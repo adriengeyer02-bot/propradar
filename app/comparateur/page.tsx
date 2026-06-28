@@ -78,18 +78,42 @@ export default function Comparateur() {
 
   const getScoreBadge = (score: number) => score >= 75 ? 'badge-green score-badge' : score >= 40 ? 'badge-orange score-badge' : 'badge-red score-badge';
 
-  // Improved colored logo (more premium)
+  // Real logo system with fallback
   const FirmLogo = ({ firm }: { firm: PropFirm }) => {
+    const logoPath = `/logos/${firm.slug}.svg`;
+
     return (
-      <div 
-        className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10 shadow-inner"
-        style={{ 
-          backgroundColor: firm.logoColor, 
-          color: '#ffffff',
-          textShadow: '0 1px 2px rgba(0,0,0,0.3)'
-        }}
-      >
-        {firm.logoText}
+      <div className="w-9 h-9 rounded-xl overflow-hidden border border-[#1f1f1f] bg-white flex items-center justify-center">
+        <img
+          src={logoPath}
+          alt={firm.name}
+          className="max-w-[90%] max-h-[90%] object-contain"
+          onError={(e) => {
+            // Fallback to colored initials
+            const target = e.target as HTMLImageElement;
+            target.style.display = 'none';
+            
+            const parent = target.parentElement;
+            if (parent) {
+              parent.innerHTML = `
+                <div style="
+                  background-color: ${firm.logoColor};
+                  color: white;
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 11px;
+                  font-weight: 700;
+                  letter-spacing: -0.5px;
+                ">
+                  ${firm.logoText}
+                </div>
+              `;
+            }
+          }}
+        />
       </div>
     );
   };
