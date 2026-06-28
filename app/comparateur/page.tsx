@@ -78,14 +78,32 @@ export default function Comparateur() {
 
   const getScoreBadge = (score: number) => score >= 75 ? 'badge-green score-badge' : score >= 40 ? 'badge-orange score-badge' : 'badge-red score-badge';
 
+  // Real logo with fallback
   const FirmLogo = ({ firm }: { firm: PropFirm }) => {
-    const bgColor = firm.logoColor || '#1f1f1f';
-    const text = firm.logoText || firm.name.split(' ').map(w => w[0]).join('').slice(0,2);
-    
+    if (firm.logoDomain) {
+      return (
+        <img
+          src={`https://logo.clearbit.com/${firm.logoDomain}`}
+          alt={firm.name}
+          className="w-9 h-9 rounded-xl object-contain bg-white p-[3px] border border-[#1f1f1f]"
+          onError={(e) => {
+            // Fallback to colored initials if logo fails
+            const target = e.target as HTMLImageElement;
+            target.style.display = 'none';
+            const fallback = target.parentElement?.querySelector('.logo-fallback') as HTMLElement;
+            if (fallback) fallback.style.display = 'flex';
+          }}
+        />
+      );
+    }
+
+    // Fallback colored initials
+    const bgColor = '#1f1f1f';
+    const text = firm.name.split(' ').map(w => w[0]).join('').slice(0,2);
     return (
       <div 
-        className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10 shadow-inner"
-        style={{ backgroundColor: bgColor, color: '#ffffff', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
+        className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10"
+        style={{ backgroundColor: bgColor, color: '#ffffff' }}
       >
         {text}
       </div>
@@ -187,7 +205,6 @@ export default function Comparateur() {
                     </td>
                     <td className="text-center px-3"><div className={getScoreBadge(firm.score)}>{firm.score}</div></td>
                     
-                    {/* NOUVEAU : Indicateurs de fiabilité */}
                     <td className="px-3">
                       <ReliabilityIndicators firm={firm} compact={true} />
                     </td>
@@ -208,14 +225,13 @@ export default function Comparateur() {
                     <td className="text-center px-2">{firm.eaAllowed ? <span className="badge badge-green text-[10px]">✓</span> : <span className="badge badge-red text-[10px]">✗</span>}</td>
                     <td className="text-center px-3"><span className={`font-mono text-sm ${firm.payoutDelay > 5 ? 'text-[#f59e0b]' : 'text-[#22c55e]'}`}>{firm.payoutDelay}j</span></td>
                     <td className="text-center px-3">{firm.incidents > 0 ? <span className="badge badge-red text-[10px]">{firm.incidents}</span> : <span className="text-[#22c55e] text-xs">0</span>}</td>
-                    <td className="px-4"><Link href={`/firm/${firm.slug}`} className="btn btn-secondary btn-sm text-xs">Fiche</Link></td>
+                    <td className="px-4"><Link href={`/firm/${farm.slug}`} className="btn btn-secondary btn-sm text-xs">Fiche</Link></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          {/* Floating Comparison Bar */}
           {selectedIds.length > 0 && (
             <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#111] border border-[#1f1f1f] rounded-2xl px-6 py-3 flex items-center gap-4 shadow-xl">
               <div><span className="font-semibold text-[#22c55e]">{selectedIds.length}</span> firm{selectedIds.length > 1 ? 's' : ''} sélectionnée{selectedIds.length > 1 ? 's' : ''}</div>
@@ -224,7 +240,6 @@ export default function Comparateur() {
             </div>
           )}
 
-          {/* Comparison View */}
           {showComparison && selectedFirms.length > 0 && (
             <div className="mt-8 card p-8">
               <div className="flex justify-between mb-6">
