@@ -87,7 +87,6 @@ export default function Comparateur() {
           alt={firm.name}
           className="w-9 h-9 rounded-xl object-contain bg-white p-[3px] border border-[#1f1f1f]"
           onError={(e) => {
-            // Fallback to colored initials if logo fails
             const target = e.target as HTMLImageElement;
             target.style.display = 'none';
             const fallback = target.parentElement?.querySelector('.logo-fallback') as HTMLElement;
@@ -97,7 +96,6 @@ export default function Comparateur() {
       );
     }
 
-    // Fallback colored initials
     const bgColor = '#1f1f1f';
     const text = firm.name.split(' ').map(w => w[0]).join('').slice(0,2);
     return (
@@ -225,7 +223,7 @@ export default function Comparateur() {
                     <td className="text-center px-2">{firm.eaAllowed ? <span className="badge badge-green text-[10px]">✓</span> : <span className="badge badge-red text-[10px]">✗</span>}</td>
                     <td className="text-center px-3"><span className={`font-mono text-sm ${firm.payoutDelay > 5 ? 'text-[#f59e0b]' : 'text-[#22c55e]'}`}>{firm.payoutDelay}j</span></td>
                     <td className="text-center px-3">{firm.incidents > 0 ? <span className="badge badge-red text-[10px]">{firm.incidents}</span> : <span className="text-[#22c55e] text-xs">0</span>}</td>
-                    <td className="px-4"><Link href={`/firm/${farm.slug}`} className="btn btn-secondary btn-sm text-xs">Fiche</Link></td>
+                    <td className="px-4"><Link href={`/firm/${firm.slug}`} className="btn btn-secondary btn-sm text-xs">Fiche</Link></td>
                   </tr>
                 ))}
               </tbody>
