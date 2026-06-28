@@ -3,400 +3,254 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { propFirms, PropFirm } from '../lib/propFirms';
+import ReliabilityIndicators from '../components/ReliabilityIndicators';
 
-type SortKey = 'score' | 'prix' | 'profit';
+type SortKey = 'score' | 'prix' | 'profit' | 'trustpilot';
 type SortDir = 'desc' | 'asc';
 
 export default function Comparateur() {
-  // Filters state
   const [search, setSearch] = useState('');
   const [selectedStyles, setSelectedStyles] = useState<string[]>([]);
   const [newsFilter, setNewsFilter] = useState<'all' | 'yes' | 'no'>('all');
   const [drawdownFilters, setDrawdownFilters] = useState<string[]>([]);
   const [maxBudget, setMaxBudget] = useState(300);
+  const [minProfitSplit, setMinProfitSplit] = useState(50);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>(['Active', 'Risque']);
   const [sortKey, setSortKey] = useState<SortKey>('score');
   const [sortDir, setSortDir] = useState<SortDir>('desc');
 
+  const [selectedIds, setSelectedIds] = useState<number[]>([]);
+  const [showComparison, setShowComparison] = useState(false);
+
   const stylesOptions = ['SMC', 'Scalp', 'Swing', 'EA', 'Copy'];
   const drawdownOptions = ['EOD', 'Trailing', 'Static', 'Hybride'];
 
-  // Filtered and sorted firms
   const filteredFirms = useMemo(() => {
     let result = [...propFirms];
 
-    // Search
     if (search) {
       const q = search.toLowerCase();
-      result = result.filter(f => 
-        f.name.toLowerCase().includes(q) || 
-        f.slug.toLowerCase().includes(q)
-      );
+      result = result.filter(f => f.name.toLowerCase().includes(q) || f.slug.toLowerCase().includes(q));
     }
-
-    // Styles
     if (selectedStyles.length > 0) {
-      result = result.filter(f => 
-        selectedStyles.some(style => f.style.includes(style))
-      );
+      result = result.filter(f => selectedStyles.some(s => f.style.includes(s)));
     }
-
-    // News trading
     if (newsFilter === 'yes') result = result.filter(f => f.newsTrading);
     if (newsFilter === 'no') result = result.filter(f => !f.newsTrading);
-
-    // Drawdown
     if (drawdownFilters.length > 0) {
       result = result.filter(f => drawdownFilters.includes(f.drawdownType));
     }
-
-    // Budget
-    result = result.filter(f => f.prixChallenge <= maxBudget);
-
-    // Status
+    result = result.filter(f => f.prixChallenge <= maxBudget && f.profitSplit >= minProfitSplit);
     if (selectedStatuses.length > 0) {
       result = result.filter(f => selectedStatuses.includes(f.status));
     }
 
-    // Sort
     result.sort((a, b) => {
       let valA: number, valB: number;
-      if (sortKey === 'score') {
-        valA = a.score; valB = b.score;
-      } else if (sortKey === 'prix') {
-        valA = a.prixChallenge; valB = b.prixChallenge;
-      } else {
-        valA = a.profitSplit; valB = b.profitSplit;
-      }
+      if (sortKey === 'score') { valA = a.score; valB = b.score; }
+      else if (sortKey === 'prix') { valA = a.prixChallenge; valB = b.prixChallenge; }
+      else if (sortKey === 'profit') { valA = a.profitSplit; valB = b.profitSplit; }
+      else { valA = a.trustpilotRating || 0; valB = b.trustpilotRating || 0; }
       return sortDir === 'desc' ? valB - valA : valA - valB;
     });
 
     return result;
-  }, [search, selectedStyles, newsFilter, drawdownFilters, maxBudget, selectedStatuses, sortKey, sortDir]);
+  }, [search, selectedStyles, newsFilter, drawdownFilters, maxBudget, minProfitSplit, selectedStatuses, sortKey, sortDir]);
 
-  const toggleStyle = (style: string) => {
-    setSelectedStyles(prev => 
-      prev.includes(style) ? prev.filter(s => s !== style) : [...prev, style]
-    );
-  };
+  const selectedFirms = propFirms.filter(f => selectedIds.includes(f.id));
 
-  const toggleDrawdown = (dd: string) => {
-    setDrawdownFilters(prev => 
-      prev.includes(dd) ? prev.filter(d => d !== dd) : [...prev, dd]
-    );
-  };
-
-  const toggleStatus = (status: string) => {
-    setSelectedStatuses(prev => 
-      prev.includes(status) ? prev.filter(s => s !== status) : [...prev, status]
-    );
-  };
+  const toggleStyle = (style: string) => setSelectedStyles(p => p.includes(style) ? p.filter(s => s !== style) : [...p, style]);
+  const toggleDrawdown = (dd: string) => setDrawdownFilters(p => p.includes(dd) ? p.filter(d => d !== dd) : [...p, dd]);
+  const toggleStatus = (st: string) => setSelectedStatuses(p => p.includes(st) ? p.filter(s => s !== st) : [...p, st]);
+  const toggleSelect = (id: number) => setSelectedIds(p => p.includes(id) ? p.filter(i => i !== id) : [...p, id]);
 
   const handleSort = (key: SortKey) => {
-    if (sortKey === key) {
-      setSortDir(sortDir === 'desc' ? 'asc' : 'desc');
-    } else {
-      setSortKey(key);
-      setSortDir(key === 'prix' ? 'asc' : 'desc');
-    }
+    if (sortKey === key) setSortDir(sortDir === 'desc' ? 'asc' : 'desc');
+    else { setSortKey(key); setSortDir(key === 'prix' ? 'asc' : 'desc'); }
   };
 
-  const getScoreBadge = (score: number) => {
-    if (score >= 75) return 'badge-green score-badge';
-    if (score >= 40) return 'badge-orange score-badge';
-    return 'badge-red score-badge';
-  };
-
-  const getStatusBadge = (status: string) => {
-    if (status === 'Active') return 'badge-green';
-    if (status === 'Risque') return 'badge-orange';
-    return 'badge-red';
-  };
-
+  const clearSelection = () => { setSelectedIds([]); setShowComparison(false); };
   const resetFilters = () => {
-    setSearch('');
-    setSelectedStyles([]);
-    setNewsFilter('all');
-    setDrawdownFilters([]);
-    setMaxBudget(300);
-    setSelectedStatuses(['Active', 'Risque']);
-    setSortKey('score');
-    setSortDir('desc');
+    setSearch(''); setSelectedStyles([]); setNewsFilter('all'); setDrawdownFilters([]);
+    setMaxBudget(300); setMinProfitSplit(50); setSelectedStatuses(['Active', 'Risque']);
+    setSortKey('score'); setSortDir('desc'); clearSelection();
+  };
+
+  const getScoreBadge = (score: number) => score >= 75 ? 'badge-green score-badge' : score >= 40 ? 'badge-orange score-badge' : 'badge-red score-badge';
+
+  const FirmLogo = ({ firm }: { firm: PropFirm }) => {
+    const bgColor = firm.logoColor || '#1f1f1f';
+    const text = firm.logoText || firm.name.split(' ').map(w => w[0]).join('').slice(0,2);
+    
+    return (
+      <div 
+        className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10 shadow-inner"
+        style={{ backgroundColor: bgColor, color: '#ffffff', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
+      >
+        {text}
+      </div>
+    );
   };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
-      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
         <div>
-          <div className="text-[#22c55e] text-sm tracking-[2px] font-mono">OUTIL PRINCIPAL</div>
+          <div className="text-[#22c55e] text-sm tracking-[2px] font-mono">OUTIL PRINCIPAL • 18 FIRMS</div>
           <h1 className="text-5xl font-semibold tracking-[-1.5px]">Comparateur Prop Firms</h1>
-          <p className="text-[#a1a1aa] mt-2">Filtrez sans pitié. Comparez sur des critères concrets. Évitez les arnaques.</p>
+          <p className="text-[#a1a1aa] mt-2">Filtrez. Sélectionnez. Comparez. Indicateurs de fiabilité inclus.</p>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="text-sm text-[#a1a1aa] font-mono">
-            {filteredFirms.length} firms affichées
-          </div>
-          <button onClick={resetFilters} className="btn btn-secondary btn-sm">
-            Réinitialiser filtres
-          </button>
-        </div>
+        <button onClick={resetFilters} className="btn btn-secondary btn-sm">Réinitialiser tout</button>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6">
-        {/* SIDEBAR FILTERS */}
+        {/* FILTERS */}
         <div className="lg:w-72 shrink-0">
           <div className="card p-6 sticky top-20">
-            <div className="flex items-center justify-between mb-6">
-              <div className="font-semibold">Filtres</div>
-              <button onClick={resetFilters} className="text-xs text-[#a1a1aa] hover:text-white">Tout effacer</button>
-            </div>
+            <div className="font-semibold mb-6">Filtres</div>
 
-            {/* Search */}
             <div className="mb-6">
               <div className="filter-label">Rechercher</div>
-              <input
-                type="text"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Nom de la firm..."
-                className="w-full bg-[#0a0a0a] border border-[#1f1f1f] rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#22c55e]"
-              />
+              <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Nom de la firm..." className="w-full bg-[#0a0a0a] border border-[#1f1f1f] rounded-lg px-4 py-2.5 text-sm focus:border-[#22c55e]" />
             </div>
 
-            {/* Styles */}
             <div className="mb-6 filter-section pb-6">
-              <div className="filter-label mb-3">Style de trading autorisé</div>
+              <div className="filter-label mb-3">Style de trading</div>
               <div className="flex flex-wrap gap-2">
-                {stylesOptions.map(style => (
-                  <button
-                    key={style}
-                    onClick={() => toggleStyle(style)}
-                    className={`px-3 py-1 text-xs rounded-full border transition-all ${selectedStyles.includes(style) 
-                      ? 'bg-[#22c55e] text-black border-[#22c55e]' 
-                      : 'border-[#1f1f1f] hover:border-[#333]'}`}
-                  >
-                    {style}
-                  </button>
-                ))}
+                {stylesOptions.map(s => <button key={s} onClick={() => toggleStyle(s)} className={`px-3 py-1 text-xs rounded-full border ${selectedStyles.includes(s) ? 'bg-[#22c55e] text-black border-[#22c55e]' : 'border-[#1f1f1f]'}`}>{s}</button>)}
               </div>
             </div>
 
-            {/* News Trading */}
             <div className="mb-6 filter-section pb-6">
-              <div className="filter-label">News trading autorisé</div>
-              <div className="flex gap-2">
-                {['all', 'yes', 'no'].map(val => (
-                  <button
-                    key={val}
-                    onClick={() => setNewsFilter(val as any)}
-                    className={`flex-1 py-2 text-xs rounded-lg border ${newsFilter === val ? 'bg-white text-black border-white' : 'border-[#1f1f1f] hover:bg-[#1a1a1a]'}`}
-                  >
-                    {val === 'all' ? 'Tous' : val === 'yes' ? 'Oui' : 'Non'}
-                  </button>
-                ))}
+              <div className="filter-label">News trading</div>
+              <div className="flex gap-2 text-xs">
+                {['all','yes','no'].map(v => <button key={v} onClick={() => setNewsFilter(v as any)} className={`flex-1 py-2 rounded-lg border ${newsFilter === v ? 'bg-white text-black' : 'border-[#1f1f1f]'}`}>{v === 'all' ? 'Tous' : v}</button>)}
               </div>
             </div>
 
-            {/* Drawdown */}
             <div className="mb-6 filter-section pb-6">
-              <div className="filter-label mb-3">Type de drawdown</div>
-              <div className="space-y-1.5">
-                {drawdownOptions.map(dd => (
-                  <label key={dd} className="flex items-center gap-2 text-sm cursor-pointer">
-                    <input 
-                      type="checkbox" 
-                      checked={drawdownFilters.includes(dd)}
-                      onChange={() => toggleDrawdown(dd)}
-                      className="accent-[#22c55e]"
-                    />
-                    <span>{dd}</span>
-                  </label>
-                ))}
-              </div>
+              <div className="filter-label mb-2">Type de drawdown</div>
+              {drawdownOptions.map(dd => <label key={dd} className="flex items-center gap-2 text-sm mb-1"><input type="checkbox" checked={drawdownFilters.includes(dd)} onChange={() => toggleDrawdown(dd)} className="accent-[#22c55e]" /> {dd}</label>)}
             </div>
 
-            {/* Budget Slider */}
-            <div className="mb-6 filter-section pb-6">
-              <div className="filter-label flex justify-between">
-                <span>Budget challenge max</span>
-                <span className="font-mono text-[#22c55e]">${maxBudget}</span>
-              </div>
-              <input 
-                type="range" 
-                min="30" 
-                max="300" 
-                step="5"
-                value={maxBudget} 
-                onChange={(e) => setMaxBudget(parseInt(e.target.value))}
-                className="w-full accent-[#22c55e]"
-              />
-              <div className="flex justify-between text-[10px] text-[#71717a] mt-1">
-                <div>$30</div><div>$300</div>
-              </div>
+            <div className="mb-6">
+              <div className="filter-label flex justify-between"><span>Budget max</span><span className="font-mono text-[#22c55e]">${maxBudget}</span></div>
+              <input type="range" min="30" max="300" value={maxBudget} onChange={e => setMaxBudget(+e.target.value)} className="w-full accent-[#22c55e]" />
             </div>
 
-            {/* Statut */}
+            <div className="mb-6">
+              <div className="filter-label flex justify-between"><span>Profit split min</span><span className="font-mono text-[#22c55e]">{minProfitSplit}%</span></div>
+              <input type="range" min="50" max="95" value={minProfitSplit} onChange={e => setMinProfitSplit(+e.target.value)} className="w-full accent-[#22c55e]" />
+            </div>
+
             <div>
-              <div className="filter-label mb-3">Statut</div>
-              <div className="space-y-1.5">
-                {['Active', 'Risque', 'Fermée'].map(st => (
-                  <label key={st} className="flex items-center gap-2 text-sm cursor-pointer">
-                    <input 
-                      type="checkbox" 
-                      checked={selectedStatuses.includes(st)}
-                      onChange={() => toggleStatus(st)}
-                      className="accent-[#22c55e]"
-                    />
-                    <span className={st === 'Fermée' ? 'text-[#ef4444]' : st === 'Risque' ? 'text-[#f59e0b]' : ''}>{st}</span>
-                  </label>
-                ))}
-              </div>
+              <div className="filter-label mb-2">Statut</div>
+              {['Active','Risque','Fermée'].map(st => <label key={st} className="flex items-center gap-2 text-sm mb-1"><input type="checkbox" checked={selectedStatuses.includes(st)} onChange={() => toggleStatus(st)} className="accent-[#22c55e]" /> <span className={st==='Fermée'?'text-[#ef4444]':st==='Risque'?'text-[#f59e0b]':''}>{st}</span></label>)}
             </div>
           </div>
         </div>
 
         {/* TABLE */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1">
           <div className="table-container bg-[#111111]">
-            <table className="w-full">
+            <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#1f1f1f]">
-                  <th className="text-left px-5 py-4 w-[220px]">Firm</th>
-                  <th className="text-center cursor-pointer px-3" onClick={() => handleSort('score')}>
-                    Score <span className="text-[10px]">{sortKey === 'score' ? (sortDir === 'desc' ? '↓' : '↑') : ''}</span>
-                  </th>
-                  <th className="text-center px-3">Ancienneté</th>
-                  <th className="text-right cursor-pointer px-3" onClick={() => handleSort('prix')}>
-                    Prix dès <span className="text-[10px]">{sortKey === 'prix' ? (sortDir === 'desc' ? '↓' : '↑') : ''}</span>
-                  </th>
-                  <th className="text-center cursor-pointer px-3" onClick={() => handleSort('profit')}>
-                    Split <span className="text-[10px]">{sortKey === 'profit' ? (sortDir === 'desc' ? '↓' : '↑') : ''}</span>
-                  </th>
-                  <th className="text-center px-3">Drawdown</th>
-                  <th className="text-center px-2">News</th>
-                  <th className="text-center px-2">SMC</th>
-                  <th className="text-center px-2">EA</th>
-                  <th className="text-center px-3">Payout</th>
-                  <th className="text-center px-3">Incidents</th>
-                  <th className="w-10"></th>
+                <tr>
+                  <th className="w-9 px-3"><input type="checkbox" onChange={e => setSelectedIds(e.target.checked ? filteredFirms.map(f=>f.id) : [])} /></th>
+                  <th className="text-left px-4">Firm</th>
+                  <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('score')}>Score {sortKey==='score' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
+                  <th className="px-3 text-center">Fiabilité</th>
+                  <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('trustpilot')}>Trustpilot {sortKey==='trustpilot' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
+                  <th className="cursor-pointer px-3 text-right" onClick={() => handleSort('prix')}>Prix {sortKey==='prix' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
+                  <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('profit')}>Split {sortKey==='profit' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
+                  <th className="px-3 text-center">Drawdown</th>
+                  <th className="px-2 text-center">News</th>
+                  <th className="px-2 text-center">SMC</th>
+                  <th className="px-2 text-center">EA</th>
+                  <th className="px-3 text-center">Payout</th>
+                  <th className="px-3 text-center">Inc.</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                {filteredFirms.length === 0 && (
-                  <tr>
-                    <td colSpan={12} className="py-12 text-center text-[#a1a1aa]">
-                      Aucune firm ne correspond à vos filtres. <button onClick={resetFilters} className="underline">Réinitialiser</button>
-                    </td>
-                  </tr>
-                )}
-                {filteredFirms.map((firm) => (
+                {filteredFirms.map(firm => (
                   <tr key={firm.id} className={firm.status === 'Fermée' ? 'opacity-60' : ''}>
-                    {/* Nom + Logo placeholder */}
-                    <td className="px-5 py-4">
+                    <td className="px-3"><input type="checkbox" checked={selectedIds.includes(firm.id)} onChange={() => toggleSelect(firm.id)} /></td>
+                    <td className="px-4 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-xl bg-[#1f1f1f] flex items-center justify-center text-xs font-mono font-bold tracking-tighter border border-[#333]">
-                          {firm.name.split(' ').map(w => w[0]).join('').slice(0,2)}
-                        </div>
+                        <FirmLogo firm={firm} />
                         <div>
                           <div className="font-semibold">{firm.name}</div>
                           <div className="text-[10px] text-[#71717a]">{firm.slug}</div>
                         </div>
                       </div>
                     </td>
+                    <td className="text-center px-3"><div className={getScoreBadge(firm.score)}>{firm.score}</div></td>
+                    
+                    {/* NOUVEAU : Indicateurs de fiabilité */}
+                    <td className="px-3">
+                      <ReliabilityIndicators firm={firm} compact={true} />
+                    </td>
 
-                    {/* Score */}
                     <td className="text-center px-3">
-                      <div className={getScoreBadge(firm.score)}>
-                        {firm.score}
-                      </div>
+                      {firm.trustpilotRating ? (
+                        <div className="text-xs">
+                          <span className="font-semibold text-[#f59e0b]">{firm.trustpilotRating}</span> ★
+                          <div className="text-[10px] text-[#71717a]">{(firm.trustpilotReviews! / 1000).toFixed(1)}k</div>
+                        </div>
+                      ) : '—'}
                     </td>
-
-                    {/* Ancienneté */}
-                    <td className="text-center px-3 font-mono text-sm text-[#a1a1aa]">
-                      {2026 - firm.anneeCreation} ans
-                    </td>
-
-                    {/* Prix */}
-                    <td className="text-right px-3 font-mono">
-                      ${firm.prixChallenge}
-                    </td>
-
-                    {/* Profit Split */}
-                    <td className="text-center px-3">
-                      <span className="font-semibold text-[#22c55e]">{firm.profitSplit}</span>
-                      <span className="text-[#a1a1aa]">%</span>
-                    </td>
-
-                    {/* Drawdown */}
-                    <td className="text-center px-3">
-                      <span className="badge badge-gray text-[10px] px-2.5">{firm.drawdownType}</span>
-                    </td>
-
-                    {/* News */}
-                    <td className="text-center px-2">
-                      {firm.newsTrading ? 
-                        <span className="badge badge-green text-[10px]">OUI</span> : 
-                        <span className="badge badge-red text-[10px]">NON</span>}
-                    </td>
-
-                    {/* SMC */}
-                    <td className="text-center px-2">
-                      {firm.smcAllowed ? 
-                        <span className="badge badge-green text-[10px]">✓</span> : 
-                        <span className="badge badge-red text-[10px]">✗</span>}
-                    </td>
-
-                    {/* EA */}
-                    <td className="text-center px-2">
-                      {firm.eaAllowed ? 
-                        <span className="badge badge-green text-[10px]">✓</span> : 
-                        <span className="badge badge-red text-[10px]">✗</span>}
-                    </td>
-
-                    {/* Payout délai */}
-                    <td className="text-center px-3">
-                      <div className={`font-mono text-sm ${firm.payoutDelay > 5 ? 'text-[#f59e0b]' : firm.payoutDelay > 3 ? 'text-[#a1a1aa]' : 'text-[#22c55e]'}`}>
-                        {firm.payoutDelay}j
-                      </div>
-                    </td>
-
-                    {/* Incidents */}
-                    <td className="text-center px-3">
-                      {firm.incidents > 0 ? (
-                        <span className="badge badge-red text-[10px]">{firm.incidents}</span>
-                      ) : (
-                        <span className="text-[#22c55e] text-xs">0</span>
-                      )}
-                    </td>
-
-                    {/* Action */}
-                    <td className="px-4">
-                      <Link 
-                        href={`/firm/${firm.slug}`} 
-                        className="btn btn-secondary btn-sm text-xs whitespace-nowrap"
-                      >
-                        Fiche →
-                      </Link>
-                    </td>
+                    <td className="text-right px-3 font-mono">${firm.prixChallenge}</td>
+                    <td className="text-center px-3"><span className="font-semibold text-[#22c55e]">{firm.profitSplit}</span>%</td>
+                    <td className="text-center px-3"><span className="badge badge-gray text-[10px]">{firm.drawdownType}</span></td>
+                    <td className="text-center px-2">{firm.newsTrading ? <span className="badge badge-green text-[10px]">OUI</span> : <span className="badge badge-red text-[10px]">NON</span>}</td>
+                    <td className="text-center px-2">{firm.smcAllowed ? <span className="badge badge-green text-[10px]">✓</span> : <span className="badge badge-red text-[10px]">✗</span>}</td>
+                    <td className="text-center px-2">{firm.eaAllowed ? <span className="badge badge-green text-[10px]">✓</span> : <span className="badge badge-red text-[10px]">✗</span>}</td>
+                    <td className="text-center px-3"><span className={`font-mono text-sm ${firm.payoutDelay > 5 ? 'text-[#f59e0b]' : 'text-[#22c55e]'}`}>{firm.payoutDelay}j</span></td>
+                    <td className="text-center px-3">{firm.incidents > 0 ? <span className="badge badge-red text-[10px]">{firm.incidents}</span> : <span className="text-[#22c55e] text-xs">0</span>}</td>
+                    <td className="px-4"><Link href={`/firm/${firm.slug}`} className="btn btn-secondary btn-sm text-xs">Fiche</Link></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <div className="mt-4 text-xs text-[#71717a] flex items-center gap-4">
-            <div>Score PropRadar = fiabilité réelle (pas de marketing)</div>
-            <div className="flex-1 h-px bg-[#1f1f1f]"></div>
-            <div>Cliquez sur les en-têtes pour trier</div>
-          </div>
-        </div>
-      </div>
+          {/* Floating Comparison Bar */}
+          {selectedIds.length > 0 && (
+            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#111] border border-[#1f1f1f] rounded-2xl px-6 py-3 flex items-center gap-4 shadow-xl">
+              <div><span className="font-semibold text-[#22c55e]">{selectedIds.length}</span> firm{selectedIds.length > 1 ? 's' : ''} sélectionnée{selectedIds.length > 1 ? 's' : ''}</div>
+              <button onClick={() => setShowComparison(true)} className="btn btn-primary btn-sm">Comparer →</button>
+              <button onClick={clearSelection} className="text-xs text-[#a1a1aa] hover:text-white">Annuler</button>
+            </div>
+          )}
 
-      {/* Note en bas */}
-      <div className="mt-8 text-[11px] text-[#71717a] max-w-3xl">
-        Les données sont collectées à partir de sources publiques, rapports de traders, conditions officielles et historiques de paiements vérifiés. 
-        Les firms "Fermée" sont listées à titre informatif uniquement. Nous ne recommandons aucune firm — nous exposons les faits.
+          {/* Comparison View */}
+          {showComparison && selectedFirms.length > 0 && (
+            <div className="mt-8 card p-8">
+              <div className="flex justify-between mb-6">
+                <h2 className="text-2xl font-semibold">Comparaison directe</h2>
+                <button onClick={() => setShowComparison(false)} className="text-sm">Fermer</button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {selectedFirms.map(f => (
+                  <div key={f.id} className="bg-[#0a0a0a] border border-[#1f1f1f] rounded-2xl p-5">
+                    <div className="flex justify-between mb-4">
+                      <div className="font-semibold">{f.name}</div>
+                      <div className={getScoreBadge(f.score)}>{f.score}</div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between"><span className="text-[#a1a1aa]">Profit Split</span> <span className="font-semibold text-[#22c55e]">{f.profitSplit}%</span></div>
+                      <div className="flex justify-between"><span className="text-[#a1a1aa]">Trustpilot</span> <span>{f.trustpilotRating} ★ ({(f.trustpilotReviews! / 1000).toFixed(1)}k)</span></div>
+                      <div className="flex justify-between"><span className="text-[#a1a1aa]">Payout moyen</span> <span className={f.payoutDelay > 5 ? 'text-[#f59e0b]' : ''}>{f.payoutDelay}j</span></div>
+                      <div className="flex justify-between"><span className="text-[#a1a1aa]">Incidents</span> <span className={f.incidents > 0 ? 'text-[#ef4444]' : 'text-[#22c55e]'}>{f.incidents}</span></div>
+                    </div>
+                    <Link href={`/firm/${f.slug}`} className="mt-5 btn btn-secondary btn-sm w-full block text-center">Voir fiche complète →</Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
