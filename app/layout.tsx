@@ -37,9 +37,10 @@ export default function RootLayout({
         </main>
         <footer className="border-t border-[#1f1f1f] py-8 mt-16">
           <div className="max-w-7xl mx-auto px-6 text-center text-xs text-[#71717a]">
-            PropRadar © 2026 — Données collectées indépendamment. Aucune affiliation payante n'influence nos scores. 
-            <br />Ce site est un outil d'analyse. Le trading comporte des risques. Vérifiez toujours par vous-même.
-          </footer>
+            PropRadar © 2026 — Données collectées indépendamment. Aucune affiliation payante n'influence nos scores.<br />
+            Ce site est un outil d'analyse. Le trading comporte des risques. Vérifiez toujours par vous-même.
+          </div>
+        </footer>
       </body>
     </html>
   );
