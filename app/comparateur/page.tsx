@@ -78,32 +78,18 @@ export default function Comparateur() {
 
   const getScoreBadge = (score: number) => score >= 75 ? 'badge-green score-badge' : score >= 40 ? 'badge-orange score-badge' : 'badge-red score-badge';
 
-  // Real logo with fallback
+  // Improved colored logo (more premium)
   const FirmLogo = ({ firm }: { firm: PropFirm }) => {
-    if (firm.logoDomain) {
-      return (
-        <img
-          src={`https://logo.clearbit.com/${firm.logoDomain}`}
-          alt={firm.name}
-          className="w-9 h-9 rounded-xl object-contain bg-white p-[3px] border border-[#1f1f1f]"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-            const fallback = target.parentElement?.querySelector('.logo-fallback') as HTMLElement;
-            if (fallback) fallback.style.display = 'flex';
-          }}
-        />
-      );
-    }
-
-    const bgColor = '#1f1f1f';
-    const text = firm.name.split(' ').map(w => w[0]).join('').slice(0,2);
     return (
       <div 
-        className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10"
-        style={{ backgroundColor: bgColor, color: '#ffffff' }}
+        className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10 shadow-inner"
+        style={{ 
+          backgroundColor: firm.logoColor, 
+          color: '#ffffff',
+          textShadow: '0 1px 2px rgba(0,0,0,0.3)'
+        }}
       >
-        {text}
+        {firm.logoText}
       </div>
     );
   };
@@ -112,7 +98,7 @@ export default function Comparateur() {
     <div className="max-w-7xl mx-auto px-6 py-10">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
         <div>
-          <div className="text-[#22c55e] text-sm tracking-[2px] font-mono">OUTIL PRINCIPAL • 18 FIRMS</div>
+          <div className="text-[#22c55e] text-sm tracking-[2px] font-mono">OUTIL PRINCIPAL • 22 FIRMS</div>
           <h1 className="text-5xl font-semibold tracking-[-1.5px]">Comparateur Prop Firms</h1>
           <p className="text-[#a1a1aa] mt-2">Filtrez. Sélectionnez. Comparez. Indicateurs de fiabilité inclus.</p>
         </div>
