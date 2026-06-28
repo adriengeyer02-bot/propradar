@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { propFirms, PropFirm } from '../lib/propFirms';
 import ReliabilityIndicators from '../components/ReliabilityIndicators';
 
-type SortKey = 'score' | 'prix' | 'profit' | 'trustpilot';
+type SortKey = 'score' | 'prix' | 'profit' | 'trustpilot' | 'reddit';
 type SortDir = 'desc' | 'asc';
 
 export default function Comparateur() {
@@ -50,7 +50,8 @@ export default function Comparateur() {
       if (sortKey === 'score') { valA = a.score; valB = b.score; }
       else if (sortKey === 'prix') { valA = a.prixChallenge; valB = b.prixChallenge; }
       else if (sortKey === 'profit') { valA = a.profitSplit; valB = b.profitSplit; }
-      else { valA = a.trustpilotRating || 0; valB = b.trustpilotRating || 0; }
+      else if (sortKey === 'trustpilot') { valA = a.trustpilotRating || 0; valB = b.trustpilotRating || 0; }
+      else if (sortKey === 'reddit') { valA = a.redditScore || 0; valB = b.redditScore || 0; }
       return sortDir === 'desc' ? valB - valA : valA - valB;
     });
 
@@ -78,42 +79,27 @@ export default function Comparateur() {
 
   const getScoreBadge = (score: number) => score >= 75 ? 'badge-green score-badge' : score >= 40 ? 'badge-orange score-badge' : 'badge-red score-badge';
 
-  // Real logo system with fallback
   const FirmLogo = ({ firm }: { firm: PropFirm }) => {
-    const logoPath = `/logos/${firm.slug}.svg`;
-
-    return (
-      <div className="w-9 h-9 rounded-xl overflow-hidden border border-[#1f1f1f] bg-white flex items-center justify-center">
+    if (firm.logoDomain) {
+      return (
         <img
-          src={logoPath}
+          src={`https://logo.clearbit.com/${firm.logoDomain}`}
           alt={firm.name}
-          className="max-w-[90%] max-h-[90%] object-contain"
+          className="w-9 h-9 rounded-xl object-contain bg-white p-[3px] border border-[#1f1f1f]"
           onError={(e) => {
-            // Fallback to colored initials
             const target = e.target as HTMLImageElement;
             target.style.display = 'none';
-            
-            const parent = target.parentElement;
-            if (parent) {
-              parent.innerHTML = `
-                <div style="
-                  background-color: ${firm.logoColor};
-                  color: white;
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  font-size: 11px;
-                  font-weight: 700;
-                  letter-spacing: -0.5px;
-                ">
-                  ${firm.logoText}
-                </div>
-              `;
-            }
+            const fallback = target.parentElement?.querySelector('.logo-fallback') as HTMLElement;
+            if (fallback) fallback.style.display = 'flex';
           }}
         />
+      );
+    }
+    const bgColor = '#1f1f1f';
+    const text = firm.name.split(' ').map(w => w[0]).join('').slice(0,2);
+    return (
+      <div className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold tracking-[-0.5px] border border-white/10" style={{ backgroundColor: bgColor, color: '#ffffff' }}>
+        {text}
       </div>
     );
   };
@@ -122,53 +108,45 @@ export default function Comparateur() {
     <div className="max-w-7xl mx-auto px-6 py-10">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
         <div>
-          <div className="text-[#22c55e] text-sm tracking-[2px] font-mono">OUTIL PRINCIPAL • 22 FIRMS</div>
+          <div className="text-[#22c55e] text-sm tracking-[2px] font-mono">OUTIL PRINCIPAL • {propFirms.length} FIRMS</div>
           <h1 className="text-5xl font-semibold tracking-[-1.5px]">Comparateur Prop Firms</h1>
-          <p className="text-[#a1a1aa] mt-2">Filtrez. Sélectionnez. Comparez. Indicateurs de fiabilité inclus.</p>
+          <p className="text-[#a1a1aa] mt-2">Filtrez. Sélectionnez. Comparez. Reddit + Trustpilot inclus.</p>
         </div>
         <button onClick={resetFilters} className="btn btn-secondary btn-sm">Réinitialiser tout</button>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6">
-        {/* FILTERS */}
         <div className="lg:w-72 shrink-0">
           <div className="card p-6 sticky top-20">
             <div className="font-semibold mb-6">Filtres</div>
-
             <div className="mb-6">
               <div className="filter-label">Rechercher</div>
               <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Nom de la firm..." className="w-full bg-[#0a0a0a] border border-[#1f1f1f] rounded-lg px-4 py-2.5 text-sm focus:border-[#22c55e]" />
             </div>
-
             <div className="mb-6 filter-section pb-6">
               <div className="filter-label mb-3">Style de trading</div>
               <div className="flex flex-wrap gap-2">
                 {stylesOptions.map(s => <button key={s} onClick={() => toggleStyle(s)} className={`px-3 py-1 text-xs rounded-full border ${selectedStyles.includes(s) ? 'bg-[#22c55e] text-black border-[#22c55e]' : 'border-[#1f1f1f]'}`}>{s}</button>)}
               </div>
             </div>
-
             <div className="mb-6 filter-section pb-6">
               <div className="filter-label">News trading</div>
               <div className="flex gap-2 text-xs">
                 {['all','yes','no'].map(v => <button key={v} onClick={() => setNewsFilter(v as any)} className={`flex-1 py-2 rounded-lg border ${newsFilter === v ? 'bg-white text-black' : 'border-[#1f1f1f]'}`}>{v === 'all' ? 'Tous' : v}</button>)}
               </div>
             </div>
-
             <div className="mb-6 filter-section pb-6">
               <div className="filter-label mb-2">Type de drawdown</div>
               {drawdownOptions.map(dd => <label key={dd} className="flex items-center gap-2 text-sm mb-1"><input type="checkbox" checked={drawdownFilters.includes(dd)} onChange={() => toggleDrawdown(dd)} className="accent-[#22c55e]" /> {dd}</label>)}
             </div>
-
             <div className="mb-6">
               <div className="filter-label flex justify-between"><span>Budget max</span><span className="font-mono text-[#22c55e]">${maxBudget}</span></div>
               <input type="range" min="30" max="300" value={maxBudget} onChange={e => setMaxBudget(+e.target.value)} className="w-full accent-[#22c55e]" />
             </div>
-
             <div className="mb-6">
               <div className="filter-label flex justify-between"><span>Profit split min</span><span className="font-mono text-[#22c55e]">{minProfitSplit}%</span></div>
               <input type="range" min="50" max="95" value={minProfitSplit} onChange={e => setMinProfitSplit(+e.target.value)} className="w-full accent-[#22c55e]" />
             </div>
-
             <div>
               <div className="filter-label mb-2">Statut</div>
               {['Active','Risque','Fermée'].map(st => <label key={st} className="flex items-center gap-2 text-sm mb-1"><input type="checkbox" checked={selectedStatuses.includes(st)} onChange={() => toggleStatus(st)} className="accent-[#22c55e]" /> <span className={st==='Fermée'?'text-[#ef4444]':st==='Risque'?'text-[#f59e0b]':''}>{st}</span></label>)}
@@ -176,7 +154,6 @@ export default function Comparateur() {
           </div>
         </div>
 
-        {/* TABLE */}
         <div className="flex-1">
           <div className="table-container bg-[#111111]">
             <table className="w-full text-sm">
@@ -187,6 +164,7 @@ export default function Comparateur() {
                   <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('score')}>Score {sortKey==='score' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
                   <th className="px-3 text-center">Fiabilité</th>
                   <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('trustpilot')}>Trustpilot {sortKey==='trustpilot' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
+                  <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('reddit')}>Reddit {sortKey==='reddit' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
                   <th className="cursor-pointer px-3 text-right" onClick={() => handleSort('prix')}>Prix {sortKey==='prix' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
                   <th className="cursor-pointer px-3 text-center" onClick={() => handleSort('profit')}>Split {sortKey==='profit' && (sortDir==='desc'?'\u2193':'\u2191')}</th>
                   <th className="px-3 text-center">Drawdown</th>
@@ -212,18 +190,12 @@ export default function Comparateur() {
                       </div>
                     </td>
                     <td className="text-center px-3"><div className={getScoreBadge(firm.score)}>{firm.score}</div></td>
-                    
-                    <td className="px-3">
-                      <ReliabilityIndicators firm={firm} compact={true} />
-                    </td>
-
+                    <td className="px-3"><ReliabilityIndicators firm={firm} compact={true} /></td>
                     <td className="text-center px-3">
-                      {firm.trustpilotRating ? (
-                        <div className="text-xs">
-                          <span className="font-semibold text-[#f59e0b]">{firm.trustpilotRating}</span> ★
-                          <div className="text-[10px] text-[#71717a]">{(firm.trustpilotReviews! / 1000).toFixed(1)}k</div>
-                        </div>
-                      ) : '—'}
+                      {firm.trustpilotRating ? <div className="text-xs"><span className="font-semibold text-[#f59e0b]">{firm.trustpilotRating}</span> ★<div className="text-[10px] text-[#71717a]">{(firm.trustpilotReviews! / 1000).toFixed(1)}k</div></div> : '—'}
+                    </td>
+                    <td className="text-center px-3">
+                      {firm.redditScore ? <div className="text-xs"><span className="font-semibold text-[#ff4500]">{firm.redditScore}</span><div className="text-[10px] text-[#71717a]">{firm.redditMentions} mentions</div></div> : '—'}
                     </td>
                     <td className="text-right px-3 font-mono">${firm.prixChallenge}</td>
                     <td className="text-center px-3"><span className="font-semibold text-[#22c55e]">{firm.profitSplit}</span>%</td>
@@ -264,6 +236,7 @@ export default function Comparateur() {
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between"><span className="text-[#a1a1aa]">Profit Split</span> <span className="font-semibold text-[#22c55e]">{f.profitSplit}%</span></div>
                       <div className="flex justify-between"><span className="text-[#a1a1aa]">Trustpilot</span> <span>{f.trustpilotRating} ★ ({(f.trustpilotReviews! / 1000).toFixed(1)}k)</span></div>
+                      <div className="flex justify-between"><span className="text-[#a1a1aa]">Reddit</span> <span className="text-[#ff4500]">{f.redditScore} / 100</span></div>
                       <div className="flex justify-between"><span className="text-[#a1a1aa]">Payout moyen</span> <span className={f.payoutDelay > 5 ? 'text-[#f59e0b]' : ''}>{f.payoutDelay}j</span></div>
                       <div className="flex justify-between"><span className="text-[#a1a1aa]">Incidents</span> <span className={f.incidents > 0 ? 'text-[#ef4444]' : 'text-[#22c55e]'}>{f.incidents}</span></div>
                     </div>
