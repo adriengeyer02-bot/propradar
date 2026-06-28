@@ -46,12 +46,26 @@ export default function Comparateur() {
     }
 
     result.sort((a, b) => {
-      let valA: number, valB: number;
-      if (sortKey === 'score') { valA = a.score; valB = b.score; }
-      else if (sortKey === 'prix') { valA = a.prixChallenge; valB = b.prixChallenge; }
-      else if (sortKey === 'profit') { valA = a.profitSplit; valB = b.profitSplit; }
-      else if (sortKey === 'trustpilot') { valA = a.trustpilotRating || 0; valB = b.trustpilotRating || 0; }
-      else if (sortKey === 'reddit') { valA = a.redditScore || 0; valB = b.redditScore || 0; }
+      let valA = 0;
+      let valB = 0;
+
+      if (sortKey === 'score') {
+        valA = a.score;
+        valB = b.score;
+      } else if (sortKey === 'prix') {
+        valA = a.prixChallenge;
+        valB = b.prixChallenge;
+      } else if (sortKey === 'profit') {
+        valA = a.profitSplit;
+        valB = b.profitSplit;
+      } else if (sortKey === 'trustpilot') {
+        valA = a.trustpilotRating || 0;
+        valB = b.trustpilotRating || 0;
+      } else if (sortKey === 'reddit') {
+        valA = a.redditScore || 0;
+        valB = b.redditScore || 0;
+      }
+
       return sortDir === 'desc' ? valB - valA : valA - valB;
     });
 
