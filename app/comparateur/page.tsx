@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { propFirms } from '../lib/propFirms';
@@ -44,7 +46,7 @@ export default function Comparateur() {
       </div>
 
       <div className="flex gap-6">
-        {/* Filtres Sidebar - Amélioré */}
+        {/* Filtres Sidebar */}
         <div className="w-72 flex-shrink-0">
           <div className="card p-6 sticky top-6">
             <h3 className="font-semibold mb-4 text-lg">Filtres</h3>
@@ -60,7 +62,6 @@ export default function Comparateur() {
               />
             </div>
 
-            {/* Autres filtres existants... */}
             <div className="text-xs text-[#a1a1aa] mb-2">STYLE DE TRADING</div>
             <div className="flex flex-wrap gap-2 mb-6">
               {['SMC', 'Scalp', 'Swing', 'EA'].map(style => (
@@ -93,7 +94,7 @@ export default function Comparateur() {
           </div>
         </div>
 
-        {/* Tableau Amélioré */}
+        {/* Tableau */}
         <div className="flex-1">
           <div className="card overflow-hidden">
             <table className="w-full text-sm">
