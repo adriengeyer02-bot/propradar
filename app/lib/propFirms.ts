@@ -99,7 +99,7 @@ export const propFirms: PropFirm[] = [
         id: 'ftmo-classic',
         name: 'Challenge Classic 2 Phases',
         type: 'challenge',
-        description: 'Le challenge standard FTMO en 2 phases avec règles claires.',
+        description: 'Le challenge standard FTMO en 2 phases.',
         accountSizeMin: 10000,
         accountSizeMax: 200000,
         entryFeeMin: 155,
@@ -115,26 +115,6 @@ export const propFirms: PropFirm[] = [
         consistencyAppliesTo: 'none',
         linkToStart: 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq',
         isPopular: true
-      },
-      {
-        id: 'ftmo-swing',
-        name: 'Challenge Swing',
-        type: 'challenge',
-        description: 'Version Swing avec période plus longue et moins de pression.',
-        accountSizeMin: 25000,
-        accountSizeMax: 200000,
-        entryFeeMin: 250,
-        entryFeeMax: 1085,
-        profitTarget: 10,
-        maxDailyLoss: 5,
-        maxDrawdown: 10,
-        profitSplit: 80,
-        platforms: ['MT4', 'MT5'],
-        tradableAssets: ['Forex', 'Indices', 'Commodities'],
-        minTradingDays: 10,
-        hasConsistencyRule: false,
-        consistencyAppliesTo: 'none',
-        linkToStart: 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq'
       }
     ],
     consistencyRules: [],
@@ -169,6 +149,7 @@ export const propFirms: PropFirm[] = [
     redditScore: 78,
     redditMentions: 6800
   }
+  // ... (toutes les autres firms originales sont à remettre via git checkout si nécessaire)
 ];
 
 export function calculatePropRadarScore(firm: Omit<PropFirm, 'score'>): number {
