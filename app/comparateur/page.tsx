@@ -23,54 +23,38 @@ export default function Comparateur() {
         </button>
       </div>
 
-      <div className="card overflow-hidden">
-        <div className="p-4 border-b border-[#222]">
-          <input
-            type="text"
-            placeholder="Rechercher une firm..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-[#111] border border-[#222] rounded-xl px-4 py-2.5 text-sm"
-          />
-        </div>
+      <div className="card p-4">
+        <input
+          type="text"
+          placeholder="Rechercher une firm..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full bg-[#111] border border-[#222] rounded-xl px-4 py-2 mb-6"
+        />
 
         <table className="w-full text-sm">
-          <thead className="text-xs text-[#a1a1aa] border-b border-[#222]">
-            <tr>
-              <th className="py-4 px-6 text-left">FIRM</th>
-              <th className="py-4 px-6">SCORE</th>
-              <th className="py-4 px-6">SPLIT</th>
-              <th className="py-4 px-6">PRODUITS</th>
-              <th className="py-4 px-6">CONSISTENCY</th>
-              <th className="py-4 px-6 text-right">FICHE</th>
+          <thead>
+            <tr className="text-left text-[#a1a1aa] text-xs border-b border-[#222]">
+              <th className="py-3 px-4">FIRM</th>
+              <th className="py-3 px-4">SCORE</th>
+              <th className="py-3 px-4">SPLIT</th>
+              <th className="py-3 px-4">FICHE</th>
             </tr>
           </thead>
           <tbody>
             {filteredFirms.map(firm => (
               <tr key={firm.id} className="border-b border-[#1f1f1f] hover:bg-[#0a0a0a]">
-                <td className="py-4 px-6">
+                <td className="py-4 px-4">
                   <div className="flex items-center gap-3">
-                    {firm.logoDomain && (
-                      <img src={`https://logo.clearbit.com/${firm.logoDomain}`} className="w-6 h-6 rounded object-contain bg-[#111]" alt={firm.name} />
-                    )}
-                    <span className="font-medium">{firm.name}</span>
+                    {firm.logoDomain && <img src={`https://logo.clearbit.com/${firm.logoDomain}`} className="w-6 h-6 rounded" alt={firm.name} />}
+                    <span>{firm.name}</span>
                   </td>
-                  <td className="py-4 px-6">
-                    <span className={`px-3 py-0.5 rounded-full text-xs font-mono ${firm.score >= 75 ? 'bg-[#22c55e] text-black' : 'bg-[#f59e0b] text-black'}`}>{firm.score}</span>
+                  <td className="py-4 px-4">
+                    <span className={`px-3 py-0.5 rounded-full text-xs ${firm.score >= 75 ? 'bg-[#22c55e] text-black' : 'bg-[#f59e0b] text-black'}`}>{firm.score}</span>
                   </td>
-                  <td className="py-4 px-6 font-medium text-[#22c55e]">{firm.profitSplit}%</td>
-                  <td className="py-4 px-6">
-                    {firm.products && firm.products.length > 0 ? 
-                      <span className="text-xs bg-[#22c55e]/10 text-[#22c55e] px-2 py-1 rounded-full">{firm.products.length}</span> : 
-                      <span className="text-xs text-[#666]">—</span>}
-                  </td>
-                  <td className="py-4 px-6">
-                    {firm.hasAnyConsistencyRule ? 
-                      <span className="text-xs bg-[#f59e0b]/10 text-[#f59e0b] px-2 py-1 rounded-full">Règle</span> : 
-                      <span className="text-xs text-[#22c55e]">✓ Aucune</span>}
-                  </td>
-                  <td className="py-4 px-6 text-right">
-                    <Link href={`/firm/${firm.slug}`} className="text-xs px-4 py-2 border border-[#333] rounded-xl hover:bg-[#111]">Fiche</Link>
+                  <td className="py-4 px-4 text-[#22c55e] font-medium">{firm.profitSplit}%</td>
+                  <td className="py-4 px-4 text-right">
+                    <Link href={`/firm/${firm.slug}`} className="text-xs px-4 py-2 border border-[#333] rounded-xl hover:bg-[#111]">Voir</Link>
                   </td>
                 </tr>
               ))}
