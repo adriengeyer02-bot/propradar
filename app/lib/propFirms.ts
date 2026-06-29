@@ -60,17 +60,115 @@ export type PropFirm = {
   logoDomain?: string;
   redditScore?: number;
   redditMentions?: number;
-
-  // Nouveaux champs
   products?: Product[];
   consistencyRules?: ConsistencyRule[];
   hasAnyConsistencyRule?: boolean;
 };
 
 export const propFirms: PropFirm[] = [
-  { id: 1, slug: 'ftmo', name: 'FTMO', status: 'Active', score: 87, anneeCreation: 2015, prixChallenge: 155, profitSplit: 80, drawdownType: 'EOD', newsTrading: true, smcAllowed: true, eaAllowed: true, payoutDelay: 1, incidents: 2, incidentsDetails: ['Plainte sur délai payout 2023 (résolu)'], style: ['SMC', 'Scalp', 'Swing', 'EA'], legalVerified: true, transparencyScore: 18, payoutProof: true, recentRuleChange: false, lastPayoutVerified: '2026-06-20', trustpilotRating: 4.6, trustpilotReviews: 12400, trustpilotLink: 'https://www.trustpilot.com/review/ftmo.com', logoDomain: 'ftmo.com', redditScore: 82, redditMentions: 12400 },
-  { id: 2, slug: 'the5ers', name: 'The5ers', status: 'Active', score: 82, anneeCreation: 2016, prixChallenge: 95, profitSplit: 80, drawdownType: 'Static', newsTrading: false, smcAllowed: true, eaAllowed: false, payoutDelay: 2, incidents: 1, incidentsDetails: ['Changement profit split 2024'], style: ['Swing', 'SMC'], legalVerified: true, transparencyScore: 17, payoutProof: true, recentRuleChange: true, lastPayoutVerified: '2026-06-15', trustpilotRating: 4.4, trustpilotReviews: 8700, trustpilotLink: 'https://www.trustpilot.com/review/the5ers.com', logoDomain: 'the5ers.com', redditScore: 78, redditMentions: 6800 }
-  // ... (autres firms inchangés - le type les accepte car les nouveaux champs sont optionnels)
+  {
+    id: 1,
+    slug: 'ftmo',
+    name: 'FTMO',
+    status: 'Active',
+    score: 87,
+    anneeCreation: 2015,
+    prixChallenge: 155,
+    profitSplit: 80,
+    drawdownType: 'EOD',
+    newsTrading: true,
+    smcAllowed: true,
+    eaAllowed: true,
+    payoutDelay: 1,
+    incidents: 2,
+    incidentsDetails: ['Plainte sur délai payout 2023 (résolu)'],
+    style: ['SMC', 'Scalp', 'Swing', 'EA'],
+    legalVerified: true,
+    transparencyScore: 18,
+    payoutProof: true,
+    recentRuleChange: false,
+    lastPayoutVerified: '2026-06-20',
+    trustpilotRating: 4.6,
+    trustpilotReviews: 12400,
+    trustpilotLink: 'https://www.trustpilot.com/review/ftmo.com',
+    logoDomain: 'ftmo.com',
+    redditScore: 82,
+    redditMentions: 12400,
+    products: [
+      {
+        id: 'ftmo-classic',
+        name: 'Challenge Classic 2 Phases',
+        type: 'challenge',
+        description: 'Le challenge standard FTMO en 2 phases avec règles claires.',
+        accountSizeMin: 10000,
+        accountSizeMax: 200000,
+        entryFeeMin: 155,
+        entryFeeMax: 1085,
+        profitTarget: 10,
+        maxDailyLoss: 5,
+        maxDrawdown: 10,
+        profitSplit: 80,
+        platforms: ['MT4', 'MT5', 'cTrader'],
+        tradableAssets: ['Forex', 'Indices', 'Commodities', 'Crypto'],
+        minTradingDays: 4,
+        hasConsistencyRule: false,
+        consistencyAppliesTo: 'none',
+        linkToStart: 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq',
+        isPopular: true
+      },
+      {
+        id: 'ftmo-swing',
+        name: 'Challenge Swing',
+        type: 'challenge',
+        description: 'Version Swing avec période plus longue et moins de pression.',
+        accountSizeMin: 25000,
+        accountSizeMax: 200000,
+        entryFeeMin: 250,
+        entryFeeMax: 1085,
+        profitTarget: 10,
+        maxDailyLoss: 5,
+        maxDrawdown: 10,
+        profitSplit: 80,
+        platforms: ['MT4', 'MT5'],
+        tradableAssets: ['Forex', 'Indices', 'Commodities'],
+        minTradingDays: 10,
+        hasConsistencyRule: false,
+        consistencyAppliesTo: 'none',
+        linkToStart: 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq'
+      }
+    ],
+    consistencyRules: [],
+    hasAnyConsistencyRule: false
+  },
+  {
+    id: 2,
+    slug: 'the5ers',
+    name: 'The5ers',
+    status: 'Active',
+    score: 82,
+    anneeCreation: 2016,
+    prixChallenge: 95,
+    profitSplit: 80,
+    drawdownType: 'Static',
+    newsTrading: false,
+    smcAllowed: true,
+    eaAllowed: false,
+    payoutDelay: 2,
+    incidents: 1,
+    incidentsDetails: ['Changement profit split 2024'],
+    style: ['Swing', 'SMC'],
+    legalVerified: true,
+    transparencyScore: 17,
+    payoutProof: true,
+    recentRuleChange: true,
+    lastPayoutVerified: '2026-06-15',
+    trustpilotRating: 4.4,
+    trustpilotReviews: 8700,
+    trustpilotLink: 'https://www.trustpilot.com/review/the5ers.com',
+    logoDomain: 'the5ers.com',
+    redditScore: 78,
+    redditMentions: 6800
+  }
 ];
 
 export function calculatePropRadarScore(firm: Omit<PropFirm, 'score'>): number {
