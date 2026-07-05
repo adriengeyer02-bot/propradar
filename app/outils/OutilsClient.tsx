@@ -1,0 +1,391 @@
+'use client';
+
+import Link from 'next/link';
+import { useMemo, useState } from 'react';
+import FirmLogo from '../components/FirmLogo';
+import type { PropFirm } from '../lib/propFirms';
+import {
+  formatUsd,
+  payoutRiskClass,
+  propFirms,
+  relationshipClass,
+  reviewReliabilityClass,
+  scoreClass,
+  statusClass,
+  topFirms,
+} from '../lib/propFirms';
+import { toEnglishText } from '../lib/i18n';
+
+type MarketChoice = 'Forex/CFD' | 'Futures' | 'Crypto' | 'Actions' | 'Tous';
+type StyleChoice =
+  | 'SMC / ICT'
+  | 'Swing trading'
+  | 'Day trading'
+  | 'Scalping'
+  | 'News trading'
+  | 'EA / Algo'
+  | 'Breakout'
+  | 'Débutant prudent';
+type PriorityChoice = 'Payout' | 'Règles' | 'Prix' | 'Score global';
+type DrawdownChoice = 'Static/EOD' | 'Trailing accepté' | 'Peu importe';
+type BudgetChoice = '75' | '150' | '300' | '1000' | 'Tous';
+
+const defaultCompare = ['ftmo', 'the5ers', 'topstep'];
+
+const marketChoices: MarketChoice[] = ['Forex/CFD', 'Futures', 'Crypto', 'Actions', 'Tous'];
+const styleChoices: StyleChoice[] = [
+  'SMC / ICT',
+  'Day trading',
+  'Swing trading',
+  'Scalping',
+  'News trading',
+  'EA / Algo',
+  'Breakout',
+  'Débutant prudent',
+];
+const priorityChoices: PriorityChoice[] = ['Payout', 'Règles', 'Prix', 'Score global'];
+const drawdownChoices: DrawdownChoice[] = ['Static/EOD', 'Trailing accepté', 'Peu importe'];
+const budgetChoices: BudgetChoice[] = ['75', '150', '300', '1000', 'Tous'];
+
+const styleNotes: Record<StyleChoice, string> = {
+  'SMC / ICT':
+    'Priority goes to firms that make manual trading easier to read: clear drawdown, indices/forex, solid payout signals and fewer vague clauses.',
+  'Swing trading':
+    'Looks for firms that are more tolerant of held positions, with Static/EOD drawdown and low payout risk.',
+  'Day trading':
+    'Classic intraday profile: daily execution, reasonable budget, clear rules and a solid overall score.',
+  Scalping:
+    'Short-term profile: avoid firms that heavily restrict fast trades, news, EA usage or strategies they may label abusive.',
+  'News trading':
+    'Very sensitive profile: the tool favors firms where news trading is allowed or less restrictive.',
+  'EA / Algo':
+    'Automation profile: the tool favors firms that accept EAs or allow them on request.',
+  Breakout:
+    'Range-break / momentum profile: the tool favors intraday firms with readable drawdown and cleaner payout signals.',
+  'Débutant prudent':
+    'Safety-first profile: strong score, low payout risk, non-trailing drawdown and simple rules first.',
+};
+
+function labelIncludes(value: string, pattern: RegExp) {
+  return pattern.test(value.toLowerCase());
+}
+
+function isClosed(firm: PropFirm) {
+  return labelIncludes(firm.status, /ferm/);
+}
+
+function isWatchlist(firm: PropFirm) {
+  return labelIncludes(firm.status, /surveiller/);
+}
+
+function isNewsAllowed(firm: PropFirm) {
+  return labelIncludes(firm.newsTrading, /autoris|allowed/);
+}
+
+function isNewsBlocked(firm: PropFirm) {
+  return labelIncludes(firm.newsTrading, /restreint|restricted|non recommand|not recommended/);
+}
+
+function marketMatch(firm: PropFirm, market: MarketChoice) {
+  if (market === 'Tous') return true;
+  const text = `${firm.styles.join(' ')} ${firm.bestFor} ${firm.products.map((product) => product.tradableAssets.join(' ')).join(' ')}`.toLowerCase();
+
+  if (market === 'Forex/CFD') return /forex|cfd|indices|metaux|mati/i.test(text) && !/futures/.test(text);
+  return text.includes(market.toLowerCase());
+}
+
+function styleFit(firm: PropFirm, style: StyleChoice) {
+  const text = `${firm.styles.join(' ')} ${firm.bestFor} ${firm.products.map((product) => product.description).join(' ')}`.toLowerCase();
+
+  if (style === 'Débutant prudent') {
+    return firm.reviewSignals.payoutRisk === 'Faible' && firm.drawdownType !== 'Trailing' ? 22 : firm.status === 'Active' ? 8 : -10;
+  }
+
+  if (style === 'SMC / ICT') {
+    let fit = 0;
+    if (/forex|indices|cfd/.test(text)) fit += 10;
+    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD') fit += 14;
+    if (firm.drawdownType === 'Hybride') fit += 6;
+    if (firm.reviewSignals.payoutRisk === 'Faible') fit += 10;
+    if (firm.newsTrading === 'Variable') fit += 3;
+    if (firm.eaAllowed === 'Non' || firm.eaAllowed === 'No') fit += 4;
+    if (firm.drawdownType === 'Trailing') fit -= 10;
+    return fit;
+  }
+
+  if (style === 'Swing trading') {
+    let fit = firm.drawdownType === 'Static' || firm.drawdownType === 'EOD' ? 22 : firm.drawdownType === 'Hybride' ? 8 : -12;
+    if (firm.reviewSignals.payoutRisk === 'Faible') fit += 8;
+    if (isNewsBlocked(firm)) fit -= 4;
+    return fit;
+  }
+
+  if (style === 'Day trading') {
+    let fit = firm.status === 'Active' ? 12 : -6;
+    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD' || firm.drawdownType === 'Hybride') fit += 8;
+    if (firm.priceFrom > 0 && firm.priceFrom <= 150) fit += 6;
+    if (firm.reviewSignals.payoutRisk !== 'Critique') fit += 8;
+    return fit;
+  }
+
+  if (style === 'Scalping') {
+    let fit = text.includes('scalping') ? 16 : 6;
+    if (isNewsBlocked(firm)) fit -= 7;
+    if (firm.eaAllowed === 'Non' || firm.eaAllowed === 'No') fit -= 4;
+    if (firm.reviewSignals.payoutRisk === 'Faible') fit += 4;
+    return fit;
+  }
+
+  if (style === 'News trading') {
+    if (isNewsAllowed(firm)) return 18;
+    if (isNewsBlocked(firm)) return -18;
+    return 4;
+  }
+
+  if (style === 'EA / Algo') {
+    if (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes') return 18;
+    if (firm.eaAllowed === 'Sur demande' || firm.eaAllowed === 'On request') return 8;
+    if (firm.eaAllowed === 'Non' || firm.eaAllowed === 'No') return -18;
+    return 2;
+  }
+
+  if (style === 'Breakout') {
+    let fit = firm.status === 'Active' ? 8 : -8;
+    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD') fit += 10;
+    if (firm.newsTrading === 'Variable' || isNewsAllowed(firm)) fit += 5;
+    if (firm.reviewSignals.payoutRisk === 'Faible') fit += 8;
+    return fit;
+  }
+
+  return firm.status === 'Active' ? 7 : -4;
+}
+
+function recommendationScore(
+  firm: PropFirm,
+  market: MarketChoice,
+  style: StyleChoice,
+  budget: BudgetChoice,
+  priority: PriorityChoice,
+  drawdown: DrawdownChoice
+) {
+  let score = firm.score;
+
+  if (firm.status === 'Active') score += 10;
+  if (isWatchlist(firm)) score -= 12;
+  if (isClosed(firm)) score -= 100;
+
+  score += marketMatch(firm, market) ? 18 : -24;
+  score += styleFit(firm, style);
+
+  if (budget !== 'Tous') {
+    const maxBudget = Number(budget);
+    if (firm.priceFrom <= 0) score -= 4;
+    else if (firm.priceFrom <= maxBudget) score += priority === 'Prix' ? 22 : 10;
+    else score -= Math.min(32, Math.round((firm.priceFrom - maxBudget) / 8));
+  }
+
+  if (priority === 'Payout') score -= Math.round(firm.reviewSignals.payoutRiskScore * 0.45);
+  else score -= Math.round(firm.reviewSignals.payoutRiskScore * 0.25);
+
+  if (priority === 'Règles') {
+    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD') score += 12;
+    if (firm.newsTrading === 'Variable' || firm.eaAllowed === 'Variable') score -= 8;
+  }
+
+  if (priority === 'Score global') score += Math.round(firm.score * 0.18);
+
+  if (drawdown === 'Static/EOD') {
+    score += firm.drawdownType === 'Static' || firm.drawdownType === 'EOD' ? 14 : -10;
+  }
+
+  if (drawdown === 'Trailing accepté' && firm.drawdownType === 'Trailing') score += 6;
+
+  return score;
+}
+
+function bestReason(firm: PropFirm, style: StyleChoice, priority: PriorityChoice) {
+  if (priority === 'Payout' && firm.reviewSignals.payoutRisk === 'Faible') return 'Low payout risk and solid overall score.';
+  if (style === 'SMC / ICT' && (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD')) return 'Good manual SMC fit: readable drawdown and rules to review before execution.';
+  if (style === 'Swing trading' && (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD')) return 'More readable drawdown for holding positions.';
+  if (style === 'Day trading' && firm.status === 'Active') return 'Good intraday profile: active firm, usable score and comparable signals.';
+  if (style === 'Scalping') return 'Check clauses on fast trades, news and prohibited strategies.';
+  if (style === 'EA / Algo' && (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes')) return 'EAs allowed, with rules to review before use.';
+  if (style === 'News trading' && isNewsAllowed(firm)) return 'News trading is more permissive than average.';
+  if (style === 'Breakout') return 'Momentum profile: monitor drawdown, spread and consistency rules.';
+  if (priority === 'Prix' && firm.priceFrom > 0) return `Entry ticket around ${formatUsd(firm.priceFrom)}.`;
+  return toEnglishText(firm.bestFor);
+}
+
+export default function OutilsClient() {
+  const allOptions = useMemo(() => [...topFirms].slice(0, 90), []);
+  const [compareSlugs, setCompareSlugs] = useState(defaultCompare);
+  const [market, setMarket] = useState<MarketChoice>('Forex/CFD');
+  const [style, setStyle] = useState<StyleChoice>('SMC / ICT');
+  const [budget, setBudget] = useState<BudgetChoice>('150');
+  const [priority, setPriority] = useState<PriorityChoice>('Payout');
+  const [drawdown, setDrawdown] = useState<DrawdownChoice>('Static/EOD');
+
+  const selectedFirms = compareSlugs
+    .map((slug) => propFirms.find((firm) => firm.slug === slug))
+    .filter((firm): firm is PropFirm => Boolean(firm));
+
+  const recommendations = useMemo(() => {
+    return [...propFirms]
+      .filter((firm) => !isClosed(firm))
+      .map((firm) => ({
+        firm,
+        fitScore: recommendationScore(firm, market, style, budget, priority, drawdown),
+      }))
+      .sort((a, b) => b.fitScore - a.fitScore)
+      .slice(0, 6);
+  }, [budget, drawdown, market, priority, style]);
+
+  function updateCompare(index: number, slug: string) {
+    setCompareSlugs((current) => current.map((item, itemIndex) => (itemIndex === index ? slug : item)));
+  }
+
+  return (
+    <main className="container tools-page">
+      <section className="tools-hero">
+        <div>
+          <div className="eyebrow">PropRadar Tools</div>
+          <h1>Compare prop firms and find the one that fits your style.</h1>
+          <p className="lead">
+            Put several firms side by side, then use the selector to find a prop firm adapted to SMC / ICT,
+            swing trading, day trading, scalping, news trading, EA or breakout.
+          </p>
+          <div className="actions">
+            <a href="#comparatif" className="btn btn-primary">Compare firms</a>
+            <a href="#style-finder" className="btn">Find my prop firm</a>
+          </div>
+        </div>
+        <div className="tools-hero-panel">
+          <div><strong>{propFirms.length}</strong><span>firms in the radar</span></div>
+          <div><strong>2</strong><span>interactive tools</span></div>
+          <div><strong>0</strong><span>scores influenced by affiliation</span></div>
+        </div>
+      </section>
+
+      <section className="section" id="comparatif">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Side-by-side comparison</div>
+            <h2>Choose up to 3 prop firms.</h2>
+          </div>
+          <Link href="/comparateur" className="btn">Open full comparator</Link>
+        </div>
+
+        <div className="compare-select-grid">
+          {compareSlugs.map((slug, index) => (
+            <label className="tool-field" key={`${slug}-${index}`}>
+              <span>Firm {index + 1}</span>
+              <select value={slug} onChange={(event) => updateCompare(index, event.target.value)}>
+                {allOptions.map((firm) => (
+                  <option value={firm.slug} key={firm.slug}>{firm.name}</option>
+                ))}
+              </select>
+            </label>
+          ))}
+        </div>
+
+        <div className="compare-board">
+          {selectedFirms.map((firm) => (
+            <article className="compare-card" key={firm.slug}>
+              <div className="compare-card-head">
+                <div className="firm-result-main">
+                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
+                  <div>
+                    <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
+                    <span>{toEnglishText(firm.bestFor)}</span>
+                  </div>
+                </div>
+                <span className={`badge ${scoreClass(firm.score)}`}>{firm.score}/100</span>
+              </div>
+              <div className="compare-metric-grid">
+                <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+                <div><span>Status</span><strong className={`badge ${statusClass(firm.status)}`}>{toEnglishText(firm.status)}</strong></div>
+                <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
+                <div><span>News</span><strong>{toEnglishText(firm.newsTrading)}</strong></div>
+                <div><span>EA</span><strong>{toEnglishText(firm.eaAllowed)}</strong></div>
+                <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
+                <div><span>Trustpilot</span><strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong></div>
+                <div><span>Affiliate status</span><strong className={`badge ${relationshipClass(firm.commercialRelationship)}`}>{firm.commercialRelationship === 'Affiliation transparente' ? 'Affiliate' : 'No conflict'}</strong></div>
+              </div>
+              <p>{toEnglishText(firm.reviewSignals.radarVerdict ?? firm.verdict)}</p>
+              <Link href={`/firm/${firm.slug}`} className="btn btn-primary">Read profile</Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="style-finder">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Style Picker</div>
+            <h2>Find a prop firm suited to your profile.</h2>
+          </div>
+          <p className="section-note">This fit score does not replace the profile page: it helps prioritize your shortlist.</p>
+        </div>
+
+        <div className="style-tool">
+          <div className="style-controls">
+            <div className="style-note">
+              <span>Selected style</span>
+              <strong>{toEnglishText(style)}</strong>
+              <p>{styleNotes[style]}</p>
+            </div>
+            <label className="tool-field">
+              <span>Market</span>
+              <select value={market} onChange={(event) => setMarket(event.target.value as MarketChoice)}>
+                {marketChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+              </select>
+            </label>
+            <label className="tool-field">
+              <span>Style</span>
+              <select value={style} onChange={(event) => setStyle(event.target.value as StyleChoice)}>
+                {styleChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+              </select>
+            </label>
+            <label className="tool-field">
+              <span>Max budget</span>
+              <select value={budget} onChange={(event) => setBudget(event.target.value as BudgetChoice)}>
+                {budgetChoices.map((item) => <option value={item} key={item}>{item === 'Tous' ? 'All budgets' : `${item}$`}</option>)}
+              </select>
+            </label>
+            <label className="tool-field">
+              <span>Priority</span>
+              <select value={priority} onChange={(event) => setPriority(event.target.value as PriorityChoice)}>
+                {priorityChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+              </select>
+            </label>
+            <label className="tool-field">
+              <span>Drawdown</span>
+              <select value={drawdown} onChange={(event) => setDrawdown(event.target.value as DrawdownChoice)}>
+                {drawdownChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+              </select>
+            </label>
+          </div>
+
+          <div className="recommendation-list">
+            {recommendations.map(({ firm, fitScore }, index) => (
+              <Link href={`/firm/${firm.slug}`} className="recommendation-row" key={firm.slug}>
+                <span className="guide-rank">{index + 1}</span>
+                <div className="firm-result-main">
+                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
+                  <div>
+                    <strong>{firm.name}</strong>
+                    <span>{bestReason(firm, style, priority)}</span>
+                  </div>
+                </div>
+                <div><span>Fit</span><strong>{Math.min(100, Math.max(0, Math.round(fitScore)))}/100</strong></div>
+                <div><span>Price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+                <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
+                <span className={`badge ${scoreClass(firm.score)}`}>{firm.score}/100</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
