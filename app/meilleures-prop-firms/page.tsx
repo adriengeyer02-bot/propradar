@@ -1,0 +1,136 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import FirmLogo from '../components/FirmLogo';
+import {
+  formatUsd,
+  payoutRiskClass,
+  propFirms,
+  relationshipClass,
+  reviewReliabilityClass,
+  scoreClass,
+  topFirms,
+} from '../lib/propFirms';
+import { toEnglishText } from '../lib/i18n';
+
+export const metadata: Metadata = {
+  title: 'Best reliable prop firms',
+  description:
+    'PropRadar ranking of the strongest prop firms: score, price, payout, filtered Trustpilot, Reddit and commercial transparency.',
+  alternates: {
+    canonical: '/meilleures-prop-firms',
+  },
+};
+
+export default function BestPropFirmsPage() {
+  const shortlist = topFirms
+    .filter((firm) => firm.reviewSignals.payoutRisk !== 'Critique')
+    .slice(0, 12);
+  const noConflictCount = propFirms.filter((firm) => firm.commercialRelationship === 'Aucune').length;
+
+  return (
+    <main className="container guide-page">
+      <section className="guide-hero">
+        <div>
+          <div className="eyebrow">Decision Guide</div>
+          <h1>Best reliable prop firms according to PropRadar</h1>
+          <p className="lead">
+            The right choice is not just about challenge price. This guide ranks firms using the PropRadar score,
+            payout risk, filtered reviews, sources and commercial transparency.
+          </p>
+          <div className="actions">
+            <Link href="/comparateur" className="btn btn-primary">Open full comparator</Link>
+            <Link href="/risques-payout" className="btn">View payout risks</Link>
+          </div>
+        </div>
+        <div className="guide-proof-panel">
+          <div><strong>{propFirms.length}</strong><span>firms tracked</span></div>
+          <div><strong>{shortlist.length}</strong><span>strong profiles shown here</span></div>
+          <div><strong>{noConflictCount}</strong><span>with no commercial link</span></div>
+        </div>
+      </section>
+
+      <section className="page-insight-strip" aria-label="Best prop firm decision summary">
+        <Link href="/comparateur">
+          <span>Shortlist</span>
+          <strong>{shortlist.length}</strong>
+          <small>Ranked profiles excluding critical payout risk.</small>
+        </Link>
+        <Link href="/risques-payout">
+          <span>Payout filter</span>
+          <strong>Visible</strong>
+          <small>Risk badges stay next to every recommendation.</small>
+        </Link>
+        <Link href="/audit">
+          <span>Proof check</span>
+          <strong>Sources</strong>
+          <small>Use audit levels before treating a firm as safe.</small>
+        </Link>
+        <Link href="/promos">
+          <span>Deals later</span>
+          <strong>After risk</strong>
+          <small>Discounts should not decide the ranking.</small>
+        </Link>
+      </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Cautious Ranking</div>
+            <h2>Top firms to compare first</h2>
+          </div>
+        </div>
+
+        <div className="guide-ranking-list">
+          {shortlist.map((firm, index) => (
+            <Link href={`/firm/${firm.slug}`} className="guide-ranking-row" key={firm.slug}>
+              <span className="guide-rank">{index + 1}</span>
+              <div className="firm-result-main">
+                <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
+                <div>
+                  <strong>{firm.name}</strong>
+                  <span>{toEnglishText(firm.bestFor)}</span>
+                </div>
+              </div>
+              <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
+              <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+              <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
+              <div><span>Trustpilot</span><strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong></div>
+              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
+                <span>Score</span>
+                <strong>{firm.score}</strong>
+                <small>/100</small>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section guide-card-grid">
+        <article className="panel">
+          <div className="eyebrow">Why this ranking</div>
+          <h2>A useful score must punish vague zones.</h2>
+          <ul className="risk-list">
+            <li>A good public rating is not enough if payouts are disputed.</li>
+            <li>A discount does not offset a dangerous drawdown or consistency rule.</li>
+            <li>Affiliate status stays visible and does not protect the score.</li>
+            <li>Closed or watchlist firms remain in the radar to avoid blind spots.</li>
+          </ul>
+        </article>
+        <article className="panel">
+          <div className="eyebrow">Transparency</div>
+          <h2>Commercial links are visible</h2>
+          <div className="guide-signal-stack">
+            {shortlist.slice(0, 6).map((firm) => (
+              <Link href={`/firm/${firm.slug}`} key={firm.slug}>
+                <span>{firm.name}</span>
+                <strong className={`badge ${relationshipClass(firm.commercialRelationship)}`}>
+                  {firm.commercialRelationship === 'Affiliation transparente' ? 'Affiliate' : 'No conflict'}
+                </strong>
+              </Link>
+            ))}
+          </div>
+        </article>
+      </section>
+    </main>
+  );
+}
