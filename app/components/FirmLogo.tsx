@@ -1,0 +1,74 @@
+'use client';
+
+import { useMemo, useState } from 'react';
+import type { CSSProperties } from 'react';
+
+type FirmLogoProps = {
+  name: string;
+  logoDomain?: string;
+  size?: 'sm' | 'md' | 'lg';
+};
+
+const palette = [
+  ['#2563eb', '#60a5fa'],
+  ['#0f766e', '#2dd4bf'],
+  ['#7c3aed', '#a78bfa'],
+  ['#be123c', '#fb7185'],
+  ['#b45309', '#f59e0b'],
+  ['#047857', '#34d399'],
+  ['#1d4ed8', '#22d3ee'],
+  ['#4338ca', '#818cf8'],
+];
+
+function initials(name: string) {
+  const cleanName = name.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
+  const parts = cleanName.split(/\s+/).filter(Boolean);
+
+  if (parts.length === 0) return 'PR';
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+
+  return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
+}
+
+function paletteIndex(name: string) {
+  return name.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0) % palette.length;
+}
+
+export default function FirmLogo({ name, logoDomain, size = 'md' }: FirmLogoProps) {
+  const [sourceIndex, setSourceIndex] = useState(0);
+  const [primary, secondary] = useMemo(() => palette[paletteIndex(name)], [name]);
+  const logoSources = useMemo(() => {
+    if (!logoDomain) return [];
+
+    return [
+      `https://www.google.com/s2/favicons?domain=${logoDomain}&sz=128`,
+      `https://icons.duckduckgo.com/ip3/${logoDomain}.ico`,
+      `https://logo.clearbit.com/${logoDomain}?size=128`,
+    ];
+  }, [logoDomain]);
+  const currentLogo = logoSources[sourceIndex];
+
+  return (
+    <span
+      className={`firm-logo firm-logo-${size} ${currentLogo ? 'firm-logo-image' : 'firm-logo-fallback'}`}
+      style={{
+        '--logo-primary': primary,
+        '--logo-secondary': secondary,
+      } as CSSProperties}
+      aria-hidden="true"
+    >
+      {currentLogo ? (
+        <img
+          src={currentLogo}
+          alt=""
+          onError={() => setSourceIndex((index) => index + 1)}
+          loading={size === 'lg' ? 'eager' : 'lazy'}
+          fetchPriority={size === 'lg' ? 'high' : 'auto'}
+          decoding="async"
+        />
+      ) : (
+        <span>{initials(name)}</span>
+      )}
+    </span>
+  );
+}
