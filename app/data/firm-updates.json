@@ -14,7 +14,8 @@
             "status"
           ]
         }
-      ]
+      ],
+      "set": {}
     },
     "topstep": {
       "reviewedAt": "2026-10-23",
@@ -58,7 +59,8 @@
       "set": {
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 54942,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftmo.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftmo.com",
+        "payoutDelay": "14-day reward cycle; review within 1-2 business days, payment typically 1-2 business days after invoice approval"
       },
       "changelog": [
         {
@@ -69,6 +71,26 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot read as 4.8 with 50,353 reviews (previous note said roughly 45k). Payout wording aligned with FTMO's FAQ. Rule change: from 12 October 2026 the Consistency rule replaces the Best Day Rule for new 1-Step Challenge orders (older orders keep the Best Day Rule). Entry price not re-read (pricing block not readable), left unchanged.",
+          "source": "https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "FTMO trading update, 8 Oct 2026 (official)",
+          "url": "https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/"
+        },
+        {
+          "label": "FTMO FAQ: how do I withdraw my profits (official)",
+          "url": "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/"
         }
       ]
     },
@@ -77,7 +99,8 @@
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 40309,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com",
+        "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval"
       },
       "changelog": [
         {
@@ -88,6 +111,333 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot read as 4.7 with 39,724 reviews. Payout wording aligned with The5ers' withdrawals FAQ. Entry price left unchanged: the official pricing table could not be read cleanly.",
+          "source": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "The5ers withdrawals FAQ (official)",
+          "url": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+        }
+      ]
+    },
+    "fundednext": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor flagged fundednext.com as 'no-trading-content'; checked by hand: the official site loads normally (JavaScript-rendered page, false positive). Trustpilot read as 4.5 with 82,113 reviews. Price and split left unchanged: the cheapest list price now appears to be Stellar Lite 5K at $32.99, a different product from the one behind the stored 59, pending a product-mapping decision.",
+          "source": "https://ie.trustpilot.com/review/fundednext.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 82113,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundednext.com"
+      },
+      "addSources": [
+        {
+          "label": "FundedNext Stellar Lite (official)",
+          "url": "https://fundednext.com/cfds/stellar-lite"
+        }
+      ]
+    },
+    "brightfunded": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor flagged brightfunded.com as 'no-trading-content'; checked by hand: the official site loads normally (operator Bright Global FZCO, trading as BrightFunded), false positive. Prices are shown in EUR (2-Step Bright 5K list EUR 47); stored price left unchanged. Default profit split 80/20 confirmed on the help center.",
+          "source": "https://help.brightfunded.com/en/articles/9268736-how-does-my-reward-split-work-on-my-funded-account"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/brightfunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/brightfunded.com)."
+      ]
+    },
+    "hantec-trader": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported hantectrader.com redirecting to rzrfunded.com. Checked by hand: on 2026-10-19 the firm announced it now operates as RZR Funded (formerly Hantec Trader), stating that challenges, funded accounts, splits, drawdowns and payout schedules are unchanged. Treated as a rebrand, not a stale domain: no domain warning set. Prices left unchanged while a launch promotion runs until 2026-11-01.",
+          "source": "https://www.newswire.ca/news-releases/hantec-trader-becomes-rzr-funded-as-firm-enters-new-phase-of-growth-894594107.html"
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addSources": [
+        {
+          "label": "Press release: Hantec Trader becomes RZR Funded (2026-10-19)",
+          "url": "https://www.newswire.ca/news-releases/hantec-trader-becomes-rzr-funded-as-firm-enters-new-phase-of-growth-894594107.html"
+        },
+        {
+          "label": "RZR Funded: why we are rebranding (official)",
+          "url": "https://rzrfunded.com/why-we-are-rebranding/"
+        }
+      ]
+    },
+    "funderpro": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Payout terms filled from the official challenge page (bi-weekly rewards, typically paid within 1 working day). Entry price $69 and 80% split consistent with the official page; unchanged.",
+          "source": "https://funderpro.com/the-challenge/",
+          "fields": [
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/funderpro.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval"
+      },
+      "addSources": [
+        {
+          "label": "FunderPro Classic Challenge (official)",
+          "url": "https://funderpro.com/the-challenge/"
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/funderpro.com)."
+      ]
+    },
+    "goat-funded-trader": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Official help center confirms an 80% base profit split and a bi-weekly payout cycle (articles updated 5 October 2026). Entry price left unchanged: official pages show promotional prices without a clear list price.",
+          "source": "https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Checked on the ca.trustpilot.com mirror of the same profile.",
+          "source": "https://www.trustpilot.com/review/goatfundedtrader.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
+      ]
+    },
+    "blue-guardian": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Official site live. Help center states an 80% profit split for 2-Step Nano. Entry price left unchanged: the 5K price on the site could not be mapped to a plan, and a 25% promotion is running.",
+          "source": "https://help.blueguardian.com/en/articles/16445450-2-step-nano-rules"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
+      ]
+    },
+    "e8-markets": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Official site confirms E8 One 5K at a $48 list price and an 80% default payout split; both unchanged.",
+          "source": "https://e8markets.com/trade-like-a-pro"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/e8markets.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
+      ]
+    },
+    "alpha-capital-group": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Entry price updated from 97 to 27: the firm's own price table (updated 21 September 2026, checked against checkout per the page) lists Alpha Pro 6% 5K at $27. 80% standard split unchanged.",
+          "source": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026",
+          "fields": [
+            "priceFrom"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/alphacapitalgroup.uk",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "priceFrom": 27
+      },
+      "addSources": [
+        {
+          "label": "Alpha Capital Group evaluation prices 2026 (official)",
+          "url": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026"
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/alphacapitalgroup.uk)."
+      ]
+    },
+    "trade-the-pool": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Profit split corrected from 80 to 70: Trade The Pool's own article (8 October 2026) cites Program Terms of 26 April 2026 stating a 70/30 split for FLEX and MAX accounts; only the Edge Program advertises 80%. Trustpilot read as 4.5 with 921 reviews. Entry price left unchanged (list vs discounted price unclear).",
+          "source": "https://tradethepool.com/fundamental/profit-split-how-prop-firm-payouts-work/",
+          "fields": [
+            "profitSplit",
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "profitSplit": 70,
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 921,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
+        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
+      },
+      "addSources": [
+        {
+          "label": "Trade The Pool: profit split explained (official, 2026-10-08)",
+          "url": "https://tradethepool.com/fundamental/profit-split-how-prop-firm-payouts-work/"
+        },
+        {
+          "label": "Trade The Pool program page (official)",
+          "url": "https://tradethepool.com/the-program/"
+        }
+      ]
+    },
+    "funded-trading-plus": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Payout terms filled from the official help center. 80/20 starting split confirmed. Entry price 119 left unchanged although it matches a legacy program: current list prices were only found on third-party sites.",
+          "source": "https://help.fundedtradingplus.com/payouts-overview/",
+          "fields": [
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/fundedtradingplus.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
+      },
+      "addSources": [
+        {
+          "label": "Funded Trading Plus payouts overview (official)",
+          "url": "https://help.fundedtradingplus.com/payouts-overview/"
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedtradingplus.com)."
+      ]
+    },
+    "dei-funded": {
+      "reviewedAt": "2026-10-23",
+      "addSources": [
+        {
+          "label": "PropRadar domain monitor, 2026-10-23",
+          "url": "https://github.com/adriengeyer02-bot/propradar/issues/4"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported deifunded.com redirecting to datasidney.xyz, an unrelated domain. The existing domain warning (unrelated content since the July 2026 review) is kept unchanged and PropRadar still does not link to the domain. A third-party listing marks the firm as no longer operating, without a date; status left unchanged pending a primary source.",
+          "source": "https://github.com/adriengeyer02-bot/propradar/issues/4"
+        }
+      ]
+    },
+    "qt-funded": {
+      "reviewedAt": "2026-10-23",
+      "addSources": [
+        {
+          "label": "FXEmpire QTFunded profile",
+          "url": "https://www.fxempire.com/prop-firms/qtfunded"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported qtfunded.com redirecting to quanttekel.com. Checked: consistent with the relationship already documented in this profile (qtfunded.com points to the qtfunded.quanttekel.com portal; QT Funded is described as Quant Tekel's prop trading arm). Not a stale domain: no domain warning set.",
+          "source": "https://www.fxempire.com/prop-firms/qtfunded"
+        }
+      ]
+    },
+    "sabiotrade": {
+      "reviewedAt": "2026-10-23",
+      "addSources": [
+        {
+          "label": "FXEmpire SabioTrade profile",
+          "url": "https://www.fxempire.com/prop-firms/sabiotrade"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported sabiotrade.com redirecting to sabiotrade.us. Checked: third-party reviews (FXEmpire; FundedTrading, updated 7 August 2026) describe sabiotrade.us as SabioTrade's dedicated site for US clients, so the redirect is most likely regional (the monitor runs from US servers). No domain warning set.",
+          "source": "https://www.fxempire.com/prop-firms/sabiotrade"
         }
       ]
     }
