@@ -156,6 +156,61 @@ export const guideArticles: Record<string, GuideArticle> = {
     ],
   },
 
+  'goat-funded-trader-avis': {
+    updated: '2026-10-23',
+    intro:
+      'GOAT Funded Trader is one of the most visible prop firms of the last two years: aggressive discounts, a large range of models and constant social media presence. Visibility is not the same as reliability. This review separates what is documented from what is marketing, and puts the funded-account rules first, because that is where traders lose payouts.',
+    sections: [
+      {
+        heading: 'Who runs GOAT Funded Trader',
+        paragraphs: [
+          'GOAT Funded Trader launched in May 2023. It is a trade name of Wishes Tower International Limited, a Hong Kong company, and the simulated trading is provided by Goat Funded LTD in Saint Lucia. No financial regulator supervises the service. Its terms describe simulated accounts, non-refundable purchases and broad discretion over payouts, which is common in the industry but worth knowing before you buy.',
+          'PropRadar scores it 68/100 and keeps it on the watchlist: the brand is real and pays traders, but its track record is short and its payout terms leave a lot of room for interpretation. PropRadar has an affiliate relationship with GOAT Funded Trader; it does not change this score or this review.',
+        ],
+      },
+      {
+        heading: 'The Trustpilot situation',
+        paragraphs: [
+          'On October 23, 2026, Trustpilot showed no TrustScore for the company. Its profile states that "this company\'s rating is unavailable due to a breach of our guidelines" and that Trustpilot "removed a number of fake reviews". The profile still lists 4,352 reviews, split sharply: 46% five-star and 40% one-star.',
+          'Treat the homepage claims of a near-perfect rating with caution while that notice stands. A polarised review profile usually means two very different experiences: traders who were paid quickly, and traders whose payouts were denied under rules they had not read closely.',
+        ],
+      },
+      {
+        heading: 'The funded-account rules that matter most',
+        paragraphs: [
+          'The challenge models are conventional. The 2-Step GOAT model asks for 8% then 6% with a 4% daily loss and a 10% static maximum loss; the 2-Step Standard asks for 10% then 5% with 5% daily and 10% maximum loss; the 1-Step asks for 10% with a 3% daily loss and a 6% static maximum loss. The 3-Step model was retired in August 2026. These figures come from a third-party review checked on October 5, 2026: confirm them at checkout.',
+          'The rules that decide payouts start after you pass:',
+        ],
+        bullets: [
+          'Goat Guard: on funded 1-Step and 2-Step accounts, a floating loss of 2% of the initial balance cuts your split to 50%; a second trigger breaches the account.',
+          '2-minute rule: profit from trades held under two minutes is removed at payout, while losses from those trades stay on the account.',
+          'News window: profit made around high-impact news is capped at 1% of the starting balance.',
+          'Daily profit cap: a funded account can bank at most $3,000 of profit per day.',
+          'Instant models use trailing drawdowns and close the account on a 1% or 2% floating loss depending on the model.',
+        ],
+      },
+      {
+        heading: 'Payouts',
+        paragraphs: [
+          'The default profit split is 80%, with a paid upgrade to 100% at checkout and a scaling plan that can raise it to 90-95%. Most models pay every 14 days, with a $100 minimum and a 3% processing fee. The first two payouts are capped at the lower of 6% of the starting balance or $10,000. Payment methods include Rise, bank transfer, Skrill and crypto, each with its own limit.',
+          'Several public claims conflict with the help center, such as payout speed (24 hours versus 2 business days) and maximum account size. When marketing and terms disagree, the terms are what will be applied to your payout.',
+        ],
+      },
+      {
+        heading: 'Who GOAT Funded Trader suits',
+        paragraphs: [
+          'It can work for a disciplined trader with small, controlled floating losses, holding periods well above two minutes and no reliance on news spikes, who wants a cheap entry. It suits scalpers, news traders and anyone who lets trades breathe through large intraday drawdowns poorly, because the funded rules target exactly those behaviours. If rule clarity matters more to you than price, compare it with the higher-scored firms in our ranking first.',
+        ],
+      },
+    ],
+    sources: [
+      { label: 'GOAT Funded Trader on Trustpilot', url: 'https://www.trustpilot.com/review/goatfundedtrader.com' },
+      { label: 'GOAT Funded Trader terms and conditions', url: 'https://www.goatfundedtrader.com/legal/terms-and-conditions' },
+      { label: 'GOAT help center: 2-Step Standard', url: 'https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard' },
+      { label: 'FuturesHive review, checked October 5, 2026 (third party)', url: 'https://www.futureshive.com/blog/goat-funded-trader-review-2026' },
+    ],
+  },
+
   'topstep-review': {
     updated: '2026-10-23',
     intro:

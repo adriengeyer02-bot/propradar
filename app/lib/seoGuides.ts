@@ -1811,42 +1811,47 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
   },
   'goat-funded-trader-avis': {
-    title: 'GOAT Funded Trader Review: FIRSTGFT, BOGO40 and Payouts',
-    metaDescription: 'GOAT Funded Trader review: compare FIRSTGFT and BOGO40, 1-step, 2-step, 3-step and Instant rules, payout terms, news trading and key risks.',
-    eyebrow: 'Brand review',
-    h1: 'Goat Funded Trader review: strong offer, but reread the rules before buying',
-    answer: 'GOAT Funded Trader has a broad offer and two documented codes: FIRSTGFT gives new customers up to 50% off eligible plans, while BOGO40 gives 40% off and a same-size account only after a first successful payout and support claim. Rules still vary heavily by model, so the exact program matters more than the headline discount.',
-    primaryKeywords: ['Goat Funded Trader review', 'GFT prop firm', 'Goat Funded Trader discount code'],
-    secondaryKeywords: ['FIRSTGFT code', 'BOGO40 code', 'GFT payout', 'GFT instant funding', 'Goat Funded Trader rules', 'Goat Funded Trader news trading'],
+    title: 'GOAT Funded Trader Review 2026: Is It Legit?',
+    metaDescription: 'Is GOAT Funded Trader legit? 2026 review: Hong Kong and Saint Lucia operators, funded-account rules, payout caps, withheld Trustpilot rating and who it suits.',
+    eyebrow: 'Firm review',
+    h1: 'GOAT Funded Trader review 2026: is it legit?',
+    answer: 'GOAT Funded Trader is a real, very visible prop firm launched in 2023 and run from Hong Kong and Saint Lucia, with no financial regulator. It does pay traders, but its funded accounts carry strict rules (a 2% floating-loss guard, a 2-minute minimum hold, capped first payouts) and Trustpilot currently withholds its rating for a guideline breach. Read the funded rules before the discount.',
+    primaryKeywords: ['goat funded trader review', 'is goat funded trader legit', 'goat funded trader'],
+    secondaryKeywords: ['goat funded trader trustpilot', 'goat funded trader rules', 'goat funded trader payout', 'goat guard', 'GFT prop firm', 'goatfundedtrader'],
     checks: [
-      'Test the checkout rules before finalizing a large account purchase.',
-      'Compare 1 step, 2 step, 3 step and Instant because news, weekend holding, daily loss, max loss and payout delay can differ.',
-      'Verify news-trading restrictions, weekend holding, lot size and payout delay on the exact model.',
-      'Read recent Reddit, Discord and X feedback from the last 30 to 60 days.',
-      'Look for payout denials and the most common rejection reasons on the program you want.',
-      'Compare FIRSTGFT and BOGO40 after choosing the right model, not before.',
+      'Read the funded-account rules, not only the challenge: Goat Guard, the 2-minute rule and the news-window cap apply after you pass.',
+      'Check the payout cap on your first two withdrawals and the 3% processing fee.',
+      'Confirm which model you are buying: the 3-Step model was retired in August 2026 and 2-Step Pro stopped selling in June 2026.',
+      'Read recent payout feedback from the last 30 to 60 days, not only star ratings.',
+      'Compare discount codes only after choosing a model that fits your trading.',
     ],
     faq: [
       {
-        question: 'Is Goat Funded Trader reliable?',
+        question: 'Is GOAT Funded Trader legit?',
         answer:
-          'GFT has a visible offer and enough public attention to deserve comparison, but reliability depends on the exact model. The important checks are payout rules, recent payout feedback, news restrictions, weekend holding and whether the trader followed the program rules.',
+          'It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 68/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).',
       },
       {
-        question: 'Are FIRSTGFT or BOGO40 enough reason to buy?',
+        question: 'Why is the GOAT Funded Trader Trustpilot rating unavailable?',
         answer:
-          'No. A discount is useful only after you have chosen a model whose rules match your trading. A lower checkout price does not compensate for news, holding, lot-size or payout restrictions that block your style.',
+          'Trustpilot states that the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews for the company. The profile still shows 4,352 reviews, 46% five-star and 40% one-star (checked October 23, 2026).',
       },
       {
-        question: 'Which GFT model is safest to compare first?',
+        question: 'What is the Goat Guard rule?',
         answer:
-          'Start by deciding whether you need speed or rule clarity. 1-step and Instant are faster, while 2-step and 3-step can be easier to evaluate because the validation process gives more time to test discipline before funded-stage rules matter.',
+          'On funded 1-Step and 2-Step accounts, a floating loss of 2% of the initial balance triggers Goat Guard: the first trigger cuts your profit split to 50%, a second one breaches the account, according to third-party reviews of the current rules.',
+      },
+      {
+        question: 'Are FIRSTGFT or BOGO40 worth using?',
+        answer:
+          'Only once you have chosen a model whose funded rules fit your trading. A discount does not offset rules that block your style. Codes change often: confirm the current offer at checkout.',
       },
     ],
     internalLinks: [
-      { label: 'Goat Funded Trader profile', href: '/firm/goat-funded-trader' },
-      { label: 'Prop firm deals', href: '/promos' },
-      { label: 'Instant funding', href: '/guides/prop-firm-instant-funding' },
+      { label: 'GOAT Funded Trader profile and score', href: '/firm/goat-funded-trader' },
+      { label: 'Instant funding explained', href: '/guides/prop-firm-instant-funding' },
+      { label: 'Prop firm reviews: Reddit vs Trustpilot', href: '/guides/prop-firm-avis-reddit-trustpilot' },
+      { label: 'Best prop firms 2026', href: '/meilleures-prop-firms' },
     ],
   },
   'prop-firm-instant-funding': {
