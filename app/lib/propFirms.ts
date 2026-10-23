@@ -1,3 +1,5 @@
+import { applyFirmUpdates } from './firmUpdates';
+
 export type Product = {
   id: string;
   name: string;
@@ -12757,7 +12759,11 @@ const universePropFirms: PropFirm[] = [
   }),
 ];
 
-export const propFirms: PropFirm[] = [...corePropFirms, ...universePropFirms];
+// Base profiles before dated updates (used by scripts/validate-firm-updates.ts).
+export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms];
+
+// Dated, sourced updates from app/data/firm-updates.json are applied last.
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms);
 
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');

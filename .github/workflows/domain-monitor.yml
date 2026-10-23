@@ -1,0 +1,69 @@
+name: Domain monitor
+
+# Daily check of every firm's listed official site. Opens (or updates) a
+# GitHub issue when a site starts redirecting elsewhere, goes parked, loses
+# its prop-trading content or stops responding. It never edits the site:
+# findings are confirmed by the weekly research agent or by hand.
+
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Restore previous results
+        uses: actions/cache/restore@v4
+        with:
+          path: app/data/domain-checks.json
+          key: domain-checks-${{ github.run_id }}
+          restore-keys: domain-checks-
+
+      - name: Check official domains
+        id: check
+        run: npx -y tsx@4.19.2 scripts/check-domains.ts | tee domain-report.md
+
+      - name: Save results
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: app/data/domain-checks.json
+          key: domain-checks-${{ github.run_id }}
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: domain-checks
+          path: |
+            app/data/domain-checks.json
+            domain-report.md
+
+      - name: Open or update the alert issue
+        if: steps.check.outputs.changes != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Domain monitor: official site changes"
+          number=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body-file domain-report.md
+          else
+            gh issue create --title "$title" --body-file domain-report.md
+          fi

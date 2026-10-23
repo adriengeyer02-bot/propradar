@@ -1,0 +1,47 @@
+name: Validate firm updates
+
+# Runs on every pull request that touches the firm data. Fails on invalid
+# data and flags sensitive changes (status, big score moves, domain
+# warnings, new incidents) that need a human approval before merge.
+
+on:
+  pull_request:
+    paths:
+      - 'app/data/firm-updates.json'
+      - 'app/lib/propFirms.ts'
+      - 'app/lib/firmUpdates.ts'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Previous version of the data
+        run: git show "origin/${{ github.base_ref }}:app/data/firm-updates.json" > /tmp/base-updates.json 2>/dev/null || echo '{"version":1,"firms":{}}' > /tmp/base-updates.json
+
+      - name: Validate
+        id: validate
+        run: npx -y tsx@4.19.2 scripts/validate-firm-updates.ts --base /tmp/base-updates.json | tee validation.txt
+
+      - name: Flag sensitive changes
+        if: steps.validate.outputs.sensitive == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          { echo "**Sensitive data change: human approval required before merge.**"; echo; echo '```'; cat validation.txt; echo '```'; } > comment.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file comment.md

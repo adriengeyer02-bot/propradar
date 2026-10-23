@@ -78,3 +78,10 @@ Le fichier `app/lib/propFirms.ts` contient une base coeur détaillée et une ext
 - L’extension universe sert à couvrir très largement le marché sans sur-vendre les firms peu vérifiées.
 - Une nouvelle firm universe doit avoir au minimum un site officiel ou une source de veille, un statut prudent et un score conservateur.
 - Les firms universe doivent passer en fiche coeur seulement après revue approfondie des règles, payouts et avis.
+
+## Mises à jour automatiques
+
+- `app/data/firm-updates.json` : mises à jour datées et sourcées, appliquées par-dessus `propFirms.ts` et affichées dans l'« Update history » de chaque fiche.
+- `scripts/validate-firm-updates.ts` : valide ce fichier et signale les changements sensibles (statut, forte variation de score, alerte de domaine, nouvel incident), qui demandent une validation humaine.
+- `scripts/check-domains.ts` + workflow `Domain monitor` : vérifie chaque jour les sites officiels et ouvre une issue GitHub en cas de changement.
+- Un agent Claude hebdomadaire met à jour une douzaine de firmes, ouvre une PR, et ne fusionne seul que les changements non sensibles. Règles dans `CLAUDE.md`.
