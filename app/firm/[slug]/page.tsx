@@ -171,7 +171,7 @@ function scoreProofRows(firm: PropFirm, kind: 'reddit' | 'x' | 'trustpilot' | 'p
 
   return [
     { label: 'Base', value: 'Trustpilot + incidents + marketing signals' },
-    { label: 'Review alert', value: `${firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0} tracked alert(s)` },
+    { label: 'Review alert', value: firm.reviewSignals.trustpilotRatingWithheld ? 'Trustpilot rating withheld (guideline breach)' : `${firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0} tracked alert(s)` },
     { label: 'Status', value: toEnglishText(firm.reviewSignals.trustpilotReliability) },
   ];
 }
