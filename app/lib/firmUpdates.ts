@@ -93,6 +93,15 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (update.addIncidents?.length) {
       next.incidentsDetails = [...update.addIncidents, ...next.incidentsDetails];
       next.incidents = next.incidents + update.addIncidents.length;
+
+      // Keep the Trustpilot panel consistent with a recorded guideline-breach notice.
+      const trustpilotNotice = update.addIncidents.find((item) => /trustpilot/i.test(item) && /(breach of our guidelines|fake reviews)/i.test(item));
+      if (trustpilotNotice) {
+        next.reviewSignals.trustpilotRatingWithheld = true;
+        next.trustpilotRating = undefined;
+        next.reviewSignals.trustpilotFlaggedReviewNote = trustpilotNotice;
+        next.reviewSignals.trustpilotFlags = ['Trustpilot rating withheld for a guideline breach', ...(next.reviewSignals.trustpilotFlags ?? [])];
+      }
     }
 
     return next;

@@ -1163,7 +1163,9 @@ export default async function FirmPage({ params }: Props) {
             <div className="sentiment-breakdown">
               {firm.trustpilotRating ? <span><strong>{firm.trustpilotRating}/5</strong> raw rating</span> : null}
               {firm.reviewSignals.trustpilotReviewCount ? <span><strong>{firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')}</strong> reviews</span> : null}
-              <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0}</strong> tracked review alert(s)</span>
+              {firm.reviewSignals.trustpilotRatingWithheld
+                ? <span><strong>Rating withheld</strong> by Trustpilot</span>
+                : <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0}</strong> tracked review alert(s)</span>}
             </div>
             <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.trustpilotNote)}</p>
             {firm.reviewSignals.trustpilotSourceUrl ? (
