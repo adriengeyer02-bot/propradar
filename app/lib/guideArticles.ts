@@ -87,7 +87,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'Where the rule applies: evaluation, payout or both',
         paragraphs: [
           'The same percentage can mean very different things. A consistency rule in the evaluation only delays your pass. A consistency rule on payouts can block a withdrawal after you have already made money on a funded account, which is far more frustrating. Some firms also use different limits per stage: Topstep uses 55% in the Combine and 40% on the Consistency payout path of its Express Funded Account.',
-          'FTMO applies a 50% Best Day Rule on its 1-Step path and FTMO Account, while PropRadar has not captured a percentage best-day rule on The5ers High Stakes program. Always confirm the stage and product, because the rule often exists on one program of a firm and not on another.',
+          'FTMO changed its rule on October 12, 2026: new 1-Step Challenge orders use a Consistency rule that compares your best day with your total profit, losing days included, while accounts from older orders keep the previous Best Day Rule, which only counted positive days. FTMO says that if you do not meet the requirement, you simply keep trading until you do (FTMO trading update, October 8, 2026). PropRadar has not captured a percentage best-day rule on The5ers High Stakes program. Always confirm the stage, product and order date.',
         ],
       },
       {
@@ -107,6 +107,7 @@ export const guideArticles: Record<string, GuideArticle> = {
     sources: [
       { label: 'Topstep help center: consistency at Topstep', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
       { label: 'FTMO trading objectives', url: 'https://ftmo.com/en/trading-objectives/' },
+      { label: 'FTMO trading update, October 8, 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
     ],
   },
 

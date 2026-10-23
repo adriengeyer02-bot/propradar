@@ -753,7 +753,7 @@ const corePropFirms: PropFirm[] = [
         tradableAssets: ['Forex', 'Indices', 'Commodities', 'Crypto', 'Stock CFDs'],
         minTradingDays: '4 minimum days on some models',
         hasConsistencyRule: true,
-        consistencyRule: 'FTMO applies a 50% Best Day Rule on the 1-Step path and FTMO Account. Confirm the exact stage and product before payout.',
+        consistencyRule: 'Since October 12, 2026, new 1-Step Challenge orders use a Consistency rule (best day compared with total profit, losing days included); accounts from older orders keep the 50% Best Day Rule. Confirm the stage and order date before payout.',
         linkToStart: FTMO_AFFILIATE_URL,
         isPopular: true,
       }),
