@@ -1,0 +1,491 @@
+/* ==========================================================================
+   PropRadar design refresh - October 2026
+   Concept: a due-diligence dossier read on a radar screen.
+   - One typeface, Archivo (self-hosted variable font): condensed width for
+     headlines and figures, normal width for reading. No monospace.
+   - Brand navy + radar cyan (the logo colours). Cyan marks what you can act
+     on (buttons, links, active navigation); green / amber / red only ever
+     mean risk.
+   - Quiet surfaces: hairline borders, no floating shadows, sentence-case
+     labels instead of tracked capitals.
+   Loaded after globals.css and design-system.css on purpose.
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Archivo Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --accent: #0b7285;
+  --accent-strong: #095c6b;
+  --accent-ink: #ffffff;
+  --accent-wash: rgba(11, 114, 133, 0.08);
+  --bg: #eef2f6;
+  --line: #d5dde7;
+  --display-stretch: 82%;
+  --figure-stretch: 88%;
+}
+
+html[data-theme='dark'] {
+  --accent: #36d6e7;
+  --accent-strong: #7be6f1;
+  --accent-ink: #04212a;
+  --accent-wash: rgba(54, 214, 231, 0.09);
+  --bg: #0b111a;
+  --surface: #111a26;
+  --surface-2: #152030;
+  --surface-3: #1a2738;
+  --surface-strong: #152030;
+  --surface-subtle: #0f1722;
+  --line: #213045;
+  --line-strong: #2d3f57;
+  --text: #eaf0f7;
+  --soft: #c2cedc;
+  --muted: #8d9eb5;
+}
+
+/* ---------- Type ---------- */
+
+html body,
+html body :is(button, input, select, textarea) {
+  font-family: var(--font-sans);
+}
+
+html body {
+  font-size: 15.5px;
+  font-optical-sizing: auto;
+}
+
+html body :is(h1, h2, h3) {
+  font-stretch: var(--display-stretch);
+  font-weight: 740;
+  letter-spacing: -0.012em;
+}
+
+html body h1 {
+  line-height: 1.02;
+}
+
+html body h2 {
+  line-height: 1.08;
+}
+
+/* Figures: condensed tabular Archivo instead of a monospace face. */
+html body :is(
+  .score,
+  .metric strong,
+  .stat strong,
+  .score-tile strong,
+  .firm-score-ring strong,
+  .home-preview-score,
+  .firm-result-score,
+  .signal-card-count,
+  .guide-library-card-metrics strong,
+  .promo-price,
+  .guide-formula strong,
+  .firm-case-timeline time,
+  time
+) {
+  font-family: var(--font-sans);
+  font-stretch: var(--figure-stretch);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* Sentence-case labels everywhere: tracked capitals read as template chrome. */
+html body * {
+  text-transform: none !important;
+}
+
+html body .eyebrow,
+html body :is(section, article, div, header, main) .eyebrow {
+  min-height: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0;
+  color: var(--accent) !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-size: 13.5px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+/* Small labels that used to rely on capitals for emphasis. */
+html body :is(
+  .firm-decision-main > span,
+  .firm-decision-grid span,
+  .firm-proof-snapshot span,
+  .firm-due-diligence-item span,
+  .community-overview-main > span,
+  .score-proof span,
+  .regulatory-source-strip span,
+  .regulatory-summary-top span,
+  .stat > span:not(.metric-icon),
+  .result-metric span,
+  .home-preview-header span
+) {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* ---------- Actions and links ---------- */
+
+html body .btn-primary,
+html body a.btn-primary {
+  border-color: var(--accent) !important;
+  color: var(--accent-ink) !important;
+  background: var(--accent) !important;
+  box-shadow: none !important;
+  font-weight: 700;
+}
+
+html body .btn-primary:hover,
+html body a.btn-primary:hover {
+  border-color: var(--accent-strong) !important;
+  color: var(--accent-ink) !important;
+  background: var(--accent-strong) !important;
+}
+
+html body .btn {
+  box-shadow: none;
+}
+
+html body :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Active navigation: a cyan rule under the link, not a filled pill. */
+html body .topbar .nav a[aria-current='page'],
+html body .topbar .nav .active {
+  border-radius: 0;
+  color: var(--text);
+  background: none;
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+/* ---------- Surfaces ---------- */
+
+html body :is(.panel, .card, .stat, .firm-result-card, .guide-entry-card, .promo-card, .compare-card) {
+  box-shadow: none;
+}
+
+html body :is(.panel, .firm-result-card) {
+  border-radius: 12px;
+}
+
+html body :is(.card, .stat, .result-metric, .firm-decision-grid div, .firm-proof-snapshot div) {
+  border-radius: 8px;
+}
+
+/* Decorative letter chips ($, %, DD, N, P) carry no information. */
+html body .metric-icon {
+  display: none !important;
+}
+
+/* ---------- Firm page ---------- */
+
+html body .firm-hero-compact {
+  padding: 32px 36px;
+  align-items: center;
+}
+
+html body .firm-hero-compact::before {
+  opacity: 0.55;
+}
+
+html body .firm-hero-copy .lead {
+  max-width: 64ch;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+html body .firm-hero-compact h1 {
+  font-size: clamp(40px, 5vw, 64px);
+  font-stretch: 78%;
+}
+
+html body .firm-hero-badges .badge {
+  font-weight: 650;
+}
+
+html body .stat-strip .stat strong {
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.15;
+}
+
+/* Long text values (payout rules) should read as text, not as a giant figure. */
+html body .stat-strip .stat strong.firm-metric-long {
+  font-size: 15px;
+  font-stretch: 100%;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+html body .firm-decision-main strong {
+  font-stretch: 78%;
+}
+
+html body .firm-details {
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+html body .firm-details > summary {
+  display: grid;
+  gap: 2px;
+  padding: 18px 22px;
+  cursor: pointer;
+  list-style: none;
+}
+
+html body .firm-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+html body .firm-details > summary span {
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+html body .firm-details > summary span::after {
+  content: ' +';
+  color: var(--accent);
+}
+
+html body .firm-details[open] > summary span::after {
+  content: ' \2212';
+}
+
+html body .firm-details > summary small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+html body .firm-details[open] {
+  padding: 0 22px 22px;
+}
+
+html body .firm-details[open] > summary {
+  margin: 0 -22px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Home ---------- */
+
+html body .home-preview-live i {
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 760px) {
+  html body .firm-hero-compact {
+    padding: 22px 18px;
+  }
+
+  html body .firm-details > summary {
+    padding: 16px;
+  }
+
+  html body .firm-details[open] {
+    padding: 0 16px 16px;
+  }
+
+  html body .firm-details[open] > summary {
+    margin: 0 -16px 8px;
+  }
+}
+
+/* Firm hero: horizontal score card so the identity block fills the row. */
+html body .firm-hero-compact {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 430px);
+}
+
+html body .firm-hero-copy {
+  align-content: center;
+}
+
+html body .firm-score-ring-card {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  grid-template-areas:
+    "ring label"
+    "ring note"
+    "ring badge"
+    "actions actions";
+  column-gap: 20px;
+  row-gap: 6px;
+  align-items: center;
+  padding: 20px;
+  text-align: left;
+}
+
+html body .firm-score-ring-card > .muted {
+  grid-area: label;
+  align-self: end;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+html body .firm-score-ring-card > .firm-score-ring {
+  grid-area: ring;
+  width: 128px;
+  height: 128px;
+  margin: 0;
+}
+
+html body .firm-score-ring-card > p {
+  grid-area: note;
+  margin: 0;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+html body .firm-score-ring-card > div:not(.firm-score-ring):not(.firm-score-actions):not(.muted) {
+  grid-area: badge;
+  margin-top: 2px !important;
+  align-self: start;
+}
+
+html body .firm-score-ring-card > .firm-score-actions {
+  grid-area: actions;
+  margin-top: 12px;
+}
+
+html body .firm-metric-card {
+  min-height: 0;
+  padding: 16px 18px;
+}
+
+@media (max-width: 980px) {
+  html body .firm-hero-compact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  html body .firm-score-ring-card {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  html body .firm-score-ring-card > .firm-score-ring {
+    width: 104px;
+    height: 104px;
+  }
+}
+
+html body .firm-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+html body .firm-hero-badges .badge {
+  width: auto;
+}
+
+html body .firm-score-ring-card > .muted,
+html body .firm-score-ring-card > div:not(.firm-score-ring):not(.firm-score-actions):not(.muted) {
+  justify-self: start;
+  text-align: left;
+}
+
+html body .firm-hero-badges {
+  display: flex !important;
+}
+
+html body .firm-hero-badges .badge {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  html body .firm-score-ring-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "ring"
+      "note"
+      "badge"
+      "actions";
+    justify-items: center;
+    text-align: center;
+  }
+
+  html body .firm-score-ring-card > .muted,
+  html body .firm-score-ring-card > p,
+  html body .firm-score-ring-card > div:not(.firm-score-ring):not(.firm-score-actions):not(.muted) {
+    justify-self: center;
+    text-align: center;
+  }
+
+  html body .firm-score-ring-card > .firm-score-actions {
+    width: 100%;
+  }
+}
+
+/* Comparator: one compact row of signals instead of two rows of boxes. */
+@media (min-width: 1100px) {
+  html body .firm-result-card .firm-result-signals {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+
+  html body .firm-result-card .signal-chip {
+    min-height: 0;
+    padding: 2px 14px;
+    border: 0;
+    border-left: 1px solid var(--line);
+    border-radius: 0;
+    background: none;
+  }
+
+  html body .firm-result-card .signal-chip:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+html body .firm-result-card .signal-chip > span:first-child {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+html body .topbar .nav .nav-link-active,
+html body .topbar .nav .nav-link-active:hover {
+  border-radius: 0;
+  color: var(--text) !important;
+  background: none !important;
+  box-shadow: inset 0 -2px 0 var(--accent) !important;
+}
+
+html[data-theme='dark'] body .quality-tag {
+  color: var(--accent);
+}
+
+/* Popular guides: no decorative number column any more. */
+html body .home-guide-card {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+}
+
+/* The top bar stays dark in both themes. */
+html body .topbar .nav .nav-link-active,
+html body .topbar .nav .nav-link-active:hover {
+  color: #f4f7fb !important;
+}

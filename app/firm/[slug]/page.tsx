@@ -672,11 +672,11 @@ export default async function FirmPage({ params }: Props) {
             <div className="firm-cell firm-identity">
               <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
               <div className="firm-identity-copy">
-                <div className="eyebrow">{toEnglishText(firm.headquarters)} - Founded {firm.founded}</div>
+                <div className="eyebrow">{toEnglishText(firm.headquarters)}, founded {firm.founded}</div>
                 <h1 className={firmTitleClass}>{firm.name}</h1>
                 <div className="firm-hero-badges">
-                  <span className={`badge ${operationalStatusClass(firm)}`}>Status - {operationalStatusLabel(firm)}</span>
-                  <span className={`badge ${firmRiskClass(firm)}`}>Risk - {firmRiskLabel(firm)}</span>
+                  <span className={`badge ${operationalStatusClass(firm)}`}>Status: {operationalStatusLabel(firm)}</span>
+                  <span className={`badge ${firmRiskClass(firm)}`}>Risk: {firmRiskLabel(firm)}</span>
                 </div>
               </div>
             </div>
@@ -811,7 +811,7 @@ export default async function FirmPage({ params }: Props) {
           </div>
           <div className="stat firm-metric-card" title="Advertised payout delay or payout rule summary to verify in official conditions.">
             <span className="metric-icon" aria-hidden="true">P</span>
-            <span>Payout</span><strong>{toEnglishText(firm.payoutDelay)}</strong>
+            <span>Payout</span><strong className={toEnglishText(firm.payoutDelay).length > 22 ? 'firm-metric-long' : undefined}>{toEnglishText(firm.payoutDelay)}</strong>
           </div>
         </div>
 
@@ -1116,132 +1116,6 @@ export default async function FirmPage({ params }: Props) {
             <small>{toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)</small>
           </div>
         </div>
-        <div className="grid-3">
-          <div className="card">
-            <div className="muted">Raw Reddit score</div>
-            <div className="score">{firm.reviewSignals.redditScore}/100</div>
-            <span className={`badge ${scoreClass(firm.reviewSignals.redditScore)}`}>{toEnglishText(firm.reviewSignals.redditSignal)}</span>
-            {firm.reviewSignals.redditSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
-            {hasMeasuredMentions(firm.reviewSignals.redditSource) ? (
-              <div className="sentiment-breakdown">
-                <span><strong>{firm.reviewSignals.redditPositiveMentions ?? 0}</strong> positive</span>
-                <span><strong>{firm.reviewSignals.redditNegativeMentions ?? 0}</strong> negative</span>
-                <span><strong>{firm.reviewSignals.redditNeutralMentions ?? 0}</strong> neutral</span>
-              </div>
-            ) : null}
-            <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.redditMentions)}</p>
-            <div className="score-proof">
-              {scoreProofRows(firm, 'reddit').map((row) => (
-                <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-              ))}
-            </div>
-          </div>
-          <div className="card">
-            <div className="muted">Raw X/Twitter score</div>
-            <div className="score">{firm.reviewSignals.xScore}/100</div>
-            <span className={`badge ${scoreClass(firm.reviewSignals.xScore)}`}>{toEnglishText(firm.reviewSignals.xSignal)}</span>
-            {firm.reviewSignals.xSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
-            {hasMeasuredMentions(firm.reviewSignals.xSource) ? (
-              <div className="sentiment-breakdown">
-                <span><strong>{firm.reviewSignals.xPositiveMentions ?? 0}</strong> positive</span>
-                <span><strong>{firm.reviewSignals.xNegativeMentions ?? 0}</strong> negative</span>
-                <span><strong>{firm.reviewSignals.xNeutralMentions ?? 0}</strong> neutral</span>
-              </div>
-            ) : null}
-            <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.xMentions)}</p>
-            <div className="score-proof">
-              {scoreProofRows(firm, 'x').map((row) => (
-                <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-              ))}
-            </div>
-          </div>
-          <div className="card">
-            <div className="muted">Trustpilot review reliability</div>
-            <div className="score">{firm.reviewSignals.trustpilotReliabilityScore}/100</div>
-            <span className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</span>
-            {!firm.trustpilotRating ? <span className="badge badge-amber">Provisional score</span> : null}
-            <div className="sentiment-breakdown">
-              {firm.trustpilotRating ? <span><strong>{firm.trustpilotRating}/5</strong> raw rating</span> : null}
-              {firm.reviewSignals.trustpilotReviewCount ? <span><strong>{firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')}</strong> reviews</span> : null}
-              {firm.reviewSignals.trustpilotRatingWithheld
-                ? <span><strong>Rating withheld</strong> by Trustpilot</span>
-                : <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0}</strong> tracked review alert(s)</span>}
-            </div>
-            <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.trustpilotNote)}</p>
-            {firm.reviewSignals.trustpilotSourceUrl ? (
-              <a href={firm.reviewSignals.trustpilotSourceUrl} target="_blank" rel="noreferrer" className="quality-tag">
-                View Trustpilot page
-              </a>
-            ) : null}
-            <div className="score-proof">
-              {scoreProofRows(firm, 'trustpilot').map((row) => (
-                <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-              ))}
-            </div>
-          </div>
-          <div className="card">
-            <div className="muted">Payout risk</div>
-            <div className="score">{firm.reviewSignals.payoutRiskScore}/100</div>
-            <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
-            <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>
-              {toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)
-            </p>
-            <div className="score-proof">
-              {scoreProofRows(firm, 'payout').map((row) => (
-                <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="panel manual-review-panel">
-          <div className="manual-review-header">
-            <div>
-              <div className="eyebrow">Manual Reddit/X Review</div>
-              <h3>Manual collection queue</h3>
-            </div>
-            <span className={`badge ${manualCoverageClass(manualReview.coverage)}`}>{toEnglishText(manualReview.coverage)}</span>
-          </div>
-          <p className="muted">{toEnglishText(manualReview.summary)}</p>
-          <div className="manual-review-grid">
-            <ManualReviewChannel title="Reddit" channel={manualReview.reddit} />
-            <ManualReviewChannel title="X/Twitter" channel={manualReview.x} />
-          </div>
-        </div>
-        <div className="signal-explain-grid">
-          <div className="signal-explain-card">
-            <div className="eyebrow">Reddit flags</div>
-            <ul className="risk-list">
-              {(firm.reviewSignals.redditFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
-            </ul>
-          </div>
-          <div className="signal-explain-card">
-            <div className="eyebrow">X/Twitter watch</div>
-            <ul className="risk-list">
-              {(firm.reviewSignals.xFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
-            </ul>
-          </div>
-          <div className="signal-explain-card">
-            <div className="eyebrow">Filtered Trustpilot</div>
-            <p className="muted">
-              {toEnglishText(firm.reviewSignals.trustpilotFlaggedReviewNote)}
-            </p>
-            <ul className="risk-list">
-              {(firm.reviewSignals.trustpilotFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
-            </ul>
-          </div>
-          <div className="signal-explain-card">
-            <div className="eyebrow">Manipulable Reviews</div>
-            <div className="score">{firm.reviewSignals.manipulationRiskScore ?? 50}/100</div>
-            <span className={`badge ${manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Moyen')}`}>
-              {toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')}
-            </span>
-            <div className="score-proof">
-              {scoreProofRows(firm, 'manipulation').map((row) => (
-                <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-              ))}
-            </div>
-          </div>
-        </div>
         <div className="panel radar-verdict">
           <div>
             <div className="eyebrow">Radar Verdict</div>
@@ -1251,6 +1125,138 @@ export default async function FirmPage({ params }: Props) {
             {(firm.reviewSignals.confidenceDrivers ?? []).map((driver) => <li key={driver}>{toEnglishText(driver)}</li>)}
           </ul>
         </div>
+        <details className="firm-details">
+          <summary>
+            <span>Score breakdown</span>
+            <small>Reddit, X/Twitter, Trustpilot and payout scores, flags and the manual review queue</small>
+          </summary>
+          <div className="grid-3">
+            <div className="card">
+              <div className="muted">Raw Reddit score</div>
+              <div className="score">{firm.reviewSignals.redditScore}/100</div>
+              <span className={`badge ${scoreClass(firm.reviewSignals.redditScore)}`}>{toEnglishText(firm.reviewSignals.redditSignal)}</span>
+              {firm.reviewSignals.redditSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
+              {hasMeasuredMentions(firm.reviewSignals.redditSource) ? (
+                <div className="sentiment-breakdown">
+                  <span><strong>{firm.reviewSignals.redditPositiveMentions ?? 0}</strong> positive</span>
+                  <span><strong>{firm.reviewSignals.redditNegativeMentions ?? 0}</strong> negative</span>
+                  <span><strong>{firm.reviewSignals.redditNeutralMentions ?? 0}</strong> neutral</span>
+                </div>
+              ) : null}
+              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.redditMentions)}</p>
+              <div className="score-proof">
+                {scoreProofRows(firm, 'reddit').map((row) => (
+                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
+                ))}
+              </div>
+            </div>
+            <div className="card">
+              <div className="muted">Raw X/Twitter score</div>
+              <div className="score">{firm.reviewSignals.xScore}/100</div>
+              <span className={`badge ${scoreClass(firm.reviewSignals.xScore)}`}>{toEnglishText(firm.reviewSignals.xSignal)}</span>
+              {firm.reviewSignals.xSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
+              {hasMeasuredMentions(firm.reviewSignals.xSource) ? (
+                <div className="sentiment-breakdown">
+                  <span><strong>{firm.reviewSignals.xPositiveMentions ?? 0}</strong> positive</span>
+                  <span><strong>{firm.reviewSignals.xNegativeMentions ?? 0}</strong> negative</span>
+                  <span><strong>{firm.reviewSignals.xNeutralMentions ?? 0}</strong> neutral</span>
+                </div>
+              ) : null}
+              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.xMentions)}</p>
+              <div className="score-proof">
+                {scoreProofRows(firm, 'x').map((row) => (
+                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
+                ))}
+              </div>
+            </div>
+            <div className="card">
+              <div className="muted">Trustpilot review reliability</div>
+              <div className="score">{firm.reviewSignals.trustpilotReliabilityScore}/100</div>
+              <span className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</span>
+              {!firm.trustpilotRating ? <span className="badge badge-amber">Provisional score</span> : null}
+              <div className="sentiment-breakdown">
+                {firm.trustpilotRating ? <span><strong>{firm.trustpilotRating}/5</strong> raw rating</span> : null}
+                {firm.reviewSignals.trustpilotReviewCount ? <span><strong>{firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')}</strong> reviews</span> : null}
+                {firm.reviewSignals.trustpilotRatingWithheld
+                  ? <span><strong>Rating withheld</strong> by Trustpilot</span>
+                  : <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0}</strong> tracked review alert(s)</span>}
+              </div>
+              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.trustpilotNote)}</p>
+              {firm.reviewSignals.trustpilotSourceUrl ? (
+                <a href={firm.reviewSignals.trustpilotSourceUrl} target="_blank" rel="noreferrer" className="quality-tag">
+                  View Trustpilot page
+                </a>
+              ) : null}
+              <div className="score-proof">
+                {scoreProofRows(firm, 'trustpilot').map((row) => (
+                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
+                ))}
+              </div>
+            </div>
+            <div className="card">
+              <div className="muted">Payout risk</div>
+              <div className="score">{firm.reviewSignals.payoutRiskScore}/100</div>
+              <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
+              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>
+                {toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)
+              </p>
+              <div className="score-proof">
+                {scoreProofRows(firm, 'payout').map((row) => (
+                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="panel manual-review-panel">
+            <div className="manual-review-header">
+              <div>
+                <div className="eyebrow">Manual Reddit/X Review</div>
+                <h3>Manual collection queue</h3>
+              </div>
+              <span className={`badge ${manualCoverageClass(manualReview.coverage)}`}>{toEnglishText(manualReview.coverage)}</span>
+            </div>
+            <p className="muted">{toEnglishText(manualReview.summary)}</p>
+            <div className="manual-review-grid">
+              <ManualReviewChannel title="Reddit" channel={manualReview.reddit} />
+              <ManualReviewChannel title="X/Twitter" channel={manualReview.x} />
+            </div>
+          </div>
+          <div className="signal-explain-grid">
+            <div className="signal-explain-card">
+              <div className="eyebrow">Reddit flags</div>
+              <ul className="risk-list">
+                {(firm.reviewSignals.redditFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
+              </ul>
+            </div>
+            <div className="signal-explain-card">
+              <div className="eyebrow">X/Twitter watch</div>
+              <ul className="risk-list">
+                {(firm.reviewSignals.xFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
+              </ul>
+            </div>
+            <div className="signal-explain-card">
+              <div className="eyebrow">Filtered Trustpilot</div>
+              <p className="muted">
+                {toEnglishText(firm.reviewSignals.trustpilotFlaggedReviewNote)}
+              </p>
+              <ul className="risk-list">
+                {(firm.reviewSignals.trustpilotFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
+              </ul>
+            </div>
+            <div className="signal-explain-card">
+              <div className="eyebrow">Manipulable Reviews</div>
+              <div className="score">{firm.reviewSignals.manipulationRiskScore ?? 50}/100</div>
+              <span className={`badge ${manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Moyen')}`}>
+                {toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')}
+              </span>
+              <div className="score-proof">
+                {scoreProofRows(firm, 'manipulation').map((row) => (
+                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </details>
       </section>
 
       <section className="container section" id="produits">

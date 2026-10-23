@@ -139,19 +139,19 @@ export default function HomePage() {
 
           <div className="home-tools-grid">
             <Link href="/comparateur" className="home-tool-card home-tool-card-primary">
-              <span className="home-tool-label">01 / Comparator</span>
+              <span className="home-tool-label">Comparator</span>
               <strong>Compare {propFirms.length} prop firms side by side.</strong>
               <small>Filter by score, market, payout risk, legal risk, price and trading rules.</small>
               <span className="home-tool-action">Open comparator <b aria-hidden="true">&gt;</b></span>
             </Link>
             <Link href="/promos" className="home-tool-card">
-              <span className="home-tool-label">02 / Risk-aware deals</span>
+              <span className="home-tool-label">Risk-aware deals</span>
               <strong>Read the risk before the discount.</strong>
               <small>Promotions stay attached to firm scores, payout context and commercial disclosures.</small>
               <span className="home-tool-action">Check current deals <b aria-hidden="true">&gt;</b></span>
             </Link>
             <Link href="/guides" className="home-tool-card">
-              <span className="home-tool-label">03 / Reliability guides</span>
+              <span className="home-tool-label">Reliability guides</span>
               <strong>Understand the rules that change outcomes.</strong>
               <small>Legal checks, payout clauses, review signals and program comparisons in plain English.</small>
               <span className="home-tool-action">Browse guides <b aria-hidden="true">&gt;</b></span>
@@ -172,22 +172,18 @@ export default function HomePage() {
 
           <div className="home-why-grid">
             <article className="home-why-card">
-              <span className="home-card-index">01</span>
               <h3>Independent scores</h3>
               <p>{noConflictFirms} firms currently have no commercial relationship with PropRadar.</p>
             </article>
             <article className="home-why-card">
-              <span className="home-card-index">02</span>
               <h3>Payout-first analysis</h3>
               <p>Withdrawal incidents and restrictive rules weigh more than headline discounts.</p>
             </article>
             <article className="home-why-card">
-              <span className="home-card-index">03</span>
               <h3>Legal evidence</h3>
               <p>{legalMappedCount} legal files map entities, jurisdictions and regulatory signals.</p>
             </article>
             <article className="home-why-card">
-              <span className="home-card-index">04</span>
               <h3>Multi-source context</h3>
               <p>Official terms, public reviews and incidents are checked against each other.</p>
             </article>
@@ -205,9 +201,8 @@ export default function HomePage() {
         </div>
 
         <div className="home-guide-grid">
-          {homepageGuides.map(({ guide, displayGuide }, index) => (
+          {homepageGuides.map(({ guide, displayGuide }) => (
             <Link href={getSeoGuidePath(guide)} className="home-guide-card" key={guide.slug}>
-              <span className="home-guide-number">0{index + 1}</span>
               <span className="home-guide-content">
                 <small>{displayGuide.eyebrow}</small>
                 <strong>{displayGuide.title}</strong>

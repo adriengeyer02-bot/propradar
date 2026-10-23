@@ -5,6 +5,8 @@ asset is trust: every number must be traceable, every warning sourced. When in
 doubt, publish less, not more.
 
 Stack: Next.js 15 (App Router), deployed by Vercel on every push to `main`.
+Design: `app/design-refresh.css` (loaded last) holds the current visual system:
+Archivo variable font, navy + radar cyan accent, sentence-case labels.
 Site language: English. Owner: Geyer (writes in French, answer him in French).
 
 ## Where the data lives
@@ -82,6 +84,6 @@ Keep earlier changelog entries when you update a firm: append, never delete.
 
 ## Checks before any merge
 
-- `npx tsc --noEmit -p .` passes (local `next build` fails offline only
-  because of Google Fonts; Vercel's preview build is the real build check).
+- `npx tsc --noEmit -p .` and `npx next build` pass (fonts are self-hosted
+  via @fontsource-variable/archivo, so the build works offline).
 - Vercel status on the PR commit is `success`.
