@@ -1,26 +1,15 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
-import { Geist, Geist_Mono } from 'next/font/google';
+import '@fontsource-variable/archivo/wdth.css';
 import './globals.css';
 import './design-system.css';
+import './design-refresh.css';
 import ActiveNavLink from './components/ActiveNavLink';
 import RiskEvidenceMenu from './components/RiskEvidenceMenu';
 import SiteSearch from './components/SiteSearch';
 import ThemeToggle from './components/ThemeToggle';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from './lib/site';
-
-const geistSans = Geist({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-geist-sans',
-});
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-geist-mono',
-});
 
 const themeInitScript = `
   (function () {
@@ -145,7 +134,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <head>
