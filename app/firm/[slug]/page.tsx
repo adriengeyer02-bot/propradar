@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { firmMetaOverrides } from '../../lib/firmMetaOverrides';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -296,8 +297,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const searchProfile = getFirmSearchProfile(firm.slug);
   const auditCaseFile = getAuditCaseFile(firm.slug);
-  const title = searchProfile?.metaTitle ?? `${firm.name} Review: Payout & Risk`;
-  const description = searchProfile?.metaDescription ??
+  const metaOverride = firmMetaOverrides[firm.slug];
+  const title = metaOverride?.title(firm) ?? searchProfile?.metaTitle ?? `${firm.name} Review: Payout & Risk`;
+  const description = metaOverride?.description(firm) ?? searchProfile?.metaDescription ??
     `${firm.name} review: score ${firm.score}/100, payout risk ${toEnglishText(firm.reviewSignals.payoutRisk)}, legal risk ${firm.regulatoryAudit.riskLevel}. ${toEnglishText(firm.verdict)}`;
   const modifiedTime = new Date(getFirmContentLastModified(
     firm.slug,
