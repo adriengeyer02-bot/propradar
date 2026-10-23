@@ -75,6 +75,8 @@ export type ReviewSignals = {
   trustpilotFlags?: string[];
   trustpilotFlaggedReviewCount?: number;
   trustpilotFlaggedReviewNote?: string;
+  /** Trustpilot shows no TrustScore because of a guideline breach. */
+  trustpilotRatingWithheld?: boolean;
   trustpilotReviewCount?: number;
   trustpilotSourceUrl?: string;
   manipulationRiskScore?: number;
