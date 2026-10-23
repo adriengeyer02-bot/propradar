@@ -3,7 +3,7 @@
  *
  * Fetches every firm's listed official site and classifies what it serves:
  *   ok                  page loads and mentions prop-trading vocabulary
- *   blocked             bot protection (403/429/503 challenge) - inconclusive
+ *   blocked             bot protection or JavaScript-only page - inconclusive
  *   redirect-offsite    redirects to a different registrable domain
  *   parked              parked / for-sale domain page
  *   no-trading-content  page loads but has no prop-trading vocabulary
@@ -108,7 +108,13 @@ async function checkUrl(url: string): Promise<Omit<CheckResult, 'checkedAt' | 's
     if (PARKED_PATTERNS.some((pattern) => pattern.test(text))) {
       return { ...base, status: 'parked', detail: 'Parked or for-sale page markers found.' };
     }
-    const tradingHits = TRADING_PATTERNS.filter((pattern) => pattern.test(text)).length;
+    const meta = [...html.matchAll(/<meta[^>]+content="([^"]{0,300})"/gi)].map((match) => match[1]).join(' ');
+    const tradingHits = TRADING_PATTERNS.filter((pattern) => pattern.test(`${title ?? ''} ${meta} ${text}`)).length;
+    const visibleText = text.replace(/\s+/g, ' ').trim();
+    if (tradingHits < 2 && visibleText.length < 1500) {
+      // JavaScript apps (FundedNext, BrightFunded...) ship almost no HTML text.
+      return { ...base, status: 'blocked', detail: 'Little server-rendered text (JavaScript app): inconclusive.' };
+    }
     if (tradingHits < 2) {
       return { ...base, status: 'no-trading-content', detail: `${tradingHits} prop-trading marker(s) found.` };
     }
