@@ -18,6 +18,9 @@ import {
   type PropFirm,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
+import GuideArticleBody from '../../components/GuideArticleBody';
+import { getGuideArticle } from '../../lib/guideArticles';
+import { getFrArticleByEnPath } from '../../lib/frArticles';
 import { getGuideVisual } from '../../lib/guideVisuals';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import {
@@ -70,6 +73,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     category: 'Prop firm due diligence',
     alternates: {
       canonical: canonicalPath,
+      ...(getFrArticleByEnPath(canonicalPath)
+        ? { languages: { en: canonicalPath, fr: `/fr/${getFrArticleByEnPath(canonicalPath)!.slug}`, 'x-default': canonicalPath } }
+        : {}),
     },
     openGraph: {
       title: displayGuide.title,
@@ -1255,6 +1261,8 @@ export default async function SeoGuidePage({ params }: Props) {
 
   const firms = selectGuideFirms(guide, 10);
   const displayGuide = getSeoGuideDisplay(guide);
+  const guideArticle = getGuideArticle(guide.slug);
+  const frPair = getFrArticleByEnPath(getSeoGuidePath(guide));
   const guideVisual = getGuideVisual(guide.slug);
   const editorial = getGuideEditorial(guide.slug);
   const relatedGuides = getRelatedGuides(guide.slug, 3);
@@ -1562,7 +1570,7 @@ export default async function SeoGuidePage({ params }: Props) {
               {isConsistencyGuide
                 ? 'Calculate best-day profit divided by total net profit, then multiply by 100. Current no-percentage examples checked by PropRadar include BrightFunded, standard Maven challenges and the blank Consistency Score fields on CTI program tables. The exact product still decides.'
                 : isTopstepApexGuide
-                  ? 'Topstep currently uses a 50% Trading Combine consistency target and path-specific Express Funded Account rules. Apex separates newer EOD and intraday products from legacy accounts, so payout, drawdown and consistency terms must be matched to the exact version.'
+                  ? 'Topstep currently uses a 55% Trading Combine consistency target (rechecked October 23, 2026) and path-specific Express Funded Account rules. Apex separates newer EOD and intraday products from legacy accounts, so payout, drawdown and consistency terms must be matched to the exact version.'
                   : isNoChallengeGuide
                     ? 'Current examples include Instant Funding, CTI Instant Funding, Maven Instant and LucidDirect. They remove the classic evaluation, not the funded-stage restrictions: drawdown, consistency, payout minimums and replacement cost still decide the real difficulty.'
                     : 'FTMO allows news trading in evaluation and on Swing accounts, while Standard funded accounts restrict selected events. BrightFunded allows evaluation news trading but restricts a funded 5-minute window on each side. The5ers Futures currently advertises news trading as allowed.'}
@@ -1632,7 +1640,7 @@ export default async function SeoGuidePage({ params }: Props) {
                 <tr><th scope="col">Decision point</th><th scope="col">Topstep</th><th scope="col">Apex Trader Funding</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Evaluation consistency</th><td>Trading Combine uses a 50% consistency target.</td><td>New products advertise no evaluation consistency rule.</td></tr>
+                <tr><th scope="row">Evaluation consistency</th><td>Trading Combine uses a 55% consistency target (rechecked October 23, 2026).</td><td>New products advertise no evaluation consistency rule.</td></tr>
                 <tr><th scope="row">Funded-stage path</th><td>XFA Standard uses winning-day criteria; XFA Consistency uses 3 days and a 40% target.</td><td>New products advertise 50% consistency; legacy account rules differ.</td></tr>
                 <tr><th scope="row">Drawdown</th><td>Maximum Loss Limit depends on account size and stage.</td><td>Separate EOD and intraday trailing products use different drawdown behavior.</td></tr>
                 <tr><th scope="row">Payout reading</th><td>Eligibility, caps and split depend on path and account cohort.</td><td>Approved payouts are advertised at 100%, subject to eligibility, compliance and the exact account terms.</td></tr>
@@ -1676,6 +1684,16 @@ export default async function SeoGuidePage({ params }: Props) {
             <a href="https://www.the5ers.com/futures/" target="_blank" rel="noreferrer">The5ers Futures program</a>
           </div>
         </section>
+      ) : null}
+
+      {guideArticle ? (
+        <GuideArticleBody
+          article={guideArticle}
+          label={`${displayGuide.h1} - full guide`}
+          langSwitch={frPair ? { href: `/fr/${frPair.slug}`, hrefLang: 'fr', label: 'Lire ce guide en français' } : undefined}
+        />
+      ) : frPair ? (
+        <p className="guide-article"><a className="guide-lang-switch" href={`/fr/${frPair.slug}`} hrefLang="fr">Lire ce guide en français</a></p>
       ) : null}
 
       <section className="page-insight-strip" aria-label="Guide proof summary">

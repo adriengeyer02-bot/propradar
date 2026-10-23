@@ -5,6 +5,7 @@ import { getFirmContentLastModified } from './lib/firmSearchProfiles';
 import { editorialBriefs, getEditorialBriefPath } from './lib/editorialBriefs';
 import { getAuditCaseFile } from './lib/auditCaseFiles';
 import { SITE_URL } from './lib/site';
+import { frArticles } from './lib/frArticles';
 
 const staticRoutes = [
   { path: '', priority: 1, lastModified: '2026-07-13' },
@@ -47,6 +48,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: getGuideLastModified(guide),
       changeFrequency: 'weekly' as const,
       priority: 0.82,
+    })),
+    {
+      url: `${SITE_URL}/fr`,
+      lastModified: new Date(frArticles.reduce((latest, article) => (article.updated > latest ? article.updated : latest), '2026-01-01')),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+      alternates: { languages: { fr: `${SITE_URL}/fr`, en: `${SITE_URL}/guides` } },
+    },
+    ...frArticles.map((article) => ({
+      url: `${SITE_URL}/fr/${article.slug}`,
+      lastModified: new Date(article.updated),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+      ...(article.enPath
+        ? { alternates: { languages: { fr: `${SITE_URL}/fr/${article.slug}`, en: `${SITE_URL}${article.enPath}` } } }
+        : {}),
     })),
     ...editorialBriefs.map((brief, index) => ({
       url: `${SITE_URL}${getEditorialBriefPath(brief)}`,

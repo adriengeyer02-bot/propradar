@@ -221,6 +221,7 @@ export default function RootLayout({
                 <Link href="/promos">Risk-checked deals</Link>
                 <Link href="/trustpilot-prop-firms">Trustpilot research</Link>
                 <a href="/feed.xml">Research feed</a>
+                <Link href="/fr" hrefLang="fr">Guides en français</Link>
               </nav>
             </div>
             <div className="container footer-bottom">

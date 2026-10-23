@@ -8277,3 +8277,219 @@ html[data-theme='dark'] .firm-domain-warning strong {
   font-size: 13px;
   font-weight: 750;
 }
+
+/* Long-form guide text (app/lib/guideArticles.ts and French articles). */
+.guide-article {
+  max-width: 780px;
+  margin: 8px auto 40px;
+  padding: 0 4px;
+  color: var(--text);
+}
+
+.guide-article-intro {
+  margin: 0 0 8px;
+  font-size: 19px;
+  font-weight: 560;
+  line-height: 1.65;
+}
+
+.guide-article section {
+  margin-top: 30px;
+}
+
+.guide-article h2 {
+  margin: 0 0 12px;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.2;
+}
+
+.guide-article h3 {
+  margin: 22px 0 8px;
+  font-size: 19px;
+}
+
+.guide-article p,
+.guide-article li {
+  color: var(--soft);
+  font-size: 17px;
+  font-weight: 450;
+  line-height: 1.72;
+}
+
+.guide-article p {
+  margin: 0 0 14px;
+}
+
+.guide-article ul {
+  display: grid;
+  gap: 6px;
+  margin: 4px 0 16px;
+  padding-left: 22px;
+}
+
+.guide-article table {
+  width: 100%;
+  margin: 8px 0 18px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.guide-article th,
+.guide-article td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.guide-article th {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.guide-article td {
+  color: var(--soft);
+}
+
+.guide-article-footer {
+  display: grid;
+  gap: 8px;
+  margin-top: 30px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.guide-article-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-article-footer li {
+  font-size: 14px;
+}
+
+.guide-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+@media (max-width: 760px) {
+  .guide-article p,
+  .guide-article li {
+    font-size: 16px;
+  }
+
+  .guide-article table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.guide-article a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html[data-theme='dark'] .guide-article a {
+  color: #93c5fd;
+}
+
+/* French articles (/fr). */
+.fr-article-page {
+  padding-top: 28px;
+}
+
+.fr-breadcrumb {
+  max-width: 780px;
+  margin: 0 auto 14px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fr-article-hero {
+  max-width: 780px;
+  margin: 0 auto 10px;
+}
+
+.fr-article-hero h1 {
+  margin: 8px 0 18px;
+  font-size: clamp(32px, 4.4vw, 48px);
+  line-height: 1.08;
+}
+
+.fr-answer {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.fr-answer strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.fr-answer p {
+  margin: 0;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 560;
+  line-height: 1.6;
+}
+
+.fr-hub-list {
+  display: grid;
+  gap: 18px;
+}
+
+.fr-hub-list article {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.fr-hub-list h2 {
+  margin: 6px 0 8px;
+  font-size: 22px;
+}
+
+.fr-hub-list h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.fr-hub-list p {
+  margin: 0;
+}
+
+.fr-faq h3 {
+  margin-top: 18px;
+}
+
+.guide-lang-switch {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html[data-theme='dark'] .guide-lang-switch {
+  color: #93c5fd;
+}
