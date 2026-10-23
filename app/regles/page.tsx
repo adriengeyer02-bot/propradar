@@ -478,9 +478,9 @@ const mediumSmallRuleAudits: CompactRuleAudit[] = [
   },
   {
     slug: 'hantec-trader',
-    product: 'Hantec Trader programs',
-    sourceLabel: 'Hantec Trader - official program table',
-    sourceUrl: 'https://hantectrader.com/',
+    product: 'RZR Funded (formerly Hantec Trader) programs',
+    sourceLabel: 'RZR Funded - official site',
+    sourceUrl: 'https://rzrfunded.com/',
     sourceDate: 'Source consultée le 2026-07-01',
     proofLevel: 'Source officielle lue',
     riskFamily: 'Static balance drawdown',

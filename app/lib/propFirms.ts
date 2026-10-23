@@ -4670,8 +4670,9 @@ const universePropFirms: PropFirm[] = [
   universeFirm({
     id: 43,
     slug: 'hantec-trader',
-    name: 'Hantec Trader',
-    website: 'https://hantectrader.com/',
+    name: 'RZR Funded',
+    website: 'https://rzrfunded.com/',
+    note: 'RZR Funded is the new name of Hantec Trader since October 19, 2026. The firm says challenges, funded accounts, rules and payout schedules are unchanged. Before the rebrand the prop service was disclosed as Hantec Trader Limited (Mauritius); reconfirm the contracting entity on the new site.',
     status: 'Active',
     score: 73,
     founded: 2023,
@@ -4717,6 +4718,7 @@ const universePropFirms: PropFirm[] = [
         'Disputes should be classified around simulated account rules, consistency, payout/reward requests and jurisdiction eligibility.',
       ],
       redFlags: [
+        'Rebranded from Hantec Trader to RZR Funded on October 19, 2026: reconfirm the legal entity and terms on rzrfunded.com.',
         'Brand association with Hantec Markets Mauritius should not be confused with direct FCA protection for Hantec Trader users.',
         'All trading is simulated and does not provide direct access to company capital.',
         'No financial ombudsman or compensation-scheme protection is available for the prop-firm service according to the official disclaimer.',
