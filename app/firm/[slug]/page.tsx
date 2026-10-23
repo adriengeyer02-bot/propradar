@@ -21,6 +21,7 @@ import {
   reviewReliabilityClass,
   scoreClass,
   type PropFirm,
+  hasMeasuredMentions,
 } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { getFirmRelatedGuides, getSeoGuideDisplay, getSeoGuidePath } from '../../lib/seoGuides';
@@ -114,20 +115,36 @@ function proofValue(row: ScoreProofRow) {
   return <strong>{row.value}</strong>;
 }
 
+function urlHost(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+}
+
+// When the listed official domain now serves unrelated content, never send
+// visitors there (it can be a casino, a parked page or a compromised site).
+function isBlockedFirmUrl(firm: PropFirm, url: string) {
+  if (!firm.listedDomainWarning) return false;
+  const listedHost = urlHost(firm.sources[0]?.url ?? '');
+  return Boolean(listedHost) && urlHost(url) === listedHost;
+}
+
 function scoreProofRows(firm: PropFirm, kind: 'reddit' | 'x' | 'trustpilot' | 'payout' | 'manipulation'): ScoreProofRow[] {
   if (kind === 'reddit') {
     return [
       { label: 'Source', value: firm.reviewSignals.redditSource === 'Estimation PropRadar' ? 'PropRadar raw score, manual review to complete' : toEnglishText(firm.reviewSignals.redditSource ?? 'À documenter') },
-      { label: 'Raw volume', value: `${firm.reviewSignals.redditSampleSize ?? 0} review(s) / mention(s)` },
-      { label: 'Confidence', value: toEnglishText(firm.reviewSignals.redditConfidence ?? 'Faible') },
+      { label: 'Raw volume', value: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `${firm.reviewSignals.redditSampleSize ?? 0} review(s) / mention(s)` : 'Not counted yet' },
+      { label: 'Confidence', value: hasMeasuredMentions(firm.reviewSignals.redditSource) ? toEnglishText(firm.reviewSignals.redditConfidence ?? 'Faible') : 'Editorial estimate' },
     ];
   }
 
   if (kind === 'x') {
     return [
       { label: 'Source', value: firm.reviewSignals.xSource === 'Estimation PropRadar' ? 'PropRadar raw score, manual review to complete' : toEnglishText(firm.reviewSignals.xSource ?? 'À documenter') },
-      { label: 'Raw volume', value: `${firm.reviewSignals.xSampleSize ?? 0} review(s) / mention(s)` },
-      { label: 'Confidence', value: toEnglishText(firm.reviewSignals.xConfidence ?? 'Faible') },
+      { label: 'Raw volume', value: hasMeasuredMentions(firm.reviewSignals.xSource) ? `${firm.reviewSignals.xSampleSize ?? 0} review(s) / mention(s)` : 'Not counted yet' },
+      { label: 'Confidence', value: hasMeasuredMentions(firm.reviewSignals.xSource) ? toEnglishText(firm.reviewSignals.xConfidence ?? 'Faible') : 'Editorial estimate' },
     ];
   }
 
@@ -392,7 +409,8 @@ export default async function FirmPage({ params }: Props) {
     ...regulatoryAudit.sources.map((source) => source.url),
     ...firm.sources.map((source) => source.url),
     ...(auditCaseFile?.sources.map((source) => source.url) ?? []),
-  ])).slice(0, 10);
+  ])).filter((url) => !isBlockedFirmUrl(firm, url)).slice(0, 10);
+  const firmPublicUrl = firm.listedDomainWarning ? pageUrl : firm.sources[0]?.url ?? pageUrl;
   const firmDecision = decisionLabel(firm);
   const firmDecisionClass = decisionClass(firmDecision);
   const longestFirmNameToken = Math.max(
@@ -446,14 +464,14 @@ export default async function FirmPage({ params }: Props) {
     {
       label: 'Reddit',
       score: firm.reviewSignals.redditScore,
-      volume: `${firm.reviewSignals.redditSampleSize ?? 0} public mention(s)`,
-      detail: `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}`,
+      volume: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `${firm.reviewSignals.redditSampleSize ?? 0} public mention(s)` : 'Editorial estimate',
+      detail: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}` : 'mentions not counted yet',
     },
     {
       label: 'X/Twitter',
       score: firm.reviewSignals.xScore,
-      volume: `${firm.reviewSignals.xSampleSize ?? 0} public mention(s)`,
-      detail: `+${firm.reviewSignals.xPositiveMentions ?? 0} / -${firm.reviewSignals.xNegativeMentions ?? 0}`,
+      volume: hasMeasuredMentions(firm.reviewSignals.xSource) ? `${firm.reviewSignals.xSampleSize ?? 0} public mention(s)` : 'Editorial estimate',
+      detail: hasMeasuredMentions(firm.reviewSignals.xSource) ? `+${firm.reviewSignals.xPositiveMentions ?? 0} / -${firm.reviewSignals.xNegativeMentions ?? 0}` : 'mentions not counted yet',
     },
     {
       label: 'Trustpilot',
@@ -544,7 +562,7 @@ export default async function FirmPage({ params }: Props) {
     about: {
       '@type': 'Organization',
       name: firm.name,
-      url: firm.sources[0]?.url ?? pageUrl,
+      url: firmPublicUrl,
     },
   };
   const reviewSchema = {
@@ -553,7 +571,7 @@ export default async function FirmPage({ params }: Props) {
     itemReviewed: {
       '@type': 'Organization',
       name: firm.name,
-      url: firm.sources[0]?.url ?? pageUrl,
+      url: firmPublicUrl,
     },
     author: {
       '@type': 'Organization',
@@ -660,7 +678,13 @@ export default async function FirmPage({ params }: Props) {
                 </div>
               </div>
             </div>
-            <p className="lead">{toEnglishText(firm.verdict)}</p>
+            {firm.listedDomainWarning ? (
+              <p className="firm-domain-warning" role="note">
+                <strong>Domain warning.</strong> {firm.listedDomainWarning}
+              </p>
+            ) : (
+              <p className="lead">{toEnglishText(firm.verdict)}</p>
+            )}
           </div>
           <div className="card firm-score-ring-card">
             <div className="muted">PropRadar score</div>
@@ -1048,7 +1072,9 @@ export default async function FirmPage({ params }: Props) {
               <ul className="source-list compact-source-list">
                 {(regulatoryAudit.sources.length ? regulatoryAudit.sources : firm.sources).map((source) => (
                   <li key={source.url}>
-                    <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>
+                    {isBlockedFirmUrl(firm, source.url)
+                      ? <span>{toEnglishText(source.label)} (not linked)</span>
+                      : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>}
                   </li>
                 ))}
               </ul>
@@ -1093,12 +1119,14 @@ export default async function FirmPage({ params }: Props) {
             <div className="muted">Raw Reddit score</div>
             <div className="score">{firm.reviewSignals.redditScore}/100</div>
             <span className={`badge ${scoreClass(firm.reviewSignals.redditScore)}`}>{toEnglishText(firm.reviewSignals.redditSignal)}</span>
-            {firm.reviewSignals.redditSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Manual raw score</span> : null}
-            <div className="sentiment-breakdown">
-              <span><strong>{firm.reviewSignals.redditPositiveMentions ?? 0}</strong> positive</span>
-              <span><strong>{firm.reviewSignals.redditNegativeMentions ?? 0}</strong> negative</span>
-              <span><strong>{firm.reviewSignals.redditNeutralMentions ?? 0}</strong> neutral</span>
-            </div>
+            {firm.reviewSignals.redditSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
+            {hasMeasuredMentions(firm.reviewSignals.redditSource) ? (
+              <div className="sentiment-breakdown">
+                <span><strong>{firm.reviewSignals.redditPositiveMentions ?? 0}</strong> positive</span>
+                <span><strong>{firm.reviewSignals.redditNegativeMentions ?? 0}</strong> negative</span>
+                <span><strong>{firm.reviewSignals.redditNeutralMentions ?? 0}</strong> neutral</span>
+              </div>
+            ) : null}
             <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.redditMentions)}</p>
             <div className="score-proof">
               {scoreProofRows(firm, 'reddit').map((row) => (
@@ -1110,12 +1138,14 @@ export default async function FirmPage({ params }: Props) {
             <div className="muted">Raw X/Twitter score</div>
             <div className="score">{firm.reviewSignals.xScore}/100</div>
             <span className={`badge ${scoreClass(firm.reviewSignals.xScore)}`}>{toEnglishText(firm.reviewSignals.xSignal)}</span>
-            {firm.reviewSignals.xSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Manual raw score</span> : null}
-            <div className="sentiment-breakdown">
-              <span><strong>{firm.reviewSignals.xPositiveMentions ?? 0}</strong> positive</span>
-              <span><strong>{firm.reviewSignals.xNegativeMentions ?? 0}</strong> negative</span>
-              <span><strong>{firm.reviewSignals.xNeutralMentions ?? 0}</strong> neutral</span>
-            </div>
+            {firm.reviewSignals.xSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
+            {hasMeasuredMentions(firm.reviewSignals.xSource) ? (
+              <div className="sentiment-breakdown">
+                <span><strong>{firm.reviewSignals.xPositiveMentions ?? 0}</strong> positive</span>
+                <span><strong>{firm.reviewSignals.xNegativeMentions ?? 0}</strong> negative</span>
+                <span><strong>{firm.reviewSignals.xNeutralMentions ?? 0}</strong> neutral</span>
+              </div>
+            ) : null}
             <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.xMentions)}</p>
             <div className="score-proof">
               {scoreProofRows(firm, 'x').map((row) => (
@@ -1366,7 +1396,9 @@ export default async function FirmPage({ params }: Props) {
             <ul className="source-list">
               {firm.sources.map((source) => (
                 <li key={source.url}>
-                  <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>
+                  {isBlockedFirmUrl(firm, source.url)
+                    ? <span>{toEnglishText(source.label)}</span>
+                    : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>}
                 </li>
               ))}
             </ul>

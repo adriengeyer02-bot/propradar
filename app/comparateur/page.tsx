@@ -7,6 +7,7 @@ import type { PropFirm } from '../lib/propFirms';
 import {
   activeFirms,
   auditStatusClass,
+  hasMeasuredMentions,
   formatUsd,
   manipulationRiskClass,
   payoutRiskClass,
@@ -656,12 +657,12 @@ export default function Comparateur() {
                 <div className={`signal-chip ${scoreToneClass(firm.reviewSignals.redditScore)}`}>
                   <span>Reddit</span>
                   <SignalDots score={firm.reviewSignals.redditScore} tone={firm.reviewSignals.redditScore >= 75 ? 'green' : firm.reviewSignals.redditScore >= 55 ? 'orange' : 'red'} />
-                  <small>+{firm.reviewSignals.redditPositiveMentions ?? 0} / -{firm.reviewSignals.redditNegativeMentions ?? 0}</small>
+                  <small>{hasMeasuredMentions(firm.reviewSignals.redditSource) ? `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}` : 'estimate'}</small>
                 </div>
                 <div className={`signal-chip ${scoreToneClass(firm.reviewSignals.xScore)}`}>
                   <span>X/Twitter</span>
                   <SignalDots score={firm.reviewSignals.xScore} tone={firm.reviewSignals.xScore >= 75 ? 'green' : firm.reviewSignals.xScore >= 55 ? 'orange' : 'red'} />
-                  <small>+{firm.reviewSignals.xPositiveMentions ?? 0} / -{firm.reviewSignals.xNegativeMentions ?? 0}</small>
+                  <small>{hasMeasuredMentions(firm.reviewSignals.xSource) ? `+${firm.reviewSignals.xPositiveMentions ?? 0} / -${firm.reviewSignals.xNegativeMentions ?? 0}` : 'estimate'}</small>
                 </div>
                 <div className={`signal-chip ${scoreToneClass(firm.reviewSignals.trustpilotReliabilityScore)}`}>
                   <span>Trustpilot</span>

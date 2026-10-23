@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="home-v2-proofline" aria-label="PropRadar dataset coverage">
             <span><strong>{propFirms.length}</strong> firms compared</span>
             <span><strong>{noConflictFirms}</strong> with no commercial relationship</span>
-            <span>Updated <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
+            <span>Latest firm review <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
           </div>
           <div className="home-v2-actions">
             <Link href="/comparateur" className="btn btn-primary home-v2-primary-action">
@@ -77,7 +77,7 @@ export default function HomePage() {
           <div className="home-v2-trust-line">
             <span>No ranking can be bought.</span>
             <span>Affiliate links stay disclosed.</span>
-            <span>Updated <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time>.</span>
+            <span>Every score shows its review date.</span>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default function HomePage() {
               <h2>Top reliability</h2>
             </div>
             <span className="home-preview-live">
-              <i aria-hidden="true" /> Live data
+              <i aria-hidden="true" /> Current scores
             </span>
           </div>
 

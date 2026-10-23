@@ -132,6 +132,8 @@ export type PropFirm = {
   auditSourcesChecked: string[];
   regulatoryAudit: RegulatoryAudit;
   reviewSignals: ReviewSignals;
+  /** Set when the listed official domain now serves unrelated content: never link to it. */
+  listedDomainWarning?: string;
 };
 
 const REVIEW_DATE = '2026-06-29';
@@ -479,6 +481,13 @@ function firm(data: FirmInput): PropFirm {
     }),
     ...firmData,
   };
+  // "Entity mapped" must mean a legal entity with a known jurisdiction was
+  // actually identified, not just that the firm is not closed.
+  base.legalVerified =
+    base.legalVerified &&
+    base.regulatoryAudit.entities.some(
+      (entity) => Boolean(entity.jurisdiction) && !/to verify|international|unknown|unconfirmed/i.test(entity.jurisdiction),
+    );
   const defaultSignals = buildReviewSignals(base);
   const mergedSignals: ReviewSignals = {
     ...defaultSignals,
@@ -529,6 +538,8 @@ type UniverseFirmInput = {
   trustpilotRating?: number;
   logoDomain?: string;
   note?: string;
+  /** Listed domain now serves unrelated content (casino, parked page...). */
+  listedDomainWarning?: string;
   styles?: string[];
   productType?: Product['type'];
   productName?: string;
@@ -572,9 +583,12 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
   const isFutures = market === 'Futures';
   const isClosed = status === 'Fermée';
   const styles = data.styles ?? (isFutures ? ['Futures'] : market === 'Crypto' ? ['Crypto'] : market === 'Actions' ? ['Actions'] : ['Forex', 'Indices']);
-  const logoDomain = data.logoDomain ?? (data.website ? domainFromWebsite(data.website) : undefined);
+  const domainWarning = data.listedDomainWarning;
+  const logoDomain = domainWarning ? undefined : data.logoDomain ?? (data.website ? domainFromWebsite(data.website) : undefined);
   const sourceUrl = data.website ?? data.sourceUrl ?? 'https://propfirmmatch.com/unlisted-firms';
-  const sourceLabel = data.website ? `Official ${data.name} site` : data.sourceLabel ?? `${data.name} monitoring signal`;
+  const sourceLabel = domainWarning && data.website
+    ? `Listed ${data.name} domain: unrelated content, not linked`
+    : data.website ? `Official ${data.name} site` : data.sourceLabel ?? `${data.name} monitoring signal`;
   const secondarySources = data.additionalSources ?? [];
   const hasTrustpilotSource =
     Boolean(data.trustpilotRating) ||
@@ -595,8 +609,8 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
   const auditSummary =
     data.auditSummary ??
     (auditStatus === 'À auditer'
-      ? 'Universe entry added for broad coverage: site or monitoring source identified, but reviews, rules and payouts must still be verified before any recommendation.'
-      : 'Universe entry enriched by at least one external source or PropRadar signal, but not yet validated as a full multi-source file.');
+      ? 'Watchlist profile: an official site or monitoring source is identified, but reviews, rules and payouts must still be verified before any recommendation.'
+      : 'Watchlist profile backed by at least one external source or PropRadar signal, but not yet validated as a full multi-source file.');
 
   return firm({
     id: data.id,
@@ -608,8 +622,9 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     headquarters: data.headquarters ?? 'International',
     bestFor: `${market.toLowerCase()} to verify in the radar`,
     verdict:
+      domainWarning ??
       data.note ??
-      `${data.name} has been added to PropRadar universe coverage. The profile stays deliberately cautious until rules, reviews and payout evidence are reviewed in depth.`,
+      `${data.name} is on the PropRadar watchlist but has not been audited in depth yet. Rules, reviews and payout evidence still need verification, so treat this profile as a starting point, not a recommendation.`,
     priceFrom: data.priceFrom ?? 0,
     profitSplit: data.profitSplit ?? (isClosed ? 0 : 80),
     drawdownType: data.drawdownType ?? (isFutures ? 'Trailing' : 'Hybride'),
@@ -619,7 +634,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     incidents: data.incidents ?? (isClosed ? 5 : status === 'Active' ? 1 : 2),
     incidentsDetails: data.incidentsDetails ?? (isClosed
       ? ['Closed or not recommended status: no purchase should be prioritized.']
-      : ['Universe entry: rules, fees, payouts and recent reviews must be rechecked before buying.']),
+      : ['Not audited in depth yet: rules, fees, payouts and recent reviews must be rechecked before buying.']),
     styles,
     legalVerified: !isClosed,
     transparencyScore: status === 'Active' ? 12 : isClosed ? 2 : 9,
@@ -638,7 +653,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
             id: `${data.slug}-program`,
             name: data.productName ?? `${data.name} Program`,
             type: data.productType ?? (isFutures ? 'Futures evaluation' : market === 'Crypto' ? 'Challenge' : 'Challenge'),
-            description: data.productDescription ?? `${market} program added to universe coverage. Conditions must be confirmed on the official source.`,
+            description: data.productDescription ?? `${market} program not yet audited by PropRadar. Confirm fees, drawdown, targets and payout conditions on the official source.`,
             accountSizeMin: data.accountSizeMin ?? (isFutures ? 25000 : 5000),
             accountSizeMax: data.accountSizeMax ?? (isFutures ? 300000 : 400000),
             entryFeeMin: data.priceFrom && data.priceFrom > 0 ? data.priceFrom : undefined,
@@ -651,10 +666,10 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
             minTradingDays: data.minTradingDays,
             hasConsistencyRule: data.hasConsistencyRule ?? true,
             consistencyRule: data.consistencyRule,
-            linkToStart: data.affiliateUrl ?? data.website,
+            linkToStart: domainWarning ? undefined : data.affiliateUrl ?? data.website,
           }),
         ]),
-    strengths: data.strengths ?? (isClosed ? ['Useful prevention archive'] : ['Name added to broad coverage', 'Official source available']),
+    strengths: data.strengths ?? (isClosed ? ['Useful prevention archive'] : ['Monitored by PropRadar', 'Official source available']),
     weaknesses: data.weaknesses ?? (isClosed
       ? ['No purchase recommended', 'Operational risk materialized']
       : ['Profile needs more detail', 'Payout data and reviews must be rechecked', 'Not a strong recommendation by default']),
@@ -666,6 +681,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     auditSourcesChecked,
     ...(data.regulatoryAudit ? { regulatoryAudit: data.regulatoryAudit } : {}),
     reviewSignals: data.reviewSignals,
+    ...(domainWarning ? { listedDomainWarning: domainWarning } : {}),
   });
 }
 
@@ -5008,6 +5024,8 @@ const universePropFirms: PropFirm[] = [
     slug: 'funded-peaks',
     name: 'Funded Peaks',
     website: 'https://www.fundedpeaks.com/',
+    listedDomainWarning:
+      'Not a current purchase option: fundedpeaks.com now hosts a sweepstakes casino and prediction-market review site, not a prop-firm checkout. PropRadar does not link to that domain.',
     status: 'À surveiller',
     score: 32,
     founded: 2023,
@@ -7405,6 +7423,8 @@ const universePropFirms: PropFirm[] = [
     slug: 'nova-funding',
     name: 'Nova Funding',
     website: 'https://novafunding.com/',
+    listedDomainWarning:
+      'Not a current purchase option: during the July 8, 2026 review, novafunding.com redirected to a lawsuit-funding business, not a prop trading firm. PropRadar does not link to that domain.',
     status: 'À surveiller',
     score: 56,
     founded: 2023,
@@ -7646,6 +7666,8 @@ const universePropFirms: PropFirm[] = [
     slug: 'fx-capital-funding',
     name: 'FX Capital Funding',
     website: 'https://fxcapitalfunding.com/',
+    listedDomainWarning:
+      'Not a current purchase option: during the July 8, 2026 review, fxcapitalfunding.com redirected to a broker-comparison site instead of a prop-firm offer. PropRadar does not link to that domain.',
     status: 'À surveiller',
     score: 54,
     founded: 2023,
@@ -8529,55 +8551,60 @@ const universePropFirms: PropFirm[] = [
     id: 112,
     slug: 'alpha-futures',
     name: 'Alpha Futures',
-    website: 'https://alphafutures.com/',
+    website: 'https://alpha-futures.com/',
     status: 'À surveiller',
-    score: 25,
+    score: 55,
     founded: 2024,
     market: 'Futures',
     priceFrom: 99,
     styles: ['Futures', 'Intraday', 'Scalping'],
     productName: 'Alpha Futures evaluation',
     productType: 'Futures evaluation',
-    productDescription: 'Futures-focused evaluation to investigate for intraday index traders. Check drawdown type, news windows, payout caps and scaling rules before buying.',
+    productDescription: 'Futures evaluations (Zero, Advanced) and a Direct plan reported by third-party trackers. Check drawdown type, news windows, payout caps, platform availability and scaling rules on the official site before buying.',
     platforms: ['To verify'],
     tradableAssets: ['Futures'],
-    incidents: 4,
-    note: 'Stale-domain risk: the listed official domain resolved to an Afternic parked/for-sale page during the July 8, 2026 review.',
+    incidents: 2,
+    recentRuleChange: true,
+    lastReviewed: '2026-10-23',
+    incidentsDetails: [
+      'Third-party tracker reports the Premium plan was discontinued on July 12, 2026.',
+      'Third-party tracker reports NinjaTrader and Tradovate were removed for new purchases.',
+      'Third-party tracker reports a temporary delisting by PickAPropFirm. Cause not documented by PropRadar.',
+    ],
+    note: 'Futures division reported as part of Alpha Capital Group. Score kept conservative while recent product and platform changes are reviewed on the official site.',
     additionalSources: [
-      { label: 'Alpha Futures parked domain / Afternic page', url: 'https://alphafutures.com/' },
+      { label: 'FundedTrading Alpha Futures profile (third party)', url: 'https://fundedtrading.com/propfirm/alpha-futures/' },
       { label: 'Alpha Futures Trustpilot search', url: 'https://www.trustpilot.com/search?query=Alpha%20Futures%20prop%20firm' },
     ],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Domain-status pass completed. The listed Alpha Futures official domain redirected to an Afternic parked/for-sale page during the July 8, 2026 PropRadar review. Treat this profile as stale or unresolved until a current official prop-firm domain, legal entity and futures broker/FCM disclosures are found.',
-    auditSourcesChecked: ['Current domain', 'Afternic parked-domain page', 'Trustpilot search'],
+      'Corrected on October 23, 2026. The July 8, 2026 pass checked alphafutures.com, a parked domain this firm does not use, and wrongly classified the profile as stale. The firm operates from alpha-futures.com. The score now reflects a cautious, not-yet-audited futures profile with recent product and platform changes.',
+    auditSourcesChecked: ['Official domain identified', 'Third-party firm tracker', 'Trustpilot search'],
     regulatoryAudit: {
-      riskLevel: 'High',
-      lastChecked: '2026-07-08',
+      riskLevel: 'To audit',
+      lastChecked: '2026-10-23',
       summary:
-        'High stale-entry risk. The current domain did not present a prop-firm product and instead appeared as a parked/for-sale domain. No legal entity, jurisdiction, terms, broker/FCM relationship or payout obligation should be inferred.',
+        'Legal entity, futures broker/FCM relationship and terms still need to be read on alpha-futures.com. Third-party trackers describe the firm as the futures division of Alpha Capital Group, based in the United Kingdom.',
       entities: [
         {
           name: 'Alpha Futures',
-          jurisdiction: 'To verify',
-          role: 'Futures prop-firm brand/operator not confirmed from the current domain.',
+          jurisdiction: 'To verify (reported United Kingdom)',
+          role: 'Futures prop-firm brand reported as part of Alpha Capital Group; confirm the contracting entity from the official terms.',
         },
       ],
       regulatoryStatus: [
-        'Current domain did not present a usable prop-firm offer in this pass.',
-        'Futures broker/FCM relationship and live/simulated account model remain unconfirmed.',
-        'Prop-firm legal entity and operating status remain unconfirmed.',
+        'Contracting entity and jurisdiction to confirm from the official terms.',
+        'Futures broker/FCM relationship and simulated account model to confirm.',
       ],
       complaintsAndDisputes: [
-        'Historical mentions should not be mapped to the current domain without proof that the same operator still controls the product.',
+        'Public complaints and payout disputes still need to be classified by source, date and severity.',
       ],
       redFlags: [
-        'Listed official domain resolved to a parked/for-sale page.',
-        'Do not recommend until a current official prop-firm URL and terms are confirmed.',
+        'Recent product and platform changes: re-read current rules before buying.',
       ],
       sources: [
-        { label: 'Alpha Futures current domain', url: 'https://alphafutures.com/' },
-        { label: 'Alpha Futures Trustpilot search', url: 'https://www.trustpilot.com/search?query=Alpha%20Futures%20prop%20firm' },
+        { label: 'Alpha Futures official site', url: 'https://alpha-futures.com/' },
+        { label: 'FundedTrading Alpha Futures profile (third party)', url: 'https://fundedtrading.com/propfirm/alpha-futures/' },
       ],
     },
   }),
@@ -9801,6 +9828,8 @@ const universePropFirms: PropFirm[] = [
     slug: 'dei-funded',
     name: 'Dei Funded',
     website: 'https://deifunded.com/',
+    listedDomainWarning:
+      'Not a current purchase option: during the July 8, 2026 review, deifunded.com served unrelated Indonesian lottery content instead of a prop-firm offer. PropRadar does not link to that domain.',
     status: 'À surveiller',
     score: 38,
     founded: 2023,
@@ -10713,6 +10742,8 @@ const universePropFirms: PropFirm[] = [
     slug: 'levels',
     name: 'Levels',
     website: 'https://levels.com/',
+    listedDomainWarning:
+      'Not a current purchase option: levels.com belongs to a metabolic-health company, not a prop firm. The prop-firm brand\'s real domain is not identified, so PropRadar does not link to levels.com.',
     status: 'À surveiller',
     score: 35,
     founded: 2023,
@@ -12786,6 +12817,13 @@ export function manipulationRiskClass(risk: NonNullable<ReviewSignals['manipulat
   if (risk === 'Faible') return 'badge-green';
   if (risk === 'Moyen') return 'badge-amber';
   return 'badge-red';
+}
+
+// Mention counts are only real when they come from a measured source.
+// Estimated profiles derive their positive/negative split from the score, so
+// those numbers must never be displayed as counted public mentions.
+export function hasMeasuredMentions(source?: string) {
+  return Boolean(source) && source !== 'Estimation PropRadar';
 }
 
 export function formatUsd(value: number) {

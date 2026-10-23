@@ -1,4 +1,5 @@
 import type { PropFirm } from './propFirms';
+import { hasMeasuredMentions } from './propFirms';
 
 export type CommunityProvider = 'reddit' | 'x';
 export type CommunitySentiment = 'positive' | 'negative' | 'neutral';
@@ -369,10 +370,13 @@ function fallbackSummary(
   reason: string,
 ): CommunitySignalSummary {
   const isReddit = provider === 'reddit';
-  const positive = isReddit ? firm.reviewSignals.redditPositiveMentions ?? 0 : firm.reviewSignals.xPositiveMentions ?? 0;
-  const negative = isReddit ? firm.reviewSignals.redditNegativeMentions ?? 0 : firm.reviewSignals.xNegativeMentions ?? 0;
-  const neutral = isReddit ? firm.reviewSignals.redditNeutralMentions ?? 0 : firm.reviewSignals.xNeutralMentions ?? 0;
-  const sampleSize = isReddit ? firm.reviewSignals.redditSampleSize ?? 0 : firm.reviewSignals.xSampleSize ?? 0;
+  // Estimated profiles have no counted mentions: return zeros instead of
+  // score-derived numbers so API consumers never read them as real counts.
+  const measured = hasMeasuredMentions(isReddit ? firm.reviewSignals.redditSource : firm.reviewSignals.xSource);
+  const positive = !measured ? 0 : isReddit ? firm.reviewSignals.redditPositiveMentions ?? 0 : firm.reviewSignals.xPositiveMentions ?? 0;
+  const negative = !measured ? 0 : isReddit ? firm.reviewSignals.redditNegativeMentions ?? 0 : firm.reviewSignals.xNegativeMentions ?? 0;
+  const neutral = !measured ? 0 : isReddit ? firm.reviewSignals.redditNeutralMentions ?? 0 : firm.reviewSignals.xNeutralMentions ?? 0;
+  const sampleSize = !measured ? 0 : isReddit ? firm.reviewSignals.redditSampleSize ?? 0 : firm.reviewSignals.xSampleSize ?? 0;
   const score = isReddit ? firm.reviewSignals.redditScore : firm.reviewSignals.xScore;
 
   return {
