@@ -78,10 +78,10 @@ const officialRuleAudits: OfficialRuleAudit[] = [
           'Never monitor balance alone. A wick, spread expansion or swap can be enough to breach the account.',
       },
       {
-        title: 'Best Day Rule on 1-Step and FTMO Account',
+        title: 'Best Day / Consistency rule on 1-Step and FTMO Account',
         severity: 'Élevé',
         finding:
-          'The best day must not exceed 50% of positive profits. This is not always a breach, but it can block progression or a reward until the ratio is corrected.',
+          'On accounts from orders placed before October 12, 2026, the best day must not exceed 50% of positive profits. New 1-Step orders use a Consistency rule that compares the best day with total profit, losing days included. Neither is a breach, but both can block progression or a reward until the ratio is corrected.',
         consumerImpact:
           'One large winning trade can force you to keep trading to unlock the account, which means taking more risk.',
       },

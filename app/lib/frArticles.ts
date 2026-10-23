@@ -196,7 +196,7 @@ export const frArticles: FrArticle[] = [
         heading: 'Challenge, payout ou les deux',
         paragraphs: [
           'Le même pourcentage n\'a pas les mêmes conséquences selon l\'étape. Sur le challenge, la règle retarde seulement votre validation. Sur les payouts, elle peut bloquer un retrait alors que vous avez déjà gagné de l\'argent sur le compte financé.',
-          'Exemples vérifiés en octobre 2026 : Topstep applique 55 % sur son Trading Combine et, si vous dépassez, relève l\'objectif de profit au lieu de vous éliminer ; son compte Express Funded en parcours « Consistency » exige 40 % ou moins pour un payout. FTMO applique une « Best Day Rule » de 50 % sur son parcours 1-Step et le compte FTMO. PropRadar n\'a pas relevé de règle de ce type sur le programme High Stakes de The5ers.',
+          'Exemples vérifiés en octobre 2026 : Topstep applique 55 % sur son Trading Combine et, si vous dépassez, relève l\'objectif de profit au lieu de vous éliminer ; son compte Express Funded en parcours « Consistency » exige 40 % ou moins pour un payout. Depuis le 12 octobre 2026, les nouveaux challenges FTMO 1-Step utilisent une règle de consistance qui compare votre meilleure journée à votre profit total, journées perdantes comprises ; les comptes issus de commandes antérieures gardent l\'ancienne « Best Day Rule », calculée sur les seules journées positives. PropRadar n\'a pas relevé de règle de ce type sur le programme High Stakes de The5ers.',
         ],
       },
       {
@@ -216,6 +216,7 @@ export const frArticles: FrArticle[] = [
     sources: [
       { label: 'Centre d\'aide Topstep : consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
       { label: 'FTMO : objectifs de trading', url: 'https://ftmo.com/en/trading-objectives/' },
+      { label: 'FTMO : mise à jour du 8 octobre 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
     ],
     faq: [
       {
@@ -412,7 +413,7 @@ export const frArticles: FrArticle[] = [
       {
         heading: 'Règles des programmes phares (relevées en juillet 2026)',
         paragraphs: [
-          'Sur le challenge FTMO en deux étapes : objectif de 10 % puis 5 %, perte journalière maximale de 5 %, perte totale maximale de 10 %. FTMO applique une « Best Day Rule » de 50 % sur son parcours 1-Step et le compte FTMO.',
+          'Sur le challenge FTMO en deux étapes : objectif de 10 % puis 5 %, perte journalière maximale de 5 %, perte totale maximale de 10 %. Depuis le 12 octobre 2026, le challenge FTMO 1-Step utilise une règle de consistance (meilleure journée comparée au profit total) à la place de l\'ancienne « Best Day Rule », qui reste valable pour les commandes antérieures.',
           'Sur le programme High Stakes de The5ers : objectif de 8 % puis 5 %, perte journalière de 5 %, perte maximale de 10 %. PropRadar n\'a pas relevé de règle de meilleure journée en pourcentage sur ce programme.',
           'Ces règles évoluent : vérifiez toujours la page officielle du programme avant d\'acheter.',
         ],
@@ -436,6 +437,7 @@ export const frArticles: FrArticle[] = [
     ],
     sources: [
       { label: 'FTMO : objectifs de trading', url: 'https://ftmo.com/en/trading-objectives/' },
+      { label: 'FTMO : mise à jour du 8 octobre 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
       { label: 'The5ers : programmes', url: 'https://the5ers.com/programs/' },
       { label: 'FTMO sur Trustpilot', url: 'https://www.trustpilot.com/review/ftmo.com' },
       { label: 'The5ers sur Trustpilot', url: 'https://www.trustpilot.com/review/the5ers.com' },
