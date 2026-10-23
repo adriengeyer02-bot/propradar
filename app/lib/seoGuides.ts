@@ -684,6 +684,98 @@ export const seoGuides: SeoGuide[] = [
     focusFirmSlugs: ['topstep', 'apex-trader-funding'],
   },
   {
+    slug: 'topstep-review',
+    title: 'Topstep Review 2026: Is Topstep Legit? Rules & Payouts',
+    metaDescription:
+      'Topstep review 2026: is Topstep legit? Trading Combine rules, 55% consistency target, trailing Maximum Loss Limit, 90% split, payout paths and Trustpilot signals.',
+    eyebrow: 'Firm review',
+    h1: 'Topstep review 2026: is Topstep legit?',
+    intent: 'risque',
+    demandSignal: 'Trust search before buying a futures evaluation: legitimacy, current rules, payout conditions and public reviews.',
+    answer:
+      'Topstep is a legitimate, long-running US futures prop firm founded in 2012. Its Trading Combine has no time limit, a 55% consistency target and a Maximum Loss Limit that trails the end-of-day balance but is monitored live. New traders keep 90% of payouts. The main drawbacks are futures-only trading, no overnight holds and frequent rule changes since late 2025.',
+    primaryKeywords: ['topstep review', 'is topstep legit', 'topstep reviews'],
+    secondaryKeywords: ['topstep rules', 'topstep payout', 'topstep consistency rule', 'topstep trading combine', 'topstep trustpilot'],
+    checks: [
+      'Confirm the current Combine price and whether the plan carries an activation fee.',
+      'Size positions from the Maximum Loss Limit, which trails the end-of-day balance.',
+      'Choose the Express Funded Account payout path carefully: the choice is permanent.',
+      'Remember the MLL resets to $0 after the first payout.',
+    ],
+    faq: [
+      {
+        question: 'Is Topstep legit?',
+        answer:
+          'Yes. Topstep has operated since 2012 from Chicago, publishes detailed rules in its help center and launched an affiliated introducing broker in 2026. PropRadar scores it 84/100 with no regulator warning recorded. As with all prop firms, the evaluation and funded stages are simulated.',
+      },
+      {
+        question: 'What is the Topstep consistency rule?',
+        answer:
+          'In the Trading Combine your best day cannot exceed 55% of the profit target; if it does, the target rises to best day divided by 0.55. On the Express Funded Account Consistency path, your largest day must be 40% or less of net profit to request a payout.',
+      },
+      {
+        question: 'What profit split does Topstep pay?',
+        answer:
+          'Traders who joined on or after January 12, 2026 receive 90% of approved payouts. Traders who joined earlier keep 100% of their first $10,000, then 90%. The minimum payout request is $125.',
+      },
+      {
+        question: 'Can I hold trades overnight with Topstep?',
+        answer: 'No. All positions must be closed by the end of the session; overnight and weekend holds are not allowed.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Topstep profile and score', href: '/firm/topstep' },
+      { label: 'Topstep vs Apex', href: '/guides/topstep-vs-apex' },
+      { label: 'Prop firm drawdown explained', href: '/guides/prop-firm-drawdown' },
+      { label: 'Best futures prop firms', href: '/guides/meilleure-prop-firm-futures' },
+    ],
+    focusFirmSlugs: ['topstep', 'apex-trader-funding', 'alpha-futures'],
+  },
+  {
+    slug: 'prop-firm-drawdown',
+    title: 'Prop Firm Drawdown Explained: Trailing, Static & EOD',
+    metaDescription:
+      'What is drawdown in a prop firm? Static vs trailing vs end-of-day drawdown explained with worked examples, daily loss limits, lock levels and how to choose.',
+    eyebrow: 'Rules explained',
+    h1: 'Prop firm drawdown explained: trailing, static and end-of-day',
+    intent: 'regles',
+    demandSignal: 'Rule-understanding search: the trader wants to know how much room an account really gives before buying.',
+    answer:
+      'Drawdown is the maximum your account may lose from a reference point. A static drawdown is fixed below the starting balance and never moves. An intraday trailing drawdown follows your highest equity in real time, open profit included. An end-of-day trailing drawdown only moves at the daily close. Static is the most forgiving, intraday trailing the strictest.',
+    primaryKeywords: ['what is drawdown in prop firm', 'prop firm drawdown rules', 'trailing drawdown prop firm'],
+    secondaryKeywords: ['static drawdown', 'end of day drawdown', 'balance based drawdown prop firm', 'daily loss limit', 'eod drawdown'],
+    checks: [
+      'Identify the reference point: starting balance, highest equity or end-of-day balance.',
+      'Check whether breaches are measured on balance or on equity.',
+      'Find the lock level where a trailing limit stops moving.',
+      'Size positions from the remaining room, not the account size.',
+    ],
+    faq: [
+      {
+        question: 'What is the difference between trailing and static drawdown?',
+        answer:
+          'A static drawdown stays at a fixed level below your starting balance. A trailing drawdown moves up as your account makes new highs, so your room shrinks after every gain until it locks.',
+      },
+      {
+        question: 'Is end-of-day drawdown better than trailing?',
+        answer:
+          'Usually yes. An end-of-day trailing limit ignores intraday swings in open profit and only moves at the close, while an intraday trailing limit can rise during a trade you later close at breakeven.',
+      },
+      {
+        question: 'Does the daily loss limit close my account?',
+        answer:
+          'It depends on the firm. Most forex/CFD firms breach the account; some futures firms only stop trading for the rest of the session. Read the terms of your exact program.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Consistency rule explained', href: '/guides/prop-firm-sans-consistency-rule' },
+      { label: 'Topstep review', href: '/guides/topstep-review' },
+      { label: 'Rules audit', href: '/regles' },
+      { label: 'Comparator', href: '/comparateur' },
+    ],
+    focusFirmSlugs: ['the5ers', 'ftmo', 'topstep', 'apex-trader-funding'],
+  },
+  {
     slug: 'funderpro-vs-the5ers',
     title: 'FunderPro vs The5ers: news, EA, swing and payout',
     metaDescription:

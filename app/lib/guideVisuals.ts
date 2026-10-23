@@ -102,6 +102,8 @@ const guideThemeBySlug: Record<string, GuideVisualTheme> = {
   'prop-firm-pour-debutant': 'ranking',
   'meilleure-prop-firm-futures': 'futures',
   'topstep-vs-apex': 'futures',
+  'topstep-review': 'futures',
+  'prop-firm-drawdown': 'rules',
   'meilleure-prop-firm-forex': 'forex',
   'ftmo-vs-the5ers': 'forex',
   'funderpro-vs-the5ers': 'forex',

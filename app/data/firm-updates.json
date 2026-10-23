@@ -8,7 +8,86 @@
           "date": "2026-10-23",
           "summary": "Corrected the official domain to alpha-futures.com. The July 8 pass had checked alphafutures.com, a parked domain this firm does not use, and wrongly classified the profile as stale. Score moved from 25 to 55 pending a full audit.",
           "source": "https://fundedtrading.com/propfirm/alpha-futures/",
-          "fields": ["website", "score", "status"]
+          "fields": [
+            "website",
+            "score",
+            "status"
+          ]
+        }
+      ]
+    },
+    "topstep": {
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "trustpilotRating": 3.7,
+        "trustpilotReviewCount": 14955,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com"
+      },
+      "addSources": [
+        {
+          "label": "Topstep help center: Maximum Loss Limit",
+          "url": "https://intercom.help/topstep-llc/en/articles/8284204"
+        },
+        {
+          "label": "Topstep help center: payout FAQs",
+          "url": "https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot refreshed: 3.7 TrustScore across 14,955 reviews, with Trustpilot's high-risk investment notice.",
+          "source": "https://www.trustpilot.com/review/topstep.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trading Combine consistency target corrected to 55% (was recorded as 50%); Express Funded Account Consistency path uses 40%.",
+          "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+          "fields": [
+            "products"
+          ]
+        }
+      ]
+    },
+    "ftmo": {
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "trustpilotRating": 4.8,
+        "trustpilotReviewCount": 54942,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftmo.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot refreshed: 4.8 TrustScore across 54,942 reviews.",
+          "source": "https://www.trustpilot.com/review/ftmo.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "the5ers": {
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 40309,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore across 40,309 reviews.",
+          "source": "https://www.trustpilot.com/review/the5ers.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ]
     }

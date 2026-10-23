@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
+import GuideArticleBody from '../components/GuideArticleBody';
 import GuideHelpfulness from '../components/GuideHelpfulness';
+import { getGuideArticle } from '../lib/guideArticles';
 import { getGuideEditorial } from '../lib/guideEditorial';
 import type { PropFirm } from '../lib/propFirms';
 import {
@@ -38,6 +40,7 @@ export const metadata: Metadata = {
   category: 'Prop firm due diligence',
   alternates: {
     canonical: '/meilleures-prop-firms',
+    languages: { en: '/meilleures-prop-firms', fr: '/fr/meilleures-prop-firms-2026', 'x-default': '/meilleures-prop-firms' },
   },
   openGraph: {
     title: 'Best Prop Firms Right Now: Risk-First Ranking (2026)',
@@ -107,6 +110,7 @@ function legalRiskWeight(firm: PropFirm) {
 }
 
 export default function BestPropFirmsPage() {
+  const bestArticle = getGuideArticle('meilleure-prop-firm-2026');
   const editorial = getGuideEditorial('meilleure-prop-firm-2026');
   const shortlist = topFirms
     .filter((firm) => firm.reviewSignals.payoutRisk !== 'Critique' && firm.regulatoryAudit.riskLevel !== 'Critical')
@@ -268,6 +272,14 @@ export default function BestPropFirmsPage() {
           </div>
         </div>
       </section>
+
+      {bestArticle ? (
+        <GuideArticleBody
+          article={bestArticle}
+          label="Best prop firms 2026 - full guide"
+          langSwitch={{ href: '/fr/meilleures-prop-firms-2026', hrefLang: 'fr', label: 'Lire ce classement en français' }}
+        />
+      ) : null}
 
       <section className="page-insight-strip" aria-label="Best prop firm decision summary">
         <Link href="/comparateur">
