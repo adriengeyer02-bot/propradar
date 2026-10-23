@@ -183,6 +183,15 @@
           "date": "2026-10-23",
           "summary": "Domain monitor reported hantectrader.com redirecting to rzrfunded.com. Checked by hand: on 2026-10-19 the firm announced it now operates as RZR Funded (formerly Hantec Trader), stating that challenges, funded accounts, splits, drawdowns and payout schedules are unchanged. Treated as a rebrand, not a stale domain: no domain warning set. Prices left unchanged while a launch promotion runs until 2026-11-01.",
           "source": "https://www.newswire.ca/news-releases/hantec-trader-becomes-rzr-funded-as-firm-enters-new-phase-of-growth-894594107.html"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Profile renamed to RZR Funded and official site updated to rzrfunded.com after the October 19, 2026 rebrand. The page address stays the same; the pre-rebrand legal entity (Hantec Trader Limited, Mauritius) is kept with a note to reconfirm it on the new site.",
+          "source": "https://rzrfunded.com/why-we-are-rebranding/",
+          "fields": [
+            "name",
+            "website"
+          ]
         }
       ],
       "reviewedAt": "2026-10-23",

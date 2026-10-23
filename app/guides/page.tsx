@@ -99,7 +99,7 @@ const featuredFirmResearch = [
   },
   {
     slug: 'hantec-trader',
-    anchor: 'Hantec Trader legal review',
+    anchor: 'RZR Funded (ex-Hantec Trader) legal review',
     note: 'Mauritius entity, simulated accounts and the difference from Hantec Markets regulation.',
   },
 ];

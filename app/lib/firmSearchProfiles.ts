@@ -350,24 +350,30 @@ const firmSearchProfiles: Partial<Record<string, FirmSearchProfile>> = {
     ],
   },
   'hantec-trader': {
-    metaTitle: 'Hantec Trader Review: Entity, Rules & FCA Status (2026)',
+    metaTitle: 'RZR Funded (ex-Hantec Trader) Review: Entity & Rules',
     metaDescription:
-      'Hantec Trader review: Mauritius entity, simulated accounts, FCA status, Hantec Markets relationship, restricted countries and legal risks.',
-    eyebrow: 'Hantec Trader review',
-    heading: 'Is Hantec Trader regulated like Hantec Markets?',
+      'RZR Funded, formerly Hantec Trader: October 2026 rebrand, Mauritius entity, simulated accounts, FCA status, Hantec Markets relationship and legal risks.',
+    eyebrow: 'RZR Funded (formerly Hantec Trader) review',
+    heading: 'Is RZR Funded (formerly Hantec Trader) regulated like Hantec Markets?',
     summary:
-      'Hantec Trader benefits from the wider Hantec brand, but the prop-firm service must be judged separately. Its official disclaimer identifies a Mauritius company, simulated accounts with virtual funds and no broker or deposit-taking activity, and states that Hantec Trader is not FCA-regulated.',
+      'Hantec Trader became RZR Funded on October 19, 2026; the firm says accounts, rules and payout schedules are unchanged. Before the rebrand, Hantec Trader benefited from the wider Hantec brand, but the prop-firm service must be judged separately. Its official disclaimer identifies a Mauritius company, simulated accounts with virtual funds and no broker or deposit-taking activity, and states that Hantec Trader is not FCA-regulated.',
     facts: [
+      'Rebranded from Hantec Trader to RZR Funded on October 19, 2026 (press release); existing logins, balances and progress carry over.',
       'Hantec Trader Limited is presented separately from regulated entities in the wider Hantec group.',
       'The prop service uses simulated accounts and does not provide normal brokerage-account protection.',
       'Country restrictions and the exact instant or evaluation program rules must be checked before purchase.',
     ],
     links: [
       { label: 'Read the prop-firm legal check guide', href: '/guides/prop-firm-legal-check' },
-      { label: 'Compare Hantec Trader with other firms', href: '/comparateur' },
-      { label: 'Open saved Hantec Trader sources', href: '#sources' },
+      { label: 'Compare RZR Funded with other firms', href: '/comparateur' },
+      { label: 'Open saved RZR Funded / Hantec Trader sources', href: '#sources' },
     ],
     faq: [
+      {
+        question: 'Is Hantec Trader the same firm as RZR Funded?',
+        answer:
+          'Yes. Hantec Trader announced on October 19, 2026 that it now operates as RZR Funded, with the same management team and no change to existing challenges, funded accounts, rules or payout schedules.',
+      },
       {
         question: 'Is Hantec Trader FCA-regulated?',
         answer:
