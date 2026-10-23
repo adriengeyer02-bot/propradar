@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "firms": {
+    "alpha-futures": {
+      "reviewedAt": "2026-10-23",
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Corrected the official domain to alpha-futures.com. The July 8 pass had checked alphafutures.com, a parked domain this firm does not use, and wrongly classified the profile as stale. Score moved from 25 to 55 pending a full audit.",
+          "source": "https://fundedtrading.com/propfirm/alpha-futures/",
+          "fields": ["website", "score", "status"]
+        }
+      ]
+    }
+  }
+}

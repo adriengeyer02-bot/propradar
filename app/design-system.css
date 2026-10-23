@@ -8236,3 +8236,44 @@ html[data-theme='dark'] .mega-deal-card:not(.mega-deal-card-featured) .mega-deal
 html[data-theme='dark'] .firm-domain-warning strong {
   color: #f87171;
 }
+
+/* Dated update history on firm pages (app/data/firm-updates.json). */
+.firm-changelog {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.firm-changelog ol {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.firm-changelog li {
+  display: grid;
+  gap: 4px;
+  padding-left: 12px;
+  border-left: 3px solid var(--line-strong, var(--line));
+}
+
+.firm-changelog time {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.firm-changelog p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.firm-changelog a {
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 750;
+}

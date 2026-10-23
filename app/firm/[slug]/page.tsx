@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { firmMetaOverrides } from '../../lib/firmMetaOverrides';
+import { getFirmChangelog } from '../../lib/firmUpdates';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -411,6 +412,7 @@ export default async function FirmPage({ params }: Props) {
     ...(auditCaseFile?.sources.map((source) => source.url) ?? []),
   ])).filter((url) => !isBlockedFirmUrl(firm, url)).slice(0, 10);
   const firmPublicUrl = firm.listedDomainWarning ? pageUrl : firm.sources[0]?.url ?? pageUrl;
+  const firmChangelog = getFirmChangelog(firm.slug);
   const firmDecision = decisionLabel(firm);
   const firmDecisionClass = decisionClass(firmDecision);
   const longestFirmNameToken = Math.max(
@@ -1405,6 +1407,20 @@ export default async function FirmPage({ params }: Props) {
             <p className="muted" style={{ marginTop: 18, marginBottom: 0 }}>
               Last review: {firm.lastReviewed}. Prices and rules should be rechecked on official sources before any decision.
             </p>
+            {firmChangelog.length ? (
+              <div className="firm-changelog" id="update-history">
+                <h3>Update history</h3>
+                <ol>
+                  {firmChangelog.map((entry) => (
+                    <li key={`${entry.date}-${entry.summary.slice(0, 24)}`}>
+                      <time dateTime={entry.date}>{entry.date}</time>
+                      <p>{entry.summary}</p>
+                      <a href={entry.source} target="_blank" rel="noopener noreferrer">Source</a>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
