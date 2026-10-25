@@ -2,9 +2,11 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/jetbrains-mono/wght.css';
 import './globals.css';
 import './design-system.css';
 import './design-refresh.css';
+import './terminal.css';
 import ActiveNavLink from './components/ActiveNavLink';
 import RiskEvidenceMenu from './components/RiskEvidenceMenu';
 import SiteSearch from './components/SiteSearch';
@@ -121,8 +123,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   viewportFit: 'cover',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f2f4f7' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0d12' },
+    { media: '(prefers-color-scheme: light)', color: '#f5f6f8' },
+    { media: '(prefers-color-scheme: dark)', color: '#07090c' },
   ],
 };
 

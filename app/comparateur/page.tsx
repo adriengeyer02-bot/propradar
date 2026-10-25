@@ -3,20 +3,18 @@
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import FirmLogo from '../components/FirmLogo';
+import { TxArrow, TxScore } from '../components/TxBits';
+import { formatDate, riskTone } from '../lib/tx';
 import type { PropFirm } from '../lib/propFirms';
 import {
   activeFirms,
-  auditStatusClass,
-  hasMeasuredMentions,
   formatUsd,
   manipulationRiskClass,
   payoutRiskClass,
   propFirms,
   regulatoryRiskClass,
-  relationshipClass,
   reviewReliabilityClass,
   riskyFirms,
-  scoreClass,
   statusClass,
 } from '../lib/propFirms';
 import { findFirmSearchMatch, normalizeFirmSearch } from '../lib/firmSearch';
@@ -32,7 +30,13 @@ type LegalFilter = 'Tous' | 'verified' | 'watch' | 'deep';
 
 const statusFilters: StatusFilter[] = ['Tous', 'Active', 'À surveiller', 'Fermée'];
 const PAGE_SIZE = 20;
-const DATA_UPDATED_AT = '2026-07-13';
+const DATA_UPDATED_AT = propFirms.reduce((latest, firm) => {
+  const firmLatest = firm.regulatoryAudit.lastChecked > firm.lastReviewed ? firm.regulatoryAudit.lastChecked : firm.lastReviewed;
+  return firmLatest > latest ? firmLatest : latest;
+}, '2026-01-01');
+
+type SortKey = 'score' | 'price' | 'split' | 'name';
+type SortDir = 'asc' | 'desc';
 
 const QUICK_SEARCHES = [
   { label: 'Futures', query: 'futures' },
@@ -49,61 +53,10 @@ function jsonLd(data: unknown) {
   };
 }
 
-function SignalDots({ score, tone = 'blue' }: { score: number; tone?: 'blue' | 'orange' | 'green' | 'red' }) {
-  const filled = Math.max(1, Math.min(5, Math.round(score / 20)));
 
-  return (
-    <span className="dot-rating" aria-label={`${score}/100`}>
-      {Array.from({ length: 5 }).map((_, index) => (
-        <span key={index} className={`dot ${index < filled ? `dot-${tone}` : ''}`} />
-      ))}
-    </span>
-  );
-}
 
-function tradingStyleTags(firm: PropFirm) {
-  const tags = new Set<string>();
-  const text = `${firm.styles.join(' ')} ${firm.bestFor}`.toLowerCase();
 
-  if (text.includes('swing')) tags.add('Swing');
-  if (text.includes('scalping')) tags.add('Scalping');
-  if (text.includes('intraday')) tags.add('Intraday');
-  if (text.includes('formation')) tags.add('Formation');
-  if (text.includes('futures')) tags.add('Futures');
-  if (text.includes('crypto')) tags.add('Crypto');
-  if (!tags.has('Swing') && firm.drawdownType !== 'Trailing') tags.add('Swing to confirm');
-  tags.add('Manual SMC');
 
-  if (firm.newsTrading === 'Autorisé' || firm.newsTrading === 'Allowed') tags.add('News');
-  if (firm.newsTrading === 'Restreint' || firm.newsTrading === 'Restricted') tags.add('Restricted news');
-  if (firm.newsTrading === 'Non recommandé' || firm.newsTrading === 'Not recommended') tags.add('News blocked');
-  if (firm.newsTrading === 'Variable') tags.add('News to verify');
-
-  if (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes') tags.add('EA');
-  if (firm.eaAllowed === 'Sur demande' || firm.eaAllowed === 'On request') tags.add('EA on request');
-  if (firm.eaAllowed === 'Variable') tags.add('EA to verify');
-
-  return Array.from(tags).slice(0, 6);
-}
-
-function scoreToneClass(score: number) {
-  if (score >= 75) return 'signal-chip-good';
-  if (score >= 55) return 'signal-chip-watch';
-  return 'signal-chip-risk';
-}
-
-function riskToneClass(score: number) {
-  if (score >= 65) return 'signal-chip-risk';
-  if (score >= 40) return 'signal-chip-watch';
-  return 'signal-chip-good';
-}
-
-function rowToneClass(firm: PropFirm) {
-  if (firm.score >= 80 && firm.reviewSignals.payoutRiskScore < 40) return 'firm-result-strong';
-  if (firm.score < 55 || firm.reviewSignals.payoutRiskScore >= 65) return 'firm-result-risk';
-  if (firm.score < 70 || firm.reviewSignals.payoutRiskScore >= 40 || firm.status !== 'Active') return 'firm-result-watch';
-  return 'firm-result-neutral';
-}
 
 function legalSourceCount(firm: PropFirm) {
   return firm.regulatoryAudit.sources.length || firm.sources.length;
@@ -127,20 +80,7 @@ function legalRiskWeight(firm: PropFirm) {
   return riskScore + (firm.legalVerified ? 0 : 18) + (legalSourceCount(firm) < 2 ? 10 : 0);
 }
 
-function sourceDepthLabel(firm: PropFirm) {
-  const count = legalSourceCount(firm);
-  if (count >= 5) return 'Deep sources';
-  if (count >= 3) return 'Usable sources';
-  if (count >= 1) return 'Thin sources';
-  return 'No sources';
-}
 
-function sourceDepthClass(firm: PropFirm) {
-  const count = legalSourceCount(firm);
-  if (count >= 5) return 'badge-green';
-  if (count >= 2) return 'badge-amber';
-  return 'badge-red';
-}
 
 function FirmSearchContext({ firm, query }: { firm: PropFirm; query: string }) {
   const match = findFirmSearchMatch(firm, query);
@@ -163,6 +103,8 @@ export default function Comparateur() {
   const [drawdown, setDrawdown] = useState<DrawdownFilter>('Tous');
   const [legalFilter, setLegalFilter] = useState<LegalFilter>('Tous');
   const [page, setPage] = useState(1);
+  const [sortKey, setSortKey] = useState<SortKey>('score');
+  const [sortDir, setSortDir] = useState<SortDir>('desc');
 
   const filteredFirms = useMemo(() => {
     const normalizedSearch = normalizeFirmSearch(search);
@@ -187,18 +129,26 @@ export default function Comparateur() {
         return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal;
       })
       .sort((a, b) => {
-        if (normalizedSearch) {
+        if (normalizedSearch && sortKey === 'score' && sortDir === 'desc') {
           const relevanceDifference = (b.searchMatch?.score ?? 0) - (a.searchMatch?.score ?? 0);
           if (relevanceDifference) return relevanceDifference;
         }
-        return b.firm.score - a.firm.score;
+        const direction = sortDir === 'asc' ? 1 : -1;
+        if (sortKey === 'name') return direction * a.firm.name.localeCompare(b.firm.name);
+        if (sortKey === 'price') {
+          // Unknown prices (0) always sink to the bottom.
+          if (!a.firm.priceFrom || !b.firm.priceFrom) return (b.firm.priceFrom ? 1 : 0) - (a.firm.priceFrom ? 1 : 0);
+          return direction * (a.firm.priceFrom - b.firm.priceFrom);
+        }
+        if (sortKey === 'split') return direction * (a.firm.profitSplit - b.firm.profitSplit) || b.firm.score - a.firm.score;
+        return direction * (a.firm.score - b.firm.score);
       })
       .map(({ firm }) => firm);
-  }, [drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+  }, [drawdown, legalFilter, market, priceMax, scoreMin, search, sortDir, sortKey, status]);
 
   useEffect(() => {
     setPage(1);
-  }, [drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+  }, [drawdown, legalFilter, market, priceMax, scoreMin, search, sortDir, sortKey, status]);
 
   const totalPages = Math.max(1, Math.ceil(filteredFirms.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -284,6 +234,8 @@ export default function Comparateur() {
     setPriceMax('Tous');
     setDrawdown('Tous');
     setLegalFilter('Tous');
+    setSortKey('score');
+    setSortDir('desc');
   }
 
   function goToPage(nextPage: number) {
@@ -291,236 +243,84 @@ export default function Comparateur() {
     document.getElementById('tableau')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  function toggleSort(key: SortKey) {
+    if (sortKey === key) {
+      setSortDir(sortDir === 'asc' ? 'desc' : 'asc');
+      return;
+    }
+    setSortKey(key);
+    setSortDir(key === 'name' || key === 'price' ? 'asc' : 'desc');
+  }
+
+  function sortHeader(label: string, sortBy: SortKey, align?: 'right') {
+    const active = sortKey === sortBy;
+    return (
+      <th
+        scope="col"
+        className={align === 'right' ? 'tx-r' : undefined}
+        aria-sort={active ? (sortDir === 'asc' ? 'ascending' : 'descending') : 'none'}
+      >
+        <button type="button" className={`tx-sort${active ? ' is-active' : ''}`} onClick={() => toggleSort(sortBy)}>
+          {label}
+          <span aria-hidden="true">{active ? (sortDir === 'asc' ? '↑' : '↓') : '↕'}</span>
+        </button>
+      </th>
+    );
+  }
+
+  const watchColumns = [
+    {
+      label: 'Payout watch',
+      href: '/risques-payout',
+      firms: payoutAlerts.map((firm) => ({ firm, value: toEnglishText(firm.reviewSignals.payoutRisk), tone: riskTone(payoutRiskClass(firm.reviewSignals.payoutRisk)) })),
+    },
+    {
+      label: 'Review manipulation',
+      href: '/trustpilot-prop-firms',
+      firms: reviewWatch.map((firm) => ({ firm, value: toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen'), tone: riskTone(manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Moyen')) })),
+    },
+    {
+      label: 'Legal watch',
+      href: '/guides/prop-firm-legal-check',
+      firms: legalWatch.map((firm) => ({ firm, value: firm.regulatoryAudit.riskLevel, tone: riskTone(regulatoryRiskClass(firm.regulatoryAudit.riskLevel)) })),
+    },
+    {
+      label: 'Clean multi-source signal',
+      href: '/audit',
+      firms: strongSignals.map((firm) => ({ firm, value: `${firm.score}/100`, tone: 'tx-risk-pos' })),
+    },
+  ];
+
   return (
-    <main className="container comparator-page">
+    <main className="container tx-page tx-comparator">
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(comparatorSchema)} />
-      <section className="comparator-hero">
-          <div className="comparator-title">
-          <div className="eyebrow">Independent Radar</div>
-          <h1>Prop Firm Comparator</h1>
-          <p className="lead">Products, risks, Reddit signals, X/Twitter, Trustpilot reliability and payout incidents.</p>
-          <div className="comparator-freshness">
-            <span>Data updated</span>
-            <strong>{DATA_UPDATED_AT}</strong>
-          </div>
-        </div>
 
-        <div className="comparator-stats">
-          <div className="summary-stat">
-            <span>Firms tracked</span>
-            <strong>{propFirms.length}</strong>
-            <small>Core + universe + {archivedFirmsCount} archives</small>
-          </div>
-          <div className="summary-stat">
-            <span>Active</span>
-            <strong>{activeFirms.length}</strong>
-            <small>Open market</small>
-          </div>
-          <div className="summary-stat">
-            <span>Watchlist</span>
-            <strong>{riskyFirms.length}</strong>
-            <small>Cautious radar</small>
-          </div>
-          <div className="summary-score">
-            <span>Average reliability of results</span>
-            <strong>{averageScore}/100</strong>
-            <small>Calculated from displayed firms</small>
-            <a href="#tableau" className="btn btn-primary">View table</a>
-          </div>
-        </div>
-      </section>
+      <header className="tx-page-head">
+        <p className="tx-label">Independent radar</p>
+        <h1>Prop Firm Comparator</h1>
+        <p className="tx-page-lead">
+          Rules, payout risk, legal evidence and public review signals for every tracked prop firm, ranked by the PropRadar score.
+        </p>
+        <dl className="tx-meta-line">
+          <div><dt>Tracked</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>Active</dt><dd>{activeFirms.length}</dd></div>
+          <div><dt>Watchlist</dt><dd>{riskyFirms.length}</dd></div>
+          <div><dt>Archived</dt><dd>{archivedFirmsCount}</dd></div>
+          <div><dt>Data updated</dt><dd><time dateTime={DATA_UPDATED_AT}>{formatDate(DATA_UPDATED_AT)}</time></dd></div>
+        </dl>
+      </header>
 
-      <section className="page-insight-strip" aria-label="Comparator reading guide">
-        <a href="#tableau">
-          <span>Displayed firms</span>
-          <strong>{filteredFirms.length}</strong>
-          <small>Average score {averageScore}/100 after filters.</small>
-        </a>
-        <a href="#tableau">
-          <span>Active filters</span>
-          <strong>{activeFilterCount}</strong>
-          <small>Search, price, market, score and drawdown combined.</small>
-        </a>
-        <Link href="/risques-payout">
-          <span>Payout watch</span>
-          <strong>{payoutAlerts.length} priority</strong>
-          <small>Read withdrawal risk before comparing discounts.</small>
-        </Link>
-        <Link href="/trustpilot-prop-firms">
-          <span>Review context</span>
-          <strong>{reviewWatch.length} alerts</strong>
-          <small>Trustpilot is weighted against incidents and social feedback.</small>
-        </Link>
-        <Link href="/guides/prop-firm-legal-check">
-          <span>Legal files</span>
-          <strong>{legalWatch.length} priority</strong>
-          <small>Entity mapping, regulator status and source depth before checkout.</small>
-        </Link>
-      </section>
-
-      <section className="signal-dashboard" aria-label="Priority signals">
-        <article className="signal-dashboard-card signal-card-alert">
-          <div className="signal-card-header">
-            <div>
-              <div className="eyebrow">Payout Watch</div>
-              <h3>Incidents to watch</h3>
-            </div>
-            <span className="signal-card-count">Top 3</span>
-          </div>
-          <ul className="compact-signal-list">
-            {payoutAlerts.map((firm) => (
-              <li key={firm.slug}>
-                <Link href={`/firm/${firm.slug}`} className="signal-firm-link">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span>{firm.name}</span>
-                </Link>
-                <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
-        <article className="signal-dashboard-card signal-card-warning">
-          <div className="signal-card-header">
-            <div>
-              <div className="eyebrow">Filtered Reviews</div>
-              <h3>Signal marketing</h3>
-            </div>
-            <span className="signal-card-count">Reviews</span>
-          </div>
-          <ul className="compact-signal-list">
-            {reviewWatch.map((firm) => (
-              <li key={firm.slug}>
-                <Link href={`/firm/${firm.slug}`} className="signal-firm-link">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span>{firm.name}</span>
-                </Link>
-                <span className={`badge ${manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Moyen')}`}>{toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
-        <article className="signal-dashboard-card signal-card-positive">
-          <div className="signal-card-header">
-            <div>
-              <div className="eyebrow">Clean Signal</div>
-              <h3>Multi-source trust</h3>
-            </div>
-            <span className="signal-card-count">Trust</span>
-          </div>
-          <ul className="compact-signal-list">
-            {strongSignals.map((firm) => (
-              <li key={firm.slug}>
-                <Link href={`/firm/${firm.slug}`} className="signal-firm-link">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span>{firm.name}</span>
-                </Link>
-                <span className="badge badge-green">{firm.score}/100</span>
-              </li>
-            ))}
-          </ul>
-        </article>
-        <article className="signal-dashboard-card signal-card-legal">
-          <div className="signal-card-header">
-            <div>
-              <div className="eyebrow">Legal Watch</div>
-              <h3>Entity risk</h3>
-            </div>
-            <span className="signal-card-count">Legal</span>
-          </div>
-          <ul className="compact-signal-list">
-            {legalWatch.map((firm) => (
-              <li key={firm.slug}>
-                <Link href={`/firm/${firm.slug}#regulatory`} className="signal-firm-link">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span>{firm.name}</span>
-                </Link>
-                <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>{firm.regulatoryAudit.riskLevel}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
-      </section>
-
-      <section className="signal-trustbar" aria-label="PropRadar signal reading">
-        <div>
-          <span>Net Reddit</span>
-          <strong>positive vs negative</strong>
-          <small>The table shows positive and negative mentions, not just an abstract score.</small>
-        </div>
-        <div>
-          <span>X/Twitter Watch</span>
-          <strong>fast signal</strong>
-          <small>Viral complaints and recent feedback are separated from slower community noise.</small>
-        </div>
-        <div>
-          <span>Filtered Trustpilot</span>
-          <strong>suspicious reviews separated</strong>
-          <small>Review alerts stay visible next to estimated reliability.</small>
-        </div>
-        <div>
-          <span>Payout Watch</span>
-          <strong>operational risk</strong>
-          <small>Delays, denials, withdrawal thresholds and closures affect ranking.</small>
-        </div>
-        <div>
-          <span>Commercial conflict</span>
-          <strong>affiliate status shown</strong>
-          <small>An affiliate firm is not protected by the PropRadar score.</small>
-        </div>
-      </section>
-
-      <section className="panel comparator-panel" id="tableau">
-        <div className="panel-title-row">
-          <div>
-            <div className="eyebrow">Search</div>
-            <h2>Filter the radar</h2>
-          </div>
-          <span>{activeFilterCount > 0 ? `${activeFilterCount} active filter(s)` : 'Full view'}</span>
-        </div>
-
-        <div className="score-legend" aria-label="Score color legend">
-          <div className="score-legend-item score-legend-good">
-            <strong>Reliable</strong>
-            <span>High score, low payout risk, cleaner review profile.</span>
-          </div>
-          <div className="score-legend-item score-legend-watch">
-            <strong>Watchlist</strong>
-            <span>Readable, but one or more signals need checking.</span>
-          </div>
-          <div className="score-legend-item score-legend-risk">
-            <strong>High risk</strong>
-            <span>Payout, status, review or proof signals require caution.</span>
-          </div>
-        </div>
-
-        <div className="comparator-upgrade-callout">
-          <div>
-            <strong>Need a side-by-side decision?</strong>
-            <span>Select 2 or 3 firms in the tools page to compare rules, payout, price and trading style without reading every row.</span>
-          </div>
-          <Link href="/outils#comparatif" className="btn btn-primary">Open side-by-side tool</Link>
-        </div>
-
-        <div className="comparator-smart-search">
-          <div className="comparator-smart-search-heading">
-            <div>
-              <span>Indexed research</span>
-              <strong>Search firms, legal entities, programs, platforms or rules</strong>
-            </div>
-            <small>
-              {propFirms.length} firms - {searchCoverage.entityRecords} entity records - {searchCoverage.programs} programs - {searchCoverage.sources} evidence links
-            </small>
-          </div>
-
-          <div className="comparator-smart-search-input">
+      <section className="tx-toolbar" id="tableau" aria-label="Search and filters">
+        <div className="tx-toolbar-main">
+          <div className="tx-search">
             <label className="sr-only" htmlFor="comparator-search">Search indexed prop firm research</label>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5" /><path d="m10.5 10.5 3 3" /></svg>
             <input
               id="comparator-search"
               type="search"
-              placeholder="Name, acronym, entity, jurisdiction, MT5, payout rule..."
+              placeholder="Firm, legal entity, jurisdiction, platform, payout rule..."
               value={search}
               onChange={(event) => setSearch(event.target.value)}
-              className="field"
               autoComplete="off"
             />
             {search ? (
@@ -530,226 +330,209 @@ export default function Comparateur() {
             ) : null}
           </div>
 
-          <div className="comparator-quick-searches" aria-label="Quick firm research searches">
-            <span>Quick searches</span>
-            {QUICK_SEARCHES.map((item) => (
-              <button
-                key={item.query}
-                type="button"
-                className={normalizeFirmSearch(search) === normalizeFirmSearch(item.query) ? 'is-active' : ''}
-                onClick={() => setSearch(item.query)}
-                aria-pressed={normalizeFirmSearch(search) === normalizeFirmSearch(item.query)}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
-
-          {normalizeFirmSearch(search) ? (
-            <div className="comparator-search-mode" aria-live="polite">
-              <strong>Relevance mode</strong>
-              <span>{filteredFirms.length} match{filteredFirms.length === 1 ? '' : 'es'} for &quot;{search.trim()}&quot;</span>
-            </div>
-          ) : null}
-        </div>
-
-        <div className="filter-bar">
-          <div className="filter-pills" aria-label="Filter by status">
+          <div className="tx-segment" role="group" aria-label="Filter by status">
             {statusFilters.map((item) => (
               <button
                 key={item}
                 type="button"
-                className={`filter-pill ${status === item ? 'filter-pill-active' : ''} ${item === 'Active' ? 'pill-green' : item === 'À surveiller' ? 'pill-amber' : item === 'Fermée' ? 'pill-red' : ''}`}
+                className={status === item ? 'is-active' : ''}
                 onClick={() => setStatus(item)}
                 aria-pressed={status === item}
               >
-                {toEnglishText(item)}
+                {item === 'Tous' ? 'All' : toEnglishText(item)}
               </button>
             ))}
           </div>
+        </div>
 
-          <select value={scoreMin} onChange={(event) => setScoreMin(event.target.value as ScoreFilter)} className="field compact-field" aria-label="Minimum score">
-            <option value="Tous">Score min.</option>
-            <option value="70">70+</option>
-            <option value="80">80+</option>
-            <option value="90">90+</option>
+        <div className="tx-toolbar-filters">
+          <select value={scoreMin} onChange={(event) => setScoreMin(event.target.value as ScoreFilter)} className="tx-select" aria-label="Minimum score">
+            <option value="Tous">Any score</option>
+            <option value="70">Score 70+</option>
+            <option value="80">Score 80+</option>
+            <option value="90">Score 90+</option>
           </select>
-
-          <select value={priceMax} onChange={(event) => setPriceMax(event.target.value as PriceFilter)} className="field compact-field" aria-label="Maximum price">
-            <option value="Tous">Max price</option>
-            <option value="50">50$</option>
-            <option value="100">100$</option>
-            <option value="200">200$</option>
+          <select value={priceMax} onChange={(event) => setPriceMax(event.target.value as PriceFilter)} className="tx-select" aria-label="Maximum price">
+            <option value="Tous">Any price</option>
+            <option value="50">Up to $50</option>
+            <option value="100">Up to $100</option>
+            <option value="200">Up to $200</option>
           </select>
-
-          <select value={drawdown} onChange={(event) => setDrawdown(event.target.value as DrawdownFilter)} className="field compact-field" aria-label="Drawdown">
-            <option value="Tous">Max drawdown</option>
+          <select value={drawdown} onChange={(event) => setDrawdown(event.target.value as DrawdownFilter)} className="tx-select" aria-label="Drawdown type">
+            <option value="Tous">Any drawdown</option>
             <option value="EOD">EOD</option>
             <option value="Trailing">Trailing</option>
             <option value="Static">Static</option>
             <option value="Hybride">Hybrid</option>
           </select>
-
-          <select value={market} onChange={(event) => setMarket(event.target.value as MarketFilter)} className="field compact-field market-field" aria-label="Market">
-            <option value="Tous">All</option>
+          <select value={market} onChange={(event) => setMarket(event.target.value as MarketFilter)} className="tx-select" aria-label="Market">
+            <option value="Tous">All markets</option>
             <option>Forex</option>
             <option>Futures</option>
             <option value="Actions">Stocks</option>
             <option>Crypto</option>
           </select>
-
-          <select value={legalFilter} onChange={(event) => setLegalFilter(event.target.value as LegalFilter)} className="field compact-field legal-field" aria-label="Legal proof">
-            <option value="Tous">Legal proof</option>
+          <select value={legalFilter} onChange={(event) => setLegalFilter(event.target.value as LegalFilter)} className="tx-select" aria-label="Legal proof">
+            <option value="Tous">Any legal proof</option>
             <option value="verified">Entity mapped</option>
             <option value="watch">Legal watch</option>
             <option value="deep">Deep sources</option>
           </select>
+          {activeFilterCount > 0 || sortKey !== 'score' || sortDir !== 'desc' ? (
+            <button type="button" className="tx-reset" onClick={resetFilters}>Reset</button>
+          ) : null}
         </div>
 
-        <div className="table-actions" aria-live="polite">
-          <div>
-            <strong>{filteredFirms.length} prop firms</strong>
-            <span>
-              {activeFilterCount > 0 ? `${activeFilterCount} active filter(s). ` : ''}
-              Showing {visibleStart}-{visibleEnd}.{normalizeFirmSearch(search) ? ' Ranked by search relevance.' : ' Filters update instantly.'}
-            </span>
+        <div className="tx-quick" aria-label="Quick searches">
+          <span className="tx-label">Quick</span>
+          {QUICK_SEARCHES.map((item) => {
+            const isActive = normalizeFirmSearch(search) === normalizeFirmSearch(item.query);
+            return (
+              <button
+                key={item.query}
+                type="button"
+                className={isActive ? 'is-active' : ''}
+                onClick={() => setSearch(isActive ? '' : item.query)}
+                aria-pressed={isActive}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="tx-results-bar" aria-live="polite">
+        <span>
+          <strong className="tx-num">{filteredFirms.length}</strong> firm{filteredFirms.length === 1 ? '' : 's'}
+          {filteredFirms.length ? <> &middot; showing {visibleStart}&ndash;{visibleEnd}</> : null}
+          {normalizeFirmSearch(search) && sortKey === 'score' && sortDir === 'desc' ? <> &middot; ranked by search relevance</> : null}
+          {filteredFirms.length ? <> &middot; average score <span className="tx-num">{averageScore}</span></> : null}
+        </span>
+        <span className="tx-legend" aria-label="Score colour legend">
+          <i className="tx-legend-pos" /> 70+
+          <i className="tx-legend-warn" /> 55&ndash;69
+          <i className="tx-legend-neg" /> under 55
+        </span>
+      </div>
+
+      <div className="tx-table-wrap">
+        {filteredFirms.length === 0 ? (
+          <div className="tx-empty">
+            <strong>No prop firm matches this search and these filters.</strong>
+            <span>Check the name or acronym, or broaden the status, price, score, market and legal filters.</span>
+            <button type="button" className="btn" onClick={resetFilters}>Reset filters</button>
           </div>
-          <button type="button" className="btn table-reset-button" onClick={resetFilters}>Reset</button>
-        </div>
+        ) : (
+          <table className="tx-table tx-table-stack tx-firm-table">
+            <thead>
+              <tr>
+                <th scope="col" className="tx-r">#</th>
+                {sortHeader('Firm', 'name')}
+                {sortHeader('Score', 'score')}
+                <th scope="col">Status</th>
+                {sortHeader('From', 'price', 'right')}
+                {sortHeader('Split', 'split', 'right')}
+                <th scope="col">Drawdown</th>
+                <th scope="col">Payout risk</th>
+                <th scope="col">Legal file</th>
+                <th scope="col">Reviews</th>
+                <th scope="col"><span className="sr-only">Commercial relationship</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              {visibleFirms.map((firm, index) => (
+                <tr key={firm.slug}>
+                  <td className="tx-r tx-rank tx-hide-sm">{visibleStart + index}</td>
+                  <td className="tx-cell-firm">
+                    <Link href={`/firm/${firm.slug}`} className="tx-firm">
+                      <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
+                      <span>
+                        {firm.name}
+                        <small>{firm.styles.slice(0, 2).map((style) => toEnglishText(style)).join(' / ')}</small>
+                      </span>
+                    </Link>
+                    {normalizeFirmSearch(search) ? <FirmSearchContext firm={firm} query={search} /> : null}
+                  </td>
+                  <td className="tx-cell-score"><TxScore score={firm.score} /></td>
+                  <td data-label="Status">
+                    <span className={`tx-risk ${riskTone(statusClass(firm.status))}`}>{toEnglishText(firm.status)}</span>
+                  </td>
+                  <td data-label="From" className="tx-r tx-num">{firm.priceFrom > 0 ? formatUsd(firm.priceFrom) : <span className="tx-na">n/a</span>}</td>
+                  <td data-label="Split" className="tx-r tx-num">{firm.profitSplit > 0 ? `${firm.profitSplit}%` : <span className="tx-na">n/a</span>}</td>
+                  <td data-label="Drawdown">{toEnglishText(firm.drawdownType)}</td>
+                  <td data-label="Payout risk">
+                    <span className={`tx-risk ${riskTone(payoutRiskClass(firm.reviewSignals.payoutRisk))}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
+                  </td>
+                  <td data-label="Legal file">
+                    <span className={`tx-risk ${riskTone(regulatoryRiskClass(firm.regulatoryAudit.riskLevel))}`} title={`${firm.legalVerified ? 'Entity mapped' : 'Entity not confirmed'}, ${legalSourceCount(firm)} source(s)`}>
+                      {firm.regulatoryAudit.riskLevel}
+                    </span>
+                  </td>
+                  <td data-label="Reviews">
+                    <span
+                      className={`tx-risk ${riskTone(reviewReliabilityClass(firm.reviewSignals.trustpilotReliability))}`}
+                      title={`Trustpilot reliability${firm.trustpilotRating ? `, raw rating ${firm.trustpilotRating}/5` : ''}`}
+                    >
+                      {toEnglishText(firm.reviewSignals.trustpilotReliability)}
+                    </span>
+                  </td>
+                  <td className="tx-cell-rel">
+                    {firm.commercialRelationship === 'Affiliation transparente' ? (
+                      <span className="tx-tag tx-tag-accent" title="Declared affiliate relationship. It never protects the score.">Affiliate</span>
+                    ) : null}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
 
-        <div className="firm-results-list">
-          {filteredFirms.length === 0 ? (
-            <div className="empty-state">
-              <strong>No prop firm matches this research query and these filters.</strong>
-              <span>Check the name or acronym, or broaden the status, price, score, market and legal filters.</span>
-              <button type="button" className="btn" onClick={resetFilters}>Reset</button>
+      {filteredFirms.length > PAGE_SIZE ? (
+        <nav className="tx-pager" aria-label="Comparator result pages">
+          <button type="button" className="btn" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1}>
+            Previous
+          </button>
+          <span aria-current="page" className="tx-num">Page {currentPage} / {totalPages}</span>
+          <button type="button" className="btn" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </nav>
+      ) : null}
+
+      <p className="tx-table-note">
+        Need a decision between two or three firms?{' '}
+        <Link href="/outils#comparatif" className="tx-link">Open the side-by-side tool <TxArrow /></Link>
+      </p>
+
+      <section className="tx-section" aria-labelledby="signals-title">
+        <div className="tx-section-head">
+          <div>
+            <p className="tx-label">Priority signals</p>
+            <h2 id="signals-title">What to read before comparing discounts.</h2>
+          </div>
+          <p>
+            Searchable index: {searchCoverage.entityRecords} entity records, {searchCoverage.programs} programs and {searchCoverage.sources} evidence links.
+          </p>
+        </div>
+        <div className="tx-ruled tx-watch" style={{ ['--cols' as string]: 4 }}>
+          {watchColumns.map((column) => (
+            <div key={column.label}>
+              <Link href={column.href} className="tx-watch-title">
+                <span className="tx-label">{column.label}</span>
+                <TxArrow />
+              </Link>
+              <ul>
+                {column.firms.map(({ firm, value, tone }) => (
+                  <li key={firm.slug}>
+                    <Link href={`/firm/${firm.slug}`}>{firm.name}</Link>
+                    <span className={`tx-risk ${tone}`}>{value}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ) : visibleFirms.map((firm, index) => (
-            <article key={firm.slug} className={`firm-result-card ${rowToneClass(firm)} ${index === 0 ? 'firm-result-featured' : ''}`}>
-              <div className="firm-result-main">
-                <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
-                <div>
-                  <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
-                  <div className="firm-subline">{firm.styles.slice(0, 2).map((style) => toEnglishText(style)).join(' / ')} - {toEnglishText(firm.bestFor)}</div>
-                  {normalizeFirmSearch(search) ? <FirmSearchContext firm={firm} query={search} /> : null}
-                  <div className="strategy-chip-list" aria-label={`Trading styles for ${firm.name}`}>
-                    {tradingStyleTags(firm).map((tag) => <span key={tag}>{tag}</span>)}
-                  </div>
-                </div>
-              </div>
-
-              <div className="firm-result-score">
-                <div className={`score-tile ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                  <span>Score</span>
-                  <strong>{firm.score}</strong>
-                  <small>/100</small>
-                </div>
-                <span className={`badge ${statusClass(firm.status)}`}>{toEnglishText(firm.status)}</span>
-              </div>
-
-              <div className="firm-result-metrics">
-                <div className="result-metric"><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
-                <div className="result-metric"><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
-                <div className="result-metric result-metric-wide"><span>Main product</span><strong>{toEnglishText(firm.products[0]?.name ?? 'Aucun produit actif')}</strong></div>
-              </div>
-
-              <div className="firm-result-signals">
-                <div className={`signal-chip ${scoreToneClass(firm.reviewSignals.redditScore)}`}>
-                  <span>Reddit</span>
-                  <SignalDots score={firm.reviewSignals.redditScore} tone={firm.reviewSignals.redditScore >= 75 ? 'green' : firm.reviewSignals.redditScore >= 55 ? 'orange' : 'red'} />
-                  <small>{hasMeasuredMentions(firm.reviewSignals.redditSource) ? `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}` : 'estimate'}</small>
-                </div>
-                <div className={`signal-chip ${scoreToneClass(firm.reviewSignals.xScore)}`}>
-                  <span>X/Twitter</span>
-                  <SignalDots score={firm.reviewSignals.xScore} tone={firm.reviewSignals.xScore >= 75 ? 'green' : firm.reviewSignals.xScore >= 55 ? 'orange' : 'red'} />
-                  <small>{hasMeasuredMentions(firm.reviewSignals.xSource) ? `+${firm.reviewSignals.xPositiveMentions ?? 0} / -${firm.reviewSignals.xNegativeMentions ?? 0}` : 'estimate'}</small>
-                </div>
-                <div className={`signal-chip ${scoreToneClass(firm.reviewSignals.trustpilotReliabilityScore)}`}>
-                  <span>Trustpilot</span>
-                  <SignalDots score={firm.reviewSignals.trustpilotReliabilityScore} tone={firm.reviewSignals.trustpilotReliabilityScore >= 75 ? 'green' : firm.reviewSignals.trustpilotReliabilityScore >= 55 ? 'orange' : 'red'} />
-                  <span className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</span>
-                  <small>
-                    {firm.trustpilotRating ? `${firm.trustpilotRating}/5 raw - ` : ''}
-                    {firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0} review alert(s)
-                  </small>
-                </div>
-                <div className={`signal-chip ${riskToneClass(firm.reviewSignals.payoutRiskScore)}`}>
-                  <span>Payout</span>
-                  <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
-                </div>
-                <div className={`signal-chip ${riskToneClass(firm.reviewSignals.manipulationRiskScore ?? 50)}`}>
-                  <span>Reviews</span>
-                  <span className={`badge ${manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Moyen')}`}>{toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')}</span>
-                </div>
-                <div className={`signal-chip ${isLegalWatchFirm(firm) ? 'signal-chip-watch' : 'signal-chip-good'}`}>
-                  <span>Legal</span>
-                  <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>{firm.regulatoryAudit.riskLevel}</span>
-                  <small>{firm.legalVerified ? 'Entity mapped' : 'Entity not confirmed'} - {legalSourceCount(firm)} source(s)</small>
-                </div>
-              </div>
-
-              <div className="firm-result-action">
-                <span className={`badge ${relationshipClass(firm.commercialRelationship)}`}>
-                  {firm.commercialRelationship === 'Affiliation transparente' ? 'Affiliate' : 'No conflict'}
-                </span>
-                <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>{toEnglishText(firm.auditStatus)}</span>
-                <span className={`badge ${sourceDepthClass(firm)}`}>{sourceDepthLabel(firm)}</span>
-                <Link href={`/firm/${firm.slug}`} className="btn btn-primary">Open profile</Link>
-              </div>
-
-              <div className="firm-mobile-summary" aria-label={`Mobile summary for ${firm.name}`}>
-                <div>
-                  <span>Score</span>
-                  <strong>{firm.score}/100</strong>
-                </div>
-                <div>
-                  <span>Status</span>
-                  <strong>{toEnglishText(firm.status)}</strong>
-                </div>
-                <div>
-                  <span>Payout</span>
-                  <strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong>
-                </div>
-                <div>
-                  <span>Trustpilot</span>
-                  <strong>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong>
-                </div>
-                <div>
-                  <span>Legal</span>
-                  <strong>{firm.regulatoryAudit.riskLevel}</strong>
-                </div>
-                <div>
-                  <span>Sources</span>
-                  <strong>{legalSourceCount(firm)} link(s)</strong>
-                </div>
-                <div>
-                  <span>Social signal</span>
-                  <strong>Reddit {firm.reviewSignals.redditScore}/100</strong>
-                </div>
-                <div>
-                  <span>From</span>
-                  <strong>{formatUsd(firm.priceFrom)}</strong>
-                </div>
-              </div>
-            </article>
           ))}
-        </div>
-
-        {filteredFirms.length > PAGE_SIZE ? (
-          <nav className="comparator-pagination" aria-label="Comparator result pages">
-            <button type="button" className="btn" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1}>
-              Previous
-            </button>
-            <span aria-current="page">Page <strong>{currentPage}</strong> of {totalPages}</span>
-            <button type="button" className="btn" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages}>
-              Next
-            </button>
-          </nav>
-        ) : null}
-
-        <div className="table-footer">
-          <span>{visibleStart}-{visibleEnd} of {filteredFirms.length} result(s) displayed</span>
-          <span>{riskyFirms.length} watchlist firm(s) remain visible in the radar.</span>
         </div>
       </section>
     </main>

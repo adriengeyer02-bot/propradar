@@ -5,8 +5,13 @@ asset is trust: every number must be traceable, every warning sourced. When in
 doubt, publish less, not more.
 
 Stack: Next.js 15 (App Router), deployed by Vercel on every push to `main`.
-Design: `app/design-refresh.css` (loaded last) holds the current visual system:
-Archivo variable font, navy + radar cyan accent, sentence-case labels.
+Design: `app/terminal.css` (loaded last) holds the current "financial terminal"
+system: colour tokens for both themes, Archivo for text, JetBrains Mono for
+figures and micro labels, hairline rules instead of boxed cards, one cyan
+accent for actions, green/amber/red only for risk. New markup uses `tx-`
+classes (home, comparator, firm header) so it never inherits legacy rules;
+helpers live in `app/lib/tx.ts` and `app/components/TxBits.tsx`. Keep text
+contrast at WCAG AA (4.5:1) in light and dark.
 Site language: English. Owner: Geyer (writes in French, answer him in French).
 
 ## Where the data lives
@@ -85,5 +90,5 @@ Keep earlier changelog entries when you update a firm: append, never delete.
 ## Checks before any merge
 
 - `npx tsc --noEmit -p .` and `npx next build` pass (fonts are self-hosted
-  via @fontsource-variable/archivo, so the build works offline).
+  via @fontsource-variable/archivo and jetbrains-mono, so the build works offline).
 - Vercel status on the PR commit is `success`.

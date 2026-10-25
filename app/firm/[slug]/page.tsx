@@ -4,6 +4,8 @@ import { getFirmChangelog } from '../../lib/firmUpdates';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { TxArrow } from '../../components/TxBits';
+import { formatDate, riskTone, scoreTone } from '../../lib/tx';
 import FirmLogo from '../../components/FirmLogo';
 import {
   BLUE_GUARDIAN_AFFILIATE_URL,
@@ -18,7 +20,6 @@ import {
   payoutRiskClass,
   propFirms,
   regulatoryRiskClass,
-  relationshipClass,
   reviewReliabilityClass,
   scoreClass,
   type PropFirm,
@@ -176,19 +177,7 @@ function scoreProofRows(firm: PropFirm, kind: 'reddit' | 'x' | 'trustpilot' | 'p
   ];
 }
 
-function scoreColor(score: number) {
-  if (score >= 80) return '#047857';
-  if (score >= 70) return '#12b76a';
-  if (score >= 55) return '#d97706';
-  return '#dc2626';
-}
 
-function scoreRingStyle(score: number) {
-  const safeScore = Math.max(0, Math.min(100, score));
-  return {
-    background: `conic-gradient(${scoreColor(score)} ${safeScore * 3.6}deg, var(--score-ring-track) 0deg)`,
-  };
-}
 
 function signalToneClass(score: number) {
   if (score >= 75) return 'community-overview-good';
@@ -418,11 +407,6 @@ export default async function FirmPage({ params }: Props) {
   const longestFirmNameToken = Math.max(
     ...firm.name.split(/\s+/).map((token) => token.length),
   );
-  const firmTitleClass = firm.name.length >= 32 || longestFirmNameToken >= 20
-    ? 'firm-title firm-title-xlong'
-    : firm.name.length >= 22 || longestFirmNameToken >= 14
-      ? 'firm-title firm-title-long'
-      : 'firm-title';
   const sourceCount = regulatoryAudit.sources.length || firm.sources.length;
   const specificStrengthPoints = uniqueProfilePoints(firm.strengths);
   const specificRiskPoints = uniqueProfilePoints([
@@ -661,51 +645,94 @@ export default async function FirmPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema)} />
 
-      <section className="container detail-header firm-profile-header">
-        <Link href="/comparateur" className="firm-back-link">
-          <span aria-hidden="true">&larr;</span>
-          All firms
-        </Link>
+      <section className="container tx-firm-head detail-header firm-profile-header">
+        <nav className="tx-crumbs" aria-label="Breadcrumb">
+          <Link href="/comparateur">Comparator</Link>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{firm.name}</span>
+        </nav>
 
-        <div className="panel firm-hero firm-hero-compact">
-          <div className="firm-hero-copy">
-            <div className="firm-cell firm-identity">
-              <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
-              <div className="firm-identity-copy">
-                <div className="eyebrow">{toEnglishText(firm.headquarters)}, founded {firm.founded}</div>
-                <h1 className={firmTitleClass}>{firm.name}</h1>
-                <div className="firm-hero-badges">
-                  <span className={`badge ${operationalStatusClass(firm)}`}>Status: {operationalStatusLabel(firm)}</span>
-                  <span className={`badge ${firmRiskClass(firm)}`}>Risk: {firmRiskLabel(firm)}</span>
-                </div>
-              </div>
-            </div>
-            {firm.listedDomainWarning ? (
-              <p className="firm-domain-warning" role="note">
-                <strong>Domain warning.</strong> {firm.listedDomainWarning}
+        <div className="tx-firm-top">
+          <div className="tx-firm-id">
+            <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
+            <div>
+              <h1 className={`tx-firm-title${firm.name.length >= 22 || longestFirmNameToken >= 14 ? ' tx-firm-title-long' : ''}`}>{firm.name}</h1>
+              <p className="tx-firm-sub">
+                <span>{toEnglishText(firm.headquarters)}</span>
+                <span>Founded {firm.founded}</span>
+                <span className={`tx-risk ${riskTone(operationalStatusClass(firm))}`}>{operationalStatusLabel(firm)}</span>
+                <span className={`tx-risk ${riskTone(firmRiskClass(firm))}`}>{firmRiskLabel(firm)} risk</span>
+                {firm.commercialRelationship === 'Affiliation transparente' ? (
+                  <span className="tx-tag tx-tag-accent" title="Declared affiliate relationship. It never protects the score.">Affiliate</span>
+                ) : (
+                  <span className="tx-tag">No commercial link</span>
+                )}
               </p>
-            ) : (
-              <p className="lead">{toEnglishText(firm.verdict)}</p>
-            )}
+            </div>
           </div>
-          <div className="card firm-score-ring-card">
-            <div className="muted">PropRadar score</div>
-            <div className="firm-score-ring" style={scoreRingStyle(firm.score)} aria-label={`PropRadar score ${firm.score} out of 100`}>
-              <div className="firm-score-ring-core">
-                <strong>{firm.score}</strong>
-                <span>/100</span>
-              </div>
+
+          <div className={`tx-scorebox ${scoreTone(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
+            <span className="tx-label">PropRadar score</span>
+            <div className="tx-scorebox-value">
+              <strong>{firm.score}</strong>
+              <span>/100</span>
             </div>
-            <p>Weighted from rules, payouts, public reviews and proof level.</p>
-            <div style={{ marginTop: 12 }}>
-              <span className={`badge ${relationshipClass(firm.commercialRelationship)}`}>{relationshipLabel(firm.commercialRelationship)}</span>
-            </div>
-            <div className="firm-score-actions">
-              <Link href="/#radar-weekly" className="btn btn-primary">Set alert</Link>
-              <Link href="/comparateur" className="btn">Compare</Link>
-            </div>
+            <span className="tx-score-bar" aria-hidden="true"><i style={{ width: `${firm.score}%` }} /></span>
+            <small>Reviewed <time dateTime={firm.lastReviewed}>{formatDate(firm.lastReviewed)}</time>. Rules, payouts, public reviews and proof level.</small>
           </div>
         </div>
+
+        {firm.listedDomainWarning ? (
+          <p className="firm-domain-warning tx-firm-warning" role="note">
+            <strong>Domain warning.</strong> {firm.listedDomainWarning}
+          </p>
+        ) : (
+          <p className="tx-firm-verdict">{toEnglishText(firm.verdict)}</p>
+        )}
+
+        <div className="tx-firm-actions">
+          <Link href="/comparateur" className="btn">Compare with other firms</Link>
+          <Link href="/#radar-weekly" className="btn">Get risk updates</Link>
+        </div>
+
+        <dl className="tx-facts">
+          <div title="Entry fee or lowest visible program price tracked by PropRadar.">
+            <dt className="tx-label">Minimum price</dt>
+            <dd className={firm.priceFrom > 0 ? 'tx-num' : undefined}>{formatUsd(firm.priceFrom)}</dd>
+          </div>
+          <div title="Advertised trader profit split, weighted separately from payout reliability.">
+            <dt className="tx-label">Profit split</dt>
+            <dd className={firm.profitSplit > 0 ? 'tx-num' : undefined}>{firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A'}</dd>
+          </div>
+          <div title="Drawdown model to verify before choosing a program.">
+            <dt className="tx-label">Drawdown</dt>
+            <dd>{toEnglishText(firm.drawdownType)}</dd>
+          </div>
+          <div title="News trading status can differ between challenge and funded accounts.">
+            <dt className="tx-label">News trading</dt>
+            <dd>{toEnglishText(firm.newsTrading)}</dd>
+          </div>
+          <div>
+            <dt className="tx-label">Payout risk</dt>
+            <dd><span className={`tx-risk ${riskTone(payoutRiskClass(firm.reviewSignals.payoutRisk))}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span></dd>
+          </div>
+          <div>
+            <dt className="tx-label">Legal file</dt>
+            <dd><span className={`tx-risk ${riskTone(regulatoryRiskClass(regulatoryAudit.riskLevel))}`}>{regulatoryAudit.riskLevel}</span></dd>
+          </div>
+          <div>
+            <dt className="tx-label">Review reliability</dt>
+            <dd><span className={`tx-risk ${riskTone(reviewReliabilityClass(firm.reviewSignals.trustpilotReliability))}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</span></dd>
+          </div>
+          <div>
+            <dt className="tx-label">Proof level</dt>
+            <dd>{toEnglishText(firm.auditStatus)}</dd>
+          </div>
+          <div className="tx-facts-wide" title="Advertised payout delay or payout rule summary to verify in official conditions.">
+            <dt className="tx-label">Payout terms</dt>
+            <dd>{toEnglishText(firm.payoutDelay)}</dd>
+          </div>
+        </dl>
 
         {searchProfile ? (
           <article className="firm-search-answer" aria-labelledby={`search-answer-${firm.slug}`}>
@@ -792,106 +819,59 @@ export default async function FirmPage({ params }: Props) {
           </section>
         ) : null}
 
-        <div className="stat-strip">
-          <div className="stat firm-metric-card" title="Entry fee or lowest visible program price tracked by PropRadar.">
-            <span className="metric-icon" aria-hidden="true">$</span>
-            <span>Minimum price</span><strong>{formatUsd(firm.priceFrom)}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="Advertised trader profit split, weighted separately from payout reliability.">
-            <span className="metric-icon" aria-hidden="true">%</span>
-            <span>Profit split</span><strong>{firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A'}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="Drawdown model to verify before choosing a program.">
-            <span className="metric-icon" aria-hidden="true">DD</span>
-            <span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="News trading status can differ between challenge and funded accounts.">
-            <span className="metric-icon" aria-hidden="true">N</span>
-            <span>News trading</span><strong>{toEnglishText(firm.newsTrading)}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="Advertised payout delay or payout rule summary to verify in official conditions.">
-            <span className="metric-icon" aria-hidden="true">P</span>
-            <span>Payout</span><strong className={toEnglishText(firm.payoutDelay).length > 22 ? 'firm-metric-long' : undefined}>{toEnglishText(firm.payoutDelay)}</strong>
-          </div>
-        </div>
-
-        <div className="firm-proof-snapshot">
-          <div>
-            <span>Proof level</span>
-            <strong>{toEnglishText(firm.auditStatus)}</strong>
-          </div>
-          <div>
-            <span>Last review</span>
-            <strong>{firm.lastReviewed}</strong>
-          </div>
-          <div>
-            <span>Payout risk</span>
-            <strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong>
-          </div>
-          <div>
-            <span>Trustpilot reliability</span>
-            <strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong>
-          </div>
-        </div>
-        <div className={`panel firm-decision-panel ${firmDecisionClass}`} id="decision">
-          <div className="firm-decision-main">
-            <span>PropRadar action</span>
-            <strong>{firmDecision}</strong>
+        <section className={`tx-decision ${firmDecisionClass}`} id="decision" aria-labelledby={`decision-${firm.slug}`}>
+          <div className="tx-decision-main">
+            <span className="tx-label">PropRadar action</span>
+            <h2 id={`decision-${firm.slug}`}>{firmDecision}</h2>
             <p>{decisionDetail(firm, firmDecision)}</p>
           </div>
-          <div className="firm-decision-grid">
+          <dl className="tx-decision-stats">
             <div>
-              <span>Risk posture</span>
-              <strong>{firmRiskLabel(firm)}</strong>
+              <dt className="tx-label">Risk posture</dt>
+              <dd>{firmRiskLabel(firm)}</dd>
               <small>Score {firm.score}/100, payout risk {toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()}.</small>
             </div>
             <div>
-              <span>Regulatory file</span>
-              <strong>{regulatoryAudit.riskLevel}</strong>
-              <small>{regulatoryAudit.sources.length || firm.sources.length} source link(s) available.</small>
+              <dt className="tx-label">Regulatory file</dt>
+              <dd>{regulatoryAudit.riskLevel}</dd>
+              <small>{sourceCount} source link(s) saved.</small>
             </div>
             <div>
-              <span>Community signal</span>
-              <strong>{communitySignalScore}/100</strong>
+              <dt className="tx-label">Community signal</dt>
+              <dd className="tx-num">{communitySignalScore}/100</dd>
               <small>Reddit, X/Twitter, Trustpilot and payout signals combined.</small>
             </div>
-          </div>
-          <div className="firm-decision-lists">
+          </dl>
+          <div className="tx-decision-lists">
             <div>
-              <span>Profile-specific evidence</span>
+              <h3 className="tx-label">Profile-specific evidence</h3>
               <ul>
                 {firmSpecificSignals.map((point) => <li key={point}>{point}</li>)}
               </ul>
             </div>
             <div>
-              <span>Before paying</span>
-              <ul>
+              <h3 className="tx-label">Before paying</h3>
+              <ol>
                 {decisionChecklist.map((item) => <li key={item}>{item}</li>)}
-              </ul>
+              </ol>
             </div>
           </div>
-        </div>
-        <div className="panel firm-due-diligence-panel">
-          <div className="firm-due-diligence-head">
-            <div>
-              <div className="eyebrow">Due Diligence Snapshot</div>
-              <h2>What the profile proves before checkout</h2>
+          <div className="tx-diligence">
+            <div className="tx-diligence-head">
+              <h3 className="tx-label">Due diligence snapshot</h3>
+              <Link href="#regulatory" className="tx-link">Open legal file <TxArrow /></Link>
             </div>
-            <Link href="#regulatory" className="btn">Open legal file</Link>
+            <dl>
+              {dueDiligenceChecks.map((check) => (
+                <div key={check.label}>
+                  <dt>{check.label}</dt>
+                  <dd><span className={`tx-risk ${riskTone(check.className)}`}>{check.value}</span></dd>
+                  <small>{check.detail}</small>
+                </div>
+              ))}
+            </dl>
           </div>
-          <div className="firm-due-diligence-grid">
-            {dueDiligenceChecks.map((check) => (
-              <article className="firm-due-diligence-item" key={check.label}>
-                <span>{check.label}</span>
-                <strong className={`badge ${check.className}`}>{check.value}</strong>
-                <small>{check.detail}</small>
-              </article>
-            ))}
-          </div>
-          <p>
-            PropRadar separates operating status, legal entity mapping, payout evidence and commercial conflicts so a high discount or public rating does not hide purchase risk.
-          </p>
-        </div>
+        </section>
         {firm.commercialNote ? (
           <div className="panel" style={{ marginTop: 18 }}>
             <div className="eyebrow">Commercial transparency</div>
