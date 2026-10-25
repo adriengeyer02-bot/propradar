@@ -128,7 +128,7 @@ export default function SiteSearch() {
         aria-activedescendant={showResults && selectedIndex >= 0 ? `site-search-result-${selectedIndex}` : undefined}
         autoComplete="off"
         spellCheck={false}
-        placeholder="Search PropRadar"
+        placeholder="Search"
         className="site-search-input"
       />
       {query ? (

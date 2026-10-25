@@ -1,24 +1,25 @@
 import Link from 'next/link';
 import FirmLogo from './components/FirmLogo';
+import { TxArrow, TxScore } from './components/TxBits';
 import { getEditorialBriefPath, latestEditorialBrief } from './lib/editorialBriefs';
 import {
   partiallyVerifiedFirms,
   payoutRiskClass,
   propFirms,
   regulatoryRiskClass,
-  scoreClass,
   topFirms,
   verifiedFirms,
 } from './lib/propFirms';
 import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from './lib/seoGuides';
 import { toEnglishText } from './lib/i18n';
+import { formatDate, riskTone } from './lib/tx';
 
 export default function HomePage() {
   const noConflictFirms = propFirms.filter((firm) => firm.commercialRelationship === 'Aucune').length;
   const officialSourceCount = propFirms.reduce((sum, firm) => sum + firm.sources.length, 0);
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const sourcedFirms = verifiedFirms.length + partiallyVerifiedFirms.length;
-  const heroPreviewFirms = topFirms.slice(0, 3);
+  const rankingFirms = topFirms.slice(0, 8);
   const homepageGuides = [
     'prop-firm-sans-challenge',
     'prop-firm-sans-consistency-rule',
@@ -38,274 +39,230 @@ export default function HomePage() {
       : firm.lastReviewed;
     return firmLatestDate > latest ? firmLatestDate : latest;
   }, '2026-01-01');
-  const dataUpdatedLabel = new Intl.DateTimeFormat('en-US', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    timeZone: 'UTC',
-  }).format(new Date(`${dataUpdatedAt}T00:00:00Z`));
+  const dataUpdatedLabel = formatDate(dataUpdatedAt);
 
   return (
-    <main className="home-v2">
-      <section className="container home-v2-hero" aria-labelledby="home-title">
-        <div className="home-v2-hero-copy">
-          <div className="home-v2-kicker">
-            <span aria-hidden="true" />
-            Independent. Evidence first.
-          </div>
+    <main className="tx-page tx-home">
+      <section className="container tx-hero" aria-labelledby="home-title">
+        <div className="tx-hero-copy">
+          <p className="tx-label tx-hero-kicker">
+            <span className="tx-live" aria-hidden="true" />
+            Independent research. Updated {dataUpdatedLabel}
+          </p>
           <h1 id="home-title">The independent prop firm comparator built to protect traders.</h1>
-          <p className="home-v2-lead">
+          <p className="tx-hero-lead">
             Compare rules, payouts, legal entities and public signals before you pay for a challenge.
           </p>
-          <div className="home-v2-proofline" aria-label="PropRadar dataset coverage">
-            <span><strong>{propFirms.length}</strong> firms compared</span>
-            <span><strong>{noConflictFirms}</strong> with no commercial relationship</span>
-            <span>Latest firm review <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
-          </div>
-          <div className="home-v2-actions">
-            <Link href="/comparateur" className="btn btn-primary home-v2-primary-action">
+          <div className="tx-actions">
+            <Link href="/comparateur" className="btn btn-primary">
               Open the comparator
             </Link>
-            <Link href="/promos" className="btn home-v2-secondary-action">
+            <Link href="/promos" className="btn">
               View risk-aware deals
             </Link>
           </div>
-          <Link href="/guides" className="home-v2-guide-link">
-            Explore reliability guides
-            <span aria-hidden="true"> &gt;</span>
-          </Link>
-          <div className="home-v2-trust-line">
-            <span>No ranking can be bought.</span>
-            <span>Affiliate links stay disclosed.</span>
-            <span>Every score shows its review date.</span>
-          </div>
+          <ul className="tx-principles" aria-label="Editorial principles">
+            <li>No ranking can be bought.</li>
+            <li>Affiliate links stay disclosed.</li>
+            <li>Every score shows its review date.</li>
+          </ul>
         </div>
 
-        <div className="home-preview" aria-label="Top prop firms comparator preview">
-          <div className="home-preview-header">
-            <div>
-              <span>Comparator preview</span>
-              <h2>Top reliability</h2>
-            </div>
-            <span className="home-preview-live">
-              <i aria-hidden="true" /> Current scores
-            </span>
+        <div className="tx-board" aria-labelledby="ranking-title">
+          <div className="tx-board-head">
+            <h2 id="ranking-title" className="tx-label">Reliability ranking</h2>
+            <span className="tx-label">Top 8 of {propFirms.length}</span>
           </div>
+          <table className="tx-table tx-board-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firm</th>
+                <th scope="col">Score</th>
+                <th scope="col">Payout</th>
+                <th scope="col" className="tx-hide-sm">Legal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rankingFirms.map((firm, index) => (
+                <tr key={firm.slug}>
+                  <td className="tx-rank">{String(index + 1).padStart(2, '0')}</td>
+                  <td>
+                    <Link href={`/firm/${firm.slug}`} className="tx-firm">
+                      <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
+                      <span>
+                        {firm.name}
+                        {firm.commercialRelationship === 'Affiliation transparente' ? (
+                          <span className="tx-tag tx-tag-accent tx-board-aff" title="Declared affiliate relationship">Aff.</span>
+                        ) : null}
+                      </span>
+                    </Link>
+                  </td>
+                  <td><TxScore score={firm.score} /></td>
+                  <td>
+                    <span className={`tx-risk ${riskTone(payoutRiskClass(firm.reviewSignals.payoutRisk))}`}>
+                      {toEnglishText(firm.reviewSignals.payoutRisk)}
+                    </span>
+                  </td>
+                  <td className="tx-hide-sm">
+                    <span className={`tx-risk ${riskTone(regulatoryRiskClass(firm.regulatoryAudit.riskLevel))}`}>
+                      {firm.regulatoryAudit.riskLevel}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <Link href="/comparateur" className="tx-board-foot">
+            <span>Full ranking and filters</span>
+            <TxArrow />
+          </Link>
+        </div>
+      </section>
 
-          <div className="home-preview-list">
-            {heroPreviewFirms.map((firm, index) => (
-              <Link href={`/firm/${firm.slug}`} className="home-preview-row" key={`home-preview-${firm.slug}`}>
-                <span className="home-preview-rank">{String(index + 1).padStart(2, '0')}</span>
-                <span className="home-preview-identity">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span>
-                    <strong>{firm.name}</strong>
-                    <small>{toEnglishText(firm.bestFor)}</small>
-                  </span>
+      <div className="container">
+        <div className="tx-tape" style={{ ['--tape-cols' as string]: 5 }} aria-label="PropRadar dataset">
+          <div><strong>{propFirms.length}</strong><small>firms tracked</small></div>
+          <div><strong>{noConflictFirms}</strong><small>with no commercial relationship</small></div>
+          <div><strong>{officialSourceCount}</strong><small>saved source links</small></div>
+          <div><strong>{legalMappedCount}</strong><small>legal entities mapped</small></div>
+          <div><strong>{sourcedFirms}</strong><small>sourced firm files</small></div>
+        </div>
+      </div>
+
+      <section className="container tx-section tx-section-flush" aria-labelledby="tools-title">
+        <div className="tx-section-head">
+          <div>
+            <p className="tx-label">Start here</p>
+            <h2 id="tools-title">Three ways into the data.</h2>
+          </div>
+        </div>
+        <div className="tx-ruled" style={{ ['--cols' as string]: 3 }}>
+          <Link href="/comparateur" className="tx-ruled-item">
+            <span className="tx-label">01 / Comparator</span>
+            <h3>Compare {propFirms.length} prop firms side by side.</h3>
+            <p>Filter by score, market, payout risk, legal risk, price and trading rules.</p>
+            <span className="tx-link">Open comparator <TxArrow /></span>
+          </Link>
+          <Link href="/promos" className="tx-ruled-item">
+            <span className="tx-label">02 / Deals</span>
+            <h3>Read the risk before the discount.</h3>
+            <p>Promotions stay attached to firm scores, payout context and commercial disclosures.</p>
+            <span className="tx-link">Check current deals <TxArrow /></span>
+          </Link>
+          <Link href="/guides" className="tx-ruled-item">
+            <span className="tx-label">03 / Guides</span>
+            <h3>Understand the rules that change outcomes.</h3>
+            <p>Legal checks, payout clauses, review signals and program comparisons in plain English.</p>
+            <span className="tx-link">Browse guides <TxArrow /></span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="container tx-section" aria-labelledby="method-title" id="methodologie">
+        <div className="tx-section-head">
+          <div>
+            <p className="tx-label">Method</p>
+            <h2 id="method-title">Four checks before one decision.</h2>
+          </div>
+          <Link href="/audit" className="tx-link">View the evidence log <TxArrow /></Link>
+        </div>
+        <div className="tx-ruled tx-method" style={{ ['--cols' as string]: 4 }}>
+          <div>
+            <span className="tx-label">Independence</span>
+            <h3>Scores no one can buy</h3>
+            <p>{noConflictFirms} of {propFirms.length} firms have no commercial relationship with PropRadar. Affiliates get the same penalties.</p>
+          </div>
+          <div>
+            <span className="tx-label">Payouts</span>
+            <h3>Payout record first</h3>
+            <p>Withdrawal incidents and restrictive rules weigh more than headline discounts.</p>
+          </div>
+          <div>
+            <span className="tx-label">Legal</span>
+            <h3>Entities, not slogans</h3>
+            <p>{legalMappedCount} legal files map entities, jurisdictions and regulatory signals.</p>
+          </div>
+          <div>
+            <span className="tx-label">Sources</span>
+            <h3>Cross-checked context</h3>
+            <p>Official terms, public reviews and incidents are checked against each other, with dated sources.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container tx-section" aria-labelledby="home-brief-title">
+        <div className="tx-brief">
+          <div className="tx-brief-intro">
+            <p className="tx-label">Risk brief / Issue {String(latestEditorialBrief.issueNumber).padStart(2, '0')}</p>
+            <h2 id="home-brief-title">{latestEditorialBrief.shortTitle}</h2>
+            <p>{latestEditorialBrief.dek}</p>
+            <p className="tx-meta tx-mono">
+              <time dateTime={latestEditorialBrief.publishedAt}>{formatDate(latestEditorialBrief.publishedAt)}</time>
+              <span>{latestEditorialBrief.readMinutes} min read</span>
+              <span>{latestBriefSourceCount} primary sources</span>
+            </p>
+            <Link href={latestBriefPath} className="btn btn-primary">Read the latest issue</Link>
+          </div>
+          <div className="tx-rows">
+            {latestEditorialBrief.sections.map((section, index) => (
+              <Link href={`${latestBriefPath}#${section.id}`} className="tx-row" key={section.id}>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <span>
+                  <small className="tx-label">{section.eyebrow}</small>
+                  <strong>{section.title}</strong>
                 </span>
-                <span className={`home-preview-score ${scoreClass(firm.score)}`}>
-                  <small>Score</small>
-                  <strong>{firm.score}</strong>
-                  <span>/100</span>
-                </span>
-                <span className="home-preview-signals">
-                  <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>
-                    {toEnglishText(firm.reviewSignals.payoutRisk)} payout
-                  </span>
-                  <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                    {firm.regulatoryAudit.riskLevel} legal
-                  </span>
-                </span>
+                <TxArrow />
               </Link>
             ))}
           </div>
-
-          <Link href="/comparateur" className="home-preview-footer">
-            <span>Compare all {propFirms.length} firms</span>
-            <strong aria-hidden="true">&gt;</strong>
-          </Link>
         </div>
       </section>
 
-      <section className="home-v2-band home-tools-band" aria-labelledby="tools-title">
-        <div className="container">
-          <div className="home-v2-section-heading">
-            <div>
-              <div className="eyebrow">Main tools</div>
-              <h2 id="tools-title">Choose your next step.</h2>
-            </div>
-            <p>Three focused paths, with the comparator kept at the center.</p>
-          </div>
-
-          <div className="home-tools-grid">
-            <Link href="/comparateur" className="home-tool-card home-tool-card-primary">
-              <span className="home-tool-label">Comparator</span>
-              <strong>Compare {propFirms.length} prop firms side by side.</strong>
-              <small>Filter by score, market, payout risk, legal risk, price and trading rules.</small>
-              <span className="home-tool-action">Open comparator <b aria-hidden="true">&gt;</b></span>
-            </Link>
-            <Link href="/promos" className="home-tool-card">
-              <span className="home-tool-label">Risk-aware deals</span>
-              <strong>Read the risk before the discount.</strong>
-              <small>Promotions stay attached to firm scores, payout context and commercial disclosures.</small>
-              <span className="home-tool-action">Check current deals <b aria-hidden="true">&gt;</b></span>
-            </Link>
-            <Link href="/guides" className="home-tool-card">
-              <span className="home-tool-label">Reliability guides</span>
-              <strong>Understand the rules that change outcomes.</strong>
-              <small>Legal checks, payout clauses, review signals and program comparisons in plain English.</small>
-              <span className="home-tool-action">Browse guides <b aria-hidden="true">&gt;</b></span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="home-v2-band home-v2-why" aria-labelledby="why-title">
-        <div className="container">
-          <div className="home-v2-section-heading">
-            <div>
-              <div className="eyebrow">Why PropRadar</div>
-              <h2 id="why-title">Four checks before one decision.</h2>
-            </div>
-            <p>Clear evidence replaces promotional noise, without hiding uncertainty.</p>
-          </div>
-
-          <div className="home-why-grid">
-            <article className="home-why-card">
-              <h3>Independent scores</h3>
-              <p>{noConflictFirms} firms currently have no commercial relationship with PropRadar.</p>
-            </article>
-            <article className="home-why-card">
-              <h3>Payout-first analysis</h3>
-              <p>Withdrawal incidents and restrictive rules weigh more than headline discounts.</p>
-            </article>
-            <article className="home-why-card">
-              <h3>Legal evidence</h3>
-              <p>{legalMappedCount} legal files map entities, jurisdictions and regulatory signals.</p>
-            </article>
-            <article className="home-why-card">
-              <h3>Multi-source context</h3>
-              <p>Official terms, public reviews and incidents are checked against each other.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="container home-v2-section home-guides-section" aria-labelledby="guides-title">
-        <div className="home-v2-section-heading">
+      <section className="container tx-section" aria-labelledby="guides-title">
+        <div className="tx-section-head">
           <div>
-            <div className="eyebrow">Popular guides</div>
+            <p className="tx-label">Guides</p>
             <h2 id="guides-title">Three useful reads before checkout.</h2>
           </div>
-          <Link href="/guides" className="home-v2-heading-link">View all guides</Link>
+          <Link href="/guides" className="tx-link">All guides <TxArrow /></Link>
         </div>
-
-        <div className="home-guide-grid">
-          {homepageGuides.map(({ guide, displayGuide }) => (
-            <Link href={getSeoGuidePath(guide)} className="home-guide-card" key={guide.slug}>
-              <span className="home-guide-content">
-                <small>{displayGuide.eyebrow}</small>
+        <div className="tx-rows">
+          {homepageGuides.map(({ guide, displayGuide }, index) => (
+            <Link href={getSeoGuidePath(guide)} className="tx-row" key={guide.slug}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <span>
+                <small className="tx-label">{displayGuide.eyebrow}</small>
                 <strong>{displayGuide.title}</strong>
-                <span>{displayGuide.primaryKeywords.slice(0, 2).join(' / ')}</span>
               </span>
-              <b aria-hidden="true">&gt;</b>
+              <TxArrow />
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="home-v2-band home-brief-band" aria-labelledby="home-brief-title">
-        <div className="container">
-          <div className="home-v2-section-heading">
-            <div>
-              <div className="eyebrow">Prop Firm Risk Brief</div>
-              <h2 id="home-brief-title">The evidence that changed this week&apos;s decision.</h2>
-            </div>
-            <p>A concise editorial briefing on rules, payouts and legal structure, with every primary source attached.</p>
+      <section className="container tx-section" aria-labelledby="home-alert-title" id="radar-weekly">
+        <div className="tx-digest">
+          <div>
+            <p className="tx-label">Research digest</p>
+            <h2 id="home-alert-title">Follow the next risk update.</h2>
+            <p>Read every issue on the site, or request the short email covering payout incidents, rule changes and newly verified evidence.</p>
           </div>
-
-          <div className="home-brief-layout">
-            <div className="home-brief-intro">
-              <span className="home-brief-issue">Issue {String(latestEditorialBrief.issueNumber).padStart(2, '0')}</span>
-              <h3>{latestEditorialBrief.shortTitle}</h3>
-              <p>{latestEditorialBrief.dek}</p>
-              <div className="home-brief-meta">
-                <span>{latestEditorialBrief.readMinutes} min read</span>
-                <span>{latestBriefSourceCount} primary sources</span>
-                <time dateTime={latestEditorialBrief.publishedAt}>July 15, 2026</time>
-              </div>
-              <Link href={latestBriefPath} className="btn btn-primary">Read the latest issue</Link>
-            </div>
-
-            <div className="home-brief-list">
-              {latestEditorialBrief.sections.map((section, index) => (
-                <Link href={`${latestBriefPath}#${section.id}`} className="home-brief-item" key={section.id}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <div>
-                    <small>{section.eyebrow}</small>
-                    <strong>{section.title}</strong>
-                  </div>
-                  <b aria-hidden="true">&#8594;</b>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="home-proof-band" id="methodologie" aria-labelledby="proof-title">
-        <div className="container">
-          <div className="home-proof-heading">
-            <div>
-              <div className="eyebrow">Trust by the numbers</div>
-              <h2 id="proof-title">Evidence you can revisit.</h2>
-            </div>
-            <p>Dataset updated <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time>.</p>
-          </div>
-
-          <div className="home-proof-stats">
-            <div><strong>{propFirms.length}</strong><span>firms tracked</span></div>
-            <div><strong>{officialSourceCount}</strong><span>saved source links</span></div>
-            <div><strong>{legalMappedCount}</strong><span>legal files mapped</span></div>
-            <div><strong>{sourcedFirms}</strong><span>sourced firm files</span></div>
-          </div>
-
-          <div className="home-proof-bottom">
-            <div className="home-method-copy">
-              <span>How the score works</span>
-              <h3>Rules, payouts, legal structure and public signals are weighed together.</h3>
-              <p>Every profile shows what is verified, partially verified or still waiting for stronger evidence.</p>
-              <div>
-                <Link href="/audit">View the evidence log</Link>
-                <Link href="/regles">Read rule audits</Link>
-              </div>
-            </div>
-
-            <div
-              className="home-alert-form"
-              id="radar-weekly"
-              aria-labelledby="home-alert-title"
+          <div className="tx-digest-actions">
+            <a
+              className="btn btn-primary"
+              href="mailto:contact@propradar.tech?subject=PropRadar%20research%20digest&body=Please%20add%20me%20to%20the%20PropRadar%20research%20digest."
             >
-              <span>Research digest</span>
-              <h3 id="home-alert-title">Follow the next risk update.</h3>
-              <p>Read every issue on the site or request the concise email covering payout incidents, rule changes and newly verified evidence.</p>
-              <div className="home-alert-form-actions">
-                <Link className="btn" href="/radar-brief">Open the archive</Link>
-                <a
-                  className="btn btn-primary"
-                  href="mailto:contact@propradar.tech?subject=PropRadar%20research%20digest&body=Please%20add%20me%20to%20the%20PropRadar%20research%20digest."
-                >
-                  Request by email
-                </a>
-              </div>
-              <small>Opens your email app. PropRadar does not collect your address on this page.</small>
-            </div>
+              Request by email
+            </a>
+            <Link className="btn" href="/radar-brief">Open the archive</Link>
+            <small>Opens your email app. PropRadar does not collect your address on this page.</small>
           </div>
-
-          <p className="home-disclaimer" id="risques">
-            PropRadar is a research filter, not financial advice. Firm rules and payout conditions can change without notice.
-          </p>
         </div>
+        <p className="tx-disclaimer" id="risques">
+          PropRadar is a research filter, not financial advice. Firm rules and payout conditions can change without notice.
+          Dataset updated <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time>.
+        </p>
       </section>
     </main>
   );
