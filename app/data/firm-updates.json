@@ -449,6 +449,181 @@
           "source": "https://www.fxempire.com/prop-firms/sabiotrade"
         }
       ]
+    },
+    "willis-capital": {
+      "reviewedAt": "2026-10-26",
+      "set": {},
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor reported on 2026-10-24 that the listed domain williscapital.com redirects to hugedomains.com. Checked by hand through public sources: TechCabal describes WFunded as 'formerly known as Willis Capital' and points readers to wfunded.io, and the Trustpilot profile for williscapitals.com (with an s) now displays as WFUNDED and links to wfunded.io. The listed williscapital.com therefore appears not to be the firm's own domain. No domain warning set and no other field changed pending a decision on the official domain.",
+          "source": "https://techcabal.com/?p=162269",
+          "fields": []
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TechCabal: WFunded, formerly known as Willis Capital",
+          "url": "https://techcabal.com/?p=162269"
+        },
+        {
+          "label": "Trustpilot profile williscapitals.com (now shown as WFUNDED)",
+          "url": "https://www.trustpilot.com/review/williscapitals.com"
+        }
+      ]
+    },
+    "syndicate-funded": {
+      "reviewedAt": "2026-10-26",
+      "set": {},
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor reported on 2026-10-23 that syndicatefunded.com redirects to earnforex.com. The redirect could not be confirmed by hand in this pass, so no domain warning was set. Trustpilot profile for syndicatefunded.com read: 2.5 TrustScore, 0 reviews in the last 12 months and no recent history of asking for reviews. Review count not stored because mirrors showed different totals (118 and 122). No field changed.",
+          "source": "https://nz.trustpilot.com/review/syndicatefunded.com?page=4",
+          "fields": []
+        }
+      ]
+    },
+    "tradexprop": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.0,
+        "trustpilotReviewCount": 40,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradexprop.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor briefly reported tradexprop.com as unreachable on 2026-10-24; it was back to normal on 2026-10-25, so no action. Trustpilot profile for tradexprop.com read: 4.0 TrustScore across 40 reviews (read on the nl-be.trustpilot.com mirror of the same profile).",
+          "source": "https://nl-be.trustpilot.com/review/tradexprop.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ]
+    },
+    "wall-street-funded": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 5030,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor flags wallstreetfunded.com as redirecting to wsfunded.com. Checked: wsfunded.com is the firm's own current domain (its Trustpilot profile is wsfunded.com, and the July 2026 audit already recorded the redirect), so this is a move, not a warning. Trustpilot read: 4.3 TrustScore across 5,030 reviews.",
+          "source": "https://uk.trustpilot.com/review/wsfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ]
+    },
+    "tradeify": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 5469,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Official help center pricing reference confirms the stored values: cheapest plan Growth 25K at $99 one-time, and a 90% trader split on Sim Funded accounts (80% on Elite Live). No price or split change.",
+          "source": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference",
+          "fields": []
+        },
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot read on www.trustpilot.com: 4.5 TrustScore across 5,469 reviews (an older ca.trustpilot.com snapshot showed 4.4 across 5,069; the higher count is the more recent reading).",
+          "source": "https://www.trustpilot.com/review/tradeify.co",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Tradeify help center: pricing reference (official)",
+          "url": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference"
+        }
+      ]
+    },
+    "take-profit-trader": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.4,
+        "trustpilotReviewCount": 10977,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Rule change reported on 17 August 2026: the minimum trading requirement of the futures evaluation went from five days to three; the firm said its payout policy is unchanged (PRO accounts can withdraw from day one). Price and split not re-read on the official site, left unchanged.",
+          "source": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days",
+          "fields": []
+        },
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot read: 4.4 TrustScore across 10,977 reviews (jp.trustpilot.com mirror; an ie.trustpilot.com snapshot showed 4.4 across 10,787).",
+          "source": "https://jp.trustpilot.com/review/takeprofittrader.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TradeInformer: Take Profit Trader cuts evaluation minimum to three days (17 Aug 2026)",
+          "url": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days"
+        }
+      ]
+    },
+    "fxify": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 6452,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore across 6,452 reviews (was 4.4 across 6,055), same figures on www.trustpilot.com and ca.trustpilot.com. Price and split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fxify.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "instant-funding": {
+      "reviewedAt": "2026-10-26",
+      "set": {},
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Corporate change: on 26 May 2026 Instant Funding announced it had acquired Funded Trading Plus; the release says both brands continue to operate independently. Trustpilot profile not found in this pass and official pricing not re-read: no field changed.",
+          "source": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697",
+          "fields": []
+        }
+      ],
+      "addSources": [
+        {
+          "label": "PR Newswire: Instant Funding acquires Funded Trading Plus (26 May 2026)",
+          "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
+        }
+      ]
     }
   }
 }
