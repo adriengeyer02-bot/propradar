@@ -36,6 +36,14 @@ export const firmMetaOverrides: Partial<Record<string, FirmMetaOverride>> = {
     description: () =>
       'GOAT Funded Trader data file: legal entities, funded-account rules, payout terms, Trustpilot status and dated updates. Full review in the PropRadar guide.',
   },
+  // Same split as GOAT: /firm/topstep (pos ~48) and /guides/topstep-review
+  // both answered "topstep review" (pos ~59) and "is topstep legit" (pos ~66).
+  // The guide targets review / legit; the profile targets the data.
+  topstep: {
+    title: (firm) => `Topstep: Score ${firm.score}/100, Rules & Payout Data`,
+    description: () =>
+      'Topstep data file: Trading Combine rules, consistency target, Maximum Loss Limit, payout paths, Trustpilot signals and dated updates. Full review in the PropRadar guide.',
+  },
   // "brightfunded review" (pos ~20), "brightfunded review 2026" (pos ~14)
   brightfunded: {
     title: (firm) => `BrightFunded Review 2026: Payouts & Score ${firm.score}/100`,
