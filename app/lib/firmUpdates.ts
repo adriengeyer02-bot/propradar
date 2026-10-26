@@ -76,6 +76,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (typeof set.trustpilotRating === 'number') next.trustpilotRating = set.trustpilotRating;
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
     if (set.trustpilotSourceUrl) next.reviewSignals.trustpilotSourceUrl = set.trustpilotSourceUrl;
+    if (typeof set.trustpilotRating === 'number') refreshTrustpilotText(next, update.reviewedAt);
     if (set.listedDomainWarning !== undefined) {
       next.listedDomainWarning = set.listedDomainWarning ?? undefined;
       if (set.listedDomainWarning) {
@@ -106,4 +107,28 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
 
     return next;
   });
+}
+
+const GENERATED_NOTE = /^(Raw Trustpilot rating [\d.]+\/5\.|Trustpilot rating is not filled in PropRadar)/;
+const HAND_WRITTEN_FIGURE = /^Trustpilot \d(?:\.\d)?\/5 with [^.]*\./;
+
+/**
+ * Keep the Trustpilot wording in line with an updated rating. The base
+ * profiles write the rating into `trustpilotNote` and `trustpilotFlags`, so a
+ * refreshed number would otherwise sit next to the old figure (or next to
+ * "not filled"). Only the stated figures change; editorial commentary after
+ * the first sentence of a hand-written note is kept.
+ */
+function refreshTrustpilotText(firm: PropFirm, checkedOn: string) {
+  const signals = firm.reviewSignals;
+  const count = signals.trustpilotReviewCount;
+  const figure = `${firm.trustpilotRating?.toFixed(1)}/5${count ? ` across ${count.toLocaleString('en-US')} reviews` : ''} (checked ${checkedOn})`;
+  if (GENERATED_NOTE.test(signals.trustpilotNote ?? '')) {
+    signals.trustpilotNote = `Raw Trustpilot rating ${figure}. The reliability score above is weighted with Reddit, payout incidents and proof level.`;
+  } else if (HAND_WRITTEN_FIGURE.test(signals.trustpilotNote ?? '')) {
+    signals.trustpilotNote = signals.trustpilotNote.replace(HAND_WRITTEN_FIGURE, `Trustpilot ${figure}.`);
+  }
+  if (signals.trustpilotFlags?.includes('Raw rating not filled')) {
+    signals.trustpilotFlags = signals.trustpilotFlags.map((flag) => (flag === 'Raw rating not filled' ? 'Raw rating available' : flag));
+  }
 }
