@@ -1696,10 +1696,10 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
   },
   'ftmo-vs-the5ers': {
-    title: 'FTMO vs The5ers: rules, price and payout',
-    metaDescription: 'FTMO vs The5ers: compare current programs, prices, drawdown, payout rules, platforms, Trustpilot signals and official terms before choosing.',
+    title: 'FTMO vs The5ers 2026: Price, Rules & Payouts Compared',
+    metaDescription: 'FTMO vs The5ers in 2026: entry price, drawdown, payout cycle, news rules, Trustpilot and FTMO\'s October 2026 1-Step rule change, from official sources.',
     eyebrow: 'Brand comparison',
-    h1: 'FTMO vs The5ers: two solid profiles, not the same use case',
+    h1: 'FTMO vs The5ers: which one fits your trading in 2026?',
     answer: 'FTMO and The5ers are both serious names, but they do not solve the same problem. FTMO is more reference-driven; The5ers can feel more conservative depending on the program. The exact offer matters more than the brand name.',
     primaryKeywords: ['FTMO vs The5ers', 'FTMO or The5ers', 'The5ers vs FTMO'],
     secondaryKeywords: ['FTMO payout', 'The5ers rules', 'prop firm compare', 'forex challenge'],
@@ -1708,6 +1708,28 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Read news, EA, drawdown and profit target rules.',
       'Identify coupons, affiliate links and commercial interests.',
       'Choose by trading style, not popularity alone.',
+    ],
+    faq: [
+      {
+        question: 'Which pays out faster, FTMO or The5ers?',
+        answer:
+          'Both run roughly two-week cycles. FTMO uses a 14-day reward cycle, reviews requests within 1-2 business days and usually pays 1-2 business days after invoice approval. The5ers allows a first request 14 days after funding, then every two weeks, typically processed within 3 business days after approval (official FAQs checked October 23, 2026).',
+      },
+      {
+        question: 'Did FTMO change its rules in 2026?',
+        answer:
+          'Yes. From October 12, 2026, a Consistency rule replaces the Best Day Rule for new FTMO 1-Step Challenge orders; older orders keep the Best Day Rule (FTMO trading update of October 8, 2026).',
+      },
+      {
+        question: 'Is FTMO better than The5ers?',
+        answer:
+          'Not universally. FTMO is the reference brand with the deepest documentation; The5ers can suit traders who prefer its program limits. The exact program, drawdown type and news rules matter more than the name.',
+      },
+      {
+        question: 'Does the affiliate link change this comparison?',
+        answer:
+          'No. Both firms are PropRadar affiliates and are held to the same standard: score, risks and commercial relationships are kept separate.',
+      },
     ],
     internalLinks: [
       { label: 'FTMO', href: '/firm/ftmo' },

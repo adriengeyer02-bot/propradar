@@ -23,7 +23,7 @@ const AUDIT_DESCRIPTION =
   'Audit PropRadar sources, legal entities, regulator checks and proof depth across verified, partial and watchlist prop-firm profiles.';
 
 export const metadata = createPageMetadata({
-  title: 'Prop Firm Source Audit: Evidence and Legal Checks',
+  title: 'Prop Firm Audit: Legal Entities, Regulator Checks & Evidence',
   description: AUDIT_DESCRIPTION,
   path: '/audit',
   keywords: ['prop firm audit', 'prop firm legal entity', 'prop firm regulation', 'prop firm sources'],

@@ -1332,6 +1332,7 @@ export default async function SeoGuidePage({ params }: Props) {
         'https://help.brightfunded.com/en/articles/12577176-does-brightfunded-have-a-consistency-rule',
         'https://maventrading.com/',
         'https://citytradersimperium.com/compare-funding-programs/',
+        'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/',
       ]
     : isTopstepApexGuide
       ? [
@@ -1568,7 +1569,7 @@ export default async function SeoGuidePage({ params }: Props) {
             </h2>
             <p>
               {isConsistencyGuide
-                ? 'Calculate best-day profit divided by total net profit, then multiply by 100. Current no-percentage examples checked by PropRadar include BrightFunded, standard Maven challenges and the blank Consistency Score fields on CTI program tables. The exact product still decides.'
+                ? 'Calculate best-day profit divided by total net profit, then multiply by 100. Rules keep moving: from October 12, 2026, FTMO applies a Consistency rule instead of its Best Day Rule to new 1-Step Challenge orders. Current no-percentage examples checked by PropRadar include BrightFunded, standard Maven challenges and the blank Consistency Score fields on CTI program tables. The exact product still decides.'
                 : isTopstepApexGuide
                   ? 'Topstep currently uses a 55% Trading Combine consistency target (rechecked October 23, 2026) and path-specific Express Funded Account rules. Apex separates newer EOD and intraday products from legacy accounts, so payout, drawdown and consistency terms must be matched to the exact version.'
                   : isNoChallengeGuide
@@ -1576,7 +1577,11 @@ export default async function SeoGuidePage({ params }: Props) {
                     : 'FTMO allows news trading in evaluation and on Swing accounts, while Standard funded accounts restrict selected events. BrightFunded allows evaluation news trading but restricts a funded 5-minute window on each side. The5ers Futures currently advertises news trading as allowed.'}
             </p>
           </div>
-          <span className="guide-query-answer-date">Sources checked {SEO_RESEARCH_DATE}</span>
+          <span className="guide-query-answer-date">
+            {isConsistencyGuide || isTopstepApexGuide
+              ? `Sources checked ${SEO_RESEARCH_DATE}, updated 2026-10-23`
+              : `Sources checked ${SEO_RESEARCH_DATE}`}
+          </span>
         </section>
       ) : null}
 
@@ -1621,6 +1626,7 @@ export default async function SeoGuidePage({ params }: Props) {
             <a href="https://help.brightfunded.com/en/articles/12577176-does-brightfunded-have-a-consistency-rule" target="_blank" rel="noreferrer">BrightFunded consistency rule</a>
             <a href="https://maventrading.com/" target="_blank" rel="noreferrer">Maven program cards</a>
             <a href="https://citytradersimperium.com/compare-funding-programs/" target="_blank" rel="noreferrer">CTI program comparison</a>
+            <a href="https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/" target="_blank" rel="noreferrer">FTMO trading update, 8 Oct 2026</a>
           </div>
         </section>
       ) : null}
