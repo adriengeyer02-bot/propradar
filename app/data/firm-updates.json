@@ -1,6 +1,45 @@
 {
   "version": 1,
   "firms": {
+    "smart-prop-trader": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "status": "Fermée"
+      },
+      "addSources": [
+        {
+          "label": "Finance Magnates: Smart Prop Trader announces closure (28 Nov 2024)",
+          "url": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Status set to closed. Finance Magnates reported on 28 November 2024 that Smart Prop Trader stopped onboarding new traders on 27 November 2024 and would stop operating on 29 December 2024, quoting the firm's announcement. The Trustpilot profile shows 1 review in the last 12 months. The domain monitor also reports that smartproptrader.com now redirects to smartprofitfx.com (not checked by hand in this pass; no domain warning added).",
+          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
+          "fields": [
+            "status"
+          ]
+        }
+      ]
+    },
+    "maven-trading": {
+      "reviewedAt": "2026-10-26",
+      "set": {},
+      "addIncidents": [
+        "Trustpilot's maventrading.com profile, checked on 2026-10-26, displays no TrustScore. Trustpilot's notice (Danish mirror, translated) reads: \"This company's TrustScore is currently unavailable due to a breach of our guidelines\", next to its reminder that companies may not offer incentives or pay to hide reviews. Source: https://dk.trustpilot.com/review/maventrading.com?page=3"
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines. Added as a dated, quoted incident; no rating or review count stored while the rating is withheld. Read on the dk.trustpilot.com mirror of the same profile. Price and split not re-read on the official site, left unchanged.",
+          "source": "https://dk.trustpilot.com/review/maventrading.com?page=3",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
     "alpha-futures": {
       "reviewedAt": "2026-10-23",
       "changelog": [
