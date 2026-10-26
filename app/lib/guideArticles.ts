@@ -7,10 +7,14 @@
  * answer on /guides/[slug]. Keep every firm-specific fact dated and sourced.
  */
 
+/** Diagrams drawn from the numbers in the section text (see components/guide-visuals). */
+export type GuideSectionVisual = 'challenge-vs-direct' | 'no-challenge-cost' | 'consistency-example' | 'trailing-vs-static';
+
 export type GuideArticleSection = {
   heading: string;
   paragraphs: string[];
   bullets?: string[];
+  visual?: GuideSectionVisual;
 };
 
 export type GuideArticle = {
@@ -28,6 +32,7 @@ export const guideArticles: Record<string, GuideArticle> = {
     sections: [
       {
         heading: 'What "no challenge" actually means',
+        visual: 'challenge-vs-direct',
         paragraphs: [
           'In a classic model you pay a fee, hit a profit target under a daily loss limit and a maximum drawdown, sometimes over two phases, and only then trade a funded account that can pay out. A no-challenge program, often called instant funding or direct funding, removes that first step: you buy the funded account and can request payouts once its own conditions are met.',
           'What disappears is the profit target before funding. What does not disappear is risk control. Instant accounts almost always keep a maximum drawdown, often a trailing one, and many add a consistency rule, a minimum number of trading days or a smaller first payout cap. The firm still needs to filter traders; it simply does it after you have paid.',
@@ -35,6 +40,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       },
       {
         heading: 'Why instant funding usually costs more',
+        visual: 'no-challenge-cost',
         paragraphs: [
           'Firms price the evaluation as a filter: a large share of challenge buyers never reach a payout, and their fees fund the traders who do. When you skip the filter, the firm prices that risk into the account itself. That is why a direct account is typically several times the price of a challenge of the same size, why account sizes are smaller, and why the drawdown is often tighter.',
           'Compare the full cost of reaching a first payout, not the sticker price. As an illustration with round numbers: a $100 challenge with a one-in-three chance of passing costs about $300 on average to get funded. A $350 instant account with a tight trailing drawdown can cost more than that if you lose one or two accounts before the first payout. The cheaper option depends on how often your strategy would survive the funded rules.',
@@ -77,6 +83,7 @@ export const guideArticles: Record<string, GuideArticle> = {
     sections: [
       {
         heading: 'How the rule is calculated',
+        visual: 'consistency-example',
         paragraphs: [
           'Most firms use the same core formula: best-day profit divided by total profit, expressed as a percentage. If the result is above the firm\'s limit, you are not yet eligible, either to pass the evaluation or to request a payout, depending on where the rule applies.',
           'Worked example with a 50% limit: you make $1,200 on Monday, $300 on Tuesday and $500 on Wednesday, so $2,000 in total. Your best day is $1,200, which is 60% of the total. You are above the limit. To fix it you do not need to lose anything: you need more total profit, here at least $2,400, so that $1,200 represents 50% or less.',
@@ -285,6 +292,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       },
       {
         heading: 'Trailing drawdown (intraday)',
+        visual: 'trailing-vs-static',
         paragraphs: [
           'An intraday trailing drawdown follows your highest equity in real time, including unrealized profit. Example on a $50,000 account with a $2,500 trailing limit: the floor starts at $47,500. A trade runs to +$1,500 unrealized, so the floor moves to $49,000, even if you then close the trade at breakeven. You now have $1,000 of room instead of $2,500, without having banked a cent. This is the strictest model and is common on futures and instant-funding accounts.',
         ],

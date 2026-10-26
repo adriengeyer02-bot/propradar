@@ -5,6 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../components/FirmLogo';
+import ChallengePath from '../../components/ui/ChallengePath';
+import RiskPip from '../../components/ui/RiskPip';
+import ScoreRing from '../../components/ui/ScoreRing';
+import { legalTone, payoutTone, reviewTone, statusTone, type Tone } from '../../lib/riskTone';
 import {
   BLUE_GUARDIAN_AFFILIATE_URL,
   FTMO_AFFILIATE_URL,
@@ -36,8 +40,6 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-const FTMO_BANNER_URL = 'https://cdn.ftmo.com/aff-banner.160x600';
-const THE5ERS_BANNER_URL = '/affiliates/the5ers-banner-passion-b.png';
 const FIRM_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 export const revalidate = 86400;
 export const dynamicParams = false;
@@ -94,6 +96,24 @@ type ScoreProofRow = {
   value: string;
   href?: string;
 };
+
+function firmRiskTone(firm: PropFirm): Tone {
+  const cls = firmRiskClass(firm);
+  return badgeTone(cls);
+}
+
+function badgeTone(className: string): Tone {
+  if (className.includes('green')) return 'good';
+  if (className.includes('red')) return 'risk';
+  return 'watch';
+}
+
+function decisionTone(label: string): Tone {
+  const cls = decisionClass(label);
+  if (cls === 'decision-good') return 'good';
+  if (cls === 'decision-watch') return 'watch';
+  return 'risk';
+}
 
 function sourceUrl(firm: PropFirm, match: RegExp) {
   return firm.sources.find((source) => match.test(`${source.label} ${source.url}`))?.url;
@@ -466,18 +486,21 @@ export default async function FirmPage({ params }: Props) {
     {
       label: 'Reddit',
       score: firm.reviewSignals.redditScore,
+      estimated: !hasMeasuredMentions(firm.reviewSignals.redditSource),
       volume: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `${firm.reviewSignals.redditSampleSize ?? 0} public mention(s)` : 'Editorial estimate',
       detail: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}` : 'mentions not counted yet',
     },
     {
       label: 'X/Twitter',
       score: firm.reviewSignals.xScore,
+      estimated: !hasMeasuredMentions(firm.reviewSignals.xSource),
       volume: hasMeasuredMentions(firm.reviewSignals.xSource) ? `${firm.reviewSignals.xSampleSize ?? 0} public mention(s)` : 'Editorial estimate',
       detail: hasMeasuredMentions(firm.reviewSignals.xSource) ? `+${firm.reviewSignals.xPositiveMentions ?? 0} / -${firm.reviewSignals.xNegativeMentions ?? 0}` : 'mentions not counted yet',
     },
     {
       label: 'Trustpilot',
       score: firm.reviewSignals.trustpilotReliabilityScore,
+      estimated: !firm.trustpilotRating,
       volume: firm.trustpilotRating ? `${firm.trustpilotRating}/5 raw rating` : 'Raw rating not filled',
       detail: toEnglishText(firm.reviewSignals.trustpilotReliability),
     },
@@ -667,45 +690,57 @@ export default async function FirmPage({ params }: Props) {
           All firms
         </Link>
 
-        <div className="panel firm-hero firm-hero-compact">
-          <div className="firm-hero-copy">
-            <div className="firm-cell firm-identity">
-              <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
-              <div className="firm-identity-copy">
-                <div className="eyebrow">{toEnglishText(firm.headquarters)}, founded {firm.founded}</div>
-                <h1 className={firmTitleClass}>{firm.name}</h1>
-                <div className="firm-hero-badges">
-                  <span className={`badge ${operationalStatusClass(firm)}`}>Status: {operationalStatusLabel(firm)}</span>
-                  <span className={`badge ${firmRiskClass(firm)}`}>Risk: {firmRiskLabel(firm)}</span>
-                </div>
+        <div className="pr-firm-hero">
+          <div className="pr-firm-identity">
+            <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
+            <div>
+              <div className="eyebrow">{toEnglishText(firm.headquarters)} · founded {firm.founded}</div>
+              <h1 className={firmTitleClass}>{firm.name}</h1>
+              <div className="pr-firm-tags">
+                <span className={`pr-tag pr-tone-${statusTone(firm.status)}`}>{operationalStatusLabel(firm)}</span>
+                <span className={`pr-tag pr-tone-${firmRiskTone(firm)}`}>{firmRiskLabel(firm)}</span>
+                {firm.commercialRelationship === 'Affiliation transparente' ? (
+                  <span className="pr-tag pr-tag-affiliate" title="PropRadar may earn a commission. The score is not affected.">Affiliate link disclosed</span>
+                ) : null}
               </div>
             </div>
-            {firm.listedDomainWarning ? (
-              <p className="firm-domain-warning" role="note">
-                <strong>Domain warning.</strong> {firm.listedDomainWarning}
-              </p>
-            ) : (
-              <p className="lead">{toEnglishText(firm.verdict)}</p>
-            )}
           </div>
-          <div className="card firm-score-ring-card">
-            <div className="muted">PropRadar score</div>
-            <div className="firm-score-ring" style={scoreRingStyle(firm.score)} aria-label={`PropRadar score ${firm.score} out of 100`}>
-              <div className="firm-score-ring-core">
-                <strong>{firm.score}</strong>
-                <span>/100</span>
+
+          {firm.listedDomainWarning ? (
+            <p className="firm-domain-warning pr-firm-verdict" role="note">
+              <strong>Domain warning.</strong> {firm.listedDomainWarning}
+            </p>
+          ) : (
+            <p className="pr-firm-verdict">{toEnglishText(firm.verdict)}</p>
+          )}
+
+          <aside className="pr-firm-scorecard" aria-label={`${firm.name} PropRadar score`}>
+            <ScoreRing score={firm.score} size="lg" />
+            <div className="pr-firm-scorecard-body">
+              <span className="pr-firm-scorecard-label">PropRadar score</span>
+              <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{firmDecision}</strong>
+              <div className="pr-scorecard-pips">
+                <RiskPip label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
+                <RiskPip label="Legal" value={regulatoryAudit.riskLevel} tone={legalTone(regulatoryAudit.riskLevel)} />
+                <RiskPip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+              </div>
+              <div className="pr-firm-actions">
+                <Link href="/comparateur" className="btn">Compare</Link>
+                <Link href="/#radar-weekly" className="pr-link">Set an alert</Link>
               </div>
             </div>
-            <p>Weighted from rules, payouts, public reviews and proof level.</p>
-            <div style={{ marginTop: 12 }}>
-              <span className={`badge ${relationshipClass(firm.commercialRelationship)}`}>{relationshipLabel(firm.commercialRelationship)}</span>
-            </div>
-            <div className="firm-score-actions">
-              <Link href="/#radar-weekly" className="btn btn-primary">Set alert</Link>
-              <Link href="/comparateur" className="btn">Compare</Link>
-            </div>
-          </div>
+          </aside>
         </div>
+
+        <dl className="pr-key-facts">
+          <div><dt>From</dt><dd>{formatUsd(firm.priceFrom)}</dd></div>
+          <div><dt>Profit split</dt><dd>{firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A'}</dd></div>
+          <div><dt>Drawdown</dt><dd>{toEnglishText(firm.drawdownType)}</dd></div>
+          <div><dt>News trading</dt><dd>{toEnglishText(firm.newsTrading)}</dd></div>
+          <div><dt>Proof level</dt><dd>{toEnglishText(firm.auditStatus)}</dd></div>
+          <div><dt>Last review</dt><dd><time dateTime={firm.lastReviewed}>{firm.lastReviewed}</time></dd></div>
+          <div className="pr-key-facts-wide"><dt>Payout</dt><dd>{toEnglishText(firm.payoutDelay)}</dd></div>
+        </dl>
 
         {searchProfile ? (
           <article className="firm-search-answer" aria-labelledby={`search-answer-${firm.slug}`}>
@@ -792,111 +827,36 @@ export default async function FirmPage({ params }: Props) {
           </section>
         ) : null}
 
-        <div className="stat-strip">
-          <div className="stat firm-metric-card" title="Entry fee or lowest visible program price tracked by PropRadar.">
-            <span className="metric-icon" aria-hidden="true">$</span>
-            <span>Minimum price</span><strong>{formatUsd(firm.priceFrom)}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="Advertised trader profit split, weighted separately from payout reliability.">
-            <span className="metric-icon" aria-hidden="true">%</span>
-            <span>Profit split</span><strong>{firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A'}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="Drawdown model to verify before choosing a program.">
-            <span className="metric-icon" aria-hidden="true">DD</span>
-            <span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="News trading status can differ between challenge and funded accounts.">
-            <span className="metric-icon" aria-hidden="true">N</span>
-            <span>News trading</span><strong>{toEnglishText(firm.newsTrading)}</strong>
-          </div>
-          <div className="stat firm-metric-card" title="Advertised payout delay or payout rule summary to verify in official conditions.">
-            <span className="metric-icon" aria-hidden="true">P</span>
-            <span>Payout</span><strong className={toEnglishText(firm.payoutDelay).length > 22 ? 'firm-metric-long' : undefined}>{toEnglishText(firm.payoutDelay)}</strong>
-          </div>
-        </div>
-
-        <div className="firm-proof-snapshot">
-          <div>
-            <span>Proof level</span>
-            <strong>{toEnglishText(firm.auditStatus)}</strong>
+        <section className="pr-firm-checks" id="decision" aria-label="Decision checks">
+          <div className="pr-firm-proof">
+            <h2>What the file proves</h2>
+            <ul>
+              {dueDiligenceChecks.map((check) => (
+                <li key={check.label}>
+                  <RiskPip label={check.label} value={check.value} tone={badgeTone(check.className)} />
+                  <small>{check.detail}</small>
+                </li>
+              ))}
+            </ul>
+            <Link href="#regulatory" className="pr-link">Open the legal file <span aria-hidden="true">→</span></Link>
           </div>
           <div>
-            <span>Last review</span>
-            <strong>{firm.lastReviewed}</strong>
+            <h2>Strengths on file</h2>
+            <ul className="pr-check-list pr-check-good">
+              {firmSpecificSignals.map((point) => <li key={point}>{point}</li>)}
+            </ul>
           </div>
           <div>
-            <span>Payout risk</span>
-            <strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong>
+            <h2>Before you pay</h2>
+            <ol className="pr-check-list pr-check-steps">
+              {decisionChecklist.map((item) => <li key={item}>{item}</li>)}
+            </ol>
           </div>
-          <div>
-            <span>Trustpilot reliability</span>
-            <strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong>
-          </div>
-        </div>
-        <div className={`panel firm-decision-panel ${firmDecisionClass}`} id="decision">
-          <div className="firm-decision-main">
-            <span>PropRadar action</span>
-            <strong>{firmDecision}</strong>
-            <p>{decisionDetail(firm, firmDecision)}</p>
-          </div>
-          <div className="firm-decision-grid">
-            <div>
-              <span>Risk posture</span>
-              <strong>{firmRiskLabel(firm)}</strong>
-              <small>Score {firm.score}/100, payout risk {toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()}.</small>
-            </div>
-            <div>
-              <span>Regulatory file</span>
-              <strong>{regulatoryAudit.riskLevel}</strong>
-              <small>{regulatoryAudit.sources.length || firm.sources.length} source link(s) available.</small>
-            </div>
-            <div>
-              <span>Community signal</span>
-              <strong>{communitySignalScore}/100</strong>
-              <small>Reddit, X/Twitter, Trustpilot and payout signals combined.</small>
-            </div>
-          </div>
-          <div className="firm-decision-lists">
-            <div>
-              <span>Profile-specific evidence</span>
-              <ul>
-                {firmSpecificSignals.map((point) => <li key={point}>{point}</li>)}
-              </ul>
-            </div>
-            <div>
-              <span>Before paying</span>
-              <ul>
-                {decisionChecklist.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="panel firm-due-diligence-panel">
-          <div className="firm-due-diligence-head">
-            <div>
-              <div className="eyebrow">Due Diligence Snapshot</div>
-              <h2>What the profile proves before checkout</h2>
-            </div>
-            <Link href="#regulatory" className="btn">Open legal file</Link>
-          </div>
-          <div className="firm-due-diligence-grid">
-            {dueDiligenceChecks.map((check) => (
-              <article className="firm-due-diligence-item" key={check.label}>
-                <span>{check.label}</span>
-                <strong className={`badge ${check.className}`}>{check.value}</strong>
-                <small>{check.detail}</small>
-              </article>
-            ))}
-          </div>
-          <p>
-            PropRadar separates operating status, legal entity mapping, payout evidence and commercial conflicts so a high discount or public rating does not hide purchase risk.
-          </p>
-        </div>
+        </section>
         {firm.commercialNote ? (
-          <div className="panel" style={{ marginTop: 18 }}>
-            <div className="eyebrow">Commercial transparency</div>
-            <p className="muted" style={{ marginBottom: 0 }}>{toEnglishText(firm.commercialNote)}</p>
-          </div>
+          <p className="pr-firm-disclosure">
+            <strong>Commercial transparency.</strong> {toEnglishText(firm.commercialNote)}
+          </p>
         ) : null}
 
         {isBlueGuardian ? (
@@ -943,9 +903,6 @@ export default async function FirmPage({ params }: Props) {
                 Open The5ers and test the code
               </a>
             </div>
-            <a href={THE5ERS_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="the5ers-banner-link">
-              <img src={THE5ERS_BANNER_URL} alt="The5ers Affiliate - Turn your passion into a trading career" />
-            </a>
           </div>
         ) : null}
 
@@ -987,9 +944,6 @@ export default async function FirmPage({ params }: Props) {
                 Open FTMO
               </a>
             </div>
-            <a href={FTMO_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="ftmo-banner-link">
-              <img src={FTMO_BANNER_URL} alt="FTMO.com - For serious traders" />
-            </a>
           </div>
         ) : null}
 
@@ -1098,10 +1052,12 @@ export default async function FirmPage({ params }: Props) {
           </div>
           <div className="community-overview-grid">
             {communityOverview.map((item) => (
-              <article className={`community-overview-card ${signalToneClass(item.score)}`} key={item.label}>
+              <article className={`community-overview-card ${signalToneClass(item.score)} ${item.estimated ? 'pr-estimate' : ''}`} key={item.label}>
                 <div>
-                  <span>{item.label}</span>
-                  <strong>{item.score}/100</strong>
+                  <span>{item.label}{item.estimated ? <em className="pr-tag">Estimate</em> : null}</span>
+                  <strong title={item.estimated ? 'Editorial estimate: public mentions have not been counted yet.' : undefined}>
+                    {item.estimated ? '≈' : ''}{item.score}/100
+                  </strong>
                 </div>
                 <div className="signal-meter" aria-hidden="true">
                   <span style={{ width: `${Math.max(0, Math.min(100, item.score))}%` }} />
@@ -1265,36 +1221,29 @@ export default async function FirmPage({ params }: Props) {
         {firm.products.length > 0 ? (
           <div className="grid-2">
             {firm.products.map((product) => (
-              <article className="card product-card" key={product.id}>
-                <div>
-                  <span className="badge badge-green">{product.type}</span>
-                  {product.isPopular ? <span className="badge badge-amber" style={{ marginLeft: 8 }}>Popular</span> : null}
+              <article className="card product-card pr-product" key={product.id}>
+                <div className="pr-product-tags">
+                  <span className="pr-tag">{product.type}</span>
+                  {product.isPopular ? <span className="pr-tag">Popular</span> : null}
                 </div>
                 <h3>{toEnglishText(product.name)}</h3>
                 <p className="muted">{toEnglishText(product.description)}</p>
-                <div className="stat-strip" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}>
-                  <div className="stat"><span>Account</span><strong>{formatUsd(product.accountSizeMin)} - {formatUsd(product.accountSizeMax)}</strong></div>
-                  <div className="stat"><span>Fee</span><strong>{product.entryFeeMin ? `${formatUsd(product.entryFeeMin)}+` : 'By size / checkout'}</strong></div>
-                  <div className="stat"><span>Target</span><strong>{toEnglishText(product.profitTarget)}</strong></div>
-                  <div className="stat"><span>Max drawdown</span><strong>{toEnglishText(product.maxDrawdown)}</strong></div>
-                  <div className="stat"><span>Daily loss</span><strong>{toEnglishText(product.maxDailyLoss)}</strong></div>
-                  <div className="stat"><span>Split</span><strong>{toEnglishText(product.profitSplit)}</strong></div>
-                </div>
-                <div>
-                  <strong>Platforms</strong>
-                  <ul className="mini-list" style={{ marginTop: 8 }}>
-                    {product.platforms.map((platform) => <li key={platform}>{toEnglishText(platform)}</li>)}
-                  </ul>
-                </div>
-                <div>
-                  <strong>Assets</strong>
-                  <ul className="mini-list" style={{ marginTop: 8 }}>
-                    {product.tradableAssets.map((asset) => <li key={asset}>{toEnglishText(asset)}</li>)}
-                  </ul>
-                </div>
-                <div className={`badge ${product.hasConsistencyRule ? 'badge-amber' : 'badge-green'}`}>
-                  {product.hasConsistencyRule ? toEnglishText(product.consistencyRule ?? 'Règle de cohérence à vérifier') : 'No major consistency rule flagged'}
-                </div>
+                <ChallengePath product={product} />
+                <dl className="pr-product-meta">
+                  <div><dt>Platforms</dt><dd>{product.platforms.map((platform) => toEnglishText(platform)).join(' · ')}</dd></div>
+                  <div><dt>Assets</dt><dd>{product.tradableAssets.map((asset) => toEnglishText(asset)).join(' · ')}</dd></div>
+                </dl>
+                {product.hasConsistencyRule ? (
+                  <p className="pr-product-rule pr-tone-watch">
+                    <span className="pr-pip-dot" aria-hidden="true" />
+                    {toEnglishText(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
+                  </p>
+                ) : (
+                  <p className="pr-product-rule pr-tone-good">
+                    <span className="pr-pip-dot" aria-hidden="true" />
+                    No major consistency rule flagged
+                  </p>
+                )}
                 {product.linkToStart ? (
                   <a
                     href={product.linkToStart}

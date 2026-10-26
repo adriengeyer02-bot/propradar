@@ -1,4 +1,5 @@
 import type { GuideArticle } from '../lib/guideArticles';
+import GuideSectionDiagram from './guide-visuals/GuideSectionDiagram';
 
 type Props = {
   article: GuideArticle;
@@ -19,6 +20,7 @@ export default function GuideArticleBody({ article, label, updatedLabel = 'Updat
         <section key={section.heading}>
           <h2>{section.heading}</h2>
           {section.paragraphs.map((paragraph) => <p key={paragraph.slice(0, 48)}>{paragraph}</p>)}
+          {section.visual ? <GuideSectionDiagram visual={section.visual} /> : null}
           {section.bullets?.length ? (
             <ul>
               {section.bullets.map((bullet) => <li key={bullet.slice(0, 48)}>{bullet}</li>)}

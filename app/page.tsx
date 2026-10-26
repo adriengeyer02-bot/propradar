@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import FirmLogo from './components/FirmLogo';
+import FirmRadar from './components/ui/FirmRadar';
+import RiskPip from './components/ui/RiskPip';
+import ScoreRing from './components/ui/ScoreRing';
+import { legalTone, payoutTone } from './lib/riskTone';
 import { getEditorialBriefPath, latestEditorialBrief } from './lib/editorialBriefs';
 import {
   partiallyVerifiedFirms,
-  payoutRiskClass,
   propFirms,
-  regulatoryRiskClass,
-  scoreClass,
   topFirms,
   verifiedFirms,
 } from './lib/propFirms';
@@ -81,49 +82,31 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="home-preview" aria-label="Top prop firms comparator preview">
-          <div className="home-preview-header">
-            <div>
-              <span>Comparator preview</span>
-              <h2>Top reliability</h2>
-            </div>
-            <span className="home-preview-live">
-              <i aria-hidden="true" /> Current scores
-            </span>
+        <div className="home-preview pr-home-radar" aria-label="Every tracked prop firm on the PropRadar">
+          <div className="pr-home-radar-head">
+            <h2>The radar today</h2>
+            <span>{propFirms.length} firms</span>
           </div>
-
-          <div className="home-preview-list">
+          <FirmRadar firms={propFirms} highlighted={heroPreviewFirms} />
+          <ol className="pr-home-top">
             {heroPreviewFirms.map((firm, index) => (
-              <Link href={`/firm/${firm.slug}`} className="home-preview-row" key={`home-preview-${firm.slug}`}>
-                <span className="home-preview-rank">{String(index + 1).padStart(2, '0')}</span>
-                <span className="home-preview-identity">
+              <li key={`home-preview-${firm.slug}`}>
+                <Link href={`/firm/${firm.slug}`}>
+                  <span className="pr-home-top-rank" aria-hidden="true">{index + 1}</span>
                   <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span>
+                  <span className="pr-home-top-name">
                     <strong>{firm.name}</strong>
-                    <small>{toEnglishText(firm.bestFor)}</small>
+                    <span>
+                      <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
+                      <RiskPip compact label="Legal" value={firm.regulatoryAudit.riskLevel} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
+                    </span>
                   </span>
-                </span>
-                <span className={`home-preview-score ${scoreClass(firm.score)}`}>
-                  <small>Score</small>
-                  <strong>{firm.score}</strong>
-                  <span>/100</span>
-                </span>
-                <span className="home-preview-signals">
-                  <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>
-                    {toEnglishText(firm.reviewSignals.payoutRisk)} payout
-                  </span>
-                  <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                    {firm.regulatoryAudit.riskLevel} legal
-                  </span>
-                </span>
-              </Link>
+                  <ScoreRing score={firm.score} size="sm" />
+                </Link>
+              </li>
             ))}
-          </div>
-
-          <Link href="/comparateur" className="home-preview-footer">
-            <span>Compare all {propFirms.length} firms</span>
-            <strong aria-hidden="true">&gt;</strong>
-          </Link>
+          </ol>
+          <Link href="/comparateur" className="pr-link pr-home-radar-more">Compare all {propFirms.length} firms <span aria-hidden="true">→</span></Link>
         </div>
       </section>
 
@@ -171,19 +154,23 @@ export default function HomePage() {
           </div>
 
           <div className="home-why-grid">
-            <article className="home-why-card">
+            <article className="home-why-card pr-why">
+              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" /><path d="m8.5 12 2.5 2.5 4.5-5" /></svg>
               <h3>Independent scores</h3>
               <p>{noConflictFirms} firms currently have no commercial relationship with PropRadar.</p>
             </article>
-            <article className="home-why-card">
+            <article className="home-why-card pr-why">
+              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" /><circle cx="12" cy="12" r="2.5" /><path d="M7 9.5v5M17 9.5v5" /></svg>
               <h3>Payout-first analysis</h3>
               <p>Withdrawal incidents and restrictive rules weigh more than headline discounts.</p>
             </article>
-            <article className="home-why-card">
+            <article className="home-why-card pr-why">
+              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0L7 7Zm10 0-3 7a3 3 0 0 0 6 0l-3-7Z" /></svg>
               <h3>Legal evidence</h3>
               <p>{legalMappedCount} legal files map entities, jurisdictions and regulatory signals.</p>
             </article>
-            <article className="home-why-card">
+            <article className="home-why-card pr-why">
+              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="12" cy="18" r="2.5" /><path d="M8 7.5 10.8 16M16 7.5 13.2 16M8.5 6h7" /></svg>
               <h3>Multi-source context</h3>
               <p>Official terms, public reviews and incidents are checked against each other.</p>
             </article>
