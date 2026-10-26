@@ -1214,36 +1214,9 @@ const noChallengeRows = [
   },
 ];
 
-const noChallengeRiskCards = [
-  {
-    title: 'Funded-stage rules can be stricter',
-    text: 'Many traders only discover after purchase that drawdown, news restrictions, lot size or scaling rules are harder than the marketing page made them feel.',
-  },
-  {
-    title: 'The true cost can rise fast',
-    text: 'A low entry price can become expensive when renewals, resets or repeated direct-account attempts are counted over several months.',
-  },
-  {
-    title: 'There is less discipline testing',
-    text: 'Skipping the evaluation also skips a useful stress test. If your risk control is not already stable, the shortcut can simply expose weaknesses faster.',
-  },
-  {
-    title: 'Minimum payout can block small-win systems',
-    text: 'Some direct accounts require a minimum withdrawal amount or specific payout rhythm that does not fit traders who build profit slowly.',
-  },
-  {
-    title: 'Surprise clauses matter more',
-    text: 'Post-funding clauses are sometimes less obvious than challenge rules. Read the funded-stage terms, not only the product headline.',
-  },
-];
-
-function expandedFaqAnswer(answer: string, guide: NonNullable<ReturnType<typeof getSeoGuideBySlug>>) {
-  const suffix =
-    guide.intent === 'comparer'
-      ? ' To decide properly, always compare the flagship offer, payout risk, restrictions and total cost before looking at popularity.'
-      : ' The important point is to verify official sources and the exact program conditions before paying.';
-
-  return `${answer}${suffix}`;
+function expandedFaqAnswer(answer: string, _guide: NonNullable<ReturnType<typeof getSeoGuideBySlug>>) {
+  // The same closing sentence used to be appended to every answer; it added length, not information.
+  return answer;
 }
 
 export default async function SeoGuidePage({ params }: Props) {
@@ -1546,7 +1519,7 @@ export default async function SeoGuidePage({ params }: Props) {
           {isNewsTradingGuide ? <a href="#news-rule-snapshot">Current news rules</a> : null}
           <a href="#method">Method</a>
           {guideCaseFiles.length > 0 ? <a href="#dated-case-studies">Dated case studies</a> : null}
-          <a href="#answer">{editorial.toc.answer}</a>
+          {guideArticle ? <a href="#guide-article">Full guide</a> : <a href="#answer">{editorial.toc.answer}</a>}
           <a href="#comparison">{editorial.toc.comparison}</a>
           <a href="#shortlist">{editorial.toc.shortlist}</a>
           <a href="#faq">{editorial.toc.faq}</a>
@@ -1696,33 +1669,6 @@ export default async function SeoGuidePage({ params }: Props) {
         <p className="guide-article"><a className="guide-lang-switch" href={`/fr/${frPair.slug}`} hrefLang="fr">Lire ce guide en français</a></p>
       ) : null}
 
-      <section className="page-insight-strip" aria-label="Guide proof summary">
-        <Link href="/audit">
-          <span>Legal proof</span>
-          <strong>{guideLegalMappedCount}/{firms.length}</strong>
-          <small>Selected firms with mapped legal entity or operating structure.</small>
-        </Link>
-        <Link href="/risques-payout">
-          <span>Payout watch</span>
-          <strong>{guidePayoutWatchCount}</strong>
-          <small>Selected firms where payout risk is above low.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Deep sources</span>
-          <strong>{guideDeepSourceCount}</strong>
-          <small>Selected firms with five or more source links saved.</small>
-        </Link>
-        <Link href="/trustpilot-prop-firms">
-          <span>Review context</span>
-          <strong>{displayGuide.primaryKeywords.length}</strong>
-          <small>Main keywords plus filtered review and source context.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Legal watch</span>
-          <strong>{guideLegalWatchCount}</strong>
-          <small>Profiles needing extra legal or source caution.</small>
-        </Link>
-      </section>
 
       {isBestRankingGuide || isNoChallengeGuide || isBeginnerGuide || isReviewSignalsGuide || isFtmoAlternativesGuide || isGftGuide ? (
         <section className="section best-method-section">
@@ -1900,6 +1846,7 @@ export default async function SeoGuidePage({ params }: Props) {
         </section>
       ) : null}
 
+      {!guideArticle ? (
       <section className="section guide-card-grid" id="answer">
         <article className="panel seo-answer-panel">
           <div className="eyebrow">{editorial.answerEyebrow}</div>
@@ -1919,6 +1866,7 @@ export default async function SeoGuidePage({ params }: Props) {
           </ul>
         </article>
       </section>
+      ) : null}
 
       {isLeveragedGuide ? (
         <>
@@ -2416,51 +2364,12 @@ export default async function SeoGuidePage({ params }: Props) {
       ) : null}
 
       {isNoChallengeGuide ? (
-        <>
-          <section className="section">
-            <div className="section-heading">
-              <div>
-                <div className="eyebrow">Real No-Challenge Risks</div>
-                <h2>The shortcut is only useful if the funded-stage rules fit you.</h2>
-              </div>
-              <p className="section-note">
-                These are the recurring traps to check before paying for direct access. The question is not just "Can I skip the challenge?", but "Can I withdraw under these rules?".
-              </p>
-            </div>
-            <div className="no-challenge-risk-grid">
-              {noChallengeRiskCards.map((card) => (
-                <article className="panel no-challenge-risk-card" key={card.title}>
-                  <span>{card.title}</span>
-                  <p>{card.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="section guide-card-grid">
-            <article className="panel no-challenge-use-card">
-              <div className="eyebrow">How To Use This Table</div>
-              <h2>Compare the rule after funding before the price.</h2>
-              <ul className="risk-list">
-                <li>Pick the row that matches your market first: futures traders should study Tradeify, while forex/CFD traders should compare Instant Funding, FXIFY, Funded Trading Plus and Blue Guardian.</li>
-                <li>Read the funded-stage rules, not only the product headline or checkout discount.</li>
-                <li>Calculate the real cost over 3 to 6 months based on your normal trading rhythm.</li>
-                <li>Cross-check recent payout feedback from traders who used the same program, not just the same brand.</li>
-                <li>If your strategy is not stable yet, a classic evaluation may be cheaper and more useful than direct access.</li>
-              </ul>
-            </article>
-            <article className="panel no-challenge-verdict-card">
-              <div className="eyebrow">Final Take</div>
-              <h2>No challenge is not no risk.</h2>
-              <p>
-                Direct access can make sense when you already trade profitably and know your average drawdown. It is much weaker for traders who are still learning discipline, because it removes the evaluation step without removing payout rules.
-              </p>
-              <p>
-                The best choice is the offer whose funded-stage rules you can follow every day. If the program only looks attractive because it is fast, treat it as expensive until proven otherwise.
-              </p>
-            </article>
-          </section>
-        </>
+        <aside className="pr-callout" aria-label="Final take">
+          <strong>No challenge is not no risk.</strong>
+          <p>
+            Direct access makes sense when you already trade profitably and know your average drawdown. If a program only looks attractive because it is fast, treat it as expensive until proven otherwise.
+          </p>
+        </aside>
       ) : null}
 
       <section className="section" id="shortlist">
