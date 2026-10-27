@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import type { PropFirm } from '../../lib/propFirms';
-import { scoreTone } from '../../lib/riskTone';
+import { scoreTone, type Tone } from '../../lib/riskTone';
+import FirmRadarLive, { type RadarDot } from './FirmRadarLive';
 
 type FirmRadarProps = {
   firms: PropFirm[];
@@ -9,7 +9,6 @@ type FirmRadarProps = {
 
 const SIZE = 400;
 const CENTER = SIZE / 2;
-const RINGS = [90, 75, 55];
 
 /** Distance from the centre: the higher the score, the closer to the centre. */
 function radiusFor(score: number) {
@@ -30,73 +29,42 @@ function point(radius: number, angleDeg: number) {
   return { x: CENTER + radius * Math.cos(rad), y: CENTER + radius * Math.sin(rad) };
 }
 
+function toneFor(firm: PropFirm): Tone {
+  return firm.status === 'Fermée' ? 'risk' : scoreTone(firm.score);
+}
+
+const STATUS_LABEL: Record<PropFirm['status'], string> = {
+  Active: 'Active',
+  'À surveiller': 'Watchlist',
+  Fermée: 'Closed',
+};
+
 /**
  * Every tracked firm on one radar: the closer to the centre, the higher the
- * PropRadar score. Colour follows the shared risk scale.
+ * PropRadar score. Colour follows the shared risk scale. Geometry is computed
+ * here (server side) so the client component only receives plain data.
  */
 export default function FirmRadar({ firms, highlighted }: FirmRadarProps) {
-  const highlightSlugs = new Set(highlighted.map((firm) => firm.slug));
-  const counts = { good: 0, watch: 0, risk: 0 };
-  firms.forEach((firm) => {
-    counts[firm.status === 'Fermée' ? 'risk' : scoreTone(firm.score)] += 1;
+  const highlightSlugs = highlighted.map((firm) => firm.slug);
+  const dots: RadarDot[] = firms.map((firm) => {
+    const pinIndex = highlightSlugs.indexOf(firm.slug);
+    const angle = pinIndex >= 0 ? HIGHLIGHT_ANGLES[pinIndex % HIGHLIGHT_ANGLES.length] : angleFor(firm.slug);
+    const radius = radiusFor(firm.score);
+    const { x, y } = point(radius, angle);
+    return {
+      slug: firm.slug,
+      name: firm.name,
+      score: firm.score,
+      status: STATUS_LABEL[firm.status] ?? firm.status,
+      reviewed: firm.lastReviewed,
+      tone: toneFor(firm),
+      angle,
+      radius,
+      x: Math.round(x * 10) / 10,
+      y: Math.round(y * 10) / 10,
+      pin: pinIndex >= 0 ? pinIndex + 1 : 0,
+    };
   });
 
-  return (
-    <figure className="pr-radar">
-      <svg viewBox={`0 0 ${SIZE} ${SIZE}`} role="img" aria-label={`${firms.length} prop firms placed by PropRadar score: ${counts.good} low risk, ${counts.watch} to watch, ${counts.risk} high risk or closed.`}>
-        <defs>
-          <radialGradient id="pr-radar-bg" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" className="pr-radar-bg-center" />
-            <stop offset="100%" className="pr-radar-bg-edge" />
-          </radialGradient>
-          <linearGradient id="pr-radar-sweep" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" className="pr-radar-sweep-start" />
-            <stop offset="100%" className="pr-radar-sweep-end" />
-          </linearGradient>
-        </defs>
-
-        <circle cx={CENTER} cy={CENTER} r={190} fill="url(#pr-radar-bg)" className="pr-radar-disc" />
-        {RINGS.map((score) => (
-          <g key={score}>
-            <circle cx={CENTER} cy={CENTER} r={radiusFor(score)} className="pr-radar-ring" />
-            <text x={CENTER + 4} y={CENTER - radiusFor(score) + 13} className="pr-radar-ring-label">{score}</text>
-          </g>
-        ))}
-        <circle cx={CENTER} cy={CENTER} r={190} className="pr-radar-ring pr-radar-ring-outer" />
-        <line x1={CENTER} y1={10} x2={CENTER} y2={SIZE - 10} className="pr-radar-axis" />
-        <line x1={10} y1={CENTER} x2={SIZE - 10} y2={CENTER} className="pr-radar-axis" />
-
-        <g className="pr-radar-sweep" aria-hidden="true">
-          <path d={`M${CENTER},${CENTER} L${CENTER},${CENTER - 190} A190,190 0 0,1 ${point(190, 38).x},${point(190, 38).y} Z`} fill="url(#pr-radar-sweep)" />
-        </g>
-
-        {firms
-          .filter((firm) => !highlightSlugs.has(firm.slug))
-          .map((firm) => {
-            const { x, y } = point(radiusFor(firm.score), angleFor(firm.slug));
-            const tone = firm.status === 'Fermée' ? 'risk' : scoreTone(firm.score);
-            return <circle key={firm.slug} cx={x} cy={y} r={3.2} className={`pr-radar-dot pr-tone-${tone}`} />;
-          })}
-
-        {highlighted.map((firm, index) => {
-          const { x, y } = point(radiusFor(firm.score), HIGHLIGHT_ANGLES[index % HIGHLIGHT_ANGLES.length]);
-          return (
-            <Link href={`/firm/${firm.slug}`} key={firm.slug} aria-label={`${firm.name}, score ${firm.score}`}>
-              <g className={`pr-radar-pin pr-tone-${scoreTone(firm.score)}`}>
-                <circle cx={x} cy={y} r={13} className="pr-radar-pin-halo" />
-                <circle cx={x} cy={y} r={10} className="pr-radar-pin-dot" />
-                <text x={x} y={y + 4} textAnchor="middle">{index + 1}</text>
-              </g>
-            </Link>
-          );
-        })}
-      </svg>
-      <figcaption className="pr-radar-legend">
-        <span><i className="pr-pip-dot pr-tone-good" aria-hidden="true" />{counts.good} low risk</span>
-        <span><i className="pr-pip-dot pr-tone-watch" aria-hidden="true" />{counts.watch} to watch</span>
-        <span><i className="pr-pip-dot pr-tone-risk" aria-hidden="true" />{counts.risk} high risk or closed</span>
-        <small>Closer to the centre = higher score</small>
-      </figcaption>
-    </figure>
-  );
+  return <FirmRadarLive dots={dots} />;
 }

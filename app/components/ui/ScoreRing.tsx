@@ -1,15 +1,18 @@
+import type { CSSProperties } from 'react';
 import { scoreTone } from '../../lib/riskTone';
 
 type ScoreRingProps = {
   score: number;
   size?: 'sm' | 'md' | 'lg';
   label?: string;
+  /** Draw the ring and count up to the score once on load (CSS only). */
+  animate?: boolean;
 };
 
 const SIZES = { sm: 44, md: 64, lg: 112 } as const;
 
 /** Circular score gauge. Colour follows the shared risk scale. */
-export default function ScoreRing({ score, size = 'md', label }: ScoreRingProps) {
+export default function ScoreRing({ score, size = 'md', label, animate = false }: ScoreRingProps) {
   const px = SIZES[size];
   const stroke = size === 'lg' ? 8 : size === 'md' ? 5 : 4;
   const radius = (px - stroke) / 2;
@@ -19,7 +22,8 @@ export default function ScoreRing({ score, size = 'md', label }: ScoreRingProps)
 
   return (
     <span
-      className={`pr-ring pr-ring-${size} pr-tone-${scoreTone(score)}`}
+      className={`pr-ring pr-ring-${size} pr-tone-${scoreTone(score)}${animate ? ' pr-ring-animate' : ''}`}
+      style={animate ? ({ '--pr-ring-to': clamped, '--pr-ring-circ': circumference } as CSSProperties) : undefined}
       role="img"
       aria-label={`${label ?? 'PropRadar score'} ${score} out of 100`}
     >
@@ -38,7 +42,11 @@ export default function ScoreRing({ score, size = 'md', label }: ScoreRingProps)
         />
       </svg>
       <span className="pr-ring-figure" aria-hidden="true">
-        <strong>{score}</strong>
+        {animate ? (
+          <strong className="pr-count"><span className="pr-count-final">{score}</span></strong>
+        ) : (
+          <strong>{score}</strong>
+        )}
         {size === 'lg' ? <small>/100</small> : null}
       </span>
     </span>
