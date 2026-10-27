@@ -138,7 +138,42 @@ export type PropFirm = {
   reviewSignals: ReviewSignals;
   /** Set when the listed official domain now serves unrelated content: never link to it. */
   listedDomainWarning?: string;
+  /**
+   * Fields that hold a watchlist default rather than a value read on a source.
+   * Pages show them as "To verify" and never as a measured fact.
+   */
+  provisional?: ProvisionalField[];
 };
+
+export type ProvisionalField = 'profitSplit' | 'drawdownType' | 'accountSize' | 'incidents';
+
+// Generic reminders that are not incidents (kept in French for old profiles).
+const PLACEHOLDER_ISSUE =
+  /rev.rifier|conditions commerciales|statuts|must be rechecked before buying|not audited in depth yet|closed or not recommended status/i;
+
+export function isProvisional(firm: Pick<PropFirm, 'provisional'>, field: ProvisionalField) {
+  return Boolean(firm.provisional?.includes(field));
+}
+
+/** Incidents actually written down on the profile; the count shown is always this list's length. */
+export function documentedIncidents(firm: Pick<PropFirm, 'incidentsDetails' | 'reviewSignals'>) {
+  const seen = new Set<string>();
+  return [...(firm.incidentsDetails ?? []), ...(firm.reviewSignals?.payoutIssues ?? [])].filter((item) => {
+    const key = item.trim();
+    if (!key || PLACEHOLDER_ISSUE.test(key) || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+export function profitSplitLabel(firm: Pick<PropFirm, 'profitSplit' | 'provisional'>) {
+  if (isProvisional(firm, 'profitSplit')) return 'To verify';
+  return firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A';
+}
+
+export function drawdownLabel(firm: Pick<PropFirm, 'drawdownType' | 'provisional'>, translate: (value: string) => string = (value) => value) {
+  return isProvisional(firm, 'drawdownType') ? 'To verify' : translate(firm.drawdownType);
+}
 
 const REVIEW_DATE = '2026-06-29';
 export const FTMO_AFFILIATE_URL = 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq';
@@ -428,7 +463,8 @@ function buildReviewSignals(data: Omit<PropFirm, 'reviewSignals'>): ReviewSignal
     payoutRiskScore,
     payoutRisk: payoutRiskLabel(payoutRiskScore),
     payoutIncidentCount: data.incidents,
-    payoutIncidentStatus: payoutIncidentStatus(payoutRiskScore, data.incidents),
+    // A defaulted incident count is not evidence of recurring incidents.
+    payoutIncidentStatus: data.provisional?.includes('incidents') ? 'À surveiller' : payoutIncidentStatus(payoutRiskScore, data.incidents),
     payoutIssues: data.incidentsDetails,
     confidenceDrivers: [
       data.payoutProof ? 'Payout claimed or reported, public proof to verify' : 'Insufficient payout proof',
@@ -436,7 +472,9 @@ function buildReviewSignals(data: Omit<PropFirm, 'reviewSignals'>): ReviewSignal
       data.recentRuleChange ? 'Recent changes to check' : 'Rules have been relatively stable recently',
     ],
     radarVerdict:
-      payoutRiskScore >= 65
+      data.provisional?.includes('incidents')
+        ? 'Not audited in depth yet: the payout risk shown is a conservative default, not a measured result. Check rules, fees and recent payout feedback before any purchase.'
+        : payoutRiskScore >= 65
         ? 'The radar detects significant payout risk: read the rules and recent feedback before any purchase.'
         : trustpilotReliabilityScore < 50
           ? 'Public reviews are too fragile: do not rely on the displayed rating without external proof.'
@@ -576,6 +614,14 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
   const isClosed = status === 'Fermée';
   const styles = data.styles ?? (isFutures ? ['Futures'] : market === 'Crypto' ? ['Crypto'] : market === 'Actions' ? ['Actions'] : ['Forex', 'Indices']);
   const domainWarning = data.listedDomainWarning;
+  const provisional: ProvisionalField[] = isClosed
+    ? []
+    : ([
+        data.profitSplit === undefined ? 'profitSplit' : undefined,
+        data.drawdownType === undefined ? 'drawdownType' : undefined,
+        data.products === undefined && data.accountSizeMin === undefined && data.accountSizeMax === undefined ? 'accountSize' : undefined,
+        data.incidents === undefined && data.incidentsDetails === undefined ? 'incidents' : undefined,
+      ].filter(Boolean) as ProvisionalField[]);
   const logoDomain = domainWarning ? undefined : data.logoDomain ?? (data.website ? domainFromWebsite(data.website) : undefined);
   const sourceUrl = data.website ?? data.sourceUrl ?? 'https://propfirmmatch.com/unlisted-firms';
   const sourceLabel = domainWarning && data.website
@@ -646,13 +692,14 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
             name: data.productName ?? `${data.name} Program`,
             type: data.productType ?? (isFutures ? 'Futures evaluation' : market === 'Crypto' ? 'Challenge' : 'Challenge'),
             description: data.productDescription ?? `${market} program not yet audited by PropRadar. Confirm fees, drawdown, targets and payout conditions on the official source.`,
-            accountSizeMin: data.accountSizeMin ?? (isFutures ? 25000 : 5000),
-            accountSizeMax: data.accountSizeMax ?? (isFutures ? 300000 : 400000),
+            // 0 = size not read on a source yet (pages then hide the range).
+            accountSizeMin: data.accountSizeMin ?? (provisional.includes('accountSize') ? 0 : isFutures ? 25000 : 5000),
+            accountSizeMax: data.accountSizeMax ?? (provisional.includes('accountSize') ? 0 : isFutures ? 300000 : 400000),
             entryFeeMin: data.priceFrom && data.priceFrom > 0 ? data.priceFrom : undefined,
             profitTarget: data.profitTarget ?? 'variable by program',
             maxDailyLoss: data.maxDailyLoss ?? 'variable',
             maxDrawdown: data.maxDrawdown ?? 'variable',
-            profitSplit: `up to ${data.profitSplit ?? 80}% depending on conditions`,
+            profitSplit: data.profitSplit === undefined ? 'To verify' : `up to ${data.profitSplit}% depending on conditions`,
             platforms: data.platforms ?? (isFutures ? ['NinjaTrader', 'Tradovate', 'Rithmic', 'To verify'] : ['MT4', 'MT5', 'cTrader', 'To verify']),
             tradableAssets: data.tradableAssets ?? (isFutures ? ['Futures'] : market === 'Crypto' ? ['Crypto'] : market === 'Actions' ? ['Stocks'] : ['Forex', 'Indices', 'Metals', 'Crypto']),
             minTradingDays: data.minTradingDays,
@@ -674,6 +721,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     ...(data.regulatoryAudit ? { regulatoryAudit: data.regulatoryAudit } : {}),
     reviewSignals: data.reviewSignals,
     ...(domainWarning ? { listedDomainWarning: domainWarning } : {}),
+    ...(provisional.length ? { provisional } : {}),
   });
 }
 
@@ -713,7 +761,6 @@ const corePropFirms: PropFirm[] = [
       trustpilotReliability: 'Forte',
       trustpilotNote: 'Trustpilot 4.8/5 with roughly 45k public reviews. Strong signal, but Trustpilot does not fact-check every payout story; PropRadar weighs it against rules and documented payout incidents.',
       trustpilotFlags: ['Very significant review volume', 'Claimed profile and Trustpilot subscription', 'Trustpilot filters non-compliant reviews but does not verify every described fact', 'Low response rate to negative reviews to monitor'],
-      trustpilotFlaggedReviewCount: 0,
       trustpilotFlaggedReviewNote: 'No public counter of removed or sanctioned fake reviews was found on the Trustpilot page checked. The signal remains strong, with caution around factual verification of individual stories.',
       manipulationRiskScore: 24,
       manipulationRisk: 'Faible',
@@ -1020,7 +1067,6 @@ const corePropFirms: PropFirm[] = [
         'Almost no public response to negative reviews on the page checked',
         'Trustpilot does not verify the facts of each testimonial',
       ],
-      trustpilotFlaggedReviewCount: 0,
       trustpilotFlaggedReviewNote:
         'No official counter of removed or sanctioned fake reviews was found on the page checked. PropRadar still keeps qualitative alerts on marketing volume and weak public handling of negative reviews.',
       manipulationRiskScore: 48,
@@ -1150,7 +1196,6 @@ const corePropFirms: PropFirm[] = [
         'Category flagged as high-risk investment',
         'Do not read the rating as payout proof',
       ],
-      trustpilotFlaggedReviewCount: 0,
       trustpilotFlaggedReviewNote:
         'No official counter of removed or sanctioned fake reviews was found on the page checked. PropRadar still keeps a qualitative alert linked to the merged profile and review dispersion.',
       manipulationRiskScore: 44,
@@ -1934,7 +1979,6 @@ const corePropFirms: PropFirm[] = [
     reviewSignals: {
       trustpilotSourceUrl: 'https://www.trustpilot.com/review/fxify.com',
       trustpilotReviewCount: 6055,
-      trustpilotFlaggedReviewCount: 3,
       trustpilotFlaggedReviewNote: 'Trustpilot checked on 2026-07-02: reviews are generally positive, but several recent reviews mention payout delays or refusals after accusations of prohibited strategy.',
       payoutIssues: [
         'Recent Trustpilot: complaint about payout pending beyond advertised delay, to verify with the official response.',
@@ -7667,7 +7711,6 @@ const universePropFirms: PropFirm[] = [
     founded: 2023,
     priceFrom: 49,
     additionalSources: [
-      { label: 'BrokersInForex redirected site', url: 'http://brokersinforex.com' },
       { label: 'FX Capital Funding Trustpilot search', url: 'https://www.trustpilot.com/search?query=FX%20Capital%20Funding%20prop%20firm' },
     ],
     auditStatus: 'Partiellement vérifié',
@@ -7699,7 +7742,6 @@ const universePropFirms: PropFirm[] = [
       ],
       sources: [
         { label: 'FX Capital Funding current domain', url: 'https://fxcapitalfunding.com/' },
-        { label: 'BrokersInForex redirected site', url: 'http://brokersinforex.com' },
         { label: 'FX Capital Funding Trustpilot search', url: 'https://www.trustpilot.com/search?query=FX%20Capital%20Funding%20prop%20firm' },
       ],
     },
@@ -8534,7 +8576,6 @@ const universePropFirms: PropFirm[] = [
         'Trustpilot does not verify the facts described in every review',
         'Weak response to negative reviews to monitor',
       ],
-      trustpilotFlaggedReviewCount: 0,
       trustpilotFlaggedReviewNote:
         'No public counter of removed or sanctioned fake reviews was found on the Trustpilot page checked. The score remains weighted by the young profile and review collection model.',
       manipulationRiskScore: 42,
@@ -12732,7 +12773,7 @@ const universePropFirms: PropFirm[] = [
         'Removed reviews reported by Trustpilot',
         'Many recent reviews to cross-check with Discord, X and payout proof',
       ],
-      trustpilotFlaggedReviewCount: 1,
+      trustpilotRatingWithheld: true,
       trustpilotFlaggedReviewNote:
         'Public Trustpilot alert: the rating is unavailable and reviews were removed. The reliability score is therefore deliberately low.',
       manipulationRiskScore: 78,

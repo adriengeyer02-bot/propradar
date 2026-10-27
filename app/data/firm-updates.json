@@ -1127,6 +1127,82 @@
           ]
         }
       ]
+    },
+    "fintokei": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore across 1,410 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fintokei.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 1410,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com"
+      }
+    },
+    "city-traders-imperium": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.2 TrustScore across 1,631 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.3 across 1,691 reviews. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/citytradersimperium.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 1631,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com"
+      }
+    },
+    "earn2trade": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore across 5,046 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.earn2trade.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 5046,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com"
+      }
+    },
+    "lucid-trading": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore across 7,805 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.6, with no review count or source stored. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/lucidtrading.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 7805,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
+      }
     }
   }
 }

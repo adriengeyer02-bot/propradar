@@ -29,6 +29,10 @@ import {
   relationshipClass,
   reviewReliabilityClass,
   type PropFirm,
+  documentedIncidents,
+  drawdownLabel,
+  isProvisional,
+  profitSplitLabel,
 } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { getFirmRelatedGuides, getSeoGuideDisplay, getSeoGuidePath } from '../../lib/seoGuides';
@@ -122,8 +126,7 @@ function sourceUrl(firm: PropFirm, match: RegExp) {
 }
 
 function hasConcretePayoutIssues(firm: PropFirm) {
-  const placeholderPattern = /rev.rifier|conditions commerciales|statuts/i;
-  return firm.reviewSignals.payoutIssues.some((issue) => !placeholderPattern.test(issue));
+  return documentedIncidents(firm).length > 0;
 }
 
 function proofValue(row: ScoreProofRow) {
@@ -170,7 +173,7 @@ function scoreProofRows(firm: PropFirm, kind: 'trustpilot' | 'payout' | 'manipul
 
     return [
       { label: 'Visible proof', value: firm.payoutProof && payoutUrl ? 'Official payout page listed' : firm.payoutProof ? 'Tracked signal, independent proof to publish' : 'Insufficient', href: firm.payoutProof ? payoutUrl : undefined },
-      { label: 'Incidents', value: hasConcretePayoutIssues(firm) ? `${firm.reviewSignals.payoutIncidentCount ?? firm.incidents} documented signal(s)` : 'No detailed incident in PropRadar' },
+      { label: 'Incidents', value: hasConcretePayoutIssues(firm) ? `${documentedIncidents(firm).length} documented signal(s)` : 'No detailed incident in PropRadar' },
       { label: 'Last check', value: firm.reviewSignals.lastSignalCheck },
     ];
   }
@@ -429,8 +432,8 @@ export default async function FirmPage({ params }: Props) {
   ]);
   const evidenceFallbackPoints = [
     `Legal file: ${regulatoryAudit.riskLevel} risk, checked ${regulatoryAudit.lastChecked}, with ${sourceCount} source link(s) saved.`,
-    `Payout file: ${toEnglishText(firm.reviewSignals.payoutRisk)} risk, ${firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s), advertised timing ${toEnglishText(firm.payoutDelay)}.`,
-    `Trading rules: ${toEnglishText(firm.drawdownType)} drawdown, news trading ${toEnglishText(firm.newsTrading).toLowerCase()}, ${firm.products.length} tracked product(s).`,
+    `Payout file: ${toEnglishText(firm.reviewSignals.payoutRisk)} risk${isProvisional(firm, 'incidents') ? ' (provisional default, not audited yet)' : ''}, ${documentedIncidents(firm).length} documented signal(s), advertised timing ${toEnglishText(firm.payoutDelay)}.`,
+    `Trading rules: ${isProvisional(firm, 'drawdownType') ? 'drawdown type to verify' : `${toEnglishText(firm.drawdownType)} drawdown`}, news trading ${toEnglishText(firm.newsTrading).toLowerCase()}, ${firm.products.length} tracked product(s).`,
   ];
   const topRiskPoints = uniqueProfilePoints([
     ...specificRiskPoints,
@@ -469,8 +472,8 @@ export default async function FirmPage({ params }: Props) {
     {
       label: 'Payout safety',
       score: Math.max(0, 100 - firm.reviewSignals.payoutRiskScore),
-      provisional: false,
-      detail: `${firm.reviewSignals.payoutIncidentCount ?? firm.incidents} documented signal(s)`,
+      provisional: isProvisional(firm, 'incidents'),
+      detail: `${documentedIncidents(firm).length} documented signal(s)`,
     },
   ];
   const communitySearchLinks = [
@@ -495,7 +498,9 @@ export default async function FirmPage({ params }: Props) {
     {
       label: 'Payout proof',
       value: payoutProofLabel(firm),
-      detail: `Payout risk is ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s).`,
+      detail: isProvisional(firm, 'incidents')
+        ? `Payout risk is a provisional ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} default: no payout incident has been documented yet.`
+        : `Payout risk is ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${documentedIncidents(firm).length} documented signal(s).`,
       className: payoutProofClass(firm),
     },
     {
@@ -522,7 +527,7 @@ export default async function FirmPage({ params }: Props) {
     },
     {
       question: `Does ${firm.name} have payout risk?`,
-      answer: `PropRadar rates payout risk as ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s). Visible payout proof is classified as ${payoutProofLabel(firm).toLowerCase()}.`,
+      answer: `PropRadar rates payout risk as ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${documentedIncidents(firm).length} tracked signal(s). Visible payout proof is classified as ${payoutProofLabel(firm).toLowerCase()}.`,
     },
     {
       question: `What should I check before buying ${firm.name}?`,
@@ -670,7 +675,9 @@ export default async function FirmPage({ params }: Props) {
               <h1 className={firmTitleClass}>{firm.name}</h1>
               <div className="pr-firm-tags">
                 <span className={`pr-tag pr-tone-${statusTone(firm.status)}`}>{operationalStatusLabel(firm)}</span>
-                <span className={`pr-tag pr-tone-${firmRiskTone(firm)}`}>{firmRiskLabel(firm)}</span>
+                {firmRiskLabel(firm) !== operationalStatusLabel(firm) ? (
+                  <span className={`pr-tag pr-tone-${firmRiskTone(firm)}`}>{firmRiskLabel(firm)}</span>
+                ) : null}
                 {firm.commercialRelationship === 'Affiliation transparente' ? (
                   <span className="pr-tag pr-tag-affiliate" title="PropRadar may earn a commission. The score is not affected.">Affiliate link disclosed</span>
                 ) : null}
@@ -706,8 +713,8 @@ export default async function FirmPage({ params }: Props) {
 
         <dl className="pr-key-facts">
           <div><dt>From</dt><dd>{formatUsd(firm.priceFrom)}</dd></div>
-          <div><dt>Profit split</dt><dd>{firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A'}</dd></div>
-          <div><dt>Drawdown</dt><dd>{toEnglishText(firm.drawdownType)}</dd></div>
+          <div><dt>Profit split</dt><dd>{profitSplitLabel(firm)}</dd></div>
+          <div><dt>Drawdown</dt><dd>{drawdownLabel(firm, toEnglishText)}</dd></div>
           <div><dt>News trading</dt><dd>{toEnglishText(firm.newsTrading)}</dd></div>
           <div><dt>Proof level</dt><dd>{toEnglishText(firm.auditStatus)}</dd></div>
           <div><dt>Last review</dt><dd><ReviewFreshness date={firm.lastReviewed} /></dd></div>
@@ -1105,7 +1112,9 @@ export default async function FirmPage({ params }: Props) {
               <div className="score">{firm.reviewSignals.payoutRiskScore}/100</div>
               <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
               <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>
-                {toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)
+                {isProvisional(firm, 'incidents')
+                  ? 'Provisional: not audited in depth yet, no payout incident documented so far'
+                  : `${toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · ${documentedIncidents(firm).length} documented signal(s)`}
               </p>
               <div className="score-proof">
                 {scoreProofRows(firm, 'payout').map((row) => (
@@ -1266,7 +1275,7 @@ export default async function FirmPage({ params }: Props) {
             <h3>Incidents on file</h3>
             {hasConcretePayoutIssues(firm) ? (
               <ul className="pr-check-list pr-incident-list">
-                {firm.reviewSignals.payoutIssues.map((incident) => <li key={incident}>{toEnglishText(incident)}</li>)}
+                {documentedIncidents(firm).map((incident) => <li key={incident}>{toEnglishText(incident)}</li>)}
               </ul>
             ) : (
               <p className="pr-fineprint">No detailed independent incident recorded. The profile stays cautious until rules, payouts and recent reviews are sourced more precisely.</p>

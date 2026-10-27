@@ -13,6 +13,7 @@ import {
   propFirms,
   regulatoryRiskClass,
   scoreClass,
+  drawdownLabel,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 import {
@@ -370,7 +371,7 @@ export default function PromosPage() {
                 </div>
               </div>
               <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
-              <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
+              <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
               <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
                 <span>Score</span>

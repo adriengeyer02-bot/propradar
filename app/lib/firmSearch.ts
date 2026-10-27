@@ -1,4 +1,4 @@
-import { propFirms, type PropFirm } from './propFirms';
+import { isProvisional, propFirms, type PropFirm } from './propFirms';
 import { toEnglishText } from './i18n';
 
 type FirmSearchField = {
@@ -116,12 +116,12 @@ function buildFirmSearchFields(firm: PropFirm): FirmSearchField[] {
     {
       label: 'Core rules',
       searchable: [
-        `drawdown ${firm.drawdownType}`,
+        isProvisional(firm, 'drawdownType') ? 'drawdown to verify' : `drawdown ${firm.drawdownType}`,
         `news trading ${firm.newsTrading} ${toEnglishText(firm.newsTrading)}`,
         `EA algo bot ${firm.eaAllowed} ${toEnglishText(firm.eaAllowed)}`,
         `payout delay ${firm.payoutDelay}`,
       ].join(' '),
-      display: `${toEnglishText(firm.drawdownType)} drawdown - News ${toEnglishText(firm.newsTrading)} - EA ${toEnglishText(firm.eaAllowed)}`,
+      display: `${isProvisional(firm, 'drawdownType') ? 'Drawdown to verify' : `${toEnglishText(firm.drawdownType)} drawdown`} - News ${toEnglishText(firm.newsTrading)} - EA ${toEnglishText(firm.eaAllowed)}`,
       weight: 76,
     },
     {
