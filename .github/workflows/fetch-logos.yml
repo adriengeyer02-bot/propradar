@@ -1,0 +1,36 @@
+name: Fetch firm logos (raw)
+
+# Downloads the icons each firm publishes on its official site and pushes the
+# raw candidates to the `agent/logo-raw` branch for review. Nothing is
+# published from this workflow.
+on:
+  workflow_dispatch:
+  push:
+    branches: [agent/logo-fetch]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-audit --no-fund
+      - run: npx tsx scripts/fetch-logos.ts
+      - name: Push raw candidates to agent/logo-raw
+        run: |
+          mv logo-raw /tmp/logo-raw
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan agent/logo-raw
+          git rm -rf --quiet . || true
+          rm -rf ./* .github
+          cp -r /tmp/logo-raw ./logo-raw
+          git add logo-raw
+          git commit -q -m "Raw logo candidates $(date -u +%F)"
+          git push -f origin agent/logo-raw
