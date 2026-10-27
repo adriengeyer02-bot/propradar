@@ -1111,6 +1111,22 @@
           ]
         }
       ]
+    },
+    "audacity-capital": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/audacity.capital",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
     }
   }
 }
