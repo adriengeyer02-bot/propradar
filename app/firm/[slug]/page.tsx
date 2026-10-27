@@ -11,7 +11,7 @@ import RiskPip from '../../components/ui/RiskPip';
 import ScoreRing from '../../components/ui/ScoreRing';
 import ReviewFreshness from '../../components/ui/ReviewFreshness';
 import RevealOnView from '../../components/ui/RevealOnView';
-import { legalTone, payoutTone, reviewTone, statusTone, type Tone } from '../../lib/riskTone';
+import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../../lib/riskTone';
 import {
   BLUE_GUARDIAN_AFFILIATE_URL,
   FTMO_AFFILIATE_URL,
@@ -383,20 +383,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       modifiedTime,
       authors: [`${SITE_URL}/audit`],
       tags: [firm.name, 'prop firm review', 'payout risk', 'legal audit'],
-      images: [{
-        url: socialImage,
-        width: auditCaseFile ? 1536 : 1200,
-        height: auditCaseFile ? 864 : 630,
-        alt: auditCaseFile
-          ? `${firm.name} operational and legal audit timeline`
-          : `${firm.name} review - PropRadar`,
-      }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [socialImage],
     },
   };
 }
@@ -950,144 +941,132 @@ export default async function FirmPage({ params }: Props) {
           </div>
         ) : null}
 
-        <nav className="firm-tabs" aria-label="Firm page navigation">
+        <nav className="firm-tabs pr-subnav" aria-label="Firm page navigation">
           <a href="#decision">Decision</a>
           {auditCaseFile ? <a href="#case-timeline">Timeline</a> : null}
-          <a href="#regulatory">Regulatory check</a>
-          <a href="#audit">Reviews & payouts</a>
+          <a href="#regulatory">Legal file</a>
+          <a href="#audit">Reviews &amp; payouts</a>
           <a href="#produits">Products</a>
-          <a href="#guides">Related guides</a>
+          <a href="#guides">Guides</a>
           <a href="#faq">FAQ</a>
-          <a href="#sources">Sources & proof</a>
+          <a href="#sources">Sources</a>
         </nav>
       </section>
 
-      <section className="container section regulatory-section" id="regulatory">
-        <div className="section-heading">
+      <section className="container pr-section" id="regulatory" aria-labelledby={`legal-${firm.slug}`}>
+        <header className="pr-section-head">
           <div>
-            <div className="eyebrow">Regulatory Check</div>
-            <h2>Legal entities, regulator status and red flags</h2>
+            <div className="eyebrow">Legal file</div>
+            <h2 id={`legal-${firm.slug}`}>Who you pay, and under which rules</h2>
           </div>
-          <span className={`badge ${regulatoryRiskClass(regulatoryAudit.riskLevel)}`}>
-            Regulatory risk - {regulatoryAudit.riskLevel}
-          </span>
-        </div>
-        <div className="regulatory-grid">
-          <article className="panel regulatory-summary-card">
-            <div className="regulatory-summary-top">
-              <div>
-                <span>Last checked</span>
-                <strong>{regulatoryAudit.lastChecked}</strong>
-              </div>
-              <span className={`badge ${regulatoryRiskClass(regulatoryAudit.riskLevel)}`}>{regulatoryAudit.riskLevel}</span>
-            </div>
-            <p>{toEnglishText(regulatoryAudit.summary)}</p>
-            <div className="regulatory-source-strip">
-              <span>Audit sources</span>
-              <strong>{regulatoryAudit.sources.length || firm.sources.length}</strong>
-            </div>
-          </article>
+          <div className="pr-section-meta">
+            <RiskPip label="Legal risk" value={regulatoryAudit.riskLevel} tone={legalTone(regulatoryAudit.riskLevel)} />
+            <span>Checked <time dateTime={regulatoryAudit.lastChecked}>{regulatoryAudit.lastChecked}</time></span>
+          </div>
+        </header>
+        <p className="pr-section-lead">{toEnglishText(regulatoryAudit.summary)}</p>
 
-          <article className="panel regulatory-entity-card">
-            <div className="eyebrow">Identified Legal Entities</div>
-            <div className="regulatory-entity-list">
-              {regulatoryAudit.entities.map((entity) => (
-                <div className="regulatory-entity-item" key={`${entity.name}-${entity.jurisdiction}`}>
-                  <div>
-                    <strong>{toEnglishText(entity.name)}</strong>
-                    <span>{toEnglishText(entity.jurisdiction)}</span>
-                  </div>
-                  {entity.registrationNumber ? <small>Registration: {entity.registrationNumber}</small> : null}
+        {regulatoryAudit.entities.length ? (
+          <div className="pr-entity-table" role="table" aria-label={`${firm.name} legal entities`}>
+            <div className="pr-entity-head" role="row">
+              <span role="columnheader">Entity</span>
+              <span role="columnheader">Jurisdiction</span>
+              <span role="columnheader">Role</span>
+            </div>
+            {regulatoryAudit.entities.map((entity) => (
+              <div className="pr-entity-row" role="row" key={`${entity.name}-${entity.jurisdiction}`}>
+                <span role="cell" className="pr-entity-name">
+                  <strong>{toEnglishText(entity.name)}</strong>
+                  {entity.registrationNumber ? <small>Registration {entity.registrationNumber}</small> : null}
                   {entity.registeredAddress ? <small>{toEnglishText(entity.registeredAddress)}</small> : null}
-                  {entity.role ? <p>{toEnglishText(entity.role)}</p> : null}
-                </div>
-              ))}
-            </div>
-          </article>
-        </div>
+                </span>
+                <span role="cell" className="pr-entity-place">{toEnglishText(entity.jurisdiction)}</span>
+                <span role="cell" className="pr-entity-role">{entity.role ? toEnglishText(entity.role) : '—'}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
 
-        <div className="regulatory-detail-grid">
-          <article className="regulatory-detail-card">
-            <div className="eyebrow">Regulator Status</div>
-            <ul className="risk-list">
-              {regulatoryAudit.regulatoryStatus.map((item) => <li key={item}>{toEnglishText(item)}</li>)}
-            </ul>
-          </article>
-          <article className="regulatory-detail-card">
-            <div className="eyebrow">Complaints & Disputes</div>
-            <ul className="risk-list">
-              {regulatoryAudit.complaintsAndDisputes.map((item) => <li key={item}>{toEnglishText(item)}</li>)}
-            </ul>
-          </article>
-          <article className="regulatory-detail-card regulatory-red-card">
-            <div className="eyebrow">Red Flags</div>
-            <ul className="risk-list">
-              {regulatoryAudit.redFlags.map((item) => <li key={item}>{toEnglishText(item)}</li>)}
-            </ul>
-          </article>
-          <article className="regulatory-detail-card">
-            <div className="eyebrow">Source Links</div>
+        <div className="pr-dossier">
+          <DossierGroup title="Red flags" items={regulatoryAudit.redFlags} tone={regulatoryAudit.redFlags.length ? 'risk' : 'good'} open />
+          <DossierGroup title="Regulator status" items={regulatoryAudit.regulatoryStatus} />
+          <DossierGroup title="Complaints and disputes" items={regulatoryAudit.complaintsAndDisputes} />
+          <details className="pr-dossier-group">
+            <summary>
+              <span className="pr-dossier-count">{(regulatoryAudit.sources.length ? regulatoryAudit.sources : firm.sources).length}</span>
+              <strong>Legal sources</strong>
+            </summary>
             {(regulatoryAudit.sources.length ? regulatoryAudit.sources : firm.sources).length > 0 ? (
-              <ul className="source-list compact-source-list">
+              <ul className="pr-source-list">
                 {(regulatoryAudit.sources.length ? regulatoryAudit.sources : firm.sources).map((source) => (
                   <li key={source.url}>
                     {isBlockedFirmUrl(firm, source.url)
                       ? <span>{toEnglishText(source.label)} (not linked)</span>
-                      : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>}
+                      : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="muted">Source links still need to be added for this regulatory file.</p>
+              <p className="pr-fineprint">Source links still need to be added for this legal file.</p>
             )}
-          </article>
+          </details>
         </div>
       </section>
 
-      <section className="container section" id="audit">
-        <div className="eyebrow">Reviews, Reddit and payouts</div>
-        <h2>Filtered community signal</h2>
-        <div className="community-overview-panel">
-          <div className="community-overview-main">
-            <span>Aggregated signal</span>
-            <strong>{communitySignalScore}/100</strong>
-            <small>Reddit, X/Twitter, Trustpilot reliability and payout risk combined.</small>
-          </div>
-          <div className="community-overview-grid">
-            {communityOverview.map((item) => (
-              <article className={`community-overview-card ${signalToneClass(item.score)} ${item.estimated ? 'pr-estimate' : ''}`} key={item.label}>
-                <div>
-                  <span>{item.label}{item.estimated ? <em className="pr-tag">Estimate</em> : null}</span>
-                  <strong title={item.estimated ? 'Editorial estimate: public mentions have not been counted yet.' : undefined}>
-                    {item.estimated ? '≈' : ''}{item.score}/100
-                  </strong>
-                </div>
-                <div className="signal-meter" aria-hidden="true">
-                  <span style={{ width: `${Math.max(0, Math.min(100, item.score))}%` }} />
-                </div>
-                <small>{item.volume} · {item.detail}</small>
-              </article>
-            ))}
-          </div>
-          <div className="payout-timeline">
-            <span>Last payout check</span>
-            <strong>{firm.reviewSignals.lastSignalCheck}</strong>
-            <small>{toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)</small>
-          </div>
-        </div>
-        <div className="panel radar-verdict">
+      <section className="container pr-section" id="audit" aria-labelledby={`reviews-${firm.slug}`}>
+        <header className="pr-section-head">
           <div>
-            <div className="eyebrow">Radar Verdict</div>
-            <p className="lead">{toEnglishText(firm.reviewSignals.radarVerdict)}</p>
+            <div className="eyebrow">Reviews and payouts</div>
+            <h2 id={`reviews-${firm.slug}`}>What traders report</h2>
           </div>
-          <ul className="mini-list">
-            {(firm.reviewSignals.confidenceDrivers ?? []).map((driver) => <li key={driver}>{toEnglishText(driver)}</li>)}
+          <div className="pr-section-meta">
+            <RiskPip label="Payout risk" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
+            <span>Payout check <time dateTime={firm.reviewSignals.lastSignalCheck}>{firm.reviewSignals.lastSignalCheck}</time></span>
+          </div>
+        </header>
+
+        <div className="pr-signal-board">
+          <div className="pr-signal-total">
+            <span>Combined signal</span>
+            <strong>{communityOverview.some((item) => item.estimated) ? '≈' : ''}{communitySignalScore}<small>/100</small></strong>
+            <small>
+              Reddit, X/Twitter, Trustpilot and payout risk.
+              {communityOverview.some((item) => item.estimated) ? ' Includes editorial estimates.' : ''}
+            </small>
+          </div>
+          <ul className="pr-signal-bars">
+            {communityOverview.map((item) => (
+              <li key={item.label} className={`pr-tone-${scoreTone(item.score)}${item.estimated ? ' is-estimate' : ''}`}>
+                <span className="pr-signal-bar-label">
+                  <strong>{item.label}</strong>
+                  {item.estimated ? <em className="pr-tag" title="Editorial estimate: public mentions have not been counted yet.">Estimate</em> : null}
+                </span>
+                <span className="pr-signal-bar-track" aria-hidden="true">
+                  <span style={{ width: `${Math.max(0, Math.min(100, item.score))}%` }} />
+                </span>
+                <span className="pr-signal-bar-value">{item.estimated ? '≈' : ''}{item.score}</span>
+                <small>{item.volume} · {item.detail}</small>
+              </li>
+            ))}
           </ul>
+          <p className="pr-signal-payout">
+            <span className={`pr-pip-dot pr-tone-${payoutTone(firm.reviewSignals.payoutRisk)}`} aria-hidden="true" />
+            Payout: {toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)
+          </p>
         </div>
+
+        <blockquote className="pr-verdict">
+          <p>{toEnglishText(firm.reviewSignals.radarVerdict)}</p>
+          {(firm.reviewSignals.confidenceDrivers ?? []).length ? (
+            <footer>
+              {(firm.reviewSignals.confidenceDrivers ?? []).map((driver) => <span className="pr-tag" key={driver}>{toEnglishText(driver)}</span>)}
+            </footer>
+          ) : null}
+        </blockquote>
         <details className="firm-details">
           <summary>
             <span>Score breakdown</span>
-            <small>Reddit, X/Twitter, Trustpilot and payout scores, flags and the manual review queue</small>
+            <small>Reddit, X/Twitter, Trustpilot and payout scores, with the flags behind them</small>
           </summary>
           <div className="grid-3">
             <div className="card">
@@ -1166,6 +1145,7 @@ export default async function FirmPage({ params }: Props) {
               </div>
             </div>
           </div>
+          {typeof manualReview.reddit.sampleSize === 'number' || typeof manualReview.x.sampleSize === 'number' ? (
           <div className="panel manual-review-panel">
             <div className="manual-review-header">
               <div>
@@ -1180,6 +1160,7 @@ export default async function FirmPage({ params }: Props) {
               <ManualReviewChannel title="X/Twitter" channel={manualReview.x} />
             </div>
           </div>
+          ) : null}
           <div className="signal-explain-grid">
             <div className="signal-explain-card">
               <div className="eyebrow">Reddit flags</div>
@@ -1270,123 +1251,147 @@ export default async function FirmPage({ params }: Props) {
         )}
       </section>
 
-      <section className="container section" id="guides">
-        <div className="section-heading">
+      <section className="container pr-section" id="guides" aria-labelledby={`guides-${firm.slug}`}>
+        <header className="pr-section-head">
           <div>
-            <div className="eyebrow">Related Research</div>
-            <h2>PropRadar guides related to {firm.name}</h2>
+            <div className="eyebrow">Related research</div>
+            <h2 id={`guides-${firm.slug}`}>Guides that cover {firm.name}</h2>
           </div>
-          <p className="section-note">
-            These links connect the firm page to the searches traders actually type before choosing.
-          </p>
-        </div>
-        {editorialMentions.length ? (
-          <div className="firm-brief-mentions" aria-label={`${firm.name} in the Prop Firm Risk Brief`}>
-            {editorialMentions.map(({ brief, section }) => (
-              <Link
-                href={`${getEditorialBriefPath(brief)}#${section.id}`}
-                className="firm-brief-mention"
-                key={`${brief.slug}-${section.id}`}
-              >
-                <span>Risk Brief {String(brief.issueNumber).padStart(2, '0')}</span>
+        </header>
+        <ul className="pr-link-list">
+          {editorialMentions.map(({ brief, section }) => (
+            <li key={`${brief.slug}-${section.id}`}>
+              <Link href={`${getEditorialBriefPath(brief)}#${section.id}`} className="pr-link-row">
+                <span className="pr-link-row-tag">Risk Brief {String(brief.issueNumber).padStart(2, '0')}</span>
                 <strong>{section.title}</strong>
                 <small>{section.summary}</small>
-                <b aria-hidden="true">Read analysis &#8594;</b>
+                <span className="pr-link-row-go" aria-hidden="true">→</span>
               </Link>
-            ))}
-          </div>
-        ) : null}
-        <div className="guide-entry-grid firm-guide-grid">
-          {relatedGuides.map((guide) => (
-            <Link href={getSeoGuidePath(guide)} className="guide-entry-card" key={guide.slug}>
-              <span>{getSeoGuideDisplay(guide).eyebrow}</span>
-              <strong>{getSeoGuideDisplay(guide).title}</strong>
-              <small>{getSeoGuideDisplay(guide).answer}</small>
-            </Link>
+            </li>
           ))}
-        </div>
+          {relatedGuides.map((guide) => {
+            const display = getSeoGuideDisplay(guide);
+            return (
+              <li key={guide.slug}>
+                <Link href={getSeoGuidePath(guide)} className="pr-link-row">
+                  <span className="pr-link-row-tag">{display.eyebrow}</span>
+                  <strong>{display.title}</strong>
+                  <small>{display.answer}</small>
+                  <span className="pr-link-row-go" aria-hidden="true">→</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </section>
 
-      <section className="container section firm-faq-section" id="faq">
-        <div className="section-heading">
+      <section className="container pr-section" id="faq" aria-labelledby={`faq-${firm.slug}`}>
+        <header className="pr-section-head">
           <div>
-            <div className="eyebrow">Decision FAQ</div>
-            <h2>{firm.name} questions before paying</h2>
+            <div className="eyebrow">Before paying</div>
+            <h2 id={`faq-${firm.slug}`}>{firm.name}: common questions</h2>
           </div>
-          <p className="section-note">
-            Short answers built from the current PropRadar score, regulatory file, payout risk and source stack.
-          </p>
-        </div>
-        <div className="firm-faq-grid">
-          {firmFaq.map((item) => (
-            <article className="firm-faq-card" key={item.question}>
-              <h3>{item.question}</h3>
+        </header>
+        <div className="pr-faq">
+          {firmFaq.map((item, index) => (
+            <details key={item.question} open={index === 0}>
+              <summary>{item.question}</summary>
               <p>{item.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
       </section>
 
-      <section className="container section" id="sources">
-        <div className="grid-2">
-          <div className="panel">
-            <div className="eyebrow">Operational Risk</div>
-            <h2>Incidents and signals</h2>
+      <section className="container pr-section" id="sources" aria-labelledby={`sources-${firm.slug}`}>
+        <header className="pr-section-head">
+          <div>
+            <div className="eyebrow">Sources</div>
+            <h2 id={`sources-${firm.slug}`}>Proof and update history</h2>
+          </div>
+          <div className="pr-section-meta">
+            <span className={`pr-tag pr-tone-${badgeTone(auditStatusClass(firm.auditStatus))}`}>{toEnglishText(firm.auditStatus)}</span>
+          </div>
+        </header>
+        <div className="pr-sources-grid">
+          <div className="pr-sources-main">
+            <p className="pr-section-lead">{toEnglishText(firm.auditSummary)}</p>
+            {firm.auditSourcesChecked.length ? (
+              <p className="pr-checked-channels">
+                <span>Checked</span>
+                {firm.auditSourcesChecked.map((source) => <span className="pr-tag" key={source}>{toEnglishText(source)}</span>)}
+              </p>
+            ) : null}
+
+            <h3>Incidents on file</h3>
             {hasConcretePayoutIssues(firm) ? (
-              <ul className="risk-list">
+              <ul className="pr-check-list pr-incident-list">
                 {firm.reviewSignals.payoutIssues.map((incident) => <li key={incident}>{toEnglishText(incident)}</li>)}
               </ul>
             ) : (
-              <div className="evidence-empty">
-                <strong>No detailed independent incident in PropRadar.</strong>
-                <span>The profile stays cautious until rules, payouts and recent reviews are sourced more precisely.</span>
-              </div>
+              <p className="pr-fineprint">No detailed independent incident recorded. The profile stays cautious until rules, payouts and recent reviews are sourced more precisely.</p>
             )}
-            <p className="muted" style={{ marginTop: 18, marginBottom: 0 }}>{toEnglishText(firm.communitySignal)}</p>
-          </div>
-          <div className="panel">
-            <div className="eyebrow">Sources</div>
-            <h2>Proof level</h2>
-            <div className="audit-source-summary">
-              <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>{toEnglishText(firm.auditStatus)}</span>
-              <p className="muted">{toEnglishText(firm.auditSummary)}</p>
-              <div className="audit-source-chips">
-                {firm.auditSourcesChecked.map((source) => <span key={source}>{toEnglishText(source)}</span>)}
-              </div>
-            </div>
+            <p className="pr-fineprint">{toEnglishText(firm.communitySignal)}</p>
+
             <h3>Sources to check</h3>
-            <ul className="source-list">
+            <ul className="pr-source-list">
               {firm.sources.map((source) => (
                 <li key={source.url}>
                   {isBlockedFirmUrl(firm, source.url)
                     ? <span>{toEnglishText(source.label)}</span>
-                    : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>}
+                    : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
                 </li>
               ))}
             </ul>
-            <p className="muted" style={{ marginTop: 18, marginBottom: 0 }}>
-              Last review: {firm.lastReviewed}. Prices and rules should be rechecked on official sources before any decision.
-            </p>
-            {firmChangelog.length ? (
-              <RevealOnView className="firm-changelog pr-timeline">
-                <h3 id="update-history">Update history</h3>
-                <ol>
-                  {firmChangelog.map((entry, index) => (
-                    <li key={`${entry.date}-${entry.summary.slice(0, 24)}`} style={{ '--i': index } as CSSProperties}>
-                      <time dateTime={entry.date}>{entry.date}</time>
-                      <p>{entry.summary}</p>
-                      <a href={entry.source} target="_blank" rel="noopener noreferrer">
-                        Source <span className="pr-timeline-domain">{sourceDomain(entry.source)}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ol>
-              </RevealOnView>
-            ) : null}
+            <p className="pr-fineprint">Last review {firm.lastReviewed}. Prices and rules can change: recheck the official sources before any decision.</p>
           </div>
+
+          {firmChangelog.length ? (
+            <RevealOnView className="firm-changelog pr-timeline">
+              <h3 id="update-history">Update history</h3>
+              <ol>
+                {firmChangelog.map((entry, index) => (
+                  <li key={`${entry.date}-${entry.summary.slice(0, 24)}`} style={{ '--i': index } as CSSProperties}>
+                    <time dateTime={entry.date}>{entry.date}</time>
+                    <p>{entry.summary}</p>
+                    <a href={entry.source} target="_blank" rel="noopener noreferrer">
+                      Source <span className="pr-timeline-domain">{sourceDomain(entry.source)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </RevealOnView>
+          ) : null}
         </div>
       </section>
     </main>
+  );
+}
+
+function DossierGroup({
+  title,
+  items,
+  tone,
+  open = false,
+}: {
+  title: string;
+  items: string[];
+  tone?: Tone;
+  open?: boolean;
+}) {
+  return (
+    <details className={`pr-dossier-group${tone ? ` pr-tone-${tone}` : ''}`} open={open && items.length > 0}>
+      <summary>
+        <span className="pr-dossier-count">{items.length}</span>
+        <strong>{title}</strong>
+      </summary>
+      {items.length ? (
+        <ul>
+          {items.map((item) => <li key={item}>{toEnglishText(item)}</li>)}
+        </ul>
+      ) : (
+        <p className="pr-fineprint">Nothing recorded at this check.</p>
+      )}
+    </details>
   );
 }
 

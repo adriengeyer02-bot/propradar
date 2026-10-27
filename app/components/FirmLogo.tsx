@@ -1,24 +1,10 @@
-'use client';
-
-import { useMemo, useState } from 'react';
-import type { CSSProperties } from 'react';
+import { firmLogoFor } from '../lib/firmLogos';
 
 type FirmLogoProps = {
   name: string;
   logoDomain?: string;
   size?: 'sm' | 'md' | 'lg';
 };
-
-const palette = [
-  ['#2563eb', '#60a5fa'],
-  ['#0f766e', '#2dd4bf'],
-  ['#7c3aed', '#a78bfa'],
-  ['#be123c', '#fb7185'],
-  ['#b45309', '#f59e0b'],
-  ['#047857', '#34d399'],
-  ['#1d4ed8', '#22d3ee'],
-  ['#4338ca', '#818cf8'],
-];
 
 function initials(name: string) {
   const cleanName = name.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
@@ -30,45 +16,32 @@ function initials(name: string) {
   return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
 }
 
-function paletteIndex(name: string) {
-  return name.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0) % palette.length;
-}
-
+/**
+ * Firm logo tile. Uses the icon the firm publishes (self-hosted in
+ * public/logos, see app/lib/firmLogos.ts); otherwise a neutral monogram.
+ * No third-party request at render time.
+ */
 export default function FirmLogo({ name, logoDomain, size = 'md' }: FirmLogoProps) {
-  const [sourceIndex, setSourceIndex] = useState(0);
-  const [primary, secondary] = useMemo(() => palette[paletteIndex(name)], [name]);
-  const logoSources = useMemo(() => {
-    if (!logoDomain) return [];
+  const logo = firmLogoFor(logoDomain);
 
-    return [
-      `https://www.google.com/s2/favicons?domain=${logoDomain}&sz=128`,
-      `https://icons.duckduckgo.com/ip3/${logoDomain}.ico`,
-      `https://logo.clearbit.com/${logoDomain}?size=128`,
-    ];
-  }, [logoDomain]);
-  const currentLogo = logoSources[sourceIndex];
-
-  return (
-    <span
-      className={`firm-logo firm-logo-${size} ${currentLogo ? 'firm-logo-image' : 'firm-logo-fallback'}`}
-      style={{
-        '--logo-primary': primary,
-        '--logo-secondary': secondary,
-      } as CSSProperties}
-      aria-hidden="true"
-    >
-      {currentLogo ? (
+  if (logo) {
+    return (
+      <span className={`firm-logo firm-logo-${size} firm-logo-image pr-logo`} aria-hidden="true">
         <img
-          src={currentLogo}
+          src={logo.src}
           alt=""
-          onError={() => setSourceIndex((index) => index + 1)}
+          width={logo.size}
+          height={logo.size}
           loading={size === 'lg' ? 'eager' : 'lazy'}
-          fetchPriority={size === 'lg' ? 'high' : 'auto'}
           decoding="async"
         />
-      ) : (
-        <span>{initials(name)}</span>
-      )}
+      </span>
+    );
+  }
+
+  return (
+    <span className={`firm-logo firm-logo-${size} firm-logo-fallback pr-logo pr-logo-mono`} aria-hidden="true">
+      <span>{initials(name)}</span>
     </span>
   );
 }
