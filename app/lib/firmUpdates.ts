@@ -35,6 +35,8 @@ export type FirmUpdate = {
     trustpilotReviewCount: number;
     trustpilotSourceUrl: string;
     listedDomainWarning: string | null;
+    /** Corrects the listed official site (the base profile pointed to the wrong domain). */
+    officialWebsite: string;
   }>;
   addSources?: SourceLink[];
   addIncidents?: string[];
@@ -77,6 +79,27 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
     if (set.trustpilotSourceUrl) next.reviewSignals.trustpilotSourceUrl = set.trustpilotSourceUrl;
     if (typeof set.trustpilotRating === 'number') refreshTrustpilotText(next, update.reviewedAt);
+    if (set.officialWebsite) {
+      const newUrl = set.officialWebsite;
+      const newDomain = new URL(newUrl).hostname.replace(/^www\./, '');
+      const oldDomain = firm.logoDomain;
+      const isOld = (url?: string) => {
+        if (!url || !oldDomain) return false;
+        try {
+          return new URL(url).hostname.replace(/^www\./, '') === oldDomain;
+        } catch {
+          return false;
+        }
+      };
+      next.logoDomain = newDomain;
+      const official = next.sources.findIndex((source) => isOld(source.url));
+      const officialSource = { label: `Official ${firm.name} site`, url: newUrl };
+      next.sources = official >= 0
+        ? next.sources.map((source, index) => (index === official ? officialSource : source))
+        : [officialSource, ...next.sources];
+      next.products = next.products.map((product) => (isOld(product.linkToStart) ? { ...product, linkToStart: newUrl } : product));
+    }
+
     if (set.listedDomainWarning !== undefined) {
       next.listedDomainWarning = set.listedDomainWarning ?? undefined;
       if (set.listedDomainWarning) {
