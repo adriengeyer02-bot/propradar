@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install --no-audit --no-fund
-      - run: npx tsx scripts/fetch-logos.ts
+      - run: npx tsx scripts/fetch-logos.ts --only=blue-guardian,hantec-trader
       - name: Push raw candidates to agent/logo-raw
         run: |
           mv logo-raw /tmp/logo-raw
