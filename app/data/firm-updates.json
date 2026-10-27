@@ -2,9 +2,10 @@
   "version": 1,
   "firms": {
     "smart-prop-trader": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-10-27",
       "set": {
-        "status": "Fermée"
+        "status": "Fermée",
+        "listedDomainWarning": "Smart Prop Trader announced its closure in November 2024 (Finance Magnates). On 2026-10-27 the listed domain smartproptrader.com redirected to smartprofitfx.com, which PropRadar has not verified as linked to the firm. PropRadar does not link the domain."
       },
       "addSources": [
         {
@@ -19,6 +20,14 @@
           "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
           "fields": [
             "status"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Domain monitor reported smartproptrader.com redirecting to smartprofitfx.com. The firm is already recorded as closed; a domain warning is set so the page no longer links the redirected domain.",
+          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
+          "fields": [
+            "listedDomainWarning"
           ]
         }
       ]
@@ -1005,6 +1014,101 @@
         {
           "label": "Decrypt (Chainwire release, 11 Apr 2025): My Crypto Funding, mycryptofunding.org",
           "url": "https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms"
+        }
+      ]
+    },
+    "funding-traders": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundingtraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "the-trading-pit": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie and uk mirrors; the nz mirror still showed an older cached rating. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://au.trustpilot.com/review/thetradingpit.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "finotive-funding": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/finotivefunding.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "for-traders": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fortraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "sure-leverage": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://sureleveragefunding.com/",
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 1426,
+        "trustpilotSourceUrl": "https://nl-be.trustpilot.com/review/sureleveragefunding.com"
+      },
+      "addSources": [
+        {
+          "label": "Trustpilot: Sure Leverage Funding (sureleveragefunding.com)",
+          "url": "https://nl-be.trustpilot.com/review/sureleveragefunding.com"
+        },
+        {
+          "label": "TradeLocker Hub: Sure Leverage (rules link to sureleveragefunding.com)",
+          "url": "https://tradelocker.com/hub/prop-firms/sure-leverage"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain monitor reported sureleverage.com redirecting to sureleveragefunding.com. Checked: the firm's claimed Trustpilot profile (\"Sure Leverage Funding is a global prop trading firm\") lists sureleveragefunding.com, and its TradeLocker Hub listing links its rules at sureleveragefunding.com/faq, so the listed domain is corrected. Trustpilot read on 2026-10-27 (nl-be mirror): 3.6 TrustScore, 1,426 reviews, no Trustpilot warning. Price and split not re-read, left unchanged.",
+          "source": "https://nl-be.trustpilot.com/review/sureleveragefunding.com",
+          "fields": [
+            "officialWebsite",
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ]
     }
