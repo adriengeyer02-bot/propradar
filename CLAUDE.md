@@ -72,6 +72,10 @@ Keep earlier changelog entries when you update a firm: append, never delete.
    wording. The validator flags them. Open the PR and leave it unmerged.
 7. **Do not touch** affiliate URLs, promo codes or the scoring formula without
    an explicit request.
+8. **No Reddit or X scores.** Removed on 2026-10-27: they were derived from the
+   PropRadar score, not counted. Firm pages link to live Reddit/X searches
+   instead. Show a Reddit or X figure only if posts were counted by hand, with
+   each post linked. Same for Trustpilot review-alert counts: hand-counted only.
 
 ## Updating firms (weekly research run)
 

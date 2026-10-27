@@ -128,7 +128,6 @@ export default function AuditPage() {
           <div className="actions">
             <Link href="/comparateur" className="btn btn-primary">Compare firms</Link>
             <Link href="/regles" className="btn">View rules</Link>
-            <Link href="/audit-communautaire" className="btn">Audit Reddit/X</Link>
           </div>
         </div>
         <div className="panel audit-method-panel">
@@ -136,7 +135,7 @@ export default function AuditPage() {
           <ol>
             <li>Official sources for prices, rules and products.</li>
             <li>Trustpilot separated from commercial scoring, with caution on unverified facts.</li>
-            <li>Reddit, forums and payout incidents treated as community signals.</li>
+            <li>Payout incidents and complaints counted only when a dated public source is linked.</li>
             <li>Legal entity, regulator status and press searches tracked separately from marketing claims.</li>
             <li>Unchecked entries remain visible, but are not recommended by default.</li>
           </ol>

@@ -177,7 +177,7 @@ export default function RootLayout({
             <ActiveNavLink href="/">Home</ActiveNavLink>
             <ActiveNavLink href="/comparateur" activePrefixes={['/compare', '/outils', '/firm']}>Compare</ActiveNavLink>
             <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms', '/fr']}>Guides</ActiveNavLink>
-            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/risques-payout', '/audit-communautaire', '/regles', '/trustpilot-prop-firms']}>Risks</ActiveNavLink>
+            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/risques-payout', '/regles', '/trustpilot-prop-firms']}>Risks</ActiveNavLink>
             <ActiveNavLink href="/promos">Deals</ActiveNavLink>
           </nav>
           <div id="main-content" tabIndex={-1}>{children}</div>
@@ -200,7 +200,6 @@ export default function RootLayout({
                 <Link href="/audit">Source audit</Link>
                 <Link href="/risques-payout">Payout watch</Link>
                 <Link href="/regles">Rule audits</Link>
-                <Link href="/audit-communautaire">Community audit</Link>
               </nav>
               <nav className="footer-nav" aria-label="Offers and review links">
                 <strong>More</strong>

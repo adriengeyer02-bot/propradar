@@ -172,7 +172,7 @@ export default function Comparateur() {
   const strongSignals = useMemo(
     () =>
       [...propFirms]
-        .filter((firm) => firm.reviewSignals.redditScore >= 75 && firm.reviewSignals.xScore >= 65 && firm.reviewSignals.trustpilotReliability === 'Forte' && firm.reviewSignals.payoutRisk === 'Faible')
+        .filter((firm) => firm.status === 'Active' && firm.reviewSignals.trustpilotReliability === 'Forte' && firm.reviewSignals.payoutRisk === 'Faible' && firm.legalVerified)
         .sort((a, b) => b.score - a.score)
         .slice(0, 3),
     []
@@ -338,7 +338,7 @@ export default function Comparateur() {
           <SignalList title="Payout incidents" href="/risques-payout" firms={payoutAlerts} value={(firm) => toEnglishText(firm.reviewSignals.payoutRisk)} tone={(firm) => payoutTone(firm.reviewSignals.payoutRisk)} />
           <SignalList title="Legal watch" href="/audit" anchor="#regulatory" firms={legalWatch} value={(firm) => firm.regulatoryAudit.riskLevel} tone={(firm) => legalTone(firm.regulatoryAudit.riskLevel)} />
           <SignalList title="Review manipulation" href="/trustpilot-prop-firms" firms={reviewWatch} value={(firm) => toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={(firm) => reviewTone(firm.reviewSignals.manipulationRisk)} />
-          <SignalList title="Cleanest multi-source profiles" href="/meilleures-prop-firms" firms={strongSignals} value={(firm) => `${firm.score}/100`} tone={(firm) => scoreTone(firm.score)} />
+          <SignalList title="Cleanest profiles" href="/meilleures-prop-firms" firms={strongSignals} value={(firm) => `${firm.score}/100`} tone={(firm) => scoreTone(firm.score)} />
         </div>
       </section>
 

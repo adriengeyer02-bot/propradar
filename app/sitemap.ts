@@ -19,7 +19,6 @@ const staticRoutes = [
   { path: '/regles', priority: 0.82, lastModified: '2026-07-15' },
   { path: '/promos', priority: 0.78, lastModified: '2026-07-13' },
   { path: '/audit', priority: 0.76, lastModified: '2026-07-19' },
-  { path: '/audit-communautaire', priority: 0.74, lastModified: '2026-07-13' },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
