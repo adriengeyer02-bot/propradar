@@ -91,40 +91,20 @@ export default function TrustpilotGuidePage() {
             <Link href="/risques-payout" className="btn">Check payout risk</Link>
           </div>
         </div>
-        <div className="guide-proof-panel">
-          <div><strong>{propFirms.length}</strong><span>firms tracked</span></div>
-          <div><strong>{watchList.length}</strong><span>profiles needing context</span></div>
-          <div><strong>{strongReliabilityCount}</strong><span>strong reliability</span></div>
-          <div><strong>{deepSourceCount}</strong><span>deep source files</span></div>
-        </div>
+        <dl className="pr-hero-stats">
+          <div><dt>Firms tracked</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>Profiles needing context</dt><dd>{watchList.length}</dd></div>
+          <div><dt>Strong reliability</dt><dd>{strongReliabilityCount}</dd></div>
+          <div><dt>Deep source files</dt><dd>{deepSourceCount}</dd></div>
+        </dl>
       </section>
 
-      <section className="page-insight-strip" aria-label="Trustpilot reading summary">
-        <Link href="#review-watchlist">
-          <span>Needs context</span>
-          <strong>{watchList.length}</strong>
-          <small>Profiles where the raw rating is not enough.</small>
-        </Link>
-        <Link href="/comparateur">
-          <span>Strong reliability</span>
-          <strong>{strongReliabilityCount}</strong>
-          <small>Still cross-check with payout and rule signals.</small>
-        </Link>
-        <Link href="/risques-payout">
-          <span>Review alerts</span>
-          <strong>{reviewAlertCount}</strong>
-          <small>Review warnings do not replace payout checks.</small>
-        </Link>
-        <Link href="/risques-payout">
-          <span>Payout overlap</span>
-          <strong>{payoutWatchReviewCount}</strong>
-          <small>Watchlist profiles where reviews and payout risk must be read together.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Legal overlap</span>
-          <strong>{legalWatchReviewCount}</strong>
-          <small>Review watchlist profiles with fragile legal or source signals.</small>
-        </Link>
+      <section className="pr-stat-line" aria-label="Trustpilot reading summary">
+        <dl>
+          <div><dt>Review alerts</dt><dd>{reviewAlertCount}</dd></div>
+          <div><dt>Payout overlap</dt><dd>{payoutWatchReviewCount}</dd></div>
+          <div><dt>Legal overlap</dt><dd>{legalWatchReviewCount}</dd></div>
+        </dl>
       </section>
 
       <section className="section guide-card-grid">

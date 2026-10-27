@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../components/FirmLogo';
 import ChallengePath from '../../components/ui/ChallengePath';
+import ReliabilityRadar from '../../components/ui/ReliabilityRadar';
 import RiskPip from '../../components/ui/RiskPip';
 import ScoreRing from '../../components/ui/ScoreRing';
 import ReviewFreshness from '../../components/ui/ReviewFreshness';
@@ -821,7 +822,11 @@ export default async function FirmPage({ params }: Props) {
           </section>
         ) : null}
 
-        <section className="pr-firm-checks" id="decision" aria-label="Decision checks">
+        <section className="pr-firm-profile" aria-labelledby={`profile-${firm.slug}`}>
+          <div className="pr-firm-profile-chart">
+            <h2 id={`profile-${firm.slug}`}>Reliability profile</h2>
+            <ReliabilityRadar firms={[firm]} showValues />
+          </div>
           <div className="pr-firm-proof">
             <h2>What the file proves</h2>
             <ul>
@@ -834,6 +839,9 @@ export default async function FirmPage({ params }: Props) {
             </ul>
             <Link href="#regulatory" className="pr-link">Open the legal file <span aria-hidden="true">→</span></Link>
           </div>
+        </section>
+
+        <section className="pr-firm-checks" id="decision" aria-label="Decision checks">
           <div>
             <h2>Strengths on file</h2>
             <ul className="pr-check-list pr-check-good">

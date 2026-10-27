@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
+import { latestReviewDate } from '../lib/riskTone';
 import FirmLogo from '../components/FirmLogo';
 import PageStructuredData from '../components/PageStructuredData';
 import { createPageMetadata } from '../lib/pageMetadata';
@@ -141,55 +143,19 @@ export default function AuditPage() {
         </div>
       </section>
 
-      <section className="audit-stat-grid" aria-label="Audit coverage">
-        <div className="summary-stat">
-          <span>Total tracked</span>
-          <strong>{propFirms.length}</strong>
-          <small>prop firms</small>
-        </div>
-        <div className="summary-stat">
-          <span>Multi-source</span>
-          <strong>{verifiedFirms.length}</strong>
-          <small>solid files</small>
-        </div>
-        <div className="summary-stat">
-          <span>Partial</span>
-          <strong>{partiallyVerifiedFirms.length}</strong>
-          <small>to enrich</small>
-        </div>
-        <div className="summary-stat">
-          <span>To audit</span>
-          <strong>{firmsToAudit.length}</strong>
-          <small>maximum caution</small>
-        </div>
-      </section>
-
-      <section className="page-insight-strip audit-legal-strip" aria-label="Legal audit coverage">
-        <Link href="/guides/prop-firm-legal-check">
-          <span>Entity mapped</span>
-          <strong>{legalVerifiedFirms.length}</strong>
-          <small>profiles with a legal entity or official operating structure identified.</small>
-        </Link>
-        <Link href="/guides/prop-firm-legal-check">
-          <span>Legal watch</span>
-          <strong>{legalWatchFirms.length}</strong>
-          <small>unverified entity, high-risk jurisdiction, regulator warning or thin source stack.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Deep sources</span>
-          <strong>{deepSourceFirms.length}</strong>
-          <small>profiles with five or more legal/source links available.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Regulator checks</span>
-          <strong>{regulatorCheckedFirms.length}</strong>
-          <small>files with regulator, warning-list or company-register checks recorded.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Press searches</span>
-          <strong>{articleNewsCheckedFirms.length}</strong>
-          <small>profiles where exact-name article/news searches were logged.</small>
-        </Link>
+      <section className="pr-stat-line" aria-label="Audit coverage">
+        <dl>
+          <div><dt>Firms tracked</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>Multi-source files</dt><dd>{verifiedFirms.length}</dd></div>
+          <div><dt>Partial files</dt><dd>{partiallyVerifiedFirms.length}</dd></div>
+          <div><dt>To audit</dt><dd>{firmsToAudit.length}</dd></div>
+          <div><dt>Entity mapped</dt><dd>{legalVerifiedFirms.length}</dd></div>
+          <div><dt>Legal watch</dt><dd>{legalWatchFirms.length}</dd></div>
+          <div><dt>5+ sources</dt><dd>{deepSourceFirms.length}</dd></div>
+          <div><dt>Regulator checks</dt><dd>{regulatorCheckedFirms.length}</dd></div>
+          <div><dt>Press searches</dt><dd>{articleNewsCheckedFirms.length}</dd></div>
+        </dl>
+        <Link href="/guides/prop-firm-legal-check" className="pr-link">How a legal file is checked <span aria-hidden="true">→</span></Link>
       </section>
 
       <section className="section audit-case-index" aria-labelledby="audit-case-index-title">
@@ -236,28 +202,21 @@ export default function AuditPage() {
         <article className="panel">
           <div className="eyebrow">Coverage</div>
           <h2>What is already sourced</h2>
-          <div className="coverage-list">
-            <div>
-              <span>Official website or primary source</span>
-              <strong>{officialCovered.length}/{propFirms.length}</strong>
-            </div>
-            <div>
-              <span>Trustpilot identified</span>
-              <strong>{trustpilotCovered.length}/{propFirms.length}</strong>
-            </div>
-            <div>
-              <span>Profiles with tracked payout incidents</span>
-              <strong>{propFirms.filter((firm) => firm.incidents > 0).length}/{propFirms.length}</strong>
-            </div>
-            <div>
-              <span>Legal entities mapped</span>
-              <strong>{legalVerifiedFirms.length}/{propFirms.length}</strong>
-            </div>
-            <div>
-              <span>Exact-name press/news searches logged</span>
-              <strong>{articleNewsCheckedFirms.length}/{propFirms.length}</strong>
-            </div>
-          </div>
+          <ul className="pr-coverage">
+            {[
+              { label: 'Official website or primary source', value: officialCovered.length },
+              { label: 'Trustpilot page identified', value: trustpilotCovered.length },
+              { label: 'Legal entity mapped', value: legalVerifiedFirms.length },
+              { label: 'Exact-name press / news search logged', value: articleNewsCheckedFirms.length },
+              { label: 'Tracked payout incidents', value: propFirms.filter((firm) => firm.incidents > 0).length },
+            ].map((item) => (
+              <li key={item.label}>
+                <span className="pr-coverage-label">{item.label}</span>
+                <span className="pr-coverage-track" aria-hidden="true"><span style={{ width: `${Math.round((item.value / propFirms.length) * 100)}%` }} /></span>
+                <strong>{item.value}<small>/{propFirms.length}</small></strong>
+              </li>
+            ))}
+          </ul>
         </article>
 
         <article className="panel">
@@ -329,59 +288,33 @@ export default function AuditPage() {
               <div className="eyebrow">Full Base</div>
               <h2>{propFirms.length} profiles, visible proof level</h2>
             </div>
-            <span>Last review: 2026-07-19</span>
+            <span>Latest review <time dateTime={latestReviewDate(propFirms)}>{latestReviewDate(propFirms)}</time></span>
           </div>
 
-          <div className="audit-list">
-            {propFirms.map((firm) => (
-              <article className={`audit-row ${firm.auditStatus === 'Vérifié multi-source' ? 'audit-row-strong' : ''}`} key={firm.slug}>
-                <div className="audit-firm-main">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <div>
-                    <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
-                    <span>{toEnglishText(firm.bestFor)}</span>
-                  </div>
-                </div>
-
-                <div className="audit-status-cell">
-                  <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>{toEnglishText(firm.auditStatus)}</span>
-                  <span className={`badge ${statusClass(firm.status)}`}>{toEnglishText(firm.status)}</span>
-                </div>
-
-                <div className="audit-score-cell">
-                  <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                    <span>Score</span>
-                    <strong>{firm.score}</strong>
-                    <small>/100</small>
-                  </div>
-                  <span>{formatUsd(firm.priceFrom)}</span>
-                </div>
-
-                <div className="audit-signal-cell">
-                  <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                    Legal {firm.regulatoryAudit.riskLevel}
-                  </span>
-                  <span className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>
-                    Trustpilot {toEnglishText(firm.reviewSignals.trustpilotReliability)}
-                  </span>
-                  <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>
-                    Payout {toEnglishText(firm.reviewSignals.payoutRisk)}
-                  </span>
-                </div>
-
-                <div className="audit-source-cell">
-                  <span>{firm.legalVerified ? 'Entity mapped' : 'Entity missing'}</span>
-                  <span>{sourceDepthLabel(firm)}</span>
-                  <span>{legalSourceCount(firm)} legal/source link(s)</span>
-                  {firm.auditSourcesChecked.map((source) => (
-                    <span key={source}>{toEnglishText(source)}</span>
-                  ))}
-                </div>
-
-                <Link href={`/firm/${firm.slug}`} className="btn">View</Link>
-              </article>
+          <div className="pr-firm-table" role="table" aria-label={`${propFirms.length} prop firm profiles with their proof level`}>
+            <FirmTableHead />
+            {propFirms.slice(0, 40).map((firm) => (
+              <FirmRow
+                key={firm.slug}
+                firm={firm}
+                subline={`${toEnglishText(firm.auditStatus)} · ${firm.legalVerified ? 'Entity mapped' : 'Entity missing'} · ${legalSourceCount(firm)} legal/source link(s)`}
+              />
             ))}
           </div>
+          {propFirms.length > 40 ? (
+            <details className="pr-disclosure">
+              <summary>Show the other {propFirms.length - 40} profiles</summary>
+              <div className="pr-firm-table" role="table" aria-label="Other prop firm profiles">
+                {propFirms.slice(40).map((firm) => (
+                  <FirmRow
+                    key={firm.slug}
+                    firm={firm}
+                    subline={`${toEnglishText(firm.auditStatus)} · ${firm.legalVerified ? 'Entity mapped' : 'Entity missing'} · ${legalSourceCount(firm)} legal/source link(s)`}
+                  />
+                ))}
+              </div>
+            </details>
+          ) : null}
         </div>
       </section>
     </main>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
 import PageStructuredData from '../components/PageStructuredData';
 import { createPageMetadata } from '../lib/pageMetadata';
-import { getManualCommunityReview, manualCoverageClass } from '../lib/manualCommunityReviews';
-import { propFirms, scoreClass, statusClass } from '../lib/propFirms';
+import { getManualCommunityReview } from '../lib/manualCommunityReviews';
+import { propFirms } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 
 const COMMUNITY_AUDIT_DESCRIPTION =
@@ -64,79 +64,58 @@ export default function CommunityAuditPage() {
         </div>
       </section>
 
-      <section className="audit-stat-grid" aria-label="Community coverage">
-        <div className="summary-stat">
-          <span>Firms tracked</span>
-          <strong>{propFirms.length}</strong>
-          <small>to audit</small>
+      <section className="pr-stat-line" aria-label="Community coverage">
+        <dl>
+          <div><dt>Firms tracked</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>Solid review</dt><dd>{solidCount}</dd></div>
+          <div><dt>Partial review</dt><dd>{partialCount}</dd></div>
+          <div><dt>Search ready only</dt><dd>{readyCount}</dd></div>
+        </dl>
+        <div className="pr-coverage-stack" role="img" aria-label={`${solidCount} solid, ${partialCount} partial, ${readyCount} search ready out of ${propFirms.length}`}>
+          <span className="pr-tone-good" style={{ width: `${(solidCount / propFirms.length) * 100}%` }} />
+          <span className="pr-tone-watch" style={{ width: `${(partialCount / propFirms.length) * 100}%` }} />
+          <span className="is-ready" style={{ width: `${(readyCount / propFirms.length) * 100}%` }} />
         </div>
-        <div className="summary-stat">
-          <span>Solid review</span>
-          <strong>{solidCount}</strong>
-          <small>linked posts</small>
-        </div>
-        <div className="summary-stat">
-          <span>Partial review</span>
-          <strong>{partialCount}</strong>
-          <small>opened sample</small>
-        </div>
-        <div className="summary-stat">
-          <span>Search ready</span>
-          <strong>{readyCount}</strong>
-          <small>generated links</small>
-        </div>
+        {solidCount + partialCount === 0 ? (
+          <p className="pr-fineprint">
+            No firm has a counted Reddit or X review yet. Until posts are opened, classified and linked, the Reddit and X figures on firm pages are editorial estimates and are marked as such.
+          </p>
+        ) : null}
       </section>
 
       <section className="section">
-        <div className="panel audit-list-panel">
-          <div className="panel-title-row">
-            <div>
-              <div className="eyebrow">Register</div>
-              <h2>Reddit/X search queues</h2>
-            </div>
-            <span>Last structure: 2026-07-04</span>
+        <header className="pr-section-head">
+          <div>
+            <div className="eyebrow">Register</div>
+            <h2>Reddit/X search queues</h2>
           </div>
+          <div className="pr-section-meta"><span>Last structure: 2026-07-04</span></div>
+        </header>
+        <p className="pr-section-lead">Each link opens a live public search, newest posts first. Read the posts yourself: a search is a starting point, not evidence.</p>
 
-          <div className="community-audit-list">
-            {reviewRows.map(({ firm, review }) => (
-              <article className="community-audit-row" key={firm.slug}>
-                <div className="audit-firm-main">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <div>
-                    <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
-                    <span>{toEnglishText(firm.bestFor)}</span>
-                  </div>
-                </div>
-
-                <div className="community-audit-status">
-                  <span className={`badge ${manualCoverageClass(review.coverage)}`}>{toEnglishText(review.coverage)}</span>
-                  <span className={`badge ${statusClass(firm.status)}`}>{toEnglishText(firm.status)}</span>
-                  <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                    <span>Score</span>
-                    <strong>{firm.score}</strong>
-                    <small>/100</small>
-                  </div>
-                </div>
-
-                <div className="community-audit-links">
-                  <strong>Reddit</strong>
-                  {review.reddit.sources.map((source) => (
-                    <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>
-                  ))}
-                </div>
-
-                <div className="community-audit-links">
-                  <strong>X/Twitter</strong>
-                  {review.x.sources.map((source) => (
-                    <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>
-                  ))}
-                </div>
-
-                <Link href={`/firm/${firm.slug}#audit`} className="btn">Profile</Link>
-              </article>
-            ))}
-          </div>
-        </div>
+        <ul className="pr-search-register">
+          {reviewRows.map(({ firm, review }) => (
+            <li key={firm.slug}>
+              <Link href={`/firm/${firm.slug}#audit`} className="pr-search-register-firm">
+                <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
+                <span>
+                  <strong>{firm.name}</strong>
+                  <small>{toEnglishText(review.coverage)} · score {firm.score}</small>
+                </span>
+              </Link>
+              <span className="pr-search-register-links">
+                <span>Reddit</span>
+                {review.reddit.sources.slice(0, 2).map((source) => (
+                  <a key={source.url} href={source.url} target="_blank" rel="noreferrer" title={toEnglishText(source.label)}>{/payout/i.test(source.label) ? 'payouts' : 'reviews'}</a>
+                ))}
+                <span>X</span>
+                {review.x.sources.slice(0, 2).map((source) => (
+                  <a key={source.url} href={source.url} target="_blank" rel="noreferrer" title={toEnglishText(source.label)}>{/payout/i.test(source.label) ? 'payouts' : 'reviews'}</a>
+                ))}
+              </span>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );

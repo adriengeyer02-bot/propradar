@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import FirmLogo from '../components/FirmLogo';
+import CompareTable from '../components/ui/CompareTable';
+import ReliabilityRadar from '../components/ui/ReliabilityRadar';
 import type { PropFirm } from '../lib/propFirms';
 import {
   formatUsd,
@@ -288,38 +290,12 @@ export default function OutilsClient() {
           ))}
         </div>
 
-        <div className="compare-board">
-          {selectedFirms.map((firm) => (
-            <article className="compare-card" key={firm.slug}>
-              <div className="compare-card-head">
-                <div className="firm-result-main">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
-                  <div>
-                    <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
-                    <span>{toEnglishText(firm.bestFor)}</span>
-                  </div>
-                </div>
-                <div className={`score-tile score-tile-compact ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                  <span>Score</span>
-                  <strong>{firm.score}</strong>
-                  <small>/100</small>
-                </div>
-              </div>
-              <div className="compare-metric-grid">
-                <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
-                <div><span>Status</span><strong className={`badge ${statusClass(firm.status)}`}>{toEnglishText(firm.status)}</strong></div>
-                <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
-                <div><span>News</span><strong>{toEnglishText(firm.newsTrading)}</strong></div>
-                <div><span>EA</span><strong>{toEnglishText(firm.eaAllowed)}</strong></div>
-                <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-                <div><span>Trustpilot</span><strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong></div>
-                <div><span>Affiliate status</span><strong className={`badge ${relationshipClass(firm.commercialRelationship)}`}>{firm.commercialRelationship === 'Affiliation transparente' ? 'Affiliate' : 'No conflict'}</strong></div>
-              </div>
-              <p>{toEnglishText(firm.reviewSignals.radarVerdict ?? firm.verdict)}</p>
-              <Link href={`/firm/${firm.slug}`} className="btn btn-primary">Read profile</Link>
-            </article>
-          ))}
-        </div>
+        {selectedFirms.length ? (
+          <div className="pr-compare-layout">
+            <ReliabilityRadar firms={selectedFirms} size={300} />
+            <CompareTable firms={selectedFirms} />
+          </div>
+        ) : null}
       </section>
 
       <section className="section" id="style-finder">

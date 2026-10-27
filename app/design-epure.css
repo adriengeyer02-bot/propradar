@@ -827,9 +827,6 @@ html body .ftmo-affiliate-panel { grid-template-columns: 1fr; }
 }
 
 /* Estimated (not counted) community scores read as estimates, not measurements. */
-html body .community-overview-card.pr-estimate strong { color: var(--muted); font-weight: 600; }
-html body .community-overview-card.pr-estimate .signal-meter span { opacity: 0.35; }
-html body .community-overview-card .pr-tag { height: 18px; margin-left: 6px; font-size: 11px; vertical-align: 1px; }
 
 /* Firm hero tweaks */
 .pr-firm-actions .pr-link { font-size: 14.5px; }
@@ -1628,3 +1625,325 @@ html body .firm-logo.pr-logo-mono.firm-logo-md span { font-size: 15px; }
 html body .firm-logo.pr-logo-mono.firm-logo-lg span { font-size: 26px; }
 html body .pr-sources-grid .firm-changelog { padding-top: 0; border-top: 0; }
 html body .pr-sources-grid .firm-changelog h3 { margin-top: 0; }
+
+/* ==========================================================================
+   Lot 2 — reliability radar
+   ========================================================================== */
+
+.pr-series-1 { --series: var(--accent); }
+.pr-series-2 { --series: #a78bfa; }
+.pr-series-3 { --series: #f472b6; }
+html:not([data-theme='dark']) .pr-series-2 { --series: #7c3aed; }
+html:not([data-theme='dark']) .pr-series-3 { --series: #db2777; }
+
+.pr-relradar { margin: 0; }
+.pr-relradar svg { display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; overflow: visible; }
+.pr-relradar-ring { fill: none; stroke: var(--line); stroke-width: 1; }
+.pr-relradar-ring:last-of-type { stroke: var(--line-strong, var(--line)); }
+.pr-relradar-axis { stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 4; }
+.pr-relradar-shape { fill: var(--series); fill-opacity: 0.16; stroke: var(--series); stroke-width: 2.5; stroke-linejoin: round; }
+.pr-relradar-series + .pr-relradar-series .pr-relradar-shape { fill-opacity: 0.1; }
+.pr-relradar-dot { fill: var(--series); stroke: var(--surface); stroke-width: 2; }
+.pr-relradar-dot.is-estimate { fill: var(--surface); stroke: var(--series); stroke-width: 2; }
+.pr-relradar-label { fill: var(--text); font-size: 14px; font-weight: 700; }
+.pr-relradar-value { fill: var(--muted); font-size: 12.5px; font-weight: 550; }
+
+.pr-relradar-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: 6px; color: var(--soft); font-size: 14px; font-weight: 650; }
+.pr-relradar-legend span { display: inline-flex; align-items: center; gap: 8px; }
+.pr-relradar-legend i { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--series); border-radius: 4px; background: color-mix(in srgb, var(--series) 25%, transparent); }
+.pr-relradar-note { margin: 8px auto 0; max-width: 46ch; color: var(--muted); font-size: 12.5px; line-height: 1.45; text-align: center; }
+
+.pr-firm-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 56px);
+  margin-top: 36px;
+  padding: clamp(18px, 2.4vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: var(--pr-radius);
+  background: var(--surface);
+}
+
+.pr-firm-profile h2 { margin: 0 0 6px; font-size: 19px; }
+.pr-firm-profile .pr-firm-proof h2 { margin-bottom: 14px; }
+html body .pr-firm-checks { grid-template-columns: 1fr 1fr; }
+
+@media (max-width: 860px) {
+  .pr-firm-profile { grid-template-columns: 1fr; }
+  html body .pr-firm-checks { grid-template-columns: 1fr; }
+}
+
+/* Side-by-side: radar + criterion table */
+.pr-compare-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: clamp(20px, 3vw, 40px);
+  margin-top: 18px;
+}
+
+.pr-compare-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--pr-radius); background: var(--surface); }
+.pr-compare { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 14px; }
+.pr-compare th, .pr-compare td { padding: 11px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+.pr-compare tbody tr:last-child :is(th, td) { border-bottom: 0; }
+.pr-compare thead th { border-bottom: 1px solid var(--line-strong, var(--line)); background: var(--surface-subtle, transparent); }
+.pr-compare thead th[class^='pr-series'] { box-shadow: inset 0 3px 0 var(--series); }
+.pr-compare tbody th { width: 170px; color: var(--muted); font-size: 13px; font-weight: 650; }
+.pr-compare td { color: var(--text); font-weight: 620; }
+.pr-compare td.is-best { background: var(--tone-good-wash); }
+.pr-best { margin-left: 8px; color: var(--tone-good); font-size: 11.5px; font-style: normal; font-weight: 760; }
+.pr-compare td .pr-ring { vertical-align: middle; }
+.pr-compare-firm { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
+.pr-compare-firm span { display: grid; gap: 1px; }
+.pr-compare-firm strong { font-size: 15px; }
+.pr-compare-firm small { color: var(--accent); font-size: 12px; font-weight: 650; }
+.pr-compare .pr-pip-label:empty { display: none; }
+
+@media (max-width: 980px) {
+  .pr-compare-layout { grid-template-columns: 1fr; }
+}
+.pr-relradar-label { font-size: 15px; }
+
+@media (max-width: 640px) {
+  .pr-compare { min-width: 0; table-layout: fixed; font-size: 13px; }
+  .pr-compare th, .pr-compare td { padding: 9px 8px; overflow-wrap: anywhere; }
+  .pr-compare tbody th { width: 92px; font-size: 12px; }
+  .pr-compare-firm { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .pr-compare-firm strong { font-size: 13.5px; }
+  .pr-compare-firm small { display: none; }
+  .pr-compare .firm-logo.pr-logo.firm-logo-md { width: 34px; height: 34px; }
+  .pr-best { display: block; margin: 2px 0 0; }
+  .pr-compare td .pr-ring-sm svg { width: 38px; height: 38px; }
+}
+
+/* Guide hero: the firms the page is about, instead of a stock image */
+.pr-guide-firms {
+  display: grid;
+  gap: 10px;
+  align-self: start;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--pr-radius);
+  background: var(--surface);
+}
+
+.pr-guide-firms-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.pr-guide-firms-head strong { color: var(--text); font-size: 17px; }
+.pr-guide-firms-head span { color: var(--muted); font-size: 13px; font-weight: 650; }
+.pr-guide-firms ol { display: grid; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.pr-guide-firms li { border-bottom: 1px solid var(--line); }
+.pr-guide-firms li a { display: flex; align-items: center; gap: 12px; padding: 10px 2px; color: var(--text); text-decoration: none; }
+.pr-guide-firms li a:hover { background: var(--pr-row-hover); }
+.pr-guide-firms-rank { width: 18px; flex: none; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; font-weight: 700; text-align: right; }
+.pr-guide-firms-name { display: grid; flex: 1; gap: 3px; min-width: 0; }
+.pr-guide-firms-name strong { overflow: hidden; font-size: 15px; text-overflow: ellipsis; white-space: nowrap; }
+.pr-guide-firms-name > span { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 12px; }
+.pr-guide-firms-name em { color: var(--muted); font-size: 13px; font-style: normal; }
+.pr-guide-firms-foot { display: grid; gap: 6px; }
+.pr-guide-firms-foot p { margin: 0; color: var(--muted); font-size: 13px; }
+.pr-guide-firms-foot .pr-link { font-size: 14px; }
+html body .guide-hero:has(.pr-guide-firms) { align-items: start; }
+
+/* ==========================================================================
+   Lot 3 — shared blocks for the remaining pages
+   ========================================================================== */
+
+/* One line of figures instead of a grid of counter boxes */
+.pr-stat-line {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.pr-stat-line dl { display: flex; flex-wrap: wrap; gap: 10px 30px; margin: 0; }
+.pr-stat-line dl div { display: grid; gap: 2px; }
+.pr-stat-line dt { color: var(--muted); font-size: 12.5px; font-weight: 650; }
+.pr-stat-line dd { margin: 0; color: var(--text); font-size: 24px; font-stretch: var(--figure-stretch, 88%); font-variant-numeric: tabular-nums; font-weight: 760; line-height: 1.1; }
+.pr-stat-line .pr-link { justify-self: start; font-size: 14px; }
+.pr-related { margin: 0; color: var(--muted); font-size: 14px; }
+.pr-related a { color: var(--accent); font-weight: 650; text-decoration: none; }
+
+/* Coverage bars */
+.pr-coverage { display: grid; gap: 12px; margin: 14px 0 0; padding: 0; list-style: none; }
+.pr-coverage li { display: grid; grid-template-columns: minmax(0, 1fr) 70px; grid-template-areas: 'label value' 'track track'; gap: 5px 12px; align-items: baseline; }
+.pr-coverage-label { grid-area: label; color: var(--soft); font-size: 14px; }
+.pr-coverage-track { grid-area: track; height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.pr-coverage-track span { display: block; height: 100%; border-radius: 99px; background: var(--accent); }
+.pr-coverage strong { grid-area: value; color: var(--text); font-size: 15px; font-variant-numeric: tabular-nums; text-align: right; }
+.pr-coverage strong small { color: var(--muted); font-size: 12px; font-weight: 600; }
+
+.pr-coverage-stack { display: flex; height: 10px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.pr-coverage-stack span { display: block; height: 100%; background: var(--tone, var(--line-strong, var(--line))); }
+.pr-coverage-stack .is-ready { background: repeating-linear-gradient(90deg, var(--line-strong, var(--line)) 0 6px, transparent 6px 10px); }
+
+/* Community search register */
+.pr-search-register {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.pr-search-register li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 2px; border-bottom: 1px solid var(--line); }
+.pr-search-register-firm { display: flex; align-items: center; gap: 10px; min-width: 0; color: var(--text); text-decoration: none; }
+.pr-search-register-firm span { display: grid; min-width: 0; }
+.pr-search-register-firm strong { overflow: hidden; font-size: 14.5px; text-overflow: ellipsis; white-space: nowrap; }
+.pr-search-register-firm small { color: var(--muted); font-size: 12.5px; }
+.pr-search-register-links { display: flex; flex: none; gap: 6px; }
+
+.pr-search-register-links a {
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--soft);
+  font-size: 12.5px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.pr-search-register-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Collapsible long lists */
+.pr-disclosure { border-top: 1px solid var(--line); }
+
+.pr-disclosure > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 2px;
+  color: var(--accent);
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pr-disclosure > summary::-webkit-details-marker { display: none; }
+.pr-disclosure > summary::before { content: '+'; display: grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--line); border-radius: 6px; color: var(--soft); font-weight: 500; }
+.pr-disclosure[open] > summary::before { content: '–'; }
+
+/* Deal cards */
+.pr-deal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.pr-deal-grid-featured { grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+
+.pr-deal {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--pr-radius);
+  background: var(--surface);
+}
+
+.pr-deal-featured { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.pr-deal-head { display: flex; align-items: center; gap: 12px; }
+.pr-deal-rank { color: var(--accent); font-size: 14px; font-weight: 780; }
+.pr-deal-firm { display: grid; flex: 1; min-width: 0; }
+.pr-deal-firm a { color: var(--text); font-size: 16px; font-weight: 720; text-decoration: none; }
+.pr-deal-firm small { color: var(--muted); font-size: 13px; }
+.pr-deal-pips { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.pr-deal-value { display: grid; gap: 2px; }
+
+.pr-deal-value strong {
+  color: var(--tone-good);
+  font-size: 34px;
+  font-stretch: var(--figure-stretch, 88%);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pr-deal-featured .pr-deal-value strong { font-size: 46px; }
+.pr-deal-value span { color: var(--text); font-size: 15.5px; font-weight: 680; line-height: 1.35; }
+.pr-deal-code { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.pr-deal-code > span { color: var(--muted); font-size: 12.5px; font-weight: 650; }
+
+.pr-deal-code code {
+  padding: 4px 10px;
+  border: 1px dashed var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  background: var(--accent-wash);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.pr-deal-code em { margin-left: auto; color: var(--muted); font-size: 12.5px; font-style: normal; font-weight: 650; }
+.pr-deal-code em.promo-status-live { color: var(--tone-good); }
+.pr-deal-verdict { margin: 0; color: var(--soft); font-size: 14.5px; line-height: 1.5; }
+.pr-deal-facts { display: grid; gap: 6px; margin: 0; padding-top: 10px; border-top: 1px solid var(--line); }
+.pr-deal-facts div { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 10px; font-size: 13px; line-height: 1.45; }
+.pr-deal-facts dt { color: var(--muted); font-weight: 650; }
+.pr-deal-facts dd { margin: 0; color: var(--soft); }
+.pr-deal-note { margin: 0; padding: 10px 12px; border-left: 3px solid var(--tone-watch); color: var(--soft); background: var(--tone-watch-wash); font-size: 13.5px; line-height: 1.45; }
+.pr-deal-note strong { color: var(--text); }
+.pr-deal-caveats summary { color: var(--tone-watch); font-size: 13.5px; font-weight: 700; cursor: pointer; }
+.pr-deal-caveats ul { display: grid; gap: 4px; margin: 8px 0 0; padding-left: 18px; color: var(--soft); font-size: 13.5px; }
+.pr-deal-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 2px; }
+.pr-deal-source { color: var(--muted); font-size: 12px; }
+
+@media (max-width: 760px) {
+  .pr-search-register { grid-template-columns: 1fr; }
+  .pr-deal-grid, .pr-deal-grid-featured { grid-template-columns: 1fr; }
+}
+
+/* ---------- Legacy components: same quiet surfaces as the new ones ---------- */
+
+html body :is(.panel, .card) {
+  border: 1px solid var(--line);
+  border-radius: var(--pr-radius);
+  background-image: none;
+  box-shadow: none;
+}
+
+html body .badge {
+  border: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+html body .badge.badge-green { color: var(--tone-good); background: var(--tone-good-wash); }
+html body .badge.badge-amber { color: var(--tone-watch); background: var(--tone-watch-wash); }
+html body .badge.badge-red { color: var(--tone-risk); background: var(--tone-risk-wash); }
+html body .badge:is(.badge-neutral, .badge-blue) { color: var(--soft); background: var(--surface-2, var(--surface-subtle)); box-shadow: inset 0 0 0 1px var(--line); }
+/* Deal values use the action colour: green is reserved for "low risk". */
+.pr-deal-value strong { color: var(--accent); }
+.pr-deal-grid-featured { grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); }
+@media (max-width: 980px) { .pr-deal-grid-featured { grid-template-columns: 1fr; } }
+.pr-search-register-links { align-items: center; }
+.pr-search-register-links > span { margin-left: 4px; color: var(--muted); font-size: 12px; font-weight: 700; }
+
+/* Guide cards: linked firms as logos instead of a stock image */
+.pr-logo-strip { display: flex; align-items: center; gap: 6px; margin: 4px 0; }
+.pr-logo-strip .firm-logo.pr-logo.firm-logo-sm { width: 36px; height: 36px; }
+.pr-logo-strip-more { display: grid; place-items: center; height: 36px; padding: 0 10px; border: 1px dashed var(--line-strong, var(--line)); border-radius: 10px; color: var(--muted); font-size: 13px; font-weight: 700; }
+html body :is(.guide-library-card, .guide-featured-card) { box-shadow: none; background-image: none; }
+
+/* Hero stats as a quiet list */
+.pr-hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; margin: 0; align-self: center; border-top: 1px solid var(--line); }
+.pr-hero-stats div { display: grid; gap: 3px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.pr-hero-stats div:nth-child(odd) { padding-right: 16px; }
+.pr-hero-stats div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
+.pr-hero-stats dt { color: var(--muted); font-size: 13px; font-weight: 650; }
+.pr-hero-stats dd { margin: 0; color: var(--text); font-size: 30px; font-stretch: var(--figure-stretch, 88%); font-variant-numeric: tabular-nums; font-weight: 760; line-height: 1.1; }
+html body .rules-stat-strip .rule-stat { box-shadow: none; background-image: none; }
+html body .rules-stat-strip .rule-stat strong { font-size: clamp(18px, 1.8vw, 22px); line-height: 1.15; }
+html body .rules-stat-strip .rule-stat > span { color: var(--tone-risk); }
+
+@media (max-width: 640px) {
+  .pr-search-register li { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .pr-search-register-links { flex-wrap: wrap; }
+  .pr-search-register-firm strong { white-space: normal; }
+}
+.pr-deal-actions .pr-link { white-space: nowrap; }
