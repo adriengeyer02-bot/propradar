@@ -87,32 +87,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       modifiedTime: modifiedDate,
       authors: [`${SITE_URL}/audit`],
       tags: displayGuide.primaryKeywords,
-      images: [
-        {
-          url: `${SITE_URL}${guideVisual.image16x9}`,
-          width: 1536,
-          height: 864,
-          alt: guideVisual.alt,
-        },
-        {
-          url: `${SITE_URL}${guideVisual.image4x3}`,
-          width: 1200,
-          height: 900,
-          alt: guideVisual.alt,
-        },
-        {
-          url: `${SITE_URL}${guideVisual.image1x1}`,
-          width: 1000,
-          height: 1000,
-          alt: guideVisual.alt,
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: displayGuide.title,
       description: displayGuide.metaDescription,
-      images: [`${SITE_URL}${guideVisual.image16x9}`],
     },
   };
 }

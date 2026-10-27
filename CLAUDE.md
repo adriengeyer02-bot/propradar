@@ -22,6 +22,17 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
 - `scripts/validate-firm-updates.ts` - validates the JSON and says whether a
   change is sensitive. Run it before every commit that touches the data.
 
+## Firm logos
+
+- Self-hosted in `public/logos/<slug>.png` (192 px tiles), listed in
+  `app/lib/firmLogos.ts` keyed by `logoDomain`. No logo = neutral monogram.
+- Refresh: run the "Fetch firm logos (raw)" workflow (pushes raw icons to the
+  `agent/logo-raw` branch), then `python3 -I scripts/normalize-logos.py
+  <logo-raw dir> --sheet sheet.png` and look at the contact sheet before
+  committing. Never use a logo from a site that redirects to another brand.
+- Share images (`opengraph-image.tsx` in `firm/[slug]` and `guides/[slug]`)
+  are generated from the same data and logos at build time.
+
 ## firm-updates.json format
 
 ```json

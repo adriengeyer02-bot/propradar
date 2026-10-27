@@ -6,7 +6,8 @@
  *   1. SVG icons declared in <link rel="icon">
  *   2. icons from the web app manifest (usually 192/512 px)
  *   3. apple-touch-icon (180 px) and other sized <link rel="icon"> PNGs
- *   4. Google's high-resolution favicon service as a last resort
+ *   4. the logo image shown in the site header (<img> with "logo" in it)
+ *   5. Google's high-resolution favicon service as a last resort
  *
  * Writes raw candidates to logo-raw/<slug>__<n>.<ext> plus logo-raw/index.json.
  * Nothing is published from here: candidates are reviewed and normalised
@@ -17,7 +18,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { propFirms } from '../app/lib/propFirms';
 
-type Candidate = { url: string; kind: 'svg' | 'manifest' | 'touch' | 'icon' | 'gstatic'; declared: number };
+type Candidate = { url: string; kind: 'svg' | 'manifest' | 'touch' | 'icon' | 'logo-img' | 'gstatic'; declared: number };
 type Saved = { file: string; url: string; kind: Candidate['kind']; declared: number; bytes: number; contentType: string };
 
 const OUT = 'logo-raw';
@@ -94,6 +95,18 @@ async function candidatesFor(domain: string): Promise<{ candidates: Candidate[];
         candidates.push({ url, kind: 'icon', declared: largestSize(attr(tag, 'sizes')) });
       }
     }
+
+    // Header logo images, used only when the site publishes no usable icon.
+    for (const tag of html.match(/<img\b[^>]*>/gi) ?? []) {
+      const src = attr(tag, 'src');
+      if (!src || src.startsWith('data:') || !/logo/i.test(`${src} ${attr(tag, 'alt')} ${attr(tag, 'class')}`)) continue;
+      try {
+        candidates.push({ url: new URL(src, base).toString(), kind: 'logo-img', declared: -1 });
+      } catch {
+        /* ignore */
+      }
+      if (candidates.filter((candidate) => candidate.kind === 'logo-img').length >= 2) break;
+    }
   } catch (caught) {
     error = caught instanceof Error ? caught.message : String(caught);
   }
@@ -108,7 +121,9 @@ async function candidatesFor(domain: string): Promise<{ candidates: Candidate[];
   const seen = new Set<string>();
   const unique = candidates.filter((candidate) => (seen.has(candidate.url) ? false : (seen.add(candidate.url), true)));
   const rank = (candidate: Candidate) => (candidate.kind === 'svg' ? 10_000 : 0) + candidate.declared - (candidate.kind === 'gstatic' ? 5_000 : 0);
-  return { candidates: unique.sort((a, b) => rank(b) - rank(a)).slice(0, 5), finalUrl, error };
+  const ranked = unique.sort((a, b) => rank(b) - rank(a));
+  const logos = ranked.filter((candidate) => candidate.kind === 'logo-img');
+  return { candidates: [...ranked.filter((candidate) => candidate.kind !== 'logo-img').slice(0, 5), ...logos], finalUrl, error };
 }
 
 async function processFirm(slug: string, domain: string) {
