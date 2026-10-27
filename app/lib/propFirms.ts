@@ -342,15 +342,6 @@ function xBreakdownFromScore(data: Omit<PropFirm, 'reviewSignals'>, xScore: numb
   };
 }
 
-function trustpilotFlaggedReviewCount(data: Omit<PropFirm, 'reviewSignals'>, manipulationRiskScore: number) {
-  if (!data.trustpilotRating) return data.incidents >= 4 ? data.incidents : 0;
-  if (data.status === 'Fermée') return Math.max(6, data.incidents * 2);
-  if (manipulationRiskScore >= 80) return Math.max(3, data.incidents + 2);
-  if (manipulationRiskScore >= 60) return Math.max(1, data.incidents);
-  if (data.trustpilotRating >= 4.6 && data.incidents >= 2) return data.incidents;
-  return 0;
-}
-
 function buildReviewSignals(data: Omit<PropFirm, 'reviewSignals'>): ReviewSignals {
   const payoutRiskScore = Math.min(
     100,
@@ -392,7 +383,6 @@ function buildReviewSignals(data: Omit<PropFirm, 'reviewSignals'>): ReviewSignal
   );
   const redditBreakdown = redditBreakdownFromScore(data, redditScore);
   const xBreakdown = xBreakdownFromScore(data, xScore);
-  const flaggedReviewCount = trustpilotFlaggedReviewCount(data, manipulationRiskScore);
 
   return {
     redditScore,
@@ -425,16 +415,14 @@ function buildReviewSignals(data: Omit<PropFirm, 'reviewSignals'>): ReviewSignal
     trustpilotReliabilityScore,
     trustpilotReliability: trustpilotReliabilityLabel(trustpilotReliabilityScore),
     trustpilotNote: data.trustpilotRating
-      ? `Raw Trustpilot rating ${data.trustpilotRating}/5. The reliability score above is weighted with Reddit, payout incidents and proof level.`
+      ? `Raw Trustpilot rating ${data.trustpilotRating}/5. The reliability score above is weighted with transparency, payout incidents and proof level.`
       : 'Trustpilot rating is not filled in PropRadar: the radar applies a conservative weighting.',
     trustpilotFlags: data.trustpilotRating
       ? ['Raw rating available', 'Weighted by incidents and external proof', 'Trustpilot does not verify the facts described in reviews']
       : ['Raw rating not filled', 'Do not use Trustpilot alone'],
-    trustpilotFlaggedReviewCount: flaggedReviewCount,
-    trustpilotFlaggedReviewNote:
-      flaggedReviewCount > 0
-        ? `${flaggedReviewCount} tracked review alert(s) in PropRadar. Confirm on the firm's Trustpilot transparency page.`
-        : 'No numbered fake-review alert tracked in PropRadar for this firm.',
+    // Review alerts are only shown when counted by hand (set on the firm profile or in firm-updates.json).
+    trustpilotFlaggedReviewCount: undefined,
+    trustpilotFlaggedReviewNote: 'No fake-review alert has been counted by PropRadar for this firm. Check the Trustpilot page for its own transparency notices.',
     manipulationRiskScore,
     manipulationRisk: manipulationRiskLabel(manipulationRiskScore),
     payoutRiskScore,
@@ -723,7 +711,7 @@ const corePropFirms: PropFirm[] = [
       redditFlags: ['High and mature discussion volume', 'Complaints mostly linked to rule enforcement', 'Few repeated non-payout patterns'],
       trustpilotReliabilityScore: 88,
       trustpilotReliability: 'Forte',
-      trustpilotNote: 'Trustpilot 4.8/5 with roughly 45k public reviews. Strong signal, but Trustpilot does not fact-check every payout story; PropRadar weighs it against rules, Reddit and incidents.',
+      trustpilotNote: 'Trustpilot 4.8/5 with roughly 45k public reviews. Strong signal, but Trustpilot does not fact-check every payout story; PropRadar weighs it against rules and documented payout incidents.',
       trustpilotFlags: ['Very significant review volume', 'Claimed profile and Trustpilot subscription', 'Trustpilot filters non-compliant reviews but does not verify every described fact', 'Low response rate to negative reviews to monitor'],
       trustpilotFlaggedReviewCount: 0,
       trustpilotFlaggedReviewNote: 'No public counter of removed or sanctioned fake reviews was found on the Trustpilot page checked. The signal remains strong, with caution around factual verification of individual stories.',
@@ -1211,7 +1199,7 @@ const corePropFirms: PropFirm[] = [
       redditFlags: ['Repeated complaints about withdrawal rules', 'Confusion around consistency', 'Very frequent discounts to weigh carefully'],
       trustpilotReliabilityScore: 45,
       trustpilotReliability: 'Faible',
-      trustpilotNote: 'Very positive reviews must be heavily weighted against Reddit feedback and payout rules.',
+      trustpilotNote: 'Very positive reviews must be heavily weighted against payout rules and documented incidents.',
       trustpilotFlags: ['Possible gap between public rating and forum feedback', 'Reviews must be weighted against payout rules', 'Do not decide from Trustpilot alone'],
       manipulationRiskScore: 78,
       manipulationRisk: 'Élevé',

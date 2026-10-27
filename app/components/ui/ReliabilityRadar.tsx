@@ -100,7 +100,7 @@ export default function ReliabilityRadar({ firms, showValues = false, size = 320
         </figcaption>
       ) : null}
       <p className="pr-relradar-note">
-        {caption ?? 'Bigger shape = safer on that axis. Reddit and X estimates are left out.'}
+        {caption ?? 'Bigger shape = safer on that axis.'}
         {axesByFirm.some((firmAxes) => firmAxes.some((axis) => axis.estimated)) ? ' Hollow dot = provisional value.' : ''}
       </p>
     </figure>

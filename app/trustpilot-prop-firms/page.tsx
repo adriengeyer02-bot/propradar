@@ -114,7 +114,7 @@ export default function TrustpilotGuidePage() {
           <ul className="risk-list">
             <li>Review volume and age, not just the average rating.</li>
             <li>Marketing, invited or overly recent review alerts.</li>
-            <li>Consistency with Reddit, forums and payout incidents.</li>
+            <li>Consistency with documented payout incidents and rule disputes.</li>
             <li>Official sources, legal entity checks and recent rule changes.</li>
           </ul>
         </article>

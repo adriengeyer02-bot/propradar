@@ -74,7 +74,6 @@ export default function RiskEvidenceMenu() {
         <ActiveNavLink href="/radar-brief" activePrefixes={['/radar-brief/']}>Risk Brief</ActiveNavLink>
         <ActiveNavLink href="/audit">Audit center</ActiveNavLink>
         <ActiveNavLink href="/risques-payout">Payout risks</ActiveNavLink>
-        <ActiveNavLink href="/audit-communautaire">Community watch</ActiveNavLink>
         <ActiveNavLink href="/regles">Trading rules</ActiveNavLink>
         <ActiveNavLink href="/trustpilot-prop-firms">Trustpilot research</ActiveNavLink>
       </div>

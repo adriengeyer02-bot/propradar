@@ -28,13 +28,11 @@ import {
   regulatoryRiskClass,
   relationshipClass,
   reviewReliabilityClass,
-  scoreClass,
   type PropFirm,
-  hasMeasuredMentions,
 } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { getFirmRelatedGuides, getSeoGuideDisplay, getSeoGuidePath } from '../../lib/seoGuides';
-import { getManualCommunityReview, manualCoverageClass } from '../../lib/manualCommunityReviews';
+import { getManualCommunityReview } from '../../lib/manualCommunityReviews';
 import { getFirmContentLastModified, getFirmSearchProfile } from '../../lib/firmSearchProfiles';
 import { toEnglishText } from '../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../lib/editorialBriefs';
@@ -156,23 +154,7 @@ function isBlockedFirmUrl(firm: PropFirm, url: string) {
   return Boolean(listedHost) && urlHost(url) === listedHost;
 }
 
-function scoreProofRows(firm: PropFirm, kind: 'reddit' | 'x' | 'trustpilot' | 'payout' | 'manipulation'): ScoreProofRow[] {
-  if (kind === 'reddit') {
-    return [
-      { label: 'Source', value: firm.reviewSignals.redditSource === 'Estimation PropRadar' ? 'PropRadar raw score, manual review to complete' : toEnglishText(firm.reviewSignals.redditSource ?? 'À documenter') },
-      { label: 'Raw volume', value: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `${firm.reviewSignals.redditSampleSize ?? 0} review(s) / mention(s)` : 'Not counted yet' },
-      { label: 'Confidence', value: hasMeasuredMentions(firm.reviewSignals.redditSource) ? toEnglishText(firm.reviewSignals.redditConfidence ?? 'Faible') : 'Editorial estimate' },
-    ];
-  }
-
-  if (kind === 'x') {
-    return [
-      { label: 'Source', value: firm.reviewSignals.xSource === 'Estimation PropRadar' ? 'PropRadar raw score, manual review to complete' : toEnglishText(firm.reviewSignals.xSource ?? 'À documenter') },
-      { label: 'Raw volume', value: hasMeasuredMentions(firm.reviewSignals.xSource) ? `${firm.reviewSignals.xSampleSize ?? 0} review(s) / mention(s)` : 'Not counted yet' },
-      { label: 'Confidence', value: hasMeasuredMentions(firm.reviewSignals.xSource) ? toEnglishText(firm.reviewSignals.xConfidence ?? 'Faible') : 'Editorial estimate' },
-    ];
-  }
-
+function scoreProofRows(firm: PropFirm, kind: 'trustpilot' | 'payout' | 'manipulation'): ScoreProofRow[] {
   if (kind === 'trustpilot') {
     const trustpilotUrl = firm.reviewSignals.trustpilotSourceUrl ?? sourceUrl(firm, /trustpilot/i);
 
@@ -195,7 +177,7 @@ function scoreProofRows(firm: PropFirm, kind: 'reddit' | 'x' | 'trustpilot' | 'p
 
   return [
     { label: 'Base', value: 'Trustpilot + incidents + marketing signals' },
-    { label: 'Review alert', value: firm.reviewSignals.trustpilotRatingWithheld ? 'Trustpilot rating withheld (guideline breach)' : `${firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0} tracked alert(s)` },
+    { label: 'Review alert', value: firm.reviewSignals.trustpilotRatingWithheld ? 'Trustpilot rating withheld (guideline breach)' : typeof firm.reviewSignals.trustpilotFlaggedReviewCount === 'number' ? `${firm.reviewSignals.trustpilotFlaggedReviewCount} counted alert(s)` : 'Not counted' },
     { label: 'Status', value: toEnglishText(firm.reviewSignals.trustpilotReliability) },
   ];
 }
@@ -469,36 +451,31 @@ export default async function FirmPage({ params }: Props) {
       : 'Check the legal entity and terms page still match this profile.',
     'Match the exact product rules with your strategy before scaling size.',
   ];
-  const communitySignalScore = Math.round(
-    (
-      firm.reviewSignals.redditScore +
-      firm.reviewSignals.xScore +
-      firm.reviewSignals.trustpilotReliabilityScore +
-      Math.max(0, 100 - firm.reviewSignals.payoutRiskScore)
-    ) / 4
-  );
-  const communityOverview = [
+  const reviewOverview = [
     {
-      label: 'Reddit',
-      score: firm.reviewSignals.redditScore,
-      estimated: !hasMeasuredMentions(firm.reviewSignals.redditSource),
-      volume: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `${firm.reviewSignals.redditSampleSize ?? 0} public mention(s)` : 'Editorial estimate',
-      detail: hasMeasuredMentions(firm.reviewSignals.redditSource) ? `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}` : 'mentions not counted yet',
-    },
-    {
-      label: 'X/Twitter',
-      score: firm.reviewSignals.xScore,
-      estimated: !hasMeasuredMentions(firm.reviewSignals.xSource),
-      volume: hasMeasuredMentions(firm.reviewSignals.xSource) ? `${firm.reviewSignals.xSampleSize ?? 0} public mention(s)` : 'Editorial estimate',
-      detail: hasMeasuredMentions(firm.reviewSignals.xSource) ? `+${firm.reviewSignals.xPositiveMentions ?? 0} / -${firm.reviewSignals.xNegativeMentions ?? 0}` : 'mentions not counted yet',
-    },
-    {
-      label: 'Trustpilot',
+      label: 'Trustpilot reliability',
       score: firm.reviewSignals.trustpilotReliabilityScore,
-      estimated: !firm.trustpilotRating,
-      volume: firm.trustpilotRating ? `${firm.trustpilotRating}/5 raw rating` : 'Raw rating not filled',
-      detail: toEnglishText(firm.reviewSignals.trustpilotReliability),
+      provisional: !firm.trustpilotRating,
+      detail: firm.trustpilotRating
+        ? `${firm.trustpilotRating}/5 raw rating${firm.reviewSignals.trustpilotReviewCount ? ` · ${firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')} reviews` : ''}`
+        : 'No Trustpilot rating on file',
     },
+    {
+      label: 'Review authenticity',
+      score: Math.max(0, 100 - (firm.reviewSignals.manipulationRiskScore ?? 50)),
+      provisional: firm.reviewSignals.manipulationRiskScore === undefined,
+      detail: `${toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} manipulation risk`,
+    },
+    {
+      label: 'Payout safety',
+      score: Math.max(0, 100 - firm.reviewSignals.payoutRiskScore),
+      provisional: false,
+      detail: `${firm.reviewSignals.payoutIncidentCount ?? firm.incidents} documented signal(s)`,
+    },
+  ];
+  const communitySearchLinks = [
+    ...manualReview.reddit.sources.slice(0, 2).map((source) => ({ ...source, network: 'Reddit' })),
+    ...manualReview.x.sources.slice(0, 2).map((source) => ({ ...source, network: 'X' })),
   ];
   const dueDiligenceChecks = [
     {
@@ -1035,31 +1012,51 @@ export default async function FirmPage({ params }: Props) {
 
         <div className="pr-signal-board">
           <div className="pr-signal-total">
-            <span>Combined signal</span>
-            <strong>{communityOverview.some((item) => item.estimated) ? '≈' : ''}{communitySignalScore}<small>/100</small></strong>
+            <span>Trustpilot</span>
+            {firm.trustpilotRating ? (
+              <strong>{firm.trustpilotRating.toFixed(1)}<small>/5</small></strong>
+            ) : (
+              <strong className="is-empty">—</strong>
+            )}
             <small>
-              Reddit, X/Twitter, Trustpilot and payout risk.
-              {communityOverview.some((item) => item.estimated) ? ' Includes editorial estimates.' : ''}
+              {firm.reviewSignals.trustpilotRatingWithheld
+                ? 'Rating withheld by Trustpilot.'
+                : firm.reviewSignals.trustpilotReviewCount
+                  ? `${firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')} reviews.`
+                  : firm.trustpilotRating
+                    ? 'Review count not recorded.'
+                    : 'No Trustpilot rating on file.'}
+              {firm.reviewSignals.trustpilotSourceUrl ? <> <a href={firm.reviewSignals.trustpilotSourceUrl} target="_blank" rel="noreferrer">Open the page</a></> : null}
             </small>
           </div>
           <ul className="pr-signal-bars">
-            {communityOverview.map((item) => (
-              <li key={item.label} className={`pr-tone-${scoreTone(item.score)}${item.estimated ? ' is-estimate' : ''}`}>
+            {reviewOverview.map((item) => (
+              <li key={item.label} className={`pr-tone-${scoreTone(item.score)}${item.provisional ? ' is-estimate' : ''}`}>
                 <span className="pr-signal-bar-label">
                   <strong>{item.label}</strong>
-                  {item.estimated ? <em className="pr-tag" title="Editorial estimate: public mentions have not been counted yet.">Estimate</em> : null}
+                  {item.provisional ? <em className="pr-tag" title="No Trustpilot rating on file: conservative PropRadar weighting.">Provisional</em> : null}
                 </span>
                 <span className="pr-signal-bar-track" aria-hidden="true">
                   <span style={{ width: `${Math.max(0, Math.min(100, item.score))}%` }} />
                 </span>
-                <span className="pr-signal-bar-value">{item.estimated ? '≈' : ''}{item.score}</span>
-                <small>{item.volume} · {item.detail}</small>
+                <span className="pr-signal-bar-value">{item.score}</span>
+                <small>{item.detail}</small>
               </li>
             ))}
           </ul>
           <p className="pr-signal-payout">
             <span className={`pr-pip-dot pr-tone-${payoutTone(firm.reviewSignals.payoutRisk)}`} aria-hidden="true" />
-            Payout: {toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · {firm.reviewSignals.payoutIncidentCount ?? firm.incidents} tracked signal(s)
+            Payout: {toEnglishText(firm.reviewSignals.payoutIncidentStatus)}
+            {communitySearchLinks.length ? (
+              <span className="pr-community-links">
+                Read traders yourself:
+                {communitySearchLinks.map((link) => (
+                  <a key={link.url} href={link.url} target="_blank" rel="noreferrer" title={toEnglishText(link.label)}>
+                    {link.network} {/payout/i.test(link.label) ? 'payouts' : 'reviews'}
+                  </a>
+                ))}
+              </span>
+            ) : null}
           </p>
         </div>
 
@@ -1074,47 +1071,9 @@ export default async function FirmPage({ params }: Props) {
         <details className="firm-details">
           <summary>
             <span>Score breakdown</span>
-            <small>Reddit, X/Twitter, Trustpilot and payout scores, with the flags behind them</small>
+            <small>Trustpilot, payout and review-manipulation scores, with the flags behind them</small>
           </summary>
-          <div className="grid-3">
-            <div className="card">
-              <div className="muted">Raw Reddit score</div>
-              <div className="score">{firm.reviewSignals.redditScore}/100</div>
-              <span className={`badge ${scoreClass(firm.reviewSignals.redditScore)}`}>{toEnglishText(firm.reviewSignals.redditSignal)}</span>
-              {firm.reviewSignals.redditSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
-              {hasMeasuredMentions(firm.reviewSignals.redditSource) ? (
-                <div className="sentiment-breakdown">
-                  <span><strong>{firm.reviewSignals.redditPositiveMentions ?? 0}</strong> positive</span>
-                  <span><strong>{firm.reviewSignals.redditNegativeMentions ?? 0}</strong> negative</span>
-                  <span><strong>{firm.reviewSignals.redditNeutralMentions ?? 0}</strong> neutral</span>
-                </div>
-              ) : null}
-              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.redditMentions)}</p>
-              <div className="score-proof">
-                {scoreProofRows(firm, 'reddit').map((row) => (
-                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-                ))}
-              </div>
-            </div>
-            <div className="card">
-              <div className="muted">Raw X/Twitter score</div>
-              <div className="score">{firm.reviewSignals.xScore}/100</div>
-              <span className={`badge ${scoreClass(firm.reviewSignals.xScore)}`}>{toEnglishText(firm.reviewSignals.xSignal)}</span>
-              {firm.reviewSignals.xSource === 'Estimation PropRadar' ? <span className="badge badge-amber">Editorial estimate</span> : null}
-              {hasMeasuredMentions(firm.reviewSignals.xSource) ? (
-                <div className="sentiment-breakdown">
-                  <span><strong>{firm.reviewSignals.xPositiveMentions ?? 0}</strong> positive</span>
-                  <span><strong>{firm.reviewSignals.xNegativeMentions ?? 0}</strong> negative</span>
-                  <span><strong>{firm.reviewSignals.xNeutralMentions ?? 0}</strong> neutral</span>
-                </div>
-              ) : null}
-              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.xMentions)}</p>
-              <div className="score-proof">
-                {scoreProofRows(firm, 'x').map((row) => (
-                  <div key={row.label}><span>{row.label}</span>{proofValue(row)}</div>
-                ))}
-              </div>
-            </div>
+          <div className="grid-2">
             <div className="card">
               <div className="muted">Trustpilot review reliability</div>
               <div className="score">{firm.reviewSignals.trustpilotReliabilityScore}/100</div>
@@ -1125,7 +1084,9 @@ export default async function FirmPage({ params }: Props) {
                 {firm.reviewSignals.trustpilotReviewCount ? <span><strong>{firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')}</strong> reviews</span> : null}
                 {firm.reviewSignals.trustpilotRatingWithheld
                   ? <span><strong>Rating withheld</strong> by Trustpilot</span>
-                  : <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0}</strong> tracked review alert(s)</span>}
+                  : typeof firm.reviewSignals.trustpilotFlaggedReviewCount === 'number'
+                    ? <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount}</strong> counted review alert(s)</span>
+                    : <span>Review alerts not counted</span>}
               </div>
               <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.trustpilotNote)}</p>
               {firm.reviewSignals.trustpilotSourceUrl ? (
@@ -1153,35 +1114,7 @@ export default async function FirmPage({ params }: Props) {
               </div>
             </div>
           </div>
-          {typeof manualReview.reddit.sampleSize === 'number' || typeof manualReview.x.sampleSize === 'number' ? (
-          <div className="panel manual-review-panel">
-            <div className="manual-review-header">
-              <div>
-                <div className="eyebrow">Manual Reddit/X Review</div>
-                <h3>Manual collection queue</h3>
-              </div>
-              <span className={`badge ${manualCoverageClass(manualReview.coverage)}`}>{toEnglishText(manualReview.coverage)}</span>
-            </div>
-            <p className="muted">{toEnglishText(manualReview.summary)}</p>
-            <div className="manual-review-grid">
-              <ManualReviewChannel title="Reddit" channel={manualReview.reddit} />
-              <ManualReviewChannel title="X/Twitter" channel={manualReview.x} />
-            </div>
-          </div>
-          ) : null}
           <div className="signal-explain-grid">
-            <div className="signal-explain-card">
-              <div className="eyebrow">Reddit flags</div>
-              <ul className="risk-list">
-                {(firm.reviewSignals.redditFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
-              </ul>
-            </div>
-            <div className="signal-explain-card">
-              <div className="eyebrow">X/Twitter watch</div>
-              <ul className="risk-list">
-                {(firm.reviewSignals.xFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
-              </ul>
-            </div>
             <div className="signal-explain-card">
               <div className="eyebrow">Filtered Trustpilot</div>
               <p className="muted">
@@ -1400,39 +1333,6 @@ function DossierGroup({
         <p className="pr-fineprint">Nothing recorded at this check.</p>
       )}
     </details>
-  );
-}
-
-function ManualReviewChannel({
-  title,
-  channel,
-}: {
-  title: string;
-  channel: ReturnType<typeof getManualCommunityReview>['reddit'];
-}) {
-  return (
-    <article className="manual-review-card">
-      <div className="manual-review-card-top">
-        <strong>{title}</strong>
-        <span className={`badge ${manualCoverageClass(channel.coverage)}`}>{toEnglishText(channel.coverage)}</span>
-      </div>
-      {typeof channel.sampleSize === 'number' ? (
-        <div className="sentiment-breakdown">
-          <span><strong>{channel.positive ?? 0}</strong> positive</span>
-          <span><strong>{channel.negative ?? 0}</strong> negative</span>
-          <span><strong>{channel.neutral ?? 0}</strong> neutral</span>
-          <span><strong>{channel.sampleSize}</strong> total</span>
-        </div>
-      ) : null}
-      <p className="muted">{toEnglishText(channel.note)}</p>
-      <ul className="source-list compact-source-list">
-        {channel.sources.map((source) => (
-          <li key={source.url}>
-            <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)}</a>
-          </li>
-        ))}
-      </ul>
-    </article>
   );
 }
 

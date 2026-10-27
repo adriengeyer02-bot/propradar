@@ -13,7 +13,6 @@ import {
   propFirms,
   regulatoryRiskClass,
   scoreClass,
-  hasMeasuredMentions,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 import {
@@ -318,7 +317,7 @@ export default function PromosPage() {
               </div>
               <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div><span>Reddit</span><strong>{hasMeasuredMentions(firm.reviewSignals.redditSource) ? `+${firm.reviewSignals.redditPositiveMentions ?? 0} / -${firm.reviewSignals.redditNegativeMentions ?? 0}` : `${firm.reviewSignals.redditScore}/100 est.`}</strong></div>
+              <div><span>Trustpilot</span><strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'Not rated'}</strong></div>
               <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
                 <span>Score</span>
                 <strong>{firm.score}</strong>

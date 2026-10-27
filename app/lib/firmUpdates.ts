@@ -124,7 +124,7 @@ function refreshTrustpilotText(firm: PropFirm, checkedOn: string) {
   const count = signals.trustpilotReviewCount;
   const figure = `${firm.trustpilotRating?.toFixed(1)}/5${count ? ` across ${count.toLocaleString('en-US')} reviews` : ''} (checked ${checkedOn})`;
   if (GENERATED_NOTE.test(signals.trustpilotNote ?? '')) {
-    signals.trustpilotNote = `Raw Trustpilot rating ${figure}. The reliability score above is weighted with Reddit, payout incidents and proof level.`;
+    signals.trustpilotNote = `Raw Trustpilot rating ${figure}. The reliability score above is weighted with transparency, payout incidents and proof level.`;
   } else if (HAND_WRITTEN_FIGURE.test(signals.trustpilotNote ?? '')) {
     signals.trustpilotNote = signals.trustpilotNote.replace(HAND_WRITTEN_FIGURE, `Trustpilot ${figure}.`);
   }

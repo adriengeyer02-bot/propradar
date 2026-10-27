@@ -475,7 +475,7 @@ const bestRankingMethodology = [
   {
     label: 'Independent community',
     weight: '20%',
-    text: 'Reddit, Discord and X signals, not only Trustpilot or invited reviews.',
+    text: 'Documented complaints and payout incidents with a linked public source, not only Trustpilot or invited reviews.',
   },
   {
     label: 'Transparency history',
@@ -503,7 +503,7 @@ const noChallengeMethodology = [
   {
     label: 'Community feedback',
     weight: '15%',
-    text: 'Recent Reddit, Discord and X signals from traders who used the same direct or instant-funded program.',
+    text: 'Documented complaints and payout incidents for the same direct or instant-funded program, each with a linked public source.',
   },
 ];
 
@@ -539,7 +539,7 @@ const reviewSignalsMethodology = [
   {
     label: 'Community evidence',
     weight: '30%',
-    text: 'Reddit, Discord and X discussions are checked for detailed complaints, payout proof and repeated patterns.',
+    text: 'Detailed complaints, payout proof and repeated patterns, counted only when a dated public source is linked.',
   },
   {
     label: 'Payout proof',
@@ -572,7 +572,7 @@ const ftmoAlternativesMethodology = [
   {
     label: 'Clarity and community',
     weight: '25%',
-    text: 'Official rule pages, support clarity and recent Reddit, Discord and X feedback decide whether the alternative is actually easier to use.',
+    text: 'Official rule pages, support clarity and documented trader complaints decide whether the alternative is actually easier to use.',
   },
 ];
 
@@ -595,7 +595,7 @@ const gftReviewMethodology = [
   {
     label: 'Community context',
     weight: '15%',
-    text: 'Recent Reddit, Discord and X feedback, with extra weight on traders mentioning the exact model used.',
+    text: 'Documented trader complaints and payout incidents, with extra weight on those about the exact model used.',
   },
 ];
 
@@ -1663,12 +1663,12 @@ export default async function SeoGuidePage({ params }: Props) {
                 : isFtmoAlternativesGuide
                 ? 'This review compares alternatives only through real trader constraints: price, rule flexibility, platform fit, payout quality, clarity and recent community feedback.'
                 : isReviewSignalsGuide
-                ? 'This review does not treat a public rating as proof. It weighs Trustpilot context, Reddit and Discord complaints, X reactions, recent payout evidence and the commercial timing around discount campaigns.'
+                ? 'This review does not treat a public rating as proof. It weighs Trustpilot context, documented complaints, recent payout evidence and the commercial timing around discount campaigns.'
                 : isBeginnerGuide
                 ? 'This review prioritizes simple rules, realistic account size, accessible cost and beginner-safe drawdown. The goal is not to find the biggest account, but the first program a new trader can follow without avoidable rule mistakes.'
                 : isNoChallengeGuide
                 ? 'This ranking compares direct-funded and instant-funding offers by the conditions that matter once the account is live. Always recheck the official page before buying because no-challenge rules can change quickly.'
-                : 'Data comes from official pages, recent trader feedback, Reddit, Discord, X and review platforms. Always recheck the official page before buying because rules change often.'}
+                : 'Data comes from official pages, review platforms and documented payout incidents. Always recheck the official page before buying because rules change often.'}
             </p>
           </div>
           <div className="best-method-grid">

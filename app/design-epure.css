@@ -1947,3 +1947,25 @@ html body .rules-stat-strip .rule-stat > span { color: var(--tone-risk); }
   .pr-search-register-firm strong { white-space: normal; }
 }
 .pr-deal-actions .pr-link { white-space: nowrap; }
+
+/* Reviews board: Trustpilot figure + links to live Reddit / X searches */
+.pr-signal-total strong.is-empty { color: var(--muted); }
+.pr-signal-total small a { color: var(--accent); font-weight: 650; text-decoration: none; }
+.pr-signal-payout { flex-wrap: wrap; }
+.pr-community-links { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-left: auto; color: var(--muted); font-size: 13px; }
+
+.pr-community-links a {
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--soft);
+  font-size: 12.5px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.pr-community-links a:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 640px) { .pr-community-links { margin-left: 0; } }
+.pr-signal-bars li { grid-template-columns: 190px minmax(0, 1fr) 44px; }
+.pr-signal-bar-label { flex-wrap: wrap; }
+@media (max-width: 860px) { .pr-signal-bars li { grid-template-columns: minmax(0, 1fr) 40px; } }
