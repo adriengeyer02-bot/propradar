@@ -1,0 +1,67 @@
+{
+  "fetchedAt": "2026-10-27T11:08:12.904Z",
+  "results": [
+    {
+      "slug": "blue-guardian",
+      "domain": "blueguardian.com",
+      "finalUrl": "https://blueguardian.com/",
+      "saved": [
+        {
+          "file": "blue-guardian__0.ico",
+          "url": "https://blueguardian.com/favicon.ico",
+          "kind": "icon",
+          "declared": 32,
+          "bytes": 4286,
+          "contentType": "image/x-icon"
+        },
+        {
+          "file": "blue-guardian__1.jpg",
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://blueguardian.com&size=256",
+          "kind": "gstatic",
+          "declared": 0,
+          "bytes": 510,
+          "contentType": "image/jpeg"
+        },
+        {
+          "file": "blue-guardian__2.png",
+          "url": "https://blueguardian.com/api/media/file/logo-mt5.png",
+          "kind": "logo-img",
+          "declared": -1,
+          "bytes": 12533,
+          "contentType": "image/png"
+        },
+        {
+          "file": "blue-guardian__3.png",
+          "url": "https://blueguardian.com/api/media/file/logo-tl.png",
+          "kind": "logo-img",
+          "declared": -1,
+          "bytes": 6251,
+          "contentType": "image/png"
+        }
+      ]
+    },
+    {
+      "slug": "hantec-trader",
+      "domain": "rzrfunded.com",
+      "finalUrl": "https://rzrfunded.com/",
+      "saved": [
+        {
+          "file": "hantec-trader__0.svg",
+          "url": "https://rzrfunded.com/logo.svg",
+          "kind": "logo-img",
+          "declared": -1,
+          "bytes": 4921,
+          "contentType": "image/svg+xml"
+        },
+        {
+          "file": "hantec-trader__1.svg",
+          "url": "https://cms.rzrfunded.com/wp-content/uploads/korapay-seeklogo-2.svg",
+          "kind": "logo-img",
+          "declared": -1,
+          "bytes": 6818,
+          "contentType": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}
