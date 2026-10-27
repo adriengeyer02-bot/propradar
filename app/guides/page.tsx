@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import GuideLibrary, {
   type GuideFocus,
   type GuideLevel,
   type GuideLibraryItem,
   type GuideType,
+  GuideLogoStrip,
 } from './GuideLibrary';
 import { payoutRiskClass, propFirms, regulatoryRiskClass } from '../lib/propFirms';
 import {
@@ -19,13 +19,12 @@ import {
 import { SITE_NAME, SITE_URL } from '../lib/site';
 import { toEnglishText } from '../lib/i18n';
 import { getEditorialBriefPath, latestEditorialBrief } from '../lib/editorialBriefs';
-import { GUIDE_EDITORIAL_REFRESH_DATE, getGuideVisual } from '../lib/guideVisuals';
+import { GUIDE_EDITORIAL_REFRESH_DATE } from '../lib/guideVisuals';
 
 export const revalidate = 86400;
 
 const GUIDES_DESCRIPTION =
   'PropRadar guides built around real trader searches: best prop firm, futures, news trading, SMC, payout, consistency rule, deals and brand comparisons.';
-const GUIDES_HUB_VISUAL = getGuideVisual('meilleure-prop-firm-2026');
 
 export const metadata: Metadata = {
   title: 'Prop Firm Guides: Rules, Payouts & Comparisons',
@@ -42,18 +41,13 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/guides`,
     type: 'website',
     siteName: SITE_NAME,
-    images: [{
-      url: `${SITE_URL}${GUIDES_HUB_VISUAL.image16x9}`,
-      width: 1536,
-      height: 864,
-      alt: GUIDES_HUB_VISUAL.alt,
-    }],
+    images: [{ url: `${SITE_URL}/guides/meilleure-prop-firm-2026/opengraph-image`, width: 1200, height: 630, alt: 'PropRadar guides: firms compared by reliability score' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Prop Firm Guides: Rules, Payouts & Comparisons',
     description: GUIDES_DESCRIPTION,
-    images: [`${SITE_URL}${GUIDES_HUB_VISUAL.image16x9}`],
+    images: [`${SITE_URL}/guides/meilleure-prop-firm-2026/opengraph-image`],
   },
 };
 
@@ -210,7 +204,6 @@ function formatGuideDate(date: Date) {
 
 function buildGuideCard(guide: SeoGuide): GuideLibraryItem {
   const display = getSeoGuideDisplay(guide);
-  const visual = getGuideVisual(guide.slug);
   const linkedFirms = selectGuideFirms(guide, propFirms.length);
   const type = guideType(guide);
   const modifiedDate = getGuideLastModified(guide);
@@ -231,8 +224,7 @@ function buildGuideCard(guide: SeoGuide): GuideLibraryItem {
     updatedLabel: formatGuideDate(modifiedDate),
     recentlyUpdated: recentlyUpdatedSlugs.has(guide.slug),
     mark: guideMarks[type],
-    imageSrc: visual.image16x9,
-    imageAlt: `${visual.alt} for the ${display.title} guide`,
+    firms: linkedFirms.slice(0, 4).map((firm) => ({ slug: firm.slug, name: firm.name, logoDomain: firm.logoDomain })),
     keywords: [...display.primaryKeywords, ...display.secondaryKeywords],
   };
 }
@@ -245,16 +237,7 @@ function FeaturedGuideCard({ guide }: { guide: GuideLibraryItem }) {
         <span>{guide.typeLabel}</span>
         {guide.recentlyUpdated ? <strong>Recently updated</strong> : null}
       </div>
-      <div className="guide-featured-card-media">
-        <Image
-          src={guide.imageSrc}
-          alt={guide.imageAlt}
-          width={1536}
-          height={864}
-          sizes="(max-width: 760px) 100vw, (max-width: 1180px) 50vw, 33vw"
-          quality={82}
-        />
-      </div>
+      <GuideLogoStrip firms={guide.firms} total={guide.firmCount} />
       <h3>{guide.title}</h3>
       <p>{guide.description}</p>
       <div className="guide-featured-card-foot">
@@ -270,6 +253,7 @@ export default function GuidesHubPage() {
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const legalWatchCount = propFirms.filter(isLegalWatchFirm).length;
   const guideCards = seoGuides.map(buildGuideCard);
+  const latestGuideUpdate = seoGuides.map((guide) => getGuideLastModified(guide).toISOString().slice(0, 10)).sort().at(-1) ?? GUIDE_EDITORIAL_REFRESH_DATE;
   const featuredGuides = featuredGuideSlugs
     .map((slug) => {
       const guide = seoGuides.find((candidate) => candidate.slug === slug);
@@ -296,7 +280,7 @@ export default function GuidesHubPage() {
     url: `${SITE_URL}/guides`,
     inLanguage: 'en',
     dateModified: GUIDE_EDITORIAL_REFRESH_DATE,
-    primaryImageOfPage: `${SITE_URL}${GUIDES_HUB_VISUAL.image16x9}`,
+    primaryImageOfPage: `${SITE_URL}/opengraph-image`,
     publisher: {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
@@ -313,7 +297,7 @@ export default function GuidesHubPage() {
       url: `${SITE_URL}${getSeoGuidePath(guide)}`,
       description: getSeoGuideDisplay(guide).metaDescription,
       dateModified: getGuideLastModified(guide).toISOString(),
-      image: `${SITE_URL}${getGuideVisual(guide.slug).image16x9}`,
+      image: `${SITE_URL}/guides/${guide.slug}/opengraph-image`,
       author: {
         '@type': 'Organization',
         name: 'PropRadar Research',
@@ -338,12 +322,12 @@ export default function GuidesHubPage() {
             <Link href="/meilleures-prop-firms" className="btn">View the current ranking</Link>
           </div>
         </div>
-        <div className="guide-proof-panel guide-hub-proof-panel">
-          <div><strong>{seoGuides.length}</strong><span>decision guides</span></div>
-          <div><strong>{propFirms.length}</strong><span>firm profiles connected</span></div>
-          <div><strong>{legalMappedCount}</strong><span>legal files mapped</span></div>
-          <div><strong>{GUIDE_EDITORIAL_REFRESH_DATE}</strong><span>library refreshed</span></div>
-        </div>
+        <dl className="pr-hero-stats">
+          <div><dt>Decision guides</dt><dd>{seoGuides.length}</dd></div>
+          <div><dt>Firm profiles connected</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>Legal files mapped</dt><dd>{legalMappedCount}</dd></div>
+          <div><dt>Latest guide update</dt><dd><time dateTime={latestGuideUpdate}>{latestGuideUpdate}</time></dd></div>
+        </dl>
       </section>
 
       <section className="section guide-featured-section" aria-labelledby="featured-guides-title">

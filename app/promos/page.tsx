@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
+import RiskPip from '../components/ui/RiskPip';
+import ScoreRing from '../components/ui/ScoreRing';
+import { legalTone, payoutTone } from '../lib/riskTone';
 import PageStructuredData from '../components/PageStructuredData';
 import { createPageMetadata } from '../lib/pageMetadata';
 import {
@@ -80,6 +83,77 @@ function availabilityClass(availability: string) {
   return 'promo-status-check';
 }
 
+type RankedDeal = ReturnType<typeof getBestPromoDeals>[number];
+
+function DealCard({
+  deal,
+  firm,
+  rank,
+  featured = false,
+  cta,
+}: {
+  deal: RankedDeal;
+  firm: NonNullable<ReturnType<typeof getFirmBySlug>>;
+  rank?: number;
+  featured?: boolean;
+  cta: string;
+}) {
+  return (
+    <article className={`pr-deal${featured ? ' pr-deal-featured' : ''}`}>
+      <header className="pr-deal-head">
+        {typeof rank === 'number' ? <span className="pr-deal-rank">#{rank}</span> : null}
+        <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="md" />
+        <span className="pr-deal-firm">
+          <Link href={`/firm/${firm.slug}`}>{firm.name}</Link>
+          <small>{toEnglishText(deal.label)}</small>
+        </span>
+        <ScoreRing score={firm.score} size="sm" />
+      </header>
+
+      <div className="pr-deal-pips">
+        <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
+        <RiskPip compact label="Legal" value={firm.regulatoryAudit.riskLevel} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
+      </div>
+
+      <div className="pr-deal-value">
+        <strong>{deal.value}</strong>
+        <span>{toEnglishText(deal.title)}</span>
+      </div>
+
+      <div className="pr-deal-code">
+        <span>Code</span>
+        <code>{deal.code}</code>
+        <em className={availabilityClass(deal.availability)}>{deal.availability}</em>
+      </div>
+
+      <p className="pr-deal-verdict">{toEnglishText(featured ? deal.commercialHook ?? deal.consumerVerdict : deal.consumerVerdict)}</p>
+
+      <dl className="pr-deal-facts">
+        <div><dt>Eligibility</dt><dd>{deal.eligibility}</dd></div>
+        <div><dt>Validity</dt><dd>{deal.validity}</dd></div>
+        <div><dt>Proof</dt><dd>{toEnglishText(deal.proofLevel)} · {legalSourceCount(firm)} source link(s) · deal score {deal.dealScore}/100</dd></div>
+      </dl>
+
+      {featured ? (
+        <p className="pr-deal-note"><strong>{deal.urgency ?? 'Verify before buying'}.</strong> {toEnglishText(deal.checkoutTip ?? deal.caveats[0])}</p>
+      ) : deal.caveats.length ? (
+        <details className="pr-deal-caveats">
+          <summary>{deal.caveats.length} caveat{deal.caveats.length > 1 ? 's' : ''} before checkout</summary>
+          <ul>
+            {deal.caveats.map((caveat) => <li key={caveat}>{toEnglishText(caveat)}</li>)}
+          </ul>
+        </details>
+      ) : null}
+
+      <footer className="pr-deal-actions">
+        <a href={deal.sourceUrl} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">{cta}</a>
+        <Link href={`/firm/${firm.slug}`} className="pr-link">{featured ? 'Read analysis' : 'Read profile'} <span aria-hidden="true">→</span></Link>
+      </footer>
+      {!featured ? <span className="pr-deal-source">{toEnglishText(deal.sourceNote ?? deal.sourceLabel)} · {categoryLabels[deal.category] ?? deal.category}</span> : null}
+    </article>
+  );
+}
+
 export default function PromosPage() {
   const riskyDiscounts = propFirms
     .filter((firm) => isActiveFirm(firm.status) && firm.reviewSignals.payoutRisk !== 'Faible')
@@ -88,6 +162,7 @@ export default function PromosPage() {
   const dealFirms = bestPromoDeals
     .map((deal) => getFirmBySlug(deal.slug))
     .filter((firm): firm is NonNullable<ReturnType<typeof getFirmBySlug>> => Boolean(firm));
+  const megaKeys = new Set(megaPromoDeals.map((deal) => `${deal.slug}-${deal.code}`));
   const uniqueDealFirms = Array.from(new Map(dealFirms.map((firm) => [firm.slug, firm])).values());
   const legalMappedDealCount = uniqueDealFirms.filter((firm) => firm.legalVerified).length;
   const deepSourceDealCount = uniqueDealFirms.filter((firm) => legalSourceCount(firm) >= 5).length;
@@ -126,37 +201,15 @@ export default function PromosPage() {
         </div>
       </section>
 
-      <section className="page-insight-strip" aria-label="Deal safety summary">
-        <Link href="#mega-deals" className="promo-insight-hot">
-          <span>Hot deals</span>
-          <strong>{megaPromoDeals.length}</strong>
-          <small>Commercial offers with score and payout context.</small>
-        </Link>
-        <Link href="#all-offers" className="promo-insight-official">
-          <span>Official offers</span>
-          <strong>{officialOfferCount}</strong>
-          <small>Live offers documented on an official firm page.</small>
-        </Link>
-        <Link href="#all-offers" className="promo-insight-check">
-          <span>Checkout checks</span>
-          <strong>{checkoutVerificationCount}</strong>
-          <small>Partner codes with no guaranteed public percentage.</small>
-        </Link>
-        <Link href="/audit" className="promo-insight-legal">
-          <span>Legal mapped</span>
-          <strong>{legalMappedDealCount}</strong>
-          <small>Promoted firms with a mapped legal or operating structure.</small>
-        </Link>
-        <Link href="/audit" className="promo-insight-sources">
-          <span>Deep sources</span>
-          <strong>{deepSourceDealCount}</strong>
-          <small>Promoted firms with five or more saved source links.</small>
-        </Link>
-        <Link href="/comparateur" className="promo-insight-compare">
-          <span>Before checkout</span>
-          <strong>Compare</strong>
-          <small>Check rules and reliability before using a code.</small>
-        </Link>
+      <section className="pr-stat-line" aria-label="Deal safety summary">
+        <dl>
+          <div><dt>Hot deals</dt><dd>{megaPromoDeals.length}</dd></div>
+          <div><dt>Official offers</dt><dd>{officialOfferCount}</dd></div>
+          <div><dt>Checkout checks</dt><dd>{checkoutVerificationCount}</dd></div>
+          <div><dt>Legal mapped</dt><dd>{legalMappedDealCount}</dd></div>
+          <div><dt>5+ sources</dt><dd>{deepSourceDealCount}</dd></div>
+        </dl>
+        <Link href="/comparateur" className="pr-link">Compare rules and reliability before using a code <span aria-hidden="true">→</span></Link>
       </section>
 
       <section className="section mega-deal-section" id="mega-deals">
@@ -169,90 +222,11 @@ export default function PromosPage() {
             This section is intentionally commercial: these are the offers that make people want to click. The caution stays visible next to them.
           </p>
         </div>
-        <div className="mega-deal-grid">
+        <div className="pr-deal-grid pr-deal-grid-featured">
           {megaPromoDeals.map((deal, index) => {
             const firm = getFirmBySlug(deal.slug);
             if (!firm) return null;
-
-            return (
-              <article className={`mega-deal-card ${index === 0 ? 'mega-deal-card-featured' : ''}`} key={`mega-${deal.slug}-${deal.code}`}>
-                <div className="mega-deal-topline">
-                  <span className="mega-rank">#{index + 1}</span>
-                  <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                    <span>Score</span>
-                    <strong>{firm.score}</strong>
-                    <small>/100</small>
-                  </div>
-                  <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>Payout {toEnglishText(firm.reviewSignals.payoutRisk)}</span>
-                  <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>Legal {firm.regulatoryAudit.riskLevel}</span>
-                </div>
-
-                <div className="firm-result-main">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
-                  <div>
-                    <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
-                    <div className="firm-subline">{toEnglishText(deal.label)}</div>
-                    <div className="ranking-proof-chips" aria-label={`${firm.name} deal proof context`}>
-                      <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>{toEnglishText(firm.auditStatus)}</span>
-                      <span className={`badge ${sourceDepthClass(firm)}`}>{sourceDepthLabel(firm)}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mega-deal-value">
-                  <span>{deal.value}</span>
-                  <strong>{toEnglishText(deal.title)}</strong>
-                </div>
-
-                <p>{toEnglishText(deal.commercialHook ?? deal.consumerVerdict)}</p>
-
-                <div className="mega-deal-proof">
-                  <div>
-                    <span>Code</span>
-                    <code>{deal.code}</code>
-                  </div>
-                  <div>
-                    <span>Proof</span>
-                    <strong>{toEnglishText(deal.proofLevel)}</strong>
-                  </div>
-                  <div>
-                    <span>Sources</span>
-                    <strong>{legalSourceCount(firm)}</strong>
-                  </div>
-                  <div>
-                    <span>Deal score</span>
-                    <strong>{deal.dealScore}/100</strong>
-                  </div>
-                </div>
-
-                <div className="promo-validity-grid">
-                  <div>
-                    <span>Status</span>
-                    <strong className={availabilityClass(deal.availability)}>{deal.availability}</strong>
-                  </div>
-                  <div>
-                    <span>Eligibility</span>
-                    <strong>{deal.eligibility}</strong>
-                  </div>
-                  <div className="promo-validity-wide">
-                    <span>Validity</span>
-                    <strong>{deal.validity}</strong>
-                  </div>
-                </div>
-
-                <div className="mega-deal-note">
-                  <strong>{deal.urgency ?? 'Verify before buying'}</strong>
-                  <span>{toEnglishText(deal.checkoutTip ?? deal.caveats[0])}</span>
-                </div>
-
-                <div className="promo-actions">
-                  <a href={deal.sourceUrl} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                    Get the offer
-                  </a>
-                  <Link href={`/firm/${firm.slug}`} className="btn">Read analysis</Link>
-                </div>
-              </article>
-            );
+            return <DealCard key={`mega-${deal.slug}-${deal.code}`} deal={deal} firm={firm} rank={index + 1} featured cta="Get the offer" />;
           })}
         </div>
       </section>
@@ -261,95 +235,20 @@ export default function PromosPage() {
         <div className="section-heading">
           <div>
             <div className="eyebrow">Checked on {PROMO_REVIEW_DATE}</div>
-            <h2>All PropRadar-ranked offers.</h2>
+            <h2>More PropRadar-ranked offers.</h2>
           </div>
           <p className="section-note">
-            Official discounts come before rumors. PropRadar links are marked as affiliate links and do not change the score.
+            Official discounts come before rumors. PropRadar links are marked as affiliate links and do not change the score. Hot deals above are not repeated here.
           </p>
         </div>
-        <div className="promo-grid">
-          {bestPromoDeals.map((deal) => {
-            const firm = getFirmBySlug(deal.slug);
-            if (!firm) return null;
-
-            return (
-              <article className="promo-card" key={`${deal.slug}-${deal.code}-${deal.value}`}>
-                <div className="promo-card-top">
-                  <div className="firm-result-main">
-                    <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
-                    <div>
-                      <Link href={`/firm/${firm.slug}`} className="firm-result-name">{firm.name}</Link>
-                      <div className="firm-subline">{toEnglishText(deal.label)}</div>
-                      <div className="ranking-proof-chips" aria-label={`${firm.name} offer proof context`}>
-                        <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>
-                          Payout {toEnglishText(firm.reviewSignals.payoutRisk)}
-                        </span>
-                        <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                          Legal {firm.regulatoryAudit.riskLevel}
-                        </span>
-                        <span className={`badge ${sourceDepthClass(firm)}`}>
-                          {sourceDepthLabel(firm)}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="promo-score-stack">
-                    <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                      <span>Score</span>
-                      <strong>{firm.score}</strong>
-                      <small>/100</small>
-                    </div>
-                    <strong>{deal.dealScore}/100 deal</strong>
-                  </div>
-                </div>
-
-                <div className="promo-value">
-                  <span>{deal.value}</span>
-                  <strong>{toEnglishText(deal.title)}</strong>
-                  <code>{deal.code}</code>
-                </div>
-
-                <div className="promo-validity-grid">
-                  <div>
-                    <span>Status</span>
-                    <strong className={availabilityClass(deal.availability)}>{deal.availability}</strong>
-                  </div>
-                  <div>
-                    <span>Eligibility</span>
-                    <strong>{deal.eligibility}</strong>
-                  </div>
-                  <div className="promo-validity-wide">
-                    <span>Validity</span>
-                    <strong>{deal.validity}</strong>
-                  </div>
-                </div>
-
-                <div className="promo-proof-row">
-                  <span>{toEnglishText(deal.proofLevel)}</span>
-                  <span>{categoryLabels[deal.category] ?? deal.category}</span>
-                  <span>{legalSourceCount(firm)} source link(s)</span>
-                  <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>{toEnglishText(firm.auditStatus)}</span>
-                </div>
-
-                <p className="muted">{toEnglishText(deal.consumerVerdict)}</p>
-                <ul className="risk-list">
-                  {deal.caveats.map((caveat) => <li key={caveat}>{toEnglishText(caveat)}</li>)}
-                </ul>
-
-                <div className="promo-tags">
-                  {deal.bestFor.slice(0, 4).map((tag) => <span key={tag}>{toEnglishText(tag)}</span>)}
-                </div>
-
-                <div className="promo-actions">
-                  <a href={deal.sourceUrl} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                    Check offer
-                  </a>
-                  <Link href={`/firm/${firm.slug}`} className="btn">Read profile</Link>
-                </div>
-                <span className="promo-source">{toEnglishText(deal.sourceNote ?? deal.sourceLabel)}</span>
-              </article>
-            );
-          })}
+        <div className="pr-deal-grid">
+          {bestPromoDeals
+            .filter((deal) => !megaKeys.has(`${deal.slug}-${deal.code}`))
+            .map((deal) => {
+              const firm = getFirmBySlug(deal.slug);
+              if (!firm) return null;
+              return <DealCard key={`${deal.slug}-${deal.code}-${deal.value}`} deal={deal} firm={firm} cta="Check offer" />;
+            })}
         </div>
       </section>
 

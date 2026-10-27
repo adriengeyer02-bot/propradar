@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState, type FocusEvent } from 'react';
 import ActiveNavLink from './ActiveNavLink';
@@ -69,7 +68,7 @@ export default function RiskEvidenceMenu() {
         aria-controls={menuId}
         onClick={() => setIsOpen((current) => !current)}
       >
-        Risk &amp; Evidence
+        Risk watch
       </button>
       <div className="nav-menu-panel" id={menuId} aria-labelledby={buttonId}>
         <ActiveNavLink href="/radar-brief" activePrefixes={['/radar-brief/']}>Risk Brief</ActiveNavLink>
@@ -77,7 +76,7 @@ export default function RiskEvidenceMenu() {
         <ActiveNavLink href="/risques-payout">Payout risks</ActiveNavLink>
         <ActiveNavLink href="/audit-communautaire">Community watch</ActiveNavLink>
         <ActiveNavLink href="/regles">Trading rules</ActiveNavLink>
-        <Link href="/#methodologie" onClick={() => setIsOpen(false)}>Methodology</Link>
+        <ActiveNavLink href="/trustpilot-prop-firms">Trustpilot research</ActiveNavLink>
       </div>
     </div>
   );

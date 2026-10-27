@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import FirmLogo from '../components/FirmLogo';
 import RiskPip from '../components/ui/RiskPip';
+import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import ScoreRing from '../components/ui/ScoreRing';
 import type { PropFirm } from '../lib/propFirms';
 import { activeFirms, formatUsd, propFirms, riskyFirms } from '../lib/propFirms';
@@ -38,22 +39,6 @@ function jsonLd(data: unknown) {
   };
 }
 
-/** Short, informative trading tags only: no tag that would appear on every firm. */
-function firmTags(firm: PropFirm) {
-  const tags: string[] = [];
-  const text = `${firm.styles.join(' ')} ${firm.bestFor}`.toLowerCase();
-
-  if (text.includes('scalping')) tags.push('Scalping');
-  if (firm.newsTrading === 'Autorisé' || firm.newsTrading === 'Allowed') tags.push('News allowed');
-  if (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes') tags.push('EA allowed');
-
-  return tags.slice(0, 2);
-}
-
-function marketLabel(firm: PropFirm) {
-  return firm.styles.slice(0, 2).map((style) => toEnglishText(style)).join(' / ');
-}
-
 function legalSourceCount(firm: PropFirm) {
   return firm.regulatoryAudit.sources.length || firm.sources.length;
 }
@@ -74,12 +59,6 @@ function legalRiskWeight(firm: PropFirm) {
     24;
 
   return riskScore + (firm.legalVerified ? 0 : 18) + (legalSourceCount(firm) < 2 ? 10 : 0);
-}
-
-function shortLegal(level: PropFirm['regulatoryAudit']['riskLevel']) {
-  if (level === 'Low to medium') return 'Low–med';
-  if (level === 'Medium to high') return 'Med–high';
-  return level;
 }
 
 function FirmSearchContext({ firm, query }: { firm: PropFirm; query: string }) {
@@ -336,44 +315,12 @@ export default function Comparateur() {
         </div>
       ) : (
         <div className="pr-firm-table" role="table" aria-label="Prop firms ranked by PropRadar score" onPointerMove={followPointer}>
-          <div className="pr-firm-head" role="row">
-            <span role="columnheader">Firm</span>
-            <span role="columnheader">Score</span>
-            <span role="columnheader">From</span>
-            <span role="columnheader">Drawdown</span>
-            <span role="columnheader">Risk signals</span>
-            <span role="columnheader"><span className="sr-only">Profile</span></span>
-          </div>
-          {visibleFirms.map((firm, index) => {
-            const tags = firmTags(firm);
-            const rank = (currentPage - 1) * PAGE_SIZE + index + 1;
-            return (
-              <Link key={firm.slug} href={`/firm/${firm.slug}`} className={`pr-firm-row pr-edge-${scoreTone(firm.score)}`} role="row">
-                <span className="pr-firm-id" role="cell">
-                  <span className="pr-firm-rank" aria-hidden="true">{rank}</span>
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span className="pr-firm-name">
-                    <strong>
-                      {firm.name}
-                      {firm.status !== 'Active' ? <em className={`pr-tag pr-tone-${statusTone(firm.status)}`}>{toEnglishText(firm.status)}</em> : null}
-                      {firm.commercialRelationship === 'Affiliation transparente' ? <em className="pr-tag pr-tag-affiliate" title="PropRadar may earn a commission. The score is not affected.">Affiliate</em> : null}
-                    </strong>
-                    <span>{marketLabel(firm)}{tags.length ? ` · ${tags.join(' · ')}` : ''}</span>
-                    {isSearching ? <FirmSearchContext firm={firm} query={search} /> : null}
-                  </span>
-                </span>
-                <span className="pr-firm-score" role="cell"><ScoreRing score={firm.score} size="sm" /></span>
-                <span className="pr-firm-fig pr-firm-price" role="cell"><small>From</small>{formatUsd(firm.priceFrom)}</span>
-                <span className="pr-firm-fig pr-firm-dd" role="cell"><small>Drawdown</small>{toEnglishText(firm.drawdownType)}</span>
-                <span className="pr-firm-pips" role="cell">
-                  <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
-                  <RiskPip compact label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-                  <RiskPip compact label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
-                </span>
-                <span className="pr-firm-go" role="cell" aria-hidden="true">›</span>
-              </Link>
-            );
-          })}
+          <FirmTableHead />
+          {visibleFirms.map((firm, index) => (
+            <FirmRow key={firm.slug} firm={firm} rank={(currentPage - 1) * PAGE_SIZE + index + 1}>
+              {isSearching ? <FirmSearchContext firm={firm} query={search} /> : null}
+            </FirmRow>
+          ))}
         </div>
       )}
 

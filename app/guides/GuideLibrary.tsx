@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
+import FirmLogo from '../components/FirmLogo';
 import { useMemo, useState } from 'react';
 
 export type GuideType = 'selection' | 'comparison' | 'rules' | 'risk' | 'style' | 'deals';
@@ -24,10 +24,20 @@ export type GuideLibraryItem = {
   updatedLabel: string;
   recentlyUpdated: boolean;
   mark: string;
-  imageSrc: string;
-  imageAlt: string;
+  /** Up to four linked firms, shown as logos instead of a stock image. */
+  firms: { slug: string; name: string; logoDomain?: string }[];
   keywords: string[];
 };
+
+export function GuideLogoStrip({ firms, total }: { firms: GuideLibraryItem['firms']; total: number }) {
+  if (!firms.length) return null;
+  return (
+    <span className="pr-logo-strip" aria-label={`${total} linked firms, including ${firms.map((firm) => firm.name).join(', ')}`}>
+      {firms.map((firm) => <FirmLogo key={firm.slug} name={firm.name} logoDomain={firm.logoDomain} size="sm" />)}
+      {total > firms.length ? <span className="pr-logo-strip-more">+{total - firms.length}</span> : null}
+    </span>
+  );
+}
 
 const typeFilters: Array<{ value: 'all' | GuideType; label: string }> = [
   { value: 'all', label: 'All' },
@@ -163,21 +173,7 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
                 {guide.recentlyUpdated ? <span className="guide-updated-badge">Recently updated</span> : null}
               </div>
 
-              <div className="guide-library-card-media">
-                <Image
-                  src={guide.imageSrc}
-                  alt={guide.imageAlt}
-                  width={1536}
-                  height={864}
-                  sizes="(max-width: 760px) 100vw, (max-width: 1180px) 50vw, 33vw"
-                  quality={82}
-                />
-              </div>
-
-              <div className="guide-library-card-copy">
-                <strong>{guide.title}</strong>
-                <p>{guide.description}</p>
-              </div>
+              <GuideLogoStrip firms={guide.firms} total={guide.firmCount} />
 
               <div className="guide-library-card-metrics" aria-label={`${guide.title} coverage`}>
                 <span><strong>{guide.firmCount}</strong> linked firms</span>

@@ -91,45 +91,19 @@ export default function PayoutRiskPage() {
             <Link href="/audit" className="btn">Check sources</Link>
           </div>
         </div>
-        <div className="guide-proof-panel">
-          <div><strong>{risky.length}</strong><span>firms shown in watch mode</span></div>
-          <div><strong>{criticalCount}</strong><span>critical risks</span></div>
-          <div><strong>{elevatedCount}</strong><span>high risks</span></div>
-          <div><strong>{legalWatchCount}</strong><span>legal watch overlaps</span></div>
-        </div>
+        <dl className="pr-hero-stats">
+          <div><dt>Firms shown in watch mode</dt><dd>{risky.length}</dd></div>
+          <div><dt>Critical risks</dt><dd>{criticalCount}</dd></div>
+          <div><dt>High risks</dt><dd>{elevatedCount}</dd></div>
+          <div><dt>Legal watch overlaps</dt><dd>{legalWatchCount}</dd></div>
+        </dl>
       </section>
 
-      <section className="page-insight-strip" aria-label="Payout risk reading summary">
-        <Link href="#priority-alerts">
-          <span>Watch mode</span>
-          <strong>{risky.length}</strong>
-          <small>Firms shown because payout risk is above low.</small>
-        </Link>
-        <Link href="/comparateur">
-          <span>Critical</span>
-          <strong>{criticalCount}</strong>
-          <small>Use the full comparator before considering any checkout.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Source depth</span>
-          <strong>{deepSourceRiskCount}</strong>
-          <small>Watch profiles with five or more saved source links.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Press checks</span>
-          <strong>{articleNewsCheckedCount}</strong>
-          <small>Risky files where article, news or press searches were recorded.</small>
-        </Link>
-        <Link href="/regles">
-          <span>Rule traps</span>
-          <strong>Read terms</strong>
-          <small>Consistency, KYC and withdrawal caps matter most.</small>
-        </Link>
-        <Link href="/trustpilot-prop-firms">
-          <span>Review cross-check</span>
-          <strong>Required</strong>
-          <small>Public ratings do not prove withdrawals.</small>
-        </Link>
+      <section className="pr-stat-line" aria-label="Payout risk reading summary">
+        <dl>
+          <div><dt>Watch profiles with 5+ sources</dt><dd>{deepSourceRiskCount}</dd></div>
+          <div><dt>Press checks recorded</dt><dd>{articleNewsCheckedCount}</dd></div>
+        </dl>
       </section>
 
       <section className="section">

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
+import GuideHeroFirms from '../components/ui/GuideHeroFirms';
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
 import GuideArticleBody from '../components/GuideArticleBody';
@@ -19,12 +21,13 @@ import {
   topFirms,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
-import { GUIDE_EDITORIAL_REFRESH_DATE, getGuideVisual } from '../lib/guideVisuals';
+import { GUIDE_EDITORIAL_REFRESH_DATE } from '../lib/guideVisuals';
 import { SITE_NAME, SITE_URL } from '../lib/site';
 
 const BEST_PROP_FIRMS_DESCRIPTION =
   'What are the best prop firms right now? Compare current leaders by payout reliability, legal proof, rule clarity, source depth and community signals.';
-const BEST_PROP_FIRMS_VISUAL = getGuideVisual('meilleure-prop-firm-2026');
+/** Generated share card (logos + scores of the top firms), see app/guides/[slug]/opengraph-image.tsx. */
+const BEST_PROP_FIRMS_CARD = `${SITE_URL}/guides/meilleure-prop-firm-2026/opengraph-image`;
 const BEST_PROP_FIRMS_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 const BEST_PROP_FIRMS_UPDATED_AT = propFirms.reduce(
   (latest, firm) => (firm.lastReviewed > latest ? firm.lastReviewed : latest),
@@ -52,17 +55,13 @@ export const metadata: Metadata = {
     modifiedTime: BEST_PROP_FIRMS_UPDATED_AT,
     authors: [`${SITE_URL}/audit`],
     tags: ['best prop firms right now', 'prop firm ranking', 'prop firm payout reliability'],
-    images: [
-      { url: `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image16x9}`, width: 1536, height: 864, alt: BEST_PROP_FIRMS_VISUAL.alt },
-      { url: `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image4x3}`, width: 1200, height: 900, alt: BEST_PROP_FIRMS_VISUAL.alt },
-      { url: `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image1x1}`, width: 1000, height: 1000, alt: BEST_PROP_FIRMS_VISUAL.alt },
-    ],
+    images: [{ url: BEST_PROP_FIRMS_CARD, width: 1200, height: 630, alt: 'PropRadar ranking: top prop firms by score' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Prop Firms Right Now: Risk-First Ranking (2026)',
     description: BEST_PROP_FIRMS_DESCRIPTION,
-    images: [`${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image16x9}`],
+    images: [BEST_PROP_FIRMS_CARD],
   },
 };
 
@@ -152,12 +151,8 @@ export default function BestPropFirmsPage() {
     isAccessibleForFree: true,
     datePublished: BEST_PROP_FIRMS_PUBLISHED_AT,
     dateModified: rankingUpdatedAt,
-    primaryImageOfPage: `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image16x9}`,
-    image: [
-      `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image16x9}`,
-      `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image4x3}`,
-      `${SITE_URL}${BEST_PROP_FIRMS_VISUAL.image1x1}`,
-    ],
+    primaryImageOfPage: BEST_PROP_FIRMS_CARD,
+    image: [BEST_PROP_FIRMS_CARD],
     author: {
       '@type': 'Organization',
       '@id': `${SITE_URL}/audit#research`,
@@ -248,29 +243,14 @@ export default function BestPropFirmsPage() {
             <Link href="/audit" className="btn">Read source audit</Link>
           </div>
         </div>
-        <div className="guide-hero-visual">
-          <figure className="guide-cover guide-cover-ranking">
-            <Image
-              src={BEST_PROP_FIRMS_VISUAL.image16x9}
-              alt={BEST_PROP_FIRMS_VISUAL.alt}
-              width={BEST_PROP_FIRMS_VISUAL.width}
-              height={BEST_PROP_FIRMS_VISUAL.height}
-              sizes="(max-width: 900px) 100vw, 42vw"
-              quality={88}
-              priority
-            />
-            <figcaption>
-              <span>{BEST_PROP_FIRMS_VISUAL.label}</span>
-              <p>{BEST_PROP_FIRMS_VISUAL.caption}</p>
-            </figcaption>
-          </figure>
-          <div className="guide-proof-panel guide-cover-proof-panel">
-            <div><strong>{propFirms.length}</strong><span>firms tracked</span></div>
-            <div><strong>{shortlist.length}</strong><span>strong profiles shown here</span></div>
-            <div><strong>{legalMappedCount}</strong><span>legal files mapped</span></div>
-            <div><strong>{deepSourceCount}</strong><span>deep source files</span></div>
-          </div>
-        </div>
+        <GuideHeroFirms
+          title="Top of the ranking"
+          firms={shortlist}
+          limit={5}
+          moreHref="#ranking"
+          moreLabel="See the full ranking"
+          facts={[`${propFirms.length} firms tracked`, `${legalMappedCount} legal files mapped`, `${deepSourceCount} deep source files`]}
+        />
       </section>
 
       {bestArticle ? (
@@ -280,34 +260,6 @@ export default function BestPropFirmsPage() {
           langSwitch={{ href: '/fr/meilleures-prop-firms-2026', hrefLang: 'fr', label: 'Lire ce classement en français' }}
         />
       ) : null}
-
-      <section className="page-insight-strip" aria-label="Best prop firm decision summary">
-        <Link href="/comparateur">
-          <span>Shortlist</span>
-          <strong>{shortlist.length}</strong>
-          <small>Ranked profiles excluding critical payout risk.</small>
-        </Link>
-        <Link href="/risques-payout">
-          <span>Payout filter</span>
-          <strong>{lowPayoutShortlistCount}/{shortlist.length}</strong>
-          <small>Shortlisted profiles with low payout-risk classification.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Legal proof</span>
-          <strong>{legalMappedCount}</strong>
-          <small>Entity or operating-structure checks recorded in the public audit.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Press searches</span>
-          <strong>{articleNewsCheckedCount}</strong>
-          <small>Profiles where article, news or press searches were logged.</small>
-        </Link>
-        <Link href="/promos">
-          <span>Deals later</span>
-          <strong>After risk</strong>
-          <small>Discounts should not decide the ranking.</small>
-        </Link>
-      </section>
 
       <section className="section">
         <div className="section-heading">
@@ -340,7 +292,7 @@ export default function BestPropFirmsPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="ranking">
         <div className="section-heading">
           <div>
             <div className="eyebrow">Cautious Ranking</div>
@@ -348,42 +300,15 @@ export default function BestPropFirmsPage() {
           </div>
         </div>
 
-        <div className="guide-ranking-list">
+        <div className="pr-firm-table" role="table" aria-label="Top prop firms ranked by PropRadar score">
+          <FirmTableHead />
           {shortlist.map((firm, index) => (
-            <Link href={`/firm/${firm.slug}`} className="guide-ranking-row" key={firm.slug}>
-              <span className="guide-rank">{index + 1}</span>
-              <div className="firm-result-main">
-                <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
-                <div>
-                  <strong>{firm.name}</strong>
-                  <span>{toEnglishText(firm.bestFor)}</span>
-                  <div className="ranking-proof-chips" aria-label={`${firm.name} legal and source proof`}>
-                    <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                      Legal {firm.regulatoryAudit.riskLevel}
-                    </span>
-                    <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>
-                      {toEnglishText(firm.auditStatus)}
-                    </span>
-                    <span className={`badge ${sourceDepthClass(firm)}`}>
-                      {sourceDepthLabel(firm)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
-              <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
-              <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div>
-                <span>Trustpilot</span>
-                <strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong>
-                <small>{legalSourceCount(firm)} source link(s)</small>
-              </div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                <span>Score</span>
-                <strong>{firm.score}</strong>
-                <small>/100</small>
-              </div>
-            </Link>
+            <FirmRow
+              key={firm.slug}
+              firm={firm}
+              rank={index + 1}
+              subline={`${toEnglishText(firm.bestFor)} · ${toEnglishText(firm.auditStatus)} · ${legalSourceCount(firm)} source link(s)`}
+            />
           ))}
         </div>
       </section>
@@ -413,20 +338,6 @@ export default function BestPropFirmsPage() {
                   </strong>
                   <small>{sourceDepthLabel(firm)}</small>
                 </span>
-              </Link>
-            ))}
-          </div>
-        </article>
-        <article className="panel">
-          <div className="eyebrow">Transparency</div>
-          <h2>Commercial links stay visible</h2>
-          <div className="guide-signal-stack">
-            {shortlist.slice(0, 6).map((firm) => (
-              <Link href={`/firm/${firm.slug}`} key={firm.slug}>
-                <span>{firm.name}</span>
-                <strong className={`badge ${relationshipClass(firm.commercialRelationship)}`}>
-                  {firm.commercialRelationship === 'Affiliation transparente' ? 'Affiliate' : 'No conflict'}
-                </strong>
               </Link>
             ))}
           </div>

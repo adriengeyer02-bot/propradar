@@ -162,12 +162,10 @@ export default function RootLayout({
                 <span>PropRadar</span>
               </Link>
               <nav className="nav nav-primary" aria-label="Main navigation">
-                <ActiveNavLink href="/">Home</ActiveNavLink>
-                <ActiveNavLink href="/comparateur" activePrefixes={['/compare']}>Comparator</ActiveNavLink>
-                <ActiveNavLink href="/outils">Tools</ActiveNavLink>
-                <ActiveNavLink href="/promos">Deals</ActiveNavLink>
-                <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms']}>Guides</ActiveNavLink>
+                <ActiveNavLink href="/comparateur" activePrefixes={['/compare', '/outils', '/firm']}>Comparator</ActiveNavLink>
+                <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms', '/fr']}>Guides</ActiveNavLink>
                 <RiskEvidenceMenu />
+                <ActiveNavLink href="/promos">Deals</ActiveNavLink>
               </nav>
               <div className="header-actions">
                 <SiteSearch />
@@ -177,11 +175,10 @@ export default function RootLayout({
           </header>
           <nav className="mobile-tabbar" aria-label="Mobile navigation">
             <ActiveNavLink href="/">Home</ActiveNavLink>
-            <ActiveNavLink href="/comparateur" activePrefixes={['/compare']}>Compare</ActiveNavLink>
-            <ActiveNavLink href="/outils">Tools</ActiveNavLink>
+            <ActiveNavLink href="/comparateur" activePrefixes={['/compare', '/outils', '/firm']}>Compare</ActiveNavLink>
+            <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms', '/fr']}>Guides</ActiveNavLink>
+            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/risques-payout', '/audit-communautaire', '/regles', '/trustpilot-prop-firms']}>Risks</ActiveNavLink>
             <ActiveNavLink href="/promos">Deals</ActiveNavLink>
-            <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms']}>Guides</ActiveNavLink>
-            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/risques-payout', '/audit-communautaire', '/regles']}>Risks</ActiveNavLink>
           </nav>
           <div id="main-content" tabIndex={-1}>{children}</div>
           <footer className="footer">
@@ -198,7 +195,7 @@ export default function RootLayout({
                 <Link href="/outils">Decision tools</Link>
               </nav>
               <nav className="footer-nav" aria-label="Risk and evidence links">
-                <strong>Risk &amp; Evidence</strong>
+                <strong>Risk watch</strong>
                 <Link href="/radar-brief">Weekly risk brief</Link>
                 <Link href="/audit">Source audit</Link>
                 <Link href="/risques-payout">Payout watch</Link>

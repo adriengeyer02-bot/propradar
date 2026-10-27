@@ -774,61 +774,24 @@ export default function RulesPage() {
           </p>
           <p className="muted">Page reviewed July 15, 2026. Each audit keeps its own visible source-check date.</p>
         </div>
-        <div className="rules-hero-panel">
-          <div className="summary-stat">
-            <span>Deep audits</span>
-            <strong>{officialRuleAudits.length}</strong>
-            <small>primary sources opened</small>
-          </div>
-          <div className="summary-stat">
-            <span>Clauses extracted</span>
-            <strong>{clauseCount}</strong>
-            <small>{criticalCount} critical</small>
-          </div>
-          <div className="summary-stat">
-            <span>Mid/small firms</span>
-            <strong>{mediumSmallRuleAudits.length}</strong>
-            <small>{compactCriticalCount} critical alerts</small>
-          </div>
-          <div className="summary-stat">
-            <span>Coverage</span>
-            <strong>{propFirms.length}</strong>
-            <small>total firms tracked</small>
-          </div>
-        </div>
+        <dl className="pr-hero-stats">
+          <div><dt>Deep audits</dt><dd>{officialRuleAudits.length}</dd></div>
+          <div><dt>Clauses extracted ({criticalCount} critical)</dt><dd>{clauseCount}</dd></div>
+          <div><dt>Mid/small firms ({compactCriticalCount} critical)</dt><dd>{mediumSmallRuleAudits.length}</dd></div>
+          <div><dt>Firms tracked</dt><dd>{propFirms.length}</dd></div>
+        </dl>
       </section>
 
-      <section className="page-insight-strip" aria-label="Rule audit proof summary">
-        <Link href="/audit">
-          <span>Rule files</span>
-          <strong>{coveredFirmCount}</strong>
-          <small>Firms with a deep or compact rule source recorded.</small>
-        </Link>
-        <Link href="/risques-payout">
-          <span>Payout clauses</span>
-          <strong>{payoutSensitiveCount}</strong>
-          <small>Covered files where payout risk is above low.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Legal watch</span>
-          <strong>{legalWatchCoveredCount}</strong>
-          <small>Covered firms that still need extra legal or source caution.</small>
-        </Link>
-        <Link href="/audit">
-          <span>Deep sources</span>
-          <strong>{deepSourceCoveredCount}</strong>
-          <small>Covered firms with five or more saved source links.</small>
-        </Link>
-        <Link href="/guides/prop-firm-sans-consistency-rule">
-          <span>Consistency rule</span>
-          <strong>Best-day cap</strong>
-          <small>Understand the formula and compare programs without a consistency rule.</small>
-        </Link>
-        <Link href="/guides/prop-firm-news-trading">
-          <span>News trading</span>
-          <strong>Allowed?</strong>
-          <small>Compare event windows, funded-stage restrictions and payout clauses.</small>
-        </Link>
+      <section className="pr-stat-line" aria-label="Rule audit coverage">
+        <dl>
+          <div><dt>Rule files</dt><dd>{coveredFirmCount}</dd></div>
+          <div><dt>Payout-sensitive files</dt><dd>{payoutSensitiveCount}</dd></div>
+          <div><dt>Legal watch</dt><dd>{legalWatchCoveredCount}</dd></div>
+          <div><dt>5+ sources</dt><dd>{deepSourceCoveredCount}</dd></div>
+        </dl>
+        <p className="pr-related">
+          Related guides: <Link href="/guides/prop-firm-sans-consistency-rule">Consistency rule</Link> · <Link href="/guides/prop-firm-news-trading">News trading</Link>
+        </p>
       </section>
 
       <section className="rules-stat-strip" aria-label="Rule statistics">
@@ -965,6 +928,8 @@ export default function RulesPage() {
             PropRadar keeps smaller firms visible to avoid blind spots: spotted source, risk archive or file still needing sourcing.
           </p>
         </div>
+        <details className="pr-disclosure">
+          <summary>Show the {longTailRows.length} firms still in the audit queue</summary>
         <div className="longtail-rule-board">
           {longTailRows.map((firm) => {
             const coverageLabel = coverageStatusLabel(firm);
@@ -987,6 +952,7 @@ export default function RulesPage() {
             );
           })}
         </div>
+        </details>
       </section>
 
       <section className="section" data-nosnippet="">
@@ -1027,6 +993,8 @@ export default function RulesPage() {
             <h2>Active firms ranked by payout risk.</h2>
           </div>
         </div>
+        <details className="pr-disclosure">
+          <summary>Show the {activeRuleRows.length} active firms by payout risk</summary>
         <div className="rules-matrix">
           {activeRuleRows.map((firm) => (
             <Link href={`/firm/${firm.slug}`} className="rules-matrix-row" key={firm.slug}>
@@ -1045,6 +1013,7 @@ export default function RulesPage() {
             </Link>
           ))}
         </div>
+        </details>
       </section>
     </main>
   );

@@ -1,4 +1,3 @@
-import { getGuideVisual } from '../lib/guideVisuals';
 import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from '../lib/seoGuides';
 import { SITE_URL } from '../lib/site';
 import { editorialBriefs, getEditorialBriefPath } from '../lib/editorialBriefs';
@@ -19,15 +18,14 @@ function escapeXml(value: string) {
 export async function GET() {
   const guideUrls = seoGuides.map((guide) => {
     const display = getSeoGuideDisplay(guide);
-    const visual = getGuideVisual(guide.slug);
-
+    // Guides now show data panels instead of stock images: list the generated card.
     return [
       '  <url>',
       `    <loc>${escapeXml(`${SITE_URL}${getSeoGuidePath(guide)}`)}</loc>`,
       '    <image:image>',
-      `      <image:loc>${escapeXml(`${SITE_URL}${visual.image16x9}`)}</image:loc>`,
+      `      <image:loc>${escapeXml(`${SITE_URL}/guides/${guide.slug}/opengraph-image`)}</image:loc>`,
       `      <image:title>${escapeXml(display.title)}</image:title>`,
-      `      <image:caption>${escapeXml(visual.caption)}</image:caption>`,
+      `      <image:caption>${escapeXml(`${display.title}: firms compared by PropRadar score`)}</image:caption>`,
       '    </image:image>',
       '  </url>',
     ].join('\n');

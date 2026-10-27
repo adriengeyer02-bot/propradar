@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import FirmLogo from '../../components/FirmLogo';
 import GuideHelpfulness from '../../components/GuideHelpfulness';
+import GuideHeroFirms from '../../components/ui/GuideHeroFirms';
+import CompareTable from '../../components/ui/CompareTable';
+import ReliabilityRadar from '../../components/ui/ReliabilityRadar';
 import { AUDIT_CASE_FILES_UPDATED_AT, auditCaseFiles } from '../../lib/auditCaseFiles';
 import { getGuideEditorial } from '../../lib/guideEditorial';
 import {
@@ -40,6 +43,13 @@ const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 
 type Props = {
   params: Promise<{ slug: string }>;
+};
+
+/** Guides that compare two named firms: shown as an overlaid radar and a criterion table. */
+const HEAD_TO_HEAD: Record<string, string[]> = {
+  'ftmo-vs-the5ers': ['ftmo', 'the5ers'],
+  'topstep-vs-apex': ['topstep', 'apex-trader-funding'],
+  'funderpro-vs-the5ers': ['funderpro', 'the5ers'],
 };
 
 export function generateStaticParams() {
@@ -1224,6 +1234,7 @@ export default async function SeoGuidePage({ params }: Props) {
   const isNoChallengeGuide = guide.slug === 'prop-firm-sans-challenge';
   const isConsistencyGuide = guide.slug === 'prop-firm-sans-consistency-rule';
   const isTopstepApexGuide = guide.slug === 'topstep-vs-apex';
+  const headToHeadFirms = (HEAD_TO_HEAD[guide.slug] ?? []).map((firmSlug) => getFirmBySlug(firmSlug)).filter((firm): firm is NonNullable<ReturnType<typeof getFirmBySlug>> => Boolean(firm));
   const isNewsTradingGuide = guide.slug === 'prop-firm-news-trading';
   const isPrioritySearchGuide = isNoChallengeGuide || isConsistencyGuide || isTopstepApexGuide || isNewsTradingGuide;
   const isBeginnerGuide = guide.slug === 'prop-firm-pour-debutant';
@@ -1314,30 +1325,14 @@ export default async function SeoGuidePage({ params }: Props) {
     image: [
       {
         '@type': 'ImageObject',
-        url: `${SITE_URL}${guideVisual.image16x9}`,
-        width: 1536,
-        height: 864,
-        caption: guideVisual.caption,
-        creditText: 'PropRadar Research',
-      },
-      {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}${guideVisual.image4x3}`,
+        url: `${SITE_URL}/guides/${guide.slug}/opengraph-image`,
         width: 1200,
-        height: 900,
-        caption: guideVisual.caption,
-        creditText: 'PropRadar Research',
-      },
-      {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}${guideVisual.image1x1}`,
-        width: 1000,
-        height: 1000,
-        caption: guideVisual.caption,
+        height: 630,
+        caption: `${displayGuide.h1}: firms compared by PropRadar score`,
         creditText: 'PropRadar Research',
       },
     ],
-    thumbnailUrl: `${SITE_URL}${guideVisual.image16x9}`,
+    thumbnailUrl: `${SITE_URL}/guides/${guide.slug}/opengraph-image`,
     citation: guideCitations,
     author: {
       '@type': 'Organization',
@@ -1452,39 +1447,18 @@ export default async function SeoGuidePage({ params }: Props) {
             <Link href="/outils" className="btn">Choose by style</Link>
           </div>
         </div>
-        <div className="guide-hero-visual">
-          <figure className={`guide-cover guide-cover-${guideVisual.theme}`}>
-            <Image
-              src={guideVisual.image16x9}
-              alt={guideVisual.alt}
-              width={guideVisual.width}
-              height={guideVisual.height}
-              sizes="(max-width: 900px) 100vw, 42vw"
-              quality={88}
-              priority
-            />
-            <figcaption>
-              <span>{guideVisual.label}</span>
-              <p>{guideVisual.caption}</p>
-            </figcaption>
-          </figure>
-          <div className="guide-proof-panel guide-cover-proof-panel">
-            {isLeveragedGuide ? (
-              <>
-                <div className="proof-panel-long"><strong>No regulated affiliation known</strong><span>linked firm context</span></div>
-                <div className="proof-panel-long"><strong>Cyprus prop firm - 20% consistency - pay after pass</strong><span>main keywords</span></div>
-                <div className="proof-panel-long"><strong>{modifiedDateLabel}</strong><span>sources: official site, FAQ, Trustpilot, FX News Group, CySEC</span></div>
-              </>
-            ) : (
-              <>
-                <div><strong>{firms.length}</strong><span>linked firms</span></div>
-                <div><strong>{guideLegalMappedCount}</strong><span>legal files mapped</span></div>
-                <div><strong>{guidePayoutWatchCount}</strong><span>payout watch profiles</span></div>
-                <div><strong>{modifiedDateLabel}</strong><span>guide updated</span></div>
-              </>
-            )}
-          </div>
-        </div>
+        <GuideHeroFirms
+          title={headToHeadFirms.length >= 2 ? 'Compared in this guide' : 'Firms in this guide'}
+          firms={headToHeadFirms.length >= 2 ? headToHeadFirms : firms}
+          limit={headToHeadFirms.length >= 2 ? headToHeadFirms.length : 5}
+          moreHref={headToHeadFirms.length >= 2 ? '#head-to-head' : '#comparison'}
+          moreLabel={headToHeadFirms.length >= 2 ? 'See the head-to-head' : 'See the full comparison'}
+          facts={
+            isLeveragedGuide
+              ? ['Cyprus prop firm', '20% consistency', 'pay after pass', `updated ${modifiedDateLabel}`]
+              : [`${guideLegalMappedCount} legal files mapped`, `${guidePayoutWatchCount} on payout watch`, `updated ${modifiedDateLabel}`]
+          }
+        />
       </section>
 
       <nav className="guide-toc" aria-label="On this guide">
@@ -1634,6 +1608,21 @@ export default async function SeoGuidePage({ params }: Props) {
             <a href="https://ftmo.com/faq/can-i-trade-news/" target="_blank" rel="noreferrer">FTMO news FAQ</a>
             <a href="https://help.brightfunded.com/en/articles/9241694-can-i-trade-news" target="_blank" rel="noreferrer">BrightFunded news rules</a>
             <a href="https://www.the5ers.com/futures/" target="_blank" rel="noreferrer">The5ers Futures program</a>
+          </div>
+        </section>
+      ) : null}
+
+      {headToHeadFirms.length >= 2 ? (
+        <section className="container pr-section pr-head-to-head" id="head-to-head" aria-labelledby="head-to-head-title">
+          <header className="pr-section-head">
+            <div>
+              <div className="eyebrow">Head to head</div>
+              <h2 id="head-to-head-title">{headToHeadFirms.map((firm) => firm.name).join(' vs ')}, criterion by criterion</h2>
+            </div>
+          </header>
+          <div className="pr-compare-layout">
+            <ReliabilityRadar firms={headToHeadFirms} size={300} />
+            <CompareTable firms={headToHeadFirms} />
           </div>
         </section>
       ) : null}
