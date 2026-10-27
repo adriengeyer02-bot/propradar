@@ -663,6 +663,190 @@
           "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
         }
       ]
+    },
+    "oneup-trader": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 2793,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore across 2,793 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/oneuptrader.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "leeloo-trading": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 608,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/leelootrading.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 3.1 TrustScore across 608 reviews; 82% five-star and 14% one-star, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/leelootrading.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "uprofit-trader": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 6555,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 3.5 TrustScore across 6,555 reviews on the www.uprofit.com profile, which Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.uprofit.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "myfundedfutures": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.9,
+        "trustpilotReviewCount": 22576,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.9 TrustScore across 22,576 reviews, with Trustpilot's high-risk investment notice. Rapid plan profit split 90/10 with daily payouts confirmed on the official plan page; stored price left unchanged.",
+          "source": "https://www.trustpilot.com/review/myfundedfutures.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "MyFundedFutures Rapid plan (official)",
+          "url": "https://myfundedfutures.com/plans/rapid"
+        }
+      ]
+    },
+    "breakout-prop": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 1226,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore across 1,226 reviews, with Trustpilot's high-risk investment notice. Official site: default 80% split with a 90% option chosen at purchase, on-demand USDC payouts usually within 24 hours; stored price and split left unchanged.",
+          "source": "https://www.trustpilot.com/review/breakoutprop.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Ownership noted: Breakout's official site states it has been acquired by Kraken and describes itself as backed by Kraken. BeInCrypto (republished by Yahoo Finance, 28 May 2026) reports the acquisition was announced on 4 September 2025 and that Kraken Prop, launched on 27 May 2026, is built on Breakout.",
+          "source": "https://www.breakoutprop.com/kraken/"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Breakout: acquired by Kraken (official)",
+          "url": "https://www.breakoutprop.com/kraken/"
+        },
+        {
+          "label": "Yahoo Finance / BeInCrypto: Kraken Prop built on Breakout (28 May 2026)",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/kraken-prop-inside-funded-trader-183521927.html"
+        }
+      ]
+    },
+    "ftuk": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 790,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 3.8 TrustScore across 790 reviews; 66% five-star and 25% one-star, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/ftuk.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "lux-trading-firm": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.0,
+        "trustpilotReviewCount": 626,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/luxtradingfirm.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.0 TrustScore across 626 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/luxtradingfirm.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "tradeday": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 1452,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.6 TrustScore across 1,452 reviews, claimed profile, no Trustpilot warning. Stored price and split left unchanged: the official prices are shown as promotional.",
+          "source": "https://www.trustpilot.com/review/tradeday.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Program relaunch noted: TradeDay announced TradeDay 2.0 on 29 May 2026 (new Fast Pass path, updated Quick Pay, 90% split in Funded Live); earlier programs are closed to new purchases. On the official site, Quick Pay funded-sim payouts split 50/50 below $4k net profit and 80/20 above.",
+          "source": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TradeDay 2.0 announcement (official, 29 May 2026)",
+          "url": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
+        }
+      ]
     }
   }
 }
