@@ -335,7 +335,7 @@ export default function Comparateur() {
           <button type="button" className="btn" onClick={resetFilters}>Reset filters</button>
         </div>
       ) : (
-        <div className="pr-firm-table" role="table" aria-label="Prop firms ranked by PropRadar score">
+        <div className="pr-firm-table" role="table" aria-label="Prop firms ranked by PropRadar score" onPointerMove={followPointer}>
           <div className="pr-firm-head" role="row">
             <span role="columnheader">Firm</span>
             <span role="columnheader">Score</span>
@@ -442,4 +442,14 @@ function SignalList({
       </ul>
     </article>
   );
+}
+
+/** Feeds the row spotlight (CSS) with the pointer position inside the hovered row. */
+function followPointer(event: React.PointerEvent<HTMLDivElement>) {
+  if (event.pointerType !== 'mouse') return;
+  const row = (event.target as Element).closest<HTMLElement>('.pr-firm-row');
+  if (!row) return;
+  const rect = row.getBoundingClientRect();
+  row.style.setProperty('--pr-mx', `${event.clientX - rect.left}px`);
+  row.style.setProperty('--pr-my', `${event.clientY - rect.top}px`);
 }

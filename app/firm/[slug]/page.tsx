@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
 import { firmMetaOverrides } from '../../lib/firmMetaOverrides';
 import { getFirmChangelog } from '../../lib/firmUpdates';
 import Image from 'next/image';
@@ -8,6 +9,8 @@ import FirmLogo from '../../components/FirmLogo';
 import ChallengePath from '../../components/ui/ChallengePath';
 import RiskPip from '../../components/ui/RiskPip';
 import ScoreRing from '../../components/ui/ScoreRing';
+import ReviewFreshness from '../../components/ui/ReviewFreshness';
+import RevealOnView from '../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, statusTone, type Tone } from '../../lib/riskTone';
 import {
   BLUE_GUARDIAN_AFFILIATE_URL,
@@ -715,7 +718,7 @@ export default async function FirmPage({ params }: Props) {
           )}
 
           <aside className="pr-firm-scorecard" aria-label={`${firm.name} PropRadar score`}>
-            <ScoreRing score={firm.score} size="lg" />
+            <ScoreRing score={firm.score} size="lg" animate />
             <div className="pr-firm-scorecard-body">
               <span className="pr-firm-scorecard-label">PropRadar score</span>
               <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{firmDecision}</strong>
@@ -738,7 +741,7 @@ export default async function FirmPage({ params }: Props) {
           <div><dt>Drawdown</dt><dd>{toEnglishText(firm.drawdownType)}</dd></div>
           <div><dt>News trading</dt><dd>{toEnglishText(firm.newsTrading)}</dd></div>
           <div><dt>Proof level</dt><dd>{toEnglishText(firm.auditStatus)}</dd></div>
-          <div><dt>Last review</dt><dd><time dateTime={firm.lastReviewed}>{firm.lastReviewed}</time></dd></div>
+          <div><dt>Last review</dt><dd><ReviewFreshness date={firm.lastReviewed} /></dd></div>
           <div className="pr-key-facts-wide"><dt>Payout</dt><dd>{toEnglishText(firm.payoutDelay)}</dd></div>
         </dl>
 
@@ -1365,18 +1368,20 @@ export default async function FirmPage({ params }: Props) {
               Last review: {firm.lastReviewed}. Prices and rules should be rechecked on official sources before any decision.
             </p>
             {firmChangelog.length ? (
-              <div className="firm-changelog" id="update-history">
-                <h3>Update history</h3>
+              <RevealOnView className="firm-changelog pr-timeline">
+                <h3 id="update-history">Update history</h3>
                 <ol>
-                  {firmChangelog.map((entry) => (
-                    <li key={`${entry.date}-${entry.summary.slice(0, 24)}`}>
+                  {firmChangelog.map((entry, index) => (
+                    <li key={`${entry.date}-${entry.summary.slice(0, 24)}`} style={{ '--i': index } as CSSProperties}>
                       <time dateTime={entry.date}>{entry.date}</time>
                       <p>{entry.summary}</p>
-                      <a href={entry.source} target="_blank" rel="noopener noreferrer">Source</a>
+                      <a href={entry.source} target="_blank" rel="noopener noreferrer">
+                        Source <span className="pr-timeline-domain">{sourceDomain(entry.source)}</span>
+                      </a>
                     </li>
                   ))}
                 </ol>
-              </div>
+              </RevealOnView>
             ) : null}
           </div>
         </div>
@@ -1416,4 +1421,12 @@ function ManualReviewChannel({
       </ul>
     </article>
   );
+}
+
+function sourceDomain(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
 }

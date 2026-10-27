@@ -21,6 +21,9 @@
   --pr-gap: clamp(16px, 2.4vw, 28px);
   --pr-section: clamp(40px, 6vw, 72px);
   --pr-row-hover: rgba(11, 114, 133, 0.05);
+  --pr-glow: rgba(11, 114, 133, 0.1);
+  --pr-tip-bg: #0b1220;
+  --pr-tip-fg: #eaf0f7;
 }
 
 html[data-theme='dark'] {
@@ -31,6 +34,9 @@ html[data-theme='dark'] {
   --tone-watch-wash: rgba(251, 191, 36, 0.1);
   --tone-risk-wash: rgba(248, 113, 113, 0.1);
   --pr-row-hover: rgba(54, 214, 231, 0.05);
+  --pr-glow: rgba(54, 214, 231, 0.1);
+  --pr-tip-bg: #eaf0f7;
+  --pr-tip-fg: #0b111a;
 }
 
 .pr-tone-good { --tone: var(--tone-good); --tone-wash: var(--tone-good-wash); }
@@ -1082,3 +1088,177 @@ html body .home-why-card.pr-why {
 
 html body .home-why-card.pr-why h3 { margin: 4px 0 0; font-size: 18px; }
 html body .home-why-card.pr-why p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+
+/* ==========================================================================
+   Motion layer (October 2026)
+   Every effect reveals a piece of data; nothing sells. Short, played once,
+   CSS transforms only, and all of it is off under prefers-reduced-motion.
+   Content is complete before any animation runs.
+   ========================================================================== */
+
+/* ---------- Home radar: live ---------- */
+.pr-radar-stage { position: relative; max-width: 420px; margin: 0 auto; }
+.pr-radar-live svg { touch-action: manipulation; }
+.pr-radar-live svg.has-hot { cursor: pointer; }
+.pr-radar-live svg[data-live] .pr-radar-sweep { animation: none; }
+.pr-radar-sweep-edge { stroke: var(--accent); stroke-width: 1.2; opacity: 0.5; }
+.pr-radar-live .pr-radar-ring { transition: stroke 0.16s ease; }
+.pr-radar-live .pr-radar-ring.is-band { stroke: var(--accent); stroke-width: 1.5; }
+.pr-radar-live .pr-radar-dot { transform-box: fill-box; transform-origin: center; transition: transform 0.14s ease-out, opacity 0.2s ease; }
+.pr-radar-live .pr-radar-dot.is-hot { transform: scale(2); opacity: 1 !important; }
+.pr-radar-live .pr-radar-dot.is-dim,
+.pr-radar-live .pr-radar-pin.is-dim { opacity: 0.12 !important; }
+.pr-radar-pin { transition: opacity 0.2s ease; }
+.pr-radar-orbit { fill: none; stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.6; }
+.pr-radar-beam { stroke: var(--accent); stroke-width: 1.2; stroke-dasharray: 3 4; }
+.pr-radar-echo {
+  fill: none;
+  stroke: var(--tone);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  transform-box: fill-box;
+  transform-origin: center;
+  pointer-events: none;
+  animation: pr-echo 1.4s ease-out forwards;
+}
+@keyframes pr-echo { from { transform: scale(1); opacity: 0.7; } to { transform: scale(2.8); opacity: 0; } }
+
+.pr-radar-tip {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  gap: 3px;
+  width: max-content;
+  min-width: 180px;
+  max-width: 200px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--pr-tip-fg);
+  background: var(--pr-tip-bg);
+  box-shadow: 0 10px 30px rgba(4, 12, 24, 0.25);
+  font-size: 13px;
+  line-height: 1.35;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 14px));
+  animation: pr-tip-in 0.12s ease-out;
+}
+.pr-radar-tip strong { font-size: 15px; font-stretch: var(--figure-stretch, 88%); }
+.pr-radar-tip-row { display: flex; justify-content: space-between; gap: 12px; font-variant-numeric: tabular-nums; }
+.pr-radar-tip-pill { padding: 1px 8px; border-radius: 999px; color: #04121a; background: var(--tone); font-size: 11.5px; font-style: normal; font-weight: 700; }
+@keyframes pr-tip-in { from { opacity: 0; } }
+
+.pr-radar-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--soft);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+.pr-radar-filter:hover,
+.pr-radar-filter.is-on { border-color: var(--line); background: var(--accent-wash, var(--pr-row-hover)); }
+.pr-radar-filter[aria-pressed='true'] { border-color: var(--accent); }
+.pr-radar-filter:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pr-radar-legend .pr-radar-readout { min-height: 2.7em; }
+.pr-radar-readout b { color: var(--text); }
+
+/* ---------- Score ring: draw + count up ---------- */
+@property --pr-ring-n {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+.pr-ring-figure strong { font-variant-numeric: tabular-nums; }
+@keyframes pr-ring-draw { from { stroke-dasharray: 0 var(--pr-ring-circ, 999); } }
+@keyframes pr-ring-count { from { --pr-ring-n: 0; } to { --pr-ring-n: var(--pr-ring-to); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .pr-ring-animate .pr-ring-value { animation: pr-ring-draw 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .pr-ring-animate .pr-count { display: inline-grid; }
+  .pr-ring-animate .pr-count-final,
+  .pr-ring-animate .pr-count::after { grid-area: 1 / 1; }
+  .pr-ring-animate .pr-count-final { visibility: hidden; }
+  .pr-ring-animate .pr-count::after {
+    content: counter(pr-ring);
+    counter-reset: pr-ring var(--pr-ring-n);
+    animation: pr-ring-count 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+}
+
+/* ---------- Review freshness ---------- */
+.pr-fresh { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.pr-fresh-dot { position: relative; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--fresh, var(--muted)); }
+.pr-fresh-fresh { --fresh: var(--tone-good); }
+.pr-fresh-recent { --fresh: var(--accent); }
+.pr-fresh-stale { --fresh: var(--tone-watch); }
+.pr-fresh-ago { color: var(--muted); font-weight: 500; }
+.pr-fresh-fresh .pr-fresh-dot::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 2px solid var(--fresh);
+  border-radius: 50%;
+  opacity: 0;
+  animation: pr-fresh-pulse 2.4s ease-out infinite;
+}
+@keyframes pr-fresh-pulse { 0% { transform: scale(0.5); opacity: 0.7; } 100% { transform: scale(1.5); opacity: 0; } }
+
+/* ---------- Update history as a timeline ---------- */
+.pr-timeline ol { position: relative; gap: 6px; padding-left: 22px; }
+.pr-timeline ol::before,
+.pr-timeline ol::after { content: ''; position: absolute; top: 8px; bottom: 8px; left: 5px; width: 2px; border-radius: 2px; background: var(--line); }
+.pr-timeline ol::after { background: var(--accent); transform: scaleY(0); transform-origin: top; }
+.pr-timeline li { position: relative; padding: 8px 12px; border-left: 0; border-radius: 10px; transition: background 0.14s ease; }
+.pr-timeline li:hover { background: var(--pr-row-hover); }
+.pr-timeline li::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: -22px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--surface);
+  box-sizing: border-box;
+}
+.pr-timeline-domain { color: var(--muted); font-weight: 600; }
+.pr-timeline.is-revealed ol::after { animation: pr-draw-line 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.pr-timeline.is-revealed li { animation: pr-rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(min(var(--i, 0), 6) * 120ms + 150ms); }
+@keyframes pr-draw-line { to { transform: scaleY(1); } }
+@keyframes pr-rise { from { opacity: 0.25; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Comparator rows: pointer spotlight ---------- */
+.pr-firm-row { isolation: isolate; }
+.pr-firm-row::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(260px circle at var(--pr-mx, 50%) var(--pr-my, 50%), var(--pr-glow), transparent 70%);
+  transition: opacity 0.16s ease;
+}
+.pr-firm-row:hover::after { opacity: 1; }
+.pr-firm-id { transition: transform 0.16s ease-out; }
+.pr-firm-row:hover .pr-firm-id { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .pr-firm-row:hover .pr-ring-value { animation: pr-ring-draw 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-radar-echo { display: none; }
+  .pr-radar-tip { animation: none; }
+  .pr-fresh-dot::after { animation: none; display: none; }
+  .pr-timeline ol::after { transform: scaleY(1); }
+  .pr-firm-id,
+  .pr-radar-live .pr-radar-dot { transition: none; }
+  .pr-firm-row:hover .pr-firm-id { transform: none; }
+}
