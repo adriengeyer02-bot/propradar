@@ -1,3 +1,4 @@
+import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
 import PageStructuredData from '../components/PageStructuredData';
@@ -54,9 +55,8 @@ export default function PayoutRiskPage() {
     .sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore)
     .slice(0, 24);
   const criticalCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Critique').length;
-  const elevatedCount = propFirms.filter(
-    (firm) => firm.reviewSignals.payoutRiskScore >= 65 && firm.reviewSignals.payoutRiskScore < 85
-  ).length;
+  const aboveLowCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').length;
+  const elevatedCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Élevé').length;
   const incidentCount = risky.reduce((total, firm) => total + firm.incidents, 0);
   const legalWatchCount = risky.filter(isLegalWatchFirm).length;
   const deepSourceRiskCount = risky.filter((firm) => legalSourceCount(firm) >= 5).length;
@@ -92,16 +92,17 @@ export default function PayoutRiskPage() {
           </div>
         </div>
         <dl className="pr-hero-stats">
-          <div><dt>Firms shown in watch mode</dt><dd>{risky.length}</dd></div>
-          <div><dt>Critical risks</dt><dd>{criticalCount}</dd></div>
-          <div><dt>High risks</dt><dd>{elevatedCount}</dd></div>
-          <div><dt>Legal watch overlaps</dt><dd>{legalWatchCount}</dd></div>
+          <div><dt>Firms with payout risk above low</dt><dd>{aboveLowCount}</dd></div>
+          <div><dt>of which critical</dt><dd>{criticalCount}</dd></div>
+          <div><dt>of which high</dt><dd>{elevatedCount}</dd></div>
+          <div><dt>Shown below (most at risk)</dt><dd>{risky.length}</dd></div>
         </dl>
       </section>
 
       <section className="pr-stat-line" aria-label="Payout risk reading summary">
         <dl>
-          <div><dt>Watch profiles with 5+ sources</dt><dd>{deepSourceRiskCount}</dd></div>
+          <div><dt>Legal watch, in the list below</dt><dd>{legalWatchCount}</dd></div>
+          <div><dt>With 5+ sources</dt><dd>{deepSourceRiskCount}</dd></div>
           <div><dt>Press checks recorded</dt><dd>{articleNewsCheckedCount}</dd></div>
         </dl>
       </section>
@@ -113,28 +114,12 @@ export default function PayoutRiskPage() {
             <h2>Payout risk needs proof, not rumor.</h2>
           </div>
         </div>
-        <div className="best-method-grid">
-          <article className="panel best-method-card">
-            <span>Incident load</span>
-            <strong>{incidentCount}</strong>
-            <p>Tracked incident count across the current payout watchlist, weighted against score and public signals.</p>
-          </article>
-          <article className="panel best-method-card">
-            <span>Legal overlap</span>
-            <strong>{legalWatchCount}</strong>
-            <p>The highest caution zone is payout stress plus unverified entity, regulator warning or thin legal source stack.</p>
-          </article>
-          <article className="panel best-method-card">
-            <span>Source depth</span>
-            <strong>{deepSourceRiskCount}</strong>
-            <p>Deeply sourced risk files are more useful than isolated screenshots or unsourced social complaints.</p>
-          </article>
-          <article className="panel best-method-card">
-            <span>Review filter</span>
-            <strong>Public</strong>
-            <p>Trustpilot and community ratings are treated as signals, not proof that a disputed withdrawal is valid.</p>
-          </article>
-        </div>
+        <ul className="pr-decision-notes pr-decision-notes-4">
+          <li><strong>Incident load</strong><span>Tracked incident count across the current payout watchlist, weighted against score and public signals.</span></li>
+          <li><strong>Legal overlap</strong><span>The highest caution zone is payout stress plus unverified entity, regulator warning or thin legal source stack.</span></li>
+          <li><strong>Source depth</strong><span>Deeply sourced risk files are more useful than isolated screenshots or unsourced social complaints.</span></li>
+          <li><strong>Review filter</strong><span>Trustpilot and community ratings are treated as signals, not proof that a disputed withdrawal is valid.</span></li>
+        </ul>
       </section>
 
       <section className="section" id="priority-alerts">
@@ -144,44 +129,14 @@ export default function PayoutRiskPage() {
             <h2>Profiles to read twice</h2>
           </div>
         </div>
-        <div className="guide-risk-grid">
+        <div className="pr-firm-table" role="table" aria-label="Prop firms with payout risk above low">
+          <FirmTableHead />
           {risky.map((firm) => (
-            <Link href={`/firm/${firm.slug}`} className="guide-risk-card" key={firm.slug}>
-              <div className="firm-result-main">
-                <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                <div>
-                  <strong>{firm.name}</strong>
-                  <span>{toEnglishText(firm.reviewSignals.payoutIncidentStatus)}</span>
-                </div>
-              </div>
-              <div className="ranking-proof-chips" aria-label={`${firm.name} payout proof context`}>
-                <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                  Legal {firm.regulatoryAudit.riskLevel}
-                </span>
-                <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>
-                  {toEnglishText(firm.auditStatus)}
-                </span>
-                <span className={`badge ${sourceDepthClass(firm)}`}>
-                  {sourceDepthLabel(firm)}
-                </span>
-              </div>
-              <div className="guide-risk-score">
-                <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
-                <strong>{firm.reviewSignals.payoutRiskScore}/100</strong>
-              </div>
-              <p>{toEnglishText(firm.reviewSignals.payoutIssues[0] ?? firm.communitySignal)}</p>
-              <div className="payout-risk-meta">
-                <span className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>
-                  Trustpilot {toEnglishText(firm.reviewSignals.trustpilotReliability)}
-                </span>
-                <small>{legalSourceCount(firm)} source link(s)</small>
-              </div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`Overall PropRadar score ${firm.score} out of 100`}>
-                <span>Overall</span>
-                <strong>{firm.score}</strong>
-                <small>/100</small>
-              </div>
-            </Link>
+            <FirmRow
+              key={firm.slug}
+              firm={firm}
+              subline={toEnglishText(firm.reviewSignals.payoutIssues[0] ?? firm.reviewSignals.payoutIncidentStatus)}
+            />
           ))}
         </div>
       </section>

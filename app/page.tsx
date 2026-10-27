@@ -11,7 +11,8 @@ import {
   topFirms,
   verifiedFirms,
 } from './lib/propFirms';
-import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from './lib/seoGuides';
+import { getSeoGuideDisplay, getSeoGuidePath, selectGuideFirms, seoGuides } from './lib/seoGuides';
+import { GuideLogoStrip } from './guides/GuideLibrary';
 import { toEnglishText } from './lib/i18n';
 
 export default function HomePage() {
@@ -193,7 +194,10 @@ export default function HomePage() {
               <span className="home-guide-content">
                 <small>{displayGuide.eyebrow}</small>
                 <strong>{displayGuide.title}</strong>
-                <span>{displayGuide.primaryKeywords.slice(0, 2).join(' / ')}</span>
+                <GuideLogoStrip
+                  firms={selectGuideFirms(guide, 4).map((firm) => ({ slug: firm.slug, name: firm.name, logoDomain: firm.logoDomain }))}
+                  total={selectGuideFirms(guide, propFirms.length).length}
+                />
               </span>
               <b aria-hidden="true">&gt;</b>
             </Link>

@@ -172,7 +172,7 @@ export default function TrustpilotGuidePage() {
               </div>
               <div><span>Raw rating</span><strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'To verify'}</strong></div>
               <div><span>Reviews</span><strong>{firm.reviewSignals.trustpilotReviewCount?.toLocaleString('en-US') ?? 'N/A'}</strong></div>
-              <div><span>Alerts</span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0}</strong></div>
+              <div><span>Counted alerts</span><strong>{typeof firm.reviewSignals.trustpilotFlaggedReviewCount === 'number' ? firm.reviewSignals.trustpilotFlaggedReviewCount : '—'}</strong></div>
               <div>
                 <span>Reliability</span>
                 <strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong>
