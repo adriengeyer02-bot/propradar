@@ -6,6 +6,7 @@ import FirmLogo from '../../components/FirmLogo';
 import GuideHelpfulness from '../../components/GuideHelpfulness';
 import GuideHeroFirms from '../../components/ui/GuideHeroFirms';
 import CompareTable from '../../components/ui/CompareTable';
+import FirmRow, { FirmTableHead } from '../../components/ui/FirmRow';
 import ReliabilityRadar from '../../components/ui/ReliabilityRadar';
 import { AUDIT_CASE_FILES_UPDATED_AT, auditCaseFiles } from '../../lib/auditCaseFiles';
 import { getGuideEditorial } from '../../lib/guideEditorial';
@@ -1671,15 +1672,18 @@ export default async function SeoGuidePage({ params }: Props) {
                 : 'Data comes from official pages, review platforms and documented payout incidents. Always recheck the official page before buying because rules change often.'}
             </p>
           </div>
-          <div className="best-method-grid">
+          <ul className="pr-weights">
             {rankingMethodology.map((item) => (
-              <article className="panel best-method-card" key={item.label}>
-                <strong>{item.weight}</strong>
-                <span>{item.label}</span>
+              <li key={item.label}>
+                <span className="pr-weights-head">
+                  <strong>{item.label}</strong>
+                  <em>{item.weight}</em>
+                </span>
+                <span className="pr-weights-track" aria-hidden="true"><span style={{ width: item.weight }} /></span>
                 <p>{item.text}</p>
-              </article>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       ) : null}
 
@@ -2128,17 +2132,6 @@ export default async function SeoGuidePage({ params }: Props) {
         )}
       </section>
 
-      <aside className="guide-inline-cta" aria-label="Guide comparison actions">
-        <div>
-          <span>Turn the research into a shortlist</span>
-          <strong>Compare the firms that fit this guide, not the whole market.</strong>
-          <p>Start with the selected profiles below, then check their current price, rules and payout risk side by side.</p>
-        </div>
-        <div className="guide-inline-cta-actions">
-          <a href="#shortlist" className="btn">See firms in this guide</a>
-          <Link href="/comparateur" className="btn btn-primary">Open the comparator</Link>
-        </div>
-      </aside>
 
       {isFtmoAlternativesGuide ? (
         <>
@@ -2341,17 +2334,6 @@ export default async function SeoGuidePage({ params }: Props) {
       ) : null}
 
       <section className="section" id="shortlist">
-        <div className="guide-profile-grid">
-          {decisionCards.map((card) => (
-            <article className="panel guide-profile-card" key={card.label}>
-              <span>{card.label}</span>
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
         <div className="section-heading">
           <div>
             <div className="eyebrow">{editorial.selectionEyebrow}</div>
@@ -2359,71 +2341,51 @@ export default async function SeoGuidePage({ params }: Props) {
           </div>
           <p className="section-note">{editorial.selectionNote}</p>
         </div>
-        <div className="guide-ranking-list">
+        <ul className="pr-decision-notes">
+          {decisionCards.map((card) => (
+            <li key={card.label}>
+              <strong>{card.label}</strong>
+              <span>{card.text}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="pr-firm-table" role="table" aria-label={editorial.selectionHeading}>
+          <FirmTableHead />
           {firms.map((firm, index) => (
-            <Link href={`/firm/${firm.slug}`} className="guide-ranking-row seo-firm-row" key={firm.slug}>
-              <span className="guide-rank">{index + 1}</span>
-              <div className="firm-result-main">
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
-                  <div>
-                    <strong>{firm.name}</strong>
-                    <span>{toEnglishText(firm.bestFor)}</span>
-                    <div className="ranking-proof-chips" aria-label={`${firm.name} selected-firm proof context`}>
-                      <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                        Legal {firm.regulatoryAudit.riskLevel}
-                      </span>
-                      <span className={`badge ${auditStatusClass(firm.auditStatus)}`}>
-                        {toEnglishText(firm.auditStatus)}
-                      </span>
-                      <span className={`badge ${sourceDepthClass(firm)}`}>
-                        {sourceDepthLabel(firm)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
-              <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
-              <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div>
-                <span>Trustpilot</span>
-                <strong className={`badge ${reviewReliabilityClass(firm.reviewSignals.trustpilotReliability)}`}>{toEnglishText(firm.reviewSignals.trustpilotReliability)}</strong>
-                <small>{legalSourceCount(firm)} source link(s)</small>
-              </div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
-                <span>Score</span>
-                <strong>{firm.score}</strong>
-                <small>/100</small>
-              </div>
-            </Link>
+            <FirmRow
+              key={firm.slug}
+              firm={firm}
+              rank={index + 1}
+              subline={`${toEnglishText(firm.bestFor)} · ${toEnglishText(firm.auditStatus)}`}
+            />
           ))}
         </div>
       </section>
 
-      <section className="section guide-card-grid" id="faq">
-        <article className="panel">
+      <section className="section pr-guide-end" id="faq">
+        <div>
           <div className="eyebrow">FAQ</div>
           <h2>{editorial.faqHeading}</h2>
-          <div className="seo-faq-stack">
-            {displayGuide.faq.map((item) => (
-              <div key={item.question}>
-                <strong>{item.question}</strong>
+          <div className="pr-faq">
+            {displayGuide.faq.map((item, index) => (
+              <details key={item.question} open={index === 0}>
+                <summary>{item.question}</summary>
                 <p>{expandedFaqAnswer(item.answer, displayGuide)}</p>
-              </div>
+              </details>
             ))}
           </div>
-        </article>
-        <article className="panel">
+        </div>
+        <aside>
           <div className="eyebrow">Continue</div>
           <h2>{editorial.continueHeading}</h2>
-          <div className="guide-signal-stack">
+          <ul className="pr-quick-links">
             {displayGuide.internalLinks.map((link) => (
-              <Link href={link.href} key={link.href}>
-                <span>{link.label}</span>
-                <strong>Open</strong>
-              </Link>
+              <li key={link.href}>
+                <Link href={link.href}>{link.label} <span aria-hidden="true">→</span></Link>
+              </li>
             ))}
-          </div>
-        </article>
+          </ul>
+        </aside>
       </section>
 
       <GuideHelpfulness slug={guide.slug} prompt={editorial.feedbackPrompt} />
@@ -2447,15 +2409,21 @@ export default async function SeoGuidePage({ params }: Props) {
             <h2>{editorial.relatedGuidesHeading}</h2>
           </div>
         </div>
-        <div className="guide-entry-grid">
-          {relatedGuides.map((related) => (
-            <Link href={getSeoGuidePath(related)} className="guide-entry-card" key={related.slug}>
-              <span>{getSeoGuideDisplay(related).eyebrow}</span>
-              <strong>{getSeoGuideDisplay(related).title}</strong>
-              <small>{getSeoGuideDisplay(related).answer}</small>
-            </Link>
-          ))}
-        </div>
+        <ul className="pr-link-list">
+          {relatedGuides.map((related) => {
+            const display = getSeoGuideDisplay(related);
+            return (
+              <li key={related.slug}>
+                <Link href={getSeoGuidePath(related)} className="pr-link-row">
+                  <span className="pr-link-row-tag">{display.eyebrow}</span>
+                  <strong>{display.title}</strong>
+                  <small>{display.answer}</small>
+                  <span className="pr-link-row-go" aria-hidden="true">→</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </main>
   );
