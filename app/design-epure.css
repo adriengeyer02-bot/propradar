@@ -2010,3 +2010,16 @@ html body .guide-research-standard-grid dd { margin: 2px 0 0; color: var(--soft)
 }
 .pr-decision-notes-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } @media (max-width: 980px) { .pr-decision-notes-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } } @media (max-width: 640px) { .pr-decision-notes-4 { grid-template-columns: 1fr; } }
 html body .home-guide-card .pr-logo-strip { margin-top: 12px; }
+
+/* Promo codes withdrawn at the last review */
+.pr-withdrawn-deals {
+  margin: 20px 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted, #5b6472);
+}
+.pr-withdrawn-deals code {
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: line-through;
+}

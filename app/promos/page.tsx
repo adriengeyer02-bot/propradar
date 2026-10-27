@@ -22,6 +22,7 @@ import {
   getFuturesPromoShortlist,
   getMegaPromoDeals,
   promoFaq,
+  withdrawnPromoDeals,
 } from '../lib/promoResearch';
 
 export const revalidate = 86400;
@@ -249,6 +250,18 @@ export default function PromosPage() {
               return <DealCard key={`${deal.slug}-${deal.code}-${deal.value}`} deal={deal} firm={firm} cta="Check offer" />;
             })}
         </div>
+        {withdrawnPromoDeals.length ? (
+          <p className="pr-withdrawn-deals">
+            <strong>Withdrawn on {PROMO_REVIEW_DATE}:</strong>{' '}
+            {withdrawnPromoDeals.map((deal, index) => (
+              <span key={`${deal.slug}-${deal.code}`}>
+                {index ? ', ' : ''}
+                <code>{deal.code}</code> ({getFirmBySlug(deal.slug)?.name ?? deal.slug})
+              </span>
+            ))}
+            . These codes were no longer shown on the firm&apos;s official page, so PropRadar stopped listing them.
+          </p>
+        ) : null}
       </section>
 
       <section className="section">
