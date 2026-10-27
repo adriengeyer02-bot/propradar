@@ -11,6 +11,7 @@ import {
   regulatoryRiskClass,
   scoreClass,
   statusClass,
+  drawdownLabel,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 
@@ -943,7 +944,7 @@ export default function RulesPage() {
                     <span>{toEnglishText(firm.products[0]?.name ?? 'Product to identify')}</span>
                   </div>
                 </div>
-                <span>{toEnglishText(firm.drawdownType)}</span>
+                <span>{drawdownLabel(firm, toEnglishText)}</span>
                 <span>{toEnglishText(firm.newsTrading)}</span>
                 <span>{toEnglishText(firm.eaAllowed)}</span>
                 <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
@@ -972,7 +973,7 @@ export default function RulesPage() {
                   <span>{toEnglishText(firm.products[0]?.name ?? 'Main product to identify')} - {formatUsd(firm.priceFrom)}</span>
                 </div>
               </div>
-              <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
+              <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
               <div><span>News</span><strong>{toEnglishText(firm.newsTrading)}</strong></div>
               <div><span>EA</span><strong>{toEnglishText(firm.eaAllowed)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
@@ -1005,7 +1006,7 @@ export default function RulesPage() {
                   <span>{formatUsd(firm.priceFrom)} - score {firm.score}/100</span>
                 </div>
               </div>
-              <div><span>Drawdown</span><strong>{toEnglishText(firm.drawdownType)}</strong></div>
+              <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
               <div><span>News</span><strong>{toEnglishText(firm.newsTrading)}</strong></div>
               <div><span>EA</span><strong>{toEnglishText(firm.eaAllowed)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
