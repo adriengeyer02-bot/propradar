@@ -7,7 +7,7 @@ import RiskPip from '../components/ui/RiskPip';
 import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import ScoreRing from '../components/ui/ScoreRing';
 import type { PropFirm } from '../lib/propFirms';
-import { activeFirms, formatUsd, propFirms, riskyFirms } from '../lib/propFirms';
+import { activeFirms, formatUsd, isProvisional, propFirms, riskyFirms } from '../lib/propFirms';
 import { findFirmSearchMatch, normalizeFirmSearch } from '../lib/firmSearch';
 import { toEnglishText } from '../lib/i18n';
 import { latestReviewDate, legalTone, payoutTone, reviewTone, scoreTone, statusTone } from '../lib/riskTone';
@@ -97,7 +97,7 @@ export default function Comparateur() {
         const matchesMarket = market === 'Tous' || firm.styles.some((style) => style.toLowerCase().includes(market.toLowerCase()));
         const matchesScore = scoreMin === 'Tous' || firm.score >= Number(scoreMin);
         const matchesPrice = priceMax === 'Tous' || (firm.priceFrom > 0 && firm.priceFrom <= Number(priceMax));
-        const matchesDrawdown = drawdown === 'Tous' || firm.drawdownType === drawdown;
+        const matchesDrawdown = drawdown === 'Tous' || (firm.drawdownType === drawdown && !isProvisional(firm, 'drawdownType'));
         const matchesLegal =
           legalFilter === 'Tous' ||
           (legalFilter === 'verified' && firm.legalVerified && !isLegalWatchFirm(firm)) ||

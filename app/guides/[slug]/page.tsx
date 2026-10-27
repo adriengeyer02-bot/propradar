@@ -20,6 +20,8 @@ import {
   scoreClass,
   type Product,
   type PropFirm,
+  drawdownLabel,
+  profitSplitLabel,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import GuideArticleBody from '../../components/GuideArticleBody';
@@ -2119,10 +2121,10 @@ export default async function SeoGuidePage({ params }: Props) {
                 <div><span>Entry fee</span><strong>{formatEntryFee(product)}</strong></div>
                 <div><span>Account</span><strong>{formatAccountRange(product)}</strong></div>
                 <div><span>Target</span><strong>{toEnglishText(product?.profitTarget ?? 'To verify')}</strong></div>
-                <div><span>Drawdown</span><strong>{toEnglishText(product?.maxDrawdown ?? firm.drawdownType)}</strong></div>
+                <div><span>Drawdown</span><strong>{toEnglishText(product?.maxDrawdown ?? drawdownLabel(firm))}</strong></div>
                 <div>
                   <span>Split / payout</span>
-                  <strong>{toEnglishText(product?.profitSplit ?? `${firm.profitSplit}%`)}</strong>
+                  <strong>{toEnglishText(product?.profitSplit ?? profitSplitLabel(firm))}</strong>
                   <small className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</small>
                 </div>
                 <div><span>Platforms</span><strong>{toEnglishText(product?.platforms.slice(0, 3).join(' / ') ?? 'To verify')}</strong></div>

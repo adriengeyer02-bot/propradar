@@ -14,9 +14,15 @@ import {
   reviewReliabilityClass,
   scoreClass,
   statusClass,
+  isProvisional,
   topFirms,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
+
+// A watchlist default is not a known drawdown: it never earns fit points.
+function knownDrawdown(firm: PropFirm): PropFirm['drawdownType'] | undefined {
+  return isProvisional(firm, 'drawdownType') ? undefined : firm.drawdownType;
+}
 
 type MarketChoice = 'Forex/CFD' | 'Futures' | 'Crypto' | 'Actions' | 'Tous';
 type StyleChoice =
@@ -100,23 +106,23 @@ function styleFit(firm: PropFirm, style: StyleChoice) {
   const text = `${firm.styles.join(' ')} ${firm.bestFor} ${firm.products.map((product) => product.description).join(' ')}`.toLowerCase();
 
   if (style === 'Débutant prudent') {
-    return firm.reviewSignals.payoutRisk === 'Faible' && firm.drawdownType !== 'Trailing' ? 22 : firm.status === 'Active' ? 8 : -10;
+    return firm.reviewSignals.payoutRisk === 'Faible' && knownDrawdown(firm) !== undefined && knownDrawdown(firm) !== 'Trailing' ? 22 : firm.status === 'Active' ? 8 : -10;
   }
 
   if (style === 'SMC / ICT') {
     let fit = 0;
     if (/forex|indices|cfd/.test(text)) fit += 10;
-    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD') fit += 14;
-    if (firm.drawdownType === 'Hybride') fit += 6;
+    if (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD') fit += 14;
+    if (knownDrawdown(firm) === 'Hybride') fit += 6;
     if (firm.reviewSignals.payoutRisk === 'Faible') fit += 10;
     if (firm.newsTrading === 'Variable') fit += 3;
     if (firm.eaAllowed === 'Non' || firm.eaAllowed === 'No') fit += 4;
-    if (firm.drawdownType === 'Trailing') fit -= 10;
+    if (knownDrawdown(firm) === 'Trailing') fit -= 10;
     return fit;
   }
 
   if (style === 'Swing trading') {
-    let fit = firm.drawdownType === 'Static' || firm.drawdownType === 'EOD' ? 22 : firm.drawdownType === 'Hybride' ? 8 : -12;
+    let fit = knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD' ? 22 : knownDrawdown(firm) === 'Hybride' ? 8 : -12;
     if (firm.reviewSignals.payoutRisk === 'Faible') fit += 8;
     if (isNewsBlocked(firm)) fit -= 4;
     return fit;
@@ -124,7 +130,7 @@ function styleFit(firm: PropFirm, style: StyleChoice) {
 
   if (style === 'Day trading') {
     let fit = firm.status === 'Active' ? 12 : -6;
-    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD' || firm.drawdownType === 'Hybride') fit += 8;
+    if (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD' || knownDrawdown(firm) === 'Hybride') fit += 8;
     if (firm.priceFrom > 0 && firm.priceFrom <= 150) fit += 6;
     if (firm.reviewSignals.payoutRisk !== 'Critique') fit += 8;
     return fit;
@@ -153,7 +159,7 @@ function styleFit(firm: PropFirm, style: StyleChoice) {
 
   if (style === 'Breakout') {
     let fit = firm.status === 'Active' ? 8 : -8;
-    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD') fit += 10;
+    if (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD') fit += 10;
     if (firm.newsTrading === 'Variable' || isNewsAllowed(firm)) fit += 5;
     if (firm.reviewSignals.payoutRisk === 'Faible') fit += 8;
     return fit;
@@ -190,25 +196,25 @@ function recommendationScore(
   else score -= Math.round(firm.reviewSignals.payoutRiskScore * 0.25);
 
   if (priority === 'Règles') {
-    if (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD') score += 12;
+    if (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD') score += 12;
     if (firm.newsTrading === 'Variable' || firm.eaAllowed === 'Variable') score -= 8;
   }
 
   if (priority === 'Score global') score += Math.round(firm.score * 0.18);
 
   if (drawdown === 'Static/EOD') {
-    score += firm.drawdownType === 'Static' || firm.drawdownType === 'EOD' ? 14 : -10;
+    score += knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD' ? 14 : -10;
   }
 
-  if (drawdown === 'Trailing accepté' && firm.drawdownType === 'Trailing') score += 6;
+  if (drawdown === 'Trailing accepté' && knownDrawdown(firm) === 'Trailing') score += 6;
 
   return score;
 }
 
 function bestReason(firm: PropFirm, style: StyleChoice, priority: PriorityChoice) {
   if (priority === 'Payout' && firm.reviewSignals.payoutRisk === 'Faible') return 'Low payout risk and solid overall score.';
-  if (style === 'SMC / ICT' && (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD')) return 'Good manual SMC fit: readable drawdown and rules to review before execution.';
-  if (style === 'Swing trading' && (firm.drawdownType === 'Static' || firm.drawdownType === 'EOD')) return 'More readable drawdown for holding positions.';
+  if (style === 'SMC / ICT' && (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD')) return 'Good manual SMC fit: readable drawdown and rules to review before execution.';
+  if (style === 'Swing trading' && (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD')) return 'More readable drawdown for holding positions.';
   if (style === 'Day trading' && firm.status === 'Active') return 'Good intraday profile: active firm, usable score and comparable signals.';
   if (style === 'Scalping') return 'Check clauses on fast trades, news and prohibited strategies.';
   if (style === 'EA / Algo' && (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes')) return 'EAs allowed, with rules to review before use.';

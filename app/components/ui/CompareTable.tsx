@@ -3,7 +3,7 @@ import FirmLogo from '../FirmLogo';
 import RiskPip from './RiskPip';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
-import { formatUsd } from '../../lib/propFirms';
+import { drawdownLabel, formatUsd, profitSplitLabel } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, reviewTone, statusTone } from '../../lib/riskTone';
 
@@ -35,8 +35,8 @@ const ROWS: Row[] = [
     render: (firm) => formatUsd(firm.priceFrom),
     best: (firms) => indexOfBest(firms, (firm) => (firm.priceFrom > 0 ? firm.priceFrom : undefined), 'min'),
   },
-  { label: 'Profit split', render: (firm) => (firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A') },
-  { label: 'Drawdown', render: (firm) => toEnglishText(firm.drawdownType) },
+  { label: 'Profit split', render: (firm) => profitSplitLabel(firm) },
+  { label: 'Drawdown', render: (firm) => drawdownLabel(firm, toEnglishText) },
   { label: 'News trading', render: (firm) => toEnglishText(firm.newsTrading) },
   { label: 'EA / bots', render: (firm) => toEnglishText(firm.eaAllowed) },
   {

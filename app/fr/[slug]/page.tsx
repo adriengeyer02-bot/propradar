@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import GuideArticleBody from '../../components/GuideArticleBody';
 import { frArticles, getFrArticle } from '../../lib/frArticles';
-import { formatUsd, propFirms } from '../../lib/propFirms';
+import { formatUsd, isProvisional, propFirms } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 
 type Props = {
@@ -151,7 +151,7 @@ export default async function FrArticlePage({ params }: Props) {
                   <td>{firm.score}/100</td>
                   <td>{statusFr[firm.status] ?? firm.status}</td>
                   <td>{firm.priceFrom > 0 ? `dès ${formatUsd(firm.priceFrom)}` : 'À vérifier'}</td>
-                  <td>{drawdownFr[firm.drawdownType] ?? firm.drawdownType}</td>
+                  <td>{isProvisional(firm, 'drawdownType') ? 'À vérifier' : drawdownFr[firm.drawdownType] ?? firm.drawdownType}</td>
                 </tr>
               ))}
             </tbody>

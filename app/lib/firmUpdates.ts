@@ -71,7 +71,10 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (set.status) next.status = set.status;
     if (typeof set.score === 'number') next.score = set.score;
     if (typeof set.priceFrom === 'number') next.priceFrom = set.priceFrom;
-    if (typeof set.profitSplit === 'number') next.profitSplit = set.profitSplit;
+    if (typeof set.profitSplit === 'number') {
+      next.profitSplit = set.profitSplit;
+      next.provisional = next.provisional?.filter((field) => field !== 'profitSplit');
+    }
     if (set.payoutDelay) next.payoutDelay = set.payoutDelay;
     if (typeof set.trustpilotRating === 'number') next.trustpilotRating = set.trustpilotRating;
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
@@ -90,6 +93,9 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       const known = new Set(next.sources.map((source) => source.url));
       next.sources = [...next.sources, ...update.addSources.filter((source) => !known.has(source.url))];
     }
+
+    // A closed firm is never a purchase option: no start link survives.
+    if (next.status === 'Fermée') next.products = next.products.map((product) => ({ ...product, linkToStart: undefined }));
 
     if (update.addIncidents?.length) {
       next.incidentsDetails = [...update.addIncidents, ...next.incidentsDetails];

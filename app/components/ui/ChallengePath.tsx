@@ -32,7 +32,7 @@ function stepsFor(product: Product): Step[] {
     },
     {
       title: 'Get paid',
-      value: `${toEnglishText(product.profitSplit)} split`,
+      value: /^to verify/i.test(product.profitSplit) ? 'Split to verify' : `${toEnglishText(product.profitSplit)} split`,
       note: product.hasConsistencyRule ? 'Consistency rule applies' : undefined,
     },
   ];

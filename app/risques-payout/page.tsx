@@ -6,6 +6,7 @@ import { createPageMetadata } from '../lib/pageMetadata';
 import type { PropFirm } from '../lib/propFirms';
 import {
   auditStatusClass,
+  documentedIncidents,
   payoutRiskClass,
   propFirms,
   regulatoryRiskClass,
@@ -57,7 +58,7 @@ export default function PayoutRiskPage() {
   const criticalCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Critique').length;
   const aboveLowCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').length;
   const elevatedCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Élevé').length;
-  const incidentCount = risky.reduce((total, firm) => total + firm.incidents, 0);
+  const incidentCount = risky.reduce((total, firm) => total + documentedIncidents(firm).length, 0);
   const legalWatchCount = risky.filter(isLegalWatchFirm).length;
   const deepSourceRiskCount = risky.filter((firm) => legalSourceCount(firm) >= 5).length;
   const articleNewsCheckedCount = risky.filter((firm) => firm.auditSourcesChecked.some((source) => /article|news|press/i.test(source))).length;

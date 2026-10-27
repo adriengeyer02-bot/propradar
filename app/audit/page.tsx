@@ -16,6 +16,7 @@ import {
   scoreClass,
   statusClass,
   verifiedFirms,
+  documentedIncidents,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 import { auditCaseFiles } from '../lib/auditCaseFiles';
@@ -207,7 +208,7 @@ export default function AuditPage() {
               { label: 'Trustpilot page identified', value: trustpilotCovered.length },
               { label: 'Legal entity mapped', value: legalVerifiedFirms.length },
               { label: 'Exact-name press / news search logged', value: articleNewsCheckedFirms.length },
-              { label: 'Tracked payout incidents', value: propFirms.filter((firm) => firm.incidents > 0).length },
+              { label: 'Documented payout incidents', value: propFirms.filter((firm) => documentedIncidents(firm).length > 0).length },
             ].map((item) => (
               <li key={item.label}>
                 <span className="pr-coverage-label">{item.label}</span>
