@@ -682,7 +682,7 @@
       ]
     },
     "instant-funding": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-10-28",
       "set": {},
       "changelog": [
         {
@@ -690,6 +690,14 @@
           "summary": "Corporate change: on 26 May 2026 Instant Funding announced it had acquired Funded Trading Plus; the release says both brands continue to operate independently. Trustpilot profile not found in this pass and official pricing not re-read: no field changed.",
           "source": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697",
           "fields": []
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/instantfunding.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "addSources": [
@@ -697,6 +705,9 @@
           "label": "PR Newswire: Instant Funding acquires Funded Trading Plus (26 May 2026)",
           "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/instantfunding.com)."
       ]
     },
     "oneup-trader": {
@@ -1203,6 +1214,70 @@
         "trustpilotReviewCount": 7805,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
       }
+    },
+    "pipfarm": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/pipfarm.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
+      ]
+    },
+    "aqua-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and ie mirrors. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/aquafunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/aquafunded.com)."
+      ]
+    },
+    "thinkcapital": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the uk and ca mirrors; the ie mirror still showed an older cached 4.0 rating. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/thinkcapital.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
+      ]
+    },
+    "blueberry-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/blueberryfunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueberryfunded.com)."
+      ]
     }
   }
 }
