@@ -1,4 +1,4 @@
-import type { PropFirm, SourceLink } from './propFirms';
+import type { PropFirm, RegulatoryEntity, SourceLink } from './propFirms';
 import updatesFile from '../data/firm-updates.json';
 
 /**
@@ -40,6 +40,8 @@ export type FirmUpdate = {
   }>;
   addSources?: SourceLink[];
   addIncidents?: string[];
+  /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
+  setEntities?: RegulatoryEntity[];
   changelog: FirmChangelogEntry[];
 };
 
@@ -119,6 +121,14 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
 
     // A closed firm is never a purchase option: no start link survives.
     if (next.status === 'Fermée') next.products = next.products.map((product) => ({ ...product, linkToStart: undefined }));
+
+    if (update.setEntities?.length) {
+      next.regulatoryAudit = { ...next.regulatoryAudit, entities: update.setEntities };
+      // Same rule as the base profile: "entity mapped" needs a known jurisdiction.
+      next.legalVerified =
+        next.status !== 'Fermée' &&
+        update.setEntities.some((entity) => Boolean(entity.jurisdiction) && !/to verify|international|unknown|unconfirmed/i.test(entity.jurisdiction));
+    }
 
     if (update.addIncidents?.length) {
       next.incidentsDetails = [...update.addIncidents, ...next.incidentsDetails];

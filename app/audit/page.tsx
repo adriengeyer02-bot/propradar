@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import { latestReviewDate } from '../lib/riskTone';
+import JurisdictionBoard from '../components/ui/JurisdictionBoard';
 import FirmLogo from '../components/FirmLogo';
 import PageStructuredData from '../components/PageStructuredData';
 import { createPageMetadata } from '../lib/pageMetadata';
@@ -234,6 +235,19 @@ export default function AuditPage() {
             ))}
           </ul>
         </article>
+      </section>
+
+      <section className="section" id="jurisdictions" aria-labelledby="jurisdictions-title">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Legal map</div>
+            <h2 id="jurisdictions-title">Where the firms register their companies.</h2>
+          </div>
+          <p className="section-note">
+            Every country where a tracked firm has a mapped entity. The bar shows the legal-file level PropRadar published for each firm there; country markers only come from official lists.
+          </p>
+        </div>
+        <JurisdictionBoard firms={propFirms} />
       </section>
 
       <section className="section audit-grid audit-legal-grid">
