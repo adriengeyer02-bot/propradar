@@ -7,10 +7,10 @@ import RiskPip from '../components/ui/RiskPip';
 import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import ScoreRing from '../components/ui/ScoreRing';
 import type { PropFirm } from '../lib/propFirms';
-import { activeFirms, formatUsd, isProvisional, propFirms, riskyFirms } from '../lib/propFirms';
+import { activeFirms, formatUsd, isProvisional, propFirms, riskyFirms, hasPayoutRiskSignal } from '../lib/propFirms';
 import { findFirmSearchMatch, normalizeFirmSearch } from '../lib/firmSearch';
 import { toEnglishText } from '../lib/i18n';
-import { latestReviewDate, legalTone, payoutTone, reviewTone, scoreTone, statusTone } from '../lib/riskTone';
+import { latestReviewDate, legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../lib/riskTone';
 import { SITE_URL } from '../lib/site';
 
 type StatusFilter = 'Tous' | 'Active' | 'À surveiller' | 'Fermée';
@@ -158,7 +158,7 @@ export default function Comparateur() {
   const averageScore = Math.round(filteredFirms.reduce((sum, firm) => sum + firm.score, 0) / Math.max(filteredFirms.length, 1));
   const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous'].filter(Boolean).length;
   const payoutAlerts = useMemo(
-    () => [...propFirms].filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore).slice(0, 3),
+    () => [...propFirms].filter((firm) => hasPayoutRiskSignal(firm)).sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore).slice(0, 3),
     []
   );
   const reviewWatch = useMemo(
@@ -371,7 +371,7 @@ function SignalList({
   anchor?: string;
   firms: PropFirm[];
   value: (firm: PropFirm) => string;
-  tone: (firm: PropFirm) => 'good' | 'watch' | 'risk';
+  tone: (firm: PropFirm) => Tone;
 }) {
   return (
     <article className="pr-signal-list">

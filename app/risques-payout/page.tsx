@@ -7,11 +7,13 @@ import type { PropFirm } from '../lib/propFirms';
 import {
   auditStatusClass,
   documentedIncidents,
+  payoutEvidence,
   payoutRiskClass,
   propFirms,
   regulatoryRiskClass,
   reviewReliabilityClass,
   scoreClass,
+  hasPayoutRiskSignal,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 
@@ -52,11 +54,11 @@ function isLegalWatchFirm(firm: PropFirm) {
 
 export default function PayoutRiskPage() {
   const risky = [...propFirms]
-    .filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible')
+    .filter((firm) => hasPayoutRiskSignal(firm))
     .sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore)
     .slice(0, 24);
   const criticalCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Critique').length;
-  const aboveLowCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').length;
+  const aboveLowCount = propFirms.filter((firm) => hasPayoutRiskSignal(firm)).length;
   const elevatedCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Élevé').length;
   const incidentCount = risky.reduce((total, firm) => total + documentedIncidents(firm).length, 0);
   const legalWatchCount = risky.filter(isLegalWatchFirm).length;
@@ -136,7 +138,7 @@ export default function PayoutRiskPage() {
             <FirmRow
               key={firm.slug}
               firm={firm}
-              subline={toEnglishText(firm.reviewSignals.payoutIssues[0] ?? firm.reviewSignals.payoutIncidentStatus)}
+              subline={toEnglishText(payoutEvidence(firm)[0] ?? documentedIncidents(firm)[0] ?? firm.verdict)}
             />
           ))}
         </div>

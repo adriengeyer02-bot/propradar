@@ -1,6 +1,6 @@
 import { toEnglishText } from './i18n';
 import { GUIDE_EDITORIAL_REFRESH_DATE } from './guideVisuals';
-import { propFirms, topFirms, type PropFirm } from './propFirms';
+import { propFirms, topFirms, type PropFirm, hasPayoutRiskSignal } from './propFirms';
 
 export const SEO_RESEARCH_DATE = '2026-07-15';
 
@@ -2279,7 +2279,7 @@ export function getFirmRelatedGuides(firm: PropFirm, limit = 4) {
       if (allowsNewsTrading(firm) && /news-trading|funderpro/i.test(guide.slug)) score += 18;
       if (allowsEaTrading(firm) && /ea-algo|funderpro/i.test(guide.slug)) score += 18;
       if (firm.priceFrom > 0 && firm.priceFrom <= 100 && /pas-cher|promo/i.test(guide.slug)) score += 18;
-      if (firm.reviewSignals.payoutRisk !== 'Faible' && /payout|fiable|trustpilot/i.test(guide.slug)) score += 20;
+      if (hasPayoutRiskSignal(firm) && /payout|fiable|trustpilot/i.test(guide.slug)) score += 20;
       if (/swing|overnight|weekend/i.test(firmText) && /swing/i.test(guide.slug)) score += 22;
       if (/forex|intraday|scalping/i.test(firm.styles.join(' ')) && /smc|ict|meilleure-prop-firm-2026/i.test(guide.slug)) score += 12;
 

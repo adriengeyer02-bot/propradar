@@ -4,7 +4,8 @@ import type { PropFirm, RegulatoryRiskLevel, ReviewSignals } from './propFirms';
  * One risk scale for the whole site.
  * good = green, watch = amber, risk = red. Nothing else uses these colours.
  */
-export type Tone = 'good' | 'watch' | 'risk';
+/** 'none' = no assessment on file (grey): never read as a risk. */
+export type Tone = 'good' | 'watch' | 'risk' | 'none';
 
 export function scoreTone(score: number): Tone {
   if (score >= 75) return 'good';
@@ -13,6 +14,7 @@ export function scoreTone(score: number): Tone {
 }
 
 export function payoutTone(risk: ReviewSignals['payoutRisk']): Tone {
+  if (risk === 'Non évalué') return 'none';
   if (risk === 'Faible') return 'good';
   if (risk === 'Moyen') return 'watch';
   return 'risk';

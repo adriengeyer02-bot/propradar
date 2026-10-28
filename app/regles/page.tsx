@@ -12,6 +12,7 @@ import {
   scoreClass,
   statusClass,
   drawdownLabel,
+  hasPayoutRiskSignal,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 
@@ -749,7 +750,7 @@ export default function RulesPage() {
   const coveredFirmCount = propFirms.filter((firm) => coveredSlugs.has(firm.slug)).length;
   const legalWatchCoveredCount = propFirms.filter((firm) => coveredSlugs.has(firm.slug) && isLegalWatchFirm(firm)).length;
   const deepSourceCoveredCount = propFirms.filter((firm) => coveredSlugs.has(firm.slug) && legalSourceCount(firm) >= 5).length;
-  const payoutSensitiveCount = propFirms.filter((firm) => coveredSlugs.has(firm.slug) && firm.reviewSignals.payoutRisk !== 'Faible').length;
+  const payoutSensitiveCount = propFirms.filter((firm) => coveredSlugs.has(firm.slug) && hasPayoutRiskSignal(firm)).length;
 
   return (
     <main className="container rules-page">
