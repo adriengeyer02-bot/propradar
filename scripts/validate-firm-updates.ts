@@ -20,7 +20,7 @@ const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
   'status', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
-  'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning',
+  'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
 ]);
 const BANNED_WORDS = /\b(scam|fraud|fraudulent|criminal|thie(f|ves)|steal|stole|arnaque|escroc)\w*/i;
 
@@ -95,6 +95,10 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     else summary.push(`${slug}: score ${beforeScore} -> ${set.score}`);
   }
   if (set.listedDomainWarning && set.listedDomainWarning !== beforeSet.listedDomainWarning) sensitive.push(`${slug}: domain warning`);
+  if (set.officialWebsite !== undefined) {
+    if (!isHttpsUrl(set.officialWebsite)) errors.push(`${where}.set.officialWebsite must be an https URL`);
+    else if (set.officialWebsite !== beforeSet.officialWebsite) sensitive.push(`${slug}: official website -> ${set.officialWebsite}`);
+  }
   const newIncidents = (update.addIncidents ?? []).filter((item) => !(before?.addIncidents ?? []).includes(item));
   if (newIncidents.length) sensitive.push(`${slug}: ${newIncidents.length} new incident(s)`);
   if (JSON.stringify(before) !== JSON.stringify(update)) summary.push(`${slug}: updated (${update.reviewedAt})`);

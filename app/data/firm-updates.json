@@ -2,9 +2,10 @@
   "version": 1,
   "firms": {
     "smart-prop-trader": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-10-27",
       "set": {
-        "status": "Fermée"
+        "status": "Fermée",
+        "listedDomainWarning": "Smart Prop Trader announced its closure in November 2024 (Finance Magnates). On 2026-10-27 the listed domain smartproptrader.com redirected to smartprofitfx.com, which PropRadar has not verified as linked to the firm. PropRadar does not link the domain."
       },
       "addSources": [
         {
@@ -19,6 +20,14 @@
           "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
           "fields": [
             "status"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Domain monitor reported smartproptrader.com redirecting to smartprofitfx.com. The firm is already recorded as closed; a domain warning is set so the page no longer links the redirected domain.",
+          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
+          "fields": [
+            "listedDomainWarning"
           ]
         }
       ]
@@ -490,14 +499,24 @@
       ]
     },
     "willis-capital": {
-      "reviewedAt": "2026-10-26",
-      "set": {},
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://wfunded.io/"
+      },
       "changelog": [
         {
           "date": "2026-10-26",
           "summary": "Domain monitor reported on 2026-10-24 that the listed domain williscapital.com redirects to hugedomains.com. Checked by hand through public sources: TechCabal describes WFunded as 'formerly known as Willis Capital' and points readers to wfunded.io, and the Trustpilot profile for williscapitals.com (with an s) now displays as WFUNDED and links to wfunded.io. The listed williscapital.com therefore appears not to be the firm's own domain. No domain warning set and no other field changed pending a decision on the official domain.",
           "source": "https://techcabal.com/?p=162269",
           "fields": []
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Listed domain corrected to wfunded.io. TechCabal describes WFunded as \"formerly known as Willis Capital\" and the williscapitals.com Trustpilot profile now displays as WFUNDED and links to wfunded.io (both recorded on 2026-10-26). The old williscapital.com no longer resolves. TheTrustedProp marks Willis Capital as closed, which may reflect the rebrand; status unchanged.",
+          "source": "https://techcabal.com/?p=162269",
+          "fields": [
+            "officialWebsite"
+          ]
         }
       ],
       "addSources": [
@@ -512,14 +531,30 @@
       ]
     },
     "syndicate-funded": {
-      "reviewedAt": "2026-10-26",
-      "set": {},
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "listedDomainWarning": "The listed domain syndicatefunded.com redirected to earnforex.com, an unrelated forex information site, when checked on 2026-10-23 and again on 2026-10-27. TheTrustedProp lists Syndicate Funded as closed. PropRadar does not link the domain."
+      },
       "changelog": [
         {
           "date": "2026-10-26",
           "summary": "Domain monitor reported on 2026-10-23 that syndicatefunded.com redirects to earnforex.com. The redirect could not be confirmed by hand in this pass, so no domain warning was set. Trustpilot profile for syndicatefunded.com read: 2.5 TrustScore, 0 reviews in the last 12 months and no recent history of asking for reviews. Review count not stored because mirrors showed different totals (118 and 122). No field changed.",
           "source": "https://nz.trustpilot.com/review/syndicatefunded.com?page=4",
           "fields": []
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Domain warning set. The redirect to earnforex.com reported by the domain monitor on 2026-10-23 was seen again by a separate fetch on 2026-10-27, and TheTrustedProp marks the firm as no longer operating (no closure date given). Status left unchanged pending approval.",
+          "source": "https://thetrustedprop.com/prop-firms/syndicate-funded/news",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TheTrustedProp: Syndicate Funded marked as closed",
+          "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
         }
       ]
     },
@@ -662,7 +697,7 @@
       ]
     },
     "instant-funding": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-10-28",
       "set": {},
       "changelog": [
         {
@@ -670,6 +705,14 @@
           "summary": "Corporate change: on 26 May 2026 Instant Funding announced it had acquired Funded Trading Plus; the release says both brands continue to operate independently. Trustpilot profile not found in this pass and official pricing not re-read: no field changed.",
           "source": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697",
           "fields": []
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/instantfunding.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "addSources": [
@@ -677,6 +720,9 @@
           "label": "PR Newswire: Instant Funding acquires Funded Trading Plus (26 May 2026)",
           "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/instantfunding.com)."
       ]
     },
     "oneup-trader": {
@@ -863,6 +909,251 @@
         }
       ]
     },
+    "aurafunded": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "listedDomainWarning": "The listed domain aurafunded.com redirected to an unrelated gambling website when PropRadar checked it on 2026-10-27, and the AuraFunded business is listed for sale on Flippa (asking price US$700,000). PropRadar does not link the domain until an official site is confirmed."
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain warning set. Checked on 2026-10-27: aurafunded.com redirected to an unrelated gambling site (lineslot88asli.com) during the logo fetch run, and a Flippa listing offers the AuraFunded business (intellectual property, infrastructure and customer base) for US$700,000. No status change.",
+          "source": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Flippa listing: AuraFunded business for sale",
+          "url": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders"
+        }
+      ]
+    },
+    "blufx": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "listedDomainWarning": "The listed domain blufx.co.uk redirected to propfirmswitch.com, a third-party site, when checked on 2026-10-23 and 2026-10-27. PickMyTrade reports it could not verify BluFX rules on BluFX pages and that only third-party results say the firm ceased operations. PropRadar does not link the domain."
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain warning set after a second fetch on 2026-10-27 confirmed the redirect to propfirmswitch.com reported by the domain monitor on 2026-10-23. PickMyTrade could not verify current rules on BluFX pages. No status change.",
+          "source": "https://pickmytrade.io/prop-firm-faq/blufx",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "PickMyTrade: BluFX research record",
+          "url": "https://pickmytrade.io/prop-firm-faq/blufx"
+        }
+      ]
+    },
+    "aeon-funded": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "listedDomainWarning": "The listed domain aeonfunded.com redirected to quantxfund.io when checked on 2026-10-23 and 2026-10-27. PropRadar found no public announcement linking Aeon Funded to that site, so the domain is not linked."
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain warning set. Two separate fetches (domain monitor 2026-10-23, logo fetch 2026-10-27) ended on quantxfund.io. A web search found no announcement of a rebrand or merger. No status change.",
+          "source": "https://aeonfunded.com/",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ]
+    },
+    "traders-central": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://traderscentralfund.com/",
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 973,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Listed domain corrected. traderscentral.com redirects to traderstools.com and is not the firm's site; the Trustpilot profile for traderscentralfund.com is claimed (since May 2019) and company replies are signed \"Traders Central\". Trustpilot read on 2026-10-27: 3.6 TrustScore, 973 reviews.",
+          "source": "https://ie.trustpilot.com/review/traderscentralfund.com?page=9",
+          "fields": [
+            "officialWebsite",
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ]
+    },
+    "inspire-funding": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://inspire-funding.com/",
+        "listedDomainWarning": "Trustpilot states that Inspire Funding can no longer be reviewed because the company's website has closed (checked 2026-10-27). The firm used inspire-funding.com; the previously listed inspirefunding.com is a domain-sale page. PropRadar does not link either domain.",
+        "trustpilotRating": 3.3,
+        "trustpilotReviewCount": 89,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/inspire-funding.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Listed domain corrected to inspire-funding.com, the domain of the Trustpilot profile in which the firm describes itself as a prop firm. Trustpilot shows that reviews are closed because the company's website has closed, so a domain warning is set. Trustpilot read on 2026-10-27: 3.3 TrustScore, 89 reviews, 0 in the last 12 months. Status left unchanged pending approval.",
+          "source": "https://nz.trustpilot.com/review/inspire-funding.com",
+          "fields": [
+            "officialWebsite",
+            "listedDomainWarning",
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Trustpilot: Inspire Funding (inspire-funding.com)",
+          "url": "https://nz.trustpilot.com/review/inspire-funding.com"
+        }
+      ]
+    },
+    "my-crypto-funding": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://mycryptofunding.org/"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Listed domain corrected. mycryptofunding.com is a domain-sale page; the firm's own press release of 11 April 2025 links to mycryptofunding.org. The .org site itself could not be opened from this environment, so rules and prices were not rechecked.",
+          "source": "https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms",
+          "fields": [
+            "officialWebsite"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Decrypt (Chainwire release, 11 Apr 2025): My Crypto Funding, mycryptofunding.org",
+          "url": "https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms"
+        }
+      ]
+    },
+    "funding-traders": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundingtraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "the-trading-pit": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie and uk mirrors; the nz mirror still showed an older cached rating. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://au.trustpilot.com/review/thetradingpit.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "finotive-funding": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/finotivefunding.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "for-traders": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fortraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "sure-leverage": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://sureleveragefunding.com/",
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 1426,
+        "trustpilotSourceUrl": "https://nl-be.trustpilot.com/review/sureleveragefunding.com"
+      },
+      "addSources": [
+        {
+          "label": "Trustpilot: Sure Leverage Funding (sureleveragefunding.com)",
+          "url": "https://nl-be.trustpilot.com/review/sureleveragefunding.com"
+        },
+        {
+          "label": "TradeLocker Hub: Sure Leverage (rules link to sureleveragefunding.com)",
+          "url": "https://tradelocker.com/hub/prop-firms/sure-leverage"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain monitor reported sureleverage.com redirecting to sureleveragefunding.com. Checked: the firm's claimed Trustpilot profile (\"Sure Leverage Funding is a global prop trading firm\") lists sureleveragefunding.com, and its TradeLocker Hub listing links its rules at sureleveragefunding.com/faq, so the listed domain is corrected. Trustpilot read on 2026-10-27 (nl-be mirror): 3.6 TrustScore, 1,426 reviews, no Trustpilot warning. Price and split not re-read, left unchanged.",
+          "source": "https://nl-be.trustpilot.com/review/sureleveragefunding.com",
+          "fields": [
+            "officialWebsite",
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "audacity-capital": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/audacity.capital",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
     "fintokei": {
       "reviewedAt": "2026-10-27",
       "changelog": [
@@ -938,6 +1229,70 @@
         "trustpilotReviewCount": 7805,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
       }
+    },
+    "pipfarm": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/pipfarm.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
+      ]
+    },
+    "aqua-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and ie mirrors. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/aquafunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/aquafunded.com)."
+      ]
+    },
+    "thinkcapital": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the uk and ca mirrors; the ie mirror still showed an older cached 4.0 rating. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/thinkcapital.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
+      ]
+    },
+    "blueberry-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/blueberryfunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueberryfunded.com)."
+      ]
     },
     "funding-pips": {
       "reviewedAt": "2026-10-28",
