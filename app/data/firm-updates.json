@@ -240,9 +240,18 @@
             "name",
             "website"
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 853 reviews on the RZR Funded profile (rzrfunded.com, the firm's current site), claimed in October 2026; Trustpilot says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://uk.trustpilot.com/review/rzrfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-10-28",
       "addSources": [
         {
           "label": "Press release: Hantec Trader becomes RZR Funded (2026-10-19)",
@@ -252,7 +261,12 @@
           "label": "RZR Funded: why we are rebranding (official)",
           "url": "https://rzrfunded.com/why-we-are-rebranding/"
         }
-      ]
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 853,
+        "trustpilotSourceUrl": "https://uk.trustpilot.com/review/rzrfunded.com"
+      }
     },
     "funderpro": {
       "changelog": [
@@ -1682,6 +1696,120 @@
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/wemastertrade.com)."
       ]
+    },
+    "rebelsfunding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 2,776 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/rebelsfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 2776,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/rebelsfunding.com"
+      }
+    },
+    "ultimate-traders": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.8 TrustScore across 68 reviews; Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 68,
+        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2"
+      }
+    },
+    "bespoke-funding-program": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.2 TrustScore across 1,193 reviews; the Trustpilot page shows the notice \"This company has received regulatory attention\" (no detail given on the page). Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/bespokefundingprogram.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.2,
+        "trustpilotReviewCount": 1193,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/bespokefundingprogram.com"
+      }
+    },
+    "sway-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.1 TrustScore across 620 reviews; Trustpilot says the profile was merged with other profiles of the company and that the company hasn't invited customers recently. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/swayfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.1,
+        "trustpilotReviewCount": 620,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/swayfunded.com"
+      }
+    },
+    "hyrotrader": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.0 TrustScore across 229 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/hyrotrader.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.0,
+        "trustpilotReviewCount": 229,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com"
+      }
+    },
+    "wegetfunded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.9 TrustScore across 1,004 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/wegetfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.9,
+        "trustpilotReviewCount": 1004,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com"
+      }
     }
   }
 }
