@@ -2256,3 +2256,10 @@ a.pr-chip-link:hover, a.pr-chip:hover { text-decoration: underline; }
 .pr-juris-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .pr-juris-legend span::before { content: ''; width: 18px; height: 6px; border-radius: 999px; background: var(--tone); }
 .pr-chain-note a { color: var(--accent); white-space: nowrap; }
+.pr-flag-img { display: inline-block; vertical-align: -2px; object-fit: cover; }
+.pr-flag-img.pr-flag-sm { width: 18px; height: 12px; }
+.pr-flag-img.pr-flag-md { width: 27px; height: 18px; }
+.pr-firm-sub { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.pr-firm-flags { display: inline-flex; align-items: center; gap: 3px; }
+.pr-firm-flags small { color: var(--muted); font-size: 11px; }
+.pr-juris-compare { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 13px; font-weight: 600; }

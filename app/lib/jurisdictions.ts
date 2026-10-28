@@ -120,3 +120,14 @@ export function listMarkers(countries: Jurisdiction[]) {
   countries.forEach((c) => c.lists?.forEach((key) => keys.add(key)));
   return [...keys].map((key) => ({ key, ...OFFICIAL_LISTS[key] }));
 }
+
+/** Countries of a firm's mapped entities, unique, in the order they appear. */
+export function entityCountries(entities: { jurisdiction: string }[]) {
+  const seen = new Map<string, Jurisdiction>();
+  for (const entity of entities) for (const c of parseJurisdiction(entity.jurisdiction).countries) if (!seen.has(c.code)) seen.set(c.code, c);
+  return [...seen.values()];
+}
+
+export function jurisdictionByCode(code: string) {
+  return JURISDICTIONS.find((j) => j.code === code);
+}

@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import FirmLogo from '../FirmLogo';
+import FlagImg from './FlagImg';
 import RiskPip from './RiskPip';
+import { entityCountries } from '../../lib/jurisdictions';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
 import { drawdownLabel, formatUsd } from '../../lib/propFirms';
@@ -56,6 +58,7 @@ type FirmRowProps = {
 /** One firm as a compact ranked row: the comparator layout, reused everywhere firms are listed. */
 export default function FirmRow({ firm, rank, children, subline, href }: FirmRowProps) {
   const tags = firmTags(firm);
+  const countries = entityCountries(firm.regulatoryAudit.entities);
   return (
     <Link href={href ?? `/firm/${firm.slug}`} className={`pr-firm-row pr-edge-${scoreTone(firm.score)}`} role="row">
       <span className="pr-firm-id" role="cell">
@@ -69,7 +72,15 @@ export default function FirmRow({ firm, rank, children, subline, href }: FirmRow
               <em className="pr-tag pr-tag-affiliate" title="PropRadar may earn a commission. The score is not affected.">Affiliate</em>
             ) : null}
           </strong>
-          <span>{subline ?? `${marketLabel(firm)}${tags.length ? ` · ${tags.join(' · ')}` : ''}`}</span>
+          <span className="pr-firm-sub">
+            {countries.length ? (
+              <span className="pr-firm-flags" aria-label={`Registered in ${countries.map((c) => c.name).join(', ')}`}>
+                {countries.slice(0, 3).map((c) => <FlagImg key={c.code} code={c.code} name={c.name} />)}
+                {countries.length > 3 ? <small>+{countries.length - 3}</small> : null}
+              </span>
+            ) : null}
+            {subline ?? `${marketLabel(firm)}${tags.length ? ` · ${tags.join(' · ')}` : ''}`}
+          </span>
           {children}
         </span>
       </span>

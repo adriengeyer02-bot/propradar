@@ -108,7 +108,7 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
       <p className="pr-chain-note">
         Country markers only come from official lists: {OFFICIAL_LISTS.fatfGrey.short} ({OFFICIAL_LISTS.fatfGrey.asOf}) and the EU tax lists (
         {OFFICIAL_LISTS.euAnnexI.asOf}).
-        {flagged || !countries.length ? '' : ' None of these countries is on them.'} No marker does not mean a country, or a firm, is safe: a regulator link only says who supervises
+        {flagged || !countries.length ? '' : countries.length === 1 ? ' This country is not on them.' : ' None of these countries is on them.'} No marker does not mean a country, or a firm, is safe: a regulator link only says who supervises
         financial firms there, not that this firm is licensed. <a href="/audit#jurisdictions">See where all tracked firms are registered →</a>
       </p>
     </figure>

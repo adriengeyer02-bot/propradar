@@ -60,6 +60,15 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     continue;
   }
   if (!DATE.test(update.reviewedAt ?? '') || update.reviewedAt > today) errors.push(`${where}.reviewedAt: YYYY-MM-DD, not in the future`);
+  if (update.setEntities !== undefined) {
+    if (!Array.isArray(update.setEntities) || !update.setEntities.length) errors.push(`${where}.setEntities: non-empty array required`);
+    for (const [index, entity] of (update.setEntities ?? []).entries()) {
+      if (!entity?.name || !entity?.jurisdiction) errors.push(`${where}.setEntities[${index}]: name and jurisdiction required`);
+    }
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('entities') && isHttpsUrl(entry.source))) {
+      errors.push(`${where}.setEntities: a changelog entry with fields ["entities"] and an https source is required`);
+    }
+  }
   if (!Array.isArray(update.changelog) || update.changelog.length === 0) errors.push(`${where}.changelog: at least one entry required`);
   for (const [index, entry] of (update.changelog ?? []).entries()) {
     if (!DATE.test(entry.date ?? '') || entry.date > today) errors.push(`${where}.changelog[${index}].date invalid`);

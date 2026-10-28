@@ -1703,6 +1703,127 @@
         "trustpilotReviewCount": 1004,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com"
       }
+    },
+    "e8-futures": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entities read from the official e8futures.com footer: E8 Funding LLC (incorporated in the United States, Dallas, Texas address), Digital Renaissance LLC (website) and E8 Markets Ltd (MT5). The footer does not say which entity operates the futures accounts.",
+          "source": "https://e8futures.com/",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "E8 Funding LLC",
+          "jurisdiction": "United States, Texas",
+          "registeredAddress": "4101 McEwen Rd #205, Dallas, TX 75244",
+          "role": "Named in the e8futures.com footer as a technology and education company incorporated under the laws of the United States. The footer does not say which entity operates the futures accounts."
+        },
+        {
+          "name": "Digital Renaissance LLC",
+          "jurisdiction": "To verify",
+          "role": "Named in the e8futures.com footer as overseeing the website; jurisdiction not stated."
+        },
+        {
+          "name": "E8 Markets Ltd",
+          "jurisdiction": "To verify",
+          "role": "Named in the e8futures.com footer as operating MT5; jurisdiction not stated."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "E8 Futures official site (footer entities)",
+          "url": "https://e8futures.com/"
+        }
+      ]
+    },
+    "top-one-futures": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entity read from the official terms: Top One Futures, LLC, address in Cheyenne, Wyoming (United States). The state of formation and the governing law are not stated.",
+          "source": "https://www.toponefutures.com/terms-and-conditions",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Top One Futures, LLC",
+          "jurisdiction": "United States, Wyoming",
+          "registeredAddress": "1621 Central Ave, Suite 8433, Cheyenne WY 82001",
+          "role": "Company named in the official terms (Top One Futures is \"a trade name of Top One Futures, LLC\"). The address is in Cheyenne, Wyoming; the state of formation is not stated."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Top One Futures terms and conditions (official)",
+          "url": "https://www.toponefutures.com/terms-and-conditions"
+        }
+      ]
+    },
+    "fast-track-trading": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entity read from the official terms: Fast Track Trading, LLC. Its place of formation is not stated, so the country stays to verify; the terms are governed by New Jersey law.",
+          "source": "https://www.fasttracktrading.net/terms-and-conditions/",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Fast Track Trading, LLC",
+          "jurisdiction": "To verify",
+          "role": "Company named in the official terms. No state of formation or address is given; the terms are governed by the laws of the State of New Jersey (United States)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Fast Track Trading terms and conditions (official)",
+          "url": "https://www.fasttracktrading.net/terms-and-conditions/"
+        }
+      ]
+    },
+    "funding-your-trades": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entities read from the official terms of service: PrimeWorks International FZ LLC owns and operates Funding Your Trades; Odeonpay ALE S.R.L. (\"Paysagi\") is merchant of record. No jurisdiction is stated, so the country stays to verify.",
+          "source": "https://fundingyourtrades.com/terms-of-services/",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "PrimeWorks International FZ LLC",
+          "jurisdiction": "To verify",
+          "role": "Owner and operator named in the official terms of service (section 11.3). Jurisdiction, registration number and address are not stated."
+        },
+        {
+          "name": "Odeonpay ALE S.R.L. (\"Paysagi\")",
+          "jurisdiction": "To verify",
+          "role": "Merchant of record for payment settlement only, per the official terms; not the service provider."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funding Your Trades terms of service (official)",
+          "url": "https://fundingyourtrades.com/terms-of-services/"
+        }
+      ]
     }
   }
 }
