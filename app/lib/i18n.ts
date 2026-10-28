@@ -16,6 +16,7 @@ const exactTranslations: Record<string, string> = {
   'Élevé': 'High',
   'Élevée': 'High',
   'Critique': 'Critical',
+  'Non évalué': 'Not assessed',
   'Incidents récurrents': 'Recurring incidents',
   'Aucun signal fort': 'No strong signal',
   'Forte': 'Strong',
@@ -227,7 +228,8 @@ const phraseTranslations: Array<[RegExp, string]> = [
   [/r[eè]gles/gi, 'rules'],
   [/r[eè]gle/gi, 'rule'],
   [/v[eé]rifier/gi, 'verify'],
-  [/v[eé]rifi[eé]e?s?/gi, 'verified'],
+  // Not followed by a letter, so the English word "verified" is left alone (was producing "verifiedd").
+  [/v[eé]rifi[eé]e?s?(?![a-z\u00e0-\u00ff])/gi, 'verified'],
   [/r[eé]duction/gi, 'discount'],
   [/r[eé]ductions/gi, 'discounts'],
   [/avis/gi, 'reviews'],

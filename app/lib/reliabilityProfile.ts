@@ -45,8 +45,8 @@ export function reliabilityAxes(firm: PropFirm): ReliabilityAxis[] {
       key: 'payout',
       label: 'Payout',
       value: clamp(100 - signals.payoutRiskScore),
-      display: `${toEnglishText(signals.payoutRisk)} risk`,
-      estimated: Boolean(firm.provisional?.includes('incidents')),
+      display: signals.payoutRisk === 'Non évalué' ? 'Not assessed' : `${toEnglishText(signals.payoutRisk)} risk`,
+      estimated: signals.payoutRisk === 'Non évalué',
     },
     {
       key: 'legal',

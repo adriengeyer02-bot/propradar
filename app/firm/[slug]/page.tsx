@@ -31,7 +31,10 @@ import {
   type PropFirm,
   documentedIncidents,
   drawdownLabel,
+  hasPayoutRiskSignal,
+  isPayoutRiskAssessed,
   isProvisional,
+  payoutEvidence,
   profitSplitLabel,
 } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
@@ -86,7 +89,7 @@ function operationalStatusClass(firm: PropFirm) {
 
 function firmRiskLabel(firm: PropFirm) {
   if (isClosedFirm(firm) || firm.score < 40 || firm.reviewSignals.payoutRisk === 'Critique') return 'Critical';
-  if (isWatchlistFirm(firm) || firm.score < 70 || firm.reviewSignals.payoutRiskScore >= 40) return 'Watchlist';
+  if (isWatchlistFirm(firm) || firm.score < 70 || hasPayoutRiskSignal(firm)) return 'Watchlist';
   return 'Reliable';
 }
 
@@ -210,7 +213,7 @@ function decisionLabel(firm: PropFirm) {
   if (
     isWatchlistFirm(firm) ||
     firm.score < 72 ||
-    firm.reviewSignals.payoutRiskScore >= 40 ||
+    hasPayoutRiskSignal(firm) ||
     firm.regulatoryAudit.riskLevel === 'High' ||
     firm.regulatoryAudit.riskLevel === 'Critical'
   ) {
@@ -432,21 +435,24 @@ export default async function FirmPage({ params }: Props) {
   ]);
   const evidenceFallbackPoints = [
     `Legal file: ${regulatoryAudit.riskLevel} risk, checked ${regulatoryAudit.lastChecked}, with ${sourceCount} source link(s) saved.`,
-    `Payout file: ${toEnglishText(firm.reviewSignals.payoutRisk)} risk${isProvisional(firm, 'incidents') ? ' (provisional default, not audited yet)' : ''}, ${documentedIncidents(firm).length} documented signal(s), advertised timing ${toEnglishText(firm.payoutDelay)}.`,
+    isPayoutRiskAssessed(firm)
+      ? `Payout file: ${toEnglishText(firm.reviewSignals.payoutRisk)} risk, ${payoutEvidence(firm).length} sourced payout signal(s), advertised timing ${toEnglishText(firm.payoutDelay)}.`
+      : `Payout file: not assessed yet (no written payout evidence on file), advertised timing ${toEnglishText(firm.payoutDelay)}.`,
     `Trading rules: ${isProvisional(firm, 'drawdownType') ? 'drawdown type to verify' : `${toEnglishText(firm.drawdownType)} drawdown`}, news trading ${toEnglishText(firm.newsTrading).toLowerCase()}, ${firm.products.length} tracked product(s).`,
   ];
   const topRiskPoints = uniqueProfilePoints([
     ...specificRiskPoints,
     ...evidenceFallbackPoints,
   ]).slice(0, 4);
+  // Never show a risk under a "strengths" heading: the list and its title follow the decision.
+  const showStrengths = firmDecision === 'Shortlist candidate' && specificStrengthPoints.length > 0;
   const firmSpecificSignals = uniqueProfilePoints([
-    ...(firmDecision === 'Shortlist candidate' ? specificStrengthPoints : specificRiskPoints),
-    ...(firmDecision === 'Shortlist candidate' ? specificRiskPoints : specificStrengthPoints),
+    ...(showStrengths ? specificStrengthPoints : specificRiskPoints),
     ...evidenceFallbackPoints,
   ]).slice(0, 4);
   const decisionChecklist = [
     firm.sources.length ? 'Open the official source links saved by PropRadar.' : 'Find and save official source links before relying on this profile.',
-    firm.reviewSignals.payoutRiskScore >= 40
+    hasPayoutRiskSignal(firm) || !isPayoutRiskAssessed(firm)
       ? 'Look for recent payout proof, denials and KYC complaints.'
       : 'Confirm payout calendar, minimum withdrawal and KYC timing.',
     firm.regulatoryAudit.riskLevel === 'High' || firm.regulatoryAudit.riskLevel === 'Critical'
@@ -472,8 +478,8 @@ export default async function FirmPage({ params }: Props) {
     {
       label: 'Payout safety',
       score: Math.max(0, 100 - firm.reviewSignals.payoutRiskScore),
-      provisional: isProvisional(firm, 'incidents'),
-      detail: `${documentedIncidents(firm).length} documented signal(s)`,
+      provisional: !isPayoutRiskAssessed(firm),
+      detail: isPayoutRiskAssessed(firm) ? `${payoutEvidence(firm).length} sourced payout signal(s)` : 'Not assessed: no payout evidence on file',
     },
   ];
   const communitySearchLinks = [
@@ -498,9 +504,9 @@ export default async function FirmPage({ params }: Props) {
     {
       label: 'Payout proof',
       value: payoutProofLabel(firm),
-      detail: isProvisional(firm, 'incidents')
-        ? `Payout risk is a provisional ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} default: no payout incident has been documented yet.`
-        : `Payout risk is ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${documentedIncidents(firm).length} documented signal(s).`,
+      detail: isPayoutRiskAssessed(firm)
+        ? `Payout risk is ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${payoutEvidence(firm).length} sourced payout signal(s).`
+        : 'Payout risk not assessed: no payout incident or payout proof is documented yet.',
       className: payoutProofClass(firm),
     },
     {
@@ -527,7 +533,9 @@ export default async function FirmPage({ params }: Props) {
     },
     {
       question: `Does ${firm.name} have payout risk?`,
-      answer: `PropRadar rates payout risk as ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${documentedIncidents(firm).length} tracked signal(s). Visible payout proof is classified as ${payoutProofLabel(firm).toLowerCase()}.`,
+      answer: isPayoutRiskAssessed(firm)
+        ? `PropRadar rates payout risk as ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${payoutEvidence(firm).length} sourced payout signal(s). Visible payout proof is classified as ${payoutProofLabel(firm).toLowerCase()}.`
+        : `PropRadar has not assessed ${firm.name}'s payout risk: no payout incident or payout proof is documented in its file yet. Check recent payout feedback and the official terms before paying.`,
     },
     {
       question: `What should I check before buying ${firm.name}?`,
@@ -827,8 +835,8 @@ export default async function FirmPage({ params }: Props) {
 
         <section className="pr-firm-checks" id="decision" aria-label="Decision checks">
           <div>
-            <h2>Strengths on file</h2>
-            <ul className="pr-check-list pr-check-good">
+            <h2>{showStrengths ? 'Strengths on file' : 'Points to check'}</h2>
+            <ul className={`pr-check-list ${showStrengths ? 'pr-check-good' : 'pr-check-watch'}`}>
               {firmSpecificSignals.map((point) => <li key={point}>{point}</li>)}
             </ul>
           </div>
@@ -849,24 +857,24 @@ export default async function FirmPage({ params }: Props) {
           <div className="panel blue-guardian-affiliate-panel">
             <div className="blue-guardian-affiliate-copy">
               <div className="eyebrow">Blue Guardian offer</div>
-              <h2>Current checkout code: LAUNCH</h2>
+              <h2>Current checkout code: HALLOWEEN</h2>
               <p className="muted">
-                Blue Guardian displayed a 40% checkout reduction with LAUNCH on 13 July 2026. The link below is affiliate-based,
-                but the PropRadar score, payout risk, public signals and rule analysis remain independent from that relationship.
+                Blue Guardian&apos;s official checkout showed &quot;SAVE 35% WITH CODE HALLOWEEN&quot; on 28 October 2026 (seasonal offer, no end date shown).
+                The link below is affiliate-based, but the PropRadar score, payout risk, public signals and rule analysis remain independent from that relationship.
               </p>
               <div className="promo-proof-row">
-                <span>Code LAUNCH</span>
-                <span>40% shown at checkout</span>
+                <span>Code HALLOWEEN</span>
+                <span>35% shown at checkout</span>
                 <span>Declared affiliate link</span>
               </div>
               <a href={BLUE_GUARDIAN_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                Open Blue Guardian and test LAUNCH
+                Open Blue Guardian and test HALLOWEEN
               </a>
             </div>
             <div className="blue-guardian-offer-card">
               <span>Official checkout code</span>
-              <strong>LAUNCH</strong>
-              <small>Confirm the 40% reduction on the selected program before payment.</small>
+              <strong>HALLOWEEN</strong>
+              <small>Seasonal code: confirm the 35% reduction on the selected program before payment.</small>
             </div>
           </div>
         ) : null}
@@ -1109,12 +1117,14 @@ export default async function FirmPage({ params }: Props) {
             </div>
             <div className="card">
               <div className="muted">Payout risk</div>
-              <div className="score">{firm.reviewSignals.payoutRiskScore}/100</div>
+              <div className="score">{isPayoutRiskAssessed(firm) ? `${firm.reviewSignals.payoutRiskScore}/100` : '—'}</div>
               <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</span>
               <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>
-                {isProvisional(firm, 'incidents')
-                  ? 'Provisional: not audited in depth yet, no payout incident documented so far'
-                  : `${toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · ${documentedIncidents(firm).length} documented signal(s)`}
+                {isClosedFirm(firm)
+                  ? 'Closed firm: not a purchase option. See the sources and update history below.'
+                  : isPayoutRiskAssessed(firm)
+                  ? `${toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · ${payoutEvidence(firm).length} sourced payout signal(s)`
+                  : 'Not assessed: PropRadar has no written payout incident or payout proof on file for this firm.'}
               </p>
               <div className="score-proof">
                 {scoreProofRows(firm, 'payout').map((row) => (

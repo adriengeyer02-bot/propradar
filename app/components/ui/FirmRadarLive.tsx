@@ -29,7 +29,7 @@ const PERIOD_MS = 6500;
 /** Pointer must be this close (viewBox units) to pick a dot. */
 const PICK_RADIUS = 14;
 
-const TONE_LABEL: Record<Tone, string> = { good: 'Low risk', watch: 'To watch', risk: 'High risk or closed' };
+const TONE_LABEL: Record<Tone, string> = { good: 'Low risk', watch: 'To watch', risk: 'High risk or closed', none: 'Not assessed' };
 const DEFAULT_HINT = 'Closer to the centre = higher score. Point at a dot, a ring or a category.';
 
 function radiusFor(score: number) {
@@ -84,7 +84,7 @@ export default function FirmRadarLive({ dots }: { dots: RadarDot[] }) {
   const filter = locked ?? preview;
 
   const counts = useMemo(() => {
-    const result: Record<Tone, number> = { good: 0, watch: 0, risk: 0 };
+    const result: Record<Tone, number> = { good: 0, watch: 0, risk: 0, none: 0 };
     dots.forEach((dot) => { result[dot.tone] += 1; });
     return result;
   }, [dots]);

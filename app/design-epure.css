@@ -42,6 +42,7 @@ html[data-theme='dark'] {
 .pr-tone-good { --tone: var(--tone-good); --tone-wash: var(--tone-good-wash); }
 .pr-tone-watch { --tone: var(--tone-watch); --tone-wash: var(--tone-watch-wash); }
 .pr-tone-risk { --tone: var(--tone-risk); --tone-wash: var(--tone-risk-wash); }
+.pr-tone-none { --tone: var(--soft, #6b7280); --tone-wash: var(--surface-2, rgba(107, 114, 128, 0.1)); }
 
 /* ---------- Score ring ---------- */
 
@@ -2023,3 +2024,25 @@ html body .home-guide-card .pr-logo-strip { margin-top: 12px; }
   font-weight: 600;
   text-decoration: line-through;
 }
+
+/* Points to check (risk items): amber dot, never a green tick */
+.pr-check-watch li::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tone-watch);
+}
+
+/* Affiliate offer cards: the generic card surface is light, so use theme text colours */
+html body :is(.blue-guardian-offer-card, .goat-offer-card) {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: none;
+  color: var(--text);
+}
+html body :is(.blue-guardian-offer-card, .goat-offer-card) :is(span, small) { color: var(--muted); }
+html body :is(.blue-guardian-offer-card, .goat-offer-card) strong { color: var(--accent); }

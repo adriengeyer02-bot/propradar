@@ -22,6 +22,7 @@ import {
   type PropFirm,
   drawdownLabel,
   profitSplitLabel,
+  hasPayoutRiskSignal,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import GuideArticleBody from '../../components/GuideArticleBody';
@@ -1289,7 +1290,7 @@ export default async function SeoGuidePage({ params }: Props) {
   const guideLegalMappedCount = firms.filter((firm) => firm.legalVerified).length;
   const guideLegalWatchCount = firms.filter(isLegalWatchFirm).length;
   const guideDeepSourceCount = firms.filter((firm) => legalSourceCount(firm) >= 5).length;
-  const guidePayoutWatchCount = firms.filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').length;
+  const guidePayoutWatchCount = firms.filter((firm) => hasPayoutRiskSignal(firm)).length;
   const guideCitations = guideCaseFiles.length > 0
     ? guideCaseFiles.flatMap(({ caseFile }) => caseFile.sources.map((source) => source.url))
     : isConsistencyGuide

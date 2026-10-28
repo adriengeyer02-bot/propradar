@@ -10,6 +10,7 @@ import {
   regulatoryRiskClass,
   reviewReliabilityClass,
   scoreClass,
+  hasPayoutRiskSignal,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 
@@ -57,9 +58,9 @@ export default function TrustpilotGuidePage() {
   const reviewAlertCount = propFirms.filter((firm) => (firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0) > 0).length;
   const deepSourceCount = propFirms.filter((firm) => legalSourceCount(firm) >= 5).length;
   const legalWatchReviewCount = watchList.filter(isLegalWatchFirm).length;
-  const payoutWatchReviewCount = watchList.filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').length;
+  const payoutWatchReviewCount = watchList.filter((firm) => hasPayoutRiskSignal(firm)).length;
   const highRatingNeedsContext = [...propFirms]
-    .filter((firm) => (firm.trustpilotRating ?? 0) >= 4.5 && (firm.reviewSignals.payoutRisk !== 'Faible' || isLegalWatchFirm(firm)))
+    .filter((firm) => (firm.trustpilotRating ?? 0) >= 4.5 && (hasPayoutRiskSignal(firm) || isLegalWatchFirm(firm)))
     .sort((a, b) => (b.trustpilotRating ?? 0) - (a.trustpilotRating ?? 0))
     .slice(0, 8);
 
@@ -134,7 +135,7 @@ export default function TrustpilotGuidePage() {
                 <span>{firm.name}</span>
                 <span className="guide-signal-stack-meta">
                   <strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'N/A'}</strong>
-                  <small>{firm.reviewSignals.payoutRisk !== 'Faible' ? `Payout ${toEnglishText(firm.reviewSignals.payoutRisk)}` : firm.regulatoryAudit.riskLevel}</small>
+                  <small>{hasPayoutRiskSignal(firm) ? `Payout ${toEnglishText(firm.reviewSignals.payoutRisk)}` : firm.regulatoryAudit.riskLevel}</small>
                 </span>
               </Link>
             ))}

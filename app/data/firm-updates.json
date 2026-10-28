@@ -1407,13 +1407,30 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Payout risk corroborated with a dated Finance Magnates report (29 August 2024: alleged payout delays and two-day video-proof requests before payout), added as a sourced incident. Approved by the site owner, who asked for every payout-risk level to be backed by sources.",
+          "source": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.2,
         "trustpilotReviewCount": 21428,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
-      }
+      },
+      "addIncidents": [
+        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid)."
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: Apex payout video-proof requests (29 Aug 2024)",
+          "url": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid"
+        }
+      ]
     },
     "bulenox": {
       "reviewedAt": "2026-10-28",
@@ -1515,6 +1532,49 @@
         "trustpilotReviewCount": 83,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com"
       }
+    },
+    "the-funded-trader": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Payout risk corroborated with two dated Finance Magnates reports (payout suspension on 14 March 2024; 900 traders still awaiting payment on 20 November 2024), added as sourced incidents. Approved by the site owner, who asked for every payout-risk level to be backed by sources.",
+          "source": "https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Finance Magnates reported on 14 March 2024 that The Funded Trader confirmed it had halted all payouts, citing a \"self-imposed internal audit\" (https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/).",
+        "Finance Magnates reported on 20 November 2024 that the firm said \"900 traders are still awaiting payment\" and had begun releasing paused accounts of $100K and larger (https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp)."
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: The Funded Trader suspends payouts (14 Mar 2024)",
+          "url": "https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/"
+        },
+        {
+          "label": "Finance Magnates: 900 traders await payouts (20 Nov 2024)",
+          "url": "https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp"
+        }
+      ]
+    },
+    "myforexfunds": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Source added: Finance Magnates reported on 14 May 2025 that a US federal judge dismissed the CFTC complaint against Traders Global Group (My Forex Funds' parent) with prejudice and sanctioned the CFTC. No sourced payout incident is on file for the current period, so the payout risk is shown as not assessed.",
+          "source": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: court dismisses CFTC case against My Forex Funds' parent (14 May 2025)",
+          "url": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+        }
+      ]
     }
   }
 }

@@ -7,7 +7,7 @@ import GuideLibrary, {
   type GuideType,
   GuideLogoStrip,
 } from './GuideLibrary';
-import { payoutRiskClass, propFirms, regulatoryRiskClass } from '../lib/propFirms';
+import { payoutRiskClass, propFirms, regulatoryRiskClass, hasPayoutRiskSignal } from '../lib/propFirms';
 import {
   getGuideLastModified,
   getSeoGuideDisplay,
@@ -219,7 +219,7 @@ function buildGuideCard(guide: SeoGuide): GuideLibraryItem {
     focuses: guideFocuses(guide),
     firmCount: linkedFirms.length,
     deepSourceCount: linkedFirms.filter((firm) => legalSourceCount(firm) >= 5).length,
-    payoutWatchCount: linkedFirms.filter((firm) => firm.reviewSignals.payoutRisk !== 'Faible').length,
+    payoutWatchCount: linkedFirms.filter((firm) => hasPayoutRiskSignal(firm)).length,
     updatedIso: modifiedDate.toISOString().slice(0, 10),
     updatedLabel: formatGuideDate(modifiedDate),
     recentlyUpdated: recentlyUpdatedSlugs.has(guide.slug),

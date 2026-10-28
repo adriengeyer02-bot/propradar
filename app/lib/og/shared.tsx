@@ -21,7 +21,7 @@ export const OG = {
 export const OG_SIZE = { width: 1200, height: 630 };
 
 export function toneColor(tone: Tone) {
-  return tone === 'good' ? OG.good : tone === 'watch' ? OG.watch : OG.risk;
+  return tone === 'good' ? OG.good : tone === 'watch' ? OG.watch : tone === 'none' ? OG.muted : OG.risk;
 }
 
 let fontCache: ReturnType<typeof loadFonts> | undefined;

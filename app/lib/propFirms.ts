@@ -82,7 +82,8 @@ export type ReviewSignals = {
   manipulationRiskScore?: number;
   manipulationRisk?: 'Faible' | 'Moyen' | 'Élevé';
   payoutRiskScore: number;
-  payoutRisk: 'Faible' | 'Moyen' | 'Élevé' | 'Critique';
+  /** 'Non évalué' = no written payout evidence on file: PropRadar makes no payout-risk claim. */
+  payoutRisk: 'Faible' | 'Moyen' | 'Élevé' | 'Critique' | 'Non évalué';
   payoutIncidentCount?: number;
   payoutIncidentStatus?:
     | 'Aucun signal fort'
@@ -2439,7 +2440,7 @@ const corePropFirms: PropFirm[] = [
     logoDomain: 'blueguardian.com',
     communitySignal: 'Decent community presence, signal to confirm with recent payout proof.',
     commercialRelationship: 'Affiliation transparente',
-    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. Official checkout code LAUNCH displayed a 40% reduction on 13 July 2026; the cart subtotal must still be verified and the offer has no impact on the score.',
+    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. The official checkout showed code HALLOWEEN (35%) on 28 October 2026; the cart subtotal must still be verified and the offer has no impact on the score.',
     products: [
       product({
         id: 'blueguardian-programs',
@@ -12795,8 +12796,69 @@ const universePropFirms: PropFirm[] = [
 // Base profiles before dated updates (used by scripts/validate-firm-updates.ts).
 export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms];
 
-// Dated, sourced updates from app/data/firm-updates.json are applied last.
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms);
+// Trustpilot review notices are review-reliability evidence, not payout evidence.
+const REVIEW_NOTICE = /trustpilot[\s\S]*(breach of (our|its) guidelines|fake reviews|rating is unavailable|reviews were removed)/i;
+
+// An item counts as payout evidence only when it says where it comes from:
+// a link, a named outlet, regulator or review site, or a dated report.
+const SOURCED_ITEM =
+  /(https?:\/\/|trustpilot|finance ?magnates|fx ?news|financefeeds|tradeinformer|reported|according to|court|cftc|nfa|fca|cysec|asic|amf|consob|cnmv|regulator|tracker|announced|\b(19|20)\d{2}\b)/i;
+
+/** Written, sourced items that can support a payout-risk level (closures excepted). */
+export function payoutEvidence(firm: Pick<PropFirm, 'incidentsDetails' | 'reviewSignals'>) {
+  return documentedIncidents(firm).filter((item) => !REVIEW_NOTICE.test(item) && SOURCED_ITEM.test(item));
+}
+
+export function isPayoutRiskAssessed(firm: Pick<PropFirm, 'reviewSignals'>) {
+  return firm.reviewSignals.payoutRisk !== 'Non évalué';
+}
+
+/** True when a payout-risk level above Low is on file (and therefore backed by written evidence). */
+export function hasPayoutRiskSignal(firm: Pick<PropFirm, 'reviewSignals'>) {
+  const risk = firm.reviewSignals.payoutRisk;
+  return risk === 'Moyen' || risk === 'Élevé' || risk === 'Critique';
+}
+
+/**
+ * A payout-risk level is only published when something written backs it:
+ * a documented closure, or at least one payout-related incident listed on the
+ * profile. A Low level is kept when payout proof is on file. Everything else
+ * is shown as "Not assessed" instead of a level PropRadar could not justify.
+ */
+function applyPayoutEvidenceRule(firm: PropFirm): PropFirm {
+  const signals = firm.reviewSignals;
+  if (firm.status === 'Fermée') {
+    return {
+      ...firm,
+      reviewSignals: { ...signals, payoutRisk: 'Critique', payoutRiskScore: Math.max(signals.payoutRiskScore, 96), payoutIncidentStatus: 'Critique' },
+    };
+  }
+  const evidence = payoutEvidence(firm).length;
+  if (evidence > 0) {
+    // "Recurring" needs at least two sourced items.
+    const recurring = signals.payoutIncidentStatus === 'Incidents récurrents' || signals.payoutIncidentStatus === 'Recurring incidents';
+    return recurring && evidence < 2 ? { ...firm, reviewSignals: { ...signals, payoutIncidentStatus: 'À surveiller' } } : firm;
+  }
+  if (signals.payoutRisk === 'Faible' && firm.payoutProof) return firm;
+  return {
+    ...firm,
+    reviewSignals: {
+      ...signals,
+      payoutRisk: 'Non évalué',
+      payoutRiskScore: 50,
+      payoutIncidentCount: 0,
+      payoutIncidentStatus: 'Aucun signal fort',
+      radarVerdict:
+        !signals.radarVerdict || /payout risk/i.test(signals.radarVerdict)
+          ? 'Payout risk not assessed: PropRadar has no written payout incident or payout proof on file for this firm yet. Check recent payout feedback and the official terms before any purchase.'
+          : signals.radarVerdict,
+    },
+  };
+}
+
+// Dated, sourced updates from app/data/firm-updates.json are applied, then the
+// payout-evidence rule, so a level is never shown without written support.
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule);
 
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');
@@ -12841,6 +12903,7 @@ export function regulatoryRiskClass(risk: RegulatoryRiskLevel) {
 }
 
 export function payoutRiskClass(risk: ReviewSignals['payoutRisk']) {
+  if (risk === 'Non évalué') return 'badge-neutral';
   if (risk === 'Faible') return 'badge-green';
   if (risk === 'Moyen') return 'badge-amber';
   return 'badge-red';

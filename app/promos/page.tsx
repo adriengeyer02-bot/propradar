@@ -14,6 +14,7 @@ import {
   regulatoryRiskClass,
   scoreClass,
   drawdownLabel,
+  hasPayoutRiskSignal,
 } from '../lib/propFirms';
 import { toEnglishText } from '../lib/i18n';
 import {
@@ -157,7 +158,7 @@ function DealCard({
 
 export default function PromosPage() {
   const riskyDiscounts = propFirms
-    .filter((firm) => isActiveFirm(firm.status) && firm.reviewSignals.payoutRisk !== 'Faible')
+    .filter((firm) => isActiveFirm(firm.status) && hasPayoutRiskSignal(firm))
     .sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore)
     .slice(0, 6);
   const dealFirms = bestPromoDeals
