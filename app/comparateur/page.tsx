@@ -8,6 +8,7 @@ import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import ScoreRing from '../components/ui/ScoreRing';
 import type { PropFirm } from '../lib/propFirms';
 import { activeFirms, formatUsd, isProvisional, propFirms, riskyFirms, hasPayoutRiskSignal } from '../lib/propFirms';
+import { entityCountries, jurisdictionByCode } from '../lib/jurisdictions';
 import { findFirmSearchMatch, normalizeFirmSearch } from '../lib/firmSearch';
 import { toEnglishText } from '../lib/i18n';
 import { latestReviewDate, legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../lib/riskTone';
@@ -23,6 +24,16 @@ type LegalFilter = 'Tous' | 'verified' | 'watch' | 'deep';
 const statusFilters: StatusFilter[] = ['Tous', 'Active', 'À surveiller', 'Fermée'];
 const PAGE_SIZE = 20;
 const DATA_UPDATED_AT = latestReviewDate(propFirms);
+
+// Countries where at least one tracked firm has a mapped entity, most firms first.
+const FIRM_COUNTRIES = new Map(propFirms.map((firm) => [firm.slug, entityCountries(firm.regulatoryAudit.entities).map((c) => c.code)]));
+const COUNTRY_OPTIONS = (() => {
+  const counts = new Map<string, number>();
+  FIRM_COUNTRIES.forEach((codes) => codes.forEach((code) => counts.set(code, (counts.get(code) ?? 0) + 1)));
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([code, n]) => ({ code, n, name: jurisdictionByCode(code)?.name ?? code }));
+})();
 
 const QUICK_SEARCHES = [
   { label: 'Futures', query: 'futures' },
@@ -81,6 +92,7 @@ export default function Comparateur() {
   const [priceMax, setPriceMax] = useState<PriceFilter>('Tous');
   const [drawdown, setDrawdown] = useState<DrawdownFilter>('Tous');
   const [legalFilter, setLegalFilter] = useState<LegalFilter>('Tous');
+  const [country, setCountry] = useState<string>('Tous');
   const [page, setPage] = useState(1);
 
   const filteredFirms = useMemo(() => {
@@ -103,7 +115,9 @@ export default function Comparateur() {
           (legalFilter === 'verified' && firm.legalVerified && !isLegalWatchFirm(firm)) ||
           (legalFilter === 'watch' && isLegalWatchFirm(firm)) ||
           (legalFilter === 'deep' && legalSourceCount(firm) >= 5);
-        return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal;
+        const firmCodes = FIRM_COUNTRIES.get(firm.slug) ?? [];
+        const matchesCountry = country === 'Tous' || (country === 'none' ? firmCodes.length === 0 : firmCodes.includes(country));
+        return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal && matchesCountry;
       })
       .sort((a, b) => {
         if (normalizedSearch) {
@@ -113,11 +127,21 @@ export default function Comparateur() {
         return b.firm.score - a.firm.score;
       })
       .map(({ firm }) => firm);
-  }, [drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+  }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+
+  // Deep link from the legal map: /comparateur?country=LC
+  useEffect(() => {
+    try {
+      const code = new URLSearchParams(window.location.search).get('country');
+      if (code && (code === 'none' || COUNTRY_OPTIONS.some((option) => option.code === code))) setCountry(code);
+    } catch {
+      /* no query string support: keep the default filter */
+    }
+  }, []);
 
   useEffect(() => {
     setPage(1);
-  }, [drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+  }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
 
   const totalPages = Math.max(1, Math.ceil(filteredFirms.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -156,7 +180,7 @@ export default function Comparateur() {
   );
 
   const averageScore = Math.round(filteredFirms.reduce((sum, firm) => sum + firm.score, 0) / Math.max(filteredFirms.length, 1));
-  const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous'].filter(Boolean).length;
+  const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const payoutAlerts = useMemo(
     () => [...propFirms].filter((firm) => hasPayoutRiskSignal(firm)).sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore).slice(0, 3),
     []
@@ -194,6 +218,7 @@ export default function Comparateur() {
     setPriceMax('Tous');
     setDrawdown('Tous');
     setLegalFilter('Tous');
+    setCountry('Tous');
   }
 
   function goToPage(nextPage: number) {
@@ -291,6 +316,15 @@ export default function Comparateur() {
             <option value="verified">Entity mapped</option>
             <option value="watch">Legal watch</option>
             <option value="deep">5+ sources</option>
+          </select>
+          <select value={country} onChange={(event) => setCountry(event.target.value)} aria-label="Entity country">
+            <option value="Tous">Any country</option>
+            {COUNTRY_OPTIONS.map((option) => (
+              <option key={option.code} value={option.code}>
+                {option.name} ({option.n})
+              </option>
+            ))}
+            <option value="none">Country not identified</option>
           </select>
         </div>
       </section>
