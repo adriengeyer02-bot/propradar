@@ -628,11 +628,12 @@
       ]
     },
     "fxify": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-10-28",
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 6452,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com",
+        "priceFrom": 59
       },
       "changelog": [
         {
@@ -643,6 +644,20 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Entry price set to $59 (was shown as 'To verify'): the official Lightning Challenge page reads \"Start from $59 $10K Evaluation\". Profit split left unchanged.",
+          "source": "https://fxify.com/programs/lightning-challenge/",
+          "fields": [
+            "priceFrom"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "FXIFY Lightning Challenge (official)",
+          "url": "https://fxify.com/programs/lightning-challenge/"
         }
       ]
     },
@@ -922,6 +937,202 @@
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 7805,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
+      }
+    },
+    "funding-pips": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 71,036 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundingpips.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 71036,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com"
+      }
+    },
+    "lark-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 523 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/larkfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 523,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com"
+      }
+    },
+    "tickticktrader": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.4 TrustScore across 6,639 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/tickticktrader.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.4,
+        "trustpilotReviewCount": 6639,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tickticktrader.com"
+      }
+    },
+    "ment-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 233 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.mentfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 233,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.mentfunding.com"
+      }
+    },
+    "apex-trader-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 21,428 reviews on a profile Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/apextraderfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 21428,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
+      }
+    },
+    "bulenox": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 1,826 reviews, claimed profile; Trustpilot notes it hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/bulenox.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 1826,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/bulenox.com"
+      }
+    },
+    "ic-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.4 TrustScore across 183 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.icfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.4,
+        "trustpilotReviewCount": 183,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.icfunded.com"
+      }
+    },
+    "elite-trader-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.8 TrustScore across 1,158 reviews on the elitetraderfunding.com profile (the firm moved its site to elitetraderfunding.app, per PropFirmMap), no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/elitetraderfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 1158,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/elitetraderfunding.com"
+      },
+      "addSources": [
+        {
+          "label": "PropFirmMap: Elite Trader Funding moved to elitetraderfunding.app",
+          "url": "https://propfirmmap.com/blog/prop-firm-industry-news-shutdowns-rebrands-new-firms-q2-2026"
+        }
+      ]
+    },
+    "hola-prime": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 4,081 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/holaprime.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 4081,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com"
+      }
+    },
+    "tradefundrr": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 83 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/tradefundrr.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 83,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com"
       }
     }
   }
