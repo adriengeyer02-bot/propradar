@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../components/FirmLogo';
 import ChallengePath from '../../components/ui/ChallengePath';
+import EntityChain from '../../components/ui/EntityChain';
 import ReliabilityRadar from '../../components/ui/ReliabilityRadar';
 import RiskPip from '../../components/ui/RiskPip';
 import ScoreRing from '../../components/ui/ScoreRing';
@@ -966,26 +967,7 @@ export default async function FirmPage({ params }: Props) {
         </header>
         <p className="pr-section-lead">{toEnglishText(regulatoryAudit.summary)}</p>
 
-        {regulatoryAudit.entities.length ? (
-          <div className="pr-entity-table" role="table" aria-label={`${firm.name} legal entities`}>
-            <div className="pr-entity-head" role="row">
-              <span role="columnheader">Entity</span>
-              <span role="columnheader">Jurisdiction</span>
-              <span role="columnheader">Role</span>
-            </div>
-            {regulatoryAudit.entities.map((entity) => (
-              <div className="pr-entity-row" role="row" key={`${entity.name}-${entity.jurisdiction}`}>
-                <span role="cell" className="pr-entity-name">
-                  <strong>{toEnglishText(entity.name)}</strong>
-                  {entity.registrationNumber ? <small>Registration {entity.registrationNumber}</small> : null}
-                  {entity.registeredAddress ? <small>{toEnglishText(entity.registeredAddress)}</small> : null}
-                </span>
-                <span role="cell" className="pr-entity-place">{toEnglishText(entity.jurisdiction)}</span>
-                <span role="cell" className="pr-entity-role">{entity.role ? toEnglishText(entity.role) : '—'}</span>
-              </div>
-            ))}
-          </div>
-        ) : null}
+        <EntityChain firmName={firm.name} entities={regulatoryAudit.entities} />
 
         <div className="pr-dossier">
           <DossierGroup title="Red flags" items={regulatoryAudit.redFlags} tone={regulatoryAudit.redFlags.length ? 'risk' : 'good'} open />
