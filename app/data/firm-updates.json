@@ -531,9 +531,10 @@
       ]
     },
     "syndicate-funded": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-28",
       "set": {
-        "listedDomainWarning": "The listed domain syndicatefunded.com redirected to earnforex.com, an unrelated forex information site, when checked on 2026-10-23 and again on 2026-10-27. TheTrustedProp lists Syndicate Funded as closed. PropRadar does not link the domain."
+        "listedDomainWarning": "The listed domain syndicatefunded.com redirected to earnforex.com, an unrelated forex information site, when checked on 2026-10-23 and again on 2026-10-27. TheTrustedProp lists Syndicate Funded as closed. PropRadar does not link the domain.",
+        "status": "Fermée"
       },
       "changelog": [
         {
@@ -549,11 +550,23 @@
           "fields": [
             "listedDomainWarning"
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Status set to closed, approved by the site owner on 2026-10-28. TheTrustedProp lists Syndicate Funded as \"CLOSED\" (\"This prop firm is no longer operating\"), and since the 2026-10-27 domain check the listed domain redirects to an unrelated site (earnforex.com). No operating official site was found.",
+          "source": "https://thetrustedprop.com/prop-firms/syndicate-funded/news",
+          "fields": [
+            "status"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "TheTrustedProp: Syndicate Funded marked as closed",
+          "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
+        },
+        {
+          "label": "TheTrustedProp: Syndicate Funded marked CLOSED",
           "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
         }
       ]
@@ -992,13 +1005,14 @@
       ]
     },
     "inspire-funding": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-28",
       "set": {
         "officialWebsite": "https://inspire-funding.com/",
         "listedDomainWarning": "Trustpilot states that Inspire Funding can no longer be reviewed because the company's website has closed (checked 2026-10-27). The firm used inspire-funding.com; the previously listed inspirefunding.com is a domain-sale page. PropRadar does not link either domain.",
         "trustpilotRating": 3.3,
         "trustpilotReviewCount": 89,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/inspire-funding.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/inspire-funding.com",
+        "status": "Fermée"
       },
       "changelog": [
         {
@@ -1012,12 +1026,24 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Status set to closed, approved by the site owner on 2026-10-28. TheTrustedProp lists Inspire Funding as \"CLOSED\" (\"This prop firm is no longer operating\"); Trustpilot states the company's website has closed (checked 2026-10-27), and the previously listed inspirefunding.com is a domain-sale page.",
+          "source": "https://thetrustedprop.com/prop-firms/inspire-funding/news",
+          "fields": [
+            "status"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "Trustpilot: Inspire Funding (inspire-funding.com)",
           "url": "https://nz.trustpilot.com/review/inspire-funding.com"
+        },
+        {
+          "label": "TheTrustedProp: Inspire Funding marked CLOSED",
+          "url": "https://thetrustedprop.com/prop-firms/inspire-funding/news"
         }
       ]
     },
