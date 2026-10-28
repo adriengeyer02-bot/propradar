@@ -483,7 +483,7 @@
       ]
     },
     "sabiotrade": {
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-10-28",
       "addSources": [
         {
           "label": "FXEmpire SabioTrade profile",
@@ -495,7 +495,18 @@
           "date": "2026-10-23",
           "summary": "Domain monitor reported sabiotrade.com redirecting to sabiotrade.us. Checked: third-party reviews (FXEmpire; FundedTrading, updated 7 August 2026) describe sabiotrade.us as SabioTrade's dedicated site for US clients, so the redirect is most likely regional (the monitor runs from US servers). No domain warning set.",
           "source": "https://www.fxempire.com/prop-firms/sabiotrade"
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/sabiotrade.com",
+          "fields": [
+            "incidents"
+          ]
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/sabiotrade.com)."
       ]
     },
     "willis-capital": {
@@ -1574,6 +1585,102 @@
           "label": "Finance Magnates: court dismisses CFTC case against My Forex Funds' parent (14 May 2025)",
           "url": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
         }
+      ]
+    },
+    "ofp-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/ofpfunding.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/ofpfunding.com)."
+      ]
+    },
+    "fundedelite": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and uk mirrors. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundedelite.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedelite.com)."
+      ]
+    },
+    "fundyourfx": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundyourfx.io",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundyourfx.io)."
+      ]
+    },
+    "clarity-traders": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/claritytraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/claritytraders.com)."
+      ]
+    },
+    "onefunded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/onefunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/onefunded.com)."
+      ]
+    },
+    "wemastertrade": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/wemastertrade.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/wemastertrade.com)."
       ]
     }
   }
