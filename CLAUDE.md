@@ -56,6 +56,27 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
 
 Keep earlier changelog entries when you update a firm: append, never delete.
 
+Also accepted: `set.drawdownType` (EOD | Trailing | Static | Hybride),
+`set.newsTrading`, `set.eaAllowed`, `setEntities` (changelog `fields:
+["entities"]`) and `setProducts` (programs read on the official site, changelog
+`fields: ["products"]`; start links are carried over, never set).
+
+## Filling thin firm files (part of every weekly run)
+
+About 120 watchlist files still show "To verify" (split, drawdown, account
+sizes, payout timing). Each weekly run also fills ~10 of them: read the
+official pricing/rules/help pages (search with `allowed_domains` first, then
+fetch the result URLs), then record only what the page states:
+- write "not stated" for anything missing; never fill a default;
+- record list prices before temporary discounts; never convert currencies
+  (non-USD prices go in the description, `priceFrom` stays 0 / "To verify");
+- set `drawdownType` only when the main programs are all read;
+- `setProducts` needs account sizes read on the page; without them, set only
+  the firm-level fields (split, payout timing, entities).
+Prioritise firms with search impressions, then Active firms, then by
+Trustpilot review count. Sites that block automated reading are listed in the
+project doc `claude/data-audit-2026-10.md`.
+
 ## Editorial and legal rules (non-negotiable)
 
 1. **Source everything.** Every change needs a public https source in the
