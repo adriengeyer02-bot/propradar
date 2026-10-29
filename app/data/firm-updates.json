@@ -1166,7 +1166,7 @@
       ]
     },
     "fundedelite": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1175,10 +1175,29 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official homepage read: Catalyst (from a $25K instant account), Flash Activation ($5 start, activation after passing), Instant Funding, Lite and Free Retry; sizes shown only as a $25K to $400K slider; up to 95% split; payout requests twice per week sent within 48 hours (FAQ) and 'processed in 3 days' (homepage); MT5 and Match-Trader. Targets, drawdown and per-program prices are not stated, and no legal entity appears on the page (Quantum SRL, Italy, stays as previously recorded).",
+          "source": "https://www.fundedelite.com/",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedelite.com)."
+      ],
+      "set": {
+        "profitSplit": 95,
+        "payoutDelay": "requests twice per week, sent within 48 hours (FAQ); the homepage also says payouts are processed in 3 days"
+      },
+      "addSources": [
+        {
+          "label": "FundedElite homepage (official)",
+          "url": "https://www.fundedelite.com/"
+        }
       ]
     },
     "fundednext": {
@@ -4077,6 +4096,329 @@
         {
           "label": "DayTraders.com homepage (official)",
           "url": "https://daytraders.com/"
+        }
+      ]
+    },
+    "orion-funded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official pages: Standard 2-Step ($49 to $1,149, 6% / 6%, 3% daily, 6% static), Select 3-Step ($59 to $739, 5% x 3, 5% static), Nova 1-Step ($7 plus $69 to $1,099 activation, 4% target, 8% then 5% funded) and Zero instant ($199 to $1,149, 6%), 80% split, withdrawals every 14 days processed within 48 hours. The help center gives Zero and Nova a trailing-lock drawdown and the 2- and 3-step programs a static one, so the firm is recorded as hybrid; the Nova and Zero product pages describe the limit as absolute on the initial balance. Orion Swing (8% / 5%, 5% daily, 8% static) has no sizes on these pages. Footer: OGM International Ltd. (Saint Lucia) and Orion Global FZCO, already on file.",
+          "source": "https://www.orionfunded.com/faq/programs/challenge-phases",
+          "fields": [
+            "products",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 80,
+        "drawdownType": "Hybride",
+        "payoutDelay": "withdrawals every 14 calendar days with processing within 48 hours (Standard, Select, Zero); the Nova page also says withdrawals are daily"
+      },
+      "setProducts": [
+        {
+          "id": "orion-standard-2-step",
+          "name": "Orion Standard (2-Step)",
+          "type": "Challenge",
+          "description": "Fee $49 (5K) to $1,149 (200K). Code-based promotions are not applied.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 49,
+          "entryFeeMax": 1149,
+          "profitTarget": "6% in phase 1, 6% in phase 2",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6% on the initial balance, static",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "4 in evaluation, none funded",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated (29 Oct 2026)."
+        },
+        {
+          "id": "orion-select-3-step",
+          "name": "Orion Select (3-Step)",
+          "type": "Challenge",
+          "description": "Fee $59 (5K) to $739 (200K). No best-day rule.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 59,
+          "entryFeeMax": 739,
+          "profitTarget": "5% in each of 3 phases",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "5% on the initial balance, static",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "4 in evaluation, none funded",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No best-day rule (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "orion-nova-1-step",
+          "name": "Orion Nova (1-Step)",
+          "type": "Challenge",
+          "description": "$7 registration, then an activation fee after passing: $69 (5K) to $1,099 (200K). Fees are not added together here.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "4%",
+          "maxDailyLoss": "4% in evaluation, 3% funded",
+          "maxDrawdown": "8% in evaluation, 5% funded; help center: trailing lock",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "A best-day rule is referenced without detail (29 Oct 2026)."
+        },
+        {
+          "id": "orion-zero-instant",
+          "name": "Orion Zero (instant)",
+          "type": "Instant funding",
+          "description": "Fee $199 (5K) to $1,149 (100K). No evaluation phase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 199,
+          "entryFeeMax": 1149,
+          "profitTarget": "none",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6%; help center: trailing lock",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": true,
+          "consistencyRule": "A best-day rule is referenced without detail (29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Orion programs compared (official help)",
+          "url": "https://www.orionfunded.com/faq/programs/challenge-phases"
+        },
+        {
+          "label": "Orion 2-Step challenge (official)",
+          "url": "https://www.orionfunded.com/2-step-orion-challenge"
+        },
+        {
+          "label": "Orion 3-Step challenge (official)",
+          "url": "https://www.orionfunded.com/3-step-orion-challenge"
+        },
+        {
+          "label": "Orion Nova (official)",
+          "url": "https://www.orionfunded.com/orion-nova"
+        },
+        {
+          "label": "Orion Zero instant funding (official)",
+          "url": "https://www.orionfunded.com/0-step-orion-challenge"
+        }
+      ]
+    },
+    "atlas-funded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official trading rules and docs read. 1-Step: $5K to $200K, 10% target, 4% daily, 7% static. 2-Step: $5K to $200K, 8% / 5%, 5% daily, 10% static. Both 90% split (100% add-on), no consistency rule, first payout 14 days after funding then every 14 days, approved payouts processed within 24 hours on weekdays. Instant Funded uses an intraday trailing drawdown that locks at breakeven and Instant Zero an end-of-day trailing one; futures drawdowns are not stated, so the firm-level type stays unverified. News allowed in evaluation, profits within 5 minutes of red-folder events deducted when funded; EAs allowed everywhere. Fees are not shown on these pages. The rules name Atlas Vanquish FZCO (Dubai) and the footer Atlas Funded LTD (Saint Lucia, 2025-00597), both already on file.",
+          "source": "https://www.atlasfunded.com/trading-rules",
+          "fields": [
+            "products",
+            "profitSplit",
+            "newsTrading",
+            "eaAllowed",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 90,
+        "newsTrading": "Restricted",
+        "eaAllowed": "Yes",
+        "payoutDelay": "first payout 14 days after the funded account is created, then every 14 days (weekly add-on); approved payouts processed within 24 hours, Monday to Friday"
+      },
+      "setProducts": [
+        {
+          "id": "atlas-1-step",
+          "name": "1-Step",
+          "type": "Challenge",
+          "description": "Sizes $5K to $200K; fees are not shown on the help page. 1-Step Pro, Daily, Access, Instant and futures programs also exist.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4%, static, from equity at 00:00 UTC",
+          "maxDrawdown": "7%, static",
+          "profitSplit": "90% (100% as an add-on)",
+          "platforms": [
+            "MetaTrader 5",
+            "TradeLocker",
+            "Match-Trader"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "3 in evaluation; 5 qualifying days per payout cycle",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule (official help, 29 Oct 2026)."
+        },
+        {
+          "id": "atlas-2-step",
+          "name": "2-Step",
+          "type": "Challenge",
+          "description": "Sizes $5K to $200K; fees are not shown on the help page.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "5%, static, from equity at 00:00 UTC",
+          "maxDrawdown": "10%, static",
+          "profitSplit": "90% (100% as an add-on)",
+          "platforms": [
+            "MetaTrader 5",
+            "TradeLocker",
+            "Match-Trader"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "3 per phase; 5 qualifying days per payout cycle",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule (official help, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Atlas Funded trading rules (official)",
+          "url": "https://www.atlasfunded.com/trading-rules"
+        },
+        {
+          "label": "Atlas Funded 1-Step (official docs)",
+          "url": "https://help.atlasfunded.com/one-step"
+        },
+        {
+          "label": "Atlas Funded 2-Step (official docs)",
+          "url": "https://help.atlasfunded.com/two-step"
+        }
+      ]
+    },
+    "superfunded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official challenges page and FAQ read: One Phase ($55 to $1,469, 8% target, 3% daily, 5% maximum) and Two Phase ($33 to $1,299, 10% / 5%, 5% daily, 10% static), up to 90% split, withdrawals every 14 days after funding, 40% (30% from 50K) single-day profit rule at payout, news trading not allowed when funded, EAs allowed (not on DXtrade), TradeLocker. The FAQ describes One Phase as trailing but another answer calls all drawdowns static, so the firm-level type stays unverified. No legal entity is named.",
+          "source": "https://superfunded.com/faqs/",
+          "fields": [
+            "products",
+            "newsTrading",
+            "eaAllowed",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "newsTrading": "Restricted",
+        "eaAllowed": "Yes",
+        "payoutDelay": "every 14 days after reaching the funded stage (first withdrawal at 14 days; 7-day add-on on Two Phase); processing time not stated"
+      },
+      "setProducts": [
+        {
+          "id": "superfunded-one-phase",
+          "name": "One Phase Challenge",
+          "type": "Challenge",
+          "description": "Fee $55 (5K) to $1,469 (200K). Leverage 1:30. A code-based 20% promotion is not applied.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 55,
+          "entryFeeMax": 1469,
+          "profitTarget": "8%",
+          "maxDailyLoss": "3% of the day's opening balance",
+          "maxDrawdown": "5%, trailing according to the FAQ (another FAQ answer calls all drawdowns static)",
+          "profitSplit": "up to 90%",
+          "platforms": [
+            "TradeLocker",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "3",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Profit distribution rule: no single day above 40% of the requested profit (30% from 50K) (FAQ, 29 Oct 2026)."
+        },
+        {
+          "id": "superfunded-two-phase",
+          "name": "Two Phase Challenge",
+          "type": "Challenge",
+          "description": "Fee $33 (3K) to $1,299 (200K). Leverage 1:50.",
+          "accountSizeMin": 3000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 33,
+          "entryFeeMax": 1299,
+          "profitTarget": "10% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "5% of the day's opening balance",
+          "maxDrawdown": "10% of the starting balance, static",
+          "profitSplit": "up to 90%",
+          "platforms": [
+            "TradeLocker",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "4",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Profit distribution rule: no single day above 40% of the requested profit (30% from 50K) (FAQ, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "SuperFunded challenges and prices (official)",
+          "url": "https://superfunded.com/challenges/"
+        },
+        {
+          "label": "SuperFunded FAQ (official)",
+          "url": "https://superfunded.com/faqs/"
+        }
+      ]
+    },
+    "bem-funding": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official homepage read: BEM One ($47 list for 5K, 9% target, 3% daily, 6% dynamic drawdown, no minimum days, no consistency rule on evaluation), BEM One Only, BEM Classic (2-step, static drawdown) and Classic Swing named without figures. Split shown both as 80% and as up to 90%, so it stays unverified. Payouts on demand. MT5 (BEM Ltd., Saint Lucia) and DXtrade / cTrader (BEX Software Development LLC-FZ, Dubai), both already on file.",
+          "source": "https://bemfunding.com/",
+          "fields": [
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "on demand; the homepage cites an average of 6 hours and also 'payouts in 1-2 days'"
+      },
+      "addSources": [
+        {
+          "label": "BEM Funding homepage (official)",
+          "url": "https://bemfunding.com/"
         }
       ]
     }
