@@ -21,7 +21,10 @@ const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
   'status', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
+  'drawdownType', 'newsTrading', 'eaAllowed',
 ]);
+const DRAWDOWN_TYPES = new Set(['EOD', 'Trailing', 'Static', 'Hybride']);
+const PRODUCT_TYPES = new Set(['Challenge', 'Instant funding', 'Futures evaluation', 'Scaling']);
 const BANNED_WORDS = /\b(scam|fraud|fraudulent|criminal|thie(f|ves)|steal|stole|arnaque|escroc)\w*/i;
 
 type File = { version: number; firms: Record<string, FirmUpdate> };
@@ -67,6 +70,25 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     }
     if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('entities') && isHttpsUrl(entry.source))) {
       errors.push(`${where}.setEntities: a changelog entry with fields ["entities"] and an https source is required`);
+    }
+  }
+  if (update.set?.drawdownType !== undefined && !DRAWDOWN_TYPES.has(update.set.drawdownType)) errors.push(`${where}.set.drawdownType must be EOD, Trailing, Static or Hybride`);
+  if (update.setProducts !== undefined) {
+    if (!Array.isArray(update.setProducts) || !update.setProducts.length) errors.push(`${where}.setProducts: non-empty array required`);
+    for (const [index, product] of (update.setProducts ?? []).entries()) {
+      const at = `${where}.setProducts[${index}]`;
+      if (!product?.id || !product?.name || !PRODUCT_TYPES.has(product?.type)) errors.push(`${at}: id, name and a valid type are required`);
+      if (!(product?.accountSizeMin > 0) || !(product?.accountSizeMax >= product?.accountSizeMin)) errors.push(`${at}: account sizes read on the source are required`);
+      for (const key of ['profitTarget', 'maxDailyLoss', 'maxDrawdown', 'profitSplit', 'description']) {
+        const value = (product as unknown as Record<string, unknown>)?.[key];
+        if (typeof value !== 'string' || !value) errors.push(`${at}.${key} required (write "not stated" if the source does not say)`);
+      }
+      if (!Array.isArray(product?.platforms) || !Array.isArray(product?.tradableAssets)) errors.push(`${at}: platforms and tradableAssets arrays required`);
+      if (typeof product?.hasConsistencyRule !== 'boolean') errors.push(`${at}.hasConsistencyRule must be true or false`);
+      if ('linkToStart' in (product ?? {})) errors.push(`${at}.linkToStart: start links are never set by an update`);
+    }
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('products') && isHttpsUrl(entry.source))) {
+      errors.push(`${where}.setProducts: a changelog entry with fields ["products"] and an https source is required`);
     }
   }
   if (!Array.isArray(update.changelog) || update.changelog.length === 0) errors.push(`${where}.changelog: at least one entry required`);

@@ -51,7 +51,7 @@
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-23",
@@ -62,9 +62,113 @@
             "score",
             "status"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Plans read on the official site and help center: Zero, Standard and Advanced monthly evaluations (from $89 a month) and Direct Qualified accounts, end-of-day trailing Maximum Loss Limit that stops at the starting balance, 90% split, 50% / 40% consistency on Standard, up to 4 payouts a month. Footer names ALPHA FUTURES LIMITED (England, 15655643).",
+          "source": "https://alpha-futures.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay",
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot shows 4.3/5 from 6,212 reviews, with no notice about withheld ratings or removed fake reviews.",
+          "source": "https://www.trustpilot.com/review/alpha-futures.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "set": {}
+      "set": {
+        "priceFrom": 89,
+        "profitSplit": 90,
+        "drawdownType": "Trailing",
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 6212,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/alpha-futures.com",
+        "payoutDelay": "up to 4 payouts a month once 5 winning days of $200 or more are reached; no fixed payout dates"
+      },
+      "setProducts": [
+        {
+          "id": "alpha-futures-zero",
+          "name": "Zero evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly evaluation: $89 (25K), $169 (50K), $279 (100K).",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 89,
+          "entryFeeMax": 279,
+          "profitTarget": "not stated on the pages read",
+          "maxDailyLoss": "not stated on the pages read",
+          "maxDrawdown": "end-of-day trailing Maximum Loss Limit, stops trailing at the starting balance",
+          "profitSplit": "not stated on the pages read",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "Marketed as a no-consistency-rule evaluation (official product page title, 29 Oct 2026)."
+        },
+        {
+          "id": "alpha-futures-standard",
+          "name": "Standard evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly evaluation: $129 (50K), $239 (100K), $349 (150K); resets $109 to $289; no activation fee. Advanced ($209 to $489 a month) and Direct Qualified ($349 to $859 one-time) plans also exist.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 129,
+          "entryFeeMax": 349,
+          "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K)",
+          "maxDailyLoss": "Daily Loss Guard $1,000 to $3,000 on qualified accounts; not on evaluations",
+          "maxDrawdown": "$2,000 to $4,500, end-of-day trailing, stops at the starting balance",
+          "profitSplit": "90% from the start",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "5 winning days of $200 or more before a payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% on evaluations, 40% on qualified accounts (official help article, 29 Oct 2026)."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "ALPHA FUTURES LIMITED",
+          "jurisdiction": "United Kingdom (England)",
+          "registrationNumber": "15655643",
+          "registeredAddress": "1 Allied Business Centre, Coldharbour Lane, Harpenden, England, AL5 4UT",
+          "role": "Company named in the official site footer."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Alpha Futures plans (official)",
+          "url": "https://alpha-futures.com/"
+        },
+        {
+          "label": "Alpha Futures Standard account overview (official help)",
+          "url": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+        },
+        {
+          "label": "Alpha Futures on Trustpilot",
+          "url": "https://www.trustpilot.com/review/alpha-futures.com"
+        },
+        {
+          "label": "Alpha Futures Zero plan (official)",
+          "url": "https://alpha-futures.com/product/zero"
+        }
+      ]
     },
     "apex-trader-funding": {
       "reviewedAt": "2026-10-28",
@@ -213,7 +317,7 @@
       ]
     },
     "blueberry-funded": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -222,10 +326,60 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Prime Challenge read in the official help center: $2.5K to $200K, 8% / 6% targets, 4% daily loss, 10% static maximum drawdown, 80% split, rewards every 14 days, no consistency rule. Prices were not stated, so the previous $49 entry price is shown as to verify.",
+          "source": "https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueberryfunded.com)."
+      ],
+      "set": {
+        "priceFrom": 0,
+        "profitSplit": 80,
+        "drawdownType": "Static",
+        "payoutDelay": "rewards every 14 days once funded; 3 active trading days per cycle for accounts bought from 17 August 2026"
+      },
+      "setProducts": [
+        {
+          "id": "blueberry-prime-2-step",
+          "name": "Prime Challenge (2-step)",
+          "type": "Challenge",
+          "description": "Two-step challenge; prices were not stated in the help article. Instant funding accounts are also sold.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% in phase 1, 6% in phase 2",
+          "maxDailyLoss": "4% of the initial balance",
+          "maxDrawdown": "10%, static",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "3 active trading days per reward cycle (5 for accounts bought before 17 August 2026)",
+          "hasConsistencyRule": false,
+          "consistencyRule": "None, per the official help article (29 Oct 2026). No new positions within 2 minutes of high-impact news."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Blueberry Funded Prime Challenge (official help)",
+          "url": "https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge"
+        }
       ]
     },
     "blufx": {
@@ -261,13 +415,55 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Launch plans read in the official help center: 50K to 200K, launch fee $99 to $179 charged only after passing, monthly evaluation billing (amount not stated), end-of-day trailing drawdown on 50K and 100K and static on 200K, 50% / 34% consistency, daily payout requests. The previous $99 entry price was the post-pass launch fee, so the entry price is now shown as to verify.",
+          "source": "https://help.blusky.pro/en/articles/16300846-launch-plans-phases-rules-and-costs",
+          "fields": [
+            "products",
+            "priceFrom",
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 940,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/blusky.pro"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/blusky.pro",
+        "priceFrom": 0,
+        "drawdownType": "Hybride",
+        "payoutDelay": "requested daily Monday to Friday; requests before 11am ET processed the same trading day; minimum $500 with a 7-day cap"
+      },
+      "setProducts": [
+        {
+          "id": "blusky-launch",
+          "name": "Launch plans",
+          "type": "Futures evaluation",
+          "description": "Evaluation billed every 30 days (amount not stated in the help article), plus a one-time launch fee charged only after passing: $99 (50K), $149 (100K), $179 (200K). A Buffer Zone phase follows Phase 1. Propel and Static Growth plans also exist.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 200000,
+          "profitTarget": "$3,000 (50K), $6,000 (100K and 200K) in Phase 1",
+          "maxDailyLoss": "none in Phase 1 or the Buffer Zone",
+          "maxDrawdown": "$2,000 / $2,500 end-of-day trailing (50K, 100K); $2,000 static (200K)",
+          "profitSplit": "not stated in the help article",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Largest profitable day at most 50% of total profitable days in Phase 1, 34% in the Buffer Zone (official help article, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "BluSky Launch plans: phases, rules and costs (official help)",
+          "url": "https://help.blusky.pro/en/articles/16300846-launch-plans-phases-rules-and-costs"
+        }
+      ]
     },
     "breakout-prop": {
       "reviewedAt": "2026-10-27",
@@ -395,13 +591,26 @@
       ]
     },
     "e8-futures": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
           "summary": "Legal entities read from the official e8futures.com footer: E8 Funding LLC (incorporated in the United States, Dallas, Texas address), Digital Renaissance LLC (website) and E8 Markets Ltd (MT5). The footer does not say which entity operates the futures accounts.",
           "source": "https://e8futures.com/",
           "fields": [
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "E8 Signature Futures read on the official page: 25K to 150K at $120 to $450 list price, 6% target, end-of-day dynamic drawdown locking at the starting balance, 35% best-day rule, 80% split, on-demand payouts. The page names E8 Funding LLC (Dallas), E8 Markets Ltd (Saint Lucia, 2025-00347) and Digital Renaissance LLC (Puerto Rico).",
+          "source": "https://e8futures.com/e8-signature-futures",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay",
             "entities"
           ]
         }
@@ -411,23 +620,61 @@
           "name": "E8 Funding LLC",
           "jurisdiction": "United States, Texas",
           "registeredAddress": "4101 McEwen Rd #205, Dallas, TX 75244",
-          "role": "Named in the e8futures.com footer as a technology and education company incorporated under the laws of the United States. The footer does not say which entity operates the futures accounts."
-        },
-        {
-          "name": "Digital Renaissance LLC",
-          "jurisdiction": "To verify",
-          "role": "Named in the e8futures.com footer as overseeing the website; jurisdiction not stated."
+          "role": "Operates the Tradelocker, cTrader and Match Trade platforms according to the E8 Signature Futures page."
         },
         {
           "name": "E8 Markets Ltd",
-          "jurisdiction": "To verify",
-          "role": "Named in the e8futures.com footer as operating MT5; jurisdiction not stated."
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00347",
+          "role": "Operates MT5 according to the official page (not available to US citizens)."
+        },
+        {
+          "name": "Digital Renaissance LLC",
+          "jurisdiction": "Puerto Rico",
+          "role": "Manages the website according to the official page."
         }
       ],
       "addSources": [
         {
           "label": "E8 Futures official site (footer entities)",
           "url": "https://e8futures.com/"
+        },
+        {
+          "label": "E8 Signature Futures (official)",
+          "url": "https://e8futures.com/e8-signature-futures"
+        }
+      ],
+      "set": {
+        "priceFrom": 120,
+        "profitSplit": 80,
+        "drawdownType": "EOD",
+        "payoutDelay": "on demand once rules are met; first payout possible after 3 days, then every 5 profitable days, up to 4 payouts per account"
+      },
+      "setProducts": [
+        {
+          "id": "e8-signature-futures",
+          "name": "E8 Signature Futures (1-step)",
+          "type": "Futures evaluation",
+          "description": "List price $120 (25K) to $450 (150K); shown with a 25% discount on 29 Oct 2026.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 120,
+          "entryFeeMax": 450,
+          "profitTarget": "6%",
+          "maxDailyLoss": "2% soft daily pause in the performance stage; challenge-stage daily limit not stated",
+          "maxDrawdown": "2.66% to 4%, end-of-day dynamic from the highest end-of-day balance, locking at the starting balance",
+          "profitSplit": "80%",
+          "platforms": [
+            "Tradelocker",
+            "cTrader",
+            "Match Trade"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "first payout after 3 days; then 5 profitable days between payouts",
+          "hasConsistencyRule": true,
+          "consistencyRule": "35% best-day rule: no single day may exceed 35% of total profits (official page, 29 Oct 2026)."
         }
       ]
     },
@@ -537,7 +784,7 @@
       }
     },
     "finotive-funding": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
       ],
@@ -549,6 +796,52 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Two Step challenge read on the official rules page: $2.5K to $200K, 7.5% / 5% targets, 4.5% daily loss, 9% maximum loss (type not stated), up to 95% split, on-demand payouts with no minimum, plus floating-loss and profit-concentration rules. Prices were not on the page; the existing entry price is kept.",
+          "source": "https://finotivefunding.com/rules",
+          "fields": [
+            "products",
+            "profitSplit",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 95,
+        "payoutDelay": "on demand, no minimum payout"
+      },
+      "setProducts": [
+        {
+          "id": "finotive-two-step",
+          "name": "Two Step challenge",
+          "type": "Challenge",
+          "description": "Prices not stated on the rules page. Finotive also sells One Step, Solo FX, Instant Funding (Standard, Lite) and Pro programs; their figures were not on the page read.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 200000,
+          "profitTarget": "7.5% in stage one, 5% in stage two",
+          "maxDailyLoss": "4.5%",
+          "maxDrawdown": "9% (type not stated); 2% floating loss per symbol",
+          "profitSplit": "up to 95% on the funded stage",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "2 profitable days per stage",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Profit-concentration rules: under 20% of profit from trades held under 2 minutes and from trades opened and closed 21:00-22:59 UTC (official rules page, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Finotive Funding trading rules (official)",
+          "url": "https://finotivefunding.com/rules"
         }
       ]
     },
@@ -628,11 +921,14 @@
       ]
     },
     "ftuk": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "set": {
         "trustpilotRating": 3.8,
         "trustpilotReviewCount": 790,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com",
+        "priceFrom": 9,
+        "payoutDelay": "on demand once program requirements are met; FTUK advertises an average payout time of 1 hour",
+        "profitSplit": 80
       },
       "changelog": [
         {
@@ -643,6 +939,49 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Current programs read on the official site: Flex Challenge (pay after you pass, from $9 plus an activation fee after passing), Instant Funding, Flex Futures and Instant Sim Funding, sizes $5K to $200K, split up to 80%, on-demand payouts. The FAQ marks the One-Step and Two-Step programs as no longer sold since 14 September 2026. Drawdown for the current programs was not stated, so the drawdown type stays unverified.",
+          "source": "https://ftuk.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "payoutDelay",
+            "profitSplit"
+          ]
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "ftuk-flex-challenge",
+          "name": "Flex Challenge (pay after you pass)",
+          "type": "Challenge",
+          "description": "Starts at $9; an activation fee is charged after passing (the homepage example showed $672 before discount). The legacy One-Step and Two-Step programs stopped being sold on 14 September 2026; existing accounts keep their rules.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "4% (as marketed on the homepage)",
+          "maxDailyLoss": "not stated on the pages read",
+          "maxDrawdown": "not stated on the pages read",
+          "profitSplit": "up to 80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "The FAQ says payouts require meeting program requirements such as profit, consistency and winning days; the exact consistency figure was not stated."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "FTUK homepage and programs (official)",
+          "url": "https://ftuk.com/"
+        },
+        {
+          "label": "FTUK legacy two-step rules (official FAQ)",
+          "url": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
         }
       ]
     },
@@ -757,11 +1096,24 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Challenge page read: One Phase, Pro and Classic challenges from $5K to $200K, $69 for the $5K account, 10% / 5% targets, 10% maximum loss, 80% split in the table (up to 90% elsewhere on the page), rewards typically paid within 1 working day, MT5. The footer names FunderPro Saint Lucia Ltd. (2025-00393) and FunderPro Ltd. (Malta, C 104558). Affiliate firm: the score is unchanged.",
+          "source": "https://funderpro.com/the-challenge/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "entities"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-10-29",
       "set": {
-        "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval"
+        "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval",
+        "priceFrom": 69,
+        "profitSplit": 80
       },
       "addSources": [
         {
@@ -771,6 +1123,55 @@
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/funderpro.com)."
+      ],
+      "setProducts": [
+        {
+          "id": "funderpro-challenges",
+          "name": "One Phase, Pro and Classic challenges",
+          "type": "Challenge",
+          "description": "Three challenge types (One Phase; Pro and Classic with two phases). The page shows $69 for the $5K account, with the fee processed with the first reward; other prices were not shown. FunderPro states that 7.35% of challenge buyers pass to the funded phase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 69,
+          "profitTarget": "10% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "5% (the FAQ states 3% for One Phase), balance-based, resets at 5 pm EST",
+          "maxDrawdown": "10% (type not stated)",
+          "profitSplit": "80% in the table; the page also says up to 90%",
+          "platforms": [
+            "MT5"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Metals",
+            "Oil",
+            "Indices",
+            "Crypto"
+          ],
+          "minTradingDays": "4 per phase",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Classic has no consistency rule; the page does not state one for One Phase or Pro (29 Oct 2026)."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "FunderPro Saint Lucia Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00393",
+          "registeredAddress": "Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Named in the official footer as providing the simulated trading services advertised on the site."
+        },
+        {
+          "name": "FunderPro Ltd.",
+          "jurisdiction": "Malta",
+          "registrationNumber": "C 104558",
+          "registeredAddress": "San Gwann, Malta",
+          "role": "Named in the official footer as providing simulated trading; states it is not a broker and does not accept deposits."
+        },
+        {
+          "name": "Red Acre Ltd",
+          "jurisdiction": "Malta",
+          "role": "Kept from the earlier PropRadar file; not named on the page read on 29 Oct 2026."
+        }
       ]
     },
     "funding-pips": {
@@ -1159,11 +1560,13 @@
       }
     },
     "lux-trading-firm": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "set": {
         "trustpilotRating": 4.0,
         "trustpilotReviewCount": 626,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/luxtradingfirm.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/luxtradingfirm.com",
+        "priceFrom": 0,
+        "profitSplit": 80
       },
       "changelog": [
         {
@@ -1174,6 +1577,49 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "1-Step Evaluation read on the official page: $100K to $1M packages priced in GBP (£199 to £699), 6% maximum loss, 80% split on funded stages. The previous $149 entry price could not be matched to a current USD price, so the price is shown as to verify instead of converting currencies.",
+          "source": "https://luxtradingfirm.com/1-step-evaluation/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit"
+          ]
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "lux-1-step-evaluation",
+          "name": "1-Step Evaluation",
+          "type": "Challenge",
+          "description": "Packages priced in pounds: $100K for £199, $400K for £449, $1M for £699, each scaling in stages to $10M. The fee is refunded on the first funded stage.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 1000000,
+          "profitTarget": "10% ($100K), 12% ($400K), 15% ($1M) on the evaluation",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "6% maximum loss (type not stated)",
+          "profitSplit": "80% on funded stages",
+          "platforms": [
+            "MatchTrader",
+            "MT4",
+            "TradingView",
+            "Trader Evolution"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Commodities"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule stated on the evaluation page (29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Lux Trading Firm 1-Step Evaluation (official)",
+          "url": "https://luxtradingfirm.com/1-step-evaluation/"
         }
       ]
     },
@@ -1395,7 +1841,7 @@
       ]
     },
     "rebelsfunding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1405,13 +1851,64 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Read on the official FAQ and Gold program page: overall drawdown is fixed from the initial size (10% on Copper, Bronze and Silver, 6% on Gold and Diamond), initial split 75% to 80% rising to 90% (Diamond 75%), EAs not supported, first reward request no earlier than 14 days after the first funded trade. Gold program details recorded; other programs' prices were not shown.",
+          "source": "https://www.rebelsfunding.com/faq/",
+          "fields": [
+            "products",
+            "profitSplit",
+            "drawdownType",
+            "eaAllowed",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 2776,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/rebelsfunding.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/rebelsfunding.com",
+        "profitSplit": 80,
+        "drawdownType": "Static",
+        "eaAllowed": "No",
+        "payoutDelay": "first reward request no earlier than 14 calendar days after the first trade on the funded (RCF) account; minimum request $50"
+      },
+      "setProducts": [
+        {
+          "id": "rebelsfunding-gold-1-phase",
+          "name": "RF Gold 1-Phase",
+          "type": "Challenge",
+          "description": "One-phase program with no daily loss limit during the evaluation. RebelsFunding also sells Copper (4 phases), Bronze (3), Silver (2) and Diamond (instant) programs; their prices and sizes were not shown on the pages read.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 40000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "none in the evaluation; 4% of the day's starting equity on the funded account",
+          "maxDrawdown": "6% of the starting capital, fixed (does not rise with profits)",
+          "profitSplit": "75% at first, up to 90%",
+          "platforms": [
+            "RF-Trader (TradingView charts)"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Commodities"
+          ],
+          "minTradingDays": "no time limit; at least 8 trades",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule stated on the program page (29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "RebelsFunding Gold 1-phase program (official)",
+          "url": "https://lo.rebelsfunding.com/programs/gold-1-phase/"
+        },
+        {
+          "label": "RebelsFunding FAQ (official)",
+          "url": "https://www.rebelsfunding.com/faq/"
+        }
+      ]
     },
     "sabiotrade": {
       "reviewedAt": "2026-10-28",
@@ -1622,7 +2119,7 @@
       ]
     },
     "the-trading-pit": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
       ],
@@ -1634,6 +2131,83 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Futures programs read on the official page: Futures Prime ($99 to $289 one-time, 80% split, EOD-based trailing drawdown that locks at the starting balance) and Futures Instant ($499 to $699, 90% split, 20% consistency rule), with payout conditions. CFD challenge figures were not on the CFD page read, so the firm-level drawdown type stays unverified.",
+          "source": "https://www.thetradingpit.com/futures",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "newsTrading",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "priceFrom": 99,
+        "profitSplit": 80,
+        "newsTrading": "Allowed",
+        "payoutDelay": "Futures Prime: a reward every 7 days after 5 profitable days of at least $150; Futures Instant: every 5 days above $500, with caps"
+      },
+      "setProducts": [
+        {
+          "id": "ttp-futures-prime",
+          "name": "Futures Prime challenge",
+          "type": "Futures evaluation",
+          "description": "One-time fee, 30-day challenge, activation fee waived on 29 Oct 2026 ($129 listed). CFD challenge figures were not shown on the CFD page read.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 99,
+          "entryFeeMax": 289,
+          "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K)",
+          "maxDailyLoss": "daily pause of $1,000 to $3,000 in the challenge",
+          "maxDrawdown": "$2,000 to $4,500, trailing on the end-of-day balance until it reaches the starting balance, then fixed",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule stated for Futures Prime (29 Oct 2026)."
+        },
+        {
+          "id": "ttp-futures-instant",
+          "name": "Futures Instant (no challenge)",
+          "type": "Instant funding",
+          "description": "Direct funded futures account, no activation fee. News trading allowed; weekend and overnight holding not allowed.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 499,
+          "entryFeeMax": 699,
+          "profitTarget": "$3,000 (50K), $6,000 (100K) payout goal",
+          "maxDailyLoss": "daily pause from $1,200 / $2,200, recalculated at 60% of the best end-of-day profit",
+          "maxDrawdown": "$2,000 (50K), $3,500 (100K), end-of-day",
+          "profitSplit": "90%",
+          "platforms": [
+            "NinjaTrader",
+            "Tradovate",
+            "TradingView",
+            "ATAS",
+            "Quantower",
+            "DeepCharts",
+            "R|Trader"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "5 trading days",
+          "hasConsistencyRule": true,
+          "consistencyRule": "20%: the biggest profitable day must not exceed 20% of total profit before a payout (official page, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "The Trading Pit futures programs (official)",
+          "url": "https://www.thetradingpit.com/futures"
         }
       ]
     },
@@ -1839,11 +2413,15 @@
       ]
     },
     "tradeday": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 1452,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com",
+        "priceFrom": 100,
+        "profitSplit": 80,
+        "drawdownType": "Trailing",
+        "payoutDelay": "Quick Pay: minimum 1 day to payout, usually processed within 24 hours; Fast Pass: minimum 5 days to payout, with a per-cycle cap"
       },
       "changelog": [
         {
@@ -1859,12 +2437,78 @@
           "date": "2026-10-27",
           "summary": "Program relaunch noted: TradeDay announced TradeDay 2.0 on 29 May 2026 (new Fast Pass path, updated Quick Pay, 90% split in Funded Live); earlier programs are closed to new purchases. On the official site, Quick Pay funded-sim payouts split 50/50 below $4k net profit and 80/20 above.",
           "source": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official pricing page: Quick Pay and Fast Pass evaluations from 25K to 150K, trailing drawdown (intraday or end-of-day), 30% and 45% consistency rules, 80% to 90% split, payout timing. Entry price recorded at list price ($100 a month for the smallest Quick Pay account) rather than the temporary discount.",
+          "source": "https://www.tradeday.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "TradeDay 2.0 announcement (official, 29 May 2026)",
           "url": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
+        },
+        {
+          "label": "TradeDay plans and funded terms (official)",
+          "url": "https://www.tradeday.com/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "tradeday-quick-pay",
+          "name": "Quick Pay evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly evaluation with intraday or end-of-day trailing drawdown. List price $100 to $400 a month by size (the site showed a 55% discount on 29 Oct 2026). Funded split 50% below $4,000 net profit, then 80%, 90% in Funded Live.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 100,
+          "entryFeeMax": 400,
+          "profitTarget": "$1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing intraday or end-of-day depending on the account",
+          "profitSplit": "50% below $4,000 net profit, 80% above, 90% in Funded Live",
+          "platforms": [
+            "Tradovate",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "5 days in the evaluation; minimum 1 day to the first payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "30% consistency rule in the evaluation; none on the funded account (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "tradeday-fast-pass",
+          "name": "Fast Pass evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly evaluation with end-of-day trailing drawdown only. List price $130 to $530 a month by size (shown with a 50% discount on 29 Oct 2026). Payout caps per cycle: $750 (25K) to $2,250 (150K).",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 130,
+          "entryFeeMax": 530,
+          "profitTarget": "$1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "$1,000 (25K) to $4,500 (150K), end-of-day trailing",
+          "profitSplit": "80% on Funded Sim, 90% on Funded Live",
+          "platforms": [
+            "Tradovate",
+            "Rithmic"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "3 days in the evaluation; 5 profitable days before a payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
         }
       ]
     },

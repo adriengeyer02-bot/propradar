@@ -1,4 +1,4 @@
-import type { PropFirm, RegulatoryEntity, SourceLink } from './propFirms';
+import type { Product, PropFirm, RegulatoryEntity, SourceLink } from './propFirms';
 import updatesFile from '../data/firm-updates.json';
 
 /**
@@ -37,7 +37,16 @@ export type FirmUpdate = {
     listedDomainWarning: string | null;
     /** Corrects the listed official site (the base profile pointed to the wrong domain). */
     officialWebsite: string;
+    drawdownType: PropFirm['drawdownType'];
+    newsTrading: 'Allowed' | 'Restricted' | 'Not recommended' | 'Variable';
+    eaAllowed: 'Yes' | 'No' | 'On request' | 'Variable';
   }>;
+  /**
+   * Replaces the tracked programs with ones read on the official site. Start
+   * links are carried over from the existing profile (affiliate or official
+   * URLs are never changed by an update).
+   */
+  setProducts?: Omit<Product, 'linkToStart'>[];
   addSources?: SourceLink[];
   addIncidents?: string[];
   /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
@@ -80,6 +89,12 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       next.provisional = next.provisional?.filter((field) => field !== 'profitSplit');
     }
     if (set.payoutDelay) next.payoutDelay = set.payoutDelay;
+    if (set.drawdownType) {
+      next.drawdownType = set.drawdownType;
+      next.provisional = next.provisional?.filter((field) => field !== 'drawdownType');
+    }
+    if (set.newsTrading) next.newsTrading = set.newsTrading;
+    if (set.eaAllowed) next.eaAllowed = set.eaAllowed;
     if (typeof set.trustpilotRating === 'number') next.trustpilotRating = set.trustpilotRating;
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
     if (set.trustpilotSourceUrl) next.reviewSignals.trustpilotSourceUrl = set.trustpilotSourceUrl;
@@ -117,6 +132,23 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (update.addSources?.length) {
       const known = new Set(next.sources.map((source) => source.url));
       next.sources = [...next.sources, ...update.addSources.filter((source) => !known.has(source.url))];
+    }
+
+    if (update.setProducts?.length) {
+      const startLink = next.products.find((product) => product.linkToStart)?.linkToStart;
+      next.products = update.setProducts.map((product) => ({ ...product, linkToStart: next.listedDomainWarning ? undefined : startLink }));
+      next.provisional = next.provisional?.filter((field) => field !== 'accountSize');
+      const fees = update.setProducts.map((product) => product.entryFeeMin ?? 0).filter((fee) => fee > 0);
+      if (typeof set.priceFrom !== 'number' && fees.length) next.priceFrom = Math.min(...fees);
+      // The watchlist boilerplate says rules were never read: no longer true.
+      const readOn = update.changelog.filter((entry) => entry.fields?.includes('products')).map((entry) => entry.date).sort().pop() ?? update.reviewedAt;
+      if (/has not been audited in depth yet/.test(next.verdict)) {
+        next.verdict = `${next.name}'s programs, prices and rules were read on its official site on ${readOn}. Payout evidence and the legal file have not been audited in depth, so treat this profile as a starting point, not a recommendation.`;
+      }
+      if (/^Watchlist profile: an official site or monitoring source is identified/.test(next.auditSummary)) {
+        next.auditSummary = `Programs and rules read on the official site on ${readOn}. Reviews, payouts and the legal file still need deeper checks before any recommendation.`;
+      }
+      if (next.auditStatus === 'À auditer') next.auditStatus = 'Partiellement vérifié';
     }
 
     // A closed firm is never a purchase option: no start link survives.
