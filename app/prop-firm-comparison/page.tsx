@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import FirmLogo from '../components/FirmLogo';
 import RiskPip from '../components/ui/RiskPip';
 import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
@@ -93,7 +93,12 @@ export default function Comparateur() {
   const [drawdown, setDrawdown] = useState<DrawdownFilter>('Tous');
   const [legalFilter, setLegalFilter] = useState<LegalFilter>('Tous');
   const [country, setCountry] = useState<string>('Tous');
-  const [page, setPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const filtersButtonRef = useRef<HTMLButtonElement>(null);
+  const filtersRef = useRef<HTMLDivElement>(null);
+  const toolbarRef = useRef<HTMLElement>(null);
+  const [toolbarHidden, setToolbarHidden] = useState(false);
 
   const filteredFirms = useMemo(() => {
     const normalizedSearch = normalizeFirmSearch(search);
@@ -140,14 +145,38 @@ export default function Comparateur() {
   }, []);
 
   useEffect(() => {
-    setPage(1);
+    setVisibleCount(PAGE_SIZE);
   }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
 
-  const totalPages = Math.max(1, Math.ceil(filteredFirms.length / PAGE_SIZE));
-  const currentPage = Math.min(page, totalPages);
-  const visibleFirms = filteredFirms.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-  const visibleStart = filteredFirms.length ? (currentPage - 1) * PAGE_SIZE + 1 : 0;
-  const visibleEnd = Math.min(currentPage * PAGE_SIZE, filteredFirms.length);
+  // Mobile filter sheet: Escape closes it, the page behind does not scroll, focus moves in and back.
+  useEffect(() => {
+    if (!filtersOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    filtersRef.current?.querySelector<HTMLElement>('button, select')?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setFiltersOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKey);
+      filtersButtonRef.current?.focus();
+    };
+  }, [filtersOpen]);
+
+  // Shows the floating Filters button once the toolbar has scrolled out of view.
+  useEffect(() => {
+    const node = toolbarRef.current;
+    if (!node || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(([entry]) => setToolbarHidden(!entry.isIntersecting && entry.boundingClientRect.top < 0));
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  const visibleFirms = filteredFirms.slice(0, visibleCount);
+  const visibleEnd = Math.min(visibleCount, filteredFirms.length);
+  const remaining = filteredFirms.length - visibleEnd;
   const comparatorSchema = useMemo(
     () => ({
       '@context': 'https://schema.org',
@@ -180,6 +209,7 @@ export default function Comparateur() {
   );
 
   const averageScore = Math.round(filteredFirms.reduce((sum, firm) => sum + firm.score, 0) / Math.max(filteredFirms.length, 1));
+  const filterOnlyCount = [status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const payoutAlerts = useMemo(
     () => [...propFirms].filter((firm) => hasPayoutRiskSignal(firm)).sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore).slice(0, 3),
@@ -221,10 +251,6 @@ export default function Comparateur() {
     setCountry('Tous');
   }
 
-  function goToPage(nextPage: number) {
-    setPage(Math.max(1, Math.min(totalPages, nextPage)));
-    document.getElementById('tableau')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 
   const isSearching = Boolean(normalizeFirmSearch(search));
 
@@ -246,7 +272,8 @@ export default function Comparateur() {
         </dl>
       </header>
 
-      <section className="pr-toolbar" id="tableau" aria-label="Search and filters">
+      <section ref={toolbarRef} className={`pr-toolbar${filtersOpen ? ' has-sheet' : ''}`} id="tableau" aria-label="Search and filters">
+        <div className="pr-search-row">
         <div className="pr-search">
           <label className="sr-only" htmlFor="comparator-search">Search prop firms, entities, programs or rules</label>
           <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" /><path d="m13.5 13.5 4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
@@ -264,6 +291,18 @@ export default function Comparateur() {
             </button>
           ) : null}
         </div>
+          <button
+            ref={filtersButtonRef}
+            type="button"
+            className={`pr-filters-toggle${filterOnlyCount ? ' has-filters' : ''}`}
+            onClick={() => setFiltersOpen(true)}
+            aria-expanded={filtersOpen}
+            aria-controls="comparator-filters"
+          >
+            <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="M3 5h14M6 10h8M8.5 15h3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
+            Filters{filterOnlyCount ? <b>{filterOnlyCount}</b> : null}
+          </button>
+        </div>
 
         <div className="pr-quick" aria-label="Quick searches">
           {QUICK_SEARCHES.map((item) => {
@@ -276,7 +315,19 @@ export default function Comparateur() {
           })}
         </div>
 
-        <div className="pr-filters">
+        {filtersOpen ? <div className="pr-sheet-backdrop" onClick={() => setFiltersOpen(false)} aria-hidden="true" /> : null}
+        <div
+          className={`pr-filters${filtersOpen ? ' is-open' : ''}`}
+          id="comparator-filters"
+          ref={filtersRef}
+          role={filtersOpen ? 'dialog' : undefined}
+          aria-modal={filtersOpen ? true : undefined}
+          aria-label={filtersOpen ? 'Filters' : undefined}
+        >
+          <div className="pr-sheet-head">
+            <strong>Filters</strong>
+            <button type="button" className="pr-sheet-close" onClick={() => setFiltersOpen(false)} aria-label="Close filters">×</button>
+          </div>
           <div className="pr-segmented" aria-label="Filter by status">
             {statusFilters.map((item) => (
               <button key={item} type="button" className={status === item ? 'is-active' : ''} onClick={() => setStatus(item)} aria-pressed={status === item}>
@@ -326,13 +377,26 @@ export default function Comparateur() {
             ))}
             <option value="none">Country not identified</option>
           </select>
+          <div className="pr-sheet-foot">
+            <button type="button" className="btn" onClick={resetFilters} disabled={!activeFilterCount}>Reset</button>
+            <button type="button" className="btn btn-primary" onClick={() => setFiltersOpen(false)}>
+              Show {filteredFirms.length} firm{filteredFirms.length === 1 ? '' : 's'}
+            </button>
+          </div>
         </div>
       </section>
+
+      {toolbarHidden && !filtersOpen ? (
+        <button type="button" className="pr-filters-fab" onClick={() => setFiltersOpen(true)}>
+          <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><path d="M3 5h14M6 10h8M8.5 15h3" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+          Filters{filterOnlyCount ? <b>{filterOnlyCount}</b> : null} · {filteredFirms.length} firms
+        </button>
+      ) : null}
 
       <div className="pr-results-meta" aria-live="polite">
         <p>
           <strong>{filteredFirms.length} firms</strong>
-          {filteredFirms.length ? <span> · showing {visibleStart}–{visibleEnd}</span> : null}
+          {filteredFirms.length > visibleEnd ? <span> · showing {visibleEnd}</span> : null}
           {isSearching ? <span> · ranked by relevance</span> : <span> · average score {averageScore}</span>}
         </p>
         <div className="pr-results-actions">
@@ -351,19 +415,20 @@ export default function Comparateur() {
         <div className="pr-firm-table" role="table" aria-label="Prop firms ranked by PropRadar score" onPointerMove={followPointer}>
           <FirmTableHead />
           {visibleFirms.map((firm, index) => (
-            <FirmRow key={firm.slug} firm={firm} rank={(currentPage - 1) * PAGE_SIZE + index + 1}>
+            <FirmRow key={firm.slug} firm={firm} rank={index + 1}>
               {isSearching ? <FirmSearchContext firm={firm} query={search} /> : null}
             </FirmRow>
           ))}
         </div>
       )}
 
-      {filteredFirms.length > PAGE_SIZE ? (
-        <nav className="pr-pagination" aria-label="Comparator result pages">
-          <button type="button" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1}>← Previous</button>
-          <span aria-current="page">Page <strong>{currentPage}</strong> of {totalPages}</span>
-          <button type="button" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages}>Next →</button>
-        </nav>
+      {remaining > 0 ? (
+        <div className="pr-load-more">
+          <button type="button" className="btn" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>
+            Show {Math.min(PAGE_SIZE, remaining)} more
+          </button>
+          <span>{remaining} more firm{remaining === 1 ? '' : 's'} match these filters</span>
+        </div>
       ) : null}
 
       <section className="pr-signal-band" aria-label="Priority signals">
@@ -383,7 +448,7 @@ export default function Comparateur() {
           <li><strong>Score</strong> weighs rules, payout reliability, legal structure, public reviews and proof level.</li>
           <li><strong>Payout</strong> reflects withdrawal incidents, denials, thresholds and closures.</li>
           <li><strong>Legal</strong> reflects entity mapping, regulator status and the depth of saved sources.</li>
-          <li><strong>Reviews</strong> is the risk that public ratings are inflated or unreliable.</li>
+          <li><strong>Trustpilot</strong> is the public rating as Trustpilot shows it, or &quot;Withheld&quot; when Trustpilot removed it after a guideline breach.</li>
           <li><strong>Affiliate</strong> marks firms that may pay PropRadar a commission. It never moves the score.</li>
         </ul>
         <Link href="/audit" className="pr-link">Full methodology and sources <span aria-hidden="true">→</span></Link>
