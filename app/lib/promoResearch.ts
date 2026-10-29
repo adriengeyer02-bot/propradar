@@ -159,7 +159,7 @@ const allPromoDeals: PromoDeal[] = [
       'Very strong futures discount, but PropRadar keeps a cautious reading: verify EOD drawdown, consistency, payout rules and fees after passing.',
     caveats: ['New evaluations only', 'Firm classified as watchlist', 'No discount on resets or PA activation fees'],
     bestFor: ['futures', 'scalping', 'day trading', 'strong discount'],
-    commercialHook: 'The most spectacular futures deal right now: ideal for clicks, but it must be framed by risk warnings.',
+    commercialHook: 'The largest futures discount on the official coupon page right now; read the payout and legal signals before using it.',
     urgency: 'Official coupon page live on 27 October 2026',
     checkoutTip: 'Confirm SAVENOW changes the evaluation price, then review recurring and PA-stage fees separately.',
     featured: true,

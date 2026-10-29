@@ -218,10 +218,10 @@ export default function PromosPage() {
         <div className="section-heading">
           <div>
             <div className="eyebrow">Hot shortlist - checked on {PROMO_REVIEW_DATE}</div>
-            <h2>Mega deals to check first.</h2>
+            <h2>The biggest discounts, with their risk.</h2>
           </div>
           <p className="section-note">
-            This section is intentionally commercial: these are the offers that make people want to click. The caution stays visible next to them.
+            The largest official discounts right now. The firm&apos;s payout and legal signals stay next to each code, and affiliate links are marked.
           </p>
         </div>
         <div className="pr-deal-grid pr-deal-grid-featured">

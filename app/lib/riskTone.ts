@@ -33,6 +33,17 @@ export function reviewTone(risk: ReviewSignals['manipulationRisk']): Tone {
   return 'watch';
 }
 
+/**
+ * The third signal shown on rows and cards: the public Trustpilot rating as a
+ * fact (or Trustpilot's own withholding notice), not a PropRadar verdict.
+ */
+export function trustpilotPip(firm: Pick<PropFirm, 'trustpilotRating' | 'reviewSignals'>): { value: string; tone: Tone } {
+  if (firm.reviewSignals.trustpilotRatingWithheld) return { value: 'Withheld', tone: 'risk' };
+  if (!firm.trustpilotRating) return { value: 'Not checked', tone: 'none' };
+  const rating = firm.trustpilotRating;
+  return { value: `${rating.toFixed(1)}/5`, tone: rating >= 4.5 ? 'good' : 'watch' };
+}
+
 export function statusTone(status: PropFirm['status']): Tone {
   if (status === 'Active') return 'good';
   if (status === 'À surveiller') return 'watch';
