@@ -1029,13 +1029,107 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Challenge comparison read on the official site: Two Phase / PAYG / NEO ($15K to $500K, 8% / 6%, 5% daily, 10% static, 80% split), One Phase ($15K to $200K, 10%, 4% daily, 8% trailing, 50% split), Instant ($5K to $75K, 8% trailing, 50% split), payouts every 7 days. Prices were not listed.",
+          "source": "https://funded7.com/challenge-comparison/",
+          "fields": [
+            "products",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 49,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/funded7.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/funded7.com",
+        "profitSplit": 80,
+        "drawdownType": "Hybride",
+        "payoutDelay": "every 7 days, processed within 1 day; minimum withdrawal $100"
+      },
+      "setProducts": [
+        {
+          "id": "funded7-two-phase",
+          "name": "Two Phase challenge",
+          "type": "Challenge",
+          "description": "Prices were not listed on the comparison page. PAYG (pay as you grow) and Two Phase NEO use the same targets and limits.",
+          "accountSizeMin": 15000,
+          "accountSizeMax": 500000,
+          "profitTarget": "8% in phase 1, 6% in phase 2",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "10%, static",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "3",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule listed on the comparison page (29 Oct 2026)."
+        },
+        {
+          "id": "funded7-one-phase",
+          "name": "One Phase challenge",
+          "type": "Challenge",
+          "description": "Prices were not listed on the comparison page.",
+          "accountSizeMin": 15000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "8%, trailing",
+          "profitSplit": "50%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "3",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule listed on the comparison page (29 Oct 2026)."
+        },
+        {
+          "id": "funded7-instant",
+          "name": "Instant Funding",
+          "type": "Instant funding",
+          "description": "Prices were not listed on the comparison page.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 75000,
+          "profitTarget": "none",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "8%, trailing",
+          "profitSplit": "50%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "3",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule listed on the comparison page (29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funded7 challenge comparison (official)",
+          "url": "https://funded7.com/challenge-comparison/"
+        }
+      ]
     },
     "fundedelite": {
       "reviewedAt": "2026-10-28",
@@ -1267,13 +1361,32 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official FAQ read: 1-Step (10% target, 4% daily, 6% trailing drawdown locking at the starting balance) and 2-Step (8% / 5%, 4% daily, 10% static), 80% split (up to 95% with an add-on), bi-weekly payouts from 14 days, DXtrade / MatchTrader / cTrader. Account sizes and prices were not on the FAQ, so programs are not recorded yet.",
+          "source": "https://fx2funding.com/faqs/",
+          "fields": [
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.1,
         "trustpilotReviewCount": 456,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fx2funding.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fx2funding.com",
+        "profitSplit": 80,
+        "drawdownType": "Hybride",
+        "payoutDelay": "bi-weekly, starting 14 days after the first trade (5 days with an add-on); instant funding: one request per 30 days, processed within 48 hours"
+      },
+      "addSources": [
+        {
+          "label": "FX2 Funding FAQ (official)",
+          "url": "https://fx2funding.com/faqs/"
+        }
+      ]
     },
     "fxify": {
       "reviewedAt": "2026-10-28",
@@ -1354,9 +1467,21 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official homepage: Instant24 (from $13), Instant Lite (from $19) and Instant Funding (from $43), $1K to $100K, up to 95% split, 15% / 20% / no consistency rules, payout timing. The footer names RZR Funded Limited in Saint Lucia (2026-00682) and Mauritius (C191400) and HM Provider Limited (UK) for support services, and states the firm is separate from Hantec Markets Limited.",
+          "source": "https://rzrfunded.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "payoutDelay",
+            "entities"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "addSources": [
         {
           "label": "Press release: Hantec Trader becomes RZR Funded (2026-10-19)",
@@ -1365,13 +1490,114 @@
         {
           "label": "RZR Funded: why we are rebranding (official)",
           "url": "https://rzrfunded.com/why-we-are-rebranding/"
+        },
+        {
+          "label": "RZR Funded programs and footer (official)",
+          "url": "https://rzrfunded.com/"
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 853,
-        "trustpilotSourceUrl": "https://uk.trustpilot.com/review/rzrfunded.com"
-      }
+        "trustpilotSourceUrl": "https://uk.trustpilot.com/review/rzrfunded.com",
+        "priceFrom": 13,
+        "profitSplit": 95,
+        "payoutDelay": "Instant24: payout requests handled within 24 hours; Instant Lite and Instant Funding: every 14 days (7 with an add-on). RZR states rewards are approved within 24 business hours or doubled up to $1,000"
+      },
+      "setProducts": [
+        {
+          "id": "rzr-instant24",
+          "name": "Instant24",
+          "type": "Instant funding",
+          "description": "From $13. Maximum open loss 1%.",
+          "accountSizeMin": 2000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 13,
+          "profitTarget": "none",
+          "maxDailyLoss": "2%",
+          "maxDrawdown": "3% total (type not stated)",
+          "profitSplit": "up to 95%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "15% consistency rule (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "rzr-instant-lite",
+          "name": "Instant Lite",
+          "type": "Instant funding",
+          "description": "From $19. Maximum open loss 1%. Weekend holding and news trading with an add-on.",
+          "accountSizeMin": 1000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 19,
+          "profitTarget": "none",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "5% total (type not stated)",
+          "profitSplit": "up to 95%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "20% consistency rule (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "rzr-instant-funding",
+          "name": "Instant Funding",
+          "type": "Instant funding",
+          "description": "From $43. Maximum open loss 3%. Weekend holding and news trading with an add-on. 1-, 2- and 3-step tabs exist but showed no details.",
+          "accountSizeMin": 1000,
+          "accountSizeMax": 50000,
+          "entryFeeMin": 43,
+          "profitTarget": "none",
+          "maxDailyLoss": "6%",
+          "maxDrawdown": "6% total (type not stated)",
+          "profitSplit": "up to 95%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule (official page, 29 Oct 2026)."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "RZR Funded Limited",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2026-00682",
+          "role": "Listed in the official footer."
+        },
+        {
+          "name": "RZR Funded Limited",
+          "jurisdiction": "Mauritius",
+          "registrationNumber": "C191400",
+          "role": "Listed in the official footer; the footer does not say which entity is the main operator."
+        },
+        {
+          "name": "HM Provider Limited",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "14429485",
+          "role": "Provides support services according to the footer, which also states RZR Funded is separate from Hantec Markets Limited."
+        }
+      ]
     },
     "hola-prime": {
       "reviewedAt": "2026-10-28",
@@ -1393,7 +1619,7 @@
       }
     },
     "hyrotrader": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1403,13 +1629,48 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Evaluations page read: Zero-Step, One-Step and Two-Step (10% / 5% on Two-Step), 80% split (up to 90% at the firm's discretion), payouts within 24 hours in USDT or USDC, Bybit or BloFin demo accounts, refundable deposit on One- and Two-Step. Entities: HYRO TECHNOLOGIES FZ-LLC (Ras Al Khaimah, UAE), HYROTRADER TECHNOLOGIES LTD (BVI), Hyro Finance j.s.a. (Slovakia). Sizes and prices were not stated, so programs are not recorded yet.",
+          "source": "https://www.hyrotrader.com/evaluations/",
+          "fields": [
+            "profitSplit",
+            "payoutDelay",
+            "entities"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.0,
         "trustpilotReviewCount": 229,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com",
+        "profitSplit": 80,
+        "payoutDelay": "within 24 hours, paid in USDT or USDC"
+      },
+      "setEntities": [
+        {
+          "name": "HYRO TECHNOLOGIES FZ-LLC",
+          "jurisdiction": "Ras Al Khaimah, United Arab Emirates",
+          "role": "Website operator according to the official evaluations page."
+        },
+        {
+          "name": "HYROTRADER TECHNOLOGIES LTD",
+          "jurisdiction": "Tortola, British Virgin Islands",
+          "role": "Funded accounts according to the official evaluations page."
+        },
+        {
+          "name": "Hyro Finance, j.s.a.",
+          "jurisdiction": "Bratislava, Slovakia",
+          "role": "Card payments for EEA and UK customers according to the official evaluations page."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "HyroTrader evaluation options (official)",
+          "url": "https://www.hyrotrader.com/evaluations/"
+        }
+      ]
     },
     "ic-funded": {
       "reviewedAt": "2026-10-28",
@@ -1641,7 +1902,7 @@
       ]
     },
     "ment-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1651,13 +1912,99 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official homepage: Forex 1-step ($25K to $5M, 10%, 5% daily, 6% static), Futures ($25K to $400K, 10%, 3% daily, 6% static, 33% consistency) and Equities ($5K to $100K, static or trailing), 75% split by default (80% on equities, 90% as an add-on), payout timing. Prices were not tied to sizes; the existing entry price is kept.",
+          "source": "https://mentfunding.com/",
+          "fields": [
+            "products",
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 233,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.mentfunding.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.mentfunding.com",
+        "profitSplit": 75,
+        "drawdownType": "Hybride",
+        "payoutDelay": "forex: first withdrawal any time, then every 30 days; equities: first after 14 days, then every 14 days"
+      },
+      "setProducts": [
+        {
+          "id": "ment-forex-1-step",
+          "name": "Forex 1-step evaluation",
+          "type": "Challenge",
+          "description": "Prices not stated on the homepage. A 30-day activity rule applies (one trade every 30 days).",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 5000000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "5% from the prior-day balance",
+          "maxDrawdown": "6%, static; locks at the starting balance after the first payout",
+          "profitSplit": "75% (90% as a checkout add-on)",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "None on $25K to $1M accounts; 35% on funded accounts above $1M (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "ment-futures",
+          "name": "Futures evaluation",
+          "type": "Futures evaluation",
+          "description": "Prices not stated on the homepage. 90-day evaluation window.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 400000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6%, static; locks at the starting balance after the first withdrawal",
+          "profitSplit": "75% (90% as a checkout add-on)",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "33%, in the evaluation and before each payout (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "ment-equities",
+          "name": "Equities evaluation",
+          "type": "Challenge",
+          "description": "Prices not tied to sizes on the homepage. Static and trailing versions.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "15% (static) or 10% (trailing)",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "6%: static, or trailing on the closed balance until 6% is made, then locked",
+          "profitSplit": "80% (90% as a checkout add-on)",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Stocks"
+          ],
+          "minTradingDays": "3 profitable days of 0.5% or more before a payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "33% (evaluation and funded on Static; evaluation only on Trailing), official page, 29 Oct 2026."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Ment Funding programs (official)",
+          "url": "https://mentfunding.com/"
+        }
+      ]
     },
     "moneta-funded": {
       "reviewedAt": "2026-10-29",
@@ -1742,7 +2089,7 @@
       ]
     },
     "ofp-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1751,10 +2098,82 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official homepage: instant funding from $23 (95% split, balance-trailing drawdown), challenges from $32 (8% / 5%, 80% split) and $155 for 10K (10% / 5%), a 70% instant package, maximum loss 6%, 8% or 10% and daily loss 3% to 5% chosen at checkout, first split after 4 to 30 days. The page does not give the full size range per package.",
+          "source": "https://ofpfunding.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/ofpfunding.com)."
+      ],
+      "set": {
+        "priceFrom": 23,
+        "profitSplit": 80,
+        "payoutDelay": "first profit split after 4 days (instant 95% account) to 30 days (challenge), depending on the program"
+      },
+      "setProducts": [
+        {
+          "id": "ofp-instant-95",
+          "name": "Instant funding (95% split)",
+          "type": "Instant funding",
+          "description": "From $23 for 5K. Maximum loss chosen at checkout (6%, 8% or 10%), daily loss 3%, 4% or 5%. The largest size for this package was not stated.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 5000,
+          "entryFeeMin": 23,
+          "profitTarget": "none",
+          "maxDailyLoss": "3%, 4% or 5%, chosen at checkout",
+          "maxDrawdown": "6%, 8% or 10%, balance-trailing",
+          "profitSplit": "95%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "An Inconsistency Score must stay below the account's maximum; the maximum is not stated (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "ofp-challenge-8-5",
+          "name": "Two-step challenge (8% / 5%)",
+          "type": "Challenge",
+          "description": "From $32 for 5K. The largest size for this package was not stated.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 5000,
+          "entryFeeMin": 32,
+          "profitTarget": "8% then 5%",
+          "maxDailyLoss": "3%, 4% or 5%, chosen at checkout",
+          "maxDrawdown": "6%, 8% or 10%, balance-based",
+          "profitSplit": "80%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "An Inconsistency Score must stay below the account's maximum; the maximum is not stated (official page, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "OFP Funding programs (official)",
+          "url": "https://ofpfunding.com/"
+        }
       ]
     },
     "onefunded": {
@@ -2299,7 +2718,7 @@
       ]
     },
     "top-one-futures": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2307,6 +2726,15 @@
           "source": "https://www.toponefutures.com/terms-and-conditions",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Elite Evaluation read in the official help center: 25K to 150K, 6% target, end-of-day trailing maximum loss $1,000 to $4,500, 2.5% daily pause, $149 activation fee after passing, 25% consistency on Sim Funded. The purchase price and split were not in the article; the existing entry price is kept.",
+          "source": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation",
+          "fields": [
+            "products",
+            "drawdownType"
           ]
         }
       ],
@@ -2322,6 +2750,35 @@
         {
           "label": "Top One Futures terms and conditions (official)",
           "url": "https://www.toponefutures.com/terms-and-conditions"
+        },
+        {
+          "label": "Top One Futures Elite Evaluation overview (official help)",
+          "url": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation"
+        }
+      ],
+      "set": {
+        "drawdownType": "Trailing"
+      },
+      "setProducts": [
+        {
+          "id": "top-one-elite-evaluation",
+          "name": "Elite Evaluation",
+          "type": "Futures evaluation",
+          "description": "Purchase price not stated in the help article; one-time $149 activation fee after passing; resets $29 (25K) to $119 (150K). Elite ACCESS, Elite DAILY and Ignite accounts also exist.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "2.5% of the end-of-day balance; trading pauses for the day",
+          "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing on the end-of-day balance, locks at the drawdown limit plus $100",
+          "profitSplit": "not stated in the help article",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in the evaluation; on Sim Funded accounts no single day may exceed 25% of total profits (official help article, 29 Oct 2026)."
         }
       ]
     },
@@ -2748,6 +3205,158 @@
         "trustpilotReviewCount": 4858,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
       }
+    },
+    "crypto-fund-trader": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Programs and one-time fees read on the official homepage: Evaluation ($58 to $1,250), Accelerated ($40 to $1,199), Ascend ($45 to $1,798), Instant ($125 to $475) and Break ($70 to $199), 80% split on the live stage. Only the Break rules are tied to a program on the page (trailing $1,000 to $3,000, 40% consistency, on-demand payouts); the other rule sets are not tied to a program, so their limits are not recorded.",
+          "source": "https://cryptofundtrader.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "priceFrom": 40,
+        "profitSplit": 80,
+        "payoutDelay": "on demand on the Break program; not stated for the other programs"
+      },
+      "setProducts": [
+        {
+          "id": "cft-evaluation",
+          "name": "Evaluation",
+          "type": "Challenge",
+          "description": "One-time fee: $58 (5K) to $1,250 (200K). The homepage lists several rule sets without tying each one to a program; read the official rules for the exact targets of this program.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 58,
+          "entryFeeMax": 1250,
+          "profitTarget": "not tied to this program on the page read",
+          "maxDailyLoss": "not tied to this program on the page read",
+          "maxDrawdown": "not tied to this program on the page read",
+          "profitSplit": "80% on the live stage",
+          "platforms": [
+            "MetaTrader 5",
+            "Match-Trader",
+            "Bybit"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "Not stated for this program on the page read (29 Oct 2026)."
+        },
+        {
+          "id": "cft-accelerated",
+          "name": "Accelerated",
+          "type": "Challenge",
+          "description": "One-time fee: $40 (5K) to $1,199 (200K).",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 40,
+          "entryFeeMax": 1199,
+          "profitTarget": "not tied to this program on the page read",
+          "maxDailyLoss": "not tied to this program on the page read",
+          "maxDrawdown": "not tied to this program on the page read",
+          "profitSplit": "80% on the live stage",
+          "platforms": [
+            "MetaTrader 5",
+            "Match-Trader",
+            "Bybit"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "Not stated for this program on the page read (29 Oct 2026)."
+        },
+        {
+          "id": "cft-break",
+          "name": "Break Evaluation",
+          "type": "Challenge",
+          "description": "One-time fee: $70 (25K), $139 (50K), $199 (100K). One phase, minimum 1 trading day.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 70,
+          "entryFeeMax": 199,
+          "profitTarget": "$1,250 (25K), $3,000 (50K), $6,000 (100K)",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "$1,000 / $2,000 / $3,000, trailing",
+          "profitSplit": "80% on the live stage",
+          "platforms": [
+            "MetaTrader 5",
+            "Match-Trader",
+            "Bybit"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "minTradingDays": "1 in phase 1",
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% on the live stage: no single day may exceed 40% of total profit at payout time (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "cft-instant",
+          "name": "Instant Evaluation",
+          "type": "Instant funding",
+          "description": "One-time fee: $125 (2.5K), $240 (5K), $475 (10K).",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 10000,
+          "entryFeeMin": 125,
+          "entryFeeMax": 475,
+          "profitTarget": "not tied to this program on the page read",
+          "maxDailyLoss": "not tied to this program on the page read",
+          "maxDrawdown": "not tied to this program on the page read",
+          "profitSplit": "not stated",
+          "platforms": [
+            "MetaTrader 5",
+            "Match-Trader",
+            "Bybit"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "Not stated for this program on the page read (29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Crypto Fund Trader programs and prices (official)",
+          "url": "https://cryptofundtrader.com/"
+        }
+      ]
+    },
+    "dna-funded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official FAQ read: 1 Phase, 2 Phase and Rapid use a static maximum loss from the initial balance, Instant Funding and the 24-hour Challenge a trailing one; 80% split (90% with an add-on), payout processing 1-4 business days, TradeLocker platform, a 30% profit-distribution rule for new purchases. Sizes and prices were not stated, so programs are not recorded yet.",
+          "source": "https://dnafunded.com/faqs/",
+          "fields": [
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 80,
+        "drawdownType": "Hybride",
+        "payoutDelay": "processing usually 1-4 business days, then 1-2 business days to arrive; the Earlier Payout add-on shortens the waiting period to 7 days"
+      },
+      "addSources": [
+        {
+          "label": "DNA Funded FAQ (official)",
+          "url": "https://dnafunded.com/faqs/"
+        }
+      ]
     }
   }
 }
