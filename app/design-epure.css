@@ -2461,3 +2461,211 @@ html body .home-tools-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .pr-product-context-links { display: grid; gap: 8px; margin: 6px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); list-style: none; }
 .pr-product-context-links a { color: var(--accent); font-weight: 650; text-decoration: none; }
 .pr-product-context-links a::after { content: ' →'; }
+
+/* ==========================================================================
+   Comparator: mobile filter sheet, compact cards, load more
+   ========================================================================== */
+
+.pr-search-row { display: flex; gap: 10px; align-items: stretch; }
+.pr-search-row .pr-search { flex: 1; min-width: 0; }
+.pr-filters-toggle,
+.pr-sheet-head,
+.pr-sheet-foot,
+.pr-sheet-backdrop { display: none; }
+
+.pr-load-more { display: grid; justify-items: center; gap: 8px; margin: 18px 0 8px; color: var(--muted); font-size: 13.5px; }
+.pr-load-more .btn { min-width: 220px; }
+
+@media (max-width: 760px) {
+  .pr-page .pr-page-head .pr-lead { font-size: 15px; }
+  .pr-page .pr-head-stats { margin-top: 14px; }
+
+  .pr-toolbar,
+  .pr-page .pr-toolbar {
+    position: relative;
+    gap: 10px;
+    padding: 10px 16px;
+    margin: 0 -16px;
+    /* backdrop-filter would trap the fixed filter sheet inside the toolbar */
+    background: var(--bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .pr-search { height: 44px; }
+
+  .pr-filters-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--line-strong, var(--line));
+    border-radius: var(--pr-radius-sm);
+    color: var(--text);
+    background: var(--surface);
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+  }
+  .pr-filters-toggle b {
+    display: inline-grid;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    place-items: center;
+    border-radius: 999px;
+    color: var(--accent-ink);
+    background: var(--accent);
+    font-size: 12px;
+  }
+  .pr-filters-toggle.has-filters { border-color: var(--accent); }
+
+  .pr-quick {
+    flex-wrap: nowrap;
+    margin: 0 -16px;
+    padding: 0 16px 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pr-quick::-webkit-scrollbar { display: none; }
+  .pr-quick button { flex: 0 0 auto; }
+
+  /* The filter controls live in a bottom sheet on phones. */
+  .pr-filters { display: none; }
+  .pr-filters.is-open {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    max-height: 86vh;
+    overflow-y: auto;
+    padding: 8px 16px calc(16px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    border-radius: 18px 18px 0 0;
+    background: var(--surface);
+    box-shadow: 0 -18px 50px rgba(8, 12, 20, 0.28);
+    animation: pr-sheet-in 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .pr-filters.is-open .pr-segmented,
+  .pr-filters.is-open .pr-sheet-head,
+  .pr-filters.is-open .pr-sheet-foot { grid-column: 1 / -1; }
+  .pr-filters.is-open .pr-segmented { display: flex; width: 100%; }
+  .pr-filters.is-open .pr-segmented button { flex: 1; height: 38px; }
+  .pr-page .pr-filters.is-open select { width: 100%; height: 44px; font-size: 15px; }
+  .pr-filters.is-open select:nth-of-type(5),
+  .pr-filters.is-open select:nth-of-type(6) { grid-column: 1 / -1; }
+  /* The sticky toolbar is a stacking context: lift it above the tab bar while the sheet is open. */
+  .pr-toolbar.has-sheet { z-index: 1000; }
+
+  .pr-sheet-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0 4px;
+  }
+  .pr-sheet-head::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 40px;
+    height: 4px;
+    border-radius: 99px;
+    background: var(--line-strong, var(--line));
+    transform: translateX(-50%);
+  }
+  .pr-sheet-head strong { margin-top: 10px; font-size: 18px; }
+  .pr-sheet-close {
+    width: 36px;
+    height: 36px;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 50%;
+    color: var(--muted);
+    background: var(--surface-2, transparent);
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .pr-sheet-foot {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    background: var(--surface);
+  }
+  .pr-sheet-foot .btn { flex: 1; height: 46px; justify-content: center; }
+  .pr-sheet-foot .btn-primary { flex: 2; }
+  .pr-sheet-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: block;
+    background: rgba(5, 9, 15, 0.5);
+    animation: pr-fade-in 0.2s ease;
+  }
+
+  .pr-load-more .btn { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .pr-firm-row {
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      'id id id score'
+      'price dd . score'
+      'pips pips pips pips';
+    gap: 6px 14px;
+    padding: 12px 14px;
+  }
+  .pr-firm-name strong { font-size: 15.5px; }
+  .pr-firm-name > span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .pr-firm-sub { flex-wrap: nowrap; }
+  .pr-firm-fig { font-size: 13.5px; }
+  .pr-firm-score { align-self: center; }
+  .pr-firm-pips { gap: 2px 12px; font-size: 12.5px; }
+  .pr-firm-pips .pr-pip { font-size: 12.5px; }
+}
+
+@keyframes pr-sheet-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pr-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .pr-filters.is-open, .pr-sheet-backdrop { animation: none; }
+}
+
+.pr-toolbar { grid-template-columns: minmax(0, 1fr); }
+.pr-search-row { min-width: 0; }
+.pr-filters-toggle { flex: 0 0 auto; }
+
+/* Phones: once the toolbar scrolls away, a floating button reopens the filters. */
+.pr-filters-fab { display: none; }
+@media (max-width: 760px) {
+  .pr-filters-fab {
+    position: fixed;
+    left: 50%;
+    bottom: calc(96px + env(safe-area-inset-bottom));
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 999px;
+    color: var(--accent-ink);
+    background: var(--accent);
+    box-shadow: 0 10px 28px rgba(8, 12, 20, 0.3);
+    font-size: 14.5px;
+    font-weight: 700;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: pr-fade-in 0.2s ease;
+  }
+  .pr-filters-fab b { padding: 1px 7px; border-radius: 999px; background: color-mix(in srgb, var(--accent-ink) 18%, transparent); }
+}
