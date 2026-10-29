@@ -1769,7 +1769,7 @@
       ]
     },
     "fast-track-trading": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1777,6 +1777,15 @@
           "source": "https://www.fasttracktrading.net/terms-and-conditions/",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 3.1 TrustScore across 821 reviews; claimed profile; Trustpilot notes the company hasn't invited customers recently. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fasttracktrading.net",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -1792,7 +1801,12 @@
           "label": "Fast Track Trading terms and conditions (official)",
           "url": "https://www.fasttracktrading.net/terms-and-conditions/"
         }
-      ]
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 821,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fasttracktrading.net"
+      }
     },
     "funding-your-trades": {
       "reviewedAt": "2026-10-28",
@@ -1824,6 +1838,133 @@
           "url": "https://fundingyourtrades.com/terms-of-services/"
         }
       ]
+    },
+    "ascendx-capital": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Rebrand noted: Finance Magnates reported on 16 September 2024 that AscendX Capital announced (X post, 15 September 2024) that its name change to QuantTekel was complete and that it was moving towards brokerage services. The article names no regulator or licence. PropRadar keeps both profiles until the current operator and domain are confirmed; see the Quant Tekel profile.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
+          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ]
+    },
+    "quant-tekel": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Background noted: Finance Magnates reported on 16 September 2024 that QuantTekel is the new name of AscendX Capital (rebrand announced on X on 15 September 2024) and that it was moving towards brokerage services. The article names no regulator or licence; a third-party claim that it is a regulated broker is not verified.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
+          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ]
+    },
+    "blusky-trading": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 940 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/blusky.pro",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 940,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/blusky.pro"
+      }
+    },
+    "wsfunded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 4,858 reviews, claimed profile, no Trustpilot warning. This is the same Trustpilot profile as the Wall Street Funded entry: PropRadar currently lists the wsfunded.com firm twice. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/wsfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 4858,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
+      }
+    },
+    "moneta-funded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.6 TrustScore across 284 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/monetafunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 284,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/monetafunded.com"
+      }
+    },
+    "funded7": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 3.1 TrustScore across 49 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/funded7.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 49,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/funded7.com"
+      }
+    },
+    "fx2-funding": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.1 TrustScore across 456 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fx2funding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.1,
+        "trustpilotReviewCount": 456,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fx2funding.com"
+      }
     }
   }
 }
