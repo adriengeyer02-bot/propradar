@@ -14,6 +14,8 @@ import {
 import { getSeoGuideDisplay, getSeoGuidePath, selectGuideFirms, seoGuides } from './lib/seoGuides';
 import { GuideLogoStrip } from './guides/GuideLibrary';
 import { toEnglishText } from './lib/i18n';
+import FirmRow, { FirmTableHead } from './components/ui/FirmRow';
+import { SITE_NAME, SITE_URL } from './lib/site';
 
 export default function HomePage() {
   const noConflictFirms = propFirms.filter((firm) => firm.commercialRelationship === 'Aucune').length;
@@ -47,17 +49,61 @@ export default function HomePage() {
     timeZone: 'UTC',
   }).format(new Date(`${dataUpdatedAt}T00:00:00Z`));
 
+  const homeRanking = topFirms
+    .filter((firm) => firm.reviewSignals.payoutRisk !== 'Critique' && firm.regulatoryAudit.riskLevel !== 'Critical')
+    .slice(0, 10);
+  const closedCount = propFirms.filter((firm) => firm.status === 'Fermée').length;
+  const homeFaq = [
+    {
+      question: 'What is a prop firm?',
+      answer:
+        'A proprietary trading firm (prop firm) sells a paid evaluation, the challenge, on a simulated account. Traders who pass get a funded account and keep a share of the profits. The firm earns from evaluation fees and from the traders it funds.',
+    },
+    {
+      question: 'How does a prop firm challenge work?',
+      answer:
+        'You pay an entry fee, then reach a profit target without breaking a daily loss limit or a maximum drawdown. One-step, two-step, instant-funding and futures models use different rules; the PropRadar challenge guide compares them program by program.',
+    },
+    {
+      question: 'Are prop firms legit?',
+      answer: `Some are well established, others have closed: ${closedCount} firms in the PropRadar database are recorded as closed, each with a dated source. Check who operates the firm, in which country, and whether payout problems are documented before paying for a challenge.`,
+    },
+    {
+      question: 'How does PropRadar review prop firms?',
+      answer:
+        'Each firm file combines the official rules and prices, the legal entities and their countries, Trustpilot status and sourced payout incidents, with the date every item was checked. Affiliate links are disclosed and never change a score.',
+    },
+  ];
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFaq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
+  };
+  const rankingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${SITE_NAME}: top prop firms by score`,
+    itemListElement: homeRanking.map((firm, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: firm.name,
+      url: `${SITE_URL}/firm/${firm.slug}`,
+    })),
+  };
+
   return (
     <main className="home-v2">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rankingSchema).replace(/</g, '\\u003c') }} />
       <section className="container home-v2-hero" aria-labelledby="home-title">
         <div className="home-v2-hero-copy">
           <div className="home-v2-kicker">
             <span aria-hidden="true" />
             Independent. Evidence first.
           </div>
-          <h1 id="home-title">The independent prop firm comparator built to protect traders.</h1>
+          <h1 id="home-title">Independent prop firm reviews, compared on evidence.</h1>
           <p className="home-v2-lead">
-            Compare rules, payouts, legal entities and public signals before you pay for a challenge.
+            Compare challenge rules, prices, payout evidence and the legal entity behind {propFirms.length} prop firms before you pay for a challenge.
           </p>
           <div className="home-v2-proofline" aria-label="PropRadar dataset coverage">
             <span><strong>{propFirms.length}</strong> firms compared</span>
@@ -65,7 +111,7 @@ export default function HomePage() {
             <span>Latest firm review <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
           </div>
           <div className="home-v2-actions">
-            <Link href="/comparateur" className="btn btn-primary home-v2-primary-action">
+            <Link href="/prop-firm-comparison" className="btn btn-primary home-v2-primary-action">
               Open the comparator
             </Link>
             <Link href="/promos" className="btn home-v2-secondary-action">
@@ -107,8 +153,29 @@ export default function HomePage() {
               </li>
             ))}
           </ol>
-          <Link href="/comparateur" className="pr-link pr-home-radar-more">Compare all {propFirms.length} firms <span aria-hidden="true">→</span></Link>
+          <Link href="/prop-firm-comparison" className="pr-link pr-home-radar-more">Compare all {propFirms.length} firms <span aria-hidden="true">→</span></Link>
         </div>
+      </section>
+
+      <section className="container home-v2-section" aria-labelledby="home-reviews-title">
+        <div className="home-v2-section-heading">
+          <div>
+            <div className="eyebrow">Prop firm reviews</div>
+            <h2 id="home-reviews-title">Top prop firms by PropRadar score</h2>
+          </div>
+          <Link href="/best-prop-firms" className="home-v2-heading-link">See the full ranking</Link>
+        </div>
+        <div className="pr-firm-table" role="table" aria-label="Top prop firms ranked by PropRadar score">
+          <FirmTableHead />
+          {homeRanking.map((firm, index) => (
+            <FirmRow key={firm.slug} firm={firm} rank={index + 1} subline={toEnglishText(firm.bestFor)} />
+          ))}
+        </div>
+        <p className="pr-table-more">
+          <Link className="pr-link" href="/prop-firm-comparison">
+            Compare all {propFirms.length} prop firms side by side <span aria-hidden="true">→</span>
+          </Link>
+        </p>
       </section>
 
       <section className="home-v2-band home-tools-band" aria-labelledby="tools-title">
@@ -118,15 +185,21 @@ export default function HomePage() {
               <div className="eyebrow">Main tools</div>
               <h2 id="tools-title">Choose your next step.</h2>
             </div>
-            <p>Three focused paths, with the comparator kept at the center.</p>
+            <p>Four focused paths, with the comparator kept at the center.</p>
           </div>
 
           <div className="home-tools-grid">
-            <Link href="/comparateur" className="home-tool-card home-tool-card-primary">
+            <Link href="/prop-firm-comparison" className="home-tool-card home-tool-card-primary">
               <span className="home-tool-label">Comparator</span>
               <strong>Compare {propFirms.length} prop firms side by side.</strong>
               <small>Filter by score, market, payout risk, legal risk, price and trading rules.</small>
               <span className="home-tool-action">Open comparator <b aria-hidden="true">&gt;</b></span>
+            </Link>
+            <Link href="/prop-firm-challenge" className="home-tool-card">
+              <span className="home-tool-label">Challenge guide</span>
+              <strong>How a prop firm challenge works, program by program.</strong>
+              <small>Fees, profit targets, daily loss and drawdown rules read on each firm&apos;s own pages.</small>
+              <span className="home-tool-action">Compare challenges <b aria-hidden="true">&gt;</b></span>
             </Link>
             <Link href="/promos" className="home-tool-card">
               <span className="home-tool-label">Risk-aware deals</span>
@@ -205,6 +278,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="container home-v2-section home-faq" aria-labelledby="home-faq-title">
+        <h2 id="home-faq-title">Prop firm questions, answered with sources</h2>
+        <div className="firm-faq-grid">
+          {homeFaq.map((item) => (
+            <article className="firm-faq-card" key={item.question}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="home-v2-band home-brief-band" aria-labelledby="home-brief-title">
         <div className="container">
           <div className="home-v2-section-heading">
@@ -268,7 +353,7 @@ export default function HomePage() {
               <p>Every profile shows what is verified, partially verified or still waiting for stronger evidence.</p>
               <div>
                 <Link href="/audit">View the evidence log</Link>
-                <Link href="/regles">Read rule audits</Link>
+                <Link href="/prop-firm-rules">Read rule audits</Link>
               </div>
             </div>
 

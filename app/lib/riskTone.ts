@@ -27,6 +27,7 @@ export function legalTone(level: RegulatoryRiskLevel): Tone {
 }
 
 export function reviewTone(risk: ReviewSignals['manipulationRisk']): Tone {
+  if (!risk || risk === 'Non évalué') return 'none';
   if (risk === 'Faible') return 'good';
   if (risk === 'Élevé') return 'risk';
   return 'watch';

@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { getGuideLastModified, getSeoGuideBySlug, getSeoGuideDisplay, selectGuideFirms, seoGuides } from '../../lib/seoGuides';
+import { getGuideLastModified, getSeoGuideByUrlSlug, guideUrlSlug, getSeoGuideDisplay, selectGuideFirms, seoGuides } from '../../lib/seoGuides';
 import { scoreTone } from '../../lib/riskTone';
 import { Backdrop, Brand, LogoTile, OG, OG_SIZE, logoDataUrl, ogFonts, toneColor } from '../../lib/og/shared';
 
@@ -9,13 +9,13 @@ export const contentType = 'image/png';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return seoGuides.map((guide) => ({ slug: guide.slug }));
+  return seoGuides.map((guide) => ({ slug: guideUrlSlug(guide) }));
 }
 
 export default async function GuideShareImage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const fonts = await ogFonts();
-  const guide = getSeoGuideBySlug(slug === 'meilleure-prop-firm-2026' ? 'meilleures-prop-firms' : slug) ?? getSeoGuideBySlug(slug);
+  const guide = getSeoGuideByUrlSlug(slug);
 
   if (!guide) {
     return new ImageResponse(<div style={{ display: 'flex', width: '100%', height: '100%', background: OG.bg }} />, { ...size, fonts });

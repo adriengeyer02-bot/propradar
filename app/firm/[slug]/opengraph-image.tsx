@@ -73,7 +73,7 @@ export default async function FirmShareImage({ params }: { params: Promise<{ slu
             <div style={{ display: 'flex', gap: 40 }}>
               <Pip label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
               <Pip label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-              <Pip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+              <Pip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
             </div>
             <span style={{ fontSize: 22, color: OG.muted }}>Reviewed {firm.lastReviewed}</span>
           </div>

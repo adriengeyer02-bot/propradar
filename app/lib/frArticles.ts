@@ -25,7 +25,7 @@ export type FrArticle = GuideArticle & {
 export const frArticles: FrArticle[] = [
   {
     slug: 'meilleures-prop-firms-2026',
-    enPath: '/meilleures-prop-firms',
+    enPath: '/best-prop-firms',
     title: 'Meilleures prop firms 2026 : classement par fiabilité',
     metaDescription:
       'Quelles sont les meilleures prop firms en 2026 ? Classement indépendant par fiabilité des payouts, clarté des règles, transparence juridique et avis vérifiés.',
@@ -101,7 +101,7 @@ export const frArticles: FrArticle[] = [
 
   {
     slug: 'prop-firm-sans-challenge',
-    enPath: '/guides/prop-firm-sans-challenge',
+    enPath: '/guides/prop-firm-no-challenge',
     title: 'Prop firm sans challenge : vaut-il le coup en 2026 ?',
     metaDescription:
       'Prop firm sans challenge et financement instantané : comment ça marche, combien ça coûte vraiment, quelles règles restent et pour qui c\'est rentable.',
@@ -172,7 +172,7 @@ export const frArticles: FrArticle[] = [
 
   {
     slug: 'regle-de-consistance-prop-firm',
-    enPath: '/guides/prop-firm-sans-consistency-rule',
+    enPath: '/guides/prop-firm-no-consistency-rule',
     title: 'Règle de consistance prop firm : calcul et exemples',
     metaDescription:
       'Règle de consistance en prop firm : formule de calcul, exemples chiffrés, différence entre challenge et payout, et règles actuelles de Topstep et FTMO.',

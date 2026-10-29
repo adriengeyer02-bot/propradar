@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
   const paths: string[] = Array.isArray(body.paths)
     ? body.paths.filter((path): path is string => typeof path === 'string')
     : [];
-  const targets: string[] = paths.length ? paths : ['/', '/guides', '/radar-brief', '/promos', '/comparateur', '/sitemap.xml', '/feed.xml'];
+  const targets: string[] = paths.length ? paths : ['/', '/guides', '/radar-brief', '/promos', '/prop-firm-comparison', '/sitemap.xml', '/feed.xml'];
 
   targets.forEach((path) => {
     revalidatePath(path);

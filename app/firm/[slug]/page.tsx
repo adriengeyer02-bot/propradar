@@ -34,7 +34,10 @@ import {
   drawdownLabel,
   hasPayoutRiskSignal,
   isPayoutRiskAssessed,
+  firmGaps,
+  isPayoutDelayUnknown,
   isProvisional,
+  isReviewRiskAssessed,
   payoutEvidence,
   profitSplitLabel,
 } from '../../lib/propFirms';
@@ -45,6 +48,7 @@ import { getFirmContentLastModified, getFirmSearchProfile } from '../../lib/firm
 import { toEnglishText } from '../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../lib/editorialBriefs';
 import { getAuditCaseFile } from '../../lib/auditCaseFiles';
+import { entityCountries } from '../../lib/jurisdictions';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -168,7 +172,7 @@ function scoreProofRows(firm: PropFirm, kind: 'trustpilot' | 'payout' | 'manipul
     return [
       { label: 'Raw rating', value: firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'Not filled in PropRadar' },
       { label: 'Source', value: trustpilotUrl ? 'Listed Trustpilot page' : 'Link or review to complete', href: trustpilotUrl },
-      { label: 'Status', value: firm.trustpilotRating ? 'Weighted score' : 'Provisional score' },
+      { label: 'Status', value: firm.reviewSignals.trustpilotRatingWithheld ? 'Rating withheld by Trustpilot' : firm.trustpilotRating ? 'Read from the public rating' : 'Not assessed' },
     ];
   }
 
@@ -183,7 +187,7 @@ function scoreProofRows(firm: PropFirm, kind: 'trustpilot' | 'payout' | 'manipul
   }
 
   return [
-    { label: 'Base', value: 'Trustpilot + incidents + marketing signals' },
+    { label: 'Base', value: 'Trustpilot notices and hand-counted fake-review alerts only' },
     { label: 'Review alert', value: firm.reviewSignals.trustpilotRatingWithheld ? 'Trustpilot rating withheld (guideline breach)' : typeof firm.reviewSignals.trustpilotFlaggedReviewCount === 'number' ? `${firm.reviewSignals.trustpilotFlaggedReviewCount} counted alert(s)` : 'Not counted' },
     { label: 'Status', value: toEnglishText(firm.reviewSignals.trustpilotReliability) },
   ];
@@ -315,6 +319,32 @@ function uniqueProfilePoints(points: string[]) {
     });
 }
 
+/** Default search title: the query people type ("<firm> review", "is <firm> legit"), facts only. */
+function genericFirmTitle(firm: PropFirm) {
+  if (firm.status === 'Fermée') return `${firm.name} Closed: Status, Timeline & Sources`;
+  const year = (firm.lastReviewed || '').slice(0, 4) || '2026';
+  return `${firm.name} Review ${year}: Legit? Rules & Payouts`;
+}
+
+/** Default search snippet built only from fields read on a source (provisional values are left out). */
+function genericFirmDescription(firm: PropFirm) {
+  if (firm.status === 'Fermée') {
+    return `${firm.name} is listed as closed on PropRadar. Dated timeline, sources, legal entities and what traders should check before buying from a similar firm.`;
+  }
+  const facts: string[] = [`PropRadar score ${firm.score}/100`];
+  if (firm.priceFrom > 0) facts.push(`challenges from $${firm.priceFrom}`);
+  if (!isProvisional(firm, 'profitSplit') && firm.profitSplit > 0) facts.push(`${firm.profitSplit}% profit split`);
+  if (firm.trustpilotRating) facts.push(`Trustpilot ${firm.trustpilotRating}/5`);
+  const countries = entityCountries(firm.regulatoryAudit.entities);
+  if (countries.length) {
+    const names = countries.map((c) => c.name);
+    facts.push(`entity in ${names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0]}`);
+  }
+  const base = `Is ${firm.name} legit? ${facts.join(', ')}.`;
+  const tail = ' Rules, payout evidence and legal checks, all sourced.';
+  return (base + tail).length <= 160 ? base + tail : base;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const firm = getFirmBySlug(slug);
@@ -329,9 +359,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const searchProfile = getFirmSearchProfile(firm.slug);
   const auditCaseFile = getAuditCaseFile(firm.slug);
   const metaOverride = firmMetaOverrides[firm.slug];
-  const title = metaOverride?.title(firm) ?? searchProfile?.metaTitle ?? `${firm.name} Review: Payout & Risk`;
-  const description = metaOverride?.description(firm) ?? searchProfile?.metaDescription ??
-    `${firm.name} review: score ${firm.score}/100, payout risk ${toEnglishText(firm.reviewSignals.payoutRisk)}, legal risk ${firm.regulatoryAudit.riskLevel}. ${toEnglishText(firm.verdict)}`;
+  const title = metaOverride?.title(firm) ?? searchProfile?.metaTitle ?? genericFirmTitle(firm);
+  const description = metaOverride?.description(firm) ?? searchProfile?.metaDescription ?? genericFirmDescription(firm);
   const modifiedTime = new Date(getFirmContentLastModified(
     firm.slug,
     firm.lastReviewed,
@@ -394,6 +423,7 @@ export default async function FirmPage({ params }: Props) {
   const isThe5ers = firm.slug === 'the5ers';
   const isBlueGuardian = firm.slug === 'blue-guardian';
   const isGoatFundedTrader = firm.slug === 'goat-funded-trader';
+  const gaps = firmGaps(firm);
   const searchProfile = getFirmSearchProfile(firm.slug);
   const auditCaseFile = getAuditCaseFile(firm.slug);
   const relatedGuides = getFirmRelatedGuides(firm, 4);
@@ -463,23 +493,30 @@ export default async function FirmPage({ params }: Props) {
   ];
   const reviewOverview = [
     {
-      label: 'Trustpilot reliability',
+      label: 'Trustpilot rating',
       score: firm.reviewSignals.trustpilotReliabilityScore,
-      provisional: !firm.trustpilotRating,
-      detail: firm.trustpilotRating
-        ? `${firm.trustpilotRating}/5 raw rating${firm.reviewSignals.trustpilotReviewCount ? ` · ${firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')} reviews` : ''}`
-        : 'No Trustpilot rating on file',
+      provisional: !firm.trustpilotRating && !firm.reviewSignals.trustpilotRatingWithheld,
+      valueLabel: firm.reviewSignals.trustpilotRatingWithheld ? 'Withheld' : firm.trustpilotRating ? `${firm.trustpilotRating}/5` : undefined,
+      detail: firm.reviewSignals.trustpilotRatingWithheld
+        ? 'Rating withheld by Trustpilot after a guideline breach'
+        : firm.trustpilotRating
+          ? `${firm.trustpilotRating}/5 public rating${firm.reviewSignals.trustpilotReviewCount ? ` · ${firm.reviewSignals.trustpilotReviewCount.toLocaleString('en-US')} reviews` : ''}`
+          : 'Not assessed: no Trustpilot rating on file',
     },
     {
       label: 'Review authenticity',
       score: Math.max(0, 100 - (firm.reviewSignals.manipulationRiskScore ?? 50)),
-      provisional: firm.reviewSignals.manipulationRiskScore === undefined,
-      detail: `${toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} manipulation risk`,
+      provisional: !isReviewRiskAssessed(firm),
+      valueLabel: isReviewRiskAssessed(firm) ? 'Alert' : undefined,
+      detail: isReviewRiskAssessed(firm)
+        ? 'Review alert on file (Trustpilot notice or counted fake reviews)'
+        : 'Not assessed: no review alert on file',
     },
     {
       label: 'Payout safety',
       score: Math.max(0, 100 - firm.reviewSignals.payoutRiskScore),
       provisional: !isPayoutRiskAssessed(firm),
+      valueLabel: undefined as string | undefined,
       detail: isPayoutRiskAssessed(firm) ? `${payoutEvidence(firm).length} sourced payout signal(s)` : 'Not assessed: no payout evidence on file',
     },
   ];
@@ -639,7 +676,7 @@ export default async function FirmPage({ params }: Props) {
         '@type': 'ListItem',
         position: 2,
         name: 'Comparator',
-        item: `${SITE_URL}/comparateur`,
+        item: `${SITE_URL}/prop-firm-comparison`,
       },
       {
         '@type': 'ListItem',
@@ -671,7 +708,7 @@ export default async function FirmPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema)} />
 
       <section className="container detail-header firm-profile-header">
-        <Link href="/comparateur" className="firm-back-link">
+        <Link href="/prop-firm-comparison" className="firm-back-link">
           <span aria-hidden="true">&larr;</span>
           All firms
         </Link>
@@ -710,10 +747,10 @@ export default async function FirmPage({ params }: Props) {
               <div className="pr-scorecard-pips">
                 <RiskPip label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
                 <RiskPip label="Legal" value={regulatoryAudit.riskLevel} tone={legalTone(regulatoryAudit.riskLevel)} />
-                <RiskPip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+                <RiskPip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
               </div>
               <div className="pr-firm-actions">
-                <Link href="/comparateur" className="btn">Compare</Link>
+                <Link href="/prop-firm-comparison" className="btn">Compare</Link>
                 <Link href="/#radar-weekly" className="pr-link">Set an alert</Link>
               </div>
             </div>
@@ -727,8 +764,31 @@ export default async function FirmPage({ params }: Props) {
           <div><dt>News trading</dt><dd>{toEnglishText(firm.newsTrading)}</dd></div>
           <div><dt>Proof level</dt><dd>{toEnglishText(firm.auditStatus)}</dd></div>
           <div><dt>Last review</dt><dd><ReviewFreshness date={firm.lastReviewed} /></dd></div>
-          <div className="pr-key-facts-wide"><dt>Payout</dt><dd>{toEnglishText(firm.payoutDelay)}</dd></div>
+          {isPayoutDelayUnknown(firm) ? null : (
+            <div className="pr-key-facts-wide"><dt>Payout</dt><dd>{toEnglishText(firm.payoutDelay)}</dd></div>
+          )}
         </dl>
+
+        {gaps.length ? (
+          <aside className="pr-gaps" aria-labelledby={`gaps-${firm.slug}`}>
+            <div>
+              <h2 id={`gaps-${firm.slug}`}>Not verified yet</h2>
+              <p>
+                PropRadar only shows what it read on a source. These items are still open for {firm.name}, so check them on the
+                firm&apos;s own pages before you buy.
+              </p>
+            </div>
+            <ul>
+              {gaps.map((gap) => <li key={gap}>{gap}</li>)}
+            </ul>
+            <a
+              className="pr-link"
+              href={`mailto:contact@propradar.tech?subject=${encodeURIComponent(`Source for ${firm.name}`)}&body=${encodeURIComponent(`Item and public link: `)}`}
+            >
+              Send us a source
+            </a>
+          </aside>
+        ) : null}
 
         {searchProfile ? (
           <article className="firm-search-answer" aria-labelledby={`search-answer-${firm.slug}`}>
@@ -1028,15 +1088,15 @@ export default async function FirmPage({ params }: Props) {
           </div>
           <ul className="pr-signal-bars">
             {reviewOverview.map((item) => (
-              <li key={item.label} className={`pr-tone-${scoreTone(item.score)}${item.provisional ? ' is-estimate' : ''}`}>
+              <li key={item.label} className={`pr-tone-${item.provisional ? 'none' : item.valueLabel === 'Withheld' || item.valueLabel === 'Alert' ? 'risk' : scoreTone(item.score)}${item.provisional ? ' is-estimate' : ''}`}>
                 <span className="pr-signal-bar-label">
                   <strong>{item.label}</strong>
-                  {item.provisional ? <em className="pr-tag" title="No Trustpilot rating on file: conservative PropRadar weighting.">Provisional</em> : null}
+                  {item.provisional ? <em className="pr-tag" title="No evidence on file: nothing is scored.">Not assessed</em> : null}
                 </span>
                 <span className="pr-signal-bar-track" aria-hidden="true">
-                  <span style={{ width: `${Math.max(0, Math.min(100, item.score))}%` }} />
+                  <span style={{ width: item.provisional ? '0%' : `${Math.max(0, Math.min(100, item.score))}%` }} />
                 </span>
-                <span className="pr-signal-bar-value">{item.score}</span>
+                <span className="pr-signal-bar-value">{item.provisional ? '—' : item.valueLabel ?? item.score}</span>
                 <small>{item.detail}</small>
               </li>
             ))}
@@ -1127,9 +1187,9 @@ export default async function FirmPage({ params }: Props) {
             </div>
             <div className="signal-explain-card">
               <div className="eyebrow">Manipulable Reviews</div>
-              <div className="score">{firm.reviewSignals.manipulationRiskScore ?? 50}/100</div>
-              <span className={`badge ${manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Moyen')}`}>
-                {toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')}
+              <div className="score">{isReviewRiskAssessed(firm) ? `${firm.reviewSignals.manipulationRiskScore}/100` : '—'}</div>
+              <span className={`badge ${manipulationRiskClass(firm.reviewSignals.manipulationRisk ?? 'Non évalué')}`}>
+                {toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')}
               </span>
               <div className="score-proof">
                 {scoreProofRows(firm, 'manipulation').map((row) => (

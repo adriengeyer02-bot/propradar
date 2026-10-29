@@ -341,7 +341,7 @@ export default async function RadarBriefIssuePage({ params }: Props) {
                 <li><span>05</span><p><strong>Timing</strong> Recheck the file on purchase day because program terms can change.</p></li>
               </ol>
               <div className="brief-decision-actions">
-                <Link href="/comparateur" className="btn btn-primary">Open the comparator</Link>
+                <Link href="/prop-firm-comparison" className="btn btn-primary">Open the comparator</Link>
                 <Link href="/audit" className="btn">Review the method</Link>
               </div>
             </section>

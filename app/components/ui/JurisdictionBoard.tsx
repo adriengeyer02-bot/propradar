@@ -100,7 +100,7 @@ export default function JurisdictionBoard({ firms }: { firms: PropFirm[] }) {
 
         <details className="pr-juris-firms">
           <summary>See the firms</summary>
-          <Link className="pr-juris-compare" href={`/comparateur?country=${country.code}`}>
+          <Link className="pr-juris-compare" href={`/prop-firm-comparison?country=${country.code}`}>
             Compare these firms →
           </Link>
           <ul>

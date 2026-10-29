@@ -23,7 +23,7 @@ const PAYOUT_RISK_DESCRIPTION =
 export const metadata = createPageMetadata({
   title: 'Prop Firm Payout Risks: Delays and Denial Signals',
   description: PAYOUT_RISK_DESCRIPTION,
-  path: '/risques-payout',
+  path: '/prop-firm-payout-risk',
   keywords: ['prop firm payout problem', 'prop firm payout denial', 'prop firm payout risk', 'prop firm withdrawal'],
   category: 'Prop firm payout risk',
 });
@@ -71,7 +71,7 @@ export default function PayoutRiskPage() {
       <PageStructuredData
         name="Prop firm payout risk watch"
         description={PAYOUT_RISK_DESCRIPTION}
-        path="/risques-payout"
+        path="/prop-firm-payout-risk"
         breadcrumbLabel="Payout risks"
         dateModified="2026-07-13"
         items={risky.map((firm) => ({
@@ -89,8 +89,8 @@ export default function PayoutRiskPage() {
             incidents, legal context or withdrawal conditions require stricter reading.
           </p>
           <div className="actions">
-            <Link href="/comparateur" className="btn btn-primary">Compare with all signals</Link>
-            <Link href="/regles" className="btn">Read sensitive clauses</Link>
+            <Link href="/prop-firm-comparison" className="btn btn-primary">Compare with all signals</Link>
+            <Link href="/prop-firm-rules" className="btn">Read sensitive clauses</Link>
             <Link href="/audit" className="btn">Check sources</Link>
           </div>
         </div>

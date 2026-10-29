@@ -3,4 +3,4 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.proprad
 export const SITE_NAME = 'PropRadar';
 
 export const SITE_DESCRIPTION =
-  'Independent prop firm comparator: scores, rules, payouts, Reddit, X/Twitter, Trustpilot and conflicts of interest visible before purchase.';
+  'Independent prop firm reviews and comparison: challenge rules, prices, payout evidence, Trustpilot status and the legal entity behind each firm, every fact sourced and dated.';

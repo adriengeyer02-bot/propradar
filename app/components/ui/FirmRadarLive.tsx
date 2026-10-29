@@ -29,7 +29,8 @@ const PERIOD_MS = 6500;
 /** Pointer must be this close (viewBox units) to pick a dot. */
 const PICK_RADIUS = 14;
 
-const TONE_LABEL: Record<Tone, string> = { good: 'Low risk', watch: 'To watch', risk: 'High risk or closed', none: 'Not assessed' };
+// Bands of the PropRadar score (see scoreTone), not a risk verdict on each firm.
+const TONE_LABEL: Record<Tone, string> = { good: 'Score 75+', watch: 'Score 55–74', risk: 'Under 55 or closed', none: 'Not assessed' };
 const DEFAULT_HINT = 'Closer to the centre = higher score. Point at a dot, a ring or a category.';
 
 function radiusFor(score: number) {
@@ -178,7 +179,7 @@ export default function FirmRadarLive({ dots }: { dots: RadarDot[] }) {
           ref={svgRef}
           viewBox={`0 0 ${SIZE} ${SIZE}`}
           role="img"
-          aria-label={`${dots.length} prop firms placed by PropRadar score: ${counts.good} low risk, ${counts.watch} to watch, ${counts.risk} high risk or closed.`}
+          aria-label={`${dots.length} prop firms placed by PropRadar score: ${counts.good} scored 75 or more, ${counts.watch} scored 55 to 74, ${counts.risk} under 55 or closed.`}
           onPointerMove={track}
           onPointerDown={(event) => { pressedHotRef.current = hotRef.current; track(event); }}
           onPointerLeave={(event) => { if (event.pointerType === 'mouse') leave(); }}

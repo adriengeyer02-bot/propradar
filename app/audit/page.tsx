@@ -128,8 +128,8 @@ export default function AuditPage() {
             PropRadar does not mix a fully verified profile with an entry added for monitoring. Each firm keeps a visible audit level, consulted sources and signals still needing reinforcement.
           </p>
           <div className="actions">
-            <Link href="/comparateur" className="btn btn-primary">Compare firms</Link>
-            <Link href="/regles" className="btn">View rules</Link>
+            <Link href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
+            <Link href="/prop-firm-rules" className="btn">View rules</Link>
           </div>
         </div>
         <div className="panel audit-method-panel">
@@ -316,18 +316,11 @@ export default function AuditPage() {
             ))}
           </div>
           {propFirms.length > 40 ? (
-            <details className="pr-disclosure">
-              <summary>Show the other {propFirms.length - 40} profiles</summary>
-              <div className="pr-firm-table" role="table" aria-label="Other prop firm profiles">
-                {propFirms.slice(40).map((firm) => (
-                  <FirmRow
-                    key={firm.slug}
-                    firm={firm}
-                    subline={`${toEnglishText(firm.auditStatus)} · ${firm.legalVerified ? 'Entity mapped' : 'Entity missing'} · ${legalSourceCount(firm)} legal/source link(s)`}
-                  />
-                ))}
-              </div>
-            </details>
+            <p className="pr-table-more">
+              <Link className="pr-link" href="/prop-firm-comparison">
+                See the other {propFirms.length - 40} profiles in the comparison table <span aria-hidden="true">→</span>
+              </Link>
+            </p>
           ) : null}
         </div>
       </section>

@@ -22,7 +22,7 @@ const RULES_DESCRIPTION =
 export const metadata = createPageMetadata({
   title: 'Prop Firm Rules: Drawdown, Payout and Trading Risk',
   description: RULES_DESCRIPTION,
-  path: '/regles',
+  path: '/prop-firm-rules',
   keywords: ['prop firm rules', 'prop firm drawdown', 'prop firm consistency rule', 'prop firm news trading'],
   category: 'Prop firm rules',
 });
@@ -757,7 +757,7 @@ export default function RulesPage() {
       <PageStructuredData
         name="Prop firm rule audits"
         description={RULES_DESCRIPTION}
-        path="/regles"
+        path="/prop-firm-rules"
         breadcrumbLabel="Trading rules"
         dateModified="2026-07-13"
         items={officialRuleAudits.map((audit) => ({
@@ -792,7 +792,7 @@ export default function RulesPage() {
           <div><dt>5+ sources</dt><dd>{deepSourceCoveredCount}</dd></div>
         </dl>
         <p className="pr-related">
-          Related guides: <Link href="/guides/prop-firm-sans-consistency-rule">Consistency rule</Link> · <Link href="/guides/prop-firm-news-trading">News trading</Link>
+          Related guides: <Link href="/guides/prop-firm-no-consistency-rule">Consistency rule</Link> · <Link href="/guides/prop-firm-news-trading">News trading</Link>
         </p>
       </section>
 

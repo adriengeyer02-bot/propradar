@@ -28,7 +28,7 @@ export const firmMetaOverrides: Partial<Record<string, FirmMetaOverride>> = {
     description: () =>
       'Does Maven Trading have a consistency rule? Standard 1-, 2- and 3-Step challenges show none; Instant and Buy Now Pay Later can. Payouts, drawdown and risk score.',
   },
-  // Firm page and /guides/goat-funded-trader-avis competed for the same
+  // Firm page and /guides/goat-funded-trader-review competed for the same
   // queries (positions 46 and 26). The guide targets "review / legit"; the
   // profile targets the data itself.
   'goat-funded-trader': {

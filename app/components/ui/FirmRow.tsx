@@ -90,7 +90,7 @@ export default function FirmRow({ firm, rank, children, subline, href }: FirmRow
       <span className="pr-firm-pips" role="cell">
         <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
         <RiskPip compact label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-        <RiskPip compact label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+        <RiskPip compact label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
       </span>
       <span className="pr-firm-go" role="cell" aria-hidden="true">›</span>
     </Link>

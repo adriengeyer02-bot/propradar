@@ -280,7 +280,7 @@ export default function OutilsClient() {
             <div className="eyebrow">Side-by-side comparison</div>
             <h2>Choose up to 3 prop firms.</h2>
           </div>
-          <Link href="/comparateur" className="btn">Open full comparator</Link>
+          <Link href="/prop-firm-comparison" className="btn">Open full comparator</Link>
         </div>
 
         <div className="compare-select-grid">

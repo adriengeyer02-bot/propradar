@@ -1,4 +1,4 @@
-import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from '../lib/seoGuides';
+import { getSeoGuideDisplay, getSeoGuidePath, guideUrlSlug, seoGuides } from '../lib/seoGuides';
 import { SITE_URL } from '../lib/site';
 import { editorialBriefs, getEditorialBriefPath } from '../lib/editorialBriefs';
 import { auditCaseFiles } from '../lib/auditCaseFiles';
@@ -23,7 +23,7 @@ export async function GET() {
       '  <url>',
       `    <loc>${escapeXml(`${SITE_URL}${getSeoGuidePath(guide)}`)}</loc>`,
       '    <image:image>',
-      `      <image:loc>${escapeXml(`${SITE_URL}/guides/${guide.slug}/opengraph-image`)}</image:loc>`,
+      `      <image:loc>${escapeXml(`${SITE_URL}/guides/${guideUrlSlug(guide)}/opengraph-image`)}</image:loc>`,
       `      <image:title>${escapeXml(display.title)}</image:title>`,
       `      <image:caption>${escapeXml(`${display.title}: firms compared by PropRadar score`)}</image:caption>`,
       '    </image:image>',

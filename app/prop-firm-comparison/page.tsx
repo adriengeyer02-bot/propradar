@@ -154,7 +154,7 @@ export default function Comparateur() {
       '@type': 'CollectionPage',
       name: 'PropRadar Prop Firm Comparator',
       description: 'Independent prop firm comparison using rules, payout risk, legal evidence and public review signals.',
-      url: `${SITE_URL}/comparateur`,
+      url: `${SITE_URL}/prop-firm-comparison`,
       dateModified: DATA_UPDATED_AT,
       mainEntity: {
         '@type': 'ItemList',
@@ -337,7 +337,7 @@ export default function Comparateur() {
         </p>
         <div className="pr-results-actions">
           {activeFilterCount > 0 ? <button type="button" className="pr-link-button" onClick={resetFilters}>Reset {activeFilterCount} filter{activeFilterCount > 1 ? 's' : ''}</button> : null}
-          <Link href="/outils#comparatif" className="pr-link">Compare 2–3 side by side <span aria-hidden="true">→</span></Link>
+          <Link href="/tools#comparatif" className="pr-link">Compare 2–3 side by side <span aria-hidden="true">→</span></Link>
         </div>
       </div>
 
@@ -369,10 +369,10 @@ export default function Comparateur() {
       <section className="pr-signal-band" aria-label="Priority signals">
         <h2>Signals to check first</h2>
         <div className="pr-signal-grid">
-          <SignalList title="Payout incidents" href="/risques-payout" firms={payoutAlerts} value={(firm) => toEnglishText(firm.reviewSignals.payoutRisk)} tone={(firm) => payoutTone(firm.reviewSignals.payoutRisk)} />
+          <SignalList title="Payout incidents" href="/prop-firm-payout-risk" firms={payoutAlerts} value={(firm) => toEnglishText(firm.reviewSignals.payoutRisk)} tone={(firm) => payoutTone(firm.reviewSignals.payoutRisk)} />
           <SignalList title="Legal watch" href="/audit" anchor="#regulatory" firms={legalWatch} value={(firm) => firm.regulatoryAudit.riskLevel} tone={(firm) => legalTone(firm.regulatoryAudit.riskLevel)} />
-          <SignalList title="Review manipulation" href="/trustpilot-prop-firms" firms={reviewWatch} value={(firm) => toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={(firm) => reviewTone(firm.reviewSignals.manipulationRisk)} />
-          <SignalList title="Cleanest profiles" href="/meilleures-prop-firms" firms={strongSignals} value={(firm) => `${firm.score}/100`} tone={(firm) => scoreTone(firm.score)} />
+          <SignalList title="Review manipulation" href="/trustpilot-prop-firms" firms={reviewWatch} value={(firm) => toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={(firm) => reviewTone(firm.reviewSignals.manipulationRisk)} />
+          <SignalList title="Cleanest profiles" href="/best-prop-firms" firms={strongSignals} value={(firm) => `${firm.score}/100`} tone={(firm) => scoreTone(firm.score)} />
         </div>
       </section>
 
