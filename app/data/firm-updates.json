@@ -865,7 +865,7 @@
       }
     },
     "for-traders": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
       ],
@@ -877,6 +877,40 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "How-it-works page read: Fast or Classic challenges (1 or 2 steps), Instant Funding and Pay After Pass, up to 90% split, payouts processed within 48 hours (footer: discretionary), MT5 / TradeLocker / cTrader. The footer names FT Trading Ltd. (Saint Lucia) and BLN Tech Club DMCC (Dubai), which replace the previously recorded Czech entity. Sizes, prices and drawdown were on a separate pricing page not read.",
+          "source": "https://fortraders.com/how-it-works",
+          "fields": [
+            "profitSplit",
+            "payoutDelay",
+            "entities"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 90,
+        "payoutDelay": "processing guaranteed within 48 hours according to the site; the footer says payouts are discretionary"
+      },
+      "setEntities": [
+        {
+          "name": "FT Trading Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registeredAddress": "Sotheby Building, Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Copyright holder named in the official footer."
+        },
+        {
+          "name": "BLN Tech Club DMCC",
+          "jurisdiction": "Dubai, United Arab Emirates",
+          "registrationNumber": "DMCC196633",
+          "role": "Also listed in the footer; the page does not say which entity contracts with traders."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "For Traders: how it works (official)",
+          "url": "https://fortraders.com/how-it-works"
         }
       ]
     },
@@ -1288,7 +1322,7 @@
       }
     },
     "funding-traders": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
       ],
@@ -1300,6 +1334,152 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official homepage: 2-Step PRO6 (from $49), 2-Step PRO10 (from $90), 1-Step PRO (from $59, 50% consistency) and Instant ($179 to $2,349, 15% consistency), $5K to $400K, 80% to 100% split, MT5 and Tradelocker; the first listed price is used. The footer now names FT US Inc. (Florida) and Funding Traders Group Ltd. (Saint Lucia, 2025-00298), which replace the previously recorded New Mexico and Panama entities. Drawdown type is not stated.",
+          "source": "https://fundingtraders.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "payoutDelay",
+            "entities"
+          ]
+        }
+      ],
+      "set": {
+        "priceFrom": 49,
+        "profitSplit": 80,
+        "payoutDelay": "14 to 21 days on 2-Step; 14 days on 1-Step (the FAQ says 21 by default); Instant 7 days in the table, 14 in the FAQ"
+      },
+      "setProducts": [
+        {
+          "id": "funding-traders-pro6",
+          "name": "2-Step PRO6",
+          "type": "Challenge",
+          "description": "Fee $49 (5K) to $799 (200K) as the first listed price; the page also shows a second, lower price for each size. Fees marked refundable.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 49,
+          "entryFeeMax": 799,
+          "profitTarget": "6% in phase 1, 6% in phase 2",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6% (type not stated)",
+          "profitSplit": "80% to 100%",
+          "platforms": [
+            "MetaTrader 5",
+            "Tradelocker"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "4",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule listed for this program (29 Oct 2026); 2% risk per trade on the funded stage."
+        },
+        {
+          "id": "funding-traders-pro10",
+          "name": "2-Step PRO10",
+          "type": "Challenge",
+          "description": "Fee $90 (5K) to $1,250 (200K) as the first listed price; refundable.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 90,
+          "entryFeeMax": 1250,
+          "profitTarget": "10% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "10% (type not stated)",
+          "profitSplit": "80% to 100%",
+          "platforms": [
+            "MetaTrader 5",
+            "Tradelocker"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "4",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule listed for this program (29 Oct 2026)."
+        },
+        {
+          "id": "funding-traders-1-step-pro",
+          "name": "1-Step PRO",
+          "type": "Challenge",
+          "description": "Fee $59 (5K) to $999 (200K) as the first listed price; refundable.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 59,
+          "entryFeeMax": 999,
+          "profitTarget": "10%",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "10% (type not stated)",
+          "profitSplit": "90% to 100%",
+          "platforms": [
+            "MetaTrader 5",
+            "Tradelocker"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "4",
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% consistency rule (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "funding-traders-instant",
+          "name": "Instant Account",
+          "type": "Instant funding",
+          "description": "Fee $179 (10K) to $2,349 (400K) as the first listed price. 1% risk per trade.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 400000,
+          "entryFeeMin": 179,
+          "entryFeeMax": 2349,
+          "profitTarget": "none",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6% (type not stated)",
+          "profitSplit": "90% to 100%",
+          "platforms": [
+            "MetaTrader 5",
+            "Tradelocker"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "15% consistency rule (official page, 29 Oct 2026)."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "FT US Inc.",
+          "jurisdiction": "United States, Florida",
+          "registeredAddress": "Miami Beach, Florida, United States",
+          "role": "Listed in the official site footer."
+        },
+        {
+          "name": "Funding Traders Group Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00298",
+          "role": "Listed in the official site footer."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funding Traders programs and footer (official)",
+          "url": "https://fundingtraders.com/"
         }
       ]
     },
@@ -1673,7 +1853,7 @@
       ]
     },
     "ic-funded": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1683,13 +1863,75 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "2-Step Professional read on the official rules page: $5K to $500K, $74 for 5K, 10% / 5% targets, 5% daily loss on end-of-day equity, 10% drawdown fixed on the initial balance, up to 90% split, 14-day payout cycles. Entities: IC Funded Evaluations Ltd (Saint Lucia, 2024-00388) and IC Funded Tech Solutions Ltd (Cyprus, HE 464324). Other programs were not detailed, so the firm-level drawdown type stays unverified.",
+          "source": "https://www.icfunded.com/rules",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "payoutDelay",
+            "entities"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 183,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.icfunded.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.icfunded.com",
+        "priceFrom": 74,
+        "profitSplit": 90,
+        "payoutDelay": "14-day payout cycles: first payout after 5 profitable days, second after 3, then none required; weekly payouts as an add-on"
+      },
+      "setProducts": [
+        {
+          "id": "ic-funded-2-step-professional",
+          "name": "2-Step Professional",
+          "type": "Challenge",
+          "description": "One-time fee $74 for 5K; other prices not shown on the rules page. 1-Step, Accelerated and Instant programs also exist.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 500000,
+          "entryFeeMin": 74,
+          "profitTarget": "10% in step 1, 5% in step 2",
+          "maxDailyLoss": "5% of end-of-day equity",
+          "maxDrawdown": "10%, fixed on the initial balance",
+          "profitSplit": "up to 90%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "minTradingDays": "3 active days per step",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule stated on the rules page (29 Oct 2026)."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "IC Funded Evaluations Ltd",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2024-00388",
+          "role": "Operator according to the official rules page."
+        },
+        {
+          "name": "IC Funded Tech Solutions Ltd",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE 464324",
+          "role": "Distributor, described as a separate but affiliated company."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "IC Funded rules (official)",
+          "url": "https://www.icfunded.com/rules"
+        }
+      ]
     },
     "inspire-funding": {
       "reviewedAt": "2026-10-28",
@@ -2388,12 +2630,14 @@
       ]
     },
     "sure-leverage": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-29",
       "set": {
         "officialWebsite": "https://sureleveragefunding.com/",
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 1426,
-        "trustpilotSourceUrl": "https://nl-be.trustpilot.com/review/sureleveragefunding.com"
+        "trustpilotSourceUrl": "https://nl-be.trustpilot.com/review/sureleveragefunding.com",
+        "profitSplit": 80,
+        "payoutDelay": "on request once requirements are met, with a stated 24-hour processing guarantee (exceptions for weekends, holidays and compliance reviews)"
       },
       "addSources": [
         {
@@ -2403,6 +2647,10 @@
         {
           "label": "TradeLocker Hub: Sure Leverage (rules link to sureleveragefunding.com)",
           "url": "https://tradelocker.com/hub/prop-firms/sure-leverage"
+        },
+        {
+          "label": "Sure Leverage 2 Step Challenge rules (official help)",
+          "url": "https://help.sureleveragefunding.com/en/articles/12141500-2-step-challenge-faq-rules"
         }
       ],
       "changelog": [
@@ -2415,11 +2663,20 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Help center read (2 Step Challenge, no longer sold; rules apply to existing accounts): 10% / 5% targets, 5% daily loss, 10% static drawdown, 80% split, 24-hour payout processing guarantee, 4 profitable days per payout, 25% consistency on funded accounts, no news trading within 5 minutes of red-folder events, EAs not allowed on this product. Current products (1 Step, EA Challenge, One Step Pro, Instant Zero) were not read, so programs are not recorded yet.",
+          "source": "https://help.sureleveragefunding.com/en/articles/12141500-2-step-challenge-faq-rules",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ]
     },
     "sway-funded": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2429,13 +2686,28 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Homepage read: Rapid, Regular and Instant accounts from $1K to $200K, Phase 1 targets 15% / 30%, daily 5% / 10% and maximum 10% / 20% drawdown (pairs not labelled), no consistency rule, up to 90% split on SF Trader, rewards paid within 24 hours. The drawdown type is not stated, so it stays unverified.",
+          "source": "https://swayfunded.com/",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.1,
         "trustpilotReviewCount": 620,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/swayfunded.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/swayfunded.com",
+        "payoutDelay": "rewards paid within 24 hours (SF Trader stage, as stated on the homepage)"
+      },
+      "addSources": [
+        {
+          "label": "Sway Funded program terms (official)",
+          "url": "https://swayfunded.com/"
+        }
+      ]
     },
     "syndicate-funded": {
       "reviewedAt": "2026-10-28",
@@ -2970,7 +3242,7 @@
       ]
     },
     "tradefundrr": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2980,13 +3252,30 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official futures page read: 80% of simulated profits to the trader, weekly payouts every Friday (first as fast as 5 days), program and monthly data fees charged but amounts not stated, TradeFundrr, LLC (New York) runs the programs and T3 Global Trading, LLC runs Pro. Sizes, targets and drawdown were not stated.",
+          "source": "https://tradefundrr.com/pages/futures",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.2,
         "trustpilotReviewCount": 83,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com",
+        "profitSplit": 80,
+        "payoutDelay": "weekly, processed every Friday; first payout as fast as 5 days after five profitable trading days"
+      },
+      "addSources": [
+        {
+          "label": "TradeFundrr futures program (official)",
+          "url": "https://tradefundrr.com/pages/futures"
+        }
+      ]
     },
     "tradeify": {
       "reviewedAt": "2026-10-26",
@@ -3043,11 +3332,16 @@
       ]
     },
     "tradexprop": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-10-29",
       "set": {
         "trustpilotRating": 4.0,
         "trustpilotReviewCount": 40,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradexprop.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradexprop.com",
+        "priceFrom": 35,
+        "profitSplit": 80,
+        "drawdownType": "Hybride",
+        "eaAllowed": "Yes",
+        "payoutDelay": "first payout available immediately once eligible, then bi-weekly"
       },
       "changelog": [
         {
@@ -3059,6 +3353,108 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Programs read on the official homepage: X 1-Step ($45 to $3,755, 10%, 6% static, 45% consistency), X 2-Step ($35 to $2,465, 8% / 5%, 8% static) and Instant Funded X ($200 to $5,000, 8% trailing), 80% split, instant first payout then bi-weekly, cTrader / MatchTrader / DXtrade. Two further unlabelled tables (9% target, 5:1 leverage) are not recorded because the page does not name the program.",
+          "source": "https://tradexprop.com/",
+          "fields": [
+            "products",
+            "priceFrom",
+            "profitSplit",
+            "drawdownType",
+            "eaAllowed",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "tradexprop-x-1-step",
+          "name": "X 1-Step evaluation",
+          "type": "Challenge",
+          "description": "Fee $45 (5K) to $3,755 (400K). No time limit.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "entryFeeMin": 45,
+          "entryFeeMax": 3755,
+          "profitTarget": "10%",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "6%, static",
+          "profitSplit": "80%",
+          "platforms": [
+            "cTrader",
+            "MatchTrader",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "45% consistency score (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "tradexprop-x-2-step",
+          "name": "X 2-Step evaluation",
+          "type": "Challenge",
+          "description": "Fee $35 (5K) to $2,465 (400K). No time limit.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "entryFeeMin": 35,
+          "entryFeeMax": 2465,
+          "profitTarget": "8% then 5%",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "8%, static",
+          "profitSplit": "80%",
+          "platforms": [
+            "cTrader",
+            "MatchTrader",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "45% consistency score (official page, 29 Oct 2026)."
+        },
+        {
+          "id": "tradexprop-instant-funded-x",
+          "name": "Instant Funded X",
+          "type": "Instant funding",
+          "description": "Fee $200 (5K) to $5,000 (100K). Account locks on payout; EAs allowed; 30-day inactivity rule.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 200,
+          "entryFeeMax": 5000,
+          "profitTarget": "none",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "8%, trailing",
+          "profitSplit": "80% / 90%",
+          "platforms": [
+            "cTrader",
+            "MatchTrader",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals",
+            "Crypto"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule (official page, 29 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TradeXProp programs and prices (official)",
+          "url": "https://tradexprop.com/"
         }
       ]
     },
@@ -3121,7 +3517,7 @@
       ]
     },
     "wegetfunded": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3131,13 +3527,32 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official FAQ read: 1 Step uses a 4% end-of-day trailing drawdown that becomes fixed at the initial balance, 2 Step a 10% drawdown fixed on the initial balance, Instant Funded 5%; default split 80% (70% on Instant, 90% or 100% as options); withdrawals every 14 days after 5 trading days, processed in 4 to 7 business days; EAs allowed after verification; MT5. Prices are in EUR (activation fee EUR 149.90), so the entry price is not converted.",
+          "source": "https://wegetfunded.com/en/faq",
+          "fields": [
+            "drawdownType",
+            "eaAllowed",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.9,
         "trustpilotReviewCount": 1004,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com",
+        "drawdownType": "Hybride",
+        "eaAllowed": "Yes",
+        "payoutDelay": "withdrawal requests every 14 days from the first funded trade, after at least 5 trading days; review and processing 4 to 7 business days, paid in USD via RISE"
+      },
+      "addSources": [
+        {
+          "label": "WeGetFunded FAQ (official)",
+          "url": "https://wegetfunded.com/en/faq"
+        }
+      ]
     },
     "wemastertrade": {
       "reviewedAt": "2026-10-28",
@@ -3355,6 +3770,28 @@
         {
           "label": "DNA Funded FAQ (official)",
           "url": "https://dnafunded.com/faqs/"
+        }
+      ]
+    },
+    "funded-bull": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trading rules page read: first payout after 14 days and 5 trading days (a day counts only with at least 0.5% of the profit target), trading locked while a payout is processed, strategy must stay the same between challenge and funded phases, RateRight Pte. Ltd. (Singapore). Sizes, prices, targets and split were not stated.",
+          "source": "https://fundedbull.com/trading-rules/",
+          "fields": [
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "first payout request after the account has been held at least 14 days and 5 trading days are completed; trading is locked until the request is processed"
+      },
+      "addSources": [
+        {
+          "label": "FundedBull trading rules (official)",
+          "url": "https://fundedbull.com/trading-rules/"
         }
       ]
     }
