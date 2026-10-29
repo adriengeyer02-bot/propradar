@@ -27,8 +27,8 @@ function stepsFor(product: Product): Step[] {
       : { title: 'Skip evaluation', value: 'Direct funded account', note: toEnglishText(product.profitTarget) },
     {
       title: 'Stay within',
-      value: /^variable$/i.test(product.maxDrawdown) ? 'Limits vary by plan' : `Max ${toEnglishText(product.maxDrawdown)}`,
-      note: /^variable$/i.test(product.maxDailyLoss) ? undefined : `Daily ${toEnglishText(product.maxDailyLoss)}`,
+      value: /^variable$/i.test(product.maxDrawdown) ? 'Limits vary by plan' : /^not stated/i.test(product.maxDrawdown) ? 'Limits not stated' : `Max ${toEnglishText(product.maxDrawdown)}`,
+      note: /^(variable|not stated)/i.test(product.maxDailyLoss) ? undefined : `Daily ${toEnglishText(product.maxDailyLoss)}`,
     },
     {
       title: 'Get paid',
