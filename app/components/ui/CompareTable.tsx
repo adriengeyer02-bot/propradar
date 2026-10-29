@@ -5,7 +5,7 @@ import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
 import { drawdownLabel, formatUsd, profitSplitLabel } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
-import { legalTone, payoutTone, reviewTone, statusTone } from '../../lib/riskTone';
+import { legalTone, payoutTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 
 type Row = {
   label: string;
@@ -48,13 +48,9 @@ const ROWS: Row[] = [
     render: (firm) => <RiskPip compact label="" value={firm.regulatoryAudit.riskLevel} tone={legalTone(firm.regulatoryAudit.riskLevel)} />,
   },
   {
-    label: 'Trustpilot reliability',
-    render: (firm) => toEnglishText(firm.reviewSignals.trustpilotReliability),
-    best: (firms) => indexOfBest(firms, (firm) => reviewRank[firm.reviewSignals.trustpilotReliability], 'max'),
-  },
-  {
-    label: 'Review manipulation',
-    render: (firm) => <RiskPip compact label="" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />,
+    label: 'Trustpilot',
+    render: (firm) => <RiskPip compact label="" value={trustpilotPip(firm).value} tone={trustpilotPip(firm).tone} />,
+    best: (firms) => indexOfBest(firms, (firm) => (firm.reviewSignals.trustpilotRatingWithheld ? 0 : firm.trustpilotRating ?? 0), 'max'),
   },
   { label: 'Proof level', render: (firm) => toEnglishText(firm.auditStatus) },
   { label: 'Affiliate link', render: (firm) => (firm.commercialRelationship === 'Affiliation transparente' ? 'Yes, disclosed' : 'No') },

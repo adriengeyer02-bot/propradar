@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { getFirmBySlug, propFirms } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
-import { legalTone, payoutTone, reviewTone, scoreTone, statusTone } from '../../lib/riskTone';
+import { legalTone, payoutTone, scoreTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 import { Backdrop, Brand, LogoTile, OG, OG_SIZE, Pip, Ring, logoDataUrl, ogFonts, toneColor } from '../../lib/og/shared';
 
 export const alt = 'PropRadar score card: score, payout, legal and review risk';
@@ -73,7 +73,7 @@ export default async function FirmShareImage({ params }: { params: Promise<{ slu
             <div style={{ display: 'flex', gap: 40 }}>
               <Pip label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
               <Pip label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-              <Pip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+              <Pip label="Trustpilot" value={trustpilotPip(firm).value} tone={trustpilotPip(firm).tone} />
             </div>
             <span style={{ fontSize: 22, color: OG.muted }}>Reviewed {firm.lastReviewed}</span>
           </div>

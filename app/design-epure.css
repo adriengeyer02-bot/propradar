@@ -24,6 +24,9 @@
   --pr-glow: rgba(11, 114, 133, 0.1);
   --pr-tip-bg: #0b1220;
   --pr-tip-fg: #eaf0f7;
+  /* Older blue accents follow the radar cyan accent (one accent colour site-wide). */
+  --blue: var(--accent);
+  --blue-2: var(--accent-strong);
 }
 
 html[data-theme='dark'] {
@@ -37,6 +40,8 @@ html[data-theme='dark'] {
   --pr-glow: rgba(54, 214, 231, 0.1);
   --pr-tip-bg: #eaf0f7;
   --pr-tip-fg: #0b111a;
+  --blue: var(--accent);
+  --blue-2: var(--accent-strong);
 }
 
 .pr-tone-good { --tone: var(--tone-good); --tone-wash: var(--tone-good-wash); }
@@ -2446,3 +2451,13 @@ html body .home-tools-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .pr-closures-table tbody th, .pr-closures-table tbody td { padding: 0; border: 0; }
   .pr-closures-table tbody td:nth-of-type(2), .pr-closures-table tbody td:nth-of-type(3) { grid-column: 1 / -1; }
 }
+
+/* Firm page: context card next to a single tracked program */
+.pr-product-context { display: grid; align-content: start; gap: 12px; }
+.pr-product-context p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.6; }
+.pr-product-context-figure { display: flex; align-items: baseline; gap: 10px; }
+.pr-product-context-figure strong { color: var(--text); font-size: 40px; font-weight: 760; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.pr-product-context-figure span { color: var(--muted); font-size: 14px; }
+.pr-product-context-links { display: grid; gap: 8px; margin: 6px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); list-style: none; }
+.pr-product-context-links a { color: var(--accent); font-weight: 650; text-decoration: none; }
+.pr-product-context-links a::after { content: ' →'; }

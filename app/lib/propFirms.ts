@@ -659,7 +659,8 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     score: data.score ?? (status === 'Active' ? 68 : isClosed ? 12 : 58),
     founded: data.founded ?? 2023,
     headquarters: data.headquarters ?? 'International',
-    bestFor: `${market.toLowerCase()} to verify in the radar`,
+    // Descriptive only (market), never a recommendation for a firm PropRadar has not audited.
+    bestFor: ({ 'Forex/CFD': 'Forex / CFD program', Crypto: 'Crypto program', Futures: 'Futures program', Actions: 'Stock program' } as Record<string, string>)[market] ?? `${market} program`,
     verdict:
       domainWarning ??
       data.note ??

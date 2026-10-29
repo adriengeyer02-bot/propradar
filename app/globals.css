@@ -8,8 +8,8 @@
   --soft: #29384d;
   --ink: #07101f;
   --navy: #091528;
-  --blue: #245ff2;
-  --blue-2: #3b82f6;
+  --blue: var(--accent);
+  --blue-2: var(--accent);
   --green: #12b76a;
   --amber: #f0b429;
   --red: #ef4444;
@@ -121,7 +121,7 @@ select {
 
 .brand-mark circle:first-child {
   fill: none;
-  stroke: #3b82f6;
+  stroke: var(--accent);
   stroke-width: 5;
 }
 
@@ -144,7 +144,7 @@ select {
 
 .brand-mark path:last-child {
   fill: none;
-  stroke: #93c5fd;
+  stroke: var(--accent);
   stroke-width: 3;
   stroke-linecap: round;
 }
@@ -465,7 +465,7 @@ h3 {
 
 .btn-primary {
   border-color: transparent;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--accent), var(--accent));
   color: #fff;
   font-weight: 800;
   box-shadow: 0 14px 28px rgba(37, 99, 235, 0.24);
@@ -531,7 +531,7 @@ h3 {
   border-radius: 10px;
   background:
     radial-gradient(circle at 50% 50%, #fff 0 3px, transparent 4px),
-    conic-gradient(from 220deg, #2563eb, #22d3ee, #12b76a, #2563eb);
+    conic-gradient(from 220deg, var(--accent), #22d3ee, #12b76a, var(--accent));
   box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
 }
 
@@ -1353,8 +1353,8 @@ h3 {
 }
 
 .firm-logo {
-  --logo-primary: #2563eb;
-  --logo-secondary: #60a5fa;
+  --logo-primary: var(--accent);
+  --logo-secondary: var(--accent);
   display: inline-grid;
   flex: 0 0 auto;
   place-items: center;
@@ -1872,7 +1872,7 @@ h3 {
   position: absolute;
   inset: 0 0 auto;
   height: 4px;
-  background: linear-gradient(90deg, #12b76a, #2563eb, #f59e0b);
+  background: linear-gradient(90deg, #12b76a, var(--accent), #f59e0b);
 }
 
 .mega-deal-card-featured {
@@ -3608,7 +3608,7 @@ h3 {
   padding: 0 9px;
   border: 1px solid rgba(37, 99, 235, 0.16);
   border-radius: 999px;
-  color: #1d4ed8;
+  color: var(--accent);
   background: rgba(37, 99, 235, 0.07);
   font-size: 11px;
   letter-spacing: 0.85px;
@@ -3631,7 +3631,7 @@ h3 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #1d4ed8, #245ff2 54%, #0f766e);
+  background: linear-gradient(135deg, var(--accent), var(--accent) 54%, #0f766e);
   box-shadow: 0 16px 30px rgba(37, 99, 235, 0.26);
 }
 
@@ -3717,7 +3717,7 @@ h3 {
 .badge-blue {
   border-color: rgba(37, 99, 235, 0.24);
   background: #eaf2ff;
-  color: #1d4ed8;
+  color: var(--accent);
 }
 
 .badge-amber {
@@ -3945,7 +3945,7 @@ h3 {
 .leveraged-evidence-grid .panel,
 .leveraged-pros-cons .panel,
 .leveraged-final-verdict {
-  border-top: 4px solid #245ff2;
+  border-top: 4px solid var(--accent);
 }
 
 .leveraged-regulatory-card,
@@ -4030,7 +4030,7 @@ h3 {
 }
 
 .smc-filter-card {
-  border-top: 4px solid #245ff2;
+  border-top: 4px solid var(--accent);
 }
 
 .smc-filter-card span,
@@ -4094,7 +4094,7 @@ h3 {
 }
 
 .smc-community-card {
-  border-top: 4px solid #245ff2;
+  border-top: 4px solid var(--accent);
 }
 
 .smc-verdict-card {
@@ -4331,7 +4331,7 @@ h3 {
 /* 2026 design-system pass: compact hierarchy, accessible navigation and native themes. */
 :root {
   --page-max: 1480px;
-  --focus-ring: #60a5fa;
+  --focus-ring: var(--accent);
   --score-ring-track: rgba(217, 228, 242, 0.92);
   color-scheme: light;
 }
@@ -4364,7 +4364,7 @@ h2 {
   padding: 10px 14px;
   border-radius: 6px;
   color: #ffffff;
-  background: #1d4ed8;
+  background: var(--accent);
   font-weight: 900;
   box-shadow: 0 10px 28px rgba(7, 16, 31, 0.28);
 }
@@ -4588,12 +4588,12 @@ html[data-theme='dark'] :where(.btn, .field, .tool-field select) {
 html[data-theme='dark'] .btn-primary {
   border-color: transparent;
   color: #ffffff;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8 58%, #0f766e);
+  background: linear-gradient(135deg, var(--accent), var(--accent) 58%, #0f766e);
 }
 
 html[data-theme='dark'] .eyebrow {
   border-color: rgba(96, 165, 250, 0.28);
-  color: #93c5fd;
+  color: var(--accent);
   background: rgba(37, 99, 235, 0.12);
 }
 

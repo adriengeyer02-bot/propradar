@@ -8,7 +8,7 @@ import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
 import { drawdownLabel, formatUsd } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
-import { legalTone, payoutTone, reviewTone, scoreTone, statusTone } from '../../lib/riskTone';
+import { legalTone, payoutTone, scoreTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 
 /** Short, informative trading tags only: no tag that would appear on every firm. */
 export function firmTags(firm: PropFirm) {
@@ -90,7 +90,7 @@ export default function FirmRow({ firm, rank, children, subline, href }: FirmRow
       <span className="pr-firm-pips" role="cell">
         <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
         <RiskPip compact label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-        <RiskPip compact label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+        <RiskPip compact label="Trustpilot" value={trustpilotPip(firm).value} tone={trustpilotPip(firm).tone} />
       </span>
       <span className="pr-firm-go" role="cell" aria-hidden="true">›</span>
     </Link>

@@ -144,9 +144,9 @@ const guideTypeLabels: Record<GuideType, string> = {
 };
 
 const guideMarks: Record<GuideType, string> = {
-  selection: '01',
+  selection: 'Top',
   comparison: 'VS',
-  rules: 'R',
+  rules: '§',
   risk: '!',
   style: 'FX',
   deals: '%',

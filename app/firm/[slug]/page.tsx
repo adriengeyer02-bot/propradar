@@ -13,7 +13,7 @@ import RiskPip from '../../components/ui/RiskPip';
 import ScoreRing from '../../components/ui/ScoreRing';
 import ReviewFreshness from '../../components/ui/ReviewFreshness';
 import RevealOnView from '../../components/ui/RevealOnView';
-import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../../lib/riskTone';
+import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../lib/riskTone';
 import {
   BLUE_GUARDIAN_AFFILIATE_URL,
   FTMO_AFFILIATE_URL,
@@ -50,6 +50,7 @@ import { editorialBriefs, getEditorialBriefPath } from '../../lib/editorialBrief
 import { getAuditCaseFile } from '../../lib/auditCaseFiles';
 import { entityCountries } from '../../lib/jurisdictions';
 import { getClosureRecord } from '../../lib/closures';
+import { feeStats } from '../../lib/industryStats';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -321,6 +322,55 @@ function uniqueProfilePoints(points: string[]) {
 }
 
 /** Default search title: the query people type ("<firm> review", "is <firm> legit"), facts only. */
+const MODEL_ANCHOR: Record<string, string> = { Challenge: 'forex', 'Futures evaluation': 'futures', 'Instant funding': 'instant' };
+const MODEL_LABEL: Record<string, string> = { Challenge: 'forex and CFD challenges', 'Futures evaluation': 'futures evaluations', 'Instant funding': 'instant-funding accounts' };
+
+/** Fills the empty column next to a single program with context computed from the other sourced firm files. */
+function ProductContext({ firm, product }: { firm: PropFirm; product: PropFirm['products'][number] }) {
+  const stats = feeStats(product.type);
+  const fee = product.entryFeeMin ?? 0;
+  const comparable = fee > 0 && stats.count >= 3 && !isProvisional(firm, 'accountSize');
+  const countries = entityCountries(firm.regulatoryAudit.entities);
+  const anchor = MODEL_ANCHOR[product.type];
+  return (
+    <aside className="card pr-product-context" aria-label={`How ${firm.name} compares`}>
+      <div className="eyebrow">How it compares</div>
+      {comparable ? (
+        <>
+          <p className="pr-product-context-figure">
+            <strong>{formatUsd(fee)}</strong>
+            <span>entry fee, smallest account</span>
+          </p>
+          <p>
+            The median starting fee across {stats.count} {MODEL_LABEL[product.type] ?? 'programs'} in PropRadar&apos;s sourced files is{' '}
+            <strong>{formatUsd(stats.median)}</strong> (half sit between {formatUsd(stats.q1)} and {formatUsd(stats.q3)}). Price alone is not
+            the cost: check resets, activation fees and the payout rules.
+          </p>
+        </>
+      ) : (
+        <p>
+          PropRadar has not read enough of this program on a source to compare its price. Check the fee, account sizes and payout rules on
+          the firm&apos;s own pages.
+        </p>
+      )}
+      <ul className="pr-product-context-links">
+        {anchor ? <li><Link href={`/prop-firm-challenge#${anchor}`}>All {MODEL_LABEL[product.type]} compared</Link></li> : null}
+        {countries[0] ? (
+          <li><Link href={`/prop-firm-comparison?country=${countries[0].code}`}>Other firms registered in {countries[0].name}</Link></li>
+        ) : null}
+        <li><Link href="/prop-firm-statistics#fees">Prop firm fee statistics</Link></li>
+      </ul>
+    </aside>
+  );
+}
+
+/** What the payout level rests on, in words (never "0 sourced signals"). */
+function payoutBasis(firm: PropFirm) {
+  const count = payoutEvidence(firm).length;
+  if (count) return `${count} sourced payout signal${count === 1 ? '' : 's'}`;
+  return firm.payoutProof ? 'payout proof on file and no sourced payout incident' : 'no sourced payout signal';
+}
+
 function genericFirmTitle(firm: PropFirm) {
   if (firm.status === 'Fermée') return `${firm.name} Closed: Status, Timeline & Sources`;
   const year = (firm.lastReviewed || '').slice(0, 4) || '2026';
@@ -469,7 +519,7 @@ export default async function FirmPage({ params }: Props) {
   const evidenceFallbackPoints = [
     `Legal file: ${regulatoryAudit.riskLevel} risk, checked ${regulatoryAudit.lastChecked}, with ${sourceCount} source link(s) saved.`,
     isPayoutRiskAssessed(firm)
-      ? `Payout file: ${toEnglishText(firm.reviewSignals.payoutRisk)} risk, ${payoutEvidence(firm).length} sourced payout signal(s), advertised timing ${toEnglishText(firm.payoutDelay)}.`
+      ? `Payout file: ${toEnglishText(firm.reviewSignals.payoutRisk)} risk, ${payoutBasis(firm)}, advertised timing ${toEnglishText(firm.payoutDelay)}.`
       : `Payout file: not assessed yet (no written payout evidence on file), advertised timing ${toEnglishText(firm.payoutDelay)}.`,
     `Trading rules: ${isProvisional(firm, 'drawdownType') ? 'drawdown type to verify' : `${toEnglishText(firm.drawdownType)} drawdown`}, news trading ${toEnglishText(firm.newsTrading).toLowerCase()}, ${firm.products.length} tracked product(s).`,
   ];
@@ -519,7 +569,7 @@ export default async function FirmPage({ params }: Props) {
       score: Math.max(0, 100 - firm.reviewSignals.payoutRiskScore),
       provisional: !isPayoutRiskAssessed(firm),
       valueLabel: undefined as string | undefined,
-      detail: isPayoutRiskAssessed(firm) ? `${payoutEvidence(firm).length} sourced payout signal(s)` : 'Not assessed: no payout evidence on file',
+      detail: isPayoutRiskAssessed(firm) ? `${payoutBasis(firm)}` : 'Not assessed: no payout evidence on file',
     },
   ];
   const communitySearchLinks = [
@@ -545,7 +595,7 @@ export default async function FirmPage({ params }: Props) {
       label: 'Payout proof',
       value: payoutProofLabel(firm),
       detail: isPayoutRiskAssessed(firm)
-        ? `Payout risk is ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${payoutEvidence(firm).length} sourced payout signal(s).`
+        ? `Payout risk is ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${payoutBasis(firm)}.`
         : 'Payout risk not assessed: no payout incident or payout proof is documented yet.',
       className: payoutProofClass(firm),
     },
@@ -574,7 +624,7 @@ export default async function FirmPage({ params }: Props) {
     {
       question: `Does ${firm.name} have payout risk?`,
       answer: isPayoutRiskAssessed(firm)
-        ? `PropRadar rates payout risk as ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${payoutEvidence(firm).length} sourced payout signal(s). Visible payout proof is classified as ${payoutProofLabel(firm).toLowerCase()}.`
+        ? `PropRadar rates payout risk as ${toEnglishText(firm.reviewSignals.payoutRisk).toLowerCase()} with ${payoutBasis(firm)}. Visible payout proof is classified as ${payoutProofLabel(firm).toLowerCase()}.`
         : `PropRadar has not assessed ${firm.name}'s payout risk: no payout incident or payout proof is documented in its file yet. Check recent payout feedback and the official terms before paying.`,
     },
     {
@@ -749,7 +799,7 @@ export default async function FirmPage({ params }: Props) {
               <div className="pr-scorecard-pips">
                 <RiskPip label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
                 <RiskPip label="Legal" value={regulatoryAudit.riskLevel} tone={legalTone(regulatoryAudit.riskLevel)} />
-                <RiskPip label="Reviews" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />
+                <RiskPip label="Trustpilot" value={trustpilotPip(firm).value} tone={trustpilotPip(firm).tone} />
               </div>
               <div className="pr-firm-actions">
                 <Link href="/prop-firm-comparison" className="btn">Compare</Link>
@@ -1182,7 +1232,7 @@ export default async function FirmPage({ params }: Props) {
                 {isClosedFirm(firm)
                   ? 'Closed firm: not a purchase option. See the sources and update history below.'
                   : isPayoutRiskAssessed(firm)
-                  ? `${toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · ${payoutEvidence(firm).length} sourced payout signal(s)`
+                  ? `${toEnglishText(firm.reviewSignals.payoutIncidentStatus)} · ${payoutBasis(firm)}`
                   : 'Not assessed: PropRadar has no written payout incident or payout proof on file for this firm.'}
               </p>
               <div className="score-proof">
@@ -1259,6 +1309,7 @@ export default async function FirmPage({ params }: Props) {
                 ) : null}
               </article>
             ))}
+            {firm.products.length === 1 && firm.status !== 'Fermée' ? <ProductContext firm={firm} product={firm.products[0]} /> : null}
           </div>
         ) : (
           <div className="panel">

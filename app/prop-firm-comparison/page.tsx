@@ -188,8 +188,8 @@ export default function Comparateur() {
   const reviewWatch = useMemo(
     () =>
       [...propFirms]
-        .filter((firm) => firm.reviewSignals.manipulationRiskScore && firm.reviewSignals.manipulationRiskScore >= 70)
-        .sort((a, b) => (b.reviewSignals.manipulationRiskScore ?? 0) - (a.reviewSignals.manipulationRiskScore ?? 0))
+        .filter((firm) => firm.status !== 'Fermée' && firm.reviewSignals.trustpilotRatingWithheld)
+        .sort((a, b) => b.score - a.score)
         .slice(0, 3),
     []
   );
@@ -234,7 +234,7 @@ export default function Comparateur() {
 
       <header className="pr-page-head">
         <div className="eyebrow">Independent radar</div>
-        <h1>Prop firm comparator</h1>
+        <h1>Prop firm comparison</h1>
         <p className="pr-lead">
           Every prop firm we track, ranked by reliability. The score weighs rules, payouts, legal structure and public signals. No firm can buy its position.
         </p>
@@ -371,7 +371,7 @@ export default function Comparateur() {
         <div className="pr-signal-grid">
           <SignalList title="Payout incidents" href="/prop-firm-payout-risk" firms={payoutAlerts} value={(firm) => toEnglishText(firm.reviewSignals.payoutRisk)} tone={(firm) => payoutTone(firm.reviewSignals.payoutRisk)} />
           <SignalList title="Legal watch" href="/audit" anchor="#regulatory" firms={legalWatch} value={(firm) => firm.regulatoryAudit.riskLevel} tone={(firm) => legalTone(firm.regulatoryAudit.riskLevel)} />
-          <SignalList title="Review manipulation" href="/trustpilot-prop-firms" firms={reviewWatch} value={(firm) => toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={(firm) => reviewTone(firm.reviewSignals.manipulationRisk)} />
+          <SignalList title="Trustpilot rating withheld" href="/trustpilot-prop-firms" firms={reviewWatch} value={() => 'Withheld'} tone={() => 'risk'} />
           <SignalList title="Cleanest profiles" href="/best-prop-firms" firms={strongSignals} value={(firm) => `${firm.score}/100`} tone={(firm) => scoreTone(firm.score)} />
         </div>
       </section>
