@@ -76,6 +76,7 @@ export default function RiskEvidenceMenu() {
         <ActiveNavLink href="/prop-firm-payout-risk">Payout risks</ActiveNavLink>
         <ActiveNavLink href="/prop-firm-rules">Trading rules</ActiveNavLink>
         <ActiveNavLink href="/trustpilot-prop-firms">Trustpilot research</ActiveNavLink>
+        <ActiveNavLink href="/prop-firm-statistics">Industry statistics</ActiveNavLink>
       </div>
     </div>
   );

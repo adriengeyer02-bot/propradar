@@ -354,6 +354,7 @@ export default function HomePage() {
               <div>
                 <Link href="/audit">View the evidence log</Link>
                 <Link href="/prop-firm-rules">Read rule audits</Link>
+                <Link href="/prop-firm-statistics">Industry statistics</Link>
               </div>
             </div>
 

@@ -49,6 +49,7 @@ import { toEnglishText } from '../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../lib/editorialBriefs';
 import { getAuditCaseFile } from '../../lib/auditCaseFiles';
 import { entityCountries } from '../../lib/jurisdictions';
+import { getClosureRecord } from '../../lib/closures';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -424,6 +425,7 @@ export default async function FirmPage({ params }: Props) {
   const isBlueGuardian = firm.slug === 'blue-guardian';
   const isGoatFundedTrader = firm.slug === 'goat-funded-trader';
   const gaps = firmGaps(firm);
+  const closure = firm.status === 'Fermée' ? getClosureRecord(firm.slug) : undefined;
   const searchProfile = getFirmSearchProfile(firm.slug);
   const auditCaseFile = getAuditCaseFile(firm.slug);
   const relatedGuides = getFirmRelatedGuides(firm, 4);
@@ -768,6 +770,21 @@ export default async function FirmPage({ params }: Props) {
             <div className="pr-key-facts-wide"><dt>Payout</dt><dd>{toEnglishText(firm.payoutDelay)}</dd></div>
           )}
         </dl>
+
+        {closure ? (
+          <aside className="pr-gaps pr-closure" aria-labelledby={`closure-${firm.slug}`}>
+            <div>
+              <h2 id={`closure-${firm.slug}`}>
+                Closed{closure.date ? <> · <time dateTime={closure.date}>{closure.date}</time>{closure.dateKind === 'reported' ? ' (reported)' : ''}</> : null}
+              </h2>
+              <p>{closure.summary}</p>
+            </div>
+            <a className="pr-link" href={closure.source.url} target="_blank" rel="noreferrer">
+              Source: {closure.source.label}
+            </a>
+            <Link className="pr-link" href="/prop-firm-statistics#closures">All documented closures</Link>
+          </aside>
+        ) : null}
 
         {gaps.length ? (
           <aside className="pr-gaps" aria-labelledby={`gaps-${firm.slug}`}>

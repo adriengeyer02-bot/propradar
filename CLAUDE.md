@@ -17,6 +17,11 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
   base profiles (`app/lib/firmUpdates.ts`). **All routine updates go here.**
   Each entry shows up in the firm page "Update history".
 - `app/lib/firmMetaOverrides.ts` - SEO titles for firm pages that rank.
+- `app/lib/closures.ts` - dated, sourced closure records for firms marked
+  `Fermée` (shown on the firm page and on /prop-firm-statistics). When a firm
+  is closed, add its record here with the source's own date and wording.
+- `app/lib/industryStats.ts` - figures for /prop-firm-statistics (and its CSV),
+  computed from the firm files; provisional values are always excluded.
 - `scripts/check-domains.ts` - official-domain monitor (run daily by
   `.github/workflows/domain-monitor.yml`, which opens a GitHub issue on change).
 - `scripts/validate-firm-updates.ts` - validates the JSON and says whether a

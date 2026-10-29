@@ -178,7 +178,7 @@ export default function RootLayout({
             <ActiveNavLink href="/">Home</ActiveNavLink>
             <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>Compare</ActiveNavLink>
             <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/prop-firm-challenge', '/fr']}>Guides</ActiveNavLink>
-            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/prop-firm-payout-risk', '/prop-firm-rules', '/trustpilot-prop-firms']}>Risks</ActiveNavLink>
+            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/prop-firm-payout-risk', '/prop-firm-rules', '/trustpilot-prop-firms', '/prop-firm-statistics']}>Risks</ActiveNavLink>
             <ActiveNavLink href="/promos">Deals</ActiveNavLink>
           </nav>
           <div id="main-content" tabIndex={-1}>{children}</div>
@@ -207,6 +207,7 @@ export default function RootLayout({
                 <strong>More</strong>
                 <Link href="/promos">Risk-checked deals</Link>
                 <Link href="/trustpilot-prop-firms">Trustpilot research</Link>
+                <Link href="/prop-firm-statistics">Prop firm statistics</Link>
                 <a href="/feed.xml">Research feed</a>
                 <Link href="/fr" hrefLang="fr">Guides en français</Link>
               </nav>
