@@ -1,52 +1,53 @@
 {
   "version": 1,
   "firms": {
-    "smart-prop-trader": {
+    "aeon-funded": {
       "reviewedAt": "2026-10-27",
       "set": {
-        "status": "Fermée",
-        "listedDomainWarning": "Smart Prop Trader announced its closure in November 2024 (Finance Magnates). On 2026-10-27 the listed domain smartproptrader.com redirected to smartprofitfx.com, which PropRadar has not verified as linked to the firm. PropRadar does not link the domain."
+        "listedDomainWarning": "The listed domain aeonfunded.com redirected to quantxfund.io when checked on 2026-10-23 and 2026-10-27. PropRadar found no public announcement linking Aeon Funded to that site, so the domain is not linked."
       },
-      "addSources": [
-        {
-          "label": "Finance Magnates: Smart Prop Trader announces closure (28 Nov 2024)",
-          "url": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter"
-        }
-      ],
       "changelog": [
         {
-          "date": "2026-10-26",
-          "summary": "Status set to closed. Finance Magnates reported on 28 November 2024 that Smart Prop Trader stopped onboarding new traders on 27 November 2024 and would stop operating on 29 December 2024, quoting the firm's announcement. The Trustpilot profile shows 1 review in the last 12 months. The domain monitor also reports that smartproptrader.com now redirects to smartprofitfx.com (not checked by hand in this pass; no domain warning added).",
-          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
-          "fields": [
-            "status"
-          ]
-        },
-        {
           "date": "2026-10-27",
-          "summary": "Domain monitor reported smartproptrader.com redirecting to smartprofitfx.com. The firm is already recorded as closed; a domain warning is set so the page no longer links the redirected domain.",
-          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
+          "summary": "Domain warning set. Two separate fetches (domain monitor 2026-10-23, logo fetch 2026-10-27) ended on quantxfund.io. A web search found no announcement of a rebrand or merger. No status change.",
+          "source": "https://aeonfunded.com/",
           "fields": [
             "listedDomainWarning"
           ]
         }
       ]
     },
-    "maven-trading": {
-      "reviewedAt": "2026-10-26",
-      "set": {},
-      "addIncidents": [
-        "Trustpilot's maventrading.com profile, checked on 2026-10-26, displays no TrustScore. Trustpilot's notice (Danish mirror, translated) reads: \"This company's TrustScore is currently unavailable due to a breach of our guidelines\", next to its reminder that companies may not offer incentives or pay to hide reviews. Source: https://dk.trustpilot.com/review/maventrading.com?page=3"
-      ],
+    "alpha-capital-group": {
       "changelog": [
         {
-          "date": "2026-10-26",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines. Added as a dated, quoted incident; no rating or review count stored while the rating is withheld. Read on the dk.trustpilot.com mirror of the same profile. Price and split not re-read on the official site, left unchanged.",
-          "source": "https://dk.trustpilot.com/review/maventrading.com?page=3",
+          "date": "2026-10-23",
+          "summary": "Entry price updated from 97 to 27: the firm's own price table (updated 21 September 2026, checked against checkout per the page) lists Alpha Pro 6% 5K at $27. 80% standard split unchanged.",
+          "source": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026",
+          "fields": [
+            "priceFrom"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/alphacapitalgroup.uk",
           "fields": [
             "incidents"
           ]
         }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "priceFrom": 27
+      },
+      "addSources": [
+        {
+          "label": "Alpha Capital Group evaluation prices 2026 (official)",
+          "url": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026"
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/alphacapitalgroup.uk)."
       ]
     },
     "alpha-futures": {
@@ -65,39 +66,523 @@
       ],
       "set": {}
     },
-    "topstep": {
-      "reviewedAt": "2026-10-23",
-      "set": {
-        "trustpilotRating": 3.7,
-        "trustpilotReviewCount": 14955,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com"
-      },
-      "addSources": [
-        {
-          "label": "Topstep help center: Maximum Loss Limit",
-          "url": "https://intercom.help/topstep-llc/en/articles/8284204"
-        },
-        {
-          "label": "Topstep help center: payout FAQs",
-          "url": "https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs"
-        }
-      ],
+    "apex-trader-funding": {
+      "reviewedAt": "2026-10-28",
       "changelog": [
         {
-          "date": "2026-10-23",
-          "summary": "Trustpilot refreshed: 3.7 TrustScore across 14,955 reviews, with Trustpilot's high-risk investment notice.",
-          "source": "https://www.trustpilot.com/review/topstep.com",
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 21,428 reviews on a profile Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/apextraderfunding.com",
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
         },
         {
-          "date": "2026-10-23",
-          "summary": "Trading Combine consistency target corrected to 55% (was recorded as 50%); Express Funded Account Consistency path uses 40%.",
-          "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+          "date": "2026-10-28",
+          "summary": "Payout risk corroborated with a dated Finance Magnates report (29 August 2024: alleged payout delays and two-day video-proof requests before payout), added as a sourced incident. Approved by the site owner, who asked for every payout-risk level to be backed by sources.",
+          "source": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid",
           "fields": [
-            "products"
+            "incidents"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 21428,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
+      },
+      "addIncidents": [
+        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid)."
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: Apex payout video-proof requests (29 Aug 2024)",
+          "url": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid"
+        }
+      ]
+    },
+    "aqua-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and ie mirrors. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/aquafunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/aquafunded.com)."
+      ]
+    },
+    "ascendx-capital": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Rebrand noted: Finance Magnates reported on 16 September 2024 that AscendX Capital announced (X post, 15 September 2024) that its name change to QuantTekel was complete and that it was moving towards brokerage services. The article names no regulator or licence. PropRadar keeps both profiles until the current operator and domain are confirmed; see the Quant Tekel profile.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
+          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ]
+    },
+    "audacity-capital": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/audacity.capital",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "aurafunded": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "listedDomainWarning": "The listed domain aurafunded.com redirected to an unrelated gambling website when PropRadar checked it on 2026-10-27, and the AuraFunded business is listed for sale on Flippa (asking price US$700,000). PropRadar does not link the domain until an official site is confirmed."
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain warning set. Checked on 2026-10-27: aurafunded.com redirected to an unrelated gambling site (lineslot88asli.com) during the logo fetch run, and a Flippa listing offers the AuraFunded business (intellectual property, infrastructure and customer base) for US$700,000. No status change.",
+          "source": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Flippa listing: AuraFunded business for sale",
+          "url": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders"
+        }
+      ]
+    },
+    "bespoke-funding-program": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.2 TrustScore across 1,193 reviews; the Trustpilot page shows the notice \"This company has received regulatory attention\" (no detail given on the page). Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/bespokefundingprogram.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.2,
+        "trustpilotReviewCount": 1193,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/bespokefundingprogram.com"
+      }
+    },
+    "blue-guardian": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Official site live. Help center states an 80% profit split for 2-Step Nano. Entry price left unchanged: the 5K price on the site could not be mapped to a plan, and a 25% promotion is running.",
+          "source": "https://help.blueguardian.com/en/articles/16445450-2-step-nano-rules"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
+      ]
+    },
+    "blueberry-funded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/blueberryfunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueberryfunded.com)."
+      ]
+    },
+    "blufx": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "listedDomainWarning": "The listed domain blufx.co.uk redirected to propfirmswitch.com, a third-party site, when checked on 2026-10-23 and 2026-10-27. PickMyTrade reports it could not verify BluFX rules on BluFX pages and that only third-party results say the firm ceased operations. PropRadar does not link the domain."
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Domain warning set after a second fetch on 2026-10-27 confirmed the redirect to propfirmswitch.com reported by the domain monitor on 2026-10-23. PickMyTrade could not verify current rules on BluFX pages. No status change.",
+          "source": "https://pickmytrade.io/prop-firm-faq/blufx",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "PickMyTrade: BluFX research record",
+          "url": "https://pickmytrade.io/prop-firm-faq/blufx"
+        }
+      ]
+    },
+    "blusky-trading": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 940 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/blusky.pro",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 940,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/blusky.pro"
+      }
+    },
+    "breakout-prop": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 1226,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore across 1,226 reviews, with Trustpilot's high-risk investment notice. Official site: default 80% split with a 90% option chosen at purchase, on-demand USDC payouts usually within 24 hours; stored price and split left unchanged.",
+          "source": "https://www.trustpilot.com/review/breakoutprop.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Ownership noted: Breakout's official site states it has been acquired by Kraken and describes itself as backed by Kraken. BeInCrypto (republished by Yahoo Finance, 28 May 2026) reports the acquisition was announced on 4 September 2025 and that Kraken Prop, launched on 27 May 2026, is built on Breakout.",
+          "source": "https://www.breakoutprop.com/kraken/"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Breakout: acquired by Kraken (official)",
+          "url": "https://www.breakoutprop.com/kraken/"
+        },
+        {
+          "label": "Yahoo Finance / BeInCrypto: Kraken Prop built on Breakout (28 May 2026)",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/kraken-prop-inside-funded-trader-183521927.html"
+        }
+      ]
+    },
+    "brightfunded": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor flagged brightfunded.com as 'no-trading-content'; checked by hand: the official site loads normally (operator Bright Global FZCO, trading as BrightFunded), false positive. Prices are shown in EUR (2-Step Bright 5K list EUR 47); stored price left unchanged. Default profit split 80/20 confirmed on the help center.",
+          "source": "https://help.brightfunded.com/en/articles/9268736-how-does-my-reward-split-work-on-my-funded-account"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/brightfunded.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/brightfunded.com)."
+      ]
+    },
+    "bulenox": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 1,826 reviews, claimed profile; Trustpilot notes it hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/bulenox.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 1826,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/bulenox.com"
+      }
+    },
+    "city-traders-imperium": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.2 TrustScore across 1,631 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.3 across 1,691 reviews. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/citytradersimperium.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 1631,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com"
+      }
+    },
+    "clarity-traders": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/claritytraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/claritytraders.com)."
+      ]
+    },
+    "dei-funded": {
+      "reviewedAt": "2026-10-23",
+      "addSources": [
+        {
+          "label": "PropRadar domain monitor, 2026-10-23",
+          "url": "https://github.com/adriengeyer02-bot/propradar/issues/4"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported deifunded.com redirecting to datasidney.xyz, an unrelated domain. The existing domain warning (unrelated content since the July 2026 review) is kept unchanged and PropRadar still does not link to the domain. A third-party listing marks the firm as no longer operating, without a date; status left unchanged pending a primary source.",
+          "source": "https://github.com/adriengeyer02-bot/propradar/issues/4"
+        }
+      ]
+    },
+    "e8-futures": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entities read from the official e8futures.com footer: E8 Funding LLC (incorporated in the United States, Dallas, Texas address), Digital Renaissance LLC (website) and E8 Markets Ltd (MT5). The footer does not say which entity operates the futures accounts.",
+          "source": "https://e8futures.com/",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "E8 Funding LLC",
+          "jurisdiction": "United States, Texas",
+          "registeredAddress": "4101 McEwen Rd #205, Dallas, TX 75244",
+          "role": "Named in the e8futures.com footer as a technology and education company incorporated under the laws of the United States. The footer does not say which entity operates the futures accounts."
+        },
+        {
+          "name": "Digital Renaissance LLC",
+          "jurisdiction": "To verify",
+          "role": "Named in the e8futures.com footer as overseeing the website; jurisdiction not stated."
+        },
+        {
+          "name": "E8 Markets Ltd",
+          "jurisdiction": "To verify",
+          "role": "Named in the e8futures.com footer as operating MT5; jurisdiction not stated."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "E8 Futures official site (footer entities)",
+          "url": "https://e8futures.com/"
+        }
+      ]
+    },
+    "e8-markets": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Official site confirms E8 One 5K at a $48 list price and an 80% default payout split; both unchanged.",
+          "source": "https://e8markets.com/trade-like-a-pro"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/e8markets.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
+      ]
+    },
+    "earn2trade": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore across 5,046 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.earn2trade.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 5046,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com"
+      }
+    },
+    "elite-trader-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.8 TrustScore across 1,158 reviews on the elitetraderfunding.com profile (the firm moved its site to elitetraderfunding.app, per PropFirmMap), no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/elitetraderfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 1158,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/elitetraderfunding.com"
+      },
+      "addSources": [
+        {
+          "label": "PropFirmMap: Elite Trader Funding moved to elitetraderfunding.app",
+          "url": "https://propfirmmap.com/blog/prop-firm-industry-news-shutdowns-rebrands-new-firms-q2-2026"
+        }
+      ]
+    },
+    "fast-track-trading": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entity read from the official terms: Fast Track Trading, LLC. Its place of formation is not stated, so the country stays to verify; the terms are governed by New Jersey law.",
+          "source": "https://www.fasttracktrading.net/terms-and-conditions/",
+          "fields": [
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 3.1 TrustScore across 821 reviews; claimed profile; Trustpilot notes the company hasn't invited customers recently. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fasttracktrading.net",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Fast Track Trading, LLC",
+          "jurisdiction": "To verify",
+          "role": "Company named in the official terms. No state of formation or address is given; the terms are governed by the laws of the State of New Jersey (United States)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Fast Track Trading terms and conditions (official)",
+          "url": "https://www.fasttracktrading.net/terms-and-conditions/"
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 821,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fasttracktrading.net"
+      }
+    },
+    "finotive-funding": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/finotivefunding.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "fintokei": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore across 1,410 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fintokei.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 1410,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com"
+      }
+    },
+    "for-traders": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fortraders.com",
+          "fields": [
+            "incidents"
           ]
         }
       ]
@@ -142,40 +627,91 @@
         }
       ]
     },
-    "the5ers": {
-      "reviewedAt": "2026-10-23",
+    "ftuk": {
+      "reviewedAt": "2026-10-27",
       "set": {
-        "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 40309,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com",
-        "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval"
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 790,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com"
       },
       "changelog": [
         {
-          "date": "2026-10-23",
-          "summary": "Trustpilot refreshed: 4.7 TrustScore across 40,309 reviews.",
-          "source": "https://www.trustpilot.com/review/the5ers.com",
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 3.8 TrustScore across 790 reviews; 66% five-star and 25% one-star, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/ftuk.com",
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        }
+      ]
+    },
+    "funded-trading-plus": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Payout terms filled from the official help center. 80/20 starting split confirmed. Entry price 119 left unchanged although it matches a legacy program: current list prices were only found on third-party sites.",
+          "source": "https://help.fundedtradingplus.com/payouts-overview/",
+          "fields": [
+            "payoutDelay"
+          ]
         },
         {
           "date": "2026-10-23",
-          "summary": "Trustpilot read as 4.7 with 39,724 reviews. Payout wording aligned with The5ers' withdrawals FAQ. Entry price left unchanged: the official pricing table could not be read cleanly.",
-          "source": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
+          "source": "https://www.trustpilot.com/review/fundedtradingplus.com",
           "fields": [
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl",
-            "payoutDelay"
+            "incidents"
           ]
         }
       ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
+      },
       "addSources": [
         {
-          "label": "The5ers withdrawals FAQ (official)",
-          "url": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+          "label": "Funded Trading Plus payouts overview (official)",
+          "url": "https://help.fundedtradingplus.com/payouts-overview/"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedtradingplus.com)."
+      ]
+    },
+    "funded7": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 3.1 TrustScore across 49 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/funded7.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 49,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/funded7.com"
+      }
+    },
+    "fundedelite": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and uk mirrors. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundedelite.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedelite.com)."
       ]
     },
     "fundednext": {
@@ -204,17 +740,185 @@
         }
       ]
     },
-    "brightfunded": {
+    "funderpro": {
       "changelog": [
         {
           "date": "2026-10-23",
-          "summary": "Domain monitor flagged brightfunded.com as 'no-trading-content'; checked by hand: the official site loads normally (operator Bright Global FZCO, trading as BrightFunded), false positive. Prices are shown in EUR (2-Step Bright 5K list EUR 47); stored price left unchanged. Default profit split 80/20 confirmed on the help center.",
-          "source": "https://help.brightfunded.com/en/articles/9268736-how-does-my-reward-split-work-on-my-funded-account"
+          "summary": "Payout terms filled from the official challenge page (bi-weekly rewards, typically paid within 1 working day). Entry price $69 and 80% split consistent with the official page; unchanged.",
+          "source": "https://funderpro.com/the-challenge/",
+          "fields": [
+            "payoutDelay"
+          ]
         },
         {
           "date": "2026-10-23",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
-          "source": "https://www.trustpilot.com/review/brightfunded.com",
+          "source": "https://www.trustpilot.com/review/funderpro.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval"
+      },
+      "addSources": [
+        {
+          "label": "FunderPro Classic Challenge (official)",
+          "url": "https://funderpro.com/the-challenge/"
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/funderpro.com)."
+      ]
+    },
+    "funding-pips": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 71,036 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundingpips.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 71036,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com"
+      }
+    },
+    "funding-traders": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundingtraders.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "funding-your-trades": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Legal entities read from the official terms of service: PrimeWorks International FZ LLC owns and operates Funding Your Trades; Odeonpay ALE S.R.L. (\"Paysagi\") is merchant of record. No jurisdiction is stated, so the country stays to verify.",
+          "source": "https://fundingyourtrades.com/terms-of-services/",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "PrimeWorks International FZ LLC",
+          "jurisdiction": "To verify",
+          "role": "Owner and operator named in the official terms of service (section 11.3). Jurisdiction, registration number and address are not stated."
+        },
+        {
+          "name": "Odeonpay ALE S.R.L. (\"Paysagi\")",
+          "jurisdiction": "To verify",
+          "role": "Merchant of record for payment settlement only, per the official terms; not the service provider."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funding Your Trades terms of service (official)",
+          "url": "https://fundingyourtrades.com/terms-of-services/"
+        }
+      ]
+    },
+    "fundyourfx": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fundyourfx.io",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundyourfx.io)."
+      ]
+    },
+    "fx2-funding": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.1 TrustScore across 456 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fx2funding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.1,
+        "trustpilotReviewCount": 456,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fx2funding.com"
+      }
+    },
+    "fxify": {
+      "reviewedAt": "2026-10-28",
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 6452,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com",
+        "priceFrom": 59
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore across 6,452 reviews (was 4.4 across 6,055), same figures on www.trustpilot.com and ca.trustpilot.com. Price and split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/fxify.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Entry price set to $59 (was shown as 'To verify'): the official Lightning Challenge page reads \"Start from $59 $10K Evaluation\". Profit split left unchanged.",
+          "source": "https://fxify.com/programs/lightning-challenge/",
+          "fields": [
+            "priceFrom"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "FXIFY Lightning Challenge (official)",
+          "url": "https://fxify.com/programs/lightning-challenge/"
+        }
+      ]
+    },
+    "goat-funded-trader": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Official help center confirms an 80% base profit split and a bi-weekly payout cycle (articles updated 5 October 2026). Entry price left unchanged: official pages show promotional prices without a clear list price.",
+          "source": "https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard"
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Checked on the ca.trustpilot.com mirror of the same profile.",
+          "source": "https://www.trustpilot.com/review/goatfundedtrader.com",
           "fields": [
             "incidents"
           ]
@@ -222,7 +926,7 @@
       ],
       "reviewedAt": "2026-10-23",
       "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/brightfunded.com)."
+        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
       ]
     },
     "hantec-trader": {
@@ -268,766 +972,62 @@
         "trustpilotSourceUrl": "https://uk.trustpilot.com/review/rzrfunded.com"
       }
     },
-    "funderpro": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Payout terms filled from the official challenge page (bi-weekly rewards, typically paid within 1 working day). Entry price $69 and 80% split consistent with the official page; unchanged.",
-          "source": "https://funderpro.com/the-challenge/",
-          "fields": [
-            "payoutDelay"
-          ]
-        },
-        {
-          "date": "2026-10-23",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
-          "source": "https://www.trustpilot.com/review/funderpro.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "set": {
-        "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval"
-      },
-      "addSources": [
-        {
-          "label": "FunderPro Classic Challenge (official)",
-          "url": "https://funderpro.com/the-challenge/"
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/funderpro.com)."
-      ]
-    },
-    "goat-funded-trader": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Official help center confirms an 80% base profit split and a bi-weekly payout cycle (articles updated 5 October 2026). Entry price left unchanged: official pages show promotional prices without a clear list price.",
-          "source": "https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard"
-        },
-        {
-          "date": "2026-10-23",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Checked on the ca.trustpilot.com mirror of the same profile.",
-          "source": "https://www.trustpilot.com/review/goatfundedtrader.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
-      ]
-    },
-    "blue-guardian": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Official site live. Help center states an 80% profit split for 2-Step Nano. Entry price left unchanged: the 5K price on the site could not be mapped to a plan, and a 25% promotion is running.",
-          "source": "https://help.blueguardian.com/en/articles/16445450-2-step-nano-rules"
-        },
-        {
-          "date": "2026-10-23",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
-          "source": "https://www.trustpilot.com/review/blueguardian.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
-      ]
-    },
-    "e8-markets": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Official site confirms E8 One 5K at a $48 list price and an 80% default payout split; both unchanged.",
-          "source": "https://e8markets.com/trade-like-a-pro"
-        },
-        {
-          "date": "2026-10-23",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
-          "source": "https://www.trustpilot.com/review/e8markets.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
-      ]
-    },
-    "alpha-capital-group": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Entry price updated from 97 to 27: the firm's own price table (updated 21 September 2026, checked against checkout per the page) lists Alpha Pro 6% 5K at $27. 80% standard split unchanged.",
-          "source": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026",
-          "fields": [
-            "priceFrom"
-          ]
-        },
-        {
-          "date": "2026-10-23",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
-          "source": "https://www.trustpilot.com/review/alphacapitalgroup.uk",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "set": {
-        "priceFrom": 27
-      },
-      "addSources": [
-        {
-          "label": "Alpha Capital Group evaluation prices 2026 (official)",
-          "url": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026"
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/alphacapitalgroup.uk)."
-      ]
-    },
-    "trade-the-pool": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Profit split corrected from 80 to 70: Trade The Pool's own article (8 October 2026) cites Program Terms of 26 April 2026 stating a 70/30 split for FLEX and MAX accounts; only the Edge Program advertises 80%. Trustpilot read as 4.5 with 921 reviews. Entry price left unchanged (list vs discounted price unclear).",
-          "source": "https://tradethepool.com/fundamental/profit-split-how-prop-firm-payouts-work/",
-          "fields": [
-            "profitSplit",
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl",
-            "payoutDelay"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "set": {
-        "profitSplit": 70,
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 921,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
-        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
-      },
-      "addSources": [
-        {
-          "label": "Trade The Pool: profit split explained (official, 2026-10-08)",
-          "url": "https://tradethepool.com/fundamental/profit-split-how-prop-firm-payouts-work/"
-        },
-        {
-          "label": "Trade The Pool program page (official)",
-          "url": "https://tradethepool.com/the-program/"
-        }
-      ]
-    },
-    "funded-trading-plus": {
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Payout terms filled from the official help center. 80/20 starting split confirmed. Entry price 119 left unchanged although it matches a legacy program: current list prices were only found on third-party sites.",
-          "source": "https://help.fundedtradingplus.com/payouts-overview/",
-          "fields": [
-            "payoutDelay"
-          ]
-        },
-        {
-          "date": "2026-10-23",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld.",
-          "source": "https://www.trustpilot.com/review/fundedtradingplus.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "reviewedAt": "2026-10-23",
-      "set": {
-        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
-      },
-      "addSources": [
-        {
-          "label": "Funded Trading Plus payouts overview (official)",
-          "url": "https://help.fundedtradingplus.com/payouts-overview/"
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedtradingplus.com)."
-      ]
-    },
-    "dei-funded": {
-      "reviewedAt": "2026-10-23",
-      "addSources": [
-        {
-          "label": "PropRadar domain monitor, 2026-10-23",
-          "url": "https://github.com/adriengeyer02-bot/propradar/issues/4"
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Domain monitor reported deifunded.com redirecting to datasidney.xyz, an unrelated domain. The existing domain warning (unrelated content since the July 2026 review) is kept unchanged and PropRadar still does not link to the domain. A third-party listing marks the firm as no longer operating, without a date; status left unchanged pending a primary source.",
-          "source": "https://github.com/adriengeyer02-bot/propradar/issues/4"
-        }
-      ]
-    },
-    "qt-funded": {
-      "reviewedAt": "2026-10-23",
-      "addSources": [
-        {
-          "label": "FXEmpire QTFunded profile",
-          "url": "https://www.fxempire.com/prop-firms/qtfunded"
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Domain monitor reported qtfunded.com redirecting to quanttekel.com. Checked: consistent with the relationship already documented in this profile (qtfunded.com points to the qtfunded.quanttekel.com portal; QT Funded is described as Quant Tekel's prop trading arm). Not a stale domain: no domain warning set.",
-          "source": "https://www.fxempire.com/prop-firms/qtfunded"
-        }
-      ]
-    },
-    "sabiotrade": {
+    "hola-prime": {
       "reviewedAt": "2026-10-28",
-      "addSources": [
-        {
-          "label": "FXEmpire SabioTrade profile",
-          "url": "https://www.fxempire.com/prop-firms/sabiotrade"
-        }
-      ],
       "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Domain monitor reported sabiotrade.com redirecting to sabiotrade.us. Checked: third-party reviews (FXEmpire; FundedTrading, updated 7 August 2026) describe sabiotrade.us as SabioTrade's dedicated site for US clients, so the redirect is most likely regional (the monitor runs from US servers). No domain warning set.",
-          "source": "https://www.fxempire.com/prop-firms/sabiotrade"
-        },
         {
           "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/sabiotrade.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/sabiotrade.com)."
-      ]
-    },
-    "willis-capital": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "officialWebsite": "https://wfunded.io/"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Domain monitor reported on 2026-10-24 that the listed domain williscapital.com redirects to hugedomains.com. Checked by hand through public sources: TechCabal describes WFunded as 'formerly known as Willis Capital' and points readers to wfunded.io, and the Trustpilot profile for williscapitals.com (with an s) now displays as WFUNDED and links to wfunded.io. The listed williscapital.com therefore appears not to be the firm's own domain. No domain warning set and no other field changed pending a decision on the official domain.",
-          "source": "https://techcabal.com/?p=162269",
-          "fields": []
-        },
-        {
-          "date": "2026-10-27",
-          "summary": "Listed domain corrected to wfunded.io. TechCabal describes WFunded as \"formerly known as Willis Capital\" and the williscapitals.com Trustpilot profile now displays as WFUNDED and links to wfunded.io (both recorded on 2026-10-26). The old williscapital.com no longer resolves. TheTrustedProp marks Willis Capital as closed, which may reflect the rebrand; status unchanged.",
-          "source": "https://techcabal.com/?p=162269",
-          "fields": [
-            "officialWebsite"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "TechCabal: WFunded, formerly known as Willis Capital",
-          "url": "https://techcabal.com/?p=162269"
-        },
-        {
-          "label": "Trustpilot profile williscapitals.com (now shown as WFUNDED)",
-          "url": "https://www.trustpilot.com/review/williscapitals.com"
-        }
-      ]
-    },
-    "syndicate-funded": {
-      "reviewedAt": "2026-10-28",
-      "set": {
-        "listedDomainWarning": "The listed domain syndicatefunded.com redirected to earnforex.com, an unrelated forex information site, when checked on 2026-10-23 and again on 2026-10-27. TheTrustedProp lists Syndicate Funded as closed. PropRadar does not link the domain.",
-        "status": "Fermée"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Domain monitor reported on 2026-10-23 that syndicatefunded.com redirects to earnforex.com. The redirect could not be confirmed by hand in this pass, so no domain warning was set. Trustpilot profile for syndicatefunded.com read: 2.5 TrustScore, 0 reviews in the last 12 months and no recent history of asking for reviews. Review count not stored because mirrors showed different totals (118 and 122). No field changed.",
-          "source": "https://nz.trustpilot.com/review/syndicatefunded.com?page=4",
-          "fields": []
-        },
-        {
-          "date": "2026-10-27",
-          "summary": "Domain warning set. The redirect to earnforex.com reported by the domain monitor on 2026-10-23 was seen again by a separate fetch on 2026-10-27, and TheTrustedProp marks the firm as no longer operating (no closure date given). Status left unchanged pending approval.",
-          "source": "https://thetrustedprop.com/prop-firms/syndicate-funded/news",
-          "fields": [
-            "listedDomainWarning"
-          ]
-        },
-        {
-          "date": "2026-10-28",
-          "summary": "Status set to closed, approved by the site owner on 2026-10-28. TheTrustedProp lists Syndicate Funded as \"CLOSED\" (\"This prop firm is no longer operating\"), and since the 2026-10-27 domain check the listed domain redirects to an unrelated site (earnforex.com). No operating official site was found.",
-          "source": "https://thetrustedprop.com/prop-firms/syndicate-funded/news",
-          "fields": [
-            "status"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "TheTrustedProp: Syndicate Funded marked as closed",
-          "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
-        },
-        {
-          "label": "TheTrustedProp: Syndicate Funded marked CLOSED",
-          "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
-        }
-      ]
-    },
-    "tradexprop": {
-      "reviewedAt": "2026-10-26",
-      "set": {
-        "trustpilotRating": 4.0,
-        "trustpilotReviewCount": 40,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradexprop.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Domain monitor briefly reported tradexprop.com as unreachable on 2026-10-24; it was back to normal on 2026-10-25, so no action. Trustpilot profile for tradexprop.com read: 4.0 TrustScore across 40 reviews (read on the nl-be.trustpilot.com mirror of the same profile).",
-          "source": "https://nl-be.trustpilot.com/review/tradexprop.com",
+          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 4,081 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/holaprime.com",
           "fields": [
             "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
+            "trustpilotReviewCount"
           ]
         }
-      ]
-    },
-    "wall-street-funded": {
-      "reviewedAt": "2026-10-26",
-      "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 5030,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Domain monitor flags wallstreetfunded.com as redirecting to wsfunded.com. Checked: wsfunded.com is the firm's own current domain (its Trustpilot profile is wsfunded.com, and the July 2026 audit already recorded the redirect), so this is a move, not a warning. Trustpilot read: 4.3 TrustScore across 5,030 reviews.",
-          "source": "https://uk.trustpilot.com/review/wsfunded.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
-          ]
-        }
-      ]
-    },
-    "tradeify": {
-      "reviewedAt": "2026-10-26",
+      ],
       "set": {
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 5469,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Official help center pricing reference confirms the stored values: cheapest plan Growth 25K at $99 one-time, and a 90% trader split on Sim Funded accounts (80% on Elite Live). No price or split change.",
-          "source": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference",
-          "fields": []
-        },
-        {
-          "date": "2026-10-26",
-          "summary": "Trustpilot read on www.trustpilot.com: 4.5 TrustScore across 5,469 reviews (an older ca.trustpilot.com snapshot showed 4.4 across 5,069; the higher count is the more recent reading).",
-          "source": "https://www.trustpilot.com/review/tradeify.co",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Tradeify help center: pricing reference (official)",
-          "url": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference"
-        }
-      ]
+        "trustpilotReviewCount": 4081,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com"
+      }
     },
-    "take-profit-trader": {
-      "reviewedAt": "2026-10-26",
-      "set": {
-        "trustpilotRating": 4.4,
-        "trustpilotReviewCount": 10977,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Rule change reported on 17 August 2026: the minimum trading requirement of the futures evaluation went from five days to three; the firm said its payout policy is unchanged (PRO accounts can withdraw from day one). Price and split not re-read on the official site, left unchanged.",
-          "source": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days",
-          "fields": []
-        },
-        {
-          "date": "2026-10-26",
-          "summary": "Trustpilot read: 4.4 TrustScore across 10,977 reviews (jp.trustpilot.com mirror; an ie.trustpilot.com snapshot showed 4.4 across 10,787).",
-          "source": "https://jp.trustpilot.com/review/takeprofittrader.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "TradeInformer: Take Profit Trader cuts evaluation minimum to three days (17 Aug 2026)",
-          "url": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days"
-        }
-      ]
-    },
-    "fxify": {
+    "hyrotrader": {
       "reviewedAt": "2026-10-28",
-      "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 6452,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com",
-        "priceFrom": 59
-      },
       "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Trustpilot refreshed: 4.3 TrustScore across 6,452 reviews (was 4.4 across 6,055), same figures on www.trustpilot.com and ca.trustpilot.com. Price and split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fxify.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        },
         {
           "date": "2026-10-28",
-          "summary": "Entry price set to $59 (was shown as 'To verify'): the official Lightning Challenge page reads \"Start from $59 $10K Evaluation\". Profit split left unchanged.",
-          "source": "https://fxify.com/programs/lightning-challenge/",
-          "fields": [
-            "priceFrom"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "FXIFY Lightning Challenge (official)",
-          "url": "https://fxify.com/programs/lightning-challenge/"
-        }
-      ]
-    },
-    "instant-funding": {
-      "reviewedAt": "2026-10-28",
-      "set": {},
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Corporate change: on 26 May 2026 Instant Funding announced it had acquired Funded Trading Plus; the release says both brands continue to operate independently. Trustpilot profile not found in this pass and official pricing not re-read: no field changed.",
-          "source": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697",
-          "fields": []
-        },
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/instantfunding.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "PR Newswire: Instant Funding acquires Funded Trading Plus (26 May 2026)",
-          "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/instantfunding.com)."
-      ]
-    },
-    "oneup-trader": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 2793,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.7 TrustScore across 2,793 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/oneuptrader.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ]
-    },
-    "leeloo-trading": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 3.1,
-        "trustpilotReviewCount": 608,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/leelootrading.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 3.1 TrustScore across 608 reviews; 82% five-star and 14% one-star, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/leelootrading.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ]
-    },
-    "uprofit-trader": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 3.5,
-        "trustpilotReviewCount": 6555,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 3.5 TrustScore across 6,555 reviews on the www.uprofit.com profile, which Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/www.uprofit.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ]
-    },
-    "myfundedfutures": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 4.9,
-        "trustpilotReviewCount": 22576,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.9 TrustScore across 22,576 reviews, with Trustpilot's high-risk investment notice. Rapid plan profit split 90/10 with daily payouts confirmed on the official plan page; stored price left unchanged.",
-          "source": "https://www.trustpilot.com/review/myfundedfutures.com",
+          "summary": "Trustpilot read for the first time: 4.0 TrustScore across 229 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/hyrotrader.com",
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
         }
       ],
-      "addSources": [
-        {
-          "label": "MyFundedFutures Rapid plan (official)",
-          "url": "https://myfundedfutures.com/plans/rapid"
-        }
-      ]
-    },
-    "breakout-prop": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 1226,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.7 TrustScore across 1,226 reviews, with Trustpilot's high-risk investment notice. Official site: default 80% split with a 90% option chosen at purchase, on-demand USDC payouts usually within 24 hours; stored price and split left unchanged.",
-          "source": "https://www.trustpilot.com/review/breakoutprop.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        },
-        {
-          "date": "2026-10-27",
-          "summary": "Ownership noted: Breakout's official site states it has been acquired by Kraken and describes itself as backed by Kraken. BeInCrypto (republished by Yahoo Finance, 28 May 2026) reports the acquisition was announced on 4 September 2025 and that Kraken Prop, launched on 27 May 2026, is built on Breakout.",
-          "source": "https://www.breakoutprop.com/kraken/"
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Breakout: acquired by Kraken (official)",
-          "url": "https://www.breakoutprop.com/kraken/"
-        },
-        {
-          "label": "Yahoo Finance / BeInCrypto: Kraken Prop built on Breakout (28 May 2026)",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/kraken-prop-inside-funded-trader-183521927.html"
-        }
-      ]
-    },
-    "ftuk": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 3.8,
-        "trustpilotReviewCount": 790,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 3.8 TrustScore across 790 reviews; 66% five-star and 25% one-star, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/ftuk.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ]
-    },
-    "lux-trading-firm": {
-      "reviewedAt": "2026-10-27",
       "set": {
         "trustpilotRating": 4.0,
-        "trustpilotReviewCount": 626,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/luxtradingfirm.com"
-      },
+        "trustpilotReviewCount": 229,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com"
+      }
+    },
+    "ic-funded": {
+      "reviewedAt": "2026-10-28",
       "changelog": [
         {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.0 TrustScore across 626 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/luxtradingfirm.com",
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.4 TrustScore across 183 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.icfunded.com",
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
         }
-      ]
-    },
-    "tradeday": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "trustpilotRating": 4.6,
-        "trustpilotReviewCount": 1452,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.6 TrustScore across 1,452 reviews, claimed profile, no Trustpilot warning. Stored price and split left unchanged: the official prices are shown as promotional.",
-          "source": "https://www.trustpilot.com/review/tradeday.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        },
-        {
-          "date": "2026-10-27",
-          "summary": "Program relaunch noted: TradeDay announced TradeDay 2.0 on 29 May 2026 (new Fast Pass path, updated Quick Pay, 90% split in Funded Live); earlier programs are closed to new purchases. On the official site, Quick Pay funded-sim payouts split 50/50 below $4k net profit and 80/20 above.",
-          "source": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
-        }
       ],
-      "addSources": [
-        {
-          "label": "TradeDay 2.0 announcement (official, 29 May 2026)",
-          "url": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
-        }
-      ]
-    },
-    "aurafunded": {
-      "reviewedAt": "2026-10-27",
       "set": {
-        "listedDomainWarning": "The listed domain aurafunded.com redirected to an unrelated gambling website when PropRadar checked it on 2026-10-27, and the AuraFunded business is listed for sale on Flippa (asking price US$700,000). PropRadar does not link the domain until an official site is confirmed."
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Domain warning set. Checked on 2026-10-27: aurafunded.com redirected to an unrelated gambling site (lineslot88asli.com) during the logo fetch run, and a Flippa listing offers the AuraFunded business (intellectual property, infrastructure and customer base) for US$700,000. No status change.",
-          "source": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders",
-          "fields": [
-            "listedDomainWarning"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Flippa listing: AuraFunded business for sale",
-          "url": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders"
-        }
-      ]
-    },
-    "blufx": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "listedDomainWarning": "The listed domain blufx.co.uk redirected to propfirmswitch.com, a third-party site, when checked on 2026-10-23 and 2026-10-27. PickMyTrade reports it could not verify BluFX rules on BluFX pages and that only third-party results say the firm ceased operations. PropRadar does not link the domain."
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Domain warning set after a second fetch on 2026-10-27 confirmed the redirect to propfirmswitch.com reported by the domain monitor on 2026-10-23. PickMyTrade could not verify current rules on BluFX pages. No status change.",
-          "source": "https://pickmytrade.io/prop-firm-faq/blufx",
-          "fields": [
-            "listedDomainWarning"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "PickMyTrade: BluFX research record",
-          "url": "https://pickmytrade.io/prop-firm-faq/blufx"
-        }
-      ]
-    },
-    "aeon-funded": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "listedDomainWarning": "The listed domain aeonfunded.com redirected to quantxfund.io when checked on 2026-10-23 and 2026-10-27. PropRadar found no public announcement linking Aeon Funded to that site, so the domain is not linked."
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Domain warning set. Two separate fetches (domain monitor 2026-10-23, logo fetch 2026-10-27) ended on quantxfund.io. A web search found no announcement of a rebrand or merger. No status change.",
-          "source": "https://aeonfunded.com/",
-          "fields": [
-            "listedDomainWarning"
-          ]
-        }
-      ]
-    },
-    "traders-central": {
-      "reviewedAt": "2026-10-27",
-      "set": {
-        "officialWebsite": "https://traderscentralfund.com/",
-        "trustpilotRating": 3.6,
-        "trustpilotReviewCount": 973,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Listed domain corrected. traderscentral.com redirects to traderstools.com and is not the firm's site; the Trustpilot profile for traderscentralfund.com is claimed (since May 2019) and company replies are signed \"Traders Central\". Trustpilot read on 2026-10-27: 3.6 TrustScore, 973 reviews.",
-          "source": "https://ie.trustpilot.com/review/traderscentralfund.com?page=9",
-          "fields": [
-            "officialWebsite",
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
-          ]
-        }
-      ]
+        "trustpilotRating": 3.4,
+        "trustpilotReviewCount": 183,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.icfunded.com"
+      }
     },
     "inspire-funding": {
       "reviewedAt": "2026-10-28",
@@ -1072,6 +1072,166 @@
         }
       ]
     },
+    "instant-funding": {
+      "reviewedAt": "2026-10-28",
+      "set": {},
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Corporate change: on 26 May 2026 Instant Funding announced it had acquired Funded Trading Plus; the release says both brands continue to operate independently. Trustpilot profile not found in this pass and official pricing not re-read: no field changed.",
+          "source": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697",
+          "fields": []
+        },
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/instantfunding.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "PR Newswire: Instant Funding acquires Funded Trading Plus (26 May 2026)",
+          "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/instantfunding.com)."
+      ]
+    },
+    "lark-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 523 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/larkfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 523,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com"
+      }
+    },
+    "leeloo-trading": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 608,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/leelootrading.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 3.1 TrustScore across 608 reviews; 82% five-star and 14% one-star, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/leelootrading.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "lucid-trading": {
+      "reviewedAt": "2026-10-27",
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore across 7,805 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.6, with no review count or source stored. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/lucidtrading.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 7805,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
+      }
+    },
+    "lux-trading-firm": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.0,
+        "trustpilotReviewCount": 626,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/luxtradingfirm.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.0 TrustScore across 626 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/luxtradingfirm.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "maven-trading": {
+      "reviewedAt": "2026-10-26",
+      "set": {},
+      "addIncidents": [
+        "Trustpilot's maventrading.com profile, checked on 2026-10-26, displays no TrustScore. Trustpilot's notice (Danish mirror, translated) reads: \"This company's TrustScore is currently unavailable due to a breach of our guidelines\", next to its reminder that companies may not offer incentives or pay to hide reviews. Source: https://dk.trustpilot.com/review/maventrading.com?page=3"
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines. Added as a dated, quoted incident; no rating or review count stored while the rating is withheld. Read on the dk.trustpilot.com mirror of the same profile. Price and split not re-read on the official site, left unchanged.",
+          "source": "https://dk.trustpilot.com/review/maventrading.com?page=3",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "ment-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 233 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.mentfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 233,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.mentfunding.com"
+      }
+    },
+    "moneta-funded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.6 TrustScore across 284 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/monetafunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 284,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/monetafunded.com"
+      }
+    },
     "my-crypto-funding": {
       "reviewedAt": "2026-10-27",
       "set": {
@@ -1094,66 +1254,219 @@
         }
       ]
     },
-    "funding-traders": {
-      "reviewedAt": "2026-10-27",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
+    "myforexfunds": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Source added: Finance Magnates reported on 14 May 2025 that a US federal judge dismissed the CFTC complaint against Traders Global Group (My Forex Funds' parent) with prejudice and sanctioned the CFTC. No sourced payout incident is on file for the current period, so the payout risk is shown as not assessed.",
+          "source": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+        }
       ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: court dismisses CFTC case against My Forex Funds' parent (14 May 2025)",
+          "url": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+        }
+      ]
+    },
+    "myfundedfutures": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.9,
+        "trustpilotReviewCount": 22576,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com"
+      },
       "changelog": [
         {
           "date": "2026-10-27",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fundingtraders.com",
+          "summary": "Trustpilot refreshed: 4.9 TrustScore across 22,576 reviews, with Trustpilot's high-risk investment notice. Rapid plan profit split 90/10 with daily payouts confirmed on the official plan page; stored price left unchanged.",
+          "source": "https://www.trustpilot.com/review/myfundedfutures.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "MyFundedFutures Rapid plan (official)",
+          "url": "https://myfundedfutures.com/plans/rapid"
+        }
+      ]
+    },
+    "ofp-funding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/ofpfunding.com",
           "fields": [
             "incidents"
           ]
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/ofpfunding.com)."
       ]
     },
-    "the-trading-pit": {
-      "reviewedAt": "2026-10-27",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
-      ],
+    "onefunded": {
+      "reviewedAt": "2026-10-28",
       "changelog": [
         {
-          "date": "2026-10-27",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie and uk mirrors; the nz mirror still showed an older cached rating. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://au.trustpilot.com/review/thetradingpit.com",
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/onefunded.com",
           "fields": [
             "incidents"
           ]
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/onefunded.com)."
       ]
     },
-    "finotive-funding": {
+    "oneup-trader": {
       "reviewedAt": "2026-10-27",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
-      ],
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 2793,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com"
+      },
       "changelog": [
         {
           "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore across 2,793 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/oneuptrader.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "pipfarm": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/pipfarm.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
+      ]
+    },
+    "qt-funded": {
+      "reviewedAt": "2026-10-23",
+      "addSources": [
+        {
+          "label": "FXEmpire QTFunded profile",
+          "url": "https://www.fxempire.com/prop-firms/qtfunded"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported qtfunded.com redirecting to quanttekel.com. Checked: consistent with the relationship already documented in this profile (qtfunded.com points to the qtfunded.quanttekel.com portal; QT Funded is described as Quant Tekel's prop trading arm). Not a stale domain: no domain warning set.",
+          "source": "https://www.fxempire.com/prop-firms/qtfunded"
+        }
+      ]
+    },
+    "quant-tekel": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Background noted: Finance Magnates reported on 16 September 2024 that QuantTekel is the new name of AscendX Capital (rebrand announced on X on 15 September 2024) and that it was moving towards brokerage services. The article names no regulator or licence; a third-party claim that it is a regulated broker is not verified.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
+          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        }
+      ]
+    },
+    "rebelsfunding": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 2,776 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/rebelsfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 2776,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/rebelsfunding.com"
+      }
+    },
+    "sabiotrade": {
+      "reviewedAt": "2026-10-28",
+      "addSources": [
+        {
+          "label": "FXEmpire SabioTrade profile",
+          "url": "https://www.fxempire.com/prop-firms/sabiotrade"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Domain monitor reported sabiotrade.com redirecting to sabiotrade.us. Checked: third-party reviews (FXEmpire; FundedTrading, updated 7 August 2026) describe sabiotrade.us as SabioTrade's dedicated site for US clients, so the redirect is most likely regional (the monitor runs from US servers). No domain warning set.",
+          "source": "https://www.fxempire.com/prop-firms/sabiotrade"
+        },
+        {
+          "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/finotivefunding.com",
+          "source": "https://www.trustpilot.com/review/sabiotrade.com",
           "fields": [
             "incidents"
           ]
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/sabiotrade.com)."
       ]
     },
-    "for-traders": {
+    "smart-prop-trader": {
       "reviewedAt": "2026-10-27",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
+      "set": {
+        "status": "Fermée",
+        "listedDomainWarning": "Smart Prop Trader announced its closure in November 2024 (Finance Magnates). On 2026-10-27 the listed domain smartproptrader.com redirected to smartprofitfx.com, which PropRadar has not verified as linked to the firm. PropRadar does not link the domain."
+      },
+      "addSources": [
+        {
+          "label": "Finance Magnates: Smart Prop Trader announces closure (28 Nov 2024)",
+          "url": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter"
+        }
       ],
       "changelog": [
         {
-          "date": "2026-10-27",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fortraders.com",
+          "date": "2026-10-26",
+          "summary": "Status set to closed. Finance Magnates reported on 28 November 2024 that Smart Prop Trader stopped onboarding new traders on 27 November 2024 and would stop operating on 29 December 2024, quoting the firm's announcement. The Trustpilot profile shows 1 review in the last 12 months. The domain monitor also reports that smartproptrader.com now redirects to smartprofitfx.com (not checked by hand in this pass; no domain warning added).",
+          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
           "fields": [
-            "incidents"
+            "status"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Domain monitor reported smartproptrader.com redirecting to smartprofitfx.com. The firm is already recorded as closed; a domain warning is set so the page no longer links the redirected domain.",
+          "source": "https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter",
+          "fields": [
+            "listedDomainWarning"
           ]
         }
       ]
@@ -1189,374 +1502,97 @@
         }
       ]
     },
-    "audacity-capital": {
-      "reviewedAt": "2026-10-27",
-      "addIncidents": [
-        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
-      ],
+    "sway-funded": {
+      "reviewedAt": "2026-10-28",
       "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.1 TrustScore across 620 reviews; Trustpilot says the profile was merged with other profiles of the company and that the company hasn't invited customers recently. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/swayfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.1,
+        "trustpilotReviewCount": 620,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/swayfunded.com"
+      }
+    },
+    "syndicate-funded": {
+      "reviewedAt": "2026-10-28",
+      "set": {
+        "listedDomainWarning": "The listed domain syndicatefunded.com redirected to earnforex.com, an unrelated forex information site, when checked on 2026-10-23 and again on 2026-10-27. TheTrustedProp lists Syndicate Funded as closed. PropRadar does not link the domain.",
+        "status": "Fermée"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor reported on 2026-10-23 that syndicatefunded.com redirects to earnforex.com. The redirect could not be confirmed by hand in this pass, so no domain warning was set. Trustpilot profile for syndicatefunded.com read: 2.5 TrustScore, 0 reviews in the last 12 months and no recent history of asking for reviews. Review count not stored because mirrors showed different totals (118 and 122). No field changed.",
+          "source": "https://nz.trustpilot.com/review/syndicatefunded.com?page=4",
+          "fields": []
+        },
         {
           "date": "2026-10-27",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/audacity.capital",
+          "summary": "Domain warning set. The redirect to earnforex.com reported by the domain monitor on 2026-10-23 was seen again by a separate fetch on 2026-10-27, and TheTrustedProp marks the firm as no longer operating (no closure date given). Status left unchanged pending approval.",
+          "source": "https://thetrustedprop.com/prop-firms/syndicate-funded/news",
           "fields": [
-            "incidents"
-          ]
-        }
-      ]
-    },
-    "fintokei": {
-      "reviewedAt": "2026-10-27",
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.3 TrustScore across 1,410 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fintokei.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 1410,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com"
-      }
-    },
-    "city-traders-imperium": {
-      "reviewedAt": "2026-10-27",
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.2 TrustScore across 1,631 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.3 across 1,691 reviews. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/citytradersimperium.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.2,
-        "trustpilotReviewCount": 1631,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com"
-      }
-    },
-    "earn2trade": {
-      "reviewedAt": "2026-10-27",
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.5 TrustScore across 5,046 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/www.earn2trade.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 5046,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com"
-      }
-    },
-    "lucid-trading": {
-      "reviewedAt": "2026-10-27",
-      "changelog": [
-        {
-          "date": "2026-10-27",
-          "summary": "Trustpilot refreshed: 4.5 TrustScore across 7,805 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.6, with no review count or source stored. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/lucidtrading.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 7805,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
-      }
-    },
-    "pipfarm": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/pipfarm.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
-      ]
-    },
-    "aqua-funded": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and ie mirrors. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/aquafunded.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/aquafunded.com)."
-      ]
-    },
-    "thinkcapital": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the uk and ca mirrors; the ie mirror still showed an older cached 4.0 rating. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/thinkcapital.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
-      ]
-    },
-    "blueberry-funded": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/blueberryfunded.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueberryfunded.com)."
-      ]
-    },
-    "funding-pips": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 71,036 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fundingpips.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 71036,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com"
-      }
-    },
-    "lark-funding": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 523 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/larkfunding.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 523,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com"
-      }
-    },
-    "tickticktrader": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 3.4 TrustScore across 6,639 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/tickticktrader.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 3.4,
-        "trustpilotReviewCount": 6639,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tickticktrader.com"
-      }
-    },
-    "ment-funding": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 233 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/www.mentfunding.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 233,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.mentfunding.com"
-      }
-    },
-    "apex-trader-funding": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 21,428 reviews on a profile Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/apextraderfunding.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
+            "listedDomainWarning"
           ]
         },
         {
           "date": "2026-10-28",
-          "summary": "Payout risk corroborated with a dated Finance Magnates report (29 August 2024: alleged payout delays and two-day video-proof requests before payout), added as a sourced incident. Approved by the site owner, who asked for every payout-risk level to be backed by sources.",
-          "source": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid",
+          "summary": "Status set to closed, approved by the site owner on 2026-10-28. TheTrustedProp lists Syndicate Funded as \"CLOSED\" (\"This prop firm is no longer operating\"), and since the 2026-10-27 domain check the listed domain redirects to an unrelated site (earnforex.com). No operating official site was found.",
+          "source": "https://thetrustedprop.com/prop-firms/syndicate-funded/news",
           "fields": [
-            "incidents"
+            "status"
           ]
         }
-      ],
-      "set": {
-        "trustpilotRating": 4.2,
-        "trustpilotReviewCount": 21428,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
-      },
-      "addIncidents": [
-        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid)."
       ],
       "addSources": [
         {
-          "label": "Finance Magnates: Apex payout video-proof requests (29 Aug 2024)",
-          "url": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid"
+          "label": "TheTrustedProp: Syndicate Funded marked as closed",
+          "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
+        },
+        {
+          "label": "TheTrustedProp: Syndicate Funded marked CLOSED",
+          "url": "https://thetrustedprop.com/prop-firms/syndicate-funded/news"
         }
       ]
     },
-    "bulenox": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 1,826 reviews, claimed profile; Trustpilot notes it hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/bulenox.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
+    "take-profit-trader": {
+      "reviewedAt": "2026-10-26",
       "set": {
-        "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 1826,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/bulenox.com"
-      }
-    },
-    "ic-funded": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 3.4 TrustScore across 183 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/www.icfunded.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 3.4,
-        "trustpilotReviewCount": 183,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.icfunded.com"
-      }
-    },
-    "elite-trader-funding": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 3.8 TrustScore across 1,158 reviews on the elitetraderfunding.com profile (the firm moved its site to elitetraderfunding.app, per PropFirmMap), no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/elitetraderfunding.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 3.8,
-        "trustpilotReviewCount": 1158,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/elitetraderfunding.com"
+        "trustpilotRating": 4.4,
+        "trustpilotReviewCount": 10977,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com"
       },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Rule change reported on 17 August 2026: the minimum trading requirement of the futures evaluation went from five days to three; the firm said its payout policy is unchanged (PRO accounts can withdraw from day one). Price and split not re-read on the official site, left unchanged.",
+          "source": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days",
+          "fields": []
+        },
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot read: 4.4 TrustScore across 10,977 reviews (jp.trustpilot.com mirror; an ie.trustpilot.com snapshot showed 4.4 across 10,787).",
+          "source": "https://jp.trustpilot.com/review/takeprofittrader.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
       "addSources": [
         {
-          "label": "PropFirmMap: Elite Trader Funding moved to elitetraderfunding.app",
-          "url": "https://propfirmmap.com/blog/prop-firm-industry-news-shutdowns-rebrands-new-firms-q2-2026"
+          "label": "TradeInformer: Take Profit Trader cuts evaluation minimum to three days (17 Aug 2026)",
+          "url": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days"
         }
       ]
-    },
-    "hola-prime": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 4,081 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/holaprime.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 4081,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com"
-      }
-    },
-    "tradefundrr": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 83 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/tradefundrr.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.2,
-        "trustpilotReviewCount": 83,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com"
-      }
     },
     "the-funded-trader": {
       "reviewedAt": "2026-10-28",
@@ -1585,125 +1621,81 @@
         }
       ]
     },
-    "myforexfunds": {
-      "reviewedAt": "2026-10-28",
+    "the-trading-pit": {
+      "reviewedAt": "2026-10-27",
+      "addIncidents": [
+        "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
+      ],
       "changelog": [
         {
-          "date": "2026-10-28",
-          "summary": "Source added: Finance Magnates reported on 14 May 2025 that a US federal judge dismissed the CFTC complaint against Traders Global Group (My Forex Funds' parent) with prejudice and sanctioned the CFTC. No sourced payout incident is on file for the current period, so the payout risk is shown as not assessed.",
-          "source": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+          "date": "2026-10-27",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie and uk mirrors; the nz mirror still showed an older cached rating. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://au.trustpilot.com/review/thetradingpit.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "the5ers": {
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 40309,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com",
+        "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore across 40,309 reviews.",
+          "source": "https://www.trustpilot.com/review/the5ers.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trustpilot read as 4.7 with 39,724 reviews. Payout wording aligned with The5ers' withdrawals FAQ. Entry price left unchanged: the official pricing table could not be read cleanly.",
+          "source": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "payoutDelay"
+          ]
         }
       ],
       "addSources": [
         {
-          "label": "Finance Magnates: court dismisses CFTC case against My Forex Funds' parent (14 May 2025)",
-          "url": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+          "label": "The5ers withdrawals FAQ (official)",
+          "url": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
         }
       ]
     },
-    "ofp-funding": {
+    "thinkcapital": {
       "reviewedAt": "2026-10-28",
       "changelog": [
         {
           "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/ofpfunding.com",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the uk and ca mirrors; the ie mirror still showed an older cached 4.0 rating. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/thinkcapital.com",
           "fields": [
             "incidents"
           ]
         }
       ],
       "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/ofpfunding.com)."
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
       ]
     },
-    "fundedelite": {
+    "tickticktrader": {
       "reviewedAt": "2026-10-28",
       "changelog": [
         {
           "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and uk mirrors. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fundedelite.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedelite.com)."
-      ]
-    },
-    "fundyourfx": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/fundyourfx.io",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundyourfx.io)."
-      ]
-    },
-    "clarity-traders": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/claritytraders.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/claritytraders.com)."
-      ]
-    },
-    "onefunded": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/onefunded.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/onefunded.com)."
-      ]
-    },
-    "wemastertrade": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/wemastertrade.com",
-          "fields": [
-            "incidents"
-          ]
-        }
-      ],
-      "addIncidents": [
-        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/wemastertrade.com)."
-      ]
-    },
-    "rebelsfunding": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 2,776 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/rebelsfunding.com",
+          "summary": "Trustpilot read for the first time: 3.4 TrustScore across 6,639 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/tickticktrader.com",
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
@@ -1711,141 +1703,25 @@
         }
       ],
       "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 2776,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/rebelsfunding.com"
+        "trustpilotRating": 3.4,
+        "trustpilotReviewCount": 6639,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tickticktrader.com"
       }
     },
-    "ultimate-traders": {
-      "reviewedAt": "2026-10-28",
+    "tiger-funded": {
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 3.8 TrustScore across 68 reviews; Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2",
+          "date": "2026-10-29",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. The www profile also shows unrelated category labels (for example \"swimming pool cleaning\"), which look like Trustpilot profile errors; the reviews themselves are about the tigerfunded.com prop firm. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/tigerfunded.com",
           "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
+            "incidents"
           ]
         }
       ],
-      "set": {
-        "trustpilotRating": 3.8,
-        "trustpilotReviewCount": 68,
-        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2"
-      }
-    },
-    "bespoke-funding-program": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 3.2 TrustScore across 1,193 reviews; the Trustpilot page shows the notice \"This company has received regulatory attention\" (no detail given on the page). Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/bespokefundingprogram.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 3.2,
-        "trustpilotReviewCount": 1193,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/bespokefundingprogram.com"
-      }
-    },
-    "sway-funded": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.1 TrustScore across 620 reviews; Trustpilot says the profile was merged with other profiles of the company and that the company hasn't invited customers recently. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/swayfunded.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.1,
-        "trustpilotReviewCount": 620,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/swayfunded.com"
-      }
-    },
-    "hyrotrader": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.0 TrustScore across 229 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/hyrotrader.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 4.0,
-        "trustpilotReviewCount": 229,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com"
-      }
-    },
-    "wegetfunded": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 3.9 TrustScore across 1,004 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/wegetfunded.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
-      "set": {
-        "trustpilotRating": 3.9,
-        "trustpilotReviewCount": 1004,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com"
-      }
-    },
-    "e8-futures": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Legal entities read from the official e8futures.com footer: E8 Funding LLC (incorporated in the United States, Dallas, Texas address), Digital Renaissance LLC (website) and E8 Markets Ltd (MT5). The footer does not say which entity operates the futures accounts.",
-          "source": "https://e8futures.com/",
-          "fields": [
-            "entities"
-          ]
-        }
-      ],
-      "setEntities": [
-        {
-          "name": "E8 Funding LLC",
-          "jurisdiction": "United States, Texas",
-          "registeredAddress": "4101 McEwen Rd #205, Dallas, TX 75244",
-          "role": "Named in the e8futures.com footer as a technology and education company incorporated under the laws of the United States. The footer does not say which entity operates the futures accounts."
-        },
-        {
-          "name": "Digital Renaissance LLC",
-          "jurisdiction": "To verify",
-          "role": "Named in the e8futures.com footer as overseeing the website; jurisdiction not stated."
-        },
-        {
-          "name": "E8 Markets Ltd",
-          "jurisdiction": "To verify",
-          "role": "Named in the e8futures.com footer as operating MT5; jurisdiction not stated."
-        }
-      ],
-      "addSources": [
-        {
-          "label": "E8 Futures official site (footer entities)",
-          "url": "https://e8futures.com/"
-        }
+      "addIncidents": [
+        "Trustpilot check on 2026-10-29: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/tigerfunded.com)."
       ]
     },
     "top-one-futures": {
@@ -1875,63 +1751,6 @@
         }
       ]
     },
-    "fast-track-trading": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Legal entity read from the official terms: Fast Track Trading, LLC. Its place of formation is not stated, so the country stays to verify; the terms are governed by New Jersey law.",
-          "source": "https://www.fasttracktrading.net/terms-and-conditions/",
-          "fields": [
-            "entities"
-          ]
-        }
-      ],
-      "setEntities": [
-        {
-          "name": "Fast Track Trading, LLC",
-          "jurisdiction": "To verify",
-          "role": "Company named in the official terms. No state of formation or address is given; the terms are governed by the laws of the State of New Jersey (United States)."
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Fast Track Trading terms and conditions (official)",
-          "url": "https://www.fasttracktrading.net/terms-and-conditions/"
-        }
-      ]
-    },
-    "funding-your-trades": {
-      "reviewedAt": "2026-10-28",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Legal entities read from the official terms of service: PrimeWorks International FZ LLC owns and operates Funding Your Trades; Odeonpay ALE S.R.L. (\"Paysagi\") is merchant of record. No jurisdiction is stated, so the country stays to verify.",
-          "source": "https://fundingyourtrades.com/terms-of-services/",
-          "fields": [
-            "entities"
-          ]
-        }
-      ],
-      "setEntities": [
-        {
-          "name": "PrimeWorks International FZ LLC",
-          "jurisdiction": "To verify",
-          "role": "Owner and operator named in the official terms of service (section 11.3). Jurisdiction, registration number and address are not stated."
-        },
-        {
-          "name": "Odeonpay ALE S.R.L. (\"Paysagi\")",
-          "jurisdiction": "To verify",
-          "role": "Merchant of record for payment settlement only, per the official terms; not the service provider."
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Funding Your Trades terms of service (official)",
-          "url": "https://fundingyourtrades.com/terms-of-services/"
-        }
-      ]
-    },
     "top-one-trader": {
       "reviewedAt": "2026-10-29",
       "changelog": [
@@ -1948,21 +1767,343 @@
         "Trustpilot check on 2026-10-29: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/toponetrader.com)."
       ]
     },
-    "tiger-funded": {
-      "reviewedAt": "2026-10-29",
+    "topstep": {
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "trustpilotRating": 3.7,
+        "trustpilotReviewCount": 14955,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com"
+      },
+      "addSources": [
+        {
+          "label": "Topstep help center: Maximum Loss Limit",
+          "url": "https://intercom.help/topstep-llc/en/articles/8284204"
+        },
+        {
+          "label": "Topstep help center: payout FAQs",
+          "url": "https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs"
+        }
+      ],
       "changelog": [
         {
-          "date": "2026-10-29",
-          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. The www profile also shows unrelated category labels (for example \"swimming pool cleaning\"), which look like Trustpilot profile errors; the reviews themselves are about the tigerfunded.com prop firm. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/tigerfunded.com",
+          "date": "2026-10-23",
+          "summary": "Trustpilot refreshed: 3.7 TrustScore across 14,955 reviews, with Trustpilot's high-risk investment notice.",
+          "source": "https://www.trustpilot.com/review/topstep.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "summary": "Trading Combine consistency target corrected to 55% (was recorded as 50%); Express Funded Account Consistency path uses 40%.",
+          "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+          "fields": [
+            "products"
+          ]
+        }
+      ]
+    },
+    "trade-the-pool": {
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Profit split corrected from 80 to 70: Trade The Pool's own article (8 October 2026) cites Program Terms of 26 April 2026 stating a 70/30 split for FLEX and MAX accounts; only the Edge Program advertises 80%. Trustpilot read as 4.5 with 921 reviews. Entry price left unchanged (list vs discounted price unclear).",
+          "source": "https://tradethepool.com/fundamental/profit-split-how-prop-firm-payouts-work/",
+          "fields": [
+            "profitSplit",
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "reviewedAt": "2026-10-23",
+      "set": {
+        "profitSplit": 70,
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 921,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
+        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
+      },
+      "addSources": [
+        {
+          "label": "Trade The Pool: profit split explained (official, 2026-10-08)",
+          "url": "https://tradethepool.com/fundamental/profit-split-how-prop-firm-payouts-work/"
+        },
+        {
+          "label": "Trade The Pool program page (official)",
+          "url": "https://tradethepool.com/the-program/"
+        }
+      ]
+    },
+    "tradeday": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 1452,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 4.6 TrustScore across 1,452 reviews, claimed profile, no Trustpilot warning. Stored price and split left unchanged: the official prices are shown as promotional.",
+          "source": "https://www.trustpilot.com/review/tradeday.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Program relaunch noted: TradeDay announced TradeDay 2.0 on 29 May 2026 (new Fast Pass path, updated Quick Pay, 90% split in Funded Live); earlier programs are closed to new purchases. On the official site, Quick Pay funded-sim payouts split 50/50 below $4k net profit and 80/20 above.",
+          "source": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TradeDay 2.0 announcement (official, 29 May 2026)",
+          "url": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading"
+        }
+      ]
+    },
+    "tradefundrr": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 83 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/tradefundrr.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 83,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com"
+      }
+    },
+    "tradeify": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 5469,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Official help center pricing reference confirms the stored values: cheapest plan Growth 25K at $99 one-time, and a 90% trader split on Sim Funded accounts (80% on Elite Live). No price or split change.",
+          "source": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference",
+          "fields": []
+        },
+        {
+          "date": "2026-10-26",
+          "summary": "Trustpilot read on www.trustpilot.com: 4.5 TrustScore across 5,469 reviews (an older ca.trustpilot.com snapshot showed 4.4 across 5,069; the higher count is the more recent reading).",
+          "source": "https://www.trustpilot.com/review/tradeify.co",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Tradeify help center: pricing reference (official)",
+          "url": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference"
+        }
+      ]
+    },
+    "traders-central": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://traderscentralfund.com/",
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 973,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Listed domain corrected. traderscentral.com redirects to traderstools.com and is not the firm's site; the Trustpilot profile for traderscentralfund.com is claimed (since May 2019) and company replies are signed \"Traders Central\". Trustpilot read on 2026-10-27: 3.6 TrustScore, 973 reviews.",
+          "source": "https://ie.trustpilot.com/review/traderscentralfund.com?page=9",
+          "fields": [
+            "officialWebsite",
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ]
+    },
+    "tradexprop": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.0,
+        "trustpilotReviewCount": 40,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradexprop.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor briefly reported tradexprop.com as unreachable on 2026-10-24; it was back to normal on 2026-10-25, so no action. Trustpilot profile for tradexprop.com read: 4.0 TrustScore across 40 reviews (read on the nl-be.trustpilot.com mirror of the same profile).",
+          "source": "https://nl-be.trustpilot.com/review/tradexprop.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ]
+    },
+    "ultimate-traders": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.8 TrustScore across 68 reviews; Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 68,
+        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2"
+      }
+    },
+    "uprofit-trader": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 6555,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-27",
+          "summary": "Trustpilot refreshed: 3.5 TrustScore across 6,555 reviews on the www.uprofit.com profile, which Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/www.uprofit.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ]
+    },
+    "wall-street-funded": {
+      "reviewedAt": "2026-10-26",
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 5030,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor flags wallstreetfunded.com as redirecting to wsfunded.com. Checked: wsfunded.com is the firm's own current domain (its Trustpilot profile is wsfunded.com, and the July 2026 audit already recorded the redirect), so this is a move, not a warning. Trustpilot read: 4.3 TrustScore across 5,030 reviews.",
+          "source": "https://uk.trustpilot.com/review/wsfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ]
+    },
+    "wegetfunded": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 3.9 TrustScore across 1,004 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/wegetfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.9,
+        "trustpilotReviewCount": 1004,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com"
+      }
+    },
+    "wemastertrade": {
+      "reviewedAt": "2026-10-28",
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/wemastertrade.com",
           "fields": [
             "incidents"
           ]
         }
       ],
       "addIncidents": [
-        "Trustpilot check on 2026-10-29: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/tigerfunded.com)."
+        "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/wemastertrade.com)."
       ]
+    },
+    "willis-capital": {
+      "reviewedAt": "2026-10-27",
+      "set": {
+        "officialWebsite": "https://wfunded.io/"
+      },
+      "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Domain monitor reported on 2026-10-24 that the listed domain williscapital.com redirects to hugedomains.com. Checked by hand through public sources: TechCabal describes WFunded as 'formerly known as Willis Capital' and points readers to wfunded.io, and the Trustpilot profile for williscapitals.com (with an s) now displays as WFUNDED and links to wfunded.io. The listed williscapital.com therefore appears not to be the firm's own domain. No domain warning set and no other field changed pending a decision on the official domain.",
+          "source": "https://techcabal.com/?p=162269",
+          "fields": []
+        },
+        {
+          "date": "2026-10-27",
+          "summary": "Listed domain corrected to wfunded.io. TechCabal describes WFunded as \"formerly known as Willis Capital\" and the williscapitals.com Trustpilot profile now displays as WFUNDED and links to wfunded.io (both recorded on 2026-10-26). The old williscapital.com no longer resolves. TheTrustedProp marks Willis Capital as closed, which may reflect the rebrand; status unchanged.",
+          "source": "https://techcabal.com/?p=162269",
+          "fields": [
+            "officialWebsite"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "TechCabal: WFunded, formerly known as Willis Capital",
+          "url": "https://techcabal.com/?p=162269"
+        },
+        {
+          "label": "Trustpilot profile williscapitals.com (now shown as WFUNDED)",
+          "url": "https://www.trustpilot.com/review/williscapitals.com"
+        }
+      ]
+    },
+    "wsfunded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Trustpilot read for the first time: 4.3 TrustScore across 4,858 reviews, claimed profile, no Trustpilot warning. This is the same Trustpilot profile as the Wall Street Funded entry: PropRadar currently lists the wsfunded.com firm twice. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/wsfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 4858,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
+      }
     }
   }
 }
