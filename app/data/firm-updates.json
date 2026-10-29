@@ -2470,11 +2470,19 @@
       ]
     },
     "qt-funded": {
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-10-29",
       "addSources": [
         {
           "label": "FXEmpire QTFunded profile",
           "url": "https://www.fxempire.com/prop-firms/qtfunded"
+        },
+        {
+          "label": "QT ONE rules (official help)",
+          "url": "https://support.qtfunded.com/support/articles/9000000000001-qt-one"
+        },
+        {
+          "label": "QT 1 Step (BNPL) rules (official help)",
+          "url": "https://support.qtfunded.com/support/articles/5632217156767-QT-1-Step-BNPL"
         }
       ],
       "changelog": [
@@ -2482,8 +2490,19 @@
           "date": "2026-10-23",
           "summary": "Domain monitor reported qtfunded.com redirecting to quanttekel.com. Checked: consistent with the relationship already documented in this profile (qtfunded.com points to the qtfunded.quanttekel.com portal; QT Funded is described as Quant Tekel's prop trading arm). Not a stale domain: no domain warning set.",
           "source": "https://www.fxempire.com/prop-firms/qtfunded"
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official help center read. QT ONE: 6% target, 3% daily and 6% maximum drawdown, both trailing, 1% floating-loss cap when funded, 70% split, no consistency score, payouts after each 4-trading-day cycle. QT 1 Step (BNPL): 6% target, 3% daily and 6% trailing drawdown, 2% floating-loss cap, 80% split with a 5% profit cap per cycle, 20% consistency score for payouts, 14-day cycle. QT 2 Step and QT 2 Step Elite are marked discontinued. Splits differ by program, so the firm-level split is left unverified; sizes and prices are not stated.",
+          "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
+          "fields": [
+            "payoutDelay"
+          ]
         }
-      ]
+      ],
+      "set": {
+        "payoutDelay": "QT ONE: payout requests after each 4-trading-day cycle (3% minimum profit); QT 1 Step (BNPL): 14-day standard cycle, 5 trading days and 3% profit minimum"
+      }
     },
     "quant-tekel": {
       "reviewedAt": "2026-10-29",
@@ -2939,7 +2958,7 @@
       ]
     },
     "thinkcapital": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2948,10 +2967,37 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official pages read. Bolt instant: $2.5K to $100K from $39, 3% daily loss on equity, 6% trailing equity drawdown that locks at the initial balance, 20% best-day rule. Bolt Flex: $2.5K to $50K from $59, 3% daily, 7% trailing balance drawdown, 25% best-day rule. Both 80% split (90% add-on) and payouts every 14 days (on-demand add-on). Nexus: 7% / 6% / 5% targets, 4% daily, 8% drawdown fixed on the initial balance, 90% split and weekly payouts as add-ons. Dual Step: 9% / 5% targets, 4% daily, 7% (challenge) and 8% (funded) drawdown, type not stated. Maximum fees and platforms are not stated, so programs and the firm-level drawdown type are not recorded yet.",
+          "source": "https://www.thinkcapital.com/instant-funding/",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
+      ],
+      "set": {
+        "profitSplit": 80,
+        "payoutDelay": "every 14 days as standard on Bolt instant accounts; on-demand (Bolt) and weekly (Nexus) payouts are paid add-ons"
+      },
+      "addSources": [
+        {
+          "label": "ThinkCapital instant funding (official)",
+          "url": "https://www.thinkcapital.com/instant-funding/"
+        },
+        {
+          "label": "ThinkCapital Nexus Challenge (official FAQ)",
+          "url": "https://www.thinkcapital.com/tc-faqs/introduction-to-thinkcapital-programs/nexus-challenge/"
+        },
+        {
+          "label": "ThinkCapital Dual Step Challenge (official FAQ)",
+          "url": "https://www.thinkcapital.com/tc-faqs/introduction-to-thinkcapital-programs/dual-step-challenge/"
+        }
       ]
     },
     "tickticktrader": {
@@ -3064,10 +3110,37 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official rules summary and help center read. 1-Step Flash: 10% target, 4% daily loss, 7% trailing drawdown that locks at the starting balance once a payout is requested, 3% daily profit cap when funded, 80% to 90% split, withdrawals every 14 days, no news trading within 5 minutes of high-impact events when funded. 2-Step Plus: 10% then 5% target, 4% daily loss, 8% static drawdown, no consistency rule, 80% split (90% as an add-on), bi-weekly payouts. 2-Step PRO V2 is described as static; AMPED, NOVA and Instant terms are not detailed, so the firm-level drawdown type stays unverified. Sizes and prices are not stated on these pages.",
+          "source": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-29: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/toponetrader.com)."
+      ],
+      "set": {
+        "profitSplit": 80,
+        "payoutDelay": "every 14 days on funded accounts (1-Step Flash and 2-Step Plus); on-demand payouts as a paid add-on on 2-Step Plus"
+      },
+      "addSources": [
+        {
+          "label": "Top One Trader rules summary (official)",
+          "url": "https://checkout.toponetrader.com/rules/"
+        },
+        {
+          "label": "Top One Trader 1-Step Flash rules (official help)",
+          "url": "https://help.toponetrader.com/en/articles/8318230-what-are-the-rules-for-the-1-step-flash-challenge-account"
+        },
+        {
+          "label": "Top One Trader 2-Step Plus overview (official help)",
+          "url": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview"
+        }
       ]
     },
     "topstep": {
@@ -3459,7 +3532,7 @@
       ]
     },
     "ultimate-traders": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3469,13 +3542,40 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official trading rules and FAQ read. Classic (2 phases): 10% then 5% target, 6% daily loss on equity, 12% maximum loss trailing until it reaches the starting balance, then fixed. Speedy (1 phase): 10% target, 4% daily loss, 6% maximum loss with the same trailing-then-fixed rule. At least 3 trading days per phase, stop-loss and no weekend holding unless a 10% premium is paid. Split 80% minimum, rising to 90% after consistent monthly results or with a paid add-on (the 90% previously shown is the maximum). Withdrawal requests once a month; news trading and EAs allowed; MT4. Account sizes and prices are not stated on these pages.",
+          "source": "https://www.ultimatetraders.com/faq/",
+          "fields": [
+            "profitSplit",
+            "drawdownType",
+            "newsTrading",
+            "eaAllowed",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.8,
         "trustpilotReviewCount": 68,
-        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2"
-      }
+        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2",
+        "profitSplit": 80,
+        "drawdownType": "Trailing",
+        "newsTrading": "Allowed",
+        "eaAllowed": "Yes",
+        "payoutDelay": "withdrawal requests once a month through the Client Area; processing time not stated"
+      },
+      "addSources": [
+        {
+          "label": "Ultimate Traders trading rules (official)",
+          "url": "https://www.ultimatetraders.com/trading-rules/"
+        },
+        {
+          "label": "Ultimate Traders FAQ (official)",
+          "url": "https://www.ultimatetraders.com/faq/"
+        }
+      ]
     },
     "uprofit-trader": {
       "reviewedAt": "2026-10-27",
@@ -3555,7 +3655,7 @@
       ]
     },
     "wemastertrade": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-10-29",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3564,10 +3664,27 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official package comparison read: 51010, 510zero, NoPC and Customize packages, all instant first-step evaluations, balance up to $200K ($50K on NoPC, $400K on Customize), targets 10% / none / 6% / custom, daily loss 5% (2% on NoPC), maximum loss 10% (4% on NoPC) described as balance-based without saying static or trailing, up to 90% split, no minimum trading days, profit consistency on all packages except NoPC, cost shown as starting from $35. First reward after 1 day, average payout time 24 hours. The page names WeTrainTrade LLC (Wyoming) and Diretio Holding Ltd (Cyprus, payment agent) but does not say which entity contracts for these packages, so entities and the entry price are unchanged.",
+          "source": "https://wemastertrade.com/us/package-comparison/",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/wemastertrade.com)."
+      ],
+      "set": {
+        "payoutDelay": "first reward request available after 1 day, then no time limit; average processing of 24 hours stated on the package comparison"
+      },
+      "addSources": [
+        {
+          "label": "WeMasterTrade package comparison (official)",
+          "url": "https://wemastertrade.com/us/package-comparison/"
+        }
       ]
     },
     "willis-capital": {
@@ -3792,6 +3909,174 @@
         {
           "label": "FundedBull trading rules (official)",
           "url": "https://fundedbull.com/trading-rules/"
+        }
+      ]
+    },
+    "axi-select": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official program page read: no sign-up, membership or challenge fee; entry to the Seed stage needs at least $500 of the trader's own equity; Axi capital rises from $5,000 (Seed) to $1,000,000 (Pro M). Profit share by stage: Seed 0%, Incubation 40%, Acceleration 50%, Pro 60%, Pro 500 70%, Pro M 80% (recorded as the 80% maximum). Maximum loss -7% (Seed to Pro 500) and -10% (Pro M), static or trailing not stated. Payouts monthly on the 1st. MT4 / MT5. AxiTrader LLC, Saint Vincent and the Grenadines.",
+          "source": "https://www.axi.com/int/funded-trader-program",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 80,
+        "payoutDelay": "monthly, on the 1st of each month"
+      },
+      "addSources": [
+        {
+          "label": "Axi Select program page (official)",
+          "url": "https://www.axi.com/int/funded-trader-program"
+        }
+      ]
+    },
+    "kortanafx": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official homepage re-read: the announcement that operations are paused until further notice after the loss of the MT5 license is still displayed (already recorded on this profile). Program terms shown: $5K to $200K, 8% then 5% target, 5% daily and 10% maximum loss (static or trailing not stated), up to 100% split, EAs allowed, 7-day payouts, DXTrade and cTrader (TradeLocker announced). Only one price ($147) is shown without a size, so programs are not recorded. KortanaFX F.Z.C., Dubai.",
+          "source": "https://kortanafx.com/",
+          "fields": [
+            "eaAllowed",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "eaAllowed": "Yes",
+        "payoutDelay": "7-day payouts stated on the homepage; the same page announces operations are paused until further notice"
+      },
+      "addSources": [
+        {
+          "label": "KortanaFX homepage and pause announcement (official)",
+          "url": "https://kortanafx.com/"
+        }
+      ]
+    },
+    "my-flash-funding": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official homepage re-read: it still states that MyFlashFunding is now owned by Sway Funded (already recorded) and its buy buttons go to my.swayfunded.com. Sizes $1K to $200K; the comparison table only details the $1K account ($15, 15% Phase 1 target, 5% daily and 10% maximum loss, type not stated, 4 minimum days per phase). The split is shown both as up to 90/10 and as up to 80% daily, so the split is left unverified. Daily payouts are advertised without conditions.",
+          "source": "https://www.myflashfunding.com/",
+          "fields": [
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "daily payouts advertised on the homepage; no schedule or conditions stated"
+      },
+      "addSources": [
+        {
+          "label": "MyFlashFunding homepage (official)",
+          "url": "https://www.myflashfunding.com/"
+        }
+      ]
+    },
+    "atmos-funded": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official homepage read: 1-Step Nova (from $5 plus activation fee, 5% target, 8% max loss, type not stated, no consistency rule, on-demand payouts), 2-Step Standard ($63 to $989, 10% / 5%, 5% daily, 10% fixed drawdown, payouts every 14 days) and Instant Funding (3% daily, 5% trailing drawdown that locks on payout, 20% consistency, payouts every 14 days); up to 90% split. A 30% code-based promotion (Oct 29 to Nov 3) is not applied to the prices recorded. Entities unchanged (Atmos Global Ltd, Comoros; AtmosFunded Ltd, Cyprus).",
+          "source": "https://atmosfunded.com/",
+          "fields": [
+            "products",
+            "profitSplit",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 90,
+        "payoutDelay": "on demand on 1-Step Nova; every 14 days on 2-Step and Instant Funding; the page gives processing as both 'within hours' and '2-5 business days' (FAQ)"
+      },
+      "setProducts": [
+        {
+          "id": "atmos-2-step-standard",
+          "name": "2-Step Standard",
+          "type": "Challenge",
+          "description": "Fee $63 (5K) to $989 (200K); $549 for 100K is labelled full price before discounts. No activation fee. 1-Step Nova (from $5 plus an activation fee) and Instant Funding are also sold; their sizes are not stated per program.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 63,
+          "entryFeeMax": 989,
+          "profitTarget": "10% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "10%, fixed",
+          "profitSplit": "up to 90%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated on the homepage for this program (29 Oct 2026); Instant Funding has a 20% consistency rule."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Atmos Funded programs and footer (official)",
+          "url": "https://atmosfunded.com/"
+        }
+      ]
+    },
+    "funder-trading": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official TrueEdge Challenge and how-it-works pages read: US stocks only (NASDAQ / NYSE), profit target $5,000, $500 daily max loss (up to 3 allowed), $3,000 maximum drawdown (type not stated), at least 12 trading days in a 22-day month, 80 round-turn trades minimum, intraday only, 80% payout after funding plus reimbursement of challenge costs. Account sizes, prices and payout timing are not stated.",
+          "source": "https://fundertrading.com/trueedge-challenge/",
+          "fields": [
+            "profitSplit"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 80
+      },
+      "addSources": [
+        {
+          "label": "Funder Trading TrueEdge Challenge (official)",
+          "url": "https://fundertrading.com/trueedge-challenge/"
+        },
+        {
+          "label": "Funder Trading how it works (official)",
+          "url": "https://fundertrading.com/how-it-works/"
+        }
+      ]
+    },
+    "daytraders-com": {
+      "reviewedAt": "2026-10-29",
+      "changelog": [
+        {
+          "date": "2026-10-29",
+          "summary": "Official homepage read: 'Keep 100% of Profits' on sim funded accounts, minimum 2 days to pass the evaluation, flat $5 activation fee, automated payout approval (no timing stated), ArcTrader platform connected to Rithmic with TradingView charts. The pricing table did not render, so sizes, prices and drawdown are not recorded.",
+          "source": "https://daytraders.com/",
+          "fields": [
+            "profitSplit"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 100
+      },
+      "addSources": [
+        {
+          "label": "DayTraders.com homepage (official)",
+          "url": "https://daytraders.com/"
         }
       ]
     }
