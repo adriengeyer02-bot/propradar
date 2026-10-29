@@ -2263,3 +2263,119 @@ a.pr-chip-link:hover, a.pr-chip:hover { text-decoration: underline; }
 .pr-firm-flags { display: inline-flex; align-items: center; gap: 3px; }
 .pr-firm-flags small { color: var(--muted); font-size: 11px; }
 .pr-juris-compare { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 13px; font-weight: 600; }
+
+/* "See all in the comparison table" under capped firm tables */
+.pr-table-more {
+  margin: 14px 0 0;
+  font-weight: 600;
+}
+
+/* Prop firm challenge pillar page */
+.pr-challenge-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  align-self: start;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--pr-radius);
+  background: var(--line);
+}
+.pr-challenge-facts > div { padding: 18px 20px; background: var(--surface); }
+.pr-challenge-facts dt { color: var(--muted); font-size: 13px; }
+.pr-challenge-facts dd {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 30px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.pr-prose { max-width: 760px; margin: 8px 0 0; }
+.pr-prose section { padding: 28px 0 4px; border-top: 1px solid var(--line); }
+.pr-prose section:first-child { border-top: 0; }
+.pr-prose h2 { margin: 0 0 12px; font-size: clamp(22px, 2.6vw, 28px); letter-spacing: -0.01em; }
+.pr-prose h3 { margin: 22px 0 6px; font-size: 17px; }
+.pr-prose p, .pr-prose li { color: var(--soft); font-size: 16px; line-height: 1.65; }
+.pr-prose a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+.pr-rule-list { display: grid; gap: 12px; margin: 0; padding-left: 20px; }
+.pr-rule-list strong { color: var(--text); }
+.pr-challenge-subhead { margin: 30px 0 0; font-size: 18px; }
+.pr-challenge-table { min-width: 860px; font-size: 13px; }
+.pr-challenge-table tbody th { width: 24%; }
+.pr-challenge-firm { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }
+.pr-challenge-firm span { display: grid; min-width: 0; }
+.pr-challenge-firm small { color: var(--muted); font-weight: 500; }
+.pr-challenge-firm:hover strong { color: var(--accent); }
+.pr-challenge-table .pr-num { color: var(--text); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pr-challenge-table time { color: var(--muted); white-space: nowrap; }
+.pr-muted { color: var(--muted); }
+.pr-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pr-related-links a {
+  display: inline-block;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.pr-related-links a:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 760px) {
+  .pr-challenge-facts dd { font-size: 24px; }
+}
+
+/* Home: four tool cards (comparator, challenge guide, deals, guides) and FAQ */
+html body .home-tools-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1100px) { html body .home-tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { html body .home-tools-grid { grid-template-columns: 1fr; } }
+.home-faq h2 + .firm-faq-grid { margin-top: 4px; }
+.home-faq h2 { margin: 0 0 16px; font-size: clamp(22px, 2.6vw, 28px); }
+
+/* Firm page: every unverified item in one place */
+.pr-gaps {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto;
+  gap: 18px 28px;
+  align-items: center;
+  margin: 18px 0 6px;
+  padding: 16px 20px;
+  border: 1px dashed color-mix(in srgb, var(--tone-watch) 55%, var(--line));
+  border-radius: var(--pr-radius);
+  background: color-mix(in srgb, var(--tone-watch) 6%, var(--surface));
+}
+.pr-gaps h2 { margin: 0 0 4px; font-size: 16px; letter-spacing: 0; }
+.pr-gaps p { margin: 0; color: var(--soft); font-size: 14px; line-height: 1.5; }
+.pr-gaps ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.pr-gaps li {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+.pr-gaps .pr-link { white-space: nowrap; font-size: 14px; }
+@media (max-width: 900px) {
+  .pr-gaps { grid-template-columns: 1fr; }
+}
+.pr-nowrap { white-space: nowrap; }
+.pr-challenge-watch {
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--tone-watch-wash, rgba(194, 124, 14, 0.12));
+  color: var(--tone-watch);
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 700;
+}

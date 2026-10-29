@@ -27,13 +27,18 @@ function stepsFor(product: Product): Step[] {
       : { title: 'Skip evaluation', value: 'Direct funded account', note: toEnglishText(product.profitTarget) },
     {
       title: 'Stay within',
-      value: `Max ${toEnglishText(product.maxDrawdown)}`,
-      note: `Daily ${toEnglishText(product.maxDailyLoss)}`,
+      value: /^variable$/i.test(product.maxDrawdown) ? 'Limits vary by plan' : `Max ${toEnglishText(product.maxDrawdown)}`,
+      note: /^variable$/i.test(product.maxDailyLoss) ? undefined : `Daily ${toEnglishText(product.maxDailyLoss)}`,
     },
     {
       title: 'Get paid',
       value: /^to verify/i.test(product.profitSplit) ? 'Split to verify' : `${toEnglishText(product.profitSplit)} split`,
-      note: product.hasConsistencyRule ? 'Consistency rule applies' : undefined,
+      // The default for unaudited programs is "true": only claim a rule when its wording was read.
+      note: product.hasConsistencyRule
+        ? product.consistencyRule && !/not yet audited|to verify|check the official/i.test(product.consistencyRule)
+          ? 'Consistency rule applies'
+          : 'Consistency rule: to verify'
+        : undefined,
     },
   ];
 }

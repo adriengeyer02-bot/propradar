@@ -10,6 +10,7 @@ import ActiveNavLink from './components/ActiveNavLink';
 import RiskEvidenceMenu from './components/RiskEvidenceMenu';
 import SiteSearch from './components/SiteSearch';
 import ThemeToggle from './components/ThemeToggle';
+import { propFirms } from './lib/propFirms';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from './lib/site';
 
 const themeInitScript = `
@@ -60,11 +61,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   title: {
-    default: 'PropRadar - Independent prop firm comparator',
+    default: 'PropRadar: Independent Prop Firm Reviews & Comparison 2026',
     template: '%s | PropRadar',
   },
   description:
-    'Compare prop firms with independent scoring: products, drawdown rules, payouts, Reddit, X/Twitter, Trustpilot reliability and visible conflicts of interest.',
+    `Independent prop firm reviews: compare challenge prices, rules, payout evidence, Trustpilot status and legal entities for ${Math.floor(propFirms.length / 10) * 10}+ firms. Every fact sourced.`,
   keywords: [
     'prop firm',
     'prop firm comparator',
@@ -73,9 +74,9 @@ export const metadata: Metadata = {
     'payout prop firm',
     'challenge trading',
     'Trustpilot prop firm',
-    'Reddit prop firm',
-    'Twitter prop firm',
-    'X prop firm',
+    'prop firm reviews',
+    'prop firm challenge',
+    'best prop firms',
   ],
   alternates: {
     canonical: '/',
@@ -89,7 +90,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.webmanifest',
   openGraph: {
-    title: 'PropRadar - Independent prop firm comparator',
+    title: 'PropRadar: Independent Prop Firm Reviews & Comparison 2026',
     description:
       'A clear radar to compare prop firms, filter marketing-heavy reviews and spot payout risks.',
     url: SITE_URL,
@@ -99,9 +100,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PropRadar - Independent prop firm comparator',
+    title: 'PropRadar: Independent Prop Firm Reviews & Comparison 2026',
     description:
-      'Compare prop firms with independent scoring, Reddit signals, Trustpilot reliability and payout risk.',
+      'Compare prop firms on sourced facts: challenge rules, prices, payout evidence, Trustpilot status and legal entities.',
   },
   robots: {
     index: true,
@@ -162,8 +163,8 @@ export default function RootLayout({
                 <span>PropRadar</span>
               </Link>
               <nav className="nav nav-primary" aria-label="Main navigation">
-                <ActiveNavLink href="/comparateur" activePrefixes={['/compare', '/outils', '/firm']}>Comparator</ActiveNavLink>
-                <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms', '/fr']}>Guides</ActiveNavLink>
+                <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>Comparator</ActiveNavLink>
+                <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/fr']}>Guides</ActiveNavLink>
                 <RiskEvidenceMenu />
                 <ActiveNavLink href="/promos">Deals</ActiveNavLink>
               </nav>
@@ -175,9 +176,9 @@ export default function RootLayout({
           </header>
           <nav className="mobile-tabbar" aria-label="Mobile navigation">
             <ActiveNavLink href="/">Home</ActiveNavLink>
-            <ActiveNavLink href="/comparateur" activePrefixes={['/compare', '/outils', '/firm']}>Compare</ActiveNavLink>
-            <ActiveNavLink href="/guides" activePrefixes={['/meilleures-prop-firms', '/fr']}>Guides</ActiveNavLink>
-            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/risques-payout', '/regles', '/trustpilot-prop-firms']}>Risks</ActiveNavLink>
+            <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>Compare</ActiveNavLink>
+            <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/prop-firm-challenge', '/fr']}>Guides</ActiveNavLink>
+            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/prop-firm-payout-risk', '/prop-firm-rules', '/trustpilot-prop-firms']}>Risks</ActiveNavLink>
             <ActiveNavLink href="/promos">Deals</ActiveNavLink>
           </nav>
           <div id="main-content" tabIndex={-1}>{children}</div>
@@ -189,17 +190,18 @@ export default function RootLayout({
               </div>
               <nav className="footer-nav" aria-label="Research links">
                 <strong>Research</strong>
-                <Link href="/comparateur">Comparator</Link>
+                <Link href="/prop-firm-comparison">Comparator</Link>
                 <Link href="/guides">Guides</Link>
-                <Link href="/meilleures-prop-firms">Best prop firms</Link>
-                <Link href="/outils">Decision tools</Link>
+                <Link href="/best-prop-firms">Best prop firms</Link>
+                <Link href="/prop-firm-challenge">Prop firm challenge guide</Link>
+                <Link href="/tools">Decision tools</Link>
               </nav>
               <nav className="footer-nav" aria-label="Risk and evidence links">
                 <strong>Risk watch</strong>
                 <Link href="/radar-brief">Weekly risk brief</Link>
                 <Link href="/audit">Source audit</Link>
-                <Link href="/risques-payout">Payout watch</Link>
-                <Link href="/regles">Rule audits</Link>
+                <Link href="/prop-firm-payout-risk">Payout watch</Link>
+                <Link href="/prop-firm-rules">Rule audits</Link>
               </nav>
               <nav className="footer-nav" aria-label="Offers and review links">
                 <strong>More</strong>

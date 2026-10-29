@@ -234,8 +234,8 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Full comparator', href: '/comparateur' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Full comparator', href: '/prop-firm-comparison' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
       { label: 'Current deals', href: '/promos' },
     ],
     focusFirmSlugs: [
@@ -286,9 +286,9 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'Futures deals', href: '/promos' },
-      { label: 'Rules to verify', href: '/regles' },
+      { label: 'Rules to verify', href: '/prop-firm-rules' },
     ],
     focusFirmSlugs: [
       'topstep',
@@ -340,9 +340,9 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Rules page', href: '/regles' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Rules page', href: '/prop-firm-rules' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
     ],
     focusFirmSlugs: ['brightfunded', 'maven-trading', 'city-traders-imperium'],
   },
@@ -378,8 +378,8 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
-      { label: 'Official rules', href: '/regles' },
+      { label: 'Trading style tool', href: '/tools' },
+      { label: 'Official rules', href: '/prop-firm-rules' },
       { label: 'FunderPro', href: '/firm/funderpro' },
     ],
     focusFirmSlugs: ['ftmo', 'brightfunded', 'the5ers'],
@@ -416,7 +416,7 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
       { label: 'Source audit', href: '/audit' },
       { label: 'Filtered Trustpilot', href: '/trustpilot-prop-firms' },
     ],
@@ -454,8 +454,8 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Current deals', href: '/promos' },
-      { label: 'Price comparator', href: '/comparateur' },
-      { label: 'Reliable top firms', href: '/meilleures-prop-firms' },
+      { label: 'Price comparator', href: '/prop-firm-comparison' },
+      { label: 'Reliable top firms', href: '/best-prop-firms' },
     ],
   },
   {
@@ -490,9 +490,9 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'News trading', href: '/guides/prop-firm-news-trading' },
-      { label: 'Rules', href: '/regles' },
+      { label: 'Rules', href: '/prop-firm-rules' },
     ],
     focusFirmSlugs: ['alpha-futures', 'lucid-trading', 'tradeify', 'ftmo', 'the5ers', 'funding-pips', 'fundednext'],
   },
@@ -528,7 +528,7 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'FunderPro', href: '/firm/funderpro' },
       { label: 'The5ers', href: '/firm/the5ers' },
     ],
@@ -565,8 +565,8 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Rules', href: '/regles' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Rules', href: '/prop-firm-rules' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'FunderPro', href: '/firm/funderpro' },
     ],
   },
@@ -604,7 +604,7 @@ export const seoGuides: SeoGuide[] = [
     internalLinks: [
       { label: 'Trustpilot prop firms', href: '/trustpilot-prop-firms' },
       { label: 'Audit', href: '/audit' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
     ],
   },
   {
@@ -641,7 +641,7 @@ export const seoGuides: SeoGuide[] = [
     internalLinks: [
       { label: 'FTMO', href: '/firm/ftmo' },
       { label: 'The5ers', href: '/firm/the5ers' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
     ],
     focusFirmSlugs: ['ftmo', 'the5ers'],
   },
@@ -727,7 +727,7 @@ export const seoGuides: SeoGuide[] = [
       { label: 'Topstep profile and score', href: '/firm/topstep' },
       { label: 'Topstep vs Apex', href: '/guides/topstep-vs-apex' },
       { label: 'Prop firm drawdown explained', href: '/guides/prop-firm-drawdown' },
-      { label: 'Best futures prop firms', href: '/guides/meilleure-prop-firm-futures' },
+      { label: 'Best futures prop firms', href: '/guides/best-futures-prop-firms' },
     ],
     focusFirmSlugs: ['topstep', 'apex-trader-funding', 'alpha-futures'],
   },
@@ -768,10 +768,10 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Consistency rule explained', href: '/guides/prop-firm-sans-consistency-rule' },
+      { label: 'Consistency rule explained', href: '/guides/prop-firm-no-consistency-rule' },
       { label: 'Topstep review', href: '/guides/topstep-review' },
-      { label: 'Rules audit', href: '/regles' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Rules audit', href: '/prop-firm-rules' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
     ],
     focusFirmSlugs: ['the5ers', 'ftmo', 'topstep', 'apex-trader-funding'],
   },
@@ -847,8 +847,8 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Leveraged profile', href: '/firm/get-leveraged' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
     ],
     focusFirmSlugs: ['get-leveraged'],
   },
@@ -925,7 +925,7 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'Goat Funded Trader', href: '/firm/goat-funded-trader' },
       { label: 'FunderPro', href: '/firm/funderpro' },
     ],
@@ -966,7 +966,7 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Instant funding', href: '/guides/prop-firm-instant-funding' },
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'Deals', href: '/promos' },
     ],
     focusFirmSlugs: ['instant-funding', 'city-traders-imperium', 'maven-trading', 'lucid-trading'],
@@ -1006,8 +1006,8 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Cheap prop firm', href: '/guides/prop-firm-pas-cher' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Cheap prop firm', href: '/guides/cheapest-prop-firms' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'Methodology', href: '/#methodologie' },
     ],
     focusFirmSlugs: ['ftmo', 'the5ers', 'topstep', 'fundednext', 'audacity-capital', 'fintokei', 'brightfunded', 'funded-trading-plus', 'alpha-capital-group'],
@@ -1099,8 +1099,8 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'FTMO vs The5ers', href: '/guides/ftmo-vs-the5ers' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Reliable top firms', href: '/meilleures-prop-firms' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Reliable top firms', href: '/best-prop-firms' },
     ],
     focusFirmSlugs: ['the5ers', 'funding-pips', 'funderpro', 'e8-markets', 'ftmo'],
   },
@@ -1144,7 +1144,7 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Trustpilot prop firms', href: '/trustpilot-prop-firms' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
       { label: 'Audit', href: '/audit' },
     ],
   },
@@ -1181,9 +1181,9 @@ export const seoGuides: SeoGuide[] = [
       },
     ],
     internalLinks: [
-      { label: 'Payout risks', href: '/risques-payout' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Fast payout prop firm', href: '/guides/prop-firm-payout-rapide' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Fast payout prop firm', href: '/guides/fast-payout-prop-firms' },
     ],
   },
   {
@@ -1227,8 +1227,8 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Audit source levels', href: '/audit' },
-      { label: 'Full comparator', href: '/comparateur' },
-      { label: 'Payout risk guide', href: '/risques-payout' },
+      { label: 'Full comparator', href: '/prop-firm-comparison' },
+      { label: 'Payout risk guide', href: '/prop-firm-payout-risk' },
       { label: 'Trustpilot context', href: '/trustpilot-prop-firms' },
     ],
     focusFirmSlugs: [
@@ -1462,7 +1462,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       },
     ],
     internalLinks: [
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'Current deals', href: '/promos' },
       { label: 'Methodology', href: '/#methodologie' },
     ],
@@ -1484,7 +1484,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     internalLinks: [
       { label: 'Topstep vs Apex', href: '/guides/topstep-vs-apex' },
       { label: 'Current futures deals', href: '/promos' },
-      { label: 'Rules', href: '/regles' },
+      { label: 'Rules', href: '/prop-firm-rules' },
     ],
   },
   'prop-firm-sans-consistency-rule': {
@@ -1519,9 +1519,9 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       },
     ],
     internalLinks: [
-      { label: 'Rules', href: '/regles' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Payout risk', href: '/risques-payout' },
+      { label: 'Rules', href: '/prop-firm-rules' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Payout risk', href: '/prop-firm-payout-risk' },
     ],
   },
   'prop-firm-news-trading': {
@@ -1551,8 +1551,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       },
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
-      { label: 'Official rules', href: '/regles' },
+      { label: 'Trading style tool', href: '/tools' },
+      { label: 'Official rules', href: '/prop-firm-rules' },
       { label: 'FunderPro', href: '/firm/funderpro' },
     ],
   },
@@ -1571,7 +1571,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Do not confuse a marketing certificate with independent proof.',
     ],
     internalLinks: [
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
       { label: 'Source audit', href: '/audit' },
       { label: 'Filtered Trustpilot', href: '/trustpilot-prop-firms' },
     ],
@@ -1592,8 +1592,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
     internalLinks: [
       { label: 'Current deals', href: '/promos' },
-      { label: 'Price comparator', href: '/comparateur' },
-      { label: 'Reliable top firms', href: '/meilleures-prop-firms' },
+      { label: 'Price comparator', href: '/prop-firm-comparison' },
+      { label: 'Reliable top firms', href: '/best-prop-firms' },
     ],
   },
   'prop-firm-smc-ict': {
@@ -1625,9 +1625,9 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       },
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'News trading', href: '/guides/prop-firm-news-trading' },
-      { label: 'Rules', href: '/regles' },
+      { label: 'Rules', href: '/prop-firm-rules' },
       { label: 'Alpha Futures', href: '/firm/alpha-futures' },
       { label: 'Lucid Trading', href: '/firm/lucid-trading' },
       { label: 'Tradeify', href: '/firm/tradeify' },
@@ -1648,7 +1648,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Compare payout delay with your average trade duration.',
     ],
     internalLinks: [
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'FunderPro', href: '/firm/funderpro' },
       { label: 'The5ers', href: '/firm/the5ers' },
     ],
@@ -1668,8 +1668,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Watch payout clauses linked to strategy behavior.',
     ],
     internalLinks: [
-      { label: 'Rules', href: '/regles' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Rules', href: '/prop-firm-rules' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'FunderPro', href: '/firm/funderpro' },
     ],
   },
@@ -1692,7 +1692,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     internalLinks: [
       { label: 'Trustpilot prop firms', href: '/trustpilot-prop-firms' },
       { label: 'Audit', href: '/audit' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
     ],
   },
   'ftmo-vs-the5ers': {
@@ -1712,7 +1712,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     internalLinks: [
       { label: 'FTMO', href: '/firm/ftmo' },
       { label: 'The5ers', href: '/firm/the5ers' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
     ],
   },
   'topstep-vs-apex': {
@@ -1806,8 +1806,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
     internalLinks: [
       { label: 'Leveraged profile', href: '/firm/get-leveraged' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Payout risks', href: '/risques-payout' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
     ],
   },
   'goat-funded-trader-avis': {
@@ -1850,8 +1850,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     internalLinks: [
       { label: 'GOAT Funded Trader profile and score', href: '/firm/goat-funded-trader' },
       { label: 'Instant funding explained', href: '/guides/prop-firm-instant-funding' },
-      { label: 'Prop firm reviews: Reddit vs Trustpilot', href: '/guides/prop-firm-avis-reddit-trustpilot' },
-      { label: 'Best prop firms 2026', href: '/meilleures-prop-firms' },
+      { label: 'Prop firm reviews: Reddit vs Trustpilot', href: '/guides/prop-firm-reviews-reddit-trustpilot' },
+      { label: 'Best prop firms 2026', href: '/best-prop-firms' },
     ],
   },
   'prop-firm-instant-funding': {
@@ -1869,8 +1869,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Avoid paying more just to skip a step if your system can handle a normal challenge.',
     ],
     internalLinks: [
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'No-challenge comparison', href: '/guides/prop-firm-sans-challenge' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'No-challenge comparison', href: '/guides/prop-firm-no-challenge' },
       { label: 'Goat Funded Trader', href: '/firm/goat-funded-trader' },
       { label: 'FunderPro', href: '/firm/funderpro' },
     ],
@@ -1915,7 +1915,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
     internalLinks: [
       { label: 'Instant funding', href: '/guides/prop-firm-instant-funding' },
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Trading style tool', href: '/tools' },
       { label: 'Deals', href: '/promos' },
     ],
   },
@@ -1953,9 +1953,9 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       },
     ],
     internalLinks: [
-      { label: 'Cheap prop firm', href: '/guides/prop-firm-pas-cher' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Trading style tool', href: '/outils' },
+      { label: 'Cheap prop firm', href: '/guides/cheapest-prop-firms' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Trading style tool', href: '/tools' },
     ],
   },
   'meilleure-prop-firm-forex': {
@@ -1973,7 +1973,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Check payout risk and proof level.',
     ],
     internalLinks: [
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'FunderPro', href: '/firm/funderpro' },
       { label: 'The5ers', href: '/firm/the5ers' },
     ],
@@ -2012,7 +2012,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
     internalLinks: [
       { label: 'FTMO', href: '/firm/ftmo' },
-      { label: 'Comparator', href: '/comparateur' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
       { label: 'FTMO vs The5ers', href: '/guides/ftmo-vs-the5ers' },
     ],
   },
@@ -2069,9 +2069,9 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Look for repeated denials or delayed withdrawals.',
     ],
     internalLinks: [
-      { label: 'Payout risks', href: '/risques-payout' },
-      { label: 'Comparator', href: '/comparateur' },
-      { label: 'Fast payout guide', href: '/guides/prop-firm-payout-rapide' },
+      { label: 'Payout risks', href: '/prop-firm-payout-risk' },
+      { label: 'Comparator', href: '/prop-firm-comparison' },
+      { label: 'Fast payout guide', href: '/guides/fast-payout-prop-firms' },
     ],
   },
   'prop-firm-legal-check': {
@@ -2172,11 +2172,40 @@ export function getSeoGuideBySlug(slug: string) {
   return seoGuides.find((guide) => guide.slug === slug);
 }
 
+/**
+ * Public English URL slug for each guide. Internal ids (guide.slug) stay as
+ * they were so the editorial maps keyed by them keep working; the old French
+ * URLs 301 to these (see next.config.ts).
+ */
+export const GUIDE_URL_SLUGS: Record<string, string> = {
+  'meilleure-prop-firm-futures': 'best-futures-prop-firms',
+  'prop-firm-sans-consistency-rule': 'prop-firm-no-consistency-rule',
+  'prop-firm-payout-rapide': 'fast-payout-prop-firms',
+  'prop-firm-pas-cher': 'cheapest-prop-firms',
+  'prop-firm-fiable-trustpilot': 'prop-firm-trustpilot-ratings',
+  'leveraged-prop-firm-avis': 'get-leveraged-review',
+  'goat-funded-trader-avis': 'goat-funded-trader-review',
+  'prop-firm-sans-challenge': 'prop-firm-no-challenge',
+  'prop-firm-pour-debutant': 'prop-firm-for-beginners',
+  'meilleure-prop-firm-forex': 'best-forex-prop-firms',
+  'alternatives-ftmo': 'ftmo-alternatives',
+  'prop-firm-avis-reddit-trustpilot': 'prop-firm-reviews-reddit-trustpilot',
+};
+
+export function guideUrlSlug(guideOrSlug: SeoGuide | string) {
+  const slug = typeof guideOrSlug === 'string' ? guideOrSlug : guideOrSlug.slug;
+  return GUIDE_URL_SLUGS[slug] ?? slug;
+}
+
+export function getSeoGuideByUrlSlug(urlSlug: string) {
+  return seoGuides.find((guide) => guideUrlSlug(guide) === urlSlug);
+}
+
 export function getSeoGuidePath(guideOrSlug: SeoGuide | string) {
   const slug = typeof guideOrSlug === 'string' ? guideOrSlug : guideOrSlug.slug;
   return slug === 'meilleure-prop-firm-2026'
-    ? '/meilleures-prop-firms'
-    : `/guides/${slug}`;
+    ? '/best-prop-firms'
+    : `/guides/${guideUrlSlug(slug)}`;
 }
 
 export function selectGuideFirms(guideOrSlug: SeoGuide | string, limit = 10) {

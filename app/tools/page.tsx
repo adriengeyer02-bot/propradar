@@ -8,7 +8,7 @@ const TOOLS_DESCRIPTION =
 export const metadata = createPageMetadata({
   title: 'Prop Firm Comparison Tools and Style Finder',
   description: TOOLS_DESCRIPTION,
-  path: '/outils',
+  path: '/tools',
   keywords: ['prop firm comparison tool', 'prop firm for SMC', 'prop firm style finder', 'compare prop firms'],
   category: 'Prop firm tools',
 });
@@ -20,13 +20,13 @@ export default function OutilsPage() {
         type="WebPage"
         name="Prop firm comparison tools"
         description={TOOLS_DESCRIPTION}
-        path="/outils"
+        path="/tools"
         breadcrumbLabel="Tools"
         dateModified="2026-07-13"
         items={[
           {
             name: 'Prop Firm Comparator',
-            path: '/comparateur',
+            path: '/prop-firm-comparison',
             description: 'Filter and compare scores, rules, payout risk, legal evidence and community signals.',
           },
           {

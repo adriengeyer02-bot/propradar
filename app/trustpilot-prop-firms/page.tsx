@@ -5,6 +5,7 @@ import { createPageMetadata } from '../lib/pageMetadata';
 import type { PropFirm } from '../lib/propFirms';
 import {
   auditStatusClass,
+  hasReviewEvidence,
   payoutRiskClass,
   propFirms,
   regulatoryRiskClass,
@@ -51,11 +52,12 @@ function isLegalWatchFirm(firm: PropFirm) {
 
 export default function TrustpilotGuidePage() {
   const watchList = [...propFirms]
-    .filter((firm) => (firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0) > 0 || firm.reviewSignals.trustpilotReliability !== 'Forte')
-    .sort((a, b) => (b.reviewSignals.trustpilotFlaggedReviewCount ?? 0) - (a.reviewSignals.trustpilotFlaggedReviewCount ?? 0))
+    // Only firms with a review alert on file or a public rating below 4.0.
+    .filter((firm) => firm.status !== 'Fermée' && (hasReviewEvidence(firm) || firm.reviewSignals.trustpilotReliability === 'Faible'))
+    .sort((a, b) => Number(hasReviewEvidence(b)) - Number(hasReviewEvidence(a)) || (a.trustpilotRating ?? 0) - (b.trustpilotRating ?? 0))
     .slice(0, 24);
   const strongReliabilityCount = propFirms.filter((firm) => firm.reviewSignals.trustpilotReliability === 'Forte').length;
-  const reviewAlertCount = propFirms.filter((firm) => (firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0) > 0).length;
+  const reviewAlertCount = propFirms.filter((firm) => hasReviewEvidence(firm)).length;
   const deepSourceCount = propFirms.filter((firm) => legalSourceCount(firm) >= 5).length;
   const legalWatchReviewCount = watchList.filter(isLegalWatchFirm).length;
   const payoutWatchReviewCount = watchList.filter((firm) => hasPayoutRiskSignal(firm)).length;
@@ -87,9 +89,9 @@ export default function TrustpilotGuidePage() {
             short history, payout complaints, legal opacity, rule changes or inconsistency with trader feedback.
           </p>
           <div className="actions">
-            <Link href="/comparateur" className="btn btn-primary">View Trustpilot in the comparator</Link>
+            <Link href="/prop-firm-comparison" className="btn btn-primary">View Trustpilot in the comparator</Link>
             <Link href="/audit" className="btn">View proof level</Link>
-            <Link href="/risques-payout" className="btn">Check payout risk</Link>
+            <Link href="/prop-firm-payout-risk" className="btn">Check payout risk</Link>
           </div>
         </div>
         <dl className="pr-hero-stats">

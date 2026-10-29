@@ -37,6 +37,8 @@ import {
   getSeoGuidePath,
   getRelatedGuides,
   getSeoGuideBySlug,
+  getSeoGuideByUrlSlug,
+  guideUrlSlug,
   seoGuides,
   selectGuideFirms,
 } from '../../lib/seoGuides';
@@ -56,14 +58,16 @@ const HEAD_TO_HEAD: Record<string, string[]> = {
   'funderpro-vs-the5ers': ['funderpro', 'the5ers'],
 };
 
+/** Rows rendered in a guide table; the full list lives in the comparator (keeps pages light). */
+const GUIDE_TABLE_ROWS = 25;
+
 export function generateStaticParams() {
-  return [...new Set([...seoGuides.map((guide) => guide.slug), 'meilleure-prop-firm-2026'])]
-    .map((slug) => ({ slug }));
+  return seoGuides.filter((guide) => guide.slug !== 'meilleure-prop-firm-2026').map((guide) => ({ slug: guideUrlSlug(guide) }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const guide = getSeoGuideBySlug(slug);
+  const guide = getSeoGuideByUrlSlug(slug);
 
   if (!guide) {
     return {
@@ -1215,11 +1219,7 @@ function expandedFaqAnswer(answer: string, _guide: NonNullable<ReturnType<typeof
 export default async function SeoGuidePage({ params }: Props) {
   const { slug } = await params;
 
-  if (slug === 'meilleure-prop-firm-2026') {
-    permanentRedirect('/meilleures-prop-firms');
-  }
-
-  const guide = getSeoGuideBySlug(slug);
+  const guide = getSeoGuideByUrlSlug(slug);
 
   if (!guide) {
     notFound();
@@ -1329,14 +1329,14 @@ export default async function SeoGuidePage({ params }: Props) {
     image: [
       {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/guides/${guide.slug}/opengraph-image`,
+        url: `${SITE_URL}/guides/${guideUrlSlug(guide)}/opengraph-image`,
         width: 1200,
         height: 630,
         caption: `${displayGuide.h1}: firms compared by PropRadar score`,
         creditText: 'PropRadar Research',
       },
     ],
-    thumbnailUrl: `${SITE_URL}/guides/${guide.slug}/opengraph-image`,
+    thumbnailUrl: `${SITE_URL}/guides/${guideUrlSlug(guide)}/opengraph-image`,
     citation: guideCitations,
     author: {
       '@type': 'Organization',
@@ -1447,8 +1447,8 @@ export default async function SeoGuidePage({ params }: Props) {
             <time dateTime={modifiedDate.toISOString()}>Updated {modifiedDateLabel}</time>
           </div>
           <div className="actions">
-            <Link href="/comparateur" className="btn btn-primary">Compare firms</Link>
-            <Link href="/outils" className="btn">Choose by style</Link>
+            <Link href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
+            <Link href="/tools" className="btn">Choose by style</Link>
           </div>
         </div>
         <GuideHeroFirms
@@ -2354,7 +2354,7 @@ export default async function SeoGuidePage({ params }: Props) {
         </ul>
         <div className="pr-firm-table" role="table" aria-label={editorial.selectionHeading}>
           <FirmTableHead />
-          {firms.map((firm, index) => (
+          {firms.slice(0, GUIDE_TABLE_ROWS).map((firm, index) => (
             <FirmRow
               key={firm.slug}
               firm={firm}
@@ -2363,6 +2363,13 @@ export default async function SeoGuidePage({ params }: Props) {
             />
           ))}
         </div>
+        {firms.length > GUIDE_TABLE_ROWS ? (
+          <p className="pr-table-more">
+            <Link className="pr-link" href="/prop-firm-comparison">
+              See all {firms.length} firms in the comparison table <span aria-hidden="true">→</span>
+            </Link>
+          </p>
+        ) : null}
       </section>
 
       <section className="section pr-guide-end" id="faq">
@@ -2400,8 +2407,8 @@ export default async function SeoGuidePage({ params }: Props) {
           <p>Rules can differ inside the same firm. Use the comparator for the shortlist and the style tool for your trading constraints.</p>
         </div>
         <div className="guide-inline-cta-actions">
-          <Link href="/comparateur" className="btn btn-primary">Compare firms</Link>
-          <Link href="/outils" className="btn">Choose by trading style</Link>
+          <Link href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
+          <Link href="/tools" className="btn">Choose by trading style</Link>
         </div>
       </aside>
 

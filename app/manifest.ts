@@ -20,7 +20,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: 'Prop firm comparator',
         short_name: 'Comparator',
         description: 'Compare prop firms by rules, evidence and risk.',
-        url: '/comparateur',
+        url: '/prop-firm-comparison',
       },
       {
         name: 'Prop firm guides',

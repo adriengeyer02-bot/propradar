@@ -15,6 +15,7 @@ import {
   seoGuides,
   selectGuideFirms,
   type SeoGuide,
+  guideUrlSlug,
 } from '../lib/seoGuides';
 import { SITE_NAME, SITE_URL } from '../lib/site';
 import { toEnglishText } from '../lib/i18n';
@@ -104,7 +105,7 @@ const decisionPaths = [
     label: 'Choose',
     title: 'Build a reliable shortlist',
     text: 'Start with payout risk, rule clarity and source depth before comparing price.',
-    href: '/meilleures-prop-firms',
+    href: '/best-prop-firms',
     tone: 'blue',
   },
   {
@@ -120,7 +121,7 @@ const decisionPaths = [
     label: 'Understand',
     title: 'Read the rule before checkout',
     text: 'Decode consistency, news windows and funded-stage restrictions.',
-    href: '/guides/prop-firm-sans-consistency-rule',
+    href: '/guides/prop-firm-no-consistency-rule',
     tone: 'amber',
   },
   {
@@ -297,7 +298,7 @@ export default function GuidesHubPage() {
       url: `${SITE_URL}${getSeoGuidePath(guide)}`,
       description: getSeoGuideDisplay(guide).metaDescription,
       dateModified: getGuideLastModified(guide).toISOString(),
-      image: `${SITE_URL}/guides/${guide.slug}/opengraph-image`,
+      image: `${SITE_URL}/guides/${guideUrlSlug(guide)}/opengraph-image`,
       author: {
         '@type': 'Organization',
         name: 'PropRadar Research',
@@ -319,7 +320,7 @@ export default function GuidesHubPage() {
           </p>
           <div className="actions">
             <a href="#all-guides" className="btn btn-primary">Find a guide</a>
-            <Link href="/meilleures-prop-firms" className="btn">View the current ranking</Link>
+            <Link href="/best-prop-firms" className="btn">View the current ranking</Link>
           </div>
         </div>
         <dl className="pr-hero-stats">

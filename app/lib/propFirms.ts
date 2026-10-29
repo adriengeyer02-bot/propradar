@@ -70,7 +70,7 @@ export type ReviewSignals = {
   xSource?: 'Revue manuelle' | 'Estimation PropRadar' | 'Score brut manuel';
   xFlags?: string[];
   trustpilotReliabilityScore: number;
-  trustpilotReliability: 'Forte' | 'Moyenne' | 'Faible';
+  trustpilotReliability: 'Forte' | 'Moyenne' | 'Faible' | 'Non évalué';
   trustpilotNote: string;
   trustpilotFlags?: string[];
   trustpilotFlaggedReviewCount?: number;
@@ -80,7 +80,7 @@ export type ReviewSignals = {
   trustpilotReviewCount?: number;
   trustpilotSourceUrl?: string;
   manipulationRiskScore?: number;
-  manipulationRisk?: 'Faible' | 'Moyen' | 'Élevé';
+  manipulationRisk?: 'Faible' | 'Moyen' | 'Élevé' | 'Non évalué';
   payoutRiskScore: number;
   /** 'Non évalué' = no written payout evidence on file: PropRadar makes no payout-risk claim. */
   payoutRisk: 'Faible' | 'Moyen' | 'Élevé' | 'Critique' | 'Non évalué';
@@ -12856,9 +12856,77 @@ function applyPayoutEvidenceRule(firm: PropFirm): PropFirm {
   };
 }
 
+/**
+ * Review evidence on file: Trustpilot withholding the rating after a guideline
+ * breach, or fake-review alerts counted by hand. Nothing else counts.
+ */
+export function hasReviewEvidence(firm: Pick<PropFirm, 'reviewSignals'>) {
+  return Boolean(firm.reviewSignals.trustpilotRatingWithheld) || (firm.reviewSignals.trustpilotFlaggedReviewCount ?? 0) > 0;
+}
+
+/**
+ * Review labels follow the same rule as payout risk (Geyer, 29 Oct 2026):
+ * - a review-manipulation level is shown only with review evidence on file;
+ * - the Trustpilot label is read from the public rating itself (4.5+ strong,
+ *   4.0+ medium, below 4.0 low), "low" when Trustpilot withheld the rating,
+ *   and "not assessed" when PropRadar has no rating.
+ * The old formula mixed defaults (transparency, incidents) and labelled
+ * firms with no evidence as high manipulation risk.
+ */
+function applyReviewEvidenceRule(firm: PropFirm): PropFirm {
+  const signals = firm.reviewSignals;
+  const evidence = hasReviewEvidence(firm);
+  const rating = firm.trustpilotRating;
+  const trustpilotReliability: ReviewSignals['trustpilotReliability'] = evidence
+    ? 'Faible'
+    : !rating
+      ? 'Non évalué'
+      : rating >= 4.5
+        ? 'Forte'
+        : rating >= 4
+          ? 'Moyenne'
+          : 'Faible';
+  return {
+    ...firm,
+    reviewSignals: {
+      ...signals,
+      trustpilotReliability,
+      trustpilotReliabilityScore: evidence ? Math.min(signals.trustpilotReliabilityScore, 25) : rating ? Math.round(rating * 20) : 50,
+      manipulationRisk: evidence ? 'Élevé' : 'Non évalué',
+      manipulationRiskScore: evidence ? Math.max(signals.manipulationRiskScore ?? 0, 75) : undefined,
+    },
+  };
+}
+
+/** True when the payout timing was never read on a source. */
+export function isPayoutDelayUnknown(firm: Pick<PropFirm, 'payoutDelay'>) {
+  return /^(to verify|à vérifier|variable|unknown)$/i.test(firm.payoutDelay.trim());
+}
+
+/**
+ * Everything PropRadar has not verified yet on a firm file, in one list, so
+ * pages can show the gaps together instead of scattering "To verify" labels.
+ */
+export function firmGaps(firm: PropFirm): string[] {
+  if (firm.status === 'Fermée') return [];
+  const gaps: string[] = [];
+  if (isProvisional(firm, 'profitSplit')) gaps.push('Profit split');
+  if (isProvisional(firm, 'drawdownType')) gaps.push('Drawdown type');
+  if (isProvisional(firm, 'accountSize')) gaps.push('Account sizes');
+  if (isPayoutDelayUnknown(firm)) gaps.push('Payout timing');
+  if (firm.reviewSignals.payoutRisk === 'Non évalué') gaps.push('Payout evidence');
+  if (!firm.trustpilotRating && !firm.reviewSignals.trustpilotRatingWithheld) gaps.push('Trustpilot rating');
+  if (!firm.regulatoryAudit.entities.length) gaps.push('Legal entity');
+  return gaps;
+}
+
+export function isReviewRiskAssessed(firm: Pick<PropFirm, 'reviewSignals'>) {
+  return firm.reviewSignals.manipulationRisk !== undefined && firm.reviewSignals.manipulationRisk !== 'Non évalué';
+}
+
 // Dated, sourced updates from app/data/firm-updates.json are applied, then the
-// payout-evidence rule, so a level is never shown without written support.
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule);
+// payout- and review-evidence rules, so a level is never shown without written support.
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule);
 
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');
@@ -12910,12 +12978,14 @@ export function payoutRiskClass(risk: ReviewSignals['payoutRisk']) {
 }
 
 export function reviewReliabilityClass(reliability: ReviewSignals['trustpilotReliability']) {
+  if (reliability === 'Non évalué') return 'badge-neutral';
   if (reliability === 'Forte') return 'badge-green';
   if (reliability === 'Moyenne') return 'badge-amber';
   return 'badge-red';
 }
 
 export function manipulationRiskClass(risk: NonNullable<ReviewSignals['manipulationRisk']>) {
+  if (risk === 'Non évalué') return 'badge-neutral';
   if (risk === 'Faible') return 'badge-green';
   if (risk === 'Moyen') return 'badge-amber';
   return 'badge-red';

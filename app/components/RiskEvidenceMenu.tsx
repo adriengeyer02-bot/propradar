@@ -73,8 +73,8 @@ export default function RiskEvidenceMenu() {
       <div className="nav-menu-panel" id={menuId} aria-labelledby={buttonId}>
         <ActiveNavLink href="/radar-brief" activePrefixes={['/radar-brief/']}>Risk Brief</ActiveNavLink>
         <ActiveNavLink href="/audit">Audit center</ActiveNavLink>
-        <ActiveNavLink href="/risques-payout">Payout risks</ActiveNavLink>
-        <ActiveNavLink href="/regles">Trading rules</ActiveNavLink>
+        <ActiveNavLink href="/prop-firm-payout-risk">Payout risks</ActiveNavLink>
+        <ActiveNavLink href="/prop-firm-rules">Trading rules</ActiveNavLink>
         <ActiveNavLink href="/trustpilot-prop-firms">Trustpilot research</ActiveNavLink>
       </div>
     </div>

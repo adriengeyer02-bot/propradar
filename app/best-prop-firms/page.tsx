@@ -42,14 +42,14 @@ export const metadata: Metadata = {
   publisher: SITE_NAME,
   category: 'Prop firm due diligence',
   alternates: {
-    canonical: '/meilleures-prop-firms',
-    languages: { en: '/meilleures-prop-firms', fr: '/fr/meilleures-prop-firms-2026', 'x-default': '/meilleures-prop-firms' },
+    canonical: '/best-prop-firms',
+    languages: { en: '/best-prop-firms', fr: '/fr/meilleures-prop-firms-2026', 'x-default': '/best-prop-firms' },
   },
   openGraph: {
     title: 'Best Prop Firms Right Now: Risk-First Ranking (2026)',
     description:
       'Compare the strongest current prop-firm profiles by payout risk, legal proof, rules and source depth.',
-    url: `${SITE_URL}/meilleures-prop-firms`,
+    url: `${SITE_URL}/best-prop-firms`,
     type: 'article',
     siteName: SITE_NAME,
     modifiedTime: BEST_PROP_FIRMS_UPDATED_AT,
@@ -143,10 +143,10 @@ export default function BestPropFirmsPage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    '@id': `${SITE_URL}/meilleures-prop-firms#article`,
+    '@id': `${SITE_URL}/best-prop-firms#article`,
     headline: 'Best prop firms right now: PropRadar risk-first ranking',
     description: BEST_PROP_FIRMS_DESCRIPTION,
-    url: `${SITE_URL}/meilleures-prop-firms`,
+    url: `${SITE_URL}/best-prop-firms`,
     inLanguage: 'en',
     isAccessibleForFree: true,
     datePublished: BEST_PROP_FIRMS_PUBLISHED_AT,
@@ -192,7 +192,7 @@ export default function BestPropFirmsPage() {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}/meilleures-prop-firms`,
+      '@id': `${SITE_URL}/best-prop-firms`,
     },
   };
   const breadcrumbSchema = {
@@ -200,7 +200,7 @@ export default function BestPropFirmsPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Best prop firms right now', item: `${SITE_URL}/meilleures-prop-firms` },
+      { '@type': 'ListItem', position: 2, name: 'Best prop firms right now', item: `${SITE_URL}/best-prop-firms` },
     ],
   };
   const faqSchema = {
@@ -238,8 +238,8 @@ export default function BestPropFirmsPage() {
             <time dateTime={rankingUpdatedAt}>Updated {rankingUpdatedAt}</time>
           </div>
           <div className="actions">
-            <Link href="/comparateur" className="btn btn-primary">Open full comparator</Link>
-            <Link href="/risques-payout" className="btn">View payout risks</Link>
+            <Link href="/prop-firm-comparison" className="btn btn-primary">Open full comparator</Link>
+            <Link href="/prop-firm-payout-risk" className="btn">View payout risks</Link>
             <Link href="/audit" className="btn">Read source audit</Link>
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function NotFound() {
             The address may be outdated, or the firm may now use a different profile. Search the comparator before assuming the listing disappeared.
           </p>
           <div className="system-state-actions">
-            <Link className="btn btn-primary" href="/comparateur">Open comparator</Link>
+            <Link className="btn btn-primary" href="/prop-firm-comparison">Open comparator</Link>
             <Link className="btn" href="/guides">Browse guides</Link>
           </div>
         </div>

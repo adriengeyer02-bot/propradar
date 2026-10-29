@@ -70,7 +70,7 @@ const firmSearchProfiles: Partial<Record<string, FirmSearchProfile>> = {
       'Product rules, drawdown, activation costs and payout clauses need a fresh primary-source check.',
     ],
     links: [
-      { label: 'Compare established futures prop firms', href: '/guides/meilleure-prop-firm-futures' },
+      { label: 'Compare established futures prop firms', href: '/guides/best-futures-prop-firms' },
       { label: 'Read Topstep vs Apex', href: '/guides/topstep-vs-apex' },
       { label: 'Open saved E8 Futures sources', href: '#sources' },
     ],
@@ -144,8 +144,8 @@ const firmSearchProfiles: Partial<Record<string, FirmSearchProfile>> = {
       'The contracting entity, governing law and full refund conditions still need confirmation from primary terms.',
     ],
     links: [
-      { label: 'Compare payout-risk signals', href: '/risques-payout' },
-      { label: 'Read prop-firm rule audits', href: '/regles' },
+      { label: 'Compare payout-risk signals', href: '/prop-firm-payout-risk' },
+      { label: 'Read prop-firm rule audits', href: '/prop-firm-rules' },
       { label: 'Open saved Fortunes Funding sources', href: '#sources' },
     ],
     faq: [
@@ -214,7 +214,7 @@ const firmSearchProfiles: Partial<Record<string, FirmSearchProfile>> = {
     ],
     links: [
       { label: 'Read the full interruption timeline', href: '#case-timeline' },
-      { label: 'Review current payout-risk cases', href: '/risques-payout' },
+      { label: 'Review current payout-risk cases', href: '/prop-firm-payout-risk' },
       { label: 'Open saved The Funded Trader sources', href: '#sources' },
     ],
     faq: [
@@ -365,7 +365,7 @@ const firmSearchProfiles: Partial<Record<string, FirmSearchProfile>> = {
     ],
     links: [
       { label: 'Read the prop-firm legal check guide', href: '/guides/prop-firm-legal-check' },
-      { label: 'Compare RZR Funded with other firms', href: '/comparateur' },
+      { label: 'Compare RZR Funded with other firms', href: '/prop-firm-comparison' },
       { label: 'Open saved RZR Funded / Hantec Trader sources', href: '#sources' },
     ],
     faq: [

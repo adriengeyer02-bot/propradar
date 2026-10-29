@@ -19,7 +19,7 @@ export default function ErrorPage({ reset }: ErrorPageProps) {
           </p>
           <div className="system-state-actions">
             <button className="btn btn-primary" type="button" onClick={reset}>Retry</button>
-            <Link className="btn" href="/comparateur">Open comparator</Link>
+            <Link className="btn" href="/prop-firm-comparison">Open comparator</Link>
           </div>
         </div>
         <div className="system-state-routes" aria-label="Alternative routes">

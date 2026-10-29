@@ -59,14 +59,14 @@ export function reliabilityAxes(firm: PropFirm): ReliabilityAxis[] {
       key: 'reviews',
       label: 'Review reliability',
       value: clamp(signals.trustpilotReliabilityScore),
-      display: toEnglishText(signals.trustpilotReliability),
-      estimated: !firm.trustpilotRating,
+      display: signals.trustpilotRatingWithheld ? 'Rating withheld' : toEnglishText(signals.trustpilotReliability),
+      estimated: !firm.trustpilotRating && !signals.trustpilotRatingWithheld,
     },
     {
       key: 'authenticity',
       label: 'Review authenticity',
       value: clamp(100 - (signals.manipulationRiskScore ?? 50)),
-      display: `${toEnglishText(signals.manipulationRisk ?? 'Moyen')} manipulation risk`,
+      display: signals.manipulationRisk && signals.manipulationRisk !== 'Non évalué' ? 'Review alert on file' : 'Not assessed',
       estimated: signals.manipulationRiskScore === undefined,
     },
     {

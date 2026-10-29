@@ -23,7 +23,7 @@ function indexOfBest(firms: PropFirm[], value: (firm: PropFirm) => number | unde
   return winners === 1 ? values.indexOf(target) : undefined;
 }
 
-const reviewRank = { Forte: 3, Moyenne: 2, Faible: 1 } as const;
+const reviewRank = { Forte: 3, Moyenne: 2, Faible: 1, 'Non évalué': 0 } as const;
 
 const ROWS: Row[] = [
   {
@@ -54,7 +54,7 @@ const ROWS: Row[] = [
   },
   {
     label: 'Review manipulation',
-    render: (firm) => <RiskPip compact label="" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Moyen')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />,
+    render: (firm) => <RiskPip compact label="" value={toEnglishText(firm.reviewSignals.manipulationRisk ?? 'Non évalué')} tone={reviewTone(firm.reviewSignals.manipulationRisk)} />,
   },
   { label: 'Proof level', render: (firm) => toEnglishText(firm.auditStatus) },
   { label: 'Affiliate link', render: (firm) => (firm.commercialRelationship === 'Affiliation transparente' ? 'Yes, disclosed' : 'No') },
