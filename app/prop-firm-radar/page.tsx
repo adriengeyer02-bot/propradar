@@ -92,16 +92,20 @@ export default function PropFirmRadarPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema)} />
 
-      <section className="pr-radar-hero">
-        <div className="eyebrow"><span>Live from the firm files · updated <time dateTime={radar.latest}>{formatDate(radar.latest)}</time></span></div>
-        <h1>Prop firm radar</h1>
-        <p className="lead">
-          Every prop firm PropRadar tracks on one map: {openCount} open firms placed by market and score, and {radar.counts.closed} closed
-          firms on the outer orbit. Point at a dot, search a firm or open a market to see who leads it.
-        </p>
-      </section>
-
-      <PropRadarLive data={radar} variant="full" />
+      <PropRadarLive
+        data={radar}
+        variant="full"
+        intro={
+          <header className="pr-radar-hero">
+            <div className="eyebrow"><span>Live from the firm files · updated <time dateTime={radar.latest}>{formatDate(radar.latest)}</time></span></div>
+            <h1>Prop firm radar</h1>
+            <p className="lead">
+              {openCount} open prop firms placed by market and score, and {radar.counts.closed} closed firms on the outer orbit. Point at a dot,
+              search a firm or open a market to see who leads it.
+            </p>
+          </header>
+        }
+      />
 
       <section className="pr-stats-keys pr-radar-findings" aria-label="What the radar shows">
         {findings.map((item) => (
