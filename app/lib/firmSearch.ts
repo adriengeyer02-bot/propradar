@@ -29,6 +29,10 @@ const FIRM_SEARCH_ALIASES: Record<string, string[]> = {
   'take-profit-trader': ['TPT'],
   'alpha-capital-group': ['ACG'],
   'city-traders-imperium': ['CTI'],
+  // Former names of merged profiles, so old names still find the firm.
+  wsfunded: ['Wall Street Funded', 'WSF', 'wallstreetfunded'],
+  'quant-tekel': ['AscendX Capital', 'AscendX', 'QuantTekel'],
+  'tx3-funding': ['TopTier Trader', 'TopTier', 'TTT'],
 };
 
 export function normalizeFirmSearch(value: string) {

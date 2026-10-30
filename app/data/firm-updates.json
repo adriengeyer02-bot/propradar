@@ -222,22 +222,6 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/aquafunded.com)."
       ]
     },
-    "ascendx-capital": {
-      "reviewedAt": "2026-10-29",
-      "changelog": [
-        {
-          "date": "2026-10-29",
-          "summary": "Rebrand noted: Finance Magnates reported on 16 September 2024 that AscendX Capital announced (X post, 15 September 2024) that its name change to QuantTekel was complete and that it was moving towards brokerage services. The article names no regulator or licence. PropRadar keeps both profiles until the current operator and domain are confirmed; see the Quant Tekel profile.",
-          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
-          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
-        }
-      ]
-    },
     "audacity-capital": {
       "reviewedAt": "2026-10-27",
       "addIncidents": [
@@ -2524,12 +2508,26 @@
       }
     },
     "quant-tekel": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
           "summary": "Background noted: Finance Magnates reported on 16 September 2024 that QuantTekel is the new name of AscendX Capital (rebrand announced on X on 15 September 2024) and that it was moving towards brokerage services. The article names no regulator or licence; a third-party claim that it is a regulated broker is not verified.",
           "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Recorded on the former AscendX Capital profile: Rebrand noted: Finance Magnates reported on 16 September 2024 that AscendX Capital announced (X post, 15 September 2024) that its name change to QuantTekel was complete and that it was moving towards brokerage services. The article names no regulator or licence. PropRadar keeps both profiles until the current operator and domain are confirmed; see the Quant Tekel profile.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp",
+          "fields": []
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: the former AscendX Capital entry described the same firm, because Finance Magnates reported on 16 September 2024 that AscendX Capital had completed its name change to QuantTekel. Its sourced facts and history are kept on this page and /firm/ascendx-capital now redirects here. Score and status of this profile are unchanged.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp",
+          "fields": [
+            "profile"
+          ]
         }
       ],
       "addSources": [
@@ -3627,26 +3625,6 @@
         }
       ]
     },
-    "wall-street-funded": {
-      "reviewedAt": "2026-10-26",
-      "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 5030,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
-      },
-      "changelog": [
-        {
-          "date": "2026-10-26",
-          "summary": "Domain monitor flags wallstreetfunded.com as redirecting to wsfunded.com. Checked: wsfunded.com is the firm's own current domain (its Trustpilot profile is wsfunded.com, and the July 2026 audit already recorded the redirect), so this is a move, not a warning. Trustpilot read: 4.3 TrustScore across 5,030 reviews.",
-          "source": "https://uk.trustpilot.com/review/wsfunded.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
-          ]
-        }
-      ]
-    },
     "wegetfunded": {
       "reviewedAt": "2026-10-29",
       "changelog": [
@@ -3751,8 +3729,14 @@
       ]
     },
     "wsfunded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
+        {
+          "date": "2026-10-26",
+          "summary": "Recorded on the former Wall Street Funded profile: Domain monitor flags wallstreetfunded.com as redirecting to wsfunded.com. Checked: wsfunded.com is the firm's own current domain (its Trustpilot profile is wsfunded.com, and the July 2026 audit already recorded the redirect), so this is a move, not a warning. Trustpilot read: 4.3 TrustScore across 5,030 reviews.",
+          "source": "https://uk.trustpilot.com/review/wsfunded.com",
+          "fields": []
+        },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot read for the first time: 4.3 TrustScore across 4,858 reviews, claimed profile, no Trustpilot warning. This is the same Trustpilot profile as the Wall Street Funded entry: PropRadar currently lists the wsfunded.com firm twice. Price and profit split not re-read on the official site, left unchanged.",
@@ -3760,6 +3744,14 @@
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: the former Wall Street Funded entry described the same firm, because wallstreetfunded.com redirects to wsfunded.com and both profiles used the same Trustpilot profile (wsfunded.com) and the same entities (WSF Technology FZCO, WSFmarkets Ltd, RENATICA LTD). Its sourced facts and history are kept on this page and /firm/wall-street-funded now redirects here. Score and status of this profile are unchanged.",
+          "source": "https://www.trustpilot.com/review/wsfunded.com",
+          "fields": [
+            "profile"
           ]
         }
       ],
@@ -4810,6 +4802,45 @@
         {
           "label": "Funded Trader Markets 1-Step (official)",
           "url": "https://fundedtradermarkets.com/1-step"
+        }
+      ]
+    },
+    "tx3-funding": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: the former TopTier Trader entry described the same firm, because the official page tx3funding.com/en/ttt-to-tx3 states \"TopTier Trader is now TX3 Funding\" (no date given). Its sourced facts and history are kept on this page and /firm/toptier-trader now redirects here. Score and status of this profile are unchanged.",
+          "source": "https://www.tx3funding.com/en/ttt-to-tx3",
+          "fields": [
+            "profile"
+          ]
+        }
+      ]
+    },
+    "indigo-trader-funding": {
+      "reviewedAt": "2026-10-30",
+      "set": {
+        "status": "Fermée"
+      },
+      "addSources": [
+        {
+          "label": "Finance Magnates: Indigo Trader Funding confirms shutdown (2024-08-21)",
+          "url": "https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/"
+        },
+        {
+          "label": "Finance Magnates: Indigo Trader Funding ceases operations, files for UK strike-off (2024-08-15)",
+          "url": "https://www.financemagnates.com/forex/prop-firm-indigo-trader-funding-ceases-operations-files-for-uk-strike-off"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Status set to closed, approved by the site owner on 2026-10-30. Finance Magnates reported on 21 August 2024 that the firm confirmed \"Indigo Trader Funding ceased trading\" and \"has ended any agreements/partnerships attributed to the operation of the evaluation model prop firm\", and that remaining funds controlled by its operating partners would be allocated to refunding active paid-for accounts. Finance Magnates had reported on 15 August 2024 that Indigo Trader Funding Limited applied on 12 August 2024 to be struck off the UK company register.",
+          "source": "https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/",
+          "fields": [
+            "status"
+          ]
         }
       ]
     }
