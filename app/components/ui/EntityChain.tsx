@@ -2,10 +2,18 @@ import type { RegulatoryEntity } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { OFFICIAL_LISTS, listMarkers, parseJurisdiction, placeDetail } from '../../lib/jurisdictions';
 import Flag from './Flag';
+import en, { type Messages } from '../../lib/messages/en';
+import { countryLabel, type Locale } from '../../lib/locales';
+
+type ChainLabels = Messages['firm']['chain'];
+const fill = (template: string, values: Record<string, string | number>) => template.replace(/\{(\w+)\}/g, (m, k: string) => (k in values ? String(values[k]) : m));
 
 type EntityChainProps = {
   firmName: string;
   entities: RegulatoryEntity[];
+  labels?: ChainLabels;
+  auditHref?: string;
+  locale?: Locale;
 };
 
 function shortRole(role?: string) {
@@ -20,7 +28,8 @@ function shortRole(role?: string) {
  * takes the payment, where each company is registered. Country markers come
  * only from official lists; no marker is not an endorsement.
  */
-export default function EntityChain({ firmName, entities }: EntityChainProps) {
+export default function EntityChain({ firmName, entities, labels: t = en.firm.chain, auditHref = '/audit#jurisdictions', locale = 'en' }: EntityChainProps) {
+  const cname = (c: { code: string; name: string }) => countryLabel(locale, c.code, c.name);
   if (!entities.length) return null;
   const nodes = entities.map((entity) => {
     const place = parseJurisdiction(entity.jurisdiction);
@@ -31,7 +40,7 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
   const flagged = nodes.some((n) => n.markers.length);
 
   return (
-    <figure className="pr-chain" aria-label={`${firmName}: legal entities and where they are registered`}>
+    <figure className="pr-chain" aria-label={fill(t.aria, { name: firmName })}>
       <figcaption className="pr-chain-head">
         <div className="pr-chain-flags" aria-hidden="true">
           {countries.map((c) => (
@@ -41,11 +50,11 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
         </div>
         <p>
           <strong>
-            {entities.length} {entities.length === 1 ? 'entity' : 'entities'}
+            {entities.length} {entities.length === 1 ? t.entity : t.entities}
           </strong>
           {' · '}
-          {countries.length ? `${countries.length} ${countries.length === 1 ? 'country' : 'countries'}` : 'no country identified yet'}
-          {unidentified && countries.length ? ` · ${unidentified} not identified yet` : ''}
+          {countries.length ? `${countries.length} ${countries.length === 1 ? t.country : t.countries}` : t.noCountry}
+          {unidentified && countries.length ? ` · ${fill(t.notIdentified, { n: unidentified })}` : ''}
         </p>
       </figcaption>
 
@@ -60,7 +69,7 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
                 {place.identified ? place.countries.map((c) => <Flag key={c.code} code={c.code} size="lg" />) : <Flag size="lg" />}
               </span>
               <span className="pr-chain-country">
-                <strong>{place.identified ? place.countries.map((c) => c.name).join(' / ') : 'Country to verify'}</strong>
+                <strong>{place.identified ? place.countries.map((c) => cname(c)).join(' / ') : t.countryVerify}</strong>
                 {detail ? <small>{detail}</small> : null}
               </span>
             </div>
@@ -69,12 +78,12 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
               <span className="pr-chain-step">{index + 1}</span>
               <strong>{toEnglishText(entity.name)}</strong>
               {entity.role ? <p title={toEnglishText(entity.role)}>{shortRole(entity.role)}</p> : null}
-              {entity.registrationNumber ? <small className="pr-chain-reg">Reg. {entity.registrationNumber}</small> : null}
+              {entity.registrationNumber ? <small className="pr-chain-reg">{t.reg} {entity.registrationNumber}</small> : null}
               {entity.registeredAddress ? <small className="pr-chain-addr">{toEnglishText(entity.registeredAddress)}</small> : null}
             </div>
 
             <div className="pr-chain-tags">
-              {place.countries.some((c) => c.eu) ? <span className="pr-chip">EU member state</span> : null}
+              {place.countries.some((c) => c.eu) ? <span className="pr-chip">{t.eu}</span> : null}
               {markers.map((m) => (
                 <a key={m.key} className={`pr-chip pr-chip-${m.tone}`} href={m.url} target="_blank" rel="noreferrer" title={`${m.label}, ${m.asOf}`}>
                   {m.short}
@@ -89,13 +98,13 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
                       href={c.regulator.url}
                       target="_blank"
                       rel="noreferrer"
-                      title={`Financial regulator in ${c.name}`}
+                      title={fill(t.regulatorTitle, { country: cname(c) })}
                     >
-                      Regulator: {c.regulator.name}
+                      {fill(t.regulator, { name: c.regulator.name })}
                     </a>
                   ) : (
-                    <span key={`reg-${c.code}`} className="pr-chip" title={`Financial regulator in ${c.name}`}>
-                      Regulator: {c.regulator.name}
+                    <span key={`reg-${c.code}`} className="pr-chip" title={fill(t.regulatorTitle, { country: cname(c) })}>
+                      {fill(t.regulator, { name: c.regulator.name })}
                     </span>
                   )
                 ) : null,
@@ -106,10 +115,9 @@ export default function EntityChain({ firmName, entities }: EntityChainProps) {
       </ol>
 
       <p className="pr-chain-note">
-        Country markers only come from official lists: {OFFICIAL_LISTS.fatfGrey.short} ({OFFICIAL_LISTS.fatfGrey.asOf}) and the EU tax lists (
-        {OFFICIAL_LISTS.euAnnexI.asOf}).
-        {flagged || !countries.length ? '' : countries.length === 1 ? ' This country is not on them.' : ' None of these countries is on them.'} No marker does not mean a country, or a firm, is safe: a regulator link only says who supervises
-        financial firms there, not that this firm is licensed. <a href="/audit#jurisdictions">See where all tracked firms are registered →</a>
+        {fill(t.note, { fatf: OFFICIAL_LISTS.fatfGrey.short, fatfDate: OFFICIAL_LISTS.fatfGrey.asOf, euDate: OFFICIAL_LISTS.euAnnexI.asOf })}
+        {flagged || !countries.length ? '' : countries.length === 1 ? t.notOnOne : t.notOnMany}
+        {t.noteTail} <a href={auditHref}>{t.seeAll}</a>
       </p>
     </figure>
   );

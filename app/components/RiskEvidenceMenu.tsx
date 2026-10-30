@@ -7,7 +7,19 @@ import ActiveNavLink from './ActiveNavLink';
 const menuId = 'risk-evidence-navigation';
 const buttonId = 'risk-evidence-navigation-trigger';
 
-export default function RiskEvidenceMenu() {
+export type RiskMenuLabels = { title: string; brief: string; audit: string; payout: string; rules: string; trustpilot: string; statistics: string };
+
+const DEFAULT_LABELS: RiskMenuLabels = {
+  title: 'Risk watch',
+  brief: 'Risk Brief',
+  audit: 'Audit center',
+  payout: 'Payout risks',
+  rules: 'Trading rules',
+  trustpilot: 'Trustpilot research',
+  statistics: 'Industry statistics',
+};
+
+export default function RiskEvidenceMenu({ labels = DEFAULT_LABELS }: { labels?: RiskMenuLabels }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -68,15 +80,15 @@ export default function RiskEvidenceMenu() {
         aria-controls={menuId}
         onClick={() => setIsOpen((current) => !current)}
       >
-        Risk watch
+        {labels.title}
       </button>
       <div className="nav-menu-panel" id={menuId} aria-labelledby={buttonId}>
-        <ActiveNavLink href="/radar-brief" activePrefixes={['/radar-brief/']}>Risk Brief</ActiveNavLink>
-        <ActiveNavLink href="/audit">Audit center</ActiveNavLink>
-        <ActiveNavLink href="/prop-firm-payout-risk">Payout risks</ActiveNavLink>
-        <ActiveNavLink href="/prop-firm-rules">Trading rules</ActiveNavLink>
-        <ActiveNavLink href="/trustpilot-prop-firms">Trustpilot research</ActiveNavLink>
-        <ActiveNavLink href="/prop-firm-statistics">Industry statistics</ActiveNavLink>
+        <ActiveNavLink href="/radar-brief" activePrefixes={['/radar-brief/']}>{labels.brief}</ActiveNavLink>
+        <ActiveNavLink href="/audit">{labels.audit}</ActiveNavLink>
+        <ActiveNavLink href="/prop-firm-payout-risk">{labels.payout}</ActiveNavLink>
+        <ActiveNavLink href="/prop-firm-rules">{labels.rules}</ActiveNavLink>
+        <ActiveNavLink href="/trustpilot-prop-firms">{labels.trustpilot}</ActiveNavLink>
+        <ActiveNavLink href="/prop-firm-statistics">{labels.statistics}</ActiveNavLink>
       </div>
     </div>
   );

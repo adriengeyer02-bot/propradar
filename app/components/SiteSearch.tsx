@@ -14,7 +14,7 @@ type SearchResult = {
 
 type SearchStatus = 'idle' | 'loading' | 'ready' | 'error';
 
-export default function SiteSearch() {
+export default function SiteSearch({ label = 'Search PropRadar' }: { label?: string } = {}) {
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +87,7 @@ export default function SiteSearch() {
 
   return (
     <div className="site-search" onMouseDown={cancelClose}>
-      <label className="site-search-label" htmlFor="site-search-input">Search PropRadar</label>
+      <label className="site-search-label" htmlFor="site-search-input">{label}</label>
       <input
         id="site-search-input"
         type="search"
@@ -128,7 +128,7 @@ export default function SiteSearch() {
         aria-activedescendant={showResults && selectedIndex >= 0 ? `site-search-result-${selectedIndex}` : undefined}
         autoComplete="off"
         spellCheck={false}
-        placeholder="Search PropRadar"
+        placeholder={label}
         className="site-search-input"
       />
       {query ? (
