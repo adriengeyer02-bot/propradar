@@ -16,7 +16,7 @@ import { notFound } from 'next/navigation';
 import { HTML_LANG, OG_LOCALE, isLocale, localePath, type Locale } from '../lib/locales';
 import { fmt, getMessages } from '../lib/messages';
 import { propFirms } from '../lib/propFirms';
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
+import { FOUNDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
 
 const themeInitScript = `
   (function () {
@@ -46,6 +46,8 @@ const siteStructuredData = {
         '@type': 'ImageObject',
         url: `${SITE_URL}/icon.svg`,
       },
+      founder: { '@type': 'Person', '@id': `${SITE_URL}/about#founder`, name: FOUNDER.handle, url: `${SITE_URL}/about` },
+      email: 'contact@propradar.tech',
     },
     {
       '@type': 'WebSite',
@@ -232,6 +234,7 @@ export default async function RootLayout({
               </nav>
               <nav className="footer-nav" aria-label="Offers and review links">
                 <strong>{c.footer.more}</strong>
+                <Link href={L('/about')}>{t.about.footerAbout}</Link>
                 <Link href={L('/promos')}>{c.footer.deals}</Link>
                 <Link href={L('/trustpilot-prop-firms')}>{c.footer.trustpilot}</Link>
                 <Link href={L('/prop-firm-statistics')}>{c.footer.statistics}</Link>
@@ -241,7 +244,10 @@ export default async function RootLayout({
             </div>
             <div className="container footer-bottom">
               <span>{c.footer.bottom}</span>
-              <Link href={L('/audit')}>{c.footer.method}</Link>
+              <span className="footer-bottom-links">
+                <Link href={L('/about')}>{t.about.footerShort}</Link>
+                <Link href={L('/audit')}>{c.footer.method}</Link>
+              </span>
             </div>
           </footer>
         </div>
