@@ -292,6 +292,9 @@ const it: Messages = {
     methodology: 'Metodologia',
     compareTable: 'Confronta le firm in tabella',
     stats: 'Statistiche prop firm',
+    listTitle: 'Tutte le firm del radar, per mercato',
+    listNote: "Gli stessi dati del radar, in elenco: firm aperte ordinate per punteggio PropRadar, poi le firm chiuse con la data di chiusura segnalata.",
+    closedList: 'Firm chiuse',
     faqTitle: 'Domande',
     faq: [
       { q: 'Come viene posizionata una prop firm sul radar?', a: 'L’angolo è il mercato principale della firm (forex e CFD, futures, cripto, azioni o più mercati), e ogni spicchio è largo quanto il numero di firm che contiene. La distanza dal centro è il punteggio PropRadar: più vicino al centro, più alto il punteggio. Le firm chiuse stanno su un’orbita esterna.' },

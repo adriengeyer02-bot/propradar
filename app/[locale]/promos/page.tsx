@@ -211,7 +211,7 @@ export default function PromosPage() {
           <div><dt>Legal mapped</dt><dd>{legalMappedDealCount}</dd></div>
           <div><dt>5+ sources</dt><dd>{deepSourceDealCount}</dd></div>
         </dl>
-        <Link href="/prop-firm-comparison" className="pr-link">Compare rules and reliability before using a code <span aria-hidden="true">→</span></Link>
+        <Link prefetch={false} href="/prop-firm-comparison" className="pr-link">Compare rules and reliability before using a code <span aria-hidden="true">→</span></Link>
       </section>
 
       <section className="section mega-deal-section" id="mega-deals">

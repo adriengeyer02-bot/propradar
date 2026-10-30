@@ -110,7 +110,7 @@ export default async function HomePage({ params }: Props) {
             <span>{h.latestReview} <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
           </div>
           <div className="home-v2-actions">
-            <Link href={L('/prop-firm-comparison')} className="btn btn-primary home-v2-primary-action">
+            <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn btn-primary home-v2-primary-action">
               {h.openComparator}
             </Link>
             <Link href={L('/promos')} className="btn home-v2-secondary-action">
@@ -180,7 +180,7 @@ export default async function HomePage({ params }: Props) {
           ))}
         </div>
         <p className="pr-table-more">
-          <Link className="pr-link" href={L('/prop-firm-comparison')}>
+          <Link prefetch={false} className="pr-link" href={L('/prop-firm-comparison')}>
             {fmt(h.compareAll, { count: propFirms.length })} <span aria-hidden="true">→</span>
           </Link>
         </p>
@@ -200,6 +200,7 @@ export default async function HomePage({ params }: Props) {
             {h.tools.map((tool, index) => (
               <Link
                 key={tool.label}
+                prefetch={index === 0 ? false : undefined}
                 href={L(['/prop-firm-comparison', '/prop-firm-challenge', '/promos', '/guides'][index])}
                 className={`home-tool-card${index === 0 ? ' home-tool-card-primary' : ''}`}
               >

@@ -384,7 +384,7 @@ function ProductContext({ firm, product, f, locale }: { firm: PropFirm; product:
       <ul className="pr-product-context-links">
         {anchor ? <li><Link href={`${L('/prop-firm-challenge')}#${anchor}`}>{fmt(f.ctxAll, { programs })}</Link></li> : null}
         {countries[0] ? (
-          <li><Link href={`${L('/prop-firm-comparison')}?country=${countries[0].code}`}>{fmt(f.ctxCountry, { country: countryLabel(locale, countries[0].code, countries[0].name) })}</Link></li>
+          <li><Link prefetch={false} href={`${L('/prop-firm-comparison')}?country=${countries[0].code}`}>{fmt(f.ctxCountry, { country: countryLabel(locale, countries[0].code, countries[0].name) })}</Link></li>
         ) : null}
         <li><Link href={`${L('/prop-firm-statistics')}#fees`}>{f.ctxStats}</Link></li>
       </ul>
@@ -794,7 +794,7 @@ export default async function FirmPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema)} />
 
       <section className="container detail-header firm-profile-header">
-        <Link href={L('/prop-firm-comparison')} className="firm-back-link">
+        <Link prefetch={false} href={L('/prop-firm-comparison')} className="firm-back-link">
           <span aria-hidden="true">&larr;</span>
           {f.allFirms}
         </Link>
@@ -836,7 +836,7 @@ export default async function FirmPage({ params }: Props) {
                 <RiskPip label={f.trustpilot} value={v(trustpilotPip(firm).value)} tone={trustpilotPip(firm).tone} />
               </div>
               <div className="pr-firm-actions">
-                <Link href={L('/prop-firm-comparison')} className="btn">{f.compare}</Link>
+                <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn">{f.compare}</Link>
                 <Link href={`${L('/')}#radar-weekly`} className="pr-link">{f.setAlert}</Link>
               </div>
             </div>

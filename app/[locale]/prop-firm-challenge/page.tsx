@@ -252,7 +252,7 @@ export default function PropFirmChallengePage() {
           </div>
           <div className="actions">
             <a href="#compare" className="btn btn-primary">Compare challenges</a>
-            <Link href="/prop-firm-comparison" className="btn">Full comparison table</Link>
+            <Link prefetch={false} href="/prop-firm-comparison" className="btn">Full comparison table</Link>
           </div>
         </div>
         <dl className="pr-challenge-facts">

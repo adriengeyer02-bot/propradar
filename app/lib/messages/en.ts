@@ -296,6 +296,9 @@ const en = {
     methodology: 'Methodology',
     compareTable: 'Compare the firms in a table',
     stats: 'Prop firm statistics',
+    listTitle: 'Every firm on the radar, by market',
+    listNote: 'The same data as the radar, as a list: open firms sorted by PropRadar score, then closed firms with their reported closure date.',
+    closedList: 'Closed firms',
     faqTitle: 'Questions',
     faq: [
       { q: 'How is a prop firm placed on the PropRadar radar?', a: "The angle is the firm's main market (forex and CFD, futures, crypto, stocks or several), and each slice is as wide as the number of firms in it. The distance from the centre is the PropRadar score: the closer to the centre, the higher the score. Closed firms sit on an outer orbit." },

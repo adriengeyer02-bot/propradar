@@ -134,8 +134,46 @@ export default async function PropFirmRadarPage({ params }: Props) {
           {r.fineprint} <Link href={L('/audit')} className="pr-link">{r.methodology}</Link>
         </p>
         <div className="actions">
-          <Link className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</Link>
+          <Link prefetch={false} className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</Link>
           <Link className="btn" href={L('/prop-firm-statistics')}>{r.stats}</Link>
+        </div>
+      </section>
+
+      <section className="pr-stats-section pr-radar-list" aria-labelledby="radar-list-title">
+        <h2 id="radar-list-title">{r.listTitle}</h2>
+        <p className="pr-fineprint">{r.listNote}</p>
+        <div className="pr-radar-list-grid">
+          {sectors.map((sector) => (
+            <details key={sector.key} open={sector.key === largest.key}>
+              <summary>
+                <strong>{sectorName(sector.key)}</strong> <span>{sector.count}</span>
+              </summary>
+              <ol>
+                {radar.dots
+                  .filter((dot) => dot.sector === sector.key)
+                  .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
+                  .map((dot) => (
+                    <li key={dot.slug}>
+                      <Link href={L(`/firm/${dot.slug}`)}>{dot.name}</Link>
+                      <b className={`prr-${dot.tone}-text`}>{dot.score}</b>
+                    </li>
+                  ))}
+              </ol>
+            </details>
+          ))}
+          <details>
+            <summary>
+              <strong>{r.closedList}</strong> <span>{radar.closed.length}</span>
+            </summary>
+            <ol>
+              {radar.closed.map((firm) => (
+                <li key={firm.slug}>
+                  <Link href={L(`/firm/${firm.slug}`)}>{firm.name}</Link>
+                  <small>{firm.closed ?? '—'}</small>
+                </li>
+              ))}
+            </ol>
+          </details>
         </div>
       </section>
 

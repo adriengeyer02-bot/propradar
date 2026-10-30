@@ -292,6 +292,9 @@ const fr: Messages = {
     methodology: 'Méthodologie',
     compareTable: 'Comparer les firmes dans un tableau',
     stats: 'Statistiques prop firms',
+    listTitle: 'Toutes les firmes du radar, par marché',
+    listNote: "Les mêmes données que le radar, sous forme de liste : les firmes ouvertes triées par score PropRadar, puis les firmes fermées avec leur date de fermeture signalée.",
+    closedList: 'Firmes fermées',
     faqTitle: 'Questions',
     faq: [
       { q: 'Comment une prop firm est-elle placée sur le radar ?', a: "L'angle correspond au marché principal de la firme (forex et CFD, futures, crypto, actions ou plusieurs), et chaque part est aussi large que le nombre de firmes qu'elle contient. La distance au centre est le score PropRadar : plus la firme est proche du centre, plus son score est élevé. Les firmes fermées sont sur une orbite extérieure." },
