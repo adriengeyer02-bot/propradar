@@ -165,7 +165,6 @@ export default function PropRadarLive({
     let frame = 0;
     let running = true;
     let visible = true;
-    const t0 = performance.now();
     let introDone = false;
     const lastBlip = new Map<number, number>();
     // Performance: only touch a dot when its glow moves by a visible step, and
@@ -223,11 +222,24 @@ export default function PropRadarLive({
       if (visible) frame = requestAnimationFrame(tick);
     };
 
-    setReady(true);
-    frame = requestAnimationFrame(tick);
+    // Start once the page is idle (hydration and first paint done), so the
+    // intro does not compete with them on slow phones. Dots stay hidden until
+    // then (.prr-js .prr-svg:not(.is-ready)).
+    let started = false;
+    let t0 = 0;
+    const start = () => {
+      if (!running || started) return;
+      started = true;
+      t0 = performance.now();
+      setReady(true);
+      frame = requestAnimationFrame(tick);
+    };
+    const idle = window.requestIdleCallback
+      ? window.requestIdleCallback(start, { timeout: 1200 })
+      : window.setTimeout(start, 200);
     const observer = new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
-      if (visible) {
+      if (visible && started) {
         cancelAnimationFrame(frame);
         frame = requestAnimationFrame(tick);
       }
@@ -235,6 +247,8 @@ export default function PropRadarLive({
     observer.observe(svg);
     return () => {
       running = false;
+      if (window.cancelIdleCallback) window.cancelIdleCallback(idle as number);
+      else window.clearTimeout(idle as number);
       cancelAnimationFrame(frame);
       observer.disconnect();
     };

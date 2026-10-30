@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import '@fontsource-variable/archivo/wdth.css';
+import { archivo } from '../fonts';
 import '../globals.css';
 import '../design-system.css';
 import '../design-refresh.css';
@@ -160,6 +161,7 @@ export default async function RootLayout({
   return (
     <html
       lang={HTML_LANG[locale]}
+      className={archivo.variable}
       suppressHydrationWarning
     >
       <head>
