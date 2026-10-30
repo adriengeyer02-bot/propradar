@@ -2776,3 +2776,154 @@ html body .pr-firm-profile-chart .pr-relradar-note { margin-top: 4px; }
 
   html body .pr-firm-profile-chart svg { max-width: 300px; }
 }
+
+/* ==========================================================================
+   Design pass 30 Oct 2026 (2): comparator columns, sorting, filters; home data strip
+   ========================================================================== */
+
+/* One column per signal, so a column can be scanned and sorted. */
+html body .pr-firm-head,
+html body .pr-firm-row {
+  grid-template-columns: minmax(220px, 2.2fr) 60px 84px 58px 88px 118px 92px 104px 20px;
+  gap: 14px;
+}
+
+html body .pr-firm-pips { display: contents; }
+html body .pr-firm-sig { min-width: 0; }
+html body .pr-firm-sig .pr-pip { white-space: nowrap; }
+html body .pr-firm-sig .pr-pip-label { display: none; }
+
+.pr-firm-head .pr-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 -6px;
+  padding: 4px 6px;
+  border: 0;
+  border-radius: 6px;
+  color: inherit;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pr-firm-head .pr-sort:hover { color: var(--text); background: var(--pr-row-hover); }
+.pr-firm-head .pr-sort.is-active { color: var(--accent); }
+.pr-sort-arrow { font-size: 11px; opacity: 0.55; }
+.pr-sort.is-active .pr-sort-arrow { opacity: 1; }
+
+@media (max-width: 1180px) {
+  html body .pr-firm-head,
+  html body .pr-firm-row { grid-template-columns: minmax(190px, 2fr) 56px 76px 52px 80px 110px 84px 96px 16px; gap: 10px; }
+}
+
+@media (max-width: 1040px) {
+  html body .pr-col-split { display: none; }
+  html body .pr-firm-head,
+  html body .pr-firm-row { grid-template-columns: minmax(190px, 2fr) 56px 76px 80px 110px 84px 96px 16px; }
+}
+
+@media (max-width: 860px) {
+  html body .pr-firm-row {
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      'id id id score'
+      'price split dd dd'
+      'pips pips pips pips';
+    gap: 10px 16px;
+  }
+  html body .pr-col-split { display: inline-flex; }
+  html body .pr-firm-split { grid-area: split; }
+  html body .pr-firm-pips { display: flex; flex-wrap: wrap; grid-area: pips; gap: 4px 14px; }
+  html body .pr-firm-sig .pr-pip-label { display: inline; }
+  /* Label and value may stack, but a value such as "No entry fee" never breaks. */
+  html body .pr-firm-fig { flex-wrap: wrap; column-gap: 6px; row-gap: 0; white-space: nowrap; }
+}
+
+/* Filters: the three most used stay visible, the rest open on demand. */
+.pr-more-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px dashed var(--line-strong, var(--line));
+  border-radius: 10px;
+  color: var(--soft);
+  background: transparent;
+  font-size: 13.5px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.pr-more-toggle:hover,
+.pr-more-toggle.is-open { border-style: solid; color: var(--text); }
+
+.pr-more-toggle b {
+  display: inline-grid;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--accent-ink);
+  background: var(--accent);
+  font-size: 11.5px;
+}
+
+.pr-filters-more { display: none; }
+.pr-filters-more.is-shown { display: contents; }
+
+@media (max-width: 760px) {
+  .pr-more-toggle { display: none; }
+  .pr-filters.is-open .pr-filters-more { display: contents; }
+  .pr-filters.is-open .pr-filters-more select:nth-of-type(3),
+  .pr-filters.is-open .pr-filters-more select:nth-of-type(4) { grid-column: 1 / -1; }
+}
+
+/* Home hero: three sourced figures fill the space under the actions. */
+.home-v2-datastrip {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--pr-radius, 14px);
+  background: var(--surface);
+}
+
+.home-v2-datastrip h2 {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.home-v2-datastrip dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+
+.home-v2-datastrip dl > div { display: grid; gap: 4px; align-content: start; }
+.home-v2-datastrip dt { order: 2; color: var(--soft); font-size: 13.5px; line-height: 1.4; }
+
+.home-v2-datastrip dd {
+  order: 1;
+  margin: 0;
+  color: var(--text);
+  font-size: 28px;
+  font-stretch: var(--figure-stretch, 88%);
+  font-variant-numeric: tabular-nums;
+  font-weight: 760;
+  line-height: 1;
+}
+
+.home-v2-datastrip .pr-link { display: inline-block; margin-top: 14px; font-size: 14px; }
+
+@media (max-width: 640px) {
+  .home-v2-datastrip { padding: 16px; }
+  .home-v2-datastrip dl { gap: 10px; }
+  .home-v2-datastrip dd { font-size: 24px; }
+  .home-v2-datastrip dt { font-size: 12.5px; }
+}

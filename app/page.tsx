@@ -16,6 +16,7 @@ import { GuideLogoStrip } from './guides/GuideLibrary';
 import { toEnglishText } from './lib/i18n';
 import FirmRow, { FirmTableHead } from './components/ui/FirmRow';
 import { SITE_NAME, SITE_URL } from './lib/site';
+import { countryCounts, documentedClosures, firmsWithCountry, withheldFirms } from './lib/industryStats';
 
 export default function HomePage() {
   const noConflictFirms = propFirms.filter((firm) => firm.commercialRelationship === 'Aucune').length;
@@ -127,6 +128,15 @@ export default function HomePage() {
             <span>Affiliate links stay disclosed.</span>
             <span>Every score shows its review date.</span>
           </div>
+          <section className="home-v2-datastrip" aria-labelledby="home-data-title">
+            <h2 id="home-data-title">From the PropRadar data</h2>
+            <dl>
+              <div><dt>prop firm closures documented with a dated source</dt><dd>{documentedClosures.length}</dd></div>
+              <div><dt>open firms whose Trustpilot rating is withheld</dt><dd>{withheldFirms.length}</dd></div>
+              <div><dt>countries where {firmsWithCountry.length} firms registered their entities</dt><dd>{countryCounts.length}</dd></div>
+            </dl>
+            <Link href="/prop-firm-statistics" className="pr-link">See all prop firm statistics <span aria-hidden="true">→</span></Link>
+          </section>
         </div>
 
         <div className="home-preview pr-home-radar" aria-label="Every tracked prop firm on the PropRadar">
