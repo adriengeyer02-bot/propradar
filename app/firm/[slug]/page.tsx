@@ -4,6 +4,7 @@ import { firmMetaOverrides } from '../../lib/firmMetaOverrides';
 import { getFirmChangelog } from '../../lib/firmUpdates';
 import Image from 'next/image';
 import Link from 'next/link';
+import FirmSectionNav from '../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../components/FirmLogo';
 import ChallengePath from '../../components/ui/ChallengePath';
@@ -22,6 +23,7 @@ import {
   THE5ERS_PROMO_CODE,
   auditStatusClass,
   formatUsd,
+  priceLabel,
   getFirmBySlug,
   manipulationRiskClass,
   payoutRiskClass,
@@ -326,6 +328,25 @@ const MODEL_ANCHOR: Record<string, string> = { Challenge: 'forex', 'Futures eval
 const MODEL_LABEL: Record<string, string> = { Challenge: 'forex and CFD challenges', 'Futures evaluation': 'futures evaluations', 'Instant funding': 'instant-funding accounts' };
 
 /** Fills the empty column next to a single program with context computed from the other sourced firm files. */
+/** Shortest readable version of a payout sentence: the first clause, capitalised. */
+function payoutShort(text: string) {
+  let short = text.split(';')[0].trim();
+  if (short.length > 90 && short.includes(' (')) short = short.slice(0, short.indexOf(' (')).trim();
+  return short.charAt(0).toUpperCase() + short.slice(1);
+}
+
+function PayoutFact({ text }: { text: string }) {
+  const short = payoutShort(text);
+  const full = text.charAt(0).toUpperCase() + text.slice(1);
+  if (short === full) return <>{full}</>;
+  return (
+    <details className="pr-payout-fact">
+      <summary>{short}<span className="pr-payout-more">Details</span></summary>
+      <p>{full}</p>
+    </details>
+  );
+}
+
 function ProductContext({ firm, product }: { firm: PropFirm; product: PropFirm['products'][number] }) {
   const stats = feeStats(product.type);
   const fee = product.entryFeeMin ?? 0;
@@ -810,14 +831,14 @@ export default async function FirmPage({ params }: Props) {
         </div>
 
         <dl className="pr-key-facts">
-          <div><dt>From</dt><dd>{formatUsd(firm.priceFrom)}</dd></div>
+          <div><dt>From</dt><dd>{priceLabel(firm)}</dd></div>
           <div><dt>Profit split</dt><dd>{profitSplitLabel(firm)}</dd></div>
           <div><dt>Drawdown</dt><dd>{drawdownLabel(firm, toEnglishText)}</dd></div>
           <div><dt>News trading</dt><dd>{toEnglishText(firm.newsTrading)}</dd></div>
           <div><dt>Proof level</dt><dd>{toEnglishText(firm.auditStatus)}</dd></div>
           <div><dt>Last review</dt><dd><ReviewFreshness date={firm.lastReviewed} /></dd></div>
           {isPayoutDelayUnknown(firm) ? null : (
-            <div className="pr-key-facts-wide"><dt>Payout</dt><dd>{toEnglishText(firm.payoutDelay)}</dd></div>
+            <div className="pr-key-facts-wide"><dt>Payout</dt><dd><PayoutFact text={toEnglishText(firm.payoutDelay)} /></dd></div>
           )}
         </dl>
 
@@ -856,6 +877,83 @@ export default async function FirmPage({ params }: Props) {
             </a>
           </aside>
         ) : null}
+
+        <FirmSectionNav
+          label="Firm page navigation"
+          items={[
+            ...(firm.products.length ? [{ id: 'produits', label: 'Offers' }] : []),
+            { id: 'decision', label: 'Decision' },
+            ...(auditCaseFile ? [{ id: 'case-timeline', label: 'Timeline' }] : []),
+            { id: 'regulatory', label: 'Legal file' },
+            { id: 'audit', label: 'Reviews & payouts' },
+            { id: 'guides', label: 'Guides' },
+            { id: 'faq', label: 'FAQ' },
+            { id: 'sources', label: 'Sources' },
+          ]}
+        />
+      </section>
+
+      <section className="container pr-section pr-offers" id="produits" aria-labelledby={`offers-${firm.slug}`}>
+        <header className="pr-section-head">
+          <div>
+            <div className="eyebrow">Offers</div>
+            <h2 id={`offers-${firm.slug}`}>{firm.name} programs and prices</h2>
+          </div>
+          <div className="pr-section-meta">
+            <span>{firm.products.length} program{firm.products.length === 1 ? '' : 's'} on file</span>
+          </div>
+        </header>
+        {firm.products.length > 0 ? (
+          <div className="grid-2">
+            {firm.products.map((product) => (
+              <article className="card product-card pr-product" key={product.id}>
+                <div className="pr-product-tags">
+                  <span className="pr-tag">{product.type}</span>
+                  {product.isPopular ? <span className="pr-tag">Popular</span> : null}
+                </div>
+                <h3>{toEnglishText(product.name)}</h3>
+                <p className="muted">{toEnglishText(product.description)}</p>
+                <ChallengePath product={product} />
+                <dl className="pr-product-meta">
+                  <div><dt>Platforms</dt><dd>{product.platforms.map((platform) => toEnglishText(platform)).join(' · ')}</dd></div>
+                  <div><dt>Assets</dt><dd>{product.tradableAssets.map((asset) => toEnglishText(asset)).join(' · ')}</dd></div>
+                </dl>
+                {product.hasConsistencyRule ? (
+                  <p className="pr-product-rule pr-tone-watch">
+                    <span className="pr-pip-dot" aria-hidden="true" />
+                    {toEnglishText(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
+                  </p>
+                ) : (
+                  <p className="pr-product-rule pr-tone-good">
+                    <span className="pr-pip-dot" aria-hidden="true" />
+                    No major consistency rule flagged
+                  </p>
+                )}
+                {product.linkToStart ? (
+                  <a
+                    href={product.linkToStart}
+                    target="_blank"
+                    rel={firm.commercialRelationship === 'Affiliation transparente' ? 'noreferrer sponsored' : 'noreferrer'}
+                    className="btn btn-primary"
+                  >
+                    {firm.commercialRelationship === 'Affiliation transparente' ? 'Open through affiliate link' : 'Open official offer'}
+                  </a>
+                ) : null}
+              </article>
+            ))}
+            {firm.products.length === 1 && firm.status !== 'Fermée' ? <ProductContext firm={firm} product={firm.products[0]} /> : null}
+          </div>
+        ) : (
+          <div className="panel">
+            <h3>No active product recommended</h3>
+            <p className="muted" style={{ marginBottom: 0 }}>
+              This firm remains in the radar as a historical risk signal, but should not be considered a buying option.
+            </p>
+          </div>
+        )}
+      </section>
+
+      <section className="container pr-section pr-decision" id="decision" aria-label={`${firm.name} decision file`}>
 
         {searchProfile ? (
           <article className="firm-search-answer" aria-labelledby={`search-answer-${firm.slug}`}>
@@ -961,7 +1059,7 @@ export default async function FirmPage({ params }: Props) {
           </div>
         </section>
 
-        <section className="pr-firm-checks" id="decision" aria-label="Decision checks">
+        <section className="pr-firm-checks" aria-label="Decision checks">
           <div>
             <h2>{showStrengths ? 'Strengths on file' : 'Points to check'}</h2>
             <ul className={`pr-check-list ${showStrengths ? 'pr-check-good' : 'pr-check-watch'}`}>
@@ -1069,16 +1167,6 @@ export default async function FirmPage({ params }: Props) {
           </div>
         ) : null}
 
-        <nav className="firm-tabs pr-subnav" aria-label="Firm page navigation">
-          <a href="#decision">Decision</a>
-          {auditCaseFile ? <a href="#case-timeline">Timeline</a> : null}
-          <a href="#regulatory">Legal file</a>
-          <a href="#audit">Reviews &amp; payouts</a>
-          <a href="#produits">Products</a>
-          <a href="#guides">Guides</a>
-          <a href="#faq">FAQ</a>
-          <a href="#sources">Sources</a>
-        </nav>
       </section>
 
       <section className="container pr-section" id="regulatory" aria-labelledby={`legal-${firm.slug}`}>
@@ -1266,59 +1354,6 @@ export default async function FirmPage({ params }: Props) {
             </div>
           </div>
         </details>
-      </section>
-
-      <section className="container section" id="produits">
-        <div className="eyebrow">Products</div>
-        <h2>Tracked offers</h2>
-        {firm.products.length > 0 ? (
-          <div className="grid-2">
-            {firm.products.map((product) => (
-              <article className="card product-card pr-product" key={product.id}>
-                <div className="pr-product-tags">
-                  <span className="pr-tag">{product.type}</span>
-                  {product.isPopular ? <span className="pr-tag">Popular</span> : null}
-                </div>
-                <h3>{toEnglishText(product.name)}</h3>
-                <p className="muted">{toEnglishText(product.description)}</p>
-                <ChallengePath product={product} />
-                <dl className="pr-product-meta">
-                  <div><dt>Platforms</dt><dd>{product.platforms.map((platform) => toEnglishText(platform)).join(' · ')}</dd></div>
-                  <div><dt>Assets</dt><dd>{product.tradableAssets.map((asset) => toEnglishText(asset)).join(' · ')}</dd></div>
-                </dl>
-                {product.hasConsistencyRule ? (
-                  <p className="pr-product-rule pr-tone-watch">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {toEnglishText(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
-                  </p>
-                ) : (
-                  <p className="pr-product-rule pr-tone-good">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    No major consistency rule flagged
-                  </p>
-                )}
-                {product.linkToStart ? (
-                  <a
-                    href={product.linkToStart}
-                    target="_blank"
-                    rel={firm.commercialRelationship === 'Affiliation transparente' ? 'noreferrer sponsored' : 'noreferrer'}
-                    className="btn btn-primary"
-                  >
-                    {firm.commercialRelationship === 'Affiliation transparente' ? 'Open through affiliate link' : 'Open official offer'}
-                  </a>
-                ) : null}
-              </article>
-            ))}
-            {firm.products.length === 1 && firm.status !== 'Fermée' ? <ProductContext firm={firm} product={firm.products[0]} /> : null}
-          </div>
-        ) : (
-          <div className="panel">
-            <h3>No active product recommended</h3>
-            <p className="muted" style={{ marginBottom: 0 }}>
-              This firm remains in the radar as a historical risk signal, but should not be considered a buying option.
-            </p>
-          </div>
-        )}
       </section>
 
       <section className="container pr-section" id="guides" aria-labelledby={`guides-${firm.slug}`}>

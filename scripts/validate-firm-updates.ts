@@ -21,7 +21,7 @@ const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
   'status', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
-  'drawdownType', 'newsTrading', 'eaAllowed',
+  'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee',
 ]);
 const DRAWDOWN_TYPES = new Set(['EOD', 'Trailing', 'Static', 'Hybride']);
 const PRODUCT_TYPES = new Set(['Challenge', 'Instant funding', 'Futures evaluation', 'Scaling']);

@@ -166,9 +166,9 @@ const phraseTranslations: Array<[RegExp, string]> = [
   [/promo futures [a\u00e0] revalider/gi, 'futures discount to revalidate'],
   [/promo [a\u00e0] confirmer/gi, 'discount to confirm'],
   [/pas une promo de prix/gi, 'not a price discount'],
-  [/promos?/gi, 'deals'],
-  [/promotionnel/gi, 'discount-related'],
-  [/promotion/gi, 'discount'],
+  // Word-bounded: English text such as "promotion", "promotional" or "promo code" must pass through unchanged.
+  [/\bpromotionnel(le)?s?\b/gi, 'discount-related'],
+  [/\bpromos?\b(?!\s?codes?)/gi, 'deals'],
   [/remise/gi, 'discount'],
   [/bon plan/gi, 'good deal'],
   [/bon point d'entr[e\u00e9]e/gi, 'good entry point'],

@@ -2669,3 +2669,110 @@ html body .home-tools-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
   .pr-filters-fab b { padding: 1px 7px; border-radius: 999px; background: color-mix(in srgb, var(--accent-ink) 18%, transparent); }
 }
+
+/* ==========================================================================
+   Design pass 30 Oct 2026: home hero, firm page order and pinned section nav
+   ========================================================================== */
+
+/* Home hero: the copy starts at the top of the radar card instead of floating mid-height. */
+html body .home-v2-hero { align-items: start; }
+html body .home-v2-hero-copy { padding-top: clamp(8px, 3vw, 40px); }
+
+/* Firm page: pinned copy of the section links. */
+.pr-subnav-pinned {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform 0.18s ease, visibility 0s linear 0.18s;
+}
+
+.pr-subnav-pinned.is-pinned { transform: none; visibility: visible; transition: transform 0.18s ease; }
+
+@supports (backdrop-filter: blur(8px)) {
+  .pr-subnav-pinned { background: color-mix(in srgb, var(--bg) 84%, transparent); backdrop-filter: blur(10px); }
+}
+
+.pr-subnav-pinned .container {
+  display: flex;
+  gap: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pr-subnav-pinned .container::-webkit-scrollbar { display: none; }
+
+.pr-subnav-pinned a,
+html body .firm-tabs.pr-subnav a {
+  flex: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pr-subnav-pinned a:hover { color: var(--text); background: var(--surface-2, var(--surface)); }
+.pr-subnav-pinned a[aria-current='location'] { color: var(--accent); background: var(--accent-wash, var(--surface-2)); }
+
+html body .firm-tabs.pr-subnav { position: static; margin-top: 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-subnav-pinned, .pr-subnav-pinned.is-pinned { transition: none; }
+}
+
+/* Anchored sections land below the pinned bar. */
+.pr-offers, .pr-decision, #regulatory, #audit, #guides, #faq, #sources, #case-timeline { scroll-margin-top: 64px; }
+
+/* Offers come right after the key facts. */
+html body .pr-offers { padding-top: clamp(20px, 3vw, 32px); }
+html body .pr-decision { padding-top: clamp(28px, 4vw, 44px); }
+html body .pr-decision > .pr-firm-profile:first-child,
+html body .pr-decision > :first-child { margin-top: 0; }
+
+/* Reliability profile: compact radar beside the proof list. */
+html body .pr-firm-profile { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); align-items: start; }
+html body .pr-firm-profile-chart svg { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; }
+html body .pr-firm-profile-chart .pr-relradar-note { margin-top: 4px; }
+
+/* Payout fact: one line, full sentence on demand. */
+.pr-payout-fact summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; cursor: pointer; list-style: none; }
+.pr-payout-fact summary::-webkit-details-marker { display: none; }
+.pr-payout-more { color: var(--accent); font-size: 13px; font-weight: 650; }
+.pr-payout-more::after { content: ' +'; }
+.pr-payout-fact[open] .pr-payout-more::after { content: ' −'; }
+.pr-payout-fact p { margin: 6px 0 0; color: var(--muted); font-size: 14px; font-weight: 500; line-height: 1.5; }
+
+/* Phone: score first, then a 3-column fact strip, verdict last. */
+@media (max-width: 640px) {
+  html body .pr-firm-hero { grid-template-areas: 'identity' 'scorecard' 'verdict'; gap: 14px; }
+  html body .pr-firm-verdict { font-size: 15px; }
+  html body .pr-firm-scorecard { padding: 14px 16px; gap: 14px; }
+  html body .pr-firm-scorecard .pr-ring-lg svg { width: 76px; height: 76px; }
+  html body .pr-firm-scorecard .pr-ring-lg .pr-ring-figure strong { font-size: 26px; }
+  html body .pr-firm-scorecard-label { display: none; }
+  html body .pr-firm-actions { margin-top: 2px; }
+  html body .pr-firm-actions .btn { min-height: 32px; padding: 0 12px; font-size: 13.5px; }
+
+  html body .pr-key-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 18px; }
+  html body .pr-key-facts > div { padding: 10px 8px 10px 0; border-top: 0; }
+  html body .pr-key-facts > div:nth-child(n) { padding-left: 8px; border-left: 1px solid var(--line); }
+  html body .pr-key-facts > div:nth-child(3n + 1) { padding-left: 0; border-left: 0; }
+  html body .pr-key-facts > div:nth-child(n + 4) { border-top: 1px solid var(--line); }
+  html body .pr-key-facts dt { font-size: 12px; }
+  html body .pr-key-facts dd { font-size: 14.5px; }
+  html body .pr-key-facts .pr-key-facts-wide { padding-left: 0; border-left: 0; }
+  html body .pr-key-facts .pr-key-facts-wide dd { font-size: 14px; }
+
+  html body .pr-firm-profile-chart svg { max-width: 300px; }
+}

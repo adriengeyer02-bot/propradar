@@ -40,6 +40,8 @@ export type FirmUpdate = {
     drawdownType: PropFirm['drawdownType'];
     newsTrading: 'Allowed' | 'Restricted' | 'Not recommended' | 'Variable';
     eaAllowed: 'Yes' | 'No' | 'On request' | 'Variable';
+    /** The official site states there is no entry fee. */
+    noEntryFee: boolean;
   }>;
   /**
    * Replaces the tracked programs with ones read on the official site. Start
@@ -95,6 +97,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     }
     if (set.newsTrading) next.newsTrading = set.newsTrading;
     if (set.eaAllowed) next.eaAllowed = set.eaAllowed;
+    if (typeof set.noEntryFee === 'boolean') next.noEntryFee = set.noEntryFee;
     if (typeof set.trustpilotRating === 'number') next.trustpilotRating = set.trustpilotRating;
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
     if (set.trustpilotSourceUrl) next.reviewSignals.trustpilotSourceUrl = set.trustpilotSourceUrl;

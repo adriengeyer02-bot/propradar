@@ -7,7 +7,7 @@ import PageStructuredData from '../components/PageStructuredData';
 import { createPageMetadata } from '../lib/pageMetadata';
 import {
   auditStatusClass,
-  formatUsd,
+  priceLabel,
   getFirmBySlug,
   payoutRiskClass,
   propFirms,
@@ -295,7 +295,7 @@ export default function PromosPage() {
                 </div>
               </div>
               <div className="deal-watch-metrics">
-                <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+                <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
                 <div><span>Score</span><strong>{firm.score}/100</strong></div>
                 <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
               </div>
@@ -330,7 +330,7 @@ export default function PromosPage() {
                   </div>
                 </div>
               </div>
-              <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+              <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
               <div><span>Trustpilot</span><strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'Not rated'}</strong></div>
               <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
@@ -371,7 +371,7 @@ export default function PromosPage() {
                   </div>
                 </div>
               </div>
-              <div><span>Min. price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+              <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
               <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
               <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>

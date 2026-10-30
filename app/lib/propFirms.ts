@@ -110,6 +110,8 @@ export type PropFirm = {
   bestFor: string;
   verdict: string;
   priceFrom: number;
+  /** True when the official site states there is no entry fee (read on a source, never a default). */
+  noEntryFee?: boolean;
   profitSplit: number;
   drawdownType: 'EOD' | 'Trailing' | 'Static' | 'Hybride';
   newsTrading: 'Autorisé' | 'Restreint' | 'Non recommandé' | 'Allowed' | 'Restricted' | 'Not recommended' | 'Variable';
@@ -12997,6 +12999,12 @@ export function manipulationRiskClass(risk: NonNullable<ReviewSignals['manipulat
 // those numbers must never be displayed as counted public mentions.
 export function hasMeasuredMentions(source?: string) {
   return Boolean(source) && source !== 'Estimation PropRadar';
+}
+
+/** Entry price label: "No entry fee" only when a source says so, "To verify" when unknown. */
+export function priceLabel(firm: Pick<PropFirm, 'priceFrom' | 'noEntryFee'>) {
+  if (firm.noEntryFee && !(firm.priceFrom > 0)) return 'No entry fee';
+  return formatUsd(firm.priceFrom);
 }
 
 export function formatUsd(value: number) {

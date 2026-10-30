@@ -6,7 +6,7 @@ import RiskPip from './RiskPip';
 import { entityCountries } from '../../lib/jurisdictions';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
-import { drawdownLabel, formatUsd } from '../../lib/propFirms';
+import { drawdownLabel, priceLabel } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, scoreTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 
@@ -85,7 +85,7 @@ export default function FirmRow({ firm, rank, children, subline, href }: FirmRow
         </span>
       </span>
       <span className="pr-firm-score" role="cell"><ScoreRing score={firm.score} size="sm" /></span>
-      <span className="pr-firm-fig pr-firm-price" role="cell"><small>From</small>{formatUsd(firm.priceFrom)}</span>
+      <span className="pr-firm-fig pr-firm-price" role="cell"><small>From</small>{priceLabel(firm)}</span>
       <span className="pr-firm-fig pr-firm-dd" role="cell"><small>Drawdown</small>{drawdownLabel(firm, toEnglishText)}</span>
       <span className="pr-firm-pips" role="cell">
         <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />

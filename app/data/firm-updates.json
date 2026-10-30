@@ -3956,7 +3956,7 @@
       ]
     },
     "axi-select": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -3966,11 +3966,20 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Entry price shown as 'No entry fee' instead of 'To verify': the official program page states there are no sign-up or membership fees and no challenge fee (entry needs at least $500 of the trader's own equity at the Seed stage, read on 2026-10-29).",
+          "source": "https://www.axi.com/int/funded-trader-program",
+          "fields": [
+            "noEntryFee"
+          ]
         }
       ],
       "set": {
         "profitSplit": 80,
-        "payoutDelay": "monthly, on the 1st of each month"
+        "payoutDelay": "monthly, on the 1st of each month",
+        "noEntryFee": true
       },
       "addSources": [
         {
