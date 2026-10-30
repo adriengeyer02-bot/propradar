@@ -3055,7 +3055,7 @@
       ]
     },
     "top-one-futures": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3072,6 +3072,15 @@
           "fields": [
             "products",
             "drawdownType"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 4.8 TrustScore across 5,269 reviews on the au mirror; trustpilot.com also shows 4.8 (5,252 reviews, earlier snapshot). Claimed profile, no rating-withheld or fake-review notice. The latest snapshot is stored.",
+          "source": "https://au.trustpilot.com/review/toponefutures.com?page=3",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -3094,7 +3103,10 @@
         }
       ],
       "set": {
-        "drawdownType": "Trailing"
+        "drawdownType": "Trailing",
+        "trustpilotRating": 4.8,
+        "trustpilotReviewCount": 5269,
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/toponefutures.com?page=3"
       },
       "setProducts": [
         {
@@ -3956,7 +3968,7 @@
       ]
     },
     "kortanafx": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -3966,11 +3978,23 @@
             "eaAllowed",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 2.4 TrustScore across 3,402 reviews on trustpilot.com (claimed profile); the ie mirror shows 2.4 across 3,401. Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. The latest snapshot is stored.",
+          "source": "https://www.trustpilot.com/review/kortanafx.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "eaAllowed": "Yes",
-        "payoutDelay": "7-day payouts stated on the homepage; the same page announces operations are paused until further notice"
+        "payoutDelay": "7-day payouts stated on the homepage; the same page announces operations are paused until further notice",
+        "trustpilotRating": 2.4,
+        "trustpilotReviewCount": 3402,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/kortanafx.com"
       },
       "addSources": [
         {
@@ -4002,7 +4026,7 @@
       ]
     },
     "atmos-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4013,11 +4037,23 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 3.5 TrustScore across 340 reviews on the au mirror; trustpilot.com showed 3.4 across 337 (earlier snapshot). Trustpilot also displays \"This company may be associated with high-risk investments.\" and notes the profile was merged with other profiles of the company. No rating-withheld or fake-review notice. The latest snapshot is stored.",
+          "source": "https://au.trustpilot.com/review/atmosfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "profitSplit": 90,
-        "payoutDelay": "on demand on 1-Step Nova; every 14 days on 2-Step and Instant Funding; the page gives processing as both 'within hours' and '2-5 business days' (FAQ)"
+        "payoutDelay": "on demand on 1-Step Nova; every 14 days on 2-Step and Instant Funding; the page gives processing as both 'within hours' and '2-5 business days' (FAQ)",
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 340,
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/atmosfunded.com"
       },
       "setProducts": [
         {
@@ -4100,7 +4136,7 @@
       ]
     },
     "orion-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4112,12 +4148,24 @@
             "drawdownType",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 4.5 TrustScore across 2,179 reviews on trustpilot.com (claimed profile); the au mirror also shows 4.5 (1,905 reviews, older snapshot). No rating-withheld or fake-review notice. The latest snapshot is stored.",
+          "source": "https://www.trustpilot.com/review/orionfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "profitSplit": 80,
         "drawdownType": "Hybride",
-        "payoutDelay": "withdrawals every 14 calendar days with processing within 48 hours (Standard, Select, Zero); the Nova page also says withdrawals are daily"
+        "payoutDelay": "withdrawals every 14 calendar days with processing within 48 hours (Standard, Select, Zero); the Nova page also says withdrawals are daily",
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 2179,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/orionfunded.com"
       },
       "setProducts": [
         {
@@ -4235,7 +4283,7 @@
       ]
     },
     "atlas-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4248,13 +4296,25 @@
             "eaAllowed",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 3.9 TrustScore across 2,015 reviews on trustpilot.com (claimed profile); the nz mirror showed an older snapshot (4.0, 1,815 reviews). No rating-withheld or fake-review notice. The latest snapshot is stored.",
+          "source": "https://www.trustpilot.com/review/atlasfunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "profitSplit": 90,
         "newsTrading": "Restricted",
         "eaAllowed": "Yes",
-        "payoutDelay": "first payout 14 days after the funded account is created, then every 14 days (weekly add-on); approved payouts processed within 24 hours, Monday to Friday"
+        "payoutDelay": "first payout 14 days after the funded account is created, then every 14 days (weekly add-on); approved payouts processed within 24 hours, Monday to Friday",
+        "trustpilotRating": 3.9,
+        "trustpilotReviewCount": 2015,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/atlasfunded.com"
       },
       "setProducts": [
         {
@@ -4421,6 +4481,63 @@
           "url": "https://bemfunding.com/"
         }
       ]
+    },
+    "cove-funded": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 4.1 TrustScore across 66 reviews on the au and ie mirrors (trustpilot.com could not be read). Trustpilot notes the company hasn't invited customers recently, so reviews may not be representative. The latest snapshot is stored.",
+          "source": "https://au.trustpilot.com/review/covefunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.1,
+        "trustpilotReviewCount": 66,
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/covefunded.com"
+      }
+    },
+    "fortunes-funding": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 3.6 TrustScore across 576 reviews on trustpilot.com (claimed profile); the ie mirror shows 3.6 across 568. Trustpilot notes the company hasn't invited customers recently. The latest snapshot is stored.",
+          "source": "https://www.trustpilot.com/review/fortunesfunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 576,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fortunesfunding.com"
+      }
+    },
+    "forex-funds-flow": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 3.6 TrustScore across 265 reviews on trustpilot.com (claimed profile); the au mirror showed an older snapshot (3.5, 256 reviews). No rating-withheld or fake-review notice. The latest snapshot is stored.",
+          "source": "https://www.trustpilot.com/review/forexfundsflow.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 265,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/forexfundsflow.com"
+      }
     }
   }
 }
