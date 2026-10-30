@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import FirmLogo from '../components/FirmLogo';
 import RiskPip from '../components/ui/RiskPip';
-import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
+import FirmRow, { FirmTableHead, type FirmSort, type FirmSortKey } from '../components/ui/FirmRow';
 import ScoreRing from '../components/ui/ScoreRing';
 import type { PropFirm } from '../lib/propFirms';
-import { activeFirms, formatUsd, isProvisional, propFirms, riskyFirms, hasPayoutRiskSignal } from '../lib/propFirms';
+import { activeFirms, isProvisional, propFirms, riskyFirms, hasPayoutRiskSignal } from '../lib/propFirms';
 import { entityCountries, jurisdictionByCode } from '../lib/jurisdictions';
 import { findFirmSearchMatch, normalizeFirmSearch } from '../lib/firmSearch';
 import { toEnglishText } from '../lib/i18n';
@@ -72,6 +72,31 @@ function legalRiskWeight(firm: PropFirm) {
   return riskScore + (firm.legalVerified ? 0 : 18) + (legalSourceCount(firm) < 2 ? 10 : 0);
 }
 
+const TONE_ORDER: Record<Tone, number> = { good: 0, watch: 1, risk: 2, none: 3 };
+
+/**
+ * Value used to sort a column. Unknown values ("To verify", "Not assessed",
+ * "Not checked") always sort last, whatever the direction.
+ */
+function sortValue(firm: PropFirm, key: FirmSortKey): number | null {
+  switch (key) {
+    case 'score': return firm.score;
+    case 'price': return firm.priceFrom > 0 ? firm.priceFrom : firm.noEntryFee ? 0 : null;
+    case 'split': return isProvisional(firm, 'profitSplit') || !(firm.profitSplit > 0) ? null : firm.profitSplit;
+    case 'payout': { const tone = payoutTone(firm.reviewSignals.payoutRisk); return tone === 'none' ? null : TONE_ORDER[tone]; }
+    case 'legal': { const tone = legalTone(firm.regulatoryAudit.riskLevel); return tone === 'none' ? null : TONE_ORDER[tone]; }
+    case 'trustpilot': {
+      if (firm.reviewSignals.trustpilotRatingWithheld) return -1;
+      return firm.trustpilotRating ? firm.trustpilotRating : null;
+    }
+  }
+}
+
+/** First click direction: best first (high score, low price, low risk...). */
+const SORT_LABEL: Record<FirmSortKey, string> = { score: 'score', price: 'entry price', split: 'profit split', payout: 'payout risk', legal: 'legal risk', trustpilot: 'Trustpilot rating' };
+
+const DEFAULT_DIR: Record<FirmSortKey, 'asc' | 'desc'> = { score: 'desc', price: 'asc', split: 'desc', payout: 'asc', legal: 'asc', trustpilot: 'desc' };
+
 function FirmSearchContext({ firm, query }: { firm: PropFirm; query: string }) {
   const match = findFirmSearchMatch(firm, query);
   if (!match) return null;
@@ -99,6 +124,16 @@ export default function Comparateur() {
   const filtersRef = useRef<HTMLDivElement>(null);
   const toolbarRef = useRef<HTMLElement>(null);
   const [toolbarHidden, setToolbarHidden] = useState(false);
+  const [sort, setSort] = useState<FirmSort | null>(null);
+  const [moreFilters, setMoreFilters] = useState(false);
+
+  function toggleSort(key: FirmSortKey) {
+    setSort((current) => {
+      if (!current || current.key !== key) return { key, dir: DEFAULT_DIR[key] };
+      if (current.dir === DEFAULT_DIR[key]) return { key, dir: current.dir === 'asc' ? 'desc' : 'asc' };
+      return null;
+    });
+  }
 
   const filteredFirms = useMemo(() => {
     const normalizedSearch = normalizeFirmSearch(search);
@@ -125,6 +160,14 @@ export default function Comparateur() {
         return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal && matchesCountry;
       })
       .sort((a, b) => {
+        if (sort) {
+          const va = sortValue(a.firm, sort.key);
+          const vb = sortValue(b.firm, sort.key);
+          if (va === null && vb !== null) return 1;
+          if (vb === null && va !== null) return -1;
+          if (va !== null && vb !== null && va !== vb) return sort.dir === 'asc' ? va - vb : vb - va;
+          return b.firm.score - a.firm.score;
+        }
         if (normalizedSearch) {
           const relevanceDifference = (b.searchMatch?.score ?? 0) - (a.searchMatch?.score ?? 0);
           if (relevanceDifference) return relevanceDifference;
@@ -132,13 +175,16 @@ export default function Comparateur() {
         return b.firm.score - a.firm.score;
       })
       .map(({ firm }) => firm);
-  }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+  }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, sort, status]);
 
   // Deep link from the legal map: /comparateur?country=LC
   useEffect(() => {
     try {
       const code = new URLSearchParams(window.location.search).get('country');
-      if (code && (code === 'none' || COUNTRY_OPTIONS.some((option) => option.code === code))) setCountry(code);
+      if (code && (code === 'none' || COUNTRY_OPTIONS.some((option) => option.code === code))) {
+        setCountry(code);
+        setMoreFilters(true);
+      }
     } catch {
       /* no query string support: keep the default filter */
     }
@@ -209,6 +255,7 @@ export default function Comparateur() {
   );
 
   const averageScore = Math.round(filteredFirms.reduce((sum, firm) => sum + firm.score, 0) / Math.max(filteredFirms.length, 1));
+  const moreFilterCount = [scoreMin !== 'Tous', market !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const filterOnlyCount = [status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const payoutAlerts = useMemo(
@@ -336,12 +383,6 @@ export default function Comparateur() {
             ))}
           </div>
 
-          <select value={scoreMin} onChange={(event) => setScoreMin(event.target.value as ScoreFilter)} aria-label="Minimum score">
-            <option value="Tous">Any score</option>
-            <option value="70">Score 70+</option>
-            <option value="80">Score 80+</option>
-            <option value="90">Score 90+</option>
-          </select>
           <select value={priceMax} onChange={(event) => setPriceMax(event.target.value as PriceFilter)} aria-label="Maximum price">
             <option value="Tous">Any price</option>
             <option value="50">Up to $50</option>
@@ -355,28 +396,46 @@ export default function Comparateur() {
             <option value="Static">Static</option>
             <option value="Hybride">Hybrid</option>
           </select>
-          <select value={market} onChange={(event) => setMarket(event.target.value as MarketFilter)} aria-label="Market">
-            <option value="Tous">All markets</option>
-            <option>Forex</option>
-            <option>Futures</option>
-            <option value="Actions">Stocks</option>
-            <option>Crypto</option>
-          </select>
-          <select value={legalFilter} onChange={(event) => setLegalFilter(event.target.value as LegalFilter)} aria-label="Legal evidence">
-            <option value="Tous">Any legal file</option>
-            <option value="verified">Entity mapped</option>
-            <option value="watch">Legal watch</option>
-            <option value="deep">5+ sources</option>
-          </select>
-          <select value={country} onChange={(event) => setCountry(event.target.value)} aria-label="Entity country">
-            <option value="Tous">Any country</option>
-            {COUNTRY_OPTIONS.map((option) => (
-              <option key={option.code} value={option.code}>
-                {option.name} ({option.n})
-              </option>
-            ))}
-            <option value="none">Country not identified</option>
-          </select>
+          <button
+            type="button"
+            className={`pr-more-toggle${moreFilters ? ' is-open' : ''}`}
+            onClick={() => setMoreFilters((open) => !open)}
+            aria-expanded={moreFilters}
+            aria-controls="comparator-more-filters"
+          >
+            {moreFilters ? 'Fewer filters' : 'More filters'}
+            {!moreFilters && moreFilterCount ? <b>{moreFilterCount}</b> : null}
+          </button>
+          <div className={`pr-filters-more${moreFilters ? ' is-shown' : ''}`} id="comparator-more-filters">
+            <select value={scoreMin} onChange={(event) => setScoreMin(event.target.value as ScoreFilter)} aria-label="Minimum score">
+              <option value="Tous">Any score</option>
+              <option value="70">Score 70+</option>
+              <option value="80">Score 80+</option>
+              <option value="90">Score 90+</option>
+            </select>
+            <select value={market} onChange={(event) => setMarket(event.target.value as MarketFilter)} aria-label="Market">
+              <option value="Tous">All markets</option>
+              <option>Forex</option>
+              <option>Futures</option>
+              <option value="Actions">Stocks</option>
+              <option>Crypto</option>
+            </select>
+            <select value={legalFilter} onChange={(event) => setLegalFilter(event.target.value as LegalFilter)} aria-label="Legal evidence">
+              <option value="Tous">Any legal file</option>
+              <option value="verified">Entity mapped</option>
+              <option value="watch">Legal watch</option>
+              <option value="deep">5+ sources</option>
+            </select>
+            <select value={country} onChange={(event) => setCountry(event.target.value)} aria-label="Entity country">
+              <option value="Tous">Any country</option>
+              {COUNTRY_OPTIONS.map((option) => (
+                <option key={option.code} value={option.code}>
+                  {option.name} ({option.n})
+                </option>
+              ))}
+              <option value="none">Country not identified</option>
+            </select>
+          </div>
           <div className="pr-sheet-foot">
             <button type="button" className="btn" onClick={resetFilters} disabled={!activeFilterCount}>Reset</button>
             <button type="button" className="btn btn-primary" onClick={() => setFiltersOpen(false)}>
@@ -397,7 +456,7 @@ export default function Comparateur() {
         <p>
           <strong>{filteredFirms.length} firms</strong>
           {filteredFirms.length > visibleEnd ? <span> · showing {visibleEnd}</span> : null}
-          {isSearching ? <span> · ranked by relevance</span> : <span> · average score {averageScore}</span>}
+          {sort ? <span> · sorted by {SORT_LABEL[sort.key]}{sort.key === 'score' ? '' : ', unknown values last'}</span> : isSearching ? <span> · ranked by relevance</span> : <span> · average score {averageScore}</span>}
         </p>
         <div className="pr-results-actions">
           {activeFilterCount > 0 ? <button type="button" className="pr-link-button" onClick={resetFilters}>Reset {activeFilterCount} filter{activeFilterCount > 1 ? 's' : ''}</button> : null}
@@ -413,7 +472,7 @@ export default function Comparateur() {
         </div>
       ) : (
         <div className="pr-firm-table" role="table" aria-label="Prop firms ranked by PropRadar score" onPointerMove={followPointer}>
-          <FirmTableHead />
+          <FirmTableHead sort={sort} onSort={toggleSort} />
           {visibleFirms.map((firm, index) => (
             <FirmRow key={firm.slug} firm={firm} rank={index + 1}>
               {isSearching ? <FirmSearchContext firm={firm} query={search} /> : null}

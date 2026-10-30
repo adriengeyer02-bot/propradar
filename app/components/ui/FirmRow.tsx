@@ -6,7 +6,7 @@ import RiskPip from './RiskPip';
 import { entityCountries } from '../../lib/jurisdictions';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
-import { drawdownLabel, priceLabel } from '../../lib/propFirms';
+import { drawdownLabel, priceLabel, profitSplitLabel } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, scoreTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 
@@ -32,14 +32,48 @@ export function shortLegal(level: PropFirm['regulatoryAudit']['riskLevel']) {
   return level;
 }
 
-export function FirmTableHead() {
+export type FirmSortKey = 'score' | 'price' | 'split' | 'payout' | 'legal' | 'trustpilot';
+export type FirmSort = { key: FirmSortKey; dir: 'asc' | 'desc' };
+
+const COLUMNS: { key: FirmSortKey | null; label: string; className?: string; title?: string }[] = [
+  { key: null, label: 'Firm' },
+  { key: 'score', label: 'Score' },
+  { key: 'price', label: 'From' },
+  { key: 'split', label: 'Split', className: 'pr-col-split' },
+  { key: null, label: 'Drawdown' },
+  { key: 'payout', label: 'Payout', title: 'Payout risk from sourced incidents or proof' },
+  { key: 'legal', label: 'Legal', title: 'Legal file risk level' },
+  { key: 'trustpilot', label: 'Trustpilot', title: 'Public Trustpilot rating, or Withheld' },
+];
+
+/**
+ * Column headers. With onSort (comparator), the sortable columns are buttons;
+ * without it (home, guides) they are plain labels.
+ */
+export function FirmTableHead({ sort, onSort }: { sort?: FirmSort | null; onSort?: (key: FirmSortKey) => void } = {}) {
   return (
     <div className="pr-firm-head" role="row">
-      <span role="columnheader">Firm</span>
-      <span role="columnheader">Score</span>
-      <span role="columnheader">From</span>
-      <span role="columnheader">Drawdown</span>
-      <span role="columnheader">Risk signals</span>
+      {COLUMNS.map((column) => {
+        const active = column.key && sort?.key === column.key;
+        return (
+          <span
+            key={column.label}
+            role="columnheader"
+            className={column.className}
+            title={column.title}
+            aria-sort={active ? (sort?.dir === 'asc' ? 'ascending' : 'descending') : undefined}
+          >
+            {column.key && onSort ? (
+              <button type="button" className={`pr-sort${active ? ' is-active' : ''}`} onClick={() => onSort(column.key as FirmSortKey)}>
+                {column.label}
+                <span aria-hidden="true" className="pr-sort-arrow">{active ? (sort?.dir === 'asc' ? '↑' : '↓') : '↕'}</span>
+              </button>
+            ) : (
+              column.label
+            )}
+          </span>
+        );
+      })}
       <span role="columnheader"><span className="sr-only">Profile</span></span>
     </div>
   );
@@ -86,11 +120,12 @@ export default function FirmRow({ firm, rank, children, subline, href }: FirmRow
       </span>
       <span className="pr-firm-score" role="cell"><ScoreRing score={firm.score} size="sm" /></span>
       <span className="pr-firm-fig pr-firm-price" role="cell"><small>From</small>{priceLabel(firm)}</span>
+      <span className="pr-firm-fig pr-firm-split pr-col-split" role="cell"><small>Split</small>{profitSplitLabel(firm)}</span>
       <span className="pr-firm-fig pr-firm-dd" role="cell"><small>Drawdown</small>{drawdownLabel(firm, toEnglishText)}</span>
-      <span className="pr-firm-pips" role="cell">
-        <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
-        <RiskPip compact label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-        <RiskPip compact label="Trustpilot" value={trustpilotPip(firm).value} tone={trustpilotPip(firm).tone} />
+      <span className="pr-firm-pips">
+        <span className="pr-firm-sig" role="cell"><RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} /></span>
+        <span className="pr-firm-sig" role="cell"><RiskPip compact label="Legal" value={shortLegal(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} /></span>
+        <span className="pr-firm-sig" role="cell"><RiskPip compact label="Trustpilot" value={trustpilotPip(firm).value} tone={trustpilotPip(firm).tone} /></span>
       </span>
       <span className="pr-firm-go" role="cell" aria-hidden="true">›</span>
     </Link>
