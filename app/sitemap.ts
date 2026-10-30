@@ -15,6 +15,7 @@ const staticRoutes = [
   { path: '/radar-brief', priority: 0.92, lastModified: '2026-07-19' },
   { path: '/best-prop-firms', priority: 0.9, lastModified: '2026-07-13' },
   { path: '/prop-firm-challenge', priority: 0.9, lastModified: '2026-10-29' },
+  { path: '/prop-firm-radar', priority: 0.9, lastModified: '2026-10-30' },
   { path: '/prop-firm-statistics', priority: 0.88, lastModified: '2026-10-29' },
   { path: '/prop-firm-payout-risk', priority: 0.88, lastModified: '2026-07-13' },
   { path: '/trustpilot-prop-firms', priority: 0.86, lastModified: '2026-07-13' },
