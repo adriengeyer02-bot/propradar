@@ -3,7 +3,7 @@ import FirmLogo from '../FirmLogo';
 import RiskPip from './RiskPip';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
-import { drawdownLabel, formatUsd, profitSplitLabel } from '../../lib/propFirms';
+import { drawdownLabel, formatUsd, priceLabel, profitSplitLabel } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 
@@ -32,7 +32,7 @@ const ROWS: Row[] = [
   },
   {
     label: 'From',
-    render: (firm) => formatUsd(firm.priceFrom),
+    render: (firm) => priceLabel(firm),
     best: (firms) => indexOfBest(firms, (firm) => (firm.priceFrom > 0 ? firm.priceFrom : undefined), 'min'),
   },
   { label: 'Profit split', render: (firm) => profitSplitLabel(firm) },

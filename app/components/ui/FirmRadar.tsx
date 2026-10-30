@@ -29,8 +29,14 @@ function point(radius: number, angleDeg: number) {
   return { x: CENTER + radius * Math.cos(rad), y: CENTER + radius * Math.sin(rad) };
 }
 
+/**
+ * Red is kept for closed firms. An open firm under 55 is grey: a low score
+ * means the file is thin or weak, not that a failure is documented.
+ */
 function toneFor(firm: PropFirm): Tone {
-  return firm.status === 'Fermée' ? 'risk' : scoreTone(firm.score);
+  if (firm.status === 'Fermée') return 'risk';
+  const tone = scoreTone(firm.score);
+  return tone === 'risk' ? 'none' : tone;
 }
 
 const STATUS_LABEL: Record<PropFirm['status'], string> = {

@@ -7,7 +7,7 @@ import CompareTable from '../components/ui/CompareTable';
 import ReliabilityRadar from '../components/ui/ReliabilityRadar';
 import type { PropFirm } from '../lib/propFirms';
 import {
-  formatUsd,
+  priceLabel,
   payoutRiskClass,
   propFirms,
   relationshipClass,
@@ -220,7 +220,7 @@ function bestReason(firm: PropFirm, style: StyleChoice, priority: PriorityChoice
   if (style === 'EA / Algo' && (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes')) return 'EAs allowed, with rules to review before use.';
   if (style === 'News trading' && isNewsAllowed(firm)) return 'News trading is more permissive than average.';
   if (style === 'Breakout') return 'Momentum profile: monitor drawdown, spread and consistency rules.';
-  if (priority === 'Prix' && firm.priceFrom > 0) return `Entry ticket around ${formatUsd(firm.priceFrom)}.`;
+  if (priority === 'Prix' && firm.priceFrom > 0) return `Entry ticket around ${priceLabel(firm)}.`;
   return toEnglishText(firm.bestFor);
 }
 
@@ -364,7 +364,7 @@ export default function OutilsClient() {
                   </div>
                 </div>
                 <div><span>Fit</span><strong>{Math.min(100, Math.max(0, Math.round(fitScore)))}/100</strong></div>
-                <div><span>Price</span><strong>{formatUsd(firm.priceFrom)}</strong></div>
+                <div><span>Price</span><strong>{priceLabel(firm)}</strong></div>
                 <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
                 <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
                   <span>Score</span>

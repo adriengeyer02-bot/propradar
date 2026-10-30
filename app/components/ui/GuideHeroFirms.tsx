@@ -3,7 +3,7 @@ import FirmLogo from '../FirmLogo';
 import RiskPip from './RiskPip';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
-import { formatUsd } from '../../lib/propFirms';
+import { priceLabel } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { payoutTone } from '../../lib/riskTone';
 
@@ -41,7 +41,7 @@ export default function GuideHeroFirms({ title, firms, facts, limit = 5, moreHre
                 <strong>{firm.name}</strong>
                 <span>
                   <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
-                  <em>From {formatUsd(firm.priceFrom)}</em>
+                  <em>From {priceLabel(firm)}</em>
                 </span>
               </span>
               <ScoreRing score={firm.score} size="sm" />

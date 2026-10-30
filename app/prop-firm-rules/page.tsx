@@ -4,7 +4,7 @@ import PageStructuredData from '../components/PageStructuredData';
 import { createPageMetadata } from '../lib/pageMetadata';
 import {
   auditStatusClass,
-  formatUsd,
+  priceLabel,
   getFirmBySlug,
   payoutRiskClass,
   propFirms,
@@ -971,7 +971,7 @@ export default function RulesPage() {
                 <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
                 <div>
                   <strong>{firm.name}</strong>
-                  <span>{toEnglishText(firm.products[0]?.name ?? 'Main product to identify')} - {formatUsd(firm.priceFrom)}</span>
+                  <span>{toEnglishText(firm.products[0]?.name ?? 'Main product to identify')} - {priceLabel(firm)}</span>
                 </div>
               </div>
               <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
@@ -1004,7 +1004,7 @@ export default function RulesPage() {
                 <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
                 <div>
                   <strong>{firm.name}</strong>
-                  <span>{formatUsd(firm.priceFrom)} - score {firm.score}/100</span>
+                  <span>{priceLabel(firm)} - score {firm.score}/100</span>
                 </div>
               </div>
               <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>

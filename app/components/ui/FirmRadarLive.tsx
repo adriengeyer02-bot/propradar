@@ -29,8 +29,8 @@ const PERIOD_MS = 6500;
 /** Pointer must be this close (viewBox units) to pick a dot. */
 const PICK_RADIUS = 14;
 
-// Bands of the PropRadar score (see scoreTone), not a risk verdict on each firm.
-const TONE_LABEL: Record<Tone, string> = { good: 'Score 75+', watch: 'Score 55–74', risk: 'Under 55 or closed', none: 'Not assessed' };
+// Bands of the PropRadar score (see scoreTone), not a risk verdict on each firm. Red is only used for closed firms.
+const TONE_LABEL: Record<Tone, string> = { good: 'Score 75+', watch: 'Score 55–74', none: 'Under 55', risk: 'Closed' };
 const DEFAULT_HINT = 'Closer to the centre = higher score. Point at a dot, a ring or a category.';
 
 function radiusFor(score: number) {
@@ -260,7 +260,7 @@ export default function FirmRadarLive({ dots }: { dots: RadarDot[] }) {
       </div>
 
       <figcaption className="pr-radar-legend">
-        {(['good', 'watch', 'risk'] as Tone[]).map((tone) => (
+        {(['good', 'watch', 'none', 'risk'] as Tone[]).map((tone) => (
           <button
             key={tone}
             type="button"
