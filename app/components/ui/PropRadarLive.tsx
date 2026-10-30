@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
 import {
   RADAR_CENTER as C,
   RADAR_ORBIT,
@@ -61,7 +61,7 @@ function shortName(name: string) {
  * names each firm scoring 75+ as it passes. Readable without JavaScript and
  * static with reduced motion.
  */
-export default function PropRadarLive({ data, variant = 'full' }: { data: RadarData; variant?: Variant }) {
+export default function PropRadarLive({ data, variant = 'full', intro }: { data: RadarData; variant?: Variant; intro?: ReactNode }) {
   const router = useRouter();
   const svgRef = useRef<SVGSVGElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -70,6 +70,7 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
   const dotRefs = useRef<(SVGCircleElement | null)[]>([]);
   const labelRefs = useRef<(SVGTextElement | null)[]>([]);
   const quietRef = useRef(false);
+  const pointerRef = useRef<string>('mouse');
 
   const [ready, setReady] = useState(false);
   const [hoverSector, setHoverSector] = useState<number | null>(null);
@@ -78,6 +79,8 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
   const [focus, setFocus] = useState<Focus | null>(null);
   const [pinned, setPinned] = useState(false);
   const [query, setQuery] = useState('');
+  const [narrow, setNarrow] = useState(false);
+  const [touched, setTouched] = useState(false);
   const [shownCounts, setShownCounts] = useState<Record<Band, number>>({ good: 0, watch: 0, none: 0, closed: 0 });
 
   const sector = lockedSector ?? hoverSector;
@@ -92,6 +95,28 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
     () => [...data.dots.map((d) => d.name), ...data.closed.map((c) => c.name)].sort((a, b) => a.localeCompare(b)),
     [data],
   );
+
+  // Below 960px the side panel sits under the radar, so a tapped firm opens in a bottom sheet.
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 960px)');
+    const update = () => setNarrow(query.matches);
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+
+  // Escape closes a pinned firm (bottom sheet on phones, pinned tooltip on the home radar).
+  useEffect(() => {
+    if (!pinned) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setPinned(false);
+        setFocus(null);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [pinned]);
 
   // Intro (dots travel out from the centre, best scores first), then the sweep loop.
   useEffect(() => {
@@ -191,9 +216,16 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
     return { x: ((event.clientX - rect.left) / rect.width) * S, y: ((event.clientY - rect.top) / rect.height) * S };
   }
 
+  /** Pick radius in radar units: about 24 screen pixels for a finger, PICK for a mouse. */
+  function pickRadius() {
+    if (pointerRef.current === 'mouse' || !svgRef.current) return PICK;
+    return Math.max(PICK, (24 * S) / Math.max(1, svgRef.current.getBoundingClientRect().width));
+  }
+
   function pick(x: number, y: number): Focus | null {
     let best: Focus | null = null;
-    let bestDistance = PICK * PICK;
+    const radius = pickRadius();
+    let bestDistance = radius * radius;
     data.dots.forEach((dot) => {
       if (dimDot(dot)) return;
       const d = (dot.x - x) ** 2 + (dot.y - y) ** 2;
@@ -215,7 +247,8 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
   }
 
   function onMove(event: ReactPointerEvent<SVGSVGElement>) {
-    if (pinned) return;
+    pointerRef.current = event.pointerType;
+    if (pinned || event.pointerType !== 'mouse') return;
     const { x, y } = toSvg(event);
     const hit = pick(x, y);
     if (hit) {
@@ -239,7 +272,16 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
     const hit = pick(x, y);
     if (hit) {
       const slug = hit.kind === 'dot' ? hit.dot.slug : hit.firm.slug;
+      setTouched(true);
       if (variant === 'compact') {
+        // A finger cannot hover: the first tap previews the firm, a second tap on it opens the page.
+        const current = focus ? (focus.kind === 'dot' ? focus.dot.slug : focus.firm.slug) : null;
+        if (pointerRef.current !== 'mouse' && (!pinned || current !== slug)) {
+          setFocus(hit);
+          setPinned(true);
+          if (hit.kind === 'dot') ping(hit.dot);
+          return;
+        }
         router.push(`/firm/${slug}`);
         return;
       }
@@ -249,7 +291,15 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
       return;
     }
     setPinned(false);
+    setFocus(null);
+    if (pointerRef.current !== 'mouse') return;
     if (hoverSector !== null) setLockedSector((current) => (current === hoverSector ? null : hoverSector));
+  }
+
+  function closeSheet() {
+    setPinned(false);
+    setFocus(null);
+    setQuery('');
   }
 
   function onSearch(value: string) {
@@ -285,13 +335,17 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
             ? { n: String(band === 'closed' ? data.counts.closed : data.counts[band]), s: BAND_LABEL[band] }
             : { n: String(shownCounts.good + shownCounts.watch + shownCounts.none), s: 'open firms on radar' };
 
-  const tip = focus && !pinned && panelRef.current && svgRef.current ? (() => {
+  const showTip = Boolean(focus) && (!pinned || variant === 'compact');
+  const tip = focus && showTip && panelRef.current && svgRef.current ? (() => {
     const panel = panelRef.current!.getBoundingClientRect();
     const rect = svgRef.current!.getBoundingClientRect();
     const p = focus.kind === 'dot' ? focus.dot : focus.firm;
     const left = Math.min(panel.width - 214, Math.max(8, (p.x / S) * rect.width + (rect.left - panel.left) + 14));
-    const top = Math.max(8, (p.y / S) * rect.height + (rect.top - panel.top) - 76);
-    return { left, top };
+    const y = (p.y / S) * rect.height + (rect.top - panel.top);
+    // A pinned tip (touch) has a link and must not cover the dot: above it, or below when there is no room.
+    const height = pinned ? 124 : 76;
+    const top = y - height - 10 >= 4 ? y - height - 10 : y + 16;
+    return { left, top: pinned ? top : Math.max(8, y - 76) };
   })() : null;
 
   const radar = (
@@ -308,6 +362,7 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
         role="img"
         aria-label={`Radar of ${data.total} prop firms: ${data.counts.good} score 75 or more, ${data.counts.watch} score 55 to 74, ${data.counts.none} under 55, ${data.counts.closed} closed. Angle shows the market, distance shows the PropRadar score.`}
         onPointerMove={onMove}
+        onPointerDown={(event) => { pointerRef.current = event.pointerType; }}
         onPointerLeave={() => {
           if (pinned) return;
           setFocus(null);
@@ -345,7 +400,7 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
         ))}
         <circle cx={C} cy={C} r={RADAR_OUTER} className="prr-rim" />
         {data.sectors.map((s, index) => (
-          <text key={s.key} className={`prr-sector-label${sector === index ? ' is-on' : ''}`} dy={labels[index].flip ? 8 : 0}>
+          <text key={s.key} className={`prr-sector-label${sector === index ? ' is-on' : ''}${s.end - s.start < 22 ? ' is-narrow' : ''}`} dy={labels[index].flip ? 8 : 0}>
             <textPath href={`#prr-label-${variant}-${index}`} startOffset="50%" textAnchor="middle">
               {s.key} · {s.count}
             </textPath>
@@ -374,6 +429,7 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
               cx={dot.x}
               cy={dot.y}
               r={dot.size}
+              style={{ ['--r' as string]: dot.size }}
               className={`prr-dot prr-${dot.tone}${dot.withheld ? ' is-hollow' : ''}${dimDot(dot) ? ' is-dim' : ''}`}
             />
           ))}
@@ -398,7 +454,7 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
         ) : null}
       </svg>
       {tip && focus ? (
-        <div className="prr-tip" style={{ left: tip.left, top: tip.top }} aria-hidden="true">
+        <div className={`prr-tip${pinned ? ' is-pinned' : ''}`} style={{ left: tip.left, top: tip.top }} aria-hidden={pinned ? undefined : true}>
           <strong>{focus.kind === 'dot' ? focus.dot.name : focus.firm.name}</strong>
           {focus.kind === 'dot' ? (
             <>
@@ -408,8 +464,14 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
           ) : (
             <span><span>Closed</span><b>{focus.firm.closed ?? 'date not stated'}</b></span>
           )}
+          {pinned ? (
+            <Link href={`/firm/${focus.kind === 'dot' ? focus.dot.slug : focus.firm.slug}`} className="prr-tip-link">
+              Open the profile <span aria-hidden="true">→</span>
+            </Link>
+          ) : null}
         </div>
       ) : null}
+      {!touched ? <p className="prr-taphint" aria-hidden="true">Tap a dot to read the firm</p> : null}
     </div>
   );
 
@@ -448,7 +510,7 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
       <div className="prr prr-is-compact">
         {radar}
         {bands}
-        <p className="prr-hint">Angle = market, distance = score. Point at a dot, a slice or a band; click a dot to open the firm.</p>
+        <p className="prr-hint">Angle = market, distance = score. Point at or tap a dot to read the firm, then open its page.</p>
       </div>
     );
   }
@@ -522,8 +584,26 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
   })();
 
   return (
-    <div className="prr prr-is-full">
+    <div className={`prr prr-is-full${intro ? ' has-intro' : ''}`}>
+      {intro ? <div className="prr-intro">{intro}</div> : null}
       <div className="prr-main">
+        <div className="prr-chips" role="group" aria-label="Markets">
+          <button type="button" aria-pressed={lockedSector === null} onClick={() => { setLockedSector(null); closeSheet(); }}>All markets</button>
+          {data.sectors.map((s, index) => (
+            <button
+              key={s.key}
+              type="button"
+              aria-pressed={lockedSector === index}
+              onClick={() => {
+                closeSheet();
+                setTouched(true);
+                setLockedSector((current) => (current === index ? null : index));
+              }}
+            >
+              {s.key} <small>{s.count}</small>
+            </button>
+          ))}
+        </div>
         {radar}
         {legend}
       </div>
@@ -567,6 +647,15 @@ export default function PropRadarLive({ data, variant = 'full' }: { data: RadarD
         </div>
         {card}
       </aside>
+      {narrow && pinned && focus ? (
+        <>
+          <div className="prr-sheet-backdrop" onClick={closeSheet} aria-hidden="true" />
+          <div className="prr-sheet" role="dialog" aria-modal="false" aria-label={focus.kind === 'dot' ? focus.dot.name : focus.firm.name}>
+            <button type="button" className="prr-sheet-close" onClick={closeSheet} aria-label="Close">×</button>
+            {card}
+          </div>
+        </>
+      ) : null}
     </div>
   );
 }
