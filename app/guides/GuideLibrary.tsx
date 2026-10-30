@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
+import GuideCover from '../components/guide-visuals/GuideCover';
+import type { GuideCoverData } from '../lib/guideCovers';
 import { useMemo, useState } from 'react';
 
 export type GuideType = 'selection' | 'comparison' | 'rules' | 'risk' | 'style' | 'deals';
@@ -27,6 +29,8 @@ export type GuideLibraryItem = {
   /** Up to four linked firms, shown as logos instead of a stock image. */
   firms: { slug: string; name: string; logoDomain?: string }[];
   keywords: string[];
+  /** Data-driven cover drawn from the firm files (see lib/guideCovers). */
+  cover: GuideCoverData;
 };
 
 export function GuideLogoStrip({ firms, total }: { firms: GuideLibraryItem['firms']; total: number }) {
@@ -164,8 +168,8 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
         <div className="guide-library-grid">
           {filteredGuides.map((guide) => (
             <Link href={guide.path} className={`guide-library-card guide-theme-${guide.type}`} key={guide.path}>
+              <GuideCover data={guide.cover} uid="lib" className="guide-card-cover" />
               <div className="guide-library-card-head">
-                <span className="guide-topic-mark" aria-hidden="true">{guide.mark}</span>
                 <div>
                   <span className="guide-card-type">{guide.typeLabel}</span>
                   <small>{guide.level}</small>
@@ -173,6 +177,7 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
                 {guide.recentlyUpdated ? <span className="guide-updated-badge">Recently updated</span> : null}
               </div>
 
+              <h3 className="guide-library-card-title">{guide.title}</h3>
               <GuideLogoStrip firms={guide.firms} total={guide.firmCount} />
 
               <div className="guide-library-card-metrics" aria-label={`${guide.title} coverage`}>

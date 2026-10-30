@@ -146,7 +146,7 @@ function ConsistencyExample() {
 function TrailingVsStatic() {
   // $50,000 account, $2,500 limit. Trade runs to +$1,500 unrealized, closed at breakeven.
   const y = (v: number) => 20 + ((52000 - v) / (52000 - 47000)) * 150;
-  const xs = [40, 170, 300, 420];
+  const xs = [70, 190, 310, 420];
   const equity = [50000, 51500, 50000, 50000];
   const trailing = [47500, 49000, 49000, 49000];
   const path = (vals: number[]) => vals.map((v, i) => `${i ? 'L' : 'M'}${xs[i]},${y(v)}`).join(' ');
@@ -157,8 +157,8 @@ function TrailingVsStatic() {
       <svg className="pr-dg-line" viewBox="0 0 460 210" role="img" aria-label="Equity rises to 51,500 dollars unrealized, then the trade closes at breakeven at 50,000. The static floor stays at 47,500, leaving 2,500 dollars of room. The intraday trailing floor rises to 49,000, leaving only 1,000 dollars of room.">
         {[47500, 49000, 50000, 51500].map((v) => (
           <g key={v}>
-            <line x1="30" x2="440" y1={y(v)} y2={y(v)} className="pr-dg-grid" />
-            <text x="26" y={y(v) + 4} textAnchor="end" className="pr-dg-svg-label">{`$${(v / 1000).toFixed(1)}k`}</text>
+            <line x1="60" x2="440" y1={y(v)} y2={y(v)} className="pr-dg-grid" />
+            <text x="54" y={y(v) + 4} textAnchor="end" className="pr-dg-svg-label">{`$${(v / 1000).toFixed(1)}k`}</text>
           </g>
         ))}
         <line x1={xs[0]} x2={xs[3]} y1={y(47500)} y2={y(47500)} className="pr-dg-floor-static" />
@@ -166,7 +166,7 @@ function TrailingVsStatic() {
         <path d={path(equity)} className="pr-dg-equity" />
         <circle cx={xs[1]} cy={y(51500)} r="4" className="pr-dg-dot" />
         <text x={xs[1]} y={y(51500) - 10} textAnchor="middle" className="pr-dg-svg-value">+$1,500 unrealized</text>
-        <text x={xs[2]} y={y(50000) - 10} textAnchor="middle" className="pr-dg-svg-label">closed at breakeven</text>
+        <text x={(xs[2] + xs[3]) / 2} y={y(50000) - 10} textAnchor="middle" className="pr-dg-svg-label">closed at breakeven</text>
 
         <line x1="436" x2="436" y1={y(50000)} y2={y(49000)} className="pr-dg-room-risk" />
         <line x1="446" x2="446" y1={y(50000)} y2={y(47500)} className="pr-dg-room-good" />

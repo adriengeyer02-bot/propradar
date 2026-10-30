@@ -21,6 +21,8 @@ import { SITE_NAME, SITE_URL } from '../lib/site';
 import { toEnglishText } from '../lib/i18n';
 import { getEditorialBriefPath, latestEditorialBrief } from '../lib/editorialBriefs';
 import { GUIDE_EDITORIAL_REFRESH_DATE } from '../lib/guideVisuals';
+import { buildGuideCover } from '../lib/guideCovers';
+import GuideCover from '../components/guide-visuals/GuideCover';
 
 export const revalidate = 86400;
 
@@ -227,14 +229,15 @@ function buildGuideCard(guide: SeoGuide): GuideLibraryItem {
     mark: guideMarks[type],
     firms: linkedFirms.slice(0, 4).map((firm) => ({ slug: firm.slug, name: firm.name, logoDomain: firm.logoDomain })),
     keywords: [...display.primaryKeywords, ...display.secondaryKeywords],
+    cover: buildGuideCover(guide),
   };
 }
 
 function FeaturedGuideCard({ guide }: { guide: GuideLibraryItem }) {
   return (
     <Link href={guide.path} className={`guide-featured-card guide-theme-${guide.type}`}>
+      <GuideCover data={guide.cover} uid="feat" className="guide-card-cover" />
       <div className="guide-featured-card-top">
-        <span className="guide-topic-mark" aria-hidden="true">{guide.mark}</span>
         <span>{guide.typeLabel}</span>
         {guide.recentlyUpdated ? <strong>Recently updated</strong> : null}
       </div>
