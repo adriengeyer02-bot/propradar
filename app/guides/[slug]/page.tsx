@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import FirmLogo from '../../components/FirmLogo';
 import GuideHelpfulness from '../../components/GuideHelpfulness';
+import GuideCover from '../../components/guide-visuals/GuideCover';
+import { buildGuideCover } from '../../lib/guideCovers';
 import GuideHeroFirms from '../../components/ui/GuideHeroFirms';
 import CompareTable from '../../components/ui/CompareTable';
 import FirmRow, { FirmTableHead } from '../../components/ui/FirmRow';
@@ -1451,6 +1453,8 @@ export default async function SeoGuidePage({ params }: Props) {
             <Link href="/tools" className="btn">Choose by style</Link>
           </div>
         </div>
+        <div className="guide-hero-side">
+        <GuideCover data={buildGuideCover(guide)} className="guide-hero-cover" />
         <GuideHeroFirms
           title={headToHeadFirms.length >= 2 ? 'Compared in this guide' : 'Firms in this guide'}
           firms={headToHeadFirms.length >= 2 ? headToHeadFirms : firms}
@@ -1463,6 +1467,7 @@ export default async function SeoGuidePage({ params }: Props) {
               : [`${guideLegalMappedCount} legal files mapped`, `${guidePayoutWatchCount} on payout watch`, `updated ${modifiedDateLabel}`]
           }
         />
+        </div>
       </section>
 
       <nav className="guide-toc" aria-label="On this guide">

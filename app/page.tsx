@@ -13,6 +13,8 @@ import {
   verifiedFirms,
 } from './lib/propFirms';
 import { getSeoGuideDisplay, getSeoGuidePath, selectGuideFirms, seoGuides } from './lib/seoGuides';
+import { buildGuideCover } from './lib/guideCovers';
+import GuideCover from './components/guide-visuals/GuideCover';
 import { GuideLogoStrip } from './guides/GuideLibrary';
 import { toEnglishText } from './lib/i18n';
 import FirmRow, { FirmTableHead } from './components/ui/FirmRow';
@@ -276,6 +278,7 @@ export default function HomePage() {
         <div className="home-guide-grid">
           {homepageGuides.map(({ guide, displayGuide }) => (
             <Link href={getSeoGuidePath(guide)} className="home-guide-card" key={guide.slug}>
+              <GuideCover data={buildGuideCover(guide)} className="home-guide-cover" />
               <span className="home-guide-content">
                 <small>{displayGuide.eyebrow}</small>
                 <strong>{displayGuide.title}</strong>
