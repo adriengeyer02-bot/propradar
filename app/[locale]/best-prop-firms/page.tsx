@@ -23,6 +23,11 @@ import {
 import { toEnglishText } from '../../lib/i18n';
 import { GUIDE_EDITORIAL_REFRESH_DATE } from '../../lib/guideVisuals';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
+import { permanentRedirect } from 'next/navigation';
+import LocalizedGuide, { localizedGuideMetadata } from '../../components/LocalizedGuide';
+import { getGuideTranslation, guideLanguageAlternates } from '../../lib/guideI18n';
+import { isLocale, type Locale } from '../../lib/locales';
+import { getSeoGuideBySlug } from '../../lib/seoGuides';
 
 const BEST_PROP_FIRMS_DESCRIPTION =
   'What are the best prop firms right now? Compare current leaders by payout reliability, legal proof, rule clarity, source depth and community signals.';
@@ -34,7 +39,7 @@ const BEST_PROP_FIRMS_UPDATED_AT = propFirms.reduce(
   GUIDE_EDITORIAL_REFRESH_DATE
 );
 
-export const metadata: Metadata = {
+const EN_METADATA: Metadata = {
   title: 'Best Prop Firms Right Now: Risk-First Ranking (2026)',
   description: BEST_PROP_FIRMS_DESCRIPTION,
   authors: [{ name: 'PropRadar Research', url: '/audit' }],
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
   category: 'Prop firm due diligence',
   alternates: {
     canonical: '/best-prop-firms',
-    languages: { en: '/best-prop-firms', fr: '/fr/meilleures-prop-firms-2026', 'x-default': '/best-prop-firms' },
+    languages: guideLanguageAlternates('meilleure-prop-firm-2026'),
   },
   openGraph: {
     title: 'Best Prop Firms Right Now: Risk-First Ranking (2026)',
@@ -108,7 +113,25 @@ function legalRiskWeight(firm: PropFirm) {
   return riskScore + (firm.legalVerified ? 0 : 18) + (legalSourceCount(firm) < 2 ? 10 : 0);
 }
 
-export default function BestPropFirmsPage() {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const guide = getSeoGuideBySlug('meilleure-prop-firm-2026');
+  const translation = getGuideTranslation(locale, 'meilleure-prop-firm-2026');
+  if (guide && translation && locale !== 'fr') return localizedGuideMetadata(locale, guide, translation);
+  return locale === 'en' ? EN_METADATA : { ...EN_METADATA, robots: { index: false, follow: true } };
+}
+
+export default async function BestPropFirmsPage({ params }: Props) {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  if (locale === 'fr') permanentRedirect('/fr/meilleures-prop-firms-2026');
+  const localizedGuide = getSeoGuideBySlug('meilleure-prop-firm-2026');
+  const translation = getGuideTranslation(locale, 'meilleure-prop-firm-2026');
+  if (localizedGuide && translation) return <LocalizedGuide locale={locale} guide={localizedGuide} translation={translation} />;
+
   const bestArticle = getGuideArticle('meilleure-prop-firm-2026');
   const editorial = getGuideEditorial('meilleure-prop-firm-2026');
   const shortlist = topFirms

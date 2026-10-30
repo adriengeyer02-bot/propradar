@@ -22,22 +22,47 @@ import { toEnglishText } from '../../lib/i18n';
 import { getEditorialBriefPath, latestEditorialBrief } from '../../lib/editorialBriefs';
 import { GUIDE_EDITORIAL_REFRESH_DATE } from '../../lib/guideVisuals';
 import { buildGuideCover } from '../../lib/guideCovers';
-import GuideCover from '../../components/guide-visuals/GuideCover';
+import GuideCover, { type CoverLabels } from '../../components/guide-visuals/GuideCover';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { fmt, formatDateLong, getMessages } from '../../lib/messages';
+import { getGuideTranslation, guideLocales, localizedGuidePath } from '../../lib/guideI18n';
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  if (locale === 'en') return EN_METADATA;
+  const h = getMessages(locale).guide.hub;
+  return {
+    title: h.metaTitle,
+    description: h.metaDescription,
+    alternates: localeAlternates(locale, '/guides'),
+    openGraph: {
+      title: h.metaTitle,
+      description: h.metaDescription,
+      url: `${SITE_URL}${localePath(locale, '/guides')}`,
+      type: 'website',
+      siteName: SITE_NAME,
+      locale: OG_LOCALE[locale],
+      images: [{ url: `${SITE_URL}/guides/meilleure-prop-firm-2026/opengraph-image`, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', title: h.metaTitle, description: h.metaDescription },
+  };
+}
 
 export const revalidate = 86400;
 
 const GUIDES_DESCRIPTION =
   'PropRadar guides built around real trader searches: best prop firm, futures, news trading, SMC, payout, consistency rule, deals and brand comparisons.';
 
-export const metadata: Metadata = {
+const EN_METADATA: Metadata = {
   title: 'Prop Firm Guides: Rules, Payouts & Comparisons',
   description: GUIDES_DESCRIPTION,
   authors: [{ name: 'PropRadar Research', url: '/audit' }],
   creator: 'PropRadar Research',
   publisher: SITE_NAME,
-  alternates: {
-    canonical: '/guides',
-  },
+  alternates: localeAlternates('en', '/guides'),
   openGraph: {
     title: 'Prop Firm Guides: Rules, Payouts & Comparisons',
     description: GUIDES_DESCRIPTION,
@@ -205,58 +230,148 @@ function formatGuideDate(date: Date) {
   }).format(date);
 }
 
-function buildGuideCard(guide: SeoGuide): GuideLibraryItem {
+function buildGuideCard(guide: SeoGuide, locale: Locale = 'en'): GuideLibraryItem {
   const display = getSeoGuideDisplay(guide);
+  const tr = getGuideTranslation(locale, guide.slug);
+  const types = getMessages(locale).guide.types;
   const linkedFirms = selectGuideFirms(guide, propFirms.length);
   const type = guideType(guide);
   const modifiedDate = getGuideLastModified(guide);
 
   return {
-    path: getSeoGuidePath(guide),
-    title: display.title,
-    description: display.metaDescription,
-    eyebrow: display.eyebrow,
+    path: localizedGuidePath(locale, guide),
+    title: tr?.title ?? display.title,
+    description: tr?.metaDescription ?? display.metaDescription,
+    eyebrow: tr?.eyebrow ?? display.eyebrow,
     type,
-    typeLabel: guideTypeLabels[type],
+    typeLabel: locale === 'en' ? guideTypeLabels[type] : types[type],
     level: guideLevel(guide),
     focuses: guideFocuses(guide),
     firmCount: linkedFirms.length,
     deepSourceCount: linkedFirms.filter((firm) => legalSourceCount(firm) >= 5).length,
     payoutWatchCount: linkedFirms.filter((firm) => hasPayoutRiskSignal(firm)).length,
     updatedIso: modifiedDate.toISOString().slice(0, 10),
-    updatedLabel: formatGuideDate(modifiedDate),
+    updatedLabel: locale === 'en' ? formatGuideDate(modifiedDate) : formatDateLong(locale, modifiedDate.toISOString()),
     recentlyUpdated: recentlyUpdatedSlugs.has(guide.slug),
     mark: guideMarks[type],
     firms: linkedFirms.slice(0, 4).map((firm) => ({ slug: firm.slug, name: firm.name, logoDomain: firm.logoDomain })),
-    keywords: [...display.primaryKeywords, ...display.secondaryKeywords],
+    keywords: tr ? [tr.h1, tr.answer, ...display.primaryKeywords] : [...display.primaryKeywords, ...display.secondaryKeywords],
     cover: buildGuideCover(guide),
   };
 }
 
-function FeaturedGuideCard({ guide }: { guide: GuideLibraryItem }) {
+const EN_CARD = { recentlyUpdated: 'Recently updated', linkedFirms: '{count} linked firms', updated: 'Updated {date}' };
+
+function FeaturedGuideCard({ guide, labels = EN_CARD, coverLabels }: { guide: GuideLibraryItem; labels?: typeof EN_CARD; coverLabels?: CoverLabels }) {
   return (
     <Link href={guide.path} className={`guide-featured-card guide-theme-${guide.type}`}>
-      <GuideCover data={guide.cover} uid="feat" className="guide-card-cover" />
+      <GuideCover data={guide.cover} uid="feat" className="guide-card-cover" labels={coverLabels} />
       <div className="guide-featured-card-top">
         <span>{guide.typeLabel}</span>
-        {guide.recentlyUpdated ? <strong>Recently updated</strong> : null}
+        {guide.recentlyUpdated ? <strong>{labels.recentlyUpdated}</strong> : null}
       </div>
       <GuideLogoStrip firms={guide.firms} total={guide.firmCount} />
       <h3>{guide.title}</h3>
       <p>{guide.description}</p>
       <div className="guide-featured-card-foot">
-        <span>{guide.firmCount} linked firms</span>
-        <span>Updated {guide.updatedLabel}</span>
+        <span>{fmt(labels.linkedFirms, { count: guide.firmCount })}</span>
+        <span>{fmt(labels.updated, { date: guide.updatedLabel })}</span>
         <strong aria-hidden="true">&#8594;</strong>
       </div>
     </Link>
   );
 }
 
-export default function GuidesHubPage() {
+function libraryLabels(locale: Locale) {
+  const g = getMessages(locale).guide;
+  return { ...g.library, levels: g.levels, recentlyUpdated: g.hub.recentlyUpdated };
+}
+
+/** Hub in another language: translated hero, featured guides and library. */
+function LocalizedGuidesHub({ locale }: { locale: Locale }) {
+  const g = getMessages(locale).guide;
+  const h = g.hub;
+  const translated = seoGuides.filter((guide) => guideLocales(guide).includes(locale));
+  const cards = translated.map((guide) => buildGuideCard(guide, locale));
+  const featured = featuredGuideSlugs
+    .map((slug) => translated.find((guide) => guide.slug === slug))
+    .filter((guide): guide is SeoGuide => Boolean(guide))
+    .map((guide) => buildGuideCard(guide, locale));
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const legalWatchCount = propFirms.filter(isLegalWatchFirm).length;
-  const guideCards = seoGuides.map(buildGuideCard);
+  const latest = translated.map((guide) => getGuideLastModified(guide).toISOString().slice(0, 10)).sort().at(-1) ?? GUIDE_EDITORIAL_REFRESH_DATE;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: h.metaTitle,
+    description: h.metaDescription,
+    url: `${SITE_URL}${localePath(locale, '/guides')}`,
+    inLanguage: HTML_LANG[locale],
+    hasPart: cards.map((card) => ({ '@type': 'Article', headline: card.title, url: `${SITE_URL}${card.path}`, inLanguage: HTML_LANG[locale] })),
+  };
+  const cardLabels = { recentlyUpdated: h.recentlyUpdated, linkedFirms: h.linkedFirms, updated: g.updated };
+
+  return (
+    <main className="container guide-page guide-hub-page seo-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(schema)} />
+      <section className="guide-hero guide-hub-hero">
+        <div>
+          <div className="eyebrow">{h.eyebrow}</div>
+          <h1>{h.h1}</h1>
+          <p className="lead">{h.lead}</p>
+          <div className="actions">
+            <a href="#all-guides" className="btn btn-primary">{h.ctaFind}</a>
+            <Link href={localizedGuidePath(locale, 'meilleure-prop-firm-2026')} className="btn">{h.ctaRanking}</Link>
+          </div>
+        </div>
+        <dl className="pr-hero-stats">
+          <div><dt>{h.statGuides}</dt><dd>{translated.length}</dd></div>
+          <div><dt>{h.statFirms}</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>{h.statLegal}</dt><dd>{legalMappedCount}</dd></div>
+          <div><dt>{h.statUpdate}</dt><dd><time dateTime={latest}>{formatDateLong(locale, latest)}</time></dd></div>
+        </dl>
+      </section>
+
+      <section className="section guide-featured-section" aria-labelledby="featured-guides-title">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">{h.featuredEyebrow}</div>
+            <h2 id="featured-guides-title">{h.featuredTitle}</h2>
+          </div>
+          <p className="section-note">{h.featuredNote}</p>
+        </div>
+        <div className="guide-featured-grid">
+          {featured.map((guide) => <FeaturedGuideCard guide={guide} labels={cardLabels} coverLabels={getMessages(locale).cover} key={guide.path} />)}
+        </div>
+      </section>
+
+      <GuideLibrary guides={cards} labels={libraryLabels(locale)} coverLabels={getMessages(locale).cover} />
+
+      <section className="section">
+        <div className="guide-living-panel">
+          <div>
+            <div className="eyebrow">{h.livingEyebrow}</div>
+            <h2>{h.livingTitle}</h2>
+            <p>{h.livingText}</p>
+          </div>
+          <div className="guide-living-stats">
+            <span>{fmt(h.livingLegal, { count: legalWatchCount })}</span>
+            <span>{fmt(h.livingGuides, { count: translated.length })}</span>
+          </div>
+          <Link href={localePath(locale, '/audit')} className="btn">{h.openAudit}</Link>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export default async function GuidesHubPage({ params }: Props) {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  if (locale !== 'en') return <LocalizedGuidesHub locale={locale} />;
+  const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
+  const legalWatchCount = propFirms.filter(isLegalWatchFirm).length;
+  const guideCards = seoGuides.map((guide) => buildGuideCard(guide));
   const latestGuideUpdate = seoGuides.map((guide) => getGuideLastModified(guide).toISOString().slice(0, 10)).sort().at(-1) ?? GUIDE_EDITORIAL_REFRESH_DATE;
   const featuredGuides = featuredGuideSlugs
     .map((slug) => {
@@ -394,7 +509,7 @@ export default function GuidesHubPage() {
         </div>
       </section>
 
-      <GuideLibrary guides={guideCards} />
+      <GuideLibrary guides={guideCards} labels={libraryLabels('en')} />
 
       <section className="section search-demand-section" aria-labelledby="firm-research-title">
         <div className="section-heading">

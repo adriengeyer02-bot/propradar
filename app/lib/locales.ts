@@ -50,7 +50,16 @@ export function splitLocale(pathname: string): { locale: Locale; path: string } 
  * prefix (so navigation never breaks) but show their English content with a
  * notice, point their canonical to English and are kept out of the index.
  */
-const TRANSLATED = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/, /^\/about$/];
+const TRANSLATED = [
+  /^\/$/,
+  /^\/prop-firm-radar$/,
+  /^\/prop-firm-comparison$/,
+  /^\/firm\/[^/]+$/,
+  /^\/about$/,
+  /^\/guides$/,
+  /^\/guides\/[^/]+$/,
+  /^\/best-prop-firms$/,
+];
 
 export function isTranslatedPath(path: string) {
   const clean = path.replace(/\/+$/, '') || '/';
