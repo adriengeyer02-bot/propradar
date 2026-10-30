@@ -20,6 +20,10 @@ type PageStructuredDataProps = {
   dateModified: string;
   items?: PageSchemaItem[];
   faq?: PageSchemaFaq[];
+  /** BCP 47 page language (default en). */
+  inLanguage?: string;
+  /** Breadcrumb root: label and absolute URL (default English home). */
+  home?: { label: string; url: string };
 };
 
 function absoluteUrl(path: string) {
@@ -42,6 +46,8 @@ export default function PageStructuredData({
   dateModified,
   items = [],
   faq = [],
+  inLanguage = 'en',
+  home = { label: 'Home', url: SITE_URL },
 }: PageStructuredDataProps) {
   const pageUrl = absoluteUrl(path);
   const pageSchema: Record<string, unknown> = {
@@ -51,7 +57,7 @@ export default function PageStructuredData({
     name,
     description,
     url: pageUrl,
-    inLanguage: 'en',
+    inLanguage,
     isAccessibleForFree: true,
     dateModified,
     author: {
@@ -94,8 +100,8 @@ export default function PageStructuredData({
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Home',
-        item: SITE_URL,
+        name: home.label,
+        item: home.url,
       },
       {
         '@type': 'ListItem',
