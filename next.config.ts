@@ -5,6 +5,13 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // Duplicate firm profiles merged on 2026-10-30 (approved by the site owner): old slug -> kept profile.
+      { source: '/firm/wall-street-funded/:path*', destination: '/firm/wsfunded/:path*', permanent: true },
+      { source: '/firm/wall-street-funded', destination: '/firm/wsfunded', permanent: true },
+      { source: '/firm/ascendx-capital/:path*', destination: '/firm/quant-tekel/:path*', permanent: true },
+      { source: '/firm/ascendx-capital', destination: '/firm/quant-tekel', permanent: true },
+      { source: '/firm/toptier-trader/:path*', destination: '/firm/tx3-funding/:path*', permanent: true },
+      { source: '/firm/toptier-trader', destination: '/firm/tx3-funding', permanent: true },
       { source: '/comparateur', destination: '/prop-firm-comparison', permanent: true },
       { source: '/comparateur/:path*', destination: '/prop-firm-comparison/:path*', permanent: true },
       { source: '/meilleures-prop-firms', destination: '/best-prop-firms', permanent: true },

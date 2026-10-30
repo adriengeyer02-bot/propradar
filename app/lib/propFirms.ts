@@ -5594,56 +5594,6 @@ const universePropFirms: PropFirm[] = [
     },
   }),
   universeFirm({
-    id: 59,
-    slug: 'toptier-trader',
-    name: 'TopTier Trader',
-    website: 'https://www.toptiertrader.com/',
-    status: 'À surveiller',
-    score: 36,
-    founded: 2021,
-    priceFrom: 0,
-    incidents: 5,
-    additionalSources: [
-      { label: 'TopTier Trader article/news search', url: 'https://www.google.com/search?q=%22TopTier+Trader%22+%22prop+firm%22+article+news' },
-    ],
-    auditStatus: 'Partiellement vérifié',
-    auditSummary:
-      'Official homepage review returned only an unexpected single-line page/image referencing Tx3Funding branding during the July 8, 2026 PropRadar pass. Exact-name article/news searches did not surface reliable mainstream or financial-press coverage confirming a migration, acquisition or current legal operator. Treat TopTier Trader as unresolved until current operator, brand migration status, terms, entity and payout obligations are confirmed from primary sources.',
-    auditSourcesChecked: ['Official homepage capture', 'TX3 Funding cross-check URL', 'Trustpilot search', 'Exact-name article/news search'],
-    regulatoryAudit: {
-      riskLevel: 'High',
-      lastChecked: '2026-07-08',
-      summary:
-        'High brand-continuity risk. The public site response did not provide enough legal text to confirm the current contracting entity, operating status, refund terms or simulated-account model. Because the returned page referenced Tx3Funding, historical TopTier Trader reputation should not be carried forward without a migration/legal continuity document.',
-      entities: [
-        {
-          name: 'TopTier Trader',
-          jurisdiction: 'To verify',
-          role: 'Brand/operator to identify from the current official site, terms and company records.',
-        },
-      ],
-      regulatoryStatus: [
-        'Current legal entity not confirmed in PropRadar at this check.',
-        'Current homepage capture showed Tx3Funding branding rather than a readable TopTier Trader legal page.',
-        'Brand continuity / possible migration signal requires manual confirmation.',
-        'No reliable newspaper/financial-press article surfaced for the exact prop-firm brand in this pass.',
-      ],
-      complaintsAndDisputes: [
-        'Historical TopTier Trader reviews should be separated from any successor or redirected brand.',
-      ],
-      redFlags: [
-        'Unexpected official-site response referencing another brand.',
-        'Do not rely on historical ratings until current contractual entity and operating status are confirmed.',
-      ],
-      sources: [
-        { label: 'TopTier Trader official site', url: 'https://www.toptiertrader.com/' },
-        { label: 'TX3 Funding official site to cross-check manually', url: 'https://tx3funding.com/' },
-        { label: 'TopTier Trader Trustpilot', url: 'https://www.trustpilot.com/review/toptiertrader.com' },
-        { label: 'TopTier Trader article/news search', url: 'https://www.google.com/search?q=%22TopTier+Trader%22+%22prop+firm%22+article+news' },
-      ],
-    },
-  }),
-  universeFirm({
     id: 60,
     slug: 'wemastertrade',
     name: 'WeMasterTrade',
@@ -6039,69 +5989,6 @@ const universePropFirms: PropFirm[] = [
         { label: 'Karma Prop Traders terms page', url: 'https://karmaproptraders.com/terms' },
         { label: 'Sway Funded official site', url: 'https://swayfunded.com/' },
         { label: 'Karma Prop Traders Trustpilot search', url: 'https://www.trustpilot.com/search?query=Karma%20Prop%20Traders' },
-      ],
-    },
-  }),
-  universeFirm({
-    id: 67,
-    slug: 'wall-street-funded',
-    name: 'Wall Street Funded',
-    website: 'https://wallstreetfunded.com/',
-    status: 'À surveiller',
-    score: 57,
-    founded: 2023,
-    headquarters: 'Dubai / Saint Lucia / Cyprus',
-    priceFrom: 49,
-    auditStatus: 'Partiellement vérifié',
-    auditSummary:
-      'Official site checked; wallstreetfunded.com redirects to wsfunded.com. The footer discloses WSF Technology FZCO in Dubai, WSFmarkets Ltd in Saint Lucia and RENATICA LTD in Cyprus for payment-related operations. The disclosure states that accounts are simulated, the company does not manage client funds, does not provide access to regulated financial instruments, does not execute or transmit orders and is not a broker or regulated investment firm.',
-    regulatoryAudit: {
-      riskLevel: 'Medium to high',
-      lastChecked: '2026-07-08',
-      summary:
-        'Medium-to-high regulatory risk. Wall Street Funded / WSFunded provides concrete entity disclosure, but the structure mixes Dubai, Saint Lucia and Cyprus roles while the homepage also uses strong funded-account and fast-payout marketing. The legal footer is clear that all accounts are simulated and that the company is not a broker, investment manager or regulated financial entity under major regimes. Treat user rights as contractual challenge/reward terms, not brokerage or client-money protection.',
-      entities: [
-        {
-          name: 'WSF Technology FZCO',
-          jurisdiction: 'Dubai, United Arab Emirates',
-          registrationNumber: 'License No. 47001',
-          registeredAddress: 'Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates',
-          role: 'Group/technology entity disclosed in official footer and general disclaimer.',
-        },
-        {
-          name: 'WSFmarkets Ltd',
-          jurisdiction: 'Saint Lucia',
-          registrationNumber: '2025-00117',
-          registeredAddress: 'Ground Floor, Rodney Court Building, Rodney Bay, Gros Islet, Saint Lucia',
-          role: 'Company under which accounts are offered according to the official simulated-trading disclosure.',
-        },
-        {
-          name: 'RENATICA LTD.',
-          jurisdiction: 'Cyprus',
-          registeredAddress: 'Arch. Makariou III, 228 AGIOS PAVLOS COURT, Block A Floor 1, Office 113, 3030, Limassol, Cyprus',
-          role: 'Operational/payment-related Cyprus office disclosed by WSF.',
-        },
-      ],
-      regulatoryStatus: [
-        'Official footer says all accounts offered by WSFmarkets Ltd under WSF Technology FZCO are not real trading accounts.',
-        'Disclosure says the company does not manage client funds, hold or safeguard third-party money or provide access to regulated financial instruments.',
-        'General disclaimer says WSF Technology FZCO is not a broker, investment manager or regulated financial entity under EU/MiFID II/ESMA/SEC/CFTC/DFSA or other international regulators.',
-        'Disclosure says all trading activity is strictly simulated, with no real capital and no access to real financial markets.',
-      ],
-      complaintsAndDisputes: [
-        'FAQ says minimum payment amount is $100 and payout rails differ below/above $500, including crypto and Rise availability.',
-        'The site says WSFmarkets Ltd does not offer services to residents of the United States, Singapore, Russia, UAE, FATF-listed jurisdictions or sanctioned jurisdictions.',
-      ],
-      redFlags: [
-        'Homepage wording says instant accounts start with real money, while footer says all accounts are simulated and do not access real financial markets.',
-        'Multi-entity structure increases the need to check checkout entity and payout obligations.',
-        'Saint Lucia company plus Dubai FZCO disclosure is not equivalent to broker or investment-firm authorization.',
-      ],
-      sources: [
-        { label: 'Wall Street Funded / WSFunded official site', url: 'https://wsfunded.com/en' },
-        { label: 'WSFunded legal notice', url: 'https://wsfunded.com/en/legal-notice' },
-        { label: 'WSFunded terms and conditions', url: 'https://wsfunded.com/en/terms-and-conditions' },
-        { label: 'WSFunded Trustpilot', url: 'https://www.trustpilot.com/review/wsfunded.com' },
       ],
     },
   }),
@@ -7313,7 +7200,7 @@ const universePropFirms: PropFirm[] = [
     priceFrom: 49,
     auditStatus: 'Vérifié multi-source',
     auditSummary:
-      'Official Quant Tekel site and footer checked. Quant Tekel separates regulated brokerage from proprietary trading: Quant Tekel (Pty) Ltd is disclosed as an FSCA-authorised South African broker for permitted Africa/Asia jurisdictions, while QTFunded virtual proprietary trading is provided by Quant Tekel LLC and does not provide brokerage, CFD trading or live market access. Quant Tekel Ltd in the UK acts as payment agent for virtual challenge fees.',
+      'Quant Tekel is the former AscendX Capital (rebrand reported by Finance Magnates on 16 September 2024). Official Quant Tekel site and footer checked. Quant Tekel separates regulated brokerage from proprietary trading: Quant Tekel (Pty) Ltd is disclosed as an FSCA-authorised South African broker for permitted Africa/Asia jurisdictions, while QTFunded virtual proprietary trading is provided by Quant Tekel LLC and does not provide brokerage, CFD trading or live market access. Quant Tekel Ltd in the UK acts as payment agent for virtual challenge fees.',
     regulatoryAudit: {
       riskLevel: 'Low to medium',
       lastChecked: '2026-07-08',
@@ -7361,54 +7248,8 @@ const universePropFirms: PropFirm[] = [
         { label: 'QTFunded prop trading portal', url: 'https://qtfunded.quanttekel.com/' },
         { label: 'Quant Tekel Terms and Conditions', url: 'https://quanttekel.com/terms-and-conditions/' },
         { label: 'Quant Tekel Trustpilot', url: 'https://www.trustpilot.com/review/quanttekel.com' },
-      ],
-    },
-  }),
-  universeFirm({
-    id: 91,
-    slug: 'ascendx-capital',
-    name: 'Ascendx Capital',
-    website: 'https://ascendxcapital.com/',
-    status: 'À surveiller',
-    score: 58,
-    founded: 2023,
-    priceFrom: 49,
-    additionalSources: [
-      { label: 'Ascendx Capital terms URL to recheck manually', url: 'https://ascendxcapital.com/terms-and-conditions/' },
-      { label: 'Ascendx Capital Trustpilot', url: 'https://www.trustpilot.com/review/ascendxcapital.com' },
-    ],
-    auditStatus: 'Partiellement vérifié',
-    auditSummary:
-      'Limited source pass completed. Ascendx Capital official domain returned an internal error or no usable legal text during the July 8, 2026 PropRadar review. Legal entity, terms, refund policy and simulated-account disclosures remain unverified, so this stays a high-information-risk watchlist entry.',
-    auditSourcesChecked: ['Official domain reachability', 'Likely terms URL', 'Trustpilot page'],
-    regulatoryAudit: {
-      riskLevel: 'High',
-      lastChecked: '2026-07-08',
-      summary:
-        'High information risk. The official site did not return usable primary text, so no contracting entity, jurisdiction, refund policy or regulator status should be inferred from the current capture.',
-      entities: [
-        {
-          name: 'Ascendx Capital',
-          jurisdiction: 'To verify',
-          role: 'Brand/operator to identify from official legal pages and company registers.',
-        },
-      ],
-      regulatoryStatus: [
-        'Official legal entity not confirmed in PropRadar at this check.',
-        'Regulator and public-warning checks still pending.',
-      ],
-      complaintsAndDisputes: [
-        'Payout, refund and rule-dispute complaints need manual classification once primary sources are accessible.',
-      ],
-      redFlags: [
-        'Official site returned an internal error in the current automated review path.',
-        'Keep out of strong recommendations until official entity and terms are sourced.',
-        'No checkout entity, refund policy or simulated-account disclaimer was captured.',
-      ],
-      sources: [
-        { label: 'Ascendx Capital official site', url: 'https://ascendxcapital.com/' },
-        { label: 'Ascendx Capital terms URL to recheck manually', url: 'https://ascendxcapital.com/terms-and-conditions/' },
-        { label: 'Ascendx Capital Trustpilot', url: 'https://www.trustpilot.com/review/ascendxcapital.com' },
+        { label: 'Finance Magnates: QuantTekel rebrand from AscendX Capital (2024-09-16)', url: 'https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp' },
+        { label: 'AscendX Capital Trustpilot (former brand)', url: 'https://www.trustpilot.com/review/ascendxcapital.com' },
       ],
     },
   }),
@@ -7902,6 +7743,7 @@ const universePropFirms: PropFirm[] = [
         'Non-regulated simulated-account model despite broker-like challenge marketing.',
         'Multiple entities across Dubai, Saint Lucia and Cyprus increase enforcement and dispute complexity.',
         'Displayed balances, profits and losses are described as hypothetical.',
+        'Homepage wording said instant accounts start with real money, while the footer says all accounts are simulated and do not access real financial markets (official site, checked 2026-07-08 under the former Wall Street Funded profile).',
       ],
       sources: [
         { label: 'WSFunded official site', url: 'https://wsfunded.com/' },
@@ -9085,7 +8927,7 @@ const universePropFirms: PropFirm[] = [
     ],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Limited source pass completed. TX3 Funding official URL was not safe/openable during the July 8, 2026 PropRadar review. Legal entity, brand relationship with past TopTier/Tx3 references, terms, refund policy and operating status remain unverified from primary sources.',
+      'TX3 Funding is the new name of TopTier Trader: its official page tx3funding.com/en/ttt-to-tx3 states "TopTier Trader is now TX3 Funding" (no date given). The page does not name the contracting entity (its metadata says TX3 Funding - FZCO, country not stated) and does not say how TopTier accounts were migrated. Legal entity, terms, refund policy and payout obligations carried over from TopTier Trader remain unverified from primary sources.',
     auditSourcesChecked: ['Official domain reachability', 'Likely terms URL', 'Trustpilot search'],
     regulatoryAudit: {
       riskLevel: 'High',
@@ -9115,6 +8957,8 @@ const universePropFirms: PropFirm[] = [
         { label: 'TX3 Funding official site', url: 'https://tx3funding.com/' },
         { label: 'TX3 Funding terms URL to recheck manually', url: 'https://tx3funding.com/terms-and-conditions/' },
         { label: 'TX3 Funding Trustpilot search', url: 'https://www.trustpilot.com/search?query=TX3%20Funding' },
+        { label: 'TX3 Funding: TopTier Trader is now TX3 Funding (official)', url: 'https://www.tx3funding.com/en/ttt-to-tx3' },
+        { label: 'TopTier Trader Trustpilot (former brand)', url: 'https://www.trustpilot.com/review/toptiertrader.com' },
       ],
     },
   }),
@@ -12929,7 +12773,13 @@ export function isReviewRiskAssessed(firm: Pick<PropFirm, 'reviewSignals'>) {
 
 // Dated, sourced updates from app/data/firm-updates.json are applied, then the
 // payout- and review-evidence rules, so a level is never shown without written support.
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule);
+/** A closed firm never keeps the watchlist boilerplate verdict ("on the PropRadar watchlist..."). */
+function applyClosedVerdictRule(firm: PropFirm): PropFirm {
+  if (firm.status !== 'Fermée' || !/on the PropRadar watchlist|has not been audited in depth yet/i.test(firm.verdict)) return firm;
+  return { ...firm, verdict: `${firm.name} is recorded as closed. It is not a purchase option: see the closure record and update history below.` };
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyClosedVerdictRule);
 
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');

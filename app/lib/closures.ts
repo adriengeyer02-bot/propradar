@@ -64,6 +64,18 @@ export const closureRecords: ClosureRecord[] = [
     checkedAt: '2026-10-29',
   },
   {
+    slug: 'indigo-trader-funding',
+    date: '2024-08-21',
+    dateKind: 'reported',
+    summary:
+      'Confirmed that it had ceased trading and ended its partnerships for the evaluation model; it said remaining funds held by its operating partners would go to refunding active paid accounts. Its UK company had applied to be struck off the register on 12 August 2024.',
+    source: {
+      label: 'Finance Magnates',
+      url: 'https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/',
+    },
+    checkedAt: '2026-10-30',
+  },
+  {
     slug: 'smart-prop-trader',
     date: '2024-12-29',
     dateKind: 'closure',
