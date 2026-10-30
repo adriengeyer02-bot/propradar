@@ -4,10 +4,13 @@ import fr from './fr';
 import de from './de';
 import it from './it';
 import zh from './zh';
+import es from './es';
+import pt from './pt';
+import ja from './ja';
 
 export type { Messages };
 
-const ALL: Record<Locale, Messages> = { en, fr, de, it, zh };
+const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja };
 
 export function getMessages(locale: Locale): Messages {
   return ALL[locale] ?? en;
@@ -25,7 +28,7 @@ export function tv(messages: Messages, value: string | undefined | null) {
   return values[value] ?? value;
 }
 
-const DATE_LOCALE: Record<Locale, string> = { en: 'en-US', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', zh: 'zh-CN' };
+const DATE_LOCALE: Record<Locale, string> = { en: 'en-US', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', es: 'es-ES', pt: 'pt-BR', zh: 'zh-CN', ja: 'ja-JP' };
 
 /** "30 October 2026" in the page language. */
 export function formatDateLong(locale: Locale, isoDate: string) {
