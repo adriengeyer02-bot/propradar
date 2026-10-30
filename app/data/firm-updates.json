@@ -2472,9 +2472,55 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
       ]
     },
-    "qt-funded": {
-      "reviewedAt": "2026-10-29",
+    "quant-tekel": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-23",
+          "summary": "Recorded on the former QT Funded profile: Domain monitor reported qtfunded.com redirecting to quanttekel.com. Checked: consistent with the relationship already documented in this profile (qtfunded.com points to the qtfunded.quanttekel.com portal; QT Funded is described as Quant Tekel's prop trading arm). Not a stale domain: no domain warning set.",
+          "source": "https://www.fxempire.com/prop-firms/qtfunded",
+          "fields": []
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Background noted: Finance Magnates reported on 16 September 2024 that QuantTekel is the new name of AscendX Capital (rebrand announced on X on 15 September 2024) and that it was moving towards brokerage services. The article names no regulator or licence; a third-party claim that it is a regulated broker is not verified.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Recorded on the former AscendX Capital profile: Rebrand noted: Finance Magnates reported on 16 September 2024 that AscendX Capital announced (X post, 15 September 2024) that its name change to QuantTekel was complete and that it was moving towards brokerage services. The article names no regulator or licence. PropRadar keeps both profiles until the current operator and domain are confirmed; see the Quant Tekel profile.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp",
+          "fields": []
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Recorded on the former QT Funded profile: Official help center read. QT ONE: 6% target, 3% daily and 6% maximum drawdown, both trailing, 1% floating-loss cap when funded, 70% split, no consistency score, payouts after each 4-trading-day cycle. QT 1 Step (BNPL): 6% target, 3% daily and 6% trailing drawdown, 2% floating-loss cap, 80% split with a 5% profit cap per cycle, 20% consistency score for payouts, 14-day cycle. QT 2 Step and QT 2 Step Elite are marked discontinued. Splits differ by program, so the firm-level split is left unverified; sizes and prices are not stated.",
+          "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
+          "fields": []
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: the former AscendX Capital entry described the same firm, because Finance Magnates reported on 16 September 2024 that AscendX Capital had completed its name change to QuantTekel. Its sourced facts and history are kept on this page and /firm/ascendx-capital now redirects here. Score and status of this profile are unchanged.",
+          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp",
+          "fields": [
+            "profile"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: QT Funded is the prop trading brand of Quant Tekel (qtfunded.com redirects to quanttekel.com, the Trustpilot profile quanttekel.com is titled \"QT Funded\", and the QTFunded footer names Quant Tekel entities). The profile is renamed \"QT Funded (Quant Tekel)\"; the QT Funded history, payout cycles read on its help center (2026-10-29), its Saint Vincent and the Grenadines contracting entity and its sources are kept here, and /firm/qt-funded now redirects here. Score and status unchanged.",
+          "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
+          "fields": [
+            "profile",
+            "payoutDelay"
+          ]
+        }
+      ],
       "addSources": [
+        {
+          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
+          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
+        },
         {
           "label": "FXEmpire QTFunded profile",
           "url": "https://www.fxempire.com/prop-firms/qtfunded"
@@ -2488,54 +2534,9 @@
           "url": "https://support.qtfunded.com/support/articles/5632217156767-QT-1-Step-BNPL"
         }
       ],
-      "changelog": [
-        {
-          "date": "2026-10-23",
-          "summary": "Domain monitor reported qtfunded.com redirecting to quanttekel.com. Checked: consistent with the relationship already documented in this profile (qtfunded.com points to the qtfunded.quanttekel.com portal; QT Funded is described as Quant Tekel's prop trading arm). Not a stale domain: no domain warning set.",
-          "source": "https://www.fxempire.com/prop-firms/qtfunded"
-        },
-        {
-          "date": "2026-10-29",
-          "summary": "Official help center read. QT ONE: 6% target, 3% daily and 6% maximum drawdown, both trailing, 1% floating-loss cap when funded, 70% split, no consistency score, payouts after each 4-trading-day cycle. QT 1 Step (BNPL): 6% target, 3% daily and 6% trailing drawdown, 2% floating-loss cap, 80% split with a 5% profit cap per cycle, 20% consistency score for payouts, 14-day cycle. QT 2 Step and QT 2 Step Elite are marked discontinued. Splits differ by program, so the firm-level split is left unverified; sizes and prices are not stated.",
-          "source": "https://support.qtfunded.com/support/articles/9000000000001-qt-one",
-          "fields": [
-            "payoutDelay"
-          ]
-        }
-      ],
       "set": {
         "payoutDelay": "QT ONE: payout requests after each 4-trading-day cycle (3% minimum profit); QT 1 Step (BNPL): 14-day standard cycle, 5 trading days and 3% profit minimum"
       }
-    },
-    "quant-tekel": {
-      "reviewedAt": "2026-10-30",
-      "changelog": [
-        {
-          "date": "2026-10-29",
-          "summary": "Background noted: Finance Magnates reported on 16 September 2024 that QuantTekel is the new name of AscendX Capital (rebrand announced on X on 15 September 2024) and that it was moving towards brokerage services. The article names no regulator or licence; a third-party claim that it is a regulated broker is not verified.",
-          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
-        },
-        {
-          "date": "2026-10-29",
-          "summary": "Recorded on the former AscendX Capital profile: Rebrand noted: Finance Magnates reported on 16 September 2024 that AscendX Capital announced (X post, 15 September 2024) that its name change to QuantTekel was complete and that it was moving towards brokerage services. The article names no regulator or licence. PropRadar keeps both profiles until the current operator and domain are confirmed; see the Quant Tekel profile.",
-          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp",
-          "fields": []
-        },
-        {
-          "date": "2026-10-30",
-          "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: the former AscendX Capital entry described the same firm, because Finance Magnates reported on 16 September 2024 that AscendX Capital had completed its name change to QuantTekel. Its sourced facts and history are kept on this page and /firm/ascendx-capital now redirects here. Score and status of this profile are unchanged.",
-          "source": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp",
-          "fields": [
-            "profile"
-          ]
-        }
-      ],
-      "addSources": [
-        {
-          "label": "Finance Magnates: AscendX Capital rebrands as QuantTekel (16 Sep 2024)",
-          "url": "https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp"
-        }
-      ]
     },
     "rebelsfunding": {
       "reviewedAt": "2026-10-29",

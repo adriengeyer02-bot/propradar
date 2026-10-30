@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       { source: '/firm/wall-street-funded', destination: '/firm/wsfunded', permanent: true },
       { source: '/firm/ascendx-capital/:path*', destination: '/firm/quant-tekel/:path*', permanent: true },
       { source: '/firm/ascendx-capital', destination: '/firm/quant-tekel', permanent: true },
+      { source: '/firm/qt-funded/:path*', destination: '/firm/quant-tekel/:path*', permanent: true },
+      { source: '/firm/qt-funded', destination: '/firm/quant-tekel', permanent: true },
       { source: '/firm/toptier-trader/:path*', destination: '/firm/tx3-funding/:path*', permanent: true },
       { source: '/firm/toptier-trader', destination: '/firm/tx3-funding', permanent: true },
       { source: '/comparateur', destination: '/prop-firm-comparison', permanent: true },

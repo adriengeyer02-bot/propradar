@@ -10,7 +10,7 @@ import FirmRow, { FirmTableHead } from '../../components/ui/FirmRow';
 import ReliabilityRadar from '../../components/ui/ReliabilityRadar';
 import { AUDIT_CASE_FILES_UPDATED_AT, auditCaseFiles } from '../../lib/auditCaseFiles';
 import { getGuideEditorial } from '../../lib/guideEditorial';
-import {
+import { isAffiliateUrl,
   auditStatusClass,
   formatUsd,
   getFirmBySlug,
@@ -1314,7 +1314,7 @@ export default async function SeoGuidePage({ params }: Props) {
             'https://help.brightfunded.com/en/articles/9241694-can-i-trade-news',
             'https://www.the5ers.com/futures/',
           ]
-        : firms.flatMap((firm) => firm.sources.map((source) => source.url)).slice(0, 8);
+        : firms.flatMap((firm) => firm.sources.map((source) => source.url)).filter((url) => !isAffiliateUrl(url)).slice(0, 8);
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
