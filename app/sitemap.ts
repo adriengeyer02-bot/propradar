@@ -8,9 +8,18 @@ import { getAuditCaseFile } from './lib/auditCaseFiles';
 import { SITE_URL } from './lib/site';
 import { frArticles } from './lib/frArticles';
 import { HTML_LANG, LOCALES, PREFIXED_LOCALES, isTranslatedPath, localePath } from './lib/locales';
+import { guideLanguageAlternates, localizedGuidePath } from './lib/guideI18n';
+
+/** Guides by English path: their languages come from the guide translations, not the generic prefix rule. */
+const GUIDE_BY_PATH = new Map(seoGuides.map((guide) => [getSeoGuidePath(guide), guide]));
 
 /** hreflang alternates (absolute URLs) for a translated English path. */
 function languageAlternates(path: string) {
+  const guide = GUIDE_BY_PATH.get(path);
+  if (guide) {
+    const relative = guideLanguageAlternates(guide);
+    return { languages: Object.fromEntries(Object.entries(relative).map(([lang, href]) => [lang, `${SITE_URL}${href}`])) };
+  }
   const languages: Record<string, string> = {};
   for (const locale of LOCALES) languages[HTML_LANG[locale]] = `${SITE_URL}${localePath(locale, path)}`;
   languages['x-default'] = `${SITE_URL}${path}`;
@@ -23,9 +32,14 @@ function withTranslations(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap
     const path = entry.url.slice(SITE_URL.length) || '/';
     if (!isTranslatedPath(path)) return [entry];
     const alternates = languageAlternates(path);
+    const guide = GUIDE_BY_PATH.get(path);
+    // A guide is listed in a language only where it has its own page (French pairs are listed as /fr/<article>).
+    const locales = guide
+      ? PREFIXED_LOCALES.filter((locale) => localizedGuidePath(locale, guide) === localePath(locale, path))
+      : PREFIXED_LOCALES;
     return [
       { ...entry, alternates },
-      ...PREFIXED_LOCALES.map((locale) => ({
+      ...locales.map((locale) => ({
         ...entry,
         url: `${SITE_URL}${localePath(locale, path)}`,
         priority: Math.round((entry.priority ?? 0.5) * 0.9 * 100) / 100,
@@ -98,7 +112,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
       ...(article.enPath
-        ? { alternates: { languages: { fr: `${SITE_URL}/fr/${article.slug}`, en: `${SITE_URL}${article.enPath}` } } }
+        ? {
+            alternates: GUIDE_BY_PATH.has(article.enPath)
+              ? languageAlternates(article.enPath)
+              : { languages: { fr: `${SITE_URL}/fr/${article.slug}`, en: `${SITE_URL}${article.enPath}` } },
+          }
         : {}),
     })),
     ...editorialBriefs.map((brief, index) => ({

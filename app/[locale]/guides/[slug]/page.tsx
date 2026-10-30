@@ -30,6 +30,9 @@ import { toEnglishText } from '../../../lib/i18n';
 import GuideArticleBody from '../../../components/GuideArticleBody';
 import { getGuideArticle } from '../../../lib/guideArticles';
 import { getFrArticleByEnPath } from '../../../lib/frArticles';
+import LocalizedGuide, { localizedGuideMetadata } from '../../../components/LocalizedGuide';
+import { frGuidePairPath, getGuideTranslation, guideLanguageAlternates, localizedGuidePath } from '../../../lib/guideI18n';
+import { isLocale, type Locale } from '../../../lib/locales';
 import { getGuideVisual } from '../../../lib/guideVisuals';
 import { SITE_NAME, SITE_URL } from '../../../lib/site';
 import {
@@ -49,7 +52,7 @@ export const revalidate = 86400;
 const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 /** Guides that compare two named firms: shown as an overlaid radar and a criterion table. */
@@ -67,7 +70,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale: rawLocale } = await params;
   const guide = getSeoGuideByUrlSlug(slug);
 
   if (!guide) {
@@ -76,6 +79,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       robots: { index: false, follow: false },
     };
   }
+
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : 'en';
+  const translation = getGuideTranslation(locale, guide.slug);
+  if (translation && !(locale === 'fr' && frGuidePairPath(guide))) return localizedGuideMetadata(locale, guide, translation);
+  // English content served under a language prefix: keep it out of the index.
+  const untranslated = locale !== 'en' ? { robots: { index: false, follow: true } } : {};
 
   const displayGuide = getSeoGuideDisplay(guide);
   const canonicalPath = getSeoGuidePath(guide);
@@ -92,10 +101,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     category: 'Prop firm due diligence',
     alternates: {
       canonical: canonicalPath,
-      ...(getFrArticleByEnPath(canonicalPath)
-        ? { languages: { en: canonicalPath, fr: `/fr/${getFrArticleByEnPath(canonicalPath)!.slug}`, 'x-default': canonicalPath } }
-        : {}),
+      languages: guideLanguageAlternates(guide),
     },
+    ...untranslated,
     openGraph: {
       title: displayGuide.title,
       description: displayGuide.metaDescription,
@@ -1218,12 +1226,21 @@ function expandedFaqAnswer(answer: string, _guide: NonNullable<ReturnType<typeof
 }
 
 export default async function SeoGuidePage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale: rawLocale } = await params;
 
   const guide = getSeoGuideByUrlSlug(slug);
 
   if (!guide) {
     notFound();
+  }
+
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : 'en';
+  if (locale !== 'en') {
+    if (guide.slug === 'meilleure-prop-firm-2026') permanentRedirect(localizedGuidePath(locale, guide));
+    const frPairPath = locale === 'fr' ? frGuidePairPath(guide) : undefined;
+    if (frPairPath) permanentRedirect(frPairPath);
+    const translation = getGuideTranslation(locale, guide.slug);
+    if (translation) return <LocalizedGuide locale={locale} guide={guide} translation={translation} />;
   }
 
   const firms = selectGuideFirms(guide, 10);

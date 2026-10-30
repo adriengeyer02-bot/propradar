@@ -2,9 +2,15 @@
 
 import Link from 'next/link';
 import FirmLogo from '../../components/FirmLogo';
-import GuideCover from '../../components/guide-visuals/GuideCover';
+import GuideCover, { type CoverLabels } from '../../components/guide-visuals/GuideCover';
 import type { GuideCoverData } from '../../lib/guideCovers';
 import { useMemo, useState } from 'react';
+import type { Messages } from '../../lib/messages';
+
+export type GuideLibraryLabels = Messages['guide']['library'] & { levels: Record<GuideLevel, string>; recentlyUpdated: string };
+
+const fill = (template: string, values: Record<string, string | number>) =>
+  template.replace(/\{(\w+)\}/g, (match, key: string) => (key in values ? String(values[key]) : match));
 
 export type GuideType = 'selection' | 'comparison' | 'rules' | 'risk' | 'style' | 'deals';
 export type GuideLevel = 'Beginner' | 'Intermediate' | 'Advanced';
@@ -33,25 +39,27 @@ export type GuideLibraryItem = {
   cover: GuideCoverData;
 };
 
-export function GuideLogoStrip({ firms, total }: { firms: GuideLibraryItem['firms']; total: number }) {
+export function GuideLogoStrip({ firms, total, label = '{count} linked firms, including {names}' }: { firms: GuideLibraryItem['firms']; total: number; label?: string }) {
   if (!firms.length) return null;
   return (
-    <span className="pr-logo-strip" aria-label={`${total} linked firms, including ${firms.map((firm) => firm.name).join(', ')}`}>
+    <span className="pr-logo-strip" aria-label={fill(label, { count: total, names: firms.map((firm) => firm.name).join(', ') })}>
       {firms.map((firm) => <FirmLogo key={firm.slug} name={firm.name} logoDomain={firm.logoDomain} size="sm" />)}
       {total > firms.length ? <span className="pr-logo-strip-more">+{total - firms.length}</span> : null}
     </span>
   );
 }
 
-const typeFilters: Array<{ value: 'all' | GuideType; label: string }> = [
-  { value: 'all', label: 'All' },
-  { value: 'selection', label: 'Selection' },
-  { value: 'comparison', label: 'Comparisons' },
-  { value: 'rules', label: 'Rules' },
-  { value: 'risk', label: 'Risks' },
-  { value: 'style', label: 'Trading styles' },
-  { value: 'deals', label: 'Deals' },
-];
+function typeFilters(l: GuideLibraryLabels): Array<{ value: 'all' | GuideType; label: string }> {
+  return [
+    { value: 'all', label: l.typeAll },
+    { value: 'selection', label: l.typeSelection },
+    { value: 'comparison', label: l.typeComparison },
+    { value: 'rules', label: l.typeRules },
+    { value: 'risk', label: l.typeRisk },
+    { value: 'style', label: l.typeStyle },
+    { value: 'deals', label: l.typeDeals },
+  ];
+}
 
 function normalized(value: string) {
   return value
@@ -61,7 +69,7 @@ function normalized(value: string) {
     .trim();
 }
 
-export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] }) {
+export default function GuideLibrary({ guides, labels: l, coverLabels }: { guides: GuideLibraryItem[]; labels: GuideLibraryLabels; coverLabels?: CoverLabels }) {
   const [query, setQuery] = useState('');
   const [type, setType] = useState<'all' | GuideType>('all');
   const [level, setLevel] = useState<'all' | GuideLevel>('all');
@@ -77,6 +85,7 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
         guide.eyebrow,
         guide.typeLabel,
         guide.level,
+        l.levels[guide.level],
         ...guide.focuses,
         ...guide.keywords,
       ].join(' ')).includes(search);
@@ -101,48 +110,48 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
     <section className="section guide-library-section" id="all-guides" aria-labelledby="guide-library-title">
       <div className="section-heading guide-library-heading">
         <div>
-          <div className="eyebrow">All guides</div>
-          <h2 id="guide-library-title">Find the guide that answers your next decision.</h2>
+          <div className="eyebrow">{l.eyebrow}</div>
+          <h2 id="guide-library-title">{l.title}</h2>
         </div>
-        <p className="section-note">Search by question, then narrow the library by topic, experience level or evidence focus.</p>
+        <p className="section-note">{l.note}</p>
       </div>
 
       <div className="guide-filter-panel">
         <div className="guide-filter-toolbar">
           <label className="guide-search-field" htmlFor="guide-search">
-            <span>Search the guides</span>
+            <span>{l.searchLabel}</span>
             <input
               id="guide-search"
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Try payout, Topstep, news trading..."
+              placeholder={l.searchPlaceholder}
             />
           </label>
 
           <label className="guide-select-field" htmlFor="guide-level">
-            <span>Level</span>
+            <span>{l.level}</span>
             <select id="guide-level" value={level} onChange={(event) => setLevel(event.target.value as 'all' | GuideLevel)}>
-              <option value="all">All levels</option>
-              <option value="Beginner">Beginner</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Advanced">Advanced</option>
+              <option value="all">{l.allLevels}</option>
+              <option value="Beginner">{l.levels.Beginner}</option>
+              <option value="Intermediate">{l.levels.Intermediate}</option>
+              <option value="Advanced">{l.levels.Advanced}</option>
             </select>
           </label>
 
           <label className="guide-select-field" htmlFor="guide-focus">
-            <span>Evidence focus</span>
+            <span>{l.focus}</span>
             <select id="guide-focus" value={focus} onChange={(event) => setFocus(event.target.value as 'all' | GuideFocus)}>
-              <option value="all">All evidence</option>
-              <option value="Payout">Payout</option>
-              <option value="Legal">Legal</option>
-              <option value="Community">Community signals</option>
+              <option value="all">{l.allEvidence}</option>
+              <option value="Payout">{l.focusPayout}</option>
+              <option value="Legal">{l.focusLegal}</option>
+              <option value="Community">{l.focusCommunity}</option>
             </select>
           </label>
         </div>
 
-        <div className="guide-type-filter-row" aria-label="Filter guides by type">
-          {typeFilters.map((item) => (
+        <div className="guide-type-filter-row" aria-label={l.filterAria}>
+          {typeFilters(l).map((item) => (
             <button
               key={item.value}
               type="button"
@@ -157,10 +166,10 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
 
         <div className="guide-results-status" aria-live="polite">
           <div>
-            <strong>{filteredGuides.length} guide{filteredGuides.length === 1 ? '' : 's'}</strong>
-            <span>{activeFilterCount ? `${activeFilterCount} active filter${activeFilterCount === 1 ? '' : 's'}` : 'Complete research library'}</span>
+            <strong>{fill(filteredGuides.length === 1 ? l.countOne : l.countMany, { count: filteredGuides.length })}</strong>
+            <span>{activeFilterCount ? fill(activeFilterCount === 1 ? l.activeOne : l.activeMany, { count: activeFilterCount }) : l.complete}</span>
           </div>
-          {activeFilterCount ? <button type="button" onClick={resetFilters}>Reset filters</button> : null}
+          {activeFilterCount ? <button type="button" onClick={resetFilters}>{l.reset}</button> : null}
         </div>
       </div>
 
@@ -168,38 +177,38 @@ export default function GuideLibrary({ guides }: { guides: GuideLibraryItem[] })
         <div className="guide-library-grid">
           {filteredGuides.map((guide) => (
             <Link href={guide.path} className={`guide-library-card guide-theme-${guide.type}`} key={guide.path}>
-              <GuideCover data={guide.cover} uid="lib" className="guide-card-cover" />
+              <GuideCover data={guide.cover} uid="lib" className="guide-card-cover" labels={coverLabels} />
               <div className="guide-library-card-head">
                 <div>
                   <span className="guide-card-type">{guide.typeLabel}</span>
-                  <small>{guide.level}</small>
+                  <small>{l.levels[guide.level]}</small>
                 </div>
-                {guide.recentlyUpdated ? <span className="guide-updated-badge">Recently updated</span> : null}
+                {guide.recentlyUpdated ? <span className="guide-updated-badge">{l.recentlyUpdated}</span> : null}
               </div>
 
               <h3 className="guide-library-card-title">{guide.title}</h3>
-              <GuideLogoStrip firms={guide.firms} total={guide.firmCount} />
+              <GuideLogoStrip firms={guide.firms} total={guide.firmCount} label={l.logoStrip} />
 
-              <div className="guide-library-card-metrics" aria-label={`${guide.title} coverage`}>
-                <span><strong>{guide.firmCount}</strong> linked firms</span>
-                <span><strong>{guide.deepSourceCount}</strong> deep files</span>
+              <div className="guide-library-card-metrics" aria-label={fill(l.coverage, { title: guide.title })}>
+                <span><strong>{guide.firmCount}</strong> {l.linkedFirms}</span>
+                <span><strong>{guide.deepSourceCount}</strong> {l.deepFiles}</span>
                 <span className={guide.payoutWatchCount ? 'guide-metric-watch' : ''}>
-                  <strong>{guide.payoutWatchCount}</strong> payout watch
+                  <strong>{guide.payoutWatchCount}</strong> {l.payoutWatch}
                 </span>
               </div>
 
               <div className="guide-library-card-foot">
-                <span>Updated {guide.updatedLabel}</span>
-                <strong>Open guide <span aria-hidden="true">&#8594;</span></strong>
+                <span>{fill(l.updated, { date: guide.updatedLabel })}</span>
+                <strong>{l.open} <span aria-hidden="true">&#8594;</span></strong>
               </div>
             </Link>
           ))}
         </div>
       ) : (
         <div className="guide-library-empty">
-          <strong>No guide matches these filters.</strong>
-          <span>Try a broader search or reset the topic, level and evidence focus.</span>
-          <button type="button" className="btn" onClick={resetFilters}>Reset filters</button>
+          <strong>{l.emptyTitle}</strong>
+          <span>{l.emptyText}</span>
+          <button type="button" className="btn" onClick={resetFilters}>{l.reset}</button>
         </div>
       )}
     </section>

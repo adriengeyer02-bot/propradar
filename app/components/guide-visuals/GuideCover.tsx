@@ -1,6 +1,17 @@
 import type { ReactNode } from 'react';
 import type { CoverDot, CoverFirm, GuideCoverData } from '../../lib/guideCovers';
 
+/** English cover text -> translation (serialisable, so client lists can pass it too). */
+export type CoverLabels = Record<string, string>;
+type T = (text: string, values?: Record<string, string | number>) => string;
+
+function translator(labels?: CoverLabels): T {
+  return (text, values) => {
+    const template = labels?.[text] ?? text;
+    return values ? template.replace(/\{(\w+)\}/g, (m, k: string) => (k in values ? String(values[k]) : m)) : template;
+  };
+}
+
 /**
  * Guide cover in the radar visual language. Pure SVG, no hooks: it renders on
  * the server and inside client components alike. Radar, versus and histogram
@@ -65,7 +76,7 @@ function placeLabels(dots: CoverDot[]) {
   return { left: place(sides.left), right: place(sides.right) };
 }
 
-function RadarCover({ data }: { data: Extract<GuideCoverData, { kind: 'radar' }> }) {
+function RadarCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'radar' }>; t: T }) {
   const { id } = data;
   const cx = 200;
   const cy = 112;
@@ -112,9 +123,11 @@ function RadarCover({ data }: { data: Extract<GuideCoverData, { kind: 'radar' }>
         }),
       )}
       <text x="14" y="20" className="gc-hud">
-        {data.linked > data.highlights.length ? `top ${data.highlights.length} of ${data.linked} in this guide` : `${data.highlights.length} of ${data.total} firms`}
+        {data.linked > data.highlights.length
+          ? t('top {shown} of {linked} in this guide', { shown: data.highlights.length, linked: data.linked })
+          : t('{shown} of {total} firms', { shown: data.highlights.length, total: data.total })}
       </text>
-      <text x="386" y="20" textAnchor="end" className="gc-hud">closer = higher score</text>
+      <text x="386" y="20" textAnchor="end" className="gc-hud">{t('closer = higher score')}</text>
     </Frame>
   );
 }
@@ -154,20 +167,20 @@ function ScoreRing({ firm, x, y, r, logo, id }: { firm: CoverFirm; x: number; y:
   );
 }
 
-function VersusCover({ data }: { data: Extract<GuideCoverData, { kind: 'versus' }> }) {
+function VersusCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'versus' }>; t: T }) {
   const { id, firms } = data;
   if (firms.length === 1) {
     const [firm] = firms;
     const facts: [string, string][] = [
-      ['From', firm.price],
-      ['Profit split', firm.split],
+      [t('From'), firm.price],
+      [t('Profit split'), firm.split],
       ['Trustpilot', firm.trustpilot],
     ];
     return (
       <Frame id={id} label={`${firm.name}: PropRadar score ${firm.score}/100, from ${firm.price}, profit split ${firm.split}, Trustpilot ${firm.trustpilot}.`}>
         <ScoreRing firm={firm} x={104} y={112} r={58} logo={58} id={id} />
         <text x="196" y="58" className="gc-title">{truncate(firm.name, 20)}</text>
-        <text x="196" y="80" className="gc-small">PropRadar score</text>
+        <text x="196" y="80" className="gc-small">{t('PropRadar score')}</text>
         <text x="196" y="112" className={`gc-big gc-text-${firm.tone}`}>
           {firm.score}
           <tspan className="gc-small" dx="4">/100</tspan>
@@ -196,9 +209,9 @@ function VersusCover({ data }: { data: Extract<GuideCoverData, { kind: 'versus' 
           <text x={x} y={156} textAnchor="middle" className="gc-title">{truncate(firm.name, 16)}</text>
           <text x={x} y={178} textAnchor="middle" className="gc-small">
             <tspan className={`gc-text-${firm.tone}`} fontWeight="700" fontSize="15">{firm.score}</tspan>
-            <tspan dx="2">/100{lead === firm.slug ? ' · higher' : ''}</tspan>
+            <tspan dx="2">/100{lead === firm.slug ? ` · ${t('higher')}` : ''}</tspan>
           </text>
-          <text x={x} y={202} textAnchor="middle" className="gc-small">{`From ${firm.price} · split ${firm.split}`}</text>
+          <text x={x} y={202} textAnchor="middle" className="gc-small">{t('From {price} · split {split}', { price: firm.price, split: firm.split })}</text>
         </g>
       ))}
       <circle cx="200" cy="84" r="17" fill="#0b1626" stroke="#36d6e7" strokeWidth="1.2" />
@@ -209,7 +222,7 @@ function VersusCover({ data }: { data: Extract<GuideCoverData, { kind: 'versus' 
 
 /* ------------------------------------------------------------ histogram */
 
-function HistogramCover({ data }: { data: Extract<GuideCoverData, { kind: 'histogram' }> }) {
+function HistogramCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'histogram' }>; t: T }) {
   const { id, bins } = data;
   const max = Math.max(1, ...bins.map((bin) => bin.count));
   const left = 24;
@@ -220,8 +233,8 @@ function HistogramCover({ data }: { data: Extract<GuideCoverData, { kind: 'histo
   const top = 70;
   return (
     <Frame id={id} label={`${data.title}: ${bins.map((bin) => `${bin.label} ${bin.count}`).join(', ')}. ${data.total} firms.`}>
-      <text x="24" y="30" className="gc-title">{data.title}</text>
-      <text x="24" y="48" className="gc-small">{`${data.total} firms with a value read on PropRadar`}</text>
+      <text x="24" y="30" className="gc-title">{t(data.title)}</text>
+      <text x="24" y="48" className="gc-small">{t('{total} firms with a value read on PropRadar', { total: data.total })}</text>
       <line x1={left} x2={left + width} y1={base} y2={base} stroke="rgba(234,240,247,0.25)" />
       {bins.map((bin, index) => {
         const h = Math.max(2, ((base - top) * bin.count) / max);
@@ -238,7 +251,7 @@ function HistogramCover({ data }: { data: Extract<GuideCoverData, { kind: 'histo
               fillOpacity={bin.count === max || bin.tone === 'risk' ? 1 : 0.62}
             />
             <text x={x + barW / 2} y={base - h - 7} textAnchor="middle" className="gc-value">{bin.count}</text>
-            <text x={x + barW / 2} y={base + 18} textAnchor="middle" className="gc-small">{bin.label}</text>
+            <text x={x + barW / 2} y={base + 18} textAnchor="middle" className="gc-small">{t(bin.label)}</text>
           </g>
         );
       })}
@@ -254,7 +267,8 @@ function Legend({ items, y = 24 }: { items: { label: string; color: string; dash
     <g>
       {items.map((item) => {
         const start = x;
-        x += 30 + item.label.length * 6.2;
+        // CJK glyphs are about twice as wide as Latin ones at this size.
+        x += 30 + [...item.label].reduce((w, ch) => w + (ch.charCodeAt(0) > 0x2e80 ? 11.5 : 6.2), 0);
         return (
           <g key={item.label}>
             <line x1={start} x2={start + 16} y1={y - 4} y2={y - 4} stroke={item.color} strokeWidth="2.4" strokeDasharray={item.dash ? '4 3' : undefined} />
@@ -266,7 +280,7 @@ function Legend({ items, y = 24 }: { items: { label: string; color: string; dash
   );
 }
 
-function DrawdownCover({ id }: { id: string }) {
+function DrawdownCover({ id, t }: { id: string; t: T }) {
   const pts: [number, number][] = [[24, 140], [64, 122], [100, 130], [140, 98], [182, 70], [216, 82], [252, 110], [292, 126], [334, 116], [376, 104]];
   const equity = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x} ${y}`).join('');
   let peak = Infinity;
@@ -279,27 +293,27 @@ function DrawdownCover({ id }: { id: string }) {
     .join('');
   return (
     <Frame id={id} label="Schematic: the same balance path against a trailing floor, which rises with the peak and is hit, and a static floor, which stays put.">
-      <Legend items={[{ label: 'Balance', color: '#36d6e7' }, { label: 'Trailing floor', color: '#fbbf24' }, { label: 'Static floor', color: '#8da3bd', dash: true }]} />
+      <Legend items={[{ label: t('Balance'), color: '#36d6e7' }, { label: t('Trailing floor'), color: '#fbbf24' }, { label: t('Static floor'), color: '#8da3bd', dash: true }]} />
       <line x1="24" x2="376" y1="180" y2="180" stroke="#8da3bd" strokeWidth="2" strokeDasharray="5 4" />
       <path d={trailing} fill="none" stroke="#fbbf24" strokeWidth="2.2" strokeLinejoin="round" />
       <path d={equity} fill="none" stroke="#36d6e7" strokeWidth="2.8" strokeLinejoin="round" strokeLinecap="round" />
       <circle cx="182" cy="70" r="4" fill="#36d6e7" />
-      <text x="182" y="58" textAnchor="middle" className="gc-small">peak</text>
+      <text x="182" y="58" textAnchor="middle" className="gc-small">{t('peak')}</text>
       <circle cx="252" cy="110" r="9" fill="rgba(248,113,113,0.2)" />
       <circle cx="252" cy="110" r="4.2" fill="#f87171" />
-      <text x="262" y="96" className="gc-value gc-text-risk">trailing floor hit</text>
-      <text x="376" y="200" textAnchor="end" className="gc-small">static floor not reached</text>
+      <text x="262" y="96" className="gc-value gc-text-risk">{t('trailing floor hit')}</text>
+      <text x="376" y="200" textAnchor="end" className="gc-small">{t('static floor not reached')}</text>
     </Frame>
   );
 }
 
-function ConsistencyCover({ id }: { id: string }) {
+function ConsistencyCover({ id, t }: { id: string; t: T }) {
   const days = [34, 52, 28, 104, 40, 22, 46, 36, 30];
   const base = 190;
   const cap = 72;
   return (
     <Frame id={id} label="Schematic: daily profits as bars with a cap line; one best day rises above the cap.">
-      <Legend items={[{ label: 'Daily profit', color: '#36d6e7' }, { label: 'Consistency cap', color: '#fbbf24', dash: true }]} />
+      <Legend items={[{ label: t('Daily profit'), color: '#36d6e7' }, { label: t('Consistency cap'), color: '#fbbf24', dash: true }]} />
       <line x1="24" x2="376" y1={base} y2={base} stroke="rgba(234,240,247,0.25)" />
       {days.map((h, i) => {
         const over = h > cap;
@@ -312,12 +326,12 @@ function ConsistencyCover({ id }: { id: string }) {
         );
       })}
       <line x1="24" x2="376" y1={base - cap} y2={base - cap} stroke="#fbbf24" strokeWidth="1.6" strokeDasharray="5 4" />
-      <text x="174" y={base - 112} className="gc-value gc-text-watch">best day above the cap</text>
+      <text x="174" y={base - 112} className="gc-value gc-text-watch">{t('best day above the cap')}</text>
     </Frame>
   );
 }
 
-function NewsCover({ id }: { id: string }) {
+function NewsCover({ id, t }: { id: string; t: T }) {
   const pts: [number, number][] = [[24, 128], [52, 122], [80, 132], [108, 118], [136, 126], [164, 116], [184, 120], [196, 74], [206, 160], [218, 92], [232, 134], [252, 104], [280, 112], [308, 100], [336, 108], [376, 96]];
   const line = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x} ${y}`).join('');
   return (
@@ -327,8 +341,8 @@ function NewsCover({ id }: { id: string }) {
       <path d={line} fill="none" stroke="#36d6e7" strokeWidth="2.6" strokeLinejoin="round" />
       <circle cx="208" cy="30" r="9" fill="#f87171" />
       <text x="208" y="34" textAnchor="middle" className="gc-mono" fontSize="11" fill="#0b1626">!</text>
-      <text x="24" y="28" className="gc-title">News release</text>
-      <text x="208" y="208" textAnchor="middle" className="gc-small">restricted window (rule varies)</text>
+      <text x="24" y="28" className="gc-title">{t('News release')}</text>
+      <text x="208" y="208" textAnchor="middle" className="gc-small">{t('restricted window (rule varies)')}</text>
     </Frame>
   );
 }
@@ -367,23 +381,23 @@ function Connector({ x1, x2, y, dashed }: { x1: number; x2: number; y: number; d
   );
 }
 
-function PayoutCover({ id }: { id: string }) {
+function PayoutCover({ id, t }: { id: string; t: T }) {
   const xs = [56, 152, 248, 344];
   return (
     <Frame id={id} label="Schematic: a payout moves from request to review, approval and payment, then a new cycle starts.">
-      <text x="24" y="28" className="gc-title">Payout cycle</text>
+      <text x="24" y="28" className="gc-title">{t('Payout cycle')}</text>
       <path d="M344 78C330 34 70 34 56 78" fill="none" stroke="rgba(54,214,231,0.35)" strokeDasharray="4 5" />
-      <text x="200" y="52" textAnchor="middle" className="gc-small">next cycle</text>
+      <text x="200" y="52" textAnchor="middle" className="gc-small">{t('next cycle')}</text>
       {xs.slice(0, -1).map((x, i) => <Connector key={x} x1={x + 24} x2={xs[i + 1] - 24} y={104} />)}
-      <Node x={xs[0]} y={104} label="Request" icon={ICONS.send} />
-      <Node x={xs[1]} y={104} label="Review" sub="rules checked" icon={ICONS.search} />
-      <Node x={xs[2]} y={104} label="Approved" tone="accent" icon={ICONS.check} />
-      <Node x={xs[3]} y={104} label="Paid" sub="the proof to look for" tone="good" icon={ICONS.coin} />
+      <Node x={xs[0]} y={104} label={t('Request')} icon={ICONS.send} />
+      <Node x={xs[1]} y={104} label={t('Review')} sub={t('rules checked')} icon={ICONS.search} />
+      <Node x={xs[2]} y={104} label={t('Approved')} tone="accent" icon={ICONS.check} />
+      <Node x={xs[3]} y={104} label={t('Paid')} sub={t('the proof to look for')} tone="good" icon={ICONS.coin} />
     </Frame>
   );
 }
 
-function ProofCover({ id }: { id: string }) {
+function ProofCover({ id, t }: { id: string; t: T }) {
   const cards = [
     { x: 24, y: 64, label: 'Official terms' },
     { x: 48, y: 52, label: 'Independent review' },
@@ -408,32 +422,32 @@ function ProofCover({ id }: { id: string }) {
         .map((card, i) => (
           <g key={card.label}>
             <circle cx="262" cy={100 + i * 30} r="3.5" fill="#36d6e7" />
-            <text x="272" y={104 + i * 30} className="gc-label">{card.label}</text>
+            <text x="272" y={104 + i * 30} className="gc-label">{t(card.label)}</text>
           </g>
         ))}
     </Frame>
   );
 }
 
-function LegalCover({ id }: { id: string }) {
+function LegalCover({ id, t }: { id: string; t: T }) {
   const xs = [56, 152, 248, 344];
   return (
     <Frame id={id} label="Schematic: the legal chain to trace, from the brand to the operating entity, the company registry and regulator lists.">
-      <text x="24" y="28" className="gc-title">Trace the chain</text>
+      <text x="24" y="28" className="gc-title">{t('Trace the chain')}</text>
       {xs.slice(0, -1).map((x, i) => <Connector key={x} x1={x + 24} x2={xs[i + 1] - 24} y={100} dashed={i === 2} />)}
-      <Node x={xs[0]} y={100} label="Brand" sub="website" tone="accent" icon={ICONS.radar} />
-      <Node x={xs[1]} y={100} label="Entity" sub="in the terms" icon={ICONS.building} />
-      <Node x={xs[2]} y={100} label="Registry" sub="company record" icon={ICONS.doc} />
-      <Node x={xs[3]} y={100} label="Regulators" sub="warning lists" icon={ICONS.columns} />
+      <Node x={xs[0]} y={100} label={t('Brand')} sub={t('website')} tone="accent" icon={ICONS.radar} />
+      <Node x={xs[1]} y={100} label={t('Entity')} sub={t('in the terms')} icon={ICONS.building} />
+      <Node x={xs[2]} y={100} label={t('Registry')} sub={t('company record')} icon={ICONS.doc} />
+      <Node x={xs[3]} y={100} label={t('Regulators')} sub={t('warning lists')} icon={ICONS.columns} />
     </Frame>
   );
 }
 
-function LanesCover({ id }: { id: string }) {
+function LanesCover({ id, t }: { id: string; t: T }) {
   const challenge = [44, 128, 212, 340];
   return (
     <Frame id={id} label="Schematic: a classic challenge goes from payment through two phases to a funded account; direct funding goes from payment straight to a funded account.">
-      <text x="24" y="28" className="gc-small">CLASSIC CHALLENGE</text>
+      <text x="24" y="28" className="gc-small">{t('CLASSIC CHALLENGE')}</text>
       {challenge.slice(0, -1).map((x, i) => <Connector key={x} x1={x + 26} x2={challenge[i + 1] - 26} y={66} />)}
       {[
         ['Pay', challenge[0]],
@@ -442,18 +456,18 @@ function LanesCover({ id }: { id: string }) {
       ].map(([label, x]) => (
         <g key={label as string}>
           <rect x={(x as number) - 24} y="52" width="48" height="28" rx="14" fill="#0f2033" stroke="rgba(234,240,247,0.3)" />
-          <text x={x as number} y="70" textAnchor="middle" className="gc-small" fill="#eaf0f7">{label}</text>
+          <text x={x as number} y="70" textAnchor="middle" className="gc-small" fill="#eaf0f7">{t(label as string)}</text>
         </g>
       ))}
-      <text x="24" y="128" className="gc-small">DIRECT FUNDING</text>
+      <text x="24" y="128" className="gc-small">{t('DIRECT FUNDING')}</text>
       <Connector x1={70} x2={314} y={160} />
       <rect x="20" y="146" width="48" height="28" rx="14" fill="#0f2033" stroke="#36d6e7" />
-      <text x="44" y="164" textAnchor="middle" className="gc-small" fill="#eaf0f7">Pay</text>
-      <text x="190" y="152" textAnchor="middle" className="gc-small">no phases, higher entry price</text>
+      <text x="44" y="164" textAnchor="middle" className="gc-small" fill="#eaf0f7">{t('Pay')}</text>
+      <text x="190" y="152" textAnchor="middle" className="gc-small">{t('no phases, higher entry price')}</text>
       {[66, 160].map((y) => (
         <g key={y}>
           <rect x="316" y={y - 14} width="62" height="28" rx="14" fill="rgba(52,211,153,0.16)" stroke="#34d399" />
-          <text x="347" y={y + 4} textAnchor="middle" className="gc-value gc-text-good">Funded</text>
+          <text x="347" y={y + 4} textAnchor="middle" className="gc-value gc-text-good">{t('Funded')}</text>
         </g>
       ))}
     </Frame>
@@ -461,39 +475,40 @@ function LanesCover({ id }: { id: string }) {
 }
 
 /** `uid` keeps SVG ids unique when the same cover appears twice on a page. */
-export default function GuideCover({ data: raw, className, uid }: { data: GuideCoverData; className?: string; uid?: string }) {
+export default function GuideCover({ data: raw, className, uid, labels }: { data: GuideCoverData; className?: string; uid?: string; labels?: CoverLabels }) {
   const data = uid ? { ...raw, id: `${raw.id}-${uid}` } : raw;
+  const t = translator(labels);
   let body: ReactNode;
   switch (data.kind) {
     case 'radar':
-      body = <RadarCover data={data} />;
+      body = <RadarCover data={data} t={t} />;
       break;
     case 'versus':
-      body = <VersusCover data={data} />;
+      body = <VersusCover data={data} t={t} />;
       break;
     case 'histogram':
-      body = <HistogramCover data={data} />;
+      body = <HistogramCover data={data} t={t} />;
       break;
     case 'drawdown':
-      body = <DrawdownCover id={data.id} />;
+      body = <DrawdownCover id={data.id} t={t} />;
       break;
     case 'consistency':
-      body = <ConsistencyCover id={data.id} />;
+      body = <ConsistencyCover id={data.id} t={t} />;
       break;
     case 'news':
-      body = <NewsCover id={data.id} />;
+      body = <NewsCover id={data.id} t={t} />;
       break;
     case 'payout':
-      body = <PayoutCover id={data.id} />;
+      body = <PayoutCover id={data.id} t={t} />;
       break;
     case 'proof':
-      body = <ProofCover id={data.id} />;
+      body = <ProofCover id={data.id} t={t} />;
       break;
     case 'legal':
-      body = <LegalCover id={data.id} />;
+      body = <LegalCover id={data.id} t={t} />;
       break;
     default:
-      body = <LanesCover id={data.id} />;
+      body = <LanesCover id={data.id} t={t} />;
   }
   return <span className={`gc${className ? ` ${className}` : ''}`}>{body}</span>;
 }
