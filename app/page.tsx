@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FirmLogo from './components/FirmLogo';
-import FirmRadar from './components/ui/FirmRadar';
+import PropRadarLive from './components/ui/PropRadarLive';
+import { buildRadar } from './lib/radar';
 import RiskPip from './components/ui/RiskPip';
 import ScoreRing from './components/ui/ScoreRing';
 import { legalTone, payoutTone } from './lib/riskTone';
@@ -24,6 +25,7 @@ export default function HomePage() {
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const sourcedFirms = verifiedFirms.length + partiallyVerifiedFirms.length;
   const heroPreviewFirms = topFirms.slice(0, 3);
+  const homeRadar = buildRadar(propFirms);
   const homepageGuides = [
     'prop-firm-sans-challenge',
     'prop-firm-sans-consistency-rule',
@@ -144,7 +146,7 @@ export default function HomePage() {
             <h2>The radar today</h2>
             <span>{propFirms.length} firms</span>
           </div>
-          <FirmRadar firms={propFirms} highlighted={heroPreviewFirms} />
+          <PropRadarLive data={homeRadar} variant="compact" />
           <ol className="pr-home-top">
             {heroPreviewFirms.map((firm, index) => (
               <li key={`home-preview-${firm.slug}`}>
@@ -163,7 +165,7 @@ export default function HomePage() {
               </li>
             ))}
           </ol>
-          <Link href="/prop-firm-comparison" className="pr-link pr-home-radar-more">Compare all {propFirms.length} firms <span aria-hidden="true">→</span></Link>
+          <Link href="/prop-firm-radar" className="pr-link pr-home-radar-more">Open the full interactive radar <span aria-hidden="true">→</span></Link>
         </div>
       </section>
 
