@@ -123,7 +123,7 @@ export default function HomePage() {
           </div>
           <Link href="/guides" className="home-v2-guide-link">
             Explore reliability guides
-            <span aria-hidden="true"> &gt;</span>
+            <span aria-hidden="true"> →</span>
           </Link>
           <div className="home-v2-trust-line">
             <span>No ranking can be bought.</span>
@@ -205,25 +205,25 @@ export default function HomePage() {
               <span className="home-tool-label">Comparator</span>
               <strong>Compare {propFirms.length} prop firms side by side.</strong>
               <small>Filter by score, market, payout risk, legal risk, price and trading rules.</small>
-              <span className="home-tool-action">Open comparator <b aria-hidden="true">&gt;</b></span>
+              <span className="home-tool-action">Open comparator <b aria-hidden="true">→</b></span>
             </Link>
             <Link href="/prop-firm-challenge" className="home-tool-card">
               <span className="home-tool-label">Challenge guide</span>
               <strong>How a prop firm challenge works, program by program.</strong>
               <small>Fees, profit targets, daily loss and drawdown rules read on each firm&apos;s own pages.</small>
-              <span className="home-tool-action">Compare challenges <b aria-hidden="true">&gt;</b></span>
+              <span className="home-tool-action">Compare challenges <b aria-hidden="true">→</b></span>
             </Link>
             <Link href="/promos" className="home-tool-card">
               <span className="home-tool-label">Risk-aware deals</span>
               <strong>Read the risk before the discount.</strong>
               <small>Promotions stay attached to firm scores, payout context and commercial disclosures.</small>
-              <span className="home-tool-action">Check current deals <b aria-hidden="true">&gt;</b></span>
+              <span className="home-tool-action">Check current deals <b aria-hidden="true">→</b></span>
             </Link>
             <Link href="/guides" className="home-tool-card">
               <span className="home-tool-label">Reliability guides</span>
               <strong>Understand the rules that change outcomes.</strong>
               <small>Legal checks, payout clauses, review signals and program comparisons in plain English.</small>
-              <span className="home-tool-action">Browse guides <b aria-hidden="true">&gt;</b></span>
+              <span className="home-tool-action">Browse guides <b aria-hidden="true">→</b></span>
             </Link>
           </div>
         </div>
@@ -279,12 +279,13 @@ export default function HomePage() {
               <span className="home-guide-content">
                 <small>{displayGuide.eyebrow}</small>
                 <strong>{displayGuide.title}</strong>
+                <span className="home-guide-summary">{displayGuide.metaDescription}</span>
                 <GuideLogoStrip
                   firms={selectGuideFirms(guide, 4).map((firm) => ({ slug: firm.slug, name: firm.name, logoDomain: firm.logoDomain }))}
                   total={selectGuideFirms(guide, propFirms.length).length}
                 />
               </span>
-              <b aria-hidden="true">&gt;</b>
+              <b aria-hidden="true">→</b>
             </Link>
           ))}
         </div>
