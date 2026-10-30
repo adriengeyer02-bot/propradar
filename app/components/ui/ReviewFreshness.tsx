@@ -7,7 +7,10 @@ import { useEffect, useState } from 'react';
  * 60, amber beyond. Age is computed in the browser so a static page never
  * shows a stale "3 days ago".
  */
-export default function ReviewFreshness({ date }: { date: string }) {
+type FreshLabels = { today: string; yesterday: string; daysAgo: string };
+const EN: FreshLabels = { today: 'today', yesterday: 'yesterday', daysAgo: '{n} days ago' };
+
+export default function ReviewFreshness({ date, labels = EN }: { date: string; labels?: FreshLabels }) {
   const [days, setDays] = useState<number | null>(null);
 
   useEffect(() => {
@@ -16,7 +19,7 @@ export default function ReviewFreshness({ date }: { date: string }) {
   }, [date]);
 
   const state = days === null ? 'unknown' : days <= 14 ? 'fresh' : days <= 60 ? 'recent' : 'stale';
-  const ago = days === null ? null : days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`;
+  const ago = days === null ? null : days === 0 ? labels.today : days === 1 ? labels.yesterday : labels.daysAgo.replace('{n}', String(days));
 
   return (
     <span className={`pr-fresh pr-fresh-${state}`}>

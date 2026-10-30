@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
+import { localePath, splitLocale } from '../lib/locales';
 
 type ActiveNavLinkProps = {
+  /** English path; the link follows the language of the current page. */
   href: string;
   children: ReactNode;
   className?: string;
@@ -24,13 +26,13 @@ export default function ActiveNavLink({
   exact = href === '/',
   activePrefixes = [],
 }: ActiveNavLinkProps) {
-  const pathname = usePathname();
+  const { locale, path } = splitLocale(usePathname() || '/');
   const paths = [href, ...activePrefixes];
-  const isActive = paths.some((path) => matchesPath(pathname, path, exact && path === href));
+  const isActive = paths.some((candidate) => matchesPath(path, candidate, exact && candidate === href));
   const classes = [className, isActive ? 'nav-link-active' : undefined].filter(Boolean).join(' ');
 
   return (
-    <Link href={href} className={classes || undefined} aria-current={isActive ? 'page' : undefined}>
+    <Link href={localePath(locale, href)} className={classes || undefined} aria-current={isActive ? 'page' : undefined}>
       {children}
     </Link>
   );

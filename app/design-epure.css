@@ -3284,3 +3284,48 @@ html body .guide-featured-card-top > span:first-child {
   line-height: 1.35;
   text-transform: uppercase;
 }
+
+/* ---------- Language switcher ---------- */
+.lang-switch { position: relative; }
+.lang-switch-button {
+  display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 11px;
+  border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 8px; background: transparent;
+  color: #e6edf5; font: inherit; font-size: 13px; font-weight: 750; cursor: pointer;
+}
+.lang-switch-button:hover, .lang-switch.is-open .lang-switch-button { border-color: #36d6e7; color: #ffffff; }
+.lang-switch-menu {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; min-width: 176px; margin: 0; padding: 6px;
+  list-style: none; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+  box-shadow: 0 18px 40px rgba(4, 12, 24, 0.22);
+}
+.lang-switch-menu[hidden] { display: none; }
+.lang-switch-menu a {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 10px;
+  border-radius: 7px; color: var(--text); font-size: 14px; font-weight: 650; text-decoration: none;
+}
+.lang-switch-menu a small { color: var(--muted); font-size: 11px; font-weight: 750; }
+.lang-switch-menu a:hover { background: var(--accent-wash); }
+.lang-switch-menu a[aria-current='true'] { background: var(--accent-wash); color: var(--accent); }
+@media (max-width: 760px) {
+  .lang-switch-button { height: 36px; padding: 0 8px; }
+  .lang-switch-button span { font-size: 12px; }
+}
+
+/* ---------- Untranslated page notice ---------- */
+.locale-notice { background: var(--accent-wash); border-bottom: 1px solid var(--line); }
+.locale-notice .container {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding-top: 10px; padding-bottom: 10px;
+  font-size: 13px; color: var(--text);
+}
+.locale-notice span { color: var(--muted); }
+.locale-notice a { margin-left: auto; color: var(--accent); font-weight: 750; }
+.pr-data-note { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+.home-guides-lang { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+/* The language button joined the header: let the search field shrink instead of overflowing. */
+html body .header-actions { min-width: 0; }
+html body .header-actions .site-search { flex: 1 1 auto; min-width: 0; }
+html body .header-actions .site-search-input { width: 100%; min-width: 0; }
+@media (max-width: 760px) {
+  html body .header-actions { gap: 6px; }
+  .lang-switch-button { padding: 0 7px; gap: 4px; }
+}

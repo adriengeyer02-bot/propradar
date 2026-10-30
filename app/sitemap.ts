@@ -7,6 +7,33 @@ import { editorialBriefs, getEditorialBriefPath } from './lib/editorialBriefs';
 import { getAuditCaseFile } from './lib/auditCaseFiles';
 import { SITE_URL } from './lib/site';
 import { frArticles } from './lib/frArticles';
+import { HTML_LANG, LOCALES, PREFIXED_LOCALES, isTranslatedPath, localePath } from './lib/locales';
+
+/** hreflang alternates (absolute URLs) for a translated English path. */
+function languageAlternates(path: string) {
+  const languages: Record<string, string> = {};
+  for (const locale of LOCALES) languages[HTML_LANG[locale]] = `${SITE_URL}${localePath(locale, path)}`;
+  languages['x-default'] = `${SITE_URL}${path}`;
+  return { languages };
+}
+
+/** One entry per extra language for each translated page already listed in English. */
+function withTranslations(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
+  return entries.flatMap((entry) => {
+    const path = entry.url.slice(SITE_URL.length) || '/';
+    if (!isTranslatedPath(path)) return [entry];
+    const alternates = languageAlternates(path);
+    return [
+      { ...entry, alternates },
+      ...PREFIXED_LOCALES.map((locale) => ({
+        ...entry,
+        url: `${SITE_URL}${localePath(locale, path)}`,
+        priority: Math.round((entry.priority ?? 0.5) * 0.9 * 100) / 100,
+        alternates,
+      })),
+    ];
+  });
+}
 
 const staticRoutes = [
   { path: '', priority: 1, lastModified: '2026-07-13' },
@@ -32,7 +59,7 @@ const latestFirmData = propFirms.reduce((latest, firm) => {
 }, '2026-01-01');
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  return withTranslations([
     ...staticRoutes.map((route) => ({
       url: `${SITE_URL}${route.path}`,
       lastModified: new Date(route.lastModified > latestFirmData ? route.lastModified : latestFirmData),
@@ -59,11 +86,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.82,
     })),
     {
-      url: `${SITE_URL}/fr`,
+      url: `${SITE_URL}/fr/articles`,
       lastModified: new Date(frArticles.reduce((latest, article) => (article.updated > latest ? article.updated : latest), '2026-01-01')),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-      alternates: { languages: { fr: `${SITE_URL}/fr`, en: `${SITE_URL}/guides` } },
+      alternates: { languages: { fr: `${SITE_URL}/fr/articles`, en: `${SITE_URL}/guides` } },
     },
     ...frArticles.map((article) => ({
       url: `${SITE_URL}/fr/${article.slug}`,
@@ -80,5 +107,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: index === 0 ? ('weekly' as const) : ('monthly' as const),
       priority: index === 0 ? 0.86 : 0.74,
     })),
-  ];
+  ]);
 }

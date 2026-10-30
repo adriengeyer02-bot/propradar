@@ -16,12 +16,22 @@ import {
   type RadarDot,
   type RadarTone,
 } from '../../lib/radar';
+import { localePath, type Locale } from '../../lib/locales';
+import en from '../../lib/messages/en';
+import type { Messages } from '../../lib/messages/en';
+
+type RadarLabels = Messages['radar'];
+type SectorNames = Messages['sectors'];
+type ValueNames = Messages['values'];
+
+function fill(template: string, values: Record<string, string | number>) {
+  return template.replace(/\{(\w+)\}/g, (match, key: string) => (key in values ? String(values[key]) : match));
+}
 
 type Variant = 'full' | 'compact';
 type Band = RadarTone | 'closed';
 type Focus = { kind: 'dot'; dot: RadarDot } | { kind: 'closed'; firm: RadarClosed };
 
-const BAND_LABEL: Record<Band, string> = { good: 'Score 75+', watch: 'Score 55–74', none: 'Under 55', closed: 'Closed' };
 const SWEEP_SPAN = 42;
 const PERIOD_MS = 7000;
 const PICK = 14;
@@ -43,12 +53,12 @@ function labelPath(start: number, end: number) {
   return { d: `M${from.x},${from.y}A${r},${r} 0 ${2 * half > 180 ? 1 : 0} ${flip ? 0 : 1} ${to.x},${to.y}`, flip };
 }
 
-function daysAgo(date: string) {
+function daysAgo(date: string, t: RadarLabels) {
   const days = Math.max(0, Math.round((Date.now() - new Date(`${date}T12:00:00Z`).getTime()) / 86_400_000));
   if (!Number.isFinite(days)) return date;
-  if (days === 0) return 'today';
-  if (days === 1) return 'yesterday';
-  return `${days} days ago`;
+  if (days === 0) return t.today;
+  if (days === 1) return t.yesterday;
+  return fill(t.daysAgo, { n: days });
 }
 
 function shortName(name: string) {
@@ -61,7 +71,29 @@ function shortName(name: string) {
  * names each firm scoring 75+ as it passes. Readable without JavaScript and
  * static with reduced motion.
  */
-export default function PropRadarLive({ data, variant = 'full', intro }: { data: RadarData; variant?: Variant; intro?: ReactNode }) {
+export default function PropRadarLive({
+  data,
+  variant = 'full',
+  intro,
+  locale = 'en',
+  labels: t = en.radar,
+  sectorNames = en.sectors,
+  valueNames = en.values,
+}: {
+  data: RadarData;
+  variant?: Variant;
+  intro?: ReactNode;
+  locale?: Locale;
+  labels?: RadarLabels;
+  sectorNames?: SectorNames;
+  valueNames?: ValueNames;
+}) {
+  const BAND_LABEL: Record<Band, string> = t.bands;
+  const sectorName = (key: string) => (sectorNames as Record<string, string>)[key] ?? key;
+  const firmHref = (slug: string) => localePath(locale, `/firm/${slug}`);
+  const statusName = (status: string) => (valueNames as Record<string, string>)[status] ?? status;
+  const trustpilotName = (text: string) =>
+    text === 'Withheld' ? valueNames.Withheld : text === 'Not checked' ? valueNames['Not checked'] : text.replace(' reviews', ` ${valueNames.reviews}`);
   const router = useRouter();
   const svgRef = useRef<SVGSVGElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -282,7 +314,7 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
           if (hit.kind === 'dot') ping(hit.dot);
           return;
         }
-        router.push(`/firm/${slug}`);
+        router.push(firmHref(slug));
         return;
       }
       setFocus(hit);
@@ -326,14 +358,14 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
   const focusSize = focus?.kind === 'dot' ? focus.dot.size : 5;
   const hud =
     focus?.kind === 'dot'
-      ? { n: String(focus.dot.score), s: 'PropRadar score' }
+      ? { n: String(focus.dot.score), s: t.propradarScore }
       : focus?.kind === 'closed'
-        ? { n: 'Closed', s: focus.firm.closed ? `reported ${focus.firm.closed}` : 'closure date not stated' }
+        ? { n: t.closed, s: focus.firm.closed ? fill(t.reported, { date: focus.firm.closed }) : t.noClosureDate }
         : sector !== null
-          ? { n: String(data.sectors[sector].count), s: `${data.sectors[sector].key} firms` }
+          ? { n: String(data.sectors[sector].count), s: `${sectorName(data.sectors[sector].key)} · ${t.firmsInMarket}` }
           : band
             ? { n: String(band === 'closed' ? data.counts.closed : data.counts[band]), s: BAND_LABEL[band] }
-            : { n: String(shownCounts.good + shownCounts.watch + shownCounts.none), s: 'open firms on radar' };
+            : { n: String(shownCounts.good + shownCounts.watch + shownCounts.none), s: t.openFirmsOnRadar };
 
   const showTip = Boolean(focus) && (!pinned || variant === 'compact');
   const tip = focus && showTip && panelRef.current && svgRef.current ? (() => {
@@ -360,7 +392,7 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
         className={`prr-svg${ready ? ' is-ready' : ''}`}
         viewBox={`0 0 ${S} ${S}`}
         role="img"
-        aria-label={`Radar of ${data.total} prop firms: ${data.counts.good} score 75 or more, ${data.counts.watch} score 55 to 74, ${data.counts.none} under 55, ${data.counts.closed} closed. Angle shows the market, distance shows the PropRadar score.`}
+        aria-label={fill(t.radarAria, { total: data.total, good: data.counts.good, watch: data.counts.watch, none: data.counts.none, closed: data.counts.closed })}
         onPointerMove={onMove}
         onPointerDown={(event) => { pointerRef.current = event.pointerType; }}
         onPointerLeave={() => {
@@ -402,13 +434,13 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
         {data.sectors.map((s, index) => (
           <text key={s.key} className={`prr-sector-label${sector === index ? ' is-on' : ''}${s.end - s.start < 22 ? ' is-narrow' : ''}`} dy={labels[index].flip ? 8 : 0}>
             <textPath href={`#prr-label-${variant}-${index}`} startOffset="50%" textAnchor="middle">
-              {s.key} · {s.count}
+              {sectorName(s.key)} · {s.count}
             </textPath>
           </text>
         ))}
 
         <circle cx={C} cy={C} r={RADAR_ORBIT} className="prr-orbit" />
-        <text x={C} y={C - RADAR_ORBIT - 8} textAnchor="middle" className="prr-orbit-label">Closed · {data.counts.closed}</text>
+        <text x={C} y={C - RADAR_ORBIT - 8} textAnchor="middle" className="prr-orbit-label">{t.bands.closed} · {data.counts.closed}</text>
         {data.closed.map((firm) => (
           <g key={firm.slug} className={`prr-closed${dimClosed ? ' is-dim' : ''}`}>
             <line x1={firm.x - 4} y1={firm.y - 4} x2={firm.x + 4} y2={firm.y + 4} />
@@ -458,25 +490,25 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
           <strong>{focus.kind === 'dot' ? focus.dot.name : focus.firm.name}</strong>
           {focus.kind === 'dot' ? (
             <>
-              <span><span>Score</span><b>{focus.dot.score}/100</b></span>
-              <span><span>{focus.dot.sector}</span><b>{BAND_LABEL[focus.dot.tone]}</b></span>
+              <span><span>{t.score}</span><b>{focus.dot.score}/100</b></span>
+              <span><span>{sectorName(focus.dot.sector)}</span><b>{BAND_LABEL[focus.dot.tone]}</b></span>
             </>
           ) : (
-            <span><span>Closed</span><b>{focus.firm.closed ?? 'date not stated'}</b></span>
+            <span><span>{t.closed}</span><b>{focus.firm.closed ?? t.dateNotStated}</b></span>
           )}
           {pinned ? (
-            <Link href={`/firm/${focus.kind === 'dot' ? focus.dot.slug : focus.firm.slug}`} className="prr-tip-link">
-              Open the profile <span aria-hidden="true">→</span>
+            <Link href={firmHref(focus.kind === 'dot' ? focus.dot.slug : focus.firm.slug)} className="prr-tip-link">
+              {t.openProfile} <span aria-hidden="true">→</span>
             </Link>
           ) : null}
         </div>
       ) : null}
-      {!touched ? <p className="prr-taphint" aria-hidden="true">Tap a dot to read the firm</p> : null}
+      {!touched ? <p className="prr-taphint" aria-hidden="true">{t.tapHint}</p> : null}
     </div>
   );
 
   const bands = (
-    <div className="prr-bands" role="group" aria-label="Filter by score band">
+    <div className="prr-bands" role="group" aria-label={t.bandsAria}>
       {(['good', 'watch', 'none', 'closed'] as Band[]).map((key) => (
         <button
           key={key}
@@ -498,10 +530,10 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
 
   const legend = (
     <div className="prr-legend">
-      <span><i className="prr-lg" aria-hidden="true" />Closer to the centre = higher score</span>
-      <span><i className="prr-lg prr-lg-big" aria-hidden="true" />Bigger = more Trustpilot reviews</span>
-      <span><i className="prr-lg prr-lg-hollow" aria-hidden="true" />Trustpilot rating withheld</span>
-      <span><b className="prr-lg-x" aria-hidden="true">×</b>Closed, on the outer orbit</span>
+      <span><i className="prr-lg" aria-hidden="true" />{t.legendCloser}</span>
+      <span><i className="prr-lg prr-lg-big" aria-hidden="true" />{t.legendBigger}</span>
+      <span><i className="prr-lg prr-lg-hollow" aria-hidden="true" />{t.legendHollow}</span>
+      <span><b className="prr-lg-x" aria-hidden="true">×</b>{t.legendClosed}</span>
     </div>
   );
 
@@ -510,7 +542,7 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
       <div className="prr prr-is-compact">
         {radar}
         {bands}
-        <p className="prr-hint">Angle = market, distance = score. Point at or tap a dot to read the firm, then open its page.</p>
+        <p className="prr-hint">{t.compactHint}</p>
       </div>
     );
   }
@@ -534,16 +566,16 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
                 {dot.logo ? <img src={dot.logo} alt="" width={22} height={22} /> : null}
                 {dot.name}
               </h3>
-              <p>{dot.status} · {dot.sector}</p>
+              <p>{statusName(dot.status)} · {sectorName(dot.sector)}</p>
             </div>
           </div>
           <dl className="prr-facts">
-            <div><dt>Score band</dt><dd>{BAND_LABEL[dot.tone]}</dd></div>
-            <div><dt>Trustpilot</dt><dd>{dot.trustpilot}</dd></div>
-            <div><dt>Last review</dt><dd>{daysAgo(dot.reviewed)}</dd></div>
-            <div><dt>Market</dt><dd>{dot.sector}</dd></div>
+            <div><dt>{t.scoreBand}</dt><dd>{BAND_LABEL[dot.tone]}</dd></div>
+            <div><dt>{t.trustpilot}</dt><dd>{trustpilotName(dot.trustpilot)}</dd></div>
+            <div><dt>{t.lastReview}</dt><dd>{daysAgo(dot.reviewed, t)}</dd></div>
+            <div><dt>{t.market}</dt><dd>{sectorName(dot.sector)}</dd></div>
           </dl>
-          <Link className="pr-link" href={`/firm/${dot.slug}`}>Open the {shortName(dot.name)} profile <span aria-hidden="true">→</span></Link>
+          <Link className="pr-link" href={firmHref(dot.slug)}>{fill(t.openFirmProfile, { name: shortName(dot.name) })} <span aria-hidden="true">→</span></Link>
         </div>
       );
     }
@@ -551,8 +583,8 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
       return (
         <div className="prr-detail">
           <h3 className="prr-detail-title">{focus.firm.name}</h3>
-          <p className="prr-detail-sub">Closed{focus.firm.closed ? ` · reported ${focus.firm.closed}` : ' · closure date not stated'}</p>
-          <Link className="pr-link" href={`/firm/${focus.firm.slug}`}>Read the closure record <span aria-hidden="true">→</span></Link>
+          <p className="prr-detail-sub">{t.closed} · {focus.firm.closed ? fill(t.reported, { date: focus.firm.closed }) : t.noClosureDate}</p>
+          <Link className="pr-link" href={firmHref(focus.firm.slug)}>{t.closureRecord} <span aria-hidden="true">→</span></Link>
         </div>
       );
     }
@@ -560,12 +592,12 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
       const s = data.sectors[sector];
       return (
         <div className="prr-detail">
-          <h3 className="prr-detail-title">{s.key}</h3>
-          <p className="prr-detail-sub">{s.count} open firm{s.count === 1 ? '' : 's'} · average score {s.average}</p>
+          <h3 className="prr-detail-title">{sectorName(s.key)}</h3>
+          <p className="prr-detail-sub">{fill(s.count === 1 ? t.sectorLineOne : t.sectorLine, { count: s.count, average: s.average })}</p>
           <ol className="prr-top">
             {s.top.map((firm) => (
               <li key={firm.slug}>
-                <Link href={`/firm/${firm.slug}`}>{firm.name}</Link>
+                <Link href={firmHref(firm.slug)}>{firm.name}</Link>
                 <b className={`prr-${firm.tone}-text`}>{firm.score}</b>
               </li>
             ))}
@@ -575,10 +607,7 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
     }
     return (
       <div className="prr-detail">
-        <p className="prr-detail-hint">
-          Point at a dot to read the firm, at a slice to read its market, or click a slice to keep it in focus. The sweep names
-          each firm scoring 75+ as it passes.
-        </p>
+        <p className="prr-detail-hint">{t.idleHint}</p>
       </div>
     );
   })();
@@ -587,8 +616,8 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
     <div className={`prr prr-is-full${intro ? ' has-intro' : ''}`}>
       {intro ? <div className="prr-intro">{intro}</div> : null}
       <div className="prr-main">
-        <div className="prr-chips" role="group" aria-label="Markets">
-          <button type="button" aria-pressed={lockedSector === null} onClick={() => { setLockedSector(null); closeSheet(); }}>All markets</button>
+        <div className="prr-chips" role="group" aria-label={t.markets}>
+          <button type="button" aria-pressed={lockedSector === null} onClick={() => { setLockedSector(null); closeSheet(); }}>{t.allMarkets}</button>
           {data.sectors.map((s, index) => (
             <button
               key={s.key}
@@ -600,21 +629,21 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
                 setLockedSector((current) => (current === index ? null : index));
               }}
             >
-              {s.key} <small>{s.count}</small>
+              {sectorName(s.key)} <small>{s.count}</small>
             </button>
           ))}
         </div>
         {radar}
         {legend}
       </div>
-      <aside className="prr-side" aria-label="Radar controls">
+      <aside className="prr-side" aria-label={t.controls}>
         <label className="prr-search">
-          <span className="sr-only">Find a firm on the radar</span>
+          <span className="sr-only">{t.findLabel}</span>
           <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" /><path d="m13.5 13.5 4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
           <input
             type="search"
             list="prr-names"
-            placeholder="Find a firm: FTMO, Topstep…"
+            placeholder={t.findPlaceholder}
             value={query}
             onChange={(event) => onSearch(event.target.value)}
             autoComplete="off"
@@ -624,7 +653,7 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
           {names.map((name) => <option key={name} value={name} />)}
         </datalist>
         {bands}
-        <div className="prr-sectors" role="group" aria-label="Markets">
+        <div className="prr-sectors" role="group" aria-label={t.markets}>
           {data.sectors.map((s, index) => (
             <button
               key={s.key}
@@ -639,8 +668,8 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
               onMouseEnter={() => setHoverSector(index)}
               onMouseLeave={() => setHoverSector(null)}
             >
-              <b>{s.key}</b>
-              <small>{s.count} firm{s.count === 1 ? '' : 's'} · avg {s.average}</small>
+              <b>{sectorName(s.key)}</b>
+              <small>{fill(s.count === 1 ? t.sectorLineOne : t.sectorLine, { count: s.count, average: s.average })}</small>
               <span className="prr-bar" aria-hidden="true"><i style={{ width: ready ? `${Math.max(3, (s.count / Math.max(1, data.dots.length)) * 100)}%` : '0%' }} /></span>
             </button>
           ))}
@@ -651,7 +680,7 @@ export default function PropRadarLive({ data, variant = 'full', intro }: { data:
         <>
           <div className="prr-sheet-backdrop" onClick={closeSheet} aria-hidden="true" />
           <div className="prr-sheet" role="dialog" aria-modal="false" aria-label={focus.kind === 'dot' ? focus.dot.name : focus.firm.name}>
-            <button type="button" className="prr-sheet-close" onClick={closeSheet} aria-label="Close">×</button>
+            <button type="button" className="prr-sheet-close" onClick={closeSheet} aria-label={t.close}>×</button>
             {card}
           </div>
         </>

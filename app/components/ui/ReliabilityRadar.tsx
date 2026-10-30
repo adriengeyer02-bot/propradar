@@ -1,5 +1,18 @@
 import type { PropFirm } from '../../lib/propFirms';
 import { reliabilityAxes } from '../../lib/reliabilityProfile';
+import type { Messages } from '../../lib/messages/en';
+
+type RadarLabels = Messages['firm']['relradar'] & { values: Record<string, string> };
+
+function localize(display: string, labels?: RadarLabels) {
+  if (!labels) return display;
+  if (display === 'Not assessed') return labels.notAssessed;
+  if (display === 'Rating withheld') return labels.withheld;
+  if (display === 'Review alert on file') return labels.alert;
+  const risk = display.match(/^(.*) risk$/);
+  if (risk) return labels.riskSuffix.replace('{level}', labels.values[risk[1]] ?? risk[1]);
+  return labels.values[display] ?? display;
+}
 
 type ReliabilityRadarProps = {
   firms: PropFirm[];
@@ -7,6 +20,7 @@ type ReliabilityRadarProps = {
   showValues?: boolean;
   size?: number;
   caption?: string;
+  labels?: RadarLabels;
 };
 
 const SERIES = ['pr-series-1', 'pr-series-2', 'pr-series-3'];
@@ -20,10 +34,16 @@ function point(cx: number, cy: number, radius: number, index: number, count: num
  * Reliability profile as a radar: one shape per firm, the bigger the safer.
  * Up to three firms can be overlaid for a side-by-side reading.
  */
-export default function ReliabilityRadar({ firms, showValues = false, size = 320, caption }: ReliabilityRadarProps) {
+export default function ReliabilityRadar({ firms, showValues = false, size = 320, caption, labels }: ReliabilityRadarProps) {
   const shown = firms.slice(0, 3);
   if (!shown.length) return null;
-  const axesByFirm = shown.map((firm) => reliabilityAxes(firm));
+  const axesByFirm = shown.map((firm) =>
+    reliabilityAxes(firm).map((axis) => ({
+      ...axis,
+      label: labels ? (labels.axes as Record<string, string>)[axis.label] ?? axis.label : axis.label,
+      display: localize(axis.display, labels),
+    })),
+  );
   const axes = axesByFirm[0];
   const count = axes.length;
   const pad = showValues ? 104 : 112;
@@ -39,7 +59,7 @@ export default function ReliabilityRadar({ firms, showValues = false, size = 320
 
   return (
     <figure className="pr-relradar">
-      <svg viewBox={`0 0 ${box} ${box}`} role="img" aria-label={`Reliability profile. ${summary}.`}>
+      <svg viewBox={`0 0 ${box} ${box}`} role="img" aria-label={`${labels?.aria ?? 'Reliability profile.'} ${summary}.`}>
         {rings.map((ring) => (
           <polygon
             key={ring}
@@ -100,8 +120,8 @@ export default function ReliabilityRadar({ firms, showValues = false, size = 320
         </figcaption>
       ) : null}
       <p className="pr-relradar-note">
-        {caption ?? 'Bigger shape = safer on that axis.'}
-        {axesByFirm.some((firmAxes) => firmAxes.some((axis) => axis.estimated)) ? ' Hollow dot = provisional value.' : ''}
+        {caption ?? labels?.caption ?? 'Bigger shape = safer on that axis.'}
+        {axesByFirm.some((firmAxes) => firmAxes.some((axis) => axis.estimated)) ? labels?.hollow ?? ' Hollow dot = provisional value.' : ''}
       </p>
     </figure>
   );
