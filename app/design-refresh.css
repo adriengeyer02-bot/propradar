@@ -12,7 +12,7 @@
    ========================================================================== */
 
 :root {
-  --font-sans: 'Archivo Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-archivo), 'Archivo Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --accent: #0b7285;
   --accent-strong: #095c6b;
   --accent-ink: #ffffff;
