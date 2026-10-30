@@ -163,6 +163,7 @@ export default function RootLayout({
                 <span>PropRadar</span>
               </Link>
               <nav className="nav nav-primary" aria-label="Main navigation">
+                <ActiveNavLink href="/prop-firm-radar">Radar</ActiveNavLink>
                 <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>Comparator</ActiveNavLink>
                 <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/fr']}>Guides</ActiveNavLink>
                 <RiskEvidenceMenu />
@@ -176,9 +177,10 @@ export default function RootLayout({
           </header>
           <nav className="mobile-tabbar" aria-label="Mobile navigation">
             <ActiveNavLink href="/">Home</ActiveNavLink>
+            <ActiveNavLink href="/prop-firm-radar">Radar</ActiveNavLink>
             <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>Compare</ActiveNavLink>
             <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/prop-firm-challenge', '/fr']}>Guides</ActiveNavLink>
-            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/prop-firm-payout-risk', '/prop-firm-rules', '/trustpilot-prop-firms', '/prop-firm-statistics', '/prop-firm-radar']}>Risks</ActiveNavLink>
+            <ActiveNavLink href="/audit" activePrefixes={['/radar-brief', '/prop-firm-payout-risk', '/prop-firm-rules', '/trustpilot-prop-firms', '/prop-firm-statistics']}>Risks</ActiveNavLink>
             <ActiveNavLink href="/promos">Deals</ActiveNavLink>
           </nav>
           <div id="main-content" tabIndex={-1}>{children}</div>

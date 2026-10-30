@@ -3083,3 +3083,20 @@ html[data-theme='dark'] .prr-disc-a { stop-opacity: 0.1; }
 @media (max-width: 760px) { .pr-radar-read-list { grid-template-columns: 1fr; } }
 /* The full radar fits the screen height on laptops. */
 .prr-is-full .prr-svg { max-width: min(100%, calc(100vh - 150px)); min-width: min(100%, 420px); margin: 0 auto; }
+
+/* Design finishing (30 Oct): guide cards carry a one-line summary; arrows match the site icon set. */
+html body .home-guide-content > .home-guide-summary {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--soft);
+  font-size: 13.5px;
+  font-weight: 450;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+html body .home-guide-card { min-height: 0; }
+html body .home-guide-card > b,
+html body .home-tool-action b { font-weight: 600; transition: transform 0.15s ease; }
+html body .home-guide-card:hover > b,
+html body a:hover .home-tool-action b { transform: translateX(2px); }
