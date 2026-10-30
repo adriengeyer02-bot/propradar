@@ -200,6 +200,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
             label={translation.title}
             updatedLabel={fmt(g.updated, { date: '' }).trim()}
             sourcesLabel={g.sources}
+            diagramLabels={t.diagram}
           />
         </section>
       ) : null}
