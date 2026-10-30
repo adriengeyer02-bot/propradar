@@ -3922,7 +3922,7 @@
       ]
     },
     "funded-bull": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -3931,10 +3931,22 @@
           "fields": [
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 2.8 TrustScore across 15 reviews on trustpilot.com and the au mirror (claimed profile). Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews.",
+          "source": "https://www.trustpilot.com/review/fundedbull.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
-        "payoutDelay": "first payout request after the account has been held at least 14 days and 5 trading days are completed; trading is locked until the request is processed"
+        "payoutDelay": "first payout request after the account has been held at least 14 days and 5 trading days are completed; trading is locked until the request is processed",
+        "trustpilotRating": 2.8,
+        "trustpilotReviewCount": 15,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedbull.com"
       },
       "addSources": [
         {
@@ -4088,7 +4100,7 @@
       ]
     },
     "funder-trading": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4097,10 +4109,22 @@
           "fields": [
             "profitSplit"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 4.0 TrustScore across 18 reviews on trustpilot.com and the au mirror (claimed profile). Trustpilot notes the company hasn't invited customers recently.",
+          "source": "https://www.trustpilot.com/review/fundertrading.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
-        "profitSplit": 80
+        "profitSplit": 80,
+        "trustpilotRating": 4.0,
+        "trustpilotReviewCount": 18,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundertrading.com"
       },
       "addSources": [
         {
@@ -4538,6 +4562,215 @@
         "trustpilotReviewCount": 265,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/forexfundsflow.com"
       }
+    },
+    "traders-launch": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Futures programs read on the official homepage: standard ($159 to $599 for 100K to 300K, end-of-day drawdown locking at the starting balance), Legacy NYC ($99 to $279) and Static 25K (from $119, $500 static), 80% split on standard accounts, no activation fee, TradingView / Volumetrica / Quantower. Payout rules page: no time restriction, same-day processing once above +1%, no consistency rule once funded; Traders Launch LLC, Philadelphia. The crypto program is not detailed, so the firm-level drawdown type stays unverified.",
+          "source": "https://traderslaunch.com/",
+          "fields": [
+            "products",
+            "profitSplit",
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot read for the first time: 4.7 TrustScore across 80 reviews on trustpilot.com and the au mirror (claimed profile). Trustpilot notes the company hasn't invited customers recently, so reviews may not be representative.",
+          "source": "https://www.trustpilot.com/review/traderslaunch.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 80,
+        "payoutDelay": "daily once the account is above +1% profit, no payout cap; crypto and ACH every 24 hours, wire weekly",
+        "trustpilotRating": 4.7,
+        "trustpilotReviewCount": 80,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderslaunch.com"
+      },
+      "setProducts": [
+        {
+          "id": "traders-launch-futures-standard",
+          "name": "Futures evaluation (standard)",
+          "type": "Futures evaluation",
+          "description": "One-time fee $159 (100K), $299 (200K), $599 (300K). No activation fee.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 300000,
+          "entryFeeMin": 159,
+          "entryFeeMax": 599,
+          "profitTarget": "$2,000 / $4,000 / $6,000",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "$1,000 / $2,000 / $3,000, end-of-day, locks at the starting balance",
+          "profitSplit": "80%",
+          "platforms": [
+            "TradingView",
+            "Volumetrica",
+            "Quantower"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rules once funded (payout rules page, 30 Oct 2026)."
+        },
+        {
+          "id": "traders-launch-futures-legacy-nyc",
+          "name": "Futures Legacy NYC (9:30am to 4:00pm ET)",
+          "type": "Futures evaluation",
+          "description": "One-time fee $99 (100K), $149 (200K), $279 (300K).",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 300000,
+          "entryFeeMin": 99,
+          "entryFeeMax": 279,
+          "profitTarget": "$2,000 / $3,000 / $5,000",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "$1,000 / $1,000 / $2,000, end-of-day",
+          "profitSplit": "80% (55% also listed on the page)",
+          "platforms": [
+            "TradingView",
+            "Volumetrica",
+            "Quantower"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rules once funded (payout rules page, 30 Oct 2026)."
+        },
+        {
+          "id": "traders-launch-static-25k",
+          "name": "Static 25K",
+          "type": "Futures evaluation",
+          "description": "From $119, one-time.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 25000,
+          "entryFeeMin": 119,
+          "profitTarget": "$1,500",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "$500, static",
+          "profitSplit": "60%, 80% or 90%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rules once funded (payout rules page, 30 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Traders Launch programs and prices (official)",
+          "url": "https://traderslaunch.com/"
+        },
+        {
+          "label": "Traders Launch payout rules (official)",
+          "url": "https://traderslaunch.com/payout-rules"
+        }
+      ]
+    },
+    "sfx-funded": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Official program pages read. 2-Step: $5K to $200K, 8% / 5%, 4% daily, 8% static drawdown, $499 list for 100K. 1-Step Pro: $5K to $200K, 9% target, no daily limit, 6% maximum loss (type not stated), $699 list for 100K. Split 85% rising to 100% (a comparison table also lists 20% for phase rewards); rewards on demand, average 8 hours, with a stated 48-hour guarantee; Match-Trader; SFX International FZCO, Dubai (already on file). Other prices are not shown, so no entry price is set.",
+          "source": "https://sfxfunded.com/2-step-challenge",
+          "fields": [
+            "products",
+            "profitSplit",
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 85,
+        "payoutDelay": "rewards on demand once eligible, average 8 hours; the firm adds $1,000 if a reward is not received within 48 hours"
+      },
+      "setProducts": [
+        {
+          "id": "sfx-2-step",
+          "name": "2-Step Challenge",
+          "type": "Challenge",
+          "description": "Sizes $5K to $200K. Only the 100K price is shown: $499 list ($224 with the 55% discount displayed). One-time, refundable fee.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "8%, static, from the initial balance",
+          "profitSplit": "85%, rising to 100% with scaling",
+          "platforms": [
+            "Match-Trader"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated (30 Oct 2026)."
+        },
+        {
+          "id": "sfx-1-step-pro",
+          "name": "1-Step Pro Challenge",
+          "type": "Challenge",
+          "description": "Sizes $5K to $200K. Only the 100K price is shown: $699 list ($349 with the 50% discount displayed). No daily loss limit.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "9%",
+          "maxDailyLoss": "none",
+          "maxDrawdown": "6% (type not stated)",
+          "profitSplit": "85% to 100%",
+          "platforms": [
+            "Match-Trader"
+          ],
+          "tradableAssets": [
+            "not stated"
+          ],
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated (30 Oct 2026)."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "SFX Funded 2-Step Challenge (official)",
+          "url": "https://sfxfunded.com/2-step-challenge"
+        },
+        {
+          "label": "SFX Funded 1-Step Pro Challenge (official)",
+          "url": "https://sfxfunded.com/one-step-pro"
+        }
+      ]
+    },
+    "funded-trader-markets": {
+      "reviewedAt": "2026-10-30",
+      "changelog": [
+        {
+          "date": "2026-10-30",
+          "summary": "Official 2-Step and 1-Step pages read: both give an on-demand reward cycle. Other terms conflict on the same pages (2-Step Plus: 4% or 3% daily, 10% or 8% overall, 70% / 80% / up to 90% split; 1-Step Nitro: up to 90% or 100% split), and only the 100K size is priced, so split, drawdown and programs stay unverified. Entities unchanged (Formed Technologies INT FZCO, UAE; FTM Funded Trader Markets LTD, Cyprus).",
+          "source": "https://fundedtradermarkets.com/2-step",
+          "fields": [
+            "payoutDelay"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "on-demand reward cycle on 2-Step Plus and 1-Step Nitro"
+      },
+      "addSources": [
+        {
+          "label": "Funded Trader Markets 2-Step (official)",
+          "url": "https://fundedtradermarkets.com/2-step"
+        },
+        {
+          "label": "Funded Trader Markets 1-Step (official)",
+          "url": "https://fundedtradermarkets.com/1-step"
+        }
+      ]
     }
   }
 }
