@@ -4413,7 +4413,7 @@
       ]
     },
     "superfunded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4424,6 +4424,14 @@
             "newsTrading",
             "eaAllowed",
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au mirror.",
+          "source": "https://www.trustpilot.com/review/superfunded.com",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -4494,7 +4502,7 @@
       ]
     },
     "bem-funding": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-10-30",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4502,6 +4510,14 @@
           "source": "https://bemfunding.com/",
           "fields": [
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au mirror.",
+          "source": "https://www.trustpilot.com/review/bemfunding.com",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -4696,6 +4712,14 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au mirror.",
+          "source": "https://www.trustpilot.com/review/sfxfunded.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -4764,6 +4788,14 @@
           "source": "https://fundedtradermarkets.com/2-step",
           "fields": [
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-10-30",
+          "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie mirror.",
+          "source": "https://www.trustpilot.com/review/fundedtradermarkets.com",
+          "fields": [
+            "incidents"
           ]
         }
       ],
