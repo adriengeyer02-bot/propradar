@@ -15,3 +15,7 @@ export type GuideTranslation = {
 };
 
 export type GuideTranslations = Record<string, GuideTranslation>;
+
+/** Long article body of a guide, same section order as the English article. */
+export type GuideArticleTranslation = NonNullable<GuideTranslation['article']>;
+export type GuideArticleTranslations = Record<string, GuideArticleTranslation>;
