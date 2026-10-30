@@ -11,7 +11,7 @@ import { HTML_LANG, OG_LOCALE, localePath, type Locale } from '../lib/locales';
 import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import { getFirmBySlug, hasPayoutRiskSignal, type PropFirm } from '../lib/propFirms';
 import { getGuideLastModified, getRelatedGuides, getSeoGuidePath, selectGuideFirms, type SeoGuide } from '../lib/seoGuides';
-import { SITE_NAME, SITE_URL } from '../lib/site';
+import { FOUNDER, SITE_NAME, SITE_URL } from '../lib/site';
 
 const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 const TABLE_ROWS = 25;
@@ -84,6 +84,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
     .filter((entry): entry is { item: SeoGuide; tr: GuideTranslation } => Boolean(entry.tr))
     .slice(0, 3);
   const [reviewedBefore, reviewedAfter = ''] = g.reviewedBy.split('{name}');
+  const [runBefore, runAfter = ''] = t.about.runBy.split('{handle}');
   const count = (n: number) => (n === 1 ? g.firmCountOne : fmt(g.firmCountMany, { count: n }));
   const heroLabels = {
     payout: g.payout,
@@ -102,7 +103,10 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
     datePublished: GUIDE_LIBRARY_PUBLISHED_AT,
     dateModified: modified.toISOString(),
     image: `${SITE_URL}${englishPath === '/best-prop-firms' ? '/guides/meilleure-prop-firm-2026' : englishPath}/opengraph-image`,
-    author: { '@type': 'Organization', '@id': `${SITE_URL}/audit#research`, name: 'PropRadar Research', url: `${SITE_URL}/audit` },
+    author: [
+      { '@type': 'Organization', '@id': `${SITE_URL}/audit#research`, name: 'PropRadar Research', url: `${SITE_URL}/audit` },
+      { '@type': 'Person', '@id': `${SITE_URL}/about#founder`, name: FOUNDER.handle, url: `${SITE_URL}/about` },
+    ],
     publisher: { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL },
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
     translationOfWork: { '@type': 'Article', url: `${SITE_URL}${englishPath}`, inLanguage: 'en' },
@@ -138,7 +142,10 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
           <div className="guide-byline">
             <span className="guide-byline-mark" aria-hidden="true">PR</span>
             <div>
-              <strong>{reviewedBefore}<Link href={localePath(locale, '/audit')}>PropRadar Research</Link>{reviewedAfter}</strong>
+              <strong>
+                {reviewedBefore}<Link href={localePath(locale, '/audit')}>PropRadar Research</Link>{reviewedAfter}
+                {' · '}{runBefore}<Link href={localePath(locale, '/about')}>{FOUNDER.handle}</Link>{runAfter}
+              </strong>
               <small>{g.reviewedNote}</small>
             </div>
             <time dateTime={modified.toISOString()}>{fmt(g.updated, { date: modifiedLabel })}</time>
