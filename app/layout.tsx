@@ -11,7 +11,7 @@ import RiskEvidenceMenu from './components/RiskEvidenceMenu';
 import SiteSearch from './components/SiteSearch';
 import ThemeToggle from './components/ThemeToggle';
 import { propFirms } from './lib/propFirms';
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from './lib/site';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, FOUNDER } from './lib/site';
 
 const themeInitScript = `
   (function () {
@@ -41,6 +41,8 @@ const siteStructuredData = {
         '@type': 'ImageObject',
         url: `${SITE_URL}/icon.svg`,
       },
+      founder: { '@type': 'Person', '@id': `${SITE_URL}/about#founder`, name: FOUNDER.handle, url: `${SITE_URL}/about` },
+      email: 'contact@propradar.tech',
     },
     {
       '@type': 'WebSite',
@@ -208,6 +210,7 @@ export default function RootLayout({
               </nav>
               <nav className="footer-nav" aria-label="Offers and review links">
                 <strong>More</strong>
+                <Link href="/about">About PropRadar</Link>
                 <Link href="/promos">Risk-checked deals</Link>
                 <Link href="/trustpilot-prop-firms">Trustpilot research</Link>
                 <Link href="/prop-firm-statistics">Prop firm statistics</Link>
@@ -217,7 +220,10 @@ export default function RootLayout({
             </div>
             <div className="container footer-bottom">
               <span>Independent decision support. Verify official terms before checkout.</span>
-              <Link href="/audit">Method and sources</Link>
+              <span className="footer-bottom-links">
+                <Link href="/about">About</Link>
+                <Link href="/audit">Method and sources</Link>
+              </span>
             </div>
           </footer>
         </div>

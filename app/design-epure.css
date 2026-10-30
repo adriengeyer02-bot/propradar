@@ -3284,3 +3284,46 @@ html body .guide-featured-card-top > span:first-child {
   line-height: 1.35;
   text-transform: uppercase;
 }
+
+/* ---------- About page ---------- */
+.pr-about { display: grid; gap: 56px; padding-top: 48px; padding-bottom: 72px; }
+.pr-about-hero { max-width: 820px; display: grid; gap: 14px; }
+.pr-about-hero h1 { margin: 0; font-size: clamp(34px, 5vw, 56px); line-height: 1.04; letter-spacing: -0.02em; }
+.pr-about-hero .lead { margin: 0; font-size: 19px; line-height: 1.6; color: var(--soft, var(--text)); }
+.pr-about-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.pr-about-facts a {
+  display: grid; gap: 6px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.pr-about-facts a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.pr-about-facts strong { font-size: 34px; line-height: 1; font-weight: 800; color: var(--accent); font-stretch: var(--figure-stretch, 88%); }
+.pr-about-facts span { color: var(--muted); font-size: 13px; line-height: 1.4; font-weight: 600; }
+.pr-about-block { display: grid; gap: 12px; max-width: 860px; }
+.pr-about-block h2 { margin: 0 0 6px; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; }
+.pr-about-prose { display: grid; gap: 14px; }
+.pr-about-prose p, .pr-about-note { margin: 0; font-size: 16px; line-height: 1.7; color: var(--soft, var(--text)); }
+.pr-about-rules { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pr-about-rules li {
+  display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start;
+  padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+}
+.pr-about-rules li > span {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px;
+  background: var(--accent-wash); color: var(--accent); font-weight: 800; font-size: 14px;
+}
+.pr-about-rules strong { display: block; font-size: 16px; margin-bottom: 4px; color: var(--text); }
+.pr-about-rules p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.pr-about-contact {
+  max-width: none; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px;
+  padding: 28px; border-radius: 14px; background: #0b1626; color: #eaf0f7;
+}
+.pr-about-contact h2 { color: #eaf0f7; }
+.pr-about-contact p { margin: 0; color: #9fb0c6; line-height: 1.6; }
+.pr-about-contact .eyebrow { color: #36d6e7; }
+.footer-bottom-links { display: inline-flex; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .pr-about { gap: 40px; padding-top: 28px; }
+  .pr-about-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pr-about-facts strong { font-size: 28px; }
+  .pr-about-contact { grid-template-columns: 1fr; padding: 22px; }
+}

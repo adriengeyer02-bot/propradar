@@ -31,7 +31,7 @@ import GuideArticleBody from '../../components/GuideArticleBody';
 import { getGuideArticle } from '../../lib/guideArticles';
 import { getFrArticleByEnPath } from '../../lib/frArticles';
 import { getGuideVisual } from '../../lib/guideVisuals';
-import { SITE_NAME, SITE_URL } from '../../lib/site';
+import { FOUNDER, SITE_NAME, SITE_URL } from '../../lib/site';
 import {
   SEO_RESEARCH_DATE,
   getGuideLastModified,
@@ -1340,12 +1340,15 @@ export default async function SeoGuidePage({ params }: Props) {
     ],
     thumbnailUrl: `${SITE_URL}/guides/${guideUrlSlug(guide)}/opengraph-image`,
     citation: guideCitations,
-    author: {
-      '@type': 'Organization',
-      '@id': `${SITE_URL}/audit#research`,
-      name: 'PropRadar Research',
-      url: `${SITE_URL}/audit`,
-    },
+    author: [
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/audit#research`,
+        name: 'PropRadar Research',
+        url: `${SITE_URL}/audit`,
+      },
+      { '@type': 'Person', '@id': `${SITE_URL}/about#founder`, name: FOUNDER.handle, url: `${SITE_URL}/about` },
+    ],
     publisher: {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
@@ -1443,7 +1446,7 @@ export default async function SeoGuidePage({ params }: Props) {
           <div className="guide-byline" aria-label="Article provenance">
             <span className="guide-byline-mark" aria-hidden="true">PR</span>
             <div>
-              <strong>Reviewed by <Link href="/audit">PropRadar Research</Link></strong>
+              <strong>Reviewed by <Link href="/audit">PropRadar Research</Link> · run by <Link href="/about">{FOUNDER.handle}</Link></strong>
               <small>Official terms, legal files, payout signals and independent community sources.</small>
             </div>
             <time dateTime={modifiedDate.toISOString()}>Updated {modifiedDateLabel}</time>
