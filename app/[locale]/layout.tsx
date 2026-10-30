@@ -216,12 +216,12 @@ export default async function RootLayout({
               </div>
               <nav className="footer-nav" aria-label="Research links">
                 <strong>{c.footer.research}</strong>
-                <Link href={L('/prop-firm-comparison')}>{c.comparator}</Link>
+                <Link prefetch={false} href={L('/prop-firm-comparison')}>{c.comparator}</Link>
                 <Link href={L('/prop-firm-radar')}>{c.footer.radar}</Link>
                 <Link href={L('/guides')}>{c.guides}</Link>
                 <Link href={L('/best-prop-firms')}>{c.footer.best}</Link>
                 <Link href={L('/prop-firm-challenge')}>{c.footer.challenge}</Link>
-                <Link href={L('/tools')}>{c.footer.tools}</Link>
+                <Link prefetch={false} href={L('/tools')}>{c.footer.tools}</Link>
               </nav>
               <nav className="footer-nav" aria-label="Risk and evidence links">
                 <strong>{c.riskWatch}</strong>

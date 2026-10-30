@@ -14,6 +14,9 @@ type ActiveNavLinkProps = {
   activePrefixes?: string[];
 };
 
+/** Routes whose client bundle carries the whole firm database: load them on click, not on sight. */
+const NO_PREFETCH = new Set(['/prop-firm-comparison', '/tools']);
+
 function matchesPath(pathname: string, path: string, exact: boolean) {
   if (exact) return pathname === path;
   return pathname === path || pathname.startsWith(`${path}/`);
@@ -32,7 +35,7 @@ export default function ActiveNavLink({
   const classes = [className, isActive ? 'nav-link-active' : undefined].filter(Boolean).join(' ');
 
   return (
-    <Link href={localePath(locale, href)} className={classes || undefined} aria-current={isActive ? 'page' : undefined}>
+    <Link href={localePath(locale, href)} prefetch={NO_PREFETCH.has(href) ? false : undefined} className={classes || undefined} aria-current={isActive ? 'page' : undefined}>
       {children}
     </Link>
   );

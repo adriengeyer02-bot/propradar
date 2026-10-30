@@ -292,6 +292,9 @@ const de: Messages = {
     methodology: 'Methodik',
     compareTable: 'Firmen in einer Tabelle vergleichen',
     stats: 'Prop-Firm-Statistiken',
+    listTitle: 'Alle Firmen auf dem Radar, nach Markt',
+    listNote: 'Dieselben Daten wie das Radar als Liste: offene Firmen nach PropRadar-Score, danach geschlossene Firmen mit gemeldetem Schließungsdatum.',
+    closedList: 'Geschlossene Firmen',
     faqTitle: 'Fragen',
     faq: [
       { q: 'Wie wird eine Prop Firm auf dem Radar platziert?', a: 'Der Winkel ist der Hauptmarkt der Firma (Forex und CFD, Futures, Krypto, Aktien oder mehrere), und jedes Segment ist so breit wie die Zahl seiner Firmen. Der Abstand zur Mitte ist der PropRadar-Score: Je näher an der Mitte, desto höher der Score. Geschlossene Firmen liegen auf einer äußeren Bahn.' },

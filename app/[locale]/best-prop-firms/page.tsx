@@ -238,7 +238,7 @@ export default function BestPropFirmsPage() {
             <time dateTime={rankingUpdatedAt}>Updated {rankingUpdatedAt}</time>
           </div>
           <div className="actions">
-            <Link href="/prop-firm-comparison" className="btn btn-primary">Open full comparator</Link>
+            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Open full comparator</Link>
             <Link href="/prop-firm-payout-risk" className="btn">View payout risks</Link>
             <Link href="/audit" className="btn">Read source audit</Link>
           </div>

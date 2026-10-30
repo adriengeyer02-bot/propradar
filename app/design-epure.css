@@ -3329,3 +3329,27 @@ html body .header-actions .site-search-input { width: 100%; min-width: 0; }
   html body .header-actions { gap: 6px; }
   .lang-switch-button { padding: 0 7px; gap: 4px; }
 }
+
+/* ---------- Trustpilot withheld list ---------- */
+.pr-withheld-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 0 0 18px; }
+.pr-withheld-facts p { margin: 0; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: 14px; line-height: 1.6; color: var(--soft, var(--text)); }
+.pr-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.pr-withheld-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.pr-withheld-table th, .pr-withheld-table td { padding: 11px 14px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+.pr-withheld-table thead th { font-size: 12px; color: var(--muted); font-weight: 700; background: var(--surface-2, transparent); }
+.pr-withheld-table tbody tr:last-child > * { border-bottom: 0; }
+.pr-withheld-table th[scope='row'] a { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; text-decoration: none; }
+.pr-withheld-table td a { color: var(--accent); font-weight: 700; }
+@media (max-width: 760px) { .pr-withheld-facts { grid-template-columns: 1fr; } }
+
+/* Radar page: the same firms as a crawlable list */
+.pr-radar-list-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; align-items: start; margin-top: 14px; }
+.pr-radar-list-grid details { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.pr-radar-list-grid summary { display: flex; justify-content: space-between; gap: 10px; padding: 12px 16px; cursor: pointer; font-size: 15px; }
+.pr-radar-list-grid summary span { color: var(--muted); font-weight: 700; }
+.pr-radar-list-grid ol { margin: 0; padding: 0 16px 12px; list-style: none; max-height: 360px; overflow: auto; }
+.pr-radar-list-grid li { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.pr-radar-list-grid li a { color: var(--text); text-decoration: none; }
+.pr-radar-list-grid li a:hover { color: var(--accent); }
+.pr-radar-list-grid li small { color: var(--muted); }
+.pr-withheld-facts a { color: var(--accent); font-weight: 700; }

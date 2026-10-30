@@ -128,7 +128,7 @@ export default function AuditPage() {
             PropRadar does not mix a fully verified profile with an entry added for monitoring. Each firm keeps a visible audit level, consulted sources and signals still needing reinforcement.
           </p>
           <div className="actions">
-            <Link href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
+            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
             <Link href="/prop-firm-rules" className="btn">View rules</Link>
           </div>
         </div>

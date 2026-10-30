@@ -168,6 +168,10 @@ export default function PropRadarLive({
     const t0 = performance.now();
     let introDone = false;
     const lastBlip = new Map<number, number>();
+    // Performance: only touch a dot when its glow moves by a visible step, and
+    // re-render the counters a few times a second, not every frame.
+    const glowCache = new Float32Array(data.dots.length).fill(-1);
+    let lastCounts = -Infinity;
 
     const tick = (now: number) => {
       if (!running) return;
@@ -185,12 +189,15 @@ export default function PropRadarLive({
           if (k < 1) done = false;
         });
         const share = Math.min(1, elapsed / 1500);
-        setShownCounts({
-          good: Math.round(data.counts.good * share),
-          watch: Math.round(data.counts.watch * share),
-          none: Math.round(data.counts.none * share),
-          closed: Math.round(data.counts.closed * share),
-        });
+        if (share >= 1 || now - lastCounts > 120) {
+          lastCounts = now;
+          setShownCounts({
+            good: Math.round(data.counts.good * share),
+            watch: Math.round(data.counts.watch * share),
+            none: Math.round(data.counts.none * share),
+            closed: Math.round(data.counts.closed * share),
+          });
+        }
         if (done && share >= 1) introDone = true;
       }
       const sweep = ((elapsed / PERIOD_MS) * 360) % 360;
@@ -200,7 +207,11 @@ export default function PropRadarLive({
         const node = dotRefs.current[index];
         if (!node) return;
         const delta = (lead - dot.angle + 360) % 360;
-        node.style.setProperty('--glow', Math.max(0.4, 1 - delta / 330).toFixed(2));
+        const glow = Math.round(Math.max(0.4, 1 - delta / 330) * 10) / 10;
+        if (glowCache[index] !== glow) {
+          glowCache[index] = glow;
+          node.style.setProperty('--glow', String(glow));
+        }
         const label = labelRefs.current[index];
         if (label && introDone && delta < 4 && !quietRef.current && now - (lastBlip.get(index) ?? 0) > PERIOD_MS * 0.8) {
           lastBlip.set(index, now);

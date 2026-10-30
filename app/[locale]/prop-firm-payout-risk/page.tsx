@@ -89,7 +89,7 @@ export default function PayoutRiskPage() {
             incidents, legal context or withdrawal conditions require stricter reading.
           </p>
           <div className="actions">
-            <Link href="/prop-firm-comparison" className="btn btn-primary">Compare with all signals</Link>
+            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Compare with all signals</Link>
             <Link href="/prop-firm-rules" className="btn">Read sensitive clauses</Link>
             <Link href="/audit" className="btn">Check sources</Link>
           </div>

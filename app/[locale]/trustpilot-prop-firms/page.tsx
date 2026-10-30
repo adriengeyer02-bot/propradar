@@ -16,13 +16,33 @@ import {
 import { toEnglishText } from '../../lib/i18n';
 
 const TRUSTPILOT_DESCRIPTION =
-  'Compare raw prop-firm Trustpilot ratings with review alerts, payout incidents, legal checks, source depth and wider community evidence.';
+  'Which prop firms have their Trustpilot rating withheld for a guideline breach, with the dated notice for each, and how raw ratings compare with payout and legal evidence.';
+
+/** Trustpilot's own page on what happens when a business breaches its guidelines. */
+const TRUSTPILOT_ACTION_URL = 'https://corporate.trustpilot.com/legal/for-everyone/action-we-take';
+
+type WithheldRow = { firm: PropFirm; checked?: string; url?: string; fakeReviews: boolean };
+
+function withheldRows(): WithheldRow[] {
+  return propFirms
+    .filter((firm) => firm.reviewSignals.trustpilotRatingWithheld)
+    .map((firm) => {
+      const note = firm.reviewSignals.trustpilotFlaggedReviewNote ?? '';
+      const checked = note.match(/\d{4}-\d{2}-\d{2}/)?.[0];
+      const url =
+        note.match(/https:\/\/[^\s)]+/)?.[0]?.replace(/[.,]$/, '') ??
+        firm.reviewSignals.trustpilotSourceUrl ??
+        firm.sources.find((source) => /trustpilot\./i.test(source.url))?.url;
+      return { firm, checked, url, fakeReviews: /fake reviews|reviews were removed/i.test(note) };
+    })
+    .sort((a, b) => b.firm.score - a.firm.score);
+}
 
 export const metadata = createPageMetadata({
-  title: 'Prop Firm Trustpilot Reviews: Ratings vs Evidence',
+  title: 'Prop Firm Trustpilot Reviews: Ratings, Withheld Scores & Evidence',
   description: TRUSTPILOT_DESCRIPTION,
   path: '/trustpilot-prop-firms',
-  keywords: ['prop firm Trustpilot', 'prop firm reviews', 'fake Trustpilot reviews', 'reliable prop firm'],
+  keywords: ['prop firm Trustpilot', 'prop firm reviews', 'fake Trustpilot reviews', 'Trustpilot rating withheld', 'Trustpilot rating unavailable breach of guidelines', 'reliable prop firm'],
   category: 'Prop firm review research',
 });
 
@@ -51,6 +71,32 @@ function isLegalWatchFirm(firm: PropFirm) {
 }
 
 export default function TrustpilotGuidePage() {
+  const withheld = withheldRows();
+  const withheldOpen = withheld.filter((row) => row.firm.status !== 'Fermée');
+  const withheldActive = withheld.filter((row) => row.firm.status === 'Active');
+  const withheldFake = withheld.filter((row) => row.fakeReviews);
+  const latestCheck = withheld.map((row) => row.checked ?? '').sort().at(-1) || '2026-10-30';
+  const trustpilotFaq = [
+    {
+      question: 'What does "rating unavailable due to a breach of our guidelines" mean on Trustpilot?',
+      answer:
+        'Trustpilot shows this notice when it has placed a Consumer Warning on a business profile. Trustpilot says that while the warning is active the TrustScore and star rating are hidden, the business keeps only minimal account features and the score is no longer shared with third parties such as search engines. The warning usually stays about six months.',
+    },
+    {
+      question: 'How many prop firms have a withheld Trustpilot rating?',
+      answer: `${withheldOpen.length} open prop firms tracked by PropRadar showed no TrustScore and a guideline-breach notice when their Trustpilot page was last checked (latest check ${latestCheck}). ${withheldFake.length} of them also carried Trustpilot's notice that it removed fake reviews. Each firm page links the Trustpilot profile and the date it was read.`,
+    },
+    {
+      question: 'Does a withheld Trustpilot rating mean a prop firm does not pay?',
+      answer:
+        "No. The notice is about how the firm used Trustpilot, not about payouts. PropRadar records it as a dated incident and lowers the review-reliability part of the score; payout risk is judged separately, from sourced payout incidents and proof. Check the firm's payout and legal file before buying.",
+    },
+    {
+      question: 'Does PropRadar use the old rating of a firm whose rating is withheld?',
+      answer:
+        'No. When Trustpilot hides the rating, PropRadar stores no rating and no review count for that firm until Trustpilot shows a TrustScore again.',
+    },
+  ];
   const watchList = [...propFirms]
     // Only firms with a review alert on file or a public rating below 4.0.
     .filter((firm) => firm.status !== 'Fermée' && (hasReviewEvidence(firm) || firm.reviewSignals.trustpilotReliability === 'Faible'))
@@ -73,7 +119,8 @@ export default function TrustpilotGuidePage() {
         description={TRUSTPILOT_DESCRIPTION}
         path="/trustpilot-prop-firms"
         breadcrumbLabel="Trustpilot reviews"
-        dateModified="2026-07-13"
+        dateModified={latestCheck}
+        faq={trustpilotFaq}
         items={watchList.map((firm) => ({
           name: firm.name,
           path: `/firm/${firm.slug}`,
@@ -89,17 +136,85 @@ export default function TrustpilotGuidePage() {
             short history, payout complaints, legal opacity, rule changes or inconsistency with trader feedback.
           </p>
           <div className="actions">
-            <Link href="/prop-firm-comparison" className="btn btn-primary">View Trustpilot in the comparator</Link>
+            <a href="#rating-withheld" className="btn btn-primary">See the {withheldOpen.length} withheld ratings</a>
+            <Link prefetch={false} href="/prop-firm-comparison" className="btn">View Trustpilot in the comparator</Link>
             <Link href="/audit" className="btn">View proof level</Link>
             <Link href="/prop-firm-payout-risk" className="btn">Check payout risk</Link>
           </div>
         </div>
         <dl className="pr-hero-stats">
           <div><dt>Firms tracked</dt><dd>{propFirms.length}</dd></div>
-          <div><dt>Profiles needing context</dt><dd>{watchList.length}</dd></div>
+          <div><dt>Rating withheld by Trustpilot</dt><dd>{withheldOpen.length}</dd></div>
           <div><dt>Strong reliability</dt><dd>{strongReliabilityCount}</dd></div>
           <div><dt>Deep source files</dt><dd>{deepSourceCount}</dd></div>
         </dl>
+      </section>
+
+      <section className="section" id="rating-withheld" aria-labelledby="withheld-title">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">Trustpilot rating withheld</div>
+            <h2 id="withheld-title">{withheldOpen.length} prop firms whose Trustpilot rating is hidden</h2>
+          </div>
+          <p className="section-note">
+            Each firm below showed no TrustScore and Trustpilot&apos;s notice that the rating is unavailable due to a breach of its
+            guidelines. Dates are when PropRadar read the page; the link opens it.
+          </p>
+        </div>
+        <div className="pr-withheld-facts">
+          <p>
+            <strong>What Trustpilot says it means.</strong> A guideline breach can lead Trustpilot to place a Consumer Warning on the
+            profile; while it is active the TrustScore and stars are hidden from view and not shared with search engines, usually for about
+            six months. <a href={TRUSTPILOT_ACTION_URL} target="_blank" rel="noreferrer">Trustpilot: action we take</a>
+          </p>
+          <p>
+            <strong>What it does not say.</strong> The notice concerns how a firm used Trustpilot, not its payouts. {withheldActive.length} of
+            these firms are Active on PropRadar; their payout and legal files are read separately.
+          </p>
+        </div>
+        <div className="pr-table-wrap">
+          <table className="pr-withheld-table">
+            <thead>
+              <tr>
+                <th scope="col">Firm</th>
+                <th scope="col">PropRadar score</th>
+                <th scope="col">Status</th>
+                <th scope="col">Fake reviews removed</th>
+                <th scope="col">Checked</th>
+                <th scope="col">Trustpilot page</th>
+              </tr>
+            </thead>
+            <tbody>
+              {withheldOpen.map(({ firm, checked, url, fakeReviews }) => (
+                <tr key={firm.slug}>
+                  <th scope="row">
+                    <Link href={`/firm/${firm.slug}`}>
+                      <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
+                      {firm.name}
+                    </Link>
+                  </th>
+                  <td>{firm.score}/100</td>
+                  <td>{toEnglishText(firm.status)}</td>
+                  <td>{fakeReviews ? 'Notice shown' : 'Not stated'}</td>
+                  <td>{checked ? <time dateTime={checked}>{checked}</time> : 'Not dated'}</td>
+                  <td>{url ? <a href={url} target="_blank" rel="noreferrer">Open</a> : '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="trustpilot-faq-title">
+        <h2 id="trustpilot-faq-title">Trustpilot and prop firms: questions</h2>
+        <div className="firm-faq-grid">
+          {trustpilotFaq.map((item) => (
+            <article className="firm-faq-card" key={item.question}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="pr-stat-line" aria-label="Trustpilot reading summary">
