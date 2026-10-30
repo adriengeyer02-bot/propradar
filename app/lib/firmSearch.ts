@@ -31,7 +31,7 @@ const FIRM_SEARCH_ALIASES: Record<string, string[]> = {
   'city-traders-imperium': ['CTI'],
   // Former names of merged profiles, so old names still find the firm.
   wsfunded: ['Wall Street Funded', 'WSF', 'wallstreetfunded'],
-  'quant-tekel': ['AscendX Capital', 'AscendX', 'QuantTekel'],
+  'quant-tekel': ['QT Funded', 'QTFunded', 'QT', 'AscendX Capital', 'AscendX', 'QuantTekel', 'Quant Tekel'],
   'tx3-funding': ['TopTier Trader', 'TopTier', 'TTT'],
 };
 

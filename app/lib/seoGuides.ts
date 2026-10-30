@@ -1329,7 +1329,6 @@ export const seoGuides: SeoGuide[] = [
       'bem-funding',
       'atmos-funded',
       'top-one-trader',
-      'qt-funded',
       'atfunded',
       'top-one-futures',
       'e8-futures',

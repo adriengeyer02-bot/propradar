@@ -184,6 +184,15 @@ export const BLUE_GUARDIAN_AFFILIATE_URL = 'https://blueguardian.com/?afmc=PROPR
 export const FUNDERPRO_AFFILIATE_URL = 'https://funderpro.cxclick.com/visit/?bta=48892&brand=funderpro';
 export const GOAT_FUNDED_TRADER_AFFILIATE_URL = 'https://app.goatfundedtrader.com/checkout?referral_id=04e892a0e3d217576945';
 export const THE5ERS_AFFILIATE_URL = 'https://www.the5ers.com/?afmc=1cuh';
+/** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
+export function isAffiliateUrl(url: string) {
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL].includes(url);
+}
+
+export function linkRel(url: string) {
+  return isAffiliateUrl(url) ? 'noreferrer sponsored' : 'noreferrer';
+}
+
 export const PROPRADAR_PROMO_CODE = 'PROPRADAR';
 export const THE5ERS_PROMO_CODE = '1EIJ6PO';
 
@@ -7191,7 +7200,7 @@ const universePropFirms: PropFirm[] = [
   universeFirm({
     id: 90,
     slug: 'quant-tekel',
-    name: 'Quant Tekel',
+    name: 'QT Funded (Quant Tekel)',
     website: 'https://quanttekel.com/',
     status: 'À surveiller',
     score: 60,
@@ -7200,7 +7209,7 @@ const universePropFirms: PropFirm[] = [
     priceFrom: 49,
     auditStatus: 'Vérifié multi-source',
     auditSummary:
-      'Quant Tekel is the former AscendX Capital (rebrand reported by Finance Magnates on 16 September 2024). Official Quant Tekel site and footer checked. Quant Tekel separates regulated brokerage from proprietary trading: Quant Tekel (Pty) Ltd is disclosed as an FSCA-authorised South African broker for permitted Africa/Asia jurisdictions, while QTFunded virtual proprietary trading is provided by Quant Tekel LLC and does not provide brokerage, CFD trading or live market access. Quant Tekel Ltd in the UK acts as payment agent for virtual challenge fees.',
+      'QT Funded is the prop trading brand of Quant Tekel (qtfunded.com redirects to qtfunded.quanttekel.com), and Quant Tekel is the former AscendX Capital (rebrand reported by Finance Magnates on 16 September 2024). Official Quant Tekel site and footer checked. Quant Tekel separates regulated brokerage from proprietary trading: Quant Tekel (Pty) Ltd is disclosed as an FSCA-authorised South African broker for permitted Africa/Asia jurisdictions, while QTFunded virtual proprietary trading is provided by Quant Tekel LLC and does not provide brokerage, CFD trading or live market access. Quant Tekel Ltd in the UK acts as payment agent for virtual challenge fees.',
     regulatoryAudit: {
       riskLevel: 'Low to medium',
       lastChecked: '2026-07-08',
@@ -7213,6 +7222,11 @@ const universePropFirms: PropFirm[] = [
           registrationNumber: '2021/321922/07 / FSP No. 53227',
           registeredAddress: '60 Noll Avenue, Gatesville, Cape Town, Western Cape, 7764, South Africa',
           role: 'FSCA-authorised brokerage entity for permitted Africa/Asia jurisdictions.',
+        },
+        {
+          name: 'Quant Tekel SVG',
+          jurisdiction: 'Saint Vincent and the Grenadines',
+          role: 'Contracting entity for QTFunded services according to the official QTFunded footer (checked 2026-07-08 under the former QT Funded profile).',
         },
         {
           name: 'Quant Tekel LLC',
@@ -7242,10 +7256,12 @@ const universePropFirms: PropFirm[] = [
         'Broker regulation should not be transferred mentally to QTFunded virtual challenges.',
         'Payment-agent role of UK entity does not make it the regulated service provider.',
         'Users must verify whether they are accessing quanttekel.com brokerage or qtfunded.com prop challenge.',
+        'Offshore SVG contracting entity for the QTFunded prop product.',
       ],
       sources: [
         { label: 'Quant Tekel official site', url: 'https://quanttekel.com/' },
         { label: 'QTFunded prop trading portal', url: 'https://qtfunded.quanttekel.com/' },
+        { label: 'QT Funded official redirect', url: 'https://qtfunded.com/' },
         { label: 'Quant Tekel Terms and Conditions', url: 'https://quanttekel.com/terms-and-conditions/' },
         { label: 'Quant Tekel Trustpilot', url: 'https://www.trustpilot.com/review/quanttekel.com' },
         { label: 'Finance Magnates: QuantTekel rebrand from AscendX Capital (2024-09-16)', url: 'https://financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/amp' },
@@ -8125,73 +8141,6 @@ const universePropFirms: PropFirm[] = [
         { label: 'Top One Trader official site', url: 'https://www.toponetrader.com/' },
         { label: 'Top One Trader Terms and Conditions', url: 'https://www.toponetrader.com/terms-and-conditions' },
         { label: 'Top One Trader Trustpilot', url: 'https://www.trustpilot.com/review/toponetrader.com' },
-      ],
-    },
-  }),
-  universeFirm({
-    id: 109,
-    slug: 'qt-funded',
-    name: 'QT Funded',
-    website: 'https://qtfunded.com/',
-    status: 'À surveiller',
-    score: 59,
-    founded: 2024,
-    headquarters: 'Saint Vincent and the Grenadines / South Africa / United Kingdom',
-    priceFrom: 49,
-    auditStatus: 'Vérifié multi-source',
-    auditSummary:
-      'Official qtfunded.com redirects to qtfunded.quanttekel.com. The footer states that Quant Tekel LLC provides virtual proprietary trading programs through simulated environments, Quant Tekel (Pty) Ltd is a separate FSCA-regulated South African broker, Quant Tekel Ltd in the UK performs internal treasury/payment processing, and customers contract with Quant Tekel SVG in Saint Vincent and the Grenadines.',
-    regulatoryAudit: {
-      riskLevel: 'Medium',
-      lastChecked: '2026-07-08',
-      summary:
-        'Medium risk mainly because QT Funded is a duplicate/brand-specific entry of the Quant Tekel prop portal. The legal separation is unusually clear, but the contracting entity for QTFunded services is offshore Quant Tekel SVG, not the FSCA-regulated South African broker.',
-      entities: [
-        {
-          name: 'Quant Tekel SVG',
-          jurisdiction: 'Saint Vincent and the Grenadines',
-          role: 'Contracting entity for QTFunded services according to official QTFunded footer.',
-        },
-        {
-          name: 'Quant Tekel LLC',
-          jurisdiction: 'United States',
-          registrationNumber: '3984 LLC 2025',
-          role: 'Provider of virtual proprietary trading programs through simulated environments.',
-        },
-        {
-          name: 'Quant Tekel (Pty) Ltd',
-          jurisdiction: 'South Africa',
-          registrationNumber: 'FSP No. 53227',
-          role: 'Separate FSCA-authorised brokerage entity for permitted Africa/Asia jurisdictions.',
-        },
-        {
-          name: 'Quant Tekel Ltd',
-          jurisdiction: 'United Kingdom',
-          registrationNumber: '15923693',
-          registeredAddress: '1 Canada Square, Level 39, Canary Wharf, London E14 5AB, United Kingdom',
-          role: 'Internal treasury/payment-processing entity, not regulated trading-service provider.',
-        },
-      ],
-      regulatoryStatus: [
-        'QTFunded does not offer brokerage, CFD trading or live market access to clients in any jurisdiction.',
-        'No real trading occurs and evaluation fees are subscription fees, not client money or investment deposits.',
-        'Quant Tekel (Pty) Ltd broker regulation does not apply to the QTFunded virtual challenge product.',
-        'Restricted jurisdictions include Cyprus, Iran, North Korea, Sudan, Syria and Russia; MT5 is unavailable to US residents.',
-      ],
-      complaintsAndDisputes: [
-        'Merge or cross-link with the Quant Tekel profile to avoid double-counting reviews and legal findings.',
-        'Payout disputes should name the SVG contracting entity, not only the UK payment entity.',
-      ],
-      redFlags: [
-        'Duplicate brand risk versus Quant Tekel profile.',
-        'Offshore SVG contracting entity for the prop product.',
-        'FSCA broker authorization should not be mentally transferred to QTFunded challenges.',
-      ],
-      sources: [
-        { label: 'QT Funded official redirect', url: 'https://qtfunded.com/' },
-        { label: 'QTFunded Quant Tekel portal', url: 'https://qtfunded.quanttekel.com/' },
-        { label: 'Quant Tekel official site', url: 'https://quanttekel.com/' },
-        { label: 'QT Funded Trustpilot search', url: 'https://www.trustpilot.com/search?query=QT%20Funded' },
       ],
     },
   }),

@@ -24,6 +24,7 @@ import {
   auditStatusClass,
   formatUsd,
   priceLabel,
+  linkRel,
   getFirmBySlug,
   manipulationRiskClass,
   payoutRiskClass,
@@ -1199,7 +1200,7 @@ export default async function FirmPage({ params }: Props) {
                   <li key={source.url}>
                     {isBlockedFirmUrl(firm, source.url)
                       ? <span>{toEnglishText(source.label)} (not linked)</span>
-                      : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
+                      : <a href={source.url} target="_blank" rel={linkRel(source.url)}>{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
                   </li>
                 ))}
               </ul>
@@ -1443,7 +1444,7 @@ export default async function FirmPage({ params }: Props) {
                 <li key={source.url}>
                   {isBlockedFirmUrl(firm, source.url)
                     ? <span>{toEnglishText(source.label)}</span>
-                    : <a href={source.url} target="_blank" rel="noreferrer">{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
+                    : <a href={source.url} target="_blank" rel={linkRel(source.url)}>{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
                 </li>
               ))}
             </ul>
