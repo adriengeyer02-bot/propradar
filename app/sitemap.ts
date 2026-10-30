@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { propFirms } from './lib/propFirms';
+import { isFirmIndexable } from './lib/firmIndexing';
 import { getGuideLastModified, getSeoGuidePath, seoGuides } from './lib/seoGuides';
 import { getFirmContentLastModified } from './lib/firmSearchProfiles';
 import { editorialBriefs, getEditorialBriefPath } from './lib/editorialBriefs';
@@ -40,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         : ('monthly' as const),
       priority: route.priority,
     })),
-    ...propFirms.map((firm) => ({
+    ...propFirms.filter(isFirmIndexable).map((firm) => ({
       url: `${SITE_URL}/firm/${firm.slug}`,
       lastModified: new Date(getFirmContentLastModified(
         firm.slug,

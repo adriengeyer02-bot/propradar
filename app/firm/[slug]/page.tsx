@@ -53,6 +53,7 @@ import { editorialBriefs, getEditorialBriefPath } from '../../lib/editorialBrief
 import { getAuditCaseFile } from '../../lib/auditCaseFiles';
 import { entityCountries } from '../../lib/jurisdictions';
 import { getClosureRecord } from '../../lib/closures';
+import { isFirmIndexable } from '../../lib/firmIndexing';
 import { feeStats } from '../../lib/industryStats';
 
 type Props = {
@@ -465,6 +466,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `/firm/${firm.slug}`,
     },
+    ...(isFirmIndexable(firm) ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title,
       description,
