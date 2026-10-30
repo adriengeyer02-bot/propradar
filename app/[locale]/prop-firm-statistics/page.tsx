@@ -25,36 +25,54 @@ import {
   withheldFirms,
 } from '../../lib/industryStats';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
+import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { fmt, formatDateLong, getMessages, numberLocale } from '../../lib/messages';
+import { rich } from '../../lib/rich';
 
 const PATH = '/prop-firm-statistics';
 const TITLE = 'Prop Firm Statistics 2026: Closures, Fees, Countries & Reviews';
-const DESCRIPTION = `Prop firm statistics from ${openFirms.length + closedFirms.length} tracked firms: dated closures, challenge fees, profit splits, where firms are registered, Trustpilot. Free CSV.`;
+const TOTAL = openFirms.length + closedFirms.length;
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  keywords: ['prop firm statistics', 'prop firm industry data', 'prop firms that closed', 'prop firm closures 2024', 'prop firm challenge fees', 'where are prop firms registered'],
-  authors: [{ name: 'PropRadar Research', url: '/audit' }],
-  publisher: SITE_NAME,
-  category: 'Prop firm research',
-  alternates: { canonical: PATH },
-  openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}${PATH}`,
-    type: 'article',
-    siteName: SITE_NAME,
-    modifiedTime: statsUpdatedAt,
-    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: 'PropRadar prop firm statistics' }],
-  },
-  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION },
-};
+type Props = { params: Promise<{ locale: string }> };
+
+async function pageLocale(params: Props['params']): Promise<Locale> {
+  const { locale } = await params;
+  return isLocale(locale) ? locale : 'en';
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = await pageLocale(params);
+  const st = getMessages(locale).stats;
+  const description = fmt(st.metaDescription, { count: TOTAL });
+  return {
+    title: st.metaTitle,
+    description,
+    ...(locale === 'en'
+      ? { keywords: ['prop firm statistics', 'prop firm industry data', 'prop firms that closed', 'prop firm closures 2024', 'prop firm challenge fees', 'where are prop firms registered'] }
+      : {}),
+    authors: [{ name: 'PropRadar Research', url: localePath(locale, '/audit') }],
+    publisher: SITE_NAME,
+    category: 'Prop firm research',
+    alternates: localeAlternates(locale, PATH),
+    openGraph: {
+      title: st.metaTitle,
+      description,
+      url: `${SITE_URL}${localePath(locale, PATH)}`,
+      type: 'article',
+      siteName: SITE_NAME,
+      locale: OG_LOCALE[locale],
+      modifiedTime: statsUpdatedAt,
+      images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: st.h1 }],
+    },
+    twitter: { card: 'summary_large_image', title: st.metaTitle, description },
+  };
+}
 
 function jsonLd(data: unknown) {
   return { __html: JSON.stringify(data).replace(/</g, '\\u003c') };
 }
 
-function Bars({ rows, unit, label }: { rows: { label: string; count: number }[]; unit: string; label: string }) {
+function Bars({ rows, unit, unitOne, label }: { rows: { label: string; count: number }[]; unit: string; unitOne: string; label: string }) {
   const max = Math.max(1, ...rows.map((row) => row.count));
   return (
     <ul className="pr-stat-bars" aria-label={label}>
@@ -65,7 +83,7 @@ function Bars({ rows, unit, label }: { rows: { label: string; count: number }[];
             <span style={{ width: `${(row.count / max) * 100}%` }} />
           </span>
           <span className="pr-stat-bars-value">
-            {row.count} <small>{row.count === 1 ? unit.replace(/s$/, '') : unit}</small>
+            {row.count} <small>{row.count === 1 ? unitOne : unit}</small>
           </span>
         </li>
       ))}
@@ -73,19 +91,27 @@ function Bars({ rows, unit, label }: { rows: { label: string; count: number }[];
   );
 }
 
-function Anchor({ id }: { id: string }) {
+function Anchor({ id, label }: { id: string; label: string }) {
   return (
-    <a className="pr-stat-anchor" href={`#${id}`} aria-label="Link to this section">
+    <a className="pr-stat-anchor" href={`#${id}`} aria-label={label}>
       #
     </a>
   );
 }
 
-function formatDate(date: string) {
+function formatDate(date: string, locale: Locale = 'en') {
+  if (locale !== 'en') return formatDateLong(locale, date);
   return new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
 }
 
-export default function PropFirmStatisticsPage() {
+export default async function PropFirmStatisticsPage({ params }: Props) {
+  const locale = await pageLocale(params);
+  const t = getMessages(locale);
+  const st = t.stats;
+  const L = (path: string) => localePath(locale, path);
+  const n = (value: number) => value.toLocaleString(numberLocale(locale));
+  const cName = (code: string, name: string) => countryLabel(locale, code, name);
+  const pageUrl = `${SITE_URL}${L(PATH)}`;
   const all = feeStats();
   const forex = feeStats('Challenge');
   const futures = feeStats('Futures evaluation');
@@ -93,40 +119,46 @@ export default function PropFirmStatisticsPage() {
   const topCountries = countryCounts.slice(0, 12);
   const listedCountries = countryCounts.filter((row) => row.country.lists?.length);
   const split80to90 = splitFirms.filter((firm) => firm.profitSplit >= 80 && firm.profitSplit <= 90).length;
-  const citation = `PropRadar, "Prop Firm Statistics 2026", ${SITE_URL}${PATH} (data as of ${statsUpdatedAt}).`;
+  const citation = `PropRadar, "${TITLE.split(':')[0]}", ${pageUrl} (data as of ${statsUpdatedAt}).`;
+  const median = trustpilotStats.median.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const anchor = (id: string) => <Anchor id={id} label={st.anchor} />;
+  const b = (value: number | string) => <strong>{typeof value === 'number' ? n(value) : value}</strong>;
 
   const keyFacts = [
-    { id: 'closures', value: String(closedFirms.length), label: 'firms recorded as closed', note: `${documentedClosures.length} with a public source linked below` },
-    { id: 'fees', value: formatUsd(all.median), label: 'median starting challenge fee', note: `across ${all.count} programs in sourced firm files` },
-    { id: 'countries', value: String(countryCounts.length), label: 'countries host a firm entity', note: `among ${firmsWithCountry.length} open firms with an identified entity` },
-    { id: 'trustpilot', value: String(trustpilotStats.withheld), label: 'firms whose Trustpilot rating is withheld', note: 'Trustpilot cites a breach of its guidelines' },
+    { id: 'closures', value: n(closedFirms.length), label: st.keyClosedLabel, note: fmt(st.keyClosedNote, { count: documentedClosures.length }) },
+    { id: 'fees', value: formatUsd(all.median), label: st.keyFeeLabel, note: fmt(st.keyFeeNote, { count: all.count }) },
+    { id: 'countries', value: n(countryCounts.length), label: st.keyCountriesLabel, note: fmt(st.keyCountriesNote, { count: firmsWithCountry.length }) },
+    { id: 'trustpilot', value: n(trustpilotStats.withheld), label: st.keyWithheldLabel, note: st.keyWithheldNote },
   ];
 
   const faq = [
     {
-      question: 'How many prop firms have closed?',
-      answer: `PropRadar records ${closedFirms.length} closed firms in its database of ${openFirms.length + closedFirms.length}. ${documentedClosures.length} have a public source on this page, including ${closuresByYear['2024'] ?? 0} closures dated 2024. This is not an industry census: Finance Magnates reported that around 50 prop firms shut down in 2024.`,
+      question: st.faq1Q,
+      answer: fmt(st.faq1A, { closed: closedFirms.length, total: TOTAL, documented: documentedClosures.length, y2024: closuresByYear['2024'] ?? 0 }),
     },
     {
-      question: 'How much does a prop firm challenge cost on average?',
-      answer: `Across ${all.count} programs with a listed entry fee in PropRadar's sourced firm files, the median starting fee is ${formatUsd(all.median)} and half of programs start between ${formatUsd(all.q1)} and ${formatUsd(all.q3)}. These are the smallest accounts before discounts.`,
+      question: st.faq2Q,
+      answer: fmt(st.faq2A, { count: all.count, median: formatUsd(all.median), q1: formatUsd(all.q1), q3: formatUsd(all.q3) }),
     },
     {
-      question: 'Where are prop firms registered?',
-      answer: `Among the ${firmsWithCountry.length} open firms whose legal entity PropRadar has identified, the most common countries are ${topCountries.slice(0, 5).map((row) => `${row.country.name} (${row.firms})`).join(', ')}. ${multiCountryFirms} of these firms use entities in more than one country.`,
+      question: st.faq3Q,
+      answer: fmt(st.faq3A, {
+        count: firmsWithCountry.length,
+        top: topCountries.slice(0, 5).map((row) => `${cName(row.country.code, row.country.name)} (${row.firms})`).join(', '),
+        multi: multiCountryFirms,
+      }),
     },
-    {
-      question: 'What is the most common profit split?',
-      answer: `Among the ${splitFirms.length} open firms whose headline profit split PropRadar read on a source, ${split80to90} advertise between 80% and 90%.`,
-    },
+    { question: st.faq4Q, answer: fmt(st.faq4A, { count: splitFirms.length, range: split80to90 }) },
   ];
 
+  const description = fmt(st.metaDescription, { count: TOTAL });
   const datasetSchema = {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: 'PropRadar prop firm statistics',
-    description: DESCRIPTION,
-    url: `${SITE_URL}${PATH}`,
+    description,
+    url: pageUrl,
+    inLanguage: HTML_LANG[locale],
     creator: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     dateModified: statsUpdatedAt,
     isAccessibleForFree: true,
@@ -136,9 +168,10 @@ export default function PropFirmStatisticsPage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}${PATH}`,
+    headline: st.metaTitle,
+    description,
+    url: pageUrl,
+    inLanguage: HTML_LANG[locale],
     datePublished: '2026-10-29',
     dateModified: statsUpdatedAt,
     author: { '@type': 'Organization', name: 'PropRadar Research', url: `${SITE_URL}/audit` },
@@ -153,10 +186,11 @@ export default function PropFirmStatisticsPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Prop firm statistics', item: `${SITE_URL}${PATH}` },
+      { '@type': 'ListItem', position: 1, name: t.guide.breadcrumbHome, item: `${SITE_URL}${L('/')}` },
+      { '@type': 'ListItem', position: 2, name: st.breadcrumb, item: pageUrl },
     ],
   };
+  const csv = `${PATH}/data.csv`;
 
   return (
     <main className="container guide-page pr-stats-page">
@@ -166,20 +200,16 @@ export default function PropFirmStatisticsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema)} />
 
       <section className="pr-stats-hero">
-        <div className="eyebrow"><span>Data as of <time dateTime={statsUpdatedAt}>{formatDate(statsUpdatedAt)}</time></span></div>
-        <h1>Prop firm statistics 2026</h1>
-        <p className="lead">
-          Closures, challenge fees, profit splits, where firms are registered and what Trustpilot shows, computed from the{' '}
-          {openFirms.length + closedFirms.length} firms PropRadar tracks. Every figure states the base it is computed on, and values
-          PropRadar has not read on a source are left out.
-        </p>
+        <div className="eyebrow"><span>{rich(st.dataAsOf, { date: <time dateTime={statsUpdatedAt}>{formatDate(statsUpdatedAt, locale)}</time> })}</span></div>
+        <h1>{st.h1}</h1>
+        <p className="lead">{fmt(st.lead, { count: TOTAL })}</p>
         <div className="actions">
-          <a className="btn btn-primary" href={`${PATH}/data.csv`} download>Download the data (CSV)</a>
-          <a className="btn" href="#cite">Cite this page</a>
+          <a className="btn btn-primary" href={csv} download>{st.download}</a>
+          <a className="btn" href="#cite">{st.cite}</a>
         </div>
       </section>
 
-      <section className="pr-stats-keys" aria-label="Key figures">
+      <section className="pr-stats-keys" aria-label={st.keysAria}>
         {keyFacts.map((fact) => (
           <a key={fact.id} href={`#${fact.id}`} className="pr-stats-key">
             <strong>{fact.value}</strong>
@@ -190,40 +220,46 @@ export default function PropFirmStatisticsPage() {
       </section>
 
       <section className="pr-stats-section" id="closures" aria-labelledby="closures-title">
-        <h2 id="closures-title">Prop firm closures <Anchor id="closures" /></h2>
+        <h2 id="closures-title">{st.closuresTitle} {anchor('closures')}</h2>
         <p>
-          PropRadar records <strong>{closedFirms.length}</strong> closed firms. The {documentedClosures.length} below have a public
-          source; dates are the ones the source gives.
-          {undocumentedClosedCount > 0 ? ` ${undocumentedClosedCount} more ${undocumentedClosedCount === 1 ? 'is' : 'are'} recorded as closed while the closure source is being documented.` : ''}{' '}
-          For scale,{' '}
-          <a href="https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter" target="_blank" rel="noreferrer">Finance Magnates reported</a> that around 50 prop firms shut down in
-          2024; this list covers only firms PropRadar tracks.
+          {rich(st.closuresText, { closed: b(closedFirms.length), documented: documentedClosures.length })}
+          {undocumentedClosedCount > 0
+            ? ` ${undocumentedClosedCount === 1 ? st.closuresMoreOne : fmt(st.closuresMore, { count: undocumentedClosedCount })}`
+            : ''}{' '}
+          {rich(st.closuresScale, {
+            link: (
+              <a href="https://financemagnates.com/forex/another-prop-firm-announces-closure-in-year-that-saw-50-companies-shutter" target="_blank" rel="noreferrer">
+                {st.closuresScaleLink}
+              </a>
+            ),
+          })}
+          {locale !== 'en' ? ` ${st.closuresSourceNote}` : ''}
         </p>
         <div className="guide-rule-table-wrap">
           <table className="guide-rule-table pr-stats-table pr-closures-table">
             <thead>
               <tr>
-                <th scope="col">Firm</th>
-                <th scope="col">Date</th>
-                <th scope="col">What the source says</th>
-                <th scope="col">Source</th>
+                <th scope="col">{st.thFirm}</th>
+                <th scope="col">{st.thDate}</th>
+                <th scope="col">{st.thSays}</th>
+                <th scope="col">{st.thSource}</th>
               </tr>
             </thead>
             <tbody>
               {documentedClosures.map(({ record, firm }) => (
                 <tr key={record.slug}>
-                  <th scope="row"><Link href={`/firm/${firm.slug}`}>{firm.name}</Link></th>
+                  <th scope="row"><Link href={L(`/firm/${firm.slug}`)}>{firm.name}</Link></th>
                   <td className="pr-nowrap">
                     {record.date ? (
                       <>
-                        <time dateTime={record.date}>{formatDate(record.date)}</time>
-                        {record.dateKind === 'reported' ? <small className="pr-muted"> (reported)</small> : null}
+                        <time dateTime={record.date}>{formatDate(record.date, locale)}</time>
+                        {record.dateKind === 'reported' ? <small className="pr-muted"> {st.reported}</small> : null}
                       </>
                     ) : (
-                      <span className="pr-muted">Not stated</span>
+                      <span className="pr-muted">{st.notStated}</span>
                     )}
                   </td>
-                  <td>{record.summary}</td>
+                  <td lang={locale !== 'en' ? 'en' : undefined}>{record.summary}</td>
                   <td><a href={record.source.url} target="_blank" rel="noreferrer">{record.source.label}</a></td>
                 </tr>
               ))}
@@ -233,68 +269,60 @@ export default function PropFirmStatisticsPage() {
       </section>
 
       <section className="pr-stats-section" id="fees" aria-labelledby="fees-title">
-        <h2 id="fees-title">Challenge fees <Anchor id="fees" /></h2>
-        <p>
-          Starting fee of the smallest account, before discounts, for {all.count} programs in sourced firm files. Half of the
-          programs start between <strong>{formatUsd(all.q1)}</strong> and <strong>{formatUsd(all.q3)}</strong>; the median is{' '}
-          <strong>{formatUsd(all.median)}</strong>.
-        </p>
+        <h2 id="fees-title">{st.feesTitle} {anchor('fees')}</h2>
+        <p>{rich(st.feesText, { count: all.count, q1: b(formatUsd(all.q1)), q3: b(formatUsd(all.q3)), median: b(formatUsd(all.median)) })}</p>
         <div className="pr-stats-grid">
-          <Bars rows={feeBuckets} unit="programs" label="Programs by starting fee" />
+          <Bars rows={feeBuckets} unit={st.unitPrograms} unitOne={st.unitProgram} label={st.feesBarsLabel} />
           <div className="guide-rule-table-wrap">
             <table className="guide-rule-table pr-stats-table">
               <thead>
-                <tr><th scope="col">Model</th><th scope="col">Programs</th><th scope="col">Lowest</th><th scope="col">Median</th><th scope="col">Highest</th></tr>
+                <tr><th scope="col">{st.thModel}</th><th scope="col">{st.thPrograms}</th><th scope="col">{st.thLowest}</th><th scope="col">{st.thMedian}</th><th scope="col">{st.thHighest}</th></tr>
               </thead>
               <tbody>
-                {[
-                  ['Forex / CFD challenge', forex],
-                  ['Futures evaluation', futures],
-                  ['Instant funding', instant],
-                ].map(([label, stat]) => {
-                  const s = stat as ReturnType<typeof feeStats>;
-                  return (
-                    <tr key={label as string}>
-                      <th scope="row">{label as string}</th>
-                      <td>{s.count}</td>
-                      <td>{formatUsd(s.min)}</td>
-                      <td>{formatUsd(s.median)}</td>
-                      <td>{formatUsd(s.max)}</td>
-                    </tr>
-                  );
-                })}
+                {([
+                  [st.modelForex, forex],
+                  [st.modelFutures, futures],
+                  [st.modelInstant, instant],
+                ] as const).map(([label, stat]) => (
+                  <tr key={label}>
+                    <th scope="row">{label}</th>
+                    <td>{stat.count}</td>
+                    <td>{formatUsd(stat.min)}</td>
+                    <td>{formatUsd(stat.median)}</td>
+                    <td>{formatUsd(stat.max)}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
         <p className="pr-stats-note">
-          Program by program: <Link href="/prop-firm-challenge#compare">prop firm challenges compared</Link>. Fees were read on each
-          firm&apos;s own pages; the review date is on every firm file. {feeRows.length} programs counted.
+          {rich(st.feesNote, { link: <Link href={`${L('/prop-firm-challenge')}#compare`}>{st.feesNoteLink}</Link>, count: feeRows.length })}
         </p>
       </section>
 
       <section className="pr-stats-section" id="profit-split" aria-labelledby="split-title">
-        <h2 id="split-title">Profit split <Anchor id="profit-split" /></h2>
-        <p>
-          Headline split advertised by {splitFirms.length} open firms whose split PropRadar read on a source.{' '}
-          <strong>{split80to90}</strong> of them advertise between 80% and 90%. Many firms raise the split with scaling or add-ons, so
-          this is the base figure, not the best case.
-        </p>
-        <Bars rows={splitBuckets} unit="firms" label="Firms by headline profit split" />
+        <h2 id="split-title">{st.splitTitle} {anchor('profit-split')}</h2>
+        <p>{rich(st.splitText, { count: splitFirms.length, range: b(split80to90) })}</p>
+        <Bars rows={splitBuckets} unit={st.unitFirms} unitOne={st.unitFirm} label={st.splitBarsLabel} />
       </section>
 
       <section className="pr-stats-section" id="countries" aria-labelledby="countries-title">
-        <h2 id="countries-title">Where prop firms are registered <Anchor id="countries" /></h2>
+        <h2 id="countries-title">{st.countriesTitle} {anchor('countries')}</h2>
         <p>
-          PropRadar has identified the legal entity country for <strong>{firmsWithCountry.length}</strong> of {openFirms.length} open
-          firms. Together they use entities in {countryCounts.length} countries; {multiCountryFirms} firms use more than one
-          country, and {euEntityFirms} have at least one entity in the EU. A firm counts once per country.
+          {rich(st.countriesText, {
+            identified: b(firmsWithCountry.length),
+            open: openFirms.length,
+            countries: countryCounts.length,
+            multi: multiCountryFirms,
+            eu: euEntityFirms,
+          })}
         </p>
         <ol className="pr-stats-countries">
           {topCountries.map(({ country, firms }) => (
             <li key={country.code}>
               <Flag code={country.code} size="md" />
-              <Link href={`/prop-firm-comparison?country=${country.code}`}>{country.name}</Link>
+              <Link prefetch={false} href={`${L('/prop-firm-comparison')}?country=${country.code}`}>{cName(country.code, country.name)}</Link>
               <span className="pr-stats-bars-track" aria-hidden="true">
                 <span style={{ width: `${(firms / topCountries[0].firms) * 100}%` }} />
               </span>
@@ -303,70 +331,73 @@ export default function PropFirmStatisticsPage() {
           ))}
         </ol>
         <p className="pr-stats-note">
-          Official-list markers ({OFFICIAL_LISTS.fatfGrey.short}, {OFFICIAL_LISTS.fatfGrey.asOf}; EU tax lists, {OFFICIAL_LISTS.euAnnexI.asOf}):{' '}
-          {listedCountries.length
-            ? listedCountries.map((row) => `${row.country.name}: ${row.country.lists!.map((key) => OFFICIAL_LISTS[key].short).join(', ')}`).join('; ')
-            : 'none of these countries'}
-          . A country count says nothing about any single firm. <Link href="/audit#jurisdictions">Open the legal map</Link>.
+          {fmt(st.countriesNote, {
+            fatf: OFFICIAL_LISTS.fatfGrey.short,
+            fatfDate: OFFICIAL_LISTS.fatfGrey.asOf,
+            euDate: OFFICIAL_LISTS.euAnnexI.asOf,
+            list: listedCountries.length
+              ? listedCountries
+                  .map((row) => `${cName(row.country.code, row.country.name)}: ${row.country.lists!.map((key) => OFFICIAL_LISTS[key].short).join(', ')}`)
+                  .join('; ')
+              : st.countriesNone,
+          })}{' '}
+          <Link href={`${L('/audit')}#jurisdictions`}>{st.countriesLink}</Link>.
         </p>
       </section>
 
       <section className="pr-stats-section" id="trustpilot" aria-labelledby="trustpilot-title">
-        <h2 id="trustpilot-title">Trustpilot ratings <Anchor id="trustpilot" /></h2>
+        <h2 id="trustpilot-title">{st.trustpilotTitle} {anchor('trustpilot')}</h2>
         <p>
-          PropRadar has checked Trustpilot for {coverage.trustpilotChecked} open firms. {trustpilotStats.rated} show a rating (median{' '}
-          <strong>{trustpilotStats.median.toFixed(1)}</strong>): {trustpilotStats.atLeast45} at 4.5 or above, {trustpilotStats.from40to44}{' '}
-          from 4.0 to 4.4 and {trustpilotStats.below40} below 4.0. For <strong>{trustpilotStats.withheld}</strong> firms Trustpilot shows no
-          rating and states that it is unavailable because of a breach of its guidelines.
+          {rich(st.trustpilotText, {
+            checked: coverage.trustpilotChecked,
+            rated: trustpilotStats.rated,
+            median: b(median),
+            high: trustpilotStats.atLeast45,
+            mid: trustpilotStats.from40to44,
+            low: trustpilotStats.below40,
+            withheld: b(trustpilotStats.withheld),
+          })}
         </p>
         <details className="pr-disclosure">
-          <summary>The {withheldFirms.length} firms whose Trustpilot rating is withheld</summary>
+          <summary>{fmt(st.withheldSummary, { count: withheldFirms.length })}</summary>
           <ul className="pr-stats-chips">
             {withheldFirms.map((firm) => (
-              <li key={firm.slug}><Link href={`/firm/${firm.slug}#audit`}>{firm.name}</Link></li>
+              <li key={firm.slug}><Link href={`${L(`/firm/${firm.slug}`)}#audit`}>{firm.name}</Link></li>
             ))}
           </ul>
         </details>
         <p className="pr-stats-note">
-          Each notice is dated and linked on the firm file. <Link href="/trustpilot-prop-firms">How to read prop firm reviews</Link>.
+          {st.trustpilotNote} <Link href={L('/trustpilot-prop-firms')}>{st.trustpilotLink}</Link>.
         </p>
       </section>
 
       <section className="pr-stats-section" id="payouts" aria-labelledby="payouts-title">
-        <h2 id="payouts-title">Payout evidence <Anchor id="payouts" /></h2>
-        <p>
-          PropRadar shows a payout-risk level only when it is backed by sources. Today {payoutStats.sourcedSignal} open firms carry a
-          sourced payout warning, {payoutStats.lowWithProof} have a low level backed by payout proof, and{' '}
-          <strong>{payoutStats.notAssessed}</strong> are not assessed because nothing is documented either way.
-        </p>
+        <h2 id="payouts-title">{st.payoutsTitle} {anchor('payouts')}</h2>
+        <p>{rich(st.payoutsText, { sourced: payoutStats.sourcedSignal, low: payoutStats.lowWithProof, none: b(payoutStats.notAssessed) })}</p>
         <p className="pr-stats-note">
-          <Link href="/prop-firm-payout-risk">See the sourced payout incidents</Link>.
+          <Link href={L('/prop-firm-payout-risk')}>{st.payoutsLink}</Link>.
         </p>
       </section>
 
       <section className="pr-stats-section" id="method" aria-labelledby="method-title">
-        <h2 id="method-title">Method and coverage <Anchor id="method" /></h2>
+        <h2 id="method-title">{st.methodTitle} {anchor('method')}</h2>
         <ul className="pr-rule-list">
-          <li>The base is the PropRadar database: {openFirms.length} open and {closedFirms.length} closed firms, not every prop firm in existence.</li>
-          <li>
-            Watchlist values that were never read on a source (split, drawdown, account sizes) are excluded. Coverage today: split read
-            for {coverage.splitRead} open firms, entity country for {coverage.countryIdentified}, Trustpilot checked for{' '}
-            {coverage.trustpilotChecked}.
-          </li>
-          <li>Figures update with every firm review; the date at the top is the latest review in the data.</li>
-          <li>PropRadar has affiliate links with five firms; they are disclosed on each file and never change a figure here.</li>
+          <li>{fmt(st.method1, { open: openFirms.length, closed: closedFirms.length })}</li>
+          <li>{fmt(st.method2, { split: coverage.splitRead, country: coverage.countryIdentified, trustpilot: coverage.trustpilotChecked })}</li>
+          <li>{st.method3}</li>
+          <li>{st.method4}</li>
         </ul>
       </section>
 
       <section className="pr-stats-section pr-stats-cite" id="cite" aria-labelledby="cite-title">
-        <h2 id="cite-title">Cite this data</h2>
-        <p>You can quote these figures freely. Please credit PropRadar and link to this page.</p>
+        <h2 id="cite-title">{st.citeTitle}</h2>
+        <p>{st.citeText}</p>
         <pre className="pr-stats-citation">{citation}</pre>
-        <a className="btn" href={`${PATH}/data.csv`} download>Download the data (CSV)</a>
+        <a className="btn" href={csv} download>{st.download}</a>
       </section>
 
       <section className="pr-stats-section" aria-labelledby="stats-faq-title">
-        <h2 id="stats-faq-title">Questions</h2>
+        <h2 id="stats-faq-title">{st.faqTitle}</h2>
         <div className="firm-faq-grid">
           {faq.map((item) => (
             <article className="firm-faq-card" key={item.question}>

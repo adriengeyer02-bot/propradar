@@ -10,11 +10,13 @@ import {
   type PropFirm,
 } from '../../lib/propFirms';
 import { entityCountries } from '../../lib/jurisdictions';
-import { getSeoGuidePath } from '../../lib/seoGuides';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { fmt, getMessages, tv, type Messages } from '../../lib/messages';
+import { localizedGuidePath } from '../../lib/guideI18n';
+import { rich } from '../../lib/rich';
 
 const PATH = '/prop-firm-challenge';
-const TITLE = 'Prop Firm Challenge 2026: Rules, Prices & Models Compared';
 const PUBLISHED_AT = '2026-10-29';
 
 type ChallengeRow = { firm: PropFirm; product: Product };
@@ -41,45 +43,54 @@ const updatedAt = rows.reduce((latest, row) => (row.firm.lastReviewed > latest ?
 const assessedPayoutCount = propFirms.filter((firm) => firm.status !== 'Fermée' && hasPayoutRiskSignal(firm)).length;
 const closedCount = propFirms.filter((firm) => firm.status === 'Fermée').length;
 
-const DESCRIPTION = `How a prop firm challenge works: 1-step, 2-step, instant and futures models, the rules that end an account, and ${rows.length} programs compared by fee and drawdown.`;
+type Props = { params: Promise<{ locale: string }> };
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  keywords: ['prop firm challenge', 'prop firm challenge rules', 'prop firm challenge cost', 'cheapest prop firm challenge', '1-step vs 2-step challenge', 'futures prop firm evaluation'],
-  authors: [{ name: 'PropRadar Research', url: '/audit' }],
-  publisher: SITE_NAME,
-  category: 'Prop firm research',
-  alternates: { canonical: PATH },
-  openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}${PATH}`,
-    type: 'article',
-    siteName: SITE_NAME,
-    modifiedTime: updatedAt,
-    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: 'PropRadar: prop firm challenges compared' }],
-  },
-  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION },
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const c = getMessages(locale).challenge;
+  const description = fmt(c.metaDescription, { count: rows.length });
+  return {
+    title: c.metaTitle,
+    description,
+    ...(locale === 'en'
+      ? { keywords: ['prop firm challenge', 'prop firm challenge rules', 'prop firm challenge cost', 'cheapest prop firm challenge', '1-step vs 2-step challenge', 'futures prop firm evaluation'] }
+      : {}),
+    authors: [{ name: 'PropRadar Research', url: localePath(locale, '/audit') }],
+    publisher: SITE_NAME,
+    category: 'Prop firm research',
+    alternates: localeAlternates(locale, PATH),
+    openGraph: {
+      title: c.metaTitle,
+      description,
+      url: `${SITE_URL}${localePath(locale, PATH)}`,
+      type: 'article',
+      siteName: SITE_NAME,
+      locale: OG_LOCALE[locale],
+      modifiedTime: updatedAt,
+      images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: c.compareTitle }],
+    },
+    twitter: { card: 'summary_large_image', title: c.metaTitle, description },
+  };
+}
 
 function jsonLd(data: unknown) {
   return { __html: JSON.stringify(data).replace(/</g, '\\u003c') };
 }
 
 /** "variable by program" style values are shown as a pointer to the firm file, not as a rule. */
-function ruleCell(value: string | undefined) {
+function ruleCell(value: string | undefined, t: Messages) {
   const text = (value ?? '').trim();
   if (!text || /^(variable|varies|program-specific|depends on the selected plan|account-specific|specific futures rules|futures-specific)/i.test(text)) {
-    return <span className="pr-muted">Varies by plan</span>;
+    return <span className="pr-muted">{t.challenge.varies}</span>;
   }
-  return text;
+  return tv(t, text);
 }
 
-function accountRange(product: Product) {
+function accountRange(product: Product, t: Messages) {
   const fmt = (n: number) =>
     n >= 1_000_000 ? `$${+(n / 1_000_000).toFixed(1)}M` : n >= 1000 ? `$${Math.round(n / 1000)}K` : `$${n}`;
-  if (!product.accountSizeMin && !product.accountSizeMax) return <span className="pr-muted">To verify</span>;
+  if (!product.accountSizeMin && !product.accountSizeMax) return <span className="pr-muted">{tv(t, 'To verify')}</span>;
   return product.accountSizeMin === product.accountSizeMax ? fmt(product.accountSizeMin) : `${fmt(product.accountSizeMin)}–${fmt(product.accountSizeMax)}`;
 }
 
@@ -89,7 +100,8 @@ function programName(firm: PropFirm, product: Product) {
   return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
-function ChallengeTable({ model, caption }: { model: Model; caption: string }) {
+function ChallengeTable({ model, caption, t, locale }: { model: Model; caption: string; t: Messages; locale: Locale }) {
+  const c = t.challenge;
   const list = byModel(model);
   if (!list.length) return null;
   return (
@@ -98,35 +110,35 @@ function ChallengeTable({ model, caption }: { model: Model; caption: string }) {
         <caption className="sr-only">{caption}</caption>
         <thead>
           <tr>
-            <th scope="col">Firm and program</th>
-            <th scope="col">Fee from</th>
-            <th scope="col">Accounts</th>
-            <th scope="col">Profit target</th>
-            <th scope="col">Daily loss</th>
-            <th scope="col">Max loss</th>
-            <th scope="col">Checked</th>
+            <th scope="col">{c.thFirm}</th>
+            <th scope="col">{c.thFee}</th>
+            <th scope="col">{c.thAccounts}</th>
+            <th scope="col">{c.thTarget}</th>
+            <th scope="col">{c.thDaily}</th>
+            <th scope="col">{c.thMax}</th>
+            <th scope="col">{c.thChecked}</th>
           </tr>
         </thead>
         <tbody>
           {list.map(({ firm, product }) => (
             <tr key={`${firm.slug}-${product.id}`}>
               <th scope="row">
-                <Link href={`/firm/${firm.slug}`} className="pr-challenge-firm">
+                <Link href={localePath(locale, `/firm/${firm.slug}`)} className="pr-challenge-firm">
                   <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
                   <span>
                     <strong>{firm.name}</strong>
                     <small>
                       {programName(firm, product)}
-                      {firm.status === 'À surveiller' ? <em className="pr-challenge-watch">Watchlist</em> : null}
+                      {firm.status === 'À surveiller' ? <em className="pr-challenge-watch">{c.watchlist}</em> : null}
                     </small>
                   </span>
                 </Link>
               </th>
               <td className="pr-num">{formatUsd(product.entryFeeMin as number)}</td>
-              <td className="pr-nowrap">{accountRange(product)}</td>
-              <td>{ruleCell(product.profitTarget)}</td>
-              <td>{ruleCell(product.maxDailyLoss)}</td>
-              <td>{ruleCell(product.maxDrawdown)}</td>
+              <td className="pr-nowrap">{accountRange(product, t)}</td>
+              <td>{ruleCell(product.profitTarget, t)}</td>
+              <td>{ruleCell(product.maxDailyLoss, t)}</td>
+              <td>{ruleCell(product.maxDrawdown, t)}</td>
               <td><time dateTime={firm.lastReviewed}>{firm.lastReviewed}</time></td>
             </tr>
           ))}
@@ -142,7 +154,14 @@ function example(slug: string, productId?: string) {
   return firm && product ? { firm, product } : undefined;
 }
 
-export default function PropFirmChallengePage() {
+export default async function PropFirmChallengePage({ params }: Props) {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const t = getMessages(locale);
+  const c = t.challenge;
+  const L = (path: string) => localePath(locale, path);
+  const G = (slug: string) => localizedGuidePath(locale, slug);
+  const pageUrl = `${SITE_URL}${L(PATH)}`;
   const ftmo = example('ftmo');
   const fivers = example('the5ers');
   const cti1 = example('city-traders-imperium', 'cti-one-step');
@@ -154,71 +173,52 @@ export default function PropFirmChallengePage() {
   };
 
   const faq = [
+    { question: c.faq1Q, answer: c.faq1A },
     {
-      question: 'What is a prop firm challenge?',
-      answer:
-        'A prop firm challenge (also called an evaluation) is a paid test on a simulated or demo account. You must reach a profit target without breaking the loss limits and other rules. If you pass, the firm offers a funded or simulated-funded account and shares part of the profits you make on it.',
-    },
-    {
-      question: 'How much does a prop firm challenge cost?',
+      question: c.faq2Q,
       answer: fees.length
-        ? `Across the ${rows.length} programs with a listed entry fee in PropRadar's sourced firm files, the lowest starting fee is ${formatUsd(fees[0])}${cheapest ? ` (${cheapest.firm.name})` : ''} and the median starting fee is ${formatUsd(medianFee)}. These are the smallest accounts before discounts; larger accounts cost more, and resets, monthly subscriptions or activation fees can add to the total.`
-        : 'Fees depend on the firm and account size; check each firm file for the listed entry fee.',
+        ? fmt(c.faq2A, { count: rows.length, lowest: formatUsd(fees[0]), firm: cheapest?.firm.name ?? '', median: formatUsd(medianFee) }).replace(' ()', '').replace('（）', '')
+        : c.faq2None,
     },
-    {
-      question: 'What is the difference between a 1-step and a 2-step challenge?',
-      answer:
-        'A 1-step challenge has a single phase to pass, usually with a tighter loss limit. A 2-step challenge splits the test into two phases, typically a higher target first and a lower one second, often with a wider loss limit. Instant-funding accounts skip the test but usually cost more and carry tighter rules.',
-    },
-    {
-      question: 'What happens if I break the daily loss limit?',
-      answer:
-        'On most programs a breach of the daily or maximum loss limit ends the account immediately, even if you were close to the target. You then need a reset or a new purchase. Check whether the limit is measured on balance or equity and when the trading day resets.',
-    },
-    {
-      question: 'Is the challenge fee refundable?',
-      answer:
-        'It depends on the firm. Some firms state that the evaluation fee is refunded with the first payout from the funded account; others never refund it. The rule is in the firm terms and FAQ, which PropRadar links from each firm file.',
-    },
-    {
-      question: 'Do prop firms actually pay out after you pass?',
-      answer: `Payout reliability is the main risk after the challenge. PropRadar shows a payout-risk level only when it is backed by sources: ${assessedPayoutCount} open firms have one today, and ${closedCount} firms in the database are recorded as closed. Read the payout section of a firm file before paying for its challenge.`,
-    },
+    { question: c.faq3Q, answer: c.faq3A },
+    { question: c.faq4Q, answer: c.faq4A },
+    { question: c.faq5Q, answer: c.faq5A },
+    { question: c.faq6Q, answer: fmt(c.faq6A, { assessed: assessedPayoutCount, closed: closedCount }) },
   ];
 
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    '@id': `${SITE_URL}${PATH}#article`,
-    headline: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}${PATH}`,
-    inLanguage: 'en',
+    '@id': `${pageUrl}#article`,
+    headline: c.metaTitle,
+    description: fmt(c.metaDescription, { count: rows.length }),
+    url: pageUrl,
+    inLanguage: HTML_LANG[locale],
     isAccessibleForFree: true,
     datePublished: PUBLISHED_AT,
     dateModified: updatedAt,
     author: { '@type': 'Organization', '@id': `${SITE_URL}/audit#research`, name: 'PropRadar Research', url: `${SITE_URL}/audit` },
     publisher: { '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: SITE_URL },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${PATH}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
   };
   const listSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Prop firm challenges compared by PropRadar',
+    name: c.compareTitle,
     numberOfItems: rows.length,
     itemListElement: [...byModel('Challenge'), ...byModel('Futures evaluation'), ...byModel('Instant funding')].map((row, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: `${row.firm.name} ${row.product.name}`,
-      url: `${SITE_URL}/firm/${row.firm.slug}`,
+      url: `${SITE_URL}${L(`/firm/${row.firm.slug}`)}`,
     })),
   };
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Prop firm challenge', item: `${SITE_URL}${PATH}` },
+      { '@type': 'ListItem', position: 1, name: t.guide.breadcrumbHome, item: `${SITE_URL}${L('/')}` },
+      { '@type': 'ListItem', position: 2, name: c.breadcrumb, item: pageUrl },
     ],
   };
   const faqSchema = {
@@ -226,6 +226,11 @@ export default function PropFirmChallengePage() {
     '@type': 'FAQPage',
     mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
   };
+
+  const [reviewedBefore, reviewedAfter = ''] = t.guide.reviewedBy.split('{name}');
+  const exampleLink = ({ firm, product }: ChallengeRow) => (
+    <Link href={L(`/firm/${firm.slug}`)}>{firm.name} {programName(firm, product)}</Link>
+  );
 
   return (
     <main className="container guide-page pr-challenge-page">
@@ -236,142 +241,111 @@ export default function PropFirmChallengePage() {
 
       <section className="guide-hero pr-challenge-hero">
         <div>
-          <div className="eyebrow">Prop firm challenge guide</div>
-          <h1>Prop firm challenge: how it works, what it costs and {rows.length} programs compared</h1>
-          <p className="lead">
-            A challenge is the paid test you take before a prop firm funds you. This page explains the models and the rules that end
-            an account, then compares the programs PropRadar has read on the firms&apos; own pages, with the date each file was checked.
-          </p>
-          <div className="guide-byline" aria-label="Article provenance">
+          <div className="eyebrow">{c.eyebrow}</div>
+          <h1>{fmt(c.h1, { count: rows.length })}</h1>
+          <p className="lead">{c.lead}</p>
+          <div className="guide-byline">
             <span className="guide-byline-mark" aria-hidden="true">PR</span>
             <div>
-              <strong>Reviewed by <Link href="/audit">PropRadar Research</Link></strong>
-              <small>Numbers come from sourced firm files only. Nothing is estimated.</small>
+              <strong>{reviewedBefore}<Link href={L('/audit')}>PropRadar Research</Link>{reviewedAfter}</strong>
+              <small>{c.bylineNote}</small>
             </div>
-            <time dateTime={updatedAt}>Updated {updatedAt}</time>
+            <time dateTime={updatedAt}>{fmt(t.guide.updated, { date: updatedAt })}</time>
           </div>
           <div className="actions">
-            <a href="#compare" className="btn btn-primary">Compare challenges</a>
-            <Link prefetch={false} href="/prop-firm-comparison" className="btn">Full comparison table</Link>
+            <a href="#compare" className="btn btn-primary">{c.ctaCompare}</a>
+            <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn">{c.ctaTable}</Link>
           </div>
         </div>
         <dl className="pr-challenge-facts">
-          <div><dt>Programs compared</dt><dd>{rows.length}</dd></div>
-          <div><dt>Firms</dt><dd>{firmCount}</dd></div>
-          <div><dt>Lowest entry fee</dt><dd>{fees.length ? formatUsd(fees[0]) : '—'}</dd></div>
-          <div><dt>Median entry fee</dt><dd>{medianFee ? formatUsd(medianFee) : '—'}</dd></div>
+          <div><dt>{c.factPrograms}</dt><dd>{rows.length}</dd></div>
+          <div><dt>{c.factFirms}</dt><dd>{firmCount}</dd></div>
+          <div><dt>{c.factLowest}</dt><dd>{fees.length ? formatUsd(fees[0]) : '—'}</dd></div>
+          <div><dt>{c.factMedian}</dt><dd>{medianFee ? formatUsd(medianFee) : '—'}</dd></div>
         </dl>
       </section>
 
       <article className="pr-prose">
         <section aria-labelledby="what-title">
-          <h2 id="what-title">What a prop firm challenge is</h2>
-          <p>
-            A proprietary trading firm (prop firm) sells you a test on a demo or simulated account. You pay an entry fee, trade under
-            fixed rules and, if you reach the profit target without breaking a loss limit, you get a funded account. On that account
-            you keep a share of the profits, the <em>profit split</em>, and the firm keeps the rest.
-          </p>
-          <p>
-            The fee is the firm&apos;s main revenue when traders fail, so the rules matter more than the headline account size.
-            Two challenges with the same price can be very different once you read how the drawdown is measured, whether there is a
-            consistency rule, and what the firm requires before the first payout.
-          </p>
+          <h2 id="what-title">{c.whatTitle}</h2>
+          <p>{c.whatP1}</p>
+          <p>{c.whatP2}</p>
         </section>
 
         <section aria-labelledby="models-title">
-          <h2 id="models-title">The four challenge models</h2>
-          <h3>Two-step (and three-step) challenges</h3>
+          <h2 id="models-title">{c.modelsTitle}</h2>
+          <h3>{c.twoTitle}</h3>
           <p>
-            The classic format: a first phase with a higher target, then a second phase with a lower one, under the same loss limits.
+            {c.twoText}
             {twoStepExamples.length ? (
               <>
-                {' '}For example,{' '}
-                {twoStepExamples.map(({ firm, product }, index) => (
-                  <span key={firm.slug}>
-                    {index ? ' and ' : ''}
-                    <Link href={`/firm/${firm.slug}`}>{firm.name} {programName(firm, product)}</Link> lists {product.profitTarget}
-                    {' '}with a {product.maxDailyLoss} daily and {product.maxDrawdown} maximum loss limit
-                  </span>
-                ))}
-                .
+                {' '}
+                {rich(c.twoExamples, {
+                  examples: twoStepExamples.map((row, index) => (
+                    <span key={row.firm.slug}>
+                      {index ? c.and : ''}
+                      {rich(c.twoExample, {
+                        link: exampleLink(row),
+                        target: tv(t, row.product.profitTarget),
+                        daily: tv(t, row.product.maxDailyLoss),
+                        max: tv(t, row.product.maxDrawdown),
+                      })}
+                    </span>
+                  )),
+                })}
               </>
             ) : null}
           </p>
-          <h3>One-step challenges</h3>
+          <h3>{c.oneTitle}</h3>
           <p>
-            A single phase, faster to pass on paper, usually with a tighter maximum loss.
+            {c.oneText}
             {cti1 ? (
               <>
-                {' '}<Link href={`/firm/${cti1.firm.slug}`}>{cti1.firm.name}&apos;s {programName(cti1.firm, cti1.product)}</Link>, for instance, lists a profit target of {cti1.product.profitTarget}
-                and a maximum loss of {cti1.product.maxDrawdown}.
+                {' '}
+                {rich(c.oneExample, { link: exampleLink(cti1), target: tv(t, cti1.product.profitTarget), max: tv(t, cti1.product.maxDrawdown) })}
               </>
             ) : null}
           </p>
-          <h3>Instant funding</h3>
+          <h3>{c.instantTitle}</h3>
           <p>
-            No test: you pay more for an account that is funded from day one, but rules are often stricter and the payout conditions
-            carry the risk. PropRadar tracks {counts.instant} instant-funding program{counts.instant === 1 ? '' : 's'} with a listed fee below.{' '}
-            <Link href={getSeoGuidePath('prop-firm-instant-funding')}>Read the instant-funding guide</Link>.
+            {counts.instant === 1 ? c.instantTextOne : fmt(c.instantText, { count: counts.instant })}{' '}
+            <Link href={G('prop-firm-instant-funding')}>{c.instantLink}</Link>.
           </p>
-          <h3>Futures evaluations</h3>
+          <h3>{c.futuresTitle}</h3>
           <p>
-            Futures firms run evaluations on CME products, usually with a trailing or end-of-day drawdown in dollars rather than a
-            percentage, and sometimes a monthly fee and an activation fee for the funded account.{' '}
-            <Link href={getSeoGuidePath('meilleure-prop-firm-futures')}>Compare futures prop firms</Link>.
+            {c.futuresText}{' '}
+            <Link href={G('meilleure-prop-firm-futures')}>{c.futuresLink}</Link>.
           </p>
         </section>
 
         <section aria-labelledby="rules-title">
-          <h2 id="rules-title">The rules that end a challenge</h2>
+          <h2 id="rules-title">{c.rulesTitle}</h2>
           <ul className="pr-rule-list">
+            <li><strong>{c.ruleDailyTitle}</strong> {c.ruleDailyText}</li>
             <li>
-              <strong>Daily loss limit.</strong> A cap on what you can lose in one trading day. Check whether it counts open
-              (floating) losses and at what time the day resets.
+              <strong>{c.ruleMaxTitle}</strong> {c.ruleMaxText} <Link href={G('prop-firm-drawdown')}>{c.ruleMaxLink}</Link>.
+            </li>
+            <li><strong>{c.ruleTargetTitle}</strong> {c.ruleTargetText}</li>
+            <li>
+              <strong>{c.ruleConsistencyTitle}</strong> {c.ruleConsistencyText}{' '}
+              <Link href={G('prop-firm-sans-consistency-rule')}>{c.ruleConsistencyLink}</Link>.
             </li>
             <li>
-              <strong>Maximum loss (drawdown).</strong> Static drawdown stays fixed at the starting balance; trailing drawdown follows
-              your highest balance or equity; end-of-day (EOD) drawdown only moves at the close. The same percentage can be much
-              harder on a trailing account. <Link href={getSeoGuidePath('prop-firm-drawdown')}>How each drawdown type works</Link>.
-            </li>
-            <li>
-              <strong>Profit target and minimum days.</strong> Some firms require a minimum number of trading days before you can
-              pass, even if the target is reached on day one.
-            </li>
-            <li>
-              <strong>Consistency rules.</strong> A cap on how much of your profit can come from one day. They often apply at payout
-              time rather than during the test. <Link href={getSeoGuidePath('prop-firm-sans-consistency-rule')}>Firms without a consistency rule</Link>.
-            </li>
-            <li>
-              <strong>News, EAs and copy trading.</strong> Trading around high-impact news, using expert advisors or copying trades
-              can be restricted on one stage and allowed on another.{' '}
-              <Link href={getSeoGuidePath('prop-firm-news-trading')}>News trading rules</Link> ·{' '}
-              <Link href={getSeoGuidePath('prop-firm-ea-algo')}>EA and algo rules</Link>.
+              <strong>{c.ruleNewsTitle}</strong> {c.ruleNewsText}{' '}
+              <Link href={G('prop-firm-news-trading')}>{c.ruleNewsLink}</Link> ·{' '}
+              <Link href={G('prop-firm-ea-algo')}>{c.ruleEaLink}</Link>.
             </li>
           </ul>
         </section>
 
         <section aria-labelledby="checks-title">
-          <h2 id="checks-title">Five checks before you pay for a challenge</h2>
+          <h2 id="checks-title">{c.checksTitle}</h2>
           <ol className="pr-rule-list">
-            <li>
-              <strong>Who you are paying.</strong> Find the legal entity and its country. PropRadar maps the companies behind each
-              firm on its <Link href="/audit#jurisdictions">legal map</Link>.
-            </li>
-            <li>
-              <strong>Payout evidence.</strong> A challenge is worth nothing if payouts stall. See the{' '}
-              <Link href="/prop-firm-payout-risk">sourced payout incidents</Link>.
-            </li>
-            <li>
-              <strong>Review status.</strong> Trustpilot sometimes withholds a firm&apos;s rating after removing fake reviews.{' '}
-              <Link href="/trustpilot-prop-firms">Which firms are affected</Link>.
-            </li>
-            <li>
-              <strong>Recent rule changes.</strong> Every firm file has a dated update history; rules often change for new orders only.
-            </li>
-            <li>
-              <strong>Discounts and affiliates.</strong> A code lowers the fee, not the risk. <Link href="/promos">Current codes</Link>{' '}
-              stay attached to each firm&apos;s risk file, and affiliate links are disclosed.
-            </li>
+            <li><strong>{c.checkWhoTitle}</strong> {rich(c.checkWhoText, { link: <Link href={`${L('/audit')}#jurisdictions`}>{c.checkWhoLink}</Link> })}</li>
+            <li><strong>{c.checkPayoutTitle}</strong> {rich(c.checkPayoutText, { link: <Link href={L('/prop-firm-payout-risk')}>{c.checkPayoutLink}</Link> })}</li>
+            <li><strong>{c.checkReviewTitle}</strong> {rich(c.checkReviewText, { link: <Link href={L('/trustpilot-prop-firms')}>{c.checkReviewLink}</Link> })}</li>
+            <li><strong>{c.checkRulesTitle}</strong> {c.checkRulesText}</li>
+            <li><strong>{c.checkDealsTitle}</strong> {rich(c.checkDealsText, { link: <Link href={L('/promos')}>{c.checkDealsLink}</Link> })}</li>
           </ol>
         </section>
       </article>
@@ -379,27 +353,24 @@ export default function PropFirmChallengePage() {
       <section className="section" id="compare" aria-labelledby="compare-title">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Compared from sourced firm files</div>
-            <h2 id="compare-title">Prop firm challenges compared</h2>
+            <div className="eyebrow">{c.compareEyebrow}</div>
+            <h2 id="compare-title">{c.compareTitle}</h2>
           </div>
-          <p className="section-note">
-            &quot;Fee from&quot; is the smallest account before discounts, as listed in the firm file on the date shown. Confirm the price
-            and rules on the firm&apos;s site before buying. Sorted by PropRadar score.
-          </p>
+          <p className="section-note">{c.compareNote}</p>
         </div>
 
-        <h3 className="pr-challenge-subhead" id="forex">Forex and CFD challenges ({counts.challenge})</h3>
-        <ChallengeTable model="Challenge" caption="Forex and CFD prop firm challenges" />
+        <h3 className="pr-challenge-subhead" id="forex">{fmt(c.forexHead, { count: counts.challenge })}</h3>
+        <ChallengeTable model="Challenge" caption={c.forexCaption} t={t} locale={locale} />
 
-        <h3 className="pr-challenge-subhead" id="futures">Futures evaluations ({counts.futures})</h3>
-        <ChallengeTable model="Futures evaluation" caption="Futures prop firm evaluations" />
+        <h3 className="pr-challenge-subhead" id="futures">{fmt(c.futuresHead, { count: counts.futures })}</h3>
+        <ChallengeTable model="Futures evaluation" caption={c.futuresCaption} t={t} locale={locale} />
 
-        <h3 className="pr-challenge-subhead" id="instant">Instant funding ({counts.instant})</h3>
-        <ChallengeTable model="Instant funding" caption="Instant funding prop firm accounts" />
+        <h3 className="pr-challenge-subhead" id="instant">{fmt(c.instantHead, { count: counts.instant })}</h3>
+        <ChallengeTable model="Instant funding" caption={c.instantCaption} t={t} locale={locale} />
 
         <p className="pr-table-more">
-          <Link className="pr-link" href="/prop-firm-comparison">
-            Filter all {propFirms.length} firms by price, rules and legal country <span aria-hidden="true">→</span>
+          <Link prefetch={false} className="pr-link" href={L('/prop-firm-comparison')}>
+            {fmt(c.filterAll, { count: propFirms.length })} <span aria-hidden="true">→</span>
           </Link>
         </p>
       </section>
@@ -407,8 +378,8 @@ export default function PropFirmChallengePage() {
       <section className="section" aria-labelledby="challenge-faq-title">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Direct answers</div>
-            <h2 id="challenge-faq-title">Prop firm challenge FAQ</h2>
+            <div className="eyebrow">{c.faqEyebrow}</div>
+            <h2 id="challenge-faq-title">{c.faqTitle}</h2>
           </div>
         </div>
         <div className="firm-faq-grid">
@@ -424,22 +395,22 @@ export default function PropFirmChallengePage() {
       <section className="section" aria-labelledby="next-title">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Keep reading</div>
-            <h2 id="next-title">Related guides</h2>
+            <div className="eyebrow">{c.nextEyebrow}</div>
+            <h2 id="next-title">{c.nextTitle}</h2>
           </div>
         </div>
         <ul className="pr-related-links">
-          <li><Link href={getSeoGuidePath('prop-firm-pas-cher')}>Cheapest prop firms</Link></li>
-          <li><Link href={getSeoGuidePath('prop-firm-sans-challenge')}>Prop firms with no challenge</Link></li>
-          <li><Link href={getSeoGuidePath('prop-firm-pour-debutant')}>Prop firms for beginners</Link></li>
-          <li><Link href={getSeoGuidePath('prop-firm-payout-rapide')}>Fast-payout prop firms</Link></li>
-          <li><Link href="/best-prop-firms">Best prop firms right now</Link></li>
-          <li><Link href={getSeoGuidePath('meilleure-prop-firm-forex')}>Best forex prop firms</Link></li>
+          <li><Link href={G('prop-firm-pas-cher')}>{c.linkCheap}</Link></li>
+          <li><Link href={G('prop-firm-sans-challenge')}>{c.linkNoChallenge}</Link></li>
+          <li><Link href={G('prop-firm-pour-debutant')}>{c.linkBeginner}</Link></li>
+          <li><Link href={G('prop-firm-payout-rapide')}>{c.linkFast}</Link></li>
+          <li><Link href={G('meilleure-prop-firm-2026')}>{c.linkBest}</Link></li>
+          <li><Link href={G('meilleure-prop-firm-forex')}>{c.linkForex}</Link></li>
         </ul>
         <p className="pr-chain-note">
-          Legal entities recorded for these firms sit in{' '}
-          {[...new Set(rows.flatMap((row) => entityCountries(row.firm.regulatoryAudit.entities).map((c) => c.name)))].length} countries.
-          PropRadar is a research filter, not financial advice.
+          {fmt(c.chainNote, {
+            count: [...new Set(rows.flatMap((row) => entityCountries(row.firm.regulatoryAudit.entities).map((country) => country.name)))].length,
+          })}
         </p>
       </section>
     </main>

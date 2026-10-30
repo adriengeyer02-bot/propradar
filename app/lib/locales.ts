@@ -59,6 +59,9 @@ const TRANSLATED = [
   /^\/guides$/,
   /^\/guides\/[^/]+$/,
   /^\/best-prop-firms$/,
+  /^\/prop-firm-challenge$/,
+  /^\/prop-firm-statistics$/,
+  /^\/trustpilot-prop-firms$/,
 ];
 
 export function isTranslatedPath(path: string) {
