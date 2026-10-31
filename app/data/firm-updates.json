@@ -3413,12 +3413,13 @@
       ]
     },
     "traders-central": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-31",
       "set": {
         "officialWebsite": "https://traderscentralfund.com/",
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 973,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com",
+        "listedDomainWarning": "The listed domain traderscentralfund.com redirected to traderseco.com when PropRadar checked it on 2026-10-31, and traderseco.com did not resolve (no DNS record). The domain monitor has reported the site unreachable since 2026-10-28. PropRadar found no other official site for Traders Central, so the domain is not linked."
       },
       "changelog": [
         {
@@ -3431,6 +3432,20 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-10-31",
+          "summary": "Domain warning set. Checked by hand on 2026-10-31 after the domain monitor reported traderscentralfund.com unreachable since 2026-10-28: the domain redirected to traderseco.com, which did not resolve. A 2023-04-17 release says Alpha Capital Group acquired the IP of Traders Central Fund Corp; no current Traders Central site was found. No status or score change.",
+          "source": "https://finance.yahoo.com/news/alpha-capital-group-acquires-traders-012200502.html",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Alpha Capital Group acquires the IP of Traders Central Fund (Newsfile via Yahoo Finance, 2023-04-17)",
+          "url": "https://finance.yahoo.com/news/alpha-capital-group-acquires-traders-012200502.html"
         }
       ]
     },
@@ -4853,6 +4868,22 @@
           "source": "https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/",
           "fields": [
             "status"
+          ]
+        }
+      ]
+    },
+    "nations-trading": {
+      "reviewedAt": "2026-10-31",
+      "set": {
+        "listedDomainWarning": "The listed domain nationstrading.com was offered for sale on GoDaddy when PropRadar checked it on 2026-10-31. PropRadar found no other official site for Nations Trading, so the domain is not linked."
+      },
+      "changelog": [
+        {
+          "date": "2026-10-31",
+          "summary": "Domain warning set. Checked by hand on 2026-10-31 after the domain monitor reported nationstrading.com unreachable: the domain redirected to a GoDaddy for-sale page (asking US$3,988). A web search found no other Nations Trading site. No status or score change.",
+          "source": "https://forsale.godaddy.com/forsale/nationstrading.com",
+          "fields": [
+            "listedDomainWarning"
           ]
         }
       ]
