@@ -14,8 +14,8 @@ export const OFFICIAL_LISTS: Record<OfficialListKey, { label: string; short: str
   fatfGrey: {
     label: 'FATF list of jurisdictions under increased monitoring',
     short: 'FATF increased monitoring',
-    asOf: '2026-06-19',
-    url: 'https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-june-2026.html',
+    asOf: '2026-10-30',
+    url: 'https://www.fatf-gafi.org/en/publications/High-risk-and-other-monitored-jurisdictions/increased-monitoring-october-2026.html',
     tone: 'risk',
   },
   euAnnexI: {
