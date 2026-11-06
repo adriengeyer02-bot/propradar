@@ -213,7 +213,8 @@ export default function PropRadarLive({
           node.setAttribute('cy', String(p.y));
           if (k < 1) done = false;
         });
-        const share = Math.min(1, elapsed / 1500);
+        // rAF timestamps can be a hair earlier than the start time: never count below zero.
+        const share = Math.max(0, Math.min(1, elapsed / 1500));
         if (share >= 1 || now - lastCounts > 120) {
           lastCounts = now;
           setShownCounts({
