@@ -415,6 +415,29 @@ export default function PropRadarLive({
   // Globe <-> radar: the pinned firm is the globe's selection; a logo picked on the globe pins it here.
   const selectedSlug = pinned && focus?.kind === 'dot' ? focus.dot.slug : null;
   const dimmedSlugs = useMemo(() => new Set(data.dots.filter((dot) => dimDot(dot)).map((dot) => dot.slug)), [data.dots, band, sectorKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  // "Since your last visit": the previous visit date lives in this browser only.
+  const [visit, setVisit] = useState<{ last: string | null; changed: RadarDot[] } | null>(null);
+  useEffect(() => {
+    if (variant !== 'full') return;
+    const KEY = 'propradar-radar-visit';
+    let last: string | null = null;
+    try {
+      last = window.localStorage.getItem(KEY);
+    } catch {
+      /* storage unavailable: treat as a first visit */
+    }
+    const changed = last
+      ? data.dots.filter((dot) => dot.changed && dot.changed > (last as string)).sort((a, b) => (b.changed ?? '').localeCompare(a.changed ?? '') || b.score - a.score)
+      : [];
+    setVisit({ last, changed });
+    try {
+      window.localStorage.setItem(KEY, new Date().toISOString().slice(0, 10));
+    } catch {
+      /* nothing to remember */
+    }
+  }, [data.dots, variant]);
+  const freshSlugs = useMemo(() => new Set((visit?.changed ?? []).map((dot) => dot.slug)), [visit]);
+
   function selectFromGlobe(slug: string) {
     const dot = data.dots.find((item) => item.slug === slug);
     if (!dot) return;
@@ -733,6 +756,31 @@ export default function PropRadarLive({
         <datalist id="prr-names">
           {names.map((name) => <option key={name} value={name} />)}
         </datalist>
+        {visit ? (
+          <div className="prr-visit" aria-live="polite">
+            {!visit.last ? (
+              <p>{t.visitFirst}</p>
+            ) : visit.changed.length ? (
+              <>
+                <p><b>{fill(t.visitSince, { when: daysAgo(visit.last, t) })}</b> · {visit.changed.length}</p>
+                <ul>
+                  {visit.changed.slice(0, 8).map((dot) => (
+                    <li key={dot.slug}>
+                      <button type="button" onClick={() => selectFromGlobe(dot.slug)} aria-pressed={selectedSlug === dot.slug}>
+                        {dot.logo ? <img src={dot.logo} alt="" width={18} height={18} /> : null}
+                        <span>{shortName(dot.name)}</span>
+                        <small>{daysAgo(dot.changed as string, t)}</small>
+                      </button>
+                    </li>
+                  ))}
+                  {visit.changed.length > 8 ? <li className="prr-visit-more">{fill(t.visitMore, { n: visit.changed.length - 8 })}</li> : null}
+                </ul>
+              </>
+            ) : (
+              <p>{fill(t.visitNone, { when: daysAgo(visit.last, t) })}</p>
+            )}
+          </div>
+        ) : null}
         <section className="prr-globe" aria-label={t.globeTitle}>
           <h2 className="prr-globe-title">{t.globeTitle}</h2>
           <FirmGlobe
@@ -741,6 +789,7 @@ export default function PropRadarLive({
             sectorName={sectorName}
             selected={selectedSlug}
             dimmed={dimmedSlugs}
+            highlight={freshSlugs}
             onSelect={selectFromGlobe}
             ariaLabel={fill(t.globeAria, { total: data.dots.length })}
             hint={t.globeHint}

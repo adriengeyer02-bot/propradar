@@ -40,6 +40,8 @@ export type RadarDot = {
   logo?: string;
   /** Date of a dated, sourced update in the latest review window, if any. */
   updated?: string;
+  /** Date of the firm's latest dated, sourced update, whenever it was. */
+  changed?: string;
 };
 
 export type RadarClosed = {
@@ -121,7 +123,7 @@ function trustpilotText(firm: PropFirm) {
   return `${firm.trustpilotRating}/5${count ? ` · ${count.toLocaleString('en-US')} reviews` : ''}`;
 }
 
-export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug: Map<string, string> }): RadarData {
+export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug: Map<string, string>; allBySlug?: Map<string, string> }): RadarData {
   const open = firms.filter((firm) => firm.status !== 'Fermée');
   const closed = firms.filter((firm) => firm.status === 'Fermée');
 
@@ -177,6 +179,7 @@ export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug:
       withheld: Boolean(firm.reviewSignals.trustpilotRatingWithheld),
       logo: firmLogoFor(firm.logoDomain)?.src,
       ...(recent?.bySlug.get(firm.slug) ? { updated: recent.bySlug.get(firm.slug) } : {}),
+      ...(recent?.allBySlug?.get(firm.slug) ? { changed: recent.allBySlug.get(firm.slug) } : {}),
     };
   });
 

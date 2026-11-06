@@ -3244,3 +3244,15 @@ html body .header-actions .site-search-input { width: 100%; min-width: 0; }
   .pr-about-facts strong { font-size: 28px; }
   .pr-about-contact { grid-template-columns: 1fr; padding: 22px; }
 }
+
+/* "Since your last visit" (radar page, per-browser) */
+.prr-visit { padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: color-mix(in srgb, var(--accent) 6%, var(--surface)); font-size: 13px; }
+.prr-visit p { margin: 0; color: var(--muted); line-height: 1.45; }
+.prr-visit p b { color: var(--text); font-weight: 750; }
+.prr-visit ul { display: flex; gap: 6px; margin: 8px -12px 0 0; padding: 0 12px 2px 0; overflow-x: auto; list-style: none; scrollbar-width: thin; }
+.prr-visit li { flex: none; }
+.prr-visit button { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px 4px 5px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); background: var(--surface); font: inherit; font-size: 12.5px; font-weight: 650; cursor: pointer; }
+.prr-visit button:hover, .prr-visit button[aria-pressed='true'] { border-color: var(--accent); }
+.prr-visit button img { border-radius: 50%; }
+.prr-visit button small { color: var(--muted); font-weight: 600; }
+.prr-visit-more { align-self: center; color: var(--muted); font-size: 12px; }
