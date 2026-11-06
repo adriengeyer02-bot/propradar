@@ -106,6 +106,7 @@ export default async function PropFirmRadarPage({ params }: Props) {
         labels={t.radar}
         sectorNames={t.sectors}
         valueNames={t.values}
+        tableLabels={t.table}
         intro={
           <header className="pr-radar-hero">
             <div className="eyebrow"><span>{r.eyebrow} <time dateTime={radar.latest}>{formatDate(radar.latest)}</time></span></div>

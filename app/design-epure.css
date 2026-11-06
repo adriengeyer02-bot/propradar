@@ -3054,7 +3054,26 @@ html body a:hover .home-tool-action b { transform: translateX(2px); }
 .prr-slot-close { position: absolute; top: 8px; right: 10px; width: 28px; height: 28px; border: 0; border-radius: 50%; color: var(--muted); background: transparent; font-size: 20px; line-height: 1; cursor: pointer; }
 .prr-slot-close:hover { color: var(--text); background: var(--surface-3, var(--line)); }
 .prr-open { display: flex; justify-content: center; width: 100%; min-height: 40px; margin-top: 10px; }
-.prr-globe-col { position: sticky; top: 84px; align-content: start; }
+/* Three aligned columns on wide screens: radar | globe | firm panel. Content that
+   comes and goes in the panel never moves the radar or the globe. */
+.prr.prr-is-full.is-three.has-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(300px, 360px); grid-template-areas: 'intro intro intro' 'main globe side'; align-items: stretch; }
+.prr-is-full.is-three .prr-globe-col { grid-area: globe; display: flex; flex-direction: column; gap: 8px; padding: 16px 16px 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.prr-is-full.is-three .prr-globe-col .prg { max-width: 100%; }
+.prr-is-full.is-three .prr-panel { grid-area: side; display: flex; flex-direction: column; gap: 12px; min-height: 0; align-self: stretch; contain: size; }
+.prr-is-full.is-three .prr-panel .prr-slot { flex: 1; min-height: 0; overflow-y: auto; align-content: start; }
+.prr-is-full.is-three .prr-svg { max-width: min(100%, calc(100vh - 170px)); }
+.prr-panel .prr-visit ul { flex-wrap: wrap; overflow: visible; margin-right: 0; padding-right: 0; }
+.prr-panel .prr-bands { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.prr-panel .prr-slot.has-card .prr-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1280px) {
+  .prr.prr-is-full.is-three.has-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: 'intro intro' 'main globe' 'side side'; }
+  .prr-is-full.is-three .prr-panel { contain: none; }
+  .prr-is-full.is-three .prr-panel .prr-slot { overflow: visible; }
+}
+@media (max-width: 960px) {
+  /* Stacked: the panel comes after the globe, so what it shows never moves the globe. */
+  .prr.prr-is-full.is-three.has-intro { grid-template-columns: 1fr; grid-template-areas: 'intro' 'main' 'globe' 'side'; }
+}
 .prr-globe { display: grid; gap: 8px; }
 .prr-globe-title { margin: 0; font-size: 15px; font-weight: 750; letter-spacing: 0; }
 .prg { position: relative; width: 100%; max-width: min(580px, calc(100vh - 360px)); min-width: min(100%, 320px); margin: 0 auto; }
