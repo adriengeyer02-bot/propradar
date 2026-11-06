@@ -103,6 +103,7 @@ export default function PropRadarLive({
   labels: t = en.radar,
   sectorNames = en.sectors,
   valueNames = en.values,
+  tableLabels: tb = en.table,
 }: {
   data: RadarData;
   variant?: Variant;
@@ -111,11 +112,13 @@ export default function PropRadarLive({
   labels?: RadarLabels;
   sectorNames?: SectorNames;
   valueNames?: ValueNames;
+  tableLabels?: Messages['table'];
 }) {
   const BAND_LABEL: Record<Band, string> = t.bands;
   const sectorName = (key: string) => (sectorNames as Record<string, string>)[key] ?? key;
   const firmHref = (slug: string) => localePath(locale, `/firm/${slug}`);
   const statusName = (status: string) => (valueNames as Record<string, string>)[status] ?? status;
+  const valueName = (value: string) => (valueNames as Record<string, string>)[value] ?? value;
   const trustpilotName = (text: string) =>
     text === 'Withheld' ? valueNames.Withheld : text === 'Not checked' ? valueNames['Not checked'] : text.replace(' reviews', ` ${valueNames.reviews}`);
   const router = useRouter();
@@ -674,6 +677,15 @@ export default function PropRadarLive({
           <dl className="prr-facts">
             <div><dt>{t.scoreBand}</dt><dd>{BAND_LABEL[dot.tone]}</dd></div>
             <div><dt>{t.trustpilot}</dt><dd>{trustpilotName(dot.trustpilot)}</dd></div>
+            {variant === 'full' ? (
+              <>
+                <div><dt>{tb.from_}</dt><dd>{valueName(dot.price)}</dd></div>
+                <div><dt>{tb.split}</dt><dd>{valueName(dot.split)}</dd></div>
+                <div><dt>{tb.drawdown}</dt><dd>{valueName(dot.drawdown)}</dd></div>
+                <div title={tb.payoutTitle}><dt>{tb.payout}</dt><dd>{valueName(dot.payout)}</dd></div>
+                <div title={tb.legalTitle}><dt>{tb.legal}</dt><dd>{valueName(dot.legal)}</dd></div>
+              </>
+            ) : null}
             <div><dt>{t.lastReview}</dt><dd>{daysAgo(dot.reviewed, t)}</dd></div>
             {dot.updated ? <div className="prr-fact-fresh"><dt>{t.updated}</dt><dd><Link href={`${firmHref(dot.slug)}#update-history`}>{dot.updated}</Link></dd></div> : null}
             <div><dt>{t.market}</dt><dd>{sectorName(dot.sector)}</dd></div>
@@ -716,7 +728,7 @@ export default function PropRadarLive({
   })();
 
   return (
-    <div className={`prr prr-is-full has-globe${intro ? ' has-intro' : ''}`}>
+    <div className={`prr prr-is-full has-globe is-three${intro ? ' has-intro' : ''}`}>
       {intro ? <div className="prr-intro">{intro}</div> : null}
       <div className="prr-main">
         <div className="prr-chips" role="group" aria-label={t.markets}>
@@ -739,7 +751,29 @@ export default function PropRadarLive({
         {radar}
         {legend}
       </div>
-      <aside className="prr-side prr-globe-col" aria-label={t.controls}>
+      <section className="prr-globe prr-globe-col" aria-label={t.globeTitle}>
+        <h2 className="prr-globe-title">{t.globeTitle}</h2>
+        <FirmGlobe
+          dots={data.dots}
+          sectors={data.sectors}
+          sectorName={sectorName}
+          selected={selectedSlug}
+          dimmed={dimmedSlugs}
+          highlight={freshSlugs}
+          onSelect={selectFromGlobe}
+          ariaLabel={fill(t.globeAria, { total: data.dots.length })}
+          hint={t.globeHint}
+          scoreLabel={t.score}
+          zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
+        />
+        <div className="prg-legend">
+          <span><i className="prg-sw prg-good" aria-hidden="true" />{BAND_LABEL.good}</span>
+          <span><i className="prg-sw prg-watch" aria-hidden="true" />{BAND_LABEL.watch}</span>
+          <span><i className="prg-sw prg-none" aria-hidden="true" />{BAND_LABEL.none}</span>
+          <small>{t.globeNorth}</small>
+        </div>
+      </section>
+      <aside className="prr-side prr-panel" aria-label={t.controls}>
         <label className="prr-search">
           <span className="sr-only">{t.findLabel}</span>
           <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" /><path d="m13.5 13.5 4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
@@ -772,7 +806,7 @@ export default function PropRadarLive({
                     <>
                       <p><b>{fill(t.visitSince, { when: daysAgo(visit.last, t) })}</b> · {visit.changed.length}</p>
                       <ul>
-                        {visit.changed.slice(0, 8).map((dot) => (
+                        {visit.changed.slice(0, 6).map((dot) => (
                           <li key={dot.slug}>
                             <button type="button" onClick={() => selectFromGlobe(dot.slug)} aria-pressed={selectedSlug === dot.slug}>
                               {dot.logo ? <img src={dot.logo} alt="" width={18} height={18} /> : null}
@@ -781,7 +815,7 @@ export default function PropRadarLive({
                             </button>
                           </li>
                         ))}
-                        {visit.changed.length > 8 ? <li className="prr-visit-more">{fill(t.visitMore, { n: visit.changed.length - 8 })}</li> : null}
+                        {visit.changed.length > 6 ? <li className="prr-visit-more">{fill(t.visitMore, { n: visit.changed.length - 6 })}</li> : null}
                       </ul>
                     </>
                   ) : (
@@ -790,32 +824,10 @@ export default function PropRadarLive({
                 </div>
               ) : null}
               <p className="prr-detail-hint">{t.idleHint}</p>
+              {bands}
             </>
           )}
         </div>
-        <section className="prr-globe" aria-label={t.globeTitle}>
-          <h2 className="prr-globe-title">{t.globeTitle}</h2>
-          <FirmGlobe
-            dots={data.dots}
-            sectors={data.sectors}
-            sectorName={sectorName}
-            selected={selectedSlug}
-            dimmed={dimmedSlugs}
-            highlight={freshSlugs}
-            onSelect={selectFromGlobe}
-            ariaLabel={fill(t.globeAria, { total: data.dots.length })}
-            hint={t.globeHint}
-            scoreLabel={t.score}
-            zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
-          />
-          <div className="prg-legend">
-            <span><i className="prg-sw prg-good" aria-hidden="true" />{BAND_LABEL.good}</span>
-            <span><i className="prg-sw prg-watch" aria-hidden="true" />{BAND_LABEL.watch}</span>
-            <span><i className="prg-sw prg-none" aria-hidden="true" />{BAND_LABEL.none}</span>
-            <small>{t.globeNorth}</small>
-          </div>
-        </section>
-        {bands}
       </aside>
       {narrow && pinned && focus ? (
         <>

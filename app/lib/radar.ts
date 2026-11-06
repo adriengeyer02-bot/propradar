@@ -1,6 +1,8 @@
 import type { PropFirm } from './propFirms';
 import { firmLogoFor } from './firmLogos';
 import { getClosureRecord } from './closures';
+import { drawdownLabel, priceLabel, profitSplitLabel } from './firmFormat';
+import { toEnglishText } from './i18n';
 
 /**
  * Geometry for the PropRadar radar: every tracked firm on one disc.
@@ -42,6 +44,12 @@ export type RadarDot = {
   updated?: string;
   /** Date of the firm's latest dated, sourced update, whenever it was. */
   changed?: string;
+  /** Short facts for the side card (English labels; the page translates them). */
+  price: string;
+  split: string;
+  drawdown: string;
+  payout: string;
+  legal: string;
 };
 
 export type RadarClosed = {
@@ -180,6 +188,11 @@ export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug:
       logo: firmLogoFor(firm.logoDomain)?.src,
       ...(recent?.bySlug.get(firm.slug) ? { updated: recent.bySlug.get(firm.slug) } : {}),
       ...(recent?.allBySlug?.get(firm.slug) ? { changed: recent.allBySlug.get(firm.slug) } : {}),
+      price: priceLabel(firm),
+      split: profitSplitLabel(firm),
+      drawdown: drawdownLabel(firm, toEnglishText),
+      payout: toEnglishText(firm.reviewSignals.payoutRisk),
+      legal: firm.regulatoryAudit.riskLevel,
     };
   });
 
