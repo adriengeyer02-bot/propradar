@@ -3039,6 +3039,39 @@ html body a:hover .home-tool-action b { transform: translateX(2px); }
   .prr-is-full.has-intro .pr-radar-hero h1 { font-size: clamp(34px, 9vw, 44px); }
 }
 
+/* /prop-firm-radar with the globe: hero on top, radar + firm card on the left, globe on the right. */
+.prr-is-full.has-globe { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.prr-is-full.has-globe.has-intro { grid-template-areas: 'intro intro' 'main side'; grid-template-rows: auto auto; }
+.prr-is-full.has-globe.has-intro .pr-radar-hero { max-width: 860px; }
+.prr-is-full.has-globe .prr-svg { min-width: 0; max-width: min(100%, calc(100vh - 140px)); }
+.prr-under { padding: 0 18px 18px; }
+.prr-under .prr-detail { min-height: 0; }
+.prr-globe-col { position: sticky; top: 84px; align-content: start; }
+.prr-globe { display: grid; gap: 8px; }
+.prr-globe-title { margin: 0; font-size: 15px; font-weight: 750; letter-spacing: 0; }
+.prg { position: relative; width: 100%; max-width: min(580px, calc(100vh - 360px)); min-width: min(100%, 320px); margin: 0 auto; }
+.prg-canvas { display: block; width: 100%; cursor: grab; touch-action: pan-y; border-radius: 50%; }
+.prg-canvas:active { cursor: grabbing; }
+.prg-canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.prg-loading { aspect-ratio: 1; background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 12%, transparent) 0 40%, transparent 41%); }
+.prg-tip { position: absolute; z-index: 3; transform: translate(-50%, calc(-100% - 8px)); padding: 7px 10px; border-radius: 10px; color: var(--pr-tip-fg); background: var(--pr-tip-bg); box-shadow: 0 10px 24px rgba(2, 8, 23, 0.22); font-size: 12px; white-space: nowrap; pointer-events: none; }
+.prg-tip strong { display: block; font-size: 13px; }
+.prg-tip span { opacity: 0.8; }
+.prg-hint { margin: 0; color: var(--muted); font-size: 12px; text-align: center; }
+.prg-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; color: var(--muted); font-size: 12.5px; }
+.prg-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.prg-legend small { flex-basis: 100%; text-align: center; font-size: 12px; }
+.prg-sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.prg-good { background: var(--tone-good); }
+.prg-watch { background: var(--tone-watch); }
+.prg-none { background: var(--muted); }
+@media (max-width: 960px) {
+  .prr-is-full.has-globe { grid-template-columns: 1fr; }
+  .prr-is-full.has-globe.has-intro { grid-template-areas: 'intro' 'main' 'side'; }
+  .prr-globe-col { position: static; }
+  .prg { max-width: 480px; }
+}
+
 /* ---------- Guide covers (data-driven SVG, same look in both themes) ---------- */
 .gc { display: block; overflow: hidden; background: #0b1626; line-height: 0; }
 .gc-svg { display: block; width: 100%; height: auto; aspect-ratio: 400 / 220; }
