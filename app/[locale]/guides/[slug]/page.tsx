@@ -47,6 +47,7 @@ import {
   seoGuides,
   selectGuideFirms,
 } from '../../../lib/seoGuides';
+import IntentLink from '../../../components/IntentLink';
 
 export const revalidate = 86400;
 const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
@@ -1468,8 +1469,8 @@ export default async function SeoGuidePage({ params }: Props) {
             <time dateTime={modifiedDate.toISOString()}>Updated {modifiedDateLabel}</time>
           </div>
           <div className="actions">
-            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
-            <Link prefetch={false} href="/tools" className="btn">Choose by style</Link>
+            <IntentLink href="/prop-firm-comparison" className="btn btn-primary">Compare firms</IntentLink>
+            <IntentLink href="/tools" className="btn">Choose by style</IntentLink>
           </div>
         </div>
         <div className="guide-hero-side">
@@ -2431,8 +2432,8 @@ export default async function SeoGuidePage({ params }: Props) {
           <p>Rules can differ inside the same firm. Use the comparator for the shortlist and the style tool for your trading constraints.</p>
         </div>
         <div className="guide-inline-cta-actions">
-          <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
-          <Link prefetch={false} href="/tools" className="btn">Choose by trading style</Link>
+          <IntentLink href="/prop-firm-comparison" className="btn btn-primary">Compare firms</IntentLink>
+          <IntentLink href="/tools" className="btn">Choose by trading style</IntentLink>
         </div>
       </aside>
 

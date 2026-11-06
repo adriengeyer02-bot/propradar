@@ -71,6 +71,24 @@ export function getFirmChangelog(slug: string): FirmChangelogEntry[] {
   return [...(updates[slug]?.changelog ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 }
 
+/**
+ * Firms with a dated, sourced changelog entry in the latest review window:
+ * the `days` days up to the most recent entry in the file. Keyed by slug,
+ * value = date of that firm's latest entry. Anchored on the file, not on the
+ * clock, so a static page never claims "this week" for an old run.
+ */
+export function recentFirmUpdates(days = 7): { since: string; latest: string; bySlug: Map<string, string> } {
+  const latestBySlug = new Map<string, string>();
+  for (const [slug, update] of Object.entries(updates)) {
+    const latest = update.changelog.reduce((max, entry) => (entry.date > max ? entry.date : max), '');
+    if (latest) latestBySlug.set(slug, latest);
+  }
+  const latest = [...latestBySlug.values()].reduce((max, date) => (date > max ? date : max), '');
+  if (!latest) return { since: '', latest: '', bySlug: new Map() };
+  const since = new Date(Date.parse(`${latest}T12:00:00Z`) - (days - 1) * 86_400_000).toISOString().slice(0, 10);
+  return { since, latest, bySlug: new Map([...latestBySlug].filter(([, date]) => date >= since)) };
+}
+
 export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
   return firms.map((firm) => {
     const update = updates[firm.slug];

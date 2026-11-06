@@ -6,13 +6,12 @@ import FirmLogo from '../../components/FirmLogo';
 import RiskPip from '../../components/ui/RiskPip';
 import FirmRow, { FirmTableHead, type FirmSort, type FirmSortKey } from '../../components/ui/FirmRow';
 import ScoreRing from '../../components/ui/ScoreRing';
-import type { PropFirm } from '../../lib/propFirms';
-import { activeFirms, isProvisional, propFirms, riskyFirms, hasPayoutRiskSignal } from '../../lib/propFirms';
+import type { ComparatorFirm } from '../../lib/comparatorFirms';
+import { hasPayoutRiskSignal, isProvisional, normalizeFirmSearch } from '../../lib/firmFormat';
+import type { FirmSearchMatch } from '../../lib/firmSearch';
 import { entityCountries, jurisdictionByCode } from '../../lib/jurisdictions';
-import { findFirmSearchMatch, normalizeFirmSearch } from '../../lib/firmSearch';
 import { toEnglishText } from '../../lib/i18n';
-import { latestReviewDate, legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../../lib/riskTone';
-import { SITE_URL } from '../../lib/site';
+import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../../lib/riskTone';
 import { localePath, type Locale } from '../../lib/locales';
 import type { Messages } from '../../lib/messages/en';
 
@@ -31,37 +30,39 @@ type LegalFilter = 'Tous' | 'verified' | 'watch' | 'deep';
 
 const statusFilters: StatusFilter[] = ['Tous', 'Active', 'À surveiller', 'Fermée'];
 const PAGE_SIZE = 20;
-const DATA_UPDATED_AT = latestReviewDate(propFirms);
 
 // Countries where at least one tracked firm has a mapped entity, most firms first.
-const FIRM_COUNTRIES = new Map(propFirms.map((firm) => [firm.slug, entityCountries(firm.regulatoryAudit.entities).map((c) => c.code)]));
-const COUNTRY_OPTIONS = (() => {
+function countryIndex(firms: ComparatorFirm[]) {
+  const byFirm = new Map(firms.map((firm) => [firm.slug, entityCountries(firm.regulatoryAudit.entities).map((c) => c.code)]));
   const counts = new Map<string, number>();
-  FIRM_COUNTRIES.forEach((codes) => codes.forEach((code) => counts.set(code, (counts.get(code) ?? 0) + 1)));
-  return [...counts.entries()]
+  byFirm.forEach((codes) => codes.forEach((code) => counts.set(code, (counts.get(code) ?? 0) + 1)));
+  const options = [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([code, n]) => ({ code, n, name: jurisdictionByCode(code)?.name ?? code }));
-})();
+  return { byFirm, options };
+}
+
+/** The full-text search index ships in its own chunk, loaded the first time someone searches. */
+type SearchModule = typeof import('../../lib/firmSearch');
+let searchModule: Promise<SearchModule> | null = null;
+function loadSearch() {
+  searchModule ??= import('../../lib/firmSearch');
+  return searchModule;
+}
 
 // Queries stay in English: they search the English firm files. Labels come from the messages.
 const QUICK_QUERIES = ['futures', 'no consistency rule', 'news allowed', 'instant funding', 'mt5', 'legal watch'] as const;
 
-function jsonLd(data: unknown) {
-  return {
-    __html: JSON.stringify(data).replace(/</g, '\\u003c'),
-  };
+function legalSourceCount(firm: ComparatorFirm) {
+  return firm.legalSourceCount;
 }
 
-function legalSourceCount(firm: PropFirm) {
-  return firm.regulatoryAudit.sources.length || firm.sources.length;
-}
-
-function isLegalWatchFirm(firm: PropFirm) {
+function isLegalWatchFirm(firm: ComparatorFirm) {
   const risk = firm.regulatoryAudit.riskLevel;
   return !firm.legalVerified || risk === 'High' || risk === 'Critical' || risk === 'To audit';
 }
 
-function legalRiskWeight(firm: PropFirm) {
+function legalRiskWeight(firm: ComparatorFirm) {
   const risk = firm.regulatoryAudit.riskLevel;
   const riskScore =
     risk === 'Critical' ? 100 :
@@ -80,7 +81,7 @@ const TONE_ORDER: Record<Tone, number> = { good: 0, watch: 1, risk: 2, none: 3 }
  * Value used to sort a column. Unknown values ("To verify", "Not assessed",
  * "Not checked") always sort last, whatever the direction.
  */
-function sortValue(firm: PropFirm, key: FirmSortKey): number | null {
+function sortValue(firm: ComparatorFirm, key: FirmSortKey): number | null {
   switch (key) {
     case 'score': return firm.score;
     case 'price': return firm.priceFrom > 0 ? firm.priceFrom : firm.noEntryFee ? 0 : null;
@@ -97,8 +98,7 @@ function sortValue(firm: PropFirm, key: FirmSortKey): number | null {
 /** First click direction: best first (high score, low price, low risk...). */
 const DEFAULT_DIR: Record<FirmSortKey, 'asc' | 'desc'> = { score: 'desc', price: 'asc', split: 'desc', payout: 'asc', legal: 'asc', trustpilot: 'desc' };
 
-function FirmSearchContext({ firm, query, label }: { firm: PropFirm; query: string; label: string }) {
-  const match = findFirmSearchMatch(firm, query);
+function FirmSearchContext({ match, label }: { match: FirmSearchMatch | null | undefined; label: string }) {
   if (!match) return null;
 
   return (
@@ -109,8 +109,22 @@ function FirmSearchContext({ firm, query, label }: { firm: PropFirm; query: stri
   );
 }
 
-export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: ComparatorUi }) {
+export default function ComparatorClient({
+  locale,
+  ui,
+  firms: propFirms,
+  updatedAt: DATA_UPDATED_AT,
+}: {
+  locale: Locale;
+  ui: ComparatorUi;
+  firms: ComparatorFirm[];
+  updatedAt: string;
+}) {
   const c = ui.compare;
+  const { byFirm: FIRM_COUNTRIES, options: COUNTRY_OPTIONS } = useMemo(() => countryIndex(propFirms), [propFirms]);
+  const activeCount = useMemo(() => propFirms.filter((firm) => firm.status === 'Active').length, [propFirms]);
+  const watchCount = useMemo(() => propFirms.filter((firm) => firm.status === 'À surveiller').length, [propFirms]);
+  const [search_, setSearchModule] = useState<SearchModule | null>(null);
   const v = (value: string) => (ui.values as Record<string, string>)[value] ?? value;
   const L = (path: string) => localePath(locale, path);
   const [search, setSearch] = useState('');
@@ -138,14 +152,36 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
     });
   }
 
-  const filteredFirms = useMemo(() => {
-    const normalizedSearch = normalizeFirmSearch(search);
+  // Load the search index as soon as the visitor shows intent (focus, a quick query, a typed letter).
+  const warmSearch = () => {
+    if (!search_) loadSearch().then(setSearchModule, () => undefined);
+  };
+  useEffect(() => {
+    if (normalizeFirmSearch(search)) warmSearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
 
+  const matched = useMemo(() => {
+    const normalizedSearch = normalizeFirmSearch(search);
     return propFirms
       .map((firm) => ({
         firm,
-        searchMatch: normalizedSearch ? findFirmSearchMatch(firm, normalizedSearch) : null,
-      }))
+        // Until the index has loaded (a fraction of a second), match on the firm name only.
+        searchMatch: !normalizedSearch
+          ? null
+          : search_
+            ? search_.findFirmSearchMatch(firm, normalizedSearch)
+            : normalizeFirmSearch(firm.name).includes(normalizedSearch)
+              ? { score: 1, label: 'Name', display: firm.name }
+              : null,
+      }));
+  }, [propFirms, search, search_]);
+  const matchBySlug = useMemo(() => new Map(matched.map(({ firm, searchMatch }) => [firm.slug, searchMatch])), [matched]);
+
+  const filteredFirms = useMemo(() => {
+    const normalizedSearch = normalizeFirmSearch(search);
+
+    return matched
       .filter(({ firm, searchMatch }) => {
         const matchesSearch = !normalizedSearch || Boolean(searchMatch);
         const matchesStatus = status === 'Tous' || firm.status === status;
@@ -178,7 +214,7 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
         return b.firm.score - a.firm.score;
       })
       .map(({ firm }) => firm);
-  }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, sort, status]);
+  }, [FIRM_COUNTRIES, matched, country, drawdown, legalFilter, market, priceMax, scoreMin, search, sort, status]);
 
   // Deep link from the legal map: /comparateur?country=LC
   useEffect(() => {
@@ -226,38 +262,6 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
   const visibleFirms = filteredFirms.slice(0, visibleCount);
   const visibleEnd = Math.min(visibleCount, filteredFirms.length);
   const remaining = filteredFirms.length - visibleEnd;
-  const comparatorSchema = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'PropRadar Prop Firm Comparator',
-      description: 'Independent prop firm comparison using rules, payout risk, legal evidence and public review signals.',
-      url: `${SITE_URL}${L('/prop-firm-comparison')}`,
-      dateModified: DATA_UPDATED_AT,
-      mainEntity: {
-        '@type': 'ItemList',
-        numberOfItems: propFirms.length,
-        itemListElement: propFirms.map((firm, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          item: {
-            '@type': 'Product',
-            name: `${firm.name} prop firm program`,
-            description: toEnglishText(firm.verdict),
-            url: `${SITE_URL}${L(`/firm/${firm.slug}`)}`,
-            category: `${firm.styles.map((style) => toEnglishText(style)).join(', ')} prop firm`,
-            brand: {
-              '@type': 'Brand',
-              name: firm.name,
-            },
-          },
-        })),
-      },
-    }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
-
   const averageScore = Math.round(filteredFirms.reduce((sum, firm) => sum + firm.score, 0) / Math.max(filteredFirms.length, 1));
   const moreFilterCount = [scoreMin !== 'Tous', market !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
   const filterOnlyCount = [status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
@@ -307,7 +311,6 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
 
   return (
     <main className="container comparator-page pr-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(comparatorSchema)} />
 
       <header className="pr-page-head">
         <div className="eyebrow">{c.eyebrow}</div>
@@ -315,8 +318,8 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
         <p className="pr-lead">{c.lead}</p>
         <dl className="pr-head-stats">
           <div><dt>{c.statTracked}</dt><dd>{propFirms.length}</dd></div>
-          <div><dt>{c.statActive}</dt><dd>{activeFirms.length}</dd></div>
-          <div><dt>{c.statWatchlist}</dt><dd>{riskyFirms.length}</dd></div>
+          <div><dt>{c.statActive}</dt><dd>{activeCount}</dd></div>
+          <div><dt>{c.statWatchlist}</dt><dd>{watchCount}</dd></div>
           <div><dt>{c.statLatest}</dt><dd><time dateTime={DATA_UPDATED_AT}>{DATA_UPDATED_AT}</time></dd></div>
         </dl>
       </header>
@@ -332,6 +335,7 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
             placeholder={c.searchPlaceholder}
             value={search}
             onChange={(event) => setSearch(event.target.value)}
+            onFocus={warmSearch}
             autoComplete="off"
           />
           {search ? (
@@ -477,7 +481,7 @@ export default function ComparatorClient({ locale, ui }: { locale: Locale; ui: C
           <FirmTableHead sort={sort} onSort={toggleSort} ui={ui} />
           {visibleFirms.map((firm, index) => (
             <FirmRow key={firm.slug} firm={firm} rank={index + 1} locale={locale} ui={ui}>
-              {isSearching ? <FirmSearchContext firm={firm} query={search} label={c.matchedBy} /> : null}
+              {isSearching ? <FirmSearchContext match={matchBySlug.get(firm.slug)} label={c.matchedBy} /> : null}
             </FirmRow>
           ))}
         </div>
@@ -529,9 +533,9 @@ function SignalList({
   title: string;
   href: string;
   anchor?: string;
-  firms: PropFirm[];
-  value: (firm: PropFirm) => string;
-  tone: (firm: PropFirm) => Tone;
+  firms: ComparatorFirm[];
+  value: (firm: ComparatorFirm) => string;
+  tone: (firm: ComparatorFirm) => Tone;
 }) {
   return (
     <article className="pr-signal-list">

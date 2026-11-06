@@ -1,20 +1,16 @@
 /* PropRadar visual system: operational clarity, compact data and native themes. */
 :root {
-  --bg: #f2f4f7;
   --surface: #ffffff;
   --surface-2: #f7f9fc;
   --surface-3: #edf1f6;
   --surface-strong: #ffffff;
   --surface-subtle: #f7f9fc;
-  --line: #d8e0ea;
   --line-strong: #bec9d7;
   --text: #111827;
   --soft: #344054;
   --muted: #667085;
   --ink: #111827;
   --navy: #0b1220;
-  --blue: var(--accent);
-  --blue-2: var(--accent);
   --green: #0e9f6e;
   --amber: #d97706;
   --red: #dc2626;
@@ -30,21 +26,8 @@
 }
 
 html[data-theme='dark'] {
-  --bg: #0a0d12;
-  --surface: #121720;
-  --surface-2: #171d27;
-  --surface-3: #1d2531;
-  --surface-strong: #171d27;
-  --surface-subtle: #10151d;
-  --line: #293442;
-  --line-strong: #3a4656;
-  --text: #f4f7fb;
-  --soft: #c7d0dc;
-  --muted: #98a6b8;
   --ink: #f4f7fb;
   --navy: #080b10;
-  --blue: var(--accent);
-  --blue-2: var(--accent);
   --green: #34d399;
   --amber: #fbbf24;
   --red: #f87171;
@@ -69,7 +52,6 @@ body {
   font-size: 15px;
   line-height: 1.55;
   letter-spacing: 0;
-  text-rendering: optimizeLegibility;
 }
 
 body,
@@ -81,7 +63,6 @@ textarea {
 }
 
 ::selection {
-  color: #ffffff;
   background: var(--accent);
 }
 
@@ -188,12 +169,10 @@ p {
 .topbar {
   border-bottom: 1px solid rgba(148, 163, 184, 0.18);
   background: rgba(11, 18, 32, 0.97);
-  box-shadow: 0 8px 26px rgba(2, 6, 23, 0.2);
   backdrop-filter: blur(18px);
 }
 
 .topbar-inner {
-  min-height: 66px;
   gap: 20px;
 }
 
@@ -326,13 +305,6 @@ p {
   font-size: 18px;
 }
 
-.footer {
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  background: var(--surface);
-  font-size: 13px;
-}
-
 .skip-link {
   border-radius: 6px;
   background: var(--accent);
@@ -360,7 +332,6 @@ p {
 
 .card::after,
 .panel::after,
-.guide-entry-card::after,
 .deal-watch-card::after {
   display: none;
 }
@@ -406,7 +377,6 @@ p {
   border-color: var(--accent);
   color: #ffffff;
   background: var(--accent);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
 }
 
 .btn-primary:hover {
@@ -513,8 +483,6 @@ p {
   box-shadow: none;
 }
 
-.guide-entry-card,
-.guide-risk-card,
 .mega-deal-card,
 .deal-watch-card,
 .rule-audit-card,
@@ -663,7 +631,6 @@ p {
 .rules-matrix-row,
 .longtail-rule-row,
 .guide-product-row,
-.seo-firm-row,
 .trust-row {
   border-color: var(--line);
   border-radius: var(--radius);
@@ -678,7 +645,6 @@ p {
 .rules-matrix-row:hover,
 .longtail-rule-row:hover,
 .guide-product-row:hover,
-.seo-firm-row:hover,
 .trust-row:hover {
   border-color: color-mix(in srgb, var(--blue) 34%, var(--line));
   box-shadow: var(--shadow-soft);
@@ -706,7 +672,6 @@ p {
 .firm-title {
   margin: 8px 0 10px;
   color: var(--text);
-  font-size: 54px;
   font-weight: 780;
   line-height: 1.04;
 }
@@ -729,7 +694,6 @@ p {
 }
 
 .firm-tabs a {
-  min-height: 34px;
   border-radius: 6px;
   color: var(--muted);
   font-size: 12px;
@@ -765,7 +729,6 @@ html[data-theme='dark'] .deal-table-row,
 html[data-theme='dark'] .rules-matrix-row,
 html[data-theme='dark'] .longtail-rule-row,
 html[data-theme='dark'] .guide-product-row,
-html[data-theme='dark'] .seo-firm-row,
 html[data-theme='dark'] .trust-row {
   border-color: var(--line);
   background: var(--surface);
@@ -834,10 +797,6 @@ html[data-theme='dark'] .tool-field select {
 
 html[data-theme='dark'] .firm-tabs {
   background: rgba(18, 23, 32, 0.94);
-}
-
-html[data-theme='dark'] .footer {
-  background: #0d1117;
 }
 
 /* Responsive density. Long labels always wrap; no business name is ellipsized. */
@@ -919,10 +878,6 @@ html[data-theme='dark'] .footer {
 
   .firm-result-main {
     grid-column: 1;
-  }
-
-  .firm-title {
-    font-size: 36px;
   }
 
   .mobile-tabbar {
@@ -1391,7 +1346,6 @@ html[data-theme='dark'] .footer {
   justify-content: space-between;
   gap: 12px;
   margin-top: auto;
-  color: var(--blue);
   font-size: 13px;
   font-weight: 760;
 }
@@ -2330,8 +2284,6 @@ html[data-theme='dark'] .home-proof-band {
 
 .guide-hub-hero h1 {
   max-width: 760px;
-  font-size: 58px;
-  line-height: 1.04;
 }
 
 .guide-hub-hero .lead {
@@ -2403,21 +2355,6 @@ html[data-theme='dark'] .home-proof-band {
   min-width: 0;
   align-items: center;
   gap: 10px;
-}
-
-.guide-topic-mark {
-  display: inline-grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--guide-accent) 42%, var(--line));
-  border-radius: 7px;
-  color: var(--guide-accent);
-  background: var(--guide-accent-soft);
-  font-size: 12px;
-  font-weight: 850;
-  line-height: 1;
 }
 
 .guide-featured-card-top > span:nth-child(2),
@@ -2934,11 +2871,8 @@ html[data-theme='dark'] .home-proof-band {
 .guide-page .panel,
 .guide-page .guide-card-grid,
 .guide-page .guide-card-grid > *,
-.guide-page .guide-profile-grid,
-.guide-page .guide-profile-grid > *,
 .guide-page .guide-deep-answer,
-.guide-page .guide-ranking-list,
-.guide-page .seo-faq-stack {
+.guide-page .guide-ranking-list {
   min-width: 0;
   max-width: 100%;
 }
@@ -3778,8 +3712,7 @@ html[data-theme='dark'] .guide-path-green {
     backdrop-filter: none;
   }
 
-  .guide-page .guide-card-grid,
-  .guide-page .guide-profile-grid {
+  .guide-page .guide-card-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 

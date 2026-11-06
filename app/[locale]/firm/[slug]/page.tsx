@@ -57,6 +57,7 @@ import { isFirmIndexable } from '../../../lib/firmIndexing';
 import { feeStats } from '../../../lib/industryStats';
 import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../../lib/locales';
 import { fmt, getMessages, tv, type Messages } from '../../../lib/messages';
+import IntentLink from '../../../components/IntentLink';
 
 type FirmT = Messages['firm'];
 
@@ -384,7 +385,7 @@ function ProductContext({ firm, product, f, locale }: { firm: PropFirm; product:
       <ul className="pr-product-context-links">
         {anchor ? <li><Link href={`${L('/prop-firm-challenge')}#${anchor}`}>{fmt(f.ctxAll, { programs })}</Link></li> : null}
         {countries[0] ? (
-          <li><Link prefetch={false} href={`${L('/prop-firm-comparison')}?country=${countries[0].code}`}>{fmt(f.ctxCountry, { country: countryLabel(locale, countries[0].code, countries[0].name) })}</Link></li>
+          <li><IntentLink href={`${L('/prop-firm-comparison')}?country=${countries[0].code}`}>{fmt(f.ctxCountry, { country: countryLabel(locale, countries[0].code, countries[0].name) })}</IntentLink></li>
         ) : null}
         <li><Link href={`${L('/prop-firm-statistics')}#fees`}>{f.ctxStats}</Link></li>
       </ul>
@@ -794,10 +795,10 @@ export default async function FirmPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(faqSchema)} />
 
       <section className="container detail-header firm-profile-header">
-        <Link prefetch={false} href={L('/prop-firm-comparison')} className="firm-back-link">
+        <IntentLink href={L('/prop-firm-comparison')} className="firm-back-link">
           <span aria-hidden="true">&larr;</span>
           {f.allFirms}
-        </Link>
+        </IntentLink>
 
         <div className="pr-firm-hero">
           <div className="pr-firm-identity">
@@ -836,7 +837,7 @@ export default async function FirmPage({ params }: Props) {
                 <RiskPip label={f.trustpilot} value={v(trustpilotPip(firm).value)} tone={trustpilotPip(firm).tone} />
               </div>
               <div className="pr-firm-actions">
-                <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn">{f.compare}</Link>
+                <IntentLink href={L('/prop-firm-comparison')} className="btn">{f.compare}</IntentLink>
                 <Link href={`${L('/')}#radar-weekly`} className="pr-link">{f.setAlert}</Link>
               </div>
             </div>

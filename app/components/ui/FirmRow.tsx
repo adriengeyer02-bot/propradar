@@ -6,7 +6,11 @@ import RiskPip from './RiskPip';
 import { entityCountries } from '../../lib/jurisdictions';
 import ScoreRing from './ScoreRing';
 import type { PropFirm } from '../../lib/propFirms';
-import { drawdownLabel, priceLabel, profitSplitLabel } from '../../lib/propFirms';
+import type { ComparatorFirm } from '../../lib/comparatorFirms';
+
+/** What a row reads: a full profile or the comparator's slim projection. */
+type RowFirm = Omit<ComparatorFirm, 'legalSourceCount'>;
+import { drawdownLabel, priceLabel, profitSplitLabel } from '../../lib/firmFormat';
 import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, scoreTone, statusTone, trustpilotPip } from '../../lib/riskTone';
 import { localePath, type Locale } from '../../lib/locales';
@@ -19,7 +23,7 @@ export const EN_ROW_UI: RowUi = { table: en.table, values: en.values, styles: en
 const pick = (map: Record<string, string>, value: string) => map[value] ?? value;
 
 /** Short, informative trading tags only: no tag that would appear on every firm. */
-export function firmTags(firm: PropFirm, ui: RowUi = EN_ROW_UI) {
+export function firmTags(firm: RowFirm, ui: RowUi = EN_ROW_UI) {
   const tags: string[] = [];
   const text = `${firm.styles.join(' ')} ${firm.bestFor}`.toLowerCase();
 
@@ -30,7 +34,7 @@ export function firmTags(firm: PropFirm, ui: RowUi = EN_ROW_UI) {
   return tags.slice(0, 2);
 }
 
-export function marketLabel(firm: PropFirm, ui: RowUi = EN_ROW_UI) {
+export function marketLabel(firm: RowFirm, ui: RowUi = EN_ROW_UI) {
   return firm.styles.slice(0, 2).map((style) => pick(ui.styles, toEnglishText(style))).join(' / ');
 }
 
@@ -90,7 +94,7 @@ export function FirmTableHead({ sort, onSort, ui = EN_ROW_UI }: { sort?: FirmSor
 }
 
 type FirmRowProps = {
-  firm: PropFirm;
+  firm: RowFirm;
   rank?: number;
   /** Extra line under the firm name (search match, proof level...). */
   children?: ReactNode;

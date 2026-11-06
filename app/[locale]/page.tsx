@@ -2,6 +2,7 @@ import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
 import PropRadarLive from '../components/ui/PropRadarLive';
 import { buildRadar } from '../lib/radar';
+import { recentFirmUpdates } from '../lib/firmUpdates';
 import RiskPip from '../components/ui/RiskPip';
 import ScoreRing from '../components/ui/ScoreRing';
 import { legalTone, payoutTone } from '../lib/riskTone';
@@ -23,6 +24,7 @@ import { countryCounts, documentedClosures, firmsWithCountry, withheldFirms } fr
 import type { Metadata } from 'next';
 import { isLocale, localeAlternates, localePath, type Locale } from '../lib/locales';
 import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
+import IntentLink from '../components/IntentLink';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -46,7 +48,7 @@ export default async function HomePage({ params }: Props) {
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const sourcedFirms = verifiedFirms.length + partiallyVerifiedFirms.length;
   const heroPreviewFirms = topFirms.slice(0, 3);
-  const homeRadar = buildRadar(propFirms);
+  const homeRadar = buildRadar(propFirms, recentFirmUpdates(1));
   const homepageGuides = [
     'prop-firm-sans-challenge',
     'prop-firm-sans-consistency-rule',
@@ -110,9 +112,9 @@ export default async function HomePage({ params }: Props) {
             <span>{h.latestReview} <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
           </div>
           <div className="home-v2-actions">
-            <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn btn-primary home-v2-primary-action">
+            <IntentLink href={L('/prop-firm-comparison')} className="btn btn-primary home-v2-primary-action">
               {h.openComparator}
-            </Link>
+            </IntentLink>
             <Link href={L('/promos')} className="btn home-v2-secondary-action">
               {h.viewDeals}
             </Link>
@@ -180,9 +182,9 @@ export default async function HomePage({ params }: Props) {
           ))}
         </div>
         <p className="pr-table-more">
-          <Link prefetch={false} className="pr-link" href={L('/prop-firm-comparison')}>
+          <IntentLink className="pr-link" href={L('/prop-firm-comparison')}>
             {fmt(h.compareAll, { count: propFirms.length })} <span aria-hidden="true">→</span>
-          </Link>
+          </IntentLink>
         </p>
       </section>
 

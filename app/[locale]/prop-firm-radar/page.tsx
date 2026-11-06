@@ -3,12 +3,14 @@ import Link from 'next/link';
 import PropRadarLive from '../../components/ui/PropRadarLive';
 import { propFirms } from '../../lib/propFirms';
 import { buildRadar } from '../../lib/radar';
+import { recentFirmUpdates } from '../../lib/firmUpdates';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages } from '../../lib/messages';
+import IntentLink from '../../components/IntentLink';
 
 const PATH = '/prop-firm-radar';
-const radar = buildRadar(propFirms);
+const radar = buildRadar(propFirms, recentFirmUpdates(1));
 const openCount = radar.dots.length;
 type Props = { params: Promise<{ locale: string }> };
 
@@ -134,7 +136,7 @@ export default async function PropFirmRadarPage({ params }: Props) {
           {r.fineprint} <Link href={L('/audit')} className="pr-link">{r.methodology}</Link>
         </p>
         <div className="actions">
-          <Link prefetch={false} className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</Link>
+          <IntentLink className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</IntentLink>
           <Link className="btn" href={L('/prop-firm-statistics')}>{r.stats}</Link>
         </div>
       </section>

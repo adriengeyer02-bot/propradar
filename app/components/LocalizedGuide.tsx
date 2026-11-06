@@ -12,6 +12,7 @@ import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import { getFirmBySlug, hasPayoutRiskSignal, type PropFirm } from '../lib/propFirms';
 import { getGuideLastModified, getRelatedGuides, getSeoGuidePath, selectGuideFirms, type SeoGuide } from '../lib/seoGuides';
 import { FOUNDER, SITE_NAME, SITE_URL } from '../lib/site';
+import IntentLink from './IntentLink';
 
 const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 const TABLE_ROWS = 25;
@@ -151,7 +152,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
             <time dateTime={modified.toISOString()}>{fmt(g.updated, { date: modifiedLabel })}</time>
           </div>
           <div className="actions">
-            <Link prefetch={false} href={localePath(locale, '/prop-firm-comparison')} className="btn btn-primary">{g.compareFirms}</Link>
+            <IntentLink href={localePath(locale, '/prop-firm-comparison')} className="btn btn-primary">{g.compareFirms}</IntentLink>
             <Link href={localePath(locale, '/prop-firm-radar')} className="btn">{g.openRadar}</Link>
           </div>
         </div>
@@ -220,9 +221,9 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
           ))}
         </div>
         <p className="pr-table-more">
-          <Link prefetch={false} className="pr-link" href={localePath(locale, '/prop-firm-comparison')}>
+          <IntentLink className="pr-link" href={localePath(locale, '/prop-firm-comparison')}>
             {g.compareFirms} <span aria-hidden="true">→</span>
-          </Link>
+          </IntentLink>
         </p>
       </section>
 
@@ -258,7 +259,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
           <p>{g.nextText}</p>
         </div>
         <div className="guide-inline-cta-actions">
-          <Link prefetch={false} href={localePath(locale, '/prop-firm-comparison')} className="btn btn-primary">{g.compareFirms}</Link>
+          <IntentLink href={localePath(locale, '/prop-firm-comparison')} className="btn btn-primary">{g.compareFirms}</IntentLink>
           <Link href={localePath(locale, '/prop-firm-radar')} className="btn">{g.openRadar}</Link>
         </div>
       </aside>

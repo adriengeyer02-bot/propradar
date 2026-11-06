@@ -299,6 +299,8 @@ const ja: Messages = {
     "legendBigger": "大きいほど Trustpilot のレビューが多い",
     "legendHollow": "Trustpilot 評価が非表示",
     "legendClosed": "閉鎖（外側の軌道）",
+    "legendUpdated": "最新のレビューで更新（{date}）",
+    "updated": "更新",
     "compactHint": "角度＝市場、距離＝スコア。点にカーソルを合わせるかタップして会社を表示し、ページを開きます。",
     "scoreBand": "スコア帯",
     "trustpilot": "Trustpilot",

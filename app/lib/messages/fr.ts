@@ -250,6 +250,8 @@ const fr: Messages = {
     legendBigger: "Plus gros = plus d'avis Trustpilot",
     legendHollow: 'Note Trustpilot retenue',
     legendClosed: "Fermée, sur l'orbite extérieure",
+    legendUpdated: 'Mise à jour lors de la dernière revue ({date})',
+    updated: 'Mise à jour',
     compactHint: 'Angle = marché, distance = score. Survolez ou touchez un point pour lire la firme, puis ouvrez sa fiche.',
     scoreBand: 'Tranche de score',
     trustpilot: 'Trustpilot',

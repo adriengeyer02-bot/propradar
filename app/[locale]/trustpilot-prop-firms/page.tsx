@@ -18,6 +18,7 @@ import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Loca
 import { fmt, getMessages, numberLocale, tv, type Messages } from '../../lib/messages';
 import { SITE_URL } from '../../lib/site';
 import type { Metadata } from 'next';
+import IntentLink from '../../components/IntentLink';
 
 const TRUSTPILOT_DESCRIPTION =
   'Which prop firms have their Trustpilot rating withheld for a guideline breach, with the dated notice for each, and how raw ratings compare with payout and legal evidence.';
@@ -152,7 +153,7 @@ export default async function TrustpilotGuidePage({ params }: Props) {
           <p className="lead">{tr.lead}</p>
           <div className="actions">
             <a href="#rating-withheld" className="btn btn-primary">{fmt(tr.ctaWithheld, { count: withheldOpen.length })}</a>
-            <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn">{tr.ctaComparator}</Link>
+            <IntentLink href={L('/prop-firm-comparison')} className="btn">{tr.ctaComparator}</IntentLink>
             <Link href={L('/audit')} className="btn">{tr.ctaProof}</Link>
             <Link href={L('/prop-firm-payout-risk')} className="btn">{tr.ctaPayout}</Link>
           </div>

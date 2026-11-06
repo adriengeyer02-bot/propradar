@@ -28,6 +28,7 @@ import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages, numberLocale } from '../../lib/messages';
 import { rich } from '../../lib/rich';
+import IntentLink from '../../components/IntentLink';
 
 const PATH = '/prop-firm-statistics';
 const TITLE = 'Prop Firm Statistics 2026: Closures, Fees, Countries & Reviews';
@@ -322,7 +323,7 @@ export default async function PropFirmStatisticsPage({ params }: Props) {
           {topCountries.map(({ country, firms }) => (
             <li key={country.code}>
               <Flag code={country.code} size="md" />
-              <Link prefetch={false} href={`${L('/prop-firm-comparison')}?country=${country.code}`}>{cName(country.code, country.name)}</Link>
+              <IntentLink href={`${L('/prop-firm-comparison')}?country=${country.code}`}>{cName(country.code, country.name)}</IntentLink>
               <span className="pr-stats-bars-track" aria-hidden="true">
                 <span style={{ width: `${(firms / topCountries[0].firms) * 100}%` }} />
               </span>

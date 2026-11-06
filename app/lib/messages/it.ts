@@ -250,6 +250,8 @@ const it: Messages = {
     legendBigger: 'Più grande = più recensioni Trustpilot',
     legendHollow: 'Valutazione Trustpilot sospesa',
     legendClosed: 'Chiusa, sull’orbita esterna',
+    legendUpdated: 'Aggiornata nell’ultima revisione ({date})',
+    updated: 'Aggiornata',
     compactHint: 'Angolo = mercato, distanza = punteggio. Passa o tocca un punto per leggere la firm, poi apri la sua scheda.',
     scoreBand: 'Fascia di punteggio',
     trustpilot: 'Trustpilot',

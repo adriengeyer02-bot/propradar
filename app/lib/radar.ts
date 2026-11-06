@@ -38,6 +38,8 @@ export type RadarDot = {
   trustpilot: string;
   withheld: boolean;
   logo?: string;
+  /** Date of a dated, sourced update in the latest review window, if any. */
+  updated?: string;
 };
 
 export type RadarClosed = {
@@ -64,6 +66,8 @@ export type RadarData = {
   closed: RadarClosed[];
   sectors: RadarSector[];
   counts: Record<RadarTone | 'closed', number>;
+  /** Open firms updated in the latest review window, and that window's last date. */
+  updated: { count: number; latest: string };
   latest: string;
   total: number;
 };
@@ -117,7 +121,7 @@ function trustpilotText(firm: PropFirm) {
   return `${firm.trustpilotRating}/5${count ? ` · ${count.toLocaleString('en-US')} reviews` : ''}`;
 }
 
-export function buildRadar(firms: PropFirm[]): RadarData {
+export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug: Map<string, string> }): RadarData {
   const open = firms.filter((firm) => firm.status !== 'Fermée');
   const closed = firms.filter((firm) => firm.status === 'Fermée');
 
@@ -172,6 +176,7 @@ export function buildRadar(firms: PropFirm[]): RadarData {
       trustpilot: trustpilotText(firm),
       withheld: Boolean(firm.reviewSignals.trustpilotRatingWithheld),
       logo: firmLogoFor(firm.logoDomain)?.src,
+      ...(recent?.bySlug.get(firm.slug) ? { updated: recent.bySlug.get(firm.slug) } : {}),
     };
   });
 
@@ -194,6 +199,7 @@ export function buildRadar(firms: PropFirm[]): RadarData {
       none: dots.filter((dot) => dot.tone === 'none').length,
       closed: closedDots.length,
     },
+    updated: { count: dots.filter((dot) => dot.updated).length, latest: recent?.latest ?? '' },
     latest: firms.reduce((latest, firm) => (firm.lastReviewed > latest ? firm.lastReviewed : latest), ''),
     total: firms.length,
   };

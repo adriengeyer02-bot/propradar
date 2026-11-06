@@ -3,14 +3,12 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import '@fontsource-variable/archivo/wdth.css';
 import { archivo } from '../fonts';
-import '../globals.css';
-import '../design-system.css';
-import '../design-refresh.css';
-import '../design-epure.css';
+import '../site.css';
 import ActiveNavLink from '../components/ActiveNavLink';
 import RiskEvidenceMenu from '../components/RiskEvidenceMenu';
 import SiteSearch from '../components/SiteSearch';
 import ThemeToggle from '../components/ThemeToggle';
+import RouteTransition from '../components/RouteTransition';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import LocaleNotice from '../components/LocaleNotice';
 import { notFound } from 'next/navigation';
@@ -18,6 +16,7 @@ import { HTML_LANG, OG_LOCALE, isLocale, localePath, type Locale } from '../lib/
 import { fmt, getMessages } from '../lib/messages';
 import { propFirms } from '../lib/propFirms';
 import { FOUNDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
+import IntentLink from '../components/IntentLink';
 
 const themeInitScript = `
   (function () {
@@ -172,6 +171,7 @@ export default async function RootLayout({
         />
       </head>
       <body>
+        <RouteTransition />
         <a href="#main-content" className="skip-link">{c.skip}</a>
         <div className="site-shell">
           <header className="topbar">
@@ -220,12 +220,12 @@ export default async function RootLayout({
               </div>
               <nav className="footer-nav" aria-label="Research links">
                 <strong>{c.footer.research}</strong>
-                <Link prefetch={false} href={L('/prop-firm-comparison')}>{c.comparator}</Link>
+                <IntentLink href={L('/prop-firm-comparison')}>{c.comparator}</IntentLink>
                 <Link href={L('/prop-firm-radar')}>{c.footer.radar}</Link>
                 <Link href={L('/guides')}>{c.guides}</Link>
                 <Link href={L('/best-prop-firms')}>{c.footer.best}</Link>
                 <Link href={L('/prop-firm-challenge')}>{c.footer.challenge}</Link>
-                <Link prefetch={false} href={L('/tools')}>{c.footer.tools}</Link>
+                <IntentLink href={L('/tools')}>{c.footer.tools}</IntentLink>
               </nav>
               <nav className="footer-nav" aria-label="Risk and evidence links">
                 <strong>{c.riskWatch}</strong>
