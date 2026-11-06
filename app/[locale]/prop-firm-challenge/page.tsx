@@ -15,6 +15,7 @@ import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Loca
 import { fmt, getMessages, tv, type Messages } from '../../lib/messages';
 import { localizedGuidePath } from '../../lib/guideI18n';
 import { rich } from '../../lib/rich';
+import IntentLink from '../../components/IntentLink';
 
 const PATH = '/prop-firm-challenge';
 const PUBLISHED_AT = '2026-10-29';
@@ -254,7 +255,7 @@ export default async function PropFirmChallengePage({ params }: Props) {
           </div>
           <div className="actions">
             <a href="#compare" className="btn btn-primary">{c.ctaCompare}</a>
-            <Link prefetch={false} href={L('/prop-firm-comparison')} className="btn">{c.ctaTable}</Link>
+            <IntentLink href={L('/prop-firm-comparison')} className="btn">{c.ctaTable}</IntentLink>
           </div>
         </div>
         <dl className="pr-challenge-facts">
@@ -369,9 +370,9 @@ export default async function PropFirmChallengePage({ params }: Props) {
         <ChallengeTable model="Instant funding" caption={c.instantCaption} t={t} locale={locale} />
 
         <p className="pr-table-more">
-          <Link prefetch={false} className="pr-link" href={L('/prop-firm-comparison')}>
+          <IntentLink className="pr-link" href={L('/prop-firm-comparison')}>
             {fmt(c.filterAll, { count: propFirms.length })} <span aria-hidden="true">→</span>
-          </Link>
+          </IntentLink>
         </p>
       </section>
 

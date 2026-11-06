@@ -1,4 +1,6 @@
 import { applyFirmUpdates } from './firmUpdates';
+import { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel } from './firmFormat';
+export { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel };
 
 export type Product = {
   id: string;
@@ -154,10 +156,6 @@ export type ProvisionalField = 'profitSplit' | 'drawdownType' | 'accountSize' | 
 const PLACEHOLDER_ISSUE =
   /rev.rifier|conditions commerciales|statuts|must be rechecked before buying|not audited in depth yet|closed or not recommended status/i;
 
-export function isProvisional(firm: Pick<PropFirm, 'provisional'>, field: ProvisionalField) {
-  return Boolean(firm.provisional?.includes(field));
-}
-
 /** Incidents actually written down on the profile; the count shown is always this list's length. */
 export function documentedIncidents(firm: Pick<PropFirm, 'incidentsDetails' | 'reviewSignals'>) {
   const seen = new Set<string>();
@@ -167,15 +165,6 @@ export function documentedIncidents(firm: Pick<PropFirm, 'incidentsDetails' | 'r
     seen.add(key);
     return true;
   });
-}
-
-export function profitSplitLabel(firm: Pick<PropFirm, 'profitSplit' | 'provisional'>) {
-  if (isProvisional(firm, 'profitSplit')) return 'To verify';
-  return firm.profitSplit > 0 ? `${firm.profitSplit}%` : 'N/A';
-}
-
-export function drawdownLabel(firm: Pick<PropFirm, 'drawdownType' | 'provisional'>, translate: (value: string) => string = (value) => value) {
-  return isProvisional(firm, 'drawdownType') ? 'To verify' : translate(firm.drawdownType);
 }
 
 const REVIEW_DATE = '2026-06-29';
@@ -12610,11 +12599,6 @@ export function isPayoutRiskAssessed(firm: Pick<PropFirm, 'reviewSignals'>) {
 }
 
 /** True when a payout-risk level above Low is on file (and therefore backed by written evidence). */
-export function hasPayoutRiskSignal(firm: Pick<PropFirm, 'reviewSignals'>) {
-  const risk = firm.reviewSignals.payoutRisk;
-  return risk === 'Moyen' || risk === 'Élevé' || risk === 'Critique';
-}
-
 /**
  * A payout-risk level is only published when something written backs it:
  * a documented closure, or at least one payout-related incident listed on the
@@ -12801,16 +12785,3 @@ export function hasMeasuredMentions(source?: string) {
 }
 
 /** Entry price label: "No entry fee" only when a source says so, "To verify" when unknown. */
-export function priceLabel(firm: Pick<PropFirm, 'priceFrom' | 'noEntryFee'>) {
-  if (firm.noEntryFee && !(firm.priceFrom > 0)) return 'No entry fee';
-  return formatUsd(firm.priceFrom);
-}
-
-export function formatUsd(value: number) {
-  if (value <= 0) return 'To verify';
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(value);
-}

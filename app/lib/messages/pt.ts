@@ -299,6 +299,8 @@ const pt: Messages = {
     "legendBigger": "Maior = mais avaliações no Trustpilot",
     "legendHollow": "Nota do Trustpilot suspensa",
     "legendClosed": "Encerrada, na órbita externa",
+    "legendUpdated": "Atualizada na última revisão ({date})",
+    "updated": "Atualizada",
     "compactHint": "Ângulo = mercado, distância = pontuação. Passe ou toque em um ponto para ver a empresa e abra a ficha.",
     "scoreBand": "Faixa de pontuação",
     "trustpilot": "Trustpilot",

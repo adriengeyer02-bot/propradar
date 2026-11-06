@@ -1,4 +1,7 @@
-import { isProvisional, propFirms, type PropFirm } from './propFirms';
+import { propFirms, type PropFirm } from './propFirms';
+import { isProvisional, normalizeFirmSearch } from './firmFormat';
+
+export { normalizeFirmSearch };
 import { toEnglishText } from './i18n';
 
 type FirmSearchField = {
@@ -34,16 +37,6 @@ const FIRM_SEARCH_ALIASES: Record<string, string[]> = {
   'quant-tekel': ['QT Funded', 'QTFunded', 'QT', 'AscendX Capital', 'AscendX', 'QuantTekel', 'Quant Tekel'],
   'tx3-funding': ['TopTier Trader', 'TopTier', 'TTT'],
 };
-
-export function normalizeFirmSearch(value: string) {
-  return value
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/&/g, ' and ')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
-}
 
 function uniqueSearchValues(values: string[]) {
   return Array.from(new Set(values.map((value) => value.trim()).filter(Boolean)));
@@ -309,7 +302,7 @@ const FIRM_SEARCH_INDEX = new Map(
   ])
 );
 
-export function findFirmSearchMatch(firm: PropFirm, query: string): FirmSearchMatch | null {
+export function findFirmSearchMatch(firm: Pick<PropFirm, 'slug'>, query: string): FirmSearchMatch | null {
   const normalizedQuery = normalizeFirmSearch(query);
   if (!normalizedQuery) return null;
 

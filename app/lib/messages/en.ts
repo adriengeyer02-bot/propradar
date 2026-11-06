@@ -254,6 +254,8 @@ const en = {
     legendBigger: 'Bigger = more Trustpilot reviews',
     legendHollow: 'Trustpilot rating withheld',
     legendClosed: 'Closed, on the outer orbit',
+    legendUpdated: 'Updated in the latest review ({date})',
+    updated: 'Updated',
     compactHint: 'Angle = market, distance = score. Point at or tap a dot to read the firm, then open its page.',
     scoreBand: 'Score band',
     trustpilot: 'Trustpilot',

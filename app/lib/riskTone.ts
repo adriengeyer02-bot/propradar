@@ -37,7 +37,7 @@ export function reviewTone(risk: ReviewSignals['manipulationRisk']): Tone {
  * The third signal shown on rows and cards: the public Trustpilot rating as a
  * fact (or Trustpilot's own withholding notice), not a PropRadar verdict.
  */
-export function trustpilotPip(firm: Pick<PropFirm, 'trustpilotRating' | 'reviewSignals'>): { value: string; tone: Tone } {
+export function trustpilotPip(firm: Pick<PropFirm, 'trustpilotRating'> & { reviewSignals: Pick<ReviewSignals, 'trustpilotRatingWithheld'> }): { value: string; tone: Tone } {
   if (firm.reviewSignals.trustpilotRatingWithheld) return { value: 'Withheld', tone: 'risk' };
   if (!firm.trustpilotRating) return { value: 'Not checked', tone: 'none' };
   const rating = firm.trustpilotRating;

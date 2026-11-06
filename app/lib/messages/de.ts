@@ -250,6 +250,8 @@ const de: Messages = {
     legendBigger: 'Größer = mehr Trustpilot-Bewertungen',
     legendHollow: 'Trustpilot-Bewertung zurückgehalten',
     legendClosed: 'Geschlossen, auf der äußeren Bahn',
+    legendUpdated: 'Bei der letzten Prüfung aktualisiert ({date})',
+    updated: 'Aktualisiert',
     compactHint: 'Winkel = Markt, Abstand = Score. Zeigen oder tippen Sie auf einen Punkt, dann öffnen Sie die Seite.',
     scoreBand: 'Score-Bereich',
     trustpilot: 'Trustpilot',

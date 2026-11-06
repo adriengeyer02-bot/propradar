@@ -28,6 +28,7 @@ import LocalizedGuide, { localizedGuideMetadata } from '../../components/Localiz
 import { getGuideTranslation, guideLanguageAlternates } from '../../lib/guideI18n';
 import { isLocale, type Locale } from '../../lib/locales';
 import { getSeoGuideBySlug } from '../../lib/seoGuides';
+import IntentLink from '../../components/IntentLink';
 
 const BEST_PROP_FIRMS_DESCRIPTION =
   'What are the best prop firms right now? Compare current leaders by payout reliability, legal proof, rule clarity, source depth and community signals.';
@@ -261,7 +262,7 @@ export default async function BestPropFirmsPage({ params }: Props) {
             <time dateTime={rankingUpdatedAt}>Updated {rankingUpdatedAt}</time>
           </div>
           <div className="actions">
-            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Open full comparator</Link>
+            <IntentLink href="/prop-firm-comparison" className="btn btn-primary">Open full comparator</IntentLink>
             <Link href="/prop-firm-payout-risk" className="btn">View payout risks</Link>
             <Link href="/audit" className="btn">Read source audit</Link>
           </div>

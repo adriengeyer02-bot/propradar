@@ -16,6 +16,7 @@ import {
   hasPayoutRiskSignal,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
+import IntentLink from '../../components/IntentLink';
 
 const PAYOUT_RISK_DESCRIPTION =
   'Track prop-firm payout delays, denials, incidents, legal checks and source depth before paying for an evaluation or funded account.';
@@ -89,7 +90,7 @@ export default function PayoutRiskPage() {
             incidents, legal context or withdrawal conditions require stricter reading.
           </p>
           <div className="actions">
-            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Compare with all signals</Link>
+            <IntentLink href="/prop-firm-comparison" className="btn btn-primary">Compare with all signals</IntentLink>
             <Link href="/prop-firm-rules" className="btn">Read sensitive clauses</Link>
             <Link href="/audit" className="btn">Check sources</Link>
           </div>

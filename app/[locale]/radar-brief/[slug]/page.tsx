@@ -18,6 +18,7 @@ import {
 import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from '../../../lib/seoGuides';
 import { SITE_NAME, SITE_URL } from '../../../lib/site';
 import { toEnglishText } from '../../../lib/i18n';
+import IntentLink from '../../../components/IntentLink';
 
 export const revalidate = 86400;
 
@@ -340,7 +341,7 @@ export default async function RadarBriefIssuePage({ params }: Props) {
                 <li><span>05</span><p><strong>Timing</strong> Recheck the file on purchase day because program terms can change.</p></li>
               </ol>
               <div className="brief-decision-actions">
-                <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Open the comparator</Link>
+                <IntentLink href="/prop-firm-comparison" className="btn btn-primary">Open the comparator</IntentLink>
                 <Link href="/audit" className="btn">Review the method</Link>
               </div>
             </section>

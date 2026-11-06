@@ -33,6 +33,14 @@ type Band = RadarTone | 'closed';
 type Focus = { kind: 'dot'; dot: RadarDot } | { kind: 'closed'; firm: RadarClosed };
 
 const SWEEP_SPAN = 42;
+/**
+ * Phosphor trail behind the beam: TRAIL_STEPS faint wedges that all start at
+ * the beam and reach back further and further, so their overlap fades
+ * smoothly (no seams) from bright at the beam to nothing TRAIL_REACH degrees behind.
+ */
+const TRAIL_STEPS = 18;
+const TRAIL_REACH = 110;
+const TRAIL_ALPHA = 0.021;
 const PERIOD_MS = 7000;
 const PICK = 14;
 
@@ -41,6 +49,18 @@ function arcPath(start: number, end: number) {
   const b = radarPoint(RADAR_OUTER, end);
   return `M${C},${C}L${a.x},${a.y}A${RADAR_OUTER},${RADAR_OUTER} 0 ${end - start > 180 ? 1 : 0} 1 ${b.x},${b.y}Z`;
 }
+
+/** Wedge from `start` to `end` degrees, in the sweep group's own frame (0 = straight up). */
+function wedgePath(start: number, end: number) {
+  const a = radarPoint(RADAR_OUTER, start);
+  const b = radarPoint(RADAR_OUTER, end);
+  return `M${C},${C}L${a.x.toFixed(1)},${a.y.toFixed(1)}A${RADAR_OUTER},${RADAR_OUTER} 0 0 1 ${b.x.toFixed(1)},${b.y.toFixed(1)}Z`;
+}
+
+const TRAIL = Array.from({ length: TRAIL_STEPS }, (_, i) => ({
+  d: wedgePath(SWEEP_SPAN - TRAIL_REACH * Math.pow((i + 1) / TRAIL_STEPS, 1.7), SWEEP_SPAN),
+  opacity: TRAIL_ALPHA,
+}));
 
 function labelPath(start: number, end: number) {
   const mid = (start + end) / 2;
@@ -105,6 +125,7 @@ export default function PropRadarLive({
   const pointerRef = useRef<string>('mouse');
 
   const [ready, setReady] = useState(false);
+  const [settled, setSettled] = useState(false);
   const [hoverSector, setHoverSector] = useState<number | null>(null);
   const [lockedSector, setLockedSector] = useState<number | null>(null);
   const [band, setBand] = useState<Band | null>(null);
@@ -157,6 +178,7 @@ export default function PropRadarLive({
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduce) {
       setReady(true);
+      setSettled(true);
       setShownCounts(data.counts);
       return;
     }
@@ -197,7 +219,10 @@ export default function PropRadarLive({
             closed: Math.round(data.counts.closed * share),
           });
         }
-        if (done && share >= 1) introDone = true;
+        if (done && share >= 1) {
+          introDone = true;
+          setSettled(true);
+        }
       }
       const sweep = ((elapsed / PERIOD_MS) * 360) % 360;
       const lead = (sweep + SWEEP_SPAN) % 360;
@@ -206,17 +231,20 @@ export default function PropRadarLive({
         const node = dotRefs.current[index];
         if (!node) return;
         const delta = (lead - dot.angle + 360) % 360;
-        const glow = Math.round(Math.max(0.4, 1 - delta / 330) * 10) / 10;
+        // Phosphor afterglow: full brightness as the beam passes, then a fast fade to a low floor.
+        const glow = Math.round((0.38 + 0.62 * Math.exp(-delta / 80)) * 10) / 10;
         if (glowCache[index] !== glow) {
           glowCache[index] = glow;
           node.style.setProperty('--glow', String(glow));
         }
         const label = labelRefs.current[index];
-        if (label && introDone && delta < 4 && !quietRef.current && now - (lastBlip.get(index) ?? 0) > PERIOD_MS * 0.8) {
+        if ((label || dot.updated) && introDone && delta < 4 && !quietRef.current && now - (lastBlip.get(index) ?? 0) > PERIOD_MS * 0.8) {
           lastBlip.set(index, now);
-          label.classList.add('is-on');
-          window.setTimeout(() => label.classList.remove('is-on'), 1900);
-          ping(dot);
+          if (label) {
+            label.classList.add('is-on');
+            window.setTimeout(() => label.classList.remove('is-on'), 1900);
+          }
+          ping(dot, Boolean(dot.updated));
         }
       });
       if (visible) frame = requestAnimationFrame(tick);
@@ -255,16 +283,17 @@ export default function PropRadarLive({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  function ping(dot: RadarDot) {
+  function ping(dot: RadarDot, fresh = false) {
     const layer = pingRef.current;
     if (!layer || typeof layer.animate !== 'function') return;
     const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     ring.setAttribute('cx', String(dot.x));
     ring.setAttribute('cy', String(dot.y));
     ring.setAttribute('r', String(dot.size));
-    ring.setAttribute('class', 'prr-ping');
+    ring.setAttribute('class', fresh ? 'prr-ping is-fresh' : 'prr-ping');
     layer.appendChild(ring);
-    const animation = ring.animate([{ r: `${dot.size}px`, opacity: 0.9 }, { r: `${dot.size + 16}px`, opacity: 0 }], { duration: 1100, easing: 'ease-out' });
+    const reach = fresh ? 24 : 16;
+    const animation = ring.animate([{ r: `${dot.size}px`, opacity: 0.9 }, { r: `${dot.size + reach}px`, opacity: 0 }], { duration: fresh ? 1400 : 1100, easing: 'ease-out' });
     animation.onfinish = () => ring.remove();
   }
 
@@ -400,9 +429,10 @@ export default function PropRadarLive({
     const left = Math.min(panel.width - 214, Math.max(8, (p.x / S) * rect.width + (rect.left - panel.left) + 14));
     const y = (p.y / S) * rect.height + (rect.top - panel.top);
     // A pinned tip (touch) has a link and must not cover the dot: above it, or below when there is no room.
-    const height = pinned ? 124 : 76;
+    const extra = focus.kind === 'dot' && focus.dot.updated ? 18 : 0;
+    const height = (pinned ? 124 : 76) + extra;
     const top = y - height - 10 >= 4 ? y - height - 10 : y + 16;
-    return { left, top: pinned ? top : Math.max(8, y - 76) };
+    return { left, top: pinned ? top : Math.max(8, y - 76 - extra) };
   })() : null;
 
   const radar = (
@@ -414,7 +444,7 @@ export default function PropRadarLive({
       <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('prr-js')" }} />
       <svg
         ref={svgRef}
-        className={`prr-svg${ready ? ' is-ready' : ''}`}
+        className={`prr-svg${ready ? ' is-ready' : ''}${settled ? ' is-settled' : ''}`}
         viewBox={`0 0 ${S} ${S}`}
         role="img"
         aria-label={fill(t.radarAria, { total: data.total, good: data.counts.good, watch: data.counts.watch, none: data.counts.none, closed: data.counts.closed })}
@@ -432,10 +462,6 @@ export default function PropRadarLive({
             <stop offset="0%" className="prr-disc-a" />
             <stop offset="100%" className="prr-disc-b" />
           </radialGradient>
-          <linearGradient id={`prr-sweep-${variant}`} x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" className="prr-sweep-a" />
-            <stop offset="100%" className="prr-sweep-b" />
-          </linearGradient>
           {labels.map((label, index) => (
             <path key={index} id={`prr-label-${variant}-${index}`} d={label.d} fill="none" />
           ))}
@@ -474,10 +500,20 @@ export default function PropRadarLive({
         ))}
 
         <g ref={sweepRef} className="prr-sweep" aria-hidden="true">
-          <path d={(() => { const e = radarPoint(RADAR_OUTER, SWEEP_SPAN); return `M${C},${C}L${C},${C - RADAR_OUTER}A${RADAR_OUTER},${RADAR_OUTER} 0 0 1 ${e.x},${e.y}Z`; })()} fill={`url(#prr-sweep-${variant})`} />
+          {TRAIL.map((wedge, index) => (
+            <path key={index} d={wedge.d} className="prr-trail" style={{ opacity: wedge.opacity }} />
+          ))}
+          <line x1={C} y1={C} x2={radarPoint(RADAR_OUTER, SWEEP_SPAN).x} y2={radarPoint(RADAR_OUTER, SWEEP_SPAN).y} className="prr-sweep-halo" />
           <line x1={C} y1={C} x2={radarPoint(RADAR_OUTER, SWEEP_SPAN).x} y2={radarPoint(RADAR_OUTER, SWEEP_SPAN).y} className="prr-sweep-edge" />
         </g>
 
+        <g aria-hidden="true">
+          {data.dots.map((dot) =>
+            dot.updated ? (
+              <circle key={dot.slug} cx={dot.x} cy={dot.y} r={dot.size + 4} className={`prr-fresh${dimDot(dot) ? ' is-dim' : ''}`} />
+            ) : null,
+          )}
+        </g>
         <g>
           {data.dots.map((dot, index) => (
             <circle
@@ -517,6 +553,7 @@ export default function PropRadarLive({
             <>
               <span><span>{t.score}</span><b>{focus.dot.score}/100</b></span>
               <span><span>{sectorName(focus.dot.sector)}</span><b>{BAND_LABEL[focus.dot.tone]}</b></span>
+              {focus.dot.updated ? <span className="prr-tip-fresh"><span>{t.updated}</span><b>{focus.dot.updated}</b></span> : null}
             </>
           ) : (
             <span><span>{t.closed}</span><b>{focus.firm.closed ?? t.dateNotStated}</b></span>
@@ -559,6 +596,7 @@ export default function PropRadarLive({
       <span><i className="prr-lg prr-lg-big" aria-hidden="true" />{t.legendBigger}</span>
       <span><i className="prr-lg prr-lg-hollow" aria-hidden="true" />{t.legendHollow}</span>
       <span><b className="prr-lg-x" aria-hidden="true">×</b>{t.legendClosed}</span>
+      {data.updated.count ? <span><i className="prr-lg prr-lg-fresh" aria-hidden="true" />{fill(t.legendUpdated, { date: data.updated.latest })} · {data.updated.count}</span> : null}
     </div>
   );
 
@@ -598,6 +636,7 @@ export default function PropRadarLive({
             <div><dt>{t.scoreBand}</dt><dd>{BAND_LABEL[dot.tone]}</dd></div>
             <div><dt>{t.trustpilot}</dt><dd>{trustpilotName(dot.trustpilot)}</dd></div>
             <div><dt>{t.lastReview}</dt><dd>{daysAgo(dot.reviewed, t)}</dd></div>
+            {dot.updated ? <div className="prr-fact-fresh"><dt>{t.updated}</dt><dd><Link href={`${firmHref(dot.slug)}#update-history`}>{dot.updated}</Link></dd></div> : null}
             <div><dt>{t.market}</dt><dd>{sectorName(dot.sector)}</dd></div>
           </dl>
           <Link className="pr-link" href={firmHref(dot.slug)}>{fill(t.openFirmProfile, { name: shortName(dot.name) })} <span aria-hidden="true">→</span></Link>

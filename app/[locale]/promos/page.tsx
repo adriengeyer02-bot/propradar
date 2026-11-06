@@ -26,6 +26,7 @@ import {
   promoFaq,
   withdrawnPromoDeals,
 } from '../../lib/promoResearch';
+import IntentLink from '../../components/IntentLink';
 
 export const revalidate = 86400;
 
@@ -211,7 +212,7 @@ export default function PromosPage() {
           <div><dt>Legal mapped</dt><dd>{legalMappedDealCount}</dd></div>
           <div><dt>5+ sources</dt><dd>{deepSourceDealCount}</dd></div>
         </dl>
-        <Link prefetch={false} href="/prop-firm-comparison" className="pr-link">Compare rules and reliability before using a code <span aria-hidden="true">→</span></Link>
+        <IntentLink href="/prop-firm-comparison" className="pr-link">Compare rules and reliability before using a code <span aria-hidden="true">→</span></IntentLink>
       </section>
 
       <section className="section mega-deal-section" id="mega-deals">

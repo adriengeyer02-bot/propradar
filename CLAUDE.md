@@ -5,8 +5,10 @@ asset is trust: every number must be traceable, every warning sourced. When in
 doubt, publish less, not more.
 
 Stack: Next.js 15 (App Router), deployed by Vercel on every push to `main`.
-Design: `app/design-refresh.css` (loaded last) holds the current visual system:
-Archivo variable font, navy + radar cyan accent, sentence-case labels.
+Design: `app/design-refresh.css` holds the current visual system: Archivo
+variable font, navy + radar cyan accent, sentence-case labels. All stylesheets
+load through `app/site.css`, in cascade order (globals, design-system,
+design-refresh, design-epure); add a sheet there, never as a separate import.
 Site language: English. Owner: Geyer (writes in French, answer him in French).
 
 ## Where the data lives

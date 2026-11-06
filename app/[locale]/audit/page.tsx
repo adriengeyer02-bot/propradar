@@ -22,6 +22,7 @@ import {
 import { toEnglishText } from '../../lib/i18n';
 import { auditCaseFiles } from '../../lib/auditCaseFiles';
 import { getEditorialBriefPath, latestEditorialBrief } from '../../lib/editorialBriefs';
+import IntentLink from '../../components/IntentLink';
 
 const AUDIT_DESCRIPTION =
   'Audit PropRadar sources, legal entities, regulator checks and proof depth across verified, partial and watchlist prop-firm profiles.';
@@ -128,7 +129,7 @@ export default function AuditPage() {
             PropRadar does not mix a fully verified profile with an entry added for monitoring. Each firm keeps a visible audit level, consulted sources and signals still needing reinforcement.
           </p>
           <div className="actions">
-            <Link prefetch={false} href="/prop-firm-comparison" className="btn btn-primary">Compare firms</Link>
+            <IntentLink href="/prop-firm-comparison" className="btn btn-primary">Compare firms</IntentLink>
             <Link href="/prop-firm-rules" className="btn">View rules</Link>
           </div>
         </div>

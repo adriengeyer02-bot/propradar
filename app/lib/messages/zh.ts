@@ -250,6 +250,8 @@ const zh: Messages = {
     legendBigger: '越大，Trustpilot 评价越多',
     legendHollow: 'Trustpilot 评分被暂停显示',
     legendClosed: '已关闭，位于外圈轨道',
+    legendUpdated: '在最近一次审核中更新（{date}）',
+    updated: '已更新',
     compactHint: '角度代表市场，距离代表评分。指向或点击圆点查看公司，然后打开其页面。',
     scoreBand: '评分区间',
     trustpilot: 'Trustpilot',
