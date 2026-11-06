@@ -77,16 +77,16 @@ export function getFirmChangelog(slug: string): FirmChangelogEntry[] {
  * value = date of that firm's latest entry. Anchored on the file, not on the
  * clock, so a static page never claims "this week" for an old run.
  */
-export function recentFirmUpdates(days = 7): { since: string; latest: string; bySlug: Map<string, string> } {
+export function recentFirmUpdates(days = 7): { since: string; latest: string; bySlug: Map<string, string>; allBySlug: Map<string, string> } {
   const latestBySlug = new Map<string, string>();
   for (const [slug, update] of Object.entries(updates)) {
     const latest = update.changelog.reduce((max, entry) => (entry.date > max ? entry.date : max), '');
     if (latest) latestBySlug.set(slug, latest);
   }
   const latest = [...latestBySlug.values()].reduce((max, date) => (date > max ? date : max), '');
-  if (!latest) return { since: '', latest: '', bySlug: new Map() };
+  if (!latest) return { since: '', latest: '', bySlug: new Map(), allBySlug: latestBySlug };
   const since = new Date(Date.parse(`${latest}T12:00:00Z`) - (days - 1) * 86_400_000).toISOString().slice(0, 10);
-  return { since, latest, bySlug: new Map([...latestBySlug].filter(([, date]) => date >= since)) };
+  return { since, latest, bySlug: new Map([...latestBySlug].filter(([, date]) => date >= since)), allBySlug: latestBySlug };
 }
 
 export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
