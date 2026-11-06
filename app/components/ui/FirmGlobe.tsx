@@ -480,6 +480,11 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.strokeStyle = palette.watch;
       strokeCurve((t) => toWorld(MID_BAND, t * 360), 120, cx, cy, radius);
       c.setLineDash([]);
+      // Reference parallels for the 50 and 25 tags (thin, so the bands keep the colour).
+      c.lineWidth = 1;
+      c.strokeStyle = palette.dark ? 'rgba(234, 240, 247, 0.28)' : 'rgba(15, 23, 42, 0.22)';
+      strokeCurve((t) => toWorld(scoreLatitude(50), t * 360), 120, cx, cy, radius);
+      strokeCurve((t) => toWorld(scoreLatitude(25), t * 360), 120, cx, cy, radius);
       c.restore();
 
       // Rim.
@@ -519,11 +524,23 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         if (visibleAt(tip)) pill(label, tip.x, tip.y + (tip.y < cy ? -10 : 10) * unit, sign > 0 ? palette.good : palette.none);
       }
 
-      // Band limits labelled where they cross the left-front of the globe.
-      const sideLon = -view.current.yaw / DEG - 64;
-      for (const [lat, label, color] of [[NORTH_BAND, '75', palette.good], [MID_BAND, '55', palette.watch]] as const) {
-        const pt = project(toWorld(lat, sideLon), cx, cy, radius);
-        if (pt.z > 0.15) pill(label, pt.x, pt.y, color);
+      // Score scale outside the globe, like a ruler: 75, 50 and 25 (with 100 and 0
+      // at the axis tips). Each tag sits where its parallel meets the left edge.
+      for (const [score, color] of [[75, palette.good], [50, palette.none], [25, palette.none]] as const) {
+        const at = limbPoint(scoreLatitude(score), cx, cy, radius);
+        if (!at) continue;
+        const dx = at.x - cx;
+        const dy = at.y - cy;
+        const len = Math.hypot(dx, dy) || 1;
+        const ux = dx / len;
+        const uy = dy / len;
+        c.strokeStyle = color;
+        c.lineWidth = 1.4;
+        c.beginPath();
+        c.moveTo(at.x, at.y);
+        c.lineTo(at.x + ux * 9 * unit, at.y + uy * 9 * unit);
+        c.stroke();
+        pill(String(score), at.x + ux * 26 * unit, at.y + uy * 26 * unit, color);
       }
 
       // Firms, back to front.
@@ -645,6 +662,28 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.arcTo(x, y + h, x, y, r);
       c.arcTo(x, y, x + w, y, r);
       c.closePath();
+    }
+
+    /**
+     * Where a parallel meets the left edge of the visible disc (the horizon),
+     * or its leftmost visible point when it never crosses it. Null when hidden.
+     */
+    function limbPoint(lat: number, cx: number, cy: number, radius: number) {
+      let best: { x: number; y: number } | null = null;
+      let prev = project(toWorld(lat, 0), cx, cy, radius);
+      let leftmost: { x: number; y: number } | null = prev.z >= 0 ? prev : null;
+      for (let d = 2; d <= 360; d += 2) {
+        const cur = project(toWorld(lat, d), cx, cy, radius);
+        if (cur.z >= 0 && (!leftmost || cur.x < leftmost.x)) leftmost = cur;
+        if ((prev.z < 0) !== (cur.z < 0)) {
+          const t = prev.z / (prev.z - cur.z);
+          const x = prev.x + (cur.x - prev.x) * t;
+          const y = prev.y + (cur.y - prev.y) * t;
+          if (x < cx && (!best || x < best.x)) best = { x, y };
+        }
+        prev = cur;
+      }
+      return best ?? leftmost;
     }
 
     /** A small rounded number tag (pole scores, band limits). */
