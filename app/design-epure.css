@@ -3044,15 +3044,27 @@ html body a:hover .home-tool-action b { transform: translateX(2px); }
 .prr-is-full.has-globe.has-intro { grid-template-areas: 'intro intro' 'main side'; grid-template-rows: auto auto; }
 .prr-is-full.has-globe.has-intro .pr-radar-hero { max-width: 860px; }
 .prr-is-full.has-globe .prr-svg { min-width: 0; max-width: min(100%, calc(100vh - 140px)); }
-.prr-under { padding: 0 18px 18px; }
-.prr-under .prr-detail { min-height: 0; }
+/* Right column: the firm card slot (reserved height so the globe below barely moves). */
+.prr-slot { position: relative; display: grid; align-content: start; gap: 10px; min-height: 196px; }
+.prr-slot.has-card { padding: 12px 14px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2, var(--surface)); }
+.prr-slot .prr-detail { min-height: 0; padding-top: 0; border-top: 0; }
+.prr-slot .prr-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 10px 0 0; }
+.prr-slot .prr-facts > div { padding: 6px 10px; }
+.prr-slot .prr-ringbox { transform: scale(0.85); transform-origin: left center; }
+.prr-slot-close { position: absolute; top: 8px; right: 10px; width: 28px; height: 28px; border: 0; border-radius: 50%; color: var(--muted); background: transparent; font-size: 20px; line-height: 1; cursor: pointer; }
+.prr-slot-close:hover { color: var(--text); background: var(--surface-3, var(--line)); }
+.prr-open { display: flex; justify-content: center; width: 100%; min-height: 40px; margin-top: 10px; }
 .prr-globe-col { position: sticky; top: 84px; align-content: start; }
 .prr-globe { display: grid; gap: 8px; }
 .prr-globe-title { margin: 0; font-size: 15px; font-weight: 750; letter-spacing: 0; }
 .prg { position: relative; width: 100%; max-width: min(580px, calc(100vh - 360px)); min-width: min(100%, 320px); margin: 0 auto; }
-.prg-canvas { display: block; width: 100%; cursor: grab; touch-action: pan-y; border-radius: 50%; }
+.prg-canvas { display: block; width: 100%; cursor: grab; touch-action: pan-y; border-radius: 12px; }
 .prg-canvas:active { cursor: grabbing; }
 .prg-canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.prg-zoom { position: absolute; top: 6px; right: 6px; z-index: 2; display: grid; gap: 4px; }
+.prg-zoom button { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 9px; color: var(--text); background: color-mix(in srgb, var(--surface) 88%, transparent); font-size: 17px; font-weight: 700; line-height: 1; cursor: pointer; backdrop-filter: blur(6px); }
+.prg-zoom button:hover:not(:disabled) { border-color: var(--accent); }
+.prg-zoom button:disabled { opacity: 0.4; cursor: default; }
 .prg-loading { aspect-ratio: 1; background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 12%, transparent) 0 40%, transparent 41%); }
 .prg-tip { position: absolute; z-index: 3; transform: translate(-50%, calc(-100% - 8px)); padding: 7px 10px; border-radius: 10px; color: var(--pr-tip-fg); background: var(--pr-tip-bg); box-shadow: 0 10px 24px rgba(2, 8, 23, 0.22); font-size: 12px; white-space: nowrap; pointer-events: none; }
 .prg-tip strong { display: block; font-size: 13px; }

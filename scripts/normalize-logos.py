@@ -16,6 +16,10 @@ Rules
 - Safari "mask" icons are monochrome silhouettes: used only when no raster of
   at least 120px exists.
 - Slugs listed in EXCLUDE were rejected by hand after visual review.
+- Slugs listed in ALLOW_SMALL were checked by hand: their own icon is only
+  published at 64-95px but is clearly the firm's mark, so it is accepted.
+- A firm that already has a logo keeps it when this run found nothing usable
+  for it (site down, closed firm no longer fetched), unless it was rejected.
 
 Usage: python3 -I scripts/normalize-logos.py <logo-raw-dir> [--sheet out.png]
 """
@@ -32,6 +36,9 @@ MIN_PX = 96
 PAD = 0.16
 DARK_TILE = (11, 17, 26, 255)
 EXCLUDE: set[str] = set()
+# Checked by hand on 2026-11-06 (same mark as the firm's site header or name).
+ALLOW_SMALL = {"dna-funded", "quant-tekel", "thinkcapital", "directfundedtrader", "hola-prime"}
+SMALL_PX = 64
 # Header logo images (<img>) are often platform or payment logos: only the
 # ones below were checked by hand and are allowed (slug -> URL fragment).
 LOGO_IMG_OK = {"hantec-trader": "rzrfunded.com/logo.svg"}
@@ -166,7 +173,7 @@ def main():
                 continue
             is_svg = path.suffix == ".svg"
             px = min(image.size)
-            if not is_svg and px < MIN_PX:
+            if not is_svg and px < (SMALL_PX if result["slug"] in ALLOW_SMALL else MIN_PX):
                 continue
             if content_box(image) is None:
                 continue
@@ -195,10 +202,24 @@ def main():
 
     out_dir = ROOT / "public" / "logos"
     out_dir.mkdir(parents=True, exist_ok=True)
-    for old in out_dir.glob("*.png"):
-        old.unlink()
 
-    entries = []
+    # Keep earlier logos this run could not replace (and did not reject).
+    kept = []
+    registry = ROOT / "app" / "lib" / "firmLogos.ts"
+    rejected = set(offsite) | shared | EXCLUDE
+    if registry.exists():
+        import re
+        for domain, file, source in re.findall(r'^  "([^"]+)": \{ file: "([^"]+)", source: (".*?") \},$', registry.read_text(), re.M):
+            slug = file[:-4]
+            if slug in chosen or slug in rejected or not (out_dir / file).exists():
+                continue
+            kept.append((domain, slug, json.loads(source)))
+    keep_files = {f"{slug}.png" for _, slug, _ in kept}
+    for old in out_dir.glob("*.png"):
+        if old.name not in keep_files:
+            old.unlink()
+
+    entries = list(kept)
     tiles = []
     for slug in sorted(chosen):
         item = chosen[slug]
@@ -242,7 +263,7 @@ def main():
     ]
     (ROOT / "app" / "lib" / "firmLogos.ts").write_text("\n".join(lines))
 
-    print(f"{len(entries)} logos written; offsite redirects: {sorted(offsite)}; rejected as shared: {sorted(shared)}; excluded by hand: {sorted(EXCLUDE)}")
+    print(f"{len(entries)} logos written ({len(kept)} kept from earlier runs: {sorted(s for _, s, _ in kept)}); offsite redirects: {sorted(offsite)}; rejected as shared: {sorted(shared)}; excluded by hand: {sorted(EXCLUDE)}")
 
     if sheet_path:
         cols, cell = 10, 150

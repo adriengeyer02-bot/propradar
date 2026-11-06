@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 102 logos, fetched 2026-10-27.
+// 108 logos, fetched 2026-11-06.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "alpha-futures.com": { file: "alpha-futures.png", source: "https://alpha-futures.com/images/webclip.png" },
   "alphacapitalgroup.uk": { file: "alpha-capital-group.png", source: "https://alphacapitalgroup.uk/images/webclip.png" },
@@ -31,6 +31,8 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "citytradersimperium.com": { file: "city-traders-imperium.png", source: "https://b4647544.assetcdn.net/2.0/4647544/wp-content/uploads/2020/03/City-Traders-Imperium-Logo-3-300x300.png?lossy=0&strip=1&webp=1" },
   "claritytraders.com": { file: "clarity-traders.png", source: "https://cdn.prod.website-files.com/6996dc189db4a155eab22aaf/6996dc189db4a155eab22b43_Untitled-1.png" },
   "cryptofundtrader.com": { file: "crypto-fund-trader.png", source: "https://cryptofundtrader.com/wp-content/uploads/2025/08/cropped-fav-icon-512x512-3-192x192.png" },
+  "directfundedtrader.com": { file: "directfundedtrader.png", source: "https://directfundedtrader.com/assets/images/dft-favicon-four.ico" },
+  "dnafunded.com": { file: "dna-funded.png", source: "https://dnafunded.com/wp-content/uploads/2024/08/DNA-Funded-Favicon.png" },
   "e8futures.com": { file: "e8-futures.png", source: "https://e8futures.com/app.svg" },
   "e8markets.com": { file: "e8-markets.png", source: "favicon service for e8markets.com" },
   "earn2trade.com": { file: "earn2trade.png", source: "https://www.earn2trade.com/favicon.svg" },
@@ -45,7 +47,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "funded7.com": { file: "funded7.png", source: "https://funded7.com/favicon.svg" },
   "fundedbull.com": { file: "funded-bull.png", source: "favicon service for fundedbull.com" },
   "fundedelite.com": { file: "fundedelite.png", source: "https://fundedelite.com/images/logos/favicons/favicon.svg" },
-  "fundedfuturesnetwork.com": { file: "funded-futures-network.png", source: "favicon service for fundedfuturesnetwork.com" },
+  "fundedfuturesnetwork.com": { file: "funded-futures-network.png", source: "https://fundedfuturesnetwork.com/static/img/apple-touch-icon.png?v=20261029t125801" },
   "fundedhive.com": { file: "fundedhive.png", source: "favicon service for fundedhive.com" },
   "fundednext.com": { file: "fundednext.png", source: "https://dirslur24ie1a.cloudfront.net/fundednext/short_logo.png" },
   "fundedsquad.com": { file: "funded-squad.png", source: "https://cdn.prod.website-files.com/6ac1ba10a9cf24313e8f656e/6ac73a51e3749c4df9aa16ee_Favicon.png" },
@@ -61,6 +63,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "goatfundedtrader.com": { file: "goat-funded-trader.png", source: "https://cdn.prod.website-files.com/692d3a3e37a293dd19f3b43e/69aabf903c2bdd94b7e148ad_brand_webclip.png" },
   "guardeerfunding.com": { file: "guardeer-funding.png", source: "https://guardeerfunding.com/wp-content/uploads/2024/08/cropped-favicon_guardeer2-192x192.png" },
   "hashhedge.com": { file: "hash-hedge.png", source: "https://www.hashhedge.com/favicon.svg" },
+  "holaprime.com": { file: "hola-prime.png", source: "favicon service for holaprime.com" },
   "hyrotrader.com": { file: "hyrotrader.png", source: "https://www.hyrotrader.com/apple-icon.png" },
   "icfunded.com": { file: "ic-funded.png", source: "https://www.icfunded.com/favicon.ico" },
   "infinityforexfunds.com": { file: "infinity-forex-funds.png", source: "https://infinityforexfunds.com/wp-content/uploads/2025/08/infinity-forex-favicon-300x300.png" },
@@ -86,6 +89,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "pipfarm.com": { file: "pipfarm.png", source: "favicon service for pipfarm.com" },
   "pro.tradingcult.com": { file: "trading-cult.png", source: "https://pro.tradingcult.com/favicon-512.png" },
   "propnumberone.com": { file: "prop-number-one.png", source: "https://propnumberone.com/prop-no-1-brown.svg" },
+  "quanttekel.com": { file: "quant-tekel.png", source: "https://quanttekel.com/wp-content/uploads/2025/06/favicon-1.png" },
   "rebelsfunding.com": { file: "rebelsfunding.png", source: "https://www.rebelsfunding.com/android-chrome-512x512.png" },
   "rzrfunded.com": { file: "hantec-trader.png", source: "https://rzrfunded.com/logo.svg" },
   "sabiotrade.com": { file: "sabiotrade.png", source: "https://sabiotrade.us/favicon.svg" },
@@ -98,6 +102,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "theconcepttrading.com": { file: "the-concept-trading.png", source: "https://prop.theconcepttrader.com/wp-content/uploads/2024/04/cropped-faviconn-192x192.png" },
   "thefundedtraderprogram.com": { file: "the-funded-trader.png", source: "favicon service for thefundedtraderprogram.com" },
   "thetradingpit.com": { file: "the-trading-pit.png", source: "https://www.thetradingpit.com/favicon-96.png" },
+  "thinkcapital.com": { file: "thinkcapital.png", source: "https://www.thinkcapital.com/icon.png?38997575c0a124b9" },
   "tickticktrader.com": { file: "tickticktrader.png", source: "favicon service for tickticktrader.com" },
   "tigerfunded.com": { file: "tiger-funded.png", source: "https://framerusercontent.com/images/LpAodeB4PRmrRE3fD9YAQVJpLJo.png" },
   "toponefutures.com": { file: "top-one-futures.png", source: "https://cdn.prod.website-files.com/67d9f6c73e1490afc415fc90/6828b63534450f4a543621f8_TOF-Logo-Icon-Green-(3).png" },
@@ -111,6 +116,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "traderswithedge.com": { file: "traders-with-edge.png", source: "favicon service for traderswithedge.com" },
   "tradethepool.com": { file: "trade-the-pool.png", source: "https://tradethepool.com/wp-content/uploads/2022/08/cropped-Artboard-2-copy-192x192.png" },
   "tradexprop.com": { file: "tradexprop.png", source: "https://tradexprop.com/wp-content/uploads/2024/10/cropped-Frame-188-1-192x192.png" },
+  "tx3funding.com": { file: "tx3-funding.png", source: "favicon service for tx3funding.com" },
   "ultimatetraders.com": { file: "ultimate-traders.png", source: "favicon service for ultimatetraders.com" },
   "upcomers.com": { file: "upcomers.png", source: "https://upcomers.com/icon.svg?4a4c1fd613b23ba0" },
   "uprofittrader.com": { file: "uprofit-trader.png", source: "https://uprofit.com/icons/android-chrome-512x512.png" },
