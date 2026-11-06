@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react';
 import {
@@ -19,6 +20,9 @@ import {
 import { localePath, type Locale } from '../../lib/locales';
 import en from '../../lib/messages/en';
 import type { Messages } from '../../lib/messages/en';
+
+// The globe ships in its own chunk, loaded after the page is interactive.
+const FirmGlobe = dynamic(() => import('./FirmGlobe'), { ssr: false, loading: () => <div className="prg prg-loading" aria-hidden="true" /> });
 
 type RadarLabels = Messages['radar'];
 type SectorNames = Messages['sectors'];
@@ -408,6 +412,18 @@ export default function PropRadarLive({
     }
   }
 
+  // Globe <-> radar: the pinned firm is the globe's selection; a logo picked on the globe pins it here.
+  const selectedSlug = pinned && focus?.kind === 'dot' ? focus.dot.slug : null;
+  const dimmedSlugs = useMemo(() => new Set(data.dots.filter((dot) => dimDot(dot)).map((dot) => dot.slug)), [data.dots, band, sectorKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  function selectFromGlobe(slug: string) {
+    const dot = data.dots.find((item) => item.slug === slug);
+    if (!dot) return;
+    setTouched(true);
+    setFocus({ kind: 'dot', dot });
+    setPinned(true);
+    ping(dot);
+  }
+
   const focusPoint = focus ? (focus.kind === 'dot' ? focus.dot : focus.firm) : null;
   const focusSize = focus?.kind === 'dot' ? focus.dot.size : 5;
   const hud =
@@ -677,7 +693,7 @@ export default function PropRadarLive({
   })();
 
   return (
-    <div className={`prr prr-is-full${intro ? ' has-intro' : ''}`}>
+    <div className={`prr prr-is-full has-globe${intro ? ' has-intro' : ''}`}>
       {intro ? <div className="prr-intro">{intro}</div> : null}
       <div className="prr-main">
         <div className="prr-chips" role="group" aria-label={t.markets}>
@@ -699,8 +715,9 @@ export default function PropRadarLive({
         </div>
         {radar}
         {legend}
+        <div className="prr-under">{card}</div>
       </div>
-      <aside className="prr-side" aria-label={t.controls}>
+      <aside className="prr-side prr-globe-col" aria-label={t.controls}>
         <label className="prr-search">
           <span className="sr-only">{t.findLabel}</span>
           <svg aria-hidden="true" viewBox="0 0 20 20" width="16" height="16"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" /><path d="m13.5 13.5 4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
@@ -716,29 +733,27 @@ export default function PropRadarLive({
         <datalist id="prr-names">
           {names.map((name) => <option key={name} value={name} />)}
         </datalist>
+        <section className="prr-globe" aria-label={t.globeTitle}>
+          <h2 className="prr-globe-title">{t.globeTitle}</h2>
+          <FirmGlobe
+            dots={data.dots}
+            sectors={data.sectors}
+            sectorName={sectorName}
+            selected={selectedSlug}
+            dimmed={dimmedSlugs}
+            onSelect={selectFromGlobe}
+            ariaLabel={fill(t.globeAria, { total: data.dots.length })}
+            hint={t.globeHint}
+            scoreLabel={t.score}
+          />
+          <div className="prg-legend">
+            <span><i className="prg-sw prg-good" aria-hidden="true" />{BAND_LABEL.good}</span>
+            <span><i className="prg-sw prg-watch" aria-hidden="true" />{BAND_LABEL.watch}</span>
+            <span><i className="prg-sw prg-none" aria-hidden="true" />{BAND_LABEL.none}</span>
+            <small>{t.globeNorth}</small>
+          </div>
+        </section>
         {bands}
-        <div className="prr-sectors" role="group" aria-label={t.markets}>
-          {data.sectors.map((s, index) => (
-            <button
-              key={s.key}
-              type="button"
-              className="prr-sec"
-              aria-pressed={lockedSector === index}
-              onClick={() => {
-                setPinned(false);
-                setFocus(null);
-                setLockedSector((current) => (current === index ? null : index));
-              }}
-              onMouseEnter={() => setHoverSector(index)}
-              onMouseLeave={() => setHoverSector(null)}
-            >
-              <b>{sectorName(s.key)}</b>
-              <small>{fill(s.count === 1 ? t.sectorLineOne : t.sectorLine, { count: s.count, average: s.average })}</small>
-              <span className="prr-bar" aria-hidden="true"><i style={{ width: ready ? `${Math.max(3, (s.count / Math.max(1, data.dots.length)) * 100)}%` : '0%' }} /></span>
-            </button>
-          ))}
-        </div>
-        {card}
       </aside>
       {narrow && pinned && focus ? (
         <>
