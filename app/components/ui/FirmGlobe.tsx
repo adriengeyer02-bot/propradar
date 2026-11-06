@@ -46,6 +46,10 @@ const MIN_SLICE = 34; // degrees: the smallest market stays readable
 const LABEL_LAT = -50; // the curved market names run along this parallel, kept clear of logos
 const LOW_LAT = -36; // the lowest firm sits here, leaving the label parallel free
 const MAX_ZOOM = 3.2;
+// Sphere radius and axis length (fractions of the canvas): fully zoomed out, the
+// 100 and 0 tags at the axis tips stay inside the canvas.
+const GLOBE_R = 0.39;
+const AXIS_TIP = 1.13;
 const MIN_GAP = 5.4; // degrees between two logo centres after decluttering
 
 type Slice = { key: string; count: number; start: number; end: number; shade: number };
@@ -413,7 +417,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const cx = size / 2;
       const cy = size / 2;
       const zoom = view.current.zoom;
-      const radius = size * 0.43 * zoom;
+      const radius = size * GLOBE_R * zoom;
 
       const now = performance.now();
       const unit = size / 520;
@@ -438,8 +442,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.fillRect(0, 0, size, size);
 
       // Axis through the poles (the part inside or behind the sphere is covered next).
-      const tipN = project({ x: 0, y: 1.17, z: 0 }, cx, cy, radius);
-      const tipS = project({ x: 0, y: -1.17, z: 0 }, cx, cy, radius);
+      const tipN = project({ x: 0, y: AXIS_TIP, z: 0 }, cx, cy, radius);
+      const tipS = project({ x: 0, y: -AXIS_TIP, z: 0 }, cx, cy, radius);
       c.strokeStyle = axisColor;
       c.lineWidth = 1.4;
       c.beginPath();
@@ -492,7 +496,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         c.lineWidth = 1.6;
         let prev: { x: number; y: number; z: number } | null = null;
         for (let k = 0; k <= 16; k++) {
-          const pt = project({ x: 0, y: sign * (1 + (0.17 * k) / 16), z: 0 }, cx, cy, radius);
+          const pt = project({ x: 0, y: sign * (1 + ((AXIS_TIP - 1) * k) / 16), z: 0 }, cx, cy, radius);
           if (prev && visibleAt(pt) && visibleAt(prev)) {
             c.beginPath();
             c.moveTo(prev.x, prev.y);
@@ -600,7 +604,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
       // Market names, curved along a parallel in the middle of each slice.
       for (const slice of sl) {
-        curvedText(`${sectorName(slice.key)} · ${slice.count}`, LABEL_LAT, (slice.start + slice.end) / 2, cx, cy, radius, Math.max(10.5, size * 0.022) * Math.min(1.5, Math.pow(zoom, 0.4)));
+        curvedText(`${sectorName(slice.key)} · ${slice.count}`, LABEL_LAT, (slice.start + slice.end) / 2, cx, cy, radius, Math.max(10.5, size * 0.022) * Math.min(1.5, Math.pow(zoom, 0.4)), (slice.end - slice.start) * 0.92);
       }
 
       // Name tag on the selected firm.
@@ -650,6 +654,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.font = `750 ${fontPx}px ${palette.font}`;
       const w = c.measureText(text).width + 12;
       const h = fontPx + 8;
+      // Never let a tag leave the canvas.
+      y = Math.max(h / 2 + 2, Math.min(size - h / 2 - 2, y));
+      x = Math.max(w / 2 + 2, Math.min(size - w / 2 - 2, x));
       c.fillStyle = palette.dark ? 'rgba(11, 17, 26, 0.85)' : 'rgba(255, 255, 255, 0.92)';
       roundRect(x - w / 2, y - h / 2, w, h, h / 2);
       c.fill();
@@ -664,8 +671,12 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     }
 
     /** Letter-spaced capitals laid along a parallel, front side only. */
-    function curvedText(text: string, lat: number, lonCenter: number, cx: number, cy: number, radius: number, fontPx: number) {
+    function curvedText(text: string, lat: number, lonCenter: number, cx: number, cy: number, radius: number, fontPx: number, maxDeg = 360) {
       const c = ctx!;
+      // A name never spills into the next market: shrink it to fit its slice.
+      const pxPerDegFit = radius * Math.cos(lat * DEG) * DEG;
+      const estimate = text.length * fontPx * 0.78;
+      if (estimate > maxDeg * pxPerDegFit) fontPx = Math.max(7, Math.floor((fontPx * maxDeg * pxPerDegFit) / estimate));
       c.font = `750 ${fontPx}px ${palette.font}`;
       c.textAlign = 'center';
       c.textBaseline = 'middle';
@@ -837,7 +848,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const onDouble = (event: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       const v = view.current;
-      const radius = size * 0.43 * v.zoom;
+      const radius = size * GLOBE_R * v.zoom;
       const x = (event.clientX - rect.left - size / 2) / radius;
       const y = -(event.clientY - rect.top - size / 2) / radius;
       if (x * x + y * y < 1) {
