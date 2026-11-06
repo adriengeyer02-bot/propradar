@@ -678,7 +678,7 @@ export default function PropRadarLive({
             {dot.updated ? <div className="prr-fact-fresh"><dt>{t.updated}</dt><dd><Link href={`${firmHref(dot.slug)}#update-history`}>{dot.updated}</Link></dd></div> : null}
             <div><dt>{t.market}</dt><dd>{sectorName(dot.sector)}</dd></div>
           </dl>
-          <Link className="pr-link" href={firmHref(dot.slug)}>{fill(t.openFirmProfile, { name: shortName(dot.name) })} <span aria-hidden="true">→</span></Link>
+          <Link className="btn btn-primary prr-open" href={firmHref(dot.slug)}>{fill(t.openFirmProfile, { name: shortName(dot.name) })} <span aria-hidden="true">→</span></Link>
         </div>
       );
     }
@@ -738,7 +738,6 @@ export default function PropRadarLive({
         </div>
         {radar}
         {legend}
-        <div className="prr-under">{card}</div>
       </div>
       <aside className="prr-side prr-globe-col" aria-label={t.controls}>
         <label className="prr-search">
@@ -756,31 +755,44 @@ export default function PropRadarLive({
         <datalist id="prr-names">
           {names.map((name) => <option key={name} value={name} />)}
         </datalist>
-        {visit ? (
-          <div className="prr-visit" aria-live="polite">
-            {!visit.last ? (
-              <p>{t.visitFirst}</p>
-            ) : visit.changed.length ? (
-              <>
-                <p><b>{fill(t.visitSince, { when: daysAgo(visit.last, t) })}</b> · {visit.changed.length}</p>
-                <ul>
-                  {visit.changed.slice(0, 8).map((dot) => (
-                    <li key={dot.slug}>
-                      <button type="button" onClick={() => selectFromGlobe(dot.slug)} aria-pressed={selectedSlug === dot.slug}>
-                        {dot.logo ? <img src={dot.logo} alt="" width={18} height={18} /> : null}
-                        <span>{shortName(dot.name)}</span>
-                        <small>{daysAgo(dot.changed as string, t)}</small>
-                      </button>
-                    </li>
-                  ))}
-                  {visit.changed.length > 8 ? <li className="prr-visit-more">{fill(t.visitMore, { n: visit.changed.length - 8 })}</li> : null}
-                </ul>
-              </>
-            ) : (
-              <p>{fill(t.visitNone, { when: daysAgo(visit.last, t) })}</p>
-            )}
-          </div>
-        ) : null}
+        {/* The firm (or market) card sits here, at the top of the right column: no scrolling to reach it. */}
+        <div className={`prr-slot${focus || sector !== null ? ' has-card' : ''}`}>
+          {focus || sector !== null ? (
+            <>
+              {pinned ? <button type="button" className="prr-slot-close" onClick={closeSheet} aria-label={t.close}>×</button> : null}
+              {card}
+            </>
+          ) : (
+            <>
+              {visit ? (
+                <div className="prr-visit" aria-live="polite">
+                  {!visit.last ? (
+                    <p>{t.visitFirst}</p>
+                  ) : visit.changed.length ? (
+                    <>
+                      <p><b>{fill(t.visitSince, { when: daysAgo(visit.last, t) })}</b> · {visit.changed.length}</p>
+                      <ul>
+                        {visit.changed.slice(0, 8).map((dot) => (
+                          <li key={dot.slug}>
+                            <button type="button" onClick={() => selectFromGlobe(dot.slug)} aria-pressed={selectedSlug === dot.slug}>
+                              {dot.logo ? <img src={dot.logo} alt="" width={18} height={18} /> : null}
+                              <span>{shortName(dot.name)}</span>
+                              <small>{daysAgo(dot.changed as string, t)}</small>
+                            </button>
+                          </li>
+                        ))}
+                        {visit.changed.length > 8 ? <li className="prr-visit-more">{fill(t.visitMore, { n: visit.changed.length - 8 })}</li> : null}
+                      </ul>
+                    </>
+                  ) : (
+                    <p>{fill(t.visitNone, { when: daysAgo(visit.last, t) })}</p>
+                  )}
+                </div>
+              ) : null}
+              <p className="prr-detail-hint">{t.idleHint}</p>
+            </>
+          )}
+        </div>
         <section className="prr-globe" aria-label={t.globeTitle}>
           <h2 className="prr-globe-title">{t.globeTitle}</h2>
           <FirmGlobe
@@ -794,6 +806,7 @@ export default function PropRadarLive({
             ariaLabel={fill(t.globeAria, { total: data.dots.length })}
             hint={t.globeHint}
             scoreLabel={t.score}
+            zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
           />
           <div className="prg-legend">
             <span><i className="prg-sw prg-good" aria-hidden="true" />{BAND_LABEL.good}</span>

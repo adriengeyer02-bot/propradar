@@ -30,6 +30,7 @@ type Props = {
   ariaLabel: string;
   hint: string;
   scoreLabel: string;
+  zoomLabels: { group: string; in: string; out: string; reset: string };
 };
 
 type Vec = { x: number; y: number; z: number };
@@ -42,23 +43,30 @@ const MID_BAND = 9; // score 55
 const SPIN = 0.09; // rad/s when idle
 const SHADE_RES = 176;
 const MIN_SLICE = 34; // degrees: the smallest market stays readable
-const LABEL_LAT = -28; // the curved market names run along this parallel
+const LABEL_LAT = -50; // the curved market names run along this parallel, kept clear of logos
+const LOW_LAT = -36; // the lowest firm sits here, leaving the label parallel free
+const MAX_ZOOM = 3.2;
+const MIN_GAP = 5.4; // degrees between two logo centres after decluttering
 
 type Slice = { key: string; count: number; start: number; end: number; shade: number };
 
-/** Market slices on the globe: proportional to the number of firms, with a floor. */
+/**
+ * Market slices on the globe: width grows with the square root of the number
+ * of firms (so small markets stay readable without hiding which is largest),
+ * with a floor. The count is always printed next to the market name.
+ */
 function layoutSlices(sectors: RadarSector[]): Slice[] {
-  const live = sectors.filter((s) => s.count > 0);
-  const total = live.reduce((sum, s) => sum + s.count, 0) || 1;
-  const widths = live.map((s) => (s.count / total) * 360);
+  const live = sectors.filter((s) => s.count > 0).map((s) => ({ ...s, weight: Math.sqrt(s.count) }));
+  const total = live.reduce((sum, s) => sum + s.weight, 0) || 1;
+  const widths = live.map((s) => (s.weight / total) * 360);
   const fixed = new Set<number>();
   for (let round = 0; round < live.length; round++) {
     let changed = false;
     const free = 360 - fixed.size * MIN_SLICE;
-    const freeCount = live.reduce((sum, s, i) => (fixed.has(i) ? sum : sum + s.count), 0) || 1;
+    const freeCount = live.reduce((sum, s, i) => (fixed.has(i) ? sum : sum + s.weight), 0) || 1;
     live.forEach((s, i) => {
       if (fixed.has(i)) return;
-      widths[i] = (s.count / freeCount) * free;
+      widths[i] = (s.weight / freeCount) * free;
       if (widths[i] < MIN_SLICE) {
         fixed.add(i);
         changed = true;
@@ -86,9 +94,49 @@ function sliceAt(slices: Slice[], lon: number) {
   return slices.length - 1;
 }
 
-/** Score -> latitude in degrees (75 -> 45°, 55 -> 9°, 100 -> 90°). */
+/**
+ * Score -> latitude in degrees, monotonic: 100 -> 90°, 75 -> 45°, 55 -> 9°.
+ * Under 55 the scale is compressed so the lowest score (20) sits at LOW_LAT
+ * and the parallel that carries the market names stays free.
+ */
 export function scoreLatitude(score: number) {
-  return Math.max(-84, Math.min(84, (score - 50) * 1.8));
+  if (score >= 55) return Math.min(84, (score - 50) * 1.8);
+  return Math.max(LOW_LAT - 2, 9 - ((55 - score) / 35) * (9 - LOW_LAT));
+}
+
+/**
+ * Spread logos so they do not sit on top of each other: a few rounds of
+ * repulsion between neighbours. Longitude moves freely inside the firm's
+ * market slice; latitude moves at most 6° and never leaves its score band.
+ */
+function declutter(items: { lat: number; lon: number; min: number; max: number; lo: number; hi: number }[]) {
+  for (let round = 0; round < 140; round++) {
+    let moved = false;
+    for (let i = 0; i < items.length; i++) {
+      for (let j = i + 1; j < items.length; j++) {
+        const a = items[i];
+        const b = items[j];
+        const cos = Math.cos(((a.lat + b.lat) / 2) * DEG);
+        const dx = (b.lon - a.lon) * cos;
+        const dy = b.lat - a.lat;
+        const d = Math.hypot(dx, dy);
+        if (d >= MIN_GAP) continue;
+        moved = true;
+        const push = (MIN_GAP - d) / 2 + 0.01;
+        const ux = d > 1e-6 ? dx / d : (i % 2 ? 1 : -1);
+        const uy = d > 1e-6 ? dy / d : 0;
+        a.lon -= (ux * push) / Math.max(0.2, cos);
+        b.lon += (ux * push) / Math.max(0.2, cos);
+        a.lat -= uy * push * 0.5;
+        b.lat += uy * push * 0.5;
+      }
+    }
+    for (const it of items) {
+      it.lon = Math.max(it.min, Math.min(it.max, it.lon));
+      it.lat = Math.max(it.lo, Math.min(it.hi, it.lat));
+    }
+    if (!moved) break;
+  }
 }
 
 function hash(seed: string) {
@@ -150,34 +198,49 @@ function initials(name: string) {
   return name.split(/[\s/]+/).filter(Boolean).slice(0, 2).map((word) => word[0]?.toUpperCase() ?? '').join('');
 }
 
-export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel }: Props) {
+export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [hover, setHover] = useState<{ dot: RadarDot; x: number; y: number } | null>(null);
 
   // Mutable view state shared by the render loop and the handlers.
-  const view = useRef({ yaw: -0.4, pitch: 0.32, vyaw: 0, vpitch: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
+  const view = useRef({ yaw: -0.4, pitch: 0.24, zoom: 1, zoomTarget: 1, vyaw: 0, vpitch: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
+  const [zoomLevel, setZoomLevel] = useState(1);
   const props = useRef({ selected, dimmed, highlight, onSelect });
   props.current = { selected, dimmed, highlight, onSelect };
   const requestDraw = useRef<() => void>(() => undefined);
+  const zoomBy = useRef<(factor: number, instant?: boolean) => void>(() => undefined);
 
   // Market slices and firm positions. A firm keeps its relative place inside
   // its market (as on the radar), stretched to the globe's slice.
   const slices = useRef<Slice[]>([]);
   slices.current = layoutSlices(sectors);
   const points = useRef<{ dot: RadarDot; world: Vec }[]>([]);
-  points.current = dots.map((dot) => {
-    const lat = scoreLatitude(dot.score) + (hash(`${dot.slug}:lat`) - 0.5) * 1.6;
-    const sector = sectors.find((s) => s.key === dot.sector);
-    const slice = slices.current.find((s) => s.key === dot.sector);
-    let lon = dot.angle;
-    if (sector && slice) {
-      const span = Math.max(1, sector.end - sector.start);
-      const t = Math.max(0, Math.min(1, ((((dot.angle - sector.start) % 360) + 360) % 360) / span));
-      lon = slice.start + (0.05 + 0.9 * t) * (slice.end - slice.start);
-    }
-    return { dot, world: toWorld(lat, lon) };
-  });
+  const placedFor = useRef<RadarDot[] | null>(null);
+  if (placedFor.current !== dots) {
+    placedFor.current = dots;
+    const items = dots.map((dot) => {
+      const lat = scoreLatitude(dot.score) + (hash(`${dot.slug}:lat`) - 0.5) * 1.6;
+      const sector = sectors.find((s) => s.key === dot.sector);
+      const slice = slices.current.find((s) => s.key === dot.sector);
+      let lon = dot.angle;
+      let min = -1e9;
+      let max = 1e9;
+      if (sector && slice) {
+        const span = Math.max(1, sector.end - sector.start);
+        const t = Math.max(0, Math.min(1, ((((dot.angle - sector.start) % 360) + 360) % 360) / span));
+        lon = slice.start + (0.05 + 0.9 * t) * (slice.end - slice.start);
+        min = slice.start + 2.2;
+        max = slice.end - 2.2;
+      }
+      // Stay inside the score band (55 -> 9°, 75 -> 45°) and within 6° of the score.
+      const bandLo = dot.score >= 75 ? 45.6 : dot.score >= 55 ? 9.6 : -90;
+      const bandHi = dot.score >= 75 ? 86 : dot.score >= 55 ? 44.4 : 8.4;
+      return { dot, lat, lon, min, max, lo: Math.max(bandLo, lat - 6), hi: Math.min(bandHi, lat + 6) };
+    });
+    declutter(items);
+    points.current = items.map((it) => ({ dot: it.dot, world: toWorld(it.lat, it.lon) }));
+  }
 
   // Turn the globe to face the selected firm.
   useEffect(() => {
@@ -273,10 +336,12 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     };
 
     /** Sphere surface: band tints, soft lighting, a lit rim. Rendered small, scaled up. */
-    function paintSurface() {
+    /** Sphere surface, sampled on a grid over the canvas (stays sharp when zoomed in). */
+    function paintSurface(radius: number) {
       const { yaw, pitch } = view.current;
       const data = pixels.data;
       const half = SHADE_RES / 2;
+      const scale = (size / 2) / radius;
       const light = { x: -0.45, y: 0.55, z: 0.7 };
       const tint = palette.dark ? 0.42 : 0.3;
       const sl = slices.current;
@@ -289,8 +354,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       for (let j = 0; j < SHADE_RES; j++) {
         for (let i = 0; i < SHADE_RES; i++) {
           const k = (j * SHADE_RES + i) * 4;
-          const x = (i + 0.5 - half) / half;
-          const y = (half - j - 0.5) / half;
+          const x = ((i + 0.5 - half) / half) * scale;
+          const y = ((half - j - 0.5) / half) * scale;
           const r2 = x * x + y * y;
           if (r2 > 1) {
             data[k + 3] = 0;
@@ -347,7 +412,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.clearRect(0, 0, size, size);
       const cx = size / 2;
       const cy = size / 2;
-      const radius = size * 0.43;
+      const zoom = view.current.zoom;
+      const radius = size * 0.43 * zoom;
 
       const now = performance.now();
       const unit = size / 520;
@@ -381,14 +447,14 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.lineTo(tipS.x, tipS.y);
       c.stroke();
 
-      paintSurface();
+      paintSurface(radius);
       c.save();
       c.beginPath();
       c.arc(cx, cy, radius, 0, Math.PI * 2);
       c.clip();
       c.imageSmoothingEnabled = true;
       c.imageSmoothingQuality = 'high';
-      c.drawImage(shade, cx - radius, cy - radius, radius * 2, radius * 2);
+      c.drawImage(shade, 0, 0, size, size);
 
       // Faint graticule every 15°.
       c.lineWidth = 0.7;
@@ -476,7 +542,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           c.fill();
           continue;
         }
-        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1);
+        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55);
         // Updated since the last visit: an expanding ring.
         if (fresh.has(dot.slug) && !isDim) {
           const phase = reduce ? 0.35 : ((now / 1600 + hash(dot.slug)) % 1);
@@ -534,7 +600,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
       // Market names, curved along a parallel in the middle of each slice.
       for (const slice of sl) {
-        curvedText(`${sectorName(slice.key)} · ${slice.count}`, LABEL_LAT, (slice.start + slice.end) / 2, cx, cy, radius, Math.max(10.5, size * 0.022));
+        curvedText(`${sectorName(slice.key)} · ${slice.count}`, LABEL_LAT, (slice.start + slice.end) / 2, cx, cy, radius, Math.max(10.5, size * 0.022) * Math.min(1.5, Math.pow(zoom, 0.4)));
       }
 
       // Name tag on the selected firm.
@@ -652,6 +718,10 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const dt = Math.min(0.05, (now - (last || now)) / 1000);
       last = now;
       let moving = false;
+      if (Math.abs(v.zoomTarget - v.zoom) > 0.002) {
+        v.zoom += (v.zoomTarget - v.zoom) * (1 - Math.pow(0.002, dt));
+        moving = true;
+      } else v.zoom = v.zoomTarget;
       if (v.target) {
         const k = 1 - Math.pow(0.0015, dt);
         v.yaw += (v.target.yaw - v.yaw) * k;
@@ -723,7 +793,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           v.target = null;
           canvas.setPointerCapture(event.pointerId);
         }
-        const k = 3 / Math.max(200, size);
+        const k = 3 / Math.max(200, size) / v.zoom;
         const dyaw = (p.x - lastMove.x) * k;
         const dpitch = event.pointerType === 'mouse' ? (p.y - lastMove.y) * k : 0;
         v.yaw += dyaw;
@@ -759,9 +829,74 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       setHover(null);
       kick();
     };
-    const onKey = (event: KeyboardEvent) => {
-      const step = 0.18;
+    const onWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      zoomBy.current(Math.exp(-event.deltaY * 0.0015));
+    };
+    // Double-click (or double-tap): bring that spot to the front and zoom in on it.
+    const onDouble = (event: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
       const v = view.current;
+      const radius = size * 0.43 * v.zoom;
+      const x = (event.clientX - rect.left - size / 2) / radius;
+      const y = -(event.clientY - rect.top - size / 2) / radius;
+      if (x * x + y * y < 1) {
+        const w = unrotate({ x, y, z: Math.sqrt(1 - x * x - y * y) }, v.yaw, v.pitch);
+        let yaw = -Math.atan2(w.x, w.z);
+        while (yaw - v.yaw > Math.PI) yaw -= 2 * Math.PI;
+        while (yaw - v.yaw < -Math.PI) yaw += 2 * Math.PI;
+        v.target = { yaw, pitch: Math.max(-1.1, Math.min(1.1, Math.asin(w.y))) };
+      }
+      zoomBy.current(1.8);
+    };
+    // Two fingers: pinch to zoom.
+    const touches = new Map<number, { x: number; y: number }>();
+    let pinchFrom = 0;
+    const onTouchDown = (event: PointerEvent) => {
+      if (event.pointerType !== 'touch') return;
+      touches.set(event.pointerId, local(event));
+      if (touches.size === 2) {
+        const [a, b] = [...touches.values()];
+        pinchFrom = Math.hypot(a.x - b.x, a.y - b.y);
+        down = null;
+        view.current.dragging = false;
+      }
+    };
+    const onTouchMove = (event: PointerEvent) => {
+      if (event.pointerType !== 'touch' || !touches.has(event.pointerId)) return;
+      touches.set(event.pointerId, local(event));
+      if (touches.size === 2 && pinchFrom > 0) {
+        const [a, b] = [...touches.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        zoomBy.current(d / pinchFrom, true);
+        pinchFrom = d;
+      }
+    };
+    const onTouchUp = (event: PointerEvent) => {
+      touches.delete(event.pointerId);
+      if (touches.size < 2) pinchFrom = 0;
+    };
+    zoomBy.current = (factor: number, instant = false) => {
+      const v = view.current;
+      const next = Math.max(1, Math.min(MAX_ZOOM, (instant ? v.zoom : v.zoomTarget) * factor));
+      v.zoomTarget = next;
+      if (instant) v.zoom = next;
+      setZoomLevel(next);
+      requestDraw.current();
+    };
+    const onKey = (event: KeyboardEvent) => {
+      const step = 0.18 / view.current.zoom;
+      const v = view.current;
+      if (event.key === '+' || event.key === '=') {
+        zoomBy.current(1.35);
+        event.preventDefault();
+        return;
+      }
+      if (event.key === '-' || event.key === '_') {
+        zoomBy.current(1 / 1.35);
+        event.preventDefault();
+        return;
+      }
       if (event.key === 'ArrowLeft') v.yaw -= step;
       else if (event.key === 'ArrowRight') v.yaw += step;
       else if (event.key === 'ArrowUp') v.pitch = Math.min(1.2, v.pitch + step);
@@ -777,6 +912,12 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     canvas.addEventListener('pointercancel', onUp);
     canvas.addEventListener('pointerleave', onLeave);
     canvas.addEventListener('keydown', onKey);
+    canvas.addEventListener('wheel', onWheel, { passive: false });
+    canvas.addEventListener('dblclick', onDouble);
+    canvas.addEventListener('pointerdown', onTouchDown);
+    canvas.addEventListener('pointermove', onTouchMove);
+    canvas.addEventListener('pointerup', onTouchUp);
+    canvas.addEventListener('pointercancel', onTouchUp);
 
     return () => {
       cancelAnimationFrame(frame);
@@ -789,6 +930,12 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       canvas.removeEventListener('pointercancel', onUp);
       canvas.removeEventListener('pointerleave', onLeave);
       canvas.removeEventListener('keydown', onKey);
+      canvas.removeEventListener('wheel', onWheel);
+      canvas.removeEventListener('dblclick', onDouble);
+      canvas.removeEventListener('pointerdown', onTouchDown);
+      canvas.removeEventListener('pointermove', onTouchMove);
+      canvas.removeEventListener('pointerup', onTouchUp);
+      canvas.removeEventListener('pointercancel', onTouchUp);
     };
     // The data set is fixed for the life of the page.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -797,6 +944,13 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   return (
     <div className="prg" ref={wrapRef}>
       <canvas ref={canvasRef} className="prg-canvas" role="img" aria-label={ariaLabel} tabIndex={0} />
+      <div className="prg-zoom" role="group" aria-label={zoomLabels.group}>
+        <button type="button" onClick={() => zoomBy.current(1.5)} disabled={zoomLevel >= MAX_ZOOM - 0.01} aria-label={zoomLabels.in}>+</button>
+        <button type="button" onClick={() => zoomBy.current(1 / 1.5)} disabled={zoomLevel <= 1.01} aria-label={zoomLabels.out}>−</button>
+        {zoomLevel > 1.01 ? (
+          <button type="button" onClick={() => zoomBy.current(1 / MAX_ZOOM)} aria-label={zoomLabels.reset}>⟲</button>
+        ) : null}
+      </div>
       {hover ? (
         <div className="prg-tip" style={{ left: hover.x, top: hover.y }} aria-hidden="true">
           <strong>{hover.dot.name}</strong>
