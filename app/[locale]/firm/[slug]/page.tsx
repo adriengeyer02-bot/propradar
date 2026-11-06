@@ -1094,24 +1094,23 @@ export default async function FirmPage({ params }: Props) {
           <div className="panel blue-guardian-affiliate-panel">
             <div className="blue-guardian-affiliate-copy">
               <div className="eyebrow">Blue Guardian offer</div>
-              <h2>Current checkout code: HALLOWEEN</h2>
+              <h2>Check the code at checkout</h2>
               <p className="muted">
-                Blue Guardian&apos;s official checkout showed &quot;SAVE 35% WITH CODE HALLOWEEN&quot; on 28 October 2026 (seasonal offer, no end date shown).
-                The link below is affiliate-based, but the PropRadar score, payout risk, public signals and rule analysis remain independent from that relationship.
+                The seasonal code HALLOWEEN (35%, seen on Blue Guardian&apos;s official checkout on 28 October 2026) was no longer shown on 6 November 2026.
+                PropRadar lists a code here only after reading it on Blue Guardian&apos;s own site. The link below is affiliate-based, but the PropRadar score, payout risk, public signals and rule analysis remain independent from that relationship.
               </p>
               <div className="promo-proof-row">
-                <span>Code HALLOWEEN</span>
-                <span>35% shown at checkout</span>
+                <span>No code confirmed by PropRadar</span>
                 <span>Declared affiliate link</span>
               </div>
               <a href={BLUE_GUARDIAN_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                Open Blue Guardian and test HALLOWEEN
+                Open Blue Guardian
               </a>
             </div>
             <div className="blue-guardian-offer-card">
               <span>Official checkout code</span>
-              <strong>HALLOWEEN</strong>
-              <small>Seasonal code: confirm the 35% reduction on the selected program before payment.</small>
+              <strong>Check at checkout</strong>
+              <small>Any code must visibly lower the subtotal before payment.</small>
             </div>
           </div>
         ) : null}

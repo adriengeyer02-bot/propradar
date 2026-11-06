@@ -255,11 +255,11 @@ export default function PromosPage() {
         </div>
         {withdrawnPromoDeals.length ? (
           <p className="pr-withdrawn-deals">
-            <strong>Withdrawn on {PROMO_REVIEW_DATE}:</strong>{' '}
+            <strong>Withdrawn:</strong>{' '}
             {withdrawnPromoDeals.map((deal, index) => (
               <span key={`${deal.slug}-${deal.code}`}>
                 {index ? ', ' : ''}
-                <code>{deal.code}</code> ({getFirmBySlug(deal.slug)?.name ?? deal.slug})
+                <code>{deal.code}</code> ({getFirmBySlug(deal.slug)?.name ?? deal.slug}, not shown on {deal.notSeenOn})
               </span>
             ))}
             . These codes were no longer shown on the firm&apos;s official page, so PropRadar stopped listing them.

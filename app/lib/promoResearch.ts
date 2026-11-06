@@ -10,7 +10,7 @@ import {
   type PropFirm,
 } from './propFirms';
 
-export const PROMO_REVIEW_DATE = '2026-10-28';
+export const PROMO_REVIEW_DATE = '2026-11-06';
 
 export type PromoProofLevel = 'Official' | 'PropRadar affiliate' | 'Confirm at checkout' | 'Good deal without code';
 export type PromoCategory = 'code' | 'affiliate' | 'official-discount' | 'price-opportunity' | 'futures';
@@ -108,7 +108,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'New customers on eligible plans; only one promotion can be used per purchase.',
     sourceUrl: `${GOAT_FUNDED_TRADER_AFFILIATE_URL}&coupon=FIRSTGFT`,
     sourceLabel: 'Official GOAT Funded Trader current discount-code page',
-    sourceNote: 'Official GOAT Funded Trader deal page rechecked on 2026-10-27: FIRSTGFT is still listed as 50% off for new customers, limited time, no end date. The final reduction depends on the eligible plan.',
+    sourceNote: 'Official GOAT Funded Trader deal page rechecked on 2026-10-27 and 2026-11-06: FIRSTGFT is still listed as 50% off for new customers, limited time, no end date. The final reduction depends on the eligible plan.',
     consumerVerdict:
       'The simpler GOAT offer for a first purchase. It is easier to understand than BOGO40, but the words "up to" mean the exact reduction must be checked on the chosen plan.',
     caveats: ['New customers only', 'Exact reduction varies by eligible plan', 'One promo code per purchase'],
@@ -154,7 +154,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'New evaluation signups only; resets, existing billing and PA activation fees excluded.',
     sourceUrl: 'https://apextraderfunding.com/coupon-code/',
     sourceLabel: 'Official Apex Trader Funding coupon page',
-    sourceNote: 'Official coupon page rechecked on 2026-10-27: SAVENOW is advertised as 90% off all evals (Intraday, EOD, Legacy, any size) with a running countdown. New signups only; not valid on existing accounts, resets or PA activation fees.',
+    sourceNote: 'Official coupon page rechecked on 2026-10-27 and 2026-11-06: SAVENOW is advertised as 90% off all evals (Intraday, EOD, Legacy, any size) with a running countdown. New signups only; not valid on existing accounts, resets or PA activation fees.',
     consumerVerdict:
       'Very strong futures discount, but PropRadar keeps a cautious reading: verify EOD drawdown, consistency, payout rules and fees after passing.',
     caveats: ['New evaluations only', 'Firm classified as watchlist', 'No discount on resets or PA activation fees'],
@@ -167,6 +167,7 @@ const allPromoDeals: PromoDeal[] = [
   },
   {
     slug: 'take-profit-trader',
+    notSeenOn: '2026-11-06',
     label: 'Official futures offer',
     title: 'NOFEE40: 40% lifetime test discount and no PRO activation fee',
     code: 'NOFEE40',
@@ -247,7 +248,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'First Pro Challenge purchase; automatic discount on the eligible offer.',
     sourceUrl: 'https://funderpro.com/pro-challenge/',
     sourceLabel: 'Official FunderPro Pro Challenge launch page',
-    sourceNote: 'Official Pro Challenge page rechecked on 2026-10-27: "Get 15% off for a limited time", no code needed (the purchase links carry the promo automatically); no end date shown.',
+    sourceNote: 'Official Pro Challenge page rechecked on 2026-10-27 and 2026-11-06: "Get 15% off for a limited time", no code needed (the purchase links carry the promo automatically); no end date shown.',
     consumerVerdict:
       'A cleaner FunderPro offer than an unconfirmed coupon because the product page states both the percentage and the no-code mechanism.',
     caveats: ['First Pro Challenge only', 'Limited-time wording without a fixed date', 'Choose daily or weekly reward rules before purchase'],
@@ -310,7 +311,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: '$200K Classic Challenge; the free plaque requires KYC plus funding or a reward on that same account.',
     sourceUrl: 'https://funderpro.com/funded-award-campaign/',
     sourceLabel: 'Official FunderPro Funded Award campaign',
-    sourceNote: 'Official campaign rechecked on 2026-10-27: AWARD200 gives a $200 voucher toward a $200K Classic Challenge. The advertised free plaque is conditional on KYC and becoming funded or claiming a reward on that account.',
+    sourceNote: 'Official campaign rechecked on 2026-10-27 and 2026-11-06: AWARD200 gives a $200 voucher toward a $200K Classic Challenge. The advertised free plaque is conditional on KYC and becoming funded or claiming a reward on that account.',
     consumerVerdict:
       'A concrete high-account discount, but it should not push a trader into a $200K purchase that does not fit the strategy or budget.',
     caveats: ['$200K Classic only', 'Plaque benefit is conditional', 'Campaign availability can change'],
@@ -394,7 +395,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'Rapid, Builder, Rapid EOD and Pro evaluations; the page lists unlimited uses.',
     sourceUrl: 'https://myfundedfutures.com/coupons',
     sourceLabel: 'Official MyFundedFutures coupon page',
-    sourceNote: 'Official coupon page checked on 2026-10-28: CLUB gives 40% off, "Lifetime Promo", works on Rapid, Builder, Rapid EOD and Pro, "Number of uses: Unlimited".',
+    sourceNote: 'Official coupon page checked on 2026-10-28 and 2026-11-06: CLUB gives 40% off, "Lifetime Promo", works on Rapid, Builder, Rapid EOD and Pro, "Number of uses: Unlimited".',
     consumerVerdict:
       'A durable discount that is not limited to new customers. Compare the plan rules first: the same 40% does not make Rapid, Builder and Pro equivalent.',
     caveats: ['Evaluations only', 'Plan rules matter more than the discount', 'Confirm the subtotal falls by 40% before paying'],
@@ -415,7 +416,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'New customers only, one use per user; Rapid EOD, Rapid, Builder and Pro evaluations.',
     sourceUrl: 'https://myfundedfutures.com/coupons',
     sourceLabel: 'Official MyFundedFutures coupon page',
-    sourceNote: 'Official coupon page checked on 2026-10-28: FIFTYOFF gives 50% off evaluations, "New Customers Only: Yes", "One Per User: Yes", works on Rapid EOD, Rapid, Builder and Pro.',
+    sourceNote: 'Official coupon page checked on 2026-10-28 and 2026-11-06: FIFTYOFF gives 50% off evaluations, "New Customers Only: Yes", "One Per User: Yes", works on Rapid EOD, Rapid, Builder and Pro.',
     consumerVerdict:
       'The strongest MFFU code for a first evaluation. It can only be used once, so pick the plan whose rules you actually want before applying it.',
     caveats: ['New customers only', 'One use per user', 'Evaluations only'],
@@ -446,6 +447,7 @@ const allPromoDeals: PromoDeal[] = [
   },
   {
     slug: 'blue-guardian',
+    notSeenOn: '2026-11-06',
     label: 'Official seasonal checkout code',
     title: 'HALLOWEEN: 35% off at the Blue Guardian checkout',
     code: 'HALLOWEEN',
