@@ -524,6 +524,7 @@ const ja: Messages = {
     "domainWarning": "ドメインに関する注意。",
     "scoreAria": "{name} の PropRadar スコア",
     "propradarScore": "PropRadar スコア",
+    "scoreCapped": "上限 {cap}：Trustpilot はこの会社の評価を表示していません（\"rating unavailable due to a breach of our guidelines\"）。上限適用前のスコア：{before}。",
     "decision": {
       "Shortlist candidate": "候補リスト入り",
       "Proceed carefully": "慎重に検討",

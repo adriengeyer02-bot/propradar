@@ -440,6 +440,7 @@ const en = {
     domainWarning: 'Domain warning.',
     scoreAria: '{name} PropRadar score',
     propradarScore: 'PropRadar score',
+    scoreCapped: "Capped at {cap}: Trustpilot shows no rating for this firm (\"rating unavailable due to a breach of our guidelines\"). Score before the cap: {before}.",
     decision: {
       'Shortlist candidate': 'Shortlist candidate',
       'Proceed carefully': 'Proceed carefully',

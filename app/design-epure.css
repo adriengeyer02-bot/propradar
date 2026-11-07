@@ -3287,3 +3287,6 @@ html body .header-actions .site-search-input { width: 100%; min-width: 0; }
 .prr-visit button img { border-radius: 50%; }
 .prr-visit button small { color: var(--muted); font-weight: 600; }
 .prr-visit-more { align-self: center; color: var(--muted); font-size: 12px; }
+
+/* Score capped by a rule (Trustpilot rating withheld): stated under the decision. */
+.pr-score-cap { margin: 6px 0 0; font-size: 12.5px; line-height: 1.45; color: var(--muted); max-width: 34ch; }

@@ -436,6 +436,7 @@ const zh: Messages = {
     domainWarning: '域名警告。',
     scoreAria: '{name} 的 PropRadar 评分',
     propradarScore: 'PropRadar 评分',
+    scoreCapped: "上限为 {cap}：Trustpilot 不再显示该公司的评分（“rating unavailable due to a breach of our guidelines”）。设上限前的评分：{before}。",
     decision: {
       'Shortlist candidate': '可列入候选',
       'Proceed carefully': '谨慎考虑',

@@ -108,9 +108,14 @@ project doc `claude/data-audit-2026-10.md`.
 6. **Sensitive changes need Geyer's approval**: status changes, score drops of
    5+ points or moves of 10+, domain warnings, new incidents, accusation-type
    wording. The validator flags them. Open the PR and leave it unmerged.
-7. **Do not touch** affiliate URLs, promo codes or the scoring formula without
+7. **Trustpilot cap.** When Trustpilot withholds a firm's rating for a guideline
+   breach (`trustpilotRatingWithheld`), the score is capped at 64
+   (`applyTrustpilotCapRule`, approved by Geyer on 2026-11-07). The firm page
+   states the cap and the score before it. It lifts only with a dated, sourced
+   `set.trustpilotNoticeLifted`.
+8. **Do not touch** affiliate URLs, promo codes or the scoring formula without
    an explicit request.
-8. **No Reddit or X scores.** Removed on 2026-10-27: they were derived from the
+9. **No Reddit or X scores.** Removed on 2026-10-27: they were derived from the
    PropRadar score, not counted. Firm pages link to live Reddit/X searches
    instead. Show a Reddit or X figure only if posts were counted by hand, with
    each post linked. Same for Trustpilot review-alert counts: hand-counted only.
