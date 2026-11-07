@@ -310,12 +310,27 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Trustpilot shows a rating again: \"Blue Guardian is rated \\\"Average\\\" with 3.1 / 5\" on the www, uk and au mirrors, 2,149 reviews on www and uk. The guideline-breach and fake-review notices seen on 2026-10-23 are no longer displayed. The rating is shown again; the dated 23 October notice stays listed under incidents.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-07",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
-      ]
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 2149,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/blueguardian.com",
+        "trustpilotNoticeLifted": "2026-11-07"
+      }
     },
     "blueberry-funded": {
       "reviewedAt": "2026-10-29",
