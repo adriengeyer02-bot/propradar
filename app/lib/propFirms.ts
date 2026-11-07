@@ -2441,7 +2441,7 @@ const corePropFirms: PropFirm[] = [
     logoDomain: 'blueguardian.com',
     communitySignal: 'Decent community presence, signal to confirm with recent payout proof.',
     commercialRelationship: 'Affiliation transparente',
-    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. The seasonal code HALLOWEEN (35%, seen on 28 October 2026) was no longer shown on 6 November 2026; any code must visibly lower the cart subtotal, and the offer has no impact on the score.',
+    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. Blue Guardian’s own site showed the code NOV30 (30%) on 7 November 2026, replacing HALLOWEEN; any code must visibly lower the cart subtotal, and the offer has no impact on the score.',
     products: [
       product({
         id: 'blueguardian-programs',
