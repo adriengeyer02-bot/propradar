@@ -524,6 +524,7 @@ const es: Messages = {
     "domainWarning": "Aviso de dominio.",
     "scoreAria": "Puntuación PropRadar de {name}",
     "propradarScore": "Puntuación PropRadar",
+    "scoreCapped": "Limitada a {cap}: Trustpilot no muestra puntuación para esta firma («rating unavailable due to a breach of our guidelines»). Puntuación antes del límite: {before}.",
     "decision": {
       "Shortlist candidate": "Candidata a la lista corta",
       "Proceed carefully": "Avanzar con cautela",

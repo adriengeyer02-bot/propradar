@@ -107,6 +107,8 @@ export type PropFirm = {
   name: string;
   status: 'Active' | 'À surveiller' | 'Fermée';
   score: number;
+  /** Set when a rule lowered the stored score; the firm page states it. */
+  scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
   founded: number;
   headquarters: string;
   bestFor: string;
@@ -12712,7 +12714,22 @@ function applyClosedVerdictRule(firm: PropFirm): PropFirm {
   return { ...firm, verdict: `${firm.name} is recorded as closed. It is not a purchase option: see the closure record and update history below.` };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyClosedVerdictRule);
+/**
+ * Trustpilot rule (approved by Geyer, 2026-11-07): when Trustpilot withholds a
+ * firm's rating for a breach of its guidelines, the PropRadar score is capped
+ * at 64, so the firm can never sit in the 75+ band on a review profile
+ * Trustpilot itself does not stand behind. The stored score is kept and shown
+ * next to the cap; the cap lifts as soon as a dated check finds the rating
+ * shown again (set.trustpilotNoticeLifted). Applies to affiliates the same way.
+ */
+export const TRUSTPILOT_WITHHELD_CAP = 64;
+
+function applyTrustpilotCapRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld || firm.score <= TRUSTPILOT_WITHHELD_CAP) return firm;
+  return { ...firm, score: TRUSTPILOT_WITHHELD_CAP, scoreCap: { before: firm.score, cap: TRUSTPILOT_WITHHELD_CAP, reason: 'trustpilot-withheld' } };
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule);
 
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');

@@ -436,6 +436,7 @@ const de: Messages = {
     domainWarning: 'Domain-Warnung.',
     scoreAria: 'PropRadar-Score von {name}',
     propradarScore: 'PropRadar-Score',
+    scoreCapped: "Auf {cap} begrenzt: Trustpilot zeigt für diese Firma keine Bewertung an („rating unavailable due to a breach of our guidelines“). Score vor der Begrenzung: {before}.",
     decision: {
       'Shortlist candidate': 'Kandidat für die Auswahl',
       'Proceed carefully': 'Mit Vorsicht prüfen',

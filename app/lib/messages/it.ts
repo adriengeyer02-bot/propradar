@@ -436,6 +436,7 @@ const it: Messages = {
     domainWarning: 'Avviso sul dominio.',
     scoreAria: 'Punteggio PropRadar di {name}',
     propradarScore: 'Punteggio PropRadar',
+    scoreCapped: "Limitato a {cap}: Trustpilot non mostra una valutazione per questa società (\"rating unavailable due to a breach of our guidelines\"). Punteggio prima del limite: {before}.",
     decision: {
       'Shortlist candidate': 'Candidata alla shortlist',
       'Proceed carefully': 'Procedere con cautela',

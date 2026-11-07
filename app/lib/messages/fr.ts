@@ -436,6 +436,7 @@ const fr: Messages = {
     domainWarning: 'Alerte domaine.',
     scoreAria: 'Score PropRadar de {name}',
     propradarScore: 'Score PropRadar',
+    scoreCapped: "Plafonné à {cap} : Trustpilot n'affiche plus de note pour cette firme (« rating unavailable due to a breach of our guidelines »). Score avant plafond : {before}.",
     decision: {
       'Shortlist candidate': 'Candidate à la shortlist',
       'Proceed carefully': 'Avancer avec prudence',

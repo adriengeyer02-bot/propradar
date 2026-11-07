@@ -831,6 +831,7 @@ export default async function FirmPage({ params }: Props) {
             <div className="pr-firm-scorecard-body">
               <span className="pr-firm-scorecard-label">{f.propradarScore}</span>
               <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{f.decision[firmDecision]}</strong>
+              {firm.scoreCap ? <p className="pr-score-cap">{fmt(f.scoreCapped, { cap: firm.scoreCap.cap, before: firm.scoreCap.before })}</p> : null}
               <div className="pr-scorecard-pips">
                 <RiskPip label={f.payout} value={v(toEnglishText(firm.reviewSignals.payoutRisk))} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
                 <RiskPip label={f.legal} value={v(regulatoryAudit.riskLevel)} tone={legalTone(regulatoryAudit.riskLevel)} />
