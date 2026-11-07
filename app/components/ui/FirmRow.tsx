@@ -13,7 +13,7 @@ type RowFirm = Omit<ComparatorFirm, 'legalSourceCount'>;
 import { drawdownLabel, priceLabel, profitSplitLabel } from '../../lib/firmFormat';
 import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, scoreTone, statusTone, trustpilotPip } from '../../lib/riskTone';
-import { localePath, type Locale } from '../../lib/locales';
+import { countryLabel, localePath, type Locale } from '../../lib/locales';
 import en, { type Messages } from '../../lib/messages/en';
 
 /** Interface strings a firm row needs (plain data, so client tables can pass it). */
@@ -111,7 +111,7 @@ export default function FirmRow({ firm, rank, children, subline, href, locale = 
   const t = ui.table;
   const v = (value: string) => pick(ui.values, value);
   const tp = trustpilotPip(firm);
-  const countries = entityCountries(firm.regulatoryAudit.entities);
+  const countries = entityCountries(firm.regulatoryAudit.entities).map((c) => ({ ...c, name: countryLabel(locale, c.code, c.name) }));
   return (
     <Link href={href ?? localePath(locale, `/firm/${firm.slug}`)} className={`pr-firm-row pr-edge-${scoreTone(firm.score)}`} role="row">
       <span className="pr-firm-id" role="cell">

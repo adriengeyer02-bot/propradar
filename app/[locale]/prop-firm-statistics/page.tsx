@@ -120,7 +120,7 @@ export default async function PropFirmStatisticsPage({ params }: Props) {
   const topCountries = countryCounts.slice(0, 12);
   const listedCountries = countryCounts.filter((row) => row.country.lists?.length);
   const split80to90 = splitFirms.filter((firm) => firm.profitSplit >= 80 && firm.profitSplit <= 90).length;
-  const citation = `PropRadar, "${TITLE.split(':')[0]}", ${pageUrl} (data as of ${statsUpdatedAt}).`;
+  const citation = `PropRadar, "${TITLE.split(':')[0]}", ${pageUrl} ${fmt(st.citeDataAsOf, { date: statsUpdatedAt })}.`;
   const median = trustpilotStats.median.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const anchor = (id: string) => <Anchor id={id} label={st.anchor} />;
   const b = (value: number | string) => <strong>{typeof value === 'number' ? n(value) : value}</strong>;

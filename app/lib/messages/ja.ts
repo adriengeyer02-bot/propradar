@@ -499,6 +499,7 @@ const ja: Messages = {
     }
   },
   "firm": {
+    partner: {"affiliateLink": "開示済みのアフィリエイトリンク", "ftmoEyebrow": "FTMO パートナー", "ftmoTitle": "PropRadar のリンクからチャレンジへ", "ftmoText": "このリンクはアフィリエイトリンクで、PropRadar スコアには影響しません。FTMO は他社と同じ基準（ルール、出金、公開シグナル、運営リスク）で評価しています。", "ftmoCta": "FTMO を開く", "bgEyebrow": "Blue Guardian のオファー", "bgTitle": "コード {code}：{pct} オフ", "bgText1": "Blue Guardian の公式サイトは {date} に「Save {pct} with code {code}」と表示していました（HALLOWEEN の後継）。季節コードはよく変わるため、決済時に {pct} の割引を確認してください。", "bgText2": "PropRadar は Blue Guardian の公式サイトで確認したコードのみ掲載します。下のリンクはアフィリエイトリンクですが、PropRadar スコア、出金リスク、公開シグナル、ルール分析はこの関係から独立しています。", "bgProof": "Blue Guardian のサイトで確認したコード（{date}）", "bgCta": "Blue Guardian を開く", "bgCardLabel": "公式コード（{date}）", "bgCardNote": "{pct} オフ。支払い前に小計が明確に下がる必要があります。", "fiversEyebrow": "The5ers パートナー", "fiversTitle": "確認が必要なパートナーコード：{code}", "fiversText": "2026年7月13日時点で、このパートナーコードの公開割引率は確認できませんでした。Hyper Growth 5K の公式価格は 74 ドルで、追加の特典は決済時の小計に反映される必要があります。PropRadar スコアは独立しています。", "fiversCoupon": "クーポン {code}", "fiversNoPct": "割引率の保証なし", "fiversCta": "The5ers を開いてコードを試す", "goatEyebrow": "GOAT Funded Trader のオファー", "goatTitle": "現在のコード：FIRSTGFT または BOGO40", "goatText": "FIRSTGFT は新規顧客向けに対象プランを最大 50% オフにします。BOGO40 は 40% オフですが、同サイズのボーナス口座は初回の出金成功とサポートへの申請の後にのみ受け取れます。登録リンクはアフィリエイトリンクです。", "goatProof1": "FIRSTGFT：最大 50%", "goatProof2": "BOGO40：40% + 条件付き口座", "goatProof3": "アフィリエイト登録リンク", "goatCta": "GFT を開いて両方のコードを比べる", "goatCardLabel": "公式コード", "goatCardNote": "選んだプランで決済結果が良くなる方だけを使ってください。"},
     "metaTitle": "{name} の評判 {year}：信頼できる？ルールと出金",
     "metaTitleClosed": "{name} は閉鎖：状況、経緯、出典",
     "metaClosed": "{name} は PropRadar で閉鎖として記録されています。日付付きの経緯、出典、法人、そして似た会社で購入する前に確認すべき点。",
@@ -957,6 +958,17 @@ const ja: Messages = {
     },
   },
   cover: {
+    "Radar view: {count} firms from this guide highlighted among {total} open firms. Closer to the centre means a higher PropRadar score.": "レーダー表示：このガイドの {count} 社を、営業中の {total} 社の中で強調表示。中心に近いほど PropRadar スコアが高い。",
+    "{name}: PropRadar score {score}/100, from {price}, profit split {split}, Trustpilot {trustpilot}.": "{name}：PropRadar スコア {score}/100、{price} から、利益配分 {split}、Trustpilot {trustpilot}。",
+    "{a} {aScore}/100 versus {b} {bScore}/100.": "{a} {aScore}/100 対 {b} {bScore}/100。",
+    "{total} firms.": "{total} 社。",
+    "Schematic: the same balance path against a trailing floor, which rises with the peak and is hit, and a static floor, which stays put.": "図：同じ残高推移を、高値とともに上がって触れられる追従型の下限と、動かない固定型の下限と比べたもの。",
+    "Schematic: daily profits as bars with a cap line; one best day rises above the cap.": "図：日々の利益の棒グラフと上限線。最も良い日が上限を超えている。",
+    "Schematic: a price line spikes around a high-impact news release, inside a shaded window where some firms restrict trading.": "図：重要な経済指標の発表前後で価格が急変し、一部の会社が取引を制限する網掛けの時間帯。",
+    "Schematic: a payout moves from request to review, approval and payment, then a new cycle starts.": "図：出金が申請から審査、承認、支払いへと進み、次のサイクルが始まる。",
+    "Schematic: three kinds of evidence stacked together: official terms, independent reviews and a dated payout record.": "図：3種類の証拠の重なり：公式規約、独立したレビュー、日付入りの出金記録。",
+    "Schematic: the legal chain to trace, from the brand to the operating entity, the company registry and regulator lists.": "図：たどるべき法的なつながり：ブランドから運営会社、会社登記、規制当局の警告リストまで。",
+    "Schematic: a classic challenge goes from payment through two phases to a funded account; direct funding goes from payment straight to a funded account.": "図：通常のチャレンジは支払いから2つのフェーズを経て資金口座へ。直接資金提供は支払いから直接資金口座へ。",
     'closer = higher score': '中心に近い = 高スコア',
     'top {shown} of {linked} in this guide': 'ガイド内{linked}社中の上位{shown}社',
     '{shown} of {total} firms': '{total}社中{shown}社',
@@ -1288,6 +1300,7 @@ const ja: Messages = {
     method3: '数値は会社の確認のたびに更新され、上部の日付はデータ内の最新の確認日です。',
     method4: 'PropRadarは5社とアフィリエイトリンクがあります。各ファイルで開示しており、このページの数値を変えることはありません。',
     citeTitle: 'このデータを引用する',
+    citeDataAsOf: "（{date} 時点のデータ）",
     citeText: 'これらの数値は自由に引用できます。PropRadarのクレジットとこのページへのリンクをお願いします。',
     faqTitle: 'よくある質問',
     faq1Q: 'プロップファームは何社閉鎖した？',

@@ -46,6 +46,7 @@ import {
 } from '../../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../../lib/site';
 import { getFirmRelatedGuides, getSeoGuideDisplay, getSeoGuidePath } from '../../../lib/seoGuides';
+import { guideCardText, localizedGuidePath } from '../../../lib/guideI18n';
 import { getManualCommunityReview } from '../../../lib/manualCommunityReviews';
 import { getFirmContentLastModified, getFirmSearchProfile } from '../../../lib/firmSearchProfiles';
 import { toEnglishText } from '../../../lib/i18n';
@@ -56,7 +57,7 @@ import { getClosureRecord } from '../../../lib/closures';
 import { isFirmIndexable } from '../../../lib/firmIndexing';
 import { feeStats } from '../../../lib/industryStats';
 import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../../lib/locales';
-import { fmt, getMessages, tv, type Messages } from '../../../lib/messages';
+import { fmt, formatDateLong, getMessages, tv, type Messages } from '../../../lib/messages';
 import IntentLink from '../../../components/IntentLink';
 
 type FirmT = Messages['firm'];
@@ -509,6 +510,8 @@ export default async function FirmPage({ params }: Props) {
   const isThe5ers = firm.slug === 'the5ers';
   const isBlueGuardian = firm.slug === 'blue-guardian';
   const isGoatFundedTrader = firm.slug === 'goat-funded-trader';
+  /** Blue Guardian code read on its own site (see promoResearch.ts). */
+  const bgOffer = { code: 'NOV30', pct: '30%', date: formatDateLong(locale, '2026-11-07') };
   const gaps = firmGaps(firm);
   const closure = firm.status === 'Fermée' ? getClosureRecord(firm.slug) : undefined;
   const searchProfile = getFirmSearchProfile(firm.slug);
@@ -1094,24 +1097,23 @@ export default async function FirmPage({ params }: Props) {
         {isBlueGuardian ? (
           <div className="panel blue-guardian-affiliate-panel">
             <div className="blue-guardian-affiliate-copy">
-              <div className="eyebrow">Blue Guardian offer</div>
-              <h2>Code NOV30: 30% off</h2>
+              <div className="eyebrow">{f.partner.bgEyebrow}</div>
+              <h2>{fmt(f.partner.bgTitle, bgOffer)}</h2>
               <p className="muted">
-                Blue Guardian&apos;s own site showed &quot;Save 30% with code NOV30&quot; on 7 November 2026 (it replaced HALLOWEEN). Seasonal codes change often: confirm the 30% reduction at checkout.
-                PropRadar lists a code here only after reading it on Blue Guardian&apos;s own site. The link below is affiliate-based, but the PropRadar score, payout risk, public signals and rule analysis remain independent from that relationship.
+                {fmt(f.partner.bgText1, bgOffer)} {f.partner.bgText2}
               </p>
               <div className="promo-proof-row">
-                <span>Code read on Blue Guardian&apos;s site, 7 Nov 2026</span>
-                <span>Declared affiliate link</span>
+                <span>{fmt(f.partner.bgProof, bgOffer)}</span>
+                <span>{f.partner.affiliateLink}</span>
               </div>
               <a href={BLUE_GUARDIAN_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                Open Blue Guardian
+                {f.partner.bgCta}
               </a>
             </div>
             <div className="blue-guardian-offer-card">
-              <span>Official code, 7 Nov 2026</span>
-              <strong>NOV30</strong>
-              <small>30% off; it must visibly lower the subtotal before payment.</small>
+              <span>{fmt(f.partner.bgCardLabel, bgOffer)}</span>
+              <strong>{bgOffer.code}</strong>
+              <small>{fmt(f.partner.bgCardNote, bgOffer)}</small>
             </div>
           </div>
         ) : null}
@@ -1119,19 +1121,16 @@ export default async function FirmPage({ params }: Props) {
         {isThe5ers ? (
           <div className="panel the5ers-affiliate-panel">
             <div className="the5ers-affiliate-copy">
-              <div className="eyebrow">The5ers Partner</div>
-              <h2>Partner code to verify: {THE5ERS_PROMO_CODE}</h2>
-              <p className="muted">
-                No public discount percentage was confirmed for this partner code on 13 July 2026. The official Hyper Growth 5K
-                price was $74; any extra coupon benefit must appear in the checkout subtotal. The PropRadar score remains independent.
-              </p>
+              <div className="eyebrow">{f.partner.fiversEyebrow}</div>
+              <h2>{fmt(f.partner.fiversTitle, { code: THE5ERS_PROMO_CODE })}</h2>
+              <p className="muted">{f.partner.fiversText}</p>
               <div className="promo-proof-row">
-                <span>Coupon {THE5ERS_PROMO_CODE}</span>
-                <span>Declared affiliate link</span>
-                <span>No guaranteed percentage</span>
+                <span>{fmt(f.partner.fiversCoupon, { code: THE5ERS_PROMO_CODE })}</span>
+                <span>{f.partner.affiliateLink}</span>
+                <span>{f.partner.fiversNoPct}</span>
               </div>
               <a href={THE5ERS_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                Open The5ers and test the code
+                {f.partner.fiversCta}
               </a>
             </div>
           </div>
@@ -1140,25 +1139,22 @@ export default async function FirmPage({ params }: Props) {
         {isGoatFundedTrader ? (
           <div className="panel goat-affiliate-panel">
             <div className="goat-affiliate-copy">
-              <div className="eyebrow">GOAT Funded Trader offers</div>
-              <h2>Current codes: FIRSTGFT or BOGO40</h2>
-              <p className="muted">
-                FIRSTGFT offers new customers up to 50% off eligible plans. BOGO40 gives 40% off, but the same-size bonus account
-                becomes claimable only after a first successful payout and a support request. The signup link remains affiliate-based.
-              </p>
+              <div className="eyebrow">{f.partner.goatEyebrow}</div>
+              <h2>{f.partner.goatTitle}</h2>
+              <p className="muted">{f.partner.goatText}</p>
               <div className="promo-proof-row">
-                <span>FIRSTGFT: up to 50%</span>
-                <span>BOGO40: 40% + conditional account</span>
-                <span>Affiliate signup link</span>
+                <span>{f.partner.goatProof1}</span>
+                <span>{f.partner.goatProof2}</span>
+                <span>{f.partner.goatProof3}</span>
               </div>
               <a href={GOAT_FUNDED_TRADER_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                Open GFT and compare both codes
+                {f.partner.goatCta}
               </a>
             </div>
             <div className="goat-offer-card">
-              <span>Official codes</span>
+              <span>{f.partner.goatCardLabel}</span>
               <strong>FIRSTGFT / BOGO40</strong>
-              <small>Use only the option that produces the better checkout result for the selected plan.</small>
+              <small>{f.partner.goatCardNote}</small>
             </div>
           </div>
         ) : null}
@@ -1166,13 +1162,11 @@ export default async function FirmPage({ params }: Props) {
         {isFtmo ? (
           <div className="panel ftmo-affiliate-panel">
             <div>
-              <div className="eyebrow">FTMO Partner</div>
-              <h2>Access the challenge through the PropRadar link</h2>
-              <p className="muted">
-                This link is affiliate-based and does not influence the PropRadar score. FTMO is ranked with the same criteria as other firms: rules, payouts, public signals and operational risk.
-              </p>
+              <div className="eyebrow">{f.partner.ftmoEyebrow}</div>
+              <h2>{f.partner.ftmoTitle}</h2>
+              <p className="muted">{f.partner.ftmoText}</p>
               <a href={FTMO_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                Open FTMO
+                {f.partner.ftmoCta}
               </a>
             </div>
           </div>
@@ -1388,12 +1382,13 @@ export default async function FirmPage({ params }: Props) {
           ))}
           {relatedGuides.map((guide) => {
             const display = getSeoGuideDisplay(guide);
+            const text = guideCardText(locale, guide);
             return (
               <li key={guide.slug}>
-                <Link href={L(getSeoGuidePath(guide))} className="pr-link-row">
-                  <span className="pr-link-row-tag">{display.eyebrow}</span>
-                  <strong>{display.title}</strong>
-                  <small>{display.answer}</small>
+                <Link href={localizedGuidePath(locale, guide)} className="pr-link-row">
+                  <span className="pr-link-row-tag">{text?.eyebrow ?? display.eyebrow}</span>
+                  <strong>{text?.title ?? display.title}</strong>
+                  <small>{text?.answer ?? display.answer}</small>
                   <span className="pr-link-row-go" aria-hidden="true">→</span>
                 </Link>
               </li>

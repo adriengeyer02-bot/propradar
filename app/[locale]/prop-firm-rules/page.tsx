@@ -978,7 +978,7 @@ export default function RulesPage() {
               <div><span>News</span><strong>{toEnglishText(firm.newsTrading)}</strong></div>
               <div><span>EA</span><strong>{toEnglishText(firm.eaAllowed)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
+              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
                 <span>Score</span>
                 <strong>{firm.score}</strong>
                 <small>/100</small>
