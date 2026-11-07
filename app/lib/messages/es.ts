@@ -499,6 +499,7 @@ const es: Messages = {
     }
   },
   "firm": {
+    partner: {"affiliateLink": "Enlace de afiliado declarado", "ftmoEyebrow": "Socio de FTMO", "ftmoTitle": "Accede al challenge con el enlace de PropRadar", "ftmoText": "Este enlace es de afiliado y no influye en la puntuación PropRadar. FTMO se evalúa con los mismos criterios que las demás firmas: reglas, pagos, señales públicas y riesgo operativo.", "ftmoCta": "Abrir FTMO", "bgEyebrow": "Oferta de Blue Guardian", "bgTitle": "Código {code}: {pct} de descuento", "bgText1": "La web de Blue Guardian mostraba «Save {pct} with code {code}» el {date} (sustituye a HALLOWEEN). Los códigos de temporada cambian a menudo: confirma el descuento del {pct} al pagar.", "bgText2": "PropRadar solo muestra aquí un código después de leerlo en la web de Blue Guardian. El enlace de abajo es de afiliado, pero la puntuación PropRadar, el riesgo de pago, las señales públicas y el análisis de reglas son independientes de esa relación.", "bgProof": "Código leído en la web de Blue Guardian, {date}", "bgCta": "Abrir Blue Guardian", "bgCardLabel": "Código oficial, {date}", "bgCardNote": "{pct} de descuento; debe reducir visiblemente el subtotal antes del pago.", "fiversEyebrow": "Socio de The5ers", "fiversTitle": "Código de socio por verificar: {code}", "fiversText": "El 13 de julio de 2026 no se confirmó ningún porcentaje de descuento público para este código de socio. El precio oficial de Hyper Growth 5K era de 74 $; cualquier ventaja adicional debe aparecer en el subtotal al pagar. La puntuación PropRadar sigue siendo independiente.", "fiversCoupon": "Cupón {code}", "fiversNoPct": "Sin porcentaje garantizado", "fiversCta": "Abrir The5ers y probar el código", "goatEyebrow": "Ofertas de GOAT Funded Trader", "goatTitle": "Códigos actuales: FIRSTGFT o BOGO40", "goatText": "FIRSTGFT ofrece a los nuevos clientes hasta un 50 % de descuento en planes elegibles. BOGO40 da un 40 % de descuento, pero la cuenta extra del mismo tamaño solo se puede reclamar tras un primer pago con éxito y una solicitud al soporte. El enlace de registro es de afiliado.", "goatProof1": "FIRSTGFT: hasta 50 %", "goatProof2": "BOGO40: 40 % + cuenta condicionada", "goatProof3": "Enlace de registro de afiliado", "goatCta": "Abrir GFT y comparar ambos códigos", "goatCardLabel": "Códigos oficiales", "goatCardNote": "Usa solo la opción que dé el mejor resultado al pagar para el plan elegido."},
     "metaTitle": "{name} opiniones {year}: ¿es fiable? Reglas y pagos",
     "metaTitleClosed": "{name} cerrada: estado, cronología y fuentes",
     "metaClosed": "{name} figura como cerrada en PropRadar. Cronología fechada, fuentes, entidades legales y qué comprobar antes de comprar en una firma similar.",
@@ -957,6 +958,17 @@ const es: Messages = {
     },
   },
   cover: {
+    "Radar view: {count} firms from this guide highlighted among {total} open firms. Closer to the centre means a higher PropRadar score.": "Vista de radar: {count} firmas de esta guía destacadas entre {total} firmas abiertas. Más cerca del centro = mayor puntuación PropRadar.",
+    "{name}: PropRadar score {score}/100, from {price}, profit split {split}, Trustpilot {trustpilot}.": "{name}: puntuación PropRadar {score}/100, desde {price}, reparto {split}, Trustpilot {trustpilot}.",
+    "{a} {aScore}/100 versus {b} {bScore}/100.": "{a} {aScore}/100 frente a {b} {bScore}/100.",
+    "{total} firms.": "{total} firmas.",
+    "Schematic: the same balance path against a trailing floor, which rises with the peak and is hit, and a static floor, which stays put.": "Esquema: la misma evolución del saldo frente a un límite móvil, que sube con el máximo y se toca, y un límite estático, que no se mueve.",
+    "Schematic: daily profits as bars with a cap line; one best day rises above the cap.": "Esquema: beneficios diarios en barras con una línea de tope; un mejor día supera el tope.",
+    "Schematic: a price line spikes around a high-impact news release, inside a shaded window where some firms restrict trading.": "Esquema: una línea de precio se dispara en torno a una noticia económica importante, dentro de una ventana sombreada donde algunas firmas restringen el trading.",
+    "Schematic: a payout moves from request to review, approval and payment, then a new cycle starts.": "Esquema: un pago pasa de la solicitud a la revisión, la aprobación y el abono, y luego empieza un nuevo ciclo.",
+    "Schematic: three kinds of evidence stacked together: official terms, independent reviews and a dated payout record.": "Esquema: tres tipos de prueba apilados: condiciones oficiales, opiniones independientes y un registro de pago fechado.",
+    "Schematic: the legal chain to trace, from the brand to the operating entity, the company registry and regulator lists.": "Esquema: la cadena legal a rastrear, de la marca a la entidad operadora, el registro mercantil y las listas de los reguladores.",
+    "Schematic: a classic challenge goes from payment through two phases to a funded account; direct funding goes from payment straight to a funded account.": "Esquema: un challenge clásico va del pago a una cuenta financiada en dos fases; la financiación directa va del pago directamente a una cuenta financiada.",
     'closer = higher score': 'más cerca = mayor puntuación',
     'top {shown} of {linked} in this guide': 'top {shown} de {linked} en la guía',
     '{shown} of {total} firms': '{shown} de {total} firmas',
@@ -1288,6 +1300,7 @@ const es: Messages = {
     method3: 'Las cifras se actualizan con cada revisión de una firma; la fecha de arriba es la revisión más reciente de los datos.',
     method4: 'PropRadar tiene enlaces de afiliado con cinco firmas; están señalados en cada ficha y nunca cambian una cifra de esta página.',
     citeTitle: 'Citar estos datos',
+    citeDataAsOf: "(datos a {date})",
     citeText: 'Puedes citar estas cifras libremente. Menciona a PropRadar y enlaza esta página.',
     faqTitle: 'Preguntas',
     faq1Q: '¿Cuántas prop firms han cerrado?',

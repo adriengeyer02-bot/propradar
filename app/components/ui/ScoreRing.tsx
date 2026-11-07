@@ -25,7 +25,7 @@ export default function ScoreRing({ score, size = 'md', label, animate = false }
       className={`pr-ring pr-ring-${size} pr-tone-${scoreTone(score)}${animate ? ' pr-ring-animate' : ''}`}
       style={animate ? ({ '--pr-ring-to': clamped, '--pr-ring-circ': circumference } as CSSProperties) : undefined}
       role="img"
-      aria-label={`${label ?? 'PropRadar score'} ${score} out of 100`}
+      aria-label={`${label ?? 'PropRadar'} ${score}/100`}
     >
       <svg width={px} height={px} viewBox={`0 0 ${px} ${px}`} aria-hidden="true">
         <circle className="pr-ring-track" cx={px / 2} cy={px / 2} r={radius} strokeWidth={stroke} fill="none" />

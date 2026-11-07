@@ -89,7 +89,7 @@ function RadarCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'radar'
     return `M${cx} ${cy}L${p(from)}A100 100 0 0 1 ${p(to)}Z`;
   };
   return (
-    <Frame id={id} label={`Radar view: ${data.highlights.length} firms from this guide highlighted among ${data.total} open firms. Closer to the centre means a higher PropRadar score.`}>
+    <Frame id={id} label={t('Radar view: {count} firms from this guide highlighted among {total} open firms. Closer to the centre means a higher PropRadar score.', { count: data.highlights.length, total: data.total })}>
       <circle cx={cx} cy={cy} r="128" fill={`url(#${id}-glow)`} />
       <circle cx={cx} cy={cy} r="100" fill="rgba(54,214,231,0.035)" stroke="rgba(54,214,231,0.42)" strokeWidth="1" />
       {data.rings.map((r) => (
@@ -177,7 +177,7 @@ function VersusCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'versu
       ['Trustpilot', firm.trustpilot],
     ];
     return (
-      <Frame id={id} label={`${firm.name}: PropRadar score ${firm.score}/100, from ${firm.price}, profit split ${firm.split}, Trustpilot ${firm.trustpilot}.`}>
+      <Frame id={id} label={t('{name}: PropRadar score {score}/100, from {price}, profit split {split}, Trustpilot {trustpilot}.', { name: firm.name, score: firm.score, price: firm.price, split: firm.split, trustpilot: t(firm.trustpilot) })}>
         <ScoreRing firm={firm} x={104} y={112} r={58} logo={58} id={id} />
         <text x="196" y="58" className="gc-title">{truncate(firm.name, 20)}</text>
         <text x="196" y="80" className="gc-small">{t('PropRadar score')}</text>
@@ -198,7 +198,7 @@ function VersusCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'versu
   const [a, b] = firms;
   const lead = a.score === b.score ? null : a.score > b.score ? a.slug : b.slug;
   return (
-    <Frame id={id} label={`${a.name} ${a.score}/100 versus ${b.name} ${b.score}/100.`}>
+    <Frame id={id} label={t('{a} {aScore}/100 versus {b} {bScore}/100.', { a: a.name, aScore: a.score, b: b.name, bScore: b.score })}>
       <path d="M200 30V196" stroke="rgba(54,214,231,0.22)" strokeDasharray="3 5" />
       {[
         { firm: a, x: 104 },
@@ -232,7 +232,7 @@ function HistogramCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'hi
   const base = 182;
   const top = 70;
   return (
-    <Frame id={id} label={`${data.title}: ${bins.map((bin) => `${bin.label} ${bin.count}`).join(', ')}. ${data.total} firms.`}>
+    <Frame id={id} label={`${t(data.title)}: ${bins.map((bin) => `${t(bin.label)} ${bin.count}`).join(', ')}. ${t('{total} firms.', { total: data.total })}`}>
       <text x="24" y="30" className="gc-title">{t(data.title)}</text>
       <text x="24" y="48" className="gc-small">{t('{total} firms with a value read on PropRadar', { total: data.total })}</text>
       <line x1={left} x2={left + width} y1={base} y2={base} stroke="rgba(234,240,247,0.25)" />
@@ -292,7 +292,7 @@ function DrawdownCover({ id, t }: { id: string; t: T }) {
     })
     .join('');
   return (
-    <Frame id={id} label="Schematic: the same balance path against a trailing floor, which rises with the peak and is hit, and a static floor, which stays put.">
+    <Frame id={id} label={t('Schematic: the same balance path against a trailing floor, which rises with the peak and is hit, and a static floor, which stays put.')}>
       <Legend items={[{ label: t('Balance'), color: '#36d6e7' }, { label: t('Trailing floor'), color: '#fbbf24' }, { label: t('Static floor'), color: '#8da3bd', dash: true }]} />
       <line x1="24" x2="376" y1="180" y2="180" stroke="#8da3bd" strokeWidth="2" strokeDasharray="5 4" />
       <path d={trailing} fill="none" stroke="#fbbf24" strokeWidth="2.2" strokeLinejoin="round" />
@@ -312,7 +312,7 @@ function ConsistencyCover({ id, t }: { id: string; t: T }) {
   const base = 190;
   const cap = 72;
   return (
-    <Frame id={id} label="Schematic: daily profits as bars with a cap line; one best day rises above the cap.">
+    <Frame id={id} label={t('Schematic: daily profits as bars with a cap line; one best day rises above the cap.')}>
       <Legend items={[{ label: t('Daily profit'), color: '#36d6e7' }, { label: t('Consistency cap'), color: '#fbbf24', dash: true }]} />
       <line x1="24" x2="376" y1={base} y2={base} stroke="rgba(234,240,247,0.25)" />
       {days.map((h, i) => {
@@ -335,7 +335,7 @@ function NewsCover({ id, t }: { id: string; t: T }) {
   const pts: [number, number][] = [[24, 128], [52, 122], [80, 132], [108, 118], [136, 126], [164, 116], [184, 120], [196, 74], [206, 160], [218, 92], [232, 134], [252, 104], [280, 112], [308, 100], [336, 108], [376, 96]];
   const line = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x} ${y}`).join('');
   return (
-    <Frame id={id} label="Schematic: a price line spikes around a high-impact news release, inside a shaded window where some firms restrict trading.">
+    <Frame id={id} label={t('Schematic: a price line spikes around a high-impact news release, inside a shaded window where some firms restrict trading.')}>
       <rect x="170" y="38" width="76" height="152" rx="6" fill="rgba(248,113,113,0.12)" stroke="rgba(248,113,113,0.45)" strokeDasharray="4 4" />
       <line x1="208" x2="208" y1="38" y2="190" stroke="#f87171" strokeWidth="1.2" />
       <path d={line} fill="none" stroke="#36d6e7" strokeWidth="2.6" strokeLinejoin="round" />
@@ -384,7 +384,7 @@ function Connector({ x1, x2, y, dashed }: { x1: number; x2: number; y: number; d
 function PayoutCover({ id, t }: { id: string; t: T }) {
   const xs = [56, 152, 248, 344];
   return (
-    <Frame id={id} label="Schematic: a payout moves from request to review, approval and payment, then a new cycle starts.">
+    <Frame id={id} label={t('Schematic: a payout moves from request to review, approval and payment, then a new cycle starts.')}>
       <text x="24" y="28" className="gc-title">{t('Payout cycle')}</text>
       <path d="M344 78C330 34 70 34 56 78" fill="none" stroke="rgba(54,214,231,0.35)" strokeDasharray="4 5" />
       <text x="200" y="52" textAnchor="middle" className="gc-small">{t('next cycle')}</text>
@@ -404,7 +404,7 @@ function ProofCover({ id, t }: { id: string; t: T }) {
     { x: 72, y: 40, label: 'Payout record' },
   ];
   return (
-    <Frame id={id} label="Schematic: three kinds of evidence stacked together: official terms, independent reviews and a dated payout record.">
+    <Frame id={id} label={t('Schematic: three kinds of evidence stacked together: official terms, independent reviews and a dated payout record.')}>
       {cards.map((card, i) => (
         <g key={card.label}>
           <rect x={card.x} y={card.y} width="160" height="120" rx="8" fill={i === 2 ? '#13293f' : '#0f2033'} stroke="rgba(234,240,247,0.18)" />
@@ -432,7 +432,7 @@ function ProofCover({ id, t }: { id: string; t: T }) {
 function LegalCover({ id, t }: { id: string; t: T }) {
   const xs = [56, 152, 248, 344];
   return (
-    <Frame id={id} label="Schematic: the legal chain to trace, from the brand to the operating entity, the company registry and regulator lists.">
+    <Frame id={id} label={t('Schematic: the legal chain to trace, from the brand to the operating entity, the company registry and regulator lists.')}>
       <text x="24" y="28" className="gc-title">{t('Trace the chain')}</text>
       {xs.slice(0, -1).map((x, i) => <Connector key={x} x1={x + 24} x2={xs[i + 1] - 24} y={100} dashed={i === 2} />)}
       <Node x={xs[0]} y={100} label={t('Brand')} sub={t('website')} tone="accent" icon={ICONS.radar} />
@@ -446,7 +446,7 @@ function LegalCover({ id, t }: { id: string; t: T }) {
 function LanesCover({ id, t }: { id: string; t: T }) {
   const challenge = [44, 128, 212, 340];
   return (
-    <Frame id={id} label="Schematic: a classic challenge goes from payment through two phases to a funded account; direct funding goes from payment straight to a funded account.">
+    <Frame id={id} label={t('Schematic: a classic challenge goes from payment through two phases to a funded account; direct funding goes from payment straight to a funded account.')}>
       <text x="24" y="28" className="gc-small">{t('CLASSIC CHALLENGE')}</text>
       {challenge.slice(0, -1).map((x, i) => <Connector key={x} x1={x + 26} x2={challenge[i + 1] - 26} y={66} />)}
       {[
