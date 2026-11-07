@@ -275,8 +275,8 @@ const es: Messages = {
   "radar": {
     "bands": {
       "good": "Puntuación 75+",
-      "watch": "Puntuación 55–74",
-      "none": "Menos de 55",
+      "watch": "Puntuación 50–74",
+      "none": "Menos de 50",
       "closed": "Cerradas"
     },
     "today": "hoy",
@@ -291,7 +291,7 @@ const es: Messages = {
     "openFirmsOnRadar": "firmas abiertas en el radar",
     "firmsInMarket": "firmas en este mercado",
     "firmsInBand": "firmas en este rango",
-    "radarAria": "Radar de {total} prop firms: {good} con puntuación de 75 o más, {watch} entre 55 y 74, {none} por debajo de 55, {closed} cerradas. El ángulo indica el mercado y la distancia la puntuación PropRadar.",
+    "radarAria": "Radar de {total} prop firms: {good} con puntuación de 75 o más, {watch} entre 50 y 74, {none} por debajo de 50, {closed} cerradas. El ángulo indica el mercado y la distancia la puntuación PropRadar.",
     "openProfile": "Abrir la ficha",
     "tapHint": "Toca un punto para ver la firma",
     "bandsAria": "Filtrar por rango de puntuación",
@@ -307,7 +307,7 @@ const es: Messages = {
     "zoomIn": "Acercar",
     "zoomOut": "Alejar",
     "zoomReset": "Restablecer el zoom",
-    "globeAria": "Globo de {total} firmas abiertas: la latitud es la puntuación PropRadar (75+ al norte, menos de 55 al sur), la longitud es el mercado. Mismos datos que el radar.",
+    "globeAria": "Globo de {total} firmas abiertas: la latitud es la puntuación PropRadar (75+ al norte, menos de 50 al sur), la longitud es el mercado. Mismos datos que el radar.",
     "globeNorth": "Norte = puntuación más alta · longitud = mercado",
     "visitSince": "Actualizadas desde tu última visita ({when})",
     "visitNone": "Ninguna firma actualizada desde tu última visita ({when}).",
@@ -353,7 +353,7 @@ const es: Messages = {
     ],
     "read2": [
       "Distancia = puntuación PropRadar.",
-      "Los anillos marcan 90, 75 y 55; {name} es la más cercana al centro con {score}."
+      "Los anillos marcan 90, 75 y 50; {name} es la más cercana al centro con {score}."
     ],
     "read3": [
       "Tamaño = volumen de Trustpilot.",
@@ -361,7 +361,7 @@ const es: Messages = {
     ],
     "read4": [
       "Color = rango de puntuación.",
-      "Verde 75+, ámbar de 55 a 74, gris por debajo de 55. Las cruces rojas son firmas cerradas."
+      "Verde 75+, ámbar de 50 a 74, gris por debajo de 50. Las cruces rojas son firmas cerradas."
     ],
     "fineprint": "La puntuación pondera reglas, pruebas de pago, el expediente legal y las reseñas públicas. No es una garantía: abre una firma para ver sus fuentes y lo que queda por verificar.",
     "methodology": "Metodología",
@@ -382,7 +382,7 @@ const es: Messages = {
       },
       {
         "q": "¿Por qué las puntuaciones bajas son grises y no rojas?",
-        "a": "El rojo se reserva para las firmas cerradas. Una firma abierta por debajo de 55 suele tener un expediente escaso más que un fallo documentado, por eso aparece en gris. Su ficha indica lo que queda por verificar."
+        "a": "El rojo se reserva para las firmas cerradas. Una firma abierta por debajo de 50 suele tener un expediente escaso más que un fallo documentado, por eso aparece en gris. Su ficha indica lo que queda por verificar."
       },
       {
         "q": "¿Cada cuánto se actualiza el radar?",

@@ -18,7 +18,7 @@ export const RADAR_SIZE = 640;
 export const RADAR_CENTER = RADAR_SIZE / 2;
 export const RADAR_OUTER = 250;
 export const RADAR_ORBIT = 292;
-export const RADAR_RINGS = [90, 75, 55] as const;
+export const RADAR_RINGS = [90, 75, 50] as const;
 
 export const SECTORS = ['Forex & CFD', 'Multi-asset', 'Futures', 'Crypto', 'Stocks'] as const;
 export type Sector = (typeof SECTORS)[number];
@@ -98,7 +98,7 @@ export function radarSector(firm: Pick<PropFirm, 'styles'>): Sector {
 
 export function radarTone(score: number): RadarTone {
   if (score >= 75) return 'good';
-  if (score >= 55) return 'watch';
+  if (score >= 50) return 'watch';
   return 'none';
 }
 
