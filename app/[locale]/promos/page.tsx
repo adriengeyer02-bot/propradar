@@ -27,19 +27,37 @@ import {
   withdrawnPromoDeals,
 } from '../../lib/promoResearch';
 import IntentLink from '../../components/IntentLink';
+import type { Metadata } from 'next';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { fmt, getMessages, tv, type Messages } from '../../lib/messages';
+import { getPageMessages, type PromosMessages } from '../../lib/messages/pages/promos';
+import { SITE_URL } from '../../lib/site';
 
 export const revalidate = 86400;
 
-const PROMOS_DESCRIPTION =
-  'Compare current prop-firm deals and discount codes with payout risk, legal evidence, source depth and affiliate disclosure visible before checkout.';
+const PATH = '/promos';
+type Props = { params: Promise<{ locale: string }> };
 
-export const metadata = createPageMetadata({
-  title: 'Prop Firm Deals and Discount Codes: Risk-Checked',
-  description: PROMOS_DESCRIPTION,
-  path: '/promos',
-  keywords: ['prop firm discount code', 'prop firm deals', 'prop firm promo', 'cheap prop firm challenge'],
-  category: 'Prop firm deals',
-});
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const p = getPageMessages(locale);
+  const base = createPageMetadata({
+    title: p.metaTitle,
+    description: p.metaDescription,
+    path: PATH,
+    keywords: locale === 'en' ? ['prop firm discount code', 'prop firm deals', 'prop firm promo', 'cheap prop firm challenge'] : [],
+    category: 'Prop firm deals',
+  });
+  return {
+    ...base,
+    alternates: localeAlternates(locale, PATH),
+    openGraph: { ...base.openGraph, url: `${SITE_URL}${localePath(locale, PATH)}`, locale: OG_LOCALE[locale] },
+  };
+}
+
+/** Everything a deal card or row needs to speak the page language. */
+type Ui = { p: PromosMessages; t: Messages; L: (path: string) => string; v: (value: string | undefined | null) => string };
 
 const valuePicks = ['the5ers', 'topstep', 'fundingpips', 'funderpro', 'the-trading-pit', 'e8-markets', 'alpha-capital-group', 'take-profit-trader', 'myfundedfutures']
   .map((slug) => getFirmBySlug(slug))
@@ -49,13 +67,6 @@ const bestPromoDeals = getBestPromoDeals(30);
 const megaPromoDeals = getMegaPromoDeals(4);
 const budgetShortlist = getBudgetPromoShortlist(12);
 const futuresShortlist = getFuturesPromoShortlist(8);
-const categoryLabels: Record<string, string> = {
-  code: 'Discount code',
-  affiliate: 'Affiliate link',
-  'official-discount': 'Official discount',
-  'price-opportunity': 'Low price',
-  futures: 'Futures',
-};
 
 function isActiveFirm(status: string) {
   return !/ferm/i.test(status);
@@ -65,12 +76,12 @@ function legalSourceCount(firm: (typeof propFirms)[number]) {
   return firm.regulatoryAudit.sources.length || firm.sources.length;
 }
 
-function sourceDepthLabel(firm: (typeof propFirms)[number]) {
+function sourceDepthLabel(firm: (typeof propFirms)[number], p: PromosMessages) {
   const count = legalSourceCount(firm);
-  if (count >= 5) return 'Deep sources';
-  if (count >= 3) return 'Usable sources';
-  if (count >= 1) return 'Thin sources';
-  return 'No sources';
+  if (count >= 5) return p.sourceDepth.deep;
+  if (count >= 3) return p.sourceDepth.usable;
+  if (count >= 1) return p.sourceDepth.thin;
+  return p.sourceDepth.none;
 }
 
 function sourceDepthClass(firm: (typeof propFirms)[number]) {
@@ -94,28 +105,32 @@ function DealCard({
   rank,
   featured = false,
   cta,
+  ui,
 }: {
   deal: RankedDeal;
   firm: NonNullable<ReturnType<typeof getFirmBySlug>>;
   rank?: number;
   featured?: boolean;
   cta: string;
+  ui: Ui;
 }) {
+  const { p, L, v } = ui;
+  const c = p.card;
   return (
     <article className={`pr-deal${featured ? ' pr-deal-featured' : ''}`}>
       <header className="pr-deal-head">
         {typeof rank === 'number' ? <span className="pr-deal-rank">#{rank}</span> : null}
         <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="md" />
         <span className="pr-deal-firm">
-          <Link href={`/firm/${firm.slug}`}>{firm.name}</Link>
+          <Link href={L(`/firm/${firm.slug}`)}>{firm.name}</Link>
           <small>{toEnglishText(deal.label)}</small>
         </span>
-        <ScoreRing score={firm.score} size="sm" />
+        <ScoreRing score={firm.score} size="sm" label={ui.t.firm.propradarScore} />
       </header>
 
       <div className="pr-deal-pips">
-        <RiskPip compact label="Payout" value={toEnglishText(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
-        <RiskPip compact label="Legal" value={firm.regulatoryAudit.riskLevel} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
+        <RiskPip compact label={c.payout} value={v(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
+        <RiskPip compact label={c.legal} value={v(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
       </div>
 
       <div className="pr-deal-value">
@@ -124,24 +139,24 @@ function DealCard({
       </div>
 
       <div className="pr-deal-code">
-        <span>Code</span>
+        <span>{c.code}</span>
         <code>{deal.code}</code>
-        <em className={availabilityClass(deal.availability)}>{deal.availability}</em>
+        <em className={availabilityClass(deal.availability)}>{p.availability[deal.availability] ?? deal.availability}</em>
       </div>
 
       <p className="pr-deal-verdict">{toEnglishText(featured ? deal.commercialHook ?? deal.consumerVerdict : deal.consumerVerdict)}</p>
 
       <dl className="pr-deal-facts">
-        <div><dt>Eligibility</dt><dd>{deal.eligibility}</dd></div>
-        <div><dt>Validity</dt><dd>{deal.validity}</dd></div>
-        <div><dt>Proof</dt><dd>{toEnglishText(deal.proofLevel)} · {legalSourceCount(firm)} source link(s) · deal score {deal.dealScore}/100</dd></div>
+        <div><dt>{c.eligibility}</dt><dd>{deal.eligibility}</dd></div>
+        <div><dt>{c.validity}</dt><dd>{deal.validity}</dd></div>
+        <div><dt>{c.proof}</dt><dd>{fmt(c.proofLine, { level: p.proofLevels[deal.proofLevel] ?? toEnglishText(deal.proofLevel), count: legalSourceCount(firm), score: deal.dealScore })}</dd></div>
       </dl>
 
       {featured ? (
-        <p className="pr-deal-note"><strong>{deal.urgency ?? 'Verify before buying'}.</strong> {toEnglishText(deal.checkoutTip ?? deal.caveats[0])}</p>
+        <p className="pr-deal-note"><strong>{deal.urgency ?? c.verifyBefore}.</strong> {toEnglishText(deal.checkoutTip ?? deal.caveats[0])}</p>
       ) : deal.caveats.length ? (
         <details className="pr-deal-caveats">
-          <summary>{deal.caveats.length} caveat{deal.caveats.length > 1 ? 's' : ''} before checkout</summary>
+          <summary>{deal.caveats.length > 1 ? fmt(c.caveatsMany, { count: deal.caveats.length }) : c.caveatsOne}</summary>
           <ul>
             {deal.caveats.map((caveat) => <li key={caveat}>{toEnglishText(caveat)}</li>)}
           </ul>
@@ -150,14 +165,23 @@ function DealCard({
 
       <footer className="pr-deal-actions">
         <a href={deal.sourceUrl} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">{cta}</a>
-        <Link href={`/firm/${firm.slug}`} className="pr-link">{featured ? 'Read analysis' : 'Read profile'} <span aria-hidden="true">→</span></Link>
+        <Link href={L(`/firm/${firm.slug}`)} className="pr-link">{featured ? c.readAnalysis : c.readProfile} <span aria-hidden="true">→</span></Link>
       </footer>
-      {!featured ? <span className="pr-deal-source">{toEnglishText(deal.sourceNote ?? deal.sourceLabel)} · {categoryLabels[deal.category] ?? deal.category}</span> : null}
+      {!featured ? <span className="pr-deal-source">{toEnglishText(deal.sourceNote ?? deal.sourceLabel)} · {p.categories[deal.category] ?? deal.category}</span> : null}
     </article>
   );
 }
 
-export default function PromosPage() {
+export default async function PromosPage({ params }: Props) {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const t = getMessages(locale);
+  const p = getPageMessages(locale);
+  const c = p.card;
+  const L = (path: string) => localePath(locale, path);
+  const v = (value: string | undefined | null) => tv(t, toEnglishText(value ?? ''));
+  const ui: Ui = { p, t, L, v };
+  const faq = locale === 'en' ? promoFaq : p.faq;
   const riskyDiscounts = propFirms
     .filter((firm) => isActiveFirm(firm.status) && hasPayoutRiskSignal(firm))
     .sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore)
@@ -175,61 +199,57 @@ export default function PromosPage() {
   return (
     <main className="container promos-page">
       <PageStructuredData
-        name="Risk-checked prop firm deals"
-        description={PROMOS_DESCRIPTION}
-        path="/promos"
-        breadcrumbLabel="Deals"
-        dateModified="2026-07-13"
-        faq={promoFaq}
+        name={p.schemaName}
+        description={p.metaDescription}
+        path={L(PATH)}
+        breadcrumbLabel={p.breadcrumb}
+        dateModified={PROMO_REVIEW_DATE}
+        faq={faq}
+        inLanguage={HTML_LANG[locale]}
+        home={{ label: t.guide.breadcrumbHome, url: `${SITE_URL}${L('/')}` }}
         items={uniqueDealFirms.map((firm) => ({
           name: firm.name,
-          path: `/firm/${firm.slug}`,
-          description: `${firm.score}/100 PropRadar score. ${toEnglishText(firm.verdict)}`,
+          path: L(`/firm/${firm.slug}`),
+          description: locale === 'en' ? `${firm.score}/100 PropRadar score. ${toEnglishText(firm.verdict)}` : fmt(p.schemaItem, { score: firm.score }),
         }))}
       />
       <section className="promos-hero">
         <div>
-          <div className="eyebrow">Best deals right now</div>
-          <h1>Prop firm offers worth checking, sorted by real risk.</h1>
-          <p className="lead">
-            PropRadar highlights discounts that can actually matter: discount code, entry price, transparent affiliate link,
-            payout risk and proof level. The goal is simple: find the best deal without buying blind.
-          </p>
+          <div className="eyebrow">{p.eyebrow}</div>
+          <h1>{p.h1}</h1>
+          <p className="lead">{p.lead}</p>
         </div>
         <div className="promo-principles">
-          <div><strong>1</strong><span>Official offers pushed first</span></div>
-          <div><strong>2</strong><span>Affiliate codes clearly disclosed</span></div>
-          <div><strong>3</strong><span>Payout risk visible before the click</span></div>
-          <div><strong>4</strong><span>Legal/source proof checked before price</span></div>
+          {p.principles.map((principle, index) => (
+            <div key={principle}><strong>{index + 1}</strong><span>{principle}</span></div>
+          ))}
         </div>
       </section>
 
-      <section className="pr-stat-line" aria-label="Deal safety summary">
+      <section className="pr-stat-line" aria-label={p.summaryAria}>
         <dl>
-          <div><dt>Hot deals</dt><dd>{megaPromoDeals.length}</dd></div>
-          <div><dt>Official offers</dt><dd>{officialOfferCount}</dd></div>
-          <div><dt>Checkout checks</dt><dd>{checkoutVerificationCount}</dd></div>
-          <div><dt>Legal mapped</dt><dd>{legalMappedDealCount}</dd></div>
-          <div><dt>5+ sources</dt><dd>{deepSourceDealCount}</dd></div>
+          <div><dt>{p.statHot}</dt><dd>{megaPromoDeals.length}</dd></div>
+          <div><dt>{p.statOfficial}</dt><dd>{officialOfferCount}</dd></div>
+          <div><dt>{p.statCheckout}</dt><dd>{checkoutVerificationCount}</dd></div>
+          <div><dt>{p.statLegal}</dt><dd>{legalMappedDealCount}</dd></div>
+          <div><dt>{p.statDeep}</dt><dd>{deepSourceDealCount}</dd></div>
         </dl>
-        <IntentLink href="/prop-firm-comparison" className="pr-link">Compare rules and reliability before using a code <span aria-hidden="true">→</span></IntentLink>
+        <IntentLink href={L('/prop-firm-comparison')} className="pr-link">{p.compareLink} <span aria-hidden="true">→</span></IntentLink>
       </section>
 
       <section className="section mega-deal-section" id="mega-deals">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Hot shortlist - checked on {PROMO_REVIEW_DATE}</div>
-            <h2>The biggest discounts, with their risk.</h2>
+            <div className="eyebrow">{fmt(p.hotEyebrow, { date: PROMO_REVIEW_DATE })}</div>
+            <h2>{p.hotTitle}</h2>
           </div>
-          <p className="section-note">
-            The largest official discounts right now. The firm&apos;s payout and legal signals stay next to each code, and affiliate links are marked.
-          </p>
+          <p className="section-note">{p.hotNote}</p>
         </div>
         <div className="pr-deal-grid pr-deal-grid-featured">
           {megaPromoDeals.map((deal, index) => {
             const firm = getFirmBySlug(deal.slug);
             if (!firm) return null;
-            return <DealCard key={`mega-${deal.slug}-${deal.code}`} deal={deal} firm={firm} rank={index + 1} featured cta="Get the offer" />;
+            return <DealCard key={`mega-${deal.slug}-${deal.code}`} deal={deal} firm={firm} rank={index + 1} featured cta={p.ctaGet} ui={ui} />;
           })}
         </div>
       </section>
@@ -237,32 +257,31 @@ export default function PromosPage() {
       <section className="section" id="all-offers">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Checked on {PROMO_REVIEW_DATE}</div>
-            <h2>More PropRadar-ranked offers.</h2>
+            <div className="eyebrow">{fmt(p.allEyebrow, { date: PROMO_REVIEW_DATE })}</div>
+            <h2>{p.allTitle}</h2>
           </div>
-          <p className="section-note">
-            Official discounts come before rumors. PropRadar links are marked as affiliate links and do not change the score. Hot deals above are not repeated here.
-          </p>
+          <p className="section-note">{p.allNote}</p>
         </div>
+        {p.dataNote ? <p className="pr-fineprint pr-data-note">{p.dataNote}</p> : null}
         <div className="pr-deal-grid">
           {bestPromoDeals
             .filter((deal) => !megaKeys.has(`${deal.slug}-${deal.code}`))
             .map((deal) => {
               const firm = getFirmBySlug(deal.slug);
               if (!firm) return null;
-              return <DealCard key={`${deal.slug}-${deal.code}-${deal.value}`} deal={deal} firm={firm} cta="Check offer" />;
+              return <DealCard key={`${deal.slug}-${deal.code}-${deal.value}`} deal={deal} firm={firm} cta={p.ctaCheck} ui={ui} />;
             })}
         </div>
         {withdrawnPromoDeals.length ? (
           <p className="pr-withdrawn-deals">
-            <strong>Withdrawn:</strong>{' '}
+            <strong>{p.withdrawnLabel}</strong>{' '}
             {withdrawnPromoDeals.map((deal, index) => (
               <span key={`${deal.slug}-${deal.code}`}>
                 {index ? ', ' : ''}
-                <code>{deal.code}</code> ({getFirmBySlug(deal.slug)?.name ?? deal.slug}, not shown on {deal.notSeenOn})
+                <code>{deal.code}</code> ({fmt(p.withdrawnItem, { firm: getFirmBySlug(deal.slug)?.name ?? deal.slug, date: deal.notSeenOn ?? '' })})
               </span>
             ))}
-            . These codes were no longer shown on the firm&apos;s official page, so PropRadar stopped listing them.
+            . {p.withdrawnNote}
           </p>
         ) : null}
       </section>
@@ -270,37 +289,35 @@ export default function PromosPage() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Price / Risk Deals</div>
-            <h2>Low-ticket prop firms to watch this week.</h2>
+            <div className="eyebrow">{p.budgetEyebrow}</div>
+            <h2>{p.budgetTitle}</h2>
           </div>
-          <p className="section-note">
-            Automatic shortlist: entry price below $100, decent score and no critical payout risk.
-          </p>
+          <p className="section-note">{p.budgetNote}</p>
         </div>
         <div className="deal-watch-grid">
           {budgetShortlist.map((firm) => (
-            <Link href={`/firm/${firm.slug}`} className="deal-watch-card" key={firm.slug}>
+            <Link href={L(`/firm/${firm.slug}`)} className="deal-watch-card" key={firm.slug}>
               <div className="firm-result-main">
                 <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
                 <div>
                   <strong>{firm.name}</strong>
-                  <span>{toEnglishText(firm.bestFor)}</span>
-                  <div className="ranking-proof-chips" aria-label={`${firm.name} budget deal proof context`}>
+                  {locale === 'en' ? <span>{toEnglishText(firm.bestFor)}</span> : null}
+                  <div className="ranking-proof-chips" aria-label={fmt(c.ariaBudget, { name: firm.name })}>
                     <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                      Legal {firm.regulatoryAudit.riskLevel}
+                      {fmt(c.legalBadge, { level: v(firm.regulatoryAudit.riskLevel) })}
                     </span>
                     <span className={`badge ${sourceDepthClass(firm)}`}>
-                      {sourceDepthLabel(firm)}
+                      {sourceDepthLabel(firm, p)}
                     </span>
                   </div>
                 </div>
               </div>
               <div className="deal-watch-metrics">
-                <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
-                <div><span>Score</span><strong>{firm.score}/100</strong></div>
-                <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
+                <div><span>{c.minPrice}</span><strong>{v(priceLabel(firm))}</strong></div>
+                <div><span>{c.score}</span><strong>{firm.score}/100</strong></div>
+                <div><span>{c.payout}</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{v(firm.reviewSignals.payoutRisk)}</strong></div>
               </div>
-              <small>{toEnglishText(firm.products[0]?.name ?? 'Program to verify')}</small>
+              <small>{firm.products[0]?.name ? toEnglishText(firm.products[0].name) : c.programToVerify}</small>
             </Link>
           ))}
         </div>
@@ -309,33 +326,33 @@ export default function PromosPage() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Good price / risk ratio</div>
-            <h2>Evaluations worth comparing even without a discount code.</h2>
+            <div className="eyebrow">{p.valueEyebrow}</div>
+            <h2>{p.valueTitle}</h2>
           </div>
         </div>
         <div className="value-pick-list">
           {valuePicks.map((firm) => (
-            <Link href={`/firm/${firm.slug}`} className="value-pick-row" key={firm.slug}>
+            <Link href={L(`/firm/${firm.slug}`)} className="value-pick-row" key={firm.slug}>
               <div className="firm-result-main">
                 <FirmLogo name={firm.name} logoDomain={firm.logoDomain} />
                 <div>
                   <strong>{firm.name}</strong>
-                  <span>{toEnglishText(firm.products[0]?.name ?? 'Program to verify')}</span>
-                  <div className="ranking-proof-chips" aria-label={`${firm.name} value pick proof context`}>
+                  <span>{firm.products[0]?.name ? toEnglishText(firm.products[0].name) : c.programToVerify}</span>
+                  <div className="ranking-proof-chips" aria-label={fmt(c.ariaValue, { name: firm.name })}>
                     <span className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>
-                      Payout {toEnglishText(firm.reviewSignals.payoutRisk)}
+                      {fmt(c.payoutBadge, { level: v(firm.reviewSignals.payoutRisk) })}
                     </span>
                     <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                      Legal {firm.regulatoryAudit.riskLevel}
+                      {fmt(c.legalBadge, { level: v(firm.regulatoryAudit.riskLevel) })}
                     </span>
                   </div>
                 </div>
               </div>
-              <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
-              <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div><span>Trustpilot</span><strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'Not rated'}</strong></div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
-                <span>Score</span>
+              <div><span>{c.minPrice}</span><strong>{v(priceLabel(firm))}</strong></div>
+              <div><span>{c.payout}</span><strong>{v(firm.reviewSignals.payoutRisk)}</strong></div>
+              <div><span>{c.trustpilot}</span><strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : c.notRated}</strong></div>
+              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={fmt(c.scoreAria, { score: firm.score })}>
+                <span>{c.score}</span>
                 <strong>{firm.score}</strong>
                 <small>/100</small>
               </div>
@@ -347,36 +364,34 @@ export default function PromosPage() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Futures funding</div>
-            <h2>Futures deals to compare.</h2>
+            <div className="eyebrow">{p.futuresEyebrow}</div>
+            <h2>{p.futuresTitle}</h2>
           </div>
-          <p className="section-note">
-            For futures, the real deal often depends on funded-account fees, drawdown and payout caps.
-          </p>
+          <p className="section-note">{p.futuresNote}</p>
         </div>
         <div className="deal-table">
           {futuresShortlist.map((firm) => (
-            <Link href={`/firm/${firm.slug}`} className="deal-table-row" key={firm.slug}>
+            <Link href={L(`/firm/${firm.slug}`)} className="deal-table-row" key={firm.slug}>
               <div className="firm-result-main">
                 <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
                 <div>
                   <strong>{firm.name}</strong>
-                  <span>{toEnglishText(firm.products[0]?.name ?? 'Futures program to verify')}</span>
-                  <div className="ranking-proof-chips" aria-label={`${firm.name} futures deal proof context`}>
+                  <span>{firm.products[0]?.name ? toEnglishText(firm.products[0].name) : c.futuresProgramToVerify}</span>
+                  <div className="ranking-proof-chips" aria-label={fmt(c.ariaFutures, { name: firm.name })}>
                     <span className={`badge ${regulatoryRiskClass(firm.regulatoryAudit.riskLevel)}`}>
-                      Legal {firm.regulatoryAudit.riskLevel}
+                      {fmt(c.legalBadge, { level: v(firm.regulatoryAudit.riskLevel) })}
                     </span>
                     <span className={`badge ${sourceDepthClass(firm)}`}>
-                      {sourceDepthLabel(firm)}
+                      {sourceDepthLabel(firm, p)}
                     </span>
                   </div>
                 </div>
               </div>
-              <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
-              <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
-              <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
-                <span>Score</span>
+              <div><span>{c.minPrice}</span><strong>{v(priceLabel(firm))}</strong></div>
+              <div><span>{c.drawdown}</span><strong>{v(drawdownLabel(firm, toEnglishText))}</strong></div>
+              <div><span>{c.payout}</span><strong>{v(firm.reviewSignals.payoutRisk)}</strong></div>
+              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={fmt(c.scoreAria, { score: firm.score })}>
+                <span>{c.score}</span>
                 <strong>{firm.score}</strong>
                 <small>/100</small>
               </div>
@@ -388,12 +403,9 @@ export default function PromosPage() {
       <section className="section">
         <div className="promo-api-panel">
           <div>
-            <div className="eyebrow">Internal API</div>
-            <h2>Deals can now be reused through API endpoints.</h2>
-            <p className="lead">
-              These endpoints can feed a widget, a newsletter, a Discord bot or a dynamic SEO page with deal, payout,
-              audit, legal risk and source-depth fields.
-            </p>
+            <div className="eyebrow">{p.apiEyebrow}</div>
+            <h2>{p.apiTitle}</h2>
+            <p className="lead">{p.apiLead}</p>
           </div>
           <div className="api-chip-list">
             <code>/api/promos</code>
@@ -411,12 +423,12 @@ export default function PromosPage() {
       <section className="section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Prop firm discount code FAQ</div>
-            <h2>Questions to ask before using a discount.</h2>
+            <div className="eyebrow">{p.faqEyebrow}</div>
+            <h2>{p.faqTitle}</h2>
           </div>
         </div>
         <div className="promo-faq-grid">
-          {promoFaq.map((item) => (
+          {faq.map((item) => (
             <article className="promo-faq-card" key={item.question}>
               <h3>{toEnglishText(item.question)}</h3>
               <p>{toEnglishText(item.answer)}</p>
@@ -428,20 +440,17 @@ export default function PromosPage() {
       <section className="section">
         <div className="panel promo-warning-panel">
           <div>
-            <div className="eyebrow">Trap Check</div>
-            <h2>A big discount does not offset payout risk.</h2>
-            <p className="lead">
-              PropRadar keeps these firms visible so traders do not confuse cheaper with better.
-              If a deal pushes you to ignore the rules, it is not a good deal.
-            </p>
+            <div className="eyebrow">{p.trapEyebrow}</div>
+            <h2>{p.trapTitle}</h2>
+            <p className="lead">{p.trapLead}</p>
           </div>
           <div className="promo-risk-list">
             {riskyDiscounts.map((firm) => (
-              <Link href={`/firm/${firm.slug}`} key={firm.slug}>
+              <Link href={L(`/firm/${firm.slug}`)} key={firm.slug}>
                 <span>{firm.name}</span>
                 <span className="guide-signal-stack-meta">
-                  <strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong>
-                  <small>{firm.regulatoryAudit.riskLevel}</small>
+                  <strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{v(firm.reviewSignals.payoutRisk)}</strong>
+                  <small>{v(firm.regulatoryAudit.riskLevel)}</small>
                 </span>
               </Link>
             ))}

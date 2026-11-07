@@ -65,6 +65,9 @@ const TRANSLATED = [
   /^\/prop-firm-rules$/,
   /^\/tools$/,
   /^\/audit$/,
+  /^\/promos$/,
+  /^\/prop-firm-payout-risk$/,
+  /^\/radar-brief$/,
 ];
 
 export function isTranslatedPath(path: string) {
