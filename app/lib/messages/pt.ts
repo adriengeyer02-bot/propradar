@@ -275,8 +275,8 @@ const pt: Messages = {
   "radar": {
     "bands": {
       "good": "Pontuação 75+",
-      "watch": "Pontuação 55–74",
-      "none": "Abaixo de 55",
+      "watch": "Pontuação 50–74",
+      "none": "Abaixo de 50",
       "closed": "Encerradas"
     },
     "today": "hoje",
@@ -291,7 +291,7 @@ const pt: Messages = {
     "openFirmsOnRadar": "empresas abertas no radar",
     "firmsInMarket": "empresas neste mercado",
     "firmsInBand": "empresas nesta faixa",
-    "radarAria": "Radar de {total} prop firms: {good} com pontuação 75 ou mais, {watch} entre 55 e 74, {none} abaixo de 55, {closed} encerradas. O ângulo indica o mercado e a distância a pontuação PropRadar.",
+    "radarAria": "Radar de {total} prop firms: {good} com pontuação 75 ou mais, {watch} entre 50 e 74, {none} abaixo de 50, {closed} encerradas. O ângulo indica o mercado e a distância a pontuação PropRadar.",
     "openProfile": "Abrir a ficha",
     "tapHint": "Toque em um ponto para ver a empresa",
     "bandsAria": "Filtrar por faixa de pontuação",
@@ -307,7 +307,7 @@ const pt: Messages = {
     "zoomIn": "Ampliar",
     "zoomOut": "Reduzir",
     "zoomReset": "Repor o zoom",
-    "globeAria": "Globo de {total} empresas abertas: a latitude é a pontuação PropRadar (75+ no norte, abaixo de 55 no sul), a longitude é o mercado. Os mesmos dados do radar.",
+    "globeAria": "Globo de {total} empresas abertas: a latitude é a pontuação PropRadar (75+ no norte, abaixo de 50 no sul), a longitude é o mercado. Os mesmos dados do radar.",
     "globeNorth": "Norte = pontuação mais alta · longitude = mercado",
     "visitSince": "Atualizadas desde a sua última visita ({when})",
     "visitNone": "Nenhuma empresa atualizada desde a sua última visita ({when}).",
@@ -353,7 +353,7 @@ const pt: Messages = {
     ],
     "read2": [
       "Distância = pontuação PropRadar.",
-      "Os anéis marcam 90, 75 e 55; {name} é a mais próxima do centro, com {score}."
+      "Os anéis marcam 90, 75 e 50; {name} é a mais próxima do centro, com {score}."
     ],
     "read3": [
       "Tamanho = volume no Trustpilot.",
@@ -361,7 +361,7 @@ const pt: Messages = {
     ],
     "read4": [
       "Cor = faixa de pontuação.",
-      "Verde 75+, âmbar de 55 a 74, cinza abaixo de 55. As cruzes vermelhas são empresas encerradas."
+      "Verde 75+, âmbar de 50 a 74, cinza abaixo de 50. As cruzes vermelhas são empresas encerradas."
     ],
     "fineprint": "A pontuação pondera regras, provas de pagamento, o dossiê jurídico e as avaliações públicas. Não é uma garantia: abra uma empresa para ver suas fontes e o que ainda falta verificar.",
     "methodology": "Metodologia",
@@ -382,7 +382,7 @@ const pt: Messages = {
       },
       {
         "q": "Por que as pontuações baixas são cinza e não vermelhas?",
-        "a": "O vermelho é reservado às empresas encerradas. Uma empresa aberta abaixo de 55 costuma ter um dossiê incompleto, e não uma falha documentada, por isso aparece em cinza. A ficha indica o que ainda falta verificar."
+        "a": "O vermelho é reservado às empresas encerradas. Uma empresa aberta abaixo de 50 costuma ter um dossiê incompleto, e não uma falha documentada, por isso aparece em cinza. A ficha indica o que ainda falta verificar."
       },
       {
         "q": "Com que frequência o radar é atualizado?",

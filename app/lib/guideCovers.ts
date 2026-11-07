@@ -201,7 +201,7 @@ export function buildGuideCover(guide: SeoGuide): GuideCoverData {
     id,
     background,
     dividers,
-    rings: [90, 75, 55].map((score) => Math.round((16 + (100 - score) * 2.34) * MINI.scale * 10) / 10),
+    rings: [90, 75, 50].map((score) => Math.round((16 + (100 - score) * 2.34) * MINI.scale * 10) / 10),
     highlights,
     labelled,
     total: data.dots.length,

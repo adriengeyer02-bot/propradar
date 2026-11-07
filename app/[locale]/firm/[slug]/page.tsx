@@ -212,7 +212,7 @@ function scoreProofRows(firm: PropFirm, kind: 'trustpilot' | 'payout' | 'manipul
 function scoreColor(score: number) {
   if (score >= 80) return '#047857';
   if (score >= 70) return '#12b76a';
-  if (score >= 55) return '#d97706';
+  if (score >= 50) return '#d97706';
   return '#dc2626';
 }
 
@@ -225,7 +225,7 @@ function scoreRingStyle(score: number) {
 
 function signalToneClass(score: number) {
   if (score >= 75) return 'community-overview-good';
-  if (score >= 55) return 'community-overview-watch';
+  if (score >= 50) return 'community-overview-watch';
   return 'community-overview-risk';
 }
 

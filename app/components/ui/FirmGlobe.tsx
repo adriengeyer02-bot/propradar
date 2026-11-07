@@ -6,7 +6,7 @@ import type { RadarDot, RadarSector } from '../../lib/radar';
 /**
  * The PropRadar globe: the same firms as the radar, wrapped on a sphere.
  * - Latitude = PropRadar score. The north cap is the 75+ band, the temperate
- *   belt 55–74, the south under 55 (the bands the radar uses), each tinted.
+ *   belt 50–74, the south under 50 (the bands the radar uses), each tinted.
  * - Longitude = market. Each market is a slice from pole to pole, walled by a
  *   lit meridian and named along a curved band; slices alternate light and
  *   shade (no extra colours: colour stays reserved for the score bands).
@@ -39,7 +39,7 @@ type Rgb = [number, number, number];
 
 const DEG = Math.PI / 180;
 const NORTH_BAND = 45; // score 75
-const MID_BAND = 9; // score 55
+const MID_BAND = 9; // score 50
 const SPIN = 0.09; // rad/s when idle
 const SHADE_RES = 176;
 const MIN_SLICE = 34; // degrees: the smallest market stays readable
@@ -99,13 +99,13 @@ function sliceAt(slices: Slice[], lon: number) {
 }
 
 /**
- * Score -> latitude in degrees, monotonic: 100 -> 90°, 75 -> 45°, 55 -> 9°.
- * Under 55 the scale is compressed so the lowest score (20) sits at LOW_LAT
+ * Score -> latitude in degrees, monotonic: 100 -> 81°, 75 -> 45°, 50 -> 9°.
+ * Under 50 the scale is compressed so the lowest score (20) sits at LOW_LAT
  * and the parallel that carries the market names stays free.
  */
 export function scoreLatitude(score: number) {
-  if (score >= 55) return Math.min(84, (score - 50) * 1.8);
-  return Math.max(LOW_LAT - 2, 9 - ((55 - score) / 35) * (9 - LOW_LAT));
+  if (score >= 50) return Math.min(84, MID_BAND + (score - 50) * 1.44);
+  return Math.max(LOW_LAT - 2, MID_BAND - ((50 - score) / 30) * (MID_BAND - LOW_LAT));
 }
 
 /**
@@ -237,9 +237,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         min = slice.start + 2.2;
         max = slice.end - 2.2;
       }
-      // Stay inside the score band (55 -> 9°, 75 -> 45°) and within 6° of the score.
-      const bandLo = dot.score >= 75 ? 45.6 : dot.score >= 55 ? 9.6 : -90;
-      const bandHi = dot.score >= 75 ? 86 : dot.score >= 55 ? 44.4 : 8.4;
+      // Stay inside the score band (50 -> 9°, 75 -> 45°) and within 6° of the score.
+      const bandLo = dot.score >= 75 ? 45.6 : dot.score >= 50 ? 9.6 : -90;
+      const bandHi = dot.score >= 75 ? 86 : dot.score >= 50 ? 44.4 : 8.4;
       return { dot, lat, lon, min, max, lo: Math.max(bandLo, lat - 6), hi: Math.min(bandHi, lat + 6) };
     });
     declutter(items);
@@ -480,10 +480,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       c.strokeStyle = palette.watch;
       strokeCurve((t) => toWorld(MID_BAND, t * 360), 120, cx, cy, radius);
       c.setLineDash([]);
-      // Reference parallels for the 50 and 25 tags (thin, so the bands keep the colour).
+      // Reference parallel for the 25 tag (thin, so the bands keep the colour).
       c.lineWidth = 1;
       c.strokeStyle = palette.dark ? 'rgba(234, 240, 247, 0.28)' : 'rgba(15, 23, 42, 0.22)';
-      strokeCurve((t) => toWorld(scoreLatitude(50), t * 360), 120, cx, cy, radius);
       strokeCurve((t) => toWorld(scoreLatitude(25), t * 360), 120, cx, cy, radius);
       c.restore();
 
@@ -526,7 +525,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
       // Score scale outside the globe, like a ruler: 75, 50 and 25 (with 100 and 0
       // at the axis tips). Each tag sits where its parallel meets the left edge.
-      for (const [score, color] of [[75, palette.good], [50, palette.none], [25, palette.none]] as const) {
+      for (const [score, color] of [[75, palette.good], [50, palette.watch], [25, palette.none]] as const) {
         const at = limbPoint(scoreLatitude(score), cx, cy, radius);
         if (!at) continue;
         const dx = at.x - cx;

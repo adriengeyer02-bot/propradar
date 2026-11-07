@@ -27,8 +27,8 @@ export default async function RadarShareImage() {
           <div style={{ display: 'flex', gap: 26, fontSize: 24 }}>
             {([
               ['good', radar.counts.good, 'score 75+'],
-              ['watch', radar.counts.watch, '55–74'],
-              ['none', radar.counts.none, 'under 55'],
+              ['watch', radar.counts.watch, '50–74'],
+              ['none', radar.counts.none, 'under 50'],
               ['risk', radar.counts.closed, 'closed'],
             ] as const).map(([tone, count, label]) => (
               <div key={label} style={{ display: 'flex', flexDirection: 'column' }}>
@@ -44,7 +44,7 @@ export default async function RadarShareImage() {
             const p = radarPoint(RADAR_OUTER, angle);
             return <line key={index} x1={RADAR_CENTER} y1={RADAR_CENTER} x2={p.x} y2={p.y} stroke={OG.line} strokeWidth="1.5" />;
           })}
-          {[90, 75, 55].map((score) => (
+          {[90, 75, 50].map((score) => (
             <circle key={score} cx={RADAR_CENTER} cy={RADAR_CENTER} r={radarRadius(score)} fill="none" stroke={OG.accent} strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="3 5" />
           ))}
           <path d={`M${RADAR_CENTER},${RADAR_CENTER}L${RADAR_CENTER},${RADAR_CENTER - RADAR_OUTER}A${RADAR_OUTER},${RADAR_OUTER} 0 0 1 ${sweepEnd.x},${sweepEnd.y}Z`} fill={OG.accent} fillOpacity="0.14" />

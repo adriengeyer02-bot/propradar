@@ -9,7 +9,7 @@ export type Tone = 'good' | 'watch' | 'risk' | 'none';
 
 export function scoreTone(score: number): Tone {
   if (score >= 75) return 'good';
-  if (score >= 55) return 'watch';
+  if (score >= 50) return 'watch';
   return 'risk';
 }
 
