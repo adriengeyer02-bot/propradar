@@ -62,6 +62,9 @@ const TRANSLATED = [
   /^\/prop-firm-challenge$/,
   /^\/prop-firm-statistics$/,
   /^\/trustpilot-prop-firms$/,
+  /^\/promos$/,
+  /^\/prop-firm-payout-risk$/,
+  /^\/radar-brief$/,
 ];
 
 export function isTranslatedPath(path: string) {
