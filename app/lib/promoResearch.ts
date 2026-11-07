@@ -10,7 +10,7 @@ import {
   type PropFirm,
 } from './propFirms';
 
-export const PROMO_REVIEW_DATE = '2026-11-06';
+export const PROMO_REVIEW_DATE = '2026-11-07';
 
 export type PromoProofLevel = 'Official' | 'PropRadar affiliate' | 'Confirm at checkout' | 'Good deal without code';
 export type PromoCategory = 'code' | 'affiliate' | 'official-discount' | 'price-opportunity' | 'futures';
@@ -426,6 +426,7 @@ const allPromoDeals: PromoDeal[] = [
   },
   {
     slug: 'goat-funded-trader',
+    notSeenOn: '2026-11-07',
     label: 'Official seasonal code',
     title: 'HALLOWEEN50: 50% off all GOAT Funded Trader accounts',
     code: 'HALLOWEEN50',
@@ -466,6 +467,70 @@ const allPromoDeals: PromoDeal[] = [
     bestFor: ['strong discount', 'instant funding', 'forex', 'futures'],
     commercialHook: 'The code Blue Guardian shows at its own checkout today.',
     checkoutTip: 'Apply HALLOWEEN and confirm the 35% reduction before adding paid options.',
+  },
+  {
+    slug: 'take-profit-trader',
+    label: 'Official futures offer',
+    title: 'NOFEE50: 50% lifetime test discount and no PRO activation fee',
+    code: 'NOFEE50',
+    value: '50%',
+    category: 'futures',
+    proofLevel: 'Official',
+    availability: 'Active official offer',
+    validity: '"Early Black Friday" promotion, "only available for a limited-time"; no end date shown on 7 November 2026.',
+    eligibility: 'All new Take Profit Trader test accounts, any size, while the promotion remains live.',
+    sourceUrl: 'https://try.takeprofittrader.com/futures-traders-nofee50-1026',
+    sourceLabel: 'Official Take Profit Trader NOFEE50 offer page',
+    sourceNote: 'Official Take Profit Trader offer page checked on 2026-11-06 and 2026-11-07: "a 50% lifetime discount on all new test accounts and never pay an activation fee with code NOFEE50"; "Only available for a limited-time". It replaced NOFEE40 (40%).',
+    consumerVerdict:
+      'A strong futures offer: the discount is described as lifetime on the test and the PRO activation fee is waived, which matters more than the first invoice alone.',
+    caveats: ['Limited-time offer, no end date shown', 'Futures only', 'Confirm both the test discount and the activation-fee waiver in the order terms'],
+    bestFor: ['futures', 'day trading', 'no activation fee'],
+    commercialHook: 'A confirmed futures discount that also removes the PRO activation fee.',
+    urgency: 'Official offer page checked 7 November 2026',
+    checkoutTip: 'Save the promotion terms showing the lifetime discount and no PRO activation fee before paying.',
+  },
+  {
+    slug: 'funderpro',
+    label: 'Official November code',
+    title: 'NOV20: 20% off all FunderPro challenges',
+    code: 'NOV20',
+    value: '20%',
+    category: 'code',
+    proofLevel: 'Official',
+    availability: 'Active official offer',
+    validity: 'November banner on the official home page on 6 and 7 November 2026; no end date shown.',
+    eligibility: 'Listed as "20% OFF all Challenges"; no further condition shown on the banner.',
+    sourceUrl: 'https://funderpro.com/',
+    sourceLabel: 'Official FunderPro home page banner',
+    sourceNote: 'Official FunderPro home page checked on 2026-11-06 and 2026-11-07: "Code NOV20: 20% OFF all Challenges", with a checkout link carrying promo=NOV20. PropRadar is a FunderPro affiliate; the code is FunderPro\'s own, not a PropRadar code.',
+    consumerVerdict:
+      'A simple, broad FunderPro discount. Compare it with the automatic 15% Pro offer and the PropRadar code: only one usually applies, so keep the lowest real total.',
+    caveats: ['Seasonal code, likely to end with November', 'Usually not stackable with other codes', 'Affiliate relationship has no impact on the score'],
+    bestFor: ['FunderPro Classic', 'FunderPro Pro', 'broad discount'],
+    commercialHook: 'The code FunderPro shows on its own home page this month.',
+    checkoutTip: 'Apply NOV20 and compare the total with the other FunderPro offers before paying.',
+  },
+  {
+    slug: 'blue-guardian',
+    label: 'Official November code',
+    title: 'NOV30: 30% off at Blue Guardian',
+    code: 'NOV30',
+    value: '30%',
+    category: 'official-discount',
+    proofLevel: 'Official',
+    availability: 'Active official offer',
+    validity: 'Shown on the official home page on 6 and 7 November 2026; no end date shown.',
+    eligibility: '"Save 30% with code NOV30"; no further condition shown. Confirm the discounted subtotal before payment.',
+    sourceUrl: BLUE_GUARDIAN_AFFILIATE_URL,
+    sourceLabel: 'Official Blue Guardian site + PropRadar affiliate link',
+    sourceNote: 'Official Blue Guardian home page checked on 2026-11-06 and 2026-11-07: "Save 30% with code NOV30". It replaced the HALLOWEEN code (35%). PropRadar affiliate link remains disclosed.',
+    consumerVerdict:
+      'A current Blue Guardian discount, but seasonal: the code has changed several times in a month, so check that it still lowers the subtotal at checkout.',
+    caveats: ['Seasonal code, likely to end with November', 'Add-ons are priced separately', 'Affiliate link has no impact on the score'],
+    bestFor: ['strong discount', 'instant funding', 'forex', 'futures'],
+    commercialHook: 'The code Blue Guardian shows on its own site today.',
+    checkoutTip: 'Apply NOV30 and confirm the 30% reduction before adding paid options.',
   },
 ];
 

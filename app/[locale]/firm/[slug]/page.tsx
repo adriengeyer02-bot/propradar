@@ -1094,13 +1094,13 @@ export default async function FirmPage({ params }: Props) {
           <div className="panel blue-guardian-affiliate-panel">
             <div className="blue-guardian-affiliate-copy">
               <div className="eyebrow">Blue Guardian offer</div>
-              <h2>Check the code at checkout</h2>
+              <h2>Code NOV30: 30% off</h2>
               <p className="muted">
-                The seasonal code HALLOWEEN (35%, seen on Blue Guardian&apos;s official checkout on 28 October 2026) was no longer shown on 6 November 2026.
+                Blue Guardian&apos;s own site showed &quot;Save 30% with code NOV30&quot; on 7 November 2026 (it replaced HALLOWEEN). Seasonal codes change often: confirm the 30% reduction at checkout.
                 PropRadar lists a code here only after reading it on Blue Guardian&apos;s own site. The link below is affiliate-based, but the PropRadar score, payout risk, public signals and rule analysis remain independent from that relationship.
               </p>
               <div className="promo-proof-row">
-                <span>No code confirmed by PropRadar</span>
+                <span>Code read on Blue Guardian&apos;s site, 7 Nov 2026</span>
                 <span>Declared affiliate link</span>
               </div>
               <a href={BLUE_GUARDIAN_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
@@ -1108,9 +1108,9 @@ export default async function FirmPage({ params }: Props) {
               </a>
             </div>
             <div className="blue-guardian-offer-card">
-              <span>Official checkout code</span>
-              <strong>Check at checkout</strong>
-              <small>Any code must visibly lower the subtotal before payment.</small>
+              <span>Official code, 7 Nov 2026</span>
+              <strong>NOV30</strong>
+              <small>30% off; it must visibly lower the subtotal before payment.</small>
             </div>
           </div>
         ) : null}
