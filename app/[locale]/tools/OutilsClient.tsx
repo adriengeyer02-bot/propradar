@@ -366,7 +366,7 @@ export default function OutilsClient() {
                 <div><span>Fit</span><strong>{Math.min(100, Math.max(0, Math.round(fitScore)))}/100</strong></div>
                 <div><span>Price</span><strong>{priceLabel(firm)}</strong></div>
                 <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-                <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
+                <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
                   <span>Score</span>
                   <strong>{firm.score}</strong>
                   <small>/100</small>

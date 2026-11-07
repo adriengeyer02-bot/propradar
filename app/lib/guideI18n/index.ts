@@ -40,6 +40,23 @@ export function getGuideTranslation(locale: Locale, slug: string): GuideTranslat
   return article ? { ...summary, article } : summary;
 }
 
+/**
+ * Card text of a guide in a given language: the translated summary, else (in
+ * French) the hand-written article that replaces it. Undefined in English or
+ * when the guide has no text in that language.
+ */
+export function guideCardText(locale: Locale, guide: SeoGuide | string): { title: string; description: string; eyebrow: string; answer: string } | undefined {
+  if (locale === 'en') return undefined;
+  const slug = typeof guide === 'string' ? guide : guide.slug;
+  const tr = getGuideTranslation(locale, slug);
+  if (tr) return { title: tr.title, description: tr.metaDescription, eyebrow: tr.eyebrow, answer: tr.answer };
+  if (locale === 'fr') {
+    const article = getFrArticleByEnPath(getSeoGuidePath(guide));
+    if (article) return { title: article.title, description: article.metaDescription, eyebrow: article.eyebrow, answer: article.answer };
+  }
+  return undefined;
+}
+
 /** Hand-written French article that replaces the translated summary, if any. */
 export function frGuidePairPath(guide: SeoGuide | string) {
   const article = getFrArticleByEnPath(getSeoGuidePath(guide));

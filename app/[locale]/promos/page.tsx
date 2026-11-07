@@ -334,7 +334,7 @@ export default function PromosPage() {
               <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
               <div><span>Trustpilot</span><strong>{firm.trustpilotRating ? `${firm.trustpilotRating}/5` : 'Not rated'}</strong></div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
+              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
                 <span>Score</span>
                 <strong>{firm.score}</strong>
                 <small>/100</small>
@@ -375,7 +375,7 @@ export default function PromosPage() {
               <div><span>Min. price</span><strong>{priceLabel(firm)}</strong></div>
               <div><span>Drawdown</span><strong>{drawdownLabel(firm, toEnglishText)}</strong></div>
               <div><span>Payout</span><strong>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar score ${firm.score} out of 100`}>
+              <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
                 <span>Score</span>
                 <strong>{firm.score}</strong>
                 <small>/100</small>
