@@ -28,6 +28,7 @@ import { isAffiliateUrl,
 } from '../../../lib/propFirms';
 import { toEnglishText } from '../../../lib/i18n';
 import GuideArticleBody from '../../../components/GuideArticleBody';
+import GuideDataTable, { type GuideDataKind } from '../../../components/GuideDataTable';
 import { getGuideArticle } from '../../../lib/guideArticles';
 import { getFrArticleByEnPath } from '../../../lib/frArticles';
 import LocalizedGuide, { localizedGuideMetadata } from '../../../components/LocalizedGuide';
@@ -1226,6 +1227,13 @@ function expandedFaqAnswer(answer: string, _guide: NonNullable<ReturnType<typeof
   return answer;
 }
 
+/** English guides that carry a live data table from the firm files. */
+const GUIDE_DATA: Record<string, GuideDataKind> = {
+  'meilleure-prop-firm-futures': 'futures',
+  'prop-firm-instant-funding': 'instant',
+  'prop-firm-payout-rapide': 'payout',
+};
+
 export default async function SeoGuidePage({ params }: Props) {
   const { slug, locale: rawLocale } = await params;
 
@@ -1640,6 +1648,8 @@ export default async function SeoGuidePage({ params }: Props) {
           </div>
         </section>
       ) : null}
+
+      {GUIDE_DATA[guide.slug] ? <GuideDataTable kind={GUIDE_DATA[guide.slug]} /> : null}
 
       {headToHeadFirms.length >= 2 ? (
         <section className="container pr-section pr-head-to-head" id="head-to-head" aria-labelledby="head-to-head-title">
