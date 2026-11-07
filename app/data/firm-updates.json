@@ -261,7 +261,7 @@
       ]
     },
     "bespoke-funding-program": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -271,13 +271,30 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "FCA warning-list entry found (first published 31/10/2023, last updated 01/11/2023) and added as a dated, quoted incident. It matches the regulatory-attention notice on the firm's Trustpilot page. No status or score change.",
+          "source": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.2,
         "trustpilotReviewCount": 1193,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/bespokefundingprogram.com"
-      }
+      },
+      "addIncidents": [
+        "The UK FCA published a warning about \"Bespoke Funding Program Limited / https://www.bespokefundingprogram.com/\" on 31 October 2023 (last updated 1 November 2023): \"This firm may be providing or promoting financial services or products without our permission.\""
+      ],
+      "addSources": [
+        {
+          "label": "FCA warning list: Bespoke Funding Program Limited",
+          "url": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom"
+        }
+      ]
     },
     "blue-guardian": {
       "changelog": [
@@ -4793,7 +4810,7 @@
       ]
     },
     "cove-funded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-30",
@@ -4803,16 +4820,25 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Domain warning set after a hand check. covefunded.com returned a page titled \"HEBAT33 | Game Online ...\" with links to unrelated shop products on 2026-11-06 and 2026-11-07. Web search found no new official domain. The latest Trustpilot review is dated 17 March 2025. No status or score change.",
+          "source": "https://covefunded.com/",
+          "fields": [
+            "listedDomainWarning"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.1,
         "trustpilotReviewCount": 66,
-        "trustpilotSourceUrl": "https://au.trustpilot.com/review/covefunded.com"
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/covefunded.com",
+        "listedDomainWarning": "The listed domain covefunded.com served unrelated content when checked on 2026-11-06 and 2026-11-07: a page titled \"HEBAT33\" (an Indonesian-language online gaming site) and a florist product catalogue. PropRadar found no announcement of a new Cove Funded domain, so the domain is not linked."
       }
     },
     "fortunes-funding": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-30",
@@ -4822,12 +4848,21 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Domain warning set after a hand check. fortunesfunding.com redirected to /cgi-sys/suspendedpage.cgi (HTTP 401) on 2026-11-06 and 2026-11-07; help.fortunesfunding.com returned a Cloudflare error page. Web search found no new official domain. A Trustpilot review dated 18 October 2026 reports the app showing a DNS error (1016). No status or score change.",
+          "source": "https://fortunesfunding.com/",
+          "fields": [
+            "listedDomainWarning"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 576,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fortunesfunding.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fortunesfunding.com",
+        "listedDomainWarning": "The listed domain fortunesfunding.com redirected to a hosting \"suspended page\" (HTTP 401) when checked on 2026-11-06 and 2026-11-07, and help.fortunesfunding.com returned a Cloudflare error. PropRadar found no announcement of a new Fortunes Funding domain, so the domain is not linked."
       }
     },
     "forex-funds-flow": {
