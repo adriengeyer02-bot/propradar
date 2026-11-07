@@ -168,7 +168,8 @@ const phraseTranslations: Array<[RegExp, string]> = [
   [/pas une promo de prix/gi, 'not a price discount'],
   // Word-bounded: English text such as "promotion", "promotional" or "promo code" must pass through unchanged.
   [/\bpromotionnel(le)?s?\b/gi, 'discount-related'],
-  [/\bpromos?\b(?!\s?codes?)/gi, 'deals'],
+  // Not inside English text: "the promo", "promo=NOV20" (checkout parameters) stay as written.
+  [/(?<!\bthe )\bpromos?\b(?!\s?codes?|=)/gi, 'deals'],
   [/remise/gi, 'discount'],
   [/bon plan/gi, 'good deal'],
   [/bon point d'entr[e\u00e9]e/gi, 'good entry point'],

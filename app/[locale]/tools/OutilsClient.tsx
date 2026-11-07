@@ -18,6 +18,15 @@ import {
   topFirms,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
+import { localePath, type Locale } from '../../lib/locales';
+import type { ToolsMessages } from '../../lib/messages/pages/tools';
+import type { Messages } from '../../lib/messages';
+
+type RadarLabels = Messages['firm']['relradar'] & { values: Record<string, string> };
+
+function fill(template: string, values: Record<string, string | number>) {
+  return template.replace(/\{(\w+)\}/g, (match, key: string) => (key in values ? String(values[key]) : match));
+}
 
 // A watchlist default is not a known drawdown: it never earns fit points.
 function knownDrawdown(firm: PropFirm): PropFirm['drawdownType'] | undefined {
@@ -54,25 +63,6 @@ const styleChoices: StyleChoice[] = [
 const priorityChoices: PriorityChoice[] = ['Payout', 'Règles', 'Prix', 'Score global'];
 const drawdownChoices: DrawdownChoice[] = ['Static/EOD', 'Trailing accepté', 'Peu importe'];
 const budgetChoices: BudgetChoice[] = ['75', '150', '300', '1000', 'Tous'];
-
-const styleNotes: Record<StyleChoice, string> = {
-  'SMC / ICT':
-    'Priority goes to firms that make manual trading easier to read: clear drawdown, indices/forex, solid payout signals and fewer vague clauses.',
-  'Swing trading':
-    'Looks for firms that are more tolerant of held positions, with Static/EOD drawdown and low payout risk.',
-  'Day trading':
-    'Classic intraday profile: daily execution, reasonable budget, clear rules and a solid overall score.',
-  Scalping:
-    'Short-term profile: avoid firms that heavily restrict fast trades, news, EA usage or strategies they may label abusive.',
-  'News trading':
-    'Very sensitive profile: the tool favors firms where news trading is allowed or less restrictive.',
-  'EA / Algo':
-    'Automation profile: the tool favors firms that accept EAs or allow them on request.',
-  Breakout:
-    'Range-break / momentum profile: the tool favors intraday firms with readable drawdown and cleaner payout signals.',
-  'Débutant prudent':
-    'Safety-first profile: strong score, low payout risk, non-trailing drawdown and simple rules first.',
-};
 
 function labelIncludes(value: string, pattern: RegExp) {
   return pattern.test(value.toLowerCase());
@@ -211,20 +201,29 @@ function recommendationScore(
   return score;
 }
 
-function bestReason(firm: PropFirm, style: StyleChoice, priority: PriorityChoice) {
-  if (priority === 'Payout' && firm.reviewSignals.payoutRisk === 'Faible') return 'Low payout risk and solid overall score.';
-  if (style === 'SMC / ICT' && (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD')) return 'Good manual SMC fit: readable drawdown and rules to review before execution.';
-  if (style === 'Swing trading' && (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD')) return 'More readable drawdown for holding positions.';
-  if (style === 'Day trading' && firm.status === 'Active') return 'Good intraday profile: active firm, usable score and comparable signals.';
-  if (style === 'Scalping') return 'Check clauses on fast trades, news and prohibited strategies.';
-  if (style === 'EA / Algo' && (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes')) return 'EAs allowed, with rules to review before use.';
-  if (style === 'News trading' && isNewsAllowed(firm)) return 'News trading is more permissive than average.';
-  if (style === 'Breakout') return 'Momentum profile: monitor drawdown, spread and consistency rules.';
-  if (priority === 'Prix' && firm.priceFrom > 0) return `Entry ticket around ${priceLabel(firm)}.`;
+function bestReason(firm: PropFirm, style: StyleChoice, priority: PriorityChoice, m: ToolsMessages, v: (value: string) => string) {
+  if (priority === 'Payout' && firm.reviewSignals.payoutRisk === 'Faible') return m.reasonPayout;
+  if (style === 'SMC / ICT' && (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD')) return m.reasonSmc;
+  if (style === 'Swing trading' && (knownDrawdown(firm) === 'Static' || knownDrawdown(firm) === 'EOD')) return m.reasonSwing;
+  if (style === 'Day trading' && firm.status === 'Active') return m.reasonDay;
+  if (style === 'Scalping') return m.reasonScalping;
+  if (style === 'EA / Algo' && (firm.eaAllowed === 'Oui' || firm.eaAllowed === 'Yes')) return m.reasonEa;
+  if (style === 'News trading' && isNewsAllowed(firm)) return m.reasonNews;
+  if (style === 'Breakout') return m.reasonBreakout;
+  if (priority === 'Prix' && firm.priceFrom > 0) return fill(m.reasonPrice, { price: v(priceLabel(firm)) });
   return toEnglishText(firm.bestFor);
 }
 
-export default function OutilsClient() {
+type OutilsClientProps = {
+  m: ToolsMessages;
+  values: Record<string, string>;
+  radarLabels: RadarLabels;
+  locale: Locale;
+};
+
+export default function OutilsClient({ m, values, radarLabels, locale }: OutilsClientProps) {
+  const v = (value: string) => values[value] ?? value;
+  const L = (path: string) => localePath(locale, path);
   const allOptions = useMemo(() => [...topFirms].slice(0, 90), []);
   const [compareSlugs, setCompareSlugs] = useState(defaultCompare);
   const [market, setMarket] = useState<MarketChoice>('Forex/CFD');
@@ -256,37 +255,34 @@ export default function OutilsClient() {
     <main className="container tools-page">
       <section className="tools-hero">
         <div>
-          <div className="eyebrow">PropRadar Tools</div>
-          <h1>Compare prop firms and find the one that fits your style.</h1>
-          <p className="lead">
-            Put several firms side by side, then use the selector to find a prop firm adapted to SMC / ICT,
-            swing trading, day trading, scalping, news trading, EA or breakout.
-          </p>
+          <div className="eyebrow">{m.eyebrow}</div>
+          <h1>{m.h1}</h1>
+          <p className="lead">{m.lead}</p>
           <div className="actions">
-            <a href="#comparatif" className="btn btn-primary">Compare firms</a>
-            <a href="#style-finder" className="btn">Find my prop firm</a>
+            <a href="#comparatif" className="btn btn-primary">{m.ctaCompare}</a>
+            <a href="#style-finder" className="btn">{m.ctaFinder}</a>
           </div>
         </div>
         <div className="tools-hero-panel">
-          <div><strong>{propFirms.length}</strong><span>firms in the radar</span></div>
-          <div><strong>2</strong><span>interactive tools</span></div>
-          <div><strong>0</strong><span>scores influenced by affiliation</span></div>
+          <div><strong>{propFirms.length}</strong><span>{m.heroFirms}</span></div>
+          <div><strong>2</strong><span>{m.heroTools}</span></div>
+          <div><strong>0</strong><span>{m.heroAffiliation}</span></div>
         </div>
       </section>
 
       <section className="section" id="comparatif">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Side-by-side comparison</div>
-            <h2>Choose up to 3 prop firms.</h2>
+            <div className="eyebrow">{m.compareEyebrow}</div>
+            <h2>{m.compareTitle}</h2>
           </div>
-          <Link href="/prop-firm-comparison" className="btn">Open full comparator</Link>
+          <Link href={L('/prop-firm-comparison')} className="btn">{m.openComparator}</Link>
         </div>
 
         <div className="compare-select-grid">
           {compareSlugs.map((slug, index) => (
             <label className="tool-field" key={`${slug}-${index}`}>
-              <span>Firm {index + 1}</span>
+              <span>{fill(m.firmN, { n: index + 1 })}</span>
               <select value={slug} onChange={(event) => updateCompare(index, event.target.value)}>
                 {allOptions.map((firm) => (
                   <option value={firm.slug} key={firm.slug}>{firm.name}</option>
@@ -298,8 +294,8 @@ export default function OutilsClient() {
 
         {selectedFirms.length ? (
           <div className="pr-compare-layout">
-            <ReliabilityRadar firms={selectedFirms} size={300} />
-            <CompareTable firms={selectedFirms} />
+            <ReliabilityRadar firms={selectedFirms} size={300} labels={radarLabels} />
+            <CompareTable firms={selectedFirms} labels={m.compare} values={values} locale={locale} />
           </div>
         ) : null}
       </section>
@@ -307,67 +303,67 @@ export default function OutilsClient() {
       <section className="section" id="style-finder">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">Style Picker</div>
-            <h2>Find a prop firm suited to your profile.</h2>
+            <div className="eyebrow">{m.finderEyebrow}</div>
+            <h2>{m.finderTitle}</h2>
           </div>
-          <p className="section-note">This fit score does not replace the profile page: it helps prioritize your shortlist.</p>
+          <p className="section-note">{m.finderNote}</p>
         </div>
 
         <div className="style-tool">
           <div className="style-controls">
             <div className="style-note">
-              <span>Selected style</span>
-              <strong>{toEnglishText(style)}</strong>
-              <p>{styleNotes[style]}</p>
+              <span>{m.selectedStyle}</span>
+              <strong>{m.styles[style]}</strong>
+              <p>{m.styleNotes[style]}</p>
             </div>
             <label className="tool-field">
-              <span>Market</span>
+              <span>{m.market}</span>
               <select value={market} onChange={(event) => setMarket(event.target.value as MarketChoice)}>
-                {marketChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+                {marketChoices.map((item) => <option value={item} key={item}>{m.markets[item]}</option>)}
               </select>
             </label>
             <label className="tool-field">
-              <span>Style</span>
+              <span>{m.style}</span>
               <select value={style} onChange={(event) => setStyle(event.target.value as StyleChoice)}>
-                {styleChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+                {styleChoices.map((item) => <option value={item} key={item}>{m.styles[item]}</option>)}
               </select>
             </label>
             <label className="tool-field">
-              <span>Max budget</span>
+              <span>{m.maxBudget}</span>
               <select value={budget} onChange={(event) => setBudget(event.target.value as BudgetChoice)}>
-                {budgetChoices.map((item) => <option value={item} key={item}>{item === 'Tous' ? 'All budgets' : `${item}$`}</option>)}
+                {budgetChoices.map((item) => <option value={item} key={item}>{item === 'Tous' ? m.allBudgets : fill(m.budget, { amount: item })}</option>)}
               </select>
             </label>
             <label className="tool-field">
-              <span>Priority</span>
+              <span>{m.priority}</span>
               <select value={priority} onChange={(event) => setPriority(event.target.value as PriorityChoice)}>
-                {priorityChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+                {priorityChoices.map((item) => <option value={item} key={item}>{m.priorities[item]}</option>)}
               </select>
             </label>
             <label className="tool-field">
-              <span>Drawdown</span>
+              <span>{m.drawdown}</span>
               <select value={drawdown} onChange={(event) => setDrawdown(event.target.value as DrawdownChoice)}>
-                {drawdownChoices.map((item) => <option value={item} key={item}>{toEnglishText(item)}</option>)}
+                {drawdownChoices.map((item) => <option value={item} key={item}>{m.drawdowns[item]}</option>)}
               </select>
             </label>
           </div>
 
           <div className="recommendation-list">
             {recommendations.map(({ firm, fitScore }, index) => (
-              <Link href={`/firm/${firm.slug}`} className="recommendation-row" key={firm.slug}>
+              <Link href={L(`/firm/${firm.slug}`)} className="recommendation-row" key={firm.slug}>
                 <span className="guide-rank">{index + 1}</span>
                 <div className="firm-result-main">
                   <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
                   <div>
                     <strong>{firm.name}</strong>
-                    <span>{bestReason(firm, style, priority)}</span>
+                    <span>{bestReason(firm, style, priority, m, v)}</span>
                   </div>
                 </div>
-                <div><span>Fit</span><strong>{Math.min(100, Math.max(0, Math.round(fitScore)))}/100</strong></div>
-                <div><span>Price</span><strong>{priceLabel(firm)}</strong></div>
-                <div><span>Payout</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{toEnglishText(firm.reviewSignals.payoutRisk)}</strong></div>
-                <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={`PropRadar ${firm.score}/100`}>
-                  <span>Score</span>
+                <div><span>{m.fit}</span><strong>{Math.min(100, Math.max(0, Math.round(fitScore)))}/100</strong></div>
+                <div><span>{m.price}</span><strong>{v(priceLabel(firm))}</strong></div>
+                <div><span>{m.payout}</span><strong className={`badge ${payoutRiskClass(firm.reviewSignals.payoutRisk)}`}>{v(toEnglishText(firm.reviewSignals.payoutRisk))}</strong></div>
+                <div className={`score-tile score-tile-row ${scoreClass(firm.score)}`} aria-label={fill(m.scoreAria, { score: firm.score })}>
+                  <span>{m.score}</span>
                   <strong>{firm.score}</strong>
                   <small>/100</small>
                 </div>
