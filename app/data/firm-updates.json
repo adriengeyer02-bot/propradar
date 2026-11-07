@@ -450,11 +450,13 @@
       ]
     },
     "breakout-prop": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-07",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 1226,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com",
+        "drawdownType": "Static",
+        "payoutDelay": "on demand, 24/7, $50 minimum after split; first payout can be requested the day the account is funded"
       },
       "changelog": [
         {
@@ -470,6 +472,23 @@
           "date": "2026-10-27",
           "summary": "Ownership noted: Breakout's official site states it has been acquired by Kraken and describes itself as backed by Kraken. BeInCrypto (republished by Yahoo Finance, 28 May 2026) reports the acquisition was announced on 4 September 2025 and that Kraken Prop, launched on 27 May 2026, is built on Breakout.",
           "source": "https://www.breakoutprop.com/kraken/"
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Official program rules read for all three plans (1-Step Classic, Pro, Turbo): \"Your maximum drawdown limit is set once… and never changes\"; daily loss 3% of the balance at the daily reset. Payouts \"On-demand, 24/7… $50 minimum (after profit split)\". Split stays at the 90% option (80/20 standard, \"Upgrade to 90/10 at checkout\").",
+          "source": "https://www.breakoutprop.com/program-rules/",
+          "fields": [
+            "drawdownType",
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Plans read on Breakout's official tools page: Classic $5K-$100K from $45, Pro $5K-$200K from $33, Turbo $5K-$200K from $20 (list prices, 80/20 option).",
+          "source": "https://tools.breakoutprop.com/breakout",
+          "fields": [
+            "products"
+          ]
         }
       ],
       "addSources": [
@@ -480,6 +499,73 @@
         {
           "label": "Yahoo Finance / BeInCrypto: Kraken Prop built on Breakout (28 May 2026)",
           "url": "https://finance.yahoo.com/markets/crypto/articles/kraken-prop-inside-funded-trader-183521927.html"
+        },
+        {
+          "label": "Breakout program rules",
+          "url": "https://www.breakoutprop.com/program-rules/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "breakout-classic",
+          "name": "1-Step Classic",
+          "type": "Challenge",
+          "description": "List prices from $45 (5K) to $800 (100K), 80/20 option.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 45,
+          "entryFeeMax": 800,
+          "profitTarget": "10%",
+          "maxDailyLoss": "3% of the balance at the daily reset",
+          "maxDrawdown": "6% static",
+          "profitSplit": "80% standard, 90% option at checkout",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "breakout-pro",
+          "name": "1-Step Pro",
+          "type": "Challenge",
+          "description": "List prices from $33 (5K); $545 for 100K; sizes up to 200K. 80/20 option.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 33,
+          "profitTarget": "12%",
+          "maxDailyLoss": "3% of the balance at the daily reset",
+          "maxDrawdown": "5% static",
+          "profitSplit": "80% standard, 90% option at checkout",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "breakout-turbo",
+          "name": "1-Step Turbo",
+          "type": "Challenge",
+          "description": "List prices from $20 (5K); $330 for 100K; sizes up to 200K. 80/20 option.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 20,
+          "profitTarget": "9%",
+          "maxDailyLoss": "3% of the balance at the daily reset",
+          "maxDrawdown": "3% static",
+          "profitSplit": "80% standard, 90% option at checkout",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Crypto"
+          ],
+          "hasConsistencyRule": false
         }
       ]
     },
@@ -703,7 +789,7 @@
       }
     },
     "elite-trader-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -713,12 +799,21 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Official terms: bots, automated trading systems and trade copiers are prohibited unless \"expressly authorized in writing by ETF\". Evaluations page (elitetraderfunding.com/products redirects to elitetraderfunding.app, same brand) lists Trailing, Static, EOD, Diamond Hands and DTF programs, so the drawdown type stays as stored.",
+          "source": "https://help.elitetraderfunding.com/help/terms-of-service",
+          "fields": [
+            "eaAllowed"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.8,
         "trustpilotReviewCount": 1158,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/elitetraderfunding.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/elitetraderfunding.com",
+        "eaAllowed": "No"
       },
       "addSources": [
         {
@@ -899,10 +994,10 @@
       ]
     },
     "ftmo": {
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-07",
       "set": {
         "trustpilotRating": 4.8,
-        "trustpilotReviewCount": 54942,
+        "trustpilotReviewCount": 56056,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftmo.com",
         "payoutDelay": "14-day reward cycle; review within 1-2 business days, payment typically 1-2 business days after invoice approval"
       },
@@ -924,6 +1019,14 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl",
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Trustpilot refreshed: 4.8 TrustScore (unchanged) across 56,056 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/ftmo.com",
+          "fields": [
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -1195,12 +1298,20 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore (unchanged) across 83,250 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/fundednext.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-07",
       "set": {
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 82113,
+        "trustpilotReviewCount": 83250,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundednext.com"
       },
       "addSources": [
@@ -2009,7 +2120,7 @@
       ]
     },
     "lark-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2019,12 +2130,21 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Official home page read: \"no news restrictions\". Split, payout timing and drawdown left unchanged because the page contradicts itself: it advertises an 80% split and bi-weekly payouts, but the 1-Step card shows \"Reward Share None\" and \"Bi-weekly Payouts No\"; it describes static drawdowns, but one card shows \"Max Trailing Drawdown $800 (8%)\".",
+          "source": "https://larkfunding.com/",
+          "fields": [
+            "newsTrading"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 523,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com",
+        "newsTrading": "Allowed"
       }
     },
     "leeloo-trading": {
@@ -2438,11 +2558,15 @@
       ]
     },
     "oneup-trader": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-07",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 2793,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com",
+        "profitSplit": 90,
+        "payoutDelay": "one withdrawal per calendar week, processed the same day once the withdrawal threshold is met ($1,000 minimum); extra withdrawals in the same week carry a 10% priority fee",
+        "drawdownType": "Trailing",
+        "newsTrading": "Restricted"
       },
       "changelog": [
         {
@@ -2453,11 +2577,93 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Official help center read: \"Funded traders keep 100% of their first $10,000 of profits and 90% of the net profits above the withdrawal profit threshold\"; one withdrawal per calendar week, \"processed on the same day as long as the withdrawal threshold has been met\", $1,000 minimum. Split moved from 80 to 90 to match the stated rule.",
+          "source": "https://help.oneuptrader.com/article/376-profit-info",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Funded trader rules read: trailing drawdown on every size, \"No Daily Loss Limit\", and \"All positions must be closed prior to and during major economic releases\". EA policy not stated on the pages read.",
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "fields": [
+            "drawdownType",
+            "newsTrading"
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Programs read on the official site: Evaluation (min 10 days) $65 to $325 per month and Pro Evaluation (min 5 days) $100 to $490 per month, 25K to 250K, list prices.",
+          "source": "https://www.oneuptrader.com/",
+          "fields": [
+            "products"
+          ]
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "oneup-evaluation",
+          "name": "Evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly subscription, list prices: $65 (25K), $75 (50K), $150 (100K), $175 (150K), $325 (250K). Minimum 10 trading days.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 250000,
+          "entryFeeMin": 65,
+          "entryFeeMax": 325,
+          "profitTarget": "$1,500 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K), $15,000 (250K)",
+          "maxDailyLoss": "No daily loss limit",
+          "maxDrawdown": "Trailing: $1,500 (25K), $2,500 (50K), $3,500 (100K), $5,000 (150K), $5,500 (250K)",
+          "profitSplit": "100% of the first $10,000, then 90%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "10",
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "oneup-pro-evaluation",
+          "name": "Pro Evaluation",
+          "type": "Futures evaluation",
+          "description": "Monthly subscription, list prices: $100 (25K), $115 (50K), $225 (100K), $265 (150K), $490 (250K). Minimum 5 trading days.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 250000,
+          "entryFeeMin": 100,
+          "entryFeeMax": 490,
+          "profitTarget": "$1,500 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K), $15,000 (250K)",
+          "maxDailyLoss": "No daily loss limit",
+          "maxDrawdown": "Trailing: $1,500 (25K), $2,500 (50K), $3,500 (100K), $5,000 (150K), $5,500 (250K)",
+          "profitSplit": "100% of the first $10,000, then 90%",
+          "platforms": [
+            "not stated"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "minTradingDays": "5",
+          "hasConsistencyRule": false
+        }
+      ],
+      "addSources": [
+        {
+          "label": "OneUp Trader profit info (help center)",
+          "url": "https://help.oneuptrader.com/article/376-profit-info"
+        },
+        {
+          "label": "OneUp Trader funded trader rules",
+          "url": "https://help.oneuptrader.com/article/372-funded-trader-rules"
         }
       ]
     },
     "pipfarm": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2466,10 +2672,27 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Official terms read: \"Only one payout request may be submitted every seven completed calendar days\", paid \"within a further two full business days\" after approval, and a cap of \"5,000 in the account's base currency\" per payout. The terms name ECI Ventures Pte. Ltd., trading as PipFarm, registered in Singapore (UEN 202329954C). Drawdown not set: models differ across programs and not all were read.",
+          "source": "https://pipfarm.com/terms-and-conditions",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
+      ],
+      "set": {
+        "payoutDelay": "one payout request every seven completed calendar days, paid within two business days after approval; capped at 5,000 in the account's base currency per payout"
+      },
+      "addSources": [
+        {
+          "label": "PipFarm terms and conditions",
+          "url": "https://pipfarm.com/terms-and-conditions"
+        }
       ]
     },
     "quant-tekel": {
@@ -2609,7 +2832,7 @@
       ]
     },
     "sabiotrade": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-07",
       "addSources": [
         {
           "label": "FXEmpire SabioTrade profile",
@@ -2629,11 +2852,26 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Official site read (sabiotrade.com redirects to sabiotrade.us, same brand): every tier shows \"Profit Target 10%\", \"Daily Loss Limit 5%\", \"Maximum Trailing Drawdown 6%\" (it stops trailing after the first reward); \"Reward frequency Weekly\"; \"News trading is allowed under the applicable standard conditions.\" Split 80%, 90% on $100K and above (stored 80 unchanged). Prices not read.",
+          "source": "https://sabiotrade.com/",
+          "fields": [
+            "drawdownType",
+            "payoutDelay",
+            "newsTrading"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/sabiotrade.com)."
-      ]
+      ],
+      "set": {
+        "drawdownType": "Trailing",
+        "payoutDelay": "weekly reward frequency",
+        "newsTrading": "Allowed"
+      }
     },
     "smart-prop-trader": {
       "reviewedAt": "2026-10-27",
@@ -2940,10 +3178,10 @@
       ]
     },
     "the5ers": {
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-07",
       "set": {
         "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 40309,
+        "trustpilotReviewCount": 41598,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com",
         "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval"
       },
@@ -2965,6 +3203,14 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl",
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore (unchanged) across 41,598 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/the5ers.com",
+          "fields": [
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -3174,10 +3420,10 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-07",
       "set": {
         "trustpilotRating": 3.7,
-        "trustpilotReviewCount": 14955,
+        "trustpilotReviewCount": 15050,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com"
       },
       "addSources": [
@@ -3207,6 +3453,14 @@
           "fields": [
             "products"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Trustpilot refreshed: 3.7 TrustScore (unchanged) across 15,050 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/topstep.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ]
     },
@@ -3223,13 +3477,21 @@
             "trustpilotSourceUrl",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore (unchanged) across 964 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/tradethepool.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-07",
       "set": {
         "profitSplit": 70,
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 921,
+        "trustpilotReviewCount": 964,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
         "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
       },
