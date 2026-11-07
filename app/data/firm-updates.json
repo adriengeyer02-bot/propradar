@@ -261,7 +261,7 @@
       ]
     },
     "bespoke-funding-program": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-07",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -271,13 +271,30 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "summary": "FCA warning-list entry found (first published 31/10/2023, last updated 01/11/2023) and added as a dated, quoted incident. It matches the regulatory-attention notice on the firm's Trustpilot page. No status or score change.",
+          "source": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.2,
         "trustpilotReviewCount": 1193,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/bespokefundingprogram.com"
-      }
+      },
+      "addIncidents": [
+        "The UK FCA published a warning about \"Bespoke Funding Program Limited / https://www.bespokefundingprogram.com/\" on 31 October 2023 (last updated 1 November 2023): \"This firm may be providing or promoting financial services or products without our permission.\""
+      ],
+      "addSources": [
+        {
+          "label": "FCA warning list: Bespoke Funding Program Limited",
+          "url": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom"
+        }
+      ]
     },
     "blue-guardian": {
       "changelog": [
