@@ -1,42 +1,58 @@
+import type { Metadata } from 'next';
 import OutilsClient from './OutilsClient';
 import PageStructuredData from '../../components/PageStructuredData';
 import { createPageMetadata } from '../../lib/pageMetadata';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { getMessages } from '../../lib/messages';
+import { getToolsMessages } from '../../lib/messages/pages/tools';
+import { SITE_URL } from '../../lib/site';
 
-const TOOLS_DESCRIPTION =
-  'Compare prop firms side by side and find programs suited to SMC, ICT, swing trading, scalping, news trading, EA or futures strategies.';
+const PATH = '/tools';
 
-export const metadata = createPageMetadata({
-  title: 'Prop Firm Comparison Tools and Style Finder',
-  description: TOOLS_DESCRIPTION,
-  path: '/tools',
-  keywords: ['prop firm comparison tool', 'prop firm for SMC', 'prop firm style finder', 'compare prop firms'],
-  category: 'Prop firm tools',
-});
+type Props = { params: Promise<{ locale: string }> };
 
-export default function OutilsPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const m = getToolsMessages(locale);
+  const base = createPageMetadata({
+    title: m.metaTitle,
+    description: m.metaDescription,
+    path: PATH,
+    keywords: locale === 'en' ? ['prop firm comparison tool', 'prop firm for SMC', 'prop firm style finder', 'compare prop firms'] : [],
+    category: 'Prop firm tools',
+  });
+  return {
+    ...base,
+    alternates: localeAlternates(locale, PATH),
+    openGraph: { ...base.openGraph, url: `${SITE_URL}${localePath(locale, PATH)}`, locale: OG_LOCALE[locale] },
+  };
+}
+
+export default async function OutilsPage({ params }: Props) {
+  const { locale: raw } = await params;
+  const locale: Locale = isLocale(raw) ? raw : 'en';
+  const t = getMessages(locale);
+  const m = getToolsMessages(locale);
+  const L = (path: string) => localePath(locale, path);
+
   return (
     <>
       <PageStructuredData
         type="WebPage"
-        name="Prop firm comparison tools"
-        description={TOOLS_DESCRIPTION}
-        path="/tools"
-        breadcrumbLabel="Tools"
+        name={m.schemaName}
+        description={m.metaDescription}
+        path={L(PATH)}
+        breadcrumbLabel={m.breadcrumb}
         dateModified="2026-07-13"
+        inLanguage={HTML_LANG[locale]}
+        home={{ label: t.guide.breadcrumbHome, url: `${SITE_URL}${L('/')}` }}
         items={[
-          {
-            name: 'Prop Firm Comparator',
-            path: '/prop-firm-comparison',
-            description: 'Filter and compare scores, rules, payout risk, legal evidence and community signals.',
-          },
-          {
-            name: 'Prop Firm Research Guides',
-            path: '/guides',
-            description: 'Find source-backed answers by rule, risk, trading style and firm.',
-          },
+          { name: m.schemaComparatorName, path: L('/prop-firm-comparison'), description: m.schemaComparatorText },
+          { name: m.schemaGuidesName, path: L('/guides'), description: m.schemaGuidesText },
         ]}
       />
-      <OutilsClient />
+      <OutilsClient m={m} values={t.values} radarLabels={{ ...t.firm.relradar, values: t.values }} locale={locale} />
     </>
   );
 }

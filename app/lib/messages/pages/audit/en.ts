@@ -1,0 +1,140 @@
+/** /audit interface and PropRadar-written case-file summaries (English, source of the other languages). */
+const audit = {
+  metaTitle: 'Prop Firm Source Audit: Evidence and Legal Checks',
+  metaDescription:
+    'Audit PropRadar sources, legal entities, regulator checks and proof depth across verified, partial and watchlist prop-firm profiles.',
+  schemaName: 'Prop firm source audit',
+  breadcrumb: 'Source audit',
+  eyebrow: 'Public audit',
+  h1: 'Sources, limits and reliability',
+  lead: 'PropRadar does not mix a fully verified profile with an entry added for monitoring. Each firm keeps a visible audit level, consulted sources and signals still needing reinforcement.',
+  ctaCompare: 'Compare firms',
+  ctaRules: 'View rules',
+  methodEyebrow: 'PropRadar method',
+  method: [
+    'Official sources for prices, rules and products.',
+    'Trustpilot separated from commercial scoring, with caution on unverified facts.',
+    'Payout incidents and complaints counted only when a dated public source is linked.',
+    'Legal entity, regulator status and press searches tracked separately from marketing claims.',
+    'Unchecked entries remain visible, but are not recommended by default.',
+  ],
+  coverageAria: 'Audit coverage',
+  statTracked: 'Firms tracked',
+  statMulti: 'Multi-source files',
+  statPartial: 'Partial files',
+  statToAudit: 'To audit',
+  statEntity: 'Entity mapped',
+  statLegalWatch: 'Legal watch',
+  statDeep: '5+ sources',
+  statRegulator: 'Regulator checks',
+  statPress: 'Press searches',
+  legalCheckLink: 'How a legal file is checked',
+  casesEyebrow: 'Dated case files',
+  casesTitle: 'Operational failures need a timeline, not a star rating.',
+  casesNote: '{count} files reconstruct what changed, which source supports it and what remains unproven before an old brand is treated as active again.',
+  datedEvents: 'dated events',
+  sources: 'sources',
+  checked: 'Checked {date}',
+  caseFiles: {
+    myforexfunds: {
+      status: 'Inactive / relaunch watch',
+      question: 'Can My Forex Funds relaunch after the CFTC case?',
+      answer:
+        'A possible relaunch is no longer a purely theoretical claim, but it is not a verified current buying option. The US case was dismissed with prejudice in May 2025 as a case-ending sanction against the CFTC, and an Ontario court later returned access to most assets and client data. Those developments do not replace current program terms, jurisdiction checks, payout mechanics or a live checkout audit.',
+    },
+    'the-funded-trader': {
+      status: 'Active site / legacy obligations watch',
+      question: 'Did The Funded Trader fully resolve its 2024 interruption?',
+      answer:
+        'The site is active again, but an active checkout does not erase the interruption or prove that every legacy obligation was resolved. Financial press documented the March 2024 pause, incomplete recovery, outstanding payouts and account-restoration promises. Current legal terms identify a simulated service and broad enforcement discretion, so new offers and old claims must be evaluated separately.',
+    },
+    'funded-engineer': {
+      status: 'Closed / bankruptcy archive',
+      question: 'Why did Funded Engineer close?',
+      answer:
+        'Funded Engineer permanently ceased operations on July 15, 2024 and said it would file for bankruptcy after restructuring, cost cutting and investment efforts failed. The closure followed earlier technology and brokerage disruptions. The public announcement did not establish how every pending payout or refund would be treated.',
+    },
+    surgetrader: {
+      status: 'Closed / parked-domain archive',
+      question: 'Is SurgeTrader still operating?',
+      answer:
+        'No current operation is verified. SurgeTrader announced that it had closed and ceased all operations on May 24, 2024, one week after public reporting about the loss of its Match-Trader license. The former domain is now parked for sale, so old reviews and any new offer using the name require a fresh ownership check.',
+    },
+    'true-forex-funds': {
+      status: 'Closed / insolvency archive',
+      question: 'What happened to True Forex Funds?',
+      answer:
+        'True Forex Funds permanently closed in May 2024 citing financial insolvency. The final closure followed a February platform-license interruption and an attempted cTrader restart. The firm also appeared on the CFTC RED List; that list identifies registration concerns and is not, by itself, a court finding of a legal violation.',
+    },
+    'skilled-funded-traders': {
+      status: 'Closed / unresolved-obligations archive',
+      question: 'Is Skilled Funded Traders still operating?',
+      answer:
+        'No current operation should be inferred. Finance Magnates and FX News Group documented the immediate suspension of operations and new purchases on March 28, 2024. The exact Easton-linked structure and final treatment of every historical payout or refund remain incomplete in the public file.',
+    },
+  } as Record<string, { status: string; question: string; answer: string }>,
+  latestBrief: 'Latest editorial synthesis',
+  readBrief: 'Read the sourced brief',
+  briefs: {
+    'prop-firm-risk-brief-july-19-2026': {
+      shortTitle: 'Relaunch claims, platform failures and legacy payouts',
+      dek: 'This issue separates legal progress from operational readiness, then traces how platform, broker and technology dependencies became material closure risks for retail prop traders.',
+    },
+  } as Record<string, { shortTitle: string; dek: string }>,
+  coverageEyebrow: 'Coverage',
+  coverageTitle: 'What is already sourced',
+  covOfficial: 'Official website or primary source',
+  covTrustpilot: 'Trustpilot page identified',
+  covEntity: 'Legal entity mapped',
+  covPress: 'Exact-name press / news search logged',
+  covIncidents: 'Documented payout incidents',
+  priorityEyebrow: 'Priority',
+  priorityTitle: 'Next profiles to investigate',
+  legalMapEyebrow: 'Legal map',
+  legalMapTitle: 'Where the firms register their companies.',
+  legalMapNote:
+    'Every country where a tracked firm has a mapped entity. The bar shows the legal-file level PropRadar published for each firm there; country markers only come from official lists.',
+  legalPriorityEyebrow: 'Legal priority',
+  legalPriorityTitle: 'Highest legal files to read first',
+  readingEyebrow: 'Legal reading order',
+  readingTitle: 'How PropRadar reads a firm file',
+  reading: [
+    { title: 'Entity', text: 'Brand name, operating company, address, jurisdiction and registration number.' },
+    { title: 'Regulator', text: 'Broker status, simulated-trading disclaimer, warning lists and company registers.' },
+    { title: 'Terms', text: 'Refunds, chargebacks, payout forfeiture, arbitration, restricted countries and KYC.' },
+    { title: 'External checks', text: 'Independent press, regulator pages, closure notices, lawsuits and exact-name searches.' },
+  ],
+  baseEyebrow: 'Full base',
+  baseTitle: '{count} profiles, visible proof level',
+  latestReview: 'Latest review',
+  tableAria: '{count} prop firm profiles with their proof level',
+  subline: '{status} · {entity} · {count} legal/source link(s)',
+  entityMapped: 'Entity mapped',
+  entityMissing: 'Entity missing',
+  seeOthers: 'See the other {count} profiles in the comparison table',
+  juris: {
+    firm: 'firm',
+    firms: 'firms',
+    entity: 'entity',
+    entities: 'entities',
+    barAria: 'Legal files of these firms: {list}',
+    heavy: '{count} with a High or Critical legal file',
+    noHeavy: 'No High or Critical legal file',
+    noRegulator: 'No regulator listed',
+    seeFirms: 'See the firms',
+    compareFirms: 'Compare these firms →',
+    legendLow: 'Low legal file',
+    legendMedium: 'Medium or to audit',
+    legendHigh: 'High or Critical',
+    showMore: 'Show {count} more countries',
+    noteUnknownOne: '{count} more entity across {firms} firms has no country identified yet.',
+    noteUnknown: '{count} more entities across {firms} firms have no country identified yet.',
+    noteBar: 'The bar shows the legal-file level PropRadar published for each firm registered there, not a rating of the country.',
+    noteMarkers: 'Official-list markers: {list}.',
+    noteNone: 'None of these countries is on the {fatf} list ({fatfDate}) or the {eu} ({euDate}).',
+  },
+};
+
+export type AuditMessages = typeof audit;
+export type JurisdictionLabels = AuditMessages['juris'];
+export default audit;
