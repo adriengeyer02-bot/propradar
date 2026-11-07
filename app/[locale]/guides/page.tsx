@@ -25,7 +25,7 @@ import { buildGuideCover } from '../../lib/guideCovers';
 import GuideCover, { type CoverLabels } from '../../components/guide-visuals/GuideCover';
 import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages } from '../../lib/messages';
-import { getGuideTranslation, guideLocales, localizedGuidePath } from '../../lib/guideI18n';
+import { getGuideTranslation, guideCardText, guideLocales, localizedGuidePath } from '../../lib/guideI18n';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -233,6 +233,7 @@ function formatGuideDate(date: Date) {
 function buildGuideCard(guide: SeoGuide, locale: Locale = 'en'): GuideLibraryItem {
   const display = getSeoGuideDisplay(guide);
   const tr = getGuideTranslation(locale, guide.slug);
+  const text = guideCardText(locale, guide);
   const types = getMessages(locale).guide.types;
   const linkedFirms = selectGuideFirms(guide, propFirms.length);
   const type = guideType(guide);
@@ -240,9 +241,9 @@ function buildGuideCard(guide: SeoGuide, locale: Locale = 'en'): GuideLibraryIte
 
   return {
     path: localizedGuidePath(locale, guide),
-    title: tr?.title ?? display.title,
-    description: tr?.metaDescription ?? display.metaDescription,
-    eyebrow: tr?.eyebrow ?? display.eyebrow,
+    title: text?.title ?? display.title,
+    description: text?.description ?? display.metaDescription,
+    eyebrow: text?.eyebrow ?? display.eyebrow,
     type,
     typeLabel: locale === 'en' ? guideTypeLabels[type] : types[type],
     level: guideLevel(guide),

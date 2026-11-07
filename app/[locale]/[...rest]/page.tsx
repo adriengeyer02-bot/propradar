@@ -131,7 +131,7 @@ export default async function FrArticlePage({ params }: Props) {
           <p>{article.answer}</p>
         </div>
         {article.enPath ? (
-          <a className="guide-lang-switch" href={article.enPath} hrefLang="en">Read this guide in English</a>
+          <a className="guide-lang-switch" href={article.enPath} hrefLang="en">Lire ce guide en anglais</a>
         ) : null}
       </header>
 

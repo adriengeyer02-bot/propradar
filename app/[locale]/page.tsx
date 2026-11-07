@@ -15,6 +15,7 @@ import {
 } from '../lib/propFirms';
 import { getSeoGuideDisplay, getSeoGuidePath, selectGuideFirms, seoGuides } from '../lib/seoGuides';
 import { buildGuideCover } from '../lib/guideCovers';
+import { guideCardText, localizedGuidePath } from '../lib/guideI18n';
 import GuideCover from '../components/guide-visuals/GuideCover';
 import { GuideLogoStrip } from './guides/GuideLibrary';
 import { toEnglishText } from '../lib/i18n';
@@ -55,7 +56,10 @@ export default async function HomePage({ params }: Props) {
     'topstep-vs-apex',
   ].flatMap((slug) => {
     const guide = seoGuides.find((candidate) => candidate.slug === slug);
-    return guide ? [{ guide, displayGuide: getSeoGuideDisplay(guide) }] : [];
+    if (!guide) return [];
+    const display = getSeoGuideDisplay(guide);
+    const text = guideCardText(locale, guide);
+    return [{ guide, displayGuide: text ? { ...display, title: text.title, metaDescription: text.description, eyebrow: text.eyebrow } : display }];
   });
   const latestBriefPath = getEditorialBriefPath(latestEditorialBrief);
   const latestBriefSourceCount = latestEditorialBrief.sections.reduce(
@@ -256,15 +260,15 @@ export default async function HomePage({ params }: Props) {
           <div>
             <div className="eyebrow">{h.guidesEyebrow}</div>
             <h2 id="guides-title">{h.guidesTitle}</h2>
-            {locale !== 'en' ? <p className="home-guides-lang">{h.guidesInEnglish}</p> : null}
+            {locale !== 'en' && homepageGuides.some(({ guide }) => !guideCardText(locale, guide)) ? <p className="home-guides-lang">{h.guidesInEnglish}</p> : null}
           </div>
           <Link href={L('/guides')} className="home-v2-heading-link">{h.allGuides}</Link>
         </div>
 
         <div className="home-guide-grid">
           {homepageGuides.map(({ guide, displayGuide }) => (
-            <Link href={getSeoGuidePath(guide)} className="home-guide-card" key={guide.slug}>
-              <GuideCover data={buildGuideCover(guide)} className="home-guide-cover" />
+            <Link href={localizedGuidePath(locale, guide)} className="home-guide-card" key={guide.slug}>
+              <GuideCover data={buildGuideCover(guide)} className="home-guide-cover" labels={t.cover} />
               <span className="home-guide-content">
                 <small>{displayGuide.eyebrow}</small>
                 <strong>{displayGuide.title}</strong>
