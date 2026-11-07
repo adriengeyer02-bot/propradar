@@ -35,6 +35,13 @@ export type FirmUpdate = {
     trustpilotReviewCount: number;
     trustpilotSourceUrl: string;
     listedDomainWarning: string | null;
+    /**
+     * Date on which Trustpilot was seen showing a rating again after a
+     * guideline-breach notice recorded in addIncidents. The dated incident
+     * stays on the page for the record; the rating in `trustpilotRating` is
+     * shown again. Needs Geyer's approval (the validator flags it).
+     */
+    trustpilotNoticeLifted: string;
     /** Corrects the listed official site (the base profile pointed to the wrong domain). */
     officialWebsite: string;
     drawdownType: PropFirm['drawdownType'];
@@ -195,6 +202,15 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
         next.reviewSignals.trustpilotFlaggedReviewNote = trustpilotNotice;
         next.reviewSignals.trustpilotFlags = ['Trustpilot rating withheld for a guideline breach', ...(next.reviewSignals.trustpilotFlags ?? [])];
       }
+    }
+
+    // A later check found the rating shown again: lift the withheld state, keep the dated incident.
+    if (set.trustpilotNoticeLifted && typeof set.trustpilotRating === 'number') {
+      next.reviewSignals.trustpilotRatingWithheld = false;
+      next.trustpilotRating = set.trustpilotRating;
+      next.reviewSignals.trustpilotFlags = (next.reviewSignals.trustpilotFlags ?? []).filter((flag) => flag !== 'Trustpilot rating withheld for a guideline breach');
+      next.reviewSignals.trustpilotFlaggedReviewNote = `Trustpilot showed a rating again on ${set.trustpilotNoticeLifted}, without the guideline-breach notice. The earlier notice stays listed under incidents with its date.`;
+      refreshTrustpilotText(next, update.reviewedAt);
     }
 
     return next;

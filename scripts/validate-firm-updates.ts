@@ -21,7 +21,7 @@ const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
   'status', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
-  'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee',
+  'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
 const DRAWDOWN_TYPES = new Set(['EOD', 'Trailing', 'Static', 'Hybride']);
 const PRODUCT_TYPES = new Set(['Challenge', 'Instant funding', 'Futures evaluation', 'Scaling']);
@@ -126,6 +126,11 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     else summary.push(`${slug}: score ${beforeScore} -> ${set.score}`);
   }
   if (set.listedDomainWarning && set.listedDomainWarning !== beforeSet.listedDomainWarning) sensitive.push(`${slug}: domain warning`);
+  if (set.trustpilotNoticeLifted !== undefined) {
+    if (!DATE.test(set.trustpilotNoticeLifted)) errors.push(`${where}.set.trustpilotNoticeLifted must be YYYY-MM-DD`);
+    if (typeof set.trustpilotRating !== 'number') errors.push(`${where}.set.trustpilotNoticeLifted needs set.trustpilotRating`);
+    if (set.trustpilotNoticeLifted !== beforeSet.trustpilotNoticeLifted) sensitive.push(`${slug}: Trustpilot notice lifted`);
+  }
   if (set.officialWebsite !== undefined) {
     if (!isHttpsUrl(set.officialWebsite)) errors.push(`${where}.set.officialWebsite must be an https URL`);
     else if (set.officialWebsite !== beforeSet.officialWebsite) sensitive.push(`${slug}: official website -> ${set.officialWebsite}`);
