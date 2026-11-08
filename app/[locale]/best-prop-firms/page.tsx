@@ -21,6 +21,7 @@ import {
   topFirms,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
+import { td } from '../../lib/dataI18n';
 import { GUIDE_EDITORIAL_REFRESH_DATE } from '../../lib/guideVisuals';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { permanentRedirect } from 'next/navigation';
@@ -331,7 +332,7 @@ export default async function BestPropFirmsPage({ params }: Props) {
               key={firm.slug}
               firm={firm}
               rank={index + 1}
-              subline={`${toEnglishText(firm.bestFor)} · ${toEnglishText(firm.auditStatus)} · ${legalSourceCount(firm)} source link(s)`}
+              subline={`${td(locale, toEnglishText(firm.bestFor))} · ${toEnglishText(firm.auditStatus)} · ${legalSourceCount(firm)} source link(s)`}
             />
           ))}
         </div>

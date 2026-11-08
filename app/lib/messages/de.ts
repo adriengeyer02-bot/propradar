@@ -423,7 +423,7 @@ const de: Messages = {
     and: 'und',
     metaBase: 'Ist {name} seriös? {facts}.',
     metaTail: ' Regeln, Auszahlungsbelege und rechtliche Prüfung, alles mit Quellen.',
-    dataNote: 'Die Oberfläche ist übersetzt. Belegte Fakten (Urteil, Regeln, Vorfälle, Verlauf) behalten den englischen Wortlaut ihrer Quellen.',
+    dataNote: "Regeln, Urteile und die wichtigsten Hinweise sind aus der englischen Firmenakte übersetzt. Zitate offizieller Seiten und der Änderungsverlauf behalten ihren Originalwortlaut; maßgeblich ist die englische Seite.",
     allFirms: 'Alle Firmen',
     founded: 'gegründet {year}',
     risk: {

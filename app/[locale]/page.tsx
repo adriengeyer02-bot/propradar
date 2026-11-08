@@ -19,6 +19,7 @@ import { guideCardText, localizedGuidePath } from '../lib/guideI18n';
 import GuideCover from '../components/guide-visuals/GuideCover';
 import { GuideLogoStrip } from './guides/GuideLibrary';
 import { toEnglishText } from '../lib/i18n';
+import { td } from '../lib/dataI18n';
 import FirmRow, { FirmTableHead } from '../components/ui/FirmRow';
 import { SITE_NAME, SITE_URL } from '../lib/site';
 import { countryCounts, documentedClosures, firmsWithCountry, withheldFirms } from '../lib/industryStats';
@@ -182,7 +183,7 @@ export default async function HomePage({ params }: Props) {
         <div className="pr-firm-table" role="table" aria-label={h.rankingAria}>
           <FirmTableHead ui={t} />
           {homeRanking.map((firm, index) => (
-            <FirmRow key={firm.slug} firm={firm} rank={index + 1} subline={locale === 'en' ? toEnglishText(firm.bestFor) : undefined} locale={locale} ui={t} />
+            <FirmRow key={firm.slug} firm={firm} rank={index + 1} subline={td(locale, toEnglishText(firm.bestFor))} locale={locale} ui={t} />
           ))}
         </div>
         <p className="pr-table-more">
