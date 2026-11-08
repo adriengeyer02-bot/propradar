@@ -49,6 +49,7 @@ import { getFirmRelatedGuides, getSeoGuideDisplay, getSeoGuidePath } from '../..
 import { guideCardText, localizedGuidePath } from '../../../lib/guideI18n';
 import { getManualCommunityReview } from '../../../lib/manualCommunityReviews';
 import { getFirmContentLastModified, getFirmSearchProfile } from '../../../lib/firmSearchProfiles';
+import { td } from '../../../lib/dataI18n';
 import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
 import { getAuditCaseFile } from '../../../lib/auditCaseFiles';
@@ -497,6 +498,8 @@ export default async function FirmPage({ params }: Props) {
   const { locale, slug } = await readParams(params);
   const firm = getFirmBySlug(slug);
   const t = getMessages(locale);
+  /** Displayed firm data: English text, then its translation when the data dictionary has one. */
+  const tx = (text?: string | null) => td(locale, toEnglishText(text ?? ''));
   const f = t.firm;
   const v = (value: string) => tv(t, value);
   const L = (path: string) => localePath(locale, path);
@@ -557,10 +560,10 @@ export default async function FirmPage({ params }: Props) {
   const evidenceFallbackPoints = [
     fmt(f.fallback.legal, { level: lower(v(regulatoryAudit.riskLevel)), date: regulatoryAudit.lastChecked, count: sourceCount }),
     isPayoutRiskAssessed(firm)
-      ? fmt(f.fallback.payout, { level: lower(v(toEnglishText(firm.reviewSignals.payoutRisk))), basis: payoutBasis(firm, f), timing: toEnglishText(firm.payoutDelay) })
-      : fmt(f.fallback.payoutNone, { timing: toEnglishText(firm.payoutDelay) }),
+      ? fmt(f.fallback.payout, { level: lower(v(toEnglishText(firm.reviewSignals.payoutRisk))), basis: payoutBasis(firm, f), timing: tx(firm.payoutDelay) })
+      : fmt(f.fallback.payoutNone, { timing: tx(firm.payoutDelay) }),
     fmt(f.fallback.rules, {
-      drawdown: isProvisional(firm, 'drawdownType') ? f.fallback.drawdownVerify : fmt(f.fallback.drawdown, { type: v(toEnglishText(firm.drawdownType) === 'Hybride' ? 'Hybrid' : toEnglishText(firm.drawdownType)) }),
+      drawdown: isProvisional(firm, 'drawdownType') ? f.fallback.drawdownVerify : fmt(f.fallback.drawdown, { type: v(toEnglishText(firm.drawdownType) === 'Hybride' ? 'Hybrid' : tx(firm.drawdownType)) }),
       news: lower(v(toEnglishText(firm.newsTrading))),
       count: firm.products.length,
     }),
@@ -678,7 +681,7 @@ export default async function FirmPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: searchProfile?.heading ?? `${firm.name} PropRadar review`,
-    description: searchProfile?.summary ?? toEnglishText(firm.verdict),
+    description: searchProfile?.summary ?? tx(firm.verdict),
     datePublished: FIRM_LIBRARY_PUBLISHED_AT,
     dateModified: contentLastModified,
     image: auditCaseFile
@@ -718,7 +721,7 @@ export default async function FirmPage({ params }: Props) {
     },
     datePublished: FIRM_LIBRARY_PUBLISHED_AT,
     dateModified: contentLastModified,
-    reviewBody: toEnglishText(firm.verdict),
+    reviewBody: tx(firm.verdict),
     inLanguage: 'en',
     citation: evidenceSourceUrls,
     reviewRating: {
@@ -733,8 +736,8 @@ export default async function FirmPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: primaryProduct ? `${firm.name} - ${primaryProduct.name}` : `${firm.name} prop firm program`,
-    description: toEnglishText(primaryProduct?.description ?? firm.verdict),
-    category: `${firm.styles.map((style) => toEnglishText(style)).join(', ')} prop firm program`,
+    description: tx(primaryProduct?.description ?? firm.verdict),
+    category: `${firm.styles.map((style) => tx(style)).join(', ')} prop firm program`,
     brand: {
       '@type': 'Brand',
       name: firm.name,
@@ -807,7 +810,7 @@ export default async function FirmPage({ params }: Props) {
           <div className="pr-firm-identity">
             <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
             <div>
-              <div className="eyebrow">{toEnglishText(firm.headquarters)} · {fmt(f.founded, { year: firm.founded })}</div>
+              <div className="eyebrow">{tx(firm.headquarters)} · {fmt(f.founded, { year: firm.founded })}</div>
               <h1 className={firmTitleClass}>{firm.name}</h1>
               <div className="pr-firm-tags">
                 <span className={`pr-tag pr-tone-${statusTone(firm.status)}`}>{v(operationalStatusLabel(firm))}</span>
@@ -826,7 +829,7 @@ export default async function FirmPage({ params }: Props) {
               <strong>{f.domainWarning}</strong> {firm.listedDomainWarning}
             </p>
           ) : (
-            <p className="pr-firm-verdict">{toEnglishText(firm.verdict)}</p>
+            <p className="pr-firm-verdict">{tx(firm.verdict)}</p>
           )}
 
           <aside className="pr-firm-scorecard" aria-label={fmt(f.scoreAria, { name: firm.name })}>
@@ -856,7 +859,7 @@ export default async function FirmPage({ params }: Props) {
           <div><dt>{f.facts.proof}</dt><dd>{v(toEnglishText(firm.auditStatus))}</dd></div>
           <div><dt>{f.facts.lastReview}</dt><dd><ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} /></dd></div>
           {isPayoutDelayUnknown(firm) ? null : (
-            <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={toEnglishText(firm.payoutDelay)} label={f.details} /></dd></div>
+            <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
           )}
         </dl>
 
@@ -928,17 +931,17 @@ export default async function FirmPage({ params }: Props) {
                   <span className="pr-tag">{v(product.type)}</span>
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
-                <h3>{toEnglishText(product.name)}</h3>
-                <p className="muted">{toEnglishText(product.description)}</p>
-                <ChallengePath product={product} labels={f.path} />
+                <h3>{tx(product.name)}</h3>
+                <p className="muted">{tx(product.description)}</p>
+                <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
                 <dl className="pr-product-meta">
-                  <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => toEnglishText(platform)).join(' · ')}</dd></div>
-                  <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => toEnglishText(asset)).join(' · ')}</dd></div>
+                  <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
+                  <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
                 </dl>
                 {product.hasConsistencyRule ? (
                   <p className="pr-product-rule pr-tone-watch">
                     <span className="pr-pip-dot" aria-hidden="true" />
-                    {toEnglishText(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
+                    {tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
                   </p>
                 ) : (
                   <p className="pr-product-rule pr-tone-good">
@@ -1090,7 +1093,7 @@ export default async function FirmPage({ params }: Props) {
         </section>
         {firm.commercialNote ? (
           <p className="pr-firm-disclosure">
-            <strong>{f.commercial}</strong> {toEnglishText(firm.commercialNote)}
+            <strong>{f.commercial}</strong> {tx(firm.commercialNote)}
           </p>
         ) : null}
 
@@ -1185,14 +1188,14 @@ export default async function FirmPage({ params }: Props) {
             <span>{f.checkedLabel} <time dateTime={regulatoryAudit.lastChecked}>{regulatoryAudit.lastChecked}</time></span>
           </div>
         </header>
-        <p className="pr-section-lead">{toEnglishText(regulatoryAudit.summary)}</p>
+        <p className="pr-section-lead">{tx(regulatoryAudit.summary)}</p>
 
         <EntityChain firmName={firm.name} entities={regulatoryAudit.entities} labels={f.chain} auditHref={`${L('/audit')}#jurisdictions`} locale={locale} />
 
         <div className="pr-dossier">
-          <DossierGroup title={f.redFlags} empty={f.nothingRecorded} items={regulatoryAudit.redFlags} tone={regulatoryAudit.redFlags.length ? 'risk' : 'good'} open />
-          <DossierGroup title={f.regulatorStatus} empty={f.nothingRecorded} items={regulatoryAudit.regulatoryStatus} />
-          <DossierGroup title={f.complaints} empty={f.nothingRecorded} items={regulatoryAudit.complaintsAndDisputes} />
+          <DossierGroup translate={tx} title={f.redFlags} empty={f.nothingRecorded} items={regulatoryAudit.redFlags} tone={regulatoryAudit.redFlags.length ? 'risk' : 'good'} open />
+          <DossierGroup translate={tx} title={f.regulatorStatus} empty={f.nothingRecorded} items={regulatoryAudit.regulatoryStatus} />
+          <DossierGroup translate={tx} title={f.complaints} empty={f.nothingRecorded} items={regulatoryAudit.complaintsAndDisputes} />
           <details className="pr-dossier-group">
             <summary>
               <span className="pr-dossier-count">{(regulatoryAudit.sources.length ? regulatoryAudit.sources : firm.sources).length}</span>
@@ -1203,8 +1206,8 @@ export default async function FirmPage({ params }: Props) {
                 {(regulatoryAudit.sources.length ? regulatoryAudit.sources : firm.sources).map((source) => (
                   <li key={source.url}>
                     {isBlockedFirmUrl(firm, source.url)
-                      ? <span>{toEnglishText(source.label)} {f.notLinked}</span>
-                      : <a href={source.url} target="_blank" rel={linkRel(source.url)}>{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
+                      ? <span>{tx(source.label)} {f.notLinked}</span>
+                      : <a href={source.url} target="_blank" rel={linkRel(source.url)}>{tx(source.label)} <span>{sourceDomain(source.url)}</span></a>}
                   </li>
                 ))}
               </ul>
@@ -1268,7 +1271,7 @@ export default async function FirmPage({ params }: Props) {
               <span className="pr-community-links">
                 {f.readYourself}
                 {communitySearchLinks.map((link) => (
-                  <a key={link.url} href={link.url} target="_blank" rel="noreferrer" title={toEnglishText(link.label)}>
+                  <a key={link.url} href={link.url} target="_blank" rel="noreferrer" title={tx(link.label)}>
                     {link.network} {/payout/i.test(link.label) ? f.payouts : f.reviews}
                   </a>
                 ))}
@@ -1278,10 +1281,10 @@ export default async function FirmPage({ params }: Props) {
         </div>
 
         <blockquote className="pr-verdict">
-          <p>{toEnglishText(firm.reviewSignals.radarVerdict)}</p>
+          <p>{tx(firm.reviewSignals.radarVerdict)}</p>
           {(firm.reviewSignals.confidenceDrivers ?? []).length ? (
             <footer>
-              {(firm.reviewSignals.confidenceDrivers ?? []).map((driver) => <span className="pr-tag" key={driver}>{toEnglishText(driver)}</span>)}
+              {(firm.reviewSignals.confidenceDrivers ?? []).map((driver) => <span className="pr-tag" key={driver}>{tx(driver)}</span>)}
             </footer>
           ) : null}
         </blockquote>
@@ -1305,7 +1308,7 @@ export default async function FirmPage({ params }: Props) {
                     ? <span><strong>{firm.reviewSignals.trustpilotFlaggedReviewCount}</strong> {f.countedAlerts}</span>
                     : <span>{f.alertsNotCounted}</span>}
               </div>
-              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{toEnglishText(firm.reviewSignals.trustpilotNote)}</p>
+              <p className="muted" style={{ marginTop: 12, marginBottom: 0 }}>{tx(firm.reviewSignals.trustpilotNote)}</p>
               {firm.reviewSignals.trustpilotSourceUrl ? (
                 <a href={firm.reviewSignals.trustpilotSourceUrl} target="_blank" rel="noreferrer" className="quality-tag">
                   {f.viewTrustpilot}
@@ -1339,10 +1342,10 @@ export default async function FirmPage({ params }: Props) {
             <div className="signal-explain-card">
               <div className="eyebrow">{f.filteredTrustpilot}</div>
               <p className="muted">
-                {toEnglishText(firm.reviewSignals.trustpilotFlaggedReviewNote)}
+                {tx(firm.reviewSignals.trustpilotFlaggedReviewNote)}
               </p>
               <ul className="risk-list">
-                {(firm.reviewSignals.trustpilotFlags ?? []).map((flag) => <li key={flag}>{toEnglishText(flag)}</li>)}
+                {(firm.reviewSignals.trustpilotFlags ?? []).map((flag) => <li key={flag}>{tx(flag)}</li>)}
               </ul>
             </div>
             <div className="signal-explain-card">
@@ -1426,31 +1429,31 @@ export default async function FirmPage({ params }: Props) {
         </header>
         <div className="pr-sources-grid">
           <div className="pr-sources-main">
-            <p className="pr-section-lead">{toEnglishText(firm.auditSummary)}</p>
+            <p className="pr-section-lead">{tx(firm.auditSummary)}</p>
             {firm.auditSourcesChecked.length ? (
               <p className="pr-checked-channels">
                 <span>{f.checkedLabel}</span>
-                {firm.auditSourcesChecked.map((source) => <span className="pr-tag" key={source}>{toEnglishText(source)}</span>)}
+                {firm.auditSourcesChecked.map((source) => <span className="pr-tag" key={source}>{tx(source)}</span>)}
               </p>
             ) : null}
 
             <h3>{f.incidentsTitle}</h3>
             {hasConcretePayoutIssues(firm) ? (
               <ul className="pr-check-list pr-incident-list">
-                {documentedIncidents(firm).map((incident) => <li key={incident}>{toEnglishText(incident)}</li>)}
+                {documentedIncidents(firm).map((incident) => <li key={incident}>{tx(incident)}</li>)}
               </ul>
             ) : (
               <p className="pr-fineprint">{f.noIncidents}</p>
             )}
-            <p className="pr-fineprint">{toEnglishText(firm.communitySignal)}</p>
+            <p className="pr-fineprint">{tx(firm.communitySignal)}</p>
 
             <h3>{f.sourcesToCheck}</h3>
             <ul className="pr-source-list">
               {firm.sources.map((source) => (
                 <li key={source.url}>
                   {isBlockedFirmUrl(firm, source.url)
-                    ? <span>{toEnglishText(source.label)}</span>
-                    : <a href={source.url} target="_blank" rel={linkRel(source.url)}>{toEnglishText(source.label)} <span>{sourceDomain(source.url)}</span></a>}
+                    ? <span>{tx(source.label)}</span>
+                    : <a href={source.url} target="_blank" rel={linkRel(source.url)}>{tx(source.label)} <span>{sourceDomain(source.url)}</span></a>}
                 </li>
               ))}
             </ul>
@@ -1485,12 +1488,14 @@ function DossierGroup({
   items,
   tone,
   open = false,
+  translate,
 }: {
   title: string;
   empty: string;
   items: string[];
   tone?: Tone;
   open?: boolean;
+  translate?: (text: string) => string;
 }) {
   return (
     <details className={`pr-dossier-group${tone ? ` pr-tone-${tone}` : ''}`} open={open && items.length > 0}>
@@ -1500,7 +1505,7 @@ function DossierGroup({
       </summary>
       {items.length ? (
         <ul>
-          {items.map((item) => <li key={item}>{toEnglishText(item)}</li>)}
+          {items.map((item) => <li key={item}>{translate ? translate(item) : toEnglishText(item)}</li>)}
         </ul>
       ) : (
         <p className="pr-fineprint">{empty}</p>

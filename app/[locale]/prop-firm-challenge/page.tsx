@@ -15,6 +15,7 @@ import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Loca
 import { fmt, getMessages, tv, type Messages } from '../../lib/messages';
 import { localizedGuidePath } from '../../lib/guideI18n';
 import { rich } from '../../lib/rich';
+import { td } from '../../lib/dataI18n';
 import IntentLink from '../../components/IntentLink';
 
 const PATH = '/prop-firm-challenge';
@@ -80,12 +81,12 @@ function jsonLd(data: unknown) {
 }
 
 /** "variable by program" style values are shown as a pointer to the firm file, not as a rule. */
-function ruleCell(value: string | undefined, t: Messages) {
+function ruleCell(value: string | undefined, t: Messages, locale: Locale) {
   const text = (value ?? '').trim();
   if (!text || /^(variable|varies|program-specific|depends on the selected plan|account-specific|specific futures rules|futures-specific)/i.test(text)) {
     return <span className="pr-muted">{t.challenge.varies}</span>;
   }
-  return tv(t, text);
+  return tv(t, td(locale, text));
 }
 
 function accountRange(product: Product, t: Messages) {
@@ -137,9 +138,9 @@ function ChallengeTable({ model, caption, t, locale }: { model: Model; caption: 
               </th>
               <td className="pr-num">{formatUsd(product.entryFeeMin as number)}</td>
               <td className="pr-nowrap">{accountRange(product, t)}</td>
-              <td>{ruleCell(product.profitTarget, t)}</td>
-              <td>{ruleCell(product.maxDailyLoss, t)}</td>
-              <td>{ruleCell(product.maxDrawdown, t)}</td>
+              <td>{ruleCell(product.profitTarget, t, locale)}</td>
+              <td>{ruleCell(product.maxDailyLoss, t, locale)}</td>
+              <td>{ruleCell(product.maxDrawdown, t, locale)}</td>
               <td><time dateTime={firm.lastReviewed}>{firm.lastReviewed}</time></td>
             </tr>
           ))}
@@ -162,6 +163,7 @@ export default async function PropFirmChallengePage({ params }: Props) {
   const c = t.challenge;
   const L = (path: string) => localePath(locale, path);
   const G = (slug: string) => localizedGuidePath(locale, slug);
+  const dt = (text?: string) => td(locale, text);
   const pageUrl = `${SITE_URL}${L(PATH)}`;
   const ftmo = example('ftmo');
   const fivers = example('the5ers');
@@ -287,9 +289,9 @@ export default async function PropFirmChallengePage({ params }: Props) {
                       {index ? c.and : ''}
                       {rich(c.twoExample, {
                         link: exampleLink(row),
-                        target: tv(t, row.product.profitTarget),
-                        daily: tv(t, row.product.maxDailyLoss),
-                        max: tv(t, row.product.maxDrawdown),
+                        target: tv(t, dt(row.product.profitTarget)),
+                        daily: tv(t, dt(row.product.maxDailyLoss)),
+                        max: tv(t, dt(row.product.maxDrawdown)),
                       })}
                     </span>
                   )),
@@ -303,7 +305,7 @@ export default async function PropFirmChallengePage({ params }: Props) {
             {cti1 ? (
               <>
                 {' '}
-                {rich(c.oneExample, { link: exampleLink(cti1), target: tv(t, cti1.product.profitTarget), max: tv(t, cti1.product.maxDrawdown) })}
+                {rich(c.oneExample, { link: exampleLink(cti1), target: tv(t, dt(cti1.product.profitTarget)), max: tv(t, dt(cti1.product.maxDrawdown)) })}
               </>
             ) : null}
           </p>

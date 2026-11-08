@@ -427,7 +427,7 @@ const en = {
     and: 'and',
     metaBase: 'Is {name} legit? {facts}.',
     metaTail: ' Rules, payout evidence and legal checks, all sourced.',
-    dataNote: 'The interface is translated. Sourced facts (verdict, rules, incidents, history) keep the English wording of their sources.',
+    dataNote: "Rules, verdicts and the main notes are translated from the English firm file. Quotes from official pages and the update history keep their original wording; the English page is the reference.",
     allFirms: 'All firms',
     founded: 'founded {year}',
     risk: {

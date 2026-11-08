@@ -423,7 +423,7 @@ const zh: Messages = {
     and: '和',
     metaBase: '{name} 可靠吗？{facts}。',
     metaTail: '规则、出金证据和法律核查，均附来源。',
-    dataNote: '界面已翻译。有来源的事实（结论、规则、事件、历史）保留其来源的英文原文。',
+    dataNote: "规则、结论和主要说明均译自英文档案。官方页面的引文和更新记录保留原文措辞;以英文页面为准。",
     allFirms: '全部公司',
     founded: '成立于 {year} 年',
     risk: {

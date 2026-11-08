@@ -423,7 +423,7 @@ const fr: Messages = {
     and: 'et',
     metaBase: '{name} est-elle fiable ? {facts}.',
     metaTail: ' Règles, preuves de paiement et vérifications juridiques, toutes sourcées.',
-    dataNote: 'L\'interface est traduite. Les faits sourcés (verdict, règles, incidents, historique) gardent la formulation anglaise de leurs sources.',
+    dataNote: "Les règles, verdicts et principales notes sont traduits depuis la fiche anglaise. Les citations des pages officielles et l'historique des mises à jour gardent leur formulation d'origine ; la page anglaise fait référence.",
     allFirms: 'Toutes les firmes',
     founded: 'fondée en {year}',
     risk: {

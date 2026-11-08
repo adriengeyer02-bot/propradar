@@ -511,7 +511,7 @@ const es: Messages = {
     "and": "y",
     "metaBase": "¿Es fiable {name}? {facts}.",
     "metaTail": " Reglas, pruebas de pago y verificación legal, todo con fuentes.",
-    "dataNote": "La interfaz está traducida. Los datos con fuente (veredicto, reglas, incidentes, historial) conservan la redacción en inglés de sus fuentes.",
+    "dataNote": "Las reglas, los veredictos y las notas principales se traducen de la ficha en inglés. Las citas de páginas oficiales y el historial de cambios conservan su redacción original; la página en inglés es la referencia.",
     "allFirms": "Todas las firmas",
     "founded": "fundada en {year}",
     "risk": {

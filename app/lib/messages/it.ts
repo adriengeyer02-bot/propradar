@@ -423,7 +423,7 @@ const it: Messages = {
     and: 'e',
     metaBase: '{name} è affidabile? {facts}.',
     metaTail: ' Regole, prove di pagamento e verifiche legali, tutte con fonti.',
-    dataNote: 'L\'interfaccia è tradotta. I fatti documentati (giudizio, regole, incidenti, cronologia) mantengono la formulazione inglese delle loro fonti.',
+    dataNote: "Regole, verdetti e note principali sono tradotti dalla scheda inglese. Le citazioni delle pagine ufficiali e la cronologia degli aggiornamenti mantengono la formulazione originale; fa fede la pagina inglese.",
     allFirms: 'Tutte le firm',
     founded: 'fondata nel {year}',
     risk: {
