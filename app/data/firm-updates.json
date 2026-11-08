@@ -171,7 +171,7 @@
       ]
     },
     "apex-trader-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -189,11 +189,19 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.2 TrustScore (unchanged) across 21,625 reviews.",
+          "source": "https://www.trustpilot.com/review/apextraderfunding.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.2,
-        "trustpilotReviewCount": 21428,
+        "trustpilotReviewCount": 21625,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
       },
       "addIncidents": [
@@ -271,7 +279,7 @@
       ]
     },
     "bespoke-funding-program": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -289,11 +297,20 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.1 TrustScore (previously 3.2) across 1,185 reviews. The page also states: \"This company has received regulatory attention.\" (already recorded).",
+          "source": "https://www.trustpilot.com/review/bespokefundingprogram.com",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
+          ]
         }
       ],
       "set": {
-        "trustpilotRating": 3.2,
-        "trustpilotReviewCount": 1193,
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 1185,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/bespokefundingprogram.com"
       },
       "addIncidents": [
@@ -329,15 +346,23 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.1 TrustScore (unchanged) across 2,151 reviews.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
       ],
       "set": {
         "trustpilotRating": 3.1,
-        "trustpilotReviewCount": 2149,
+        "trustpilotReviewCount": 2151,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/blueguardian.com",
         "trustpilotNoticeLifted": "2026-11-07"
       }
@@ -492,10 +517,10 @@
       ]
     },
     "breakout-prop": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 1226,
+        "trustpilotReviewCount": 1273,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com",
         "drawdownType": "Static",
         "payoutDelay": "on demand, 24/7, $50 minimum after split; first payout can be requested the day the account is funded"
@@ -530,6 +555,14 @@
           "source": "https://tools.breakoutprop.com/breakout",
           "fields": [
             "products"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore (unchanged) across 1,273 reviews.",
+          "source": "https://www.trustpilot.com/review/breakoutprop.com",
+          "fields": [
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -633,7 +666,7 @@
       ]
     },
     "bulenox": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -643,16 +676,25 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.6 TrustScore (previously 4.7) across 1,834 reviews.",
+          "source": "https://www.trustpilot.com/review/bulenox.com",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
+          ]
         }
       ],
       "set": {
-        "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 1826,
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 1834,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/bulenox.com"
       }
     },
     "city-traders-imperium": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -662,11 +704,20 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore (previously 4.2) across 1,641 reviews.",
+          "source": "https://www.trustpilot.com/review/citytradersimperium.com",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
+          ]
         }
       ],
       "set": {
-        "trustpilotRating": 4.2,
-        "trustpilotReviewCount": 1631,
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 1641,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com"
       }
     },
@@ -812,7 +863,7 @@
       ]
     },
     "earn2trade": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -822,16 +873,24 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore (unchanged) across 5,079 reviews.",
+          "source": "https://www.trustpilot.com/review/www.earn2trade.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 5046,
+        "trustpilotReviewCount": 5079,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com"
       }
     },
     "elite-trader-funding": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -849,11 +908,19 @@
           "fields": [
             "eaAllowed"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.8 TrustScore (unchanged) across 1,174 reviews.",
+          "source": "https://www.trustpilot.com/review/elitetraderfunding.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.8,
-        "trustpilotReviewCount": 1158,
+        "trustpilotReviewCount": 1174,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/elitetraderfunding.com",
         "eaAllowed": "No"
       },
@@ -865,7 +932,7 @@
       ]
     },
     "fast-track-trading": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -881,6 +948,14 @@
           "source": "https://www.trustpilot.com/review/fasttracktrading.net",
           "fields": [
             "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.1 TrustScore (unchanged) across 819 reviews.",
+          "source": "https://www.trustpilot.com/review/fasttracktrading.net",
+          "fields": [
             "trustpilotReviewCount"
           ]
         }
@@ -900,7 +975,7 @@
       ],
       "set": {
         "trustpilotRating": 3.1,
-        "trustpilotReviewCount": 821,
+        "trustpilotReviewCount": 819,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fasttracktrading.net"
       }
     },
@@ -972,7 +1047,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -982,11 +1057,19 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore (unchanged) across 1,434 reviews.",
+          "source": "https://www.trustpilot.com/review/fintokei.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 1410,
+        "trustpilotReviewCount": 1434,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com"
       }
     },
@@ -1046,10 +1129,10 @@
       ]
     },
     "ftmo": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.8,
-        "trustpilotReviewCount": 56056,
+        "trustpilotReviewCount": 56103,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftmo.com",
         "payoutDelay": "14-day reward cycle; review within 1-2 business days, payment typically 1-2 business days after invoice approval"
       },
@@ -1076,6 +1159,14 @@
         {
           "date": "2026-11-07",
           "summary": "Trustpilot refreshed: 4.8 TrustScore (unchanged) across 56,056 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/ftmo.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.8 TrustScore (unchanged) across 56,103 reviews.",
           "source": "https://www.trustpilot.com/review/ftmo.com",
           "fields": [
             "trustpilotReviewCount"
@@ -1358,12 +1449,20 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore (unchanged) across 83,306 reviews.",
+          "source": "https://www.trustpilot.com/review/fundednext.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 83250,
+        "trustpilotReviewCount": 83306,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundednext.com"
       },
       "addSources": [
@@ -1469,7 +1568,7 @@
       ]
     },
     "funding-pips": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1479,11 +1578,20 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.4 TrustScore (previously 4.5) across 72,707 reviews.",
+          "source": "https://www.trustpilot.com/review/fundingpips.com",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
+          ]
         }
       ],
       "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 71036,
+        "trustpilotRating": 4.4,
+        "trustpilotReviewCount": 72707,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com"
       }
     },
@@ -1740,10 +1848,10 @@
       ]
     },
     "fxify": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 6452,
+        "trustpilotReviewCount": 6619,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com",
         "priceFrom": 59
       },
@@ -1763,6 +1871,14 @@
           "source": "https://fxify.com/programs/lightning-challenge/",
           "fields": [
             "priceFrom"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore (unchanged) across 6,619 reviews.",
+          "source": "https://www.trustpilot.com/review/fxify.com",
+          "fields": [
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -2182,7 +2298,7 @@
       ]
     },
     "lark-funding": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2200,11 +2316,19 @@
           "fields": [
             "newsTrading"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.3 TrustScore (unchanged) across 519 reviews.",
+          "source": "https://www.trustpilot.com/review/larkfunding.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 523,
+        "trustpilotReviewCount": 519,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com",
         "newsTrading": "Allowed"
       }
@@ -2496,10 +2620,10 @@
       ]
     },
     "myfundedfutures": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.9,
-        "trustpilotReviewCount": 22576,
+        "trustpilotReviewCount": 22813,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com"
       },
       "changelog": [
@@ -2509,6 +2633,14 @@
           "source": "https://www.trustpilot.com/review/myfundedfutures.com",
           "fields": [
             "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.9 TrustScore (unchanged) across 22,813 reviews.",
+          "source": "https://www.trustpilot.com/review/myfundedfutures.com",
+          "fields": [
             "trustpilotReviewCount"
           ]
         }
@@ -2625,10 +2757,10 @@
       ]
     },
     "oneup-trader": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 2793,
+        "trustpilotReviewCount": 2814,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com",
         "profitSplit": 90,
         "payoutDelay": "one withdrawal per calendar week, processed the same day once the withdrawal threshold is met ($1,000 minimum); extra withdrawals in the same week carry a 10% priority fee",
@@ -2669,6 +2801,14 @@
           "source": "https://www.oneuptrader.com/",
           "fields": [
             "products"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore (unchanged) across 2,814 reviews.",
+          "source": "https://www.trustpilot.com/review/oneuptrader.com",
+          "fields": [
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -3098,10 +3238,10 @@
       ]
     },
     "take-profit-trader": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.4,
-        "trustpilotReviewCount": 10977,
+        "trustpilotReviewCount": 11175,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com"
       },
       "changelog": [
@@ -3119,6 +3259,14 @@
             "trustpilotRating",
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.4 TrustScore (unchanged) across 11,175 reviews.",
+          "source": "https://www.trustpilot.com/review/takeprofittrader.com",
+          "fields": [
+            "trustpilotReviewCount"
           ]
         }
       ],
@@ -3255,10 +3403,10 @@
       ]
     },
     "the5ers": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 41598,
+        "trustpilotReviewCount": 41676,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com",
         "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval"
       },
@@ -3285,6 +3433,14 @@
         {
           "date": "2026-11-07",
           "summary": "Trustpilot refreshed: 4.7 TrustScore (unchanged) across 41,598 reviews, same figures on uk.trustpilot.com. No Trustpilot warning.",
+          "source": "https://www.trustpilot.com/review/the5ers.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.7 TrustScore (unchanged) across 41,676 reviews.",
           "source": "https://www.trustpilot.com/review/the5ers.com",
           "fields": [
             "trustpilotReviewCount"
@@ -3347,7 +3503,7 @@
       ]
     },
     "tickticktrader": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3357,11 +3513,19 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.4 TrustScore (unchanged) across 6,636 reviews.",
+          "source": "https://www.trustpilot.com/review/tickticktrader.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.4,
-        "trustpilotReviewCount": 6639,
+        "trustpilotReviewCount": 6636,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tickticktrader.com"
       }
     },
@@ -3502,10 +3666,10 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 3.7,
-        "trustpilotReviewCount": 15050,
+        "trustpilotReviewCount": 15052,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com"
       },
       "addSources": [
@@ -3543,6 +3707,14 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.7 TrustScore (unchanged) across 15,052 reviews.",
+          "source": "https://www.trustpilot.com/review/topstep.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ]
     },
@@ -3567,13 +3739,21 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.5 TrustScore (unchanged) across 969 reviews.",
+          "source": "https://www.trustpilot.com/review/tradethepool.com",
+          "fields": [
+            "trustpilotReviewCount"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "profitSplit": 70,
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 964,
+        "trustpilotReviewCount": 969,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
         "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
       },
@@ -3725,10 +3905,10 @@
       ]
     },
     "tradeify": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-11-08",
       "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 5469,
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 6894,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co"
       },
       "changelog": [
@@ -3746,6 +3926,15 @@
             "trustpilotRating",
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 4.6 TrustScore (previously 4.5) across 6,894 reviews.",
+          "source": "https://www.trustpilot.com/review/tradeify.co",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
           ]
         }
       ],
@@ -3952,10 +4141,10 @@
       ]
     },
     "uprofit-trader": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-08",
       "set": {
-        "trustpilotRating": 3.5,
-        "trustpilotReviewCount": 6555,
+        "trustpilotRating": 3.4,
+        "trustpilotReviewCount": 6554,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com"
       },
       "changelog": [
@@ -3966,6 +4155,15 @@
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot refreshed: 3.4 TrustScore (previously 3.5) across 6,554 reviews.",
+          "source": "https://www.trustpilot.com/review/www.uprofit.com",
+          "fields": [
+            "trustpilotReviewCount",
+            "trustpilotRating"
           ]
         }
       ]
