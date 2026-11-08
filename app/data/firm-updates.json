@@ -207,7 +207,7 @@
       ]
     },
     "aqua-funded": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -216,6 +216,11 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (\"This company’s rating is unavailable due to a breach of our guidelines.\" (1,209 reviews listed)). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/aquafunded.com"
         }
       ],
       "addIncidents": [
@@ -223,7 +228,7 @@
       ]
     },
     "audacity-capital": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-08",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
       ],
@@ -235,6 +240,11 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 293 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/audacity.capital"
         }
       ]
     },
@@ -895,7 +905,7 @@
       }
     },
     "finotive-funding": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-08",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
       ],
@@ -917,6 +927,11 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 1,058 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/finotivefunding.com"
         }
       ],
       "set": {
@@ -976,7 +991,7 @@
       }
     },
     "for-traders": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-08",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
       ],
@@ -998,6 +1013,11 @@
             "payoutDelay",
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (\"This company’s rating is unavailable due to a breach of our guidelines.\" (1,844 reviews listed)). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/fortraders.com"
         }
       ],
       "set": {
@@ -1468,7 +1488,7 @@
       }
     },
     "funding-traders": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-08",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
       ],
@@ -1492,6 +1512,11 @@
             "payoutDelay",
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 3,286 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/fundingtraders.com"
         }
       ],
       "set": {
@@ -2123,7 +2148,7 @@
       ]
     },
     "instant-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "set": {},
       "changelog": [
         {
@@ -2139,6 +2164,11 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 4,379 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/instantfunding.com"
         }
       ],
       "addSources": [
@@ -2282,7 +2312,7 @@
       ]
     },
     "maven-trading": {
-      "reviewedAt": "2026-10-26",
+      "reviewedAt": "2026-11-08",
       "set": {},
       "addIncidents": [
         "Trustpilot's maventrading.com profile, checked on 2026-10-26, displays no TrustScore. Trustpilot's notice (Danish mirror, translated) reads: \"This company's TrustScore is currently unavailable due to a breach of our guidelines\", next to its reminder that companies may not offer incentives or pay to hide reviews. Source: https://dk.trustpilot.com/review/maventrading.com?page=3"
@@ -2295,6 +2325,11 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (\"This company’s rating is unavailable due to a breach of our guidelines.\" and \"We’ve removed a number of fake reviews for this company.\"). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/maventrading.com"
         }
       ]
     },
@@ -2695,7 +2730,7 @@
       ]
     },
     "pipfarm": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2712,6 +2747,11 @@
           "fields": [
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 344 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/pipfarm.com"
         }
       ],
       "addIncidents": [
@@ -3117,7 +3157,7 @@
       ]
     },
     "the-trading-pit": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-08",
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
       ],
@@ -3141,6 +3181,11 @@
             "newsTrading",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 1,086 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/thetradingpit.com"
         }
       ],
       "set": {
@@ -3254,7 +3299,7 @@
       ]
     },
     "thinkcapital": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3272,6 +3317,11 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 605 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
+          "source": "https://www.trustpilot.com/review/thinkcapital.com"
         }
       ],
       "addIncidents": [
