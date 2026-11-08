@@ -171,7 +171,7 @@
       ]
     },
     "apex-trader-funding": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -189,6 +189,14 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Pending lawsuit added as a dated incident: McCrudden v. Apex Trader Funding, Inc. et al., M.D. Fla. 3:26-cv-01073, filed 2026-04-30. Allegations only, pleading stage on the docket read. No score or status change.",
+          "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -197,12 +205,17 @@
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
       },
       "addIncidents": [
-        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid)."
+        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid).",
+        "Court filing: on 2026-04-30 Vincent McCrudden filed a complaint, with a jury demand, against Apex Trader Funding, Inc. and several individuals in the US District Court for the Middle District of Florida (case 3:26-cv-01073); a second amended complaint followed on 2026-06-02. These are allegations; the docket read showed the case at the pleading stage (https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938)."
       ],
       "addSources": [
         {
           "label": "Finance Magnates: Apex payout video-proof requests (29 Aug 2024)",
           "url": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid"
+        },
+        {
+          "label": "Justia docket: McCrudden v. Apex Trader Funding (M.D. Fla. 3:26-cv-01073)",
+          "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938"
         }
       ]
     },
@@ -3130,7 +3143,7 @@
       ]
     },
     "the-funded-trader": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3139,11 +3152,20 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Court order added as a dated incident (D'Arcangelo v. The Funded Trader, W.D. Tex. 1:23-cv-01472, order of 2025-03-21, read on govinfo.gov). No score or status change.",
+          "source": "https://www.govinfo.gov/content/pkg/USCOURTS-txwd-1_23-cv-01472/pdf/USCOURTS-txwd-1_23-cv-01472-1.pdf",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "addIncidents": [
         "Finance Magnates reported on 14 March 2024 that The Funded Trader confirmed it had halted all payouts, citing a \"self-imposed internal audit\" (https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/).",
-        "Finance Magnates reported on 20 November 2024 that the firm said \"900 traders are still awaiting payment\" and had begun releasing paused accounts of $100K and larger (https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp)."
+        "Finance Magnates reported on 20 November 2024 that the firm said \"900 traders are still awaiting payment\" and had begun releasing paused accounts of $100K and larger (https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp).",
+        "Court order: on 2025-03-21 the US District Court for the Western District of Texas (D'Arcangelo v. The Funded Trader, LLC et al., case 1:23-cv-01472) granted in part and denied in part a motion to dismiss, dismissing nine claims with prejudice while other claims, including breach of the amended operating agreement, remained pending (https://www.govinfo.gov/content/pkg/USCOURTS-txwd-1_23-cv-01472/pdf/USCOURTS-txwd-1_23-cv-01472-1.pdf)."
       ],
       "addSources": [
         {
@@ -3502,7 +3524,7 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-08",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15050,
@@ -3516,6 +3538,10 @@
         {
           "label": "Topstep help center: payout FAQs",
           "url": "https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs"
+        },
+        {
+          "label": "Justia docket: McCrudden v. Topstepfunded LLC (M.D. Fla. 3:26-cv-00816)",
+          "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513"
         }
       ],
       "changelog": [
@@ -3543,7 +3569,18 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Pending lawsuit added as a dated incident: McCrudden v. Topstepfunded LLC et al., M.D. Fla. 3:26-cv-00816, filed 2026-04-09 by a self-represented plaintiff. Allegations only; no merits ruling on the docket read. No score or status change.",
+          "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513",
+          "fields": [
+            "incidents"
+          ]
         }
+      ],
+      "addIncidents": [
+        "Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."
       ]
     },
     "trade-the-pool": {
@@ -5218,6 +5255,38 @@
           ]
         }
       ]
+    },
+    "leveled-up-society": {
+      "reviewedAt": "2026-11-08",
+      "changelog": [
+        {
+          "date": "2026-11-08",
+          "summary": "Dated incident added from Finance Magnates (20 October 2023): services paused in late September 2023. Current operating status not confirmed; no status change.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Finance Magnates reported on 2023-10-20 that Leveled Up Society \"abruptly went dark late last month\" and quoted the firm: \"As of right now, all of our services are temporarily paused as we are working hard into a new transition.\" (https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/)."
+      ]
+    },
+    "funded-unicorn": {
+      "reviewedAt": "2026-11-08",
+      "changelog": [
+        {
+          "date": "2026-11-08",
+          "summary": "Status set to Fermée: Finance Magnates reported on 3 July 2025 that \"Funded Unicorn has closed its operations\", which the firm attributed to \"massive losses\" and \"bureaucratic hurdles\". Closure record added.",
+          "source": "https://www.financemagnates.com/forex/prop-trading-germanys-funded-unicorn-fails-raising-questions-on-risk-models/",
+          "fields": [
+            "status"
+          ]
+        }
+      ],
+      "set": {
+        "status": "Fermée"
+      }
     }
   }
 }
