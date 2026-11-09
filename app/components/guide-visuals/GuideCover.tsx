@@ -89,7 +89,14 @@ function RadarCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'radar'
     return `M${cx} ${cy}L${p(from)}A100 100 0 0 1 ${p(to)}Z`;
   };
   return (
-    <Frame id={id} label={t('Radar view: {count} firms from this guide highlighted among {total} open firms. Closer to the centre means a higher PropRadar score.', { count: data.highlights.length, total: data.total })}>
+    <Frame
+      id={id}
+      label={
+        data.scope === 'issue'
+          ? t('Radar view: {count} firms named in this issue highlighted among {total} tracked firms. Closer to the centre means a higher PropRadar score.', { count: data.highlights.length, total: data.total })
+          : t('Radar view: {count} firms from this guide highlighted among {total} open firms. Closer to the centre means a higher PropRadar score.', { count: data.highlights.length, total: data.total })
+      }
+    >
       <circle cx={cx} cy={cy} r="128" fill={`url(#${id}-glow)`} />
       <circle cx={cx} cy={cy} r="100" fill="rgba(54,214,231,0.035)" stroke="rgba(54,214,231,0.42)" strokeWidth="1" />
       {data.rings.map((r) => (
@@ -124,8 +131,8 @@ function RadarCover({ data, t }: { data: Extract<GuideCoverData, { kind: 'radar'
       )}
       <text x="14" y="20" className="gc-hud">
         {data.linked > data.highlights.length
-          ? t('top {shown} of {linked} in this guide', { shown: data.highlights.length, linked: data.linked })
-          : t('{shown} of {total} firms', { shown: data.highlights.length, total: data.total })}
+          ? t(data.scope === 'issue' ? 'top {shown} of {linked} in this issue' : 'top {shown} of {linked} in this guide', { shown: data.highlights.length, linked: data.linked })
+          : t(data.scope === 'issue' ? '{shown} firms from this issue on the radar' : '{shown} of {total} firms', { shown: data.highlights.length, total: data.total })}
       </text>
       <text x="386" y="20" textAnchor="end" className="gc-hud">{t('closer = higher score')}</text>
     </Frame>
@@ -443,6 +450,36 @@ function LegalCover({ id, t }: { id: string; t: T }) {
   );
 }
 
+function DependencyCover({ id, t }: { id: string; t: T }) {
+  const hub = { x: 200, y: 58 };
+  const xs = [52, 149, 251, 348];
+  const y = 142;
+  return (
+    <Frame id={id} label={t('Schematic: a prop firm depends on its trading platform, its broker or liquidity provider, its payment processors and its legal entity; a failure in any one of them can change what traders can do.')}>
+      <text x="16" y="22" className="gc-hud">{t('one firm, four dependencies')}</text>
+      {xs.map((x, i) => (
+        <path
+          key={x}
+          d={`M${hub.x} ${hub.y + 20}C${hub.x} ${hub.y + 52} ${x} ${y - 52} ${x} ${y - 21}`}
+          fill="none"
+          stroke={i === 0 ? 'rgba(248,113,113,0.75)' : 'rgba(54,214,231,0.5)'}
+          strokeWidth="1.4"
+          strokeDasharray={i === 0 ? '4 4' : undefined}
+        />
+      ))}
+      <Node x={hub.x} y={hub.y} label="" tone="accent" icon={ICONS.radar} />
+      <text x={hub.x + 30} y={hub.y + 4} className="gc-label">{t('Prop firm')}</text>
+      <Node x={xs[0]} y={y} label={t('Platform')} sub={t('trading software')} icon={ICONS.radar} />
+      <Node x={xs[1]} y={y} label={t('Broker')} sub={t('liquidity, data')} icon={ICONS.columns} />
+      <Node x={xs[2]} y={y} label={t('Payments')} sub={t('card, crypto, payouts')} icon={ICONS.coin} />
+      <Node x={xs[3]} y={y} label={t('Legal entity')} sub={t('terms, registry')} icon={ICONS.building} />
+      <circle cx={(hub.x + xs[0]) / 2 - 6} cy={(hub.y + y) / 2 + 2} r="7" fill="#0b1626" stroke="#f87171" strokeWidth="1.4" />
+      <path d={`M${(hub.x + xs[0]) / 2 - 9} ${(hub.y + y) / 2 - 1}l6 6m0 -6l-6 6`} stroke="#f87171" strokeWidth="1.4" />
+      <text x="384" y="22" textAnchor="end" className="gc-hud">{t('one link fails, the firm changes')}</text>
+    </Frame>
+  );
+}
+
 function LanesCover({ id, t }: { id: string; t: T }) {
   const challenge = [44, 128, 212, 340];
   return (
@@ -506,6 +543,9 @@ export default function GuideCover({ data: raw, className, uid, labels }: { data
       break;
     case 'legal':
       body = <LegalCover id={data.id} t={t} />;
+      break;
+    case 'dependency':
+      body = <DependencyCover id={data.id} t={t} />;
       break;
     default:
       body = <LanesCover id={data.id} t={t} />;

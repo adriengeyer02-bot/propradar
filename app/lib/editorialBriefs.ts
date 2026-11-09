@@ -32,9 +32,8 @@ export type EditorialBrief = {
   researchCutoff: string;
   readMinutes: number;
   keywords: string[];
-  image16x9: string;
-  image4x3: string;
-  image1x1: string;
+  /** Cover drawn in the radar visual language (no stock or generated imagery). */
+  cover: 'dependency' | 'radar';
   imageAlt: string;
   imageCaption: string;
   sections: EditorialBriefSection[];
@@ -64,10 +63,8 @@ export const editorialBriefs: EditorialBrief[] = [
       'prop firm platform risk',
       'prop firm closures',
     ],
-    image16x9: '/editorial/prop-firm-operational-dependency-risk-16x9.jpg',
-    image4x3: '/editorial/prop-firm-operational-dependency-risk-4x3.jpg',
-    image1x1: '/editorial/prop-firm-operational-dependency-risk-1x1.jpg',
-    imageAlt: 'Operational dependency chain connecting a prop firm to platform, broker, payment and legal providers',
+    cover: 'dependency',
+    imageAlt: 'Schematic: a prop firm linked to its trading platform, broker, payment processors and legal entity',
     imageCaption:
       'A prop firm can remain visible while one critical platform, broker, payment or legal dependency has already changed the trader outcome.',
     sections: [
@@ -195,10 +192,8 @@ export const editorialBriefs: EditorialBrief[] = [
       'Skilled Funded Traders closed',
       'Hantec Trader regulation',
     ],
-    image16x9: '/guides/prop-firm-legal-due-diligence-16x9.jpg',
-    image4x3: '/guides/prop-firm-legal-due-diligence-4x3.jpg',
-    image1x1: '/guides/prop-firm-legal-due-diligence-1x1.jpg',
-    imageAlt: 'Legal due-diligence dossier connecting entity, jurisdiction and contract evidence',
+    cover: 'radar',
+    imageAlt: 'PropRadar radar with the firms named in this issue highlighted among all tracked firms',
     imageCaption:
       'The first PropRadar Risk Brief compares rules, closure proof and the entity behind each prop service.',
     sections: [
@@ -309,4 +304,14 @@ export function getEditorialBriefBySlug(slug: string) {
 export function getEditorialBriefPath(briefOrSlug: EditorialBrief | string) {
   const slug = typeof briefOrSlug === 'string' ? briefOrSlug : briefOrSlug.slug;
   return `/radar-brief/${slug}`;
+}
+
+/** Share image of an issue, generated from its data (1200 x 630). */
+export function getEditorialBriefImage(briefOrSlug: EditorialBrief | string) {
+  return `${getEditorialBriefPath(briefOrSlug)}/opengraph-image`;
+}
+
+/** Firms named in an issue, in order of first mention. */
+export function editorialBriefFirmSlugs(brief: EditorialBrief) {
+  return brief.sections.flatMap((section) => section.firmSlugs).filter((slug, index, all) => all.indexOf(slug) === index);
 }

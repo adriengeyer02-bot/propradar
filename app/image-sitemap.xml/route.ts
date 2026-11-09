@@ -1,6 +1,6 @@
 import { getSeoGuideDisplay, getSeoGuidePath, guideUrlSlug, seoGuides } from '../lib/seoGuides';
 import { SITE_URL } from '../lib/site';
-import { editorialBriefs, getEditorialBriefPath } from '../lib/editorialBriefs';
+import { editorialBriefs, getEditorialBriefImage, getEditorialBriefPath } from '../lib/editorialBriefs';
 import { auditCaseFiles } from '../lib/auditCaseFiles';
 import { getFirmBySlug } from '../lib/propFirms';
 
@@ -34,7 +34,7 @@ export async function GET() {
     '  <url>',
     `    <loc>${escapeXml(`${SITE_URL}${getEditorialBriefPath(brief)}`)}</loc>`,
     '    <image:image>',
-    `      <image:loc>${escapeXml(`${SITE_URL}${brief.image16x9}`)}</image:loc>`,
+    `      <image:loc>${escapeXml(`${SITE_URL}${getEditorialBriefImage(brief)}`)}</image:loc>`,
     `      <image:title>${escapeXml(brief.title)}</image:title>`,
     `      <image:caption>${escapeXml(brief.imageCaption)}</image:caption>`,
     '    </image:image>',
@@ -48,7 +48,7 @@ export async function GET() {
       '  <url>',
       `    <loc>${escapeXml(`${SITE_URL}/firm/${firm.slug}`)}</loc>`,
       '    <image:image>',
-      `      <image:loc>${escapeXml(`${SITE_URL}/editorial/prop-firm-operational-dependency-risk-16x9.jpg`)}</image:loc>`,
+      `      <image:loc>${escapeXml(`${SITE_URL}/firm/${firm.slug}/opengraph-image`)}</image:loc>`,
       `      <image:title>${escapeXml(`${firm.name} operational and legal audit timeline`)}</image:title>`,
       `      <image:caption>${escapeXml(caseFile.answer)}</image:caption>`,
       '    </image:image>',

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import GuideCover from '../../../components/guide-visuals/GuideCover';
+import { buildBriefCover } from '../../../lib/guideCovers';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import {
   editorialBriefs,
   getEditorialBriefBySlug,
+  getEditorialBriefImage,
   getEditorialBriefPath,
   type EditorialBriefTopic,
 } from '../../../lib/editorialBriefs';
@@ -72,17 +74,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [`${SITE_URL}/audit`],
       section: 'Prop Firm Risk Brief',
       tags: brief.keywords,
-      images: [
-        { url: `${SITE_URL}${brief.image16x9}`, width: 1536, height: 864, alt: brief.imageAlt },
-        { url: `${SITE_URL}${brief.image4x3}`, width: 1200, height: 900, alt: brief.imageAlt },
-        { url: `${SITE_URL}${brief.image1x1}`, width: 1000, height: 1000, alt: brief.imageAlt },
-      ],
+      images: [{ url: `${SITE_URL}${getEditorialBriefImage(brief)}`, width: 1200, height: 630, alt: brief.imageAlt }],
     },
     twitter: {
       card: 'summary_large_image',
       title: brief.title,
       description: brief.description,
-      images: [`${SITE_URL}${brief.image16x9}`],
+      images: [`${SITE_URL}${getEditorialBriefImage(brief)}`],
     },
   };
 }
@@ -128,11 +126,7 @@ export default async function RadarBriefIssuePage({ params }: Props) {
     inLanguage: 'en',
     datePublished: brief.publishedAt,
     dateModified: brief.updatedAt,
-    image: [
-      { '@type': 'ImageObject', url: `${SITE_URL}${brief.image16x9}`, width: 1536, height: 864, caption: brief.imageCaption },
-      { '@type': 'ImageObject', url: `${SITE_URL}${brief.image4x3}`, width: 1200, height: 900, caption: brief.imageCaption },
-      { '@type': 'ImageObject', url: `${SITE_URL}${brief.image1x1}`, width: 1000, height: 1000, caption: brief.imageCaption },
-    ],
+    image: [{ '@type': 'ImageObject', url: `${SITE_URL}${getEditorialBriefImage(brief)}`, width: 1200, height: 630, caption: brief.imageCaption }],
     articleSection: brief.sections.map((section) => section.eyebrow),
     keywords: brief.keywords.join(', '),
     citation: citedSources,
@@ -201,15 +195,7 @@ export default async function RadarBriefIssuePage({ params }: Props) {
               <span>Research cut-off <time dateTime={brief.researchCutoff}>{formatDate(brief.researchCutoff)}</time></span>
             </div>
             <figure className="brief-issue-cover">
-              <Image
-                src={brief.image16x9}
-                alt={brief.imageAlt}
-                width={1536}
-                height={864}
-                sizes="(max-width: 760px) 100vw, 1180px"
-                quality={88}
-                priority
-              />
+              <GuideCover data={buildBriefCover(brief)} className="brief-cover" />
               <figcaption>{brief.imageCaption}</figcaption>
             </figure>
           </div>
