@@ -963,6 +963,16 @@ export const seoGuides: SeoGuide[] = [
         answer:
           'It usually fits traders who already have a stable process and know their average drawdown. For beginners, a small classic challenge can be cheaper and more educational.',
       },
+      {
+        question: 'Which prop firms offer a funded account without a challenge?',
+        answer:
+          'The table on this page lists every instant or direct-funding program in PropRadar files, ordered by PropRadar score, with entry price, account sizes, drawdown, split and Trustpilot status. Each firm page shows the source and the date every value was read.',
+      },
+      {
+        question: 'Are there forex, futures or stock prop firms without a challenge?',
+        answer:
+          'Most no-challenge programs on file are forex and CFD instant accounts. Some futures firms sell a direct account instead of an evaluation (Alpha Futures Direct is one on file). PropRadar has no stock-only instant program on file today, so check the tradable assets of each program before buying.',
+      },
     ],
     internalLinks: [
       { label: 'Instant funding', href: '/guides/prop-firm-instant-funding' },
@@ -1872,8 +1882,8 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
   },
   'prop-firm-sans-challenge': {
-    title: 'No-Challenge Prop Firms 2026: Direct Funding',
-    metaDescription: 'Compare no-challenge prop firms and direct funded accounts in 2026 by price, drawdown, payout reliability, consistency and true funded-stage cost.',
+    title: 'No Challenge Prop Firms 2026: Every Instant Funding Program Compared',
+    metaDescription: 'Every prop firm program you can buy without a challenge, from the PropRadar files: entry price, account sizes, drawdown, split, Trustpilot status and review date.',
     eyebrow: 'No challenge',
     h1: 'No challenge prop firms: compare direct funding before you pay',
     answer: 'A no-challenge prop firm gives access to a funded-style account without a classic evaluation. The format saves time, but direct funded accounts can cost more and use tighter drawdown, consistency and payout rules.',
