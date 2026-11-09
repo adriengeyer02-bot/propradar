@@ -2,6 +2,7 @@ import type { Locale } from '../locales';
 import de from './de.json';
 import es from './es.json';
 import fr from './fr.json';
+import hi from './hi.json';
 import it from './it.json';
 import ja from './ja.json';
 import pt from './pt.json';
@@ -16,7 +17,7 @@ import zh from './zh.json';
  * refreshed. Numbers, names and quoted text are kept as in the source.
  * Server-only: the dictionaries never reach the browser bundle.
  */
-const DATA: Partial<Record<Locale, Record<string, string>>> = { fr, de, it, es, pt, zh, ja };
+const DATA: Partial<Record<Locale, Record<string, string>>> = { fr, de, it, es, pt, zh, ja, hi };
 
 export function td(locale: Locale, text: string | undefined | null): string {
   if (!text) return text ?? '';

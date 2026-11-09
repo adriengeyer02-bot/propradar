@@ -7,10 +7,11 @@ import es from './es';
 import pt from './pt';
 import zh from './zh';
 import ja from './ja';
+import hi from './hi';
 
 export type { RulesMessages };
 
-const ALL: Record<Locale, RulesMessages> = { en, fr, de, it, es, pt, zh, ja };
+const ALL: Record<Locale, RulesMessages> = { en, fr, de, it, es, pt, zh, ja, hi };
 
 /** /prop-firm-rules strings in the page language. */
 export function getPageMessages(locale: Locale): RulesMessages {

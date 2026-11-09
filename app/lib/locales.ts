@@ -1,8 +1,8 @@
 /**
  * Site languages. English stays at the root (no prefix, existing URLs);
- * the other languages live under /fr, /de, /it and /zh.
+ * the other languages live under their prefix (/fr, /de, ... /hi).
  */
-export const LOCALES = ['en', 'fr', 'de', 'it', 'es', 'pt', 'zh', 'ja'] as const;
+export const LOCALES = ['en', 'fr', 'de', 'it', 'es', 'pt', 'zh', 'ja', 'hi'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'en';
 export const PREFIXED_LOCALES = LOCALES.filter((locale) => locale !== DEFAULT_LOCALE);
@@ -16,13 +16,14 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   pt: 'Português',
   zh: '中文',
   ja: '日本語',
+  hi: 'हिन्दी',
 };
 
-export const LOCALE_SHORT: Record<Locale, string> = { en: 'EN', fr: 'FR', de: 'DE', it: 'IT', es: 'ES', pt: 'PT', zh: '中文', ja: '日本語' };
+export const LOCALE_SHORT: Record<Locale, string> = { en: 'EN', fr: 'FR', de: 'DE', it: 'IT', es: 'ES', pt: 'PT', zh: '中文', ja: '日本語', hi: 'हिन्दी' };
 
 /** BCP 47 tags for <html lang> and hreflang. */
-export const HTML_LANG: Record<Locale, string> = { en: 'en', fr: 'fr', de: 'de', it: 'it', es: 'es', pt: 'pt', zh: 'zh-Hans', ja: 'ja' };
-export const OG_LOCALE: Record<Locale, string> = { en: 'en_US', fr: 'fr_FR', de: 'de_DE', it: 'it_IT', es: 'es_ES', pt: 'pt_BR', zh: 'zh_CN', ja: 'ja_JP' };
+export const HTML_LANG: Record<Locale, string> = { en: 'en', fr: 'fr', de: 'de', it: 'it', es: 'es', pt: 'pt', zh: 'zh-Hans', ja: 'ja', hi: 'hi' };
+export const OG_LOCALE: Record<Locale, string> = { en: 'en_US', fr: 'fr_FR', de: 'de_DE', it: 'it_IT', es: 'es_ES', pt: 'pt_BR', zh: 'zh_CN', ja: 'ja_JP', hi: 'hi_IN' };
 
 export const LOCALE_COOKIE = 'NEXT_LOCALE';
 

@@ -7,10 +7,11 @@ import es from './es';
 import pt from './pt';
 import zh from './zh';
 import ja from './ja';
+import hi from './hi';
 
 export type { ToolsMessages };
 
-const ALL: Record<Locale, ToolsMessages> = { en, fr, de, it, es, pt, zh, ja };
+const ALL: Record<Locale, ToolsMessages> = { en, fr, de, it, es, pt, zh, ja, hi };
 
 /** /tools strings in the page language. */
 export function getPageMessages(locale: Locale): ToolsMessages {

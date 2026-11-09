@@ -315,3 +315,7 @@ html body .topbar .nav .nav-link-active:hover {
 @media (prefers-reduced-motion: reduce) {
   .pr-route-bar, .pr-route-bar.is-loading, .pr-route-bar.is-done { transform: scaleX(1); transition: opacity 0.15s ease; }
 }
+
+/* Hindi: Devanagari letters join along the headline bar, so negative tracking
+   pinches them; keep normal spacing and a little more room for vowel signs. */
+:lang(hi) :is(h1, h2, h3, h4) { letter-spacing: 0; line-height: 1.25; }

@@ -81,13 +81,15 @@ project doc `claude/data-audit-2026-10.md`.
 
 ## Languages (i18n)
 
-- Site languages: en (root, no prefix), fr, de, it, es, pt, zh, ja (`app/lib/locales.ts`).
+- Site languages: en (root, no prefix), fr, de, it, es, pt, zh, ja, hi (`app/lib/locales.ts`).
   `isTranslatedPath` lists the translated pages; other pages show English with a notice and noindex.
-- Interface strings live in `app/lib/messages/<locale>.ts`: any new UI string goes into all 8 files.
+- Interface strings live in `app/lib/messages/<locale>.ts`: any new UI string goes into all 9 files.
 - Guides: translated summaries in `app/lib/guideI18n/<locale>.ts` (one entry per internal guide slug).
   A new English guide needs an entry per language, or its prefixed pages fall back to English (noindex).
   French guides with a hand-written article (`app/lib/frArticles.ts`, `enPath`) redirect to it.
-- Firm data, scores and dates are shared by every language: never translate a number differently.
+- Firm data, scores and dates are shared by every language: never translate a number differently
+  (Hindi formats numbers with en-US grouping, not lakh/crore; see `numberLocale`).
+- Translated firm data lives in `app/lib/dataI18n/<locale>.json` (English text as key); a missing key shows English.
 
 ## Editorial and legal rules (non-negotiable)
 
