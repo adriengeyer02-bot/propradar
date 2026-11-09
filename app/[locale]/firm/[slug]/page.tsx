@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
 import { firmMetaOverrides } from '../../../lib/firmMetaOverrides';
 import { getFirmChangelog } from '../../../lib/firmUpdates';
-import Image from 'next/image';
 import Link from 'next/link';
 import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
@@ -52,6 +51,8 @@ import { getFirmContentLastModified, getFirmSearchProfile } from '../../../lib/f
 import { td } from '../../../lib/dataI18n';
 import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
+import GuideCover from '../../../components/guide-visuals/GuideCover';
+import { DEPENDENCY_COVER } from '../../../lib/guideCovers';
 import { getAuditCaseFile } from '../../../lib/auditCaseFiles';
 import { entityCountries } from '../../../lib/jurisdictions';
 import { getClosureRecord } from '../../../lib/closures';
@@ -451,10 +452,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     auditCaseFile?.lastChecked,
   )).toISOString();
 
-  const socialImage = auditCaseFile
-    ? `${SITE_URL}/editorial/prop-firm-operational-dependency-risk-16x9.jpg`
-    : `${SITE_URL}/opengraph-image`;
-
   return {
     title,
     description,
@@ -684,9 +681,7 @@ export default async function FirmPage({ params }: Props) {
     description: searchProfile?.summary ?? tx(firm.verdict),
     datePublished: FIRM_LIBRARY_PUBLISHED_AT,
     dateModified: contentLastModified,
-    image: auditCaseFile
-      ? `${SITE_URL}/editorial/prop-firm-operational-dependency-risk-16x9.jpg`
-      : `${SITE_URL}/opengraph-image`,
+    image: `${SITE_URL}/firm/${firm.slug}/opengraph-image`,
     inLanguage: HTML_LANG[locale],
     mainEntityOfPage: pageUrl,
     citation: evidenceSourceUrls,
@@ -1011,14 +1006,7 @@ export default async function FirmPage({ params }: Props) {
             </div>
 
             <figure className="firm-case-file-visual">
-              <Image
-                src="/editorial/prop-firm-operational-dependency-risk-16x9.jpg"
-                alt="Operational dependency chain linking a prop firm to its platform, broker, payment and legal providers"
-                width={1536}
-                height={864}
-                sizes="(max-width: 760px) 100vw, 1180px"
-                quality={86}
-              />
+              <GuideCover data={DEPENDENCY_COVER} className="brief-cover" labels={t.cover} />
               <figcaption>
                 {f.caseCaption}
               </figcaption>

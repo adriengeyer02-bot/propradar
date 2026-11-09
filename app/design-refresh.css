@@ -319,3 +319,7 @@ html body .topbar .nav .nav-link-active:hover {
 /* Hindi: Devanagari letters join along the headline bar, so negative tracking
    pinches them; keep normal spacing and a little more room for vowel signs. */
 :lang(hi) :is(h1, h2, h3, h4) { letter-spacing: 0; line-height: 1.25; }
+
+/* Data-drawn covers (brief issues, firm case files): keep the schematic at a readable size. */
+:is(.brief-issue-cover, .firm-case-file-visual) .gc { max-width: 780px; margin-inline: auto; }
+:is(.brief-issue-cover, .firm-case-file-visual) { background: #0b1626; }

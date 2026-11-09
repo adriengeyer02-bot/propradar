@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import GuideCover from '../../components/guide-visuals/GuideCover';
+import { buildBriefCover } from '../../lib/guideCovers';
 import Link from 'next/link';
 import {
   editorialBriefs,
+  getEditorialBriefImage,
   getEditorialBriefPath,
   latestEditorialBrief,
   type EditorialBriefTopic,
@@ -41,17 +43,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: OG_LOCALE[locale],
       siteName: SITE_NAME,
-      images: [
-        { url: `${SITE_URL}${latestEditorialBrief.image16x9}`, width: 1536, height: 864, alt: latestEditorialBrief.imageAlt },
-        { url: `${SITE_URL}${latestEditorialBrief.image4x3}`, width: 1200, height: 900, alt: latestEditorialBrief.imageAlt },
-        { url: `${SITE_URL}${latestEditorialBrief.image1x1}`, width: 1000, height: 1000, alt: latestEditorialBrief.imageAlt },
-      ],
+      images: [{ url: `${SITE_URL}${getEditorialBriefImage(latestEditorialBrief)}`, width: 1200, height: 630, alt: latestEditorialBrief.imageAlt }],
     },
     twitter: {
       card: 'summary_large_image',
       title: b.metaTitle,
       description: b.metaDescription,
-      images: [`${SITE_URL}${latestEditorialBrief.image16x9}`],
+      images: [`${SITE_URL}${getEditorialBriefImage(latestEditorialBrief)}`],
     },
   };
 }
@@ -91,7 +89,7 @@ export default async function RadarBriefHubPage({ params }: Props) {
     url: `${SITE_URL}${L(PATH)}`,
     inLanguage: HTML_LANG[locale],
     dateModified: latestEditorialBrief.updatedAt,
-    primaryImageOfPage: `${SITE_URL}${latestEditorialBrief.image16x9}`,
+    primaryImageOfPage: `${SITE_URL}${getEditorialBriefImage(latestEditorialBrief)}`,
     publisher: {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
@@ -110,7 +108,7 @@ export default async function RadarBriefHubPage({ params }: Props) {
       url: `${SITE_URL}${getEditorialBriefPath(brief)}`,
       datePublished: brief.publishedAt,
       dateModified: brief.updatedAt,
-      image: `${SITE_URL}${brief.image16x9}`,
+      image: `${SITE_URL}${getEditorialBriefImage(brief)}`,
       author: {
         '@type': 'Organization',
         name: 'PropRadar Research',
@@ -154,15 +152,7 @@ export default async function RadarBriefHubPage({ params }: Props) {
 
           <article className="brief-latest-panel" lang={locale === 'en' ? undefined : 'en'}>
             <div className="brief-latest-media">
-              <Image
-                src={latestEditorialBrief.image16x9}
-                alt={latestEditorialBrief.imageAlt}
-                width={1536}
-                height={864}
-                sizes="(max-width: 980px) 100vw, 42vw"
-                quality={84}
-                priority
-              />
+              <GuideCover data={buildBriefCover(latestEditorialBrief)} className="brief-cover" />
             </div>
             <div className="brief-latest-meta" lang={HTML_LANG[locale]}>
               <span>{issueLabel(latestEditorialBrief.issueNumber)}</span>

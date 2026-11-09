@@ -2,6 +2,7 @@ import { priceLabel, profitSplitLabel, propFirms, type PropFirm } from './propFi
 import { buildRadar, radarTone, RADAR_CENTER, type RadarTone } from './radar';
 import { selectGuideFirms, type SeoGuide } from './seoGuides';
 import { firmLogoFor } from './firmLogos';
+import { editorialBriefFirmSlugs, type EditorialBrief } from './editorialBriefs';
 
 /**
  * Data for the guide covers (cards, guide heroes, home). Everything shown is
@@ -24,10 +25,10 @@ export type CoverFirm = {
 
 export type CoverBin = { label: string; count: number; tone?: 'risk' };
 
-export type SchematicCover = 'drawdown' | 'consistency' | 'news' | 'payout' | 'proof' | 'legal' | 'lanes';
+export type SchematicCover = 'drawdown' | 'consistency' | 'news' | 'payout' | 'proof' | 'legal' | 'lanes' | 'dependency';
 
 export type GuideCoverData =
-  | { kind: 'radar'; id: string; background: string; dividers: string; rings: number[]; highlights: CoverDot[]; labelled: CoverDot[]; total: number; linked: number }
+  | { kind: 'radar'; id: string; background: string; dividers: string; rings: number[]; highlights: CoverDot[]; labelled: CoverDot[]; total: number; linked: number; scope?: 'guide' | 'issue' }
   | { kind: 'versus'; id: string; firms: CoverFirm[] }
   | { kind: 'histogram'; id: string; title: string; bins: CoverBin[]; total: number }
   | { kind: SchematicCover; id: string };
@@ -134,38 +135,10 @@ function volumeBins(): { bins: CoverBin[]; total: number } {
 
 const MAX_HIGHLIGHTS = 20;
 
-export function buildGuideCover(guide: SeoGuide): GuideCoverData {
-  const id = `gc-${guide.slug}`;
-
-  const schematic = SCHEMATIC[guide.slug];
-  if (schematic) return { kind: schematic, id };
-
-  if (guide.slug === 'prop-firm-pas-cher') {
-    const { bins, total } = priceBins();
-    return { kind: 'histogram', id, title: 'Lowest listed entry price', bins, total };
-  }
-  if (guide.slug === 'prop-firm-avis-reddit-trustpilot') {
-    const { bins, total } = volumeBins();
-    return { kind: 'histogram', id, title: 'Trustpilot review volume, open firms', bins, total };
-  }
-  if (guide.slug === 'prop-firm-fiable-trustpilot') {
-    const { bins, total } = trustBins();
-    return { kind: 'histogram', id, title: 'Trustpilot rating, open firms', bins, total };
-  }
-
-  const profileSlug = PROFILE[guide.slug];
-  if (profileSlug) {
-    const firm = propFirms.find((candidate) => candidate.slug === profileSlug);
-    if (firm) return { kind: 'versus', id, firms: [coverFirm(firm)] };
-  }
-
-  const firms = selectGuideFirms(guide, propFirms.length);
-  if (guide.intent === 'comparer' && firms.length === 2) {
-    return { kind: 'versus', id, firms: firms.map(coverFirm) };
-  }
-
+/** Mini radar with the given firms highlighted among all tracked firms. */
+export function radarCover(id: string, slugs: string[], scope: 'guide' | 'issue' = 'guide'): Extract<GuideCoverData, { kind: 'radar' }> {
   const data = radar();
-  const linked = new Set(firms.map((firm) => firm.slug));
+  const linked = new Set(slugs);
   const wanted = new Set(
     data.dots
       .filter((dot) => linked.has(dot.slug))
@@ -206,5 +179,49 @@ export function buildGuideCover(guide: SeoGuide): GuideCoverData {
     labelled,
     total: data.dots.length,
     linked: data.dots.filter((dot) => linked.has(dot.slug)).length,
+    scope,
   };
 }
+
+export function buildGuideCover(guide: SeoGuide): GuideCoverData {
+  const id = `gc-${guide.slug}`;
+
+  const schematic = SCHEMATIC[guide.slug];
+  if (schematic) return { kind: schematic, id };
+
+  if (guide.slug === 'prop-firm-pas-cher') {
+    const { bins, total } = priceBins();
+    return { kind: 'histogram', id, title: 'Lowest listed entry price', bins, total };
+  }
+  if (guide.slug === 'prop-firm-avis-reddit-trustpilot') {
+    const { bins, total } = volumeBins();
+    return { kind: 'histogram', id, title: 'Trustpilot review volume, open firms', bins, total };
+  }
+  if (guide.slug === 'prop-firm-fiable-trustpilot') {
+    const { bins, total } = trustBins();
+    return { kind: 'histogram', id, title: 'Trustpilot rating, open firms', bins, total };
+  }
+
+  const profileSlug = PROFILE[guide.slug];
+  if (profileSlug) {
+    const firm = propFirms.find((candidate) => candidate.slug === profileSlug);
+    if (firm) return { kind: 'versus', id, firms: [coverFirm(firm)] };
+  }
+
+  const firms = selectGuideFirms(guide, propFirms.length);
+  if (guide.intent === 'comparer' && firms.length === 2) {
+    return { kind: 'versus', id, firms: firms.map(coverFirm) };
+  }
+
+  return radarCover(id, firms.map((firm) => firm.slug));
+}
+
+/** Cover of a Risk Brief issue: a schematic, or the radar with the issue's firms highlighted. */
+export function buildBriefCover(brief: EditorialBrief): GuideCoverData {
+  const id = `bc-${brief.issueNumber}`;
+  if (brief.cover === 'dependency') return { kind: 'dependency', id };
+  return radarCover(id, editorialBriefFirmSlugs(brief), 'issue');
+}
+
+/** Cover of a firm's operational case file. */
+export const DEPENDENCY_COVER: GuideCoverData = { kind: 'dependency', id: 'case-dependency' };
