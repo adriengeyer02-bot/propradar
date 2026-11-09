@@ -1,8 +1,8 @@
 /** /audit interface and PropRadar-written case-file summaries (English, source of the other languages). */
 const audit = {
-  metaTitle: 'Prop Firm Source Audit: Evidence and Legal Checks',
+  metaTitle: 'Prop Firm Due Diligence: Legal Entities, Regulator Warnings, Closures',
   metaDescription:
-    'Audit PropRadar sources, legal entities, regulator checks and proof depth across verified, partial and watchlist prop-firm profiles.',
+    'Check a prop firm before you pay: the company behind it, its country, regulator warning lists, Trustpilot status and documented closures, each with a dated source.',
   schemaName: 'Prop firm source audit',
   breadcrumb: 'Source audit',
   eyebrow: 'Public audit',
