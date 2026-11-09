@@ -28,6 +28,7 @@ import { isAffiliateUrl,
   propFirms,
 } from '../../../lib/propFirms';
 import { toEnglishText } from '../../../lib/i18n';
+import ConsistencyCalculator from '../../../components/ConsistencyCalculator';
 import GuideArticleBody from '../../../components/GuideArticleBody';
 import GuideDataTable, { type GuideDataKind } from '../../../components/GuideDataTable';
 import { getGuideArticle } from '../../../lib/guideArticles';
@@ -503,6 +504,36 @@ const bestRankingMethodology = [
     text: 'Track record, communication quality, source traceability and visible commercial relationships.',
   },
 ];
+
+const MARKETS: { label: string; match: RegExp }[] = [
+  { label: 'Forex', match: /forex|fx\b/i },
+  { label: 'Indices', match: /indic|indices/i },
+  { label: 'Crypto', match: /crypto/i },
+  { label: 'Metals and commodities', match: /metal|gold|commodit/i },
+  { label: 'Stock CFDs', match: /action|stock|share|equit/i },
+  { label: 'Futures', match: /future/i },
+];
+
+/** Instant programs on file grouped by the markets each program lists. */
+function noChallengeByMarket() {
+  const programs = propFirms
+    .filter((firm) => firm.status !== 'Fermée')
+    .flatMap((firm) => firm.products.filter((product) => product.type === 'Instant funding').map((product) => ({ firm, product })));
+  return MARKETS.map((market) => ({
+    label: market.label,
+    items: programs
+      .filter(({ product }) => product.tradableAssets.some((asset) => market.match.test(asset)))
+      .sort((a, b) => b.firm.score - a.firm.score),
+  })).map((market) => ({ ...market, firms: market.items.map((item) => item.firm).filter((firm, index, all) => all.findIndex((other) => other.slug === firm.slug) === index) }));
+}
+
+/** Programs whose file records no consistency rule, by score (watchlist defaults excluded). */
+function noConsistencyPrograms() {
+  return propFirms
+    .filter((firm) => firm.status !== 'Fermée')
+    .flatMap((firm) => firm.products.filter((product) => !product.hasConsistencyRule).map((product) => ({ firm, product })))
+    .sort((a, b) => b.firm.score - a.firm.score);
+}
 
 const noChallengeMethodology = [
   {
@@ -1476,6 +1507,9 @@ export default async function SeoGuidePage({ params }: Props) {
         </div>
         <div className="guide-toc-links">
           {isConsistencyGuide ? <a href="#consistency-formula">Formula & example</a> : null}
+          {isConsistencyGuide ? <a href="#consistency-calculator">Calculator</a> : null}
+          {isConsistencyGuide ? <a href="#no-consistency-list">Programs with no rule</a> : null}
+          {isNoChallengeGuide ? <a href="#no-challenge-markets">By market</a> : null}
           {isTopstepApexGuide ? <a href="#current-rule-snapshot">Current rule snapshot</a> : null}
           {isNewsTradingGuide ? <a href="#news-rule-snapshot">Current news rules</a> : null}
           <a href="#method">Method</a>
@@ -1555,6 +1589,65 @@ export default async function SeoGuidePage({ params }: Props) {
             <a href="https://help.brightfunded.com/en/articles/12577176-does-brightfunded-have-a-consistency-rule" target="_blank" rel="noreferrer">BrightFunded consistency rule</a>
             <a href="https://maventrading.com/" target="_blank" rel="noreferrer">Maven program cards</a>
             <a href="https://citytradersimperium.com/compare-funding-programs/" target="_blank" rel="noreferrer">CTI program comparison</a>
+          </div>
+        </section>
+      ) : null}
+
+      {isConsistencyGuide ? (
+        <section className="guide-query-evidence" id="consistency-calculator" aria-label="Consistency rule calculator">
+          <ConsistencyCalculator />
+        </section>
+      ) : null}
+
+      {isConsistencyGuide ? (
+        <section className="guide-query-evidence" id="no-consistency-list" aria-labelledby="no-consistency-title">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">From the PropRadar files</div>
+              <h2 id="no-consistency-title">Prop firm programs with no consistency rule on file</h2>
+            </div>
+            <p className="section-note">Programs whose rules were read and record no consistency percentage, ordered by PropRadar score. Defaults are never counted as &quot;no rule&quot;. Check the funded stage too: some firms add a rule after funding.</p>
+          </div>
+          <div className="pr-plain-table" role="table" aria-label="Programs with no consistency rule on file">
+            {noConsistencyPrograms().map(({ firm, product }) => (
+              <div className="pr-plain-row" role="row" key={`${firm.slug}-${product.id}`}>
+                <span role="cell"><Link href={`/firm/${firm.slug}`}>{firm.name}</Link><small>Score {firm.score}/100</small></span>
+                <span role="cell">{toEnglishText(product.name)}<small>{product.type}</small></span>
+                <span role="cell">{product.entryFeeMin ? `From $${product.entryFeeMin.toLocaleString('en-US')}` : 'Price to verify'}<small>{toEnglishText(product.maxDrawdown)}</small></span>
+                <span role="cell"><small>Reviewed {firm.lastReviewed}</small></span>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {isNoChallengeGuide ? (
+        <section className="guide-query-evidence" id="no-challenge-markets" aria-labelledby="no-challenge-markets-title">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">By market</div>
+              <h2 id="no-challenge-markets-title">No-challenge programs for forex, indices, crypto, stocks and futures</h2>
+            </div>
+            <p className="section-note">Instant and direct-funding programs on file, grouped by the markets each program lists, ordered by PropRadar score.</p>
+          </div>
+          <div className="guide-query-facts">
+            {noChallengeByMarket().map((market) => (
+              <article key={market.label}>
+                <span>{market.label}</span>
+                <strong>{market.items.length === 0 ? 'None on file' : `${market.items.length} program${market.items.length > 1 ? 's' : ''}, ${market.firms.length} firm${market.firms.length > 1 ? 's' : ''}`}</strong>
+                <p>
+                  {market.items.length === 0
+                    ? 'No instant program in the PropRadar files lists this market today.'
+                    : market.firms.slice(0, 6).map((firm, index) => (
+                        <span key={firm.slug}>
+                          {index > 0 ? ', ' : ''}
+                          <Link href={`/firm/${firm.slug}`}>{firm.name}</Link>
+                        </span>
+                      ))}
+                  {market.firms.length > 6 ? ` and ${market.firms.length - 6} more` : ''}
+                </p>
+              </article>
+            ))}
           </div>
         </section>
       ) : null}

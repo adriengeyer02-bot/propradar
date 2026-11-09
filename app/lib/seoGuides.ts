@@ -971,7 +971,7 @@ export const seoGuides: SeoGuide[] = [
       {
         question: 'Are there forex, futures or stock prop firms without a challenge?',
         answer:
-          'Most no-challenge programs on file are forex and CFD instant accounts. Some futures firms sell a direct account instead of an evaluation (Alpha Futures Direct is one on file). PropRadar has no stock-only instant program on file today, so check the tradable assets of each program before buying.',
+          'Most no-challenge programs on file are forex and CFD instant accounts. Some futures firms sell a direct account instead of an evaluation (Alpha Futures Direct is one on file). No stock-only instant program is on file today; FXIFY Instant Funding is the one instant program on file that lists stock CFDs. Check the tradable assets of each program before buying.',
       },
     ],
     internalLinks: [
@@ -1494,7 +1494,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
   },
   'prop-firm-sans-consistency-rule': {
-    title: 'Prop Firm Consistency Rule: Formula & No-Rule Firms',
+    title: 'Prop Firm Consistency Rule: Formula, Calculator & No-Rule Firms',
     metaDescription: 'What is a prop firm consistency rule? See the formula, a worked 40% example, payout impact and how to compare firms without the rule.',
     eyebrow: 'Rules search',
     h1: 'What is a consistency rule in a prop firm?',

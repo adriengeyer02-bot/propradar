@@ -350,3 +350,18 @@ html body .topbar .nav .nav-link-active:hover {
   .pr-india-row { grid-template-columns: 1fr 1fr; }
   .pr-india-head { display: none; }
 }
+
+/* Guides: consistency calculator and plain generated tables */
+.pr-calc { border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--surface, #fff); display: grid; gap: 14px; }
+.pr-calc h3 { margin: 0; }
+.pr-calc-fields { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.pr-calc-fields label { display: grid; gap: 6px; font-size: 0.85rem; color: var(--muted); }
+.pr-calc-fields input { font: inherit; font-size: 1.05rem; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2, #f6f8fb); color: var(--text, inherit); }
+.pr-calc-result { display: grid; gap: 4px; padding: 12px 14px; border-radius: 8px; background: var(--surface-2, #f3f6fa); }
+.pr-calc-result.is-pass { box-shadow: inset 3px 0 0 #16a34a; }
+.pr-calc-result.is-fail { box-shadow: inset 3px 0 0 #d97706; }
+.pr-plain-table { display: grid; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.pr-plain-row { display: grid; grid-template-columns: 1.1fr 1.3fr 1.2fr 0.7fr; gap: 12px; padding: 10px 14px; border-top: 1px solid var(--line); }
+.pr-plain-row:first-child { border-top: 0; }
+.pr-plain-row small { display: block; color: var(--muted); font-size: 0.8rem; }
+@media (max-width: 760px) { .pr-plain-row { grid-template-columns: 1fr 1fr; } }
