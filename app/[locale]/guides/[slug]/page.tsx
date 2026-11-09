@@ -1684,16 +1684,16 @@ export default async function SeoGuidePage({ params }: Props) {
               <div className="eyebrow">{isGftGuide || isBeginnerGuide || isReviewSignalsGuide || isFtmoAlternativesGuide ? 'Review Methodology' : 'Ranking Methodology'}</div>
               <h2>
                 {isGftGuide
-                  ? 'How this GFT review is weighted.'
+                  ? 'What this GFT review checks.'
                   : isFtmoAlternativesGuide
-                    ? 'How FTMO alternatives are evaluated.'
+                    ? 'What FTMO alternatives are checked on.'
                   : isReviewSignalsGuide
-                    ? 'How review reliability is weighted.'
+                    ? 'What review reliability is checked on.'
                   : isBeginnerGuide
-                    ? 'How beginner-friendly offers are weighted.'
+                    ? 'What beginner-friendly offers are checked on.'
                   : isNoChallengeGuide
-                    ? 'How no-challenge offers are weighted.'
-                    : 'How this ranking is weighted.'}
+                    ? 'What no-challenge offers are checked on.'
+                    : 'What this ranking checks.'}
               </h2>
             </div>
             <p className="section-note">
@@ -1710,14 +1710,16 @@ export default async function SeoGuidePage({ params }: Props) {
                 : 'Data comes from official pages, review platforms and documented payout incidents. Always recheck the official page before buying because rules change often.'}
             </p>
           </div>
+          <p className="pr-fineprint">
+            These are the checks PropRadar reads in each firm file. No fixed weights are applied:{' '}
+            <Link href="/about#score">how the score is set</Link>.
+          </p>
           <ul className="pr-weights">
             {rankingMethodology.map((item) => (
               <li key={item.label}>
                 <span className="pr-weights-head">
                   <strong>{item.label}</strong>
-                  <em>{item.weight}</em>
                 </span>
-                <span className="pr-weights-track" aria-hidden="true"><span style={{ width: item.weight }} /></span>
                 <p>{item.text}</p>
               </li>
             ))}
