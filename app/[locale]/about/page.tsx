@@ -144,6 +144,17 @@ export default async function AboutPage({ params }: Props) {
         <p className="pr-about-note">{rich(a.rulesNote, { link: <Link href={L('/audit')}>{a.rulesLink}</Link> })}</p>
       </section>
 
+      <section className="pr-about-block" id="score" aria-labelledby="score-title">
+        <div className="eyebrow">{a.scoreEyebrow}</div>
+        <h2 id="score-title">{a.scoreTitle}</h2>
+        <div className="pr-about-prose">
+          <p>{a.scoreP1}</p>
+          <ul>
+            {a.scoreRules.map((rule) => <li key={rule}>{rule}</li>)}
+          </ul>
+        </div>
+      </section>
+
       <section className="pr-about-block" aria-labelledby="work-title">
         <div className="eyebrow">{a.workEyebrow}</div>
         <h2 id="work-title">{a.workTitle}</h2>
@@ -160,6 +171,16 @@ export default async function AboutPage({ params }: Props) {
           <p>{fmt(a.moneyP1, { firms: affiliates })}</p>
           <p>{rich(a.moneyP2, { link: <Link href={L('/promos')}>{a.moneyLink}</Link> })}</p>
           <p>{a.moneyP3}</p>
+        </div>
+      </section>
+
+      <section className="pr-about-block" id="corrections" aria-labelledby="corrections-title">
+        <div className="eyebrow">{a.correctionsEyebrow}</div>
+        <h2 id="corrections-title">{a.correctionsTitle}</h2>
+        <div className="pr-about-prose">
+          <ol>
+            {a.corrections.map((item) => <li key={item}>{item}</li>)}
+          </ol>
         </div>
       </section>
 

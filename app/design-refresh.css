@@ -323,3 +323,19 @@ html body .topbar .nav .nav-link-active:hover {
 /* Data-drawn covers (brief issues, firm case files): keep the schematic at a readable size. */
 :is(.brief-issue-cover, .firm-case-file-visual) .gc { max-width: 780px; margin-inline: auto; }
 :is(.brief-issue-cover, .firm-case-file-visual) { background: #0b1626; }
+
+/* Firm page: list prices by account size (app/data/price-tables.json). */
+.pr-price-tables { margin-top: 28px; }
+.pr-price-tables > h3 { margin: 0 0 6px; }
+.pr-price-tables > p { margin: 0 0 16px; max-width: 72ch; }
+.pr-price-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.pr-price-table { margin: 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface, #fff); display: grid; gap: 8px; align-content: start; }
+.pr-price-table figcaption { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.pr-price-table figcaption span { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
+.pr-price-table table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.pr-price-table th, .pr-price-table td { padding: 6px 0; border-top: 1px solid var(--line); text-align: left; font-weight: 500; }
+.pr-price-table td { text-align: right; font-weight: 700; }
+.pr-price-table td small { margin-left: 2px; color: var(--muted); font-weight: 500; }
+.pr-price-table thead th { border-top: 0; color: var(--muted); font-size: 0.78rem; font-weight: 600; }
+.pr-price-table thead th:last-child { text-align: right; }
+.pr-price-table .pr-fineprint { margin: 0; }

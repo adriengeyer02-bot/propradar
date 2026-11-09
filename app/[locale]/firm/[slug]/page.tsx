@@ -53,6 +53,7 @@ import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
 import GuideCover from '../../../components/guide-visuals/GuideCover';
 import { DEPENDENCY_COVER } from '../../../lib/guideCovers';
+import { formatAccountSize, formatListPrice, getPriceTable } from '../../../lib/priceTables';
 import { getAuditCaseFile } from '../../../lib/auditCaseFiles';
 import { entityCountries } from '../../../lib/jurisdictions';
 import { getClosureRecord } from '../../../lib/closures';
@@ -495,6 +496,7 @@ export default async function FirmPage({ params }: Props) {
   const { locale, slug } = await readParams(params);
   const firm = getFirmBySlug(slug);
   const t = getMessages(locale);
+  const priceTable = getPriceTable(slug);
   /** Displayed firm data: English text, then its translation when the data dictionary has one. */
   const tx = (text?: string | null) => td(locale, toEnglishText(text ?? ''));
   const f = t.firm;
@@ -964,6 +966,37 @@ export default async function FirmPage({ params }: Props) {
             <p className="muted" style={{ marginBottom: 0 }}>{f.noProductText}</p>
           </div>
         )}
+        {priceTable && firm.status !== 'Fermée' ? (
+          <div className="pr-price-tables" id="prices">
+            <h3>{f.priceTableTitle}</h3>
+            <p className="muted">{fmt(f.priceTableLead, { name: firm.name, date: formatDateLong(locale, priceTable.checkedOn) })}</p>
+            <div className="pr-price-grid">
+              {priceTable.programs.map((program) => (
+                <figure className="pr-price-table" key={program.name}>
+                  <figcaption>
+                    <strong>{program.name}</strong>
+                    <span>{program.billing === 'monthly' ? f.perMonth : f.oneTime}</span>
+                  </figcaption>
+                  <table>
+                    <thead>
+                      <tr><th scope="col">{f.priceSize}</th><th scope="col">{f.priceList}</th></tr>
+                    </thead>
+                    <tbody>
+                      {program.rows.map((row) => (
+                        <tr key={row.size}>
+                          <th scope="row">{formatAccountSize(row.size)}</th>
+                          <td>{formatListPrice(row.price, program.currency)}{program.billing === 'monthly' ? <small>{f.perMonth}</small> : null}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  {program.note ? <p className="pr-fineprint" lang="en">{program.note}</p> : null}
+                  <a className="pr-fineprint" href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
+                </figure>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </section>
 
       <section className="container pr-section pr-decision" id="decision" aria-label={fmt(f.decisionAria, { name: firm.name })}>
