@@ -1781,6 +1781,14 @@
             "newsTrading",
             "drawdownType"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile fundingyourtrades.com checked on www (134 reviews listed) and on the au mirror (129): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/fundingyourtrades.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "setEntities": [
@@ -1808,7 +1816,10 @@
       "set": {
         "newsTrading": "Allowed",
         "drawdownType": "Hybride"
-      }
+      },
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingyourtrades.com)."
+      ]
     },
     "fundyourfx": {
       "reviewedAt": "2026-10-28",
@@ -5493,13 +5504,24 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "CNMV search for fxrk.com read on 2026-11-09: one warning, dated 17/02/2025, under \"unauthorised entities\". Added as a dated regulator incident, quoting the regulator.",
+          "source": "https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 2463,
         "trustpilotSourceUrl": "https://ie.trustpilot.com/review/fxrk.com"
-      }
+      },
+      "addIncidents": [
+        "The Spanish securities regulator CNMV published a warning dated 17/02/2025 on \"HTTPS://FXRK.COM\" in its list of unauthorised entities, stating that it is not authorised to provide investment services and activities subject to authorisation, including foreign-exchange operations (https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en)."
+      ]
     },
     "now-trade-funded": {
       "reviewedAt": "2026-11-09",
@@ -5588,13 +5610,24 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Dated 2023 pause and payout reports from Finance Magnates added as an incident. Current status not established: the official site blocks automated reading and Trustpilot shows no review since 29 Aug 2025. No status change.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.3,
         "trustpilotReviewCount": 1286,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.leveledupsociety.com"
-      }
+      },
+      "addIncidents": [
+        "Finance Magnates reported on 2023-10-20 (Arnab Shome) that Leveled Up Society \"abruptly went dark\" in late September 2023; the firm's message quoted there said \"all of our services are temporarily paused as we are working hard into a new transition\", and its website said pending payouts \"have been resumed\", while some traders reported rejected payout claims (https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/)."
+      ]
     },
     "fxci": {
       "reviewedAt": "2026-11-09",
@@ -5665,6 +5698,14 @@
             "newsTrading",
             "eaAllowed"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile directfundedtrader.com checked on www (235 reviews listed) and on the au mirror (235): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/directfundedtrader.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -5677,6 +5718,9 @@
           "label": "Direct Funded Trader FAQ and trading rules (official)",
           "url": "https://directfundedtrader.com/faq-rules"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/directfundedtrader.com)."
       ]
     },
     "upcomers": {
@@ -5699,6 +5743,14 @@
           "source": "https://upcomers.com/payouts",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile upcomers.com checked on www (587 reviews listed) and on the au mirror (580): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/upcomers.com",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -5740,6 +5792,9 @@
           "registeredAddress": "Nicosia, Cyprus",
           "role": "Company disclosed in the official footer."
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/upcomers.com)."
       ]
     },
     "forexive": {
@@ -5753,6 +5808,14 @@
             "payoutDelay",
             "newsTrading"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile forexive.com checked on www (110 reviews listed) and on the au mirror (114): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/forexive.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -5764,6 +5827,9 @@
           "label": "Forexive challenges (official)",
           "url": "https://forexive.com/challenges"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/forexive.com)."
       ]
     },
     "alpine-funded": {
@@ -5776,6 +5842,14 @@
           "fields": [
             "payoutDelay",
             "newsTrading"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Regulator item found in Finance Magnates (2025-03-05): NSSMC (Ukraine) warning list. The NSSMC page itself was not read; the incident cites the outlet and says the regulator gave no reason.",
+          "source": "https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -5792,6 +5866,25 @@
           "label": "Alpine Funded news trading (official help)",
           "url": "https://help.alpinefunded.com/en/articles/9690823-is-news-trading-allowed"
         }
+      ],
+      "addIncidents": [
+        "Finance Magnates reported on 2025-03-05 (Arnab Shome) that Ukraine's National Securities and Stock Market Commission (NSSMC) added Alpine Funded and Aura Funded to its warning list, among seven names flagged the week before; the article notes the regulator gave no reason for their inclusion (https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/)."
+      ]
+    },
+    "fundedhive": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile fundedhive.com checked on www (141 reviews listed) and on the au and ie mirror (141): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/fundedhive.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au and ie mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedhive.com)."
       ]
     }
   }
