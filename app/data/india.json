@@ -1,0 +1,16 @@
+{
+  "checkedOn": "2026-11-09",
+  "firms": [
+    { "slug": "ftmo", "restrictedListUrl": "https://ftmo.com/en/faq/who-can-join-ftmo/", "payouts": "Bank wire, Visa Direct / Mastercard Send, Skrill, crypto", "payoutsUrl": "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/" },
+    { "slug": "the5ers", "restrictedListUrl": "https://the5ers.com/faqs/who-can-join-the5ers/", "payouts": "Rise, crypto, bank transfer", "payoutsUrl": "https://the5ers.com/faqs/what-payout-methods-are-available" },
+    { "slug": "fundednext", "restrictedListUrl": "https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds", "payouts": "USDT, USDC, Confirmo, Rise, bank transfer, card", "payoutsUrl": "https://help.fundednext.com/en/articles/8020084-how-can-i-withdraw-my-profits", "rbiAlert": { "date": "2024-10-22", "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949", "entry": "FundedNext | https://fundednext.com" } },
+    { "slug": "funderpro", "restrictedListUrl": "https://support.funderpro.com/en/articles/376945-sign-up-age-limits-and-country-restrictions", "payouts": "USDC, Rise", "payoutsUrl": "https://support.funderpro.com/en/articles/378136-how-can-i-receive-my-rewards" },
+    { "slug": "goat-funded-trader", "restrictedListUrl": "https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader", "payouts": "Rise, crypto, Skrill (bank transfer only in some African countries)", "payoutsUrl": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival" },
+    { "slug": "blue-guardian", "restrictedListUrl": "https://help.blueguardian.com/en/articles/15618204-general-information-rules", "payouts": "Crypto, Rise", "payoutsUrl": "https://help.blueguardian.com/en/articles/9660857-how-do-payouts-work", "note": "The firm's list says restricted countries \"include\" those named, so it may not be complete." },
+    { "slug": "alpha-capital-group", "restrictedListUrl": "https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations", "payouts": "Rise, Wise, bank transfer", "payoutsUrl": "https://help.alphacapitalgroup.uk/en/articles/6933755-how-do-i-get-paid-performance-fees" },
+    { "slug": "fxify", "restrictedListUrl": "https://fxify.com/faqs/all-faqs/what-countries-are-accepted/", "payouts": "Rise", "payoutsUrl": "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/" },
+    { "slug": "maven-trading", "restrictedListUrl": "https://maventrading.com/faqs", "payouts": "USDT, USDC, Rise", "payoutsUrl": "https://maventrading.com/faqs", "note": "Maven names UPI for India as a way to buy a challenge (AstroPay partnership), not for payouts." },
+    { "slug": "city-traders-imperium", "restrictedListUrl": "https://citytradersimperium.com/", "payouts": "Bank transfer, crypto", "payoutsUrl": "https://citytradersimperium.com/" }
+  ],
+  "notRead": ["Funding Pips", "E8 Markets"]
+}
