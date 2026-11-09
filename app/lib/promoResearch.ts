@@ -10,7 +10,7 @@ import {
   type PropFirm,
 } from './propFirms';
 
-export const PROMO_REVIEW_DATE = '2026-11-07';
+export const PROMO_REVIEW_DATE = '2026-11-09';
 
 export type PromoProofLevel = 'Official' | 'PropRadar affiliate' | 'Confirm at checkout' | 'Good deal without code';
 export type PromoCategory = 'code' | 'affiliate' | 'official-discount' | 'price-opportunity' | 'futures';
@@ -84,7 +84,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'Eligible account purchase; the free account is claimable only after the first successful payout and a support request.',
     sourceUrl: `${GOAT_FUNDED_TRADER_AFFILIATE_URL}&coupon=BOGO40`,
     sourceLabel: 'Official GOAT Funded Trader BOGO40 checkout and help article',
-    sourceNote: 'Official help article rechecked on 2026-10-27 (last updated 2026-10-05): BOGO40 gives 40% off at checkout. The same-size free account is not issued at purchase; it is issued only after the first payout and a support request.',
+    sourceNote: 'Official help article rechecked on 2026-10-27 and 2026-11-09 (last updated 2026-10-05): BOGO40 gives 40% off at checkout. The same-size free account is not issued at purchase; it is issued only after the first payout and a support request.',
     consumerVerdict:
       'The headline is attractive, but this is not an immediate buy-one-get-one deal. Treat the second account as a conditional reward that depends on reaching and receiving a first payout.',
     caveats: ['Free account only after the first successful payout', 'Support claim required', 'One promo code per purchase'],
@@ -108,7 +108,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'New customers on eligible plans; only one promotion can be used per purchase.',
     sourceUrl: `${GOAT_FUNDED_TRADER_AFFILIATE_URL}&coupon=FIRSTGFT`,
     sourceLabel: 'Official GOAT Funded Trader current discount-code page',
-    sourceNote: 'Official GOAT Funded Trader deal page rechecked on 2026-10-27 and 2026-11-06: FIRSTGFT is still listed as 50% off for new customers, limited time, no end date. The final reduction depends on the eligible plan.',
+    sourceNote: 'Official GOAT Funded Trader deal page rechecked on 2026-10-27, 2026-11-06 and 2026-11-09: FIRSTGFT is still listed as 50% off for new customers, limited time, no end date. The final reduction depends on the eligible plan.',
     consumerVerdict:
       'The simpler GOAT offer for a first purchase. It is easier to understand than BOGO40, but the words "up to" mean the exact reduction must be checked on the chosen plan.',
     caveats: ['New customers only', 'Exact reduction varies by eligible plan', 'One promo code per purchase'],
@@ -248,7 +248,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'First Pro Challenge purchase; automatic discount on the eligible offer.',
     sourceUrl: 'https://funderpro.com/pro-challenge/',
     sourceLabel: 'Official FunderPro Pro Challenge launch page',
-    sourceNote: 'Official Pro Challenge page rechecked on 2026-10-27 and 2026-11-06: "Get 15% off for a limited time", no code needed (the purchase links carry the promo automatically); no end date shown.',
+    sourceNote: 'Official Pro Challenge page rechecked on 2026-10-27, 2026-11-06 and 2026-11-09: "Get 15% off for a limited time", no code needed (the purchase links carry the promo automatically); no end date shown.',
     consumerVerdict:
       'A cleaner FunderPro offer than an unconfirmed coupon because the product page states both the percentage and the no-code mechanism.',
     caveats: ['First Pro Challenge only', 'Limited-time wording without a fixed date', 'Choose daily or weekly reward rules before purchase'],
@@ -269,7 +269,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'Smallest eligible Instant configuration; larger sizes and options cost more.',
     sourceUrl: FUNDERPRO_AFFILIATE_URL,
     sourceLabel: 'Official FunderPro site + PropRadar affiliate link',
-    sourceNote: 'Official site checked on 2026-07-13: Instant Program starts from $79, with news trading and an advertised first reward threshold of $100. This is a starting price, not a percentage discount.',
+    sourceNote: 'Official site checked on 2026-07-13 and 2026-11-09 (home page: Instant Program "Starts from $79.00"): Instant Program starts from $79, with news trading and an advertised first reward threshold of $100. This is a starting price, not a percentage discount.',
     consumerVerdict:
       'Useful as a price benchmark for instant access, but the selected drawdown, account size and payout conditions determine whether it is actually cheaper.',
     caveats: ['Starting price only', 'Conditions vary by account size', 'Affiliate link has no impact on the score'],
@@ -290,7 +290,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'Classic Challenges only; select the No Minimum Trading Days add-on before applying the code.',
     sourceUrl: 'https://funderpro.com/blog/how-to-claim-the-nomindays-discount-on-funderpro/',
     sourceLabel: 'Official FunderPro NOMINDAYS instructions',
-    sourceNote: 'Official instructions checked on 2026-07-13: NOMINDAYS makes the No Minimum Trading Days add-on free on eligible Classic Challenges. FunderPro recommends selecting the add-on before applying the code.',
+    sourceNote: 'Official instructions checked on 2026-07-13 and 2026-11-09 (article dated 28 April 2026, no end date): NOMINDAYS makes the No Minimum Trading Days add-on free on eligible Classic Challenges. FunderPro recommends selecting the add-on before applying the code.',
     consumerVerdict:
       'This changes a rule-related add-on rather than the base challenge price. It is valuable only if minimum trading days would otherwise affect the selected Classic plan.',
     caveats: ['Classic Challenge only', 'Add-on must display as free', 'Does not remove other consistency or payout requirements'],
@@ -311,7 +311,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: '$200K Classic Challenge; the free plaque requires KYC plus funding or a reward on that same account.',
     sourceUrl: 'https://funderpro.com/funded-award-campaign/',
     sourceLabel: 'Official FunderPro Funded Award campaign',
-    sourceNote: 'Official campaign rechecked on 2026-10-27 and 2026-11-06: AWARD200 gives a $200 voucher toward a $200K Classic Challenge. The advertised free plaque is conditional on KYC and becoming funded or claiming a reward on that account.',
+    sourceNote: 'Official campaign rechecked on 2026-10-27, 2026-11-06 and 2026-11-09: AWARD200 gives a $200 voucher toward a $200K Classic Challenge. The advertised free plaque is conditional on KYC and becoming funded or claiming a reward on that account.',
     consumerVerdict:
       'A concrete high-account discount, but it should not push a trader into a $200K purchase that does not fit the strategy or budget.',
     caveats: ['$200K Classic only', 'Plaque benefit is conditional', 'Campaign availability can change'],
@@ -395,7 +395,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'Rapid, Builder, Rapid EOD and Pro evaluations; the page lists unlimited uses.',
     sourceUrl: 'https://myfundedfutures.com/coupons',
     sourceLabel: 'Official MyFundedFutures coupon page',
-    sourceNote: 'Official coupon page checked on 2026-10-28 and 2026-11-06: CLUB gives 40% off, "Lifetime Promo", works on Rapid, Builder, Rapid EOD and Pro, "Number of uses: Unlimited".',
+    sourceNote: 'Official coupon page checked on 2026-10-28, 2026-11-06 and 2026-11-09: CLUB gives 40% off, "Lifetime Promo", works on Rapid, Builder, Rapid EOD and Pro, "Number of uses: Unlimited".',
     consumerVerdict:
       'A durable discount that is not limited to new customers. Compare the plan rules first: the same 40% does not make Rapid, Builder and Pro equivalent.',
     caveats: ['Evaluations only', 'Plan rules matter more than the discount', 'Confirm the subtotal falls by 40% before paying'],
@@ -416,7 +416,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'New customers only, one use per user; Rapid EOD, Rapid, Builder and Pro evaluations.',
     sourceUrl: 'https://myfundedfutures.com/coupons',
     sourceLabel: 'Official MyFundedFutures coupon page',
-    sourceNote: 'Official coupon page checked on 2026-10-28 and 2026-11-06: FIFTYOFF gives 50% off evaluations, "New Customers Only: Yes", "One Per User: Yes", works on Rapid EOD, Rapid, Builder and Pro.',
+    sourceNote: 'Official coupon page checked on 2026-10-28, 2026-11-06 and 2026-11-09: FIFTYOFF gives 50% off evaluations, "New Customers Only: Yes", "One Per User: Yes", works on Rapid EOD, Rapid, Builder and Pro.',
     consumerVerdict:
       'The strongest MFFU code for a first evaluation. It can only be used once, so pick the plan whose rules you actually want before applying it.',
     caveats: ['New customers only', 'One use per user', 'Evaluations only'],
@@ -481,7 +481,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'All new Take Profit Trader test accounts, any size, while the promotion remains live.',
     sourceUrl: 'https://try.takeprofittrader.com/futures-traders-nofee50-1026',
     sourceLabel: 'Official Take Profit Trader NOFEE50 offer page',
-    sourceNote: 'Official Take Profit Trader offer page checked on 2026-11-06 and 2026-11-07: "a 50% lifetime discount on all new test accounts and never pay an activation fee with code NOFEE50"; "Only available for a limited-time". It replaced NOFEE40 (40%).',
+    sourceNote: 'Official Take Profit Trader offer page checked on 2026-11-06, 2026-11-07 and 2026-11-09: "a 50% lifetime discount on all new test accounts and never pay an activation fee with code NOFEE50"; "Only available for a limited-time". It replaced NOFEE40 (40%).',
     consumerVerdict:
       'A strong futures offer: the discount is described as lifetime on the test and the PRO activation fee is waived, which matters more than the first invoice alone.',
     caveats: ['Limited-time offer, no end date shown', 'Futures only', 'Confirm both the test discount and the activation-fee waiver in the order terms'],
@@ -524,7 +524,7 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: '"Save 30% with code NOV30"; no further condition shown. Confirm the discounted subtotal before payment.',
     sourceUrl: BLUE_GUARDIAN_AFFILIATE_URL,
     sourceLabel: 'Official Blue Guardian site + PropRadar affiliate link',
-    sourceNote: 'Official Blue Guardian home page checked on 2026-11-06 and 2026-11-07: "Save 30% with code NOV30". It replaced the HALLOWEEN code (35%). PropRadar affiliate link remains disclosed.',
+    sourceNote: 'Official Blue Guardian home page checked on 2026-11-06 and 2026-11-07: "Save 30% with code NOV30". Official checkout rechecked on 2026-11-09: "30% OFF • LIMITED OFFER", "SAVE 30% WITH CODE NOV30". It replaced the HALLOWEEN code (35%). PropRadar affiliate link remains disclosed.',
     consumerVerdict:
       'A current Blue Guardian discount, but seasonal: the code has changed several times in a month, so check that it still lowers the subtotal at checkout.',
     caveats: ['Seasonal code, likely to end with November', 'Add-ons are priced separately', 'Affiliate link has no impact on the score'],
