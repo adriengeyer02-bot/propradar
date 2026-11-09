@@ -7,10 +7,11 @@ import zh from './zh';
 import es from './es';
 import pt from './pt';
 import ja from './ja';
+import hi from './hi';
 
 export type { Messages };
 
-const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja };
+const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja, hi };
 
 export function getMessages(locale: Locale): Messages {
   return ALL[locale] ?? en;
@@ -28,7 +29,7 @@ export function tv(messages: Messages, value: string | undefined | null) {
   return values[value] ?? value;
 }
 
-const DATE_LOCALE: Record<Locale, string> = { en: 'en-US', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', es: 'es-ES', pt: 'pt-BR', zh: 'zh-CN', ja: 'ja-JP' };
+const DATE_LOCALE: Record<Locale, string> = { en: 'en-US', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', es: 'es-ES', pt: 'pt-BR', zh: 'zh-CN', ja: 'ja-JP', hi: 'hi-IN' };
 
 /** "30 October 2026" in the page language. */
 export function formatDateLong(locale: Locale, isoDate: string) {
@@ -37,6 +38,11 @@ export function formatDateLong(locale: Locale, isoDate: string) {
   );
 }
 
+/**
+ * Numbers keep the grouping of the source data. Hindi would otherwise switch
+ * to lakh grouping (1,00,000), which reads as a different number next to the
+ * firm's own pages.
+ */
 export function numberLocale(locale: Locale) {
-  return DATE_LOCALE[locale];
+  return locale === 'hi' ? 'en-US' : DATE_LOCALE[locale];
 }
