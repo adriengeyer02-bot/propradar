@@ -1457,9 +1457,17 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "RBI press release of 22 Oct 2024 read: FundedNext is entry 8 of 13 added to the Alert List of unauthorised forex trading platforms. Added as a dated regulator incident, quoting the RBI. The current Alert List PDF could not be read, so continued presence was not checked.",
+          "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-09",
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 83306,
@@ -1470,6 +1478,9 @@
           "label": "FundedNext Stellar Lite (official)",
           "url": "https://fundednext.com/cfds/stellar-lite"
         }
+      ],
+      "addIncidents": [
+        "The Reserve Bank of India added \"FundedNext | https://fundednext.com\" to its Alert List of unauthorised forex trading platforms in a press release dated 2024-10-22 (Press Release 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). The RBI says the list is not exhaustive."
       ]
     },
     "funderpro": {

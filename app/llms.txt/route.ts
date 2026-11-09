@@ -42,6 +42,7 @@ export function GET() {
     `- [Prop firm statistics](${SITE_URL}/prop-firm-statistics): closures, fees, splits, entity countries; CSV at ${SITE_URL}/prop-firm-statistics/data.csv`,
     `- [Payout risk](${SITE_URL}/prop-firm-payout-risk): firms with sourced payout incidents`,
     `- [Trustpilot research](${SITE_URL}/trustpilot-prop-firms): firms whose Trustpilot rating is withheld`,
+    `- [Prop firms in India](${SITE_URL}/prop-firms-india): RBI rules, the RBI Alert List entry for a prop firm, which firms list India as restricted`,
     `- [Method and sources](${SITE_URL}/audit)`,
     `- [About, score method and corrections policy](${SITE_URL}/about)`,
     '',

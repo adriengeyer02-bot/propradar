@@ -339,3 +339,14 @@ html body .topbar .nav .nav-link-active:hover {
 .pr-price-table thead th { border-top: 0; color: var(--muted); font-size: 0.78rem; font-weight: 600; }
 .pr-price-table thead th:last-child { text-align: right; }
 .pr-price-table .pr-fineprint { margin: 0; }
+
+/* /prop-firms-india */
+.pr-india-table { display: grid; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 12px; }
+.pr-india-row { display: grid; grid-template-columns: 1.1fr 1fr 1.4fr 1fr; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--line); align-items: start; }
+.pr-india-row:first-child { border-top: 0; }
+.pr-india-head { background: var(--surface-2, #f3f6fa); font-size: 0.8rem; font-weight: 700; color: var(--muted); }
+.pr-india-row small { display: block; color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
+@media (max-width: 760px) {
+  .pr-india-row { grid-template-columns: 1fr 1fr; }
+  .pr-india-head { display: none; }
+}
