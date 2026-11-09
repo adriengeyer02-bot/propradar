@@ -1763,7 +1763,7 @@
       ]
     },
     "funding-your-trades": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-09",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1771,6 +1771,15 @@
           "source": "https://fundingyourtrades.com/terms-of-services/",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Official pages read. Main challenges: \"Fair rules — based on opening balance, never trailing\" (static); Instant Plus uses a trailing drawdown and Instant Funding Prime a trailing drawdown capped at the initial balance, so the type is recorded as mixed. FAQ: \"FYT places no restrictions on news trading.\" Payout timing is contradictory on the page (\"Payouts released weekly\" vs a \"Bi-weekly\" table entry) and two prices are shown per size without saying which is the list price, so payout timing and prices are not recorded.",
+          "source": "https://fundingyourtrades.com/faq/maximum-drawdown-loss-limit/",
+          "fields": [
+            "newsTrading",
+            "drawdownType"
           ]
         }
       ],
@@ -1790,8 +1799,16 @@
         {
           "label": "Funding Your Trades terms of service (official)",
           "url": "https://fundingyourtrades.com/terms-of-services/"
+        },
+        {
+          "label": "Funding Your Trades drawdown FAQ (official)",
+          "url": "https://fundingyourtrades.com/faq/maximum-drawdown-loss-limit/"
         }
-      ]
+      ],
+      "set": {
+        "newsTrading": "Allowed",
+        "drawdownType": "Hybride"
+      }
     },
     "fundyourfx": {
       "reviewedAt": "2026-10-28",
@@ -4682,7 +4699,7 @@
       ]
     },
     "daytraders-com": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-09",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -4691,15 +4708,47 @@
           "fields": [
             "profitSplit"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 4.6/5 from 518 reviews on www.trustpilot.com; the au mirror shows 4.6 from 508 reviews (older snapshot). No withheld-rating or fake-review notice on either. Profile domain daytraders.com matches the official site (not daytrader.com).",
+          "source": "https://www.trustpilot.com/review/daytraders.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Official pages read. Live (S2L) page: \"Not every 8 days. Not bi-weekly. Daily.\" and an 80% split on live accounts; one-time fees Core $329, Edge $469, Ultra $599. Help article: news trading allowed (\"not recommended as liquidity can drastically decrease\"), automated high-frequency trading prohibited, Pro accounts keep the evaluation drawdown (static or intraday trailing) and S2F uses an end-of-day trailing drawdown. Drawdown differs by program and the S2L type is not named, so drawdownType stays unverified. Pro/S2F prices and payout schedule not stated.",
+          "source": "https://daytraders.com/live-funded-trading",
+          "fields": [
+            "payoutDelay",
+            "newsTrading"
+          ]
         }
       ],
       "set": {
-        "profitSplit": 100
+        "profitSplit": 100,
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 518,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/daytraders.com",
+        "payoutDelay": "Live (S2L): daily payout requests (\"Trade profitably Monday, request payout Tuesday\"); Pro and S2F schedule not stated",
+        "newsTrading": "Allowed"
       },
       "addSources": [
         {
           "label": "DayTraders.com homepage (official)",
           "url": "https://daytraders.com/"
+        },
+        {
+          "label": "DayTraders.com live funded trading (official)",
+          "url": "https://daytraders.com/live-funded-trading"
+        },
+        {
+          "label": "DayTraders.com funded account rules, Pro and S2F (official help)",
+          "url": "https://daytraders.com/help/articles/14367899-funded-account-trading-rules-pro-s2f"
         }
       ]
     },
@@ -5379,7 +5428,7 @@
       ]
     },
     "tx3-funding": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-09",
       "changelog": [
         {
           "date": "2026-10-30",
@@ -5388,8 +5437,23 @@
           "fields": [
             "profile"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 3.0/5 from 4,311 reviews on www.trustpilot.com (profile www.tx3funding.com, which Trustpilot says was merged with other profiles of the company); the uk mirror shows 3.0 from 4,310. No withheld-rating notice.",
+          "source": "https://www.trustpilot.com/review/www.tx3funding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
         }
-      ]
+      ],
+      "set": {
+        "trustpilotRating": 3.0,
+        "trustpilotReviewCount": 4311,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.tx3funding.com"
+      }
     },
     "indigo-trader-funding": {
       "reviewedAt": "2026-10-30",
@@ -5414,6 +5478,319 @@
           "fields": [
             "status"
           ]
+        }
+      ]
+    },
+    "fxrk": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 4.4/5 from 2,463 reviews on the ie mirror; www.trustpilot.com shows the same 4.4 and 2,463 reviews. No withheld-rating or fake-review notice.",
+          "source": "https://ie.trustpilot.com/review/fxrk.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 4.4,
+        "trustpilotReviewCount": 2463,
+        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/fxrk.com"
+      }
+    },
+    "now-trade-funded": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 3.1/5 from 16 reviews on www.trustpilot.com, same on the au mirror. Trustpilot shows 0 reviews in the last 12 months (latest 15 Aug 2025) and no withheld-rating notice.",
+          "source": "https://www.trustpilot.com/review/nowtradefunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Official home page read: \"Profit Share – 80%\" on every challenge tier. Drawdown type is named only for the Progressive tiers (\"Max Total Drawdown(Trailing) – 6%\"), Progressive prices are shown with two unlabelled figures, and no legal entity is named, so those fields stay unverified.",
+          "source": "https://nowtradefunded.com/",
+          "fields": [
+            "profitSplit"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 16,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/nowtradefunded.com",
+        "profitSplit": 80
+      },
+      "addSources": [
+        {
+          "label": "Now Trade Funded home page (official)",
+          "url": "https://nowtradefunded.com/"
+        }
+      ]
+    },
+    "getcryptofunded": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 2.3/5 from 7 reviews on www.trustpilot.com, same on the au mirror. 0 reviews in the last 12 months (latest 15 Apr 2025); no withheld-rating notice.",
+          "source": "https://www.trustpilot.com/review/getcryptofunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 2.3,
+        "trustpilotReviewCount": 7,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/getcryptofunded.com"
+      }
+    },
+    "fidelcrest": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 3.9/5 from 1,766 reviews on the ca mirror; the nl-be mirror shows 3.9 from 1,761 reviews. Trustpilot shows 0 reviews in the last 12 months (latest 4 Jan 2025) and no withheld-rating notice.",
+          "source": "https://ca.trustpilot.com/review/fidelcrest.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.9,
+        "trustpilotReviewCount": 1766,
+        "trustpilotSourceUrl": "https://ca.trustpilot.com/review/fidelcrest.com"
+      }
+    },
+    "leveled-up-society": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 3.3/5 from 1,286 reviews on www.trustpilot.com (profile www.leveledupsociety.com); au and ie mirrors show 3.3 from 1,284. Latest review 29 Aug 2025; no withheld-rating notice.",
+          "source": "https://www.trustpilot.com/review/www.leveledupsociety.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.3,
+        "trustpilotReviewCount": 1286,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.leveledupsociety.com"
+      }
+    },
+    "fxci": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 1.9/5 from 137 reviews on the nz mirror; the uk mirror shows the same 1.9 and 137. No withheld-rating notice.",
+          "source": "https://nz.trustpilot.com/review/fxci.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Official pages read: \"Keep up to 85% profit share with FXCI\" (home page); help center: EAs and HFT bots allowed \"only during the Evaluation stage and is prohibited on a Funded account\". Account sizes are shown in EUR (€10,000 to €200,000) without prices, so no products recorded; drawdown 5% daily / 10% total of the initial balance, type not named.",
+          "source": "https://fxci.com/",
+          "fields": [
+            "profitSplit",
+            "eaAllowed"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 1.9,
+        "trustpilotReviewCount": 137,
+        "trustpilotSourceUrl": "https://nz.trustpilot.com/review/fxci.com",
+        "profitSplit": 85,
+        "eaAllowed": "Variable"
+      },
+      "addSources": [
+        {
+          "label": "FXCI EAs and HFT bots (official help)",
+          "url": "https://help.fxci.com/are-eas-and-hft-bots-allowed/"
+        }
+      ]
+    },
+    "myfundedcapital": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "First Trustpilot reading: 3.5/5 from 82 reviews on the au mirror (same on it.trustpilot.com). www.trustpilot.com showed an older snapshot, 3.6 from 79 reviews; the reading with the most reviews is stored. No withheld-rating notice.",
+          "source": "https://au.trustpilot.com/review/myfundedcapital.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 82,
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/myfundedcapital.com"
+      }
+    },
+    "directfundedtrader": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Domain monitor: directfundedtrader.com went from unreachable to ok on 2026-11-06; read by hand on 2026-11-09, it serves the same brand (\"Direct Funded Trader | #1 Prop Trading Firm\"). No domain warning needed. Official FAQ read: 80% split, 100% after more than five consecutive rewards (home page tiers: monthly 100%, biweekly 80%, weekly 70%; stored \"up to 100\" unchanged); first profit share after four trading weeks, then every two trading weeks; funded stage: no trading or holding during news, trades closed 5 minutes before high-impact news (challenge stage allowed); \"EA and Indicators are allowed\" (third-party EAs verified first). Drawdown type not stated (10% overall, 5% daily).",
+          "source": "https://directfundedtrader.com/faq-rules",
+          "fields": [
+            "payoutDelay",
+            "newsTrading",
+            "eaAllowed"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "first profit share after four trading weeks, then every two trading weeks (Evaluation and Fast Funding)",
+        "newsTrading": "Restricted",
+        "eaAllowed": "Yes"
+      },
+      "addSources": [
+        {
+          "label": "Direct Funded Trader FAQ and trading rules (official)",
+          "url": "https://directfundedtrader.com/faq-rules"
+        }
+      ]
+    },
+    "upcomers": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Official help center read: \"The standard profit split is 90%. Depending on the option selected at checkout, it can be adjusted to 80% or 100%\" for all programs. Program comparison: Ash, Thunderbolt, Horizon, Odyssey \"Dynamic\" (Ash page: a trailing drawdown that moves with equity), Phoenix static, Vanguard/Oracle/Ember trailing, Supernova/Hypernova/Ultranova nonstop trailing, so the type is recorded as mixed; payouts on demand, every 14 days or after 5 valid days depending on the program; \"News trading and weekend holding allowed\". Prices not stated on the help pages, so no products recorded.",
+          "source": "https://help.upcomers.com/en/articles/12657643-what-are-the-differences-between-upcomers-programs",
+          "fields": [
+            "profitSplit",
+            "payoutDelay",
+            "newsTrading",
+            "drawdownType"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Entities read in the official footer: Upcomers Ltd. (Saint Lucia, 2025-00579), Royal Flow - FZCO (UAE, licence 35886) and UPCOMERS LTD (Cyprus, HE 490773, Nicosia), which was not listed before.",
+          "source": "https://upcomers.com/payouts",
+          "fields": [
+            "entities"
+          ]
+        }
+      ],
+      "set": {
+        "profitSplit": 90,
+        "payoutDelay": "on demand (Ash, Thunderbolt, Phoenix), every 14 days (Horizon, Odyssey), after 5 valid days (Vanguard, Oracle, Ember); processed within 24 hours of receiving payout details",
+        "newsTrading": "Allowed",
+        "drawdownType": "Hybride"
+      },
+      "addSources": [
+        {
+          "label": "Upcomers profit split (official help)",
+          "url": "https://help.upcomers.com/en/articles/12640136-profit-split"
+        },
+        {
+          "label": "Upcomers program differences (official help)",
+          "url": "https://help.upcomers.com/en/articles/12657643-what-are-the-differences-between-upcomers-programs"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Upcomers Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00579",
+          "registeredAddress": "Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Company disclosed in the official footer."
+        },
+        {
+          "name": "Royal Flow - FZCO",
+          "jurisdiction": "Dubai, United Arab Emirates",
+          "registrationNumber": "License 35886",
+          "registeredAddress": "IFZA Business Park DDP, Dubai Silicon Oasis, United Arab Emirates",
+          "role": "Technology and education company disclosed in the official footer."
+        },
+        {
+          "name": "UPCOMERS LTD",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE 490773",
+          "registeredAddress": "Nicosia, Cyprus",
+          "role": "Company disclosed in the official footer."
+        }
+      ]
+    },
+    "forexive": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Official challenges page read: rewards \"Bi-weekly or weekly\" with \"7 days before first reward\" on Access, 2-Step and 1-Step, on-demand on Instant; home page: \"Reward requests processed within 24 hours.\" News: allowed in evaluation; on funded accounts profit from trades closed between 5 minutes before and 5 minutes after a high-impact news event is deducted. The split depends on an add-on (funded column shows 100%, 1-Step tiers 80/85/95%), so the split is left unverified; drawdown type not named.",
+          "source": "https://forexive.com/challenges",
+          "fields": [
+            "payoutDelay",
+            "newsTrading"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "bi-weekly or weekly, first reward after 7 days (Access, 2-Step, 1-Step); on demand (Instant); requests processed within 24 hours",
+        "newsTrading": "Restricted"
+      },
+      "addSources": [
+        {
+          "label": "Forexive challenges (official)",
+          "url": "https://forexive.com/challenges"
+        }
+      ]
+    },
+    "alpine-funded": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Official help center read: \"The first payout is available 21 days after the initial trade\", then bi-weekly. News: Peak Standard forbids opening or closing trades five minutes before or after high-impact news; Peak Swing \"News trading is not restricted\"; Instant allows news. Drawdown is measured from the highest balance but the type is not named, and the Phase 2 limit differs between the help article (8%) and the Peak page (4%), so drawdown is left unverified. Product pages could not be read.",
+          "source": "https://help.alpinefunded.com/en/articles/9690819-what-is-the-payout-schedule",
+          "fields": [
+            "payoutDelay",
+            "newsTrading"
+          ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "first payout 21 days after the initial trade, then bi-weekly",
+        "newsTrading": "Variable"
+      },
+      "addSources": [
+        {
+          "label": "Alpine Funded payout schedule (official help)",
+          "url": "https://help.alpinefunded.com/en/articles/9690819-what-is-the-payout-schedule"
+        },
+        {
+          "label": "Alpine Funded news trading (official help)",
+          "url": "https://help.alpinefunded.com/en/articles/9690823-is-news-trading-allowed"
         }
       ]
     }
