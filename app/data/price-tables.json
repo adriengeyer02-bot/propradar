@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "firms": {
+    "topstep": {
+      "checkedOn": "2026-11-09",
+      "programs": [
+        {
+          "name": "Trading Combine – Standard Path",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+          "note": "Plus a $149 activation fee, charged once per Express Funded Account earned.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 49
+            },
+            {
+              "size": 100000,
+              "price": 99
+            },
+            {
+              "size": 150000,
+              "price": 199
+            }
+          ]
+        },
+        {
+          "name": "Trading Combine – No Activation Fee Path",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
+          "note": "No activation fee when you pass.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 95
+            },
+            {
+              "size": 100000,
+              "price": 149
+            },
+            {
+              "size": 150000,
+              "price": 229
+            }
+          ]
+        }
+      ]
+    },
+    "alpha-futures": {
+      "checkedOn": "2026-11-09",
+      "programs": [
+        {
+          "name": "Zero",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://alpha-futures.com/",
+          "note": "No fee once qualified.",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 89
+            },
+            {
+              "size": 50000,
+              "price": 169
+            },
+            {
+              "size": 100000,
+              "price": 279
+            }
+          ]
+        },
+        {
+          "name": "Standard",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://alpha-futures.com/",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 129
+            },
+            {
+              "size": 100000,
+              "price": 239
+            },
+            {
+              "size": 150000,
+              "price": 349
+            }
+          ]
+        },
+        {
+          "name": "Advanced",
+          "billing": "monthly",
+          "currency": "USD",
+          "sourceUrl": "https://alpha-futures.com/product/advanced",
+          "note": "No fee once qualified.",
+          "rows": [
+            {
+              "size": 50000,
+              "price": 209
+            },
+            {
+              "size": 100000,
+              "price": 349
+            },
+            {
+              "size": 150000,
+              "price": 489
+            }
+          ]
+        },
+        {
+          "name": "Direct",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://alpha-futures.com/",
+          "rows": [
+            {
+              "size": 25000,
+              "price": 349
+            },
+            {
+              "size": 50000,
+              "price": 519
+            },
+            {
+              "size": 100000,
+              "price": 689
+            },
+            {
+              "size": 150000,
+              "price": 859
+            }
+          ]
+        }
+      ]
+    },
+    "fundednext": {
+      "checkedOn": "2026-11-09",
+      "programs": [
+        {
+          "name": "Stellar 2-Step",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://fundednext.com/cfds/stellar-2-step",
+          "note": "A temporary code offer (41% off) was shown on the $6K size; the list price is stored.",
+          "rows": [
+            {
+              "size": 6000,
+              "price": 59.99
+            },
+            {
+              "size": 15000,
+              "price": 119.99
+            },
+            {
+              "size": 25000,
+              "price": 199.99
+            },
+            {
+              "size": 50000,
+              "price": 299.99
+            },
+            {
+              "size": 100000,
+              "price": 549.99
+            },
+            {
+              "size": 200000,
+              "price": 1099.99
+            }
+          ]
+        },
+        {
+          "name": "Stellar 1-Step",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://fundednext.com/cfds/stellar-1-step",
+          "note": "A temporary code offer (31% off) was shown on the $6K size; the list price is stored.",
+          "rows": [
+            {
+              "size": 6000,
+              "price": 65.99
+            },
+            {
+              "size": 15000,
+              "price": 129.99
+            },
+            {
+              "size": 25000,
+              "price": 219.99
+            },
+            {
+              "size": 50000,
+              "price": 329.99
+            },
+            {
+              "size": 100000,
+              "price": 569.99
+            },
+            {
+              "size": 200000,
+              "price": 1099.99
+            }
+          ]
+        },
+        {
+          "name": "Stellar Lite",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://fundednext.com/cfds/stellar-lite",
+          "note": "A temporary code offer (9% off) was shown on the $5K size; the list price is stored.",
+          "rows": [
+            {
+              "size": 5000,
+              "price": 32.99
+            },
+            {
+              "size": 10000,
+              "price": 59.99
+            },
+            {
+              "size": 25000,
+              "price": 139.99
+            },
+            {
+              "size": 50000,
+              "price": 229.99
+            },
+            {
+              "size": 100000,
+              "price": 399.99
+            },
+            {
+              "size": 200000,
+              "price": 798.99
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

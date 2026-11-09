@@ -359,6 +359,7 @@ export default async function HomePage({ params }: Props) {
               <h3>{h.scoreTitle}</h3>
               <p>{h.scoreText}</p>
               <div>
+                <Link href={`${L('/about')}#score`}>{t.about.scoreEyebrow}</Link>
                 <Link href={L('/audit')}>{h.evidenceLog}</Link>
                 <Link href={L('/prop-firm-rules')}>{h.ruleAudits}</Link>
                 <Link href={L('/prop-firm-statistics')}>{h.industryStats}</Link>
