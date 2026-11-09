@@ -25,6 +25,7 @@ import { isAffiliateUrl,
   drawdownLabel,
   profitSplitLabel,
   hasPayoutRiskSignal,
+  propFirms,
 } from '../../../lib/propFirms';
 import { toEnglishText } from '../../../lib/i18n';
 import GuideArticleBody from '../../../components/GuideArticleBody';
@@ -1151,76 +1152,46 @@ const ftmoComparisonSteps = [
   'Switch only if the alternative solves your main pain point clearly enough to justify leaving FTMO.',
 ];
 
-const noChallengeRows = [
-  {
-    firm: 'Instant Funding',
-    href: '/firm/instant-funding',
-    offer: 'Instant Funding Account',
-    entry: '$39+',
-    account: '$625 - $300k',
-    target: 'No fixed target on some accounts',
-    drawdown: '10% smart',
-    split: '80-90%',
-    platforms: 'MT4 / MT5 / cTrader / MatchTrader',
-    news: 'Restricted by plan',
-    consistency: '15%-20% best-day rule by plan',
-    payout: 'Reliable profile',
-    community: 'PropRadar file: usable evidence',
-    bestFor: 'Already profitable traders',
-    risk: 'Plan-specific best-day rules can delay payout even without an evaluation.',
-  },
-  {
-    firm: 'City Traders Imperium',
-    href: '/firm/city-traders-imperium',
-    offer: 'CTI Instant Funding / Instant Pro',
-    entry: '$79+',
-    account: '$2.5k - $160k',
-    target: '10% to scale, not to pass an evaluation',
-    drawdown: '6% static, balance-based',
-    split: '50-100% by level and tier',
-    platforms: 'MT5 / Match-Trader',
-    news: 'Exact instant terms to verify',
-    consistency: 'No percentage listed; conduct rules apply',
-    payout: 'On demand first, then plan-specific',
-    community: 'Deep multi-source file',
-    bestFor: 'CFD traders comparing direct access',
-    risk: 'Simulated-account terms and broad enforcement discretion still control payouts.',
-  },
-  {
-    firm: 'Maven Trading',
-    href: '/firm/maven-trading',
-    offer: 'Maven Instant',
-    entry: '$18+ on current cards',
-    account: '$5k - $100k',
-    target: 'No evaluation; payout requirements apply',
-    drawdown: '3% max loss on displayed cards',
-    split: '80%',
-    platforms: 'MT5',
-    news: 'Plan-dependent',
-    consistency: 'Yes on Instant; exact rule by card',
-    payout: 'When requirements are met',
-    community: 'Official product cards checked',
-    bestFor: 'Low-entry CFD direct access',
-    risk: 'Standard challenges and Instant use different consistency and payout rules.',
-  },
-  {
-    firm: 'Lucid Trading',
-    href: '/firm/lucid-trading',
-    offer: 'LucidDirect',
-    entry: 'From $135 tracked',
-    account: '$25k - $150k',
-    target: 'First-cycle payout objective',
-    drawdown: 'EOD trailing MLL',
-    split: '90%',
-    platforms: 'NinjaTrader / Tradovate / TradingView',
-    news: 'Allowed',
-    consistency: '20% per payout cycle',
-    payout: 'Fast after approval is advertised',
-    community: 'Multi-source watchlist file',
-    bestFor: 'Futures straight-to-funded access',
-    risk: 'Young operator; platform availability and 20% consistency need a fresh checkout check.',
-  },
-];
+const PAYOUT_RISK_EN: Record<string, string> = { Faible: 'low', Moyen: 'medium', Élevé: 'high', Critique: 'critical', 'Non évalué': 'not assessed' };
+
+/**
+ * No-challenge table, generated from the firm files: every open firm with an
+ * instant or direct-funding program, by PropRadar score. Each value is the one
+ * shown on the firm page, where its source and review date are listed.
+ */
+function buildNoChallengeRows() {
+  const money = (value: number) => `$${value.toLocaleString('en-US')}`;
+  const size = (value: number) => (value >= 1000 ? `$${Math.round(value / 100) / 10}k` : money(value));
+  return propFirms
+    .filter((firm) => firm.status !== 'Fermée')
+    .flatMap((firm) => firm.products.filter((product) => product.type === 'Instant funding').map((product) => ({ firm, product })))
+    .sort((a, b) => b.firm.score - a.firm.score)
+    .map(({ firm, product }) => {
+      const trust = firm.reviewSignals.trustpilotRatingWithheld
+        ? 'Trustpilot rating withheld'
+        : firm.trustpilotRating
+          ? `Trustpilot ${firm.trustpilotRating}/5`
+          : 'Trustpilot not read';
+      return {
+        firm: firm.name,
+        href: `/firm/${firm.slug}`,
+        offer: toEnglishText(product.name),
+        entry: product.entryFeeMin ? `${money(product.entryFeeMin)}+` : 'Price to verify',
+        account: product.accountSizeMin && product.accountSizeMax ? `${size(product.accountSizeMin)} - ${size(product.accountSizeMax)}` : 'Sizes to verify',
+        target: toEnglishText(product.profitTarget),
+        drawdown: toEnglishText(product.maxDrawdown),
+        split: toEnglishText(product.profitSplit),
+        platforms: product.platforms.map((platform) => toEnglishText(platform)).join(' / '),
+        news: toEnglishText(firm.newsTrading),
+        consistency: product.hasConsistencyRule ? toEnglishText(product.consistencyRule ?? 'Yes, details to verify') : 'None on file',
+        payout: toEnglishText(firm.payoutDelay),
+        community: `${trust} · reviewed ${firm.lastReviewed}`,
+        bestFor: `Score ${firm.score}/100`,
+        risk: `Payout risk: ${PAYOUT_RISK_EN[firm.reviewSignals.payoutRisk] ?? 'not assessed'}`,
+      };
+    });
+}
+
 
 function expandedFaqAnswer(answer: string, _guide: NonNullable<ReturnType<typeof getSeoGuideBySlug>>) {
   // The same closing sentence used to be appended to every answer; it added length, not information.
@@ -1306,7 +1277,7 @@ export default async function SeoGuidePage({ params }: Props) {
     : isBeginnerGuide
     ? beginnerRows
     : isNoChallengeGuide
-    ? noChallengeRows
+    ? buildNoChallengeRows()
     : bestRankingRows;
   const pageUrl = `${SITE_URL}${getSeoGuidePath(guide)}`;
   const answerParagraphs = guideAnswerParagraphs(displayGuide, firms);
@@ -2116,7 +2087,7 @@ export default async function SeoGuidePage({ params }: Props) {
                 : isBeginnerGuide
                 ? 'Beginner note: the safest first choice is usually the clearest small or medium account, not the largest discounted account. Recheck current official rules before purchase.'
                 : isNoChallengeGuide
-                ? 'Community score is a synthetic reading of recent public feedback. Mixed means user feedback changes by period, product or trader profile. Always verify current rules on the official checkout page.'
+                ? 'Every instant or direct-funding program on file, ordered by PropRadar score. Values come from the firm pages, where each source and review date is listed. Always verify current rules on the official checkout page.'
                 : 'Community signal is a synthesis of recent public feedback and review-platform context. Mixed means feedback varies by period, product or trader profile.'}
             </p>
           </div>

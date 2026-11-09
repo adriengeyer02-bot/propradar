@@ -248,6 +248,7 @@ export default async function RootLayout({
               <span>{c.footer.bottom}</span>
               <span className="footer-bottom-links">
                 <Link href={L('/about')}>{t.about.footerShort}</Link>
+                <Link href="/legal">Legal &amp; privacy</Link>
                 <Link href={L('/audit')}>{c.footer.method}</Link>
               </span>
             </div>
