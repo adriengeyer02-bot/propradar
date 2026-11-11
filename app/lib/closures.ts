@@ -15,6 +15,17 @@ export type ClosureRecord = {
 
 export const closureRecords: ClosureRecord[] = [
   {
+    slug: 'funded-unicorn',
+    date: '2025-07-03',
+    dateKind: 'reported',
+    summary: 'Closed its operations; the firm cited "massive losses" and "bureaucratic hurdles".',
+    source: {
+      label: 'Finance Magnates',
+      url: 'https://www.financemagnates.com/forex/prop-trading-germanys-funded-unicorn-fails-raising-questions-on-risk-models/',
+    },
+    checkedAt: '2026-11-08',
+  },
+  {
     slug: 'skilled-funded-traders',
     date: '2024-03-28',
     dateKind: 'closure',

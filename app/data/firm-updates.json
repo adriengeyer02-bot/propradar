@@ -279,6 +279,14 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Pending lawsuit added as a dated incident: McCrudden v. Apex Trader Funding, Inc. et al., M.D. Fla. 3:26-cv-01073, filed 2026-04-30. Allegations only, pleading stage on the docket read. No score or status change.",
+          "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -287,12 +295,17 @@
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
       },
       "addIncidents": [
-        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid)."
+        "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid).",
+        "Court filing: on 2026-04-30 Vincent McCrudden filed a complaint, with a jury demand, against Apex Trader Funding, Inc. and several individuals in the US District Court for the Middle District of Florida (case 3:26-cv-01073); a second amended complaint followed on 2026-06-02. These are allegations; the docket read showed the case at the pleading stage (https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938)."
       ],
       "addSources": [
         {
           "label": "Finance Magnates: Apex payout video-proof requests (29 Aug 2024)",
           "url": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid"
+        },
+        {
+          "label": "Justia docket: McCrudden v. Apex Trader Funding (M.D. Fla. 3:26-cv-01073)",
+          "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938"
         }
       ]
     },
@@ -1929,6 +1942,14 @@
             "newsTrading",
             "drawdownType"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile fundingyourtrades.com checked on www (134 reviews listed) and on the au mirror (129): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/fundingyourtrades.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "setEntities": [
@@ -1956,7 +1977,10 @@
       "set": {
         "newsTrading": "Allowed",
         "drawdownType": "Hybride"
-      }
+      },
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingyourtrades.com)."
+      ]
     },
     "fundyourfx": {
       "reviewedAt": "2026-10-28",
@@ -3457,7 +3481,7 @@
       ]
     },
     "the-funded-trader": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-08",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3466,11 +3490,20 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Court order added as a dated incident (D'Arcangelo v. The Funded Trader, W.D. Tex. 1:23-cv-01472, order of 2025-03-21, read on govinfo.gov). No score or status change.",
+          "source": "https://www.govinfo.gov/content/pkg/USCOURTS-txwd-1_23-cv-01472/pdf/USCOURTS-txwd-1_23-cv-01472-1.pdf",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "addIncidents": [
         "Finance Magnates reported on 14 March 2024 that The Funded Trader confirmed it had halted all payouts, citing a \"self-imposed internal audit\" (https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/).",
-        "Finance Magnates reported on 20 November 2024 that the firm said \"900 traders are still awaiting payment\" and had begun releasing paused accounts of $100K and larger (https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp)."
+        "Finance Magnates reported on 20 November 2024 that the firm said \"900 traders are still awaiting payment\" and had begun releasing paused accounts of $100K and larger (https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp).",
+        "Court order: on 2025-03-21 the US District Court for the Western District of Texas (D'Arcangelo v. The Funded Trader, LLC et al., case 1:23-cv-01472) granted in part and denied in part a motion to dismiss, dismissing nine claims with prejudice while other claims, including breach of the amended operating agreement, remained pending (https://www.govinfo.gov/content/pkg/USCOURTS-txwd-1_23-cv-01472/pdf/USCOURTS-txwd-1_23-cv-01472-1.pdf)."
       ],
       "addSources": [
         {
@@ -3859,6 +3892,10 @@
         {
           "label": "Topstep help center: payout FAQs",
           "url": "https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs"
+        },
+        {
+          "label": "Justia docket: McCrudden v. Topstepfunded LLC (M.D. Fla. 3:26-cv-00816)",
+          "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513"
         }
       ],
       "changelog": [
@@ -3899,7 +3936,18 @@
           "date": "2026-11-11",
           "summary": "Topstep Labs added two limited-edition $50K \"Daily Payouts+\" Trading Combines (end-of-day trailing and static): after a $2,000 buffer, daily payouts of $250 to $1,500. Topstep says it has not decided whether daily payouts become permanent.",
           "source": "https://www.topstep.com/blog/daily-payouts"
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Pending lawsuit added as a dated incident: McCrudden v. Topstepfunded LLC et al., M.D. Fla. 3:26-cv-00816, filed 2026-04-09 by a self-represented plaintiff. Allegations only; no merits ruling on the docket read. No score or status change.",
+          "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513",
+          "fields": [
+            "incidents"
+          ]
         }
+      ],
+      "addIncidents": [
+        "Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."
       ]
     },
     "trade-the-pool": {
@@ -4130,12 +4178,13 @@
       ]
     },
     "traders-central": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-10-31",
       "set": {
         "officialWebsite": "https://traderscentralfund.com/",
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 973,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com",
+        "listedDomainWarning": "The listed domain traderscentralfund.com redirected to traderseco.com when PropRadar checked it on 2026-10-31, and traderseco.com did not resolve (no DNS record). The domain monitor has reported the site unreachable since 2026-10-28. PropRadar found no other official site for Traders Central, so the domain is not linked."
       },
       "changelog": [
         {
@@ -4148,6 +4197,20 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-10-31",
+          "summary": "Domain warning set. Checked by hand on 2026-10-31 after the domain monitor reported traderscentralfund.com unreachable since 2026-10-28: the domain redirected to traderseco.com, which did not resolve. A 2023-04-17 release says Alpha Capital Group acquired the IP of Traders Central Fund Corp; no current Traders Central site was found. No status or score change.",
+          "source": "https://finance.yahoo.com/news/alpha-capital-group-acquires-traders-012200502.html",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Alpha Capital Group acquires the IP of Traders Central Fund (Newsfile via Yahoo Finance, 2023-04-17)",
+          "url": "https://finance.yahoo.com/news/alpha-capital-group-acquires-traders-012200502.html"
         }
       ]
     },
@@ -5660,13 +5723,24 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "CNMV search for fxrk.com read on 2026-11-09: one warning, dated 17/02/2025, under \"unauthorised entities\". Added as a dated regulator incident, quoting the regulator.",
+          "source": "https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 2463,
         "trustpilotSourceUrl": "https://ie.trustpilot.com/review/fxrk.com"
-      }
+      },
+      "addIncidents": [
+        "The Spanish securities regulator CNMV published a warning dated 17/02/2025 on \"HTTPS://FXRK.COM\" in its list of unauthorised entities, stating that it is not authorised to provide investment services and activities subject to authorisation, including foreign-exchange operations (https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en)."
+      ]
     },
     "now-trade-funded": {
       "reviewedAt": "2026-11-09",
@@ -5755,13 +5829,32 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-08",
+          "summary": "Dated incident added from Finance Magnates (20 October 2023): services paused in late September 2023. Current operating status not confirmed; no status change.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "fields": [
+            "incidents"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Dated 2023 pause and payout reports from Finance Magnates added as an incident. Current status not established: the official site blocks automated reading and Trustpilot shows no review since 29 Aug 2025. No status change.",
+          "source": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 3.3,
         "trustpilotReviewCount": 1286,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.leveledupsociety.com"
-      }
+      },
+      "addIncidents": [
+        "Finance Magnates reported on 2023-10-20 that Leveled Up Society \"abruptly went dark late last month\" and quoted the firm: \"As of right now, all of our services are temporarily paused as we are working hard into a new transition.\" (https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/)."
+      ]
     },
     "fxci": {
       "reviewedAt": "2026-11-09",
@@ -5832,6 +5925,14 @@
             "newsTrading",
             "eaAllowed"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile directfundedtrader.com checked on www (235 reviews listed) and on the au mirror (235): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/directfundedtrader.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -5844,6 +5945,9 @@
           "label": "Direct Funded Trader FAQ and trading rules (official)",
           "url": "https://directfundedtrader.com/faq-rules"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/directfundedtrader.com)."
       ]
     },
     "upcomers": {
@@ -5866,6 +5970,14 @@
           "source": "https://upcomers.com/payouts",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile upcomers.com checked on www (587 reviews listed) and on the au mirror (580): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/upcomers.com",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -5907,6 +6019,9 @@
           "registeredAddress": "Nicosia, Cyprus",
           "role": "Company disclosed in the official footer."
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/upcomers.com)."
       ]
     },
     "forexive": {
@@ -5920,6 +6035,14 @@
             "payoutDelay",
             "newsTrading"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile forexive.com checked on www (110 reviews listed) and on the au mirror (114): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/forexive.com",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
@@ -5931,6 +6054,9 @@
           "label": "Forexive challenges (official)",
           "url": "https://forexive.com/challenges"
         }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/forexive.com)."
       ]
     },
     "alpine-funded": {
@@ -5943,6 +6069,14 @@
           "fields": [
             "payoutDelay",
             "newsTrading"
+          ]
+        },
+        {
+          "date": "2026-11-09",
+          "summary": "Regulator item found in Finance Magnates (2025-03-05): NSSMC (Ukraine) warning list. The NSSMC page itself was not read; the incident cites the outlet and says the regulator gave no reason.",
+          "source": "https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -5959,7 +6093,58 @@
           "label": "Alpine Funded news trading (official help)",
           "url": "https://help.alpinefunded.com/en/articles/9690823-is-news-trading-allowed"
         }
+      ],
+      "addIncidents": [
+        "Finance Magnates reported on 2025-03-05 (Arnab Shome) that Ukraine's National Securities and Stock Market Commission (NSSMC) added Alpine Funded and Aura Funded to its warning list, among seven names flagged the week before; the article notes the regulator gave no reason for their inclusion (https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/)."
       ]
+    },
+    "funded-unicorn": {
+      "reviewedAt": "2026-11-08",
+      "changelog": [
+        {
+          "date": "2026-11-08",
+          "summary": "Status set to Fermée: Finance Magnates reported on 3 July 2025 that \"Funded Unicorn has closed its operations\", which the firm attributed to \"massive losses\" and \"bureaucratic hurdles\". Closure record added.",
+          "source": "https://www.financemagnates.com/forex/prop-trading-germanys-funded-unicorn-fails-raising-questions-on-risk-models/",
+          "fields": [
+            "status"
+          ]
+        }
+      ],
+      "set": {
+        "status": "Fermée"
+      }
+    },
+    "fundedhive": {
+      "reviewedAt": "2026-11-09",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Trustpilot profile fundedhive.com checked on www (141 reviews listed) and on the au and ie mirror (141): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
+          "source": "https://www.trustpilot.com/review/fundedhive.com",
+          "fields": [
+            "incidents"
+          ]
+        }
+      ],
+      "addIncidents": [
+        "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au and ie mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedhive.com)."
+      ]
+    },
+    "nations-trading": {
+      "reviewedAt": "2026-10-31",
+      "changelog": [
+        {
+          "date": "2026-10-31",
+          "summary": "Domain warning set. Checked by hand on 2026-10-31 after the domain monitor reported nationstrading.com unreachable: the domain redirected to a GoDaddy for-sale page (asking US$3,988). A web search found no other Nations Trading site. No status or score change.",
+          "source": "https://forsale.godaddy.com/forsale/nationstrading.com",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ],
+      "set": {
+        "listedDomainWarning": "The listed domain nationstrading.com was offered for sale on GoDaddy when PropRadar checked it on 2026-10-31. PropRadar found no other official site for Nations Trading, so the domain is not linked."
+      }
     }
   }
 }
