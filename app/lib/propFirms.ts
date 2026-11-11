@@ -12592,8 +12592,20 @@ const SOURCED_ITEM =
   /(https?:\/\/|trustpilot|finance ?magnates|fx ?news|financefeeds|tradeinformer|reported|according to|court|cftc|nfa|fca|cysec|asic|amf|consob|cnmv|regulator|tracker|announced|\b(19|20)\d{2}\b)/i;
 
 /** Written, sourced items that can support a payout-risk level (closures excepted). */
+// Regulator warnings, court filings and disputed terms are legal-file facts: they
+// are listed on the firm page, but they do not by themselves set a payout-risk
+// level unless the item itself is about payouts or withdrawals (avoids implying
+// payout problems that the source does not state).
+const LEGAL_ONLY_ITEM = /(warning list|warns?|alert list|unauthori[sz]ed|without (our|its) permission|court filing|court order|complaint against|filed a complaint|terms and conditions)/i;
+const PAYOUT_WORDING = /(payout|withdraw|reward)/i;
+// A report the firm disputes in the same source never sets a payout-risk level on its own.
+const DISPUTED_ITEM = /\b(disputed|denied|denies|contested)\b/i;
+
 export function payoutEvidence(firm: Pick<PropFirm, 'incidentsDetails' | 'reviewSignals'>) {
-  return documentedIncidents(firm).filter((item) => !REVIEW_NOTICE.test(item) && SOURCED_ITEM.test(item));
+  return documentedIncidents(firm).filter(
+    (item) =>
+      !REVIEW_NOTICE.test(item) && SOURCED_ITEM.test(item) && !DISPUTED_ITEM.test(item) && (!LEGAL_ONLY_ITEM.test(item) || PAYOUT_WORDING.test(item)),
+  );
 }
 
 export function isPayoutRiskAssessed(firm: Pick<PropFirm, 'reviewSignals'>) {
