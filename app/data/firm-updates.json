@@ -1705,7 +1705,7 @@
       ]
     },
     "funding-pips": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-11",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1724,13 +1724,24 @@
             "trustpilotReviewCount",
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Dated incident added from Finance Magnates (22 September 2026) on the PRIME terms, quoting both the terms as reported and FundingPips' response. Approved by Geyer on 2026-11-11. No score or status change.",
+          "source": "https://www.financemagnates.com/forex/fundingpips-invited-traders-into-prime-the-tcs-made-it-mandatory/",
+          "fields": [
+            "incidents"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 72707,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com"
-      }
+      },
+      "addIncidents": [
+        "Finance Magnates reported on 2026-09-22 that FundingPips' terms (effective 15 May 2026) state that PRIME access for invited funded traders \"is deemed automatically accepted by you, is mandatory, and you waive any right to refuse or contest it\", and that the payout from the previous, permanently closed account \"serves as the starting balance for PRIME\". FundingPips disputed that reading in the same article: \"There is no such thing as replacing a payout. Nothing is replaced.\" (https://www.financemagnates.com/forex/fundingpips-invited-traders-into-prime-the-tcs-made-it-mandatory/)."
+      ]
     },
     "funding-traders": {
       "reviewedAt": "2026-11-08",
