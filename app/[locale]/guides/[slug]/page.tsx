@@ -1657,7 +1657,7 @@ export default async function SeoGuidePage({ params }: Props) {
           <div className="section-heading">
             <div>
               <div className="eyebrow">Current rule snapshot</div>
-              <h2 id="current-rule-snapshot-title">Topstep vs Apex rules checked July 15, 2026.</h2>
+              <h2 id="current-rule-snapshot-title">Topstep vs Apex rules rechecked November 11, 2026.</h2>
             </div>
             <p className="section-note">Legacy Apex accounts and different Topstep payout paths must not be mixed into one headline comparison.</p>
           </div>
@@ -1667,8 +1667,8 @@ export default async function SeoGuidePage({ params }: Props) {
                 <tr><th scope="col">Decision point</th><th scope="col">Topstep</th><th scope="col">Apex Trader Funding</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Evaluation consistency</th><td>Trading Combine uses a 55% consistency target (rechecked October 23, 2026).</td><td>New products advertise no evaluation consistency rule.</td></tr>
-                <tr><th scope="row">Funded-stage path</th><td>XFA Standard uses winning-day criteria; XFA Consistency uses 3 days and a 40% target.</td><td>New products advertise 50% consistency; legacy account rules differ.</td></tr>
+                <tr><th scope="row">Evaluation consistency</th><td>Trading Combine uses a 55% consistency target (rechecked November 11, 2026).</td><td>New products advertise no evaluation consistency rule.</td></tr>
+                <tr><th scope="row">Funded-stage path</th><td>XFA Standard uses winning-day criteria; XFA Consistency uses 3 days and a 40% target.</td><td>New products advertise 50% consistency; legacy account rules differ, and Apex states that "Legacy Accounts Are Back For a Limited Time" (homepage, November 11, 2026).</td></tr>
                 <tr><th scope="row">Drawdown</th><td>Maximum Loss Limit depends on account size and stage.</td><td>Separate EOD and intraday trailing products use different drawdown behavior.</td></tr>
                 <tr><th scope="row">Payout reading</th><td>Eligibility, caps and split depend on path and account cohort.</td><td>Approved payouts are advertised at 100%, subject to eligibility, compliance and the exact account terms.</td></tr>
               </tbody>
@@ -1692,13 +1692,13 @@ export default async function SeoGuidePage({ params }: Props) {
               <div className="eyebrow">Stage-by-stage answer</div>
               <h2 id="news-rule-snapshot-title">Which prop firms allow news trading in 2026?</h2>
             </div>
-            <p className="section-note">Rules checked July 15, 2026. "Allowed" must always be tied to an account stage and instrument.</p>
+            <p className="section-note">Rules rechecked November 11, 2026. "Allowed" must always be tied to an account stage and instrument.</p>
           </div>
           <div className="guide-rule-table-wrap">
             <table className="guide-rule-table">
               <thead><tr><th scope="col">Firm / product</th><th scope="col">Evaluation</th><th scope="col">Funded-stage rule</th></tr></thead>
               <tbody>
-                <tr><th scope="row">FTMO</th><td>News trading is allowed during the Evaluation Process.</td><td>Swing accounts have no news restriction. Standard FTMO Accounts restrict selected instruments from 2 minutes before to 2 minutes after listed events.</td></tr>
+                <tr><th scope="row">FTMO</th><td>News trading is allowed during the Evaluation Process.</td><td>Swing accounts have no news restriction. FTMO Accounts and FTMO Instant Accounts (non-Swing) restrict selected instruments from 2 minutes before to 2 minutes after listed events.</td></tr>
                 <tr><th scope="row">BrightFunded</th><td>Phase 1 and Phase 2 can trade around news without restrictions.</td><td>Funded accounts prohibit execution on targeted instruments from 5 minutes before to 5 minutes after major events; affected profits can be deducted.</td></tr>
                 <tr><th scope="row">The5ers Futures</th><td>The current futures program advertises news trading as allowed.</td><td>Confirm the exact futures account and per-position consistency rules before trading a release.</td></tr>
               </tbody>
