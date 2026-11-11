@@ -34,9 +34,17 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Programs re-read on the official site (list prices before temporary codes): Alpha Pro 2-Step from $27 ($5K, 6% option; \"Evaluation fees start from $27\"), $37 to $997 on the 8% option; Alpha One 1-Step $37 to $647; Alpha Direct (no evaluation) $30 ($2.5K) to $897. The stored $97 was the Alpha Direct $10K price.",
+          "source": "https://alphacapitalgroup.uk/product",
+          "fields": [
+            "products"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-11",
       "set": {
         "priceFrom": 27
       },
@@ -48,6 +56,80 @@
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/alphacapitalgroup.uk)."
+      ],
+      "setProducts": [
+        {
+          "platforms": [
+            "MT5"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Rules not yet audited in PropRadar: check the official product source.",
+          "maxDailyLoss": "not stated on the pages read",
+          "maxDrawdown": "not stated on the pages read",
+          "profitSplit": "up to 80%+",
+          "id": "alpha-pro",
+          "name": "Alpha Pro (2-Step)",
+          "type": "Challenge",
+          "description": "List prices: from $27 ($5K, 6% option); 8% option $37 ($5K) to $997 ($200K).",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 27,
+          "entryFeeMax": 997,
+          "profitTarget": "6% or 8% option, by phase: see the official page"
+        },
+        {
+          "platforms": [
+            "MT5"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Rules not yet audited in PropRadar: check the official product source.",
+          "maxDailyLoss": "not stated on the pages read",
+          "maxDrawdown": "not stated on the pages read",
+          "profitSplit": "up to 80%+",
+          "id": "alpha-one",
+          "name": "Alpha One (1-Step)",
+          "type": "Challenge",
+          "description": "List prices: $37 ($5K) to $647 ($200K), 6% option.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 37,
+          "entryFeeMax": 647,
+          "profitTarget": "6%"
+        },
+        {
+          "platforms": [
+            "MT5"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "Indices",
+            "Metals"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Rules not yet audited in PropRadar: check the official product source.",
+          "maxDailyLoss": "not stated on the pages read",
+          "maxDrawdown": "not stated on the pages read",
+          "profitSplit": "90%",
+          "id": "alpha-direct",
+          "name": "Alpha Direct",
+          "type": "Instant funding",
+          "description": "No evaluation. List prices: $30 ($2.5K) to $897 ($200K); 90% split stated.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 30,
+          "entryFeeMax": 897,
+          "profitTarget": "none (no evaluation)"
+        }
       ]
     },
     "alpha-futures": {
@@ -863,7 +945,7 @@
       ]
     },
     "earn2trade": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-11",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -881,13 +963,33 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Official rule update (2 Nov 2026), for subscriptions bought on or after that date: \"The Progression Ladder has been retired and replaced with fixed contract limits enforced directly at the system level\" (2 contracts on 25K up to 20 on 400K). Earlier subscriptions keep the old rules.",
+          "source": "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026/"
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Payout terms updated from the same official post: before each withdrawal request, funded traders must complete five profitable trading days (minimum daily profit $100 on 25K up to $350 on 200K), on LiveSim and Live accounts.",
+          "source": "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026/",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 5079,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com",
+        "payoutDelay": "five profitable trading days required before each withdrawal request (subscriptions from 2 Nov 2026; minimum daily profit $100 to $350 by size)"
+      },
+      "addSources": [
+        {
+          "label": "Earn2Trade rule updates, November 2026",
+          "url": "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026/"
+        }
+      ]
     },
     "elite-trader-funding": {
       "reviewedAt": "2026-11-08",
@@ -1047,7 +1149,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-11",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1065,13 +1167,28 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Official blog (21 Oct 2026): the rebuilt StartTrader costs $34 for a $5,000 one-phase account (3% target, 8% static max loss, fixed 80% reward, rewards capped at $400 per account), available only as one of a client's first two challenges. Lowest list price set to $34.",
+          "source": "https://www.fintokei.com/blog/the-new-starttrader-is-here/",
+          "fields": [
+            "priceFrom"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 1434,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com",
+        "priceFrom": 34
+      },
+      "addSources": [
+        {
+          "label": "Fintokei: the new StartTrader",
+          "url": "https://www.fintokei.com/blog/the-new-starttrader-is-here/"
+        }
+      ]
     },
     "for-traders": {
       "reviewedAt": "2026-11-08",
@@ -1465,13 +1582,22 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Official blog (24 Sep 2026): on Stellar 2-Step and Stellar Lite, traders pick one payout structure at checkout: Standard (80%, first reward after 21 days, then every 14 days), 3 Day (60%) or On-Demand (90%, 40% consistency rule).",
+          "source": "https://fundednext.com/blog/fundednext-new-payout-structures",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-11",
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 83306,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundednext.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundednext.com",
+        "payoutDelay": "chosen at checkout on Stellar 2-Step and Lite: Standard (first reward after 21 days, then every 14 days, 80%), 3 Day (60%) or On-Demand (90%, 40% consistency rule)"
       },
       "addSources": [
         {
@@ -1931,9 +2057,14 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "New program: GOAT Funded Predictions, a one-step evaluation for prediction-market trading, opened on 19 Oct 2026 (press release of 26 Oct 2026). Price and split not stated in the release.",
+          "source": "https://natlawreview.com/press-releases/goat-funded-trader-launches-goat-funded-predictions-trading-program"
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-11",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
       ]
@@ -2648,11 +2779,12 @@
       ]
     },
     "myfundedfutures": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-11",
       "set": {
         "trustpilotRating": 4.9,
         "trustpilotReviewCount": 22813,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com",
+        "drawdownType": "EOD"
       },
       "changelog": [
         {
@@ -2670,6 +2802,14 @@
           "source": "https://www.trustpilot.com/review/myfundedfutures.com",
           "fields": [
             "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Help center (24 Sep 2026): evaluations standardised across Builder, Rapid, Rapid EOD and Pro; every plan lists a \"Maximum Loss Limit (EOD)\" and Builder states \"EOD Trailing\". Drawdown type set to EOD.",
+          "source": "https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified",
+          "fields": [
+            "drawdownType"
           ]
         }
       ],
@@ -3694,7 +3834,7 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-11",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15052,
@@ -3743,6 +3883,11 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Topstep Labs added two limited-edition $50K \"Daily Payouts+\" Trading Combines (end-of-day trailing and static): after a $2,000 buffer, daily payouts of $250 to $1,500. Topstep says it has not decided whether daily payouts become permanent.",
+          "source": "https://www.topstep.com/blog/daily-payouts"
         }
       ]
     },
