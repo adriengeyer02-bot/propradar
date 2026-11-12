@@ -13,13 +13,14 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 108 logos, fetched 2026-11-06.
+// 112 logos, fetched 2026-11-12.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "alpha-futures.com": { file: "alpha-futures.png", source: "https://alpha-futures.com/images/webclip.png" },
   "alphacapitalgroup.uk": { file: "alpha-capital-group.png", source: "https://alphacapitalgroup.uk/images/webclip.png" },
   "alpinefunded.com": { file: "alpine-funded.png", source: "favicon service for alpinefunded.com" },
   "apextraderfunding.com": { file: "apex-trader-funding.png", source: "favicon service for apextraderfunding.com" },
   "aquafunded.com": { file: "aqua-funded.png", source: "https://cdn.prod.website-files.com/68b69f4a2b57f5b22e3f9954/68fb277b9e54677dfc0687ca_webclip.png" },
+  "atfunded.com": { file: "atfunded.png", source: "https://atfunded.com/ATfunded_Logo_white.png" },
   "atlasfunded.com": { file: "atlas-funded.png", source: "https://www.atlasfunded.com/assets/android-chrome-512x512.png" },
   "atmosfunded.com": { file: "atmos-funded.png", source: "favicon service for atmosfunded.com" },
   "audacity.capital": { file: "audacity-capital.png", source: "https://audacity.capital/favicon.svg" },
@@ -27,10 +28,13 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "blusky.pro": { file: "blusky-trading.png", source: "https://blusky.pro/wp-content/uploads/2025/08/cropped-favicon-192x192.png" },
   "breakoutprop.com": { file: "breakout-prop.png", source: "favicon service for breakoutprop.com" },
   "brightfunded.com": { file: "brightfunded.png", source: "https://framerusercontent.com/images/DiuykdZpUOfvmYDUbbnXnX1p78.png" },
+  "blueguardian.com": { file: "blue-guardian.png", source: "https://blueguardian.com/ (symbol of the inline header logo, read 2026-11-12)" },
+  "bulenox.com": { file: "bulenox.png", source: "https://bulenox.com/assets/logo-iXtDrF5P.svg" },
   "cashflowfunding.com": { file: "cash-flow-funding.png", source: "favicon service for cashflowfunding.com" },
   "citytradersimperium.com": { file: "city-traders-imperium.png", source: "https://b4647544.assetcdn.net/2.0/4647544/wp-content/uploads/2020/03/City-Traders-Imperium-Logo-3-300x300.png?lossy=0&strip=1&webp=1" },
   "claritytraders.com": { file: "clarity-traders.png", source: "https://cdn.prod.website-files.com/6996dc189db4a155eab22aaf/6996dc189db4a155eab22b43_Untitled-1.png" },
   "cryptofundtrader.com": { file: "crypto-fund-trader.png", source: "https://cryptofundtrader.com/wp-content/uploads/2025/08/cropped-fav-icon-512x512-3-192x192.png" },
+  "daytraders.com": { file: "daytraders-com.png", source: "https://daytraders.com/assets/images/logo/logo.svg" },
   "directfundedtrader.com": { file: "directfundedtrader.png", source: "https://directfundedtrader.com/assets/images/dft-favicon-four.ico" },
   "dnafunded.com": { file: "dna-funded.png", source: "https://dnafunded.com/wp-content/uploads/2024/08/DNA-Funded-Favicon.png" },
   "e8futures.com": { file: "e8-futures.png", source: "https://e8futures.com/app.svg" },
@@ -38,10 +42,10 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "earn2trade.com": { file: "earn2trade.png", source: "https://www.earn2trade.com/favicon.svg" },
   "elitetraderfunding.app": { file: "elite-trader-funding.png", source: "https://elitetraderfunding.app/icons/icon-512.png" },
   "finotivefunding.com": { file: "finotive-funding.png", source: "https://finotivefunding.com/android-chrome-512x512.png" },
-  "fintokei.com": { file: "fintokei.png", source: "https://www.fintokei.com/apple-icon.png?apple-icon.0r.2lzzq-yyyr.png" },
+  "fintokei.com": { file: "fintokei.png", source: "https://www.fintokei.com/apple-icon.png" },
   "forexfundsflow.com": { file: "forex-funds-flow.png", source: "https://forexfundsflow.com/favicons/new/192x192.png" },
   "forexive.com": { file: "forexive.png", source: "https://forexive.com/favicon.ico?favicon.1pfj4md666ntt.ico" },
-  "fortraders.com": { file: "for-traders.png", source: "https://fortraders.com/icon.svg?icon.0jyy44fghc0cm.svg" },
+  "fortraders.com": { file: "for-traders.png", source: "https://fortraders.com/icon.svg?icon.0g25r0q5a6n1m.svg" },
   "ftmo.com": { file: "ftmo.png", source: "https://ftmo.com/app/themes/ftmo-com/public/images/favicon/favicon-512.png" },
   "ftuk.com": { file: "ftuk.png", source: "https://cdn.prod.website-files.com/6a3d4ec2aed3a0313ea2c9d7/6abba2cb479cab153ceb8295_ftuk-fav-new.png" },
   "funded7.com": { file: "funded7.png", source: "https://funded7.com/favicon.svg" },

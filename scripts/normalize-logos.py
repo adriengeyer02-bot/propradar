@@ -41,7 +41,16 @@ ALLOW_SMALL = {"dna-funded", "quant-tekel", "thinkcapital", "directfundedtrader"
 SMALL_PX = 64
 # Header logo images (<img>) are often platform or payment logos: only the
 # ones below were checked by hand and are allowed (slug -> URL fragment).
-LOGO_IMG_OK = {"hantec-trader": "rzrfunded.com/logo.svg"}
+LOGO_IMG_OK = {
+    "hantec-trader": "rzrfunded.com/logo.svg",
+    # Checked by hand on 2026-11-12: the firm's own header wordmark.
+    "bulenox": "bulenox.com/assets/logo-",
+    "daytraders-com": "daytraders.com/assets/images/logo/logo.svg",
+    "atfunded": "atfunded.com/ATfunded_Logo_white.png",
+}
+# Wide wordmarks: keep only the symbol at the left (fraction of the content
+# width), so the mark stays readable in a small square tile. Checked by hand.
+SYMBOL_LEFT = {"bulenox": 0.25, "daytraders-com": 0.25, "atfunded": 0.32}
 # Redirects to another domain of the same brand, checked by hand on 2026-10-27.
 ALLOW_REDIRECT = {"fundyourfx", "sabiotrade", "sure-leverage", "the-concept-trading", "uprofit-trader", "qt-funded"}
 
@@ -121,11 +130,16 @@ def mark_is_light(image):
     return luminance > 205
 
 
-def tile(image):
+def tile(image, symbol_left=None):
     if has_transparency(image):
         box = content_box(image)
         if box:
             image = image.crop(box)
+        if symbol_left:
+            image = image.crop((0, 0, max(1, int(image.width * symbol_left)), image.height))
+            box = content_box(image)
+            if box:
+                image = image.crop(box)
         bg = DARK_TILE if mark_is_light(image) else (255, 255, 255, 255)
         canvas = Image.new("RGBA", (SIZE, SIZE), bg)
         inner = int(SIZE * (1 - 2 * PAD))
@@ -223,7 +237,7 @@ def main():
     tiles = []
     for slug in sorted(chosen):
         item = chosen[slug]
-        tiled = tile(item["image"])
+        tiled = tile(item["image"], SYMBOL_LEFT.get(slug))
         tiled.save(out_dir / f"{slug}.png", optimize=True)
         tiles.append((slug, tiled))
         source = item["saved"]["url"]
