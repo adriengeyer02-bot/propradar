@@ -1015,6 +1015,10 @@ const zh: Messages = {
     contactText: '请发送页面和一个公开链接。每次更正都会在公司的更新记录中注明日期。',
     footerAbout: '关于 PropRadar',
     footerShort: '关于',
+    founderEyebrow: "创始人",
+    founderRole: "创始人兼编辑",
+    founderBio1: "Adrien 在亲自参与多家自营交易公司的挑战后创建了 PropRadar。他希望交易者不仅关注宣传折扣，还能比较规则、出金风险及每项产品背后的公司实体。",
+    founderBio2: "他的编辑原则很明确：引用注明日期的公开来源，标明尚不确定的信息，保留可见的更正记录，不让联盟合作影响公司的评分。",
     runBy: '由 {handle} 运营',
   },
   diagram: {

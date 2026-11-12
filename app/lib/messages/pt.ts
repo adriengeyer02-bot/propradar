@@ -1103,6 +1103,10 @@ const pt: Messages = {
     contactText: 'Envie a página e um link público. Cada correção é datada no histórico da empresa.',
     footerAbout: 'Sobre o PropRadar',
     footerShort: 'Sobre',
+    founderEyebrow: "O fundador",
+    founderRole: "Fundador e editor",
+    founderBio1: "Adrien criou o PropRadar depois de operar pessoalmente em desafios de prop firms. Queria comparar regras, riscos de pagamento e as empresas por trás de cada oferta, não apenas os descontos anunciados.",
+    founderBio2: "Seu princípio editorial é simples: citar fontes públicas com data, deixar claras as incertezas, mostrar as correções e nunca permitir que acordos de afiliação alterem as pontuações.",
     runBy: 'administrado por {handle}',
   },
   diagram: {

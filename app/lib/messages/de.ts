@@ -1015,6 +1015,10 @@ const de: Messages = {
     contactText: 'Senden Sie die Seite und einen öffentlichen Link. Jede Korrektur wird im Änderungsverlauf der Firma datiert.',
     footerAbout: 'Über PropRadar',
     footerShort: 'Über uns',
+    founderEyebrow: "Der Gründer",
+    founderRole: "Gründer und Redakteur",
+    founderBio1: "Adrien gründete PropRadar, nachdem er selbst Challenges bei Prop-Firms gehandelt hatte. Er wollte Regeln, Auszahlungsrisiken und die Unternehmen hinter den Angeboten vergleichen – statt nur Werberabatte.",
+    founderBio2: "Sein redaktioneller Grundsatz: öffentliche Quellen mit Datum nennen, Unsicherheiten offenlegen, Korrekturen sichtbar halten und Affiliate-Partnerschaften niemals die Bewertung beeinflussen lassen.",
     runBy: 'betrieben von {handle}',
   },
   diagram: {

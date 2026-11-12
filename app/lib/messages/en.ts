@@ -1019,6 +1019,10 @@ const en = {
     contactText: 'Send the page and a public link. Every correction is dated in the firm\'s update history.',
     footerAbout: 'About PropRadar',
     footerShort: 'About',
+    founderEyebrow: "Meet the founder",
+    founderRole: "Founder & Editor",
+    founderBio1: "Adrien created PropRadar after trading prop-firm challenges himself. He wanted a way to compare the rules, payout risks and legal entities behind each offer—not just the headline discounts.",
+    founderBio2: "His editorial approach is straightforward: cite dated public sources, show what remains uncertain, keep corrections visible and never let an affiliate agreement influence a firm's score.",
     runBy: 'run by {handle}',
   },
   diagram: {

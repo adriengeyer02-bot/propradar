@@ -1103,6 +1103,10 @@ const ja: Messages = {
     contactText: '該当ページと公開リンクを送ってください。すべての訂正は会社の更新履歴に日付付きで記録されます。',
     footerAbout: 'PropRadarについて',
     footerShort: '運営者情報',
+    founderEyebrow: "創設者について",
+    founderRole: "創設者・編集責任者",
+    founderBio1: "Adrien は自身で複数のプロップファームのチャレンジを経験した後、PropRadar を立ち上げました。割引だけでなく、取引ルール、出金リスク、運営法人を比較できる場所を目指しています。",
+    founderBio2: "編集方針は明快です。日付付きの公開情報を示し、不確かな点を明記し、訂正履歴を公開し、アフィリエイト契約を評価に反映させません。",
     runBy: '運営：{handle}',
   },
   diagram: {

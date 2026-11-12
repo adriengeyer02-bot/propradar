@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 import { closedFirms, documentedClosures, openFirms, payoutStats, statsUpdatedAt, trustpilotStats } from '../../lib/industryStats';
 import { propFirms } from '../../lib/propFirms';
@@ -88,6 +89,7 @@ export default async function AboutPage({ params }: Props) {
       name: FOUNDER.handle,
       jobTitle: 'Founder of PropRadar',
       description: FOUNDER.bio,
+      image: `${SITE_URL}/founder-adrien-geyer.webp`,
       knowsAbout: ['Proprietary trading firms', 'Forex trading', 'Commodities trading', 'Crypto trading', 'Prop firm challenges'],
       ...(FOUNDER.sameAs.length ? { sameAs: FOUNDER.sameAs } : {}),
     },
@@ -102,6 +104,30 @@ export default async function AboutPage({ params }: Props) {
         <h1>{a.h1}</h1>
         <p className="lead">{rich(a.lead, { handle })}</p>
       </header>
+
+
+      <section className="pr-about-founder" id="founder" aria-labelledby="founder-title">
+        <div className="pr-about-founder-visual">
+          <Image
+            className="pr-about-founder-photo"
+            src="/founder-adrien-geyer.webp"
+            alt={`Portrait of ${FOUNDER.handle}, founder of PropRadar`}
+            width={255}
+            height={510}
+            sizes="(max-width: 760px) 210px, 255px"
+            priority
+          />
+        </div>
+        <div className="pr-about-founder-copy">
+          <div className="eyebrow">{a.founderEyebrow}</div>
+          <h2 id="founder-title">{FOUNDER.handle}</h2>
+          <p className="pr-about-founder-role">{a.founderRole}</p>
+          <div className="pr-about-prose">
+            <p>{a.founderBio1}</p>
+            <p>{a.founderBio2}</p>
+          </div>
+        </div>
+      </section>
 
       <section className="pr-about-facts" aria-label={a.factsAria}>
         {facts.map((fact) => (
