@@ -164,6 +164,16 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Google Tag Manager container shared across all languages and pages. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNQWH42C');`,
+          }}
+        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
@@ -171,6 +181,15 @@ export default async function RootLayout({
         />
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TNQWH42C"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <RouteTransition />
         <a href="#main-content" className="skip-link">{c.skip}</a>
         <div className="site-shell">
