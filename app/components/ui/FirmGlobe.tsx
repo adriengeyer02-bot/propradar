@@ -1006,7 +1006,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           <span>{scoreLabel} {hover.dot.score}/100</span>
         </div>
       ) : null}
-      <p className="prg-hint">{hint}</p>
+      <p className="sr-only">{hint}</p>
     </div>
   );
 }

@@ -119,10 +119,6 @@ export default function ReliabilityRadar({ firms, showValues = false, size = 320
           ))}
         </figcaption>
       ) : null}
-      <p className="pr-relradar-note">
-        {caption ?? labels?.caption ?? 'Bigger shape = safer on that axis.'}
-        {axesByFirm.some((firmAxes) => firmAxes.some((axis) => axis.estimated)) ? labels?.hollow ?? ' Hollow dot = provisional value.' : ''}
-      </p>
     </figure>
   );
 }

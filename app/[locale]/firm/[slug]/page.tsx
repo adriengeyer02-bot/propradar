@@ -1105,12 +1105,6 @@ export default async function FirmPage({ params }: Props) {
               {firmSpecificSignals.map((point) => <li key={point}>{point}</li>)}
             </ul>
           </div>
-          <div>
-            <h2>{f.beforePay}</h2>
-            <ol className="pr-check-list pr-check-steps">
-              {decisionChecklist.map((item) => <li key={item}>{item}</li>)}
-            </ol>
-          </div>
         </section>
         {firm.commercialNote ? (
           <p className="pr-firm-disclosure">

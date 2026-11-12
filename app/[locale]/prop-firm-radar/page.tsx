@@ -67,7 +67,8 @@ export default async function PropFirmRadarPage({ params }: Props) {
     { value: `${radar.counts.closed}`, label: r.f4Label, note: r.f4Note },
   ];
 
-  const faq = r.faq.map((item) => ({ question: item.q, answer: fmt(item.a, { date: formatDate(radar.latest) }) }));
+  // Two questions only: where a firm sits, and how fresh the data is.
+  const faq = [r.faq[0], r.faq[3]].map((item) => ({ question: item.q, answer: fmt(item.a, { date: formatDate(radar.latest) }) }));
 
   const pageSchema = {
     '@context': 'https://schema.org',
@@ -126,25 +127,14 @@ export default async function PropFirmRadarPage({ params }: Props) {
         ))}
       </section>
 
-      <section className="pr-stats-section pr-radar-read" aria-labelledby="radar-read-title">
-        <h2 id="radar-read-title">{r.readTitle}</h2>
-        <ul className="pr-radar-read-list">
-          {[r.read1, r.read2, r.read3, r.read4].map(([lead, text]) => (
-            <li key={lead}><strong>{lead}</strong> {fmt(text, { name: topFirm.name, score: topFirm.score })}</li>
-          ))}
-        </ul>
-        <p className="pr-fineprint">
-          {r.fineprint} <Link href={L('/audit')} className="pr-link">{r.methodology}</Link>
-        </p>
-        <div className="actions">
-          <IntentLink className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</IntentLink>
-          <Link className="btn" href={L('/prop-firm-statistics')}>{r.stats}</Link>
-        </div>
-      </section>
+      <div className="actions pr-radar-actions">
+        <IntentLink className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</IntentLink>
+        <Link className="btn" href={L('/prop-firm-statistics')}>{r.stats}</Link>
+        <Link className="btn" href={`${L('/about')}#score`}>{r.methodology}</Link>
+      </div>
 
       <section className="pr-stats-section pr-radar-list" aria-labelledby="radar-list-title">
         <h2 id="radar-list-title">{r.listTitle}</h2>
-        <p className="pr-fineprint">{r.listNote}</p>
         <div className="pr-radar-list-grid">
           {sectors.map((sector) => (
             <details key={sector.key} open={sector.key === largest.key}>

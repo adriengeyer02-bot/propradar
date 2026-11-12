@@ -151,6 +151,17 @@ export default function PropRadarLive({
   const dimClosed = (band !== null && band !== 'closed') || sectorKey !== null;
 
   const labels = useMemo(() => data.sectors.map((s) => labelPath(s.start, s.end)), [data.sectors]);
+  // Logo badges for the highest-scored firms, spaced so they never overlap.
+  const badges = useMemo(() => {
+    const picked: typeof data.dots = [];
+    const max = variant === 'full' ? 16 : 9;
+    for (const dot of [...data.dots].sort((x, y) => y.score - x.score)) {
+      if (picked.length >= max) break;
+      if (!dot.logo || picked.some((other) => Math.hypot(other.x - dot.x, other.y - dot.y) < 31)) continue;
+      picked.push(dot);
+    }
+    return picked;
+  }, [data.dots, variant]);
   const names = useMemo(
     () => [...data.dots.map((d) => d.name), ...data.closed.map((c) => c.name)].sort((a, b) => a.localeCompare(b)),
     [data],
@@ -579,6 +590,14 @@ export default function PropRadarLive({
             ) : null,
           )}
         </g>
+        <g className="prr-badges" aria-hidden="true">
+          {badges.map((dot, index) => (
+            <g key={dot.slug} className={`prr-badge prr-${dot.tone}${dimDot(dot) ? ' is-dim' : ''}`} style={{ animationDelay: `${0.9 + index * 0.07}s` }}>
+              <circle cx={dot.x} cy={dot.y} r={13} className="prr-badge-ring" />
+              <image href={dot.logo} x={dot.x - 11} y={dot.y - 11} width={22} height={22} preserveAspectRatio="xMidYMid slice" />
+            </g>
+          ))}
+        </g>
         <g ref={pingRef} aria-hidden="true" />
         <circle cx={C} cy={C} r={2.5} className="prr-core" />
         {focusPoint ? (
@@ -633,22 +652,11 @@ export default function PropRadarLive({
     </div>
   );
 
-  const legend = (
-    <div className="prr-legend">
-      <span><i className="prr-lg" aria-hidden="true" />{t.legendCloser}</span>
-      <span><i className="prr-lg prr-lg-big" aria-hidden="true" />{t.legendBigger}</span>
-      <span><i className="prr-lg prr-lg-hollow" aria-hidden="true" />{t.legendHollow}</span>
-      <span><b className="prr-lg-x" aria-hidden="true">×</b>{t.legendClosed}</span>
-      {data.updated.count ? <span><i className="prr-lg prr-lg-fresh" aria-hidden="true" />{fill(t.legendUpdated, { date: data.updated.latest })} · {data.updated.count}</span> : null}
-    </div>
-  );
-
   if (variant === 'compact') {
     return (
       <div className="prr prr-is-compact">
         {radar}
         {bands}
-        <p className="prr-hint">{t.compactHint}</p>
       </div>
     );
   }
@@ -750,7 +758,6 @@ export default function PropRadarLive({
           ))}
         </div>
         {radar}
-        {legend}
       </div>
       <section className="prr-globe prr-globe-col" aria-label={t.globeTitle}>
         <h2 className="prr-globe-title">{t.globeTitle}</h2>
@@ -767,12 +774,6 @@ export default function PropRadarLive({
           scoreLabel={t.score}
           zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
         />
-        <div className="prg-legend">
-          <span><i className="prg-sw prg-good" aria-hidden="true" />{BAND_LABEL.good}</span>
-          <span><i className="prg-sw prg-watch" aria-hidden="true" />{BAND_LABEL.watch}</span>
-          <span><i className="prg-sw prg-none" aria-hidden="true" />{BAND_LABEL.none}</span>
-          <small>{t.globeNorth}</small>
-        </div>
       </section>
       <aside className="prr-side prr-panel" aria-label={t.controls}>
         <label className="prr-search">
@@ -799,11 +800,9 @@ export default function PropRadarLive({
             </>
           ) : (
             <>
-              {visit ? (
+              {visit?.last ? (
                 <div className="prr-visit" aria-live="polite">
-                  {!visit.last ? (
-                    <p>{t.visitFirst}</p>
-                  ) : visit.changed.length ? (
+                  {!visit.last ? null : visit.changed.length ? (
                     <>
                       <p><b>{fill(t.visitSince, { when: daysAgo(visit.last, t) })}</b> · {visit.changed.length}</p>
                       <ul>
@@ -824,8 +823,18 @@ export default function PropRadarLive({
                   )}
                 </div>
               ) : null}
-              <p className="prr-detail-hint">{t.idleHint}</p>
               {bands}
+              <ol className="prr-leaders">
+                {[...data.dots].sort((x, y) => y.score - x.score).slice(0, 5).map((dot) => (
+                  <li key={dot.slug}>
+                    <button type="button" onClick={() => selectFromGlobe(dot.slug)}>
+                      {dot.logo ? <img src={dot.logo} alt="" width={26} height={26} loading="lazy" /> : <i aria-hidden="true" />}
+                      <span>{dot.name}</span>
+                      <b className={`prr-${dot.tone}-text`}>{dot.score}</b>
+                    </button>
+                  </li>
+                ))}
+              </ol>
             </>
           )}
         </div>
