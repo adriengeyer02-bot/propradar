@@ -8,7 +8,7 @@
  */
 
 /** Diagrams drawn from the numbers in the section text (see components/guide-visuals). */
-export type GuideSectionVisual = 'challenge-vs-direct' | 'no-challenge-cost' | 'consistency-example' | 'trailing-vs-static';
+export type GuideSectionVisual = 'challenge-vs-direct' | 'no-challenge-cost' | 'consistency-example' | 'trailing-vs-static' | 'rule-stages' | 'daily-vs-max' | 'topstep-path';
 
 export type GuideArticleSection = {
   heading: string;
@@ -92,6 +92,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       },
       {
         heading: 'Where the rule applies: evaluation, payout or both',
+        visual: 'rule-stages',
         paragraphs: [
           'The same percentage can mean very different things. A consistency rule in the evaluation only delays your pass. A consistency rule on payouts can block a withdrawal after you have already made money on a funded account, which is far more frustrating. Some firms also use different limits per stage: Topstep uses 55% in the Combine and 40% on the Consistency payout path of its Express Funded Account.',
           'FTMO changed its rule on October 12, 2026: new 1-Step Challenge orders use a Consistency rule that compares your best day with your total profit, losing days included, while accounts from older orders keep the previous Best Day Rule, which only counted positive days. FTMO says that if you do not meet the requirement, you simply keep trading until you do (FTMO trading update, October 8, 2026). PropRadar has not captured a percentage best-day rule on The5ers High Stakes program. Always confirm the stage, product and order date.',
@@ -232,6 +233,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       },
       {
         heading: 'How the Trading Combine works',
+        visual: 'topstep-path',
         paragraphs: [
           'The Trading Combine is Topstep\'s evaluation. It comes in 50K, 100K and 150K sizes, with profit targets of $3,000, $6,000 and $9,000. There is no time limit and no minimum number of trading days. Positions must be closed by the end of the session: Topstep does not allow overnight or weekend holds.',
           'The Maximum Loss Limit (MLL) is $2,000, $3,000 or $4,500 below the starting balance depending on size. It trails upward as your end-of-day balance grows and never moves down, but breaches are monitored in real time, including unrealized losses. In the Combine it stops trailing once it reaches the starting balance (Topstep help center, updated September 18, 2026).',
@@ -280,6 +282,7 @@ export const guideArticles: Record<string, GuideArticle> = {
     sections: [
       {
         heading: 'Daily loss limit vs maximum drawdown',
+        visual: 'daily-vs-max',
         paragraphs: [
           'Most firms use two limits at once. The daily loss limit caps how much you can lose in one trading day, usually measured from the day\'s starting balance or equity. The maximum drawdown caps your total loss over the life of the account. Breaking either one usually breaches the account, although some futures firms only stop you for the rest of the session when you hit the daily limit.',
         ],

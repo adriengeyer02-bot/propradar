@@ -22,7 +22,76 @@ export default function GuideSectionDiagram({ visual, labels }: { visual: GuideS
   if (visual === 'challenge-vs-direct') return <ChallengeVsDirect t={t} />;
   if (visual === 'no-challenge-cost') return <NoChallengeCost t={t} />;
   if (visual === 'consistency-example') return <ConsistencyExample t={t} />;
+  if (visual === 'rule-stages') return <RuleStages t={t} />;
+  if (visual === 'daily-vs-max') return <DailyVsMax t={t} />;
+  if (visual === 'topstep-path') return <TopstepPath t={t} />;
   return <TrailingVsStatic t={t} />;
+}
+
+/* ---------------------------------------------------------------------- */
+
+function RuleStages({ t }: { t: T }) {
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-lanes">
+        <Lane
+          tone="classic"
+          title={t('Where a consistency rule can apply')}
+          steps={[
+            { label: t('Evaluation'), note: t('A rule here only delays your pass') },
+            { label: t('Funded account'), note: t('The limit can differ from the evaluation') },
+            { label: t('Payout request'), note: t('A rule here can block a withdrawal'), strong: true },
+          ]}
+        />
+      </div>
+      <figcaption>{t('Check the stage, the product and the order date of your own program.')}</figcaption>
+    </figure>
+  );
+}
+
+function DailyVsMax({ t }: { t: T }) {
+  // Schematic equity curve over three days: the daily limit restarts each day, the maximum drawdown does not.
+  const curve = 'M20 92 L60 80 L100 96 L120 88 L160 70 L200 84 L220 76 L260 58 L300 74';
+  const days = [20, 120, 220];
+  const starts = [92, 88, 76];
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-title">{t('Two limits at once')} <span>{t('Schematic, no real account')}</span></div>
+      <svg viewBox="0 0 320 170" role="img" aria-label="Schematic: the daily loss limit restarts below each day's starting balance, while the maximum drawdown is one floor for the whole account.">
+        <line x1="20" y1="146" x2="300" y2="146" className="pr-dg-line-risk" strokeDasharray="5 4" />
+        {days.map((x, i) => (
+          <g key={x}>
+            <line x1={x} y1={starts[i] + 26} x2={x + 96} y2={starts[i] + 26} className="pr-dg-line-watch" />
+            <line x1={x} y1="20" x2={x} y2="150" className="pr-dg-line-grid" />
+            <text x={x + 4} y="164" className="pr-dg-svg-label">{t('Day {n}').replace('{n}', String(i + 1))}</text>
+          </g>
+        ))}
+        <path d={curve} className="pr-dg-line-curve" />
+      </svg>
+      <ul className="pr-dg-keys">
+        <li><i className="pr-dg-key-watch" aria-hidden="true" />{t('Daily loss limit: restarts every day')}</li>
+        <li><i className="pr-dg-key-risk" aria-hidden="true" />{t('Maximum drawdown: one floor for the whole account')}</li>
+      </ul>
+    </figure>
+  );
+}
+
+function TopstepPath({ t }: { t: T }) {
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-lanes">
+        <Lane
+          tone="direct"
+          title={t('The Topstep path')}
+          steps={[
+            { label: 'Trading Combine', note: t('Evaluation: profit target, no time limit') },
+            { label: 'Express Funded Account', note: t('Still simulated: payouts begin here') },
+            { label: 'Live Funded Account', note: t('By invitation, real capital'), strong: true },
+          ]}
+        />
+      </div>
+    </figure>
+  );
 }
 
 /* ---------------------------------------------------------------------- */

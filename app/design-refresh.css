@@ -365,3 +365,37 @@ html body .topbar .nav .nav-link-active:hover {
 .pr-plain-row:first-child { border-top: 0; }
 .pr-plain-row small { display: block; color: var(--muted); font-size: 0.8rem; }
 @media (max-width: 760px) { .pr-plain-row { grid-template-columns: 1fr 1fr; } }
+
+/* Lighter pages (2026-11-12): fewer explanations, more air. */
+html body .pr-firm-checks { grid-template-columns: 1fr; }
+html body .pr-firm-checks .pr-check-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px 24px; }
+.pr-radar-actions { margin: 4px 0 8px; }
+.prr-is-full.is-three .prr-globe-col { justify-content: center; }
+
+/* Radar: logo badges on the highest-scored firms. */
+.prr-badge { pointer-events: none; opacity: 0; animation: prr-badge-in 0.5s ease forwards; transition: opacity 0.2s ease; }
+.prr-badge image { clip-path: circle(50%); }
+.prr-badge-ring { fill: #fff; stroke-width: 2.4; }
+.prr-badge.prr-good .prr-badge-ring { stroke: #16a34a; }
+.prr-badge.prr-watch .prr-badge-ring { stroke: #d97706; }
+.prr-badge.prr-none .prr-badge-ring { stroke: #94a3b8; }
+.prr-badge.is-dim { opacity: 0.18 !important; }
+@keyframes prr-badge-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .prr-badge { animation: none; opacity: 1; } }
+.prr-leaders { list-style: none; margin: 4px 0 0; padding: 0; display: grid; }
+.prr-leaders button { display: grid; grid-template-columns: 26px 1fr auto; align-items: center; gap: 10px; width: 100%; padding: 9px 4px; border: 0; border-top: 1px solid var(--line); background: none; color: inherit; font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.prr-leaders li:first-child button { border-top: 0; }
+.prr-leaders button:hover span { color: var(--accent, #0b7285); }
+.prr-leaders img, .prr-leaders i { width: 26px; height: 26px; border-radius: 7px; background: #fff; border: 1px solid var(--line); object-fit: cover; }
+.prr-leaders b { font-variant-numeric: tabular-nums; }
+
+/* Guide diagrams added 2026-11-12 */
+.pr-diagram svg .pr-dg-line-curve { fill: none; stroke: var(--accent, #0b7285); stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+.pr-diagram svg .pr-dg-line-watch { stroke: #d97706; stroke-width: 2; }
+.pr-diagram svg .pr-dg-line-risk { stroke: #dc2626; stroke-width: 2; }
+.pr-diagram svg .pr-dg-line-grid { stroke: var(--line); stroke-width: 1; }
+.pr-dg-keys { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 10px 0 0; padding: 0; font-size: 0.88rem; }
+.pr-dg-keys li { display: flex; align-items: center; gap: 8px; }
+.pr-dg-keys i { width: 18px; height: 3px; border-radius: 2px; }
+.pr-dg-key-watch { background: #d97706; }
+.pr-dg-key-risk { background: #dc2626; }

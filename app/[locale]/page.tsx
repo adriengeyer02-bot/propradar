@@ -49,7 +49,6 @@ export default async function HomePage({ params }: Props) {
   const officialSourceCount = propFirms.reduce((sum, firm) => sum + firm.sources.length, 0);
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const sourcedFirms = verifiedFirms.length + partiallyVerifiedFirms.length;
-  const heroPreviewFirms = topFirms.slice(0, 3);
   const homeRadar = buildRadar(propFirms, recentFirmUpdates(1));
   const homepageGuides = [
     'prop-firm-sans-challenge',
@@ -150,24 +149,6 @@ export default async function HomePage({ params }: Props) {
             <span>{fmt(h.firms, { count: propFirms.length })}</span>
           </div>
           <PropRadarLive data={homeRadar} variant="compact" locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} />
-          <ol className="pr-home-top">
-            {heroPreviewFirms.map((firm, index) => (
-              <li key={`home-preview-${firm.slug}`}>
-                <Link href={L(`/firm/${firm.slug}`)}>
-                  <span className="pr-home-top-rank" aria-hidden="true">{index + 1}</span>
-                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
-                  <span className="pr-home-top-name">
-                    <strong>{firm.name}</strong>
-                    <span>
-                      <RiskPip compact label={h.payout} value={tv(t, toEnglishText(firm.reviewSignals.payoutRisk))} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
-                      <RiskPip compact label={h.legal} value={tv(t, firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
-                    </span>
-                  </span>
-                  <ScoreRing score={firm.score} size="sm" />
-                </Link>
-              </li>
-            ))}
-          </ol>
           <Link href={L('/prop-firm-radar')} className="pr-link pr-home-radar-more">{h.openRadar} <span aria-hidden="true">→</span></Link>
         </div>
       </section>
@@ -200,7 +181,6 @@ export default async function HomePage({ params }: Props) {
               <div className="eyebrow">{h.toolsEyebrow}</div>
               <h2 id="tools-title">{h.toolsTitle}</h2>
             </div>
-            <p>{h.toolsNote}</p>
           </div>
 
           <div className="home-tools-grid">
@@ -217,41 +197,6 @@ export default async function HomePage({ params }: Props) {
                 <span className="home-tool-action">{tool.action} <b aria-hidden="true">→</b></span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="home-v2-band home-v2-why" aria-labelledby="why-title">
-        <div className="container">
-          <div className="home-v2-section-heading">
-            <div>
-              <div className="eyebrow">{h.whyEyebrow}</div>
-              <h2 id="why-title">{h.whyTitle}</h2>
-            </div>
-            <p>{h.whyNote}</p>
-          </div>
-
-          <div className="home-why-grid">
-            <article className="home-why-card pr-why">
-              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" /><path d="m8.5 12 2.5 2.5 4.5-5" /></svg>
-              <h3>{h.why[0].title}</h3>
-              <p>{fmt(h.why[0].text, { count: noConflictFirms })}</p>
-            </article>
-            <article className="home-why-card pr-why">
-              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2" /><circle cx="12" cy="12" r="2.5" /><path d="M7 9.5v5M17 9.5v5" /></svg>
-              <h3>{h.why[1].title}</h3>
-              <p>{h.why[1].text}</p>
-            </article>
-            <article className="home-why-card pr-why">
-              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0L7 7Zm10 0-3 7a3 3 0 0 0 6 0l-3-7Z" /></svg>
-              <h3>{h.why[2].title}</h3>
-              <p>{fmt(h.why[2].text, { count: legalMappedCount })}</p>
-            </article>
-            <article className="home-why-card pr-why">
-              <svg className="pr-why-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="12" cy="18" r="2.5" /><path d="M8 7.5 10.8 16M16 7.5 13.2 16M8.5 6h7" /></svg>
-              <h3>{h.why[3].title}</h3>
-              <p>{h.why[3].text}</p>
-            </article>
           </div>
         </div>
       </section>
@@ -304,7 +249,6 @@ export default async function HomePage({ params }: Props) {
               <div className="eyebrow">{h.briefEyebrow}</div>
               <h2 id="home-brief-title">{h.briefTitle}</h2>
             </div>
-            <p>{h.briefNote}</p>
           </div>
 
           <div className="home-brief-layout">
