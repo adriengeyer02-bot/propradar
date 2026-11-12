@@ -24,6 +24,12 @@ type Saved = { file: string; url: string; kind: Candidate['kind']; declared: num
 const OUT = 'logo-raw';
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 8;
+/** Logo images read on the official site (via a branding scan) that the generic scan misses. */
+const EXTRA_LOGOS: Record<string, string[]> = {
+  'funder-trading': ['https://fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq-20.png'],
+  'moneta-funded': ['https://www.monetafunded.com/wp-content/themes/Moneta/images/logo.svg'],
+  'sure-leverage': ['https://sureleveragefunding.com/sureLeverageFunded-Favicon.png'],
+};
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36';
 
 async function get(url: string) {
@@ -49,7 +55,7 @@ function largestSize(sizes: string) {
     .reduce((max, value) => Math.max(max, value), 0);
 }
 
-async function candidatesFor(domain: string): Promise<{ candidates: Candidate[]; finalUrl?: string; error?: string }> {
+async function scan(domain: string): Promise<{ candidates: Candidate[]; finalUrl?: string; error?: string }> {
   const candidates: Candidate[] = [];
   let finalUrl: string | undefined;
   let error: string | undefined;
@@ -58,6 +64,7 @@ async function candidatesFor(domain: string): Promise<{ candidates: Candidate[];
     const response = await get(`https://${domain}/`);
     finalUrl = response.url;
     const html = (await response.text()).slice(0, 400_000);
+    if (process.env.SAVE_PAGES) writeFileSync(`${OUT}/${domain}__page.html`, html);
     const base = response.url || `https://${domain}/`;
 
     for (const tag of html.match(/<link\b[^>]*>/gi) ?? []) {
@@ -111,6 +118,16 @@ async function candidatesFor(domain: string): Promise<{ candidates: Candidate[];
     error = caught instanceof Error ? caught.message : String(caught);
   }
 
+  return { candidates, finalUrl, error };
+}
+
+async function candidatesWithExtras(slug: string, domain: string) {
+  const { candidates, finalUrl, error } = await scan(domain);
+  for (const url of EXTRA_LOGOS[slug] ?? []) candidates.push({ url, kind: 'logo-img', declared: -1 });
+  return rankCandidates(domain, candidates, finalUrl, error);
+}
+
+function rankCandidates(domain: string, candidates: Candidate[], finalUrl?: string, error?: string) {
   candidates.push({ url: `https://${domain}/apple-touch-icon.png`, kind: 'touch', declared: 180 });
   candidates.push({
     url: `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=256`,
@@ -127,7 +144,7 @@ async function candidatesFor(domain: string): Promise<{ candidates: Candidate[];
 }
 
 async function processFirm(slug: string, domain: string) {
-  const { candidates, finalUrl, error } = await candidatesFor(domain);
+  const { candidates, finalUrl, error } = await candidatesWithExtras(slug, domain);
   const saved: Saved[] = [];
 
   for (const candidate of candidates) {
@@ -156,7 +173,8 @@ async function processFirm(slug: string, domain: string) {
 
 async function main() {
   const onlyArg = process.argv.find((arg) => arg.startsWith('--only'));
-  const only = onlyArg ? new Set((onlyArg.split('=')[1] ?? process.argv[process.argv.indexOf(onlyArg) + 1] ?? '').split(',')) : null;
+  const onlyEnv = process.env.ONLY ? new Set(process.env.ONLY.split(',')) : null;
+  const only = onlyArg ? new Set((onlyArg.split('=')[1] ?? process.argv[process.argv.indexOf(onlyArg) + 1] ?? '').split(',')) : onlyEnv;
   const targets = propFirms.filter((firm) => firm.logoDomain && firm.status !== 'Fermée' && !firm.listedDomainWarning && (!only || only.has(firm.slug)));
 
   mkdirSync(OUT, { recursive: true });
