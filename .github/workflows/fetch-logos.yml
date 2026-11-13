@@ -22,6 +22,8 @@ jobs:
           node-version: 20
       - run: npm install --no-audit --no-fund
       - run: npx tsx scripts/fetch-logos.ts
+        env:
+          ONLY: lvlup-futures
       - name: Push raw candidates to agent/logo-raw
         run: |
           mv logo-raw /tmp/logo-raw

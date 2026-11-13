@@ -175,9 +175,12 @@ export const BLUE_GUARDIAN_AFFILIATE_URL = 'https://blueguardian.com/?afmc=PROPR
 export const FUNDERPRO_AFFILIATE_URL = 'https://funderpro.cxclick.com/visit/?bta=48892&brand=funderpro';
 export const GOAT_FUNDED_TRADER_AFFILIATE_URL = 'https://app.goatfundedtrader.com/checkout?referral_id=04e892a0e3d217576945';
 export const THE5ERS_AFFILIATE_URL = 'https://www.the5ers.com/?afmc=1cuh';
+export const E8_AFFILIATE_URL = 'https://e8markets.com/d/A4DE0965';
+/** Partner code issued to PropRadar by OneFunded on 2026-11-12 (25% off all challenges, per OneFunded). */
+export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -1459,6 +1462,9 @@ const corePropFirms: PropFirm[] = [
     transparencyScore: 14,
     payoutProof: true,
     logoDomain: 'e8markets.com',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote:
+      'PropRadar may receive a commission through the E8 Markets link. On 13 November 2026 the official page reached through that link showed the public code E8 (15% off the first order); confirm the reduction in the order summary. The relationship has no impact on the score.',
     communitySignal: 'Strong marketing traction; confirm the exact rules before relying on the public signal.',
     styles: ['Forex', 'Futures', 'Crypto'],
     products: [
@@ -1473,7 +1479,7 @@ const corePropFirms: PropFirm[] = [
         profitSplit: 'up to 80%+',
         platforms: ['TradeLocker', 'cTrader', 'Match-Trader'],
         tradableAssets: ['Forex', 'Futures', 'Crypto'],
-        linkToStart: 'https://e8markets.com/',
+        linkToStart: E8_AFFILIATE_URL,
       }),
     ],
     strengths: ['Modern product experience', 'Explicit simulated-account positioning', 'Public payout claims'],
@@ -11551,6 +11557,9 @@ const universePropFirms: PropFirm[] = [
     slug: 'onefunded',
     name: 'OneFunded',
     website: 'https://onefunded.com/',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote:
+      'PropRadar may receive a commission when the partner code PROPRADARTECH is used. OneFunded says the code gives 25% off all challenges. On 13 November 2026 its own site also showed the public codes NOV20 (20%) and AWARD (30%): compare them at checkout. Trustpilot withholds OneFunded\'s rating for a guideline breach, so its score stays capped at 64. The relationship has no impact on the score.',
     status: 'À surveiller',
     score: 61,
     founded: 2025,
@@ -11618,6 +11627,92 @@ const universePropFirms: PropFirm[] = [
         { label: 'OneFunded Disclaimer', url: 'https://onefunded.com/disclaimer/' },
         { label: 'OneFunded Refund Policy', url: 'https://onefunded.com/refund-policy/' },
         { label: 'OneFunded Trustpilot search', url: 'https://www.trustpilot.com/search?query=OneFunded' },
+      ],
+    },
+  }),
+  universeFirm({
+    id: 197,
+    slug: 'lvlup-futures',
+    name: 'Lvlup Futures',
+    website: 'https://lvlupfutures.com/',
+    status: 'À surveiller',
+    score: 56,
+    headquarters: 'Germany (brand) / Prop Account (evaluations)',
+    market: 'Futures',
+    priceFrom: 117,
+    profitSplit: 80,
+    drawdownType: 'EOD',
+    newsTrading: 'Allowed',
+    payoutProof: true,
+    incidents: 0,
+    lastReviewed: '2026-11-13',
+    styles: ['Futures', 'Intraday'],
+    productName: 'Lvlup Evaluation and Starter Evaluation',
+    productDescription:
+      'Futures evaluations in 25K, 50K, 100K and 150K sizes. Lvlup accounts: list price from $117/month or $194 one-time (25K), 80% split, activation fee after passing. Starter accounts: one-time fee from $129 (25K), 100% split, no activation fee, at most 5 payouts and 50% of profit per payout. Prices read on 13 November 2026 before the NOV26 coupon.',
+    accountSizeMin: 25000,
+    accountSizeMax: 150000,
+    profitTarget: '$1,500 / $3,000 / $7,000 / $12,000 for 25K / 50K / 100K / 150K',
+    maxDailyLoss: 'None (no daily loss limit)',
+    maxDrawdown: 'EOD trailing: $1,250 / $2,500 / $5,000 / $7,500 (Lvlup accounts); $1,000 / $2,000 / $3,000 / $4,500 (Starter accounts)',
+    platforms: ['Tickblaze', 'Volumetrica'],
+    tradableAssets: ['Futures'],
+    minTradingDays: '5 days',
+    hasConsistencyRule: true,
+    consistencyRule: '40%: the best day cannot exceed 40% of total profit (Starter accounts: evaluation only).',
+    payoutDelay: 'Payout requests every 14 days; up to 10% of the starting balance per request',
+    auditStatus: 'Partiellement vérifié',
+    auditSummary:
+      'Official home page, rules summary and legal footer read on 13 November 2026. The brand is run by LVLUP One UG (haftungsbeschränkt), Stralsund, Germany (HRB 23184), but the footer says all funding assessments are offered by Prop Account, LLC, which receives the assessment fees, and funded accounts need a separate Trader Agreement with Prop Account LC. No founding date is published; Prop Firm Pal dates the brand from the registration of lvlupfutures.com in January 2026. Trustpilot showed 4.2 from 13 reviews. Score set like other recent firms on the same kind of structure: clear rules and a named entity, but a very short public history and no independent payout evidence yet.',
+    auditSourcesChecked: ['Official site and legal footer', 'Rules summary', 'Trustpilot', 'Prop Firm Pal profile'],
+    regulatoryAudit: {
+      riskLevel: 'Medium to high',
+      lastChecked: '2026-11-13',
+      summary:
+        'Medium-to-high risk. The brand entity is a German company with a public imprint and a named managing director, which is more than many recent firms publish. The evaluations, fees and funded-account contracts sit with Prop Account, LLC and Prop Account LC, whose jurisdictions are not stated on the Lvlup page. The firm is very recent and its payout evidence is self-published.',
+      entities: [
+        {
+          name: 'LVLUP One UG (haftungsbeschränkt)',
+          jurisdiction: 'Germany',
+          registrationNumber: 'HRB 23184 (Local Court of Stralsund)',
+          registeredAddress: 'Am Langenwall 1, 18439 Stralsund, Germany',
+          role: 'Brand operator; authorized representative Lennard Wenderholm (official footer).',
+        },
+        {
+          name: 'Prop Account, LLC',
+          jurisdiction: 'Not stated on the Lvlup page',
+          role: 'Offers and conducts all funding assessments and receives all assessment fees (official footer).',
+        },
+        {
+          name: 'Prop Account LC',
+          jurisdiction: 'Not stated on the Lvlup page',
+          role: 'Counterparty of the separate Trader Agreement required for a funded account (official footer).',
+        },
+      ],
+      regulatoryStatus: [
+        'The footer says the website content is informational and marketing material, not investment, financial, tax or legal advice.',
+        'Client terms are hosted by Dashboard Analytix (dashboardanalytix.com/client-terms-and-policies).',
+        'The site shows a Financial Commission "Certified Prop Trading Firm" badge; PropRadar did not confirm it on the Financial Commission site.',
+        'No regulator warning about Lvlup Futures or LVLUP One UG was found in web searches on 13 November 2026 (BaFin, FCA, CFTC, CONSOB, AMF named in the query).',
+      ],
+      complaintsAndDisputes: [
+        'Trustpilot showed 4.2 from 13 reviews on 13 November 2026: too few to describe payout behaviour.',
+        'No public payout dispute was found on 13 November 2026.',
+      ],
+      redFlags: [
+        'Very short history: no founding date published; domain registered in January 2026 according to Prop Firm Pal.',
+        'The brand and the company that sells the evaluation and signs the funded-account contract are different entities.',
+        'Payout certificates on the home page are published by the firm itself.',
+        'The home page lists 28 named testimonials that share one avatar and link to no source.',
+        'Restricted countries include Pakistan.',
+      ],
+      sources: [
+        { label: 'Lvlup Futures official site and legal footer', url: 'https://lvlupfutures.com/' },
+        { label: 'Lvlup Futures rules', url: 'https://lvlupfutures.com/rules' },
+        { label: 'Lvlup Futures imprint', url: 'https://lvlupfutures.com/imprint' },
+        { label: 'Client terms (Dashboard Analytix)', url: 'https://dashboardanalytix.com/client-terms-and-policies/' },
+        { label: 'Trustpilot: Lvlup Futures', url: 'https://www.trustpilot.com/review/lvlupfutures.com' },
+        { label: 'Prop Firm Pal: Lvlup Futures profile', url: 'https://propfirmpal.com/futures/firms/verified/lvlup-futures' },
       ],
     },
   }),
