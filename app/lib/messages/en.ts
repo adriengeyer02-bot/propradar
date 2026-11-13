@@ -511,6 +511,7 @@ const en = {
     noConsistency: 'No major consistency rule flagged',
     openAffiliate: 'Open through affiliate link',
     openOfficial: 'Open official offer',
+    partnerCode: {"eyebrow": "PropRadar partner code", "title": "{pct}% off all challenges", "body": "Use code {code} at {name} checkout.", "copy": "Copy code", "copied": "Copied", "cta": "Go to {name}", "close": "Close", "disclosure": "Code given to PropRadar by {name}: PropRadar may earn a commission. It has no effect on the score.", "compare": "If the checkout shows a bigger public discount, use the one that gives the lowest price."},
     noProductTitle: 'No active product recommended',
     noProductText: 'This firm remains in the radar as a historical risk signal, but should not be considered a buying option.',
     ctxAria: 'How {name} compares',

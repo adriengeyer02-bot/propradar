@@ -554,3 +554,101 @@ html body .guide-article .ga-callout p { margin: 2px 0 0; color: var(--text); fo
 .pr-dg-stack-result { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin-top: 12px; color: var(--muted); font-size: 14px; }
 .pr-dg-stack-result strong { color: var(--text); font-size: 15px; }
 html body .guide-article .ga-compare td.is-short { white-space: nowrap; }
+
+/* Partner code offer (PartnerCodeOffer): card on the firm page + pop-up */
+.pr-pcode-section { margin: 18px 0; }
+.pr-pcode {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  overflow: hidden;
+  padding: 26px 28px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+  border-radius: 18px;
+  background:
+    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--accent) 22%, transparent) 0%, transparent 55%),
+    linear-gradient(160deg, var(--surface) 0%, color-mix(in srgb, var(--surface) 82%, #000) 100%);
+  color: var(--text);
+}
+.pr-pcode-glow {
+  position: absolute;
+  inset: auto -60px -80px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 35%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+.pr-pcode-eyebrow { color: var(--accent); font-size: 12.5px; font-weight: 760; letter-spacing: 0.06em; text-transform: uppercase; }
+.pr-pcode-title { font-size: clamp(26px, 3.6vw, 36px); font-weight: 800; line-height: 1.08; letter-spacing: -0.01em; }
+.pr-pcode-body { margin: 0; color: var(--soft); font-size: 16px; }
+.pr-pcode-ticket {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 6px 0 4px;
+  border: 2px dashed color-mix(in srgb, var(--accent) 70%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.pr-pcode-code {
+  padding: 12px 18px;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(18px, 2.4vw, 22px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.pr-pcode-copy {
+  padding: 0 16px;
+  border: 0;
+  border-left: 2px dashed color-mix(in srgb, var(--accent) 70%, transparent);
+  border-radius: 0 10px 10px 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 760;
+  cursor: pointer;
+}
+.pr-pcode-copy { white-space: nowrap; }
+.pr-pcode-copy:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.pr-pcode-cta { margin-top: 4px; }
+.pr-pcode-fine { margin: 4px 0 0; max-width: 60ch; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+
+.pr-pcode-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(3, 8, 14, 0.62);
+  backdrop-filter: blur(4px);
+  animation: pr-pcode-fade 0.25s ease-out;
+}
+.pr-pcode-dialog { position: relative; width: min(460px, 100%); animation: pr-pcode-pop 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2); }
+.pr-pcode-modal { padding: 34px 30px 26px; justify-items: center; text-align: center; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45); }
+.pr-pcode-modal .pr-pcode-fine { text-align: center; }
+.pr-pcode-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+}
+.pr-pcode-close:hover { color: var(--text); }
+@keyframes pr-pcode-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pr-pcode-pop { from { opacity: 0; transform: translateY(14px) scale(0.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .pr-pcode-overlay, .pr-pcode-dialog { animation: none; }
+}
