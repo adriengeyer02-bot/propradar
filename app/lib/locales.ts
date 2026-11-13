@@ -69,6 +69,8 @@ const TRANSLATED = [
   /^\/promos$/,
   /^\/prop-firm-payout-risk$/,
   /^\/radar-brief$/,
+  // French-only articles (app/lib/frArticles.ts) and their index: written in French.
+  /^\/(articles|meilleures-prop-firms-2026|prop-firm-sans-challenge|regle-de-consistance-prop-firm|drawdown-prop-firm|avis-topstep|ftmo-vs-the5ers)$/,
 ];
 
 export function isTranslatedPath(path: string) {

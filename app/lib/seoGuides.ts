@@ -1835,7 +1835,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       {
         question: 'Is GOAT Funded Trader legit?',
         answer:
-          'It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 68/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).',
+          'It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 64/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).',
       },
       {
         question: 'Why is the GOAT Funded Trader Trustpilot rating unavailable?',

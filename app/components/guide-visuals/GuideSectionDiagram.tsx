@@ -25,6 +25,11 @@ export default function GuideSectionDiagram({ visual, labels }: { visual: GuideS
   if (visual === 'rule-stages') return <RuleStages t={t} />;
   if (visual === 'daily-vs-max') return <DailyVsMax t={t} />;
   if (visual === 'topstep-path') return <TopstepPath t={t} />;
+  if (visual === 'static-floor') return <StaticFloor t={t} />;
+  if (visual === 'eod-vs-intraday') return <EodVsIntraday t={t} />;
+  if (visual === 'trailing-lock') return <TrailingLock t={t} />;
+  if (visual === 'balance-vs-equity') return <BalanceVsEquity t={t} />;
+  if (visual === 'real-cost-stack') return <RealCostStack t={t} />;
   return <TrailingVsStatic t={t} />;
 }
 
@@ -259,6 +264,161 @@ function TrailingVsStatic({ t }: { t: T }) {
         <li><span className="pr-dg-key pr-dg-key-static" />{rich(t('Static floor stays at $47,500 → {room}'), { room: <strong className="pr-tone-good">{t('$2,500 room')}</strong> })}</li>
         <li><span className="pr-dg-key pr-dg-key-trailing" />{rich(t('Trailing floor moves to $49,000 → {room}'), { room: <strong className="pr-tone-risk">{t('$1,000 room')}</strong> })}</li>
       </ul>
+    </figure>
+  );
+}
+
+/* ---------------------------------------------------------------------- */
+
+function StaticFloor({ t }: { t: T }) {
+  // $100,000 account, 10% static limit: floor $90,000; account grown to $108,000 -> $18,000 of room.
+  const x = (v: number) => 30 + ((v - 86000) / (112000 - 86000)) * 400;
+  const marks = [
+    { v: 90000, label: t('Floor'), cls: 'pr-dg-svg-risk' },
+    { v: 100000, label: t('Start'), cls: 'pr-dg-svg-label' },
+    { v: 108000, label: t('Today'), cls: 'pr-dg-svg-value' },
+  ];
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-title">{t('Static drawdown: the floor never moves')} <span>{t('$100,000 account, 10% static limit')}</span></div>
+      <svg className="pr-dg-line" viewBox="0 0 460 150" role="img" aria-label="The floor stays at 90,000 dollars. The account has grown to 108,000 dollars, so 18,000 dollars of room remain.">
+        <rect x={x(90000)} y="46" width={x(108000) - x(90000)} height="26" rx="6" className="pr-dg-fill-good-soft" />
+        <line x1="30" x2="430" y1="59" y2="59" className="pr-dg-grid" />
+        <line x1={x(90000)} x2={x(90000)} y1="30" y2="88" className="pr-dg-line-risk" strokeDasharray="5 4" />
+        {marks.map((m) => (
+          <g key={m.v}>
+            {m.v === 90000 ? null : <circle cx={x(m.v)} cy="59" r="6" className="pr-dg-dot" />}
+            <text x={x(m.v)} y="22" textAnchor="middle" className={m.cls}>{m.label}</text>
+            <text x={x(m.v)} y="138" textAnchor="middle" className="pr-dg-svg-label">{`$${(m.v / 1000).toFixed(0)}k`}</text>
+          </g>
+        ))}
+        <text x={(x(90000) + x(108000)) / 2} y="100" textAnchor="middle" className="pr-dg-svg-good">{'\u2190 '}{t('Room: $18,000')}{' \u2192'}</text>
+      </svg>
+      <figcaption>{t('Every profit you bank widens the gap to the floor.')}</figcaption>
+    </figure>
+  );
+}
+
+/** Schematic equity path over two days (index = time step). */
+const EQ = [50, 53, 58, 55, 52, 54, 57, 61, 56, 55];
+const CLOSES = [4, 9]; // last step of day 1 and day 2
+
+function EodVsIntraday({ t }: { t: T }) {
+  const D = 8;
+  const x = (i: number) => 30 + i * 44;
+  const y = (v: number) => 20 + ((66 - v) / (66 - 38)) * 140;
+  const line = (vals: number[]) => vals.map((v, i) => `${i ? 'L' : 'M'}${x(i)},${y(v)}`).join(' ');
+  let peak = -Infinity;
+  const intraday = EQ.map((v) => ((peak = Math.max(peak, v)), peak - D));
+  // End of day: the floor only moves at each close, from the closing value.
+  let eodFloor = EQ[0] - D;
+  const eod = EQ.map((v, i) => {
+    if (CLOSES.includes(i)) eodFloor = Math.max(eodFloor, v - D);
+    return eodFloor;
+  });
+  const eodPath = eod.map((v, i) => `${i ? 'H' + x(i) + ' V' : 'M' + x(i) + ','}${y(v)}`).join(' ');
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-title">{t('Intraday trailing vs end of day')} <span>{t('Schematic, no real account')}</span></div>
+      <svg className="pr-dg-line" viewBox="0 0 460 200" role="img" aria-label="The intraday trailing floor rises with every new high during the day. The end-of-day floor only moves at each close.">
+        {CLOSES.map((i) => (
+          <g key={i}>
+            <line x1={x(i)} x2={x(i)} y1="14" y2="172" className="pr-dg-line-grid" strokeDasharray="3 4" />
+            <text x={x(i)} y="190" textAnchor="middle" className="pr-dg-svg-label">{t('Close')}</text>
+          </g>
+        ))}
+        <path d={eodPath} className="pr-dg-floor-eod" />
+        <path d={line(intraday)} className="pr-dg-floor-trailing" />
+        <path d={line(EQ)} className="pr-dg-equity" />
+      </svg>
+      <ul className="pr-dg-legend">
+        <li><span className="pr-dg-key pr-dg-key-equity" />{t('Equity')}</li>
+        <li><span className="pr-dg-key pr-dg-key-trailing" />{t('Intraday trailing: rises with every new high, open profit included')}</li>
+        <li><span className="pr-dg-key pr-dg-key-eod" />{t('End of day: moves only at the close')}</li>
+      </ul>
+    </figure>
+  );
+}
+
+function TrailingLock({ t }: { t: T }) {
+  // Schematic: start 50, trailing distance 5, lock at the starting balance.
+  const eq = [50, 51.5, 51, 53, 54.5, 55.5, 56, 58, 57, 59.5];
+  const start = 50;
+  const D = 5;
+  const x = (i: number) => 30 + i * 44;
+  const y = (v: number) => 20 + ((61 - v) / (61 - 43)) * 140;
+  let peak = -Infinity;
+  const floor = eq.map((v) => ((peak = Math.max(peak, v)), Math.min(start, peak - D)));
+  const lockAt = floor.findIndex((v) => v >= start);
+  const line = (vals: number[]) => vals.map((v, i) => `${i ? 'L' : 'M'}${x(i)},${y(v)}`).join(' ');
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-title">{t('The lock: where the trailing stops')} <span>{t('Schematic, no real account')}</span></div>
+      <svg className="pr-dg-line" viewBox="0 0 460 200" role="img" aria-label="The floor follows the account's high until it reaches the starting balance, then stays there like a static limit.">
+        <rect x={x(0)} y="14" width={x(lockAt) - x(0)} height="158" className="pr-dg-zone-risk" />
+        <text x={(x(0) + x(lockAt)) / 2} y="30" textAnchor="middle" className="pr-dg-svg-risk">{t('Most dangerous days')}</text>
+        <line x1={x(0)} x2={x(9)} y1={y(start)} y2={y(start)} className="pr-dg-line-grid" strokeDasharray="5 4" />
+        <text x={x(9)} y={y(start) - 6} textAnchor="end" className="pr-dg-svg-label">{t('Starting balance')}</text>
+        <path d={line(floor)} className="pr-dg-floor-trailing" />
+        <path d={line(eq)} className="pr-dg-equity" />
+        <circle cx={x(lockAt)} cy={y(start)} r="5" className="pr-dg-dot-risk" />
+        <text x="440" y={y(start) + 22} textAnchor="end" className="pr-dg-svg-strong">{t('Locked: now a fixed floor')}</text>
+      </svg>
+      <ul className="pr-dg-legend">
+        <li><span className="pr-dg-key pr-dg-key-equity" />{t('Equity')}</li>
+        <li><span className="pr-dg-key pr-dg-key-trailing" />{t('Floor: trails your high, then locks')}</li>
+      </ul>
+    </figure>
+  );
+}
+
+function BalanceVsEquity({ t }: { t: T }) {
+  // Schematic: one open trade dips through the floor, then closes in profit.
+  const pnl = [50, 48.5, 46, 44.2, 45.5, 48, 51, 53];
+  const floor = 45;
+  const x = (i: number) => 40 + i * 54;
+  const y = (v: number) => 20 + ((55 - v) / (55 - 42)) * 140;
+  const line = pnl.map((v, i) => `${i ? 'L' : 'M'}${x(i)},${y(v)}`).join(' ');
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-title">{t('Balance vs equity')} <span>{t('Schematic, no real account')}</span></div>
+      <svg className="pr-dg-line" viewBox="0 0 460 190" role="img" aria-label="An open trade's floating loss crosses the floor before the trade closes in profit. An equity-based limit is breached at that moment; a balance-based limit only sees the profitable close.">
+        <line x1="30" x2="430" y1={y(floor)} y2={y(floor)} className="pr-dg-line-risk" strokeDasharray="6 5" />
+        <text x="430" y={y(floor) + 16} textAnchor="end" className="pr-dg-svg-risk">{t('Floor')}</text>
+        <path d={line} className="pr-dg-equity" />
+        <circle cx={x(3)} cy={y(44.2)} r="6" className="pr-dg-dot-risk" />
+        <text x={x(3)} y={y(44.2) + 22} textAnchor="middle" className="pr-dg-svg-risk">{t('Equity-based: breached here')}</text>
+        <circle cx={x(7)} cy={y(53)} r="6" className="pr-dg-dot-good" />
+        <text x={x(7) - 8} y={y(53) - 12} textAnchor="end" className="pr-dg-svg-good">{t('Trade closed in profit')}</text>
+      </svg>
+      <figcaption>{t('A balance-based limit only sees the closed result. An equity-based limit also counts the open loss, so the account can be lost before the trade ends.')}</figcaption>
+    </figure>
+  );
+}
+
+function RealCostStack({ t }: { t: T }) {
+  const parts = [
+    { label: t('Challenge fee'), w: 34, cls: 'is-a' },
+    { label: t('Resets'), w: 22, cls: 'is-b' },
+    { label: t('Activation fee'), w: 16, cls: 'is-c' },
+    { label: t('Replacement accounts'), w: 28, cls: 'is-d' },
+  ];
+  return (
+    <figure className="pr-diagram">
+      <div className="pr-dg-title">{t('What a firm really costs you')} <span>{t('Schematic, no real prices')}</span></div>
+      <div className="pr-dg-stack" role="img" aria-label="Real cost = challenge fee + resets + activation fee + replacement accounts, minus any refund, all paid before the first payout.">
+        {parts.map((part, index) => (
+          <span key={part.label} className={`pr-dg-stack-part ${part.cls}`} style={{ flexBasis: `${part.w}%` }}>
+            {index ? <em aria-hidden="true">+</em> : null}
+            {part.label}
+          </span>
+        ))}
+      </div>
+      <div className="pr-dg-stack-result">
+        <span>− {t('Refund, if any')}</span>
+        <strong>= {t('Real cost before your first payout')}</strong>
+      </div>
+      <figcaption>{t('Discount codes come last: they mostly cut the challenge fee.')}</figcaption>
     </figure>
   );
 }

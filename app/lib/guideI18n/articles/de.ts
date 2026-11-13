@@ -128,7 +128,7 @@ const de: GuideArticleTranslations = {
         heading: 'Wer GOAT Funded Trader betreibt',
         paragraphs: [
           'GOAT Funded Trader startete im Mai 2023. Es ist ein Handelsname der Wishes Tower International Limited, einer Gesellschaft in Hongkong, und das simulierte Trading stellt Goat Funded LTD in St. Lucia bereit. Keine Finanzaufsicht überwacht den Dienst. Die Bedingungen beschreiben simulierte Konten, nicht erstattungsfähige Käufe und weiten Ermessensspielraum bei Auszahlungen, was in der Branche üblich ist, aber vor dem Kauf bekannt sein sollte.',
-          'PropRadar bewertet die Firma mit 68/100 und führt sie auf der Beobachtungsliste: Die Marke ist real und zahlt Trader aus, aber ihre Historie ist kurz und ihre Auszahlungsbedingungen lassen viel Interpretationsspielraum. PropRadar hat eine Affiliate-Beziehung zu GOAT Funded Trader; sie ändert weder diesen Score noch diesen Test.',
+          'PropRadar bewertet die Firma mit 64/100 und führt sie auf der Beobachtungsliste: Die Marke ist real und zahlt Trader aus, aber ihre Historie ist kurz und ihre Auszahlungsbedingungen lassen viel Interpretationsspielraum. PropRadar hat eine Affiliate-Beziehung zu GOAT Funded Trader; sie ändert weder diesen Score noch diesen Test.',
         ],
       },
       {

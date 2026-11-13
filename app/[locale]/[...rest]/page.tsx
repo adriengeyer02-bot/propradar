@@ -5,6 +5,7 @@ import GuideArticleBody from '../../components/GuideArticleBody';
 import { frArticles, getFrArticle } from '../../lib/frArticles';
 import { formatUsd, isProvisional, propFirms } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
+import { getMessages } from '../../lib/messages';
 
 type Props = {
   params: Promise<{ locale: string; rest: string[] }>;
@@ -135,7 +136,7 @@ export default async function FrArticlePage({ params }: Props) {
         ) : null}
       </header>
 
-      <GuideArticleBody article={article} label={article.h1} updatedLabel="Mis à jour le" sourcesLabel="Sources" />
+      <GuideArticleBody article={article} label={article.h1} updatedLabel="Mis à jour le" sourcesLabel="Sources" diagramLabels={getMessages('fr').diagram} />
 
       {firms.length ? (
         <section className="guide-article fr-firm-table" aria-labelledby="fr-firms-title">
