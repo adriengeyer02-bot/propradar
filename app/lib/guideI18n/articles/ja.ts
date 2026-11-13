@@ -128,7 +128,7 @@ const ja: GuideArticleTranslations = {
         heading: 'GOAT Funded Traderの運営会社',
         paragraphs: [
           'GOAT Funded Traderは2023年5月に開始しました。香港の会社Wishes Tower International Limitedの商号で、シミュレーション取引はセントルシアのGoat Funded LTDが提供しています。サービスを監督する金融規制当局はありません。規約にはシミュレーション口座、返金不可の購入、出金に関する広い裁量が記載されています。業界ではよくあることですが、購入前に知っておくべき点です。',
-          'PropRadarのスコアは68/100で、監視対象にしています。ブランドは実在しトレーダーに出金していますが、実績は短く、出金条件には解釈の余地が多く残っています。PropRadarはGOAT Funded Traderとアフィリエイト関係にありますが、このスコアやレビューには影響しません。',
+          'PropRadarのスコアは64/100で、監視対象にしています。ブランドは実在しトレーダーに出金していますが、実績は短く、出金条件には解釈の余地が多く残っています。PropRadarはGOAT Funded Traderとアフィリエイト関係にありますが、このスコアやレビューには影響しません。',
         ],
       },
       {

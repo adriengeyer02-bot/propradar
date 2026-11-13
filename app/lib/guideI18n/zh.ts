@@ -303,7 +303,7 @@ const zh: GuideTranslations = {
       '先选好适合你交易方式的模式，再比较优惠码。',
     ],
     faq: [
-      { question: 'GOAT Funded Trader 靠谱吗？', answer: '它是一家会向交易者出金的真实运营商，但不受任何金融监管机构监管，其条款赋予它在出金上很大的自由裁量权。PropRadar 将其列入观察名单，评分 68/100；Trustpilot 因其违反准则暂停显示评分（2026 年 10 月 23 日核查）。' },
+      { question: 'GOAT Funded Trader 靠谱吗？', answer: '它是一家会向交易者出金的真实运营商，但不受任何金融监管机构监管，其条款赋予它在出金上很大的自由裁量权。PropRadar 将其列入观察名单，评分 64/100；Trustpilot 因其违反准则暂停显示评分（2026 年 10 月 23 日核查）。' },
       { question: '为什么 GOAT Funded Trader 的 Trustpilot 评分无法显示？', answer: 'Trustpilot 表示，因违反其准则，该评分无法显示，并已删除该公司的若干虚假评价。资料页仍显示 4,352 条评价，其中 46% 为五星，40% 为一星（2026 年 10 月 23 日核查）。' },
       { question: '什么是 Goat Guard 规则？', answer: '根据第三方对现行规则的分析，在 1-Step 和 2-Step 注资账户上，浮亏达到初始余额的 2% 会触发 Goat Guard：第一次触发将分成降至 50%，第二次触发则判定账户违规。' },
       { question: 'FIRSTGFT 或 BOGO40 值得用吗？', answer: '只有在你选好了注资规则适合自己交易方式的模式之后才值得。折扣无法弥补限制你风格的规则。优惠码经常变化：请在结账时确认当前优惠。' },

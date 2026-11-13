@@ -399,3 +399,158 @@ html body .pr-firm-checks .pr-check-list { display: grid; grid-template-columns:
 .pr-dg-keys i { width: 18px; height: 3px; border-radius: 2px; }
 .pr-dg-key-watch { background: #d97706; }
 .pr-dg-key-risk { background: #dc2626; }
+
+/* ==========================================================================
+   Guide articles: teaching blocks (GuideArticleBody) and new diagrams
+   ========================================================================== */
+
+.guide-article strong { color: var(--text); font-weight: 720; }
+.guide-article h2 { display: flex; align-items: baseline; gap: 12px; }
+.guide-article .ga-num {
+  flex: none;
+  color: var(--accent);
+  font-size: 0.62em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 760;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+.ga-icon { width: 18px; height: 18px; flex: none; }
+
+/* Key points */
+.ga-keypoints {
+  margin: 18px 0 8px;
+  padding: 18px 20px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-radius: var(--pr-radius, 14px);
+  background: var(--accent-wash);
+}
+.ga-keypoints-title { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: var(--accent); font-size: 13px; font-weight: 760; letter-spacing: 0.04em; text-transform: uppercase; }
+html body .guide-article .ga-keypoints ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+html body .guide-article .ga-keypoints li { display: flex; gap: 10px; align-items: flex-start; margin: 0; color: var(--text); font-size: 16px; line-height: 1.5; }
+.ga-keypoints li .ga-icon { margin-top: 3px; color: var(--accent); }
+
+/* Icon lists */
+html body .guide-article ul.ga-list { padding: 0; list-style: none; gap: 10px; }
+html body .guide-article ul.ga-list li { display: flex; gap: 10px; align-items: flex-start; }
+.ga-list li .ga-icon { margin-top: 5px; }
+.ga-list-check li .ga-icon { color: var(--tone-good); }
+.ga-list-flag li .ga-icon { color: var(--tone-risk); }
+
+/* Stat tiles */
+html body .guide-article ul.ga-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 16px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+html body .guide-article .ga-stats li {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  line-height: 1.35;
+}
+.ga-stats strong { color: var(--accent); font-size: 26px; font-variant-numeric: tabular-nums; font-weight: 780; line-height: 1.1; }
+.ga-stats span { color: var(--muted); font-size: 14px; }
+
+/* Steps */
+html body .guide-article ol.ga-steps { display: grid; gap: 0; margin: 16px 0 22px; padding: 0; list-style: none; }
+html body .guide-article .ga-steps li { position: relative; display: flex; gap: 14px; margin: 0; padding: 0 0 16px; }
+.ga-steps li:not(:last-child)::before { content: ''; position: absolute; left: 15px; top: 34px; bottom: 2px; width: 2px; background: var(--line); }
+.ga-step-num {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-ink, #04121a);
+  font-size: 15px;
+  font-weight: 800;
+}
+.ga-step-title { display: block; margin-top: 4px; font-size: 17px; }
+html body .guide-article .ga-steps p { margin: 2px 0 0; font-size: 15.5px; line-height: 1.55; }
+
+/* Comparison table */
+.ga-compare { margin: 16px 0 22px; padding: 4px 0 0; overflow-x: auto; }
+html body .guide-article .ga-compare table { margin: 0; border: 1px solid var(--line); border-radius: 12px; border-collapse: separate; border-spacing: 0; overflow: hidden; background: var(--surface); }
+html body .guide-article .ga-compare thead th { background: var(--surface-2, var(--surface)); color: var(--accent); font-size: 13.5px; }
+html body .guide-article .ga-compare tbody th { color: var(--text); font-size: 14.5px; font-weight: 700; }
+html body .guide-article .ga-compare td { color: var(--text); font-size: 15px; font-variant-numeric: tabular-nums; }
+html body .guide-article .ga-compare tr:last-child > * { border-bottom: 0; }
+.ga-compare figcaption { margin-top: 8px; color: var(--muted); font-size: 13.5px; }
+
+/* Fit / pros and cons */
+.ga-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 22px; }
+.ga-duo-col { padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.ga-duo-col.is-good { border-top: 3px solid var(--tone-good); }
+.ga-duo-col.is-bad { border-top: 3px solid var(--tone-risk); }
+.ga-duo-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 14px; font-weight: 760; }
+.is-good .ga-duo-title { color: var(--tone-good); }
+.is-bad .ga-duo-title { color: var(--tone-risk); }
+html body .guide-article .ga-duo ul { display: grid; gap: 8px; margin: 0; padding-left: 18px; }
+html body .guide-article .ga-duo li { font-size: 15.5px; line-height: 1.5; }
+
+/* Callouts */
+.ga-callout {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0 20px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--tone, var(--accent));
+  border-radius: 0 12px 12px 0;
+  background: var(--tone-wash, var(--accent-wash));
+}
+.ga-callout > .ga-icon { margin-top: 2px; color: var(--tone, var(--accent)); }
+.ga-callout-label { display: block; color: var(--tone, var(--accent)); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
+html body .guide-article .ga-callout p { margin: 2px 0 0; color: var(--text); font-size: 16px; line-height: 1.55; }
+.ga-callout-tip { --tone: var(--accent); --tone-wash: var(--accent-wash); }
+.ga-callout-warning { --tone: var(--tone-watch); --tone-wash: var(--tone-watch-wash); }
+.ga-callout-example { --tone: var(--tone-good); --tone-wash: var(--tone-good-wash); }
+
+@media (max-width: 640px) {
+  .ga-duo { grid-template-columns: 1fr; }
+  .ga-stats strong { font-size: 22px; }
+}
+
+/* New diagrams */
+.pr-diagram svg .pr-dg-svg-risk { fill: var(--tone-risk); font-size: 11.5px; font-weight: 700; }
+.pr-diagram svg .pr-dg-svg-good { fill: var(--tone-good); font-size: 11.5px; font-weight: 700; }
+.pr-diagram svg .pr-dg-svg-strong { fill: var(--text); font-size: 12.5px; font-weight: 760; }
+.pr-diagram svg .pr-dg-fill-good-soft { fill: var(--tone-good-wash); stroke: var(--tone-good); stroke-width: 1; }
+.pr-diagram svg .pr-dg-zone-risk { fill: var(--tone-risk-wash); }
+.pr-diagram svg .pr-dg-dot-risk { fill: var(--tone-risk); }
+.pr-diagram svg .pr-dg-dot-good { fill: var(--tone-good); }
+.pr-diagram svg .pr-dg-floor-eod { fill: none; stroke: var(--tone-watch); stroke-width: 2.5; stroke-dasharray: 7 4; }
+.pr-diagram .pr-dg-key-eod { border-color: var(--tone-watch); border-top-style: dashed; }
+.pr-dg-stack { display: flex; gap: 4px; flex-wrap: wrap; }
+.pr-dg-stack-part {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-grow: 1;
+  min-width: 120px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.pr-dg-stack-part em { color: var(--muted); font-style: normal; font-weight: 800; }
+.pr-dg-stack-part.is-a { background: var(--accent-wash); box-shadow: inset 0 -3px 0 var(--accent); }
+.pr-dg-stack-part.is-b { background: var(--tone-watch-wash); box-shadow: inset 0 -3px 0 var(--tone-watch); }
+.pr-dg-stack-part.is-c { background: var(--tone-watch-wash); box-shadow: inset 0 -3px 0 var(--tone-watch); }
+.pr-dg-stack-part.is-d { background: var(--tone-risk-wash); box-shadow: inset 0 -3px 0 var(--tone-risk); }
+.pr-dg-stack-result { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; margin-top: 12px; color: var(--muted); font-size: 14px; }
+.pr-dg-stack-result strong { color: var(--text); font-size: 15px; }
+html body .guide-article .ga-compare td.is-short { white-space: nowrap; }

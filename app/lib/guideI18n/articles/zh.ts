@@ -128,7 +128,7 @@ const zh: GuideArticleTranslations = {
         heading: '谁在运营 GOAT Funded Trader',
         paragraphs: [
           'GOAT Funded Trader 于 2023 年 5 月上线。它是香港公司 Wishes Tower International Limited 的商号，模拟交易由圣卢西亚的 Goat Funded LTD 提供。该服务不受任何金融监管机构监管。其条款写明了模拟账户、不可退款的购买以及在出金上的广泛自由裁量权：这在行业里很常见，但购买前应当知道。',
-          'PropRadar 给出 68/100 的评分，并将其列入观察名单：这个品牌是真实的，也会向交易者出金，但历史较短，出金条款留有很大的解释空间。PropRadar 与 GOAT Funded Trader 有联盟合作关系，这不会改变本评分和本评测。',
+          'PropRadar 给出 64/100 的评分，并将其列入观察名单：这个品牌是真实的，也会向交易者出金，但历史较短，出金条款留有很大的解释空间。PropRadar 与 GOAT Funded Trader 有联盟合作关系，这不会改变本评分和本评测。',
         ],
       },
       {
