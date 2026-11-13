@@ -1,0 +1,52 @@
+{
+  "fetchedAt": "2026-11-13T09:17:32.132Z",
+  "results": [
+    {
+      "slug": "lvlup-futures",
+      "domain": "lvlupfutures.com",
+      "finalUrl": "https://lvlupfutures.com/",
+      "saved": [
+        {
+          "file": "lvlup-futures__0.png",
+          "url": "https://lvlupfutures.com/apple-icon.png?apple-icon.05gnjygrxvjva.png",
+          "kind": "touch",
+          "declared": 180,
+          "bytes": 5692,
+          "contentType": "image/png"
+        },
+        {
+          "file": "lvlup-futures__1.ico",
+          "url": "https://lvlupfutures.com/favicon.ico?favicon.0rtpobgkdb6zx.ico",
+          "kind": "icon",
+          "declared": 66,
+          "bytes": 10904,
+          "contentType": "image/x-icon"
+        },
+        {
+          "file": "lvlup-futures__2.jpg",
+          "url": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://lvlupfutures.com&size=256",
+          "kind": "gstatic",
+          "declared": 0,
+          "bytes": 2988,
+          "contentType": "image/jpeg"
+        },
+        {
+          "file": "lvlup-futures__3.webp",
+          "url": "https://lvlupfutures.com/assets/mirror/wp-content/uploads/2026/08/lvlup-logo-nav.webp",
+          "kind": "logo-img",
+          "declared": -1,
+          "bytes": 6798,
+          "contentType": "image/webp"
+        },
+        {
+          "file": "lvlup-futures__4.webp",
+          "url": "https://lvlupfutures.com/assets/media/tickblaze-plattform.webp",
+          "kind": "logo-img",
+          "declared": -1,
+          "bytes": 30226,
+          "contentType": "image/webp"
+        }
+      ]
+    }
+  ]
+}
