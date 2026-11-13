@@ -595,7 +595,7 @@ const ja: Messages = {
     "noConsistency": "大きな一貫性ルールは確認されていません",
     "openAffiliate": "提携リンクで開く",
     "openOfficial": "公式ページを開く",
-    "partnerCode": {"eyebrow": "PropRadar パートナーコード", "title": "全チャレンジ {pct}% オフ", "body": "{name} の決済時にコード {code} を入力してください。", "copy": "コードをコピー", "copied": "コピーしました", "cta": "{name} へ", "close": "閉じる", "disclosure": "{name} が PropRadar に提供したコードです。PropRadar に手数料が入る場合がありますが、スコアには影響しません。", "compare": "決済画面でより大きな公開割引が表示される場合は、最も安くなる方を使ってください。"},
+    "partnerOffer": {"eyebrow": "PropRadar パートナー特典", "titleAll": "全チャレンジ {pct}% オフ", "titleFirst": "初回注文 {pct}% オフ", "titleNew": "新規顧客は最大 {pct}% オフ", "titleCode": "パートナーコード：{code}", "titleLink": "{name} でチャレンジを始める", "bodyCode": "{name} の決済時にコード {code} を入力してください。", "bodyCodeNoPct": "決済時に入力：支払い前に小計に割引が表示されることを確認してください。", "bodyLink": "PropRadar のリンク経由で購入すると、独立した比較サイトの支援になります。", "factFrom": "{price} から", "factSplit": "最大 {split}% の利益配分", "copy": "コードをコピー", "copied": "コピーしました", "ctaDeal": "{name} で特典を使う", "ctaOpen": "{name} を開く", "close": "閉じる", "discAffiliate": "アフィリエイトリンク：PropRadar に手数料が入る場合がありますが、スコアには影響しません。", "discFirmCode": "{name} が PropRadar に提供したコードです。", "discSiteCode": "{date} に {name} の公式サイトに表示されていたコードです。", "compare": "決済画面でより大きな公開割引が表示される場合は、最も安くなる方を使ってください。"},
     "noProductTitle": "推奨できる提供中の商品はありません",
     "noProductText": "この会社は過去のリスクシグナルとしてレーダーに残していますが、購入の選択肢ではありません。",
     "ctxAria": "{name} の比較",

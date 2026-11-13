@@ -7,6 +7,7 @@ import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
+import { firmLogoFor } from '../../../lib/firmLogos';
 import ChallengePath from '../../../components/ui/ChallengePath';
 import EntityChain from '../../../components/ui/EntityChain';
 import ReliabilityRadar from '../../../components/ui/ReliabilityRadar';
@@ -516,6 +517,43 @@ export default async function FirmPage({ params }: Props) {
   const isGoatFundedTrader = firm.slug === 'goat-funded-trader';
   /** Blue Guardian code read on its own site (see promoResearch.ts). */
   const bgOffer = { code: 'NOV30', pct: '30%', date: formatDateLong(locale, '2026-11-07') };
+  const partnerView = (() => {
+    const offer = firm.partnerOffer;
+    if (!offer) return undefined;
+    const po = f.partnerOffer;
+    const pct = offer.percent;
+    const title = pct
+      ? fmt(offer.scope === 'first' ? po.titleFirst : offer.scope === 'new' ? po.titleNew : po.titleAll, { pct })
+      : offer.code
+        ? fmt(po.titleCode, { code: offer.code })
+        : fmt(po.titleLink, { name: firm.name });
+    const body = offer.code ? (pct ? fmt(po.bodyCode, { code: offer.code, name: firm.name }) : po.bodyCodeNoPct) : po.bodyLink;
+    const facts = [
+      firm.priceFrom > 0 ? fmt(po.factFrom, { price: formatUsd(firm.priceFrom) }) : '',
+      firm.profitSplit > 0 ? fmt(po.factSplit, { split: firm.profitSplit }) : '',
+    ].filter(Boolean);
+    const fine = [
+      offer.code && offer.codeSource === 'firm' ? fmt(po.discFirmCode, { name: firm.name }) : '',
+      offer.code && offer.codeSource === 'site' && offer.checkedOn ? fmt(po.discSiteCode, { name: firm.name, date: formatDateLong(locale, offer.checkedOn) }) : '',
+      offer.href ? po.discAffiliate : '',
+      offer.code ? po.compare : '',
+    ].filter(Boolean).join(' ');
+    const officialLink = firm.products.find((product) => product.linkToStart)?.linkToStart ?? `https://${firm.logoDomain}/`;
+    return {
+      eyebrow: po.eyebrow,
+      title,
+      body,
+      code: offer.code,
+      facts,
+      cta: fmt(pct ? po.ctaDeal : po.ctaOpen, { name: firm.name }),
+      href: offer.href ?? officialLink,
+      sponsored: Boolean(offer.href),
+      fine,
+      copy: po.copy,
+      copied: po.copied,
+      close: po.close,
+    };
+  })();
   const gaps = firmGaps(firm);
   const closure = firm.status === 'Fermée' ? getClosureRecord(firm.slug) : undefined;
   const searchProfile = getFirmSearchProfile(firm.slug);
@@ -1108,22 +1146,13 @@ export default async function FirmPage({ params }: Props) {
             </ul>
           </div>
         </section>
-        {firm.partnerCode && firm.status !== 'Fermée' ? (
+        {partnerView ? (
           <PartnerCodeOffer
             slug={firm.slug}
-            code={firm.partnerCode.code}
-            href={firm.products.find((p) => p.linkToStart)?.linkToStart ?? `https://${firm.logoDomain}/`}
-            labels={{
-              eyebrow: f.partnerCode.eyebrow,
-              title: fmt(f.partnerCode.title, { pct: firm.partnerCode.percent }),
-              body: fmt(f.partnerCode.body, { code: firm.partnerCode.code, name: firm.name }),
-              copy: f.partnerCode.copy,
-              copied: f.partnerCode.copied,
-              cta: fmt(f.partnerCode.cta, { name: firm.name }),
-              close: f.partnerCode.close,
-              disclosure: fmt(f.partnerCode.disclosure, { name: firm.name }),
-              compare: f.partnerCode.compare,
-            }}
+            name={firm.name}
+            logo={firmLogoFor(firm.logoDomain)?.src}
+            view={partnerView}
+            showCard={!isFtmo && !isThe5ers && !isBlueGuardian && !isGoatFundedTrader}
           />
         ) : null}
         {firm.commercialNote ? (
