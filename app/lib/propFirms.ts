@@ -138,6 +138,8 @@ export type PropFirm = {
   sources: SourceLink[];
   commercialRelationship: 'Aucune' | 'Affiliation transparente';
   commercialNote?: string;
+  /** Discount code issued to PropRadar by the firm (no tracking link). Shown in a pop-up and a card on the firm page. */
+  partnerCode?: { code: string; percent: number; issuedOn: string };
   auditStatus: 'Vérifié multi-source' | 'Partiellement vérifié' | 'À auditer';
   auditSummary: string;
   auditSourcesChecked: string[];
@@ -607,6 +609,8 @@ type UniverseFirmInput = {
   affiliateUrl?: string;
   commercialRelationship?: PropFirm['commercialRelationship'];
   commercialNote?: string;
+  /** Discount code issued to PropRadar by the firm (no tracking link). Shown in a pop-up and a card on the firm page. */
+  partnerCode?: { code: string; percent: number; issuedOn: string };
 };
 
 function domainFromWebsite(website: string) {
@@ -722,6 +726,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     sources: [{ label: sourceLabel, url: sourceUrl }, ...secondarySources],
     commercialRelationship: data.commercialRelationship ?? 'Aucune',
     commercialNote: data.commercialNote,
+    partnerCode: data.partnerCode,
     auditStatus,
     auditSummary,
     auditSourcesChecked,
@@ -11558,6 +11563,7 @@ const universePropFirms: PropFirm[] = [
     name: 'OneFunded',
     website: 'https://onefunded.com/',
     commercialRelationship: 'Affiliation transparente',
+    partnerCode: { code: ONEFUNDED_PROMO_CODE, percent: 25, issuedOn: '2026-11-12' },
     commercialNote:
       'PropRadar may receive a commission when the partner code PROPRADARTECH is used. OneFunded says the code gives 25% off all challenges. On 13 November 2026 its own site also showed the public codes NOV20 (20%) and AWARD (30%): compare them at checkout. Trustpilot withholds OneFunded\'s rating for a guideline breach, so its score stays capped at 64. The relationship has no impact on the score.',
     status: 'À surveiller',

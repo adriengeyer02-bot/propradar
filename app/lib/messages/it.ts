@@ -507,6 +507,7 @@ const it: Messages = {
     noConsistency: 'Nessuna regola di consistenza rilevante segnalata',
     openAffiliate: 'Apri tramite link di affiliazione',
     openOfficial: 'Apri l\'offerta ufficiale',
+    partnerCode: {"eyebrow": "Codice partner PropRadar", "title": "-{pct}% su tutte le challenge", "body": "Usa il codice {code} al pagamento su {name}.", "copy": "Copia il codice", "copied": "Copiato", "cta": "Vai su {name}", "close": "Chiudi", "disclosure": "Codice fornito a PropRadar da {name}: PropRadar può ricevere una commissione. Non cambia il punteggio.", "compare": "Se al pagamento compare uno sconto pubblico maggiore, scegli quello con il prezzo più basso."},
     noProductTitle: 'Nessun prodotto attivo consigliato',
     noProductText: 'Questa firm resta sul radar come segnale di rischio storico, ma non va considerata un\'opzione d\'acquisto.',
     ctxAria: 'Come si posiziona {name}',

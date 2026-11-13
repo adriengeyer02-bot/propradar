@@ -595,6 +595,7 @@ const ja: Messages = {
     "noConsistency": "大きな一貫性ルールは確認されていません",
     "openAffiliate": "提携リンクで開く",
     "openOfficial": "公式ページを開く",
+    "partnerCode": {"eyebrow": "PropRadar パートナーコード", "title": "全チャレンジ {pct}% オフ", "body": "{name} の決済時にコード {code} を入力してください。", "copy": "コードをコピー", "copied": "コピーしました", "cta": "{name} へ", "close": "閉じる", "disclosure": "{name} が PropRadar に提供したコードです。PropRadar に手数料が入る場合がありますが、スコアには影響しません。", "compare": "決済画面でより大きな公開割引が表示される場合は、最も安くなる方を使ってください。"},
     "noProductTitle": "推奨できる提供中の商品はありません",
     "noProductText": "この会社は過去のリスクシグナルとしてレーダーに残していますが、購入の選択肢ではありません。",
     "ctxAria": "{name} の比較",
