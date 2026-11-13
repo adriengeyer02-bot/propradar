@@ -303,7 +303,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const themeObserver = new MutationObserver(refreshPalette);
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-    // Logos, loaded once; a firm without a logo gets a monogram.
+    // Logos, loaded once; a firm without a logo is a small dot (a monogram when selected).
     const images = new Map<string, HTMLImageElement>();
     for (const { dot } of points.current) {
       if (!dot.logo) continue;
@@ -562,7 +562,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           c.fill();
           continue;
         }
-        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55);
+        // Firms without a logo are drawn as small plain dots, so the logos lead.
+        const plain = !dot.logo && !isSel;
+        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55) * (plain ? 0.42 : 1);
         // Updated since the last visit: an expanding ring.
         if (fresh.has(dot.slug) && !isDim) {
           const phase = reduce ? 0.35 : ((now / 1600 + hash(dot.slug)) % 1);
@@ -574,6 +576,20 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           c.stroke();
         }
         c.globalAlpha = isDim ? 0.16 : 0.55 + 0.45 * p.z;
+        if (plain) {
+          c.beginPath();
+          c.arc(p.x, p.y, r, 0, Math.PI * 2);
+          c.fillStyle = tone;
+          c.fill();
+          if (dot.withheld) {
+            c.lineWidth = 1.2;
+            c.strokeStyle = palette.surface;
+            c.stroke();
+          }
+          c.globalAlpha = 1;
+          if (!isDim && p.z > 0.15) hits.push({ dot, x: p.x, y: p.y, r: Math.max(r, 9) });
+          continue;
+        }
         // Logo tile.
         c.save();
         c.beginPath();
