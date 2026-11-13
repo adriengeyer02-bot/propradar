@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 115 logos, fetched 2026-11-12.
+// 116 logos, fetched 2026-11-13.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "alpha-futures.com": { file: "alpha-futures.png", source: "https://alpha-futures.com/images/webclip.png" },
   "alphacapitalgroup.uk": { file: "alpha-capital-group.png", source: "https://alphacapitalgroup.uk/images/webclip.png" },
@@ -28,6 +28,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "blusky.pro": { file: "blusky-trading.png", source: "https://blusky.pro/wp-content/uploads/2025/08/cropped-favicon-192x192.png" },
   "breakoutprop.com": { file: "breakout-prop.png", source: "favicon service for breakoutprop.com" },
   "brightfunded.com": { file: "brightfunded.png", source: "https://framerusercontent.com/images/DiuykdZpUOfvmYDUbbnXnX1p78.png" },
+  "lvlupfutures.com": { file: "lvlup-futures.png", source: "https://lvlupfutures.com/apple-icon.png (180 px, read 2026-11-13)" },
   "bemfunding.com": { file: "bem-funding.png", source: "https://bemfunding.com/ (symbol of the inline header logo, read 2026-11-12)" },
   "fundedtradermarkets.com": { file: "funded-trader-markets.png", source: "https://fundedtradermarkets.com/ (symbol of the inline header logo, read 2026-11-12)" },
   "monetafunded.com": { file: "moneta-funded.png", source: "https://www.monetafunded.com/wp-content/themes/Moneta/images/logo.svg (symbol, read 2026-11-12)" },
