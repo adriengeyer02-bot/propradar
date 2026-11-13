@@ -138,8 +138,12 @@ export type PropFirm = {
   sources: SourceLink[];
   commercialRelationship: 'Aucune' | 'Affiliation transparente';
   commercialNote?: string;
-  /** Discount code issued to PropRadar by the firm (no tracking link). Shown in a pop-up and a card on the firm page. */
-  partnerCode?: { code: string; percent: number; issuedOn: string };
+  /**
+   * Offer shown in the partner pop-up of an affiliate's firm page: a tracking
+   * link, a code, or both. A percentage is set only when it was read on the
+   * firm's site or given by the firm (source + date), never estimated.
+   */
+  partnerOffer?: PartnerOffer;
   auditStatus: 'Vérifié multi-source' | 'Partiellement vérifié' | 'À auditer';
   auditSummary: string;
   auditSourcesChecked: string[];
@@ -191,6 +195,18 @@ export function linkRel(url: string) {
 
 export const PROPRADAR_PROMO_CODE = 'PROPRADAR';
 export const THE5ERS_PROMO_CODE = '1EIJ6PO';
+
+export type PartnerOffer = {
+  /** Affiliate (tracking) link; when absent the pop-up links to the official site. */
+  href?: string;
+  code?: string;
+  percent?: number;
+  /** all challenges, first order, new customers (up to), or eligible challenges only. */
+  scope?: 'all' | 'first' | 'new' | 'selected';
+  /** 'site': read on the firm's own site; 'firm': given to PropRadar by the firm. */
+  codeSource?: 'site' | 'firm';
+  checkedOn?: string;
+};
 
 function defaultRegulatoryAudit(data: {
   name: string;
@@ -609,8 +625,12 @@ type UniverseFirmInput = {
   affiliateUrl?: string;
   commercialRelationship?: PropFirm['commercialRelationship'];
   commercialNote?: string;
-  /** Discount code issued to PropRadar by the firm (no tracking link). Shown in a pop-up and a card on the firm page. */
-  partnerCode?: { code: string; percent: number; issuedOn: string };
+  /**
+   * Offer shown in the partner pop-up of an affiliate's firm page: a tracking
+   * link, a code, or both. A percentage is set only when it was read on the
+   * firm's site or given by the firm (source + date), never estimated.
+   */
+  partnerOffer?: PartnerOffer;
 };
 
 function domainFromWebsite(website: string) {
@@ -726,7 +746,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
     sources: [{ label: sourceLabel, url: sourceUrl }, ...secondarySources],
     commercialRelationship: data.commercialRelationship ?? 'Aucune',
     commercialNote: data.commercialNote,
-    partnerCode: data.partnerCode,
+    partnerOffer: data.partnerOffer,
     auditStatus,
     auditSummary,
     auditSourcesChecked,
@@ -11563,7 +11583,6 @@ const universePropFirms: PropFirm[] = [
     name: 'OneFunded',
     website: 'https://onefunded.com/',
     commercialRelationship: 'Affiliation transparente',
-    partnerCode: { code: ONEFUNDED_PROMO_CODE, percent: 25, issuedOn: '2026-11-12' },
     commercialNote:
       'PropRadar may receive a commission when the partner code PROPRADARTECH is used. OneFunded says the code gives 25% off all challenges. On 13 November 2026 its own site also showed the public codes NOV20 (20%) and AWARD (30%): compare them at checkout. Trustpilot withholds OneFunded\'s rating for a guideline breach, so its score stays capped at 64. The relationship has no impact on the score.',
     status: 'À surveiller',
@@ -12844,7 +12863,28 @@ function applyTrustpilotCapRule(firm: PropFirm): PropFirm {
   return { ...firm, score: TRUSTPILOT_WITHHELD_CAP, scoreCap: { before: firm.score, cap: TRUSTPILOT_WITHHELD_CAP, reason: 'trustpilot-withheld' } };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule);
+/**
+ * Partner pop-up offers, one place for every affiliate (requested by Geyer,
+ * 2026-11-13). Codes and percentages come from the promo research
+ * (promoResearch.ts) or from the firm itself, with the date they were read.
+ * Update them when the code changes on the firm's site.
+ */
+export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
+  ftmo: { href: FTMO_AFFILIATE_URL },
+  the5ers: { href: THE5ERS_AFFILIATE_URL, code: THE5ERS_PROMO_CODE, codeSource: 'firm' },
+  funderpro: { href: FUNDERPRO_AFFILIATE_URL, code: PROPRADAR_PROMO_CODE, codeSource: 'firm' },
+  'goat-funded-trader': { href: GOAT_FUNDED_TRADER_AFFILIATE_URL, code: 'FIRSTGFT', percent: 50, scope: 'new', codeSource: 'site', checkedOn: '2026-11-09' },
+  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'NOV30', percent: 30, scope: 'all', codeSource: 'site', checkedOn: '2026-11-09' },
+  'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
+  onefunded: { code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-12' },
+};
+
+function applyPartnerOffer(firm: PropFirm): PropFirm {
+  const offer = PARTNER_OFFERS[firm.slug];
+  return offer && firm.status !== 'Fermée' ? { ...firm, partnerOffer: offer } : firm;
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyPartnerOffer);
 
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');

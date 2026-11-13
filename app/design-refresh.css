@@ -652,3 +652,24 @@ html body .guide-article .ga-compare td.is-short { white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) {
   .pr-pcode-overlay, .pr-pcode-dialog { animation: none; }
 }
+.pr-pcode-head { display: flex; align-items: center; gap: 12px; }
+.pr-pcode-logo { width: 44px; height: 44px; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 6px 18px rgba(0, 0, 0, 0.3); }
+.pr-pcode-eyebrow small { display: block; margin-top: 2px; color: var(--text); font-size: 15px; font-weight: 760; letter-spacing: 0; text-transform: none; }
+.pr-pcode-modal .pr-pcode-head { flex-direction: column; gap: 10px; }
+.pr-pcode-modal .pr-pcode-logo { width: 60px; height: 60px; border-radius: 16px; }
+.pr-pcode-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 0; padding: 0; list-style: none; }
+.pr-pcode-modal .pr-pcode-facts { justify-content: center; }
+.pr-pcode-facts li {
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  color: var(--soft);
+  font-size: 13px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.pr-pcode-cta { display: inline-flex; align-items: center; gap: 8px; padding-inline: 22px; font-size: 15.5px; box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 35%, transparent); }
+.pr-pcode-modal .pr-pcode-cta { width: 100%; justify-content: center; min-height: 50px; }
+.pr-pcode-cta svg { transition: transform 0.18s ease; }
+.pr-pcode-cta:hover svg { transform: translateX(3px); }

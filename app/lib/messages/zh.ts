@@ -507,7 +507,7 @@ const zh: Messages = {
     noConsistency: '未发现主要的一致性规则',
     openAffiliate: '通过推广链接打开',
     openOfficial: '打开官方页面',
-    partnerCode: {"eyebrow": "PropRadar 合作优惠码", "title": "所有挑战 {pct}% 折扣", "body": "在 {name} 结账时使用优惠码 {code}。", "copy": "复制优惠码", "copied": "已复制", "cta": "前往 {name}", "close": "关闭", "disclosure": "此优惠码由 {name} 提供给 PropRadar：PropRadar 可能获得佣金，但不影响评分。", "compare": "如果结账页显示更大的公开折扣，请选择价格最低的那个。"},
+    partnerOffer: {"eyebrow": "PropRadar 合作优惠", "titleAll": "所有挑战 {pct}% 折扣", "titleFirst": "首单 {pct}% 折扣", "titleNew": "新客户最高 {pct}% 折扣", "titleCode": "您的合作优惠码：{code}", "titleLink": "在 {name} 开始您的挑战", "bodyCode": "在 {name} 结账时输入优惠码 {code}。", "bodyCodeNoPct": "结账时输入：付款前小计中应显示折扣。", "bodyLink": "通过 PropRadar 链接购买可支持独立的比较网站。", "factFrom": "起价 {price}", "factSplit": "最高 {split}% 分成", "copy": "复制优惠码", "copied": "已复制", "ctaDeal": "在 {name} 领取优惠", "ctaOpen": "打开 {name}", "close": "关闭", "discAffiliate": "联盟链接：PropRadar 可能获得佣金，不影响评分。", "discFirmCode": "此优惠码由 {name} 提供给 PropRadar。", "discSiteCode": "该优惠码于 {date} 显示在 {name} 官网。", "compare": "如果结账页显示更大的公开折扣，请选择价格最低的那个。"},
     noProductTitle: '无推荐的在售产品',
     noProductText: '该公司作为历史风险信号保留在雷达上，但不应作为购买选项。',
     ctxAria: '{name} 的对比情况',
