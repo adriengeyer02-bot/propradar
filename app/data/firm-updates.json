@@ -950,9 +950,17 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-13",
+          "summary": "Affiliate link added (disclosed on the page). The official page reached through it showed the public code E8, 15% off the first order, on 13 November 2026. Score unchanged.",
+          "source": "https://e8markets.com/d/A4DE0965",
+          "fields": [
+            "commercialRelationship"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-13",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
       ]
@@ -2944,7 +2952,7 @@
       ]
     },
     "onefunded": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-13",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2952,6 +2960,14 @@
           "source": "https://www.trustpilot.com/review/onefunded.com",
           "fields": [
             "incidents"
+          ]
+        },
+        {
+          "date": "2026-11-13",
+          "summary": "Partner code PROPRADARTECH disclosed (25% off all challenges, according to OneFunded). The official site also showed NOV20 (20%) and AWARD (30%) on 13 November 2026. Trustpilot still showed the rating as unavailable due to a breach of its guidelines (149 reviews), so the 64 cap still applies. Score unchanged.",
+          "source": "https://onefunded.com/",
+          "fields": [
+            "commercialRelationship"
           ]
         }
       ],
@@ -6145,6 +6161,35 @@
       "set": {
         "listedDomainWarning": "The listed domain nationstrading.com was offered for sale on GoDaddy when PropRadar checked it on 2026-10-31. PropRadar found no other official site for Nations Trading, so the domain is not linked."
       }
+    },
+    "lvlup-futures": {
+      "reviewedAt": "2026-11-13",
+      "set": {
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 13,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lvlupfutures.com"
+      },
+      "changelog": [
+        {
+          "date": "2026-11-13",
+          "summary": "Firm added to PropRadar. Programs, prices (list prices before the NOV26 coupon), EOD trailing drawdown, 40% consistency rule, 14-day payout cycle and the legal footer read on the official site. Score 56, watchlist: named German brand entity and clear rules, but a brand registered in January 2026, evaluations sold by a separate company (Prop Account, LLC) and no independent payout evidence yet. Lvlup Futures contacted PropRadar about an affiliate program; there is no active affiliation and this has no effect on the score.",
+          "source": "https://lvlupfutures.com/",
+          "fields": [
+            "status",
+            "score",
+            "products",
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-11-13",
+          "summary": "Trustpilot: 4.2 from 13 reviews, no notice.",
+          "source": "https://www.trustpilot.com/review/lvlupfutures.com",
+          "fields": [
+            "trustpilotRating"
+          ]
+        }
+      ]
     }
   }
 }
