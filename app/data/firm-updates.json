@@ -5983,7 +5983,7 @@
       ]
     },
     "upcomers": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -6010,6 +6010,14 @@
           "source": "https://www.trustpilot.com/review/upcomers.com",
           "fields": [
             "incidents"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Affiliate link and partner code kkscxhro disclosed (no percentage stated by Upcomers). On the official site the same day, \"up to 93% off\" showed with or without the code; with the code applied (\"KKSCXHRO appliqué\") the $100K challenge showed $109 instead of $1,090. List prices not recorded (temporary discount). Score unchanged; Trustpilot rating still withheld.",
+          "source": "https://upcomers.com/fr",
+          "fields": [
+            "commercialRelationship"
           ]
         }
       ],
