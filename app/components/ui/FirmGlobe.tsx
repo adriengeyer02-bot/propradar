@@ -57,6 +57,13 @@ const NAVY: Rgb = [12, 24, 38];
 const NAVY_LIGHT: Rgb = [30, 56, 86];
 const RIM_CYAN: Rgb = [54, 214, 231];
 const BAND_TINT_DARK = 0.09;
+// Radar sweep around the globe, the intro and the lifted logos.
+const SWEEP_PERIOD = 9000; // ms per turn
+const SWEEP_WIDTH = 16; // degrees of glowing trail behind the beam
+const INTRO_DELAY = 300; // ms before the first logo lands
+const INTRO_STEP = 9; // ms between two logos (best scores first)
+const INTRO_FADE = 380; // ms for one logo to land
+const LIFT = 0.07; // logo height above the surface, share of the radius
 const MIN_GAP = 5.4; // degrees between two logo centres after decluttering
 
 type Slice = { key: string; count: number; start: number; end: number; shade: number };
@@ -213,6 +220,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [hover, setHover] = useState<{ dot: RadarDot; x: number; y: number } | null>(null);
+  const hoverSlug = useRef<string | null>(null);
 
   // Mutable view state shared by the render loop and the handlers.
   const view = useRef({ yaw: -0.4, pitch: 0.24, zoom: 1, zoomTarget: 1, vyaw: 0, vpitch: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
@@ -286,6 +294,13 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Intro: the globe arrives from a distance, then the logos land, best scores first.
+    const born = performance.now();
+    const rankOf = new Map([...points.current].sort((a, b) => b.dot.score - a.dot.score).map((pt, index) => [pt.dot.slug, index]));
+    if (!reduce) {
+      view.current.zoom = 0.62;
+      view.current.zoomTarget = Math.max(1, view.current.zoomTarget);
+    }
     // Open on the smaller markets, so the market walls and names show at once;
     // the spin then brings the large Forex & CFD slice round.
     const sl0 = slices.current;
@@ -563,14 +578,32 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         pill(String(score), at.x + ux * 26 * unit, at.y + uy * 26 * unit, color);
       }
 
+      // Radar sweep: a lit meridian turning around the globe with a fading trail.
+      const sweepLon = reduce ? null : ((((now - born) / SWEEP_PERIOD) * 360) % 360) - 180;
+      if (sweepLon !== null) {
+        c.save();
+        c.beginPath();
+        c.arc(cx, cy, radius, 0, Math.PI * 2);
+        c.clip();
+        for (let k = SWEEP_WIDTH; k >= 0; k -= 1) {
+          c.globalAlpha = (palette.dark ? 0.22 : 0.16) * Math.pow(1 - k / SWEEP_WIDTH, 2) + (k === 0 ? 0.5 : 0);
+          c.lineWidth = (k === 0 ? 2.2 : 0.5 + (radius * 0.0175 * Math.PI) / 2) * unit;
+          c.lineCap = 'round';
+          c.strokeStyle = palette.accent;
+          strokeCurve((t) => toWorld(-88 + t * 176, sweepLon - k), 64, cx, cy, radius);
+        }
+        c.restore();
+        c.globalAlpha = 1;
+      }
+
       // Firms, back to front.
       const { selected: sel, dimmed: dim, highlight: fresh } = props.current;
       const placed = points.current
-        .map(({ dot, world }) => ({ dot, p: project(world, cx, cy, radius) }))
+        .map(({ dot, world }) => ({ dot, world, p: project(world, cx, cy, radius) }))
         .sort((a, b) => a.p.z - b.p.z);
       hits = [];
       let callout: { dot: RadarDot; x: number; y: number; r: number } | null = null;
-      for (const { dot, p } of placed) {
+      for (const { dot, world, p } of placed) {
         const isSel = dot.slug === sel;
         const isDim = dim.has(dot.slug) && !isSel;
         const tone = dot.tone === 'good' ? palette.good : dot.tone === 'watch' ? palette.watch : palette.none;
@@ -585,7 +618,49 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         }
         // Firms without a logo are drawn as small plain dots, so the logos lead.
         const plain = !dot.logo && !isSel;
-        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55) * (plain ? 0.42 : 1);
+        // Intro: each firm lands in turn (best scores first).
+        const landing = reduce ? 1 : Math.max(0, Math.min(1, (now - born - INTRO_DELAY - (rankOf.get(dot.slug) ?? 0) * INTRO_STEP) / INTRO_FADE));
+        if (landing <= 0) continue;
+        const pop = landing < 1 ? 1 + 0.35 * Math.sin(landing * Math.PI) - 0.35 * (1 - landing) : 1;
+        // Sweep glow: brighter as the beam passes over the firm.
+        let glow = 0;
+        if (sweepLon !== null && world) {
+          const lon = Math.atan2(world.x, world.z) / DEG;
+          const behind = ((sweepLon - lon) % 360 + 360) % 360;
+          glow = behind < 40 ? Math.pow(1 - behind / 40, 2) : 0;
+        }
+        const hovered = hoverSlug.current === dot.slug;
+        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55) * (plain ? 0.42 : 1) * pop * (hovered && !plain ? 1.25 : 1);
+        // Lifted logos: a short stem from the surface, the tile at its tip, a soft shadow at its base.
+        if (!plain && world && p.z > 0) {
+          const lift = LIFT * (hovered || isSel ? 1.8 : 1) * landing;
+          const tip = project({ x: world.x * (1 + lift), y: world.y * (1 + lift), z: world.z * (1 + lift) }, cx, cy, radius);
+          // Shadow cast on the surface, below and slightly right of the tile (light from top left).
+          const drop = (0.45 + 0.5 * lift / LIFT) * r;
+          c.globalAlpha = (isDim ? 0.08 : palette.dark ? 0.5 : 0.28) * p.z;
+          c.fillStyle = '#000';
+          c.beginPath();
+          c.ellipse(tip.x + drop * 0.35, tip.y + drop, r * 0.9, r * 0.38, 0, 0, Math.PI * 2);
+          c.fill();
+          c.globalAlpha = (isDim ? 0.1 : 0.7) * p.z;
+          c.strokeStyle = glow > 0.05 ? palette.accent : tone;
+          c.lineWidth = 1.4 * unit;
+          c.beginPath();
+          c.moveTo(p.x, p.y);
+          c.lineTo(tip.x, tip.y);
+          c.stroke();
+          c.globalAlpha = 1;
+          p.x = tip.x;
+          p.y = tip.y;
+        }
+        if (glow > 0.02 && !isDim) {
+          c.beginPath();
+          c.arc(p.x, p.y, r + 5 * unit, 0, Math.PI * 2);
+          c.fillStyle = palette.accent;
+          c.globalAlpha = 0.28 * glow * p.z;
+          c.fill();
+          c.globalAlpha = 1;
+        }
         // Updated since the last visit: an expanding ring.
         if (fresh.has(dot.slug) && !isDim) {
           const phase = reduce ? 0.35 : ((now / 1600 + hash(dot.slug)) % 1);
@@ -825,7 +900,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         moving = true;
       }
       // Keep the twinkle and the "updated since your visit" pulses alive.
-      if (!reduce && (props.current.highlight.size > 0 || palette.dark)) moving = true;
+      if (!reduce) moving = true;
       draw();
       if (moving && visible) frame = requestAnimationFrame(tick);
       else {
@@ -894,6 +969,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       if (event.pointerType !== 'mouse') return;
       const hit = pick(p.x, p.y);
       v.hovering = Boolean(hit);
+      hoverSlug.current = hit ? hit.dot.slug : null;
       canvas.style.cursor = hit ? 'pointer' : 'grab';
       setHover(hit ? { dot: hit.dot, x: hit.x, y: hit.y - hit.r } : null);
       if (!hit) kick();
@@ -912,6 +988,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     };
     const onLeave = () => {
       view.current.hovering = false;
+      hoverSlug.current = null;
       setHover(null);
       kick();
     };
