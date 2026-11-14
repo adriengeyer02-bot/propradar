@@ -50,6 +50,11 @@ const MAX_ZOOM = 3.2;
 // 100 and 0 tags at the axis tips stay inside the canvas.
 const GLOBE_R = 0.39;
 const AXIS_TIP = 1.13;
+// Dark-theme sphere colours (the hero globe look): navy sea, lit navy, cyan rim.
+const NAVY: Rgb = [12, 24, 38];
+const NAVY_LIGHT: Rgb = [30, 56, 86];
+const RIM_CYAN: Rgb = [54, 214, 231];
+const BAND_TINT_DARK = 0.09;
 const MIN_GAP = 5.4; // degrees between two logo centres after decluttering
 
 type Slice = { key: string; count: number; start: number; end: number; shade: number };
@@ -375,6 +380,19 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           const shade = shadeByDeg[deg] ? darkShade : 1;
           const lit = ((palette.dark ? 0.5 : 0.78) + (palette.dark ? 0.55 : 0.3) * lambert) * shade;
           const rim = Math.pow(1 - z, 3) * (palette.dark ? 0.55 : 0.25);
+          if (palette.dark) {
+            // Deep navy sphere lit from the top left, a faint band tint and a cyan rim glow.
+            const glow = Math.pow(lambert, 1.6);
+            const deep = 0.6 + 0.4 * shade;
+            const rimGlow = Math.pow(1 - z, 3.2) * 0.38;
+            for (let c = 0; c < 3; c++) {
+              const sea = NAVY[c] + (NAVY_LIGHT[c] - NAVY[c]) * glow;
+              const mixed = sea * (1 - BAND_TINT_DARK) + band[c] * BAND_TINT_DARK;
+              data[k + c] = Math.min(255, mixed * deep * (0.75 + 0.35 * lambert) + RIM_CYAN[c] * rimGlow);
+            }
+            data[k + 3] = 255;
+            continue;
+          }
           for (let c = 0; c < 3; c++) {
             const mixed = rgb.base[c] * (1 - tint) + band[c] * tint;
             data[k + c] = Math.min(255, mixed * lit + band[c] * rim);
@@ -435,8 +453,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       }
 
       // Halo behind the sphere.
-      const halo = c.createRadialGradient(cx, cy, radius * 0.92, cx, cy, radius * 1.15);
-      halo.addColorStop(0, palette.dark ? 'rgba(54, 214, 231, 0.22)' : 'rgba(11, 114, 133, 0.14)');
+      const halo = c.createRadialGradient(cx, cy, radius * 0.9, cx, cy, radius * 1.3);
+      halo.addColorStop(0, palette.dark ? 'rgba(54, 214, 231, 0.30)' : 'rgba(11, 114, 133, 0.14)');
+      halo.addColorStop(0.35, palette.dark ? 'rgba(54, 214, 231, 0.14)' : 'rgba(11, 114, 133, 0.06)');
       halo.addColorStop(1, 'rgba(0, 0, 0, 0)');
       c.fillStyle = halo;
       c.fillRect(0, 0, size, size);

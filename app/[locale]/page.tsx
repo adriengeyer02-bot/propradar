@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
-import PropRadarLive from '../components/ui/PropRadarLive';
+import HomeGlobe from '../components/ui/HomeGlobe';
 import { buildRadar } from '../lib/radar';
 import { recentFirmUpdates } from '../lib/firmUpdates';
 import RiskPip from '../components/ui/RiskPip';
@@ -143,13 +143,9 @@ export default async function HomePage({ params }: Props) {
           </section>
         </div>
 
-        <div className="home-preview pr-home-radar" aria-label={h.radarAria}>
-          <div className="pr-home-radar-head">
-            <h2>{h.radarToday}</h2>
-            <span>{fmt(h.firms, { count: propFirms.length })}</span>
-          </div>
-          <PropRadarLive data={homeRadar} variant="compact" locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} />
-          <Link href={L('/prop-firm-radar')} className="pr-link pr-home-radar-more">{h.openRadar} <span aria-hidden="true">→</span></Link>
+        <div className="home-preview pr-home-radar pr-home-globe" aria-label={h.radarAria}>
+          <h2 className="sr-only">{h.radarToday}</h2>
+          <HomeGlobe data={homeRadar} locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} tableLabels={t.table} radarCta={h.openRadar} />
         </div>
       </section>
 
