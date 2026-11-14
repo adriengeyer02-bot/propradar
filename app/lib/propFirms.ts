@@ -12893,6 +12893,8 @@ function applyPartnerOffer(firm: PropFirm): PropFirm {
 
 export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyPartnerOffer);
 
+/** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
+export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');
 export const activeFirms = propFirms.filter((firm) => firm.status === 'Active');
 export const riskyFirms = propFirms.filter((firm) => firm.status === 'À surveiller');
 export const verifiedFirms = propFirms.filter((firm) => firm.auditStatus === 'Vérifié multi-source');

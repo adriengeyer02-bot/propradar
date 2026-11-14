@@ -291,7 +291,7 @@ const es: Messages = {
     "openFirmsOnRadar": "firmas abiertas en el radar",
     "firmsInMarket": "firmas en este mercado",
     "firmsInBand": "firmas en este rango",
-    "radarAria": "Radar de {total} prop firms: {good} con puntuación de 75 o más, {watch} entre 50 y 74, {none} por debajo de 50, {closed} cerradas. El ángulo indica el mercado y la distancia la puntuación PropRadar.",
+    "radarAria": "Radar de {total} prop firms: {good} con puntuación de 75 o más, {watch} entre 50 y 74, {none} por debajo de 50. El ángulo indica el mercado y la distancia la puntuación PropRadar.",
     "openProfile": "Abrir la ficha",
     "tapHint": "Toca un punto para ver la firma",
     "bandsAria": "Filtrar por rango de puntuación",
@@ -334,10 +334,10 @@ const es: Messages = {
   },
   "radarPage": {
     "metaTitle": "Radar de prop firms: {total} prop firms por mercado y puntuación",
-    "metaDescription": "Radar interactivo de {total} prop firms: mercado, puntuación PropRadar, volumen de Trustpilot y {closed} firmas cerradas en un solo mapa. Actualizado el {date}.",
+    "metaDescription": "Radar interactivo de {total} prop firms: mercado, puntuación PropRadar, volumen de Trustpilot en un solo mapa, solo firmas abiertas. Actualizado el {date}.",
     "eyebrow": "En directo desde las fichas · actualizado el",
     "h1": "Radar de prop firms",
-    "lead": "{open} prop firms abiertas situadas por mercado y puntuación, y {closed} firmas cerradas en la órbita exterior. Pasa sobre un punto, busca una firma o abre un mercado para ver quién lo lidera.",
+    "lead": "{open} prop firms abiertas situadas por mercado y puntuación. Las firmas cerradas no se muestran: ya no son una opción de compra. Pasa sobre un punto, busca una firma o abre un mercado para ver quién lo lidera.",
     "findingsAria": "Lo que muestra el radar",
     "f1Value": "{good} de {open}",
     "f1Label": "firmas abiertas tienen una puntuación de 75 o más",
@@ -376,7 +376,7 @@ const es: Messages = {
     "faq": [
       {
         "q": "¿Cómo se sitúa una prop firm en el radar?",
-        "a": "El ángulo es el mercado principal de la firma (forex y CFD, futuros, cripto, acciones o varios), y cada sector es tan ancho como el número de firmas que contiene. La distancia al centro es la puntuación PropRadar: cuanto más cerca del centro, mayor es la puntuación. Las firmas cerradas están en una órbita exterior."
+        "a": "El ángulo es el mercado principal de la firma (forex y CFD, futuros, cripto, acciones o varios), y cada sector es tan ancho como el número de firmas que contiene. La distancia al centro es la puntuación PropRadar: cuanto más cerca del centro, mayor es la puntuación. Las firmas cerradas no se muestran."
       },
       {
         "q": "¿Qué indica el tamaño de un punto?",

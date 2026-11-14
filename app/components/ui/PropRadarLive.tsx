@@ -734,8 +734,12 @@ export default function PropRadarLive({
           </text>
         ))}
 
-        <circle cx={C} cy={C} r={RADAR_ORBIT} className="prr-orbit" />
-        <text x={C} y={C - RADAR_ORBIT - 8} textAnchor="middle" className="prr-orbit-label">{t.bands.closed} · {data.counts.closed}</text>
+        {data.closed.length ? (
+          <>
+            <circle cx={C} cy={C} r={RADAR_ORBIT} className="prr-orbit" />
+            <text x={C} y={C - RADAR_ORBIT - 8} textAnchor="middle" className="prr-orbit-label">{t.bands.closed} · {data.counts.closed}</text>
+          </>
+        ) : null}
         {data.closed.map((firm) => (
           <g key={firm.slug} className={`prr-closed${dimClosed ? ' is-dim' : ''}`}>
             <line x1={firm.x - 4} y1={firm.y - 4} x2={firm.x + 4} y2={firm.y + 4} />
@@ -825,7 +829,7 @@ export default function PropRadarLive({
 
   const bands = (
     <div className="prr-bands" role="group" aria-label={t.bandsAria}>
-      {(['good', 'watch', 'none', 'closed'] as Band[]).map((key) => (
+      {(['good', 'watch', 'none', 'closed'] as Band[]).filter((key) => key !== 'closed' || data.counts.closed > 0).map((key) => (
         <button
           key={key}
           type="button"

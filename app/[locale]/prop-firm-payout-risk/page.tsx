@@ -8,7 +8,7 @@ import {
   documentedIncidents,
   payoutEvidence,
   payoutRiskClass,
-  propFirms,
+  listedFirms,
   hasPayoutRiskSignal,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
@@ -56,13 +56,13 @@ export default async function PayoutRiskPage({ params }: Props) {
   const L = (path: string) => localePath(locale, path);
   const v = (value: string | undefined | null) => tv(t, toEnglishText(value ?? ''));
 
-  const risky = [...propFirms]
+  const risky = [...listedFirms]
     .filter((firm) => hasPayoutRiskSignal(firm))
     .sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore)
     .slice(0, 24);
-  const criticalCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Critique').length;
-  const aboveLowCount = propFirms.filter((firm) => hasPayoutRiskSignal(firm)).length;
-  const elevatedCount = propFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Élevé').length;
+  const criticalCount = listedFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Critique').length;
+  const aboveLowCount = listedFirms.filter((firm) => hasPayoutRiskSignal(firm)).length;
+  const elevatedCount = listedFirms.filter((firm) => firm.reviewSignals.payoutRisk === 'Élevé').length;
   const legalWatchCount = risky.filter(isLegalWatchFirm).length;
   const deepSourceRiskCount = risky.filter((firm) => legalSourceCount(firm) >= 5).length;
   const articleNewsCheckedCount = risky.filter((firm) => firm.auditSourcesChecked.some((source) => /article|news|press/i.test(source))).length;

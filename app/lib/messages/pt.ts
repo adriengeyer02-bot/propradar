@@ -291,7 +291,7 @@ const pt: Messages = {
     "openFirmsOnRadar": "empresas abertas no radar",
     "firmsInMarket": "empresas neste mercado",
     "firmsInBand": "empresas nesta faixa",
-    "radarAria": "Radar de {total} prop firms: {good} com pontuação 75 ou mais, {watch} entre 50 e 74, {none} abaixo de 50, {closed} encerradas. O ângulo indica o mercado e a distância a pontuação PropRadar.",
+    "radarAria": "Radar de {total} prop firms: {good} com pontuação 75 ou mais, {watch} entre 50 e 74, {none} abaixo de 50. O ângulo indica o mercado e a distância a pontuação PropRadar.",
     "openProfile": "Abrir a ficha",
     "tapHint": "Toque em um ponto para ver a empresa",
     "bandsAria": "Filtrar por faixa de pontuação",
@@ -334,10 +334,10 @@ const pt: Messages = {
   },
   "radarPage": {
     "metaTitle": "Radar de prop firms: {total} prop firms por mercado e pontuação",
-    "metaDescription": "Radar interativo de {total} prop firms: mercado, pontuação PropRadar, volume no Trustpilot e {closed} empresas encerradas em um só mapa. Atualizado em {date}.",
+    "metaDescription": "Radar interativo de {total} prop firms: mercado, pontuação PropRadar, volume no Trustpilot em um só mapa, apenas empresas abertas. Atualizado em {date}.",
     "eyebrow": "Ao vivo a partir das fichas · atualizado em",
     "h1": "Radar de prop firms",
-    "lead": "{open} prop firms abertas posicionadas por mercado e pontuação, e {closed} empresas encerradas na órbita externa. Passe sobre um ponto, pesquise uma empresa ou abra um mercado para ver quem lidera.",
+    "lead": "{open} prop firms abertas posicionadas por mercado e pontuação. Empresas encerradas não aparecem: já não são uma opção de compra. Passe sobre um ponto, pesquise uma empresa ou abra um mercado para ver quem lidera.",
     "findingsAria": "O que o radar mostra",
     "f1Value": "{good} de {open}",
     "f1Label": "empresas abertas têm pontuação de 75 ou mais",
@@ -376,7 +376,7 @@ const pt: Messages = {
     "faq": [
       {
         "q": "Como uma prop firm é posicionada no radar?",
-        "a": "O ângulo é o mercado principal da empresa (forex e CFD, futuros, cripto, ações ou vários), e cada setor é tão largo quanto o número de empresas que contém. A distância até o centro é a pontuação PropRadar: quanto mais perto do centro, maior a pontuação. As empresas encerradas ficam em uma órbita externa."
+        "a": "O ângulo é o mercado principal da empresa (forex e CFD, futuros, cripto, ações ou vários), e cada setor é tão largo quanto o número de empresas que contém. A distância até o centro é a pontuação PropRadar: quanto mais perto do centro, maior a pontuação. Empresas encerradas não aparecem."
       },
       {
         "q": "O que significa o tamanho de um ponto?",

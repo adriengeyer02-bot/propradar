@@ -1,6 +1,6 @@
 import { isLocale, localePath, type Locale } from '../../lib/locales';
 import { getMessages } from '../../lib/messages';
-import { propFirms } from '../../lib/propFirms';
+import { listedFirms } from '../../lib/propFirms';
 import { toComparatorFirm } from '../../lib/comparatorFirms';
 import { toEnglishText } from '../../lib/i18n';
 import { latestReviewDate } from '../../lib/riskTone';
@@ -8,8 +8,8 @@ import { SITE_URL } from '../../lib/site';
 import ComparatorClient from './ComparatorClient';
 
 // Built once per build: the browser receives the slim rows, never the full profiles.
-const FIRMS = propFirms.map(toComparatorFirm);
-const DATA_UPDATED_AT = latestReviewDate(propFirms);
+const FIRMS = listedFirms.map(toComparatorFirm);
+const DATA_UPDATED_AT = latestReviewDate(listedFirms);
 
 function comparatorSchema(locale: Locale) {
   const L = (path: string) => localePath(locale, path);
@@ -22,8 +22,8 @@ function comparatorSchema(locale: Locale) {
     dateModified: DATA_UPDATED_AT,
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: propFirms.length,
-      itemListElement: propFirms.map((firm, index) => ({
+      numberOfItems: listedFirms.length,
+      itemListElement: listedFirms.map((firm, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         item: {

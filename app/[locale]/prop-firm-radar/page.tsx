@@ -23,7 +23,7 @@ function texts(locale: Locale) {
   const t = getMessages(locale);
   return {
     title: fmt(t.radarPage.metaTitle, { total: radar.total }),
-    description: fmt(t.radarPage.metaDescription, { total: radar.total, closed: radar.counts.closed, date: radar.latest }),
+    description: fmt(t.radarPage.metaDescription, { total: radar.total, date: radar.latest }),
   };
 }
 
@@ -64,7 +64,6 @@ export default async function PropFirmRadarPage({ params }: Props) {
     { value: fmt(r.f1Value, { good: radar.counts.good, open: openCount }), label: r.f1Label, note: fmt(r.f1Note, { share: share75 }) },
     { value: `${largest.count}`, label: fmt(r.f2Label, { market: sectorName(largest.key) }), note: fmt(r.f2Note, { average: largest.average }) },
     { value: `${best.average}`, label: fmt(r.f3Label, { market: sectorName(best.key) }), note: fmt(r.f3Note, { count: best.count }) },
-    { value: `${radar.counts.closed}`, label: r.f4Label, note: r.f4Note },
   ];
 
   // Two questions only: where a firm sits, and how fresh the data is.
@@ -112,7 +111,7 @@ export default async function PropFirmRadarPage({ params }: Props) {
           <header className="pr-radar-hero">
             <div className="eyebrow"><span>{r.eyebrow} <time dateTime={radar.latest}>{formatDate(radar.latest)}</time></span></div>
             <h1>{r.h1}</h1>
-            <p className="lead">{fmt(r.lead, { open: openCount, closed: radar.counts.closed })}</p>
+            <p className="lead">{fmt(r.lead, { open: openCount })}</p>
           </header>
         }
       />
@@ -154,19 +153,6 @@ export default async function PropFirmRadarPage({ params }: Props) {
               </ol>
             </details>
           ))}
-          <details>
-            <summary>
-              <strong>{r.closedList}</strong> <span>{radar.closed.length}</span>
-            </summary>
-            <ol>
-              {radar.closed.map((firm) => (
-                <li key={firm.slug}>
-                  <Link href={L(`/firm/${firm.slug}`)}>{firm.name}</Link>
-                  <small>{firm.closed ?? '—'}</small>
-                </li>
-              ))}
-            </ol>
-          </details>
         </div>
       </section>
 
