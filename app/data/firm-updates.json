@@ -2045,10 +2045,10 @@
       ]
     },
     "fxify": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 6619,
+        "trustpilotReviewCount": 6663,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com",
         "priceFrom": 59
       },
@@ -2076,6 +2076,22 @@
           "source": "https://www.trustpilot.com/review/fxify.com",
           "fields": [
             "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Affiliate link and partner code FXIFY0EVDNU disclosed (25% off all programs, according to FXIFY). The official site also showed FUNDED25 (25% + 2 free add-ons, until 24 November 2026) and ONESTEP35 (35% off One Phase for new traders). Score unchanged.",
+          "source": "https://fxify.com/",
+          "fields": [
+            "commercialRelationship"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Trustpilot: 4.3 from 6,663 reviews, no notice.",
+          "source": "https://www.trustpilot.com/review/fxify.com",
+          "fields": [
+            "trustpilotRating"
           ]
         }
       ],

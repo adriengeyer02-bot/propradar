@@ -182,11 +182,14 @@ export const FUNDERPRO_AFFILIATE_URL = 'https://funderpro.cxclick.com/visit/?bta
 export const GOAT_FUNDED_TRADER_AFFILIATE_URL = 'https://app.goatfundedtrader.com/checkout?referral_id=04e892a0e3d217576945';
 export const THE5ERS_AFFILIATE_URL = 'https://www.the5ers.com/?afmc=1cuh';
 export const E8_AFFILIATE_URL = 'https://e8markets.com/d/A4DE0965';
+export const FXIFY_AFFILIATE_URL = 'https://trader.fxify.com/purchasechallenge?affiliateId=8924';
+/** Partner code issued to PropRadar by FXIFY (25% off all programs, per FXIFY), received 2026-11-14. */
+export const FXIFY_PROMO_CODE = 'FXIFY0EVDNU';
 /** Partner code issued to PropRadar by OneFunded on 2026-11-12 (25% off all challenges, per OneFunded). */
 export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -1872,6 +1875,9 @@ const corePropFirms: PropFirm[] = [
     lastReviewed: '2026-07-02',
     trustpilotRating: 4.4,
     logoDomain: 'fxify.com',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote:
+      'PropRadar may receive a commission through the FXIFY link and the partner code FXIFY0EVDNU (25% off all programs, according to FXIFY). On 14 November 2026 the official site also showed FUNDED25 (25% off plus 2 free add-ons, until 24 November 2026) and ONESTEP35 (35% off One Phase for new traders): compare at checkout. The relationship has no impact on the score.',
     communitySignal: 'Strong marketing presence, many programs and frequent discounts.',
     products: [
       product({
@@ -1890,7 +1896,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '5 minimum trading days before the first payout per the official page',
         hasConsistencyRule: true,
         consistencyRule: 'Exact rules and add-ons must be confirmed at FXIFY checkout.',
-        linkToStart: 'https://fxify.com/programs/one-phase/',
+        linkToStart: FXIFY_AFFILIATE_URL,
       }),
       product({
         id: 'fxify-two-phase',
@@ -1907,7 +1913,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '5 minimum trading days before the first payout per the official page',
         hasConsistencyRule: true,
         consistencyRule: 'Structure and add-ons to reread before buying.',
-        linkToStart: 'https://fxify.com/programs/two-phase/',
+        linkToStart: FXIFY_AFFILIATE_URL,
       }),
       product({
         id: 'fxify-three-phase',
@@ -1924,7 +1930,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '5 minimum trading days before the first payout per the official page',
         hasConsistencyRule: true,
         consistencyRule: 'More progressive program; details to verify on the official page.',
-        linkToStart: 'https://fxify.com/programs/three-phase-challenge/',
+        linkToStart: FXIFY_AFFILIATE_URL,
       }),
       product({
         id: 'fxify-lightning',
@@ -1942,7 +1948,7 @@ const corePropFirms: PropFirm[] = [
         tradableAssets: ['Forex', 'Indices', 'Actions CFD', 'Crypto'],
         hasConsistencyRule: true,
         consistencyRule: 'Confirm the full parameters on the Lightning product page.',
-        linkToStart: 'https://fxify.com/programs/lightning-challenge/',
+        linkToStart: FXIFY_AFFILIATE_URL,
       }),
       product({
         id: 'fxify-instant-funding',
@@ -1959,7 +1965,7 @@ const corePropFirms: PropFirm[] = [
         tradableAssets: ['Forex', 'Indices', 'Actions CFD', 'Crypto'],
         hasConsistencyRule: true,
         consistencyRule: 'No evaluation, but risk and payout rules must be read line by line.',
-        linkToStart: 'https://fxify.com/programs/instant-funding/',
+        linkToStart: FXIFY_AFFILIATE_URL,
       }),
     ],
     strengths: ['Wide program range', 'EAs advertised as allowed depending on presentation', 'Many assets'],
@@ -12876,6 +12882,7 @@ export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
   'goat-funded-trader': { href: GOAT_FUNDED_TRADER_AFFILIATE_URL, code: 'FIRSTGFT', percent: 50, scope: 'new', codeSource: 'site', checkedOn: '2026-11-09' },
   'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'NOV30', percent: 30, scope: 'all', codeSource: 'site', checkedOn: '2026-11-09' },
   'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
+  fxify: { href: FXIFY_AFFILIATE_URL, code: FXIFY_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-14' },
   onefunded: { code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-12' },
 };
 
