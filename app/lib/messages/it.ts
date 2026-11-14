@@ -259,7 +259,7 @@ const it: Messages = {
     zoomOut: 'Riduci',
     zoomReset: 'Reimposta lo zoom',
     radarZoom: "Zoom del radar",
-    radarZoomHint: "Doppio clic, pizzico o Ctrl + rotella per lo zoom: i punti diventano loghi, poi nomi.",
+    radarZoomHint: "Doppio clic, pizzico o rotella per lo zoom: i punti diventano loghi, poi nomi.",
     globeAria: 'Globo di {total} società attive: la latitudine è il punteggio PropRadar (75+ a nord, sotto 50 a sud), la longitudine è il mercato. Stessi dati del radar.',
     globeNorth: 'Nord = punteggio più alto · longitudine = mercato',
     visitSince: 'Aggiornate dalla tua ultima visita ({when})',
