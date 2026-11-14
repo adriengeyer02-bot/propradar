@@ -47,6 +47,12 @@ const TRAIL_REACH = 110;
 const TRAIL_ALPHA = 0.021;
 const PERIOD_MS = 7000;
 const PICK = 14;
+/** Radar zoom: logos from LOGO_ZOOM, names and scores from NAME_ZOOM. */
+const MAX_ZOOM = 5;
+const LOGO_ZOOM = 1.8;
+const NAME_ZOOM = 3;
+/** Dots and logos grow more slowly than the map, so a zoomed view stays readable. */
+const grow = (z: number) => Math.pow(z, -0.45);
 
 function arcPath(start: number, end: number) {
   const a = radarPoint(RADAR_OUTER, start);
@@ -141,6 +147,12 @@ export default function PropRadarLive({
   const [query, setQuery] = useState('');
   const [narrow, setNarrow] = useState(false);
   const [touched, setTouched] = useState(false);
+  const [view, setView] = useState({ z: 1, x: C, y: C });
+  const viewRef = useRef(view);
+  viewRef.current = view;
+  const dragRef = useRef<{ id: number; x: number; y: number; moved: boolean } | null>(null);
+  const pinchRef = useRef<{ points: Map<number, { x: number; y: number }>; start: number; z: number } | null>(null);
+  const suppressClick = useRef(false);
   const [shownCounts, setShownCounts] = useState<Record<Band, number>>({ good: 0, watch: 0, none: 0, closed: 0 });
 
   const sector = lockedSector ?? hoverSector;
@@ -188,6 +200,22 @@ export default function PropRadarLive({
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [pinned]);
+
+  // Wheel: zoom with ctrl/pinch-to-zoom on a trackpad, or freely once zoomed in
+  // (a plain wheel over the radar still scrolls the page at full view).
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg || variant !== 'full') return;
+    const onWheel = (event: WheelEvent) => {
+      if (!event.ctrlKey && viewRef.current.z <= 1) return;
+      event.preventDefault();
+      const p = toSvg(event);
+      zoomAt(Math.exp(-event.deltaY * (event.ctrlKey ? 0.01 : 0.0025)), p.x, p.y);
+    };
+    svg.addEventListener('wheel', onWheel, { passive: false });
+    return () => svg.removeEventListener('wheel', onWheel);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [variant]);
 
   // Intro (dots travel out from the centre, best scores first), then the sweep loop.
   useEffect(() => {
@@ -316,15 +344,43 @@ export default function PropRadarLive({
     animation.onfinish = () => ring.remove();
   }
 
+  function viewBoxOf(v = viewRef.current) {
+    const w = S / v.z;
+    return { x: v.x - w / 2, y: v.y - w / 2, w };
+  }
+
   function toSvg(event: { clientX: number; clientY: number }) {
     const rect = svgRef.current!.getBoundingClientRect();
-    return { x: ((event.clientX - rect.left) / rect.width) * S, y: ((event.clientY - rect.top) / rect.height) * S };
+    const vb = viewBoxOf();
+    return { x: vb.x + ((event.clientX - rect.left) / rect.width) * vb.w, y: vb.y + ((event.clientY - rect.top) / rect.height) * vb.w };
+  }
+
+  /** Keep the view inside the radar disc (with the closed-firm orbit). */
+  function clampView(z: number, x: number, y: number) {
+    const zz = Math.max(1, Math.min(MAX_ZOOM, z));
+    const half = S / zz / 2;
+    const lo = Math.min(C, half);
+    const hi = Math.max(C, S - half);
+    return { z: zz, x: Math.max(lo, Math.min(hi, x)), y: Math.max(lo, Math.min(hi, y)) };
+  }
+
+  /** Zoom by a factor around a radar point (keeps that point under the pointer). */
+  function zoomAt(factor: number, px?: number, py?: number) {
+    setView((v) => {
+      const z = Math.max(1, Math.min(MAX_ZOOM, v.z * factor));
+      if (z === 1) return { z: 1, x: C, y: C };
+      const ax = px ?? v.x;
+      const ay = py ?? v.y;
+      const k = v.z / z;
+      return clampView(z, ax + (v.x - ax) * k, ay + (v.y - ay) * k);
+    });
   }
 
   /** Pick radius in radar units: about 24 screen pixels for a finger, PICK for a mouse. */
   function pickRadius() {
-    if (pointerRef.current === 'mouse' || !svgRef.current) return PICK;
-    return Math.max(PICK, (24 * S) / Math.max(1, svgRef.current.getBoundingClientRect().width));
+    const z = viewRef.current.z;
+    if (pointerRef.current === 'mouse' || !svgRef.current) return PICK / Math.sqrt(z);
+    return Math.max(PICK, (24 * S) / Math.max(1, svgRef.current.getBoundingClientRect().width)) / z;
   }
 
   function pick(x: number, y: number): Focus | null {
@@ -353,6 +409,34 @@ export default function PropRadarLive({
 
   function onMove(event: ReactPointerEvent<SVGSVGElement>) {
     pointerRef.current = event.pointerType;
+    const pinch = pinchRef.current;
+    if (pinch && pinch.points.has(event.pointerId)) {
+      pinch.points.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      if (pinch.points.size === 2) {
+        const [a, b] = [...pinch.points.values()];
+        const distance = Math.hypot(a.x - b.x, a.y - b.y);
+        const mid = toSvg({ clientX: (a.x + b.x) / 2, clientY: (a.y + b.y) / 2 });
+        const target = pinch.z * (distance / Math.max(1, pinch.start));
+        zoomAt(target / viewRef.current.z, mid.x, mid.y);
+        suppressClick.current = true;
+        return;
+      }
+    }
+    const drag = dragRef.current;
+    if (drag && drag.id === event.pointerId && viewRef.current.z > 1) {
+      const rect = svgRef.current!.getBoundingClientRect();
+      const dx = event.clientX - drag.x;
+      const dy = event.clientY - drag.y;
+      if (drag.moved || Math.hypot(dx, dy) > 4) {
+        drag.moved = true;
+        suppressClick.current = true;
+        drag.x = event.clientX;
+        drag.y = event.clientY;
+        const scale = viewBoxOf().w / rect.width;
+        setView((v) => clampView(v.z, v.x - dx * scale, v.y - dy * scale));
+        return;
+      }
+    }
     if (pinned || event.pointerType !== 'mouse') return;
     const { x, y } = toSvg(event);
     const hit = pick(x, y);
@@ -373,6 +457,10 @@ export default function PropRadarLive({
   }
 
   function onClick(event: React.MouseEvent<SVGSVGElement>) {
+    if (suppressClick.current) {
+      suppressClick.current = false;
+      return;
+    }
     const { x, y } = toSvg(event);
     const hit = pick(x, y);
     if (hit) {
@@ -480,14 +568,84 @@ export default function PropRadarLive({
     const panel = panelRef.current!.getBoundingClientRect();
     const rect = svgRef.current!.getBoundingClientRect();
     const p = focus.kind === 'dot' ? focus.dot : focus.firm;
-    const left = Math.min(panel.width - 214, Math.max(8, (p.x / S) * rect.width + (rect.left - panel.left) + 14));
-    const y = (p.y / S) * rect.height + (rect.top - panel.top);
+    const vb = viewBoxOf(view);
+    const left = Math.min(panel.width - 214, Math.max(8, ((p.x - vb.x) / vb.w) * rect.width + (rect.left - panel.left) + 14));
+    const y = ((p.y - vb.y) / vb.w) * rect.height + (rect.top - panel.top);
     // A pinned tip (touch) has a link and must not cover the dot: above it, or below when there is no room.
     const extra = focus.kind === 'dot' && focus.dot.updated ? 18 : 0;
     const height = (pinned ? 124 : 76) + extra;
     const top = y - height - 10 >= 4 ? y - height - 10 : y + 16;
     return { left, top: pinned ? top : Math.max(8, y - 76 - extra) };
   })() : null;
+
+  // Zoomed in: every firm with a logo shows it (best scores first, no overlap),
+  // and from NAME_ZOOM its name and score, placed so labels never collide.
+  const zoomLayer = (() => {
+    if (view.z < LOGO_ZOOM) return null;
+    const vb = viewBoxOf(view);
+    const g = grow(view.z);
+    const r = 12 * g;
+    const margin = 20 / view.z;
+    const inView = (dot: RadarDot) => dot.x > vb.x - margin && dot.x < vb.x + vb.w + margin && dot.y > vb.y - margin && dot.y < vb.y + vb.w + margin;
+    const placed: RadarDot[] = [];
+    for (const dot of [...data.dots].filter((item) => item.logo && inView(item)).sort((a, b) => b.score - a.score)) {
+      if (placed.some((other) => Math.hypot(other.x - dot.x, other.y - dot.y) < r * 1.9)) continue;
+      placed.push(dot);
+    }
+    const font = 12.5 / view.z;
+    const boxes: { x1: number; y1: number; x2: number; y2: number }[] = placed.map((dot) => ({ x1: dot.x - r, y1: dot.y - r, x2: dot.x + r, y2: dot.y + r }));
+    const named: { dot: RadarDot; x: number; y: number }[] = [];
+    if (view.z >= NAME_ZOOM) {
+      for (const dot of placed) {
+        const text = `${shortName(dot.name)} ${dot.score}`;
+        const x = dot.x + r + 4 / view.z;
+        const y = dot.y + font * 0.35;
+        const box = { x1: x - 2 / view.z, y1: y - font, x2: x + text.length * font * 0.58, y2: y + font * 0.3 };
+        const self = boxes.findIndex((b) => b.x1 === dot.x - r && b.y1 === dot.y - r);
+        if (boxes.some((b, index) => index !== self && !(box.x2 < b.x1 || box.x1 > b.x2 || box.y2 < b.y1 || box.y1 > b.y2))) continue;
+        boxes.push(box);
+        named.push({ dot, x, y });
+      }
+    }
+    return (
+      <g className="prr-zoom-layer" aria-hidden="true">
+        {placed.map((dot) => (
+          <g key={dot.slug} className={`prr-zlogo prr-${dot.tone}${dimDot(dot) ? ' is-dim' : ''}`}>
+            <circle cx={dot.x} cy={dot.y} r={r + 1.5 * g} className="prr-badge-ring" />
+            <image href={dot.logo} x={dot.x - r} y={dot.y - r} width={2 * r} height={2 * r} preserveAspectRatio="xMidYMid slice" />
+          </g>
+        ))}
+        {named.map(({ dot, x, y }) => (
+          <text key={dot.slug} x={x} y={y} className={`prr-zlabel${dimDot(dot) ? ' is-dim' : ''}`} style={{ fontSize: font, strokeWidth: 3.5 / view.z }}>
+            {shortName(dot.name)} <tspan className={`prr-zscore prr-${dot.tone}`}>{dot.score}</tspan>
+          </text>
+        ))}
+      </g>
+    );
+  })();
+
+  const zoomControls = variant === 'full' ? (
+    <>
+      <div className="prr-zoom" role="group" aria-label={t.radarZoom}>
+        <button type="button" onClick={() => zoomAt(1.6)} aria-label={t.zoomIn} disabled={view.z >= MAX_ZOOM}>+</button>
+        <button type="button" onClick={() => zoomAt(1 / 1.6)} aria-label={t.zoomOut} disabled={view.z <= 1}>−</button>
+        {view.z > 1 ? (
+          <button type="button" onClick={() => setView({ z: 1, x: C, y: C })} aria-label={t.zoomReset}>
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M4 4v6h6M20 20v-6h-6M5.5 15A7.5 7.5 0 0 0 19 16M18.5 9A7.5 7.5 0 0 0 5 8" /></svg>
+          </button>
+        ) : null}
+      </div>
+      {view.z > 1 ? (
+        <svg className="prr-minimap" viewBox={`0 0 ${S} ${S}`} aria-hidden="true">
+          <circle cx={C} cy={C} r={RADAR_OUTER} className="prr-minimap-disc" />
+          {data.dots.map((dot) => <circle key={dot.slug} cx={dot.x} cy={dot.y} r={5} className={`prr-minimap-dot prr-${dot.tone}`} />)}
+          <rect x={viewBoxOf(view).x} y={viewBoxOf(view).y} width={viewBoxOf(view).w} height={viewBoxOf(view).w} className="prr-minimap-view" />
+        </svg>
+      ) : (
+        <p className="prr-zoomhint" aria-hidden="true">{t.radarZoomHint}</p>
+      )}
+    </>
+  ) : null;
 
   const radar = (
     <div className={`prr-stage prr-${variant}`} ref={panelRef}>
@@ -498,13 +656,46 @@ export default function PropRadarLive({
       <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('prr-js')" }} />
       <svg
         ref={svgRef}
-        className={`prr-svg${ready ? ' is-ready' : ''}${settled ? ' is-settled' : ''}`}
-        viewBox={`0 0 ${S} ${S}`}
+        className={`prr-svg${ready ? ' is-ready' : ''}${settled ? ' is-settled' : ''}${view.z > 1 ? ' is-zoomed' : ''}`}
+        viewBox={`${viewBoxOf(view).x} ${viewBoxOf(view).y} ${viewBoxOf(view).w} ${viewBoxOf(view).w}`}
+        style={{ ['--zk' as string]: 1 / view.z }}
         role="img"
         aria-label={fill(t.radarAria, { total: data.total, good: data.counts.good, watch: data.counts.watch, none: data.counts.none, closed: data.counts.closed })}
         onPointerMove={onMove}
-        onPointerDown={(event) => { pointerRef.current = event.pointerType; }}
+        onPointerDown={(event) => {
+          pointerRef.current = event.pointerType;
+          suppressClick.current = false;
+          if (event.pointerType === 'touch') {
+            const pinch = pinchRef.current ?? { points: new Map(), start: 0, z: viewRef.current.z };
+            pinch.points.set(event.pointerId, { x: event.clientX, y: event.clientY });
+            if (pinch.points.size === 2) {
+              const [a, b] = [...pinch.points.values()];
+              pinch.start = Math.hypot(a.x - b.x, a.y - b.y);
+              pinch.z = viewRef.current.z;
+            }
+            pinchRef.current = pinch;
+          }
+          if (viewRef.current.z > 1) dragRef.current = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
+        }}
+        onPointerUp={(event) => {
+          dragRef.current = null;
+          pinchRef.current?.points.delete(event.pointerId);
+          if (pinchRef.current && pinchRef.current.points.size === 0) pinchRef.current = null;
+        }}
+        onPointerCancel={(event) => {
+          dragRef.current = null;
+          pinchRef.current?.points.delete(event.pointerId);
+        }}
+        onDoubleClick={(event) => {
+          setLockedSector(null);
+          setHoverSector(null);
+          setPinned(false);
+          setFocus(null);
+          const p = toSvg(event);
+          zoomAt(2, p.x, p.y);
+        }}
         onPointerLeave={() => {
+          dragRef.current = null;
           if (pinned) return;
           setFocus(null);
           setHoverSector(null);
@@ -564,7 +755,7 @@ export default function PropRadarLive({
         <g aria-hidden="true">
           {data.dots.map((dot) =>
             dot.updated ? (
-              <circle key={dot.slug} cx={dot.x} cy={dot.y} r={dot.size + 4} className={`prr-fresh${dimDot(dot) ? ' is-dim' : ''}`} />
+              <circle key={dot.slug} cx={dot.x} cy={dot.y} r={(dot.size + 4) * grow(view.z)} className={`prr-fresh${dimDot(dot) ? ' is-dim' : ''}`} />
             ) : null,
           )}
         </g>
@@ -575,8 +766,8 @@ export default function PropRadarLive({
               ref={(node) => { dotRefs.current[index] = node; }}
               cx={dot.x}
               cy={dot.y}
-              r={dot.size}
-              style={{ ['--r' as string]: dot.size }}
+              r={dot.size * grow(view.z)}
+              style={{ ['--r' as string]: dot.size * grow(view.z) }}
               className={`prr-dot prr-${dot.tone}${dot.withheld ? ' is-hollow' : ''}${dimDot(dot) ? ' is-dim' : ''}`}
             />
           ))}
@@ -590,11 +781,12 @@ export default function PropRadarLive({
             ) : null,
           )}
         </g>
-        <g className="prr-badges" aria-hidden="true">
+        {view.z >= LOGO_ZOOM ? zoomLayer : null}
+        <g className="prr-badges" aria-hidden="true" style={view.z >= LOGO_ZOOM ? { display: 'none' } : undefined}>
           {badges.map((dot, index) => (
             <g key={dot.slug} className={`prr-badge prr-${dot.tone}${dimDot(dot) ? ' is-dim' : ''}`} style={{ animationDelay: `${0.9 + index * 0.07}s` }}>
-              <circle cx={dot.x} cy={dot.y} r={13} className="prr-badge-ring" />
-              <image href={dot.logo} x={dot.x - 11} y={dot.y - 11} width={22} height={22} preserveAspectRatio="xMidYMid slice" />
+              <circle cx={dot.x} cy={dot.y} r={13 * grow(view.z)} className="prr-badge-ring" />
+              <image href={dot.logo} x={dot.x - 11 * grow(view.z)} y={dot.y - 11 * grow(view.z)} width={22 * grow(view.z)} height={22 * grow(view.z)} preserveAspectRatio="xMidYMid slice" />
             </g>
           ))}
         </g>
@@ -604,10 +796,11 @@ export default function PropRadarLive({
           <g className="prr-focus" aria-hidden="true">
             <line x1={C} y1={C} x2={focusPoint.x} y2={focusPoint.y} />
             <circle cx={C} cy={C} r={Math.hypot(focusPoint.x - C, focusPoint.y - C)} />
-            <circle cx={focusPoint.x} cy={focusPoint.y} r={focusSize + 5} className="prr-focus-ring" />
+            <circle cx={focusPoint.x} cy={focusPoint.y} r={(view.z >= LOGO_ZOOM ? 15 : focusSize + 5) * grow(view.z)} className="prr-focus-ring" />
           </g>
         ) : null}
       </svg>
+      {zoomControls}
       {tip && focus ? (
         <div className={`prr-tip${pinned ? ' is-pinned' : ''}`} style={{ left: tip.left, top: tip.top }} aria-hidden={pinned ? undefined : true}>
           <strong>{focus.kind === 'dot' ? focus.dot.name : focus.firm.name}</strong>

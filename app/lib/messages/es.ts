@@ -307,6 +307,8 @@ const es: Messages = {
     "zoomIn": "Acercar",
     "zoomOut": "Alejar",
     "zoomReset": "Restablecer el zoom",
+    "radarZoom": "Zoom del radar",
+    "radarZoomHint": "Doble clic, pellizco o Ctrl + rueda para hacer zoom: los puntos se convierten en logos y luego en nombres.",
     "globeAria": "Globo de {total} firmas abiertas: la latitud es la puntuación PropRadar (75+ al norte, menos de 50 al sur), la longitud es el mercado. Mismos datos que el radar.",
     "globeNorth": "Norte = puntuación más alta · longitud = mercado",
     "visitSince": "Actualizadas desde tu última visita ({when})",

@@ -258,6 +258,8 @@ const de: Messages = {
     zoomIn: 'Vergrößern',
     zoomOut: 'Verkleinern',
     zoomReset: 'Zoom zurücksetzen',
+    radarZoom: "Radar-Zoom",
+    radarZoomHint: "Doppelklick, Zwei-Finger-Geste oder Strg + Mausrad zum Zoomen: Punkte werden zu Logos, dann zu Namen.",
     globeAria: 'Globus mit {total} aktiven Firmen: Breite = PropRadar-Score (75+ im Norden, unter 50 im Süden), Länge = Markt. Dieselben Daten wie der Radar.',
     globeNorth: 'Norden = höherer Score · Länge = Markt',
     visitSince: 'Seit Ihrem letzten Besuch aktualisiert ({when})',
