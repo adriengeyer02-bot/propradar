@@ -7,7 +7,7 @@ import GuideLibrary, {
   type GuideType,
   GuideLogoStrip,
 } from './GuideLibrary';
-import { payoutRiskClass, propFirms, regulatoryRiskClass, hasPayoutRiskSignal } from '../../lib/propFirms';
+import { listedFirms, payoutRiskClass, propFirms, regulatoryRiskClass, hasPayoutRiskSignal } from '../../lib/propFirms';
 import {
   getGuideLastModified,
   getSeoGuideDisplay,
@@ -327,7 +327,7 @@ function LocalizedGuidesHub({ locale }: { locale: Locale }) {
         </div>
         <dl className="pr-hero-stats">
           <div><dt>{h.statGuides}</dt><dd>{translated.length}</dd></div>
-          <div><dt>{h.statFirms}</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>{h.statFirms}</dt><dd>{listedFirms.length}</dd></div>
           <div><dt>{h.statLegal}</dt><dd>{legalMappedCount}</dd></div>
           <div><dt>{h.statUpdate}</dt><dd><time dateTime={latest}>{formatDateLong(locale, latest)}</time></dd></div>
         </dl>
@@ -444,7 +444,7 @@ export default async function GuidesHubPage({ params }: Props) {
         </div>
         <dl className="pr-hero-stats">
           <div><dt>Decision guides</dt><dd>{seoGuides.length}</dd></div>
-          <div><dt>Firm profiles connected</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>Firm profiles connected</dt><dd>{listedFirms.length}</dd></div>
           <div><dt>Legal files mapped</dt><dd>{legalMappedCount}</dd></div>
           <div><dt>Latest guide update</dt><dd><time dateTime={latestGuideUpdate}>{latestGuideUpdate}</time></dd></div>
         </dl>

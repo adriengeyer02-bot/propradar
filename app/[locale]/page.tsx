@@ -9,6 +9,7 @@ import { legalTone, payoutTone } from '../lib/riskTone';
 import { getEditorialBriefPath, latestEditorialBrief } from '../lib/editorialBriefs';
 import {
   partiallyVerifiedFirms,
+  listedFirms,
   propFirms,
   topFirms,
   verifiedFirms,
@@ -45,7 +46,7 @@ export default async function HomePage({ params }: Props) {
   const t = getMessages(locale);
   const h = t.home;
   const L = (path: string) => localePath(locale, path);
-  const noConflictFirms = propFirms.filter((firm) => firm.commercialRelationship === 'Aucune').length;
+  const noConflictFirms = listedFirms.filter((firm) => firm.commercialRelationship === 'Aucune').length;
   const officialSourceCount = propFirms.reduce((sum, firm) => sum + firm.sources.length, 0);
   const legalMappedCount = propFirms.filter((firm) => firm.legalVerified).length;
   const sourcedFirms = verifiedFirms.length + partiallyVerifiedFirms.length;
@@ -108,10 +109,22 @@ export default async function HomePage({ params }: Props) {
           </div>
           <h1 id="home-title">{h.h1}</h1>
           <p className="home-v2-lead">
-            {fmt(h.lead, { count: propFirms.length })}
+            {fmt(h.lead, { count: listedFirms.length })}
           </p>
+          <a
+            className="home-v2-award"
+            href="https://www.myfxbook.com/articles/best-prop-firm-comparison-websites-in-2026-20-sites-reviewed-and-compared/89#propradar-review"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="home-v2-award-rank" aria-hidden="true">#1</span>
+            <span className="home-v2-award-text">
+              <strong>{h.awardTitle}</strong>
+              <small>{h.awardSource}</small>
+            </span>
+          </a>
           <div className="home-v2-proofline" aria-label={h.coverageAria}>
-            <span><strong>{propFirms.length}</strong> {h.firmsCompared}</span>
+            <span><strong>{listedFirms.length}</strong> {h.firmsCompared}</span>
             <span><strong>{noConflictFirms}</strong> {h.noRelationship}</span>
             <span>{h.latestReview} <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
           </div>
@@ -165,7 +178,7 @@ export default async function HomePage({ params }: Props) {
         </div>
         <p className="pr-table-more">
           <IntentLink className="pr-link" href={L('/prop-firm-comparison')}>
-            {fmt(h.compareAll, { count: propFirms.length })} <span aria-hidden="true">→</span>
+            {fmt(h.compareAll, { count: listedFirms.length })} <span aria-hidden="true">→</span>
           </IntentLink>
         </p>
       </section>
@@ -188,7 +201,7 @@ export default async function HomePage({ params }: Props) {
                 className={`home-tool-card${index === 0 ? ' home-tool-card-primary' : ''}`}
               >
                 <span className="home-tool-label">{tool.label}</span>
-                <strong>{fmt(tool.title, { count: propFirms.length })}</strong>
+                <strong>{fmt(tool.title, { count: listedFirms.length })}</strong>
                 <small>{tool.text}</small>
                 <span className="home-tool-action">{tool.action} <b aria-hidden="true">→</b></span>
               </Link>
@@ -287,7 +300,7 @@ export default async function HomePage({ params }: Props) {
           </div>
 
           <div className="home-proof-stats">
-            <div><strong>{propFirms.length}</strong><span>{h.statFirms}</span></div>
+            <div><strong>{listedFirms.length}</strong><span>{h.statFirms}</span></div>
             <div><strong>{officialSourceCount}</strong><span>{h.statSources}</span></div>
             <div><strong>{legalMappedCount}</strong><span>{h.statLegal}</span></div>
             <div><strong>{sourcedFirms}</strong><span>{h.statSourced}</span></div>

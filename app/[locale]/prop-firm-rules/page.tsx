@@ -8,6 +8,7 @@ import {
   priceLabel,
   getFirmBySlug,
   payoutRiskClass,
+  listedFirms,
   propFirms,
   regulatoryRiskClass,
   scoreClass,
@@ -225,7 +226,7 @@ export default async function RulesPage({ params }: Props) {
           <div><dt>{m.statDeep}</dt><dd>{officialRuleAudits.length}</dd></div>
           <div><dt>{fmt(m.statClauses, { critical: criticalCount })}</dt><dd>{clauseCount}</dd></div>
           <div><dt>{fmt(m.statCompact, { critical: compactCriticalCount })}</dt><dd>{mediumSmallRuleAudits.length}</dd></div>
-          <div><dt>{m.statTracked}</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>{m.statTracked}</dt><dd>{listedFirms.length}</dd></div>
         </dl>
       </section>
 

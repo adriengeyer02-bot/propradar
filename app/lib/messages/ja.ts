@@ -147,6 +147,8 @@ const ja: Messages = {
     "lead": "チャレンジに支払う前に、{count} 社のプロップファームのルール、価格、出金の証拠、運営法人を比較できます。",
     "coverageAria": "PropRadar のデータ範囲",
     "firmsCompared": "社を比較",
+    "awardTitle": "プロップファーム比較サイト 20 社中 第 1 位",
+    "awardSource": "Myfxbook 2026 年レビュー · 9.4/10",
     "noRelationship": "社は商業関係なし",
     "latestReview": "最新の審査",
     "openComparator": "比較表を開く",

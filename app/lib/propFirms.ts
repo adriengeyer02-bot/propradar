@@ -2483,7 +2483,7 @@ const corePropFirms: PropFirm[] = [
     logoDomain: 'blueguardian.com',
     communitySignal: 'Decent community presence, signal to confirm with recent payout proof.',
     commercialRelationship: 'Affiliation transparente',
-    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. Blue Guardian’s own site showed the code NOV30 (30%) on 7 November 2026, replacing HALLOWEEN; any code must visibly lower the cart subtotal, and the offer has no impact on the score.',
+    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. Blue Guardian’s own site showed the code BG25 (25%, all accounts) on 14 November 2026, replacing NOV30; any code must visibly lower the cart subtotal, and the offer has no impact on the score.',
     products: [
       product({
         id: 'blueguardian-programs',
@@ -12885,8 +12885,8 @@ export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
   ftmo: { href: FTMO_AFFILIATE_URL },
   the5ers: { href: THE5ERS_AFFILIATE_URL, code: THE5ERS_PROMO_CODE, codeSource: 'firm' },
   funderpro: { href: FUNDERPRO_AFFILIATE_URL, code: PROPRADAR_PROMO_CODE, codeSource: 'firm' },
-  'goat-funded-trader': { href: GOAT_FUNDED_TRADER_AFFILIATE_URL, code: 'FIRSTGFT', percent: 50, scope: 'new', codeSource: 'site', checkedOn: '2026-11-09' },
-  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'NOV30', percent: 30, scope: 'all', codeSource: 'site', checkedOn: '2026-11-09' },
+  'goat-funded-trader': { href: GOAT_FUNDED_TRADER_AFFILIATE_URL, code: 'FIRSTGFT', percent: 50, scope: 'new', codeSource: 'site', checkedOn: '2026-11-14' },
+  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'BG25', percent: 25, scope: 'all', codeSource: 'site', checkedOn: '2026-11-14' },
   'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
   fxify: { href: FXIFY_AFFILIATE_URL, code: FXIFY_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-14' },
   upcomers: { href: UPCOMERS_AFFILIATE_URL, code: UPCOMERS_PROMO_CODE, codeSource: 'firm', checkedOn: '2026-11-14' },

@@ -9,6 +9,7 @@ import type { PropFirm } from '../../lib/propFirms';
 import {
   priceLabel,
   payoutRiskClass,
+  listedFirms,
   propFirms,
   relationshipClass,
   reviewReliabilityClass,
@@ -264,7 +265,7 @@ export default function OutilsClient({ m, values, radarLabels, locale }: OutilsC
           </div>
         </div>
         <div className="tools-hero-panel">
-          <div><strong>{propFirms.length}</strong><span>{m.heroFirms}</span></div>
+          <div><strong>{listedFirms.length}</strong><span>{m.heroFirms}</span></div>
           <div><strong>2</strong><span>{m.heroTools}</span></div>
           <div><strong>0</strong><span>{m.heroAffiliation}</span></div>
         </div>

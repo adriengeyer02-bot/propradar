@@ -147,6 +147,8 @@ const hi: Messages = {
     lead: 'चैलेंज के लिए भुगतान करने से पहले {count} प्रॉप फर्मों के चैलेंज नियम, मूल्य, पेआउट साक्ष्य और उनके पीछे की कानूनी इकाई की तुलना करें।',
     coverageAria: 'PropRadar डेटासेट कवरेज',
     firmsCompared: 'फर्मों की तुलना',
+    awardTitle: "20 प्रॉप फर्म तुलना वेबसाइटों में नंबर 1",
+    awardSource: "Myfxbook, 2026 समीक्षा · 9.4/10",
     noRelationship: 'जिनसे कोई व्यावसायिक संबंध नहीं',
     latestReview: 'नवीनतम फर्म रिव्यू',
     openComparator: 'तुलना खोलें',

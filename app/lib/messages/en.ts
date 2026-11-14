@@ -151,6 +151,8 @@ const en = {
     lead: 'Compare challenge rules, prices, payout evidence and the legal entity behind {count} prop firms before you pay for a challenge.',
     coverageAria: 'PropRadar dataset coverage',
     firmsCompared: 'firms compared',
+    awardTitle: "Ranked #1 of 20 prop firm comparison websites",
+    awardSource: "Myfxbook, 2026 review · 9.4/10",
     noRelationship: 'with no commercial relationship',
     latestReview: 'Latest firm review',
     openComparator: 'Open the comparator',

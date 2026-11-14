@@ -147,6 +147,8 @@ const de: Messages = {
     lead: 'Vergleichen Sie Challenge-Regeln, Preise, Auszahlungsnachweise und den Rechtsträger hinter {count} Prop Firms, bevor Sie eine Challenge bezahlen.',
     coverageAria: 'Datenabdeckung von PropRadar',
     firmsCompared: 'Firmen im Vergleich',
+    awardTitle: "Platz 1 von 20 Prop-Firm-Vergleichsportalen",
+    awardSource: "Myfxbook, Ranking 2026 · 9,4/10",
     noRelationship: 'ohne Geschäftsbeziehung',
     latestReview: 'Letzte Firmenprüfung',
     openComparator: 'Zum Vergleich',
