@@ -765,3 +765,11 @@ html body .pr-hg-search input:focus, html body .pr-hg-search input:focus-visible
 .prr-zoomhint { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); margin: 0; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 85%, transparent); color: var(--muted); font-size: 12px; width: max-content; max-width: 92%; text-align: center; pointer-events: none; }
 @media (max-width: 640px) { .prr-zoomhint { display: none; } }
 .prr-stage:has(.prr-svg.is-zoomed) .prr-hud { opacity: 0.2; transition: opacity 0.2s; }
+
+/* Home hero: the globe column matches the height of the text column (desktop). */
+@media (min-width: 1100px) {
+  html body .home-v2-hero.home-v2-hero { grid-template-columns: minmax(0, 0.86fr) minmax(560px, 1.14fr); align-items: stretch; }
+  html body .pr-home-radar.pr-home-globe { container-type: size; display: flex; flex-direction: column; justify-content: center; min-height: 620px; }
+  .pr-home-globe .pr-hg { width: 100%; }
+  html body .pr-home-globe .pr-hg .prg { max-width: none; width: min(100cqw, calc(100cqh - 36px)); }
+}

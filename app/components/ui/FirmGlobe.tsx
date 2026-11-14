@@ -31,6 +31,8 @@ type Props = {
   hint: string;
   scoreLabel: string;
   zoomLabels: { group: string; in: string; out: string; reset: string };
+  /** Sphere radius as a share of the canvas (default GLOBE_R); the home hero uses a bigger sphere. */
+  sphere?: number;
 };
 
 type Vec = { x: number; y: number; z: number };
@@ -207,7 +209,7 @@ function initials(name: string) {
   return name.split(/[\s/]+/).filter(Boolean).slice(0, 2).map((word) => word[0]?.toUpperCase() ?? '').join('');
 }
 
-export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels }: Props) {
+export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels, sphere }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [hover, setHover] = useState<{ dot: RadarDot; x: number; y: number } | null>(null);
@@ -215,8 +217,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   // Mutable view state shared by the render loop and the handlers.
   const view = useRef({ yaw: -0.4, pitch: 0.24, zoom: 1, zoomTarget: 1, vyaw: 0, vpitch: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
   const [zoomLevel, setZoomLevel] = useState(1);
-  const props = useRef({ selected, dimmed, highlight, onSelect });
-  props.current = { selected, dimmed, highlight, onSelect };
+  const props = useRef({ selected, dimmed, highlight, onSelect, sphere });
+  props.current = { selected, dimmed, highlight, onSelect, sphere };
   const requestDraw = useRef<() => void>(() => undefined);
   const zoomBy = useRef<(factor: number, instant?: boolean) => void>(() => undefined);
 
@@ -435,7 +437,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const cx = size / 2;
       const cy = size / 2;
       const zoom = view.current.zoom;
-      const radius = size * GLOBE_R * zoom;
+      const radius = size * (props.current.sphere ?? GLOBE_R) * zoom;
 
       const now = performance.now();
       const unit = size / 520;
@@ -921,7 +923,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const onDouble = (event: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       const v = view.current;
-      const radius = size * GLOBE_R * v.zoom;
+      const radius = size * (props.current.sphere ?? GLOBE_R) * v.zoom;
       const x = (event.clientX - rect.left - size / 2) / radius;
       const y = -(event.clientY - rect.top - size / 2) / radius;
       if (x * x + y * y < 1) {
