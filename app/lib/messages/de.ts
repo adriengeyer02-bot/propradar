@@ -143,7 +143,7 @@ const de: Messages = {
     metaTitle: 'PropRadar: Unabhängige Prop-Firm-Bewertungen & Vergleich 2026',
     metaDescription: 'Unabhängige Prop-Firm-Bewertungen: Challenge-Preise, Regeln, Auszahlungsnachweise, Trustpilot-Status und Rechtsträger von über {count} Firmen im Vergleich. Jede Angabe mit Quelle.',
     kicker: 'Unabhängig. Belege zuerst.',
-    h1: 'Prop Firms im unabhängigen Vergleich – auf Basis von Belegen.',
+    h1: 'Unabhängige Prop-Firm-Bewertungen, verglichen auf Basis von Belegen.',
     lead: 'Vergleichen Sie Challenge-Regeln, Preise, Auszahlungsnachweise und den Rechtsträger hinter {count} Prop Firms, bevor Sie eine Challenge bezahlen.',
     coverageAria: 'Datenabdeckung von PropRadar',
     firmsCompared: 'Firmen im Vergleich',

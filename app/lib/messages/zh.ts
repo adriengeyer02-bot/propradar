@@ -143,7 +143,7 @@ const zh: Messages = {
     metaTitle: 'PropRadar：独立的自营交易公司（Prop Firm）评测与对比 2026',
     metaDescription: '独立的自营交易公司评测：对比 {count} 多家公司的考核价格、规则、出金证据、Trustpilot 状态和法律主体。每条信息都有来源。',
     kicker: '独立。证据优先。',
-    h1: '以证据为基础的独立自营交易公司评测与对比。',
+    h1: '独立的自营交易公司评测，以证据进行比较。',
     lead: '在支付考核费用之前，对比 {count} 家自营交易公司的考核规则、价格、出金证据以及背后的法律主体。',
     coverageAria: 'PropRadar 数据覆盖范围',
     firmsCompared: '家公司参与对比',

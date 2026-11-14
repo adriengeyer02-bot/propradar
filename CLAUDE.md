@@ -108,6 +108,9 @@ project doc `claude/data-audit-2026-10.md`.
    parked or serves unrelated content, check by hand first: the firm may simply
    have moved (Alpha Futures was wrongly marked stale in July 2026 because the
    wrong domain was listed). Only then set `listedDomainWarning`.
+   Every warning text must also cite an external source (Trustpilot notice,
+   trade press, registry, regulator) next to PropRadar's own check (Geyer,
+   2026-11-15: avoid any defamation risk).
 6. **Sensitive changes need Geyer's approval**: status changes, score drops of
    5+ points or moves of 10+, domain warnings, new incidents, accusation-type
    wording. The validator flags them. Open the PR and leave it unmerged.
