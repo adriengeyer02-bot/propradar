@@ -93,6 +93,7 @@ export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, ta
         hint={t.globeHint}
         scoreLabel={t.score}
         zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
+        sphere={0.43}
       />
 
       {dot ? (
