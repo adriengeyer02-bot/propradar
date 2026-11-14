@@ -179,7 +179,7 @@ export default async function RulesPage({ params }: Props) {
   const criticalCount = officialRuleAudits.reduce((sum, audit) => sum + audit.severities.filter((severity) => severity === 'Critique').length, 0);
   const compactCriticalCount = mediumSmallRuleAudits.filter((audit) => audit.severity === 'Critique').length;
   const longTailRows = propFirms
-    .filter((firm) => !coveredSlugs.has(firm.slug))
+    .filter((firm) => !coveredSlugs.has(firm.slug) && firm.status !== 'Fermée')
     .sort((a, b) => {
       if (a.status === 'Fermée' && b.status !== 'Fermée') return 1;
       if (a.status !== 'Fermée' && b.status === 'Fermée') return -1;

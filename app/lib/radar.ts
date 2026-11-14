@@ -132,8 +132,10 @@ function trustpilotText(firm: PropFirm) {
 }
 
 export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug: Map<string, string>; allBySlug?: Map<string, string> }): RadarData {
+  // Closed firms are left off the radar (Geyer, 14 Nov 2026): they are no longer a
+  // purchase option. Their files and closure records stay for the statistics pages.
   const open = firms.filter((firm) => firm.status !== 'Fermée');
-  const closed = firms.filter((firm) => firm.status === 'Fermée');
+  const closed: PropFirm[] = [];
 
   const GAP = 2.5;
   const MIN = 16;
@@ -216,7 +218,7 @@ export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug:
       closed: closedDots.length,
     },
     updated: { count: dots.filter((dot) => dot.updated).length, latest: recent?.latest ?? '' },
-    latest: firms.reduce((latest, firm) => (firm.lastReviewed > latest ? firm.lastReviewed : latest), ''),
-    total: firms.length,
+    latest: open.reduce((latest, firm) => (firm.lastReviewed > latest ? firm.lastReviewed : latest), ''),
+    total: open.length,
   };
 }

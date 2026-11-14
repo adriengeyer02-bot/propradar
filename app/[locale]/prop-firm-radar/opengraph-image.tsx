@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { propFirms } from '../../lib/propFirms';
-import { RADAR_CENTER, RADAR_ORBIT, RADAR_OUTER, buildRadar, radarPoint, radarRadius } from '../../lib/radar';
+import { RADAR_CENTER, RADAR_OUTER, buildRadar, radarPoint, radarRadius } from '../../lib/radar';
 import { Backdrop, Brand, OG, OG_SIZE, ogFonts, toneColor } from '../../lib/og/shared';
 
 export const alt = 'PropRadar radar: every tracked prop firm by market and score';
@@ -29,7 +29,6 @@ export default async function RadarShareImage() {
               ['good', radar.counts.good, 'score 75+'],
               ['watch', radar.counts.watch, '50–74'],
               ['none', radar.counts.none, 'under 50'],
-              ['risk', radar.counts.closed, 'closed'],
             ] as const).map(([tone, count, label]) => (
               <div key={label} style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontFamily: 'Archivo Display', fontSize: 40, color: toneColor(tone) }}>{count}</span>
@@ -49,10 +48,6 @@ export default async function RadarShareImage() {
           ))}
           <path d={`M${RADAR_CENTER},${RADAR_CENTER}L${RADAR_CENTER},${RADAR_CENTER - RADAR_OUTER}A${RADAR_OUTER},${RADAR_OUTER} 0 0 1 ${sweepEnd.x},${sweepEnd.y}Z`} fill={OG.accent} fillOpacity="0.14" />
           <line x1={RADAR_CENTER} y1={RADAR_CENTER} x2={sweepEnd.x} y2={sweepEnd.y} stroke={OG.accent} strokeWidth="2" />
-          <circle cx={RADAR_CENTER} cy={RADAR_CENTER} r={RADAR_ORBIT} fill="none" stroke={OG.risk} strokeOpacity="0.45" strokeWidth="1.5" strokeDasharray="2 7" />
-          {radar.closed.map((firm) => (
-            <path key={firm.slug} d={`M${firm.x - 5},${firm.y - 5}L${firm.x + 5},${firm.y + 5}M${firm.x - 5},${firm.y + 5}L${firm.x + 5},${firm.y - 5}`} stroke={OG.risk} strokeWidth="2.4" strokeLinecap="round" />
-          ))}
           {radar.dots.map((dot) => (
             <circle key={dot.slug} cx={dot.x} cy={dot.y} r={dot.size * 1.1} fill={dot.withheld ? OG.surface : toneColor(dot.tone)} stroke={toneColor(dot.tone)} strokeWidth={dot.withheld ? 2 : 0} fillOpacity={dot.withheld ? 1 : 0.9} />
           ))}

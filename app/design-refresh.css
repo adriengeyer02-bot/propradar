@@ -773,3 +773,9 @@ html body .pr-hg-search input:focus, html body .pr-hg-search input:focus-visible
   .pr-home-globe .pr-hg { width: 100%; }
   html body .pr-home-globe .pr-hg .prg { max-width: none; width: min(100cqw, calc(100cqh - 36px)); }
 }
+
+/* Radar without closed firms (14 Nov 2026): three findings, three score bands. */
+html body .pr-stats-keys.pr-radar-findings { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 760px) { html body .pr-stats-keys.pr-radar-findings { grid-template-columns: minmax(0, 1fr); } }
+html body .prr-bands { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+html body .prr-panel .prr-bands { grid-template-columns: repeat(3, minmax(0, 1fr)); }

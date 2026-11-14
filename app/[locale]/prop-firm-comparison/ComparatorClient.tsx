@@ -28,7 +28,7 @@ type PriceFilter = 'Tous' | '50' | '100' | '200';
 type DrawdownFilter = 'Tous' | 'EOD' | 'Trailing' | 'Static' | 'Hybride';
 type LegalFilter = 'Tous' | 'verified' | 'watch' | 'deep';
 
-const statusFilters: StatusFilter[] = ['Tous', 'Active', 'À surveiller', 'Fermée'];
+const statusFilters: StatusFilter[] = ['Tous', 'Active', 'À surveiller'];
 const PAGE_SIZE = 20;
 
 // Countries where at least one tracked firm has a mapped entity, most firms first.
