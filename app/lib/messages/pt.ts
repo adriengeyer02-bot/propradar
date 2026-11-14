@@ -308,7 +308,7 @@ const pt: Messages = {
     "zoomOut": "Reduzir",
     "zoomReset": "Repor o zoom",
     "radarZoom": "Zoom do radar",
-    "radarZoomHint": "Clique duplo, pinça ou Ctrl + roda para dar zoom: os pontos viram logos e depois nomes.",
+    "radarZoomHint": "Clique duplo, pinça ou roda para dar zoom: os pontos viram logos e depois nomes.",
     "globeAria": "Globo de {total} empresas abertas: a latitude é a pontuação PropRadar (75+ no norte, abaixo de 50 no sul), a longitude é o mercado. Os mesmos dados do radar.",
     "globeNorth": "Norte = pontuação mais alta · longitude = mercado",
     "visitSince": "Atualizadas desde a sua última visita ({when})",

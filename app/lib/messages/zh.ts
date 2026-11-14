@@ -259,7 +259,7 @@ const zh: Messages = {
     zoomOut: '缩小',
     zoomReset: '重置缩放',
     radarZoom: "雷达缩放",
-    radarZoomHint: "双击、双指捏合或 Ctrl + 滚轮缩放：圆点会变成标志，再显示名称。",
+    radarZoomHint: "双击、双指捏合或 滚轮缩放：圆点会变成标志，再显示名称。",
     globeAria: '{total} 家在营公司的地球仪：纬度为 PropRadar 评分（北部 75+，南部低于 50），经度为市场。数据与雷达相同。',
     globeNorth: '北 = 评分更高 · 经度 = 市场',
     visitSince: '自您上次访问以来已更新（{when}）',

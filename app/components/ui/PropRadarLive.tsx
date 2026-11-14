@@ -201,16 +201,15 @@ export default function PropRadarLive({
     return () => window.removeEventListener('keydown', onKey);
   }, [pinned]);
 
-  // Wheel: zoom with ctrl/pinch-to-zoom on a trackpad, or freely once zoomed in
-  // (a plain wheel over the radar still scrolls the page at full view).
+  // Wheel: zooms straight away, like the globe (trackpad pinch arrives as ctrl + wheel).
   useEffect(() => {
     const svg = svgRef.current;
     if (!svg || variant !== 'full') return;
     const onWheel = (event: WheelEvent) => {
-      if (!event.ctrlKey && viewRef.current.z <= 1) return;
       event.preventDefault();
       const p = toSvg(event);
-      zoomAt(Math.exp(-event.deltaY * (event.ctrlKey ? 0.01 : 0.0025)), p.x, p.y);
+      const dy = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? 400 : 1);
+      zoomAt(Math.exp(-dy * (event.ctrlKey ? 0.01 : 0.0025)), p.x, p.y);
     };
     svg.addEventListener('wheel', onWheel, { passive: false });
     return () => svg.removeEventListener('wheel', onWheel);
