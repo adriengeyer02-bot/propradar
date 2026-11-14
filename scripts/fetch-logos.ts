@@ -25,10 +25,33 @@ const OUT = 'logo-raw';
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 8;
 /** Logo images read on the official site (via a branding scan) that the generic scan misses. */
+// Extra candidates: the firm's own logo files, or its logo on its claimed Trustpilot profile.
 const EXTRA_LOGOS: Record<string, string[]> = {
-  'funder-trading': ['https://fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq-20.png'],
+  'algo-forex-funds': ['https://consumersiteimages.trustpilot.net/business-units/660cb2ed4f9d2754577ca618-198x149-2x.jpg'],
+  'blueberry-funded': ['https://blueberryfunded.com/wp-content/uploads/2025/07/BBF-Favicon-1.png', 'https://consumersiteimages.trustpilot.net/business-units/66a2c96e4bade719bbb261cb-198x149-2x.jpg'],
+  'fast-track-trading': ['https://consumersiteimages.trustpilot.net/business-units/66527b21598c1c220e38f60b-198x149-2x.jpg'],
+  'fidelcrest': ['https://consumersiteimages.trustpilot.net/business-units/5f523d06c358dd00014b8f46-198x149-2x.jpg'],
+  'fundedlions': ['https://consumersiteimages.trustpilot.net/business-units/65a901e73582cedc26275320-198x149-2x.jpg'],
+  'funder-trading': ['https://fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq-20.png', 'https://consumersiteimages.trustpilot.net/business-units/64e7a2299f297316de58cfa0-198x149-2x.jpg'],
+  'fundings4u': ['https://consumersiteimages.trustpilot.net/business-units/6666533cc8e0a3255da1a914-198x149-2x.jpg'],
+  'funds-for-traders': ['https://consumersiteimages.trustpilot.net/business-units/65438a5a2f3c7574eedc49b8-198x149-2x.jpg'],
+  'fxci': ['https://consumersiteimages.trustpilot.net/business-units/64b7b1d39abc8aaa57e634a9-198x149-2x.jpg'],
+  'fxrk': ['https://consumersiteimages.trustpilot.net/business-units/66e9ebe6c3677f772318361d-198x149-2x.jpg'],
+  'getcryptofunded': ['https://consumersiteimages.trustpilot.net/business-units/67757a5ba908ff6c9daa337c-198x149-2x.jpg'],
+  'glow-node': ['https://consumersiteimages.trustpilot.net/business-units/628419c98b0c428e7f3889ce-198x149-2x.jpg'],
+  'klein-funding-crypto': ['https://consumersiteimages.trustpilot.net/business-units/651d07eaf72c1f4c5c23d4f2-198x149-2x.jpg'],
+  'leveled-up-society': ['https://consumersiteimages.trustpilot.net/business-units/6272b38871558c5428edcdee-198x149-2x.jpg'],
+  'mifunder': ['https://consumersiteimages.trustpilot.net/business-units/65473fcf92f5c6062d175af2-198x149-2x.jpg'],
   'moneta-funded': ['https://www.monetafunded.com/wp-content/themes/Moneta/images/logo.svg'],
-  'sure-leverage': ['https://sureleveragefunding.com/sureLeverageFunded-Favicon.png'],
+  'myfxcapital': ['https://consumersiteimages.trustpilot.net/business-units/5fa934b249970d0001a88ab0-198x149-2x.jpg'],
+  'next-step-funded': ['https://consumersiteimages.trustpilot.net/business-units/63cfa85ee84db43150abf02e-198x149-2x.jpg'],
+  'one-of-one-funding': ['https://consumersiteimages.trustpilot.net/business-units/650da9b526a7a9a2fadd2509-198x149-2x.jpg'],
+  'optimal-traders': ['https://consumersiteimages.trustpilot.net/business-units/623743bf88982b0e57974c89-198x149-2x.jpg'],
+  'purdia-capital': ['https://consumersiteimages.trustpilot.net/business-units/63bbf8c692fe59d1ce884da8-198x149-2x.jpg'],
+  'rocket21-challenge': ['https://consumersiteimages.trustpilot.net/business-units/62e309294a216fae180f1fd3-198x149-2x.jpg'],
+  'sure-leverage': ['https://sureleveragefunding.com/sureLeverageFunded-Favicon.png', 'https://consumersiteimages.trustpilot.net/business-units/66d25135f3f7fe4eab39524f-198x149-2x.jpg'],
+  'the-forex-funder': ['https://consumersiteimages.trustpilot.net/business-units/627c810e86d791adf5986fba-198x149-2x.jpg'],
+  'tribe-funded': ['https://consumersiteimages.trustpilot.net/business-units/68c1c1909508ecdefef16492-198x149-2x.jpg'],
 };
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36';
 

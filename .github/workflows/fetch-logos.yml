@@ -22,6 +22,8 @@ jobs:
           node-version: 20
       - run: npm install --no-audit --no-fund
       - run: npx tsx scripts/fetch-logos.ts
+        env:
+          ONLY: algo-forex-funds,blueberry-funded,fast-track-trading,fidelcrest,fundedlions,funder-trading,fundings4u,funds-for-traders,fxci,fxrk,getcryptofunded,glow-node,klein-funding-crypto,leveled-up-society,mifunder,myfxcapital,next-step-funded,one-of-one-funding,optimal-traders,purdia-capital,rocket21-challenge,sure-leverage,the-forex-funder,tribe-funded
       - name: Push raw candidates to agent/logo-raw
         run: |
           mv logo-raw /tmp/logo-raw
