@@ -7,6 +7,7 @@ import {
   auditStatusClass,
   hasReviewEvidence,
   payoutRiskClass,
+  listedFirms,
   propFirms,
   regulatoryRiskClass,
   reviewReliabilityClass,
@@ -159,7 +160,7 @@ export default async function TrustpilotGuidePage({ params }: Props) {
           </div>
         </div>
         <dl className="pr-hero-stats">
-          <div><dt>{tr.statTracked}</dt><dd>{propFirms.length}</dd></div>
+          <div><dt>{tr.statTracked}</dt><dd>{listedFirms.length}</dd></div>
           <div><dt>{tr.statWithheld}</dt><dd>{withheldOpen.length}</dd></div>
           <div><dt>{tr.statStrong}</dt><dd>{strongReliabilityCount}</dd></div>
           <div><dt>{tr.statDeep}</dt><dd>{deepSourceCount}</dd></div>

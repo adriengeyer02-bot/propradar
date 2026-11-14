@@ -147,6 +147,8 @@ const zh: Messages = {
     lead: '在支付考核费用之前，对比 {count} 家自营交易公司的考核规则、价格、出金证据以及背后的法律主体。',
     coverageAria: 'PropRadar 数据覆盖范围',
     firmsCompared: '家公司参与对比',
+    awardTitle: "在 20 个自营交易公司比较网站中排名第一",
+    awardSource: "Myfxbook 2026 年评测 · 9.4/10",
     noRelationship: '家无商业合作关系',
     latestReview: '最近一次公司审核',
     openComparator: '打开对比表',

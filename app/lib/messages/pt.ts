@@ -147,6 +147,8 @@ const pt: Messages = {
     "lead": "Compare as regras dos challenges, os preços, as provas de pagamento e a entidade jurídica por trás de {count} prop firms antes de pagar um challenge.",
     "coverageAria": "Cobertura de dados do PropRadar",
     "firmsCompared": "empresas comparadas",
+    "awardTitle": "Nº 1 entre 20 comparadores de prop firms",
+    "awardSource": "Myfxbook, ranking 2026 · 9,4/10",
     "noRelationship": "sem relação comercial",
     "latestReview": "Última revisão",
     "openComparator": "Abrir o comparador",

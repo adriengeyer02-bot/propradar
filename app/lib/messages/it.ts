@@ -147,6 +147,8 @@ const it: Messages = {
     lead: 'Confronta regole delle challenge, prezzi, prove di pagamento e la società dietro {count} prop firm prima di pagare una challenge.',
     coverageAria: 'Copertura dei dati PropRadar',
     firmsCompared: 'firm a confronto',
+    awardTitle: "N. 1 su 20 siti di confronto di prop firm",
+    awardSource: "Myfxbook, classifica 2026 · 9,4/10",
     noRelationship: 'senza rapporti commerciali',
     latestReview: 'Ultima revisione',
     openComparator: 'Apri il confronto',

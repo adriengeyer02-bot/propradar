@@ -310,7 +310,7 @@
       ]
     },
     "aqua-funded": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -324,10 +324,40 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (\"This company’s rating is unavailable due to a breach of our guidelines.\" (1,209 reviews listed)). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/aquafunded.com"
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Official terms (updated 26 March 2025) re-read: pages \"operated by Aqua Funded FZCO\" (IFZA Business Park, DDP, Premises No. 35882-001, Dubai Silicon Oasis); AquaFunded LTD, \"a Saint Lucia Corporation\", \"provides the simulated trading services\". The terms print its company number as \"2004-00597\" and give a London-style postcode (SW18 1TA) in its Saint Lucia address; both are quoted as printed.",
+          "source": "https://www.aquafunded.com/legal/terms-and-conditions",
+          "fields": [
+            "entities"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/aquafunded.com)."
+      ],
+      "addSources": [
+        {
+          "label": "AquaFunded terms and conditions",
+          "url": "https://www.aquafunded.com/legal/terms-and-conditions"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Aqua Funded FZCO",
+          "jurisdiction": "Dubai, United Arab Emirates",
+          "registrationNumber": "IFZA premises no. 35882-001",
+          "registeredAddress": "IFZA Business Park, DDP, Dubai Silicon Oasis, Dubai, United Arab Emirates",
+          "role": "Operates the website and publishes its content (official terms)."
+        },
+        {
+          "name": "AquaFunded LTD",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2004-00597 (as printed in the terms)",
+          "registeredAddress": "The Sotheby Building, Ground Floor, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia (terms add \"SW18 1TA\")",
+          "role": "Provides the simulated trading services (official terms)."
+        }
       ]
     },
     "audacity-capital": {
@@ -753,11 +783,60 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Official terms re-read: Bright Global Computer Systems Software Design FZCO (\"Bright Global FZCO\", Dubai Silicon Oasis) is \"the contracting party\" for all services except futures; futures services are \"offered solely by BrightFunded LLC\" (Wyoming; 2000 Cedar Bend Dr, Austin TX). The terms also list BrightFunded Ltd. (Saint Lucia, 2025-00358), Bright Transact Ltd. (Cyprus, HE 478945) and Bright Transact US Ltd. (Cyprus, HE 500567), roles not stated.",
+          "source": "https://brightfunded.com/terms-and-conditions",
+          "fields": [
+            "entities"
+          ]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/brightfunded.com)."
+      ],
+      "addSources": [
+        {
+          "label": "BrightFunded terms and conditions",
+          "url": "https://brightfunded.com/terms-and-conditions"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Bright Global Computer Systems Software Design FZCO (Bright Global FZCO)",
+          "jurisdiction": "Dubai, United Arab Emirates",
+          "registeredAddress": "Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates",
+          "role": "Contracting party for all simulated trading and evaluation services other than futures."
+        },
+        {
+          "name": "BrightFunded LLC",
+          "jurisdiction": "United States, Wyoming",
+          "registeredAddress": "2000 Cedar Bend Dr, Austin, TX 78758, United States",
+          "role": "Sole contracting party for futures services."
+        },
+        {
+          "name": "BrightFunded Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00358",
+          "registeredAddress": "Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Listed in the terms; role not stated."
+        },
+        {
+          "name": "Bright Transact Ltd.",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE 478945",
+          "registeredAddress": "228 Archiepiskopou Makariou III, 3030 Limassol, Cyprus",
+          "role": "Listed in the terms; role not stated."
+        },
+        {
+          "name": "Bright Transact US Ltd.",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE 500567",
+          "registeredAddress": "228 Archiepiskopou Makariou III, 3030 Limassol, Cyprus",
+          "role": "Listed in the terms; role not stated."
+        }
       ]
     },
     "bulenox": {
@@ -1267,7 +1346,7 @@
       ]
     },
     "ftmo": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 56103,
@@ -1309,6 +1388,14 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Legal entities re-read on the official contact page and the Australian terms. FTMO s.r.o. (ID 09213651, VAT CZ699005540, Purkyňova 2121/3, Prague), FTMO Global Markets (Mauritius, ID C187370, \"License number: GB21027119\") and JV Prop Corporation (1209 Orange Street, Wilmington DE) are listed on the contact page; the Australian platform is \"offered by VRGK Tech Pty Ltd (trading as FTMO Australia)\", ACN 640 619 521, AFSL 525757. The former entry \"FTMO Trading Global s.r.o.\" was not found on any official page and is removed. OANDA states that FTMO completed the acquisition of OANDA Global Corporation on 1 December 2025.",
+          "source": "https://ftmo.com/en/contact/",
+          "fields": [
+            "entities"
+          ]
         }
       ],
       "addSources": [
@@ -1319,6 +1406,52 @@
         {
           "label": "FTMO FAQ: how do I withdraw my profits (official)",
           "url": "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/"
+        },
+        {
+          "label": "FTMO contact page (company information)",
+          "url": "https://ftmo.com/en/contact/"
+        },
+        {
+          "label": "FTMO Australia terms (VRGK Tech Pty Ltd)",
+          "url": "https://ftmo.com/au/terms-and-conditions/"
+        },
+        {
+          "label": "OANDA press release: OANDA acquired by FTMO",
+          "url": "https://www.oanda.com/group/press-release/oanda-acquired-by-ftmo/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "FTMO s.r.o.",
+          "jurisdiction": "Czech Republic",
+          "registrationNumber": "ID 09213651 (VAT CZ699005540)",
+          "registeredAddress": "Purkyňova 2121/3, 110 00 Prague, Czech Republic",
+          "role": "First company listed on the official contact page."
+        },
+        {
+          "name": "FTMO Global Markets",
+          "jurisdiction": "Mauritius",
+          "registrationNumber": "ID C187370; licence number GB21027119",
+          "registeredAddress": "Silicon Avenue, 40 Cybercity, The Catalyst, Ebene 72201, Mauritius",
+          "role": "Listed on the official contact page; role not stated there."
+        },
+        {
+          "name": "JV Prop Corporation",
+          "jurisdiction": "United States, Delaware",
+          "registeredAddress": "1209 Orange Street, Wilmington, DE 19801, United States",
+          "role": "Listed on the official contact page; role not stated there."
+        },
+        {
+          "name": "VRGK Tech Pty Ltd (trading as FTMO Australia)",
+          "jurisdiction": "Australia",
+          "registrationNumber": "ACN 640 619 521; AFSL 525757",
+          "registeredAddress": "Level 24, Three International Towers, 300 Barangaroo Avenue, Sydney NSW 2000, Australia",
+          "role": "Offers the FTMO demo trading platform in Australia (official Australian terms)."
+        },
+        {
+          "name": "OANDA Global Corporation (OANDA group)",
+          "jurisdiction": "Group with regulated entities in the US, Canada, UK, EU, Asia-Pacific and BVI",
+          "role": "Broker group acquired by FTMO, completed on 1 December 2025 (OANDA press release); run as a standalone business."
         }
       ]
     },
@@ -2093,12 +2226,50 @@
           "fields": [
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "The current FXIFY agreement names \"FXIFY Solutions Limited (the 'Prop Company')\", \"a registered company in the United Kingdom (Company No. 14451720)\", registered office 142 Central Street, Clerkenwell, London EC1V 8AR, operating as a payment agent. FXIFY Markets (the broker brand) is operated by Prime Intermarket Group Eurasia Ltd, Mauritius FSC licence GB24204066. The Labuan entity previously listed does not appear on the agreement; it is kept as \"previously listed\" until re-read.",
+          "source": "https://fxify.com/agreement/",
+          "fields": [
+            "entities"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "FXIFY Lightning Challenge (official)",
           "url": "https://fxify.com/programs/lightning-challenge/"
+        },
+        {
+          "label": "FXIFY agreement (FXIFY Solutions Limited)",
+          "url": "https://fxify.com/agreement/"
+        },
+        {
+          "label": "FXIFY Markets (Prime Intermarket Group Eurasia Ltd)",
+          "url": "https://markets.fxify.com/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "FXIFY Solutions Limited",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "14451720",
+          "registeredAddress": "142 Central Street, Clerkenwell, London EC1V 8AR, United Kingdom",
+          "role": "\"Prop Company\" party to the FXIFY agreement, operating as a payment agent."
+        },
+        {
+          "name": "Prime Intermarket Group Eurasia Ltd",
+          "jurisdiction": "Mauritius",
+          "registrationNumber": "FSC Investment Dealer licence GB24204066",
+          "registeredAddress": "1st Floor, River Court, 6 St Denis Street, Port Louis, Mauritius",
+          "role": "Owns and operates FXIFYMarkets.com (broker brand), per markets.fxify.com."
+        },
+        {
+          "name": "FXIFY Markets LTD",
+          "jurisdiction": "Labuan F.T., Malaysia",
+          "registeredAddress": "No.1-23A, First Floor, Paragon, Jalan Tun Mustapha, 87008 Labuan F.T. Malaysia",
+          "role": "Previously listed from the public footer; not named in the current agreement (recheck)."
         }
       ]
     },
@@ -2121,11 +2292,46 @@
           "date": "2026-11-11",
           "summary": "New program: GOAT Funded Predictions, a one-step evaluation for prediction-market trading, opened on 19 Oct 2026 (press release of 26 Oct 2026). Price and split not stated in the release.",
           "source": "https://natlawreview.com/press-releases/goat-funded-trader-launches-goat-funded-predictions-trading-program"
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Official terms re-read: Wishes Tower International Limited (Hong Kong, company number 76428795) is the \"Company\", now at Room 2007, 20/F, Futura Plaza, 111-113 How Ming Street, Kwun Tong; Goat Funded LTD (Saint Lucia, company number 2025-00240) \"provides the simulated trading services\"; payments \"are processed by Odeonpay ALE S.R.L\" (Paysagi) as Merchant of Record.",
+          "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+          "fields": [
+            "entities"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
+      ],
+      "addSources": [
+        {
+          "label": "GOAT Funded Trader terms and conditions",
+          "url": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Wishes Tower International Limited",
+          "jurisdiction": "Hong Kong",
+          "registrationNumber": "76428795",
+          "registeredAddress": "Room 2007, 20/F, Futura Plaza, 111-113 How Ming Street, Kwun Tong, Hong Kong",
+          "role": "The \"Company\" in the terms; operates under the Goat Funded Trader trade name."
+        },
+        {
+          "name": "Goat Funded LTD",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00240",
+          "registeredAddress": "Ground Floor, The Sotheby Building, Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Provides the simulated trading services (official disclaimer)."
+        },
+        {
+          "name": "Odeonpay ALE S.R.L (\"Paysagi\")",
+          "jurisdiction": "Not stated",
+          "role": "Payment processor and Merchant of Record named in the terms."
+        }
       ]
     },
     "hantec-trader": {
@@ -2822,23 +3028,51 @@
       ]
     },
     "myforexfunds": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-28",
           "summary": "Source added: Finance Magnates reported on 14 May 2025 that a US federal judge dismissed the CFTC complaint against Traders Global Group (My Forex Funds' parent) with prejudice and sanctioned the CFTC. No sourced payout incident is on file for the current period, so the payout risk is shown as not assessed.",
           "source": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Finance Magnates reported on 28 September 2026 that Traders Global sold only the MyForexFunds/MFF brand, the myforexfunds.com domain and the social accounts to Dubai-based Global Solutions, led by former MFF operations director Haider Raza (deal closed 1 August 2026); Global Solutions \"has not assumed any liabilities or obligations of Traders Global\", which handles pending payouts under a service agreement. On 21 October 2026 it reported an \"Evolution\" program: \"The program launches on November 23, 2026.\" Status unchanged until the offer is live and read.",
+          "source": "https://www.financemagnates.com/forex/breaking-myforexfunds-brand-assets-sold-to-dubai-based-firm/",
+          "fields": [
+            "entities"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "Finance Magnates: court dismisses CFTC case against My Forex Funds' parent (14 May 2025)",
           "url": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/"
+        },
+        {
+          "label": "Finance Magnates: MyForexFunds brand assets sold (28 Sep 2026)",
+          "url": "https://www.financemagnates.com/forex/breaking-myforexfunds-brand-assets-sold-to-dubai-based-firm/"
+        },
+        {
+          "label": "Finance Magnates: MyForexFunds Evolution program (21 Oct 2026)",
+          "url": "https://www.financemagnates.com/forex/myforexfunds-unveils-evolution-hitting-2-drawdown-gets-you-demoted-to-intern/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Traders Global Group",
+          "jurisdiction": "Canada",
+          "role": "Former operator; kept pending trader payouts, handled through Global Solutions under a service agreement (Finance Magnates, 28 Sep 2026)."
+        },
+        {
+          "name": "Global Solutions",
+          "jurisdiction": "Dubai, United Arab Emirates",
+          "role": "Bought the MyForexFunds/MFF brand, domain and social accounts (closed 1 Aug 2026); CEO Haider Raza; no liabilities assumed (Finance Magnates)."
         }
       ]
     },
     "myfundedfutures": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.9,
         "trustpilotReviewCount": 22813,
@@ -2870,12 +3104,36 @@
           "fields": [
             "drawdownType"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Official terms re-read: the \"Company\" is MyFunded Futures, LLC; Texas law governs, with courts in Collin County, Texas. The footer adds that \"MyFunded Perpetuals is offered by Funding Perpetuals Holdings, Inc., a company separate from MyFunded Futures, LLC.\"",
+          "source": "https://myfundedfutures.com/terms",
+          "fields": [
+            "entities"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "MyFundedFutures Rapid plan (official)",
           "url": "https://myfundedfutures.com/plans/rapid"
+        },
+        {
+          "label": "MyFundedFutures terms",
+          "url": "https://myfundedfutures.com/terms"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "MyFunded Futures, LLC",
+          "jurisdiction": "United States (Texas law governs; state of formation not stated)",
+          "role": "The \"Company\" in the official terms."
+        },
+        {
+          "name": "Funding Perpetuals Holdings, Inc.",
+          "jurisdiction": "Not stated",
+          "role": "Offers MyFunded Perpetuals, \"a company separate from MyFunded Futures, LLC\"."
         }
       ]
     },
@@ -5889,7 +6147,7 @@
       ]
     },
     "fxci": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -5909,6 +6167,14 @@
             "profitSplit",
             "eaAllowed"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Ownership fact added: OneFunded announced on 13 November 2025 that it acquired the FXCI brand and that \"FXCI traders will seamlessly transition to the OneFunded platform\". The official fxci.com domain failed to resolve in PropRadar's checks of 12–14 November 2026; to recheck before any status change. (OneFunded is a PropRadar affiliate; this has no effect on either score.)",
+          "source": "https://www.newsfilecorp.com/release/274356/OneFunded-Acquires-FXCI-to-Accelerate-Global-Leadership-in-Prop-Trading",
+          "fields": [
+            "entities"
+          ]
         }
       ],
       "set": {
@@ -5922,6 +6188,10 @@
         {
           "label": "FXCI EAs and HFT bots (official help)",
           "url": "https://help.fxci.com/are-eas-and-hft-bots-allowed/"
+        },
+        {
+          "label": "OneFunded press release: acquisition of FXCI (13 Nov 2025)",
+          "url": "https://www.newsfilecorp.com/release/274356/OneFunded-Acquires-FXCI-to-Accelerate-Global-Leadership-in-Prop-Trading"
         }
       ]
     },
