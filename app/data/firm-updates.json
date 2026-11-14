@@ -133,7 +133,7 @@
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-23",
@@ -165,6 +165,14 @@
           "fields": [
             "trustpilotRating",
             "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Dated incident added: Finance Magnates reported on 13 November 2026 that \"Alpha Futures closed its Premium Plan in July\" after NinjaTrader terminated the partnership, \"with accounts refunded and pending payouts beyond those already paid not honoured\"; \"The firm continues with its other plans.\"",
+          "source": "https://www.financemagnates.com/forex/the-49-challenge-problem-are-futures-prop-margins-meeting-the-exit-door/",
+          "fields": [
+            "incidents"
           ]
         }
       ],
@@ -249,7 +257,14 @@
         {
           "label": "Alpha Futures Zero plan (official)",
           "url": "https://alpha-futures.com/product/zero"
+        },
+        {
+          "label": "Finance Magnates: futures prop margins and closures (13 Nov 2026)",
+          "url": "https://www.financemagnates.com/forex/the-49-challenge-problem-are-futures-prop-margins-meeting-the-exit-door/"
         }
+      ],
+      "addIncidents": [
+        "Finance Magnates reported on 2026-11-13 that Alpha Futures closed its Premium Plan in July 2026 after NinjaTrader terminated the partnership, \"with accounts refunded and pending payouts beyond those already paid not honoured\"; the firm continues its other plans."
       ]
     },
     "apex-trader-funding": {
@@ -6481,6 +6496,134 @@
           "source": "https://www.trustpilot.com/review/lvlupfutures.com",
           "fields": [
             "trustpilotRating"
+          ]
+        }
+      ]
+    },
+    "traddoo": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "listedDomainWarning": "The listed domain traddoo.com redirected to expireddomains.com when PropRadar's monitor checked it on 2026-11-14, after being unreachable. PropRadar found no new official domain or relaunch announcement. Do not buy through any site using this name without confirming its operator."
+      },
+      "addSources": [
+        {
+          "label": "Finance Magnates: Traddoo suspends sales to new clients (11 Sep 2024)",
+          "url": "https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-temporarily-suspends-access-for-new-clients/"
+        },
+        {
+          "label": "PropRadar domain monitor, 14 Nov 2026",
+          "url": "https://github.com/adriengeyer02-bot/propradar/issues/4"
+        }
+      ],
+      "addIncidents": [
+        "Finance Magnates reported on 2024-09-11 that Traddoo was \"temporarily suspending challenge sales to new clients\"."
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Domain warning and dated incident. PropRadar's domain monitor found on 14 November 2026 that traddoo.com redirects to expireddomains.com (it had been unreachable before). Trustpilot's latest Traddoo review is dated 29 May 2025. Finance Magnates reported on 11 September 2024 that Traddoo was \"temporarily suspending challenge sales to new clients\". No relaunch or new domain was found.",
+          "source": "https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-temporarily-suspends-access-for-new-clients/",
+          "fields": [
+            "listedDomainWarning",
+            "incidents"
+          ]
+        }
+      ]
+    },
+    "trade-amber": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "listedDomainWarning": "The listed domain tradeamber.com did not resolve when PropRadar checked it on 12–14 November 2026, and Trustpilot says the company's website has closed. PropRadar found no new official domain."
+      },
+      "addSources": [
+        {
+          "label": "Trustpilot: Trade Amber (website closed notice)",
+          "url": "https://www.trustpilot.com/review/tradeamber.com"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Domain warning: tradeamber.com did not resolve in PropRadar's checks of 12–14 November 2026, and Trustpilot states: \"it's not possible to leave a review here anymore because the company's website has closed\" (latest review 17 March 2024). No new official domain found.",
+          "source": "https://www.trustpilot.com/review/tradeamber.com",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ]
+    },
+    "purdia-capital": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "officialWebsite": "https://purdia.com/"
+      },
+      "addSources": [
+        {
+          "label": "Purdia Capital official site",
+          "url": "https://purdia.com/"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Official domain corrected: the listed purdiacapital.com did not resolve on 12–14 November 2026, while purdia.com loads with the title \"Purdia Capital — Transparent Proprietary Trading\" and sells evaluations; Trustpilot's \"Purdia Capital LLC\" profile links purdia.com.",
+          "source": "https://purdia.com/",
+          "fields": [
+            "officialWebsite"
+          ]
+        }
+      ]
+    },
+    "klein-funding-crypto": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "officialWebsite": "https://kleinfunding.com/"
+      },
+      "addSources": [
+        {
+          "label": "Klein Funding official site",
+          "url": "https://kleinfunding.com/"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Official domain corrected: the listed kleinfundingcrypto.com did not resolve on 12–14 November 2026, while kleinfunding.com loads as \"Klein Funding\" (\"Trade crypto like on Bybit with Klein Funding … Start your evaluation today\").",
+          "source": "https://kleinfunding.com/",
+          "fields": [
+            "officialWebsite"
+          ]
+        }
+      ]
+    },
+    "quantec-trading-capital": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "listedDomainWarning": "Neither quantectradingcapital.com (no DNS) nor quantectrading.com (SSL error 526) served the firm's site when PropRadar checked on 12–14 November 2026. PropRadar found no new official domain."
+      },
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Domain warning: the listed quantectradingcapital.com did not resolve on 12–14 November 2026, and quantectrading.com (the domain on Quantec's Trustpilot profile) returned \"526: Invalid SSL certificate\" on 14 November 2026. Trustpilot shows no review since 6 February 2025. No relaunch or new domain found.",
+          "source": "https://www.trustpilot.com/review/quantectrading.com",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ]
+    },
+    "limitless-funding": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "listedDomainWarning": "limitlessfunding.com was parked and limitlessfunding.io redirected to google.com when PropRadar checked on 12–14 November 2026. PropRadar found no current official site."
+      },
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Domain warning: the listed limitlessfunding.com was parked on 12–13 November 2026, and limitlessfunding.io (the domain on its Trustpilot profile, last review 3 December 2024) redirected to google.com on 14 November 2026. No new domain found.",
+          "source": "https://www.trustpilot.com/review/limitlessfunding.io",
+          "fields": [
+            "listedDomainWarning"
           ]
         }
       ]
