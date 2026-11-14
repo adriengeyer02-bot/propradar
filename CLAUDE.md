@@ -102,8 +102,8 @@ project doc `claude/data-audit-2026-10.md`.
    (mention counts, payout totals, review counts). If you could not read the
    number, leave the field unchanged.
 4. **Affiliation never moves a score.** FTMO, The5ers, FunderPro, GOAT Funded
-   Trader, Blue Guardian, E8 Markets and OneFunded are affiliates: hold them
-   to the same standard.
+   Trader, Blue Guardian, E8 Markets, OneFunded and FXIFY are affiliates: hold
+   them to the same standard.
 5. **Domain changes.** If a listed official domain redirects elsewhere, is
    parked or serves unrelated content, check by hand first: the firm may simply
    have moved (Alpha Futures was wrongly marked stale in July 2026 because the

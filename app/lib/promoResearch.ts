@@ -1,6 +1,8 @@
 import {
   BLUE_GUARDIAN_AFFILIATE_URL,
   E8_AFFILIATE_URL,
+  FXIFY_AFFILIATE_URL,
+  FXIFY_PROMO_CODE,
   FUNDERPRO_AFFILIATE_URL,
   GOAT_FUNDED_TRADER_AFFILIATE_URL,
   ONEFUNDED_PROMO_CODE,
@@ -48,6 +50,25 @@ export type PromoDeal = {
 };
 
 const allPromoDeals: PromoDeal[] = [
+  {
+    slug: 'fxify',
+    label: 'Transparent partner code',
+    title: 'FXIFY partner code FXIFY0EVDNU (25% on all programs according to FXIFY)',
+    code: FXIFY_PROMO_CODE,
+    value: '25%',
+    category: 'affiliate',
+    proofLevel: 'PropRadar affiliate',
+    availability: 'Verify at checkout',
+    validity: 'Code issued to PropRadar by FXIFY, received on 14 November 2026; no end date stated.',
+    eligibility: 'All FXIFY programs, according to FXIFY.',
+    sourceUrl: FXIFY_AFFILIATE_URL,
+    sourceLabel: 'FXIFY checkout + PropRadar affiliate link',
+    sourceNote: 'FXIFY gave PropRadar the code FXIFY0EVDNU (25% off all programs). On 2026-11-14 the official home page showed FUNDED25 (25% off + 2 free add-ons, excl. Instant Lite, expires 24 November 2026) and ONESTEP35 (35% off One Phase, new traders, expires 31 December 2026).',
+    consumerVerdict: 'Same percentage as the public FUNDED25 sale, which adds 2 free add-ons until 24 November 2026; new traders buying One Phase get more with ONESTEP35. Compare at checkout.',
+    caveats: ['FUNDED25 adds 2 free add-ons until 24 November 2026', 'ONESTEP35: 35% on One Phase for new traders', 'Partner code: PropRadar may receive a commission; no impact on the score'],
+    bestFor: ['FXIFY', 'forex', 'all programs'],
+    checkoutTip: 'Try FXIFY0EVDNU, FUNDED25 and ONESTEP35 on your cart and keep the lowest total.',
+  },
   {
     slug: 'e8-markets',
     label: 'Official code + affiliate',
