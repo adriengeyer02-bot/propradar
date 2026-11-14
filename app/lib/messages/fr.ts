@@ -258,6 +258,8 @@ const fr: Messages = {
     zoomIn: 'Zoomer',
     zoomOut: 'Dézoomer',
     zoomReset: 'Réinitialiser le zoom',
+    radarZoom: "Zoom du radar",
+    radarZoomHint: "Double-clic, pincement ou Ctrl + molette pour zoomer : les billes deviennent des logos, puis des noms.",
     globeAria: 'Globe de {total} firmes ouvertes : la latitude est le score PropRadar (75+ au nord, moins de 50 au sud), la longitude est le marché. Mêmes données que le radar.',
     globeNorth: 'Nord = score plus élevé · longitude = marché',
     visitSince: 'Mises à jour depuis votre dernière visite ({when})',

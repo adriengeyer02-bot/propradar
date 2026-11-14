@@ -307,6 +307,8 @@ const ja: Messages = {
     "zoomIn": "拡大",
     "zoomOut": "縮小",
     "zoomReset": "ズームをリセット",
+    "radarZoom": "レーダーのズーム",
+    "radarZoomHint": "ダブルクリック、ピンチ、または Ctrl + ホイールでズーム：点がロゴに、さらに名前に変わります。",
     "globeAria": "営業中の {total} 社のグローブ：緯度は PropRadar スコア（北が 75 以上、南が 50 未満）、経度は市場。レーダーと同じデータです。",
     "globeNorth": "北 = 高スコア · 経度 = 市場",
     "visitSince": "前回の訪問以降に更新（{when}）",

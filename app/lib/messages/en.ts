@@ -262,6 +262,8 @@ const en = {
     zoomIn: 'Zoom in',
     zoomOut: 'Zoom out',
     zoomReset: 'Reset zoom',
+    radarZoom: "Radar zoom",
+    radarZoomHint: "Double-click, pinch or Ctrl + scroll to zoom: dots turn into logos, then names.",
     globeAria: 'Globe of {total} open firms: latitude is the PropRadar score (75+ in the north, under 50 in the south), longitude is the market. Same data as the radar.',
     globeNorth: 'North = higher score · longitude = market',
     visitSince: 'Updated since your last visit ({when})',
