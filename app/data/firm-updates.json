@@ -6281,6 +6281,82 @@
           ]
         }
       ]
+    },
+    "purdia-capital": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "officialWebsite": "https://purdia.com/"
+      },
+      "addSources": [
+        {
+          "label": "Purdia Capital official site",
+          "url": "https://purdia.com/"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Official domain corrected: the listed purdiacapital.com did not resolve on 12–14 November 2026, while purdia.com loads with the title \"Purdia Capital — Transparent Proprietary Trading\" and sells evaluations; Trustpilot's \"Purdia Capital LLC\" profile links purdia.com.",
+          "source": "https://purdia.com/",
+          "fields": [
+            "officialWebsite"
+          ]
+        }
+      ]
+    },
+    "klein-funding-crypto": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "officialWebsite": "https://kleinfunding.com/"
+      },
+      "addSources": [
+        {
+          "label": "Klein Funding official site",
+          "url": "https://kleinfunding.com/"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Official domain corrected: the listed kleinfundingcrypto.com did not resolve on 12–14 November 2026, while kleinfunding.com loads as \"Klein Funding\" (\"Trade crypto like on Bybit with Klein Funding … Start your evaluation today\").",
+          "source": "https://kleinfunding.com/",
+          "fields": [
+            "officialWebsite"
+          ]
+        }
+      ]
+    },
+    "quantec-trading-capital": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "listedDomainWarning": "Neither quantectradingcapital.com (no DNS) nor quantectrading.com (SSL error 526) served the firm's site when PropRadar checked on 12–14 November 2026. PropRadar found no new official domain."
+      },
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Domain warning: the listed quantectradingcapital.com did not resolve on 12–14 November 2026, and quantectrading.com (the domain on Quantec's Trustpilot profile) returned \"526: Invalid SSL certificate\" on 14 November 2026. Trustpilot shows no review since 6 February 2025. No relaunch or new domain found.",
+          "source": "https://www.trustpilot.com/review/quantectrading.com",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ]
+    },
+    "limitless-funding": {
+      "reviewedAt": "2026-11-14",
+      "set": {
+        "listedDomainWarning": "limitlessfunding.com was parked and limitlessfunding.io redirected to google.com when PropRadar checked on 12–14 November 2026. PropRadar found no current official site."
+      },
+      "changelog": [
+        {
+          "date": "2026-11-14",
+          "summary": "Domain warning: the listed limitlessfunding.com was parked on 12–13 November 2026, and limitlessfunding.io (the domain on its Trustpilot profile, last review 3 December 2024) redirected to google.com on 14 November 2026. No new domain found.",
+          "source": "https://www.trustpilot.com/review/limitlessfunding.io",
+          "fields": [
+            "listedDomainWarning"
+          ]
+        }
+      ]
     }
   }
 }
