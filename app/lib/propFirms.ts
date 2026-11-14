@@ -185,11 +185,14 @@ export const E8_AFFILIATE_URL = 'https://e8markets.com/d/A4DE0965';
 export const FXIFY_AFFILIATE_URL = 'https://trader.fxify.com/purchasechallenge?affiliateId=8924';
 /** Partner code issued to PropRadar by FXIFY (25% off all programs, per FXIFY), received 2026-11-14. */
 export const FXIFY_PROMO_CODE = 'FXIFY0EVDNU';
+export const UPCOMERS_AFFILIATE_URL = 'https://www.upcomers.com/fr/?code=kkscxhro#challenges';
+/** Partner code issued to PropRadar by Upcomers, received 2026-11-14 (no percentage stated by Upcomers). */
+export const UPCOMERS_PROMO_CODE = 'kkscxhro';
 /** Partner code issued to PropRadar by OneFunded on 2026-11-12 (25% off all challenges, per OneFunded). */
 export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -9936,6 +9939,9 @@ const universePropFirms: PropFirm[] = [
     website: 'https://upcomers.com/',
     status: 'À surveiller',
     score: 60,
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote:
+      'PropRadar may receive a commission through the Upcomers link and the partner code kkscxhro. On 14 November 2026 the official site showed "up to 93% off" with or without the code; with the code applied, the $100K challenge showed $109 instead of $1,090. Prices change often: check the total at checkout. The relationship has no impact on the score, and the Trustpilot rating stays withheld.',
     founded: 2025,
     headquarters: 'Saint Lucia / Dubai, United Arab Emirates',
     priceFrom: 0,
@@ -12883,6 +12889,7 @@ export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
   'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'NOV30', percent: 30, scope: 'all', codeSource: 'site', checkedOn: '2026-11-09' },
   'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
   fxify: { href: FXIFY_AFFILIATE_URL, code: FXIFY_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-14' },
+  upcomers: { href: UPCOMERS_AFFILIATE_URL, code: UPCOMERS_PROMO_CODE, codeSource: 'firm', checkedOn: '2026-11-14' },
   onefunded: { code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-12' },
 };
 
