@@ -809,7 +809,9 @@ export function getBestPromoDeals(limit = 12) {
 
 /** Top of /promos: one offer per partner firm first (best deal score), then the other featured official offers. */
 export function getMegaPromoDeals(limit = 4) {
-  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal)).sort((a, b) => b.dealScore - a.dealScore);
+  // A partner's own code (the one in its pop-up) comes before its other offers.
+  const own = (deal: { slug: string; code?: string }) => Number(Boolean(deal.code) && PARTNER_OFFERS[deal.slug]?.code === deal.code);
+  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal)).sort((a, b) => own(b) - own(a) || b.dealScore - a.dealScore);
   const partners: typeof ranked = [];
   for (const deal of ranked) {
     if (isPartner(deal.slug) && !partners.some((item) => item.slug === deal.slug)) partners.push(deal);
