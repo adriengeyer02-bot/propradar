@@ -963,7 +963,7 @@
       }
     },
     "clarity-traders": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -972,10 +972,29 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official FAQ read: split \"70% … on your first payout, 80% on your second and 90% after that\" (add-on up to 100%); \"at least 7 trading days before the first payout request\", \"a payout every 14 days, or weekly with the Express Payouts add-on\"; sizes \"$5,000 to $200,000\"; \"trading during high-impact news events is permitted.\"",
+          "source": "https://www.claritytraders.com/faq",
+          "fields": [
+            "payoutDelay",
+            "newsTrading"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/claritytraders.com)."
+      ],
+      "set": {
+        "payoutDelay": "first request after at least 7 trading days (Terms add 14 days after the account is issued); then every 14 days, or weekly with the Express Payouts add-on",
+        "newsTrading": "Allowed"
+      },
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://www.claritytraders.com/faq"
+        }
       ]
     },
     "dei-funded": {
@@ -2716,7 +2735,7 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2734,12 +2753,23 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official rulebook (schedules) read: static maximum loss on 2-Step Pro and 1-Step Prime (\"Basis (Max. Loss Limit) | Static\"), intraday trailing on Fly funded accounts, end-of-day trailing on Direct; payout conditions per schedule SCH.4. The rulebook gives different splits for 1-Step Fly (80% in SCH.1, 70% in SCH.4), so the split is not changed.",
+          "source": "https://holaprime.com/rulebook/schedules/",
+          "fields": [
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 4081,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com",
+        "drawdownType": "Hybride",
+        "payoutDelay": "Pro/Prime: bi-weekly after 3 profitable days, monthly after 7, or on demand after 2% profit; Direct every 14 days; Fly funded accounts anytime; review up to 24 business hours, then processing within 1 hour"
       },
       "addPayoutProofs": [
         {
@@ -2758,10 +2788,16 @@
           "url": "https://financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/",
           "firmReported": false
         }
+      ],
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://holaprime.com/rulebook/schedules/"
+        }
       ]
     },
     "hyrotrader": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2781,6 +2817,14 @@
             "payoutDelay",
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official HyroTrader blog read: \"HyroTrader uses static drawdown only\" (3%/5% on Hyro Core and Instant, 4%/8% one-step, 5%/10% two-step); on-demand payouts \"usually deliver within 24 hours\". Pricing page not readable (robots), so prices are not changed.",
+          "source": "https://www.hyrotrader.com/blog/hyrotrader-vs-cryptofundtrader/",
+          "fields": [
+            "drawdownType"
+          ]
         }
       ],
       "set": {
@@ -2788,7 +2832,8 @@
         "trustpilotReviewCount": 229,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com",
         "profitSplit": 80,
-        "payoutDelay": "within 24 hours, paid in USDT or USDC"
+        "payoutDelay": "within 24 hours, paid in USDT or USDC",
+        "drawdownType": "Static"
       },
       "setEntities": [
         {
@@ -2811,6 +2856,10 @@
         {
           "label": "HyroTrader evaluation options (official)",
           "url": "https://www.hyrotrader.com/evaluations/"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://www.hyrotrader.com/blog/hyrotrader-vs-cryptofundtrader/"
         }
       ]
     },
@@ -3503,7 +3552,7 @@
       ]
     },
     "onefunded": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3528,6 +3577,14 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official site read: \"14-day payout cycle\" (7 days with an add-on); split up to 90%; sizes $5K–$200K; daily 4–5% and overall 6–10% drawdown \"depending on the plan\" (static or trailing not stated).",
+          "source": "https://onefunded.com/how-it-works/",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
@@ -3541,6 +3598,15 @@
           "quote": "\"$1M+ Paid Out\" (undated counter)",
           "url": "https://onefunded.com/",
           "firmReported": true
+        }
+      ],
+      "set": {
+        "payoutDelay": "14-day payout cycle, or 7 days with an add-on (first-payout rule not stated)"
+      },
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://onefunded.com/how-it-works/"
         }
       ]
     },
@@ -4369,7 +4435,7 @@
       ]
     },
     "top-one-futures": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -4396,6 +4462,15 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official help center read: \"All Sim Funded accounts at Top One Futures use the same 90/10 profit split\" (previously recorded as 80). The account comparison lists an \"End of Day\" trailing drawdown on Elite Evaluation, Elite Sim Funded, Instant Sim Funded and Ignite. Payout timing not stated in these articles.",
+          "source": "https://help.toponefutures.com/en/articles/10907430-understanding-the-profit-split-on-sim-funded-accounts",
+          "fields": [
+            "profitSplit",
+            "drawdownType"
+          ]
         }
       ],
       "setEntities": [
@@ -4414,13 +4489,18 @@
         {
           "label": "Top One Futures Elite Evaluation overview (official help)",
           "url": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://help.toponefutures.com/en/articles/10907430-understanding-the-profit-split-on-sim-funded-accounts"
         }
       ],
       "set": {
-        "drawdownType": "Trailing",
+        "drawdownType": "EOD",
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 5269,
-        "trustpilotSourceUrl": "https://au.trustpilot.com/review/toponefutures.com?page=3"
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/toponefutures.com?page=3",
+        "profitSplit": 90
       },
       "setProducts": [
         {
@@ -5184,7 +5264,7 @@
       ]
     },
     "wsfunded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-26",
@@ -5208,13 +5288,30 @@
           "fields": [
             "profile"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official FAQ and home page read: static maximum drawdown on Classic and Ultra 2-Phase and Prime 1-Phase; Instant Pro \"Max total drawdown: 5%, trailing\"; Power \"Maximum Trailing Drawdown (FUNDED Phase Only) will be 6%\"; sizes \"5k, 10k, 25k, 50k and 100k\". Profit split differs by plan, so it is not changed.",
+          "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+          "fields": [
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 4858,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com",
+        "drawdownType": "Hybride",
+        "payoutDelay": "Instant Pro: first payout after 15 days, then every 10 days; 1-Phase Power: \"first payout is available 14 days after becoming Funded\", then every 14 days"
+      },
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://faq.wsfunded.com/en/articles/10719208-instant-pro"
+        }
+      ]
     },
     "crypto-fund-trader": {
       "reviewedAt": "2026-10-29",
@@ -5369,7 +5466,7 @@
       ]
     },
     "funded-bull": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -5387,18 +5484,32 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official Terms read: \"traders retain 90% of the profits\" (Lite plans 50/50; the discounted 1-Step promo plan 20% to the trader); drawdown \"Trailing\" on One-Step and \"Static\" on Two-Step and Three-Step; sizes \"from a minimum of $5,000 to a maximum of $250,000\"; RATERIGHT PTE. LTD., 68 Circular Road #02-01, Singapore 049422, Singapore law.",
+          "source": "https://fundedbull.com/terms/",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
-        "payoutDelay": "first payout request after the account has been held at least 14 days and 5 trading days are completed; trading is locked until the request is processed",
+        "payoutDelay": "\"Initial payouts are made after a 14-day period, with subsequent payouts processed within 7 days\" (Terms 5.2.3)",
         "trustpilotRating": 2.8,
         "trustpilotReviewCount": 15,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedbull.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedbull.com",
+        "profitSplit": 90
       },
       "addSources": [
         {
           "label": "FundedBull trading rules (official)",
           "url": "https://fundedbull.com/trading-rules/"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://fundedbull.com/terms/"
         }
       ]
     },
@@ -7002,6 +7113,69 @@
           "source": "https://www.trustpilot.com/review/limitlessfunding.io",
           "fields": [
             "listedDomainWarning"
+          ]
+        }
+      ]
+    },
+    "funded-futures-network": {
+      "reviewedAt": "2026-11-15",
+      "set": {
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 560,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedfuturesnetwork.com",
+        "profitSplit": 80,
+        "drawdownType": "EOD",
+        "payoutDelay": "Sim Funded Pro: payouts \"can be requested the same day you're eligible\"; minimum $500, maximum $10,000 per payout (cumulative across accounts); Institution accounts: same-business-day payouts"
+      },
+      "setEntities": [
+        {
+          "name": "Funded Futures Network LLC",
+          "jurisdiction": "United States (New York address; state of formation not stated)",
+          "registeredAddress": "99 Wall Street #1660, New York, NY 10006, United States",
+          "role": "Company named in the official site copyright notice; the same address is on its claimed Trustpilot profile."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funded Futures Network official site (footer address)",
+          "url": "https://fundedfuturesnetwork.com/"
+        },
+        {
+          "label": "Funded Futures Network Trustpilot (claimed profile)",
+          "url": "https://www.trustpilot.com/review/fundedfuturesnetwork.com"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://fundedfuturesnetwork.com/faq"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-15",
+          "summary": "Address read in the official site footer: \"99 Wall Street #1660, New York NY 10006\"; the claimed Trustpilot profile gives the same address (\"99 wall street, 10006, New York, United States\"). Legal form and state of formation are not stated, so no registration number is recorded.",
+          "source": "https://fundedfuturesnetwork.com/",
+          "fields": [
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Trustpilot read on the ca mirror: 3.5/5 (\"Average\") from 560 reviews, claimed profile.",
+          "source": "https://ca.trustpilot.com/review/fundedfuturesnetwork.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official FAQ read: Sim Funded Pro \"has an 80/20 profit split\" (Institution accounts 90/10); \"Payouts can be requested the same day you're eligible\", \"Minimum withdrawal: $500\", \"Maximum withdrawal of $10,000 per user per payout\"; \"T1 News Events cannot be traded\"; \"Automated trading is allowed but at the discretion of FFN.\" Accounts page: end-of-day drawdown on MAX Standard. Legal name in the copyright notice: Funded Futures Network LLC.",
+          "source": "https://fundedfuturesnetwork.com/faq",
+          "fields": [
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay",
+            "entities"
           ]
         }
       ]
