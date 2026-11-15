@@ -23,6 +23,24 @@ export type GuideEditorial = {
 };
 
 const guideEditorial: Record<string, GuideEditorial> = {
+  'hyrotrader-vs-tradeify': {
+    answerEyebrow: 'Market and rule comparison',
+    answerHeading: 'Crypto or futures: which rules fit your trading?',
+    scopeLabels: ['Daily loss floors', 'EOD enforcement', 'Payout eligibility'],
+    checklistEyebrow: 'Before checkout',
+    checklistHeading: 'Match the instrument, account stage and payout policy.',
+    toc: { answer: 'Market fit', comparison: 'Rules compared', shortlist: 'Firm files', faq: 'Practical questions' },
+    comparisonEyebrow: 'Official program rules',
+    comparisonHeading: 'HyroTrader and Tradeify, rule by rule.',
+    comparisonNote: 'Program-level rules checked on 15 November 2026. A brand-wide entry price or score is not a like-for-like program comparison.',
+    selectionEyebrow: 'Documented background',
+    selectionHeading: 'Open the two firm files.',
+    selectionNote: 'These profiles provide background and their own dated update histories. The program comparison above uses the linked official rules.',
+    faqHeading: 'Questions about drawdown, consistency and withdrawals.',
+    continueHeading: 'Check the program contract and the remaining limits.',
+    relatedGuidesHeading: 'More drawdown, consistency and instant-funding research.',
+    feedbackPrompt: 'Did this comparison clarify the rules that matter for your market?',
+  },
   'meilleure-prop-firm-2026': {
     answerEyebrow: '2026 verdict',
     answerHeading: 'Which prop firms deserve a place on the first shortlist?',

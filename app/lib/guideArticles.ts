@@ -1,3 +1,5 @@
+import { hyroTradeifyArticle, noChallengeGettingStarted } from './searchIntentGuides';
+
 /**
  * Long-form editorial text for guides.
  *
@@ -48,6 +50,7 @@ export type GuideArticleSection = {
 };
 
 export type GuideArticle = {
+  published?: string;
   updated: string;
   intro?: string;
   /** "Key points" box shown under the intro. */
@@ -57,26 +60,19 @@ export type GuideArticle = {
 };
 
 export const guideArticles: Record<string, GuideArticle> = {
+  'hyrotrader-vs-tradeify': hyroTradeifyArticle,
   'prop-firm-sans-challenge': {
-    updated: '2026-11-12',
+    updated: '2026-11-15',
     intro:
-      'A no-challenge prop firm sells a funded account directly, without the classic evaluation phase. It sounds like a shortcut. In practice you **pay more upfront** for skipping the test, and the rules you would have met in the challenge **move into the funded account**, where a mistake costs the account instead of a retry.',
+      'To get started with a no-challenge prop firm, choose the market and exact program, check eligibility, read the funded rules, calculate the full fee exposure and test your strategy against the loss limits. **Skipping evaluation does not remove payout conditions.** Access can be simulated, and the first withdrawal may still require qualifying days, a profit goal or consistency.',
     keyPoints: [
-      '**No challenge means no profit target**, not no rules: drawdown, consistency and minimum days are still there.',
-      'A direct account usually costs **several times** a challenge of the same size.',
+      '**No challenge means no evaluation before funding.** A payout profit goal may still apply.',
+      'Check the **exact program**, its complete fees and whether the account is simulated.',
       'Compare the **total cost to a first payout**, not the sticker price.',
       'It suits a **stable, low-drawdown** strategy, not one you are still testing.',
     ],
     sections: [
-      {
-        heading: 'What "no challenge" actually means',
-        visual: 'challenge-vs-direct',
-        paragraphs: [
-          'In a classic model you pay a fee, hit a profit target under a daily loss limit and a maximum drawdown, sometimes over two phases, and only then trade a funded account that can pay out. A no-challenge program, often called **instant funding** or **direct funding**, removes that first step: you buy the funded account and can request payouts once its own conditions are met.',
-          'What disappears is the **profit target before funding**. What does not disappear is **risk control**. Instant accounts almost always keep a maximum drawdown, often a trailing one, and many add a consistency rule, a minimum number of trading days or a smaller first payout cap.',
-        ],
-        callout: { kind: 'tip', text: 'The firm still filters traders. It simply does it **after you have paid**.' },
-      },
+      noChallengeGettingStarted,
       {
         heading: 'Why instant funding usually costs more',
         visual: 'no-challenge-cost',
@@ -123,6 +119,20 @@ export const guideArticles: Record<string, GuideArticle> = {
         ],
         callout: { kind: 'tip', text: 'Before buying, open the firm\'s PropRadar profile: **legal entity, payout signals, domain and regulator alerts** are on one page.' },
       },
+      {
+        heading: 'Two current examples: instant access is not instant withdrawal',
+        paragraphs: [
+          'Official pages checked on 15 November 2026 illustrate why the exact plan matters. **Hyro Instant** skips evaluation but requires three qualifying trading days for the first payout, at least $25 profit after the split and a cap on profit counted per payout.',
+          '**Tradeify Lightning Funded** also skips evaluation. Its published $50,000 plan needs $3,000 profit to unlock the first request, which is capped at $2,000 before the trader’s 90% split. Consistency also applies. The profit goal is not the amount available to withdraw.',
+          'These examples describe the published rules, not independently authenticated customer payments. Use the current agreement and the source links below to verify the conditions that apply to a new purchase.',
+        ],
+      },
+    ],
+    sources: [
+      { label: 'HyroTrader: Hyro Instant account and setup', url: 'https://www.hyrotrader.com/faq/getting-started/what-is-hyro-instant/' },
+      { label: 'HyroTrader: qualifying days and first Instant payout', url: 'https://www.hyrotrader.com/faq/hyrotrader-account/how-does-the-first-payout-work-on-hyro-instant/' },
+      { label: 'Tradeify: Lightning Funded accounts', url: 'https://help.tradeify.co/en/articles/10495938-lightning-funded-accounts' },
+      { label: 'Tradeify: Lightning payout goals, caps and split', url: 'https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy' },
     ],
   },
 

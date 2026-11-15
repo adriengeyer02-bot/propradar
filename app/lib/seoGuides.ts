@@ -1,6 +1,8 @@
 import { toEnglishText } from './i18n';
 import { GUIDE_EDITORIAL_REFRESH_DATE } from './guideVisuals';
 import { propFirms, topFirms, type PropFirm, hasPayoutRiskSignal } from './propFirms';
+import { getGuideArticle, type GuideArticleSection } from './guideArticles';
+import { hyroTradeifyGuide } from './searchIntentGuides';
 
 export const SEO_RESEARCH_DATE = '2026-07-15';
 
@@ -35,6 +37,8 @@ export type SeoGuide = {
   faq: { question: string; answer: string }[];
   internalLinks: { label: string; href: string }[];
   focusFirmSlugs?: string[];
+  /** A sourced program comparison when firm-wide defaults would be misleading. */
+  programComparison?: GuideArticleSection['compare'];
 };
 
 export const searchClusters: SearchCluster[] = [
@@ -202,6 +206,7 @@ export const searchClusters: SearchCluster[] = [
 ];
 
 export const seoGuides: SeoGuide[] = [
+  hyroTradeifyGuide,
   {
     slug: 'meilleure-prop-firm-2026',
     title: 'Best prop firm 2026: a risk-first ranking',
@@ -931,55 +936,80 @@ export const seoGuides: SeoGuide[] = [
     ],
   },
   {
-    slug: 'prop-firm-sans-challenge',
-    title: 'No challenge prop firm: instant funding or false shortcut?',
-    metaDescription:
-      'No challenge prop firm: understand instant funding, direct funded accounts, fees, drawdown, payout rules and risks before paying more.',
-    eyebrow: 'No challenge',
-    h1: 'No challenge prop firm: the shortcut can cost more',
-    intent: 'choisir',
-    demandSignal:
-      'Fast-purchase search: the trader wants to skip evaluation phases, but needs to understand what can be lost in cost, clarity and margin for error.',
-    answer:
-      'A no-challenge prop firm mainly sells time. Direct access can suit a stable trader, but it can cost more if the funded-stage rules are tighter than expected.',
-    primaryKeywords: ['no challenge prop firm', 'prop firm without evaluation', 'direct funded account'],
-    secondaryKeywords: ['instant funding', 'instant funded account', 'fast prop firm', 'funded account direct'],
-    checks: [
-      'Compare the real cost over several months, including entry fees and possible renewals.',
-      'Verify funded-stage rules: drawdown, news restrictions, scaling, lot size and payout clauses.',
-      'Check payout minimum and withdrawal frequency before judging the offer cheap.',
-      'Confirm drawdown type: static, trailing, EOD or smart drawdown.',
-      'Look for consistency rules, daily loss limits and any hidden funded-stage conditions.',
-      'Avoid this format if you do not have a stable strategy tested over several months.',
+    "slug": "prop-firm-sans-challenge",
+    "title": "How to get started with no-challenge prop firms (2026)",
+    "metaDescription": "How to start with a no-challenge prop firm: choose a program, verify eligibility, compare fees and drawdown, test the rules and understand your first payout.",
+    "eyebrow": "No challenge",
+    "h1": "How to get started with a no-challenge prop firm",
+    "intent": "choisir",
+    "demandSignal": "Fast-purchase search: the trader wants to skip evaluation phases, but needs to understand what can be lost in cost, clarity and margin for error.",
+    "answer": "A no-challenge prop firm mainly sells time. Direct access can suit a stable trader, but it can cost more if the funded-stage rules are tighter than expected.",
+    "primaryKeywords": [
+      "no challenge prop firm",
+      "prop firm without evaluation",
+      "direct funded account"
     ],
-    faq: [
-      {
-        question: 'Can you get a prop firm account without a challenge?',
-        answer:
-          'Yes. Some instant or direct-funded offers exist, but they do not remove risk. They often move the difficulty to funded-stage rules, fees, drawdown or payout conditions.',
-      },
-      {
-        question: 'Who is no-challenge funding suitable for?',
-        answer:
-          'It usually fits traders who already have a stable process and know their average drawdown. For beginners, a small classic challenge can be cheaper and more educational.',
-      },
-      {
-        question: 'Which prop firms offer a funded account without a challenge?',
-        answer:
-          'The table on this page lists every instant or direct-funding program in PropRadar files, ordered by PropRadar score, with entry price, account sizes, drawdown, split and Trustpilot status. Each firm page shows the source and the date every value was read.',
-      },
-      {
-        question: 'Are there forex, futures or stock prop firms without a challenge?',
-        answer:
-          'Most no-challenge programs on file are forex and CFD instant accounts. Some futures firms sell a direct account instead of an evaluation (Alpha Futures Direct is one on file). No stock-only instant program is on file today; FXIFY Instant Funding is the one instant program on file that lists stock CFDs. Check the tradable assets of each program before buying.',
-      },
+    "secondaryKeywords": [
+      "instant funding",
+      "instant funded account",
+      "fast prop firm",
+      "funded account direct",
+      "how to get started with no-challenge prop firms"
     ],
-    internalLinks: [
-      { label: 'Instant funding', href: '/guides/prop-firm-instant-funding' },
-      { label: 'Trading style tool', href: '/tools' },
-      { label: 'Deals', href: '/promos' },
+    "checks": [
+      "Compare the real cost over several months, including entry fees and possible renewals.",
+      "Verify funded-stage rules: drawdown, news restrictions, scaling, lot size and payout clauses.",
+      "Check payout minimum and withdrawal frequency before judging the offer cheap.",
+      "Confirm drawdown type: static, trailing, EOD or smart drawdown.",
+      "Look for consistency rules, daily loss limits and any hidden funded-stage conditions.",
+      "Avoid this format if you do not have a stable strategy tested over several months."
     ],
-    focusFirmSlugs: ['instant-funding', 'city-traders-imperium', 'maven-trading', 'lucid-trading'],
+    "faq": [
+      {
+        "question": "How do I get started with a no-challenge prop firm?",
+        "answer": "Choose the market and exact program, check eligibility and the contracting company, save the funded rules, calculate all fees, test the loss limits and complete setup. Understand the first-payout conditions before buying."
+      },
+      {
+        "question": "Can you get a prop firm account without a challenge?",
+        "answer": "Yes. Some instant or direct-funded offers exist, but they do not remove risk. They often move the difficulty to funded-stage rules, fees, drawdown or payout conditions."
+      },
+      {
+        "question": "Who is no-challenge funding suitable for?",
+        "answer": "It usually fits traders who already have a stable process and know their average drawdown. For beginners, a small classic challenge can be cheaper and more educational."
+      },
+      {
+        "question": "Which prop firms offer a funded account without a challenge?",
+        "answer": "The table on this page lists every instant or direct-funding program in PropRadar files, ordered by PropRadar score, with entry price, account sizes, drawdown, split and Trustpilot status. Each firm page shows the source and the date every value was read."
+      },
+      {
+        "question": "Are there forex, futures or stock prop firms without a challenge?",
+        "answer": "Most no-challenge programs on file are forex and CFD instant accounts. Some futures firms sell a direct account instead of an evaluation (Alpha Futures Direct is one on file). No stock-only instant program is on file today; FXIFY Instant Funding is the one instant program on file that lists stock CFDs. Check the tradable assets of each program before buying."
+      }
+    ],
+    "internalLinks": [
+      {
+        "label": "Instant funding",
+        "href": "/guides/prop-firm-instant-funding"
+      },
+      {
+        "label": "Trading style tool",
+        "href": "/tools"
+      },
+      {
+        "label": "Deals",
+        "href": "/promos"
+      },
+      {
+        "label": "HyroTrader vs Tradeify",
+        "href": "/guides/hyrotrader-vs-tradeify"
+      }
+    ],
+    "focusFirmSlugs": [
+      "instant-funding",
+      "city-traders-imperium",
+      "maven-trading",
+      "lucid-trading"
+    ]
   },
   {
     slug: 'prop-firm-pour-debutant',
@@ -1882,11 +1912,11 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     ],
   },
   'prop-firm-sans-challenge': {
-    title: 'No Challenge Prop Firms 2026: Every Instant Funding Program Compared',
-    metaDescription: 'Every prop firm program you can buy without a challenge, from the PropRadar files: entry price, account sizes, drawdown, split, Trustpilot status and review date.',
+    title: 'How to get started with no-challenge prop firms (2026)',
+    metaDescription: 'How to start with a no-challenge prop firm: choose a program, verify eligibility, compare fees and drawdown, test the rules and understand your first payout.',
     eyebrow: 'No challenge',
-    h1: 'No challenge prop firms: compare direct funding before you pay',
-    answer: 'A no-challenge prop firm gives access to a funded-style account without a classic evaluation. The format saves time, but direct funded accounts can cost more and use tighter drawdown, consistency and payout rules.',
+    h1: 'How to get started with a no-challenge prop firm',
+    answer: 'Choose the market and exact instant-funding program, check country and identity requirements, read the funded rules, calculate all fees and test your strategy against its loss limits. Complete setup only after understanding the route to the first payout: skipping evaluation does not remove profit goals, consistency or withdrawal caps.',
     primaryKeywords: ['no challenge prop firm', 'prop firm without challenge', 'prop firms without challenge'],
     secondaryKeywords: ['funded trading no challenge', 'funded trader no challenge', 'direct funded account', 'prop firm without evaluation'],
     checks: [
@@ -1898,6 +1928,14 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       'Avoid this format if your strategy has not been stable for several months.',
     ],
     faq: [
+      {
+        question: 'How do I get started with a no-challenge prop firm?',
+        answer: 'Choose your market and program, check eligibility and the contracting company, save the funded rules, calculate all fees, test the loss limits and complete any required identity checks. Monitor daily loss, total drawdown and payout qualification from the first session.',
+      },
+      {
+        question: 'Does no challenge mean I can withdraw immediately?',
+        answer: 'No. For example, Hyro Instant lists qualifying days for the first payout, while Tradeify Lightning Funded has profit goals, consistency and request caps. Read the exact funded-account policy; access, payout eligibility and money received are different stages.',
+      },
       {
         question: 'Is no-challenge funding easier than a normal challenge?',
         answer:
@@ -2286,9 +2324,18 @@ export function getGuideLastModified(guideOrSlug: SeoGuide | string) {
     .map((firm) => new Date(firm.lastReviewed).getTime())
     .filter((timestamp) => Number.isFinite(timestamp));
 
-  const editorialRefresh = new Date(GUIDE_EDITORIAL_REFRESH_DATE).getTime();
+  const articleUpdated = guide ? getGuideArticle(guide.slug)?.updated : undefined;
+  const editorialRefresh = Math.max(
+    new Date(GUIDE_EDITORIAL_REFRESH_DATE).getTime(),
+    articleUpdated ? new Date(articleUpdated).getTime() : 0,
+  );
   if (!dates.length) return new Date(editorialRefresh);
   return new Date(Math.max(...dates, editorialRefresh));
+}
+
+export function getGuidePublishedAt(guideOrSlug: SeoGuide | string) {
+  const slug = typeof guideOrSlug === 'string' ? guideOrSlug : guideOrSlug.slug;
+  return getGuideArticle(slug)?.published ?? '2026-06-29T08:00:00.000Z';
 }
 
 export function getRelatedGuides(currentSlug: string, limit = 3) {

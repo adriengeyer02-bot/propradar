@@ -12,14 +12,14 @@
  * new incidents, and accusation-type wording (scam, fraud...).
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { basePropFirms } from '../app/lib/propFirms';
+import { basePropFirms, propFirms } from '../app/lib/propFirms';
 import type { FirmUpdate } from '../app/lib/firmUpdates';
 
 const FILE = 'app/data/firm-updates.json';
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
-  'status', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
+  'status', 'verdict', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
   'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
@@ -113,6 +113,13 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     if (!SET_KEYS.has(key)) errors.push(`${where}.set.${key}: field not allowed`);
   }
   const set = update.set ?? {};
+  if (set.verdict !== undefined) {
+    if (typeof set.verdict !== 'string' || set.verdict.trim().length < 40) errors.push(`${where}.set.verdict: a substantive introduction is required`);
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('verdict') && isHttpsUrl(entry.source))) {
+      errors.push(`${where}.set.verdict: a changelog entry with fields ["verdict"] and an https source is required`);
+    }
+    if (BANNED_WORDS.test(set.verdict)) sensitive.push(`${slug}: introduction wording needs a legal read`);
+  }
   if (set.status !== undefined && !STATUSES.has(set.status)) errors.push(`${where}.set.status invalid`);
   if (set.score !== undefined && (!Number.isInteger(set.score) || set.score < 0 || set.score > 100)) errors.push(`${where}.set.score must be 0-100`);
   if (set.trustpilotRating !== undefined && (set.trustpilotRating < 1 || set.trustpilotRating > 5)) errors.push(`${where}.set.trustpilotRating must be 1-5`);
@@ -149,6 +156,14 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
   const newIncidents = (update.addIncidents ?? []).filter((item) => !(before?.addIncidents ?? []).includes(item));
   if (newIncidents.length) sensitive.push(`${slug}: ${newIncidents.length} new incident(s)`);
   if (JSON.stringify(before) !== JSON.stringify(update)) summary.push(`${slug}: updated (${update.reviewedAt})`);
+}
+
+// A completed multi-source label cannot coexist with the watchlist fallback.
+// Check effective profiles, including product updates that rewrite introductions.
+for (const firm of propFirms) {
+  if (firm.status !== 'Fermée' && firm.auditStatus === 'Vérifié multi-source' && /(?:has not been|have not been) audited in depth/i.test(firm.verdict)) {
+    errors.push(`${firm.slug}: multi-source audit status contradicts the introduction; add a sourced verdict correction`);
+  }
 }
 
 if (errors.length) {

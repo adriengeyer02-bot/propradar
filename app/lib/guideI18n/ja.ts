@@ -2,6 +2,28 @@ import type { GuideTranslations } from './types';
 
 /** Japanese guide summaries (translated from the English guides). */
 const ja: GuideTranslations = {
+  'hyrotrader-vs-tradeify': {
+    "title": "HyroTrader対Tradeify：ドローダウンと出金条件",
+    "metaDescription": "HyroTraderとTradeifyの暗号資産・先物市場、日次損失、EODドローダウン、一貫性、初回出金条件を比較。",
+    "eyebrow": "暗号資産と先物",
+    "h1": "HyroTrader対Tradeify：ドローダウンとリスク管理",
+    "answer": "HyroTraderは暗号資産、Tradeifyは取引所先物を対象とします。具体的なプログラムの市場、日次損失、最大ドローダウン、出金条件を比較してください。TradeifyのEOD計算でも、損失下限は取引中に監視されます。",
+    "checks": [
+      "価格比較の前に商品とプラットフォームを選ぶ。",
+      "日次損失、総損失、出金の一貫性要件を分ける。",
+      "プログラム、口座段階、購入日を確認する。"
+    ],
+    "faq": [
+      {
+        "question": "HyroTraderとTradeifyはどちらがよいですか？",
+        "answer": "まず市場を選びます。HyroTraderは暗号資産、Tradeifyは先物です。その後に具体的なルールと初回出金までの条件を比較してください。"
+      },
+      {
+        "question": "EODドローダウンなら取引中の下限超過は許されますか？",
+        "answer": "いいえ。Tradeifyは日終に下限を更新しますが、純清算価値をリアルタイムで監視します。下限に達すると即時失格になる場合があります。"
+      }
+    ]
+  },
   'meilleure-prop-firm-2026': {
     title: '現在のおすすめプロップファーム：リスク重視ランキング（2026年）',
     metaDescription: '今おすすめのプロップファームは？出金の信頼性、ルールの明確さ、法的な裏付け、ドローダウン、コミュニティの声で主要各社を比較します。',
