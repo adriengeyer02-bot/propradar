@@ -133,94 +133,176 @@ export const frArticles: FrArticle[] = [
   },
 
   {
-    slug: 'prop-firm-sans-challenge',
-    enPath: '/guides/prop-firm-no-challenge',
-    title: 'Prop firm sans challenge : vaut-il le coup en 2026 ?',
-    metaDescription:
-      'Prop firm sans challenge et financement instantané : comment ça marche, combien ça coûte vraiment, quelles règles restent et pour qui c\'est rentable.',
-    eyebrow: 'Sans challenge',
-    h1: 'Prop firm sans challenge : le raccourci peut coûter plus cher',
-    answer:
-      'Oui, certaines prop firms vendent un compte financé directement, sans challenge. Mais vous payez plus cher pour sauter l\'évaluation, et les règles du challenge (drawdown, consistance, plafonds de payout) se retrouvent sur le compte financé, où une erreur coûte le compte au lieu d\'un nouvel essai.',
-    keywords: ['prop firm sans challenge', 'financement instantané prop firm', 'instant funding', 'compte financé direct'],
-    updated: '2026-11-12',
-    intro:
-      'Une prop firm « sans challenge » vend un compte financé directement, sans phase d\'évaluation. Sur le papier, c\'est un raccourci. Dans les faits, **vous payez la sélection d\'avance**, et **la sélection continue après l\'achat**.',
-    keyPoints: [
-      '**Sans challenge = sans objectif de profit**, pas sans règles : drawdown, consistance et jours minimum restent.',
-      'Un compte direct coûte souvent **plusieurs fois** un challenge de même taille.',
-      'Comparez le **coût total jusqu\'au premier payout**, pas le prix affiché.',
-      'Adapté à une stratégie **stable et peu risquée**, pas à une stratégie encore en test.',
+    "slug": "prop-firm-sans-challenge",
+    "enPath": "/guides/prop-firm-no-challenge",
+    "title": "Comment démarrer avec une prop firm sans challenge ?",
+    "metaDescription": "Démarrer avec une prop firm sans challenge : choisir son programme, vérifier les règles et frais, tester le drawdown et comprendre les conditions du premier payout.",
+    "eyebrow": "Sans challenge",
+    "h1": "Comment démarrer avec une prop firm sans challenge",
+    "answer": "Choisissez le marché et le programme précis, vérifiez votre éligibilité, lisez les règles du compte financé, calculez les frais et testez votre stratégie contre les limites de perte. Sauter l’évaluation ne supprime pas les conditions de retrait.",
+    "keywords": [
+      "prop firm sans challenge",
+      "financement instantané prop firm",
+      "instant funding",
+      "compte financé direct"
     ],
-    sections: [
+    "updated": "2026-11-15",
+    "intro": "Choisissez le marché et le programme précis, vérifiez votre éligibilité, lisez les règles du compte financé, calculez les frais et testez votre stratégie contre les limites de perte. Sauter l’évaluation ne supprime pas les conditions de retrait.",
+    "keyPoints": [
+      "**Sans challenge signifie sans évaluation préalable.** Un objectif de profit peut néanmoins conditionner le payout.",
+      "Un compte direct coûte souvent **plusieurs fois** un challenge de même taille.",
+      "Comparez le **coût total jusqu'au premier payout**, pas le prix affiché.",
+      "Adapté à une stratégie **stable et peu risquée**, pas à une stratégie encore en test."
+    ],
+    "sections": [
       {
-        heading: 'Ce que « sans challenge » veut vraiment dire',
-        visual: 'challenge-vs-direct',
-        paragraphs: [
-          'Dans le modèle classique, vous payez des frais, vous atteignez un objectif de profit sans dépasser une perte journalière et un drawdown maximum, parfois en deux phases, puis vous tradez un compte financé qui peut verser des payouts. Le **financement direct** (instant funding) supprime cette première étape : vous achetez le compte financé.',
-          'Ce qui disparaît, c\'est **l\'objectif de profit avant le financement**. Ce qui reste, c\'est **le contrôle du risque** : un drawdown maximum, souvent suiveur, et fréquemment une règle de consistance, un nombre minimum de jours ou un premier payout plafonné.',
+        "heading": "Les six étapes pour démarrer sans challenge",
+        "visual": "challenge-vs-direct",
+        "paragraphs": [
+          "Le financement direct supprime l’évaluation préalable. Le compte peut rester simulé et les retraits dépendent de règles spécifiques : jours qualifiants, objectif de profit, consistance ou plafond. Voici les vérifications à faire avant et après l’achat."
         ],
-        callout: { kind: 'tip', text: 'La firme filtre toujours les traders. Elle le fait simplement **après votre paiement**.' },
+        "steps": [
+          {
+            "title": "Choisir le marché et vérifier son éligibilité",
+            "text": "Confirmez les instruments, la plateforme, les horaires, les pays acceptés, le contrôle d’identité et la société contractante."
+          },
+          {
+            "title": "Lire les règles du programme exact",
+            "text": "Conservez le nom du produit et la version des conditions. Notez les seuils journaliers et totaux, leur mode de calcul et l’heure de réinitialisation."
+          },
+          {
+            "title": "Écrire le chemin jusqu’au premier retrait",
+            "text": "Listez les jours requis, l’objectif éventuel, la consistance, le minimum de demande, les plafonds et le partage des profits."
+          },
+          {
+            "title": "Calculer tous les frais",
+            "text": "Vérifiez achat, activation, abonnement, plateforme et données selon le programme, puis les conditions de remboursement et de remplacement."
+          },
+          {
+            "title": "Tester sa stratégie avec ces limites",
+            "text": "Rejouez votre journal ou utilisez un essai avec les pertes flottantes, les commissions et les séries de pertes. Le montant nominal du compte n’est pas votre budget de perte."
+          },
+          {
+            "title": "Configurer le compte et surveiller les seuils",
+            "text": "Après les vérifications requises, confirmez que le tableau de bord correspond au contrat. Contrôlez les deux seuils de perte et les conditions de payout à chaque séance."
+          }
+        ]
       },
       {
-        heading: 'Pourquoi le financement instantané coûte plus cher',
-        visual: 'no-challenge-cost',
-        paragraphs: [
-          'Le challenge sert de **filtre** : une grande partie des acheteurs n\'atteint jamais de payout, et leurs frais financent ceux qui y arrivent. Quand vous sautez ce filtre, la firme intègre ce risque dans le prix du compte : comptes **plusieurs fois plus chers**, tailles **plus petites**, drawdown **plus serré**.',
-          'Exemple en chiffres ronds : un challenge à 100 $ avec une chance sur trois de réussite coûte **environ 300 $ en moyenne** pour être financé. Un compte instantané à 350 $ coûte davantage dès que vous en perdez un seul avant le premier retrait.',
-        ],
+        "heading": "Pourquoi le financement instantané coûte plus cher",
+        "visual": "no-challenge-cost",
+        "paragraphs": [
+          "Le challenge sert de **filtre** : une grande partie des acheteurs n'atteint jamais de payout, et leurs frais financent ceux qui y arrivent. Quand vous sautez ce filtre, la firme intègre ce risque dans le prix du compte : comptes **plusieurs fois plus chers**, tailles **plus petites**, drawdown **plus serré**.",
+          "Exemple en chiffres ronds : un challenge à 100 $ avec une chance sur trois de réussite coûte **environ 300 $ en moyenne** pour être financé. Un compte instantané à 350 $ coûte davantage dès que vous en perdez un seul avant le premier retrait."
+        ]
       },
       {
-        heading: 'Les règles qui décident si un compte direct est rentable',
-        paragraphs: ['Lisez les conditions du compte financé, pas la page marketing. Six points changent tout :'],
-        bulletStyle: 'check',
-        bullets: [
-          '**Type de drawdown** : un drawdown qui suit votre plus haut est bien plus contraignant qu\'une limite fixe.',
-          '**Règle de consistance** : beaucoup de programmes instantanés limitent la part du profit faite sur votre meilleure journée.',
-          '**Premier payout** : jours minimum, profit minimum, plafond des premiers retraits.',
-          '**Partage de départ** : il commence parfois plus bas que sur les challenges.',
-          '**Coût de remplacement** après une violation de règle.',
-          '**Stratégies interdites** : fenêtres d\'annonces, durée minimale des trades, copy trading.',
+        "heading": "Les règles qui décident si un compte direct est rentable",
+        "paragraphs": [
+          "Lisez les conditions du compte financé, pas la page marketing. Six points changent tout :"
         ],
+        "bulletStyle": "check",
+        "bullets": [
+          "**Type de drawdown** : un drawdown qui suit votre plus haut est bien plus contraignant qu'une limite fixe.",
+          "**Règle de consistance** : beaucoup de programmes instantanés limitent la part du profit faite sur votre meilleure journée.",
+          "**Premier payout** : jours minimum, profit minimum, plafond des premiers retraits.",
+          "**Partage de départ** : il commence parfois plus bas que sur les challenges.",
+          "**Coût de remplacement** après une violation de règle.",
+          "**Stratégies interdites** : fenêtres d'annonces, durée minimale des trades, copy trading."
+        ]
       },
       {
-        heading: 'Pour qui le financement direct a du sens',
-        paragraphs: [
-          'Le financement direct **échange de l\'argent contre du temps**. La pression de l\'objectif de profit est remplacée par celle d\'un drawdown en direct, sur un compte plus cher.',
+        "heading": "Pour qui le financement direct a du sens",
+        "paragraphs": [
+          "Le financement direct **échange de l'argent contre du temps**. La pression de l'objectif de profit est remplacée par celle d'un drawdown en direct, sur un compte plus cher."
         ],
-        fit: {
-          yes: ['Une stratégie **stable, à faible drawdown**', 'Un historique de **respect des limites journalières**', 'Vous préférez **gagner du temps** plutôt que de l\'argent'],
-          no: ['Une stratégie **encore en test**', 'Un style **volatil** qui a besoin de marge', 'L\'envie de **fuir l\'objectif de profit**'],
+        "fit": {
+          "yes": [
+            "Une stratégie **stable, à faible drawdown**",
+            "Un historique de **respect des limites journalières**",
+            "Vous préférez **gagner du temps** plutôt que de l'argent"
+          ],
+          "no": [
+            "Une stratégie **encore en test**",
+            "Un style **volatil** qui a besoin de marge",
+            "L'envie de **fuir l'objectif de profit**"
+          ]
         },
-        callout: { kind: 'tip', text: 'En cas de doute, un **challenge en une étape bon marché** reste souvent le meilleur test avant d\'acheter un compte direct.' },
+        "callout": {
+          "kind": "tip",
+          "text": "En cas de doute, un **challenge en une étape bon marché** reste souvent le meilleur test avant d'acheter un compte direct."
+        }
       },
       {
-        heading: 'Signaux d\'alerte propres au financement instantané',
-        paragraphs: ['Les programmes instantanés attirent beaucoup de firmes récentes et très marketing. Méfiez-vous de :'],
-        bulletStyle: 'flag',
-        bullets: [
-          '**Très gros comptes à très bas prix.**',
-          'Promesses de payout **sans politique de paiement publiée**.',
-          'Règles **différentes entre la page d\'accueil et les conditions générales**.',
-          'Clauses qui permettent de refuser un payout **« à la seule discrétion »** de la firme.',
+        "heading": "Signaux d'alerte propres au financement instantané",
+        "paragraphs": [
+          "Les programmes instantanés attirent beaucoup de firmes récentes et très marketing. Méfiez-vous de :"
         ],
-        callout: { kind: 'tip', text: 'Avant d\'acheter, ouvrez la fiche PropRadar de la firme : **entité, signaux de payout, alertes de domaine et de régulateur** sur une seule page.' },
+        "bulletStyle": "flag",
+        "bullets": [
+          "**Très gros comptes à très bas prix.**",
+          "Promesses de payout **sans politique de paiement publiée**.",
+          "Règles **différentes entre la page d'accueil et les conditions générales**.",
+          "Clauses qui permettent de refuser un payout **« à la seule discrétion »** de la firme."
+        ],
+        "callout": {
+          "kind": "tip",
+          "text": "Avant d'acheter, ouvrez la fiche PropRadar de la firme : **entité, signaux de payout, alertes de domaine et de régulateur** sur une seule page."
+        }
       },
-    ],
-    faq: [
       {
-        question: 'Une prop firm sans challenge est-elle une arnaque ?',
-        answer:
-          'Pas forcément : c\'est un modèle commercial légitime. Mais il est utilisé par de nombreuses firmes récentes. Vérifiez l\'entité juridique, la politique de payout et les signaux publics avant d\'acheter.',
+        "heading": "Deux exemples : accès immédiat et retrait sont distincts",
+        "paragraphs": [
+          "Les règles officielles consultées le 15 novembre 2026 indiquent que Hyro Instant demande trois jours qualifiants et au moins 25 $ de profit après partage pour le premier payout. Le profit comptabilisé par retrait est plafonné.",
+          "Chez Tradeify Lightning 50 000 $, le premier objectif publié est de 3 000 $ mais la demande est plafonnée à 2 000 $ avant partage à 90 %. La consistance s’applique aussi : l’objectif de profit n’est pas la somme retirable.",
+          "Ces conditions publiées ne constituent pas une authentification indépendante de paiements clients. Vérifiez le contrat correspondant à la date d’achat."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Comment démarrer avec une prop firm sans challenge ?",
+        "answer": "Choisissez le marché et le programme précis, vérifiez votre éligibilité, lisez les règles du compte financé, calculez les frais et testez votre stratégie contre les limites de perte. Sauter l’évaluation ne supprime pas les conditions de retrait."
       },
       {
-        question: 'Le financement instantané est-il moins cher qu\'un challenge ?',
-        answer:
-          'Rarement. Le compte coûte plus cher à l\'achat et les règles du compte financé sont souvent plus serrées. Comparez le coût total jusqu\'au premier payout.',
+        "question": "Une prop firm sans challenge est-elle une arnaque ?",
+        "answer": "Pas forcément : c'est un modèle commercial légitime. Mais il est utilisé par de nombreuses firmes récentes. Vérifiez l'entité juridique, la politique de payout et les signaux publics avant d'acheter."
       },
+      {
+        "question": "Le financement instantané est-il moins cher qu'un challenge ?",
+        "answer": "Rarement. Le compte coûte plus cher à l'achat et les règles du compte financé sont souvent plus serrées. Comparez le coût total jusqu'au premier payout."
+      }
     ],
-    firmSlugs: ['the5ers', 'ftmo', 'goat-funded-trader', 'fundednext'],
-    related: ['drawdown-prop-firm', 'regle-de-consistance-prop-firm', 'meilleures-prop-firms-2026'],
+    "firmSlugs": [
+      "the5ers",
+      "ftmo",
+      "goat-funded-trader",
+      "fundednext"
+    ],
+    "related": [
+      "drawdown-prop-firm",
+      "regle-de-consistance-prop-firm",
+      "meilleures-prop-firms-2026",
+      "hyrotrader-vs-tradeify"
+    ],
+    "sources": [
+      {
+        "label": "HyroTrader : Hyro Instant",
+        "url": "https://www.hyrotrader.com/faq/getting-started/what-is-hyro-instant/"
+      },
+      {
+        "label": "HyroTrader : premier payout Instant",
+        "url": "https://www.hyrotrader.com/faq/hyrotrader-account/how-does-the-first-payout-work-on-hyro-instant/"
+      },
+      {
+        "label": "Tradeify : Lightning Funded",
+        "url": "https://help.tradeify.co/en/articles/10495938-lightning-funded-accounts"
+      },
+      {
+        "label": "Tradeify : objectifs et plafonds de payout",
+        "url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+      }
+    ]
   },
 
   {

@@ -27,6 +27,8 @@ export type FirmUpdate = {
   reviewedAt: string;
   set?: Partial<{
     status: PropFirm['status'];
+    /** Sourced editorial correction; does not change the audit level or score. */
+    verdict: PropFirm['verdict'];
     score: number;
     priceFrom: number;
     profitSplit: number;
@@ -111,6 +113,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     };
 
     if (set.status) next.status = set.status;
+    if (set.verdict !== undefined) next.verdict = set.verdict;
     if (typeof set.score === 'number') next.score = set.score;
     if (typeof set.priceFrom === 'number') next.priceFrom = set.priceFrom;
     if (typeof set.profitSplit === 'number') {

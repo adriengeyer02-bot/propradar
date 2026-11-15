@@ -8,19 +8,27 @@
           "date": "2026-11-15",
           "summary": "Initial profile added at 49/100 after reviewing programmes, original euro fees, payout conditions and company disclosures. No earlier score is replaced; this is an editorial assessment, not a finding on individual disputes.",
           "source": "https://www.foxx-funded.com/terms-and-conditions/",
-          "fields": ["initialReview", "products", "entities"]
+          "fields": [
+            "initialReview",
+            "products",
+            "entities"
+          ]
         },
         {
           "date": "2026-11-15",
           "summary": "Domain-linked Trustpilot profile, currently named Ponjas Marketing, shows no TrustScore and carries a guideline-breach and removed-review notice. No old rating or invented removed-review count is used.",
           "source": "https://www.trustpilot.com/review/foxx-funded.com",
-          "fields": ["initialReview"]
+          "fields": [
+            "initialReview"
+          ]
         },
         {
           "date": "2026-11-15",
           "summary": "Official payout showcase is labelled illustrative and not verified client payouts; no payout proof was added. Customer complaints and the firm's rule-breach responses are presented as disputed accounts.",
           "source": "https://www.foxx-funded.com/payout/",
-          "fields": ["initialReview"]
+          "fields": [
+            "initialReview"
+          ]
         }
       ]
     },
@@ -1336,11 +1344,20 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 1,058 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/finotivefunding.com"
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Editorial correction: replaced the watchlist introduction with a description of the existing documented review. This corrects its contradiction with the multi-source label; it is not a new audit and does not change scores, audit status or prior review dates.",
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "fields": [
+            "verdict"
+          ]
         }
       ],
       "set": {
         "profitSplit": 95,
-        "payoutDelay": "on demand, no minimum payout"
+        "payoutDelay": "on demand, no minimum payout",
+        "verdict": "PropRadar's file covers Finotive Funding's published programs and legal terms, including the disclosed DIFC contracting company. The funding accounts are simulated, with rewards subject to contractual conditions. Company registration does not make the funding product a regulated brokerage account or independently verify customer payments."
       },
       "setProducts": [
         {
@@ -3110,12 +3127,21 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Editorial correction: replaced the watchlist introduction with a description of the existing documented review. This corrects its contradiction with the multi-source label; it is not a new audit and does not change scores, audit status or prior review dates.",
+          "source": "https://www.lucidtrading.com/terms-of-use/",
+          "fields": [
+            "verdict"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 7805,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com",
+        "verdict": "Lucid Trading's file covers LucidPro, LucidFlex and LucidDirect, their published rules and payout conditions, and the disclosed Delaware operator. Official documents and external sources support this review. Published payout conditions do not independently authenticate individual customer payments."
       }
     },
     "lux-trading-firm": {
@@ -3826,6 +3852,14 @@
             "profile",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Editorial correction: replaced the watchlist introduction with a description of the existing documented review. This corrects its contradiction with the multi-source label; it is not a new audit and does not change scores, audit status or prior review dates.",
+          "source": "https://quanttekel.com/",
+          "fields": [
+            "verdict"
+          ]
         }
       ],
       "addSources": [
@@ -3847,7 +3881,8 @@
         }
       ],
       "set": {
-        "payoutDelay": "QT ONE: payout requests after each 4-trading-day cycle (3% minimum profit); QT 1 Step (BNPL): 14-day standard cycle, 5 trading days and 3% profit minimum"
+        "payoutDelay": "QT ONE: payout requests after each 4-trading-day cycle (3% minimum profit); QT 1 Step (BNPL): 14-day standard cycle, 5 trading days and 3% profit minimum",
+        "verdict": "QT Funded is Quant Tekel's virtual prop-trading offering. PropRadar's file documents the disclosed operating and payment entities and distinguishes the prop program from the group's brokerage business. Brokerage authorisation should not be treated as authorisation of the virtual challenge; program rules and payout evidence require their own checks."
       }
     },
     "rebelsfunding": {

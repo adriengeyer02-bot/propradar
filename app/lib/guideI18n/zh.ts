@@ -2,6 +2,28 @@ import type { GuideTranslations } from './types';
 
 /** Simplified Chinese guide summaries (translated from the English guides). */
 const zh: GuideTranslations = {
+  'hyrotrader-vs-tradeify': {
+    "title": "HyroTrader 与 Tradeify：回撤规则及出金比较",
+    "metaDescription": "比较 HyroTrader 和 Tradeify 的加密货币与期货市场、每日亏损、EOD 回撤、一致性及首次出金条件。",
+    "eyebrow": "加密货币与期货",
+    "h1": "HyroTrader 与 Tradeify：回撤规则和风险管理",
+    "answer": "HyroTrader 面向加密货币交易，Tradeify 面向交易所期货。应比较具体项目的市场、每日亏损、总回撤和出金条件。Tradeify 的 EOD 计算并不意味着盘中可以触及亏损底线。",
+    "checks": [
+      "先选择交易品种和平台，再比较价格。",
+      "区分每日亏损、总亏损与出金一致性要求。",
+      "核对具体项目、账户阶段和购买日期。"
+    ],
+    "faq": [
+      {
+        "question": "HyroTrader 和 Tradeify 哪个更好？",
+        "answer": "先看市场：HyroTrader 是加密货币项目，Tradeify 是期货项目。再比较具体规则与首次出金流程，不宜仅凭分数判断整体优劣。"
+      },
+      {
+        "question": "EOD 回撤允许盘中突破底线吗？",
+        "answer": "不允许。Tradeify 在日终更新底线，但实时监测净清算价值。触及底线可能立即导致账户失败。"
+      }
+    ]
+  },
   'meilleure-prop-firm-2026': {
     title: '当前最佳自营交易公司：以风险为先的排名（2026）',
     metaDescription: '目前最好的自营交易公司（prop firm）有哪些？按出金可靠性、规则清晰度、法律证据、回撤和社区信号比较当前领先者。',
