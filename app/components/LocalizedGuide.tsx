@@ -13,6 +13,7 @@ import { getFirmBySlug, hasPayoutRiskSignal, type PropFirm } from '../lib/propFi
 import { getGuideLastModified, getGuidePublishedAt, getRelatedGuides, getSeoGuidePath, selectGuideFirms, type SeoGuide } from '../lib/seoGuides';
 import { FOUNDER, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from './IntentLink';
+import LanguageLink from './LanguageLink';
 
 const TABLE_ROWS = 25;
 
@@ -245,7 +246,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
           <p className="section-note">{g.englishText}</p>
           <ul className="pr-quick-links">
             <li>
-              <Link href={englishPath} hrefLang="en">{g.englishLink} <span aria-hidden="true">→</span></Link>
+              <LanguageLink href={englishPath} locale="en">{g.englishLink} <span aria-hidden="true">→</span></LanguageLink>
             </li>
           </ul>
         </aside>

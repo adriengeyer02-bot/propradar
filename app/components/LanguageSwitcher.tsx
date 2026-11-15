@@ -2,7 +2,9 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { LOCALES, LOCALE_COOKIE, LOCALE_LABELS, LOCALE_SHORT, HTML_LANG, localePath, splitLocale, type Locale } from '../lib/locales';
+import { LOCALES, LOCALE_LABELS, LOCALE_SHORT, HTML_LANG, splitLocale } from '../lib/locales';
+import { languageSwitchPath } from '../lib/articlePaths';
+import LanguageLink from './LanguageLink';
 
 /**
  * Language menu in the top bar. Picking a language stores it in a cookie
@@ -31,10 +33,6 @@ export default function LanguageSwitcher({ label }: { label: string }) {
     };
   }, [open]);
 
-  function remember(next: Locale) {
-    document.cookie = `${LOCALE_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`;
-  }
-
   return (
     <div ref={rootRef} className={`lang-switch${open ? ' is-open' : ''}`}>
       <button
@@ -54,16 +52,15 @@ export default function LanguageSwitcher({ label }: { label: string }) {
       <ul className="lang-switch-menu" role="list" hidden={!open}>
         {LOCALES.map((item) => (
           <li key={item}>
-            <a
-              href={localePath(item, path)}
-              hrefLang={HTML_LANG[item]}
+            <LanguageLink
+              href={languageSwitchPath(item, path)}
+              locale={item}
               lang={HTML_LANG[item]}
               aria-current={item === locale ? 'true' : undefined}
-              onClick={() => remember(item)}
             >
               <span>{LOCALE_LABELS[item]}</span>
               <small>{LOCALE_SHORT[item]}</small>
-            </a>
+            </LanguageLink>
           </li>
         ))}
       </ul>
