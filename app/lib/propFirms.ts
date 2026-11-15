@@ -202,13 +202,14 @@ export const FXIFY_AFFILIATE_URL = 'https://trader.fxify.com/purchasechallenge?a
 /** Partner code issued to PropRadar by FXIFY (25% off all programs, per FXIFY), received 2026-11-14. */
 export const FXIFY_PROMO_CODE = 'FXIFY0EVDNU';
 export const UPCOMERS_AFFILIATE_URL = 'https://www.upcomers.com/fr/?code=kkscxhro#challenges';
+export const ONEFUNDED_AFFILIATE_URL = 'https://onefunded.com/?utm_medium=aff&utm_term=713&utm_source=tracknow&campaign_id=7&ref_id=713#challenges';
 /** Partner code issued to PropRadar by Upcomers, received 2026-11-14 (no percentage stated by Upcomers). */
 export const UPCOMERS_PROMO_CODE = 'kkscxhro';
 /** Partner code issued to PropRadar by OneFunded on 2026-11-12 (25% off all challenges, per OneFunded). */
 export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL, ONEFUNDED_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -12906,7 +12907,7 @@ export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
   'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
   fxify: { href: FXIFY_AFFILIATE_URL, code: FXIFY_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-14' },
   upcomers: { href: UPCOMERS_AFFILIATE_URL, code: UPCOMERS_PROMO_CODE, codeSource: 'firm', checkedOn: '2026-11-14' },
-  onefunded: { code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-12' },
+  onefunded: { href: ONEFUNDED_AFFILIATE_URL, code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-15' },
 };
 
 function applyPartnerOffer(firm: PropFirm): PropFirm {
