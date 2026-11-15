@@ -37,6 +37,9 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
   `agent/logo-raw` branch), then `python3 -I scripts/normalize-logos.py
   <logo-raw dir> --sheet sheet.png` and look at the contact sheet before
   committing. Never use a logo from a site that redirects to another brand.
+- When the site gives no usable icon, the logo the firm uploaded to its
+  claimed Trustpilot profile (s3-eu-west-1.amazonaws.com/tpd/logos/<id>/0x0.png)
+  can be added to `EXTRA_LOGOS` and allowed in `LOGO_IMG_OK` after a visual check.
 - Share images (`opengraph-image.tsx` in `firm/[slug]` and `guides/[slug]`)
   are generated from the same data and logos at build time.
 
