@@ -259,6 +259,7 @@ const de: Messages = {
     globeZoom: 'Globus-Zoom',
     globePause: 'Drehung pausieren',
     globeResume: 'Drehung fortsetzen',
+    globeHud: { preview: 'Firmenvorschau', locked: 'Profil fixiert', jurisdictions: 'Rechtssitze der Gesellschaften', unknown: 'Nicht festgestellt', offer: 'Partnerangebot', available: 'Auf der Website der Firma verfügbar', offerNew: 'Bis zu {pct}% Rabatt · Neukunden', offerFirst: '{pct}% Rabatt · erste Bestellung', offerAll: '{pct}% Rabatt · alle Challenges', offerSelected: '{pct}% Rabatt · berechtigte Challenges', conditions: 'Affiliate · Bedingungen beim Kauf prüfen.', copy: 'Kopieren', copied: 'Code kopiert', copyFailed: 'Den obigen Code markieren und kopieren.', seeOffer: 'Zum Angebot' },
     globeNoResults: 'Keine passende Firma. Versuchen Sie einen anderen Namen.',
     zoomIn: 'Vergrößern',
     zoomOut: 'Verkleinern',

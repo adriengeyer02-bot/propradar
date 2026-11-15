@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { RadarDot, RadarSector } from '../../lib/radar';
+import GlobeFirmHud, { type GlobeHudConfig } from './GlobeFirmHud';
 
 /**
  * The PropRadar globe: the same firms as the radar, wrapped on a sphere.
@@ -33,6 +34,7 @@ type Props = {
   zoomLabels: { group: string; in: string; out: string; reset: string };
   motionLabels: { pause: string; resume: string };
   legend: { caption: string; label: string };
+  hud: GlobeHudConfig;
   /** Sphere radius as a share of the canvas (default GLOBE_R); the home hero uses a bigger sphere. */
   sphere?: number;
 };
@@ -219,11 +221,18 @@ function initials(name: string) {
   return name.split(/[\s/]+/).filter(Boolean).slice(0, 2).map((word) => word[0]?.toUpperCase() ?? '').join('');
 }
 
-export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels, motionLabels, legend, sphere }: Props) {
+export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels, motionLabels, legend, hud, sphere }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [hover, setHover] = useState<{ dot: RadarDot; x: number; y: number } | null>(null);
+  const [hover, setHover] = useState<RadarDot | null>(null);
   const hoverSlug = useRef<string | null>(null);
+  const hudAnchorRef = useRef<HTMLDivElement>(null);
+  const hudWireRef = useRef<SVGSVGElement>(null);
+  const hudPathRef = useRef<SVGPathElement>(null);
+  const hudOriginRef = useRef<SVGCircleElement>(null);
+  const hudHeight = useRef(340);
+  const hudSide = useRef<'left' | 'right'>('right');
+  const hoverCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
@@ -234,6 +243,49 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   props.current = { selected, dimmed, highlight, onSelect, sphere, paused };
   const requestDraw = useRef<() => void>(() => undefined);
   const zoomBy = useRef<(factor: number, instant?: boolean) => void>(() => undefined);
+  const hudDot = hover ?? dots.find((dot) => dot.slug === selected) ?? null;
+
+  function cancelHoverClose() {
+    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
+    hoverCloseTimer.current = null;
+  }
+
+  function clearHover() {
+    cancelHoverClose();
+    hoverSlug.current = null;
+    setHover(null);
+    requestDraw.current();
+  }
+
+  function scheduleHoverClose() {
+    // Leave a bridge between the moving canvas target and the interactive card.
+    if (hoverCloseTimer.current) return;
+    hoverCloseTimer.current = setTimeout(() => {
+      hoverCloseTimer.current = null;
+      if (hudAnchorRef.current?.contains(document.activeElement)) return;
+      hoverSlug.current = null;
+      setHover(null);
+      view.current.hovering = canvasRef.current?.matches(':hover') ?? false;
+      requestDraw.current();
+    }, 240);
+  }
+
+  function dismissHud() {
+    clearHover();
+    hud.onDismiss();
+  }
+
+  useEffect(() => {
+    const node = hudAnchorRef.current;
+    if (!node) return;
+    const observer = new ResizeObserver(() => {
+      hudHeight.current = node.offsetHeight;
+      requestDraw.current();
+    });
+    observer.observe(node);
+    requestDraw.current();
+    return () => observer.disconnect();
+  }, [hudDot?.slug]);
 
   // Market slices and firm positions. A firm keeps its relative place inside
   // its market (as on the radar), stretched to the globe's slice.
@@ -270,6 +322,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
   // Turn the globe to face the selected firm.
   useEffect(() => {
+    clearHover();
     if (!selected) {
       // Back to the idle spin.
       requestDraw.current();
@@ -616,7 +669,6 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         .map(({ dot, world }) => ({ dot, world, p: project(world, cx, cy, radius) }))
         .sort((a, b) => priority(a.dot.slug) - priority(b.dot.slug) || a.p.z - b.p.z);
       hits = [];
-      let callout: { dot: RadarDot; x: number; y: number; r: number } | null = null;
       for (const { dot, world, p } of placed) {
         const isSel = dot.slug === sel;
         const isDim = dim.has(dot.slug) && !isSel;
@@ -742,7 +794,6 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           c.strokeStyle = palette.accent;
           c.globalAlpha = 0.6;
           c.stroke();
-          if (p.z > 0.2) callout = { dot, x: p.x, y: p.y, r };
         }
         c.globalAlpha = 1;
         if (!isDim && p.z > 0.15) hits.push({ dot, x: p.x, y: p.y, r: Math.max(r, 9) });
@@ -754,36 +805,41 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         curvedText(`${sectorName(slice.key)} · ${slice.count}`, LABEL_LAT, (slice.start + slice.end) / 2, cx, cy, radius, Math.max(10.5, size * 0.022) * Math.min(1.5, Math.pow(zoom, 0.4)), (slice.end - slice.start) * 0.92);
       }
 
-      // Name tag on the selected firm.
-      if (callout) {
-        const fontPx = Math.min(18, Math.max(11, size * 0.024));
-        c.font = `750 ${fontPx}px ${palette.font}`;
-        const suffix = ` · ${callout.dot.score}`;
-        let name = callout.dot.name;
-        const maxWidth = size - 32;
-        while (name.length > 1 && c.measureText(`${name}${suffix}`).width > maxWidth) name = name.slice(0, -1);
-        const text = `${name}${name !== callout.dot.name ? '…' : ''}${suffix}`;
-        const w = c.measureText(text).width + 16;
-        const h = fontPx + 12;
-        const right = callout.x + callout.r + 18 + w < size - 4;
-        const bx = Math.max(4, Math.min(size - w - 4, right ? callout.x + callout.r + 14 : callout.x - callout.r - 14 - w));
-        const by = Math.max(4, callout.y - callout.r - h - 4);
-        c.strokeStyle = palette.accent;
-        c.lineWidth = 1.2;
-        c.beginPath();
-        c.moveTo(callout.x + (right ? 1 : -1) * callout.r * 0.7, callout.y - callout.r * 0.7);
-        c.lineTo(right ? bx : bx + w, by + h / 2);
-        c.stroke();
-        c.fillStyle = palette.dark ? 'rgba(11, 17, 26, 0.92)' : 'rgba(255, 255, 255, 0.95)';
-        roundRect(bx, by, w, h, h / 2);
-        c.fill();
-        c.strokeStyle = palette.accent;
-        c.stroke();
-        c.fillStyle = palette.text;
-        c.textAlign = 'left';
-        c.textBaseline = 'middle';
-        c.fillText(text, bx + 8, by + h / 2 + 0.5);
-        c.textBaseline = 'alphabetic';
+      // Keep the dossier and its leader attached to the projected logo without
+      // re-rendering React on every animation frame. Narrow globes dock it below.
+      const panel = hudAnchorRef.current;
+      const wire = hudWireRef.current;
+      if (panel && wire) {
+        const anchor = hits.find((hit) => hit.dot.slug === (hoverSlug.current ?? sel));
+        const docked = size < 520;
+        const front = docked || Boolean(anchor && anchor.x > 8 && anchor.x < size - 8 && anchor.y > 8 && anchor.y < size - 8 && !view.current.dragging);
+        panel.dataset.docked = String(docked);
+        panel.dataset.front = String(front);
+        wire.dataset.front = String(front && !docked);
+        wire.style.height = `${size}px`;
+        wire.setAttribute('viewBox', `0 0 ${size} ${size}`);
+        if (anchor && !docked) {
+          const gap = anchor.r + 16;
+          if (anchor.x < size / 2 - 40) hudSide.current = 'right';
+          else if (anchor.x > size / 2 + 40) hudSide.current = 'left';
+          const right = hudSide.current === 'right';
+          // At high zoom the selected logo grows: reserve its actual radius
+          // instead of letting the panel cover the target.
+          const available = right ? size - anchor.x - gap - 12 : anchor.x - gap - 12;
+          const width = Math.max(180, Math.min(284, Math.floor(available)));
+          const left = Math.max(12, Math.min(size - width - 12, right ? anchor.x + gap : anchor.x - gap - width));
+          const top = Math.max(64, Math.min(size - hudHeight.current - 12, anchor.y - 76));
+          panel.style.width = `${width}px`;
+          panel.style.left = `${left}px`;
+          panel.style.top = `${top}px`;
+          panel.style.setProperty('--hud-max-height', `${size - 82}px`);
+          const edge = right ? left : left + width;
+          const start = anchor.x + (right ? 1 : -1) * (anchor.r + 5);
+          const join = Math.max(top + 22, Math.min(top + hudHeight.current - 22, anchor.y));
+          hudPathRef.current?.setAttribute('d', `M ${start} ${anchor.y} H ${(start + edge) / 2} L ${edge} ${join}`);
+          hudOriginRef.current?.setAttribute('cx', String(start));
+          hudOriginRef.current?.setAttribute('cy', String(anchor.y));
+        }
       }
     }
 
@@ -967,12 +1023,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       }
       return closest;
     };
-    const clearHover = () => {
-      hoverSlug.current = null;
-      setHover(null);
-    };
     const onEnter = (event: PointerEvent) => {
       if (event.pointerType === 'mouse') {
+        cancelHoverClose();
         view.current.hovering = true;
         view.current.vyaw = 0;
         view.current.vpitch = 0;
@@ -1016,9 +1069,12 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       if (event.pointerType !== 'mouse') return;
       const hit = pick(p.x, p.y);
       v.hovering = true;
-      hoverSlug.current = hit ? hit.dot.slug : null;
       canvas.style.cursor = hit ? 'pointer' : 'grab';
-      setHover(hit ? { dot: hit.dot, x: Math.max(Math.min(130, size / 2), Math.min(size - Math.min(130, size / 2), hit.x)), y: Math.max(70, hit.y - hit.r) } : null);
+      if (hit) {
+        cancelHoverClose();
+        hoverSlug.current = hit.dot.slug;
+        setHover((current) => current?.slug === hit.dot.slug ? current : hit.dot);
+      } else scheduleHoverClose();
       requestDraw.current();
     };
     const onUp = (event: PointerEvent) => {
@@ -1047,8 +1103,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       kick();
     };
     const onLeave = () => {
-      view.current.hovering = false;
-      clearHover();
+      scheduleHoverClose();
       kick();
     };
     const onWheel = (event: WheelEvent) => {
@@ -1147,6 +1202,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     canvas.addEventListener('pointercancel', onTouchUp);
 
     return () => {
+      cancelHoverClose();
       cancelAnimationFrame(frame);
       observer.disconnect();
       resizeObserver.disconnect();
@@ -1170,7 +1226,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   }, [dots, sectors]);
 
   return (
-    <div className="prg" ref={wrapRef}>
+    <div className="prg" ref={wrapRef} onKeyDown={(event) => {
+      if (event.key === 'Escape') dismissHud();
+    }}>
       <canvas ref={canvasRef} className="prg-canvas" role="img" aria-label={ariaLabel} tabIndex={0} />
       <div className="prg-zoom" role="group" aria-label={zoomLabels.group}>
         <button type="button" onClick={() => zoomBy.current(1.5)} disabled={zoomLevel >= MAX_ZOOM - 0.01} aria-label={zoomLabels.in}>+</button>
@@ -1186,11 +1244,19 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           </button>
         ) : null}
       </div>
-      {hover ? (
-        <div className="prg-tip" style={{ left: hover.x, top: hover.y }} aria-hidden="true">
-          <strong>{hover.dot.name}</strong>
-          <span>{sectorName(hover.dot.sector)} · {scoreLabel} {hover.dot.score}/100</span>
+      {hudDot ? (
+        <>
+        <svg key={hudDot.slug} className="prg-hud-wire" ref={hudWireRef} aria-hidden="true" data-front="false">
+          <path ref={hudPathRef} pathLength="1" /><circle ref={hudOriginRef} r="3" />
+        </svg>
+        <div ref={hudAnchorRef} className="prg-hud-anchor" data-front="false"
+          onPointerEnter={() => { cancelHoverClose(); view.current.hovering = true; }}
+          onPointerLeave={scheduleHoverClose}
+          onFocus={cancelHoverClose}
+          onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) scheduleHoverClose(); }}>
+          <GlobeFirmHud key={hudDot.slug} dot={hudDot} sector={sectorName(hudDot.sector)} scoreLabel={scoreLabel} pinned={hudDot.slug === selected} config={hud} onClose={dismissHud} />
         </div>
+        </>
       ) : null}
       <div className="prg-legend" aria-label={legend.label}>
         <span><i className="prg-sw prg-good" />75–100</span>

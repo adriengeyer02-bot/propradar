@@ -308,6 +308,7 @@ const ja: Messages = {
     "globeZoom": "グローブのズーム",
     "globePause": "回転を一時停止",
     "globeResume": "回転を再開",
+    "globeHud": { "preview": "会社プレビュー", "locked": "プロフィールを固定", "jurisdictions": "法人の管轄地", "unknown": "未確認", "offer": "提携特典", "available": "会社のサイトで確認", "offerNew": "新規顧客は最大 {pct}% 割引", "offerFirst": "初回注文は {pct}% 割引", "offerAll": "全チャレンジ {pct}% 割引", "offerSelected": "対象チャレンジ {pct}% 割引", "conditions": "アフィリエイト · 決済時に条件を確認してください。", "copy": "コピー", "copied": "コードをコピーしました", "copyFailed": "上のコードを選択してコピーしてください。", "seeOffer": "特典を見る" },
     "globeNoResults": "一致する会社がありません。別の名前で検索してください。",
     "zoomIn": "拡大",
     "zoomOut": "縮小",

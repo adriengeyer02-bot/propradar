@@ -3,6 +3,7 @@ import { firmLogoFor } from './firmLogos';
 import { getClosureRecord } from './closures';
 import { drawdownLabel, priceLabel, profitSplitLabel } from './firmFormat';
 import { toEnglishText } from './i18n';
+import { entityCountries } from './jurisdictions';
 
 /**
  * Geometry for the PropRadar radar: every tracked firm on one disc.
@@ -50,6 +51,9 @@ export type RadarDot = {
   drawdown: string;
   payout: string;
   legal: string;
+  /** Mapped legal entities, never an inference from a brand's headquarters. */
+  jurisdictions: { code: string; name: string }[];
+  offer?: Pick<NonNullable<PropFirm['partnerOffer']>, 'href' | 'code' | 'percent' | 'scope'>;
 };
 
 export type RadarClosed = {
@@ -109,7 +113,10 @@ export function radarRadius(score: number) {
 
 export function radarPoint(radius: number, angle: number) {
   const t = ((angle - 90) * Math.PI) / 180;
-  return { x: RADAR_CENTER + radius * Math.cos(t), y: RADAR_CENTER + radius * Math.sin(t) };
+  // Node and browser trig can differ in the last decimal. Stable SVG attributes
+  // avoid hydration warnings without changing positions at a visible scale.
+  const stable = (value: number) => Math.round(value * 1e6) / 1e6;
+  return { x: stable(RADAR_CENTER + radius * Math.cos(t)), y: stable(RADAR_CENTER + radius * Math.sin(t)) };
 }
 
 /** Stable 0-1 value per string, so the radar does not reshuffle between builds. */
@@ -195,6 +202,13 @@ export function buildRadar(firms: PropFirm[], recent?: { latest: string; bySlug:
       drawdown: drawdownLabel(firm, toEnglishText),
       payout: toEnglishText(firm.reviewSignals.payoutRisk),
       legal: firm.regulatoryAudit.riskLevel,
+      jurisdictions: entityCountries(firm.regulatoryAudit.entities).map(({ code, name }) => ({ code, name })),
+      ...(firm.partnerOffer ? { offer: {
+        href: firm.partnerOffer.href,
+        code: firm.partnerOffer.code,
+        percent: firm.partnerOffer.percent,
+        scope: firm.partnerOffer.scope,
+      } } : {}),
     };
   });
 

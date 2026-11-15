@@ -308,6 +308,7 @@ const es: Messages = {
     "globeZoom": "Zoom del globo",
     "globePause": "Pausar la rotación",
     "globeResume": "Reanudar la rotación",
+    "globeHud": { "preview": "Vista previa", "locked": "Perfil fijado", "jurisdictions": "Jurisdicciones de las entidades", "unknown": "No determinadas", "offer": "Oferta de socio", "available": "Disponible en la web de la firma", "offerNew": "Hasta {pct}% de descuento · nuevos clientes", "offerFirst": "{pct}% de descuento · primer pedido", "offerAll": "{pct}% de descuento · todos los desafíos", "offerSelected": "{pct}% de descuento · desafíos elegibles", "conditions": "Afiliación · verifica las condiciones al pagar.", "copy": "Copiar", "copied": "Código copiado", "copyFailed": "Selecciona y copia el código de arriba.", "seeOffer": "Ver oferta" },
     "globeNoResults": "No se encontró ninguna firma. Prueba otro nombre.",
     "zoomIn": "Acercar",
     "zoomOut": "Alejar",

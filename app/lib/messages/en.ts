@@ -263,6 +263,7 @@ const en = {
     globeZoom: 'Globe zoom',
     globePause: 'Pause rotation',
     globeResume: 'Resume rotation',
+    globeHud: { preview: 'Firm preview', locked: 'Profile locked', jurisdictions: 'Entity jurisdictions', unknown: 'Not established', offer: 'Partner offer', available: 'Available on the firm’s site', offerNew: 'Up to {pct}% off · new customers', offerFirst: '{pct}% off · first order', offerAll: '{pct}% off · all challenges', offerSelected: '{pct}% off · eligible challenges', conditions: 'Affiliate · check conditions at checkout.', copy: 'Copy', copied: 'Code copied', copyFailed: 'Select and copy the code above.', seeOffer: 'See offer' },
     globeNoResults: 'No matching firm. Try another name.',
     zoomIn: 'Zoom in',
     zoomOut: 'Zoom out',

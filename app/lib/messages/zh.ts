@@ -259,6 +259,7 @@ const zh: Messages = {
     globeZoom: '地球仪缩放',
     globePause: '暂停旋转',
     globeResume: '继续旋转',
+    globeHud: { preview: '公司预览', locked: '资料已固定', jurisdictions: '法律实体管辖地', unknown: '尚未确认', offer: '合作优惠', available: '可在公司官网查看', offerNew: '新客户最高优惠 {pct}%', offerFirst: '首次订单优惠 {pct}%', offerAll: '所有挑战优惠 {pct}%', offerSelected: '符合条件的挑战优惠 {pct}%', conditions: '推广合作 · 请在结账时确认条款。', copy: '复制', copied: '代码已复制', copyFailed: '请选择并复制上方代码。', seeOffer: '查看优惠' },
     globeNoResults: '未找到匹配的公司，请尝试其他名称。',
     zoomIn: '放大',
     zoomOut: '缩小',

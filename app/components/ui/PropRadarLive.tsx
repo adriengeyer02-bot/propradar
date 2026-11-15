@@ -971,6 +971,7 @@ export default function PropRadarLive({
           zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
           motionLabels={{ pause: t.globePause, resume: t.globeResume }}
           legend={{ caption: t.globeNorth, label: t.scoreBand }}
+          hud={{ locale, labels: t.globeHud, values: valueNames, fromLabel: tb.from_, splitLabel: tb.split, reviewLabel: t.lastReview, trustpilotLabel: t.trustpilot, openLabel: t.openProfile, closeLabel: t.close, onDismiss: () => { setPinned(false); setFocus(null); } }}
         />
       </section>
       <aside className="prr-side prr-panel" aria-label={t.controls}>

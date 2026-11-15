@@ -259,6 +259,7 @@ const hi: Messages = {
     globeZoom: 'ग्लोब ज़ूम',
     globePause: 'घुमाव रोकें',
     globeResume: 'घुमाव फिर शुरू करें',
+    globeHud: { preview: 'फ़र्म की झलक', locked: 'प्रोफ़ाइल पिन की गई', jurisdictions: 'कानूनी इकाइयों के क्षेत्राधिकार', unknown: 'स्थापित नहीं', offer: 'पार्टनर ऑफ़र', available: 'फ़र्म की वेबसाइट पर उपलब्ध', offerNew: '{pct}% तक छूट · नए ग्राहक', offerFirst: '{pct}% छूट · पहला ऑर्डर', offerAll: '{pct}% छूट · सभी चैलेंज', offerSelected: '{pct}% छूट · पात्र चैलेंज', conditions: 'एफ़िलिएट · भुगतान के समय शर्तें जाँचें।', copy: 'कॉपी करें', copied: 'कोड कॉपी हो गया', copyFailed: 'ऊपर का कोड चुनकर कॉपी करें।', seeOffer: 'ऑफ़र देखें' },
     globeNoResults: 'कोई मेल खाती फर्म नहीं मिली। दूसरा नाम आज़माएँ।',
     zoomIn: 'ज़ूम इन',
     zoomOut: 'ज़ूम आउट',
