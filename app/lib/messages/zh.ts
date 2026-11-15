@@ -609,6 +609,7 @@ const zh: Messages = {
     nothingRecorded: '本次核查无记录。',
     reviewsEyebrow: '评价与出金',
     reviewsTitle: '交易者怎么说',
+    payoutProofs: { title: "公开的出金证明", intro: "仅收录注明日期并附链接的来源。公司自行公布的数字标注为「公司自报」：PropRadar 未对其进行审计。", official: "公司官方页面", press: "行业媒体", onchain: "链上数据", firmReported: "公司自报", independent: "独立统计" },
     payoutRisk: '出金风险',
     payoutCheck: '出金核查',
     withheldShort: 'Trustpilot 已暂停显示评分。',

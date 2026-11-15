@@ -697,6 +697,7 @@ const ja: Messages = {
     "nothingRecorded": "今回の確認では記録はありません。",
     "reviewsEyebrow": "レビューと出金",
     "reviewsTitle": "トレーダーの報告",
+    "payoutProofs": { "title": "公開されている出金の証拠", "intro": "日付とリンクのある情報源のみ。会社自身が公表した数字は「会社発表」と表示しています（PropRadar は監査していません）。", "official": "会社の公式ページ", "press": "業界メディア", "onchain": "オンチェーンデータ", "firmReported": "会社発表", "independent": "独立した集計" },
     "payoutRisk": "出金リスク",
     "payoutCheck": "出金の確認",
     "withheldShort": "Trustpilot により評価は非表示です。",

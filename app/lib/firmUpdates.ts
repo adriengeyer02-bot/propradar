@@ -1,4 +1,4 @@
-import type { Product, PropFirm, RegulatoryEntity, SourceLink } from './propFirms';
+import type { Product, PropFirm, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
 import updatesFile from '../data/firm-updates.json';
 
 /**
@@ -60,6 +60,8 @@ export type FirmUpdate = {
   addIncidents?: string[];
   /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
   setEntities?: RegulatoryEntity[];
+  /** Public payout proof to append (never replaces earlier items). */
+  addPayoutProofs?: PayoutProof[];
   changelog: FirmChangelogEntry[];
 };
 
@@ -188,6 +190,12 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       next.legalVerified =
         next.status !== 'Fermée' &&
         update.setEntities.some((entity) => Boolean(entity.jurisdiction) && !/to verify|international|unknown|unconfirmed/i.test(entity.jurisdiction));
+    }
+
+    if (update.addPayoutProofs?.length) {
+      const seen = new Set((next.payoutProofs ?? []).map((proof) => proof.url + proof.quote));
+      next.payoutProofs = [...(next.payoutProofs ?? []), ...update.addPayoutProofs.filter((proof) => !seen.has(proof.url + proof.quote))]
+        .sort((a, b) => b.date.localeCompare(a.date));
     }
 
     if (update.addIncidents?.length) {

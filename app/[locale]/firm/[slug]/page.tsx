@@ -1294,6 +1294,28 @@ export default async function FirmPage({ params }: Props) {
           </div>
         </header>
 
+        {firm.payoutProofs?.length ? (
+          <div className="pr-payout-proofs" aria-labelledby={`payout-proofs-${firm.slug}`}>
+            <h3 id={`payout-proofs-${firm.slug}`}>{f.payoutProofs.title}</h3>
+            <p className="pr-payout-proofs-intro">{f.payoutProofs.intro}</p>
+            <ol>
+              {firm.payoutProofs.map((proof) => (
+                <li key={proof.url + proof.quote}>
+                  <div className="pr-payout-proof-meta">
+                    <time dateTime={proof.date}>{proof.date}</time>
+                    <span className={`pr-payout-proof-kind is-${proof.kind}`}>{f.payoutProofs[proof.kind]}</span>
+                    <span className={proof.firmReported ? 'pr-payout-proof-tag is-firm' : 'pr-payout-proof-tag is-independent'}>
+                      {proof.firmReported ? f.payoutProofs.firmReported : f.payoutProofs.independent}
+                    </span>
+                  </div>
+                  <p className="pr-payout-proof-text">{proof.quote}</p>
+                  <a href={proof.url} target="_blank" rel="noopener noreferrer">{proof.publisher} <span aria-hidden="true">↗</span></a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : null}
+
         <div className="pr-signal-board">
           <div className="pr-signal-total">
             <span>Trustpilot</span>

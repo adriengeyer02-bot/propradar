@@ -697,6 +697,7 @@ const es: Messages = {
     "nothingRecorded": "Nada registrado en esta comprobación.",
     "reviewsEyebrow": "Reseñas y pagos",
     "reviewsTitle": "Lo que cuentan los traders",
+    "payoutProofs": { "title": "Pruebas públicas de pagos", "intro": "Solo fuentes fechadas y enlazadas. Una cifra publicada por la propia firma se marca como declarada por la firma: PropRadar no la ha auditado.", "official": "Página oficial de la firma", "press": "Prensa especializada", "onchain": "Datos on-chain", "firmReported": "declarado por la firma", "independent": "recuento independiente" },
     "payoutRisk": "Riesgo de pago",
     "payoutCheck": "Revisión de pagos",
     "withheldShort": "Valoración retenida por Trustpilot.",

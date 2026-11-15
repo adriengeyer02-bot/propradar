@@ -609,6 +609,7 @@ const hi: Messages = {
     nothingRecorded: 'इस जाँच में कुछ दर्ज नहीं हुआ।',
     reviewsEyebrow: 'रिव्यू और पेआउट',
     reviewsTitle: 'ट्रेडर क्या रिपोर्ट करते हैं',
+    payoutProofs: { title: "सार्वजनिक पेआउट प्रमाण", intro: "केवल दिनांकित और लिंक किए गए स्रोत। फ़र्म द्वारा खुद प्रकाशित आंकड़े को फ़र्म द्वारा बताया गया चिह्नित किया गया है: PropRadar ने इसका ऑडिट नहीं किया है।", official: "फ़र्म का आधिकारिक पेज", press: "ट्रेड प्रेस", onchain: "ऑन-चेन डेटा", firmReported: "फ़र्म द्वारा बताया गया", independent: "स्वतंत्र गिनती" },
     payoutRisk: 'पेआउट जोखिम',
     payoutCheck: 'पेआउट जाँच',
     withheldShort: 'Trustpilot द्वारा रेटिंग रोकी गई।',
