@@ -64,7 +64,7 @@ const valuePicks = ['the5ers', 'topstep', 'fundingpips', 'funderpro', 'the-tradi
   .filter((firm): firm is NonNullable<ReturnType<typeof getFirmBySlug>> => Boolean(firm));
 
 const bestPromoDeals = getBestPromoDeals(30);
-const megaPromoDeals = getMegaPromoDeals(4);
+const megaPromoDeals = getMegaPromoDeals(12);
 const budgetShortlist = getBudgetPromoShortlist(12);
 const futuresShortlist = getFuturesPromoShortlist(8);
 
