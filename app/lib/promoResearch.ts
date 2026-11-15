@@ -1,4 +1,5 @@
 import {
+  PARTNER_OFFERS,
   BLUE_GUARDIAN_AFFILIATE_URL,
   E8_AFFILIATE_URL,
   FXIFY_AFFILIATE_URL,
@@ -796,19 +797,29 @@ export function promoDealWithFirm(deal: PromoDeal) {
   };
 }
 
+/** Firms PropRadar has a partner link or code with (disclosed on every card); listed first on /promos. Scores are unaffected. */
+const isPartner = (slug: string) => slug in PARTNER_OFFERS;
+
 export function getBestPromoDeals(limit = 12) {
   return promoDeals
     .map((deal) => promoDealWithFirm(deal))
-    .sort((a, b) => b.dealScore - a.dealScore)
+    .sort((a, b) => Number(isPartner(b.slug)) - Number(isPartner(a.slug)) || b.dealScore - a.dealScore)
     .slice(0, limit);
 }
 
+/** Top of /promos: one offer per partner firm first (best deal score), then the other featured official offers. */
 export function getMegaPromoDeals(limit = 4) {
-  return promoDeals
-    .filter((deal) => deal.featured && deal.availability === 'Active official offer')
-    .map((deal) => promoDealWithFirm(deal))
-    .sort((a, b) => (a.heroRank ?? 99) - (b.heroRank ?? 99) || b.dealScore - a.dealScore)
-    .slice(0, limit);
+  // A partner's own code (the one in its pop-up) comes before its other offers.
+  const own = (deal: { slug: string; code?: string }) => Number(Boolean(deal.code) && PARTNER_OFFERS[deal.slug]?.code === deal.code);
+  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal)).sort((a, b) => own(b) - own(a) || b.dealScore - a.dealScore);
+  const partners: typeof ranked = [];
+  for (const deal of ranked) {
+    if (isPartner(deal.slug) && !partners.some((item) => item.slug === deal.slug)) partners.push(deal);
+  }
+  const others = ranked
+    .filter((deal) => !isPartner(deal.slug) && deal.featured && deal.availability === 'Active official offer')
+    .sort((a, b) => (a.heroRank ?? 99) - (b.heroRank ?? 99) || b.dealScore - a.dealScore);
+  return [...partners, ...others].slice(0, limit);
 }
 
 export function getBudgetPromoShortlist(limit = 12) {
