@@ -969,6 +969,8 @@ export default function PropRadarLive({
           hint={t.globeHint}
           scoreLabel={t.score}
           zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
+          motionLabels={{ pause: t.globePause, resume: t.globeResume }}
+          legend={{ caption: t.globeNorth, label: t.scoreBand }}
         />
       </section>
       <aside className="prr-side prr-panel" aria-label={t.controls}>

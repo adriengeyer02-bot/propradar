@@ -17,7 +17,6 @@ import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../../lib/riskTone';
 import {
-  BLUE_GUARDIAN_AFFILIATE_URL,
   FTMO_AFFILIATE_URL,
   GOAT_FUNDED_TRADER_AFFILIATE_URL,
   THE5ERS_AFFILIATE_URL,
@@ -513,17 +512,16 @@ export default async function FirmPage({ params }: Props) {
 
   const isFtmo = firm.slug === 'ftmo';
   const isThe5ers = firm.slug === 'the5ers';
-  const isBlueGuardian = firm.slug === 'blue-guardian';
   const isGoatFundedTrader = firm.slug === 'goat-funded-trader';
-  /** Blue Guardian code read on its own site (see promoResearch.ts). */
-  const bgOffer = { code: 'NOV30', pct: '30%', date: formatDateLong(locale, '2026-11-07') };
   const partnerView = (() => {
     const offer = firm.partnerOffer;
     if (!offer) return undefined;
     const po = f.partnerOffer;
     const pct = offer.percent;
     const title = pct
-      ? fmt(offer.scope === 'first' ? po.titleFirst : offer.scope === 'new' ? po.titleNew : po.titleAll, { pct })
+      ? offer.scope === 'selected'
+        ? `${fmt(po.titleCode, { code: offer.code ?? '' })} · ${pct}%`
+        : fmt(offer.scope === 'first' ? po.titleFirst : offer.scope === 'new' ? po.titleNew : po.titleAll, { pct })
       : offer.code
         ? fmt(po.titleCode, { code: offer.code })
         : fmt(po.titleLink, { name: firm.name });
@@ -1152,37 +1150,13 @@ export default async function FirmPage({ params }: Props) {
             name={firm.name}
             logo={firmLogoFor(firm.logoDomain)?.src}
             view={partnerView}
-            showCard={!isFtmo && !isThe5ers && !isBlueGuardian && !isGoatFundedTrader}
+            showCard={!isFtmo && !isThe5ers && !isGoatFundedTrader}
           />
         ) : null}
         {firm.commercialNote ? (
           <p className="pr-firm-disclosure">
             <strong>{f.commercial}</strong> {tx(firm.commercialNote)}
           </p>
-        ) : null}
-
-        {isBlueGuardian ? (
-          <div className="panel blue-guardian-affiliate-panel">
-            <div className="blue-guardian-affiliate-copy">
-              <div className="eyebrow">{f.partner.bgEyebrow}</div>
-              <h2>{fmt(f.partner.bgTitle, bgOffer)}</h2>
-              <p className="muted">
-                {fmt(f.partner.bgText1, bgOffer)} {f.partner.bgText2}
-              </p>
-              <div className="promo-proof-row">
-                <span>{fmt(f.partner.bgProof, bgOffer)}</span>
-                <span>{f.partner.affiliateLink}</span>
-              </div>
-              <a href={BLUE_GUARDIAN_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                {f.partner.bgCta}
-              </a>
-            </div>
-            <div className="blue-guardian-offer-card">
-              <span>{fmt(f.partner.bgCardLabel, bgOffer)}</span>
-              <strong>{bgOffer.code}</strong>
-              <small>{fmt(f.partner.bgCardNote, bgOffer)}</small>
-            </div>
-          </div>
         ) : null}
 
         {isThe5ers ? (

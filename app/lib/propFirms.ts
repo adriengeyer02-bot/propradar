@@ -194,6 +194,8 @@ export function documentedIncidents(firm: Pick<PropFirm, 'incidentsDetails' | 'r
 const REVIEW_DATE = '2026-06-29';
 export const FTMO_AFFILIATE_URL = 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq';
 export const BLUE_GUARDIAN_AFFILIATE_URL = 'https://blueguardian.com/?afmc=PROPRADAR';
+/** PropRadar partner code; 25% verified on the Elite 100K Futures checkout on 2026-11-15. */
+export const BLUE_GUARDIAN_PROMO_CODE = 'PROPRADAR';
 export const FUNDERPRO_AFFILIATE_URL = 'https://funderpro.cxclick.com/visit/?bta=48892&brand=funderpro';
 export const GOAT_FUNDED_TRADER_AFFILIATE_URL = 'https://app.goatfundedtrader.com/checkout?referral_id=04e892a0e3d217576945';
 export const THE5ERS_AFFILIATE_URL = 'https://www.the5ers.com/?afmc=1cuh';
@@ -2500,7 +2502,7 @@ const corePropFirms: PropFirm[] = [
     logoDomain: 'blueguardian.com',
     communitySignal: 'Decent community presence, signal to confirm with recent payout proof.',
     commercialRelationship: 'Affiliation transparente',
-    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. Blue Guardian’s own site showed the code BG25 (25%, all accounts) on 14 November 2026, replacing NOV30; any code must visibly lower the cart subtotal, and the offer has no impact on the score.',
+    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link or partner code PROPRADAR. On 15 November 2026, PROPRADAR reduced the Elite 100K Futures checkout from $330 to $247.50 (25%). Eligibility and the final subtotal must be checked for the selected plan; the relationship has no impact on the score.',
     products: [
       product({
         id: 'blueguardian-programs',
@@ -12903,7 +12905,7 @@ export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
   the5ers: { href: THE5ERS_AFFILIATE_URL, code: THE5ERS_PROMO_CODE, codeSource: 'firm' },
   funderpro: { href: FUNDERPRO_AFFILIATE_URL, code: PROPRADAR_PROMO_CODE, codeSource: 'firm' },
   'goat-funded-trader': { href: GOAT_FUNDED_TRADER_AFFILIATE_URL, code: 'FIRSTGFT', percent: 50, scope: 'new', codeSource: 'site', checkedOn: '2026-11-14' },
-  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'BG25', percent: 25, scope: 'all', codeSource: 'site', checkedOn: '2026-11-14' },
+  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: BLUE_GUARDIAN_PROMO_CODE, percent: 25, scope: 'selected', codeSource: 'firm', checkedOn: '2026-11-15' },
   'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
   fxify: { href: FXIFY_AFFILIATE_URL, code: FXIFY_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-14' },
   upcomers: { href: UPCOMERS_AFFILIATE_URL, code: UPCOMERS_PROMO_CODE, codeSource: 'firm', checkedOn: '2026-11-14' },

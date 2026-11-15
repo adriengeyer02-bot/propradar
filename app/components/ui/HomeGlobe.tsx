@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import type { RadarData } from '../../lib/radar';
 import type { Messages } from '../../lib/messages';
 import { localePath, type Locale } from '../../lib/locales';
@@ -33,6 +33,8 @@ export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, ta
   const radarHref = localePath(locale, '/prop-firm-radar');
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState('');
+  const [activeMatch, setActiveMatch] = useState(0);
+  const searchId = useId();
   const sectorName = (key: string) => (sectorNames as Record<string, string>)[key] ?? key;
   const valueName = (value: string) => (valueNames as Record<string, string>)[value] ?? value;
   const trustpilotName = (text: string) =>
@@ -46,31 +48,52 @@ export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, ta
   }, [query, data.dots]);
   const empty = useMemo(() => new Set<string>(), []);
   const circumference = 2 * Math.PI * 24;
+  const searchOpen = query.trim().length >= 2;
+  const chooseFirm = (slug: string) => {
+    setSelected(slug);
+    setQuery('');
+    setActiveMatch(0);
+  };
 
   return (
-    <div className="pr-hg">
-      <div className="pr-hg-search">
+    <div className="pr-hg" onKeyDown={(event) => {
+      if (event.key === 'Escape') { setQuery(''); setSelected(null); }
+    }}>
+      <div className="pr-hg-search" onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setQuery('');
+      }}>
         <label>
           <span className="sr-only">{t.findLabel}</span>
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
           <input
             type="search"
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded={searchOpen}
+            aria-controls={`${searchId}-results`}
+            aria-activedescendant={searchOpen && matches[activeMatch] ? `${searchId}-${activeMatch}` : undefined}
+            autoComplete="off"
             value={query}
             placeholder={t.findPlaceholder}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => { setQuery(event.target.value); setActiveMatch(0); }}
             onKeyDown={(event) => {
-              if (event.key === 'Enter' && matches[0]) {
-                setSelected(matches[0].slug);
-                setQuery('');
+              if ((event.key === 'ArrowDown' || event.key === 'ArrowUp') && matches.length) {
+                event.preventDefault();
+                const direction = event.key === 'ArrowDown' ? 1 : -1;
+                setActiveMatch((index) => (index + direction + matches.length) % matches.length);
+              } else if (event.key === 'Enter' && matches[activeMatch]) {
+                event.preventDefault();
+                chooseFirm(matches[activeMatch].slug);
               }
             }}
           />
         </label>
-        {matches.length ? (
-          <ul className="pr-hg-results">
-            {matches.map((item) => (
-              <li key={item.slug}>
-                <button type="button" onClick={() => { setSelected(item.slug); setQuery(''); }}>
+        {searchOpen ? (
+          <ul className="pr-hg-results" id={`${searchId}-results`} role="listbox" aria-label={t.findLabel}>
+            {matches.length === 0 ? <li className="pr-hg-empty" role="presentation"><span role="status">{t.globeNoResults}</span></li> : null}
+            {matches.map((item, index) => (
+              <li key={item.slug} role="presentation">
+                <button id={`${searchId}-${index}`} type="button" role="option" aria-selected={activeMatch === index} tabIndex={-1} onMouseEnter={() => setActiveMatch(index)} onClick={() => chooseFirm(item.slug)}>
                   {item.logo ? <img src={item.logo} alt="" width={20} height={20} /> : <i aria-hidden="true" />}
                   <span>{item.name}</span>
                   <b className={`prr-${item.tone}`}>{item.score}</b>
@@ -93,11 +116,13 @@ export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, ta
         hint={t.globeHint}
         scoreLabel={t.score}
         zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
+        motionLabels={{ pause: t.globePause, resume: t.globeResume }}
+        legend={{ caption: t.globeNorth, label: t.scoreBand }}
         sphere={0.43}
       />
 
       {dot ? (
-        <div className="pr-hg-card" role="dialog" aria-label={dot.name}>
+        <div className="pr-hg-card" role="region" aria-label={dot.name} aria-live="polite">
           <button type="button" className="pr-hg-close" onClick={() => setSelected(null)} aria-label={t.close}>
             <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
           </button>

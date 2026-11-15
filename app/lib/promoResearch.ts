@@ -1,6 +1,7 @@
 import {
   PARTNER_OFFERS,
   BLUE_GUARDIAN_AFFILIATE_URL,
+  BLUE_GUARDIAN_PROMO_CODE,
   E8_AFFILIATE_URL,
   FXIFY_AFFILIATE_URL,
   FXIFY_PROMO_CODE,
@@ -53,6 +54,25 @@ export type PromoDeal = {
 };
 
 const allPromoDeals: PromoDeal[] = [
+  {
+    slug: 'blue-guardian',
+    label: 'Transparent partner code',
+    title: 'PROPRADAR: 25% off eligible Blue Guardian accounts',
+    code: BLUE_GUARDIAN_PROMO_CODE,
+    value: '25%',
+    category: 'affiliate',
+    proofLevel: 'PropRadar affiliate',
+    availability: 'Verify at checkout',
+    validity: 'Verified on the official checkout on 15 November 2026; no end date confirmed.',
+    eligibility: '25% verified on Elite 100K Futures; confirm eligibility and the discount for your selected plan. Add-ons and bundles have their own conditions.',
+    sourceUrl: BLUE_GUARDIAN_AFFILIATE_URL,
+    sourceLabel: 'Official Blue Guardian checkout + PropRadar affiliate link',
+    sourceNote: 'PropRadar partner code PROPRADAR checked on 2026-11-15: Elite 100K Futures subtotal $330, coupon reduction $82.50, final total $247.50. The public site also displays BG25 (25% across CFD and Futures accounts). No purchase was made.',
+    consumerVerdict: 'Use the PropRadar partner code and check the final price for your plan. The 25% reduction was verified on an Elite 100K Futures account.',
+    caveats: ['Eligibility depends on the selected plan', 'Add-ons and bundles have separate conditions', 'Affiliate link and code have no impact on the score'],
+    bestFor: ['Blue Guardian', 'futures', 'partner code'],
+    checkoutTip: 'Apply PROPRADAR and confirm the discounted subtotal before paying.',
+  },
   {
     slug: 'fxify',
     label: 'Transparent partner code',
