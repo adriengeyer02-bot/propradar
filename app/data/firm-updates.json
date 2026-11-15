@@ -42,9 +42,17 @@
           "fields": [
             "products"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-alpha-capital-pushes-mobile-app-rollout-as-yearly-payouts-may-be-one-third-of-2024",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "set": {
         "priceFrom": 27
       },
@@ -129,6 +137,24 @@
           "entryFeeMin": 30,
           "entryFeeMax": 897,
           "profitTarget": "none (no evaluation)"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2025-12-03",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "\"The group has paid out a total of $120 million in performance fees to traders, according to its figures.\"",
+          "url": "https://www.financemagnates.com/forex/prop-firm-alpha-capital-pushes-mobile-app-rollout-as-yearly-payouts-may-be-one-third-of-2024",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "Alpha Capital Group: $7.44 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
         }
       ]
     },
@@ -494,9 +520,17 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://blueguardian.com/payouts",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
       ],
@@ -505,7 +539,25 @@
         "trustpilotReviewCount": 2151,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/blueguardian.com",
         "trustpilotNoticeLifted": "2026-11-07"
-      }
+      },
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Blue Guardian payouts page",
+          "quote": "\"$47M+\" total payouts; each recent payout links a \"View Proof\" transaction on TronScan or Etherscan",
+          "url": "https://blueguardian.com/payouts",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "Blue Guardian: $1.37 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
+      ]
     },
     "blueberry-funded": {
       "reviewedAt": "2026-10-29",
@@ -1052,11 +1104,29 @@
           "fields": [
             "commercialRelationship"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-13",
+      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "E8 Markets: $5.00 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "earn2trade": {
@@ -1264,7 +1334,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1290,6 +1360,14 @@
           "fields": [
             "priceFrom"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.fintokei.com/blog/a-record-year-for-fintokei-nearly-half-of-all-payouts-were-generated-in-2025/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -1302,6 +1380,16 @@
         {
           "label": "Fintokei: the new StartTrader",
           "url": "https://www.fintokei.com/blog/the-new-starttrader-is-here/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-03-11",
+          "kind": "official",
+          "publisher": "Fintokei blog",
+          "quote": "\"we've paid out a total of $28,080,786 to our traders by the end of 2025\"; \"In 2025 alone, traders received $13,135,105.\"",
+          "url": "https://www.fintokei.com/blog/a-record-year-for-fintokei-nearly-half-of-all-payouts-were-generated-in-2025/",
+          "firmReported": true
         }
       ]
     },
@@ -1411,6 +1499,14 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/ftmo-adds-200-million-to-lifetime-payouts-in-one-year-as-monthly-rewards-near-15-million/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
@@ -1467,6 +1563,16 @@
           "name": "OANDA Global Corporation (OANDA group)",
           "jurisdiction": "Group with regulated entities in the US, Canada, UK, EU, Asia-Pacific and BVI",
           "role": "Broker group acquired by FTMO, completed on 1 December 2025 (OANDA press release); run as a standalone business."
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-08",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "FTMO reported paying \"more than $14.4 million in rewards to roughly 7,100 traders in September\", \"bringing its reported cumulative payouts above $650 million\" (self-reported, no audited breakdown)",
+          "url": "https://www.financemagnates.com/forex/ftmo-adds-200-million-to-lifetime-payouts-in-one-year-as-monthly-rewards-near-15-million/",
+          "firmReported": true
         }
       ]
     },
@@ -1759,9 +1865,17 @@
           "fields": [
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (3 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://fundednext.com/blog/fundednext-payout-report-october-2026",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 83306,
@@ -1776,6 +1890,32 @@
       ],
       "addIncidents": [
         "The Reserve Bank of India added \"FundedNext | https://fundednext.com\" to its Alert List of unauthorised forex trading platforms in a press release dated 2024-10-22 (Press Release 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). The RBI says the list is not exhaustive."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-05",
+          "kind": "official",
+          "publisher": "FundedNext payout report",
+          "quote": "\"FundedNext paid $22.4M to 9,320 traders in October 2026.\" Since inception: \"$407M+ to traders … across 317,486 transactions.\"",
+          "url": "https://fundednext.com/blog/fundednext-payout-report-october-2026",
+          "firmReported": true
+        },
+        {
+          "date": "2026-10-21",
+          "kind": "onchain",
+          "publisher": "Finance Magnates (Payout Junction data)",
+          "quote": "30-day on-chain payouts: FundedNext at $18 million (first)",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": false
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "FundedNext CFDs: $42.67 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "funderpro": {
@@ -1874,7 +2014,7 @@
       ]
     },
     "funding-pips": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1901,6 +2041,14 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -1910,6 +2058,16 @@
       },
       "addIncidents": [
         "Finance Magnates reported on 2026-09-22 that FundingPips' terms (effective 15 May 2026) state that PRIME access for invited funded traders \"is deemed automatically accepted by you, is mandatory, and you waive any right to refuse or contest it\", and that the payout from the previous, permanently closed account \"serves as the starting balance for PRIME\". FundingPips disputed that reading in the same article: \"There is no such thing as replacing a payout. Nothing is replaced.\" (https://www.financemagnates.com/forex/fundingpips-invited-traders-into-prime-the-tcs-made-it-mandatory/)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-21",
+          "kind": "onchain",
+          "publisher": "Finance Magnates (Payout Junction data)",
+          "quote": "30-day on-chain payouts: FundingPips at $3.02 million",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": false
+        }
       ]
     },
     "funding-traders": {
@@ -2249,6 +2407,14 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://fxify.com/blog/fxify-3rd-anniversary/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
@@ -2286,6 +2452,24 @@
           "registeredAddress": "No.1-23A, First Floor, Paragon, Jalan Tun Mustapha, 87008 Labuan F.T. Malaysia",
           "role": "Previously listed from the public footer; not named in the current agreement (recheck)."
         }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-04-30",
+          "kind": "official",
+          "publisher": "FXIFY blog",
+          "quote": "\"Three years in, $40 million paid out\"",
+          "url": "https://fxify.com/blog/fxify-3rd-anniversary/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "FXIFY: $1.44 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "goat-funded-trader": {
@@ -2314,6 +2498,14 @@
           "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "fields": [
+            "payoutProofs"
           ]
         }
       ],
@@ -2346,6 +2538,24 @@
           "name": "Odeonpay ALE S.R.L (\"Paysagi\")",
           "jurisdiction": "Not stated",
           "role": "Payment processor and Merchant of Record named in the terms."
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-21",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "GOAT Funded Trader, \"declaring $26.16 million paid to 22,279 traders\", figures from its own self-reported dashboard; Payout Junction put it fourth with $1.59 million in 30-day on-chain payouts",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "GOAT Funded Trader transparency page",
+          "quote": "\"$32,000,000+ Total Rewarded\"",
+          "url": "https://www.goatfundedtrader.com/transparency",
+          "firmReported": true
         }
       ]
     },
@@ -2506,7 +2716,7 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2516,13 +2726,39 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/hola-prime-says-it-has-paid-more-than-10-million-to-funded-traders/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 4081,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com"
-      }
+      },
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-06",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "\"Hola Prime said today (Tuesday) it has paid more than $10 million to funded traders\" (the company's own count)",
+          "url": "https://www.financemagnates.com/forex/hola-prime-says-it-has-paid-more-than-10-million-to-funded-traders/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "press",
+          "publisher": "Finance Magnates (Deloitte review)",
+          "quote": "Deloitte, commissioned by Hola Prime, reviewed 15 Oct 2025–15 Mar 2026: it \"cleared 98.35% of withdrawal requests within its one-hour target and rejected none\" (timing, not totals)",
+          "url": "https://financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/",
+          "firmReported": false
+        }
+      ]
     },
     "hyrotrader": {
       "reviewedAt": "2026-10-29",
@@ -3127,6 +3363,14 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://myfundedfutures.com/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
@@ -3149,6 +3393,24 @@
           "name": "Funding Perpetuals Holdings, Inc.",
           "jurisdiction": "Not stated",
           "role": "Offers MyFunded Perpetuals, \"a company separate from MyFunded Futures, LLC\"."
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "MyFundedFutures home page",
+          "quote": "\"$300M+\" paid to traders (undated counter)",
+          "url": "https://myfundedfutures.com/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "MyFunded Futures: $38.51 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
         }
       ]
     },
@@ -3241,7 +3503,7 @@
       ]
     },
     "onefunded": {
-      "reviewedAt": "2026-11-13",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3258,10 +3520,28 @@
           "fields": [
             "commercialRelationship"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://onefunded.com/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/onefunded.com)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "OneFunded home page",
+          "quote": "\"$1M+ Paid Out\" (undated counter)",
+          "url": "https://onefunded.com/",
+          "firmReported": true
+        }
       ]
     },
     "oneup-trader": {
@@ -3920,7 +4200,7 @@
       ]
     },
     "the5ers": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 41676,
@@ -3962,12 +4242,38 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "The5ers withdrawals FAQ (official)",
           "url": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "The 5%ers: $14.44 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        },
+        {
+          "date": "2026-10-21",
+          "kind": "onchain",
+          "publisher": "Finance Magnates (Payout Junction data)",
+          "quote": "30-day on-chain payouts: The5ers at $3.64 million",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": false
         }
       ]
     },
@@ -4183,7 +4489,7 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15052,
@@ -4249,10 +4555,28 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.topstep.com/paid-lp",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addIncidents": [
         "Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Topstep",
+          "quote": "\"$1.4B+ Paid out to traders\" — \"Total paid all time.\"",
+          "url": "https://www.topstep.com/paid-lp",
+          "firmReported": true
+        }
       ]
     },
     "trade-the-pool": {
@@ -4306,7 +4630,7 @@
       ]
     },
     "tradeday": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 1452,
@@ -4341,6 +4665,14 @@
             "profitSplit",
             "drawdownType",
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.tradeday.com/about",
+          "fields": [
+            "payoutProofs"
           ]
         }
       ],
@@ -4403,6 +4735,16 @@
           "hasConsistencyRule": true,
           "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
         }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "TradeDay about page",
+          "quote": "Timeline, December 2025: \"$10M+ in verified payouts\" (verifier not named)",
+          "url": "https://www.tradeday.com/about",
+          "firmReported": true
+        }
       ]
     },
     "tradefundrr": {
@@ -4442,7 +4784,7 @@
       ]
     },
     "tradeify": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 6894,
@@ -4473,12 +4815,30 @@
             "trustpilotReviewCount",
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://tradeify.co/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "Tradeify help center: pricing reference (official)",
           "url": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Tradeify home page",
+          "quote": "\"Over $400 million in verified payouts\" (verifier not named)",
+          "url": "https://tradeify.co/",
+          "firmReported": true
         }
       ]
     },
@@ -6304,6 +6664,14 @@
           "fields": [
             "commercialRelationship"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://upcomers.com/payouts",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -6347,6 +6715,16 @@
       ],
       "addIncidents": [
         "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/upcomers.com)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Upcomers payouts page",
+          "quote": "\"We have paid out $11.1M+ to traders so far.\"",
+          "url": "https://upcomers.com/payouts",
+          "firmReported": true
+        }
       ]
     },
     "forexive": {

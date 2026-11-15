@@ -609,6 +609,7 @@ const de: Messages = {
     nothingRecorded: 'Bei dieser Prüfung nichts erfasst.',
     reviewsEyebrow: 'Bewertungen und Auszahlungen',
     reviewsTitle: 'Was Trader berichten',
+    payoutProofs: { title: "Öffentliche Auszahlungsbelege", intro: "Nur datierte, verlinkte Quellen. Eine von der Firma selbst veröffentlichte Zahl ist als Firmenangabe markiert: PropRadar hat sie nicht geprüft.", official: "Eigene Seite der Firma", press: "Fachpresse", onchain: "On-Chain-Daten", firmReported: "Firmenangabe", independent: "unabhängige Zählung" },
     payoutRisk: 'Auszahlungsrisiko',
     payoutCheck: 'Auszahlungsprüfung',
     withheldShort: 'Bewertung von Trustpilot zurückgehalten.',

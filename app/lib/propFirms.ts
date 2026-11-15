@@ -31,6 +31,20 @@ export type SourceLink = {
 
 export type RegulatoryRiskLevel = 'Low' | 'Low to medium' | 'Medium' | 'Medium to high' | 'High' | 'Critical' | 'To audit';
 
+export type PayoutProof = {
+  /** Date stated by the source, or the date PropRadar read an undated page. */
+  date: string;
+  /** official = the firm's own page; press = trade press; onchain = public blockchain data compiled by a named third party. */
+  kind: 'official' | 'press' | 'onchain';
+  /** Who published it, e.g. "Finance Magnates". */
+  publisher: string;
+  /** Short statement of the figure; words in quotation marks are verbatim from the source. */
+  quote: string;
+  url: string;
+  /** True when the figure comes from the firm itself (its page, or press relaying its own count). */
+  firmReported: boolean;
+};
+
 export type RegulatoryEntity = {
   name: string;
   jurisdiction: string;
@@ -123,6 +137,8 @@ export type PropFirm = {
   payoutDelay: string;
   incidents: number;
   incidentsDetails: string[];
+  /** Public, dated payout proof (official pages, trade press, on-chain data), added through firm-updates.json. */
+  payoutProofs?: PayoutProof[];
   styles: string[];
   legalVerified: boolean;
   transparencyScore: number;

@@ -613,6 +613,7 @@ const en = {
     nothingRecorded: 'Nothing recorded at this check.',
     reviewsEyebrow: 'Reviews and payouts',
     reviewsTitle: 'What traders report',
+    payoutProofs: { title: "Public payout proof", intro: "Dated, linked sources only. A figure published by the firm itself is marked as firm-reported: PropRadar has not audited it.", official: "Firm's own page", press: "Trade press", onchain: "On-chain data", firmReported: "firm-reported", independent: "independent count" },
     payoutRisk: 'Payout risk',
     payoutCheck: 'Payout check',
     withheldShort: 'Rating withheld by Trustpilot.',

@@ -609,6 +609,7 @@ const it: Messages = {
     nothingRecorded: 'Nulla di registrato in questa verifica.',
     reviewsEyebrow: 'Recensioni e pagamenti',
     reviewsTitle: 'Cosa riportano i trader',
+    payoutProofs: { title: "Prove pubbliche dei pagamenti", intro: "Solo fonti datate e linkate. Una cifra pubblicata dalla firm stessa è indicata come dichiarata dalla firm: PropRadar non l'ha verificata.", official: "Pagina ufficiale della firm", press: "Stampa di settore", onchain: "Dati on-chain", firmReported: "dichiarato dalla firm", independent: "conteggio indipendente" },
     payoutRisk: 'Rischio pagamenti',
     payoutCheck: 'Verifica pagamenti',
     withheldShort: 'Valutazione sospesa da Trustpilot.',

@@ -72,6 +72,17 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
       errors.push(`${where}.setEntities: a changelog entry with fields ["entities"] and an https source is required`);
     }
   }
+  for (const [index, proof] of (update.addPayoutProofs ?? []).entries()) {
+    const at = `${where}.addPayoutProofs[${index}]`;
+    if (!DATE.test(proof?.date ?? '') || proof.date > today) errors.push(`${at}.date: YYYY-MM-DD, not in the future`);
+    if (!['official', 'press', 'onchain'].includes(proof?.kind)) errors.push(`${at}.kind must be official, press or onchain`);
+    if (!isHttpsUrl(proof?.url)) errors.push(`${at}.url must be an https URL`);
+    if (!proof?.publisher || !proof?.quote || proof.quote.length < 8) errors.push(`${at}: publisher and an exact quote are required`);
+    if (typeof proof?.firmReported !== 'boolean') errors.push(`${at}.firmReported must be true or false`);
+  }
+  if (update.addPayoutProofs?.length && !(update.changelog ?? []).some((entry) => entry.fields?.includes('payoutProofs') && isHttpsUrl(entry.source))) {
+    errors.push(`${where}.addPayoutProofs: a changelog entry with fields ["payoutProofs"] and an https source is required`);
+  }
   if (update.set?.drawdownType !== undefined && !DRAWDOWN_TYPES.has(update.set.drawdownType)) errors.push(`${where}.set.drawdownType must be EOD, Trailing, Static or Hybride`);
   if (update.setProducts !== undefined) {
     if (!Array.isArray(update.setProducts) || !update.setProducts.length) errors.push(`${where}.setProducts: non-empty array required`);
