@@ -1,5 +1,6 @@
 import type { RegulatoryEntity } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
+import { td } from '../../lib/dataI18n';
 import { OFFICIAL_LISTS, listMarkers, parseJurisdiction, placeDetail } from '../../lib/jurisdictions';
 import Flag from './Flag';
 import en, { type Messages } from '../../lib/messages/en';
@@ -16,10 +17,10 @@ type EntityChainProps = {
   locale?: Locale;
 };
 
-function shortRole(role?: string) {
+function shortRole(role?: string, locale: Locale = 'en') {
   if (!role) return '';
-  const text = toEnglishText(role);
-  const first = text.split(/(?<=\.)\s/)[0];
+  const text = td(locale, toEnglishText(role));
+  const first = text.split(/(?<=\.)\s|(?<=[。।])/)[0];
   return first.length > 150 ? `${first.slice(0, 147).trimEnd()}…` : first;
 }
 
@@ -77,7 +78,7 @@ export default function EntityChain({ firmName, entities, labels: t = en.firm.ch
             <div className="pr-chain-entity">
               <span className="pr-chain-step">{index + 1}</span>
               <strong>{toEnglishText(entity.name)}</strong>
-              {entity.role ? <p title={toEnglishText(entity.role)}>{shortRole(entity.role)}</p> : null}
+              {entity.role ? <p title={td(locale, toEnglishText(entity.role))}>{shortRole(entity.role, locale)}</p> : null}
               {entity.registrationNumber ? <small className="pr-chain-reg">{t.reg} {entity.registrationNumber}</small> : null}
               {entity.registeredAddress ? <small className="pr-chain-addr">{toEnglishText(entity.registeredAddress)}</small> : null}
             </div>
