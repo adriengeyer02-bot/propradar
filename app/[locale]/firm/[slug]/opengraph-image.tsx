@@ -60,7 +60,7 @@ export default async function FirmShareImage({ params }: { params: Promise<{ slu
                     {status}
                   </span>
                   <span style={{ color: OG.muted }}>
-                    {toEnglishText(firm.headquarters)} · founded {firm.founded}
+                    {toEnglishText(firm.headquarters)}{firm.founded > 0 ? ` · founded ${firm.founded}` : ''}
                   </span>
                 </div>
               </div>

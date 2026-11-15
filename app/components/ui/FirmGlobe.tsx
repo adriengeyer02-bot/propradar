@@ -224,7 +224,6 @@ function initials(name: string) {
 export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels, motionLabels, legend, hud, sphere }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [hover, setHover] = useState<RadarDot | null>(null);
   const hoverSlug = useRef<string | null>(null);
   const hudAnchorRef = useRef<HTMLDivElement>(null);
   const hudWireRef = useRef<SVGSVGElement>(null);
@@ -232,42 +231,21 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   const hudOriginRef = useRef<SVGCircleElement>(null);
   const hudHeight = useRef(340);
   const hudSide = useRef<'left' | 'right'>('right');
-  const hoverCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
   // Mutable view state shared by the render loop and the handlers.
   const view = useRef({ yaw: -0.4, pitch: 0.24, zoom: 1, zoomTarget: 1, vyaw: 0, vpitch: 0, idleUntil: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
   const [zoomLevel, setZoomLevel] = useState(1);
-  const props = useRef({ selected, dimmed, highlight, onSelect, sphere, paused });
-  props.current = { selected, dimmed, highlight, onSelect, sphere, paused };
+  const props = useRef({ selected, dimmed, highlight, onSelect, onDismiss: hud.onDismiss, sphere, paused });
+  props.current = { selected, dimmed, highlight, onSelect, onDismiss: hud.onDismiss, sphere, paused };
   const requestDraw = useRef<() => void>(() => undefined);
   const zoomBy = useRef<(factor: number, instant?: boolean) => void>(() => undefined);
-  const hudDot = hover ?? dots.find((dot) => dot.slug === selected) ?? null;
-
-  function cancelHoverClose() {
-    if (hoverCloseTimer.current) clearTimeout(hoverCloseTimer.current);
-    hoverCloseTimer.current = null;
-  }
+  const hudDot = dots.find((dot) => dot.slug === selected) ?? null;
 
   function clearHover() {
-    cancelHoverClose();
     hoverSlug.current = null;
-    setHover(null);
     requestDraw.current();
-  }
-
-  function scheduleHoverClose() {
-    // Leave a bridge between the moving canvas target and the interactive card.
-    if (hoverCloseTimer.current) return;
-    hoverCloseTimer.current = setTimeout(() => {
-      hoverCloseTimer.current = null;
-      if (hudAnchorRef.current?.contains(document.activeElement)) return;
-      hoverSlug.current = null;
-      setHover(null);
-      view.current.hovering = canvasRef.current?.matches(':hover') ?? false;
-      requestDraw.current();
-    }, 240);
   }
 
   function dismissHud() {
@@ -810,7 +788,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const panel = hudAnchorRef.current;
       const wire = hudWireRef.current;
       if (panel && wire) {
-        const anchor = hits.find((hit) => hit.dot.slug === (hoverSlug.current ?? sel));
+        const anchor = hits.find((hit) => hit.dot.slug === sel);
         const docked = size < 520;
         const front = docked || Boolean(anchor && anchor.x > 8 && anchor.x < size - 8 && anchor.y > 8 && anchor.y < size - 8 && !view.current.dragging);
         panel.dataset.docked = String(docked);
@@ -1003,7 +981,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     resize();
     kick();
 
-    // Pointer: drag to turn, click to select, hover for the name.
+    // Pointer: drag to turn; only a click opens a dossier. Hover lifts the logo.
     let down: { x: number; y: number; t: number } | null = null;
     let lastMove = { x: 0, y: 0 };
     const local = (event: PointerEvent) => {
@@ -1025,7 +1003,6 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     };
     const onEnter = (event: PointerEvent) => {
       if (event.pointerType === 'mouse') {
-        cancelHoverClose();
         view.current.hovering = true;
         view.current.vyaw = 0;
         view.current.vpitch = 0;
@@ -1070,11 +1047,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const hit = pick(p.x, p.y);
       v.hovering = true;
       canvas.style.cursor = hit ? 'pointer' : 'grab';
-      if (hit) {
-        cancelHoverClose();
-        hoverSlug.current = hit.dot.slug;
-        setHover((current) => current?.slug === hit.dot.slug ? current : hit.dot);
-      } else scheduleHoverClose();
+      hoverSlug.current = hit?.dot.slug ?? null;
       requestDraw.current();
     };
     const onUp = (event: PointerEvent) => {
@@ -1090,6 +1063,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       } else if (down) {
         const hit = pick(p.x, p.y, event.pointerType === 'touch' ? 18 : 0);
         if (hit) props.current.onSelect(hit.dot.slug);
+        else props.current.onDismiss();
       }
       down = null;
     };
@@ -1103,7 +1077,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       kick();
     };
     const onLeave = () => {
-      scheduleHoverClose();
+      view.current.hovering = false;
+      clearHover();
       kick();
     };
     const onWheel = (event: WheelEvent) => {
@@ -1202,7 +1177,6 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     canvas.addEventListener('pointercancel', onTouchUp);
 
     return () => {
-      cancelHoverClose();
       cancelAnimationFrame(frame);
       observer.disconnect();
       resizeObserver.disconnect();
@@ -1250,10 +1224,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           <path ref={hudPathRef} pathLength="1" /><circle ref={hudOriginRef} r="3" />
         </svg>
         <div ref={hudAnchorRef} className="prg-hud-anchor" data-front="false"
-          onPointerEnter={() => { cancelHoverClose(); view.current.hovering = true; }}
-          onPointerLeave={scheduleHoverClose}
-          onFocus={cancelHoverClose}
-          onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) scheduleHoverClose(); }}>
+          onPointerEnter={() => { view.current.hovering = true; }}
+          onPointerLeave={() => { view.current.hovering = false; requestDraw.current(); }}>
           <GlobeFirmHud key={hudDot.slug} dot={hudDot} sector={sectorName(hudDot.sector)} scoreLabel={scoreLabel} pinned={hudDot.slug === selected} config={hud} onClose={dismissHud} />
         </div>
         </>

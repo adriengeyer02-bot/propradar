@@ -1,6 +1,29 @@
 {
   "version": 1,
   "firms": {
+    "foxx-funded": {
+      "reviewedAt": "2026-11-15",
+      "changelog": [
+        {
+          "date": "2026-11-15",
+          "summary": "Initial profile added at 49/100 after reviewing programmes, original euro fees, payout conditions and company disclosures. No earlier score is replaced; this is an editorial assessment, not a finding on individual disputes.",
+          "source": "https://www.foxx-funded.com/terms-and-conditions/",
+          "fields": ["initialReview", "products", "entities"]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Domain-linked Trustpilot profile, currently named Ponjas Marketing, shows no TrustScore and carries a guideline-breach and removed-review notice. No old rating or invented removed-review count is used.",
+          "source": "https://www.trustpilot.com/review/foxx-funded.com",
+          "fields": ["initialReview"]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official payout showcase is labelled illustrative and not verified client payouts; no payout proof was added. Customer complaints and the firm's rule-breach responses are presented as disputed accounts.",
+          "source": "https://www.foxx-funded.com/payout/",
+          "fields": ["initialReview"]
+        }
+      ]
+    },
     "aeon-funded": {
       "reviewedAt": "2026-10-27",
       "set": {

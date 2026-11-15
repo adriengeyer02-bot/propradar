@@ -7,6 +7,7 @@ import it from './it.json';
 import ja from './ja.json';
 import pt from './pt.json';
 import zh from './zh.json';
+import { foxxFundedFrench } from '../foxxFunded';
 
 /**
  * Translations of the firm data that readers see most (program rules, payout
@@ -17,7 +18,7 @@ import zh from './zh.json';
  * refreshed. Numbers, names and quoted text are kept as in the source.
  * Server-only: the dictionaries never reach the browser bundle.
  */
-const DATA: Partial<Record<Locale, Record<string, string>>> = { fr, de, it, es, pt, zh, ja, hi };
+const DATA: Partial<Record<Locale, Record<string, string>>> = { fr: { ...fr, ...foxxFundedFrench }, de, it, es, pt, zh, ja, hi };
 
 export function td(locale: Locale, text: string | undefined | null): string {
   if (!text) return text ?? '';

@@ -1,4 +1,5 @@
 import { applyFirmUpdates } from './firmUpdates';
+import { foxxFunded } from './foxxFunded';
 import { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel } from './firmFormat';
 export { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel };
 
@@ -123,11 +124,14 @@ export type PropFirm = {
   score: number;
   /** Set when a rule lowered the stored score; the firm page states it. */
   scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
+  /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
   bestFor: string;
   verdict: string;
   priceFrom: number;
+  /** Native fee when no comparable USD fee is confirmed; never an implicit conversion. */
+  nativePriceFrom?: { amount: number; currency: 'EUR' | 'GBP' };
   /** True when the official site states there is no entry fee (read on a source, never a default). */
   noEntryFee?: boolean;
   profitSplit: number;
@@ -12734,7 +12738,7 @@ const universePropFirms: PropFirm[] = [
 ];
 
 // Base profiles before dated updates (used by scripts/validate-firm-updates.ts).
-export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms];
+export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms, foxxFunded];
 
 // Trustpilot review notices are review-reliability evidence, not payout evidence.
 const REVIEW_NOTICE = /trustpilot[\s\S]*(breach of (our|its) guidelines|fake reviews|rating is unavailable|reviews were removed)/i;

@@ -845,7 +845,7 @@ export default async function FirmPage({ params }: Props) {
           <div className="pr-firm-identity">
             <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
             <div>
-              <div className="eyebrow">{tx(firm.headquarters)} · {fmt(f.founded, { year: firm.founded })}</div>
+              <div className="eyebrow">{tx(firm.headquarters)}{firm.founded > 0 ? ` · ${fmt(f.founded, { year: firm.founded })}` : ''}</div>
               <h1 className={firmTitleClass}>{firm.name}</h1>
               <div className="pr-firm-tags">
                 <span className={`pr-tag pr-tone-${statusTone(firm.status)}`}>{v(operationalStatusLabel(firm))}</span>

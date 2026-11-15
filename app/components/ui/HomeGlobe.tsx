@@ -26,7 +26,7 @@ function fill(template: string, values: Record<string, string | number>) {
 /**
  * The home-page hero globe: the radar's firms on the PropRadar globe, a
  * search box that turns the globe to a firm, and an anchored dossier on
- * hover or selection. The full radar page keeps the deeper tools.
+ * selection. The full radar page keeps the deeper tools.
  */
 export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, tableLabels: tb, locale, radarCta }: Props) {
   const radarHref = localePath(locale, '/prop-firm-radar');

@@ -23,7 +23,10 @@ export function hasPayoutRiskSignal(firm: { reviewSignals: Pick<PropFirm['review
   return risk === 'Moyen' || risk === 'Élevé' || risk === 'Critique';
 }
 
-export function priceLabel(firm: Pick<PropFirm, 'priceFrom' | 'noEntryFee'>) {
+export function priceLabel(firm: Pick<PropFirm, 'priceFrom' | 'noEntryFee' | 'nativePriceFrom'>) {
+  if (firm.nativePriceFrom && firm.nativePriceFrom.amount > 0) {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: firm.nativePriceFrom.currency, maximumFractionDigits: 0 }).format(firm.nativePriceFrom.amount);
+  }
   if (firm.noEntryFee && !(firm.priceFrom > 0)) return 'No entry fee';
   return formatUsd(firm.priceFrom);
 }

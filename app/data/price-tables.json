@@ -1,6 +1,27 @@
 {
   "version": 1,
   "firms": {
+    "foxx-funded": {
+      "checkedOn": "2026-11-15",
+      "programs": [
+        {
+          "name": "1-Step Evaluation",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://www.foxx-funded.com/",
+          "note": "Euro fees before codes and add-ons; simulated account sizes are in US dollars. Instant Funding prices were not confirmed.",
+          "rows": [
+            { "size": 10000, "price": 109 },
+            { "size": 25000, "price": 265 },
+            { "size": 50000, "price": 359 },
+            { "size": 100000, "price": 549 },
+            { "size": 200000, "price": 969 },
+            { "size": 300000, "price": 1345 },
+            { "size": 500000, "price": 1990 }
+          ]
+        }
+      ]
+    },
     "topstep": {
       "checkedOn": "2026-11-09",
       "programs": [

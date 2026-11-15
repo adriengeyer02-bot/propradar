@@ -49,6 +49,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "finotivefunding.com": { file: "finotive-funding.png", source: "https://finotivefunding.com/android-chrome-512x512.png" },
   "fintokei.com": { file: "fintokei.png", source: "https://www.fintokei.com/apple-icon.png" },
   "forexfundsflow.com": { file: "forex-funds-flow.png", source: "https://forexfundsflow.com/favicons/new/192x192.png" },
+  "foxx-funded.com": { file: "foxx-funded.png", source: "https://www.foxx-funded.com/assets/foxx-BVC7eVJJ.png (official favicon, read 2026-11-15)" },
   "forexive.com": { file: "forexive.png", source: "https://forexive.com/favicon.ico?favicon.1pfj4md666ntt.ico" },
   "fortraders.com": { file: "for-traders.png", source: "https://fortraders.com/icon.svg?icon.0g25r0q5a6n1m.svg" },
   "ftmo.com": { file: "ftmo.png", source: "https://ftmo.com/app/themes/ftmo-com/public/images/favicon/favicon-512.png" },
