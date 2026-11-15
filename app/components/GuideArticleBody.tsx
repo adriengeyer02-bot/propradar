@@ -1,13 +1,15 @@
 import type { ReactNode } from 'react';
 import type { GuideArticle, GuideArticleSection } from '../lib/guideArticles';
 import GuideSectionDiagram, { type DiagramLabels } from './guide-visuals/GuideSectionDiagram';
+import LanguageLink from './LanguageLink';
+import type { Locale } from '../lib/locales';
 
 type Props = {
   article: GuideArticle;
   label: string;
   updatedLabel?: string;
   sourcesLabel?: string;
-  langSwitch?: { href: string; hrefLang: string; label: string };
+  langSwitch?: { href: string; hrefLang: Locale; label: string };
   /** English text -> translation, for diagrams and block labels. */
   diagramLabels?: DiagramLabels;
 };
@@ -142,7 +144,7 @@ export default function GuideArticleBody({ article, label, updatedLabel = 'Updat
   return (
     <article className="guide-article" id="guide-article" aria-label={label}>
       {langSwitch ? (
-        <a className="guide-lang-switch" href={langSwitch.href} hrefLang={langSwitch.hrefLang}>{langSwitch.label}</a>
+        <LanguageLink className="guide-lang-switch" href={langSwitch.href} locale={langSwitch.hrefLang}>{langSwitch.label}</LanguageLink>
       ) : null}
       {article.intro ? <p className="guide-article-intro"><Bold text={article.intro} /></p> : null}
       {article.keyPoints?.length ? (

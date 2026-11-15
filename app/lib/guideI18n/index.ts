@@ -18,6 +18,7 @@ import ptArticles from './articles/pt';
 import zhArticles from './articles/zh';
 import jaArticles from './articles/ja';
 import hiArticles from './articles/hi';
+import { updateNoChallengeTranslation } from './noChallenge';
 
 export type { GuideTranslation };
 
@@ -40,7 +41,8 @@ export function getGuideTranslation(locale: Locale, slug: string): GuideTranslat
   const summary = ALL[locale]?.[slug];
   if (!summary) return undefined;
   const article = ARTICLES[locale]?.[slug];
-  return article ? { ...summary, article } : summary;
+  const translation = article ? { ...summary, article } : summary;
+  return slug === 'prop-firm-sans-challenge' ? updateNoChallengeTranslation(locale, translation) : translation;
 }
 
 /**
