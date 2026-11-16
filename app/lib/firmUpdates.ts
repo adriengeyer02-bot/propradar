@@ -142,7 +142,10 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (typeof set.trustpilotRating === 'number') next.trustpilotRating = set.trustpilotRating;
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
     if (set.trustpilotSourceUrl) next.reviewSignals.trustpilotSourceUrl = set.trustpilotSourceUrl;
-    if (typeof set.trustpilotRating === 'number') refreshTrustpilotText(next, update.reviewedAt);
+    const trustpilotCheckedOn = update.changelog
+      .filter((entry) => entry.fields?.some((field) => field.startsWith('trustpilot')) || /^https:\/\/(?:[a-z]+\.)?trustpilot\.com\//i.test(entry.source))
+      .map((entry) => entry.date).sort().pop() ?? update.reviewedAt;
+    if (typeof set.trustpilotRating === 'number') refreshTrustpilotText(next, trustpilotCheckedOn);
     if (set.officialWebsite) {
       const newUrl = set.officialWebsite;
       const newDomain = new URL(newUrl).hostname.replace(/^www\./, '');
@@ -232,7 +235,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       next.trustpilotRating = set.trustpilotRating;
       next.reviewSignals.trustpilotFlags = (next.reviewSignals.trustpilotFlags ?? []).filter((flag) => flag !== 'Trustpilot rating withheld for a guideline breach');
       next.reviewSignals.trustpilotFlaggedReviewNote = `Trustpilot showed a rating again on ${set.trustpilotNoticeLifted}, without the guideline-breach notice. The earlier notice stays listed under incidents with its date.`;
-      refreshTrustpilotText(next, update.reviewedAt);
+      refreshTrustpilotText(next, trustpilotCheckedOn);
     }
 
     return next;

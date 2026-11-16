@@ -1,5 +1,6 @@
 import { xFunded as f } from './xFunded';
 import type { Locale } from './locales';
+import { toEnglishText } from './i18n';
 
 /** Main conclusions are available in every locale; French also covers the detailed initial review. */
 const core: Partial<Record<Locale, string[]>> = {
@@ -118,3 +119,11 @@ Object.assign(xFundedTranslations.fr!, {
   [f.reviewSignals.confidenceDrivers![1]]: 'Différences non résolues sur les entités et les retraits ; aucun historique de paiements clients authentifié indépendamment.',
   [f.reviewSignals.radarVerdict!]: '52/100 est une première appréciation éditoriale indépendante de toute affiliation. Lire la politique de partage à 50 % liée aux affiliés et les conditions de retrait avant de choisir un programme.'
 });
+
+// Firm pages normalize legacy wording before lookup (e.g. programmes → programs).
+// Keep both spellings so direct programme-card lookups also resolve.
+for (const translations of Object.values(xFundedTranslations)) {
+  for (const [key, value] of Object.entries(translations)) {
+    translations[toEnglishText(key).trim()] = value;
+  }
+}
