@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { RadarDot, RadarSector } from '../../lib/radar';
 import GlobeFirmHud, { type GlobeHudConfig } from './GlobeFirmHud';
+import { globeCoastStep, globeReleaseVelocity, type GlobeMotionSample } from './globeMotion';
 
 /**
  * The PropRadar globe: the same firms as the radar, wrapped on a sphere.
@@ -322,6 +323,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   }, [selected]);
 
   useEffect(() => {
+    if (paused) { view.current.vyaw = 0; view.current.vpitch = 0; }
     requestDraw.current();
   }, [dimmed, highlight, paused]);
 
@@ -946,11 +948,15 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         v.pitch += (v.target.pitch - v.pitch) * k;
         if (Math.abs(v.target.yaw - v.yaw) < 0.002 && Math.abs(v.target.pitch - v.pitch) < 0.002) v.target = null;
         moving = true;
-      } else if (!reduce && !v.dragging && !v.hovering && !props.current.paused && (Math.abs(v.vyaw) > 0.0005 || Math.abs(v.vpitch) > 0.0005)) {
-        v.yaw += v.vyaw;
-        v.pitch = Math.max(-1.2, Math.min(1.2, v.pitch + v.vpitch));
-        v.vyaw *= Math.pow(0.05, dt);
-        v.vpitch *= Math.pow(0.05, dt);
+      } else if (!reduce && !v.dragging && !props.current.paused && (v.vyaw !== 0 || v.vpitch !== 0)) {
+        const yaw = globeCoastStep(v.vyaw, dt);
+        const pitch = globeCoastStep(v.vpitch, dt);
+        v.yaw += yaw.distance;
+        const nextPitch = v.pitch + pitch.distance;
+        v.pitch = Math.max(-1.2, Math.min(1.2, nextPitch));
+        v.vyaw = yaw.velocity;
+        v.vpitch = nextPitch === v.pitch ? pitch.velocity : 0;
+        v.idleUntil = now + 1800;
         moving = true;
       } else if (!reduce && !v.dragging && !v.hovering && !props.current.paused && !props.current.selected && now > v.idleUntil) {
         v.yaw += SPIN * dt;
@@ -982,8 +988,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     kick();
 
     // Pointer: drag to turn; only a click opens a dossier. Hover lifts the logo.
-    let down: { x: number; y: number; t: number } | null = null;
+    let down: { x: number; y: number; pointerId: number } | null = null;
     let lastMove = { x: 0, y: 0 };
+    let motion: GlobeMotionSample[] = [];
     const local = (event: PointerEvent) => {
       const rect = canvas.getBoundingClientRect();
       return { x: event.clientX - rect.left, y: event.clientY - rect.top };
@@ -1004,14 +1011,15 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const onEnter = (event: PointerEvent) => {
       if (event.pointerType === 'mouse') {
         view.current.hovering = true;
-        view.current.vyaw = 0;
-        view.current.vpitch = 0;
       }
     };
     const onDown = (event: PointerEvent) => {
+      if (event.button !== 0 || !event.isPrimary) return;
       const p = local(event);
-      down = { ...p, t: performance.now() };
+      down = { ...p, pointerId: event.pointerId };
       lastMove = p;
+      motion = [{ time: event.timeStamp, yaw: view.current.yaw, pitch: view.current.pitch }];
+      view.current.target = null;
       view.current.vyaw = 0;
       view.current.vpitch = 0;
       view.current.idleUntil = performance.now() + 2800;
@@ -1020,6 +1028,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const p = local(event);
       const v = view.current;
       if (event.pointerType === 'touch' && touches.size > 1) return;
+      if (down && down.pointerId !== event.pointerId) return;
       if (down && (v.dragging || Math.hypot(p.x - down.x, p.y - down.y) > 4)) {
         // Leave vertical swipes to page scrolling on phones.
         if (!v.dragging && event.pointerType === 'touch' && Math.abs(p.y - down.y) > Math.abs(p.x - down.x) * 1.2) {
@@ -1036,8 +1045,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         const dpitch = event.pointerType === 'mouse' ? (p.y - lastMove.y) * k : 0;
         v.yaw += dyaw;
         v.pitch = Math.max(-1.2, Math.min(1.2, v.pitch + dpitch));
-        v.vyaw = dyaw;
-        v.vpitch = dpitch;
+        motion.push({ time: event.timeStamp, yaw: v.yaw, pitch: v.pitch });
+        while (motion.length > 2 && motion[1].time < event.timeStamp - 120) motion.shift();
         lastMove = p;
         clearHover();
         draw();
@@ -1058,7 +1067,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       if (v.dragging) {
         v.dragging = false;
         if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
-        if (reduce || v.hovering) { v.vyaw = 0; v.vpitch = 0; }
+        const velocity = reduce || props.current.paused ? { yaw: 0, pitch: 0 } : globeReleaseVelocity(motion, event.timeStamp);
+        v.vyaw = velocity.yaw;
+        v.vpitch = velocity.pitch;
         kick();
       } else if (down) {
         const hit = pick(p.x, p.y, event.pointerType === 'touch' ? 18 : 0);
@@ -1066,9 +1077,11 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         else props.current.onDismiss();
       }
       down = null;
+      motion = [];
     };
     const onCancel = (event: PointerEvent) => {
       down = null;
+      motion = [];
       view.current.dragging = false;
       view.current.vyaw = 0;
       view.current.vpitch = 0;
@@ -1113,6 +1126,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         pinchFrom = Math.hypot(a.x - b.x, a.y - b.y);
         down = null;
         view.current.dragging = false;
+        view.current.vyaw = 0;
+        view.current.vpitch = 0;
+        motion = [];
       }
     };
     const onTouchMove = (event: PointerEvent) => {
@@ -1160,6 +1176,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       else return;
       event.preventDefault();
       v.target = null;
+      v.vyaw = 0;
+      v.vpitch = 0;
       draw();
     };
     canvas.addEventListener('pointerdown', onDown);

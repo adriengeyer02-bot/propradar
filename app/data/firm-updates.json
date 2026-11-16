@@ -1013,6 +1013,12 @@
             "trustpilotReviewCount",
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Owner-supplied CTI referral link added to the programme buttons and partner pop-up, with affiliate disclosure. Tracking parameters are preserved. No discount code or percentage was supplied; score, audit level and review date are unchanged.",
+          "source": "https://app.citytradersimperium.com/user-auth/register?referral_code=8b3df5&utm_source=client&utm_medium=referral&utm_id=8b3df5",
+          "fields": ["affiliateLink", "commercialRelationship", "partnerOffer"]
         }
       ],
       "set": {
