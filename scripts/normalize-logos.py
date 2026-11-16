@@ -71,10 +71,15 @@ LOGO_IMG_OK = {
     "the-forex-funder": "s3-eu-west-1.amazonaws.com/tpd/logos/",
     "tribe-funded": "s3-eu-west-1.amazonaws.com/tpd/logos/",
     "funder-trading": "fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq",
+    # Official Bullwaves / Bullwaves Prime brand guidelines: same classic icon.
+    "bullwaves-prime": "bullwaves.com/_next/image?url=%2Fassets%2F1ad98a3294a5",
+    # Verified current domain for the legacy Willis Capital entry; do not
+    # mistake its logo for an unrelated company (WFunded rebrand).
+    "willis-capital": "wfunded.io/_next/static/media/wfunded.",
 }
 # Wide wordmarks: keep only the symbol at the left (fraction of the content
 # width), so the mark stays readable in a small square tile. Checked by hand.
-SYMBOL_LEFT = {"bulenox": 0.25, "daytraders-com": 0.25, "atfunded": 0.32}
+SYMBOL_LEFT = {"bulenox": 0.25, "daytraders-com": 0.25, "atfunded": 0.32, "willis-capital": 0.30}
 # Redirects to another domain of the same brand, checked by hand on 2026-10-27.
 ALLOW_REDIRECT = {"fundyourfx", "sabiotrade", "sure-leverage", "the-concept-trading", "uprofit-trader", "qt-funded"}
 
@@ -96,31 +101,38 @@ def is_mask(saved):
 
 
 def rasterize_svgs(paths):
-    """Render SVG files to transparent PNG bytes with headless Chromium (JS off)."""
+    """Render SVG files to transparent PNG bytes with local Sharp or Chromium."""
     if not paths:
         return {}
-    from playwright.sync_api import sync_playwright
-    import base64
+    # Sharp (libvips + librsvg) works in CI and on sandboxed Linux hosts that
+    # cannot start Chromium. Never execute scripts embedded in an SVG.
+    import subprocess
+    from tempfile import TemporaryDirectory
 
-    out = {}
-    with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path="/opt/pw-browsers/chromium-1243/chrome-linux64/chrome")
-        context = browser.new_context(java_script_enabled=False, viewport={"width": 512, "height": 512})
-        page = context.new_page()
-        for path in paths:
-            data = base64.b64encode(path.read_bytes()).decode()
-            page.set_content(
-                f'<html><body style="margin:0;background:transparent">'
-                f'<img id="i" src="data:image/svg+xml;base64,{data}" '
-                f'style="width:512px;height:512px;object-fit:contain;display:block"></body></html>'
+    with TemporaryDirectory(prefix="propradar-svg-") as tmp:
+        script = """
+          const sharp = require(process.argv[1]);
+          const fs = require('node:fs');
+          const path = require('node:path');
+          (async () => {
+            for (let i = 3; i < process.argv.length; i++) {
+              const source = process.argv[i];
+              try {
+                await sharp(source, { density: 240 }).resize(512, 512, { fit: 'contain', background: '#00000000' }).png().toFile(path.join(process.argv[2], `${i - 3}.png`));
+              } catch (err) { console.error(`SVG skipped: ${source}: ${err.message}`); }
+            }
+          })().catch(err => { console.error(err); process.exitCode = 1; });
+        """
+        try:
+            subprocess.run(
+                ["node", "-e", script, str(ROOT / "node_modules" / "sharp"), tmp, *(str(p) for p in paths)],
+                check=True,
+                capture_output=True,
+                text=True,
             )
-            page.wait_for_timeout(150)
-            try:
-                out[path] = page.locator("#i").screenshot(omit_background=True)
-            except Exception:
-                pass
-        browser.close()
-    return out
+            return {path: Path(tmp, f"{i}.png").read_bytes() for i, path in enumerate(paths) if Path(tmp, f"{i}.png").exists()}
+        except (OSError, subprocess.CalledProcessError):
+            return {}
 
 
 def open_raster(path, svg_png):

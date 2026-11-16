@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 142 logos, fetched 2026-11-16.
+// 144 logos, fetched 2026-11-16.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -34,6 +34,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "blusky.pro": { file: "blusky-trading.png", source: "https://blusky.pro/wp-content/uploads/2025/08/cropped-favicon-192x192.png" },
   "breakoutprop.com": { file: "breakout-prop.png", source: "favicon service for breakoutprop.com" },
   "brightfunded.com": { file: "brightfunded.png", source: "https://framerusercontent.com/images/DiuykdZpUOfvmYDUbbnXnX1p78.png" },
+  "bullwaves.com": { file: "bullwaves-prime.png", source: "https://bullwaves.com/brand-guidelines (official Bullwaves Prime Classic Icon)" },
   "bulenox.com": { file: "bulenox.png", source: "https://bulenox.com/assets/logo-iXtDrF5P.svg" },
   "cashflowfunding.com": { file: "cash-flow-funding.png", source: "favicon service for cashflowfunding.com" },
   "citytradersimperium.com": { file: "city-traders-imperium.png", source: "https://b4647544.assetcdn.net/2.0/4647544/wp-content/uploads/2020/03/City-Traders-Imperium-Logo-3-300x300.png?lossy=0&strip=1&webp=1" },
@@ -155,6 +156,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "uprofittrader.com": { file: "uprofit-trader.png", source: "https://uprofit.com/icons/android-chrome-512x512.png" },
   "wegetfunded.com": { file: "wegetfunded.png", source: "https://wegetfunded.com/icon.svg?icon.003a1611.svg" },
   "wemastertrade.com": { file: "wemastertrade.png", source: "https://wemastertrade.com/wp-content/uploads/2026/08/faviconwe.png" },
+  "wfunded.io": { file: "willis-capital.png", source: "https://www.wfunded.io/_next/static/media/wfunded.796effa3.svg (WFunded's current official logo; previously branded Willis Capital)" },
   "wsfunded.com": { file: "wsfunded.png", source: "https://cdn.prod.website-files.com/6a01d4d9cc5f7d7ee9fffb50/6a16d025a52790ac21ce23d5_favicon-192x192.png" },
   "x-funded.com": { file: "x-funded.png", source: "https://x-funded.com/wp-content/uploads/2024/02/cropped-favicon-270x270.png" },
 };
