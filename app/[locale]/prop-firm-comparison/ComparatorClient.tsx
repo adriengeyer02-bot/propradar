@@ -422,7 +422,7 @@ export default function ComparatorClient({
             <option value="Static">{v('Static')}</option>
             <option value="Hybride">{v('Hybrid')}</option>
           </select>
-          <select value={eligibilityCountry} onChange={(event) => { setEligibilityCountry(event.target.value); setEligibilityStatus('all'); }} aria-label={c.eligibilityCountryAria}>
+          <select value={eligibilityCountry} onChange={(event) => { setEligibilityCountry(event.target.value); setEligibilityStatus(event.target.value ? 'available' : 'all'); }} aria-label={c.eligibilityCountryAria}>
             <option value="">{c.eligibilityAnyCountry}</option>
             {ELIGIBILITY_COUNTRIES.map((code) => (
               <option key={code} value={code}>{new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? code}</option>
@@ -505,7 +505,11 @@ export default function ComparatorClient({
       </div>
       {eligibilityCountry ? (
         <p className="pr-eligibility-note">
-          <strong>{eligibilityCounts.available} {c.eligibilityAvailable}</strong> · {eligibilityCounts.restricted} {c.eligibilityRestricted} · {eligibilityCounts.unknown} {c.eligibilityUnknown}. {c.eligibilityNote}
+          {eligibilityStatus === 'all' ? (
+            <><strong>{eligibilityCounts.available} {c.eligibilityAvailable}</strong> · {eligibilityCounts.restricted} {c.eligibilityRestricted} · {eligibilityCounts.unknown} {c.eligibilityUnknown}.</>
+          ) : (
+            <strong>{filteredFirms.length} {eligibilityStatus === 'available' ? c.eligibilityAvailable : eligibilityStatus === 'restricted' ? c.eligibilityRestricted : c.eligibilityUnknown}.</strong>
+          )} {c.eligibilityNote}
         </p>
       ) : null}
       {eligibilityCountry ? (
