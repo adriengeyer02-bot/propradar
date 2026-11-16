@@ -49,6 +49,17 @@ const zh: Messages = {
       method: '方法与来源',
     },
   },
+  newsletter: {
+    title: 'PropRadar 简报 — 即将推出',
+    body: '了解交易规则变化、出金风险提醒及独立自营交易公司研究。',
+    email: '您的电子邮箱',
+    subscribe: '订阅',
+    consent: '我同意接收 PropRadar 简报。',
+    privacy: '隐私政策',
+    success: '订阅成功，谢谢！',
+    already: '此邮箱已订阅。',
+    error: '订阅失败，请重试。',
+  },
   notice: {
     title: '本页尚未翻译。',
     body: '你正在阅读英文版。雷达、对比表和各公司页面已有中文版。',

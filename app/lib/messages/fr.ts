@@ -49,6 +49,17 @@ const fr: Messages = {
       method: 'Méthode et sources',
     },
   },
+  newsletter: {
+    title: 'Newsletter PropRadar — bientôt',
+    body: 'Évolutions des règles, alertes de paiement et analyses indépendantes des prop firms.',
+    email: 'Votre adresse e-mail',
+    subscribe: "S'inscrire",
+    consent: "J'accepte de recevoir la newsletter PropRadar.",
+    privacy: 'Confidentialité',
+    success: 'Inscription enregistrée. Merci !',
+    already: 'Cette adresse e-mail est déjà inscrite.',
+    error: "L'inscription a échoué. Réessayez.",
+  },
   notice: {
     title: "Cette page n'est pas encore traduite.",
     body: 'Vous lisez la version anglaise. Le radar, le comparateur et les fiches des firmes sont disponibles en français.',

@@ -4,8 +4,8 @@ import { FOUNDER, SITE_NAME, SITE_URL } from '../../lib/site';
 import { isLocale, localePath, type Locale } from '../../lib/locales';
 
 const PATH = '/legal';
-const UPDATED = '2026-11-09';
-const AFFILIATES = ['FTMO', 'The5ers', 'FunderPro', 'GOAT Funded Trader', 'Blue Guardian'];
+const UPDATED = '2026-11-16';
+const AFFILIATES = ['FTMO', 'The5ers', 'FunderPro', 'GOAT Funded Trader', 'Blue Guardian', 'Fintokei'];
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -67,12 +67,16 @@ export default async function LegalPage({ params }: Props) {
       <section aria-labelledby="privacy">
         <h2 id="privacy">Privacy</h2>
         <ul>
-          <li>{SITE_NAME} has no user accounts and runs no advertising or analytics trackers.</li>
+          <li>{SITE_NAME} currently has no user accounts. The site uses Google Tag Manager for audience measurement; analytics tools may set cookies or collect usage data according to their own policies.</li>
           <li>
             One functional cookie, <code>NEXT_LOCALE</code>, stores the language you pick in the language menu. It holds no personal data and is
             only set when you choose a language.
           </li>
           <li>The host, Vercel, processes technical request data (such as IP address and browser) to deliver and secure the site.</li>
+          <li>
+            If you voluntarily join our upcoming newsletter, we store your email address, chosen language, and the date and time of your consent in private Vercel storage. We use this information only to contact you about PropRadar news and research, and do not sell the list. You may ask for access or deletion at{' '}
+            <a href="mailto:contact@propradar.tech">contact@propradar.tech</a> and unsubscribe from any newsletter once sending begins.
+          </li>
           <li>
             If you email us, your address and message are used only to answer you and to keep a record of corrections. You can ask for access to,
             or deletion of, this data at <a href="mailto:contact@propradar.tech">contact@propradar.tech</a>.
