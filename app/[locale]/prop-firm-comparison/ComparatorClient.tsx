@@ -7,6 +7,7 @@ import RiskPip from '../../components/ui/RiskPip';
 import FirmRow, { FirmTableHead, type FirmSort, type FirmSortKey } from '../../components/ui/FirmRow';
 import ScoreRing from '../../components/ui/ScoreRing';
 import type { ComparatorFirm } from '../../lib/comparatorFirms';
+import { ELIGIBILITY_COUNTRIES, eligibilityFor, type EligibilityStatus } from '../../lib/countryEligibility';
 import { hasPayoutRiskSignal, isProvisional, normalizeFirmSearch } from '../../lib/firmFormat';
 import type { FirmSearchMatch } from '../../lib/firmSearch';
 import { entityCountries, jurisdictionByCode } from '../../lib/jurisdictions';
@@ -135,6 +136,8 @@ export default function ComparatorClient({
   const [drawdown, setDrawdown] = useState<DrawdownFilter>('Tous');
   const [legalFilter, setLegalFilter] = useState<LegalFilter>('Tous');
   const [country, setCountry] = useState<string>('Tous');
+  const [eligibilityCountry, setEligibilityCountry] = useState('');
+  const [eligibilityStatus, setEligibilityStatus] = useState<EligibilityStatus | 'all'>('all');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const filtersButtonRef = useRef<HTMLButtonElement>(null);
@@ -196,7 +199,8 @@ export default function ComparatorClient({
           (legalFilter === 'deep' && legalSourceCount(firm) >= 5);
         const firmCodes = FIRM_COUNTRIES.get(firm.slug) ?? [];
         const matchesCountry = country === 'Tous' || (country === 'none' ? firmCodes.length === 0 : firmCodes.includes(country));
-        return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal && matchesCountry;
+        const matchesEligibility = !eligibilityCountry || eligibilityStatus === 'all' || eligibilityFor(firm.slug, eligibilityCountry).status === eligibilityStatus;
+        return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal && matchesCountry && matchesEligibility;
       })
       .sort((a, b) => {
         if (sort) {
@@ -214,7 +218,7 @@ export default function ComparatorClient({
         return b.firm.score - a.firm.score;
       })
       .map(({ firm }) => firm);
-  }, [FIRM_COUNTRIES, matched, country, drawdown, legalFilter, market, priceMax, scoreMin, search, sort, status]);
+  }, [FIRM_COUNTRIES, matched, country, drawdown, eligibilityCountry, eligibilityStatus, legalFilter, market, priceMax, scoreMin, search, sort, status]);
 
   // Deep link from the legal map: /comparateur?country=LC
   useEffect(() => {
@@ -231,7 +235,7 @@ export default function ComparatorClient({
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [country, drawdown, legalFilter, market, priceMax, scoreMin, search, status]);
+  }, [country, drawdown, eligibilityCountry, eligibilityStatus, legalFilter, market, priceMax, scoreMin, search, status]);
 
   // Mobile filter sheet: Escape closes it, the page behind does not scroll, focus moves in and back.
   useEffect(() => {
@@ -263,9 +267,9 @@ export default function ComparatorClient({
   const visibleEnd = Math.min(visibleCount, filteredFirms.length);
   const remaining = filteredFirms.length - visibleEnd;
   const averageScore = Math.round(filteredFirms.reduce((sum, firm) => sum + firm.score, 0) / Math.max(filteredFirms.length, 1));
-  const moreFilterCount = [scoreMin !== 'Tous', market !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
-  const filterOnlyCount = [status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
-  const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous'].filter(Boolean).length;
+  const moreFilterCount = [scoreMin !== 'Tous', market !== 'Tous', legalFilter !== 'Tous', country !== 'Tous', Boolean(eligibilityCountry), eligibilityCountry && eligibilityStatus !== 'all'].filter(Boolean).length;
+  const filterOnlyCount = [status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous', Boolean(eligibilityCountry), eligibilityCountry && eligibilityStatus !== 'all'].filter(Boolean).length;
+  const activeFilterCount = [normalizeFirmSearch(search), status !== 'Tous', market !== 'Tous', scoreMin !== 'Tous', priceMax !== 'Tous', drawdown !== 'Tous', legalFilter !== 'Tous', country !== 'Tous', Boolean(eligibilityCountry), eligibilityCountry && eligibilityStatus !== 'all'].filter(Boolean).length;
   const payoutAlerts = useMemo(
     () => [...propFirms].filter((firm) => hasPayoutRiskSignal(firm)).sort((a, b) => b.reviewSignals.payoutRiskScore - a.reviewSignals.payoutRiskScore).slice(0, 3),
     []
@@ -304,6 +308,8 @@ export default function ComparatorClient({
     setDrawdown('Tous');
     setLegalFilter('Tous');
     setCountry('Tous');
+    setEligibilityCountry('');
+    setEligibilityStatus('all');
   }
 
 
@@ -402,6 +408,20 @@ export default function ComparatorClient({
             <option value="Static">{v('Static')}</option>
             <option value="Hybride">{v('Hybrid')}</option>
           </select>
+          <select value={eligibilityCountry} onChange={(event) => { setEligibilityCountry(event.target.value); setEligibilityStatus('all'); }} aria-label={c.eligibilityCountryAria}>
+            <option value="">{c.eligibilityAnyCountry}</option>
+            {ELIGIBILITY_COUNTRIES.map((code) => (
+              <option key={code} value={code}>{new Intl.DisplayNames([locale], { type: 'region' }).of(code) ?? code}</option>
+            ))}
+          </select>
+          {eligibilityCountry ? (
+            <select value={eligibilityStatus} onChange={(event) => setEligibilityStatus(event.target.value as EligibilityStatus | 'all')} aria-label={c.eligibilityStatusAria}>
+              <option value="all">{c.eligibilityAnyStatus}</option>
+              <option value="available">{c.eligibilityAvailable}</option>
+              <option value="restricted">{c.eligibilityRestricted}</option>
+              <option value="unknown">{c.eligibilityUnknown}</option>
+            </select>
+          ) : null}
           <button
             type="button"
             className={`pr-more-toggle${moreFilters ? ' is-open' : ''}`}
@@ -469,6 +489,18 @@ export default function ComparatorClient({
           <Link href={`${L('/tools')}#comparatif`} className="pr-link">{c.sideBySide} <span aria-hidden="true">→</span></Link>
         </div>
       </div>
+      {eligibilityCountry ? <p className="pr-eligibility-note">{c.eligibilityNote}</p> : null}
+      {eligibilityCountry ? (
+        <details className="pr-eligibility-sources">
+          <summary>{c.eligibilityEvidence}</summary>
+          <ul>
+            {propFirms.filter((firm) => eligibilityFor(firm.slug, eligibilityCountry).source).map((firm) => {
+              const rule = eligibilityFor(firm.slug, eligibilityCountry);
+              return <li key={firm.slug}><a href={rule.source} target="_blank" rel="noopener noreferrer">{firm.name} ↗</a> · {rule.scope} ({rule.checked})</li>;
+            })}
+          </ul>
+        </details>
+      ) : null}
 
       {filteredFirms.length === 0 ? (
         <div className="pr-empty">
@@ -482,6 +514,16 @@ export default function ComparatorClient({
           {visibleFirms.map((firm, index) => (
             <FirmRow key={firm.slug} firm={firm} rank={index + 1} locale={locale} ui={ui}>
               {isSearching ? <FirmSearchContext match={matchBySlug.get(firm.slug)} label={c.matchedBy} /> : null}
+              {eligibilityCountry ? (() => {
+                const evidence = eligibilityFor(firm.slug, eligibilityCountry);
+                const label = evidence.status === 'available' ? c.eligibilityAvailable : evidence.status === 'restricted' ? c.eligibilityRestricted : c.eligibilityUnknown;
+                return (
+                  <span className={`pr-eligibility-badge pr-eligibility-${evidence.status}`} title={evidence.scope}>
+                    {label}
+                    {evidence.source ? <span aria-hidden="true"> · ↗</span> : null}
+                  </span>
+                );
+              })() : null}
             </FirmRow>
           ))}
         </div>

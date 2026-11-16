@@ -308,6 +308,34 @@ html[data-theme='dark'] {
 .pr-results-meta strong { color: var(--text); }
 .pr-results-actions { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
 
+.pr-eligibility-note {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.pr-eligibility-sources { margin: 0 0 14px; font-size: 12px; color: var(--muted); }
+.pr-eligibility-sources summary { width: fit-content; cursor: pointer; color: var(--accent-ink); }
+.pr-eligibility-sources ul { margin: 8px 0 0; padding: 0 0 0 22px; }
+.pr-eligibility-sources li { margin: 5px 0; line-height: 1.5; }
+.pr-eligibility-sources a { color: var(--accent-ink); }
+.pr-eligibility-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 4px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 600;
+  white-space: normal;
+  background: var(--surface-2, var(--surface));
+  color: var(--muted);
+}
+.pr-eligibility-available { color: #15775a; background: #e2f5ee; }
+.pr-eligibility-restricted { color: #9d3535; background: #ffebeb; }
+.pr-eligibility-unknown { border: 1px solid var(--line); }
+
 .pr-firm-table {
   border: 1px solid var(--line);
   border-radius: var(--pr-radius);
