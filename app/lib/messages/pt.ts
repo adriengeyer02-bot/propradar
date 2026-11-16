@@ -49,6 +49,17 @@ const pt: Messages = {
       "method": "Método e fontes"
     }
   },
+  "newsletter": {
+    "title": "Newsletter PropRadar — em breve",
+    "body": "Mudanças nas regras, alertas de pagamentos e análises independentes de prop firms.",
+    "email": "Seu e-mail",
+    "subscribe": "Inscrever-me",
+    "consent": "Aceito receber a newsletter da PropRadar.",
+    "privacy": "Política de privacidade",
+    "success": "Inscrição registrada. Obrigado!",
+    "already": "Este e-mail já está inscrito.",
+    "error": "Falha na inscrição. Tente novamente."
+  },
   "notice": {
     "title": "Esta página ainda não está traduzida.",
     "body": "Você está lendo a versão em inglês. O radar, o comparador e as fichas das empresas estão disponíveis em português.",
@@ -306,6 +317,10 @@ const pt: Messages = {
     "globeTitle": "O globo PropRadar",
     "globeHint": "Arraste para girar · roda do rato ou duplo clique para ampliar · clique num logo para ver a empresa",
     "globeZoom": "Zoom do globo",
+    "globePause": "Pausar a rotação",
+    "globeResume": "Retomar a rotação",
+    "globeHud": { "preview": "Prévia da empresa", "locked": "Perfil fixado", "jurisdictions": "Jurisdições das entidades", "unknown": "Não estabelecidas", "offer": "Oferta de parceiro", "available": "Disponível no site da empresa", "offerNew": "Até {pct}% de desconto · novos clientes", "offerFirst": "{pct}% de desconto · primeira compra", "offerAll": "{pct}% de desconto · todos os desafios", "offerSelected": "{pct}% de desconto · desafios elegíveis", "conditions": "Afiliação · confira as condições no pagamento.", "copy": "Copiar", "copied": "Código copiado", "copyFailed": "Selecione e copie o código acima.", "seeOffer": "Ver oferta" },
+    "globeNoResults": "Nenhuma empresa encontrada. Tente outro nome.",
     "zoomIn": "Ampliar",
     "zoomOut": "Reduzir",
     "zoomReset": "Repor o zoom",
@@ -441,6 +456,15 @@ const pt: Messages = {
     "countryAria": "País da entidade",
     "anyCountry": "Qualquer país",
     "countryUnknown": "País não identificado",
+    "eligibilityCountryAria": "Meu país de residência",
+    "eligibilityAnyCountry": "Disponível no meu país…",
+    "eligibilityStatusAria": "Disponibilidade por país",
+    "eligibilityAnyStatus": "Todos os estados",
+    "eligibilityAvailable": "Aceito pela empresa",
+    "eligibilityRestricted": "Excluído pela empresa",
+    "eligibilityUnknown": "Não verificado",
+    "eligibilityNote": "Segundo as condições publicadas pela empresa; NÃO é autorização legal. Cada programa e plataforma pode ter restrições próprias. KYC e pagamentos não são garantidos: confirme antes de comprar.",
+    "eligibilityEvidence": "Condições de elegibilidade publicadas pela empresa",
     "reset": "Redefinir",
     "showFirms": "Ver {n} empresas",
     "showFirm": "Ver 1 empresa",
@@ -571,6 +595,12 @@ const pt: Messages = {
       "Legal entity": "Entidade jurídica"
     },
     "sendSource": "Envie-nos uma fonte",
+    "sourceForm": {
+      "title": "Compartilhar uma fonte", "intro": "Ajude-nos a verificar esta empresa. Envie um link público para provas, regras ou pagamentos.",
+      "url": "Link público da fonte", "detail": "O que esta fonte mostra? (opcional)", "submit": "Enviar fonte", "sending": "Enviando…", "cancel": "Cancelar", "close": "Fechar",
+      "success": "Obrigado! Sua fonte foi guardada para análise editorial.", "error": "O formulário está temporariamente indisponível.", "gmail": "Enviar pelo Gmail",
+      "privacy": "O link e o comentário ficam privados e não são publicados automaticamente."
+    },
     "navLabel": "Navegação da ficha",
     "nav": {
       "offers": "Ofertas",
@@ -697,6 +727,7 @@ const pt: Messages = {
     "nothingRecorded": "Nada registrado nesta verificação.",
     "reviewsEyebrow": "Avaliações e pagamentos",
     "reviewsTitle": "O que os traders relatam",
+    "payoutProofs": { "title": "Provas públicas de pagamentos", "intro": "Apenas fontes datadas e com link. Um número publicado pela própria empresa é marcado como declarado pela empresa: o PropRadar não o auditou.", "official": "Página oficial da empresa", "press": "Imprensa especializada", "onchain": "Dados on-chain", "firmReported": "declarado pela empresa", "independent": "contagem independente" },
     "payoutRisk": "Risco de pagamento",
     "payoutCheck": "Verificação de pagamentos",
     "withheldShort": "Nota suspensa pelo Trustpilot.",

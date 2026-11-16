@@ -7,6 +7,7 @@ import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
+import SourceSubmission from '../../../components/SourceSubmission';
 import { firmLogoFor } from '../../../lib/firmLogos';
 import ChallengePath from '../../../components/ui/ChallengePath';
 import EntityChain from '../../../components/ui/EntityChain';
@@ -17,7 +18,6 @@ import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../../lib/riskTone';
 import {
-  BLUE_GUARDIAN_AFFILIATE_URL,
   FTMO_AFFILIATE_URL,
   GOAT_FUNDED_TRADER_AFFILIATE_URL,
   THE5ERS_AFFILIATE_URL,
@@ -78,6 +78,11 @@ async function readParams(params: Props['params']): Promise<{ locale: Locale; sl
 }
 
 const FIRM_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
+
+function firmPublishedAt(slug: string) {
+  return getFirmChangelog(slug).filter((entry) => entry.fields?.includes('initialReview'))
+    .map((entry) => entry.date).sort()[0] ?? FIRM_LIBRARY_PUBLISHED_AT;
+}
 export const revalidate = 86400;
 
 export function generateStaticParams() {
@@ -482,7 +487,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: OG_LOCALE[locale],
       siteName: SITE_NAME,
-      publishedTime: FIRM_LIBRARY_PUBLISHED_AT,
+      publishedTime: firmPublishedAt(firm.slug),
       modifiedTime,
       authors: [`${SITE_URL}/audit`],
       tags: [firm.name, 'prop firm review', 'payout risk', 'legal audit'],
@@ -513,17 +518,16 @@ export default async function FirmPage({ params }: Props) {
 
   const isFtmo = firm.slug === 'ftmo';
   const isThe5ers = firm.slug === 'the5ers';
-  const isBlueGuardian = firm.slug === 'blue-guardian';
   const isGoatFundedTrader = firm.slug === 'goat-funded-trader';
-  /** Blue Guardian code read on its own site (see promoResearch.ts). */
-  const bgOffer = { code: 'NOV30', pct: '30%', date: formatDateLong(locale, '2026-11-07') };
   const partnerView = (() => {
     const offer = firm.partnerOffer;
     if (!offer) return undefined;
     const po = f.partnerOffer;
     const pct = offer.percent;
     const title = pct
-      ? fmt(offer.scope === 'first' ? po.titleFirst : offer.scope === 'new' ? po.titleNew : po.titleAll, { pct })
+      ? offer.scope === 'selected'
+        ? `${fmt(po.titleCode, { code: offer.code ?? '' })} · ${pct}%`
+        : fmt(offer.scope === 'first' ? po.titleFirst : offer.scope === 'new' ? po.titleNew : po.titleAll, { pct })
       : offer.code
         ? fmt(po.titleCode, { code: offer.code })
         : fmt(po.titleLink, { name: firm.name });
@@ -721,7 +725,7 @@ export default async function FirmPage({ params }: Props) {
     '@type': 'Article',
     headline: searchProfile?.heading ?? `${firm.name} PropRadar review`,
     description: searchProfile?.summary ?? tx(firm.verdict),
-    datePublished: FIRM_LIBRARY_PUBLISHED_AT,
+    datePublished: firmPublishedAt(firm.slug),
     dateModified: contentLastModified,
     image: `${SITE_URL}/firm/${firm.slug}/opengraph-image`,
     inLanguage: HTML_LANG[locale],
@@ -756,10 +760,10 @@ export default async function FirmPage({ params }: Props) {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    datePublished: FIRM_LIBRARY_PUBLISHED_AT,
+    datePublished: firmPublishedAt(firm.slug),
     dateModified: contentLastModified,
     reviewBody: tx(firm.verdict),
-    inLanguage: 'en',
+    inLanguage: HTML_LANG[locale],
     citation: evidenceSourceUrls,
     reviewRating: {
       '@type': 'Rating',
@@ -847,7 +851,7 @@ export default async function FirmPage({ params }: Props) {
           <div className="pr-firm-identity">
             <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
             <div>
-              <div className="eyebrow">{tx(firm.headquarters)} · {fmt(f.founded, { year: firm.founded })}</div>
+              <div className="eyebrow">{tx(firm.headquarters)}{firm.founded > 0 ? ` · ${fmt(f.founded, { year: firm.founded })}` : ''}</div>
               <h1 className={firmTitleClass}>{firm.name}</h1>
               <div className="pr-firm-tags">
                 <span className={`pr-tag pr-tone-${statusTone(firm.status)}`}>{v(operationalStatusLabel(firm))}</span>
@@ -926,12 +930,7 @@ export default async function FirmPage({ params }: Props) {
             <ul>
               {gaps.map((gap) => <li key={gap}>{(f.gaps as Record<string, string>)[gap] ?? gap}</li>)}
             </ul>
-            <a
-              className="pr-link"
-              href={`mailto:contact@propradar.tech?subject=${encodeURIComponent(`Source for ${firm.name}`)}&body=${encodeURIComponent(`Item and public link: `)}`}
-            >
-              {f.sendSource}
-            </a>
+            <SourceSubmission firm={firm.name} slug={firm.slug} copy={f} />
           </aside>
         ) : null}
 
@@ -1152,37 +1151,13 @@ export default async function FirmPage({ params }: Props) {
             name={firm.name}
             logo={firmLogoFor(firm.logoDomain)?.src}
             view={partnerView}
-            showCard={!isFtmo && !isThe5ers && !isBlueGuardian && !isGoatFundedTrader}
+            showCard={!isFtmo && !isThe5ers && !isGoatFundedTrader}
           />
         ) : null}
         {firm.commercialNote ? (
           <p className="pr-firm-disclosure">
             <strong>{f.commercial}</strong> {tx(firm.commercialNote)}
           </p>
-        ) : null}
-
-        {isBlueGuardian ? (
-          <div className="panel blue-guardian-affiliate-panel">
-            <div className="blue-guardian-affiliate-copy">
-              <div className="eyebrow">{f.partner.bgEyebrow}</div>
-              <h2>{fmt(f.partner.bgTitle, bgOffer)}</h2>
-              <p className="muted">
-                {fmt(f.partner.bgText1, bgOffer)} {f.partner.bgText2}
-              </p>
-              <div className="promo-proof-row">
-                <span>{fmt(f.partner.bgProof, bgOffer)}</span>
-                <span>{f.partner.affiliateLink}</span>
-              </div>
-              <a href={BLUE_GUARDIAN_AFFILIATE_URL} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">
-                {f.partner.bgCta}
-              </a>
-            </div>
-            <div className="blue-guardian-offer-card">
-              <span>{fmt(f.partner.bgCardLabel, bgOffer)}</span>
-              <strong>{bgOffer.code}</strong>
-              <small>{fmt(f.partner.bgCardNote, bgOffer)}</small>
-            </div>
-          </div>
         ) : null}
 
         {isThe5ers ? (
@@ -1293,6 +1268,28 @@ export default async function FirmPage({ params }: Props) {
             <span>{f.payoutCheck} <time dateTime={firm.reviewSignals.lastSignalCheck}>{firm.reviewSignals.lastSignalCheck}</time></span>
           </div>
         </header>
+
+        {firm.payoutProofs?.length ? (
+          <div className="pr-payout-proofs" aria-labelledby={`payout-proofs-${firm.slug}`}>
+            <h3 id={`payout-proofs-${firm.slug}`}>{f.payoutProofs.title}</h3>
+            <p className="pr-payout-proofs-intro">{f.payoutProofs.intro}</p>
+            <ol>
+              {firm.payoutProofs.map((proof) => (
+                <li key={proof.url + proof.quote}>
+                  <div className="pr-payout-proof-meta">
+                    <time dateTime={proof.date}>{proof.date}</time>
+                    <span className={`pr-payout-proof-kind is-${proof.kind}`}>{f.payoutProofs[proof.kind]}</span>
+                    <span className={proof.firmReported ? 'pr-payout-proof-tag is-firm' : 'pr-payout-proof-tag is-independent'}>
+                      {proof.firmReported ? f.payoutProofs.firmReported : f.payoutProofs.independent}
+                    </span>
+                  </div>
+                  <p className="pr-payout-proof-text">{proof.quote}</p>
+                  <a href={proof.url} target="_blank" rel="noopener noreferrer">{proof.publisher} <span aria-hidden="true">↗</span></a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : null}
 
         <div className="pr-signal-board">
           <div className="pr-signal-total">

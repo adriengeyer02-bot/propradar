@@ -1,4 +1,8 @@
 import { applyFirmUpdates } from './firmUpdates';
+import { foxxFunded } from './foxxFunded';
+import { xFunded } from './xFunded';
+import { milTraders } from './milTraders';
+import { bullwavesPrime } from './bullwavesPrime';
 import { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel } from './firmFormat';
 export { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel };
 
@@ -30,6 +34,20 @@ export type SourceLink = {
 };
 
 export type RegulatoryRiskLevel = 'Low' | 'Low to medium' | 'Medium' | 'Medium to high' | 'High' | 'Critical' | 'To audit';
+
+export type PayoutProof = {
+  /** Date stated by the source, or the date PropRadar read an undated page. */
+  date: string;
+  /** official = the firm's own page; press = trade press; onchain = public blockchain data compiled by a named third party. */
+  kind: 'official' | 'press' | 'onchain';
+  /** Who published it, e.g. "Finance Magnates". */
+  publisher: string;
+  /** Short statement of the figure; words in quotation marks are verbatim from the source. */
+  quote: string;
+  url: string;
+  /** True when the figure comes from the firm itself (its page, or press relaying its own count). */
+  firmReported: boolean;
+};
 
 export type RegulatoryEntity = {
   name: string;
@@ -109,11 +127,14 @@ export type PropFirm = {
   score: number;
   /** Set when a rule lowered the stored score; the firm page states it. */
   scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
+  /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
   bestFor: string;
   verdict: string;
   priceFrom: number;
+  /** Native fee when no comparable USD fee is confirmed; never an implicit conversion. */
+  nativePriceFrom?: { amount: number; currency: 'EUR' | 'GBP' };
   /** True when the official site states there is no entry fee (read on a source, never a default). */
   noEntryFee?: boolean;
   profitSplit: number;
@@ -123,6 +144,8 @@ export type PropFirm = {
   payoutDelay: string;
   incidents: number;
   incidentsDetails: string[];
+  /** Public, dated payout proof (official pages, trade press, on-chain data), added through firm-updates.json. */
+  payoutProofs?: PayoutProof[];
   styles: string[];
   legalVerified: boolean;
   transparencyScore: number;
@@ -178,21 +201,30 @@ export function documentedIncidents(firm: Pick<PropFirm, 'incidentsDetails' | 'r
 const REVIEW_DATE = '2026-06-29';
 export const FTMO_AFFILIATE_URL = 'https://trader.ftmo.com/?affiliates=ILTDLLkYLwdMlzGLBwkq';
 export const BLUE_GUARDIAN_AFFILIATE_URL = 'https://blueguardian.com/?afmc=PROPRADAR';
+/** PropRadar partner code; 25% verified on the Elite 100K Futures checkout on 2026-11-15. */
+export const BLUE_GUARDIAN_PROMO_CODE = 'PROPRADAR';
 export const FUNDERPRO_AFFILIATE_URL = 'https://funderpro.cxclick.com/visit/?bta=48892&brand=funderpro';
 export const GOAT_FUNDED_TRADER_AFFILIATE_URL = 'https://app.goatfundedtrader.com/checkout?referral_id=04e892a0e3d217576945';
 export const THE5ERS_AFFILIATE_URL = 'https://www.the5ers.com/?afmc=1cuh';
 export const E8_AFFILIATE_URL = 'https://e8markets.com/d/A4DE0965';
 export const FXIFY_AFFILIATE_URL = 'https://trader.fxify.com/purchasechallenge?affiliateId=8924';
+/** Fintokei affiliate link issued to PropRadar, confirmed by Geyer on 2026-11-16. */
+export const FINTOKEI_AFFILIATE_URL = 'https://www.fintokei.com/?affiliate=2534';
+/** Geo-aware outbound redirect to the regional version of the same affiliate link. */
+export const FINTOKEI_TRACKING_PATH = '/out/fintokei';
 /** Partner code issued to PropRadar by FXIFY (25% off all programs, per FXIFY), received 2026-11-14. */
 export const FXIFY_PROMO_CODE = 'FXIFY0EVDNU';
 export const UPCOMERS_AFFILIATE_URL = 'https://www.upcomers.com/fr/?code=kkscxhro#challenges';
+export const ONEFUNDED_AFFILIATE_URL = 'https://onefunded.com/?utm_medium=aff&utm_term=713&utm_source=tracknow&campaign_id=7&ref_id=713#challenges';
+/** City Traders Imperium referral link supplied by PropRadar's owner on 2026-11-16. */
+export const CTI_AFFILIATE_URL = 'https://app.citytradersimperium.com/user-auth/register?referral_code=8b3df5&utm_source=client&utm_medium=referral&utm_id=8b3df5';
 /** Partner code issued to PropRadar by Upcomers, received 2026-11-14 (no percentage stated by Upcomers). */
 export const UPCOMERS_PROMO_CODE = 'kkscxhro';
 /** Partner code issued to PropRadar by OneFunded on 2026-11-12 (25% off all challenges, per OneFunded). */
 export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, FINTOKEI_AFFILIATE_URL, FINTOKEI_TRACKING_PATH, UPCOMERS_AFFILIATE_URL, ONEFUNDED_AFFILIATE_URL, CTI_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -2483,7 +2515,7 @@ const corePropFirms: PropFirm[] = [
     logoDomain: 'blueguardian.com',
     communitySignal: 'Decent community presence, signal to confirm with recent payout proof.',
     commercialRelationship: 'Affiliation transparente',
-    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link. Blue Guardian’s own site showed the code BG25 (25%, all accounts) on 14 November 2026, replacing NOV30; any code must visibly lower the cart subtotal, and the offer has no impact on the score.',
+    commercialNote: 'PropRadar may receive a commission through the Blue Guardian link or partner code PROPRADAR. On 15 November 2026, PROPRADAR reduced the Elite 100K Futures checkout from $330 to $247.50 (25%). Eligibility and the final subtotal must be checked for the selected plan; the relationship has no impact on the score.',
     products: [
       product({
         id: 'blueguardian-programs',
@@ -2588,6 +2620,9 @@ const corePropFirms: PropFirm[] = [
     recentRuleChange: false,
     logoDomain: 'fintokei.com',
     communitySignal: 'A more institutional and less promotion-driven public signal.',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote: 'PropRadar may receive a commission when a visitor purchases through its Fintokei affiliate link (confirmed by PropRadar on 16 November 2026). The link uses Fintokei\'s regional site for Czechia, Japan, Italy, Poland and Slovakia; other locations use English, while restricted locations go to the official eligibility FAQ. Fintokei also checks residence and citizenship. This relationship does not affect the independent score or warnings.',
+    partnerOffer: { href: FINTOKEI_TRACKING_PATH, checkedOn: '2026-11-16' },
     products: [
       product({
         id: 'fintokei-challenges',
@@ -2598,7 +2633,7 @@ const corePropFirms: PropFirm[] = [
         profitSplit: 'up to 95% depending on the program',
         platforms: ['MT4', 'MT5'],
         tradableAssets: ['Forex', 'Indices', 'Metals'],
-        linkToStart: 'https://www.fintokei.com/',
+        linkToStart: FINTOKEI_TRACKING_PATH,
       }),
     ],
     lastReviewed: '2026-07-13',
@@ -2791,6 +2826,8 @@ const corePropFirms: PropFirm[] = [
     trustpilotRating: 4.3,
     logoDomain: 'citytradersimperium.com',
     communitySignal: 'Established since 2018 with 1,691 Trustpilot reviews at this check and recent financial-press coverage, but public feedback still includes rule-enforcement and payout-eligibility disputes.',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote: 'PropRadar may receive a commission if you use this link. The score stays independent and weaknesses remain visible.',
     products: [
       product({
         id: 'cti-one-step',
@@ -2809,7 +2846,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '3 profitable days for the evaluation; payout conditions also apply',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; profitable-day and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/compare-funding-programs/',
+        linkToStart: CTI_AFFILIATE_URL,
       }),
       product({
         id: 'cti-two-step',
@@ -2828,7 +2865,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '3 profitable days per evaluation phase; payout conditions also apply',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; profitable-day and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/compare-funding-programs/',
+        linkToStart: CTI_AFFILIATE_URL,
         isPopular: true,
       }),
       product({
@@ -2848,7 +2885,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: 'Payout eligibility varies; official pages describe profitable-day and minimum-profit conditions',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; payout qualification and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/forex-funded-trader-accounts/',
+        linkToStart: CTI_AFFILIATE_URL,
       }),
       product({
         id: 'cti-instant-pro',
@@ -2867,7 +2904,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: 'On-demand first reward claim; later bi-weekly subject to qualification rules',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; payout qualification and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/forex-funded-trader-accounts/',
+        linkToStart: CTI_AFFILIATE_URL,
       }),
     ],
     strengths: [
@@ -12715,7 +12752,7 @@ const universePropFirms: PropFirm[] = [
 ];
 
 // Base profiles before dated updates (used by scripts/validate-firm-updates.ts).
-export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms];
+export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms, foxxFunded, xFunded, milTraders, bullwavesPrime];
 
 // Trustpilot review notices are review-reliability evidence, not payout evidence.
 const REVIEW_NOTICE = /trustpilot[\s\S]*(breach of (our|its) guidelines|fake reviews|rating is unavailable|reviews were removed)/i;
@@ -12882,15 +12919,16 @@ function applyTrustpilotCapRule(firm: PropFirm): PropFirm {
  * Update them when the code changes on the firm's site.
  */
 export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
+  'city-traders-imperium': { href: CTI_AFFILIATE_URL },
   ftmo: { href: FTMO_AFFILIATE_URL },
   the5ers: { href: THE5ERS_AFFILIATE_URL, code: THE5ERS_PROMO_CODE, codeSource: 'firm' },
   funderpro: { href: FUNDERPRO_AFFILIATE_URL, code: PROPRADAR_PROMO_CODE, codeSource: 'firm' },
   'goat-funded-trader': { href: GOAT_FUNDED_TRADER_AFFILIATE_URL, code: 'FIRSTGFT', percent: 50, scope: 'new', codeSource: 'site', checkedOn: '2026-11-14' },
-  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: 'BG25', percent: 25, scope: 'all', codeSource: 'site', checkedOn: '2026-11-14' },
+  'blue-guardian': { href: BLUE_GUARDIAN_AFFILIATE_URL, code: BLUE_GUARDIAN_PROMO_CODE, percent: 25, scope: 'selected', codeSource: 'firm', checkedOn: '2026-11-15' },
   'e8-markets': { href: E8_AFFILIATE_URL, code: 'E8', percent: 15, scope: 'first', codeSource: 'site', checkedOn: '2026-11-13' },
   fxify: { href: FXIFY_AFFILIATE_URL, code: FXIFY_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-14' },
   upcomers: { href: UPCOMERS_AFFILIATE_URL, code: UPCOMERS_PROMO_CODE, codeSource: 'firm', checkedOn: '2026-11-14' },
-  onefunded: { code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-12' },
+  onefunded: { href: ONEFUNDED_AFFILIATE_URL, code: ONEFUNDED_PROMO_CODE, percent: 25, scope: 'all', codeSource: 'firm', checkedOn: '2026-11-15' },
 };
 
 function applyPartnerOffer(firm: PropFirm): PropFirm {

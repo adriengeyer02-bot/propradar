@@ -12,14 +12,14 @@
  * new incidents, and accusation-type wording (scam, fraud...).
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { basePropFirms } from '../app/lib/propFirms';
+import { basePropFirms, propFirms } from '../app/lib/propFirms';
 import type { FirmUpdate } from '../app/lib/firmUpdates';
 
 const FILE = 'app/data/firm-updates.json';
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
-  'status', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
+  'status', 'verdict', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
   'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
@@ -63,6 +63,22 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     continue;
   }
   if (!DATE.test(update.reviewedAt ?? '') || update.reviewedAt > today) errors.push(`${where}.reviewedAt: YYYY-MM-DD, not in the future`);
+  if (update.setLegalReview !== undefined) {
+    const legal = update.setLegalReview;
+    if (!legal.summary || legal.summary.length < 40) errors.push(`${where}.setLegalReview.summary: substantive text required`);
+    for (const key of ['complaintsAndDisputes', 'redFlags'] as const) {
+      if (!Array.isArray(legal[key]) || legal[key].some((item) => typeof item !== 'string' || !item.trim())) errors.push(`${where}.setLegalReview.${key}: array of non-empty strings required`);
+    }
+    if (!Array.isArray(legal.sources) || !legal.sources.length || legal.sources.some((source) => !source.label || !isHttpsUrl(source.url))) errors.push(`${where}.setLegalReview.sources: public sources required`);
+    for (const key of Object.keys(legal)) {
+      if (!['summary', 'complaintsAndDisputes', 'redFlags', 'sources'].includes(key)) errors.push(`${where}.setLegalReview.${key}: field not allowed`);
+    }
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('legalReview') && legal.sources?.some((source) => source.url === entry.source))) errors.push(`${where}.setLegalReview: matching sourced legalReview changelog required`);
+    const oldSources = new Set([...firm.sources, ...firm.regulatoryAudit.sources, ...(previous.firms?.[slug]?.addSources ?? []), ...(previous.firms?.[slug]?.setLegalReview?.sources ?? [])].map((source) => source.url));
+    const newLegalSources = (legal.sources ?? []).filter((source) => !oldSources.has(source.url));
+    if (newLegalSources.length) sensitive.push(`${slug}: legal review introduces ${newLegalSources.length} new source(s); check for new incidents before merge`);
+    if (BANNED_WORDS.test(JSON.stringify(legal))) sensitive.push(`${slug}: legal-review wording needs a legal read`);
+  }
   if (update.setEntities !== undefined) {
     if (!Array.isArray(update.setEntities) || !update.setEntities.length) errors.push(`${where}.setEntities: non-empty array required`);
     for (const [index, entity] of (update.setEntities ?? []).entries()) {
@@ -71,6 +87,17 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('entities') && isHttpsUrl(entry.source))) {
       errors.push(`${where}.setEntities: a changelog entry with fields ["entities"] and an https source is required`);
     }
+  }
+  for (const [index, proof] of (update.addPayoutProofs ?? []).entries()) {
+    const at = `${where}.addPayoutProofs[${index}]`;
+    if (!DATE.test(proof?.date ?? '') || proof.date > today) errors.push(`${at}.date: YYYY-MM-DD, not in the future`);
+    if (!['official', 'press', 'onchain'].includes(proof?.kind)) errors.push(`${at}.kind must be official, press or onchain`);
+    if (!isHttpsUrl(proof?.url)) errors.push(`${at}.url must be an https URL`);
+    if (!proof?.publisher || !proof?.quote || proof.quote.length < 8) errors.push(`${at}: publisher and an exact quote are required`);
+    if (typeof proof?.firmReported !== 'boolean') errors.push(`${at}.firmReported must be true or false`);
+  }
+  if (update.addPayoutProofs?.length && !(update.changelog ?? []).some((entry) => entry.fields?.includes('payoutProofs') && isHttpsUrl(entry.source))) {
+    errors.push(`${where}.addPayoutProofs: a changelog entry with fields ["payoutProofs"] and an https source is required`);
   }
   if (update.set?.drawdownType !== undefined && !DRAWDOWN_TYPES.has(update.set.drawdownType)) errors.push(`${where}.set.drawdownType must be EOD, Trailing, Static or Hybride`);
   if (update.setProducts !== undefined) {
@@ -102,6 +129,13 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     if (!SET_KEYS.has(key)) errors.push(`${where}.set.${key}: field not allowed`);
   }
   const set = update.set ?? {};
+  if (set.verdict !== undefined) {
+    if (typeof set.verdict !== 'string' || set.verdict.trim().length < 40) errors.push(`${where}.set.verdict: a substantive introduction is required`);
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('verdict') && isHttpsUrl(entry.source))) {
+      errors.push(`${where}.set.verdict: a changelog entry with fields ["verdict"] and an https source is required`);
+    }
+    if (BANNED_WORDS.test(set.verdict)) sensitive.push(`${slug}: introduction wording needs a legal read`);
+  }
   if (set.status !== undefined && !STATUSES.has(set.status)) errors.push(`${where}.set.status invalid`);
   if (set.score !== undefined && (!Number.isInteger(set.score) || set.score < 0 || set.score > 100)) errors.push(`${where}.set.score must be 0-100`);
   if (set.trustpilotRating !== undefined && (set.trustpilotRating < 1 || set.trustpilotRating > 5)) errors.push(`${where}.set.trustpilotRating must be 1-5`);
@@ -138,6 +172,14 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
   const newIncidents = (update.addIncidents ?? []).filter((item) => !(before?.addIncidents ?? []).includes(item));
   if (newIncidents.length) sensitive.push(`${slug}: ${newIncidents.length} new incident(s)`);
   if (JSON.stringify(before) !== JSON.stringify(update)) summary.push(`${slug}: updated (${update.reviewedAt})`);
+}
+
+// A completed multi-source label cannot coexist with the watchlist fallback.
+// Check effective profiles, including product updates that rewrite introductions.
+for (const firm of propFirms) {
+  if (firm.status !== 'Fermée' && firm.auditStatus === 'Vérifié multi-source' && /(?:has not been|have not been) audited in depth/i.test(firm.verdict)) {
+    errors.push(`${firm.slug}: multi-source audit status contradicts the introduction; add a sourced verdict correction`);
+  }
 }
 
 if (errors.length) {

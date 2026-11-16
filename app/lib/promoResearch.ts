@@ -1,5 +1,7 @@
 import {
+  PARTNER_OFFERS,
   BLUE_GUARDIAN_AFFILIATE_URL,
+  BLUE_GUARDIAN_PROMO_CODE,
   E8_AFFILIATE_URL,
   FXIFY_AFFILIATE_URL,
   FXIFY_PROMO_CODE,
@@ -52,6 +54,25 @@ export type PromoDeal = {
 };
 
 const allPromoDeals: PromoDeal[] = [
+  {
+    slug: 'blue-guardian',
+    label: 'Transparent partner code',
+    title: 'PROPRADAR: 25% off eligible Blue Guardian accounts',
+    code: BLUE_GUARDIAN_PROMO_CODE,
+    value: '25%',
+    category: 'affiliate',
+    proofLevel: 'PropRadar affiliate',
+    availability: 'Verify at checkout',
+    validity: 'Verified on the official checkout on 15 November 2026; no end date confirmed.',
+    eligibility: '25% verified on Elite 100K Futures; confirm eligibility and the discount for your selected plan. Add-ons and bundles have their own conditions.',
+    sourceUrl: BLUE_GUARDIAN_AFFILIATE_URL,
+    sourceLabel: 'Official Blue Guardian checkout + PropRadar affiliate link',
+    sourceNote: 'PropRadar partner code PROPRADAR checked on 2026-11-15: Elite 100K Futures subtotal $330, coupon reduction $82.50, final total $247.50. The public site also displays BG25 (25% across CFD and Futures accounts). No purchase was made.',
+    consumerVerdict: 'Use the PropRadar partner code and check the final price for your plan. The 25% reduction was verified on an Elite 100K Futures account.',
+    caveats: ['Eligibility depends on the selected plan', 'Add-ons and bundles have separate conditions', 'Affiliate link and code have no impact on the score'],
+    bestFor: ['Blue Guardian', 'futures', 'partner code'],
+    checkoutTip: 'Apply PROPRADAR and confirm the discounted subtotal before paying.',
+  },
   {
     slug: 'fxify',
     label: 'Transparent partner code',
@@ -796,19 +817,29 @@ export function promoDealWithFirm(deal: PromoDeal) {
   };
 }
 
+/** Firms PropRadar has a partner link or code with (disclosed on every card); listed first on /promos. Scores are unaffected. */
+const isPartner = (slug: string) => slug in PARTNER_OFFERS;
+
 export function getBestPromoDeals(limit = 12) {
   return promoDeals
     .map((deal) => promoDealWithFirm(deal))
-    .sort((a, b) => b.dealScore - a.dealScore)
+    .sort((a, b) => Number(isPartner(b.slug)) - Number(isPartner(a.slug)) || b.dealScore - a.dealScore)
     .slice(0, limit);
 }
 
+/** Top of /promos: one offer per partner firm first (best deal score), then the other featured official offers. */
 export function getMegaPromoDeals(limit = 4) {
-  return promoDeals
-    .filter((deal) => deal.featured && deal.availability === 'Active official offer')
-    .map((deal) => promoDealWithFirm(deal))
-    .sort((a, b) => (a.heroRank ?? 99) - (b.heroRank ?? 99) || b.dealScore - a.dealScore)
-    .slice(0, limit);
+  // A partner's own code (the one in its pop-up) comes before its other offers.
+  const own = (deal: { slug: string; code?: string }) => Number(Boolean(deal.code) && PARTNER_OFFERS[deal.slug]?.code === deal.code);
+  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal)).sort((a, b) => own(b) - own(a) || b.dealScore - a.dealScore);
+  const partners: typeof ranked = [];
+  for (const deal of ranked) {
+    if (isPartner(deal.slug) && !partners.some((item) => item.slug === deal.slug)) partners.push(deal);
+  }
+  const others = ranked
+    .filter((deal) => !isPartner(deal.slug) && deal.featured && deal.availability === 'Active official offer')
+    .sort((a, b) => (a.heroRank ?? 99) - (b.heroRank ?? 99) || b.dealScore - a.dealScore);
+  return [...partners, ...others].slice(0, limit);
 }
 
 export function getBudgetPromoShortlist(limit = 12) {

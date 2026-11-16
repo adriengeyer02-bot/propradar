@@ -1,4 +1,4 @@
-import type { Product, PropFirm, RegulatoryEntity, SourceLink } from './propFirms';
+import type { Product, PropFirm, RegulatoryAudit, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
 import updatesFile from '../data/firm-updates.json';
 
 /**
@@ -27,6 +27,8 @@ export type FirmUpdate = {
   reviewedAt: string;
   set?: Partial<{
     status: PropFirm['status'];
+    /** Sourced editorial correction; does not change the audit level or score. */
+    verdict: PropFirm['verdict'];
     score: number;
     priceFrom: number;
     profitSplit: number;
@@ -60,6 +62,10 @@ export type FirmUpdate = {
   addIncidents?: string[];
   /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
   setEntities?: RegulatoryEntity[];
+  /** Refreshes the written legal file without changing the risk level or identified entities. */
+  setLegalReview?: Pick<RegulatoryAudit, 'summary' | 'complaintsAndDisputes' | 'redFlags' | 'sources'>;
+  /** Public payout proof to append (never replaces earlier items). */
+  addPayoutProofs?: PayoutProof[];
   changelog: FirmChangelogEntry[];
 };
 
@@ -108,7 +114,17 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       reviewSignals: { ...firm.reviewSignals },
     };
 
+    if (update.setLegalReview) {
+      const sources = [...firm.regulatoryAudit.sources];
+      const known = new Set(sources.map((source) => source.url));
+      for (const source of update.setLegalReview.sources) {
+        if (!known.has(source.url)) { sources.push(source); known.add(source.url); }
+      }
+      next.regulatoryAudit = { ...firm.regulatoryAudit, ...update.setLegalReview, lastChecked: update.reviewedAt, sources };
+    }
+
     if (set.status) next.status = set.status;
+    if (set.verdict !== undefined) next.verdict = set.verdict;
     if (typeof set.score === 'number') next.score = set.score;
     if (typeof set.priceFrom === 'number') next.priceFrom = set.priceFrom;
     if (typeof set.profitSplit === 'number') {
@@ -126,7 +142,10 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (typeof set.trustpilotRating === 'number') next.trustpilotRating = set.trustpilotRating;
     if (typeof set.trustpilotReviewCount === 'number') next.reviewSignals.trustpilotReviewCount = set.trustpilotReviewCount;
     if (set.trustpilotSourceUrl) next.reviewSignals.trustpilotSourceUrl = set.trustpilotSourceUrl;
-    if (typeof set.trustpilotRating === 'number') refreshTrustpilotText(next, update.reviewedAt);
+    const trustpilotCheckedOn = update.changelog
+      .filter((entry) => entry.fields?.some((field) => field.startsWith('trustpilot')) || /^https:\/\/(?:[a-z]+\.)?trustpilot\.com\//i.test(entry.source))
+      .map((entry) => entry.date).sort().pop() ?? update.reviewedAt;
+    if (typeof set.trustpilotRating === 'number') refreshTrustpilotText(next, trustpilotCheckedOn);
     if (set.officialWebsite) {
       const newUrl = set.officialWebsite;
       const newDomain = new URL(newUrl).hostname.replace(/^www\./, '');
@@ -190,6 +209,12 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
         update.setEntities.some((entity) => Boolean(entity.jurisdiction) && !/to verify|international|unknown|unconfirmed/i.test(entity.jurisdiction));
     }
 
+    if (update.addPayoutProofs?.length) {
+      const seen = new Set((next.payoutProofs ?? []).map((proof) => proof.url + proof.quote));
+      next.payoutProofs = [...(next.payoutProofs ?? []), ...update.addPayoutProofs.filter((proof) => !seen.has(proof.url + proof.quote))]
+        .sort((a, b) => b.date.localeCompare(a.date));
+    }
+
     if (update.addIncidents?.length) {
       next.incidentsDetails = [...update.addIncidents, ...next.incidentsDetails];
       next.incidents = next.incidents + update.addIncidents.length;
@@ -210,7 +235,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       next.trustpilotRating = set.trustpilotRating;
       next.reviewSignals.trustpilotFlags = (next.reviewSignals.trustpilotFlags ?? []).filter((flag) => flag !== 'Trustpilot rating withheld for a guideline breach');
       next.reviewSignals.trustpilotFlaggedReviewNote = `Trustpilot showed a rating again on ${set.trustpilotNoticeLifted}, without the guideline-breach notice. The earlier notice stays listed under incidents with its date.`;
-      refreshTrustpilotText(next, update.reviewedAt);
+      refreshTrustpilotText(next, trustpilotCheckedOn);
     }
 
     return next;

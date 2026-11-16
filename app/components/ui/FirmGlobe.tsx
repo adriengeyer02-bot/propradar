@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { RadarDot, RadarSector } from '../../lib/radar';
+import GlobeFirmHud, { type GlobeHudConfig } from './GlobeFirmHud';
+import { globeCoastStep, globeReleaseVelocity, type GlobeMotionSample } from './globeMotion';
 
 /**
  * The PropRadar globe: the same firms as the radar, wrapped on a sphere.
@@ -31,6 +33,9 @@ type Props = {
   hint: string;
   scoreLabel: string;
   zoomLabels: { group: string; in: string; out: string; reset: string };
+  motionLabels: { pause: string; resume: string };
+  legend: { caption: string; label: string };
+  hud: GlobeHudConfig;
   /** Sphere radius as a share of the canvas (default GLOBE_R); the home hero uses a bigger sphere. */
   sphere?: number;
 };
@@ -64,7 +69,7 @@ const INTRO_DELAY = 300; // ms before the first logo lands
 const INTRO_STEP = 9; // ms between two logos (best scores first)
 const INTRO_FADE = 380; // ms for one logo to land
 const LIFT = 0.07; // logo height above the surface, share of the radius
-const MIN_GAP = 5.4; // degrees between two logo centres after decluttering
+const MIN_GAP = 8.2; // degrees between full logo centres; plain dots need less space
 
 type Slice = { key: string; count: number; start: number; end: number; shade: number };
 
@@ -127,20 +132,21 @@ export function scoreLatitude(score: number) {
  * repulsion between neighbours. Longitude moves freely inside the firm's
  * market slice; latitude moves at most 6° and never leaves its score band.
  */
-function declutter(items: { lat: number; lon: number; min: number; max: number; lo: number; hi: number }[]) {
-  for (let round = 0; round < 140; round++) {
+function declutter(items: { lat: number; lon: number; min: number; max: number; lo: number; hi: number; footprint: number }[]) {
+  for (let round = 0; round < 180; round++) {
     let moved = false;
     for (let i = 0; i < items.length; i++) {
       for (let j = i + 1; j < items.length; j++) {
         const a = items[i];
         const b = items[j];
         const cos = Math.cos(((a.lat + b.lat) / 2) * DEG);
-        const dx = (b.lon - a.lon) * cos;
+        const dx = ((((b.lon - a.lon) + 540) % 360) - 180) * cos;
         const dy = b.lat - a.lat;
         const d = Math.hypot(dx, dy);
-        if (d >= MIN_GAP) continue;
+        const gap = MIN_GAP * (a.footprint + b.footprint) / 2;
+        if (d >= gap - 0.01) continue;
         moved = true;
-        const push = (MIN_GAP - d) / 2 + 0.01;
+        const push = (gap - d) / 2 + 0.01;
         const ux = d > 1e-6 ? dx / d : (i % 2 ? 1 : -1);
         const uy = d > 1e-6 ? dy / d : 0;
         a.lon -= (ux * push) / Math.max(0.2, cos);
@@ -216,19 +222,49 @@ function initials(name: string) {
   return name.split(/[\s/]+/).filter(Boolean).slice(0, 2).map((word) => word[0]?.toUpperCase() ?? '').join('');
 }
 
-export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels, sphere }: Props) {
+export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed, highlight, onSelect, ariaLabel, hint, scoreLabel, zoomLabels, motionLabels, legend, hud, sphere }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [hover, setHover] = useState<{ dot: RadarDot; x: number; y: number } | null>(null);
   const hoverSlug = useRef<string | null>(null);
+  const hudAnchorRef = useRef<HTMLDivElement>(null);
+  const hudWireRef = useRef<SVGSVGElement>(null);
+  const hudPathRef = useRef<SVGPathElement>(null);
+  const hudOriginRef = useRef<SVGCircleElement>(null);
+  const hudHeight = useRef(340);
+  const hudSide = useRef<'left' | 'right'>('right');
+  const [paused, setPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   // Mutable view state shared by the render loop and the handlers.
-  const view = useRef({ yaw: -0.4, pitch: 0.24, zoom: 1, zoomTarget: 1, vyaw: 0, vpitch: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
+  const view = useRef({ yaw: -0.4, pitch: 0.24, zoom: 1, zoomTarget: 1, vyaw: 0, vpitch: 0, idleUntil: 0, target: null as null | { yaw: number; pitch: number }, dragging: false, hovering: false });
   const [zoomLevel, setZoomLevel] = useState(1);
-  const props = useRef({ selected, dimmed, highlight, onSelect, sphere });
-  props.current = { selected, dimmed, highlight, onSelect, sphere };
+  const props = useRef({ selected, dimmed, highlight, onSelect, onDismiss: hud.onDismiss, sphere, paused });
+  props.current = { selected, dimmed, highlight, onSelect, onDismiss: hud.onDismiss, sphere, paused };
   const requestDraw = useRef<() => void>(() => undefined);
   const zoomBy = useRef<(factor: number, instant?: boolean) => void>(() => undefined);
+  const hudDot = dots.find((dot) => dot.slug === selected) ?? null;
+
+  function clearHover() {
+    hoverSlug.current = null;
+    requestDraw.current();
+  }
+
+  function dismissHud() {
+    clearHover();
+    hud.onDismiss();
+  }
+
+  useEffect(() => {
+    const node = hudAnchorRef.current;
+    if (!node) return;
+    const observer = new ResizeObserver(() => {
+      hudHeight.current = node.offsetHeight;
+      requestDraw.current();
+    });
+    observer.observe(node);
+    requestDraw.current();
+    return () => observer.disconnect();
+  }, [hudDot?.slug]);
 
   // Market slices and firm positions. A firm keeps its relative place inside
   // its market (as on the radar), stretched to the globe's slice.
@@ -248,14 +284,16 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       if (sector && slice) {
         const span = Math.max(1, sector.end - sector.start);
         const t = Math.max(0, Math.min(1, ((((dot.angle - sector.start) % 360) + 360) % 360) / span));
-        lon = slice.start + (0.05 + 0.9 * t) * (slice.end - slice.start);
         min = slice.start + 2.2;
         max = slice.end - 2.2;
+        // The radar already reserves a 7% margin. Undo that margin here so
+        // the globe uses the full available width, including in Forex & CFD.
+        lon = min + Math.max(0, Math.min(1, (t - 0.07) / 0.86)) * (max - min);
       }
       // Stay inside the score band (50 -> 9°, 75 -> 45°) and within 6° of the score.
       const bandLo = dot.score >= 75 ? 45.6 : dot.score >= 50 ? 9.6 : -90;
       const bandHi = dot.score >= 75 ? 86 : dot.score >= 50 ? 44.4 : 8.4;
-      return { dot, lat, lon, min, max, lo: Math.max(bandLo, lat - 6), hi: Math.min(bandHi, lat + 6) };
+      return { dot, lat, lon, min, max, lo: Math.max(bandLo, lat - 6), hi: Math.min(bandHi, lat + 6), footprint: dot.logo ? (dot.size > 5 ? 1.08 : 1) : 0.45 };
     });
     declutter(items);
     points.current = items.map((it) => ({ dot: it.dot, world: toWorld(it.lat, it.lon) }));
@@ -263,6 +301,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
   // Turn the globe to face the selected firm.
   useEffect(() => {
+    clearHover();
     if (!selected) {
       // Back to the idle spin.
       requestDraw.current();
@@ -284,8 +323,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   }, [selected]);
 
   useEffect(() => {
+    if (paused) { view.current.vyaw = 0; view.current.vpitch = 0; }
     requestDraw.current();
-  }, [dimmed, highlight]);
+  }, [dimmed, highlight, paused]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -294,6 +334,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(reduce);
     // Intro: the globe arrives from a distance, then the logos land, best scores first.
     const born = performance.now();
     const rankOf = new Map([...points.current].sort((a, b) => b.dot.score - a.dot.score).map((pt, index) => [pt.dot.slug, index]));
@@ -348,6 +389,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     let shadeByDeg: number[] = [];
     let shadeFor: Slice[] | null = null;
     const charWidths = new Map<string, number>();
+    let surfaceFor: { yaw: number; pitch: number; radius: number; size: number; palette: Palette } | null = null;
 
     let size = 0;
     let dpr = 1;
@@ -365,6 +407,10 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     /** Sphere surface, sampled on a grid over the canvas (stays sharp when zoomed in). */
     function paintSurface(radius: number) {
       const { yaw, pitch } = view.current;
+      // Hover, sweep and selection halos can redraw without recalculating
+      // every surface pixel while the globe is stationary.
+      if (surfaceFor?.yaw === yaw && surfaceFor.pitch === pitch && surfaceFor.radius === radius && surfaceFor.size === size && surfaceFor.palette === palette) return;
+      surfaceFor = { yaw, pitch, radius, size, palette };
       const data = pixels.data;
       const half = SHADE_RES / 2;
       const scale = (size / 2) / radius;
@@ -471,8 +517,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
       // Halo behind the sphere.
       const halo = c.createRadialGradient(cx, cy, radius * 0.9, cx, cy, radius * 1.3);
-      halo.addColorStop(0, palette.dark ? 'rgba(54, 214, 231, 0.30)' : 'rgba(11, 114, 133, 0.14)');
-      halo.addColorStop(0.35, palette.dark ? 'rgba(54, 214, 231, 0.14)' : 'rgba(11, 114, 133, 0.06)');
+      halo.addColorStop(0, palette.dark ? 'rgba(54, 214, 231, 0.24)' : 'rgba(11, 114, 133, 0.14)');
+      halo.addColorStop(0.35, palette.dark ? 'rgba(54, 214, 231, 0.10)' : 'rgba(11, 114, 133, 0.06)');
       halo.addColorStop(1, 'rgba(0, 0, 0, 0)');
       c.fillStyle = halo;
       c.fillRect(0, 0, size, size);
@@ -586,8 +632,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         c.arc(cx, cy, radius, 0, Math.PI * 2);
         c.clip();
         for (let k = SWEEP_WIDTH; k >= 0; k -= 1) {
-          c.globalAlpha = (palette.dark ? 0.22 : 0.16) * Math.pow(1 - k / SWEEP_WIDTH, 2) + (k === 0 ? 0.5 : 0);
-          c.lineWidth = (k === 0 ? 2.2 : 0.5 + (radius * 0.0175 * Math.PI) / 2) * unit;
+          c.globalAlpha = (palette.dark ? 0.14 : 0.12) * Math.pow(1 - k / SWEEP_WIDTH, 2) + (k === 0 ? 0.38 : 0);
+          c.lineWidth = k === 0 ? 1.8 * unit : 0.5 * unit + (radius * DEG) / 2;
           c.lineCap = 'round';
           c.strokeStyle = palette.accent;
           strokeCurve((t) => toWorld(-88 + t * 176, sweepLon - k), 64, cx, cy, radius);
@@ -598,11 +644,11 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
       // Firms, back to front.
       const { selected: sel, dimmed: dim, highlight: fresh } = props.current;
+      const priority = (slug: string) => slug === sel ? 2 : slug === hoverSlug.current ? 1 : 0;
       const placed = points.current
         .map(({ dot, world }) => ({ dot, world, p: project(world, cx, cy, radius) }))
-        .sort((a, b) => a.p.z - b.p.z);
+        .sort((a, b) => priority(a.dot.slug) - priority(b.dot.slug) || a.p.z - b.p.z);
       hits = [];
-      let callout: { dot: RadarDot; x: number; y: number; r: number } | null = null;
       for (const { dot, world, p } of placed) {
         const isSel = dot.slug === sel;
         const isDim = dim.has(dot.slug) && !isSel;
@@ -617,7 +663,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           continue;
         }
         // Firms without a logo are drawn as small plain dots, so the logos lead.
-        const plain = !dot.logo && !isSel;
+        const hovered = hoverSlug.current === dot.slug;
+        const plain = !dot.logo && !isSel && !hovered;
         // Intro: each firm lands in turn (best scores first).
         const landing = reduce ? 1 : Math.max(0, Math.min(1, (now - born - INTRO_DELAY - (rankOf.get(dot.slug) ?? 0) * INTRO_STEP) / INTRO_FADE));
         if (landing <= 0) continue;
@@ -629,15 +676,14 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           const behind = ((sweepLon - lon) % 360 + 360) % 360;
           glow = behind < 40 ? Math.pow(1 - behind / 40, 2) : 0;
         }
-        const hovered = hoverSlug.current === dot.slug;
-        const r = (isSel ? 15 : 7.5 + 4.5 * p.z) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55) * (plain ? 0.42 : 1) * pop * (hovered && !plain ? 1.25 : 1);
+        const r = (isSel ? 15 : 5.5 + 5.5 * Math.pow(p.z, 0.8)) * unit * (dot.size > 5 ? 1.12 : 1) * Math.pow(zoom, 0.55) * (plain ? 0.42 : 1) * pop * (hovered ? 1.24 : 1);
         // Lifted logos: a short stem from the surface, the tile at its tip, a soft shadow at its base.
         if (!plain && world && p.z > 0) {
           const lift = LIFT * (hovered || isSel ? 1.8 : 1) * landing;
           const tip = project({ x: world.x * (1 + lift), y: world.y * (1 + lift), z: world.z * (1 + lift) }, cx, cy, radius);
           // Shadow cast on the surface, below and slightly right of the tile (light from top left).
           const drop = (0.45 + 0.5 * lift / LIFT) * r;
-          c.globalAlpha = (isDim ? 0.08 : palette.dark ? 0.5 : 0.28) * p.z;
+          c.globalAlpha = (isDim ? 0.06 : palette.dark ? 0.28 : 0.18) * p.z;
           c.fillStyle = '#000';
           c.beginPath();
           c.ellipse(tip.x + drop * 0.35, tip.y + drop, r * 0.9, r * 0.38, 0, 0, Math.PI * 2);
@@ -671,7 +717,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
           c.globalAlpha = (1 - phase) * 0.65 * p.z;
           c.stroke();
         }
-        c.globalAlpha = isDim ? 0.16 : 0.55 + 0.45 * p.z;
+        c.globalAlpha = isDim ? 0.16 : (isSel || hovered ? 1 : 0.3 + 0.7 * Math.pow(p.z, 0.65));
         if (plain) {
           c.beginPath();
           c.arc(p.x, p.y, r, 0, Math.PI * 2);
@@ -717,13 +763,17 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         c.stroke();
         c.setLineDash([]);
         if (isSel) {
+          const focusGlow = c.createRadialGradient(p.x, p.y, r, p.x, p.y, r + 17 * unit);
+          focusGlow.addColorStop(0, palette.dark ? 'rgba(54, 214, 231, 0.30)' : 'rgba(11, 114, 133, 0.18)');
+          focusGlow.addColorStop(1, 'rgba(0, 0, 0, 0)');
+          c.fillStyle = focusGlow;
+          c.fillRect(p.x - r - 17 * unit, p.y - r - 17 * unit, (r + 17 * unit) * 2, (r + 17 * unit) * 2);
           c.beginPath();
           c.arc(p.x, p.y, r + 6 * unit, 0, Math.PI * 2);
           c.lineWidth = 1.2;
           c.strokeStyle = palette.accent;
           c.globalAlpha = 0.6;
           c.stroke();
-          if (p.z > 0.2) callout = { dot, x: p.x, y: p.y, r };
         }
         c.globalAlpha = 1;
         if (!isDim && p.z > 0.15) hits.push({ dot, x: p.x, y: p.y, r: Math.max(r, 9) });
@@ -735,32 +785,41 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         curvedText(`${sectorName(slice.key)} · ${slice.count}`, LABEL_LAT, (slice.start + slice.end) / 2, cx, cy, radius, Math.max(10.5, size * 0.022) * Math.min(1.5, Math.pow(zoom, 0.4)), (slice.end - slice.start) * 0.92);
       }
 
-      // Name tag on the selected firm.
-      if (callout) {
-        const fontPx = Math.max(11, size * 0.024);
-        c.font = `750 ${fontPx}px ${palette.font}`;
-        const text = `${callout.dot.name} · ${callout.dot.score}`;
-        const w = c.measureText(text).width + 16;
-        const h = fontPx + 12;
-        const right = callout.x + callout.r + 18 + w < size - 4;
-        const bx = right ? callout.x + callout.r + 14 : callout.x - callout.r - 14 - w;
-        const by = Math.max(4, callout.y - callout.r - h - 4);
-        c.strokeStyle = palette.accent;
-        c.lineWidth = 1.2;
-        c.beginPath();
-        c.moveTo(callout.x + (right ? 1 : -1) * callout.r * 0.7, callout.y - callout.r * 0.7);
-        c.lineTo(right ? bx : bx + w, by + h / 2);
-        c.stroke();
-        c.fillStyle = palette.dark ? 'rgba(11, 17, 26, 0.92)' : 'rgba(255, 255, 255, 0.95)';
-        roundRect(bx, by, w, h, h / 2);
-        c.fill();
-        c.strokeStyle = palette.accent;
-        c.stroke();
-        c.fillStyle = palette.text;
-        c.textAlign = 'left';
-        c.textBaseline = 'middle';
-        c.fillText(text, bx + 8, by + h / 2 + 0.5);
-        c.textBaseline = 'alphabetic';
+      // Keep the dossier and its leader attached to the projected logo without
+      // re-rendering React on every animation frame. Narrow globes dock it below.
+      const panel = hudAnchorRef.current;
+      const wire = hudWireRef.current;
+      if (panel && wire) {
+        const anchor = hits.find((hit) => hit.dot.slug === sel);
+        const docked = size < 520;
+        const front = docked || Boolean(anchor && anchor.x > 8 && anchor.x < size - 8 && anchor.y > 8 && anchor.y < size - 8 && !view.current.dragging);
+        panel.dataset.docked = String(docked);
+        panel.dataset.front = String(front);
+        wire.dataset.front = String(front && !docked);
+        wire.style.height = `${size}px`;
+        wire.setAttribute('viewBox', `0 0 ${size} ${size}`);
+        if (anchor && !docked) {
+          const gap = anchor.r + 16;
+          if (anchor.x < size / 2 - 40) hudSide.current = 'right';
+          else if (anchor.x > size / 2 + 40) hudSide.current = 'left';
+          const right = hudSide.current === 'right';
+          // At high zoom the selected logo grows: reserve its actual radius
+          // instead of letting the panel cover the target.
+          const available = right ? size - anchor.x - gap - 12 : anchor.x - gap - 12;
+          const width = Math.max(180, Math.min(284, Math.floor(available)));
+          const left = Math.max(12, Math.min(size - width - 12, right ? anchor.x + gap : anchor.x - gap - width));
+          const top = Math.max(64, Math.min(size - hudHeight.current - 12, anchor.y - 76));
+          panel.style.width = `${width}px`;
+          panel.style.left = `${left}px`;
+          panel.style.top = `${top}px`;
+          panel.style.setProperty('--hud-max-height', `${size - 82}px`);
+          const edge = right ? left : left + width;
+          const start = anchor.x + (right ? 1 : -1) * (anchor.r + 5);
+          const join = Math.max(top + 22, Math.min(top + hudHeight.current - 22, anchor.y));
+          hudPathRef.current?.setAttribute('d', `M ${start} ${anchor.y} H ${(start + edge) / 2} L ${edge} ${join}`);
+          hudOriginRef.current?.setAttribute('cx', String(start));
+          hudOriginRef.current?.setAttribute('cy', String(anchor.y));
+        }
       }
     }
 
@@ -880,22 +939,26 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       last = now;
       let moving = false;
       if (Math.abs(v.zoomTarget - v.zoom) > 0.002) {
-        v.zoom += (v.zoomTarget - v.zoom) * (1 - Math.pow(0.002, dt));
+        v.zoom = reduce ? v.zoomTarget : v.zoom + (v.zoomTarget - v.zoom) * (1 - Math.pow(0.002, dt));
         moving = true;
       } else v.zoom = v.zoomTarget;
       if (v.target) {
-        const k = 1 - Math.pow(0.0015, dt);
+        const k = reduce ? 1 : 1 - Math.pow(0.0015, dt);
         v.yaw += (v.target.yaw - v.yaw) * k;
         v.pitch += (v.target.pitch - v.pitch) * k;
         if (Math.abs(v.target.yaw - v.yaw) < 0.002 && Math.abs(v.target.pitch - v.pitch) < 0.002) v.target = null;
         moving = true;
-      } else if (!v.dragging && (Math.abs(v.vyaw) > 0.0005 || Math.abs(v.vpitch) > 0.0005)) {
-        v.yaw += v.vyaw;
-        v.pitch = Math.max(-1.2, Math.min(1.2, v.pitch + v.vpitch));
-        v.vyaw *= Math.pow(0.05, dt);
-        v.vpitch *= Math.pow(0.05, dt);
+      } else if (!reduce && !v.dragging && !props.current.paused && (v.vyaw !== 0 || v.vpitch !== 0)) {
+        const yaw = globeCoastStep(v.vyaw, dt);
+        const pitch = globeCoastStep(v.vpitch, dt);
+        v.yaw += yaw.distance;
+        const nextPitch = v.pitch + pitch.distance;
+        v.pitch = Math.max(-1.2, Math.min(1.2, nextPitch));
+        v.vyaw = yaw.velocity;
+        v.vpitch = nextPitch === v.pitch ? pitch.velocity : 0;
+        v.idleUntil = now + 1800;
         moving = true;
-      } else if (!reduce && !v.dragging && !v.hovering && !props.current.selected) {
+      } else if (!reduce && !v.dragging && !v.hovering && !props.current.paused && !props.current.selected && now > v.idleUntil) {
         v.yaw += SPIN * dt;
         moving = true;
       }
@@ -924,31 +987,54 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     resize();
     kick();
 
-    // Pointer: drag to turn, click to select, hover for the name.
-    let down: { x: number; y: number; t: number } | null = null;
+    // Pointer: drag to turn; only a click opens a dossier. Hover lifts the logo.
+    let down: { x: number; y: number; pointerId: number } | null = null;
     let lastMove = { x: 0, y: 0 };
+    let motion: GlobeMotionSample[] = [];
     const local = (event: PointerEvent) => {
       const rect = canvas.getBoundingClientRect();
       return { x: event.clientX - rect.left, y: event.clientY - rect.top };
     };
-    const pick = (x: number, y: number) => {
+    const pick = (x: number, y: number, minimumRadius = 0) => {
+      let closest: (typeof hits)[number] | null = null;
+      let distance = Infinity;
       for (let i = hits.length - 1; i >= 0; i--) {
         const h = hits[i];
-        if ((h.x - x) ** 2 + (h.y - y) ** 2 <= h.r * h.r) return h;
+        const d = Math.hypot(h.x - x, h.y - y) / Math.max(h.r, minimumRadius);
+        if (d <= 1 && d < distance) {
+          closest = h;
+          distance = d;
+        }
       }
-      return null;
+      return closest;
+    };
+    const onEnter = (event: PointerEvent) => {
+      if (event.pointerType === 'mouse') {
+        view.current.hovering = true;
+      }
     };
     const onDown = (event: PointerEvent) => {
+      if (event.button !== 0 || !event.isPrimary) return;
       const p = local(event);
-      down = { ...p, t: performance.now() };
+      down = { ...p, pointerId: event.pointerId };
       lastMove = p;
+      motion = [{ time: event.timeStamp, yaw: view.current.yaw, pitch: view.current.pitch }];
+      view.current.target = null;
       view.current.vyaw = 0;
       view.current.vpitch = 0;
+      view.current.idleUntil = performance.now() + 2800;
     };
     const onMove = (event: PointerEvent) => {
       const p = local(event);
       const v = view.current;
+      if (event.pointerType === 'touch' && touches.size > 1) return;
+      if (down && down.pointerId !== event.pointerId) return;
       if (down && (v.dragging || Math.hypot(p.x - down.x, p.y - down.y) > 4)) {
+        // Leave vertical swipes to page scrolling on phones.
+        if (!v.dragging && event.pointerType === 'touch' && Math.abs(p.y - down.y) > Math.abs(p.x - down.x) * 1.2) {
+          down = null;
+          return;
+        }
         if (!v.dragging) {
           v.dragging = true;
           v.target = null;
@@ -959,41 +1045,58 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         const dpitch = event.pointerType === 'mouse' ? (p.y - lastMove.y) * k : 0;
         v.yaw += dyaw;
         v.pitch = Math.max(-1.2, Math.min(1.2, v.pitch + dpitch));
-        v.vyaw = dyaw;
-        v.vpitch = dpitch;
+        motion.push({ time: event.timeStamp, yaw: v.yaw, pitch: v.pitch });
+        while (motion.length > 2 && motion[1].time < event.timeStamp - 120) motion.shift();
         lastMove = p;
-        setHover(null);
+        clearHover();
         draw();
         return;
       }
       if (event.pointerType !== 'mouse') return;
       const hit = pick(p.x, p.y);
-      v.hovering = Boolean(hit);
-      hoverSlug.current = hit ? hit.dot.slug : null;
+      v.hovering = true;
       canvas.style.cursor = hit ? 'pointer' : 'grab';
-      setHover(hit ? { dot: hit.dot, x: hit.x, y: hit.y - hit.r } : null);
-      if (!hit) kick();
+      hoverSlug.current = hit?.dot.slug ?? null;
+      requestDraw.current();
     };
     const onUp = (event: PointerEvent) => {
       const v = view.current;
       const p = local(event);
+      v.idleUntil = performance.now() + 2800;
+      if (event.pointerType !== 'mouse') v.hovering = false;
       if (v.dragging) {
         v.dragging = false;
+        if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
+        const velocity = reduce || props.current.paused ? { yaw: 0, pitch: 0 } : globeReleaseVelocity(motion, event.timeStamp);
+        v.vyaw = velocity.yaw;
+        v.vpitch = velocity.pitch;
         kick();
       } else if (down) {
-        const hit = pick(p.x, p.y);
+        const hit = pick(p.x, p.y, event.pointerType === 'touch' ? 18 : 0);
         if (hit) props.current.onSelect(hit.dot.slug);
+        else props.current.onDismiss();
       }
       down = null;
+      motion = [];
+    };
+    const onCancel = (event: PointerEvent) => {
+      down = null;
+      motion = [];
+      view.current.dragging = false;
+      view.current.vyaw = 0;
+      view.current.vpitch = 0;
+      if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
+      clearHover();
+      kick();
     };
     const onLeave = () => {
       view.current.hovering = false;
-      hoverSlug.current = null;
-      setHover(null);
+      clearHover();
       kick();
     };
     const onWheel = (event: WheelEvent) => {
       event.preventDefault();
+      clearHover();
       zoomBy.current(Math.exp(-event.deltaY * 0.0015));
     };
     // Double-click (or double-tap): bring that spot to the front and zoom in on it.
@@ -1023,6 +1126,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         pinchFrom = Math.hypot(a.x - b.x, a.y - b.y);
         down = null;
         view.current.dragging = false;
+        view.current.vyaw = 0;
+        view.current.vpitch = 0;
+        motion = [];
       }
     };
     const onTouchMove = (event: PointerEvent) => {
@@ -1043,6 +1149,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       const v = view.current;
       const next = Math.max(1, Math.min(MAX_ZOOM, (instant ? v.zoom : v.zoomTarget) * factor));
       v.zoomTarget = next;
+      v.idleUntil = performance.now() + 2800;
       if (instant) v.zoom = next;
       setZoomLevel(next);
       requestDraw.current();
@@ -1050,6 +1157,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     const onKey = (event: KeyboardEvent) => {
       const step = 0.18 / view.current.zoom;
       const v = view.current;
+      v.idleUntil = performance.now() + 2800;
+      clearHover();
       if (event.key === '+' || event.key === '=') {
         zoomBy.current(1.35);
         event.preventDefault();
@@ -1067,12 +1176,15 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       else return;
       event.preventDefault();
       v.target = null;
+      v.vyaw = 0;
+      v.vpitch = 0;
       draw();
     };
     canvas.addEventListener('pointerdown', onDown);
+    canvas.addEventListener('pointerenter', onEnter);
     canvas.addEventListener('pointermove', onMove);
     canvas.addEventListener('pointerup', onUp);
-    canvas.addEventListener('pointercancel', onUp);
+    canvas.addEventListener('pointercancel', onCancel);
     canvas.addEventListener('pointerleave', onLeave);
     canvas.addEventListener('keydown', onKey);
     canvas.addEventListener('wheel', onWheel, { passive: false });
@@ -1088,9 +1200,10 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       resizeObserver.disconnect();
       themeObserver.disconnect();
       canvas.removeEventListener('pointerdown', onDown);
+      canvas.removeEventListener('pointerenter', onEnter);
       canvas.removeEventListener('pointermove', onMove);
       canvas.removeEventListener('pointerup', onUp);
-      canvas.removeEventListener('pointercancel', onUp);
+      canvas.removeEventListener('pointercancel', onCancel);
       canvas.removeEventListener('pointerleave', onLeave);
       canvas.removeEventListener('keydown', onKey);
       canvas.removeEventListener('wheel', onWheel);
@@ -1105,7 +1218,9 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
   }, [dots, sectors]);
 
   return (
-    <div className="prg" ref={wrapRef}>
+    <div className="prg" ref={wrapRef} onKeyDown={(event) => {
+      if (event.key === 'Escape') dismissHud();
+    }}>
       <canvas ref={canvasRef} className="prg-canvas" role="img" aria-label={ariaLabel} tabIndex={0} />
       <div className="prg-zoom" role="group" aria-label={zoomLabels.group}>
         <button type="button" onClick={() => zoomBy.current(1.5)} disabled={zoomLevel >= MAX_ZOOM - 0.01} aria-label={zoomLabels.in}>+</button>
@@ -1113,13 +1228,32 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         {zoomLevel > 1.01 ? (
           <button type="button" onClick={() => zoomBy.current(1 / MAX_ZOOM)} aria-label={zoomLabels.reset}>⟲</button>
         ) : null}
+        {!reducedMotion ? (
+          <button type="button" className="prg-motion" onClick={() => setPaused((value) => !value)} aria-pressed={paused} aria-label={paused ? motionLabels.resume : motionLabels.pause} title={paused ? motionLabels.resume : motionLabels.pause}>
+            <svg viewBox="0 0 20 20" width="15" height="15" fill="currentColor" aria-hidden="true">
+              {paused ? <path d="m7 4 9 6-9 6Z" /> : <path d="M5 4h3v12H5zm7 0h3v12h-3z" />}
+            </svg>
+          </button>
+        ) : null}
       </div>
-      {hover ? (
-        <div className="prg-tip" style={{ left: hover.x, top: hover.y }} aria-hidden="true">
-          <strong>{hover.dot.name}</strong>
-          <span>{scoreLabel} {hover.dot.score}/100</span>
+      {hudDot ? (
+        <>
+        <svg key={hudDot.slug} className="prg-hud-wire" ref={hudWireRef} aria-hidden="true" data-front="false">
+          <path ref={hudPathRef} pathLength="1" /><circle ref={hudOriginRef} r="3" />
+        </svg>
+        <div ref={hudAnchorRef} className="prg-hud-anchor" data-front="false"
+          onPointerEnter={() => { view.current.hovering = true; }}
+          onPointerLeave={() => { view.current.hovering = false; requestDraw.current(); }}>
+          <GlobeFirmHud key={hudDot.slug} dot={hudDot} sector={sectorName(hudDot.sector)} scoreLabel={scoreLabel} pinned={hudDot.slug === selected} config={hud} onClose={dismissHud} />
         </div>
+        </>
       ) : null}
+      <div className="prg-legend" aria-label={legend.label}>
+        <span><i className="prg-sw prg-good" />75–100</span>
+        <span><i className="prg-sw prg-watch" />50–74</span>
+        <span><i className="prg-sw prg-none" />0–49</span>
+        <small>{legend.caption}</small>
+      </div>
       <p className="sr-only">{hint}</p>
     </div>
   );

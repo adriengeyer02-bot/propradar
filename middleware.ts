@@ -42,7 +42,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Skip Next internals, API routes and any path with a file extension
+  // Skip Next internals, API routes, geo-aware outbound redirects and extensions
   // (sitemap.xml, robots.txt, feed.xml, data.csv, logos, icons...).
-  matcher: ['/((?!_next/|api/|.*\\.[a-zA-Z0-9]+$).*)'],
+  matcher: ['/((?!_next/|api/|out/|.*\\.[a-zA-Z0-9]+$).*)'],
 };

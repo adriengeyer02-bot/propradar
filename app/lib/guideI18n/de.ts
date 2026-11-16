@@ -2,6 +2,28 @@ import type { GuideTranslations } from './types';
 
 /** German guide summaries (translated from the English guides). */
 const de: GuideTranslations = {
+  'hyrotrader-vs-tradeify': {
+    "title": "HyroTrader vs Tradeify: Drawdown und Auszahlungen",
+    "metaDescription": "HyroTrader und Tradeify vergleichen: Krypto oder Futures, Tagesverlust, EOD-Drawdown, Konsistenz und Bedingungen der ersten Auszahlung.",
+    "eyebrow": "Krypto und Futures",
+    "h1": "HyroTrader vs Tradeify: Drawdown-Regeln und Risikomanagement",
+    "answer": "HyroTrader richtet sich an Kryptotrader, Tradeify an Futures-Trader. Vergleichen Sie Markt, Tagesverlust, gesamten Drawdown und Auszahlungsregeln des konkreten Programms. Tradeifys EOD-Berechnung bedeutet nicht, dass der Verlustboden erst am Tagesende überwacht wird.",
+    "checks": [
+      "Zuerst Instrumente und Plattform wählen.",
+      "Tagesverlust, maximalen Verlust und Auszahlungskonsistenz trennen.",
+      "Programm, Kontophase und Kaufdatum prüfen."
+    ],
+    "faq": [
+      {
+        "question": "Ist HyroTrader oder Tradeify besser?",
+        "answer": "Der Markt entscheidet zuerst: Krypto bei HyroTrader und Futures bei Tradeify. Danach zählen die Regeln des konkreten Programms und der Weg zur ersten Auszahlung."
+      },
+      {
+        "question": "Darf der EOD-Drawdown intraday verletzt werden?",
+        "answer": "Nein. Tradeify aktualisiert den Boden zum Tagesende, überwacht den Nettoliquidationswert aber laufend. Eine Berührung kann das Konto sofort beenden."
+      }
+    ]
+  },
   'meilleure-prop-firm-2026': {
     title: 'Die besten Prop Firms aktuell: Ranking nach Risiko (2026)',
     metaDescription: 'Welche Prop Firms sind aktuell die besten? Vergleichen Sie die führenden Anbieter nach Auszahlungszuverlässigkeit, Klarheit der Regeln, rechtlichen Nachweisen, Drawdown und Community-Signalen.',

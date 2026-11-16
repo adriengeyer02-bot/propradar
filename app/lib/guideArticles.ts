@@ -1,3 +1,5 @@
+import { hyroTradeifyArticle, noChallengeGettingStarted } from './searchIntentGuides';
+
 /**
  * Long-form editorial text for guides.
  *
@@ -39,7 +41,7 @@ export type GuideArticleSection = {
   /** Big figures read in the text, shown as tiles. */
   stats?: { value: string; label: string }[];
   /** Small comparison table (first column = row label). */
-  compare?: { columns: string[]; rows: { label: string; values: string[] }[]; note?: string };
+  compare?: { columns: string[]; rows: { label: string; values: string[]; sourceUrl?: string }[]; note?: string };
   /** Numbered steps, shown as a path. */
   steps?: { title: string; text: string }[];
   fit?: { yes: string[]; no: string[] };
@@ -48,6 +50,7 @@ export type GuideArticleSection = {
 };
 
 export type GuideArticle = {
+  published?: string;
   updated: string;
   intro?: string;
   /** "Key points" box shown under the intro. */
@@ -57,26 +60,203 @@ export type GuideArticle = {
 };
 
 export const guideArticles: Record<string, GuideArticle> = {
-  'prop-firm-sans-challenge': {
-    updated: '2026-11-12',
-    intro:
-      'A no-challenge prop firm sells a funded account directly, without the classic evaluation phase. It sounds like a shortcut. In practice you **pay more upfront** for skipping the test, and the rules you would have met in the challenge **move into the funded account**, where a mistake costs the account instead of a retry.',
+  'hyrotrader-vs-tradeify': hyroTradeifyArticle,
+  'prop-firm-hidden-rules': {
+    published: '2026-11-16',
+    updated: '2026-11-16',
+    intro: 'A prop firm can advertise a generous profit split and an easy challenge while the binding agreement includes conditions that materially change when you may withdraw. These are **easy-to-miss rules**, not necessarily rules the company has intentionally concealed: the examples below are taken from firms\' own public documentation. **We include PropRadar affiliate partners.** No ranking or affiliate commission can buy an exemption from scrutiny.',
     keyPoints: [
-      '**No challenge means no profit target**, not no rules: drawdown, consistency and minimum days are still there.',
-      'A direct account usually costs **several times** a challenge of the same size.',
+      '**Evaluation rules are not necessarily funded-account rules.** News, trading hours and consistency may change after you pass.',
+      '**Profit in the dashboard is not automatically a payable reward.** Some programs deduct profits or apply separate eligibility gates.',
+      '**Residence, citizenship, location and payment provider can differ.** A successful purchase does not prove later payout eligibility.',
+      '**Every named example below links to an original company policy** checked on 16 November 2026.',
+    ],
+    sections: [
+      {
+        heading: '1. News trading allowed in evaluation, but profits deducted after funding',
+        paragraphs: [
+          'E8 Markets says news trading is unrestricted during its **E8 Classic evaluation**. On a Classic SimFi Performance account, however, only **40% of profits made during the news window count as eligible profit**. Its separate E8 One product forbids certain news-window actions on performance accounts, while E8 Pro allows news trading. These are three distinct rules within one brand.',
+          'FundingPips similarly distinguishes its evaluation and Master stages. For several Master models, profits from opening or closing within specified high-impact-news windows can be **deducted**, with a stated exception for positions opened at least five hours before the event. FundingPips Zero has stricter restrictions. Do not infer funded-stage permission from an evaluation-stage headline.',
+        ],
+        callout: { kind: 'warning', text: 'A trading platform allowing you to click Buy or Sell **does not mean the contract permits that trade**. Check the exact account model, event calendar and clock before trading.' },
+      },
+      {
+        heading: 'News-trading rule register: evaluation versus funded (official sources)',
+        paragraphs: [
+          'These are **ten program groups we checked**, not a universal blacklist. A permitted hold through an announcement is not the same as permission to open a news-spike trade. The rules below apply to the **specific programs and stages named**, not automatically to every product the company sells.',
+        ],
+        compare: {
+          columns: ['Evaluation stage', 'Qualified / funded stage'],
+          rows: [
+            { label: 'E8 Classic', values: ['News unrestricted', '**40% of news-window profits eligible**'], sourceUrl: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+            { label: 'E8 One', values: ['News unrestricted', '**No trades in ±5 min high-impact window**; profits may be removed'], sourceUrl: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+            { label: 'E8 Pro', values: ['Unrestricted', 'Unrestricted, subject to general risk rules'], sourceUrl: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+            { label: 'FundingPips Flex / Standard / Pro', values: ['Holding permitted; intentional news-spike trading prohibited', '**Affected Master profits deducted**; 5-hour swing exception'], sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
+            { label: 'FundingPips Zero', values: ['Check exact contract', '**No open, close or holding through restricted news**; 10-min windows on Master'], sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
+            { label: 'Blue Guardian CFD 1-Step Standard', values: ['News permitted', '**No opening or closing ±5 min** around high-impact news'], sourceUrl: 'https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules' },
+            { label: 'BrightFunded CFD Phase 1 / 2', values: ['News trading unrestricted', '**Profits deducted on executions ±5 min**; Instant restricted from day one'], sourceUrl: 'https://help.brightfunded.com/en/articles/9241694-can-i-trade-news' },
+            { label: 'Alpha Futures Standard / Zero / Direct', values: ['Standard / Zero evaluation: unrestricted; Direct skips evaluation', '**No orders ±2 min** on specified Qualified plans; Advanced Qualified differs'], sourceUrl: 'https://help.alpha-futures.com/en/articles/9492063-news-trading-policy' },
+            { label: 'Alpha Capital Pro / One / Three / Direct', values: ['Evaluation: unrestricted; Direct has no evaluation', '**No executions ±5 min** on targeted news; even a TP fill can invalidate profit'], sourceUrl: 'https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news' },
+            { label: 'Tradeify Futures', values: ['News permitted', 'News permitted under its general FAQ'], sourceUrl: 'https://help.tradeify.co/en/articles/12268494-common-faqs' },
+          ],
+          note: 'Reviewed 16 Nov 2026. Click ↗ beside a firm to read its original rule. These are company policies, not independent proof of how every trader dispute is decided.',
+        },
+      },
+      {
+        heading: '2. A VPN or VPS can invalidate otherwise profitable trades',
+        paragraphs: [
+          'GOAT Funded Trader states that, effective **6 October 2026**, trading through a VPN, VPS, proxy or hosted environment is prohibited. Its help center says trades executed that way can cause an immediate account breach and that the related rewards will not be eligible for payment. It describes a narrowly limited exception for the initial server login, and a separate exception for its own dashboard copier.',
+          'This is a published contractual restriction, **not evidence that the company improperly refuses legitimate payouts**. It is nevertheless crucial for algorithmic traders and for visitors whose internet access commonly uses routing services.',
+        ],
+      },
+      {
+        heading: 'VPN / VPS watchlist: which firms restrict them?',
+        paragraphs: [
+          '**A VPN (connection masking) and a VPS (remote trading server) are different tools.** Some firms prohibit both, others allow a VPN but ban hosted order execution, and others only prohibit hiding your residence. Here are the **11 companies with identifiable, sourced policies in our sample**, including affiliate partners. “Conditional” is not “banned everywhere.”',
+        ],
+        compare: {
+          columns: ['VPN', 'VPS / remote execution'],
+          rows: [
+            { label: 'GOAT Funded Trader', values: ['**Prohibited** for trading (since 6 Oct 2026)', '**Prohibited**; limited company-tool exception'], sourceUrl: 'https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading' },
+            { label: 'FundingPips', values: ['**Prohibited** when accessing a trading account', '**Prohibited** when accessing a trading account'], sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards' },
+            { label: 'Topstep / TopstepX', values: ['**Prohibited** (also proxy and TOR)', '**No order transmission** via remote server or API; read-only analysis allowed'], sourceUrl: 'https://help.topstep.com/en/articles/11187768-topstepx-api-access' },
+            { label: 'FundedNext CFD', values: ['**Allowed** except excluded-country IPs', '**Banned ≥$50k**; below $50k paid add-on, eligible trading EA only; no manual orders'], sourceUrl: 'https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps' },
+            { label: 'Alpha Capital Group', values: ['**Conditional**: dedicated static IP + prior notification', '**Conditional**: dedicated static IP + prior notification'], sourceUrl: 'https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed' },
+            { label: 'Tradeify Futures', values: ['**No VPN at login**', 'Allowed **after normal login**, at trader’s risk'], sourceUrl: 'https://help.tradeify.co/en/articles/12268494-common-faqs' },
+            { label: 'FTMO CFD', values: ['**Generally allowed**; avoid US geolocation for named platforms', '**Generally allowed**; US platform/geolocation exception'], sourceUrl: 'https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/' },
+            { label: 'Blue Guardian CFD 1-Step Standard', values: ['**Allowed**; no circumvention of copy/group-trading rules', '**Allowed** under same condition'], sourceUrl: 'https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules' },
+            { label: 'Apex Trader Funding', values: ['Banned **when used to disguise identity/location or evade rules**', 'Same anti-circumvention condition; not a published blanket ban'], sourceUrl: 'https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/' },
+            { label: 'The5ers', values: ['**No circumvention of country restrictions**; blanket ban not established', 'No blanket VPS rule established in the cited terms'], sourceUrl: 'https://the5ers.com/terms-and-conditions/' },
+            { label: 'HyroTrader (crypto)', values: ['**No bypass** of exchange/platform region restrictions', 'Depends on platform and its own terms; no universal ban verified'], sourceUrl: 'https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/' },
+          ],
+          note: 'Source-linked register, not an allegation of unpaid payouts. Updated 16 Nov 2026. Rules may differ by product, account size, platform and country. Other firms remain unreviewed for this specific issue.',
+        },
+        callout: { kind: 'warning', text: 'Running a trading robot on a VPS is **not automatically allowed just because EAs are allowed**. Check the server, IP, account-size and order-routing rules separately.' },
+      },
+      {
+        heading: '3. “Scalping allowed” can still come with time and margin limits',
+        paragraphs: [
+          'Blue Guardian allows scalping in its Futures program but says that **less than half of total profit may come from trades held under 10 seconds**. It separately describes an **80% margin-use threshold** as an “all or nothing” gambling rule on CFD accounts; consequences can include removal of profits or denial of a payout.',
+          'A label such as “scalping allowed” or “EA allowed” is therefore too broad to make a purchase decision. Look for trade-duration thresholds, restrictions on automation and how multiple accounts are treated.',
+        ],
+      },
+      {
+        heading: '4. Consistency can delay a payout after the challenge is passed',
+        visual: 'consistency-example',
+        paragraphs: [
+          'A consistency rule measures how much of your overall profit came from your best trading day. At Topstep, the rule and its percentage **depend on whether you are in the Trading Combine or on a funded payout path**. The two stages must not be conflated.',
+          'Example: with a 50% best-day limit, a $1,200 winning day requires at least **$2,400 total profit** before the ratio falls to 50%. The correct way to fix a ratio above the cap is generally to earn additional eligible profit, not to deliberately lose money.',
+        ],
+        callout: { kind: 'tip', text: 'Read our separate guide to **prop firms without consistency rules**. “No consistency” only removes one possible restriction; it does not remove drawdown, news or payout conditions.' },
+      },
+      {
+        heading: '5. Country of residence is not the same as eligibility to withdraw',
+        paragraphs: [
+          'GOAT Funded Trader explicitly lists **Singapore** among countries it does not accept. Apex Trader Funding lists **China** among countries excluded from new or additional accounts. These are particularly important examples for PropRadar visitors because both countries contribute to our international audience.',
+          'Different products of one firm may use different geographic lists. FTMO CFD and FTMO Futures do; E8 Classic and E8 Futures do as well. Passing checkout, travelling abroad or seeing a firm in your country does **not** replace KYC, citizenship checks, supported-platform access and the available payout methods.',
+        ],
+        compare: {
+          columns: ['India', 'Mainland China', 'Singapore'],
+          rows: [
+            { label: 'FTMO CFD', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://ftmo.com/en/faq/who-can-join-ftmo/' },
+            { label: 'Topstep Futures', values: ['Published as eligible', '**Individual verification needed**', 'Published as eligible'], sourceUrl: 'https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep' },
+            { label: 'My Funded Futures', values: ['Published as eligible', '**Excluded**', 'Published as eligible'], sourceUrl: 'https://help.myfundedfutures.com/en/articles/8229993-restricted-countries-policy' },
+            { label: 'Apex Trader Funding', values: ['Published as eligible', '**Excluded**', 'Published as eligible'], sourceUrl: 'https://apextraderfunding.com/help-center/getting-started/restricted-countries/' },
+            { label: 'GOAT Funded Trader', values: ['Published as eligible', 'Published as eligible', '**Excluded**'], sourceUrl: 'https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader' },
+            { label: 'FundedNext CFD', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds' },
+            { label: 'Fintokei', values: ['**Excluded**', '**Temporarily excluded**', 'Published as eligible'], sourceUrl: 'https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei' },
+            { label: 'Alpha Futures', values: ['Published as eligible', '**Excluded**', 'Published as eligible'], sourceUrl: 'https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations' },
+            { label: 'Alpha Capital Group', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations' },
+            { label: 'Lucid Trading', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://support.lucidtrading.com/en/articles/11404636-restricted-countries' },
+            { label: 'PipFarm', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.pipfarm.com/en/articles/4318163-prohibited-country-list' },
+            { label: 'HyroTrader (Hyro platform)', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/' },
+            { label: 'BrightFunded CFD', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.brightfunded.com/en/articles/9286630-what-countries-are-restricted-at-brightfunded' },
+            { label: 'Upcomers', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries' },
+          ],
+          note: 'Admission under the cited published general policy, checked 16 Nov 2026 — not a legal licence, a KYC approval or a promise of payouts. The green cases are based on firms’ explicit worldwide-except-exclusions policies, not actual test purchases. A different challenge or third-party platform can change the answer.',
+        },
+        callout: { kind: 'warning', text: 'PropRadar\'s country filter reflects firms\' **published admission conditions**, not legal permission, a regulatory licence or a guaranteed payout. When a product cannot be verified, we say **Not verified** rather than guessing.' },
+      },
+      {
+        heading: '6. Visiting a restricted country can be a breach even if you live elsewhere',
+        paragraphs: [
+          'Take Profit Trader says even a single trading or market-data access event from a prohibited location can trigger an account restriction. It explicitly mentions VPNs and remote connections that route access through such a country. A resident of an allowed jurisdiction should therefore check **travel and IP rules** before taking a laptop abroad.',
+          'Not every firm uses this rule: Tradeify says its general geographic restriction is based on **permanent residence, not short-term travel**. Two firms may therefore treat the same journey differently.',
+        ],
+      },
+      {
+        heading: '7. A payout can depend on discretionary contractual approval',
+        paragraphs: [
+          'Apex Trader Funding\'s own Risk Disclosure says its Performance Account rewards are granted at its **discretion** and that decisions to pay or deny a reward are final. This is a significant clause to read alongside the User Agreement and published payout criteria.',
+          'A discretionary clause is **not proof that a company systematically denies valid payments**. It does mean that a trader should document compliance and understand dispute and appeal routes before spending money.',
+        ],
+      },
+      {
+        heading: '8. The funded and live stages may not be interchangeable',
+        paragraphs: [
+          'Tradeify says traders denied entry to a Live Account cannot simply return to the simulated stage. FTMO Futures also distinguishes its Sim-Funded experience from eligibility to progress to a Live Funded Account, which is restricted in additional countries.',
+          'Ask whether the firm promises a funded stage, a live brokerage account, or only a simulated reward program. The advertising word **“funded” does not describe the same contractual arrangement everywhere**.',
+        ],
+      },
+      {
+        heading: '9. How to find a prop firm without surprise conditions',
+        paragraphs: [
+          'No independent site can certify that a company has *zero* hidden rules: terms can change, KYC is individual and support decisions are sometimes discretionary. You can, however, reduce the likelihood of buying an unsuitable program.',
+        ],
+        steps: [
+          { title: 'Identify the exact product', text: 'Write down the **firm, account name, account size and evaluation/funded stage**. Brand-level summaries are not sufficient.' },
+          { title: 'Save the contract and date', text: 'Read the full **terms, help-center article, payout policy and restricted-country list**; keep a dated copy of the pages.' },
+          { title: 'Test your real trading style', text: 'Check **news windows, copy trading, VPN/VPS, holding, maximum contracts, consistency and inactivity** against the strategy you actually use.' },
+          { title: 'Calculate a real first payout', text: 'Include **profit targets, minimum days, first-withdrawal caps, activation fees, payout fees and payment-processor requirements**.' },
+          { title: 'Ask in writing before paying', text: 'For anything ambiguous, seek a support answer identifying the **exact rule and version**, and save the response.' },
+        ],
+        callout: { kind: 'tip', text: 'If you find a rule that is missing from our comparison, send PropRadar the official link and a screenshot through our **source submission** contact. We review affiliate and non-affiliate firms by the same editorial standard.' },
+      },
+    ],
+    sources: [
+      { label: 'E8 Markets: news trading by E8 Pro, Classic and One', url: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+      { label: 'FundingPips: news trading and weekend holding', url: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
+      { label: 'GOAT Funded Trader: VPN/VPS and hosted trading policy (12 Oct 2026)', url: 'https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading' },
+      { label: 'Blue Guardian: prohibited trading strategies', url: 'https://help.blueguardian.com/en/articles/18426719-prohibited-trading-strategies' },
+      { label: 'Topstep: consistency at Topstep', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
+      { label: 'GOAT Funded Trader: restricted countries', url: 'https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader' },
+      { label: 'Apex: restricted countries', url: 'https://apextraderfunding.com/help-center/getting-started/restricted-countries/' },
+      { label: 'Take Profit Trader: restricted countries and access', url: 'https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/22447557656477-Restricted-Countries' },
+      { label: 'Tradeify: permanent residence and Live Account rule', url: 'https://help.tradeify.co/en/articles/10495888-rules-restricted-countries' },
+      { label: 'Apex: Risk Disclosure — Performance Account rewards', url: 'https://apextraderfunding.com/risk-disclosure/' },
+      { label: 'FTMO Futures: eligibility for a Live Funded Account', url: 'https://ftmo.com/en/futures/faq/who-is-eligible-for-a-live-funded-account/' },
+      { label: 'FundingPips: VPN and VPS account policy', url: 'https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards' },
+      { label: 'Topstep: VPN ban and VPS order-routing rules', url: 'https://help.topstep.com/en/articles/11187768-topstepx-api-access' },
+      { label: 'FundedNext CFD: VPN/VPS conditions by account size', url: 'https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps' },
+      { label: 'Alpha Capital Group: VPN/VPS static IP and notice', url: 'https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed' },
+      { label: 'FTMO CFD: VPN/VPS and US geolocation exception', url: 'https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/' },
+      { label: 'Blue Guardian: 1-Step Standard CFD news and VPS', url: 'https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules' },
+      { label: 'Apex: remote access used for geographic circumvention', url: 'https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/' },
+      { label: 'Tradeify: login/VPS and news FAQ', url: 'https://help.tradeify.co/en/articles/12268494-common-faqs' },
+      { label: 'The5ers: official conditions on country circumvention', url: 'https://the5ers.com/terms-and-conditions/' },
+      { label: 'HyroTrader: local platform restrictions', url: 'https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/' },
+      { label: 'Alpha Futures: qualified-account news execution window', url: 'https://help.alpha-futures.com/en/articles/9492063-news-trading-policy' },
+      { label: 'Alpha Capital Group: qualified-account news trading', url: 'https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news' },
+      { label: 'Fintokei: complete eligibility list and new-purchase restrictions', url: 'https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei' },
+      { label: 'Alpha Futures: geographic exclusions', url: 'https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations' },
+      { label: 'Lucid Trading: restricted countries', url: 'https://support.lucidtrading.com/en/articles/11404636-restricted-countries' },
+      { label: 'FundedNext: CFD restricted countries', url: 'https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds' },
+      { label: 'BrightFunded: CFD news-event restrictions', url: 'https://help.brightfunded.com/en/articles/9241694-can-i-trade-news' },
+      { label: 'Upcomers: general geographic restrictions', url: 'https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries' },
+    ],
+  },
+  'prop-firm-sans-challenge': {
+    updated: '2026-11-15',
+    intro:
+      'To get started with a no-challenge prop firm, choose the market and exact program, check eligibility, read the funded rules, calculate the full fee exposure and test your strategy against the loss limits. **Skipping evaluation does not remove payout conditions.** Access can be simulated, and the first withdrawal may still require qualifying days, a profit goal or consistency.',
+    keyPoints: [
+      '**No challenge means no evaluation before funding.** A payout profit goal may still apply.',
+      'Check the **exact program**, its complete fees and whether the account is simulated.',
       'Compare the **total cost to a first payout**, not the sticker price.',
       'It suits a **stable, low-drawdown** strategy, not one you are still testing.',
     ],
     sections: [
-      {
-        heading: 'What "no challenge" actually means',
-        visual: 'challenge-vs-direct',
-        paragraphs: [
-          'In a classic model you pay a fee, hit a profit target under a daily loss limit and a maximum drawdown, sometimes over two phases, and only then trade a funded account that can pay out. A no-challenge program, often called **instant funding** or **direct funding**, removes that first step: you buy the funded account and can request payouts once its own conditions are met.',
-          'What disappears is the **profit target before funding**. What does not disappear is **risk control**. Instant accounts almost always keep a maximum drawdown, often a trailing one, and many add a consistency rule, a minimum number of trading days or a smaller first payout cap.',
-        ],
-        callout: { kind: 'tip', text: 'The firm still filters traders. It simply does it **after you have paid**.' },
-      },
+      noChallengeGettingStarted,
       {
         heading: 'Why instant funding usually costs more',
         visual: 'no-challenge-cost',
@@ -123,6 +303,20 @@ export const guideArticles: Record<string, GuideArticle> = {
         ],
         callout: { kind: 'tip', text: 'Before buying, open the firm\'s PropRadar profile: **legal entity, payout signals, domain and regulator alerts** are on one page.' },
       },
+      {
+        heading: 'Two current examples: instant access is not instant withdrawal',
+        paragraphs: [
+          'Official pages checked on 15 November 2026 illustrate why the exact plan matters. **Hyro Instant** skips evaluation but requires three qualifying trading days for the first payout, at least $25 profit after the split and a cap on profit counted per payout.',
+          '**Tradeify Lightning Funded** also skips evaluation. Its published $50,000 plan needs $3,000 profit to unlock the first request, which is capped at $2,000 before the trader’s 90% split. Consistency also applies. The profit goal is not the amount available to withdraw.',
+          'These examples describe the published rules, not independently authenticated customer payments. Use the current agreement and the source links below to verify the conditions that apply to a new purchase.',
+        ],
+      },
+    ],
+    sources: [
+      { label: 'HyroTrader: Hyro Instant account and setup', url: 'https://www.hyrotrader.com/faq/getting-started/what-is-hyro-instant/' },
+      { label: 'HyroTrader: qualifying days and first Instant payout', url: 'https://www.hyrotrader.com/faq/hyrotrader-account/how-does-the-first-payout-work-on-hyro-instant/' },
+      { label: 'Tradeify: Lightning Funded accounts', url: 'https://help.tradeify.co/en/articles/10495938-lightning-funded-accounts' },
+      { label: 'Tradeify: Lightning payout goals, caps and split', url: 'https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy' },
     ],
   },
 

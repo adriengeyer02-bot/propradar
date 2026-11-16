@@ -10,7 +10,7 @@ export type GuideTranslation = {
   /** Long-form sections, translated from guideArticles when the guide has one. */
   article?: {
     intro?: string;
-    sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
+    sections: { heading: string; paragraphs: string[]; bullets?: string[]; steps?: { title: string; text: string }[] }[];
   };
 };
 

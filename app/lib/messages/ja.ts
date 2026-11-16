@@ -49,6 +49,17 @@ const ja: Messages = {
       "method": "方法と出典"
     }
   },
+  "newsletter": {
+    "title": "PropRadarニュースレター — 近日開始",
+    "body": "取引ルールの変更、出金に関する注意情報、プロップファームの独立調査をお届けします。",
+    "email": "メールアドレス",
+    "subscribe": "登録する",
+    "consent": "PropRadarのニュースレター受信に同意します。",
+    "privacy": "プライバシーポリシー",
+    "success": "登録しました。ありがとうございます！",
+    "already": "このメールアドレスは登録済みです。",
+    "error": "登録できませんでした。もう一度お試しください。"
+  },
   "notice": {
     "title": "このページはまだ翻訳されていません。",
     "body": "英語版を表示しています。レーダー、比較表、各社ページは日本語で利用できます。",
@@ -306,6 +317,10 @@ const ja: Messages = {
     "globeTitle": "PropRadar グローブ",
     "globeHint": "ドラッグで回転 · ホイールまたはダブルクリックでズーム · ロゴをクリックで企業を表示",
     "globeZoom": "グローブのズーム",
+    "globePause": "回転を一時停止",
+    "globeResume": "回転を再開",
+    "globeHud": { "preview": "会社プレビュー", "locked": "プロフィールを固定", "jurisdictions": "法人の管轄地", "unknown": "未確認", "offer": "提携特典", "available": "会社のサイトで確認", "offerNew": "新規顧客は最大 {pct}% 割引", "offerFirst": "初回注文は {pct}% 割引", "offerAll": "全チャレンジ {pct}% 割引", "offerSelected": "対象チャレンジ {pct}% 割引", "conditions": "アフィリエイト · 決済時に条件を確認してください。", "copy": "コピー", "copied": "コードをコピーしました", "copyFailed": "上のコードを選択してコピーしてください。", "seeOffer": "特典を見る" },
+    "globeNoResults": "一致する会社がありません。別の名前で検索してください。",
     "zoomIn": "拡大",
     "zoomOut": "縮小",
     "zoomReset": "ズームをリセット",
@@ -441,6 +456,15 @@ const ja: Messages = {
     "countryAria": "法人の所在国",
     "anyCountry": "国指定なし",
     "countryUnknown": "国が未特定",
+    "eligibilityCountryAria": "居住国",
+    "eligibilityAnyCountry": "自分の国で利用可能…",
+    "eligibilityStatusAria": "国別の利用資格",
+    "eligibilityAnyStatus": "すべての利用資格",
+    "eligibilityAvailable": "企業の公表条件で対象",
+    "eligibilityRestricted": "企業が対象外と明記",
+    "eligibilityUnknown": "未確認",
+    "eligibilityNote": "企業が公開した申込条件に基づくもので、法律上の認可ではありません。商品や取引プラットフォームごとに追加制限があります。本人確認や報酬支払を保証するものではなく、購入前に個別の条件をご確認ください。",
+    "eligibilityEvidence": "企業が公開した利用資格条件",
     "reset": "リセット",
     "showFirms": "{n} 社を表示",
     "showFirm": "1 社を表示",
@@ -571,6 +595,12 @@ const ja: Messages = {
       "Legal entity": "運営法人"
     },
     "sendSource": "出典を送る",
+    "sourceForm": {
+      "title": "出典を共有", "intro": "この会社の情報確認にご協力ください。証拠、取引規則、出金に関する公開リンクをお送りください。",
+      "url": "公開リンク", "detail": "この出典から何が分かりますか？（任意）", "submit": "送信", "sending": "送信中…", "cancel": "キャンセル", "close": "閉じる",
+      "success": "ありがとうございます。出典を編集部の確認用に安全に保存しました。", "error": "フォームは一時的に利用できません。", "gmail": "Gmailで送る",
+      "privacy": "リンクとコメントは確認用に非公開で保管され、自動公開されません。"
+    },
     "navLabel": "会社ページのナビゲーション",
     "nav": {
       "offers": "プラン",
@@ -697,6 +727,7 @@ const ja: Messages = {
     "nothingRecorded": "今回の確認では記録はありません。",
     "reviewsEyebrow": "レビューと出金",
     "reviewsTitle": "トレーダーの報告",
+    "payoutProofs": { "title": "公開されている出金の証拠", "intro": "日付とリンクのある情報源のみ。会社自身が公表した数字は「会社発表」と表示しています（PropRadar は監査していません）。", "official": "会社の公式ページ", "press": "業界メディア", "onchain": "オンチェーンデータ", "firmReported": "会社発表", "independent": "独立した集計" },
     "payoutRisk": "出金リスク",
     "payoutCheck": "出金の確認",
     "withheldShort": "Trustpilot により評価は非表示です。",

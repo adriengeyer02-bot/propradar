@@ -1,6 +1,76 @@
 {
   "version": 1,
   "firms": {
+    "miltraders": {
+      "reviewedAt": "2026-11-16",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "summary": "Initial 58/100 editorial profile added after reading Zero, Pro and Instant pricing, programme rules, payout caps, terms and the stated Dubai operator. Regular USD fees are separated from temporary public coupon prices. No previous score is replaced.",
+          "source": "https://miltraders.com/pricing/",
+          "fields": ["initialReview", "products", "entities"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Trustpilot read: 3.9/5 across 13 reviews. The sample is small; visible customer statements and the company's KYC response are not authenticated payment evidence. No review-manipulation or rating-withholding finding is inferred.",
+          "source": "https://www.trustpilot.com/review/miltraders.com",
+          "fields": ["initialReview"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Contract review records retrospective rule changes, discretionary treatment of a pending payout under article 12.5, mandatory live-account selection and the 80% share on the first three live payouts. The website FAQ differs from the terms/help wording on the stated conduct-review scenario; no individual payment failure is established.",
+          "source": "https://miltraders.com/terms/",
+          "fields": ["initialReview"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company dashboard payout figures captured as firm-reported information only. No independent reconciliation, authenticated customer receipt or payout-risk upgrade is claimed.",
+          "source": "https://miltraders.com/",
+          "fields": ["payoutProofs"]
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "MilTraders",
+          "quote": "The company dashboard reports $266,990 paid since launch and $52,670 across 40 payouts for November 2026, read on 16 November. These are company-reported aggregates; customer receipts and the totals were not independently authenticated.",
+          "url": "https://miltraders.com/",
+          "firmReported": true
+        }
+      ]
+    },
+    "foxx-funded": {
+      "reviewedAt": "2026-11-15",
+      "changelog": [
+        {
+          "date": "2026-11-15",
+          "summary": "Initial profile added at 49/100 after reviewing programmes, original euro fees, payout conditions and company disclosures. No earlier score is replaced; this is an editorial assessment, not a finding on individual disputes.",
+          "source": "https://www.foxx-funded.com/terms-and-conditions/",
+          "fields": [
+            "initialReview",
+            "products",
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Domain-linked Trustpilot profile, currently named Ponjas Marketing, shows no TrustScore and carries a guideline-breach and removed-review notice. No old rating or invented removed-review count is used.",
+          "source": "https://www.trustpilot.com/review/foxx-funded.com",
+          "fields": [
+            "initialReview"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official payout showcase is labelled illustrative and not verified client payouts; no payout proof was added. Customer complaints and the firm's rule-breach responses are presented as disputed accounts.",
+          "source": "https://www.foxx-funded.com/payout/",
+          "fields": [
+            "initialReview"
+          ]
+        }
+      ]
+    },
     "aeon-funded": {
       "reviewedAt": "2026-10-27",
       "set": {
@@ -42,9 +112,17 @@
           "fields": [
             "products"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-alpha-capital-pushes-mobile-app-rollout-as-yearly-payouts-may-be-one-third-of-2024",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "set": {
         "priceFrom": 27
       },
@@ -130,10 +208,28 @@
           "entryFeeMax": 897,
           "profitTarget": "none (no evaluation)"
         }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2025-12-03",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "\"The group has paid out a total of $120 million in performance fees to traders, according to its figures.\"",
+          "url": "https://www.financemagnates.com/forex/prop-firm-alpha-capital-pushes-mobile-app-rollout-as-yearly-payouts-may-be-one-third-of-2024",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "Alpha Capital Group: $7.44 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-23",
@@ -174,6 +270,18 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company-run leaderboard checked for a self-reported lifetime payout aggregate. Explicitly not bank-reconciled; the previously documented Premium Plan payout incident remains on the profile and the score does not change.",
+          "source": "https://alpha-futures.com/leaderboard",
+          "fields": ["payoutProofs"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Independent Arbitrum transaction review: a 2025 RISEPAY transfer is visible on the public explorer and attributed to Alpha Futures by a third-party ledger tracker. Recipient identity and whether this is a trader rather than affiliate/vendor remuneration remain unverified. No rating uplift.",
+          "source": "https://arbiscan.io/tx/0x24d54969903bd20d0fc280ac700d9908cb450340e3ac0c591ed339b1e3e1e7f7",
+          "fields": ["payoutProofs"]
         }
       ],
       "set": {
@@ -261,6 +369,32 @@
         {
           "label": "Finance Magnates: futures prop margins and closures (13 Nov 2026)",
           "url": "https://www.financemagnates.com/forex/the-49-challenge-problem-are-futures-prop-margins-meeting-the-exit-door/"
+        },
+        {
+          "label": "Alpha Futures company-run trader leaderboard (reported payout amounts)",
+          "url": "https://alpha-futures.com/leaderboard"
+        },
+        {
+          "label": "Independent Alpha Futures Rise/Arbitrum trace with wallet attribution and limitations",
+          "url": "https://damnpropfirms.com/futures-prop-firms/alpha-futures/payouts/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "Alpha Futures",
+          "quote": "The company's own public leaderboard displays '$70M Performance Fees Paid' alongside individual 'Virtual Payout Amount' figures. These are company-published amounts, not authenticated bank transfers or independent reconciliation. Its Premium Plan payout dispute remains separately disclosed.",
+          "url": "https://alpha-futures.com/leaderboard",
+          "firmReported": true
+        },
+        {
+          "date": "2025-12-11",
+          "kind": "onchain",
+          "publisher": "Arbiscan (public Arbitrum transfer)",
+          "quote": "A successful Arbitrum transaction on 11 Dec 2025 shows 61,279.62 RISEPAY tokens moving from an address attributed to Alpha Futures by a third-party payout tracker. The chain transfer itself is independently viewable; the firm's wallet attribution and whether the recipient is a trader rather than an affiliate/vendor have NOT been independently authenticated by PropRadar.",
+          "url": "https://arbiscan.io/tx/0x24d54969903bd20d0fc280ac700d9908cb450340e3ac0c591ed339b1e3e1e7f7",
+          "firmReported": false
         }
       ],
       "addIncidents": [
@@ -268,7 +402,7 @@
       ]
     },
     "apex-trader-funding": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -302,6 +436,14 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Existing McCrudden legal note corrected: a direct docket is already on file. Recorded the accessible snapshot cutoff and discovery/arbitration procedural steps without treating allegations as findings or claiming a current complete court record. No new incident or risk-level change.",
+          "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938",
+          "fields": [
+            "legalReview"
+          ]
         }
       ],
       "set": {
@@ -322,7 +464,27 @@
           "label": "Justia docket: McCrudden v. Apex Trader Funding (M.D. Fla. 3:26-cv-01073)",
           "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938"
         }
-      ]
+      ],
+      "setLegalReview": {
+        "summary": "Legal file clarified on 16 November 2026 using the already-listed McCrudden court docket. The accessible snapshot ends on 19 October 2026 and records a discovery stay pending an arbitration motion, not a decision on the underlying allegations. The existing risk level is unchanged; this pass did not reverify company registrations or conduct comprehensive regulatory clearance.",
+        "complaintsAndDisputes": [
+          "Public complaints often focus on payout eligibility, consistency rules, trailing threshold interpretation and rule changes.",
+          "McCrudden v. Apex Trader Funding, Inc. et al., M.D. Fla. 3:26-cv-01073, filed 30 April 2026: the public docket snapshot was last retrieved 19 October 2026. The 7 October entry stays discovery pending resolution of the arbitration motion; the 19 October entries include the plaintiff’s objection. These are procedural entries, not findings on the allegations.",
+          "Regulator-warning searches were not refreshed in this scoped court-docket check."
+        ],
+        "redFlags": [
+          "Explicitly non-regulated financial status for a futures-related prop-firm product.",
+          "US futures prop-firm model sits in a grey zone between education, simulation, payouts and trading evaluation.",
+          "Large discount campaigns can make traders under-read payout and consistency constraints.",
+          "The linked McCrudden docket is a bounded procedural record; later developments and the underlying allegations require separate verification."
+        ],
+        "sources": [
+          {
+            "label": "McCrudden v. Apex — public docket snapshot through 19 October 2026",
+            "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938"
+          }
+        ]
+      }
     },
     "aqua-funded": {
       "reviewedAt": "2026-11-14",
@@ -494,9 +656,17 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://blueguardian.com/payouts",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
       ],
@@ -505,7 +675,25 @@
         "trustpilotReviewCount": 2151,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/blueguardian.com",
         "trustpilotNoticeLifted": "2026-11-07"
-      }
+      },
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Blue Guardian payouts page",
+          "quote": "\"$47M+\" total payouts; each recent payout links a \"View Proof\" transaction on TronScan or Etherscan",
+          "url": "https://blueguardian.com/payouts",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "Blue Guardian: $1.37 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
+      ]
     },
     "blueberry-funded": {
       "reviewedAt": "2026-10-29",
@@ -902,6 +1090,12 @@
             "trustpilotReviewCount",
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Owner-supplied CTI referral link added to the programme buttons and partner pop-up, with affiliate disclosure. Tracking parameters are preserved. No discount code or percentage was supplied; score, audit level and review date are unchanged.",
+          "source": "https://app.citytradersimperium.com/user-auth/register?referral_code=8b3df5&utm_source=client&utm_medium=referral&utm_id=8b3df5",
+          "fields": ["affiliateLink", "commercialRelationship", "partnerOffer"]
         }
       ],
       "set": {
@@ -911,7 +1105,7 @@
       }
     },
     "clarity-traders": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -920,10 +1114,29 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official FAQ read: split \"70% … on your first payout, 80% on your second and 90% after that\" (add-on up to 100%); \"at least 7 trading days before the first payout request\", \"a payout every 14 days, or weekly with the Express Payouts add-on\"; sizes \"$5,000 to $200,000\"; \"trading during high-impact news events is permitted.\"",
+          "source": "https://www.claritytraders.com/faq",
+          "fields": [
+            "payoutDelay",
+            "newsTrading"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/claritytraders.com)."
+      ],
+      "set": {
+        "payoutDelay": "first request after at least 7 trading days (Terms add 14 days after the account is issued); then every 14 days, or weekly with the Express Payouts add-on",
+        "newsTrading": "Allowed"
+      },
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://www.claritytraders.com/faq"
+        }
       ]
     },
     "dei-funded": {
@@ -1052,11 +1265,29 @@
           "fields": [
             "commercialRelationship"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-13",
+      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "E8 Markets: $5.00 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "earn2trade": {
@@ -1224,11 +1455,20 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 1,058 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/finotivefunding.com"
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Editorial correction: replaced the watchlist introduction with a description of the existing documented review. This corrects its contradiction with the multi-source label; it is not a new audit and does not change scores, audit status or prior review dates.",
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "fields": [
+            "verdict"
+          ]
         }
       ],
       "set": {
         "profitSplit": 95,
-        "payoutDelay": "on demand, no minimum payout"
+        "payoutDelay": "on demand, no minimum payout",
+        "verdict": "PropRadar's file covers Finotive Funding's published programs and legal terms, including the disclosed DIFC contracting company. The funding accounts are simulated, with rewards subject to contractual conditions. Company registration does not make the funding product a regulated brokerage account or independently verify customer payments."
       },
       "setProducts": [
         {
@@ -1264,7 +1504,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1290,6 +1530,14 @@
           "fields": [
             "priceFrom"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.fintokei.com/blog/a-record-year-for-fintokei-nearly-half-of-all-payouts-were-generated-in-2025/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -1302,6 +1550,16 @@
         {
           "label": "Fintokei: the new StartTrader",
           "url": "https://www.fintokei.com/blog/the-new-starttrader-is-here/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-03-11",
+          "kind": "official",
+          "publisher": "Fintokei blog",
+          "quote": "\"we've paid out a total of $28,080,786 to our traders by the end of 2025\"; \"In 2025 alone, traders received $13,135,105.\"",
+          "url": "https://www.fintokei.com/blog/a-record-year-for-fintokei-nearly-half-of-all-payouts-were-generated-in-2025/",
+          "firmReported": true
         }
       ]
     },
@@ -1411,6 +1669,14 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/ftmo-adds-200-million-to-lifetime-payouts-in-one-year-as-monthly-rewards-near-15-million/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
@@ -1467,6 +1733,16 @@
           "name": "OANDA Global Corporation (OANDA group)",
           "jurisdiction": "Group with regulated entities in the US, Canada, UK, EU, Asia-Pacific and BVI",
           "role": "Broker group acquired by FTMO, completed on 1 December 2025 (OANDA press release); run as a standalone business."
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-08",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "FTMO reported paying \"more than $14.4 million in rewards to roughly 7,100 traders in September\", \"bringing its reported cumulative payouts above $650 million\" (self-reported, no audited breakdown)",
+          "url": "https://www.financemagnates.com/forex/ftmo-adds-200-million-to-lifetime-payouts-in-one-year-as-monthly-rewards-near-15-million/",
+          "firmReported": true
         }
       ]
     },
@@ -1552,9 +1828,15 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Public payout-certificate examples on the firm's own site archived as firm-reported marketing evidence, not bank-authenticated client receipts. The existing Trustpilot review-removal notice and score cap remain unchanged.",
+          "source": "https://www.fundedtradingplus.com/",
+          "fields": ["payoutProofs"]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-16",
       "set": {
         "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
       },
@@ -1562,6 +1844,20 @@
         {
           "label": "Funded Trading Plus payouts overview (official)",
           "url": "https://help.fundedtradingplus.com/payouts-overview/"
+        },
+        {
+          "label": "FT+ company-published trader payout certificates",
+          "url": "https://www.fundedtradingplus.com/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "Funded Trading Plus",
+          "quote": "The company's public website shows individual trader reward certificates, including a $5,965.10 example labelled India and $8,450.89 labelled Singapore. The site states its displayed result data was last refreshed in February 2026. Certificates are issued/displayed by the firm and have not been independently matched to bank or payment-processor records.",
+          "url": "https://www.fundedtradingplus.com/",
+          "firmReported": true
         }
       ],
       "addIncidents": [
@@ -1759,9 +2055,17 @@
           "fields": [
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (3 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://fundednext.com/blog/fundednext-payout-report-october-2026",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 83306,
@@ -1776,6 +2080,32 @@
       ],
       "addIncidents": [
         "The Reserve Bank of India added \"FundedNext | https://fundednext.com\" to its Alert List of unauthorised forex trading platforms in a press release dated 2024-10-22 (Press Release 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). The RBI says the list is not exhaustive."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-05",
+          "kind": "official",
+          "publisher": "FundedNext payout report",
+          "quote": "\"FundedNext paid $22.4M to 9,320 traders in October 2026.\" Since inception: \"$407M+ to traders … across 317,486 transactions.\"",
+          "url": "https://fundednext.com/blog/fundednext-payout-report-october-2026",
+          "firmReported": true
+        },
+        {
+          "date": "2026-10-21",
+          "kind": "onchain",
+          "publisher": "Finance Magnates (Payout Junction data)",
+          "quote": "30-day on-chain payouts: FundedNext at $18 million (first)",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": false
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "FundedNext CFDs: $42.67 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "funderpro": {
@@ -1874,7 +2204,7 @@
       ]
     },
     "funding-pips": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-14",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1901,6 +2231,14 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -1910,6 +2248,16 @@
       },
       "addIncidents": [
         "Finance Magnates reported on 2026-09-22 that FundingPips' terms (effective 15 May 2026) state that PRIME access for invited funded traders \"is deemed automatically accepted by you, is mandatory, and you waive any right to refuse or contest it\", and that the payout from the previous, permanently closed account \"serves as the starting balance for PRIME\". FundingPips disputed that reading in the same article: \"There is no such thing as replacing a payout. Nothing is replaced.\" (https://www.financemagnates.com/forex/fundingpips-invited-traders-into-prime-the-tcs-made-it-mandatory/)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-21",
+          "kind": "onchain",
+          "publisher": "Finance Magnates (Payout Junction data)",
+          "quote": "30-day on-chain payouts: FundingPips at $3.02 million",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": false
+        }
       ]
     },
     "funding-traders": {
@@ -2249,6 +2597,14 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://fxify.com/blog/fxify-3rd-anniversary/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
@@ -2286,6 +2642,24 @@
           "registeredAddress": "No.1-23A, First Floor, Paragon, Jalan Tun Mustapha, 87008 Labuan F.T. Malaysia",
           "role": "Previously listed from the public footer; not named in the current agreement (recheck)."
         }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-04-30",
+          "kind": "official",
+          "publisher": "FXIFY blog",
+          "quote": "\"Three years in, $40 million paid out\"",
+          "url": "https://fxify.com/blog/fxify-3rd-anniversary/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "FXIFY: $1.44 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        }
       ]
     },
     "goat-funded-trader": {
@@ -2314,6 +2688,14 @@
           "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
           "fields": [
             "entities"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "fields": [
+            "payoutProofs"
           ]
         }
       ],
@@ -2346,6 +2728,24 @@
           "name": "Odeonpay ALE S.R.L (\"Paysagi\")",
           "jurisdiction": "Not stated",
           "role": "Payment processor and Merchant of Record named in the terms."
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-21",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "GOAT Funded Trader, \"declaring $26.16 million paid to 22,279 traders\", figures from its own self-reported dashboard; Payout Junction put it fourth with $1.59 million in 30-day on-chain payouts",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "GOAT Funded Trader transparency page",
+          "quote": "\"$32,000,000+ Total Rewarded\"",
+          "url": "https://www.goatfundedtrader.com/transparency",
+          "firmReported": true
         }
       ]
     },
@@ -2506,7 +2906,7 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2516,16 +2916,59 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/hola-prime-says-it-has-paid-more-than-10-million-to-funded-traders/",
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official rulebook (schedules) read: static maximum loss on 2-Step Pro and 1-Step Prime (\"Basis (Max. Loss Limit) | Static\"), intraday trailing on Fly funded accounts, end-of-day trailing on Direct; payout conditions per schedule SCH.4. The rulebook gives different splits for 1-Step Fly (80% in SCH.1, 70% in SCH.4), so the split is not changed.",
+          "source": "https://holaprime.com/rulebook/schedules/",
+          "fields": [
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 4081,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com",
+        "drawdownType": "Hybride",
+        "payoutDelay": "Pro/Prime: bi-weekly after 3 profitable days, monthly after 7, or on demand after 2% profit; Direct every 14 days; Fly funded accounts anytime; review up to 24 business hours, then processing within 1 hour"
+      },
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-06",
+          "kind": "press",
+          "publisher": "Finance Magnates",
+          "quote": "\"Hola Prime said today (Tuesday) it has paid more than $10 million to funded traders\" (the company's own count)",
+          "url": "https://www.financemagnates.com/forex/hola-prime-says-it-has-paid-more-than-10-million-to-funded-traders/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-27",
+          "kind": "press",
+          "publisher": "Finance Magnates (Deloitte review)",
+          "quote": "Deloitte, commissioned by Hola Prime, reviewed 15 Oct 2025–15 Mar 2026: it \"cleared 98.35% of withdrawal requests within its one-hour target and rejected none\" (timing, not totals)",
+          "url": "https://financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/",
+          "firmReported": false
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://holaprime.com/rulebook/schedules/"
+        }
+      ]
     },
     "hyrotrader": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2545,6 +2988,22 @@
             "payoutDelay",
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official HyroTrader blog read: \"HyroTrader uses static drawdown only\" (3%/5% on Hyro Core and Instant, 4%/8% one-step, 5%/10% two-step); on-demand payouts \"usually deliver within 24 hours\". Pricing page not readable (robots), so prices are not changed.",
+          "source": "https://www.hyrotrader.com/blog/hyrotrader-vs-cryptofundtrader/",
+          "fields": [
+            "drawdownType"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Transparency dashboard added with company-reported totals. A published Solana transaction was separately opened on Solscan and shows a finalized 2,221.6 USDT transfer from the disclosed wallet. This verifies that transfer, not the recipient client status or all claimed payouts; score and risk level unchanged.",
+          "source": "https://solscan.io/tx/3WGeyKrMeQTMWPbqdntUyfyKgmFr6bBAaZVYCchESsobZUsGP91sqXEWJmzFnPD6h3C2uDDUKgcUfsECRSv7UmNR",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -2552,7 +3011,8 @@
         "trustpilotReviewCount": 229,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com",
         "profitSplit": 80,
-        "payoutDelay": "within 24 hours, paid in USDT or USDC"
+        "payoutDelay": "within 24 hours, paid in USDT or USDC",
+        "drawdownType": "Static"
       },
       "setEntities": [
         {
@@ -2575,6 +3035,36 @@
         {
           "label": "HyroTrader evaluation options (official)",
           "url": "https://www.hyrotrader.com/evaluations/"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://www.hyrotrader.com/blog/hyrotrader-vs-cryptofundtrader/"
+        },
+        {
+          "label": "HyroTrader — transparency dashboard and published payout wallets",
+          "url": "https://www.hyrotrader.com/transparency/"
+        },
+        {
+          "label": "Solscan — finalized 2,221.6 USDT transfer, 15 November 2026",
+          "url": "https://solscan.io/tx/3WGeyKrMeQTMWPbqdntUyfyKgmFr6bBAaZVYCchESsobZUsGP91sqXEWJmzFnPD6h3C2uDDUKgcUfsECRSv7UmNR"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "HyroTrader",
+          "quote": "The transparency dashboard reports $9,560,111 total paid to traders and $1,653,933 in on-chain payouts, captured on 16 November 2026. These aggregate figures are company-reported and were not independently reconciled.",
+          "url": "https://www.hyrotrader.com/transparency/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-11-15",
+          "kind": "onchain",
+          "publisher": "Solscan",
+          "quote": "Solscan shows a finalized 2,221.6 USDT transfer at 21:34:45 UTC on 15 November 2026 from Gry8B7fxWo6qce15A1ULPM7bC8YSkWghNDWQgYMNPCsS, the wallet HyroTrader identifies on its transparency page. The transfer is visible; recipient identity, client status and the full payout total were not authenticated.",
+          "url": "https://solscan.io/tx/3WGeyKrMeQTMWPbqdntUyfyKgmFr6bBAaZVYCchESsobZUsGP91sqXEWJmzFnPD6h3C2uDDUKgcUfsECRSv7UmNR",
+          "firmReported": false
         }
       ]
     },
@@ -2792,7 +3282,7 @@
       ]
     },
     "lucid-trading": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -2802,13 +3292,55 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Editorial correction: replaced the watchlist introduction with a description of the existing documented review. This corrects its contradiction with the multi-source label; it is not a new audit and does not change scores, audit status or prior review dates.",
+          "source": "https://www.lucidtrading.com/terms-of-use/",
+          "fields": [
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Official homepage payout total added as company-reported evidence only. No score, audit tier or payout-risk upgrade.",
+          "source": "https://lucidtrading.com/",
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "LucidFlex payout policy read: 90% share; five qualifying profitable days per cycle; $500 minimum; requests limited to 50% of profits and $1,000–$3,000 by account size; five payouts before live transition; disbursement within two business days after approval. These are LucidFlex rules, not a guarantee of payment.",
+          "source": "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 7805,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com",
+        "verdict": "Lucid Trading's file covers LucidPro, LucidFlex and LucidDirect, their published rules and payout conditions, and the disclosed Delaware operator. Official documents and external sources support this review. Published payout conditions do not independently authenticate individual customer payments.",
+        "payoutDelay": "Plan-specific. LucidFlex: request after 5 qualifying profitable days per cycle; disbursement within 2 business days after approval. Other plans have different eligibility rules."
+      },
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "Lucid Trading",
+          "quote": "The official homepage reports more than $700 million earned by traders. Undated company figure captured on 16 November 2026; the total and customer receipts were not independently authenticated.",
+          "url": "https://lucidtrading.com/",
+          "firmReported": true
+        }
+      ],
+      "addSources": [
+        {
+          "label": "LucidFlex — official payout eligibility, caps and processing times",
+          "url": "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts"
+        }
+      ]
     },
     "lux-trading-firm": {
       "reviewedAt": "2026-10-29",
@@ -3127,6 +3659,14 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://myfundedfutures.com/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
@@ -3149,6 +3689,24 @@
           "name": "Funding Perpetuals Holdings, Inc.",
           "jurisdiction": "Not stated",
           "role": "Offers MyFunded Perpetuals, \"a company separate from MyFunded Futures, LLC\"."
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "MyFundedFutures home page",
+          "quote": "\"$300M+\" paid to traders (undated counter)",
+          "url": "https://myfundedfutures.com/",
+          "firmReported": true
+        },
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "MyFunded Futures: $38.51 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
         }
       ]
     },
@@ -3241,7 +3799,7 @@
       ]
     },
     "onefunded": {
-      "reviewedAt": "2026-11-13",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3258,10 +3816,45 @@
           "fields": [
             "commercialRelationship"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://onefunded.com/",
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official site read: \"14-day payout cycle\" (7 days with an add-on); split up to 90%; sizes $5K–$200K; daily 4–5% and overall 6–10% drawdown \"depending on the plan\" (static or trailing not stated).",
+          "source": "https://onefunded.com/how-it-works/",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/onefunded.com)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "OneFunded home page",
+          "quote": "\"$1M+ Paid Out\" (undated counter)",
+          "url": "https://onefunded.com/",
+          "firmReported": true
+        }
+      ],
+      "set": {
+        "payoutDelay": "14-day payout cycle, or 7 days with an add-on (first-payout rule not stated)"
+      },
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://onefunded.com/how-it-works/"
+        }
       ]
     },
     "oneup-trader": {
@@ -3378,7 +3971,7 @@
       ]
     },
     "pipfarm": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3400,6 +3993,12 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 344 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/pipfarm.com"
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company homepage payout aggregate captured as a self-reported marketing figure; it is not an independent payment verification. Prior Trustpilot review-removal notice and score cap remain visible and unchanged.",
+          "source": "https://pipfarm.com/",
+          "fields": ["payoutProofs"]
         }
       ],
       "addIncidents": [
@@ -3412,6 +4011,20 @@
         {
           "label": "PipFarm terms and conditions",
           "url": "https://pipfarm.com/terms-and-conditions"
+        },
+        {
+          "label": "PipFarm public self-reported payout totals",
+          "url": "https://pipfarm.com/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "PipFarm",
+          "quote": "The PipFarm homepage reports 'over $5,000,000' in worldwide trader payouts since 2024 to over 1,000 traders. This is a company-reported aggregate with no independent reconciliation of transfers or individual recipients. Its Trustpilot guideline-breach notice remains recorded on this profile.",
+          "url": "https://pipfarm.com/",
+          "firmReported": true
         }
       ]
     },
@@ -3457,6 +4070,14 @@
             "profile",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Editorial correction: replaced the watchlist introduction with a description of the existing documented review. This corrects its contradiction with the multi-source label; it is not a new audit and does not change scores, audit status or prior review dates.",
+          "source": "https://quanttekel.com/",
+          "fields": [
+            "verdict"
+          ]
         }
       ],
       "addSources": [
@@ -3478,7 +4099,8 @@
         }
       ],
       "set": {
-        "payoutDelay": "QT ONE: payout requests after each 4-trading-day cycle (3% minimum profit); QT 1 Step (BNPL): 14-day standard cycle, 5 trading days and 3% profit minimum"
+        "payoutDelay": "QT ONE: payout requests after each 4-trading-day cycle (3% minimum profit); QT 1 Step (BNPL): 14-day standard cycle, 5 trading days and 3% profit minimum",
+        "verdict": "QT Funded is Quant Tekel's virtual prop-trading offering. PropRadar's file documents the disclosed operating and payment entities and distinguishes the prop program from the group's brokerage business. Brokerage authorisation should not be treated as authorisation of the virtual challenge; program rules and payout evidence require their own checks."
       }
     },
     "rebelsfunding": {
@@ -3920,7 +4542,7 @@
       ]
     },
     "the5ers": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 41676,
@@ -3962,12 +4584,38 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "The5ers withdrawals FAQ (official)",
           "url": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-04-20",
+          "kind": "onchain",
+          "publisher": "Finance Magnates Intelligence",
+          "quote": "The 5%ers: $14.44 million in tracked crypto payouts in Q1 2026",
+          "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
+          "firmReported": false
+        },
+        {
+          "date": "2026-10-21",
+          "kind": "onchain",
+          "publisher": "Finance Magnates (Payout Junction data)",
+          "quote": "30-day on-chain payouts: The5ers at $3.64 million",
+          "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "firmReported": false
         }
       ]
     },
@@ -4063,7 +4711,7 @@
       ]
     },
     "top-one-futures": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -4090,6 +4738,15 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official help center read: \"All Sim Funded accounts at Top One Futures use the same 90/10 profit split\" (previously recorded as 80). The account comparison lists an \"End of Day\" trailing drawdown on Elite Evaluation, Elite Sim Funded, Instant Sim Funded and Ignite. Payout timing not stated in these articles.",
+          "source": "https://help.toponefutures.com/en/articles/10907430-understanding-the-profit-split-on-sim-funded-accounts",
+          "fields": [
+            "profitSplit",
+            "drawdownType"
+          ]
         }
       ],
       "setEntities": [
@@ -4108,13 +4765,18 @@
         {
           "label": "Top One Futures Elite Evaluation overview (official help)",
           "url": "https://help.toponefutures.com/en/articles/11020730-overview-of-the-elite-evaluation"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://help.toponefutures.com/en/articles/10907430-understanding-the-profit-split-on-sim-funded-accounts"
         }
       ],
       "set": {
-        "drawdownType": "Trailing",
+        "drawdownType": "EOD",
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 5269,
-        "trustpilotSourceUrl": "https://au.trustpilot.com/review/toponefutures.com?page=3"
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/toponefutures.com?page=3",
+        "profitSplit": 90
       },
       "setProducts": [
         {
@@ -4183,7 +4845,7 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-16",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15052,
@@ -4249,11 +4911,58 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.topstep.com/paid-lp",
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Existing McCrudden legal note corrected: a direct docket is already on file. Recorded the accessible snapshot cutoff and discovery/arbitration procedural steps without treating allegations as findings or claiming a current complete court record. No new incident or risk-level change.",
+          "source": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513",
+          "fields": [
+            "legalReview"
+          ]
         }
       ],
       "addIncidents": [
         "Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."
-      ]
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Topstep",
+          "quote": "\"$1.4B+ Paid out to traders\" — \"Total paid all time.\"",
+          "url": "https://www.topstep.com/paid-lp",
+          "firmReported": true
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Legal file clarified on 16 November 2026 using the already-listed McCrudden court docket. The accessible snapshot ends on 4 September 2026 and documents procedural steps, not a merits ruling. Topstep’s brokerage affiliate remains separate from its evaluation product. Company registrations, current regulator status and the previously reported data-breach signal were not reverified in this pass.",
+        "complaintsAndDisputes": [
+          "Public complaints include rules, payout eligibility, account restrictions and live-account conditions.",
+          "McCrudden v. Topstepfunded LLC et al., M.D. Fla. 3:26-cv-00816, filed 9 April 2026: the public docket snapshot was last retrieved 4 September 2026. The 10 August entry stays discovery pending the arbitration motion; the 4 September entry records mediator selection. These are procedural entries, not findings on the allegations.",
+          "A reported September 2025 data-breach signal involving personal data, including names and Social Security numbers, should be treated as a serious watch point until a direct breach-notice source is attached.",
+          "Regulator-warning searches were not refreshed in this scoped court-docket check."
+        ],
+        "redFlags": [
+          "Historic brand, but still a futures prop-firm model with simulated evaluation rules and payout constraints.",
+          "The linked McCrudden docket is a bounded procedural record; later developments and the underlying allegations require separate verification.",
+          "Reported data-breach signal needs an official breach notice or attorney-general filing before being treated as fully sourced.",
+          "Users must distinguish Topstep Prop, Topstep Brokerage and any FCM/brokerage partner before assuming regulatory protection."
+        ],
+        "sources": [
+          {
+            "label": "McCrudden v. Topstep — public docket snapshot through 4 September 2026",
+            "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513"
+          }
+        ]
+      }
     },
     "trade-the-pool": {
       "changelog": [
@@ -4306,7 +5015,7 @@
       ]
     },
     "tradeday": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-14",
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 1452,
@@ -4341,6 +5050,14 @@
             "profitSplit",
             "drawdownType",
             "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.tradeday.com/about",
+          "fields": [
+            "payoutProofs"
           ]
         }
       ],
@@ -4403,6 +5120,16 @@
           "hasConsistencyRule": true,
           "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
         }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "TradeDay about page",
+          "quote": "Timeline, December 2025: \"$10M+ in verified payouts\" (verifier not named)",
+          "url": "https://www.tradeday.com/about",
+          "firmReported": true
+        }
       ]
     },
     "tradefundrr": {
@@ -4442,11 +5169,12 @@
       ]
     },
     "tradeify": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-16",
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 6894,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co",
+        "payoutDelay": "Plan-specific: daily eligibility on Select Daily; Lightning requires its profit goal, consistency threshold and withdrawal cap. Earning the profit goal does not make that full amount withdrawable."
       },
       "changelog": [
         {
@@ -4473,12 +5201,50 @@
             "trustpilotReviewCount",
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://tradeify.co/",
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Homepage payout claim rechecked: the previously recorded $400 million figure remains displayed. It stays company-reported; no duplicate proof, independent verification claim, score or payout-risk change.",
+          "source": "https://tradeify.co/",
+          "fields": [
+            "payoutReview"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Lightning Funded policy clarified: profit target and withdrawal cap are different. Its 150K example requires $9,000 earned to unlock the first request, capped at $3,000 before the 90% trader share. Post-12 September 2025 accounts have 20%, 25%, then 30% consistency thresholds. Select daily-payment rules are separate.",
+          "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+          "fields": [
+            "payoutDelay"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "Tradeify help center: pricing reference (official)",
           "url": "https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference"
+        },
+        {
+          "label": "Tradeify — Lightning Funded payout requirements and withdrawal caps",
+          "url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Tradeify home page",
+          "quote": "\"Over $400 million in verified payouts\" (verifier not named)",
+          "url": "https://tradeify.co/",
+          "firmReported": true
         }
       ]
     },
@@ -4824,7 +5590,7 @@
       ]
     },
     "wsfunded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-26",
@@ -4848,13 +5614,30 @@
           "fields": [
             "profile"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official FAQ and home page read: static maximum drawdown on Classic and Ultra 2-Phase and Prime 1-Phase; Instant Pro \"Max total drawdown: 5%, trailing\"; Power \"Maximum Trailing Drawdown (FUNDED Phase Only) will be 6%\"; sizes \"5k, 10k, 25k, 50k and 100k\". Profit split differs by plan, so it is not changed.",
+          "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+          "fields": [
+            "drawdownType",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 4858,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com",
+        "drawdownType": "Hybride",
+        "payoutDelay": "Instant Pro: first payout after 15 days, then every 10 days; 1-Phase Power: \"first payout is available 14 days after becoming Funded\", then every 14 days"
+      },
+      "addSources": [
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://faq.wsfunded.com/en/articles/10719208-instant-pro"
+        }
+      ]
     },
     "crypto-fund-trader": {
       "reviewedAt": "2026-10-29",
@@ -5009,7 +5792,7 @@
       ]
     },
     "funded-bull": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-15",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -5027,18 +5810,32 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official Terms read: \"traders retain 90% of the profits\" (Lite plans 50/50; the discounted 1-Step promo plan 20% to the trader); drawdown \"Trailing\" on One-Step and \"Static\" on Two-Step and Three-Step; sizes \"from a minimum of $5,000 to a maximum of $250,000\"; RATERIGHT PTE. LTD., 68 Circular Road #02-01, Singapore 049422, Singapore law.",
+          "source": "https://fundedbull.com/terms/",
+          "fields": [
+            "profitSplit",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
-        "payoutDelay": "first payout request after the account has been held at least 14 days and 5 trading days are completed; trading is locked until the request is processed",
+        "payoutDelay": "\"Initial payouts are made after a 14-day period, with subsequent payouts processed within 7 days\" (Terms 5.2.3)",
         "trustpilotRating": 2.8,
         "trustpilotReviewCount": 15,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedbull.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedbull.com",
+        "profitSplit": 90
       },
       "addSources": [
         {
           "label": "FundedBull trading rules (official)",
           "url": "https://fundedbull.com/trading-rules/"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://fundedbull.com/terms/"
         }
       ]
     },
@@ -6304,6 +7101,14 @@
           "fields": [
             "commercialRelationship"
           ]
+        },
+        {
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (1 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://upcomers.com/payouts",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
@@ -6347,6 +7152,16 @@
       ],
       "addIncidents": [
         "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/upcomers.com)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-14",
+          "kind": "official",
+          "publisher": "Upcomers payouts page",
+          "quote": "\"We have paid out $11.1M+ to traders so far.\"",
+          "url": "https://upcomers.com/payouts",
+          "firmReported": true
+        }
       ]
     },
     "forexive": {
@@ -6625,6 +7440,118 @@
           "fields": [
             "listedDomainWarning"
           ]
+        }
+      ]
+    },
+    "funded-futures-network": {
+      "reviewedAt": "2026-11-15",
+      "set": {
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 560,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedfuturesnetwork.com",
+        "profitSplit": 80,
+        "drawdownType": "EOD",
+        "payoutDelay": "Sim Funded Pro: payouts \"can be requested the same day you're eligible\"; minimum $500, maximum $10,000 per payout (cumulative across accounts); Institution accounts: same-business-day payouts"
+      },
+      "setEntities": [
+        {
+          "name": "Funded Futures Network LLC",
+          "jurisdiction": "United States (New York address; state of formation not stated)",
+          "registeredAddress": "99 Wall Street #1660, New York, NY 10006, United States",
+          "role": "Company named in the official site copyright notice; the same address is on its claimed Trustpilot profile."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funded Futures Network official site (footer address)",
+          "url": "https://fundedfuturesnetwork.com/"
+        },
+        {
+          "label": "Funded Futures Network Trustpilot (claimed profile)",
+          "url": "https://www.trustpilot.com/review/fundedfuturesnetwork.com"
+        },
+        {
+          "label": "Official page read 2026-11-15",
+          "url": "https://fundedfuturesnetwork.com/faq"
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-15",
+          "summary": "Address read in the official site footer: \"99 Wall Street #1660, New York NY 10006\"; the claimed Trustpilot profile gives the same address (\"99 wall street, 10006, New York, United States\"). Legal form and state of formation are not stated, so no registration number is recorded.",
+          "source": "https://fundedfuturesnetwork.com/",
+          "fields": [
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Trustpilot read on the ca mirror: 3.5/5 (\"Average\") from 560 reviews, claimed profile.",
+          "source": "https://ca.trustpilot.com/review/fundedfuturesnetwork.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        },
+        {
+          "date": "2026-11-15",
+          "summary": "Official FAQ read: Sim Funded Pro \"has an 80/20 profit split\" (Institution accounts 90/10); \"Payouts can be requested the same day you're eligible\", \"Minimum withdrawal: $500\", \"Maximum withdrawal of $10,000 per user per payout\"; \"T1 News Events cannot be traded\"; \"Automated trading is allowed but at the discretion of FFN.\" Accounts page: end-of-day drawdown on MAX Standard. Legal name in the copyright notice: Funded Futures Network LLC.",
+          "source": "https://fundedfuturesnetwork.com/faq",
+          "fields": [
+            "profitSplit",
+            "drawdownType",
+            "payoutDelay",
+            "entities"
+          ]
+        }
+      ]
+    },
+    "x-funded": {
+      "reviewedAt": "2026-11-16",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "summary": "Initial 52/100 editorial profile: standard 1-Phase, standard 2-Phase and Instant Funding documented with original euro fees. Legal registrations, founding year, permissions and client payments remain unconfirmed. No earlier score is replaced.",
+          "source": "https://x-funded.com/terms-and-conditions/",
+          "fields": [
+            "initialReview",
+            "products",
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Affiliate-referred accounts have a 50% base profit split after the first approved payout across current and future accounts. The official policy also permits retroactive adjustments and limits the 100% add-on. PropRadar has no affiliation with X Funded.",
+          "source": "https://help.x-funded.com/payout-policy-dashboard/payout-split-policy/",
+          "fields": [
+            "initialReview"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Trustpilot shows 583 reviews and withholds the TrustScore for a guideline breach, with a review-removal notice. No old rating or invented removal count is used; review status is not treated as a payment failure.",
+          "source": "https://www.trustpilot.com/review/x-funded.com",
+          "fields": [
+            "initialReview"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company-reported payout total captured separately from independently verified transfers. The homepage amount is not used to mark customer payments as authenticated.",
+          "source": "https://x-funded.com/",
+          "fields": [
+            "payoutProofs"
+          ]
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "X Funded",
+          "quote": "The homepage reports more than $5 million earned by traders globally. This is an undated company total read on 16 November 2026; individual transfers and the aggregate were not independently authenticated.",
+          "url": "https://x-funded.com/",
+          "firmReported": true
         }
       ]
     }

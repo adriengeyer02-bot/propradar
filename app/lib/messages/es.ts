@@ -49,6 +49,17 @@ const es: Messages = {
       "method": "Método y fuentes"
     }
   },
+  "newsletter": {
+    "title": "Newsletter de PropRadar — próximamente",
+    "body": "Cambios de reglas, alertas de pagos y análisis independientes de prop firms.",
+    "email": "Tu correo electrónico",
+    "subscribe": "Suscribirme",
+    "consent": "Acepto recibir la newsletter de PropRadar.",
+    "privacy": "Política de privacidad",
+    "success": "Inscripción registrada. ¡Gracias!",
+    "already": "Este correo electrónico ya está inscrito.",
+    "error": "No se pudo completar la inscripción. Inténtalo de nuevo."
+  },
   "notice": {
     "title": "Esta página aún no está traducida.",
     "body": "Estás leyendo la versión en inglés. El radar, el comparador y las fichas de las firmas están disponibles en español.",
@@ -306,6 +317,10 @@ const es: Messages = {
     "globeTitle": "El globo PropRadar",
     "globeHint": "Arrastra para girarlo · rueda o doble clic para hacer zoom · haz clic en un logo para ver la firma",
     "globeZoom": "Zoom del globo",
+    "globePause": "Pausar la rotación",
+    "globeResume": "Reanudar la rotación",
+    "globeHud": { "preview": "Vista previa", "locked": "Perfil fijado", "jurisdictions": "Jurisdicciones de las entidades", "unknown": "No determinadas", "offer": "Oferta de socio", "available": "Disponible en la web de la firma", "offerNew": "Hasta {pct}% de descuento · nuevos clientes", "offerFirst": "{pct}% de descuento · primer pedido", "offerAll": "{pct}% de descuento · todos los desafíos", "offerSelected": "{pct}% de descuento · desafíos elegibles", "conditions": "Afiliación · verifica las condiciones al pagar.", "copy": "Copiar", "copied": "Código copiado", "copyFailed": "Selecciona y copia el código de arriba.", "seeOffer": "Ver oferta" },
+    "globeNoResults": "No se encontró ninguna firma. Prueba otro nombre.",
     "zoomIn": "Acercar",
     "zoomOut": "Alejar",
     "zoomReset": "Restablecer el zoom",
@@ -441,6 +456,15 @@ const es: Messages = {
     "countryAria": "País de la sociedad",
     "anyCountry": "Cualquier país",
     "countryUnknown": "País no identificado",
+    "eligibilityCountryAria": "Mi país de residencia",
+    "eligibilityAnyCountry": "Disponible en mi país…",
+    "eligibilityStatusAria": "Disponibilidad por país",
+    "eligibilityAnyStatus": "Todos los estados",
+    "eligibilityAvailable": "Admitido por la firma",
+    "eligibilityRestricted": "Excluido por la firma",
+    "eligibilityUnknown": "Sin verificar",
+    "eligibilityNote": "Según las condiciones publicadas por la firma; NO es una autorización legal. Cada programa y plataforma puede tener otras restricciones. KYC y pagos no están garantizados: verifica antes de comprar.",
+    "eligibilityEvidence": "Condiciones de admisión publicadas por la firma",
     "reset": "Restablecer",
     "showFirms": "Ver {n} firmas",
     "showFirm": "Ver 1 firma",
@@ -571,6 +595,12 @@ const es: Messages = {
       "Legal entity": "Entidad legal"
     },
     "sendSource": "Envíanos una fuente",
+    "sourceForm": {
+      "title": "Compartir una fuente", "intro": "Ayúdanos a verificar esta firma. Envía un enlace público a pruebas, reglas o pagos.",
+      "url": "Enlace público", "detail": "¿Qué demuestra esta fuente? (opcional)", "submit": "Enviar fuente", "sending": "Enviando…", "cancel": "Cancelar", "close": "Cerrar",
+      "success": "¡Gracias! Tu fuente se ha guardado para su revisión editorial.", "error": "El formulario no está disponible temporalmente.", "gmail": "Enviar por Gmail",
+      "privacy": "El enlace y el comentario son privados y no se publican automáticamente."
+    },
     "navLabel": "Navegación de la ficha",
     "nav": {
       "offers": "Ofertas",
@@ -697,6 +727,7 @@ const es: Messages = {
     "nothingRecorded": "Nada registrado en esta comprobación.",
     "reviewsEyebrow": "Reseñas y pagos",
     "reviewsTitle": "Lo que cuentan los traders",
+    "payoutProofs": { "title": "Pruebas públicas de pagos", "intro": "Solo fuentes fechadas y enlazadas. Una cifra publicada por la propia firma se marca como declarada por la firma: PropRadar no la ha auditado.", "official": "Página oficial de la firma", "press": "Prensa especializada", "onchain": "Datos on-chain", "firmReported": "declarado por la firma", "independent": "recuento independiente" },
     "payoutRisk": "Riesgo de pago",
     "payoutCheck": "Revisión de pagos",
     "withheldShort": "Valoración retenida por Trustpilot.",

@@ -2,6 +2,28 @@ import type { GuideTranslations } from './types';
 
 /** Spanish guide summaries (translated from the English guides). */
 const es: GuideTranslations = {
+  'hyrotrader-vs-tradeify': {
+    "title": "HyroTrader vs Tradeify: drawdown, reglas y pagos",
+    "metaDescription": "Compara HyroTrader y Tradeify: cripto o futuros, pérdida diaria, drawdown EOD, consistencia y condiciones del primer pago.",
+    "eyebrow": "Cripto y futuros",
+    "h1": "HyroTrader vs Tradeify: drawdown y gestión del riesgo",
+    "answer": "HyroTrader se centra en cripto y Tradeify en futuros cotizados. Compara mercado, pérdida diaria, drawdown total y condiciones del programa exacto. El cálculo EOD de Tradeify no elimina la vigilancia del umbral durante la sesión.",
+    "checks": [
+      "Elige instrumentos y plataforma antes de comparar precios.",
+      "Separa pérdida diaria, pérdida total y consistencia de los pagos.",
+      "Comprueba programa, fase y fecha de compra."
+    ],
+    "faq": [
+      {
+        "question": "¿Es mejor HyroTrader o Tradeify?",
+        "answer": "Primero importa el mercado: cripto con HyroTrader y futuros con Tradeify. Después compara las reglas del programa y el camino hasta el primer retiro."
+      },
+      {
+        "question": "¿El drawdown EOD permite superar el umbral intradía?",
+        "answer": "No. Tradeify actualiza el umbral al cierre, pero controla el valor de liquidación en tiempo real. Tocarlo puede cerrar la cuenta inmediatamente."
+      }
+    ]
+  },
   'meilleure-prop-firm-2026': {
     title: 'Las mejores prop firms ahora: ranking por riesgo (2026)',
     metaDescription: '¿Cuáles son hoy las mejores prop firms? Compara a los líderes actuales por fiabilidad de pagos, claridad de reglas, pruebas legales, drawdown y señales de la comunidad.',

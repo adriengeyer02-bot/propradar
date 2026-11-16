@@ -1,6 +1,142 @@
 {
   "version": 1,
   "firms": {
+    "bullwaves-prime": {
+      "checkedOn": "2026-11-16",
+      "programs": [
+        {
+          "name": "1 Step Challenge", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://prime.bullwaves.com/pricing",
+          "note": "Published fees before add-ons; 10% target, 4% daily drawdown and 8% maximum drawdown. Prices checked 16 November 2026.",
+          "rows": [
+            { "size": 5000, "price": 89 }, { "size": 10000, "price": 149 }, { "size": 25000, "price": 329 },
+            { "size": 50000, "price": 449 }, { "size": 100000, "price": 649 }, { "size": 200000, "price": 1199 }, { "size": 400000, "price": 2199 }
+          ]
+        },
+        {
+          "name": "2 Step Challenge", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://prime.bullwaves.com/pricing",
+          "note": "Published fees before add-ons. Accounts purchased from 12 November 2026 use the updated 8% static maximum drawdown; old accounts retain their purchase-date rules.",
+          "rows": [
+            { "size": 5000, "price": 59 }, { "size": 10000, "price": 99 }, { "size": 25000, "price": 199 },
+            { "size": 50000, "price": 299 }, { "size": 100000, "price": 549 }, { "size": 200000, "price": 999 }
+          ]
+        }
+      ]
+    },
+    "miltraders": {
+      "checkedOn": "2026-11-16",
+      "programs": [
+        {
+          "name": "Zero",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
+          "note": "Regular list prices before the public MIL50 promotion. No activation fee; resets are separate purchases.",
+          "rows": [
+            { "size": 50000, "price": 250 },
+            { "size": 100000, "price": 378 },
+            { "size": 150000, "price": 658 }
+          ]
+        },
+        {
+          "name": "Pro",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
+          "note": "Regular list prices before MIL50. The displayed promotional prices on 16 November were $94.99 / $159.99 / $219.99; availability and final checkout price may change.",
+          "rows": [
+            { "size": 50000, "price": 189.98 },
+            { "size": 100000, "price": 319.98 },
+            { "size": 150000, "price": 439.98 }
+          ]
+        },
+        {
+          "name": "Instant",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
+          "note": "Regular list prices before the public MIL30 promotion. Simulated funded access; withdrawal profit goals and payout caps still apply.",
+          "rows": [
+            { "size": 50000, "price": 500 },
+            { "size": 100000, "price": 643 },
+            { "size": 150000, "price": 800 }
+          ]
+        }
+      ]
+    },
+    "x-funded": {
+      "checkedOn": "2026-11-16",
+      "programs": [
+        {
+          "name": "1-Phase Challenge — standard",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://x-funded.com/",
+          "note": "Published euro fees before add-ons; simulated account sizes are in US dollars. Zero and Bybit fee schedules are outside this captured table.",
+          "rows": [
+            { "size": 10000, "price": 115 },
+            { "size": 25000, "price": 245 },
+            { "size": 50000, "price": 399 },
+            { "size": 100000, "price": 599 },
+            { "size": 200000, "price": 1155 },
+            { "size": 300000, "price": 1749 }
+          ]
+        },
+        {
+          "name": "2-Phase Challenge — standard",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://x-funded.com/",
+          "note": "Published euro fees before add-ons; simulated account sizes are in US dollars. Referral-specific payout conditions apply independently of the entry fee.",
+          "rows": [
+            { "size": 10000, "price": 89 },
+            { "size": 25000, "price": 189 },
+            { "size": 50000, "price": 299 },
+            { "size": 100000, "price": 449 },
+            { "size": 200000, "price": 889 },
+            { "size": 300000, "price": 1349 }
+          ]
+        },
+        {
+          "name": "Instant Funding",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://x-funded.com/instant-funding/",
+          "note": "Displayed euro fees for the undated one-month anniversary offer; recheck availability. Account sizes are in US dollars.",
+          "rows": [
+            { "size": 2000, "price": 249 },
+            { "size": 5000, "price": 299 },
+            { "size": 10000, "price": 399 },
+            { "size": 25000, "price": 545 },
+            { "size": 50000, "price": 899 },
+            { "size": 100000, "price": 1550 },
+            { "size": 200000, "price": 2899 }
+          ]
+        }
+      ]
+    },
+    "foxx-funded": {
+      "checkedOn": "2026-11-15",
+      "programs": [
+        {
+          "name": "1-Step Evaluation",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://www.foxx-funded.com/",
+          "note": "Euro fees before codes and add-ons; simulated account sizes are in US dollars. Instant Funding prices were not confirmed.",
+          "rows": [
+            { "size": 10000, "price": 109 },
+            { "size": 25000, "price": 265 },
+            { "size": 50000, "price": 359 },
+            { "size": 100000, "price": 549 },
+            { "size": 200000, "price": 969 },
+            { "size": 300000, "price": 1345 },
+            { "size": 500000, "price": 1990 }
+          ]
+        }
+      ]
+    },
     "topstep": {
       "checkedOn": "2026-11-09",
       "programs": [

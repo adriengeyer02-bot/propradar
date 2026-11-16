@@ -17,6 +17,7 @@ export type ComparatorFirm = Pick<
   | 'score'
   | 'bestFor'
   | 'priceFrom'
+  | 'nativePriceFrom'
   | 'noEntryFee'
   | 'profitSplit'
   | 'drawdownType'
@@ -45,6 +46,7 @@ export function toComparatorFirm(firm: PropFirm): ComparatorFirm {
     score: firm.score,
     bestFor: firm.bestFor,
     priceFrom: firm.priceFrom,
+    nativePriceFrom: firm.nativePriceFrom,
     noEntryFee: firm.noEntryFee,
     profitSplit: firm.profitSplit,
     drawdownType: firm.drawdownType,

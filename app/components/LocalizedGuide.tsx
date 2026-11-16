@@ -10,11 +10,11 @@ import { guideLanguageAlternates, localizedGuidePath, getGuideTranslation, type 
 import { HTML_LANG, OG_LOCALE, localePath, type Locale } from '../lib/locales';
 import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import { getFirmBySlug, hasPayoutRiskSignal, type PropFirm } from '../lib/propFirms';
-import { getGuideLastModified, getRelatedGuides, getSeoGuidePath, selectGuideFirms, type SeoGuide } from '../lib/seoGuides';
+import { getGuideLastModified, getGuidePublishedAt, getRelatedGuides, getSeoGuidePath, selectGuideFirms, type SeoGuide } from '../lib/seoGuides';
 import { FOUNDER, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from './IntentLink';
+import LanguageLink from './LanguageLink';
 
-const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 const TABLE_ROWS = 25;
 
 /** Guides comparing two named firms (same map as the English page). */
@@ -45,7 +45,7 @@ export function localizedGuideMetadata(locale: Locale, guide: SeoGuide, translat
       type: 'article',
       siteName: SITE_NAME,
       locale: OG_LOCALE[locale],
-      publishedTime: GUIDE_LIBRARY_PUBLISHED_AT,
+      publishedTime: getGuidePublishedAt(guide),
       modifiedTime: getGuideLastModified(guide).toISOString(),
     },
     twitter: { card: 'summary_large_image', title: translation.title, description: translation.metaDescription },
@@ -101,7 +101,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
     description: translation.metaDescription,
     inLanguage: HTML_LANG[locale],
     url: pageUrl,
-    datePublished: GUIDE_LIBRARY_PUBLISHED_AT,
+    datePublished: getGuidePublishedAt(guide),
     dateModified: modified.toISOString(),
     image: `${SITE_URL}${englishPath === '/best-prop-firms' ? '/guides/meilleure-prop-firm-2026' : englishPath}/opengraph-image`,
     author: [
@@ -246,7 +246,7 @@ export default function LocalizedGuide({ locale, guide, translation }: { locale:
           <p className="section-note">{g.englishText}</p>
           <ul className="pr-quick-links">
             <li>
-              <Link href={englishPath} hrefLang="en">{g.englishLink} <span aria-hidden="true">→</span></Link>
+              <LanguageLink href={englishPath} locale="en">{g.englishLink} <span aria-hidden="true">→</span></LanguageLink>
             </li>
           </ul>
         </aside>

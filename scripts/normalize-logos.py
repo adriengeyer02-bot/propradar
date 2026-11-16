@@ -35,7 +35,8 @@ SIZE = 192
 MIN_PX = 96
 PAD = 0.16
 DARK_TILE = (11, 17, 26, 255)
-EXCLUDE: set[str] = set()
+# Checked by hand on 2026-11-15: the Trustpilot logo is a wide wordmark that crops badly.
+EXCLUDE: set[str] = {"sure-leverage"}
 # Checked by hand on 2026-11-06 (same mark as the firm's site header or name).
 ALLOW_SMALL = {"dna-funded", "quant-tekel", "thinkcapital", "directfundedtrader", "hola-prime"}
 SMALL_PX = 64
@@ -47,6 +48,29 @@ LOGO_IMG_OK = {
     "bulenox": "bulenox.com/assets/logo-",
     "daytraders-com": "daytraders.com/assets/images/logo/logo.svg",
     "atfunded": "atfunded.com/ATfunded_Logo_white.png",
+    # Checked by hand on 2026-11-15: the logo the firm uploaded to its claimed Trustpilot profile.
+    "algo-forex-funds": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "blueberry-funded": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "fidelcrest": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "fundedlions": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "fundings4u": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "funds-for-traders": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "fxci": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "fxrk": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "getcryptofunded": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "glow-node": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "klein-funding-crypto": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "leveled-up-society": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "mifunder": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "myfxcapital": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "next-step-funded": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "one-of-one-funding": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "optimal-traders": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "purdia-capital": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "rocket21-challenge": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "the-forex-funder": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "tribe-funded": "s3-eu-west-1.amazonaws.com/tpd/logos/",
+    "funder-trading": "fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq",
 }
 # Wide wordmarks: keep only the symbol at the left (fraction of the content
 # width), so the mark stays readable in a small square tile. Checked by hand.
@@ -243,6 +267,8 @@ def main():
         source = item["saved"]["url"]
         if item["saved"]["kind"] == "gstatic":
             source = f"favicon service for {item['domain']}"
+        elif "amazonaws.com/tpd/logos/" in source:
+            source = f"{source} (logo uploaded by the firm to its claimed Trustpilot profile)"
         entries.append((item["domain"], slug, source))
 
     lines = [

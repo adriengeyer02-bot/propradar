@@ -11,6 +11,7 @@ import ThemeToggle from '../components/ThemeToggle';
 import RouteTransition from '../components/RouteTransition';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import LocaleNotice from '../components/LocaleNotice';
+import NewsletterSignup from '../components/NewsletterSignup';
 import { notFound } from 'next/navigation';
 import { HTML_LANG, OG_LOCALE, isLocale, localePath, type Locale } from '../lib/locales';
 import { fmt, getMessages } from '../lib/messages';
@@ -262,6 +263,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="/feed.xml">{c.footer.feed}</a>
                 <Link href="/fr/articles" hrefLang="fr">{c.footer.frGuides}</Link>
               </nav>
+            </div>
+            <div className="container newsletter-footer-row">
+              <NewsletterSignup locale={locale} copy={t.newsletter} />
             </div>
             <div className="container footer-bottom">
               <span>{c.footer.bottom}</span>

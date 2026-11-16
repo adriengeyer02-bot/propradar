@@ -5,6 +5,79 @@ import type { GuideTranslations } from './types';
  * article (/fr/<slug>) are not repeated here: /fr/guides/<slug> redirects to it.
  */
 const fr: GuideTranslations = {
+  'hyrotrader-vs-tradeify': {
+    "title": "HyroTrader vs Tradeify : drawdown, règles et paiements",
+    "metaDescription": "Comparez HyroTrader et Tradeify : crypto ou futures, pertes journalières, drawdown EOD, consistance et conditions du premier payout.",
+    "eyebrow": "Crypto et futures",
+    "h1": "HyroTrader vs Tradeify : comparer le drawdown et la gestion du risque",
+    "answer": "HyroTrader vise le trading crypto et Tradeify les futures cotés. Comparez le marché, les limites journalières, le drawdown total et les conditions du programme précis. Chez Tradeify, le calcul EOD du drawdown ne supprime pas son contrôle pendant la séance.",
+    "checks": [
+      "Choisissez les instruments et la plateforme avant de comparer les prix.",
+      "Distinguez perte journalière, perte totale et consistance de payout.",
+      "Vérifiez le programme, la phase du compte et la date d’achat."
+    ],
+    "faq": [
+      {
+        "question": "HyroTrader ou Tradeify : laquelle choisir ?",
+        "answer": "Le marché vient en premier : crypto chez HyroTrader, futures chez Tradeify. Comparez ensuite les règles du programme et le chemin vers un premier retrait, sans déduire un gagnant global du seul score."
+      },
+      {
+        "question": "Un drawdown EOD autorise-t-il une violation en séance ?",
+        "answer": "Non. Tradeify actualise le seuil en fin de journée mais surveille la valeur liquidative en temps réel. Toucher le seuil peut fermer le compte immédiatement."
+      }
+    ],
+    "article": {
+      "intro": "Cette comparaison utilise les règles officielles consultées le 15 novembre 2026. Elle distingue les conditions publiées des preuves de paiement authentifiées et compare des marchés différents.",
+      "sections": [
+        {
+          "heading": "Choisir le marché avant le programme",
+          "paragraphs": [
+            "HyroTrader décrit des comptes simulés sur le marché crypto. Tradeify propose des programmes de futures ; Lightning commence sur un compte simulé. Vérifiez les instruments, la plateforme, les horaires et votre éligibilité géographique avant de comparer un montant de compte affiché."
+          ]
+        },
+        {
+          "heading": "HyroTrader : calculer le plancher journalier",
+          "paragraphs": [
+            "Le seuil part de l’equity à 00:00 UTC, diminuée d’un pourcentage du solde initial : Core et Instant 3 %, One-Step 4 %, Two-Step 5 %. Les positions ouvertes et les frais entrent dans l’equity. Le seuil ne suit pas les nouveaux plus hauts pendant la journée.",
+            "Exemple pédagogique : sur un Instant de 10 000 $ avec 10 300 $ d’equity au début du jour, la marge journalière est de 300 $ et le seuil de 10 000 $. La limite totale et la règle de perte par trade restent des contrôles distincts."
+          ]
+        },
+        {
+          "heading": "Tradeify : EOD ne signifie pas contrôle uniquement à la clôture",
+          "paragraphs": [
+            "Le plancher suiveur se recalcule sur les plus hauts soldes de clôture, mais son respect est contrôlé en temps réel. Exemple : 50 000 $ avec 2 000 $ de drawdown donne 48 000 $ de seuil initial ; une clôture à 51 000 $ le remonte à 49 000 $. Toucher ce seuil en séance peut fermer le compte, même si le marché remonte ensuite.",
+            "Les comptes simulés financés disposent d’un mécanisme de verrouillage du seuil ; les évaluations n’ont pas le même fonctionnement. Consultez le produit exact."
+          ]
+        },
+        {
+          "heading": "La consistance dépend de la phase et du dénominateur",
+          "paragraphs": [
+            "Sur Core, One-Step et Two-Step, HyroTrader plafonne la contribution quotidienne comptabilisée à 40 % de l’objectif d’évaluation. Chez Tradeify SELECT, les 40 % comparent la meilleure journée au profit total ; Growth n’a pas cette consistance en évaluation.",
+            "En phase financée, Tradeify indique 35 % pour Growth, aucune consistance en pourcentage pour SELECT et 20 %, puis 25 %, puis 30 % pour les nouveaux Lightning. Les anciens Lightning peuvent conserver 20 %. Les règles d’Instant ne se déduisent pas de celles d’une évaluation."
+          ]
+        },
+        {
+          "heading": "Hyro Instant et Lightning : conditions du premier retrait",
+          "paragraphs": [
+            "Hyro Instant demande trois jours de trading répondant à une définition précise et au moins 25 $ de profit après partage pour le premier payout. Le profit comptabilisé par retrait est plafonné à 5 % du solde initial. Le partage commence à 80 %, avec une éventuelle hausse discrétionnaire.",
+            "Le Lightning 50 000 $ publié par Tradeify demande 3 000 $ de profit pour débloquer la première demande, plafonnée à 2 000 $ avant partage à 90 %. Une demande de 2 000 $ représente ainsi 1 800 $ pour le trader, sous réserve des autres conditions. Les objectifs suivants demandent de nouveaux profits."
+          ]
+        },
+        {
+          "heading": "Préparer sa gestion du risque",
+          "paragraphs": [
+            "Notez les deux seuils de perte, l’heure de réinitialisation et la phase du compte. Testez les pertes flottantes, les commissions, une série de pertes et l’effet d’un retrait sur la marge restante. Conservez la version des règles applicable à votre achat."
+          ]
+        },
+        {
+          "heading": "Comparer un programme plutôt que désigner un gagnant global",
+          "paragraphs": [
+            "Partez des instruments dont votre stratégie a besoin, puis comparez les limites de perte et toutes les étapes du premier payout. Les conditions publiées ne démontrent ni la solvabilité de la firme ni l’authenticité d’un paiement client. Les sources officielles figurent ci-dessous."
+          ]
+        }
+      ]
+    }
+  },
   'meilleure-prop-firm-futures': {
     title: 'Meilleure prop firm futures : Topstep, Apex et les autres',
     metaDescription: 'Comparez les prop firms futures : règles de paiement, drawdown suiveur, frais, plateformes et signaux de risque récents chez Topstep, Apex, TPT et leurs alternatives.',

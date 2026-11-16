@@ -41,6 +41,7 @@ import { FOUNDER, SITE_NAME, SITE_URL } from '../../../lib/site';
 import {
   SEO_RESEARCH_DATE,
   getGuideLastModified,
+  getGuidePublishedAt,
   getSeoGuideDisplay,
   getSeoGuidePath,
   getRelatedGuides,
@@ -53,7 +54,6 @@ import {
 import IntentLink from '../../../components/IntentLink';
 
 export const revalidate = 86400;
-const GUIDE_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -114,7 +114,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${SITE_URL}${canonicalPath}`,
       type: 'article',
       siteName: SITE_NAME,
-      publishedTime: GUIDE_LIBRARY_PUBLISHED_AT,
+      publishedTime: getGuidePublishedAt(guide),
       modifiedTime: modifiedDate,
       authors: [`${SITE_URL}/audit`],
       tags: displayGuide.primaryKeywords,
@@ -291,6 +291,14 @@ function guideAnswerParagraphs(guide: NonNullable<ReturnType<typeof getSeoGuideB
     ];
   }
 
+  if (guide.slug === 'hyrotrader-vs-tradeify') {
+    return [
+      guide.answer,
+      'HyroTrader’s daily reset and Tradeify’s EOD update describe different parts of risk control. Both still require the trader to respect the applicable loss floor during the session.',
+      'Choose the instrument first, then compare evaluation rules with funded-stage and withdrawal rules. Hyro Instant and Lightning Funded skip evaluation, but use different first-payout conditions.',
+    ];
+  }
+
   if (guide.intent === 'comparer' && first && second) {
     return [
       `If you are hesitating between ${first.name} and ${second.name}, start with the question that actually matters: which offer can you follow for several weeks without forcing your trading style? The right choice depends on drawdown, funded-stage fees, payout schedule, news/EA rules and platform.`,
@@ -360,6 +368,14 @@ function guideAnswerParagraphs(guide: NonNullable<ReturnType<typeof getSeoGuideB
 function guideDecisionCards(guide: NonNullable<ReturnType<typeof getSeoGuideBySlug>>, firms: PropFirm[]) {
   const first = firms[0];
   const second = firms[1];
+
+  if (guide.slug === 'hyrotrader-vs-tradeify') {
+    return [
+      { label: 'Crypto strategy', text: 'Read HyroTrader’s supported instruments, daily reset and program-specific payout conditions.' },
+      { label: 'Futures strategy', text: 'Read Tradeify’s session rules, EOD loss floor and the payout policy for the exact funded account.' },
+      { label: 'Compare equivalent rules', text: 'Keep daily loss, total loss, evaluation consistency and withdrawal eligibility separate. Neither firm is the default winner across markets.' },
+    ];
+  }
 
   if (guide.intent === 'comparer' && first && second) {
     return [
@@ -1257,6 +1273,7 @@ export default async function SeoGuidePage({ params }: Props) {
   const firms = selectGuideFirms(guide, 10);
   const displayGuide = getSeoGuideDisplay(guide);
   const guideArticle = getGuideArticle(guide.slug);
+  const programSourceDate = guide.programComparison && guideArticle ? guideArticle.updated : SEO_RESEARCH_DATE;
   const frPair = getFrArticleByEnPath(getSeoGuidePath(guide));
   const guideVisual = getGuideVisual(guide.slug);
   const editorial = getGuideEditorial(guide.slug);
@@ -1320,7 +1337,7 @@ export default async function SeoGuidePage({ params }: Props) {
   const guideLegalWatchCount = firms.filter(isLegalWatchFirm).length;
   const guideDeepSourceCount = firms.filter((firm) => legalSourceCount(firm) >= 5).length;
   const guidePayoutWatchCount = firms.filter((firm) => hasPayoutRiskSignal(firm)).length;
-  const guideCitations = guideCaseFiles.length > 0
+  const backgroundCitations = guideCaseFiles.length > 0
     ? guideCaseFiles.flatMap(({ caseFile }) => caseFile.sources.map((source) => source.url))
     : isConsistencyGuide
     ? [
@@ -1344,6 +1361,7 @@ export default async function SeoGuidePage({ params }: Props) {
             'https://www.the5ers.com/futures/',
           ]
         : firms.flatMap((firm) => firm.sources.map((source) => source.url)).filter((url) => !isAffiliateUrl(url)).slice(0, 8);
+  const guideCitations = [...new Set([...backgroundCitations, ...(guideArticle?.sources ?? []).map((source) => source.url)])];
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -1353,7 +1371,7 @@ export default async function SeoGuidePage({ params }: Props) {
     url: pageUrl,
     inLanguage: 'en',
     isAccessibleForFree: true,
-    datePublished: GUIDE_LIBRARY_PUBLISHED_AT,
+    datePublished: getGuidePublishedAt(guide),
     dateModified: modifiedDate.toISOString(),
     image: [
       {
@@ -1869,7 +1887,7 @@ export default async function SeoGuidePage({ params }: Props) {
           <div>
             <dt>Freshness</dt>
             <dd>
-              Article updated <time dateTime={modifiedDate.toISOString()}>{modifiedDateLabel}</time>; core program sources checked {SEO_RESEARCH_DATE}
+              Article updated <time dateTime={modifiedDate.toISOString()}>{modifiedDateLabel}</time>; core program sources checked {programSourceDate}
               {guideCaseFiles.length > 0 ? <>; linked case files rechecked {AUDIT_CASE_FILES_UPDATED_AT}</> : null}.
             </dd>
           </div>
@@ -2127,7 +2145,19 @@ export default async function SeoGuidePage({ params }: Props) {
           </div>
           <p className="section-note">{editorial.comparisonNote}</p>
         </div>
-        {isBestRankingGuide || isNoChallengeGuide || isBeginnerGuide || isReviewSignalsGuide || isFtmoAlternativesGuide || isGftGuide ? (
+        {displayGuide.programComparison ? (
+          <div className="guide-article">
+            <figure className="ga-compare"><table aria-label={editorial.comparisonHeading}>
+              <thead><tr>{displayGuide.programComparison.columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr></thead>
+              <tbody>
+                {displayGuide.programComparison.rows.map((row) => (
+                  <tr key={row.label}><th scope="row">{row.label}</th>{row.values.map((value, index) => <td key={index}>{value}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+            <figcaption>{displayGuide.programComparison.note}</figcaption></figure>
+          </div>
+        ) : isBestRankingGuide || isNoChallengeGuide || isBeginnerGuide || isReviewSignalsGuide || isFtmoAlternativesGuide || isGftGuide ? (
           <div className="best-ranking-table">
             <div className="best-ranking-row best-ranking-head">
               <span>Firm</span>
