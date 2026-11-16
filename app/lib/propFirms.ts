@@ -207,6 +207,10 @@ export const GOAT_FUNDED_TRADER_AFFILIATE_URL = 'https://app.goatfundedtrader.co
 export const THE5ERS_AFFILIATE_URL = 'https://www.the5ers.com/?afmc=1cuh';
 export const E8_AFFILIATE_URL = 'https://e8markets.com/d/A4DE0965';
 export const FXIFY_AFFILIATE_URL = 'https://trader.fxify.com/purchasechallenge?affiliateId=8924';
+/** Fintokei affiliate link issued to PropRadar, confirmed by Geyer on 2026-11-16. */
+export const FINTOKEI_AFFILIATE_URL = 'https://www.fintokei.com/?affiliate=2534';
+/** Geo-aware outbound redirect to the regional version of the same affiliate link. */
+export const FINTOKEI_TRACKING_PATH = '/out/fintokei';
 /** Partner code issued to PropRadar by FXIFY (25% off all programs, per FXIFY), received 2026-11-14. */
 export const FXIFY_PROMO_CODE = 'FXIFY0EVDNU';
 export const UPCOMERS_AFFILIATE_URL = 'https://www.upcomers.com/fr/?code=kkscxhro#challenges';
@@ -219,7 +223,7 @@ export const UPCOMERS_PROMO_CODE = 'kkscxhro';
 export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL, ONEFUNDED_AFFILIATE_URL, CTI_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, FINTOKEI_AFFILIATE_URL, FINTOKEI_TRACKING_PATH, UPCOMERS_AFFILIATE_URL, ONEFUNDED_AFFILIATE_URL, CTI_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -2615,6 +2619,9 @@ const corePropFirms: PropFirm[] = [
     recentRuleChange: false,
     logoDomain: 'fintokei.com',
     communitySignal: 'A more institutional and less promotion-driven public signal.',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote: 'PropRadar may receive a commission when a visitor purchases through its Fintokei affiliate link (confirmed by PropRadar on 16 November 2026). The link uses Fintokei\'s regional site for Czechia, Japan, Italy, Poland and Slovakia; other locations use English, while restricted locations go to the official eligibility FAQ. Fintokei also checks residence and citizenship. This relationship does not affect the independent score or warnings.',
+    partnerOffer: { href: FINTOKEI_TRACKING_PATH, checkedOn: '2026-11-16' },
     products: [
       product({
         id: 'fintokei-challenges',
@@ -2625,7 +2632,7 @@ const corePropFirms: PropFirm[] = [
         profitSplit: 'up to 95% depending on the program',
         platforms: ['MT4', 'MT5'],
         tradableAssets: ['Forex', 'Indices', 'Metals'],
-        linkToStart: 'https://www.fintokei.com/',
+        linkToStart: FINTOKEI_TRACKING_PATH,
       }),
     ],
     lastReviewed: '2026-07-13',

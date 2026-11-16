@@ -3333,3 +3333,29 @@ html body .header-actions .site-search-input { width: 100%; min-width: 0; }
 
 /* Score capped by a rule (Trustpilot rating withheld): stated under the decision. */
 .pr-score-cap { margin: 6px 0 0; font-size: 12.5px; line-height: 1.45; color: var(--muted); max-width: 34ch; }
+
+/* Newsletter opt-in: part of the footer, never a floating overlay. */
+.newsletter-footer-row { display: flex; justify-content: flex-end; padding-bottom: 26px; }
+.pr-newsletter { width: min(100%, 410px); padding: 19px 20px 13px; border: 1px solid rgba(91, 128, 152, 0.45); border-radius: 14px; background: #102135; color: #eaf4f8; }
+.pr-newsletter h2 { margin: 0 0 6px; color: #fff; font-size: 17px; line-height: 1.35; font-weight: 800; }
+.pr-newsletter p { margin: 0 0 13px; color: #b4c6d5; font-size: 13px; line-height: 1.5; }
+.pr-newsletter-controls { display: flex; gap: 8px; }
+.pr-newsletter-controls input[type='email'] { width: 100%; min-width: 0; flex: 1 1 auto; padding: 10px 11px; border-radius: 8px; border: 1px solid #60748a; background: #f8fafc; color: #102135; font: inherit; font-size: 13px; }
+.pr-newsletter-controls input:focus-visible, .pr-newsletter button:focus-visible, .pr-newsletter a:focus-visible { outline: 3px solid #36d6e7; outline-offset: 2px; }
+.pr-newsletter button { flex: none; min-height: 41px; padding: 9px 12px; border: 0; border-radius: 8px; background: #36d6e7; color: #07121e; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; }
+.pr-newsletter button:hover:not(:disabled) { background: #7deaf4; }
+.pr-newsletter button:disabled { opacity: .65; cursor: not-allowed; }
+.pr-newsletter-consent { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; color: #b4c6d5; font-size: 11px; line-height: 1.5; cursor: pointer; }
+.pr-newsletter-consent input { flex: none; width: 15px; height: 15px; margin: 1px 0 0; accent-color: #36d6e7; }
+.pr-newsletter-consent a { color: #b4f7fb; text-decoration: underline; text-underline-offset: 2px; }
+.pr-newsletter .pr-newsletter-status { min-height: 17px; margin: 8px 0 0; color: #82e8c4; font-weight: 700; }
+.pr-newsletter .pr-newsletter-status.is-error { color: #ffb4b4; }
+.pr-newsletter-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.pr-newsletter-honey { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 600px) {
+  .newsletter-footer-row { justify-content: stretch; padding-bottom: 22px; }
+  .pr-newsletter { width: 100%; }
+  .pr-newsletter-controls { flex-wrap: wrap; }
+  .pr-newsletter-controls input[type='email'] { flex-basis: 100%; }
+  .pr-newsletter button { width: 100%; }
+}

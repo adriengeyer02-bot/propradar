@@ -49,6 +49,17 @@ const de: Messages = {
       method: 'Methode und Quellen',
     },
   },
+  newsletter: {
+    title: 'PropRadar-Newsletter — demnächst',
+    body: 'Regeländerungen, Auszahlungswarnungen und unabhängige Prop-Firm-Analysen.',
+    email: 'Ihre E-Mail-Adresse',
+    subscribe: 'Eintragen',
+    consent: 'Ich möchte den PropRadar-Newsletter erhalten.',
+    privacy: 'Datenschutz',
+    success: 'Ihre Anmeldung wurde gespeichert. Danke!',
+    already: 'Diese E-Mail-Adresse ist bereits eingetragen.',
+    error: 'Anmeldung fehlgeschlagen. Bitte erneut versuchen.',
+  },
   notice: {
     title: 'Diese Seite ist noch nicht übersetzt.',
     body: 'Sie lesen die englische Version. Das Radar, der Vergleich und die Firmenseiten sind auf Deutsch verfügbar.',

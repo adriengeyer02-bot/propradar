@@ -49,6 +49,17 @@ const es: Messages = {
       "method": "Método y fuentes"
     }
   },
+  "newsletter": {
+    "title": "Newsletter de PropRadar — próximamente",
+    "body": "Cambios de reglas, alertas de pagos y análisis independientes de prop firms.",
+    "email": "Tu correo electrónico",
+    "subscribe": "Suscribirme",
+    "consent": "Acepto recibir la newsletter de PropRadar.",
+    "privacy": "Política de privacidad",
+    "success": "Inscripción registrada. ¡Gracias!",
+    "already": "Este correo electrónico ya está inscrito.",
+    "error": "No se pudo completar la inscripción. Inténtalo de nuevo."
+  },
   "notice": {
     "title": "Esta página aún no está traducida.",
     "body": "Estás leyendo la versión en inglés. El radar, el comparador y las fichas de las firmas están disponibles en español.",

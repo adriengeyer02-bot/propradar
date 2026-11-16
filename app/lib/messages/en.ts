@@ -53,6 +53,17 @@ const en = {
       method: 'Method and sources',
     },
   },
+  newsletter: {
+    title: 'PropRadar newsletter — coming soon',
+    body: 'Trading-rule changes, payout alerts and independent prop firm research. Be first to know.',
+    email: 'Your email address',
+    subscribe: 'Join the list',
+    consent: 'I agree to receive the PropRadar newsletter.',
+    privacy: 'Privacy policy',
+    success: 'You are on the list. Thank you!',
+    already: 'This email address is already registered.',
+    error: 'Registration failed. Please try again.',
+  },
   notice: {
     title: 'This page is not translated yet.',
     body: 'You are reading the English version. The radar, the comparator and the firm pages are available in your language.',
