@@ -502,6 +502,12 @@ const en = {
       'Legal entity': 'Legal entity',
     },
     sendSource: 'Send us a source',
+    sourceForm: {
+      title: 'Share a source', intro: 'Help us verify this firm. Send a public link to evidence, rules, or payouts. We review submissions before publishing.',
+      url: 'Public source URL', detail: 'What does this source show? (optional)', submit: 'Send source', sending: 'Sending…', cancel: 'Cancel', close: 'Close',
+      success: 'Thank you. Your source has been securely recorded for editorial review.', error: 'The form is temporarily unavailable.', gmail: 'Send with Gmail instead',
+      privacy: 'Your link and comment are kept privately for editorial verification; they are not published automatically.',
+    },
     navLabel: 'Firm page navigation',
     nav: {
       offers: 'Offers',

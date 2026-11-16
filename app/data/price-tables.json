@@ -1,6 +1,29 @@
 {
   "version": 1,
   "firms": {
+    "bullwaves-prime": {
+      "checkedOn": "2026-11-16",
+      "programs": [
+        {
+          "name": "1 Step Challenge", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://prime.bullwaves.com/pricing",
+          "note": "Published fees before add-ons; 10% target, 4% daily drawdown and 8% maximum drawdown. Prices checked 16 November 2026.",
+          "rows": [
+            { "size": 5000, "price": 89 }, { "size": 10000, "price": 149 }, { "size": 25000, "price": 329 },
+            { "size": 50000, "price": 449 }, { "size": 100000, "price": 649 }, { "size": 200000, "price": 1199 }, { "size": 400000, "price": 2199 }
+          ]
+        },
+        {
+          "name": "2 Step Challenge", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://prime.bullwaves.com/pricing",
+          "note": "Published fees before add-ons. Accounts purchased from 12 November 2026 use the updated 8% static maximum drawdown; old accounts retain their purchase-date rules.",
+          "rows": [
+            { "size": 5000, "price": 59 }, { "size": 10000, "price": 99 }, { "size": 25000, "price": 199 },
+            { "size": 50000, "price": 299 }, { "size": 100000, "price": 549 }, { "size": 200000, "price": 999 }
+          ]
+        }
+      ]
+    },
     "miltraders": {
       "checkedOn": "2026-11-16",
       "programs": [

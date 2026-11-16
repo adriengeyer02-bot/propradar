@@ -498,6 +498,12 @@ const zh: Messages = {
       'Legal entity': '法律主体',
     },
     sendSource: '向我们提供来源',
+    sourceForm: {
+      title: '提交来源', intro: '帮助我们核实这家公司的信息。请提供证据、规则或出金记录的公开链接。',
+      url: '公开来源链接', detail: '此来源说明了什么？（选填）', submit: '提交来源', sending: '提交中…', cancel: '取消', close: '关闭',
+      success: '感谢！来源已安全保存，等待编辑审核。', error: '表单暂时不可用。', gmail: '改用 Gmail 发送',
+      privacy: '链接和评论在审核期间保持私密，不会自动公开。',
+    },
     navLabel: '公司页面导航',
     nav: {
       offers: '项目',

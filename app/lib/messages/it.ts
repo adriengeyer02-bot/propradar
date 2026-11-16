@@ -498,6 +498,12 @@ const it: Messages = {
       'Legal entity': 'Società',
     },
     sendSource: 'Inviaci una fonte',
+    sourceForm: {
+      title: 'Condividi una fonte', intro: 'Aiutaci a verificare questa società. Invia un link pubblico a prove, regole o pagamenti.',
+      url: 'Link pubblico alla fonte', detail: 'Che cosa dimostra la fonte? (facoltativo)', submit: 'Invia fonte', sending: 'Invio…', cancel: 'Annulla', close: 'Chiudi',
+      success: 'Grazie! La fonte è stata salvata per una verifica editoriale.', error: 'Il modulo non è temporaneamente disponibile.', gmail: 'Invia tramite Gmail',
+      privacy: 'Link e commento restano privati e non vengono pubblicati automaticamente.',
+    },
     navLabel: 'Navigazione della scheda',
     nav: {
       offers: 'Offerte',
