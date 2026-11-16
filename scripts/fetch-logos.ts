@@ -29,6 +29,9 @@ const EXTRA_LOGOS: Record<string, string[]> = {
   'funder-trading': ['https://fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq-20.png'],
   'moneta-funded': ['https://www.monetafunded.com/wp-content/themes/Moneta/images/logo.svg'],
   'sure-leverage': ['https://sureleveragefunding.com/sureLeverageFunded-Favicon.png'],
+  // The group's generic favicon is only 32px. Its official brand guidelines
+  // explicitly identify this high-resolution icon as shared by Bullwaves Prime.
+  'bullwaves-prime': ['https://bullwaves.com/_next/image?url=%2Fassets%2F1ad98a3294a5-688c99fe706456fbfd1e351f_Frame-2147223985.png&w=1080&q=75&dpl=dpl_D3G78MyUXSmkTzyff3iftScb21TF'],
 };
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36';
 
