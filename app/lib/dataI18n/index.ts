@@ -9,6 +9,7 @@ import pt from './pt.json';
 import zh from './zh.json';
 import { foxxFundedFrench } from '../foxxFunded';
 import { xFundedTranslations } from '../xFundedI18n';
+import { milTradersTranslations } from '../milTradersI18n';
 
 /**
  * Translations of the firm data that readers see most (program rules, payout
@@ -23,5 +24,5 @@ const DATA: Partial<Record<Locale, Record<string, string>>> = { fr: { ...fr, ...
 
 export function td(locale: Locale, text: string | undefined | null): string {
   if (!text) return text ?? '';
-  return xFundedTranslations[locale]?.[text.trim()] ?? DATA[locale]?.[text.trim()] ?? text;
+  return milTradersTranslations[locale]?.[text.trim()] ?? xFundedTranslations[locale]?.[text.trim()] ?? DATA[locale]?.[text.trim()] ?? text;
 }
