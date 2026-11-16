@@ -79,7 +79,12 @@ function SectionBlocks({ section, t }: { section: GuideArticleSection; t: (text:
             <tbody>
               {section.compare.rows.map((row) => (
                 <tr key={row.label}>
-                  <th scope="row">{row.label}</th>
+                  <th scope="row">
+                    {row.label}
+                    {row.sourceUrl ? (
+                      <> <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`Source: ${row.label}`} title="Original company policy">↗</a></>
+                    ) : null}
+                  </th>
                   {row.values.map((value, index) => <td key={index} className={value.length <= 14 ? 'is-short' : undefined}><Bold text={value} /></td>)}
                 </tr>
               ))}

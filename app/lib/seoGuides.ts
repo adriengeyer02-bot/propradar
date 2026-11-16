@@ -217,7 +217,7 @@ export const seoGuides: SeoGuide[] = [
   {
     slug: 'prop-firm-hidden-rules',
     title: 'Prop Firm Hidden Rules in 2026: 9 Clauses to Check Before Buying',
-    metaDescription: 'Discover nine easy-to-miss prop firm rules that can block payouts: consistency, news trading, VPNs, trading time, country bans and contract discretion. Official sources, 2026.',
+    metaDescription: 'Which prop firms restrict VPN or VPS? Compare sourced bans at GFT, FundingPips, Topstep and 8 others, plus news rules by challenge and country, updated 2026.',
     eyebrow: 'Independent rule investigations',
     h1: 'Prop firm hidden rules: what the sales page does not explain',
     intent: 'risque',
@@ -234,6 +234,8 @@ export const seoGuides: SeoGuide[] = [
     faq: [
       { question: 'Are these rules really hidden?', answer: 'Usually the examples are published in official FAQs or agreements. The problem is that the sales page can omit them or different plans have different rules. PropRadar calls them easy-to-miss conditions, not proof of deliberate concealment.' },
       { question: 'Is there a prop firm with no hidden rules?', answer: 'No public comparison can guarantee that. Prefer firms with a complete, dated and searchable agreement, consistent answers from support and clear payout-stage criteria.' },
+      { question: 'Which prop firms prohibit VPN or VPS trading?', answer: 'As of 16 November 2026, GOAT Funded Trader and FundingPips explicitly prohibit both for trading access. Topstep prohibits VPNs and VPS order routing. FundedNext, Alpha Capital Group and Tradeify have conditional rules; FTMO CFD and Blue Guardian 1-Step Standard generally allow them subject to stated exceptions. Each policy is linked in the table.' },
+      { question: 'Can news trading be allowed during evaluation but restricted after funding?', answer: 'Yes. E8 Classic, BrightFunded CFD, Blue Guardian 1-Step Standard and certain FundingPips programs change how news-window profits are treated once funded. Always check the named program and stage, not the brand slogan.' },
       { question: 'Does PropRadar criticize its affiliate partners?', answer: 'Yes. Commercial relationships never change a PropRadar score or remove documented contractual restrictions.' },
     ],
     internalLinks: [

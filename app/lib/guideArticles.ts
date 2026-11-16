@@ -41,7 +41,7 @@ export type GuideArticleSection = {
   /** Big figures read in the text, shown as tiles. */
   stats?: { value: string; label: string }[];
   /** Small comparison table (first column = row label). */
-  compare?: { columns: string[]; rows: { label: string; values: string[] }[]; note?: string };
+  compare?: { columns: string[]; rows: { label: string; values: string[]; sourceUrl?: string }[]; note?: string };
   /** Numbered steps, shown as a path. */
   steps?: { title: string; text: string }[];
   fit?: { yes: string[]; no: string[] };
@@ -81,11 +81,57 @@ export const guideArticles: Record<string, GuideArticle> = {
         callout: { kind: 'warning', text: 'A trading platform allowing you to click Buy or Sell **does not mean the contract permits that trade**. Check the exact account model, event calendar and clock before trading.' },
       },
       {
+        heading: 'News-trading rule register: evaluation versus funded (official sources)',
+        paragraphs: [
+          'These are **ten program groups we checked**, not a universal blacklist. A permitted hold through an announcement is not the same as permission to open a news-spike trade. The rules below apply to the **specific programs and stages named**, not automatically to every product the company sells.',
+        ],
+        compare: {
+          columns: ['Evaluation stage', 'Qualified / funded stage'],
+          rows: [
+            { label: 'E8 Classic', values: ['News unrestricted', '**40% of news-window profits eligible**'], sourceUrl: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+            { label: 'E8 One', values: ['News unrestricted', '**No trades in ±5 min high-impact window**; profits may be removed'], sourceUrl: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+            { label: 'E8 Pro', values: ['Unrestricted', 'Unrestricted, subject to general risk rules'], sourceUrl: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+            { label: 'FundingPips Flex / Standard / Pro', values: ['Holding permitted; intentional news-spike trading prohibited', '**Affected Master profits deducted**; 5-hour swing exception'], sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
+            { label: 'FundingPips Zero', values: ['Check exact contract', '**No open, close or holding through restricted news**; 10-min windows on Master'], sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
+            { label: 'Blue Guardian CFD 1-Step Standard', values: ['News permitted', '**No opening or closing ±5 min** around high-impact news'], sourceUrl: 'https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules' },
+            { label: 'BrightFunded CFD Phase 1 / 2', values: ['News trading unrestricted', '**Profits deducted on executions ±5 min**; Instant restricted from day one'], sourceUrl: 'https://help.brightfunded.com/en/articles/9241694-can-i-trade-news' },
+            { label: 'Alpha Futures Standard / Zero / Direct', values: ['Standard / Zero evaluation: unrestricted; Direct skips evaluation', '**No orders ±2 min** on specified Qualified plans; Advanced Qualified differs'], sourceUrl: 'https://help.alpha-futures.com/en/articles/9492063-news-trading-policy' },
+            { label: 'Alpha Capital Pro / One / Three / Direct', values: ['Evaluation: unrestricted; Direct has no evaluation', '**No executions ±5 min** on targeted news; even a TP fill can invalidate profit'], sourceUrl: 'https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news' },
+            { label: 'Tradeify Futures', values: ['News permitted', 'News permitted under its general FAQ'], sourceUrl: 'https://help.tradeify.co/en/articles/12268494-common-faqs' },
+          ],
+          note: 'Reviewed 16 Nov 2026. Click ↗ beside a firm to read its original rule. These are company policies, not independent proof of how every trader dispute is decided.',
+        },
+      },
+      {
         heading: '2. A VPN or VPS can invalidate otherwise profitable trades',
         paragraphs: [
           'GOAT Funded Trader states that, effective **6 October 2026**, trading through a VPN, VPS, proxy or hosted environment is prohibited. Its help center says trades executed that way can cause an immediate account breach and that the related rewards will not be eligible for payment. It describes a narrowly limited exception for the initial server login, and a separate exception for its own dashboard copier.',
           'This is a published contractual restriction, **not evidence that the company improperly refuses legitimate payouts**. It is nevertheless crucial for algorithmic traders and for visitors whose internet access commonly uses routing services.',
         ],
+      },
+      {
+        heading: 'VPN / VPS watchlist: which firms restrict them?',
+        paragraphs: [
+          '**A VPN (connection masking) and a VPS (remote trading server) are different tools.** Some firms prohibit both, others allow a VPN but ban hosted order execution, and others only prohibit hiding your residence. Here are the **11 companies with identifiable, sourced policies in our sample**, including affiliate partners. “Conditional” is not “banned everywhere.”',
+        ],
+        compare: {
+          columns: ['VPN', 'VPS / remote execution'],
+          rows: [
+            { label: 'GOAT Funded Trader', values: ['**Prohibited** for trading (since 6 Oct 2026)', '**Prohibited**; limited company-tool exception'], sourceUrl: 'https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading' },
+            { label: 'FundingPips', values: ['**Prohibited** when accessing a trading account', '**Prohibited** when accessing a trading account'], sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards' },
+            { label: 'Topstep / TopstepX', values: ['**Prohibited** (also proxy and TOR)', '**No order transmission** via remote server or API; read-only analysis allowed'], sourceUrl: 'https://help.topstep.com/en/articles/11187768-topstepx-api-access' },
+            { label: 'FundedNext CFD', values: ['**Allowed** except excluded-country IPs', '**Banned ≥$50k**; below $50k paid add-on, eligible trading EA only; no manual orders'], sourceUrl: 'https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps' },
+            { label: 'Alpha Capital Group', values: ['**Conditional**: dedicated static IP + prior notification', '**Conditional**: dedicated static IP + prior notification'], sourceUrl: 'https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed' },
+            { label: 'Tradeify Futures', values: ['**No VPN at login**', 'Allowed **after normal login**, at trader’s risk'], sourceUrl: 'https://help.tradeify.co/en/articles/12268494-common-faqs' },
+            { label: 'FTMO CFD', values: ['**Generally allowed**; avoid US geolocation for named platforms', '**Generally allowed**; US platform/geolocation exception'], sourceUrl: 'https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/' },
+            { label: 'Blue Guardian CFD 1-Step Standard', values: ['**Allowed**; no circumvention of copy/group-trading rules', '**Allowed** under same condition'], sourceUrl: 'https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules' },
+            { label: 'Apex Trader Funding', values: ['Banned **when used to disguise identity/location or evade rules**', 'Same anti-circumvention condition; not a published blanket ban'], sourceUrl: 'https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/' },
+            { label: 'The5ers', values: ['**No circumvention of country restrictions**; blanket ban not established', 'No blanket VPS rule established in the cited terms'], sourceUrl: 'https://the5ers.com/terms-and-conditions/' },
+            { label: 'HyroTrader (crypto)', values: ['**No bypass** of exchange/platform region restrictions', 'Depends on platform and its own terms; no universal ban verified'], sourceUrl: 'https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/' },
+          ],
+          note: 'Source-linked register, not an allegation of unpaid payouts. Updated 16 Nov 2026. Rules may differ by product, account size, platform and country. Other firms remain unreviewed for this specific issue.',
+        },
+        callout: { kind: 'warning', text: 'Running a trading robot on a VPS is **not automatically allowed just because EAs are allowed**. Check the server, IP, account-size and order-routing rules separately.' },
       },
       {
         heading: '3. “Scalping allowed” can still come with time and margin limits',
@@ -109,6 +155,26 @@ export const guideArticles: Record<string, GuideArticle> = {
           'GOAT Funded Trader explicitly lists **Singapore** among countries it does not accept. Apex Trader Funding lists **China** among countries excluded from new or additional accounts. These are particularly important examples for PropRadar visitors because both countries contribute to our international audience.',
           'Different products of one firm may use different geographic lists. FTMO CFD and FTMO Futures do; E8 Classic and E8 Futures do as well. Passing checkout, travelling abroad or seeing a firm in your country does **not** replace KYC, citizenship checks, supported-platform access and the available payout methods.',
         ],
+        compare: {
+          columns: ['India', 'Mainland China', 'Singapore'],
+          rows: [
+            { label: 'FTMO CFD', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://ftmo.com/en/faq/who-can-join-ftmo/' },
+            { label: 'Topstep Futures', values: ['Published as eligible', '**Individual verification needed**', 'Published as eligible'], sourceUrl: 'https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep' },
+            { label: 'My Funded Futures', values: ['Published as eligible', '**Excluded**', 'Published as eligible'], sourceUrl: 'https://help.myfundedfutures.com/en/articles/8229993-restricted-countries-policy' },
+            { label: 'Apex Trader Funding', values: ['Published as eligible', '**Excluded**', 'Published as eligible'], sourceUrl: 'https://apextraderfunding.com/help-center/getting-started/restricted-countries/' },
+            { label: 'GOAT Funded Trader', values: ['Published as eligible', 'Published as eligible', '**Excluded**'], sourceUrl: 'https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader' },
+            { label: 'FundedNext CFD', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds' },
+            { label: 'Fintokei', values: ['**Excluded**', '**Temporarily excluded**', 'Published as eligible'], sourceUrl: 'https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei' },
+            { label: 'Alpha Futures', values: ['Published as eligible', '**Excluded**', 'Published as eligible'], sourceUrl: 'https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations' },
+            { label: 'Alpha Capital Group', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations' },
+            { label: 'Lucid Trading', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://support.lucidtrading.com/en/articles/11404636-restricted-countries' },
+            { label: 'PipFarm', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.pipfarm.com/en/articles/4318163-prohibited-country-list' },
+            { label: 'HyroTrader (Hyro platform)', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/' },
+            { label: 'BrightFunded CFD', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.brightfunded.com/en/articles/9286630-what-countries-are-restricted-at-brightfunded' },
+            { label: 'Upcomers', values: ['Published as eligible', 'Published as eligible', 'Published as eligible'], sourceUrl: 'https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries' },
+          ],
+          note: 'Admission under the cited published general policy, checked 16 Nov 2026 — not a legal licence, a KYC approval or a promise of payouts. The green cases are based on firms’ explicit worldwide-except-exclusions policies, not actual test purchases. A different challenge or third-party platform can change the answer.',
+        },
         callout: { kind: 'warning', text: 'PropRadar\'s country filter reflects firms\' **published admission conditions**, not legal permission, a regulatory licence or a guaranteed payout. When a product cannot be verified, we say **Not verified** rather than guessing.' },
       },
       {
@@ -159,6 +225,24 @@ export const guideArticles: Record<string, GuideArticle> = {
       { label: 'Tradeify: permanent residence and Live Account rule', url: 'https://help.tradeify.co/en/articles/10495888-rules-restricted-countries' },
       { label: 'Apex: Risk Disclosure — Performance Account rewards', url: 'https://apextraderfunding.com/risk-disclosure/' },
       { label: 'FTMO Futures: eligibility for a Live Funded Account', url: 'https://ftmo.com/en/futures/faq/who-is-eligible-for-a-live-funded-account/' },
+      { label: 'FundingPips: VPN and VPS account policy', url: 'https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards' },
+      { label: 'Topstep: VPN ban and VPS order-routing rules', url: 'https://help.topstep.com/en/articles/11187768-topstepx-api-access' },
+      { label: 'FundedNext CFD: VPN/VPS conditions by account size', url: 'https://help.fundednext.com/en/articles/8223809-can-i-use-a-vpn-or-vps' },
+      { label: 'Alpha Capital Group: VPN/VPS static IP and notice', url: 'https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed' },
+      { label: 'FTMO CFD: VPN/VPS and US geolocation exception', url: 'https://ftmo.com/en/faq/can-i-travel-or-use-vpn-vps/' },
+      { label: 'Blue Guardian: 1-Step Standard CFD news and VPS', url: 'https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules' },
+      { label: 'Apex: remote access used for geographic circumvention', url: 'https://apextraderfunding.com/help-center/uncategorized/prohibited-activities/' },
+      { label: 'Tradeify: login/VPS and news FAQ', url: 'https://help.tradeify.co/en/articles/12268494-common-faqs' },
+      { label: 'The5ers: official conditions on country circumvention', url: 'https://the5ers.com/terms-and-conditions/' },
+      { label: 'HyroTrader: local platform restrictions', url: 'https://www.hyrotrader.com/faq/platform/which-countries-are-allowed-to-join-hyrotrader-can-i-join-from-the-usuk/' },
+      { label: 'Alpha Futures: qualified-account news execution window', url: 'https://help.alpha-futures.com/en/articles/9492063-news-trading-policy' },
+      { label: 'Alpha Capital Group: qualified-account news trading', url: 'https://help.alphacapitalgroup.uk/en/articles/9293522-can-i-trade-news' },
+      { label: 'Fintokei: complete eligibility list and new-purchase restrictions', url: 'https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei' },
+      { label: 'Alpha Futures: geographic exclusions', url: 'https://help.alpha-futures.com/en/articles/9523389-countries-with-limitations' },
+      { label: 'Lucid Trading: restricted countries', url: 'https://support.lucidtrading.com/en/articles/11404636-restricted-countries' },
+      { label: 'FundedNext: CFD restricted countries', url: 'https://help.fundednext.com/en/articles/8020080-are-any-countries-restricted-on-fundednext-cfds' },
+      { label: 'BrightFunded: CFD news-event restrictions', url: 'https://help.brightfunded.com/en/articles/9241694-can-i-trade-news' },
+      { label: 'Upcomers: general geographic restrictions', url: 'https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries' },
     ],
   },
   'prop-firm-sans-challenge': {

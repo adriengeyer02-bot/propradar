@@ -229,7 +229,7 @@
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-23",
@@ -270,6 +270,18 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company-run leaderboard checked for a self-reported lifetime payout aggregate. Explicitly not bank-reconciled; the previously documented Premium Plan payout incident remains on the profile and the score does not change.",
+          "source": "https://alpha-futures.com/leaderboard",
+          "fields": ["payoutProofs"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Independent Arbitrum transaction review: a 2025 RISEPAY transfer is visible on the public explorer and attributed to Alpha Futures by a third-party ledger tracker. Recipient identity and whether this is a trader rather than affiliate/vendor remuneration remain unverified. No rating uplift.",
+          "source": "https://arbiscan.io/tx/0x24d54969903bd20d0fc280ac700d9908cb450340e3ac0c591ed339b1e3e1e7f7",
+          "fields": ["payoutProofs"]
         }
       ],
       "set": {
@@ -357,6 +369,32 @@
         {
           "label": "Finance Magnates: futures prop margins and closures (13 Nov 2026)",
           "url": "https://www.financemagnates.com/forex/the-49-challenge-problem-are-futures-prop-margins-meeting-the-exit-door/"
+        },
+        {
+          "label": "Alpha Futures company-run trader leaderboard (reported payout amounts)",
+          "url": "https://alpha-futures.com/leaderboard"
+        },
+        {
+          "label": "Independent Alpha Futures Rise/Arbitrum trace with wallet attribution and limitations",
+          "url": "https://damnpropfirms.com/futures-prop-firms/alpha-futures/payouts/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "Alpha Futures",
+          "quote": "The company's own public leaderboard displays '$70M Performance Fees Paid' alongside individual 'Virtual Payout Amount' figures. These are company-published amounts, not authenticated bank transfers or independent reconciliation. Its Premium Plan payout dispute remains separately disclosed.",
+          "url": "https://alpha-futures.com/leaderboard",
+          "firmReported": true
+        },
+        {
+          "date": "2025-12-11",
+          "kind": "onchain",
+          "publisher": "Arbiscan (public Arbitrum transfer)",
+          "quote": "A successful Arbitrum transaction on 11 Dec 2025 shows 61,279.62 RISEPAY tokens moving from an address attributed to Alpha Futures by a third-party payout tracker. The chain transfer itself is independently viewable; the firm's wallet attribution and whether the recipient is a trader rather than an affiliate/vendor have NOT been independently authenticated by PropRadar.",
+          "url": "https://arbiscan.io/tx/0x24d54969903bd20d0fc280ac700d9908cb450340e3ac0c591ed339b1e3e1e7f7",
+          "firmReported": false
         }
       ],
       "addIncidents": [
@@ -1790,9 +1828,15 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Public payout-certificate examples on the firm's own site archived as firm-reported marketing evidence, not bank-authenticated client receipts. The existing Trustpilot review-removal notice and score cap remain unchanged.",
+          "source": "https://www.fundedtradingplus.com/",
+          "fields": ["payoutProofs"]
         }
       ],
-      "reviewedAt": "2026-10-23",
+      "reviewedAt": "2026-11-16",
       "set": {
         "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
       },
@@ -1800,6 +1844,20 @@
         {
           "label": "Funded Trading Plus payouts overview (official)",
           "url": "https://help.fundedtradingplus.com/payouts-overview/"
+        },
+        {
+          "label": "FT+ company-published trader payout certificates",
+          "url": "https://www.fundedtradingplus.com/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "Funded Trading Plus",
+          "quote": "The company's public website shows individual trader reward certificates, including a $5,965.10 example labelled India and $8,450.89 labelled Singapore. The site states its displayed result data was last refreshed in February 2026. Certificates are issued/displayed by the firm and have not been independently matched to bank or payment-processor records.",
+          "url": "https://www.fundedtradingplus.com/",
+          "firmReported": true
         }
       ],
       "addIncidents": [
@@ -3913,7 +3971,7 @@
       ]
     },
     "pipfarm": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-16",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3935,6 +3993,12 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 344 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/pipfarm.com"
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company homepage payout aggregate captured as a self-reported marketing figure; it is not an independent payment verification. Prior Trustpilot review-removal notice and score cap remain visible and unchanged.",
+          "source": "https://pipfarm.com/",
+          "fields": ["payoutProofs"]
         }
       ],
       "addIncidents": [
@@ -3947,6 +4011,20 @@
         {
           "label": "PipFarm terms and conditions",
           "url": "https://pipfarm.com/terms-and-conditions"
+        },
+        {
+          "label": "PipFarm public self-reported payout totals",
+          "url": "https://pipfarm.com/"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "PipFarm",
+          "quote": "The PipFarm homepage reports 'over $5,000,000' in worldwide trader payouts since 2024 to over 1,000 traders. This is a company-reported aggregate with no independent reconciliation of transfers or individual recipients. Its Trustpilot guideline-breach notice remains recorded on this profile.",
+          "url": "https://pipfarm.com/",
+          "firmReported": true
         }
       ]
     },
