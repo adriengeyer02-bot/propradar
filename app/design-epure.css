@@ -2170,6 +2170,26 @@ html body .home-tools-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   font-weight: 600;
 }
 .pr-gaps .pr-link { white-space: nowrap; font-size: 14px; }
+.pr-source-trigger { border: 0; background: none; cursor: pointer; padding: 0; color: var(--accent); text-align: left; font: inherit; }
+.pr-source-dialog { width: min(95vw, 520px); padding: 26px; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--pr-radius); box-shadow: 0 30px 90px rgba(0,0,0,.32); }
+.pr-source-dialog::backdrop { background: rgba(0,0,0,.62); }
+.pr-source-dialog-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.pr-source-dialog-head h2 { margin: 0; font-size: 21px; line-height: 1.3; }
+.pr-source-close { border: 0; color: var(--text); background: transparent; font-size: 26px; cursor: pointer; }
+.pr-source-form { display: grid; gap: 10px; margin-top: 12px; }
+.pr-source-form p { margin: 2px 0; color: var(--soft); font-size: 14px; line-height: 1.5; }
+.pr-source-form label { font-weight: 650; font-size: 14px; }
+.pr-source-form input[type="url"], .pr-source-form textarea { box-sizing: border-box; width: 100%; padding: 11px 12px; border-radius: 8px; border: 1px solid var(--line); color: var(--text); background: var(--surface); font: inherit; }
+.pr-source-form input:focus-visible, .pr-source-form textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pr-source-form-actions { display: flex; gap: 12px; margin-top: 8px; }
+.pr-source-form-actions button, .pr-source-success button { padding: 9px 16px; border-radius: 8px; border: 1px solid var(--line); font: inherit; cursor: pointer; }
+.pr-source-form-actions button:first-child, .pr-source-success button { background: var(--accent); color: white; border-color: var(--accent); }
+.pr-source-form-actions button:disabled { opacity: .6; cursor: wait; }
+.pr-source-form .pr-source-error { color: var(--tone-danger, #c44); }
+.pr-source-form .pr-source-privacy { font-size: 12px; }
+.pr-source-success { padding-top: 20px; display: grid; gap: 16px; }
+.pr-source-success p { margin: 0; }
+.pr-source-honey { position: absolute; height: 1px; width: 1px; overflow: hidden; clip-path: inset(50%); }
 @media (max-width: 900px) {
   .pr-gaps { grid-template-columns: 1fr; }
 }

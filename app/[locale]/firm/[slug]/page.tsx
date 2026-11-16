@@ -7,6 +7,7 @@ import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
+import SourceSubmission from '../../../components/SourceSubmission';
 import { firmLogoFor } from '../../../lib/firmLogos';
 import ChallengePath from '../../../components/ui/ChallengePath';
 import EntityChain from '../../../components/ui/EntityChain';
@@ -929,12 +930,7 @@ export default async function FirmPage({ params }: Props) {
             <ul>
               {gaps.map((gap) => <li key={gap}>{(f.gaps as Record<string, string>)[gap] ?? gap}</li>)}
             </ul>
-            <a
-              className="pr-link"
-              href={`mailto:contact@propradar.tech?subject=${encodeURIComponent(`Source for ${firm.name}`)}&body=${encodeURIComponent(`Item and public link: `)}`}
-            >
-              {f.sendSource}
-            </a>
+            <SourceSubmission firm={firm.name} slug={firm.slug} copy={f} />
           </aside>
         ) : null}
 

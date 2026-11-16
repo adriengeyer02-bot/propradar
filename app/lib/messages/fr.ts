@@ -498,6 +498,12 @@ const fr: Messages = {
       'Legal entity': 'Entité juridique',
     },
     sendSource: 'Nous envoyer une source',
+    sourceForm: {
+      title: 'Partager une source', intro: 'Aidez-nous à vérifier cette société. Envoyez un lien public vers une preuve, une règle ou un paiement. Nous examinons les contributions avant toute publication.',
+      url: 'Lien public vers la source', detail: 'Que montre cette source ? (facultatif)', submit: 'Envoyer la source', sending: 'Envoi…', cancel: 'Annuler', close: 'Fermer',
+      success: 'Merci ! Votre source a été enregistrée en privé pour examen éditorial.', error: 'Le formulaire est temporairement indisponible.', gmail: 'Envoyer via Gmail',
+      privacy: 'Le lien et le commentaire restent privés pendant la vérification et ne sont jamais publiés automatiquement.',
+    },
     navLabel: 'Navigation de la fiche',
     nav: {
       offers: 'Offres',

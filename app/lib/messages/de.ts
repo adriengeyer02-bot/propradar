@@ -498,6 +498,12 @@ const de: Messages = {
       'Legal entity': 'Rechtsträger',
     },
     sendSource: 'Quelle senden',
+    sourceForm: {
+      title: 'Quelle teilen', intro: 'Helfen Sie uns, diese Firma zu überprüfen. Senden Sie einen öffentlichen Link zu Belegen, Regeln oder Auszahlungen.',
+      url: 'Öffentlicher Quellenlink', detail: 'Was zeigt die Quelle? (optional)', submit: 'Quelle senden', sending: 'Wird gesendet…', cancel: 'Abbrechen', close: 'Schließen',
+      success: 'Vielen Dank! Ihre Quelle wurde zur redaktionellen Prüfung gespeichert.', error: 'Das Formular ist derzeit nicht verfügbar.', gmail: 'Stattdessen über Gmail senden',
+      privacy: 'Link und Kommentar bleiben bis zur Überprüfung privat und werden nicht automatisch veröffentlicht.',
+    },
     navLabel: 'Navigation der Firmenseite',
     nav: {
       offers: 'Angebote',

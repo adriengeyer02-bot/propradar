@@ -586,6 +586,12 @@ const pt: Messages = {
       "Legal entity": "Entidade jurídica"
     },
     "sendSource": "Envie-nos uma fonte",
+    "sourceForm": {
+      "title": "Compartilhar uma fonte", "intro": "Ajude-nos a verificar esta empresa. Envie um link público para provas, regras ou pagamentos.",
+      "url": "Link público da fonte", "detail": "O que esta fonte mostra? (opcional)", "submit": "Enviar fonte", "sending": "Enviando…", "cancel": "Cancelar", "close": "Fechar",
+      "success": "Obrigado! Sua fonte foi guardada para análise editorial.", "error": "O formulário está temporariamente indisponível.", "gmail": "Enviar pelo Gmail",
+      "privacy": "O link e o comentário ficam privados e não são publicados automaticamente."
+    },
     "navLabel": "Navegação da ficha",
     "nav": {
       "offers": "Ofertas",
