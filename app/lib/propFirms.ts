@@ -210,13 +210,15 @@ export const FXIFY_AFFILIATE_URL = 'https://trader.fxify.com/purchasechallenge?a
 export const FXIFY_PROMO_CODE = 'FXIFY0EVDNU';
 export const UPCOMERS_AFFILIATE_URL = 'https://www.upcomers.com/fr/?code=kkscxhro#challenges';
 export const ONEFUNDED_AFFILIATE_URL = 'https://onefunded.com/?utm_medium=aff&utm_term=713&utm_source=tracknow&campaign_id=7&ref_id=713#challenges';
+/** City Traders Imperium referral link supplied by PropRadar's owner on 2026-11-16. */
+export const CTI_AFFILIATE_URL = 'https://app.citytradersimperium.com/user-auth/register?referral_code=8b3df5&utm_source=client&utm_medium=referral&utm_id=8b3df5';
 /** Partner code issued to PropRadar by Upcomers, received 2026-11-14 (no percentage stated by Upcomers). */
 export const UPCOMERS_PROMO_CODE = 'kkscxhro';
 /** Partner code issued to PropRadar by OneFunded on 2026-11-12 (25% off all challenges, per OneFunded). */
 export const ONEFUNDED_PROMO_CODE = 'PROPRADARTECH';
 /** Affiliate links must carry rel="sponsored" wherever they appear (buttons, sources, deals). */
 export function isAffiliateUrl(url: string) {
-  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL, ONEFUNDED_AFFILIATE_URL].includes(url);
+  return [FTMO_AFFILIATE_URL, BLUE_GUARDIAN_AFFILIATE_URL, FUNDERPRO_AFFILIATE_URL, GOAT_FUNDED_TRADER_AFFILIATE_URL, THE5ERS_AFFILIATE_URL, E8_AFFILIATE_URL, FXIFY_AFFILIATE_URL, UPCOMERS_AFFILIATE_URL, ONEFUNDED_AFFILIATE_URL, CTI_AFFILIATE_URL].includes(url);
 }
 
 export function linkRel(url: string) {
@@ -2815,6 +2817,8 @@ const corePropFirms: PropFirm[] = [
     trustpilotRating: 4.3,
     logoDomain: 'citytradersimperium.com',
     communitySignal: 'Established since 2018 with 1,691 Trustpilot reviews at this check and recent financial-press coverage, but public feedback still includes rule-enforcement and payout-eligibility disputes.',
+    commercialRelationship: 'Affiliation transparente',
+    commercialNote: 'PropRadar may receive a commission if you use this link. The score stays independent and weaknesses remain visible.',
     products: [
       product({
         id: 'cti-one-step',
@@ -2833,7 +2837,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '3 profitable days for the evaluation; payout conditions also apply',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; profitable-day and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/compare-funding-programs/',
+        linkToStart: CTI_AFFILIATE_URL,
       }),
       product({
         id: 'cti-two-step',
@@ -2852,7 +2856,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: '3 profitable days per evaluation phase; payout conditions also apply',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; profitable-day and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/compare-funding-programs/',
+        linkToStart: CTI_AFFILIATE_URL,
         isPopular: true,
       }),
       product({
@@ -2872,7 +2876,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: 'Payout eligibility varies; official pages describe profitable-day and minimum-profit conditions',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; payout qualification and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/forex-funded-trader-accounts/',
+        linkToStart: CTI_AFFILIATE_URL,
       }),
       product({
         id: 'cti-instant-pro',
@@ -2891,7 +2895,7 @@ const corePropFirms: PropFirm[] = [
         minTradingDays: 'On-demand first reward claim; later bi-weekly subject to qualification rules',
         hasConsistencyRule: false,
         consistencyRule: 'No percentage consistency score listed; payout qualification and conduct rules still apply.',
-        linkToStart: 'https://citytradersimperium.com/forex-funded-trader-accounts/',
+        linkToStart: CTI_AFFILIATE_URL,
       }),
     ],
     strengths: [
@@ -12906,6 +12910,7 @@ function applyTrustpilotCapRule(firm: PropFirm): PropFirm {
  * Update them when the code changes on the firm's site.
  */
 export const PARTNER_OFFERS: Record<string, PartnerOffer> = {
+  'city-traders-imperium': { href: CTI_AFFILIATE_URL },
   ftmo: { href: FTMO_AFFILIATE_URL },
   the5ers: { href: THE5ERS_AFFILIATE_URL, code: THE5ERS_PROMO_CODE, codeSource: 'firm' },
   funderpro: { href: FUNDERPRO_AFFILIATE_URL, code: PROPRADAR_PROMO_CODE, codeSource: 'firm' },
