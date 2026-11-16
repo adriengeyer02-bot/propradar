@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 140 logos, fetched 2026-11-16.
+// 141 logos, fetched 2026-11-16.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -98,6 +98,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "maventrading.com": { file: "maven-trading.png", source: "https://maventrading.com/favicon.png" },
   "mentfunding.com": { file: "ment-funding.png", source: "https://mentfunding.com/favicon.svg" },
   "mifunder.com": { file: "mifunder.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/65473fcf92f5c6062d175af2/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
+  "miltraders.com": { file: "miltraders.png", source: "https://miltraders.com/wp-content/uploads/2026/05/cropped-miltraders-favicon-512-180x180.png" },
   "monetafunded.com": { file: "moneta-funded.png", source: "https://www.monetafunded.com/wp-content/themes/Moneta/images/logo.svg (symbol, read 2026-11-12)" },
   "monevis.com": { file: "monevis.png", source: "https://monevis.com/favicon.ico" },
   "myflashfunding.com": { file: "my-flash-funding.png", source: "https://myflashfunding.com/apple-touch-icon.png" },

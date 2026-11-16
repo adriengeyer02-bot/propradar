@@ -1,6 +1,7 @@
 import { applyFirmUpdates } from './firmUpdates';
 import { foxxFunded } from './foxxFunded';
 import { xFunded } from './xFunded';
+import { milTraders } from './milTraders';
 import { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel } from './firmFormat';
 export { drawdownLabel, formatUsd, hasPayoutRiskSignal, isProvisional, priceLabel, profitSplitLabel };
 
@@ -12743,7 +12744,7 @@ const universePropFirms: PropFirm[] = [
 ];
 
 // Base profiles before dated updates (used by scripts/validate-firm-updates.ts).
-export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms, foxxFunded, xFunded];
+export const basePropFirms: PropFirm[] = [...corePropFirms, ...universePropFirms, foxxFunded, xFunded, milTraders];
 
 // Trustpilot review notices are review-reliability evidence, not payout evidence.
 const REVIEW_NOTICE = /trustpilot[\s\S]*(breach of (our|its) guidelines|fake reviews|rating is unavailable|reviews were removed)/i;

@@ -1,6 +1,47 @@
 {
   "version": 1,
   "firms": {
+    "miltraders": {
+      "checkedOn": "2026-11-16",
+      "programs": [
+        {
+          "name": "Zero",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
+          "note": "Regular list prices before the public MIL50 promotion. No activation fee; resets are separate purchases.",
+          "rows": [
+            { "size": 50000, "price": 250 },
+            { "size": 100000, "price": 378 },
+            { "size": 150000, "price": 658 }
+          ]
+        },
+        {
+          "name": "Pro",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
+          "note": "Regular list prices before MIL50. The displayed promotional prices on 16 November were $94.99 / $159.99 / $219.99; availability and final checkout price may change.",
+          "rows": [
+            { "size": 50000, "price": 189.98 },
+            { "size": 100000, "price": 319.98 },
+            { "size": 150000, "price": 439.98 }
+          ]
+        },
+        {
+          "name": "Instant",
+          "billing": "one-time",
+          "currency": "USD",
+          "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
+          "note": "Regular list prices before the public MIL30 promotion. Simulated funded access; withdrawal profit goals and payout caps still apply.",
+          "rows": [
+            { "size": 50000, "price": 500 },
+            { "size": 100000, "price": 643 },
+            { "size": 150000, "price": 800 }
+          ]
+        }
+      ]
+    },
     "x-funded": {
       "checkedOn": "2026-11-16",
       "programs": [

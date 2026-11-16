@@ -1,6 +1,45 @@
 {
   "version": 1,
   "firms": {
+    "miltraders": {
+      "reviewedAt": "2026-11-16",
+      "changelog": [
+        {
+          "date": "2026-11-16",
+          "summary": "Initial 58/100 editorial profile added after reading Zero, Pro and Instant pricing, programme rules, payout caps, terms and the stated Dubai operator. Regular USD fees are separated from temporary public coupon prices. No previous score is replaced.",
+          "source": "https://miltraders.com/pricing/",
+          "fields": ["initialReview", "products", "entities"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Trustpilot read: 3.9/5 across 13 reviews. The sample is small; visible customer statements and the company's KYC response are not authenticated payment evidence. No review-manipulation or rating-withholding finding is inferred.",
+          "source": "https://www.trustpilot.com/review/miltraders.com",
+          "fields": ["initialReview"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Contract review records retrospective rule changes, discretionary treatment of a pending payout under article 12.5, mandatory live-account selection and the 80% share on the first three live payouts. The website FAQ differs from the terms/help wording on the stated conduct-review scenario; no individual payment failure is established.",
+          "source": "https://miltraders.com/terms/",
+          "fields": ["initialReview"]
+        },
+        {
+          "date": "2026-11-16",
+          "summary": "Company dashboard payout figures captured as firm-reported information only. No independent reconciliation, authenticated customer receipt or payout-risk upgrade is claimed.",
+          "source": "https://miltraders.com/",
+          "fields": ["payoutProofs"]
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-16",
+          "kind": "official",
+          "publisher": "MilTraders",
+          "quote": "The company dashboard reports $266,990 paid since launch and $52,670 across 40 payouts for November 2026, read on 16 November. These are company-reported aggregates; customer receipts and the totals were not independently authenticated.",
+          "url": "https://miltraders.com/",
+          "firmReported": true
+        }
+      ]
+    },
     "foxx-funded": {
       "reviewedAt": "2026-11-15",
       "changelog": [
