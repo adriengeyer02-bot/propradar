@@ -203,6 +203,14 @@ export default function ComparatorClient({
         return matchesSearch && matchesStatus && matchesMarket && matchesScore && matchesPrice && matchesDrawdown && matchesLegal && matchesCountry && matchesEligibility;
       })
       .sort((a, b) => {
+        // When a visitor selects their residence, surface useful confirmed
+        // matches first rather than showing a wall of unreviewed firms.
+        // Explicit column sorts and text-search relevance still take priority.
+        if (eligibilityCountry && eligibilityStatus === 'all' && !sort && !normalizedSearch) {
+          const rank = { available: 0, restricted: 2, unknown: 1 } as const;
+          const difference = rank[eligibilityFor(a.firm.slug, eligibilityCountry).status] - rank[eligibilityFor(b.firm.slug, eligibilityCountry).status];
+          if (difference) return difference;
+        }
         if (sort) {
           const va = sortValue(a.firm, sort.key);
           const vb = sortValue(b.firm, sort.key);
@@ -219,6 +227,12 @@ export default function ComparatorClient({
       })
       .map(({ firm }) => firm);
   }, [FIRM_COUNTRIES, matched, country, drawdown, eligibilityCountry, eligibilityStatus, legalFilter, market, priceMax, scoreMin, search, sort, status]);
+
+  const eligibilityCounts = useMemo(() => {
+    const counts = { available: 0, restricted: 0, unknown: 0 };
+    if (eligibilityCountry) filteredFirms.forEach((firm) => { counts[eligibilityFor(firm.slug, eligibilityCountry).status] += 1; });
+    return counts;
+  }, [eligibilityCountry, filteredFirms]);
 
   // Deep link from the legal map: /comparateur?country=LC
   useEffect(() => {
@@ -489,7 +503,11 @@ export default function ComparatorClient({
           <Link href={`${L('/tools')}#comparatif`} className="pr-link">{c.sideBySide} <span aria-hidden="true">→</span></Link>
         </div>
       </div>
-      {eligibilityCountry ? <p className="pr-eligibility-note">{c.eligibilityNote}</p> : null}
+      {eligibilityCountry ? (
+        <p className="pr-eligibility-note">
+          <strong>{eligibilityCounts.available} {c.eligibilityAvailable}</strong> · {eligibilityCounts.restricted} {c.eligibilityRestricted} · {eligibilityCounts.unknown} {c.eligibilityUnknown}. {c.eligibilityNote}
+        </p>
+      ) : null}
       {eligibilityCountry ? (
         <details className="pr-eligibility-sources">
           <summary>{c.eligibilityEvidence}</summary>

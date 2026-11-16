@@ -24,6 +24,119 @@ export type FrArticle = GuideArticle & {
 
 export const frArticles: FrArticle[] = [
   {
+    slug: 'regles-cachees-prop-firm',
+    enPath: '/guides/prop-firm-hidden-rules',
+    title: 'Prop firms : 9 règles cachées à vérifier avant de payer (2026)',
+    metaDescription: 'Consistance, news, VPN, scalping, KYC et payout : les règles de prop firms faciles à manquer, avec exemples FTMO, GFT, Apex, E8 et sources officielles.',
+    eyebrow: 'Enquête indépendante · 16 novembre 2026',
+    h1: 'Règles cachées des prop firms : ce que la publicité ne dit pas',
+    answer: 'Avant de payer un challenge, vérifiez les conditions du compte financé et du premier retrait : trading pendant les annonces, règle de consistance, VPN, scalping, pays acceptés et pouvoirs contractuels de la firme. Les exemples ci-dessous proviennent des propres conditions publiées par les entreprises, y compris nos partenaires affiliés.',
+    keywords: ['règles cachées prop firm', 'prop firm sans règles cachées', 'règles payout prop firm', 'consistency rule', 'payout refusé'],
+    published: '2026-11-16',
+    updated: '2026-11-16',
+    intro: 'Une société peut annoncer un gros profit split et un challenge simple, puis appliquer au compte financé des conditions plus complexes. Nous parlons ici de **règles faciles à manquer**, et non nécessairement de règles volontairement dissimulées. Chaque exemple renvoie aux **conditions publiées par la firme elle-même**. Et oui, PropRadar examine aussi les sociétés avec lesquelles il a une affiliation.',
+    keyPoints: [
+      'Les règles du **challenge** ne sont pas forcément celles du **compte financé**.',
+      'Un gain affiché ne constitue pas nécessairement un **payout éligible**.',
+      'Le **pays de résidence**, la plateforme, l’identité et le prestataire de paiement peuvent entraîner des restrictions différentes.',
+      'Sources officielles consultées le **16 novembre 2026** ; les contrats peuvent évoluer.',
+    ],
+    sections: [
+      {
+        heading: '1. News trading : autorisé pendant le challenge, limité ensuite',
+        paragraphs: [
+          'Chez **E8 Markets**, le programme Classic autorise les annonces pendant l’évaluation. Mais sur un compte SimFi Performance Classic, seulement **40 % du profit réalisé pendant la fenêtre d’annonce est éligible**. E8 One applique encore une autre règle, tandis qu’E8 Pro autorise le news trading : une seule marque, trois traitements différents.',
+          '**FundingPips** distingue aussi ses comptes. Sur plusieurs modèles Master, un profit réalisé dans la fenêtre d’annonces peut être **déduit** ; une exception existe pour certains trades ouverts au moins cinq heures avant. FundingPips Zero impose des conditions plus strictes. Lisez les règles du **programme exact**, pas seulement la promesse de la page commerciale.',
+        ],
+        callout: { kind: 'warning', text: 'Le fait que la plateforme laisse ouvrir ou fermer un trade **ne prouve pas que ce trade est autorisé contractuellement**.' },
+      },
+      {
+        heading: '2. VPN et VPS : un profit peut devenir non éligible',
+        paragraphs: [
+          'Depuis le **6 octobre 2026**, **GOAT Funded Trader** indique interdire le trading via VPN, VPS, proxy ou environnement hébergé. Selon sa FAQ, cela peut entraîner un manquement immédiat et rendre les gains concernés **non éligibles au paiement**. Une exception très limitée existe pour la première connexion au serveur et une autre pour son copieur interne.',
+          'Cette clause écrite ne démontre **pas** que GFT refuse abusivement les paiements. Elle doit toutefois être visible par les traders qui utilisent un VPS pour leurs robots ou qui se connectent depuis l’étranger.',
+        ],
+      },
+      {
+        heading: '3. Scalping et risque : des seuils parfois méconnus',
+        paragraphs: [
+          '**Blue Guardian Futures** indique que moins de 50 % du profit total peut venir de trades détenus **moins de 10 secondes**. Pour ses comptes CFD, l’utilisation de plus de **80 % de la marge** est qualifiée de pratique « all or nothing » et peut avoir des conséquences sur le compte ou les retraits.',
+          '« Scalping autorisé » ne suffit donc pas : vérifiez le temps minimum, la taille des positions, les stratégies automatiques et les règles de copie.',
+        ],
+      },
+      {
+        heading: '4. Consistance : une règle différente au challenge et au payout',
+        visual: 'consistency-example',
+        paragraphs: [
+          'Une règle de consistance compare souvent la meilleure journée au profit total. Chez **Topstep**, les seuils et leur effet dépendent de l’étape : Trading Combine et parcours de payout ne sont pas identiques.',
+          'Exemple avec une limite fictive de 50 % : si votre meilleure journée est de 1 200 $, il faut au moins **2 400 $ de profit total** pour respecter le ratio. Une firme annoncée « sans consistency rule » peut tout de même imposer un drawdown plus exigeant ou des plafonds de retrait.',
+        ],
+      },
+      {
+        heading: '5. Pays interdits : le piège découvert au moment du KYC',
+        paragraphs: [
+          'La FAQ de **GOAT Funded Trader** classe explicitement **Singapour** parmi les pays exclus. **Apex Trader Funding** exclut notamment **la Chine** des nouveaux comptes. C’est important pour PropRadar : ces pays font partie de notre audience.',
+          'Même lorsque la firme accepte le pays, certaines plateformes ou certains programmes peuvent rester inaccessibles. Le filtre pays de PropRadar présente les **conditions publiées par les entreprises**, pas une autorisation légale ni une garantie de paiement.',
+        ],
+      },
+      {
+        heading: '6. Voyager : un simple accès depuis le mauvais pays peut compter',
+        paragraphs: [
+          '**Take Profit Trader** indique qu’une seule connexion de trading ou aux données de marché depuis un pays interdit peut entraîner des restrictions. La politique mentionne aussi les VPN et connexions à distance.',
+          'À l’inverse, **Tradeify** précise que sa liste géographique générale est fondée sur la **résidence permanente**, pas sur un déplacement touristique. Une même situation peut donc produire des résultats différents selon la firme.',
+        ],
+      },
+      {
+        heading: '7. Retrait : une clause de décision discrétionnaire',
+        paragraphs: [
+          'Dans son propre **Risk Disclosure**, **Apex Trader Funding** indique que l’attribution des récompenses sur les Performance Accounts relève de sa **discrétion** et que ses décisions sont finales. Cette clause mérite d’être lue avec les conditions de payout et les possibilités de contestation.',
+          'Cela ne prouve pas que les payouts légitimes sont systématiquement refusés. En revanche, c’est un élément de **risque contractuel** à connaître avant de payer.',
+        ],
+      },
+      {
+        heading: '8. « Funded » ne veut pas toujours dire « live »',
+        paragraphs: [
+          '**Tradeify** précise qu’un trader refusé pour un compte Live ne peut pas simplement retourner au stade simulé. **FTMO Futures** distingue également l’accès au compte Sim-Funded d’une éventuelle progression vers un compte Live, elle-même restreinte dans certains pays.',
+          'Identifiez ce qui est réellement promis : **évaluation simulée, compte simulé avec récompenses ou compte live**. Les conséquences juridiques et opérationnelles ne sont pas les mêmes.',
+        ],
+      },
+      {
+        heading: '9. Notre méthode pour éviter les mauvaises surprises',
+        paragraphs: [
+          'Aucun comparateur sérieux ne peut garantir qu’une prop firm n’a **aucune règle cachée** : les contrats changent et le KYC est individuel. En revanche, vous pouvez limiter le risque d’acheter un programme inadapté.',
+        ],
+        steps: [
+          { title: 'Identifier le programme', text: 'Noter **marque, nom du programme, taille du compte et étape** (évaluation, funded, live).' },
+          { title: 'Conserver les sources', text: 'Lire et enregistrer les **conditions, FAQ, règles de payout et pays exclus** avec la date.' },
+          { title: 'Vérifier son style réel', text: 'Contrôler **news, overnight, VPN, EA, scalping, drawdown, consistance et inactivité**.' },
+          { title: 'Simuler le premier payout', text: 'Compter les **jours obligatoires, plafonds, frais, KYC et moyens de retrait**.' },
+          { title: 'Demander une confirmation écrite', text: 'En cas de doute, obtenir la réponse du support sur le **programme et la version précise**.' },
+        ],
+        callout: { kind: 'tip', text: 'Une condition absente de nos fiches ? Transmettez à PropRadar la source officielle et sa date. **Une affiliation ne change jamais nos notes ni nos constats.**' },
+      },
+    ],
+    sources: [
+      { label: 'E8 Markets : news trading et différences entre programmes', url: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
+      { label: 'FundingPips : règles de news et de week-end', url: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
+      { label: 'GOAT Funded Trader : VPN/VPS et environnements hébergés', url: 'https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading' },
+      { label: 'Blue Guardian : pratiques de trading interdites', url: 'https://help.blueguardian.com/en/articles/18426719-prohibited-trading-strategies' },
+      { label: 'Topstep : règle de consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
+      { label: 'GOAT Funded Trader : pays exclus', url: 'https://help.goatfundedtrader.com/en/articles/10742187-which-countries-are-restricted-at-goat-funded-trader' },
+      { label: 'Apex Trader Funding : pays exclus', url: 'https://apextraderfunding.com/help-center/getting-started/restricted-countries/' },
+      { label: 'Take Profit Trader : accès depuis les pays exclus', url: 'https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/22447557656477-Restricted-Countries' },
+      { label: 'Tradeify : politique géographique', url: 'https://help.tradeify.co/en/articles/10495888-rules-restricted-countries' },
+      { label: 'Apex Trader Funding : Risk Disclosure', url: 'https://apextraderfunding.com/risk-disclosure/' },
+      { label: 'FTMO Futures : accès aux comptes Live', url: 'https://ftmo.com/en/futures/faq/who-is-eligible-for-a-live-funded-account/' },
+    ],
+    faq: [
+      { question: 'Existe-t-il une prop firm sans règles cachées ?', answer: 'Aucun site ne peut garantir zéro condition méconnue. Cherchez un contrat complet, daté, des règles identiques entre marketing et compte financé, et des conditions de payout vérifiables.' },
+      { question: 'Une règle publiée est-elle vraiment cachée ?', answer: 'Pas nécessairement. Nous utilisons ce terme recherché par les traders pour parler de conditions faciles à manquer, notamment lorsqu’elles diffèrent d’un programme à l’autre.' },
+      { question: 'PropRadar critique-t-il ses sociétés affiliées ?', answer: 'Oui. Les relations d’affiliation sont distinctes du classement et n’effacent aucune condition publiée ou incident sourcé.' },
+    ],
+    firmSlugs: ['goat-funded-trader', 'e8-markets', 'funding-pips', 'apex-trader-funding', 'blue-guardian', 'topstep', 'tradeify', 'take-profit-trader', 'ftmo'],
+    related: ['prop-firm-sans-consistency-rule', 'prop-firm-payout-proof', 'prop-firm-legal-check'],
+  },
+  {
     slug: 'meilleures-prop-firms-2026',
     enPath: '/best-prop-firms',
     title: 'Meilleures prop firms 2026 : classement par fiabilité',
