@@ -1,6 +1,57 @@
 {
   "version": 1,
   "firms": {
+    "x-funded": {
+      "checkedOn": "2026-11-16",
+      "programs": [
+        {
+          "name": "1-Phase Challenge — standard",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://x-funded.com/",
+          "note": "Published euro fees before add-ons; simulated account sizes are in US dollars. Zero and Bybit fee schedules are outside this captured table.",
+          "rows": [
+            { "size": 10000, "price": 115 },
+            { "size": 25000, "price": 245 },
+            { "size": 50000, "price": 399 },
+            { "size": 100000, "price": 599 },
+            { "size": 200000, "price": 1155 },
+            { "size": 300000, "price": 1749 }
+          ]
+        },
+        {
+          "name": "2-Phase Challenge — standard",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://x-funded.com/",
+          "note": "Published euro fees before add-ons; simulated account sizes are in US dollars. Referral-specific payout conditions apply independently of the entry fee.",
+          "rows": [
+            { "size": 10000, "price": 89 },
+            { "size": 25000, "price": 189 },
+            { "size": 50000, "price": 299 },
+            { "size": 100000, "price": 449 },
+            { "size": 200000, "price": 889 },
+            { "size": 300000, "price": 1349 }
+          ]
+        },
+        {
+          "name": "Instant Funding",
+          "billing": "one-time",
+          "currency": "EUR",
+          "sourceUrl": "https://x-funded.com/instant-funding/",
+          "note": "Displayed euro fees for the undated one-month anniversary offer; recheck availability. Account sizes are in US dollars.",
+          "rows": [
+            { "size": 2000, "price": 249 },
+            { "size": 5000, "price": 299 },
+            { "size": 10000, "price": 399 },
+            { "size": 25000, "price": 545 },
+            { "size": 50000, "price": 899 },
+            { "size": 100000, "price": 1550 },
+            { "size": 200000, "price": 2899 }
+          ]
+        }
+      ]
+    },
     "foxx-funded": {
       "checkedOn": "2026-11-15",
       "programs": [

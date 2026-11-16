@@ -66,6 +66,12 @@ Also accepted: `set.drawdownType` (EOD | Trailing | Static | Hybride),
 ["entities"]`) and `setProducts` (programs read on the official site, changelog
 `fields: ["products"]`; start links are carried over, never set).
 
+`setLegalReview` refreshes `summary`, `complaintsAndDisputes`, `redFlags` and
+`sources` without changing the legal risk level or entities. It needs a matching
+`legalReview` changelog source. A legal source not already in the file is flagged
+for owner review; refreshing an already documented case must state the docket's
+coverage date and distinguish procedural orders from findings on the merits.
+
 ## Filling thin firm files (part of every weekly run)
 
 About 120 watchlist files still show "To verify" (split, drawdown, account

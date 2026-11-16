@@ -1,4 +1,4 @@
-import type { Product, PropFirm, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
+import type { Product, PropFirm, RegulatoryAudit, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
 import updatesFile from '../data/firm-updates.json';
 
 /**
@@ -62,6 +62,8 @@ export type FirmUpdate = {
   addIncidents?: string[];
   /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
   setEntities?: RegulatoryEntity[];
+  /** Refreshes the written legal file without changing the risk level or identified entities. */
+  setLegalReview?: Pick<RegulatoryAudit, 'summary' | 'complaintsAndDisputes' | 'redFlags' | 'sources'>;
   /** Public payout proof to append (never replaces earlier items). */
   addPayoutProofs?: PayoutProof[];
   changelog: FirmChangelogEntry[];
@@ -111,6 +113,15 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       lastReviewed: update.reviewedAt > firm.lastReviewed ? update.reviewedAt : firm.lastReviewed,
       reviewSignals: { ...firm.reviewSignals },
     };
+
+    if (update.setLegalReview) {
+      const sources = [...firm.regulatoryAudit.sources];
+      const known = new Set(sources.map((source) => source.url));
+      for (const source of update.setLegalReview.sources) {
+        if (!known.has(source.url)) { sources.push(source); known.add(source.url); }
+      }
+      next.regulatoryAudit = { ...firm.regulatoryAudit, ...update.setLegalReview, lastChecked: update.reviewedAt, sources };
+    }
 
     if (set.status) next.status = set.status;
     if (set.verdict !== undefined) next.verdict = set.verdict;
