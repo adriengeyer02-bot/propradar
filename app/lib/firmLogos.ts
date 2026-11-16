@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 141 logos, fetched 2026-11-16.
+// 142 logos, fetched 2026-11-16.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -28,6 +28,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "audacity.capital": { file: "audacity-capital.png", source: "https://audacity.capital/favicon.svg" },
   "axi.com": { file: "axi-select.png", source: "https://www.axi.com/icon.svg" },
   "bemfunding.com": { file: "bem-funding.png", source: "https://bemfunding.com/ (symbol of the inline header logo, read 2026-11-12)" },
+  "bespokefundingprogram.com": { file: "bespoke-funding-program.png", source: "https://media.propfirmmatch.com/system/gqij28ahtqm7h75ahukr0isa/65e0ea7ade5050bebe0f5a96_Bespoke-Funding.svg (archived logo displayed by Prop Firm Match, checked 2026-11-16)" },
   "blueberryfunded.com": { file: "blueberry-funded.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/66a2c96e4bade719bbb261cb/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "blueguardian.com": { file: "blue-guardian.png", source: "https://blueguardian.com/ (symbol of the inline header logo, read 2026-11-12)" },
   "blusky.pro": { file: "blusky-trading.png", source: "https://blusky.pro/wp-content/uploads/2025/08/cropped-favicon-192x192.png" },
