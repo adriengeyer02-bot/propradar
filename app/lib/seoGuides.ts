@@ -64,6 +64,13 @@ export const searchClusters: SearchCluster[] = [
     priority: 0.92,
   },
   {
+    label: 'Hidden prop firm rules',
+    intent: 'risque',
+    queries: ['prop firm hidden rules', 'prop firms without hidden rules', 'prop firm payout rules', 'prop firm rules to avoid', 'prop firm hidden payout conditions'],
+    pageSlug: 'prop-firm-hidden-rules',
+    priority: 0.93,
+  },
+  {
     label: 'News trading',
     intent: 'style',
     queries: ['which prop firms allow news trading', 'prop firm news trading allowed', 'can you trade news with a prop firm'],
@@ -207,6 +214,36 @@ export const searchClusters: SearchCluster[] = [
 
 export const seoGuides: SeoGuide[] = [
   hyroTradeifyGuide,
+  {
+    slug: 'prop-firm-hidden-rules',
+    title: 'Prop Firm Hidden Rules in 2026: 9 Clauses to Check Before Buying',
+    metaDescription: 'Discover nine easy-to-miss prop firm rules that can block payouts: consistency, news trading, VPNs, trading time, country bans and contract discretion. Official sources, 2026.',
+    eyebrow: 'Independent rule investigations',
+    h1: 'Prop firm hidden rules: what the sales page does not explain',
+    intent: 'risque',
+    demandSignal: 'Traders search for prop firms without hidden rules because they fear a payout blocked by a condition they did not notice.',
+    answer: 'A rule is not necessarily secret just because it is hard to find. Before buying, compare the full funded-stage terms, reward eligibility, news windows, consistency, geographic restrictions and prohibited trading tools. PropRadar links directly to the firms’ published conditions, including for its own affiliates.',
+    primaryKeywords: ['prop firm hidden rules', 'prop firms without hidden rules', 'hidden payout rules prop firms'],
+    secondaryKeywords: ['prop firm consistency rule', 'prop firm news trading rules', 'prop firm VPN restrictions', 'prop firm payout rejected', 'prop firm no hidden rules'],
+    checks: [
+      'Save the exact rulebook, account model and date before checkout; marketing summaries are not the agreement.',
+      'Check evaluation versus funded rules, especially news, holding, consistency and payout limits.',
+      'Confirm residence, citizenship, trading platform, KYC and payout-provider availability.',
+      'Find clauses for discretionary reward denial, account termination, inactivity and forbidden strategies.',
+    ],
+    faq: [
+      { question: 'Are these rules really hidden?', answer: 'Usually the examples are published in official FAQs or agreements. The problem is that the sales page can omit them or different plans have different rules. PropRadar calls them easy-to-miss conditions, not proof of deliberate concealment.' },
+      { question: 'Is there a prop firm with no hidden rules?', answer: 'No public comparison can guarantee that. Prefer firms with a complete, dated and searchable agreement, consistent answers from support and clear payout-stage criteria.' },
+      { question: 'Does PropRadar criticize its affiliate partners?', answer: 'Yes. Commercial relationships never change a PropRadar score or remove documented contractual restrictions.' },
+    ],
+    internalLinks: [
+      { label: 'Independent prop firm comparison', href: '/prop-firm-comparison' },
+      { label: 'No-consistency-rule guide', href: '/guides/prop-firm-sans-consistency-rule' },
+      { label: 'Payout risk monitor', href: '/prop-firm-payout-risk' },
+      { label: 'How PropRadar audits firms', href: '/audit' },
+    ],
+    focusFirmSlugs: ['goat-funded-trader', 'e8-markets', 'funding-pips', 'apex-trader-funding', 'blue-guardian', 'topstep', 'tradeify', 'take-profit-trader', 'ftmo'],
+  },
   {
     slug: 'meilleure-prop-firm-2026',
     title: 'Best prop firm 2026: a risk-first ranking',
