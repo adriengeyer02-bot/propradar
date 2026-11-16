@@ -77,6 +77,11 @@ async function readParams(params: Props['params']): Promise<{ locale: Locale; sl
 }
 
 const FIRM_LIBRARY_PUBLISHED_AT = '2026-06-29T08:00:00.000Z';
+
+function firmPublishedAt(slug: string) {
+  return getFirmChangelog(slug).filter((entry) => entry.fields?.includes('initialReview'))
+    .map((entry) => entry.date).sort()[0] ?? FIRM_LIBRARY_PUBLISHED_AT;
+}
 export const revalidate = 86400;
 
 export function generateStaticParams() {
@@ -481,7 +486,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: OG_LOCALE[locale],
       siteName: SITE_NAME,
-      publishedTime: FIRM_LIBRARY_PUBLISHED_AT,
+      publishedTime: firmPublishedAt(firm.slug),
       modifiedTime,
       authors: [`${SITE_URL}/audit`],
       tags: [firm.name, 'prop firm review', 'payout risk', 'legal audit'],
@@ -719,7 +724,7 @@ export default async function FirmPage({ params }: Props) {
     '@type': 'Article',
     headline: searchProfile?.heading ?? `${firm.name} PropRadar review`,
     description: searchProfile?.summary ?? tx(firm.verdict),
-    datePublished: FIRM_LIBRARY_PUBLISHED_AT,
+    datePublished: firmPublishedAt(firm.slug),
     dateModified: contentLastModified,
     image: `${SITE_URL}/firm/${firm.slug}/opengraph-image`,
     inLanguage: HTML_LANG[locale],
@@ -754,10 +759,10 @@ export default async function FirmPage({ params }: Props) {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    datePublished: FIRM_LIBRARY_PUBLISHED_AT,
+    datePublished: firmPublishedAt(firm.slug),
     dateModified: contentLastModified,
     reviewBody: tx(firm.verdict),
-    inLanguage: 'en',
+    inLanguage: HTML_LANG[locale],
     citation: evidenceSourceUrls,
     reviewRating: {
       '@type': 'Rating',

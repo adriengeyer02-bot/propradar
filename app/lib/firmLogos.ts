@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 138 logos, fetched 2026-11-15.
+// 140 logos, fetched 2026-11-16.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -49,9 +49,9 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "finotivefunding.com": { file: "finotive-funding.png", source: "https://finotivefunding.com/android-chrome-512x512.png" },
   "fintokei.com": { file: "fintokei.png", source: "https://www.fintokei.com/apple-icon.png" },
   "forexfundsflow.com": { file: "forex-funds-flow.png", source: "https://forexfundsflow.com/favicons/new/192x192.png" },
-  "foxx-funded.com": { file: "foxx-funded.png", source: "https://www.foxx-funded.com/assets/foxx-BVC7eVJJ.png (official favicon, read 2026-11-15)" },
   "forexive.com": { file: "forexive.png", source: "https://forexive.com/favicon.ico?favicon.1pfj4md666ntt.ico" },
   "fortraders.com": { file: "for-traders.png", source: "https://fortraders.com/icon.svg?icon.0g25r0q5a6n1m.svg" },
+  "foxx-funded.com": { file: "foxx-funded.png", source: "https://www.foxx-funded.com/assets/foxx-BVC7eVJJ.png (official favicon, read 2026-11-15)" },
   "ftmo.com": { file: "ftmo.png", source: "https://ftmo.com/app/themes/ftmo-com/public/images/favicon/favicon-512.png" },
   "ftuk.com": { file: "ftuk.png", source: "https://cdn.prod.website-files.com/6a3d4ec2aed3a0313ea2c9d7/6abba2cb479cab153ceb8295_ftuk-fav-new.png" },
   "funded7.com": { file: "funded7.png", source: "https://funded7.com/favicon.svg" },
@@ -154,6 +154,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "wegetfunded.com": { file: "wegetfunded.png", source: "https://wegetfunded.com/icon.svg?icon.003a1611.svg" },
   "wemastertrade.com": { file: "wemastertrade.png", source: "https://wemastertrade.com/wp-content/uploads/2026/08/faviconwe.png" },
   "wsfunded.com": { file: "wsfunded.png", source: "https://cdn.prod.website-files.com/6a01d4d9cc5f7d7ee9fffb50/6a16d025a52790ac21ce23d5_favicon-192x192.png" },
+  "x-funded.com": { file: "x-funded.png", source: "https://x-funded.com/wp-content/uploads/2024/02/cropped-favicon-270x270.png" },
 };
 
 export function firmLogoFor(domain?: string) {
