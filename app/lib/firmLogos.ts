@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 145 logos, fetched 2026-11-17.
+// 146 logos, fetched 2026-11-17 (including one verified legacy brand mark).
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -109,6 +109,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "myfundedfutures.com": { file: "myfundedfutures.png", source: "https://myfundedfutures.com/images/mffu/apple-touch-icon.png" },
   "myfxcapital.com": { file: "myfxcapital.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/5fa934b249970d0001a88ab0/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "nextstepfunded.com": { file: "next-step-funded.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/63cfa85ee84db43150abf02e/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
+  "nova-funding.com": { file: "nova-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/63fe9840075954d494a07402/0x0.png (historical logo uploaded by Nova Funding to its claimed Trustpilot profile; not a current checkout)" },
   "nowtradefunded.com": { file: "now-trade-funded.png", source: "https://nowtradefunded.com/wp-content/uploads/2024/05/cropped-now-trade-favicon-192x192.png" },
   "ofpfunding.com": { file: "ofp-funding.png", source: "favicon service for ofpfunding.com" },
   "onefunded.com": { file: "onefunded.png", source: "https://onefunded.com/wp-content/uploads/2025/08/cropped-favicon_ONE-192x192.png" },

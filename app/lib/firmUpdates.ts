@@ -1,4 +1,5 @@
 import type { Product, PropFirm, RegulatoryAudit, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
+import { firmLogoFor } from './firmLogos';
 import updatesFile from '../data/firm-updates.json';
 
 /**
@@ -48,6 +49,8 @@ export type FirmUpdate = {
     trustpilotNoticeLifted: string;
     /** Corrects the listed official site (the base profile pointed to the wrong domain). */
     officialWebsite: string;
+    /** Verified locally stored historical brand logo. Never used as a purchase link. */
+    historicLogoDomain: string;
     drawdownType: PropFirm['drawdownType'];
     newsTrading: 'Allowed' | 'Restricted' | 'Not recommended' | 'Variable';
     eaAllowed: 'Yes' | 'No' | 'On request' | 'Variable';
@@ -171,11 +174,16 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       next.products = next.products.map((product) => (isOld(product.linkToStart) ? { ...product, linkToStart: newUrl } : product));
     }
 
+    if (set.historicLogoDomain && firmLogoFor(set.historicLogoDomain)) {
+      next.logoDomain = set.historicLogoDomain;
+    }
     if (set.listedDomainWarning !== undefined) {
       next.listedDomainWarning = set.listedDomainWarning ?? undefined;
       if (set.listedDomainWarning) {
-        next.logoDomain = undefined;
-        next.verdict = set.listedDomainWarning;
+        // A warning invalidates checkout, not a separately sourced local brand
+        // mark. Only keep the logo if an image is actually stored in our repo.
+        if (!firmLogoFor(next.logoDomain)) next.logoDomain = undefined;
+        if (set.verdict === undefined) next.verdict = set.listedDomainWarning;
         next.products = next.products.map((product) => ({ ...product, linkToStart: undefined }));
       }
     }
@@ -210,6 +218,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       // Same rule as the base profile: "entity mapped" needs a known jurisdiction.
       next.legalVerified =
         next.status !== 'Fermée' &&
+        !next.listedDomainWarning &&
         update.setEntities.some((entity) => Boolean(entity.jurisdiction) && !/to verify|international|unknown|unconfirmed/i.test(entity.jurisdiction));
     }
 

@@ -20,7 +20,7 @@ const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
   'status', 'verdict', 'auditSummary', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
-  'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
+  'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite', 'historicLogoDomain',
   'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
 const DRAWDOWN_TYPES = new Set(['EOD', 'Trailing', 'Static', 'Hybride']);
@@ -178,6 +178,15 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
   if (set.officialWebsite !== undefined) {
     if (!isHttpsUrl(set.officialWebsite)) errors.push(`${where}.set.officialWebsite must be an https URL`);
     else if (set.officialWebsite !== beforeSet.officialWebsite) sensitive.push(`${slug}: official website -> ${set.officialWebsite}`);
+  }
+  if (set.historicLogoDomain !== undefined) {
+    if (typeof set.historicLogoDomain !== 'string' || !/^[a-z\d.-]+\.[a-z]{2,}$/i.test(set.historicLogoDomain)) {
+      errors.push(`${where}.set.historicLogoDomain: valid domain required`);
+    }
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('historicLogoDomain') && isHttpsUrl(entry.source))) {
+      errors.push(`${where}.set.historicLogoDomain: sourced logo provenance changelog required`);
+    }
+    if (set.historicLogoDomain !== beforeSet.historicLogoDomain) sensitive.push(`${slug}: historic logo domain -> ${set.historicLogoDomain}`);
   }
   const newIncidents = (update.addIncidents ?? []).filter((item) => !(before?.addIncidents ?? []).includes(item));
   if (newIncidents.length) sensitive.push(`${slug}: ${newIncidents.length} new incident(s)`);

@@ -8625,6 +8625,575 @@
         {"label":"Monevis company-published payout information","url":"https://monevis.com/payouts"}
       ]
     },
+    "nova-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Restored Nova Funding's historic magenta brand mark from the image uploaded by the firm to its claimed Trustpilot profile; displaying this archived identity does not reinstate an invalid purchase URL.",
+          "source": "https://s3-eu-west-1.amazonaws.com/tpd/logos/63fe9840075954d494a07402/0x0.png",
+          "fields": [
+            "historicLogoDomain"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Nova Funding's claimed Trustpilot profile links to nova-funding.com, but that former prop domain currently redirects to an unrelated gambling site. The database-listed novafunding.com instead corresponds to unrelated lawsuit funding. No active authorised checkout or formal closure statement verified.",
+          "source": "https://www.trustpilot.com/review/nova-funding.com",
+          "fields": [
+            "listedDomainWarning",
+            "verdict",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historic 2024 Nova assessment terms name Prop Trade Tech Pty Ltd, ABN 71 661 045 950; Australian government history shows it changed legal name to TRADESIM PTY LTD on 14 Mar 2025, ABN active. This verifies the old entity, not current Nova liability.",
+          "source": "https://abr.business.gov.au/AbnHistory/View?id=71661045950",
+          "fields": [
+            "entities",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Another historical Nova website terms PDF names a separate Saint Vincent Prop Trade Tech LLC (2784 LLC 2022). A government gazette dated 24 June 2025 lists that LLC as struck from the register; do not conflate with the Australian company.",
+          "source": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf",
+          "fields": [
+            "entities",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot 2.2 out of 5 across 4,448 reviews; allegations about unpaid payouts and account migrations remain unadjudicated, not authenticated banking evidence.",
+          "source": "https://www.trustpilot.com/review/nova-funding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "historicLogoDomain": "nova-funding.com",
+        "trustpilotRating": 2.2,
+        "trustpilotReviewCount": 4448,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/nova-funding.com",
+        "listedDomainWarning": "Do not buy through a Nova Funding link: historical nova-funding.com redirected to unrelated gambling on 17 Nov 2026; the previously listed novafunding.com is a different lawsuit-funding operation or inaccessible. No verified active prop-firm checkout or formal closure notice.",
+        "auditSummary": "17 Nov 2026: the historical nova-funding.com redirects to unrelated gambling, while the similarly spelled novafunding.com is not the prop firm. Historic trader terms name Australian Prop Trade Tech Pty Ltd, ABN 71 661 045 950, now TRADESIM PTY LTD since 14 Mar 2025 according to the government register. Separate website terms name SVG Prop Trade Tech LLC, number 2784 LLC 2022, which an official June 2025 gazette lists as struck off. These two distinct providers do not establish Nova's current payout liability. Archived payout rules included a 30% daily-profit concentration cap and a 6% payout gain cap, but cannot be assumed current. Trustpilot 2.2/5 across 4,448 reviews includes unverified payout complaints; no independent current bank or chain settlement authenticated.",
+        "verdict": "Nova Funding has no verified active prop-firm checkout. Its historical domain redirects to unrelated gambling; two separate former legal providers were traced to a name change and a government strike-off respectively. Current business continuity, refund party and completed payouts are unverified; archive/watchlist only."
+      },
+      "setEntities": [
+        {
+          "name": "TRADESIM PTY LTD (formerly PROPTRADETECH PTY LTD)",
+          "jurisdiction": "Australia (historical 2024 Nova terms)",
+          "registrationNumber": "ABN 71 661 045 950 / ACN 661 045 950",
+          "role": "Named in 2024 trader terms under its old name; Australian ABN register verifies name change on 14 Mar 2025. Not proof of present Nova activity."
+        },
+        {
+          "name": "Prop Trade Tech LLC",
+          "jurisdiction": "Saint Vincent and the Grenadines (historical Nova website terms)",
+          "registrationNumber": "2784 LLC 2022 (struck off 24 Jun 2025)",
+          "role": "Distinct older website-terms party listed as removed from official LLC register; must not be conflated with the Australian firm."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The 2024 Nova assessment terms identify Australian Prop Trade Tech Pty Ltd, ABN 71 661 045 950. The official Australian ABN history now records TRADESIM PTY LTD with the same identifier following a 14 March 2025 name change. A separate historical Nova website PDF identifies Prop Trade Tech LLC (2784 LLC 2022), struck from the Saint Vincent and Grenadines register in June 2025 according to that government's gazette. Neither record alone identifies the current operator, and the old prop domain redirects to unrelated gambling. Published payout claims and complaints are not authenticated financial settlements; no formal Nova shutdown notice was found.",
+        "regulatoryStatus": [
+          "Australian ABN remained active under renamed TRADESIM PTY LTD in the government record; ABN is not a brokerage authorisation.",
+          "Saint Vincent and Grenadines LLC 2784 LLC 2022 officially struck off in June 2025; separate entity.",
+          "Old Nova agreement describes simulated evaluation rather than brokerage deposits."
+        ],
+        "complaintsAndDisputes": [
+          "4,448-review Trustpilot profile rates 2.2/5, with unaudited user allegations about payouts and access after migrations.",
+          "Archived website copy states a 30% day-profit consistency rule and 6% gain cap per withdrawal; present applicability unverified.",
+          "Claimants should preserve the actual contracting entity and invoice instead of inferring liability from a brand name."
+        ],
+        "redFlags": [
+          "Historical domain redirects to unrelated gambling and is unsafe as a purchase destination.",
+          "Wrong near-identical domain points to unrelated lawsuit funding.",
+          "Historical company roles changed/ended; current seller and payment obligation unconfirmed.",
+          "No independent settlement proof located."
+        ],
+        "sources": [
+          {
+            "label": "Historic Nova assessment terms 2024",
+            "url": "https://nova-funding.com/wp-content/uploads/2024/08/Terms-and-conditions-Nova-Funding-1.pdf"
+          },
+          {
+            "label": "Australian ABN name-change history",
+            "url": "https://abr.business.gov.au/AbnHistory/View?id=71661045950"
+          },
+          {
+            "label": "Historic Nova website terms naming SVG LLC",
+            "url": "https://portal.nova-funding.com/wp-content/uploads/Website-Terms-and-Conditions-Nova-Funding.pdf"
+          },
+          {
+            "label": "SVG government gazette LLC strike-off June 2025",
+            "url": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf"
+          },
+          {
+            "label": "Nova Funding Trustpilot",
+            "url": "https://www.trustpilot.com/review/nova-funding.com"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Nova historic assessment terms (2024)",
+          "url": "https://nova-funding.com/wp-content/uploads/2024/08/Terms-and-conditions-Nova-Funding-1.pdf"
+        },
+        {
+          "label": "Australian company register historic name",
+          "url": "https://abr.business.gov.au/AbnHistory/View?id=71661045950"
+        },
+        {
+          "label": "SVG government gazette of struck-off Prop Trade Tech LLC",
+          "url": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf"
+        },
+        {
+          "label": "Nova Funding Trustpilot claimed profile",
+          "url": "https://www.trustpilot.com/review/nova-funding.com"
+        }
+      ]
+    },
+    "the-forex-funder": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "TFF's own August/September 2024 Help Center documents first withdrawal after 30 days, later withdrawals after 14 days, KYC, signed funded agreement and processing quoted as 1–4 or 1–3 business days. These are archived program policies, not independently verified 2026 payouts.",
+          "source": "https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account",
+          "fields": [
+            "payoutDelay",
+            "auditSummary",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The firm's 26 Aug 2024 announcement, quoted by Finance Magnates, confirms acquisition by AXE Securities via a Hong Kong holding company; no named current TFF contracting entity or registration number was confirmed from accessible primary legal terms.",
+          "source": "https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/",
+          "fields": [
+            "entities",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Main website returns HTTP 403 in this review; another dated October 2026 check reported Cloudflare error 1000 and no formal closure statement. Do not route buyers to an unusable/unverified checkout. Keep status watchlist, not formally closed.",
+          "source": "https://mypropgenius.com/closed-firms/theforexfunder/",
+          "fields": [
+            "listedDomainWarning",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot showed 2.5/5 across 1,574 reviews, including contested payout complaints. In an Aug 2024 company response TFF described a new-management process for previously accepted but unpaid requests; no independently verified settlement evidence located.",
+          "source": "https://www.trustpilot.com/review/theforexfunder.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "legalReview"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 2.5,
+        "trustpilotReviewCount": 1574,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/theforexfunder.com",
+        "payoutDelay": "Archived TFF 2024 support policy: first request 30 days after first trade, next 14 days after first post-payout trade; processing listed as 1–4 business days (another FAQ says 1–3). Not confirmed operational in 2026.",
+        "listedDomainWarning": "The Forex Funder main site returned HTTP 403 on 17 Nov 2026; an independent check in Oct 2026 reported Cloudflare error 1000. No verified active checkout or formal company closure notice. Purchase links suspended pending current terms and seller identity.",
+        "auditSummary": "17 Nov 2026: first-party 2024 help pages describe a 30-day first-payout wait, 14-day later wait, KYC, signed trader agreement, minimum 1% of initial balance including split and USDT TRC20 below $400 versus Rise over $400. One article says processing 1–4 days and another 1–3; these old FAQ differences must be rechecked with current terms. TFF announced its acquisition by AXE Securities on 26 Aug 2024 via a Hong Kong holding company, but the actual registered TFF contracting entity/number remains unverified. Main site returns 403, while a separate Oct 2026 check recorded Cloudflare error 1000; neither proves a legal shutdown. Trustpilot 2.5/5 across 1,574 reviews includes contested payout reports, and a 2024 firm reply acknowledged a process for claims accepted but not paid under previous management. No independently traced settlement proof.",
+        "verdict": "Historic TFF payout rules are documented but stale. Its AXE acquisition is publicly reported, the website is currently inaccessible, and the present legal counterparty is unknown. Older payout disputes must not be confused with proven current defaults; do not present this brand as an active checkout."
+      },
+      "setEntities": [
+        {
+          "name": "The Forex Funder (current contractual company unidentified)",
+          "jurisdiction": "To verify",
+          "role": "2024 official help articles name the brand but do not disclose a company registration number or currently applicable trader agreement."
+        },
+        {
+          "name": "AXE Securities (reported 2024 acquirer)",
+          "jurisdiction": "To verify (media describe Bahamas CFD broker and acquisition via unnamed Hong Kong holding company)",
+          "role": "Publicly announced acquisition through a holding company; does not establish which entity owed original or subsequent TFF trader rewards."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "TFF's publicly viewable support center contains 2024 payout rules but no accessible signed Funded Trader Agreement or clearly registered contracting entity. The firm's acquisition by AXE Securities in August 2024 was announced by the company and reported in finance press; purchaser and contract obligor must not be assumed identical. A 2024 Trustpilot company response offered a claims process for disputed/accepted unpaid payouts under earlier management, but no independently reconciled disbursement records were found. In 2026 the checkout site fails, although no formal winding-up notice is verified.",
+        "regulatoryStatus": [
+          "Press reports AXE Securities as a Bahamas-based CFD broker and TFF as Dubai-registered at the time of acquisition; corporate register numbers and actual legal contract party were not independently retrieved.",
+          "The 2024 support documentation describes prop account rewards, not a protected client investment deposit.",
+          "A broker relationship or corporate acquisition does not extend brokerage regulatory status to TFF challenges."
+        ],
+        "complaintsAndDisputes": [
+          "A TFF-managed response in August 2024 discussed previously accepted but unpaid payouts and an intake form under new management. This documents the firm's public response, not final payment outcomes.",
+          "Company 2024 FAQ payout schedule and payment method differ by article: processing 1–4 vs 1–3 days; USDT TRC20 below $400 and Rise above $400, plus KYC and 1% minimum.",
+          "Trustpilot 2.5/5 across 1,574 reviews includes disputed claims; user accounts cannot substitute for bank or blockchain confirmations."
+        ],
+        "redFlags": [
+          "Current site returns HTTP 403, with independent October 2026 report of Cloudflare error 1000; not proof of formal closure but no safe live checkout.",
+          "Present contracting company and full current rulebook not verified.",
+          "Historical management transition complicates allocation of disputed payouts.",
+          "No independently authenticated payout transfers from the reviewed material."
+        ],
+        "sources": [
+          {
+            "label": "TFF official first/subsequent payout eligibility FAQ",
+            "url": "https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account"
+          },
+          {
+            "label": "TFF official payout method and threshold FAQ",
+            "url": "https://support.theforexfunder.com/en/articles/9823909-how-do-i-request-a-payout"
+          },
+          {
+            "label": "Finance Magnates reporting company acquisition announcement",
+            "url": "https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/"
+          },
+          {
+            "label": "Dated October 2026 independent site-reachability check",
+            "url": "https://mypropgenius.com/closed-firms/theforexfunder/"
+          },
+          {
+            "label": "TFF claimed Trustpilot profile and company replies",
+            "url": "https://www.trustpilot.com/review/theforexfunder.com"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "TFF official 2024 payout eligibility and KYC",
+          "url": "https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account"
+        },
+        {
+          "label": "TFF official 2024 payout methods",
+          "url": "https://support.theforexfunder.com/en/articles/9823909-how-do-i-request-a-payout"
+        },
+        {
+          "label": "TFF Aug 2024 AXE acquisition reporting",
+          "url": "https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/"
+        },
+        {
+          "label": "TFF October 2026 inactive-domain report",
+          "url": "https://mypropgenius.com/closed-firms/theforexfunder/"
+        }
+      ]
+    },
+    "one-of-one-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Claimed Trustpilot profile identifies historical website oneofonefunding.com, whereas existing PropRadar profile points at 1of1funding.com. Old alternate domain returned HTTP 503 and primary historical domain could not be loaded; no checkout safely authenticated.",
+          "source": "https://www.trustpilot.com/review/oneofonefunding.com",
+          "fields": [
+            "listedDomainWarning",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "WikiFX directory attributes the name 10F1FUNDING LLC to Puerto Rico, 151 Calle de San Francisco STE 200 PMB 0026, San Juan; registration number, government record and signed agreement could not be independently verified. Treat as third-party lead, not legally proven contracting entity.",
+          "source": "https://www.wikifx.com/en/prop/517425147.html",
+          "fields": [
+            "entities",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot shows 3.3/5 across 964 reviews, including accounts of access and withdrawal problems. Forex Peace Army independently labels the firm out of business, but no first-party formal closure statement was found; classify apparently inactive, not proven legally dissolved.",
+          "source": "https://www.trustpilot.com/review/oneofonefunding.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "legalReview"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.3,
+        "trustpilotReviewCount": 964,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneofonefunding.com",
+        "listedDomainWarning": "Historical claimed website is oneofonefunding.com, not the listed 1of1funding.com. On 17 Nov 2026 the latter returned HTTP 503 and the former could not be authenticated as an active checkout. Multiple reviewers classify the firm inactive; no first-party closure notice verified. Purchase links suspended.",
+        "auditSummary": "17 Nov 2026: Trustpilot's claimed 1of1 Funding profile points to oneofonefunding.com (distinct from legacy PropRadar's 1of1funding.com), rates 3.3/5 from 964 reviews, and contains first-person complaints about missing logins, account access and payouts. These are allegations, not verified settlements or legal findings. Forex Peace Army labels the historical firm out of business on an unreachable-site assessment, but no official dissolution/closure statement was found. Secondary directory WikiFX lists '10F1FUNDING LLC' at 151 Calle de San Francisco STE 200 PMB 0026, San Juan, Puerto Rico, and archived plan terms including a 10% funded profit-concentration limit and 25% stock-trading concentration rule. The entity and rules lack current first-party contract/registry corroboration. No authenticated payouts or current billing entity.",
+        "verdict": "1of1 Funding appears inactive; historic and currently listed domains are inconsistent and cannot provide a verified current checkout. A Puerto Rico LLC name appears in a secondary directory but remains unconfirmed by official registry/contract. Do not buy until there is a verifiable operator, working site and clear trader-account resolution."
+      },
+      "setEntities": [
+        {
+          "name": "10F1FUNDING LLC (third-party listing only)",
+          "jurisdiction": "To verify (Puerto Rico reported by WikiFX)",
+          "registeredAddress": "151 Calle de San Francisco STE 200 PMB 0026, San Juan PR 00901 (secondary report)",
+          "role": "Claimed 1of1 Funding operator in WikiFX directory. No official registration extract or first-party terms independently matched; identity unverified."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The brand's claimed Trustpilot profile identifies oneofonefunding.com as the historic URL, not the 1of1funding.com address in the base comparison record. Neither was authenticated as a live prop trading checkout on 17 November 2026. A WikiFX directory lists 10F1FUNDING LLC in Puerto Rico but no primary government register match or first-party contract was retrieved; do not assert verified incorporation or liability. Forex Peace Army categorises OneOfOneFunding as out of business based on inaccessible website, which is evidence of likely inactivity, not a formal winding-up order. No bank transfer or chain payout record independently verified.",
+        "regulatoryStatus": [
+          "No publicly accessible current signed user agreement, invoicing company or corporate registration number authenticated.",
+          "Puerto Rico LLC identification comes solely from a secondary directory and is unconfirmed.",
+          "Historic evaluation product rules cannot be assumed currently enforceable or purchasable."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot shows 964 reviews at 3.3/5 including 2025 user reports of missing credentials, stalled withdrawal and unavailable support; statements remain unadjudicated.",
+          "Third-party archived plan descriptions mention 10% funded consistency and 25% stocks concentration limits, not verified against live rules.",
+          "Formal closure or legal insolvency notice not located; readers should retain payment and dashboard records if they are affected."
+        ],
+        "redFlags": [
+          "Brand's own claimed Trustpilot domain differs from the old PropRadar purchase URL.",
+          "Both current/historic candidate websites inaccessible as working checkouts; FPA labels apparently out of business.",
+          "Operator name only sourced from non-government third-party directory.",
+          "No independent, traceable payout transfer located."
+        ],
+        "sources": [
+          {
+            "label": "Claimed 1of1 Trustpilot profile and historic domain",
+            "url": "https://www.trustpilot.com/review/oneofonefunding.com"
+          },
+          {
+            "label": "Forex Peace Army independent inactive/out-of-business assessment",
+            "url": "https://www.forexpeacearmy.com/forex-reviews/21955/one-of-one-funding-review"
+          },
+          {
+            "label": "WikiFX 1of1 profile naming unverified LLC and historic rules",
+            "url": "https://www.wikifx.com/en/prop/517425147.html"
+          },
+          {
+            "label": "Prop Firm Match unlisted profile and user reports",
+            "url": "https://propfirmmatch.com/unlisted-prop-firms/1of1-funding"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "1of1 claimed Trustpilot profile (historical oneofonefunding.com)",
+          "url": "https://www.trustpilot.com/review/oneofonefunding.com"
+        },
+        {
+          "label": "Forex Peace Army independent inactivity assessment",
+          "url": "https://www.forexpeacearmy.com/forex-reviews/21955/one-of-one-funding-review"
+        },
+        {
+          "label": "WikiFX unverified historic identity and program rules",
+          "url": "https://www.wikifx.com/en/prop/517425147.html"
+        }
+      ]
+    },
+    "glow-node": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Sway Funded's current first-party timeline confirms that it bought Glow Node and its entire user base in August 2024. Glow Node no longer offers a verified separate purchase flow; classify the standalone brand closed after acquisition, not the acquired accounts as extinguished.",
+          "source": "https://swayfunded.com/",
+          "fields": [
+            "status",
+            "listedDomainWarning",
+            "auditSummary",
+            "verdict",
+            "entities",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Finance Magnates reported Glow Node had disclosed 36 traders awaiting payouts at 2024 transfer. Former founder Sam Bradbury says those showing profits were paid and accounts transferred/refunded; the outlet could not independently verify each resolution. Neither side should be represented as an audited settled/unpaid count.",
+          "source": "https://www.financemagnates.com/forex/sam-bradbury-buys-get-funded-now-assets-in-return-to-prop-firm-ownership/",
+          "fields": [
+            "legalReview",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historic Glow Node Trustpilot 3.8/5 across 353 reviews, with no reviews in the prior 12 months, describes the pre-migration brand; not evidence of present standalone operations or confirmed Sway payouts.",
+          "source": "https://www.trustpilot.com/review/glow-node.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount"
+          ]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "trustpilotRating": 3.8,
+        "trustpilotReviewCount": 353,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/glow-node.com",
+        "listedDomainWarning": "Glow Node was acquired with its entire customer base by Sway Funded in August 2024, according to Sway's own timeline. No separate Glow Node challenge store has been verified. Historical brand is closed as a standalone purchase option; do not infer that Sway contract terms settle every legacy payout.",
+        "auditSummary": "17 Nov 2026: Sway Funded's live company timeline states that Sway purchased Glow Node and its entire user base in August 2024. This supports closure of Glow Node as an independent firm, not a bankruptcy or confirmation that all accounts and liabilities were settled. Glow Node standalone web pages are inaccessible; the similar glownode.com is parked, not a verified checkout. Finance Magnates reported 36 traders awaiting payouts at the 2024 transition. Former founder Sam Bradbury says profit accounts were paid and some traders received refunds/replacement challenges; the reporter could not independently check each resolution. Historic Trustpilot 3.8/5 across 353 reviews has no reviews in the last 12 months. Do not count current Sway reward claims as independent proof for legacy Glow payouts.",
+        "verdict": "Glow Node was acquired by Sway Funded and is no longer a distinct verified seller. Legacy customer migration and payout responsibility require evidence from each user's original agreement and Sway's replacement terms. The 2024 payout backlog and founder's reported resolution are both historical and not independently reconciled."
+      },
+      "setEntities": [
+        {
+          "name": "Glow Node (historic standalone operator not verified)",
+          "jurisdiction": "To verify",
+          "role": "Pre-August 2024 challenge brand. No authenticated historic incorporation extract or complete pre-acquisition trader agreement."
+        },
+        {
+          "name": "SF Funded LTD",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2026-00408",
+          "role": "Current Sway Funded entity disclosed in Sway footer; acquirer group website claims acquisition. Does not automatically establish responsibility for each 2024 Glow Node contract."
+        },
+        {
+          "name": "Corvexia Holding LTD",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE 489845",
+          "role": "Current Sway Funded disclosed payment agent; current registration/function do not authenticate Glow Node legacy disbursements."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The acquirer's first-party timeline identifies the August 2024 purchase of Glow Node and its customer base. This is compelling evidence the historic brand is not a distinct trading challenge seller, but not a legal liquidation notice or a novation agreement establishing that Sway took on every old debt. The current Sway footer lists Saint Lucia company SF Funded LTD and Cyprus payment agent Corvexia Holding LTD; those corporate records refer to modern Sway business, not verified legacy Glow contracts. Finance Magnates documents 36 customers awaiting 2024 payouts and the former founder's claim to have paid/provided replacements, explicitly without independent case-by-case verification.",
+        "regulatoryStatus": [
+          "Sway's acquisition timeline and company footer are first-party; current Sway uses virtual funds and non-broker terminology.",
+          "Current named Sway entities do not prove responsibility for legacy Glow Node payout obligations; request account-migration and claim-assumption records.",
+          "No standalone Glow Node regulator status or legacy corporate register evidence authenticated."
+        ],
+        "complaintsAndDisputes": [
+          "Finance Magnates says 36 Glow Node traders were waiting for rewards before their accounts moved in 2024.",
+          "Former operator told Finance Magnates profits were paid at exit and some refunds or replacement accounts supplied; financial outlet could not verify every case.",
+          "Historical customer complaints include challenged migration conditions; user reviews are statements, not findings.",
+          "Historic 353-review Trustpilot record has no fresh review in previous 12 months and cannot evidence 2026 payment service."
+        ],
+        "redFlags": [
+          "Acquired/absorbed brand has no separate verifiable challenge store.",
+          "No disclosed original legal contract or documented assumption of every unpaid claim.",
+          "Public statements on 2024 payout backlog versus founder-reported resolution are not independently reconciled.",
+          "Modern Sway marketing payout dashboard does not prove Glow Node legacy disbursement."
+        ],
+        "sources": [
+          {
+            "label": "Sway Funded own acquisition timeline August 2024",
+            "url": "https://swayfunded.com/"
+          },
+          {
+            "label": "Finance Magnates 2026 follow-up on Glow Node 2024 payout transfer",
+            "url": "https://www.financemagnates.com/forex/sam-bradbury-buys-get-funded-now-assets-in-return-to-prop-firm-ownership/"
+          },
+          {
+            "label": "Historical Glow Node Trustpilot claimed profile",
+            "url": "https://www.trustpilot.com/review/glow-node.com"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Sway Funded primary acquisition timeline",
+          "url": "https://swayfunded.com/"
+        },
+        {
+          "label": "Finance Magnates independent interview on 2024 Glow Node settlements",
+          "url": "https://www.financemagnates.com/forex/sam-bradbury-buys-get-funded-now-assets-in-return-to-prop-firm-ownership/"
+        },
+        {
+          "label": "Glow Node claimed Trustpilot profile (historic)",
+          "url": "https://www.trustpilot.com/review/glow-node.com"
+        }
+      ]
+    },
+    "tribe-funded": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Official tribefunded.com returned HTTP 525 TLS handshake failure, following a dated July 2026 external inaccessible-domain assessment. No working checkout or first-party formal closure notice identified; status remains watchlist with unsafe purchase links blocked.",
+          "source": "https://propfirmbook.com/unverified/tribe-funded",
+          "fields": [
+            "listedDomainWarning",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Tribe Funded's claimed Trustpilot profile shows 3.1/5 across 46 reviews (41% one-star); complaints describe payout refusal and breach notices, while positive comments do not necessarily demonstrate paid withdrawals. No independently authenticated transfer was found.",
+          "source": "https://www.trustpilot.com/review/tribefunded.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "legalReview"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Neither a primary contracting-company name, registered jurisdiction/number, signed trader rules nor a current payout policy was accessible; Prop Firm Match lists the firm unlisted, which is not a finding of misconduct.",
+          "source": "https://propfirmmatch.com/unlisted-prop-firms/tribe-funded",
+          "fields": [
+            "entities",
+            "legalReview"
+          ]
+        }
+      ],
+      "set": {
+        "trustpilotRating": 3.1,
+        "trustpilotReviewCount": 46,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tribefunded.com",
+        "listedDomainWarning": "Tribe Funded website returned HTTP 525 on 17 Nov 2026 after external inaccessible-site reports during 2026. Active checkout, corporate seller and fresh withdrawal terms are not independently verified; purchase links suspended. No formal closure finding.",
+        "auditSummary": "17 Nov 2026: official tribefunded.com produced HTTP 525 (TLS handshake failure), consistent with a July 2026 third-party inactive-site check, but cannot alone prove bankruptcy or permanent closure. Claimed Trustpilot profile shows 3.1/5 from 46 reviews with 41% one-star; users report pending withdrawals, breached accounts or support problems, alongside positive experiences that often do not include authenticated withdrawals. The Trustpilot sample is small and no policy-breach/paid-fake-review notice was identified on the claimed page. Prop Firm Match marks the company unlisted, not a finding of misconduct. Secondary sites repeat former up-to-100% share and first-payout marketing, but no current official rulebook, legal entity, registration number, bank/chain settlement or functioning checkout was retrieved.",
+        "verdict": "Tribe Funded's operating status is unconfirmed and its site is inaccessible. The modest mixed review sample, missing legal counterparty and lack of verified transfers warrant a cautious watchlist dossier. Historical marketing promises should not be displayed as currently purchasable terms."
+      },
+      "setEntities": [
+        {
+          "name": "Tribe Funded (registered operator unconfirmed)",
+          "jurisdiction": "To verify (claimed Trustpilot profile lists United States as contact country only)",
+          "role": "Brand listed on the Trustpilot profile; no company number, government incorporation match or first-party trader agreement obtained."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Tribe Funded's homepage returned an HTTP 525 error in a direct 17 Nov 2026 check. A July 2026 external review also treated the site as unreachable while leaving formal status undetermined. The claimed Trustpilot record lists a US contact location but no corporate identity, and Prop Firm Match marks the firm unlisted pending its own vetting; neither establishes the company's incorporation or wrongdoing. Historical offer details from directories were not corroborated by presently accessible official terms. No verified account-holder bank receipt, independently identifiable blockchain transaction, or full settlement record was found.",
+        "regulatoryStatus": [
+          "No registered company name, jurisdiction, incorporation number or regulatory status independently verified.",
+          "Trustpilot's 'United States' contact tag is not evidence of US legal incorporation.",
+          "No accessible current rulebook establishes whether challenges use simulated or actual funds; do not assume regulated broker protections."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot 3.1/5 across 46 reviews, 41% one-star, includes unresolved personal reports of payout refusal, changed breach status and support handling.",
+          "Some favorable reviews describe service or platform but do not claim a successful withdrawal; count neither side as audited payout evidence.",
+          "Former third-party plan advertisements of high splits or short cycles lack current first-party confirmation."
+        ],
+        "redFlags": [
+          "Official site returned HTTP 525, blocking review of terms and checkout.",
+          "No verifiable registered contractual counterparty.",
+          "Small polarized review set with insufficient independently verified payout samples.",
+          "Third-party 'unlisted' status is not proof of wrongdoing or corporate closure."
+        ],
+        "sources": [
+          {
+            "label": "Tribe Funded claimed Trustpilot record",
+            "url": "https://www.trustpilot.com/review/tribefunded.com"
+          },
+          {
+            "label": "PropFirmBook July 2026 unreachable-site status review",
+            "url": "https://propfirmbook.com/unverified/tribe-funded"
+          },
+          {
+            "label": "Prop Firm Match Tribe Funded unlisted profile",
+            "url": "https://propfirmmatch.com/unlisted-prop-firms/tribe-funded"
+          },
+          {
+            "label": "Tribe Funded own domain (not reachable Nov 2026)",
+            "url": "https://tribefunded.com/"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Tribe Funded claimed Trustpilot review profile",
+          "url": "https://www.trustpilot.com/review/tribefunded.com"
+        },
+        {
+          "label": "July 2026 dated reachability assessment",
+          "url": "https://propfirmbook.com/unverified/tribe-funded"
+        },
+        {
+          "label": "Prop Firm Match unlisted status",
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/tribe-funded"
+        }
+      ]
+    },
     "x-funded": {
       "reviewedAt": "2026-11-16",
       "changelog": [
