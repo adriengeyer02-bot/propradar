@@ -156,7 +156,17 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (set.officialWebsite) {
       const newUrl = set.officialWebsite;
       const newDomain = new URL(newUrl).hostname.replace(/^www\./, '');
-      const oldDomain = firm.logoDomain;
+      // Some imported firms have no local logo, so `logoDomain` is absent even
+      // when their original official URL is known. Use that URL to remove
+      // unrelated/stale links when correcting the official website (e.g.
+      // levels.com, a health company, versus the prop firm's lv.ls domain).
+      const oldDomain = (() => {
+        try {
+          return new URL(firm.sources[0]?.url ?? '').hostname.replace(/^www\./, '') || firm.logoDomain;
+        } catch {
+          return firm.logoDomain;
+        }
+      })();
       const isOld = (url?: string) => {
         if (!url || !oldDomain) return false;
         try {
