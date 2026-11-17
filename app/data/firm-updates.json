@@ -10184,6 +10184,362 @@
         "2024-08-15 — Funds For Traders announced it was ceasing all operations, citing trading-platform support as its own stated reason; individual customer refund and payout outcomes were not verified in this review. Source: https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/"
       ]
     },
+    "onlyfunds": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Corrected the historic prop-firm domain to only-funds.com. The previously listed onlyfunds.com belongs to a separate investment-advice business that expressly distinguishes itself from the defunct prop firm; its logo and obsolete terms must never be attributed to the historic brand.",
+          "source": "https://www.onlyfunds.com/faq",
+          "fields": ["officialWebsite", "listedDomainWarning", "status", "verdict", "auditSummary", "legalReview", "entities", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The historic OnlyFunds Trustpilot profile, tied to only-funds.com with the hyphen, currently shows 2.1/5 from 142 reviews. Complaints about withdrawal denials and disputed trading-rule breaches are customer accounts, not verified findings or settled cases.",
+          "source": "https://www.trustpilot.com/review/only-funds.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "score", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The old only-funds.com checkout is no longer verifiably operational; the historical profile is classified closed for buyer safety, without claiming formal dissolution of a named corporate entity.",
+          "source": "https://thetrustedprop.com/prop-firms/only-funds",
+          "fields": ["status", "listedDomainWarning", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 38,
+        "officialWebsite": "https://only-funds.com/",
+        "verdict": "The historical OnlyFunds prop firm used only-funds.com, not onlyfunds.com. The former firm is no longer a verifiable active challenge provider and its claimed Trustpilot profile shows 2.1/5 across 142 reviews. The similarly named business at onlyfunds.com is a different company. This archived profile cannot be used to buy a program.",
+        "auditSummary": "17 November 2026 historical investigation: PropRadar corrected a serious domain-identity error. The prop-firm brand was associated with only-funds.com (hyphen), whereas onlyfunds.com currently describes a separate investment-advisory service, expressly rejecting a connection to the old challenge firm. The historic brand's domain is no longer a verified checkout; industry archives classify it as closed and customers were describing shutdown in 2024. Its domain-specific Trustpilot profile shows 2.1/5 from about 142 reviews, with many user-reported refused payouts, contested copy-trading allegations and refund disputes. These testimonies are not independently adjudicated or authenticated transfers. Some reviewers associate the former operator with 'PTT' / Prop Trade Tech, but PropRadar did not recover a contemporaneous OnlyFunds contract or register extract connecting that company to the brand, so no legal registration is asserted. The score falls from 51 to a historical 38 on the documented reputation and identity risks; the operational closure is not a finding of corporate liquidation.",
+        "trustpilotRating": 2.1,
+        "trustpilotReviewCount": 142,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/only-funds.com",
+        "listedDomainWarning": "OnlyFunds prop-firm brand is recorded as closed. Its former address was only-funds.com; the similarly spelled onlyfunds.com is an unrelated investment-advisory business. Do not buy an OnlyFunds trading challenge from a reused name, impersonating seller or redirected checkout. Verify the present legal operator independently."
+      },
+      "setEntities": [
+        {
+          "name": "OnlyFunds (historical challenge brand; company registration unverified)",
+          "jurisdiction": "To verify — no independently matched registration",
+          "role": "Not the investment-advisory business presently operating at onlyfunds.com; references to Prop Trade Tech in customer reviews are not sufficient legal proof."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The archived trading-challenge brand and today's similarly spelled investment adviser are different businesses. The historical firm's precise registered contracting entity, payment processor obligations and formal dissolution status remain unproven. No current purchase pathway is recommended.",
+        "regulatoryStatus": [
+          "Historical challenge domain: only-funds.com, no verified functioning original checkout in the November 2026 review.",
+          "Current onlyfunds.com website publicly distinguishes itself from the defunct trading-challenge business; no affiliation between them is established.",
+          "A claimed operator/technical provider named in user reviews is not independently tied to this firm's contract or any official register filing."
+        ],
+        "complaintsAndDisputes": [
+          "Historic Trustpilot score 2.1/5 from 142 reviews; significant negative testimony concerns rule interpretations and refused reward requests.",
+          "Some historic positive reviews self-report receiving a reward; neither such reports nor negative allegations are independently verified settlement evidence.",
+          "No authenticated records establish whether former customers' payouts, challenge fees or refunds were finally reconciled."
+        ],
+        "redFlags": [
+          "Historic brand ceased verifiable operations and its domain no longer provides an authenticated checkout.",
+          "Near-identical unhyphenated domain belongs to a wholly different service; brand impersonation or misdirected traffic is a serious risk.",
+          "No independently matched historic corporate registration, refund ledger or third-party confirmed customer transfer."
+        ],
+        "sources": [
+          { "label": "Historic OnlyFunds prop-firm Trustpilot profile", "url": "https://www.trustpilot.com/review/only-funds.com" },
+          { "label": "Unrelated current onlyfunds.com service explicitly identifying the name collision", "url": "https://www.onlyfunds.com/faq" },
+          { "label": "Only Funds historical closed-firm industry archive", "url": "https://thetrustedprop.com/prop-firms/only-funds" },
+          { "label": "Old original challenge domain, currently unauthenticated", "url": "https://only-funds.com/" }
+        ]
+      },
+      "addSources": [
+        { "label": "Historic challenge firm's review record, only-funds.com", "url": "https://www.trustpilot.com/review/only-funds.com" },
+        { "label": "Present-day unrelated OnlyFunds investment advisory FAQ", "url": "https://www.onlyfunds.com/faq" },
+        { "label": "Independent historical closed-company listing", "url": "https://thetrustedprop.com/prop-firms/only-funds" }
+      ],
+      "addIncidents": [
+        "2024 — Former only-funds.com customers posted disputed payout and account-closure complaints; customer narratives and any claimed chargebacks were not independently adjudicated. Source: https://www.trustpilot.com/review/only-funds.com",
+        "2026-11-17 — Corrected a material domain-name collision: onlyfunds.com now identifies a different investment-advisory service and is not the former prop firm's checkout. Source: https://www.onlyfunds.com/faq"
+      ]
+    },
+    "axe-trader-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "A December 2024 Discord announcement by Axe Trader, reproduced contemporaneously by Finance Magnates, confirmed the immediate suspension of trading operations. No public restart was authenticated; former sites do not currently provide usable checkout.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-axe-trader-halts-operations-following-ceos-medical-emergency/",
+          "fields": ["status", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The brand-specific Axe Trader Trustpilot page shows 2.5/5 from 73 reviews and includes unverified consumer payout and account-access complaints. The historical operating domain is axetrader.com, rather than the stale universe listing.",
+          "source": "https://www.trustpilot.com/review/axetrader.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "officialWebsite", "score", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 40,
+        "officialWebsite": "https://axetrader.com/",
+        "verdict": "Axe Trader announced an immediate pause of operations in December 2024 and no independently confirmed resumption has been found by November 2026. The historical axetrader.com Trustpilot profile has 2.5/5 from 73 reviews, but consumer allegations and settlement status are unverified. PropRadar treats this as a defunct trading program and blocks purchases.",
+        "auditSummary": "17 November 2026 retrospective: Finance Magnates quoted Axe Trader's 11 December 2024 Discord notice suspending operations immediately, reportedly after a medical emergency affecting its chief executive; the stated reason is a company explanation, not an independent diagnosis. Historic axetrader.com and the old axetraderfunding.com listing are not functioning original sales/contracts. The claimed axetrader.com Trustpilot record displays 2.5/5 across 73 reviews, with some customers reporting inaccessible accounts, incomplete evaluations and delayed or refused payouts after the pause. These are user narratives rather than validated payment records. Third-party articles claim a similarly named UK company dissolved in June 2025; no matching company number or primary register filing tied to this brand was authenticated, and other UK companies with near-identical names must not be treated as the operator. Score revised from 51 to a historical 40 given the operational shutdown, weak review distribution and lack of payout-settlement proof. A closure of trading operations is not by itself proof of legal dissolution.",
+        "trustpilotRating": 2.5,
+        "trustpilotReviewCount": 73,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/axetrader.com",
+        "listedDomainWarning": "Axe Trader suspended trading operations in December 2024 and no authenticated resumption has been established. The old axetrader.com / axetraderfunding.com brand must not be treated as a live challenge seller. Verify any purported restart, legal operator and payout responsibilities before transferring funds."
+      },
+      "setEntities": [
+        {
+          "name": "Axe Trader / Axe Trader Funding (historic brand; legal company unconfirmed)",
+          "jurisdiction": "To verify — UK references not independently linked to the brand",
+          "role": "Brand suspended operations in December 2024; similar UK Companies House names cannot establish contractual identity without matching original company filings."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The firm's own December 2024 pause notice was contemporaneously documented. Neither a verifiable restart nor an original merchant contract or matched Companies House file has been recovered. The press report records an operational freeze, not a court finding, licence revocation or bankruptcy decree.",
+        "regulatoryStatus": [
+          "Trading operations were suspended immediately in the 11 December 2024 company Discord notice as reproduced by Finance Magnates.",
+          "No independently verified original corporate registration number, formal liquidation filing or current responsible contracting party.",
+          "Publicly indexed similarly named UK companies are not sufficient to identify this brand's operator."
+        ],
+        "complaintsAndDisputes": [
+          "2.5/5 Trustpilot rating from 73 historic reviews, about half one-star at the time inspected.",
+          "Customer reviews describe restricted dashboards, disrupted assessments and payout requests; none is independently established as a court finding or a verified payment failure.",
+          "No consolidated settlement record for paused accounts, refunds or pending payouts was obtained."
+        ],
+        "redFlags": [
+          "Company-announced operational suspension since December 2024 with no confirmed restoration.",
+          "Historic selling domains unavailable, making current contractual verification impossible.",
+          "Low consumer review score and unresolved public reward-settlement questions.",
+          "Unverified claims of company dissolution must not be copied from secondary articles as proven corporate records."
+        ],
+        "sources": [
+          { "label": "Finance Magnates contemporaneous reproduction of Axe Trader's original suspension", "url": "https://www.financemagnates.com/forex/prop-firm-axe-trader-halts-operations-following-ceos-medical-emergency/" },
+          { "label": "Axe Trader historical Trustpilot company profile", "url": "https://www.trustpilot.com/review/axetrader.com" },
+          { "label": "Axe Trader former website", "url": "https://axetrader.com/" },
+          { "label": "Independent October 2026 website and shutdown check", "url": "https://mypropgenius.com/closed-firms/axe-trader/" }
+        ]
+      },
+      "addSources": [
+        { "label": "Original Axe Trader operational freeze quoted by industry press", "url": "https://www.financemagnates.com/forex/prop-firm-axe-trader-halts-operations-following-ceos-medical-emergency/" },
+        { "label": "Historic Axe Trader company Trustpilot rating", "url": "https://www.trustpilot.com/review/axetrader.com" },
+        { "label": "Independent check of the unresponsive original trading site", "url": "https://mypropgenius.com/closed-firms/axe-trader/" }
+      ],
+      "addIncidents": [
+        "2024-12-11 — Axe Trader announced suspension of trading operations through its official community channel. No authenticated public relaunch, refund settlement or fulfilment of pending reward obligations was found by November 2026. Source: https://www.financemagnates.com/forex/prop-firm-axe-trader-halts-operations-following-ceos-medical-emergency/"
+      ]
+    },
+    "algo-forex-funds": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The claimed Algo Forex Funds Trustpilot page states that its company website has closed and no longer allows reviews; there are 677 historical reviews. The old official domain also did not serve a usable website, although some July 2026 trackers described it as intermittently selling.",
+          "source": "https://www.trustpilot.com/review/algoforexfunds.com",
+          "fields": ["status", "verdict", "auditSummary", "listedDomainWarning", "trustpilotReviewCount", "trustpilotSourceUrl", "legalReview", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Hong Kong Companies Registry independently lists Algo Trading Solutions Limited, incorporated 7 November 2023, company number 3335261; linking this exact registered entity to the site's historical trading contracts is sourced by industry researchers, not validated against the firm's original signed terms.",
+          "source": "https://www.cr.gov.hk/docs/wrpt/wk_new%26changednamecoys_20231106.pdf",
+          "fields": ["entities", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 42,
+        "verdict": "Algo Forex Funds' claimed Trustpilot page now explicitly marks the company's website as closed, and the old domain could not be authenticated as a functioning seller. A Hong Kong business with the reported operator's name and registration number exists in the official registry, but original contractual linkage and ongoing corporate status require separate proof. Trading-challenge purchases are disabled.",
+        "auditSummary": "17 November 2026 review: the claimed algoforexfunds.com Trustpilot profile explicitly says the company website has closed and has stopped accepting reviews; 677 historical customer reviews remain visible, including contested reports of refused withdrawals and lost account access. The old trading domain was not reachable as a verifiable checkout. A July 2026 third-party observer previously found sales pages accessible, so PropRadar calls this an operational closure at this review date rather than asserting an uninterrupted historical closure or corporate dissolution. Hong Kong Companies Registry independently confirms the 7 November 2023 incorporation of Algo Trading Solutions Limited, registration 3335261. However, the direct signed brand-to-company contract and its current register status were not retrieved; the brand association is reported in secondary research. HFT/EA rules, payouts advertised up to 95%, broker partnerships and transaction evidence cannot be treated as current enforceable contracts. The historical score falls from 50 to 42 based on shutdown risk, inconsistent public operation and unverifiable payout liabilities.",
+        "trustpilotReviewCount": 677,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/algoforexfunds.com",
+        "listedDomainWarning": "Algo Forex Funds' claimed Trustpilot page now says its company website has closed; the original domain is not an authenticated active checkout. Some earlier 2026 sources showed intermittent availability. PropRadar does not recommend any purchase under this historic brand until a newly identified legal operator, valid terms and payout responsibility can be independently confirmed."
+      },
+      "setEntities": [
+        {
+          "name": "Algo Trading Solutions Limited (reported historic operator; contractual link not independently verified)",
+          "jurisdiction": "Hong Kong — company incorporation confirmed; brand association unconfirmed",
+          "registrationNumber": "3335261",
+          "role": "Hong Kong registry confirms the named company's 2023 incorporation, not that it presently operates or must honour the former prop-firm's payouts."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Hong Kong company number 3335261 is independently recorded as Algo Trading Solutions Limited in the Companies Registry's official 2023 incorporation list. Third-party material links the name to Algo Forex Funds, but the original signed website terms and current registry record were not available. Trustpilot directly indicates the firm's trading site has closed, which is evidence of a website status, not legal dissolution.",
+        "regulatoryStatus": [
+          "Hong Kong Companies Registry weekly incorporation list names Algo Trading Solutions Limited, no. 3335261, registered 7 November 2023.",
+          "Association between this company and Algo Forex Funds is attributed in industry research; PropRadar has not authenticated the signed historical operator contract.",
+          "No current government-register status, licence, regulated brokerage status or successor contract verified."
+        ],
+        "complaintsAndDisputes": [
+          "Claimed Trustpilot page preserves 677 reviews and labels the firm's website closed; a current TrustScore is not displayed, so no unsupported numeric rating was entered.",
+          "Some consumers allege denied payouts, unavailable support and account resets after an alleged ownership change; those claims are not independently adjudicated.",
+          "No bank-confirmed payout transfers, refund ledger or assignment of historical obligations to a successor found."
+        ],
+        "redFlags": [
+          "Closed/unavailable original company website and no authenticated present purchase agreement.",
+          "Contradictory operating-status snapshots between July and November 2026.",
+          "Legal company incorporated in Hong Kong does not, by itself, establish a trading-service licence, current existence or brand-contract linkage.",
+          "Historical algo/HFT compatibility and reward claims may no longer apply."
+        ],
+        "sources": [
+          { "label": "Original firm's Trustpilot profile marking its site closed", "url": "https://www.trustpilot.com/review/algoforexfunds.com" },
+          { "label": "Hong Kong Companies Registry primary 2023 incorporation list", "url": "https://www.cr.gov.hk/docs/wrpt/wk_new%26changednamecoys_20231106.pdf" },
+          { "label": "Independent source attributing operator name, number and historical rules", "url": "https://tradingbrokers.com/algo-forex-funds-review/" },
+          { "label": "July 2026 research noting intermittent site visibility", "url": "https://propfirmbook.com/unverified/algo-forex-funds" }
+        ]
+      },
+      "addSources": [
+        { "label": "AFF Trustpilot website-closed notice and archived client reviews", "url": "https://www.trustpilot.com/review/algoforexfunds.com" },
+        { "label": "Hong Kong Companies Registry incorporation no. 3335261", "url": "https://www.cr.gov.hk/docs/wrpt/wk_new%26changednamecoys_20231106.pdf" },
+        { "label": "Historical brand/operator association from trading research", "url": "https://tradingbrokers.com/algo-forex-funds-review/" },
+        { "label": "Earlier July 2026 operating-status ambiguity", "url": "https://propfirmbook.com/unverified/algo-forex-funds" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — AFF's claimed Trustpilot profile explicitly identifies the firm's website as closed. Customer posts about disputes or takeover are not validated payout evidence or an official corporate liquidation notice. Source: https://www.trustpilot.com/review/algoforexfunds.com"
+      ]
+    },
+    "astra-capital-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Contemporaneous 23 September 2024 trading-press coverage reported the Astra Capital Funding shutdown, and a retrospective closure tracker dates the website closure notice to 22 September 2024. The old domain no longer provides a verified challenge checkout.",
+          "source": "https://www.proptraders.io/p/astra-capital-closes-down-the-long-trade-is-back-on-beware-the-vix",
+          "fields": ["status", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Astra Capital Funding's unclaimed Trustpilot company profile shows 3.5/5 from only eight reviews, too small and dated for trustworthy transfer or payout conclusions.",
+          "source": "https://www.trustpilot.com/review/astracapitalfunding.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary", "score", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 48,
+        "verdict": "Astra Capital Funding was reported closed in September 2024 and its former domain is no longer a verified checkout. Its historic, unclaimed Trustpilot page has a 3.5/5 score based on just eight reviews, not independently verified transfers. This is an archived company profile with sales links removed and no formal dissolution claim.",
+        "auditSummary": "17 November 2026 retrospective audit: a contemporaneous September 23, 2024 prop-trading industry report states Astra Capital Funding had shut down, while a specialist closure chronology identifies an original website notice for September 22, 2024; the original notice itself is no longer accessible for PropRadar to authenticate directly. The former astracapitalfunding.com site does not provide a dependable current challenge checkout. Its unclaimed Trustpilot page rates 3.5/5 from eight reviews, mixing historic praise with a September 2024 claim of an unpaid $22,000 request made on behalf of another trader, neither side proving settlement. Some secondary websites identify Astra Capital Group LLC in Delaware, but PropRadar could not match that alleged entity to an authoritative Delaware registry file and contemporaneous contract; no verified company number is entered. The score remains a modest historical 48 (down from 50) and the operationally closed flag controls checkout blocking and the visitor safety warning.",
+        "trustpilotRating": 3.5,
+        "trustpilotReviewCount": 8,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/astracapitalfunding.com",
+        "listedDomainWarning": "Astra Capital Funding was reported to have ceased operations in September 2024; the historic official checkout is unavailable. A new seller using its brand name, or a similarly named active business, is not automatically its legal successor. Do not pay for archived challenges without independently verifying a registered operator and contractual continuity."
+      },
+      "setEntities": [
+        {
+          "name": "Astra Capital Funding (historic brand; Delaware LLC assertion unverified)",
+          "jurisdiction": "To verify — possible Delaware entity mentioned only in secondary sources",
+          "role": "Astra Capital Group LLC is a secondary-source claim, not authenticated as this trading firm's original merchant or operator."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Contemporaneous market commentary and a later shutdown register support the finding that this challenge brand stopped selling in September 2024. The original corporate contract, government filing, refund ledger and liquidation status were not independently obtained. This is a historical operational-closure classification only.",
+        "regulatoryStatus": [
+          "Independent industry commentary dated 23 September 2024 reported Astra Capital Funding's exit.",
+          "A closure chronology dates a company-site closing notice to 22 September 2024, but the first-party notice was not independently retrieved.",
+          "Astra Capital Group LLC / Delaware is mentioned in secondary research, without a matched official registration or signed brand contract."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot unclaimed business profile shows 3.5/5 based on eight historic reviews; no fresh verified customer transfers.",
+          "A September 2024 post alleges a refused $22,000 payout involving a third party. PropRadar has not verified the account, bank settlement or contractual basis.",
+          "No audited list establishes payment of all refunds or remaining trader rewards after the shutdown."
+        ],
+        "redFlags": [
+          "Operational closure and unusable historical checkout.",
+          "Very small and stale public review sample.",
+          "No independently confirmed legal contracting entity or payout liabilities.",
+          "Potential brand-name confusion with unrelated Astra Capital businesses."
+        ],
+        "sources": [
+          { "label": "23 September 2024 contemporary report of Astra Capital Funding shutdown", "url": "https://www.proptraders.io/p/astra-capital-closes-down-the-long-trade-is-back-on-beware-the-vix" },
+          { "label": "2024 closure register recording alleged official notice", "url": "https://propfirmvs.com/closed-prop-firms" },
+          { "label": "Domain-specific Astra Capital Funding Trustpilot record", "url": "https://www.trustpilot.com/review/astracapitalfunding.com" },
+          { "label": "Secondary legal identity assertion, not an official Delaware record", "url": "https://propfirmbook.com/unverified/astra-capital-funding" }
+        ]
+      },
+      "addSources": [
+        { "label": "Contemporary September 2024 shutdown reporting", "url": "https://www.proptraders.io/p/astra-capital-closes-down-the-long-trade-is-back-on-beware-the-vix" },
+        { "label": "Historical company closure log", "url": "https://propfirmvs.com/closed-prop-firms" },
+        { "label": "Historical Trustpilot page, eight reviews", "url": "https://www.trustpilot.com/review/astracapitalfunding.com" }
+      ],
+      "addIncidents": [
+        "2024-09-22 — Industry reports documented Astra Capital Funding's end of operations around the date a later closure chronology attributes to its original site notice; the notice and ultimate payout/refund settlement could not be authenticated directly. Source: https://www.proptraders.io/p/astra-capital-closes-down-the-long-trade-is-back-on-beware-the-vix"
+      ]
+    },
+    "gry-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "A GRY Funding-origin press release issued on 7 October 2024 quoted its founder announcing an acquisition by Goated FX and Only Funds FX. The ownership claim is traceable to the seller's promotional notice; transaction documents and binding succession terms were not published.",
+          "source": "https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110",
+          "fields": ["verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities", "score", "payoutProofs"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The original gryfunding.com website is not a functioning verified sales page in November 2026. No domain-matched Trustpilot review page or bank-confirmed payout record was obtained, so an unverified rating is intentionally not displayed.",
+          "source": "https://gryfunding.com/",
+          "fields": ["listedDomainWarning", "auditSummary", "legalReview", "score"]
+        }
+      ],
+      "set": {
+        "status": "À surveiller",
+        "score": 44,
+        "verdict": "GRY Funding's founder publicly announced a change of ownership in October 2024. The former gryfunding.com site is now unavailable, while the original press release's promised continuity, customer-account migration and historic payout obligations have not been independently validated. PropRadar flags the acquisition and blocks all purchase links, without declaring a proven corporate liquidation.",
+        "auditSummary": "17 November 2026 investigation: a press release distributed through IssueWire on 7 October 2024, attributed to GRY Funding and quoting founder Grayson Maldonado, says the trading brand was acquired by Goated FX and Only Funds FX. The same promotional release advertised prior five-figure trader payouts and promised uninterrupted service. These are unverified statements by the seller, not a publicly filed acquisition agreement, independently matched bank settlement or authenticated successor contract. As of November 2026 the former gryfunding.com website does not serve a usable official sales and terms page, and an October industry check also found it offline. Neither the company's original registered legal name, the acquirer's exact registered company, nor any legal assumption of existing trader payouts and refunds was proven. The similarly spelled historical OnlyFunds challenge brand and the 'Only Funds FX' name in the press announcement must not be assumed to be the same legal business. No trustworthy domain-specific Trustpilot sample was located; a fabricated reputation score would be misleading. Editorial score is reduced from 50 to 44 for inaccessible terms, unavailable continuity evidence and payout uncertainty, with monitoring status retained rather than asserting formal closure.",
+        "listedDomainWarning": "GRY Funding was reportedly acquired in October 2024 by Goated FX and Only Funds FX, according to a company-origin announcement. Its former website is no longer a verified active checkout and the exact successor operator and old payout obligations remain unconfirmed. Do not buy a challenge under this acquired brand until registration, account migration and new terms are independently checked."
+      },
+      "setEntities": [
+        {
+          "name": "GRY Funding (former trading brand; legal contracting company unverified)",
+          "jurisdiction": "United States / Arizona address claimed in company-origin press release — registration unconfirmed",
+          "role": "The press-release contact in Scottsdale is not evidence of a registered corporate entity or business licence."
+        },
+        {
+          "name": "Goated FX and Only Funds FX (reported acquirers; entities not established)",
+          "jurisdiction": "To verify — no corporate filing tied to transaction",
+          "role": "Names from the founder-attributed October 2024 acquisition announcement; no executed transfer agreement or responsibility for existing accounts established."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "A company-origin October 2024 press announcement reports GRY Funding's acquisition, but no transaction deed, official corporate registry match or assumption-of-liabilities schedule has been independently authenticated. Unavailability of the old domain in November 2026 requires a buyer warning, yet does not establish a legal wind-up.",
+        "regulatoryStatus": [
+          "Founder-attributed press release dated 7 October 2024 names Goated FX and Only Funds FX as buyers; this is self-reporting, not an official change-of-control register extract.",
+          "PR's Scottsdale office address is not sufficient for independent legal-entity confirmation.",
+          "No current broker licence, corporate registered number, successor contracting party or live programme rules authenticated."
+        ],
+        "complaintsAndDisputes": [
+          "The acquisition announcement itself claimed historical five-figure payouts, without customer-specific transaction IDs or third-party transfer authentication.",
+          "No reliable gryfunding.com-specific Trustpilot rating or review count was found; some comparison widgets incorrectly map reviews from similarly named firms.",
+          "No independently verified migration ledger, return-of-fees schedule or resolution for outstanding reward requests after the change of control."
+        ],
+        "redFlags": [
+          "Material 2024 ownership announcement without verifiable legal transfer documents.",
+          "Former gryfunding.com contract and checkout unavailable.",
+          "Company-reported payout examples have no independently authenticated receipts.",
+          "Similar names among Only Funds FX and the unrelated defunct OnlyFunds brand create a risk of incorrect identity attribution."
+        ],
+        "sources": [
+          { "label": "Company-origin October 2024 acquisition press release and founder quote", "url": "https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110" },
+          { "label": "GRY Funding former company website, currently unavailable", "url": "https://gryfunding.com/" },
+          { "label": "Independent October 2026 status and domain check", "url": "https://mypropgenius.com/closed-firms/gry-funding/" },
+          { "label": "2024 review noting absence of Trustpilot trader reviews", "url": "https://firmfunded.com/prop-trading/gry-funding/" }
+        ]
+      },
+      "addSources": [
+        { "label": "7 October 2024 founder-attributed acquisition announcement", "url": "https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110" },
+        { "label": "Independent domain status review in October 2026", "url": "https://mypropgenius.com/closed-firms/gry-funding/" },
+        { "label": "Original GRY Funding domain, no verifiable checkout", "url": "https://gryfunding.com/" }
+      ],
+      "addIncidents": [
+        "2024-10-07 — GRY Funding's founder-attributed press release stated the business was acquired by Goated FX and Only Funds FX; no independent contract or verified assignment of pending trader payout obligations was obtained. Source: https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110"
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2024-10-07",
+          "kind": "official",
+          "publisher": "GRY Funding founder-attributed IssueWire press release",
+          "quote": "The company-origin acquisition announcement claimed five-figure trader payouts. It provided no named, independently verified transfer receipt or bank statement; the advertised amount is a self-reported historical claim.",
+          "url": "https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110",
+          "firmReported": true
+        }
+      ]
+    },
     "x-funded": {
       "reviewedAt": "2026-11-16",
       "changelog": [

@@ -166,11 +166,14 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
         }
       };
       next.logoDomain = newDomain;
-      const official = next.sources.findIndex((source) => isOld(source.url));
       const officialSource = { label: `Official ${firm.name} site`, url: newUrl };
-      next.sources = official >= 0
-        ? next.sources.map((source, index) => (index === official ? officialSource : source))
-        : [officialSource, ...next.sources];
+      // Remove *every* old-domain link, including obsolete terms URLs. A
+      // correction can be an identity collision, not merely a domain change.
+      next.sources = [officialSource, ...next.sources.filter((source) => !isOld(source.url))];
+      next.regulatoryAudit = {
+        ...next.regulatoryAudit,
+        sources: next.regulatoryAudit.sources.filter((source) => !isOld(source.url)),
+      };
       next.products = next.products.map((product) => (isOld(product.linkToStart) ? { ...product, linkToStart: newUrl } : product));
     }
 

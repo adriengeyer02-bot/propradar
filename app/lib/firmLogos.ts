@@ -117,7 +117,6 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "ofpfunding.com": { file: "ofp-funding.png", source: "favicon service for ofpfunding.com" },
   "onefunded.com": { file: "onefunded.png", source: "https://onefunded.com/wp-content/uploads/2025/08/cropped-favicon_ONE-192x192.png" },
   "oneuptrader.com": { file: "oneup-trader.png", source: "https://www.oneuptrader.com/wp-content/uploads/2022/09/cropped-imgpsh_fullsize_anim-192x192.png" },
-  "onlyfunds.com": { file: "onlyfunds.png", source: "https://static.wixstatic.com/media/87f56f_b9b20638887045399cc84950698cce79%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/87f56f_b9b20638887045399cc84950698cce79%7Emv2.jpg" },
   "optimal-traders.com": { file: "optimal-traders.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/623743bf88982b0e57974c89/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "orionfunded.com": { file: "orion-funded.png", source: "favicon service for orionfunded.com" },
   "pipfarm.com": { file: "pipfarm.png", source: "favicon service for pipfarm.com" },

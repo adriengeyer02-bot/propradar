@@ -585,7 +585,7 @@ export default async function FirmPage({ params }: Props) {
   const firmPublicUrl = firm.listedDomainWarning ? pageUrl : firm.sources[0]?.url ?? pageUrl;
   const firmChangelog = getFirmChangelog(firm.slug);
   const isClosedOrParked = firm.status === 'Fermée'
-    || /\b(?:domain.sale|for sale|parked|listed for sale|domain sold)\b/i.test(firm.listedDomainWarning ?? '');
+    || /\b(?:domain.sale|for sale|parked|listed for sale|domain sold|acquired|acquisition)\b/i.test(firm.listedDomainWarning ?? '');
   const firmDecision = decisionLabel(firm);
   const firmDecisionClass = decisionClass(firmDecision);
   const longestFirmNameToken = Math.max(
