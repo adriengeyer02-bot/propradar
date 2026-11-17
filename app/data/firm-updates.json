@@ -1,6 +1,84 @@
 {
   "version": 1,
   "firms": {
+    "traders-with-edge": {
+      "reviewedAt": "2026-11-17",
+      "set": {
+        "score": 22,
+        "verdict": "Traders With Edge once advertised Hong Kong-linked simulated evaluation products, but its former official domain could not be reached during this review. Earlier PropRadar access returned only a private account/login page, and independent October 2026 checks also reported a nonfunctioning site. Current checkout, operator, enforceable contract and payouts cannot be verified. Some current-looking third-party directories copy historical terms and incorrectly label it active without demonstrating a working company storefront. PropRadar lowers the historical 40/100 to 22 and blocks challenge purchases. Commercial inactivity is suspected, but neither a formal closure announcement nor legal dissolution has been established.",
+        "auditSummary": "17 November 2026: the previously advertised traderswithedge.com domain timed out in a fresh public-page attempt. PropRadar's July capture had already found an account-only screen rather than a public prop-firm offer; independent dated checks reported DNS/homepage failures in 2026. The archived historical program figures, reported payout claims and static review pages are not evidence of a current operating service. No first-party announcement of a lawful migration, verified new domain, working checkout, contracting entity, refund policy, open funded account support or current profit withdrawals could be authenticated. A current Crunchbase listing describing the company as 'Active' is a business-directory status, not proof of a live commercial storefront. Until a functioning primary source and legal counterparty are found, any new offer under this name or old domain has high impersonation and payment risk. Score 40 to 22; no claim of proven liquidation, and checkout links are disabled.",
+        "listedDomainWarning": "UNVERIFIED OPERATION — NO SAFE CHECKOUT: the former official Traders With Edge website does not provide a verifiable current challenge store or legal contract. Some directories still reproduce older program terms. Do not pay for new assessments, send KYC files or use a purported migration/recovery agent until a genuine operator, official domain and responsibility for existing traders are established. Formal company closure has not been confirmed."
+      },
+      "setLegalReview": {
+        "summary": "High information and counterparty risk. A functioning first-party website and a current contracting legal entity have not been verified; historical third-party program listings are not evidence of ongoing customer obligations being honoured. No corporate dissolution was independently established.",
+        "regulatoryStatus": [
+          "An attempted public visit to the original traderswithedge.com domain did not return a current offer or accessible legal terms on 17 November 2026.",
+          "The operator's live contracting company, jurisdiction, simulated-account documentation and refund process remain unverified.",
+          "An independently recorded October 2026 domain outage is consistent with inaccessibility but cannot establish legal closure."
+        ],
+        "complaintsAndDisputes": [
+          "No current first-party payout schedule, withdrawal channel or authenticated transaction evidence was obtained.",
+          "Historical evaluations or directory status labels cannot establish any current settlement of legacy traders."
+        ],
+        "redFlags": [
+          "Current storefront and legal contract inaccessible on original domain.",
+          "Historical marketing and third-party listings may mislead users into treating a dormant brand as operational.",
+          "No verified migration domain, legal successor or procedure for old account holders."
+        ],
+        "sources": [
+          {"label": "Traders With Edge original official domain checked 17 Nov 2026 (unavailable)", "url": "https://traderswithedge.com/"},
+          {"label": "Independent dated website-status research (October 2026)", "url": "https://mypropgenius.com/closed-firms/traders-with-edge/"}
+        ]
+      },
+      "addSources": [
+        {"label":"Independent October 2026 record of Traders With Edge domain downtime","url":"https://mypropgenius.com/closed-firms/traders-with-edge/"}
+      ],
+      "changelog": [
+        {"date":"2026-11-17","summary":"Original domain did not yield a working service in the latest public check; no official shutdown or legal successor established. Replaced stale watchlist description, lowered editorial score from 40 to 22 and blocked checkout pending first-party verification.","source":"https://traderswithedge.com/","fields":["score","verdict","auditSummary","listedDomainWarning","legalReview"]},
+        {"date":"2026-11-17","summary":"Independent October 2026 checks also reported domain inaccessibility while acknowledging absence of an official closure statement; cited as corroborating observations only, not proof of dissolution.","source":"https://mypropgenius.com/closed-firms/traders-with-edge/"}
+      ]
+    },
+    "t4tcapital": {
+      "reviewedAt": "2026-11-17",
+      "set": {
+        "score": 38,
+        "verdict": "The legacy T4TCapital profile points to t4tcapital.com, whose current independent challenge terms and checkout could not be retrieved. A related but distinct brand, T4TCapital Funds Management (t4tcapitalfm.com), redirects to the active Traders4Traders education/funding website, with assessments advertised from €32 and up to 90% profit sharing. The connection is documented through that redirect and its claimed Trustpilot profile, but the original .com contract and legal succession are unverified. Trustpilot's small T4TCapitalFM profile shows 2.5/5 from just six old reviews, not a reliable measure of the new Traders4Traders offer. Do not treat these as one proven legal operator. Legacy score lowered from 44 to 38, old-brand checkout disabled pending identity verification.",
+        "auditSummary": "17 November 2026: the listed www.t4tcapital.com storefront did not produce usable public legal or checkout pages. A separate, longer-established brand using t4tcapitalfm.com currently redirects to traders4traders.com, whose official live funding page advertises evaluations between $10K and $1M, from €32, up to a 90% trader share, a 10% displayed profit target and 7.5% maximum-loss plan, with weekly payouts; other rules are configurable, and the contract was not independently reconciled. The current site combines education/mentoring with trader funding, and its claims of Pepperstone backing or a live funding route must not be read as independent authorization of the legacy T4TCapital domain. The claimed Trustpilot page named 'T4TCapital Funds Management', linked to t4tcapitalfm.com and proptradr.com, rates only 2.5/5 from six reviews with none in the prior year. This score does not statistically validate or condemn the separate current Traders4Traders service. The legacy profile's UK address, current operator and continuity of old client obligations remain unresolved. Editor score 44 to 38; buy links for the original brand are disabled rather than silently redirected to a potentially different contract.",
+        "listedDomainWarning": "LEGACY DOMAIN / BRAND AMBIGUITY: no current official checkout or legal contract could be verified at t4tcapital.com. A similarly named T4TCapitalFM brand redirects to the active Traders4Traders site, but the precise legal continuity and treatment of former accounts were not established. Do not assume old challenge offers, Trustpilot scores or UK company details apply to the new website. Verify the legal entity and current agreement before making any payment."
+      },
+      "setLegalReview": {
+        "summary": "The historic t4tcapital.com service is unverified. T4TCapitalFM redirects to a live related Traders4Traders brand, but operator identity, contractual continuity with the original UK-labelled listing and specific refund obligations have not been corroborated from company records.",
+        "regulatoryStatus": [
+          "The original listed t4tcapital.com terms and company disclosures could not be retrieved.",
+          "The separate t4tcapitalfm.com address currently redirects to Traders4Traders, an active training and funding website; this is evidence of a related brand, not of a single legal counterparty.",
+          "The current Traders4Traders funding page advertises an evaluation route and broker support, but that marketing is not regulatory authorization of the historic T4TCapital account."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot lists T4TCapital Funds Management with 2.5/5 from six old reviews and no reviews over the previous 12 months; such a tiny historic sample must not be projected onto Traders4Traders.",
+          "No primary evidence establishes which operator would pay, refund or migrate former T4TCapital customers."
+        ],
+        "redFlags": [
+          "Original domain currently lacks a verified checkout and current contract.",
+          "Company names T4TCapital, T4TCapitalFM and Traders4Traders may be mistakenly conflated despite distinct domains and contracts.",
+          "Historic UK location and new Australian-facing branding lack a verified chain of legal succession in this audit."
+        ],
+        "sources": [
+          {"label":"Original T4TCapital domain checked (unavailable)","url":"https://www.t4tcapital.com/"},
+          {"label":"T4TCapitalFM site redirect to Traders4Traders","url":"https://www.t4tcapitalfm.com/"},
+          {"label":"Current Traders4Traders funding offer","url":"https://traders4traders.com/funding/"},
+          {"label":"T4TCapital Funds Management Trustpilot profile","url":"https://www.trustpilot.com/review/proptradr.com"}
+        ]
+      },
+      "addSources": [
+        {"label":"Related T4TCapitalFM domain now redirects to Traders4Traders (17 Nov 2026)","url":"https://www.t4tcapitalfm.com/"},
+        {"label":"Current Traders4Traders funding overview (not assumed identical contract)","url":"https://traders4traders.com/funding/"},
+        {"label":"Historical T4TCapitalFM Trustpilot profile","url":"https://www.trustpilot.com/review/proptradr.com"}
+      ],
+      "changelog": [
+        {"date":"2026-11-17","summary":"Deep legacy-brand audit: original .com seller/contract remains unverified and T4TCapitalFM redirects to the distinct but related active Traders4Traders site. Do not merge contracts or silently redirect buyers. Score 44 to 38, original checkout disabled.","source":"https://www.t4tcapitalfm.com/","fields":["score","verdict","auditSummary","listedDomainWarning","legalReview"]},
+        {"date":"2026-11-17","summary":"The related T4TCapitalFM Trustpilot profile, not necessarily the old .com operator, holds 2.5/5 from six old reviews and none in the last year; not applied as the rating for the distinct T4TCapital .com legal identity.","source":"https://www.trustpilot.com/review/proptradr.com"}
+      ]
+    },
     "fundings4u": {
       "reviewedAt": "2026-11-17",
       "set": {
@@ -5970,38 +6048,149 @@
       ]
     },
     "tradefundrr": {
-      "reviewedAt": "2026-10-29",
-      "changelog": [
-        {
-          "date": "2026-10-28",
-          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 83 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
-          "source": "https://www.trustpilot.com/review/tradefundrr.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        },
-        {
-          "date": "2026-10-29",
-          "summary": "Official futures page read: 80% of simulated profits to the trader, weekly payouts every Friday (first as fast as 5 days), program and monthly data fees charged but amounts not stated, TradeFundrr, LLC (New York) runs the programs and T3 Global Trading, LLC runs Pro. Sizes, targets and drawdown were not stated.",
-          "source": "https://tradefundrr.com/pages/futures",
-          "fields": [
-            "profitSplit",
-            "payoutDelay"
-          ]
-        }
-      ],
+      "reviewedAt": "2026-11-17",
       "set": {
-        "trustpilotRating": 4.2,
-        "trustpilotReviewCount": 83,
+        "score": 67,
+        "priceFrom": 599,
+        "verdict": "TradeFundrr's current homepage primarily sells simulated US-stock and options programs, not the futures-focused listing previously displayed here. Its site identifies TradeFundrr, LLC as the evaluation counterparty, promises an 80% share of eligible simulated gains, and processes withdrawals on Fridays after the relevant conditions (including five profitable days on Prop). Pro is a separate capital-contribution route under separate agreements. Trustpilot showed 4.3/5 on 84 reviews, but customer reports and the firm's payout gallery do not independently prove every transfer. The brokerage registration of its strategic partner T3 Trading Group does not extend to TradeFundrr simulated accounts.",
+        "auditSummary": "Deep audit, 17 November 2026: the former futures URL redirects to an official homepage centered on US-listed shares, ETFs and options, including SPX and 0DTE; futures are mentioned only in partners' broader descriptions, not in its present 'What markets can I trade?' FAQ. Stock evaluation buying power is advertised up to $100K and options up to $25K, with larger discretionary Pro possibilities. Official stock and options pages each price Pre-Prop at $599 one time plus $99/month, and immediate Prop at $1,499 one time plus $99/month; Pro involves a capital contribution at risk under separate terms. Pre-Prop and Prop use fully simulated accounts operated by TradeFundrr, LLC. Prop payouts are eligible after five profitable days plus consistency rules and processed Fridays, at an 80% split. The marketing gallery consists of firm-published certificates, not audited cash transfers. Trustpilot shows 4.3/5 across 84 reviews including positive verified experiences and an onboarding/KYC delay complaint. SEC/FINRA registration cited for T3 Trading Group belongs to that separate broker-dealer, not the simulated evaluations. Score rises moderately from 64 to 67 while contract-level Pro risks and execution remain untested.",
+        "trustpilotRating": 4.3,
+        "trustpilotReviewCount": 84,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradefundrr.com",
         "profitSplit": 80,
-        "payoutDelay": "weekly, processed every Friday; first payout as fast as 5 days after five profitable trading days"
+        "payoutDelay": "Prop: Friday processing after five profitable trading days and the consistency conditions; Pre-Prop only after promotion. Pro follows a separate agreement."
+      },
+      "setProducts": [
+        {
+          "id": "tradefundrr-stocks-preprop",
+          "name": "Stocks Pre-Prop",
+          "type": "Challenge",
+          "description": "US stock evaluation with $100K simulated buying power. $599 one-time program fee plus $99 monthly data/technology subscription. Must pass the evaluation and be promoted to Prop to qualify for payouts.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 599,
+          "profitTarget": "Evaluation target: confirm in current account agreement",
+          "maxDailyLoss": "Read individual account agreement",
+          "maxDrawdown": "Read individual account agreement",
+          "profitSplit": "80% of eligible simulated gains after Prop promotion",
+          "platforms": ["TradeFundrr trading platform; verify before payment"],
+          "tradableAssets": ["US stocks", "ETFs"],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Qualification and risk rules apply; exact trading target must be checked."
+        },
+        {
+          "id": "tradefundrr-stocks-prop",
+          "name": "Stocks Prop",
+          "type": "Instant funding",
+          "description": "$100K simulated US-stock account without an evaluation stage. $1,499 one-time program fee plus $99/month. Payout eligibility after five profitable days and consistency compliance; payouts processed Fridays.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 1499,
+          "profitTarget": "Five profitable days for payout eligibility, plus consistency rules",
+          "maxDailyLoss": "Read individual account agreement",
+          "maxDrawdown": "Read individual account agreement",
+          "profitSplit": "80% of eligible simulated gains",
+          "platforms": ["TradeFundrr trading platform; verify before payment"],
+          "tradableAssets": ["US stocks", "ETFs"],
+          "minTradingDays": "Five profitable trading days to request eligible payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Payout depends on the program's consistency conditions."
+        },
+        {
+          "id": "tradefundrr-options-preprop",
+          "name": "Options Pre-Prop",
+          "type": "Challenge",
+          "description": "$25K simulated buying power for US options. $599 one-time program fee plus $99/month data/technology subscription. Payouts require promotion to Prop.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 25000,
+          "entryFeeMin": 599,
+          "profitTarget": "Evaluation target: confirm in current account agreement",
+          "maxDailyLoss": "Read individual account agreement",
+          "maxDrawdown": "Read individual account agreement",
+          "profitSplit": "80% of eligible simulated gains after Prop promotion",
+          "platforms": ["TradeFundrr trading platform; verify before payment"],
+          "tradableAssets": ["US equity options", "Index options", "0DTE"],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Qualification and risk rules apply; exact trading target must be checked."
+        },
+        {
+          "id": "tradefundrr-options-prop",
+          "name": "Options Prop",
+          "type": "Instant funding",
+          "description": "$25K simulated US-options account. $1,499 one-time fee and $99/month subscription. Payout eligibility after five profitable trading days plus consistency rules.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 25000,
+          "entryFeeMin": 1499,
+          "profitTarget": "Five profitable trading days for payout eligibility, plus consistency rules",
+          "maxDailyLoss": "Read individual account agreement",
+          "maxDrawdown": "Read individual account agreement",
+          "profitSplit": "80% of eligible simulated gains",
+          "platforms": ["TradeFundrr trading platform; verify before payment"],
+          "tradableAssets": ["US equity options", "Index options", "0DTE"],
+          "minTradingDays": "Five profitable days for eligible payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Payout depends on the program's consistency conditions."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "TradeFundrr, LLC is explicitly named as the provider of Pre-Prop and Prop simulated accounts. The separately operated Pro pathway involves a capital contribution, so the broad homepage promise of no trading losses owed applies to its simulated entry products and should not be assumed to describe every Pro agreement. T3 Trading Group's SEC/FINRA status is not a regulatory authorization for TradeFundrr simulated payouts.",
+        "regulatoryStatus": [
+          "The official footer names TradeFundrr, LLC as the evaluation-contract counterparty; Pre-Prop and Prop are fully simulated and hold no customer securities or funds.",
+          "Pro is a distinct program conducted under a separate company's agreements; its FAQ says access requires a capital contribution.",
+          "T3 Trading Group is described as an SEC-registered broker-dealer and FINRA/SIPC member, but this separate entity's registrations do not cover TradeFundrr simulated accounts."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot showed 4.3/5 across 84 reviews on 17 November 2026, with positive payment reports but also a verified complaint describing identity-verification delay; claims are not independently adjudicated.",
+          "The firm publishes its own payout certificates. They are not independent bank reconciliations or proof that all qualifying requests are approved.",
+          "The current FAQ states Prop payouts require five profitable trading days plus consistency compliance and are processed weekly on Friday."
+        ],
+        "redFlags": [
+          "The site's historical futures page redirects to a current homepage focused on US shares and options: old futures descriptions must not be used to choose the present program.",
+          "Pro requires a capital contribution and separate contractual review; do not infer its loss exposure from the Pre-Prop/Prop simulation disclaimer.",
+          "Current Pre-Prop and Prop tariffs are respectively $599/$1,499 up front plus $99 monthly for stocks and options; verify the checkout and continuing fee obligations before purchase.",
+          "T3 broker-dealer credentials belong to a strategic partner and do not create brokerage safeguards for simulated payouts."
+        ],
+        "sources": [
+          {"label": "TradeFundrr current homepage, instruments, FAQ, fees and legal disclaimer (17 Nov 2026)", "url": "https://tradefundrr.com/"},
+          {"label": "Official TradeFundrr stock plans and fees (17 Nov 2026)", "url": "https://tradefundrr.com/stock-trader-funding/index.html"},
+          {"label": "Official TradeFundrr options plans and fees (17 Nov 2026)", "url": "https://tradefundrr.com/options-trader-funding/index.html"},
+          {"label": "TradeFundrr Trustpilot profile (17 Nov 2026)", "url": "https://www.trustpilot.com/review/tradefundrr.com"}
+        ]
       },
       "addSources": [
         {
           "label": "TradeFundrr futures program (official)",
           "url": "https://tradefundrr.com/pages/futures"
+        },
+        {"label": "Current TradeFundrr shares/options homepage, FAQ and legal disclaimer (2026-11-17)", "url": "https://tradefundrr.com/"},
+        {"label": "TradeFundrr stock accounts and explicit $599/$1499 plus $99/mo pricing (2026-11-17)", "url": "https://tradefundrr.com/stock-trader-funding/index.html"},
+        {"label": "TradeFundrr options accounts and explicit $599/$1499 plus $99/mo pricing (2026-11-17)", "url": "https://tradefundrr.com/options-trader-funding/index.html"}
+      ],
+      "changelog": [
+        {
+          "date": "2026-10-28",
+          "summary": "Trustpilot read for the first time: 4.2 TrustScore across 83 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
+          "source": "https://www.trustpilot.com/review/tradefundrr.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+        },
+        {
+          "date": "2026-10-29",
+          "summary": "Official futures page read: 80% of simulated profits to the trader, weekly payouts every Friday (first as fast as 5 days), program and monthly data fees charged but amounts not stated, TradeFundrr, LLC (New York) runs the programs and T3 Global Trading, LLC runs Pro. Sizes, targets and drawdown were not stated.",
+          "source": "https://tradefundrr.com/pages/futures",
+          "fields": ["profitSplit", "payoutDelay"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Current futures URL redirects to the stock/options homepage. Corrected market classification and four program cards with sourced $599 Pre-Prop / $1,499 Prop one-off fees plus $99/month; re-read simulated contracts, separate Pro capital-contribution risk, Friday payouts and T3 registration. Editorial score 64 to 67.",
+          "source": "https://tradefundrr.com/",
+          "fields": ["score", "verdict", "auditSummary", "market", "legalReview", "priceFrom", "products"]
+        },
+        {"date":"2026-11-17","summary":"Both official stock and options product pages explicitly show Pre-Prop at $599 upfront, Prop at $1,499 upfront and a $99/month subscription. Pro capital contributions are at risk, unlike simulated account losses.","source":"https://tradefundrr.com/stock-trader-funding/index.html","fields":["priceFrom","products"]},
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot rose to 4.3 across 84 reviews; individual positive payouts and a KYC-delay complaint noted without treating either as independently reconciled payments.",
+          "source": "https://www.trustpilot.com/review/tradefundrr.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount"]
         }
       ]
     },
@@ -6890,61 +7079,92 @@
       ]
     },
     "kortanafx": {
-      "reviewedAt": "2026-10-30",
-      "changelog": [
-        {
-          "date": "2026-10-29",
-          "summary": "Official homepage re-read: the announcement that operations are paused until further notice after the loss of the MT5 license is still displayed (already recorded on this profile). Program terms shown: $5K to $200K, 8% then 5% target, 5% daily and 10% maximum loss (static or trailing not stated), up to 100% split, EAs allowed, 7-day payouts, DXTrade and cTrader (TradeLocker announced). Only one price ($147) is shown without a size, so programs are not recorded. KortanaFX F.Z.C., Dubai.",
-          "source": "https://kortanafx.com/",
-          "fields": [
-            "eaAllowed",
-            "payoutDelay"
-          ]
-        },
-        {
-          "date": "2026-10-30",
-          "summary": "Trustpilot read for the first time: 2.4 TrustScore across 3,402 reviews on trustpilot.com (claimed profile); the ie mirror shows 2.4 across 3,401. Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. The latest snapshot is stored.",
-          "source": "https://www.trustpilot.com/review/kortanafx.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
-        }
-      ],
+      "reviewedAt": "2026-11-17",
       "set": {
+        "score": 15,
+        "verdict": "KortanaFX's own homepage still announces that ALL operations are paused until further notice after loss of its MT5 license. It continues to display old challenge prices, a 100% split and seven-day withdrawal advertising, but those offers must not be mistaken for a functioning service. Trustpilot is 2.4/5 on about 3,401 historic reviews, including unresolved claims of payouts not received. The company has not announced a verified resumption. PropRadar blocks purchases and rates the current operational risk 15/100; this is a suspension, not proven legal dissolution.",
+        "auditSummary": "17 November 2026: the first announcement on kortanafx.com continues to say the service is temporarily suspended because its MT5 licence was lost and all operations are halted indefinitely. Below this notice, the website nevertheless advertises 5K–200K simulated accounts, 8%/5% targets, 5% daily and 10% maximum losses, up-to-100% simulated rewards, HFT EA permission, a seven-day payout cycle and a $147 displayed price. These are stale promotional terms during the pause and are not current purchase availability or verified bank payments. The footer names KortanaFX F.Z.C. in Dubai and states there are no real deposits, regulated broker services or live capital. Trustpilot shows 2.4/5 from 3,401 reviews at the latest accessible capture; complaints of unpaid withdrawals and account suspensions are individual allegations, not independent findings. No resumption notice, successor operator, settlement schedule for legacy accounts or reliable new checkout has been established. The legal entity is not declared dissolved. Score reduced from 42 to 15 and challenge purchase links disabled.",
+        "listedDomainWarning": "OPERATIONS PAUSED — DO NOT PURCHASE: KortanaFX itself states that it halted all operations indefinitely following loss of its MT5 licence. Challenge prices and purchase buttons still visible beneath the warning do not show a verified restart. Check any claimed relaunch, payment request or recovery agent directly with the legal operator before sending money. This is not evidence of a formal company dissolution.",
         "eaAllowed": "Yes",
         "payoutDelay": "7-day payouts stated on the homepage; the same page announces operations are paused until further notice",
         "trustpilotRating": 2.4,
-        "trustpilotReviewCount": 3402,
+        "trustpilotReviewCount": 3401,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/kortanafx.com"
       },
+      "setLegalReview": {
+        "summary": "Operational risk is critical: the company has publicly announced an indefinite pause following loss of its MT5 licence, even while legacy product and checkout promotions remain visible. The Dubai operator is identified, but no verified restart or legacy-payout settlement is documented. Paused business is not synonymous with formally dissolved company.",
+        "regulatoryStatus": [
+          "The official homepage still says every operation is temporarily paused until further notice after losing its MT5 licence.",
+          "The official footer identifies KortanaFX F.Z.C. in Dubai and states accounts are simulated, fee payments are not deposits and it does not offer financial advice.",
+          "No verified new trading-platform licence, resumption or authorised sale of new challenges has been documented at this check."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot displayed 2.4/5 from 3,401 reviews in the latest accessible capture, with historical claims of delayed payments and account suspension; each is an unadjudicated customer statement.",
+          "No official audited schedule for settlement of pre-pause payouts or refunds was located in the suspension announcement."
+        ],
+        "redFlags": [
+          "The site says all operations are paused, even though challenge purchase buttons remain on the same page.",
+          "Headline seven-day payouts and up to 100% profit splits are not a verified service available during the suspension.",
+          "Impersonation or purported relaunch could exploit the legacy brand; no verified successor is established."
+        ],
+        "sources": [
+          {"label": "KortanaFX official suspension notice (17 Nov 2026)", "url": "https://kortanafx.com/"},
+          {"label": "KortanaFX customer reviews (17 Nov 2026)", "url": "https://www.trustpilot.com/review/kortanafx.com"}
+        ]
+      },
+      "addIncidents": ["17/11/2026 — KortanaFX official homepage still announces that ALL operations are paused indefinitely after losing its MT5 license, while challenge purchase links remain on display. No resumption confirmed. Source: https://kortanafx.com/"],
       "addSources": [
         {
           "label": "KortanaFX homepage and pause announcement (official)",
           "url": "https://kortanafx.com/"
         }
+      ],
+      "changelog": [
+        {"date":"2026-10-29","summary":"Official homepage re-read: the announcement that operations are paused until further notice after the loss of the MT5 license is still displayed (already recorded on this profile). Program terms shown: $5K to $200K, 8% then 5% target, 5% daily and 10% maximum loss (static or trailing not stated), up to 100% split, EAs allowed, 7-day payouts, DXTrade and cTrader (TradeLocker announced). Only one price ($147) is shown without a size, so programs are not recorded. KortanaFX F.Z.C., Dubai.","source":"https://kortanafx.com/","fields":["eaAllowed","payoutDelay"]},
+        {"date":"2026-10-30","summary":"Trustpilot read for the first time: 2.4 TrustScore across 3,402 reviews on trustpilot.com (claimed profile); the ie mirror shows 2.4 across 3,401. Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. The latest snapshot is stored.","source":"https://www.trustpilot.com/review/kortanafx.com","fields":["trustpilotRating","trustpilotReviewCount"]},
+        {"date":"2026-11-17","summary":"Official pause has not been lifted; purchase and seven-day payout marketing still displayed under it. Operational score 42 to 15; unverified purchases blocked without asserting formal liquidation.","source":"https://kortanafx.com/","fields":["score","verdict","auditSummary","listedDomainWarning","legalReview"]},
+        {"date":"2026-11-17","summary":"Latest accessible Trustpilot profile shows 2.4/5 across 3,401 reviews and a small recent sample; complaints remain unadjudicated.","source":"https://www.trustpilot.com/review/kortanafx.com","fields":["trustpilotRating","trustpilotReviewCount"]}
       ]
     },
     "my-flash-funding": {
-      "reviewedAt": "2026-10-29",
-      "changelog": [
-        {
-          "date": "2026-10-29",
-          "summary": "Official homepage re-read: it still states that MyFlashFunding is now owned by Sway Funded (already recorded) and its buy buttons go to my.swayfunded.com. Sizes $1K to $200K; the comparison table only details the $1K account ($15, 15% Phase 1 target, 5% daily and 10% maximum loss, type not stated, 4 minimum days per phase). The split is shown both as up to 90/10 and as up to 80% daily, so the split is left unverified. Daily payouts are advertised without conditions.",
-          "source": "https://www.myflashfunding.com/",
-          "fields": [
-            "payoutDelay"
-          ]
-        }
-      ],
+      "reviewedAt": "2026-11-17",
       "set": {
-        "payoutDelay": "daily payouts advertised on the homepage; no schedule or conditions stated"
+        "score": 49,
+        "verdict": "My Flash Funding is an acquired legacy brand, not an independent checkout operator. Its official site explicitly states Sway Funded ownership and sends purchases to my.swayfunded.com. It simultaneously advertises up to 80% daily and up to 90/10 profit sharing, without reconciling conditions on the landing page. The $1,000 comparison example describes 15% Phase-1 target, 5% daily and 10% overall loss, four minimum trading days per phase and a $15 advertised fee, but other sizes and models may differ. Sway Funded's current agreement, payout eligibility and liability for legacy accounts should be reviewed before purchase. 49/100.",
+        "auditSummary": "Deep review, 17 November 2026: myflashfunding.com explicitly says MyFlashFunding was acquired by Sway Funded LTD; footer still includes MyFlashFunding LLC copyright and describes Sway Funded LLC registration 2024-00342 in Saint Lucia. All 'Buy Evaluation' links route to my.swayfunded.com, not a standalone My Flash Funding store. The page advertises Rapid, Regular and No Consistency models across 1K–200K sizes but presents detailed figures only for a 1K example: fee $15, a 15% first-stage target, 5% daily and 10% total loss, and four minimum trading days at each stage. Marketing inconsistently promises 'up to 80%' daily versus 'up to 90/10'; it does not establish which current contract or add-on gives either split, nor show the eligibility conditions behind daily rewards. Company statements of low spreads and execution are not independently measured. The exact current Sway contract, any migration of legacy obligations, actual account ownership and third-party payment evidence have not been independently verified. Score 55 to 49 for brand/contract ambiguity, not a finding that Sway itself is closed.",
+        "listedDomainWarning": "ACQUIRED BRAND — CHECK THE COUNTERPARTY: My Flash Funding says it is now owned by Sway Funded and directs purchases to my.swayfunded.com. It is not verified as an independent seller. Before paying, inspect the Sway Funded agreement, profit-split model, payout conditions and which entity owes any legacy reward. Do not rely on old My Flash Funding reviews or terms alone.",
+        "payoutDelay": "daily payouts advertised on the legacy landing page; current Sway Funded eligibility and settlement timetable not verified"
+      },
+      "setLegalReview": {
+        "summary": "MyFlashFunding is a legacy brand now advertised as acquired by Sway Funded LTD; the payment journey goes to Sway. Its legacy LLC copyright, acquirer and separately mentioned Saint Lucia Sway Funded LLC must not be treated as a single verified contracting company. Old user obligations and present reward conditions remain unverified.",
+        "regulatoryStatus": [
+          "Official landing page explicitly states the MyFlashFunding acquisition by Sway Funded LTD and redirects purchase traffic to my.swayfunded.com.",
+          "Footer describes Sway Funded LTD as non-broker and non-deposit taking, and cites Saint Lucia registration 2024-00342 for Sway Funded LLC.",
+          "The current Sway checkout contract, legal allocation of legacy payouts and any successor liability were not independently established."
+        ],
+        "complaintsAndDisputes": [
+          "The acquired brand's historic reviews and disputes must not automatically be attributed to the post-acquisition Sway Funded entity or treated as proof of debt assumption.",
+          "The landing page markets both up-to-80%-daily and up-to-90/10 shares without explaining model-specific entitlement or the detailed payout schedule."
+        ],
+        "redFlags": [
+          "Checkout is on a different Sway Funded domain; contract counterparty and terms must be checked there.",
+          "Multiple Sway legal entity names and a MyFlashFunding LLC legacy copyright coexist on the same page.",
+          "Historic My Flash Funding performance and payment representations cannot validate a new operator's performance."
+        ],
+        "sources": [
+          {"label":"MyFlashFunding official acquisition and marketing disclosure (17 Nov 2026)","url":"https://myflashfunding.com/"},
+          {"label":"Sway checkout destination as linked by MyFlashFunding","url":"https://my.swayfunded.com/"}
+        ]
       },
       "addSources": [
         {
           "label": "MyFlashFunding homepage (official)",
           "url": "https://www.myflashfunding.com/"
         }
+      ],
+      "changelog": [
+        {"date":"2026-10-29","summary":"Official homepage re-read: it still states that MyFlashFunding is now owned by Sway Funded (already recorded) and its buy buttons go to my.swayfunded.com. Sizes $1K to $200K; the comparison table only details the $1K account ($15, 15% Phase 1 target, 5% daily and 10% maximum loss, type not stated, 4 minimum days per phase). The split is shown both as up to 90/10 and as up to 80% daily, so the split is left unverified. Daily payouts are advertised without conditions.","source":"https://www.myflashfunding.com/","fields":["payoutDelay"]},
+        {"date":"2026-11-17","summary":"Deep acquisition/migration review: Sway Funded LTD is identified as acquirer and all checkouts route to Sway. Landing-page split claims conflict and legacy liability/current contract remain unconfirmed. Score 55 to 49 and direct purchases through legacy brand disabled, without calling Sway closed.","source":"https://myflashfunding.com/","fields":["score","verdict","auditSummary","listedDomainWarning","legalReview"]}
       ]
     },
     "atmos-funded": {

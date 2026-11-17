@@ -6184,9 +6184,9 @@ const universePropFirms: PropFirm[] = [
     score: 64,
     founded: 2021,
     headquarters: 'United States / T3 Global pathway',
-    market: 'Futures',
+    market: 'Actions',
     priceFrom: 99,
-    styles: ['Futures'],
+    styles: ['Actions', 'Options', 'Simulated evaluations'],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
       'Official site and policy links checked. TradeFundrr separates simulated funding programs from a potential live-capital path through T3 Global. The site states that TradeFundrr is not a broker-dealer, investment adviser or financial planner, does not solicit or accept public investments and does not hold customer funds or securities. It also states that T3 Global is not a broker-dealer, investment adviser or FCM and does not conduct business with public customers.',
