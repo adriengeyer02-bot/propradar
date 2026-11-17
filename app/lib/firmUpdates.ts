@@ -246,9 +246,16 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (set.trustpilotNoticeLifted && typeof set.trustpilotRating === 'number') {
       next.reviewSignals.trustpilotRatingWithheld = false;
       next.trustpilotRating = set.trustpilotRating;
-      next.reviewSignals.trustpilotFlags = (next.reviewSignals.trustpilotFlags ?? []).filter((flag) => flag !== 'Trustpilot rating withheld for a guideline breach');
+      next.reviewSignals.trustpilotFlags = (next.reviewSignals.trustpilotFlags ?? [])
+        .filter((flag) => !/^(?:Trustpilot rating withheld for a guideline breach|Unavailable Trustpilot rating|Public guideline-violation alert)$/.test(flag));
+      next.reviewSignals.trustpilotFlags.unshift(`Rating visible again on ${set.trustpilotNoticeLifted}; earlier guideline notice remains historical evidence`);
       next.reviewSignals.trustpilotFlaggedReviewNote = `Trustpilot showed a rating again on ${set.trustpilotNoticeLifted}, without the guideline-breach notice. The earlier notice stays listed under incidents with its date.`;
       refreshTrustpilotText(next, trustpilotCheckedOn);
+      // A firm's original hand-written note may have stated "rating unavailable";
+      // unlike generic number-only notes, it must be replaced on restoration.
+      if (/rating (?:is )?unavailable|unavailable rating|rating signal is unavailable/i.test(next.reviewSignals.trustpilotNote ?? '')) {
+        next.reviewSignals.trustpilotNote = `Trustpilot displayed ${set.trustpilotRating.toFixed(1)}/5 across ${(next.reviewSignals.trustpilotReviewCount ?? 0).toLocaleString('en-US')} reviews on ${set.trustpilotNoticeLifted}. An earlier guideline-breach/removed-review notice remains in the incident history. This public review score is not independently verified payout evidence.`;
+      }
     }
 
     return next;

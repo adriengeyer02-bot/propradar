@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 146 logos, fetched 2026-11-17 (including one verified legacy brand mark).
+// 148 logos, fetched 2026-11-17 (including three verified legacy brand marks).
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -74,6 +74,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "fundingyourtrades.com": { file: "funding-your-trades.png", source: "https://fundingyourtrades.com/wp-content/uploads/2025/05/cropped-IMG_1077.png" },
   "fundsfortraders.com": { file: "funds-for-traders.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/65438a5a2f3c7574eedc49b8/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "fundyourfx.io": { file: "fundyourfx.png", source: "https://fundyourfx.com/seo/fyfx-v5-favicon-gradient-v2.svg" },
+  "fxcapitalfunding.com": { file: "fx-capital-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/648aecbc52b8b8a1e9467caa/0x0.png (historic logo uploaded by the firm to its claimed Trustpilot profile; not an active checkout)" },
   "fx2funding.com": { file: "fx2-funding.png", source: "https://fx2funding.com/wp-content/uploads/2022/09/cropped-Favicon-192x192.png" },
   "fxci.com": { file: "fxci.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/64b7b1d39abc8aaa57e634a9/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "fxify.com": { file: "fxify.png", source: "https://fxify.com/safari-pinned-tab.svg" },
@@ -128,6 +129,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "rzrfunded.com": { file: "hantec-trader.png", source: "https://rzrfunded.com/logo.svg" },
   "sabiotrade.com": { file: "sabiotrade.png", source: "https://sabiotrade.us/favicon.svg" },
   "sfxfunded.com": { file: "sfx-funded.png", source: "https://sfxfunded.com/icon.png" },
+  "summitstrike.com": { file: "summit-strike-capital.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/663f6873e5a2c038b07f60e5/0x0.png (historic logo uploaded by the firm to its claimed Trustpilot profile; not an active checkout)" },
   "superfunded.com": { file: "superfunded.png", source: "https://superfunded.com/wp-content/uploads/2024/05/cropped-SuperFunded-Logo-08-192x192.png" },
   "swayfunded.com": { file: "sway-funded.png", source: "https://swayfunded.com/media/favicon/favicon.svg" },
   "takeprofittrader.com": { file: "take-profit-trader.png", source: "https://takeprofittrader.com/assets/logo-dark.svg" },

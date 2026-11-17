@@ -9194,6 +9194,586 @@
         }
       ]
     },
+    "fx-capital-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The UK Companies House register confirms FX CAPITAL FUNDING LIMITED no. 14759730 was dissolved on 28 January 2025 after a voluntary strike-off application. The name and address match the brand's historic review records, but this does not independently settle outstanding customer balances.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/14759730",
+          "fields": [
+            "status",
+            "entities",
+            "legalReview",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The historical official domain redirects to BrokersInForex, a distinct broker-guide site. The dormant prop-firm checkout remains disabled.",
+          "source": "https://fxcapitalfunding.com/",
+          "fields": [
+            "listedDomainWarning",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "A historical 4.4/5 score based on only 15 claimed Trustpilot reviews is not proof of individual payouts or present operations. Preserve the historical logo solely as a sourced archive asset.",
+          "source": "https://www.trustpilot.com/review/fxcapitalfunding.com",
+          "fields": [
+            "historicLogoDomain",
+            "auditSummary"
+          ]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "verdict": "Historical prop-firm brand, not a current purchase option. Companies House confirms the matching UK operator was dissolved in January 2025; the former domain now redirects to an unrelated broker-information service. Historical customer payouts and refund completion were not independently verified.",
+        "auditSummary": "17 November 2026 multi-source archival review: UK Companies House lists FX CAPITAL FUNDING LIMITED (14759730), incorporated 27 March 2023 and dissolved 28 January 2025 following voluntary strike-off. Historical review records link the company and registered address to FX Capital Funding. The old fxcapitalfunding.com website redirects to BrokersInForex, not a functioning FX Capital Funding checkout. Trustpilot's small historical review sample and old promotional materials do not independently authenticate bank transfers, on-chain payments or completed refunds. Do not confuse this brand with the unrelated FX Capital Funded name.",
+        "listedDomainWarning": "Historic brand only: FX CAPITAL FUNDING LIMITED (UK 14759730) was dissolved on 28 January 2025, and fxcapitalfunding.com redirects to an unrelated broker-guide site. PropRadar blocks purchases through this former domain.",
+        "historicLogoDomain": "fxcapitalfunding.com"
+      },
+      "setEntities": [
+        {
+          "name": "FX CAPITAL FUNDING LIMITED",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "14759730 (dissolved 2025-01-28)",
+          "registeredAddress": "19–20 Bourne Court, Southend Road, Woodford Green, Essex, IG8 8HD, United Kingdom",
+          "role": "Historical UK operator matched to the brand's published address; voluntary strike-off and dissolution recorded by Companies House."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The historical operator was a registered UK company, now dissolved. Companies House's public record establishes corporate status and dates, not whether all clients received requested withdrawals, refunds or performance rewards. The former website is no longer a prop-firm checkout.",
+        "regulatoryStatus": [
+          "UK Companies House no. 14759730: dissolved on 28 January 2025; company formerly incorporated 27 March 2023.",
+          "Filing history documents a voluntary strike-off application in October 2024; this is a corporate-register fact, not proof every customer balance was settled.",
+          "No independently verified present trading-program operator or valid purchase terms were found at the redirected domain."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot's historical claimed profile contains a small review sample; reviews are subjective and not independently authenticated proof of transfers.",
+          "No reliable primary record establishing completion of every pending payout or refund was located."
+        ],
+        "redFlags": [
+          "Dissolved legal entity, with no demonstrated successor undertaking prior contractual obligations.",
+          "Original brand domain redirects to a separate broker-comparison operation.",
+          "Historical Trustpilot rating cannot substantiate active services or payout solvency.",
+          "Do not attribute evidence relating to the similarly named FX Capital Funded to this operator."
+        ],
+        "sources": [
+          {
+            "label": "UK Companies House – FX CAPITAL FUNDING LIMITED (14759730)",
+            "url": "https://find-and-update.company-information.service.gov.uk/company/14759730"
+          },
+          {
+            "label": "Companies House filing and voluntary strike-off history",
+            "url": "https://find-and-update.company-information.service.gov.uk/company/14759730/filing-history"
+          },
+          {
+            "label": "Former FX Capital Funding domain (redirected)",
+            "url": "https://fxcapitalfunding.com/"
+          },
+          {
+            "label": "Historical claimed Trustpilot review and logo",
+            "url": "https://www.trustpilot.com/review/fxcapitalfunding.com"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Verified UK company dissolution",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/14759730"
+        },
+        {
+          "label": "Historical logo on claimed Trustpilot profile",
+          "url": "https://s3-eu-west-1.amazonaws.com/tpd/logos/648aecbc52b8b8a1e9467caa/0x0.png"
+        }
+      ],
+      "addIncidents": [
+        "2025-01-28 — Companies House formally records dissolution of FX CAPITAL FUNDING LIMITED (14759730); this does not establish the disposition of individual trader balances. Source: https://find-and-update.company-information.service.gov.uk/company/14759730"
+      ]
+    },
+    "get-leveraged": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The official terms identify GetLeveraged Ltd (Saint Lucia no. 2025-00808) as the simulated evaluation operator and Leveraged Capital Management LTD as a separate Cyprus billing agent. Cyprus government Gazette independently lists the agent as HE471661; billing and reward liabilities should not be conflated.",
+          "source": "https://getleveraged.com/terms/",
+          "fields": [
+            "entities",
+            "legalReview",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The Cyprus Securities and Exchange Commission warned about getleveraged.com as not authorised for investment services in its 7 April 2026 notice, which is a genuine regulator warning but does not by itself establish that simulated challenges require an investment-firm licence.",
+          "source": "https://fi.ee/sites/default/files/2026-04/GetFile.pdf",
+          "fields": [
+            "legalReview",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The current Trustpilot page again displays 4.5/5 from 1,312 reviews as observed on 17 November 2026. An independent directory still preserves the prior withheld-rating and removed-review alert; the historical warning stays visible in PropRadar and the new rating is not treated as proof of payouts.",
+          "source": "https://www.trustpilot.com/review/getleveraged.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "trustpilotNoticeLifted",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Official payout FAQ distinguishes Turbo, Sprint, Classic and funded-stage eligibility, including the 14-day first reward on Turbo and a 20% best-day constraint. The advertised small Turbo upfront price does not include its later pass fee.",
+          "source": "https://getleveraged.com/fr/faq/payouts-and-profit-split/",
+          "fields": [
+            "payoutDelay",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The Cyprus Official Gazette lists LEVERAGED CAPITAL MANAGEMENT LTD as corporate registration HE471661, dated 23 February 2025, at a Nicosia registered address. The public Limassol contact location need not be the registered office.",
+          "source": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/BDF290E757EB7A6AC2258C4600244618/$file/4507%207%203%202025%20PARARTHMA%205o%20MEROS%20I.pdf",
+          "fields": [
+            "entities",
+            "legalReview"
+          ]
+        }
+      ],
+      "set": {
+        "verdict": "Active simulated-account challenge provider with identified Saint Lucia operator and Cyprus billing agent. Its current Trustpilot rating is displayed again, but a prior review-integrity notice and a published CySEC investment-services warning materially affect the strength of its public trust signals. Verify each program's payout and deferred-fee rules before buying.",
+        "auditSummary": "17 November 2026 deeper review: official October 2026 terms identify GetLeveraged Ltd (Saint Lucia registration 2025-00808), distinct from Cyprus payment agent Leveraged Capital Management LTD (HE471661 in the official Gazette). The terms describe fully simulated accounts rather than real-money trading. CySEC's 7 April 2026 warning includes getleveraged.com as unauthorised for investment services; whether a particular simulated evaluation service legally requires authorisation is a separate question, not determined by the website notice alone. Trustpilot now displays 4.5/5 and 1,312 reviews, while a documented earlier rating-withheld/fake-review-removal notice remains relevant history. Eligibility differs by program: Turbo's initial reward typically requires 14 days and a 20% best-day limit; Sprint/Classic differ. The low advertised Turbo signup amount may be followed by a substantial funded-stage fee. No independently matched bank receipt or on-chain payout transfer was authenticated for this review.",
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 1312,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/getleveraged.com",
+        "trustpilotNoticeLifted": "2026-11-17",
+        "payoutDelay": "Program-dependent: Turbo first payout after 14 calendar days plus three qualifying profit days and a 20% best-day cap; Sprint and Classic follow different schedules. Check the current program's official FAQ before purchase."
+      },
+      "setEntities": [
+        {
+          "name": "GetLeveraged Ltd",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00808 (number published in operator's own terms; independent registry entry not retrieved)",
+          "registeredAddress": "Robin Kelton Building, Choc Bay, Castries, Saint Lucia",
+          "role": "Contracting simulated trading challenge operator named by official terms."
+        },
+        {
+          "name": "Leveraged Capital Management LTD",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE471661 (Cyprus Official Gazette, registered 2025-02-23)",
+          "registeredAddress": "25 Smyrnis Street, Kaimakli, Nicosia 1026, Cyprus",
+          "role": "Separately registered payment or billing agent named in official terms, not automatically the counterparty promising trader rewards."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Two legal entities perform different functions: the Saint Lucia company describes itself as the simulated challenge provider, whereas a registered Cyprus firm acts as payment agent. The CySEC public investment-services warning references this website, but the licence requirements for the described simulated product need separate legal classification.",
+        "regulatoryStatus": [
+          "GetLeveraged Ltd Saint Lucia 2025-00808 is identified by first-party terms, not independently certified by the Saint Lucia registry in this check.",
+          "Leveraged Capital Management LTD appears in Cyprus Official Gazette as HE471661, registered on 23 February 2025; the Gazette gives its Nicosia registered address.",
+          "CySEC's 7 April 2026 warning names getleveraged.com among websites not authorised to provide investment services; do not reinterpret this into a finding of criminal conduct.",
+          "The October 2026 official terms describe simulated trading accounts, not custody of live investment accounts."
+        ],
+        "complaintsAndDisputes": [
+          "An archived third-party review captures an earlier Trustpilot withheld-rating notice concerning guideline breaches and removed reviews; Trustpilot's public score was restored to display as of 17 November 2026, without explaining who caused past review irregularities.",
+          "The payout timetable and rejection criteria differ between programs, especially best-day consistency and qualifying-profit days.",
+          "Marketing a low up-front Turbo fee can be misleading if the contingent funded-stage payment is overlooked; review complete checkout costs.",
+          "No independent customer-linked transfer record was authenticated during this review."
+        ],
+        "redFlags": [
+          "Regulator-published unauthorised investment-services warning naming the firm's URL; effect on this particular simulated product is not independently adjudicated.",
+          "Prior Trustpilot review-integrity notice remains historical context despite the now visible rating.",
+          "Saint Lucia operator registration not independently retrieved in a government register.",
+          "Separate Cyprus billing entity may complicate identification of the party responsible for a reward or refund.",
+          "Strict program-specific withdrawal conditions and deferred challenge fees."
+        ],
+        "sources": [
+          {
+            "label": "Get Leveraged official terms (October 2026)",
+            "url": "https://getleveraged.com/terms/"
+          },
+          {
+            "label": "CySEC warning (7 April 2026), PDF hosted by Estonian regulator",
+            "url": "https://fi.ee/sites/default/files/2026-04/GetFile.pdf"
+          },
+          {
+            "label": "Cyprus Official Gazette – HE471661",
+            "url": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/BDF290E757EB7A6AC2258C4600244618/$file/4507%207%203%202025%20PARARTHMA%205o%20MEROS%20I.pdf"
+          },
+          {
+            "label": "Get Leveraged reward policy FAQ",
+            "url": "https://getleveraged.com/fr/faq/payouts-and-profit-split/"
+          },
+          {
+            "label": "Trustpilot – current Leveraged rating",
+            "url": "https://www.trustpilot.com/review/getleveraged.com"
+          },
+          {
+            "label": "PropTested – recorded earlier Trustpilot rating withheld",
+            "url": "https://proptested.com/firms/leveraged"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Official October 2026 contract and simulated-account definitions",
+          "url": "https://getleveraged.com/terms/"
+        },
+        {
+          "label": "Cyprus Gazette corporate register for billing agent",
+          "url": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/BDF290E757EB7A6AC2258C4600244618/$file/4507%207%203%202025%20PARARTHMA%205o%20MEROS%20I.pdf"
+        },
+        {
+          "label": "Direct CySEC investment warning",
+          "url": "https://fi.ee/sites/default/files/2026-04/GetFile.pdf"
+        },
+        {
+          "label": "Historical Trustpilot alert as archived Nov 2026",
+          "url": "https://proptested.com/firms/leveraged"
+        },
+        {
+          "label": "Get Leveraged payout schedule by product",
+          "url": "https://getleveraged.com/fr/faq/payouts-and-profit-split/"
+        }
+      ],
+      "addIncidents": [
+        "2026-04-07 — The Cyprus Securities and Exchange Commission published getleveraged.com among websites not authorised to provide investment services. This does not alone decide the licence treatment of its simulated challenges. Primary notice: https://fi.ee/sites/default/files/2026-04/GetFile.pdf",
+        "2026-11-16 — Historical Trustpilot guideline-breach and fake-reviews-removal notice recorded by PropTested while the rating was withheld; on 17 November Trustpilot again displayed a numerical rating. Source: https://proptested.com/firms/leveraged"
+      ]
+    },
+    "fundedlions": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Finance Magnates reported FundedLions' September 2024 suspension and quoted CEO Noman Iqbal's proposed platform migration. Allegations about former technology partner Dominion Markets are presented as FundedLions' claims, not independently established findings.",
+          "source": "https://www.financemagnates.com/forex/in-review-bdswiss-staff-exodus-ironfxs-new-prop-firm-us-fx-deposits-and-more/",
+          "fields": [
+            "entities",
+            "legalReview",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The original fundedlions.com checkout and legal pages cannot be reached, with no verified present contracting entity or successful post-migration service. Prevent directing traders to an unavailable checkout, without claiming formal dissolution.",
+          "source": "https://fundedlions.com/",
+          "fields": [
+            "listedDomainWarning",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "A September 2024 published company statement described suspended operations and an intended MT5 migration; neither implementation nor subsequent reward transfers are independently established in the present review.",
+          "source": "https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013",
+          "fields": [
+            "legalReview",
+            "auditSummary"
+          ]
+        }
+      ],
+      "set": {
+        "verdict": "Historically operating challenge brand with a reported September 2024 suspension, and an original site that is no longer reachable. No present checkout, company-registration number or independently authenticated payout transfer could be confirmed. Keep on the watchlist until the operator proves continuity rather than assuming a formally recorded liquidation.",
+        "auditSummary": "17 November 2026: the historical FundedLions domain is not operating as a usable purchase destination. Finance Magnates and a contemporaneous report reproduce the firm's September 2024 communication, in which CEO Noman Iqbal said the company was temporarily suspending access and intended to migrate away from provider Dominion Markets to MetaTrader 5. His assertions about supplier pricing and conduct are claims by FundedLions, not verified misconduct by Dominion. No reliable documentary evidence that the migration succeeded or that customers' outstanding rewards were discharged was located. Historical plan and aggregate payout claims are not verified bank records. A complete corporate legal name and official registration number remain unconfirmed; no Trustpilot number is treated as current.",
+        "listedDomainWarning": "Do not purchase via fundedlions.com: the historical site/checkout is unreachable as of 17 November 2026. The firm reported a suspension in September 2024, but no independent record confirms successful restart, formal dissolution or outstanding reward settlement."
+      },
+      "setEntities": [
+        {
+          "name": "FundedLions (registered legal name not established)",
+          "jurisdiction": "Unverified; Saint Lucia appears in secondary listings only",
+          "role": "Historical challenge brand; CEO Noman Iqbal identified in 2024 news reporting. Registered corporation and number not independently retrieved."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The historical provider's public domain is unavailable and its 2024 suspension announcement is documented in contemporaneous media, but neither a final closure nor an active successor's legal status has been independently shown. The company name and jurisdiction cannot be elevated from directory descriptions into a verified registration.",
+        "regulatoryStatus": [
+          "September 2024: company-reported interruption and intended migration to MT5 documented by Finance Magnates and BrokersView.",
+          "2026-11-17: fundedlions.com does not expose a live current evaluation checkout, corporate details or enforceable terms.",
+          "Secondary claims of Saint Lucia registration lack the registered name, company number and government register confirmation needed to verify the entity.",
+          "No regulator finding about the provider, or a formal court/company-register closure filing, was authenticated in this pass."
+        ],
+        "complaintsAndDisputes": [
+          "The FundedLions CEO alleged improper charges and pressure by former technology supplier Dominion Markets; PropRadar does not treat those allegations as proven findings about the supplier.",
+          "Traders may have been affected by the operational pause, but the present sources do not identify or confirm the outcomes of individual refund/payout requests.",
+          "Historical payout-total advertising and plan-specific reward schedules have not been backed by independently checked transactions."
+        ],
+        "redFlags": [
+          "Historically announced service suspension with no verified successful recovery.",
+          "Former official domain inaccessible and no verified alternate purchase URL.",
+          "No independently identified registered company and number.",
+          "Inability to inspect currently applicable payout, refund, KYC and termination rules.",
+          "Third-party customer reviews, payout counters and operator accusations should not be conflated with independently documented money transfers or wrongdoing."
+        ],
+        "sources": [
+          {
+            "label": "Finance Magnates – September 2024 FundedLions company statement",
+            "url": "https://www.financemagnates.com/forex/in-review-bdswiss-staff-exodus-ironfxs-new-prop-firm-us-fx-deposits-and-more/"
+          },
+          {
+            "label": "BrokersView reproduction of FundedLions September 2024 announcement",
+            "url": "https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013"
+          },
+          {
+            "label": "Former FundedLions official domain (not usable 2026)",
+            "url": "https://fundedlions.com/"
+          },
+          {
+            "label": "Historical claimed Trustpilot brand profile and logo",
+            "url": "https://www.trustpilot.com/review/fundedlions.com"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Finance Magnates contemporaneous platform suspension report",
+          "url": "https://www.financemagnates.com/forex/in-review-bdswiss-staff-exodus-ironfxs-new-prop-firm-us-fx-deposits-and-more/"
+        },
+        {
+          "label": "FundedLions own 2024 statement reproduced in industry report",
+          "url": "https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013"
+        }
+      ],
+      "addIncidents": [
+        "2024-09 — FundedLions reported suspending operations and planning a technology-provider migration; the firm's accusations against the former provider remain allegations only. Source: https://www.financemagnates.com/forex/in-review-bdswiss-staff-exodus-ironfxs-new-prop-firm-us-fx-deposits-and-more/"
+      ]
+    },
+    "alphaproptraders": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "AlphaPropTraders' previous official website currently returns a 502/unavailable response. The historical July footer showed simulated accounts and a Romania reference but did not identify an independently verifiable corporation or registration number; avoid sending customers to an inaccessible checkout.",
+          "source": "https://alphaproptraders.com/",
+          "fields": [
+            "listedDomainWarning",
+            "auditSummary",
+            "verdict",
+            "entities"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The branded Linktree links the same AlphaPropTraders name to digital-share SFT marketing, XPortal app downloads and social accounts. Without issuer documents or contractual terms, PropRadar does not describe SFT as verified company equity or a security.",
+          "source": "https://linktr.ee/alphaproptraders",
+          "fields": [
+            "legalReview",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "A negative Trustpilot page for alphaprotraders.com (different spelling) contains comments dating to 2020 and should not be assigned to the 2024-branded alphaproptraders.com operation. Its rating is intentionally excluded.",
+          "source": "https://uk.trustpilot.com/review/www.alphaprotraders.com",
+          "fields": [
+            "legalReview",
+            "auditSummary"
+          ]
+        }
+      ],
+      "set": {
+        "verdict": "Unverified historical challenge/SFT brand: the former prop-firm website cannot currently be inspected and its registered operator has not been identified. Marketing for SFT digital shares persists on the branded social link page, but no primary legal terms establishing ownership rights, redemption or customer rewards were recovered. Lookalike Alpha Prop brands are excluded from this evidence.",
+        "auditSummary": "17 November 2026: the historical alphaproptraders.com site is inaccessible (502 on public retrieval), preventing an up-to-date terms, KYC, invoice, payout or regulator review. PropRadar's earlier July capture described Romania as an applicable jurisdiction and explicitly simulated demo accounts rather than broker custody, but no registered company name or corporate number was captured. A branded Linktree created in 2024 still advertises SFT digital shares and an XPortal application, a distinct product for which legal ownership rights and issuer documentation were not verified. Reviews of the differently spelled alphaprotraders.com domain refer to 2020 and are not safe to attribute to this operator. No third-party bank proof or verifiable on-chain payout record was authenticated. The review remains a company-identity watchlist, not a positive recommendation.",
+        "listedDomainWarning": "The AlphaPropTraders historical website and checkout at alphaproptraders.com were unavailable (502) when checked on 17 November 2026. Purchases and SFT purchases are not directed to this unreachable URL until a legally identified operator and current terms can be verified."
+      },
+      "setEntities": [
+        {
+          "name": "AlphaPropTraders / Alpha Prop Traders (registered corporate name unverified)",
+          "jurisdiction": "Romania indicated in historical site footer; independently unverified",
+          "role": "Historical simulated-account and SFT marketing brand. No government company number, company registration certificate or issuer identity authenticated."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Publicly retrievable brand social links exist, but the old corporate footer cannot currently be re-read and no competent primary register is available to tie AlphaPropTraders to a registered legal entity. Its digital-share SFT materials introduce a separate diligence topic requiring issuer and rights documentation.",
+        "regulatoryStatus": [
+          "A historical July 2026 PropRadar capture noted that its own footer described all trading as simulated demo accounts and said the brand was not a broker or custodian.",
+          "The website now returns 502 during public retrieval, so current contractual language is unconfirmed.",
+          "Romania was named in the historic footer; this alone is not a registered company name or number.",
+          "No SFT issuer, custody arrangement, shareholder register, redemption obligation or current security-authorisation evidence was validated."
+        ],
+        "complaintsAndDisputes": [
+          "No payout sample could be tied to an independently verified customer transfer.",
+          "A Trustpilot page for alphaprotraders.com has a materially different domain spelling and older 2020 reviews; attribution to AlphaPropTraders is unproven and the rating is not imported.",
+          "Digital-share advertisements on official-looking Linktree entries are marketing claims, not verified ownership rights."
+        ],
+        "redFlags": [
+          "Current original domain returns 502; no readable checkout contract or live program policies.",
+          "Unknown legal contracting party despite historical Romania jurisdiction claim.",
+          "Unverified digital shares/SFT product rights, liquidity and corporate issuer.",
+          "Serious risk of accidentally merging reviews or legal terms from similarly named Alpha Prop / Alpha Props / Alphaprotraders businesses.",
+          "No verified payout transfer or refund record."
+        ],
+        "sources": [
+          {
+            "label": "AlphaPropTraders former official domain",
+            "url": "https://alphaproptraders.com/"
+          },
+          {
+            "label": "AlphaPropTraders branded Linktree and SFT/XPortal links",
+            "url": "https://linktr.ee/alphaproptraders"
+          },
+          {
+            "label": "Differently spelled 2020 Trustpilot page — identity exclusion",
+            "url": "https://uk.trustpilot.com/review/www.alphaprotraders.com"
+          },
+          {
+            "label": "Prop Firm Match AlphaPropTraders unlisted directory",
+            "url": "https://propfirmmatch.com/crypto/unlisted-prop-firms/alphaproptraders"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "AlphaPropTraders claimed official social links",
+          "url": "https://linktr.ee/alphaproptraders"
+        },
+        {
+          "label": "Do-not-conflate 2020 Alphaprotraders Trustpilot page",
+          "url": "https://uk.trustpilot.com/review/www.alphaprotraders.com"
+        }
+      ]
+    },
+    "summit-strike-capital": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The historic brand URL summitstrike.com is now parked for sale, not serving a prop-firm checkout. Multiple third-party sources describe operations as ceased, but a primary corporate dissolution or first-party closure filing could not be independently retrieved.",
+          "source": "https://summitstrike.com/",
+          "fields": [
+            "status",
+            "listedDomainWarning",
+            "auditSummary",
+            "verdict"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The claimed Trustpilot profile links Summit Strike Capital to summitstrike.com and shows 3.6/5 from 269 historical reviews, with Malaysian contact details but no corporate registration number. Old reviews are not evidence the firm is presently operating.",
+          "source": "https://www.trustpilot.com/review/summitstrike.com",
+          "fields": [
+            "trustpilotRating",
+            "trustpilotReviewCount",
+            "trustpilotSourceUrl",
+            "legalReview",
+            "entities",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "One directory reports an April 5, 2025 closure and possible client refunds, but references another operator in its account; a separate listing says no official closure notice was located. Treat dates and proposed refunds as secondary, disputed details, not independently confirmed settlement.",
+          "source": "https://vettedpropfirms.com/summit-strike-capital-announces-closure-following-metaquotes-policy-change/",
+          "fields": [
+            "legalReview",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "A public reply by the firm on its claimed Trustpilot profile described a historical 72-business-hour payout processing period after approval, not after initial request. Customer complaints about delayed rewards and refunds are allegations not authenticated transfer records.",
+          "source": "https://www.trustpilot.com/review/summitstrike.com",
+          "fields": [
+            "payoutDelay",
+            "legalReview",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The archived brand logo appears on the same claimed Trustpilot page for summitstrike.com. It is retained as a historical brand mark, with purchases disabled because the linked domain is no longer an active checkout.",
+          "source": "https://s3-eu-west-1.amazonaws.com/tpd/logos/663f6873e5a2c038b07f60e5/0x0.png",
+          "fields": [
+            "historicLogoDomain"
+          ]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "verdict": "Former prop-firm brand with no functioning checkout: the historical summitstrike.com domain is parked for sale. The company's claimed review page identifies a Kuala Lumpur contact address but no independently registered corporate entity. Industry reports suggest an April 2025 shutdown; neither an official dissolution date nor completion of customer refunds can be established.",
+        "auditSummary": "17 November 2026 historical review: summitstrike.com, linked by Summit Strike Capital's claimed Trustpilot profile, no longer presents a trading challenge and resolves to a domain-sale page. A third-party August 2025 report describes a closure effective 5 April 2025 and proposed account refunds, but text referring to another firm makes the specifics insufficiently reliable for unconditional attribution; other directories have noted no original official closure announcement. The Trustpilot profile displays 3.6/5 from 269 reviews, predominantly historical, not payout or solvency proof. The firm once represented that approved payouts were processed within 72 business hours; this is an old company claim and differs from time measured from trader request. Customer reports of unpaid rewards or refunds remain unverified individual allegations. A Kuala Lumpur contact locality is not a corporate registry record; the registered legal entity and final liabilities remain unknown.",
+        "listedDomainWarning": "Historical firm only: summitstrike.com now points to a domain-sale/parking page. Independent evidence of a current operator, safe checkout or completed customer refunds is unavailable; PropRadar blocks purchase links.",
+        "trustpilotRating": 3.6,
+        "trustpilotReviewCount": 269,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/summitstrike.com",
+        "payoutDelay": "Historical claim: processing within 72 business hours after management approval, not from the initial request. Firm no longer has a working checkout; no current payout schedule is verified.",
+        "historicLogoDomain": "summitstrike.com"
+      },
+      "setEntities": [
+        {
+          "name": "Summit Strike Capital (registered legal entity not verified)",
+          "jurisdiction": "Malaysia contact location reported; incorporation jurisdiction unverified",
+          "registeredAddress": "Mont Kiara, 50480 Kuala Lumpur, Malaysia (public contact address, not independently confirmed registered office)",
+          "role": "Historical prop challenge brand whose claimed Trustpilot listing named this support location. No government company number or liquidation record confirmed."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "An archived consumer profile and parked former domain reliably connect Summit Strike Capital with the former summitstrike.com operation, which is no longer publicly selling programs. Secondary reports describe a closure, but its formal legal status and potential outstanding obligations were not established through a government registry or authenticated first-party winding-up notice.",
+        "regulatoryStatus": [
+          "Historical official domain summitstrike.com is parked for sale, not a trading-program purchase destination as of 17 November 2026.",
+          "Claimed Trustpilot profile lists Mont Kiara, Kuala Lumpur as a contact location; this is not evidence of Malaysian incorporation.",
+          "Industry articles report an April 2025 closure, but the principal article includes references to another company, so the exact closure mechanism/date cannot be independently certified.",
+          "No corporate registration number, government dissolution filing or final authorised operator was located."
+        ],
+        "complaintsAndDisputes": [
+          "Several dated Trustpilot reviewers in March–July 2025 allege delayed payouts, disallowed accounts or refunds not received; these are unverified individual claims, not adjudicated findings.",
+          "The company's public reply to at least one review described a 72-business-hour clock only after payout approval, and disputed conditions described by a reviewer.",
+          "One retrospective article describes a refund process, but no independent batch evidence establishes actual completed refunds.",
+          "Historical 3.6/5 Trustpilot aggregate from 269 reviews cannot authenticate specific transfers."
+        ],
+        "redFlags": [
+          "Official trading domain is now parked and cannot support a valid challenge purchase.",
+          "No identified corporate registrant or jurisdiction despite an old Kuala Lumpur contact listing.",
+          "Closure and proposed-refund chronology from secondary material is inconsistent or confounded by another company name.",
+          "Historical reward timing is a company statement rather than an independently observed transfer.",
+          "Trustpilot consumer reports of unreceived refunds/withdrawals warrant caution, with individual outcomes unverified."
+        ],
+        "sources": [
+          {
+            "label": "Claimed Trustpilot brand page (historic reviews and contact address)",
+            "url": "https://www.trustpilot.com/review/summitstrike.com"
+          },
+          {
+            "label": "Former summitstrike.com domain (parked)",
+            "url": "https://summitstrike.com/"
+          },
+          {
+            "label": "Vetted Prop Firms retrospective closure report (caveated)",
+            "url": "https://vettedpropfirms.com/summit-strike-capital-announces-closure-following-metaquotes-policy-change/"
+          }
+        ]
+      },
+      "addSources": [
+        {
+          "label": "Summit Strike Capital claimed Trustpilot company profile",
+          "url": "https://www.trustpilot.com/review/summitstrike.com"
+        },
+        {
+          "label": "Old domain now for sale",
+          "url": "https://summitstrike.com/"
+        },
+        {
+          "label": "Secondary retrospective closure account with conflicting company details",
+          "url": "https://vettedpropfirms.com/summit-strike-capital-announces-closure-following-metaquotes-policy-change/"
+        },
+        {
+          "label": "Archival brand logo",
+          "url": "https://s3-eu-west-1.amazonaws.com/tpd/logos/663f6873e5a2c038b07f60e5/0x0.png"
+        }
+      ],
+      "addIncidents": [
+        "2025-03 to 2025-07 — Multiple Summit Strike Capital reviewers alleged delayed reward withdrawals and challenge-fee refunds; the public record does not authenticate individual transfer outcomes. Source: https://www.trustpilot.com/review/summitstrike.com",
+        "2025-04 (reported) — A secondary industry retrospective says Summit Strike Capital ceased operations and described a proposed refund pathway; direct company notice and actual repayment completion are unverified, and parts of the report refer to a differently named firm. Source: https://vettedpropfirms.com/summit-strike-capital-announces-closure-following-metaquotes-policy-change/"
+      ]
+    },
     "x-funded": {
       "reviewedAt": "2026-11-16",
       "changelog": [
