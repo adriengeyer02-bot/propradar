@@ -11,7 +11,8 @@ import hi from './hi';
 
 export type { RulesMessages };
 
-const ALL: Record<Locale, RulesMessages> = { en, fr, de, it, es, pt, zh, ja, hi };
+// Untranslated editorial pages fall back to English and are noindexed in these locales.
+const ALL: Record<Locale, RulesMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en };
 
 /** /prop-firm-rules strings in the page language. */
 export function getPageMessages(locale: Locale): RulesMessages {

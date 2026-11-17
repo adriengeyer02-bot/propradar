@@ -6,7 +6,7 @@ import { LOCALE_COOKIE, isTranslatedPath, splitLocale } from '../lib/locales';
 /** Banner on pages whose content is still English only, outside English. */
 export default function LocaleNotice({ title, body, english }: { title: string; body: string; english: string }) {
   const { locale, path } = splitLocale(usePathname() || '/');
-  if (locale === 'en' || isTranslatedPath(path)) return null;
+  if (locale === 'en' || isTranslatedPath(path, locale)) return null;
   return (
     <div className="locale-notice" role="note">
       <div className="container">

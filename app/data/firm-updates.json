@@ -3576,8 +3576,14 @@
       ]
     },
     "ment-funding": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of the firm's July 2026 official Terms of Service. Section 15 permits holding/rejecting withdrawals and requesting more identity verification for a shared crypto wallet; section 14 generally forfeits profits on breached accounts; section 16 allows variable fees and overnight swap costs. Published package-level rules and payout schedules from the prior audit remain; no execution, spread, or external transfer test was performed.",
+          "source": "https://mentfunding.com/terms-of-service",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.7 TrustScore across 233 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -3600,6 +3606,8 @@
         }
       ],
       "set": {
+        "verdict": "Ment Funding offers distinct forex, futures and equities programs, but its contract permits payout holds or rejections for shared crypto-wallet addresses, and generally forfeits gains on breached accounts. Its advertised payout schedules do not establish independent payment reliability. Always check the program-specific consistency and drawdown rules before buying.",
+        "auditSummary": "Official Terms of Service read on 17 November 2026, alongside the previously documented program comparison. Section 15 prohibits shared cryptocurrency payout wallets: the company may block a payment, demand an alternate wallet and additional verification, or suspend the account if it identifies a shared address. Section 14 says profits in breached accounts are generally forfeited. Section 16 states commissions and overnight swap charges can vary by asset and provider; the legal terms also reserve substantial amendment discretion. Forex, futures and equities have materially different targets, consistency thresholds and payout timing (see program cards). These contractual risk points matter more than the promotional 90% upgrade. This desk audit did not test live spreads/slippage, receive a trader payout, or authenticate third-party proof of funds.",
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 233,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.mentfunding.com",
@@ -3674,6 +3682,7 @@
         }
       ],
       "addSources": [
+        { "label": "Ment Funding terms of service — shared-wallet and payout restrictions (official)", "url": "https://mentfunding.com/terms-of-service" },
         {
           "label": "Ment Funding programs (official)",
           "url": "https://mentfunding.com/"
@@ -3858,8 +3867,14 @@
       ]
     },
     "ofp-funding": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "In-depth read of official trading rules and reward processing FAQ. Previous-day end-of-day equity determines each day's risk threshold; a floating 1% risk breach resets the balance; the firm may withhold rewards for an inconsistency score. FAQ claims typical 2–3 working-day processing and a Rise fee for rewards above $500. Claims are not independent payout verification. Existing Trustpilot removed-fake-reviews notice remains unchanged.",
+          "source": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
@@ -3884,6 +3899,8 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/ofpfunding.com)."
       ],
       "set": {
+        "verdict": "OFP Funding has a documented Trustpilot rating-withheld notice concerning removed fake reviews, alongside material contractual risk rules: daily limits recalculate from prior-day equity, a 1% floating-risk breach resets the account, and inconsistent profits may stop a reward. The firm's processing times and rewards are unverified claims. Elevated caution is warranted; this review does not alter its existing score.",
+        "auditSummary": "Deep rules audit on 17 November 2026 using OFP's official help centre and terms, expanding the October program-price review. Daily drawdown is recalculated at GMT+2 (with DST) from previous-day closing equity, so an intraday breach can terminate a challenge even after profits made the prior day. A separate maximum 1% floating loss rule is described as 'soft': breach resets account balance rather than directly terminating the account. OFP reserves the right to withhold reward eligibility for its Inconsistency Score and prohibits delayed-feed/arbitrage exploitation, cross-account hedging, AI/HFT or mass-entry systems and some news-gap strategies. Its FAQ advertises typical processing of 2–3 business days; it describes bank/USDC for amounts under $500 and Rise above $500 with a $50 fee. None of those payment statements was confirmed by independent transfer records. The existing October Trustpilot breach/fake-review notice remains disclosed. No spread, slippage or firsthand withdrawal test was conducted.",
         "priceFrom": 23,
         "profitSplit": 80,
         "payoutDelay": "first profit split after 4 days (instant 95% account) to 30 days (challenge), depending on the program"
@@ -3939,6 +3956,9 @@
         }
       ],
       "addSources": [
+        { "label": "OFP Funding mandatory trading and risk rules (official)", "url": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/" },
+        { "label": "OFP Funding reward processing and payment methods (official)", "url": "https://help.ofpfunding.com/how-long-does-it-take-to-receive-my-payout-after-request/" },
+        { "label": "OFP Funding terms and conditions (official)", "url": "https://ofpfunding.com/terms-and-conditions" },
         {
           "label": "OFP Funding programs (official)",
           "url": "https://ofpfunding.com/"
@@ -4440,8 +4460,14 @@
       ]
     },
     "sway-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Read the official challenge contract, including prohibited post-challenge strategy switching, cross-account hedging, discretionary risk review before a simulated funded account, required KYC, 80/20 default contractual profit share and listed restricted jurisdictions (including Japan, Pakistan and Vietnam). Homepage advertises up to 90%, so the difference is flagged; country list requires fresh confirmation at checkout. No independent payout test.",
+          "source": "https://my.swayfunded.com/p/terms",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.1 TrustScore across 620 reviews; Trustpilot says the profile was merged with other profiles of the company and that the company hasn't invited customers recently. Price and profit split not re-read on the official site, left unchanged.",
@@ -4461,12 +4487,16 @@
         }
       ],
       "set": {
+        "verdict": "Sway Funded advertises rewards up to 90%, while its official challenge terms specify an 80/20 default share. The contract also permits discretionary risk reviews, rejects cross-account hedging and strategy switching after assessment, and expressly restricts several countries. A trader in Japan, Pakistan or Vietnam should not assume eligibility. Advertised 24-hour rewards were not independently verified.",
+        "auditSummary": "The official challenge agreement (17 November 2026 review) offers a more useful risk picture than the sales homepage alone. Section 7.4 prohibits different strategies in evaluation versus funded simulation and cross-account hedging; section 7.5 leaves classification of prohibited trading to the firm's discretion. Section 8.7 permits additional risk profiling after successful assessment and potentially rejecting funded account access, while saying the assessment fee or credits remain refundable in that specific case. Section 9 conditions access on identity verification and cites an 80% trader share, contrasting with the 'up to 90%' homepage claim (upgrades or conditions were not independently established). Section 10 lists restricted jurisdictions including Japan, Pakistan, Vietnam, Myanmar, Afghanistan and others; this is published company eligibility, not a legal opinion or proof that a checkout accepts another country. The site claims 24-hour rewards, but no bank-level payout verification, real trading test or measured spread data was obtained.",
         "trustpilotRating": 4.1,
         "trustpilotReviewCount": 620,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/swayfunded.com",
         "payoutDelay": "rewards paid within 24 hours (SF Trader stage, as stated on the homepage)"
       },
       "addSources": [
+        { "label": "Sway Funded trader terms, prohibited strategies, payout split and restricted countries (official)", "url": "https://my.swayfunded.com/p/terms" },
+        { "label": "Sway Funded challenge refund policy (official)", "url": "https://my.swayfunded.com/p/refund-policy" },
         {
           "label": "Sway Funded program terms (official)",
           "url": "https://swayfunded.com/"
@@ -5672,8 +5702,14 @@
       ]
     },
     "wemastertrade": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep check of official FAQ: advertised up-to-90% split is conditional; 510Zero performance below 6% (8% for Vietnam/Indonesia/Thailand) yields just 10%; high profit-consistency can block withdrawals; risk-consistency reset/reactivation can reduce the next payout share to 20%. Existing Trustpilot fake-review warning kept; headline 24-hour processing remains firm-reported.",
+          "source": "https://faq.wemastertrade.com/en_gb/what-is-the-profit-sharing-rule/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
@@ -5695,9 +5731,13 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/wemastertrade.com)."
       ],
       "set": {
+        "verdict": "WeMasterTrade's headline 'up to 90%' reward is strongly conditional. Its own FAQ describes a 10% share for 510Zero traders below specified performance thresholds, rejected requests above the allowed consistency ratio, and reduced shares after risk-rule reactivation. The recorded Trustpilot fake-review notice remains a significant trust warning. A claimed 24-hour payout average is not independent payment proof.",
+        "auditSummary": "Official FAQ and package comparison checked 17 November 2026. The provider lists 51010, 510Zero, NoPC and Customize with materially different limits; the NoPC absence of profit consistency must not be generalized to other packages. The FAQ says a trader above the profit-consistency ceiling must continue trading until the best-day ratio falls; otherwise risk management rejects the payout. On 510Zero, performance below 6% leads to a fixed 10% share, raised to an 8% trigger for clients in Vietnam, Indonesia and Thailand. A 'Reactivate Profit Sharing' action after a risk-consistency breach can make the next reward share 20% before gradual recovery. The risk team may impose additional conditions on suspected abnormal trading. Its 'up to 90%' and average 24-hour processing claims do not convey these eligibility thresholds. Trustpilot's previously recorded rating-withheld/fake-review notice remains in the incident record. No independent payout audit, execution latency or live spread measurement was performed.",
         "payoutDelay": "first reward request available after 1 day, then no time limit; average processing of 24 hours stated on the package comparison"
       },
       "addSources": [
+        { "label": "WeMasterTrade profit-sharing conditions and consistency restrictions (official FAQ)", "url": "https://faq.wemastertrade.com/en_gb/what-is-the-profit-sharing-rule/" },
+        { "label": "WeMasterTrade additional profit-sharing conditions (official FAQ)", "url": "https://faq.wemastertrade.com/en_gb/profit-sharing/" },
         {
           "label": "WeMasterTrade package comparison (official)",
           "url": "https://wemastertrade.com/us/package-comparison/"
@@ -5787,8 +5827,14 @@
       ]
     },
     "crypto-fund-trader": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Read full official terms and add-on pricing. Marketing '48h Payout' is a paid 20%-of-evaluation add-on giving scholarship request eligibility every two active trading days on 1-Step, not verified transfer within 48 chronological hours; base threshold seven active trading days. Firm reserves review of risk/position sizing before rewards. No independent payout or spread test.",
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Programs and one-time fees read on the official homepage: Evaluation ($58 to $1,250), Accelerated ($40 to $1,199), Ascend ($45 to $1,798), Instant ($125 to $475) and Break ($70 to $199), 80% split on the live stage. Only the Break rules are tied to a program on the page (trailing $1,000 to $3,000, 40% consistency, on-demand payouts); the other rule sets are not tied to a program, so their limits are not recorded.",
@@ -5802,6 +5848,8 @@
         }
       ],
       "set": {
+        "verdict": "Crypto Fund Trader offers several evaluation models with important paid add-ons. Its '48h Payout' costs an additional 20% of the evaluation fee and grants eligibility to request a reward every two active trading days, rather than proving receipt within 48 hours. The firm can review position sizing and risk before approval. The actual speed and reliability of payouts remain unverified.",
+        "auditSummary": "17 November 2026 deep review of official full terms and FAQ, building on the October product-price snapshot. The 1-Step '48h Payout' option costs 20% extra and shortens the reward-request waiting period in the Final Stage from seven active trading days to two; this should not be described as a guaranteed 48-hour bank settlement. A separate 90% bonus-performance add-on also costs 20% of the evaluation fee, so promotional reward percentages are not universally included in headline prices. The written terms identify separate 1-Step Classic, Pro and Turbo goals and distinguish 2-phase/Ascend and Break programs. The provider explicitly reserves review of instruments, holding times, position size and risk profile before considering a scholarship. Trading fees vary with platform and instrument, but actual live spreads, slippage and transfer receipt were not measured by PropRadar. Prior program card parameters that could not be mapped unambiguously remain marked unverified.",
         "priceFrom": 40,
         "profitSplit": 80,
         "payoutDelay": "on demand on the Break program; not stated for the other programs"
@@ -5906,6 +5954,8 @@
         }
       ],
       "addSources": [
+        { "label": "Crypto Fund Trader terms, 48h add-on and payout checks (official)", "url": "https://cryptofundtrader.com/terms-and-conditions/" },
+        { "label": "Crypto Fund Trader current FAQ and platform fees (official)", "url": "https://cryptofundtrader.com/faq/" },
         {
           "label": "Crypto Fund Trader programs and prices (official)",
           "url": "https://cryptofundtrader.com/"

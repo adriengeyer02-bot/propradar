@@ -2,7 +2,7 @@
  * Site languages. English stays at the root (no prefix, existing URLs);
  * the other languages live under their prefix (/fr, /de, ... /hi).
  */
-export const LOCALES = ['en', 'fr', 'de', 'it', 'es', 'pt', 'zh', 'ja', 'hi'] as const;
+export const LOCALES = ['en', 'fr', 'de', 'it', 'es', 'pt', 'zh', 'ja', 'hi', 'tr', 'ar'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'en';
 export const PREFIXED_LOCALES = LOCALES.filter((locale) => locale !== DEFAULT_LOCALE);
@@ -17,13 +17,15 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   zh: '中文',
   ja: '日本語',
   hi: 'हिन्दी',
+  tr: 'Türkçe',
+  ar: 'العربية',
 };
 
-export const LOCALE_SHORT: Record<Locale, string> = { en: 'EN', fr: 'FR', de: 'DE', it: 'IT', es: 'ES', pt: 'PT', zh: '中文', ja: '日本語', hi: 'हिन्दी' };
+export const LOCALE_SHORT: Record<Locale, string> = { en: 'EN', fr: 'FR', de: 'DE', it: 'IT', es: 'ES', pt: 'PT', zh: '中文', ja: '日本語', hi: 'हिन्दी', tr: 'TR', ar: 'عربي' };
 
 /** BCP 47 tags for <html lang> and hreflang. */
-export const HTML_LANG: Record<Locale, string> = { en: 'en', fr: 'fr', de: 'de', it: 'it', es: 'es', pt: 'pt', zh: 'zh-Hans', ja: 'ja', hi: 'hi' };
-export const OG_LOCALE: Record<Locale, string> = { en: 'en_US', fr: 'fr_FR', de: 'de_DE', it: 'it_IT', es: 'es_ES', pt: 'pt_BR', zh: 'zh_CN', ja: 'ja_JP', hi: 'hi_IN' };
+export const HTML_LANG: Record<Locale, string> = { en: 'en', fr: 'fr', de: 'de', it: 'it', es: 'es', pt: 'pt', zh: 'zh-Hans', ja: 'ja', hi: 'hi', tr: 'tr', ar: 'ar' };
+export const OG_LOCALE: Record<Locale, string> = { en: 'en_US', fr: 'fr_FR', de: 'de_DE', it: 'it_IT', es: 'es_ES', pt: 'pt_BR', zh: 'zh_CN', ja: 'ja_JP', hi: 'hi_IN', tr: 'tr_TR', ar: 'ar_SA' };
 
 export const LOCALE_COOKIE = 'NEXT_LOCALE';
 
@@ -73,17 +75,27 @@ const TRANSLATED = [
   /^\/(articles|meilleures-prop-firms-2026|prop-firm-sans-challenge|regle-de-consistance-prop-firm|drawdown-prop-firm|avis-topstep|ftmo-vs-the5ers)$/,
 ];
 
-export function isTranslatedPath(path: string) {
+// Turkish and Arabic are being introduced on the main decision surfaces first.
+// Other routes remain accessible but must not be indexed as translated copies
+// until their complete editorial copy has been localized.
+const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/];
+
+export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';
+  if (locale === 'tr' || locale === 'ar') {
+    return NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
+  }
   return TRANSLATED.some((pattern) => pattern.test(clean));
 }
 
 /** canonical + hreflang alternates for a translated page (English path in). */
 export function localeAlternates(locale: Locale, path: string) {
   const languages: Record<string, string> = {};
-  for (const item of LOCALES) languages[HTML_LANG[item]] = localePath(item, path);
+  for (const item of LOCALES) {
+    if (isTranslatedPath(path, item)) languages[HTML_LANG[item]] = localePath(item, path);
+  }
   languages['x-default'] = path;
-  return { canonical: localePath(locale, path), languages };
+  return { canonical: isTranslatedPath(path, locale) ? localePath(locale, path) : path, languages };
 }
 
 /** Country name in the page language (ISO 3166 code), falling back to the English name. */

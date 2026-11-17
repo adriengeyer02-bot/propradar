@@ -11,7 +11,8 @@ import hi from './hi';
 
 export type { AuditMessages, JurisdictionLabels };
 
-const ALL: Record<Locale, AuditMessages> = { en, fr, de, it, es, pt, zh, ja, hi };
+// Untranslated editorial pages fall back to English and are noindexed in these locales.
+const ALL: Record<Locale, AuditMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en };
 
 /** /audit strings in the page language. */
 export function getPageMessages(locale: Locale): AuditMessages {

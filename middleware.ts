@@ -23,7 +23,7 @@ export function middleware(request: NextRequest) {
     // Pages still in English under a language prefix: kept out of the index
     // (their canonical already points to the English URL).
     const path = pathname.slice(first.length + 1) || '/';
-    if (!path.includes('/opengraph-image') && !isTranslatedPath(path)) response.headers.set('X-Robots-Tag', 'noindex, follow');
+    if (!path.includes('/opengraph-image') && !isTranslatedPath(path, first as typeof PREFIXED_LOCALES[number])) response.headers.set('X-Robots-Tag', 'noindex, follow');
     return response;
   }
 

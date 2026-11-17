@@ -3234,6 +3234,17 @@ html body .guide-featured-card-top > span:first-child {
 .lang-switch-menu a small { color: var(--muted); font-size: 11px; font-weight: 750; }
 .lang-switch-menu a:hover { background: var(--accent-wash); }
 .lang-switch-menu a[aria-current='true'] { background: var(--accent-wash); color: var(--accent); }
+
+/* Arabic uses a real RTL reading order; trading values and URLs remain LTR. */
+html[dir='rtl'] .lang-switch-menu { right: auto; left: 0; }
+html[dir='rtl'] .lang-switch-menu a { text-align: right; }
+html[dir='rtl'] input[type='number'],
+html[dir='rtl'] input[type='url'],
+html[dir='rtl'] input[type='email'],
+html[dir='rtl'] input[type='tel'],
+html[dir='rtl'] .score-value,
+html[dir='rtl'] code,
+html[dir='rtl'] pre { direction: ltr; unicode-bidi: isolate; }
 @media (max-width: 760px) {
   .lang-switch-button { height: 36px; }
   .lang-switch-button span { font-size: 12px; }

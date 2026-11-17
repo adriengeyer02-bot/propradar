@@ -161,6 +161,7 @@ export default async function RootLayout({
   return (
     <html
       lang={HTML_LANG[locale]}
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
       className={archivo.variable}
       suppressHydrationWarning
     >
