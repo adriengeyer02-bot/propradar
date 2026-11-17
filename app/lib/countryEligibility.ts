@@ -164,10 +164,10 @@ const rules: Record<string, Rule> = {
   },
   fxify: {
     worldwideExceptListed: true,
-    restricted: ['RU', 'VN', 'NG'],
+    restricted: ['RU', 'VN'],
     conditional: ['US'],
     source: 'https://fxify.com/faqs/all-faqs/what-countries-are-accepted/',
-    scope: 'FXIFY FAQ lists excluded countries but the main website also contains a US-specific exclusion disclosure: US access is unverified pending firm clarification. Other countries may face platform, identity and local-law limits. The official FAQ excludes Nigeria and Vietnam; deliberately misrepresenting residence may lead to denial of an account/refund.',
+    scope: 'FXIFY FAQ lists excluded countries but the main website also contains a US-specific exclusion disclosure: US access is unverified pending firm clarification. Other countries may face platform, identity and local-law limits. The official FAQ excludes Vietnam, Russia, Kenya and Ghana (but does not list Nigeria); deliberately misrepresenting residence may lead to denial of an account/refund.',
     checked: '2026-11-17',
   },
   fintokei: {
