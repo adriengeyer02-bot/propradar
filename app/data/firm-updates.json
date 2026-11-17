@@ -6225,8 +6225,14 @@
       ]
     },
     "ultimate-traders": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit found a material disagreement between the site's unlimited-challenge-time advertising and contractual 30-calendar-day clauses for both Classic and Speedy. The 90% reward split requires a paid add-on or conditions; refunds are restricted after delivery of login details. The January 2025 New Zealand FMA warning names ultimatetraders.pro, not the reviewed ultimatetraders.com; no corporate connection between these domains has been proven. Independent payout verification remains absent.",
+          "source": "https://theindustryspread.com/ultimate-traders-review-30-day-clock-contract/",
+          "fields": ["score", "verdict", "auditSummary", "legalReview", "trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 3.8 TrustScore across 68 reviews; Trustpilot notes the company hasn't invited customers recently and hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
@@ -6250,16 +6256,29 @@
         }
       ],
       "set": {
-        "trustpilotRating": 3.8,
+        "score": 52,
+        "status": "À surveiller",
+        "verdict": "Ultimate Traders still advertises live Classic and Speedy evaluations, but its unlimited-time promise conflicts with 30-day challenge limits identified in its written contract. The default profit share is 80%, with 90% conditional or sold as an add-on; refunds are narrow after login delivery. Trustpilot displays 4.3/5 from about 68 reviews with little recent activity. PropRadar lowers its score from 63 to 52/100 because contract consistency and verifiable payments matter more than promotional headline terms.",
+        "auditSummary": "17 November 2026: Ultimate Traders' official homepage advertises one-step and two-step simulated challenges with no maximum time limits, while a clause-by-clause published investigation found that sections 9.3 and 10.6 of its own Terms impose 30 calendar days from activation. The same investigation highlights conditional 90% profit share, a restrictive no-refund rule once platform credentials are emailed, and severe payout consequences for funded-account loss-limit breaches. The operator is Ultimate Traders Evaluation Ltd, UK company 14665391; a registration does not guarantee liquidity, payout execution or a financial licence. Trustpilot's exact .com profile displays 4.3/5 from approximately 68 reviews, with no new reviews during the last twelve months at the time checked. The New Zealand FMA separately warns about an entity named Ultimate Traders using ultimatetraders.pro; the regulator does NOT list this .com domain and the firms should not be conflated without evidence. No independent bank payout audit was available. The score reflects material contract uncertainty and limited contemporary independent verification rather than proof of wrongdoing.",
+        "trustpilotRating": 4.3,
         "trustpilotReviewCount": 68,
-        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/ultimatetraders.com?page=2",
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/ultimatetraders.com",
         "profitSplit": 80,
         "drawdownType": "Trailing",
         "newsTrading": "Allowed",
         "eaAllowed": "Yes",
-        "payoutDelay": "withdrawal requests once a month through the Client Area; processing time not stated"
+        "payoutDelay": "Published contract/FAQ review describes requests every 15 days with minimum 3 active trading days and $100 threshold; actual settlement time not verified"
+      },
+      "setLegalReview": {
+        "summary": "The UK operator is identifiable, but published terms apparently impose a 30-day evaluation deadline contradicted by the homepage's unlimited-time claim; refund and reward rights are restrictive. A regulator's similarly named .pro warning has not been linked to this .com operator.",
+        "regulatoryStatus": ["Ultimate Traders Evaluation Ltd (UK 14665391) is identified as the simulated-evaluation operator, not an authorised investment-broker guarantee.", "The New Zealand Financial Markets Authority's 2025 warning names ultimatetraders.pro; the reviewed website is ultimatetraders.com, and a legal identity link was not established."],
+        "complaintsAndDisputes": ["Trustpilot exact-domain profile displays 4.3/5 on about 68 reviews but had no reviews in the past year at the time checked.", "A detailed contract review found 30-day expiry clauses contrary to unlimited-time marketing, with narrow post-login refunds and potentially forfeitable funded profits following risk breaches."],
+        "redFlags": ["Official site and written challenge-duration terms apparently conflict.", "90% reward split is not automatic and refund rights are restrictive.", "No independent authenticated transfer history; the superficially matching FMA warning must not be attributed to the .com firm."],
+        "sources": [{"label":"Ultimate Traders current homepage","url":"https://www.ultimatetraders.com/"},{"label":"Detailed contract-clause comparison","url":"https://theindustryspread.com/ultimate-traders-review-30-day-clock-contract/"},{"label":"Ultimate Traders exact-domain Trustpilot","url":"https://www.trustpilot.com/review/ultimatetraders.com"},{"label":"NZ FMA warning for a DIFFERENT .pro domain","url":"https://www.fma.govt.nz/library/warnings-and-alerts/ultimate-traders"}]
       },
       "addSources": [
+        {"label":"Ultimate Traders marketing versus 30-day contract clauses","url":"https://theindustryspread.com/ultimate-traders-review-30-day-clock-contract/"},
+        {"label":"Trustpilot exact .com domain — 4.3/5 and 68 reviews","url":"https://www.trustpilot.com/review/ultimatetraders.com"},
         {
           "label": "Ultimate Traders trading rules (official)",
           "url": "https://www.ultimatetraders.com/trading-rules/"
@@ -6390,11 +6409,24 @@
       ]
     },
     "willis-capital": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-17",
       "set": {
-        "officialWebsite": "https://wfunded.io/"
+        "officialWebsite": "https://wfunded.io/",
+        "status": "À surveiller",
+        "score": 39,
+        "verdict": "Willis Capital is an older brand name for the currently operating WFunded service, not a confirmed liquidation of the successor. Its current wfunded.io site offers simulated one-step, two-step and zero-phase programmes and names Western Sahara Worldwide Services as manager. The former singular williscapital.com domain is parked; the separate plural williscapitals.com Trustpilot profile is now branded WFUNDED at 3.4/5 (294 reviews). Complaints on the correct profile allege delayed payouts and platform disruptions. PropRadar sets a cautious 39/100, not a closed-business label.",
+        "auditSummary": "17 November 2026: Preserve the already verified Willis Capital-to-WFunded rebrand documented by TechCabal and the exact Trustpilot profile. The reviewed historic domain williscapital.com is parked; it is NOT the current registration or purchasing destination. The functioning wfunded.io homepage explicitly names Western Sahara Worldwide Services (WSWS) as managing company, gives a Lagos contact address, describes educational/simulated challenge programmes and says no real funds are traded. Its claim of incorporation was not independently checked in a Nigerian registry. Trustpilot on williscapitals.com (plural) has renamed its profile WFUNDED and shows 3.4/5 from 294 reviews; several 2026 reviewers report payout delays, changed trading platforms or frozen accounts, all unadjudicated allegations. The independent comparator TheTrustedProp marks the old Willis Capital brand closed, which does not establish that today's WFunded company has stopped operating. Never equate the parked singular domain with the active plural review identity, and do not represent unverified payouts as proof of solvency.",
+        "trustpilotRating": 3.4,
+        "trustpilotReviewCount": 294,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/williscapitals.com"
       },
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Rebrand audit: Willis Capital continues under WFunded at wfunded.io, which names Western Sahara Worldwide Services and publishes simulated-account disclaimers. The original singular domain is parked; the different plural-domain Trustpilot page is WFUNDED, 3.4/5 over 294 reviews, with disputed 2026 payout/platform complaints. Old-brand 'closed' directory flags must not be misapplied to the current successor.",
+          "source": "https://www.trustpilot.com/review/williscapitals.com",
+          "fields": ["score", "verdict", "auditSummary", "entities", "legalReview", "trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+        },
         {
           "date": "2026-10-26",
           "summary": "Domain monitor reported on 2026-10-24 that the listed domain williscapital.com redirects to hugedomains.com. Checked by hand through public sources: TechCabal describes WFunded as 'formerly known as Willis Capital' and points readers to wfunded.io, and the Trustpilot profile for williscapitals.com (with an s) now displays as WFUNDED and links to wfunded.io. The listed williscapital.com therefore appears not to be the firm's own domain. No domain warning set and no other field changed pending a decision on the official domain.",
@@ -6410,7 +6442,17 @@
           ]
         }
       ],
+      "setEntities": [{"name":"Western Sahara Worldwide Services (WSWS)","jurisdiction":"Nigeria — incorporation claimed on the current WFunded site, registration number unverified","role":"Managing operator named on the current WFunded footer; contractual identity and corporate registration require independent registry confirmation."}],
+      "setLegalReview": {
+        "summary": "Historical Willis Capital has rebranded into an active simulated-evaluation service named WFunded. The old domain is parked, the new service names its manager, and the correct Trustpilot profile contains unresolved customer complaints.",
+        "regulatoryStatus": ["The current wfunded.io footer names Western Sahara Worldwide Services as manager and states all accounts and funds are simulated.", "The former williscapital.com domain is parked and must not be used as a current checkout; neither Nigerian registration nor a brokerage licence was independently authenticated."],
+        "complaintsAndDisputes": ["Trustpilot profile on williscapitals.com, now displayed as WFUNDED, lists 3.4/5 across 294 reviews.", "Several March–April 2026 reviewers allege reward delays, platform-migration problems and customer support problems. Their accounts are not independently adjudicated."],
+        "redFlags": ["Historical name and singular/plural domains invite mistaken identity and an unsafe old link.", "A company-registration claim on the current site does not itself verify its licence or ability to pay.", "Material recent payout disputes and service-quality issues warrant follow-up before purchase."],
+        "sources": [{"label":"WFunded official current site and operator disclosure","url":"https://wfunded.io/"},{"label":"Former Willis-to-WFunded reporting","url":"https://techcabal.com/?p=162269"},{"label":"WFUNDED Trustpilot profile and contemporary customer complaints","url":"https://www.trustpilot.com/review/williscapitals.com"},{"label":"Old singular domain parking evidence","url":"https://www.scamadviser.com/check-website/williscapital.com"}]
+      },
       "addSources": [
+        {"label":"WFunded active official homepage and simulated disclaimer","url":"https://wfunded.io/"},
+        {"label":"WFUNDED exact plural-domain Trustpilot 3.4/5, 294 reviews","url":"https://www.trustpilot.com/review/williscapitals.com"},
         {
           "label": "TechCabal: WFunded, formerly known as Willis Capital",
           "url": "https://techcabal.com/?p=162269"
@@ -11446,6 +11488,66 @@
       },
       "addSources": [{ "label": "Indigo verified commercial shutdown — Finance Magnates", "url": "https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/" }, { "label": "Indigo corporate dissolution timeline", "url": "https://propfirmly.com/unlisted-prop-firms/indigo-trader-funding" }, { "label": "Earlier August 2024 Indigo UK strike-off filing report", "url": "https://www.financemagnates.com/forex/prop-firm-indigo-trader-funding-ceases-operations-files-for-uk-strike-off" }],
       "addIncidents": ["2024-08-20 — Indigo Trader Funding announces permanent cessation and termination of evaluation partnerships. It says remaining partner-held funds will be directed to refunds, without proving all customers received payment. Source: https://www.financemagnates.com/forex/prop-trading-firm-indigo-trader-funding-confirms-shutdown/", "2024-11-05 — A later corporate-record researcher reports UK company no.15370862 was dissolved by voluntary strike-off, citing Companies House. Direct registry retrieval was unavailable for this audit. Source: https://propfirmly.com/unlisted-prop-firms/indigo-trader-funding"]
+    },
+    "cove-funded": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [{"date":"2026-11-17","summary":"The former covefunded.com prop-firm website now serves an Indonesian HEBAT33 online-gaming page linking to an unrelated destination. Independent directories identify the original challenge business as closed; Trustpilot preserves a historical 4.0/5 score across 68 reviews and several disputed payout complaints. This does not authenticate the current website operator or legal dissolution.","source":"https://covefunded.com/","fields":["status","score","verdict","auditSummary","listedDomainWarning","entities","legalReview","trustpilotRating","trustpilotReviewCount","trustpilotSourceUrl"]}],
+      "set": {
+        "status":"Fermée","score":9,"trustpilotRating":4,"trustpilotReviewCount":68,"trustpilotSourceUrl":"https://www.trustpilot.com/review/covefunded.com",
+        "verdict":"Cove Funded is no longer an authenticated active prop firm. Its exact former domain now displays Indonesian HEBAT33 online-gaming content and links away from the original trading programme. An independent prop-firm directory marks Cove Funded closed, while historic Trustpilot feedback contains disputed payout experiences despite a 4.0/5 aggregate. The repurposed domain is not proof of the former company's legal dissolution, but it makes new challenge purchases under this name unsafe to recommend. Historical score falls from 54 to 9/100.",
+        "auditSummary":"17 November 2026: The exact former Cove Funded domain covefunded.com was opened and served a page headed HEBAT33 in Indonesian, promoting online gaming with login and registration links to covefunded.hebat33-suka.site. This is not the prior TradeLocker-based simulated-evaluation offer, and no evidence establishes that the current gambling-related content is run by Collective Holdings Limited, the Malta company disclosed in historical Cove terms. TheTrustedProp marks the historic firm CLOSED, independently consistent with the former sales site being unusable, but a formal Maltese winding-up record was not retrieved. Trustpilot's historical exact-domain listing remains 4.0/5 from 68 reviews with no new reviews during the past twelve months; a March 2025 customer alleged months waiting for a second payout, while others described favourable support. Neither an individual allegation nor aggregate stars independently verifies outstanding debts or completed transfers. PropRadar archives the service as commercially closed, blocks purchases and warns that its old domain is being reused for unrelated content.",
+        "listedDomainWarning":"CONFIRMED INACTIVE PROP BRAND / REPURPOSED DOMAIN: Former prop site covefunded.com now displays unrelated HEBAT33 gaming material and off-domain signup links. The original challenge operator has not been authenticated at the current destination. Do not enter payment details or buy a challenge through this domain or anyone claiming to have revived Cove Funded without independent company and liability checks. Formal corporate dissolution was not verified."
+      },
+      "setEntities":[{"name":"Collective Holdings Limited (historic Cove Funded disclosure)","jurisdiction":"Malta — historical company statement, present registration and dissolution unverified","role":"Named in old Cove Funded legal pages; the current HEBAT33 site is not authenticated as this entity or its successor."}],
+      "setLegalReview": {
+        "summary":"The original Cove Funded prop offer is commercially inaccessible and its exact domain hosts unrelated gaming content. The former Malta company and any obligations of the new domain operator have not been linked by verified corporate records.",
+        "regulatoryStatus":["Historic Cove terms named a Malta company and demo-only TradeLocker evaluations; the present homepage no longer provides these products.","The former domain now redirects visitors via Indonesian HEBAT33 gaming registrations and no longer authenticates the original contractual seller."],
+        "complaintsAndDisputes":["Historic Trustpilot displays 4.0/5 from 68 reviews, with no new reviews in the last year at the time checked.","A March 2025 reviewer alleged a months-long pending second payout; the individual claim and any settlement remain unverified."],
+        "redFlags":["Exact old domain now advertises unrelated online gaming and a different signup destination.","No confirmed original prop checkout, refund programme or legal continuity.","A positive historical Trustpilot aggregate must not be read as an endorsement of the new domain content."],
+        "sources":[{"label":"Repurposed former Cove Funded exact-domain homepage","url":"https://covefunded.com/"},{"label":"Historical Cove Funded Trustpilot","url":"https://www.trustpilot.com/review/covefunded.com"},{"label":"Independent CLOSED classification for historic Cove brand","url":"https://thetrustedprop.com/prop-firms/cove-funded"}]
+      },
+      "addSources":[{"label":"Cove former prop domain now hosts HEBAT33 gaming","url":"https://covefunded.com/"},{"label":"Cove Funded historic customer review record","url":"https://www.trustpilot.com/review/covefunded.com"},{"label":"Cove Funded independently marked closed","url":"https://thetrustedprop.com/prop-firms/cove-funded"}],
+      "addIncidents":["2026-11-17 — Former Cove Funded exact domain now contains unrelated Indonesian HEBAT33 gaming and new off-domain sign-up links. No legal relationship to the former Malta prop seller was authenticated. Source: https://covefunded.com/"]
+    },
+    "stocknet-institute": {
+      "reviewedAt":"2026-11-17",
+      "changelog":[{"date":"2026-11-17","summary":"Original Stocknet Institute, also marketed as SI World, sent a July 4, 2024 client notice announcing its strategic wind-down and goal of permanently closing, stopped new plan purchases and said technology IP was for sale. Financial-press contemporaneous coverage reproduces the notice; a corporate liquidation certificate and final client reconciliation were not checked.","source":"https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-stocknet-institute-siworld-shuts-down/","fields":["status","score","verdict","auditSummary","listedDomainWarning","entities","legalReview"]}],
+      "set": {
+        "status":"Fermée","score":8,
+        "verdict":"Stocknet Institute, operating as SI World, officially announced on 4 July 2024 that it was winding down with the intention of permanently leaving prop trading. New plan purchases were disabled and existing customers were told that closure instructions would follow. The firm's trading technology was offered for sale. Financial press documented the operator's own notice; no later legitimate reopening or complete payout reconciliation was authenticated. PropRadar marks the programme closed and reduces the historic score from 31 to 8/100.",
+        "auditSummary":"17 November 2026: FX News Group reproduced the 4 July 2024 message issued by Stocknet Institute (SI World), a UK prop firm that had operated for approximately three years. It said the firm was formally winding down, would permanently move away from the sector, had disabled new plan purchases and would email existing customers about account closures. It also publicly offered its in-house prop trading technology intellectual property for sale. A historical Terms page identifies Stocknet FX Limited, England and Wales company number 13258192; the status of that legal company and possible proceeds or customer obligations were not directly verified against a current Companies House record. Other independent directories continue to classify the trading programme as inactive, and the old stocknetinstitute.com and siworld.io domains are reported parked. An announced operational closure is substantiated, but a completed legal dissolution, every refund and any liability transfer to a buyer of the technology cannot be assumed. The page receives a closed-brand modal and disabled purchasing links.",
+        "listedDomainWarning":"CLOSED PROP PROGRAMME — STOCKNET / SI WORLD: In July 2024 the company announced the wind-down of its prop evaluations, disabled purchases and offered its technology IP for sale. The old domains are not evidence of an authorised successor; sale of software does not automatically transfer responsibility for former customers. Do not buy new challenges under either name without verified current registration and settlement of old obligations."
+      },
+      "setEntities":[{"name":"Stocknet FX Limited","jurisdiction":"England and Wales, United Kingdom — historical contracting identity, current status not independently checked","registrationNumber":"13258192","role":"Company disclosed on archived Stocknet terms, associated with the formerly operating SI World/Stocknet Institute prop programme."}],
+      "setLegalReview": {
+        "summary":"Contemporaneous financial press reproduced the operator's July 2024 wind-down announcement and purchasing suspension. UK historic corporate identity is documented, but formal dissolution and the resolution of individual customer accounts were not independently established.",
+        "regulatoryStatus":["The company explicitly announced commercial wind-down on 4 July 2024 with a stated goal of permanent closure of its prop activities.","Archived Stocknet Terms name Stocknet FX Limited (UK 13258192); the present register status was not independently retrieved."],
+        "complaintsAndDisputes":["Customers with active accounts were to receive individual closure instructions, but there is no verified account-by-account payment reconciliation.","Sale of the company's in-house technology was offered; no transfer of trader claims to a new owner was documented."],
+        "redFlags":["Challenge sales disabled since the 2024 announcement.","Former brand domains are reported parked, making successor impersonation a practical concern.","Business wind-down does not itself prove legal dissolution or full settlement of outstanding balances."],
+        "sources":[{"label":"Original Stocknet client shutdown notice reproduced by financial press","url":"https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-stocknet-institute-siworld-shuts-down/"},{"label":"Archived Stocknet Terms naming UK company","url":"https://stocksnetinstitutesltd.com/terms-of-service/index.html"},{"label":"Independent inactive status report","url":"https://mypropgenius.com/closed-firms/"}]
+      },
+      "addSources":[{"label":"Stocknet official shutdown announcement reproduced July 2024","url":"https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-stocknet-institute-siworld-shuts-down/"},{"label":"Archive of Stocknet FX Limited legal terms","url":"https://stocksnetinstitutesltd.com/terms-of-service/index.html"}],
+      "addIncidents":["2024-07-04 — Stocknet / SI World announced it was winding down permanently, disabled new sales and said active customers would receive closure instructions. Source: https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-stocknet-institute-siworld-shuts-down/"]
+    },
+    "infinity-forex-funds": {
+      "reviewedAt":"2026-11-17",
+      "changelog":[{"date":"2026-11-17","summary":"The former Infinity Forex Funds prop challenge is no longer operating: current domain offers a currency converter and expressly says it sells no products. A 2025 cessation email was quoted by a customer but not independently authenticated. Dutch AFM issued a named 2024 consumer warning identifying this exact domain; the source is an official regulator bulletin. Trustpilot shows 2.4/5 across 2,535 reviews. Distinguish the dormant challenge operation from the current information site.","source":"https://fi.ee/en/print/pdf/node/53341","fields":["status","score","verdict","auditSummary","listedDomainWarning","entities","legalReview","trustpilotRating","trustpilotReviewCount","trustpilotSourceUrl"]}],
+      "set": {
+        "status":"Fermée","score":4,"trustpilotRating":2.4,"trustpilotReviewCount":2535,"trustpilotSourceUrl":"https://www.trustpilot.com/review/infinityforexfunds.com",
+        "verdict":"Infinity Forex Funds no longer sells prop-firm evaluations. The historic domain now operates as a currency-converter and education site whose own Terms explicitly exclude product sales and financial services. More seriously, the Dutch financial regulator AFM published a 2024 consumer warning naming Infinity Forex Funds and this exact domain, describing suspected boiler-room approaches and no AFM authorisation. The former prop business is closed, not the same thing as the current information site. Trustpilot shows 2.4/5 from 2,535 reviews. PropRadar cuts the historical rating from 34 to 4/100 and forbids challenge purchases.",
+        "auditSummary":"17 November 2026: The live infinityforexfunds.com homepage presents forex conversion tools and education only, not a prop evaluation storefront. Its Terms of Use expressly say that the site does not sell products, solicit money or provide financial services. An old customer copied a purported closure email on Trustpilot in February 2025 stating trader accounts would be disabled after 14 February; the original issuer's statement was not independently obtained, so the exact closure day is reported as alleged. A dated official Dutch AFM bulletin dated 2 May 2024 explicitly identifies Infinity Forex Funds, the domain and support email, warns consumers not to respond to unsolicited investment proposals and states that the named entity lacked an AFM licence or European passport. That regulatory warning concerns the named historical brand, but does not automatically identify the legal owner of today's information website. Trustpilot records 2.4/5 across 2,535 historical reviews with a high proportion of one-star ratings; individual payout accusations are not adjudicated. A third-party corporate-history investigation reports that Australian company Prop Trade Tech Pty Ltd changed its registered name to Tradesim Pty Ltd in March 2025; a direct Australian Business Register check was not repeated here, and a corporate rename is not the same as winding up. There is no authenticated challenge checkout, settled-payout audit or legally verified successor. The archive gets a closure modal, risk notice and blocked purchases.",
+        "listedDomainWarning":"CLOSED CHALLENGE / OFFICIAL REGULATORY WARNING: Infinity Forex Funds no longer operates the prop offer; its old domain is now an informational currency-converter site. The Netherlands AFM formally warned about the historical Infinity Forex Funds brand and exact domain in May 2024, citing suspected unauthorised investment solicitation. Do not buy challenges or transfer money to anyone invoking this former name, including purported refund recovery agents. The present site's ownership and prior liabilities are not independently established."
+      },
+      "setEntities":[{"name":"Prop Trade Tech Pty Ltd / Tradesim Pty Ltd (reported historic Australian company)","jurisdiction":"Australia — reported business name change March 2025, registry not independently rechecked","registrationNumber":"ACN 661 045 950","role":"Historic prop-firm company identified by investigative reporting; the current educational-domain operator and any customer-liability succession are unverified."}],
+      "setLegalReview": {
+        "summary":"Former prop challenge no longer available. The current site disclaims sales; official Netherlands AFM warning named the historical brand and exact domain. Corporate rename and customer settlement cannot be inferred from the old review page or new educational content.",
+        "regulatoryStatus":["Dutch AFM warned consumers about Infinity Forex Funds on 2 May 2024, named the exact domain and said the entity lacked an AFM licence or European passport.","Current site's Terms expressly say it is informational, sells no products and solicits no investment funds.","Investigative research reports Prop Trade Tech Pty Ltd was renamed Tradesim Pty Ltd in March 2025; direct registry confirmation was outside this pass."],
+        "complaintsAndDisputes":["The exact-domain Trustpilot page displays 2.4/5 from 2,535 reviews; historic customers allege refused rewards or account shutdowns, which have not been independently adjudicated.","A February 2025 reviewer published a purported notice of account termination on 14 February, but original corporate confirmation and final refunds could not be obtained."],
+        "redFlags":["Named official regulatory warning concerning suspected unauthorised investment solicitation.","Historical challenge disappeared while same domain now offers unrelated informational services.","Legal identity of the current domain operator and settlement of old customer obligations remain unverified."],
+        "sources":[{"label":"Official Dutch AFM warning via Estonian financial authority mirror","url":"https://fi.ee/en/print/pdf/node/53341"},{"label":"Present information-only homepage and Terms","url":"https://infinityforexfunds.com/terms-of-use/"},{"label":"Historical exact-domain Trustpilot customer history","url":"https://www.trustpilot.com/review/infinityforexfunds.com"},{"label":"Corporate rename and former service investigation","url":"https://theindustryspread.com/infinity-forex-funds-review-closed-afm-warning-entity-rename/"}]
+      },
+      "addSources":[{"label":"Official regulator warning on Infinity Forex Funds and domain","url":"https://fi.ee/en/print/pdf/node/53341"},{"label":"Current non-commercial Terms of Use","url":"https://infinityforexfunds.com/terms-of-use/"},{"label":"Trustpilot 2.4/5, 2,535 customer reviews","url":"https://www.trustpilot.com/review/infinityforexfunds.com"},{"label":"Historical closure and corporate rename research","url":"https://theindustryspread.com/infinity-forex-funds-review-closed-afm-warning-entity-rename/"}],
+      "addIncidents":["2024-05-02 — Dutch AFM warned the public about Infinity Forex Funds (infinityforexfunds.com), describing suspected unauthorised investment solicitation and lack of AFM authorisation. Source: https://fi.ee/en/print/pdf/node/53341","2025-02 — A former customer published a purported closure email saying accounts would be disabled after 14 February 2025; the original corporate communication and final payout reconciliation were not independently authenticated. Source: https://www.trustpilot.com/review/infinityforexfunds.com"]
     },
     "x-funded": {
       "reviewedAt": "2026-11-16",
