@@ -2129,7 +2129,7 @@
       ]
     },
     "fundedelite": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2147,6 +2147,16 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Program-level audit of official payout schedule, country restrictions, consistency and IP rules, including the new Elite Atom variant. Corrected obsolete twice-weekly/48h payout wording: initial regular 1/2-step/Instant requests normally require 21 days; subsequent intervals depend on program. Turkey is officially excluded. Original Trustpilot fake-review incident retained; neither score nor incident count changed.",
+          "source": "https://faq.fundedelite.com/en/articles/17437349-when-can-i-request-a-payout",
+          "fields": [
+            "payoutDelay",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
       "addIncidents": [
@@ -2154,12 +2164,34 @@
       ],
       "set": {
         "profitSplit": 95,
-        "payoutDelay": "requests twice per week, sent within 48 hours (FAQ); the homepage also says payouts are processed in 3 days"
+        "payoutDelay": "Program-specific: regular 1-Step, 2-Step and Instant first request after 21 days; later regular 1/2-Step requests every 14 days and Instant every 21 days. Flash Activation/Catalyst: 14-day intervals. Faster add-ons do not waive the initial wait.",
+        "verdict": "FundedElite's advertised up-to-95% profit split and low entry prices need to be read against each plan's real payout calendar and funded-stage rules. The first regular payout is not simply available twice a week, several plans impose consistency limits, and Turkey is on the firm's exclusion list. Its Trustpilot rating remains withheld with a fake-review removal notice. Approach low-cost promotions cautiously; PropRadar has not verified a trader's bank receipt or execution quality.",
+        "auditSummary": "Deep desk audit (17 November 2026) of FundedElite's official FAQ. Regular 1-Step, 2-Step and Instant plans require a 21-day wait before the first reward request; subsequent windows are 14 days for regular 1/2-Step and 21 days for Instant, while Flash Activation/Catalyst operate on a different 14-day cycle. The advertised 95% share is an upper option, not the standard 80% payout for regular programs; Instant starts at 70% and later 80%. Consistency is product-specific: Instant 25%, Flash/Catalyst 30% unless removed by an add-on, certain large Lite accounts 60%, and the newer Elite Atom can impose 50% even on the funded stage. The official restricted-country FAQ explicitly excludes Turkey, Iran, Iraq and several other territories; use of a VPN to conceal a prohibited residence is a serious violation, although an innocent IP change may be reviewed as a soft breach. The earlier Trustpilot withheld-score/fake-review notice remains documented. No real-money payout, spread, slippage, legal residency eligibility or independent funding was tested."
       },
       "addSources": [
         {
           "label": "FundedElite homepage (official)",
           "url": "https://www.fundedelite.com/"
+        },
+        {
+          "label": "FundedElite first payout and subsequent cycles (official FAQ, 2026-11-17)",
+          "url": "https://faq.fundedelite.com/en/articles/17437349-when-can-i-request-a-payout"
+        },
+        {
+          "label": "FundedElite country eligibility, including Turkey (official FAQ, 2026-11-17)",
+          "url": "https://faq.fundedelite.com/en/articles/17437429-which-countries-can-t-use-fundedelite"
+        },
+        {
+          "label": "FundedElite program-specific consistency limits (official FAQ, 2026-11-17)",
+          "url": "https://faq.fundedelite.com/en/articles/17437274-what-is-the-consistency-rule"
+        },
+        {
+          "label": "FundedElite Elite Atom evaluation and funded rules (official FAQ, 2026-11-17)",
+          "url": "https://faq.fundedelite.com/en/articles/17638456-elite-atom-challenge-faq"
+        },
+        {
+          "label": "FundedElite VPN/IP and account-sharing enforcement (official FAQ, 2026-11-17)",
+          "url": "https://faq.fundedelite.com/en/articles/17437333-account-sharing-passing-services-and-ip-sharing"
         }
       ]
     },
@@ -3402,7 +3434,7 @@
       ]
     },
     "lark-funding": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3428,14 +3460,41 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Read official VPN/KYC, jurisdiction and payout help articles. VPN/VPS is not categorically banned, but VPN must not be used for identity verification. Corrected the generic payout label to its 1/2/3-step and Instant cycles and added the $40 withdrawal fee. Myanmar is restricted. Score and stored Trustpilot snapshot unchanged.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work",
+          "fields": [
+            "payoutDelay",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 519,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/larkfunding.com",
-        "newsTrading": "Allowed"
-      }
+        "newsTrading": "Allowed",
+        "payoutDelay": "1-Step, 2-Step and 3-Step: first and subsequent payout requests every 14 days; Instant: first eligible payout on demand, then every 30 days. Minimum request $100; $40 withdrawal fee; firm states processing within 3 business days.",
+        "verdict": "Lark Funding publishes useful product and withdrawal FAQs, but its 'instant' model does not mean unrestricted daily withdrawals: later payouts use a 30-day cycle and a $40 fee applies. VPN/VPS use is generally allowed yet barred during identity checks, making KYC a potential trap for mobile or privacy-conscious traders. Country exclusions include Myanmar. These restrictions do not prove misconduct, but the chosen account's terms should be checked before purchase.",
+        "auditSummary": "Official-source deep review dated 17 November 2026. Lark Funding allows VPNs and VPSs for trading while discouraging them because network anomalies can trigger additional scrutiny; it explicitly prohibits VPN usage during KYC/AML identity checks, where it may lead to refusal or a breach. Standard 1-Step, 2-Step and 3-Step payout requests follow 14-day cycles, unlike the Instant product whose first request is on demand but subsequent withdrawals are 30 days apart. There is a $100 minimum withdrawal and a stated $40 charge for each payout; processing is advertised within three business days, not guaranteed bank receipt. The firm excludes Myanmar, Iran, North Korea, Russia, Belarus and other jurisdictions, but absence from an exclusion list alone does not confirm local regulatory permission in India, China or Singapore. Its homepage has previously shown contradictory product-card reward/drawdown labels, so account-specific checkout terms take precedence. Trustpilot's older 4.3/5 snapshot is a public review aggregate, not proof of independently settled rewards, and PropRadar did not test spreads, slippage, account opening or receipts."
+      },
+      "addSources": [
+        {
+          "label": "Lark Funding VPN/VPS and identity-check conditions (official, 2026-11-17)",
+          "url": "https://helpdesk.larkfunding.com/en/articles/7174234-can-i-use-a-vpn"
+        },
+        {
+          "label": "Lark Funding payouts, cycles and fees (official, 2026-11-17)",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"
+        },
+        {
+          "label": "Lark Funding excluded jurisdictions (official, 2026-11-17)",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8028220-what-countries-are-we-available-in"
+        }
+      ]
     },
     "leeloo-trading": {
       "reviewedAt": "2026-10-27",
@@ -7397,7 +7456,7 @@
       ]
     },
     "upcomers": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -7441,13 +7500,24 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Priority deep audit of the advertised $1M-$2M simulated accounts. Official Horizon rules require 9% in evaluation, then 3% funded profit before each withdrawal and five qualifying profit days for $1M; the general schedule limits a $1M first payout to $5,000 gross, subject to product overrides. Published fees include expensive crypto settlement and a separate permanent 50% payout penalty after specified violations; BOGO free-account promotion is conditional on a first fully approved payout. A purported EUR 200 price for a $1M account could not be verified. Existing Trustpilot warning and affiliate disclosure retained. Score unchanged pending editorial owner decision.",
+          "source": "https://help.upcomers.com/en/articles/12688538-payout-structure-cfd-perpetuals",
+          "fields": [
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
       "set": {
         "profitSplit": 90,
         "payoutDelay": "on demand (Ash, Thunderbolt, Phoenix), every 14 days (Horizon, Odyssey), after 5 valid days (Vanguard, Oracle, Ember); processed within 24 hours of receiving payout details",
         "newsTrading": "Allowed",
-        "drawdownType": "Hybride"
+        "drawdownType": "Hybride",
+        "verdict": "Upcomers markets unusually large simulated accounts, but a $1M headline is not withdrawable capital: the standard first reward cap is only $5,000 gross, and Horizon requires a separate $30,000 profit threshold plus five qualifying days to request it. The written rules also impose payout processing fees and a potentially permanent 50% reward reduction after certain rule violations. The firm's Trustpilot rating remains withheld with a fake-review removal notice. PropRadar discloses its affiliate relationship but does not treat the promotion or company-reported payout totals as proof of trustworthiness.",
+        "auditSummary": "Priority desk audit (17 November 2026) from Upcomers' official checkout, CFD payout schedule, Horizon and Odyssey specifications, reset-penalty help and full terms. Sizes up to $2 million are advertised as simulated accounts, not deposits or actual trading capital. A transient indexed checkout snapshot advertised $1 million for about $689; the alleged EUR 200 deal was not substantiated at checkout and offers vary by variant and promotion. Horizon $1M: 9% evaluation target, 3% daily and 6% trailing equity risk shield, 80% funded split, 1.5% maximum single-trade loss, at least five profitable funded days each earning 0.5% of nominal account value, then at least 3% ($30,000) profit between payout requests, ordinarily every 14 days. The standard CFD/Perpetuals payout table caps the first $1M withdrawal at $5,000 gross, with product-specific exceptions prevailing. Payment processing fees: bank $19.90 plus 2.49%, and crypto $19.90 plus 30% unless the stated cryptocurrency-order exception applies. A risk-team violation reset, rule-based rejected payout or partially approved violation payout can permanently halve later payouts for that account; this is distinct from the normal tier cap. The advertised BOGO bonus account is awarded only after the purchased account's first payout is fully approved. VPN/VPS is allowed but can trigger manual location scrutiny. Its terms cite a $1.5M aggregate allocation ceiling even while individual program pages show $2M sizes, requiring written clarification. The pre-existing Trustpilot withheld-score/fake-review warning remains, and firm-published $11.1M+ transfers are not third-party bank verification. No account, order, spread, slippage or reward receipt was independently tested."
       },
       "addSources": [
         {
@@ -7457,6 +7527,30 @@
         {
           "label": "Upcomers program differences (official help)",
           "url": "https://help.upcomers.com/en/articles/12657643-what-are-the-differences-between-upcomers-programs"
+        },
+        {
+          "label": "Upcomers payout caps and processing charges (official, 2026-11-17)",
+          "url": "https://help.upcomers.com/en/articles/12688538-payout-structure-cfd-perpetuals"
+        },
+        {
+          "label": "Upcomers Horizon 1-Step CFD complete rules (official, 2026-11-17)",
+          "url": "https://help.upcomers.com/en/articles/17292992-1-step-horizon-challenge-cfd-complete-rules-overview"
+        },
+        {
+          "label": "Upcomers 50-percent permanent payout reduction after qualifying violation (official, 2026-11-17)",
+          "url": "https://help.upcomers.com/en/articles/13672653-account-reset-penalty-50-payout-limit"
+        },
+        {
+          "label": "Upcomers BOGO promotion, aggregate allocation and discretionary risk terms (official, 2026-11-17)",
+          "url": "https://www.upcomers.com/policies/terms-conditions"
+        },
+        {
+          "label": "Upcomers published promotion and checkout (2026-11-17; price may change)",
+          "url": "https://app.upcomers.com/en/buy"
+        },
+        {
+          "label": "Upcomers VPN/VPS policy (official, 2026-11-17)",
+          "url": "https://help.upcomers.com/en/articles/12657600-using-vpn-vps"
         }
       ],
       "setEntities": [
@@ -7497,7 +7591,7 @@
       ]
     },
     "forexive": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -7515,16 +7609,40 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Read General, Instant and Rules official FAQ pages. 'On demand' Instant withdrawal requires seven qualifying profitable days and at least 3% profit, with 20% consistency; instant news execution is a hard breach and the funded evaluation-plan news rule subtracts gains even from pre-event trades closed within the window. Documented 3% floating loss, 15-day inactivity and EA constraints. Previous Trustpilot warning preserved, no new incident and no score change.",
+          "source": "https://forexive.com/faq/general",
+          "fields": [
+            "payoutDelay",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
       "set": {
-        "payoutDelay": "bi-weekly or weekly, first reward after 7 days (Access, 2-Step, 1-Step); on demand (Instant); requests processed within 24 hours",
-        "newsTrading": "Restricted"
+        "payoutDelay": "Plan-specific: Access/1-Step/2-Step market weekly or biweekly payouts after the applicable initial period; Instant is on demand only after 7 qualifying profitable days, >=3% total profit and its 20% consistency condition. Processing within 24 hours is firm-claimed, not settlement proof.",
+        "newsTrading": "Restricted",
+        "verdict": "Forexive's headline Instant access and on-demand payouts need to be read alongside substantial eligibility tests: a tight 3% overall loss limit, 1% maximum per trade, 20% consistency and seven genuinely profitable days. News, EA and inactive-account rules can remove otherwise earned gains or end eligibility. The Trustpilot rating-withheld and fake-review notice previously recorded adds a separate transparency concern. Promotional rates should not outweigh the actual funded-stage restrictions.",
+        "auditSummary": "17 November 2026 official-FAQ desk audit, separated by evaluation/funded and Instant programs. Instant: 2% daily loss, 3% maximum total drawdown, 1% maximum loss per trade, 20% consistency (one best day not more than a fifth of profits), seven qualifying profitable days of at least 0.5% and at least 3% total profit before any on-demand withdrawal. The first Instant reward split is 70%, then 80%, subject to terms. Evaluation news trades may be allowed, but on funded 1-Step/2-Step accounts profits from positions closed within five minutes before/after high-impact news can be removed even if entries were earlier or closed by stop/take-profit, while losses remain; on Instant, opening or closing in that window is a hard breach. Fully automated trading EAs are not accepted: only approved risk/trade management tools may be used. Published 1-Step/2-Step funded rules also describe 3% floating-loss exposure and account failure after 15 days without trading; certain IP changes may trigger scrutiny. The broad Rules page still contains 'News trading to be confirmed' despite more specific FAQ text, so plan terms need confirmation. Trustpilot already displays a withheld score and removed-fake-reviews notice, preserved from the previous review. PropRadar has not tested live spreads, slippage, execution or any bank-level payout."
       },
       "addSources": [
         {
           "label": "Forexive challenges (official)",
           "url": "https://forexive.com/challenges"
+        },
+        {
+          "label": "Forexive general FAQ: funded news, EAs, floating loss, inactivity and IP (official, 2026-11-17)",
+          "url": "https://forexive.com/faq/general"
+        },
+        {
+          "label": "Forexive Instant funded rules and reward eligibility (official, 2026-11-17)",
+          "url": "https://forexive.com/faq/instant"
+        },
+        {
+          "label": "Forexive public rules and unclear news-trading summary (official, 2026-11-17)",
+          "url": "https://forexive.com/rules"
         }
       ],
       "addIncidents": [
@@ -7532,7 +7650,7 @@
       ]
     },
     "alpine-funded": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -7550,11 +7668,31 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Audited current Alpine Pass subscription against older payout instructions: subscription EUR119/189/429 per month by tier, ten profitable days and +10% milestone, weekly Thursday processing cutoff and $40 reward charge; reward is a published fixed tier amount rather than unrestricted nominal-account profits. Corrected payoutDelay so old 21-day wording is not applied across programs. The homepage's 24-hour processing promise needs reconciliation with the Pass weekly schedule. Existing NSSMC news incident retained. Score unchanged.",
+          "source": "https://alpinefunded.com/how-it-works/",
+          "fields": [
+            "payoutDelay",
+            "verdict",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Added one dated Alpine Pass reward certificate from the firm's homepage, labelled firm-reported rather than independently verified bank or blockchain payment. A gallery item is not a completed PropRadar withdrawal test.",
+          "source": "https://alpinefunded.com/",
+          "fields": [
+            "payoutProofs"
+          ]
         }
       ],
       "set": {
-        "payoutDelay": "first payout 21 days after the initial trade, then bi-weekly",
-        "newsTrading": "Variable"
+        "payoutDelay": "Program-dependent: older help describes a first-after-21-days rule, current homepage describes Alpine 2-Step every 14 days, and Alpine Pass FAQ describes Thursday processing after a Tuesday 12:00 UTC cutoff with a $40 fee. Confirm current program-specific terms.",
+        "newsTrading": "Variable",
+        "verdict": "Alpine Funded now sells an Alpine Pass subscription alongside evaluated and instant models, so its former blanket '21 days then biweekly' payout description was misleading. The Pass requires recurring fees, ten qualifying profit days and a 10% milestone, and rewards are fixed by subscription tier with a $40 processing charge. The company publishes payout certificates, but they are not independently matched to receiving accounts. A previously reported Ukrainian regulator watchlist entry remains an important due-diligence item.",
+        "auditSummary": "Official-source update dated 17 November 2026. Alpine Funded publishes three materially distinct offerings: Alpine Pass recurring subscription, Base Camp instant and Alpine 2-Step. Alpine Pass pricing appears at EUR119/month Standard, EUR189/month Advanced and EUR429/month Pro; advertised nominal account size and absence of conventional drawdown do not mean unlimited cash access. Under Pass, a reward needs a +10% milestone and ten profitable days each at least 0.5%; the top trading day must not exceed 30% of the target. Pass rewards are tiered fixed amounts rather than a uniform profit-share entitlement; the FAQ says Thursday processing for submissions before Tuesday 12:00 UTC, with a $40 fee. This needs clarification against the homepage's broader 'within 24 hours or +$500' reward marketing, and against older help describing 21 days before the first payment while the newer homepage says every 14 days on Alpine 2-Step. A dated collection of payout certificates is displayed on the provider's homepage, but PropRadar has not verified bank transfers, real execution, spreads, KYC eligibility or the recipient. The previously documented 2025 report of a Ukrainian NSSMC watchlist inclusion is retained as reported, not restated as a regulator finding independently read today. Trustpilot's public aggregate and individual testimonials are contextual signals, not proof of payment reliability."
       },
       "addSources": [
         {
@@ -7564,10 +7702,36 @@
         {
           "label": "Alpine Funded news trading (official help)",
           "url": "https://help.alpinefunded.com/en/articles/9690823-is-news-trading-allowed"
+        },
+        {
+          "label": "Alpine Funded program comparison and Alpine Pass subscriptions (official, 2026-11-17)",
+          "url": "https://alpinefunded.com/how-it-works/"
+        },
+        {
+          "label": "Alpine Pass reward days, Thursdays and charges (official, 2026-11-17)",
+          "url": "https://alpinefunded.com/faq/how-do-i-trigger-my-reward/"
+        },
+        {
+          "label": "Alpine Pass reward milestones and fixed tiers (official help, 2026-11-17)",
+          "url": "https://help.alpinefunded.com/en/articles/16424529-how-rewards-work-how-much-i-can-earn"
+        },
+        {
+          "label": "Alpine Funded public payout-certificate gallery (provider-published, 2026-11-17)",
+          "url": "https://alpinefunded.com/"
         }
       ],
       "addIncidents": [
         "Finance Magnates reported on 2025-03-05 (Arnab Shome) that Ukraine's National Securities and Stock Market Commission (NSSMC) added Alpine Funded and Aura Funded to its warning list, among seven names flagged the week before; the article notes the regulator gave no reason for their inclusion (https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/)."
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-10-08",
+          "kind": "official",
+          "publisher": "Alpine Funded homepage reward-certificate gallery",
+          "quote": "Alpine Pass reward certificate: $2,000 reward to Jose, October 8, 2026",
+          "url": "https://alpinefunded.com/",
+          "firmReported": true
+        }
       ]
     },
     "funded-unicorn": {
