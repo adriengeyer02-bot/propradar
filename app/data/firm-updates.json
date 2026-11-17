@@ -2157,12 +2157,21 @@
             "verdict",
             "auditSummary"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Owner-approved editorial adjustment from 62 to 60 after the November deep audit. The stricter product-specific withdrawal waiting periods and existing Trustpilot rating-withheld/removed-fake-reviews notice warrant a modest additional caution; the Trustpilot incident is not counted twice or represented as proof that the firm purchased reviews. Affiliate relationships do not influence the score.",
+          "source": "https://www.trustpilot.com/review/fundedelite.com",
+          "fields": [
+            "score"
+          ]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedelite.com)."
       ],
       "set": {
+        "score": 60,
         "profitSplit": 95,
         "payoutDelay": "Program-specific: regular 1-Step, 2-Step and Instant first request after 21 days; later regular 1/2-Step requests every 14 days and Instant every 21 days. Flash Activation/Catalyst: 14-day intervals. Faster add-ons do not waive the initial wait.",
         "verdict": "FundedElite's advertised up-to-95% profit split and low entry prices need to be read against each plan's real payout calendar and funded-stage rules. The first regular payout is not simply available twice a week, several plans impose consistency limits, and Turkey is on the firm's exclusion list. Its Trustpilot rating remains withheld with a fake-review removal notice. Approach low-cost promotions cautiously; PropRadar has not verified a trader's bank receipt or execution quality.",
@@ -7509,9 +7518,18 @@
             "verdict",
             "auditSummary"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Owner approved reduction from 60 to 54 after the documented November audit: $1M nominal-account marketing faces a $5,000 standard first-payout cap, payout-eligibility thresholds, high fees on some crypto routes and a permanent 50% payout restriction after specified violations. The Trustpilot guideline-breach/removed-fake-reviews notice had already been recorded; it is not double-counted, and it does not establish that Upcomers paid for reviews. The Upcomers affiliate agreement does not affect rating.",
+          "source": "https://help.upcomers.com/en/articles/12688538-payout-structure-cfd-perpetuals",
+          "fields": [
+            "score"
+          ]
         }
       ],
       "set": {
+        "score": 54,
         "profitSplit": 90,
         "payoutDelay": "on demand (Ash, Thunderbolt, Phoenix), every 14 days (Horizon, Odyssey), after 5 valid days (Vanguard, Oracle, Ember); processed within 24 hours of receiving payout details",
         "newsTrading": "Allowed",
@@ -7619,9 +7637,18 @@
             "verdict",
             "auditSummary"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Owner-approved score adjustment from 58 to 55 for strict funded-stage news-window profit exclusions, highly conditional Instant on-demand withdrawals, and automation/inactivity restrictions verified in official FAQs. The pre-existing Trustpilot withheld-rating/removed-fake-reviews notice remains recorded without a new accusation or duplicate incident.",
+          "source": "https://forexive.com/faq/general",
+          "fields": [
+            "score"
+          ]
         }
       ],
       "set": {
+        "score": 55,
         "payoutDelay": "Plan-specific: Access/1-Step/2-Step market weekly or biweekly payouts after the applicable initial period; Instant is on demand only after 7 qualifying profitable days, >=3% total profit and its 20% consistency condition. Processing within 24 hours is firm-claimed, not settlement proof.",
         "newsTrading": "Restricted",
         "verdict": "Forexive's headline Instant access and on-demand payouts need to be read alongside substantial eligibility tests: a tight 3% overall loss limit, 1% maximum per trade, 20% consistency and seven genuinely profitable days. News, EA and inactive-account rules can remove otherwise earned gains or end eligibility. The Trustpilot rating-withheld and fake-review notice previously recorded adds a separate transparency concern. Promotional rates should not outweigh the actual funded-stage restrictions.",
