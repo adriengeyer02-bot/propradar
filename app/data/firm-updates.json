@@ -357,8 +357,26 @@
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Full retrospective review: Alpha Futures remains active on Standard, Zero, Advanced and Direct programmes, with an identifiable UK simulated-trading provider. Finance Magnates documents the July 2026 NinjaTrader separation, closure of Premium accounts, fee refunds and cancellation of pending Premium reward requests. The disputed partner explanations are not adjudicated. PropRadar changes the score from 55 to 53, reflecting substantial historical payout-contract risk despite detailed live rules.",
+          "source": "https://www.financemagnates.com/forex/ninjatrader-and-alpha-futures-breakup-turns-bitter-exposing-a-big-industry-risk/",
+          "fields": ["score", "verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The official terms identify Alpha Futures Limited, England and Wales no. 15655643, as provider of virtual simulated analyst accounts. The company retains plan-specific risk, consistency and performance-fee eligibility terms; this is not direct ownership of a real futures account.",
+          "source": "https://alpha-futures.com/terms-and-conditions",
+          "fields": ["entities", "legalReview", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Exact-domain Trustpilot shows 4.3/5 on 6,304 reviews. Very recent reviews include both claimed successful rewards and unadjudicated refusals or delays, which do not by themselves establish each account's eligibility.",
+          "source": "https://www.trustpilot.com/review/alpha-futures.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+        },
         {
           "date": "2026-10-23",
           "summary": "Corrected the official domain to alpha-futures.com. The July 8 pass had checked alphafutures.com, a parked domain this firm does not use, and wrongly classified the profile as stale. Score moved from 25 to 55 pending a full audit.",
@@ -413,13 +431,23 @@
         }
       ],
       "set": {
+        "score": 53,
+        "verdict": "Alpha Futures is still selling simulated futures evaluations, with clear end-of-day drawdown and programme-specific consistency rules and a named UK company. But in July 2026 the firm cancelled its Premium plan amid a NinjaTrader dispute, and contemporaneous reporting describes pending Premium reward requests being voided even while some evaluation fees were refunded. Its 4.3/5 Trustpilot score across about 6,300 reviews includes both favourable and disputed payout experiences. PropRadar rates the continuing operation 53/100, below its former 55, with material historical counterparty risk rather than a claim that the entire firm closed.",
+        "auditSummary": "17 November 2026: Alpha Futures Limited, UK company number 15655643 according to its own terms, runs simulated Analyst and Qualified Analyst futures programmes, not a client-owned brokerage account. Current Standard evaluations apply a 50% consistency cap, Advanced evaluations 40%, and the seller describes end-of-day trailing maximum loss limits and qualified-account reward eligibility such as five profitable days before a request, subject to product details. Finance Magnates reported the July 2026 separation from NinjaTrader and the closure of Premium accounts; fee refunds were announced but previously pending Premium profit rewards beyond amounts already paid were cancelled. Alpha and NinjaTrader disputed the reasons, so neither party's contractual allegations are treated as proven. This is a serious documented programme-specific payment event, not proof that current Zero, Standard, Advanced or Direct accounts are all closed. Trustpilot shows 4.3/5 on 6,304 reviews, including positive withdrawals and contested 2026 reward decisions. The firm's payout leaderboard and a third-party-attributed blockchain transaction do not independently reconcile every trader's claims. Score 53/100 reflects real operational and contract risk alongside current published rules.",
         "priceFrom": 89,
         "profitSplit": 90,
         "drawdownType": "Trailing",
         "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 6212,
+        "trustpilotReviewCount": 6304,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/alpha-futures.com",
         "payoutDelay": "up to 4 payouts a month once 5 winning days of $200 or more are reached; no fixed payout dates"
+      },
+      "setLegalReview": {
+        "summary": "The official UK operator and simulation contract are identifiable, but the July 2026 closure of Premium accounts and cancellation of pending reward claims represents a material documented counterparty event. The firm continues selling other plans; contractual fault in the NinjaTrader dispute was not adjudicated for this audit.",
+        "regulatoryStatus": ["Official terms name Alpha Futures Limited, registered in England and Wales under 15655643, as provider of virtual simulated trading services.", "The separate NinjaTrader/Tradovate infrastructure relationship ended for the Premium programme in July 2026; this does not prove the remaining product lines have ceased."],
+        "complaintsAndDisputes": ["Finance Magnates documents the Premium programme closure, announced fee refunds and voided pending reward requests after the NinjaTrader breakup; the two counterparties disputed responsibility.", "Trustpilot 4.3/5 over 6,304 exact-domain reviews includes recent conflicting claims of payouts received and rejected or delayed, without independent case adjudication."],
+        "redFlags": ["Programme-specific unpaid Premium performance rewards following a material platform-provider dispute.", "Simulated performance fees depend on contract conditions and risk controls, not normal brokerage withdrawal protections.", "Company-reported aggregate payout figures and isolated blockchain movements do not reconcile every reward entitlement."],
+        "sources": [{"label":"Alpha Futures live simulated-contract terms","url":"https://alpha-futures.com/terms-and-conditions"},{"label":"Finance Magnates NinjaTrader/Alpha Premium dispute reporting","url":"https://www.financemagnates.com/forex/ninjatrader-and-alpha-futures-breakup-turns-bitter-exposing-a-big-industry-risk/"},{"label":"Alpha Futures current plan and consistency explanation","url":"https://alpha-futures.com/posts/futures-prop-firm-rules-explained-2026"},{"label":"Alpha Futures exact-domain Trustpilot","url":"https://www.trustpilot.com/review/alpha-futures.com"}]
       },
       "setProducts": [
         {
@@ -474,7 +502,7 @@
           "jurisdiction": "United Kingdom (England)",
           "registrationNumber": "15655643",
           "registeredAddress": "1 Allied Business Centre, Coldharbour Lane, Harpenden, England, AL5 4UT",
-          "role": "Company named in the official site footer."
+          "role": "Named UK provider of simulated futures Analyst and Qualified Analyst accounts according to the official terms; corporate registration status not independently rechecked."
         }
       ],
       "addSources": [
@@ -505,7 +533,10 @@
         {
           "label": "Independent Alpha Futures Rise/Arbitrum trace with wallet attribution and limitations",
           "url": "https://damnpropfirms.com/futures-prop-firms/alpha-futures/payouts/"
-        }
+        },
+        {"label":"Current Alpha Futures UK legal terms","url":"https://alpha-futures.com/terms-and-conditions"},
+        {"label":"Independent reporting on NinjaTrader dispute and Premium cancellation","url":"https://www.financemagnates.com/forex/ninjatrader-and-alpha-futures-breakup-turns-bitter-exposing-a-big-industry-risk/"},
+        {"label":"Alpha Futures 2026 programme rules","url":"https://alpha-futures.com/posts/futures-prop-firm-rules-explained-2026"}
       ],
       "addPayoutProofs": [
         {
@@ -1254,8 +1285,20 @@
       ]
     },
     "bulenox": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Bulenox now markets Qualification, Fast Track and Momentum routes; its Fast Track documentation lists one-time, non-refundable fees and separate trailing or end-of-day drawdown options, not a single universal loss rule. The site advertises up to 90% and daily payout requests for eligible tracks, but execution of individual rewards is not independently audited. PropRadar adjusts the score from 65 to 66.",
+          "source": "https://bulenox.com/help-center/fast-track",
+          "fields": ["score", "verdict", "auditSummary", "drawdownType", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Bulenox exact-domain Trustpilot currently shows 4.6/5 across 1,837 reviews; many customers describe successful rewards and responsive support, while a smaller group contests account restrictions, 'flipping' interpretations or payout refusal. These are individual unadjudicated accounts.",
+          "source": "https://www.trustpilot.com/review/bulenox.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "legalReview"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.7 TrustScore across 1,826 reviews, claimed profile; Trustpilot notes it hasn't replied to negative reviews. Price and profit split not re-read on the official site, left unchanged.",
@@ -1276,10 +1319,22 @@
         }
       ],
       "set": {
+        "score": 66,
+        "verdict": "Bulenox operates several futures evaluation tracks with published one-time Fast Track fees, simulated trading, and either trailing or end-of-day loss-limit options. Its official pages advertise reward shares up to 90% and daily payout requests for eligible programmes; neither headline automatically applies to every account. Trustpilot shows 4.6/5 on 1,837 reviews, with abundant favourable reports alongside disputed rule-based payout refusals. The Delaware LLC and legal PDFs are identified, but older strict no-refund language and interpretations of trading restrictions remain important. PropRadar sets 66/100, one point above the former score, without treating review stars as authenticated cash receipts.",
+        "auditSummary": "17 November 2026: Bulenox LLC is named in the official terms with a Wilmington, Delaware address; the site frames the product as futures trading training and uses simulated-performance risk disclosures, not a brokerage deposit account. The current homepage shows three routes: Qualification, Fast Track and Momentum. Its Fast Track help article specifies non-refundable one-time prices of $338 for $25K, $488 for $50K, $648 for $100K and $788 for $150K, with separate trailing and EOD/no-scaling alternatives; a $50K EOD option carries a $1,200 daily loss limit while the trailing version has different risk conditions. These are examples of Fast Track terms only, not the price of every evaluation. Marketing promises up to 90% reward share and daily processing for selected programmes, but full account eligibility and the wording of each payout rule govern. Trustpilot's exact-domain profile displays 4.6/5 across 1,837 reviews, with both satisfied recipients and recent complaints alleging inconsistent 'flipping' interpretations or declined rewards. The complaints have not been independently adjudicated. Older legal PDFs contain sweeping final-sale/no-refund and termination provisions. Score 66/100: real documentation and review depth, with meaningful rule-discretion and no bank-reconciled payout history.",
+        "drawdownType": "Hybride",
         "trustpilotRating": 4.6,
-        "trustpilotReviewCount": 1834,
+        "trustpilotReviewCount": 1837,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/bulenox.com"
-      }
+      },
+      "setLegalReview": {
+        "summary": "Bulenox LLC is disclosed as a Delaware training/simulated futures provider. Current routes have materially different drawdown structures and fees; restrictive older refund language and customer disputes over eligibility and 'flipping' require caution.",
+        "regulatoryStatus": ["Official documents identify Bulenox LLC with a Wilmington, Delaware address, describing trading simulations and training rather than direct brokerage deposits.", "The Fast Track programme offers trailing-loss and end-of-day-loss alternatives and advertises non-refundable one-time purchases."],
+        "complaintsAndDisputes": ["Trustpilot reports 4.6/5 across 1,837 exact-domain reviews, including many claimed successful payments.", "Some October 2026 reviewers allege payouts were rejected after disputed 'flipping' or order-type interpretations; the underlying trade records and contractual validity were not independently assessed."],
+        "redFlags": ["Older legal PDFs use broad no-refund and account-restriction clauses.", "Different plans and drawdown modes must not be presented as one common contract.", "Daily reward-request marketing is not proof of payment approval for any specific trader."],
+        "sources": [{"label":"Bulenox official programme and route overview","url":"https://bulenox.com/"},{"label":"Bulenox Fast Track price and drawdown tables","url":"https://bulenox.com/help-center/fast-track"},{"label":"Bulenox exact-domain Trustpilot and payout disputes","url":"https://www.trustpilot.com/review/bulenox.com"},{"label":"Bulenox Terms of Use PDF","url":"https://bulenox.com/wa-data/public/site/data/bulenox.com/Terms_of_Use.pdf"}]
+      },
+      "addSources": [{"label":"Bulenox 2026 Fast Track fee and risk-structure tables","url":"https://bulenox.com/help-center/fast-track"},{"label":"Bulenox current account routes","url":"https://bulenox.com/"},{"label":"Bulenox exact-domain Trustpilot 4.6/5","url":"https://www.trustpilot.com/review/bulenox.com"}]
     },
     "city-traders-imperium": {
       "reviewedAt": "2026-11-08",
@@ -3339,8 +3394,26 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-11-15",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Finance Magnates reports having inspected documents from an externally performed review of Hola Prime payout processing covering 15 October 2025–15 March 2026. The company's own summary says 98.35% of eligible, fully documented requests were processed within one hour and none denied in the scoped data, but expressly says this was NOT an audit or assurance opinion and the full report is not public. Score rises cautiously from 64 to 67, not into the 70+ band.",
+          "source": "https://www.financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/",
+          "fields": ["score", "verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The official engagement summary confirms its procedure scope and clearly disclaims audit, assurance and third-party reliance; the stated one-hour clock begins only after required information is complete, and no future outcome is guaranteed.",
+          "source": "https://www.holaprime.com/review-by-deloitte/",
+          "fields": ["legalReview", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The exact-domain Trustpilot score is now 4.6/5 across 4,324 reviews. There is no displayed removed-review guideline warning; individual claims of reward rejection or extra verification remain unadjudicated.",
+          "source": "https://www.trustpilot.com/review/holaprime.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.5 TrustScore across 4,081 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -3369,11 +3442,21 @@
         }
       ],
       "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 4081,
+        "score": 67,
+        "verdict": "Hola Prime publishes detailed, product-specific simulated trading rules, identifies multiple platform/legal entities and has 4.6/5 on Trustpilot from 4,324 reviews. A payout-processing review commissioned from Deloitte and examined by financial press offers more documentation than normal industry self-reporting, but the company itself expressly says the engagement was neither a full audit nor an assurance opinion; the report is not published and the fast-processing figures cover a defined set of eligible requests. Some users dispute account restrictions and payment decisions. PropRadar raises the score cautiously from 64 to 67/100 for transparency, not a guarantee of solvency or future rewards.",
+        "auditSummary": "17 November 2026: Hola Prime's published rulebook distinguishes static maximum loss limits on some Prime/Pro evaluations, intraday trailing rules on Fly funded programmes and end-of-day trailing limits on Direct. Payout timing and reward shares depend on each selected schedule; its own Fly schedules have differed on whether the split is 70% or 80%, so a universal split should not be inferred. The footer identifies separate Hong Kong, Cyprus, Mauritius and technology-provider roles; Mauritius investment-dealer authorisation for one related broker entity is not equivalent to investor protection for every simulated challenge. Finance Magnates reported reviewing materials from the Deloitte-commissioned payout-processing exercise for 15 October 2025–15 March 2026. The seller's summary says 98.35% of requests with complete information were processed within one hour, 1.65% later and no denials in the scoped reviewed population. Crucially, the same summary says this is NOT an audit or assurance opinion, the full report is not publicly distributed and the engagement was not designed for third-party reliance. These percentages therefore do not establish that all people buying challenges qualified, that bank deposits were independently reconciled or that future payments are guaranteed. Trustpilot currently displays 4.6/5 on 4,324 reviews with both positive experiences and contested payout/KYC restrictions. Balanced score: 67/100, below the independently established, multi-year industry leaders.",
+        "trustpilotRating": 4.6,
+        "trustpilotReviewCount": 4324,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/holaprime.com",
         "drawdownType": "Hybride",
         "payoutDelay": "Pro/Prime: bi-weekly after 3 profitable days, monthly after 7, or on demand after 2% profit; Direct every 14 days; Fly funded accounts anytime; review up to 24 business hours, then processing within 1 hour"
+      },
+      "setLegalReview": {
+        "summary": "The multi-entity simulated service discloses material rules by plan and publishes a scoped Deloitte payout-processing review, but not a public assurance report; the Mauritius broker licence does not extend automatically to the challenge contract.",
+        "regulatoryStatus": ["The company's footer identifies different Hong Kong, Cyprus, Mauritius and infrastructure-provider roles, while its prop challenges are described as simulated services.", "The published Deloitte exercise covers payout processing during 15 October 2025–15 March 2026 and expressly disclaims audit, assurance opinion and third-party reliance."],
+        "complaintsAndDisputes": ["The company's summary reports 98.35% of complete requests processed within one hour and zero denials in scope, but the full supporting engagement document is not publicly distributed.", "Trustpilot shows 4.6/5 across 4,324 exact-domain reviews, including recent contested complaints about account restrictions, KYC or payment rejection; the underlying cases are not independently decided."],
+        "redFlags": ["A processing-speed review of eligible requests cannot prove that all challenge purchasers were eligible or all bank transfers independently reconciled.", "Different plan schedules contain materially different drawdowns, timing and reward shares.", "Mauritius investment-dealer status claimed for a linked entity does not itself regulate the simulated prop-firm compensation contract."],
+        "sources": [{"label":"Hola Prime official scope and limits of Deloitte engagement","url":"https://www.holaprime.com/review-by-deloitte/"},{"label":"Finance Magnates review of Deloitte processing documentation","url":"https://www.financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/"},{"label":"Hola Prime official plan schedules","url":"https://holaprime.com/rulebook/schedules/"},{"label":"Hola Prime exact-domain Trustpilot","url":"https://www.trustpilot.com/review/holaprime.com"}]
       },
       "addPayoutProofs": [
         {
@@ -3397,7 +3480,9 @@
         {
           "label": "Official page read 2026-11-15",
           "url": "https://holaprime.com/rulebook/schedules/"
-        }
+        },
+        { "label": "Hola Prime external processing review summary and limitations", "url": "https://www.holaprime.com/review-by-deloitte/" },
+        { "label": "Financial press on the Deloitte review's limited scope", "url": "https://www.financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/" }
       ]
     },
     "hyrotrader": {
@@ -4720,7 +4805,7 @@
       ]
     },
     "sabiotrade": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-17",
       "addSources": [
         {
           "label": "FXEmpire SabioTrade profile",
@@ -4728,6 +4813,18 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The current SabioTrade terms identify Irish company CODEVIL IT ENGINEERING LIMITED, say all trading is simulated, impose a 10% evaluation target, 5% daily-loss and normally 6% trailing drawdown tests, consistency and inactivity restrictions, and allow reward adjustment for defined risk/control flags. The prior Trustpilot removed-fake-review warning is still on record. Score reduced from 64 to 55 because an identifiable provider does not offset incomplete payout verification and elevated review-integrity concerns.",
+          "source": "https://sabiotrade.com/terms",
+          "fields": ["score", "verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot continues to withhold SabioTrade's rating for a guideline breach and shows 705 reviews. Its earlier removed-fake-reviews notice is retained as dated evidence without attributing authorship of the reviews to the company.",
+          "source": "https://www.trustpilot.com/review/sabiotrade.com",
+          "fields": ["trustpilotReviewCount", "trustpilotSourceUrl", "legalReview"]
+        },
         {
           "date": "2026-10-23",
           "summary": "Domain monitor reported sabiotrade.com redirecting to sabiotrade.us. Checked: third-party reviews (FXEmpire; FundedTrading, updated 7 August 2026) describe sabiotrade.us as SabioTrade's dedicated site for US clients, so the redirect is most likely regional (the monitor runs from US servers). No domain warning set.",
@@ -4756,9 +4853,21 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/sabiotrade.com)."
       ],
       "set": {
+        "score": 55,
+        "verdict": "SabioTrade still offers simulated one-step trading evaluations through an identifiable Irish contracting company, and its terms publish loss limits, consistency rules, reward-review discretion and non-refundable purchases. However, Trustpilot still withholds its public score for a guideline breach, with 705 reviews visible and an earlier removal of fake reviews recorded. Trustpilot does not identify the author of those reviews. The terms provide no independently reconciled payout history, and reward decisions depend on compliance conditions. PropRadar cuts its score from 64 to 55/100; this is a significant transparency and customer-review signal, not proof of illegal conduct or commercial closure.",
+        "auditSummary": "17 November 2026: SabioTrade's current terms name CODEVIL IT ENGINEERING LIMITED, company number 680139 according to its legal disclosures, as provider of simulated evaluations, not deposits or actual market trades. The company describes a 10% evaluation objective, a 5% daily-loss limit, generally 6% maximum trailing drawdown and a 40% best-day consistency provision with other single-trade concentration restrictions; the exact plan governs. KYC, inactivity beyond 30 days, closure of positions and a minimum seven-day interval between eligible performance rewards are additional terms. Risk and compliance reviews can adjust, reduce or withhold rewards under the written contract, which should be read alongside the promotional weekly-payment claim. Trustpilot's exact-domain page still states that its rating is unavailable because its rules were breached; the previously documented fake-review removals are not an adjudication of which party authored them. There are 705 reviews but no valid current TrustScore to publish. User praise and complaints alike are unverified individual reports, and PropRadar found no independent settlement ledger for all reward obligations. Score 55/100: legal traceability is positive, but review-integrity concerns and unilateral compensation controls deserve substantial caution.",
+        "trustpilotReviewCount": 705,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/sabiotrade.com",
         "drawdownType": "Trailing",
         "payoutDelay": "weekly reward frequency",
         "newsTrading": "Allowed"
+      },
+      "setLegalReview": {
+        "summary": "The named Irish provider sells simulated evaluations with detailed but restrictive loss, consistency, refund and performance-reward conditions. Trustpilot continues to withhold the rating after a guideline breach, and earlier fake-review removals do not identify their author.",
+        "regulatoryStatus": ["Official terms name CODEVIL IT ENGINEERING LIMITED (Ireland, no. 680139 stated in the firm's legal disclosure) as simulated assessment provider; these are not brokerage funds.", "Trading and reward rules are defined by plan, including a 10% evaluation target and strict loss, consistency, KYC and inactivity conditions."],
+        "complaintsAndDisputes": ["The exact-domain Trustpilot page has 705 reviews but withholds its TrustScore after a guideline breach. A prior removed-fake-reviews notice is preserved without assigning responsibility for their creation.", "Contractual clauses permit performance reward reductions or refusal after certain compliance reviews; independent settlement records were not obtained."],
+        "redFlags": ["Trustpilot rating remains withheld; do not reuse older cached stars or use an unrelated brand's profile.", "Reward qualification is discretionary within contract clauses and multiple concentration, risk and inactivity limits apply.", "Published marketing terms and 705 customer reviews cannot replace independently verifiable reward transfers."],
+        "sources": [{"label":"Current SabioTrade terms, provider and payout restrictions","url":"https://sabiotrade.com/terms"},{"label":"SabioTrade exact-domain Trustpilot guideline notice","url":"https://www.trustpilot.com/review/sabiotrade.com"},{"label":"SabioTrade active programme homepage","url":"https://sabiotrade.com/"}]
       }
     },
     "smart-prop-trader": {
@@ -5196,8 +5305,20 @@
       ]
     },
     "thinkcapital": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "ThinkCapital's updated contract identifies TFG (Payments) Limited as simulated service provider, with different Bolt, Bolt Flex, Nexus and Dual Step rules. Instant reward eligibility can require a minimum 6%-7% gain, 14-day wait and 20%-25% best-day caps; refunds are limited, potentially with a stated $20 fee. Trustpilot still withholds the rating after guideline and fake-review removals. Score changes from 65 (previously capped at 64) to an editorial 58.",
+          "source": "https://www.thinkcapital.com/terms-of-services/",
+          "fields": ["score", "verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The exact-domain Trustpilot page still displays no rating because of a guideline breach and repeats its fake-review-removal warning; 605 user reviews remain visible. Some 2026 commenters dispute reward refusals, which are unadjudicated personal claims.",
+          "source": "https://www.trustpilot.com/review/thinkcapital.com",
+          "fields": ["trustpilotReviewCount", "trustpilotSourceUrl", "legalReview"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the uk and ca mirrors; the ie mirror still showed an older cached 4.0 rating. Price and profit split not re-read on the official site, left unchanged.",
@@ -5225,8 +5346,20 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/thinkcapital.com)."
       ],
       "set": {
+        "score": 58,
+        "verdict": "ThinkCapital continues to offer broker-backed branded simulated evaluations with named UK contracting provider TFG (Payments) Limited and substantive plan-specific terms. However, ThinkMarkets' regulatory authorisations do not protect the separate prop challenge as a regulated client brokerage account. Trustpilot currently withholds the rating following a guideline breach and removal of fake reviews, leaving 605 reviews without a usable TrustScore; the platform does not identify who authored the removed reviews. Complaints about refused rewards remain disputed. Detailed payout gates and restricted refunds justify a reduction from 65 (previously capped at 64) to 58/100, not a closure label.",
+        "auditSummary": "17 November 2026: ThinkCapital's official Terms of Service name TFG (Payments) Limited as the provider of simulated, fictitious-funds trading programmes; the firm's association with ThinkMarkets does not extend that group's broker regulation, client-money rights or investor compensation to the challenge contract. The contract lists Bolt, Bolt Flex, Nexus, Lightning and Dual Step routes with different loss and consistency rules. For Bolt/Bolt Flex, eligible first performance reward requests may require 6%-7% closed simulated profit, 14 calendar days from first virtual trade and a 20%-25% best-day consistency cap, depending on plan or paid add-ons; $100 is the specified minimum request. Cooling-off/refund exceptions are narrow and an administration charge of up to $20 can apply in listed circumstances. Trustpilot still suppresses ThinkCapital's score over a guideline breach and records removed fake reviews; 605 reviews are visible but no valid live star rating exists. Neither the notice nor unadjudicated customer payout refusals proves the company itself commissioned false reviews or unlawfully withheld a particular payment. Score 58/100 reflects contract clarity tempered by review-integrity concerns, complicated reward gates and limited independently reconciled payments.",
+        "trustpilotReviewCount": 605,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/thinkcapital.com",
         "profitSplit": 80,
         "payoutDelay": "every 14 days as standard on Bolt instant accounts; on-demand (Bolt) and weekly (Nexus) payouts are paid add-ons"
+      },
+      "setLegalReview": {
+        "summary": "The UK simulated-evaluation operator is identifiable and has substantive legal terms, but its broker-affiliate marketing must not imply regulatory protection for prop customers. Reward conditions and refund limits are significant, and Trustpilot suppresses the score after a guideline breach.",
+        "regulatoryStatus": ["Official terms name TFG (Payments) Limited as the customer provider of virtual trading challenges, separate from regulated ThinkMarkets brokerage contracts.", "ThinkMarkets group regulatory permissions do not confer brokerage deposit, investor-compensation or client-money protections on the ThinkCapital simulated service."],
+        "complaintsAndDisputes": ["Trustpilot has withheld the exact-domain company score after a guideline breach and reports removal of fake reviews; 605 user reviews remain, with responsibility for removed reviews unspecified.", "Some customers allege refused payouts after meeting targets, while company terms apply anti-abuse, consistency and account-eligibility tests. Individual cases are not adjudicated."],
+        "redFlags": ["No valid TrustScore is available; older mirror ratings are historical and should not be presented as current.", "Bolt and Bolt Flex may require 6%-7% closed profit, at least 14 days and 20%-25% best-day concentration caps before first reward.", "Refunds and appeal rights are conditional; a $20 transaction fee may apply, subject to any overriding consumer rights."],
+        "sources": [{"label":"ThinkCapital official Terms of Service and simulated account rules","url":"https://www.thinkcapital.com/terms-of-services/"},{"label":"ThinkCapital Trustpilot withheld score and fake-review notice","url":"https://www.trustpilot.com/review/thinkcapital.com"},{"label":"ThinkCapital product and programme rules","url":"https://www.thinkcapital.com/instant-funding/"}]
       },
       "addSources": [
         {
