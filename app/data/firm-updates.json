@@ -10540,6 +10540,366 @@
         }
       ]
     },
+    "cash-flow-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Cash Flow Funding is marked closed by a 2026 prop-firm directory and its former domain has no verifiable live checkout; the precise legal closure date and corporate registration could not be authenticated.",
+          "source": "https://thetrustedprop.com/prop-firms/cash-flow-funding",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Prop Firm Match maintains a specific warning about an earlier increase in denied or delayed payout reports; these are complaints and not independently authenticated bank transaction failures.",
+          "source": "https://propfirmmatch.com/unlisted-prop-firms/cash-flow-funding",
+          "fields": ["score", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 29,
+        "verdict": "Cash Flow Funding is listed as closed by a prop-firm directory and its former sales domain is unavailable. PropRadar therefore treats the historical brand as a closed purchase option, not as an investment recommendation. The precise legal dissolution date and final handling of trader payout requests have not been independently established.",
+        "auditSummary": "17 November 2026: a specialist directory marks Cash Flow Funding CLOSED and advises against sending funds. The historical cashflowfunding.com site no longer provides an authenticated active challenge checkout or usable contractual terms. Prop Firm Match's unlisted-profile system warning documented a rise in customer allegations of payout delays, refusals, account breaches and unresponsive support, notably during 2024. Those allegations are not court findings or verified banking records; individual positive testimonials also exist. A 2026 third-party description names Cash Flow Funding SAL in Lebanon, but no official Lebanese company-register extract or contracting document tying that entity to this domain could be authenticated. The 2026 editorial closure classification is based on offline commercial operations and specialist directory status, not a verified company liquidation. No source supplied independently matched payout transfers and customer identities. Score adjusted from 33 to 29, with original incident history retained.",
+        "listedDomainWarning": "BUYER ALERT: Cash Flow Funding is reported CLOSED by an independent prop-firm directory, and its former cashflowfunding.com website is not a verified live sales channel. Do not purchase an evaluation sold under this name or from a reused domain. Any purported successor must independently prove its legal identity and responsibility for older accounts and rewards. Formal corporate dissolution has not been verified."
+      },
+      "setEntities": [
+        {
+          "name": "Cash Flow Funding SAL (reported historic trading operator; unverified)",
+          "jurisdiction": "Lebanon — incorporation and brand linkage unconfirmed",
+          "role": "Name and 2024 incorporation date appear in a secondary directory; no official register document or first-party trading agreement authenticated."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "A third-party directory identifies Cash Flow Funding as commercially closed, but this is not proof of a Lebanese legal-entity dissolution. Both the contracting company and any successor liable for historical customer payments remain unverified.",
+        "regulatoryStatus": [
+          "Original cashflowfunding.com challenge terms and working checkout were unavailable in the November 2026 check.",
+          "A secondary source names Cash Flow Funding SAL in Lebanon; no primary company registry identifier or valid operating authorisation was authenticated.",
+          "Closed brand classification reflects commercial availability, not a proven court liquidation or regulatory enforcement order."
+        ],
+        "complaintsAndDisputes": [
+          "Prop Firm Match reported increased complaints concerning payout delays or denials, alleged rule breaches and support response in the historic trading period; allegations have not been independently adjudicated.",
+          "No independently identifiable bank or blockchain transfer confirmation tied to a named trader and completed payout could be verified.",
+          "Current remedies, outstanding challenge-fee refunds and rights against any successor entity remain unknown."
+        ],
+        "redFlags": [
+          "Former sales domain cannot be used to authenticate present offers.",
+          "Specialist directory marks the business closed without a supporting corporate dissolution certificate.",
+          "Historical payout and dispute warning combined with missing original contracting terms."
+        ],
+        "sources": [
+          { "label": "Closed status in independent prop-firm directory", "url": "https://thetrustedprop.com/prop-firms/cash-flow-funding" },
+          { "label": "Historic customer complaints and unlisted warning", "url": "https://propfirmmatch.com/unlisted-prop-firms/cash-flow-funding" },
+          { "label": "Secondary account of claimed Lebanese business identity", "url": "https://www.forextelevision.com/proprietary-trading-firm/cash-flow-funding/" },
+          { "label": "Former business domain — offline", "url": "https://cashflowfunding.com/" }
+        ]
+      },
+      "addSources": [
+        { "label": "Cash Flow Funding listed as CLOSED", "url": "https://thetrustedprop.com/prop-firms/cash-flow-funding" },
+        { "label": "Historical payout complaints, Prop Firm Match", "url": "https://propfirmmatch.com/unlisted-prop-firms/cash-flow-funding" },
+        { "label": "Secondary Lebanese operator claim (not verified)", "url": "https://www.forextelevision.com/proprietary-trading-firm/cash-flow-funding/" }
+      ],
+      "addIncidents": [
+        "2024 — Prop Firm Match's historical system warning stated that Cash Flow Funding received a marked increase in complaints about delayed or denied payouts and service responses. These are third-party reports, not independently verified transactions or a legal finding. Source: https://propfirmmatch.com/unlisted-prop-firms/cash-flow-funding",
+        "2026-11-17 — A third-party specialist directory lists Cash Flow Funding as CLOSED and the old domain is unavailable. No official dissolution notice or payout-obligation settlement document was found. Source: https://thetrustedprop.com/prop-firms/cash-flow-funding"
+      ]
+    },
+    "levels": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Corrected the unrelated levels.com health-tech URL to the genuine lv.ls Levels trading platform and its published contract, naming Chancery Lane Traders as operator.",
+          "source": "https://lv.ls/terms-and-conditions/",
+          "fields": ["officialWebsite", "verdict", "auditSummary", "entities", "legalReview", "score", "priceFrom"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The Dutch financial-markets regulator republishes a 13 July 2023 FCA warning specifically identifying Levels LV.LS; applicability to the site's currently simulated-only model needs independent clarification.",
+          "source": "https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/l/levels--lvls",
+          "fields": ["listedDomainWarning", "score", "verdict", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot displays 3.7/5 for lv.ls based on exactly one April 2023 review; that customer had not yet reached a payout level and the sample cannot establish reliability.",
+          "source": "https://www.trustpilot.com/review/lv.ls",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary"]
+        }
+      ],
+      "set": {
+        "status": "À surveiller",
+        "score": 32,
+        "officialWebsite": "https://lv.ls/",
+        "priceFrom": 50,
+        "trustpilotRating": 3.7,
+        "trustpilotReviewCount": 1,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lv.ls",
+        "verdict": "Levels is an active simulated FX-challenge platform at lv.ls, unrelated to the metabolic-health company at levels.com. The UK operator is named in published terms and has an active registry entry, but a historic UK FCA warning identifies the Levels LV.LS name. Conflicting instruments descriptions and no independently authenticated reward payments justify a cautious 32/100 score.",
+        "auditSummary": "17 November 2026: restored the true official site lv.ls after the original PropRadar listing mistakenly used levels.com, an unrelated health company. Current Levels terms name Chancery Lane Traders, matched to active UK company CHANCERY LANE TRADERS LTD no.09383987 (incorporated 2015), and describe simulated trading rather than actual deposits. The Dutch AFM's public database republishes a 13 July 2023 FCA warning for 'Levels LV.LS'; it is a historical regulator notice, not evidence that the current simulated product has been specifically adjudicated or forbidden. The site's FAQ advertises trading in commodities, while the more formal terms define an FX-only simulated environment. Terms still contain template text such as '[Privacy Policy URL]' and allow platform changes or termination; published payout conditions do not establish completed cash transfers. Trustpilot displays 3.7/5 from only one April 2023 review, whose author explicitly had not yet reached the payout stage. That score is recorded for transparency but must not be treated as a tested payout history. Starting challenge advertised at $50. The verified domain and corporate link improve identity confidence, but regulatory-history and documentation ambiguities keep purchases blocked pending clarification.",
+        "listedDomainWarning": "REGULATORY HISTORY: the FCA published a warning on 13 July 2023 concerning 'Levels LV.LS', recorded by the Dutch AFM. The current lv.ls platform presents itself as simulated-only, so relevance of the historical notice to today's service requires clarification. Its FAQ and terms also disagree about permitted instruments. Do not confuse lv.ls with the unrelated levels.com health company. PropRadar has disabled purchase links pending a documented explanation."
+      },
+      "setEntities": [
+        {
+          "name": "CHANCERY LANE TRADERS LTD",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "09383987",
+          "role": "Active company named as Chancery Lane Traders in Levels' official terms; Companies House incorporation 12 January 2015, legal-contracting identity linked by name."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Levels' real site is lv.ls and names Chancery Lane Traders as operator; the UK company of that name is active. A historical FCA warning for Levels LV.LS appears in the Netherlands AFM regulator database, while the website currently describes simulated-only activity. No regulator clearance or evidence of completed contractual rewards has been identified.",
+        "regulatoryStatus": [
+          "UK Companies House: CHANCERY LANE TRADERS LTD no.09383987, active as at 17 November 2026; incorporation is not proof of a financial services licence.",
+          "AFM republishes a UK FCA consumer warning dated 13 July 2023 specifically for Levels LV.LS. Current relevance and any regulatory resolution were not established.",
+          "Current official terms classify activity as simulated evaluation, not live financial trading or client brokerage deposits."
+        ],
+        "complaintsAndDisputes": [
+          "The only lv.ls Trustpilot review is from April 2023 and says the reviewer had not reached a payout level; no independently authenticated completed cash rewards found.",
+          "FAQ offers commodities but formal terms restrict assets to FX simulation; users cannot safely infer contractual permission from the more permissive FAQ.",
+          "Digital access fees may be non-refundable after activity, according to official published payment terms."
+        ],
+        "redFlags": [
+          "Historical FCA warning for the exact Levels LV.LS brand.",
+          "Trading instruments conflict between official FAQ and contract.",
+          "Published terms contain unfinished placeholders and unilateral service-modification language.",
+          "One Trustpilot review provides no meaningful payout verification."
+        ],
+        "sources": [
+          { "label": "Levels official platform", "url": "https://lv.ls/" },
+          { "label": "Levels official terms, named operator and rules", "url": "https://lv.ls/terms-and-conditions/" },
+          { "label": "Levels FAQ including instrument and $50 entry claims", "url": "https://lv.ls/faq/" },
+          { "label": "UK Companies House: Chancery Lane Traders Ltd 09383987", "url": "https://find-and-update.company-information.service.gov.uk/company/09383987" },
+          { "label": "Dutch AFM publication of FCA Levels warning dated 13 July 2023", "url": "https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/l/levels--lvls" },
+          { "label": "Levels Trustpilot profile, one historic review", "url": "https://www.trustpilot.com/review/lv.ls" }
+        ]
+      },
+      "addSources": [
+        { "label": "Authentic Levels trading domain and terms", "url": "https://lv.ls/terms-and-conditions/" },
+        { "label": "UK operator registry entry", "url": "https://find-and-update.company-information.service.gov.uk/company/09383987" },
+        { "label": "AFM mirrored FCA warning for lv.ls", "url": "https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/l/levels--lvls" },
+        { "label": "Levels Trustpilot (only one review)", "url": "https://www.trustpilot.com/review/lv.ls" }
+      ],
+      "addIncidents": [
+        "2023-07-13 — The Dutch AFM regulator database republishes a UK FCA warning identifying Levels LV.LS. The current service advertises simulated trading; the warning's applicability to its current model was not resolved. Source: https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/l/levels--lvls",
+        "2026-11-17 — Levels' official FAQ lists commodities while its published legal terms define FX-only simulated trading; users should request written clarification before relying on broader FAQ language. Sources: https://lv.ls/faq/ and https://lv.ls/terms-and-conditions/"
+      ]
+    },
+    "titan-capital-markets": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Identified the current Titan prop-evaluation domain and its named UK service supplier TFT Titan Solutions Limited no.15229528; Companies House shows the business active with an active strike-off proposal and overdue filings.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/15229528",
+          "fields": ["officialWebsite", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The correct titancapitalmarkets.co.uk Trustpilot company profile withholds its TrustScore for a guidelines breach and reports removal of fake reviews; it must not be merged with a distinct .com Trustpilot profile.",
+          "source": "https://www.trustpilot.com/review/titancapitalmarkets.co.uk",
+          "fields": ["score", "trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "À surveiller",
+        "score": 36,
+        "officialWebsite": "https://titancapital.tgmarkets.com/",
+        "trustpilotReviewCount": 1063,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/titancapitalmarkets.co.uk",
+        "verdict": "Titan Capital Markets currently advertises prop evaluations at titancapital.tgmarkets.com, but its UK supplier TFT Titan Solutions Limited faces an active proposal to strike off and overdue filings. Trustpilot has withheld the firm's rating after a guideline breach and removal of fake reviews. The platform's active website does not establish reliable payouts, so the editorial score falls to 36/100.",
+        "auditSummary": "17 November 2026: the old .com listing was not the verified current prop-firm address. Titan markets 1-step, 2-step, 3-step and instant challenges through titancapital.tgmarkets.com, also linked from titancapitalmarkets.co.uk. Its official 17 December 2025 terms identify TFT TITAN SOLUTIONS LIMITED no.15229528 as service supplier and name TG Markets LTD elsewhere as an agreement counterparty; the latter's exact registered jurisdiction is not resolved by those clauses. The UK Companies House record for TFT Titan Solutions Limited remains Active, but also shows an active proposal to strike off, overdue 2025 accounts and overdue confirmation statement — it is not already dissolved. Trustpilot's domain-matched titancapitalmarkets.co.uk profile displays no TrustScore due to a breach of platform guidelines and says it removed fake reviews; it currently carries 1,063 reviews, with mixed individual accounts of payouts and denials. Who produced the removed reviews is not proven. The separate titancapitalmarkets.com Trustpilot listing must not be merged. Titan's own terms allow pre-approved-KYC profits to be treated as invalid, say fees are non-refundable and refer to several counterparties and a merchant of record; they contain inconsistent age language. Marketing of fast payouts is not a bank-confirmed receipt. With legal continuity, review integrity and user obligations unresolved, purchase links are paused and the score is revised from 50 to 36.",
+        "listedDomainWarning": "IMPORTANT: Titan Capital Markets' supplier TFT Titan Solutions Limited (UK no.15229528) is still ACTIVE but is subject to an ACTIVE PROPOSAL TO STRIKE OFF and overdue filings, not a confirmed dissolution. Trustpilot withholds the rating of titancapitalmarkets.co.uk after a guidelines breach and removal of fake reviews. The current website is titancapital.tgmarkets.com, not the old .com listing; check the contracting party, your jurisdiction, payout terms and KYC before paying. PropRadar has disabled purchase links pending documentary clarification."
+      },
+      "setEntities": [
+        {
+          "name": "TFT TITAN SOLUTIONS LIMITED",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "15229528",
+          "role": "Named service supplier in current prop-firm terms; Companies House active with active proposal to strike off, overdue accounts and confirmation statement."
+        },
+        {
+          "name": "TG Markets LTD (contractual party named elsewhere in Titan terms)",
+          "jurisdiction": "To verify — exact legal registration not authenticated",
+          "role": "Named as counterparty in same legal document; distinct UK/SVG corporate relationships are not proven from this clause alone."
+        },
+        {
+          "name": "Odeonpay ALE S.R.L. (Paysagi)",
+          "jurisdiction": "To verify — merchant-of-record claim from Titan contract",
+          "role": "Third-party payment settlement provider named by the terms, not purported prop-challenge supplier."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The current Titan prop-firm terms identify TFT Titan Solutions Limited no.15229528 as supplier, but also reference TG Markets LTD as contract party and an external merchant of record. Official Companies House shows an active proposal to strike off and overdue filings for TFT Titan Solutions. Trustpilot has withheld the domain-matched brand's TrustScore for guidelines violations, with removed reviews.",
+        "regulatoryStatus": [
+          "UK Companies House no.15229528 remains Active with an active proposal to strike off; no liquidation or completed striking-off can be inferred as of 17 November 2026.",
+          "Company filings: accounts due 31 July 2026 and confirmation statement due 22 May 2026 are overdue.",
+          "Current prop terms name TFT Titan Solutions Limited as supplier but also TG Markets LTD as agreement counterparty, without an independently verified chain of legal responsibility.",
+          "Titan's website includes exclusions for some countries; the exact scope of restrictions for prop challenges versus brokerage services should be confirmed directly."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot explicitly withholds the titancapitalmarkets.co.uk rating for a guidelines breach and states fake reviews were removed; review authorship or procurement cannot be independently attributed.",
+          "Current customer reviews include both praise and payout-delay or account-termination allegations; neither establishes universally successful nor universally denied payments.",
+          "Terms state that profits before approved identity verification may be void and that purchases are non-refundable, subject to applicable consumer law."
+        ],
+        "redFlags": [
+          "UK supplier's active strike-off proposal and two overdue statutory filings.",
+          "Trustpilot score is unavailable for a guidelines breach and review removal.",
+          "Unclear supplier-versus-counterparty language across the official agreement.",
+          "Promised fast payouts without a verified identity-matched settlement trail.",
+          "Former .com domain has a separate review identity; conflating it would corrupt the evidence."
+        ],
+        "sources": [
+          { "label": "Current Titan Capital prop-firm website", "url": "https://titancapital.tgmarkets.com/" },
+          { "label": "Titan official terms, supplier, KYC and payment counterparty", "url": "https://titancapital.tgmarkets.com/terms-conditions/" },
+          { "label": "UK Companies House TFT Titan Solutions Limited 15229528", "url": "https://find-and-update.company-information.service.gov.uk/company/15229528" },
+          { "label": "Trustpilot: Titan Capital Markets .co.uk, rating withheld", "url": "https://www.trustpilot.com/review/titancapitalmarkets.co.uk" }
+        ]
+      },
+      "addSources": [
+        { "label": "Current Titan Capital Markets website and evaluations", "url": "https://titancapital.tgmarkets.com/" },
+        { "label": "Titan signed terms: supplier, KYC and payment rules", "url": "https://titancapital.tgmarkets.com/terms-conditions/" },
+        { "label": "Official UK supplier status (active proposed strike-off)", "url": "https://find-and-update.company-information.service.gov.uk/company/15229528" },
+        { "label": "Domain-matched Trustpilot warning (rating withheld)", "url": "https://www.trustpilot.com/review/titancapitalmarkets.co.uk" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — UK Companies House identifies TFT Titan Solutions Limited no.15229528 as Active with an active proposal to strike off and overdue accounts and confirmation statement, not as already dissolved. Source: https://find-and-update.company-information.service.gov.uk/company/15229528",
+        "2026-11-17 — Trustpilot says Titan Capital Markets' .co.uk rating is unavailable due to a breach of our guidelines and that it has removed a number of fake reviews; the source does not identify who originated those reviews. Source: https://www.trustpilot.com/review/titancapitalmarkets.co.uk"
+      ]
+    },
+    "ryze-trading": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "A historic unlisted Ryze Trading profile identifies the earlier Ryze Funding brand, whose original ryze.trading web address is no longer usable; Companies House records dissolution of Ryze Funding Ltd on 20 May 2025.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/14542770",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "officialWebsite", "entities", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The claimed Trustpilot profile at www.ryze.trading now explicitly says the company website has closed and preserves 254 old trader reviews; its displayed company address matches Ryze Funding Ltd's official registered-office address.",
+          "source": "https://www.trustpilot.com/review/www.ryze.trading",
+          "fields": ["trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 27,
+        "officialWebsite": "https://ryze.trading/",
+        "trustpilotReviewCount": 254,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.ryze.trading",
+        "verdict": "Ryze Trading appears in historical community records as a later name for Ryze Funding. The former Ryze Funding website is closed, and UK company RYZE FUNDING LTD no.14542770 was legally dissolved on 20 May 2025. The brand identity link is supported by trader reports and an identical address on the historical Trustpilot listing, but a formal Ryze Trading rename filing was not found.",
+        "auditSummary": "17 November 2026: the originally listed ryzetrading.com was not a verified company website. Prop Firm Match's historical 'Ryze Trading' discussions refer to the former Ryze Funding brand, and that business used ryze.trading according to its claimed Trustpilot listing. Trustpilot itself prevents new reviews there because the company website has closed and still shows 254 archived reviews, including long-running complaints about payouts; these are user reports, not independently verified bank transfer failures. The claimed Trustpilot office address (71–75 Shelton Street, London) corresponds with RYZE FUNDING LTD company no.14542770 in UK Companies House. The registrar confirms that legal entity was dissolved on 20 May 2025 after compulsory strike-off proceedings; this is a documented corporate event, not just a dead URL. The exact formal chain from the older Ryze Funding brand to the 'Ryze Trading' name was not independently established, so the original identity ambiguity is prominently disclosed. A separate present-day ryzefunding.com US-business-finance website is unrelated and should never be used for a current challenge or review attribution. The account is an archive only, with all purchase links suppressed and score reduced from 44 to 27.",
+        "listedDomainWarning": "CLOSED-BRAND ALERT: the historical Ryze Funding/Ryze Trading operation is no longer a verified challenge seller. RYZE FUNDING LTD (UK no.14542770) was DISSOLVED on 20 May 2025, and Trustpilot marks its former ryze.trading website closed. A formal rename connecting every use of 'Ryze Trading' to that company was not authenticated. Do not pay anyone reusing either brand or domain without verifying a distinct current registered supplier; the present ryzefunding.com loan business is unrelated."
+      },
+      "setEntities": [
+        {
+          "name": "RYZE FUNDING LTD (historical Ryze Funding trading operator)",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "14542770",
+          "role": "Dissolved 20 May 2025 by Companies House. The historic Ryze Trading rename is inferred from customer records and historical brand identity, not a registered name-change certificate."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "RYZE FUNDING LTD no.14542770 was dissolved in the United Kingdom on 20 May 2025, with the same address as the claimed historical Ryze Funding Trustpilot listing. The Ryze Trading alias is reported by old customer accounts but lacks a formal corporate name-change document; do not confuse it with another company using Ryze branding.",
+        "regulatoryStatus": [
+          "Official Companies House record: RYZE FUNDING LTD no.14542770, dissolved 20 May 2025.",
+          "Historic www.ryze.trading Trustpilot profile says reviews are closed because the company website has closed.",
+          "No current trading-supplier licence, live terms, customer migration contract or formal Ryze Trading trade-name certificate authenticated."
+        ],
+        "complaintsAndDisputes": [
+          "The old domain-matched Trustpilot profile preserves 254 reviews, including several 2024 customer allegations of prolonged payout delays; bank settlement disputes were not independently adjudicated.",
+          "No verifiable post-closure reward discharge or refund schedule was found.",
+          "The company's former marketing disputed review removals on its Trustpilot description, but that claim cannot be independently confirmed as an exoneration."
+        ],
+        "redFlags": [
+          "Official UK corporate dissolution and former website closure.",
+          "Ryze Trading versus Ryze Funding alias lacks a definitive first-party name-change record.",
+          "Historic complaints and no authenticated continuity or payout settlement records.",
+          "Similar current Ryze lending brand is an unrelated entity."
+        ],
+        "sources": [
+          { "label": "Official UK Ryze Funding Ltd dissolution, 20 May 2025", "url": "https://find-and-update.company-information.service.gov.uk/company/14542770" },
+          { "label": "Claimed Ryze Funding Trustpilot archive and website-closed notice", "url": "https://www.trustpilot.com/review/www.ryze.trading" },
+          { "label": "Ryze Trading discussions and old Ryze Funding name attribution", "url": "https://propfirmmatch.com/futures/unlisted-prop-firms/ryze-trading" },
+          { "label": "Historical brand domain", "url": "https://ryze.trading/" }
+        ]
+      },
+      "addSources": [
+        { "label": "UK government company dissolution registry", "url": "https://find-and-update.company-information.service.gov.uk/company/14542770" },
+        { "label": "Historic claimed Ryze Funding Trustpilot, old domain closed", "url": "https://www.trustpilot.com/review/www.ryze.trading" },
+        { "label": "Archived Ryze Trading / Ryze Funding community identity report", "url": "https://propfirmmatch.com/futures/unlisted-prop-firms/ryze-trading" }
+      ],
+      "addIncidents": [
+        "2025-05-20 — RYZE FUNDING LTD no.14542770 was dissolved in the UK official register. Historical Ryze Trading identity linkage is reported, not a verified company trade-name filing. Source: https://find-and-update.company-information.service.gov.uk/company/14542770",
+        "2026-11-17 — The claimed historic Ryze Funding Trustpilot page says no further reviews are accepted because the company's old website has closed. Source: https://www.trustpilot.com/review/www.ryze.trading"
+      ]
+    },
+    "tradicave": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Specialist directory now labels Tradicave CLOSED; the former tradicave.com website is offline. No first-party closure declaration or legal-company dissolution filing was authenticated.",
+          "source": "https://thetrustedprop.com/prop-firms/tradicave",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Unlisted Prop Firm Match trader reports include several 2024 payout refusal allegations alongside a historic positive payment testimonial; neither is an identity-matched bank receipt.",
+          "source": "https://propfirmmatch.com/unlisted-prop-firms/tradicave",
+          "fields": ["score", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 33,
+        "verdict": "Tradicave is listed as closed in a current specialist directory, and tradicave.com does not provide an authenticated working checkout. Historic community reports raise payout questions, but there is no verified company dissolution or independently established refund disposition. PropRadar preserves the dossier as a closed commercial-brand archive and strongly discourages purchases under this name.",
+        "auditSummary": "17 November 2026: Tradicave is marked CLOSED by a prop-firm specialist directory updated in November 2026, while its former tradicave.com website is unavailable. That supports a conservative commercial closure classification but does not establish formal winding-up of a particular legal entity. Prop Firm Match's historical unlisted listing includes multiple independent-looking 2024 user posts alleging refused payout requests and copy-trading-rule disputes, alongside at least one user testimonial claiming a completed payout within three days. Neither kind of post contains a retrievable independent bank confirmation tied to the named recipient, so PropRadar does not convert them into verified payout evidence. A secondary listing mentions Prop Trade Tech LLC; without a first-party contract or official corporate record linking that name to Tradicave, its legal identity remains unverified. The original terms, refund policies and successor responsibilities were not available; historical Trustpilot rumours cannot be substituted for a domain-matched current profile. Risk score falls from 44 to 33 because an apparently inactive seller, missing legal details and unresolved historical payment complaints create clear buyer uncertainty.",
+        "listedDomainWarning": "CLOSED-BRAND ALERT: independent directory TheTrustedProp marks Tradicave CLOSED, and its original tradicave.com site is unavailable. This is a reported commercial closure; no formal legal dissolution certificate has been verified. Do not pay any new seller using Tradicave's name, logo or a revived domain unless the supplier's current corporate identity, terms and responsibility for old payouts are independently documented."
+      },
+      "setEntities": [
+        {
+          "name": "Prop Trade Tech LLC (secondary source attribution only)",
+          "jurisdiction": "To verify — entity and connection to Tradicave unconfirmed",
+          "role": "A specialist listing attributes this company name; no first-party Tradicave agreement or independent corporate registry confirmation obtained."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Tradicave's old domain is inactive and a current directory labels its commercial brand closed; no primary legal-entity dissolution or assignment of customer obligations was verified. A secondary attribution to Prop Trade Tech LLC remains unproven without original trading terms or registry evidence.",
+        "regulatoryStatus": [
+          "Original Tradicave website and old challenge contract are unavailable, so current offering and refunds cannot be authenticated.",
+          "A 2026 specialist directory marks Tradicave closed commercially; this does not identify a formal legal liquidation.",
+          "Prop Trade Tech LLC is a secondary-source association only: incorporation, location and direct Tradicave linkage unconfirmed."
+        ],
+        "complaintsAndDisputes": [
+          "Prop Firm Match community comments from 2024 include both alleged refusal of payouts and at least one claimed successful withdrawal; both classes of statement are unverified testimonials.",
+          "No payout record matching a real payee, amount and external transfer settlement was verified.",
+          "No public closure statement describing resolution of trader balances or refunds was found."
+        ],
+        "redFlags": [
+          "Former sales domain unavailable; current directory calls the business closed.",
+          "Historical payout disputes reported without documentary resolution.",
+          "Unverified legal company and no surviving enforceable account-terms archive.",
+          "New same-name purchase offers cannot be assumed to belong to the original operator."
+        ],
+        "sources": [
+          { "label": "Tradicave commercially CLOSED in 2026 directory", "url": "https://thetrustedprop.com/prop-firms/tradicave" },
+          { "label": "2024 trader disputes and contrary positive testimonial", "url": "https://propfirmmatch.com/unlisted-prop-firms/tradicave" },
+          { "label": "Original Tradicave domain, unavailable", "url": "https://tradicave.com/" },
+          { "label": "Historic third-party domain availability assessment", "url": "https://www.scamadviser.com/check-website/tradicave.com" }
+        ]
+      },
+      "addSources": [
+        { "label": "Tradicave listed CLOSED, November 2026", "url": "https://thetrustedprop.com/prop-firms/tradicave" },
+        { "label": "Unlisted trader feedback for Tradicave", "url": "https://propfirmmatch.com/unlisted-prop-firms/tradicave" },
+        { "label": "Former Tradicave domain reachability", "url": "https://tradicave.com/" }
+      ],
+      "addIncidents": [
+        "2024 — Multiple Tradicave customer posts described payout rejections, including disputed copy-trading enforcement; one other user claimed an earlier payout. The allegations and positive claim both lack independently authenticated settlement records. Source: https://propfirmmatch.com/unlisted-prop-firms/tradicave",
+        "2026-11-17 — A specialist prop-firm directory now marks Tradicave CLOSED and its original website is unavailable; no first-party legal dissolution confirmation was located. Source: https://thetrustedprop.com/prop-firms/tradicave"
+      ]
+    },
     "x-funded": {
       "reviewedAt": "2026-11-16",
       "changelog": [
