@@ -129,10 +129,57 @@
       ]
     },
     "aeon-funded": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-17",
       "set": {
-        "listedDomainWarning": "The listed domain aeonfunded.com redirected to quantxfund.io when checked on 2026-10-23 and 2026-10-27. PropRadar found no public announcement linking Aeon Funded to that site, so the domain is not linked."
+        "listedDomainWarning": null,
+        "officialWebsite": "https://quantxfund.io/",
+        "payoutDelay": "1-Step: every 5 profitable days; 2-Step and Instant: biweekly. Processing usually 1–3 business days (company policy, not independently verified).",
+        "verdict": "Aeon Funded is now branded Quantx, as confirmed by the firm's own manifesto. The operator named in current terms is EVC Holdings LTD, operating from Dubai; its corporate registration number and the claimed dealing-desk economics have not been independently verified. Payout marketing must be distinguished from transfers proved to have reached traders.",
+        "auditSummary": "Deep review, 17 November 2026: Quantx's first-party manifesto explicitly identifies the Aeon Funded rebrand, correcting an older PropRadar domain warning. Current terms identify EVC Holdings LTD; the AML policy gives a Dubai business address but no independently checked company-registration number. All evaluation trading is described as simulated, without a licensed brokerage service. The official help article sets a $600 minimum withdrawal, KYC, a 2.5% profit threshold and five profitable days (each at least 0.5%) for accounts below $50k. Terms prohibit bots/copying, require geographic IP consistency and refund challenge fees only with the third performance reward. Quantx claims more than $570,000 distributed since May 2025, but no independently attributed bank or on-chain payout series was verified in this audit."
       },
+      "setEntities": [
+        {
+          "name": "EVC Holdings LTD",
+          "jurisdiction": "Dubai, United Arab Emirates (operator-stated; registration not independently checked)",
+          "registeredAddress": "Meydan Grandstand, Shared Desk, 6th floor, Meydan Road, Nad Al Sheba, Dubai, UAE (per AML policy)",
+          "role": "Contracting company named in current Quantx Terms of Service; corporate registration number not provided."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Aeon Funded's own successor-brand manifesto identifies Quantx; Quantx's terms and AML policy name EVC Holdings LTD and a Dubai business address. This is operator disclosure, not an independently checked commercial registration or a broker licence. Trading programs are simulated; potential real trading is subject to separate agreements. Claimed in-house dealing desks, payout guarantees and $570k distributed remain company assertions rather than independently audited solvency or payout proof.",
+        "regulatoryStatus": [
+          "EVC Holdings LTD is identified in current terms; Dubai business address is published in the AML policy, registration number unverified.",
+          "The site states that all evaluation accounts use virtual capital and no brokerage, investment or customer deposit services are provided.",
+          "Claims of live hedging/dealing desk are marketing descriptions and do not override the platform's simulated-trading disclaimer."
+        ],
+        "complaintsAndDisputes": [
+          "The firm reports a 1–3 business-day receipt window after a payout request, but this is not an independent completion audit.",
+          "Third performance reward is the stated trigger for reimbursement of challenge fees; IP-region changes can lead to manual review or account breach.",
+          "Independent recipient-level payout evidence and the company-register extract remain outstanding."
+        ],
+        "redFlags": [
+          "Quantx claims over $570,000 distributed; the amount is not backed here by independently attributed settlement records.",
+          "No UAE commercial registration number was verified for the named legal operator.",
+          "Free or giveaway-account payout requests may be conditioned on a promotional interview, with funds withheld until completion under the current terms.",
+          "Automated strategies and position-copiers are prohibited; enrollment and trading IP regions must remain consistent."
+        ],
+        "sources": [
+          { "label": "Quantx manifesto: Aeon Funded rebrand", "url": "https://quantxfund.io/manifesto" },
+          { "label": "Quantx current terms: EVC Holdings LTD", "url": "https://quantxfund.io/terms" },
+          { "label": "Quantx AML policy: Dubai address", "url": "https://quantxfund.io/aml" },
+          { "label": "Quantx withdrawal requirements (official help)", "url": "https://quantxfund.io/help/how-can-i-request-a-payout-13765982" }
+        ]
+      },
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-17",
+          "kind": "official",
+          "publisher": "Quantx official website",
+          "quote": "More than $570,000 distributed in performance-based rewards since May 2025",
+          "url": "https://quantxfund.io/",
+          "firmReported": true
+        }
+      ],
       "changelog": [
         {
           "date": "2026-10-27",
@@ -141,6 +188,30 @@
           "fields": [
             "listedDomainWarning"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The operator's manifesto now explicitly confirms Aeon Funded's move to Quantx. Old domain safety warning cleared and current official site linked. Separate first-party terms identify EVC Holdings LTD and its Dubai business address; independent company registration still pending.",
+          "source": "https://quantxfund.io/manifesto",
+          "fields": ["officialWebsite", "listedDomainWarning", "entities", "verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Official payout policy checked: minimum $600, KYC, five 0.5% profitable days and 2.5% threshold for accounts below $50k. Processing claim is 1–3 business days; cycles depend on challenge type.",
+          "source": "https://quantxfund.io/help/how-can-i-request-a-payout-13765982",
+          "fields": ["payoutDelay"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Company-reported $570k cumulative performance rewards logged and explicitly tagged as self-reported, not independently verified payout evidence.",
+          "source": "https://quantxfund.io/",
+          "fields": ["payoutProofs"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Full legal review updated from current terms: simulated evaluation, bot and copier prohibitions, IP-region check, and additional interview condition on free-account payouts.",
+          "source": "https://quantxfund.io/terms",
+          "fields": ["legalReview"]
         }
       ]
     },
@@ -616,9 +687,34 @@
       ]
     },
     "aurafunded": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-17",
       "set": {
-        "listedDomainWarning": "The listed domain aurafunded.com redirected to an unrelated gambling website when PropRadar checked it on 2026-10-27, and the AuraFunded business is listed for sale on Flippa (asking price US$700,000). PropRadar does not link the domain until an official site is confirmed."
+        "listedDomainWarning": "The listed domain aurafunded.com redirected to an unrelated gambling website on 2026-10-27; the historical AuraPips successor homepage also showed unrelated gambling content on the 2026-11-17 recheck. The AuraFunded business was advertised for sale on Flippa. No current official challenge checkout is linked.",
+        "auditSummary": "Deep review, 17 November 2026: AuraPips' historically published Terms still name AuraFunded as provider and describe fully simulated accounts, non-refundable evaluation fees and separate third-party contracts for eligible traders. The terms do not supply a separately verifiable legal company name or registration number. Both AuraFunded's listed domain and the later AuraPips homepage have served unrelated gambling material; the archived terms do not establish an active business. The AuraPips Trustpilot page contains multiple dated 2025 allegations of unpaid withdrawals and poor communication. These are user reports, not independently adjudicated payment defaults. No reliable new payout proof was found; the profile is retained for historical risk research and the domain warning remains active."
+      },
+      "setLegalReview": {
+        "summary": "Historical AuraPips terms explicitly identify the services as AuraFunded simulations, with fictitious balances, fee non-refund terms and a possible separate contract with a third-party funded-trader provider. Neither the legal incorporated operator nor a company registration number is identified in the captured terms. Current former-brand domains no longer establish a functioning prop-firm website; the current market status is unverified, and an unrelated gambling redirect is an active domain-safety issue.",
+        "regulatoryStatus": [
+          "Historical AuraPips terms name the AuraFunded brand as provider, but no incorporated contracting company or registration number was verified.",
+          "The archived terms describe demo trading and no investment advice; funded-trader participation may be contracted by a third party.",
+          "The former domains cannot be treated as safe current purchase links while they serve unrelated gambling content."
+        ],
+        "complaintsAndDisputes": [
+          "AuraPips' claimed Trustpilot listing contains multiple June–August 2025 customer allegations of payout requests remaining pending for weeks or months; these are not independently adjudicated.",
+          "The historical terms state evaluation fees are generally non-refundable; an unjustified bank dispute may result in service termination.",
+          "Neither a current payment processor nor completed payout receipt chain was verified."
+        ],
+        "redFlags": [
+          "Historical official-looking domains now display or redirect to unrelated gambling content; links to checkout remain withheld.",
+          "Contracting legal entity, registration and current operating status are not verified.",
+          "Multiple independently authored customer reports allege delayed or unpaid payouts; no external adjudication established.",
+          "Old terms refer to contracts with third-party traders/providers rather than promising a direct trading-capital allocation."
+        ],
+        "sources": [
+          { "label": "Historical AuraPips terms retaining AuraFunded name", "url": "https://aurapips.com/terms/" },
+          { "label": "AuraPips historical homepage / current unrelated content", "url": "https://aurapips.com/" },
+          { "label": "AuraPips Trustpilot reviews: historical payout complaints", "url": "https://www.trustpilot.com/review/aurapips.com" }
+        ]
       },
       "changelog": [
         {
@@ -628,12 +724,32 @@
           "fields": [
             "listedDomainWarning"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Follow-up domain check found that the historical successor AuraPips homepage also displayed unrelated gambling content. The domain warning was refreshed; checkout stays unlinked and no definitive business-closure claim is made.",
+          "source": "https://aurapips.com/",
+          "fields": ["listedDomainWarning", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historical AuraPips terms still explicitly name AuraFunded, but provide no verified incorporated legal operator. Trustpilot user reviews contain dated unpaid-withdrawal allegations, classified as unadjudicated reports; no completed payout independently confirmed.",
+          "source": "https://aurapips.com/terms/",
+          "fields": ["legalReview"]
         }
       ],
       "addSources": [
         {
           "label": "Flippa listing: AuraFunded business for sale",
           "url": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders"
+        },
+        {
+          "label": "Historical AuraPips terms: provider named AuraFunded",
+          "url": "https://aurapips.com/terms/"
+        },
+        {
+          "label": "AuraPips historical customer reviews and payout allegations",
+          "url": "https://www.trustpilot.com/review/aurapips.com"
         }
       ]
     },
@@ -5202,7 +5318,54 @@
       ]
     },
     "top-one-trader": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
+      "set": {
+        "profitSplit": 80,
+        "payoutDelay": "Funded FLASH / 2-Step Plus / NOVA: usually every 14 days; faster cycles require eligible add-ons. Rise payouts carry a 2% processing fee.",
+        "auditSummary": "Deep review, 17 November 2026: June 2026 terms identify Top One Trader, LLC while its footer also names an Anjouan-based Top One Trader Ltd and site-stated licence L15829/TOT; legal registration/licensing was not independently checked. Official payout help documents the 14-day cadence, 2% RiseWorks processing fee, KYC, risk review and programme-specific rules. NOVA funded accounts require a 2% minimum withdrawal, <=20% ESS, locking drawdown after payout and a stated $25k rolling 30-day aggregate cap, subject to separately published loyalty-tier limits. PayoutTrail and PropTested independently monitor RiseUSD transactions attributed to Top One Trader on Arbitrum; a representative successful 8 Nov transaction is traceable on Arbiscan, but wallet attribution remains third-party and does not guarantee individual claims. Trustpilot's rating remains withheld after a guideline-breach/fake-review notice."
+      },
+      "setEntities": [
+        {
+          "name": "Top One Trader, LLC",
+          "jurisdiction": "To verify (contracting name in June 2026 terms; incorporation register not checked)",
+          "role": "Contracting company named in Terms and Conditions; separate from the LTD name in the footer."
+        },
+        {
+          "name": "Top One Trader Ltd",
+          "jurisdiction": "Anjouan, Union of Comoros (operator-stated)",
+          "registrationNumber": "License L15829/TOT (website-stated; independently unverified)",
+          "registeredAddress": "Hamchako, Mutsamudu, Anjouan, Union of Comoros (per website)",
+          "role": "Entity and international brokerage/clearing house licence claimed in footer; not evidence of tier-one client-funds protection."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Current June 2026 legal terms name Top One Trader, LLC, while the footer names Top One Trader Ltd in Anjouan and cites licence L15829/TOT. Corporate identity and the Anjouan licence are company disclosures, not independently confirmed registration/licence checks. Current October 2026 help pages define programme-dependent payout cycles, eligibility and a 2% RiseWorks fee. NOVA requires ESS consistency at or below 20%, a withdrawal of at least 2% of starting balance, and a published $25k rolling 30-day aggregate cap across accounts; the separate loyalty article lists possible higher limits by tier. Independent on-chain tracking shows RiseUSD settlement activity attributed to the firm, but wallet attribution comes from data providers and cannot establish that every trader is paid.",
+        "regulatoryStatus": [
+          "June 2026 terms name Top One Trader, LLC as the contracting company.",
+          "Website footer separately names Top One Trader Ltd, Anjouan, and licence L15829/TOT; independent registry and regulator confirmation pending.",
+          "Terms describe simulated challenge performance, not an investor deposit with standard regulated brokerage protections."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot's 2026-10-29 notice withholds the firm rating and says a number of fake reviews were removed; the notice is documented separately in the firm's incident log.",
+          "NOVA funded account: 14-day standard payout cadence (7-day paid upgrade), 90% standard split, ESS <=20%, minimum 2% withdrawal, post-payout drawdown lock and a $25k combined rolling 30-day limit as written in NOVA policy.",
+          "RiseWorks bank/crypto payouts have a 2% processing fee and require linked KYC. Accounts undergo manual risk review, typically 24–48 business hours per the firm.",
+          "On-chain RiseUSD transfers attributed to Top One Trader are visible, but the labelled wallet's linkage and beneficiary identities are not independently verified by PropRadar."
+        ],
+        "redFlags": [
+          "The same public-facing business uses LLC and Ltd names; independent incorporation/licence lookup is needed before treating them as one regulated operator.",
+          "Trustpilot withheld its score after a guideline breach and removed some fake reviews, according to its public notice.",
+          "NOVA payout eligibility and a rolling withdrawal/profit cap can make the headline profit split misleading without programme context.",
+          "The payout processor's 2% fee reduces the actual net amount a trader receives."
+        ],
+        "sources": [
+          { "label": "Top One Trader June 2026 terms and contracting company", "url": "https://www.toponetrader.com/terms-and-conditions" },
+          { "label": "Top One Trader NOVA payout rules (October 2026)", "url": "https://help.toponetrader.com/en/articles/13833385-nova-payout-rules" },
+          { "label": "Top One Trader RiseWorks payout method and 2% fee", "url": "https://help.toponetrader.com/en/articles/8466922-what-are-the-payout-methods" },
+          { "label": "Top One Trader loyalty-tier payout caps", "url": "https://help.toponetrader.com/en/articles/16401852-payouts-and-xp" },
+          { "label": "PayoutTrail on-chain settlements attributed to Top One Trader", "url": "https://www.payouttrail.com/firms/top-one-trader" },
+          { "label": "Arbiscan: example RiseUSD burn (8 Nov 2026)", "url": "https://arbiscan.io/tx/0xdfebf8d78ef867c1c834dede507941cce82a2b73c5a3bd751361933d48a4d385" }
+        ]
+      },
       "changelog": [
         {
           "date": "2026-10-29",
@@ -5220,15 +5383,29 @@
             "profitSplit",
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Current NOVA policy checked: 14-day withdrawals, 90% standard trader split, 2% minimum, ESS <=20%, drawdown lock and a stated $25k 30-day aggregate cap; separate loyalty tiers can raise monthly ceilings.",
+          "source": "https://help.toponetrader.com/en/articles/13833385-nova-payout-rules",
+          "fields": ["auditSummary", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "RiseWorks help article confirms bank/crypto settlement, KYC, manual payout review and a 2% processing fee.",
+          "source": "https://help.toponetrader.com/en/articles/8466922-what-are-the-payout-methods",
+          "fields": ["payoutDelay"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Third-party labelled on-chain RiseUSD settlements and a representative Arbiscan transaction added. Settlement is visible on-chain, but attribution of the wallet to the firm and recipients remains provider-dependent.",
+          "source": "https://www.payouttrail.com/firms/top-one-trader",
+          "fields": ["payoutProofs"]
         }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-29: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/toponetrader.com)."
       ],
-      "set": {
-        "profitSplit": 80,
-        "payoutDelay": "every 14 days on funded accounts (1-Step Flash and 2-Step Plus); on-demand payouts as a paid add-on on 2-Step Plus"
-      },
       "addSources": [
         {
           "label": "Top One Trader rules summary (official)",
@@ -5241,6 +5418,16 @@
         {
           "label": "Top One Trader 2-Step Plus overview (official help)",
           "url": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview"
+        }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-08",
+          "kind": "onchain",
+          "publisher": "PayoutTrail (wallet attribution) / Arbiscan (transfer)",
+          "quote": "08 Nov | $150.00 | 0xdfeb…d385",
+          "url": "https://arbiscan.io/tx/0xdfebf8d78ef867c1c834dede507941cce82a2b73c5a3bd751361933d48a4d385",
+          "firmReported": false
         }
       ]
     },
@@ -5648,14 +5835,110 @@
         }
       ]
     },
+    "rocket21-challenge": {
+      "reviewedAt": "2026-11-17",
+      "set": {
+        "auditSummary": "Deep review, 17 November 2026: the historical Rocket21 assessment terms identify Prop Trade Tech Pty Ltd, Australian ABN 71 661 045 950, as contracting company. An official Australian Business Register history independently confirms the same ABN and its 14 March 2025 renaming to TRADESIM PTY LTD; this verifies the legal company's existence, not that Rocket21 continues to accept or pay traders. The Nov 2024 schedule describes demo-only funded accounts, Apollo 11 first withdrawal after 14 days, Standard Regular/Swing after 30 days, later requests every 14 days, a no-HFT/no-martingale/no-grid policy, and exclusion of high-impact-news profits within four minutes on either side. Apollo 11 fee refunds were conditional on the first successful withdrawal. Third-party domain checks classify the historical challenge site as unavailable in 2026; no active checkout or current settlement receipts were independently confirmed. All quoted programme rules are historical, not a current offer."
+      },
+      "setEntities": [
+        {
+          "name": "TRADESIM PTY LTD (formerly PROPTRADETECH PTY LTD / Prop Trade Tech Pty Ltd)",
+          "jurisdiction": "Australia (Australian Business Register; business location VIC 3000)",
+          "registrationNumber": "ABN 71 661 045 950; ACN 661 045 950",
+          "registeredAddress": "Victoria 3000, Australia (business-location postcode in ABR; no street address independently checked)",
+          "role": "Historically named Rocket21 contracting entity in assessment terms; same ABN currently records TRADESIM PTY LTD, not proof of an ongoing Rocket21 contract."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "A historical Rocket21 terms PDF on the brand's own portal names Prop Trade Tech Pty Ltd, ABN 71 661 045 950. The Australian Business Register independently lists that same company identifier under TRADESIM PTY LTD from March 2025, formerly PROPTRADETECH PTY LTD. Legal existence and a documented change of corporate name are verified; the link between that company and any currently operating Rocket21 challenge business is not. Historical contracts describe fully simulated trades, discretionary funded offers, restrictive programme rules and conditional trader payments. Former public checkout domains have not been verified as operational in November 2026.",
+        "regulatoryStatus": [
+          "Historical contracting entity's Australian ABN 71 661 045 950 verified on the government Australian Business Register.",
+          "Company changed its registered name from PROPTRADETECH PTY LTD to TRADESIM PTY LTD on 14 March 2025, according to the Australian Business Register history.",
+          "The old Rocket21 contract covers a demo-only assessment environment, and the existence of an Australian company is not an ASIC broker licence for the trading programme.",
+          "Current Rocket21 trading operations and whether the ABN company still contracts with customers are not established."
+        ],
+        "complaintsAndDisputes": [
+          "Historical programme rules: Apollo 11 first withdrawal after 14 funded days, Regular/Swing after 30; subsequent requests 14 days later.",
+          "High-impact-news trades were not fully banned, but profits earned within four minutes before or after major news could be removed; funded-stage HFT, tick scalping, martingale and grid were forbidden.",
+          "Historical Apollo 11 challenge fee refund was only available after the first successful withdrawal and was lost after a disqualifying breach.",
+          "No verifiable up-to-date paid-to-trader receipt, operational checkout or new customer agreement was recovered."
+        ],
+        "redFlags": [
+          "Former challenge site is reported inaccessible in several October 2026 checks; a live active operation is unverified.",
+          "The current ABN company name differs from the name printed on the historical contract, so the legal link to any new programme needs reconfirmation.",
+          "Passing the assessment did not guarantee a funded-trader offer under historical contract terms.",
+          "All recorded payout conditions come from 2024 documents, not a verified 2026 checkout or agreement."
+        ],
+        "sources": [
+          { "label": "Rocket21 2024 historical terms: ABN and simulation model", "url": "https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21-2.pdf" },
+          { "label": "Rocket21 November 2024 assessment schedule", "url": "https://portal.rocket21challenge.com/schedule-of-assessment/" },
+          { "label": "Australian Business Register: current ABN 71 661 045 950", "url": "https://abr.business.gov.au/ABN/View?abn=71661045950" },
+          { "label": "Australian Business Register: name-change history", "url": "https://abr.business.gov.au/AbnHistory/View?id=71661045950" },
+          { "label": "October 2026 independent Rocket21 domain checks", "url": "https://mypropgenius.com/closed-firms/" }
+        ]
+      },
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Rocket21's own older terms name Prop Trade Tech Pty Ltd ABN 71 661 045 950; Australian Business Register confirms the same legal entity and March 2025 name change to TRADESIM PTY LTD. This is historical operator attribution, not current operating proof.",
+          "source": "https://abr.business.gov.au/AbnHistory/View?id=71661045950",
+          "fields": ["entities", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historical schedule and contract recovered: simulated accounts, 14-day vs 30-day initial withdrawals by programme, 14-day repeats, conditional refunds, restricted strategies and high-impact-news profit exclusions. Current availability and payout completion remain unverified.",
+          "source": "https://portal.rocket21challenge.com/schedule-of-assessment/",
+          "fields": ["legalReview"]
+        }
+      ]
+    },
     "traders-central": {
-      "reviewedAt": "2026-10-31",
+      "reviewedAt": "2026-11-17",
       "set": {
         "officialWebsite": "https://traderscentralfund.com/",
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 973,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/traderscentralfund.com",
-        "listedDomainWarning": "The listed domain traderscentralfund.com redirected to traderseco.com when PropRadar checked it on 2026-10-31, and traderseco.com did not resolve (no DNS record). The domain monitor has reported the site unreachable since 2026-10-28. PropRadar found no other official site for Traders Central, so the domain is not linked."
+        "listedDomainWarning": "The former traderscentralfund.com domain redirected to traderseco.com, which did not resolve on the 2026-10-31 check; no verified active challenge site was found. The 2023 Alpha Capital Group acquisition covered intellectual property, not documented transfer of all trader liabilities. Historical legal documents can identify earlier counterparties but cannot establish current operations or guarantee payouts.",
+        "auditSummary": "Deep review, 17 November 2026: historical legal documents hosted at legal.traderseco.com identify Traders Central Fund Corp. as a Canadian intermediary (registration number BC1281254 stated on its own 2022 disclaimer), not a broker or the actual backer. Those materials name Prime Bridge Securities LLC for an older funding policy, with funded-account payments handled by backers rather than Traders Central. A Newsfile announcement confirms that Alpha Capital Group acquired Traders Central Fund's intellectual property in April 2023; this alone does not establish acquisition of liabilities or continued operation. The former challenge domain is not a verified working checkout. Neither the claimed BC registration number nor new completed payouts were independently verified in a registry/settlement ledger, so historical operating terms must not be sold as current."
+      },
+      "setEntities": [
+        {
+          "name": "Traders Central Fund Corp.",
+          "jurisdiction": "To verify (British Columbia, Canada claimed in 2022 legal disclaimer)",
+          "registrationNumber": "BC1281254 (operator-stated; independent registry extract not obtained)",
+          "role": "Historical trader-referral intermediary, not the direct broker or funder under the 2022 disclaimer."
+        },
+        {
+          "name": "Prime Bridge Securities LLC",
+          "jurisdiction": "To verify (historical funding-policy counterparty)",
+          "role": "Funding/backer company named in older TradersEco policy; its present operation and registration are not established."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The 10 May 2022 Traders Central Fund Corp disclaimer names Canadian registration BC1281254, describes the brand as a referral intermediary, and assigns actual funding and profit payouts to separate backers. A historical policy names Prime Bridge Securities LLC. A 17 April 2023 Newsfile release confirms that Alpha Capital Group acquired the firm's intellectual property, not necessarily its corporate liabilities or old trader accounts. Neither the BC registration nor an operating merchant entity/current payment contract has been independently confirmed in 2026; links to the former site remain blocked.",
+        "regulatoryStatus": [
+          "Traders Central Fund Corp. identified itself in 2022 as a Canadian intermediary with number BC1281254; no government registry match was independently captured in this pass.",
+          "Historical legal disclaimer says the intermediary itself was not a broker, prop fund, hedge fund or investment fund.",
+          "Funding counterparties such as Prime Bridge Securities LLC were separate; the current legal and commercial relationships are not established.",
+          "An April 2023 news release documents an IP acquisition by Alpha Capital Group, not evidence of full legal merger or outstanding-obligation assumption."
+        ],
+        "complaintsAndDisputes": [
+          "Historical funding rules make backers, not the intermediary, responsible for trader funding and profit distributions.",
+          "Historical Prime Bridge rules included payout-request windows, active-plan prerequisites and broad risk-desk discretion; these are not valid quotations of current purchasable rules.",
+          "No trustworthy current checkout, beneficiary-level payout ledger or legally responsible entity for new traders has been verified."
+        ],
+        "redFlags": [
+          "Former official domains redirect or fail; the current operating status cannot be verified from an active challenge site.",
+          "Legal responsibility for payouts was divided between intermediary, backer and broker under older terms.",
+          "An acquisition of brand IP does not, by itself, establish the assumption of client payout obligations.",
+          "The Canadian registration number is the company's own historical statement; independent corporate-record verification is outstanding."
+        ],
+        "sources": [
+          { "label": "Traders Central Fund 2022 legal disclaimer", "url": "https://legal.traderseco.com/disclaimer" },
+          { "label": "Prime Bridge historical funding policy", "url": "https://legal.traderseco.com/funding-provider/funding-policy" },
+          { "label": "Alpha Capital Group 2023 IP acquisition press release", "url": "https://www.newsfilecorp.com/release/161688" }
+        ]
       },
       "changelog": [
         {
@@ -5676,6 +5959,18 @@
           "fields": [
             "listedDomainWarning"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historical legal disclaimer newly recovered: Traders Central Fund Corp. claimed British Columbia registration BC1281254 and explicitly acted as referral intermediary rather than broker or direct payout obligor; registry remains unverified.",
+          "source": "https://legal.traderseco.com/disclaimer",
+          "fields": ["entities", "legalReview", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Newsfile primary acquisition announcement confirms Alpha Capital Group bought intellectual property in 2023, not demonstrably all liabilities. Former domain remains blocked and no current payouts were verified.",
+          "source": "https://www.newsfilecorp.com/release/161688",
+          "fields": ["listedDomainWarning"]
         }
       ],
       "addSources": [

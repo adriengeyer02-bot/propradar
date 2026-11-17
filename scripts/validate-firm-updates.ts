@@ -69,9 +69,12 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     for (const key of ['complaintsAndDisputes', 'redFlags'] as const) {
       if (!Array.isArray(legal[key]) || legal[key].some((item) => typeof item !== 'string' || !item.trim())) errors.push(`${where}.setLegalReview.${key}: array of non-empty strings required`);
     }
+    if (legal.regulatoryStatus !== undefined && (!Array.isArray(legal.regulatoryStatus) || legal.regulatoryStatus.some((item) => typeof item !== 'string' || !item.trim()))) {
+      errors.push(`${where}.setLegalReview.regulatoryStatus: array of non-empty strings required`);
+    }
     if (!Array.isArray(legal.sources) || !legal.sources.length || legal.sources.some((source) => !source.label || !isHttpsUrl(source.url))) errors.push(`${where}.setLegalReview.sources: public sources required`);
     for (const key of Object.keys(legal)) {
-      if (!['summary', 'complaintsAndDisputes', 'redFlags', 'sources'].includes(key)) errors.push(`${where}.setLegalReview.${key}: field not allowed`);
+      if (!['summary', 'regulatoryStatus', 'complaintsAndDisputes', 'redFlags', 'sources'].includes(key)) errors.push(`${where}.setLegalReview.${key}: field not allowed`);
     }
     if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('legalReview') && legal.sources?.some((source) => source.url === entry.source))) errors.push(`${where}.setLegalReview: matching sourced legalReview changelog required`);
     const oldSources = new Set([...firm.sources, ...firm.regulatoryAudit.sources, ...(previous.firms?.[slug]?.addSources ?? []), ...(previous.firms?.[slug]?.setLegalReview?.sources ?? [])].map((source) => source.url));

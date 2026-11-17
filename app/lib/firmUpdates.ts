@@ -65,7 +65,8 @@ export type FirmUpdate = {
   /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
   setEntities?: RegulatoryEntity[];
   /** Refreshes the written legal file without changing the risk level or identified entities. */
-  setLegalReview?: Pick<RegulatoryAudit, 'summary' | 'complaintsAndDisputes' | 'redFlags' | 'sources'>;
+  setLegalReview?: Pick<RegulatoryAudit, 'summary' | 'complaintsAndDisputes' | 'redFlags' | 'sources'> &
+    Partial<Pick<RegulatoryAudit, 'regulatoryStatus'>>;
   /** Public payout proof to append (never replaces earlier items). */
   addPayoutProofs?: PayoutProof[];
   changelog: FirmChangelogEntry[];

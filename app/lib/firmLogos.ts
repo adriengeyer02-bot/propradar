@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 144 logos, fetched 2026-11-16.
+// 145 logos, fetched 2026-11-17.
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -34,8 +34,8 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "blusky.pro": { file: "blusky-trading.png", source: "https://blusky.pro/wp-content/uploads/2025/08/cropped-favicon-192x192.png" },
   "breakoutprop.com": { file: "breakout-prop.png", source: "favicon service for breakoutprop.com" },
   "brightfunded.com": { file: "brightfunded.png", source: "https://framerusercontent.com/images/DiuykdZpUOfvmYDUbbnXnX1p78.png" },
-  "bullwaves.com": { file: "bullwaves-prime.png", source: "https://bullwaves.com/brand-guidelines (official Bullwaves Prime Classic Icon)" },
   "bulenox.com": { file: "bulenox.png", source: "https://bulenox.com/assets/logo-iXtDrF5P.svg" },
+  "bullwaves.com": { file: "bullwaves-prime.png", source: "https://bullwaves.com/brand-guidelines (official Bullwaves Prime Classic Icon)" },
   "cashflowfunding.com": { file: "cash-flow-funding.png", source: "favicon service for cashflowfunding.com" },
   "citytradersimperium.com": { file: "city-traders-imperium.png", source: "https://b4647544.assetcdn.net/2.0/4647544/wp-content/uploads/2020/03/City-Traders-Imperium-Logo-3-300x300.png?lossy=0&strip=1&webp=1" },
   "claritytraders.com": { file: "clarity-traders.png", source: "https://cdn.prod.website-files.com/6996dc189db4a155eab22aaf/6996dc189db4a155eab22b43_Untitled-1.png" },
@@ -121,6 +121,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "propnumberone.com": { file: "prop-number-one.png", source: "https://propnumberone.com/prop-no-1-brown.svg" },
   "purdia.com": { file: "purdia-capital.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/63bbf8c692fe59d1ce884da8/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "quanttekel.com": { file: "quant-tekel.png", source: "https://quanttekel.com/wp-content/uploads/2025/06/favicon-1.png" },
+  "quantxfund.io": { file: "aeon-funded.png", source: "https://quantxfund.io/favicon.ico" },
   "rebelsfunding.com": { file: "rebelsfunding.png", source: "https://www.rebelsfunding.com/android-chrome-512x512.png" },
   "rocket21challenge.com": { file: "rocket21-challenge.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/62e309294a216fae180f1fd3/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "rzrfunded.com": { file: "hantec-trader.png", source: "https://rzrfunded.com/logo.svg" },
