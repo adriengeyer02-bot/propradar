@@ -2,7 +2,7 @@
  * Site languages. English stays at the root (no prefix, existing URLs);
  * the other languages live under their prefix (/fr, /de, ... /hi).
  */
-export const LOCALES = ['en', 'fr', 'de', 'it', 'es', 'pt', 'zh', 'ja', 'hi', 'tr', 'ar'] as const;
+export const LOCALES = ['en', 'fr', 'de', 'it', 'es', 'pt', 'zh', 'ja', 'hi', 'tr', 'ar', 'ko'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'en';
 export const PREFIXED_LOCALES = LOCALES.filter((locale) => locale !== DEFAULT_LOCALE);
@@ -19,13 +19,14 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   hi: 'हिन्दी',
   tr: 'Türkçe',
   ar: 'العربية',
+  ko: '한국어',
 };
 
-export const LOCALE_SHORT: Record<Locale, string> = { en: 'EN', fr: 'FR', de: 'DE', it: 'IT', es: 'ES', pt: 'PT', zh: '中文', ja: '日本語', hi: 'हिन्दी', tr: 'TR', ar: 'عربي' };
+export const LOCALE_SHORT: Record<Locale, string> = { en: 'EN', fr: 'FR', de: 'DE', it: 'IT', es: 'ES', pt: 'PT', zh: '中文', ja: '日本語', hi: 'हिन्दी', tr: 'TR', ar: 'عربي', ko: '한국어' };
 
 /** BCP 47 tags for <html lang> and hreflang. */
-export const HTML_LANG: Record<Locale, string> = { en: 'en', fr: 'fr', de: 'de', it: 'it', es: 'es', pt: 'pt', zh: 'zh-Hans', ja: 'ja', hi: 'hi', tr: 'tr', ar: 'ar' };
-export const OG_LOCALE: Record<Locale, string> = { en: 'en_US', fr: 'fr_FR', de: 'de_DE', it: 'it_IT', es: 'es_ES', pt: 'pt_BR', zh: 'zh_CN', ja: 'ja_JP', hi: 'hi_IN', tr: 'tr_TR', ar: 'ar_SA' };
+export const HTML_LANG: Record<Locale, string> = { en: 'en', fr: 'fr', de: 'de', it: 'it', es: 'es', pt: 'pt', zh: 'zh-Hans', ja: 'ja', hi: 'hi', tr: 'tr', ar: 'ar', ko: 'ko-KR' };
+export const OG_LOCALE: Record<Locale, string> = { en: 'en_US', fr: 'fr_FR', de: 'de_DE', it: 'it_IT', es: 'es_ES', pt: 'pt_BR', zh: 'zh_CN', ja: 'ja_JP', hi: 'hi_IN', tr: 'tr_TR', ar: 'ar_SA', ko: 'ko_KR' };
 
 export const LOCALE_COOKIE = 'NEXT_LOCALE';
 
@@ -75,14 +76,14 @@ const TRANSLATED = [
   /^\/(articles|meilleures-prop-firms-2026|prop-firm-sans-challenge|regle-de-consistance-prop-firm|drawdown-prop-firm|avis-topstep|ftmo-vs-the5ers)$/,
 ];
 
-// Turkish and Arabic are being introduced on the main decision surfaces first.
+// Turkish, Arabic and Korean are introduced on the main decision surfaces first.
 // Other routes remain accessible but must not be indexed as translated copies
 // until their complete editorial copy has been localized.
 const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/];
 
 export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';
-  if (locale === 'tr' || locale === 'ar') {
+  if (locale === 'tr' || locale === 'ar' || locale === 'ko') {
     return NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
   }
   return TRANSLATED.some((pattern) => pattern.test(clean));

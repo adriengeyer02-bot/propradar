@@ -12,7 +12,7 @@ import hi from './hi';
 export type { ToolsMessages };
 
 // Untranslated editorial pages fall back to English and are noindexed in these locales.
-const ALL: Record<Locale, ToolsMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en };
+const ALL: Record<Locale, ToolsMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en, ko: en };
 
 /** /tools strings in the page language. */
 export function getPageMessages(locale: Locale): ToolsMessages {

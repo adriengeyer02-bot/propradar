@@ -854,8 +854,19 @@
       ]
     },
     "blusky-trading": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of the October 2026 Sim Funded and live-brokerage policies: $500 minimum payout, $500 fresh trading profit between requests, rolling seven-day caps and mandatory brokerage review at $10,000 cumulative profit. The live invitation immediately ends further Sim Funded payouts/trading, and nationality/KYC restrictions can alter eligibility. These conditions are policy statements, not independently verified transfers; score left unchanged.",
+          "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+          "fields": ["verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Checked official brokerage eligibility rules: restricted citizenship/residence can bar the brokerage route even when simulation was available; broker checks require government ID and address proof. No country eligibility was inferred from an absent name in the public extract.",
+          "source": "https://help.blusky.pro/en/articles/12434004-list-of-countries-we-cannot-offer-services-to-can-i-trade-with-blusky"
+        },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot read for the first time: 4.7 TrustScore across 940 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -878,6 +889,8 @@
         }
       ],
       "set": {
+        "verdict": "BluSky has a detailed official futures help center, but its October 2026 terms make Sim Funded withdrawals conditional on a $500 minimum, fresh profits between payouts and rolling seven-day caps. A compulsory brokerage review at $10,000 cumulative profit can end Sim Funded payout eligibility immediately on invitation; residence and brokerage KYC may impose additional restrictions. These are material conditions for a buyer, not proof of misconduct or of actual payments.",
+        "auditSummary": "Deep audit (17 November 2026): the official Sim Funded rules effective 1 October require a minimum $500 withdrawal, at least $500 of new ordinary trading profit before a subsequent request, and a rolling 7-day payout cap. The trader must contact support before crossing $10,000 total account profit including payouts; reviews may take five trading days and continued trading during review can put the account at risk. The invitation to Live Brokerage immediately terminates eligibility for new Sim Funded requests; an approved live trader starts at $0, with eligible simulated profits moved to a Bonus Vault, or may choose a defined buyout subject to restrictions. Brokerage checks demand identity and address documents, and certain nationalities or residences cannot qualify; BluSky says risk parameters and profit splits may differ for some simulation-only traders. Platform, size and plan-specific rules vary: the stored Launch evaluation figures are not a blanket rule for all BluSky programs. No independently authenticated payout or execution/slippage test was performed by PropRadar.",
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 940,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/blusky.pro",
@@ -908,6 +921,18 @@
         }
       ],
       "addSources": [
+        {
+          "label": "BluSky Sim Funded account and payout rules, effective October 2026 (official, checked 2026-11-17)",
+          "url": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules"
+        },
+        {
+          "label": "BluSky live-brokerage transition and withdrawal rules (official, checked 2026-11-17)",
+          "url": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+        },
+        {
+          "label": "BluSky restricted-country and brokerage KYC policy (official, checked 2026-11-17)",
+          "url": "https://help.blusky.pro/en/articles/12434004-list-of-countries-we-cannot-offer-services-to-can-i-trade-with-blusky"
+        },
         {
           "label": "BluSky Launch plans: phases, rules and costs (official help)",
           "url": "https://help.blusky.pro/en/articles/16300846-launch-plans-phases-rules-and-costs"
@@ -2710,8 +2735,14 @@
       ]
     },
     "fx2-funding": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep review of current FX2 FAQ and withdrawal provisions: Instant accounts generally allow one withdrawal every 30 days absent the Rapid Payout add-on, require the higher of $100 or 1% of starting balance, and lock the trailing drawdown at the initial balance after withdrawal. The FAQ warns that fully withdrawing gains may breach and forfeit the account. KYC can be deferred until withdrawal, when failure cancels gains; no score change or independently verified payout asserted.",
+          "source": "https://fx2funding.com/faqs/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot read for the first time: 4.1 TrustScore across 456 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -2733,6 +2764,8 @@
         }
       ],
       "set": {
+        "verdict": "FX2 Funding offers evaluation and instant pathways but its official Instant FAQ contains a sharp withdrawal trap: taking all profits can lock trailing drawdown at the initial balance and breach the account. Without the paid Rapid Payout option, Instant withdrawals are limited to one every 30 days; KYC deferred until withdrawal can lead to forfeiture of gains if unsuccessful. A public 48-hour processing claim is not an independently tested payout.",
+        "auditSummary": "Deep audit (17 November 2026): the operator identifies FX2 Funding, LTD in Saint Lucia (2025-00108) and assessment provider Prop Account LTD; the product is a paid simulated assessment, not brokerage custody. FX2's public FAQ distinguishes 1-Step, 2-Step, Instant and Futures, so their drawdowns and payout cycles cannot be blended. For Instant, the larger of $100 or 1% of starting capital is the minimum withdrawal, with one request every 30 days unless a Rapid Payout add-on was bought. On approval, trailing drawdown locks at the starting balance; withdrawing the full gains can eliminate the remaining loss buffer and breach the funded account. The firm allows Instant KYC/contract checks to wait until a payout request, but says failed KYC results in rejected withdrawal, lost gains and closure. Its separate general FAQ markets payouts processed within 48 hours via crypto or Rise; that timing was not independently verified, nor were live spreads/slippage or receipts. The stated US/Canada service exclusion and exact plan agreement need review before payment.",
         "trustpilotRating": 4.1,
         "trustpilotReviewCount": 456,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fx2funding.com",
@@ -2741,6 +2774,14 @@
         "payoutDelay": "bi-weekly, starting 14 days after the first trade (5 days with an add-on); instant funding: one request per 30 days, processed within 48 hours"
       },
       "addSources": [
+        {
+          "label": "FX2 Instant withdrawal, trailing drawdown and KYC FAQ (official, checked 2026-11-17)",
+          "url": "https://fx2funding.com/faqs/"
+        },
+        {
+          "label": "FX2 general payout-processing timing and payment routes (firm claim, checked 2026-11-17)",
+          "url": "https://fx2funding.com/blog/general-faqs/how-are-withdrawal-payouts-requests-processed/"
+        },
         {
           "label": "FX2 Funding FAQ (official)",
           "url": "https://fx2funding.com/faqs/"
@@ -3285,8 +3326,14 @@
       ]
     },
     "ic-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Cross-checked current IC Funded 2-Step rules and terms: 10%/5% targets, 5% EOD-based daily/10% fixed overall drawdowns, three active days per step and staged 14-day reward requirements. Maximum 90% applies to specific add-on/program combinations, not necessarily base participation; 1-Step and Instant are distinct. Recorded clauses allowing payout cancellation for prohibited strategies; no individual wrongdoing asserted or score changed.",
+          "source": "https://www.icfunded.com/rules",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 3.4 TrustScore across 183 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -3310,6 +3357,8 @@
         }
       ],
       "set": {
+        "verdict": "IC Funded publishes unusually granular 2-Step conditions, but the 'up to 90%' share depends on the selected program/add-ons and Instant is capped at a different advertised maximum. Funded payouts depend on profitable-day conditions and 14-day intervals; the terms allow cancellation of rewards for broadly described prohibited conduct. The site explains the rules, yet independent bank/on-chain payout verification and measured spreads remain outstanding.",
+        "auditSummary": "Deep audit (17 November 2026): IC Funded's current 2-Step Professional rules specify a 10% Step 1 and 5% Step 2 target, 5% daily limit calculated on end-of-day equity, 10% fixed overall drawdown, and three active days per evaluation step. The page advertises $74 for a $5K evaluation, up to 90% profit share, biweekly payout availability (weekly only as an add-on), and graduated profitable-day checks: five for the first reward, three for the second, none thereafter, subject to 14-day intervals. Current Terms section 12 prohibits latency/price exploitation, artificial target-meeting trades and certain automation; it gives the operator broad rights to cancel rewards on violations. The terms explicitly distinguish simulated capital from live market funds; KYC and jurisdictional eligibility still apply. Unlike 2-Step, the Instant program advertises at most 80% reward share, so a single firm-level figure must not be read as every product's default. Spread, platform execution and bank/on-chain payment evidence were not independently tested; no Trustpilot manipulation allegation is inferred.",
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 183,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.icfunded.com",
@@ -3359,6 +3408,14 @@
         }
       ],
       "addSources": [
+        {
+          "label": "IC Funded current 2-Step program rules and selected price (official, checked 2026-11-17)",
+          "url": "https://www.icfunded.com/rules"
+        },
+        {
+          "label": "IC Funded terms, prohibited strategies and reward discretion (official, checked 2026-11-17)",
+          "url": "https://www.icfunded.com/terms-and-conditions"
+        },
         {
           "label": "IC Funded rules (official)",
           "url": "https://www.icfunded.com/rules"
@@ -3786,8 +3843,14 @@
       ]
     },
     "moneta-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of Moneta Funded multi-plan comparison and September 2026 contractual terms: drawdown, consistency, news permissions and payout intervals differ materially across Instant, Instant Pro, Phoenix, 1-Step and 2-Step. The contractual consistency formula applies to individual payout cycles, and the Instant Pro daily profit cap can exclude gains. Identified differences between summary displays for 1-Step drawdown requiring checkout-plan verification; no score changed.",
+          "source": "https://www.monetafunded.com/compare-challenges/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot read for the first time: 4.6 TrustScore across 284 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -3799,10 +3862,26 @@
         }
       ],
       "set": {
+        "verdict": "Moneta Funded's headline 88% split and broker-linked marketing conceal very different challenge mechanics. Standard Instant has a 15%/20% consistency condition and trailing loss limit, Instant Pro introduces a daily-profit ceiling, and news trading is not universally allowed. The comparison, general rules and September 2026 agreement must be reconciled for the exact checkout plan; broker association alone does not prove reward solvency or execution quality.",
+        "auditSummary": "Deep audit (17 November 2026): Moneta Funded Ltd is disclosed in Saint Lucia (2025-00532); its September 2026 contract defines simulated funds and account-specific rules, not deposits at Moneta Markets. Its program comparison spans 1-Step Daily, 1-Step, 2-Step, Instant, Instant Pro, Phoenix and Sprint. The comparison marks news trading disallowed on the ordinary 1/2-Step and Instant models but allowed on Instant Pro and Phoenix, with material differences in loss limits and first payout. For Instant, it states a 15%/20% consistency threshold; clause 5.1F of the current PDF calculates best realized trading day divided by total realized P&L in that payout cycle, delaying payment when breached. The PDF also allows automatic closing or excluding profit above an Instant Pro per-day cap. At the time of review, the public general-rules page described 1-Step/Phoenix as 6% static while the comparison presented its generic One-Step as 5% trailing: this may reflect product variants or stale copy, so obtain the exact program/checkout document in writing. Advertised 14-day/on-demand reward cycles are not authenticated customer payout evidence; no account or spread was tested by PropRadar.",
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 284,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/monetafunded.com"
-      }
+      },
+      "addSources": [
+        {
+          "label": "Moneta Funded program-by-program comparison (official, checked 2026-11-17)",
+          "url": "https://www.monetafunded.com/compare-challenges/"
+        },
+        {
+          "label": "Moneta Funded general drawdown and profit rules (official, checked 2026-11-17)",
+          "url": "https://www.monetafunded.com/general-rules/"
+        },
+        {
+          "label": "Moneta Funded contract September 2026, payout consistency and profit caps (official PDF)",
+          "url": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        }
+      ]
     },
     "my-crypto-funding": {
       "reviewedAt": "2026-10-27",
@@ -4379,8 +4458,14 @@
       }
     },
     "rebelsfunding": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit against RebelsFunding rules version 3.2 dated 11 November 2026 and terms. Gold evaluation has no daily drawdown but funded RCF has a 4% daily limit; 8 real trades, 10% target, 6% maximum drawdown, 75% initial reward and no fee refund. Passing does not automatically grant the separate RCF agreement; first eligible reward request after 14 days and $50 minimum. EAs prohibited. Score unchanged; no direct payout test.",
+          "source": "https://www.rebelsfunding.com/all-the-rules/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.3 TrustScore across 2,776 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -4404,6 +4489,8 @@
         }
       ],
       "set": {
+        "verdict": "RebelsFunding has a documented Slovak company/operator and unusually detailed program-specific conditions. The Gold 'no daily drawdown' message applies to evaluation only: the simulated RCF phase has a 4% daily limit, a 1.5% trade-idea risk rule and news-window restrictions. Completing an evaluation does not guarantee an RCF contract or payment. Official reward eligibility is not independent evidence of payouts; check the accepted version of the rules.",
+        "auditSummary": "Deep audit (17 November 2026) against RebelsFunding's official all-rules page (version 3.2, updated 11 November), terms and FAQ. Evaluation services are attributed to Slovakia-based RIFM, s.r.o.; any RCF collaboration needs a separately approved contract involving RIFM and FRCSM, s.r.o. The Gold program requires an evaluation 10% profit target and eight independent real trades, has no evaluation daily loss ceiling but 6% overall fixed drawdown, and starts at a 75% reward share with no evaluation-fee refund. RCF is still simulated and introduces a 4% daily loss threshold, a 1.5% maximum risk per trade idea and restrictions around high-impact news. The first reward request cannot precede 14 calendar days after the first RCF trade, must be at least $50 and requires closed positions; passing does not automatically create an entitlement. The terms prohibit paid-program EAs and arbitrage/split-trade rule evasion. Website program claims were checked, but no independent deposit receipt, trade-execution/slippage study or customer-level payout transfer was authenticated; the 90% advertised maximum is conditional.",
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 2776,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/rebelsfunding.com",
@@ -4438,6 +4525,14 @@
         }
       ],
       "addSources": [
+        {
+          "label": "RebelsFunding all program rules, version 3.2 of 11 November 2026 (official)",
+          "url": "https://www.rebelsfunding.com/all-the-rules/"
+        },
+        {
+          "label": "RebelsFunding contractual approval, simulated RCF and use restrictions (official)",
+          "url": "https://www.rebelsfunding.com/terms-and-conditions/"
+        },
         {
           "label": "RebelsFunding Gold 1-phase program (official)",
           "url": "https://lo.rebelsfunding.com/programs/gold-1-phase/"
