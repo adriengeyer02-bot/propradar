@@ -2157,8 +2157,26 @@
       ]
     },
     "funded7": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Official Rule 1 reveals three payout-quality conditions absent from the previous comparison: statistical trade-size limit MIN(2.5 x median, Q3 + 1.5 x IQR), 10 closed trades over 3 active trading days and a best-three-trades QC ratio >=0.90. Failure can defer payouts without being an account-breach strike. Corrected consistency metadata across program cards; precise applicability to each new variant should be reconfirmed at checkout.",
+          "source": "https://funded7.com/faq/rule-1-payout-criteria/",
+          "fields": ["products", "verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Official terms name ICHIBAN TECH LTD (Cyprus HE470329) and SUCCESSIO LTD (Seychelles 245758), alongside the FUNDED7 LTD (St Lucia 2025-00900) group disclosure already in the base profile. The role of each entity in an individual invoice remains to be verified.",
+          "source": "https://funded7.com/terms-and-conditions/",
+          "fields": ["entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Payout FAQ: >=$100 net after split, seven-day request interval, KYC and account read-only at request. Separately, Terms section 3 limits all client withdrawals to $10,000/calendar month, while section 12 gives promotional/giveaway accounts 50% split, 2% payout cap and 30-day interval. No independently authenticated bank or chain transfer found.",
+          "source": "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/",
+          "fields": ["payoutDelay", "auditSummary"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot read for the first time: 3.1 TrustScore across 49 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -2186,7 +2204,9 @@
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/funded7.com",
         "profitSplit": 80,
         "drawdownType": "Hybride",
-        "payoutDelay": "every 7 days, processed within 1 day; minimum withdrawal $100"
+        "payoutDelay": "Requests every 7 days if eligible; $100 minimum net of split; KYC and Rule 1 consistency review apply. Promotional accounts: every 30 days, capped.",
+        "auditSummary": "17 Nov 2026 deep review: Funded7 has meaningful payout eligibility gates not visible in a simple challenge comparison. Rule 1 examines relative notional trade size, requires 10 closed trades over 3 active days and QC >=0.90 for the top three trades; a failed check can defer payout rather than permanently breach an account. Minimum withdrawal is $100 after split; Terms section 3 additionally specifies a $10,000 maximum per calendar month per client. Promo/giveaway accounts use separate capped, 30-day rules. Cyprus, Seychelles and St Lucia entities are disclosed; checkout contracting identity and third-party payout receipts need verification.",
+        "verdict": "Funded7's 7-day payout headline is conditional: a statistical consistency test can defer an otherwise profitable trader's withdrawal. The terms cap client withdrawals at $10,000 per calendar month; promotional accounts follow even stricter terms. Inspect Rule 1 and the exact checkout entity before paying; no independently authenticated payout transfer was located."
       },
       "setProducts": [
         {
@@ -2210,8 +2230,8 @@
             "Crypto"
           ],
           "minTradingDays": "3",
-          "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rule listed on the comparison page (29 Oct 2026)."
+          "hasConsistencyRule": true,
+          "consistencyRule": "Payout-quality Rule 1: notional trade size <= MIN(median x 2.5, Q3 + 1.5 x IQR); >=10 closed trades, >=3 active days; (2nd + 3rd best profits)/best profit >=0.90. Failing can delay payout, rather than constitute a hard breach. Confirm program applicability."
         },
         {
           "id": "funded7-one-phase",
@@ -2234,8 +2254,8 @@
             "Crypto"
           ],
           "minTradingDays": "3",
-          "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rule listed on the comparison page (29 Oct 2026)."
+          "hasConsistencyRule": true,
+          "consistencyRule": "Payout-quality Rule 1: notional trade size <= MIN(median x 2.5, Q3 + 1.5 x IQR); >=10 closed trades, >=3 active days; (2nd + 3rd best profits)/best profit >=0.90. Failing can delay payout, rather than constitute a hard breach. Confirm program applicability."
         },
         {
           "id": "funded7-instant",
@@ -2258,16 +2278,56 @@
             "Crypto"
           ],
           "minTradingDays": "3",
-          "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rule listed on the comparison page (29 Oct 2026)."
+          "hasConsistencyRule": true,
+          "consistencyRule": "Payout-quality Rule 1: notional trade size <= MIN(median x 2.5, Q3 + 1.5 x IQR); >=10 closed trades, >=3 active days; (2nd + 3rd best profits)/best profit >=0.90. Failing can delay payout, rather than constitute a hard breach. Confirm program applicability."
         }
       ],
       "addSources": [
         {
           "label": "Funded7 challenge comparison (official)",
           "url": "https://funded7.com/challenge-comparison/"
+        },
+        {
+          "label": "Funded7 Rule 1: trade-size, activity and profit quality for payouts",
+          "url": "https://funded7.com/faq/rule-1-payout-criteria/"
+        },
+        {
+          "label": "Funded7 terms, section 3 monthly limit and section 12 promo account rules",
+          "url": "https://funded7.com/terms-and-conditions/"
         }
-      ]
+      ],
+      "setEntities": [
+        {
+          "name": "FUNDED7 LTD",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2025-00900",
+          "role": "Group/brand entity disclosed on website; exact contracting role depends on purchase documentation."
+        },
+        {
+          "name": "ICHIBAN TECH LTD",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE470329",
+          "role": "Entity named in the published Terms and Conditions; independently cross-check the company number against a live company-register extract."
+        },
+        {
+          "name": "SUCCESSIO LTD",
+          "jurisdiction": "Seychelles",
+          "registrationNumber": "245758",
+          "role": "Entity named in the published Terms and Conditions; exact billing/contracting role is not established from the public text alone."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Multiple company names appear in the group disclosures (Saint Lucia, Cyprus and Seychelles), with registration identifiers. The buyer's particular contracting party remains to be confirmed on the invoice. A material payout restriction is its statistical Rule 1: unusually large notional trades, too few trades/days or concentrated best-trade profits can defer withdrawals. This is a payout-quality gate, not automatically a hard account breach. Terms section 3 limits all client withdrawals to $10,000 per calendar month, despite nearby marketing language about no limits for directly purchased challenges; promotional accounts follow separate 30-day/2%-cap/50%-split limits. No public bank confirmation or independently attributable chain transaction was found.",
+        "regulatoryStatus": ["Disclosed operating group entities in Saint Lucia, Cyprus and Seychelles are not evidence of a retail broker licence.", "Challenge accounts and trader rewards are subject to the terms and eligibility checks; the checkout counterparty must be verified."],
+        "complaintsAndDisputes": ["Rule 1 may defer a reward even if the advertised target and loss limits were met; check the numerical thresholds before trading.", "A reward request triggers read-only account state and closure of open trades, subject to the FAQ wording.", "Terms section 3 caps client withdrawals at $10,000 per calendar month, while section 12 calls directly purchased challenges free of payout caps: ask for written clarification.", "Published information about withdrawal methods varies across help pages; ask the firm which method applies to the purchased program."],
+        "redFlags": ["The simplified comparison did not disclose the detailed Rule 1 payout-consistency test.", "Terms section 3 imposes a $10,000/month withdrawal cap, despite broadly worded section 12 marketing about no cap on purchased accounts.", "Different payout economics apply to promotional/giveaway accounts.", "Multiple disclosed corporate entities complicate identifying the actual checkout counterparty and recovery venue.", "No independent customer payout settlement evidence established."],
+        "sources": [
+          {"label": "Funded7 Rule 1 payout criteria (official)", "url": "https://funded7.com/faq/rule-1-payout-criteria/"},
+          {"label": "Funded7 legal terms (official)", "url": "https://funded7.com/terms-and-conditions/"},
+          {"label": "Funded7 payout mechanics (official)", "url": "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/"},
+          {"label": "Funded7 contractual monthly and promotional payout limits (official)", "url": "https://funded7.com/terms-and-conditions/"}
+        ]
+      }
     },
     "fundedelite": {
       "reviewedAt": "2026-11-17",
@@ -5211,8 +5271,20 @@
       }
     },
     "tiger-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Corporate footer rechecked: ALPHAEDGE PRO – FZCO provides simulated platform technology (Dubai licence 42340, DUL DH5472); Alphaedgepro Services (Europe) Ltd is the seller in Cyprus (HE479670). Neither licence number is a documented investment-services authorisation. Existing Trustpilot rating-withheld/fake-reviews incident retained without duplication.",
+          "source": "https://tigerfunded.com/payouts",
+          "fields": ["entities", "legalReview", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Company's payouts page publicly lists trader initials, amounts and Rise processing claims (e.g. $4,212.50); these are self-reported platform illustrations, not individually authenticated bank receipts or blockchain transactions. Separately promises up to 48-hour payouts plus $1,000 for delay, conditional on eligibility and compliance checks.",
+          "source": "https://tigerfunded.com/payouts",
+          "fields": ["payoutProofs", "payoutDelay", "verdict"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. The www profile also shows unrelated category labels (for example \"swimming pool cleaning\"), which look like Trustpilot profile errors; the reviews themselves are about the tigerfunded.com prop firm. Price and profit split not re-read on the official site, left unchanged.",
@@ -5220,6 +5292,51 @@
           "fields": [
             "incidents"
           ]
+        }
+      ],
+      "set": {
+        "payoutDelay": "Firm promises within 48 hours of an eligible request, with a claimed $1,000 late-payment bonus; independently unverified.",
+        "auditSummary": "17 Nov 2026 deep review: the legal disclosure names a Dubai infrastructure supplier (ALPHAEDGE PRO – FZCO, licence 42340 / DUL DH5472) and a distinct Cyprus checkout seller (Alphaedgepro Services (Europe) Ltd, HE479670). The company publishes a Rise-labelled payout feed and quotes a 48-hour payout guarantee, 95% standard split and 100% add-on. These are the company's own claims and sample figures, not independently confirmed settlements; the footer says names and figures illustrate platform activity. Its existing Trustpilot rating-withheld and removed-fake-reviews notice remains in the incident history, with no assumption about who caused the reviews.",
+        "verdict": "Tiger Funded is comparatively transparent about its two corporate entities but the payout stream is self-published, not proof of individual bank/crypto settlement. The 48-hour/$1,000 guarantee must be read alongside conditional reward eligibility. The previously recorded Trustpilot guideline-breach notice warrants caution; no new event is alleged."
+      },
+      "setEntities": [
+        {
+          "name": "ALPHAEDGE PRO – FZCO",
+          "jurisdiction": "Dubai, United Arab Emirates",
+          "registrationNumber": "Licence 42340; Dubai Unified Licence DH5472",
+          "registeredAddress": "Dubai Silicon Oasis, Dubai, UAE",
+          "role": "Simulated-trading platforms and technology infrastructure; not identified as the seller of trader challenges. A Dubai commercial licence is not evidence of brokerage or investment-firm authorisation."
+        },
+        {
+          "name": "Alphaedgepro Services (Europe) Ltd",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE479670",
+          "registeredAddress": "Pindou 4, Egkomi 2409, Nicosia, Cyprus",
+          "role": "Seller of products and services under the company-published corporate disclosure; states it does not offer investment or brokerage services."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The November corporate footer distinguishes two different parties: Dubai-incorporated ALPHAEDGE PRO – FZCO (simulated-platform technology, licence 42340 / DUL DH5472) and the Cyprus HE479670 company Alphaedgepro Services (Europe) Ltd (seller). The licences demonstrate company disclosures but do not by themselves establish a regulated-broker authorisation. The company advertises 95% split (100% add-on), 48-hour rewards and an additional $1,000 if late, but its risk/eligibility checks still apply and its payout list is self-published. Trustpilot's previously recorded guideline-breach notice remains an unresolved review-quality concern, not evidence of failed payment or attribution of who posted false reviews.",
+        "regulatoryStatus": ["All trader accounts are described as simulated using virtual funds; the footer denies investment/brokerage services or public deposits.", "Dubai commercial licence 42340 and DUL DH5472 are not proof of investment permissions.", "Cyprus HE479670 identifies the disclosed seller; a live invoice should still match the entity."],
+        "complaintsAndDisputes": ["The payout promise is tied to a reward request that passes eligibility, verification and compliance checks, which can be disputed.", "Refund policy and chargeback restrictions may leave little recourse after account credentials are issued.", "Company-labelled trader examples cannot be independently confirmed as completed settlements without a payment-processor statement or blockchain transaction."],
+        "redFlags": ["Trustpilot rating previously withheld for a guidelines breach and removal of fake reviews; no actor identified.", "Payout feed names and amounts are company-authored platform illustrations, not independent recipient confirmations.", "Aggressive 48-hour late-bonus and 100%-split promotional language requires verification in the purchase-specific agreement.", "Supplier in Dubai is distinct from the seller in Cyprus."],
+        "sources": [
+          {"label": "Tiger Funded payouts feed, payout promises and corporate footer (official)", "url": "https://tigerfunded.com/payouts"},
+          {"label": "Tiger Funded Terms of Service (official)", "url": "https://tigerfunded.com/terms-of-service"},
+          {"label": "Tiger Funded refund policy (official)", "url": "https://tigerfunded.com/refund-policy"}
+        ]
+      },
+      "addSources": [
+        {"label": "Tiger Funded published payout illustrations and seller information", "url": "https://tigerfunded.com/payouts"}
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-17",
+          "kind": "official",
+          "publisher": "Tiger Funded",
+          "quote": "Company-published 'Live Payouts' list shows 'Tyler R.' as 'Verified · via Rise' with '$4,212.50 Payout Sent'. The footer says names and figures illustrate platform activity; no third-party transaction receipt was provided to independently authenticate this example.",
+          "url": "https://tigerfunded.com/payouts",
+          "firmReported": true
         }
       ],
       "addIncidents": [
@@ -8417,6 +8534,95 @@
             "entities"
           ]
         }
+      ]
+    },
+    "mifunder": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {"date":"2026-11-17","summary":"Official mifunder.com domain returned HTTP 521 at the time of a direct check: unavailability is not evidence of closure, an ownership transfer or unpaid traders. Current support, rules and checkout cannot be independently verified.","source":"https://mifunder.com/","fields":["verdict","auditSummary","legalReview"]},
+        {"date":"2026-11-17","summary":"Historical MiFunder deployment, with terms explicitly dated 24 Aug 2023, names Gigimobile Technology Solutions PTY Ltd (2023/535414/07) in South Africa. Off-domain historical wording is not proof of the present contracting party.","source":"https://mi-funder.vercel.app/legal/terms-of-service","fields":["entities","legalReview"]}
+      ],
+      "set": {
+        "auditSummary": "17 Nov 2026: mifunder.com returned HTTP 521 during a direct reachability check. This does not establish closure but blocks independent verification of today's products, prices, customer support, payouts and checkout. A distinct MiFunder historical deployment hosts 2023 terms naming South African Gigimobile Technology Solutions PTY Ltd, registration 2023/535414/07. Those old terms cannot authenticate the current operator. No independent payout settlement evidence found.",
+        "verdict": "Primary domain unavailable during this audit (HTTP 521). Historic terms expose a possible South African contracting company but do not identify today's operator. Maintain watchlist; verify operational website, registered seller and actual payouts before any purchase."
+      },
+      "setEntities": [
+        {"name":"Gigimobile Technology Solutions PTY Ltd","jurisdiction":"To verify (South Africa, 2023 historical terms only)","registrationNumber":"2023/535414/07 (stated in historical terms, registry not independently checked)","role":"Company named in 24 August 2023 MiFunder terms on a separate Vercel deployment; current operating and billing roles unconfirmed."}
+      ],
+      "setLegalReview": {
+        "summary": "At the November 2026 check, mifunder.com did not serve its website (HTTP 521). That point-in-time failure does not prove permanent shutdown. Historical terms from August 2023 on an off-domain MiFunder deployment name Gigimobile Technology Solutions PTY Ltd, South Africa, but current company registration and control of the official domain were not verified. Historical terms treat the evaluation as demo trading, deny an automatic funded offer after passing and set harsh chargeback restrictions. No third-party payout confirmation was located.",
+        "regulatoryStatus": ["The 2023 terms describe evaluation in a proprietary demonstration environment, not an authorised brokerage.", "Current legal operator and corporate status were not verified."],
+        "complaintsAndDisputes": ["Old terms say a successful assessment does not guarantee a funded trader offer; current terms may differ.", "Old dispute wording threatens blacklisting on chargebacks; do not assume it is today's policy.", "Current customer support, refunds and payout conditions could not be checked."],
+        "redFlags": ["Official domain unavailable at this check; closure not established.", "Only off-domain historical terms identify a legal entity.", "No independent customer payout settlement located."],
+        "sources": [
+          {"label":"Official MiFunder domain checked 17 Nov 2026","url":"https://mifunder.com/"},
+          {"label":"Historical MiFunder Terms dated 24 Aug 2023","url":"https://mi-funder.vercel.app/legal/terms-of-service"}
+        ]
+      },
+      "addSources": [{"label":"MiFunder historical legal terms (not current ownership proof)","url":"https://mi-funder.vercel.app/legal/terms-of-service"}]
+    },
+    "tradersedgefx": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {"date":"2026-11-17","summary":"Official rules specify 60-second minimum trade hold, 20-lot maximum position size, 6%-of-initial-balance profit cap, inactivity restriction and conditional seven-day no-trade refund. Sales cards separately say 'No Refund', so the governing refund policy needs written confirmation.","source":"https://tradersedgefx.com/Overall-Rules-and-Conditions/","fields":["verdict","auditSummary","legalReview"]},
+        {"date":"2026-11-17","summary":"Homepage program cards disclose variable 50%/70% split, initial payouts in 15 or 30 days and caps during first three months. Published terms name TradersEdgeFX LLC and footer shows Nassau address, but no independently verified registration or formation jurisdiction. No independently authenticated payout transfer found.","source":"https://tradersedgefx.com/","fields":["entities","payoutDelay","auditSummary"]}
+      ],
+      "set": {
+        "payoutDelay": "Plan-dependent first request after 15 or 30 days; initial three-month payout caps and eligibility rules also apply.",
+        "auditSummary": "17 Nov 2026: TradersEdgeFX LLC publishes simulated/non-broker wording and a Nassau business address, but incorporation jurisdiction and registration number are unverified. Program cards vary between 50%/70% splits and 15/30-day first payout waits; early-month payout ceilings apply. Official general rules limit trade size to 20 lots, prohibit holds shorter than 60 seconds and impose a 6% starting-balance profit cap. Sales cards say 'No Refund', while general rules allow a refund within seven days if no trade was placed. No independent bank or chain payment confirmation found.",
+        "verdict": "Reward split and payout timing vary materially by plan. The 6% profit cap, 60-second hold restriction and initial payout ceilings merit attention. Published card 'No Refund' messaging conflicts with the written conditional refund policy; obtain a written purchase-specific answer. LLC registry and paid-out trader evidence remain unverified."
+      },
+      "setEntities": [
+        {"name":"TradersEdgeFX LLC","jurisdiction":"To verify (Nassau, Bahamas business address; formation jurisdiction unconfirmed)","registeredAddress":"Old Fort Town Center, Windsor Field Road, Nassau, Bahamas","role":"Legal name in official terms and disclaimer; LLC registration number not independently located."}
+      ],
+      "setLegalReview": {
+        "summary": "TradersEdgeFX LLC is named in official terms, with a Bahamas business address but no independently checked LLC formation jurisdiction or registration identifier. The product is simulated/educational, not a brokerage deposit. Program-based splits (50%/70%), 15/30-day payout waits and first-three-month payout caps are more restrictive than headline funding. General rules cap simulated profit at 6% of opening balance, position size at 20 lots and require a 60-second trade hold. The sales 'No Refund' label must be reconciled with the official seven-day no-trade conditional refund language. No independent payout settlement was authenticated.",
+        "regulatoryStatus": ["The provider disclaims brokerage and client deposits and presents simulated educational trading.", "The declared Nassau location does not independently establish incorporation jurisdiction or regulatory permissions."],
+        "complaintsAndDisputes": ["Official cards label products 'No Refund', but general written rules offer a conditional refund within seven days if no trades occurred.", "Profit limit and payout caps can reduce withdrawals relative to headline simulated gains.", "Minimum hold, lot and inactivity clauses could affect reward eligibility."],
+        "redFlags": ["LLC registration number and place of formation remain unverified.", "No universal profit split or payout speed; terms vary across programs.", "Inconsistent refund presentation across official pages.", "No third-party authenticated payout transfer located."],
+        "sources": [
+          {"label":"TradersEdgeFX published program cards","url":"https://tradersedgefx.com/"},
+          {"label":"TradersEdgeFX official general rules and conditional refund","url":"https://tradersedgefx.com/Overall-Rules-and-Conditions/"},
+          {"label":"TradersEdgeFX official legal terms","url":"https://tradersedgefx.com/terms-of-services/"}
+        ]
+      },
+      "addSources": [
+        {"label":"TradersEdgeFX program rules including conditional refund","url":"https://tradersedgefx.com/Overall-Rules-and-Conditions/"},
+        {"label":"TradersEdgeFX published Terms of Services","url":"https://tradersedgefx.com/terms-of-services/"}
+      ]
+    },
+    "monevis": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {"date":"2026-11-17","summary":"Company-hosted Terms effective 20 May 2024 name Monevis s.r.o., Slovakia, company ID 55215921 and Bratislava register Sro/167310/B; an official Slovak commercial gazette confirms this entity and identifier. The current homepage footer instead names Monevis Brokers Ltd, not proven to be the same legal party. The PDF is a historical snapshot, not the guaranteed current contract.","source":"https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf","fields":["entities","legalReview","auditSummary"]},
+        {"date":"2026-11-17","summary":"Company payout page claims 7/14-day timing and promotes certificates and blockchain payouts; the certificates were not independently matched with bank or chain settlement IDs. Instant funding marketing lists a biweekly cycle and 50% share plus specific trading restrictions; avoid applying these rules to every product.","source":"https://monevis.com/payouts","fields":["payoutDelay","verdict","auditSummary"]}
+      ],
+      "set": {
+        "payoutDelay": "Company reports 7- or 14-day payout schedule by program; instant program claims biweekly with 50% split. Independent settlement unverified.",
+        "auditSummary": "17 Nov 2026: historical terms hosted by Monevis identify Monevis s.r.o., Podunajská 23/G, Bratislava, Slovakia (IČO 55215921, Sro/167310/B), independently corroborated in Slovakia's Ministry of Justice company gazette. However, the current monevis.com footer says 'Monevis Brokers Ltd' without a public registration number; the link between the names and the current billing contract is unresolved. Public payout certificates and blockchain claims were not matched to independent transfer receipts. Instant funding specifically lists 50% split, biweekly withdrawals and restrictions around news and holding overnight/weekends.",
+        "verdict": "Monevis has a historical Slovak contractual company with a verifiable state registration, but its modern Monevis Brokers Ltd label is not reconciled with that company. Payout certificates and blockchain marketing did not furnish independently authenticated transfers. Confirm present seller and plan-specific conditions before purchase."
+      },
+      "setEntities": [
+        {"name":"Monevis s.r.o.","jurisdiction":"Slovakia","registrationNumber":"IČO 55215921; Bratislava register Sro/167310/B","registeredAddress":"Podunajská 23/G, 821 06 Bratislava, Slovakia","role":"Service provider in company-hosted Terms effective May 2024; identity corroborated in Slovak Ministry of Justice commercial gazette. Current contract status to recheck."},
+        {"name":"Monevis Brokers Ltd","jurisdiction":"To verify (current website footer, number undisclosed)","role":"Name stated on current homepage; legal relationship to the 2024 Slovak contractual company has not been established."}
+      ],
+      "setLegalReview": {
+        "summary": "A company-hosted 2024 Terms PDF names Monevis s.r.o. of Slovakia (IČO 55215921 / Bratislava Sro 167310/B); the Slovak Ministry of Justice's 2024 commercial gazette verifies the same registered company. The modern footer instead names Monevis Brokers Ltd without a registration number. These names must not be assumed interchangeable. Trading is marketed as simulated rather than brokerage/deposits. The company advertises blockchain-verified payouts without providing a third-party verified recipient transfer in the materials reviewed. Instant product conditions include a 50% split, biweekly cycle, restrictive news windows and no overnight/weekend holding.",
+        "regulatoryStatus": ["Slovak commercial-register identity evidenced in government gazette, not proof of brokerage or investment permission.", "Live footer disclaims deposit-taking brokerage activity, describing simulated trading and educational tools.", "Current contracting identity and relationship of both company names require confirmation."],
+        "complaintsAndDisputes": ["The company name on older contract terms differs from the live footer name; ask for the current legal counterparty and invoice.", "Public certificates and 'blockchain verified' branding require transaction-level verification before they are considered authenticated payouts.", "Instant funding rules may constrain trading around high-impact news or position holding unlike other programs."],
+        "redFlags": ["Legal-identity discrepancy between historic terms and current footer has not been resolved.", "Firm-generated payout certificates are not independent transfer evidence.", "Payout cycles, splits and prohibited strategies vary substantially between programs."],
+        "sources": [
+          {"label":"Monevis official-hosted Terms, effective May 2024","url":"https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf"},
+          {"label":"Slovak Ministry of Justice gazette listing Monevis s.r.o.","url":"https://obchodnyvestnik.justice.gov.sk/ObchodnyVestnik/Web/Stiahnut.aspx?IdOvSubor=152047"},
+          {"label":"Monevis current corporate footer","url":"https://monevis.com/"},
+          {"label":"Monevis payout claims","url":"https://monevis.com/payouts"},
+          {"label":"Monevis instant program rules","url":"https://monevis.com/instant-funding"}
+        ]
+      },
+      "addSources": [
+        {"label":"Monevis company-hosted historical terms PDF","url":"https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf"},
+        {"label":"Slovak corporate gazette confirming Monevis s.r.o.","url":"https://obchodnyvestnik.justice.gov.sk/ObchodnyVestnik/Web/Stiahnut.aspx?IdOvSubor=152047"},
+        {"label":"Monevis company-published payout information","url":"https://monevis.com/payouts"}
       ]
     },
     "x-funded": {
