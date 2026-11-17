@@ -13,6 +13,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import LocaleNotice from '../components/LocaleNotice';
 import NewsletterSignup from '../components/NewsletterSignup';
 import DiscordCommunity from '../components/DiscordCommunity';
+import DiscordTopBanner from '../components/DiscordTopBanner';
 import { notFound } from 'next/navigation';
 import { HTML_LANG, OG_LOCALE, isLocale, localePath, type Locale } from '../lib/locales';
 import { fmt, getMessages } from '../lib/messages';
@@ -34,6 +35,15 @@ const themeInitScript = `
       document.documentElement.dataset.theme = 'light';
     }
   })();
+`;
+
+const discordBannerInitScript = `
+  try {
+    var dismissedAt = Number(localStorage.getItem('propradar-discord-banner-dismissed'));
+    if (dismissedAt > 0 && Date.now() - dismissedAt < 1209600000) {
+      document.documentElement.dataset.discordBannerDismissed = 'true';
+    }
+  } catch (e) {}
 `;
 
 const siteStructuredData = {
@@ -179,6 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script dangerouslySetInnerHTML={{ __html: discordBannerInitScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteStructuredData).replace(/</g, '\\u003c') }}
@@ -225,6 +236,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </header>
+          <DiscordTopBanner locale={locale} closeLabel={t.radar.close} />
           <nav className="mobile-tabbar" aria-label={c.mobileNav}>
             <ActiveNavLink href="/">{c.home}</ActiveNavLink>
             <ActiveNavLink href="/prop-firm-radar">{c.radar}</ActiveNavLink>
