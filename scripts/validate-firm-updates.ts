@@ -19,7 +19,7 @@ const FILE = 'app/data/firm-updates.json';
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
-  'status', 'verdict', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
+  'status', 'verdict', 'auditSummary', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite',
   'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
@@ -135,6 +135,13 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
       errors.push(`${where}.set.verdict: a changelog entry with fields ["verdict"] and an https source is required`);
     }
     if (BANNED_WORDS.test(set.verdict)) sensitive.push(`${slug}: introduction wording needs a legal read`);
+  }
+  if (set.auditSummary !== undefined) {
+    if (typeof set.auditSummary !== 'string' || set.auditSummary.trim().length < 100) errors.push(`${where}.set.auditSummary: a substantive, sourced audit narrative (100+ characters) is required`);
+    if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('auditSummary') && isHttpsUrl(entry.source))) {
+      errors.push(`${where}.set.auditSummary: a changelog entry with fields ["auditSummary"] and an https source is required`);
+    }
+    if (BANNED_WORDS.test(set.auditSummary)) sensitive.push(`${slug}: audit summary wording needs a legal read`);
   }
   if (set.status !== undefined && !STATUSES.has(set.status)) errors.push(`${where}.set.status invalid`);
   if (set.score !== undefined && (!Number.isInteger(set.score) || set.score < 0 || set.score > 100)) errors.push(`${where}.set.score must be 0-100`);
