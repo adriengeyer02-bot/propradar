@@ -167,15 +167,15 @@ const rules: Record<string, Rule> = {
     restricted: ['RU', 'VN'],
     conditional: ['US'],
     source: 'https://fxify.com/faqs/all-faqs/what-countries-are-accepted/',
-    scope: 'FXIFY FAQ lists excluded countries but the main website also contains a US-specific exclusion disclosure: US access is unverified pending firm clarification. Other countries may face platform, identity and local-law limits.',
-    checked: '2026-11-16',
+    scope: 'FXIFY FAQ lists excluded countries but the main website also contains a US-specific exclusion disclosure: US access is unverified pending firm clarification. Other countries may face platform, identity and local-law limits. The official FAQ excludes Vietnam, Russia, Kenya and Ghana (but does not list Nigeria); deliberately misrepresenting residence may lead to denial of an account/refund.',
+    checked: '2026-11-17',
   },
   fintokei: {
     worldwideExceptListed: true,
     restricted: ['US', 'IN', 'CN', 'BD', 'PK', 'VN', 'RU', 'ID', 'MY', 'PH', 'TH', 'SA', 'NG', 'ZA', 'TR', 'UA', 'AE'],
     source: 'https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei',
-    scope: 'Fintokei distinguishes a resident/citizen ban (including India and US), temporary bans (including China, Pakistan and Bangladesh) and countries where NEW purchases are suspended (including Indonesia, Malaysia, Philippines and Thailand). Crypto payouts are only available in a narrower subset; other eligible residents may use different payment methods.',
-    checked: '2026-11-16',
+    scope: 'Fintokei distinguishes a resident/citizen ban (including India and US), temporary bans (including China, Pakistan and Bangladesh) and countries where NEW purchases are suspended (including Indonesia, Malaysia, Philippines and Thailand). The company explicitly lists Singapore, Japan, Hong Kong and South Korea among locations for crypto rewards; outside this subset, other payout methods must be checked independently. A private VPS is allowed, but disguised location/shared VPS use can cause sanctions under separate rules.',
+    checked: '2026-11-17',
   },
   hyrotrader: {
     worldwideExceptListed: true,
@@ -220,6 +220,28 @@ const rules: Record<string, Rule> = {
     source: 'https://help.upcomers.com/en/articles/8703655-are-there-any-prohibited-countries',
     scope: 'Upcomers general challenge eligibility admits over 180 countries including India; specified Ukrainian territories are excluded. The separate Breakout products additionally exclude UAE citizens/residents, so UAE is unverified at firm level. Program, KYC and payment access must still be checked.',
     checked: '2026-11-16',
+  },
+  // Asia pass on 2026-11-17; firm admission is not a local financial-regulator clearance.
+  earn2trade: {
+    worldwideExceptListed: true,
+    restricted: ['PK', 'RU', 'UA', 'NG'],
+    source: 'https://help.earn2trade.com/en/articles/2547638-i-m-not-an-american-us-citizen-can-i-still-get-funded',
+    scope: 'Earn2Trade excludes CITIZENS of certain jurisdictions (including Pakistan), not solely those logging in from them. Foreign funded traders need a W-8BEN and foreign tax ID. The evaluation, eventual broker funding, sanctions, KYC and reward provider remain separate checks.',
+    checked: '2026-11-17',
+  },
+  'elite-trader-funding': {
+    available: ['SG', 'HK', 'JP', 'MY', 'TH', 'AU', 'NZ'],
+    conditional: ['CN', 'IN', 'ID', 'US', 'CA'],
+    source: 'https://elitetraderfunding.app/help/countries-restricted-and-supported',
+    scope: 'Elite Trader Funding requires BOTH Rise payout and Stripe payment support. Singapore, Hong Kong, Japan, Malaysia and Thailand appear on its standard Stripe list and not on Rise exclusions. India and Indonesia are flagged as Stripe limited/preview; China is not confirmed. Residence determines standard admission, while LIVE Elite has additional broker restrictions.',
+    checked: '2026-11-17',
+  },
+  'e8-futures': {
+    available: ['IN', 'SG', 'JP', 'HK', 'KR', 'MY', 'TH', 'BD'],
+    restricted: ['CN', 'ID', 'PH', 'PK', 'VN', 'AE', 'RU', 'UA', 'TR', 'ZA', 'NG', 'RO'],
+    source: 'https://help.e8markets.com/en/articles/5514278-accepted-countries',
+    scope: 'The E8 FUTURES exclusion list differs substantially from E8 Classic/Perpetuals. Mainland China, Indonesia, Philippines and Vietnam are barred for Futures even when some CFD/Perpetual products may be offered. India and Singapore are not on the published Futures exclusions; documentary KYC, product restrictions and payout-processor support remain separate.',
+    checked: '2026-11-17',
   },
 };
 

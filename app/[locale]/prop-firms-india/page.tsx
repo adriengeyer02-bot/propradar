@@ -9,7 +9,7 @@ import { isLocale, type Locale } from '../../lib/locales';
 const PATH = '/prop-firms-india';
 const TITLE = 'Prop Firms in India (2026): RBI Rules, Alert List and Which Firms Accept Indian Traders';
 const DESCRIPTION =
-  'Official India eligibility policies for 26 prop firms, trading-country restrictions, payout methods where documented, RBI rules and the RBI Alert List. Every decision linked and dated.';
+  'Sourced India eligibility policies for forex and futures prop firms, country restrictions, payout-provider limitations, RBI rules and its Alert List. Each rule linked and dated.';
 
 type Props = { params: Promise<{ locale: string }> };
 

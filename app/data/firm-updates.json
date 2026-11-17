@@ -1156,7 +1156,7 @@
       ]
     },
     "e8-futures": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1178,6 +1178,16 @@
             "payoutDelay",
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The Futures country list is separate from E8 Classic/Perpetuals: mainland China, Indonesia, Philippines and Vietnam are excluded from Futures, even where another E8 product may be available. India and Singapore are not in that Futures exclusion list; KYC and reward processors still determine practical access.",
+          "source": "https://help.e8markets.com/en/articles/5514278-accepted-countries"
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The official symbols interface provides product-specific bid/ask, spread and commissions; our unauthenticated read returned a Classic-market instrument, not a repeatable Futures spread or slippage series. A real Futures execution-cost test remains unverified. No invented spread figure is displayed.",
+          "source": "https://e8x.e8markets.com/trading-symbols"
         }
       ],
       "setEntities": [
@@ -1207,6 +1217,14 @@
         {
           "label": "E8 Signature Futures (official)",
           "url": "https://e8futures.com/e8-signature-futures"
+        },
+        {
+          "label": "E8 Futures official country-specific exclusions",
+          "url": "https://help.e8markets.com/en/articles/5514278-accepted-countries"
+        },
+        {
+          "label": "E8 trading-symbols and product-specific spread information",
+          "url": "https://e8x.e8markets.com/trading-symbols"
         }
       ],
       "set": {
@@ -1291,7 +1309,7 @@
       ]
     },
     "earn2trade": {
-      "reviewedAt": "2026-11-11",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1322,6 +1340,11 @@
           "fields": [
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The funded-account exclusions focus on CITIZENSHIP and include Pakistan; non-US applicants require W-8BEN and a foreign tax ID. The help center warns against purchases/resets from sanctioned locations and false address information. Its previously recorded five-profitable-day payout condition is unchanged.",
+          "source": "https://help.earn2trade.com/en/articles/2547638-i-m-not-an-american-us-citizen-can-i-still-get-funded"
         }
       ],
       "set": {
@@ -1334,11 +1357,15 @@
         {
           "label": "Earn2Trade rule updates, November 2026",
           "url": "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026/"
+        },
+        {
+          "label": "Earn2Trade non-US citizenship and funded eligibility",
+          "url": "https://help.earn2trade.com/en/articles/2547638-i-m-not-an-american-us-citizen-can-i-still-get-funded"
         }
       ]
     },
     "elite-trader-funding": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1364,6 +1391,21 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The firm requires support from BOTH Rise and Stripe. Singapore, Hong Kong, Japan, Malaysia and Thailand are on its standard Stripe list; India and Indonesia are limited/preview; China is unconfirmed. Standard eligibility is based on residence, with extra LIVE Elite broker conditions.",
+          "source": "https://elitetraderfunding.app/help/countries-restricted-and-supported"
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Its published policy prohibits VPN/VPS/proxy masking except approved partner services and IP ranges; consequences can include lost profits or account failure. This is a contractual risk disclosure, not a claim about any individual case.",
+          "source": "https://elitetraderfunding.app/help/vpn-and-ip-masking-policy"
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The official round-turn commission table lists NQ/ES at $4.08, MNQ at $1.02 and MES at $1.12. These are advertised fees, NOT an independently measured futures spread, slippage or execution benchmark.",
+          "source": "https://elitetraderfunding.app/help/guide-to-our-commissions-and-exchanges-we-support"
         }
       ],
       "set": {
@@ -1376,6 +1418,18 @@
         {
           "label": "PropFirmMap: Elite Trader Funding moved to elitetraderfunding.app",
           "url": "https://propfirmmap.com/blog/prop-firm-industry-news-shutdowns-rebrands-new-firms-q2-2026"
+        },
+        {
+          "label": "Elite Trader Funding official payout and purchase countries",
+          "url": "https://elitetraderfunding.app/help/countries-restricted-and-supported"
+        },
+        {
+          "label": "Elite Trader Funding VPN and VPS policy",
+          "url": "https://elitetraderfunding.app/help/vpn-and-ip-masking-policy"
+        },
+        {
+          "label": "Elite Trader Funding futures commission table",
+          "url": "https://elitetraderfunding.app/help/guide-to-our-commissions-and-exchanges-we-support"
         }
       ]
     },
@@ -1504,7 +1558,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1538,6 +1592,21 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "India residents/citizens are excluded; China, Bangladesh, Pakistan and Vietnam are temporarily restricted; new purchases are suspended in Indonesia, Malaysia, Philippines and Thailand. Singapore is on Fintokei's narrower crypto payout list. Geographic eligibility is not local regulatory approval.",
+          "source": "https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei"
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Private VPS and ordinary travel are allowed; repeated masked VPN/proxy use or a shared VPS without satisfactory explanation can cause restrictions and, for a breached account, loss of refund/rewards. This is a company-published term, not a verified payout incident.",
+          "source": "https://support.fintokei.com/en/articles/11316016-what-is-the-definition-of-using-multiple-ip-addresses-from-many-countries-when-connecting-to-your-fintokei-demo-accounts-or-masking-the-ip-addresses"
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The firm may impose individual daily profit/risk caps, news restrictions and a 40% best-day payout eligibility rule. Failing that specific 40% condition delays payout eligibility rather than automatically breaching the account. No rating or status change.",
+          "source": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules"
         }
       ],
       "set": {
@@ -1550,6 +1619,18 @@
         {
           "label": "Fintokei: the new StartTrader",
           "url": "https://www.fintokei.com/blog/the-new-starttrader-is-here/"
+        },
+        {
+          "label": "Fintokei eligibility and country-specific crypto payouts",
+          "url": "https://support.fintokei.com/en/articles/6538820-who-can-join-fintokei"
+        },
+        {
+          "label": "Fintokei IP/VPN and VPS policy",
+          "url": "https://support.fintokei.com/en/articles/11316016-what-is-the-definition-of-using-multiple-ip-addresses-from-many-countries-when-connecting-to-your-fintokei-demo-accounts-or-masking-the-ip-addresses"
+        },
+        {
+          "label": "Fintokei individualized consistency and payout conditions",
+          "url": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules"
         }
       ],
       "addPayoutProofs": [
@@ -2541,7 +2622,7 @@
       ]
     },
     "fxify": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-17",
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 6663,
@@ -2605,6 +2686,11 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The published country exclusions include Vietnam, Russia, Kenya and Ghana, but NOT Nigeria; mainland China, India and Singapore are absent from the list. False residence declarations may lead to account/refund denial. Actual KYC, trading-platform and local-law eligibility remain separate.",
+          "source": "https://fxify.com/faqs/all-faqs/what-countries-are-accepted/"
         }
       ],
       "addSources": [
@@ -2619,6 +2705,10 @@
         {
           "label": "FXIFY Markets (Prime Intermarket Group Eurasia Ltd)",
           "url": "https://markets.fxify.com/"
+        },
+        {
+          "label": "FXIFY official restricted-country FAQ",
+          "url": "https://fxify.com/faqs/all-faqs/what-countries-are-accepted/"
         }
       ],
       "setEntities": [
