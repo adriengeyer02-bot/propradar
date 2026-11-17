@@ -1,6 +1,7 @@
 import type { Locale } from '../locales';
 import updates from '../../data/firm-updates.json';
 import { auditFrenchDetails } from './auditFrenchDetails';
+import { auditNextTranslations } from './auditNextTranslations';
 
 /**
  * Editorial translations are tied to the exact English strings of a reviewed
@@ -368,6 +369,11 @@ const translations: Partial<Record<Locale, AuditLocale>> = {
 };
 
 const dictionaries: Partial<Record<Locale, Map<string, string>>> = {};
+
+// Keep independently audited batches with all language variants together.
+for (const [locale, entries] of Object.entries(auditNextTranslations)) {
+  Object.assign(translations[locale as Locale] ??= {}, entries);
+}
 
 export function translatedAuditText(locale: Locale, original: string): string | undefined {
   const entries = translations[locale];
