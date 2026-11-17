@@ -28,6 +28,7 @@ import type { Metadata } from 'next';
 import { isLocale, localeAlternates, localePath, type Locale } from '../lib/locales';
 import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import IntentLink from '../components/IntentLink';
+import { DISCORD_URL, communityCopy } from '../lib/community';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -140,6 +141,9 @@ export default async function HomePage({ params }: Props) {
             {h.exploreGuides}
             <span aria-hidden="true"> →</span>
           </Link>
+          <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" className="home-v2-guide-link home-v2-discord-link">
+            {communityCopy(locale).action}<span aria-hidden="true"> ↗</span>
+          </a>
           <div className="home-v2-trust-line">
             <span>{h.trust1}</span>
             <span>{h.trust2}</span>

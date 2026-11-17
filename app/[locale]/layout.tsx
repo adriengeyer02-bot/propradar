@@ -12,12 +12,14 @@ import RouteTransition from '../components/RouteTransition';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import LocaleNotice from '../components/LocaleNotice';
 import NewsletterSignup from '../components/NewsletterSignup';
+import DiscordCommunity from '../components/DiscordCommunity';
 import { notFound } from 'next/navigation';
 import { HTML_LANG, OG_LOCALE, isLocale, localePath, type Locale } from '../lib/locales';
 import { fmt, getMessages } from '../lib/messages';
 import { propFirms } from '../lib/propFirms';
 import { FOUNDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from '../components/IntentLink';
+import { DISCORD_URL, communityCopy } from '../lib/community';
 
 const themeInitScript = `
   (function () {
@@ -263,9 +265,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <Link href={L('/prop-firm-statistics')}>{c.footer.statistics}</Link>
                 <a href="/feed.xml">{c.footer.feed}</a>
                 <Link href="/fr/articles" hrefLang="fr">{c.footer.frGuides}</Link>
+                <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">{communityCopy(locale).action} ↗</a>
               </nav>
             </div>
             <div className="container newsletter-footer-row">
+              <DiscordCommunity locale={locale} />
               <NewsletterSignup locale={locale} copy={t.newsletter} />
             </div>
             <div className="container footer-bottom">
