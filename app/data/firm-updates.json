@@ -9959,6 +9959,12 @@
           "summary": "The domain-specific claimed Trustpilot profile displayed 4.2/5 across 2,704 reviews. Reviews add a public signal but do not independently authenticate individual withdrawals or settlement receipts.",
           "source": "https://www.trustpilot.com/review/equityedge.io",
           "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The company's own homepage displays a payout-total marketing counter and a gallery of certificates, while its payout-process policy specifies a 14-calendar-day request window and conditional processing within two business days. These provide public company-reported evidence, not authenticated customer bank or crypto settlement receipts.",
+          "source": "https://equityedge.io/",
+          "fields": ["payoutProofs", "auditSummary"]
         }
       ],
       "set": {
@@ -9971,7 +9977,7 @@
         "trustpilotRating": 4.2,
         "trustpilotReviewCount": 2704,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/equityedge.io",
-        "payoutDelay": "Standard published pathway: eligible every 14 days after first funded trade; model-specific reviews and restrictions apply"
+        "payoutDelay": "Standard: request on 14th calendar day after first funded trade (miss it: another 14 days); 48 hours processing claimed after approval"
       },
       "setEntities": [
         {
@@ -10017,7 +10023,9 @@
           { "label": "Equity Edge official updated contract, including entity and payment clauses", "url": "https://equityedge.io/terms-and-conditions" },
           { "label": "UK Companies House — EQUITY EDGE ANALYTICS LTD 15263705", "url": "https://find-and-update.company-information.service.gov.uk/company/15263705" },
           { "label": "Equity Edge official trading rules and reward timetable", "url": "https://equityedge.io/trading-rules/trading-rules-and-guidelines" },
-          { "label": "Equity Edge claimed Trustpilot profile", "url": "https://www.trustpilot.com/review/equityedge.io" }
+          { "label": "Equity Edge claimed Trustpilot profile", "url": "https://www.trustpilot.com/review/equityedge.io" },
+          { "label": "Equity Edge company payout certificates and marketing total (unverified)", "url": "https://equityedge.io/" },
+          { "label": "Equity Edge official reward request and processing conditions", "url": "https://equityedge.io/funded-traders/payout-process" }
         ]
       },
       "addSources": [
@@ -10025,7 +10033,19 @@
         { "label": "UK Companies House verification, registration 15263705", "url": "https://find-and-update.company-information.service.gov.uk/company/15263705" },
         { "label": "Official evaluation and Instant trading rulebook", "url": "https://equityedge.io/trading-rules/trading-rules-and-guidelines" },
         { "label": "Official Equity Edge icon provenance", "url": "https://framerusercontent.com/images/AQ5zSxV23p8B0Atn3O9xlSvaUU.png" },
-        { "label": "Equity Edge Trustpilot claim and review distribution", "url": "https://www.trustpilot.com/review/equityedge.io" }
+        { "label": "Equity Edge Trustpilot claim and review distribution", "url": "https://www.trustpilot.com/review/equityedge.io" },
+        { "label": "Firm-reported payout counter and certificates; transfer outcome unverified", "url": "https://equityedge.io/" },
+        { "label": "Official biweekly/VIP reward request and conditional 48h processing rules", "url": "https://equityedge.io/funded-traders/payout-process" }
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-17",
+          "kind": "official",
+          "publisher": "Equity Edge (official website)",
+          "quote": "The homepage displays '$1 M+' under 'Proven payouts delivered to global traders' and a gallery of payout certificates. These remain company-origin claims without PropRadar-authenticated customer transfers, payment processor receipts or blockchain transaction identifiers.",
+          "url": "https://equityedge.io/",
+          "firmReported": true
+        }
       ]
     },
     "myfxcapital": {
