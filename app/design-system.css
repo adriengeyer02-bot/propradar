@@ -6526,6 +6526,114 @@ html[data-theme='dark'] .firm-domain-warning strong {
   color: #f87171;
 }
 
+/* Once-per-session safety modal for closed firms and formerly sold/parked domains. */
+.pr-closed-alert {
+  width: min(94vw, 570px);
+  max-height: min(92dvh, 780px);
+  padding: 0;
+  overflow-y: auto;
+  border: 1px solid rgba(220, 38, 38, 0.32);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 32px 110px rgba(0, 0, 0, 0.36);
+}
+.pr-closed-alert::backdrop {
+  background: rgba(5, 12, 24, 0.76);
+  backdrop-filter: blur(5px);
+}
+.pr-closed-alert-inner {
+  padding: clamp(23px, 5vw, 38px);
+  border-top: 6px solid #dc2626;
+}
+.pr-closed-alert-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  margin-bottom: 18px;
+  border: 2px solid #dc2626;
+  border-radius: 50%;
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.10);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+}
+.pr-closed-alert-eyebrow {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.pr-closed-alert h2 {
+  margin: 9px 0 4px;
+  color: var(--text);
+  font-size: clamp(23px, 4vw, 31px);
+  line-height: 1.2;
+}
+.pr-closed-alert-name {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-weight: 750;
+}
+.pr-closed-alert-body {
+  margin: 0;
+  padding: 18px;
+  border: 1px solid rgba(220, 38, 38, 0.22);
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.06);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.pr-closed-alert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 23px;
+}
+.pr-closed-alert-evidence {
+  padding: 12px 3px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pr-closed-alert-dismiss {
+  min-width: 140px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #dc2626;
+  color: #fff;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+.pr-closed-alert-dismiss:hover { background: #b91c1c; }
+.pr-closed-alert-dismiss:focus-visible,
+.pr-closed-alert-evidence:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+.pr-closed-alert-score-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+html[data-theme='dark'] .pr-closed-alert-eyebrow,
+html[data-theme='dark'] .pr-closed-alert-icon { color: #f87171; }
+@media (max-width: 520px) {
+  .pr-closed-alert-actions { align-items: stretch; flex-direction: column-reverse; }
+  .pr-closed-alert-evidence, .pr-closed-alert-dismiss { text-align: center; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pr-closed-alert, .pr-closed-alert::backdrop { scroll-behavior: auto; }
+}
+
 /* Dated update history on firm pages (app/data/firm-updates.json). */
 .firm-changelog {
   margin-top: 22px;

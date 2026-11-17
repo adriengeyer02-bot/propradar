@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
 import SourceSubmission from '../../../components/SourceSubmission';
+import ClosedFirmNotice, { ClosedFirmArchiveLabel } from '../../../components/ClosedFirmNotice';
 import { firmLogoFor } from '../../../lib/firmLogos';
 import ChallengePath from '../../../components/ui/ChallengePath';
 import EntityChain from '../../../components/ui/EntityChain';
@@ -583,6 +584,8 @@ export default async function FirmPage({ params }: Props) {
   ])).filter((url) => !isBlockedFirmUrl(firm, url)).slice(0, 10);
   const firmPublicUrl = firm.listedDomainWarning ? pageUrl : firm.sources[0]?.url ?? pageUrl;
   const firmChangelog = getFirmChangelog(firm.slug);
+  const isClosedOrParked = firm.status === 'Fermée'
+    || /\b(?:domain.sale|for sale|parked|listed for sale|domain sold)\b/i.test(firm.listedDomainWarning ?? '');
   const firmDecision = decisionLabel(firm);
   const firmDecisionClass = decisionClass(firmDecision);
   const longestFirmNameToken = Math.max(
@@ -835,6 +838,7 @@ export default async function FirmPage({ params }: Props) {
 
   return (
     <main>
+      {isClosedOrParked ? <ClosedFirmNotice slug={firm.slug} name={firm.name} locale={locale} /> : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(articleSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(reviewSchema)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(productSchema)} />
@@ -877,6 +881,7 @@ export default async function FirmPage({ params }: Props) {
             <ScoreRing score={firm.score} size="lg" animate />
             <div className="pr-firm-scorecard-body">
               <span className="pr-firm-scorecard-label">{f.propradarScore}</span>
+              {isClosedOrParked ? <ClosedFirmArchiveLabel locale={locale} /> : null}
               <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{f.decision[firmDecision]}</strong>
               {firm.scoreCap ? <p className="pr-score-cap">{fmt(f.scoreCapped, { cap: firm.scoreCap.cap, before: firm.scoreCap.before })}</p> : null}
               <div className="pr-scorecard-pips">
