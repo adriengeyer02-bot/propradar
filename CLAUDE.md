@@ -97,9 +97,10 @@ project doc `claude/data-audit-2026-10.md`.
 
 ## Languages (i18n)
 
-- Site languages: en (root, no prefix), fr, de, it, es, pt, zh, ja, hi (`app/lib/locales.ts`).
+- Site languages: en (root, no prefix), fr, de, it, es, pt, zh, ja, hi, tr, ar (`app/lib/locales.ts`).
   `isTranslatedPath` lists the translated pages; other pages show English with a notice and noindex.
-- Interface strings live in `app/lib/messages/<locale>.ts`: any new UI string goes into all 9 files.
+- Turkish and Arabic launched first on the homepage, radar, comparator and firm-profile interface. Their longer editorial articles, guides and other routes are still English and explicitly noindexed until reviewed translations exist; do not expand `NEW_LANGUAGE_PATHS` for pages with English-only content. Firm audit evidence remains in its source language, even where the surrounding interface is localized.
+- Interface strings live in `app/lib/messages/<locale>.ts`: any new UI string goes into all 11 files.
 - Guides: translated summaries in `app/lib/guideI18n/<locale>.ts` (one entry per internal guide slug).
   A new English guide needs an entry per language, or its prefixed pages fall back to English (noindex).
   French guides with a hand-written article (`app/lib/frArticles.ts`, `enPath`) redirect to it.

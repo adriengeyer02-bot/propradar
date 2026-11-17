@@ -21,7 +21,9 @@ function languageAlternates(path: string) {
     return { languages: Object.fromEntries(Object.entries(relative).map(([lang, href]) => [lang, `${SITE_URL}${href}`])) };
   }
   const languages: Record<string, string> = {};
-  for (const locale of LOCALES) languages[HTML_LANG[locale]] = `${SITE_URL}${localePath(locale, path)}`;
+  for (const locale of LOCALES) {
+    if (isTranslatedPath(path, locale)) languages[HTML_LANG[locale]] = `${SITE_URL}${localePath(locale, path)}`;
+  }
   languages['x-default'] = `${SITE_URL}${path}`;
   return { languages };
 }
@@ -36,7 +38,7 @@ function withTranslations(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap
     // A guide is listed in a language only where it has its own page (French pairs are listed as /fr/<article>).
     const locales = guide
       ? PREFIXED_LOCALES.filter((locale) => localizedGuidePath(locale, guide) === localePath(locale, path))
-      : PREFIXED_LOCALES;
+      : PREFIXED_LOCALES.filter((locale) => isTranslatedPath(path, locale));
     return [
       { ...entry, alternates },
       ...locales.map((locale) => ({

@@ -11,7 +11,8 @@ import hi from './hi';
 
 export type { PromosMessages };
 
-const ALL: Record<Locale, PromosMessages> = { en, fr, de, it, es, pt, zh, ja, hi };
+// Untranslated editorial pages fall back to English and are noindexed in these locales.
+const ALL: Record<Locale, PromosMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en };
 
 export function getPageMessages(locale: Locale): PromosMessages {
   return ALL[locale] ?? en;
