@@ -871,7 +871,7 @@ export default async function FirmPage({ params }: Props) {
 
           {firm.listedDomainWarning ? (
             <p className="firm-domain-warning pr-firm-verdict" role="note">
-              <strong>{f.domainWarning}</strong> {firm.listedDomainWarning}
+              <strong>{f.domainWarning}</strong> {tx(firm.listedDomainWarning)}
             </p>
           ) : (
             <p className="pr-firm-verdict">{tx(firm.verdict)}</p>
@@ -1533,7 +1533,7 @@ export default async function FirmPage({ params }: Props) {
                 {firmChangelog.map((entry, index) => (
                   <li key={`${entry.date}-${entry.summary.slice(0, 24)}`} style={{ '--i': index } as CSSProperties}>
                     <time dateTime={entry.date}>{entry.date}</time>
-                    <p>{entry.summary}</p>
+                    <p>{tx(entry.summary)}</p>
                     <a href={entry.source} target="_blank" rel="noopener noreferrer">
                       {f.historySource} <span className="pr-timeline-domain">{sourceDomain(entry.source)}</span>
                     </a>
