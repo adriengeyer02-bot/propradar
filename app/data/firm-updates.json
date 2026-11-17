@@ -1,6 +1,63 @@
 {
   "version": 1,
   "firms": {
+    "fundings4u": {
+      "reviewedAt": "2026-11-17",
+      "set": {
+        "verdict": "Fundings4U markets low-cost 2-step, instant-funding and unlimited-attempt accounts, but its homepage gives both weekly and bi-weekly reward frequencies. The advertised payouts and raw spreads are company statements, not independently tested results. The applicable contract, operator identity and withdrawal timetable still need primary documentation before a positive recommendation.",
+        "auditSummary": "Deep-dive check (17 November 2026): the official homepage lists 2-Step Evaluation (6% then 3% targets, 4% daily / 8% overall loss on the displayed offer), Instant Funding and Unlimited Try. Pricing tiles advertise weekly 80% payouts, while another block says bi-weekly payouts and the general marketing lists additional cycles. The firm claims $3M+ paid and raw 0.0-pip spreads without transaction-level or execution evidence inspected by PropRadar. Its Trustpilot page showed a 4.1/5 rating across only 19 reviews at the check date. Full legal terms, the contracting operator and account-specific payout rules were not independently located. Do not treat marketing claims or screenshots as verified payouts."
+      },
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Low-score deep audit: homepage program figures recorded alongside its differing weekly versus bi-weekly payout descriptions. Promotional payout totals and spread advertising remain unverified; full contracting terms and operator not established. Replaced generic watchlist introduction and audit summary, without changing the score.",
+          "source": "https://fundings4u.com/",
+          "fields": [
+            "verdict",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Claimed Trustpilot profile showed 4.1/5 from 19 reviews at review time; small sample noted editorially, not used as independent execution or payout verification.",
+          "source": "https://www.trustpilot.com/review/fundings4u.com"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Fundings4U programs, price tiles and reward marketing (official, checked 2026-11-17)",
+          "url": "https://fundings4u.com/"
+        },
+        {
+          "label": "Fundings4U claimed Trustpilot profile (checked 2026-11-17)",
+          "url": "https://www.trustpilot.com/review/fundings4u.com"
+        }
+      ]
+    },
+    "funded-squad": {
+      "reviewedAt": "2026-11-17",
+      "set": {
+        "verdict": "Funded Squad advertises Instant, One-Step and Two-Step Lite/Flex models, no consistency rule and reward cycles that vary by model. Its 48-hour reward promise and $4M-plus total are firm-reported, not independently reconciled. The current public homepage is not a substitute for model-by-model legal terms, payment evidence or measured execution quality.",
+        "auditSummary": "Deep-dive review (17 November 2026) of the firm's official current homepage: six marketed pathways are Instant Lite/Flex, 1-Step Lite/Flex and 2-Step Lite/Flex, with differing drawdown regimes and targets. The FAQ says reward cycles may be on-demand, daily, every five days, weekly or biweekly depending on the selected model, with up to a 100% share. It promises eligible requests processed within 48 hours through USDT/USDC or Rise, plus a $1,000 reward adjustment if late; that promise and the $4,037,892 displayed reward total remain claims by the firm, not independent transfer verification. The site displays its own testimonials and video case studies but no PropRadar-controlled payout test. Confirm the exact chosen model's agreement, risk rules, country restrictions and withdrawal conditions before purchase."
+      },
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of six Lite/Flex offer paths and reward FAQ. Recorded the 48-hour marketing promise and model-dependent payout cycles as firm-reported claims, with no independent payment proof or tested spread. Replaced generic firm description without altering score.",
+          "source": "https://fundedsquad.com/",
+          "fields": [
+            "verdict",
+            "auditSummary"
+          ]
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Funded Squad homepage, pricing paths and FAQ (official, checked 2026-11-17)",
+          "url": "https://fundedsquad.com/"
+        }
+      ]
+    },
     "miltraders": {
       "reviewedAt": "2026-11-16",
       "changelog": [
@@ -6322,7 +6379,7 @@
       ]
     },
     "atlas-funded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -6344,16 +6401,33 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of the currently published general terms: standard 80% share (add-ons possible), 30-day default first payout, 21/30-day first payouts under weekly/biweekly add-ons, 50% first on-demand split, 1–5 business day processing, funded news-profit deductions and strategy limits. Prior shorter timing stated on program docs is not assumed universal. No score change.",
+          "source": "https://www.atlasfunded.com/terms",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "payoutDelay"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Read $1 Start Access offer: $1 is the upfront entry amount with the remaining fee payable after passing, not the full challenge cost; separate products can have different payout clocks. Site-hosted payout receipts are not treated as independent verification.",
+          "source": "https://www.atlasfunded.com/start-access"
         }
       ],
       "set": {
         "profitSplit": 90,
         "newsTrading": "Restricted",
         "eaAllowed": "Yes",
-        "payoutDelay": "first payout 14 days after the funded account is created, then every 14 days (weekly add-on); approved payouts processed within 24 hours, Monday to Friday",
+        "payoutDelay": "Current general terms: default first payout after 30 days from first funded trade; biweekly add-on first day 30 then every 14 days; weekly add-on first day 21 then every 7 days; on-demand first payout uses 50% split. Approved requests processed within 1–5 business days. Product-specific variations possible.",
         "trustpilotRating": 3.9,
         "trustpilotReviewCount": 2015,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/atlasfunded.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/atlasfunded.com",
+        "verdict": "Atlas Funded's current general terms specify an 80% standard funded split, add-on-dependent first withdrawals and a 50% share on the first on-demand payout. Funded news-event profit can be excluded from a payout even without an account breach, and short-duration trading strategies can be restricted. Its '$1 to start' route defers the balance until after a pass; it is not a $1 full challenge. Compare terms with the exact purchased model before paying.",
+        "auditSummary": "Official terms and $1 Start Access program reviewed on 17 November 2026. General terms set an 80% default trader share, potentially increased by add-ons. Default first payout is after 30 days from the first funded trade; biweekly add-on starts at day 30 then every 14 days, and weekly add-on starts day 21 then every 7 days. The first on-demand withdrawal instead uses a 50% share; later ones return to normal. Approved requests are processed in 1–5 business days, not guaranteed within 24 hours. On funded accounts, profit from positions opened/closed within five minutes of high-impact news may be deducted even if this does not count as a rule breach. Certain sub-three-minute strategies, cross-firm copy trading and unapproved EAs are restricted. The 'Start Access' $1 upfront marketing requires deferred payment after a pass; special-product terms and public program pages may differ from general terms. Firm-hosted payout screenshots are not independently validated transactions."
       },
       "setProducts": [
         {
@@ -6415,11 +6489,19 @@
         {
           "label": "Atlas Funded 2-Step (official docs)",
           "url": "https://help.atlasfunded.com/two-step"
+        },
+        {
+          "label": "Atlas Funded Terms, payout splits and trading restrictions (official)",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        {
+          "label": "Atlas Funded Start Access $1 upfront promotion (official)",
+          "url": "https://www.atlasfunded.com/start-access"
         }
       ]
     },
     "superfunded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -6439,12 +6521,24 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of official 22 October rulebook: 70%/80%/90% sequence for Two-Step payouts, 80% One-Step, $100 minimum, 14-day eligibility, daily profit-concentration thresholds, and first-three-payout 5% cap. Corrected payout timing to distinguish request eligibility from processing; still no independent payout or execution test.",
+          "source": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "payoutDelay"
+          ]
         }
       ],
       "set": {
         "newsTrading": "Restricted",
         "eaAllowed": "Yes",
-        "payoutDelay": "every 14 days after reaching the funded stage (first withdrawal at 14 days; 7-day add-on on Two Phase); processing time not stated"
+        "payoutDelay": "Rules V2: first or subsequent eligible payout request after a 14-day waiting period; approved payouts typically processed in 24–48 hours after review, with verification delays possible.",
+        "verdict": "SuperFunded's October 2026 rulebook makes a headline 90% split misleading for early Two-Step withdrawals: the first approved payout receives 70%, the second 80%, and only later payouts 90%. Distribution limits, a first-three-payout profit cap, funded news restrictions and discretionary payout review materially affect the trader's outcome. This is an official-rules audit, not an independently verified trading or withdrawal test.",
+        "auditSummary": "Official Rules and Conditions V2 (22 October 2026) reviewed on 17 November. One-Step funded payouts carry an 80% share; Two-Step pays 70% on the first payout, 80% on the second and 90% thereafter. Requests require at least $100 after the split and a 14-day waiting period; approved payouts are typically processed within 24–48 hours, with KYC or video reviews possible. A 40% single-day profit-distribution limit applies to accounts up to $25k and 30% to $50k–$200k; the first three approved payouts have a 5%-of-bankroll profit cap and excess may be removed on reset. Some news trades and strategies are prohibited on funded accounts. The prior Trustpilot rating-withheld notice remains part of the dated record. No firsthand execution/slippage test or third-party bank-level payout verification was performed."
       },
       "setProducts": [
         {
@@ -6504,6 +6598,10 @@
         {
           "label": "SuperFunded FAQ (official)",
           "url": "https://superfunded.com/faqs/"
+        },
+        {
+          "label": "SuperFunded Rules and Conditions V2, 22 October 2026 (official PDF)",
+          "url": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf"
         }
       ],
       "addIncidents": [
@@ -6511,7 +6609,7 @@
       ]
     },
     "bem-funding": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-17",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -6528,15 +6626,39 @@
           "fields": [
             "incidents"
           ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Deep audit of main legal terms: risk-team interview invitation must be answered within 7 days and attended within 21 business days; contract describes possible termination without refund for missed obligations. Existing rating notice is unchanged.",
+          "source": "https://bemfunding.com/terms-and-conditions",
+          "fields": [
+            "verdict",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Read separate BEM Ascend giveaway agreement: three-phase evaluation including consistency and special news/VPN-eligibility controls. Explicitly distinguished giveaway-only restrictions from standard paid challenges.",
+          "source": "https://bemfunding.com/terms-of-use/bem-ascend"
         }
       ],
       "set": {
-        "payoutDelay": "on demand; the homepage cites an average of 6 hours and also 'payouts in 1-2 days'"
+        "payoutDelay": "on demand; the homepage cites an average of 6 hours and also 'payouts in 1-2 days'",
+        "verdict": "BEM Funding's general terms allow a risk-review interview and require a reply within seven days and attendance within 21 business days; missed obligations can end the account without refund. Its separate BEM Ascend giveaway has a three-phase consistency stage and specific news/IP-masking restrictions. Those giveaway rules must not be mislabeled as applying to every paid BEM challenge. The earlier Trustpilot withheld-rating record remains relevant.",
+        "auditSummary": "Read the main Terms and Conditions (last updated 26 October 2026) and separate BEM Ascend giveaway rules on 17 November. Under the main agreement, the risk unit may request an online meeting; the trader must respond within 7 days and attend within 21 business days, with account termination without refund reserved for noncompliance. The BEM Ascend giveaway specifically adds Challenge, Consistency and Verification phases, news-event handling restrictions and a prohibition on VPN/proxy/device masking when used to evade giveaway eligibility controls. This is not evidence that ordinary paid challenges impose a blanket VPN ban. Existing Trustpilot guideline-breach notice is retained. Claimed payouts, spreads and execution quality were not independently tested."
       },
       "addSources": [
         {
           "label": "BEM Funding homepage (official)",
           "url": "https://bemfunding.com/"
+        },
+        {
+          "label": "BEM Funding Terms and Conditions, updated 26 October 2026 (official)",
+          "url": "https://bemfunding.com/terms-and-conditions"
+        },
+        {
+          "label": "BEM Ascend giveaway-specific Terms of Use (official)",
+          "url": "https://bemfunding.com/terms-of-use/bem-ascend"
         }
       ],
       "addIncidents": [

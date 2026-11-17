@@ -61,6 +61,13 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
 
 Keep earlier changelog entries when you update a firm: append, never delete.
 
+Also accepted: `set.verdict` (sourced short assessment) and
+`set.auditSummary` (sourced, substantive 100+ character audit narrative).
+These can replace generic watchlist copy without implying a hands-on trade test;
+the update must cite the relevant official rule or program in a changelog entry
+with `fields: ["verdict", "auditSummary"]`. Do not mark company marketing
+claims, payout screenshots or simulated execution as independently tested.
+
 Also accepted: `set.drawdownType` (EOD | Trailing | Static | Hybride),
 `set.newsTrading`, `set.eaAllowed`, `setEntities` (changelog `fields:
 ["entities"]`) and `setProducts` (programs read on the official site, changelog
