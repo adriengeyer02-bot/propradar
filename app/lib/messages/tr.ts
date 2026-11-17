@@ -130,7 +130,7 @@ const tr: Messages = {
     metaTitle: 'PropRadar: Bağımsız Prop Firm İncelemeleri ve Karşılaştırma 2026',
     metaDescription: 'Bağımsız prop firm incelemeleri: {count}+ firmanın fiyatlarını, kurallarını, ödeme kanıtlarını, Trustpilot durumunu ve tüzel kişilerini karşılaştırın.',
     kicker: 'Bağımsız. Önce kanıt.',
-    h1: 'Bağımsız prop firm incelemeleri, kanıta dayalı karşılaştırma.',
+    h1: 'Bağımsız prop firm karşılaştırıcısı',
     lead: 'Bir değerlendirme ücreti ödemeden önce {count} prop firmanın kurallarını, fiyatlarını, ödeme kanıtlarını ve arkasındaki şirketleri karşılaştırın.',
     coverageAria: 'PropRadar veri kapsamı',
     firmsCompared: 'karşılaştırılan firma',

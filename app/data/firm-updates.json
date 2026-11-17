@@ -753,8 +753,14 @@
       ]
     },
     "blueberry-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep recheck of official October rules by program and purchase date. The previously recorded firm-wide static drawdown is corrected to hybrid: Prime is static but 3-Step/Instant variants trail. Instant Lite from 17 Aug has 15% funded consistency; funded synthetic from 8 Oct has 25%, and synthetic profits on trades shorter than 5 minutes are excluded from payout. A VPN/VPS is allowed only with a stable dedicated IP; household/shared IP restrictions apply. Existing Trustpilot notice remains. No payout transfer or live spread was independently tested.",
+          "source": "https://help.blueberryfunded.com/en/articles/15310153-what-rules-can-breach-my-account-and-where-do-i-find-the-limits",
+          "fields": ["verdict", "auditSummary", "drawdownType"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -780,9 +786,11 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueberryfunded.com)."
       ],
       "set": {
+        "verdict": "Blueberry Funded's restrictions vary sharply by product and purchase date: Prime has no consistency rule, but newer Instant Lite and funded synthetic plans do; certain synthetic trades held under five minutes do not count toward rewards. Static-IP VPN/VPS use is permitted, whereas shared or rotating IPs can trigger review. The previous Trustpilot rating-withheld notice remains disclosed; neither payouts nor execution were independently tested.",
+        "auditSummary": "Program-level desk audit dated 17 November 2026, with official help-centre rules. Blueberry's general drawdown structure is mixed, not uniformly static: Prime is static, whereas the 3-Step and Instant variants use trailing limits, with an eventual lock for Instant. Its October 8 guidance distinguishes a 15% best-day consistency cap on Instant Lite purchased from 17 August 2026, a 25% funded-stage cap on synthetic plans bought from 8 October 2026, and a legacy 30% rule on earlier synthetic accounts; other plans including Prime have none. For funded synthetic plans purchased from 8 October, profits from trades lasting under five minutes are excluded from rewards, a different rule from prohibited tick scalping. The company explicitly permits VPN/VPS only with a dedicated static IP, warns that shared or rotating addresses may pause access, and publishes restrictions on multiple household accounts sharing an IP. These clauses need product/date-specific application, not a blanket VPN prohibition. The earlier official Prime parameters and Trustpilot withheld-rating incident remain in the file. No PropRadar trade, spread/slippage measurement or bank-level payout verification was performed.",
         "priceFrom": 0,
         "profitSplit": 80,
-        "drawdownType": "Static",
+        "drawdownType": "Hybride",
         "payoutDelay": "rewards every 14 days once funded; 3 active trading days per cycle for accounts bought from 17 August 2026"
       },
       "setProducts": [
@@ -812,6 +820,11 @@
         }
       ],
       "addSources": [
+        { "label": "Blueberry Funded consistency rules by product and purchase date (official)", "url": "https://help.blueberryfunded.com/en/articles/9812246-does-blueberry-funded-enforce-a-consistency-rule-in-trading" },
+        { "label": "Blueberry Funded prohibited-strategy and synthetic minimum-hold rules (official)", "url": "https://help.blueberryfunded.com/en/articles/9714626-prohibited-strategies-after-march-12-2026" },
+        { "label": "Blueberry Funded drawdown styles and previous rules (official)", "url": "https://help.blueberryfunded.com/en/articles/15310153-what-rules-can-breach-my-account-and-where-do-i-find-the-limits" },
+        { "label": "Blueberry Funded VPN/VPS static-IP policy (official)", "url": "https://help.blueberryfunded.com/en/articles/9859313-is-vpn-or-vps-allowed" },
+        { "label": "Blueberry Funded household/shared-IP policy (official)", "url": "https://help.blueberryfunded.com/en/articles/9774387-what-is-your-ip-rule-regarding-multiple-accounts" },
         {
           "label": "Blueberry Funded Prime Challenge (official help)",
           "url": "https://help.blueberryfunded.com/en/articles/12136509-what-is-the-prime-challenge"
@@ -2625,8 +2638,14 @@
       ]
     },
     "fundyourfx": {
-      "reviewedAt": "2026-10-28",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Deep review of current terms, 1-Step Pay-After-You-Pass FAQ and eligible countries. All payouts are contractually discretionary subject to verification. The model's 4x best-day Profit Balance Rule, 3-minute stop-loss, 60-second hold, 15-second rapid re-entry and news-window restrictions create execution traps. The company forbids VPN/VPS used to evade country restrictions, not all VPN use; Hong Kong, Iran and North Korea are excluded. Existing Trustpilot rating-withheld notice retained, no paid trial or transfer verification.",
+          "source": "https://fundyourfx.com/terms-conditions",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -2635,6 +2654,15 @@
             "incidents"
           ]
         }
+      ],
+      "set": {
+        "verdict": "FundYourFX sells several simulated funding and evaluation routes with materially different rules. The 1-Step Pay-After-You-Pass program starts at 70% reward share and imposes a profit-balance requirement, time-based trade restrictions and mandatory stop-loss use. Official terms reserve discretionary payout review. VPN/VPS circumvention of territorial restrictions is prohibited; this is not a blanket ban. The existing Trustpilot fake-review notice remains a material caution.",
+        "auditSummary": "Reviewed the current official Terms and Conditions and the 1-Step Pay-After-You-Pass program FAQ on 17 November 2026. For that specific 1-Step model the evaluation requires a 12% target, five trading days, 6% static maximum loss and 4% EOD daily loss; funded rewards begin at a 70% share and progress to 80%, 90%, then 95% only after consecutive payout milestones. The published Profit Balance Rule requires total accumulated profit at least four times the best trading day to unlock a reward. The same program lists a stop loss within three minutes of each entry, a minimum 60-second hold, no reopening within 15 seconds of closing, a two-position stacking cap per direction/instrument, and news-related time restrictions. General terms expressly describe payouts as discretionary and allow holds/rejections for violations after checks. The firm's country FAQ excludes Hong Kong, Iran and North Korea, and prohibits VPN or VPS masking to circumvent those restrictions; it does not establish a universal VPN ban. Different Instant and evaluation programs must not inherit every 1-Step-only parameter. Existing Trustpilot rating-withheld notice is preserved. No spread, latency, fee-funded account or independently verified payout test was made."
+      },
+      "addSources": [
+        { "label": "FundYourFX binding terms and payout discretion (official)", "url": "https://fundyourfx.com/terms-conditions" },
+        { "label": "FundYourFX 1-Step Pay-After-You-Pass FAQ (official)", "url": "https://fundyourfx.com/faqs/trading-rules-guide/1-step-evaluation-pay-after-you-pass-complete-faq" },
+        { "label": "FundYourFX country restrictions and VPN circumvention policy (official)", "url": "https://fundyourfx.com/faqs/getting-started/country-restrictions" }
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundyourfx.io)."
@@ -3966,8 +3994,14 @@
       ]
     },
     "onefunded": {
-      "reviewedAt": "2026-11-15",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Official 2026 payout checklist, breach rules, IP-region guidance and Nov 10 eligibility rechecked independently of the affiliate relationship. Open positions AND pending orders must be cancelled for payout; approval freezes trading temporarily. A breach voids previous simulated gains even if earned before it; region changes may trigger travel-document/video verification. UAE appears in the firm-published restricted jurisdictions; checkout payment does not prove eligibility. No universal VPN ban documented and no payout personally verified.",
+          "source": "https://help.onefunded.com/before-you-request-a-payout/",
+          "fields": ["verdict", "auditSummary"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror; Trustpilot also says the profile was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
@@ -4015,9 +4049,15 @@
         }
       ],
       "set": {
-        "payoutDelay": "14-day payout cycle, or 7 days with an add-on (first-payout rule not stated)"
+        "verdict": "OneFunded has unusually consequential operational checks around payouts: positions and pending orders must all be closed, a breach may void prior simulated profits, and a change of IP region can require identity/location evidence. The firm's eligibility page lists the UAE among restricted jurisdictions. PropRadar has an affiliate relationship, but it does not change the existing score or erase the dated Trustpilot fake-review notice.",
+        "auditSummary": "Detailed official help-centre audit on 17 November 2026. A reward request requires 14 days since the previous payout (or seven with a paid weekly add-on; first cycle starts with first trade), no open trades, no pending/limit orders, a within-cap consistency ratio, and at least $100 after the profit split. Trading goes to view-only while the request is processed. A separate official article explains that a funded breach, including a drawdown or unauthorized automation discovered at payout review, permanently closes the account and voids simulated gains including gains accrued before the breach. The May 2026 multiple-IP policy permits different devices/addresses but expects geographical IP-region consistency: changes can prompt travel evidence, a passport stamp or live location video; this must not be misreported as a universal VPN/VPS ban. The 10 November eligibility guide lists UAE and several other restricted countries and explicitly cautions that successful checkout does not establish the legal right to receive services. Source dates and model-specific thresholds are given so users can verify before purchase. The earlier Trustpilot rating-withheld notice and firm-reported $1M+ payout counter remain separately labeled; neither proves payment verification. PropRadar's commercial relationship has no role in this assessment, and no firsthand payout/spread test occurred.",
+        "payoutDelay": "First funded reward request after 14 days from the first trade; subsequent requests after 14 days from prior payout, or 7 days with the paid weekly add-on; all open positions and pending orders must be closed"
       },
       "addSources": [
+        { "label": "OneFunded payout request conditions (official)", "url": "https://help.onefunded.com/before-you-request-a-payout/" },
+        { "label": "OneFunded breached-account consequences (official)", "url": "https://help.onefunded.com/breaching-a-funded-account/" },
+        { "label": "OneFunded multiple devices and IP regions (official)", "url": "https://help.onefunded.com/multiple-devices-andor-ip-addresses/" },
+        { "label": "OneFunded eligibility and restricted countries, updated 10 Nov (official)", "url": "https://help.onefunded.com/eligibility/" },
         {
           "label": "Official page read 2026-11-15",
           "url": "https://onefunded.com/how-it-works/"
@@ -4582,6 +4622,26 @@
           "label": "TradeInformer: Take Profit Trader cuts evaluation minimum to three days (17 Aug 2026)",
           "url": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days"
         }
+      ]
+    },
+    "the-concept-trading": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "First in-depth trading-rule audit using current official FAQ and All Rules. Standard share starts at 50%, not headline 90%; top-level or conditional 90% Lock is different, forfeits higher scaling and requires milestone first. Outside scaling events, payouts may be requested monthly (weekly at the top/Lock), and an invoice must be submitted within 30 days of target or profit share is forfeited. Trading inactivity of 42 days terminates an account. The FAQ says Iran, North Korea and OFAC countries excluded; US clients cannot use Metaquotes. No independent withdrawal, spread or license verification performed.",
+          "source": "https://new.theconcepttrading.com/faq/",
+          "fields": ["verdict", "auditSummary"]
+        }
+      ],
+      "set": {
+        "verdict": "The Concept Trading advertises profit sharing up to 90%, but its published default for every model is 50%; 90% needs top-level progression or the optional Lock Rule, which sacrifices further scaling. Its FAQ additionally requires a timely invoice to avoid loss of earned profit share, while inactive prop accounts can terminate after 42 days. Published eligibility and payout schedules are not substitutes for proof of independent trader payments.",
+        "auditSummary": "PropRadar's 17 November 2026 desk audit read the official current FAQ, All Rules and Terms for program-level catches. The firm's standard profit-share arrangement begins at 50% on every model; 90% is offered at a top program level or through the 90% Lock Rule. Lock activation is unavailable on Foundation and Intern accounts, requires first reaching the chosen scaling milestone and receiving its normal split, and prevents further account scaling after election. Once on Level 1 or higher, rewards are triggered by a scaling target; otherwise the FAQ permits one withdrawal per month, rising to weekly at the highest level or with the Lock Rule. Most importantly, the official FAQ requires a profit-sharing invoice within 30 days after hitting the scaling target or the entitlement is forfeited; a six-week/42-day inactivity period also terminates the account. The FAQ excludes Iran, North Korea and US-sanctioned jurisdictions and says US residents cannot use Metaquotes platforms, though other platforms are accepted. It describes static drawdowns varying by plan, not a single universal percentage. These rules and the firm's public financial-service authorisation claims have not been independently verified via a regulator in this pass; no hands-on execution, spread comparison or verified bank payout exists."
+      },
+      "addSources": [
+        { "label": "The Concept Trading standard split, monthly payouts, invoice deadline and jurisdictions (official FAQ)", "url": "https://new.theconcepttrading.com/faq/" },
+        { "label": "The Concept Trading 90% Lock Rule and 42-day inactivity (official)", "url": "https://new.theconcepttrading.com/all-rules/" },
+        { "label": "The Concept Trading contractual terms (official)", "url": "https://new.theconcepttrading.com/terms-and-conditions/" }
       ]
     },
     "the-funded-trader": {
@@ -5664,8 +5724,14 @@
       ]
     },
     "wegetfunded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-17",
       "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Important correction from the firm's 10 November updated contract: funded reward requests are permitted only from the 16th through month-end (UTC), after minimum 7 calendar days and qualifying trading days, subject to a 50% cumulative-PnL request ceiling and plan/size payout caps. New funded daily 30% profit-distribution cap and 199 EUR activation fee after passing challenges; No-Consistency checkout add-on does not waive funded rules. The earlier 14-day payout statement is superseded. No payout or spread independently tested.",
+          "source": "https://wegetfunded.com/en/legal/terms",
+          "fields": ["verdict", "auditSummary", "payoutDelay"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 3.9 TrustScore across 1,004 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -5687,14 +5753,18 @@
         }
       ],
       "set": {
+        "verdict": "WeGetFunded's November 2026 contract materially tightens the practical withdrawal picture: reward requests are open only from the 16th through month-end, subject to an at-least-seven-day cycle wait, qualifying trading days and a 50% cumulative-profit request cap plus plan-specific ceilings. A funded 30% best-day limit applies, and challenge graduates generally owe an activation fee unless an eligible advance-payment option was bought. Its former simple 'every 14 days' summary is outdated.",
+        "auditSummary": "Deep document review on 17 November 2026 of the official terms last updated 10 November and the current FAQ. Section 17.4 adds a funded-stage Daily PNL Cap: the largest profit day cannot exceed 30% of cumulative account profit for reward eligibility. Program appendices distinguish 20% consistency on Instant Funded from 40% (2-Step evaluation), 50% (1-Step evaluation) and 30% (funded). Withdrawals on the listed WGF models can be requested only on the 16th to the last day of each month (UTC), after at least seven calendar days from the cycle's first trade and any qualifying-day requirement, with at most 50% of accumulated P&L per request and additional absolute caps determined by account size and sequence. For challenge graduates the currently described activation charge is EUR 199; a EUR 99 upfront payment option waives the later fee, but is non-refundable on failure. The No-Consistency add-on applies to a 2-Step challenge evaluation, not to its resulting funded account. The 1-Step EOD trailing drawdown continues rising with higher end-of-day balances, unlike the earlier broad claim that every 1-Step drawdown locks to starting capital. These are published company terms, not verified settlements, legal eligibility confirmations or live spread tests. PropRadar's previous payout timing description has been corrected rather than left as a misleading legacy promise.",
         "trustpilotRating": 3.9,
         "trustpilotReviewCount": 1004,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/wegetfunded.com",
         "drawdownType": "Hybride",
         "eaAllowed": "Yes",
-        "payoutDelay": "withdrawal requests every 14 days from the first funded trade, after at least 5 trading days; review and processing 4 to 7 business days, paid in USD via RISE"
+        "payoutDelay": "10 Nov 2026 terms: funded requests only from 16th through month-end (UTC), after at least 7 calendar days from cycle's first trade and required qualified days; 50% cumulative-profit request cap and account-size ceilings; settlement speed not independently verified"
       },
       "addSources": [
+        { "label": "WeGetFunded Terms updated 10 November 2026, sections 17-18 (official)", "url": "https://wegetfunded.com/en/legal/terms" },
+        { "label": "WeGetFunded current program FAQ and optional activation fees (official)", "url": "https://wegetfunded.com/faq" },
         {
           "label": "WeGetFunded FAQ (official)",
           "url": "https://wegetfunded.com/en/faq"
