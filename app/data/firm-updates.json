@@ -10900,6 +10900,370 @@
         "2026-11-17 — A specialist prop-firm directory now marks Tradicave CLOSED and its original website is unavailable; no first-party legal dissolution confirmation was located. Source: https://thetrustedprop.com/prop-firms/tradicave"
       ]
     },
+    "trading-cult": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The live TradingCult website now names TradingCult Limited of Saint Lucia, whereas independent 2024 reporting identified different Seychelles and Cyprus entities. No formal corporate succession record or Saint Lucia registration number was authenticated.",
+          "source": "https://pro.tradingcult.com/",
+          "fields": ["score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot suppresses TradingCult's numeric TrustScore over a guidelines breach and says it removed a number of fake reviews; its notice does not say who authored or bought them. The profile displayed 196 reviews on the audit date.",
+          "source": "https://www.trustpilot.com/review/tradingcult.com",
+          "fields": ["score", "trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The operator's October 2026 trading rules and homepage payout certificates were reviewed; amounts displayed in marketing are classified only as company-reported, not independently settled transfers.",
+          "source": "https://faq.fr.tradingcult.com/existe-t-il-des-pratiques-ou-des-methodes-commerciales-interdites/",
+          "fields": ["auditSummary", "legalReview", "payoutProofs"]
+        }
+      ],
+      "set": {
+        "score": 40,
+        "trustpilotReviewCount": 196,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradingcult.com",
+        "verdict": "TradingCult operates a live simulated-evaluation service, but its present Saint Lucia supplier has not been independently registered or linked by a formal succession document to the Seychelles/Cyprus entities reported in 2024. Trustpilot withholds its rating following a guidelines breach and fake-review removals; it does not publicly identify who submitted the reviews. The combination of counterparty uncertainty, strict trading limits and unverified payouts justifies a 40/100 watchlist score.",
+        "auditSummary": "17 November 2026: TradingCult's live pro.tradingcult.com site identifies TradingCult Limited in Saint Lucia and states that the service is simulated, not brokerage trading. Finance Magnates separately reported a 2024 launch involving Cultpedia in Seychelles and Cultedge in Cyprus under the wider Traders Trust leadership; that historic affiliation is not proof that the 2026 Saint Lucia company assumed all former customer obligations. No official Saint Lucia incorporation number or signed assignment was authenticated. Trustpilot's domain-matched tradingcult.com page displayed 196 reviews and removed the numeric TrustScore for a breach of its guidelines, expressly noting removal of fake reviews; the notice does not establish who arranged them. A fresh 17 November complaint alleges immediate closure of a profitable Instant Funded account over a stop-loss risk calculation; the company replies that its 2% risk rule evaluates potential stop loss, with no first-warning protection for Instant accounts. Its official FAQ documents the rules effective 21 October 2026, including per-symbol/direction limits and duration restrictions; applicable rules may depend on purchase date. Homepage payout certificates and aggregate claims are publisher-produced, not external bank settlement evidence. PropRadar's score falls from 46 to 40 and purchases should be considered only after the exact legal supplier, account-specific rule version and independent payment track record are established.",
+        "listedDomainWarning": "HIGH-CAUTION PURCHASE NOTICE: TradingCult's site is live, but the current Saint Lucia operator has not been independently matched to a registered company number or formally linked to the older Seychelles/Cyprus entities. Trustpilot currently withholds the firm's score and reports fake-review removals without identifying who generated them. Independently authenticated trader transfer receipts were not found. PropRadar is not presenting an approved checkout link pending supplier and payout verification."
+      },
+      "setEntities": [
+        {
+          "name": "TradingCult Limited",
+          "jurisdiction": "Saint Lucia — official incorporation unverified",
+          "role": "Current operating entity named on the live TradingCult website; no authenticated business-registration number or public legal succession document."
+        },
+        {
+          "name": "Cultpedia and Cultedge (historical, reported names)",
+          "jurisdiction": "Seychelles and Cyprus — independent 2024 reporting only; succession unverified",
+          "role": "Finance Magnates identified these entities in a 2024 Trading Cult launch report. They must not be assumed to be the same as or guarantee TradingCult Limited's 2026 liabilities."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "TradingCult has an active simulated prop-evaluation website with a Saint Lucia operator name but no verified company number or documented migration from two historically reported counterparties. Its Trustpilot rating is withheld following guideline violations, and current strict risk limits can trigger account closures.",
+        "regulatoryStatus": [
+          "The live website names TradingCult Limited in Saint Lucia and describes simulated evaluations rather than broker or custodial investment services; registration itself was not independently verified.",
+          "2024 Finance Magnates reporting named Cultpedia (Seychelles) and Cultedge (Cyprus); this does not establish any 2026 company successor or licence transfer.",
+          "Official October 2026 FAQ describes rule restrictions; confirm the account's purchase-era terms before making any trading decision."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot reports breach of review guidelines and removal of a number of fake reviews; it does not attribute authorship, motive or payment to the company.",
+          "A 17 November 2026 customer complaint describes an Instant account disabled for a 2% potential stop-loss-risk rule. TradingCult replied and explained its interpretation; the individual's account facts remain disputed.",
+          "TradingCult displays named payout certificates and marketing totals, but no third-party transfer record attributable to the actual recipient was independently confirmed."
+        ],
+        "redFlags": [
+          "Current legal registration number and relationship to prior companies unverified.",
+          "Trustpilot numeric rating withheld; fake-review removals confirmed by the platform, not evidence of which actor submitted them.",
+          "Programme-specific immediate-breach rules and self-published payout material only."
+        ],
+        "sources": [
+          { "label": "Current TradingCult operator and simulated service website", "url": "https://pro.tradingcult.com/" },
+          { "label": "TradingCult Trustpilot guideline-breach and review-removal notice", "url": "https://www.trustpilot.com/review/tradingcult.com" },
+          { "label": "TradingCult official October 2026 trading restrictions", "url": "https://faq.fr.tradingcult.com/existe-t-il-des-pratiques-ou-des-methodes-commerciales-interdites/" },
+          { "label": "Finance Magnates 2024 investigation into launch entities", "url": "https://www.financemagnates.com/forex/exclusive-traders-trust-silently-launches-prop-trading-platform/" }
+        ]
+      },
+      "addSources": [
+        { "label": "TradingCult live operator and homepage payout claims", "url": "https://pro.tradingcult.com/" },
+        { "label": "Domain-matched TradingCult Trustpilot score-withdrawal notice", "url": "https://www.trustpilot.com/review/tradingcult.com" },
+        { "label": "Official updated TradingCult rules dated 21 October 2026", "url": "https://faq.fr.tradingcult.com/existe-t-il-des-pratiques-ou-des-methodes-commerciales-interdites/" },
+        { "label": "2024 Trading Cult launch legal-entity reporting", "url": "https://www.financemagnates.com/forex/exclusive-traders-trust-silently-launches-prop-trading-platform/" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — Trustpilot says TradingCult's rating is unavailable due to a breach of our guidelines and that it has removed a number of fake reviews; this notice does not identify who originated or purchased any reviews. Source: https://www.trustpilot.com/review/tradingcult.com",
+        "2026-11-17 — The 2% potential stop-loss risk rule and different Instant Funded breach treatment are illustrated by a disputed trader account and a substantive company reply; the customer's exact facts are not independently adjudicated. Source: https://www.trustpilot.com/review/tradingcult.com"
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-17",
+          "kind": "official",
+          "publisher": "TradingCult",
+          "quote": "TradingCult displays named payout certificates and claims to have paid millions to traders. This is company-published promotional evidence; independent bank or on-chain settlement matching individual recipients was not authenticated.",
+          "url": "https://pro.tradingcult.com/",
+          "firmReported": true
+        }
+      ]
+    },
+    "next-step-funded": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The old sales domain is unavailable and a specialist directory marks Next Step Funded closed; this supports commercial inactivity, not proof that a specific corporate entity has been legally dissolved.",
+          "source": "https://thetrustedprop.com/prop-firms/next-step-funded",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The domain-matched Trustpilot page shows 1.6/5 across 859 reviews, 71% one-star, with numerous unpaid-reward, account-access and KYC complaints; these remain allegations unless independently established.",
+          "source": "https://www.trustpilot.com/review/nextstepfunded.com",
+          "fields": ["score", "trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 23,
+        "trustpilotRating": 1.6,
+        "trustpilotReviewCount": 859,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/nextstepfunded.com",
+        "verdict": "Next Step Funded's original trading website is unavailable and a specialist prop-firm directory describes the business as closed. Its domain-matched Trustpilot page has a poor 1.6/5 score over 859 reviews and substantial historic trader complaints. Closure of the prop-evaluation offering is reported, but no company-dissolution filing was verified. This archived page must not be treated as an invitation to buy a challenge.",
+        "auditSummary": "17 November 2026: nextstepfunded.com could not be used to authenticate trading, account access, current purchase conditions or a living registered supplier. TheTrustedProp lists the firm as closed and 2026 availability checks describe website errors, supporting commercial inactivity. A company dissolution cannot be inferred from an inaccessible website: its original legal name and UAE registration number were not verified. Trustpilot's claimed nextstepfunded.com profile displays 859 customer reviews, a 1.6/5 rating and 71% one-star responses; reports include long payout delays, unresponsive support, unworkable KYC links and unusable trading credentials. An individual customer review does not itself establish the seller's contractual breach, and some complaints may be stale or uncorroborated. No primary payout ledger, independently matched funds transfer, closure refund settlement or successor contract was found. PropRadar reduces the score from 44 to 23, classifies the commercial challenge operation as reportedly closed and suppresses buying links, while preserving the distinction from formal corporate liquidation.",
+        "listedDomainWarning": "CLOSED-BRAND WARNING: Next Step Funded is reported commercially closed, its original challenge website is unavailable and its legal operator has not been verified as formally dissolved. PropRadar strongly warns against paying anyone reusing this business name or domain until an independently registered current supplier and responsibility for old refunds and payouts are documented. No historic purchase URL is endorsed."
+      },
+      "setEntities": [
+        {
+          "name": "Next Step Funded (historic brand; legal counterparty unverified)",
+          "jurisdiction": "To verify — Trustpilot lists UAE contact location, not a confirmed incorporation",
+          "role": "Historical simulated-account seller. Official company number, legal discontinuation, and successor liabilities not authenticated."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Commercial closure is reported by a specialist directory and supported by the unavailable original website; formal corporate dissolution is not established. The exact legal entity, former customer refund route and responsibility for disputed payouts remain unverified.",
+        "regulatoryStatus": [
+          "The original nextstepfunded.com trading site is not accessible as a reliable 2026 service or contracting reference.",
+          "TheTrustedProp labels the firm CLOSED; this is a directory classification, not an official corporate register entry.",
+          "The claimed Trustpilot listing supplies only a UAE contact-location reference; no UAE trade licence or registry number confirmed."
+        ],
+        "complaintsAndDisputes": [
+          "The current Trustpilot page displays 1.6/5 from 859 reviews, including 71% one-star ratings, with allegations of reward refusal, inaccessible accounts and KYC problems.",
+          "Several late customer posts report difficulties in 2025–2026, but individual claims were not independently adjudicated and may relate to older account purchases.",
+          "No independently confirmed final payout settlement, refund policy or closure procedure was found."
+        ],
+        "redFlags": [
+          "Sales domain inaccessible and a current directory reports closure.",
+          "Very weak domain-matched public review record with repeated unresolved payout complaints.",
+          "Historical legal supplier and financial-redress obligations unidentified.",
+          "Risk of impersonation when the former brand or domain is reused."
+        ],
+        "sources": [
+          { "label": "Next Step Funded reported CLOSED in specialist directory", "url": "https://thetrustedprop.com/prop-firms/next-step-funded" },
+          { "label": "Current domain-matched Trustpilot score and reviews", "url": "https://www.trustpilot.com/review/nextstepfunded.com" },
+          { "label": "Historic company site, unavailable", "url": "https://nextstepfunded.com/" },
+          { "label": "2026 secondary availability record", "url": "https://mypropgenius.com/closed-firms/" }
+        ]
+      },
+      "addSources": [
+        { "label": "Next Step Funded specialist closure listing", "url": "https://thetrustedprop.com/prop-firms/next-step-funded" },
+        { "label": "Next Step Funded exact-domain Trustpilot", "url": "https://www.trustpilot.com/review/nextstepfunded.com" },
+        { "label": "Former Next Step Funded website", "url": "https://nextstepfunded.com/" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — TheTrustedProp marks Next Step Funded CLOSED, while the original trading site fails availability checks; the specific legal company has not been proved dissolved. Source: https://thetrustedprop.com/prop-firms/next-step-funded",
+        "2026-11-17 — Domain-matched Trustpilot displays 1.6/5 from 859 reviews and extensive user allegations of payout, KYC and access problems; these are customer accounts rather than verified court findings. Source: https://www.trustpilot.com/review/nextstepfunded.com"
+      ]
+    },
+    "exfunded": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "A surviving first-party ExFunded website exposes detailed terms naming ExFunded LLC and a physical Accra address, correcting the earlier claim that no operator could be named; no independent Ghana incorporation record or registration number was retrieved.",
+          "source": "https://exfunded.sandai-investment.com/terms-condition/",
+          "fields": ["score", "officialWebsite", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The current ExFunded FAQ details variable splits and trading/withdrawal constraints; homepage payout totals and average processing times remain issuer-reported, without independently confirmed settlement records.",
+          "source": "https://exfunded.sandai-investment.com/faq/",
+          "fields": ["score", "auditSummary", "legalReview", "payoutProofs"]
+        }
+      ],
+      "set": {
+        "score": 39,
+        "officialWebsite": "https://exfunded.sandai-investment.com/",
+        "verdict": "ExFunded has an accessible first-party website and terms expressly naming ExFunded LLC with an Accra, Ghana business address. This improves identity disclosure over the old unavailable exfunded.com domain, but the LLC's Ghana registration and exact continuity between domains have not been independently authenticated. Reward split conditions and trading restrictions warrant careful reading; impressive company payout totals are not independent proof of settlement.",
+        "auditSummary": "17 November 2026: ExFunded's original exfunded.com website was unavailable, but the current ExFunded-branded subdomain exfunded.sandai-investment.com publishes first-party terms identifying ExFunded LLC as the owner of exfunded.com and showing a physical address at 10–22 Westlands Blvd, West Legon Road, Haatso, Accra, Ghana. The text states it is a simulated, non-broker prop challenge; the stated legal entity was not matched to an official Ghana company register, and a formal assignment of the .com web identity to the subdomain was not verified. The official FAQ states a 70% initial reward share, potentially 80% after three withdrawals and 90% after four, with an evaluation fee refund only after the fourth eligible payout; trading consistency, minimum trading days and payout conditions may materially affect eligibility. The homepage claims more than $1 million paid and fast average withdrawals, but no independently authenticated trader-specific transfer, wallet settlement or bank statement was obtained. Historical operator Telegram posts mention a management transition and payout backlog, though exact unresolved balances and contemporary responsibility are not independently established. A domain-matched active Trustpilot score was not authenticated, so no unrelated ExFunded-sounding brand is used as a proxy. PropRadar raises the score from 34 to 39 for discoverable contract and terms while continuing to block unverified checkout routes.",
+        "listedDomainWarning": "SUPPLIER-IDENTITY WARNING: ExFunded's old .com is unavailable, while a branded sandai-investment.com subdomain now claims to represent ExFunded LLC in Ghana. The name and address appear in first-party terms, but registration number, corporate status and contractual continuity remain unverified. Confirm the actual legal supplier, current URL, payout obligations and purchase-specific terms independently; PropRadar does not endorse an unverified payment link."
+      },
+      "setEntities": [
+        {
+          "name": "ExFunded LLC",
+          "jurisdiction": "Ghana — incorporation and legal form not independently verified",
+          "role": "First-party terms claim ownership of exfunded.com and list 10–22 Westlands Blvd, West Legon Road, Haatso, Accra. No official registration number authenticated."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "ExFunded's first-party terms identify an ExFunded LLC and Ghana address and describe simulated challenges, but no official registry entry or reliable transfer of customer contracts to the present subdomain was found. Reward eligibility is conditional and published payout totals are unaudited marketing claims.",
+        "regulatoryStatus": [
+          "Current ExFunded terms name ExFunded LLC at an Accra business address; a Ghana government company number or authenticated corporate form was not independently retrieved.",
+          "The terms describe virtual trading and deny offering brokerage, client-fund management or investment services.",
+          "The provider's old .com domain and current sandai-investment.com subdomain are connected by the first-party terms, not by an independently validated assignment or ownership registry."
+        ],
+        "complaintsAndDisputes": [
+          "The operator's public communications refer to prior management changes and payout arrears; no independent complete ledger, dated payment resolution or adjudication was found.",
+          "The official FAQ requires programme-specific qualification for reward splits and a fourth payout for the fee refund, so advertised percentages must not be treated as unconditional.",
+          "The website's $1m+ cumulative payout and fast payment claims lack an independently identified receipt-to-recipient chain."
+        ],
+        "redFlags": [
+          "First-party entity identification without independent legal registration confirmation.",
+          "Domain migration and possible legacy counterparty obligations unresolved.",
+          "Company-controlled payout figures with no independently authenticated proof.",
+          "Material reward and refund conditions in official FAQ."
+        ],
+        "sources": [
+          { "label": "ExFunded first-party legal entity and Ghana address", "url": "https://exfunded.sandai-investment.com/terms-condition/" },
+          { "label": "Official ExFunded reward rules and payout conditions", "url": "https://exfunded.sandai-investment.com/faq/" },
+          { "label": "Current ExFunded company payout claims", "url": "https://exfunded.sandai-investment.com/" },
+          { "label": "Original ExFunded domain referenced by company", "url": "https://exfunded.com/" }
+        ]
+      },
+      "addSources": [
+        { "label": "Current ExFunded brand website", "url": "https://exfunded.sandai-investment.com/" },
+        { "label": "ExFunded operator legal-entity disclosure", "url": "https://exfunded.sandai-investment.com/terms-condition/" },
+        { "label": "ExFunded FAQ trading and reward conditions", "url": "https://exfunded.sandai-investment.com/faq/" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — The original exfunded.com is unavailable; the current first-party terms claim ExFunded LLC, Ghana, operates the name, but no official incorporation number or independently authenticated customer-contract transfer was found. Source: https://exfunded.sandai-investment.com/terms-condition/"
+      ],
+      "addPayoutProofs": [
+        {
+          "date": "2026-11-17",
+          "kind": "official",
+          "publisher": "ExFunded",
+          "quote": "ExFunded's current homepage claims over $1 million of total payouts and rapid withdrawal processing. These are company-originated figures, not independently matched recipient bank transfers or on-chain settlements.",
+          "url": "https://exfunded.sandai-investment.com/",
+          "firmReported": true
+        }
+      ]
+    },
+    "optimal-traders": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Optimal Traders' own surviving shop names OTS Research FZCO, a Dubai company. Bloomberg's LEI record independently identifies the UAE entity as ACTIVE, although its LEI renewal status is LAPSED; lapsed LEI does not mean company dissolution.",
+          "source": "https://shop.optimal-traders.com/pages/terms-conditions",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The original challenge home page is inaccessible, a specialist directory labels the prop firm closed, and Trustpilot shows 2.4/5 across 283 reviews with repeated customer reports of suspended trading and unpaid withdrawals.",
+          "source": "https://www.trustpilot.com/review/optimal-traders.com",
+          "fields": ["status", "score", "trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 24,
+        "trustpilotRating": 2.4,
+        "trustpilotReviewCount": 283,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/optimal-traders.com",
+        "verdict": "Optimal Traders' main evaluation site is unavailable and recent trader accounts describe suspension of trading and long-unpaid withdrawals; a specialist directory labels the prop offering closed. Unlike an anonymous brand, its old shop names the UAE-registered OTS RESEARCH - FZCO, which an independent LEI register currently labels ACTIVE. This is a reported commercial service interruption—not proof the legal company has been dissolved—and past checkout pages should not be used.",
+        "auditSummary": "17 November 2026: optimal-traders.com is not a functioning authenticated prop evaluation entry point, and TheTrustedProp's profile flags the commercial operation closed; trader testimonies also describe suspended access during 2025. A surviving optimal-traders.com Shopify subdomain still exposes terms that name OTS Research FZCO, Dubai Silicon Oasis, UAE, as trading as Optimal Traders; an apparently working storefront does not verify that trading accounts can be delivered or rewards paid. The Bloomberg LEI record corroborates the legal name OTS RESEARCH - FZCO, the UAE jurisdiction and authority entity ID 2190000000000015801, and specifically labels the entity ACTIVE. Its LEI registration is LAPSED as of its June 2026 renewal, which is only an identifier-maintenance status, not company deregistration. This distinction matters: PropRadar's closed status describes the previously offered prop challenges, not the legal extinction of OTS Research FZCO. Trustpilot currently displays 2.4/5 across 283 reviews, with numerous first-person reports of months-long nonpayments, and some older successful payout testimonials. No independent bank payment verification or settlement statement for contested cases was found. The score falls from 37 to 24. All historical checkout links are disabled until the firm independently proves trading access, payout processing and counterparty continuity.",
+        "listedDomainWarning": "COMMERCIAL CLOSURE / SERVICE-PAUSE ALERT: Optimal Traders' main evaluation website is unavailable, its service has been reported closed or paused, and multiple traders report unpaid withdrawals. Important nuance: OTS RESEARCH - FZCO remains marked ACTIVE in an independent legal-identity record, and its legacy shop subdomain may remain accessible; neither fact demonstrates renewed delivery of prop accounts. Do not pay any website claiming revived Optimal Traders challenges without verifying real trading access, registered supplier and settlement of prior liabilities."
+      },
+      "setEntities": [
+        {
+          "name": "OTS RESEARCH - FZCO (also OTS Research FZCO)",
+          "jurisdiction": "United Arab Emirates — Bloomberg LEI entity status ACTIVE",
+          "registrationNumber": "2190000000000015801",
+          "role": "Official Optimal Traders shop terms name this Dubai free-zone company. Independent Bloomberg LEI record 9845002KFD73C5FDOD22 corroborates company identity; LEI renewal status LAPSED is not dissolution or a verified payment guarantee."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "The historical Optimal Traders shop names OTS Research FZCO, confirmed by the Bloomberg LEI record as an active UAE legal entity with entity ID 2190000000000015801. However, primary evaluation access is absent and trader reports describe the prop business as paused/closed, leaving historic payout liabilities unresolved. Legal company status and live prop-service status are different questions.",
+        "regulatoryStatus": [
+          "First-party legacy shop terms: OTS Research FZCO, Dubai Silicon Oasis, Dubai, UAE.",
+          "Bloomberg LEI 9845002KFD73C5FDOD22: OTS RESEARCH - FZCO, UAE, entity status ACTIVE, registry entity ID 2190000000000015801; LEI renewal LAPSED does not imply corporate dissolution.",
+          "Current challenge trading infrastructure, revised contract or regulated-broker status were not verified from the inaccessible main site."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot shows 2.4/5 from 283 reviews, including extensive 2025–2026 allegations of unpaid payouts and prolonged service suspension.",
+          "The same Trustpilot archive contains earlier positive payout accounts; neither positive nor negative reviews are verified external bank records.",
+          "The remaining online shop alone cannot demonstrate restored accounts, timely rewards, or customer-contract performance."
+        ],
+        "redFlags": [
+          "Commercial challenge operation appears paused/closed despite an active legal entity and a surviving shop subdomain.",
+          "Numerous unresolved payout complaints and inoperative original evaluation site.",
+          "No independently authenticated resolution of historic reward obligations.",
+          "Potentially confusing live checkout surfaces under a brand with uncertain service delivery."
+        ],
+        "sources": [
+          { "label": "Original Optimal Traders shop legal supplier terms", "url": "https://shop.optimal-traders.com/pages/terms-conditions" },
+          { "label": "Independent UAE company LEI identity and active status", "url": "https://lei.bloomberg.com/leis/view/9845002KFD73C5FDOD22" },
+          { "label": "Optimal Traders Trustpilot reward and interruption complaints", "url": "https://www.trustpilot.com/review/optimal-traders.com" },
+          { "label": "Specialist directory marks prop offering closed", "url": "https://thetrustedprop.com/prop-firms/optimal-traders" }
+        ]
+      },
+      "addSources": [
+        { "label": "OTS Research FZCO first-party Optimal Traders shop terms", "url": "https://shop.optimal-traders.com/pages/terms-conditions" },
+        { "label": "Bloomberg LEI 9845002KFD73C5FDOD22 independent corporate record", "url": "https://lei.bloomberg.com/leis/view/9845002KFD73C5FDOD22" },
+        { "label": "Optimal Traders exact-domain Trustpilot (2.4/5)", "url": "https://www.trustpilot.com/review/optimal-traders.com" },
+        { "label": "Specialist Optimal Traders commercial closure record", "url": "https://thetrustedprop.com/prop-firms/optimal-traders" }
+      ],
+      "addIncidents": [
+        "2025–2026 — Multiple Optimal Traders customer accounts report months of pending withdrawals and a paused challenge service; the experiences remain unverified individual claims. Source: https://www.trustpilot.com/review/optimal-traders.com",
+        "2026-11-17 — The original prop evaluation page is unavailable and a specialist directory reports closure; however, OTS RESEARCH - FZCO is independently recorded as an ACTIVE UAE company, so no legal dissolution is implied. Source: https://lei.bloomberg.com/leis/view/9845002KFD73C5FDOD22"
+      ]
+    },
+    "next-level-funding": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The original UK-run Next Level Funding prop brand reportedly stopped serving challenges around October 2024 and its .com domain was later reused by an unrelated US business-funding operator; no official wind-up filing for the historical prop seller was found.",
+          "source": "https://propfirmbook.com/unverified/next-level-funding",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The present-day .com Trustpilot identity is a US small-business finance provider, not reliable evidence of the old UK prop firm; the separate Australian Next Level Funded (.com without 'ing') is also unrelated.",
+          "source": "https://www.trustpilot.com/review/nextlevelfunding.com",
+          "fields": ["score", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "score": 22,
+        "verdict": "The historical Next Level Funding prop firm is reported to have ceased challenge operations in 2024; its previous nextlevelfunding.com address no longer verifies that original seller. A later US business-finance company and a different Australian prop firm called Next Level Funded have similar names but must not inherit the old firm's record. No official company-dissolution document or obligation transfer was found, so the archived brand is closed commercially, not verified as legally liquidated.",
+        "auditSummary": "17 November 2026: a detailed specialist historical review dates the former UK-run Next Level Funding prop-firm operation from 2023 to an end of website operations around October 2024; by early 2025, nextlevelfunding.com was reportedly repurposed for an unrelated US small-business finance service and then parked. The old prop-firm terms, registered company number, independent payout receipts and any refund or winding-up statement were not available for authentication. The Trustpilot listing at nextlevelfunding.com identifies a US business lender marketing working-capital finance since 2007; its review score cannot be fairly assigned to the earlier prop-firm operator, even where some user posts appear to mention trading. Separately, active Australian brand Next Level Funded uses nextlevelfunded.com and is not a spelling variant or proven successor of Next Level Funding. PropRadar deliberately imports no Trustpilot number from either unrelated brand. The reported historic closure and unanswered identity/payout questions justify lowering the risk score from 34 to 22 and hiding all purchase links. The warning describes business inactivity and domain reuse, not proven corporate liquidation or any accusation against later legitimate companies.",
+        "listedDomainWarning": "HISTORIC CLOSED PROP BRAND / DOMAIN REUSE: the old UK Next Level Funding challenge business appears to have stopped operating around October 2024. Its former nextlevelfunding.com domain was reportedly reused by an unrelated US lending operator, and the Australian Next Level Funded at nextlevelfunded.com is a separate business. Do not pay for revived challenges based solely on a familiar name, logo or old URL. The original prop company's formal legal dissolution and old-account payout settlement remain unverified."
+      },
+      "setEntities": [
+        {
+          "name": "Next Level Funding (historic UK prop evaluation brand)",
+          "jurisdiction": "United Kingdom — historical business attribution only; incorporated counterparty unverified",
+          "role": "Former evaluation brand. No independent company number, dissolution filing or legal successor contract was authenticated; unrelated US lender and Australian Next Level Funded are excluded."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Next Level Funding's original prop business appears to have ceased operations in 2024, but the original UK corporate counterparty and dissolution status are undocumented. Subsequent .com use for US lending and similar Australian Next Level Funded must not be conflated, especially when attaching Trustpilot ratings or payment claims.",
+        "regulatoryStatus": [
+          "Historical secondary account places Next Level Funding's prop evaluation activity in the UK during 2023–2024; no named legal company or registry filing was independently proved.",
+          "A separate US working-capital finance business previously used the former .com domain; it is not the documented UK prop evaluation contractor.",
+          "Next Level Funded (nextlevelfunded.com), the currently operating Australian prop firm, has a similar name but is a distinct brand."
+        ],
+        "complaintsAndDisputes": [
+          "A detailed historical directory summarises complaints about rejected payouts and lost account access in 2024, but no individual dispute or bank settlement was independently substantiated.",
+          "The .com Trustpilot review record mixes identities and belongs to a later US finance supplier, so no numeric TrustScore is imported into the UK prop firm's history.",
+          "Original payout liabilities, customer refunds and valid successor contact channels were not verified."
+        ],
+        "redFlags": [
+          "Original prop challenge activity ended and former domain subsequently changed use.",
+          "Unverifiable historic registered supplier and no confirmed closure settlement procedure.",
+          "High probability of mistaken identity with a separate current Australian firm and US lender.",
+          "No independently authenticated historical payout evidence."
+        ],
+        "sources": [
+          { "label": "Next Level Funding historical closure and domain reassignment review", "url": "https://propfirmbook.com/unverified/next-level-funding" },
+          { "label": "Present-day exact-domain Trustpilot identity (US business lending)", "url": "https://www.trustpilot.com/review/nextlevelfunding.com" },
+          { "label": "Separate Australian Next Level Funded website", "url": "https://nextlevelfunded.com/" },
+          { "label": "Original Next Level Funding domain, unavailable", "url": "https://nextlevelfunding.com/" }
+        ]
+      },
+      "addSources": [
+        { "label": "Next Level Funding closure, domain reuse and brand distinction", "url": "https://propfirmbook.com/unverified/next-level-funding" },
+        { "label": "Former domain Trustpilot identity — unrelated US lender", "url": "https://www.trustpilot.com/review/nextlevelfunding.com" },
+        { "label": "Distinct Australian Next Level Funded (not original brand)", "url": "https://nextlevelfunded.com/" }
+      ],
+      "addIncidents": [
+        "2024–2025 — A historical directory reports Next Level Funding's UK prop evaluations stopped around October 2024 and its .com domain subsequently served an unrelated US finance business; there is no authenticated corporate dissolution or transfer of payout obligations. Source: https://propfirmbook.com/unverified/next-level-funding",
+        "2026-11-17 — The .com Trustpilot page represents a small-business-lending service, so its ratings cannot be assigned to the old UK prop firm or to the separate Australian Next Level Funded brand. Source: https://www.trustpilot.com/review/nextlevelfunding.com"
+      ]
+    },
     "x-funded": {
       "reviewedAt": "2026-11-16",
       "changelog": [
