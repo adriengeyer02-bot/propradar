@@ -9774,6 +9774,396 @@
         "2025-04 (reported) — A secondary industry retrospective says Summit Strike Capital ceased operations and described a proposed refund pathway; direct company notice and actual repayment completion are unverified, and parts of the report refer to a differently named firm. Source: https://vettedpropfirms.com/summit-strike-capital-announces-closure-following-metaquotes-policy-change/"
       ]
     },
+    "nostro": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Nostro's original domain explicitly confirms that the brand has officially closed and is no longer accepting customers, while announcing a transfer of accounts to FunderPro. The closure date and individual customer account outcomes are not established by the notice.",
+          "source": "https://nostromarkets.com/",
+          "fields": ["status", "officialWebsite", "listedDomainWarning", "verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historical company terms used the designation Nostro Markets LTD and UK company number 14971445; the government register for that number identifies NOSTRO LIMITED at the same address and still records the company as active. Brand cessation is not corporate dissolution.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/14971445",
+          "fields": ["entities", "legalReview", "auditSummary"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Archived brand terms also claim a Saint Lucia IBC registration numbered 2025-00319, which has not been independently corroborated in an official Saint Lucia registry.",
+          "source": "https://www.nostromarkets.com/terms-and-conditions",
+          "fields": ["entities", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "officialWebsite": "https://nostromarkets.com/",
+        "verdict": "Nostro has officially ceased accepting clients and says customer accounts moved to FunderPro. This is a historical brand profile, not a new-purchase option. The linked UK company's corporate register remains active, so the brand's closure must not be confused with legal dissolution.",
+        "auditSummary": "17 November 2026: the original Nostro domain carries a first-party message that the brand is officially closed, with account migration announced to FunderPro; the site also promotes a FunderPro welcome offer, which PropRadar does not endorse or use as a Nostro purchase link. Historical Nostro Markets terms cite UK registration 14971445 at 7 Bell Yard, but the official Companies House entry is NOSTRO LIMITED, marked ACTIVE, rather than the 'Nostro Markets LTD' wording used on the terms page. The terms also claim Saint Lucia IBC 2025-00319 without independent register verification. The official notice does not establish the exact transfer contract, assumption of past liabilities, completion of outstanding refunds or authenticated payout transfers. The stored 52/100 is a historical analytical score; all Nostro challenge checkout links remain disabled.",
+        "listedDomainWarning": "Nostro officially says its brand is closed and no longer takes customers; its old website now directs visitors toward FunderPro. Do not purchase a 'Nostro' evaluation from a newly appearing site, seller or recycled domain without independently verifying the operator. The UK entity remains registered as active, a separate fact from brand closure."
+      },
+      "setEntities": [
+        {
+          "name": "NOSTRO LIMITED",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "14971445 (active on 2026-11-17)",
+          "registeredAddress": "7 Bell Yard, London, England, WC2A 2JR",
+          "role": "UK company matching the number and address in Nostro's archived terms, but the terms describe it as 'Nostro Markets LTD'. Corporate register status is active despite the Nostro brand's closure."
+        },
+        {
+          "name": "Nostro Markets LTD (Saint Lucia filing claimed by former site)",
+          "jurisdiction": "Saint Lucia — registration unconfirmed",
+          "registrationNumber": "2025-00319 (brand-reported, not register-verified)",
+          "role": "Historical website footer's claimed international business company; no official registry match authenticated."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Nostro's own closure notice resolves the operational status of the brand, but not its corporate liabilities. Historical terms point to company 14971445, whereas the UK register identifies that number as active NOSTRO LIMITED. The Saint Lucia registration is a separate, unverified website claim. FunderPro's announced takeover must not be taken as independent proof that old obligations were contractually assumed or paid.",
+        "regulatoryStatus": [
+          "Nostro website states the brand officially closed and stopped taking customers; it says accounts have moved to FunderPro.",
+          "UK Companies House identifies no. 14971445 as NOSTRO LIMITED, active, incorporated 30 June 2023, with 7 Bell Yard registered address.",
+          "Former terms describe demo/not-real trading funds and deny providing investment services, but identify the UK name differently.",
+          "Saint Lucia IBC registration 2025-00319 remains a first-party claim without independently retrieved government confirmation."
+        ],
+        "complaintsAndDisputes": [
+          "The takeover announcement does not independently authenticate the outcome of any historical reward withdrawal, customer account migration or refunded challenge fee.",
+          "A Trustpilot page for nostromarkets.com has too few reviews to support a meaningful aggregate assessment.",
+          "The legal distinction between active UK registered entity and closed trading brand should be considered before any legacy claim."
+        ],
+        "redFlags": [
+          "Brand explicitly shut down and a successor is being promoted at the old domain.",
+          "Inconsistent legal naming in former company terms versus UK official register for the same registration number.",
+          "Unverified Saint Lucia corporate registration and incomplete evidence for predecessor obligations.",
+          "No independently authenticated payout, bank transfer or blockchain reward trace."
+        ],
+        "sources": [
+          { "label": "Nostro first-party closure and FunderPro takeover notice", "url": "https://nostromarkets.com/" },
+          { "label": "Nostro archived terms — operator and registrations", "url": "https://www.nostromarkets.com/terms-and-conditions" },
+          { "label": "UK Companies House — NOSTRO LIMITED 14971445", "url": "https://find-and-update.company-information.service.gov.uk/company/14971445" },
+          { "label": "Nostro domain-specific Trustpilot page", "url": "https://www.trustpilot.com/review/nostromarkets.com" }
+        ]
+      },
+      "addSources": [
+        { "label": "Official Nostro closure announcement, checked 2026-11-17", "url": "https://nostromarkets.com/" },
+        { "label": "UK government corporate registration, active despite brand closure", "url": "https://find-and-update.company-information.service.gov.uk/company/14971445" },
+        { "label": "Former Nostro challenge terms and legal names", "url": "https://www.nostromarkets.com/terms-and-conditions" },
+        { "label": "Nostro brand Trustpilot review sample", "url": "https://www.trustpilot.com/review/nostromarkets.com" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — Nostro's former official site announces brand closure and a move to FunderPro; no independently verified completion of individual account migrations, reward withdrawals or refunds was obtained. Source: https://nostromarkets.com/"
+      ]
+    },
+    "funding-frontier": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Previously indexed official terms identify First Frontier FZ-LLC in Ras Al Khaimah, and include extensive litigation waivers and one-sided mediation provisions; their current enforceability and exact applicability require legal review. The public site currently falls into a redirect loop, so no working purchase path was verified.",
+          "source": "https://fundingfrontier.com/legal-terms/",
+          "fields": ["officialWebsite", "entities", "legalReview", "listedDomainWarning", "verdict", "auditSummary", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Trustpilot displayed 2.8/5 from 454 reviews on the Funding Frontier domain. Low sentiment is one input to a cautious editorial score, but individual allegations cannot be treated as adjudicated nonpayment.",
+          "source": "https://www.trustpilot.com/review/fundingfrontier.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "score", "historicLogoDomain"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Previously indexed official reward FAQ outlined model-dependent profit shares, an on-demand first request, a 14-day subsequent cycle, and a conditional payout-guarantee claim. Those are historical company policies, not independently validated funds movement.",
+          "source": "https://fundingfrontier.com/rules-faqs/",
+          "fields": ["payoutDelay", "auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "À surveiller",
+        "score": 42,
+        "officialWebsite": "https://fundingfrontier.com/",
+        "historicLogoDomain": "fundingfrontier.com",
+        "verdict": "Funding Frontier's archived terms identify a UAE operator but contain unusually restrictive dispute-resolution language. The official domain was caught in a redirect loop during this review and Trustpilot shows a low 2.8/5 across 454 reviews. PropRadar cannot verify a live checkout, independently settled rewards or the enforceability of the legal provisions; no purchase link is offered.",
+        "auditSummary": "17 November 2026 deep review: previously indexed Funding Frontier Terms identify First Frontier FZ-LLC in Ras Al Khaimah (claimed registration 0000004042431), trading only simulated accounts and expressly not claiming SCA/DFSA/FSRA/Central Bank authorisation. Most consequentially, §16 purports to waive customers' right to sue, arbitrate, join collective actions or challenge account decisions, while allowing only a single trader-funded, nonbinding UAE mediation; PropRadar does not assert that such language would be enforceable in any consumer's jurisdiction. The official domain and rules pages now trigger a redirect loop, making current terms, offers and checkout unconfirmable. Its historical FAQ marketed 80% challenge splits, on-demand first reward, then 14-day cycles and a conditional 48-business-hour processing target; none is independently verified payout evidence. Trustpilot shows 2.8/5 across 454 reviews, with customer criticisms that remain allegations. The editorial score changes from 52 to 42 because of the one-sided contract, poor current domain access and weak independent reward substantiation, not as a finding of wrongdoing.",
+        "trustpilotRating": 2.8,
+        "trustpilotReviewCount": 454,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingfrontier.com",
+        "payoutDelay": "Historical FAQ: first request on demand, later every 14 days; 48 business hours claimed after approval, conditional",
+        "listedDomainWarning": "Funding Frontier's old fundingfrontier.com pages returned a redirect loop on 17 November 2026. PropRadar cannot authenticate a current program, checkout or replacement operator and has disabled start links until they are verified. This is not confirmation of legal closure."
+      },
+      "setEntities": [
+        {
+          "name": "First Frontier FZ-LLC",
+          "jurisdiction": "United Arab Emirates — Ras Al Khaimah (registration stated in former terms)",
+          "registrationNumber": "0000004042431 (company-stated; official RAK registry not independently retrieved)",
+          "registeredAddress": "Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates",
+          "role": "Historical operator named in previously indexed legal terms for the Funding Frontier brand; company registration has not been independently corroborated."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Funding Frontier's previously indexed Terms identify First Frontier FZ-LLC and claim a RAK Economic Zone company registration, but this has not been confirmed via an official UAE register. Clause 16 asserts sweeping waivers of legal recourse and makes trader-paid, nonbinding Ras Al Khaimah mediation the exclusive route to disputes. The legal enforceability of these clauses is unknown and may differ under mandatory local consumer protection rules. Current domain redirect loops prevent checking whether these archived provisions were amended.",
+        "regulatoryStatus": [
+          "Former official terms claim First Frontier FZ-LLC registration 0000004042431, not independently verified in a UAE government register.",
+          "Former terms say all accounts are simulated and the company is not authorised by the UAE Central Bank, SCA, DFSA or FSRA, while claiming not to undertake regulated investment activities.",
+          "The public site and legal page currently return a redirect loop; current company operation and contract version cannot be verified."
+        ],
+        "complaintsAndDisputes": [
+          "Clause 16 of the formerly published Terms purports to bar court/arbitration claims and collective actions; it permits a maximum one-session, trader-funded mediation nonbinding on the company.",
+          "Trustpilot's 2.8/5 across 454 reviews includes negative customer reports; individual disputes and payouts are not independently adjudicated.",
+          "The formerly advertised 48-business-hour payout processing guarantee has model, approval and processor restrictions and is not authenticated bank/on-chain proof."
+        ],
+        "redFlags": [
+          "Contract attempts to heavily restrict legal redress and reserve final account decisions to the provider.",
+          "Original public domain fails in a redirect loop, with no verified alternative checkout.",
+          "Historical operator's stated registration number has not been matched to a government registry record.",
+          "Low customer review aggregate and missing independently authenticated payout transfer records."
+        ],
+        "sources": [
+          { "label": "Funding Frontier historic official Terms and §16 legal waiver", "url": "https://fundingfrontier.com/legal-terms/" },
+          { "label": "Funding Frontier historic official rules and reward FAQ", "url": "https://fundingfrontier.com/rules-faqs/" },
+          { "label": "Funding Frontier homepage currently in redirect loop", "url": "https://fundingfrontier.com/" },
+          { "label": "Funding Frontier claimed Trustpilot profile, checked 2026-11-17", "url": "https://www.trustpilot.com/review/fundingfrontier.com" }
+        ]
+      },
+      "addSources": [
+        { "label": "Indexed former Funding Frontier legal terms, not currently live", "url": "https://fundingfrontier.com/legal-terms/" },
+        { "label": "Indexed former payout FAQ, model-specific company promises", "url": "https://fundingfrontier.com/rules-faqs/" },
+        { "label": "Funding Frontier Trustpilot score and company-uploaded logo", "url": "https://www.trustpilot.com/review/fundingfrontier.com" }
+      ],
+      "addIncidents": [
+        "2026-11-17 — Previously indexed official Funding Frontier terms contain an expansive legal-recourse waiver and exclusively trader-funded nonbinding mediation provision; their actual enforceability is untested. Source: https://fundingfrontier.com/legal-terms/",
+        "2026-11-17 — Former official domain and terms returned a redirect loop, preventing PropRadar from confirming a current checkout, terms version or customer-support pathway. Source: https://fundingfrontier.com/"
+      ]
+    },
+    "equity-edge": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Current October 2026 official Terms identify the Saint Lucia technical operator and UK customer-service/billing entity, plus a potential separate payment settlement provider. The profile now links to the correct domain, with a sourced firm favicon.",
+          "source": "https://equityedge.io/terms-and-conditions",
+          "fields": ["officialWebsite", "entities", "legalReview", "verdict", "auditSummary", "historicLogoDomain", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "UK Companies House confirms EQUITY EDGE ANALYTICS LTD no. 15263705 is active, incorporated in November 2023. The Saint Lucia entity's 2025-00306 registration remains first-party reported pending local register verification.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/15263705",
+          "fields": ["entities", "legalReview", "auditSummary", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Official trading rulebook defines six evaluation tracks plus Instant, model-specific restricted news windows and 14-day payouts after the first funded trade for the stated standard structure; model-specific eligibility and review apply.",
+          "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+          "fields": ["payoutDelay", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The domain-specific claimed Trustpilot profile displayed 4.2/5 across 2,704 reviews. Reviews add a public signal but do not independently authenticate individual withdrawals or settlement receipts.",
+          "source": "https://www.trustpilot.com/review/equityedge.io",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
+        }
+      ],
+      "set": {
+        "status": "À surveiller",
+        "score": 58,
+        "officialWebsite": "https://equityedge.io/",
+        "historicLogoDomain": "equityedge.io",
+        "verdict": "Equity Edge has a live official website, published current simulated-trading terms and a UK service/billing company independently identifiable at Companies House. Transparency is materially better than its former unverified-identity profile; however its Saint Lucia operator is not independently register-verified, the terms contain an internal non-affiliation contradiction, and customer-reward transfers have not been authenticated by PropRadar.",
+        "auditSummary": "17 November 2026: Equity Edge's October 6 Terms say Equity Edge Ltd (Saint Lucia 2025-00306) operates the simulated trading platform, while UK EQUITY EDGE ANALYTICS LTD (Companies House 15263705, active) administers evaluations, support and payments; some payment settlements may involve Odeonpay ALE S.R.L ('Paysagi'). The same contract's non-affiliation disclaimer confusingly says the brand is not connected to the two companies just named as its own operators, a drafting conflict requiring clarification rather than a proven legal violation. Official trading rules describe six evaluation tracks plus Instant, different 4/10/16-minute news-trading windows by model, 14-day standard reward eligibility after the first funded trade and manual checks that can change payout outcomes. The claimed Trustpilot score is 4.2/5 from 2,704 reviews, but no authenticated matched bank or on-chain transfer was examined. Editorial score rises modestly from the generic 52 baseline to 58 for concrete legal-document and UK-register verification, not for the Trustpilot number alone.",
+        "trustpilotRating": 4.2,
+        "trustpilotReviewCount": 2704,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/equityedge.io",
+        "payoutDelay": "Standard published pathway: eligible every 14 days after first funded trade; model-specific reviews and restrictions apply"
+      },
+      "setEntities": [
+        {
+          "name": "Equity Edge Ltd",
+          "jurisdiction": "Saint Lucia (official contract claim; register not independently checked)",
+          "registrationNumber": "2025-00306 (claimed on official website)",
+          "registeredAddress": "Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia (website footer)",
+          "role": "Website and simulated MetaQuotes technical-platform operator identified by October 2026 terms."
+        },
+        {
+          "name": "EQUITY EDGE ANALYTICS LTD",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "15263705 (active on 2026-11-17)",
+          "role": "Independently registered UK evaluation-administration, customer support and payment entity, according to current first-party terms."
+        },
+        {
+          "name": "Odeonpay ALE S.R.L. (Paysagi)",
+          "jurisdiction": "Jurisdiction not confirmed in PropRadar review",
+          "role": "Separate merchant/payment settlement provider named in clause 20 for eligible transactions; independent corporate documentation not checked."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Unlike generic-name search results, Equity Edge's own current terms map the simulated-platform operator and UK billing/support company, and UK Companies House independently confirms the latter active. The Saint Lucia company number is not government-verified in this check. A contractual non-affiliation clause contradicts the expressly described relationship among the same named entities; responsibility for payments, refunds and disputes should be clarified before purchase.",
+        "regulatoryStatus": [
+          "UK EQUITY EDGE ANALYTICS LTD 15263705: registered and active according to Companies House; registration itself is not financial-services authorisation.",
+          "Equity Edge Ltd Saint Lucia registration 2025-00306 is stated in the official terms and footer but was not checked against the Saint Lucia registry.",
+          "Official terms say trading balances are virtual/simulated, challenge fees are not deposits and product rules restrict some countries.",
+          "The terms specify Saint Lucia law and nonexclusive courts, with payment matters potentially subject to England and Wales; a separate merchant of record may be used."
+        ],
+        "complaintsAndDisputes": [
+          "Clause 19 disclaims affiliation with Equity Edge Analytics Ltd and Equity Edge Ltd even though earlier sections name them as participating operator and billing entity; seek an updated clarification.",
+          "Rulebook forbids opening or closing trades around major news in program-specific windows and may deduct profit or deny withdrawals after qualifying violations.",
+          "The 4.2/5 Trustpilot score from 2,704 reviews is a reputation signal, not a bank-statement audit or verified payout completion record."
+        ],
+        "redFlags": [
+          "Contradictory corporate non-affiliation wording in the published contract.",
+          "Saint Lucia entity registration and merchant provider not independently corroborated by the relevant registers.",
+          "Multi-party technical, billing and settlement chain may complicate contract dispute resolution.",
+          "Different news restrictions and payout deductions can apply to funded versus evaluation and Instant accounts.",
+          "No independently authenticated payout transfers, execution/slippage testing or verified refunds."
+        ],
+        "sources": [
+          { "label": "Equity Edge official updated contract, including entity and payment clauses", "url": "https://equityedge.io/terms-and-conditions" },
+          { "label": "UK Companies House — EQUITY EDGE ANALYTICS LTD 15263705", "url": "https://find-and-update.company-information.service.gov.uk/company/15263705" },
+          { "label": "Equity Edge official trading rules and reward timetable", "url": "https://equityedge.io/trading-rules/trading-rules-and-guidelines" },
+          { "label": "Equity Edge claimed Trustpilot profile", "url": "https://www.trustpilot.com/review/equityedge.io" }
+        ]
+      },
+      "addSources": [
+        { "label": "Equity Edge current company terms (6 October 2026)", "url": "https://equityedge.io/terms-and-conditions" },
+        { "label": "UK Companies House verification, registration 15263705", "url": "https://find-and-update.company-information.service.gov.uk/company/15263705" },
+        { "label": "Official evaluation and Instant trading rulebook", "url": "https://equityedge.io/trading-rules/trading-rules-and-guidelines" },
+        { "label": "Official Equity Edge icon provenance", "url": "https://framerusercontent.com/images/AQ5zSxV23p8B0Atn3O9xlSvaUU.png" },
+        { "label": "Equity Edge Trustpilot claim and review distribution", "url": "https://www.trustpilot.com/review/equityedge.io" }
+      ]
+    },
+    "myfxcapital": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "The earlier official site and legal URLs were inaccessible or timed out in this audit; no replacement contracted operator, purchase agreement, current price or verified checkout could be confirmed. This does not independently prove corporate dissolution.",
+          "source": "https://myfxcapital.com/",
+          "fields": ["listedDomainWarning", "verdict", "auditSummary", "legalReview", "entities", "score"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The brand's claimed Trustpilot page showed 2.7/5 from only 46 reviews; customer reports of payout difficulties are not independently adjudicated. A company reply asserts US registration and many prior payouts but supplies no legal name or state-file number for verification.",
+          "source": "https://www.trustpilot.com/review/myfxcapital.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl", "legalReview", "score"]
+        }
+      ],
+      "set": {
+        "status": "À surveiller",
+        "score": 45,
+        "verdict": "MyFxCapital's former official website could not be reliably loaded for a current purchase or contractual review. The domain-specific claimed Trustpilot profile shows 2.7/5 from 46 reviews; responses claim US incorporation and numerous payouts but identify neither a verifiable company number nor independently documented reward transfers. PropRadar blocks purchases pending a primary-source operator check.",
+        "auditSummary": "17 November 2026: the MyFxCapital original website failed to provide a usable official checkout or current legal text, following a similar title-only result in the July review. Its claimed Trustpilot profile shows 2.7/5 across 46 reviews, with both criticisms and provider responses. Some consumers allege delayed or denied withdrawals, but their identities, trading accounts and payments have not been independently reconciled. In public responses the company says it is 'U.S.-registered' and has made many payouts, yet does not provide a registered legal business name, state registry, filing number or auditable payment receipts. Historical social-channel promotions mention funded challenges, MT5, up-to-95% splits and biweekly rewards; these are stale marketing descriptions rather than current contractual guarantees. The editorial score drops from 52 to 45 on public-source access, lack of entity evidence and weak review sentiment; no finding of illegal conduct or confirmed business closure is made.",
+        "trustpilotRating": 2.7,
+        "trustpilotReviewCount": 46,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfxcapital.com",
+        "listedDomainWarning": "MyFxCapital's original domain could not provide a verifiable active checkout or current legal contract during the 17 November 2026 review. Current operator, prices and payout rights are unverified; purchases are disabled on PropRadar until primary documentation is restored. Domain inaccessibility alone is not proof of closure."
+      },
+      "setEntities": [
+        {
+          "name": "MyFxCapital (legal operator undisclosed in accessible records)",
+          "jurisdiction": "United States — claimed in company Trustpilot reply, unverified",
+          "role": "Company's claimed jurisdiction only; no specific business name, state or registration number identified in official government records."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "No functioning current legal document or primary corporate registry record was authenticated for MyFxCapital. A reply by a claimed company account asserts US registration without a legal name or official filing reference, which is not sufficient entity verification. Website failure is a serious buyer-information limitation but not evidence of formal liquidation or an illegal operation.",
+        "regulatoryStatus": [
+          "MyFxCapital former website inaccessible or timed out when accessed on 17 November 2026; no current terms could be examined.",
+          "The company's Trustpilot replies describe US registration without state, legal corporate name or company number; government-register verification remains open.",
+          "No verified current broker/regulator status or investment-service authorisation claim can be concluded from these sources."
+        ],
+        "complaintsAndDisputes": [
+          "Claimed Trustpilot score 2.7/5 based on 46 reviews, with consumer payout and account-treatment allegations disputed by the provider.",
+          "Company claims many previous reward payments but provided no individually verified transfer records in inspected public responses.",
+          "Current reward cycle, refund rules, rule-change clauses and final-contract contracting party remain unavailable."
+        ],
+        "redFlags": [
+          "Unreachable official website prevents inspection of current payout and termination rules.",
+          "No independently verified corporation or registration number despite US-registration marketing claims.",
+          "Low review sample and insufficient independent transfer documentation.",
+          "Do not conflate this domain with different FX Capital-named prop firms."
+        ],
+        "sources": [
+          { "label": "MyFxCapital original official site, currently inaccessible", "url": "https://myfxcapital.com/" },
+          { "label": "MyFxCapital terms endpoint, currently unverified", "url": "https://myfxcapital.com/terms-and-conditions/" },
+          { "label": "Domain-specific claimed Trustpilot reviews and company replies", "url": "https://www.trustpilot.com/review/myfxcapital.com" }
+        ]
+      },
+      "addSources": [
+        { "label": "MyFxCapital Trustpilot score, alleged disputes and company registration claims", "url": "https://www.trustpilot.com/review/myfxcapital.com" },
+        { "label": "MyFxCapital official domain reachability check", "url": "https://myfxcapital.com/" },
+        { "label": "Older MyFxCapital first-party Telegram marketing, not an active contract", "url": "https://t.me/s/myfxcapitalofficial" }
+      ],
+      "addIncidents": [
+        "2025-2026 — Some domain-specific Trustpilot reviewers describe alleged withdrawal difficulties, while company replies dispute customer accounts and assert many payouts; no individual transfer or adjudicated outcome was independently established. Source: https://www.trustpilot.com/review/myfxcapital.com"
+      ]
+    },
+    "funds-for-traders": {
+      "reviewedAt": "2026-11-17",
+      "changelog": [
+        {
+          "date": "2026-11-17",
+          "summary": "Finance Magnates reproduced Funds For Traders' public 15 August 2024 X announcement that it was ceasing all operations following an alleged platform-support loss. The reason is the company's account; it is not an independently adjudicated finding about Eightcap.",
+          "source": "https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/",
+          "fields": ["status", "verdict", "auditSummary", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The historical fundsfortraders.com domain remains inaccessible with no verified successor checkout, operating legal company or transfer confirmation. Historical risk score is retained solely for archive use, and no purchase link is exposed.",
+          "source": "https://fundsfortraders.com/",
+          "fields": ["listedDomainWarning", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "The old Trustpilot brand page has 62 reviews and is not independent evidence that all customer balances, payouts, fee refunds or promised assistance were settled after the 2024 shutdown.",
+          "source": "https://www.trustpilot.com/review/fundsfortraders.com",
+          "fields": ["auditSummary", "legalReview"]
+        }
+      ],
+      "set": {
+        "status": "Fermée",
+        "verdict": "Funds For Traders publicly announced on 15 August 2024 that it was ending its operations. Its historic domain is not a verified active evaluation checkout, and no successor company or reliable payout/refund settlement record was found. PropRadar displays this firm as a closed historical profile, not a trading-program purchase option.",
+        "auditSummary": "17 November 2026 retrospective audit: Finance Magnates' contemporaneous 15 August 2024 report quoted Funds For Traders' own public X statement declaring the end of all operations, citing Eightcap's cessation of MT4/MT5 support for prop companies as the firm's explanation. That business explanation does not independently establish fault by Eightcap or any other party. The company reportedly intended to contact active challenge customers, but public sources inspected do not demonstrate whether every refund, challenge, reward balance or settlement was delivered. The former fundsfortraders.com site is currently unusable and there is no independently authenticated current legal contracting entity, corporate dissolution record or successor rights transfer. The historical claimed Trustpilot 4.0/5 across 62 reviews cannot establish present solvency or settlement. The stored 51/100 is historical only, and PropRadar has disabled any old purchase links.",
+        "listedDomainWarning": "Funds For Traders announced it ceased all operations on 15 August 2024. No verified active successor or checkout is available; if another site offers to sell Funds For Traders challenges under the old name, verify the new entity and payment obligations independently. PropRadar does not provide a purchase link."
+      },
+      "setEntities": [
+        {
+          "name": "Funds For Traders (historic trading brand; company not independently identified)",
+          "jurisdiction": "To verify — no independent corporate registration obtained",
+          "role": "Company brand which announced operational closure in August 2024; this record does not establish formal company dissolution or any ongoing registered entity."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "A contemporaneous financial press report quotes Funds For Traders' own 15 August 2024 announcement of cessation of all operations. The report documents the public operational closure, not an authenticated court insolvency filing or legal dissolution. No named registered company, present provider or completed historical payout/refund ledger was independently confirmed.",
+        "regulatoryStatus": [
+          "Funds For Traders announced operational closure on 15 August 2024 via X, as reported and quoted by Finance Magnates.",
+          "Its explanation cited MetaTrader 4/5 platform-support changes at Eightcap; this is a statement by the closing firm, not a regulatory finding concerning the vendor.",
+          "No verified historical corporate registration number, regulator status, liquidation filing or successor contract was retrieved."
+        ],
+        "complaintsAndDisputes": [
+          "The firm's reported message said active challenge customers would be contacted; actual assistance and settlement outcomes remain unverified.",
+          "Historical Trustpilot scores and isolated customer complaints are not independent audit evidence of either successful payment or failure to refund.",
+          "The present domain does not contain an operating checkout or applicable current refund agreement."
+        ],
+        "redFlags": [
+          "Publicly announced shutdown and unavailable former website.",
+          "No verified ongoing legal operator or successor undertaking historic obligations.",
+          "Insufficient evidence to establish settlement of every outstanding payout and refund.",
+          "Old brand could be reused without proving continuity of contracts."
+        ],
+        "sources": [
+          { "label": "Finance Magnates 15 August 2024 report quoting company's shutdown announcement", "url": "https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/" },
+          { "label": "FX News Group separate contemporary shutdown coverage", "url": "https://fxnewsgroup.com/forex-news/retail-forex/exclusive-funds-for-traders-shuts-after-eightcap-cuts-mt4-mt5-for-prop-firms/" },
+          { "label": "Funds For Traders former domain, no active contract", "url": "https://fundsfortraders.com/" },
+          { "label": "Funds For Traders historical Trustpilot profile", "url": "https://www.trustpilot.com/review/fundsfortraders.com" }
+        ]
+      },
+      "addSources": [
+        { "label": "Funds For Traders' 2024 operational-closure statement in Finance Magnates", "url": "https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/" },
+        { "label": "Contemporaneous independent media coverage of closure", "url": "https://fxnewsgroup.com/forex-news/retail-forex/exclusive-funds-for-traders-shuts-after-eightcap-cuts-mt4-mt5-for-prop-firms/" },
+        { "label": "Original now-unusable Funds For Traders website", "url": "https://fundsfortraders.com/" },
+        { "label": "Funds For Traders historic company review page", "url": "https://www.trustpilot.com/review/fundsfortraders.com" }
+      ],
+      "addIncidents": [
+        "2024-08-15 — Funds For Traders announced it was ceasing all operations, citing trading-platform support as its own stated reason; individual customer refund and payout outcomes were not verified in this review. Source: https://www.financemagnates.com/forex/prop-trading-funds-for-traders-closes-operations/"
+      ]
+    },
     "x-funded": {
       "reviewedAt": "2026-11-16",
       "changelog": [

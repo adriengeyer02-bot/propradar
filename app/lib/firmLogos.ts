@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 148 logos, fetched 2026-11-17 (including three verified legacy brand marks).
+// 150 logos, fetched 2026-11-17 (including three verified legacy brand marks).
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -46,6 +46,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "e8futures.com": { file: "e8-futures.png", source: "https://e8futures.com/app.svg" },
   "e8markets.com": { file: "e8-markets.png", source: "favicon service for e8markets.com" },
   "earn2trade.com": { file: "earn2trade.png", source: "https://www.earn2trade.com/favicon.svg" },
+  "equityedge.io": { file: "equity-edge.png", source: "https://framerusercontent.com/images/AQ5zSxV23p8B0Atn3O9xlSvaUU.png (favicon linked by official equityedge.io website; checked 2026-11-17)" },
   "elitetraderfunding.app": { file: "elite-trader-funding.png", source: "https://elitetraderfunding.app/icons/icon-512.png" },
   "fidelcrest.com": { file: "fidelcrest.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/5f523d06c358dd00014b8f46/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "finotivefunding.com": { file: "finotive-funding.png", source: "https://finotivefunding.com/android-chrome-512x512.png" },
@@ -68,6 +69,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "fundedtradingplus.com": { file: "funded-trading-plus.png", source: "favicon service for fundedtradingplus.com" },
   "funderpro.com": { file: "funderpro.png", source: "https://funderpro.com/wp-content/uploads/2024/02/apple-touch-icon.webp" },
   "fundertrading.com": { file: "funder-trading.png", source: "https://fundertrading.com/wp-content/uploads/2022/09/funder-trading_logo_hq-20.png" },
+  "fundingfrontier.com": { file: "funding-frontier.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/64a7dfa615f574b2bb3653e9/0x0.png (logo uploaded to the claimed Funding Frontier Trustpilot profile; checked 2026-11-17)" },
   "fundingpips.com": { file: "funding-pips.png", source: "favicon service for fundingpips.com" },
   "fundings4u.com": { file: "fundings4u.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/6666533cc8e0a3255da1a914/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "fundingtraders.com": { file: "funding-traders.png", source: "https://fundingtraders.com/assets/fav/apple-touch-icon.png" },
