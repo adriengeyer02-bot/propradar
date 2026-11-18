@@ -7,7 +7,7 @@ import type { FirmUpdate, RestrictiveRule } from './firmUpdates';
  */
 
 /** Off until Geyer approves the score impact (sensitive change, CLAUDE.md rule 6). */
-export const RULES_PENALTY_ENABLED = false;
+export const RULES_PENALTY_ENABLED = true;
 
 export const RULES_PENALTY_MAX = 12;
 /** Raw load at which the penalty reaches ~63% of the maximum (diminishing returns). */
