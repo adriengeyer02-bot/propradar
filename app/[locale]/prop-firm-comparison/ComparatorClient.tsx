@@ -16,6 +16,7 @@ import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } f
 import { localePath, type Locale } from '../../lib/locales';
 import type { Messages } from '../../lib/messages/en';
 import { optionsCopy } from '../../lib/optionsI18n';
+import { optionsAuditCopy } from '../../lib/optionsAuditI18n';
 
 export type ComparatorUi = Pick<Messages, 'compare' | 'table' | 'values' | 'styles'>;
 
@@ -347,7 +348,7 @@ export default function ComparatorClient({
       </header>
 
       <aside className="options-discovery-cta">
-        <div><strong>{oc.nav}: {oc.evaluation}</strong><p>{oc.noScoreNotice}</p></div>
+        <div><strong>{oc.nav}: {oc.evaluation}</strong><p>{optionsAuditCopy(locale).notice}</p></div>
         <Link href={L('/options-prop-firms')}>{oc.dossier} →</Link>
       </aside>
 

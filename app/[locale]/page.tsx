@@ -4,6 +4,7 @@ import HomeGlobe from '../components/ui/HomeGlobe';
 import { buildRadar } from '../lib/radar';
 import { withOptionsGlobe } from '../lib/optionsGlobe';
 import { optionsCopy } from '../lib/optionsI18n';
+import { optionsAuditCopy } from '../lib/optionsAuditI18n';
 import { recentFirmUpdates } from '../lib/firmUpdates';
 import RiskPip from '../components/ui/RiskPip';
 import ScoreRing from '../components/ui/ScoreRing';
@@ -171,7 +172,7 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       <aside className="container options-discovery-cta">
-        <div><strong>{optionsCopy(locale).nav}: {optionsCopy(locale).title}</strong><p>{optionsCopy(locale).noScoreNotice}</p></div>
+        <div><strong>{optionsCopy(locale).nav}: {optionsCopy(locale).title}</strong><p>{optionsAuditCopy(locale).notice}</p></div>
         <Link href={L('/options-prop-firms')}>{optionsCopy(locale).dossier} →</Link>
       </aside>
 

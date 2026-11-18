@@ -29,7 +29,7 @@ export type RadarDot = {
   slug: string;
   name: string;
   score: number;
-  /** Unscored discovery marker: score 50 is used for globe geometry only, never displayed. */
+  /** Reserved for future score-pending discovery markers. */
   unrated?: boolean;
   /** Route for a separate discovery dossier, when not part of the scored firm catalogue. */
   href?: string;

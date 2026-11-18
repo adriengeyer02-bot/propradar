@@ -5,6 +5,7 @@ import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from './seoGuides';
 import { toEnglishText } from './i18n';
 import { editorialBriefs, getEditorialBriefPath } from './editorialBriefs';
 import { optionsFirms } from './optionsFirms';
+import { optionsAuditFor } from './optionsAudits';
 
 export type SiteSearchResult = {
   type: 'Firm' | 'Guide' | 'Brief' | 'Deal';
@@ -160,7 +161,7 @@ export function searchSite(rawQuery: string, requestedLimit = 10): SiteSearchRes
     type: 'Firm',
     title: firm.name,
     description: compactText(`${firm.instruments}. ${firm.programme}`),
-    matchLabel: 'Options · not rated',
+    matchLabel: `Options · ${optionsAuditFor(firm.slug)?.score ?? '—'}/100`,
     href: `/options-prop-firms/${firm.slug}`,
     score: scoreContentResult(query, firm.name, `${firm.instruments} ${firm.programme} options prop firm`) +
       (normalizeFirmSearch(firm.name) === normalizedQuery ? 90 : 0),
@@ -168,7 +169,7 @@ export function searchSite(rawQuery: string, requestedLimit = 10): SiteSearchRes
   const optionGuideResult: RankedSearchResult = {
     type: 'Guide',
     title: 'Options prop firms — independent research',
-    description: 'Explore listed US options evaluation firms and professional trading desks, with primary sources and no premature ratings.',
+    description: 'Explore initial source-linked PropRadar audits of listed-options firms and professional trading desks.',
     matchLabel: 'Options research',
     href: '/options-prop-firms',
     score: scoreContentResult(query, 'Options prop firms', 'funded options call put spreads options trading challenge'),

@@ -55,9 +55,10 @@ Si une clé manque ou si l'API refuse la requête, PropRadar retombe automatique
 - `/options-prop-firms` : nouvelle rubrique de recherche sur les prop firms d'options cotées ; `/options-prop-firms/[slug]` : sept dossiers sourcés, cinq programmes d'évaluation et deux desks professionnels.
 - `app/lib/optionsFirms.ts` : source de vérité séparée pour les offres, leurs règles documentées et les liens officiels. Le niveau de preuve est **une offre annoncée par la firme**, pas une validation de sa fiabilité.
 - `app/lib/optionsI18n.ts` : interface dédiée aux 15 langues ; les faits issus des sources officielles restent en anglais original dans les fiches afin de préserver la traçabilité.
-- `app/lib/optionsGlobe.ts` : marqueurs de recherche « non noté » sur un secteur **Options** du globe d'accueil et du radar. Ces marqueurs ne rentrent **pas** dans les moyennes, classements ou statistiques de score du radar ; la latitude est seulement une position d'affichage.
+- `app/lib/optionsAudits.ts` : sept audits initiaux sourcés (dont TradeFundrr, dont la note est synchronisée avec sa fiche canonique), et références des logos officiels dans `public/logos`.
+- `app/lib/optionsGlobe.ts` : marqueurs **notés** dans un secteur Options du globe d'accueil et du radar. Ces notes n'entrent **pas** dans les moyennes, classements ou statistiques du radar principal. Les deux desks professionnels restent séparés des challenges pour particuliers.
 - Les nouvelles firmes apparaissent aussi dans la recherche globale et depuis le comparateur, mais pas dans son classement par score tant qu'elles ne sont pas auditées.
-- **Aucune note sur 100 n'a été attribuée** : seuls les programmes et quelques restrictions officielles ont été collectés. Une future inclusion dans `propFirms.ts` exige l'audit complet juridique, payout, produits, restrictions et avis, puis validation éditoriale d'Adrien.
+- Les notes Options sont des **audits initiaux** éditoriaux : sources primaires, clauses, signaux d'avis et points non vérifiés sont affichés. Une future inclusion dans `propFirms.ts` exige la comparabilité complète juridique, payout, produits, restrictions et avis, puis validation éditoriale d'Adrien. Toute nouvelle alerte sensible reste soumise à validation avant publication.
 
 ## Règle éditoriale
 
