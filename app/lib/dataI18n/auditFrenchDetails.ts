@@ -483,10 +483,15 @@ export const auditFrenchDetails: Record<string, {
     changelog: ["Le contrôle d'octobre relevait déjà le rachat par Sway, les tailles annoncées de 1 000 à 200 000 $, les paramètres d'un exemple à 15 $, ainsi que la contradiction entre 80 % quotidiens et 90 % de partage.", "Le site confirme le rachat par Sway Funded LTD et renvoie les paiements vers Sway. Les rémunérations annoncées sont ambiguës et le contrat actuel reste à vérifier. Note de 55 à 49, achats sous l'ancienne enseigne bloqués."]
   },
   'tradefundrr': {
+    restrictiveRules: [
+      {program:'Actions/options Pre-Prop — évaluation',rule:'599 $ de frais initiaux et 99 $/mois pour les données et la plateforme ; il faut réussir l’évaluation avant d’accéder à une rémunération simulée.',impact:'Le coût récurrent augmente si la phase d’évaluation dure plusieurs mois.'},
+      {program:'Actions/options Prop — financé simulé',rule:'1 499 $ à l’entrée plus 99 $/mois ; cinq jours bénéficiaires, dont au moins 250 $ nets chacun sur le parcours Actions, et règle de régularité avant un retrait.',impact:'Le paiement du vendredi ne garantit aucun retrait dès la première semaine.'},
+      {program:'Pro — parcours distinct avec apport personnel',rule:'Le trader engage ses propres fonds, exposés aux pertes ; levier, capital attribué et limites dépendent d’un contrat individuel.',impact:'Le risque financier est différent des comptes Pre-Prop/Prop entièrement simulés.'}
+    ],
     regulatoryStatus: ["TradeFundrr LLC est nommé comme prestataire des comptes Pre-Prop et Prop entièrement fictifs ; il ne détient pas les titres ni les fonds des clients.", "Pro est un programme séparé avec contribution de capital et contrat distinct.", "T3 Trading Group est présenté comme courtier SEC/FINRA/SIPC, mais ses agréments ne couvrent pas les simulations TradeFundrr."],
     complaintsAndDisputes: ["Trustpilot affiche 4,3/5 sur 84 avis, entre récits de versement et plainte vérifiée sur des vérifications d'identité tardives ; les cas restent non arbitrés.", "Le mur de certificats de l'entreprise ne remplace pas des rapprochements bancaires indépendants.", "Les retraits Prop demandent cinq journées positives et le respect d'une règle de régularité, puis sont traités le vendredi."],
     redFlags: ["L'ancienne page Futures mène aujourd'hui à une offre actions/options : les anciennes descriptions ne doivent pas guider un achat actuel.", "Le parcours Pro requiert une contribution : son exposition contractuelle doit être étudiée séparément.", "Les tarifs Pre-Prop/Prop sont 599/1 499 $ à l'entrée, auxquels s'ajoutent 99 $ par mois ; vérifier le panier et les échéances.", "Les agréments de T3 appartiennent à un partenaire distinct."],
-    changelog: ["Le précédent relevé d'octobre indiquait 4,2/5 pour 83 avis Trustpilot ; les prix et répartitions n'avaient pas été entièrement revérifiés.", "En octobre, l'ancienne page Futures indiquait 80 % de partage, des retraits le vendredi et des frais de données ; les montants et la nouvelle orientation commerciale restaient à confirmer.", "L'URL Futures mène à une page actions/options. Catégorie et quatre offres corrigées : Pre-Prop 599 $, Prop 1 499 $, plus 99 $/mois. Contrats simulés, risque Pro et retraits réexaminés. Note de 64 à 67.", "Les pages officielles des actions et options indiquent les mêmes prix d'entrée et de souscription mensuelle, tandis que la contribution Pro peut être perdue.", "Trustpilot passe à 4,3/5 sur 84 avis ; récits favorables et retard KYC sont présentés comme témoignages, pas comme preuve de virement."]
+    changelog: ["Frais mensuels de 99 $ distingués des frais d'entrée et des cinq jours gagnants ; apport personnel de Pro exposé aux pertes. Note inchangée.", "Le précédent relevé d'octobre indiquait 4,2/5 pour 83 avis Trustpilot ; les prix et répartitions n'avaient pas été entièrement revérifiés.", "En octobre, l'ancienne page Futures indiquait 80 % de partage, des retraits le vendredi et des frais de données ; les montants et la nouvelle orientation commerciale restaient à confirmer.", "L'URL Futures mène à une page actions/options. Catégorie et quatre offres corrigées : Pre-Prop 599 $, Prop 1 499 $, plus 99 $/mois. Contrats simulés, risque Pro et retraits réexaminés. Note de 64 à 67.", "Les pages officielles des actions et options indiquent les mêmes prix d'entrée et de souscription mensuelle, tandis que la contribution Pro peut être perdue.", "Trustpilot passe à 4,3/5 sur 84 avis ; récits favorables et retard KYC sont présentés comme témoignages, pas comme preuve de virement."]
   },
   'alpha-futures': {
     regulatoryStatus: ["Les conditions officielles nomment Alpha Futures Limited (Royaume-Uni, n° 15655643) comme fournisseur des services virtuels simulés.", "La relation technique NinjaTrader/Tradovate s'est terminée pour le programme Premium en juillet 2026, sans arrêt démontré des autres programmes."],
@@ -514,10 +519,15 @@ export const auditFrenchDetails: Record<string, {
     changelog: ["Les conditions de TFG (Payments) Limited précisent des règles distinctes par programme et des restrictions sur les gains et remboursements. Avec l'alerte Trustpilot persistante, la note éditoriale passe de 65 (plafonnée à 64) à 58.", "Trustpilot masque toujours sa note et mentionne de faux avis retirés ; 605 avis restent visibles et les litiges individuels ne sont pas arbitrés."]
   },
   'hola-prime': {
+    restrictiveRules: [
+      {program:'2-Step Pro / Prime et 1-Step Prime — choix du retrait',rule:'Retraits bimensuels avec trois journées gagnantes d’au moins 0,5 % du capital initial ; sept journées pour le mensuel. Retrait à la demande : 2 % de gain total et régularité de 40 %.',impact:'La fréquence des gains et le partage dépendent de l’option choisie ; tout bénéfice n’est pas immédiatement retirable.'},
+      {program:'1-Step Fly / 2-Step Fly — évaluation puis financement simulé',rule:'Perte globale statique pendant le challenge, mais seuil suiveur intraday en compte financé ; annonces et positions de week-end peuvent entraîner une rupture. Régularité : 40 % en 1-Step, 50 % en phase 2 du 2-Step.',impact:'Un compte peut être validé avec un seuil fixe puis être soumis à une mécanique bien plus serrée une fois financé.'},
+      {program:'Direct et Direct Fly — comptes financés',rule:'Direct a un seuil suiveur EOD, une régularité de 20 % sur les retraits bimensuels et des interdictions de trading lors des annonces et week-ends ; Direct Fly suit l’équité intraday.',impact:'Ces parcours directs ne sont pas interchangeables ; une violation peut entraîner la clôture du compte.'}
+    ],
     regulatoryStatus: ["Le site distingue les entités de Hong Kong, Chypre, Maurice et les prestataires techniques dans une activité d'évaluation simulée.", "Le contrôle externe des délais de traitement du 15 octobre 2025 au 15 mars 2026 exclut explicitement une opinion d'audit, d'assurance ou une reliance des tiers."],
     complaintsAndDisputes: ["Le résumé publié par la société annonce 98,35 % de demandes complètes traitées dans l'heure et zéro refus dans le périmètre, sans rendre public le rapport intégral.", "Trustpilot affiche 4,6/5 sur 4 324 avis, avec des litiges individuels sur comptes et vérification d'identité, non arbitrés."],
     redFlags: ["L'étude de délais ne démontre pas que tous les acheteurs se sont qualifiés ni que tous les virements bancaires ont été contrôlés.", "Les conditions et plafonds diffèrent fortement selon les programmes.", "La licence d'une société liée à Maurice ne régule pas automatiquement les rémunérations des simulations."],
-    changelog: ["Finance Magnates a examiné des documents d'une étude Deloitte sur les délais de versement, mais celle-ci n'est ni un audit ni une opinion d'assurance et le rapport intégral n'est pas public. Note prudente de 64 à 67.", "Le résumé officiel précise les limites du contrôle et le calcul du délai après réception des informations complètes.", "Trustpilot affiche désormais 4,6/5 sur 4 324 avis, sans alerte publique de retrait de note."]
+    changelog: ["Les parcours Pro, Prime, Fly et Direct ont des seuils et fenêtres de retrait distincts ; divergence du partage 1-Step Fly signalée sans supposer la bonne version. Note inchangée.", "Finance Magnates a examiné des documents d'une étude Deloitte sur les délais de versement, mais celle-ci n'est ni un audit ni une opinion d'assurance et le rapport intégral n'est pas public. Note prudente de 64 à 67.", "Le résumé officiel précise les limites du contrôle et le calcul du délai après réception des informations complètes.", "Trustpilot affiche désormais 4,6/5 sur 4 324 avis, sans alerte publique de retrait de note."]
   },
   'cove-funded': {
     regulatoryStatus: ["Les anciennes conditions de Cove Funded mentionnaient une société maltaise et des évaluations TradeLocker simulées ; le site actuel n'offre plus ces produits.", "Le domaine d'origine affiche désormais HEBAT33 et renvoie à une inscription sur un autre site. Son exploitation par l'ancienne société n'est pas démontrée."],
@@ -787,5 +797,89 @@ export const auditFrenchDetails: Record<string, {
       "Juin 2026 — L'ancien communiqué officiel annonce la fermeture définitive de FORFX et prétend que tous les frais et gains ont été réglés. Aucun audit indépendant ne l'a confirmé. Source : https://www.forfx.com/",
       "17/11/2026 — L'ancien domaine forfx.com redirige vers une annonce de vente GoDaddy. Un futur acquéreur du nom de domaine ne peut être considéré comme l'ancien exploitant ou un service légitime de récupération de fonds. Source : https://www.forfx.com/"
     ]
-  }
+  },
+  'breakout-prop': {
+    restrictiveRules: [
+      {program:'1-Step Classic / Pro / Turbo — pertes en évaluation et après financement',rule:'La perte quotidienne se recalcule à 00 h 30 UTC sur le solde, avec contrôle de l’équité latente. Un franchissement, même bref, clôt définitivement le compte. Limites globales fixes : Classic 6 %, Pro 5 %, Turbo 3 %.',impact:'Une perte flottante peut invalider le challenge même si les trades clôturés restent positifs. Il s’agit d’une limite de risque publiée.'},
+      {program:'1-Step Classic / Pro / Turbo — pratiques interdites',rule:'L’entreprise interdit de reprendre les idées de trading de tiers ou de communautés, de partager un compte, ou d’utiliser plusieurs comptes depuis un même foyer, appareil ou IP.',impact:'Les signaux copiés et les foyers de plusieurs traders doivent être clarifiés avant tout achat.'}
+    ],
+    products: [
+      {name:'1-Step Classic',drawdownDetails:'Seuil total fixe à 94 % du capital initial ; toucher le seuil en perte latente ferme le compte.'},
+      {name:'1-Step Pro',drawdownDetails:'Seuil total fixe à 95 % du capital initial ; le plafond journalier est indépendant.'},
+      {name:'1-Step Turbo',drawdownDetails:'Seuil total fixe à 97 % du capital initial, avec plafond journalier simultané.'}
+    ]
+  },
+  myfundedfutures: {
+    restrictiveRules: [
+      {program:'Builder — évaluation et compte financé simulé',rule:'L’évaluation comporte un drawdown suiveur EOD, sans consistance. Une fois financé : meilleure journée plafonnée à 50 %, réserve de gains et retraits de 1 000 $ sur 25K ou 2 000 $ sur 50K ; seuil de perte ajusté après paiement.',impact:'Une journée autorisée pendant le test peut bloquer un retrait financé ; réserver suffisamment de bénéfices.'},
+      {program:'Rapid Intraday / Rapid EOD — évaluation',rule:'Rapid Intraday : 50 % de consistance et deux jours minimum. Rapid EOD : 30 %, quatre jours et inactivité limitée à sept jours.',impact:'Les deux versions Rapid ont des conditions de réussite différentes malgré un nom commun.'},
+      {program:'Pro et Rapid — retraits financés',rule:'Rapid : admissibilité après 24 heures, sous réserve de gains et retrait minimal de 500 $. Pro : cycles de quatorze jours, réserve plus importante et retrait minimal de 1 000 $.',impact:'Un compte bénéficiaire peut rester sous le seuil de gains effectivement retirable.'}
+    ],
+    products:[
+      {name:'Builder — évaluation',drawdownDetails:'Drawdown suiveur sur les pics de solde de fin de journée, contrôlé pendant les séances.',consistencyRule:'Pas de règle de consistance pendant l’évaluation.'},
+      {name:'Rapid Intraday — évaluation',drawdownDetails:'Le tableau commun indique une limite d’évaluation EOD ; ne pas l’étendre au compte financé sans vérifier.',consistencyRule:'Meilleure journée ≤ 50 % des gains de l’évaluation.'},
+      {name:'Rapid EOD — évaluation',drawdownDetails:'Drawdown relevé à la clôture puis surveillé en séance.',consistencyRule:'Meilleure journée ≤ 30 % des gains de l’évaluation.'},
+      {name:'Pro — évaluation',drawdownDetails:'Limite de perte EOD propre à chaque taille de compte.',consistencyRule:'Meilleure journée ≤ 50 % des gains de l’évaluation.'}
+    ]
+  },
+  tradeify: {
+    restrictiveRules:[
+      {program:'Select Evaluation — phase d’évaluation',rule:'Drawdown suiveur EOD, plafond de 40 % sur la meilleure journée et trois jours minimum. Une fois le challenge réussi, choix définitif entre Flex (cinq jours gagnants) et Daily (réserve et plafonds plus petits).',impact:'L’absence de limite de perte quotidienne durant l’évaluation ne supprime pas le drawdown ; le choix de retrait est irréversible.'},
+      {program:'Growth — évaluation puis financement',rule:'Limite quotidienne souple pendant l’évaluation, sans consistance ; une règle distincte de 35 % de consistance s’applique ensuite sur le compte financé.',impact:'Réussir rapidement le test ne dispense pas des règles de retrait une fois financé.'},
+      {program:'Lightning — achats depuis septembre 2025',rule:'Financement simulé direct, mais objectifs de gains, plafonds par retrait et consistance progressive de 20 %, puis 25 % et enfin 30 %.',impact:'L’objectif de profit n’est pas la somme intégralement retirable.'}
+    ],
+    products:[
+      {name:'Select — évaluation',drawdownDetails:'Seuil recalculé sur les pics de clôture, contrôlé intraday ; Flex et Daily divergent après validation.',consistencyRule:'40 % à l’évaluation ; option à 50 % payante.'},
+      {name:'Growth — évaluation',drawdownDetails:'Seuil de perte relevé en fin de journée et pause souple distincte en séance.'},
+      {name:'Lightning — financement simulé direct',drawdownDetails:'Drawdown suiveur EOD ; montant du retrait et objectif de gains sont deux mesures distinctes.',consistencyRule:'20 % au premier retrait, 25 % au deuxième, 30 % aux suivants.'}
+    ]
+  },
+  tradeday: {
+    restrictiveRules:[
+      {program:'Quick Pay — évaluation',rule:'Cinq jours de trading minimum ; meilleure journée limitée à 30 % des gains totaux. La limite de drawdown reste valable même si l’objectif est atteint.',impact:'Une forte journée peut retarder la validation ; le compte financé Quick Pay annonce un premier retrait sans réserve de gains.'},
+      {program:'Fast Pass — évaluation',rule:'Le guide officiel dit « sans minimum de jours », mais les fiches d’achat actuelles indiquent trois jours. Les deux affichent une consistance de 45 %.',impact:'Les textes officiels divergent : demander la règle contractuelle écrite pour le compte choisi.'},
+      {program:'Tous les nouveaux challenges — depuis le 12 novembre 2026',rule:'Les abonnements et réinitialisations payantes ont été remplacés par un prix unique. Les anciens abonnements bénéficient de conditions de transition ; après échec, il faut acheter un nouveau challenge.',impact:'Les anciens tarifs mensuels ne décrivent plus les nouveaux achats.'}
+    ],
+    products:[
+      {name:'Quick Pay — évaluation',description:'Achat unique dès 99 $ au tarif catalogue pour 25K Intraday, hors remise temporaire. Versions d’évaluation Intraday ou EOD ; le seuil peut changer en compte financé.'},
+      {name:'Fast Pass — évaluation',description:'Achat unique dès 173 $ au tarif catalogue pour le 25K EOD, hors remise ; retraits avec cinq journées gagnantes et plafond par paiement.',minTradingDays:'Contradiction officielle : carte d’achat à trois jours minimum, guide « sans minimum ». Cinq journées bénéficiaires pour le retrait.'}
+    ]
+  },
+  'lark-funding': {
+    restrictiveRules: [
+      {program:'1-Step / 2-Step / 3-Step — retraits',rule:'Demandes de retrait toutes les quatorze journées, au moins 100 $, avec 40 $ de frais fixes de traitement. Un calendrier hebdomadaire est proposé contre supplément.',impact:'La commission fixe pèse lourd sur les petits retraits ; la date d’éligibilité ne garantit pas le délai de réception.'},
+      {program:'Comptes Instant — retraits suivants',rule:'Le premier retrait est accessible à la demande, mais les suivants sont espacés de trente jours, avec un minimum de 100 $. La FAQ générale indique 40 $ de frais, mais la formule Instant 1 000 $ en est explicitement exemptée.',impact:'Les comptes Instant ne permettent pas des retraits illimités ; vérifier les frais par produit. Exception documentée : https://helpdesk.larkfunding.com/en/articles/13714987-withdrawal-rules-1-000-instant-account'},
+      {program:'1-Step MAX — perte latente par idée de trading',rule:'Dépasser 1 % de perte sur une même position ou idée constitue une infraction souple pendant le test, puis éliminatoire sur le compte financé. Les positions ouvertes sont fermées.',impact:'Un dépassement récupérable pendant l’évaluation devient définitif après financement ; le seuil reste fondé sur le capital initial.'}
+    ],
+    products:[
+      {name:'1-Step Career — évaluation',drawdownDetails:'Seuil de perte totale fixe à 7 % du capital initial ; plafond quotidien distinct.'},
+      {name:'3-Step — évaluation',drawdownDetails:'Présentation officielle : perte maximale statique de 5 % ; vérifier les chiffres de chaque phase avant paiement.'}
+    ]
+  },
+  'uprofit-trader': {
+    restrictiveRules:[
+      {program:'DAY Soft / DAY Flex — évaluation et compte virtuel financé',rule:'Drawdown EOD et objectifs propres à chaque taille. Pour DAY Soft 50K, la limite journalière est de 1 100 $ et la consistance de 50 %. Les retraits sont soumis à d’autres plafonds.',impact:'Le partage annoncé de 90 % n’annule ni le contrôle des pertes, ni les plafonds de paiement.'},
+      {program:'ONE 50K — évaluation',rule:'Objectif de 2 500 $, perte maximale statique de 1 000 $, consistance de 50 % et deux jours minimum. Pas de frais d’activation une fois le test réussi.',impact:'Le plancher de perte est fixe, contrairement aux plans DAY EOD ; une seule grosse journée peut retarder la validation.'},
+      {program:'DAY — renouvellement',rule:'Les évaluations à abonnement sont renouvelées automatiquement, sauf résiliation au moins un jour ouvré avant la date prévue.',impact:'Un test non terminé ou échoué peut engendrer un nouveau prélèvement si l’abonnement reste actif.'}
+    ],
+    products:[
+      {name:'DAY Soft — évaluation',description:'Abonnement mensuel : 49 $ catalogue en 10K et 130 $ en 50K, hors promotions.',drawdownDetails:'Mesure de perte EOD, avec plafonds de risque quotidien propres à la taille.',consistencyRule:'50 % sur les cartes d’évaluation ; conditions de retrait financé distinctes.'},
+      {name:'DAY Flex — évaluation',description:'Formule DAY distincte sur abonnement, disponible de 50K à 150K.',drawdownDetails:'Drawdown EOD ; ne pas appliquer la limite journalière du plan Soft au plan Flex.',consistencyRule:'50 % selon les cartes d’évaluation affichées.'},
+      {name:'ONE 50K — évaluation',description:'Évaluation à 120 $ en achat unique, sans frais d’activation après réussite.',drawdownDetails:'Plancher statique à 49 000 $, non relevé par les plus-hauts du solde.',consistencyRule:'Meilleure journée limitée à 50 % des gains de l’évaluation.',minTradingDays:'Deux journées de trading.'}
+    ]
+  },
+  tickticktrader: {
+    restrictiveRules:[
+      {program:'Nouveaux programmes — disponibilité des achats',rule:'La boutique officielle indique que les achats et nouveaux abonnements sont temporairement suspendus pendant des changements de plateforme. Les anciens tarifs ne prouvent pas que la commande fonctionne actuellement.',impact:'Vérifier directement la reprise effective des ventes. Une suspension n’est pas la preuve d’une fermeture juridique.'},
+      {program:'S2F+ 50K / 100K — gains contractuels',rule:'Profit Score de 10 avant le premier retrait, puis 7. Sur les gains, 50 % sont versés en espèces, 40 % transférés dans un Live Wallet et 10 % retenus en frais ; minimum de demande 250 $ et plafonds par cycle.',impact:'Une allocation globale de 90 % ne signifie pas 90 % immédiatement retirables en espèces.'},
+      {program:'TTT Direct 50K — restrictions propres au contrat',rule:'Conservation de positions la nuit ou le week-end interdite, règles de progression des lots, et réserve de sécurité de 2 600 $ avant le premier retrait ; violations répétées pouvant entraîner la désactivation.',impact:'Les modalités du compte Direct ne doivent pas être confondues avec celles de S2F+.'}
+    ]
+  },
+  'the-concept-trading': {
+    restrictiveRules:[
+      {program:'Modèles standards — facturation du partage des gains',rule:'La FAQ demande une facture dans les trente jours suivant l’atteinte d’un objectif de progression ; le partage standard commence à 50 %, et non aux 90 % maximaux mis en avant.',impact:'Oublier une échéance administrative peut faire perdre un paiement malgré l’objectif de trading atteint.'},
+      {program:'90% Lock — niveaux financés éligibles',rule:'Option absente des niveaux Foundation et Intern, à activer après avoir reçu le partage habituel au niveau choisi. Son activation bloque définitivement toute nouvelle progression.',impact:'Obtenir 90 % implique de renoncer aux augmentations futures de taille de compte.'},
+      {program:'Tous les modèles — inactivité',rule:'Sans opération pendant 42 jours, le compte est clôturé. Le drawdown est fixe, avec un taux propre au programme et non universel.',impact:'L’inactivité peut entraîner la perte du compte sans dépassement du plafond de pertes.'}
+    ]
+  },
 };

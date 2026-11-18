@@ -1516,7 +1516,11 @@
       ]
     },
     "breakout-prop": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"1-Step Classic / Pro / Turbo — evaluation and funded equity limits","rule":"A daily equity-loss limit recalculates at 00:30 UTC against the reset balance; reaching it even briefly with unrealised losses is a permanent breach. The fixed overall equity limits are 6% Classic, 5% Pro and 3% Turbo.","impact":"Intraday floating loss can terminate a challenge despite a profitable closed-trade balance. This is a risk threshold, not an allegation of a hidden fee.","source":"https://www.breakoutprop.com/program-rules/"},
+        {"program":"1-Step Classic / Pro / Turbo — prohibited trading practices","rule":"Firm rules prohibit using third-party copied trading ideas or community signals, sharing accounts and operating multiple accounts from the same household, device or IP address.","impact":"Copy traders and shared-household users must verify eligibility before paying; the restriction extends beyond simply copying live orders.","source":"https://www.breakoutprop.com/program-rules/"}
+      ],
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 1273,
@@ -1525,6 +1529,7 @@
         "payoutDelay": "on demand, 24/7, $50 minimum after split; first payout can be requested the day the account is funded"
       },
       "changelog": [
+        {"date":"2026-11-18","summary":"Separated Classic, Pro and Turbo static floors from their recalculated daily equity-loss line and documented copied-idea and shared-IP restrictions; score unchanged.","source":"https://www.breakoutprop.com/program-rules/","fields":["products","restrictiveRules"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 4.7 TrustScore across 1,226 reviews, with Trustpilot's high-risk investment notice. Official site: default 80% split with a 90% option chosen at purchase, on-demand USDC payouts usually within 24 hours; stored price and split left unchanged.",
@@ -1592,6 +1597,9 @@
           "profitTarget": "10%",
           "maxDailyLoss": "3% of the balance at the daily reset",
           "maxDrawdown": "6% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.breakoutprop.com/program-rules/",
+          "drawdownDetails": "Lifetime maximum equity-loss floor is fixed at 94% of the starting balance; a floating-equity touch terminates the account.",
           "profitSplit": "80% standard, 90% option at checkout",
           "platforms": [
             "not stated"
@@ -1612,6 +1620,9 @@
           "profitTarget": "12%",
           "maxDailyLoss": "3% of the balance at the daily reset",
           "maxDrawdown": "5% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.breakoutprop.com/program-rules/",
+          "drawdownDetails": "Lifetime maximum equity-loss floor remains fixed at 95% of initial capital, while the daily equity limit resets independently.",
           "profitSplit": "80% standard, 90% option at checkout",
           "platforms": [
             "not stated"
@@ -1632,6 +1643,9 @@
           "profitTarget": "9%",
           "maxDailyLoss": "3% of the balance at the daily reset",
           "maxDrawdown": "3% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.breakoutprop.com/program-rules/",
+          "drawdownDetails": "Turbo's maximum equity-loss floor is fixed at 97% of the initial capital; the daily equity loss floor is also enforced.",
           "profitSplit": "80% standard, 90% option at checkout",
           "platforms": [
             "not stated"
@@ -5763,8 +5777,14 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"2-Step Pro / Prime and 1-Step Prime — funded withdrawal choice","rule":"Pro/Prime bi-weekly rewards require three profitable days at at least 0.5% initial balance; monthly rewards require seven. On-demand rewards require at least 2% total gain and a 40% best-day consistency ceiling.","impact":"The headline profit share and payout speed depend on the chosen cycle; an eligible trading profit is not automatically available for immediate withdrawal.","source":"https://www.holaprime.com/rulebook/schedules/"},
+        {"program":"1-Step Fly / 2-Step Fly — evaluation versus funded stage","rule":"Fly evaluations have static maximum losses, but simulated funded stages use intraday trailing limits; challenge news-window trades and weekend holds can result in termination. Evaluation consistency is 40% for 1-Step Fly or 50% in phase 2 for 2-Step Fly.","impact":"A trader may pass under a static loss floor and then face a materially different trailing floor and stage-specific restrictions; funded payout split differs from challenge marketing.","source":"https://www.holaprime.com/rulebook/schedules/"},
+        {"program":"Direct and Direct Fly — funded accounts","rule":"Direct is subject to an end-of-day trailing floor, 20% consistency on bi-weekly payouts and restricted news/weekend operation; Direct Fly has an intraday trailing floor. The published matrix describes rule breaches with possible account termination.","impact":"The two direct routes must not be described as equivalent instant-funding accounts, and paid fees are exposed to a breach during restricted trading windows.","source":"https://www.holaprime.com/rulebook/schedules/"}
+      ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Separated Pro, Prime, Fly and Direct restrictions by stage, payout schedule and loss calculation; official Fly split disagreement remains flagged; no score change.","source":"https://www.holaprime.com/rulebook/schedules/","fields":["restrictiveRules"]},
         {
           "date": "2026-11-17",
           "summary": "Finance Magnates reports having inspected documents from an externally performed review of Hola Prime payout processing covering 15 October 2025–15 March 2026. The company's own summary says 98.35% of eligible, fully documented requests were processed within one hour and none denied in the scoped data, but expressly says this was NOT an audit or assurance opinion and the full report is not public. Score rises cautiously from 64 to 67, not into the 70+ band.",
@@ -6149,8 +6169,18 @@
       ]
     },
     "lark-funding": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"1-Step / 2-Step / 3-Step — payouts","rule":"First and later requests are on a 14-day schedule, require at least $100 withdrawal and incur a flat $40 processing fee; the optional weekly schedule costs extra.","impact":"The fixed fee is significant relative to small withdrawals; a fourteen-day eligibility cycle is distinct from payout processing time.","source":"https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"},
+        {"program":"Instant accounts — subsequent payouts","rule":"The first request may be made on demand; later requests are spaced 30 days apart with a $100 minimum. The general payout FAQ lists a $40 processing fee, but the separate $1,000 Instant account FAQ expressly waives it.","impact":"Instant access to a trading account does not mean unlimited instant withdrawals; processing fees depend on the product and should be checked before purchase. Fee exception: https://helpdesk.larkfunding.com/en/articles/13714987-withdrawal-rules-1-000-instant-account","source":"https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"},
+        {"program":"1-Step MAX — per-trade open-loss risk","rule":"Any single trade setup exceeding a fixed 1% loss threshold is a soft breach during evaluation but a hard breach in funded trading; all open positions are closed.","impact":"A rule that is recoverable during the test becomes disqualifying after funding; the threshold does not grow with account balance.","source":"https://helpdesk.larkfunding.com/en/articles/17429577-how-does-the-1-per-trade-open-loss-limit-work-on-1-step-max-accounts"}
+      ],
+      "setProducts": [
+        {"id":"lark-1-step-career","name":"1-Step Career — evaluation","type":"Challenge","description":"10K–200K one-step evaluation with a fixed maximum-loss floor; 14-day payout cycles on the simulated funded Master Account, with $40 payout fee.","accountSizeMin":10000,"accountSizeMax":200000,"profitTarget":"10% evaluation target","maxDailyLoss":"5% daily limit","maxDrawdown":"7% static from starting balance","drawdownType":"Static","drawdownSource":"https://larkfunding.com/help/trading-rules-guidelines/1-step-career-evaluation-details","drawdownDetails":"The fixed 7% maximum floor does not rise when profits increase; separate daily loss is monitored.","profitSplit":"80% after evaluation","platforms":["Verify supported platform at checkout"],"tradableAssets":["Forex","Indices","Metals","Crypto CFD"],"minTradingDays":"No evaluation minimum","hasConsistencyRule":false},
+        {"id":"lark-3-step","name":"3-Step — evaluation","type":"Challenge","description":"Three sequential evaluation phases in simulated accounts, from 10K to 100K; funded payouts follow fourteen-day timing, with a processing fee.","accountSizeMin":10000,"accountSizeMax":100000,"profitTarget":"Phase-specific; verify at checkout","maxDailyLoss":"Verify exact daily limit for selected account","maxDrawdown":"5% maximum static drawdown published on official programme overview","drawdownType":"Static","drawdownSource":"https://larkfunding.com/","drawdownDetails":"Lark lists a five-percent 3-Step maximum-loss ceiling on its programme overview; check phase-specific values before buying.","profitSplit":"Confirm per-phase funded split before buying","platforms":["Verify supported platform at checkout"],"tradableAssets":["Forex","Indices","Metals","Crypto CFD"],"hasConsistencyRule":false}
+      ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Documented the 1-Step, 3-Step and 1-Step MAX differences, withdrawal charges and a 1%-per-trade soft evaluation breach that becomes hard once funded; no score change.","source":"https://helpdesk.larkfunding.com/en/articles/17429577-how-does-the-1-per-trade-open-loss-limit-work-on-1-step-max-accounts","fields":["products","restrictiveRules"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.3 TrustScore across 523 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -6674,7 +6704,18 @@
       ]
     },
     "myfundedfutures": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Builder — evaluation versus simulated-funded stage","rule":"Builder evaluation has an EOD trailing loss floor and no consistency ceiling; simulated funded rewards require 50% best-day consistency, a profit buffer and are capped at $1,000 for 25K or $2,000 for 50K, with a maximum-loss adjustment after payout.","impact":"An unrestricted evaluation day does not imply an unrestricted funded withdrawal; profit concentration and payout buffers must be planned separately.","source":"https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"},
+        {"program":"Rapid Intraday / Rapid EOD — evaluation","rule":"Rapid Intraday evaluations impose 50% daily-profit consistency and at least two trading days; Rapid EOD evaluations impose 30% and at least four trading days, with the EOD plan also listing seven-day inactivity.","impact":"The fastest-pass and trailing-risk mechanics differ even inside the Rapid brand; do not apply one plan's conditions to the other.","source":"https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified"},
+        {"program":"Pro and Rapid — funded withdrawals","rule":"Rapid funded payout eligibility begins after 24 hours but requires a size-based profit buffer and at least $500 request; Pro requests are on fourteen-calendar-day cycles with a larger buffer and at least $1,000 per request.","impact":"Advertised daily or fortnightly payouts are conditional; a trader can be profitable but still below the withdrawable buffer.","source":"https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"}
+      ],
+      "setProducts": [
+        {"id":"mffu-builder","name":"Builder — evaluation","type":"Futures evaluation","description":"Builder 25K, 50K, 100K and 150K evaluated under EOD trailing limits, with one minimum day; funded stage has capped payouts and a 50% best-day rule absent from the evaluation.","accountSizeMin":25000,"accountSizeMax":150000,"profitTarget":"$1,500 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K)","maxDailyLoss":"$600–$2,500 soft pause by account size","maxDrawdown":"$1,000–$4,500 EOD trailing, by size","drawdownType":"EOD","drawdownSource":"https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified","drawdownDetails":"Evaluation maximum-loss line follows end-of-day balance highs and is enforced during trading; funded terms must be read independently.","profitSplit":"80% Builder simulated-funded","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"minTradingDays":"1 evaluation day","hasConsistencyRule":false},
+        {"id":"mffu-rapid-intraday","name":"Rapid Intraday — evaluation","type":"Futures evaluation","description":"Rapid Intraday evaluation 25K–150K, 50% evaluation consistency and at least two days; Rapid funded rewards use a separate buffer and daily eligibility policy.","accountSizeMin":25000,"accountSizeMax":150000,"profitTarget":"$1,500–$9,000 by size","maxDailyLoss":"No evaluation daily loss limit stated in the programme table","maxDrawdown":"$1,000–$4,500 EOD maximum-loss measurement during evaluation","drawdownType":"EOD","drawdownSource":"https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified","drawdownDetails":"Official consolidated evaluation table states EOD maximum loss; the Intraday product name must not be mistaken for an EOD funded loss method.","profitSplit":"90% Rapid simulated-funded","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"minTradingDays":"2 evaluation days","hasConsistencyRule":true,"consistencyRule":"Best day ≤50% of total evaluation profits; not the funded payout rule."},
+        {"id":"mffu-rapid-eod","name":"Rapid EOD — evaluation","type":"Futures evaluation","description":"Distinct Rapid EOD evaluation with seven-day inactivity rule and a 30% best-day concentration threshold.","accountSizeMin":25000,"accountSizeMax":50000,"profitTarget":"$1,500 (25K), $3,000 (50K)","maxDailyLoss":"None in standard published evaluation table","maxDrawdown":"$1,000 (25K) or $2,000 (50K) EOD trailing","drawdownType":"EOD","drawdownSource":"https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified","drawdownDetails":"Loss line updates from end-of-day balance, while floating equity can breach the established floor within the session.","profitSplit":"90% Rapid simulated-funded","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"minTradingDays":"4 evaluation days","hasConsistencyRule":true,"consistencyRule":"Best day ≤30% of total evaluation profits."},
+        {"id":"mffu-pro","name":"Pro — evaluation","type":"Futures evaluation","description":"Pro 50K–150K with two-day minimum (one-day add-on changes the 50K target); funded withdrawals normally follow fourteen-day cycles and buffer requirements.","accountSizeMin":50000,"accountSizeMax":150000,"profitTarget":"$3,000 (50K), $6,000 (100K), $9,000 (150K); 50K One-Day Add-On: $4,000","maxDailyLoss":"None listed for Pro evaluation","maxDrawdown":"$2,000–$4,500 EOD maximum loss by size","drawdownType":"EOD","drawdownSource":"https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified","drawdownDetails":"The consolidated Pro evaluation table specifies an EOD maximum-loss calculation, distinct from subsequent funded payout conditions.","profitSplit":"80% Pro simulated-funded","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"minTradingDays":"2 evaluation days; one-day add-on has different profit goal","hasConsistencyRule":true,"consistencyRule":"Best day ≤50% of total evaluation profits."}
+      ],
       "set": {
         "trustpilotRating": 4.9,
         "trustpilotReviewCount": 22813,
@@ -6682,6 +6723,7 @@
         "drawdownType": "EOD"
       },
       "changelog": [
+        {"date":"2026-11-18","summary":"Separated Builder, Rapid Intraday, Rapid EOD and Pro evaluations, their EOD loss floors, profit consistency thresholds and funded payment buffers; no score change.","source":"https://help.myfundedfutures.com/en/articles/11802636-traders-evaluation-simplified","fields":["products","restrictiveRules"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 4.9 TrustScore across 22,576 reviews, with Trustpilot's high-risk investment notice. Rapid plan profit split 90/10 with daily payouts confirmed on the official plan page; stored price left unchanged.",
@@ -7763,8 +7805,14 @@
       ]
     },
     "the-concept-trading": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"All standard models — profit-share invoicing","rule":"The FAQ requires an invoice within thirty days after a scaling target is reached to preserve the earned profit-share entitlement; the standard split begins at 50%, not the marketed maximum 90%.","impact":"A trader who misses an administrative deadline can forfeit a payout despite meeting the trading target.","source":"https://new.theconcepttrading.com/faq/"},
+        {"program":"90% Lock — eligible funded levels only","rule":"The 90% Lock is unavailable on Foundation and Intern levels, requires meeting the chosen level's target and receiving its ordinary split first, and permanently prevents any further scaling.","impact":"The headline 90% share entails giving up future account-size progression and is not the default evaluation reward.","source":"https://new.theconcepttrading.com/all-rules/"},
+        {"program":"All prop models — account inactivity","rule":"An account without trading for 42 days is terminated; maximum drawdown is fixed and depends on the selected model rather than a universal published percentage.","impact":"Sporadic traders can lose the account through inactivity even without breaching a trading loss limit.","source":"https://new.theconcepttrading.com/all-rules/"}
+      ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Isolated 30-day invoice deadline, conditional 90% Lock precluding further scaling, and 42-day inactivity termination; these were in the earlier review and are not penalised twice.","source":"https://new.theconcepttrading.com/all-rules/","fields":["restrictiveRules"]},
         {
           "date": "2026-11-17",
           "summary": "First in-depth trading-rule audit using current official FAQ and All Rules. Standard share starts at 50%, not headline 90%; top-level or conditional 90% Lock is different, forfeits higher scaling and requires milestone first. Outside scaling events, payouts may be requested monthly (weekly at the top/Lock), and an invoice must be submitted within 30 days of target or profit share is forfeited. Trading inactivity of 42 days terminates an account. The FAQ says Iran, North Korea and OFAC countries excluded; US clients cannot use Metaquotes. No independent withdrawal, spread or license verification performed.",
@@ -8207,8 +8255,14 @@
       ]
     },
     "tickticktrader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"All new programmes — purchase availability check","rule":"The firm's official checkout states that purchases and new subscriptions are temporarily suspended during platform changes. Current availability requires direct reconfirmation; archived plan prices do not establish a working checkout.","impact":"A visitor should not assume an advertised account can currently be purchased; the official pause is not proof of legal closure.","source":"https://app.tickticktrader.com/signup/Recurring_Subscriptions?provider=Projectx&type=evaluation"},
+        {"program":"S2F+ 50K / 100K — rewards and account rules (published contract)","rule":"A Profit Score of ten is required for the first payout and seven thereafter; only 50% of profits is a cash reward, 40% is allocated to a Live Wallet, and 10% is a company fee. A $250 request minimum and per-cycle caps apply.","impact":"A displayed 90% total allocation cannot be interpreted as 90% immediately withdrawable in cash; purchase availability must be verified separately.","source":"https://app.tickticktrader.com/signup/5oZvj0yTy"},
+        {"program":"TTT Direct 50K — trading and payout limits (published contract)","rule":"Overnight/weekend positions breach the contract; position scaling applies, a $2,600 safety threshold precedes the first request, and repeated scaling violations can deactivate the account.","impact":"Direct funding has its own contractual restrictions; do not apply the S2F+ payout system to this product.","source":"https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement"}
+      ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Documented the firm's suspension of new purchases, legacy S2F+ cash versus Live Wallet rewards and Direct 50K limits. A formal closure remains unproven; status and score await owner review.","source":"https://app.tickticktrader.com/signup/Recurring_Subscriptions?provider=Projectx&type=evaluation","fields":["restrictiveRules","verdict","auditSummary"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 3.4 TrustScore across 6,639 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -8230,8 +8284,16 @@
       "set": {
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 6636,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tickticktrader.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/tickticktrader.com",
+        "verdict": "TickTickTrader's published checkout notice says new purchases and subscriptions are temporarily suspended during a platform transition. Independent November 2026 checks also report inaccessible purchase and support surfaces. Its previously advertised Direct and S2F+ products have materially different payout, safety-buffer and trading restrictions, but a historical contract does not prove that any of them can currently be purchased or paid out. Do not attempt a new purchase without current written confirmation. This finding does not establish that the legal entity has formally closed.",
+        "auditSummary": "18 November 2026 research: the official TickTickTrader purchase interface indexed by search explicitly reports suspension of new account purchases during operational changes; fresh direct retrieval of some official login/contract URLs could not be completed. A 9 November independent monitoring entry reports the domain was still inaccessible to its checks, and another late-October source found a site-not-found screen. The legacy S2F+ agreement describes a Profit Score of 10 for the first payout and 7 thereafter, and 50% direct cash allocation plus 40% to a Live Wallet and 10% retained by the firm, rather than a freely withdrawable 90%. The separate 50K Direct contract imposes intraday risk and scaling, prohibits overnight positions, and requires a safety buffer before rewards. Those documents may predate today's availability and should not be treated as a live sales offer. No regulator dissolution, formal closure, current checkout, or independently reconciled payout was verified. Prior 3.4 Trustpilot snapshot was not updated in this pass; the score/status need an owner decision after direct contact or a working site is confirmed."
+      },
+      "addSources": [
+        {"label":"TickTickTrader public checkout suspension notice (official, verified by indexed text)","url":"https://app.tickticktrader.com/signup/Recurring_Subscriptions?provider=Projectx&type=evaluation"},
+        {"label":"Independent 9 November 2026 status check of TickTickTrader", "url":"https://whichprop.co/rule-changes/"},
+        {"label":"TickTickTrader S2F+ published legacy account agreement", "url":"https://app.tickticktrader.com/signup/5oZvj0yTy"},
+        {"label":"TickTickTrader Direct 50K agreement", "url":"https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement"}
+      ]
     },
     "tiger-funded": {
       "reviewedAt": "2026-11-17",
@@ -8914,17 +8976,25 @@
       ]
     },
     "tradeday": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Quick Pay — evaluation","rule":"At least five trading days and a maximum 30% best-day share of total profit are required; the maximum drawdown remains binding even when the consistency objective is met.","impact":"A large winning day may delay evaluation completion, but Quick Pay funded accounts are marketed without an initial payout buffer.","source":"https://www.tradeday.com/how-it-works"},
+        {"program":"Fast Pass — evaluation","rule":"The official How It Works page claims no formal minimum trading days, but current Fast Pass purchase cards say a three-day minimum. Both publish a 45% best-day consistency ceiling.","impact":"Official pages disagree on whether three days is a contractual minimum; request written confirmation for the exact account purchased.","source":"https://www.tradeday.com/how-it-works","status":"conflicting"},
+        {"program":"All new evaluations — purchase terms from 12 November 2026","rule":"Subscriptions and paid resets were replaced by single non-recurring purchases. Existing subscriptions are wound down under transitional conditions; a failed new evaluation requires a fresh purchase.","impact":"The historic $100 per month figure is obsolete for newly purchased challenges and should not be described as a current recurring price.","source":"https://www.tradeday.com/pt/blog-posts/no-more-subscriptions-tradeday-moves-to-one-time-payments---plus-60-off-every-account"}
+      ],
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 1452,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com",
-        "priceFrom": 100,
+        "priceFrom": 99,
         "profitSplit": 80,
         "drawdownType": "Trailing",
-        "payoutDelay": "Quick Pay: minimum 1 day to payout, usually processed within 24 hours; Fast Pass: minimum 5 days to payout, with a per-cycle cap"
+        "payoutDelay": "Quick Pay: first funded day, no profit buffer, $250 minimum; Fast Pass: at least five profitable funded days, 45% concentration and size-based capped withdrawals; payments subject to approval.",
+        "verdict": "TradeDay switched new evaluation purchases to one-time fees on 12 November 2026: the older monthly-subscription prices no longer apply. Quick Pay and Fast Pass differ by evaluation concentration, drawdown variant and funded withdrawal requirements. Quick Pay advertises day-one eligible requests without a profit buffer, while Fast Pass imposes five profitable days and a per-cycle cap. The current homepage shows three evaluation days for Fast Pass but the official How It Works page says no minimum; seek account-specific written clarification. Scores reflect established published rules rather than treating their mere strictness as concealed misconduct.",
+        "auditSummary": "18 November 2026: the official TradeDay update dated 12 November replaced monthly billing and paid resets with one-time purchases. Its public offer lists $99 before discount for a 25K Quick Pay Intraday evaluation and $173 before discount for a 25K Fast Pass EOD evaluation; the temporary 60%-off prices are excluded from the comparison baseline. Quick Pay evaluations require five days and 30% concentration; intraday and end-of-day evaluation drawdown variants exist, while Quick Pay Funded Sim can use an intraday trailing line even when the evaluation used EOD. The firm advertises no initial payout buffer and a $250 minimum request. Fast Pass uses a 45% concentration rule and five profitable funded days before payouts, with size-dependent caps; its homepage calls for three evaluation days while the How It Works article claims no formal day count, a direct official-source inconsistency. Existing subscription users have transitional conditions through 1 January 2027. No new payout or legality allegation is made, and the 75/100 editorial score remains unchanged."
       },
       "changelog": [
+        {"date":"2026-11-18","summary":"Corrected the obsolete monthly subscription entry to new one-time fee list prices from $99 as of 12 November 2026; mapped Quick Pay and Fast Pass differences and contradictory minimum-day text. Score remains 75.","source":"https://www.tradeday.com/pt/blog-posts/no-more-subscriptions-tradeday-moves-to-one-time-payments---plus-60-off-every-account","fields":["priceFrom","products","restrictiveRules","verdict","auditSummary"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 4.6 TrustScore across 1,452 reviews, claimed profile, no Trustpilot warning. Stored price and split left unchanged: the official prices are shown as promotional.",
@@ -8975,11 +9045,11 @@
           "id": "tradeday-quick-pay",
           "name": "Quick Pay evaluation",
           "type": "Futures evaluation",
-          "description": "Monthly evaluation with intraday or end-of-day trailing drawdown. List price $100 to $400 a month by size (the site showed a 55% discount on 29 Oct 2026). Funded split 50% below $4,000 net profit, then 80%, 90% in Funded Live.",
+          "description": "One-time non-refundable evaluation fee from $99 list price for 25K Intraday (site temporarily shows $39 promotional). Quick Pay offers both intraday and EOD evaluation loss-floor variants; EOD evaluation may change to intraday once funded. No subscription or paid resets for new purchases from 12 Nov 2026.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
-          "entryFeeMin": 100,
-          "entryFeeMax": 400,
+          "entryFeeMin": 99,
+          "entryFeeMax": 440,
           "profitTarget": "$1,500 (25K) to $9,000 (150K)",
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing intraday or end-of-day depending on the account",
@@ -8999,11 +9069,10 @@
           "id": "tradeday-fast-pass",
           "name": "Fast Pass evaluation",
           "type": "Futures evaluation",
-          "description": "Monthly evaluation with end-of-day trailing drawdown only. List price $130 to $530 a month by size (shown with a 50% discount on 29 Oct 2026). Payout caps per cycle: $750 (25K) to $2,250 (150K).",
+          "description": "One-time fee from $173 list price for the 25K EOD plan (site temporarily shows $69 promotional). End-of-day trailing drawdown in evaluation and simulated funding, with five qualifying winning days and size-dependent per-request payout caps; no recurring charge for new purchases.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
-          "entryFeeMin": 130,
-          "entryFeeMax": 530,
+          "entryFeeMin": 173,
           "profitTarget": "$1,500 (25K) to $9,000 (150K)",
           "maxDailyLoss": "not stated",
           "maxDrawdown": "$1,000 (25K) to $4,500 (150K), end-of-day trailing",
@@ -9015,7 +9084,7 @@
           "tradableAssets": [
             "Futures"
           ],
-          "minTradingDays": "3 days in the evaluation; 5 profitable days before a payout",
+          "minTradingDays": "Conflicting official pages: current account card says 3 evaluation days; How It Works says no formal minimum. Five profitable days before a payout.",
           "hasConsistencyRule": true,
           "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
         }
@@ -9032,7 +9101,12 @@
       ]
     },
     "tradefundrr": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Stocks / options Pre-Prop — evaluation","rule":"The $599 one-time entry fee is accompanied by a $99 monthly platform/data subscription; an evaluation must be passed before simulated funded payout eligibility begins.","impact":"Published one-off fees alone understate the recurring cost if the evaluation lasts more than one month.","source":"https://tradefundrr.com/stock-trader-funding/"},
+        {"program":"Stocks / options Prop — simulated funded stage","rule":"The $1,499 one-time fee plus $99 monthly cost remains due; a qualifying withdrawal requires five profitable days, including at least $250 net profit per day on stock Prop, and the programme's consistency checks.","impact":"Weekly Friday processing does not mean a trader can request rewards in the first week without completing profitable-day targets.","source":"https://tradefundrr.com/stock-trader-funding/"},
+        {"program":"Pro — separate real-capital contribution route","rule":"The Pro arrangement asks the trader to contribute personal capital at risk; leverage, buying-power ceilings and account terms are decided through a separate application and agreement.","impact":"Pro is financially different from the simulated, no-personal-trading-loss Pre-Prop and Prop programmes; it cannot be evaluated as risk-free instant funding.","source":"https://tradefundrr.com/stock-trader-funding/"}
+      ],
       "set": {
         "score": 67,
         "priceFrom": 599,
@@ -9151,6 +9225,7 @@
         {"label": "TradeFundrr options accounts and explicit $599/$1499 plus $99/mo pricing (2026-11-17)", "url": "https://tradefundrr.com/options-trader-funding/index.html"}
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Split recurring $99/month platform charges from one-off Stock/Options Pre-Prop and Prop fees, five-profitable-day payout thresholds and real capital-contribution risk on Pro; score unchanged.","source":"https://tradefundrr.com/stock-trader-funding/","fields":["restrictiveRules"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.2 TrustScore across 83 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -9179,7 +9254,17 @@
       ]
     },
     "tradeify": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Select Evaluation — evaluation stage","rule":"An EOD trailing floor and 40% best-day consistency ceiling apply, with at least three days to pass; the funded trader then permanently selects either the Flex five-winning-day path or a Daily path with a required buffer.","impact":"No evaluation daily-loss limit does not mean no trailing loss floor, and a payout choice made after passing cannot be changed for that account.","source":"https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts"},
+        {"program":"Growth Evaluation and funded stage","rule":"Growth evaluation has a daily loss limit but no consistency test; its funded stage uses a separate 35% consistency rule and a fixed payout policy.","impact":"Passing a Growth test quickly does not waive funded payout concentration checks or daily-loss restrictions.","source":"https://help.tradeify.co/en/articles/10468320-rules-consistency-rule"},
+        {"program":"Lightning Funded — post-12 September 2025 purchases","rule":"No evaluation is required, but payout eligibility follows size-based profit goals, per-request caps and an escalating best-day consistency ceiling of 20% for the first payout, 25% second and 30% later.","impact":"The profit objective is not the amount withdrawable; meeting a nominal goal can still leave a trader below the separate payout eligibility conditions.","source":"https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"}
+      ],
+      "setProducts": [
+        {"id":"tradeify-select-eval","name":"Select — evaluation","type":"Futures evaluation","description":"Select $25K–$300K one-time evaluation with no daily loss limit; after passing, permanently choose Select Flex (five winning days) or Select Daily (buffer plus lower caps). 300K carries additional KYC and purchase limits.","accountSizeMin":25000,"accountSizeMax":300000,"profitTarget":"$1,500–$14,000 by size","maxDailyLoss":"None during evaluation; funded Daily option adds a limit","maxDrawdown":"End-of-day trailing by account size","drawdownType":"EOD","drawdownSource":"https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you","drawdownDetails":"Loss floor updates from end-of-day high but is enforced intra-session against available equity; funded Flex and Daily terms diverge.","profitSplit":"90% simulated-funded; 80% Elite Live","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"minTradingDays":"3 days (or 2 with 50% consistency add-on)","hasConsistencyRule":true,"consistencyRule":"40% best-day ceiling in evaluation only; optional 50% add-on."},
+        {"id":"tradeify-growth-eval","name":"Growth — evaluation","type":"Futures evaluation","description":"Growth $25K–$150K one-time evaluation; soft daily-loss pause, no evaluation consistency, fixed funded payout policy with separate 35% concentration rule.","accountSizeMin":25000,"accountSizeMax":150000,"profitTarget":"$1,500–$9,000 by size","maxDailyLoss":"Size-based daily soft pause; check exact tier","maxDrawdown":"End-of-day trailing by size","drawdownType":"EOD","drawdownSource":"https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you","drawdownDetails":"Trailing loss floor updates at end of day; daily soft-limit intervention is separate and can interrupt the session.","profitSplit":"90% simulated-funded; 80% Elite Live","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"minTradingDays":"As few as 1 day","hasConsistencyRule":false},
+        {"id":"tradeify-lightning","name":"Lightning — directly simulated funded","type":"Instant funding","description":"One-time 25K–150K instant funded product: separate payout profit objectives, hard per-request caps and escalating 20/25/30% consistency for qualifying post-September-2025 purchases.","accountSizeMin":25000,"accountSizeMax":150000,"profitTarget":"No evaluation; payout profit objectives $1,500–$9,000 by size","maxDailyLoss":"Size-based daily loss limit applies","maxDrawdown":"End-of-day trailing by size","drawdownType":"EOD","drawdownSource":"https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you","drawdownDetails":"EOD trailing floor; funded profit goal and capped withdrawal are separate figures and depend on purchase date.","profitSplit":"90% simulated-funded; 80% Elite Live","platforms":["Verify platform at purchase"],"tradableAssets":["Futures"],"hasConsistencyRule":true,"consistencyRule":"20% first payout, 25% second, 30% subsequent, for new eligible accounts."}
+      ],
       "set": {
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 6894,
@@ -9187,6 +9272,7 @@
         "payoutDelay": "Plan-specific: daily eligibility on Select Daily; Lightning requires its profit goal, consistency threshold and withdrawal cap. Earning the profit goal does not make that full amount withdrawable."
       },
       "changelog": [
+        {"date":"2026-11-18","summary":"Split Select, Growth and Lightning risk and payout conditions with distinct evaluation consistency and funded withdrawal criteria; published restrictions are not hidden, score unchanged.","source":"https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you","fields":["products","restrictiveRules"]},
         {
           "date": "2026-10-26",
           "summary": "Official help center pricing reference confirms the stored values: cheapest plan Growth 25K at $99 one-time, and a 90% trader split on Sim Funded accounts (80% on Elite Live). No price or split change.",
@@ -9596,13 +9682,25 @@
       ]
     },
     "uprofit-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"UProfit DAY Soft / DAY Flex — evaluation and virtual live","rule":"DAY plans have end-of-day drawdown and size-based profit objectives, while listed 50K Soft evaluation limits include a $1,100 daily-loss threshold and 50% consistency. Withdrawal policy separately refers to best-day profit and dollar payout caps.","impact":"The headline 90% profit share does not remove daily risk limits or per-request and lifetime payout ceilings.","source":"https://uprofit.com/day-programs"},
+        {"program":"UProfit ONE 50K — evaluation","rule":"A $2,500 profit target, fixed $1,000 static maximum drawdown, 50% consistency and two minimum trading days apply; no activation fee is due after passing.","impact":"The ONE 50K loss floor is fixed, unlike the EOD limits of DAY products, and one dominant winning day may delay passing.","source":"https://uprofit.com/help/how-does-the-one-50k-account-work-49114317399828"},
+        {"program":"UProfit DAY — renewals","rule":"Evaluation products may be subscription based and renew automatically unless the trader cancels or requests cancellation at least one business day before the renewal date.","impact":"Failed or unfinished evaluations can generate a further monthly charge if the trader overlooks cancellation.","source":"https://uprofit.com/help/-how-do-evaluation-programs-work-38337950337940"}
+      ],
       "set": {
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 6554,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com",
+        "priceFrom": 49
       },
+      "setProducts": [
+        {"id":"uprofit-day-soft","name":"DAY Soft — evaluation","type":"Futures evaluation","description":"Published DAY Soft monthly subscriptions span $10K–$150K, including $49 list for 10K and $130 list for 50K before temporary discounts.","accountSizeMin":10000,"accountSizeMax":150000,"profitTarget":"$800 (10K), $3,000 (50K), $6,000 (100K), $9,000 (150K)","maxDailyLoss":"$220 (10K), $1,100 (50K), $2,200 (100K), $3,000 (150K)","maxDrawdown":"$400 (10K), $2,000 (50K), $3,000 (100K), $4,500 (150K) EOD","drawdownType":"EOD","drawdownSource":"https://uprofit.com/day-programs","drawdownDetails":"The DAY plan uses a day-end loss measurement; daily soft risk parameters remain size-specific.","profitSplit":"Up to 90% on virtual live subject to payout policy","platforms":["TradingView","Tradovate"],"tradableAssets":["Futures"],"hasConsistencyRule":true,"consistencyRule":"50% consistency on the displayed evaluation cards; published payout rules may differ after funding."},
+        {"id":"uprofit-day-flex","name":"DAY Flex — evaluation","type":"Futures evaluation","description":"Separate flexible DAY product; evaluation cards offer 50K–150K tiers, monthly subscriptions and separate soft-limit conditions; verify checkout options.","accountSizeMin":50000,"accountSizeMax":150000,"profitTarget":"$3,000 (50K), $6,000 (100K), $9,000 (150K)","maxDailyLoss":"No daily loss value on the currently displayed Flex tier cards; verify before purchase","maxDrawdown":"$2,000 (50K), $3,000 (100K), $4,500 (150K) EOD","drawdownType":"EOD","drawdownSource":"https://uprofit.com/day-programs","drawdownDetails":"DAY Flex is presented within the EOD drawdown family; a different daily-loss configuration must not be inferred from Soft.","profitSplit":"Up to 90% on virtual live subject to payout policy","platforms":["TradingView","Tradovate"],"tradableAssets":["Futures"],"hasConsistencyRule":true,"consistencyRule":"50% consistency on the displayed evaluation cards."},
+        {"id":"uprofit-one-50k","name":"ONE 50K — evaluation","type":"Futures evaluation","description":"One-off $120 50K evaluation, no activation fee; static floor and two trading days before simulated funded qualification.","accountSizeMin":50000,"accountSizeMax":50000,"entryFeeMin":120,"profitTarget":"$2,500","maxDailyLoss":"No separate daily percentage in the official ONE 50K overview","maxDrawdown":"$1,000 fixed maximum loss (account floor $49,000)","drawdownType":"Static","drawdownSource":"https://uprofit.com/help/how-does-the-one-50k-account-work-49114317399828","drawdownDetails":"The 49,000 account floor does not trail winning balance highs; unlike DAY, this is a static loss cap.","profitSplit":"Funded split subject to ONE payout policy","platforms":["Verify supported ONE platform at checkout"],"tradableAssets":["Futures"],"minTradingDays":"2 trading days","hasConsistencyRule":true,"consistencyRule":"50% best-day ceiling during ONE evaluation."}
+      ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Separated DAY Soft, DAY Flex and ONE 50K accounts, including EOD versus static limits; list entry price corrected to $49 monthly before discounts, score unchanged.","source":"https://uprofit.com/day-programs","fields":["priceFrom","products","restrictiveRules"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 3.5 TrustScore across 6,555 reviews on the www.uprofit.com profile, which Trustpilot says was merged with other profiles of the company. Price and profit split not re-read on the official site, left unchanged.",
