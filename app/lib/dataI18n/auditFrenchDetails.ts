@@ -7,6 +7,21 @@ export const auditFrenchDetails: Record<string, {
   entities?: string[];
   incidents?: string[];
 }> = {
+  'goat-funded-trader': {
+    changelog: ["", "", "", "", "", "Réexamen à 58/100 : pénalité de huit points pour l'alerte Trustpilot encore active, plus les contraintes de versement publiées. Ni fermeture ni faute individuelle non prouvée ne sont affirmées.", "La FAQ officielle confirme les plafonds sur les premiers retraits, 3 000 $ de gains quotidiens, 3 % de frais et les conditions d'éligibilité ajoutées depuis le 8 octobre 2026."]
+  },
+  'leeloo-trading': {
+    changelog: ["", "Les conditions officielles de 2026 prévoient un contrôle manuel et des plafonds variables : note de 70 à 65, sans attribuer à la société une faute non démontrée.", "Le support officiel rappelle la règle des 30 %, le drawdown suiveur et les limites de positions selon les comptes."]
+  },
+  'hantec-trader': {
+    changelog: ["", "", "", "", "La FAQ distingue la décision sous 24 heures ouvrées du virement effectif et exclut certains contrôles supplémentaires. Note de 73 à 70 ; société toujours active sous RZR Funded.", "Trustpilot affiche désormais 4,4/5 sur 880 avis regroupés. Aucune pénalité pour manipulation d'avis n'est appliquée."]
+  },
+  ftuk: {
+    changelog: ["", "", "La règle officielle impose 30 secondes à tous les trades, y compris en cas de SL/TP. Avec les restrictions de stratégie et d'IP, la note baisse de 72 à 65 sans accuser la société de cacher ses règles.", "Conditions VPN/IP vérifiées ; les plaintes et les réponses de FTUK restent contradictoires et non arbitrées.", "Trustpilot affiche 3,9/5 sur 811 avis ; aucune suspension de note n'est signalée."]
+  },
+  'lux-trading-firm': {
+    changelog: ["", "", "Plusieurs pages officielles annoncent 80 % et un retrait à la demande, contre 75 % et un retrait mensuel sur un parcours distinct : note de 74 à 64 pour manque de clarté, sans conclure à un refus de paiement prouvé.", "Les anciennes règles Career et une FAQ d'essai sont encore accessibles ; leur application aux offres actuelles n'a pas été établie.", "Companies House confirme l'existence active de la société britannique, sans garantir ses versements.", "Trustpilot affiche désormais 3,7/5 sur 627 avis, sans alerte de note retenue."]
+  },
   'sure-leverage': {
     regulatoryStatus: ["Le site officiel nomme ASAP Solutions FZ-LLC à Ras Al Khaimah comme société qui facture les challenges ; son immatriculation n'a pas été vérifiée directement.", "Le site nomme Sure Leverage Funding Ltd à Sainte-Lucie (n° déclaré 2025-00514) comme prestataire des comptes simulés ; l'enregistrement n'a pas été vérifié.", "La société présente une activité de simulation et non un compte de courtage réglementé par défaut."],
     complaintsAndDisputes: ["Trustpilot masque désormais la note pour infraction à ses règles et annonce avoir retiré de faux avis ; 1 356 avis demeurent visibles.", "Trustpilot ne dit pas publiquement si les avis supprimés provenaient de la société, de prestataires, de tiers ou de concurrents.", "Les délais annoncés de versement et les règles d'un ancien programme n'ont pas été testés par une vérification bancaire indépendante pour tous les challenges actuels."],

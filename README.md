@@ -56,7 +56,7 @@ PropRadar peut utiliser de l’affiliation sur les firms jugées fiables, mais l
 
 - Le champ `commercialRelationship` doit rester explicite.
 - Le lien affilié doit être visible côté fiche.
-- Les firms à risque ou fermées doivent rester présentes dans le radar.
+- Les firmes à risque restent visibles dans les listes comparatives ; les firmes fermées restent consultables uniquement en archives, jamais proposées à l'achat.
 - Une firme affiliée garde ses faiblesses affichées.
 
 ## Avis et payouts
@@ -69,6 +69,8 @@ Le bloc `reviewSignals` sépare les avis publics du score global.
 - `manipulationRiskScore` estime le risque qu’une note publique soit trop marketing, trop récente ou incohérente avec les retours traders.
 - Les `redditFlags`, `trustpilotFlags`, `confidenceDrivers` et `radarVerdict` expliquent le score au visiteur au lieu d’afficher une note opaque.
 - Les cas critiques doivent être renseignés manuellement plutôt que laissés au calcul par défaut.
+- Pour une fermeture documentée (`status: Fermée`), la note opérationnelle affichée est plafonnée à **29/100**. L'ancienne note éditoriale reste conservée dans les données et l'historique : cette limite indique seulement qu'une offre fermée ne peut plus être recommandée à l'achat.
+- Un avertissement Trustpilot sur le retrait de faux avis justifie une pénalité éditoriale de **8 points au maximum** lorsque l'avis est documenté et actuel ; le plafond de 64/100 pour une note Trustpilot retenue reste une règle distincte. Ne pas attribuer les refus de retrait ou les faux avis à une firme sans source primaire ou corroboration.
 
 ## Couverture universe
 
