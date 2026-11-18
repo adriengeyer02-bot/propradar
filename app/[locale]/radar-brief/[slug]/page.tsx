@@ -25,7 +25,7 @@ import IntentLink from '../../../components/IntentLink';
 export const revalidate = 86400;
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 const topicLabels: Record<EditorialBriefTopic, string> = {
@@ -39,7 +39,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const brief = getEditorialBriefBySlug(slug);
 
   if (!brief) {
@@ -62,6 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: path,
     },
+    robots: locale === 'en' ? undefined : { index: false, follow: true },
     openGraph: {
       title: brief.title,
       description: brief.description,

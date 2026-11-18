@@ -13,7 +13,7 @@ import {
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import IntentLink from '../../components/IntentLink';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, getMessages, tv } from '../../lib/messages';
 import { getPageMessages } from '../../lib/messages/pages/payout-risk';
 import { SITE_URL } from '../../lib/site';
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     ...base,
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     openGraph: { ...base.openGraph, url: `${SITE_URL}${localePath(locale, PATH)}`, locale: OG_LOCALE[locale] },
   };
 }

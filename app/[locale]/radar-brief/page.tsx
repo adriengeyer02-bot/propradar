@@ -11,7 +11,7 @@ import {
 } from '../../lib/editorialBriefs';
 import { propFirms } from '../../lib/propFirms';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt } from '../../lib/messages';
 import { getPageMessages } from '../../lib/messages/pages/radar-brief';
 
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publisher: SITE_NAME,
     category: 'Prop firm risk intelligence',
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     openGraph: {
       title: b.metaTitle,
       description: b.metaDescription,

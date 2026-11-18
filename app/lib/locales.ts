@@ -102,6 +102,11 @@ export function localeAlternates(locale: Locale, path: string) {
   return { canonical: isTranslatedPath(path, locale) ? localePath(locale, path) : path, languages };
 }
 
+/** Match the HTML robots directive to the middleware's X-Robots-Tag fallback. */
+export function untranslatedRobots(locale: Locale, path: string) {
+  return isTranslatedPath(path, locale) ? undefined : { index: false, follow: true };
+}
+
 /** Country name in the page language (ISO 3166 code), falling back to the English name. */
 export function countryLabel(locale: Locale, code: string, fallback: string) {
   if (locale === DEFAULT_LOCALE) return fallback;

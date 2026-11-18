@@ -28,7 +28,7 @@ import {
 } from '../../lib/promoResearch';
 import IntentLink from '../../components/IntentLink';
 import type { Metadata } from 'next';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, getMessages, tv, type Messages } from '../../lib/messages';
 import { getPageMessages, type PromosMessages } from '../../lib/messages/pages/promos';
 import { SITE_URL } from '../../lib/site';
@@ -52,6 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     ...base,
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     openGraph: { ...base.openGraph, url: `${SITE_URL}${localePath(locale, PATH)}`, locale: OG_LOCALE[locale] },
   };
 }

@@ -25,7 +25,7 @@ import {
   withheldFirms,
 } from '../../lib/industryStats';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
-import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages, numberLocale } from '../../lib/messages';
 import { rich } from '../../lib/rich';
 import IntentLink from '../../components/IntentLink';
@@ -55,6 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publisher: SITE_NAME,
     category: 'Prop firm research',
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     openGraph: {
       title: st.metaTitle,
       description,

@@ -6,7 +6,7 @@ import { closedFirms, documentedClosures, openFirms, payoutStats, statsUpdatedAt
 import { propFirms } from '../../lib/propFirms';
 import { getFirmChangelog } from '../../lib/firmUpdates';
 import { FOUNDER, SITE_NAME, SITE_URL } from '../../lib/site';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, getMessages, numberLocale } from '../../lib/messages';
 
 const PATH = '/about';
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: a.metaTitle,
     description,
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     authors: [{ name: FOUNDER.handle, url: localePath(locale, PATH) }],
     openGraph: {
       title: a.metaTitle,
