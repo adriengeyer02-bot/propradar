@@ -125,7 +125,9 @@ export default async function HomePage({ params }: Props) {
             </span>
           </a>
           <div className="home-v2-proofline" aria-label={h.coverageAria}>
+            <span><strong>{propFirms.length}</strong> {h.firmsTracked}</span>
             <span><strong>{listedFirms.length}</strong> {h.firmsCompared}</span>
+            <span><strong>{closedCount}</strong> {h.firmsClosed}</span>
             <span><strong>{noConflictFirms}</strong> {h.noRelationship}</span>
             <span>{h.latestReview} <time dateTime={dataUpdatedAt}>{dataUpdatedLabel}</time></span>
           </div>
@@ -304,7 +306,7 @@ export default async function HomePage({ params }: Props) {
           </div>
 
           <div className="home-proof-stats">
-            <div><strong>{listedFirms.length}</strong><span>{h.statFirms}</span></div>
+            <div><strong>{propFirms.length}</strong><span>{h.statFirms}</span></div>
             <div><strong>{officialSourceCount}</strong><span>{h.statSources}</span></div>
             <div><strong>{legalMappedCount}</strong><span>{h.statLegal}</span></div>
             <div><strong>{sourcedFirms}</strong><span>{h.statSourced}</span></div>

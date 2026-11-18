@@ -88,7 +88,7 @@ const ko: Messages = {
     kicker: '독립적인 평가 · 증거 우선',
     h1: '독립적인 프랍펌 비교 사이트',
     lead: '챌린지 비용을 결제하기 전에 {count}개 프랍펌의 가격, 거래 규칙, 지급 근거와 운영 법인을 비교하세요.',
-    coverageAria: 'PropRadar 데이터 범위', firmsCompared: '비교 중인 프랍펌',
+    coverageAria: 'PropRadar 데이터 범위', firmsTracked: '추적 중인 프랍펌', firmsCompared: '비교 중인 프랍펌', firmsClosed: '폐업한 프랍펌',
     noRelationship: '상업적 관계가 없는 회사', latestReview: '최근 회사 검토',
     openComparator: '비교 도구 열기', viewDeals: '할인 정보 보기', exploreGuides: '신뢰성 가이드 살펴보기',
     trust1: '평가 순위는 돈으로 살 수 없습니다.', trust2: '제휴 링크는 공개합니다.',
