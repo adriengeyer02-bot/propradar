@@ -467,7 +467,7 @@ const fr: Messages = {
     domainWarning: 'Alerte domaine.',
     scoreAria: 'Score PropRadar de {name}',
     propradarScore: 'Score PropRadar',
-    scoreCapped: "Plafonné à {cap} : Trustpilot n'affiche plus de note pour cette firme (« rating unavailable due to a breach of our guidelines »). Score avant plafond : {before}.",
+    scoreCapped: "Fiabilité des avis Trustpilot : –{cap} points (avant déduction : {before}). La plateforme ne précise pas qui a publié les avis supprimés.",
     decision: {
       'Shortlist candidate': 'Candidate à la shortlist',
       'Proceed carefully': 'Avancer avec prudence',
@@ -1044,7 +1044,7 @@ const fr: Messages = {
     "scoreEyebrow": "Comment le score est fixé",
     "scoreTitle": "Un score éditorial, encadré par des règles fixes.",
     "scoreP1": "Le score PropRadar (0 à 100) est fixé à la main pour chaque firme après lecture de son dossier : incidents de payout sourcés, entités juridiques et leurs pays, listes d'alerte des régulateurs, statut Trustpilot, règles et prix des programmes, et part du dossier vérifiée. Il n'y a pas de formule de pondération fixe : deux firmes aux faits proches peuvent différer si l'un des dossiers est mieux documenté. Ce qui est fixe, ce sont les règles ci-dessous.",
-    "scoreRules": ["Trois tranches sont utilisées partout : 75 et plus, 50 à 74, moins de 50. Les firmes fermées sont à part, en rouge.", "Quand Trustpilot retire la note d'une firme pour violation de ses règles, le score est plafonné à 64. La fiche indique le plafond et le score d'avant.", "Une baisse de 5 points ou plus, ou un écart de 10, est validé par le responsable du site avant mise en ligne, et chaque changement est daté dans l'historique de la fiche.", "L'affiliation ne fait jamais bouger un score : les firmes affiliées suivent les mêmes règles."],
+    "scoreRules": ["Trois tranches sont utilisées partout : 75 et plus, 50 à 74, moins de 50. Les firmes fermées sont à part, en rouge.", "Une note Trustpilot retirée pour manquement aux règles entraîne une seule déduction de 8 points. Les notes réauditées l'intègrent déjà. Règles de paiement cachées, représailles contre les critiques et incidents de paiement prouvés sont pénalisés séparément selon les preuves, sans plafond fixe.", "Une baisse de 5 points ou plus, ou un écart de 10, est validé par le responsable du site avant mise en ligne, et chaque changement est daté dans l'historique de la fiche.", "L'affiliation ne fait jamais bouger un score : les firmes affiliées suivent les mêmes règles."],
     "correctionsEyebrow": "Politique de corrections",
     "correctionsTitle": "Comment une erreur est corrigée.",
     "corrections": ["Envoyez la page et une source publique à contact@propradar.tech.", "Une erreur factuelle appuyée par une source est corrigée, et la correction est datée dans l'historique de la fiche avec cette source. Les entrées précédentes ne sont jamais supprimées.", "Les firmes peuvent demander une correction comme tout le monde, avec une source publique. Une firme ne peut pas payer pour changer un score ou retirer un avertissement sourcé.", "Si un signalement ne peut pas être confirmé par une source publique, la page affiche « à vérifier » plutôt qu'une supposition."],

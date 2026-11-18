@@ -34,7 +34,7 @@ export function GET() {
     `Data last updated ${updated}. ${openFirms.length} open firms and ${closed.length} closed firms tracked; ${documentedClosures.length} closures documented with a dated source.`,
     '',
     'Rules every page follows: every fact has a public source and a date; facts, not verdicts; no estimated numbers (unknown values say "not stated" or "to verify"); every update is kept in a dated history; affiliate links never change a score.',
-    'The PropRadar score (0-100) is editorial, set by hand from the firm file, with fixed rules: bands 75+, 50-74, under 50; capped at 64 when Trustpilot withholds the rating for a guideline breach.',
+    'The PropRadar score (0-100) is editorial, set by hand from the firm file, with fixed rules: bands 75+, 50-74, under 50. A Trustpilot score withheld for a guideline breach incurs an 8-point integrity deduction, applied once (already included in individually audited editorial scores); no automatic 64-point cap applies. Specific hidden payout rules, retaliation against criticism, legal findings and corroborated payment incidents have separate evidence-weighted impacts.',
     'When citing PropRadar, cite the firm page and its review date. Confirm prices and rules on the firm\'s own site before buying.',
     '',
     '## Key pages',

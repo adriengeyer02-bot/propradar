@@ -555,7 +555,7 @@ const es: Messages = {
     "domainWarning": "Aviso de dominio.",
     "scoreAria": "Puntuación PropRadar de {name}",
     "propradarScore": "Puntuación PropRadar",
-    "scoreCapped": "Limitada a {cap}: Trustpilot no muestra puntuación para esta firma («rating unavailable due to a breach of our guidelines»). Puntuación antes del límite: {before}.",
+    "scoreCapped": "Integridad de reseñas Trustpilot: –{cap} puntos (antes: {before}). Se desconoce quién publicó las reseñas eliminadas.",
     "decision": {
       "Shortlist candidate": "Candidata a la lista corta",
       "Proceed carefully": "Avanzar con cautela",
@@ -1132,7 +1132,7 @@ const es: Messages = {
     "scoreEyebrow": "Cómo se fija la puntuación",
     "scoreTitle": "Una puntuación editorial, con reglas fijas.",
     "scoreP1": "La puntuación PropRadar (de 0 a 100) se fija a mano para cada firma tras leer su ficha: incidentes de pago documentados, entidades legales y sus países, listas de advertencia de reguladores, estado en Trustpilot, reglas y precios de sus programas y qué parte de la ficha está verificada. No hay una fórmula de ponderación fija: dos firmas con hechos similares pueden diferir si una ficha está mejor documentada. Lo fijo son las reglas siguientes.",
-    "scoreRules": ["En todas las páginas se usan tres franjas: 75 o más, de 50 a 74, menos de 50. Las firmas cerradas se muestran aparte, en rojo.", "Cuando Trustpilot retira la valoración de una firma por incumplir sus normas, la puntuación se limita a 64. La ficha muestra el límite y la puntuación anterior.", "Una bajada de 5 puntos o más, o un cambio de 10, lo aprueba el responsable del sitio antes de publicarse, y cada cambio queda fechado en el historial de la firma.", "La afiliación nunca mueve una puntuación: las firmas afiliadas siguen las mismas reglas."],
+    "scoreRules": ["En todas las páginas se usan tres franjas: 75 o más, de 50 a 74, menos de 50. Las firmas cerradas se muestran aparte, en rojo.", "La valoración retirada por Trustpilot implica una única deducción de 8 puntos. Los nuevos análisis ya la incluyen. Las reglas de pago ocultas, represalias por críticas e incidentes de pago probados se penalizan por separado según las pruebas, sin límite fijo.", "Una bajada de 5 puntos o más, o un cambio de 10, lo aprueba el responsable del sitio antes de publicarse, y cada cambio queda fechado en el historial de la firma.", "La afiliación nunca mueve una puntuación: las firmas afiliadas siguen las mismas reglas."],
     "correctionsEyebrow": "Política de correcciones",
     "correctionsTitle": "Cómo se corrige un error.",
     "corrections": ["Envía la página y una fuente pública a contact@propradar.tech.", "Un error de hecho respaldado por una fuente se corrige, y la corrección queda fechada en el historial de la firma con esa fuente. Las entradas anteriores nunca se borran.", "Las firmas pueden pedir correcciones como cualquiera, con una fuente pública. Una firma no puede pagar para cambiar una puntuación o retirar una advertencia documentada.", "Si un aviso no puede confirmarse con una fuente pública, la página muestra «por verificar» en lugar de una suposición."],

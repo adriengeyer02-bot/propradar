@@ -267,7 +267,7 @@ const ko: Messages = {
     affiliateTitle: 'PropRadar가 수수료를 받을 수 있으며 점수에는 영향이 없습니다.',
     domainWarning: '도메인 주의.', scoreAria: '{name} PropRadar 점수',
     propradarScore: 'PropRadar 점수',
-    scoreCapped: '상한 {cap}점: Trustpilot가 가이드라인 위반으로 평점을 제공하지 않습니다. 제한 전 점수: {before}점.',
+    scoreCapped: "Trustpilot 리뷰 신뢰성: –{cap}점 (차감 전: {before}점). 삭제된 리뷰의 작성자는 확인되지 않았습니다.",
     decision: { 'Shortlist candidate': '후보로 검토 가능', 'Proceed carefully': '신중히 접근', 'Avoid for now': '현재는 피하는 편이 좋음' },
     decisionLower: { 'Shortlist candidate': '검토 후보', 'Proceed carefully': '신중한 접근 필요', 'Avoid for now': '현재는 피하기' },
     payout: '지급', legal: '법률', compare: '비교', setAlert: '알림 설정',

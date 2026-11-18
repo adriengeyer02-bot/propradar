@@ -724,8 +724,40 @@
       }
     },
     "aqua-funded": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
+      "set": {
+        "score": 54,
+        "trustpilotReviewCount": 1223,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/aquafunded.com",
+        "verdict": "AquaFunded remains commercially active, with a disclosed UAE site operator and a Saint Lucia simulated-services entity. Its Trustpilot rating remains withheld after fake-review removals, and 41% of the 1,223 remaining reviews are one-star. Official rewards guidance charges a 3% payout processing fee and makes withdrawals conditional on rules and reviews. Customer reports of withheld payments and device-sharing or drawdown disputes remain unadjudicated; proceed with elevated caution. Editorial score: 54/100.",
+        "auditSummary": "Deep re-audit, 18 November 2026: AquaFunded's live site, help centre and legal terms confirm an operating simulated challenge business, not a verified closure. The contract names Aqua Funded FZCO in Dubai as site operator and AquaFunded LTD in Saint Lucia as the simulation services provider; the Saint Lucia registration number and oddly formatted address are quoted only as first-party disclosures, not independently certified filings. The official September 2026 rewards FAQ advertises 24-business-hour handling after approval but explicitly deducts a 3% processing fee from all payouts. Contract terms include broad account-access termination, Dubai DIAC arbitration and an EU consumer-rights exception; their enforceability in each jurisdiction was not litigated in this audit. Exact-domain Trustpilot withholds the TrustScore after deleting fake reviews: 1,223 reviews, approximately 41% one-star. November 17 customer allegations include a USD 7,319.95 denied reward over alleged device sharing and a separate reported daily-drawdown discrepancy. These are contested first-person allegations, not independently proven breaches. Score 54/100 reflects exactly one eight-point Trustpilot transparency deduction plus seven points for concentrated unresolved dispute signals, processing friction and contract uncertainty, against the historical 69/100. No final court judgment or regulator sanction against this precise simulated-evaluation operator was established from sources consulted."
+      },
+      "setLegalReview": {
+        "summary": "Operating Dubai/Saint Lucia brand; publicly disclosed contractual terms but cross-border customer recourse and disputed reward approvals warrant caution. No independently confirmed injunction, criminal finding or court judgment against the exact service in the consulted records.",
+        "regulatoryStatus": [
+          "Official terms name UAE-based Aqua Funded FZCO as site operator and Saint Lucia-based AquaFunded LTD for simulation services; neither incorporation nor the site's financial-service classification certifies brokerage authorization.",
+          "Terms route disputes toward Dubai International Arbitration Centre arbitration, while expressly acknowledging that some European consumer protections can override the arbitration term.",
+          "The Saint Lucia entity number and postcode formatting are reproduced as first-party claims only, not treated as independently verified register data."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot withholds its rating because of guideline breaches and removed fake reviews; 1,223 remaining reviews, 41% one-star on 18 November 2026.",
+          "A 17 November reviewer alleges rejection of a USD 7,319.95 payout due to 'device sharing'; another alleges a dashboard/drawdown mismatch. No underlying server logs, contract vintage or legal decision were available to test either account-specific claim.",
+          "Official September 2026 payout FAQ discloses an across-the-board 3% processing charge and a review-dependent 24-business-hour payout promise."
+        ],
+        "redFlags": [
+          "Trustpilot rating unavailable; no inference that the firm itself authored the removed reviews.",
+          "Very large proportion of negative reviews, not a verified rate of payout refusal.",
+          "Cross-border operator, discretionary account termination and arbitration terms complicate remedies.",
+          "Additional 3% charge reduces the actual net reward compared with a headline profit split."
+        ],
+        "sources": [
+          {"label":"AquaFunded legal terms and operator identity","url":"https://www.aquafunded.com/tos"},
+          {"label":"AquaFunded official rewards: 3% fee and timing","url":"https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work"},
+          {"label":"AquaFunded Trustpilot status and dated complaints","url":"https://www.trustpilot.com/review/aquafunded.com"}
+        ]
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Third-batch re-audit: confirmed active official offer, UAE and Saint Lucia counterparties, 3% rewards processing fee, withheld TrustScore and 41% one-star share, plus unadjudicated November payment disputes. Eight-point Trustpilot deduction plus separate evidence-weighted issues; score 69 to 54.","source":"https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work","fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and ie mirrors. Price and profit split not re-read on the official site, left unchanged.",
@@ -775,7 +807,44 @@
       ]
     },
     "audacity-capital": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "set": {
+        "score": 66,
+        "trustpilotReviewCount": 308,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/audacity.capital",
+        "verdict": "Long-running and currently active simulated-trading operator with three published challenge formats and payout guidance. The current contracting counterparty is an Anjouan/Comoros company rather than a UK-regulated broker. Trustpilot withholds its rating after fake-review removals and about 39% of its displayed reviews are one-star. Verified corporate identity and rule transparency are positive, but the licensing claim, payout eligibility and recurring customer disputes need caution; score 66/100.",
+        "auditSummary": "Second-pass audit on 18 November 2026: AudaCity Capital still operates its audacity.capital site and trade dashboard. The current terms identify AudaCity Global LTD, Anjouan (Comoros) number 15850, as programme provider, and AudaCity International FZCO, Dubai licence DSO-FZCO 38282, as payment facilitator; the site also states it has a UK office and a Cyprus payment partner. The self-described Comoros brokerage/clearing-house licence was not independently matched to a regulator's register, and is NOT evidence of FCA coverage for simulated challenges. The firm says it has operated since 2012 and publishes rules for Ability 1-Step, 2-Step and FTP Instant. Its official help expects reward requests to be reviewed within 3–5 business days, subject to eligibility and compliance. Trustpilot's exact audacity.capital profile has no TrustScore after a guidelines breach and removal of fake reviews; 308 displayed reviews include about 39% one-star, disputed platform execution and reward cases as well as user-reported completed payouts. Those are allegations and testimonials, not independently adjudicated outcomes. An FCA clone-site warning for audacitycapital.trade is flagged by the firm's scam alert as third-party impersonation and must NOT be misattributed to audacity.capital. Score 66/100 uses one 8-point Trustpilot event penalty, modest separate review-concentration and cross-border regulatory-traceability adjustments, and credit for longevity and current rules. No independently reconciled payout ledger or confirmed court judgment against this exact operator was located in the public sources examined."
+      },
+      "setLegalReview": {
+        "summary": "18 Nov 2026: operating brand with public programme rules, legally disclosed Comoros provider and UAE/Cyprus payment intermediaries. License claim and corporate registration are first-party disclosures not matched to an official Anjouan or UAE register. Trustpilot's rating is withheld after fake-review removals. Complaint themes concern eligibility, execution and delay; no public adjudication was verified. The firm's own alert warns of brand-clone domains, which must not be treated as official-company regulatory sanctions.",
+        "regulatoryStatus": [
+          "Current terms name AudaCity Global LTD (Anjouan/Comoros, self-declared registration 15850) as the contracting programme operator and AudaCity International FZCO (Dubai DSO-FZCO 38282) as payment facilitator, with Propmetry Ltd (Cyprus HE469039) as additional payment partner.",
+          "The claimed Anjouan International Brokerage and Clearing House Licence L15850/WL was not independently confirmed through the issuer's register; neither company incorporation nor a claimed licence proves UK retail-investment protection for simulated challenges.",
+          "A company notice attributes an FCA warning about audacitycapital.trade to an imposter domain; no regulator source verifying the official firm's warning was located, so no penalty is assigned for that clone allegation."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot currently withholds the exact-domain TrustScore and reports fake reviews removed. The remaining roughly 308 reviews include about 39% one-star, alongside claimed successful payments.",
+          "November 2026 customers allege disputed automated trades, delayed challenges, KYC and payout-processing problems; underlying account logs and transactions were not independently adjudicated.",
+          "The official help centre describes 3–5 business days for reward processing after account review; a marketing promise is not proof that an individual request is owed or settled."
+        ],
+        "redFlags": [
+          "Trustpilot rating withheld after review-integrity breach; identity of the party responsible for removed reviews unknown.",
+          "High one-star share in the remaining review sample, which may itself be biased and is not a verified loss or rejection rate.",
+          "Cross-border offshore provider and self-declared brokerage licence not independently reconciled; verify the name on checkout and trader agreement.",
+          "No independent end-to-end payout settlement ledger inspected; official clone-domain warnings require domain verification."
+        ],
+        "sources": [
+          {"label":"Audacity Capital current terms and group identity","url":"https://audacity.capital/terms-and-conditions/"},
+          {"label":"Audacity Capital trading rules and payout processing","url":"https://audacity.capital/knowledge-center/general/"},
+          {"label":"Audacity Capital official impostor-domain warning","url":"https://audacity.capital/scam-alert/"},
+          {"label":"Trustpilot Audacity exact-domain withheld rating and reviews","url":"https://www.trustpilot.com/review/audacity.capital"}
+        ]
+      },
+      "setEntities": [
+        {"name":"AudaCity Global LTD","jurisdiction":"Anjouan, Union of Comoros","registrationNumber":"15850 (as declared in terms)","registeredAddress":"Hamchako, Mutsamudu, Anjouan, Union of Comoros","role":"Provider and contracting operator for simulated trading programmes under current terms; claimed licence L15850/WL not independently checked."},
+        {"name":"AudaCity International FZCO","jurisdiction":"Dubai, United Arab Emirates","registrationNumber":"DSO-FZCO 38282 (as declared in terms)","role":"Payment facilitator only, not the stated simulation-service provider."},
+        {"name":"Propmetry Limited","jurisdiction":"Cyprus","registrationNumber":"HE469039 (as declared in terms)","role":"Additional payment partner, per current footer/terms."}
+      ],
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
       ],
@@ -792,6 +861,12 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 293 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/audacity.capital"
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Independently re-read current legal operator/Anjouan licence assertion, Dubai and Cyprus payment roles, and Audacity's anti-impersonation advisory; distinguished clone domains from official audacity.capital. The no-rating Trustpilot notice remains; about 39% of 308 visible reviews are one-star and disputed payouts are unadjudicated. Calibrated risk score 66/100 after one 8-point integrity deduction, with the former 64-point hard cap retired.",
+          "source": "https://audacity.capital/terms-and-conditions/",
+          "fields": ["score", "auditSummary", "verdict", "trustpilotReviewCount", "legalReview", "entities"]
         }
       ]
     },
@@ -1293,7 +1368,46 @@
       ]
     },
     "brightfunded": {
+      "reviewedAt": "2026-11-18",
+      "set": {
+        "score": 58,
+        "trustpilotReviewCount": 582,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/brightfunded.com",
+        "verdict": "BrightFunded is still running CFD and futures simulated evaluations, and it has clarified the separate contracting companies. Nonetheless, Trustpilot suppresses the rating for guideline breaches after fake-review removals, and current terms give the operator broad powers over funded-stage admission, account restrictions and discretionary rewards. Risk-team measures and disputed payout/KYC experiences deserve particular care; 58/100.",
+        "auditSummary": "18 November 2026 second-pass review: BrightFunded still advertises simulated CFD and futures programmes. Its official legal terms designate Bright Global FZCO of Dubai as contracting party for CFD simulations and BrightFunded LLC of Wyoming as contracting party for futures; three further Saint Lucia/Cyprus affiliates are listed, without equivalent clearly specified roles. The operator may decline a funded-stage offer at its sole discretion, impose risk limits after evaluation and withhold undisbursed rewards after qualifying breaches; the exact payout promise depends on a separate agreement. The help centre describes a post-pass security review typically 1–2, sometimes 4 business days and acknowledges temporary risk measures. Trustpilot's exact-domain page withholds the score for a rules breach and says fake reviews were removed; 582 reviews are visible, with about 21% one-star. November customer complaints of unexpected trade flags, restricted risk thresholds, fees and outstanding reward/affiliate amounts remain unverified allegations; the company's counter-statements are also not independent adjudications. No definitive regulator enforcement finding or court judgment naming the precise current counterparty was substantiated in this pass. Payout claims and testimonials are not bank-audited. Calibrated score 58/100 applies a single 8-point Trustpilot deduction plus a distinct material discretionary-contract-risk adjustment and a modest visible complaints signal, acknowledging legally disclosed business roles."
+      },
+      "setLegalReview": {
+        "summary": "18 Nov 2026: currently active cross-border simulated trader evaluator. Primary terms name Dubai Bright Global FZCO as CFD contracting party and US BrightFunded LLC for futures, alongside Saint Lucia/Cyprus affiliates. The risk team can impose new account parameters, and the reward contract is separately issued after post-evaluation checks. Trustpilot withheld the rating and removed fake reviews. No verified court judgment/regulator sanction on the exact operator was identified; consumer complaints are non-adjudicated.",
+        "regulatoryStatus": [
+          "Contractual CFD operator: Bright Global Computer Systems Software Design FZCO, Dubai. Futures operator: BrightFunded LLC, Wyoming, according to official terms, with three additional affiliates listed.",
+          "Official site states the contracts provide simulated programmes and are not brokerage/FCM accounts. Incorporation disclosures are not regulatory investment authorisations.",
+          "Company's public terms and help-centre statements, not an external legal registry certificate, are the source of these group-role descriptions."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot exact-domain warning remains active; about 21% of 582 visible reviews are one-star, despite many favourable reviews.",
+          "November 2026 consumers allege unexplained restriction/hedging findings and pending rewards; an October public complaint concerns an allegedly late EUR 1,057 affiliate commission. No accounting or case ruling authenticated those claims.",
+          "Official help confirms a risk-team review after challenge completion and possible temporary account-risk measures; the legal terms say performance rewards are discretionary and depend on a separate funded-stage agreement."
+        ],
+        "redFlags": [
+          "Trustpilot-withheld score is not a valid 4+/5 star recommendation or proof that this operator itself authored removed reviews.",
+          "Funded-stage acceptance, variable trading parameters, risk controls and unpaid performance reward rights rely on broad discretionary contract provisions.",
+          "Customer-facing claims that terms are clear should be checked against the separate post-pass contract; full payout settlement not independently audited.",
+          "Multi-jurisdictional entities demand precise identification of the CFD versus futures counterparty before purchase."
+        ],
+        "sources": [
+          {"label":"BrightFunded current CFD terms, payout discretion and legal entities","url":"https://brightfunded.com/terms-and-conditions"},
+          {"label":"BrightFunded security checks and temporary risk measures (official)","url":"https://help.brightfunded.com/en/articles/9268287-how-do-i-obtain-my-funded-account"},
+          {"label":"BrightFunded exact-domain Trustpilot notice and November reviews","url":"https://www.trustpilot.com/review/brightfunded.com"},
+          {"label":"BrightFunded customer chargeback rights versus fraudulent abuse policy","url":"https://help.brightfunded.com/en/articles/10717651-chargeback-policy-enforcement"}
+        ]
+      },
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Second pass of the current Dubai/Wyoming operator clauses, post-pass risk-team checks, discretionary reward rights and exact-domain Trustpilot: 582 reviews, 21% one-star, score still hidden for a guideline breach. Rated 58/100 with one 8-point Trustpilot event penalty; no finding that the firm commissioned fake reviews or committed a proven payout offence.",
+          "source": "https://brightfunded.com/terms-and-conditions",
+          "fields": ["score", "auditSummary", "verdict", "trustpilotReviewCount", "legalReview"]
+        },
         {
           "date": "2026-10-23",
           "summary": "Domain monitor flagged brightfunded.com as 'no-trading-content'; checked by hand: the official site loads normally (operator Bright Global FZCO, trading as BrightFunded), false positive. Prices are shown in EUR (2-Step Bright 5K list EUR 47); stored price left unchanged. Default profit split 80/20 confirmed on the help center.",
@@ -1316,7 +1430,6 @@
           ]
         }
       ],
-      "reviewedAt": "2026-11-14",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/brightfunded.com)."
       ],
@@ -1871,11 +1984,38 @@
       }
     },
     "finotive-funding": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "setLegalReview": {
+        "summary": "Active simulated-account provider identifying Finotive Funding Technologies Limited (Dubai DIFC number 11088). A matching public LEI entry corroborates the corporate identity but is not a DFSA broker licence. Published risk rules explicitly permit a reward-share reduction to 10% for some soft breaches; the company publicly confirmed three such payments to one disputing client, while the correctness of the risk judgments remains contested.",
+        "regulatoryStatus": [
+          "Official terms identify Finotive Funding Technologies Limited, DIFC Dubai number 11088, and state the simulated service is not a DFSA-regulated brokerage service.",
+          "Public LEI entry for the same entity corroborates its registration ID; this does not certify client funds or payout performance.",
+          "The official contract reserves risk and compliance review rights, including retrospective assessments; the specific scope must be checked against the agreement applicable on purchase date."
+        ],
+        "complaintsAndDisputes": [
+          "Finotive's official help centre confirms a confirmed soft-breach strike can cut the payout-cycle reward share to 10% (rather than merely deducting ten percentage points).",
+          "In a November 2026 Trustpilot exchange the company itself acknowledged reducing three payments for a specific trader to a 10% share after risk reviews; the client disputes inconsistency, and no neutral adjudication was found.",
+          "The company reply calls the customer's trading an 'aggressive gambling style' and confirms it blocked further purchases; this is a documented public company characterization, not proof of unlawful defamation.",
+          "Trustpilot rating is withheld, after removals of fake reviews; 1,070 displayed reviews include 27% one-star."
+        ],
+        "redFlags": [
+          "Large potential reduction from advertised 70–95% profit share to 10% when the internal risk team finds a defined soft breach.",
+          "Practical payout eligibility may require risk-team interpretation of 'reactive/recovery-driven' trading beyond a dashboard's green indicators.",
+          "Company publicly addressed a named client with negative language while disputing payout complaints.",
+          "Trustpilot review-integrity breach; party responsible for removed fake reviews unknown."
+        ],
+        "sources": [
+          {"label":"Finotive official legal terms and risk reviews","url":"https://finotivefunding.com/terms-and-conditions"},
+          {"label":"Finotive official 10% reduction FAQ","url":"https://help.finotivefunding.com/en/articles/989-can-my-reward-payment-be-reduced-to-10percent"},
+          {"label":"Finotive company-confirmed reductions in customer dispute","url":"https://www.trustpilot.com/review/finotivefunding.com"},
+          {"label":"Finotive Funding Technologies Limited LEI entity record","url":"https://lei.bloomberg.com/leis/view/98450004A69DA6BCB084"}
+        ]
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Third-batch deep audit: DIFC operator and LEI corroborated; official rules can reduce a payout-cycle reward to 10%, and a company Trustpilot reply confirms three such payments in a contested trader case. TrustScore withheld (1,070 reviews, 27% one-star). Rating 71 to 51: one eight-point Trustpilot penalty and materially greater separate payout-discretion/communication concerns.","source":"https://finotivefunding.com/terms-and-conditions","fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -1909,9 +2049,13 @@
         }
       ],
       "set": {
+        "score": 51,
+        "trustpilotReviewCount": 1070,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/finotivefunding.com",
         "profitSplit": 95,
         "payoutDelay": "on demand, no minimum payout",
-        "verdict": "PropRadar's file covers Finotive Funding's published programs and legal terms, including the disclosed DIFC contracting company. The funding accounts are simulated, with rewards subject to contractual conditions. Company registration does not make the funding product a regulated brokerage account or independently verify customer payments."
+        "verdict": "Finotive Funding is operational and has a publicly identifiable Dubai DIFC counterparty, but its reward contract materially weakens an advertised profit split: several soft-breach categories can reduce the trader's payout-cycle share to just 10%. In a public complaint, Finotive itself acknowledged applying that reduction to three payments, with the trader disputing its judgment. Trustpilot also withholds the firm's rating. Score: 51/100, chiefly due to the payout rules and their documented application, not just the eight-point Trustpilot deduction.",
+        "auditSummary": "Deep re-audit, 18 November 2026: the current official website operates and identifies Finotive Funding Technologies Limited, DIFC registration 11088; an external LEI entry matches this identification. Finotive separately states that its simulated evaluation is not an authorized brokerage service. Its currently published contract and help documents contain 'Soft Breach' strikes reducing the relevant cycle's reward percentage to 10%, and additional conditional strikes and retrospective compliance review powers. An exact-domain November Trustpilot dispute illustrates the real effect: a customer alleges that four USD 100K account payouts were cut, while the firm's own response corrects that one previous USD 50K payout received 70% and confirms that three later USD 100K payouts were paid at 10% following risk-team reviews. The merits of these risk classifications and the customer's trading logs were not independently resolved. The firm's public response describes the customer as an aggressive gambling-style trader and says future purchases were disabled, a verifiable company statement but not a verified case of unlawful denigration. Trustpilot lists 1,070 remaining reviews and 27% one-star, with TrustScore removed after fake reviews. Editorial score falls from historical 71 to 51: single eight-point review-integrity deduction plus twelve points for the unusually consequential payout rule, subjective compliance assessment and documented contested application. No final court judgment verified in public sources reviewed."
       },
       "setProducts": [
         {
@@ -2034,11 +2178,37 @@
       ]
     },
     "for-traders": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "setLegalReview": {
+        "summary": "Active virtual trading evaluation brand whose current terms identify BLN TECH CLUB FZCO, Dubai, licence DMCC-882990, and footer also cites FT Trading Ltd. in Saint Lucia. Certain checkout configurations explicitly require a USD 189 activation fee after passing. The contract has an unresolved '[X] days' placeholder for the post-pass payment deadline and describes performance rewards as discretionary, creating material contract-clarity concerns.",
+        "regulatoryStatus": [
+          "Official 2026 contract gives BLN TECH CLUB FZCO, DMCC-882990, as provider of simulated evaluation services, while site footer also mentions FT Trading Ltd. (Saint Lucia). These are first-party identities, not independently verified trading licences.",
+          "Specific live checkout configurations disclose a USD 189 activation fee after passing; other configurations explicitly show no activation fee. The fee is not proven universally hidden or universal to all plans.",
+          "Contract clause 6.4 uses a literal '[X] days' placeholder for the deadline to pay an activation fee; without a fixed number, the exact applicable deadline is unclear from the public terms."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot removed fake reviews and withholds this domain's score; 1,856 remaining reviews, 18% one-star.",
+          "A dated October 2026 reviewer alleges denial of two rewards totaling EUR 11,000 over mirror-trading rules; the firm responded, but PropRadar has not examined underlying trades or an adjudication.",
+          "Official agreement says payouts depend on acceptance, risk review and licensing of virtual trading data; marketing's 48-hour claim does not guarantee every request."
+        ],
+        "redFlags": [
+          "Profit/reward approval is contractually discretionary even after success in simulated evaluation.",
+          "Activation fee payable after challenge success on some plans, disclosed at checkout but a meaningful later cost; incomplete '[X] days' deadline in public legal terms.",
+          "Trustpilot rating withheld following guideline breach; no evidence assigning blame for the removed reviews to the operator.",
+          "Customer complaints about mirrored accounts require account-specific verification and cannot be treated as proven evasion of payouts."
+        ],
+        "sources": [
+          {"label":"For Traders current legal terms, clauses 6.3–6.4 and footer","url":"https://fortraders.com/terms-and-conditions"},
+          {"label":"For Traders official checkout with a USD 189 later activation fee","url":"https://app.fortraders.com/trading/new-challenge?planId=eb6b356f-f226-4314-9f87-e3efb4f6dbd9"},
+          {"label":"For Traders official checkout with no activation fee","url":"https://app.fortraders.com/trading/new-challenge?planId=dde502ba-bc6d-4c69-bdde-a4386d831e80"},
+          {"label":"For Traders Trustpilot with withdrawn rating","url":"https://www.trustpilot.com/review/fortraders.com"}
+        ]
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Third-batch audit confirms operating Dubai contractual entity, model-specific USD 189 post-pass activation charge disclosed at checkout, an unfilled '[X] days' contractual payment deadline, discretionary reward review, and withdrawn Trustpilot rating (1,856 reviews, 18% one-star). Score 72 to 58: eight-point Trustpilot penalty plus six for verifiable post-pass and legal clarity risks.","source":"https://fortraders.com/terms-and-conditions","fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -2064,8 +2234,13 @@
         }
       ],
       "set": {
+        "score": 58,
+        "trustpilotReviewCount": 1856,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fortraders.com",
         "profitSplit": 90,
-        "payoutDelay": "processing guaranteed within 48 hours according to the site; the footer says payouts are discretionary"
+        "payoutDelay": "advertised processing within 48 hours if accepted; eligibility and final reward remain subject to contractual review",
+        "verdict": "For Traders is operational, but headline payouts depend on discretionary review. Certain plans add a USD 189 activation charge after the successful challenge (currently disclosed in checkout), and clause 6.4 of its public contract still contains an unfilled '[X] days' deadline for payment. Trustpilot withholds its rating after fake-review removals. This is not evidence that every plan hides a fee or that any individual payout complaint is proven. Score: 58/100.",
+        "auditSummary": "18 November 2026 deep re-audit: official Dubai company BLN TECH CLUB FZCO is named as simulated evaluation provider, while the footer also names FT Trading Ltd. in Saint Lucia. Live checkout screens demonstrate material plan variation: one order form expressly adds a USD 189 activation fee after reaching the Master stage; another says no activation fee. The terms say this fee must be shown before checkout and is compulsory before KYC and later steps when applicable; avoid asserting it is universally hidden. Critically, section 6.4 has a literal '[X] days' placeholder for its payment deadline; this public drafting error creates uncertainty about whether a trader must repeat an evaluation if the deadline is missed. The same terms describe payouts as discretionary and dependent on acceptance of trading data. A recent customer alleges two EUR 11,000 combined denied rewards due to mirrored trades; the allegation was not independently adjudicated. Trustpilot rating unavailable after guideline breaches and fake review removals; 1,856 reviews, 18% one-star. Score 72 to 58 consists of eight points for Trustpilot and six more for the later charge, indeterminate legal deadline and discretionary approval. No court judgment against this exact service was confirmed in the sources reviewed."
       },
       "setEntities": [
         {
@@ -2282,7 +2457,52 @@
       ]
     },
     "funded-trading-plus": {
+      "reviewedAt": "2026-11-18",
+      "set": {
+        "score": 64,
+        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review); activation-plan requests require 10 trading days plus threshold and consistency eligibility",
+        "trustpilotReviewCount": 2672,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedtradingplus.com",
+        "verdict": "Established and operating simulated-trading business with substantial published programme detail, a current UK operator and reported payment history. Since the May 2026 takeover, the legal and card-payment structure overlaps with Instant Funding. Trustpilot nevertheless withholds its rating for guidelines breaches; risk interviews, very broad strategy discretion, profit forfeiture and programme-specific payout conditions cap confidence. Editorial score 64/100 despite predominantly positive remaining customer reviews.",
+        "auditSummary": "Deep second-pass review, 18 November 2026: Funded Trading Plus remains commercially open and offers simulated evaluation and instant routes. Its own current terms identify Acello Ltd (England and Wales 12696083) as website/service operator and payment agent for IF Pro Ltd (Saint Lucia 2025-00056), which is the simulated programme company. Companies House verifies that Acello Ltd is active and has filed accounts to 31 December 2025, but that fact does not establish payout solvency. Funded Trading Plus confirms that Instant Funding acquired it in May 2026; both brands now share Acello infrastructure and should not be counted as independent corporate guarantors. Trustpilot hides the exact-domain rating after rules breaches and fake-review removals, despite 2,672 visible reviews and only about 4% one-star. The official activation-account guide requires 10 trading days, simulated profit equal to at least 3% of account balance at payout and a best-day concentration no greater than 25%, with a $50 minimum withdrawal; other programmes differ. More importantly, current contract clauses permit a discretionary risk interview, forfeiture of all simulated-stage profits for suspected prohibited strategies, requests for trading-software source code, and loss of payment rights if KYC fails. The firm reports over $19.5m in rewards but its public certificates were not independently bank-reconciled; consumer allegations of slippage and payout decisions remain unadjudicated. Calibrated score 64/100: one 8-point Trustpilot penalty, separate significant contract discretion, offset by transparent UK filing and a long product history, without presuming that a 4% one-star share verifies all payouts. No substantiated active injunction or regulatory enforcement finding about this exact operator emerged from searched public sources."
+      },
+      "setLegalReview": {
+        "summary": "18 Nov 2026: acquired by Instant Funding, now co-operating through Acello Ltd (UK active company 12696083) and Saint Lucia IF Pro Ltd (2025-00056). Company confirms card statements now show Acello. Published programme rules differentiate between activation, one-step/two-step and instant products. Risk interviews and unilateral prohibited-strategy classification can lead to simulated-profit forfeiture; public corporate filings do not guarantee any individual reward. Trustpilot suppresses rating and reports fake reviews removed, while visible low-star reviews remain uncommon.",
+        "regulatoryStatus": [
+          "Acello Ltd company 12696083 is active on UK Companies House and named by FT+ as the owner of the website and payment agent; IF Pro Ltd (Saint Lucia registration 2025-00056) is listed as simulated programme provider.",
+          "The acquisition by Instant Funding completed in 2026, and FT+ itself says new card purchases from 29 June appear as ACELLO LTD rather than previous FTP LONDON LTD.",
+          "Corporate incorporation and filings do not establish FCA authorisation of a simulated challenge or create a guarantee of performance rewards."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot withholds public score for guideline breach and reports fake reviews removed. Visible distribution among 2,672 reviews: about 4% one-star, far below many withheld-rating peers; distribution is not proof of payout completion.",
+          "October and November customer accounts include contested order execution, slippage and reward-support issues; the company has publicly replied to selected claims and underlying trade records have not been independently validated.",
+          "Company-originated payout certificates and $19.5m-plus lifetime claim cannot be equated with independent recipient-bank reconciliation."
+        ],
+        "redFlags": [
+          "Contract section 10.5 permits risk interviews, strategy classification, full simulated-profit forfeiture, and cross-brand future-purchase bans; it also demands software logs/source code in certain reviews.",
+          "Funded-stage payout rules are programme-specific: activation accounts require 10 trading days, >=3% simulated profit and <=25% best-day concentration; not all routes offer genuine day-one withdrawals.",
+          "Contracted Researcher agreement and successful KYC are prerequisites for payouts; failure may end rights according to current terms.",
+          "Trustpilot rating unavailable; group commonality with Instant Funding creates shared-counterparty risk rather than independent diversification."
+        ],
+        "sources": [
+          {"label":"FT+ current programme terms including risk interview, software access and forfeiture","url":"https://www.fundedtradingplus.com/terms-conditions/"},
+          {"label":"FT+ acquired-group billing identity and operational change","url":"https://help.fundedtradingplus.com/who-are-acello-ltd/"},
+          {"label":"FT+ activation account payout conditions (18 Sep 2026)","url":"https://help.fundedtradingplus.com/activation-accounts-payouts-and-withdrawals/"},
+          {"label":"UK Companies House Acello company status and filings","url":"https://find-and-update.company-information.service.gov.uk/company/12696083"},
+          {"label":"FT+ Trustpilot withdrawn rating and review distribution","url":"https://www.trustpilot.com/review/fundedtradingplus.com"}
+        ]
+      },
+      "setEntities": [
+        {"name":"Acello Ltd","jurisdiction":"England and Wales, United Kingdom","registrationNumber":"12696083","registeredAddress":"30 Old Bailey, London, EC4M 7AU, United Kingdom","role":"Active UK website/service operator and payment agent, shared with Instant Funding after 2026 acquisition."},
+        {"name":"IF Pro Ltd","jurisdiction":"Saint Lucia","registrationNumber":"2025-00056 (stated by FT+)","registeredAddress":"Top Floor, Rodney Court Building, Rodney Bay, Gros Islet, Saint Lucia","role":"International Business Company named for simulated programmes; Acello acts as its payment agent."}
+      ],
       "changelog": [
+        {
+          "date":"2026-11-18",
+          "summary":"Confirmed current UK Acello/IF Pro roles and acquisition interdependence with Instant Funding, the 10-trading-day/3%-profit/25%-consistency gates on activation plans, and broad risk-interview/profit-forfeiture terms. Trustpilot score remains withdrawn after fake reviews removed, but 2,672 visible ratings have only ~4% one-star. Recalibrated to 64/100: single 8-point rating-integrity deduction, additional contractual risk and positives for registration/track record.",
+          "source":"https://www.fundedtradingplus.com/terms-conditions/",
+          "fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview","entities"]
+        },
         {
           "date": "2026-10-23",
           "summary": "Payout terms filled from the official help center. 80/20 starting split confirmed. Entry price 119 left unchanged although it matches a legacy program: current list prices were only found on third-party sites.",
@@ -2306,10 +2526,6 @@
           "fields": ["payoutProofs"]
         }
       ],
-      "reviewedAt": "2026-11-16",
-      "set": {
-        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
-      },
       "addSources": [
         {
           "label": "Funded Trading Plus payouts overview (official)",
@@ -2832,11 +3048,37 @@
       ]
     },
     "funding-traders": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "setLegalReview": {
+        "summary": "Operational simulated evaluator with first-party terms identifying FT US Inc (Florida). September 2026 terms combine explicit trading-behaviour discipline tiers, strong user-feedback/reputation provisions and rights to publish serious misconduct allegations. These clauses are documented; their abusive application to particular customers has not been established by a court.",
+        "regulatoryStatus": [
+          "Current official contract identifies FT US Inc in Miami Beach, Florida, for FundingTraders Trading Evaluation; older footer also gives Funding Traders Group Ltd in Saint Lucia. Roles and corporate registers were not fully reconciled.",
+          "Contract uses simulated challenges and third-party evaluator language; a company address is not a financial regulator's authorisation of live funds.",
+          "The September 2026 terms expressly permit discretionary trading-behaviour review, a strike system and an internal appeal channel with an intended 48-hour response."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot TrustScore is suppressed after removal of fake reviews; 3,294 visible reviews and 25% one-star.",
+          "Published risk/Discipline Program: Tier 1 reduces split to 70% and deducts 50% of 'Violation Profit'; Tier 2 reduces split to 60% and deducts 100% of violation profit; the amount payable may become zero, and Tier 3 closes the account.",
+          "Terms section 9 grants the operator rights to publish certain account identifiers and serious alleged misconduct where it claims reasonable support, and a separate reputation clause provides for termination and possible legal action after materially harmful conduct while preserving lawful consumer free expression.",
+          "Recent individual complaints report withheld payouts and retroactive trading violations, but no independent account logs or judicial outcome were verified."
+        ],
+        "redFlags": [
+          "Strong contractual discretion around retroactive assessment, discipline tiers and the amount remaining eligible for reward.",
+          "Contractual right to publicise substantiated allegations about users and expansive reputation-protection language may deter criticism; there is no established proof the company engaged in unlawful defamation.",
+          "Client-facing Clarity Desk green tiles explicitly do not guarantee a valid payout or waive later breach assessments.",
+          "Trustpilot withheld, with 25% one-star among the remaining reviews."
+        ],
+        "sources": [
+          {"label":"FundingTraders official September 2026 terms, sections 6, 7 and 9","url":"https://fundingtraders.com/terms-of-service"},
+          {"label":"FundingTraders official withdrawal policy","url":"https://fundingtraders.com/withdrawal-policy"},
+          {"label":"FundingTraders Trustpilot notices and user complaints","url":"https://www.trustpilot.com/review/fundingtraders.com"}
+        ]
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Third-batch audit: active FT US Inc evaluator; contractual discipline tiers can deduct violation profits and reduce split to 70/60%, while clause 9 permits publication of certain user misconduct allegations and litigation threats over materially harmful conduct, subject to law. Trustpilot withheld (3,294 reviews, 25% one-star). Score 70 to 52: single eight-point Trustpilot penalty and ten additional contract/reputation-risk points.","source":"https://fundingtraders.com/terms-of-service","fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -2866,7 +3108,12 @@
       "set": {
         "priceFrom": 49,
         "profitSplit": 80,
-        "payoutDelay": "14 to 21 days on 2-Step; 14 days on 1-Step (the FAQ says 21 by default); Instant 7 days in the table, 14 in the FAQ"
+        "payoutDelay": "current contract: every 21 days for 1/2-Step by default (14-day optional add-on); Instant every 14 days (on-demand optional add-on)",
+        "score": 52,
+        "trustpilotReviewCount": 3294,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingtraders.com",
+        "verdict": "FundingTraders remains operational, but its September 2026 terms contain particularly consequential post-trading reviews. Its Discipline Program can materially reduce both the eligible profit and the trader's share, even to a zero payout; the contract also grants rights to publicise some alleged trader misconduct and protect company reputation through legal action. Those clauses warrant stronger penalties than the eight-point Trustpilot warning alone. Score: 52/100; no unproven accusation of actual defamation is presented as fact.",
+        "auditSummary": "18 November 2026 deep re-audit: current official terms show an active US-named FundingTraders Trading Evaluation operator (FT US Inc, Miami Beach); an older site footer also names a Saint Lucia company, and exact contractual roles must be checked at purchase. Sections 6.3.6–6.3.10 impose a four-level Discipline Program based on risk-team review: at Tier 1 the trader's share becomes 70% with half of 'Violation Profit' deducted; at Tier 2 it becomes 60% with all Violation Profit deducted; under specified conditions the net reward may be zero; Tier 3 closes the account. A green Clarity Desk indicator is expressly not a promise that the review will approve rewards. Section 9 lets the company publicly describe serious alleged customer abuse with certain identifiers if it claims good-faith evidence, and prohibits intentionally and materially reputation-harming conduct subject to consumer rights and freedom of expression; suspension or legal action may follow. These are contractual powers, not proof that any user was unlawfully defamed. A current official payout policy also gives a 25% best-day consistency condition on Next-Gen accounts. Trustpilot displays no TrustScore after fake-review removals, 3,294 reviews and 25% one-star. Individual payout-denial reviews are allegations without independently verified logs. Historical score 70 falls to 52: one eight-point Trustpilot penalty and ten more for the weight of documented reward and reputation provisions; no confirmed court judgment was found in the source set."
       },
       "setProducts": [
         {
@@ -3850,9 +4097,51 @@
       ]
     },
     "instant-funding": {
-      "reviewedAt": "2026-11-08",
-      "set": {},
+      "reviewedAt": "2026-11-18",
+      "set": {
+        "score": 63,
+        "trustpilotReviewCount": 4387,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/instantfunding.com",
+        "verdict": "Instant Funding is active with a traceable UK operating group that also owns Funded Trading Plus. Its October 2026 legal agreement explicitly recognises obligations to pay eligible rewards, but permits unilateral classification of banned strategies, revised trading rules, exclusions and reward cancellation. Trustpilot has withdrawn the rating after a guideline breach, and 27% of its visible reviews are one-star. Score 63/100: contract and evidence risk, not a finding that the platform is closed or fraudulent.",
+        "auditSummary": "Second-pass review on 18 November 2026: Instant Funding continues selling simulated trading programmes. Its October 2026 General Terms identify Acello Ltd, UK company 12696083 at 30 Old Bailey, as operating counterparty; Companies House currently lists that company as active with 2025 accounts filed. Its web footer also describes Acello as payment agent for Saint Lucia IF Pro Ltd, so precisely which entity signs a particular trader agreement must be checked at checkout. Official acquisition notice confirms Instant Funding bought Funded Trading Plus in 2026, so the two brands are not independently guaranteed competitors. Its October contract states all trading profits are simulated and the company is obliged to pay eligible agreed rewards, but clauses 11.2–11.9 permit cancelling trades, retroactive classifications of prohibited behaviour, unilateral rule changes and loss of reward rights; specific programme thresholds differ. Its homepage currently notes temporary 1:5 leverage limits for metals, oil and indices on funded accounts. Trustpilot's instantfunding.com rating remains withheld for guideline breach, with removed fake reviews, some 4,387 remaining reviews and about 27% one-star. Recent customers allege travel/IP-related payout delays, order execution and account closures, but other customers report successful resolution and neither case type is independently adjudicated. A claim of a court conviction or regulator warning for the precise company was not substantiated in this public search. Score 63/100: one 8-point review-integrity penalty, separate bounded contract/review negatives, with credit for an active UK company and explicit eligible-payout obligation. No presumption that the firm itself commissioned the fake reviews."
+      },
+      "setLegalReview": {
+        "summary": "18 Nov 2026: operating simulated-trading firm with current UK operator Acello Ltd (12696083); group acquired FT+ in 2026, with an associated Saint Lucia payment-provider model disclosed on the site. Official GTCs require payment of eligible rewards but reserve broad unilateral discretion over prohibited practices, reward cancellation and suspension. Trustpilot rating withheld with fake-review notice, 27% of remaining reviews one-star. Disputed recent trader reports are not judicial findings.",
+        "regulatoryStatus": [
+          "October 2026 General Terms identify Acello Ltd of England and Wales, number 12696083, as Instant Funding's contracting entity. UK Companies House lists Acello Ltd active and 2025 accounts filed; financial strength not concluded.",
+          "Instant Funding acquired Funded Trading Plus in May/June 2026; the group's brands use Acello services and FT+ publicly identifies IF Pro Ltd, Saint Lucia registration 2025-00056, as simulated-services entity.",
+          "The General Terms explicitly describe simulated funds, not client money in a regulated broker account; company registration alone does not confer FCA brokerage authorisation."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot exact-domain public score withheld, fake-review removals recorded; visible distribution about 27% one-star from 4,387 reviews. A profile-merging disclosure means not every review necessarily arose at this exact original domain.",
+          "November 2026 reviews include individual claims of contested Saudi travel/login IP flags and delayed withdrawal, stop-loss execution and delayed support. Some complainants later reported support resolutions or replacement accounts; cases remain unadjudicated.",
+          "The company's FAQ offers on-demand payouts subject to programme-specific requirements; these must be checked against Trader Agreement and current risk controls."
+        ],
+        "redFlags": [
+          "General Terms section 11 grants broad authority to identify forbidden strategies, change rules, cancel account or already accrued simulated rewards without a judicial finding.",
+          "Temporarily reduced leverage announced on funded metals/oil/indices illustrates operating parameters that can shift even after purchase.",
+          "Review-integrity problem and large one-star share; do not treat the number of stars as an independent proof that any specific transaction was refused.",
+          "Corporate link to Funded Trading Plus creates common counterparty exposure, not two independent guarantees."
+        ],
+        "sources": [
+          {"label":"Instant Funding October 2026 General Terms PDF","url":"https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"},
+          {"label":"Instant Funding acquisition announcement","url":"https://instantfunding.com/news/instant-funding-acquires-funded-trading-plus/"},
+          {"label":"UK Companies House Acello Ltd company status","url":"https://find-and-update.company-information.service.gov.uk/company/12696083"},
+          {"label":"Instant Funding live homepage and temporary funded leverage update","url":"https://instantfunding.com/"},
+          {"label":"Instant Funding withheld Trustpilot page and recent customer reports","url":"https://www.trustpilot.com/review/instantfunding.com"}
+        ]
+      },
+      "setEntities": [
+        {"name":"Acello Ltd","jurisdiction":"England and Wales, United Kingdom","registrationNumber":"12696083","registeredAddress":"30 Old Bailey, London, EC4M 7AU, United Kingdom","role":"Company named in October 2026 Instant Funding General Terms as contractual operator, active on UK Companies House; payment agent on some group site disclosures."},
+        {"name":"IF Pro Ltd","jurisdiction":"Saint Lucia","registrationNumber":"2025-00056 (as stated on group sites)","registeredAddress":"Top floor, Rodney Court Building, Rodney Bay, Gros Islet, Saint Lucia","role":"Group simulated-trading services company named on current FT+ site and Instant Funding footer; role in specific Instant Funding contract requires document-level verification."}
+      ],
       "changelog": [
+        {
+          "date":"2026-11-18",
+          "summary":"Rechecked active Companies House Acello Ltd 12696083, 2026 acquisition of FT+, October 2026 programme rules and discretion, temporary funded leverage limits and withheld Trustpilot notice. About 27% of 4,387 remaining reviews are one-star; claims of payout/IP and stop-loss disputes are not treated as proven misconduct. Score calibrated 63/100 with one 8-point integrity penalty and separate contract risks.",
+          "source":"https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+          "fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview","entities"]
+        },
         {
           "date": "2026-10-26",
           "summary": "Corporate change: on 26 May 2026 Instant Funding announced it had acquired Funded Trading Plus; the release says both brands continue to operate independently. Trustpilot profile not found in this pass and official pricing not re-read: no field changed.",
@@ -4709,8 +4998,33 @@
       ]
     },
     "pipfarm": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "setLegalReview": {
+        "summary": "Active PipFarm simulation business operated by ECI Ventures Pte. Ltd. (Singapore UEN 202329954C, per official terms). Well-documented payout limits coexist with a broad 'toxic trading' monitoring policy that explicitly extends beyond rule breaches and can lead to post-pass or post-payout review. No verified litigation or regulator sanction established in consulted records.",
+        "regulatoryStatus": [
+          "PipFarm homepage and contract identify ECI Ventures Pte. Ltd., Singapore UEN 202329954C, as simulation operator; the registration was not independently checked against a live Singapore government certificate.",
+          "The service is described as simulated evaluation rather than a regulated broker account; displayed payout totals are firm-reported and not an audited reconciliation.",
+          "Current help centre expressly distinguishes subjective 'toxic trading' from cheating/rule violations and permits warning, probation and further account action following manual review."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot's exact-domain rating is unavailable after fake review removals, with 345 remaining reviews and 23% one-star.",
+          "One reviewer alleges retroactive new rules and a weekly USD 5,000 payout limit. The limit is indeed published in terms as 5,000 base-currency units per payout and a seven-day request cycle, but the customer's claim of retroactivity was not independently substantiated.",
+          "Official toxic behaviour guidance says passing or having been paid does not exclude future manual review; it describes graduated warnings and probation, not automatic reward forfeiture for every flagged pattern."
+        ],
+        "redFlags": [
+          "Subjective, non-exhaustive assessment of trading style beyond explicit rule violations may affect the trader after success.",
+          "5,000 base-currency payout cap per request and seven-day submission interval can frustrate large balances; terms publicly disclose the restrictions.",
+          "Trustpilot withdraws its score after review-integrity breach; no evidence identifying who created removed fake reviews."
+        ],
+        "sources": [
+          {"label":"PipFarm published operator and contract","url":"https://pipfarm.com/terms-and-conditions"},
+          {"label":"PipFarm official subjective toxic trading guidance","url":"https://help.pipfarm.com/en/help/articles/9077334-toxic-trading-behaviour"},
+          {"label":"PipFarm official payout process","url":"https://help.pipfarm.com/en/articles/9367703-how-payouts-work"},
+          {"label":"PipFarm Trustpilot suspended TrustScore","url":"https://www.trustpilot.com/review/pipfarm.com"}
+        ]
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Third-batch re-audit: verified active Singapore-named operator and published 5,000-base-currency payout limit, seven-day cycle and subjective toxic-trading review beyond formal rule violations. Trustpilot withholds rating after fake-review removals (345 reviews, 23% one-star). Score 72 to 61: single eight-point TP deduction, three more for discretionary post-pass review; no verified shutdown or court finding.","source":"https://help.pipfarm.com/en/help/articles/9077334-toxic-trading-behaviour","fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the nz.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -4743,7 +5057,12 @@
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/pipfarm.com)."
       ],
       "set": {
-        "payoutDelay": "one payout request every seven completed calendar days, paid within two business days after approval; capped at 5,000 in the account's base currency per payout"
+        "payoutDelay": "one payout request every seven completed calendar days, paid within two business days after approval; capped at 5,000 in the account's base currency per payout",
+        "score": 61,
+        "trustpilotReviewCount": 345,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/pipfarm.com",
+        "verdict": "PipFarm is active, identifies a Singapore operator and publishes unusually clear per-request payout limits. A separate, non-exhaustive 'toxic trading' review goes beyond explicit rule violations, however, and can affect traders after challenge completion or a payout. Trustpilot also withholds its rating after removing fake reviews. Historical 72/100 becomes 61/100: eight points for review integrity and three for discretionary post-pass scrutiny, not an allegation of proven insolvency.",
+        "auditSummary": "Third-batch audit, 18 November 2026: PipFarm remains available and discloses ECI Ventures Pte. Ltd., Singapore UEN 202329954C, in official terms. Contract allows only one payout request each seven completed calendar days, with a maximum of 5,000 units in the account's base currency per request, normally processed within two business days after approval. These caps are publicly disclosed, not proven to have been added secretly. The official 'toxic trading' help article defines risk patterns as distinct from rule-breaking and says even traders who pass or receive a reward may be flagged for post-performance manual review. Its listed steps are warning, probation and corrective action depending on circumstances; the guidance does not prove automatic payout confiscation. Exact-domain Trustpilot has removed a number of fake reviews and withheld its rating (345 reviews, 23% one-star), with both negative allegations and positive trader experiences. Company marketing of more than USD 5m historical payouts is self-reported. Score 72 to 61: exactly one eight-point trust warning and three discretionary-review points. No verified legal judgment, corporate dissolution or regulator sanction found in the limited public audit source set."
       },
       "addSources": [
         {
@@ -5291,11 +5610,42 @@
       ]
     },
     "the-trading-pit": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "setLegalReview": {
+        "summary": "18 Nov 2026: actively offering futures and CFD simulation through Liechtenstein-listed The Trading Pit Challenge GmbH (FL-0002.693.417-1). Current terms explicitly distinguish documented grounds for suspicion from proven breaches, but permit temporarily withholding eligible rewards and changing reward rates, frequency or contract limits under suspicion-based risk controls for up to 90 days, extendable to 180. Trustpilot continues to suppress its company rating after fake-review removals. Traders report contract-sizing and payout eligibility disputes, unadjudicated.",
+        "regulatoryStatus": [
+          "Official general terms identify The Trading Pit Challenge GmbH, Liechtenstein commercial-register FL-0002.693.417-1; footer lists The Trading Pit AG (FL-0002.688.743-6) as group holding company. Those registrations are firm-declared; no fresh official registry certificate was retrieved.",
+          "The services are described as simulated exchange games, not a broker deposit or supervised investment service. A corporate legal seat in Liechtenstein is not a reward guarantee.",
+          "The 2026 agreement contains defined interim and periodic reassessment procedures for suspected third-party hedging/copied strategies; lack of an external judgment is not evidence that every internal decision is sound."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot suppresses the public TrustScore after a guidelines breach and fake-review removals; 1,087 reviews remain with roughly 22% one-star.",
+          "A November 2026 reviewer disputes sudden contract-size limitations and what was promised at purchase; the company replies that its risk controls govern. No trading logs or chargeback outcome were independently authenticated.",
+          "The brand and customers report successful funded payouts, but audited completion rates or independent transfer reconciliation for all traders are not public in the primary sources read."
+        ],
+        "redFlags": [
+          "Under terms section 6.8, reasonable documented suspicion can allow reward withholding and temporary reduced reward rates or limits; conditions can last up to 180 days subject to review.",
+          "Restrictions and consistency caps vary across Futures Prime, Futures Instant and CFD products; a headline account size or split may not match payout eligibility.",
+          "Trustpilot withdrawal is a meaningful integrity problem, not proof that the business has ceased operating or itself generated fake reviews.",
+          "Account-contract and dispute venue are cross-border, and independently audited full payout data was not located."
+        ],
+        "sources": [
+          {"label":"The Trading Pit current general contract, sections 6.8 and counterparty","url":"https://www.thetradingpit.com/general-terms-and-conditions"},
+          {"label":"The Trading Pit 2026 futures programme and consistency rules","url":"https://www.thetradingpit.com/futures"},
+          {"label":"Trading Pit official trading-risk rules","url":"https://www.thetradingpitgroup.com/trading-rules"},
+          {"label":"Trading Pit exact-domain Trustpilot warning and contract-sizing dispute","url":"https://www.trustpilot.com/review/thetradingpit.com"}
+        ]
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
       ],
       "changelog": [
+        {
+          "date":"2026-11-18",
+          "summary":"Rechecked Liechtenstein contracting entity and current general terms, especially documented suspicion vs confirmed breaches and 90/180-day temporary risk controls for rewards and contract sizing. Trustpilot still withholds public rating, with 1,087 reviews and 22% one-star. Ranked 64/100 after one 8-point Trustpilot penalty and separate modest contract/complaint adjustments; still active, no proven regulator sanction.",
+          "source":"https://www.thetradingpit.com/general-terms-and-conditions",
+          "fields":["score","verdict","auditSummary","trustpilotReviewCount","legalReview","entities"]
+        },
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie and uk mirrors; the nz mirror still showed an older cached rating. Price and profit split not re-read on the official site, left unchanged.",
@@ -5323,6 +5673,11 @@
         }
       ],
       "set": {
+        "score": 64,
+        "trustpilotReviewCount": 1087,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/thetradingpit.com",
+        "verdict": "Operating Liechtenstein-based futures/CFD evaluation provider with specific product terms and documented risk-review steps. Trustpilot still hides its rating after removed fake reviews, and an official suspicion-based risk procedure can restrict rewards, frequency and position size for up to 180 days. Evidence justifies caution, not a shutdown or a fraud finding; score 64/100.",
+        "auditSummary": "18 November 2026 second-pass: The Trading Pit still operates current futures and CFD simulated evaluations. Official 2026 terms identify The Trading Pit Challenge GmbH (Liechtenstein FL-0002.693.417-1); the website additionally names The Trading Pit AG as holding company. Futures Prime and Futures Instant offer materially different eligibility, profit-sharing and consistency rules; the original programme figures remain subject to exact plan and purchase date. The legal terms permit suspending rewards and applying new restrictions where the company documents reasonable suspicion of coordinated hedging or other prohibited patterns; such controls can last 90 days, with one further 90-day extension, and require interim reassessment. Those clauses include safeguards and should not be characterised as an unlimited permanent confiscation power without cause, but they can materially delay or shrink withdrawal prospects. Trustpilot still withholds the exact-domain rating after a guidelines breach and reported fake-review removals: about 22% of the 1,087 remaining reviews are one-star. A current consumer complaint challenges contract caps being changed after sale; the facts are disputed and not independently adjudicated. Public firm payout statements do not authenticate every cash settlement. Score calibrated to 64/100: a single 8-point Trustpilot deduction, modest separately supported rule/complaint risk and credit for programme transparency and identified provider, not a confirmed insolvency or enforcement finding.",
         "priceFrom": 99,
         "profitSplit": 80,
         "newsTrading": "Allowed",
@@ -5380,6 +5735,10 @@
           "hasConsistencyRule": true,
           "consistencyRule": "20%: the biggest profitable day must not exceed 20% of total profit before a payout (official page, 29 Oct 2026)."
         }
+      ],
+      "setEntities": [
+        {"name":"The Trading Pit Challenge GmbH","jurisdiction":"Liechtenstein","registrationNumber":"FL-0002.693.417-1 (official terms)","registeredAddress":"Vaduz, Liechtenstein","role":"Contracting operator for the simulated challenge and exchange-game products."},
+        {"name":"The Trading Pit AG","jurisdiction":"Liechtenstein","registrationNumber":"FL-0002.688.743-6 (official footer)","role":"Holding company of the group, separate from the contracting challenge GmbH."}
       ],
       "addSources": [
         {

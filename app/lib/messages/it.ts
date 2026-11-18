@@ -467,7 +467,7 @@ const it: Messages = {
     domainWarning: 'Avviso sul dominio.',
     scoreAria: 'Punteggio PropRadar di {name}',
     propradarScore: 'Punteggio PropRadar',
-    scoreCapped: "Limitato a {cap}: Trustpilot non mostra una valutazione per questa società (\"rating unavailable due to a breach of our guidelines\"). Punteggio prima del limite: {before}.",
+    scoreCapped: "Affidabilità delle recensioni Trustpilot: –{cap} punti (prima: {before}). Gli autori delle recensioni rimosse non sono identificati.",
     decision: {
       'Shortlist candidate': 'Candidata alla shortlist',
       'Proceed carefully': 'Procedere con cautela',
@@ -1044,7 +1044,7 @@ const it: Messages = {
     "scoreEyebrow": "Come viene assegnato il punteggio",
     "scoreTitle": "Un punteggio editoriale, con regole fisse.",
     "scoreP1": "Il punteggio PropRadar (da 0 a 100) viene assegnato a mano per ogni firm dopo la lettura del suo dossier: incidenti di payout documentati, entità legali e relativi paesi, liste di avvertimento dei regolatori, stato Trustpilot, regole e prezzi dei programmi e quanta parte del dossier è verificata. Non esiste una formula di ponderazione fissa: due firm con fatti simili possono differire se un dossier è documentato meglio. Fisse sono le regole seguenti.",
-    "scoreRules": ["Su ogni pagina si usano tre fasce: 75 e oltre, da 50 a 74, sotto 50. Le firm chiuse sono mostrate a parte, in rosso.", "Quando Trustpilot sospende la valutazione di una firm per violazione delle linee guida, il punteggio è limitato a 64. La pagina della firm mostra il limite e il punteggio precedente.", "Un calo di 5 punti o più, o una variazione di 10, viene approvato dal responsabile del sito prima della pubblicazione, e ogni modifica è datata nella cronologia della firm.", "L'affiliazione non sposta mai un punteggio: le firm affiliate seguono le stesse regole."],
+    "scoreRules": ["Su ogni pagina si usano tre fasce: 75 e oltre, da 50 a 74, sotto 50. Le firm chiuse sono mostrate a parte, in rosso.", "Una valutazione ritirata da Trustpilot comporta una sola detrazione di 8 punti, già inclusa nei punteggi revisionati. Regole di pagamento nascoste, ritorsioni per critiche e mancati pagamenti provati sono penalizzati separatamente, senza tetto fisso.", "Un calo di 5 punti o più, o una variazione di 10, viene approvato dal responsabile del sito prima della pubblicazione, e ogni modifica è datata nella cronologia della firm.", "L'affiliazione non sposta mai un punteggio: le firm affiliate seguono le stesse regole."],
     "correctionsEyebrow": "Politica delle correzioni",
     "correctionsTitle": "Come si corregge un errore.",
     "corrections": ["Invia la pagina e una fonte pubblica a contact@propradar.tech.", "Un errore di fatto supportato da una fonte viene corretto, e la correzione è datata nella cronologia della firm con quella fonte. Le voci precedenti non vengono mai cancellate.", "Le firm possono chiedere correzioni come chiunque altro, con una fonte pubblica. Una firm non può pagare per cambiare un punteggio o rimuovere un avvertimento documentato.", "Se una segnalazione non può essere confermata da una fonte pubblica, la pagina mostra «da verificare» invece di un'ipotesi."],
