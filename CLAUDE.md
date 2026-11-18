@@ -25,10 +25,17 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
 - `app/lib/industryStats.ts` - figures for /prop-firm-statistics (and its CSV),
   computed from the firm files; provisional values are always excluded.
 - `app/lib/optionsFirms.ts` - separate primary-source discovery catalogue of
-  listed-options prop programmes and professional desks. Its seven entries have
-  NO PropRadar score. `app/lib/optionsGlobe.ts` adds neutral unscored markers
-  to the globe only; NEVER treat their geometric position (50) as a rating,
-  merge them into scored rankings or invent an evaluation without full audit.
+  listed-options prop programmes and professional desks.
+- `app/lib/optionsAudits.ts` - source-linked INITIAL editorial scores for the
+  seven options research dossiers, with individual findings and official logos.
+  TradeFundrr's existing 67/100 score is read from its canonical main profile,
+  never independently copied. Professional desks remain a separate group.
+  `app/lib/optionsGlobe.ts` adds scored options markers to the globe only;
+  NEVER merge these into the main scored radar averages and rankings without
+  an audit of product comparability and editorial approval. New accusations,
+  regulatory incidents or major changes still require Geyer's review before merge.
+- `app/lib/optionsAuditI18n.ts` - translated audit interface in 15 languages;
+  official evidence snippets remain in their source language.
 - `app/lib/optionsI18n.ts` - Options landing/profile interface translations
   for all 15 active locales. Official evidence excerpts stay in English.
 - `scripts/check-domains.ts` - official-domain monitor (run daily by

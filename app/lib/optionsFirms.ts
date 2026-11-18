@@ -1,9 +1,8 @@
 /**
  * Discovery catalogue for listed-options proprietary trading programmes.
- * These are NOT PropRadar-scored firms. The evidence below establishes only
- * what each operator advertises, not payouts, solvency or live execution.
- * Never merge these records into the scored propFirms collection without a
- * complete, separately approved audit using the uniform rating framework.
+ * Source-based preliminary scores and evidence live in optionsAudits.ts;
+ * they do not establish payouts, solvency or execution. The main comparator
+ * stays separate; TradeFundrr's pre-existing rating is shared, not duplicated.
  */
 export type OptionsFirm = {
   slug: string;

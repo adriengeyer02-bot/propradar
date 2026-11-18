@@ -508,7 +508,7 @@ export default function PropRadarLive({
       setOptionSelected(null);
       return;
     }
-    const option = globeData.dots.find((item) => item.unrated && item.name.toLowerCase().includes(q));
+    const option = globeData.dots.find((item) => Boolean(item.href) && item.name.toLowerCase().includes(q));
     if (option) {
       setOptionSelected(option.slug);
       setFocus(null);
@@ -555,7 +555,7 @@ export default function PropRadarLive({
   const freshSlugs = useMemo(() => new Set((visit?.changed ?? []).map((dot) => dot.slug)), [visit]);
 
   function selectFromGlobe(slug: string) {
-    if (globeData.dots.some((item) => item.slug === slug && item.unrated)) {
+    if (globeData.dots.some((item) => item.slug === slug && Boolean(item.href))) {
       setOptionSelected(slug);
       setFocus(null);
       setPinned(false);
