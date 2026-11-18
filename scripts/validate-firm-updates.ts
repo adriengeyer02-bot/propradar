@@ -13,7 +13,8 @@
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { basePropFirms, propFirms } from '../app/lib/propFirms';
-import type { FirmUpdate } from '../app/lib/firmUpdates';
+import { RESTRICTIVE_RULE_CATEGORIES, type FirmUpdate } from '../app/lib/firmUpdates';
+import { computeRulesPenalty, RULES_PENALTY_ENABLED } from '../app/lib/restrictiveRules';
 
 const FILE = 'app/data/firm-updates.json';
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -52,6 +53,7 @@ const today = new Date().toISOString().slice(0, 10);
 const errors: string[] = [];
 const sensitive: string[] = [];
 const summary: string[] = [];
+const penaltyChanges: string[] = [];
 
 if (current.version !== 1) errors.push('version must be 1');
 
@@ -71,9 +73,34 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
       if (!isHttpsUrl(rule.source)) errors.push(`${at}.source: public https source required`);
       if (rule.status && rule.status !== 'conflicting') errors.push(`${at}.status: only 'conflicting' is supported`);
       if (BANNED_WORDS.test(`${rule.rule} ${rule.impact}`)) sensitive.push(`${slug}: restrictive-rule wording needs a legal read`);
+      // Scoring fields (SCORING.md 2): all four or none (legacy rules are shown, not counted).
+      const scoring = [rule.category, rule.severity, rule.clarity, rule.appliesTo];
+      if (scoring.some((value) => value !== undefined) && scoring.some((value) => value === undefined)) errors.push(`${at}: category, severity, clarity and appliesTo go together`);
+      if (rule.category !== undefined && !(RESTRICTIVE_RULE_CATEGORIES as readonly string[]).includes(rule.category)) errors.push(`${at}.category: unknown "${rule.category}"`);
+      if (rule.severity !== undefined && !['minor', 'major', 'blocking'].includes(rule.severity)) errors.push(`${at}.severity: minor | major | blocking`);
+      if (rule.clarity !== undefined && !['clear', 'buried', 'vague'].includes(rule.clarity)) errors.push(`${at}.clarity: clear | buried | vague`);
+      if (rule.appliesTo !== undefined) {
+        const keys = new Set((update.auditedPrograms ?? []).map((program) => program.key));
+        if (!Array.isArray(rule.appliesTo) || !rule.appliesTo.length) errors.push(`${at}.appliesTo: non-empty array`);
+        else if (keys.size && rule.appliesTo.some((key) => key !== '*' && !keys.has(key))) errors.push(`${at}.appliesTo: unknown programme key (declare it in auditedPrograms)`);
+      }
     }
     if (!(update.changelog ?? []).some((entry) => (update.restrictiveRules ?? []).some((rule) => rule.source === entry.source))) {
       errors.push(`${where}.restrictiveRules: at least one rule source must appear in the dated changelog`);
+    }
+  }
+  if (update.auditedPrograms !== undefined) {
+    const keys = (update.auditedPrograms ?? []).map((program) => program.key);
+    if (!Array.isArray(update.auditedPrograms) || !keys.length || keys.some((key) => !key?.trim() || key === '*')) errors.push(`${where}.auditedPrograms: non-empty list of { key, name }`);
+    if (new Set(keys).size !== keys.length) errors.push(`${where}.auditedPrograms: duplicate key`);
+  }
+  {
+    // Restrictive-rules penalty impact (SCORING.md 2), reported even while the switch is off.
+    const after = computeRulesPenalty(update)?.penalty ?? 0;
+    const before = computeRulesPenalty(previous.firms?.[slug])?.penalty ?? 0;
+    if (after !== before) {
+      penaltyChanges.push(`${slug}: rules penalty ${before} -> ${after}`);
+      if (RULES_PENALTY_ENABLED && (before - after <= -5 || Math.abs(after - before) >= 10)) sensitive.push(`${slug}: displayed score moves by ${before - after} (restrictive-rules penalty)`);
     }
   }
   if (update.setLegalReview !== undefined) {
@@ -227,5 +254,6 @@ if (errors.length) {
 const isSensitive = sensitive.length > 0;
 console.log(`Valid. ${Object.keys(current.firms).length} firm update(s) in file.`);
 if (summary.length) console.log(`Changes:\n- ${summary.join('\n- ')}`);
+if (penaltyChanges.length) console.log(`Restrictive-rules penalty (${RULES_PENALTY_ENABLED ? 'APPLIED to displayed scores' : 'computed, not applied: RULES_PENALTY_ENABLED is off'}), ${penaltyChanges.length} firm(s):\n- ${penaltyChanges.join('\n- ')}`);
 console.log(isSensitive ? `SENSITIVE - human approval required:\n- ${sensitive.join('\n- ')}` : 'Not sensitive: safe to merge automatically.');
 if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `sensitive=${isSensitive}\n`, { flag: 'a' });

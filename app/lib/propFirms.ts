@@ -1,4 +1,5 @@
-import { applyFirmUpdates } from './firmUpdates';
+import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
+import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { foxxFunded } from './foxxFunded';
 import { xFunded } from './xFunded';
 import { milTraders } from './milTraders';
@@ -133,6 +134,8 @@ export type PropFirm = {
   score: number;
   /** Set when a rule lowered the stored score; the firm page states it. */
   scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
+  /** Restrictive-rules penalty (SCORING.md section 2), set when it lowered the score. */
+  rulesPenalty?: { before: number; penalty: number };
   /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
@@ -12917,6 +12920,20 @@ function applyClosedScoreRule(firm: PropFirm): PropFirm {
 }
 
 /**
+ * Restrictive-rules penalty (SCORING.md section 2, scale approved by Geyer on
+ * 2026-11-18): the stored score is editorial, before fine print; the code
+ * subtracts at most 12 points computed from classified, sourced rules.
+ * Applied before the Trustpilot and closure caps. Off until the score impact
+ * is approved (RULES_PENALTY_ENABLED).
+ */
+function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
+  if (!RULES_PENALTY_ENABLED || firm.status === 'Fermée') return firm;
+  const result = computeRulesPenalty(getFirmUpdate(firm.slug));
+  if (!result?.penalty) return firm;
+  return { ...firm, score: Math.max(0, firm.score - result.penalty), rulesPenalty: { before: firm.score, penalty: result.penalty } };
+}
+
+/**
  * Trustpilot rule (approved by Geyer, 2026-11-07): when Trustpilot withholds a
  * firm's rating for a breach of its guidelines, the PropRadar score is capped
  * at 64, so the firm can never sit in the 75+ band on a review profile
@@ -12955,7 +12972,7 @@ function applyPartnerOffer(firm: PropFirm): PropFirm {
   return offer && firm.status !== 'Fermée' ? { ...firm, partnerOffer: offer } : firm;
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

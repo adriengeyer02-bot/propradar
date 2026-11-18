@@ -440,6 +440,9 @@ const ar: Messages = {
     rulesImpact: 'الأثر العملي',
     rulesConflict: 'المصادر الرسمية متعارضة',
     rulesCount: '{n} قواعد موثقة',
+    rulesSeverity: { minor: "بسيطة", major: "مهمة", blocking: "حاسمة" },
+    rulesClarity: { clear: "مذكورة بوضوح", buried: "في الشروط فقط", vague: "تقديرية أو غير واضحة" },
+    rulesPenaltyNote: "خصم القواعد التقييدية: −{penalty} نقاط (التقييم التحريري قبل القواعد: {before}).",
   },
 };
 

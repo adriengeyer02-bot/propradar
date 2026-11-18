@@ -888,6 +888,7 @@ export default async function FirmPage({ params }: Props) {
               <span className="pr-firm-scorecard-label">{f.propradarScore}</span>
               {isClosedOrParked ? <ClosedFirmArchiveLabel locale={locale} /> : null}
               <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{f.decision[firmDecision]}</strong>
+              {firm.rulesPenalty ? <p className="pr-score-cap"><a href="#rules">{fmt(f.rulesPenaltyNote, { penalty: firm.rulesPenalty.penalty, before: firm.rulesPenalty.before })}</a></p> : null}
               {firm.scoreCap ? <p className="pr-score-cap">{fmt(f.scoreCapped, { cap: firm.scoreCap.cap, before: firm.scoreCap.before })}</p> : null}
               <div className="pr-scorecard-pips">
                 <RiskPip label={f.payout} value={v(toEnglishText(firm.reviewSignals.payoutRisk))} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
@@ -1076,6 +1077,12 @@ export default async function FirmPage({ params }: Props) {
                     <li key={`${rule.source}-${index}`} className={rule.status === 'conflicting' ? 'pr-rules-conflict' : ''}>
                       <p>{tx(rule.rule)}</p>
                       <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {tx(rule.impact)}</p>
+                      {rule.severity && rule.clarity ? (
+                        <span className="pr-rules-tags">
+                          <span className={`pr-tag pr-tone-${rule.severity === 'blocking' ? 'risk' : rule.severity === 'major' ? 'watch' : 'none'}`}>{f.rulesSeverity[rule.severity]}</span>
+                          <span className="pr-tag pr-tone-none">{f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity]}</span>
+                        </span>
+                      ) : null}
                       {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
                       <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
                     </li>
