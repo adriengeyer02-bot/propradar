@@ -1415,7 +1415,7 @@
       "addSources": [{"label":"Bulenox 2026 Fast Track fee and risk-structure tables","url":"https://bulenox.com/help-center/fast-track"},{"label":"Bulenox current account routes","url":"https://bulenox.com/"},{"label":"Bulenox exact-domain Trustpilot 4.6/5","url":"https://www.trustpilot.com/review/bulenox.com"}]
     },
     "city-traders-imperium": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1440,13 +1440,117 @@
           "summary": "Owner-supplied CTI referral link added to the programme buttons and partner pop-up, with affiliate disclosure. Tracking parameters are preserved. No discount code or percentage was supplied; score, audit level and review date are unchanged.",
           "source": "https://app.citytradersimperium.com/user-auth/register?referral_code=8b3df5&utm_source=client&utm_medium=referral&utm_id=8b3df5",
           "fields": ["affiliateLink", "commercialRelationship", "partnerOffer"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "The terms linked as authoritative on the current CTI site are the August 2026 PDF, not the previously reviewed September 2025 CTI FZCO-only contract. They identify Comoros-registered City Traders Imperium Limited (15969) as provider of the simulated skill assessments and CTI FZCO as the separate Dubai-based academy; the older UAE wording is retained historically, not treated as current. The new contract still permits substantial risk-rule discretion and source-code requests. Score revised from 74 to 68, without disputing the brand's ongoing activity.",
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf",
+          "fields": ["score", "verdict", "auditSummary", "legalReview", "entities"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "CTI's current FAQ confirms an actual stop-loss order within 60 seconds of opening on all trades; this is NOT a minimum position-holding period. Third-party EAs are permitted for 1-Step only; other plans require the trader's own source-code-accessible EA. Refunds usually cease after the first simulated trade, and the conduct policy grants sanctions for several classes of abusive behaviour. No general prohibition on truthful reviews has been established.",
+          "source": "https://citytradersimperium.com/ea-trading-rules/",
+          "fields": ["verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Trustpilot remains 4.3/5, now from 1,646 reviews. The updated company program comparison says standard challenge share starts at 80% (not 100%); 100% is reached only at specified VIP levels. This is not independent bank-payout verification.",
+          "source": "https://www.trustpilot.com/review/citytradersimperium.com",
+          "fields": ["trustpilotReviewCount"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Reconciled all four CURRENT CTI programs with the firm's October 2026 published comparison: 1-Step starts at $29 and 2-Step at $39, with distinct trailing/static drawdowns; Instant from $79 starts with half nominal balance and a 50% split; the former 'Instant Pro' card is now marketed as Direct Funding from $229, full nominal balance, 70% share and day-five first payout. Existing owner-supplied affiliate links are carried over unchanged.",
+          "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+          "fields": ["products", "priceFrom"]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 1641,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com"
-      }
+        "trustpilotReviewCount": 1646,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com",
+        "score": 68,
+        "verdict": "City Traders Imperium still offers four live-to-buy simulated assessment routes, with clear program tables and a strong volume of positive reviews. But the current August 2026 contract identifies a Comoros assessment provider rather than the older UAE contracting language. The firm's 60-second rule is a mandatory stop-loss placement deadline, not a minimum holding time; discretionary risk reviews, EA source-code requests and strict refund/dispute clauses make the 100% VIP headline an incomplete guide to customer rights. PropRadar score: 68/100.",
+        "auditSummary": "18 November 2026: PropRadar followed CTI's current Terms page to its authoritative August 2026, 30-page contract. The current site names City Traders Imperium Limited, registration 15969 in Anjouan/Comoros with a Costa Rica operating address, as the simulated-skill-assessment provider; Dubai-based CTI FZCO now presents itself as the Academy educator. This supersedes the operator allocation in the September 2025 archived contract, not the existence of the old document. The new terms still describe no live financial trading and permit requesting KYC, prior trading records or EA source code within short deadlines, plus invalidating trades, account closure and leverage/risk changes where forbidden practices are found. CTI's official EA guide says a real visible stop loss must be installed within 60 seconds after each trade opens, with automatic closure if missing; that is not a minimum trade-duration restriction. Third-party EAs are allowed on 1-Step; self-developed, source-available algorithms are specified on the other three paths. The first reward is advertised after seven days on challenges or from day five under Direct Funding, but later payouts follow monthly or semi-monthly schedules until VIP thresholds. A 100% share is for VIP Silver, not the first payout; instant starts at 50%, Direct at 70%, challenges at 80%. Refunds normally end after the first simulated transaction, and the conduct policy's broad category wording requires careful reading, without inferring that legitimate customer criticism is forbidden. Trustpilot: 4.3/5 from 1,646 reviews; user experiences and company payout marketing are not independent transaction audit. Editorial score 74 to 68 due contract-jurisdiction and discretion risk, with explicit credit for useful public rules and positive review history."
+      },
+      "setEntities": [
+        {"name": "City Traders Imperium Limited", "jurisdiction": "Union of Comoros, Anjouan", "registrationNumber": "15969", "registeredAddress": "Hamchako, Mutsamudu, Autonomous Island of Anjouan, Comoros Union; operating address: Edificio Faro, Oficina 4, Barrio Luján, San José, Costa Rica", "role": "Provider of simulated skill assessment and trading programmes according to the authoritative August 2026 terms and current official footer. Not a verified regulated broker."},
+        {"name": "CTI FZCO", "jurisdiction": "Dubai, United Arab Emirates", "registrationNumber": "DSO-FZCO-21340", "registeredAddress": "Dubai Silicon Oasis, DDP, Building A1, Dubai, United Arab Emirates", "role": "Current provider of CTI Academy education. The archived September 2025 evaluation PDF previously named CTI FZCO as the trading-program contracting operator; the August 2026 terms assign assessment services to the Comoros entity."},
+        {"name": "Golden Trader Program Academy Limited", "jurisdiction": "England and Wales", "registrationNumber": "11463147", "registeredAddress": "124 City Road, London, EC1V 2NX, United Kingdom", "role": "Historic former UK City Traders Imperium company, renamed January 2025 and the subject of a March 2026 voluntary strike-off application; not the operator named on CTI's current website. The filing does not itself establish dissolution."}
+      ],
+      "setProducts": [
+        {
+          "id": "cti-one-step", "name": "CTI 1-Step Challenge", "type": "Challenge",
+          "description": "One-phase simulated evaluation, from $29 for 2.5K. 80% funded share initially, up to 100% only after VIP progression. Visible stop-loss required within 60 seconds on each position; third-party EAs allowed.",
+          "accountSizeMin": 2500, "accountSizeMax": 100000, "entryFeeMin": 29, "entryFeeMax": 449,
+          "profitTarget": "8%", "maxDailyLoss": "None", "maxDrawdown": "5% trailing, balance-based",
+          "profitSplit": "80% initial; 90% / 100% at VIP tiers", "platforms": ["MT5", "Match-Trader"], "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "3 profitable days in evaluation", "hasConsistencyRule": false,
+          "consistencyRule": "No percentage rule stated for payout; general conduct and stop-loss obligations remain."
+        },
+        {
+          "id": "cti-two-step", "name": "CTI 2-Step Challenge", "type": "Challenge",
+          "description": "Two-phase simulated evaluation, from $39 for 2.5K. 80% initial reward share. Personal EAs only and a visible stop-loss within 60 seconds; no third-party EAs or Martingale.",
+          "accountSizeMin": 2500, "accountSizeMax": 100000, "entryFeeMin": 39, "entryFeeMax": 549,
+          "profitTarget": "10% phase 1; 5% phase 2", "maxDailyLoss": "5% of initial balance, measured from each day's starting balance", "maxDrawdown": "10% static, balance-based",
+          "profitSplit": "80% initial; 90% / 100% at VIP tiers", "platforms": ["MT5", "Match-Trader"], "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "3 profitable days per evaluation phase", "hasConsistencyRule": false,
+          "consistencyRule": "No percentage rule stated for payout; general conduct and stop-loss obligations remain."
+        },
+        {
+          "id": "cti-instant", "name": "CTI Instant Funding", "type": "Instant funding",
+          "description": "No separate evaluation; $79–$1,599 list price for 2.5K–80K nominal accounts. Starts with only half nominal balance and 50% share; first reward five days after full funding.",
+          "accountSizeMin": 2500, "accountSizeMax": 80000, "entryFeeMin": 79, "entryFeeMax": 1599,
+          "profitTarget": "10% milestones for scaling", "maxDailyLoss": "None", "maxDrawdown": "6% static, balance-based",
+          "profitSplit": "50% initially, 70% after first scale, then up to 100% via VIP", "platforms": ["MT5", "Match-Trader"], "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "Five days after fully funded for first payout", "hasConsistencyRule": true,
+          "consistencyRule": "20% score for scaling, not for ordinary payouts."
+        },
+        {
+          "id": "cti-instant-pro", "name": "CTI Direct Funding", "type": "Instant funding",
+          "description": "Current name of the premium no-evaluation path. $229–$3,999 for 5K–80K; full nominal starting balance and 70% share. First reward on request from day five; later schedule depends on tier.",
+          "accountSizeMin": 5000, "accountSizeMax": 80000, "entryFeeMin": 229, "entryFeeMax": 3999,
+          "profitTarget": "10% milestones for scaling", "maxDailyLoss": "None", "maxDrawdown": "6% static, balance-based",
+          "profitSplit": "70% initial, 90% / 100% at VIP tiers", "platforms": ["MT5", "Match-Trader"], "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "First payout on demand from day five", "hasConsistencyRule": true,
+          "consistencyRule": "20% score for scaling, not for ordinary payouts."
+        }
+      ],
+      "setLegalReview": {
+        "summary": "Medium-to-high legal and contractual risk. The current August 2026 official terms supersede the archived 2025 operator wording: Comoros-registered City Traders Imperium Limited supplies simulated assessments from an operating address in Costa Rica; Dubai CTI FZCO supplies Academy education. Neither is represented by the company as a broker holding client investment capital. Broad rules for monitoring and discretion over accounts, trades, chargebacks and payment eligibility remain material.",
+        "regulatoryStatus": [
+          "The current authoritative 2026 terms and contact page name City Traders Imperium Limited (Comoros/Anjouan, company 15969) as the simulated trading-assessment provider, with an operating address in Costa Rica, and CTI FZCO (Dubai) as the Academy provider; the September 2025 version naming UAE CTI FZCO as evaluation contractor is historical.",
+          "Both providers describe educational/simulated services, not live brokerage deposits; the separate invitation to a live broker agreement is discretionary and not established as a protected or routine stage by these terms.",
+          "Anjouan's license-verification page displays 15969 as active, but this jurisdictional registration cannot be equated with FCA, ASIC, or EU investor protection. The former renamed UK entity must not be confused with either current operator."
+        ],
+        "complaintsAndDisputes": [
+          "The current contract allows review of trading risk, source-code and KYC requests, disregard of certain trades, reduced leverage, cancellation and denial of refunds on stated grounds; the published decision process is not a guarantee of independent adjudication.",
+          "Current refund policy generally bars refunds after the first simulated trade, with limited seven-day inactive-account exceptions; it also sets adverse consequences for what CTI labels unjustified payment disputes.",
+          "Trustpilot is 4.3/5 from 1,646 reviews; positive payout and support comments coexist with critical accounts, none independently adjudicated by PropRadar."
+        ],
+        "redFlags": [
+          "The older 2025 PDF and current 2026 authoritative PDF identify different providers for assessments; purchasers should retain the version attached to their checkout and invoice.",
+          "A visible stop-loss within 60 seconds is mandatory; 2-Step, Instant and Direct have stricter EA ownership/source-code restrictions than 1-Step. These are not minimum trade-holding periods.",
+          "Broad conduct and risk-discretion language and short KYC/source-code response requirements can affect account and payout rights; up-to-100% split and immediate payout headlines are tier-dependent."
+        ],
+        "sources": [
+          {"label": "Authoritative CTI terms linked on current site (August 2026)", "url": "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf"},
+          {"label": "CTI contact and current contracting-role disclosure", "url": "https://citytradersimperium.com/contact-us/"},
+          {"label": "CTI official EA and stop-loss rule explanation", "url": "https://citytradersimperium.com/ea-trading-rules/"},
+          {"label": "CTI refund and chargeback policy", "url": "https://citytradersimperium.com/fee-refund-policy/"},
+          {"label": "CTI code of conduct", "url": "https://citytradersimperium.com/code-of-conduct-policy/"},
+          {"label": "CTI four-program comparison (October 2026)", "url": "https://citytradersimperium.com/choosing-your-funding-program/"},
+          {"label": "CTI claimed Trustpilot reviews", "url": "https://www.trustpilot.com/review/citytradersimperium.com"}
+        ]
+      },
+      "addSources": [
+        {"label": "CTI latest official 2026 contract identifying Comoros assessments and UAE Academy", "url": "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf"},
+        {"label": "CTI official EA and stop-loss timing rules", "url": "https://citytradersimperium.com/ea-trading-rules/"},
+        {"label": "CTI current refund policy", "url": "https://citytradersimperium.com/fee-refund-policy/"},
+        {"label": "CTI current conduct policy", "url": "https://citytradersimperium.com/code-of-conduct-policy/"},
+        {"label": "CTI current four-program payout, profit-share and tier rules", "url": "https://citytradersimperium.com/choosing-your-funding-program/"}
+      ]
     },
     "clarity-traders": {
       "reviewedAt": "2026-11-15",
@@ -4644,15 +4748,18 @@
       ]
     },
     "oneup-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.7,
-        "trustpilotReviewCount": 2814,
+        "trustpilotReviewCount": 2824,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/oneuptrader.com",
         "profitSplit": 90,
         "payoutDelay": "one withdrawal per calendar week, processed the same day once the withdrawal threshold is met ($1,000 minimum); extra withdrawals in the same week carry a 10% priority fee",
         "drawdownType": "Trailing",
-        "newsTrading": "Restricted"
+        "newsTrading": "Restricted",
+        "score": 66,
+        "verdict": "OneUp Trader is an established futures evaluation brand with a transparent subscription menu and 4.7/5 on Trustpilot. Its funded-partner rules, however, prohibit certain sub-10-second strategies, require weekly trading volume of at least half the evaluation average, and impose a recurring positive-balance check during the first 90 days. Evaluation consistency and the $1,000 minimum payout add friction beyond the headline 90% split. These terms are public, not allegations of concealed rules or unpaid rewards. PropRadar: 66/100.",
+        "auditSummary": "18 November 2026: official OneUp documentation distinguishes a 10/5-trading-day ordinary/Pro evaluation from the obligations after placement with funding partners. The evaluation has a specific consistency calculation: three other strong days' aggregate net profit must be at least 80% of the best day, with some alternative calculations documented. Funded accounts must place at least 50% of the average number of weekly evaluation trades each week, subject to holiday proration and approved inactivity exceptions. During the first 90 days, the rules call for a positive net balance against the starting figure at 15-day intervals, with discretionary warnings when below. The funding partners expressly bar micro-scalping, latency arbitrage and other listed strategies lasting less than ten seconds; this is not a proven automatic violation for every protective stop that happens to close early. Overnight economic releases and cross-account copy trading remain restricted. Withdrawal terms publish 100% of the first $10,000 of eligible gains and 90% thereafter, at least $1,000 per withdrawal, once weekly as standard, with 10% priority fees for additional same-week withdrawals. Trustpilot is 4.7/5 across 2,824 reviews but does not independently verify every fund transfer or contract outcome. Score reduced from 72 to 66 for cumulative behavioural, duration and liquidity restrictions, not for proven review manipulation or business closure."
       },
       "changelog": [
         {
@@ -4697,6 +4804,24 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Deep funded-account audit: the official partner rules prohibit listed sub-10-second micro-scalping/latency strategies, require at least 50% of average evaluation weekly trade count, and apply positive-balance monitoring in 15-day periods during the first 90 days. These are published conditions; no claim that every sub-10-second SL/TP is a breach. Score 72 to 66 with strong positive review history acknowledged.",
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "fields": ["score", "verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Evaluation consistency is measured by comparing the best trading day with the aggregate of other best days; the official article requires 80% of the leading day's profit as the comparison, not no consistency rule. Trustpilot refreshed to 4.7/5 from 2,824 reviews.",
+          "source": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
+          "fields": ["auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Claimed Trustpilot profile still displays 4.7/5, now 2,824 reviews. No official platform-rating suspension found.",
+          "source": "https://www.trustpilot.com/review/oneuptrader.com",
+          "fields": ["trustpilotReviewCount"]
         }
       ],
       "setProducts": [
@@ -4753,6 +4878,10 @@
         {
           "label": "OneUp Trader funded trader rules",
           "url": "https://help.oneuptrader.com/article/372-funded-trader-rules"
+        },
+        {
+          "label": "OneUp Trader evaluation consistency and minimum trading days",
+          "url": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation"
         }
       ]
     },
@@ -5243,11 +5372,14 @@
       ]
     },
     "take-profit-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.4,
-        "trustpilotReviewCount": 11175,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com"
+        "trustpilotReviewCount": 11297,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com",
+        "score": 68,
+        "verdict": "Take Profit Trader has unusually well-documented futures rules, US entity information and a large positive review base. Its 'day-one payout' on PRO nevertheless requires first building a drawdown-sized buffer (for example $2,000 on $50K); the first account-to-wallet transfer is not the same as money reaching a bank. Intraday unrealized trailing drawdown, one trading day per week, no bots and news flat periods remain strict. PRO+ offers 90% and no buffer only if the company chooses to upgrade the trader. PropRadar: 68/100.",
+        "auditSummary": "18 November 2026: TakeProfitTrader's October 2026 official PRO withdrawal article clarifies that a trader can request on day one only if the PRO account has first earned a buffer equal to its maximum drawdown: $50,000 accounts need $52,000 before ordinary 80/20 withdrawals; it says 50% of this buffer can be withdrawn after closure. The September PRO rules ban automated bots and algorithms, require a weekly round trip, liquidate accounts whose intraday trailing equity (including unrealized peak gains) breaches the floor, and require all orders and positions closed one minute before, during and one minute after listed CPI/NFP/FOMC events. The August 20 payout-speed update offers 5–10-second account-to-wallet transfers for eligible Tradovate PRO accounts; moving money from the wallet to a bank or payment channel is separate, with manual compliance checks of up to twelve business hours and further settlement time. Wallet requests of $250 or less incur a $50 fee; amounts above $250 are fee-free from TPT, excluding processor costs. PRO+ has a 90% split, no buffer and end-of-day drawdown, but transfer to live PRO+ is at TPT's sole discretion, not automatic after passing. Trustpilot remains 4.4/5 across 11,297 reviews; positive experiences do not independently validate each advertised time. Score reduced from 73 to 68 for payout qualification, account loss mechanics and process distinction, with explicit credit for clear current help pages and company visibility."
       },
       "changelog": [
         {
@@ -5273,13 +5405,36 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "The day-one PRO payout headline requires prior buffer profit (e.g. $2,000 above starting balance on $50K); 80% applies above that threshold, and the help article states only half the buffer can be withdrawn after closure. Intraday trailing drawdown and inactivity/news restrictions remain. Score 73 to 68 for material practical withdrawal constraints, while crediting current detailed documentation.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+          "fields": ["score", "verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "TPT's fast automated processing is an eligible Tradovate PRO account-to-wallet transfer only. Wallet-to-bank withdrawal is a separate compliance/payment step, not guaranteed in 5–10 seconds; PRO+ live-account upgrade is discretionary.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/37697356049949-Speed-of-Payouts-Update-Q-A",
+          "fields": ["auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Trustpilot still displays 4.4/5 on 11,297 reviews, no withheld-rating notice observed.",
+          "source": "https://www.trustpilot.com/review/takeprofittrader.com",
+          "fields": ["trustpilotReviewCount"]
         }
       ],
       "addSources": [
         {
           "label": "TradeInformer: Take Profit Trader cuts evaluation minimum to three days (17 Aug 2026)",
           "url": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days"
-        }
+        },
+        {"label": "TPT PRO buffer and 80/20 withdrawal rules (October 2026)", "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules"},
+        {"label": "TPT September 2026 PRO trading restrictions", "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"},
+        {"label": "TPT wallet versus bank payout-time distinction", "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/37697356049949-Speed-of-Payouts-Update-Q-A"},
+        {"label": "TPT withdrawal fees for small amounts", "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172354954525-Withdrawal-Fees"},
+        {"label": "TPT discretionary PRO+ upgrade", "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171929948829-Advantages-of-PRO"}
       ]
     },
     "the-concept-trading": {
@@ -6040,15 +6195,30 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "The current Program Terms condition eligibility of EACH profitable position on a minimum 10-cent price move and 60-second opening-to-closing interval, except 30 seconds on specified MAX/FLEX plans; partial adds/reductions also count. They separately set a generally 30% best-position profit-concentration ratio and a 5% cap relative to the previous minute's market volume. Profits outside these criteria may not count toward evaluation or withdrawal. The terms do not explicitly resolve every protective stop/take-profit scenario, so no automatic account-closure claim is made. Score 76 to 66.",
+          "source": "https://tradethepool.com/program-terms/",
+          "fields": ["score", "verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Claimed Trustpilot page: 4.5/5 on 1,002 reviews, positive user feedback alongside complaints about strict rules and qualification. Neither category is a certified payout record.",
+          "source": "https://www.trustpilot.com/review/tradethepool.com",
+          "fields": ["trustpilotReviewCount"]
         }
       ],
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "set": {
         "profitSplit": 70,
         "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 969,
+        "trustpilotReviewCount": 1002,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
-        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
+        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days",
+        "score": 66,
+        "verdict": "Trade The Pool remains a recognizable stocks-only evaluation run by the The5ers group's Israeli operator, with a 4.5/5 public Trustpilot score and 70% standard share on MAX/FLEX. But its binding trading terms say profits only count if each position passes a 10-cent minimum move and a minimum 30 seconds on MAX/FLEX or 60 seconds under the general rule, with other volume/concentration checks. A stop or take-profit closing early is not expressly exempted in those terms; the exact treatment should be confirmed, not assumed. The rules are public but unusually restrictive. PropRadar: 66/100.",
+        "auditSummary": "18 November 2026: direct rereading of Trade The Pool's official Program Terms finds duration and price-distance tests in the 'Consistency/Validity Rules' for each position: at least 10 cents from average entry to average exit, and at least 60 seconds between each position opening/addition and subsequent closing/reduction except 30 seconds for MAX/FLEX. Profit from a position failing these tests may not be counted toward targets or the simulated payout, even if a protective order closed it; the public text does not spell out a separate automatic-breach policy for every stop-loss or take-profit, so this audit does not assert that an early defensive exit alone necessarily closes an account. A generally 30% best-position-to-total-profit ratio, a 5% position-volume limit relative to the preceding one-minute stock candle, halt restrictions and case-by-case risk review create further qualification friction. The terms allow a reward request after at least 14 days and a minimum account surplus, and state that the professional stage can differ from the evaluation at company discretion. MAX/FLEX generally share 70/30; Edge advertises up to 80% in distinct conditions. Favourable counterweights: differentiated US-stock access, the named Five Percent Online Ltd operator and Trustpilot's still-published 4.5/5 on 1,002 reviews. These are signals, not independent proof of every payout. Score reduced from 76 to 66 for objective trade-validity risk; no claim of rating manipulation, universal nonpayment or closure is made."
       },
       "addSources": [
         {
@@ -6058,6 +6228,10 @@
         {
           "label": "Trade The Pool program page (official)",
           "url": "https://tradethepool.com/the-program/"
+        },
+        {
+          "label": "Trade The Pool binding position validity, scalping and withdrawal rules",
+          "url": "https://tradethepool.com/program-terms/"
         }
       ]
     },
@@ -7178,7 +7352,7 @@
       ]
     },
     "axi-select": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -7196,18 +7370,43 @@
           "fields": [
             "noEntryFee"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Rechecked the genuine no-challenge-fee capital-allocation model. It requires at least $500 of trader-owned LIVE CFD equity, 20 closed trades and Edge Score 50; Seed normally has 0% program profit share, while 80% is only the top Pro M stage. Each promotion also depends on 7% allocation-account profits, minimum stage days, Edge Score, trade count and higher equity thresholds. The route is therefore not a risk-free funded challenge. Kept 77/100: mature disclosures and no challenge fee offset the own-capital and qualification risks.",
+          "source": "https://www.axi.com/int/funded-trader-program",
+          "fields": ["verdict", "auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Axi's official support specifies the 20-trade and $500 own-capital entry requirements, and its stage progression FAQ requires qualifying trade counts, equity, Edge Score, minimum stage duration and 7% simulated allocation-account profit. Distinct from buying a simulated evaluation.",
+          "source": "https://help.axi.com/en-US/axiv2--axicorp-prod/article/zLCbArkB-how-do-i-qualify-for-the-axi-select-program",
+          "fields": ["auditSummary"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Trustpilot displays 4.1/5 on 8,354 reviews for the broader Axi BROKER brand; that sample is not specific to the Axi Select program, so no Axi Select Trustpilot numeric rating was inserted. Axi Select's participation depends on region; the AxiTrader LLC international product should not be conflated with separately regulated Axi EU/UK accounts.",
+          "source": "https://www.trustpilot.com/review/axi.com",
+          "fields": ["auditSummary"]
         }
       ],
       "set": {
         "profitSplit": 80,
         "payoutDelay": "monthly, on the 1st of each month",
-        "noEntryFee": true
+        "noEntryFee": true,
+        "verdict": "Axi Select is a real-money, broker-linked allocation pathway rather than an ordinary paid prop challenge: no registration or evaluation fee, and transparent progression as high as $1M, but the trader must risk at least $500 in a live leveraged CFD account first. The advertised 80% is the final stage, not the Seed share, and monthly payment follows detailed performance and equity rules. The broker's 4.1/5 Trustpilot average is not a dedicated Axi Select review sample. Score maintained at 77/100 for its documented model, subject to country eligibility.",
+        "auditSummary": "18 November 2026: official Axi Select rules were reread against current support articles. The international program belongs to an AxiTrader LLC customer trading account and charges no sign-up, subscription or simulated evaluation fee, but starting requires at least $500 in personal live trading equity, 20 nonhedged closed trades and an Edge Score of 50. CFD gains and losses on the trader's own funds remain real, unlike a simulated prop challenge. Six stages progress from Seed ($5K allocation, normally 0% share) through Incubation (40%) to Pro M ($1M allocation, 80%), conditional on increasing equity ($1K to $20K), Edge Score, number of trades, minimum 30/60-day stage periods and, until Pro 500, a 7% allocation-account profit target. Monthly profit share is processed at the start of each month, and Axi permits custom payout percentages from Incubation onward. Regional availability must be confirmed by legal counterparty: Axi Select targets the offshore AxiTrader LLC route, distinct from the regulated Axi EU/UK broker products; a contemporaneous August 2026 independent review says EU, UK, Australia and New Zealand residents cannot enrol. Trustpilot's 4.1/5 on 8,354 reviews concerns the larger Axi broker domain, NOT a dedicated Axi Select population and so is not copied into this prop-firm's score inputs. Nothing in the reviewed official pages establishes a Trustpilot-rating suspension, an unannounced minimum hold-time rule or a current program closure. Score held at 77/100 to reflect the no-fee, specific and active documented offering while emphasising personal capital-at-risk and the unequal six-stage payout economics."
       },
       "addSources": [
         {
           "label": "Axi Select program page (official)",
           "url": "https://www.axi.com/int/funded-trader-program"
-        }
+        },
+        {"label": "Axi official 20 trades, live $500 and Edge Score qualification", "url": "https://help.axi.com/en-US/axiv2--axicorp-prod/article/zLCbArkB-how-do-i-qualify-for-the-axi-select-program"},
+        {"label": "Axi official allocation-account stage targets", "url": "https://svgsupport.axi.com/en-US/axisvg--axicorp-prod/article/g9t1fAl3-what-is-the-profit-target-to-advance-to-the-next-axi-select-stage"},
+        {"label": "Axi official monthly profit-share setting", "url": "https://cysecsupport.axi.com/en-US/axicysec--axicorp-prod/article/X5igfFKb-can-i-choose-how-much-of-my-profit-share-is-paid-out-each-month"},
+        {"label": "Axi Select 2026 review on eligibility/geography", "url": "https://www.investing.com/brokers/reviews/axi-select/"},
+        {"label": "Axi broker-level reviews (not solely Axi Select)", "url": "https://www.trustpilot.com/review/axi.com"}
       ]
     },
     "kortanafx": {
