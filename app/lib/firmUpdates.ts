@@ -45,6 +45,8 @@ export type FirmUpdate = {
     auditSummary: PropFirm['auditSummary'];
     score: number;
     priceFrom: number;
+    /** Official non-USD list price; preserve source currency rather than pretending USD equivalence. */
+    nativePriceFrom: NonNullable<PropFirm['nativePriceFrom']>;
     profitSplit: number;
     payoutDelay: string;
     trustpilotRating: number;
@@ -145,6 +147,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (set.auditSummary !== undefined) next.auditSummary = set.auditSummary;
     if (typeof set.score === 'number') next.score = set.score;
     if (typeof set.priceFrom === 'number') next.priceFrom = set.priceFrom;
+    if (set.nativePriceFrom) next.nativePriceFrom = set.nativePriceFrom;
     if (typeof set.profitSplit === 'number') {
       next.profitSplit = set.profitSplit;
       next.provisional = next.provisional?.filter((field) => field !== 'profitSplit');

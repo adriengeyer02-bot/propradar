@@ -7,6 +7,7 @@ export const auditFrenchDetails: Record<string, {
   entities?: string[];
   incidents?: string[];
   restrictiveRules?: { program: string; rule: string; impact: string }[];
+  products?: { name?: string; description?: string; drawdownDetails?: string; maxDrawdown?: string; maxDailyLoss?: string; consistencyRule?: string; profitTarget?: string; profitSplit?: string; minTradingDays?: string }[];
 }> = {
   'goat-funded-trader': {
     restrictiveRules: [
@@ -31,10 +32,82 @@ export const auditFrenchDetails: Record<string, {
   },
   ftuk: {
     restrictiveRules: [
+      { program: 'FTUK Flex Challenge — compte financé', rule: 'Au premier niveau financé, le meilleur jour doit représenter moins de 20 % des gains visés par le retrait ; le seuil évolue avec les niveaux. Le protecteur de compte clôture les positions si la perte latente dépasse 2 % ; deux déclenchements constituent une violation définitive.', impact: 'Un retrait rentable peut rester bloqué par la consistance, et plusieurs clôtures automatiques de risque peuvent faire perdre le compte.' },
+      { program: 'FTUK FLEX Futures — compte financé uniquement', rule: 'Après évaluation, limite de perte journalière souple, consistance de 40 %, cinq jours gagnants, réserve à conserver et plafond par retrait. Pendant l’évaluation, aucune limite journalière n’est prévue.', impact: 'Réussir l’évaluation ne rend pas les gains immédiatement retirables ; les contraintes du compte financé ne doivent pas être appliquées au challenge.' },
+      { program: 'FTUK Instant Sim Funding — retraits futures', rule: 'Objectif de gains de 6 % pour le retrait, cinq jours gagnants, consistance maximale de 20 %, réserve non retirable et plafonds de retrait variables selon le compte.', impact: 'Il n’y a pas d’évaluation, mais « instantané » ne signifie pas qu’on peut retirer les gains sans conditions.' },
       { program: 'FTUK forex et futures — évaluation et compte financé', rule: 'Chaque position doit rester ouverte au moins 30 secondes, même lorsqu’un stop-loss ou take-profit la ferme plus tôt.', impact: 'Un SL/TP déclenché automatiquement avant 30 secondes peut enfreindre la règle, sans clôture manuelle prématurée.' },
       { program: 'FTUK — connexions au compte et retraits', rule: 'La multiplication ou le changement de serveurs VPN, certains schémas d’adresses IP et une connexion depuis un autre pays non signalée peuvent déclencher un contrôle.', impact: 'FTUK indique qu’une infraction à ces conditions peut entraîner le refus du retrait et la fermeture du compte.' }
     ],
-    changelog: ["", "", "La règle officielle impose 30 secondes à tous les trades, y compris en cas de SL/TP. Avec les restrictions de stratégie et d'IP, la note baisse de 72 à 65 sans accuser la société de cacher ses règles.", "Conditions VPN/IP vérifiées ; les plaintes et les réponses de FTUK restent contradictoires et non arbitrées.", "Trustpilot affiche 3,9/5 sur 811 avis ; aucune suspension de note n'est signalée."]
+    changelog: ["", "", "La règle officielle impose 30 secondes à tous les trades, y compris en cas de SL/TP. Avec les restrictions de stratégie et d'IP, la note baisse de 72 à 65 sans accuser la société de cacher ses règles.", "Conditions VPN/IP vérifiées ; les plaintes et les réponses de FTUK restent contradictoires et non arbitrées.", "Trustpilot affiche 3,9/5 sur 811 avis ; aucune suspension de note n'est signalée.", "Quatre offres actuelles vérifiées séparément : Flex Challenge 6 % trailing avec verrouillage, Instant Funding 6 % relatif, FLEX Futures et Instant Sim Funding trailing EOD. L'ancien Two-Step à 8 % statique est distinct. Note inchangée."],
+    products: [
+      { name: 'Flex Challenge (paiement après réussite)', description: 'Évaluation forex/CFD en une étape, dès 9 $ puis frais d’activation après réussite. La limite maximale de 6 % suit les plus hauts de solde clôturé jusqu’au niveau initial.', drawdownDetails: 'Suit le plus haut solde clôturé ; le plancher reste fixe une fois revenu au capital initial.', maxDrawdown: '6 % suiveur ; se verrouille au capital initial', maxDailyLoss: '5 % recalculés à 22 h UTC depuis le plus élevé du solde ou de l’équité', profitTarget: '4 % (une phase d’évaluation)', profitSplit: '60 % au départ, jusqu’à 90 % avec progression', minTradingDays: 'Au moins un jour pendant l’évaluation', consistencyRule: 'Financé : meilleure journée < 20 % des gains demandés au niveau 1 ; plafond relevé progressivement jusqu’à 40 %.' },
+      { name: 'Instant Funding (forex/CFD)', description: 'Compte financé simulé sans évaluation. La perte maximale suit le plus haut solde clôturé et se fige quand le plancher atteint le capital initial.', drawdownDetails: 'Suiveur selon le solde clôturé ; ce n’est pas un seuil statique de 6 % avant verrouillage.', maxDrawdown: '6 % relatif/suiveur ; se verrouille au capital initial', maxDailyLoss: '5 % depuis le plus élevé du solde ou de l’équité à 22 h UTC', profitTarget: 'Pas d’évaluation ; 10 % pour progresser de niveau', profitSplit: '65 % au départ, jusqu’à 90 % selon la FAQ officielle', consistencyRule: 'Retrait financé : 20 % aux niveaux 1–2, puis 30 à 40 % aux niveaux suivants.' },
+      { name: 'FLEX Futures — évaluation et compte financé', description: 'Évaluation rapide dès 59 $, 30 jours pour réussir, puis frais d’activation distincts. Le compte financé ajoute une perte journalière souple et des conditions de retrait.', drawdownDetails: 'Suit le solde de fin de journée, sans suivre les gains latents ; verrouillage au capital initial +100 $.', maxDrawdown: 'EOD suiveur de 1 000 à 4 000 $ (2,67 à 4 %), verrouillage à +100 $', maxDailyLoss: 'Évaluation : aucune ; financé : limite souple de 500 à 1 750 $ selon la taille', profitTarget: '5 % en évaluation', minTradingDays: 'Évaluation : 1 jour gagnant ; retrait financé : 5 jours admissibles', consistencyRule: 'Retraits financés : meilleure journée ≤ 40 %, minimum 500 $, réserve et plafonds selon le compte.' },
+      { name: 'Instant Sim Funding (futures)', description: 'Compte futures simulé sans évaluation ni activation après réussite. L’objectif de 6 % conditionne le retrait, pas une réussite de challenge.', drawdownDetails: 'Le seuil monte avec les soldes de clôture EOD ; l’équité qui touche ce plancher entraîne une violation immédiate.', maxDrawdown: 'EOD suiveur de 1 000 à 5 250 $ ; violation définitive sur l’équité', maxDailyLoss: '750 à 3 000 $ (blocage pour la journée, remise à zéro le lendemain)', profitTarget: 'Pas d’évaluation ; objectif de retrait 6 %', minTradingDays: '5 jours gagnants admissibles avant retrait', consistencyRule: 'Retrait : meilleure journée ≤ 20 % des gains clôturés, réserve et plafond selon le compte.' }
+    ]
+  },
+  'funderpro': {
+    restrictiveRules: [
+      { program: 'FunderPro Instant — seuil de verrouillage contradictoire', rule: 'Les conditions contractuelles Instant (art. 6.1) indiquent que le drawdown suiveur de 6 % se verrouille au capital initial, mais un exemple chiffré de la FAQ annonce un verrouillage à 94 % de ce capital. Ces deux seuils sont incompatibles.', impact: 'Demandez une clarification écrite et contrôlez le seuil affiché sur le compte avant achat ; nous ne présentons pas cet exemple comme cohérent.' },
+      { program: 'FunderPro One-Phase et Pro — évaluation uniquement', rule: 'La meilleure journée ne peut dépasser 40 % des profits sur One-Phase, et 45 % sur chacune des phases Pro. Classic n’applique pas ce test, pas plus que les comptes financés de ces challenges selon la FAQ.', impact: 'Un challenge bénéficiaire peut rester bloqué à cause d’une seule grosse journée ; cette règle ne s’étend pas à Classic ni aux comptes financés.' },
+      { program: 'FunderPro Pro Weekly — compte financé uniquement', rule: 'La formule 90 % avec retrait hebdomadaire limite aussi la marge utilisée à 20 %, impose 1 % de profit du capital initial par demande et maintient 5 % de perte quotidienne / 10 % globale.', impact: 'Le partage de gains plus élevé s’accompagne d’une limite de marge pouvant entraîner suppression des gains ou clôture.' },
+      { program: 'FunderPro Instant — compte financé direct', rule: 'Le risque est limité à 2 % du capital par idée de trade, même avec plusieurs entrées. Le premier écart peut supprimer les gains, le second ferme le compte ; plus de 80 % de marge peut entraîner une clôture immédiate.', impact: 'Fractionner les ordres ne contourne pas le plafond ; certaines violations peuvent fermer le compte dès la première occurrence.' }
+    ],
+    products: [
+      { name: 'One-Phase — évaluation', drawdownDetails: 'Plancher maximal fixé au capital initial ; le pourcentage exact One-Phase doit être confirmé sur le tableau de bord.', maxDrawdown: 'Pourcentage fixe du capital initial ; valeur One-Phase exacte à confirmer', maxDailyLoss: '3 % du solde de la veille, violation sur l’équité', consistencyRule: 'Évaluation : meilleure journée ≤ 40 % des gains. Aucune consistance après financement selon la FAQ.' },
+      { name: 'Classic — challenge 2 phases', drawdownDetails: 'Le seuil maximal reste fixe ; seule la limite quotidienne est recalculée.', maxDrawdown: '10 % statique depuis le capital initial', maxDailyLoss: '5 % sur le solde, réinitialisés à 17 h EST' },
+      { name: 'Pro — challenge 2 phases', drawdownDetails: 'Seuil de perte maximal fixe ; formule Pro Weekly limitée à 20 % de marge utilisée.', maxDrawdown: '10 % statique depuis le capital initial', consistencyRule: 'Évaluation uniquement : meilleure journée ≤ 45 % des gains sur les deux phases.' }
+    ]
+  },
+  'maven-trading': {
+    restrictiveRules: [
+      { program: 'Maven Standard 1-Step — challenge et compte financé', rule: 'Le drawdown maximal de 5 % suit le plus haut de l’équité, profits latents compris ; il ne se verrouille jamais et n’est remis à zéro qu’après un retrait.', impact: 'Un gain latent temporaire peut relever le seuil de liquidation, même si le trade finit avec un plus petit profit.' },
+      { program: 'Maven Instant — financement direct', rule: 'Drawdown maximal suiveur de 3 % sur le pic d’équité, limite quotidienne de 2 % et perte latente cumulée maximale de 1 % sur les positions ouvertes.', impact: 'Une position qui reflue après un pic, ou une perte latente cumulée au-delà de 1 %, peut fermer le compte.' },
+      { program: 'Maven Standard 2-Step — évaluation', rule: 'Trois jours gagnants d’au moins 0,5 % du capital initial en net sont requis, en plus des objectifs de 8 % puis 5 %.', impact: 'Atteindre le profit cible ne suffit pas si les jours bénéficiaires admissibles manquent.' },
+      { program: 'Maven Buy Now Pay Later — évaluation / financé', rule: 'En évaluation : 10 % de perte statique sans limite journalière. En financé : perte maximale suiveuse de 8 % et perte journalière EOD de 4 %.', impact: 'Les limites changent après réussite ; le seuil statique de 10 % ne s’applique pas automatiquement au compte financé.' }
+    ],
+    products: [
+      { name: 'Standard 1-Step — suiveur', drawdownDetails: 'Suit sans verrouillage les plus hauts d’équité, profits latents compris ; remis à zéro après retrait.', maxDrawdown: '5 % suiveur depuis le plus haut d’équité intraday' },
+      { name: 'Static 1-Step', drawdownDetails: 'Seuil permanent fixé sous le capital initial : il ne suit pas les gains.', maxDrawdown: '5 % statique sous le capital initial' },
+      { name: 'Standard 2-Step', drawdownDetails: 'Drawdown maximal fixe, mais le reset quotidien sur l’équité peut provoquer une violation temporaire.', maxDrawdown: '8 % statique sous le capital initial' },
+      { name: 'Standard 3-Step', drawdownDetails: 'Seuil fixe de 3 % sur la vie du compte, distinct de la limite quotidienne.', maxDrawdown: '3 % statique sous le capital initial' },
+      { name: 'Instant — compte financé simulé', drawdownDetails: 'Les pics de gains latents comptent ; perte latente cumulée limitée séparément à 1 %.', maxDrawdown: '3 % suiveur depuis le pic d’équité intraday', maxDailyLoss: '2 % quotidiens, plus plafond de 1 % de perte latente cumulée' }
+    ]
+  },
+  'instant-funding': {
+    restrictiveRules: [
+      { program: 'Instant Funding Pro — compte financé direct', rule: 'Le seuil de perte maximale annoncé à 10 % se resserre à 5 % du capital initial après 5 % de gains clôturés. Le drawdown doit être verrouillé avant retrait ; premier retrait à 14 jours, puis tous les sept jours.', impact: 'Le trader ne peut pas forcément retirer avant d’avoir atteint le verrouillage des 5 %, même sur une formule « instantanée ».' },
+      { program: 'Instant Funding One-Phase Pro — évaluation et financé', rule: 'Une idée de trade ne peut dépasser la moitié de la limite de perte journalière initiale ; les entrées du même sens et les réouvertures sous dix minutes s’additionnent. Dépassement : violation définitive.', impact: 'Refermer puis rouvrir rapidement ne réinitialise pas le risque. Les retraits exigent aussi 40 % de consistance et un montant minimum.' },
+      { program: 'Instant Funding Two-Phase — évaluation et financé', rule: 'Limite par idée de trade à 50 % de la perte quotidienne initiale et plafond de lots par classe d’actifs ; un dépassement de lots peut réinitialiser le compte. Retraits : 40 % de consistance et minimum 1,5 % du capital ou 25 $.', impact: 'Le drawdown maximal statique de 10 % n’annule pas les restrictions de taille de positions ni les conditions de retrait.' }
+    ],
+    products: [
+      { name: 'Instant Funding Pro (anciennement Smart)', drawdownDetails: 'Resserrement unique après +5 % de profit clôturé ; ce verrouillage est exigé avant retrait.', maxDrawdown: '10 % initialement, puis plancher verrouillé à capital initial −5 %', profitTarget: 'Sans évaluation ; +5 % de solde pour le verrouillage' },
+      { name: 'One-Phase Pro', drawdownDetails: 'Seuil de perte maximal fixé pour toute la vie du compte, même lorsque les gains augmentent.', maxDrawdown: '8 % statique sous le capital initial' },
+      { name: 'Two-Phase — challenge', drawdownDetails: 'Perte maximale fixe ; plafonds de lots et de risque par idée distincts.', maxDrawdown: '10 % statique sous le capital initial' }
+    ]
+  },
+  'audacity-capital': {
+    restrictiveRules: [
+      { program: 'Audacity Capital Ability One — évaluation', rule: 'La FAQ officielle impose au moins trois jours de trading, dont deux gagnants, tandis que le tableau des conditions générales n’indique aucun jour minimum. Les textes actuels se contredisent.', impact: 'Il faut une confirmation écrite du règlement lié à la date d’achat, sans présenter une version comme certaine.' },
+      { program: 'Audacity Capital Ability One — financé uniquement', rule: 'Consistance maximale de 50 %, premier retrait après 14 jours, puis toutes les deux semaines. Pour les achats depuis le 2 novembre 2026, les frais Ability One ne sont plus remboursés.', impact: 'Un compte bénéficiaire peut devoir trader davantage avant retrait ; ne comptez pas récupérer les frais d’entrée.' },
+      { program: 'Audacity Capital FTP Instant — tous les comptes actifs', rule: 'La limite quotidienne de 5 % suit le pic d’équité intraday. La perte maximale démarre à −10 %, puis se bloque au capital initial après +10 % ; un seul FTP actif autorisé et 35 % de consistance.', impact: 'Un gain latent relève le seuil quotidien, puis le verrouillage maximal empêche de repasser sous le capital initial.' }
+    ],
+    products: [
+      { name: 'Ability Challenge (2 phases)', drawdownDetails: 'Plancher fixe à chaque phase, mais le pourcentage autorisé baisse après la première.', maxDrawdown: '15 % statique phase 1 ; 10 % statique phase 2 et financé' },
+      { name: 'Ability One (1 phase)', drawdownDetails: 'Perte maximale fixe de 6 % depuis le capital initial ; équité contrôlée en temps réel.', maxDrawdown: '6 % statique en évaluation et financé', minTradingDays: 'Contradiction : FAQ 3 jours (2 gagnants), conditions générales aucun' },
+      { name: 'FTP Instant Funding', drawdownDetails: 'Perte quotidienne suiveuse selon le pic d’équité ; perte maximale verrouillée au capital initial après +10 %.', maxDrawdown: '10 % initialement fixe, puis verrouillé au capital initial à +10 %', maxDailyLoss: '5 % suiveurs sur le pic d’équité intraday, réinitialisés chaque jour' }
+    ]
+  },
+  'the-trading-pit': {
+    restrictiveRules: [
+      { program: 'The Trading Pit Futures Prime — évaluation', rule: 'Le drawdown maximal suit les soldes EOD puis se fige au capital initial. Trois jours de trading minimum, consistance de 40 % et clôture forcée des positions avant 15 h 55 CT.', impact: 'Un seul très gros jour ou une position laissée en séance tardive peuvent empêcher la réussite ou provoquer une clôture automatique.' },
+      { program: 'The Trading Pit Futures Prime — retraits financés', rule: 'Cinq jours gagnants d’au moins 150 $ ; demandes espacées de sept jours ; maximum 50 % des gains réalisés, dans des plafonds de 2 500/3 500/5 000 $ selon la taille du compte.', impact: 'Un compte positif ne rend pas tous les gains retirables en une fois.' },
+      { program: 'The Trading Pit Futures Instant — retraits financés', rule: 'Consistance maximale de 20 %, cinq jours de trading, minimum 500 $ et plafonds évolutifs. La pause quotidienne augmente avec 60 % du plus haut profit cumulé EOD.', impact: 'Le compte instantané reste soumis à une forte concentration des gains et à des plafonds ; cette pause évolutive est distincte du drawdown maximal EOD.' }
+    ],
+    products: [
+      { name: 'Futures Prime — challenge', drawdownDetails: 'Suit le solde de fin de journée puis se bloque au capital initial ; franchir le seuil actif en équité fait perdre le compte.', maxDrawdown: '2 000 à 4 500 $ suiveurs EOD, puis plafond fixe au capital initial' },
+      { name: 'Futures Instant (sans challenge)', drawdownDetails: 'Drawdown maximal suiveur EOD jusqu’au capital initial ; pause quotidienne qui se relève séparément.', maxDrawdown: '2 000 $ (50K), 3 500 $ (100K), calcul EOD' }
+    ]
   },
   'lux-trading-firm': {
     restrictiveRules: [

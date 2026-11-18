@@ -775,7 +775,17 @@
       ]
     },
     "audacity-capital": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Audacity Capital Ability One — evaluation","rule":"The official Knowledge Center says at least three trading days including two profitable days, while the general Terms table says no minimum evaluation trading days for Ability One. The two official current sources differ.","impact":"A buyer should request written confirmation of the rules attached to the purchase date; do not promise zero or three days as a settled universal condition.","source":"https://audacity.capital/knowledge-center/ability-one/","status":"conflicting"},
+        {"program":"Audacity Capital Ability One — funded only","rule":"The funded stage has a maximum 50% best-day consistency ratio and 14-day first-payout eligibility followed by bi-weekly requests. Under the post-2-November 2026 terms, the Ability One fee is not refundable.","impact":"A profitable account can have to continue trading before withdrawal, and traders should not expect the initial fee back under the newer plan.","source":"https://audacity.capital/knowledge-center/ability-one/"},
+        {"program":"Audacity Capital FTP Instant Funding — all active accounts","rule":"The 5% daily limit follows the highest intraday equity and resets daily. The maximum lifetime limit starts 10% below initial capital but locks at starting capital after a 10% gain; only one FTP account may be active and payout consistency is 35%.","impact":"Open-trade floating profit can tighten the daily floor, while the 10% max-loss lock removes the ability to fall below initial capital after enough gain.","source":"https://audacity.capital/knowledge-center/ftp/"}
+      ],
+      "set": {
+        "drawdownType": "Hybride",
+        "verdict": "Audacity Capital's offers do not share one drawdown: Ability Challenge and Ability One have fixed maximum-loss thresholds by phase, whereas FTP Instant combines a trailing intraday daily floor with a 10%-to-starting-capital maximum-loss lock. The post-2-November plan rules also remove Ability One's fee refund; a current Knowledge Center passage and the Terms disagree on evaluation minimum days. PropRadar leaves the earlier 64/100 Trustpilot-withheld cap unchanged while flagging the conflict for written clarification.",
+        "auditSummary": "18 November 2026 desk audit of Audacity Capital's published general Terms and separate Knowledge Center pages. Ability Challenge 2-Step permits 15% static max/7.5% daily in phase 1 and 10% static/5% daily in phase 2 and funded, with four trading days in each evaluation phase and no default consistency. Ability One has 6% static max and 3% daily in evaluation/funded, with 50% funded best-day payout ratio, first request after 14 days, and nonrefundable joining fee for purchases from 2 November 2026. However its current Knowledge Center says 3 evaluation days including two winning days, while the current Terms' summary says none; applicability must be confirmed at checkout and neither is silently preferred. FTP Instant (5K–50K) has 5% intraday equity-peak daily trailing and 10% initial-capital maximum loss that locks up at starting capital after a 10% gain; 35% payout consistency and only one active FTP account. New FTP Knowledge Center says no minimum days or original profit target for post-2-Nov purchases, distinct from older archived model statements. All accounts are marketed as simulated trading; no authenticated third-party payout transfer, execution or financial solvency test was performed. Existing Trustpilot withholding notice already caps score at 64, which remains unchanged."
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/audacity.capital)."
       ],
@@ -792,7 +802,19 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 293 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/audacity.capital"
-        }
+        },
+        {"date":"2026-11-18","summary":"Split Ability Challenge 2-Step 15%/10% static, Ability One 6% static and FTP Instant 10% maximum-loss-with-lock plus daily equity-high trailing. Flagged official discrepancy on Ability One evaluation minimum days and the post-2-November nonrefundable fee. No scoring or status change; Trustpilot cap remains.","source":"https://audacity.capital/knowledge-center/ability-one/","fields":["products","drawdownType","restrictiveRules","verdict","auditSummary"]}
+      ],
+      "setProducts": [
+        {"id":"audacity-ability-challenge","name":"Ability Challenge (2-Step)","type":"Challenge","description":"Two-stage simulated evaluation with different phase-1 and phase-2 risk allowances; fee refund only with the first eligible funded withdrawal.","accountSizeMin":5000,"accountSizeMax":200000,"profitTarget":"10% Phase 1; 5% Phase 2","maxDailyLoss":"7.5% Phase 1; 5% Phase 2 and funded","maxDrawdown":"15% static Phase 1; 10% static Phase 2 and funded","drawdownType":"Static","drawdownSource":"https://audacity.capital/terms-and-conditions/","drawdownDetails":"Fixed to starting balance in each phase, but the permitted percentage tightens after the first phase.","profitSplit":"75% initially, eligible higher tiers up to 90%","platforms":["MT5"],"tradableAssets":["Forex","CFD"],"minTradingDays":"4 days per evaluation phase","hasConsistencyRule":false},
+        {"id":"audacity-ability-one","name":"Ability One (1-Step)","type":"Challenge","description":"One-stage simulated evaluation; rules updated for purchases from 2 November 2026. Official Terms and FAQ disagree on minimum evaluation days.","accountSizeMin":5000,"accountSizeMax":100000,"profitTarget":"10% evaluation","maxDailyLoss":"3% reset from higher rollover balance/equity","maxDrawdown":"6% static during evaluation and funded","drawdownType":"Static","drawdownSource":"https://audacity.capital/knowledge-center/ability-one/","drawdownDetails":"Fixed six-percent maximum from initial capital; equity monitored continuously.","profitSplit":"75% initially, up to 90% with scaling","platforms":["MT5"],"tradableAssets":["Forex","CFD"],"minTradingDays":"Conflict: knowledge guide 3 days (2 winning), Terms table none","hasConsistencyRule":true,"consistencyRule":"Funded only: best day ≤50% of total net profit; no funded minimum trading days."},
+        {"id":"audacity-ftp-instant","name":"FTP Instant Funding","type":"Instant funding","description":"Direct simulated account under the post-2-November-2026 FTP rules, with 14-day payout intervals and one active account permitted.","accountSizeMin":5000,"accountSizeMax":50000,"profitTarget":"No evaluation or mandatory initial profit target","maxDailyLoss":"5% intraday equity-high trailing floor, resets daily","maxDrawdown":"10% fixed initial floor; jumps to starting balance after +10% gain","drawdownType":"Hybride","drawdownSource":"https://audacity.capital/knowledge-center/ftp/","drawdownDetails":"Daily loss floor follows intraday equity high; lifetime floor locks to starting capital after 10% gain.","profitSplit":"75% first payout, 80% second, 85% thereafter","platforms":["MT5"],"tradableAssets":["Forex","CFD"],"hasConsistencyRule":true,"consistencyRule":"Funded payout best day ≤35%; no post-2-November minimum profitable days."}
+      ],
+      "addSources": [
+        {"label":"Audacity Capital 2026 programme contract by phase","url":"https://audacity.capital/terms-and-conditions/"},
+        {"label":"Audacity Ability One current knowledge, minimum-day and fee changes","url":"https://audacity.capital/knowledge-center/ability-one/"},
+        {"label":"Audacity FTP Instant current daily/max drawdown and payouts","url":"https://audacity.capital/knowledge-center/ftp/"},
+        {"label":"Audacity verified account sizes by programme","url":"https://audacity.capital/knowledge-center/getting-started/"}
       ]
     },
     "aurafunded": {
@@ -2219,6 +2241,24 @@
     "ftuk": {
       "restrictiveRules": [
         {
+          "program": "FTUK Flex Challenge — funded",
+          "rule": "A 20% best-day consistency test applies at the first funded level, rising only as the account scales. A floating loss exceeding 2% triggers Account Protector; two triggers cause a hard breach.",
+          "impact": "An otherwise profitable payout can be ineligible until the consistency ratio is met, and repeated automated risk closures can terminate the account.",
+          "source": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained"
+        },
+        {
+          "program": "FTUK FLEX Futures — funded only",
+          "rule": "The funded phase has a soft daily loss limit, 40% consistency, five qualifying winning days, payout buffers and a cap per request. The evaluation phase has no daily loss limit.",
+          "impact": "Passing a Futures evaluation does not make profits immediately withdrawable. Do not apply funded payout tests or daily loss limits to the evaluation.",
+          "source": "https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview"
+        },
+        {
+          "program": "FTUK Instant Sim Funding — futures payout stage",
+          "rule": "A 6% payout target, five qualified winning days, a 20% best-day consistency test, a non-withdrawable buffer and size-dependent payout caps apply before a withdrawal request.",
+          "impact": "There is no evaluation phase, but the advertised instant account does not mean unrestricted instant withdrawals.",
+          "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression"
+        },
+        {
           "program": "FTUK forex and futures — evaluation and funded stages",
           "rule": "Each position must remain open for at least 30 seconds, including when its stop-loss or take-profit closes it earlier.",
           "impact": "A fast automatic SL/TP execution can breach the duration rule without a deliberate early manual exit.",
@@ -2233,6 +2273,7 @@
       ],
       "reviewedAt": "2026-11-18",
       "set": {
+        "drawdownType": "Hybride",
         "trustpilotRating": 3.9,
         "trustpilotReviewCount": 811,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com",
@@ -2241,7 +2282,7 @@
         "profitSplit": 80,
         "score": 65,
         "verdict": "FTUK has a live commercial service, disclosed legal entities and a substantial public review history, but mandatory 30-second trade duration, strict multi-IP/VPN restrictions and prohibited-strategy rules present meaningful withdrawal risk even for profitable accounts. These conditions are written in its public help centre, so PropRadar does not call them undisclosed rules or assume every disputed rejection was wrongful. Editorial score: 65/100.",
-        "auditSummary": "18 November 2026: FTUK's official help centre states every forex or futures position must stay open at least 30 seconds, even when a stop-loss or take-profit closes it sooner. Restricted strategies include martingale, grid, anti-scaling, tick and ultra-fast scalping, with account closure specified for prohibited practices. The current IP/VPN policy permits a single consistent address and ordinary mobile/home changes, but concurrent differing IP addresses, server switching, hidden-country location and unapproved overseas trading can lead to denied rewards and closure; traders must alert support before trading while abroad. The company reviews each withdrawal against logs, KYC and these conditions. A November Trustpilot account alleges a prior strategy approval followed by payout denial over seven sub-30-second trades; FTUK's public reply confirms applying the 30-second requirement, while the broader merits and communications are not independently established. The firm's claimed average payout speed and totals are not independently reconciled. Trustpilot now shows 3.9/5 from 811 reviews with no rating-withholding banner. Score 72 to 65 for stringent enforceable rules and contested application, not for a proven company closure or fake-review campaign."
+        "auditSummary": "18 November 2026: FTUK's official help centre states every forex or futures position must stay open at least 30 seconds, even when a stop-loss or take-profit closes it sooner. Restricted strategies include martingale, grid, anti-scaling, tick and ultra-fast scalping, with account closure specified for prohibited practices. The current IP/VPN policy permits a single consistent address and ordinary mobile/home changes, but concurrent differing IP addresses, server switching, hidden-country location and unapproved overseas trading can lead to denied rewards and closure; traders must alert support before trading while abroad. The company reviews each withdrawal against logs, KYC and these conditions. A November Trustpilot account alleges a prior strategy approval followed by payout denial over seven sub-30-second trades; FTUK's public reply confirms applying the 30-second requirement, while the broader merits and communications are not independently established. The firm's claimed average payout speed and totals are not independently reconciled. Trustpilot now shows 3.9/5 from 811 reviews with no rating-withholding banner. Programme-specific drawdowns independently sourced 18 November: Flex Challenge 6% trailing on closed-balance highs, freezing at starting capital, plus 5% daily reset from the higher of equity or balance; forex Instant Funding 6% balance-relative trailing with the same eventual lock and 5% daily limit; FLEX Futures EOD trailing 2.67–4% with different evaluation versus funded daily-loss rules; Instant Sim Funding EOD trailing with $1,000–$5,250 limits and equity-triggered hard breaches. Older One-Step uses 8% relative trailing and the discontinued Two-Step 8% static, neither should be presented as a currently sold challenge. The verified firm-wide drawdown label is hybrid precisely because different available programmes use different mechanics. Score 72 to 65 for stringent enforceable rules and contested application, not for a proven company closure or fake-review campaign."
       },
       "changelog": [
         {
@@ -2266,28 +2307,90 @@
         },
         {"date":"2026-11-18","summary":"Official help centre confirms sub-30-second trades (including SL/TP) violate the duration rule. Combined with published VPN/IP and strategy-closure policy, editor score lowered from 72 to 65; these rules are public, so no unsupported allegation of secret terms.","source":"https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration","fields":["score","verdict","auditSummary","payoutDelay"]},
         {"date":"2026-11-18","summary":"IP/VPN controls and consequences reviewed; trader complaints and FTUK's public response on Trustpilot remain a contested record, not a judicial finding.","source":"https://faq.ftuk.com/en/articles/18247501-ip-address-vpn-location-rules","fields":["auditSummary"]},
-        {"date":"2026-11-18","summary":"Current claimed Trustpilot profile: 3.9/5 from 811 reviews, with no withheld-rating notice; no manipulation penalty applied.","source":"https://www.trustpilot.com/review/ftuk.com","fields":["trustpilotRating","trustpilotReviewCount"]}
+        {"date":"2026-11-18","summary":"Current claimed Trustpilot profile: 3.9/5 from 811 reviews, with no withheld-rating notice; no manipulation penalty applied.","source":"https://www.trustpilot.com/review/ftuk.com","fields":["trustpilotRating","trustpilotReviewCount"]},
+        {"date":"2026-11-18","summary":"Corrected four currently marketed programme cards and sourced each exact drawdown model. Flex Challenge is 6% balance-HWM trailing with a 5% daily limit; Instant Funding is 6% relative trailing; FLEX Futures and Instant Sim Funding both trail EOD but have materially different funded/day-loss and breach rules. Discontinued Two-Step is the distinct 8% static case. Replaced erroneous 'unverified' label without altering score.","source":"https://faq.ftuk.com/en/articles/12333289-what-are-the-drawdown-limits","fields":["products","drawdownType","auditSummary","restrictiveRules"]}
       ],
       "setProducts": [
         {
           "id": "ftuk-flex-challenge",
           "name": "Flex Challenge (pay after you pass)",
           "type": "Challenge",
-          "description": "Starts at $9; an activation fee is charged after passing (the homepage example showed $672 before discount). The legacy One-Step and Two-Step programs stopped being sold on 14 September 2026; existing accounts keep their rules.",
+          "description": "One-step forex/CFD evaluation. Starts at $9, with the activation fee due only after passing. The 6% maximum loss trails closed balance highs until the floor reaches the original balance.",
           "accountSizeMin": 5000,
-          "accountSizeMax": 200000,
-          "profitTarget": "4% (as marketed on the homepage)",
-          "maxDailyLoss": "not stated on the pages read",
-          "maxDrawdown": "not stated on the pages read",
-          "profitSplit": "up to 80%",
-          "platforms": [
-            "not stated"
-          ],
-          "tradableAssets": [
-            "Forex"
-          ],
+          "accountSizeMax": 100000,
+          "entryFeeMin": 9,
+          "profitTarget": "4% (one evaluation stage)",
+          "maxDailyLoss": "5% reset at 22:00 UTC from higher of equity or balance",
+          "maxDrawdown": "6% trailing; locks at initial balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained",
+          "drawdownDetails": "Highest closing balance; once the floor reaches starting balance it stays fixed.",
+          "profitSplit": "60% initially, scaling to 90%",
+          "platforms": ["TradeLocker", "Match-Trader", "MT5"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "minTradingDays": "1 evaluation day minimum",
           "hasConsistencyRule": true,
-          "consistencyRule": "The FAQ says payouts require meeting program requirements such as profit, consistency and winning days; the exact consistency figure was not stated."
+          "consistencyRule": "Funded: best winning day <20% of requested profit at Level 1; limit rises to 40% as the account scales."
+        },
+        {
+          "id": "ftuk-instant-funding",
+          "name": "Instant Funding (forex/CFD)",
+          "type": "Instant funding",
+          "description": "Direct simulated funded account without evaluation. Maximum loss follows the highest closed balance and locks when the floor reaches starting capital; weekend and news holding are allowed subject to other rules.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "No evaluation; 10% for level scaling",
+          "maxDailyLoss": "5% reset from higher of balance or equity at 22:00 UTC",
+          "maxDrawdown": "6% balance-relative trailing; locks at initial balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://faq.ftuk.com/en/articles/12333289-what-are-the-drawdown-limits",
+          "drawdownDetails": "Relative to closed balance; not a static 6% limit until the lock is reached.",
+          "profitSplit": "65% initially, scaling to 90% (official programme FAQ)",
+          "platforms": ["MT5", "Match-Trader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payout: 20% best-day score at Levels 1–2; increases to 30% then 40% at later levels."
+        },
+        {
+          "id": "ftuk-flex-futures",
+          "name": "FLEX Futures — evaluation and funded",
+          "type": "Futures evaluation",
+          "description": "Fast-track evaluation from $59; 30 days to pass and a separate activation fee after passing. The funded phase adds daily soft loss, five profitable days and payout buffers.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 59,
+          "profitTarget": "5% during evaluation",
+          "maxDailyLoss": "Evaluation: none; funded: soft $500–$1,750 depending on size",
+          "maxDrawdown": "EOD trailing $1,000–$4,000 (2.67%–4%), locks at initial balance +$100",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://faq.ftuk.com/en/articles/17589498-flex-futures-maximum-loss-limit-eod",
+          "drawdownDetails": "Trails completed end-of-day balance, not intraday unrealized gains; final floor locks at capital +$100.",
+          "profitSplit": "90%",
+          "platforms": ["WealthCharts"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "Evaluation: 1 profitable day; funded payout: 5 qualifying days",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payout only: 40% best-day limit, minimum $500 payout and programme-specific payout buffers/caps."
+        },
+        {
+          "id": "ftuk-instant-sim-futures",
+          "name": "Instant Sim Funding (futures)",
+          "type": "Instant funding",
+          "description": "Direct simulated Futures account, without evaluation or post-pass activation. A 6% profit target is for payout eligibility, not for passing a challenge.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "No evaluation; payout eligibility target 6%",
+          "maxDailyLoss": "$750–$3,000 (daily soft lock, resets next day)",
+          "maxDrawdown": "EOD trailing $1,000–$5,250, equity breach is permanent",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://faq.ftuk.com/en/articles/12354215-instant-sim-funding-eod-drawdown-daily-loss-limit",
+          "drawdownDetails": "Floor rises on completed EOD balances; equity touching the active floor breaches intraday.",
+          "profitSplit": "90%",
+          "platforms": ["WealthCharts"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "5 qualifying winning days before payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Payout only: best day ≤20% of closed profit, non-withdrawable buffer and size-based payout cap."
         }
       ],
       "addSources": [
@@ -2301,7 +2404,14 @@
         },
         {"label":"FTUK minimum trade duration (including SL/TP)","url":"https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration"},
         {"label":"FTUK current VPN/IP restrictions","url":"https://faq.ftuk.com/en/articles/18247501-ip-address-vpn-location-rules"},
-        {"label":"FTUK prohibited manual strategies","url":"https://faq.ftuk.com/en/articles/14364125-restricted-strategies-for-manual-trading"}
+        {"label":"FTUK prohibited manual strategies","url":"https://faq.ftuk.com/en/articles/14364125-restricted-strategies-for-manual-trading"},
+        {"label":"FTUK FLEX Challenge risk, scaling and payout rules","url":"https://faq.ftuk.com/en/articles/14322511-flex-challenge-explained"},
+        {"label":"FTUK forex Instant Funding relative drawdown (official)","url":"https://faq.ftuk.com/en/articles/12333289-what-are-the-drawdown-limits"},
+        {"label":"FTUK Instant Funding forex programme tiers","url":"https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex"},
+        {"label":"FTUK FLEX Futures EOD maximum loss and lock","url":"https://faq.ftuk.com/en/articles/17589498-flex-futures-maximum-loss-limit-eod"},
+        {"label":"FTUK FLEX Futures evaluation/funded rules","url":"https://faq.ftuk.com/en/articles/17563548-flex-futures-account-rules-overview"},
+        {"label":"FTUK Instant Sim Funding EOD and equity breach","url":"https://faq.ftuk.com/en/articles/12354215-instant-sim-funding-eod-drawdown-daily-loss-limit"},
+        {"label":"FTUK Instant Sim Funding payout conditions","url":"https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression"}
       ]
     },
     "funded-trading-plus": {
@@ -2703,6 +2813,12 @@
       ]
     },
     "funderpro": {
+      "restrictiveRules": [
+        {"program":"FunderPro Instant Program — contradictory official lock example","rule":"The signed Instant Terms section 6.1 says the 6% trailing floor ultimately locks at initial starting capital, but the official Help Center's numeric example says it locks at 94% of initial capital. Those two stated lock levels are incompatible.","impact":"A trader should obtain written confirmation and rely on the contract and live dashboard before paying; this audit does not pretend the worked example is consistent.","source":"https://funderpro.com/instant-account-terms-and-conditions/","status":"conflicting"},
+        {"program":"FunderPro One-Phase and Pro — evaluation only","rule":"The official consistency tests cap the best trading day at 40% for One-Phase and 45% in each Pro evaluation phase. Classic has no such test; the funded stages have none under this FAQ.","impact":"A profitable evaluation can remain ineligible to pass because one day dominates its profits; do not apply this test to Classic or funded challenges.","source":"https://support.funderpro.com/en/articles/377852-what-is-the-consistency-rule-and-how-does-it-affect-my-challenge"},
+        {"program":"FunderPro Pro Weekly Rewards — funded only","rule":"Choosing weekly 90% rewards instead of daily 60% also brings a 20% margin-usage cap, a 1% initial-balance profit minimum per request and 5% daily/10% overall losses.","impact":"A higher advertised profit split comes with an additional risk gate; breaching margin limits may remove profits or close the account.","source":"https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges"},
+        {"program":"FunderPro Instant Program — funded direct","rule":"Risk per trade idea cannot exceed 2% of account balance, aggregating multiple entries and scaling. First breach deducts account profits, the second closes the account; over 80% available margin may cause immediate closure.","impact":"Splitting an order does not bypass the idea-level cap. A single prohibited margin or gambling pattern may terminate the account on the first occurrence.","source":"https://support.funderpro.com/en/articles/527816-instant-risk-management-rules-2-rule-gambling-policy"}
+      ],
       "changelog": [
         {
           "date": "2026-10-23",
@@ -2730,10 +2846,14 @@
             "profitSplit",
             "entities"
           ]
-        }
+        },
+        {"date":"2026-11-18","summary":"Split mixed FunderPro cards into One-Phase, Classic and Pro; funded challenge drawdown is static based on initial balance, whereas the Instant Program is a separate 6% trailing-to-lock model. Revealed 40/45% evaluation consistency, Pro Weekly's 20% margin cap and Instant's 2% per-idea/80% margin constraints. Existing Trustpilot-withheld cap remains; score unchanged at 64.","source":"https://support.funderpro.com/en/articles/377852-what-is-the-consistency-rule-and-how-does-it-affect-my-challenge","fields":["products","restrictiveRules","auditSummary","drawdownType","verdict"]}
       ],
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-18",
       "set": {
+        "drawdownType": "Hybride",
+        "verdict": "FunderPro publishes a generally fixed maximum drawdown for Classic, Pro and One-Phase evaluations, but a separate trailing-to-lock model for Instant accounts. The 40–45% evaluation consistency tests, weekly Pro margin cap and Instant trade-idea restrictions are substantial programme-specific constraints. An unresolved Trustpilot rating-withheld notice already caps PropRadar's score at 64/100; no new score adjustment is made, and the affiliate relationship has no editorial effect.",
+        "auditSummary": "18 November 2026 official-rule desk audit. One-Phase, Classic and Pro challenges use static overall drawdown calculated from initial balance and intraday equity breaches; Classic and Pro publish a 5% balance-based daily limit, One-Phase 3%, with a reset at 5 p.m. EST. Classic has no consistency test, One-Phase has a 40% best-day cap and Pro each evaluation phase 45%, while funded challenge accounts have none per the help FAQ. Pro Weekly rewards (90% option) restrict available margin to 20% and require 1% of starting account capital before a payout; daily Pro rewards advertise a different, 60% split. Direct Instant accounts instead apply a 6% balance trailing maximum drawdown until it locks at starting capital, a 3% daily limit, a 2% risk-per-trade-idea rule with profit removal on first breach and closure on second, and a separate 80% margin-use cap. The latter can be a first-offence termination. Disclosed simulated-service operators in Malta and Saint Lucia were already recorded. Company-reported payouts and marketing do not establish independent individual transfer verification. Trustpilot's earlier withheld score notice remains in the file; score held at 64 pending fresh verified evidence.",
         "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval",
         "priceFrom": 69,
         "profitSplit": 80
@@ -2742,37 +2862,76 @@
         {
           "label": "FunderPro Classic Challenge (official)",
           "url": "https://funderpro.com/the-challenge/"
-        }
+        },
+        {"label":"FunderPro challenge static max drawdown, daily-loss calculation","url":"https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges"},
+        {"label":"FunderPro challenge phase consistency by plan","url":"https://support.funderpro.com/en/articles/377852-what-is-the-consistency-rule-and-how-does-it-affect-my-challenge"},
+        {"label":"FunderPro Pro Weekly reward margin and payout conditions","url":"https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges"},
+        {"label":"FunderPro Instant trailing drawdown","url":"https://support.funderpro.com/en/articles/527811-instant-how-drawdown-works-in-instant-program"},
+        {"label":"FunderPro Instant contract section 6.1 lock threshold","url":"https://funderpro.com/instant-account-terms-and-conditions/"},
+        {"label":"FunderPro Instant per-idea risk and margin restrictions","url":"https://support.funderpro.com/en/articles/527816-instant-risk-management-rules-2-rule-gambling-policy"}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/funderpro.com)."
       ],
       "setProducts": [
         {
-          "id": "funderpro-challenges",
-          "name": "One Phase, Pro and Classic challenges",
+          "id": "funderpro-one-phase",
+          "name": "One-Phase evaluation",
           "type": "Challenge",
-          "description": "Three challenge types (One Phase; Pro and Classic with two phases). The page shows $69 for the $5K account, with the fee processed with the first reward; other prices were not shown. FunderPro states that 7.35% of challenge buyers pass to the funded phase.",
+          "description": "One evaluation phase; 40% best-day consistency cap during evaluation, but no funded-stage consistency under the official FAQ. Two-week funded payouts.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "Programme-specific target: confirm at checkout",
+          "maxDailyLoss": "3% from prior-day balance; equity triggers breach",
+          "maxDrawdown": "Fixed overall percentage of initial balance; check account dashboard for exact One-Phase percentage",
+          "drawdownType": "Static",
+          "drawdownSource": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges",
+          "drawdownDetails": "Fixed initial-balance floor; not a trailing maximum loss. One-Phase percentage is not confirmed on the same current page.",
+          "profitSplit": "Up to 90% with eligible add-on",
+          "platforms": ["MT5", "cTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Metals", "Oil", "Indices", "Crypto"],
+          "minTradingDays": "Evaluation days: see selected account",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Evaluation only: best day ≤40% of total profit; funded challenge stage: none under current FAQ."
+        },
+        {
+          "id": "funderpro-classic",
+          "name": "Classic 2-Phase challenge",
+          "type": "Challenge",
+          "description": "Two-phase simulated evaluation with no consistency rule in either evaluation phase; funded rewards can be requested every 14 days.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "entryFeeMin": 69,
-          "profitTarget": "10% in phase 1, 5% in phase 2",
-          "maxDailyLoss": "5% (the FAQ states 3% for One Phase), balance-based, resets at 5 pm EST",
-          "maxDrawdown": "10% (type not stated)",
-          "profitSplit": "80% in the table; the page also says up to 90%",
-          "platforms": [
-            "MT5"
-          ],
-          "tradableAssets": [
-            "Forex",
-            "Metals",
-            "Oil",
-            "Indices",
-            "Crypto"
-          ],
-          "minTradingDays": "4 per phase",
+          "profitTarget": "10% first phase, 5% second phase",
+          "maxDailyLoss": "5%, balance-based reset at 5 p.m. EST",
+          "maxDrawdown": "10% static from starting balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://funderpro.com/the-challenge/",
+          "drawdownDetails": "Equity touching the fixed maximum-loss floor fails; only the daily threshold resets.",
+          "profitSplit": "80% default; optional 90% upgrade",
+          "platforms": ["MT5", "cTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Metals", "Oil", "Indices", "Crypto"],
+          "minTradingDays": "4 per evaluation phase",
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "funderpro-pro",
+          "name": "Pro 2-Phase challenge",
+          "type": "Challenge",
+          "description": "Two evaluation phases; funded reward choice changes both profit split and margin restrictions.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% first phase, 8% second phase",
+          "maxDailyLoss": "5%, balance-based reset at 5 p.m. EST",
+          "maxDrawdown": "10% static from starting balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://support.funderpro.com/en/articles/377860-what-is-the-drawdown-rule-and-how-does-it-apply-to-funded-account-challenges",
+          "drawdownDetails": "Maximum-loss floor stays fixed; Pro Weekly has a separate 20% margin usage cap.",
+          "profitSplit": "60% daily rewards or 90% weekly rewards (funded)",
+          "platforms": ["MT5", "cTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Metals", "Oil", "Indices", "Crypto"],
           "hasConsistencyRule": true,
-          "consistencyRule": "Classic has no consistency rule; the page does not state one for One Phase or Pro (29 Oct 2026)."
+          "consistencyRule": "Evaluation only: best day ≤45% of total profit in both phases."
         }
       ],
       "setEntities": [
@@ -3918,8 +4077,17 @@
       ]
     },
     "instant-funding": {
-      "reviewedAt": "2026-11-08",
-      "set": {},
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Instant Funding Pro — direct funded account","rule":"The advertised 10% maximum drawdown tightens to 5% of starting capital once the account makes +5% balance profit. Withdrawals require the Smart Drawdown to have locked; the first request is 14 days after the first trade and later requests every seven days.","impact":"A trader cannot necessarily withdraw profitable results before the +5% lock threshold, even on an account marketed as instant funding.","source":"https://instantfunding.com/help/instant-funding-program/"},
+        {"program":"Instant Funding One-Phase Pro — evaluation and funded","rule":"A single trade idea may not risk or lose more than 50% of the account's starting daily-loss budget. Multiple same-direction entries in one instrument and a reopening within ten minutes count as one idea; violation is a hard breach.","impact":"Closing and instantly reopening does not reset the risk budget. The 40% best-day test and 1.5% of starting capital/$25 withdrawal minimum also apply to funded payouts.","source":"https://instantfunding.com/help/one-phase/"},
+        {"program":"Instant Funding Two-Phase — evaluation and funded","rule":"Trade ideas are limited to 50% of the initial daily-loss budget, and asset-class maximum lot sizes apply; exceeding lot sizes can reset the account. Funded withdrawals require a 40% best-day cap and at least 1.5% or $25 of net profit, whichever is larger.","impact":"The flat 10% static maximum loss does not eliminate separate trade-size limits and payout conditions.","source":"https://instantfunding.com/help/two-phase/"}
+      ],
+      "set": {
+        "drawdownType": "Hybride",
+        "verdict": "Instant Funding's product name conceals materially distinct risk models: Instant Funding Pro uses a 10%-to-5% smart drawdown lock, while One-Phase Pro and Two-Phase use genuinely static maximum limits. Per-idea risk caps, best-day payout rules and a required drawdown lock can block payouts or terminate accounts despite profitable performance. These are public official rules, not established undisclosed conditions. PropRadar retains 64/100 under its pre-existing Trustpilot-withheld-rating cap; no independently bank-verified blanket payout conclusion is claimed.",
+        "auditSummary": "18 November 2026: compared current official Instant Funding Pro, One-Phase Pro, Two-Phase and maximum-loss help pages. Pro (formerly Smart) begins at a 10% static-floor distance, but once closed account balance gains 5%, the floor tightens to 5% below the original starting capital and is locked, a hybrid model rather than ordinary static or continuously trailing. A payout request needs this lock; first eligible request follows 14 days, later every seven. One-Phase Pro instead uses 8% static maximum, 3% daily reset from higher balance/equity, 10% evaluation target, 3 separate evaluation days, funded 40% best-day limit and risk-per-idea at 50% of starting daily drawdown with ten-minute aggregation. Two-Phase uses 10% static max and 5% daily, 8% then 5% targets, matching funded best-day/risk-per-idea restrictions and asset-class lot limits. Some other micro, crypto, lite and starter variants have distinct thresholds in the same official table and are not automatically assigned a main-programme rule. Prior documented Trustpilot rating-withheld and profile-merger notice is retained without attributing review-origin wrongdoing to the firm. No live-trade test or independently authenticated individual payout was obtained. Score remains capped at 64/100."
+      },
       "changelog": [
         {
           "date": "2026-10-26",
@@ -3939,13 +4107,23 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 4,379 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/instantfunding.com"
-        }
+        },
+        {"date":"2026-11-18","summary":"Replaced generic Instant Funding account with sourced Instant Funding Pro (10-to-5% hybrid Smart Drawdown), One-Phase Pro (8% static) and Two-Phase (10% static). Recorded payout lock, one-idea and lot-size restrictions separately. Score stays 64 under existing Trustpilot cap, no new accusation or status change.","source":"https://instantfunding.com/help/instant-funding-program/","fields":["products","drawdownType","restrictiveRules","verdict","auditSummary"]}
+      ],
+      "setProducts": [
+        {"id":"instant-funding-pro","name":"Instant Funding Pro (formerly Smart)","type":"Instant funding","description":"Representative $10K account; direct simulated funding with Smart Drawdown and a 14-day first-payout clock.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"No evaluation; reach +5% balance for payout lock","maxDailyLoss":"No programme daily loss stated; 3% risk per trade idea","maxDrawdown":"10% initially; at +5% balance profit, locked floor = initial balance −5%","drawdownType":"Hybride","drawdownSource":"https://instantfunding.com/help/instant-funding-program/","drawdownDetails":"One-time Smart Drawdown step at +5% closed-balance profit; the account must be locked before withdrawal.","profitSplit":"programme-dependent, confirm selected tier","platforms":["MT5","cTrader","Match-Trader"],"tradableAssets":["Forex","CFD"],"hasConsistencyRule":false},
+        {"id":"instant-funding-one-phase-pro","name":"One-Phase Pro","type":"Challenge","description":"Representative $10K one-step evaluation, three trading days and risk-per-idea hard breach rule.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"10% one-phase evaluation","maxDailyLoss":"3% reset at 17:00 EST from higher balance/equity","maxDrawdown":"8% static below starting balance","drawdownType":"Static","drawdownSource":"https://instantfunding.com/help/one-phase/","drawdownDetails":"The lifetime loss floor does not move even when equity rises.","profitSplit":"programme-dependent, confirm selected tier","platforms":["MT5","cTrader","Match-Trader"],"tradableAssets":["Forex","CFD"],"minTradingDays":"3 evaluation days","hasConsistencyRule":true,"consistencyRule":"Funded payout: best day ≤40%; minimum net request 1.5% of starting balance or $25."},
+        {"id":"instant-funding-two-phase","name":"Two-Phase challenge","type":"Challenge","description":"Representative $10K of the officially listed $5K–$200K account range; different payout and per-idea rules from Instant Funding Pro.","accountSizeMin":5000,"accountSizeMax":200000,"profitTarget":"8% Phase 1; 5% Phase 2","maxDailyLoss":"5% reset at 17:00 EST from higher balance/equity","maxDrawdown":"10% static below starting balance","drawdownType":"Static","drawdownSource":"https://instantfunding.com/help/two-phase/","drawdownDetails":"Static maximum loss; separately enforced asset-class lot limits and idea-level risk cap.","profitSplit":"programme-dependent, confirm selected tier","platforms":["MT5","cTrader","Match-Trader"],"tradableAssets":["Forex","Metals","Indices","Crypto"],"minTradingDays":"3 separate evaluation days","hasConsistencyRule":true,"consistencyRule":"Funded payout: best day ≤40%; minimum net request 1.5% of starting balance or $25."}
       ],
       "addSources": [
         {
           "label": "PR Newswire: Instant Funding acquires Funded Trading Plus (26 May 2026)",
           "url": "https://tools.prnewswire.com/en-us/live/20813/release/20260526EN67697"
-        }
+        },
+        {"label":"Instant Funding official programme maximum drawdown types","url":"https://instantfunding.com/help/how-max-loss-is-calculated/"},
+        {"label":"Instant Funding Pro smart lock and payout","url":"https://instantfunding.com/help/instant-funding-program/"},
+        {"label":"Instant Funding One-Phase Pro rules","url":"https://instantfunding.com/help/one-phase/"},
+        {"label":"Instant Funding Two-Phase rules","url":"https://instantfunding.com/help/two-phase/"}
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-28: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/instantfunding.com)."
@@ -4210,8 +4388,18 @@
       ]
     },
     "maven-trading": {
-      "reviewedAt": "2026-11-08",
-      "set": {},
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Maven Standard 1-Step — evaluation and funded","rule":"The 5% maximum loss follows the highest equity reached, including open unrealized gains; it never locks and only resets after a payout.","impact":"A temporary floating profit can raise the account's loss floor even when the position later closes at a smaller profit or a loss.","source":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"},
+        {"program":"Maven Instant — direct funded account","rule":"A 3% intraday equity-high trailing maximum drawdown applies, with a separate 2% daily threshold and a 1% maximum total floating loss on open positions.","impact":"A profitable trade retracing from its unrealized peak, or a floating loss above 1% of starting capital, can terminate the account.","source":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"},
+        {"program":"Maven Standard 2-Step — evaluation","rule":"Three profitable days of at least 0.5% net of initial capital are required in the two-step evaluation, in addition to 8% then 5% phase targets.","impact":"Meeting the profit target does not necessarily pass the evaluation until enough qualifying profitable days are logged.","source":"https://maventrading.crisp.help/en/article/what-are-the-differences-between-mavens-one-step-two-step-and-three-step-trading-challenges-1hxpw02/"},
+        {"program":"Maven Buy Now Pay Later — evaluation vs funded","rule":"Evaluation uses a 10% static maximum drawdown without a daily limit; the funded stage instead uses 8% trailing maximum loss and a 4% EOD daily loss limit.","impact":"Risk conditions become materially different after passing; do not treat the evaluation's static 10% as the funded account's loss allowance.","source":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"}
+      ],
+      "set": {
+        "drawdownType": "Hybride",
+        "verdict": "Maven sells multiple genuinely different risk models: Standard 1-Step is equity-peak trailing, the separately named Static 1-Step stays fixed, the 2/3-Step evaluations are static, and Instant has an unusually tight 1% aggregate floating-loss restriction. This is not one universal 5% drawdown. The pre-existing withheld Trustpilot score notice keeps the PropRadar score capped at 64/100; the new rules are published, and no independent proof of systematic non-payment is asserted.",
+        "auditSummary": "18 November 2026: reviewed Maven's official challenge comparison, drawdown help centre and dedicated Static 1-Step sales page. Standard One-Step uses 5% trailing from the highest intraday equity including unrealized gains and never locks; the separately sold Static 1-Step has 5% fixed maximum loss, 10% profit target and four qualifying profitable days. Standard Two-Step applies 8% static max, 4% daily reset and three 0.5%-profitable days; Standard Three-Step uses 3% static max with 2% daily, 3/3/3% targets. Direct Instant uses a 3% equity-high trailing max, 2% daily and a separate 1% total floating-loss threshold. Buy Now Pay Later changes from 10% static and no daily limit in evaluation to 8% trailing and 4% EOD daily in funded phase. Marketing and help-page labels can look inconsistent if Standard versus Static are not distinguished; the two products themselves are explicitly distinct on Maven's site. No bank-level payout, slippage or execution testing was performed. Existing Trustpilot warning remains recorded; editorial score held at 64 under the existing cap rule."
+      },
       "addIncidents": [
         "Trustpilot's maventrading.com profile, checked on 2026-10-26, displays no TrustScore. Trustpilot's notice (Danish mirror, translated) reads: \"This company's TrustScore is currently unavailable due to a breach of our guidelines\", next to its reminder that companies may not offer incentives or pay to hide reviews. Source: https://dk.trustpilot.com/review/maventrading.com?page=3"
       ],
@@ -4228,7 +4416,21 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (\"This company’s rating is unavailable due to a breach of our guidelines.\" and \"We’ve removed a number of fake reviews for this company.\"). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/maventrading.com"
-        }
+        },
+        {"date":"2026-11-18","summary":"Separated Standard 1-Step 5% equity-high trailing from Static 1-Step 5% fixed. Verified 2-Step 8% static, 3-Step 3% static, Instant 3% trailing with 1% floating-risk cap and BNPL phase-dependent model. Programme-specific constraints and direct FAQ sources added; existing Trustpilot cap and score 64 unchanged.","source":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/","fields":["products","restrictiveRules","drawdownType","verdict","auditSummary"]}
+      ],
+      "setProducts": [
+        {"id":"maven-standard-one-step","name":"Standard 1-Step — trailing","type":"Challenge","description":"Representative $10K Standard One-Step offer, distinct from the Static One-Step variant.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"8% single evaluation phase","maxDailyLoss":"3% from higher of balance/equity at 00:00 UTC","maxDrawdown":"5% trailing highest intraday equity, including floating gains","drawdownType":"Trailing","drawdownSource":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/","drawdownDetails":"Never locks; intraday unrealized peaks count. Tracker resets after an approved payout.","profitSplit":"80%","platforms":["not verified for this specific tier"],"tradableAssets":["Forex","CFD"],"hasConsistencyRule":false},
+        {"id":"maven-static-one-step","name":"Static 1-Step","type":"Challenge","description":"Separate $10K representative tier, four qualifying profitable days; the fixed maximum loss is different from Standard One-Step.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"10% single evaluation phase","maxDailyLoss":"3% from higher of balance/equity at 00:00 UTC","maxDrawdown":"5% static below starting capital","drawdownType":"Static","drawdownSource":"https://maventrading.com/static-1-step","drawdownDetails":"Permanent fixed floor based on initial account size; does not follow profits.","profitSplit":"80%","platforms":["not verified for this specific tier"],"tradableAssets":["Forex","CFD"],"minTradingDays":"4 profitable days ≥0.5%","hasConsistencyRule":false},
+        {"id":"maven-standard-two-step","name":"Standard 2-Step","type":"Challenge","description":"Representative $10K tier; 8% then 5% targets with qualifying profit-day requirement.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"8% Phase 1, 5% Phase 2","maxDailyLoss":"4% from higher of balance/equity at 00:00 UTC","maxDrawdown":"8% static below starting capital","drawdownType":"Static","drawdownSource":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/","drawdownDetails":"Static max but equity-based daily reset can breach on a temporary fluctuation.","profitSplit":"80%","platforms":["not verified for this specific tier"],"tradableAssets":["Forex","CFD"],"minTradingDays":"3 profitable days ≥0.5% net","hasConsistencyRule":false},
+        {"id":"maven-standard-three-step","name":"Standard 3-Step","type":"Challenge","description":"Representative $10K tier, three stages with 3% profit target in each.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"3% per phase, 3 phases","maxDailyLoss":"2% from higher of balance/equity at 00:00 UTC","maxDrawdown":"3% static below starting capital","drawdownType":"Static","drawdownSource":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/","drawdownDetails":"Fixed 3% lifetime floor, independent of the resetting daily limit.","profitSplit":"80%","platforms":["not verified for this specific tier"],"tradableAssets":["Forex","CFD"],"hasConsistencyRule":false},
+        {"id":"maven-instant","name":"Instant direct simulated funded","type":"Instant funding","description":"Representative $10K Instant offer without evaluation, separate from the Standard and Static challenge lines.","accountSizeMin":10000,"accountSizeMax":10000,"profitTarget":"No evaluation target","maxDailyLoss":"2% from higher of balance/equity at 00:00 UTC; 1% maximum floating loss","maxDrawdown":"3% trailing highest intraday equity","drawdownType":"Trailing","drawdownSource":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/","drawdownDetails":"Includes unrealized peaks; 1% total floating-loss condition applies separately.","profitSplit":"80% (verify selected tier)","platforms":["not verified for this specific tier"],"tradableAssets":["Forex","CFD"],"hasConsistencyRule":true,"consistencyRule":"Payout consistency applies; confirm threshold for selected Instant tier."}
+      ],
+      "addSources": [
+        {"label":"Maven official all-model drawdown guide","url":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/"},
+        {"label":"Maven 1/2/3-step evaluation comparison","url":"https://maventrading.crisp.help/en/article/what-are-the-differences-between-mavens-one-step-two-step-and-three-step-trading-challenges-1hxpw02/"},
+        {"label":"Maven distinct Static 1-Step offer","url":"https://maventrading.com/static-1-step"},
+        {"label":"Maven 2026 programme pricing examples","url":"https://maventrading.com/pricing"}
       ]
     },
     "ment-funding": {
@@ -5410,7 +5612,12 @@
       ]
     },
     "the-trading-pit": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"The Trading Pit Futures Prime — evaluation","rule":"The EOD balance trailing maximum drawdown locks at the initial balance. Evaluation requires at least three trading days, a 40% consistency test and liquidation before the 15:55 CT session cut-off.","impact":"One unusually profitable evaluation day or an overnight position can prevent passing or cause forced closure, even when no daily hard-breach occurs.","source":"https://www.thetradingpit.com/trading-rules"},
+        {"program":"The Trading Pit Futures Prime — earning account withdrawals","rule":"Five profitable days of at least $150 each are needed. Requests are every seven days and limited to 50% of realised profit, further capped at $2,500/$3,500/$5,000 for 50K/100K/150K accounts.","impact":"A positive account balance does not mean all earned profits are withdrawable at once; payout caps depend on size and stage.","source":"https://www.thetradingpit.com/futures"},
+        {"program":"The Trading Pit Futures Instant — earning account withdrawals","rule":"The 20% best-day consistency rule, five trading days, $500 minimum profit request and tiered payout caps apply. A daily pause resets from 60% of the highest accumulated EOD profit and can tighten as profits grow.","impact":"A direct funded account still has substantial profit-concentration and withdrawal limits; EOD trailing is separate from the dynamically tightening daily pause.","source":"https://www.thetradingpit.com/futures"}
+      ],
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://au.trustpilot.com/review/thetradingpit.com)."
       ],
@@ -5439,10 +5646,15 @@
           "date": "2026-11-08",
           "summary": "Trustpilot rechecked: the profile still shows no rating (both notices, 1,086 reviews listed). The PropRadar score stays capped at 64 under the Trustpilot rule.",
           "source": "https://www.trustpilot.com/review/thetradingpit.com"
-        }
+        },
+        {"date":"2026-11-18","summary":"Verified programme-specific Futures Prime and Instant EOD trailing loss models, 40% Prime evaluation consistency, five qualified $150 days and 50%-of-profit/capped Prime withdrawals, plus Instant 20% consistency, rising daily pause and payout caps. Fixed missing product drawdown type and removed incorrectly USD-labelled fees: source prices are €99–€289 and €499–€699, and no USD conversion is assumed. Older CFDs are not projected onto futures; Trustpilot cap/64 unchanged.","source":"https://www.thetradingpit.com/futures","fields":["products","priceFrom","nativePriceFrom","drawdownType","restrictiveRules","verdict","auditSummary"]}
       ],
       "set": {
-        "priceFrom": 99,
+        "priceFrom": 0,
+        "nativePriceFrom": { "amount": 99, "currency": "EUR" },
+        "drawdownType": "Hybride",
+        "verdict": "The Trading Pit's Futures Prime and Futures Instant both use EOD-balance trailing maximum drawdown, not a generic static floor, but their daily pauses and payout gates differ. Prime needs five $150 profitable days and pays no more than half realised gains within caps; Instant imposes 20% concentration and payout caps. The group also sells different CFD terms, so the firm-wide label remains hybrid. Pre-existing Trustpilot withheld-rating evidence already caps PropRadar's score at 64/100, unchanged; no blanket payout failure is inferred.",
+        "auditSummary": "18 November 2026 programme review of the Trading Pit's official Futures sales and trading rules. Futures Prime $50K/100K/150K accounts use $2,000/3,000/4,500 EOD-balance trailing drawdown until it reaches the initial balance and stops. A daily pause of $1,000–$3,000 is evaluation-only; passing requires at least three trading days and the trading-rules page describes a 40% consistency target, while funded withdrawal requires five profitable days of at least $150, a seven-day request interval, up to 50% of accrued realised profits and $2,500/3,500/5,000 per-request caps. Futures Instant $50K/100K uses $2,000/$3,500 EOD trailing and dynamic daily pause of $1,200/$2,200 initially, linked to 60% of best accumulated EOD gains. A 20% best-day limit, five trading days, $500 request minimum and sequential payout caps constrain direct-funded withdrawals. The Trading Pit also markets CFD challenges; the terms on its official CFDs section are different and should not be applied to the futures products. It has publicly posted risk controls, but no individual transfer or platform execution audit was completed. Prior Trustpilot withheld-rating notice remains; score held at 64/100.",
         "profitSplit": 80,
         "newsTrading": "Allowed",
         "payoutDelay": "Futures Prime: a reward every 7 days after 5 profitable days of at least $150; Futures Instant: every 5 days above $500, with caps"
@@ -5452,14 +5664,15 @@
           "id": "ttp-futures-prime",
           "name": "Futures Prime challenge",
           "type": "Futures evaluation",
-          "description": "One-time fee, 30-day challenge, activation fee waived on 29 Oct 2026 ($129 listed). CFD challenge figures were not shown on the CFD page read.",
+          "description": "Official listed price €99–€289 by account size; 30-day challenge with reset/extension charges. A temporary zero activation charge is advertised; prices remain in euros, not converted to USD.",
           "accountSizeMin": 50000,
           "accountSizeMax": 150000,
-          "entryFeeMin": 99,
-          "entryFeeMax": 289,
           "profitTarget": "$3,000 (50K), $6,000 (100K), $9,000 (150K)",
           "maxDailyLoss": "daily pause of $1,000 to $3,000 in the challenge",
           "maxDrawdown": "$2,000 to $4,500, trailing on the end-of-day balance until it reaches the starting balance, then fixed",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://www.thetradingpit.com/futures",
+          "drawdownDetails": "Floor follows completed end-of-day balance and stops at starting capital; equity reaching the active floor is a breach.",
           "profitSplit": "80%",
           "platforms": [
             "not stated"
@@ -5467,21 +5680,23 @@
           "tradableAssets": [
             "Futures"
           ],
-          "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rule stated for Futures Prime (29 Oct 2026)."
+          "minTradingDays": "Evaluation: 3 trading days; funded payout: 5 days with at least $150 profit",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Evaluation: 40% best-day consistency on the profit target (trading-rules page); funded withdrawal has separate five-day and capped amount conditions."
         },
         {
           "id": "ttp-futures-instant",
           "name": "Futures Instant (no challenge)",
           "type": "Instant funding",
-          "description": "Direct funded futures account, no activation fee. News trading allowed; weekend and overnight holding not allowed.",
+          "description": "Official listed fee €499–€699, no activation fee. News trading allowed; overnight and weekend holding disallowed. Euro prices are not converted to USD.",
           "accountSizeMin": 50000,
           "accountSizeMax": 100000,
-          "entryFeeMin": 499,
-          "entryFeeMax": 699,
           "profitTarget": "$3,000 (50K), $6,000 (100K) payout goal",
           "maxDailyLoss": "daily pause from $1,200 / $2,200, recalculated at 60% of the best end-of-day profit",
           "maxDrawdown": "$2,000 (50K), $3,500 (100K), end-of-day",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://www.thetradingpit.com/futures",
+          "drawdownDetails": "EOD balance trailing up to initial capital; daily pause is a separate rising risk threshold.",
           "profitSplit": "90%",
           "platforms": [
             "NinjaTrader",

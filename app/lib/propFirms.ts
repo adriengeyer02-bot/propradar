@@ -18,6 +18,12 @@ export type Product = {
   profitTarget: string;
   maxDailyLoss: string;
   maxDrawdown: string;
+  /** Drawdown mechanics verified for this exact programme, never inferred from the firm-wide label. */
+  drawdownType?: 'Static' | 'Trailing' | 'EOD' | 'Hybride';
+  /** Official programme rule documenting the type, calculation basis and lock behaviour. */
+  drawdownSource?: string;
+  /** Optional concise detail on calculation, lock level and intra-day enforcement. */
+  drawdownDetails?: string;
   profitSplit: string;
   platforms: string[];
   tradableAssets: string[];
