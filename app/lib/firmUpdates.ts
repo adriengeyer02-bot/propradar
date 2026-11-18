@@ -32,6 +32,7 @@ export type FirmUpdate = {
     verdict: PropFirm['verdict'];
     /** Dated, sourced substantive dossier; retains its actual review maturity. */
     auditSummary: PropFirm['auditSummary'];
+    headquarters: PropFirm['headquarters'];
     score: number;
     priceFrom: number;
     profitSplit: number;
@@ -67,9 +68,9 @@ export type FirmUpdate = {
   addIncidents?: string[];
   /** Replaces the legal entities of the profile (name, jurisdiction, role...), read on a public source. */
   setEntities?: RegulatoryEntity[];
-  /** Refreshes the written legal file without changing the risk level or identified entities. */
+  /** Refreshes the evidence-based legal file; risk-level revisions require the same sourced owner review as incidents. */
   setLegalReview?: Pick<RegulatoryAudit, 'summary' | 'complaintsAndDisputes' | 'redFlags' | 'sources'> &
-    Partial<Pick<RegulatoryAudit, 'regulatoryStatus'>>;
+    Partial<Pick<RegulatoryAudit, 'regulatoryStatus' | 'riskLevel'>>;
   /** Public payout proof to append (never replaces earlier items). */
   addPayoutProofs?: PayoutProof[];
   changelog: FirmChangelogEntry[];
@@ -132,6 +133,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     if (set.status) next.status = set.status;
     if (set.verdict !== undefined) next.verdict = set.verdict;
     if (set.auditSummary !== undefined) next.auditSummary = set.auditSummary;
+    if (set.headquarters !== undefined) next.headquarters = set.headquarters;
     if (typeof set.score === 'number') next.score = set.score;
     if (typeof set.priceFrom === 'number') next.priceFrom = set.priceFrom;
     if (typeof set.profitSplit === 'number') {

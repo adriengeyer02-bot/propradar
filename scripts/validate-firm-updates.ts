@@ -19,7 +19,7 @@ const FILE = 'app/data/firm-updates.json';
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
-  'status', 'verdict', 'auditSummary', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
+  'status', 'verdict', 'auditSummary', 'headquarters', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite', 'historicLogoDomain',
   'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
@@ -72,14 +72,18 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     if (legal.regulatoryStatus !== undefined && (!Array.isArray(legal.regulatoryStatus) || legal.regulatoryStatus.some((item) => typeof item !== 'string' || !item.trim()))) {
       errors.push(`${where}.setLegalReview.regulatoryStatus: array of non-empty strings required`);
     }
+    if (legal.riskLevel !== undefined && !['Low', 'Low to medium', 'Medium', 'Medium to high', 'High', 'Critical', 'To audit'].includes(legal.riskLevel)) {
+      errors.push(`${where}.setLegalReview.riskLevel: unrecognized legal risk level`);
+    }
     if (!Array.isArray(legal.sources) || !legal.sources.length || legal.sources.some((source) => !source.label || !isHttpsUrl(source.url))) errors.push(`${where}.setLegalReview.sources: public sources required`);
     for (const key of Object.keys(legal)) {
-      if (!['summary', 'regulatoryStatus', 'complaintsAndDisputes', 'redFlags', 'sources'].includes(key)) errors.push(`${where}.setLegalReview.${key}: field not allowed`);
+      if (!['summary', 'riskLevel', 'regulatoryStatus', 'complaintsAndDisputes', 'redFlags', 'sources'].includes(key)) errors.push(`${where}.setLegalReview.${key}: field not allowed`);
     }
     if (!(update.changelog ?? []).some((entry) => entry.fields?.includes('legalReview') && legal.sources?.some((source) => source.url === entry.source))) errors.push(`${where}.setLegalReview: matching sourced legalReview changelog required`);
     const oldSources = new Set([...firm.sources, ...firm.regulatoryAudit.sources, ...(previous.firms?.[slug]?.addSources ?? []), ...(previous.firms?.[slug]?.setLegalReview?.sources ?? [])].map((source) => source.url));
     const newLegalSources = (legal.sources ?? []).filter((source) => !oldSources.has(source.url));
     if (newLegalSources.length) sensitive.push(`${slug}: legal review introduces ${newLegalSources.length} new source(s); check for new incidents before merge`);
+    if (legal.riskLevel !== undefined && legal.riskLevel !== firm.regulatoryAudit.riskLevel) sensitive.push(`${slug}: legal risk ${firm.regulatoryAudit.riskLevel} -> ${legal.riskLevel}`);
     if (BANNED_WORDS.test(JSON.stringify(legal))) sensitive.push(`${slug}: legal-review wording needs a legal read`);
   }
   if (update.setEntities !== undefined) {
@@ -147,6 +151,8 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     if (BANNED_WORDS.test(set.auditSummary)) sensitive.push(`${slug}: audit summary wording needs a legal read`);
   }
   if (set.status !== undefined && !STATUSES.has(set.status)) errors.push(`${where}.set.status invalid`);
+  if (set.headquarters !== undefined && (typeof set.headquarters !== 'string' || set.headquarters.trim().length < 3)) errors.push(`${where}.set.headquarters must name a substantive country or jurisdiction`);
+  if (set.headquarters !== undefined && !(update.changelog ?? []).some((entry) => entry.fields?.includes('headquarters') && isHttpsUrl(entry.source))) errors.push(`${where}.set.headquarters: sourced changelog required`);
   if (set.score !== undefined && (!Number.isInteger(set.score) || set.score < 0 || set.score > 100)) errors.push(`${where}.set.score must be 0-100`);
   if (set.trustpilotRating !== undefined && (set.trustpilotRating < 1 || set.trustpilotRating > 5)) errors.push(`${where}.set.trustpilotRating must be 1-5`);
   if (set.profitSplit !== undefined && (set.profitSplit < 0 || set.profitSplit > 100)) errors.push(`${where}.set.profitSplit must be 0-100`);
