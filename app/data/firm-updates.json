@@ -1778,8 +1778,20 @@
       ]
     },
     "fast-track-trading": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Critical correction: the exact Fast Track Trading LLC is the debtor in US Bankruptcy Court (New Jersey) Chapter 7 case 25-10470, filed 16 January 2025; the trustee's November 2026 docket lists recovery lawsuits, which are pending claims rather than judgments against traders. Canadian securities administrators separately identify the exact fasttracktrading.net domain in a BCSC investor alert. Removed the obsolete watchlist/purchase presentation, classified the trading operation as closed, and lowered 60 to 2/100. No general finding that every payout must be refunded.",
+          "source": "https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc",
+          "fields": ["status", "score", "verdict", "auditSummary", "listedDomainWarning", "legalReview", "entities", "incidents"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "The Canadian Securities Administrators archive records a BCSC investor alert dated January/February 2025 against the Fast Track Trading name and the same .net domain; an alert alone is not an adjudicated offense.",
+          "source": "https://www.securities-administrators.ca/investor-alerts/fast-track-trading/",
+          "fields": ["legalReview", "incidents"]
+        },
         {
           "date": "2026-10-28",
           "summary": "Legal entity read from the official terms: Fast Track Trading, LLC. Its place of formation is not stated, so the country stays to verify; the terms are governed by New Jersey law.",
@@ -1809,17 +1821,50 @@
       "setEntities": [
         {
           "name": "Fast Track Trading, LLC",
-          "jurisdiction": "To verify",
-          "role": "Company named in the official terms. No state of formation or address is given; the terms are governed by the laws of the State of New Jersey (United States)."
+          "jurisdiction": "United States (New Jersey federal bankruptcy court; incorporation state not independently confirmed)",
+          "role": "Same-named debtor in US Bankruptcy Court for the District of New Jersey, Chapter 7 case 25-10470; the former terms also named Fast Track Trading LLC. Bankruptcy court jurisdiction does not prove the state of incorporation."
         }
+      ],
+      "setLegalReview": {
+        "summary": "Former futures evaluation firm, now confirmed as a Chapter 7 debtor in US Bankruptcy Court, District of New Jersey, case 25-10470, filed 16 January 2025. The Canadian Securities Administrators also list a BCSC investor alert for the same Fast Track Trading name and fasttracktrading.net address. The trustee's November 2026 lawsuits seek recovery of certain earlier transfers; filing claims does not establish liability in each case.",
+        "regulatoryStatus": [
+          "US Bankruptcy Court for the District of New Jersey: voluntary Chapter 7 case 25-10470 filed 16 January 2025, debtor Fast Track Trading LLC; the docket remained active on 16 November 2026.",
+          "Canadian Securities Administrators published a British Columbia Securities Commission investor alert in January/February 2025 identifying Fast Track Trading and its fasttracktrading.net domain. This is an alert, not a final liability judgment.",
+          "The business no longer has a verified current challenge checkout or a separately verified successor."
+        ],
+        "complaintsAndDisputes": [
+          "The bankruptcy docket records trustee-initiated recovery proceedings against prior recipients of transfers, including November 2026 Section 547 preference filings. Those are allegations to be resolved in court, not a universal repayment order.",
+          "Historic Trustpilot 3.1/5 from 819 reviews reflects the pre-liquidation period and cannot establish present payment capacity or continued service.",
+          "The final treatment of all unpaid customer rewards, fees and individual litigation defenses has not been independently established."
+        ],
+        "redFlags": [
+          "US Chapter 7 liquidation filing, not simply a young firm awaiting more review.",
+          "Public Canadian securities investor alert for the matching name and .net address.",
+          "Active trustee recovery lawsuits make even some historical payouts the subject of claims; no new purchase link or purported recovery agent should be trusted without verification."
+        ],
+        "sources": [
+          {"label": "New Jersey US Bankruptcy Court docket mirror: Fast Track Trading LLC, case 25-10470", "url": "https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc"},
+          {"label": "Canadian Securities Administrators: BCSC Fast Track Trading investor alert", "url": "https://www.securities-administrators.ca/investor-alerts/fast-track-trading/"}
+        ]
+      },
+      "addIncidents": [
+        "16/01/2025 — Fast Track Trading LLC filed a voluntary Chapter 7 case in US Bankruptcy Court for the District of New Jersey (25-10470); the November 2026 docket includes trustee recovery lawsuits against specific transferees. The legal merits of individual claims have not been adjudicated. Source: https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc",
+        "24/01/2025 — Canadian Securities Administrators record a British Columbia Securities Commission investor alert concerning Fast Track Trading and fasttracktrading.net. The alert itself is not a judicial finding. Source: https://www.securities-administrators.ca/investor-alerts/fast-track-trading/"
       ],
       "addSources": [
         {
           "label": "Fast Track Trading terms and conditions (official)",
           "url": "https://www.fasttracktrading.net/terms-and-conditions/"
-        }
+        },
+        {"label": "New Jersey Chapter 7 docket, Fast Track Trading LLC", "url": "https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc"},
+        {"label": "CSA / BCSC investor alert, Fast Track Trading", "url": "https://www.securities-administrators.ca/investor-alerts/fast-track-trading/"}
       ],
       "set": {
+        "status": "Fermée",
+        "score": 2,
+        "verdict": "Fast Track Trading is no longer a current futures prop-firm purchase option: Fast Track Trading LLC filed for Chapter 7 liquidation in New Jersey in January 2025. The case docket shows trustee lawsuits seeking to recover some historical transfers; these are claims, not findings that every recipient must repay. A Canadian investor alert also names the former .net domain. PropRadar corrects the obsolete 60/100 watchlist entry to a 2/100 historical archive with all purchase links disabled.",
+        "auditSummary": "18 November 2026 corrective audit: US Bankruptcy Court case 25-10470, District of New Jersey, confirms that Fast Track Trading LLC voluntarily filed Chapter 7 on 16 January 2025. The publicly mirrored docket includes proceedings initiated by the trustee in November 2026 seeking to recover certain earlier transfers under bankruptcy provisions. Individual suits are unresolved legal claims; the public record does not prove every historical trader payout is automatically repayable. The Canadian Securities Administrators record a separate BCSC investor alert dated January/February 2025 for Fast Track Trading and fasttracktrading.net. Earlier PropRadar checks had treated this as a young unverified firm; that was materially wrong. No current official challenge operator, reliable restart or complete distribution to prior claimants has been confirmed. Score lowered from 60 to 2, status closed, all purchase links disabled.",
+        "listedDomainWarning": "CHAPTER 7 LIQUIDATION — FORMER FUTURES PROP FIRM: Fast Track Trading LLC entered US Chapter 7 proceedings in January 2025. The trustee has initiated court claims involving certain earlier payments; allegations are not automatically court judgments. A Canadian securities investor alert also names this former firm and domain. Do not buy purported Fast Track challenges, send identity documents, or pay anyone claiming to recover old funds without verifying the bankruptcy case and the legal counterparty.",
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 819,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fasttracktrading.net"
@@ -4980,16 +5025,49 @@
       ]
     },
     "sure-leverage": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-18",
       "set": {
         "officialWebsite": "https://sureleveragefunding.com/",
-        "trustpilotRating": 3.6,
-        "trustpilotReviewCount": 1426,
-        "trustpilotSourceUrl": "https://nl-be.trustpilot.com/review/sureleveragefunding.com",
+        "score": 53,
+        "verdict": "Sure Leverage Funding remains online and publishes a named UAE contracting operator and separate Saint Lucia simulated-platform provider. However, Trustpilot has withdrawn the firm's public TrustScore for a breach of its guidelines and expressly says it removed fake reviews. This does not identify who submitted the reviews or prove the company bought them. Existing pricing and payout marketing are company claims, not independently audited settlements. At the owner's direction PropRadar lowers the rating from 55 to 53/100 and explicitly withholds the former 3.6/5 Trustpilot average.",
+        "auditSummary": "18 November 2026: the live Sure Leverage Funding website identifies ASAP Solutions FZ-LLC in Ras Al Khaimah, UAE, as site operator and fee-charging contractual party. Sure Leverage Funding Ltd, Saint Lucia company number 2025-00514 according to the website, is named as the simulated-trading provider; neither registration was independently confirmed at an official corporate registry. On the exact sureleveragefunding.com Trustpilot page, the TrustScore is no longer available because of a guideline breach and the platform states that it removed fake reviews. A review tally of 1,356 is displayed, but the former 3.6/5 rating is not current and is suppressed. Trustpilot's notice does not itself establish who orchestrated the removed reviews. The 24-hour payout claims and 80% split on the previously examined 2-Step rules have not been independently tested across current products. PropRadar score 55 to 53/100; caution rather than a shutdown label.",
+        "trustpilotReviewCount": 1356,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/sureleveragefunding.com",
         "profitSplit": 80,
         "payoutDelay": "on request once requirements are met, with a stated 24-hour processing guarantee (exceptions for weekends, holidays and compliance reviews)"
       },
+      "setEntities": [
+        {"name": "ASAP Solutions FZ-LLC", "jurisdiction": "United Arab Emirates (Ras Al Khaimah Economic Zone; official website claim, registry not independently verified)", "role": "Named by the company as operator of the website, seller of evaluations and contracting party responsible for program fees."},
+        {"name": "Sure Leverage Funding Ltd", "jurisdiction": "Saint Lucia (claimed company number 2025-00514; registration not independently verified)", "role": "Named by the company as provider of simulated accounts and trading-platform services; distinct from the UAE seller."}
+      ],
+      "setLegalReview": {
+        "summary": "The current site names ASAP Solutions FZ-LLC (United Arab Emirates) as its contracting program-fee collector and Sure Leverage Funding Ltd (Saint Lucia) as its simulated account provider, without direct independent company-registry verification. Trustpilot now withholds the exact domain's rating over a guidelines breach and says it removed fake reviews. This signals review-integrity risk without proving who caused the fake reviews.",
+        "regulatoryStatus": [
+          "Official site claims the program contracting entity is ASAP Solutions FZ-LLC, Ras Al Khaimah, UAE; corporate registry not independently consulted.",
+          "Official site names Sure Leverage Funding Ltd, Saint Lucia, company number 2025-00514, as simulated-account provider; separate from the UAE seller.",
+          "The site disclaims operating as a broker or investment intermediary; a simulated evaluation is not automatically a regulated brokerage account."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot has withdrawn the TrustScore for sureleveragefunding.com, citing a breach of its guidelines and removal of fake reviews; 1,356 reviews still appear in the public list.",
+          "Trustpilot's moderation does not establish whether removed reviews were submitted by the firm, a marketer, a third party or competitors.",
+          "The advertised payout speed and historic 2-Step terms have not been audited through bank-payment evidence for all current challenges."
+        ],
+        "redFlags": [
+          "Current Trustpilot rating unavailable after a moderation breach; displaying the former 3.6/5 would mislead.",
+          "Different UAE contracting and Saint Lucia platform entities; registry status and contractual obligations must be distinguished.",
+          "Large advertised user and reward totals are self-reported, not independently reconciled with external records."
+        ],
+        "sources": [
+          {"label":"Official Sure Leverage Funding homepage and entity disclosures","url":"https://sureleveragefunding.com/"},
+          {"label":"Trustpilot: rating withheld and fake-review removal notice","url":"https://www.trustpilot.com/review/sureleveragefunding.com"}
+        ]
+      },
+      "addIncidents": [
+        "18/11/2026 — Trustpilot states that the rating for Sure Leverage Funding (sureleveragefunding.com) is unavailable due to a breach of our guidelines, and that it removed a number of fake reviews. Trustpilot does not identify who submitted or commissioned those reviews. Source: https://www.trustpilot.com/review/sureleveragefunding.com"
+      ],
       "addSources": [
+        {"label":"Sure Leverage Funding official operator and simulated-provider disclosures","url":"https://sureleveragefunding.com/"},
+        {"label":"Trustpilot live notice: Sure Leverage Funding rating withheld","url":"https://www.trustpilot.com/review/sureleveragefunding.com"},
         {
           "label": "Trustpilot: Sure Leverage Funding (sureleveragefunding.com)",
           "url": "https://nl-be.trustpilot.com/review/sureleveragefunding.com"
@@ -5004,6 +5082,12 @@
         }
       ],
       "changelog": [
+        {
+          "date":"2026-11-18",
+          "summary":"Trustpilot no longer displays the old 3.6/5 TrustScore for Sure Leverage Funding and explicitly reports a guidelines breach with removed fake reviews. Recorded the warning without attributing responsibility for the reviews, withheld the stale rating, verified two self-declared corporate roles from the live site and reduced 55 to the owner-requested 53/100. Added the owner's supplied historical/current brand logo.",
+          "source":"https://www.trustpilot.com/review/sureleveragefunding.com",
+          "fields":["score","verdict","auditSummary","trustpilotReviewCount","incidents","legalReview","entities","historicLogoDomain"]
+        },
         {
           "date": "2026-10-27",
           "summary": "Domain monitor reported sureleverage.com redirecting to sureleveragefunding.com. Checked: the firm's claimed Trustpilot profile (\"Sure Leverage Funding is a global prop trading firm\") lists sureleveragefunding.com, and its TradeLocker Hub listing links its rules at sureleveragefunding.com/faq, so the listed domain is corrected. Trustpilot read on 2026-10-27 (nl-be mirror): 3.6 TrustScore, 1,426 reviews, no Trustpilot warning. Price and split not re-read, left unchanged.",
@@ -7784,8 +7868,14 @@
       }
     },
     "fortunes-funding": {
-      "reviewedAt": "2026-11-07",
+      "reviewedAt": "2026-11-18",
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Reclassified Fortunes Funding as commercially inactive at its former domain, not as legally dissolved: the website served a suspended-hosting page in November, despite help-center material posted in April 2026 and user reports of a 2026 relaunch. A third-party status review dates a previous interruption to 2024 but acknowledges no formal closure announcement. The owner's stated Trustpilot rating of 3.6/5 and the historic PropRadar score of 56 are left unchanged; checkout remains disabled and the listing moves to archives.",
+          "source": "https://propfirmreviews.net/unlisted-prop-firms/",
+          "fields": ["status", "verdict", "auditSummary", "listedDomainWarning", "legalReview"]
+        },
         {
           "date": "2026-10-30",
           "summary": "Trustpilot read for the first time: 3.6 TrustScore across 576 reviews on trustpilot.com (claimed profile); the ie mirror shows 3.6 across 568. Trustpilot notes the company hasn't invited customers recently. The latest snapshot is stored.",
@@ -7805,11 +7895,41 @@
         }
       ],
       "set": {
+        "status": "Fermée",
+        "verdict": "Fortunes Funding cannot currently be verified as an operating evaluation seller at its listed domain: PropRadar observed a hosting suspension in November 2026. Historical reports describe an earlier 2024 interruption, but official help documents posted in April 2026 show that the brand was still publishing terms during an attempted return. This is an inactive commercial archive, not proof of legal dissolution or a permanent shutdown announcement. The owner's historic 56/100 and Trustpilot 3.6/5 figures are preserved for reference, never as a live purchase recommendation.",
+        "auditSummary": "18 November 2026 recheck: fortunesfunding.com returned a hosting-suspended page on 6–7 November and the former help center produced an error at that time, preventing verification of any current checkout or settlement method. An independent July/September 2026 directory classed the brand as dormant, citing an initial 2024 stoppage and no formal closure notice. At the same time, an archived official Fortunes Funding Help Center article dated 21 April 2026 lists fresh Renaissance challenge rules and later 2026 customer reviews describe both service and connectivity problems, so a claim of uninterrupted shutdown since 2024 would be inaccurate. The current domain, contracting entity, conditions for new buyers and resolution of earlier complaints are unverified. Existing Trustpilot snapshot 3.6/5 from 576 reviews and old PropRadar 56/100 are retained as historical figures only. Marked inactive in the archive with no purchase links; court or corporate dissolution is not alleged.",
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 576,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fortunesfunding.com",
-        "listedDomainWarning": "The listed domain fortunesfunding.com redirected to a hosting \"suspended page\" (HTTP 401) when checked on 2026-11-06 and 2026-11-07, and help.fortunesfunding.com returned a Cloudflare error. PropRadar found no announcement of a new Fortunes Funding domain, so the domain is not linked."
-      }
+        "listedDomainWarning": "INACTIVE / WEBSITE SUSPENDED — NO VERIFIED CURRENT CHECKOUT: fortunesfunding.com served a suspended-hosting page in November 2026. The brand's help center had published updated material in April 2026, so an earlier stoppage does not prove continuous closure. No functioning current seller or official dissolution can be authenticated. Trustpilot 3.6/5 and PropRadar 56/100 are historical only. Do not pay or use a supposed relaunch until its legal operator and current contract can be verified."
+      },
+      "setLegalReview": {
+        "summary": "Commercial availability of Fortunes Funding is unverified after the November 2026 suspension of its former domain. The historic 2024 interruption was followed by April 2026 help-center material; neither a continuously functioning 2026 service nor a formal company dissolution is established. Current legal contracting entity, buyer protections and resolution of previous claims remain unknown.",
+        "regulatoryStatus": [
+          "Former official fortunesfunding.com domain showed a suspended-hosting page in early November 2026; there is no authenticated replacement domain.",
+          "Official help-center challenge rules were dated April 2026, preventing a categorical assertion of continuous shutdown since 2024.",
+          "The present contracting company, relevant jurisdiction, regulator status and legal dissolution are not independently established."
+        ],
+        "complaintsAndDisputes": [
+          "The historic Trustpilot snapshot was 3.6/5 from 576 reviews. Some 2026 users reported errors accessing accounts or disputed account restrictions; individual complaints are unadjudicated.",
+          "No reconciled list of funded-account liabilities, paid rewards or refunds was obtained after the latest hosting suspension."
+        ],
+        "redFlags": [
+          "No functioning verified payment storefront on the former official domain at the latest dated check.",
+          "Different historical claims of 2024 shutdown and 2026 restart require separation; neither proves legal dissolution.",
+          "Historical ratings and program listings risk being mistaken for a presently available seller."
+        ],
+        "sources": [
+          {"label":"Former Fortunes Funding domain checked November 2026","url":"https://fortunesfunding.com/"},
+          {"label":"Official Fortunes Funding Help Center: 2026 Renaissance terms","url":"https://help.fortunesfunding.com/en/articles/14687130-the-renaissance"},
+          {"label":"Independent inactive-firm status review","url":"https://propfirmreviews.net/unlisted-prop-firms/"},
+          {"label":"Fortunes Funding Trustpilot historic review page","url":"https://www.trustpilot.com/review/fortunesfunding.com"}
+        ]
+      },
+      "addSources": [
+        {"label":"Fortunes Funding official April 2026 Help Center rules","url":"https://help.fortunesfunding.com/en/articles/14687130-the-renaissance"},
+        {"label":"Independent dated inactive-firm status directory","url":"https://propfirmreviews.net/unlisted-prop-firms/"}
+      ]
     },
     "forex-funds-flow": {
       "reviewedAt": "2026-10-30",
@@ -8745,17 +8865,51 @@
       ]
     },
     "trade-amber": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "set": {
-        "listedDomainWarning": "The listed domain tradeamber.com did not resolve when PropRadar checked it on 12–14 November 2026, and Trustpilot says the company's website has closed. PropRadar found no new official domain."
+        "status": "Fermée",
+        "score": 10,
+        "historicLogoDomain": "tradeamber.com",
+        "verdict": "Trade Amber is no longer verifiably operating as a prop-firm evaluation seller. Its former website failed DNS checks during October–November 2026, and its Trustpilot page describes the company website as closed. An independent dated check likewise classifies it inactive rather than legally dissolved; no official company shutdown statement or verified successor was found. PropRadar moves this former 50/100 watchlist profile to the inactive archive at 10/100, without claiming a court-ordered closure or a resolved refund process.",
+        "auditSummary": "18 November 2026 corrective audit: tradeamber.com failed DNS resolution in PropRadar checks of 12–14 November; an independent 11 October check also recorded NXDOMAIN and no operating storefront. Trustpilot's archived profile says that reviews cannot be posted because the company's website has closed; last review was in March 2024 according to the earlier PropRadar check. TheTrustedProp's October 2026 directory labels the operation CLOSED, but no first-party formal dissolution or final payout accounting was obtained. These are sufficient indicators to remove the business from the current comparison, while describing the status as commercial inactivity rather than proven company liquidation. The owner's provided legacy brand mark is displayed as an archive logo. Old score 50 lowered to 10; purchases are disabled.",
+        "listedDomainWarning": "INACTIVE PROP FIRM — FORMER DOMAIN OFFLINE: tradeamber.com no longer resolves and Trustpilot identifies its website as closed. The former company has no verified challenge store or new official domain, but formal legal dissolution and outstanding payouts are not established. The logo is a historical brand identifier, not evidence of resumed operations. Do not pay an alleged new Trade Amber operator without verifying the company and contract."
+      },
+      "setLegalReview": {
+        "summary": "Trade Amber's former domain was repeatedly unavailable in October and November 2026, while its historic Trustpilot page says the website has closed. Secondary monitors classify the service as inactive or closed. No original legal closure notice, incorporation record, insolvency case or final payout settlement is authenticated.",
+        "regulatoryStatus": [
+          "tradeamber.com returned NXDOMAIN during independent October and PropRadar November 2026 checks.",
+          "Trustpilot says the historic company website has closed; no successor domain or current checkout was verified.",
+          "No official corporate dissolution record or regulator enforcement finding against the operator was obtained."
+        ],
+        "complaintsAndDisputes": [
+          "Legacy customers' withdrawal or refund balances were not independently reconciled when the site disappeared.",
+          "Old reviews and copied account terms are not proof that a firm is currently accepting or honoring evaluations."
+        ],
+        "redFlags": [
+          "Former official domain unavailable; no current company contact or contract verified.",
+          "Legacy directory profiles may continue to display challenges despite lack of an operating storefront.",
+          "Unknown outcome of former customer obligations and no authenticated restart."
+        ],
+        "sources": [
+          {"label":"Trade Amber original domain (unavailable in dated checks)","url":"https://tradeamber.com/"},
+          {"label":"Trade Amber Trustpilot website-closed notice","url":"https://www.trustpilot.com/review/tradeamber.com"},
+          {"label":"Independent dated domain check of Trade Amber","url":"https://mypropgenius.com/closed-firms/trade-amber/"}
+        ]
       },
       "addSources": [
         {
           "label": "Trustpilot: Trade Amber (website closed notice)",
           "url": "https://www.trustpilot.com/review/tradeamber.com"
-        }
+        },
+        {"label":"Independent Trade Amber October 2026 unavailable-domain check","url":"https://mypropgenius.com/closed-firms/trade-amber/"}
       ],
       "changelog": [
+        {
+          "date":"2026-11-18",
+          "summary":"Confirmed the inactive former Trade Amber storefront against dated October/November domain checks and the Trustpilot website-closed indicator; no corporate dissolution was found. Moved the former watchlist entry to the closed/inactive archive, disabled buying, lowered 50 to 10/100 and preserved the user's supplied historical logo.",
+          "source":"https://mypropgenius.com/closed-firms/trade-amber/",
+          "fields":["status","score","verdict","auditSummary","listedDomainWarning","legalReview","historicLogoDomain"]
+        },
         {
           "date": "2026-11-14",
           "summary": "Domain warning: tradeamber.com did not resolve in PropRadar's checks of 12–14 November 2026, and Trustpilot states: \"it's not possible to leave a review here anymore because the company's website has closed\" (latest review 17 March 2024). No new official domain found.",
@@ -8827,11 +8981,50 @@
       ]
     },
     "limitless-funding": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "set": {
-        "listedDomainWarning": "limitlessfunding.com was parked and limitlessfunding.io redirected to google.com when PropRadar checked on 12–14 November 2026; its Trustpilot profile (trustpilot.com/review/limitlessfunding.io) shows no review since 3 December 2024. PropRadar found no current official site."
+        "status": "Fermée",
+        "score": 12,
+        "trustpilotRating": 4.1,
+        "trustpilotReviewCount": 23,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/limitlessfunding.io",
+        "verdict": "Limitless Funding's former .com site is parked and its Trustpilot-associated .io domain no longer presents a verifiable prop-firm storefront. Trustpilot still displays 4.1/5, but only 23 reviews and none in the past 12 months; at least one review discusses a different sort of business, making the small sample especially weak evidence. No new company domain, working checkout, legal successor or confirmed company dissolution was found. PropRadar lists the operation as inactive, reduces the old 50/100 watchlist score to 12/100 and retains the historical review rating only with strong context.",
+        "auditSummary": "18 November 2026: PropRadar's 12–14 November checks found limitlessfunding.com parked and limitlessfunding.io, the domain claimed on Trustpilot, redirecting away from the former evaluation service. An independent September 2026 inquiry likewise saw the .io domain redirect to an advertisement network. The Trustpilot page still records 4.1/5 from 23 reviews, with zero reviews in the preceding year; the last public review visible to PropRadar dates from December 2024 and some content concerns an unrelated credit-service experience. This average cannot validate current payout capacity. A current storefront, contracting company, refund route and first-party closure statement are not verifiable. Classified as commercially inactive in the archive without asserting formal dissolution or confirmed unpaid claims. Score 50 to 12 and no purchases.",
+        "listedDomainWarning": "INACTIVE / DOMAINS NO LONGER SELLING VERIFIED CHALLENGES: limitlessfunding.com is parked and the Trustpilot-linked limitlessfunding.io redirected away from any provable prop-firm service. Its historic Trustpilot 4.1/5 is based on just 23 reviews with no recent activity and is not evidence of a functioning business. Do not pay, send identity documents or rely on a supposed relaunch without independently establishing the current contracting company. Legal dissolution is unconfirmed."
       },
+      "setLegalReview": {
+        "summary": "The original Limitless Funding .com domain was parked, and the Trustpilot-linked .io domain redirected away from the prop-firm service in multiple September–November 2026 checks. Trustpilot's old 4.1/5 has only 23 reviews, no recent activity and at least one apparently unrelated-service review. No valid current legal entity, operational contract, successor, or formal company closure record was established.",
+        "regulatoryStatus": [
+          "limitlessfunding.com was parked in November 2026, while limitlessfunding.io redirected away from the former trading service.",
+          "The Trustpilot page names a Zagreb, Croatia address but provides no independently confirmed current contractual company or registration.",
+          "No official incorporation-status certificate, regulator intervention or signed closure statement was found."
+        ],
+        "complaintsAndDisputes": [
+          "Trustpilot gives 4.1/5 from 23 reviews, zero in the past year; at least one review appears to discuss a separate credit-cleanup service, so the average needs caution.",
+          "No first-party schedule for former account balances, trader payouts or possible refunds could be authenticated."
+        ],
+        "redFlags": [
+          "Both known domains fail to supply a current credible evaluation checkout and legal contract.",
+          "Tiny and stale Trustpilot sample cannot justify treating an unavailable service as live.",
+          "No verified company successor, customer settlement channel or legal dissolution."
+        ],
+        "sources": [
+          {"label":"Limitless Funding Trustpilot historic 4.1/5 and 23 reviews","url":"https://www.trustpilot.com/review/limitlessfunding.io"},
+          {"label":"Independent September 2026 Limitless Funding domain redirection check","url":"https://shortlist.trading/firma/"},
+          {"label":"Former Limitless Funding .com domain","url":"https://limitlessfunding.com/"}
+        ]
+      },
+      "addSources": [
+        {"label":"Trustpilot historic Limitless Funding profile","url":"https://www.trustpilot.com/review/limitlessfunding.io"},
+        {"label":"Independent September 2026 domain continuity review","url":"https://shortlist.trading/firma/"}
+      ],
       "changelog": [
+        {
+          "date":"2026-11-18",
+          "summary":"Recorded the historic 4.1/5 Trustpilot rating (23 reviews, none in twelve months), not proof of live trading. September and November checks found the former domains parked or redirected away. Removed Limitless Funding from the active comparison as commercially inactive, preserving the distinction from legal dissolution, and lowered 50 to 12/100 with all purchase links blocked.",
+          "source":"https://www.trustpilot.com/review/limitlessfunding.io",
+          "fields":["status","score","verdict","auditSummary","listedDomainWarning","trustpilotRating","trustpilotReviewCount","legalReview"]
+        },
         {
           "date": "2026-11-14",
           "summary": "Domain warning: the listed limitlessfunding.com was parked on 12–13 November 2026, and limitlessfunding.io (the domain on its Trustpilot profile, last review 3 December 2024) redirected to google.com on 14 November 2026. No new domain found.",

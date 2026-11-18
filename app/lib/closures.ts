@@ -15,6 +15,38 @@ export type ClosureRecord = {
 
 export const closureRecords: ClosureRecord[] = [
   {
+    slug: 'fast-track-trading',
+    date: '2025-01-16',
+    dateKind: 'reported',
+    summary: 'Fast Track Trading LLC entered a voluntary US Chapter 7 bankruptcy case (New Jersey, 25-10470). November 2026 docket entries include trustee recovery suits. The filing date is not a verified last trading day, and the lawsuits are not final findings of repayment liability.',
+    source: {
+      label: 'US Bankruptcy Court for the District of New Jersey docket mirror',
+      url: 'https://www.bkalerts.com/recent-bankruptcy-cases/new-jersey-bankruptcy-court/3:25-bk-10470/bankruptcy-case-fast-track-trading-llc',
+    },
+    checkedAt: '2026-11-18',
+  },
+  {
+    slug: 'trade-amber',
+    dateKind: 'none',
+    summary: 'Commercially inactive: old domain unavailable, and Trustpilot says the website has closed. No official company dissolution or exact last trading day was established.',
+    source: { label: 'Trade Amber Trustpilot website-closed notice', url: 'https://www.trustpilot.com/review/tradeamber.com' },
+    checkedAt: '2026-11-18',
+  },
+  {
+    slug: 'limitless-funding',
+    dateKind: 'none',
+    summary: 'Commercially inactive: the legacy .com was parked, and the Trustpilot-linked .io domain redirected away from the former prop firm in dated checks. No legal dissolution or formal closure notice verified.',
+    source: { label: 'Independent dated Limitless Funding domain check', url: 'https://shortlist.trading/firma/' },
+    checkedAt: '2026-11-18',
+  },
+  {
+    slug: 'fortunes-funding',
+    dateKind: 'none',
+    summary: 'Commercially inactive at its prior domain in November 2026: hosting was suspended. Earlier historical shutdown reports and April 2026 help-center activity mean a continuous closure or legal dissolution must not be asserted.',
+    source: { label: 'Independent Fortunes Funding dormant-status review', url: 'https://propfirmreviews.net/unlisted-prop-firms/' },
+    checkedAt: '2026-11-18',
+  },
+  {
     slug: 'funded-unicorn',
     date: '2025-07-03',
     dateKind: 'reported',

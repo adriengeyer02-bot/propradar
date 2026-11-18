@@ -35,8 +35,11 @@ SIZE = 192
 MIN_PX = 96
 PAD = 0.16
 DARK_TILE = (11, 17, 26, 255)
-# Checked by hand on 2026-11-15: the Trustpilot logo is a wide wordmark that crops badly.
-EXCLUDE: set[str] = {"sure-leverage"}
+# These brand marks were supplied by the site owner on 2026-11-18.
+# Keep them ahead of automated favicon candidates; historic logos are still
+# labels for archived firms, not evidence of live storefronts.
+OWNER_PROVIDED = {"sure-leverage", "fortunes-funding", "trade-amber"}
+EXCLUDE: set[str] = set()
 # Checked by hand on 2026-11-06 (same mark as the firm's site header or name).
 ALLOW_SMALL = {"dna-funded", "quant-tekel", "thinkcapital", "directfundedtrader", "hola-prime"}
 SMALL_PX = 64
@@ -249,6 +252,8 @@ def main():
     shared = {slug for slug, item in chosen.items() if counts[item["fp"]] > 1}
     for slug in sorted(shared | EXCLUDE):
         chosen.pop(slug, None)
+    for slug in OWNER_PROVIDED:
+        chosen.pop(slug, None)
 
     out_dir = ROOT / "public" / "logos"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -256,7 +261,7 @@ def main():
     # Keep earlier logos this run could not replace (and did not reject).
     kept = []
     registry = ROOT / "app" / "lib" / "firmLogos.ts"
-    rejected = set(offsite) | shared | EXCLUDE
+    rejected = (set(offsite) | shared | EXCLUDE) - OWNER_PROVIDED
     if registry.exists():
         import re
         for domain, file, source in re.findall(r'^  "([^"]+)": \{ file: "([^"]+)", source: (".*?") \},$', registry.read_text(), re.M):

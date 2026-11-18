@@ -13,7 +13,7 @@ export type FirmLogoEntry = {
 
 export const FIRM_LOGO_SIZE = 192;
 
-// 150 logos, fetched 2026-11-17 (including three verified legacy brand marks).
+// 153 logos, fetched 2026-11-17 (plus three owner-supplied brand marks on 2026-11-18).
 export const firmLogos: Record<string, FirmLogoEntry> = {
   "1of1funding.com": { file: "one-of-one-funding.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/650da9b526a7a9a2fadd2509/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
   "algoforexfunds.com": { file: "algo-forex-funds.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/660cb2ed4f9d2754577ca618/0x0.png (logo uploaded by the firm to its claimed Trustpilot profile)" },
@@ -53,6 +53,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "fintokei.com": { file: "fintokei.png", source: "https://www.fintokei.com/apple-icon.png" },
   "forexfundsflow.com": { file: "forex-funds-flow.png", source: "https://forexfundsflow.com/favicons/new/192x192.png" },
   "forexive.com": { file: "forexive.png", source: "https://forexive.com/favicon.ico?favicon.1pfj4md666ntt.ico" },
+  "fortunesfunding.com": { file: "fortunes-funding.jpg", source: "Historic Fortunes Funding logo supplied by the PropRadar site owner on 2026-11-18; this mark is not evidence of an operating challenge store" },
   "fortraders.com": { file: "for-traders.png", source: "https://fortraders.com/icon.svg?icon.0g25r0q5a6n1m.svg" },
   "foxx-funded.com": { file: "foxx-funded.png", source: "https://www.foxx-funded.com/assets/foxx-BVC7eVJJ.png (official favicon, read 2026-11-15)" },
   "ftmo.com": { file: "ftmo.png", source: "https://ftmo.com/app/themes/ftmo-com/public/images/favicon/favicon-512.png" },
@@ -133,6 +134,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "summitstrike.com": { file: "summit-strike-capital.png", source: "https://s3-eu-west-1.amazonaws.com/tpd/logos/663f6873e5a2c038b07f60e5/0x0.png (historic logo uploaded by the firm to its claimed Trustpilot profile; not an active checkout)" },
   "superfunded.com": { file: "superfunded.png", source: "https://superfunded.com/wp-content/uploads/2024/05/cropped-SuperFunded-Logo-08-192x192.png" },
   "swayfunded.com": { file: "sway-funded.png", source: "https://swayfunded.com/media/favicon/favicon.svg" },
+  "sureleveragefunding.com": { file: "sure-leverage.jpg", source: "Sure Leverage Funding logo supplied by the PropRadar site owner on 2026-11-18" },
   "takeprofittrader.com": { file: "take-profit-trader.png", source: "https://takeprofittrader.com/assets/logo-dark.svg" },
   "tentrade.com": { file: "tentrade.png", source: "https://tentrade.com/wp-content/uploads/2026/04/logos-512-hexagon-300x300.webp" },
   "the5ers.com": { file: "the5ers.png", source: "https://the5ers.com/favicon.png?v=2" },
@@ -146,6 +148,7 @@ export const firmLogos: Record<string, FirmLogoEntry> = {
   "toponefutures.com": { file: "top-one-futures.png", source: "https://cdn.prod.website-files.com/67d9f6c73e1490afc415fc90/6828b63534450f4a543621f8_TOF-Logo-Icon-Green-(3).png" },
   "toponetrader.com": { file: "top-one-trader.png", source: "https://cdn.prod.website-files.com/6903c898abbf4652eee29160/690632d1eb3ff099aa83187c_WC.png" },
   "topstep.com": { file: "topstep.png", source: "https://cdn.prod.website-files.com/69e902b0a74d3d99a517f56d/6aaae816c7513025465a49be_Topstep-Favicon.png" },
+  "tradeamber.com": { file: "trade-amber.jpg", source: "Historical Trade Amber brand mark supplied by the PropRadar site owner on 2026-11-18; inactivity is assessed separately" },
   "tradeday.com": { file: "tradeday.png", source: "https://cdn.prod.website-files.com/696509b94e1d014f63369766/6a1bd7799b7db52174c320ce_Asset%2072.png" },
   "tradefundrr.com": { file: "tradefundrr.png", source: "https://tradefundrr.com/assets/images/tf-icon-dark.png?v=202605241720" },
   "tradeify.co": { file: "tradeify.png", source: "https://cdn.prod.website-files.com/679b064a680c614548672a06/6a84628529744886a578d5b9_icon.png" },
