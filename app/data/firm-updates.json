@@ -326,16 +326,43 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Mapped Alpha Pro static 6/8/10%, Alpha One balance-high trailing 4/6/8%, Alpha Direct trailing 5%, plus Swing/Three fixed options. Audited new 21-Jul-2026 idea-risk rules, mandatory VPN pre-notification and lot-exposure profit forfeiture policy. Existing Trustpilot-withheld cap keeps score 64 unchanged.",
+          "source": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "set": {
-        "priceFrom": 27
+        "priceFrom": 27,
+        "drawdownType": "Hybride",
+        "verdict": "Alpha Capital Group has different mechanisms, not one generic rule: Alpha Pro/Swing/Three have fixed loss floors, Alpha One and Alpha Direct trail highest recorded balance and lock once back at initial capital. Under the July 2026 policy certain funded plans enforce strict max risk per trade idea, unannounced VPN/VPS use may close accounts, and lot-exposure violations can void trading profits. These are publicly available policies; prior withheld Trustpilot rating already caps the score at 64/100, unchanged.",
+        "auditSummary": "18 November 2026 official Alpha Capital Help Center: Pro 6/8/10 variants static at 6/8/10% max, Alpha Swing static 10%, Three static 6%; One 6/10/12 variants trail 4/6/8% from highest balance and lock at starting capital once adequate profits are reached, Alpha Direct trails 5%. Max Risk Rule for accounts purchased since 21 July 2026 combines trade entries and re-entries within a specific idea and sets stricter funded risk caps, including 1% for Direct. On Alpha One, lot-size breaches can first remove performance fee on excess lots and on repeated violations deactivate the account. Using VPN/VPS without notifying support is identified as a cause of closure and potential permanent ban; this is not a universal ban on all VPN use. No new allegation or trustpilot count; unchanged score 64 because an existing recorded rating-withheld notice already applies."
       },
       "addSources": [
         {
           "label": "Alpha Capital Group evaluation prices 2026 (official)",
           "url": "https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026"
+        },
+        {
+          "label": "Alpha exact static vs trailing tiers and lock",
+          "url": "https://help.alphacapitalgroup.uk/en/articles/6934220-what-is-the-maximum-total-loss"
+        },
+        {
+          "label": "Alpha current funded risk per trade idea",
+          "url": "https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work"
+        },
+        {
+          "label": "Alpha VPN security restrictions",
+          "url": "https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed"
         }
       ],
       "addIncidents": [
@@ -351,20 +378,22 @@
             "Indices",
             "Metals"
           ],
-          "hasConsistencyRule": true,
-          "consistencyRule": "Rules not yet audited in PropRadar: check the official product source.",
-          "maxDailyLoss": "not stated on the pages read",
-          "maxDrawdown": "not stated on the pages read",
+          "hasConsistencyRule": false,
+          "maxDailyLoss": "3%-5% according to the Pro 6/8/10 plan",
+          "maxDrawdown": "6% / 8% / 10% static by selected Pro plan",
           "profitSplit": "up to 80%+",
           "id": "alpha-pro",
           "name": "Alpha Pro (2-Step)",
           "type": "Challenge",
-          "description": "List prices: from $27 ($5K, 6% option); 8% option $37 ($5K) to $997 ($200K).",
+          "description": "List prices: from $27 ($5K, 6% option); 8% option $37 ($5K) to $997 ($200K). The 6/8/10% variants have distinct static maximum loss limits.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "entryFeeMin": 27,
           "entryFeeMax": 997,
-          "profitTarget": "6% or 8% option, by phase: see the official page"
+          "profitTarget": "6% or 8% option, by phase: see the official page",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.alphacapitalgroup.uk/en/articles/6934220-what-is-the-maximum-total-loss",
+          "drawdownDetails": "Fixed floor at the chosen percent below initial capital; it does not rise with gains."
         },
         {
           "platforms": [
@@ -375,20 +404,22 @@
             "Indices",
             "Metals"
           ],
-          "hasConsistencyRule": true,
-          "consistencyRule": "Rules not yet audited in PropRadar: check the official product source.",
-          "maxDailyLoss": "not stated on the pages read",
-          "maxDrawdown": "not stated on the pages read",
+          "hasConsistencyRule": false,
+          "maxDailyLoss": "3%-5% depending on One target/tier",
+          "maxDrawdown": "4% / 6% / 8% trailing for One 6/10/12",
           "profitSplit": "up to 80%+",
           "id": "alpha-one",
           "name": "Alpha One (1-Step)",
           "type": "Challenge",
-          "description": "List prices: $37 ($5K) to $647 ($200K), 6% option.",
+          "description": "List prices: $37 ($5K) to $647 ($200K), 6% option. One 6/10/12 targets use distinct trailing losses; sizes vary by selected variant.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "entryFeeMin": 37,
           "entryFeeMax": 647,
-          "profitTarget": "6%"
+          "profitTarget": "6%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12",
+          "drawdownDetails": "Moves from the highest closed balance; locks at initial capital after a rise matching the loss percentage."
         },
         {
           "platforms": [
@@ -400,9 +431,9 @@
             "Metals"
           ],
           "hasConsistencyRule": true,
-          "consistencyRule": "Rules not yet audited in PropRadar: check the official product source.",
-          "maxDailyLoss": "not stated on the pages read",
-          "maxDrawdown": "not stated on the pages read",
+          "consistencyRule": "Strict 1% risk per trade idea in funded stage; verify selected payout concentration.",
+          "maxDailyLoss": "not confirmed for the purchased Direct size",
+          "maxDrawdown": "5% trailing from highest closed balance",
           "profitSplit": "90%",
           "id": "alpha-direct",
           "name": "Alpha Direct",
@@ -412,7 +443,10 @@
           "accountSizeMax": 200000,
           "entryFeeMin": 30,
           "entryFeeMax": 897,
-          "profitTarget": "none (no evaluation)"
+          "profitTarget": "none (no evaluation)",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.alphacapitalgroup.uk/en/articles/6934220-what-is-the-maximum-total-loss",
+          "drawdownDetails": "Trails highest recorded balance and freezes at starting capital after +5%."
         }
       ],
       "addPayoutProofs": [
@@ -431,6 +465,26 @@
           "quote": "Alpha Capital Group: $7.44 million in tracked crypto payouts in Q1 2026",
           "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
           "firmReported": false
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "Alpha One (all size variants) — max drawdown and withdrawals",
+          "rule": "Alpha One 6/10/12 targets carry 4/6/8% balance-high trailing drawdowns, locking at the initial capital floor. Requesting all profits after the lock would close the account; the firm recommends keeping a buffer.",
+          "impact": "A 6% profit target does not mean a static 6% loss cushion. Withdrawal can remove all remaining room after lock.",
+          "source": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12"
+        },
+        {
+          "program": "Alpha Direct and qualified Alpha accounts — funded risk",
+          "rule": "The Max Risk Rule for plans bought from 21 July 2026 aggregates positions in the same trade idea; Direct has a 1% maximum. On Alpha One, breach of maximum lot exposure removes profits on first violation, repeated violations can deactivate.",
+          "impact": "A profitable sequence may have ineligible profits if lot exposure or per-idea risk was exceeded, including after re-entry.",
+          "source": "https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work"
+        },
+        {
+          "program": "Alpha Capital Group — login, KYC and VPN/VPS",
+          "rule": "VPN or VPS trading is possible with prior notification to support; using one without prior notice is stated to trigger security flags, account closure and potential permanent ban. VPN is prohibited during KYC.",
+          "impact": "Even a geographically harmless VPN configuration can affect access if not declared in advance.",
+          "source": "https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed"
         }
       ]
     },
@@ -639,7 +693,7 @@
       ]
     },
     "apex-trader-funding": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -681,12 +735,29 @@
           "fields": [
             "legalReview"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Distinguished current EOD and live Intraday Trailing evaluation models; verified no evaluation consistency/minimum days, but funded payout has five qualifying days, 50% consistency, safety net and six-payout lifetime closure. Score 66 to 63 for restrictive earned-account payout structure, no new legal allegations.",
+          "source": "https://apextraderfunding.com/help-center/eod-accounts/eod-evaluations/",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.2,
         "trustpilotReviewCount": 21625,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/apextraderfunding.com",
+        "drawdownType": "Hybride",
+        "score": 63,
+        "verdict": "Apex offers genuinely different EOD and intraday trailing futures evaluation models. Evaluation does not have the funded payout consistency or qualifying-day conditions, whereas Performance Accounts apply a 50% best-day limit, five size-dependent qualifying winning days, permanent safety net, payout caps and six payouts maximum per PA. These rules are sourced from current official help pages, with no assertion that a particular paid request was wrongfully denied. Score 63/100, reduced modestly for restrictions.",
+        "auditSummary": "18 November 2026 review of Apex EOD and Intraday Trailing 30-day evaluations, PA payout terms and account-size tables. EOD 25K/50K/100K/150K evaluates with 1K/2K/3K/4K loss thresholds set from closing balances, enforced intraday; daily loss thresholds of 500/1,000/1,500/2,000 are separate from disqualification threshold. Intraday Trailing model instead follows the actual equity high in real time. Evaluations carry no minimum trading days and no 50% consistency rule. Earned Performance Account withdrawals require five qualifying profit days (e.g. 50K $250/day), at most 50% profit from the best day, $500 minimum request, a protected drawdown-plus-$100 Safety Net, sequential payout caps and six payouts maximum, after which PA closes. Historical litigation notes from the previous audit remain untouched: no merits finding has been newly verified. Editorial score 66 to 63 for funded-stage withdrawal caps and finite PA cycle."
       },
       "addIncidents": [
         "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid).",
@@ -700,6 +771,18 @@
         {
           "label": "Justia docket: McCrudden v. Apex Trader Funding (M.D. Fla. 3:26-cv-01073)",
           "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938"
+        },
+        {
+          "label": "Apex EOD Evaluation terms and tier sizes",
+          "url": "https://apextraderfunding.com/help-center/eod-accounts/eod-evaluations/"
+        },
+        {
+          "label": "Apex intraday trailing evaluation",
+          "url": "https://apextraderfunding.com/help-center/evaluation-accounts/ea/intraday-trailing-drawdown-evaluations/"
+        },
+        {
+          "label": "Apex EOD PA payments and six-payout closure",
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/"
         }
       ],
       "setLegalReview": {
@@ -721,7 +804,75 @@
             "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv01073/458938"
           }
         ]
-      }
+      },
+      "restrictiveRules": [
+        {
+          "program": "Apex EOD and Intraday Trailing — evaluations",
+          "rule": "EOD model computes the trailing floor at the day close; Intraday model adjusts its high-water floor on unrealized equity in real time. Evaluation has no minimum trading days or consistency ratio.",
+          "impact": "A high intraday unrealized gain is more dangerous on Intraday than EOD; these models must not share one generic label.",
+          "source": "https://apextraderfunding.com/help-center/eod-accounts/eod-evaluations/"
+        },
+        {
+          "program": "Apex EOD Performance Account — payout",
+          "rule": "Five separate days must reach a size-dependent minimum profit; no single day may reach 50% of all profit since the last approved payout. Keep a Safety Net equal to drawdown plus $100 and request at least $500.",
+          "impact": "A profitable PA may be unable to withdraw until multiple daily-profit, concentration and protected-balance criteria all hold.",
+          "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/"
+        },
+        {
+          "program": "Apex EOD and Intraday Performance Accounts — lifetime",
+          "rule": "Each PA receives at most six sequential payouts, each capped according to size and payment sequence; after the sixth approved payout the PA is closed.",
+          "impact": "Apex funded sim status is not indefinite; future withdrawals require a newly qualified account.",
+          "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "apex-eod-current",
+          "name": "EOD Trailing Evaluation",
+          "type": "Futures evaluation",
+          "description": "Current 25K–150K futures model; evaluation has no consistency and no minimum days, funded PA does.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "$1,500 / $3K / $6K / $9K",
+          "maxDailyLoss": "Daily loss $500–$2,000, size dependent",
+          "maxDrawdown": "EOD trailing $1K–$4K",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://apextraderfunding.com/help-center/eod-accounts/eod-evaluations/",
+          "drawdownDetails": "Floor recalculated at market close from EOD balance; next session monitors touches in real time.",
+          "profitSplit": "100% PA (subject to withdrawal caps)",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "PA only: best day <50%, five qualified profit days, safety net and max six payouts."
+        },
+        {
+          "id": "apex-intraday-current",
+          "name": "Intraday Trailing Evaluation",
+          "type": "Futures evaluation",
+          "description": "Separate 25K–150K real-time trailing futures evaluation; funded PA payout gates differ from challenge.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "$1,500 / $3K / $6K / $9K",
+          "maxDailyLoss": "No separate DLL stated in this model guide",
+          "maxDrawdown": "Intraday trailing on realtime equity peak",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://apextraderfunding.com/help-center/evaluation-accounts/ea/intraday-trailing-drawdown-evaluations/",
+          "drawdownDetails": "Floor can tighten immediately from an unrealized profit peak during the current trading session.",
+          "profitSplit": "100% PA (subject to withdrawal caps)",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "PA payout rules apply; no evaluation consistency."
+        }
+      ]
     },
     "aqua-funded": {
       "reviewedAt": "2026-11-14",
@@ -968,9 +1119,22 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Updated present-tense Blue Guardian models: 1-Step Standard 6% trailing, 2-Step Standard 8% static, 2-Step Nano 10% static, Instant Standard 6% trailing and Instant Starter 5% trailing. Explicit two-minute minimum hold, 1%/2% funded Guardian Shield, payout split drop to 50% at first Instant Shield trigger, second hard breach, 20% best-day Instant ratio. Score 66 to 62.",
+          "source": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
       ],
@@ -978,7 +1142,11 @@
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 2151,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/blueguardian.com",
-        "trustpilotNoticeLifted": "2026-11-07"
+        "trustpilotNoticeLifted": "2026-11-07",
+        "drawdownType": "Hybride",
+        "score": 62,
+        "verdict": "Blue Guardian sells genuinely different 2026 challenge and instant models. Most one-step/instant CFDs trail closed balance, whereas 2-Step Standard and Nano are static. Published anti-tick-scalping terms require a two-minute trade hold on relevant CFD offers; the FAQ reviewed does not specify an SL/TP exception, so PropRadar does not assume one. Instant Standard Guardian Shield triggers at 1% combined floating loss: first trigger permanently cuts profit split to 50%, second closes the account. These especially restrictive conditions lower the editorial score from 66 to 62/100.",
+        "auditSummary": "18 November 2026: the Blue Guardian help center was updated 13-17 November 2026 with separate CFD plan articles. 1-Step Standard: 9% target, 4% daily, 6% trailing high-closed-balance max locking after +6%, 3 profitable 0.5% days and funded Guardian Shield at 2% floating loss. 2-Step Standard: 8%+4% target, 4% daily and 8% static max, same three days per evaluation phase. 2-Step Nano: 10% static and 3% daily with 50% funded best-day/2% payout cap. Instant Standard: 3% daily and 6% trailing max, 5 profitable 0.5% days, 20% best-day funded ratio (15% for 300K/400K), a 1% funded combined floating-loss Shield where first trigger permanently reduces split to 50% and second is hard account breach; a 1% buffer after drawdown lock. Instant Starter: 5% trailing on a $5K one-off with capped crypto payout. Specific CFD articles state a minimum two-minute holding period; no published SL/TP exception verified. Futures Express stopped being sold 16 November and is not marketed as current. Score 66 to 62 for transparently published but severe risk/withdrawal controls."
       },
       "addPayoutProofs": [
         {
@@ -996,6 +1164,167 @@
           "quote": "Blue Guardian: $1.37 million in tracked crypto payouts in Q1 2026",
           "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
           "firmReported": false
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "Blue Guardian CFD Standard and Instant — trade duration",
+          "rule": "Official current product cards require a minimum hold time of 2 minutes for tick-scalping control; reviewed pages do not state a stop-loss or take-profit exception.",
+          "impact": "An otherwise normal fast exit may require a compliance clarification. Until written confirmation, do not claim that automatically filled protective orders are exempt or forbidden.",
+          "source": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+        },
+        {
+          "program": "Blue Guardian CFD Instant Standard — funded Guardian Shield",
+          "rule": "Combined open floating loss reaching 1% of initial capital triggers auto-closure. First trigger permanently reduces profit split from 80% to 50%; second permanently breaches the account. Minimum five 0.5%-profitable days, best-day concentration ≤20% and post-lock withdrawal buffer 1% also apply.",
+          "impact": "A single automatic protection event can permanently impair compensation, even if the account remains open; the second can end it.",
+          "source": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules"
+        },
+        {
+          "program": "Blue Guardian 2 Step Nano — funded withdrawal",
+          "rule": "Evaluation uses 10% static max and 3% daily; funded withdrawals instead require 50% best-day consistency and are capped at 2% of starting account per cycle.",
+          "impact": "Passing both evaluation phases does not make all funded profits eligible for immediate payout.",
+          "source": "https://help.blueguardian.com/en/articles/18426785-2-step-nano-rules"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "Blue Guardian current CFD product index",
+          "url": "https://help.blueguardian.com/en/collections/19810140-cfd-plans"
+        },
+        {
+          "label": "Blue Guardian 1-Step two-minute holding rule",
+          "url": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+        },
+        {
+          "label": "Blue Guardian Instant graduated Shield sanctions",
+          "url": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules"
+        },
+        {
+          "label": "Blue Guardian withdrawn Express futures notice",
+          "url": "https://help.blueguardian.com/en/articles/18426764-express-account-rules"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "bg-one-standard-current",
+          "name": "1 Step Standard (CFD)",
+          "type": "Challenge",
+          "description": "Representative $100K current CFD tier; 2-minute minimum holding rule and funded Shield apply.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "9% one phase",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "6% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules",
+          "drawdownDetails": "Balance-high maximum rises with closed profits and locks at original capital after +6%.",
+          "profitSplit": "85% default",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 days ≥0.5% net in evaluation"
+        },
+        {
+          "id": "bg-two-standard-current",
+          "name": "2 Step Standard (CFD)",
+          "type": "Challenge",
+          "description": "Representative $100K tier; funded Guardian Shield triggers at 2% floating loss.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "8% Phase 1; 4% Phase 2",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "8% static below starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules",
+          "drawdownDetails": "Fixed 8% floor during the two evaluations and funded stage.",
+          "profitSplit": "85% default",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 profitable days per evaluation phase"
+        },
+        {
+          "id": "bg-two-nano-current",
+          "name": "2 Step Nano (CFD)",
+          "type": "Challenge",
+          "description": "Representative $100K tier; no evaluation minimum days, but funded reward caps apply.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "8% Phase 1; 5% Phase 2",
+          "maxDailyLoss": "3% daily",
+          "maxDrawdown": "10% static maximum loss",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.blueguardian.com/en/articles/18426785-2-step-nano-rules",
+          "drawdownDetails": "Fixed floor, with funded 50% best-day and 2%-of-account payout cap.",
+          "profitSplit": "80% default",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded best day ≤50%, maximum 2% of starting size per payout cycle."
+        },
+        {
+          "id": "bg-instant-standard-current",
+          "name": "Instant Standard (CFD)",
+          "type": "Instant funding",
+          "description": "Representative $100K tier; 2-minute hold, 20% payout concentration and two-stage 1% Shield penalties.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "No evaluation target; payout needs 5 profit days",
+          "maxDailyLoss": "3% daily reset",
+          "maxDrawdown": "6% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+          "drawdownDetails": "Locks after +6% closed profit; then leave 1% buffer. A separate 1% floating Shield can permanently cut split.",
+          "profitSplit": "80%; permanently 50% after first Guardian Shield trigger",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day ≤20% of cycle profit (15% on $300K/$400K); 1% buffer after drawdown lock.",
+          "minTradingDays": "5 days ≥0.5% profit before reward"
+        },
+        {
+          "id": "bg-instant-starter-current",
+          "name": "Instant Starter (CFD)",
+          "type": "Instant funding",
+          "description": "Single-use $5K instant tier, crypto payout capped at $250, strict duration and floating loss controls.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 5000,
+          "profitTarget": "No evaluation; one payout route",
+          "maxDailyLoss": "3% daily",
+          "maxDrawdown": "5% trailing maximum loss",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules",
+          "drawdownDetails": "Locks at $5K after +5% closed profits; 1% floating Guardian Shield is separate.",
+          "profitSplit": "verify current one-off tier payout share",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "15% best-day concentration; a single crypto payout cap of $250."
         }
       ]
     },
@@ -1336,9 +1665,21 @@
           "fields": [
             "entities"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Replaced pre-16-Nov-2026 BrightFunded legacy models with current 1-Step Daily 6% realtime equity trailing, 2-Step Bright 8% static and Instant 5% realtime trailing. Documented Instant 1% combined floating loss, 15% best-day payout concentration, 3% buffer, 5 winning days, biggest loss ≤biggest winner, funded news 5-minute window and loss-of-profit soft breaches. Score remains prior Trustpilot-capped 64.",
+          "source": "https://help.brightfunded.com/en/articles/18457132-what-are-the-current-rules-for-the-evaluation-process",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/brightfunded.com)."
       ],
@@ -1346,6 +1687,18 @@
         {
           "label": "BrightFunded terms and conditions",
           "url": "https://brightfunded.com/terms-and-conditions"
+        },
+        {
+          "label": "BrightFunded current three-model comparison",
+          "url": "https://help.brightfunded.com/en/articles/18457132-what-are-the-current-rules-for-the-evaluation-process"
+        },
+        {
+          "label": "BrightFunded Instant strict withdrawal conditions",
+          "url": "https://help.brightfunded.com/en/articles/18450314-what-is-instant"
+        },
+        {
+          "label": "BrightFunded legacy pre-16-Nov plan archive",
+          "url": "https://help.brightfunded.com/en/articles/9241611-what-are-the-current-rules-for-the-evaluation-process-old"
         }
       ],
       "setEntities": [
@@ -1381,6 +1734,111 @@
           "registrationNumber": "HE 500567",
           "registeredAddress": "228 Archiepiskopou Makariou III, 3030 Limassol, Cyprus",
           "role": "Listed in the terms; role not stated."
+        }
+      ],
+      "set": {
+        "drawdownType": "Hybride",
+        "verdict": "BrightFunded revised its CFD lineup on 16 November 2026; older 2-Step Classic and original 1-Step rules remain for legacy purchases only. The current 1-Step Daily follows real-time equity peaks (6%) and the 2-Step Bright has an 8% fixed floor. Instant trails 5% and requires only 1% aggregate floating-loss maximum, 15% payout consistency, 3% reserve and five qualifying days. This extensive difference should be shown per product; previous Trustpilot cap holds score at 64/100 with no new status or nonpayment allegations.",
+        "auditSummary": "18 November 2026 official post-16-Nov-2026 BrightFunded FAQ audit. Current 1-Step Daily: one 10% target, 3% daily, 6% real-time equity-high trailing maximum, no minimum days or consistency, with funded payout any day but 1% retained buffer. Current 2-Step Bright: 8%+5% targets, 4% daily, 8% fixed maximum, 3 days with 0.5% net profit per phase, no consistency, 14-day standard payout. Current Instant: no evaluation, 3% daily, 5% real-time equity-high trailing maximum locking at initial capital, 1% maximum combined floating loss, 15% best-day consistency, 3% reserve, five days of at least 0.5% profit and requirement that largest loss not exceed largest winning trade. Funded news entry/exit in the ±5-minute high-impact window leads to profits removed as a soft breach except qualifying long-held TP. Cross-account hedging is a soft breach once and hard after repeat; inactivity >30 days a hard breach, while old-account reactivation will end 1 Dec. Current and old articles explicitly differ and are not mixed. No new bank-level payout test; score remains 64 because prior withheld Trustpilot notice already caps it."
+      },
+      "restrictiveRules": [
+        {
+          "program": "BrightFunded Instant — direct simulated funded",
+          "rule": "The 5% overall drawdown trails the highest equity in real time and a separate 1% combined open floating loss hard-breaches. A 3% unrecoverable payout reserve, 15% best-day consistency, five 0.5%-profitable days and largest loss not exceeding largest win apply together.",
+          "impact": "A profitable account can lose withdrawal eligibility or close from temporary floating loss; all payout gates must be fulfilled concurrently.",
+          "source": "https://help.brightfunded.com/en/articles/18450314-what-is-instant"
+        },
+        {
+          "program": "BrightFunded 1-Step Daily — evaluation and funded",
+          "rule": "6% maximum loss follows the highest unrealized equity reached intraday, not only closed end-of-day balance. It locks when the floor reaches starting capital and the funded payout retains a 1% buffer.",
+          "impact": "A temporary winning open trade can raise the floor, then a reversal can breach even without a closed gain.",
+          "source": "https://help.brightfunded.com/en/articles/18450319-1-step-daily-evaluation-rules"
+        },
+        {
+          "program": "BrightFunded current funded CFD models — news and replication",
+          "rule": "Funded trades opened or closed within ±5 minutes of listed high-impact events may have their profit removed as a soft breach; cross-account hedging gets a warning then a hard breach. Trading inactivity beyond 30 days is a hard breach.",
+          "impact": "Profitable news exits and correlated hedges may be ineligible for payout; pre-16-Nov purchasers follow legacy terms.",
+          "source": "https://help.brightfunded.com/en/articles/18457132-what-are-the-current-rules-for-the-evaluation-process"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "bf-one-step-daily-current",
+          "name": "1-Step Daily (since 16 Nov 2026)",
+          "type": "Challenge",
+          "description": "Current 5K–200K one-phase account, not the original pre-16-Nov model.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% one evaluation",
+          "maxDailyLoss": "3% daily from rollover higher balance/equity",
+          "maxDrawdown": "6% intraday trailing on highest equity",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.brightfunded.com/en/articles/18450319-1-step-daily-evaluation-rules",
+          "drawdownDetails": "Unrealized equity peak moves floor immediately; locks at starting capital at +6%.",
+          "profitSplit": "80% default",
+          "platforms": [
+            "MT5",
+            "cTrader",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "bf-two-step-bright-current",
+          "name": "2-Step Bright (since 16 Nov 2026)",
+          "type": "Challenge",
+          "description": "New two-stage plan, 5K–200K, distinct from pre-16-Nov Classic.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% Phase 1; 5% Phase 2",
+          "maxDailyLoss": "4% daily from higher rollover balance/equity",
+          "maxDrawdown": "8% static below starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.brightfunded.com/en/articles/18450320-2-step-bright-evaluation-rules",
+          "drawdownDetails": "Fixed starting-capital floor in both evaluation phases and funded.",
+          "profitSplit": "80% default",
+          "platforms": [
+            "MT5",
+            "cTrader",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 days ≥0.5% profit per evaluation phase"
+        },
+        {
+          "id": "bf-instant-current",
+          "name": "Instant (since 16 Nov 2026)",
+          "type": "Instant funding",
+          "description": "Direct simulated account, no weekends; 15% best-day, 3% buffer and five qualifying days.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "No evaluation; payout profit conditions",
+          "maxDailyLoss": "3% daily; 1% separate combined floating-loss cap",
+          "maxDrawdown": "5% intraday trailing equity-high max",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.brightfunded.com/en/articles/18450314-what-is-instant",
+          "drawdownDetails": "Equity peaks move the floor until initial capital; a 1% floating loss can breach separately.",
+          "profitSplit": "90% default",
+          "platforms": [
+            "MT5",
+            "cTrader",
+            "DXtrade"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day ≤15%, biggest losing trade ≤biggest winning trade; maintain 3% reserve.",
+          "minTradingDays": "5 profitable days ≥0.5% before payout"
         }
       ]
     },
@@ -1657,9 +2115,21 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Mapped E8 One 6% dynamic balance-high, E8 Pro 8% static with first-payout floor shift, E8 Zero/Signature futures EOD trailing. Flagged Pro 2% daily profit cap, 50% compulsory profit buffer, Signature 35% payout consistency, Zero 40% evaluation ratio and five-payout cap. Score remains Trustpilot-capped 64.",
+          "source": "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com)."
       ],
@@ -1671,6 +2141,140 @@
           "quote": "E8 Markets: $5.00 million in tracked crypto payouts in Q1 2026",
           "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
           "firmReported": false
+        }
+      ],
+      "set": {
+        "drawdownType": "Hybride",
+        "verdict": "E8 Markets currently separates One (closed-balance dynamic drawdown), Pro (8% static until first payout) and futures Zero/Signature (end-of-day dynamic). E8 Pro advertises no payout caps or best-day rule but retains half each period profit as a buffer and shifts the static floor to starting capital on the first payout; it also counts at most 2% daily profit. Those important mechanical restrictions are published and should be visible. Existing score 64 remains under the documented Trustpilot cap.",
+        "auditSummary": "18 November 2026 review of E8 official four-program comparison and programme-specific help pages. E8 One follows highest closed balance with dynamic 6% floor, locking at initial capital after enough gain, hard 4% daily limit and 40% funded best-day ratio. E8 Pro 8% static drawdown and 2.5% daily, but after first payout the floor jumps to initial capital: half each cycle profit is retained as a buffer, and 2% of initial account size is the maximum daily profit credited to targets/rewards. Zero Futures and Signature Futures use EOD dynamic drawdown that locks at starting capital, but Zero places 40% best-day consistency in evaluation and no funded concentration, whereas Signature places 35% in funded and a nonwithdrawable drawdown-sized buffer/payout caps. Official E8 size/pricing guide covers $5K–$500K for Classic and smaller Futures tiers, with variable checkout. There is no independent hands-on withdrawal or bank-level verification here; score 64 remains capped by existing Trustpilot notice."
+      },
+      "restrictiveRules": [
+        {
+          "program": "E8 Pro — evaluation and performance",
+          "rule": "A 2% daily profit cap counts toward evaluation/payout even if the trader gains more, 2.5% daily loss applies, and first payout moves the 8% static drawdown floor to starting capital. Only 50% of realised profit is requestable; the rest stays as a buffer.",
+          "impact": "The advertised no-payout-cap programme still withholds half profit per cycle as account protection; high-profit days cannot accelerate the target beyond 2%.",
+          "source": "https://help.e8markets.com/en/articles/15274219-e8-pro"
+        },
+        {
+          "program": "E8 One — performance payout",
+          "rule": "6% dynamic maximum loss trails highest closed balance and locks at initial capital; funded best-day consistency is 40%, while the challenge does not have that payout rule.",
+          "impact": "Profitable accounts can fail withdrawal concentration even after passing evaluation; profit withdrawal leaves an unchanged drawdown level.",
+          "source": "https://help.e8markets.com/en/articles/11775980-e8-one"
+        },
+        {
+          "program": "E8 Zero vs Signature — futures stages",
+          "rule": "Zero has a 40% best-day rule in the challenge but no performance consistency, with at most five payouts per account; Signature has 35% funded consistency and a nonwithdrawable EOD-drawdown-sized buffer and per-request caps.",
+          "impact": "Do not extrapolate Zero challenge rules to Signature funded payouts. Both display EOD trailing but very different reward eligibility.",
+          "source": "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "E8 exact all-products comparison",
+          "url": "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+        },
+        {
+          "label": "E8 Pro payout retains half the profit",
+          "url": "https://help.e8markets.com/en/articles/13653464-payout-request-from-e8-pro"
+        },
+        {
+          "label": "E8 custom account sizes/price examples",
+          "url": "https://help.e8markets.com/en/articles/8880316-what-is-the-custom-account"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "e8-one-current",
+          "name": "E8 One (classic/perpetual)",
+          "type": "Challenge",
+          "description": "One-step customizable account with dynamic balance drawdown and a funded 40% concentration rule.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 500000,
+          "profitTarget": "6% preset single-phase",
+          "maxDailyLoss": "4% preset hard daily loss",
+          "maxDrawdown": "6% preset highest closed balance dynamic",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.e8markets.com/en/articles/11782996-dynamic-drawdown",
+          "drawdownDetails": "Preset is 6% dynamic / 4% daily; custom checkout ranges 4–14% dynamic and 3–9.2% daily. Only closed balance highs count; locks at starting size once the configured threshold is reached.",
+          "profitSplit": "80% preset; customized at purchase",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Performance only: best day ≤40% of total profit; challenge none."
+        },
+        {
+          "id": "e8-pro-current",
+          "name": "E8 Pro (classic/perpetual)",
+          "type": "Challenge",
+          "description": "One-step Pro; 8% static is the preset, with 6% or 10% variants, and not all profits withdrawable.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 500000,
+          "profitTarget": "8% preset single phase (2% profit cap per day)",
+          "maxDailyLoss": "2.5% preset hard daily",
+          "maxDrawdown": "8% preset static until first payout",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.e8markets.com/en/articles/13653031-static-drawdown",
+          "drawdownDetails": "Default 8% static / 2.5% daily; 6% and 10% static alternatives at checkout. Fixed initial floor jumps to starting balance after first payout; half profits retained.",
+          "profitSplit": "80% default, applied to requestable 50% profits",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "e8-zero-current",
+          "name": "E8 Zero Futures",
+          "type": "Futures evaluation",
+          "description": "One-stage futures challenge, 40% challenge consistency but not funded; five payouts maximum.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 200000,
+          "profitTarget": "Published tier-specific futures target",
+          "maxDailyLoss": "No mandatory daily limit",
+          "maxDrawdown": "EOD dynamic trailing until starting balance",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+          "drawdownDetails": "Follows end-of-day closed profits; freezes at initial capital when reached.",
+          "profitSplit": "80% default",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Challenge best day ≤40%; funded has no consistency, five payout maximum."
+        },
+        {
+          "id": "e8-signature-current",
+          "name": "E8 Signature Futures",
+          "type": "Futures evaluation",
+          "description": "Futures stage has 35% funded best-day limit, soft daily pause and payout caps.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "Published tier-specific futures target",
+          "maxDailyLoss": "2% soft daily pause on funded",
+          "maxDrawdown": "EOD dynamic trailing until starting balance",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.e8markets.com/en/articles/11755943-e8-signature",
+          "drawdownDetails": "Updates from completed EOD balance, with a nonwithdrawable funded buffer equal to drawdown.",
+          "profitSplit": "80% default",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded best day ≤35%; nonwithdrawable drawdown buffer and size-based caps."
         }
       ]
     },
@@ -2111,12 +2715,21 @@
       ]
     },
     "ftmo": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 56103,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftmo.com",
-        "payoutDelay": "14-day reward cycle; review within 1-2 business days, payment typically 1-2 business days after invoice approval"
+        "payoutDelay": "14-day reward cycle; review within 1-2 business days, payment typically 1-2 business days after invoice approval",
+        "drawdownType": "Hybride",
+        "priceFrom": 0,
+        "nativePriceFrom": {
+          "amount": 79,
+          "currency": "EUR"
+        },
+        "score": 89,
+        "verdict": "FTMO sells three materially different models: 2-Step has a static maximum loss; 1-Step trails the closing balance EOD and requires 50% best-day consistency; Instant trails closed balance intraday and has 30% consistency. All limits are published on its official comparison and trading-objective pages. Long operation and independently recorded payouts remain relevant; score 89/100 after a small policy-transparency deduction, not an allegation of undisclosed terms.",
+        "auditSummary": "18 November 2026 official FTMO comparison and trading-objective check. The 2-Step route permits 10% fixed maximum and 5% daily loss with 10% then 5% targets and four evaluation days. The 1-Step route has 10% EOD balance-high trailing maximum that rises but does not fall before a payout reset, 3% daily limit and a 10% one-phase target. Accounts ordered from 12 October 2026 use a best-day-to-total-profit consistency limit of 50% in evaluation and funded withdrawal; older accounts retain a different best-positive-days formula. Instant offers direct simulated funding with 10% high-closed-balance intraday trailing, 3% daily and 30% best-day payout concentration. Current prices on the main official comparison page are in EUR: 1-Step from €79, 2-Step from €89, Instant from €169. No bank transfer or execution was tested. Existing strong trading record and payout evidence retained; editorial score 91 to 89 for constraints of the two newer models."
       },
       "changelog": [
         {
@@ -2169,6 +2782,21 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Replaced one generic FTMO challenge with sourced current 2-Step, 1-Step and Instant terms, including static vs EOD balance trailing vs intraday balance trailing. Added 50%/30% best-day payout thresholds; corrected live EUR 79 starting price without a USD conversion. Editorial score 91 to 89 due payout concentration gates, not a company closure or allegation.",
+          "source": "https://ftmo.com/en/comparison-table/",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score",
+            "priceFrom",
+            "nativePriceFrom"
+          ]
         }
       ],
       "addSources": [
@@ -2191,6 +2819,18 @@
         {
           "label": "OANDA press release: OANDA acquired by FTMO",
           "url": "https://www.oanda.com/group/press-release/oanda-acquired-by-ftmo/"
+        },
+        {
+          "label": "FTMO current three-model comparison",
+          "url": "https://ftmo.com/en/comparison-table/"
+        },
+        {
+          "label": "FTMO dynamic rules, consistency and grandfathered accounts",
+          "url": "https://ftmo.com/en/trading-objectives/"
+        },
+        {
+          "label": "FTMO Instant current tiers",
+          "url": "https://ftmo.com/en/instant-account/"
         }
       ],
       "setEntities": [
@@ -2235,6 +2875,100 @@
           "quote": "FTMO reported paying \"more than $14.4 million in rewards to roughly 7,100 traders in September\", \"bringing its reported cumulative payouts above $650 million\" (self-reported, no audited breakdown)",
           "url": "https://www.financemagnates.com/forex/ftmo-adds-200-million-to-lifetime-payouts-in-one-year-as-monthly-rewards-near-15-million/",
           "firmReported": true
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "FTMO 1-Step — evaluation and FTMO Account",
+          "rule": "10% maximum loss trails the highest end-of-day closed balance; the 50% best-day share of total profit applies to passing and withdrawal for accounts ordered on/after 12 October 2026. The older best-day denominator remains for legacy accounts.",
+          "impact": "A large single winning day can delay passing and payout without being a hard breach. Loss floor only moves upward until a reward account reset.",
+          "source": "https://ftmo.com/en/trading-objectives/"
+        },
+        {
+          "program": "FTMO Instant — direct simulated account",
+          "rule": "10% maximum loss trails the highest closed balance intraday. At reward request, the largest profitable day must be no more than 30% of cumulative net profit; 3% daily equity limit also applies.",
+          "impact": "A trader can be profitable yet not eligible for a reward until more eligible profit days dilute the best day.",
+          "source": "https://ftmo.com/en/trading-objectives/"
+        },
+        {
+          "program": "FTMO 2-Step — Standard/Swing challenge",
+          "rule": "2-Step retains the static 10% maximum and 5% daily loss, with four evaluation trading days and different rules from the EOD trailing 1-Step.",
+          "impact": "Do not transfer the 1-Step consistency and trailing figures to the legacy-style 2-Step purchase.",
+          "source": "https://ftmo.com/en/comparison-table/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "ftmo-two-step-current",
+          "name": "FTMO Challenge: 2-Step",
+          "type": "Challenge",
+          "description": "Two evaluation stages, Standard or Swing; official comparison lists the original fixed 10% total drawdown.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% Phase 1; 5% Phase 2",
+          "maxDailyLoss": "5% daily equity limit",
+          "maxDrawdown": "10% fixed from initial capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://ftmo.com/en/comparison-table/",
+          "drawdownDetails": "Lifetime loss floor fixed to 90% of starting capital, unlike the newer 1-Step.",
+          "profitSplit": "up to 90%",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "4 evaluation trading days"
+        },
+        {
+          "id": "ftmo-one-step-current",
+          "name": "FTMO Challenge: 1-Step",
+          "type": "Challenge",
+          "description": "Single-stage evaluation with new 50% best-day rule on post-12-Oct-2026 accounts.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% single evaluation phase",
+          "maxDailyLoss": "3% daily equity reset",
+          "maxDrawdown": "10% trailing on closing balance (EOD)",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://ftmo.com/en/trading-objectives/",
+          "drawdownDetails": "Maximum floor follows the highest midnight closing balance, never falls; reset on replacement account after reward.",
+          "profitSplit": "90%",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day ≤50% of total profit (current accounts); legacy calculation differs."
+        },
+        {
+          "id": "ftmo-instant-current",
+          "name": "FTMO Instant (direct funded)",
+          "type": "Instant funding",
+          "description": "Immediate simulated account, current official sizes $5K–$100K; one-time nonrefundable EUR fee.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "No evaluation target",
+          "maxDailyLoss": "3% daily equity reset",
+          "maxDrawdown": "10% intraday trailing on closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://ftmo.com/en/trading-objectives/",
+          "drawdownDetails": "Highest closed balance increases the loss floor during the day; not just an EOD snapshot.",
+          "profitSplit": "90%",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day ≤30% of total closed net profit at payout."
         }
       ]
     },
@@ -2767,19 +3501,52 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Separated three fixed-loss Stellar challenges from 6% trailing Instant. Documented the exact Quick Strike profit-ratio rule for sub-30-second trades, its very different evaluation and funded consequences, news 40% profit allocation, EA restriction above $50K and post-12-Oct Lite trading days. Score 79 to 75.",
+          "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 83306,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundednext.com",
-        "payoutDelay": "chosen at checkout on Stellar 2-Step and Lite: Standard (first reward after 21 days, then every 14 days, 80%), 3 Day (60%) or On-Demand (90%, 40% consistency rule)"
+        "payoutDelay": "chosen at checkout on Stellar 2-Step and Lite: Standard (first reward after 21 days, then every 14 days, 80%), 3 Day (60%) or On-Demand (90%, 40% consistency rule)",
+        "drawdownType": "Hybride",
+        "score": 75,
+        "verdict": "FundedNext Stellar 1-Step (6%), 2-Step (10%) and Lite (8%) use fixed original-capital total-loss floors; Stellar Instant has a separate 6% balance-high trailing threshold and no daily loss cap. The restrictive Quick Strike policy counts profits from positions closed under 30 seconds; it warns at 20%, stalls challenge passage at 30% and can remove 100% of those profits plus terminate a funded account at cycle-end if the threshold persists. These are published rules, not evidence of concealment. Editorial score 75/100 after a four-point documented rule-severity adjustment.",
+        "auditSummary": "18 November 2026: read FundedNext Stellar 1-Step/2-Step/Lite/Instant current product pages, detailed maximum-loss FAQ and Quick Strike policy. 1-Step static 6% total, 3% daily, 10% goal and 2 evaluation days; 2-Step static 10%, 5% daily, 8%+5% goals and five days per phase; Lite static 8%, 4% daily, 8%+4% goals and two days per phase on accounts purchased/reset from 12 October 2026 (older accounts five days). Instant offers $2K–$20K direct simulated allocation with 6% balance-high trailing maximum and no daily limit, no payout consistency ratio but 3% risk rule and news reward allocation of only 40% for qualifying trades around high-impact events. Across models, Quick Strike means profitable trades closed in under 30 seconds as share of recorded profit, warns at 20% and at ≥30% stalls evaluation progression; on funded accounts those profits may be entirely forfeited with cycle-end termination. EA use restricted for ≥$50K challenge sizes. This is not a universal minimum hold for every trade, unlike FTUK. Score 79 to 75 under publicly documented policy severity; no blanket nonpayment asserted."
       },
       "addSources": [
         {
           "label": "FundedNext Stellar Lite (official)",
           "url": "https://fundednext.com/cfds/stellar-lite"
+        },
+        {
+          "label": "FundedNext exact Quick Strike threshold and consequences",
+          "url": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext"
+        },
+        {
+          "label": "FundedNext fixed challenges maximum-loss comparison",
+          "url": "https://help.fundednext.com/en/articles/8019812-how-can-i-calculate-the-maximum-loss-limit"
+        },
+        {
+          "label": "FundedNext current Lite purchase-date conditions",
+          "url": "https://help.fundednext.com/en/articles/17253939-stellar-lite-account"
+        },
+        {
+          "label": "FundedNext Stellar Instant separate terms",
+          "url": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
         }
       ],
       "addIncidents": [
@@ -2809,6 +3576,125 @@
           "quote": "FundedNext CFDs: $42.67 million in tracked crypto payouts in Q1 2026",
           "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
           "firmReported": false
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "FundedNext Stellar challenges and funded accounts — Quick Strike",
+          "rule": "Profitable trades closed in under 30 seconds are measured as a share of all recorded profits. At 20% a warning; at ≥30% evaluation progression pauses. On funded accounts, ≥30% after warning can remove 100% Quick Strike profit and close the account at cycle-end.",
+          "impact": "A trade stopped automatically under 30 seconds contributes if profitable; unlike an unconditional minimum duration, the 30% profit-concentration threshold and stage-specific consequences determine exposure.",
+          "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext"
+        },
+        {
+          "program": "FundedNext Stellar 1/2-Step and Lite — larger sizes",
+          "rule": "Expert Advisors and the related VPS/EA add-ons are disallowed for new challenge sizes $50,000 and above; Lite/2-Step payout cycles and minimum phase-days vary by checkout choice and date.",
+          "impact": "An automated strategy usable on a $25K account may not be allowed on a $50K account; a recently purchased Lite account follows two days, not a five-day legacy statement.",
+          "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+        },
+        {
+          "program": "FundedNext Stellar Instant — news and rewards",
+          "rule": "For trades in a correlated high-impact news ±5-minute window, only 40% of profitable P/L is credited to the account, while full losses count. Withdrawals need at least 1% growth or 5% growth for the EOD on-demand route.",
+          "impact": "Headline profit can exceed eligible reward, with an EOD eligibility recheck if a new trade is placed.",
+          "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "fundednext-stellar-one-current",
+          "name": "Stellar 1-Step",
+          "type": "Challenge",
+          "description": "Current Stellar single-phase 6K–200K; two evaluation days minimum unless eligible paid add-on.",
+          "accountSizeMin": 6000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% in one phase",
+          "maxDailyLoss": "3% per day",
+          "maxDrawdown": "6% fixed below starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundednext.com/en/articles/17252927-stellar-1-step-account",
+          "drawdownDetails": "Fixed 94% original-capital floor; does not follow profits.",
+          "profitSplit": "80% standard, up to 95% add-on",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "2 evaluation days (eligible add-on can remove)"
+        },
+        {
+          "id": "fundednext-stellar-two-current",
+          "name": "Stellar 2-Step",
+          "type": "Challenge",
+          "description": "Two-phase current Stellar model, not the trailing Instant offer.",
+          "accountSizeMin": 6000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% Phase 1, 5% Phase 2",
+          "maxDailyLoss": "5% per day",
+          "maxDrawdown": "10% fixed below starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge",
+          "drawdownDetails": "Fixed 90% floor; different five-day requirement in each evaluation phase.",
+          "profitSplit": "80% standard, other payout routes/add-ons",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "On-demand payout route can impose 40% best-day limit; Quick Strike rule applies regardless.",
+          "minTradingDays": "5 evaluation days per phase"
+        },
+        {
+          "id": "fundednext-stellar-lite-current",
+          "name": "Stellar Lite",
+          "type": "Challenge",
+          "description": "Lite challenge; new accounts from 12 October 2026 use two evaluation days per phase, older ones five.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% Phase 1, 4% Phase 2",
+          "maxDailyLoss": "4% per day",
+          "maxDrawdown": "8% fixed below starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundednext.com/en/articles/17253939-stellar-lite-account",
+          "drawdownDetails": "Fixed 92% starting-capital floor; optional 10% max-loss add-on is a separate paid setting.",
+          "profitSplit": "60-90% by payout route",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Quick Strike all stages; 40% applies to selected on-demand payout route.",
+          "minTradingDays": "2 days/phase if bought/reset from 12 Oct 2026; earlier 5"
+        },
+        {
+          "id": "fundednext-stellar-instant-current",
+          "name": "Stellar Instant",
+          "type": "Instant funding",
+          "description": "Direct $2K–$20K simulated account; news window counts only 40% of eligible profits and purchase fee nonrefundable.",
+          "accountSizeMin": 2000,
+          "accountSizeMax": 20000,
+          "profitTarget": "No evaluation target; payout eligibility after 1%-5% growth",
+          "maxDailyLoss": "No separate daily-loss limit",
+          "maxDrawdown": "6% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+          "drawdownDetails": "Balance-high floor rises with closed profit and locks at initial capital; real-time equity can breach.",
+          "profitSplit": "70% initially, up to 80%",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
         }
       ]
     },
@@ -2957,7 +3843,7 @@
       ]
     },
     "funding-pips": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -2992,12 +3878,29 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Verified static 12% 1-Step Flex, 10% 2-Step Standard, 6% 2-Step Pro versus Zero 5% trailing. Captured single-idea warning system, concentration trigger above 60% of evaluation profit target, funded 35% on-demand consistency and seven profitable days, Zero floating loss and rolling 10-minute idea test. Score 70 to 66.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 72707,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundingpips.com",
+        "drawdownType": "Hybride",
+        "score": 66,
+        "verdict": "FundingPips has several static challenges but Zero uses a 5% trailing maximum, so a single generic drawdown label conceals important product differences. Flexible marketing rewards depend on the selected cycle: on-demand or monthly options can require 35% best-day consistency and seven 0.5%-profitable days, while a single idea above 60% of the evaluation target activates extra payout conditions. Zero also has intraday combined floating loss and 10-minute continuation rules. These are published; score 66/100 after a four-point severity deduction.",
+        "auditSummary": "18 November 2026: official product and risk FAQ audit. 1-Step Flex uses 12% static max/3% daily and a 12% target with no phase minimum, but if one trade idea exceeds 60% of that target a four-profitable-day payout gate is activated; all sizes face a 1% floating idea warning system that closes after a fourth warning. 2-Step Standard uses 10% static overall with 8%/5% stage targets, 3 evaluation trading days, restrictions on funded overnight and weekend holdings unless a Swing add-on; on-demand 100% reward asks for 35% consistency and seven 0.5%-profitable days. 2-Step Pro uses 6% static max and 3% daily, with two days per evaluation phase for new purchases/reset from 26 August 2026. Zero is direct simulated funded with 5% trailing total and separate floating loss, 2%-3% per-trade idea limits by size, a 10-minute reopening aggregate and seven 0.25%-profitable days per 30-day window. Source pricing/models differ by checkout and old versions; no unsupported general fee or payout success assertion. Score 70 to 66 for punitive funded account mechanics."
       },
       "addIncidents": [
         "Finance Magnates reported on 2026-09-22 that FundingPips' terms (effective 15 May 2026) state that PRIME access for invited funded traders \"is deemed automatically accepted by you, is mandatory, and you waive any right to refuse or contest it\", and that the payout from the previous, permanently closed account \"serves as the starting balance for PRIME\". FundingPips disputed that reading in the same article: \"There is no such thing as replacing a payout. Nothing is replaced.\" (https://www.financemagnates.com/forex/fundingpips-invited-traders-into-prime-the-tcs-made-it-mandatory/)."
@@ -3010,6 +3913,140 @@
           "quote": "30-day on-chain payouts: FundingPips at $3.02 million",
           "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
           "firmReported": false
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "FundingPips 1-Step Flex — evaluation to Master",
+          "rule": "If a single trade idea generates more than 60% of the 12% evaluation profit target, the Master account gains an additional four qualifying profitable days per reward. Master 1% floating-loss ideas trigger four-strike warnings.",
+          "impact": "Finishing an evaluation quickly can create unexpected payout days, even when evaluation has no minimum days.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+        },
+        {
+          "program": "FundingPips 2-Step Standard — on-demand funded rewards",
+          "rule": "Weekly/biweekly and on-demand splits differ. The on-demand 100% route requires a best day ≤35% of all profits and seven days with at least 0.5% gain; normal Master overnight/weekend trading requires the Swing add-on.",
+          "impact": "Headline maximum reward percentage is conditional, not a promise of immediate unrestricted withdrawal.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+        },
+        {
+          "program": "FundingPips Zero — direct Master risk",
+          "rule": "Zero requires seven 0.25%-profitable days within each rolling 30 days for payouts; 5% overall loss trails. On $50K+ ideas, 2% idea risk is aggregated across re-entries in the same direction within 10 minutes and 1% combined floating-loss can hard-breach.",
+          "impact": "Splitting or rapidly reopening a losing position may not reset risk; small concurrent losers can trigger immediate closure.",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "FundingPips five account model reference",
+          "url": "https://help.fundingpips.com/hc/en-us/articles/48368490585105-Compare-Account-Models"
+        },
+        {
+          "label": "FundingPips Zero risk and ten-minute idea definition",
+          "url": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"
+        },
+        {
+          "label": "FundingPips 1-Step Flex concentration threshold",
+          "url": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "pips-one-step-flex",
+          "name": "1-Step Flex",
+          "type": "Challenge",
+          "description": "Single-stage 5K–100K; one trade idea over 60% of target adds funded payout conditions.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "12% single evaluation",
+          "maxDailyLoss": "3% daily from higher opening balance/equity",
+          "maxDrawdown": "12% static from starting capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex",
+          "drawdownDetails": "Initial-size 12% floor stays fixed; floating losses also count.",
+          "profitSplit": "85% biweekly; 100% monthly subject to gates",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Monthly reward: best day ≤35%, 7 qualifying profit days; 60% single-idea evaluation trigger adds 4 days."
+        },
+        {
+          "id": "pips-two-step-standard",
+          "name": "2-Step Standard",
+          "type": "Challenge",
+          "description": "Standard two-phase challenge; Master overnight/weekend holding requires Swing add-on.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "8% Phase 1; 5% Phase 2",
+          "maxDailyLoss": "5% daily by standard tier; verify add-on",
+          "maxDrawdown": "10% static maximum loss",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+          "drawdownDetails": "Lifetime floor fixed 10% below initial balance; optional account configuration may alter daily rules.",
+          "profitSplit": "60% weekly / 80% biweekly / 100% on-demand",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "On-demand rewards: best day ≤35%, 7 profitable days ≥0.5%.",
+          "minTradingDays": "3 evaluation days in Phase 1 (standard model)"
+        },
+        {
+          "id": "pips-two-step-pro",
+          "name": "2-Step Pro",
+          "type": "Challenge",
+          "description": "Two-phase Pro tier; newly purchased/reset accounts need two evaluation days per phase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "6% in each of two phases",
+          "maxDailyLoss": "3% daily",
+          "maxDrawdown": "6% static maximum loss",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model",
+          "drawdownDetails": "6% fixed from initial capital, regardless of subsequent profit.",
+          "profitSplit": "80% weekly",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "2 days per phase for new/reset after 26 Aug 2026"
+        },
+        {
+          "id": "pips-zero-direct",
+          "name": "FundingPips Zero",
+          "type": "Instant funding",
+          "description": "Direct Master with strict floating loss and per-idea risk; account-size-dependent 2%-3% per-idea cap.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "No evaluation; 7 qualified days per 30 days for reward",
+          "maxDailyLoss": "Combined floating loss limit of 1% on losing open positions",
+          "maxDrawdown": "5% trailing maximum loss",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero",
+          "drawdownDetails": "Maximum-loss floor follows balance profits; 10-minute same-direction re-entry losses aggregate as one idea.",
+          "profitSplit": "95% biweekly subject to all payout gates",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Direct payout qualified-day and profit concentration rules vary by tier.",
+          "minTradingDays": "7 profitable days ≥0.25% in rolling 30-day period"
         }
       ]
     },
@@ -5723,12 +6760,16 @@
       ]
     },
     "the5ers": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 41676,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/the5ers.com",
-        "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval"
+        "payoutDelay": "first request 14 days after funding, then every 2 weeks; typically processed within up to 3 business days after approval",
+        "drawdownType": "Hybride",
+        "score": 83,
+        "verdict": "The5ers is active and offers distinct High Stakes, Bootcamp and Hyper-Growth routes. High Stakes maximum loss is fixed to starting equity despite its daily reset; Bootcamp changes the permitted loss and daily-pause rule on reaching Pro. Explanatory materials disagree about whether Bootcamp/Hyper Growth floors are genuinely trailing versus simply allowing a larger loss cushion as profits accumulate. PropRadar does not label those two verified without an unambiguous programme contract. News-window and withdrawal controls are material but publicly documented; score 83/100.",
+        "auditSummary": "18 November 2026: High Stakes official FAQ defines 8-10% absolute initial-capital maximum, with daily 3-5% recalculated at server midnight from the higher balance or equity; the seller publishes a two-minute before/after high-impact news no-entry window and caps $50K/$100K payouts at $3,000/$4,000, respectively. Bootcamp has three evaluation stages, 5% maximum loss in each and 4% in the $20K Pro example, with daily pause absent during evaluation and 3% in Pro; fees are nonrefundable and inactivity after 30 days closes accounts. Hyper Growth uses a 3% daily pause rather than automatic account termination. The July company FAQ examples describe a fixed initial floor for Bootcamp/Hyper Growth while 2026 official educational articles call the same mechanisms trailing: the exact floor movement is expressly left unresolved, without an unsupported verified type on the two cards. No new complaint or legal event inferred. Score 85 to 83 for hard funded-stage payout limits and product complexity."
       },
       "changelog": [
         {
@@ -5773,12 +6814,37 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Reviewed High Stakes fixed 8%-10% loss and EOD daily reset, Bootcamp phase-to-Pro rule change, Hyper Growth daily pause and documented conflicting explanatory drawdown language. Recorded news-window profit confiscation and payout caps without extrapolating across products. Score 85 to 83 for programme complexity and payout gates.",
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "The5ers withdrawals FAQ (official)",
           "url": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+        },
+        {
+          "label": "The5ers High Stakes absolute loss and daily reset",
+          "url": "https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/"
+        },
+        {
+          "label": "The5ers Bootcamp by phase and Pro",
+          "url": "https://the5ers.com/bootcamp/"
+        },
+        {
+          "label": "The5ers high-stakes payout/news restrictions",
+          "url": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
         }
       ],
       "addPayoutProofs": [
@@ -5797,6 +6863,104 @@
           "quote": "30-day on-chain payouts: The5ers at $3.64 million",
           "url": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
           "firmReported": false
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "The5ers High Stakes — evaluation and Pro",
+          "rule": "Maximum loss is 8%-10% fixed from starting capital; daily 3%-5% recalculates on the higher of closing balance/equity. Executing trades 2 minutes before or after high-impact news removes those trade profits, while losses still count.",
+          "impact": "Daily-loss breach terminates the account; a profitable news trade can lose its eligible profits despite remaining open.",
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+        },
+        {
+          "program": "The5ers High Stakes — Pro withdrawals",
+          "rule": "Published $50K / $100K Pro payout caps are $3,000 / $4,000, with minimum payout profits $300 / $500; requests are every 14 days.",
+          "impact": "Not all accumulated profit is immediately withdrawable. Check exact size and current plan in the dashboard.",
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+        },
+        {
+          "program": "The5ers Bootcamp — three evaluation stages vs Pro",
+          "rule": "Bootcamp evaluation has no daily pause; its Pro stage adds a 3% daily pause, changes maximum loss in the $20K example from 5% to 4%, and its purchase fee is nonrefundable. Inactivity over 30 days closes accounts.",
+          "impact": "Passing changes the operative risk controls and does not reimburse the entry fee.",
+          "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"
+        },
+        {
+          "program": "The5ers Bootcamp and Hyper Growth — drawdown explanation",
+          "rule": "The official July drawdown examples leave the floor at the original starting-capital less loss percentage as retained gains rise, but newer official education pages call these drawdowns trailing. These descriptions do not consistently specify floor movement.",
+          "impact": "Do not assume the floor is static or trailing based on one marketing explanation; obtain the purchased programme contract and live dashboard threshold.",
+          "source": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
+          "status": "conflicting"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "the5ers-high-stakes-current",
+          "name": "High Stakes (two-step)",
+          "type": "Challenge",
+          "description": "Current High Stakes examples include $50K and $100K with separate funded payout caps.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 100000,
+          "profitTarget": "Two-stage plan; targets depend on tier",
+          "maxDailyLoss": "3%-5% daily from higher prior closing balance/equity",
+          "maxDrawdown": "8%-10% fixed from initial capital",
+          "drawdownType": "Static",
+          "drawdownSource": "https://the5ers.com/faqs/what-is-the-drawdown-rule-for-high-stakes/",
+          "drawdownDetails": "Absolute maximum-loss floor stays fixed; daily loss is recalculated after server rollover.",
+          "profitSplit": "programme scaling dependent",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded-stage 50% best-day consistency noted in firm educational guide."
+        },
+        {
+          "id": "the5ers-bootcamp-current",
+          "name": "Bootcamp (three-stage)",
+          "type": "Challenge",
+          "description": "Stage-dependent $20K-to-$250K plans; 3% Pro pause and nonrefundable activation fee.",
+          "accountSizeMin": 20000,
+          "accountSizeMax": 250000,
+          "profitTarget": "6% in each of three evaluation stages",
+          "maxDailyLoss": "None in evaluation; 3% daily pause on Pro",
+          "maxDrawdown": "5% evaluation per phase; 4% Pro in the $20K plan",
+          "drawdownSource": "https://the5ers.com/bootcamp/",
+          "drawdownDetails": "Classification pending: official descriptions differ on whether the actual floor trails retained profit.",
+          "profitSplit": "50% initial, scaling opportunities",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "No fixed evaluation time limit"
+        },
+        {
+          "id": "the5ers-hyper-growth-current",
+          "name": "Hyper Growth",
+          "type": "Scaling",
+          "description": "Direct scale-up route; daily pause allows trading again next session if maximum loss is not breached.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 20000,
+          "profitTarget": "10% growth target for stage progression",
+          "maxDailyLoss": "3% daily pause (not immediate account termination)",
+          "maxDrawdown": "6% max-loss allowance; mechanics contested",
+          "drawdownSource": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+          "drawdownDetails": "Current education articles call it trailing but the official example describes a fixed initial floor; type unresolved.",
+          "profitSplit": "50% initial and rises with scale-up",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
         }
       ]
     },
@@ -6178,11 +7342,15 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15052,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/topstep.com",
+        "drawdownType": "EOD",
+        "score": 82,
+        "verdict": "Topstep remains an active futures evaluation service. Standard Trading Combine and Express Funded use an end-of-day trailing maximum-loss limit, but the Express Funded nominal account size is buying power: its real starting balance is zero. The floor locks at zero and a first payout sets it to zero regardless of prior position. A separate 40% consistency route applies only to the selected XFA payout path. These are documented rules; PropRadar score 82/100 after a modest deduction for complexity and withdrawal gates.",
+        "auditSummary": "18 November 2026 official Topstep September 2026 help-center audit. Trading Combine sizes $50K, $100K, $150K have maximum loss limits of $2,000, $3,000, $4,500, each trailing end-of-day balance but enforced against realtime unrealized net P/L intraday; the floor eventually locks at starting size. Evaluation has a 55% profit concentration target, whereas its Express Funded Account starts at $0 despite nominal $50K–$150K buying power; its MLL trails from negative amounts to a permanent $0 floor, and the first reward resets the MLL to zero. XFA Standard and Consistency payout routes differ; Consistency requires best day ≤40% of window profit and at least three trading days; payouts reset the window. A daily loss limit may be selected at checkout and changes some parameters. No legal incident added or independent bank-level examination; editor score 84 to 82 for complexity, not proof of unfair denial."
       },
       "addSources": [
         {
@@ -6196,6 +7364,14 @@
         {
           "label": "Justia docket: McCrudden v. Topstepfunded LLC (M.D. Fla. 3:26-cv-00816)",
           "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513"
+        },
+        {
+          "label": "Topstep MLL mechanism, funded account and payout reset",
+          "url": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"
+        },
+        {
+          "label": "Topstep separate 55%/40% consistency conditions",
+          "url": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep"
         }
       ],
       "changelog": [
@@ -6260,6 +7436,19 @@
           "fields": [
             "legalReview"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Separated Trading Combine EOD trailing maximum-loss from Express Funded account starting at zero; identified 55% Combine consistency, optional 40% XFA payout route, trading-day requirements and irreversible zero-floor after first payout. Score 84 to 82 for funded gating, not alleged nonpayment.",
+          "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+          "fields": [
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "verdict",
+            "auditSummary",
+            "score"
+          ]
         }
       ],
       "addIncidents": [
@@ -6295,7 +7484,52 @@
             "url": "https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513"
           }
         ]
-      }
+      },
+      "restrictiveRules": [
+        {
+          "program": "Topstep Trading Combine — standard evaluation",
+          "rule": "MLL trails end-of-day balance and is recalculated at daily close, but an intraday unrealized equity touch triggers liquidation. Standard Combine profit-day concentration is limited to 55% of its target.",
+          "impact": "Profitable open positions that reverse can breach a threshold set at the previous EOD; a single oversized winning day delays passing.",
+          "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"
+        },
+        {
+          "program": "Topstep Express Funded Account — payout",
+          "rule": "Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
+          "impact": "A payout can reduce remaining loss cushion, and payout eligibility differs between Standard and Consistency paths.",
+          "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep"
+        },
+        {
+          "program": "Topstep Trading Combine and XFA — daily loss options",
+          "rule": "Daily Loss Limit is not necessarily universal: checkout can add DLL and change a funded payout cap; self-set personal loss controls are distinct from mandatory MLL.",
+          "impact": "Do not present an optional daily lockout as a compulsory hard breach for every Topstep programme.",
+          "source": "https://help.topstep.com/en/articles/10490293-daily-loss-limit-in-the-trading-combine-and-express-funded-account"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "topstep-trading-combine-current",
+          "name": "Trading Combine + earned Express Funded",
+          "type": "Futures evaluation",
+          "description": "Futures combine; funded stage is earned after passing, not an instantly purchased $50K cash balance.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 150000,
+          "profitTarget": "$3K / $6K / $9K for 50K / 100K / 150K",
+          "maxDailyLoss": "Optional DLL at checkout",
+          "maxDrawdown": "EOD trailing MLL $2,000 / $3,000 / $4,500",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
+          "drawdownDetails": "Trailing floor updates after daily close; all realtime P/L counts for breach. Earned XFA uses a zero-balance start and $0 lock.",
+          "profitSplit": "up to 100% by payout route; verify eligibility",
+          "platforms": [
+            "not verified for this specific tier"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Combine 55% of target; optional XFA Consistency payout route 40% of net profit and 3 days."
+        }
+      ]
     },
     "trade-the-pool": {
       "changelog": [
