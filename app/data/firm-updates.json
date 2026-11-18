@@ -137,8 +137,17 @@
       ]
     },
     "miltraders": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Zero — first funded reward","rule":"The first payout requires five winning days of at least 0.2% each and the EOD drawdown floor to lock after a balance of $52,100/$103,100/$154,600, depending on the $50K/$100K/$150K size. Only 50% of the gains above that locked level can then be requested, subject to a separate payout cap.","impact":"The headline 90% profit split is not a promise that all profits are immediately withdrawable; the lock, winning-day threshold and first cap must be reached.","source":"https://miltraders.com/faqs/"},
+        {"program":"Pro — funded reward cycle","rule":"Five winning days of at least 0.2% each and the drawdown safety buffer are prerequisites. The best winning day must stay within 30% of cumulative cycle profits; progressive per-request caps start at $1,500/$2,000/$2,500 depending on size.","impact":"Profitable trading may continue before a reward is eligible; the payout cap is independent of the advertised 90% share.","source":"https://miltraders.com/faqs/"},
+        {"program":"Instant — reward eligibility","rule":"The first reward is unlocked only after $3,000/$6,000/$9,000 of new profit by size; later cycles need fresh profit and have their own targets. The best day must represent less than 20% of current-cycle profit, with progressive payout caps.","impact":"There is no minimum-day count, but a sizable profit trigger and a strict best-day ratio delay access to withdrawals.","source":"https://miltraders.com/faqs/"}
+      ],
+      "set": {
+        "auditSummary": "18 November 2026 desk audit of MilTraders' Zero, Pro and Instant futures programs using the firm's current FAQ and contractual terms. Zero and Pro require five sufficiently profitable days plus a locked EOD drawdown buffer; Zero permits withdrawal of only half of gains above the lock, whereas Pro adds a 30% funded best-day ratio. Instant has a sizable first-profit trigger and a 20% best-day ratio instead of a day count. Each tier has separate minimum and per-request caps, despite the advertised 90% payout split. Operator disclosures and discretionary contractual powers remain documented in the initial review; official payout totals were not independently verified. The pre-existing 58/100 score remains unchanged."
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Program-level audit: separated Zero lock-and-50%-of-gains withdrawal, Pro 30% best-day condition and Instant 20% best-day/fresh-profit trigger; recorded progressive payout caps. Retained 58/100 because the firm's initial review had already documented the material restrictions.","source":"https://miltraders.com/faqs/","fields":["restrictiveRules","auditSummary"]},
         {
           "date": "2026-11-16",
           "summary": "Initial 58/100 editorial profile added after reading Zero, Pro and Instant pricing, programme rules, payout caps, terms and the stated Dubai operator. Regular USD fees are separated from temporary public coupon prices. No previous score is replaced.",
@@ -875,8 +884,19 @@
       ]
     },
     "aqua-funded": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Instant Funding Standard — hard loss limits","rule":"The model has a 3% daily equity/balance-based loss floor, resetting at 00:00 UTC, and a 5% maximum loss floor trailing upward at daily reset. The higher balance or equity at the reset determines the reference.","impact":"Unrealized gains at reset can raise the risk floor; breaching either limit closes the account.","source":"https://help.aquafunded.com/en/articles/10476448-instant-funding-standard"},
+        {"program":"Instant Funding Standard — consistency and qualified days","rule":"At reward time, the best profitable day must be less than 15% of aggregate profits, and five trading days must each achieve at least 0.5% of the initial account balance in profit. A failed best-day ratio delays reward eligibility without automatically closing the account.","impact":"Five calendar days with trades do not necessarily qualify, and a single large winner can require many more profitable days before a request.","source":"https://help.aquafunded.com/en/articles/10476448-instant-funding-standard"},
+        {"program":"Instant Funding Standard — floating-loss strikes","rule":"If combined floating PnL reaches minus 1% of the initial balance, the first occurrence cuts the payout split to 50%, the second cuts it to 25%, and the third closes the account.","impact":"This funded-stage floating-loss restriction applies separately from daily and overall drawdown; advertised 90% splits can be reduced.","source":"https://help.aquafunded.com/en/articles/10476448-instant-funding-standard"},
+        {"program":"Funded rewards — general limits","rule":"The first request normally opens 14 days after the first funded trade. For accounts of $100K or more, each of the first two reward requests is capped at $10,000; the minimum request is $100. The stated 24-business-hour guarantee starts after a payout is approved.","impact":"A timely approval and a short processing promise do not remove the initial waiting period, the first-two-payment cap or eligibility checks.","source":"https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work"}
+      ],
+      "set": {
+        "auditSummary": "18 November 2026 program-specific review of AquaFunded's current Instant Funding Standard documentation and general funded reward policy. Instant Standard combines a 3% daily loss with a 5% upward-trailing drawdown, a strict 15% best-day reward condition and five qualifying days of at least 0.5% profit. A separate minus-1% floating-PnL sequence reduces a 90% reward share to 50%, then 25%, before a third violation closes the account. General reward eligibility includes a 14-day first wait and first-two-request limits on accounts of $100K or more. These are issuer-published contractual conditions, not independently tested execution or payout evidence. The existing Trustpilot-withheld policy still caps the visible score at 64/100; no new consumer allegation is inferred."
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Read current Instant Standard hard drawdown, qualified-day, best-day and floating-PnL penalty rules. Separately checked the reward FAQ's first-withdrawal window and initial $100K+ payout caps. Left the pre-existing Trustpilot score cap and complaint chronology unchanged.","source":"https://help.aquafunded.com/en/articles/10476448-instant-funding-standard","fields":["restrictiveRules","auditSummary"]},
+        {"date":"2026-11-18","summary":"General reward FAQ confirms 14-day first eligibility and $10K maximum on each of the first two payouts for $100K-plus account sizes.","source":"https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work","fields":["restrictiveRules"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au and ie mirrors. Price and profit split not re-read on the official site, left unchanged.",
@@ -2805,11 +2825,23 @@
       }
     },
     "finotive-funding": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"All Challenge and funded payout cycles — high-frequency condition","rule":"If at least 20% of positive realized profit comes from trades held less than 120 seconds, assessed only after ten closed trades, a still-active finding at payout request records one conditional strike and reduces that cycle's reward to 10%. Five cumulative strikes close the account.","impact":"Rapid trades can sharply reduce a reward even when the advertised profit split is higher; the metric can be corrected before requesting payment.","source":"https://finotivefunding.com/terms-and-conditions"},
+        {"program":"Instant Funding Standard and Lite — profit concentration","rule":"If a single closed position or grouped overlapping sequence contributes at least 60% of total positive realized profit in the payout cycle, submitting the request with the condition active records a conditional strike and reduces that cycle's reward to 10%.","impact":"One profitable idea can dominate a cycle, making a payout substantially smaller unless other trades lower the concentration first.","source":"https://finotivefunding.com/terms-and-conditions"},
+        {"program":"All account types — volatility trade resets","rule":"The published terms reserve the right to reset concentrated trades during heightened volatility; affected simulated profits and losses are removed from balance and payout calculations. A reset is not itself a strike or account closure.","impact":"An apparent account profit can be recalculated after a trading review, independently of the payout-request strike system.","source":"https://finotivefunding.com/terms-and-conditions"}
+      ],
+      "set": {
+        "profitSplit": 95,
+        "payoutDelay": "on demand where eligible, subject to programme rules and payout-cycle review (company policy)",
+        "verdict": "PropRadar's file covers Finotive Funding's published programs and legal terms, including the disclosed DIFC contracting company. The funding accounts are simulated, with rewards subject to contractual conditions. Company registration does not make the funding product a regulated brokerage account or independently verify customer payments.",
+        "auditSummary": "18 November 2026 review of Finotive Funding's detailed current terms alongside previously checked two-step program pages. The contract defines a short-holding-time threshold: at least 20% of positive cycle profit from positions held under 120 seconds can cause a conditional strike and reduce a requested reward to 10%. Instant Standard and Instant Lite have a separate 60% single-position concentration threshold with the same cycle reduction. Five cumulative conditional strikes close an account, while discretionary volatility-related trade resets can change account and reward figures without counting as strikes. This is a review of published rules, not a finding that any particular trader was penalized. The visible 64/100 Trustpilot-withheld cap is retained."
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/finotivefunding.com)."
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Parsed current section 7 terms: 20% of profits from under-two-minute trades and 60% concentration on Instant Standard/Lite can each reduce a submitted cycle reward to 10%, with conditional strikes; volatility trade resets may alter simulated results. Existing 64/100 review-rating cap unchanged.","source":"https://finotivefunding.com/terms-and-conditions","fields":["restrictiveRules","auditSummary","payoutDelay"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the au.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -2842,11 +2874,6 @@
           ]
         }
       ],
-      "set": {
-        "profitSplit": 95,
-        "payoutDelay": "on demand, no minimum payout",
-        "verdict": "PropRadar's file covers Finotive Funding's published programs and legal terms, including the disclosed DIFC contracting company. The funding accounts are simulated, with rewards subject to contractual conditions. Company registration does not make the funding product a regulated brokerage account or independently verify customer payments."
-      },
       "setProducts": [
         {
           "id": "finotive-two-step",
@@ -3115,11 +3142,23 @@
       ]
     },
     "for-traders": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Forex Instant — Master Account","rule":"The best profitable day must represent no more than 15% of total profit before a reward is eligible. This rule does not apply to Forex Instant Pro, Fast, Fast Static or Classic.","impact":"A high-profit day can delay a withdrawal despite an otherwise positive account; the named product variant matters.","source":"https://help.fortraders.com/en/articles/10442201-how-does-the-consistency-score-work-on-instant-and-pay-after-pass-accounts"},
+        {"program":"Forex Pay After Pass — Master Account","rule":"The largest profitable day must represent no more than 20% of aggregate profit before requesting reward. Older discontinued Crypto Fast PRO and Futures Fast models had different ratios.","impact":"Do not apply the Instant 15% threshold to this 20% plan or transfer archived product restrictions to new purchases.","source":"https://help.fortraders.com/en/articles/10442201-how-does-the-consistency-score-work-on-instant-and-pay-after-pass-accounts"},
+        {"program":"Forex Fast Static versus Fast/Instant — overall loss","rule":"Forex Fast Static uses a fixed 6% maximum drawdown tied to the starting balance. Forex Pay After Pass, Fast and Instant/Instant Pro use a moving maximum-loss methodology; loss floors do not necessarily reset down after a reward.","impact":"Buying a similarly named Forex plan can change whether prior profits tighten the allowable loss cushion; examine the exact model.","source":"https://help.fortraders.com/en/articles/11992314-what-does-balance-based-max-drawdown-mean-and-how-is-it-calculated"}
+      ],
+      "set": {
+        "profitSplit": 90,
+        "payoutDelay": "processing guarantee of 48 hours according to the site, subject to discretionary payout terms and plan-specific eligibility",
+        "drawdownType": "Hybride",
+        "auditSummary": "18 November 2026 program-level audit of For Traders' Forex Instant, Pay After Pass, Fast and Fast Static help pages. The eligible-payout consistency ratio is 15% of total profit on Instant Master and 20% on Pay After Pass Master; the current rules explicitly exempt Instant Pro, Fast, Fast Static and Classic. The firm's current help also distinguishes static maximum loss on Fast Static from balance-based or trailing variants on other Forex paths. A generic firm-level consistency or drawdown claim would therefore misstate what is bought. Its advertised 48-hour processing promise is conditional on award eligibility and discretionary terms, not independently verified bank settlement. The prior visible 64/100 Trustpilot-withheld cap remains in place."
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fortraders.com)."
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Separated current Instant Master 15% and Pay After Pass Master 20% best-day limits from plans with no such score; distinguished Fast Static loss methodology from moving-loss models. No new complaint or rating restoration inferred.","source":"https://help.fortraders.com/en/articles/10442201-how-does-the-consistency-score-work-on-instant-and-pay-after-pass-accounts","fields":["restrictiveRules","auditSummary","drawdownType"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -3144,10 +3183,6 @@
           "source": "https://www.trustpilot.com/review/fortraders.com"
         }
       ],
-      "set": {
-        "profitSplit": 90,
-        "payoutDelay": "processing guaranteed within 48 hours according to the site; the footer says payouts are discretionary"
-      },
       "setEntities": [
         {
           "name": "FT Trading Ltd.",
@@ -4656,11 +4691,24 @@
       ]
     },
     "funding-traders": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"2-Step PRO6/PRO10 and 1-Step PRO — payout schedule","rule":"Official terms give a standard 21-day withdrawal cycle, shortened to 14 days only with the biweekly add-on. Instant Funding uses 14 days, or on-demand when an applicable add-on is bought.","impact":"Marketing tables or older FAQs showing shorter periods should not replace the dated programme-level contractual schedule.","source":"https://fundingtraders.com/terms-of-service/"},
+        {"program":"Funded 2-Step and 1-Step PRO — news profits","rule":"Profits attributed to trades opened, held or closed within five minutes of a high-impact announcement may not exceed 30% of total PnL for an eligible payout, unless held at least five hours beforehand. Payouts wait until the proportion falls.","impact":"Permitted news trading does not mean every news-derived dollar is immediately withdrawable.","source":"https://fundingtraders.com/terms-of-service/"},
+        {"program":"Instant Funding — reward reserve","rule":"The first 3% of profits is held as a non-withdrawable drawdown buffer; rewards have a 15% best-day condition, a 14-day default cycle and a minimum request of 1% of initial account balance.","impact":"The headline 90% share applies only to eligible profits above the reserved buffer, not all gains displayed in the dashboard.","source":"https://fundingtraders.com/terms-of-service/"},
+        {"program":"All funded programme payouts — processing breach","rule":"Under section 7.5, when an account fails within 48 hours after a withdrawal request, the request is denied, the account reinstated and the amount credited back to the simulated balance.","impact":"Submitting a valid reward request does not by itself protect the payout amount against a subsequent account breach in the stated window.","source":"https://fundingtraders.com/terms-of-service/"}
+      ],
+      "set": {
+        "priceFrom": 49,
+        "profitSplit": 80,
+        "payoutDelay": "2-Step PRO6/PRO10 and 1-Step PRO: every 21 days by default (14-day add-on); Instant: 14 days by default (on-demand add-on), per current terms",
+        "auditSummary": "18 November 2026 re-audit of Funding Traders' current Terms of Service, maintaining the four previously priced products. The contractual standard payout cadence is 21 days on the PRO challenges and 14 days on Instant; paid options can shorten it. One-Step PRO uses a 50% best-day limit, Instant uses 15% plus a permanently non-withdrawable first 3% profit buffer, and funded PRO news-influenced profits over 30% delay withdrawal. A breach within 48 hours of payout request triggers the account-reinstatement rule rather than normal payment. Older pricing/FAQ intervals differ; the dated contractual text is used for this field. The company-reported terms are not independent payout receipts. The existing 64/100 Trustpilot-withheld cap stays unchanged."
+      },
       "addIncidents": [
         "Trustpilot check on 2026-10-27: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingtraders.com)."
       ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Current contractual terms supersede older contradictory FAQ/table payout estimates: PRO plans 21 days default, Instant 14 days default. Recorded the 30% funded news-profit threshold, Instant 3% non-withdrawable buffer and the 48-hour post-request account-failure provision.","source":"https://fundingtraders.com/terms-of-service/","fields":["restrictiveRules","auditSummary","payoutDelay"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot profile checked: no TrustScore displayed; Trustpilot states the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews. Added as a dated, quoted incident. No review count stored while the rating is withheld. Same notices seen on the ie.trustpilot.com mirror. Price and profit split not re-read on the official site, left unchanged.",
@@ -4687,11 +4735,6 @@
           "source": "https://www.trustpilot.com/review/fundingtraders.com"
         }
       ],
-      "set": {
-        "priceFrom": 49,
-        "profitSplit": 80,
-        "payoutDelay": "14 to 21 days on 2-Step; 14 days on 1-Step (the FAQ says 21 by default); Instant 7 days in the table, 14 in the FAQ"
-      },
       "setProducts": [
         {
           "id": "funding-traders-pro6",
@@ -5875,8 +5918,17 @@
       ]
     },
     "hyrotrader": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Hyro Instant — funded risk","rule":"New November 2026 crypto Instant model: 3% daily loss and 5% fixed lifetime loss. A completed position losing over 2% of initial balance causes one non-resetting warning and the second such violation fails the account; margin is capped at 25% of initial balance and combined open notional at 2 times initial balance.","impact":"Instant funding removes the evaluation but has separate trade-level and exposure constraints besides the standard drawdown floors.","source":"https://www.hyrotrader.com/blog/hyrotrader-crypto-instant-funding/"},
+        {"program":"Hyro Instant — reward eligibility","rule":"Before the first reward, three qualifying UTC trading days and a positive account result are required. A qualifying day needs a closed trade worth at least 5% of initial capital with a move of at least 1% of that trade value before fees.","impact":"An ordinary day with a small closed position does not necessarily count toward the first three required days.","source":"https://www.hyrotrader.com/blog/hyrotrader-crypto-instant-funding/"},
+        {"program":"Hyro Instant — each withdrawal","rule":"Each request includes no more than the first 5% of initial capital in account profit, split 80% by default; after a request the funded account resets. The fee is normally non-refundable, and the company describes these as simulated accounts.","impact":"A $100K Instant account ordinarily caps a single gross reward pool at $5K and trader share at $4K before any discretionary profit-split increase.","source":"https://www.hyrotrader.com/blog/hyrotrader-crypto-instant-funding/"},
+        {"program":"Hyro Core, One-Step and Two-Step — evaluation consistency","rule":"The official trading-rules page limits the contribution of any single evaluation trading day to 40% of the required profit target. This applies to challenges, not automatically to Instant funded payouts.","impact":"One profitable day can be too concentrated to complete an evaluation even when the total profit target is achieved.","source":"https://www.hyrotrader.com/trading-rules/index.html.md"},
+        {"program":"All current HyroTrader programs — eligible instruments","rule":"The published prohibitions include spot trading, USDC perpetuals, COIN-M futures and options, plus cross-account hedging and martingale strategies.","impact":"HyroTrader is a crypto derivatives prop firm, but does not offer options contracts under these trading rules.","source":"https://www.hyrotrader.com/trading-rules/index.html.md"}
+      ],
       "changelog": [
+        {"date":"2026-11-18","summary":"Added the new Hyro Instant programme's $5K–$100K sizes, published $169–$2,799 price range, fixed loss floors, per-position warning, qualifying days and per-request 5%-of-initial-capital profit cap as program-level rules. No invented independent payout confirmation or rating change.","source":"https://www.hyrotrader.com/blog/hyrotrader-crypto-instant-funding/","fields":["restrictiveRules","auditSummary"]},
+        {"date":"2026-11-18","summary":"Official crypto trading rules confirm 40% maximum single-day contribution to challenge targets and explicitly exclude options and several other instrument/strategy categories.","source":"https://www.hyrotrader.com/trading-rules/index.html.md","fields":["restrictiveRules"]},
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 4.0 TrustScore across 229 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
@@ -5919,7 +5971,8 @@
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/hyrotrader.com",
         "profitSplit": 80,
         "payoutDelay": "within 24 hours, paid in USDT or USDC",
-        "drawdownType": "Static"
+        "drawdownType": "Static",
+        "auditSummary": "18 November 2026 review of HyroTrader's newly launched Hyro Instant crypto account, distinct from its One-Step, Two-Step and Hyro Core challenges. The issuer advertises sizes $5K–$100K with normally nonrefundable prices $169–$2,799, 3% daily and 5% static overall limits, a 2% maximum losing-position strike rule and separate margin/notional caps. After KYC, the first reward requires three precisely qualified trading days and profits are limited to a 5%-of-starting-capital pool per request, after which the account resets. Its traditional evaluation paths also cap each winning day's contribution to 40% of the target, and the rules specifically prohibit options instruments. These accounts are simulated; the previously verified Solana transfer proves only one on-chain transaction, not all marketed payouts. The pre-existing 61/100 editorial rating stays unchanged pending independent operational follow-up."
       },
       "setEntities": [
         {
@@ -6285,8 +6338,23 @@
       ]
     },
     "lucid-trading": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"LucidPro — funded payout","rule":"Reward eligibility includes the plan's minimum profit target, required safety buffer and a best-day consistency ratio of at most 40% of cycle profit. The site does not present these as LucidFlex requirements.","impact":"A profitable account may still be unable to withdraw if its best day exceeds 40% of cycle earnings or its buffer is not met.","source":"https://lucidtrading.com/general-faq/"},
+        {"program":"LucidFlex — funded payout","rule":"A request requires five qualifying profitable trading days plus positive net cycle profit. Current published plan policy also uses a $500 minimum and allows only 50% of available profits per request, with size-dependent caps and a maximum of five payouts before a live-transition decision.","impact":"LucidFlex's five profitable days and per-request cap are different from LucidPro's 40% and LucidDirect's 20% best-day tests.","source":"https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts"},
+        {"program":"LucidDirect — funded payout","rule":"Direct accounts bypass the evaluation, but a reward requires meeting a separate cycle-profit objective and a best-day ratio no higher than 20%.","impact":"Instant access is not an entitlement to immediately withdraw a large one-day result.","source":"https://lucidtrading.com/general-faq/"},
+        {"program":"LucidPro, LucidFlex and LucidDirect — trade close","rule":"All positions must be flat by 4:45 p.m. Eastern Standard Time Monday to Friday; the official FAQ gives the normal futures reopening as 6 p.m. Sunday to Thursday, with special closings on market holidays.","impact":"Accounts do not permit unrestricted overnight futures exposure; check the published exchange and daylight-saving timetable before holding positions.","source":"https://lucidtrading.com/general-faq/"}
+      ],
+      "set": {
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 7805,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com",
+        "verdict": "Lucid Trading's file covers LucidPro, LucidFlex and LucidDirect, their published rules and payout conditions, and the disclosed Delaware operator. Official documents and external sources support this review. Published payout conditions do not independently authenticate individual customer payments.",
+        "payoutDelay": "Plan-specific: Pro requires profit/buffer and ≤40% best-day ratio; Flex five qualified profitable days; Direct profit objective and ≤20% best-day ratio. Disbursement follows approval.",
+        "auditSummary": "18 November 2026 program-by-program audit of Lucid Trading's futures programs. LucidPro requires an eligible profit objective, buffer and at most 40% best-day ratio for a funded reward; LucidDirect has a stricter 20% ratio despite skipping evaluation. LucidFlex instead requires five qualifying profitable days and uses its previously documented $500 minimum, 50%-of-profit per-request limit and five-request lifecycle. All three require closing positions by the stated Eastern-time daily cut-off. These different conditions should not be collapsed into one generic company-wide payout promise. The original audit's identity, Trustpilot snapshot, and issuer-reported payout metrics have not been replaced by unverified client receipts. The editorial score remains 61/100."
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Current official FAQ confirms distinct 40% Pro and 20% Direct funded best-day limits versus Flex's five profitable days, plus a common daily position close-out. Flex-specific per-request limits remain sourced to the separate help page.","source":"https://lucidtrading.com/general-faq/","fields":["restrictiveRules","auditSummary","payoutDelay"]},
         {
           "date": "2026-10-27",
           "summary": "Trustpilot refreshed: 4.5 TrustScore across 7,805 reviews, claimed profile, no Trustpilot warning. Previously recorded: 4.6, with no review count or source stored. Price and profit split not re-read on the official site, left unchanged.",
@@ -6321,13 +6389,6 @@
           ]
         }
       ],
-      "set": {
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 7805,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lucidtrading.com",
-        "verdict": "Lucid Trading's file covers LucidPro, LucidFlex and LucidDirect, their published rules and payout conditions, and the disclosed Delaware operator. Official documents and external sources support this review. Published payout conditions do not independently authenticate individual customer payments.",
-        "payoutDelay": "Plan-specific. LucidFlex: request after 5 qualifying profitable days per cycle; disbursement within 2 business days after approval. Other plans have different eligibility rules."
-      },
       "addPayoutProofs": [
         {
           "date": "2026-11-16",
@@ -10667,8 +10728,25 @@
       ]
     },
     "orion-funded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"Orion Zero and funded Orion Nova — best-day ratio","rule":"At payout request, the single most profitable day cannot exceed 20% of cycle profit. This rule does not apply in Nova evaluation and does not apply to Standard, Swing or Select.","impact":"The instant Zero and funded Nova paths may require further trading to dilute one large profitable day; other tiers should not be labelled with this rule.","source":"https://www.orionfunded.com/faq/programs/consistency-rule"},
+        {"program":"Orion Zero and Nova — funded reward buffer","rule":"The first 3% of profit is retained as a non-withdrawable safety cushion before a reward request may be made.","impact":"The advertised profit split does not make the initial 3% of account growth withdrawable on these two programs.","source":"https://www.orionfunded.com/faq/payouts/payout-request"},
+        {"program":"Funded Orion Zero — high-impact news","rule":"Trades opened or closed within five minutes of a high-impact event remain permitted but are rewarded with a 50% profit split rather than the normal 80%.","impact":"The same profitable trade can have a materially smaller share because of its timing around an economic release.","source":"https://www.orionfunded.com/faq/programs/news-trading"},
+        {"program":"Funded Nova, Standard and Select — high-impact news","rule":"No opens, closes, modifications or stop orders are allowed within two minutes before or after a high-impact event. Funded Swing has no such news restriction.","impact":"Leaving a pre-existing trade open through the window is distinguished from changing it; the affected programmes require order-management discipline.","source":"https://www.orionfunded.com/faq/programs/news-trading"},
+        {"program":"Orion Nova — post-evaluation fee","rule":"Nova charges a small $7 evaluation registration fee and a separate funded activation fee after passing; the activation must be paid within 30 days after completion.","impact":"The $7 introductory price is not the full amount required to access a Nova funded account.","source":"https://www.orionfunded.com/faq/programs/challenge-phases"}
+      ],
+      "set": {
+        "profitSplit": 80,
+        "drawdownType": "Hybride",
+        "payoutDelay": "Program-specific; Orion Zero and Nova retain a 3% non-withdrawable safety cushion and 20% best-day ratio, with rewards reviewed before processing",
+        "trustpilotRating": 4.5,
+        "trustpilotReviewCount": 2179,
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/orionfunded.com",
+        "auditSummary": "18 November 2026 comparison of Orion's official five-program matrix, payout help and funded-news policies. Zero (instant) and funded Nova (one phase) use a moving drawdown lock, a 20% best-day payout condition and a non-withdrawable first 3% profit cushion; Standard, Swing and Select have fixed drawdown levels and no published best-day rule. Orion Zero reduces reward split to 50% on trades executed close to major news, while funded Nova, Standard and Select restrict order activity within two minutes; Swing is exempt. Nova's $7 fee is only registration and a separate activation fee is required within 30 days of passing. The source material is company policy, not independently tested risk execution or payment proof. Existing 59/100 editorial score is maintained."
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Compared all five official programs and added separately sourced 20% Zero/Nova best-day limit, 3% retained reward cushion, program-specific news restrictions and Nova post-pass activation payment. The two product consistency descriptions are now precise; no generic company-wide consistency is inferred.","source":"https://www.orionfunded.com/faq/programs/consistency-rule","fields":["restrictiveRules","auditSummary","payoutDelay","products"]},
         {
           "date": "2026-10-29",
           "summary": "Programs read on the official pages: Standard 2-Step ($49 to $1,149, 6% / 6%, 3% daily, 6% static), Select 3-Step ($59 to $739, 5% x 3, 5% static), Nova 1-Step ($7 plus $69 to $1,099 activation, 4% target, 8% then 5% funded) and Zero instant ($199 to $1,149, 6%), 80% split, withdrawals every 14 days processed within 48 hours. The help center gives Zero and Nova a trailing-lock drawdown and the 2- and 3-step programs a static one, so the firm is recorded as hybrid; the Nova and Zero product pages describe the limit as absolute on the initial balance. Orion Swing (8% / 5%, 5% daily, 8% static) has no sizes on these pages. Footer: OGM International Ltd. (Saint Lucia) and Orion Global FZCO, already on file.",
@@ -10690,14 +10768,6 @@
           ]
         }
       ],
-      "set": {
-        "profitSplit": 80,
-        "drawdownType": "Hybride",
-        "payoutDelay": "withdrawals every 14 calendar days with processing within 48 hours (Standard, Select, Zero); the Nova page also says withdrawals are daily",
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 2179,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/orionfunded.com"
-      },
       "setProducts": [
         {
           "id": "orion-standard-2-step",
@@ -10764,7 +10834,7 @@
           ],
           "minTradingDays": "none",
           "hasConsistencyRule": true,
-          "consistencyRule": "A best-day rule is referenced without detail (29 Oct 2026)."
+          "consistencyRule": "Funded phase: best single day at most 20% of total cycle profits; no best-day rule during Nova evaluation (18 Nov 2026)."
         },
         {
           "id": "orion-zero-instant",
@@ -10787,7 +10857,7 @@
           ],
           "minTradingDays": "not stated",
           "hasConsistencyRule": true,
-          "consistencyRule": "A best-day rule is referenced without detail (29 Oct 2026)."
+          "consistencyRule": "Best single day at most 20% of total cycle profits before a withdrawal request (18 Nov 2026)."
         }
       ],
       "addSources": [
@@ -11357,8 +11427,20 @@
       ]
     },
     "sfx-funded": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"SFX rewards — 48-hour processing promise","rule":"The published 48-hour guarantee begins only after the risk team has approved the request, runs on Dubai business days and pauses on weekends and local public holidays. Bank or crypto-provider delivery time can add more time.","impact":"The marketing 48-hour clock is not a guarantee of receiving money within 48 consecutive hours of clicking the request button.","source":"https://sfxfunded.com/help/payout-guarantee"},
+        {"program":"Ascend 2-Step, 1-Step Pro and Rapid — rewards with add-on","rule":"The help center describes a purchasable five-business-day payout schedule replacing a 21-day standard cycle on these named plans.","impact":"Public descriptions of on-demand rewards and older help text on 21-day defaults do not line up cleanly; confirm the exact checkout contract before purchase.","source":"https://sfxfunded.com/help/add-ons","status":"conflicting"},
+        {"program":"Ascend 2-Step, 1-Step Pro and Rapid — funded reset add-on","rule":"The paid reset of a funded-stage rule breach must be activated within ten calendar days of the first funded trade and restores the account at a 50/50 split, per the help center.","impact":"The reset is not unlimited insurance: it has a short eligibility window and can halve the trader's subsequent profit share.","source":"https://sfxfunded.com/help/add-ons"}
+      ],
+      "set": {
+        "profitSplit": 85,
+        "payoutDelay": "48-hour processing guarantee only after risk-team approval, with weekend/holiday pauses; official add-on FAQ also describes 21-day base versus paid 5-business-day cycles on Ascend/Pro/Rapid, conflicting with on-demand marketing",
+        "auditSummary": "18 November 2026 audit of SFX Funded's reward guarantee and programme add-on help against earlier official 1-Step and 2-Step pricing checks. The advertised 48-hour payout promise applies only after risk approval and excludes weekends and public holidays; the receiving bank or payment provider can add time. An add-on FAQ separately describes a 21-day ordinary payout cadence and paid five-business-day cadence for specific Ascend/Pro/Rapid accounts, which conflicts with public on-demand reward language and needs written checkout clarification. The same page says the funded reset add-on must be used within ten days of first funded trade and reduces the ensuing profit split to 50%. The issuer's Trustpilot-withheld notice was already reflected in the 57/100 score; no new allegation or independently validated payment result is claimed."
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Clarified that the advertised 48-hour reward guarantee starts only after risk approval and pauses outside Dubai working days. The programme add-ons FAQ gives 21-day versus paid five-business-day payout periods, conflicting with generic on-demand copy; flagged instead of silently choosing one.","source":"https://sfxfunded.com/help/payout-guarantee","fields":["restrictiveRules","auditSummary","payoutDelay"]},
+        {"date":"2026-11-18","summary":"Recorded Ascend/Pro/Rapid five-business-day payout add-on and the funded-stage reset time window with a 50/50 profit share.","source":"https://sfxfunded.com/help/add-ons","fields":["restrictiveRules"]},
         {
           "date": "2026-10-30",
           "summary": "Official program pages read. 2-Step: $5K to $200K, 8% / 5%, 4% daily, 8% static drawdown, $499 list for 100K. 1-Step Pro: $5K to $200K, 9% target, no daily limit, 6% maximum loss (type not stated), $699 list for 100K. Split 85% rising to 100% (a comparison table also lists 20% for phase rewards); rewards on demand, average 8 hours, with a stated 48-hour guarantee; Match-Trader; SFX International FZCO, Dubai (already on file). Other prices are not shown, so no entry price is set.",
@@ -11378,10 +11460,6 @@
           ]
         }
       ],
-      "set": {
-        "profitSplit": 85,
-        "payoutDelay": "rewards on demand once eligible, average 8 hours; the firm adds $1,000 if a reward is not received within 48 hours"
-      },
       "setProducts": [
         {
           "id": "sfx-2-step",
@@ -15756,8 +15834,18 @@
       "changelog": [{"date":"2026-11-18","summary":"Updated original March 2024 temporary-suspension context, Easton ownership uncertainty, lack of verifiable resumption and historical Trustpilot 4.0/5 (1,066). Kept archival 8/100 and commercial closure status without claiming proved legal dissolution or complete nonpayment.","source":"https://fxnewsgroup.com/forex-news/retail-forex/skilled-funded-traders-becomes-second-easton-prop-firm-shut/","fields":["score","verdict","auditSummary","listedDomainWarning","legalReview","trustpilotRating","trustpilotReviewCount","trustpilotSourceUrl"]}]
     },
     "x-funded": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {"program":"1-Phase and 2-Phase funded — mandatory stop loss","rule":"Every opened position needs a stop-loss order. More than five minutes without one automatically breaches the account, while an omission lasting under five minutes still leads to payout rejection and account reset.","impact":"A briefly omitted stop loss can invalidate a reward even before the five-minute account-breach threshold.","source":"https://x-funded.com/terms-and-conditions/"},
+        {"program":"1-Phase and 2-Phase funded — trade concentration and risk","rule":"One trade idea (including overlapping trades counted together) must not exceed 45% of total profit, and its planned stop-loss risk must stay at or below 1% of initial capital. Exceeding the profit ratio rejects the payout and resets the account; exceeding the risk limit can also breach the account.","impact":"Related orders are combined as one idea, so splitting entries does not bypass either rule.","source":"https://x-funded.com/terms-and-conditions/"},
+        {"program":"Instant Funding — stop loss and concentration","rule":"The Instant plan requires a stop loss within two minutes, not five; a single trade idea may account for at most 20% of profits at withdrawal. It also uses a 6% trailing maximum-loss rule.","impact":"The Instant account has materially stricter order-management timing and payout-concentration conditions than 1-Phase/2-Phase funded accounts.","source":"https://x-funded.com/terms-and-conditions/"},
+        {"program":"All funded paths — news and weekends","rule":"The terms prohibit affected-currency exposure within ten minutes before and after high-impact releases and all open weekend positions; violations can cause payout rejection and account breach.","impact":"A position that stays open across an announcement or the Friday close can violate the rule even without a new entry in that window.","source":"https://x-funded.com/terms-and-conditions/"}
+      ],
+      "set": {
+        "auditSummary": "18 November 2026 detailed review of X Funded's current 1-Phase, 2-Phase and Instant Funding contract. The first two funded plans mandate stop losses within five minutes, cap each combined trade idea at 1% of initial risk and 45% of accrued profit, and restrict news exposure and weekends. Instant imposes a tighter two-minute stop-loss placement requirement, 20% profit concentration and a 6% trailing loss ceiling. Even short stop-loss omissions can cause account reset or reward rejection under the written terms. The earlier audit already noted a 50% base split on affiliate-referred accounts after their first eligible payout and a withheld Trustpilot rating; neither fact is independent proof of a failed payment. The editorial score stays 52/100, with unverified operating history and firm-reported payout totals kept separate from independently authenticated transfers."
+      },
       "changelog": [
+        {"date":"2026-11-18","summary":"Made existing contract risk clearer programme by programme: five-minute funded versus two-minute Instant stop-loss timing, 45% versus 20% single-trade-idea concentration, 1% trade risk and news/weekend rules. No new incident or change to the 52/100 editorial rating.","source":"https://x-funded.com/terms-and-conditions/","fields":["restrictiveRules","auditSummary"]},
         {
           "date": "2026-11-16",
           "summary": "Initial 52/100 editorial profile: standard 1-Phase, standard 2-Phase and Instant Funding documented with original euro fees. Legal registrations, founding year, permissions and client payments remain unconfirmed. No earlier score is replaced.",
