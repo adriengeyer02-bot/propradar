@@ -22,6 +22,9 @@ type AuditSource = {
 
 const translations: Partial<Record<Locale, AuditLocale>> = {
   fr: {
+    'aqua-funded': {
+      auditSummary: 'Audit du 18 novembre 2026 consacré au programme Instant Funding Standard d’AquaFunded et à sa politique générale de retrait. Instant Standard associe une limite quotidienne de perte de 3 % à un drawdown total suiveur de 5 % qui remonte, une condition stricte imposant que la meilleure journée représente moins de 15 % des profits et cinq journées qualifiantes d’au moins 0,5 % de gain. Une règle distincte sur les pertes latentes de 1 % réduit la part des profits du trader de 90 % à 50 %, puis à 25 %, avant fermeture du compte au troisième dépassement. Le premier retrait n’est normalement accessible qu’après 14 jours ; sur les comptes d’au moins 100 000 $, chacun des deux premiers retraits est plafonné. Il s’agit de règles contractuelles publiées par l’entreprise : ni l’exécution ni les versements n’ont été vérifiés indépendamment. La note visible reste plafonnée à 64/100 selon la règle Trustpilot déjà appliquée ; aucune nouvelle accusation à l’encontre de clients ou de l’entreprise n’en découle.',
+    },
     tradeday: {
       verdict: "Depuis le 12 novembre 2026, TradeDay facture les nouveaux challenges en une seule fois, et non plus par abonnement mensuel. Quick Pay et Fast Pass ont des limites, règles de consistance et conditions de retrait distinctes. Quick Pay annonce des retraits accessibles dès le premier jour financé sans réserve, tandis que Fast Pass exige cinq journées bénéficiaires et limite les montants par cycle. Deux pages officielles se contredisent sur les jours minimum de Fast Pass : demander une confirmation écrite avant l'achat. Ces règles sont publiques ; leur sévérité n'est pas assimilée à une dissimulation.",
       auditSummary: "Audit du 18 novembre 2026 : TradeDay a remplacé le 12 novembre les abonnements et réinitialisations payantes par des achats uniques. Tarifs catalogue avant promotions : 99 $ pour Quick Pay 25K Intraday, 173 $ pour Fast Pass 25K EOD. Quick Pay : cinq jours de test, meilleure journée limitée à 30 % et possibilité de drawdown Intraday ou EOD selon l'offre ; le compte financé simulé peut conserver un suivi intraday même après un test EOD. Premier retrait annoncé sans réserve de bénéfice, à partir de 250 $. Fast Pass : consistance de 45 %, cinq jours bénéficiaires en financé et plafonds par versement. Sa carte commerciale parle de trois jours de test, mais son guide dit « sans minimum » : divergence officielle. Conditions de transition pour les anciens abonnements jusqu'au 1er janvier 2027. Aucun nouveau grief de versement ou de légalité ; note maintenue à 75/100."
@@ -806,6 +809,8 @@ export function translatedAuditText(locale: Locale, original: string): string | 
         source.restrictiveRules?.forEach((rule, index) => {
           const translated = details.restrictiveRules?.[index];
           if (!translated) return;
+          // A rules update must not inherit a translation of a different or older rule.
+          if (translated.sourceRule && translated.sourceRule !== rule.rule) return;
           if (translated.program) dictionary!.set(rule.program.trim(), translated.program);
           if (translated.rule) dictionary!.set(rule.rule.trim(), translated.rule);
           if (translated.impact) dictionary!.set(rule.impact.trim(), translated.impact);

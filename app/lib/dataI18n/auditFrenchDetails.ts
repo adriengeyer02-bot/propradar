@@ -6,9 +6,45 @@ export const auditFrenchDetails: Record<string, {
   changelog?: string[];
   entities?: string[];
   incidents?: string[];
-  restrictiveRules?: { program: string; rule: string; impact: string }[];
+  restrictiveRules?: { program: string; rule: string; impact: string; sourceRule?: string }[];
   products?: { name?: string; description?: string; drawdownDetails?: string; maxDrawdown?: string; maxDailyLoss?: string; consistencyRule?: string; profitTarget?: string; profitSplit?: string; minTradingDays?: string }[];
 }> = {
+  'aqua-funded': {
+    restrictiveRules: [
+      {
+        sourceRule: 'The model has a 3% daily equity/balance-based loss floor, resetting at 00:00 UTC, and a 5% maximum loss floor trailing upward at daily reset. The higher balance or equity at the reset determines the reference.',
+        program: 'Instant Funding Standard — limites de perte strictes',
+        rule: 'Le programme prévoit une limite de perte quotidienne de 3 %, calculée à partir du solde ou de l’équité et réinitialisée à 00 h 00 UTC. La limite de perte totale de 5 % remonte lors de la réinitialisation quotidienne. Le solde ou l’équité le plus élevé à cet instant sert de référence.',
+        impact: 'Les gains latents au moment de la réinitialisation peuvent relever le seuil de perte ; franchir l’une de ces limites entraîne la fermeture du compte.',
+      },
+      {
+        sourceRule: 'At reward time, the best profitable day must be less than 15% of aggregate profits, and five trading days must each achieve at least 0.5% of the initial account balance in profit. A failed best-day ratio delays reward eligibility without automatically closing the account.',
+        program: 'Instant Funding Standard — régularité des gains et jours qualifiants',
+        rule: 'Lors d’une demande de retrait, la meilleure journée bénéficiaire doit représenter strictement moins de 15 % des profits cumulés. Cinq journées de trading doivent chacune dégager un bénéfice d’au moins 0,5 % du capital initial. Le dépassement du seuil de 15 % retarde l’éligibilité au retrait, sans entraîner automatiquement la fermeture du compte.',
+        impact: 'Cinq jours calendaires avec des opérations ne suffisent pas forcément ; une seule journée très rentable peut obliger à accumuler bien davantage de journées bénéficiaires avant de demander un retrait.',
+      },
+      {
+        sourceRule: 'If combined floating PnL reaches minus 1% of the initial balance, the first occurrence cuts the payout split to 50%, the second cuts it to 25%, and the third closes the account.',
+        program: 'Instant Funding Standard — sanctions pour pertes latentes',
+        rule: 'Si la perte latente cumulée atteint 1 % du solde initial, le premier dépassement réduit la part de profits versée au trader à 50 %, le deuxième à 25 % et le troisième entraîne la fermeture du compte.',
+        impact: 'Cette règle propre au compte financé s’ajoute aux limites de perte quotidienne et totale. Le partage des profits annoncé à 90 % peut donc être réduit.',
+      },
+      {
+        sourceRule: 'The first request normally opens 14 days after the first funded trade. For accounts of $100K or more, each of the first two reward requests is capped at $10,000; the minimum request is $100. The stated 24-business-hour guarantee starts after a payout is approved.',
+        program: 'Comptes financés — limites générales des retraits',
+        rule: 'Le premier retrait est normalement possible 14 jours après la première opération sur le compte financé. Pour les comptes de 100 000 $ ou plus, chacun des deux premiers retraits est plafonné à 10 000 $. Le minimum demandé est de 100 $. Le délai garanti annoncé de 24 heures ouvrées ne commence qu’après l’approbation du retrait.',
+        impact: 'Une approbation rapide et une promesse de traitement court ne suppriment ni l’attente initiale, ni le plafond des deux premiers versements, ni les vérifications d’éligibilité.',
+      },
+    ],
+    changelog: [
+      'Vérification des seuils de perte, des journées qualifiantes, de la meilleure journée et des sanctions sur les pertes latentes du programme Instant Standard. La FAQ des retraits confirme séparément le délai initial et les plafonds des deux premiers versements pour les comptes de 100 000 $ ou plus. Le plafond de note lié à Trustpilot et l’historique des réclamations restent inchangés.',
+      'La FAQ générale confirme un premier retrait possible après 14 jours et un plafond de 10 000 $ sur chacun des deux premiers versements pour les comptes d’au moins 100 000 $.',
+      'Profil Trustpilot vérifié : aucune note TrustScore publiée. Trustpilot indique une infraction à ses règles et la suppression d’un certain nombre de faux avis. Signalement daté ajouté sans enregistrer de nombre d’avis pendant la suspension de la note. Les mêmes avertissements apparaissent sur les versions australienne et irlandaise. Prix et partage des gains laissés inchangés faute de nouvelle vérification officielle.',
+      'Nouvelle vérification Trustpilot : toujours aucune note publiée. La plateforme signale une infraction à ses règles et affiche 1 209 avis. La note PropRadar reste plafonnée à 64 selon la règle Trustpilot.',
+      'Nouvelle lecture des conditions officielles mises à jour le 26 mars 2025 : elles désignent Aqua Funded FZCO (Dubaï) comme exploitant des pages et AquaFunded LTD (Sainte-Lucie) comme prestataire des services de trading simulé. Le numéro « 2004-00597 » et le code postal « SW18 1TA » figurent dans le document, sans vérification indépendante de leur cohérence.',
+      'Classification des règles contraignantes conformément à SCORING.md (catégorie, gravité, clarté et programmes), pour permettre le calcul uniforme de leur pénalité.',
+    ],
+  },
   earn2trade: {
     restrictiveRules: [
       {program:'Trader Career Path / Gauntlet Mini — évaluation',rule:'Drawdown suiveur relevé sur le solde de clôture EOD ; meilleure journée ≤ 30 % des profits de l’évaluation. Limite de perte quotidienne propre à la taille.',impact:'Une journée exceptionnelle peut retarder la validation ; le seuil de perte dépend du modèle et du capital.'},

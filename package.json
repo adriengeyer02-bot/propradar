@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check:firm-rules-fr": "node scripts/check-firm-rule-fr.cjs",
     "start": "next start",
     "lint": "next lint"
   },
