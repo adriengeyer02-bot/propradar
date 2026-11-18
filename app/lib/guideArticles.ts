@@ -469,7 +469,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'Who runs GOAT Funded Trader',
         paragraphs: [
           'GOAT Funded Trader launched in **May 2023**. It is a trade name of **Wishes Tower International Limited**, a Hong Kong company, and the simulated trading is provided by **Goat Funded LTD in Saint Lucia**. **No financial regulator** supervises the service. Its terms describe simulated accounts, non-refundable purchases and broad discretion over payouts, which is common in the industry but worth knowing before you buy.',
-          'PropRadar scores it **64/100**, the cap that applies while Trustpilot withholds a firm\'s rating, and keeps it on the watchlist: the brand is real and pays traders, but its track record is short and its payout terms leave a lot of room for interpretation. PropRadar has an affiliate relationship with GOAT Funded Trader; it does not change this score or this review.',
+          'PropRadar scores it **58/100**, below the 64-point maximum permitted while Trustpilot withholds its rating, and keeps it on the watchlist. The operator is active and reports paying traders, but the current payout caps, deductions and risk-team decisions create meaningful restrictions. PropRadar has an affiliate relationship with GOAT Funded Trader; it does not change this score or review.',
         ],
       },
       {

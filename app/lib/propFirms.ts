@@ -12898,6 +12898,19 @@ function applyClosedVerdictRule(firm: PropFirm): PropFirm {
 }
 
 /**
+ * A historical score described the offer while it could be purchased. Once
+ * a closure has been verified and recorded, that old score must not suggest
+ * the firm is a viable present-day choice. Keep the source score in the
+ * archive/update file; cap only the buyer-facing operational score.
+ */
+export const CLOSED_FIRM_SCORE_CAP = 29;
+
+function applyClosedScoreRule(firm: PropFirm): PropFirm {
+  if (firm.status !== 'Fermée' || firm.score <= CLOSED_FIRM_SCORE_CAP) return firm;
+  return { ...firm, score: CLOSED_FIRM_SCORE_CAP };
+}
+
+/**
  * Trustpilot rule (approved by Geyer, 2026-11-07): when Trustpilot withholds a
  * firm's rating for a breach of its guidelines, the PropRadar score is capped
  * at 64, so the firm can never sit in the 75+ band on a review profile
@@ -12936,7 +12949,7 @@ function applyPartnerOffer(firm: PropFirm): PropFirm {
   return offer && firm.status !== 'Fermée' ? { ...firm, partnerOffer: offer } : firm;
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

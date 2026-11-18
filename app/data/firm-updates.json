@@ -2217,14 +2217,17 @@
       ]
     },
     "ftuk": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-18",
       "set": {
-        "trustpilotRating": 3.8,
-        "trustpilotReviewCount": 790,
+        "trustpilotRating": 3.9,
+        "trustpilotReviewCount": 811,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/ftuk.com",
         "priceFrom": 9,
-        "payoutDelay": "on demand once program requirements are met; FTUK advertises an average payout time of 1 hour",
-        "profitSplit": 80
+        "payoutDelay": "FTUK advertises on-demand rewards after qualification; all trading is reviewed for minimum trade duration, strategy and IP/location restrictions at payout. Advertised one-hour average is company-reported, not a guaranteed transfer time.",
+        "profitSplit": 80,
+        "score": 65,
+        "verdict": "FTUK has a live commercial service, disclosed legal entities and a substantial public review history, but mandatory 30-second trade duration, strict multi-IP/VPN restrictions and prohibited-strategy rules present meaningful withdrawal risk even for profitable accounts. These conditions are written in its public help centre, so PropRadar does not call them undisclosed rules or assume every disputed rejection was wrongful. Editorial score: 65/100.",
+        "auditSummary": "18 November 2026: FTUK's official help centre states every forex or futures position must stay open at least 30 seconds, even when a stop-loss or take-profit closes it sooner. Restricted strategies include martingale, grid, anti-scaling, tick and ultra-fast scalping, with account closure specified for prohibited practices. The current IP/VPN policy permits a single consistent address and ordinary mobile/home changes, but concurrent differing IP addresses, server switching, hidden-country location and unapproved overseas trading can lead to denied rewards and closure; traders must alert support before trading while abroad. The company reviews each withdrawal against logs, KYC and these conditions. A November Trustpilot account alleges a prior strategy approval followed by payout denial over seven sub-30-second trades; FTUK's public reply confirms applying the 30-second requirement, while the broader merits and communications are not independently established. The firm's claimed average payout speed and totals are not independently reconciled. Trustpilot now shows 3.9/5 from 811 reviews with no rating-withholding banner. Score 72 to 65 for stringent enforceable rules and contested application, not for a proven company closure or fake-review campaign."
       },
       "changelog": [
         {
@@ -2246,7 +2249,10 @@
             "payoutDelay",
             "profitSplit"
           ]
-        }
+        },
+        {"date":"2026-11-18","summary":"Official help centre confirms sub-30-second trades (including SL/TP) violate the duration rule. Combined with published VPN/IP and strategy-closure policy, editor score lowered from 72 to 65; these rules are public, so no unsupported allegation of secret terms.","source":"https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration","fields":["score","verdict","auditSummary","payoutDelay"]},
+        {"date":"2026-11-18","summary":"IP/VPN controls and consequences reviewed; trader complaints and FTUK's public response on Trustpilot remain a contested record, not a judicial finding.","source":"https://faq.ftuk.com/en/articles/18247501-ip-address-vpn-location-rules","fields":["auditSummary"]},
+        {"date":"2026-11-18","summary":"Current claimed Trustpilot profile: 3.9/5 from 811 reviews, with no withheld-rating notice; no manipulation penalty applied.","source":"https://www.trustpilot.com/review/ftuk.com","fields":["trustpilotRating","trustpilotReviewCount"]}
       ],
       "setProducts": [
         {
@@ -2278,7 +2284,10 @@
         {
           "label": "FTUK legacy two-step rules (official FAQ)",
           "url": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
-        }
+        },
+        {"label":"FTUK minimum trade duration (including SL/TP)","url":"https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration"},
+        {"label":"FTUK current VPN/IP restrictions","url":"https://faq.ftuk.com/en/articles/18247501-ip-address-vpn-location-rules"},
+        {"label":"FTUK prohibited manual strategies","url":"https://faq.ftuk.com/en/articles/14364125-restricted-strategies-for-manual-trading"}
       ]
     },
     "funded-trading-plus": {
@@ -3274,6 +3283,12 @@
       ]
     },
     "goat-funded-trader": {
+  "set": {
+    "score": 58,
+    "payoutDelay": "Model-dependent eligibility; requests on weekdays, normally processed in 2 business days after first-payout KYC. Minimum $100 except Instant Daily; payout caps, deductions and a 3% processing fee apply.",
+    "verdict": "GOAT Funded Trader remains commercially active and publishes a detailed payout help centre, but its high-friction reward rules and the Trustpilot rating-withholding/fake-review notice make it a watchlist firm. The score is 58/100: review integrity is penalized by eight points in the editorial calibration, while further caution reflects deductions, eligibility tests and risk-team discretion. The existence of customer complaints does not establish that any specific payout was improperly refused.",
+    "auditSummary": "18 November 2026: GOAT Funded Trader's 14 November payout guide confirms a $3,000 daily profit ceiling (excess profits removed), a 6% or $10,000 cap on the first two rewards, model-specific 4% exceptions, and a 3% processing charge on rewards. It also says that from 8 October 2026 purchases the largest winning trade must match or exceed the largest losing trade before a withdrawal is eligible; this is not itself an account breach. One reward request at a time, no partial withdrawals in most models, exact-name payout details and an exclusively used destination are required; duplicate payment addresses can result in a final breach decision even for relatives. First KYC and risk review can delay the marketed two-business-day window. Trustpilot still withholds the rating for a breach of its guidelines and says fake reviews were removed. These are documented eligibility and review-integrity concerns, not proof that the firm is closed or that every complaint is genuine. Earlier firm-reported payout aggregates remain unverified as independent transfers. Editorial score 68 before the Trustpilot cap, then 58 after the current wider audit; affiliate status has no influence."
+  },
       "changelog": [
         {
           "date": "2026-10-23",
@@ -3302,15 +3317,17 @@
           ]
         },
         {
-          "date": "2026-11-14",
-          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
-          "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
-          "fields": [
-            "payoutProofs"
-          ]
-        }
+      "date": "2026-11-14",
+      "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+      "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+      "fields": [
+        "payoutProofs"
+      ]
+    },
+    {"date":"2026-11-18","summary":"Reassessed editor score to 58/100, including an eight-point review-integrity penalty for Trustpilot's still-withheld TrustScore; extra caution concerns the current documented reward caps, deductions and eligibility/risk-review constraints, not an unverified allegation of wrongdoing or a business closure.","source":"https://www.trustpilot.com/review/goatfundedtrader.com","fields":["score","verdict","auditSummary"]},
+    {"date":"2026-11-18","summary":"First-party payout policy updated 14 November confirms initial reward caps, a $3,000 daily profit limit, 3% processing fee, post-8-October best-versus-worst-trade condition and account-specific payment-address restrictions.","source":"https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival","fields":["payoutDelay","auditSummary"]}
       ],
-      "reviewedAt": "2026-11-14",
+  "reviewedAt": "2026-11-18",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
       ],
@@ -3318,7 +3335,8 @@
         {
           "label": "GOAT Funded Trader terms and conditions",
           "url": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
-        }
+    },
+    {"label":"GFT reward eligibility and deductions (14 Nov 2026)","url":"https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"}
       ],
       "setEntities": [
         {
@@ -3361,6 +3379,17 @@
       ]
     },
     "hantec-trader": {
+  "set": {
+    "trustpilotRating": 4.4,
+    "trustpilotReviewCount": 880,
+    "trustpilotSourceUrl": "https://www.trustpilot.com/review/rzrfunded.com",
+    "score": 70,
+    "priceFrom": 13,
+    "profitSplit": 95,
+    "payoutDelay": "Most models: eligible after 14 days from first trade (7 with add-on); Instant24 after its 24h window. Company guarantees risk-team approval or rejection within 24 business hours only for otherwise eligible requests; bank/crypto delivery is not covered.",
+    "verdict": "RZR Funded, the October 2026 successor brand to Hantec Trader, has a live site, named legal entities and detailed model-by-model trading rules. Its base profit share is 80% (up to 95% with an add-on), and the advertised 24-hour reward promise concerns approval, not actual receipt. Recent mixed payout reviews and hard-breach conditions justify monitoring, while the firm's live rules and Trustpilot 4.4/5 are more substantive than a closure rumour. PropRadar score: 70/100.",
+    "auditSummary": "18 November 2026: RZR Funded is commercially active at rzrfunded.com after the 19 October Hantec Trader rebrand. Its own guide states 80% standard reward share, 95% only with an add-on, 14-day typical request cycle measured from the first trade, and model-specific 7-day or Instant24 exceptions. Instant Lite requires five profitable days of at least 0.5%, Enhanced three; open trades must be closed before submitting. The 24-business-hour guarantee covers approval or rejection by the risk team, not arrival of funds, and expressly excludes requests under investigation, verification, possible rule breaches or incorrect details. Separate official rules list hard closure for drawdown/open-risk/inactivity breaches; the site distinguishes some soft rule violations. Trustpilot currently shows 4.4/5 from 880 reviews on the claimed, merged profile. Individual payout refusal allegations remain disputed and were not independently adjudicated. RZR's contract identifies the Saint Lucia operator and simulation-only service; marketing association with Hantec's regulated broker group must not be mistaken for broker protection. Score revised 73 to 70 to reflect the operational conditions and short post-rebrand track record."
+  },
       "changelog": [
         {
           "date": "2026-10-23",
@@ -3396,9 +3425,11 @@
             "payoutDelay",
             "entities"
           ]
-        }
+        },
+        {"date":"2026-11-18","summary":"First-party RZR payout guide and the guarantee help article show that 24 business hours covers approval/rejection, not settlement, and can exclude risk reviews. Recalibrated editorial score from 73 to 70; company is actively selling under its rebranded legal identity.","source":"https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/","fields":["score","verdict","auditSummary","payoutDelay"]},
+        {"date":"2026-11-18","summary":"Current claimed/merged RZR Trustpilot profile shows 4.4/5 across 880 reviews; no separate review-integrity penalty inferred.","source":"https://www.trustpilot.com/review/rzrfunded.com","fields":["trustpilotRating","trustpilotReviewCount","trustpilotSourceUrl"]}
       ],
-      "reviewedAt": "2026-10-29",
+  "reviewedAt": "2026-11-18",
       "addSources": [
         {
           "label": "Press release: Hantec Trader becomes RZR Funded (2026-10-19)",
@@ -3411,16 +3442,11 @@
         {
           "label": "RZR Funded programs and footer (official)",
           "url": "https://rzrfunded.com/"
-        }
+    },
+    {"label":"RZR Funded reward guide (19 Oct 2026)","url":"https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"},
+    {"label":"RZR 24-hour guarantee restrictions","url":"https://help.rzrfunded.com/en/support/solutions/articles/158000471185-what-is-the-24-hour-payout-guarantee-"},
+    {"label":"RZR current Trustpilot profile","url":"https://www.trustpilot.com/review/rzrfunded.com"}
       ],
-      "set": {
-        "trustpilotRating": 4.3,
-        "trustpilotReviewCount": 853,
-        "trustpilotSourceUrl": "https://uk.trustpilot.com/review/rzrfunded.com",
-        "priceFrom": 13,
-        "profitSplit": 95,
-        "payoutDelay": "Instant24: payout requests handled within 24 hours; Instant Lite and Instant Funding: every 14 days (7 with an add-on). RZR states rewards are approved within 24 business hours or doubled up to $1,000"
-      },
       "setProducts": [
         {
           "id": "rzr-instant24",
@@ -3947,11 +3973,15 @@
       ]
     },
     "leeloo-trading": {
-      "reviewedAt": "2026-10-27",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 608,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/leelootrading.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/leelootrading.com",
+        "score": 65,
+        "payoutDelay": "Varies by performance-account type; withdrawals require account-specific windows, threshold and consistency checks, followed by manual review. No universal processing deadline verified.",
+        "verdict": "Leeloo Trading still operates its US futures evaluation and performance-account service, with publicly accessible terms and a detailed support portal. However, trailing drawdown, the 30% profit-concentration rule, payout caps and wide manual discretion on reward approval materially limit certainty; its 3.1/5 Trustpilot score is not proof of any single payment failure. PropRadar grades it 65/100 pending independent reconciliation of withdrawals.",
+        "auditSummary": "18 November 2026: Natural Trading LLC's live site advertises futures practice and performance contests rather than broker deposits. The 31 March 2026 terms say all payouts depend on a manual compliance review at Leeloo's discretion and that account payout caps may change. Official support currently describes a 30% performance-account daily-profit concentration rule, a no-flipping policy, an intraday trailing liquidation threshold, limits on positions held through the close, and approval requirements. Its account types use different payment windows and caps, so a headline split or withdrawal frequency is not universal. Trustpilot showed 3.1/5 across 608 reviews, including disputed payout complaints with company responses; the complaints have not been authenticated against full trade logs. The website and support content demonstrate current commercial activity, not independent proof of solvency or of each advertised payout. Editorial score 70 to 65 for contract discretion and withdrawal complexity, without alleging a Trustpilot manipulation notice."
       },
       "changelog": [
         {
@@ -3962,7 +3992,13 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
-        }
+        },
+        {"date":"2026-11-18","summary":"The official 2026 terms expressly reserve manual payout review and variable account caps. Reassessed score from 70 to 65 for discretionary reward eligibility, not a confirmed closure or misconduct finding.","source":"https://www.leelootrading.com/terms-of-service","fields":["score","verdict","auditSummary","payoutDelay"]},
+        {"date":"2026-11-18","summary":"Official live support lists a 30% PA profit-concentration rule, no flipping, intraday trailing liquidation, and account-specific overnight permission. Checked against the current homepage.","source":"https://www.leelootrading.com/support","fields":["auditSummary"]}
+      ],
+      "addSources": [
+        {"label":"Leeloo current PA risk and reward rules","url":"https://www.leelootrading.com/support"},
+        {"label":"Leeloo terms (31 March 2026)","url":"https://www.leelootrading.com/terms-of-service"}
       ]
     },
     "lucid-trading": {
@@ -4027,13 +4063,17 @@
       ]
     },
     "lux-trading-firm": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-18",
       "set": {
-        "trustpilotRating": 4.0,
-        "trustpilotReviewCount": 626,
+        "trustpilotRating": 3.7,
+        "trustpilotReviewCount": 627,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/luxtradingfirm.com",
         "priceFrom": 0,
-        "profitSplit": 80
+        "profitSplit": 80,
+        "score": 64,
+        "payoutDelay": "Programme-dependent and contradictory across publicly accessible Lux pages: a current evaluation guide advertises on-demand withdrawals after risk review, an older career-plan page says monthly, and an unlinked FAQ page describes 10-day windows. Confirm the signed programme agreement.",
+        "verdict": "Lux Trading Firm is still operating, and its named UK company is active at Companies House. The chief concern is documentation clarity: multiple public pages state materially different withdrawal schedules and profit splits without consistently identifying the applicable account generation. Its current evaluation guide also gives the risk desk broad control over refunds and live-account selection. PropRadar reduces the score to 64/100 for contractual ambiguity; neither a proven closure nor a company-wide payout failure has been established.",
+        "auditSummary": "18 November 2026: the UK register still lists Lux Trading Firm Ltd (13160991) as active, with September 2026 annual-account filings, and the official site advertises purchasable programmes. A current Rules of Engagement page says 80% to funded-stage traders, 6% static drawdown, the option to request withdrawals at any time when profitable, and a fee refund only after risk-desk approval. A separate still-public Trading Rules page describes a career-plan route with 75% profit share and only monthly withdrawal eligibility, as well as relative/hybrid drawdowns. Another publicly accessible page under a numeric, practice-labelled path describes first and later reward windows every ten days and 70% profit share for the first two payouts; its applicability to currently sold accounts is not established. These pages may reflect different products or obsolete drafts; they must not be collapsed into a single undisclosed contract. The site should clearly associate each live checkout with the controlling agreement and payout schedule. Trustpilot now shows 3.7/5 from 627 reviews without a withheld-rating banner, while specific complaints about risk-desk decisions remain disputed. A UK company filing proves registered corporate existence, not the success of any payout. Editorial score reduced from 74 to 64 pending clarification of which publicly available rule set applies."
       },
       "changelog": [
         {
@@ -4054,7 +4094,11 @@
             "priceFrom",
             "profitSplit"
           ]
-        }
+        },
+        {"date":"2026-11-18","summary":"Official rules-of-engagement currently advertises on-demand withdrawal and 80% funded-stage split, while another still-public career-plan trading-rules page states monthly withdrawals and 75%. Product/version mapping unresolved, so score 74 to 64 for public contract ambiguity, not a verified payout refusal.","source":"https://luxtradingfirm.com/rules-of-engagement-3/","fields":["score","verdict","auditSummary","payoutDelay"]},
+        {"date":"2026-11-18","summary":"Older/different career rules remain visible with monthly payouts and hybrid drawdown. A separate practice-labelled FAQ describes 10-day windows and 70% early splits; its applicability to current offers is not established.","source":"https://luxtradingfirm.com/trading-rules/","fields":["auditSummary"]},
+        {"date":"2026-11-18","summary":"UK Companies House confirms the listed company is active; this is corporate status, not proof of ongoing performance or of individual payouts.","source":"https://find-and-update.company-information.service.gov.uk/company/13160991","fields":["auditSummary"]},
+        {"date":"2026-11-18","summary":"Claimed Lux Trustpilot profile now shows 3.7/5 from 627 reviews; no manipulated-review or withheld-score penalty is inferred.","source":"https://www.trustpilot.com/review/luxtradingfirm.com","fields":["trustpilotRating","trustpilotReviewCount"]}
       ],
       "setProducts": [
         {
@@ -4087,7 +4131,11 @@
         {
           "label": "Lux Trading Firm 1-Step Evaluation (official)",
           "url": "https://luxtradingfirm.com/1-step-evaluation/"
-        }
+        },
+        {"label":"Lux current rules of engagement","url":"https://luxtradingfirm.com/rules-of-engagement-3/"},
+        {"label":"Lux separately published career-plan rules","url":"https://luxtradingfirm.com/trading-rules/"},
+        {"label":"Lux practice-labelled FAQ (applicability not established)","url":"https://luxtradingfirm.com/78534-2/"},
+        {"label":"Lux Trading Firm Ltd UK corporate register","url":"https://find-and-update.company-information.service.gov.uk/company/13160991"}
       ]
     },
     "maven-trading": {
