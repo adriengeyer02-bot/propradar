@@ -11,6 +11,11 @@ load through `app/site.css`, in cascade order (globals, design-system,
 design-refresh, design-epure); add a sheet there, never as a separate import.
 Site language: English. Owner: Geyer (writes in French, answer him in French).
 
+Read also `SCORING.md` (how scores move, restrictive-rules penalty) and
+`AGENTS.md` (who does what between Claude and ChatGPT/Codex, and how to avoid
+editing the same files). Restrictive rules need `category`, `severity`,
+`clarity` and `appliesTo` (plus `auditedPrograms` on the firm) to count.
+
 ## Where the data lives
 
 - `app/lib/propFirms.ts` - base profiles (core firms + "universe" watchlist

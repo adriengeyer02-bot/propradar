@@ -659,6 +659,9 @@ const tr: Messages = {
     rulesImpact: 'Pratik sonuç',
     rulesConflict: 'Resmi kaynaklar çelişiyor',
     rulesCount: '{n} belgelenmiş kural',
+    rulesSeverity: { minor: "Küçük", major: "Önemli", blocking: "Engelleyici" },
+    rulesClarity: { clear: "Açıkça belirtilmiş", buried: "Yalnızca şartlarda", vague: "Takdire bağlı veya belirsiz" },
+    rulesPenaltyNote: "Kısıtlayıcı kural kesintisi: −{penalty} puan (kurallardan önceki editoryal puan: {before}).",
   },
 };
 

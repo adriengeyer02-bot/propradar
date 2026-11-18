@@ -667,6 +667,8 @@ html[data-theme='dark'] {
 .pr-rules-list a { display: inline-block; font-size: 12.5px; color: var(--accent); overflow-wrap: anywhere; }
 .pr-rules-list a span { color: var(--muted); }
 .pr-rules-list .pr-tag { display: inline-block; margin: 0 0 9px; }
+.pr-rules-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.pr-rules-tags .pr-tag { margin-bottom: 9px; }
 .pr-rules-empty { border: 1px dashed var(--line); border-radius: var(--pr-radius); background: var(--surface); color: var(--muted); padding: 18px 20px; font-size: 14px; line-height: 1.5; }
 @media (max-width: 760px) { .pr-rules-program-grid { grid-template-columns: 1fr; } .pr-rules-program { padding: 18px; } }
 

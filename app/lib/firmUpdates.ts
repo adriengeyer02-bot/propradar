@@ -32,11 +32,28 @@ export type RestrictiveRule = {
   source: string;
   /** For conflicting official documents, say so instead of choosing a rule. */
   status?: 'conflicting';
+  /** Scoring fields (SCORING.md section 2). Rules without them are shown but not counted. */
+  appliesTo?: string[];
+  category?: RestrictiveRuleCategory;
+  severity?: 'minor' | 'major' | 'blocking';
+  clarity?: 'clear' | 'buried' | 'vague';
 };
+
+export const RESTRICTIVE_RULE_CATEGORIES = [
+  'vpn-ip-device', 'min-hold-time', 'consistency', 'payout-cap', 'account-ends-after-payouts',
+  'min-trading-days', 'news', 'weekend-overnight', 'ea-copy-hft', 'lot-risk-limit',
+  'discretionary-clause', 'funded-trailing-drawdown', 'inactivity', 'country-kyc',
+  'split-reduction', 'payout-conditions', 'other',
+] as const;
+export type RestrictiveRuleCategory = (typeof RESTRICTIVE_RULE_CATEGORIES)[number];
+
+/** Main programmes sold on the official pricing page (SCORING.md 2.3). */
+export type AuditedProgram = { key: string; name: string };
 
 export type FirmUpdate = {
   reviewedAt: string;
   restrictiveRules?: RestrictiveRule[];
+  auditedPrograms?: AuditedProgram[];
   set?: Partial<{
     status: PropFirm['status'];
     /** Sourced editorial correction; does not change the audit level or score. */
