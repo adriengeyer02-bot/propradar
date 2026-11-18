@@ -9490,7 +9490,21 @@
       ]
     },
     "tradexprop": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "TradeXProp Forex X-1 Step / X-2 Step — evaluation and funded consistency",
+          "rule": "The highest day must be at most 45% of the original evaluation profit target; otherwise the target increases. In a funded payout cycle the highest day must be at most 45% of total profit, and the calculation restarts after each approved payout.",
+          "impact": "Meeting the original evaluation target or earning a positive funded balance does not alone establish passage or payout eligibility.",
+          "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-consistency-rules"
+        },
+        {
+          "program": "TradeXProp Forex — news and trading style restrictions",
+          "rule": "No trades within three minutes before or after a news release. The published rules prohibit changing trading strategy between evaluation and funded stages; a soft breach may remove trade P&L or reduce leverage.",
+          "impact": "Even an otherwise profitable news trade may be adjusted, and a material strategy change after evaluation creates compliance risk.",
+          "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules"
+        }
+      ],
       "set": {
         "trustpilotRating": 4.0,
         "trustpilotReviewCount": 40,
@@ -9499,9 +9513,22 @@
         "profitSplit": 80,
         "drawdownType": "Hybride",
         "eaAllowed": "Yes",
-        "payoutDelay": "first payout available immediately once eligible, then bi-weekly"
+        "payoutDelay": "Forex: first payout immediately once eligible and after 45% best-day consistency, then at least 14 days between requests",
+        "score": 52
       },
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Audited Forex evaluation/funded consistency (45% best-day threshold and evaluation target readjustment) and biweekly payouts. Score 55 to 52 because the newly documented payout-eligibility restriction materially limits withdrawal predictability; no claim of actual unpaid payouts.",
+          "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-consistency-rules",
+          "fields": ["restrictiveRules", "payoutDelay", "score"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Documented Forex three-minute news window, strategy continuity requirement and the published soft-breach effects, separately from other plans.",
+          "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-10-26",
           "summary": "Domain monitor briefly reported tradexprop.com as unreachable on 2026-10-24; it was back to normal on 2026-10-25, so no action. Trustpilot profile for tradexprop.com read: 4.0 TrustScore across 40 reviews (read on the nl-be.trustpilot.com mirror of the same profile).",
@@ -10054,8 +10081,34 @@
       ]
     },
     "dna-funded": {
-      "reviewedAt": "2026-10-29",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "DNA Funded 1 Phase / 2 Phase / Rapid / Instant — first three payouts",
+          "rule": "The March 2026 terms cap each of the first three approved payouts at 5% of nominal account size; profit above the cap is forfeited when the account resets. For accounts opened on or after 3 February 2026, one day's profit may contribute at most 30% of a requested payout.",
+          "impact": "Profit beyond the early payout cap is not merely deferred. Large winning days also delay eligibility until profits are better distributed.",
+          "source": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        },
+        {
+          "program": "DNA Funded — withdrawal qualification and account vintages",
+          "rule": "New accounts require five trading days with trades held at least 60 seconds; payouts need at least $100 net of the split and a 14-day waiting period. The company states it retains sole discretion over payout approval and can request a video or phone call.",
+          "impact": "The purchase date changes several limits; approval can require identity/compliance checks beyond meeting trading targets.",
+          "source": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        },
+        {
+          "program": "DNA Funded Instant Funding — equity-high trailing loss",
+          "rule": "The Instant account has a 4% trailing maximum drawdown that follows peak equity. New 1 Phase, 2 Phase and Rapid accounts instead use static maximum loss of 6%, 8% and 5% respectively.",
+          "impact": "The 4% Instant cushion follows unrealized peaks and can breach after a retracement while nominal balance is profitable; it is not comparable to a static drawdown.",
+          "source": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Read official March 2026 rules with the 3 February account-vintage split: verified 4 program size/fee tables, static versus equity-high trailing losses, 30% daily payout distribution, five trading days, first-three-payout 5% cap with excess forfeiture and discretionary qualification. Score 44 to 42 for the newly evidenced non-carry-forward payout cap; historical incidents not re-adjudicated.",
+          "source": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+          "fields": ["products", "restrictiveRules", "priceFrom", "payoutDelay", "score"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Official FAQ read: 1 Phase, 2 Phase and Rapid use a static maximum loss from the initial balance, Instant Funding and the 24-hour Challenge a trailing one; 80% split (90% with an add-on), payout processing 1-4 business days, TradeLocker platform, a 30% profit-distribution rule for new purchases. Sizes and prices were not stated, so programs are not recorded yet.",
@@ -10070,8 +10123,100 @@
       "set": {
         "profitSplit": 80,
         "drawdownType": "Hybride",
-        "payoutDelay": "processing usually 1-4 business days, then 1-2 business days to arrive; the Earlier Payout add-on shortens the waiting period to 7 days"
+        "payoutDelay": "14 days between payout requests (7 with paid Earlier Payout add-on); approved requests typically processed in 24–48 hours, subject to risk review",
+        "priceFrom": 49,
+        "score": 42
       },
+      "setProducts": [
+        {
+          "id": "dna-1-phase-march-2026",
+          "name": "1 Phase (accounts opened since 3 February 2026)",
+          "type": "Challenge",
+          "description": "March 2026 official terms: $5K–$200K, access fees $59–$1,209 before add-ons and taxes; five trading days, 60-second minimum per trade. Earlier account vintages have different daily-loss and day requirements.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 59,
+          "entryFeeMax": 1209,
+          "profitTarget": "10% in the single evaluation phase",
+          "maxDailyLoss": "4% of previous day's balance snapshot; equity monitored intraday",
+          "maxDrawdown": "6% fixed from initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+          "drawdownDetails": "Fixed total floor 6% below the initial balance; daily threshold is separately recalculated from previous-day balance.",
+          "profitSplit": "80% standard; 90% paid add-on",
+          "platforms": ["TradeLocker", "MT5 (territory restrictions apply)"],
+          "tradableAssets": ["Forex", "Commodities", "Indices", "Crypto", "Stocks"],
+          "minTradingDays": "5 days; positions held at least 60 seconds",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payout: best daily profit at most 30% of requested profit; first three payouts each capped at 5% of size."
+        },
+        {
+          "id": "dna-2-phase-march-2026",
+          "name": "2 Phase (accounts opened since 3 February 2026)",
+          "type": "Challenge",
+          "description": "March 2026 official terms: $5K–$200K, $49–$1,079 access fees excluding add-ons and taxes; historical accounts before February 2026 retained different 10%/5% targets and 10% drawdown.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 49,
+          "entryFeeMax": 1079,
+          "profitTarget": "8% first phase, 5% second phase",
+          "maxDailyLoss": "5% of previous day's balance snapshot",
+          "maxDrawdown": "8% fixed from initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+          "drawdownDetails": "The 8% overall floor remains fixed to initial balance; the 5% daily limit recalculates from the preceding snapshot.",
+          "profitSplit": "80% standard; 90% paid add-on",
+          "platforms": ["TradeLocker", "MT5 (territory restrictions apply)"],
+          "tradableAssets": ["Forex", "Commodities", "Indices", "Crypto", "Stocks"],
+          "minTradingDays": "5 days per applicable stage; positions held at least 60 seconds",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payout: 30% best-day distribution; first three approved payouts each capped at 5% of nominal account size."
+        },
+        {
+          "id": "dna-rapid-march-2026",
+          "name": "Rapid (10 days)",
+          "type": "Challenge",
+          "description": "March 2026 official terms: $10K–$100K, $99–$549 access fees before add-ons/taxes; evaluation must be completed within 10 days.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 99,
+          "entryFeeMax": 549,
+          "profitTarget": "5% within 10 days",
+          "maxDailyLoss": "3% of previous day's balance snapshot for new accounts",
+          "maxDrawdown": "5% fixed from initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+          "drawdownDetails": "Five-percent total floor stays fixed to initial balance; daily 3% rule is calculated separately.",
+          "profitSplit": "80% standard; 90% paid add-on",
+          "platforms": ["TradeLocker", "MT5 (territory restrictions apply)"],
+          "tradableAssets": ["Forex", "Commodities", "Indices", "Crypto", "Stocks"],
+          "minTradingDays": "5 days for new accounts within 10-day evaluation",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payout: 30% best-day distribution and first-three-payout 5% cap."
+        },
+        {
+          "id": "dna-instant-march-2026",
+          "name": "Instant Funding",
+          "type": "Instant funding",
+          "description": "March 2026 official terms: $5K–$50K, $199–$979 access fees excluding add-ons/taxes; enters simulated funded stage directly, no evaluation target.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 50000,
+          "entryFeeMin": 199,
+          "entryFeeMax": 979,
+          "profitTarget": "None: directly enters funded stage",
+          "maxDailyLoss": "Not applicable to Instant Funding under March 2026 PDF",
+          "maxDrawdown": "4% trailing from highest equity, including floating profits",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+          "drawdownDetails": "Equity-high trailing floor rises with unrealized gains, never falls on a retracement, and may eliminate the account.",
+          "profitSplit": "80% standard; 90% paid add-on",
+          "platforms": ["TradeLocker", "MT5 (territory restrictions apply)"],
+          "tradableAssets": ["Forex", "Commodities", "Indices", "Crypto", "Stocks"],
+          "minTradingDays": "5 days to qualify for payout on new accounts",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payout: best day max 30% of request and early payout cap of 5%."
+        }
+      ],
       "addSources": [
         {
           "label": "DNA Funded FAQ (official)",
@@ -10378,8 +10523,28 @@
       ]
     },
     "funder-trading": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "Funder Trading TrueEdge Challenge — activity and size",
+          "rule": "At least 12 distinct days in each 22-trading-day month, at least 80 completed round turns, no more than 1,000 shares of any security, and all positions closed intraday.",
+          "impact": "A profitable stock trader can fail the evaluation for insufficient activity or position sizing; the programme is unsuitable for overnight holds.",
+          "source": "https://fundertrading.com/trueedge-challenge/"
+        },
+        {
+          "program": "Funder Trading TrueEdge Challenge — performance and risk tests",
+          "rule": "Official challenge page requires a $5,000 profit target, $500 daily-loss threshold (at most three occurrences), $3,000 overall drawdown, winner/loser ratio at least 1.20, minimum BAT 40% and largest winner greater than largest loser.",
+          "impact": "The $5,000 target alone is insufficient; multiple behavioral and statistical conditions are independently required.",
+          "source": "https://fundertrading.com/trueedge-challenge/"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Full TrueEdge stock-trading rule extraction: 12 of 22 days, 80 round turns, 1,000-share cap, no overnight positions, $500 daily and $3,000 total losses, 1.20 W/L, 40% BAT and largest-win rule. Previous score 58 retained: no new verified payout history or legal event.",
+          "source": "https://fundertrading.com/trueedge-challenge/",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Official TrueEdge Challenge and how-it-works pages read: US stocks only (NASDAQ / NYSE), profit target $5,000, $500 daily max loss (up to 3 allowed), $3,000 maximum drawdown (type not stated), at least 12 trading days in a 22-day month, 80 round-turn trades minimum, intraday only, 80% payout after funding plus reimbursement of challenge costs. Account sizes, prices and payout timing are not stated.",
@@ -10416,8 +10581,40 @@
       ]
     },
     "daytraders-com": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "DayTraders.com Trail / Static / EOD evaluations versus Pro",
+          "rule": "Evaluations require two qualifying days and at most 50% of total profit from the best day. The subsequent simulated Pro payout cycle has a stricter 30% best-day rule and needs eight qualifying days between payouts.",
+          "impact": "Passing a two-day evaluation does not mean the Pro account can pay after two days; the payout calendar and concentration ratio change after passage.",
+          "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview"
+        },
+        {
+          "program": "DayTraders.com S2F instant / S2L live programme",
+          "rule": "S2F has an EOD trailing limit, 20% best-day consistency per payout cycle and ten qualifying payout days. S2L evaluation has an intraday trailing loss and a 25% best-day limit, then a live 80/20 split with no live consistency rule.",
+          "impact": "The similarly advertised instant and live tracks have fundamentally different drawdown, consistency, payout and capital-execution mechanics.",
+          "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview"
+        },
+        {
+          "program": "DayTraders.com EOD 25K / 50K / 150K / 300K",
+          "rule": "Official EOD help lists end-of-day trailing loss floors of $1,000 / $2,000 / $4,000 / $6,500 and daily loss limits of $800 / $1,250 / $2,000 / $3,250 across those sizes.",
+          "impact": "The EOD model is not the same as a static drawdown or intraday trail; a loss-limit breach can occur before the headline profit goal.",
+          "source": "https://daytraders.com/help/articles/14473672-eod-account-rules"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Audited five programme families on the official help-center comparison: Trail/Static/EOD evaluation 50% best-day then Pro 30%, S2F 20% per payout, S2L 25% during evaluation and none when live; eight or ten qualified payout days as relevant. Added actual EOD size-specific floors and daily loss amounts. Score 59 retained, with no claim of personally tested payouts.",
+          "source": "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+          "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Cross-checked EOD 25K/50K/150K/300K size-specific loss floors and daily limits on the firm's official rules page.",
+          "source": "https://daytraders.com/help/articles/14473672-eod-account-rules",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-10-29",
           "summary": "Official homepage read: 'Keep 100% of Profits' on sim funded accounts, minimum 2 days to pass the evaluation, flat $5 activation fee, automated payout approval (no timing stated), ArcTrader platform connected to Rithmic with TradingView charts. The pricing table did not render, so sizes, prices and drawdown are not recorded.",
@@ -11015,8 +11212,41 @@
       }
     },
     "traders-launch": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "Traders Launch Standard Futures 100K / 200K / 300K — buffer and payouts",
+          "rule": "After the EOD evaluation, a buffer stage must build $1,000 / $2,000 / $3,000 before a payout-eligible simulated-funded account. The plan selected at purchase carries a 60% or 80% split; payouts are available once over +1%, at most one every 24 hours.",
+          "impact": "The advertised daily payouts are not necessarily available immediately on passing; the intermediate buffer and chosen split matter.",
+          "source": "https://www.traderslaunch.com/faq"
+        },
+        {
+          "program": "Traders Launch Futures — trading restrictions and cumulative payout review",
+          "rule": "Hedging and HFT-style trading are prohibited; the firm also restricts trades near CME index price limits. When cumulative payouts reach $100,000, the next request can be paused for review for up to five business days.",
+          "impact": "A permitted scalping strategy can still trigger a high-frequency filter and payout processing is not unconditional at the larger lifetime milestone.",
+          "source": "https://www.traderslaunch.com/"
+        },
+        {
+          "program": "Traders Launch Legacy NYC — minimum evaluation days",
+          "rule": "The official home page says 'no minimum' days to pass Legacy NYC evaluations, while the official pricing page lists three minimum days for those Legacy accounts.",
+          "impact": "Conflicting official eligibility wording. Ask support to confirm the rule for the actual account being purchased.",
+          "source": "https://traderslaunch.com/pricing",
+          "status": "conflicting"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Re-read current Futures pages: standard accounts choose 60% or 80% split, require a post-pass buffer before daily payouts, can incur a review at $100K cumulative payouts, and restrict HFT/hedging/CME limit zones. Legacy NYC minimum trading days conflict between home (none) and pricing (three). Score 59 retained pending direct clarification.",
+          "source": "https://www.traderslaunch.com/faq",
+          "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Official pricing page lists three minimum evaluation days for Legacy NYC while the homepage currently advertises no minimum; publication flags the discrepancy rather than choosing a number.",
+          "source": "https://traderslaunch.com/pricing",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-10-30",
           "summary": "Futures programs read on the official homepage: standard ($159 to $599 for 100K to 300K, end-of-day drawdown locking at the starting balance), Legacy NYC ($99 to $279) and Static 25K (from $119, $500 static), 80% split on standard accounts, no activation fee, TradingView / Volumetrica / Quantower. Payout rules page: no time restriction, same-day processing once above +1%, no consistency rule once funded; Traders Launch LLC, Philadelphia. The crypto program is not detailed, so the firm-level drawdown type stays unverified.",
@@ -11209,8 +11439,46 @@
       ]
     },
     "funded-trader-markets": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "FTM 2-Step Plus — Shield Risk Protocol on funded accounts",
+          "rule": "Floating unrealized loss at 1% of initial account size auto-closes positions and progressively cuts the 70% trader split to 50%, 40%, 30%, then permanently 20% on the fourth breach.",
+          "impact": "A trader may avoid the advertised 10% overall stop-out yet suffer a permanent reduction in revenue share after smaller floating-loss events.",
+          "source": "https://www.fundedtradermarkets.com/faq/category/2-step-plus-evaluation"
+        },
+        {
+          "program": "FTM 2-Step Plus — optional 90% split during evaluation",
+          "rule": "The free 90% split add-on applies the Shield Protocol already during evaluation; first trigger is soft, second is a hard breach that fails the evaluation.",
+          "impact": "Selecting the apparently free higher split changes the pass/fail risk profile before funding.",
+          "source": "https://www.fundedtradermarkets.com/faq/category/2-step-plus-evaluation"
+        },
+        {
+          "program": "FTM 1-Step Nitro — concentration and withdrawals",
+          "rule": "Highest day cannot exceed 50% of the target in evaluation or 45% of total profit in funded simulation before withdrawal; exceeding the ratio means continuing to trade until compliant.",
+          "impact": "A successful profit target or a profitable funded balance may still be ineligible for approval or withdrawal.",
+          "source": "https://fundedtradermarkets.com/faq/is-there-a-rule-regarding-consistency-for-1-step-nitro-accounts"
+        },
+        {
+          "program": "FTM 1-Step Infinity Plus — increasing payout buffer",
+          "rule": "The funded minimum balance remaining after a performance reward starts 2% above initial balance and rises another two percentage points after every three approved payouts.",
+          "impact": "Available withdrawable profit may shrink at later payout milestones even when the account remains profitable.",
+          "source": "https://fundedtradermarkets.com/faq"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Separated account-specific FTM rules: 2-Step Plus 1% floating-loss Shield with cuts from 70% to 20%, zero-price 90% option enabling Shield in evaluation, Nitro 50%/45% best-day ratios and Infinity Plus increasing buffer. Score 59 to 55 for concrete revenue-sharing and qualification risks; Trustpilot withheld-rating notice already documented, no new accusation.",
+          "source": "https://www.fundedtradermarkets.com/faq/category/2-step-plus-evaluation",
+          "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Official FTM Nitro and Infinity program FAQs checked; distinct per-program rules, not incorrectly applied to all FTM accounts.",
+          "source": "https://fundedtradermarkets.com/faq/is-there-a-rule-regarding-consistency-for-1-step-nitro-accounts",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-10-30",
           "summary": "Official 2-Step and 1-Step pages read: both give an on-demand reward cycle. Other terms conflict on the same pages (2-Step Plus: 4% or 3% daily, 10% or 8% overall, 70% / 80% / up to 90% split; 1-Step Nitro: up to 90% or 100% split), and only the 100K size is priced, so split, drawdown and programs stay unverified. Entities unchanged (Formed Technologies INT FZCO, UAE; FTM Funded Trader Markets LTD, Cyprus).",
@@ -11229,7 +11497,8 @@
         }
       ],
       "set": {
-        "payoutDelay": "on-demand reward cycle on 2-Step Plus and 1-Step Nitro"
+        "payoutDelay": "on-demand reward cycle on 2-Step Plus and 1-Step Nitro, conditional on their own Shield / profit-consistency rules",
+        "score": 55
       },
       "addSources": [
         {
@@ -11246,8 +11515,41 @@
       ]
     },
     "tx3-funding": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "TX3 Forex Pro — funded payout and major news",
+          "rule": "Best-day concentration allowed varies with account size: 40% up to $50K, 30% at $100K, 25% at $200K and 20% at $300K. Minimum payout profit 2%, maximum payout 10% of original account size. Without a news add-on, no new trades within five minutes either side of high-impact releases; breaches deduct profits.",
+          "impact": "Payout eligibility is materially stricter on larger Pro accounts; a profitable news trade can lose its gain.",
+          "source": "https://faq.tx3funding.com/challenge-rules-and-objectives-pro-challenge"
+        },
+        {
+          "program": "TX3 Forex Flex — evaluation and payout",
+          "rule": "Two 30-day evaluation phases require five profitable days each reaching 0.5%; funded stage adds 20% best-day consistency, 2% minimum request and a 5% per-cycle payout cap. The Flex challenge article says biweekly payouts, while the generic payout page describes the first request after 10 days and subsequent requests every seven days.",
+          "impact": "A pass or payout may depend on several qualifying days. Published payout timing is inconsistent between official pages: ask for written clarification before buying.",
+          "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge",
+          "status": "conflicting"
+        },
+        {
+          "program": "TX3 Instant Standard — buffer and qualified days",
+          "rule": "Funded withdrawals require seven trading days and seven profitable days of at least 0.25%, a 15% best-day consistency ratio and 3% retained buffer; requests run on a 14-day cycle.",
+          "impact": "An instant-funded account can show profit but remain unable to withdraw due to the buffer or concentration threshold.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/how-payouts-work-instant-standard"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Current TX3 official Forex FAQ: Pro size-dependent 40/30/25/20% payout consistency and high-impact news add-on; Flex 5 qualifying days per phase, 20% funded best-day cap and conflicting payout cadence; Instant Standard 15% consistency, 7 profitable days and 3% buffer. Score 55 to 52 for verified restrictive eligibility, not an allegation of payout refusal.",
+          "source": "https://faq.tx3funding.com/challenge-rules-and-objectives-pro-challenge",
+          "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Documented Flex payout timeline discrepancy between two TX3 official help articles; the 14-day cadence and the 10-days-then-seven statement should be reconciled by the firm.",
+          "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-10-30",
           "summary": "Duplicate profile merged, approved by the site owner on 2026-10-30: the former TopTier Trader entry described the same firm, because the official page tx3funding.com/en/ttt-to-tx3 states \"TopTier Trader is now TX3 Funding\" (no date given). Its sourced facts and history are kept on this page and /firm/toptier-trader now redirects here. Score and status of this profile are unchanged.",
@@ -11270,12 +11572,39 @@
       "set": {
         "trustpilotRating": 3.0,
         "trustpilotReviewCount": 4311,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.tx3funding.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.tx3funding.com",
+        "score": 52
       }
     },
     "fxrk": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "FXRK One-Step / Two-Steps / Instant — funded trade concentration",
+          "rule": "Since the 17 March 2026 model, a single trade must not account for more than 40% of the payout-cycle profit on One-Step and Two-Steps, or 25% on Instant accounts.",
+          "impact": "A profitable account may have to trade further before withdrawing when a large winner dominates the cycle.",
+          "source": "https://fxrk.framer.website/help-center/help-center-articles/new-trading-conditions"
+        },
+        {
+          "program": "FXRK new trading model — high-impact news and Risk Shield",
+          "rule": "Position holding through news is allowed but opening or closing within four minutes before or after the release is restricted. Risk Shield automatically closes positions at 2% floating loss, including challenges.",
+          "impact": "News holding and execution are different permissions; the 2% stop may force exits before a broader account drawdown limit.",
+          "source": "https://fxrk.framer.website/help-center/help-center-articles/new-trading-conditions"
+        },
+        {
+          "program": "FXRK Instant — first payout and trailing risk",
+          "rule": "Instant account terms list 30 days before the first payout, then a 14-day cycle, 3% daily drawdown, 6% trailing overall loss and 25% single-trade consistency.",
+          "impact": "Instant access to the trading simulation does not mean instant access to withdrawals.",
+          "source": "https://fxrk.framer.website/help-center/help-center-articles/new-trading-conditions"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Read FXRK's dated March 2026 model: 40% single-trade limit for One/Two-Step, 25% for Instant, +/-4-minute news execution restriction, 2% Risk Shield, Instant first payout at 30 days then every 14. Existing CNMV regulator incident remains unchanged; score 59 retained without new legal inference.",
+          "source": "https://fxrk.framer.website/help-center/help-center-articles/new-trading-conditions",
+          "fields": ["restrictiveRules", "payoutDelay"]
+        },
         {
           "date": "2026-11-09",
           "summary": "First Trustpilot reading: 4.4/5 from 2,463 reviews on the ie mirror; www.trustpilot.com shows the same 4.4 and 2,463 reviews. No withheld-rating or fake-review notice.",
@@ -11298,15 +11627,36 @@
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 2463,
-        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/fxrk.com"
+        "trustpilotSourceUrl": "https://ie.trustpilot.com/review/fxrk.com",
+        "payoutDelay": "One-Step/Two-Steps: 14-day cycle after eligibility; Instant: 30 days until first payout, then every 14 days (March 2026 model)"
       },
       "addIncidents": [
         "The Spanish securities regulator CNMV published a warning dated 17/02/2025 on \"HTTPS://FXRK.COM\" in its list of unauthorised entities, stating that it is not authorised to provide investment services and activities subject to authorisation, including foreign-exchange operations (https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en)."
       ]
     },
     "now-trade-funded": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "Now Trade Funded — historical June 2024 Schedule of Assessment, payout limits",
+          "rule": "The still-hosted June 2024 official programme schedule states first withdrawal after 30 days, later requests after 15 days, and an initial payout cap of 2.5% of starting balance followed by 5%. Its applicability to contracts sold in November 2026 could not be independently reconfirmed.",
+          "impact": "These material historical withdrawal conditions require written confirmation against the current contract before purchase; they are not asserted to govern all current plans.",
+          "source": "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+        },
+        {
+          "program": "Now Trade Funded Quick Pass — historical 2024 trading conditions",
+          "rule": "The June 2024 schedule describes 35% concentration tests (single trade and one-day profit), a trade-size band of +/-50% around average volume and restrictions on funded-stage news, weekends and expert advisors. Current-plan applicability has not been established.",
+          "impact": "The still-hosted conditions could substantially constrain payout eligibility; programme-specific up-to-date terms remain unverified.",
+          "source": "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Read the company's still-hosted June 2024 assessment schedule (not a verified 2026 terms edition): payout cap 2.5% then 5%, first request after 30 days then 15 days, 35% concentration and lot-size consistency. Explicitly flag that present contract applicability needs confirmation; score 55 and headline product terms remain unchanged.",
+          "source": "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-11-09",
           "summary": "First Trustpilot reading: 3.1/5 from 16 reviews on www.trustpilot.com, same on the au mirror. Trustpilot shows 0 reviews in the last 12 months (latest 15 Aug 2025) and no withheld-rating notice.",
@@ -11838,8 +12188,40 @@
       }
     },
     "fundedhive": {
-      "reviewedAt": "2026-11-09",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "FundedHive Pay From Profits 2-Step — upfront versus deferred fee",
+          "rule": "The PFP model advertises a low initial access fee, but the larger funded fee is deducted from eligible A-book profits after a pass. Until that obligation is covered, the terms do not make profits withdrawable; the funded risk category may affect eligibility.",
+          "impact": "A $9.99-style entry price is not necessarily the full programme cost. Passing the evaluation alone does not make the first payout available.",
+          "source": "https://fundedhive.com/faq"
+        },
+        {
+          "program": "FundedHive PFP 2-Step — evaluation and funded limits",
+          "rule": "The official terms describe 8% then 6% evaluation targets, 5% daily and 10% overall balance-based loss limits, 3% maximum loss per trade, and three qualifying profitable days in each phase. Funded stop-loss and daily-loss limits vary by assigned risk category.",
+          "impact": "The per-trade cap and profitable-day test are distinct from headline drawdown. A funded account can receive different risk limits from the evaluation.",
+          "source": "https://fundedhive.com/static/assets/download/terms-and-conditions.pdf?t=1743541676"
+        },
+        {
+          "program": "FundedHive funded programmes — strategy restrictions",
+          "rule": "The official FAQ distinguishes news and weekend holding on challenge accounts from restrictions on funded accounts; copy trading can be available in evaluation but is generally restricted in funded trading.",
+          "impact": "Permission on the evaluation does not automatically carry over after passing; confirm the assigned funded-risk category and written restrictions.",
+          "source": "https://fundedhive.com/faq"
+        }
+      ],
       "changelog": [
+        {
+          "date": "2026-11-18",
+          "summary": "Reviewed Pay From Profits model and programme annex: deferred funded fee must be covered from eligible profits before withdrawal; 8%/6% targets, 5% daily/10% static overall, 3% per-trade cap and qualifying profitable days. Distinguishes evaluation from funded risk-category rules. Score 56 retained; smart-contract payout claims were not independently verified.",
+          "source": "https://fundedhive.com/static/assets/download/terms-and-conditions.pdf?t=1743541676",
+          "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Official FAQ says Pay From Profits funded fees are paid from eligible A-book profits before becoming withdrawable and eligibility depends on risk category; this is a firm claim, not an independently confirmed on-chain settlement.",
+          "source": "https://fundedhive.com/faq",
+          "fields": ["restrictiveRules"]
+        },
         {
           "date": "2026-11-09",
           "summary": "Trustpilot profile fundedhive.com checked on www (141 reviews listed) and on the au and ie mirror (141): no TrustScore, guideline-breach and fake-review notices on both. Added as a dated, quoted incident; no rating or review count stored. The score cap of 64 applies (current score is already below it).",
