@@ -14,10 +14,13 @@ import ko from './ko';
 import sw from './sw';
 import ha from './ha';
 import am from './am';
+import swGuide from './guideSw';
+import haGuide from './guideHa';
+import amGuide from './guideAm';
 
 export type { Messages };
 
-const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja, hi, tr, ar, ko, sw, ha, am };
+const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja, hi, tr, ar, ko, sw: { ...sw, guide: swGuide }, ha: { ...ha, guide: haGuide }, am: { ...am, guide: amGuide } };
 
 export function getMessages(locale: Locale): Messages {
   return ALL[locale] ?? en;
