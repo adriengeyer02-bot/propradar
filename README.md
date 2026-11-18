@@ -11,6 +11,15 @@ npm run dev
 
 Le site sera disponible sur `http://localhost:3000`.
 
+## Langues et traduction
+
+L'anglais est servi à la racine et les autres langues sous leur préfixe (`/fr`, `/sw`, etc.). Les langues actives sont définies dans `app/lib/locales.ts` et leurs textes dans `app/lib/messages/`.
+
+- **Kiswahili (`sw`), hausa (`ha`) et amharique (`am`)** : traduction de l'accueil, du radar, du comparateur et des fiches prop firm, ajoutée le 18 novembre 2026. La navigation, les avertissements de fermeture et les mentions d'affiliation de ces écrans sont également localisés.
+- Les guides, enquêtes, documents juridiques et autres pages longues ne sont **pas encore traduits** dans ces trois langues : ils affichent le texte anglais avec un avertissement et ne sont pas indexés comme traductions (`isTranslatedPath` et `localeAlternates`). Ne pas étendre les `hreflang` sans traduction éditoriale complète et relecture.
+- Les données factuelles, sources, prix, scores, formules et liens affiliés restent communs à toutes les langues. Une modification de traduction ne doit jamais altérer ces éléments.
+- Avant de promouvoir davantage ces versions, faire relire les expressions techniques et les avertissements par des locuteurs natifs, notamment pour l'amharique.
+
 ## API Reddit et X/Twitter
 
 Les signaux live sont lus côté serveur. Les clés ne doivent jamais être exposées dans le navigateur.

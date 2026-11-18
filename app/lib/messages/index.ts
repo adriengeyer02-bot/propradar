@@ -11,10 +11,13 @@ import hi from './hi';
 import tr from './tr';
 import ar from './ar';
 import ko from './ko';
+import sw from './sw';
+import ha from './ha';
+import am from './am';
 
 export type { Messages };
 
-const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja, hi, tr, ar, ko };
+const ALL: Record<Locale, Messages> = { en, fr, de, it, es, pt, zh, ja, hi, tr, ar, ko, sw, ha, am };
 
 export function getMessages(locale: Locale): Messages {
   return ALL[locale] ?? en;
@@ -32,7 +35,7 @@ export function tv(messages: Messages, value: string | undefined | null) {
   return values[value] ?? value;
 }
 
-const DATE_LOCALE: Record<Locale, string> = { en: 'en-US', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', es: 'es-ES', pt: 'pt-BR', zh: 'zh-CN', ja: 'ja-JP', hi: 'hi-IN', tr: 'tr-TR', ar: 'ar-SA', ko: 'ko-KR' };
+const DATE_LOCALE: Record<Locale, string> = { en: 'en-US', fr: 'fr-FR', de: 'de-DE', it: 'it-IT', es: 'es-ES', pt: 'pt-BR', zh: 'zh-CN', ja: 'ja-JP', hi: 'hi-IN', tr: 'tr-TR', ar: 'ar-SA', ko: 'ko-KR', sw: 'sw-KE', ha: 'ha-NG', am: 'am-ET' };
 
 /** "30 October 2026" in the page language. */
 export function formatDateLong(locale: Locale, isoDate: string) {
@@ -47,5 +50,5 @@ export function formatDateLong(locale: Locale, isoDate: string) {
  * firm's own pages.
  */
 export function numberLocale(locale: Locale) {
-  return locale === 'hi' || locale === 'ar' ? 'en-US' : DATE_LOCALE[locale];
+  return locale === 'hi' || locale === 'ar' || locale === 'ha' || locale === 'am' ? 'en-US' : DATE_LOCALE[locale];
 }

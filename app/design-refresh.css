@@ -23,6 +23,18 @@
   --figure-stretch: 88%;
 }
 
+/* Ethiopic glyphs need a compatible font and more vertical space than Archivo. */
+html[lang='am-ET'] {
+  --font-sans: 'Noto Sans Ethiopic', 'Nyala', 'Abyssinica SIL', var(--font-archivo), system-ui, sans-serif;
+  --display-stretch: normal;
+  --figure-stretch: normal;
+}
+
+html[lang='am-ET'] body :is(h1, h2, h3) {
+  line-height: 1.22;
+  letter-spacing: normal;
+}
+
 html[data-theme='dark'] {
   --accent: #36d6e7;
   --accent-strong: #7be6f1;
