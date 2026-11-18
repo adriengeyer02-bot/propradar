@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import OutilsClient from './OutilsClient';
 import PageStructuredData from '../../components/PageStructuredData';
 import { createPageMetadata } from '../../lib/pageMetadata';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { getMessages } from '../../lib/messages';
 import { getToolsMessages } from '../../lib/messages/pages/tools';
 import { SITE_URL } from '../../lib/site';
@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     ...base,
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     openGraph: { ...base.openGraph, url: `${SITE_URL}${localePath(locale, PATH)}`, locale: OG_LOCALE[locale] },
   };
 }

@@ -23,7 +23,7 @@ import { getEditorialBriefPath, latestEditorialBrief } from '../../lib/editorial
 import { GUIDE_EDITORIAL_REFRESH_DATE } from '../../lib/guideVisuals';
 import { buildGuideCover } from '../../lib/guideCovers';
 import GuideCover, { type CoverLabels } from '../../components/guide-visuals/GuideCover';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages } from '../../lib/messages';
 import { getGuideTranslation, guideCardText, guideLocales, localizedGuidePath } from '../../lib/guideI18n';
 
@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: h.metaTitle,
     description: h.metaDescription,
     alternates: localeAlternates(locale, '/guides'),
+    robots: untranslatedRobots(locale, '/guides'),
     openGraph: {
       title: h.metaTitle,
       description: h.metaDescription,

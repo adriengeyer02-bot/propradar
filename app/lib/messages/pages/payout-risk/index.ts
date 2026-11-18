@@ -12,7 +12,7 @@ import hi from './hi';
 export type { PayoutRiskMessages };
 
 // Untranslated editorial pages fall back to English and are noindexed in these locales.
-const ALL: Record<Locale, PayoutRiskMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en, ko: en };
+const ALL: Record<Locale, PayoutRiskMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en, ko: en, sw: en, ha: en, am: en };
 
 export function getPageMessages(locale: Locale): PayoutRiskMessages {
   return ALL[locale] ?? en;

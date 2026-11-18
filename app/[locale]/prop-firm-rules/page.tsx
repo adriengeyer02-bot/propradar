@@ -17,7 +17,7 @@ import {
   hasPayoutRiskSignal,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
-import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
+import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, untranslatedRobots, type Locale } from '../../lib/locales';
 import { fmt, formatDateLong, getMessages, tv } from '../../lib/messages';
 import { getRulesMessages, type RulesMessages } from '../../lib/messages/pages/prop-firm-rules';
 import { localizedGuidePath } from '../../lib/guideI18n';
@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     ...base,
     alternates: localeAlternates(locale, PATH),
+    robots: untranslatedRobots(locale, PATH),
     openGraph: { ...base.openGraph, url: `${SITE_URL}${localePath(locale, PATH)}`, locale: OG_LOCALE[locale] },
   };
 }
