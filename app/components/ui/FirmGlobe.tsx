@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { RadarDot, RadarSector } from '../../lib/radar';
+import { layoutGlobeSectors, type GlobeSectorSlice } from '../../lib/globeSectorLayout';
 import GlobeFirmHud, { type GlobeHudConfig } from './GlobeFirmHud';
 import { globeCoastStep, globeReleaseVelocity, type GlobeMotionSample } from './globeMotion';
 
@@ -49,7 +50,6 @@ const NORTH_BAND = 45; // score 75
 const MID_BAND = 9; // score 50
 const SPIN = 0.09; // rad/s when idle
 const SHADE_RES = 176;
-const MIN_SLICE = 34; // degrees: the smallest market stays readable
 const LABEL_LAT = -50; // the curved market names run along this parallel, kept clear of logos
 const LOW_LAT = -36; // the lowest firm sits here, leaving the label parallel free
 const MAX_ZOOM = 3.2;
@@ -71,43 +71,8 @@ const INTRO_FADE = 380; // ms for one logo to land
 const LIFT = 0.07; // logo height above the surface, share of the radius
 const MIN_GAP = 8.2; // degrees between full logo centres; plain dots need less space
 
-type Slice = { key: string; count: number; start: number; end: number; shade: number };
-
-/**
- * Market slices on the globe: width grows with the square root of the number
- * of firms (so small markets stay readable without hiding which is largest),
- * with a floor. The count is always printed next to the market name.
- */
-function layoutSlices(sectors: RadarSector[]): Slice[] {
-  const live = sectors.filter((s) => s.count > 0).map((s) => ({ ...s, weight: Math.sqrt(s.count) }));
-  const total = live.reduce((sum, s) => sum + s.weight, 0) || 1;
-  const widths = live.map((s) => (s.weight / total) * 360);
-  const fixed = new Set<number>();
-  for (let round = 0; round < live.length; round++) {
-    let changed = false;
-    const free = 360 - fixed.size * MIN_SLICE;
-    const freeCount = live.reduce((sum, s, i) => (fixed.has(i) ? sum : sum + s.weight), 0) || 1;
-    live.forEach((s, i) => {
-      if (fixed.has(i)) return;
-      widths[i] = (s.weight / freeCount) * free;
-      if (widths[i] < MIN_SLICE) {
-        fixed.add(i);
-        changed = true;
-      }
-    });
-    fixed.forEach((i) => { widths[i] = MIN_SLICE; });
-    if (!changed) break;
-  }
-  let cursor = -widths[0] / 2;
-  return live.map((s, i) => {
-    const slice = { key: s.key, count: s.count, start: cursor, end: cursor + widths[i], shade: i % 2 ? 1 : 0 };
-    cursor += widths[i];
-    return slice;
-  });
-}
-
 /** Slice index for a longitude in degrees. */
-function sliceAt(slices: Slice[], lon: number) {
+function sliceAt(slices: GlobeSectorSlice[], lon: number) {
   const rel = (((lon - slices[0].start) % 360) + 360) % 360;
   let acc = 0;
   for (let i = 0; i < slices.length; i++) {
@@ -268,8 +233,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
 
   // Market slices and firm positions. A firm keeps its relative place inside
   // its market (as on the radar), stretched to the globe's slice.
-  const slices = useRef<Slice[]>([]);
-  slices.current = layoutSlices(sectors);
+  const slices = useRef<GlobeSectorSlice[]>([]);
+  slices.current = layoutGlobeSectors(sectors);
   const points = useRef<{ dot: RadarDot; world: Vec }[]>([]);
   const placedFor = useRef<RadarDot[] | null>(null);
   if (placedFor.current !== dots) {
@@ -387,7 +352,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
     }));
 
     let shadeByDeg: number[] = [];
-    let shadeFor: Slice[] | null = null;
+    let shadeFor: GlobeSectorSlice[] | null = null;
     const charWidths = new Map<string, number>();
     let surfaceFor: { yaw: number; pitch: number; radius: number; size: number; palette: Palette } | null = null;
 
