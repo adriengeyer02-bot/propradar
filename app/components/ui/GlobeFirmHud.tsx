@@ -17,6 +17,7 @@ export type GlobeHudConfig = {
   openLabel: string;
   closeLabel: string;
   onDismiss: () => void;
+  unratedLabel?: string;
 };
 
 type Props = {
@@ -39,7 +40,7 @@ export default function GlobeFirmHud({ dot, sector, scoreLabel, pinned, config, 
   const [copyFailed, setCopyFailed] = useState(false);
   const { labels: t, locale } = config;
   const translate = (value: string) => (config.values as Record<string, string>)[value] ?? value;
-  const profile = localePath(locale, `/firm/${dot.slug}`);
+  const profile = localePath(locale, dot.href ?? `/firm/${dot.slug}`);
   const offer = dot.offer;
   const trustpilot = translate(dot.trustpilot.split(' · ')[0]);
   const dealTitle = offer?.percent
@@ -75,15 +76,19 @@ export default function GlobeFirmHud({ dot, sector, scoreLabel, pinned, config, 
         <div><h3 id={id}>{dot.name}</h3><p>{sector}</p></div>
       </header>
       <div className="prg-hud-summary prg-hud-reveal" style={{ '--reveal-delay': '180ms' } as CSSProperties}>
-        <div className={`prg-hud-score prg-hud-score-${dot.tone}`} style={{ '--score-offset': 151 * (1 - dot.score / 100) } as CSSProperties}>
-          <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="24" /><circle className="prg-hud-meter" cx="29" cy="29" r="24" /></svg>
-          <strong aria-hidden="true">{dot.score}<small>/100</small></strong>
-          <span className="sr-only">{scoreLabel}: {dot.score}/100</span>
-        </div>
+        {dot.unrated ? <div className="prg-hud-unrated" role="status">{config.unratedLabel ?? 'Not rated'}</div> : (
+          <div className={`prg-hud-score prg-hud-score-${dot.tone}`} style={{ '--score-offset': 151 * (1 - dot.score / 100) } as CSSProperties}>
+            <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="24" /><circle className="prg-hud-meter" cx="29" cy="29" r="24" /></svg>
+            <strong aria-hidden="true">{dot.score}<small>/100</small></strong>
+            <span className="sr-only">{scoreLabel}: {dot.score}/100</span>
+          </div>
+        )}
         <dl className="prg-hud-facts">
+          {!dot.unrated ? <>
           <div><dt>{config.fromLabel}</dt><dd>{translate(dot.price)}</dd></div>
           <div><dt>{config.splitLabel}</dt><dd>{translate(dot.split)}</dd></div>
           <div><dt>{config.trustpilotLabel}</dt><dd title={dot.trustpilot.replace(' reviews', ` ${config.values.reviews}`)}>{trustpilot}</dd></div>
+          </> : <div><dt>{scoreLabel}</dt><dd>{config.unratedLabel ?? 'Not rated'}</dd></div>}
         </dl>
       </div>
       <div className="prg-hud-country prg-hud-reveal" style={{ '--reveal-delay': '260ms' } as CSSProperties}>

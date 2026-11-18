@@ -9,6 +9,7 @@ import { SITE_URL } from './lib/site';
 import { frArticles } from './lib/frArticles';
 import { HTML_LANG, LOCALES, PREFIXED_LOCALES, isTranslatedPath, localePath } from './lib/locales';
 import { guideLanguageAlternates, localizedGuidePath } from './lib/guideI18n';
+import { optionsFirms } from './lib/optionsFirms';
 
 /** Guides by English path: their languages come from the guide translations, not the generic prefix rule. */
 const GUIDE_BY_PATH = new Map(seoGuides.map((guide) => [getSeoGuidePath(guide), guide]));
@@ -54,6 +55,7 @@ function withTranslations(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap
 const staticRoutes = [
   { path: '', priority: 1, lastModified: '2026-07-13' },
   { path: '/prop-firm-comparison', priority: 0.95, lastModified: '2026-07-13' },
+  { path: '/options-prop-firms', priority: 0.87, lastModified: '2026-11-18' },
   { path: '/tools', priority: 0.94, lastModified: '2026-07-13' },
   { path: '/guides', priority: 0.93, lastModified: '2026-07-19' },
   { path: '/radar-brief', priority: 0.92, lastModified: '2026-07-19' },
@@ -96,6 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       )),
       changeFrequency: 'monthly' as const,
       priority: firm.status === 'Active' ? 0.72 : 0.55,
+    })),
+    ...optionsFirms.map((firm) => ({
+      url: `${SITE_URL}/options-prop-firms/${firm.slug}`,
+      lastModified: new Date(firm.checkedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.55,
     })),
     ...seoGuides.filter((guide) => guide.slug !== 'meilleure-prop-firm-2026').map((guide) => ({
       url: `${SITE_URL}${getSeoGuidePath(guide)}`,

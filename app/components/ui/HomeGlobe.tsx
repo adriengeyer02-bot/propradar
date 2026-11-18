@@ -11,6 +11,8 @@ const FirmGlobe = dynamic(() => import('./FirmGlobe'), { ssr: false, loading: ()
 
 type Props = {
   data: RadarData;
+  globeData: Pick<RadarData, 'dots' | 'sectors'>;
+  optionLabels: { name: string; unrated: string };
   labels: Messages['radar'];
   sectorNames: Messages['sectors'];
   valueNames: Messages['values'];
@@ -28,18 +30,19 @@ function fill(template: string, values: Record<string, string | number>) {
  * search box that turns the globe to a firm, and an anchored dossier on
  * selection. The full radar page keeps the deeper tools.
  */
-export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, tableLabels: tb, locale, radarCta }: Props) {
+export default function HomeGlobe({ data, globeData, optionLabels, labels: t, sectorNames, valueNames, tableLabels: tb, locale, radarCta }: Props) {
   const radarHref = localePath(locale, '/prop-firm-radar');
   const [selected, setSelected] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [activeMatch, setActiveMatch] = useState(0);
   const searchId = useId();
-  const sectorName = (key: string) => (sectorNames as Record<string, string>)[key] ?? key;
+  const sectorName = (key: string) => key === 'Options' ? optionLabels.name : (sectorNames as Record<string, string>)[key] ?? key;
+  const visibleDots = globeData.dots;
   const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (q.length < 2) return [];
-    return data.dots.filter((item) => item.name.toLowerCase().includes(q)).sort((a, b) => b.score - a.score).slice(0, 5);
-  }, [query, data.dots]);
+    return visibleDots.filter((item) => item.name.toLowerCase().includes(q)).sort((a, b) => Number(a.unrated) - Number(b.unrated) || b.score - a.score).slice(0, 5);
+  }, [query, visibleDots]);
   const empty = useMemo(() => new Set<string>(), []);
   const searchOpen = query.trim().length >= 2;
   const chooseFirm = (slug: string) => {
@@ -89,7 +92,7 @@ export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, ta
                 <button id={`${searchId}-${index}`} type="button" role="option" aria-selected={activeMatch === index} tabIndex={-1} onMouseEnter={() => setActiveMatch(index)} onClick={() => chooseFirm(item.slug)}>
                   {item.logo ? <img src={item.logo} alt="" width={20} height={20} /> : <i aria-hidden="true" />}
                   <span>{item.name}</span>
-                  <b className={`prr-${item.tone}`}>{item.score}</b>
+                  <b className={`prr-${item.tone}`}>{item.unrated ? optionLabels.unrated : item.score}</b>
                 </button>
               </li>
             ))}
@@ -98,20 +101,20 @@ export default function HomeGlobe({ data, labels: t, sectorNames, valueNames, ta
       </div>
 
       <FirmGlobe
-        dots={data.dots}
-        sectors={data.sectors}
+        dots={globeData.dots}
+        sectors={globeData.sectors}
         sectorName={sectorName}
         selected={selected}
         dimmed={empty}
         highlight={empty}
         onSelect={setSelected}
-        ariaLabel={fill(t.globeAria, { total: data.dots.length })}
+        ariaLabel={fill(t.globeAria, { total: globeData.dots.length })}
         hint={t.globeHint}
         scoreLabel={t.score}
         zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
         motionLabels={{ pause: t.globePause, resume: t.globeResume }}
         legend={{ caption: t.globeNorth, label: t.scoreBand }}
-        hud={{ locale, labels: t.globeHud, values: valueNames, fromLabel: tb.from_, splitLabel: tb.split, reviewLabel: t.lastReview, trustpilotLabel: t.trustpilot, openLabel: t.openProfile, closeLabel: t.close, onDismiss: () => setSelected(null) }}
+        hud={{ locale, labels: t.globeHud, values: valueNames, fromLabel: tb.from_, splitLabel: tb.split, reviewLabel: t.lastReview, trustpilotLabel: t.trustpilot, openLabel: t.openProfile, closeLabel: t.close, unratedLabel: optionLabels.unrated, onDismiss: () => setSelected(null) }}
         sphere={0.43}
       />
 

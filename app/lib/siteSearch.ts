@@ -4,6 +4,7 @@ import { promoDeals } from './promoResearch';
 import { getSeoGuideDisplay, getSeoGuidePath, seoGuides } from './seoGuides';
 import { toEnglishText } from './i18n';
 import { editorialBriefs, getEditorialBriefPath } from './editorialBriefs';
+import { optionsFirms } from './optionsFirms';
 
 export type SiteSearchResult = {
   type: 'Firm' | 'Guide' | 'Brief' | 'Deal';
@@ -155,6 +156,24 @@ export function searchSite(rawQuery: string, requestedLimit = 10): SiteSearchRes
     };
   });
 
+  const optionFirmResults: RankedSearchResult[] = optionsFirms.map((firm) => ({
+    type: 'Firm',
+    title: firm.name,
+    description: compactText(`${firm.instruments}. ${firm.programme}`),
+    matchLabel: 'Options · not rated',
+    href: `/options-prop-firms/${firm.slug}`,
+    score: scoreContentResult(query, firm.name, `${firm.instruments} ${firm.programme} options prop firm`) +
+      (normalizeFirmSearch(firm.name) === normalizedQuery ? 90 : 0),
+  }));
+  const optionGuideResult: RankedSearchResult = {
+    type: 'Guide',
+    title: 'Options prop firms — independent research',
+    description: 'Explore listed US options evaluation firms and professional trading desks, with primary sources and no premature ratings.',
+    matchLabel: 'Options research',
+    href: '/options-prop-firms',
+    score: scoreContentResult(query, 'Options prop firms', 'funded options call put spreads options trading challenge'),
+  };
+
   const promoResults: RankedSearchResult[] = promoDeals.map((deal) => ({
     type: 'Deal',
     title: toEnglishText(`${deal.title} - ${deal.code}`),
@@ -194,7 +213,7 @@ export function searchSite(rawQuery: string, requestedLimit = 10): SiteSearchRes
   });
 
   const limit = Math.max(1, Math.min(20, Math.floor(requestedLimit) || 10));
-  return [...firmResults, ...guideResults, ...briefResults, ...promoResults]
+  return [...firmResults, ...optionFirmResults, optionGuideResult, ...guideResults, ...briefResults, ...promoResults]
     .filter((result) => result.score > 0)
     .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
     .slice(0, limit)

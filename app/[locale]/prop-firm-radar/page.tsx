@@ -3,6 +3,8 @@ import Link from 'next/link';
 import PropRadarLive from '../../components/ui/PropRadarLive';
 import { propFirms } from '../../lib/propFirms';
 import { buildRadar } from '../../lib/radar';
+import { withOptionsGlobe } from '../../lib/optionsGlobe';
+import { optionsCopy } from '../../lib/optionsI18n';
 import { recentFirmUpdates } from '../../lib/firmUpdates';
 import { SITE_NAME, SITE_URL } from '../../lib/site';
 import { HTML_LANG, OG_LOCALE, isLocale, localeAlternates, localePath, type Locale } from '../../lib/locales';
@@ -101,6 +103,8 @@ export default async function PropFirmRadarPage({ params }: Props) {
 
       <PropRadarLive
         data={radar}
+        globeData={withOptionsGlobe(radar)}
+        optionLabels={{ name: optionsCopy(locale).nav, unrated: optionsCopy(locale).noScore }}
         variant="full"
         locale={locale}
         labels={t.radar}
@@ -128,6 +132,7 @@ export default async function PropFirmRadarPage({ params }: Props) {
 
       <div className="actions pr-radar-actions">
         <IntentLink className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</IntentLink>
+        <Link className="btn" href={L('/options-prop-firms')}>{optionsCopy(locale).nav} · {optionsCopy(locale).noScore} →</Link>
         <Link className="btn" href={L('/prop-firm-statistics')}>{r.stats}</Link>
         <Link className="btn" href={`${L('/about')}#score`}>{r.methodology}</Link>
       </div>
