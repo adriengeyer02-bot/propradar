@@ -1895,7 +1895,7 @@
       "addSources": [{"label":"Bulenox 2026 Fast Track fee and risk-structure tables","url":"https://bulenox.com/help-center/fast-track"},{"label":"Bulenox current account routes","url":"https://bulenox.com/"},{"label":"Bulenox exact-domain Trustpilot 4.6/5","url":"https://www.trustpilot.com/review/bulenox.com"}]
     },
     "city-traders-imperium": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -1919,14 +1919,177 @@
           "date": "2026-11-16",
           "summary": "Owner-supplied CTI referral link added to the programme buttons and partner pop-up, with affiliate disclosure. Tracking parameters are preserved. No discount code or percentage was supplied; score, audit level and review date are unchanged.",
           "source": "https://app.citytradersimperium.com/user-auth/register?referral_code=8b3df5&utm_source=client&utm_medium=referral&utm_id=8b3df5",
-          "fields": ["affiliateLink", "commercialRelationship", "partnerOffer"]
+          "fields": [
+            "affiliateLink",
+            "commercialRelationship",
+            "partnerOffer"
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Corrected CTI four distinct products: 1-Step balance-high trailing, 2-Step static, Instant initial half-size/static and Direct static; differentiated three profitable days, scaling consistency and first withdrawal. Score remains 74.",
+          "source": "https://citytradersimperium.com/choosing-your-funding-program/",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 1641,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/citytradersimperium.com",
+        "drawdownType": "Hybride",
+        "verdict": "City Traders Imperium sells four separate CFD paths. The 1-Step has a closed-balance trailing drawdown, 2-Step is static, and Instant/Direct funding use fixed maximum losses without an evaluation. The Instant offer starts at half of the headline account size and scales up only after meeting its target; a 20% consistency condition applies to certain scaling requests rather than all withdrawals. The published distinctions justify clearer cards, not an automatic score penalty: 74/100 unchanged.",
+        "auditSummary": "18 November 2026: 1-Step evaluation aims for 8%, uses a 5% maximum loss trailing the highest closed balance with no fixed daily loss; three profitable evaluation days. 2-Step has 10% then 5% targets, 5% daily, 10% static total and three positive trading days per stage. Instant Funding and Direct Funding are no-evaluation routes with 6% fixed maximum and no standard daily loss. CTI Instant initially provides only 50% of the advertised nominal capital with 50% trader split, grows to the full amount after 10% profit and then split to 70%; first payout five days after qualifying for full funding. Direct starts at full purchased account allocation and has a 70% split, first payout from day five. The 20% best-day consistency threshold on Instant/Direct pertains to SCALING, not every payout, per the official terms. Company marketing and payout claims have not been independently tested; 74/100 unchanged."
+      },
+      "restrictiveRules": [
+        {
+          "program": "CTI 1-Step vs 2-Step — evaluation",
+          "rule": "1-Step: 5% loss trails highest closed balance, 8% target, three profitable days; 2-Step: 10% static total, 5% daily, 10%/5% targets and three profitable days PER stage.",
+          "impact": "Mixing the programmes would misstate the liquidation line and the number of required profitable sessions.",
+          "source": "https://citytradersimperium.com/choosing-your-funding-program/"
+        },
+        {
+          "program": "CTI Instant Funding — allocation and first reward",
+          "rule": "Directly funded model starts at just 50% of advertised account capital; 10% gain is needed to reach full allocation, trader share increases 50% to 70%, and first withdrawal is not until five days after full funding.",
+          "impact": "Instant account activation is not immediate availability of advertised capital or payout.",
+          "source": "https://citytradersimperium.com/instant-funding/"
+        },
+        {
+          "program": "CTI Instant and Direct — scaling consistency",
+          "rule": "A 20% best-day-to-profit consistency rule governs eligibility for account scaling; do not treat it as a blanket restriction on every funded payout.",
+          "impact": "Traders seeking to scale may need additional steady profitable days, while cash-out rules differ.",
+          "source": "https://citytradersimperium.com/instant-funding/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "cti-one-current",
+          "name": "CTI 1-Step Challenge",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "8% one phase",
+          "maxDailyLoss": "No fixed daily loss",
+          "maxDrawdown": "5% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://citytradersimperium.com/1-step-challenge/",
+          "drawdownDetails": "Moves with new closed profit and leaves less cushion than a fixed floor.",
+          "profitSplit": "80% initially, up to 100%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 profitable days"
+        },
+        {
+          "id": "cti-two-current",
+          "name": "CTI 2-Step Challenge",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "10% then 5%",
+          "maxDailyLoss": "5% daily",
+          "maxDrawdown": "10% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://citytradersimperium.com/2-step-challenge/",
+          "drawdownDetails": "Floor fixed 10% below initial capital for the selected stage.",
+          "profitSplit": "80% initially, up to 100%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 profitable days each phase"
+        },
+        {
+          "id": "cti-instant-current",
+          "name": "CTI Instant Funding — half allocation initially",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 80000,
+          "profitTarget": "No challenge; 10% gain to unlock full nominal size",
+          "maxDailyLoss": "No fixed daily loss",
+          "maxDrawdown": "6% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://citytradersimperium.com/instant-funding/",
+          "drawdownDetails": "Fixed maximum loss; actual starting allocation only half of nominal purchased size.",
+          "profitSplit": "50% initially, 70% after scale-up",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best-day ≤20% only for scaling."
+        },
+        {
+          "id": "cti-direct-current",
+          "name": "CTI Direct Funding — full allocation",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 80000,
+          "profitTarget": "No challenge",
+          "maxDailyLoss": "No fixed daily loss",
+          "maxDrawdown": "6% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://citytradersimperium.com/direct-funding/",
+          "drawdownDetails": "Fixed 6% loss floor; do not confuse with Instant half-size activation.",
+          "profitSplit": "70% initial",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best-day ≤20% only for scaling."
+        }
+      ],
+      "addSources": [
+        {
+          "label": "City Traders Imperium official programmes",
+          "url": "https://citytradersimperium.com/"
+        },
+        {
+          "label": "CTI product comparison and current four funding routes",
+          "url": "https://citytradersimperium.com/choosing-your-funding-program/"
+        },
+        {
+          "label": "CTI 1-Step trailing limits and 80% starting split",
+          "url": "https://citytradersimperium.com/1-step-challenge/"
+        },
+        {
+          "label": "CTI 2-Step static limits and 80% starting split",
+          "url": "https://citytradersimperium.com/2-step-challenge/"
+        },
+        {
+          "label": "CTI Instant allocation and scale-up rules",
+          "url": "https://citytradersimperium.com/instant-funding/"
+        },
+        {
+          "label": "CTI Direct full-allocation program",
+          "url": "https://citytradersimperium.com/direct-funding/"
+        }
+      ]
     },
     "clarity-traders": {
       "reviewedAt": "2026-11-15",
@@ -2279,7 +2442,7 @@
       ]
     },
     "earn2trade": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -2315,13 +2478,28 @@
           "date": "2026-11-17",
           "summary": "The funded-account exclusions focus on CITIZENSHIP and include Pakistan; non-US applicants require W-8BEN and a foreign tax ID. The help center warns against purchases/resets from sanctioned locations and false address information. Its previously recorded five-profitable-day payout condition is unchanged.",
           "source": "https://help.earn2trade.com/en/articles/2547638-i-m-not-an-american-us-citizen-can-i-still-get-funded"
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Separated Trader Career Path and Gauntlet Mini evaluations from LiveSim and Live funded mechanics; recorded the post-2-Nov-2026 five-positive-days-before-each-payout requirement and size-dependent thresholds. Kept 78 points: the rule was already noted in the prior review.",
+          "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 5079,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.earn2trade.com",
-        "payoutDelay": "five profitable trading days required before each withdrawal request (subscriptions from 2 Nov 2026; minimum daily profit $100 to $350 by size)"
+        "payoutDelay": "five profitable trading days required before each withdrawal request (subscriptions from 2 Nov 2026; minimum daily profit $100 to $350 by size)",
+        "drawdownType": "EOD",
+        "verdict": "Earn2Trade publishes separate Trader Career Path and Gauntlet Mini futures evaluations, with end-of-day trailing loss limits and 30% evaluation best-day limits. Funded LiveSim and Live accounts behave differently, particularly the real-time versus EOD drawdown and the five qualifying winning days required for post-2-November-2026 purchases before each withdrawal. These restrictions are publicly stated, and the existing 78/100 score already reflects the payout gate.",
+        "auditSummary": "18 November 2026: Earn2Trade documentation confirms TCP evaluation sizes from $25K, Gauntlet Mini from $50K, a 30% best-day concentration test during evaluations and trailing drawdown observed on EOD balances; funded LiveSim retains EOD trailing while a real Live account can trail intraday. Purchases since 2 November 2026 need five profitable trading days before each withdrawal, with daily minima of $100 to $350 depending on account size, resetting after every withdrawal. This is a separate funded payout condition rather than a universal minimum during evaluations. A post-November fixed contract limit replaced older progression wording for eligible newly purchased plans; older accounts may retain their original terms. The profit share can vary by size and profit threshold. No independently verified bank transfer is inferred; score unchanged at 78."
       },
       "addSources": [
         {
@@ -2331,6 +2509,122 @@
         {
           "label": "Earn2Trade non-US citizenship and funded eligibility",
           "url": "https://help.earn2trade.com/en/articles/2547638-i-m-not-an-american-us-citizen-can-i-still-get-funded"
+        },
+        {
+          "label": "Earn2Trade evaluation rules and 30% best-day limit",
+          "url": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules"
+        },
+        {
+          "label": "Earn2Trade home and program catalogue",
+          "url": "https://www.earn2trade.com/"
+        },
+        {
+          "label": "Earn2Trade funded LiveSim/Live rules and fixed TCP 200K/400K exception",
+          "url": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "Trader Career Path / Gauntlet Mini — evaluation",
+          "rule": "Maximum loss trails end-of-day balance; the highest profitable day may not exceed 30% of the total evaluation profits. A daily maximum loss limit also applies by size.",
+          "impact": "A single dominant profit day can defer passing; floating losses can reach the previously calculated floor.",
+          "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules"
+        },
+        {
+          "program": "Funded LiveSim and Live — purchases from 2 November 2026",
+          "rule": "Five days with a minimum positive profit, from $100 to $350 according to size, are required before EACH withdrawal; the count restarts following payment. LiveSim drawdown is EOD and Live can trail in real time, except funded $200K/$400K Trader Career Path accounts use fixed drawdown.",
+          "impact": "Passing the challenge is not sufficient for a first or subsequent reward; daily profit minima differ by purchased account.",
+          "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "e2t-tcp",
+          "name": "Trader Career Path — evaluation",
+          "type": "Futures evaluation",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "profitTarget": "Stage profit goals vary",
+          "maxDailyLoss": "Varies by size",
+          "maxDrawdown": "$1,500–$3,000 example EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
+          "drawdownDetails": "End-of-day peak moves the allowable loss floor; limit checked against account equity.",
+          "profitSplit": "Depends on account and payout option",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day ≤30% of total evaluation profits."
+        },
+        {
+          "id": "e2t-gauntlet",
+          "name": "Gauntlet Mini — evaluation",
+          "type": "Futures evaluation",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 200000,
+          "profitTarget": "Profit goal varies by tier",
+          "maxDailyLoss": "Daily maximum by tier",
+          "maxDrawdown": "EOD trailing by account size",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
+          "drawdownDetails": "Threshold follows end-of-day closed-balance high.",
+          "profitSplit": "Depends on account and payout option",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day ≤30% of total evaluation profits."
+        },
+        {
+          "id": "e2t-livesim",
+          "name": "Earn2Trade funded LiveSim",
+          "type": "Scaling",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 100000,
+          "profitTarget": "No new challenge profit target",
+          "maxDailyLoss": "Risk cap varies with allocation",
+          "maxDrawdown": "EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "drawdownDetails": "Simulated funded balance follows EOD floor; for post-2-Nov orders five qualifying profitable days are needed per withdrawal.",
+          "profitSplit": "Depends on account and payout option",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "5 qualifying positive days between each withdrawal for eligible new purchases"
+        },
+        {
+          "id": "e2t-tcp-large-fixed",
+          "name": "Trader Career Path 200K / 400K — funded fixed loss",
+          "type": "Scaling",
+          "description": "Funded TCP $200K and $400K are documented exceptions to the otherwise EOD/real-time funded trailing rule.",
+          "accountSizeMin": 200000,
+          "accountSizeMax": 400000,
+          "profitTarget": "No further evaluation; funded programme",
+          "maxDailyLoss": "Daily limit by tier",
+          "maxDrawdown": "Fixed drawdown on TCP $200K / $400K",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+          "drawdownDetails": "Earn2Trade explicitly carves out $200K/$400K funded TCP as fixed, unlike other funded EOD LiveSim and real-time Live accounts.",
+          "profitSplit": "Depends on funded size and reward threshold",
+          "platforms": ["Confirm at funded onboarding"],
+          "tradableAssets": ["Futures"],
+          "hasConsistencyRule": false,
+          "minTradingDays": "Five qualifying profitable days between payouts for recent subscriptions"
         }
       ]
     },
@@ -2573,7 +2867,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -2622,13 +2916,28 @@
           "date": "2026-11-17",
           "summary": "The firm may impose individual daily profit/risk caps, news restrictions and a 40% best-day payout eligibility rule. Failing that specific 40% condition delays payout eligibility rather than automatically breaching the account. No rating or status change.",
           "source": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules"
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Distinguished post-21-October StartTrader one-step from old three-step articles, SwiftTrader post-15-July strict static 3% limit, ProTrader and Swing daily-loss resets. Preserved 77 points while explicitly flagging outdated generic summaries.",
+          "source": "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 1434,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fintokei.com",
-        "priceFrom": 34
+        "priceFrom": 34,
+        "drawdownType": "Static",
+        "verdict": "Fintokei currently separates a revamped one-step StartTrader, a low-drawdown SwiftTrader, and two-step ProTrader / Swing variations. Specific post-July and post-October help articles supersede generic explanations that still show older stage counts and loss limits. StartTrader has a $400 total payout ceiling; SwiftTrader has only 3% fixed total risk. Public source inconsistency warrants clarification of purchased version, but score stays 77/100 while no double deduction is made.",
+        "auditSummary": "18 November 2026 official product-date audit: StartTrader accounts purchased from 21 October 2026 use one 3%-target stage, 2% daily loss, 8% static overall loss, minimum three trading days, 60-day evaluation and an initial 5K tier. First daily limit breach is soft, second hard; a $400 lifetime payout maximum across two withdrawals applies to the model. SwiftTrader purchased from 15 July 2026 uses 6% target, 2% daily, 3% fixed total loss, 3%-of-starting-capital per profitable day evaluation cap, 60-day deadline and three trading days. ProTrader uses two targets of 8% then 6%, 5% daily and 10% fixed total risk; ProTrader Swing resets daily from the closed balance instead of EOD equity. Some older general help pages still show old StartTrader three-stage and former SwiftTrader loss percentages; the dated model pages govern newer purchases. Existing 77/100 retained pending contract reconciliation and no independent payout testing."
       },
       "addSources": [
         {
@@ -2646,6 +2955,22 @@
         {
           "label": "Fintokei individualized consistency and payout conditions",
           "url": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules"
+        },
+        {
+          "label": "Fintokei new StartTrader change-date and payout limit",
+          "url": "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules"
+        },
+        {
+          "label": "Fintokei SwiftTrader new plan and old purchase treatment",
+          "url": "https://support.fintokei.com/en/articles/12040973-how-does-swifttrader-challenge-work-what-are-the-rules"
+        },
+        {
+          "label": "Fintokei ProTrader evaluation conditions",
+          "url": "https://support.fintokei.com/en/articles/6538822-how-does-the-protrader-challenge-work-what-are-the-rules"
+        },
+        {
+          "label": "Fintokei ProTrader vs Swing EOD equity/balance distinction",
+          "url": "https://support.fintokei.com/en/articles/12058210-what-is-the-difference-between-protrader-and-protrader-swing"
         }
       ],
       "addPayoutProofs": [
@@ -2656,6 +2981,122 @@
           "quote": "\"we've paid out a total of $28,080,786 to our traders by the end of 2025\"; \"In 2025 alone, traders received $13,135,105.\"",
           "url": "https://www.fintokei.com/blog/a-record-year-for-fintokei-nearly-half-of-all-payouts-were-generated-in-2025/",
           "firmReported": true
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "StartTrader — new purchases from 21 October 2026",
+          "rule": "One evaluation with 3% profit goal, 2% daily and 8% static total max; after funding a $400 lifetime payout ceiling over up to two requests, with profit and time prerequisites.",
+          "impact": "Nominal funded account size does not imply unlimited withdrawal; old three-phase descriptions are obsolete for these purchases.",
+          "source": "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules"
+        },
+        {
+          "program": "SwiftTrader — purchases from 15 July 2026",
+          "rule": "Only 3% fixed total maximum loss, 2% daily loss, 3% per-day profit cap in evaluation, three trading days and 60-day evaluation. Legacy plans use different limits.",
+          "impact": "A small drawdown can end the evaluation while one profitable day cannot contribute unlimited progress.",
+          "source": "https://support.fintokei.com/en/articles/12040973-how-does-swifttrader-challenge-work-what-are-the-rules"
+        },
+        {
+          "program": "ProTrader vs ProTrader Swing — two-step",
+          "rule": "Both have 10% static total loss and 5% daily; ordinary ProTrader uses EOD equity for the next daily baseline, while Swing uses closed balance.",
+          "impact": "Floating profit or loss near rollover affects the variants differently; choose the exact model before comparing loss thresholds.",
+          "source": "https://support.fintokei.com/en/articles/12058210-what-is-the-difference-between-protrader-and-protrader-swing"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "finto-start-new",
+          "name": "StartTrader — new one-step (21 Oct 2026+)",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 5000,
+          "profitTarget": "3% one phase",
+          "maxDailyLoss": "2% daily",
+          "maxDrawdown": "8% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules",
+          "drawdownDetails": "Fixed floor, with first daily breach soft and second hard; total $400 payout cap.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 days; finish evaluation within 60 days"
+        },
+        {
+          "id": "finto-swift-new",
+          "name": "SwiftTrader — one-step (15 July 2026+)",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "6% one phase; eval daily profit cap 3%",
+          "maxDailyLoss": "2% daily",
+          "maxDrawdown": "3% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://support.fintokei.com/en/articles/12040973-how-does-swifttrader-challenge-work-what-are-the-rules",
+          "drawdownDetails": "Starting equity minus a fixed 3%; funded-stage conditions separately apply.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 days; finish within 60 days"
+        },
+        {
+          "id": "finto-pro-two",
+          "name": "ProTrader — two-step",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "profitTarget": "8% then 6%",
+          "maxDailyLoss": "5% daily reset from end-of-day equity",
+          "maxDrawdown": "10% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://support.fintokei.com/en/articles/6538822-how-does-the-protrader-challenge-work-what-are-the-rules",
+          "drawdownDetails": "Overall max fixed at 90% of starting capital; daily baseline depends on EOD equity.",
+          "profitSplit": "80% base",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "finto-swing-two",
+          "name": "ProTrader Swing — two-step",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% then 6%",
+          "maxDailyLoss": "5% daily reset from closed balance",
+          "maxDrawdown": "10% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://support.fintokei.com/en/articles/12058210-what-is-the-difference-between-protrader-and-protrader-swing",
+          "drawdownDetails": "Daily loss based on closed balance instead of regular ProTrader EOD equity.",
+          "profitSplit": "80% base",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
         }
       ]
     },
@@ -3170,12 +3611,29 @@
           "date": "2026-11-16",
           "summary": "Public payout-certificate examples on the firm's own site archived as firm-reported marketing evidence, not bank-authenticated client receipts. The existing Trustpilot review-removal notice and score cap remain unchanged.",
           "source": "https://www.fundedtradingplus.com/",
-          "fields": ["payoutProofs"]
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Separated four Funded Trading Plus CFD routes with challenge versus funded drawdown, per-symbol floating cap, payout consistency, weekend and PNPL activation. Maintained existing 64 Trustpilot-capped score without a second deduction.",
+          "source": "https://help.fundedtradingplus.com/instant-program-information/",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
       "set": {
-        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)"
+        "payoutDelay": "standard review and processing 2 business days (5-7 if flagged for risk review)",
+        "drawdownType": "Hybride",
+        "verdict": "Funded Trading Plus has multiple documented drawdown mechanisms. Express follows the highest closed balance, Classic is static with 35% challenge and 50% funded best-day concentration plus a 3% per-symbol floating-loss breach, Instant trails while requiring Friday flat positions, and Pass Now Pay Later changes from 6% static evaluation to a stricter trailing funded plan. Score stays 64/100 under its previously applied Trustpilot cap; no extra deduction for already documented concerns.",
+        "auditSummary": "18 November 2026: compared FT+ official help pages for 1-Step Express, 2-Step Classic, Instant and Pass Now Pay Later (PNPL). Express: 10% evaluation goal, 6% closed-balance trailing loss and 4% daily loss; reward possible from first profitable funded day, then weekly. Classic: 7% then 7% goals, 8% static overall and 4% daily, 35% best-day in each evaluation and 50% funded, strict 3% floating exposure on a single instrument, 30-day inactivity closure and payouts after ten days. Instant: 6% trailing closed balance and Friday 4:30 ET closure before weekend; rewards minimum $50 after profit and regular seven-day schedule. PNPL: evaluate with 2% target and 6% fixed max, then funded 6% real-time equity-high trailing with 3% daily, 25% concentration and ten trading days before cashout, plus a fee to activate after passing. Source is company-published policy, not independent execution evidence. Trustpilot cap already holds score at 64."
       },
       "addSources": [
         {
@@ -3185,6 +3643,22 @@
         {
           "label": "FT+ company-published trader payout certificates",
           "url": "https://www.fundedtradingplus.com/"
+        },
+        {
+          "label": "Funded Trading Plus Express product terms",
+          "url": "https://help.fundedtradingplus.com/1-step-express-program-information/"
+        },
+        {
+          "label": "Funded Trading Plus Classic hard limits",
+          "url": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+        },
+        {
+          "label": "Funded Trading Plus Instant product terms",
+          "url": "https://help.fundedtradingplus.com/instant-program-information/"
+        },
+        {
+          "label": "Funded Trading Plus PNPL funded-stage divergence",
+          "url": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/"
         }
       ],
       "addPayoutProofs": [
@@ -3199,6 +3673,123 @@
       ],
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundedtradingplus.com)."
+      ],
+      "restrictiveRules": [
+        {
+          "program": "2-Step Classic — evaluation and funded payout",
+          "rule": "35% best-day consistency for BOTH challenge phases and 50% funded, 3% floating loss on any single symbol is a hard breach, 30 days inactivity closes.",
+          "impact": "Passing a normal static challenge does not remove funded concentration or open-risk restrictions.",
+          "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+        },
+        {
+          "program": "Instant Funding — holding through Friday",
+          "rule": "6% trailing closed-balance maximum; all positions must be closed by Friday 4:30 p.m. Eastern (programme-specific weekend prohibition).",
+          "impact": "An otherwise profitable overnight/weekend position may trigger discipline if held past Friday cut-off.",
+          "source": "https://help.fundedtradingplus.com/instant-program-information/"
+        },
+        {
+          "program": "Pass Now Pay Later — funded stage and activation",
+          "rule": "Challenge has 6% fixed max and a 2% profit target, but funded account switches to 6% intraday equity-high trailing and 3% daily; 25% funded best-day consistency, ten trade-days per payout and activation fee apply.",
+          "impact": "A cheap evaluation becomes a different, stricter risk model after successful passing and adds a later cost.",
+          "source": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "ftp-express-current",
+          "name": "1-Step Express",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 200000,
+          "profitTarget": "10% one phase",
+          "maxDailyLoss": "4% daily from prior balance",
+          "maxDrawdown": "6% trailing highest closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+          "drawdownDetails": "Highest realized balance moves maximum loss until locked at original capital.",
+          "profitSplit": "80%+",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "ftp-classic-current",
+          "name": "2-Step Classic",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 200000,
+          "profitTarget": "7% then 7%",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "8% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.fundedtradingplus.com/2-step-classic-program-information/",
+          "drawdownDetails": "Fixed floor; separate hard 3%-per-symbol floating-loss breach.",
+          "profitSplit": "80%+",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "35% best-day each evaluation; 50% after funding."
+        },
+        {
+          "id": "ftp-instant-current",
+          "name": "Instant Program",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "6% daily",
+          "maxDrawdown": "6% trailing high closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.fundedtradingplus.com/instant-program-information/",
+          "drawdownDetails": "Floor tracks high realized balance and locks; positions flat every Friday by 4:30 ET.",
+          "profitSplit": "80%+",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "ftp-pnpl-current",
+          "name": "Pass Now Pay Later",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 200000,
+          "profitTarget": "2% evaluation",
+          "maxDailyLoss": "4% during challenge; 3% once funded",
+          "maxDrawdown": "6% static evaluation → 6% intraday equity trailing funded",
+          "drawdownType": "Hybride",
+          "drawdownSource": "https://help.fundedtradingplus.com/pass-now-pay-later-program-information/",
+          "drawdownDetails": "Static floor during cheap test, but funded highest floating equity raises floor immediately.",
+          "profitSplit": "80%+",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "25% funded best day; activation fee after passing.",
+          "minTradingDays": "Funded 10 trading days between rewards"
+        }
       ]
     },
     "funded7": {
@@ -4362,12 +4953,15 @@
       ]
     },
     "fxify": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 6663,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fxify.com",
-        "priceFrom": 59
+        "priceFrom": 59,
+        "drawdownType": "Hybride",
+        "verdict": "FXIFY now offers sharply different challenges: 1-Phase and 2-Phase Standard follow closed-balance trailing floors, while 2-Phase Classic, newer 2-Phase Pro and 3-Phase are static. Instant Lite is a stricter direct-funded product with a 20% best-day gate and news-window profit exclusions, including SL/TP exits. Do not project Lite restrictions onto all FXIFY accounts. The score stays 74/100 pending an independent payout test; no arbitrary penalty for product diversity.",
+        "auditSummary": "18 November 2026 official FXIFY product comparison and October guide. One Phase uses a 6% high-water closed-balance trailing maximum and 3% daily cap. 2 Phase Standard: 10% trailing (locks at original size), goals 10% then 5%; Classic: 10% fixed overall, goals 5% then 10%, 25% funded-only best-day payout concentration; new Pro: 8% fixed overall, goals 4% then 8%, three qualifying days each phase and each reward cycle, no consistency, payout every ten days and account sizes $10K–$250K. 3 Phase: 5% static maximum. Instant Funding ordinary offers 8% closed-balance trailing; Instant Lite offers 4% trailing, 3% daily, 20% funded concentration, and a five-minute high-impact news blackout where even automatic profit-taking exits can be ineligible while losses still count. These are model- and sometimes purchase-date-specific; score 74 retained, with no claim of universal news or TP prohibition."
       },
       "changelog": [
         {
@@ -4431,6 +5025,18 @@
           "date": "2026-11-17",
           "summary": "The published country exclusions include Vietnam, Russia, Kenya and Ghana, but NOT Nigeria; mainland China, India and Singapore are absent from the list. False residence declarations may lead to account/refund denial. Actual KYC, trading-platform and local-law eligibility remain separate.",
           "source": "https://fxify.com/faqs/all-faqs/what-countries-are-accepted/"
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Separated 1 Phase trailing, 2 Phase Standard trailing, Classic and Pro static, 3 Phase static, and distinct Instant Lite restrictions; flagged payout-dependent news window and 2026 Pro 4%/8% targets. Score remains 74 as constraints are fully product-specific and already expected from complex catalogue.",
+          "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
       "addSources": [
@@ -4449,6 +5055,22 @@
         {
           "label": "FXIFY official restricted-country FAQ",
           "url": "https://fxify.com/faqs/all-faqs/what-countries-are-accepted/"
+        },
+        {
+          "label": "FXIFY published Pro / Classic / Standard comparison",
+          "url": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+        },
+        {
+          "label": "FXIFY product-specific static and trailing rules",
+          "url": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/"
+        },
+        {
+          "label": "FXIFY Instant Lite current news blackout including take-profit exits",
+          "url": "https://fxify.com/faqs/all-faqs/instant-funding-lite-faq/instant-funding-lite-can-i-trade-news-on-instant-funding-lite/"
+        },
+        {
+          "label": "FXIFY Instant Lite drawdown, size and ten-trading-day payout",
+          "url": "https://fxify.com/newsroom/introducing-fxify-instant-funding-lite/"
         }
       ],
       "setEntities": [
@@ -4490,6 +5112,170 @@
           "url": "https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026",
           "firmReported": false
         }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "1-Phase / 2-Phase Standard vs Classic / Pro / 3-Phase",
+          "rule": "One Phase 6% trailing and Standard 2-Phase 10% trailing; Classic 10%, Pro 8% and 3-Phase 5% fixed. Pro targets 4% then 8% and has minimum three 0.5%-positive days per phase/cycle.",
+          "impact": "A fixed-drawdown plan cannot be substituted for a trailing one based on the shared 2-Phase label.",
+          "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+        },
+        {
+          "program": "2-Phase Classic — funded withdrawals",
+          "rule": "Classic has no evaluation consistency rule but 25% best-day concentration once funded; Pro has no such consistency requirement and uses ten-day payouts.",
+          "impact": "A trader passing Classic quickly may need additional profit days to become payout-eligible.",
+          "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+        },
+        {
+          "program": "Instant Funding Lite — news and protective exits",
+          "rule": "Around high-impact news (±5 minutes), a trade closing via stop-loss or take-profit can remain subject to the news policy: profits of disallowed trades are removed while losses count. 20% best-day funded rule also applies.",
+          "impact": "An automatic take-profit during the blackout may not be paid; this is a Lite-specific warning, not the rules of every 2-Phase product.",
+          "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-faq/instant-funding-lite-can-i-trade-news-on-instant-funding-lite/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "fxi-one",
+          "name": "FXIFY One Phase",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "profitTarget": "10% one phase",
+          "maxDailyLoss": "3% daily",
+          "maxDrawdown": "6% trailing high closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+          "drawdownDetails": "Closed-profit high-water raises max-loss floor then locks at initial capital.",
+          "profitSplit": "Up to 90%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "fxi-two-std",
+          "name": "FXIFY Two Phase — Standard",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "profitTarget": "10% then 5%",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "10% trailing and locks at starting capital",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+          "drawdownDetails": "Closed-balance peak, unlike static Classic and Pro.",
+          "profitSplit": "Up to 90%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "5 per phase"
+        },
+        {
+          "id": "fxi-two-classic",
+          "name": "FXIFY Two Phase — Classic",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "5% then 10%",
+          "maxDailyLoss": "Confirm tier",
+          "maxDrawdown": "10% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+          "drawdownDetails": "Fixed total floor; funded 25% best-day rule despite none during evaluation.",
+          "profitSplit": "Up to 100%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "25% best-day in funded stage only."
+        },
+        {
+          "id": "fxi-two-pro",
+          "name": "FXIFY Two Phase — Pro (new)",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 250000,
+          "profitTarget": "4% then 8%",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "8% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+          "drawdownDetails": "Static even after reaching high profits; no consistency rule.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 days at ≥0.5% per phase and funded cycle"
+        },
+        {
+          "id": "fxi-three",
+          "name": "FXIFY Three Phase",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "Targets vary by exact plan",
+          "maxDailyLoss": "By tier",
+          "maxDrawdown": "5% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/",
+          "drawdownDetails": "Fixed starting-capital floor.",
+          "profitSplit": "Up to 90%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "fxi-instant-lite",
+          "name": "FXIFY Instant Funding Lite",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "3% daily",
+          "maxDrawdown": "4% trailing closed balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fxify.com/newsroom/introducing-fxify-instant-funding-lite/",
+          "drawdownDetails": "4% closed-balance trail with lock; funded news and payout gate separate.",
+          "profitSplit": "80%, 90% optional upgrade",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "20% best day; first reward after 10 trading days incl. 5 traded days; news blackout ±5 min incl. automated TP/SL exits."
+        }
       ]
     },
     "goat-funded-trader": {
@@ -4505,14 +5291,33 @@
           "rule": "Before requesting a reward, the largest winning trade must be at least as large as the largest losing trade. This eligibility test is not itself an account breach.",
           "impact": "A profitable account may still need additional trades before the next payout is eligible.",
           "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+        },
+        {
+          "program": "GOAT 1-Step (Aug 2026+) and 2-Step Standard",
+          "rule": "1-Step: 6% static maximum and 3% daily; 2-Step: 10% static and 4% daily. Funded 2-Step GOAT Guard at 2% combined floating loss can permanently reduce split to 50%, repeated trigger closes. Some cheaper 1% Guard variants close immediately.",
+          "impact": "The same firm brand has drastically different risk and reward consequences across checkout choices.",
+          "source": "https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard"
+        },
+        {
+          "program": "GOAT Instant GOAT / Instant Premium",
+          "rule": "Both trail 6% against the real-time equity peak and require five 0.5%-profitable days before payout. Instant GOAT has a 2% aggregate floating-loss hard cap and 15% best-day consistency; current Premium has a 1% floating cap but no universal consistency.",
+          "impact": "An intraday unrealized dip may terminate the account despite not hitting overall maximum loss; buying the wrong Instant version matters.",
+          "source": "https://help.goatfundedtrader.com/instant-goat.html"
+        },
+        {
+          "program": "GOAT Instant Daily — strict direct funding",
+          "rule": "3% real-time equity trailing total loss, separate 1% combined floating hard loss, 30-calendar-day expiry, daily payout limited to 1%–3% of account size; payout can lock loss floor at original capital.",
+          "impact": "Withdrawing the entire cushion can breach the account immediately; the offer is not perpetual funding or an unlimited instant payout.",
+          "source": "https://help.goatfundedtrader.com/en/articles/17677256-instant-daily-model"
         }
       ],
-  "set": {
-    "score": 58,
-    "payoutDelay": "Model-dependent eligibility; requests on weekdays, normally processed in 2 business days after first-payout KYC. Minimum $100 except Instant Daily; payout caps, deductions and a 3% processing fee apply.",
-    "verdict": "GOAT Funded Trader remains commercially active and publishes a detailed payout help centre, but its high-friction reward rules and the Trustpilot rating-withholding/fake-review notice make it a watchlist firm. The score is 58/100: review integrity is penalized by eight points in the editorial calibration, while further caution reflects deductions, eligibility tests and risk-team discretion. The existence of customer complaints does not establish that any specific payout was improperly refused.",
-    "auditSummary": "18 November 2026: GOAT Funded Trader's 14 November payout guide confirms a $3,000 daily profit ceiling (excess profits removed), a 6% or $10,000 cap on the first two rewards, model-specific 4% exceptions, and a 3% processing charge on rewards. It also says that from 8 October 2026 purchases the largest winning trade must match or exceed the largest losing trade before a withdrawal is eligible; this is not itself an account breach. One reward request at a time, no partial withdrawals in most models, exact-name payout details and an exclusively used destination are required; duplicate payment addresses can result in a final breach decision even for relatives. First KYC and risk review can delay the marketed two-business-day window. Trustpilot still withholds the rating for a breach of its guidelines and says fake reviews were removed. These are documented eligibility and review-integrity concerns, not proof that the firm is closed or that every complaint is genuine. Earlier firm-reported payout aggregates remain unverified as independent transfers. Editorial score 68 before the Trustpilot cap, then 58 after the current wider audit; affiliate status has no influence."
-  },
+      "set": {
+        "score": 58,
+        "payoutDelay": "Model-dependent eligibility; requests on weekdays, normally processed in 2 business days after first-payout KYC. Minimum $100 except Instant Daily; payout caps, deductions and a 3% processing fee apply.",
+        "verdict": "GOAT Funded Trader remains commercially active and publishes a detailed payout help centre, but its high-friction reward rules and the Trustpilot rating-withholding/fake-review notice make it a watchlist firm. The score is 58/100: review integrity is penalized by eight points in the editorial calibration, while further caution reflects deductions, eligibility tests and risk-team discretion. The existence of customer complaints does not establish that any specific payout was improperly refused.",
+        "auditSummary": "18 November 2026 programme deep dive adds model-specific conditions to the existing 58/100 Trustpilot and payout-integrity review. 1-Step post-1-August 2026: 10% evaluation target, 3% daily, 6% static maximum, three profitable days; initial two payouts capped at 6% of initial size or $10K and profits above $3,000 on a day removed. 2-Step Standard: 8%/6% goals, 4% daily and 10% fixed total; funded GOAT Guard can cut the split to 50% at 2% simultaneous floating loss, and repeat breach closes, while some cheaper 1% Guard offers trigger immediate closure. Instant GOAT: 6% real-time equity trailing max, 3% daily, 2% simultaneous floating hard loss, 15% best-day and five days ≥0.5% before rewards. Instant Premium: 6% trailing, 1% floating hard loss for purchases after 2 September, five 0.5%-profitable days, no blanket concentration. Instant Daily: 3% real-time trailing, only 1% floating loss, expires after 30 days, payout per request limited to 1%-3% account size; payout locks floor at original capital, so emptying remaining profits can immediately breach. Existing initial reward restrictions, account matching, KYC and Trustpilot withhold notice remain intact. 58 points unchanged; do not assert review-removal attribution or universal programme rules.",
+        "drawdownType": "Hybride"
+      },
       "changelog": [
         {
           "date": "2026-10-23",
@@ -4541,17 +5346,46 @@
           ]
         },
         {
-      "date": "2026-11-14",
-      "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
-      "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
-      "fields": [
-        "payoutProofs"
-      ]
-    },
-    {"date":"2026-11-18","summary":"Reassessed editor score to 58/100, including an eight-point review-integrity penalty for Trustpilot's still-withheld TrustScore; extra caution concerns the current documented reward caps, deductions and eligibility/risk-review constraints, not an unverified allegation of wrongdoing or a business closure.","source":"https://www.trustpilot.com/review/goatfundedtrader.com","fields":["score","verdict","auditSummary"]},
-    {"date":"2026-11-18","summary":"First-party payout policy updated 14 November confirms initial reward caps, a $3,000 daily profit limit, 3% processing fee, post-8-October best-versus-worst-trade condition and account-specific payment-address restrictions.","source":"https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival","fields":["payoutDelay","auditSummary"]}
+          "date": "2026-11-14",
+          "summary": "Public payout proof added (2 dated, linked item(s)); figures published by the firm are labelled firm-reported. No score or payout-risk change.",
+          "source": "https://www.financemagnates.com/forex/prop-firm-goat-funded-trader-says-it-paid-26-million-to-22279-of-12-million-traders/",
+          "fields": [
+            "payoutProofs"
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Reassessed editor score to 58/100, including an eight-point review-integrity penalty for Trustpilot's still-withheld TrustScore; extra caution concerns the current documented reward caps, deductions and eligibility/risk-review constraints, not an unverified allegation of wrongdoing or a business closure.",
+          "source": "https://www.trustpilot.com/review/goatfundedtrader.com",
+          "fields": [
+            "score",
+            "verdict",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "First-party payout policy updated 14 November confirms initial reward caps, a $3,000 daily profit limit, 3% processing fee, post-8-October best-versus-worst-trade condition and account-specific payment-address restrictions.",
+          "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+          "fields": [
+            "payoutDelay",
+            "auditSummary"
+          ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Preserved existing 58-point Trustpilot watchlist treatment and two firm-wide reward warnings; added five product-specific one/two-step and Instant GOAT/Premium/Daily restrictions, especially 1% floating-risk Daily, 30-day expiry and drawdown-floor cashout trap. No repeat penalty.",
+          "source": "https://help.goatfundedtrader.com/en/articles/17677256-instant-daily-model",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
+        }
       ],
-  "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-18",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
       ],
@@ -4559,8 +5393,35 @@
         {
           "label": "GOAT Funded Trader terms and conditions",
           "url": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
-    },
-    {"label":"GFT reward eligibility and deductions (14 Nov 2026)","url":"https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"}
+        },
+        {
+          "label": "GFT reward eligibility and deductions (14 Nov 2026)",
+          "url": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+        },
+        {
+          "label": "GOAT new 1-Step official dated model",
+          "url": "https://help.goatfundedtrader.com/en/articles/10630134-1-step-model"
+        },
+        {
+          "label": "GOAT 2-Step Standard protections",
+          "url": "https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard"
+        },
+        {
+          "label": "GOAT current Instant funding versions",
+          "url": "https://help.goatfundedtrader.com/en/collections/18216160-instant-funding"
+        },
+        {
+          "label": "GOAT Instant GOAT exact real-time drawdown and 15% consistency",
+          "url": "https://help.goatfundedtrader.com/instant-goat.html"
+        },
+        {
+          "label": "GOAT Instant Premium post-September 1% floating limit",
+          "url": "https://help.goatfundedtrader.com/en/articles/16013484-instant-premium-model"
+        },
+        {
+          "label": "GOAT Instant Daily strict rules",
+          "url": "https://help.goatfundedtrader.com/en/articles/17677256-instant-daily-model"
+        }
       ],
       "setEntities": [
         {
@@ -4599,6 +5460,127 @@
           "quote": "\"$32,000,000+ Total Rewarded\"",
           "url": "https://www.goatfundedtrader.com/transparency",
           "firmReported": true
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "goat-one-new",
+          "name": "GOAT 1-Step — post-Aug 2026",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "profitTarget": "10% one phase",
+          "maxDailyLoss": "3% daily (optional 2% checkout variant)",
+          "maxDrawdown": "6% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.goatfundedtrader.com/en/articles/10630134-1-step-model",
+          "drawdownDetails": "Fixed maximum below starting capital, with funded payout caps and profit-day removal rules.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 profitable evaluation days"
+        },
+        {
+          "id": "goat-two-standard-new",
+          "name": "GOAT 2-Step Standard",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% then 6%",
+          "maxDailyLoss": "4% daily",
+          "maxDrawdown": "10% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard",
+          "drawdownDetails": "Fixed floor; funded-only floating GOAT Guard can reduce split or close.",
+          "profitSplit": "80% before Shield sanctions",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3-4 profitable days by purchase date"
+        },
+        {
+          "id": "goat-instant-goat",
+          "name": "GOAT Instant Funding",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "3% daily; additional 2% combined floating hard loss",
+          "maxDrawdown": "6% real-time equity trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.goatfundedtrader.com/instant-goat.html",
+          "drawdownDetails": "Real-time highest unrealized equity advances the drawdown floor.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "15% best day; five days ≥0.5% prior to reward."
+        },
+        {
+          "id": "goat-instant-premium",
+          "name": "GOAT Instant Premium",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "No evaluation",
+          "maxDailyLoss": "3% daily; additional 1% floating hard loss on current purchases",
+          "maxDrawdown": "6% real-time equity trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.goatfundedtrader.com/en/articles/16013484-instant-premium-model",
+          "drawdownDetails": "A separate 1% floating stop can terminate before full 6% drawdown is reached.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "Five days ≥0.5% prior to reward"
+        },
+        {
+          "id": "goat-instant-daily",
+          "name": "GOAT Instant Daily",
+          "type": "Instant funding",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 1000,
+          "accountSizeMax": 50000,
+          "profitTarget": "No challenge; daily reward eligibility",
+          "maxDailyLoss": "No distinct daily total; 1% maximum floating",
+          "maxDrawdown": "3% real-time trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.goatfundedtrader.com/en/articles/17677256-instant-daily-model",
+          "drawdownDetails": "Funded account expires in 30 days; a payout locks the floor at initial balance, so full cash-out can instantly breach.",
+          "profitSplit": "60% to 80% by payout cycle",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false
         }
       ]
     },
@@ -5954,7 +6936,7 @@
       ]
     },
     "oneup-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 2814,
@@ -5962,7 +6944,10 @@
         "profitSplit": 90,
         "payoutDelay": "one withdrawal per calendar week, processed the same day once the withdrawal threshold is met ($1,000 minimum); extra withdrawals in the same week carry a 10% priority fee",
         "drawdownType": "Trailing",
-        "newsTrading": "Restricted"
+        "newsTrading": "Restricted",
+        "score": 70,
+        "verdict": "OneUp Trader operates established futures evaluations but its funded rulebook restricts any trading activity lasting less than 10 seconds, prohibits specific major-news trading and requires weekly activity compared with evaluation. A fast stop-loss or take-profit is a practical concern, but the official page does not state an SL/TP exemption or exception. Standard and Pro evaluations have different minimum days; Express is requalification for a former funded trader, not a new instant purchase. Score reduced from 72 to 70 for funded execution restrictions, not integrity allegations.",
+        "auditSummary": "18 November 2026 official OneUp rules check: standard evaluation requires ten trading days; Pro requires five and Express requalification three, with an unusual consistency test in which the next three best days combined must represent at least 80% of the best day. Funding uses real-time trailing loss on account equity until its floor locks at initial capital. The funded trader rules ban trades with duration under ten seconds, some major-news executions, and require weekly trades to be at least 50% of the evaluation weekly average; monitoring over the first 90 days may flag negative 15-day periods. Express is not general-purpose instant funding. Because these policies can conflict with ordinary fast exits and change strategy requirements after passing, editorial score lowered two points to 70. No inference of improper nonpayment."
       },
       "changelog": [
         {
@@ -6007,52 +6992,91 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Identified funded prohibition on trades shorter than 10 seconds and mandatory weekly volume linked to evaluation, plus funded news blackouts; separated evaluation types and Express requalification eligibility. Score 72 to 70 for these especially invasive funded rules, without any claim of concealment.",
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "score"
+          ]
         }
       ],
       "setProducts": [
         {
-          "id": "oneup-evaluation",
-          "name": "Evaluation",
+          "id": "oneup-standard-current",
+          "name": "Standard Evaluation",
           "type": "Futures evaluation",
-          "description": "Monthly subscription, list prices: $65 (25K), $75 (50K), $150 (100K), $175 (150K), $325 (250K). Minimum 10 trading days.",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
-          "entryFeeMin": 65,
-          "entryFeeMax": 325,
-          "profitTarget": "$1,500 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K), $15,000 (250K)",
-          "maxDailyLoss": "No daily loss limit",
-          "maxDrawdown": "Trailing: $1,500 (25K), $2,500 (50K), $3,500 (100K), $5,000 (150K), $5,500 (250K)",
-          "profitSplit": "100% of the first $10,000, then 90%",
+          "profitTarget": "Tier-specific profit target",
+          "maxDailyLoss": "By size",
+          "maxDrawdown": "Real-time trailing; locks at starting balance",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
+          "drawdownDetails": "Intraday account equity may touch trailing maximum even when profit is unrealized.",
+          "profitSplit": "100% first $10K then 90%",
           "platforms": [
-            "not stated"
+            "Confirm at checkout"
           ],
           "tradableAssets": [
             "Futures"
           ],
-          "minTradingDays": "10",
-          "hasConsistencyRule": false
+          "hasConsistencyRule": true,
+          "consistencyRule": "Three next-best days combined ≥80% of single best day.",
+          "minTradingDays": "10 days"
         },
         {
-          "id": "oneup-pro-evaluation",
+          "id": "oneup-pro-current",
           "name": "Pro Evaluation",
           "type": "Futures evaluation",
-          "description": "Monthly subscription, list prices: $100 (25K), $115 (50K), $225 (100K), $265 (150K), $490 (250K). Minimum 5 trading days.",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
-          "entryFeeMin": 100,
-          "entryFeeMax": 490,
-          "profitTarget": "$1,500 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K), $15,000 (250K)",
-          "maxDailyLoss": "No daily loss limit",
-          "maxDrawdown": "Trailing: $1,500 (25K), $2,500 (50K), $3,500 (100K), $5,000 (150K), $5,500 (250K)",
-          "profitSplit": "100% of the first $10,000, then 90%",
+          "profitTarget": "Tier-specific profit target",
+          "maxDailyLoss": "By size",
+          "maxDrawdown": "Trailing funded maximum loss",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
+          "drawdownDetails": "Funded threshold follows intraday high and eventually locks at starting balance.",
+          "profitSplit": "Depends on account and payout option",
           "platforms": [
-            "not stated"
+            "Confirm at checkout"
           ],
           "tradableAssets": [
             "Futures"
           ],
-          "minTradingDays": "5",
-          "hasConsistencyRule": false
+          "hasConsistencyRule": true,
+          "consistencyRule": "Three next-best days combined ≥80% of single best day.",
+          "minTradingDays": "5 days"
+        },
+        {
+          "id": "oneup-express-return",
+          "name": "Express requalification — previous funded only",
+          "type": "Futures evaluation",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 250000,
+          "profitTarget": "Requalification after termination",
+          "maxDailyLoss": "By legacy account",
+          "maxDrawdown": "Trailing per requalification policy",
+          "drawdownSource": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation",
+          "drawdownDetails": "Not a new customer instant account; special eligibility after funded termination.",
+          "profitSplit": "Depends on account and payout option",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "3 days, restricted to eligible former funded accounts"
         }
       ],
       "addSources": [
@@ -6063,6 +7087,30 @@
         {
           "label": "OneUp Trader funded trader rules",
           "url": "https://help.oneuptrader.com/article/372-funded-trader-rules"
+        },
+        {
+          "label": "OneUp current evaluation and consistency terms",
+          "url": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "OneUp funded accounts — trade duration",
+          "rule": "Trading activities with duration under 10 seconds, tick-scalping and latency-based strategies are prohibited. The source does not describe a blanket stop-loss / take-profit exception.",
+          "impact": "A fast profitable close may trigger rule scrutiny; get written treatment of automated protective exits before purchase.",
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules"
+        },
+        {
+          "program": "OneUp funded — activity and news",
+          "rule": "Weekly trade count must be at least 50% of the trader’s average evaluation weekly execution; major-news trading is restricted, and first 90 days are monitored in 15-day periods.",
+          "impact": "Passing with a high trade frequency can impose a burdensome minimum volume when funded.",
+          "source": "https://help.oneuptrader.com/article/372-funded-trader-rules"
+        },
+        {
+          "program": "OneUp Standard / Pro / Express evaluation",
+          "rule": "Standard: minimum ten days; Pro: five; Express: three and available only to eligible former funded traders. Consistency compares the next three best days with 80% of the single best day.",
+          "impact": "Express cannot be treated as an instantly funded challenge for new customers.",
+          "source": "https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation"
         }
       ]
     },
@@ -6553,11 +7601,14 @@
       ]
     },
     "take-profit-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 4.4,
         "trustpilotReviewCount": 11175,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/takeprofittrader.com",
+        "drawdownType": "Hybride",
+        "verdict": "Take Profit Trader has three importantly different futures stages: TEST evaluations trail at end of day, PRO funded accounts trail unrealized intraday equity, and invitation-based PRO+ uses an EOD model. All PRO positions must be closed around specified FOMC, NFP and CPI announcements. A PRO withdrawal buffer and PRO+ profit reserve limit early access to gains. Score remains 73/100; published restrictions are not treated as hidden terms.",
+        "auditSummary": "18 November 2026: TEST has EOD trailing drawdowns of $1,500 to $4,500 on $25K–$150K, 50% best-day evaluation consistency and three trading days. PRO applies an unrealized-equity high-water intraday trail, which can move upward before profit is closed, and requires the trader to build a buffer equal to the account drawdown before the ordinary 80% split can be withdrawn. All orders and positions must be absent during the one minute before, during and one minute after prohibited FOMC statements, NFP and CPI news. PRO+ is a separate selectively granted live path, uses EOD trailing and a 90% split, and freezes $5,000 of preceding PRO gains during PRO+ participation. The marketed ability to withdraw from day one has PRO-stage qualifications. No payout transfer independently tested; 73/100 unchanged."
       },
       "changelog": [
         {
@@ -6583,12 +7634,131 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Separated TEST end-of-day trail from PRO intraday-equity trail and PRO+ EOD trail; spelled out FOMC/NFP/CPI no-position window, funded buffer and cashout restrictions. Score stays 73 because these published rules were not found to be concealed.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
       "addSources": [
         {
           "label": "TradeInformer: Take Profit Trader cuts evaluation minimum to three days (17 Aug 2026)",
           "url": "https://tradeinformer.com/broker-news/take-profit-trader-cuts-prop-firm-evaluation-requirement-to-three-days"
+        },
+        {
+          "label": "TakeProfitTrader funded PRO official rulebook",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"
+        },
+        {
+          "label": "TakeProfitTrader TEST EOD trailing futures size table",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown"
+        },
+        {
+          "label": "TakeProfitTrader PRO+ distinct EOD and economic news rules",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172006753821-PRO-Account-Rules"
+        },
+        {
+          "label": "TakeProfitTrader PRO buffer and withdrawal limits",
+          "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "TEST — futures evaluation",
+          "rule": "End-of-day trailing maximum loss; best winning day at most 50% of evaluation profit and a three-trading-day minimum.",
+          "impact": "Intraday profit does not move the end-of-day threshold until the close, but the evaluation remains subject to concentration.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown"
+        },
+        {
+          "program": "PRO — funded simulated",
+          "rule": "Trailing drawdown follows the highest REAL-TIME equity, including unrealized gains. Build a payout buffer equivalent to the maximum loss limit before normal cash-outs.",
+          "impact": "A temporary unrealized spike raises the floor and then can cause account liquidation; profit is not all freely withdrawable.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"
+        },
+        {
+          "program": "PRO and PRO+ — major news",
+          "rule": "All positions and orders must be flat at least one minute before, during and one minute after specified FOMC, NFP and CPI releases.",
+          "impact": "Existing open positions must be closed even if the trader does not intend to place a new trade.",
+          "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "tpt-test",
+          "name": "TEST — evaluation",
+          "type": "Futures evaluation",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "Tier profit target",
+          "maxDailyLoss": "No daily hard cap stated on standard TEST",
+          "maxDrawdown": "$1,500–$4,500 EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15170265979165-Rule-3-Do-Not-Hit-End-Of-Day-EOD-Maximum-Trailing-Drawdown",
+          "drawdownDetails": "Loss floor updates after daily settlement and locks at initial balance.",
+          "profitSplit": "N/A evaluation",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best trading day ≤50% of total evaluation gains.",
+          "minTradingDays": "3 days"
+        },
+        {
+          "id": "tpt-pro",
+          "name": "PRO — funded",
+          "type": "Scaling",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "No evaluation target",
+          "maxDailyLoss": "Risk by chosen contract tier",
+          "maxDrawdown": "Real-time high-equity trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+          "drawdownDetails": "Unrealized profits immediately advance the floor; buffer equals the maximum loss amount.",
+          "profitSplit": "80%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "At least one completed trade per week"
+        },
+        {
+          "id": "tpt-proplus",
+          "name": "PRO+ — selected funded",
+          "type": "Scaling",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "No evaluation; invite-only",
+          "maxDailyLoss": "Check funded risk tier",
+          "maxDrawdown": "EOD trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172006753821-PRO-Account-Rules",
+          "drawdownDetails": "Live route by approval, distinct from the PRO intraday trail; $5,000 preceding PRO gains held as reserve.",
+          "profitSplit": "90%",
+          "platforms": [
+            "Confirm at checkout"
+          ],
+          "tradableAssets": [
+            "Futures"
+          ],
+          "hasConsistencyRule": false
         }
       ]
     },
@@ -7560,15 +8730,32 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Audited current Day MAX/FLEX, Swing MAX/FLEX and Edge by product. Contract says default 60 seconds unless programme exception, MAX/FLEX 30 seconds; Edge 30 seconds, minimum 10-cent price movement, low liquidity/withdrawal limits. Score 76 to 72 for strict execution restrictions — not an accusation of hidden rules.",
+          "source": "https://tradethepool.com/program-terms/",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType",
+            "score"
+          ]
         }
       ],
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
       "set": {
         "profitSplit": 70,
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 969,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradethepool.com",
-        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days"
+        "payoutDelay": "withdrawals every 14 days; usually 3 to 5 business days",
+        "drawdownType": "Hybride",
+        "score": 72,
+        "verdict": "Trade The Pool is a real US-stock specialist, but several published execution rules directly conflict with fast risk exits. Programme Terms set a general 60-second minimum unless an exception applies; MAX/FLEX and Edge explicitly use 30 seconds, with a ten-cent minimum price movement for profit to count. Edge adds a hard daily loss, 5% of prior minute volume per position and modest reward caps. These are public, not hidden conditions, yet the execution and withdrawal friction warrants 72/100 from 76.",
+        "auditSummary": "18 November 2026: reconciled current programme comparison against contractual Program Terms. Day and Swing have distinct MAX and FLEX routes with 30% versus 50% best-position consistency in evaluation; FLEX maintains concentration restrictions on the funded account and requires three profitable days of at least 0.5% for certain payouts. Normative terms stipulate at least 60 seconds between execution and close unless a specific programme overrides, including 30 seconds MAX/FLEX; profits also need ten cents between entry and exit. Edge $50K/$100K explicitly requires 30 seconds, $0.10 movement and opening position under 5% of stock one-minute volume. Edge has 4% max loss calculated at EOD on funded Pro, hard daily loss 2.5%/$50K or 1.8%/$100K (not just a pause), 40% funded concentration, minimum $500 withdrawal with $1,500/$2,000 cap and no Pro scaling. SL/TP automatic exemption is NOT established in official terms. Editorial score -4 for unusually prescriptive executions, not dishonesty or company closure."
       },
       "addSources": [
         {
@@ -7578,6 +8765,151 @@
         {
           "label": "Trade The Pool program page (official)",
           "url": "https://tradethepool.com/the-program/"
+        },
+        {
+          "label": "Trade The Pool normative contractual trading programme terms",
+          "url": "https://tradethepool.com/program-terms/"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "Day/Swing MAX and FLEX — minimum execution duration",
+          "rule": "Program Terms impose a 60-second minimum by default, but expressly provide a 30-second exception for MAX/FLEX positions; valid profit also needs at least $0.10 entry-to-exit price movement.",
+          "impact": "A rapid protective exit or very small price move can result in profit being excluded; no published automatic SL/TP exception verified.",
+          "source": "https://tradethepool.com/program-terms/"
+        },
+        {
+          "program": "Trade The Pool Edge — all $50K/$100K positions",
+          "rule": "Every position must remain open ≥30 seconds and travel at least $0.10 in price; each position cannot exceed 5% of the stock prior one-minute traded volume.",
+          "impact": "Fast scalps and protective exits may breach the eligibility test; execution size depends on market liquidity.",
+          "source": "https://tradethepool.com/the-program/"
+        },
+        {
+          "program": "Edge Pro — loss and reward ceilings",
+          "rule": "4% maximum drawdown, hard 2.5%/$50K or 1.8%/$100K daily loss (account disabled), 40% best-day consistency and $500 minimum payout capped at $1,500 or $2,000 per request; Pro does not scale.",
+          "impact": "A daily breach is permanent, not the temporary pause offered by some Day plans; not all earned gains can be withdrawn at once.",
+          "source": "https://tradethepool.com/the-program/"
+        },
+        {
+          "program": "Day/Swing MAX vs FLEX — payout concentration",
+          "rule": "MAX evaluation best position generally capped at 30% of target/profit, while FLEX commonly allows 50% but retains funded concentration and three qualifying days.",
+          "impact": "The route with fewer evaluation days can have more payout gates after passing.",
+          "source": "https://tradethepool.com/the-program/"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "ttp-day-max",
+          "name": "TTP Day MAX",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "6%",
+          "maxDailyLoss": "By tier; daily pause differs from hard daily breach",
+          "maxDrawdown": "Programme-specific max loss; confirm exact tier",
+          "drawdownSource": "https://tradethepool.com/the-program/",
+          "drawdownDetails": "Published Day loss figures vary by selected capital and loss/pause option; do not infer static or trailing from a single size.",
+          "profitSplit": "70%",
+          "platforms": [
+            "TTP platform"
+          ],
+          "tradableAssets": [
+            "US stocks"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best position ≤30% in evaluation; payout rule differs from FLEX.",
+          "minTradingDays": "At least 20 positions"
+        },
+        {
+          "id": "ttp-day-flex",
+          "name": "TTP Day FLEX",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "6%",
+          "maxDailyLoss": "By tier; daily pause",
+          "maxDrawdown": "Programme-specific max loss; confirm tier",
+          "drawdownSource": "https://tradethepool.com/the-program/",
+          "drawdownDetails": "No verified single drawdown algorithm for all FLEX sizes.",
+          "profitSplit": "70%",
+          "platforms": [
+            "TTP platform"
+          ],
+          "tradableAssets": [
+            "US stocks"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% position share in eval and payout; three 0.5%-profitable days per funded cycle.",
+          "minTradingDays": "At least 10 positions"
+        },
+        {
+          "id": "ttp-swing-max",
+          "name": "TTP Swing MAX",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2000,
+          "accountSizeMax": 40000,
+          "profitTarget": "15%",
+          "maxDailyLoss": "Stage-specific swing loss allowance",
+          "maxDrawdown": "Programme-specific overall max loss",
+          "drawdownSource": "https://tradethepool.com/the-program/",
+          "drawdownDetails": "Swing is distinct from Day; verify the current MAX product card.",
+          "profitSplit": "70%",
+          "platforms": [
+            "TTP platform"
+          ],
+          "tradableAssets": [
+            "US stocks"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best position ≤30% in evaluation / 70% funded according to swing rules."
+        },
+        {
+          "id": "ttp-swing-flex",
+          "name": "TTP Swing FLEX",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 2000,
+          "accountSizeMax": 40000,
+          "profitTarget": "15%",
+          "maxDailyLoss": "Stage-specific swing loss allowance",
+          "maxDrawdown": "Programme-specific overall max loss",
+          "drawdownSource": "https://tradethepool.com/the-program/",
+          "drawdownDetails": "FLEX evaluation period differs from MAX; exact stage losses depend on the tier.",
+          "profitSplit": "70%",
+          "platforms": [
+            "TTP platform"
+          ],
+          "tradableAssets": [
+            "US stocks"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "50% best-position in evaluation and funded."
+        },
+        {
+          "id": "ttp-edge",
+          "name": "TTP Edge — $50K / $100K",
+          "type": "Challenge",
+          "description": "Official programme-specific rules checked 18 November 2026; confirm the terms at purchase.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 100000,
+          "profitTarget": "6% evaluation",
+          "maxDailyLoss": "2.5% on $50K; 1.8% on $100K hard daily loss",
+          "maxDrawdown": "4% maximum; Pro calculated EOD",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://tradethepool.com/the-program/",
+          "drawdownDetails": "Pro 4% threshold calculated using EOD values; avoid assuming a trailing floor without clear algorithm.",
+          "profitSplit": "80%",
+          "platforms": [
+            "TTP platform"
+          ],
+          "tradableAssets": [
+            "US stocks"
+          ],
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% best day on Pro; min hold 30s, $0.10 price move, size ≤5% prior-minute volume."
         }
       ]
     },
@@ -8698,7 +10030,7 @@
       ]
     },
     "axi-select": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-18",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -8716,17 +10048,83 @@
           "fields": [
             "noEntryFee"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Clarified Axi Select is a real-money Axi broker ladder rather than a fee-only simulated challenge: stage capital, fixed loss limits, withdrawals of personal capital and regional eligibility must be checked. No scoring change, because user-funded risk was already recorded in its legal review.",
+          "source": "https://www.axi.com/int/funded-trader-program",
+          "fields": [
+            "verdict",
+            "auditSummary",
+            "products",
+            "restrictiveRules",
+            "drawdownType"
+          ]
         }
       ],
       "set": {
         "profitSplit": 80,
         "payoutDelay": "monthly, on the 1st of each month",
-        "noEntryFee": true
+        "noEntryFee": true,
+        "drawdownType": "Static",
+        "verdict": "Axi Select is not a classic paid simulated challenge. The trader must open and fund a real Axi brokerage account, and capital allocation grows through six qualifying stages. The programme advertises a fixed overall loss limit, but withdrawing personal broker funds can shrink the allocated balance without moving the loss floor. Availability depends on the local Axi entity; a generic global page does not guarantee eligibility in France or other European countries. Score stays 77/100, with the existing real-money risk warning retained.",
+        "auditSummary": "18 November 2026: reviewed Axi Select six-stage Seed, Incubation, Acceleration, Pro, Pro500 and ProM official programme information. Typical stage equity requirements increase $500, $1,000, $2,000, $5,000, $10,000 and $20,000 of trader-owned broker capital respectively, against advertised allocations $5K, $20K, $100K, $200K, $500K and $1M. Static maximum allocation loss is 7% on early stages and 10% for ProM; loss in live equity counts. Stage advancement generally requires a 7% gain, minimum weeks/trades and the programme Edge score. Withdrawals from a real broker balance can lower programme allocation in proportion without lowering the previously defined loss floor, potentially causing immediate failure. Axi support gives different country eligibility answers depending on its regional legal entity, including region-restricted availability, and registration country must be truthful. This is not a free-risk $0-challenge offer. Score unchanged at 77; no claim that any individual French applicant is necessarily eligible."
       },
       "addSources": [
         {
           "label": "Axi Select program page (official)",
           "url": "https://www.axi.com/int/funded-trader-program"
+        },
+        {
+          "label": "Axi Select jurisdiction-specific support eligibility",
+          "url": "https://dfsasupport.axi.com/en-AE/axidfsa--axicorp-prod/article/HN4FNM7J-do-you-offer-axi-select-for-clients-in-my-country"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "Axi Select Seed → Pro500 — broker-funded stages",
+          "rule": "User must deposit and trade personal real money (minimum stage equity $500 to $10K), satisfy a minimum performance/Edge score and 7% static allocation maximum-loss ceiling.",
+          "impact": "Losses can affect trader-owned capital even before Axi allocation; no free trial account equivalent to a simulated prop challenge.",
+          "source": "https://www.axi.com/int/funded-trader-program"
+        },
+        {
+          "program": "Axi Select — own-funds withdrawal",
+          "rule": "Withdrawing from the linked real-money brokerage balance can reduce programme allocation by the applicable multiplier while the original loss limit does not automatically move downward.",
+          "impact": "A cash withdrawal of the trader’s own funds may trigger disqualification if it reduces allocation equity below the existing floor.",
+          "source": "https://www.axi.com/int/funded-trader-program"
+        },
+        {
+          "program": "Axi Select — country and operator eligibility",
+          "rule": "Axi regional help centres have different answers (selected jurisdictions, region-specific exclusions) for the same programme; correct legal counterparty must be confirmed at onboarding.",
+          "impact": "Do not promise access to a French/EU resident on the basis of a generic global marketing page.",
+          "source": "https://dfsasupport.axi.com/en-AE/axidfsa--axicorp-prod/article/HN4FNM7J-do-you-offer-axi-select-for-clients-in-my-country"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "axi-select-six-stages",
+          "name": "Axi Select — six-stage broker allocation",
+          "type": "Scaling",
+          "description": "Allocation from $5K Seed to $1M ProM requires depositing personal money into a real Axi broker account and qualification; sizes are allocation ceilings, not challenge purchases.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 1000000,
+          "profitTarget": "7% stage advance except terminal ProM",
+          "maxDailyLoss": "No separate universal daily percentage verified",
+          "maxDrawdown": "7% fixed stage loss; 10% for ProM",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.axi.com/int/funded-trader-program",
+          "drawdownDetails": "Fixed from the applicable stage allocation, with unrealized equity monitored; not a purchased challenge nominal.",
+          "profitSplit": "Up to 90% by stage",
+          "platforms": [
+            "MT4",
+            "MT5"
+          ],
+          "tradableAssets": [
+            "Forex",
+            "CFD"
+          ],
+          "hasConsistencyRule": false,
+          "minTradingDays": "Stage-specific duration and Edge score"
         }
       ]
     },

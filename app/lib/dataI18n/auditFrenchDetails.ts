@@ -9,6 +9,136 @@ export const auditFrenchDetails: Record<string, {
   restrictiveRules?: { program: string; rule: string; impact: string }[];
   products?: { name?: string; description?: string; drawdownDetails?: string; maxDrawdown?: string; maxDailyLoss?: string; consistencyRule?: string; profitTarget?: string; profitSplit?: string; minTradingDays?: string }[];
 }> = {
+  earn2trade: {
+    restrictiveRules: [
+      {program:'Trader Career Path / Gauntlet Mini — évaluation',rule:'Drawdown suiveur relevé sur le solde de clôture EOD ; meilleure journée ≤ 30 % des profits de l’évaluation. Limite de perte quotidienne propre à la taille.',impact:'Une journée exceptionnelle peut retarder la validation ; le seuil de perte dépend du modèle et du capital.'},
+      {program:'LiveSim et Live financés — achats depuis le 2 novembre 2026',rule:'Avant CHAQUE retrait : cinq journées bénéficiaires qualifiantes, avec un minimum quotidien de 100 à 350 $ selon la taille. Le compteur repart à zéro après le retrait. LiveSim : EOD ; Live réel : suiveur intraday.',impact:'Les retraits suivants ne sont pas automatiques, même sur un compte profitable.'}
+    ],
+    products:[
+      {name:'Trader Career Path — évaluation',drawdownDetails:'Le seuil se relève sur les plus hauts de solde en fin de journée ; le franchissement reste surveillé en séance.',maxDrawdown:'Suiveur EOD, montant variable selon la taille',consistencyRule:'Meilleure journée ≤ 30 % des profits.'},
+      {name:'Gauntlet Mini — évaluation',drawdownDetails:'Suiveur selon les profits clôturés en fin de séance.',maxDrawdown:'Suiveur EOD par taille',consistencyRule:'Meilleure journée ≤ 30 % des profits.'},
+      {name:'Earn2Trade LiveSim financé',drawdownDetails:'Seuil financé suiveur EOD pour les tailles ordinaires ; cinq journées gagnantes qualifiantes entre deux retraits sur les achats récents.',maxDrawdown:'Suiveur EOD',minTradingDays:'Cinq jours bénéficiaires qualifiants entre chaque retrait.'},
+      {name:'Trader Career Path 200K / 400K — financé statique',description:'Exception explicitement publiée pour les très grands comptes TCP financés.',drawdownDetails:'Les comptes TCP financés 200K/400K ont un seuil de perte fixe, contrairement aux comptes LiveSim habituels.',maxDrawdown:'Drawdown fixe sur TCP 200K/400K',minTradingDays:'Cinq jours bénéficiaires entre retraits pour les achats récents.'}
+    ]
+  },
+  'take-profit-trader': {
+    restrictiveRules:[
+      {program:'TEST — évaluation futures',rule:'Drawdown suiveur EOD et meilleure journée ≤ 50 % des profits, trois jours de trading minimum.',impact:'Ne pas confondre le seuil de l’évaluation avec celui du compte PRO.'},
+      {program:'PRO — financé',rule:'Drawdown suiveur sur le plus haut d’équité en temps réel, gains latents compris ; réserve de gains égale au drawdown avant retraits ordinaires.',impact:'Une hausse latente suivie d’un reflux peut liquider le compte ; les gains ne sont pas tous retirables immédiatement.'},
+      {program:'PRO et PRO+ — annonces économiques',rule:'Aucun ordre ni position ouverte de la minute précédant à la minute suivant les annonces FOMC, NFP et CPI désignées.',impact:'Il faut clôturer aussi les positions déjà ouvertes ; la restriction n’est pas qu’une interdiction d’entrée.'}
+    ],
+    products:[
+      {name:'TEST — évaluation',drawdownDetails:'Seuil relevé à la clôture, non sur le gain latent intraday.',maxDrawdown:'Suiveur EOD de 1 500 à 4 500 $',consistencyRule:'Meilleure journée ≤ 50 %.'},
+      {name:'PRO — financé',drawdownDetails:'Le seuil suit immédiatement le pic d’équité latente ; une réserve équivalente au drawdown conditionne les retraits.',maxDrawdown:'Suiveur intraday du pic d’équité.'},
+      {name:'PRO+ — compte sélectionné',drawdownDetails:'Modèle EOD distinct de PRO ; 5 000 $ de gains antérieurs PRO conservés en réserve.',maxDrawdown:'Suiveur EOD.'}
+    ]
+  },
+  'oneup-trader': {
+    restrictiveRules:[
+      {program:'OneUp financé — durée minimale',rule:'Trades durant moins de dix secondes et pratiques de scalping sur ticks / latence interdits. Aucune exception générale explicite pour un stop-loss ou take-profit rapide n’a été confirmée.',impact:'Une sortie de protection très rapide peut soulever un problème ; demander une réponse écrite avant achat.'},
+      {program:'OneUp financé — activité et news',rule:'Nombre hebdomadaire de trades au moins égal à 50 % de la moyenne hebdomadaire de l’évaluation ; restrictions sur certaines annonces majeures et revue de rentabilité par tranches de quinze jours au début.',impact:'La cadence du challenge peut devenir une obligation contraignante après financement.'},
+      {program:'Évaluations Standard / Pro / Express',rule:'Dix / cinq / trois jours de trading minimum ; Express réservé à la requalification d’un ancien compte financé. Les trois meilleures autres journées doivent totaliser au moins 80 % de la meilleure journée.',impact:'Express n’est pas un financement instantané à acheter librement.'}
+    ],
+    products:[
+      {name:'Standard Evaluation',drawdownDetails:'Seuil suiveur surveillé en séance, pouvant se figer au capital initial.',minTradingDays:'Dix jours.',consistencyRule:'Trois autres meilleures journées cumulées ≥ 80 % de la meilleure.'},
+      {name:'Pro Evaluation',drawdownDetails:'Suiveur intraday puis verrouillage au capital de départ.',minTradingDays:'Cinq jours.',consistencyRule:'Trois autres meilleures journées cumulées ≥ 80 % de la meilleure.'},
+      {name:'Express requalification — anciens financés seulement',drawdownDetails:'Règle de requalification réservée aux anciens comptes financés ; type exact de drawdown à confirmer.',minTradingDays:'Trois jours, sous condition d’éligibilité.'}
+    ]
+  },
+  fintokei: {
+    restrictiveRules:[
+      {program:'StartTrader — achats depuis le 21 octobre 2026',rule:'Une étape à +3 %, perte quotidienne 2 % et maximum global 8 % fixe. Après financement, plafond de retraits de 400 $ au total, jusqu’à deux demandes.',impact:'Anciennes pages parlant de trois étapes non applicables aux achats récents ; rémunération totale très limitée.'},
+      {program:'SwiftTrader — achats depuis le 15 juillet 2026',rule:'Perte maximale fixe de 3 %, quotidienne de 2 %, profit d’évaluation comptabilisé au plus 3 % par jour ; trois jours et 60 jours calendaires maximum.',impact:'La marge de risque est mince, même si l’objectif se limite à 6 %.'},
+      {program:'ProTrader et ProTrader Swing — deux phases',rule:'Perte globale fixe de 10 %, limite quotidienne 5 %, mais référence de calcul EOD équité pour ProTrader et solde clôturé pour Swing.',impact:'Le même gain latent ne modifie pas nécessairement les deux seuils quotidiens de façon identique.'}
+    ],
+    products:[
+      {name:'StartTrader — une étape (depuis 21/10/2026)',drawdownDetails:'Seuil fixe ; un premier dépassement journalier est souple, un second définitif.',maxDrawdown:'8 % fixes',profitTarget:'3 %',maxDailyLoss:'2 %',minTradingDays:'Trois jours, évaluation sous 60 jours.'},
+      {name:'SwiftTrader — une étape (depuis 15/07/2026)',drawdownDetails:'Seuil global fixé à 97 % du capital initial.',maxDrawdown:'3 % fixes',profitTarget:'6 %',maxDailyLoss:'2 %',minTradingDays:'Trois jours en 60 jours.'},
+      {name:'ProTrader — deux étapes',drawdownDetails:'Seuil global fixe ; la limite quotidienne repart de l’équité de clôture.',maxDrawdown:'10 % fixes',maxDailyLoss:'5 % depuis équité EOD.'},
+      {name:'ProTrader Swing — deux étapes',drawdownDetails:'Seuil global fixe ; limite quotidienne recalculée depuis le solde clôturé.',maxDrawdown:'10 % fixes',maxDailyLoss:'5 % depuis solde clôturé.'}
+    ]
+  },
+  'axi-select': {
+    restrictiveRules:[
+      {program:'Axi Select Seed à Pro500 — capital propre',rule:'Dépôt personnel réel auprès du courtier Axi (de 500 à 10 000 $ selon l’étape), objectif de progression et plafond de perte statique de 7 % sur l’allocation.',impact:'Les pertes sur le compte de courtage engagent l’argent du trader ; ce n’est pas un challenge démo à risque limité aux frais.'},
+      {program:'Axi Select — retrait de fonds personnels',rule:'Retirer son argent du courtier peut réduire l’allocation de manière amplifiée sans abaisser le seuil de perte préexistant.',impact:'Un retrait personnel peut provoquer l’échec du programme malgré l’absence d’une nouvelle perte de trading.'},
+      {program:'Axi Select — pays d’éligibilité',rule:'Les pages Axi diffèrent selon les sociétés régionales : certaines juridictions acceptées, d’autres exclues ; disponibilité en France/UE à vérifier sur l’entité contractante.',impact:'Ne pas déduire la disponibilité locale d’une page publicitaire internationale.'}
+    ],
+    products:[{name:'Axi Select — six étapes de courtage',description:'Allocation théorique de 5 000 à 1 million de dollars, obtenue en tradant d’abord de l’argent personnel réel chez Axi ; les montants indiqués ne sont pas des challenges payants.',drawdownDetails:'Seuil fixe selon l’étape, perte latente incluse ; retirer ses fonds du courtier peut faire tomber l’allocation sous le seuil.',maxDrawdown:'7 % fixes jusqu’à Pro500 ; 10 % sur ProM',profitTarget:'7 % en progression, sauf stade final.'}]
+  },
+  'city-traders-imperium': {
+    restrictiveRules:[
+      {program:'CTI 1-Step / 2-Step — évaluation',rule:'1-Step : 5 % suiveurs, objectif 8 % ; 2-Step : 10 % statiques, 5 % par jour et objectifs 10 % puis 5 %, avec trois jours gagnants par phase.',impact:'Les deux formules ne partagent pas le même type de drawdown.'},
+      {program:'CTI Instant Funding — capital et retrait',rule:'À l’ouverture, seulement 50 % du capital nominal annoncé ; il faut 10 % de gain pour débloquer le nominal complet, et attendre cinq jours supplémentaires avant premier retrait. Partage 50 %, puis 70 %.',impact:'« Instant » ne veut dire ni totalité du capital dès le premier jour, ni versement immédiat.'},
+      {program:'CTI Instant / Direct — montée en capital',rule:'Consistance de 20 % liée à la progression (« scaling ») et non à tous les retraits.',impact:'La règle doit être appliquée au bon événement, sans inventer une interdiction générale de retirer.'}
+    ],
+    products:[
+      {name:'CTI 1-Step Challenge',drawdownDetails:'Suit les pics de gains clôturés ; pas de limite quotidienne fixe.',maxDrawdown:'5 % suiveurs',minTradingDays:'Trois jours bénéficiaires.'},
+      {name:'CTI 2-Step Challenge',drawdownDetails:'Plancher de perte fixe à 90 % du capital initial.',maxDrawdown:'10 % statiques',maxDailyLoss:'5 %',profitTarget:'10 % puis 5 %.'},
+      {name:'CTI Instant Funding — moitié du nominal au début',drawdownDetails:'Seuil fixe de 6 % ; capital alloué au départ égal à la moitié du montant affiché.',maxDrawdown:'6 % statiques',consistencyRule:'20 % lors des demandes de scaling uniquement.'},
+      {name:'CTI Direct Funding — nominal entier',drawdownDetails:'Drawdown fixe de 6 % sans obligation de challenge.',maxDrawdown:'6 % statiques',consistencyRule:'20 % pour le scaling uniquement.'}
+    ]
+  },
+  'trade-the-pool': {
+    restrictiveRules:[
+      {program:'Day et Swing MAX/FLEX — durée et amplitude',rule:'Le contrat prévoit 60 secondes par défaut mais déroge à 30 secondes pour MAX/FLEX. Un profit doit également couvrir au moins 0,10 $ d’écart entre entrée et sortie.',impact:'Un stop-loss ou TP très rapide peut ne pas être validé ; aucune exception générale automatique confirmée.'},
+      {program:'Trade The Pool Edge — 50K/100K',rule:'Durée ≥ 30 secondes, variation ≥ 0,10 $ et taille de position ≤ 5 % du volume négocié sur la minute précédente.',impact:'Les sorties urgentes et les titres peu liquides rendent ces contraintes particulièrement pénalisantes.'},
+      {program:'Edge Pro — perte et retraits',rule:'Perte maximale 4 % ; perte quotidienne DÉFINITIVE de 2,5 % (50K) ou 1,8 % (100K), consistance 40 %, retrait minimum 500 $ plafonné à 1 500 / 2 000 $ ; pas de scaling.',impact:'La limite journalière ferme le compte, ce n’est pas une pause ; des gains peuvent rester bloqués.'},
+      {program:'Day/Swing MAX et FLEX — consistance',rule:'MAX : limite généralement 30 % pour le gain sur une position en évaluation ; FLEX : généralement 50 %, avec règles conservées en financé et trois jours bénéficiaires.',impact:'Une évaluation courte peut s’accompagner de retraits plus difficiles.'}
+    ],
+    products:[
+      {name:'TTP Day MAX',drawdownDetails:'Le plafond dépend du niveau choisi ; algorithme statique/suiveur non établi pour toutes les tailles.',consistencyRule:'Meilleure position ≤ 30 % en évaluation.'},
+      {name:'TTP Day FLEX',drawdownDetails:'Seuil dépendant du niveau d’achat ; pas de modèle unique vérifié.',consistencyRule:'50 % sur la position et trois jours à +0,5 % pour certaines demandes.'},
+      {name:'TTP Swing MAX',drawdownDetails:'Conditions Swing à distinguer des produits Day ; seuil exact par taille à confirmer.',consistencyRule:'30 % en évaluation, 70 % en financé selon formule.'},
+      {name:'TTP Swing FLEX',drawdownDetails:'Risque propre au Swing FLEX ; le plancher n’a pas été assimilé à tort au Day.',consistencyRule:'Meilleure position ≤ 50 % selon la phase.'},
+      {name:'TTP Edge — 50K / 100K',drawdownDetails:'Maximum de 4 % ; calcul en fin de journée sur Pro ; perte quotidienne définitive séparée.',maxDrawdown:'4 % EOD',maxDailyLoss:'2,5 % sur 50K ; 1,8 % sur 100K (fermeture définitive).',consistencyRule:'40 % en Pro ; au moins trente secondes et dix cents par trade.'}
+    ]
+  },
+  fxify: {
+    restrictiveRules:[
+      {program:'FXIFY challenges — différents drawdowns',rule:'1-Phase : 6 % suiveurs ; 2-Phase Standard : 10 % suiveurs ; Classic : 10 % statiques ; Pro : 8 % statiques ; 3-Phase : 5 % statiques. Pro : objectifs 4 % puis 8 % et trois jours qualifiants.',impact:'Deux offres portant le nom « 2-Phase » ont des marges de perte et des règles de retrait très différentes.'},
+      {program:'FXIFY 2-Phase Classic — retraits',rule:'Consistance de 25 % uniquement après financement ; la 2-Phase Pro n’impose pas cette règle et prévoit des cycles de dix jours.',impact:'Une réussite rapide en Classic ne garantit pas un retrait rapide.'},
+      {program:'FXIFY Instant Lite — annonce et stop-loss/take-profit',rule:'Dans la fenêtre de cinq minutes autour des annonces majeures, même une sortie automatique SL/TP peut être concernée : profits non retenus, pertes décomptées. Consistance financée 20 %.',impact:'Un TP déclenché pendant une annonce peut ne pas générer de gain payable ; cette règle ne s’applique pas à tous les programmes FXIFY.'}
+    ],
+    products:[
+      {name:'FXIFY One Phase',drawdownDetails:'Suit le pic du solde clôturé et se fige au capital initial.',maxDrawdown:'6 % suiveurs'},
+      {name:'FXIFY Two Phase — Standard',drawdownDetails:'Suit les plus hauts de solde et se bloque au capital initial.',maxDrawdown:'10 % suiveurs'},
+      {name:'FXIFY Two Phase — Classic',drawdownDetails:'Plancher fixe ; consistance appliquée après financement.',maxDrawdown:'10 % fixes',consistencyRule:'25 % après financement uniquement.'},
+      {name:'FXIFY Two Phase — Pro (nouveau)',drawdownDetails:'Plancher statique, pas de consistance.',maxDrawdown:'8 % fixes',profitTarget:'4 % puis 8 %',minTradingDays:'Trois jours à +0,5 % par phase et cycle.'},
+      {name:'FXIFY Three Phase',drawdownDetails:'Maximum fixé à 5 % sous le capital initial.',maxDrawdown:'5 % fixes'},
+      {name:'FXIFY Instant Funding Lite',drawdownDetails:'Seuil suiveur sur le solde clôturé puis verrouillé ; sorties autour des news pénalisées.',maxDrawdown:'4 % suiveurs',profitSplit:'80 % ; option 90 %',consistencyRule:'Meilleure journée ≤ 20 %, premier retrait après dix jours de trading dont cinq actifs ; news ± cinq minutes.'}
+    ]
+  },
+  'funded-trading-plus': {
+    restrictiveRules:[
+      {program:'2-Step Classic — évaluation et financé',rule:'Consistance de 35 % à chacune des phases puis 50 % en financé ; perte latente de 3 % maximum par instrument, et 30 jours d’inactivité sanctionnés.',impact:'Un compte financé en gain peut perdre son admissibilité au retrait ou se fermer sur une seule ligne ouverte.'},
+      {program:'Instant Funding — fermeture du vendredi',rule:'Drawdown maximal 6 % suiveur sur solde clôturé ; toutes les positions doivent être fermées le vendredi avant 16 h 30 heure de New York.',impact:'Un trade conservé le week-end peut constituer une infraction malgré son potentiel de gain.'},
+      {program:'Pass Now Pay Later — changement après validation',rule:'Évaluation à perte maximale fixe 6 % et objectif 2 % ; financement à perte suiveuse de 6 % sur équité latente et 3 % quotidienne, consistance 25 %, dix jours minimum et frais d’activation après réussite.',impact:'L’option à paiement différé devient sensiblement plus contraignante après le challenge.'}
+    ],
+    products:[
+      {name:'1-Step Express',drawdownDetails:'Suit le plus haut solde clôturé puis se verrouille.',maxDrawdown:'6 % suiveurs'},
+      {name:'2-Step Classic',drawdownDetails:'Seuil global fixe et limite séparée de 3 % de perte latente par instrument.',maxDrawdown:'8 % statiques',consistencyRule:'35 % par phase, 50 % en financé.'},
+      {name:'Instant Program',drawdownDetails:'Suiveur du solde clôturé ; obligation de fermer le vendredi.',maxDrawdown:'6 % suiveurs'},
+      {name:'Pass Now Pay Later',drawdownDetails:'Fixe lors de l’évaluation mais suit le pic d’équité latente une fois financé.',maxDrawdown:'6 % fixes en évaluation → 6 % suiveurs en financé',consistencyRule:'25 % une fois financé.'}
+    ]
+  },
+  'goat-funded-trader': {
+    restrictiveRules:[
+      {program:'GOAT — demandes de rémunération en financé',rule:'Les gains journaliers sont plafonnés à 3 000 $ ; les deux premiers retraits sont plafonnés à 6 % du capital initial ou 10 000 $ (minimum des deux). Frais de traitement 3 %, conditions de vérification et paiement selon modèle.',impact:'Les gains excédentaires et la somme accessible en début de parcours peuvent être limités malgré la performance.'},
+      {program:'GOAT — achats postérieurs au 8 octobre 2026',rule:'Le plus gros trade gagnant doit être au moins égal au plus gros trade perdant pour demander un retrait ; cela n’entraîne pas à lui seul la fermeture du compte.',impact:'Un compte bénéficiaire peut être momentanément non éligible au retrait.'},
+      {program:'GOAT 1-Step / 2-Step Standard — protections',rule:'1-Step : 6 % statiques et 3 % quotidiens ; 2-Step : 10 % statiques et 4 % quotidiens. Sur certains comptes financés 2-Step, perte latente globale 2 % : partage réduit définitivement à 50 %, puis fermeture à la deuxième alerte ; variante moins chère à 1 % peut fermer dès la première.',impact:'Les options d’achat peuvent modifier radicalement la sanction d’une perte latente.'},
+      {program:'GOAT Instant GOAT et Instant Premium',rule:'Les deux modèles suivent 6 % de perte sur le pic d’équité en temps réel et exigent cinq jours à +0,5 %. Instant GOAT : plafond latent 2 % et consistance 15 % ; Instant Premium : limite latente 1 % sur les achats récents.',impact:'Un simple creux latent peut fermer un compte profitable bien avant le drawdown global.'},
+      {program:'GOAT Instant Daily — directement financé',rule:'3 % de drawdown suiveur intraday, 1 % de perte latente globale, échéance 30 jours, retrait limité à 1 à 3 % du capital par demande. Un retrait peut verrouiller le seuil au capital initial.',impact:'Retirer toute la marge de gains peut provoquer immédiatement la fermeture ; ce produit n’est pas durable sans limite de temps.'}
+    ],
+    changelog:["", "", "", "", "", "Réexamen à 58/100 : pénalité de huit points pour l’alerte Trustpilot encore active, plus les contraintes de versement publiées. Aucune fermeture ni faute individuelle non prouvée n’est affirmée.", "La FAQ officielle confirme les plafonds sur les premiers retraits, 3 000 $ de gains quotidiens, 3 % de frais et les conditions d’éligibilité ajoutées depuis le 8 octobre 2026.", "Audit de cinq formules distinctes et de leurs risques de drawdown et de retrait, sans nouvelle pénalité sur la note."],
+    products:[
+      {name:'GOAT 1-Step — après août 2026',drawdownDetails:'Limite globale fixe à 6 % sous le capital initial.',maxDrawdown:'6 % statiques'},
+      {name:'GOAT 2-Step Standard',drawdownDetails:'Plancher fixe, mais Guardian/Guard financé distinct sur perte latente globale.',maxDrawdown:'10 % statiques'},
+      {name:'GOAT Instant Funding',drawdownDetails:'Suit immédiatement le plus haut d’équité, avec perte latente 2 % distincte.',maxDrawdown:'6 % suiveurs intraday',consistencyRule:'15 % et cinq jours à +0,5 %.'},
+      {name:'GOAT Instant Premium',drawdownDetails:'Suit l’équité en temps réel ; perte latente 1 % distincte.',maxDrawdown:'6 % suiveurs intraday',minTradingDays:'Cinq jours à +0,5 %.'},
+      {name:'GOAT Instant Daily',drawdownDetails:'Suiveur 3 % avec plancher verrouillé après retrait et expiration sous trente jours.',maxDrawdown:'3 % suiveurs intraday',maxDailyLoss:'Pas de plafond quotidien séparé, mais perte latente limitée à 1 %.'}
+    ]
+  },
   ftmo: {
     restrictiveRules: [
       {program:'FTMO 1-Step — challenge et compte financé',rule:'Perte maximale de 10 % suiveuse selon le solde clôturé en fin de journée ; depuis les commandes du 12 octobre 2026, la meilleure journée doit représenter au plus 50 % des profits nets pour passer et retirer. Anciens comptes : ancien dénominateur.',impact:'Une grosse journée gagnante peut retarder la réussite ou le versement sans constituer une violation définitive.'},
@@ -129,13 +259,6 @@ export const auditFrenchDetails: Record<string, {
       {name:'2-Step Bright (depuis le 16/11/2026)',drawdownDetails:'Plancher fixe à 8 % sous le capital initial pendant les deux phases et le financement.',maxDrawdown:'8 % statiques'},
       {name:'Instant (depuis le 16/11/2026)',drawdownDetails:'Suit le pic d’équité, puis verrouille au capital initial ; perte latente séparée de 1 %.',maxDrawdown:'5 % suiveurs intraday',consistencyRule:'Meilleure journée ≤15 %, pire perte ≤meilleur gain et réserve de 3 %.'}
     ]
-  },
-  'goat-funded-trader': {
-    restrictiveRules: [
-      { program: 'GOAT — demandes de versement sur compte financé', rule: 'Le guide impose un plafond de 3 000 $ de profit quotidien (excédent supprimé), des plafonds selon le modèle pour les deux premiers versements et 3 % de frais de traitement.', impact: 'Le profit brut affiché peut dépasser la somme effectivement éligible ; vérifiez le plafond de votre formule.' },
-      { program: 'GOAT — programmes achetés après le 8 octobre 2026', rule: 'Pour demander un versement, le plus gros trade gagnant doit être au moins égal au plus gros trade perdant. Cette condition ne constitue pas, à elle seule, une violation fermant le compte.', impact: 'Un compte bénéficiaire peut devoir trader davantage avant de pouvoir retirer.' }
-    ],
-    changelog: ["", "", "", "", "", "Réexamen à 58/100 : pénalité de huit points pour l'alerte Trustpilot encore active, plus les contraintes de versement publiées. Ni fermeture ni faute individuelle non prouvée ne sont affirmées.", "La FAQ officielle confirme les plafonds sur les premiers retraits, 3 000 $ de gains quotidiens, 3 % de frais et les conditions d'éligibilité ajoutées depuis le 8 octobre 2026."]
   },
   'leeloo-trading': {
     restrictiveRules: [
