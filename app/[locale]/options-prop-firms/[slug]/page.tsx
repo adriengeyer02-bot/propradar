@@ -60,17 +60,17 @@ export default async function OptionsFirmPage({ params }: Props) {
       {audit.trustpilot ? <div className="options-trustpilot"><strong>{a.trustpilot}</strong> <span>{audit.trustpilot.withheld ? a.ratingUnavailable : `${audit.trustpilot.rating}/5 · ${audit.trustpilot.count}`}</span><a target="_blank" rel="noopener noreferrer" href={audit.trustpilot.url}>{a.source} ↗</a></div> : null}
       {audit.beforeTrustpilotPenalty != null ? <p className="options-penalty">{a.penalty} ({audit.beforeTrustpilotPenalty} → {audit.score}/100)</p> : null}
       <section className="options-catalogue" aria-labelledby="options-audit-findings-title">
-        <div className="options-section-heading"><span className="options-section-number">01 / AUDIT</span><h2 id="options-audit-findings-title">{a.findings}</h2></div>
+        <div className="options-section-heading"><span className="options-section-number">01</span><h2 id="options-audit-findings-title">{a.findings}</h2></div>
         <ol className="options-audit-findings">{audit.findings.map((finding) => <li key={finding.title} className={`options-finding-${finding.tone}`}><h3>{finding.title}</h3><p>{finding.detail}</p><a href={finding.source} target="_blank" rel="noopener noreferrer">{a.source} ↗</a></li>)}</ol>
       </section>
       {slug === 'tradefundrr' ? <p className="options-main-profile"><Link href={L('/firm/tradefundrr')}>{a.mainProfile} →</Link></p> : null}
       <section className="options-catalogue" aria-labelledby="options-rules-title">
-        <div className="options-section-heading"><span className="options-section-number">02 / SOURCES</span><h2 id="options-rules-title">{c.rules}</h2></div>
+        <div className="options-section-heading"><span className="options-section-number">02</span><h2 id="options-rules-title">{c.rules}</h2></div>
         <ol className="options-rules">
           {firm.facts.map((fact, index) => <li key={fact.source + index}><p>{fact.text}</p><a href={fact.source} target="_blank" rel="noopener noreferrer">{c.officialSource} ↗</a></li>)}
         </ol>
       </section>
-      <section className="options-editorial options-method"><div><span className="options-section-number">03 / DUE DILIGENCE</span><h2>{c.caution}</h2><p>{firm.caution}</p></div><Link href={L('/audit')} className="btn">{a.methodTitle} →</Link></section>
+      <section className="options-editorial options-method"><div><span className="options-section-number">03</span><h2>{c.caution}</h2><p>{firm.caution}</p></div><Link href={L('/audit')} className="btn">{a.methodTitle} →</Link></section>
       <p className="options-back"><Link href={L('/options-prop-firms')}>← {c.returnHub}</Link></p>
     </main>
   );

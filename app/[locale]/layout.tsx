@@ -21,7 +21,6 @@ import { propFirms } from '../lib/propFirms';
 import { FOUNDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from '../components/IntentLink';
 import { DISCORD_URL, communityCopy } from '../lib/community';
-import { optionsCopy } from '../lib/optionsI18n';
 
 const themeInitScript = `
   (function () {
@@ -170,7 +169,6 @@ export default async function RootLayout({
   const locale: Locale = raw;
   const t = getMessages(locale);
   const c = t.chrome;
-  const oc = optionsCopy(locale);
   const L = (path: string) => localePath(locale, path);
   return (
     <html
@@ -227,7 +225,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <nav className="nav nav-primary" aria-label={c.mainNav}>
                 <ActiveNavLink href="/prop-firm-radar">{c.radar}</ActiveNavLink>
                 <ActiveNavLink href="/prop-firm-comparison" activePrefixes={['/compare', '/tools', '/firm']}>{c.comparator}</ActiveNavLink>
-                <ActiveNavLink href="/options-prop-firms">{oc.nav}</ActiveNavLink>
                 <ActiveNavLink href="/guides" activePrefixes={['/best-prop-firms', '/articles']}>{c.guides}</ActiveNavLink>
                 <RiskEvidenceMenu labels={{ title: c.riskWatch, ...c.riskMenu }} />
                 <ActiveNavLink href="/promos">{c.deals}</ActiveNavLink>
@@ -256,26 +253,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <Link href={L('/')} className="footer-brand">PropRadar</Link>
                 <p>{c.footer.tagline}</p>
               </div>
-              <nav className="footer-nav" aria-label="Research links">
+              <nav className="footer-nav" aria-label={c.footer.research}>
                 <strong>{c.footer.research}</strong>
                 <IntentLink href={L('/prop-firm-comparison')}>{c.comparator}</IntentLink>
                 <Link href={L('/prop-firm-radar')}>{c.footer.radar}</Link>
-                <Link href={L('/options-prop-firms')}>{oc.nav}</Link>
                 <Link href={L('/guides')}>{c.guides}</Link>
                 <Link href={L('/best-prop-firms')}>{c.footer.best}</Link>
                 <Link href={L('/prop-firm-challenge')}>{c.footer.challenge}</Link>
                 <IntentLink href={L('/tools')}>{c.footer.tools}</IntentLink>
               </nav>
-              <nav className="footer-nav" aria-label="Risk and evidence links">
+              <nav className="footer-nav" aria-label={c.riskWatch}>
                 <strong>{c.riskWatch}</strong>
                 <Link href={L('/radar-brief')}>{c.footer.brief}</Link>
                 <Link href={L('/audit')}>{c.footer.audit}</Link>
                 <Link href={L('/prop-firm-payout-risk')}>{c.footer.payout}</Link>
                 <Link href={L('/prop-firm-rules')}>{c.footer.rules}</Link>
               </nav>
-              <nav className="footer-nav" aria-label="Offers and review links">
+              <nav className="footer-nav" aria-label={c.footer.more}>
                 <strong>{c.footer.more}</strong>
-                <Link href={L('/about')}>{t.about.footerAbout}</Link>
+                <Link href={L('/about')}>{c.footer.about}</Link>
                 <Link href={L('/promos')}>{c.footer.deals}</Link>
                 <Link href={L('/trustpilot-prop-firms')}>{c.footer.trustpilot}</Link>
                 <Link href={L('/prop-firm-statistics')}>{c.footer.statistics}</Link>
@@ -291,8 +287,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div className="container footer-bottom">
               <span>{c.footer.bottom}</span>
               <span className="footer-bottom-links">
-                <Link href={L('/about')}>{t.about.footerShort}</Link>
-                <Link href="/legal">Legal &amp; privacy</Link>
+                <Link href={L('/about')}>{c.footer.aboutShort}</Link>
+                <Link href="/legal">{t.newsletter.privacy}</Link>
                 <Link href={L('/audit')}>{c.footer.method}</Link>
               </span>
             </div>

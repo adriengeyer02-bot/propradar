@@ -4,6 +4,8 @@ import PropRadarLive from '../../components/ui/PropRadarLive';
 import { propFirms } from '../../lib/propFirms';
 import { buildRadar } from '../../lib/radar';
 import { withOptionsGlobe } from '../../lib/optionsGlobe';
+import { optionsFirms } from '../../lib/optionsFirms';
+import { optionsAuditFor } from '../../lib/optionsAudits';
 import { optionsCopy } from '../../lib/optionsI18n';
 import { optionsAuditCopy } from '../../lib/optionsAuditI18n';
 import { recentFirmUpdates } from '../../lib/firmUpdates';
@@ -14,6 +16,7 @@ import IntentLink from '../../components/IntentLink';
 
 const PATH = '/prop-firm-radar';
 const radar = buildRadar(propFirms, recentFirmUpdates(1));
+const optionsPrograms = optionsFirms.filter((firm) => firm.kind === 'evaluation');
 const openCount = radar.dots.length;
 type Props = { params: Promise<{ locale: string }> };
 
@@ -133,7 +136,6 @@ export default async function PropFirmRadarPage({ params }: Props) {
 
       <div className="actions pr-radar-actions">
         <IntentLink className="btn btn-primary" href={L('/prop-firm-comparison')}>{r.compareTable}</IntentLink>
-        <Link className="btn" href={L('/options-prop-firms')}>{optionsCopy(locale).nav} · {optionsAuditCopy(locale).initial} →</Link>
         <Link className="btn" href={L('/prop-firm-statistics')}>{r.stats}</Link>
         <Link className="btn" href={`${L('/about')}#score`}>{r.methodology}</Link>
       </div>
@@ -159,6 +161,25 @@ export default async function PropFirmRadarPage({ params }: Props) {
               </ol>
             </details>
           ))}
+          <details id="options-sector" className="pr-radar-options-category">
+            <summary>
+              <strong>{optionsCopy(locale).nav} · {optionsCopy(locale).evaluation}</strong>
+              <span>{optionsPrograms.length}</span>
+            </summary>
+            <ol>
+              {optionsPrograms.map((firm) => {
+                const audit = optionsAuditFor(firm.slug);
+                return (
+                  <li key={firm.slug}>
+                    <Link href={L(`/options-prop-firms/${firm.slug}`)}>{firm.name}</Link>
+                    <b title={optionsAuditCopy(locale).initial} className="prr-watch-text">{audit?.score ?? '—'}*</b>
+                  </li>
+                );
+              })}
+            </ol>
+            <p className="pr-radar-options-footnote">* {optionsAuditCopy(locale).initial} · {optionsAuditCopy(locale).explained}</p>
+            <Link href={L('/options-prop-firms')}>{optionsCopy(locale).returnHub} →</Link>
+          </details>
         </div>
       </section>
 

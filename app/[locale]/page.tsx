@@ -4,7 +4,6 @@ import HomeGlobe from '../components/ui/HomeGlobe';
 import { buildRadar } from '../lib/radar';
 import { withOptionsGlobe } from '../lib/optionsGlobe';
 import { optionsCopy } from '../lib/optionsI18n';
-import { optionsAuditCopy } from '../lib/optionsAuditI18n';
 import { recentFirmUpdates } from '../lib/firmUpdates';
 import RiskPip from '../components/ui/RiskPip';
 import ScoreRing from '../components/ui/ScoreRing';
@@ -170,11 +169,6 @@ export default async function HomePage({ params }: Props) {
           <HomeGlobe data={homeRadar} globeData={withOptionsGlobe(homeRadar)} optionLabels={{ name: optionsCopy(locale).nav, unrated: optionsCopy(locale).noScore }} locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} tableLabels={t.table} radarCta={h.openRadar} />
         </div>
       </section>
-
-      <aside className="container options-discovery-cta">
-        <div><strong>{optionsCopy(locale).nav}: {optionsCopy(locale).title}</strong><p>{optionsAuditCopy(locale).notice}</p></div>
-        <Link href={L('/options-prop-firms')}>{optionsCopy(locale).dossier} →</Link>
-      </aside>
 
       <section className="container home-v2-section" aria-labelledby="home-reviews-title">
         <div className="home-v2-section-heading">
