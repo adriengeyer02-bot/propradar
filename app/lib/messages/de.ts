@@ -467,7 +467,7 @@ const de: Messages = {
     domainWarning: 'Domain-Warnung.',
     scoreAria: 'PropRadar-Score von {name}',
     propradarScore: 'PropRadar-Score',
-    scoreCapped: "Auf {cap} begrenzt: Trustpilot zeigt für diese Firma keine Bewertung an („rating unavailable due to a breach of our guidelines“). Score vor der Begrenzung: {before}.",
+    scoreCapped: "Trustpilot-Bewertungsintegrität: –{cap} Punkte (vorher: {before}). Die Urheber der entfernten Rezensionen sind nicht bekannt.",
     decision: {
       'Shortlist candidate': 'Kandidat für die Auswahl',
       'Proceed carefully': 'Mit Vorsicht prüfen',
@@ -1044,7 +1044,7 @@ const de: Messages = {
     "scoreEyebrow": "Wie der Score festgelegt wird",
     "scoreTitle": "Ein redaktioneller Score mit festen Regeln.",
     "scoreP1": "Der PropRadar-Score (0 bis 100) wird für jede Firma von Hand festgelegt, nachdem ihre Akte gelesen wurde: belegte Auszahlungsvorfälle, juristische Personen und ihre Länder, Warnlisten der Aufsichtsbehörden, Trustpilot-Status, Regeln und Preise der Programme und wie viel der Akte verifiziert ist. Es gibt keine feste Gewichtungsformel: Zwei Firmen mit ähnlichen Fakten können sich unterscheiden, wenn eine Akte besser belegt ist. Fest sind die folgenden Regeln.",
-    "scoreRules": ["Auf jeder Seite gelten drei Stufen: 75 und mehr, 50 bis 74, unter 50. Geschlossene Firmen werden getrennt in Rot gezeigt.", "Wenn Trustpilot die Bewertung einer Firma wegen eines Richtlinienverstoßes zurückhält, wird der Score bei 64 gedeckelt. Die Firmenseite zeigt die Deckelung und den Score davor.", "Ein Rückgang um 5 Punkte oder mehr oder eine Änderung um 10 wird vor der Veröffentlichung vom Betreiber freigegeben, und jede Änderung ist im Update-Verlauf der Firma datiert.", "Affiliation verändert nie einen Score: Partnerfirmen gelten dieselben Regeln."],
+    "scoreRules": ["Auf jeder Seite gelten drei Stufen: 75 und mehr, 50 bis 74, unter 50. Geschlossene Firmen werden getrennt in Rot gezeigt.", "Eine wegen Regelverstoßes zurückgehaltene Trustpilot-Bewertung führt zu einmalig 8 Punkten Abzug. Neue Einzelbewertungen enthalten diesen bereits. Verborgene Auszahlungsregeln, Vergeltung für Kritik und belegte Zahlungsprobleme werden gesondert bewertet, ohne feste Obergrenze.", "Ein Rückgang um 5 Punkte oder mehr oder eine Änderung um 10 wird vor der Veröffentlichung vom Betreiber freigegeben, und jede Änderung ist im Update-Verlauf der Firma datiert.", "Affiliation verändert nie einen Score: Partnerfirmen gelten dieselben Regeln."],
     "correctionsEyebrow": "Korrekturrichtlinie",
     "correctionsTitle": "Wie ein Fehler korrigiert wird.",
     "corrections": ["Senden Sie die Seite und eine öffentliche Quelle an contact@propradar.tech.", "Ein durch eine Quelle belegter Sachfehler wird korrigiert, und die Korrektur wird mit dieser Quelle im Update-Verlauf der Firma datiert. Frühere Einträge werden nie gelöscht.", "Firmen können wie alle anderen Korrekturen mit einer öffentlichen Quelle anfragen. Eine Firma kann nicht bezahlen, um einen Score zu ändern oder eine belegte Warnung zu entfernen.", "Lässt sich eine Meldung nicht mit einer öffentlichen Quelle bestätigen, zeigt die Seite „zu prüfen“ statt einer Vermutung."],

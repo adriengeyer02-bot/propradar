@@ -1,4 +1,4 @@
-import { applyFirmUpdates } from './firmUpdates';
+import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
 import { foxxFunded } from './foxxFunded';
 import { xFunded } from './xFunded';
 import { milTraders } from './milTraders';
@@ -125,8 +125,8 @@ export type PropFirm = {
   name: string;
   status: 'Active' | 'À surveiller' | 'Fermée';
   score: number;
-  /** Set when a rule lowered the stored score; the firm page states it. */
-  scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
+  /** An automatic integrity deduction shown transparently on the firm page. */
+  trustpilotPenalty?: { before: number; points: number };
   /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
@@ -12898,18 +12898,27 @@ function applyClosedVerdictRule(firm: PropFirm): PropFirm {
 }
 
 /**
- * Trustpilot rule (approved by Geyer, 2026-11-07): when Trustpilot withholds a
- * firm's rating for a breach of its guidelines, the PropRadar score is capped
- * at 64, so the firm can never sit in the 75+ band on a review profile
- * Trustpilot itself does not stand behind. The stored score is kept and shown
- * next to the cap; the cap lifts as soon as a dated check finds the rating
- * shown again (set.trustpilotNoticeLifted). Applies to affiliates the same way.
+ * Trustpilot rule revised by Adrien, 2026-11-18: withheld TrustScore for a
+ * guideline breach incurs ONE 8-point review-integrity deduction. Fake-review
+ * removal is not a second offence, and the notice does not identify who paid
+ * for/created the removed reviews. An explicitly reviewed editor score in the
+ * dated update file already incorporates the deduction and must not be
+ * penalised twice. Previously approved 64-point hard cap is retired.
+ * Applies equally to affiliates. An automatic deduction lifts when the TP notice
+ * is verified gone; individually audited scores must be updated by a new dated
+ * review when their embedded integrity deduction no longer applies.
  */
-export const TRUSTPILOT_WITHHELD_CAP = 64;
+export const TRUSTPILOT_WITHHELD_PENALTY = 8;
 
-function applyTrustpilotCapRule(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld || firm.score <= TRUSTPILOT_WITHHELD_CAP) return firm;
-  return { ...firm, score: TRUSTPILOT_WITHHELD_CAP, scoreCap: { before: firm.score, cap: TRUSTPILOT_WITHHELD_CAP, reason: 'trustpilot-withheld' } };
+function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld) return firm;
+  // Scores manually changed in a sourced audit include the integrity concern.
+  if (typeof getFirmUpdate(firm.slug)?.set?.score === 'number') return firm;
+  return {
+    ...firm,
+    score: Math.max(0, firm.score - TRUSTPILOT_WITHHELD_PENALTY),
+    trustpilotPenalty: { before: firm.score, points: TRUSTPILOT_WITHHELD_PENALTY },
+  };
 }
 
 /**
@@ -12936,7 +12945,7 @@ function applyPartnerOffer(firm: PropFirm): PropFirm {
   return offer && firm.status !== 'Fermée' ? { ...firm, partnerOffer: offer } : firm;
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyTrustpilotPenaltyRule).map(applyClosedVerdictRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

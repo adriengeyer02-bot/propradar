@@ -467,7 +467,7 @@ const zh: Messages = {
     domainWarning: '域名警告。',
     scoreAria: '{name} 的 PropRadar 评分',
     propradarScore: 'PropRadar 评分',
-    scoreCapped: "上限为 {cap}：Trustpilot 不再显示该公司的评分（“rating unavailable due to a breach of our guidelines”）。设上限前的评分：{before}。",
+    scoreCapped: "Trustpilot 评论可信度：扣除 {cap} 分（扣分前：{before}）。被移除评论的发布者身份未确定。",
     decision: {
       'Shortlist candidate': '可列入候选',
       'Proceed carefully': '谨慎考虑',
@@ -1044,7 +1044,7 @@ const zh: Messages = {
     "scoreEyebrow": "评分如何确定",
     "scoreTitle": "编辑评分，并受固定规则约束。",
     "scoreP1": "PropRadar 评分（0 到 100）在阅读每家公司的档案后人工确定：有来源的出金事件、法律实体及其所在国家、监管机构警示名单、Trustpilot 状态、各项目的规则和价格，以及档案中已核实的比例。没有固定的加权公式：事实相近的两家公司，若其中一份档案记录更充分，评分可能不同。固定的是以下规则。",
-    "scoreRules": ["所有页面使用三个区间：75 及以上、50 至 74、50 以下。已关闭的公司单独以红色显示。", "当 Trustpilot 因违反其准则而隐藏某公司的评分时，该公司评分上限为 64。公司页面会显示上限及封顶前的评分。", "下降 5 分或以上、或变动 10 分，须经网站负责人批准后才会上线，每次变动都会在公司的更新记录中注明日期。", "联盟合作从不影响评分：联盟公司遵循相同规则。"],
+    "scoreRules": ["所有页面使用三个区间：75 及以上、50 至 74、50 以下。已关闭的公司单独以红色显示。", "Trustpilot 因违反规则隐藏评分时，仅扣除一次 8 分；重新审核的评分已包含该扣分。隐藏的出金规则、对批评者的报复和已证实的支付问题另行扣分，不设固定上限。", "下降 5 分或以上、或变动 10 分，须经网站负责人批准后才会上线，每次变动都会在公司的更新记录中注明日期。", "联盟合作从不影响评分：联盟公司遵循相同规则。"],
     "correctionsEyebrow": "更正政策",
     "correctionsTitle": "错误如何被更正。",
     "corrections": ["请将页面和公开来源发送至 contact@propradar.tech。", "有来源支持的事实错误会被更正，更正连同该来源注明日期记入公司的更新记录。以前的记录永不删除。", "公司可以像其他人一样凭公开来源申请更正。公司不能付费改变评分或移除有来源的警示。", "如果报告无法通过公开来源确认，页面会显示\"待核实\"，而不是猜测。"],
