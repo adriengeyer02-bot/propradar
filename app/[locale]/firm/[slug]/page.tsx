@@ -982,6 +982,14 @@ export default async function FirmPage({ params }: Props) {
                 <p className="muted">{tx(product.description)}</p>
                 <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
                 <dl className="pr-product-meta">
+                  <div>
+                    <dt>{f.gaps['Drawdown type']}</dt>
+                    <dd>
+                      <strong>{product.drawdownType ? tx(product.drawdownType) : f.rulesEmptyTag}</strong>
+                      {product.drawdownDetails ? <span className="pr-product-dd-detail">{tx(product.drawdownDetails)}</span> : null}
+                      {product.drawdownSource ? <a className="pr-product-dd-source" href={product.drawdownSource} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}
+                    </dd>
+                  </div>
                   <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
                   <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
                 </dl>

@@ -19,7 +19,7 @@ const FILE = 'app/data/firm-updates.json';
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATUSES = new Set(['Active', 'À surveiller', 'Fermée']);
 const SET_KEYS = new Set([
-  'status', 'verdict', 'auditSummary', 'score', 'priceFrom', 'profitSplit', 'payoutDelay',
+  'status', 'verdict', 'auditSummary', 'score', 'priceFrom', 'nativePriceFrom', 'profitSplit', 'payoutDelay',
   'trustpilotRating', 'trustpilotReviewCount', 'trustpilotSourceUrl', 'listedDomainWarning', 'officialWebsite', 'historicLogoDomain',
   'drawdownType', 'newsTrading', 'eaAllowed', 'noEntryFee', 'trustpilotNoticeLifted',
 ]);
@@ -116,6 +116,7 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     errors.push(`${where}.addPayoutProofs: a changelog entry with fields ["payoutProofs"] and an https source is required`);
   }
   if (update.set?.drawdownType !== undefined && !DRAWDOWN_TYPES.has(update.set.drawdownType)) errors.push(`${where}.set.drawdownType must be EOD, Trailing, Static or Hybride`);
+  if (update.set?.nativePriceFrom !== undefined && (!(update.set.nativePriceFrom.amount > 0) || !['EUR', 'GBP'].includes(update.set.nativePriceFrom.currency))) errors.push(`${where}.set.nativePriceFrom needs a positive amount and EUR or GBP currency`);
   if (update.setProducts !== undefined) {
     if (!Array.isArray(update.setProducts) || !update.setProducts.length) errors.push(`${where}.setProducts: non-empty array required`);
     for (const [index, product] of (update.setProducts ?? []).entries()) {
@@ -127,6 +128,10 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
         if (typeof value !== 'string' || !value) errors.push(`${at}.${key} required (write "not stated" if the source does not say)`);
       }
       if (!Array.isArray(product?.platforms) || !Array.isArray(product?.tradableAssets)) errors.push(`${at}: platforms and tradableAssets arrays required`);
+      if (product?.drawdownType !== undefined && !DRAWDOWN_TYPES.has(product.drawdownType)) errors.push(`${at}.drawdownType must be EOD, Trailing, Static or Hybride`);
+      if (product?.drawdownType !== undefined && !isHttpsUrl(product.drawdownSource)) errors.push(`${at}.drawdownSource required for a verified programme drawdown type`);
+      if (product?.drawdownSource !== undefined && !isHttpsUrl(product.drawdownSource)) errors.push(`${at}.drawdownSource must be an https URL`);
+      if (product?.drawdownDetails !== undefined && (typeof product.drawdownDetails !== 'string' || product.drawdownDetails.length < 12)) errors.push(`${at}.drawdownDetails must describe the calculation or lock mechanics`);
       if (typeof product?.hasConsistencyRule !== 'boolean') errors.push(`${at}.hasConsistencyRule must be true or false`);
       if ('linkToStart' in (product ?? {})) errors.push(`${at}.linkToStart: start links are never set by an update`);
     }
