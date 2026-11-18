@@ -1165,8 +1165,31 @@
       ]
     },
     "breakout-prop": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "Breakout 1-Step Classic, Pro and Turbo — evaluation",
+          "rule": "The daily equity-loss limit is 3% of the balance measured at 00:30 UTC, recalculated each day. Equity including open positions is monitored in real time; a threshold touch fails the evaluation.",
+          "impact": "An automatic stop or a temporary intraday equity dip can end an account; the daily limit is not 3% of starting capital.",
+          "source": "https://www.breakoutprop.com/program-rules/"
+        },
+        {
+          "program": "Breakout 1-Step Classic / Pro / Turbo — evaluation",
+          "rule": "Maximum drawdown is static but differs by plan: 6% Classic, 5% Pro and only 3% Turbo. Refunds are generally unavailable, except active evaluations following a KYC rejection.",
+          "impact": "The cheapest Turbo evaluation has half the overall loss allowance of Classic.",
+          "source": "https://www.breakoutprop.com/program-rules/"
+        },
+        {
+          "program": "Breakout — evaluation and funded accounts",
+          "rule": "Same-account hedging is allowed only under the rulebook's standalone-position conditions; cross-account or coordinated opposite positions are prohibited. The company can terminate accounts and forfeit accrued performance splits.",
+          "impact": "Opposing trades across accounts, even involving correlated assets, can jeopardize all related accounts and pending rewards.",
+          "source": "https://www.breakoutprop.com/program-rules/"
+        }
+      ],
       "set": {
+        "score": 66,
+        "verdict": "Breakout Prop is active and Kraken-backed, with unusually explicit one-step crypto evaluation thresholds and on-demand rewards. Its dated rules nevertheless impose 3% daily equity limits, very different plan drawdowns (3% to 6%), and broad discretion over cross-account hedging, including forfeiture of accrued performance splits. Kraken's own disclosures distinguish the funded arrangement from a regulated brokerage account. PropRadar reassesses the score from 70 to 66/100; no generalized payout failure is claimed.",
+        "auditSummary": "18 November 2026: Breakout's published programme rules were updated on 29 October 2026. Classic, Pro and Turbo share a 3% daily equity-loss limit recalculated at 00:30 UTC from the preceding balance, while static total drawdown is respectively 6%, 5% and 3%; touching either limit even briefly is an account breach. The contract permits hedging inside a single account but broadly forbids opposite positions across accounts or traders, with decisions reserved to the company and potential loss of accrued reward rights. Evaluation fees are at risk; funded payouts begin only after passing and KYC. The usual 80/20 reward split can be upgraded to 90/10, with $50 minimum on-demand USDC requests. Kraken's own funded-program disclosure confirms that Payward Oceanic is a separate counterparty, not an ordinary regulated brokerage protection for the challenge. The company is currently selling programmes, and this review documents published contract terms, not independently verified trading execution or a systematic failure to pay. Editorial score 70 to 66/100 for restrictive enforcement discretion and tight Turbo risk limits.",
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 1273,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/breakoutprop.com",
@@ -1212,6 +1235,18 @@
           "fields": [
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Re-read 29 October 2026 official rulebook: 3% daily balance-based equity threshold, static 6/5/3% drawdowns on Classic/Pro/Turbo, and discretionary cross-account hedging termination/forfeiture. Score 70 to 66, not a payout-failure allegation.",
+          "source": "https://www.breakoutprop.com/program-rules/",
+          "fields": ["score", "verdict", "auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Kraken's own disclosure distinguishes the Payward Oceanic funded-program counterparty and its unregulated performance-fee arrangement from normal Kraken account protections; backing does not imply broker safeguards.",
+          "source": "https://support.kraken.com/articles/funded",
+          "fields": ["auditSummary"]
         }
       ],
       "addSources": [
@@ -1226,6 +1261,10 @@
         {
           "label": "Breakout program rules",
           "url": "https://www.breakoutprop.com/program-rules/"
+        },
+        {
+          "label": "Kraken Funded: separate entity and programme risk disclosures",
+          "url": "https://support.kraken.com/articles/funded"
         }
       ],
       "setProducts": [
@@ -4453,8 +4492,38 @@
       ]
     },
     "myfundedfutures": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "MyFundedFutures Rapid EOD / Rapid Intraday — evaluation",
+          "rule": "Rapid EOD evaluation applies a 30% daily-profit consistency objective; Rapid Intraday uses 50%. Exceeding the percentage is not an account breach, but requires further qualifying days.",
+          "impact": "Rapid EOD and Rapid Intraday should not be conflated; a large winning day can delay passage even after the profit target is reached.",
+          "source": "https://help.myfundedfutures.com/en/articles/11994562-consistency-rule-at-my-fundedfutures"
+        },
+        {
+          "program": "MyFundedFutures Rapid (Intraday and EOD) — simulated funded payouts",
+          "rule": "Daily payout eligibility starts no earlier than 24 hours after the first trade, with a non-withdrawable buffer ($2,100 on 50K, $3,100 on 100K, $4,600 on 150K) and $500 minimum above that buffer.",
+          "impact": "A daily-payout headline does not mean the first $2,100 of profits on a 50K account is withdrawable. The payout policy says there is no consistency rule in this funded stage.",
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
+        },
+        {
+          "program": "MyFundedFutures Builder — simulated funded payouts",
+          "rule": "A 50% consistency objective, a buffer and per-request caps ($1,000 on 25K, $2,000 on 50K) apply. After the first payout the maximum loss limit is reset to $100.",
+          "impact": "The first withdrawal can materially reduce the remaining loss cushion; a profitable evaluation is not equivalent to a freely withdrawable funded account.",
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
+        },
+        {
+          "program": "MyFundedFutures Pro — simulated funded payouts",
+          "rule": "Payout requests are scheduled every 14 calendar days from first trade, with a $1,000 minimum, an 80% trader split and a buffer target, subject to the plan's partial-buffer rules.",
+          "impact": "Pro is not a daily-payout account and its 80% split differs from Rapid's 90% funded-stage split.",
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
+        }
+      ],
       "set": {
+        "score": 71,
+        "payoutDelay": "Plan-specific: Rapid simulated-funded payouts may be requested daily after 24 hours from first trade, above a buffer and $500 minimum; Builder has consistency/buffer/caps, while Pro is generally every 14 calendar days.",
+        "verdict": "MyFundedFutures remains active, publishes detailed futures account policies and has some independently tracked crypto payout evidence. Its 4.9/5 Trustpilot score does not override the contract: Rapid EOD and Intraday evaluations have different consistency percentages, Rapid funded withdrawals require buffers, Builder limits withdrawals and resets the loss cushion, and Pro has a 14-day cycle with an 80% rather than 90% trader split. Editorial score 73 to 71/100; no manipulation or generalized non-payment is asserted.",
+        "auditSummary": "18 November 2026: read the September 2026 evaluation consistency article and the 25 August payout overview for Builder, Rapid EOD, Rapid Intraday and Pro, with separate evaluation and funded-stage conditions. Rapid EOD evaluation uses a 30% largest-day threshold, Rapid Intraday and standard Pro 50%, while Builder has no evaluation consistency requirement; breaching a consistency target delays passage rather than closing the account. The Rapid simulated-funded payout article explicitly says no consistency limit there, but requires a $2,100 / $3,100 / $4,600 buffer by 50K / 100K / 150K tier and a further $500 minimum. Builder simulated-funded stage requires 50% consistency, limited payout amounts and a $100 maximum-loss-limit reset after the first payout. Pro uses a 14-calendar-day request schedule and an 80% split; Rapid funded accounts use 90%, demonstrating why one firm-level payout speed or split cannot describe all products. The official site still operates and PropRadar already has independently tracked payout data for Q1 2026, not a guarantee of each user's eligibility. Score 73 to 71/100 for the complexity of stage-specific access to profits, without penalizing a false contradiction between evaluation and funded rules.",
         "trustpilotRating": 4.9,
         "trustpilotReviewCount": 22813,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/myfundedfutures.com",
@@ -4501,6 +4570,18 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Evaluation consistency from the official 25 September 2026 guide: Rapid EOD 30%, Rapid Intraday/Pro 50%, Builder none; the funded-stage payout page correctly describes different conditions. Score 73 to 71 for programme complexity.",
+          "source": "https://help.myfundedfutures.com/en/articles/11994562-consistency-rule-at-my-fundedfutures",
+          "fields": ["score", "verdict", "auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Plan-separated payout restrictions: Rapid funded daily only above buffers, Builder 50% consistency and post-payout loss-limit reset, Pro 14-day timing and 80% split. These are stage-specific terms, not conflicting claims about the same stage.",
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+          "fields": ["payoutDelay", "auditSummary", "restrictiveRules"]
         }
       ],
       "addSources": [
@@ -4511,6 +4592,14 @@
         {
           "label": "MyFundedFutures terms",
           "url": "https://myfundedfutures.com/terms"
+        },
+        {
+          "label": "MyFundedFutures evaluation consistency by plan",
+          "url": "https://help.myfundedfutures.com/en/articles/11994562-consistency-rule-at-my-fundedfutures"
+        },
+        {
+          "label": "MyFundedFutures payout policies by plan and stage",
+          "url": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
         }
       ],
       "setEntities": [
@@ -6133,8 +6222,38 @@
       ]
     },
     "tradeday": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "TradeDay Quick Pay — evaluation",
+          "rule": "At least five trading days, a 30% best-day consistency objective and the selected intraday or EOD trailing drawdown apply before the simulated funded stage.",
+          "impact": "Meeting the dollar profit target early does not complete the five-day evaluation objective.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405228-what-is-quick-pay-"
+        },
+        {
+          "program": "TradeDay Quick Pay — Funded Sim",
+          "rule": "Payout requests below a $4,000 current profit threshold receive a 50/50 split; an 80/20 split only applies to the portion above $4,000 that remains above the threshold after withdrawal. Funded Sim drawdown is intraday and trails gross profit, including withdrawn amounts.",
+          "impact": "A headline 80% or 90% share can overstate the first payout, and taking money out does not reset the trailing-loss calculation.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy"
+        },
+        {
+          "program": "TradeDay Fast Pass — evaluation",
+          "rule": "Two official help articles updated on 12 November disagree: the objectives article requires three minimum trading days; the Fast Pass overview says there is no minimum, though both require 45% daily-profit consistency.",
+          "impact": "Do not rely on the 'no minimum days' marketing phrasing without written confirmation for the purchased evaluation.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008847-what-are-the-objectives-and-rules-of-the-trading-evaluation-challenge-",
+          "status": "conflicting"
+        },
+        {
+          "program": "TradeDay Fast Pass — Funded Sim (opened on/after 26 July 2026)",
+          "rule": "Each payout requires five qualifying profitable days and 45% best-day consistency, plus net profit since the previous payout. Requests are capped at 50% of the eligible balance and at $1,500 for the 50K tier; trading must pause after submitting a request until payment.",
+          "impact": "A trader may be funded but unable to withdraw immediately; the current 50K cap is lower than for older accounts.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy"
+        }
+      ],
       "set": {
+        "score": 69,
+        "verdict": "TradeDay remains active and its Quick Pay/Fast Pass programme documents are unusually detailed, but the advertised day-one withdrawal is not a uniform 80–90% cash split. Quick Pay Funded Sim pays 50% below a $4,000 retained-profit threshold and its intraday trailing drawdown includes profits already withdrawn. Fast Pass has five winning-day payout cycles, lower caps for post-July 2026 accounts, and official FAQs disagree on its evaluation minimum days. Editorial score 75 to 69/100; no blanket payout failure is alleged.",
+        "auditSummary": "18 November 2026: audited TradeDay's original Quick Pay and Fast Pass payout articles plus its 9 September/12 November programme overviews, distinguishing evaluation from funded simulation and live trading. Quick Pay evaluation requires five days and a 30% consistency objective. On Quick Pay Funded Sim, the account's first $4,000 of retained current profit attracts a 50/50 rather than 80/20 withdrawal split; a payment crossing that boundary is split proportionally. The funded drawdown trails intraday on gross profit, including previously withdrawn amounts. Quick Pay's planned $10,000 gross-profit review for live transition may remove profit above that threshold, while Live has different agreements. Fast Pass evaluates at 45% consistency; two current official FAQs conflict over whether the evaluation has a three-day minimum, so the correct contractual interpretation is left unresolved. For Fast Pass Funded Sim opened after 26 July 2026, five qualifying winning days, 45% funded consistency, a cap of $1,500 per payout on 50K and post-payout net-positive recovery are required. The company advertises no funded buffer, but this does not remove those constraints. Score 75 to 69/100 for restrictive payout maths and a documented official FAQ discrepancy, not for a proven refusal of legitimate withdrawals.",
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 1452,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeday.com",
@@ -6177,6 +6296,24 @@
           "fields": [
             "payoutProofs"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Quick Pay funded payouts use 50/50 below a retained $4K current-profit threshold, 80/20 only above it; Funded Sim TMD is intraday and based on gross profits including withdrawals. Score lowered for contractual access to profits.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy",
+          "fields": ["score", "verdict", "auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Fast Pass payout: for post-26 July accounts, five profitable days, 45% best-day rule, payout cap $1,500 for 50K and positive performance since prior withdrawal; stop trading while the payout request is pending.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy",
+          "fields": ["auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Two TradeDay official FAQs dated 12 November conflict: objectives page says three minimum Fast Pass evaluation trading days, overview says no minimum. Left unresolved and shown as a documentary conflict, not as an enforced penalty.",
+          "source": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008847-what-are-the-objectives-and-rules-of-the-trading-evaluation-challenge-",
+          "fields": ["auditSummary", "restrictiveRules", "products"]
         }
       ],
       "addSources": [
@@ -6187,6 +6324,22 @@
         {
           "label": "TradeDay plans and funded terms (official)",
           "url": "https://www.tradeday.com/"
+        },
+        {
+          "label": "TradeDay Quick Pay Funded Sim payout policy",
+          "url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000335937-quick-pay-funded-sim-payout-policy"
+        },
+        {
+          "label": "TradeDay Fast Pass Funded Sim payout policy",
+          "url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000404096-fast-pass-funded-sim-payout-policy"
+        },
+        {
+          "label": "TradeDay evaluation objectives (three-day Fast Pass wording)",
+          "url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008847-what-are-the-objectives-and-rules-of-the-trading-evaluation-challenge-"
+        },
+        {
+          "label": "TradeDay Fast Pass overview (no-minimum wording)",
+          "url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405229-what-is-fast-pass-"
         }
       ],
       "setProducts": [
@@ -6234,9 +6387,9 @@
           "tradableAssets": [
             "Futures"
           ],
-          "minTradingDays": "3 days in the evaluation; 5 profitable days before a payout",
+          "minTradingDays": "Fast Pass evaluation: official FAQs conflict (3 minimum days vs no stated minimum); Funded Sim: 5 qualifying profitable days per payout",
           "hasConsistencyRule": true,
-          "consistencyRule": "45% consistency rule in the evaluation and on the funded account (official page, 29 Oct 2026)."
+          "consistencyRule": "45% in evaluation; also required in Funded Sim for accounts opened on/after 26 July 2026 (older Funded Sim accounts exempt)."
         }
       ],
       "addPayoutProofs": [
@@ -6398,8 +6551,43 @@
       ]
     },
     "tradeify": {
-      "reviewedAt": "2026-11-16",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "Tradeify — all simulated funded account types",
+          "rule": "For payout eligibility, more than 50% of trades AND more than 50% of profits must come from positions held longer than ten seconds. The rule does not apply in evaluations.",
+          "impact": "A profitable funded scalping account may be ineligible for withdrawal even if some automatic SL/TP fills close in under ten seconds; this is a majority test, not an absolute ten-second minimum per order.",
+          "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+        },
+        {
+          "program": "Tradeify Select — evaluation",
+          "rule": "The evaluation applies a 40% best-day consistency threshold and normally requires at least three trading days; Select Flex and Select Daily payout policies are selected only after passing.",
+          "impact": "A single large winning day can require more evaluation trading before the trader can choose a funded plan.",
+          "source": "https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts"
+        },
+        {
+          "program": "Tradeify Select Daily — simulated funded (50K, bought after 1 September 2026)",
+          "rule": "There is a $2,100 buffer, a $250 minimum payout, and a $1,250 per-request cap subject to the Daily Continuity 2-times-new-profit formula. Negative net profit since the previous request must first be recovered.",
+          "impact": "'Daily payouts' does not mean all profits are immediately withdrawable, and the policy choice is permanent for that account.",
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+        },
+        {
+          "program": "Tradeify Select Flex — simulated funded (50K, bought after 1 September 2026)",
+          "rule": "Five winning days of at least $150 each are needed per payout cycle; up to 50% of current profits can be requested, capped at $2,500 on this 50K tier. No daily loss limit applies to Select Flex.",
+          "impact": "The Flex route has a slower withdrawal schedule than Select Daily despite larger caps and a looser daily-risk structure.",
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+        },
+        {
+          "program": "Tradeify Lightning Funded — accounts bought after 12 September 2025",
+          "rule": "The largest profitable day must stay within 20% of total profits for the first payout, 25% for the second and 30% thereafter, alongside programme-specific profit goals and payout caps.",
+          "impact": "Hitting the stated profit goal is not the same as being entitled to withdraw that whole amount.",
+          "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+        }
+      ],
       "set": {
+        "score": 66,
+        "verdict": "Tradeify is active and its futures programmes publish unusually specific risk and payout rules. However, its simulated-funded 10-second microscalping majority test can withhold payout eligibility, and the apparently simple Select daily-withdrawal option requires non-withdrawable buffers, per-request caps and a permanent policy choice. Lightning adds 20/25/30% consistency thresholds depending on payout sequence. Score 72 to 66/100 for material rule friction; the 10-second rule is not an absolute minimum holding period on each trade.",
+        "auditSummary": "18 November 2026: examined Tradeify's 17 October 2026 Essential Trading Rules, Select evaluation and Select Flex/Daily policies, plus its Lightning payout policy previously checked on 16 November. For simulated funded accounts, more than half of both the number of trades and their resulting profit must come from positions held longer than ten seconds to request a payout; this is a payout test, not the universal trade-level 30-second rule seen at FTUK. Select evaluation requires 40% best-day consistency, whereas Select Flex funded has no consistency or daily loss limit but demands five winning days per payout cycle and caps withdrawals. Select Daily on a post-1-September 2026 50K account includes a $2,100 buffer, $1,250 cap, $250 minimum, a 2-times-new-profit daily continuity formula and net loss recovery before another request; the chosen Flex/Daily payout policy cannot later be changed on that account. Lightning's first/second/third payout consistency limits are 20/25/30% for accounts bought after 12 September 2025, with profit objectives distinct from withdrawal caps. These terms are published and programme-specific, not secret or evidence of a wrongful individual denial. The company's reported payout aggregates are not independently audited in this review. Score 72 to 66/100 for the potential mismatch between rapid-trading styles and actual withdrawal eligibility.",
         "trustpilotRating": 4.6,
         "trustpilotReviewCount": 6894,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradeify.co",
@@ -6454,6 +6642,24 @@
           "fields": [
             "payoutDelay"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Official 17 October guide: on funded accounts more than half of both trades and profits must come from holdings over ten seconds to withdraw; evaluations exempt. Score 72 to 66 due to payout eligibility friction, not a per-position hard ten-second minimum.",
+          "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+          "fields": ["score", "verdict", "auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Select Daily/Flex post-1-September withdrawal caps, Daily buffers and continuity requirement, irrevocable plan choice, and five winning days for Flex reviewed from the official payout-policy page.",
+          "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+          "fields": ["auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Select evaluation uses 40% best-day consistency and requires a multi-day route; funded-plan policies only apply after passing.",
+          "source": "https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts",
+          "fields": ["auditSummary", "restrictiveRules"]
         }
       ],
       "addSources": [
@@ -6464,6 +6670,18 @@
         {
           "label": "Tradeify — Lightning Funded payout requirements and withdrawal caps",
           "url": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+        },
+        {
+          "label": "Tradeify — all account trading rules and 10-second funded microscalping majority test",
+          "url": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+        },
+        {
+          "label": "Tradeify — Select Daily and Flex funded payout policies",
+          "url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+        },
+        {
+          "label": "Tradeify — Select evaluation objectives",
+          "url": "https://help.tradeify.co/en/articles/12853921-select-evaluation-accounts"
         }
       ],
       "addPayoutProofs": [
@@ -6815,8 +7033,57 @@
       ]
     },
     "uprofit-trader": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-18",
+      "restrictiveRules": [
+        {
+          "program": "UProfit Flex / Soft — evaluation, Virtual Live and Live Funded",
+          "rule": "Under the mandatory 28 October Best Practices guide, gains from winning trades held under 60 seconds must be less than 20% of all winning-trade profit during the review period.",
+          "impact": "A profitable rapid-scalping strategy can breach a portfolio-level profit-ratio rule despite meeting the challenge's drawdown and profit objectives.",
+          "source": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide"
+        },
+        {
+          "program": "UProfit Flex / Soft — evaluation, Virtual Live and Live Funded",
+          "rule": "Trades held ten seconds or less must represent strictly less than 30% of all trades, including losing trades; this is separate from the under-60-second winning-profit test.",
+          "impact": "An automatic early SL/TP still contributes to the under-ten-second trade count, although there is no absolute minimum duration for each order.",
+          "source": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide"
+        },
+        {
+          "program": "UProfit — access, VPN and location (all stages)",
+          "rule": "The general Terms say any VPN/VPS detection can close associated accounts with forfeiture; the newer Best Practices guide instead refers to unauthorized or location-concealing VPNs and advance notice before travel.",
+          "impact": "Two official texts differ in scope: seek written compliance confirmation before using a VPN, VPS or trading from another country.",
+          "source": "https://uprofit.com/terms-and-conditions",
+          "status": "conflicting"
+        },
+        {
+          "program": "UProfit Flex — Virtual Live (50K example)",
+          "rule": "Each request requires three profitable days and 40% best-day consistency, reset after each withdrawal. The first $2,500 SafetyNet on 50K is not withdrawable; payouts are capped at 3% of account size and six withdrawals per account.",
+          "impact": "On 50K, only profits above $52,500 can be requested; after the sixth payout, the Virtual Live account is closed under the published policy.",
+          "source": "https://uprofit.com/fr/aide/uprofit-flex-politique-de-paiements-52062715698580"
+        },
+        {
+          "program": "UProfit ONE 50K — Virtual Live payouts",
+          "rule": "Five profitable days with at least $150 each are required, with at most 50% of available accumulated earnings withdrawable and a $2,000 cap per request. Six withdrawals maximum per account.",
+          "impact": "The account can show profit while remaining ineligible for a payout or unable to withdraw more than half of it.",
+          "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468"
+        },
+        {
+          "program": "UProfit DAY — Virtual Live (older published programme policy)",
+          "rule": "The older DAY payout article requires four profitable days, 30% daily-profit consistency and a non-withdrawable SafetyNet; it offers an 80% trader share.",
+          "impact": "These terms cannot be assumed to apply to today's Flex/Soft/ONE purchases without checking the specific signed programme agreement.",
+          "source": "https://uprofit.com/help/uprofit-day-payout-policy-32526417608212"
+        },
+        {
+          "program": "UProfit — mandatory risk/compliance review (all account stages)",
+          "rule": "The October guide gives compliance three business days for a trader response and up to five business days for its review; a verified Best Practices violation can close all linked accounts and cancel pending rewards, subject to contract and law.",
+          "impact": "A payout may be paused during a compliance review, with serious contractual consequences only after the firm's violation decision.",
+          "source": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide"
+        }
+      ],
       "set": {
+        "score": 60,
+        "payoutDelay": "Depends on the purchased programme: Flex Virtual Live requires 3 winning days, 40% consistency, SafetyNet and capped requests; ONE 50K requires 5 winning $150+ days and a 50% earnings cap; legacy DAY policies differ. Compliance reviews may pause payout.",
+        "verdict": "UProfit remains an operating US futures prop firm, but its 28 October 2026 mandatory guide is especially restrictive for short-term trading: less than 20% of winning profits may come from trades under 60 seconds, and less than 30% of total trades may last ten seconds or less. VPN/location wording also differs across official documents, while FLEX and ONE withdrawals have distinct buffers, caps and six-withdrawal limits. Score 69 to 60/100 for the strict, programme-specific conditions, not a proven generalized refusal to pay.",
+        "auditSummary": "18 November 2026: compared UProfit's October 28 Trading Best Practices guide (which applies to evaluations, Live Virtual and Live Funded, exemplifying Flex/Soft) with its website Terms and the Flex, ONE and older DAY withdrawal policies. The guide imposes two separate proportional scalping restrictions: profits from winning trades under 60 seconds must be strictly less than 20% of all winning-trade profit, and positions lasting ten seconds or less must make up strictly less than 30% of all trades. A single fast stop-loss is not in itself banned, but it counts toward the duration mix. The guide also caps aggregate session volume, requires written approval for trade-placing automation, and describes compliance reviews with potential suspension and forfeiture after a documented violation. The general Terms speak of immediate closure on detection of any VPN/VPS; the newer guide narrows the practical wording to unauthorized/location-hiding technology and prior notification of international travel. That difference is explicitly unresolved. Flex Virtual Live requires three profit days, a 40% concentration test, a $2,500 unwithdrawable SafetyNet for 50K, capped requests and a maximum of six withdrawals before account closure. ONE 50K has five $150+ days, a 50% available-earnings limit, $2,000 per-request cap and six-withdrawal maximum; the older DAY page has different 30%/four-day/80% terms and is not automatically applicable to current offers. Trustpilot's 3.4/5 is not a finding about any particular complaint. Editorial score 69 to 60/100 for substantial restrictions and document-scope ambiguity, without treating published policy as secretly imposed or verified misconduct.",
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 6554,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.uprofit.com"
@@ -6839,7 +7106,44 @@
             "trustpilotReviewCount",
             "trustpilotRating"
           ]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Mandatory 28 October Best Practices apply to evaluation and funded stages: winning-trade profit under 60 seconds below 20%, trades lasting ten seconds or less below 30%, plus review/sanction clauses. Score 69 to 60 for material trade-style restrictions.",
+          "source": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide",
+          "fields": ["score", "verdict", "auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Official general Terms state broad VPN/VPS closure rules; newer Best Practices guidance speaks of unauthorized or origin-concealing services. Their actual scope needs written clarification, not an assumption that all VPN use is equally prohibited.",
+          "source": "https://uprofit.com/terms-and-conditions",
+          "fields": ["auditSummary", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Flex Virtual Live payout terms: 3 winning days, 40% best-day consistency reset each request, non-withdrawable 50K SafetyNet $2,500, capped payout and 6-withdrawal closure.",
+          "source": "https://uprofit.com/fr/aide/uprofit-flex-politique-de-paiements-52062715698580",
+          "fields": ["payoutDelay", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "ONE 50K Virtual Live payout policy differs from Flex: 5 winning days of at least $150, withdrawal up to 50% of available earnings and $2,000 maximum, at most 6 payouts.",
+          "source": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468",
+          "fields": ["payoutDelay", "restrictiveRules"]
+        },
+        {
+          "date": "2026-11-18",
+          "summary": "Older DAY policy still online describes four winning days, 30% concentration, SafetyNet and 80% split. Not treated as necessarily governing today's Flex or ONE products.",
+          "source": "https://uprofit.com/help/uprofit-day-payout-policy-32526417608212",
+          "fields": ["restrictiveRules"]
         }
+      ],
+      "addSources": [
+        { "label": "UProfit Trader October 2026 mandatory Trading Best Practices", "url": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide" },
+        { "label": "UProfit general Terms and VPN/VPS rule", "url": "https://uprofit.com/terms-and-conditions" },
+        { "label": "UProfit Flex withdrawal policy (official French help)", "url": "https://uprofit.com/fr/aide/uprofit-flex-politique-de-paiements-52062715698580" },
+        { "label": "UProfit ONE 50K payout policy", "url": "https://uprofit.com/help/uprofit-one-payout-policy-49177986296468" },
+        { "label": "UProfit older DAY payout policy", "url": "https://uprofit.com/help/uprofit-day-payout-policy-32526417608212" }
       ]
     },
     "wegetfunded": {
