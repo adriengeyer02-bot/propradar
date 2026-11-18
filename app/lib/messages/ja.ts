@@ -606,6 +606,7 @@ const ja: Messages = {
     "navLabel": "会社ページのナビゲーション",
     "nav": {
       "offers": "プラン",
+      "rules": "制限のあるルール",
       "decision": "判断",
       "timeline": "経緯",
       "legal": "法務ファイル",
@@ -615,6 +616,13 @@ const ja: Messages = {
       "sources": "出典"
     },
     "offersEyebrow": "プラン",
+    "rulesTitle": "プログラム別の制限ルール",
+    "rulesIntro": "公表された制限をプログラムと口座段階ごとに整理しています。記載がないことは制限がない証拠ではありません。購入前に公式規約を確認してください。",
+    "rulesEmpty": "この会社のプログラム別の制限はまだ確認されていません。公式規約をご確認ください。",
+    "rulesEmptyTag": "未確認",
+    "rulesImpact": "実際の影響",
+    "rulesConflict": "公式情報に矛盾あり",
+    "rulesCount": "確認済みのルール {n} 件",
     "priceTableTitle": "口座サイズ別の価格",
     "priceTableLead": "{date} に {name} の公式料金ページで確認した定価（期間限定の割引コード適用前）。税金・リセット・オプションは含みません。",
     "priceSize": "口座サイズ",

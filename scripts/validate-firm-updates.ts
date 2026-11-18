@@ -63,6 +63,19 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
     continue;
   }
   if (!DATE.test(update.reviewedAt ?? '') || update.reviewedAt > today) errors.push(`${where}.reviewedAt: YYYY-MM-DD, not in the future`);
+  if (update.restrictiveRules !== undefined) {
+    if (!Array.isArray(update.restrictiveRules) || !update.restrictiveRules.length) errors.push(`${where}.restrictiveRules: non-empty array required`);
+    for (const [index, rule] of (update.restrictiveRules ?? []).entries()) {
+      const at = `${where}.restrictiveRules[${index}]`;
+      if (!rule.program?.trim() || !rule.rule?.trim() || !rule.impact?.trim()) errors.push(`${at}: program, rule and impact are required`);
+      if (!isHttpsUrl(rule.source)) errors.push(`${at}.source: public https source required`);
+      if (rule.status && rule.status !== 'conflicting') errors.push(`${at}.status: only 'conflicting' is supported`);
+      if (BANNED_WORDS.test(`${rule.rule} ${rule.impact}`)) sensitive.push(`${slug}: restrictive-rule wording needs a legal read`);
+    }
+    if (!(update.changelog ?? []).some((entry) => (update.restrictiveRules ?? []).some((rule) => rule.source === entry.source))) {
+      errors.push(`${where}.restrictiveRules: at least one rule source must appear in the dated changelog`);
+    }
+  }
   if (update.setLegalReview !== undefined) {
     const legal = update.setLegalReview;
     if (!legal.summary || legal.summary.length < 40) errors.push(`${where}.setLegalReview.summary: substantive text required`);

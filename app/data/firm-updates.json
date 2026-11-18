@@ -2217,6 +2217,20 @@
       ]
     },
     "ftuk": {
+      "restrictiveRules": [
+        {
+          "program": "FTUK forex and futures — evaluation and funded stages",
+          "rule": "Each position must remain open for at least 30 seconds, including when its stop-loss or take-profit closes it earlier.",
+          "impact": "A fast automatic SL/TP execution can breach the duration rule without a deliberate early manual exit.",
+          "source": "https://faq.ftuk.com/en/articles/14492295-is-there-a-minimum-trade-duration"
+        },
+        {
+          "program": "FTUK — account access and withdrawals",
+          "rule": "Multiple or changing VPN servers, unexplained IP patterns, or an unreported connection from another country can trigger compliance action.",
+          "impact": "The firm says a payout may be refused and the account closed after a qualifying IP/location violation.",
+          "source": "https://faq.ftuk.com/en/articles/18247501-ip-address-vpn-location-rules"
+        }
+      ],
       "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 3.9,
@@ -3283,6 +3297,20 @@
       ]
     },
     "goat-funded-trader": {
+      "restrictiveRules": [
+        {
+          "program": "GOAT programmes — funded reward requests",
+          "rule": "The payout guide sets a $3,000 daily profit ceiling (excess removed), model-specific caps on the first two rewards, and a 3% processing fee.",
+          "impact": "The account's apparent gross profit can exceed the amount eligible for a reward; check your model's exact cap.",
+          "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+        },
+        {
+          "program": "GOAT programmes — purchased after 8 October 2026",
+          "rule": "Before requesting a reward, the largest winning trade must be at least as large as the largest losing trade. This eligibility test is not itself an account breach.",
+          "impact": "A profitable account may still need additional trades before the next payout is eligible.",
+          "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+        }
+      ],
   "set": {
     "score": 58,
     "payoutDelay": "Model-dependent eligibility; requests on weekdays, normally processed in 2 business days after first-payout KYC. Minimum $100 except Instant Daily; payout caps, deductions and a 3% processing fee apply.",
@@ -3379,6 +3407,20 @@
       ]
     },
     "hantec-trader": {
+      "restrictiveRules": [
+        {
+          "program": "RZR Funded — standard funded accounts",
+          "rule": "The first payout is generally eligible after 14 days from the first trade; certain products offer seven days or an Instant24 variant. All positions must be closed before requesting.",
+          "impact": "Passing the challenge does not make all profits immediately withdrawable; eligibility depends on the purchased plan.",
+          "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"
+        },
+        {
+          "program": "RZR Funded — payout guarantee",
+          "rule": "The stated 24-business-hour window concerns payout approval or rejection, not the arrival of funds, and excludes some KYC/risk checks.",
+          "impact": "A request can remain under review even when the promotional approval timeframe has passed.",
+          "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"
+        }
+      ],
   "set": {
     "trustpilotRating": 4.4,
     "trustpilotReviewCount": 880,
@@ -3973,6 +4015,20 @@
       ]
     },
     "leeloo-trading": {
+      "restrictiveRules": [
+        {
+          "program": "Leeloo Performance Account — simulated funded stage",
+          "rule": "Support documentation applies a 30% daily profit-concentration condition and restricts artificial trade flipping; an intraday trailing liquidation threshold also applies.",
+          "impact": "An otherwise profitable account may not yet qualify for a payout, and the trailing liquidation level can be reached intraday.",
+          "source": "https://www.leelootrading.com/support"
+        },
+        {
+          "program": "Leeloo — reward requests",
+          "rule": "Terms reserve manual checks and account-dependent payout limits; approval is not automatic on reaching the profit objective.",
+          "impact": "The payout window and available amount must be read in the specific Performance Account's terms.",
+          "source": "https://www.leelootrading.com/terms-of-service"
+        }
+      ],
       "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 3.1,
@@ -4063,6 +4119,21 @@
       ]
     },
     "lux-trading-firm": {
+      "restrictiveRules": [
+        {
+          "program": "Lux — Rules of Engagement evaluation/funded route",
+          "rule": "This published rules page describes a 6% static drawdown, an 80% funded profit share and on-demand withdrawal requests subject to review.",
+          "impact": "The risk-desk review and approval still govern payment; verify this is the agreement attached to your checkout.",
+          "source": "https://luxtradingfirm.com/rules-of-engagement-3/"
+        },
+        {
+          "program": "Lux — Career Plan trading-rules page (current application unverified)",
+          "rule": "Another official page still describes monthly withdrawals, a 75% split, and a relative/hybrid drawdown instead of the 80% on-demand terms elsewhere.",
+          "impact": "The two published rule sets may concern different or older programmes. The applicable signed programme agreement needs confirmation.",
+          "source": "https://luxtradingfirm.com/trading-rules/",
+          "status": "conflicting"
+        }
+      ],
       "reviewedAt": "2026-11-18",
       "set": {
         "trustpilotRating": 3.7,

@@ -24,8 +24,19 @@ export type FirmChangelogEntry = {
   fields?: string[];
 };
 
+/** A sourced restriction with explicit programme/stage scope; never infer firm-wide applicability. */
+export type RestrictiveRule = {
+  program: string;
+  rule: string;
+  impact: string;
+  source: string;
+  /** For conflicting official documents, say so instead of choosing a rule. */
+  status?: 'conflicting';
+};
+
 export type FirmUpdate = {
   reviewedAt: string;
+  restrictiveRules?: RestrictiveRule[];
   set?: Partial<{
     status: PropFirm['status'];
     /** Sourced editorial correction; does not change the audit level or score. */

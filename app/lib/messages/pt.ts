@@ -606,6 +606,7 @@ const pt: Messages = {
     "navLabel": "Navegação da ficha",
     "nav": {
       "offers": "Ofertas",
+      "rules": "Regras restritivas",
       "decision": "Decisão",
       "timeline": "Cronologia",
       "legal": "Dossiê jurídico",
@@ -615,6 +616,13 @@ const pt: Messages = {
       "sources": "Fontes"
     },
     "offersEyebrow": "Ofertas",
+    "rulesTitle": "Regras restritivas por programa",
+    "rulesIntro": "As restrições publicadas são separadas por programa e fase da conta. Uma regra ausente não significa que não exista; consulte os termos oficiais antes da compra.",
+    "rulesEmpty": "As restrições específicas dos programas desta empresa ainda não foram verificadas. Consulte as condições oficiais.",
+    "rulesEmptyTag": "Ainda não verificado",
+    "rulesImpact": "Consequência prática",
+    "rulesConflict": "Fontes oficiais divergentes",
+    "rulesCount": "{n} regras documentadas",
     "priceTableTitle": "Preços por tamanho de conta",
     "priceTableLead": "Preços de tabela lidos nas páginas de preços da {name} em {date}, antes de códigos de desconto temporários. Impostos, resets e extras não incluídos.",
     "priceSize": "Tamanho da conta",
