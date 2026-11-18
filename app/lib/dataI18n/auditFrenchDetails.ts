@@ -7,6 +7,41 @@ export const auditFrenchDetails: Record<string, {
   entities?: string[];
   incidents?: string[];
 }> = {
+  'axi-select': {
+    changelog: ["", "", "Offre sans frais de challenge confirmée, mais compte CFD réel avec 500 $ de fonds personnels, 20 trades et Score Edge 50 ; Seed normalement à 0 % et 80 % seulement au sommet. Note 77/100 maintenue après comparaison des risques et de la transparence.", "Les règles de progression exigent des jours et un capital propres à chaque niveau, ainsi que les objectifs d'allocation. Aucun challenge simulé payant n'est vendu ici.", "Le Trustpilot Axi de 4,1/5 sur 8 354 avis concerne le courtier global, pas le seul programme Select ; aucune note spécifique n'a été ajoutée." ]
+  },
+  'trade-the-pool': {
+    changelog: ["", "", "", "Les profits ne sont comptabilisés que si la variation atteint dix cents et si la position dure 60 secondes en règle générale, ou 30 secondes pour MAX/FLEX. Concentration de 30 % et volume par minute limité à 5 % ; pas de preuve d'une fermeture automatique pour chaque SL/TP rapide. Note 76 à 66.", "Trustpilot reste à 4,5/5 sur 1 002 avis ; commentaires favorables et plaintes sur les règles ne constituent pas un audit des retraits."]
+  },
+  'city-traders-imperium': {
+    regulatoryStatus: [
+      "Le contrat officiel d'août 2026 et la page contact désignent City Traders Imperium Limited (Comores, n° 15969) pour les évaluations simulées, avec adresse opérationnelle au Costa Rica, et CTI FZCO (Dubaï) pour l'Academy. Le PDF de septembre 2025 qui nommait FZCO pour l'évaluation est une archive.",
+      "Les deux entités décrivent des services éducatifs ou simulés, non des dépôts de courtage. Une éventuelle invitation distincte à un courtier est discrétionnaire et ne constitue pas une étape protégée ou garantie du programme.",
+      "Une page de vérification d'Anjouan mentionne l'immatriculation n° 15969 comme active, sans que cela équivaille à la protection d'un régulateur FCA, ASIC ou européen. L'ancienne société britannique renommée est distincte."
+    ],
+    complaintsAndDisputes: [
+      "Le contrat autorise sous conditions contrôle du risque, demande de code source et de KYC, annulation de trades, réduction du levier et fermeture sans remboursement. Les décisions ne constituent pas un arbitrage indépendant.",
+      "Le règlement de remboursement exclut en général les comptes ayant effectué un premier trade, sous réserve de l'exception limitée de sept jours pour les comptes inactifs, et prévoit des conséquences pour les contestations de paiement qualifiées d'injustifiées.",
+      "Trustpilot affiche 4,3/5 sur 1 646 avis, positifs et critiques ; PropRadar n'a pas tranché les litiges individuels."
+    ],
+    redFlags: [
+      "Le contrat d'archive de 2025 et la version d'août 2026 désignent des sociétés différentes pour les évaluations ; conserver la version effectivement acceptée à l'achat et la facture.",
+      "Un stop-loss visible doit être placé sous 60 secondes ; les EA sont plus strictement encadrés sur 2-Step, Instant et Direct. Ce ne sont pas des durées minimales de maintien des positions.",
+      "Clauses générales de conduite et de contrôle, ainsi que délais courts pour répondre aux demandes KYC ou de code source ; le partage jusqu'à 100 % et les retraits immédiats dépendent de paliers."
+    ],
+    changelog: ["", "", "", "Le PDF d'août 2026 lié comme contrat actuel attribue désormais les évaluations simulées à la société des Comores et les cours à CTI FZCO ; correction des anciennes descriptions juridiques. Note 74 à 68 sans remettre en cause l'activité commerciale.", "Stop-loss réel obligatoire sous 60 secondes, non durée de trade ; EA tiers permis sur 1-Step seulement. Remboursements limités et règlement de conduite à lire, sans conclure à une interdiction des avis honnêtes.", "Trustpilot : 4,3/5 sur 1 646 avis ; les 100 % sont un niveau VIP, pas la part initiale.", "Les quatre programmes actuels ont été mis à jour : 1-Step dès 29 $, 2-Step dès 39 $, Instant dès 79 $ et Direct Funding (anciennement affiché Instant Pro) dès 229 $. Les liens d'affiliation fournis par Adrien restent inchangés."],
+    entities: [
+      "Prestataire actuel des évaluations de compétences et du trading simulé, selon le contrat d'août 2026 et le pied de page officiel. Non assimilé à un courtier agréé de premier rang.",
+      "Prestataire actuel de l'Academy. Le PDF de septembre 2025 désignait auparavant CTI FZCO comme cocontractant des évaluations, mais le texte d'août 2026 attribue celles-ci à l'entité des Comores.",
+      "Ancienne société britannique City Traders Imperium renommée en janvier 2025 et visée par une demande de radiation volontaire en mars 2026 ; distincte de l'exploitant actuel. Demande de radiation ne prouve pas dissolution acquise."
+    ]
+  },
+  'take-profit-trader': {
+    changelog: ["", "", "", "La promesse d'un retrait PRO dès le premier jour suppose d'abord un coussin de gains égal au drawdown, par exemple 2 000 $ sur un compte 50K. Règles de trading et stop suiveur intraday sévères ; note 73 à 68 tout en saluant la documentation précise.", "Les 5 à 10 secondes concernent le passage PRO Tradovate vers le portefeuille TPT pour les comptes éligibles, non la réception bancaire ; l'accès à PRO+ n'est pas automatique.", "Trustpilot affiche 4,4/5 sur 11 297 avis, sans suspension de note observée."]
+  },
+  'oneup-trader': {
+    changelog: ["", "", "", "", "", "La documentation des comptes financés interdit les stratégies sous dix secondes citées, impose 50 % de l'activité hebdomadaire moyenne du test et un contrôle du solde tous les quinze jours pendant 90 jours. Pas de preuve d'une interdiction générale des stops déclenchés sous dix secondes. Note 72 à 66.", "La régularité du test compare les trois autres meilleures journées à 80 % de la meilleure ; Trustpilot mis à jour séparément.", "Trustpilot reste à 4,7/5, avec 2 824 avis et sans suspension de note visible."]
+  },
   'goat-funded-trader': {
     changelog: ["", "", "", "", "", "Réexamen à 58/100 : pénalité de huit points pour l'alerte Trustpilot encore active, plus les contraintes de versement publiées. Ni fermeture ni faute individuelle non prouvée ne sont affirmées.", "La FAQ officielle confirme les plafonds sur les premiers retraits, 3 000 $ de gains quotidiens, 3 % de frais et les conditions d'éligibilité ajoutées depuis le 8 octobre 2026."]
   },
