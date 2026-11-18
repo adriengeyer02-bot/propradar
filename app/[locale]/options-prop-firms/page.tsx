@@ -59,13 +59,13 @@ export default async function OptionsPropFirmsPage({ params }: Props) {
       </header>
 
       <section className="options-editorial" aria-labelledby="options-intro-title">
-        <div><span className="options-section-number">01 / RESEARCH</span><h2 id="options-intro-title">{c.introTitle}</h2><p>{c.intro}</p></div>
+        <div><span className="options-section-number">01</span><h2 id="options-intro-title">{c.introTitle}</h2><p>{c.intro}</p></div>
         <aside className="options-pending"><strong>{a.initial}</strong><p>{a.notice}</p></aside>
       </section>
 
       {(['evaluation', 'professional'] as const).map((kind, groupIndex) => (
         <section key={kind} className="options-catalogue" aria-labelledby={`options-${kind}`}>
-          <div className="options-section-heading"><span className="options-section-number">0{groupIndex + 2} / MARKET</span><h2 id={`options-${kind}`}>{kind === 'evaluation' ? c.evaluation : c.professional}</h2><span>{group(kind).length}</span></div>
+          <div className="options-section-heading"><span className="options-section-number">0{groupIndex + 2}</span><h2 id={`options-${kind}`}>{kind === 'evaluation' ? c.evaluation : c.professional}</h2><span>{group(kind).length}</span></div>
           <div className="options-cards">
             {group(kind).map((firm) => {
               const audit = optionsAuditFor(firm.slug)!;
@@ -83,7 +83,7 @@ export default async function OptionsPropFirmsPage({ params }: Props) {
       ))}
 
       <section className="options-editorial options-method" aria-labelledby="options-method-title">
-        <div><span className="options-section-number">04 / METHODOLOGY</span><h2 id="options-method-title">{a.methodTitle}</h2><p>{a.notice}</p></div>
+        <div><span className="options-section-number">04</span><h2 id="options-method-title">{a.methodTitle}</h2><p>{a.notice}</p></div>
         <Link href={L('/audit')} className="btn">{a.methodTitle} →</Link>
       </section>
     </main>

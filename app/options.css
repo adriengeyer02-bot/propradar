@@ -78,6 +78,9 @@
 .options-discovery-cta strong { display: block; font-size: 1.02rem; }
 .options-discovery-cta p { margin: 5px 0 0; line-height: 1.5; font-size: .85rem; }
 .options-discovery-cta a { color: var(--accent, #0ca6c4); text-decoration: none; font-weight: 800; white-space: nowrap; }
+.pr-radar-options-category .pr-radar-options-footnote { margin: 0 16px 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.pr-radar-options-category > a { display: block; margin: 0 16px 14px; color: var(--accent); font-size: 13px; font-weight: 700; text-decoration: none; }
+.pr-radar-options-category > a:hover { text-decoration: underline; }
 .prg-hud-unrated { min-width: 112px; min-height: 63px; display: grid; align-content: center; justify-items: center; border: 1px solid rgba(20, 165, 198, .4); border-radius: 12px; color: var(--accent, #0ca6c4); font-weight: 850; font-size: .84rem; }
 @media (max-width: 850px) { .options-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .options-counter { grid-template-columns: repeat(2, auto 1fr); } }
 @media (max-width: 620px) { .options-page { padding-top: 24px; } .options-hero { padding: 27px 20px; border-radius: 14px; } .options-counter { grid-template-columns: repeat(2, auto 1fr); } .options-editorial, .options-detail-facts, .options-audit-findings { grid-template-columns: 1fr; } .options-cards { grid-template-columns: 1fr; } .options-card { min-height: 250px; } .options-rules li { flex-direction: column; } .options-detail-heading { gap: 12px; } .options-detail-heading .options-company-logo { width: 60px; height: 60px; } .options-method { padding: 20px; } }

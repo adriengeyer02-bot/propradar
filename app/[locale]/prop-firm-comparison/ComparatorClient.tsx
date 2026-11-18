@@ -15,8 +15,6 @@ import { toEnglishText } from '../../lib/i18n';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, type Tone } from '../../lib/riskTone';
 import { localePath, type Locale } from '../../lib/locales';
 import type { Messages } from '../../lib/messages/en';
-import { optionsCopy } from '../../lib/optionsI18n';
-import { optionsAuditCopy } from '../../lib/optionsAuditI18n';
 
 export type ComparatorUi = Pick<Messages, 'compare' | 'table' | 'values' | 'styles'>;
 
@@ -124,7 +122,6 @@ export default function ComparatorClient({
   updatedAt: string;
 }) {
   const c = ui.compare;
-  const oc = optionsCopy(locale);
   const { byFirm: FIRM_COUNTRIES, options: COUNTRY_OPTIONS } = useMemo(() => countryIndex(propFirms), [propFirms]);
   const activeCount = useMemo(() => propFirms.filter((firm) => firm.status === 'Active').length, [propFirms]);
   const watchCount = useMemo(() => propFirms.filter((firm) => firm.status === 'À surveiller').length, [propFirms]);
@@ -346,11 +343,6 @@ export default function ComparatorClient({
           <div><dt>{c.statLatest}</dt><dd><time dateTime={DATA_UPDATED_AT}>{DATA_UPDATED_AT}</time></dd></div>
         </dl>
       </header>
-
-      <aside className="options-discovery-cta">
-        <div><strong>{oc.nav}: {oc.evaluation}</strong><p>{optionsAuditCopy(locale).notice}</p></div>
-        <Link href={L('/options-prop-firms')}>{oc.dossier} →</Link>
-      </aside>
 
       <section ref={toolbarRef} className={`pr-toolbar${filtersOpen ? ' has-sheet' : ''}`} id="tableau" aria-label={c.toolbarAria}>
         <div className="pr-search-row">
