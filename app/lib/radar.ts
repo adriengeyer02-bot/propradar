@@ -22,13 +22,17 @@ export const RADAR_ORBIT = 292;
 export const RADAR_RINGS = [90, 75, 50] as const;
 
 export const SECTORS = ['Forex & CFD', 'Multi-asset', 'Futures', 'Crypto', 'Stocks'] as const;
-export type Sector = (typeof SECTORS)[number];
+export type Sector = (typeof SECTORS)[number] | 'Options';
 export type RadarTone = 'good' | 'watch' | 'none';
 
 export type RadarDot = {
   slug: string;
   name: string;
   score: number;
+  /** Unscored discovery marker: score 50 is used for globe geometry only, never displayed. */
+  unrated?: boolean;
+  /** Route for a separate discovery dossier, when not part of the scored firm catalogue. */
+  href?: string;
   status: 'Active' | 'Watchlist';
   sector: Sector;
   tone: RadarTone;

@@ -61,6 +61,7 @@ const TRANSLATED = [
   /^\/$/,
   /^\/prop-firm-radar$/,
   /^\/prop-firm-comparison$/,
+  /^\/options-prop-firms(?:\/[^/]+)?$/,
   /^\/firm\/[^/]+$/,
   /^\/about$/,
   /^\/guides$/,
@@ -82,7 +83,7 @@ const TRANSLATED = [
 // New languages are introduced on the main decision surfaces first.
 // Other routes remain accessible but must not be indexed as translated copies
 // until their complete editorial copy has been localized.
-const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/];
+const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/, /^\/options-prop-firms(?:\/[^/]+)?$/];
 
 export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';

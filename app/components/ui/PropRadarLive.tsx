@@ -103,6 +103,8 @@ function shortName(name: string) {
  */
 export default function PropRadarLive({
   data,
+  globeData,
+  optionLabels,
   variant = 'full',
   intro,
   locale = 'en',
@@ -112,6 +114,8 @@ export default function PropRadarLive({
   tableLabels: tb = en.table,
 }: {
   data: RadarData;
+  globeData: Pick<RadarData, 'dots' | 'sectors'>;
+  optionLabels: { name: string; unrated: string };
   variant?: Variant;
   intro?: ReactNode;
   locale?: Locale;
@@ -121,7 +125,7 @@ export default function PropRadarLive({
   tableLabels?: Messages['table'];
 }) {
   const BAND_LABEL: Record<Band, string> = t.bands;
-  const sectorName = (key: string) => (sectorNames as Record<string, string>)[key] ?? key;
+  const sectorName = (key: string) => key === 'Options' ? optionLabels.name : (sectorNames as Record<string, string>)[key] ?? key;
   const firmHref = (slug: string) => localePath(locale, `/firm/${slug}`);
   const statusName = (status: string) => (valueNames as Record<string, string>)[status] ?? status;
   const valueName = (value: string) => (valueNames as Record<string, string>)[value] ?? value;
@@ -143,6 +147,7 @@ export default function PropRadarLive({
   const [lockedSector, setLockedSector] = useState<number | null>(null);
   const [band, setBand] = useState<Band | null>(null);
   const [focus, setFocus] = useState<Focus | null>(null);
+  const [optionSelected, setOptionSelected] = useState<string | null>(null);
   const [pinned, setPinned] = useState(false);
   const [query, setQuery] = useState('');
   const [narrow, setNarrow] = useState(false);
@@ -500,11 +505,20 @@ export default function PropRadarLive({
     if (!q) {
       setPinned(false);
       setFocus(null);
+      setOptionSelected(null);
+      return;
+    }
+    const option = globeData.dots.find((item) => item.unrated && item.name.toLowerCase().includes(q));
+    if (option) {
+      setOptionSelected(option.slug);
+      setFocus(null);
+      setPinned(false);
       return;
     }
     const dot = data.dots.find((d) => d.name.toLowerCase().startsWith(q)) ?? data.dots.find((d) => d.name.toLowerCase().includes(q));
     const closed = dot ? undefined : data.closed.find((c) => c.name.toLowerCase().includes(q));
     if (dot || closed) {
+      setOptionSelected(null);
       setBand(null);
       setLockedSector(null);
       setHoverSector(null);
@@ -515,7 +529,7 @@ export default function PropRadarLive({
   }
 
   // Globe <-> radar: the pinned firm is the globe's selection; a logo picked on the globe pins it here.
-  const selectedSlug = pinned && focus?.kind === 'dot' ? focus.dot.slug : null;
+  const selectedSlug = optionSelected ?? (pinned && focus?.kind === 'dot' ? focus.dot.slug : null);
   const dimmedSlugs = useMemo(() => new Set(data.dots.filter((dot) => dimDot(dot)).map((dot) => dot.slug)), [data.dots, band, sectorKey]); // eslint-disable-line react-hooks/exhaustive-deps
   // "Since your last visit": the previous visit date lives in this browser only.
   const [visit, setVisit] = useState<{ last: string | null; changed: RadarDot[] } | null>(null);
@@ -541,8 +555,16 @@ export default function PropRadarLive({
   const freshSlugs = useMemo(() => new Set((visit?.changed ?? []).map((dot) => dot.slug)), [visit]);
 
   function selectFromGlobe(slug: string) {
+    if (globeData.dots.some((item) => item.slug === slug && item.unrated)) {
+      setOptionSelected(slug);
+      setFocus(null);
+      setPinned(false);
+      setTouched(true);
+      return;
+    }
     const dot = data.dots.find((item) => item.slug === slug);
     if (!dot) return;
+    setOptionSelected(null);
     setTouched(true);
     setFocus({ kind: 'dot', dot });
     setPinned(true);
@@ -955,23 +977,23 @@ export default function PropRadarLive({
         </div>
         {radar}
       </div>
-      <section className="prr-globe prr-globe-col" aria-label={t.globeTitle}>
+      <section className="prr-globe prr-globe-col" id="options-sector" aria-label={t.globeTitle}>
         <h2 className="prr-globe-title">{t.globeTitle}</h2>
         <FirmGlobe
-          dots={data.dots}
-          sectors={data.sectors}
+          dots={globeData.dots}
+          sectors={globeData.sectors}
           sectorName={sectorName}
           selected={selectedSlug}
           dimmed={dimmedSlugs}
           highlight={freshSlugs}
           onSelect={selectFromGlobe}
-          ariaLabel={fill(t.globeAria, { total: data.dots.length })}
+          ariaLabel={fill(t.globeAria, { total: globeData.dots.length })}
           hint={t.globeHint}
           scoreLabel={t.score}
           zoomLabels={{ group: t.globeZoom, in: t.zoomIn, out: t.zoomOut, reset: t.zoomReset }}
           motionLabels={{ pause: t.globePause, resume: t.globeResume }}
           legend={{ caption: t.globeNorth, label: t.scoreBand }}
-          hud={{ locale, labels: t.globeHud, values: valueNames, fromLabel: tb.from_, splitLabel: tb.split, reviewLabel: t.lastReview, trustpilotLabel: t.trustpilot, openLabel: t.openProfile, closeLabel: t.close, onDismiss: () => { setPinned(false); setFocus(null); } }}
+          hud={{ locale, labels: t.globeHud, values: valueNames, fromLabel: tb.from_, splitLabel: tb.split, reviewLabel: t.lastReview, trustpilotLabel: t.trustpilot, openLabel: t.openProfile, closeLabel: t.close, unratedLabel: optionLabels.unrated, onDismiss: () => { setPinned(false); setFocus(null); setOptionSelected(null); } }}
         />
       </section>
       <aside className="prr-side prr-panel" aria-label={t.controls}>

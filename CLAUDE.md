@@ -24,6 +24,13 @@ Site language: English. Owner: Geyer (writes in French, answer him in French).
   is closed, add its record here with the source's own date and wording.
 - `app/lib/industryStats.ts` - figures for /prop-firm-statistics (and its CSV),
   computed from the firm files; provisional values are always excluded.
+- `app/lib/optionsFirms.ts` - separate primary-source discovery catalogue of
+  listed-options prop programmes and professional desks. Its seven entries have
+  NO PropRadar score. `app/lib/optionsGlobe.ts` adds neutral unscored markers
+  to the globe only; NEVER treat their geometric position (50) as a rating,
+  merge them into scored rankings or invent an evaluation without full audit.
+- `app/lib/optionsI18n.ts` - Options landing/profile interface translations
+  for all 15 active locales. Official evidence excerpts stay in English.
 - `scripts/check-domains.ts` - official-domain monitor (run daily by
   `.github/workflows/domain-monitor.yml`, which opens a GitHub issue on change).
 - `scripts/validate-firm-updates.ts` - validates the JSON and says whether a

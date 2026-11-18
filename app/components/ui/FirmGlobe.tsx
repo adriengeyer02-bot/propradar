@@ -652,7 +652,7 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
       for (const { dot, world, p } of placed) {
         const isSel = dot.slug === sel;
         const isDim = dim.has(dot.slug) && !isSel;
-        const tone = dot.tone === 'good' ? palette.good : dot.tone === 'watch' ? palette.watch : palette.none;
+        const tone = dot.unrated ? palette.accent : dot.tone === 'good' ? palette.good : dot.tone === 'watch' ? palette.watch : palette.none;
         if (p.z < 0) {
           // Far side: a faint speck, for depth.
           c.globalAlpha = 0.18 * (1 + p.z) * (isDim ? 0.3 : 1);
@@ -664,7 +664,8 @@ export default function FirmGlobe({ dots, sectors, sectorName, selected, dimmed,
         }
         // Firms without a logo are drawn as small plain dots, so the logos lead.
         const hovered = hoverSlug.current === dot.slug;
-        const plain = !dot.logo && !isSel && !hovered;
+        // Unrated options get their own cyan monogram: they are not low-scored firms.
+        const plain = !dot.logo && !dot.unrated && !isSel && !hovered;
         // Intro: each firm lands in turn (best scores first).
         const landing = reduce ? 1 : Math.max(0, Math.min(1, (now - born - INTRO_DELAY - (rankOf.get(dot.slug) ?? 0) * INTRO_STEP) / INTRO_FADE));
         if (landing <= 0) continue;

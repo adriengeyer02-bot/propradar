@@ -2,6 +2,8 @@ import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
 import HomeGlobe from '../components/ui/HomeGlobe';
 import { buildRadar } from '../lib/radar';
+import { withOptionsGlobe } from '../lib/optionsGlobe';
+import { optionsCopy } from '../lib/optionsI18n';
 import { recentFirmUpdates } from '../lib/firmUpdates';
 import RiskPip from '../components/ui/RiskPip';
 import ScoreRing from '../components/ui/ScoreRing';
@@ -164,9 +166,14 @@ export default async function HomePage({ params }: Props) {
 
         <div className="home-preview pr-home-radar pr-home-globe" aria-label={h.radarAria}>
           <h2 className="sr-only">{h.radarToday}</h2>
-          <HomeGlobe data={homeRadar} locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} tableLabels={t.table} radarCta={h.openRadar} />
+          <HomeGlobe data={homeRadar} globeData={withOptionsGlobe(homeRadar)} optionLabels={{ name: optionsCopy(locale).nav, unrated: optionsCopy(locale).noScore }} locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} tableLabels={t.table} radarCta={h.openRadar} />
         </div>
       </section>
+
+      <aside className="container options-discovery-cta">
+        <div><strong>{optionsCopy(locale).nav}: {optionsCopy(locale).title}</strong><p>{optionsCopy(locale).noScoreNotice}</p></div>
+        <Link href={L('/options-prop-firms')}>{optionsCopy(locale).dossier} →</Link>
+      </aside>
 
       <section className="container home-v2-section" aria-labelledby="home-reviews-title">
         <div className="home-v2-section-heading">
