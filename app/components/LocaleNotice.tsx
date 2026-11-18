@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { LOCALE_COOKIE, isTranslatedPath, splitLocale } from '../lib/locales';
 
-const partialPages = new Set(['/audit', '/promos', '/tools', '/prop-firm-payout-risk', '/radar-brief']);
+const partialPages = new Set(['/audit', '/promos', '/tools', '/prop-firm-payout-risk', '/radar-brief', '/prop-firm-rules']);
 const partialCopy: Record<'sw' | 'ha' | 'am', { title: string; body: string }> = {
   sw: { title: 'Kiolesura kimetafsiriwa; baadhi ya vyanzo vimebaki kwa Kiingereza.', body: 'Madai rasmi ya kampuni, ushahidi na masharti yaliyotolewa na vyanzo yanaweza kuwa katika lugha asilia.' },
   ha: { title: 'An fassara shafin; wasu bayanan tushe suna cikin Ingilishi.', body: 'Bayanan kamfani, hujjoji da sharuddan hukuma na iya kasancewa a harshen asali.' },
