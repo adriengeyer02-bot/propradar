@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { CSSProperties } from 'react';
 import { firmMetaOverrides } from '../../../lib/firmMetaOverrides';
-import { getFirmChangelog } from '../../../lib/firmUpdates';
+import { getFirmChangelog, getFirmUpdate } from '../../../lib/firmUpdates';
 import Link from 'next/link';
 import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
@@ -584,6 +584,11 @@ export default async function FirmPage({ params }: Props) {
   ])).filter((url) => !isBlockedFirmUrl(firm, url)).slice(0, 10);
   const firmPublicUrl = firm.listedDomainWarning ? pageUrl : firm.sources[0]?.url ?? pageUrl;
   const firmChangelog = getFirmChangelog(firm.slug);
+  const firmRules = getFirmUpdate(firm.slug)?.restrictiveRules ?? [];
+  const rulesByProgram = [...new Set(firmRules.map((rule) => rule.program))].map((program) => ({
+    program,
+    rules: firmRules.filter((rule) => rule.program === program),
+  }));
   const isClosedOrParked = firm.status === 'Fermée'
     || /\b(?:domain.sale|for sale|parked|listed for sale|domain sold|acquired|acquisition)\b/i.test(firm.listedDomainWarning ?? '');
   const firmDecision = decisionLabel(firm);
@@ -943,6 +948,7 @@ export default async function FirmPage({ params }: Props) {
           label={f.navLabel}
           items={[
             ...(firm.products.length ? [{ id: 'produits', label: f.nav.offers }] : []),
+            { id: 'rules', label: f.nav.rules },
             { id: 'decision', label: f.nav.decision },
             ...(auditCaseFile ? [{ id: 'case-timeline', label: f.nav.timeline }] : []),
             { id: 'regulatory', label: f.nav.legal },
@@ -1041,6 +1047,38 @@ export default async function FirmPage({ params }: Props) {
             </div>
           </div>
         ) : null}
+      </section>
+
+      <section className="container pr-section pr-restrictive-rules" id="rules" aria-labelledby={`rules-${firm.slug}`}>
+        <header className="pr-section-head">
+          <div>
+            <div className="eyebrow">{f.checkedLabel} · {firmRules.length ? <time dateTime={getFirmUpdate(firm.slug)?.reviewedAt}>{getFirmUpdate(firm.slug)?.reviewedAt}</time> : f.rulesEmptyTag}</div>
+            <h2 id={`rules-${firm.slug}`}>{f.rulesTitle}</h2>
+          </div>
+          {firmRules.length ? <div className="pr-section-meta"><span>{fmt(f.rulesCount, { n: firmRules.length })}</span></div> : null}
+        </header>
+        <p className="pr-section-lead">{f.rulesIntro}</p>
+        {rulesByProgram.length ? (
+          <div className="pr-rules-program-grid">
+            {rulesByProgram.map(({ program, rules }) => (
+              <article className="pr-rules-program" key={program}>
+                <h3>{tx(program)}</h3>
+                <ul className="pr-rules-list">
+                  {rules.map((rule, index) => (
+                    <li key={`${rule.source}-${index}`} className={rule.status === 'conflicting' ? 'pr-rules-conflict' : ''}>
+                      <p>{tx(rule.rule)}</p>
+                      <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {tx(rule.impact)}</p>
+                      {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
+                      <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="pr-rules-empty" role="note">{f.rulesEmpty}</div>
+        )}
       </section>
 
       <section className="container pr-section pr-decision" id="decision" aria-label={fmt(f.decisionAria, { name: firm.name })}>

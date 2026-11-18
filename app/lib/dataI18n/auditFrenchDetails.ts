@@ -6,20 +6,41 @@ export const auditFrenchDetails: Record<string, {
   changelog?: string[];
   entities?: string[];
   incidents?: string[];
+  restrictiveRules?: { program: string; rule: string; impact: string }[];
 }> = {
   'goat-funded-trader': {
+    restrictiveRules: [
+      { program: 'GOAT — demandes de versement sur compte financé', rule: 'Le guide impose un plafond de 3 000 $ de profit quotidien (excédent supprimé), des plafonds selon le modèle pour les deux premiers versements et 3 % de frais de traitement.', impact: 'Le profit brut affiché peut dépasser la somme effectivement éligible ; vérifiez le plafond de votre formule.' },
+      { program: 'GOAT — programmes achetés après le 8 octobre 2026', rule: 'Pour demander un versement, le plus gros trade gagnant doit être au moins égal au plus gros trade perdant. Cette condition ne constitue pas, à elle seule, une violation fermant le compte.', impact: 'Un compte bénéficiaire peut devoir trader davantage avant de pouvoir retirer.' }
+    ],
     changelog: ["", "", "", "", "", "Réexamen à 58/100 : pénalité de huit points pour l'alerte Trustpilot encore active, plus les contraintes de versement publiées. Ni fermeture ni faute individuelle non prouvée ne sont affirmées.", "La FAQ officielle confirme les plafonds sur les premiers retraits, 3 000 $ de gains quotidiens, 3 % de frais et les conditions d'éligibilité ajoutées depuis le 8 octobre 2026."]
   },
   'leeloo-trading': {
+    restrictiveRules: [
+      { program: 'Leeloo Performance Account — compte financé simulé', rule: 'Le support prévoit une concentration maximale de 30 % des profits sur une journée, interdit les trades artificiels (« flipping ») et applique un seuil de liquidation suiveur intraday.', impact: 'Un compte bénéficiaire peut ne pas être éligible au retrait ; le seuil de liquidation peut être touché pendant la séance.' },
+      { program: 'Leeloo — demandes de rémunération', rule: 'Les conditions prévoient une vérification manuelle et des plafonds variables selon le compte ; atteindre l’objectif ne garantit pas une approbation immédiate.', impact: 'Consultez la fenêtre et les limites du Performance Account concerné.' }
+    ],
     changelog: ["", "Les conditions officielles de 2026 prévoient un contrôle manuel et des plafonds variables : note de 70 à 65, sans attribuer à la société une faute non démontrée.", "Le support officiel rappelle la règle des 30 %, le drawdown suiveur et les limites de positions selon les comptes."]
   },
   'hantec-trader': {
+    restrictiveRules: [
+      { program: 'RZR Funded — comptes financés standard', rule: 'Le premier retrait est généralement possible 14 jours après le premier trade ; certaines formules prévoient sept jours ou Instant24. Les positions doivent être clôturées avant la demande.', impact: 'Réussir le challenge ne rend pas tous les profits immédiatement disponibles ; tout dépend de la formule achetée.' },
+      { program: 'RZR Funded — garantie de retrait', rule: 'Les 24 heures ouvrées annoncées concernent l’approbation ou le refus, pas la réception des fonds. Certains contrôles KYC ou de risque sont exclus.', impact: 'La demande peut rester à l’étude au-delà du délai promotionnel.' }
+    ],
     changelog: ["", "", "", "", "La FAQ distingue la décision sous 24 heures ouvrées du virement effectif et exclut certains contrôles supplémentaires. Note de 73 à 70 ; société toujours active sous RZR Funded.", "Trustpilot affiche désormais 4,4/5 sur 880 avis regroupés. Aucune pénalité pour manipulation d'avis n'est appliquée."]
   },
   ftuk: {
+    restrictiveRules: [
+      { program: 'FTUK forex et futures — évaluation et compte financé', rule: 'Chaque position doit rester ouverte au moins 30 secondes, même lorsqu’un stop-loss ou take-profit la ferme plus tôt.', impact: 'Un SL/TP déclenché automatiquement avant 30 secondes peut enfreindre la règle, sans clôture manuelle prématurée.' },
+      { program: 'FTUK — connexions au compte et retraits', rule: 'La multiplication ou le changement de serveurs VPN, certains schémas d’adresses IP et une connexion depuis un autre pays non signalée peuvent déclencher un contrôle.', impact: 'FTUK indique qu’une infraction à ces conditions peut entraîner le refus du retrait et la fermeture du compte.' }
+    ],
     changelog: ["", "", "La règle officielle impose 30 secondes à tous les trades, y compris en cas de SL/TP. Avec les restrictions de stratégie et d'IP, la note baisse de 72 à 65 sans accuser la société de cacher ses règles.", "Conditions VPN/IP vérifiées ; les plaintes et les réponses de FTUK restent contradictoires et non arbitrées.", "Trustpilot affiche 3,9/5 sur 811 avis ; aucune suspension de note n'est signalée."]
   },
   'lux-trading-firm': {
+    restrictiveRules: [
+      { program: 'Lux — parcours Rules of Engagement (évaluation/financé)', rule: 'Cette page annonce 6 % de drawdown statique, 80 % de partage en phase financée et un retrait à la demande après contrôle.', impact: 'Le paiement dépend toujours de la revue de risque ; vérifiez que ce règlement est celui associé à votre achat.' },
+      { program: 'Lux — page Career Plan (application actuelle non vérifiée)', rule: 'Une autre page officielle accessible annonce des retraits mensuels, 75 % de partage et un drawdown relatif/hybride, contre 80 % et le retrait à la demande ailleurs.', impact: 'Ces pages peuvent viser des programmes distincts ou anciens : il faut confirmer quel accord signé s’applique.' }
+    ],
     changelog: ["", "", "Plusieurs pages officielles annoncent 80 % et un retrait à la demande, contre 75 % et un retrait mensuel sur un parcours distinct : note de 74 à 64 pour manque de clarté, sans conclure à un refus de paiement prouvé.", "Les anciennes règles Career et une FAQ d'essai sont encore accessibles ; leur application aux offres actuelles n'a pas été établie.", "Companies House confirme l'existence active de la société britannique, sans garantir ses versements.", "Trustpilot affiche désormais 3,7/5 sur 627 avis, sans alerte de note retenue."]
   },
   'sure-leverage': {

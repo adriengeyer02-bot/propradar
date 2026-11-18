@@ -432,6 +432,14 @@ const ar: Messages = {
     gapsTitle: 'لم يتم التحقق بعد',
     gapsText: 'يعرض PropRadar فقط ما ورد في المصادر. تحقق من بيانات {name} الناقصة على موقع الشركة قبل الشراء.',
     gaps: { 'Profit split': 'نسبة الأرباح', 'Drawdown type': 'نوع حد الخسارة', 'Account sizes': 'أحجام الحسابات', 'Payout timing': 'مواعيد السحب', 'Payout evidence': 'أدلة السحب', 'Trustpilot rating': 'تقييم Trustpilot', 'Legal entity': 'الكيان القانوني' },
+    nav: { ...en.firm.nav, rules: 'القواعد المقيّدة' },
+    rulesTitle: 'القواعد المقيّدة حسب البرنامج',
+    rulesIntro: 'نرتب القيود المنشورة حسب البرنامج ومرحلة الحساب. غياب قاعدة من القائمة لا يعني عدم وجودها. راجع الشروط الرسمية قبل الشراء.',
+    rulesEmpty: 'لم نتحقق بعد من القيود الخاصة ببرامج هذه الشركة. راجع الشروط الرسمية.',
+    rulesEmptyTag: 'لم يتم التحقق بعد',
+    rulesImpact: 'الأثر العملي',
+    rulesConflict: 'المصادر الرسمية متعارضة',
+    rulesCount: '{n} قواعد موثقة',
   },
 };
 

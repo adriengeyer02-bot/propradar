@@ -432,6 +432,14 @@ const tr: Messages = {
     gapsTitle: 'Henüz doğrulanmadı',
     gapsText: 'PropRadar yalnızca kaynakta bulduklarını gösterir. {name} için eksik bilgileri ödeme öncesinde resmi siteden kontrol edin.',
     gaps: { 'Profit split': 'Kâr payı', 'Drawdown type': 'Düşüş sınırı türü', 'Account sizes': 'Hesap tutarları', 'Payout timing': 'Ödeme zamanı', 'Payout evidence': 'Ödeme kanıtı', 'Trustpilot rating': 'Trustpilot puanı', 'Legal entity': 'Tüzel kişi' },
+    nav: { ...en.firm.nav, rules: 'Kısıtlayıcı kurallar' },
+    rulesTitle: 'Programa göre kısıtlayıcı kurallar',
+    rulesIntro: 'Yayımlanan kısıtlamalar program ve hesap aşamasına göre ayrılır. Bir kuralın listelenmemesi, mevcut olmadığı anlamına gelmez. Satın almadan önce resmi şartları kontrol edin.',
+    rulesEmpty: 'Bu firma için programa özel kısıtlamalar henüz doğrulanmadı. Resmi koşulları inceleyin.',
+    rulesEmptyTag: 'Henüz doğrulanmadı',
+    rulesImpact: 'Pratik sonuç',
+    rulesConflict: 'Resmi kaynaklar çelişiyor',
+    rulesCount: '{n} belgelenmiş kural',
   },
 };
 

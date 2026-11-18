@@ -654,6 +654,22 @@ html[data-theme='dark'] {
 
 .pr-key-facts .pr-key-facts-wide dd { color: var(--soft); font-size: 15px; font-stretch: 100%; font-weight: 550; }
 
+/* Sourced restrictions by actual programme / account stage. */
+.pr-restrictive-rules { scroll-margin-top: 88px; }
+.pr-rules-program-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.pr-rules-program { padding: 22px; border: 1px solid color-mix(in srgb, var(--tone-watch) 38%, var(--line)); border-radius: var(--pr-radius); background: var(--surface); }
+.pr-rules-program h3 { margin: 0 0 16px; font-size: 17px; line-height: 1.35; }
+.pr-rules-list { display: grid; gap: 16px; padding: 0; margin: 0; list-style: none; }
+.pr-rules-list li { padding-left: 14px; border-left: 3px solid var(--tone-watch); }
+.pr-rules-list li.pr-rules-conflict { border-left-color: var(--tone-risk); }
+.pr-rules-list p { margin: 0 0 8px; color: var(--text); font-size: 14.5px; line-height: 1.55; }
+.pr-rules-list .pr-rules-impact { color: var(--soft); font-size: 13.5px; }
+.pr-rules-list a { display: inline-block; font-size: 12.5px; color: var(--accent); overflow-wrap: anywhere; }
+.pr-rules-list a span { color: var(--muted); }
+.pr-rules-list .pr-tag { display: inline-block; margin: 0 0 9px; }
+.pr-rules-empty { border: 1px dashed var(--line); border-radius: var(--pr-radius); background: var(--surface); color: var(--muted); padding: 18px 20px; font-size: 14px; line-height: 1.5; }
+@media (max-width: 760px) { .pr-rules-program-grid { grid-template-columns: 1fr; } .pr-rules-program { padding: 18px; } }
+
 .pr-firm-checks {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;

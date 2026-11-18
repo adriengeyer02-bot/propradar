@@ -16,6 +16,7 @@ type AuditSource = {
   changelog?: { summary: string }[];
   setEntities?: { role?: string }[];
   addIncidents?: string[];
+  restrictiveRules?: { program: string; rule: string; impact: string }[];
 };
 
 const translations: Partial<Record<Locale, AuditLocale>> = {
@@ -696,6 +697,13 @@ export function translatedAuditText(locale: Locale, original: string): string | 
         });
         source.addIncidents?.forEach((incident, index) => {
           if (details.incidents?.[index]) dictionary!.set(incident.trim(), details.incidents[index]);
+        });
+        source.restrictiveRules?.forEach((rule, index) => {
+          const translated = details.restrictiveRules?.[index];
+          if (!translated) return;
+          if (translated.program) dictionary!.set(rule.program.trim(), translated.program);
+          if (translated.rule) dictionary!.set(rule.rule.trim(), translated.rule);
+          if (translated.impact) dictionary!.set(rule.impact.trim(), translated.impact);
         });
       }
     }
