@@ -125,6 +125,16 @@ project doc `claude/data-audit-2026-10.md`.
   French guides with a hand-written article (`app/lib/frArticles.ts`, `enPath`) redirect to it.
 - Firm data, scores and dates are shared by every language: never translate a number differently
   (Hindi formats numbers with en-US grouping, not lakh/crore; see `numberLocale`).
+- All 709 sourced restrictive rules (rule text and practical impact) are now translated
+  in French. The original audited data and source URLs stay in English in
+  `firm-updates.json`; new translations for 84 firms live in
+  `app/lib/dataI18n/auditFrenchExtra.ts`. `auditFrenchExtraHashes.json` ties
+  each rendering to the exact English programme/rule/impact triple. If a rule
+  changes, review its translation first and then run
+  `node scripts/generate-french-rule-fingerprints.cjs --write-after-translation-review`.
+  Do NOT regenerate hashes automatically on source updates or stale French
+  contractual wording could be published. Run `npm run check:firm-rules-fr`
+  before merging any new rules. Official commercial programme names remain intact.
 - Translated firm data lives in `app/lib/dataI18n/<locale>.json` (English text as key); a missing key shows English.
 
 ## Editorial and legal rules (non-negotiable)
