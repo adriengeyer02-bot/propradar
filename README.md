@@ -15,10 +15,10 @@ Le site sera disponible sur `http://localhost:3000`.
 
 L'anglais est servi à la racine et les autres langues sous leur préfixe (`/fr`, `/sw`, etc.). Les langues actives sont définies dans `app/lib/locales.ts` et leurs textes dans `app/lib/messages/`.
 
-- **Kiswahili (`sw`), hausa (`ha`) et amharique (`am`)** : traduction de l'accueil, du radar, du comparateur et des fiches prop firm, ajoutée le 18 novembre 2026. La navigation, les avertissements de fermeture et les mentions d'affiliation de ces écrans sont également localisés.
-- Les guides, enquêtes, documents juridiques et autres pages longues ne sont **pas encore traduits** dans ces trois langues : ils affichent le texte anglais avec un avertissement et ne sont pas indexés comme traductions (`isTranslatedPath` et `localeAlternates`). Ne pas étendre les `hreflang` sans traduction éditoriale complète et relecture.
+- **Kiswahili (`sw`), hausa (`ha`) et amharique (`am`)** : l'accueil, le radar, le comparateur, les fiches, les outils, l'audit, les règles de trading, les promos, le risque de payout, À propos, les statistiques, Trustpilot et la page Challenges ont leurs textes d'interface et leurs explications éditoriales traduits. Les **27 guides** disposent de titres, résumés, contrôles et FAQ propres à chaque langue (`app/lib/guideI18n/african.ts`). Le sélecteur mobile présente les 15 langues sur deux colonnes, avec défilement.
+- **Couverture à ne pas confondre avec une traduction intégrale des sources** : les longues enquêtes d'édition du Risk Brief, les longs articles des guides, les documents juridiques et les **données d'audit/produit citées des firmes** restent dans leur langue source. Ces dernières sont volontairement séparées des textes rédigés par PropRadar ; elles ne doivent pas être traduites approximativement. Le hub du Risk Brief est localisé mais ses archives restent en anglais et `noindex`. Le même traitement s'applique aux autres routes réellement non traduites (`isTranslatedPath` et `localeAlternates`).
 - Les données factuelles, sources, prix, scores, formules et liens affiliés restent communs à toutes les langues. Une modification de traduction ne doit jamais altérer ces éléments.
-- Avant de promouvoir davantage ces versions, faire relire les expressions techniques et les avertissements par des locuteurs natifs, notamment pour l'amharique.
+- Avant de promouvoir davantage ces versions, faire relire les expressions techniques et les avertissements par des locuteurs natifs, notamment pour l'amharique ; les traductions ne constituent pas une validation linguistique professionnelle.
 
 ## API Reddit et X/Twitter
 

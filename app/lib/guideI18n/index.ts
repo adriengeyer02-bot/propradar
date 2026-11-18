@@ -10,6 +10,7 @@ import pt from './pt';
 import zh from './zh';
 import ja from './ja';
 import hi from './hi';
+import { sw, ha, am } from './african';
 import frArticles from './articles/fr';
 import deArticles from './articles/de';
 import itArticles from './articles/it';
@@ -22,7 +23,7 @@ import { updateNoChallengeTranslation } from './noChallenge';
 
 export type { GuideTranslation };
 
-const ALL: Partial<Record<Locale, GuideTranslations>> = { fr, de, it, es, pt, zh, ja, hi };
+const ALL: Partial<Record<Locale, GuideTranslations>> = { fr, de, it, es, pt, zh, ja, hi, sw, ha, am };
 /** Long article bodies, kept apart from the summaries (only the guides that have an English article). */
 const ARTICLES: Partial<Record<Locale, GuideArticleTranslations>> = {
   fr: frArticles,

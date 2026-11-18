@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check:african-i18n": "node scripts/check-african-i18n.cjs",
     "start": "next start",
     "lint": "next lint"
   },

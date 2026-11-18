@@ -79,14 +79,27 @@ const TRANSLATED = [
   /^\/(articles|meilleures-prop-firms-2026|prop-firm-sans-challenge|regle-de-consistance-prop-firm|drawdown-prop-firm|avis-topstep|ftmo-vs-the5ers)$/,
 ];
 
-// New languages are introduced on the main decision surfaces first.
-// Other routes remain accessible but must not be indexed as translated copies
-// until their complete editorial copy has been localized.
+// Swahili, Hausa and Amharic now have localized interfaces, guide summaries,
+// audit conclusions and risk explanations on these routes. Original-language
+// company disclosures remain source evidence, not translated editorial copy.
+// The risk-brief archive and full issues still contain English editorial text;
+// do not index those as African-language translations yet.
+const AFRICAN_LANGUAGE_PATHS = [
+  /^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/,
+  /^\/about$/, /^\/tools$/, /^\/audit$/, /^\/promos$/, /^\/prop-firm-rules$/,
+  /^\/prop-firm-payout-risk$/, /^\/prop-firm-challenge$/, /^\/prop-firm-statistics$/,
+  /^\/trustpilot-prop-firms$/, /^\/guides$/, /^\/guides\/[^/]+$/,
+  /^\/best-prop-firms$/,
+];
+// Turkish, Arabic and Korean are still limited to the initial four surfaces.
 const NEW_LANGUAGE_PATHS = [/^\/$/, /^\/prop-firm-radar$/, /^\/prop-firm-comparison$/, /^\/firm\/[^/]+$/];
 
 export function isTranslatedPath(path: string, locale: Locale = 'en') {
   const clean = path.replace(/\/+$/, '') || '/';
-  if (locale === 'tr' || locale === 'ar' || locale === 'ko' || locale === 'sw' || locale === 'ha' || locale === 'am') {
+  if (locale === 'sw' || locale === 'ha' || locale === 'am') {
+    return AFRICAN_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
+  }
+  if (locale === 'tr' || locale === 'ar' || locale === 'ko') {
     return NEW_LANGUAGE_PATHS.some((pattern) => pattern.test(clean));
   }
   return TRANSLATED.some((pattern) => pattern.test(clean));

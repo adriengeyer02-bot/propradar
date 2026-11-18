@@ -8,11 +8,13 @@ import pt from './pt';
 import zh from './zh';
 import ja from './ja';
 import hi from './hi';
+import sw from './sw';
+import ha from './ha';
+import am from './am';
 
 export type { PromosMessages };
 
-// Untranslated editorial pages fall back to English and are noindexed in these locales.
-const ALL: Record<Locale, PromosMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en, ko: en, sw: en, ha: en, am: en };
+const ALL: Record<Locale, PromosMessages> = { en, fr, de, it, es, pt, zh, ja, hi, tr: en, ar: en, ko: en, sw, ha, am };
 
 export function getPageMessages(locale: Locale): PromosMessages {
   return ALL[locale] ?? en;
