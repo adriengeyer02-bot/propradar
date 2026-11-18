@@ -34,7 +34,7 @@ export const closureRecords: ClosureRecord[] = [
       label: 'Finance Magnates',
       url: 'https://www.financemagnates.com/forex/easton-controlled-skilled-funded-trader-suspends-prop-trading-operations/',
     },
-    checkedAt: '2026-07-15',
+    checkedAt: '2026-11-18',
   },
   {
     slug: 'true-forex-funds',
@@ -42,7 +42,7 @@ export const closureRecords: ClosureRecord[] = [
     dateKind: 'closure',
     summary: 'Announced a permanent closure, citing financial insolvency, after losing MetaTrader access in February 2024.',
     source: { label: 'FX News Group', url: 'https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-true-forex-funds-folds/' },
-    checkedAt: '2026-07-19',
+    checkedAt: '2026-11-18',
   },
   {
     slug: 'surgetrader',
@@ -53,7 +53,7 @@ export const closureRecords: ClosureRecord[] = [
       label: 'Finance Magnates',
       url: 'https://www.financemagnates.com/forex/prop-firm-surgetrader-shuts-down-a-week-after-losing-match-trader-license/',
     },
-    checkedAt: '2026-07-19',
+    checkedAt: '2026-11-18',
   },
   {
     slug: 'funded-engineer',
@@ -61,7 +61,7 @@ export const closureRecords: ClosureRecord[] = [
     dateKind: 'closure',
     summary: 'Announced a permanent closure and its intention to file for bankruptcy.',
     source: { label: 'Finance Magnates', url: 'https://www.financemagnates.com/forex/breaking-prop-trading-firm-funded-engineer-shuts-down/' },
-    checkedAt: '2026-07-19',
+    checkedAt: '2026-11-18',
   },
   {
     slug: 'karma-prop-traders',
@@ -106,7 +106,7 @@ export const closureRecords: ClosureRecord[] = [
       label: 'Finance Magnates',
       url: 'https://www.financemagnates.com/forex/seacrest-ends-prop-trading-after-integrating-myfundedfx-shifts-focus-to-cfds/',
     },
-    checkedAt: '2026-10-29',
+    checkedAt: '2026-11-18',
   },
   {
     slug: 'syndicate-funded',
