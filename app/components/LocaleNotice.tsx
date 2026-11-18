@@ -14,7 +14,7 @@ const partialCopy: Record<'sw' | 'ha' | 'am', { title: string; body: string }> =
 export default function LocaleNotice({ title, body, english }: { title: string; body: string; english: string }) {
   const { locale, path } = splitLocale(usePathname() || '/');
   if (locale === 'en' || isTranslatedPath(path, locale)) return null;
-  const isPartiallyLocalized = (locale === 'sw' || locale === 'ha' || locale === 'am') && partialPages.has(path);
+  const isPartiallyLocalized = (locale === 'sw' || locale === 'ha' || locale === 'am') && (partialPages.has(path) || path === '/guides' || path.startsWith('/guides/'));
   const message = isPartiallyLocalized ? partialCopy[locale as keyof typeof partialCopy] : null;
   return (
     <div className="locale-notice" role="note">
