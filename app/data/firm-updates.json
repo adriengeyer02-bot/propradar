@@ -343,9 +343,9 @@
       "reviewedAt": "2026-11-18",
       "set": {
         "priceFrom": 27,
-        "score": 47,
+        "score": 56,
         "verdict": "Active UK operator, but historic FCA warning, unavailable Trustpilot rating, concerning 2025 filed net liabilities and severe dispute clauses warrant substantial caution.",
-        "auditSummary": "Independent second-pass review on 18 November 2026. The UK company 13719951 is active, and Alpha still offers simulated evaluations. Trustpilot withholds its rating following a guideline breach and says fake reviews were removed. The Dutch AFM preserves a 2023 FCA warning naming this exact domain, though the original FCA page no longer loads and its present status could not be established. Accounts filed for 2025 show negative net assets, not evidence of formal insolvency. Current terms include strict per-position risk, device-sharing checks, unilateral complaint restrictions and a contractual demand for the user to bear Alpha's legal costs regardless of court outcome; enforceability of that clause is not independently established. Trader allegations of CID-linked payout refusals remain allegations, not court findings. Score reduced from its previous 64/100 effective cap to 47/100; firm remains operational, not endorsed."
+        "auditSummary": "Independent second-pass review on 18 November 2026. The UK company 13719951 is active, and Alpha still offers simulated evaluations. Trustpilot withholds its rating following a guideline breach and says fake reviews were removed. The Dutch AFM preserves a 2023 FCA warning naming this exact domain, though the original FCA page no longer loads and its present status could not be established. Accounts filed for 2025 show negative net assets, not evidence of formal insolvency. Current terms include strict per-position risk, device-sharing checks, unilateral complaint restrictions and a contractual demand for the user to bear Alpha's legal costs regardless of court outcome; enforceability of that clause is not independently established. Trader allegations of CID-linked payout refusals remain allegations, not court findings. Calibrated score 56/100: one 8-point review-integrity deduction, then separate documented legal/financial/contractual risk adjustments rather than treating complaints as judicial findings; firm remains operational."
       },
       "addSources": [
         {
@@ -1684,7 +1684,7 @@
         },
         {
           "date": "2026-11-18",
-          "summary": "Second-pass: verified the still-withheld Trustpilot rating, the E8 Funding LLC and E8 Markets Ltd disclosures, and unusually broad retroactive changes and payout-forfeiture discretion in official terms. Lowered editorial score to 53 despite verified aggregate tracked crypto payouts.",
+          "summary": "Second-pass: verified the still-withheld Trustpilot rating, the E8 Funding LLC and E8 Markets Ltd disclosures, and unusually broad retroactive changes and payout-forfeiture discretion in official terms. Editorial rating recalibrated to 62 with a single 8-point Trustpilot deduction and positive weight for externally tracked crypto payouts.",
           "source": "https://e8markets.com/e8-markets-terms-and-conditions",
           "fields": ["score", "legalReview", "auditSummary", "verdict"]
         },
@@ -1697,9 +1697,9 @@
       ],
       "reviewedAt": "2026-11-18",
       "set": {
-        "score": 53,
+        "score": 62,
         "verdict": "Operational US-linked simulated trading brand with externally tracked payouts, but withdrawn Trustpilot rating and broad payout and retroactive-rule discretion require caution.",
-        "auditSummary": "Independent re-audit on 18 November 2026: E8 continues offering simulated evaluations through E8 Funding LLC, alongside a Saint Lucia entity. Trustpilot still hides its rating after a guidelines breach and fake-review removals. E8's published terms let it change features or reward policies for existing users, including retroactively, and withhold awards following its own compliance decisions. Finance Magnates Data Lab tracked crypto payouts in Q1 2026, a positive but incomplete payment signal. A Dallas contract claim filed in April 2026 was dismissed by June after a nonsuit; it is not a court finding against E8. The editorial score is 53/100, with affiliate status excluded from the calculation."
+        "auditSummary": "Independent re-audit on 18 November 2026: E8 continues offering simulated evaluations through E8 Funding LLC, alongside a Saint Lucia entity. Trustpilot still hides its rating after a guidelines breach and fake-review removals. E8's published terms let it change features or reward policies for existing users, including retroactively, and withhold awards following its own compliance decisions. Finance Magnates Data Lab tracked crypto payouts in Q1 2026, a positive but incomplete payment signal. A Dallas contract claim filed in April 2026 was dismissed by June after a nonsuit; it is not a court finding against E8 and carries no guilt deduction. The recalibrated score is 62/100, reflecting one 8-point Trustpilot integrity deduction, contract risk and positive tracked payout evidence; affiliate status is excluded."
       },
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/e8markets.com).",
@@ -2818,10 +2818,10 @@
         "payoutDelay": "bi-weekly rewards (Classic / One-Phase); typically paid within 1 working day of approval",
         "priceFrom": 69,
         "profitSplit": 80,
-        "score": 47,
+        "score": 55,
         "headquarters": "Malta",
         "verdict": "Operational Malta/Saint Lucia simulated-challenge business, but its withdrawn Trustpilot rating, concentrated payout disputes and discretionary contract clauses warrant a high level of caution.",
-        "auditSummary": "Independent re-audit on 18 November 2026: FunderPro remains commercially active and has identifiable Malta and Saint Lucia companies. Its official March 2026 challenge terms reserve broad discretion over entry into the funded phase, allow extra activation fees for certain products and prohibit linked accounts/shared environments and trading above a 20% per-asset-class margin threshold. Trustpilot still withholds the firm rating for guideline breaches and reports removing fake reviews; approximately 35% of visible reviews carry one star. One documented customer complaint contests an IP-sharing payout denial and the firm publicly maintains broader signals were checked and points to appeals. A customer dispute is not a proven rule breach by the firm. The independently set score is 47/100, unaffected by PropRadar affiliation."
+        "auditSummary": "Independent re-audit on 18 November 2026: FunderPro remains commercially active and has identifiable Malta and Saint Lucia companies. Its official March 2026 challenge terms reserve broad discretion over entry into the funded phase, allow extra activation fees for certain products and prohibit linked accounts/shared environments and trading above a 20% per-asset-class margin threshold. Trustpilot still withholds the firm rating for guideline breaches and reports removing fake reviews; approximately 35% of visible reviews carry one star. One documented customer complaint contests an IP-sharing payout denial and the firm publicly maintains broader signals were checked and points to appeals. A customer dispute is not a proven rule breach by the firm. Score recalibrated to 55/100, with a single 8-point Trustpilot event penalty and separate contract/reputation weighting, unaffected by PropRadar affiliation."
       },
       "addSources": [
         {
@@ -2834,7 +2834,7 @@
         "18/11/2026 — Publicly contested payout decision: an October 2026 Trustpilot reviewer reports an account failure for alleged IP sharing and disputes the evidence; FunderPro's 12 October reply says additional risk signals were considered and an appeal is available, but declines to share raw security logs publicly. It is a disputed customer report, not adjudicated wrongdoing. Source: https://uk.trustpilot.com/review/funderpro.com"
       ],
       "setLegalReview": {
-        "summary": "18 November 2026: official FunderPro challenge terms name Malta-registered FunderPro Ltd (C 104558), while site footer additionally names FunderPro Saint Lucia Ltd (2025-00393). The firm offers simulated trading rather than regulated investment services. The Malta contract imposes broad account-review discretion, permits activation fees on some products, and treats shared IPs, devices, VPSs and linked trading environments as prohibited where they enable coordination. A live Trustpilot warning removes the rating; complaints of payout refusal using IP/device checks are public but disputed, including a company reply. This combination is medium-to-high risk and merits a 47/100 score despite affiliate relationships.",
+        "summary": "18 November 2026: official FunderPro challenge terms name Malta-registered FunderPro Ltd (C 104558), while site footer additionally names FunderPro Saint Lucia Ltd (2025-00393). The firm offers simulated trading rather than regulated investment services. The Malta contract imposes broad account-review discretion, permits activation fees on some products, and treats shared IPs, devices, VPSs and linked trading environments as prohibited where they enable coordination. A live Trustpilot warning removes the rating; complaints of payout refusal using IP/device checks are public but disputed, including a company reply. This combination is medium-to-high risk and merits a recalibrated 55/100 score despite affiliate relationships.",
         "riskLevel": "Medium to high",
         "regulatoryStatus": [
           "Official March 2026 challenge terms identify FunderPro Ltd, Malta company C 104558; official footer also identifies FunderPro Saint Lucia Ltd, registration 2025-00393.",
@@ -3440,7 +3440,7 @@
         },
         {
           "date": "2026-11-18",
-          "summary": "Second-pass re-audit of 15 November 2026 terms: Hong Kong contracting party and Saint Lucia simulated services remain; the firm can refuse linked/coordinated trading or terminate services with extensive discretion. 39% of visible Trustpilot ratings are one-star while its overall score remains withdrawn. Editorial risk score lowered to 43.",
+          "summary": "Second-pass re-audit of 15 November 2026 terms: Hong Kong contracting party and Saint Lucia simulated services remain; the firm can refuse linked/coordinated trading or terminate services with extensive discretion. 39% of visible Trustpilot ratings are one-star while its overall score remains withdrawn. After removing double-counting of allegations and the Trustpilot event, editorial risk score recalibrated to 54.",
           "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
           "fields": ["score", "auditSummary", "verdict", "legalReview", "headquarters"]
         },
@@ -3453,10 +3453,10 @@
       ],
       "reviewedAt": "2026-11-18",
       "set": {
-        "score": 43,
+        "score": 54,
         "headquarters": "Hong Kong",
         "verdict": "Operating Hong Kong/Saint Lucia simulated-trading brand with firm-reported payout history, but a withdrawn Trustpilot rating, large negative-review share and rigid automated payout checks.",
-        "auditSummary": "Second-pass investigation dated 18 November 2026: GOAT Funded Trader remains operational. Its current agreement names Wishes Tower International Limited in Hong Kong and Goat Funded LTD in Saint Lucia; rewards derive from simulated rather than live funded capital. Trustpilot still hides the TrustScore and notes fake reviews removed; about 39% of displayed consumer reviews are one-star. Official help updated 14 November says any payout destination already linked to another user is an automatic final breach even for family sharing, with no option to supply a new address. Terms allow broad suspension and prohibited-strategy findings. Public trader reports describe IP/VPS and coordinated-trading payout disagreements, while some users report successful payouts; these are not proven legal violations. Firm-reported payout totals exist but are not independent audited accounts. Risk-weighted score 43/100; referral relationship is excluded."
+        "auditSummary": "Second-pass investigation dated 18 November 2026: GOAT Funded Trader remains operational. Its current agreement names Wishes Tower International Limited in Hong Kong and Goat Funded LTD in Saint Lucia; rewards derive from simulated rather than live funded capital. Trustpilot still hides the TrustScore and notes fake reviews removed; about 39% of displayed consumer reviews are one-star. Official help updated 14 November says any payout destination already linked to another user is an automatic final breach even for family sharing, with no option to supply a new address. Terms allow broad suspension and prohibited-strategy findings. Public trader reports describe IP/VPS and coordinated-trading payout disagreements, while some users report successful payouts; these are not proven legal violations. Firm-reported payout totals exist but are not independent audited accounts. Risk-weighted score recalibrated to 54/100: Trustpilot penalty counted once at 8 points, independent contractual rules and residual review distribution weighed separately, legitimate operation and reported payouts taken into account; referral relationship is excluded."
       },
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com).",
@@ -4267,10 +4267,10 @@
     "maven-trading": {
       "reviewedAt": "2026-11-18",
       "set": {
-        "score": 53,
+        "score": 62,
         "headquarters": "United Arab Emirates",
         "verdict": "Operational UAE-based simulated-evaluation business with clarified 2026 terms, but a withheld Trustpilot rating, demanding consistency gates and payout ceilings justify caution.",
-        "auditSummary": "18 November 2026 independent re-audit: Maven's newly updated terms (version 2026.3, 5 November) now clearly identify MAVEN EDU - FZCO, Dubai free-zone trade licence 60823, and recognise approved cash rewards as contractual obligations. This corrects earlier ambiguity between MAVEN LLC and Maven Edu - FZCO. Trustpilot nevertheless still withholds its rating for a guidelines breach and reports removed fake reviews. Standard and certain direct-access accounts carry a $10,000 combined limit within two payouts or 30 days; excess profit is erased, with strict profitable-day and consistency rules. Claims of interview-related payout refusal appear in consumer reviews but are not adjudicated. Disputes under the current contract may require Dubai arbitration. Score 53/100, without using affiliate relationships."
+        "auditSummary": "18 November 2026 independent re-audit: Maven's newly updated terms (version 2026.3, 5 November) now clearly identify MAVEN EDU - FZCO, Dubai free-zone trade licence 60823, and recognise approved cash rewards as contractual obligations. This corrects earlier ambiguity between MAVEN LLC and Maven Edu - FZCO. Trustpilot nevertheless still withholds its rating for a guidelines breach and reports removed fake reviews. Standard and certain direct-access accounts carry a $10,000 combined limit within two payouts or 30 days; excess profit is erased, with strict profitable-day and consistency rules. Claims of interview-related payout refusal appear in consumer reviews but are not adjudicated. Disputes under the current contract may require Dubai arbitration. Score recalibrated to 62/100: one 8-point Trustpilot deduction, separate payout-ceiling risk and positive weight for legal clarification, without affiliate bias."
       },
       "addIncidents": [
         "Trustpilot's maventrading.com profile, checked on 2026-10-26, displays no TrustScore. Trustpilot's notice (Danish mirror, translated) reads: \"This company's TrustScore is currently unavailable due to a breach of our guidelines\", next to its reminder that companies may not offer incentives or pay to hide reviews. Source: https://dk.trustpilot.com/review/maventrading.com?page=3"
@@ -4291,7 +4291,7 @@
         },
         {
           "date": "2026-11-18",
-          "summary": "Full legal and payout-rule recheck of Maven terms version 2026.3 effective 5 November: contracting party now unambiguously MAVEN EDU - FZCO (DIEZ licence 60823); approved rewards described as contractual, but trader-wide $10,000 payout ceiling, strict consistency requirements and Dubai DIAC arbitration remain. Trustpilot rating remains withdrawn; score re-assessed to 53.",
+          "summary": "Full legal and payout-rule recheck of Maven terms version 2026.3 effective 5 November: contracting party now unambiguously MAVEN EDU - FZCO (DIEZ licence 60823); approved rewards described as contractual, but trader-wide $10,000 payout ceiling, strict consistency requirements and Dubai DIAC arbitration remain. Trustpilot rating remains withdrawn; score calibrated to 62 after one 8-point review-integrity deduction and separate contract-risk factors.",
           "source": "https://maventrading.com/terms-and-conditions",
           "fields": ["score", "verdict", "auditSummary", "legalReview", "entities", "headquarters"]
         },
