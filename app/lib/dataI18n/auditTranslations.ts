@@ -1,6 +1,9 @@
 import type { Locale } from '../locales';
 import updates from '../../data/firm-updates.json';
 import { auditFrenchDetails } from './auditFrenchDetails';
+import { auditFrenchExtra } from './auditFrenchExtra';
+import auditFrenchExtraHashes from './auditFrenchExtraHashes.json';
+import { createHash } from 'node:crypto';
 
 /**
  * Editorial translations are tied to the exact English strings of a reviewed
@@ -772,42 +775,56 @@ const translations: Partial<Record<Locale, AuditLocale>> = {
 
 const dictionaries: Partial<Record<Locale, Map<string, string>>> = {};
 
+const verifiedFrenchExtra = (slug: string, index: number, rule: { program: string; rule: string; impact: string }) => {
+  const expected = (auditFrenchExtraHashes as Record<string, string[]>)[slug]?.[index];
+  if (!expected) return undefined;
+  const current = createHash('sha256')
+    .update(JSON.stringify([rule.program, rule.rule, rule.impact])).digest('hex');
+  return current === expected ? auditFrenchExtra[slug]?.[index] : undefined;
+};
+
 export function translatedAuditText(locale: Locale, original: string): string | undefined {
   const entries = translations[locale];
   if (!entries) return undefined;
   let dictionary = dictionaries[locale];
   if (!dictionary) {
     dictionary = new Map();
-    for (const [slug, translation] of Object.entries(entries)) {
-      if (!translation) continue;
+    const slugs = locale === 'fr'
+      ? new Set([...Object.keys(entries), ...Object.keys(auditFrenchExtra)])
+      : new Set(Object.keys(entries));
+    for (const slug of slugs) {
+      const translation = entries[slug];
+      if (!translation && !(locale === 'fr' && auditFrenchExtra[slug])) continue;
       const source = (updates.firms as Record<string, AuditSource>)[slug];
       if (!source) continue;
       for (const field of ['verdict', 'auditSummary', 'listedDomainWarning'] as const) {
         const english = source.set?.[field];
-        const localized = translation[field];
+        const localized = translation?.[field];
         if (english && localized) dictionary.set(english.trim(), localized);
       }
       const legalSummary = source.setLegalReview?.summary;
-      if (legalSummary && translation.legalSummary) dictionary.set(legalSummary.trim(), translation.legalSummary);
+      if (legalSummary && translation?.legalSummary) dictionary.set(legalSummary.trim(), translation.legalSummary);
       if (locale === 'fr') {
         const details = auditFrenchDetails[slug];
-        if (!details) continue;
+        const extraRules = auditFrenchExtra[slug];
+        if (!details && !extraRules) continue;
         for (const field of ['regulatoryStatus', 'complaintsAndDisputes', 'redFlags'] as const) {
           const originals = source.setLegalReview?.[field] ?? [];
-          const localized = details[field] ?? [];
+          const localized = details?.[field] ?? [];
           originals.forEach((line, index) => { if (localized[index]) dictionary!.set(line.trim(), localized[index]); });
         }
         source.changelog?.forEach((entry, index) => {
-          if (details.changelog?.[index]) dictionary!.set(entry.summary.trim(), details.changelog[index]);
+          if (details?.changelog?.[index]) dictionary!.set(entry.summary.trim(), details.changelog[index]);
         });
         source.setEntities?.forEach((entity, index) => {
-          if (entity.role && details.entities?.[index]) dictionary!.set(entity.role.trim(), details.entities[index]);
+          if (entity.role && details?.entities?.[index]) dictionary!.set(entity.role.trim(), details.entities[index]);
         });
         source.addIncidents?.forEach((incident, index) => {
-          if (details.incidents?.[index]) dictionary!.set(incident.trim(), details.incidents[index]);
+          if (details?.incidents?.[index]) dictionary!.set(incident.trim(), details.incidents[index]);
         });
         source.restrictiveRules?.forEach((rule, index) => {
-          const translated = details.restrictiveRules?.[index];
+          const extra = extraRules && verifiedFrenchExtra(slug, index, rule);
+          const translated = details?.restrictiveRules?.[index] ?? (extra ? { program: extra[0], rule: extra[1], impact: extra[2] } : undefined);
           if (!translated) return;
           // A rules update must not inherit a translation of a different or older rule.
           if (translated.sourceRule && translated.sourceRule !== rule.rule) return;
@@ -816,7 +833,7 @@ export function translatedAuditText(locale: Locale, original: string): string | 
           if (translated.impact) dictionary!.set(rule.impact.trim(), translated.impact);
         });
         source.setProducts?.forEach((product, index) => {
-          const translated = details.products?.[index];
+          const translated = details?.products?.[index];
           if (!translated) return;
           for (const field of ['name', 'description', 'drawdownDetails', 'maxDrawdown', 'maxDailyLoss', 'consistencyRule', 'profitTarget', 'profitSplit', 'minTradingDays'] as const) {
             const english = product[field];
