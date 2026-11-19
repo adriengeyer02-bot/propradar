@@ -30,6 +30,14 @@ A documented, current Trustpilot fake-review removal notice may justify an
 editorial deduction of **at most 8 points**, on top of nothing else; it never
 replaces the 64 cap (README, 2026-11-18).
 
+Never write the score itself ("74/100", "score 66 to 63") in a verdict,
+audit summary or changelog-facing narrative: the displayed score moves with
+the pipeline and the text goes stale (FTMO showed 90 while its verdict said
+89/100). The firm page's score dialog explains every step. Explain the reasons
+in words; record the number only in `set.score` and the changelog `fields`.
+The validator rejects new narrative text containing "NN/100", and
+`app/lib/scoreClaims.ts` strips score sentences from older texts at display.
+
 ## 2. Restrictive-rules penalty
 
 A restrictive rule is a contract or FAQ condition that can delay, reduce or
