@@ -900,7 +900,7 @@ html body .pr-product.pr-product-compact {
 .pr-product-compact .pr-program-promo { gap: 4px; padding: 10px 12px; border-radius: 8px; }
 .pr-product-compact .pr-program-promo-head { gap: 3px 8px; }
 .pr-product-compact .pr-program-promo-head > span { font-size: 12px; }
-.pr-product-compact .pr-program-promo-head > strong { font-size: 16px; }
+.pr-product-compact .pr-program-promo-head > strong { color: var(--accent); font-size: 16px; }
 .pr-product-compact .pr-program-promo-code { font-size: 12px; }
 .pr-product-compact .pr-program-promo-code code { padding: 2px 7px; font-size: 12px; }
 
