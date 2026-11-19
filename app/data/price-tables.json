@@ -824,5 +824,76 @@
           "rows": [{ "size": 500000, "price": 3495 }, { "size": 1000000, "price": 5995 }]
         }
       ]
-    }  }
+    },
+    "tradexprop": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "X 1-Step (Forex)", "productId": "tradexprop-x-1-step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://tradexprop.com/",
+          "note": "Homepage table with 10% target / 6% static drawdown (X-1 Step parameters per the official help article). No crossed-out prices shown.",
+          "rows": [{ "size": 5000, "price": 45 }, { "size": 10000, "price": 85 }, { "size": 25000, "price": 215 }, { "size": 50000, "price": 395 }, { "size": 100000, "price": 795 }, { "size": 250000, "price": 2155 }, { "size": 400000, "price": 3755 }]
+        },
+        {
+          "name": "X 2-Step (Forex)", "productId": "tradexprop-x-2-step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://tradexprop.com/",
+          "note": "Homepage table with 8% and 5% targets / 8% static drawdown.",
+          "rows": [{ "size": 5000, "price": 35 }, { "size": 10000, "price": 75 }, { "size": 25000, "price": 155 }, { "size": 50000, "price": 310 }, { "size": 100000, "price": 615 }, { "size": 250000, "price": 1540 }, { "size": 400000, "price": 2465 }]
+        },
+        {
+          "name": "Instant Funded X", "productId": "tradexprop-instant-funded-x", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://tradexprop.com/",
+          "note": "Prices from the homepage Instant Funded X table; the Instant Funded X page itself shows no prices.",
+          "rows": [{ "size": 5000, "price": 200 }, { "size": 10000, "price": 400 }, { "size": 25000, "price": 1125 }, { "size": 50000, "price": 2500 }, { "size": 100000, "price": 5000 }]
+        },
+        {
+          "name": "Crypto X-1 Step", "productId": "tradexprop-crypto-x-1-step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://tradexprop.com/crypto-evaluation/",
+          "note": "Table with 9% target / 6% static drawdown under the X-1 Step tab (parameters match the official crypto guide).",
+          "rows": [{ "size": 5000, "price": 45 }, { "size": 10000, "price": 95 }, { "size": 25000, "price": 250 }, { "size": 50000, "price": 525 }, { "size": 100000, "price": 1050 }, { "size": 200000, "price": 2150 }]
+        },
+        {
+          "name": "Crypto X-2 Step", "productId": "tradexprop-crypto-x-2-step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://tradexprop.com/crypto-evaluation/",
+          "note": "Table with 6% and 9% targets / 9% static drawdown under the X-2 Step tab.",
+          "rows": [{ "size": 5000, "price": 35 }, { "size": 10000, "price": 80 }, { "size": 25000, "price": 210 }, { "size": 50000, "price": 430 }, { "size": 100000, "price": 900 }, { "size": 200000, "price": 2000 }]
+        }
+      ]
+    },
+    "funded-trader-markets": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "1-Step Nitro", "productId": "ftm-1step-nitro", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedtradermarkets.com/",
+          "note": "Crossed (pre-discount) prices from the home page price table; discounted prices shown with code NOV were $20, $29, $59, $120, $249, $439 and $649. The 100K figure matches the 1-Step page ($622 crossed, $249 current).",
+          "rows": [{ "size": 5000, "price": 80 }, { "size": 10000, "price": 116 }, { "size": 25000, "price": 236 }, { "size": 50000, "price": 480 }, { "size": 100000, "price": 622 }, { "size": 200000, "price": 1096 }, { "size": 300000, "price": 1622 }]
+        },
+        {
+          "name": "2-Step Plus", "productId": "ftm-2step-plus", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedtradermarkets.com/programs",
+          "note": "Only the 100K size rendered; crossed price $998, current $399.",
+          "rows": [{ "size": 100000, "price": 998 }]
+        },
+        {
+          "name": "Instant Standard", "productId": "ftm-instant-standard", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedtradermarkets.com/ftm-instant-funding",
+          "note": "Only the 100K size rendered; crossed price $723, current $398.",
+          "rows": [{ "size": 100000, "price": 723 }]
+        },
+        {
+          "name": "Instant Pro", "productId": "ftm-instant-pro", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedtradermarkets.com/ftm-instant-funding",
+          "note": "Only the 100K size rendered; crossed price $600, current $330.",
+          "rows": [{ "size": 100000, "price": 600 }]
+        },
+        {
+          "name": "Instant Plus", "productId": "ftm-instant-plus", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedtradermarkets.com/ftm-instant-funding",
+          "note": "Only the 100K size rendered; crossed price $884, current $442.",
+          "rows": [{ "size": 100000, "price": 884 }]
+        }
+      ]
+    }
+  }
 }
