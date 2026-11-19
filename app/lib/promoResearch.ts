@@ -17,6 +17,7 @@ import {
   propFirms,
   type PropFirm,
 } from './propFirms';
+import { isProgramPromotionCurrent, programPromotions } from './programPromotions';
 
 export const PROMO_REVIEW_DATE = '2026-11-14';
 
@@ -46,6 +47,8 @@ export type PromoDeal = {
   checkoutTip?: string;
   featured?: boolean;
   heroRank?: number;
+  /** Exact expiration, so a seasonal offer is not published after it ends. */
+  expiresAt?: string;
   /**
    * Date of the review in which the code was no longer shown on the official
    * page. Such deals stay in the source for the record but are not published.
@@ -706,12 +709,12 @@ const allPromoDeals: PromoDeal[] = [
     proofLevel: 'Official',
     availability: 'Active official offer',
     validity: 'Shown on the official home page on 14 November 2026; no end date shown.',
-    eligibility: '"Use code HELLO & Get 20% OFF now on your first purchase!"',
-    sourceUrl: 'https://fundingpips.com/',
-    sourceLabel: 'Official FundingPips home page',
-    sourceNote: 'Official home page read on 2026-11-14: "Use code HELLO & Get 20% OFF now on your first purchase!"',
+    eligibility: 'First purchase only; the official checkout guide explicitly EXCLUDES 100K accounts.',
+    sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/44390730743825-Get-Started',
+    sourceLabel: 'Official FundingPips purchase guide',
+    sourceNote: 'Official onboarding guide checked 2026-11-19: HELLO grants 20% off a first purchase but cannot be used on 100K accounts; the code must be entered before payment.',
     consumerVerdict: 'A simple first-purchase discount. Read the PRIME terms in the firm file before buying.',
-    caveats: ['First purchase only', 'See the PRIME terms on the firm file'],
+    caveats: ['First purchase only', '100K accounts excluded', 'See the product rules on the firm file'],
     bestFor: ['forex', 'first purchase'],
     checkoutTip: 'Apply HELLO on your first order and check the subtotal.',
   },
@@ -736,8 +739,34 @@ const allPromoDeals: PromoDeal[] = [
   },
 ];
 
-/** Published deals: everything still seen on an official page at the last review. */
-export const promoDeals: PromoDeal[] = allPromoDeals.filter((deal) => !deal.notSeenOn);
+/** Reuse the same sourced, dated offer record for program cards and the promo board. */
+const spotlightIds = new Set(['fxify-black35-2026', 'tradeify-nov-2026', 'funderpro-bf30-2026', 'fundedtradingplus-size20-2026']);
+const spotlightDeals: PromoDeal[] = programPromotions
+  .filter((offer) => spotlightIds.has(offer.id) && isProgramPromotionCurrent(offer))
+  .map((offer) => ({
+    slug: offer.slug,
+    label: 'Official dated program discount',
+    title: `${getFirmBySlug(offer.slug)?.name ?? offer.slug}: ${offer.offer} with ${offer.code}`,
+    code: offer.code ?? '',
+    value: offer.offer,
+    category: 'official-discount' as const,
+    proofLevel: 'Official' as const,
+    availability: 'Active official offer' as const,
+    validity: offer.expiresAt ? `Offer published until ${offer.expiresAt.slice(0, 10)} (UTC date); confirm the exact checkout cutoff.` : `Checked ${offer.checkedOn}; no public end date.`,
+    eligibility: offer.terms,
+    sourceUrl: offer.sourceUrl,
+    sourceLabel: 'Firm-published offer',
+    sourceNote: `Official source checked ${offer.checkedOn}; checkout was not submitted.`,
+    consumerVerdict: 'Compare the final checkout subtotal with the standard fee; promotions never change the PropRadar score.',
+    caveats: [offer.terms, 'Confirm the discounted subtotal before payment'],
+    bestFor: [offer.slug, 'current code'],
+    checkoutTip: `Use ${offer.code} on an eligible product and check the price before purchasing.`,
+    expiresAt: offer.expiresAt,
+  }));
+
+/** Do not display ended or withdrawn promotions. */
+export const promoDeals: PromoDeal[] = [...allPromoDeals, ...spotlightDeals]
+  .filter((deal) => !deal.notSeenOn && (!deal.expiresAt || Date.now() < Date.parse(deal.expiresAt)));
 
 /** Deals withdrawn from the page because the official source no longer shows them. */
 export const withdrawnPromoDeals: PromoDeal[] = allPromoDeals.filter((deal) => Boolean(deal.notSeenOn));
@@ -829,9 +858,10 @@ export function getBestPromoDeals(limit = 12) {
 
 /** Top of /promos: one offer per partner firm first (best deal score), then the other featured official offers. */
 export function getMegaPromoDeals(limit = 4) {
-  // A partner's own code (the one in its pop-up) comes before its other offers.
-  const own = (deal: { slug: string; code?: string }) => Number(Boolean(deal.code) && PARTNER_OFFERS[deal.slug]?.code === deal.code);
-  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal)).sort((a, b) => own(b) - own(a) || b.dealScore - a.dealScore);
+  // The best verified public discount takes precedence over a weaker affiliate code.
+  const percent = (value: string) => value.includes('%') ? Number(value.match(/\d+/)?.[0] ?? 0) : 0;
+  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal))
+    .sort((a, b) => percent(b.value) - percent(a.value) || b.dealScore - a.dealScore);
   const partners: typeof ranked = [];
   for (const deal of ranked) {
     if (isPartner(deal.slug) && !partners.some((item) => item.slug === deal.slug)) partners.push(deal);

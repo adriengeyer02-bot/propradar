@@ -364,6 +364,18 @@ html body .topbar .nav .nav-link-active:hover {
 .pr-product-prices-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 12px; }
 .pr-product-prices-links a { font-size: 0.76rem; font-weight: 650; color: var(--accent); text-decoration: none; }
 .pr-product-prices-links a:hover { text-decoration: underline; }
+.pr-program-promo { display: grid; gap: 8px; padding: 13px 14px; border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line)); border-radius: 10px; background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.pr-program-promo-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px 12px; }
+.pr-program-promo-head > span { font-size: 0.82rem; font-weight: 750; color: var(--text); }
+.pr-program-promo-head > strong { font-size: 1.2rem; font-weight: 800; color: var(--accent-ink, var(--accent)); font-variant-numeric: tabular-nums; }
+.pr-program-promo-code { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin: 0; font-size: 0.79rem; color: var(--muted); }
+.pr-program-promo-code code { display: inline-block; padding: 5px 8px; border: 1px dashed var(--accent); border-radius: 6px; background: var(--surface); color: var(--text); font-size: 0.9rem; font-weight: 750; letter-spacing: 0.035em; user-select: all; }
+.pr-program-promo-terms { margin: 0; color: var(--soft); font-size: 0.79rem; line-height: 1.45; }
+.pr-program-promo-check { margin: 0; color: var(--text); font-size: 0.78rem; font-weight: 650; }
+.pr-program-promo-foot { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 5px 12px; padding-top: 7px; border-top: 1px solid var(--line); }
+.pr-program-promo-foot small { color: var(--muted); font-size: 0.71rem; }
+.pr-program-promo-foot a { color: var(--accent); font-size: 0.75rem; text-decoration: underline; text-underline-offset: 2px; }
+.pr-program-affiliate-note { color: var(--muted); font-size: 0.73rem; line-height: 1.45; }
 
 /* /prop-firms-india */
 .pr-india-table { display: grid; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 12px; }
