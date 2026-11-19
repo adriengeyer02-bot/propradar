@@ -36,13 +36,18 @@ const fill = (text: string, values: Record<string, string | number>) =>
  */
 export default function ScoreBreakdownDialog({ view, copy, children }: { view: ScoreBreakdownView; copy: ScoreMethodCopy; children: ReactNode }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const titleId = useId();
 
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
-    if (open && !dialog.open) dialog.showModal();
+    if (open && !dialog.open) {
+      dialog.showModal();
+      // Start on the content, not on the close button (no stray focus ring on open; Tab still reaches it).
+      scrollRef.current?.focus({ preventScroll: true });
+    }
     if (!open && dialog.open) dialog.close();
   }, [open]);
 
@@ -69,13 +74,15 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
           <div className="prg-hud psb-hud">
             <span className="prg-hud-corners" aria-hidden="true" />
             <span className="prg-hud-scan" aria-hidden="true" />
+            <button type="button" className="prg-hud-close" onClick={() => setOpen(false)} aria-label={copy.close}>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" /></svg>
+            </button>
+            {/* The frame (corners, scan line, close button) stays fixed; only this inner panel scrolls. */}
+            <div className="psb-scroll" ref={scrollRef} tabIndex={-1}>
             <div className="prg-hud-top prg-hud-reveal" style={delay(0)}>
               <span><i aria-hidden="true" />{copy.eyebrow}</span>
               <span className="prg-hud-index" aria-hidden="true">PR / SCORE</span>
             </div>
-            <button type="button" className="prg-hud-close" onClick={() => setOpen(false)} aria-label={copy.close}>
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13" /></svg>
-            </button>
 
             <header className="psb-head prg-hud-reveal" style={delay(1)}>
               <div className={`prg-hud-score prg-hud-score-${view.tone}`} style={{ '--score-offset': 151 * (1 - view.score / 100) } as CSSProperties}>
@@ -164,6 +171,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                 <a href={view.methodHref}>{copy.fullMethod}<span aria-hidden="true">→</span></a>
               </div>
             </footer>
+            </div>
           </div>
         ) : null}
       </dialog>
