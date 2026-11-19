@@ -192,7 +192,7 @@ const es: Messages = {
     "tools": [
       {
         "label": "Comparador",
-        "title": "Compara {count} prop firms una al lado de otra.",
+        "title": "Compara las prop firms una al lado de otra.",
         "text": "Filtra por puntuación, mercado, riesgo de pago, riesgo legal, precio y reglas de trading.",
         "action": "Abrir el comparador"
       },

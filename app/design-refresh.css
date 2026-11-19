@@ -806,6 +806,19 @@ html body .pr-hg-search input:focus, html body .pr-hg-search input:focus-visible
 .prr-stage:has(.prr-svg.is-zoomed) .prr-hud { opacity: 0.2; transition: opacity 0.2s; }
 
 /* Home hero: the globe column matches the height of the text column (desktop). */
+.home-v2-tagline {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.55;
+  letter-spacing: 0.015em;
+}
+
+@media (max-width: 760px) {
+  .home-v2-tagline { margin-top: 10px; font-size: 14px; }
+}
+
 @media (min-width: 1100px) {
   html body .home-v2-hero.home-v2-hero { grid-template-columns: minmax(0, 0.86fr) minmax(560px, 1.14fr); align-items: stretch; }
   html body .pr-home-radar.pr-home-globe { container-type: size; display: flex; flex-direction: column; justify-content: center; min-height: 620px; }

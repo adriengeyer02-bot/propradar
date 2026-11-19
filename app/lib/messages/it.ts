@@ -190,7 +190,7 @@ const it: Messages = {
     toolsTitle: 'Scegli il prossimo passo.',
     toolsNote: 'Quattro percorsi, con il confronto al centro.',
     tools: [
-      { label: 'Confronto', title: 'Confronta {count} prop firm fianco a fianco.', text: 'Filtra per punteggio, mercato, rischio pagamenti, rischio legale, prezzo e regole di trading.', action: 'Apri il confronto' },
+      { label: 'Confronto', title: 'Confronta le prop firm fianco a fianco.', text: 'Filtra per punteggio, mercato, rischio pagamenti, rischio legale, prezzo e regole di trading.', action: 'Apri il confronto' },
       { label: 'Guida alla challenge', title: 'Come funziona una challenge, programma per programma.', text: 'Quote, obiettivi di profitto, perdita giornaliera e drawdown letti sulle pagine ufficiali di ogni firm.', action: 'Confronta le challenge' },
       { label: 'Offerte verificate', title: 'Prima il rischio, poi lo sconto.', text: 'Le promozioni restano legate al punteggio della firm, al contesto dei pagamenti e alle informative commerciali.', action: 'Vedi le offerte' },
       { label: 'Guide di affidabilità', title: 'Capire le regole che cambiano il risultato.', text: 'Verifiche legali, clausole di pagamento, segnali delle recensioni e confronti tra programmi.', action: 'Sfoglia le guide' },

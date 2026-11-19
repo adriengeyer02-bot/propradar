@@ -194,7 +194,7 @@ const en = {
     toolsTitle: 'Choose your next step.',
     toolsNote: 'Four focused paths, with the comparator kept at the center.',
     tools: [
-      { label: 'Comparator', title: 'Compare {count} prop firms side by side.', text: 'Filter by score, market, payout risk, legal risk, price and trading rules.', action: 'Open comparator' },
+      { label: 'Comparator', title: 'Compare prop firms side by side.', text: 'Filter by score, market, payout risk, legal risk, price and trading rules.', action: 'Open comparator' },
       { label: 'Challenge guide', title: 'How a prop firm challenge works, program by program.', text: "Fees, profit targets, daily loss and drawdown rules read on each firm's own pages.", action: 'Compare challenges' },
       { label: 'Risk-aware deals', title: 'Read the risk before the discount.', text: 'Promotions stay attached to firm scores, payout context and commercial disclosures.', action: 'Check current deals' },
       { label: 'Reliability guides', title: 'Understand the rules that change outcomes.', text: 'Legal checks, payout clauses, review signals and program comparisons.', action: 'Browse guides' },

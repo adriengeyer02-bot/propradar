@@ -169,7 +169,7 @@ const tr: Messages = {
     toolsTitle: 'Bir sonraki adımınızı seçin.',
     toolsNote: 'Karşılaştırıcıyı merkeze alan dört araştırma yolu.',
     tools: [
-      { label: 'Karşılaştırıcı', title: '{count} prop firmayı yan yana karşılaştırın.', text: 'Puan, piyasa, ödeme ve hukuki risk, fiyat ve işlem kurallarına göre filtreleyin.', action: 'Karşılaştırıcıyı aç' },
+      { label: 'Karşılaştırıcı', title: 'Prop firmaları yan yana karşılaştırın.', text: 'Puan, piyasa, ödeme ve hukuki risk, fiyat ve işlem kurallarına göre filtreleyin.', action: 'Karşılaştırıcıyı aç' },
       { label: 'Değerlendirme rehberi', title: 'Prop firm değerlendirmeleri nasıl çalışır?', text: 'Ücretler, kâr hedefleri, günlük kayıp ve düşüş sınırları resmi kaynaklardan incelenir.', action: 'Değerlendirmeleri karşılaştır' },
       { label: 'Risk odaklı fırsatlar', title: 'İndirime değil, önce riske bakın.', text: 'Kampanyalar firma puanları, ödeme bağlamı ve ticari açıklamalarla gösterilir.', action: 'Kampanyaları incele' },
       { label: 'Güvenilirlik rehberleri', title: 'Sonucu değiştiren kuralları anlayın.', text: 'Hukuki kontroller, ödeme maddeleri, kullanıcı sinyalleri ve program karşılaştırmaları.', action: 'Rehberlere göz at' },

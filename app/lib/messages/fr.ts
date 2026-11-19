@@ -190,7 +190,7 @@ const fr: Messages = {
     toolsTitle: 'Choisissez votre prochaine étape.',
     toolsNote: 'Quatre parcours, avec le comparateur au centre.',
     tools: [
-      { label: 'Comparateur', title: 'Comparez {count} prop firms côte à côte.', text: 'Filtrez par score, marché, risque de paiement, risque juridique, prix et règles de trading.', action: 'Ouvrir le comparateur' },
+      { label: 'Comparateur', title: 'Comparez les prop firms côte à côte.', text: 'Filtrez par score, marché, risque de paiement, risque juridique, prix et règles de trading.', action: 'Ouvrir le comparateur' },
       { label: 'Guide du challenge', title: 'Comment fonctionne un challenge, programme par programme.', text: 'Frais, objectifs de profit, pertes journalières et drawdown, lus sur les pages officielles de chaque firme.', action: 'Comparer les challenges' },
       { label: 'Promos vérifiées', title: 'Lisez le risque avant la réduction.', text: 'Chaque promo reste liée au score de la firme, au contexte des paiements et aux mentions commerciales.', action: 'Voir les promos' },
       { label: 'Guides de fiabilité', title: 'Comprendre les règles qui changent tout.', text: 'Vérifications juridiques, clauses de paiement, signaux des avis et comparatifs de programmes.', action: 'Parcourir les guides' },

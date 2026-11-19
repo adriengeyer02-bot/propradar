@@ -190,7 +190,7 @@ const de: Messages = {
     toolsTitle: 'Wählen Sie Ihren nächsten Schritt.',
     toolsNote: 'Vier klare Wege, mit dem Vergleich im Mittelpunkt.',
     tools: [
-      { label: 'Vergleich', title: '{count} Prop Firms nebeneinander vergleichen.', text: 'Filter nach Score, Markt, Auszahlungsrisiko, Rechtsrisiko, Preis und Handelsregeln.', action: 'Zum Vergleich' },
+      { label: 'Vergleich', title: 'Prop Firms nebeneinander vergleichen.', text: 'Filter nach Score, Markt, Auszahlungsrisiko, Rechtsrisiko, Preis und Handelsregeln.', action: 'Zum Vergleich' },
       { label: 'Challenge-Ratgeber', title: 'So funktioniert eine Prop-Firm-Challenge, Programm für Programm.', text: 'Gebühren, Gewinnziele, Tagesverlust- und Drawdown-Regeln, gelesen auf den Seiten der Firmen.', action: 'Challenges vergleichen' },
       { label: 'Geprüfte Angebote', title: 'Erst das Risiko, dann der Rabatt.', text: 'Rabatte bleiben mit Score, Auszahlungskontext und Werbekennzeichnung der Firma verbunden.', action: 'Aktuelle Angebote' },
       { label: 'Ratgeber', title: 'Die Regeln verstehen, die über Erfolg entscheiden.', text: 'Rechtliche Prüfungen, Auszahlungsklauseln, Bewertungssignale und Programmvergleiche.', action: 'Ratgeber ansehen' },
