@@ -22226,7 +22226,7 @@
       ]
     },
     "alpine-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -22257,6 +22257,12 @@
           "summary": "Restrictive-rules audit (partial): read the homepage and the prohibited-strategies, hard/soft breach, news and Base Camp payout help articles; 5 rules across Base Camp and the Peak 2-Step. Alpine Pass pages did not load and are not audited.",
           "source": "https://help.alpinefunded.com/en/articles/9691375-what-trading-strategies-are-prohibited",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Rechecked the current official Trading Rules FAQ and September 2026 General Terms PDF. Corrected the gambling threshold to more than 50% of trades held under two minutes (not one), and treated the dedicated, plainly navigable FAQ as clear while preserving blocking severity where the firm expressly says Base Camp and Alpine 2-Step accounts are lost for prohibited strategies. The separate discretionary authority to define forbidden trading practices and change terms for ongoing services (GTC 7.3, 12.3 and 15.1) is recorded once. GTC versus programme news exceptions, Alpine Pass reward timing and third-party funded contracts still need programme-by-programme reconciliation. No actual unjustified payout refusal is asserted and the audit remains partial.",
+          "source": "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -22266,6 +22272,18 @@
         "auditSummary": "Official-source update dated 17 November 2026. Alpine Funded publishes three materially distinct offerings: Alpine Pass recurring subscription, Base Camp instant and Alpine 2-Step. Alpine Pass pricing appears at EUR119/month Standard, EUR189/month Advanced and EUR429/month Pro; advertised nominal account size and absence of conventional drawdown do not mean unlimited cash access. Under Pass, a reward needs a +10% milestone and ten profitable days each at least 0.5%; the top trading day must not exceed 30% of the target. Pass rewards are tiered fixed amounts rather than a uniform profit-share entitlement; the FAQ says Thursday processing for submissions before Tuesday 12:00 UTC, with a $40 fee. This needs clarification against the homepage's broader 'within 24 hours or +$500' reward marketing, and against older help describing 21 days before the first payment while the newer homepage says every 14 days on Alpine 2-Step. A dated collection of payout certificates is displayed on the provider's homepage, but PropRadar has not verified bank transfers, real execution, spreads, KYC eligibility or the recipient. The previously documented 2025 report of a Ukrainian NSSMC watchlist inclusion is retained as reported, not restated as a regulator finding independently read today. Trustpilot's public aggregate and individual testimonials are contextual signals, not proof of payment reliability."
       },
       "addSources": [
+        {
+          "label": "Alpine Funded General Terms PDF, clauses 7, 9, 12 and 15 (2026-11-19)",
+          "url": "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+        },
+        {
+          "label": "Alpine Funded current prohibited trading strategies FAQ (2026-11-19)",
+          "url": "https://alpinefunded.com/faq/what-trading-strategies-are-prohibited/"
+        },
+        {
+          "label": "Alpine Funded current Base Camp payout conditions (2026-11-19)",
+          "url": "https://alpinefunded.com/faq/base-camp-payouts/"
+        },
         {
           "label": "Alpine Funded payout schedule (official help)",
           "url": "https://help.alpinefunded.com/en/articles/9690819-what-is-the-payout-schedule"
@@ -22326,34 +22344,34 @@
       ],
       "restrictiveRules": [
         {
-          "program": "All challenges and funded accounts",
-          "appliesTo": ["*"],
+          "program": "Base Camp Instant Funding and Alpine 2-Step",
+          "appliesTo": ["basecamp", "peak"],
           "category": "lot-risk-limit",
           "severity": "blocking",
-          "clarity": "buried",
+          "clarity": "clear",
           "rule": "'Gambling' is prohibited; listed indicators include five positions within one losing trade, total open risk of '3% or more' when a stop loss is used, and, without a stop loss, exceeding the maximum lot size for the account size (e.g. 5 lots in Forex on a Standard $10,000 account) or combined exposure above '100% of the total exposure'. 'Not following these rules will result in an account loss.'",
           "impact": "Exceeding the risk or lot thresholds can end the account and its profits.",
-          "source": "https://help.alpinefunded.com/en/articles/9691375-what-trading-strategies-are-prohibited"
+          "source": "https://alpinefunded.com/faq/what-trading-strategies-are-prohibited/"
         },
         {
-          "program": "All challenges and funded accounts",
-          "appliesTo": ["*"],
+          "program": "Base Camp Instant Funding and Alpine 2-Step",
+          "appliesTo": ["basecamp", "peak"],
           "category": "min-hold-time",
           "severity": "blocking",
-          "clarity": "buried",
-          "rule": "Among the 'gambling' indicators: 'Over 50% of trades with a hold time under one minute.' The article states that not following these rules results in an account loss.",
-          "impact": "A trading style dominated by sub-one-minute trades can end the account.",
-          "source": "https://help.alpinefunded.com/en/articles/9691375-what-trading-strategies-are-prohibited"
+          "clarity": "clear",
+          "rule": "Among the 'gambling' indicators: 'Over 50% of trades with a hold time under two minutes.' The current Trading Rules FAQ states that breach of prohibited-strategy rules ends a Base Camp Instant Funding or Alpine 2-Step account, while Alpine Pass may instead see a reduced reward or temporary timeout, without account loss.",
+          "impact": "A Base Camp or Alpine 2-Step style dominated by sub-two-minute trades can end the account. This does not establish automatic account closure for Alpine Pass.",
+          "source": "https://alpinefunded.com/faq/what-trading-strategies-are-prohibited/"
         },
         {
-          "program": "All challenges and funded accounts",
-          "appliesTo": ["*"],
+          "program": "Base Camp Instant Funding and Alpine 2-Step",
+          "appliesTo": ["basecamp", "peak"],
           "category": "ea-copy-hft",
           "severity": "blocking",
-          "clarity": "buried",
+          "clarity": "clear",
           "rule": "Prohibited on all challenges and funded accounts: grid trading software, martingale EAs, high-frequency trading, latency arbitrage, hedging across multiple accounts, guaranteed limit-order fills on news, delayed data feeds, copy trading among multiple users and third-party account management; 'Not following these rules will result in an account loss.' A hard breach means 'The account will be terminated and any simulated profits will be lost.'",
           "impact": "Use of these tools or practices ends the account with loss of profits.",
-          "source": "https://help.alpinefunded.com/en/articles/9691375-what-trading-strategies-are-prohibited"
+          "source": "https://alpinefunded.com/faq/what-trading-strategies-are-prohibited/"
         },
         {
           "program": "Peak accounts — Standard",
@@ -22370,10 +22388,20 @@
           "appliesTo": ["basecamp"],
           "category": "payout-conditions",
           "severity": "major",
-          "clarity": "buried",
+          "clarity": "clear",
           "rule": "A payout needs 5% profit and 3 trading days, but 'the first and second payouts are disbursed alongside the third payout' unless the On-Demand add-on is bought. Payouts are fixed 'Payout Fully Withdrawable' amounts per level (e.g. $2,000 at Level 1 on a $200,000 account), not a percentage split.",
           "impact": "Without the add-on, the first two earned payouts are held until a third is reached.",
-          "source": "https://help.alpinefunded.com/en/articles/9963151-how-do-payouts-work"
+          "source": "https://alpinefunded.com/faq/base-camp-payouts/"
+        },
+        {
+          "program": "Base Camp Instant Funding and Alpine 2-Step — discretionary prohibited-practice and terms powers",
+          "appliesTo": ["basecamp", "peak"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The September 2026 General Terms let the provider decide at its sole discretion what constitutes a forbidden trading practice (7.3) and which enforcement action applies (12.3). Section 7.1 includes trading deemed unprofessional or harmful to the provider's reputation; section 7.4 permits removal of trades from profit calculations or immediate termination. Section 15.1 says changed Terms also apply to ongoing services. These clauses do not expressly establish automatic retroactive confiscation of legitimately earned rewards just because the Terms change.",
+          "impact": "Broad discretion to judge undefined trading conduct and change future conditions can threaten account access or the recognition of profits. This separate discretionary risk is counted once, not repeated under every specific restriction, and is not proof of an actual wrongful payout denial.",
+          "source": "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
         }
       ]
     },
