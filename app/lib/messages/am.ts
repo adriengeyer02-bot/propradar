@@ -98,6 +98,7 @@ const am: Messages = {
     metaDescription: 'ከ{count} በላይ prop firm ያነፃፅሩ፤ ዋጋ፣ የግብይት ህጎች፣ ክፍያ፣ Trustpilot እና ህጋዊ መረጃ።',
     kicker: 'ገለልተኛ ግምገማ · ቅድሚያ ለማስረጃ',
     h1: 'ገለልተኛ የprop firm ማነፃፀሪያ',
+    tagline: 'ትሬደሮችን ለመጠበቅ የተሠራ',
     lead: 'ለchallenge ከመክፈልዎ በፊት የ{count} prop firm ዋጋ፣ ህጎች፣ የክፍያ ማስረጃ እና የሚያስተዳድሩትን ኩባንያዎች ያነፃፅሩ።',
     coverageAria: 'የPropRadar የመረጃ ሽፋን',
     firmsTracked: 'በክትትል ላይ ያሉ prop firm',

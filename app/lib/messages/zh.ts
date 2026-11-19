@@ -155,6 +155,7 @@ const zh: Messages = {
     metaDescription: '独立的自营交易公司评测：对比 {count} 多家公司的考核价格、规则、出金证据、Trustpilot 状态和法律主体。每条信息都有来源。',
     kicker: '独立。证据优先。',
     h1: '独立自营交易公司比较平台',
+    tagline: '为保护交易者而打造',
     lead: '在支付考核费用之前，对比 {count} 家自营交易公司的考核规则、价格、出金证据以及背后的法律主体。',
     coverageAria: 'PropRadar 数据覆盖范围',
     firmsTracked: '家已收录公司',

@@ -155,6 +155,7 @@ const pt: Messages = {
     "metaDescription": "Análises independentes de prop firms: preços dos challenges, regras, provas de pagamento, status no Trustpilot e entidades jurídicas de mais de {count} empresas. Cada dado com fonte.",
     "kicker": "Independente. Provas em primeiro lugar.",
     "h1": "Comparador independente de prop firms",
+    "tagline": "Feito para proteger os traders",
     "lead": "Compare as regras dos challenges, os preços, as provas de pagamento e a entidade jurídica por trás de {count} prop firms antes de pagar um challenge.",
     "coverageAria": "Cobertura de dados do PropRadar",
     "firmsTracked": "prop firms monitoradas",

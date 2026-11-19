@@ -94,6 +94,7 @@ const ha: Messages = {
     metaDescription: 'Kwatanta prop firm sama da {count}: farashi, dokokin ciniki, hujjar biyan riba, Trustpilot da bayanan doka.',
     kicker: 'Kimantawa mai zaman kanta · Hujja a gaba',
     h1: 'Kwatanta prop firm ba tare da son kai ba',
+    tagline: 'An tsara shi don kare masu cinikin kuɗi',
     lead: 'Kafin biyan kuɗin challenge, kwatanta farashi, dokokin ciniki, hujjojin biyan riba da kamfanonin da ke gudanar da prop firm {count}.',
     coverageAria: 'Yankin bayanan PropRadar',
     firmsTracked: 'Prop firm da ake bi',
