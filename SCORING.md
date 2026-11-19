@@ -119,17 +119,47 @@ fine: the total penalty is capped at **12 points**.
 | `major`    | 3      | breaking or not meeting it delays, reduces or blocks a payout request, but the account and profits survive | consistency rule before payout, payout cap per cycle, minimum hold time where short trades are excluded, lot or risk-per-trade cap, trailing drawdown kept on the funded account, profit-split reduction |
 | `blocking` | 5      | breaking it voids profits or closes the account, or the account ends by design                            | VPN / IP / device mismatch that breaches the account, profits cancelled for trades held under X seconds, account closed after N payouts, undefined "gambling" / "abuse" clause applied at the firm's discretion |
 
-Pick the severity from what the official text says happens, not from the
-category. A minimum hold time is `major` when short trades are simply not
-counted, `blocking` when it voids profits or breaches the account.
+Pick the severity from the **individual rule's documented consequence**, not
+from its category or a generic clause about any breach. A minimum hold time is
+`minor` when the specific outcome is a warning; `major` when short trades
+are excluded from rewards; `blocking` when the rule expressly voids profits
+or breaches the account. An ordinary restriction with no separate stated
+payout or account consequence is `minor`, however inconvenient it may be.
+The company's general power to reject payouts is classified **once** below.
 
 ### 2.2 Clarity multiplier
 
 | clarity  | × | when |
 |----------|---|------|
-| `clear`  | 1   | stated on the programme's own rules or pricing page (or its main FAQ entry) |
-| `buried` | 1.5 | only in the terms and conditions or a deep help-centre article |
+| `clear`  | 1   | stated on the programme's rules/pricing page, main FAQ or a **plainly headed, navigable official Terms trading-rules section** with understandable thresholds |
+| `buried` | 1.5 | genuinely hard to find, e.g. a deep help-centre article or unrelated legal subsection without clear navigation; **Terms-only does not automatically mean buried** |
 | `vague`  | 2   | discretionary wording ("we reserve the right…", undefined "abuse"), or official documents contradict each other (`status: "conflicting"` counts as `vague`) |
+
+### 2.2a General enforcement clauses: count once, no severity multiplication
+
+A general contractual power to suspend or terminate accounts or reject rewards
+for **any** violation is not evidence that each separately listed trading
+restriction has its own automatic payout-loss consequence. Classify each
+restriction from the **specific sanction actually written for it**. Record
+that general power only once, under `discretionary-clause`, across the relevant
+programmes. It can itself be `blocking` × `vague` when reward rejection or
+account closure at the firm's discretion is explicitly documented.
+
+Do not simultaneously deduct that same clause manually from the editorial
+score or present its possible exercise as an independently established wrongful
+payout denial. A clear public restriction remains restrictive, but is not by
+itself a **hidden rule**. Distinguish genuinely inaccessible or contradictory
+terms from a conspicuous dedicated Terms section. Source the latter as a
+contractual rule, not an accusation of concealment.
+
+**Calibration:** Forex Funds Flow's plainly headed trading-prohibitions
+section has a documented account breach on the third 80%-margin event, a
+warning for early stop-losses and one general discretionary reward-rejection
+clause. Under this method its seven categories yield raw load 20 and a
+computed rules deduction of **6** instead of the previous raw load 42 and
+deduction of 9, pending complete FAQ and programme review. See
+`claude/rules-calibration-2026-11-19.md` in PR #192; changes in displayed
+scores still require the owner-review rule in section 4.
 
 ### 2.3 Programme scope and firm total
 
@@ -172,7 +202,7 @@ qualifying days (`min-trading-days`, minor, clear: 1), a 50% best-day
 consistency rule before each payout (`consistency`, major, clear: 3) and
 closes after six payouts (`account-ends-after-payouts`, blocking, clear: 5):
 load 9 → penalty 3. Editorial score 72 → displayed 69. The same firm with
-those three rules only in its terms (×1.5) and a vague "abuse" clause
+those three rules buried in a hard-to-find legal subsection (×1.5) and a vague "abuse" clause
 (blocking × 2 = 10) has load 23.5 → penalty 7.
 
 ## 3. Writing a rule entry
