@@ -15521,7 +15521,7 @@
       ]
     },
     "tradexprop": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "TradeXProp Forex X-1 Step / X-2 Step — evaluation and funded consistency",
@@ -15542,6 +15542,86 @@
           "category": "news",
           "severity": "blocking",
           "clarity": "clear"
+        },
+        {
+          "program": "All programmes — Terms of Use, 'Prohibition of Gambling Practices'",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The Terms prohibit 'inappropriate risk management practices, such as gambling, \"all-in\" trading, or excessively leveraging' and 'Trading activity that resembles gambling—such as consistently placing trades prior to news releases or other binary events'; the Company may close the account immediately and fees owed may be forfeited. The prohibited-activities help article states 'Immediate account closure, with all fees forfeited.' None of these terms is defined by a number.",
+          "impact": "An account can be closed and amounts owed forfeited on the firm's own assessment of what counts as gambling or excessive leverage.",
+          "source": "https://tradexprop.com/terms-of-use/"
+        },
+        {
+          "program": "All programmes — copy trading and cross-account hedging",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Copy trading is permitted only between accounts the trader owns; 'Group trading, signal services, passing services' and EAs that facilitate copy trading are prohibited, as are opposing trades across accounts and group hedging across accounts or prop firms (hedging within one account is allowed). The help article lists 'Account termination' as the consequence for the copy-trading breaches.",
+          "impact": "Using signals, a copy service or hedging between accounts can end the account.",
+          "source": "https://tradexprop.com/forex-faq/"
+        },
+        {
+          "program": "All programmes — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Not placing a trade for 30 consecutive days is a hard breach (forex rules article; '30 days of no trading = breach' in the crypto guide; '30 days' inactivity period on the Instant Funded X table).",
+          "impact": "An account left idle for 30 days is closed.",
+          "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules"
+        },
+        {
+          "program": "All programmes — restricted countries",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Residents of Pakistan, Russia, Cuba, Sudan, Somalia, Iran, Lebanon, Syria, Libya and Vietnam are listed as restricted, plus OFAC-listed countries; KYC and a Trader Agreement are required before a funded account is issued.",
+          "impact": "Traders from the listed countries cannot take part.",
+          "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules"
+        },
+        {
+          "program": "Crypto X-1 Step / X-2 Step — news window",
+          "appliesTo": ["crypto1step", "crypto2step"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "'No trading 3 minutes before or after high-impact news' (crypto guide); the crypto FAQ prohibits opening a position within 3 minutes of a News Event, and the Terms state that the Company decides what constitutes a News Event and may close positions, remove P&L, reduce leverage or breach the account.",
+          "impact": "News-window trades on the crypto accounts can lose their profit or, in the firm's assessment, end the account.",
+          "source": "https://tradexprop.com/crypto-faq/"
+        },
+        {
+          "program": "Crypto X-1 Step / X-2 Step — daily cap in both directions",
+          "appliesTo": ["crypto1step", "crypto2step"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "A 3% daily cap applies 'in either direction' from the previous day's equity (reset 5 PM EST): if equity moves more than 3% up or down, positions are closed and the account is locked until the next session.",
+          "impact": "Daily gains above 3% are closed out automatically, which limits how fast profit can be made in one day.",
+          "source": "https://tradexprop.com/crypto-faq/"
+        },
+        {
+          "program": "Instant Funded X — funded account",
+          "appliesTo": ["instant"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The funded Instant Funded X account has a maximum trailing drawdown that the homepage table gives as 8% and the Instant Funded X page gives as 5%; both list 'Lock upon payout? Yes'. Neither page explains the trailing calculation.",
+          "impact": "The loss floor rises with gains on the funded account, and official pages disagree on its size.",
+          "source": "https://tradexprop.com/instantfunding/"
+        },
+        {
+          "program": "Instant Funded X — weekend holding",
+          "appliesTo": ["instant"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Instant Funded X table lists 'Flat for Weekend: Yes'; the feature list says 'Weekend Holding Allowed with (Add-Ons)'.",
+          "impact": "Positions must be closed before the weekend unless a paid add-on is bought.",
+          "source": "https://tradexprop.com/instantfunding/"
         }
       ],
       "set": {
@@ -15552,8 +15632,11 @@
         "profitSplit": 80,
         "drawdownType": "Hybride",
         "eaAllowed": "Yes",
-        "payoutDelay": "Forex: first payout immediately once eligible and after 45% best-day consistency, then at least 14 days between requests",
-        "score": 55
+        "payoutDelay": "Forex: first payout once eligible (45% best-day consistency), then every 14 calendar days (plans after 16 April 2025; older plans monthly). Crypto: first withdrawal anytime, then at most once per 30 days. Processing typically 1-2 working days.",
+        "score": 55,
+        "newsTrading": "Restricted",
+        "verdict": "TradeXProp sells forex X 1-Step and X 2-Step evaluations with static drawdowns, crypto-only X-1/X-2 Step evaluations on DXtrade and an Instant Funded X account with a trailing drawdown. The terms impose a 45% best-day consistency rule, a 3-minute news window, a 30-day inactivity breach and an undefined gambling clause. Payout evidence and the legal file have not been audited.",
+        "auditSummary": "Official-source review dated 19 November 2026. TradeXProp's homepage, pricing pages, forex and crypto FAQs, help-desk rules articles and Terms of Use (last modified 16 July 2025) were read. Forex X 1-Step ($45 to $3,755) has a 10% target and 6% static drawdown; X 2-Step ($35 to $2,465) has 8% then 5% targets and an 8% static drawdown, both with a 5% daily loss, no time limit and an 80% split. Crypto X-1 Step ($45 to $2,150) and X-2 Step ($35 to $2,000) trade on DXtrade with 9% or 6%/9% targets, static 6% or 9% drawdowns and a 3% daily cap in both directions; the pricing table shows a 90% split while the crypto help article says up to 80%. Instant Funded X ($200 to $5,000) has no target and a trailing drawdown given as 8% on the homepage but 5% on its own page. The forex rules state a 45% best-day consistency limit for evaluation (the target is raised otherwise) and for each funded payout, no trades within 3 minutes of news, no strategy change between evaluation and funded, and a breach after 30 days without trading. The Terms prohibit copy trading between accounts the trader does not own, cross-account hedging, third-party pass strategies and undefined 'gambling' or excessive leverage, with account closure and forfeiture of amounts owed as possible consequences. Forex payouts are bi-weekly after the first eligible payout; crypto withdrawals are at most every 30 days; open trades must be closed before a request. The Terms and footer name Prop Account, LLC as provider within a group that includes Forest Park FX LTD; no registration number or address is published. Payout evidence was not independently verified."
       },
       "changelog": [
         {
@@ -15585,68 +15668,166 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 52 to 55: the earlier manual deduction (\"Score 55 to 52 because the newly documented payout-eligibility restriction materially limits withdrawal predictability; no claim of actual unpaid payouts.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-consistency-rules",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 8 new restrictive rules; 5 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://tradexprop.com/terms-of-use/",
+          "fields": ["auditSummary", "drawdownType", "eaAllowed", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "setProducts": [
         {
           "id": "tradexprop-x-1-step",
-          "name": "X 1-Step evaluation",
+          "name": "X 1-Step evaluation (Forex)",
           "type": "Challenge",
-          "description": "Fee $45 (5K) to $3,755 (400K). No time limit.",
+          "description": "One-step forex/CFD evaluation, one-time fee $45 (5K) to $3,755 (400K). No time limit, no minimum trading days, 50:1 forex leverage. First payout once eligible, then bi-weekly (plans after 16 April 2025).",
           "accountSizeMin": 5000,
           "accountSizeMax": 400000,
           "entryFeeMin": 45,
           "entryFeeMax": 3755,
           "profitTarget": "10%",
-          "maxDailyLoss": "5%",
-          "maxDrawdown": "6%, static",
+          "maxDailyLoss": "5% (from the higher of end-of-day balance or equity)",
+          "maxDrawdown": "6%",
+          "drawdownType": "Static",
+          "drawdownSource": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules",
+          "drawdownDetails": "6% of starting balance, does not trail and does not reset on withdrawal.",
           "profitSplit": "80%",
           "platforms": ["cTrader", "MatchTrader", "DXtrade"],
-          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Oil", "Crypto"],
+          "minTradingDays": "0",
           "hasConsistencyRule": true,
-          "consistencyRule": "45% consistency score (official page, 29 Oct 2026)."
+          "consistencyRule": "Best day at most 45% of the profit target in evaluation (target raised otherwise) and at most 45% of total profit for a funded payout; resets after each payout."
         },
         {
           "id": "tradexprop-x-2-step",
-          "name": "X 2-Step evaluation",
+          "name": "X 2-Step evaluation (Forex)",
           "type": "Challenge",
-          "description": "Fee $35 (5K) to $2,465 (400K). No time limit.",
+          "description": "Two-step forex/CFD evaluation, one-time fee $35 (5K) to $2,465 (400K). No time limit, no minimum trading days, 50:1 forex leverage. First payout once eligible, then bi-weekly (plans after 16 April 2025).",
           "accountSizeMin": 5000,
           "accountSizeMax": 400000,
           "entryFeeMin": 35,
           "entryFeeMax": 2465,
           "profitTarget": "8% then 5%",
-          "maxDailyLoss": "5%",
-          "maxDrawdown": "8%, static",
+          "maxDailyLoss": "5% (from the higher of end-of-day balance or equity)",
+          "maxDrawdown": "8%",
+          "drawdownType": "Static",
+          "drawdownSource": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules",
+          "drawdownDetails": "8% of starting balance, does not trail and does not reset on withdrawal.",
           "profitSplit": "80%",
           "platforms": ["cTrader", "MatchTrader", "DXtrade"],
-          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Oil", "Crypto"],
+          "minTradingDays": "0",
           "hasConsistencyRule": true,
-          "consistencyRule": "45% consistency score (official page, 29 Oct 2026)."
+          "consistencyRule": "Best day at most 45% of the profit target in evaluation (target raised otherwise) and at most 45% of total profit for a funded payout; resets after each payout."
         },
         {
           "id": "tradexprop-instant-funded-x",
           "name": "Instant Funded X",
           "type": "Instant funding",
-          "description": "Fee $200 (5K) to $5,000 (100K). Account locks on payout; EAs allowed; 30-day inactivity rule.",
+          "description": "Funded account without evaluation, one-time fee $200 (5K) to $5,000 (100K). Instant first payout; EAs allowed; 30-day inactivity breach; flat for weekend unless an add-on is bought; 90% split with add-ons.",
           "accountSizeMin": 5000,
           "accountSizeMax": 100000,
           "entryFeeMin": 200,
           "entryFeeMax": 5000,
           "profitTarget": "none",
           "maxDailyLoss": "5%",
-          "maxDrawdown": "8%, trailing",
-          "profitSplit": "80% / 90%",
+          "maxDrawdown": "8% on the homepage table, 5% on the Instant Funded X page (official pages disagree)",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://tradexprop.com/instantfunding/",
+          "drawdownDetails": "Maximum trailing drawdown, locked upon payout; calculation not explained on the pages read.",
+          "profitSplit": "80% (90% with add-ons)",
           "platforms": ["cTrader", "MatchTrader", "DXtrade"],
           "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "minTradingDays": "not stated",
           "hasConsistencyRule": false,
-          "consistencyRule": "No consistency rule (official page, 29 Oct 2026)."
+          "consistencyRule": "'No Consistency Rules' on the Instant Funded X page."
+        },
+        {
+          "id": "tradexprop-crypto-x-1-step",
+          "name": "Crypto X-1 Step evaluation",
+          "type": "Challenge",
+          "description": "One-step crypto-only evaluation on DXtrade, one-time fee $45 (5K) to $2,150 (200K). Leverage 5:1 on BTC/ETH, 2:1 on other coins. First withdrawal anytime once eligible, then no more than once per 30 days.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 45,
+          "entryFeeMax": 2150,
+          "profitTarget": "9%",
+          "maxDailyLoss": "3% daily cap in either direction from previous day's equity (positions closed, account locked until next session)",
+          "maxDrawdown": "6%",
+          "drawdownType": "Static",
+          "drawdownSource": "https://tradexprop.com/crypto-faq/",
+          "drawdownDetails": "6% of starting balance; the floor stays fixed as balance grows.",
+          "profitSplit": "90% on the pricing table; the crypto help article says up to 80%",
+          "platforms": ["DXtrade"],
+          "tradableAssets": ["Crypto"],
+          "minTradingDays": "0",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated"
+        },
+        {
+          "id": "tradexprop-crypto-x-2-step",
+          "name": "Crypto X-2 Step evaluation",
+          "type": "Challenge",
+          "description": "Two-step crypto-only evaluation on DXtrade, one-time fee $35 (5K) to $2,000 (200K). Leverage 5:1 on BTC/ETH, 2:1 on other coins. First withdrawal anytime once eligible, then no more than once per 30 days.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 35,
+          "entryFeeMax": 2000,
+          "profitTarget": "6% then 9%",
+          "maxDailyLoss": "3% daily cap in either direction from previous day's equity (positions closed, account locked until next session)",
+          "maxDrawdown": "9%",
+          "drawdownType": "Static",
+          "drawdownSource": "https://tradexprop.com/crypto-faq/",
+          "drawdownDetails": "9% of starting balance; the floor stays fixed as balance grows.",
+          "profitSplit": "90% on the pricing table; the crypto help article says up to 80%",
+          "platforms": ["DXtrade"],
+          "tradableAssets": ["Crypto"],
+          "minTradingDays": "0",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated"
         }
       ],
       "addSources": [
         {
           "label": "TradeXProp programs and prices (official)",
           "url": "https://tradexprop.com/"
+        },
+        {
+          "label": "tradexprop.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.com/forex-evaluation/"
+        },
+        {
+          "label": "tradexprop.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.com/crypto-evaluation/"
+        },
+        {
+          "label": "tradexprop.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.com/instantfunding/"
+        },
+        {
+          "label": "tradexprop.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.com/forex-faq/"
+        },
+        {
+          "label": "tradexprop.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.com/crypto-faq/"
+        },
+        {
+          "label": "tradexprop.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.com/terms-of-use/"
+        },
+        {
+          "label": "tradexprop.zohodesk.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.zohodesk.com/portal/en/kb/articles/tradexprop-forex-evaluation-trading-rules"
+        },
+        {
+          "label": "tradexprop.zohodesk.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.zohodesk.com/portal/en/kb/articles/forex-evaluation-x-1-step"
+        },
+        {
+          "label": "tradexprop.zohodesk.com official page (read 2026-11-19)",
+          "url": "https://tradexprop.zohodesk.com/portal/en/kb/articles/prohibited-trading-activities-what-you-need-to-know"
         }
       ],
       "auditedPrograms": [
@@ -15661,6 +15842,14 @@
         {
           "key": "instant",
           "name": "Instant Funded X"
+        },
+        {
+          "key": "crypto1step",
+          "name": "Crypto X-1 Step"
+        },
+        {
+          "key": "crypto2step",
+          "name": "Crypto X-2 Step"
         }
       ]
     },
@@ -19595,7 +19784,7 @@
       ]
     },
     "funded-trader-markets": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "FTM 2-Step Plus — Shield Risk Protocol on funded accounts",
@@ -19628,14 +19817,154 @@
           "clarity": "clear"
         },
         {
-          "program": "FTM 1-Step Infinity Plus — increasing payout buffer",
-          "rule": "The funded minimum balance remaining after a performance reward starts 2% above initial balance and rises another two percentage points after every three approved payouts.",
-          "impact": "Available withdrawable profit may shrink at later payout milestones even when the account remains profitable.",
-          "source": "https://fundedtradermarkets.com/faq",
-          "appliesTo": ["infinity-plus"],
+          "program": "FTM — all accounts, prohibited trading practices",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The FAQ lists prohibited practices including external or slow data feeds, exploiting service errors, hedging across accounts, group trading, high-frequency trading, news scalping, arbitrage, tick scalping, reverse trading, account sharing, account management services and mirroring trades; for any of them 'we reserve the right to close the account and forfeit any associated performance reward without a refund'. Bots are allowed except high-frequency, news-scalping, arbitrage, tick-scalping, multi-account reverse, demo-server exploit bots and emulators.",
+          "impact": "Copying or mirroring another trader, news scalping or a prohibited bot can end the account and cancel the pending reward.",
+          "source": "https://fundedtradermarkets.com/faq/are-there-any-limitations-on-certain-trading-practices-at-funded-trader-markets"
+        },
+        {
+          "program": "FTM — all accounts, IP and VPN rules",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Trading IPs must not match or overlap another user's trading, Trader Area or KYC IP; purchases and KYC through a VPN or VPS are prohibited and the purchase IP country must match the KYC country; dashboard access via VPN/VPS is not allowed; multi-trader households must be declared. Violations 'may lead to payout rejection, restriction, or ban without refund'; undeclared shared IPs 'may result in the termination of all accounts involved'.",
+          "impact": "Sharing an IP with another FTM user, or buying/verifying through a VPN, can cost the payout and every linked account.",
+          "source": "https://fundedtradermarkets.com/faq/are-there-ip-address-rules-during-trading"
+        },
+        {
+          "program": "FTM — all accounts, minimum trade holding time",
+          "appliesTo": ["*"],
+          "category": "min-hold-time",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "In the simulated funded phase, profits from trades closed in under 1 minute are voided and do not count toward the performance reward (no breach). In the challenge phase, if more than 20% of the combined profit target comes from trades held under 1 minute, the challenge must be redone.",
+          "impact": "Very short trades are deducted from the reward; in evaluation they can force a restart.",
+          "source": "https://fundedtradermarkets.com/faq/is-there-a-minimum-trade-holding-time"
+        },
+        {
+          "program": "FTM — all accounts, gap and sequential trading",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Opening positions within 5 minutes before rollover and closing them within 5 minutes after is not permitted and those profits are ineligible for rewards. Sequential trading across accounts is not allowed: the same pair may be opened on several accounts only within 5 minutes, otherwise only after the first position is fully closed (official FTM Trade Copier exempt if all positions close together); in the challenge, over 20% of the combined target from violating trades requires a redo. Martingale/layering across accounts counts as sequential trading.",
+          "impact": "Profits from rollover-gap trades or staggered multi-account entries are removed from the reward calculation.",
+          "source": "https://fundedtradermarkets.com/faq/is-sequential-trading-allowed"
+        },
+        {
+          "program": "FTM — all accounts, partial closes and overnight hedging",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Overnight holding is permitted only while 100% of the position is still open; once part is closed, the remainder must be closed the same trading day, and violations cause profits to be deducted (positions on one instrument opened within 15 minutes are aggregated). Overnight hedging is not allowed on Instant Funded or Evaluation Simulated Funded accounts: profits from overnight hedged positions are not counted toward the reward. Overnight and weekend holding is otherwise allowed in all programmes.",
+          "impact": "A partially closed position carried overnight, or an overnight hedge on a funded account, reduces the reward.",
+          "source": "https://fundedtradermarkets.com/faq/are-partial-closes-allowed-at-funded-trader-markets"
+        },
+        {
+          "program": "FTM — funded and instant accounts, qualifying trading days",
+          "appliesTo": ["nitro", "2step-plus", "instant-standard", "instant-pro", "instant-plus"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Five trading days are required for payout eligibility in the simulated funded phase of 1-Step Nitro and 2-Step Plus and on Instant Standard, Pro and Plus; 2-Step Plus also requires three trading days in each evaluation phase. 'Only trading days with at least 0.5% profit count' toward these requirements. 1-Step Infinity has no minimum.",
+          "impact": "The first reward cannot be requested before five days each closing at least 0.5% in profit.",
+          "source": "https://fundedtradermarkets.com/faq/is-there-a-requirement-for-a-minimum-number-of-trading-days"
+        },
+        {
+          "program": "FTM — all accounts, inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "If there is no activity on an account for 30 consecutive calendar days, FTM 'has the right to automatically terminate the simulated trading account for all phases'; planned absences can be approved if notified in advance.",
+          "impact": "An account left idle for 30 days can be closed.",
+          "source": "https://fundedtradermarkets.com/faq/for-how-long-is-it-permissible-to-keep-my-account-inactive-at-funded-trader-markets"
+        },
+        {
+          "program": "FTM Instant Standard, Pro and Plus — 15% consistency",
+          "appliesTo": ["instant-standard", "instant-pro", "instant-plus"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "'You should not have made more than 15% of the total profit in one day'; if a day exceeds 15%, 'you will have to continue trading until there isn't a day with more than 15%' before a withdrawal.",
+          "impact": "A single strong day delays the reward until total profit grows to about 6.7 times that day's profit.",
+          "source": "https://fundedtradermarkets.com/faq/what-is-the-consistency-requirement-on-instant-standard-account"
+        },
+        {
+          "program": "FTM Instant Standard and Instant Pro — split ramp",
+          "appliesTo": ["instant-standard", "instant-pro"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The profit split starts at 50/50 for the 1st reward, then 60/40 for the 2nd, 70/30 for the 3rd, and 'remains 80/20 split from the 4th reward onwards'. The pricing page shows 'Up to 80%'.",
+          "impact": "The first three rewards pay the trader 50%, 60% and 70%, below the advertised 80%.",
+          "source": "https://fundedtradermarkets.com/faq/what-is-the-profit-split-offered-in-instant-standard-account"
+        },
+        {
+          "program": "FTM Instant Plus — floating-loss Shield",
+          "appliesTo": ["instant-plus"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Floating loss is limited to 1% of the account balance at all times; 'If floating loss reaches or exceeds this limit, all positions auto-close and the profit split is reduced': 80/20 to 50/50, then 40/60, 30/70, and permanently 20/80 on the fourth breach, including when trades close past the limit because of delays or slippage.",
+          "impact": "Small floating losses, well inside the 6% overall limit, can permanently cut the trader's share to 20%.",
+          "source": "https://fundedtradermarkets.com/faq/is-there-a-maximum-floating-loss-rule-on-instant-plus-accounts"
+        },
+        {
+          "program": "FTM Instant Standard and Instant Pro — full withdrawals only",
+          "appliesTo": ["instant-standard", "instant-pro"],
           "category": "payout-conditions",
           "severity": "major",
-          "clarity": "clear"
+          "clarity": "clear",
+          "rule": "'Partial Withdrawal is Not allowed' on Instant Standard and Instant Pro accounts; after a full withdrawal the overall drawdown limit resets to its initial-balance level.",
+          "impact": "Traders cannot leave part of the profit in the account as a cushion when requesting a reward.",
+          "source": "https://fundedtradermarkets.com/faq/how-does-requesting-a-withdrawal-influence-the-drawdown-limits-for-instant-standard-account"
+        },
+        {
+          "program": "FTM 1-Step Nitro — 90% split limited to first $10,000",
+          "appliesTo": ["nitro"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The Nitro funded account offers 'a 90% profit split on the first $10,000 of profits earned', then 80%; giveaway, game and partnership accounts are always 80%. Terms 4.I.1 apply the 90% only 'up until 10,000 USD' across all evaluation funded accounts on one email. The pricing page shows 'Up to 90%'.",
+          "impact": "Profits above $10,000 (counted per email across accounts) are paid at 80%.",
+          "source": "https://fundedtradermarkets.com/faq/what-is-the-profit-split-offered-in-1-step-nitro-pro-simulated-funded-account"
+        },
+        {
+          "program": "FTM — all accounts, reward payment method checks",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Rewards are paid in USDT (TRC20) or via Rise; crypto requests carry a 5% processing fee deducted from the trader's share; 'the reward may be forfeited' if the Rise name differs from the FTM account name or if a wallet address or email matches another FTM user's. Failing to respond within 36 hours to a payment-method request auto-rejects the reward.",
+          "impact": "A name or wallet mismatch can cancel an earned reward, and crypto payouts lose 5%.",
+          "source": "https://fundedtradermarkets.com/faq/what-withdrawal-methods-are-available-at-funded-trader-markets"
+        },
+        {
+          "program": "FTM — all accounts, KYC and verification call (terms)",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 4.H.2: failing to attend a verification call 'may result in the forfeiture of the performance reward'; funded accounts stay read-only until KYC and the trader agreement are complete (5.G), and the FAQ says the company 'reserves the right to deny any upgrade' if KYC is not completed within 2 weeks after passing. Residents of listed restricted jurisdictions, including Cyprus, are excluded (2.C).",
+          "impact": "Missing the verification interview or the two-week KYC window can cost the reward or the funded upgrade.",
+          "source": "https://fundedtradermarkets.com/terms-conditions"
+        },
+        {
+          "program": "FTM — all accounts, strategy and discretion clauses (terms)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms 5.C prohibit any 'third-party strategy, off-the-shelf strategy, or one marketed to pass challenge accounts' and using 'one strategy to pass an assessment and then utilizing a different strategy in a funded account'; under 5.D participation 'will be terminated and may include forfeiture of any fees paid'. 5.F lets the company block a trader 'for any reason, in the Company's sole and absolute discretion'; 4.H.1 lets it refuse a funded account where trading may 'pose a risk' or cut leverage to 1:10; 11.B allows ending services 'at any time, at its sole discretion, without any prior notification'.",
+          "impact": "A change of trading style between evaluation and funded stage, or a discretionary risk assessment, can end the account without an objective test in the terms.",
+          "source": "https://fundedtradermarkets.com/terms-conditions"
         }
       ],
       "changelog": [
@@ -19668,11 +19997,21 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://www.fundedtradermarkets.com/faq/category/2-step-plus-evaluation",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 15 new restrictive rules; 1 outdated rule(s) removed; 5 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://fundedtradermarkets.com/programs",
+          "fields": ["auditSummary", "eaAllowed", "newsTrading", "payoutDelay", "products", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
-        "payoutDelay": "on-demand reward cycle on 2-Step Plus and 1-Step Nitro, conditional on their own Shield / profit-consistency rules",
-        "score": 55
+        "payoutDelay": "on demand once the consistency rule, minimum reward (1% of initial balance) and minimum trading days are met; FTM states a 24-business-hour guarantee for rewards up to $1,000",
+        "score": 55,
+        "newsTrading": "Allowed",
+        "eaAllowed": "Yes",
+        "verdict": "Funded Trader Markets sells 1-Step Nitro, 2-Step Plus and three Instant Funding accounts with on-demand rewards. The FAQ voids profits from trades under one minute, applies 15% to 50% best-day ratios, and on 2-Step Plus and Instant Plus cuts the split down to 20% after 1% floating-loss breaches; Instant splits start at 50%. Payout claims are unverified.",
+        "auditSummary": "Official-source review dated 19 November 2026. The pricing pages list 1-Step Nitro (5K to 300K, list prices $80 to $1,622 before the site-wide NOV discount; 10% target, 4% daily, 6% trailing limit locking at break-even after 6% profit), 2-Step Plus (8% and 5% targets, 4% daily, 10% static limit, 70% split), and Instant Standard, Pro and Plus (3% daily; 5%, 3% and 6% trailing limits); only the 100K size of the last four rendered. The FAQ states rewards are on demand after five days of at least 0.5% profit, with a minimum of 1% of initial balance, a 5% fee on crypto payouts and a 24-business-hour guarantee for rewards up to $1,000. The heaviest conditions are: profits from trades closed in under one minute are voided; best-day ratios of 50%/45% on Nitro and 15% on Instant accounts; Instant Standard and Pro splits of 50%, 60% and 70% before 80% from the 4th reward; a 1% floating-loss Shield on 2-Step Plus and Instant Plus that cuts the split step by step to a permanent 20%; the 90% Nitro split limited to the first $10,000 per email; IP-overlap and VPN rules that can cost payouts and linked accounts; 30-day inactivity closure. The terms name Formed Technologies INT FZCO (UAE) as contracting entity, prohibit using a different strategy on the funded account, and allow blocking a trader 'for any reason'. Payout evidence remains unverified; Trustpilot showed its rating as withheld for a guideline breach when checked on 30 October 2026."
       },
       "addSources": [
         {
@@ -19682,6 +20021,38 @@
         {
           "label": "Funded Trader Markets 1-Step (official)",
           "url": "https://fundedtradermarkets.com/1-step"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/programs"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/ftm-instant-funding"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/variations"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/terms-conditions"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/refund-policy"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/promo-terms"
+        },
+        {
+          "label": "fundedtradermarkets.com official page (read 2026-11-19)",
+          "url": "https://fundedtradermarkets.com/faq"
         }
       ],
       "addIncidents": [
@@ -19699,11 +20070,135 @@
         {
           "key": "infinity-plus",
           "name": "1-Step Infinity Plus"
+        },
+        {
+          "key": "instant-standard",
+          "name": "Instant Standard"
+        },
+        {
+          "key": "instant-pro",
+          "name": "Instant Pro"
+        },
+        {
+          "key": "instant-plus",
+          "name": "Instant Plus"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "ftm-1step-nitro",
+          "name": "1-Step Nitro",
+          "type": "Challenge",
+          "description": "One-phase evaluation, sizes 5K to 300K on the official price table. Trailing overall limit that locks at the initial balance once the account is 6% in profit. 90% split on the first $10,000 of profit, then 80%. Reward cycle on demand.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 300000,
+          "entryFeeMin": 80,
+          "entryFeeMax": 1622,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4% of initial balance (3% on the 300K size)",
+          "maxDrawdown": "6%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fundedtradermarkets.com/faq/how-does-the-overall-drawdown-limit-for-the-1-step-nitro-evaluation-work",
+          "drawdownDetails": "6% below the highest recorded balance; once the account reaches 6% profit the limit is fixed at the initial account size ('Trailing Lock').",
+          "profitSplit": "90% on the first $10,000 of profit, then 80%",
+          "platforms": ["MT5", "cTrader", "TradeLocker", "Match-Trader"],
+          "tradableAssets": ["Forex", "Commodities", "Crypto"],
+          "minTradingDays": "5 profitable days of at least 0.5% in the simulated funded phase; none in evaluation",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Evaluation: no day above 50% of the profit target. Funded: no day above 45% of total profit before withdrawal."
+        },
+        {
+          "id": "ftm-2step-plus",
+          "name": "2-Step Plus",
+          "type": "Challenge",
+          "description": "Two-phase evaluation with a static 10% overall limit and a 70% starting split protected by the Shield Risk Protocol (1% floating-loss limit). Only the 100K size was rendered on the official pricing page; the FAQ states a $300,000 maximum allocation per member.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 998,
+          "entryFeeMax": 998,
+          "profitTarget": "8% phase 1, 5% phase 2",
+          "maxDailyLoss": "4% of initial balance",
+          "maxDrawdown": "10%",
+          "drawdownType": "Static",
+          "drawdownSource": "https://fundedtradermarkets.com/faq/how-does-the-overall-drawdown-limit-for-the-2-step-plus-account-work",
+          "drawdownDetails": "The 10% limit 'remains fixed to the initial balance throughout the account' (pricing table label: 'Balance Based').",
+          "profitSplit": "70% (optional $0 add-on: 90% with the Shield Protocol applied during evaluation)",
+          "platforms": ["MT5", "cTrader", "TradeLocker", "Match-Trader"],
+          "tradableAssets": ["Forex", "Commodities", "Crypto"],
+          "minTradingDays": "3 per evaluation phase, 5 in the simulated funded phase (days of at least 0.5% profit)",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule in evaluation or funded phase (official FAQ)."
+        },
+        {
+          "id": "ftm-instant-standard",
+          "name": "Instant Standard",
+          "type": "Instant funding",
+          "description": "Instant simulated funded account with no evaluation. Only the 100K size was rendered on the official pricing page; the FAQ states a $200,000 maximum allocation per member. Split rises from 50% to 80% by the 4th reward; full withdrawals only.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 723,
+          "entryFeeMax": 723,
+          "profitTarget": "None",
+          "maxDailyLoss": "3% of initial balance",
+          "maxDrawdown": "5%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fundedtradermarkets.com/faq/how-does-the-overall-drawdown-limit-for-the-instant-standard-account-work",
+          "drawdownDetails": "'It consistently remains at 5% of the INITIAL BALANCE from the peak balance'; resets to the initial-balance level after a full withdrawal.",
+          "profitSplit": "50% (1st reward), 60%, 70%, then 80% from the 4th reward",
+          "platforms": ["MT5", "cTrader", "TradeLocker", "Match-Trader"],
+          "tradableAssets": ["Forex", "Commodities", "Crypto"],
+          "minTradingDays": "5 profitable days of at least 0.5%",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No single day above 15% of total profit before withdrawal."
+        },
+        {
+          "id": "ftm-instant-pro",
+          "name": "Instant Pro",
+          "type": "Instant funding",
+          "description": "Instant simulated funded account with a 3% trailing overall limit. Only the 100K size was rendered on the official pricing page; the FAQ states a $100,000 maximum allocation per trader. The product description says 'no daily drawdown limits' while the table and FAQ give 3% daily.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 600,
+          "entryFeeMax": 600,
+          "profitTarget": "None",
+          "maxDailyLoss": "3% of initial balance (table and FAQ; product description conflicts)",
+          "maxDrawdown": "3%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fundedtradermarkets.com/faq/how-does-the-overall-drawdown-limit-for-the-instant-funding-pro-account-work",
+          "drawdownDetails": "'It consistently remains at 3% of the INITIAL BALANCE from the peak balance and is always trailing.'",
+          "profitSplit": "50% (1st reward), 60%, 70%, then 80% from the 4th reward",
+          "platforms": ["MT5", "cTrader", "TradeLocker", "Match-Trader"],
+          "tradableAssets": ["Forex", "Commodities", "Crypto"],
+          "minTradingDays": "5 profitable days of at least 0.5%",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No single day above 15% of total profit before withdrawal."
+        },
+        {
+          "id": "ftm-instant-plus",
+          "name": "Instant Plus",
+          "type": "Instant funding",
+          "description": "Instant simulated funded account with an 80% starting split subject to a 1% floating-loss Shield that cuts the split on each breach. Only the 100K size was rendered on the official pricing page; the FAQ states a $100,000 maximum allocation per member.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 884,
+          "entryFeeMax": 884,
+          "profitTarget": "None",
+          "maxDailyLoss": "3% of initial balance",
+          "maxDrawdown": "6%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fundedtradermarkets.com/faq/how-does-the-overall-drawdown-limit-for-the-instant-funding-plus-account-work",
+          "drawdownDetails": "6% from the highest recorded balance; fixed at the initial balance once the account reaches 6% profit ('Trailing Lock').",
+          "profitSplit": "80%, reduced to 50%, 40%, 30% and permanently 20% after floating-loss breaches",
+          "platforms": ["MT5", "cTrader", "TradeLocker", "Match-Trader"],
+          "tradableAssets": ["Forex", "Commodities", "Crypto"],
+          "minTradingDays": "5 profitable days of at least 0.5%",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No single day above 15% of total profit before withdrawal."
         }
       ]
     },
     "tx3-funding": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "TX3 Forex Pro — funded payout and major news",
@@ -19735,6 +20230,126 @@
           "category": "consistency",
           "severity": "major",
           "clarity": "clear"
+        },
+        {
+          "program": "TX3 Instant Standard and Instant Pro — 1% maximum open risk",
+          "appliesTo": ["instant-standard", "instant-pro"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "'You must not risk more than 1% of your account balance at any given time', counted across all open trades and scaled positions. The Instant Standard rules state 'Breaching any rule will result in account termination'; the Instant Pro rules state that breaching risk rules results in account termination.",
+          "impact": "Open risk above 1% of balance ends the instant account, well before the 5% overall limit.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/trading-rules-for-instant-standard-accounts"
+        },
+        {
+          "program": "TX3 Instant Standard — news and weekend",
+          "appliesTo": ["instant-standard"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "News trading is not allowed and weekend trading is not allowed on Instant Standard; the same article states 'Breaching any rule will result in account termination'.",
+          "impact": "A trade around a news release or held over the weekend can end the account.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/trading-rules-for-instant-standard-accounts"
+        },
+        {
+          "program": "TX3 Instant Standard — weekend holding",
+          "appliesTo": ["instant-standard"],
+          "category": "weekend-overnight",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Weekend trading is not allowed on Instant Standard, and 'Breaching any rule will result in account termination'.",
+          "impact": "Positions must be closed before the weekend or the account can be terminated.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/trading-rules-for-instant-standard-accounts"
+        },
+        {
+          "program": "TX3 Instant Pro — consistency, profitable days and buffer",
+          "appliesTo": ["instant-pro"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Each 10-day payout cycle requires 10 trading days, 10 profitable days of at least 0.25%, a 10% profit threshold and 10% consistency (no single day above 10% of total profit); a 5% buffer of account size must stay in the account and cannot be withdrawn. 'All conditions reset for each payout cycle.'",
+          "impact": "A payout needs at least ten separate profitable days and evenly spread profit; the first 5% of profit is never withdrawable while the account is open.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/how-payouts-work-instant-pro"
+        },
+        {
+          "program": "TX3 Instant Pro — 20% cap and 50% split",
+          "appliesTo": ["instant-pro"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Withdrawals are limited to '20% of account balance per cycle', applied after the 5% buffer and before the 50% profit split (worked example: $30,000 profit on 100K gives the trader $10,000). Excess profit stays for later cycles.",
+          "impact": "Large gains are paid out over several 10-day cycles, at half of the eligible amount.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/how-payouts-work-instant-pro"
+        },
+        {
+          "program": "TX3 Instant Pro — news and weekend profit deductions",
+          "appliesTo": ["instant-pro"],
+          "category": "news",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "No opening or closing of trades (including pending orders and SL/TP) from 5 minutes before to 5 minutes after red-folder events; holding over the weekend is not allowed. 'Violating any restriction will result in profit deductions, not account termination'; losses from violating trades are not reinstated.",
+          "impact": "Profits from news-window or weekend trades are removed from the payout while their losses stay.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/leverage-and-trading-restrictions-instant-pro"
+        },
+        {
+          "program": "TX3 Instant Pro — weekend holding",
+          "appliesTo": ["instant-pro"],
+          "category": "weekend-overnight",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "'Holding trades over the weekend is not allowed' and trades must be closed before the weekend; any profit from weekend trades is deducted. Overnight holding is allowed.",
+          "impact": "Weekend gains are deducted from the payout.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/leverage-and-trading-restrictions-instant-pro"
+        },
+        {
+          "program": "TX3 Instant Standard and Instant Pro — minimum trading days",
+          "appliesTo": ["instant-standard", "instant-pro"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Minimum trading days: 7 on Instant Standard and 10 on Instant Pro, with the same number of profitable days of at least 0.25% each.",
+          "impact": "No payout before 7 (Standard) or 10 (Pro) qualifying days.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/instant-standard-vs-instant-pro-what-s-the-difference"
+        },
+        {
+          "program": "TX3 Forex 1 Phase — funded consistency and news add-on",
+          "appliesTo": ["1phase"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "No consistency rule in evaluation; a 50% consistency rule applies in the funded phase, and payout requests require 'All trading rules ... (including the Consistency Rule and Max Loss Limit)' to be followed. 'News trading is only allowed with the add-on' on challenge and funded accounts.",
+          "impact": "A funded payout can be held back while one day accounts for more than half of the profit.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/challenge-rules-objectives-1-phase-challenge"
+        },
+        {
+          "program": "TX3 Forex Flex — funded floating-loss limit",
+          "appliesTo": ["flex"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "On the funded account, combined floating loss across open positions may not exceed 0.5% of the initial balance at any time (not applied in evaluation). The article does not state the consequence of a breach; the funded account also has a 2.5% daily drawdown.",
+          "impact": "Position sizing on the funded Flex account is constrained far below the 5% overall limit.",
+          "source": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge"
+        },
+        {
+          "program": "TX3 — all accounts, copy trading, bots and multiple accounts (terms)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms of Use Section 7 prohibit multiple accounts without 'express written permission', copy-trading, 'bots or automated scripts' and exploiting 'latency or slippage'; violations may bring 'immediate termination, forfeiture of payouts, permanent bans, and legal action'. Section 3: 'Each person may hold only one account unless granted written consent.'",
+          "impact": "Using a copier or an automated strategy can forfeit payouts under the terms.",
+          "source": "https://www.tx3funding.com/en/terms"
+        },
+        {
+          "program": "TX3 — all accounts, discretionary freeze and forfeiture (terms)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms Section 8 allow TX3 to freeze accounts, delay payouts or terminate access 'at its discretion' if suspicious activity is detected; Section 9: TX3 'may delay or deny payouts pending identity re-verification, compliance review, or investigation of prohibited conduct'; Section 11: TX3 'reserves the right to suspend or terminate accounts immediately' for breach of the terms, suspected misconduct or 'regulatory risk', and 'Termination for breach results in forfeiture of fees and payouts.'",
+          "impact": "Payouts can be delayed or withheld during a review whose triggers are not defined in the terms.",
+          "source": "https://www.tx3funding.com/en/terms"
         }
       ],
       "changelog": [
@@ -19767,13 +20382,23 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 52 to 55: the earlier manual deduction (\"Score 55 to 52 for verified restrictive eligibility, not an allegation of payout refusal.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://faq.tx3funding.com/challenge-rules-and-objectives-pro-challenge",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 12 new restrictive rules; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://faq.tx3funding.com/help/tx3-funding/instant-standard-vs-instant-pro-what-s-the-difference",
+          "fields": ["auditSummary", "newsTrading", "payoutDelay", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
         "trustpilotRating": 3.0,
         "trustpilotReviewCount": 4311,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/www.tx3funding.com",
-        "score": 55
+        "score": 55,
+        "payoutDelay": "varies by programme: 1 Phase first request 3 days after the first funded trade; Pro and 1 Phase processed within 1 business day; Flex every two weeks; Instant Standard 14-day cycle; Instant Pro 10-day cycle",
+        "newsTrading": "Restricted",
+        "verdict": "TX3 Funding, formerly TopTier Trader, sells forex 1 Phase, Flex and Pro two-phase challenges and Instant Standard and Pro accounts on MatchTrader. Its help centre sets payout conditions per programme (best-day limits from 10% to 50%, buffers, caps of 5% to 20% per cycle) and terminates instant accounts for open risk above 1%; Instant Pro pays a 50% split. Prices and payout evidence were not verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. The site lists five forex programmes on MatchTrader: 1 Phase (10% target, 3% daily, 6% trailing, 85% split, 50% funded consistency, first payout 3 days after the first funded trade), Pro 2 Phase (10% and 5% targets, 5% daily, 10% static, 80% split, 2% minimum and 10% cap per payout, best-day limit from 40% to 20% by size), Flex 2 Phase (rules dated 24 August 2026: 30-day phases with five 0.5% profitable days, 5% static limit, funded 2.5% daily and 0.5% floating-loss limit, 20% consistency, 5% cap, biweekly payouts), Instant Standard (3% daily, 5% trailing, 80% split, 15% consistency, 3% buffer, 14-day cycle) and Instant Pro (2% daily, 5% trailing, 50% split, 10% consistency, 5% buffer, 20% cap, 10-day cycle). The heaviest conditions: on both instant accounts open risk above 1% of balance ends the account, and on Instant Standard any rule breach, including news or weekend trading, is stated to terminate it. News trading on challenges needs a paid add-on. The Terms of Use name TX3 Funding FZCO (Dubai law), prohibit copy trading and 'bots or automated scripts', and allow payouts to be delayed or denied pending review at TX3's discretion. Prices, payout evidence and the legal file remain unverified."
       },
       "auditedPrograms": [
         {
@@ -19787,6 +20412,56 @@
         {
           "key": "instant-standard",
           "name": "Instant Standard"
+        },
+        {
+          "key": "1phase",
+          "name": "Forex 1 Phase"
+        },
+        {
+          "key": "instant-pro",
+          "name": "Instant Pro"
+        }
+      ],
+      "addSources": [
+        {
+          "label": "tx3funding.com official page (read 2026-11-19)",
+          "url": "https://www.tx3funding.com/en"
+        },
+        {
+          "label": "tx3funding.com official page (read 2026-11-19)",
+          "url": "https://www.tx3funding.com/en/fx/select-challenge?utm_code=start-challenge"
+        },
+        {
+          "label": "tx3funding.com official page (read 2026-11-19)",
+          "url": "https://www.tx3funding.com/en/fx/one-phase"
+        },
+        {
+          "label": "tx3funding.com official page (read 2026-11-19)",
+          "url": "https://www.tx3funding.com/en/terms"
+        },
+        {
+          "label": "faq.tx3funding.com official page (read 2026-11-19)",
+          "url": "https://faq.tx3funding.com/challenge-rules-and-objectives-pro-challenge"
+        },
+        {
+          "label": "faq.tx3funding.com official page (read 2026-11-19)",
+          "url": "https://faq.tx3funding.com/challenge-rules-objectives-flex-challenge"
+        },
+        {
+          "label": "faq.tx3funding.com official page (read 2026-11-19)",
+          "url": "https://faq.tx3funding.com/help/tx3-funding/introduction-to-the-flex-challenge"
+        },
+        {
+          "label": "faq.tx3funding.com official page (read 2026-11-19)",
+          "url": "https://faq.tx3funding.com/help/tx3-funding/rules-and-objectives-1-phase-challenge"
+        },
+        {
+          "label": "faq.tx3funding.com official page (read 2026-11-19)",
+          "url": "https://faq.tx3funding.com/help/tx3-funding/challenge-rules-objectives-1-phase-challenge"
+        },
+        {
+          "label": "faq.tx3funding.com official page (read 2026-11-19)",
+          "url": "https://faq.tx3funding.com/help/tx3-funding/payouts-guide-first-and-subsequent-withdrawals-1-phase"
         }
       ]
     },
@@ -19875,7 +20550,7 @@
       ]
     },
     "now-trade-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "Now Trade Funded — historical June 2024 Schedule of Assessment, payout limits",
@@ -19896,6 +20571,76 @@
           "category": "consistency",
           "severity": "major",
           "clarity": "buried"
+        },
+        {
+          "program": "Now Trade Funded — all accounts, prohibited strategies",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The FAQ lists high-frequency trading (manual or by bot), hedge arbitrage, tick scalping, grid trading, one-sided betting, latency arbitrage, reverse arbitrage and copying trades from other traders as prohibited; if detected, 'it will be considered a violation of the rules and NowTrade will terminate your account.'",
+          "impact": "Using any listed strategy, including copy trading or bot-driven high-frequency trading, ends the account rather than only excluding the trades.",
+          "source": "https://nowtradefunded.com/faqs/"
+        },
+        {
+          "program": "Now Trade Funded — all accounts, weekend holding",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The FAQ states 'We do not allow holding weekend hold on any accounts but we allow weekend trading on crypto pairs.' The consequence of a breach is not stated.",
+          "impact": "Positions must be closed before the weekend except crypto pairs.",
+          "source": "https://nowtradefunded.com/faqs/"
+        },
+        {
+          "program": "Now Trade Funded — all accounts, inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The FAQ states 'At NowTrade our inactivity period is 30 days.' It does not say what happens when the period is reached; the terms (cl. 18.1(b)) separately allow the company to treat 6 consecutive months without use as notice of discontinuation, with access fees not refundable (cl. 18.1(d)).",
+          "impact": "An account left untraded for 30 days may be treated as inactive; the exact consequence is not written on the FAQ.",
+          "source": "https://nowtradefunded.com/faqs/"
+        },
+        {
+          "program": "Now Trade Funded — funded account, first payout conditions",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The FAQ states 'you must engage in trading with us for a minimum of 30 days to qualify for your initial payout', after which 'you can request bi-weekly payouts'; the live account must end the 30-day period with a positive balance, the minimum withdrawal is $100 and all trades must be closed before the withdrawal button activates.",
+          "impact": "No payout can be requested in the first 30 days of the funded stage, and a negative balance at day 30 blocks the first withdrawal.",
+          "source": "https://nowtradefunded.com/faqs/"
+        },
+        {
+          "program": "Now Trade Funded — all accounts, IP and account access (terms)",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms cl. 12.2(g)(vi) prohibit 'accessing multiple accounts from the same IP address' and use of an account 'from multiple IP addresses'; on a finding of contravention the company may act 'immediately and without notice' and the trader 'will forfeit any fees or payments you are entitled to' (cl. 12.3).",
+          "impact": "Logging in from several IP addresses, or sharing an IP with another account, can forfeit earned trader payments.",
+          "source": "https://nowtradefunded.com/wp-content/uploads/2024/03/Proptradetech-terms-and-conditions-NowTrade-1.pdf"
+        },
+        {
+          "program": "Now Trade Funded — all accounts, good-faith and termination discretion (terms)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms cl. 12.2(g)(viii) let the company treat any strategy as not trading 'in good faith' at its 'exclusive option'; cl. 12.2(c) prohibits undefined 'unethical, unconscionable' activity; cl. 12.3 provides forfeiture of 'any fees or payments you are entitled to'; cl. 18.2 allows termination 'for any reason and without cause at any time'.",
+          "impact": "Payments can be forfeited on a discretionary assessment of the trading style, without an objective test in the terms.",
+          "source": "https://nowtradefunded.com/wp-content/uploads/2024/03/Proptradetech-terms-and-conditions-NowTrade-1.pdf"
+        },
+        {
+          "program": "Now Trade Funded — all accounts, opposite trades across accounts",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The FAQ states hedging between two accounts is not allowed: 'You cannot open trades that are exactly opposite one another on different accounts.' Accounts cannot be merged and must be in the trader's own name.",
+          "impact": "Traders holding several accounts cannot hedge one against another.",
+          "source": "https://nowtradefunded.com/faqs/"
         }
       ],
       "changelog": [
@@ -19922,18 +20667,47 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 7 new restrictive rules; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://nowtradefunded.com/faqs/",
+          "fields": ["auditSummary", "payoutDelay", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 16,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/nowtradefunded.com",
-        "profitSplit": 80
+        "profitSplit": 80,
+        "payoutDelay": "first payout after at least 30 days of trading on the funded account, then bi-weekly; requests approved within 1-3 business days; $100 minimum",
+        "verdict": "Now Trade Funded sells two-phase challenges (Standard, Quick Pass and Progressive tiers from 1K to 200K) with an advertised 80% split. Its FAQ prohibits copy trading, HFT, grid and arbitrage strategies on pain of termination and delays the first payout to 30 days; its terms let NowMeta forfeit payments at its discretion. Current prices and payout evidence were not verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. The pricing and product pages of nowtradefunded.com did not render for automated reading, so current prices, targets and drawdowns remain unverified; the site describes challenges from 1K to 200K with up to 80% of profit, and search listings show Standard, Progressive and HFT products (the FAQ says HFT accounts are not currently accepted). The FAQ states the first payout requires at least 30 days of trading on the funded account with a positive balance, then bi-weekly requests, a $100 minimum and approval within 1-3 business days; weekend holding is not allowed except crypto; the inactivity period is 30 days; and HFT, tick scalping, grid trading, latency or hedge arbitrage and copy trading lead to account termination. Leverage is 1:50 in evaluation and 1:30 funded. The Terms and Conditions name NowMeta as the company without stating its country of incorporation, are governed by the law of Saint Vincent and the Grenadines, prohibit logging in from multiple IP addresses, allow the company to treat any strategy as not in good faith at its exclusive option with forfeiture of payments (cl. 12.2-12.3), and allow termination without cause (cl. 18.2). The still-linked June 2024 schedule sets a 2.5% then 5% payout cap that the current FAQ does not mention. Payout evidence and the legal file remain unverified."
       },
       "addSources": [
         {
           "label": "Now Trade Funded home page (official)",
           "url": "https://nowtradefunded.com/"
+        },
+        {
+          "label": "nowtradefunded.com official page (read 2026-11-19)",
+          "url": "https://nowtradefunded.com/faqs/"
+        },
+        {
+          "label": "nowtradefunded.com official page (read 2026-11-19)",
+          "url": "https://nowtradefunded.com/wp-content/uploads/2024/03/Proptradetech-terms-and-conditions-NowTrade-1.pdf"
+        },
+        {
+          "label": "nowtradefunded.com official page (read 2026-11-19)",
+          "url": "https://nowtradefunded.com/home/"
+        },
+        {
+          "label": "nowtradefunded.com official page (read 2026-11-19)",
+          "url": "https://nowtradefunded.com/challenges/"
+        },
+        {
+          "label": "nowtradefunded.com official page (read 2026-11-19)",
+          "url": "https://nowtradefunded.com/product/5k-two-phase-standard-challenge-2/"
         }
       ],
       "auditedPrograms": [
