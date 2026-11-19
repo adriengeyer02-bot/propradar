@@ -3213,7 +3213,7 @@
       ]
     },
     "clarity-traders": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3232,6 +3232,12 @@
           "summary": "Restrictive-rules audit: read the official FAQ, Instant page, trading rules, how-payouts-work page and Terms and Conditions; 8 rules across Instant, One Step and Two Step.",
           "source": "https://www.claritytraders.com/terms-and-conditions",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 4 new restrictive rules; 3 programmes; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://www.claritytraders.com/terms-and-conditions",
+          "fields": ["auditSummary", "products", "restrictiveRules", "verdict"]
         }
       ],
       "addIncidents": [
@@ -3239,7 +3245,9 @@
       ],
       "set": {
         "payoutDelay": "first request after at least 7 trading days (Terms add 14 days after the account is issued); then every 14 days, or weekly with the Express Payouts add-on",
-        "newsTrading": "Allowed"
+        "newsTrading": "Allowed",
+        "verdict": "Clarity Traders LLC (Delaware) sells simulated Instant, One Step and Two Step accounts from $5,000 to $200,000, paid in USDT. Its terms make trades under 60 seconds, cross-account hedging and strategies it determines exploit the program material breaches, and the published Terms still contain unfilled placeholders. Payout evidence has not been verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. Clarity Traders LLC, a Delaware company, sells three simulated programmes from $5,000 to $200,000: Instant (no target, 3% daily limit that trails new equity highs, 5% maximum loss, from $95), One Step (10% target, 4% daily, 6% then 10% funded, from $59) and Two Step (8% and 5% targets, 5% daily, 8% then 10% funded, from $55). Per-size prices are only shown in a JavaScript checkout that could not be read. The terms state that payouts need KYC, 7 trading days and 14 days since the account was issued or the last request, and pass a consistency test (10% best-day share on Instant, 20% on funded One Step and Two Step). The split is 70% on the first payout, 80% on the second and 90% after, with 100% only through a paid add-on; payouts are in USDT every 14 days, or weekly with a paid add-on. The heaviest clauses are in Terms section 7: trades held under 60 seconds, hedging or coordinated trading across accounts and 'any strategy we reasonably determine is designed to exploit the program' are material breaches, for which a reward can be delayed, reduced or refused and the account closed without refund. A VPN ban, 60-day inactivity closure and an EA add-on also apply. On 19 November 2026 the Terms still contained unfilled placeholders (restricted-country list, account cap, daily reset time), and official pages disagree on whether weekend trading needs an add-on. Payout records and the company's legal file have not been independently verified."
       },
       "addSources": [
         {
@@ -3261,6 +3269,14 @@
         {
           "label": "Clarity Traders Instant accounts (official, 2026-11-18)",
           "url": "https://www.claritytraders.com/instant"
+        },
+        {
+          "label": "claritytraders.com official page (read 2026-11-19)",
+          "url": "https://www.claritytraders.com/"
+        },
+        {
+          "label": "app.claritytraders.com official page (read 2026-11-19)",
+          "url": "https://app.claritytraders.com/checkout"
         }
       ],
       "auditedPrograms": [
@@ -3357,6 +3373,103 @@
           "rule": "'You must place at least one trade every 60 days.' Terms section 6.8: 'An Account with no trade for 60 days is closed as inactive.'",
           "impact": "An account idle for 60 days is closed.",
           "source": "https://www.claritytraders.com/terms-and-conditions"
+        },
+        {
+          "program": "All programmes — evaluation and funded",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms section 7 lists practices that 'are a material breach', including 'Gap trading or other strategies designed to profit from the difference between simulated and real execution' (7.7) and 'Market manipulation, or any strategy we reasonably determine is designed to exploit the program' (7.8). Section 8.7 allows the firm to 'delay, reduce or refuse a Reward' for a breach and section 9.2 allows suspension or closure without refund for a material breach. The Terms say decisions are made 'in good faith, based on trade data' and that the trader is told which rule was breached and can respond.",
+          "impact": "A strategy the firm determines is designed to exploit the program can lead to a refused payout or account closure; the clause does not define such strategies in advance.",
+          "source": "https://www.claritytraders.com/terms-and-conditions"
+        },
+        {
+          "program": "All programmes — evaluation and funded",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The trading-rules page says hedging is not allowed, including hedging or coordinating trades across accounts, also accounts held by other people. Terms section 7.3 lists 'Hedging, opposite-direction or coordinated trading across accounts' as a material breach (consequences in sections 8.7 and 9.2).",
+          "impact": "Opposite-direction or coordinated trading across accounts can lead to a refused payout or account closure.",
+          "source": "https://www.claritytraders.com/trading-rules"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "vague",
+          "rule": "The FAQ says 'weekend trading and holding positions over the weekend are permitted.' The trading-rules page says weekend trading is allowed only with the Trade on Weekends add-on. Terms section 6.6 says 'you may trade the news, hold positions overnight and over weekends', while section 6.7 says 'Trading on weekends is available only with the Trade on Weekends Add-on.'",
+          "impact": "Official documents disagree on whether weekend trading needs a paid add-on; a trader should confirm in writing before trading at weekends.",
+          "source": "https://www.claritytraders.com/terms-and-conditions",
+          "status": "conflicting"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms section 2.2: 'The Services are not offered in countries subject to US, UN, EU or UK sanctions, or in [list of restricted countries / link]' and 'We may close Accounts opened from a restricted country.' The restricted-country list is an unfilled placeholder on 2026-11-19. Section 2.3: 'You must pass identity verification (KYC) before any Reward is paid'; section 8.7 allows a Reward to be delayed, reduced or refused over a KYC problem.",
+          "impact": "Residents of a country the firm treats as restricted can have the account closed, and the published Terms do not list those countries.",
+          "source": "https://www.claritytraders.com/terms-and-conditions"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "clarity-instant",
+          "name": "Instant Account",
+          "type": "Instant funding",
+          "description": "No evaluation. Six sizes from $5,000 to $200,000, from $95 (list; per-size prices not shown outside the checkout). Payouts in USDT (ERC-20) every 14 days, or weekly with the Express Payouts add-on (+25%). Add-ons: 100% Profit Share (+15%), EAs Allowed (+35%), Refund Guarantee (price not stated).",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 95,
+          "profitTarget": "none",
+          "maxDailyLoss": "3%, described as a dynamic limit that adjusts as equity reaches new highs",
+          "maxDrawdown": "5% of account size (type not stated)",
+          "profitSplit": "70% first payout, 80% second, 90% after; 100% with paid add-on",
+          "platforms": ["TradeLocker", "MetaTrader 5"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "7 trading days before the first payout; Terms add 14 days after the account is issued",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No single trading day can make up more than 10% of the profit in the payout request."
+        },
+        {
+          "id": "clarity-1step",
+          "name": "One Step",
+          "type": "Challenge",
+          "description": "One phase, no minimum days and no time limit to pass. Six sizes from $5,000 to $200,000, from $59 (per-size prices not shown outside the checkout). Funded payouts in USDT (ERC-20) every 14 days, or weekly with the Express Payouts add-on.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 59,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "6% in evaluation, 10% funded (type not stated)",
+          "profitSplit": "70% first payout, 80% second, 90% after; 100% with paid add-on",
+          "platforms": ["TradeLocker", "MetaTrader 5"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "none to pass; 7 trading days on the funded account before the first payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded only: no single day can make up more than 20% of the requested payout."
+        },
+        {
+          "id": "clarity-2step",
+          "name": "Two Step",
+          "type": "Challenge",
+          "description": "Two phases, no minimum days and no time limit to pass. Six sizes from $5,000 to $200,000, from $55 (per-size prices not shown outside the checkout). Funded payouts in USDT (ERC-20) every 14 days, or weekly with the Express Payouts add-on.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 55,
+          "profitTarget": "8% in phase 1, 5% in phase 2",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "8% in evaluation, 10% funded (type not stated)",
+          "profitSplit": "70% first payout, 80% second, 90% after; 100% with paid add-on",
+          "platforms": ["TradeLocker", "MetaTrader 5"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "none to pass; 7 trading days on the funded account before the first payout",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded only: no single day can make up more than 20% of the requested payout."
         }
       ]
     },
@@ -18322,7 +18435,7 @@
       ]
     },
     "funder-trading": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "Funder Trading TrueEdge Challenge — activity and size",
@@ -18343,6 +18456,46 @@
           "category": "other",
           "severity": "minor",
           "clarity": "clear"
+        },
+        {
+          "program": "TrueEdge Challenge — funded account at the firm's discretion",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The disclaimer states that Funder Trading may 'provide funding in a discretionary trading account that is held by Funder', and a second official page (/how-it-works-2/) says traders 'earn a funded account through affiliated partners'. No written criteria, contract terms or funded-account rules are published.",
+          "impact": "Passing the challenge is not shown to guarantee a funded account, and the funded-stage rules are not published.",
+          "source": "https://fundertrading.com/disclaimer/"
+        },
+        {
+          "program": "TrueEdge Challenge — consistency ratio on a second official page",
+          "appliesTo": ["*"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The page /how-it-works-2/ requires a 6% profit target, 200 round trades and a minimum consistency ratio of 10% ('CR'), which the TrueEdge Challenge page does not mention (it gives a $5,000 target and 80 round turns). The two official pages contradict each other and 'CR' is not defined.",
+          "impact": "A trader cannot tell from the official pages which pass conditions apply.",
+          "source": "https://fundertrading.com/how-it-works-2/"
+        },
+        {
+          "program": "TrueEdge Challenge — profit split stated as 75% on a second official page",
+          "appliesTo": ["*"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The page /how-it-works-2/ says 'Keep 75 % of the profits earned in your funded account', while the homepage, How It Works and TrueEdge pages say 80%.",
+          "impact": "The official pages give two different profit splits for the funded account.",
+          "source": "https://fundertrading.com/how-it-works-2/"
+        },
+        {
+          "program": "TrueEdge Challenge — 22-day attempt window and resets",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Each 'attempt' runs 22 trading days on a 100k simulated account. An account reset brings the balance back to 100k and resets the statistics 'but does NOT reset your time'; a reset needs at least 12 trading days left in the attempt, and trading resumes only on the next trading day.",
+          "impact": "A trader who falls behind late in an attempt cannot reset that attempt and must wait for the next 22-day window.",
+          "source": "https://fundertrading.zendesk.com/hc/en-us/articles/21017908499219-Difference-between-an-Account-Reset-and-a-Challenge-Attempt"
         }
       ],
       "changelog": [
@@ -18369,13 +18522,22 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://fundertrading.com/trueedge-challenge/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 4 new restrictive rules; 1 programmes; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://fundertrading.com/trueedge-challenge/",
+          "fields": ["auditSummary", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
         "profitSplit": 80,
         "trustpilotRating": 4.0,
         "trustpilotReviewCount": 18,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundertrading.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundertrading.com",
+        "payoutDelay": "not stated",
+        "verdict": "Funder Trading (Chicago) runs one US-stocks day-trading challenge on a 100k simulated account with a $5,000 target, $3,000 loss limit and several statistical pass tests. Prices and payout timing are not published, a second official page states different targets and a 75% split, and the disclaimer describes funding as discretionary.",
+        "auditSummary": "Official-source review dated 19 November 2026. Funder Trading LLC (141 W. Jackson Blvd, Chicago, Illinois) sells the TrueEdge Challenge: intraday trading of NASDAQ/NYSE stocks on a 100k simulated account through TradeFundrr software, in attempts of 22 trading days. The challenge page requires more than $5,000 profit, at least 12 trading days and 80 round turns per attempt, no more than 1,000 shares per security, no overnight positions, a $500 daily loss stop (three at most) and a $3,000 overall limit, plus a win/loss ratio of 1.20, a 40% batting average and a largest win above the largest loss. The firm states an 80% split, coverage of losses and reimbursement of challenge costs once funded, but no price, billing period, payout schedule or funded-account rulebook is published. A second official page describes a 6% target, 200 round trades, a 10% consistency ratio, a 75% split and funding 'through affiliated partners'. The disclaimer says the firm is not registered as a broker-dealer or investment adviser and 'may provide funding in a discretionary trading account'; the website terms state no refunds and Illinois law. Payout evidence and the legal file were not verified."
       },
       "addSources": [
         {
@@ -18385,12 +18547,65 @@
         {
           "label": "Funder Trading how it works (official)",
           "url": "https://fundertrading.com/how-it-works/"
+        },
+        {
+          "label": "fundertrading.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.com/"
+        },
+        {
+          "label": "fundertrading.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.com/how-it-works-2/"
+        },
+        {
+          "label": "fundertrading.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.com/terms-conditions/"
+        },
+        {
+          "label": "fundertrading.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.com/disclaimer/"
+        },
+        {
+          "label": "fundertrading.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.com/introduction-to-prohibited-strategies/"
+        },
+        {
+          "label": "fundertrading.zendesk.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.zendesk.com/hc/en-us"
+        },
+        {
+          "label": "fundertrading.zendesk.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.zendesk.com/hc/en-us/categories/22639923408659-True-Edge-Challenge-and-Rules"
+        },
+        {
+          "label": "fundertrading.zendesk.com official page (read 2026-11-19)",
+          "url": "https://fundertrading.zendesk.com/hc/en-us/categories/22639915259539-FAQ"
         }
       ],
       "auditedPrograms": [
         {
           "key": "trueedge",
           "name": "TrueEdge Challenge"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "funder-trading-trueedge",
+          "name": "TrueEdge Challenge",
+          "type": "Challenge",
+          "description": "US-stocks day-trading challenge on a 100k simulated account, run in 22-trading-day attempts on TradeFundrr software with NASDAQ/NYSE Level I and II data. Price and billing period not stated on the pages read; challenge costs are stated to be reimbursed once funded.",
+          "accountSizeMin": 100000,
+          "accountSizeMax": 100000,
+          "profitTarget": "More than $5,000 per attempt",
+          "maxDailyLoss": "$500 (trading stops for the day; no more than 3 per challenge)",
+          "maxDrawdown": "$3,000",
+          "drawdownSource": "https://fundertrading.com/trueedge-challenge/",
+          "drawdownDetails": "Type not stated.",
+          "profitSplit": "80%",
+          "platforms": ["TradeFundrr"],
+          "tradableAssets": ["US stocks (NASDAQ, NYSE)"],
+          "minTradingDays": "12 of each 22 trading days",
+          "hasConsistencyRule": false,
+          "consistencyRule": "Not stated on the TrueEdge page; a second official page (/how-it-works-2/) mentions a 10% consistency ratio. Other pass tests: 80 round turns, W/L ratio 1.20+, 40% BAT, largest win above largest loss, 1,000-share cap, intraday only."
         }
       ]
     },
@@ -18500,7 +18715,7 @@
       ]
     },
     "orion-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "Orion Zero and funded Orion Nova — best-day ratio",
@@ -18547,16 +18762,108 @@
           "rule": "Nova charges a small $7 evaluation registration fee and a separate funded activation fee after passing; the activation must be paid within 30 days after completion.",
           "impact": "The $7 introductory price is not the full amount required to access a Nova funded account.",
           "source": "https://www.orionfunded.com/faq/programs/challenge-phases"
+        },
+        {
+          "program": "All Orion programmes — trades 'not replicable on a live account'",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The Forbidden Trading Practices article bans trades 'not replicable on a live account', listed as 'overleveraging, overexposure, one-sided bets, and account rolling', and treats as non-standard risk management 'position sizes that are substantially larger than your other trades' or 'substantially more or fewer positions than your normal pattern'. No numeric threshold is given. Orion 'may remove trades from your history, restrict platform access, disqualify the evaluation', forfeit pending rewards or terminate all active agreements, depending on the situation.",
+          "impact": "Whether a trade pattern breaches the rule is decided by Orion without a published threshold, and the stated consequences include losing pending rewards and every account.",
+          "source": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        },
+        {
+          "program": "Orion Standard, Swing, Select and Nova — admission to the Orion Trader Program",
+          "appliesTo": ["standard", "swing", "select", "nova"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "After all evaluation phases are passed, Orion recommends the trader for the Orion Trader Program; 'a third party reviews your application and, if accepted', offers an Orion Trader Account contract. The terms (7.6) add that passing 'does not guarantee your acceptance into the Orion Trader Program'. Acceptance criteria are not published.",
+          "impact": "Passing the evaluation does not by itself give a funded account; the review criteria are not stated.",
+          "source": "https://www.orionfunded.com/faq/programs/challenge-phases"
+        },
+        {
+          "program": "All Orion programmes — grid and martingale",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 10.3.5: grid trading is prohibited at any stage and 'the opening of four or more simultaneous positions in the same asset' is treated as an indication of grid trading; such accounts 'will be disqualified'. Terms 10.3.2: increasing position size after losses (martingale) is prohibited and rewards may be 'partially or totally nullified'.",
+          "impact": "Holding four or more positions on one symbol at once can be read as grid trading and lead to disqualification.",
+          "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf"
+        },
+        {
+          "program": "All Orion programmes — EAs and copy trading",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "EAs or robots that generate 'more than 2,000 server requests per day' are not permitted (help centre). The terms (10.3.1) allow copying between accounts of the same person but prohibit copying via 'external copy-trading services or third-party tools', and (10.2) ban 'automated systems, ultra-fast trading software or mass data entry programs' used to manipulate or gain an unfair advantage. Stated consequences include trade removal and disqualification.",
+          "impact": "High-frequency EAs and third-party copy services are excluded; a breach can cost the account.",
+          "source": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        },
+        {
+          "program": "All Orion programmes — news trading as a strategy",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The news page states there are no timing restrictions in evaluation but that 'news trading as a strategy is prohibited in all phases'; the terms (11.6) prohibit 'any trading strategy explicitly designed to capitalize on news volatility' where restrictions apply. 'News trading as a strategy' is not defined. Breaches 'may have the related profit adjusted, deducted, or voided'.",
+          "impact": "Even on Swing and in evaluation, a news-driven approach can be challenged under an undefined standard, with profit adjustment as the stated consequence.",
+          "source": "https://www.orionfunded.com/faq/programs/news-trading"
+        },
+        {
+          "program": "All Orion programmes — gap trading",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Opening trades specifically to exploit price gaps is banned around scheduled 'major global news, macroeconomic events, or earnings releases' and 'within 2 hours of a relevant market closing for at least 2 hours'. Holding an existing position through a session close is allowed.",
+          "impact": "New positions opened shortly before a long market closure can be treated as gap trading.",
+          "source": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        },
+        {
+          "program": "Orion Standard — overnight and weekend holding",
+          "appliesTo": ["standard"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "vague",
+          "rule": "Terms 7.2.3 (last updated 22 March 2026) state that holding positions overnight or over weekends is not permitted for Orion Standard, while the help centre states that holding overnight and over weekends 'is permitted on every Orion program, in both the evaluation and funded phases'. The two official documents contradict each other.",
+          "impact": "A Standard trader holding over a weekend relies on the help-centre wording against the signed terms.",
+          "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf"
+        },
+        {
+          "program": "All Orion programmes — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms 7.4: an account with no transactions for '30 consecutive calendar days' is marked expired, and this period 'cannot be extended or altered'; 16.2: the agreement terminates if no simulated trade is opened in 30 consecutive calendar days.",
+          "impact": "An account left untraded for 30 days ends.",
+          "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf"
+        },
+        {
+          "program": "All Orion programmes — KYC deadline and restricted countries",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms 8.6: 'After passing the evaluation phase, traders must complete KYC verification within 30 calendar days.' Terms 1.2: restricted jurisdictions 'include United Arab Emirates, Bangladesh, North Korea, Syria' and others listed on the website; 8.5: no contracts with non-profit organisations or trusts.",
+          "impact": "Residents of listed countries cannot use the service, and verification must be completed within 30 days of passing.",
+          "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf"
         }
       ],
       "set": {
         "profitSplit": 80,
         "drawdownType": "Hybride",
-        "payoutDelay": "Program-specific; Orion Zero and Nova retain a 3% non-withdrawable safety cushion and 20% best-day ratio, with rewards reviewed before processing",
+        "payoutDelay": "14-day reward cycle with no initial waiting period; approved rewards stated to be paid within 48 hours (late payment: 100% reward plus programme-fee refund, terms 7.10.2); Zero and Nova keep a 3% non-withdrawable cushion and a 20% best-day ratio",
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 2179,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/orionfunded.com",
-        "auditSummary": "18 November 2026 comparison of Orion's official five-program matrix, payout help and funded-news policies. Zero (instant) and funded Nova (one phase) use a moving drawdown lock, a 20% best-day payout condition and a non-withdrawable first 3% profit cushion; Standard, Swing and Select have fixed drawdown levels and no published best-day rule. Orion Zero reduces reward split to 50% on trades executed close to major news, while funded Nova, Standard and Select restrict order activity within two minutes; Swing is exempt. Nova's $7 fee is only registration and a separate activation fee is required within 30 days of passing. The source material is company policy, not independently tested risk execution or payment proof. Existing 59/100 editorial score is maintained."
+        "auditSummary": "Official-source review dated 19 November 2026. Orion Funded (OGM International Ltd, Saint Lucia) sells five CFD models on MT5 and MatchTrader: Standard and Swing (2-step), Select (3-step), Nova (1-step, $7 registration then an activation fee after passing) and the instant Zero; static drawdown on the stepped models, a trailing lock on Nova and Zero. The terms state an 80% split, a 14-day reward cycle, a 48-hour payment promise backed by a fee refund if late, and a fee refund after four reward splits. Zero and funded Nova add a 20% best-day ratio and a non-withdrawable 3% cushion; funded Nova, Standard and Select restrict orders two minutes around high-impact news and Zero pays 50% on trades near news. The heaviest fine print: trades 'not replicable on a live account' (overleveraging, one-sided bets, account rolling) can lead to removed trades, forfeited rewards and termination with no numeric threshold; four or more simultaneous positions in one asset are treated as grid trading; EAs above 2,000 server requests a day and external copy services are banned; funded access follows a third-party review that passing does not guarantee; accounts expire after 30 days without trading. The terms PDF (22 March 2026) contradicts the help centre on overnight holding for Standard, Swing's drawdown and minimum days. Per-size prices, payout evidence and the legal file were not verified.",
+        "newsTrading": "Variable",
+        "verdict": "Orion Funded sells Standard, Swing, Select, Nova and the instant Zero account with an 80% split and a 14-day reward cycle. The help centre and terms add a discretionary 'not replicable on a live account' ban, a grid indicator at four simultaneous positions per asset, and third-party review before funding. Payout evidence was not verified."
       },
       "changelog": [
         {
@@ -18582,6 +18889,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://www.orionfunded.com/faq/programs/consistency-rule",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 9 new restrictive rules; 4 programmes; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://www.orionfunded.com/faq/programs/prohibited-practices",
+          "fields": ["auditSummary", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "setProducts": [
@@ -18589,7 +18902,7 @@
           "id": "orion-standard-2-step",
           "name": "Orion Standard (2-Step)",
           "type": "Challenge",
-          "description": "Fee $49 (5K) to $1,149 (200K). Code-based promotions are not applied.",
+          "description": "Fee $49 (5K) to $1,149 (200K), read on 29 Oct 2026; per-size prices could not be re-read on 19 Nov 2026 (JavaScript-rendered).",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "entryFeeMin": 49,
@@ -18597,18 +18910,20 @@
           "profitTarget": "6% in phase 1, 6% in phase 2",
           "maxDailyLoss": "3%",
           "maxDrawdown": "6% on the initial balance, static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.orionfunded.com/faq/programs/challenge-phases",
           "profitSplit": "80%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["not stated"],
+          "platforms": ["MT5", "MatchTrader"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Commodities", "Stocks", "Crypto"],
           "minTradingDays": "4 in evaluation, none funded",
           "hasConsistencyRule": false,
-          "consistencyRule": "not stated (29 Oct 2026)."
+          "consistencyRule": "No best-day rule stated for Standard (help centre, 19 Nov 2026)."
         },
         {
           "id": "orion-select-3-step",
           "name": "Orion Select (3-Step)",
           "type": "Challenge",
-          "description": "Fee $59 (5K) to $739 (200K). No best-day rule.",
+          "description": "Fee $59 (5K) to $739 (200K), read on 29 Oct 2026. No best-day rule.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "entryFeeMin": 59,
@@ -18616,9 +18931,11 @@
           "profitTarget": "5% in each of 3 phases",
           "maxDailyLoss": "5%",
           "maxDrawdown": "5% on the initial balance, static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://www.orionfunded.com/faq/programs/challenge-phases",
           "profitSplit": "80%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["not stated"],
+          "platforms": ["MT5", "MatchTrader"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Commodities", "Stocks", "Crypto"],
           "minTradingDays": "4 in evaluation, none funded",
           "hasConsistencyRule": false,
           "consistencyRule": "No best-day rule (official page, 29 Oct 2026)."
@@ -18627,15 +18944,17 @@
           "id": "orion-nova-1-step",
           "name": "Orion Nova (1-Step)",
           "type": "Challenge",
-          "description": "$7 registration, then an activation fee after passing: $69 (5K) to $1,099 (200K). Fees are not added together here.",
+          "description": "$7 registration, then an activation fee after passing, payable within 30 days: $69 (5K) to $1,099 (200K) read on 29 Oct 2026. Fees are not added together here. No time limit on the evaluation.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "profitTarget": "4%",
           "maxDailyLoss": "4% in evaluation, 3% funded",
           "maxDrawdown": "8% in evaluation, 5% funded; help center: trailing lock",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://www.orionfunded.com/faq/programs/challenge-phases",
           "profitSplit": "80%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["not stated"],
+          "platforms": ["MT5", "MatchTrader"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Commodities", "Stocks", "Crypto"],
           "minTradingDays": "none",
           "hasConsistencyRule": true,
           "consistencyRule": "Funded phase: best single day at most 20% of total cycle profits; no best-day rule during Nova evaluation (18 Nov 2026)."
@@ -18644,7 +18963,7 @@
           "id": "orion-zero-instant",
           "name": "Orion Zero (instant)",
           "type": "Instant funding",
-          "description": "Fee $199 (5K) to $1,149 (100K). No evaluation phase.",
+          "description": "Fee $199 (5K) to $1,149 (100K), read on 29 Oct 2026. No evaluation phase; not eligible for the scaling plan (terms 7.11.1).",
           "accountSizeMin": 5000,
           "accountSizeMax": 100000,
           "entryFeeMin": 199,
@@ -18652,10 +18971,12 @@
           "profitTarget": "none",
           "maxDailyLoss": "3%",
           "maxDrawdown": "6%; help center: trailing lock",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://www.orionfunded.com/faq/programs/challenge-phases",
           "profitSplit": "80%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["not stated"],
-          "minTradingDays": "not stated",
+          "platforms": ["MT5", "MatchTrader"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Commodities", "Stocks", "Crypto"],
+          "minTradingDays": "none",
           "hasConsistencyRule": true,
           "consistencyRule": "Best single day at most 20% of total cycle profits before a withdrawal request (18 Nov 2026)."
         }
@@ -18680,6 +19001,42 @@
         {
           "label": "Orion Zero instant funding (official)",
           "url": "https://www.orionfunded.com/0-step-orion-challenge"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/docs/terms-and-conditions.pdf"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/programs"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/programs/trading-restrictions"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/programs/news-trading"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/trading/overnight-weekend"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/trading/instruments"
+        },
+        {
+          "label": "orionfunded.com official page (read 2026-11-19)",
+          "url": "https://www.orionfunded.com/faq/payouts"
         }
       ],
       "auditedPrograms": [
@@ -18698,6 +19055,10 @@
         {
           "key": "zero",
           "name": "Orion Zero (instant)"
+        },
+        {
+          "key": "swing",
+          "name": "Orion Swing (2-Step)"
         }
       ]
     },
@@ -19654,7 +20015,7 @@
       ]
     },
     "sfx-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "SFX rewards — 48-hour processing promise",
@@ -19686,12 +20047,114 @@
           "category": "split-reduction",
           "severity": "major",
           "clarity": "clear"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Help-centre article: VPN and VPS use 'is strictly prohibited across all SFX Funded accounts.' Listed consequences: 'Immediate disqualification or breach of the account', 'Permanent restriction from our platform, depending on severity and intent' and 'Loss of eligibility for future funded accounts or payouts.' Travellers are asked to contact support in advance.",
+          "impact": "Trading through a VPN or VPS can breach the account and remove payout eligibility; this is stated in a help-centre article, not on the plan pages.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/11051648-can-i-use-a-vpn-or-vps-while-trading-with-sfx-funded"
+        },
+        {
+          "program": "All programmes — evaluation and funded",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The prohibited-strategies article lists about twenty practices, several without a measurable threshold ('Overtrading', 'One-Sided Bets', 'Poor Money Management', 'Behavioural & Inconsistent Trading Patterns', 'Churning of Accounts'). Consequences are at the risk team's discretion and include 'Deduction of all profits.', 'Rejection of withdrawal requests.', 'Reduction of profit split to 20-25%.' and termination 'without notice'. Terms 3.3: 'all payouts are fully at the discretion of the Company'; Terms 6.9 and 9.5 say the Company 'retains the sole authority to define the scope of the behaviours'.",
+          "impact": "Profits can be removed or a payout rejected for trading patterns the firm defines at its discretion.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
+        },
+        {
+          "program": "All programmes — evaluation and funded",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "'Gamble to Pass': 'risking more than the industry norm of 1-2% per trade idea' and 'maxing out the daily drawdown' are treated as prohibited high-risk tactics. A separate article defines over-leveraging as excessive leverage that 'reduces the account's Margin Level to 150% or lower' and says 'Violating this rule may result in a payout denial, reset to Phase 1, or a hard breach.' Terms 9.6(iv) also allow leverage to be reduced to 1:5.",
+          "impact": "Risking more than about 1-2% per trade idea, or a margin level at or below 150%, can lead to a denied payout or a breached account; the 1-2% figure is described as a norm rather than a hard limit.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
+        },
+        {
+          "program": "All programmes — evaluation and funded",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "'Order Layering': 'placing more than four(4) layered orders based on the same trade idea will be categorized as prohibited activity.' 'Opposite Direction Recovery Strategy': 'Opening a position in the opposite direction of a recent losing trade within 10 minutes of closing it' ('this 10 minute window is a guideline only'). Also prohibited: martingale, grid trading and group or multi-account reverse hedging. Consequences listed in the same article include deduction of all profits and rejection of withdrawal requests.",
+          "impact": "More than four orders on one idea, or reversing a losing trade within about 10 minutes, can cost the profits of the account.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
+        },
+        {
+          "program": "All programmes — evaluation and funded",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "'The bracketing strategy, which involves setting buy and sell pending orders around high-impact news events' 'is not allowed'; news-scalping EAs are prohibited. Terms 9.2.6 prohibit gap trading by opening trades around scheduled events or shortly before extended market closures. The 1-Step Pro page lists news trading as 'Allowed'.",
+          "impact": "News trading is allowed in general, but pending-order brackets around high-impact releases and gap trades before closures can lead to profit deduction or a breach.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
+        },
+        {
+          "program": "2-Step (Ascend 25%, Ignite 20%) and 1-Step Pro — funded stage",
+          "appliesTo": ["2step", "1step-pro"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "The 'SFX Stability Index' (shown on the dashboard as 'Consistency') divides the biggest winning day by total profit. To qualify for a payout it must be at or below 25% on 2-Step Ascend Funded, 20% on 2-Step Ignite Funded and 20% on 1-Step Pro Funded. Above it, 'your profits are too concentrated' and payout eligibility is unlocked once the index falls.",
+          "impact": "A payout is delayed until the best day is no more than 20-25% of total profit; the plan pages do not state this rule.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/12816856-sfx-stability-index"
+        },
+        {
+          "program": "Instant Plans (Standard and Pro)",
+          "appliesTo": ["instant"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The Instant plan builder shows a consistency rule of 15% for Standard and 20% for Pro, and 'No consistency rule' for Flex. The Stability Index article sets 15% for Instant Funding: above it, payout eligibility is withheld until the index falls.",
+          "impact": "On Standard and Pro, a payout is delayed until the best day is no more than 15% or 20% of total profit.",
+          "source": "https://sfxfunded.com/instant-funding"
+        },
+        {
+          "program": "2-Step (Ignite and Ascend) — payout on demand",
+          "appliesTo": ["2step"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Payout on demand is 'only available for Ignite, Ascend and Rapid Funded accounts'. It requires 'A minimum profit of 3% has been achieved on their account size' and a Stability Index within range; the first request is possible 3 trading days after the first funded trade at a 40% profit split, then every 14 business days (7-day add-on available).",
+          "impact": "No payout can be requested before profit reaches 3% of the account size; an early first request is paid at a 40% split.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9879194-how-does-payout-on-demand-work"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "'An Expert Advisor is allowed as long as it is a trade or risk manager'; own EAs are allowed but the source code must be provided for verification. Third-party EAs, rollover-scalping and news-scalping EAs are prohibited, with possible 'denial of progression', payout denial, a permanent account breach and a platform ban. Terms 9.2.1 prohibit copy trading, HFT, ultra-fast scalping and using the same EA on 'more than two accounts'.",
+          "impact": "Running a third-party EA or copying trades can lead to a denied payout or a breached account.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9265076-can-i-use-ea-s"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "'Trading accounts that remain inactive for 30 days will be subject to automatic suspension.' 'This applies to all account types.' Terms 20.2: the contract 'terminates automatically and with immediate effect' after 30 consecutive days without a demo transaction; Terms 3.7 add termination 'without any right to a refund of the fee'.",
+          "impact": "An account with no trade for 30 days is suspended or terminated.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9265083-is-there-an-inactivity-period"
         }
       ],
       "set": {
         "profitSplit": 85,
         "payoutDelay": "48-hour processing guarantee only after risk-team approval, with weekend/holiday pauses; official add-on FAQ also describes 21-day base versus paid 5-business-day cycles on Ascend/Pro/Rapid, conflicting with on-demand marketing",
-        "auditSummary": "18 November 2026 audit of SFX Funded's reward guarantee and programme add-on help against earlier official 1-Step and 2-Step pricing checks. The advertised 48-hour payout promise applies only after risk approval and excludes weekends and public holidays; the receiving bank or payment provider can add time. An add-on FAQ separately describes a 21-day ordinary payout cadence and paid five-business-day cadence for specific Ascend/Pro/Rapid accounts, which conflicts with public on-demand reward language and needs written checkout clarification. The same page says the funded reset add-on must be used within ten days of first funded trade and reduces the ensuing profit split to 50%. The issuer's Trustpilot-withheld notice was already reflected in the 57/100 score; no new allegation or independently validated payment result is claimed."
+        "auditSummary": "Official-source review dated 19 November 2026. SFX International FZCO (Dubai, DSO-FZCO-21983), whose Terms say it is 'not registered or regulated', sells three simulated programmes on Match-Trader: a 2-Step Challenge (8% then 5% targets, 4% daily, 8% static maximum loss), a 1-Step Pro (9% target, no daily limit, 6% maximum loss) and Instant Plans in Standard, Pro and Flex variants. Only 100K prices are displayed ($499, $699 and $599 list). The plan pages advertise an 85% split rising to 100%, on-demand rewards and a '100% Refundable' fee, but the Refund Policy refunds the evaluation fee only with the fifth profit split payment. The heaviest clauses sit in the help centre and Terms: VPN or VPS use can breach the account; a 'gamble to pass' rule treats risking more than about 1-2% per trade idea as prohibited; more than four layered orders, news bracketing, third-party EAs and copy trading are banned; and the risk team may deduct all profits, reject withdrawals or cut the split to 20-25%. Terms 3.3 state 'all payouts are fully at the discretion of the Company'. Funded payouts also need a best-day Stability Index at or below 15-25% depending on the plan, and on-demand payouts need 3% profit. Payout cadence is described as on demand, every 14 business days and every 21 days on different official pages. Payout records have not been independently verified.",
+        "newsTrading": "Restricted",
+        "verdict": "SFX International FZCO (Dubai) sells 2-Step, 1-Step Pro and Instant simulated accounts on Match-Trader, with only 100K prices displayed. Its help centre adds a VPN ban, a best-day consistency index, a 1-2% per-idea risk norm and discretionary profit deduction, and official pages give three different payout cycles. Payout evidence has not been verified."
       },
       "changelog": [
         {
@@ -19723,6 +20186,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://sfxfunded.com/help/payout-guarantee",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 10 new restrictive rules; 3 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://sfxfunded.com/docs/terms-of-service",
+          "fields": ["auditSummary", "newsTrading", "products", "restrictiveRules", "verdict"]
         }
       ],
       "setProducts": [
@@ -19730,23 +20199,26 @@
           "id": "sfx-2-step",
           "name": "2-Step Challenge",
           "type": "Challenge",
-          "description": "Sizes $5K to $200K. Only the 100K price is shown: $499 list ($224 with the 55% discount displayed). One-time, refundable fee.",
+          "description": "Sizes $5K to $200K. Only the 100K price is shown: $499 list ($224 with the 55% BF55 discount displayed on 2026-11-19); 'from $17' advertised without a size. Leverage up to 1:30, no time limit, weekend holding allowed. Early reward requests after 3 trading days at a 40% split.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "profitTarget": "8% in phase 1, 5% in phase 2",
           "maxDailyLoss": "4%",
           "maxDrawdown": "8%, static, from the initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://sfxfunded.com/2-step-challenge",
           "profitSplit": "85%, rising to 100% with scaling",
           "platforms": ["Match-Trader"],
           "tradableAssets": ["not stated"],
-          "hasConsistencyRule": false,
-          "consistencyRule": "not stated (30 Oct 2026)."
+          "minTradingDays": "not stated to pass; payout on demand from 3 trading days after the first funded trade",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payouts need the SFX Stability Index (best day / total profit) at or below 25% (Ascend) or 20% (Ignite), per the help centre."
         },
         {
           "id": "sfx-1-step-pro",
           "name": "1-Step Pro Challenge",
           "type": "Challenge",
-          "description": "Sizes $5K to $200K. Only the 100K price is shown: $699 list ($349 with the 50% discount displayed). No daily loss limit.",
+          "description": "Sizes $5K to $200K. Only the 100K price is shown: $699 list ($314 with the 55% BF55 discount displayed on 2026-11-19); 'from $53' advertised without a size. No daily loss limit, leverage up to 1:30, news trading and weekend holding allowed.",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "profitTarget": "9%",
@@ -19755,8 +20227,26 @@
           "profitSplit": "85% to 100%",
           "platforms": ["Match-Trader"],
           "tradableAssets": ["not stated"],
-          "hasConsistencyRule": false,
-          "consistencyRule": "not stated (30 Oct 2026)."
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded payouts need the SFX Stability Index at or below 20%, per the help centre."
+        },
+        {
+          "id": "sfx-instant",
+          "name": "Instant Plans (Standard, Pro, Flex)",
+          "type": "Instant funding",
+          "description": "No evaluation. Builder sizes $5K to $400K (page text also says up to $500,000). Only the 100K Standard price is shown: $599 list ($269 with the 55% BF55 discount displayed on 2026-11-19); 'from $26' advertised without a size. Standard: 5% max loss, 15% consistency; Pro: 6% max loss, 20% consistency; Flex: 5% max loss, no consistency rule.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 400000,
+          "profitTarget": "none",
+          "maxDailyLoss": "2% shown for 100K Standard; not stated for Pro and Flex",
+          "maxDrawdown": "5% (Standard, Flex) or 6% (Pro), type not stated",
+          "profitSplit": "85% to 100%",
+          "platforms": ["Match-Trader"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": true,
+          "consistencyRule": "15% (Standard), 20% (Pro), none (Flex)."
         }
       ],
       "addSources": [
@@ -19767,6 +20257,38 @@
         {
           "label": "SFX Funded 1-Step Pro Challenge (official)",
           "url": "https://sfxfunded.com/one-step-pro"
+        },
+        {
+          "label": "sfxfunded.com official page (read 2026-11-19)",
+          "url": "https://sfxfunded.com/programs"
+        },
+        {
+          "label": "sfxfunded.com official page (read 2026-11-19)",
+          "url": "https://sfxfunded.com/instant-funding"
+        },
+        {
+          "label": "sfxfunded.com official page (read 2026-11-19)",
+          "url": "https://sfxfunded.com/compare-plans"
+        },
+        {
+          "label": "sfxfunded.com official page (read 2026-11-19)",
+          "url": "https://sfxfunded.com/docs/terms-of-service"
+        },
+        {
+          "label": "sfxfunded.com official page (read 2026-11-19)",
+          "url": "https://sfxfunded.com/docs/refund-policy"
+        },
+        {
+          "label": "sfxfunded.com official page (read 2026-11-19)",
+          "url": "https://sfxfunded.com/help/add-ons"
+        },
+        {
+          "label": "intercom.help official page (read 2026-11-19)",
+          "url": "https://intercom.help/sfx-15a6836318fd/en/"
+        },
+        {
+          "label": "intercom.help official page (read 2026-11-19)",
+          "url": "https://intercom.help/sfx-15a6836318fd/en/collections/8853267-trading-rules"
         }
       ],
       "addIncidents": [
@@ -19780,6 +20302,10 @@
         {
           "key": "1step-pro",
           "name": "1-Step Pro Challenge"
+        },
+        {
+          "key": "instant",
+          "name": "Instant Plans (Standard, Pro, Flex)"
         }
       ]
     },
