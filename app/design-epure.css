@@ -829,6 +829,111 @@ html body .ftmo-affiliate-panel { grid-template-columns: 1fr; }
 
 .pr-product-rule .pr-pip-dot { transform: translateY(-1px); }
 
+/* Shared product presentation: decision first, technical evidence on demand. */
+html body .pr-product.pr-product-compact {
+  gap: 10px;
+  padding: clamp(14px, 1.6vw, 19px);
+  border-top-width: 1px;
+}
+
+.pr-product-compact h3 { margin: 0; font-size: 18px; }
+.pr-product-compact .pr-product-tags { gap: 5px; }
+.pr-product-compact .pr-product-tags .pr-tag { font-size: 10px; }
+.pr-product-compact .pr-product-intro {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.pr-product-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 3px 0;
+  padding: 10px 0;
+  border-block: 1px solid var(--line);
+}
+.pr-product-highlights > div { min-width: 0; padding-inline: 11px; border-inline-start: 1px solid var(--line); }
+.pr-product-highlights > div:first-child { padding-inline-start: 0; border: 0; }
+.pr-product-highlights dt { color: var(--muted); font-size: 11px; font-weight: 600; }
+.pr-product-highlights dd {
+  margin: 3px 0 0;
+  color: var(--text);
+  font-size: 12.5px;
+  font-weight: 720;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.pr-product-compact > .pr-product-rule {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 12px;
+}
+.pr-product-compact > .pr-product-rule .pr-pip-dot { display: inline-block; margin-right: 5px; }
+
+.pr-product-compact .pr-product-prices { gap: 7px; padding: 10px 11px; }
+.pr-product-compact .pr-product-prices-head strong { font-size: 12px; }
+.pr-product-compact .pr-product-prices-head span { font-size: 11px; }
+.pr-product-compact .pr-product-price-tiers { gap: 0; }
+.pr-product-compact .pr-product-price-tier {
+  gap: 1px;
+  padding: 3px 8px;
+  background: transparent;
+  border: 0;
+  border-inline-start: 1px solid var(--line);
+  border-radius: 0;
+}
+.pr-product-compact .pr-product-price-tier:first-child { padding-inline-start: 0; border: 0; }
+.pr-product-compact .pr-product-price-tier strong { font-size: 16px; }
+.pr-product-compact .pr-product-price-tier small { line-height: 1.25; }
+.pr-product-compact .pr-product-prices-links { gap: 8px; padding-top: 5px; border-top: 1px solid var(--line); }
+
+.pr-product-compact .pr-program-promo { gap: 4px; padding: 10px 12px; border-radius: 8px; }
+.pr-product-compact .pr-program-promo-head { gap: 3px 8px; }
+.pr-product-compact .pr-program-promo-head > span { font-size: 12px; }
+.pr-product-compact .pr-program-promo-head > strong { font-size: 16px; }
+.pr-product-compact .pr-program-promo-code { font-size: 12px; }
+.pr-product-compact .pr-program-promo-code code { padding: 2px 7px; font-size: 12px; }
+
+.pr-product-compact :is(.pr-product-details, .pr-program-promo-details) { min-width: 0; }
+.pr-product-compact :is(.pr-product-details, .pr-program-promo-details) > summary {
+  width: fit-content;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-underline-offset: 3px;
+}
+.pr-product-compact :is(.pr-product-details, .pr-program-promo-details) > summary:hover { text-decoration: underline; }
+.pr-product-compact :is(.pr-product-details, .pr-program-promo-details) > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.pr-product-compact .pr-program-promo-details { margin-top: 4px; }
+.pr-product-compact .pr-program-promo-details[open] { display: grid; gap: 7px; }
+.pr-product-compact .pr-program-promo-details[open] > summary { margin-bottom: 4px; }
+.pr-product-compact .pr-product-details { border-top: 1px solid var(--line); padding-top: 9px; }
+.pr-product-compact .pr-product-details-content { display: grid; gap: 15px; margin-top: 12px; }
+.pr-product-compact .pr-product-details-content .pr-path { margin: 0; }
+.pr-product-compact .pr-product-details-content .pr-product-meta { gap: 8px; }
+.pr-product-compact .pr-product-details-content .pr-product-meta div { font-size: 12px; }
+.pr-product-compact .btn { margin-top: 2px; min-height: 38px; }
+
+@media (max-width: 460px) {
+  .pr-product-highlights > div { padding-inline: 7px; }
+  .pr-product-highlights dd { font-size: 11.5px; }
+  .pr-product-compact .pr-product-price-tier { padding-inline: 5px; }
+  .pr-product-compact .pr-product-price-tier strong { font-size: 14px; }
+  .pr-product-compact .pr-product-details-content .pr-path { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+  .pr-product-compact .pr-product-details-content .pr-path::before { display: none; }
+}
+
 @media (max-width: 980px) {
   .pr-firm-hero { grid-template-columns: 1fr; grid-template-areas: 'identity' 'verdict' 'scorecard'; }
   .pr-key-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }

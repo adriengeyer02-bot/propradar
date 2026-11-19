@@ -487,6 +487,8 @@ const ar: Messages = {
     priceSize: 'حجم الحساب', priceList: 'السعر المعلن', perMonth: '/شهر',
     oneTime: 'لمرة واحدة', priceSource: 'صفحة الأسعار',
     pricePromoTitle: 'عرض على هذا البرنامج',
+    pricePromoTermsLabel: 'شروط العرض ومصدره',
+    programDetails: 'مراحل البرنامج وقواعده',
     pricePromoCode: 'رمز الخصم',
     pricePromoExpires: 'ينتهي في',
     pricePromoCheckout: 'تحقق من الخصم والمبلغ النهائي قبل الدفع.',

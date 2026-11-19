@@ -547,6 +547,8 @@ const de: Messages = {
     oneTime: "einmalig",
     priceSource: "Preisseite",
     pricePromoTitle: "Angebot für dieses Programm",
+    pricePromoTermsLabel: "Angebotsbedingungen und Quelle",
+    programDetails: "Programmablauf und Regeln",
     pricePromoCode: "Code",
     pricePromoExpires: "Endet am",
     pricePromoCheckout: "Rabatt und Endpreis vor dem Bezahlen prüfen.",

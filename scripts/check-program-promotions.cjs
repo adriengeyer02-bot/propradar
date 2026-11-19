@@ -1,5 +1,6 @@
 const assert = require('node:assert/strict');
 const updates = require('../app/data/firm-updates.json').firms;
+const priceTables = require('../app/data/price-tables.json').firms;
 const { version, promotions } = require('../app/data/program-promotions.json');
 
 assert.equal(version, 1);
@@ -17,6 +18,16 @@ for (const promo of promotions) {
   const firmProducts = new Set((updates[promo.slug]?.setProducts ?? []).map((p) => p.id));
   assert.ok(Array.isArray(promo.productIds) && promo.productIds.length, `${label}: missing exact products`);
   for (const productId of promo.productIds) assert.ok(firmProducts.has(productId), `${label}: unknown product id ${productId}`);
+  if (promo.highlightedSizes) {
+    assert.ok(Array.isArray(promo.highlightedSizes) && promo.highlightedSizes.length, `${label}: invalid highlighted account sizes`);
+    for (const productId of promo.productIds) {
+      const program = (priceTables[promo.slug]?.programs ?? []).find((row) => row.productId === productId);
+      assert.ok(program, `${label}: no price table for ${productId}`);
+      for (const size of promo.highlightedSizes) {
+        assert.ok(Number.isInteger(size) && program.rows.some((row) => row.size === size), `${label}: price size ${size} not sourced for ${productId}`);
+      }
+    }
+  }
   if (promo.code) assert.match(promo.code, /^[A-Za-z0-9_-]+$/, `${label}: suspicious promo code`);
   if (promo.expiresAt) {
     assert.ok(Number.isFinite(Date.parse(promo.expiresAt)), `${label}: invalid expiry instant`);
