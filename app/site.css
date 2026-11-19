@@ -1,7 +1,7 @@
 /*
  * Single stylesheet entry, so the cascade order never depends on how the
  * bundler groups CSS chunks. Order matters: each sheet overrides the ones
- * before it. design-epure.css comes last, as it always has.
+ * before it. Page-specific layers follow the shared design-epure baseline.
  */
 @import './globals.css';
 @import './design-system.css';
@@ -9,3 +9,4 @@
 @import './design-epure.css';
 @import './community.css';
 @import './options.css';
+@import './promos-refresh.css';
