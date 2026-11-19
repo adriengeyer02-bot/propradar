@@ -8,6 +8,13 @@ Approved by Geyer on 2026-11-18 (restrictive-rules scale), then
 revised on 2026-11-19 (**Trustpilot: a single 6-point penalty, no rating cap**;
 this supersedes the earlier 8-point proposal).
 
+**Five-axis scoring upgrade approved in principle (2026-11-19):**
+35 payout / 30 contract rules / 15 legal / 10 integrity / 10 offer.
+See [`SCORING_V2.md`](SCORING_V2.md) for the evidence-based implementation
+specification. It is **staged, not yet the live score formula**: do not infer
+new numeric scores from old editorial totals, and obtain approval before
+publishing sensitive recalibrations.
+
 ## 1. What a score is
 
 `score` (0-100) in `app/lib/propFirms.ts` or `set.score` in

@@ -13,9 +13,13 @@ any change, in this order:
    -8 or 64-cap wording in `CLAUDE.md`, `README.md` or open PRs until
    those files are synchronized. Classify restrictive rules; the code
    computes their separate penalty.
-3. `claude/README.md`: short, dated implementation brief for Claude
+3. `SCORING_V2.md`: owner-approved **35/30/15/10/10** five-axis upgrade,
+   with source/evidence thresholds. This is a **staged scoring migration**;
+   the old totals must not be mechanically converted into new scores.
+   `app/lib/scoringV2.ts` and the coverage report are preparatory only.
+4. `claude/README.md`: short, dated implementation brief for Claude
    (including how to correct manual scores that embedded the former -8).
-4. `README.md`: product overview (French).
+5. `README.md`: product overview (French).
 
 ## Who does what (set by Geyer on 2026-11-18)
 
