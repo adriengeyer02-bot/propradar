@@ -1,6 +1,119 @@
 {
   "version": 1,
   "firms": {
+    "earn2trade": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "Trader Career Path — evaluation", "productId": "e2t-tcp", "billing": "monthly", "currency": "USD",
+          "sourceUrl": "https://www.earn2trade.com/non-us/purchase?plan=TCP25",
+          "note": "Regular recurring monthly evaluation fees, not one-time payments. Official purchase matrix published with TCP25/50/100. Separate reset, data and funded-stage fees may apply.",
+          "rows": [
+            { "size": 25000, "price": 150 }, { "size": 50000, "price": 190 }, { "size": 100000, "price": 350 }
+          ]
+        },
+        {
+          "name": "Gauntlet Mini — evaluation", "productId": "e2t-gauntlet", "billing": "monthly", "currency": "USD",
+          "sourceUrl": "https://www.earn2trade.com/fr/non-us/purchase?plan=GAU50",
+          "note": "Regular USD monthly fees from official purchase-page snapshots, not the expired 50%-off seasonal prices visible in some cached variants. Recheck the actual checkout and funded-stage data/activation charges.",
+          "rows": [
+            { "size": 50000, "price": 170 }, { "size": 100000, "price": 315 },
+            { "size": 150000, "price": 375 }, { "size": 200000, "price": 550 }
+          ]
+        }
+      ]
+    },
+    "funded-trading-plus": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "1-Step Express — regular fee", "productId": "ftp-express-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.fundedtradingplus.com/prop-trading-challenges/one-step",
+          "note": "Official un-discounted USD 100K sample for Express. The website simultaneously advertises different SIZE20 / FUNDED30 codes, so no supposedly guaranteed discount is folded into this fee.",
+          "rows": [{ "size": 100000, "price": 549 }]
+        },
+        {
+          "name": "Pass Now Pay Later / Activation Accounts — total", "productId": "ftp-pnpl-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.fundedtradingplus.com/activation-accounts-pricing-and-fees/",
+          "note": "FULL total only if the challenge is passed: $4 paid upfront for any size, then $179 / $299 / $489 due within 60 days of passing for the 25K / 50K / 100K account. No activation fee is owed if the challenge is not passed.",
+          "rows": [
+            { "size": 25000, "price": 183, "upfrontPrice": 4, "completionFee": 179 },
+            { "size": 50000, "price": 303, "upfrontPrice": 4, "completionFee": 299 },
+            { "size": 100000, "price": 493, "upfrontPrice": 4, "completionFee": 489 }
+          ]
+        }
+      ]
+    },
+    "city-traders-imperium": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "CTI 1-Step Challenge", "productId": "cti-one-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://citytradersimperium.com/1-step-challenge/",
+          "note": "Official one-time challenge fees by USD simulated account size. Includes CTI Academy; no monthly subscription. Prices before optional discounts.",
+          "rows": [
+            { "size": 2500, "price": 29 }, { "size": 5000, "price": 49 }, { "size": 10000, "price": 79 },
+            { "size": 25000, "price": 159 }, { "size": 50000, "price": 299 }, { "size": 100000, "price": 449 }
+          ]
+        },
+        {
+          "name": "CTI 2-Step Challenge", "productId": "cti-two-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://citytradersimperium.com/2-step-challenge/",
+          "note": "Official one-time challenge fees by USD simulated account size. Includes CTI Academy; no monthly subscription. Prices before optional discounts.",
+          "rows": [
+            { "size": 2500, "price": 39 }, { "size": 5000, "price": 59 }, { "size": 10000, "price": 99 },
+            { "size": 25000, "price": 199 }, { "size": 50000, "price": 329 }, { "size": 100000, "price": 549 }
+          ]
+        },
+        {
+          "name": "CTI Instant Funding", "productId": "cti-instant-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://citytradersimperium.com/instant-funding",
+          "note": "Official one-time fees for the stated eventual account size. CTI says the initial trading balance is only HALF that advertised amount (e.g. 80K plan starts at 40K), with a 50% initial reward share.",
+          "rows": [
+            { "size": 2500, "price": 79 }, { "size": 5000, "price": 139 }, { "size": 10000, "price": 259 },
+            { "size": 20000, "price": 449 }, { "size": 40000, "price": 849 }, { "size": 80000, "price": 1599 }
+          ]
+        },
+        {
+          "name": "CTI Direct Funding", "productId": "cti-direct-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://citytradersimperium.com/direct-funding",
+          "note": "Official one-time fees; CTI describes this Direct route as accessing the FULL selected simulated balance from day one, unlike its Instant Funding route.",
+          "rows": [
+            { "size": 5000, "price": 229 }, { "size": 10000, "price": 399 }, { "size": 20000, "price": 999 },
+            { "size": 40000, "price": 1999 }, { "size": 80000, "price": 3999 }
+          ]
+        }
+      ]
+    },
+    "e8-markets": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "E8 One — default 6% max drawdown / 80% payout", "productId": "e8-one-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://e8markets.com/?market=forex",
+          "note": "Official E8 One standard USD configuration before the public E8 code (first order 15% off). Custom drawdown, payout and other choices can change the final checkout price; these are NOT E8 Pro/Futures prices.",
+          "rows": [
+            { "size": 5000, "price": 48 }, { "size": 10000, "price": 88 }, { "size": 25000, "price": 188 },
+            { "size": 50000, "price": 288 }, { "size": 100000, "price": 488 }, { "size": 200000, "price": 798 },
+            { "size": 400000, "price": 1598 }, { "size": 500000, "price": 1998 }
+          ]
+        }
+      ]
+    },
+    "take-profit-trader": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "TEST — standard monthly subscription", "productId": "tpt-test", "billing": "monthly", "currency": "USD",
+          "sourceUrl": "https://takeprofittrader.com/",
+          "note": "Regular monthly TEST subscription (NOT a one-time fee). Official NOFEE40 code advertises 40% off for the life of eligible new TEST subscriptions and a PRO activation-fee waiver; verify both at checkout. Resets are separate.",
+          "rows": [
+            { "size": 25000, "price": 150 }, { "size": 50000, "price": 170 }, { "size": 75000, "price": 245 },
+            { "size": 100000, "price": 330 }, { "size": 150000, "price": 360 }
+          ]
+        }
+      ]
+    },
     "fxify": {
       "checkedOn": "2026-11-19",
       "programs": [

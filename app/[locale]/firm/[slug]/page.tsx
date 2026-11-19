@@ -61,6 +61,7 @@ import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBr
 import GuideCover from '../../../components/guide-visuals/GuideCover';
 import { DEPENDENCY_COVER } from '../../../lib/guideCovers';
 import { formatAccountSize, formatListPrice, getPriceTable, pricePreviewRows } from '../../../lib/priceTables';
+import { getProgramPromotions } from '../../../lib/programPromotions';
 import { getAuditCaseFile } from '../../../lib/auditCaseFiles';
 import { entityCountries } from '../../../lib/jurisdictions';
 import { getClosureRecord } from '../../../lib/closures';
@@ -1079,16 +1080,32 @@ export default async function FirmPage({ params }: Props) {
                     </div>
                   </div>
                 )) : null}
-                {product.linkToStart ? (
+                {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
+                  <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
+                    <div className="pr-program-promo-head">
+                      <span>{f.pricePromoTitle}</span>
+                      <strong>{promo.offer}</strong>
+                    </div>
+                    {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
+                    <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+                    <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
+                    <div className="pr-program-promo-foot">
+                      <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
+                      <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
+                    </div>
+                  </aside>
+                )) : null}
+                {firm.status !== 'Fermée' && (firm.partnerOffer?.href || product.linkToStart) ? (
                   <a
-                    href={product.linkToStart}
+                    href={firm.partnerOffer?.href || product.linkToStart}
                     target="_blank"
-                    rel={isAffiliateUrl(product.linkToStart) ? 'noreferrer sponsored' : 'noreferrer'}
+                    rel={firm.partnerOffer?.href || isAffiliateUrl(product.linkToStart ?? '') ? 'noreferrer sponsored' : 'noreferrer'}
                     className="btn btn-primary"
                   >
-                    {isAffiliateUrl(product.linkToStart) ? f.openAffiliate : f.openOfficial}
+                    {firm.partnerOffer?.href || isAffiliateUrl(product.linkToStart ?? '') ? f.openAffiliate : f.openOfficial}
                   </a>
                 ) : null}
+                {firm.status !== 'Fermée' && firm.partnerOffer?.href ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
               </article>
             ))}
             {firm.products.length === 1 && firm.status !== 'Fermée' ? <ProductContext firm={firm} product={firm.products[0]} f={f} locale={locale} /> : null}
