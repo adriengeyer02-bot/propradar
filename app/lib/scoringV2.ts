@@ -59,8 +59,12 @@ export type AuditCoverage = {
   officialRulesUrl?: string;
   /** Official payout eligibility and withdrawal terms. */
   payoutPolicyUrl?: string;
+  /** Dated company-issued payout proof, distinct from a payment policy. */
+  companyReportedPayoutUrl?: string;
   /** Company registry or source identifying the actual contracting entity. */
   legalEntityUrl?: string;
+  /** Independent registration entry, when claiming registry verification. */
+  independentRegistryUrl?: string;
   /** Exact Trustpilot profile or another identified independent check. */
   reputationSourceUrl?: string;
   /** Proof of real successful withdrawals, if independently corroborated. */
@@ -100,6 +104,10 @@ function validSource(url: string | undefined): url is string {
   } catch {
     return false;
   }
+}
+
+function sameHost(a: string | undefined, b: string | undefined): boolean {
+  return validSource(a) && validSource(b) && new URL(a).hostname === new URL(b).hostname;
 }
 
 /** One factual event can only affect one category; there is no silent stacking. */
@@ -176,10 +184,22 @@ export function calculateScoringV2(input: FirmScoringV2Input): FirmScoringV2Resu
   const sufficientlyDocumented = requiredSources.every(validSource);
   if (!sufficientlyDocumented) errors.push('Four core evidence sources are required before publishing a score');
   if (input.payoutEvidence === 'not-assessed') errors.push('Payout evidence or a dated published payout policy must be assessed');
+  if (input.payoutEvidence === 'company-reported' && !validSource(coverage.companyReportedPayoutUrl)) {
+    errors.push('Company-reported payout credit needs a dated source for the actual claimed payment');
+  }
   if (input.payoutEvidence === 'independent' && !validSource(coverage.independentlyVerifiedPayoutUrl)) {
     errors.push('Independently verified payout credit requires an independent source');
   }
+  if (input.payoutEvidence === 'independent' && sameHost(coverage.independentlyVerifiedPayoutUrl, coverage.payoutPolicyUrl)) {
+    errors.push('A firm-hosted payout source cannot be used as independent payment verification');
+  }
   if (input.legalEvidence === 'not-assessed') errors.push('The contracting legal entity has not been assessed');
+  if (input.legalEvidence === 'registry-verified' && !validSource(coverage.independentRegistryUrl)) {
+    errors.push('Registry verification requires a link to the actual registry entry');
+  }
+  if (input.legalEvidence === 'registry-verified' && sameHost(coverage.independentRegistryUrl, coverage.legalEntityUrl)) {
+    errors.push('A firm-hosted legal disclosure alone cannot establish independent registration');
+  }
 
   const offer = input.offer;
   if (!offer ||

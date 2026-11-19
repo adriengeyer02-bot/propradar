@@ -113,6 +113,11 @@ Before publication, the auditor must provide at least an official rules URL,
 an official payout-policy URL, a legal-entity source and an identified
 review-integrity source, plus the three sourced offer subscores. A sourced
 score with limited independent evidence may be B; missing documents are C.
+The 30-point company-reported payment tier additionally requires a link to
+the actual reported payout, not merely the payout policy. Independent payout
+and registry tiers each require their own distinct third-party source URL;
+a firm's own web page cannot validate its own independent evidence. External
+sources still require editorial verification of the issuer and relevance.
 
 Confirmed closed firms stay outside the active rankings with a prominent
 closed-state notice; their historical audit is retained rather than treated

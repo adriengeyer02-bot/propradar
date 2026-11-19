@@ -12,7 +12,8 @@ const example: FirmScoringV2Input = {
     payoutPolicyUrl: 'https://example.com/payout',
     legalEntityUrl: 'https://example.com/legal',
     reputationSourceUrl: 'https://www.trustpilot.com/review/example.com',
-    independentlyVerifiedPayoutUrl: 'https://example.com/independent-payout-proof',
+    independentlyVerifiedPayoutUrl: 'https://independent.example.org/payout-proof',
+    independentRegistryUrl: 'https://registry.example.org/company/example',
   },
   offer: {
     priceAndFees: 4,
@@ -63,6 +64,24 @@ const limitedButNotAccused = calculateScoringV2({
 assert.equal(limitedButNotAccused.score, 78);
 assert.equal(limitedButNotAccused.confidence, 'B');
 assert.equal(limitedButNotAccused.axes.payout, 25);
+
+const companyClaimMissingEvidence = calculateScoringV2({ ...example, payoutEvidence: 'company-reported' });
+assert.equal(companyClaimMissingEvidence.score, undefined);
+assert.ok(companyClaimMissingEvidence.errors.some((error) => error.includes('Company-reported payout')));
+
+const disguisedCompanyProof = calculateScoringV2({
+  ...example,
+  coverage: { ...example.coverage, independentlyVerifiedPayoutUrl: 'https://example.com/self-issued-payout-proof' },
+});
+assert.equal(disguisedCompanyProof.score, undefined);
+assert.ok(disguisedCompanyProof.errors.some((error) => error.includes('firm-hosted payout')));
+
+const registryMissing = calculateScoringV2({
+  ...example,
+  coverage: { ...example.coverage, independentRegistryUrl: undefined },
+});
+assert.equal(registryMissing.score, undefined);
+assert.ok(registryMissing.errors.some((error) => error.includes('Registry verification')));
 
 const independentEvents: FirmScoringV2Input = {
   ...example,
