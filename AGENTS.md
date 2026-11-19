@@ -7,12 +7,15 @@ any change, in this order:
    files, sources, editorial and legal rules, sensitive changes, checks before
    merge).
 2. `SCORING.md`: **authoritative scoring policy for all agents**.
-   Restrictive-rules penalty, **single Trustpilot -8 (no 64 cap, approved
-   2026-11-19)**, closure cap. It supersedes the former Trustpilot cap in
-   `CLAUDE.md` section 7 until that section is synchronized. Never lower a
-   score by hand for a restrictive rule: classify it and the code computes
-   the penalty. Do not count the same Trustpilot incident twice.
-3. `README.md`: product overview (French).
+   Restrictive-rules penalty, **one Trustpilot -6 (no 64 cap, approved
+   2026-11-19)**, closure handling, payout/rule priorities and
+   **no double counting of the same fact**. This supersedes any earlier
+   -8 or 64-cap wording in `CLAUDE.md`, `README.md` or open PRs until
+   those files are synchronized. Classify restrictive rules; the code
+   computes their separate penalty.
+3. `claude/README.md`: short, dated implementation brief for Claude
+   (including how to correct manual scores that embedded the former -8).
+4. `README.md`: product overview (French).
 
 ## Who does what (set by Geyer on 2026-11-18)
 
