@@ -6,9 +6,12 @@ any change, in this order:
 1. `CLAUDE.md`: the project rules for every agent, despite its name (data
    files, sources, editorial and legal rules, sensitive changes, checks before
    merge).
-2. `SCORING.md`: how a score moves (restrictive-rules penalty, Trustpilot cap,
-   closure cap). Never lower a score by hand for a restrictive rule: classify
-   the rule and the code computes the penalty.
+2. `SCORING.md`: **authoritative scoring policy for all agents**.
+   Restrictive-rules penalty, **single Trustpilot -8 (no 64 cap, approved
+   2026-11-19)**, closure cap. It supersedes the former Trustpilot cap in
+   `CLAUDE.md` section 7 until that section is synchronized. Never lower a
+   score by hand for a restrictive rule: classify it and the code computes
+   the penalty. Do not count the same Trustpilot incident twice.
 3. `README.md`: product overview (French).
 
 ## Who does what (set by Geyer on 2026-11-18)

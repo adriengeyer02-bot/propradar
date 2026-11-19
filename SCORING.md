@@ -4,8 +4,8 @@ Read this before you change any score. It applies to Claude, ChatGPT/Codex and
 any human editor. `CLAUDE.md` (editorial and legal rules) still applies in
 full; this file only covers how a score moves.
 
-Approved by Geyer on 2026-11-18 (restrictive-rules scale). Earlier caps are
-listed with their own approval dates.
+Approved by Geyer on 2026-11-18 (restrictive-rules scale) and
+2026-11-19 (Trustpilot: one 8-point penalty, **no rating cap**).
 
 ## 1. What a score is
 
@@ -16,19 +16,46 @@ signals, transparency and offer quality. Do not lower it by hand for a
 restrictive rule: classify the rule (section 2) and the code subtracts the
 penalty.
 
-The buyer-facing score is then computed in this order
+The buyer-facing score is computed in this order
 (`propFirms` pipeline in `app/lib/propFirms.ts`):
 
-1. editorial score (`score`);
-2. minus the restrictive-rules penalty (section 2, at most 12 points);
-3. Trustpilot cap: rating withheld for a guideline breach → at most **64**
-   (Geyer, 2026-11-07; lifts only with a dated `set.trustpilotNoticeLifted`);
-4. closed firm (`status: Fermée`) → at most **29** (the historical score stays
-   in the data and the update history).
+1. editorial score (`score`), with a recorded rationale for any manually
+   incorporated Trustpilot integrity penalty;
+2. minus the restrictive-rules penalty (section 2, at most 12 points, only
+   when the feature is enabled);
+3. **minus exactly 8 points, once**, for a currently documented Trustpilot
+   guideline-breach / fake-review-removal notice, unless those same 8 points
+   are *explicitly already included* in the manually audited editorial score;
+4. closed firm (`status: Fermée`) → at most **29** (historical score retained
+   in the data and update history).
 
-A documented, current Trustpilot fake-review removal notice may justify an
-editorial deduction of **at most 8 points**, on top of nothing else; it never
-replaces the 64 cap (README, 2026-11-18).
+**The old Trustpilot ceiling of 64 is abolished** (Geyer, 2026-11-19).
+Trustpilot alone must never limit the maximum possible score, including 65+
+or 80+ firms; do not retain a hidden floor, ceiling or additional -8.
+A generic unavailable rating, a small review sample or an unverified
+allegation is **not** sufficient for this penalty. Record the exact Trustpilot
+notice, its URL and review date; do not claim the firm bought the fake
+reviews unless independent evidence establishes who was responsible.
+
+Do not double-count one Trustpilot incident: rating withheld, removed fake
+reviews and the related review-integrity notice form **one** -8 event,
+not separate sanctions. Any additional score reduction must concern
+**different, substantiated** risks (contract terms, payments, independently
+verified legal/regulatory facts) and be explained separately. A concentration
+of negative Trustpilot reviews alone should not silently create a second
+penalty for the same evidence.
+
+For an individually re-audited `set.score`, state in its dated changelog
+whether the -8 is already embedded; otherwise the implementation must apply
+the penalty once. Do not assume every manual score already includes it.
+When the notice is verified lifted, remove an automatic penalty; if the
+manual editorial score embedded it, perform a new dated review before
+adjusting that score. Affiliation has no effect on this rule.
+
+Example: an audited 79/100 firm with no active rules penalty and a single
+confirmed Trustpilot integrity notice displays **71/100**, not 64/100.
+A lower figure requires documented, independently justified deductions.
+The score breakdown and rankings must always agree on the final result.
 
 Never write the score itself ("74/100", "score 66 to 63") in a verdict,
 audit summary or changelog-facing narrative: the displayed score moves with
