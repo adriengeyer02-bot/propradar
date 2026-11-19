@@ -1,0 +1,243 @@
+/* Promo directory — quieter, shorter deal cards without hiding risk signals. */
+
+.promos-page .promos-hero { gap: clamp(18px, 3vw, 36px); }
+.promos-page .promo-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: 0 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.promos-page .promo-principles > div {
+  gap: 10px;
+  min-width: 0;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--soft);
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+.promos-page .promo-principles strong {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 12px;
+}
+.promos-page .pr-stat-line { margin-top: 20px; }
+.promos-page .pr-deal-grid,
+.promos-page .pr-deal-grid-featured {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 12px;
+}
+.promos-page .pr-deal {
+  gap: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 0;
+}
+.promos-page .pr-deal-featured { border-color: color-mix(in srgb, var(--accent) 38%, var(--line)); }
+.promos-page .pr-deal-head { gap: 9px; min-width: 0; }
+.promos-page .pr-deal-firm a { font-size: 15px; }
+.promos-page .pr-deal-firm small {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  font-size: 12px;
+}
+.promos-page .pr-deal-rank { font-size: 12px; }
+.promos-page .pr-deal-offer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0 3px;
+  min-width: 0;
+}
+.promos-page .pr-deal-value { gap: 5px; min-width: 0; }
+.promos-page .pr-deal-value strong,
+.promos-page .pr-deal-featured .pr-deal-value strong {
+  color: var(--accent);
+  font-size: clamp(29px, 2.5vw, 38px);
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+.promos-page .pr-deal-value span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  color: var(--soft);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.promos-page .pr-deal-code {
+  display: grid;
+  gap: 5px;
+  justify-items: start;
+  min-width: 0;
+}
+.promos-page .pr-deal-code code,
+.promos-page .pr-deal-code b {
+  display: block;
+  max-width: 150px;
+  padding: 7px 9px;
+  border: 1px dashed var(--accent);
+  border-radius: 7px;
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 750;
+  letter-spacing: .015em;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+.promos-page .pr-deal-code b { border-style: solid; font-family: inherit; }
+.promos-page .pr-deal-signal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.promos-page .pr-deal-pips { gap: 4px 11px; }
+.promos-page .pr-deal-status { display: grid; justify-items: end; gap: 3px; text-align: right; }
+.promos-page .pr-deal-status small { color: var(--muted); font-size: 10.5px; line-height: 1.2; }
+.promos-page .pr-deal-signal em {
+  color: var(--tone-watch);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.promos-page .pr-deal-signal em.promo-status-live { color: var(--tone-good); }
+.promos-page .pr-deal-signal em.promo-status-price { color: var(--soft); }
+.promos-page .pr-deal-preview-warning {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  margin: 0;
+  color: var(--tone-watch);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.promos-page .pr-deal-actions { flex-wrap: wrap; gap: 9px 12px; }
+.promos-page .pr-deal-actions .btn { min-height: 38px; padding: 9px 14px; font-size: 13px; }
+.promos-page .pr-deal-actions .pr-link { font-size: 12px; }
+.promos-page .pr-deal-disclosure {
+  min-width: 0;
+  margin-top: auto;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+.promos-page .pr-deal-disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+}
+.promos-page .pr-deal-disclosure > summary::-webkit-details-marker { display: none; }
+.promos-page .pr-deal-disclosure > summary span { transition: transform .2s ease; }
+.promos-page .pr-deal-disclosure[open] > summary span { transform: rotate(180deg); }
+.promos-page .pr-deal-disclosure-body { display: grid; gap: 11px; margin-top: 13px; }
+.promos-page .pr-deal-verdict { font-size: 13px; }
+.promos-page .pr-deal-facts { gap: 8px; }
+.promos-page .pr-deal-facts div { grid-template-columns: 76px minmax(0, 1fr); gap: 8px; font-size: 12px; }
+.promos-page .pr-deal-caveats { display: grid; gap: 5px; }
+.promos-page .pr-deal-caveats strong { color: var(--tone-watch); font-size: 12px; }
+.promos-page .pr-deal-caveats ul { margin: 0; padding-left: 17px; font-size: 12px; }
+.promos-page .pr-deal-note { padding: 9px; font-size: 12px; }
+.promos-page .pr-deal-source { overflow-wrap: anywhere; line-height: 1.4; }
+
+/* Informational blocks remain accessible, but do not dominate the deals. */
+.promos-page .promo-faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.promos-page .promo-faq-card {
+  min-height: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: none;
+}
+.promos-page .promo-faq-card > summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  list-style: none;
+  cursor: pointer;
+}
+.promos-page .promo-faq-card > summary::-webkit-details-marker { display: none; }
+.promos-page .promo-faq-card > summary::after { content: '+'; color: var(--accent); font-size: 18px; line-height: 1; }
+.promos-page .promo-faq-card[open] > summary::after { content: '−'; }
+.promos-page .promo-faq-card p { margin: 0; padding: 0 15px 15px; font-size: 13px; }
+.promos-page .pr-promo-api-section { padding-block: 4px; }
+.promos-page .pr-promo-api-disclosure { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.promos-page .pr-promo-api-disclosure > summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 15px 0;
+  color: var(--text);
+  list-style: none;
+  cursor: pointer;
+}
+.promos-page .pr-promo-api-disclosure > summary::-webkit-details-marker { display: none; }
+.promos-page .pr-promo-api-disclosure > summary strong { flex: 1; font-size: 15px; }
+.promos-page .pr-promo-api-disclosure > summary > span:last-child { color: var(--accent); }
+.promos-page .pr-promo-api-disclosure[open] > summary > span:last-child { transform: rotate(180deg); }
+.promos-page .pr-promo-api-disclosure .promo-api-panel {
+  display: grid;
+  gap: 12px;
+  padding: 0 0 18px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.promos-page .pr-promo-api-disclosure .lead { margin: 0; font-size: 13px; }
+.promos-page :is(.pr-deal-disclosure, .promo-faq-card, .pr-promo-api-disclosure) > summary:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .promos-page .promo-principles { grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .promos-page .promo-principles > div { font-size: 11.5px; padding: 10px 0; }
+  .promos-page .pr-deal-grid,
+  .promos-page .pr-deal-grid-featured { grid-template-columns: minmax(0, 1fr); }
+  .promos-page .promo-faq-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 390px) {
+  .promos-page .pr-deal-offer { grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .promos-page .pr-deal-code { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .promos-page .pr-deal-status { justify-items: start; text-align: left; }
+}

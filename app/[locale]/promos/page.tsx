@@ -15,6 +15,7 @@ import {
   scoreClass,
   drawdownLabel,
   hasPayoutRiskSignal,
+  isAffiliateUrl,
 } from '../../lib/propFirms';
 import { toEnglishText } from '../../lib/i18n';
 import {
@@ -65,7 +66,7 @@ const valuePicks = ['the5ers', 'topstep', 'fundingpips', 'funderpro', 'the-tradi
   .filter((firm): firm is NonNullable<ReturnType<typeof getFirmBySlug>> => Boolean(firm));
 
 const bestPromoDeals = getBestPromoDeals(30);
-const megaPromoDeals = getMegaPromoDeals(12);
+const megaPromoDeals = getMegaPromoDeals(6);
 const budgetShortlist = getBudgetPromoShortlist(12);
 const futuresShortlist = getFuturesPromoShortlist(8);
 
@@ -117,6 +118,8 @@ function DealCard({
 }) {
   const { p, L, v } = ui;
   const c = p.card;
+  const isAffiliate = isAffiliateUrl(deal.sourceUrl) || deal.proofLevel === 'PropRadar affiliate';
+  const hasCode = deal.code.toLowerCase() !== 'no code';
   return (
     <article className={`pr-deal${featured ? ' pr-deal-featured' : ''}`}>
       <header className="pr-deal-head">
@@ -124,51 +127,67 @@ function DealCard({
         <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="md" />
         <span className="pr-deal-firm">
           <Link href={L(`/firm/${firm.slug}`)}>{firm.name}</Link>
-          <small>{toEnglishText(deal.label)}</small>
+          <small lang="en">{toEnglishText(deal.label)}</small>
         </span>
         <ScoreRing score={firm.score} size="sm" label={ui.t.firm.propradarScore} />
       </header>
 
-      <div className="pr-deal-pips">
-        <RiskPip compact label={c.payout} value={v(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
-        <RiskPip compact label={c.legal} value={v(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
+      <div className="pr-deal-offer">
+        <div className="pr-deal-value">
+          <strong>{deal.value}</strong>
+          <span lang="en">{toEnglishText(deal.title)}</span>
+        </div>
+        <div className="pr-deal-code">
+          <span>{hasCode ? c.code : p.categories['official-discount']}</span>
+          {!hasCode
+            ? <b aria-hidden="true">✓</b>
+            : <code>{deal.code}</code>}
+        </div>
       </div>
 
-      <div className="pr-deal-value">
-        <strong>{deal.value}</strong>
-        <span>{toEnglishText(deal.title)}</span>
+      <div className="pr-deal-signal">
+        <div className="pr-deal-pips">
+          <RiskPip compact label={c.payout} value={v(firm.reviewSignals.payoutRisk)} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
+          <RiskPip compact label={c.legal} value={v(firm.regulatoryAudit.riskLevel)} tone={legalTone(firm.regulatoryAudit.riskLevel)} />
+        </div>
+        <div className="pr-deal-status">
+          <em className={availabilityClass(deal.availability)}>{p.availability[deal.availability] ?? deal.availability}</em>
+          {isAffiliate ? <small>{p.proofLevels['PropRadar affiliate']}</small> : null}
+        </div>
       </div>
 
-      <div className="pr-deal-code">
-        <span>{c.code}</span>
-        <code>{deal.code}</code>
-        <em className={availabilityClass(deal.availability)}>{p.availability[deal.availability] ?? deal.availability}</em>
-      </div>
-
-      <p className="pr-deal-verdict">{toEnglishText(featured ? deal.commercialHook ?? deal.consumerVerdict : deal.consumerVerdict)}</p>
-
-      <dl className="pr-deal-facts">
-        <div><dt>{c.eligibility}</dt><dd>{deal.eligibility}</dd></div>
-        <div><dt>{c.validity}</dt><dd>{deal.validity}</dd></div>
-        <div><dt>{c.proof}</dt><dd>{fmt(c.proofLine, { level: p.proofLevels[deal.proofLevel] ?? toEnglishText(deal.proofLevel), count: legalSourceCount(firm), score: deal.dealScore })}</dd></div>
-      </dl>
-
-      {featured ? (
-        <p className="pr-deal-note"><strong>{deal.urgency ?? c.verifyBefore}.</strong> {toEnglishText(deal.checkoutTip ?? deal.caveats[0])}</p>
-      ) : deal.caveats.length ? (
-        <details className="pr-deal-caveats">
-          <summary>{deal.caveats.length > 1 ? fmt(c.caveatsMany, { count: deal.caveats.length }) : c.caveatsOne}</summary>
-          <ul>
-            {deal.caveats.map((caveat) => <li key={caveat}>{toEnglishText(caveat)}</li>)}
-          </ul>
-        </details>
+      {featured && deal.caveats[0] ? (
+        <p className="pr-deal-preview-warning" lang="en">{toEnglishText(deal.caveats[0])}</p>
       ) : null}
 
       <footer className="pr-deal-actions">
-        <a href={deal.sourceUrl} target="_blank" rel="noreferrer sponsored" className="btn btn-primary">{cta}</a>
+        <a href={deal.sourceUrl} target="_blank" rel={isAffiliate ? 'noopener noreferrer sponsored' : 'noopener noreferrer'} className="btn btn-primary">{cta}</a>
         <Link href={L(`/firm/${firm.slug}`)} className="pr-link">{featured ? c.readAnalysis : c.readProfile} <span aria-hidden="true">→</span></Link>
       </footer>
-      {!featured ? <span className="pr-deal-source">{toEnglishText(deal.sourceNote ?? deal.sourceLabel)} · {p.categories[deal.category] ?? deal.category}</span> : null}
+
+      <details className="pr-deal-disclosure">
+        <summary>{c.verifyBefore} <span aria-hidden="true">⌄</span></summary>
+        <div className="pr-deal-disclosure-body">
+          <p className="pr-deal-verdict" lang="en">{toEnglishText(featured ? deal.commercialHook ?? deal.consumerVerdict : deal.consumerVerdict)}</p>
+          <dl className="pr-deal-facts">
+            <div><dt>{c.eligibility}</dt><dd lang="en">{deal.eligibility}</dd></div>
+            <div><dt>{c.validity}</dt><dd lang="en">{deal.validity}</dd></div>
+            <div><dt>{c.proof}</dt><dd>{fmt(c.proofLine, { level: p.proofLevels[deal.proofLevel] ?? toEnglishText(deal.proofLevel), count: legalSourceCount(firm), score: deal.dealScore })}</dd></div>
+          </dl>
+          {deal.caveats.length ? (
+            <div className="pr-deal-caveats">
+              <strong>{deal.caveats.length > 1 ? fmt(c.caveatsMany, { count: deal.caveats.length }) : c.caveatsOne}</strong>
+              <ul lang="en">
+                {deal.caveats.map((caveat) => <li key={caveat}>{toEnglishText(caveat)}</li>)}
+              </ul>
+            </div>
+          ) : null}
+          {featured && deal.checkoutTip ? (
+            <p className="pr-deal-note"><strong>{deal.urgency ?? c.verifyBefore}.</strong> <span lang="en">{toEnglishText(deal.checkoutTip)}</span></p>
+          ) : null}
+          <span className="pr-deal-source"><span lang="en">{toEnglishText(deal.sourceNote ?? deal.sourceLabel)}</span> · {p.categories[deal.category] ?? deal.category}</span>
+        </div>
+      </details>
     </article>
   );
 }
@@ -401,24 +420,23 @@ export default async function PromosPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="section">
-        <div className="promo-api-panel">
-          <div>
-            <div className="eyebrow">{p.apiEyebrow}</div>
-            <h2>{p.apiTitle}</h2>
+      <section className="section pr-promo-api-section">
+        <details className="pr-promo-api-disclosure">
+          <summary><span className="eyebrow">{p.apiEyebrow}</span><strong>{p.apiTitle}</strong><span aria-hidden="true">⌄</span></summary>
+          <div className="promo-api-panel">
             <p className="lead">{p.apiLead}</p>
+            <div className="api-chip-list">
+              <code>/api/promos</code>
+              <code>/api/promos?mega=true&amp;limit=4</code>
+              <code>/api/promos?best=true&amp;limit=5</code>
+              <code>/api/promos?availability=active official</code>
+              <code>/api/promos?category=futures</code>
+              <code>/api/promos?style=news trading</code>
+              <code>/api/promos/best?mega=true</code>
+              <code>/api/promos/firm/funderpro</code>
+            </div>
           </div>
-          <div className="api-chip-list">
-            <code>/api/promos</code>
-            <code>/api/promos?mega=true&amp;limit=4</code>
-            <code>/api/promos?best=true&amp;limit=5</code>
-            <code>/api/promos?availability=active official</code>
-            <code>/api/promos?category=futures</code>
-            <code>/api/promos?style=news trading</code>
-            <code>/api/promos/best?mega=true</code>
-            <code>/api/promos/firm/funderpro</code>
-          </div>
-        </div>
+        </details>
       </section>
 
       <section className="section">
@@ -430,10 +448,10 @@ export default async function PromosPage({ params }: Props) {
         </div>
         <div className="promo-faq-grid">
           {faq.map((item) => (
-            <article className="promo-faq-card" key={item.question}>
-              <h3>{toEnglishText(item.question)}</h3>
+            <details className="promo-faq-card" key={item.question}>
+              <summary>{toEnglishText(item.question)}</summary>
               <p>{toEnglishText(item.answer)}</p>
-            </article>
+            </details>
           ))}
         </div>
       </section>
