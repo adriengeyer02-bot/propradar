@@ -2,6 +2,16 @@
 
 *Décision d'Adrien Geyer, 19 novembre 2026. À lire avec `AGENTS.md`, `CLAUDE.md` et surtout le barème canonique `SCORING.md`.*
 
+## Nouvelle grille sur 100 : chantier de migration approuvé
+
+Adrien a aussi validé une **refonte complète** du calcul : **paiements 35 / règles contractuelles 30 / juridique 15 / intégrité commerciale 10 / offre 10**. La grille détaillée, les fourchettes de sévérité et la séparation « niveau de preuve / gravité du risque » sont dans **`SCORING_V2.md`** ; le calcul candidat et ses tests sont dans `app/lib/scoringV2.ts` et `scripts/test-scoring-v2.ts`.
+
+**Important :** ce barème est approuvé mais **n'est pas encore le calcul du site**. Le guide ci-dessous (−6, plafond supprimé, `computeRulesPenalty` à 12) décrit la **transition de l'ancien moteur**, pas les 30 points contractuels du nouveau. Ne jamais soustraire la pénalité de règles historique de 12 **et** une nouvelle sous-note de règles à 30 sur le même fait.
+
+Le recensement `claude/scoring-v2-coverage-2026-11-19.md` classe **197 firmes** par disponibilité apparente des sources (159 non fermées, 38 fermées). Parmi les 159, **106** ont encore un risque payout « non évalué » ; **12** seulement portent une référence de payout déclarée indépendante, à authentifier. Les coches du tableau ne prouvent **ni** l'indépendance **ni** l'actualité des pièces. Auditer les contrats, retraits, registres et offres firmes par firmes, puis soumettre les variations sensibles à Adrien **avant** mise en production. Si une catégorie manque, classer la note **provisoire / non publiable** : ne pas inventer 35 points de paiement parce qu'aucun incident n'est connu.
+
+Un dossier de société doit détailler les cinq sous-notes, les URL exactes, les faits uniques et la confiance A/B/C. Audacity Capital reste un **cas de contrôle prioritaire** : contrat et Knowledge Center publient des minimums de jours contradictoires, et le signal Trustpilot actuel vaut −6 **une fois** ; ses 72/100 ci-dessous ne sont qu'un calcul sous **l'ancien moteur**, pas une nouvelle note sur 100.
+
 ## Barème définitivement validé
 
 - **Trustpilot = −6 points exactement une fois**, uniquement lorsqu'une suppression de note liée à un manquement aux règles ou à un retrait de faux avis est **actuellement documentée par Trustpilot** et qu'il n'est pas déjà incorporé dans le score éditorial.
