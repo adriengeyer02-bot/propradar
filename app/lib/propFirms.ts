@@ -138,6 +138,8 @@ export type PropFirm = {
   scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
   /** Restrictive-rules penalty (SCORING.md section 2), set when it lowered the score. */
   rulesPenalty?: { before: number; penalty: number };
+  /** Trustpilot −6 (SCORING.md 1): applied, or already included in a dated editorial score. */
+  trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
@@ -11646,7 +11648,7 @@ const universePropFirms: PropFirm[] = [
     website: 'https://onefunded.com/',
     commercialRelationship: 'Affiliation transparente',
     commercialNote:
-      'PropRadar may receive a commission when the partner code PROPRADARTECH is used. OneFunded says the code gives 25% off all challenges. On 13 November 2026 its own site also showed the public codes NOV20 (20%) and AWARD (30%): compare them at checkout. Trustpilot withholds OneFunded\'s rating for a guideline breach, so its score stays capped at 64. The relationship has no impact on the score.',
+      'PropRadar may receive a commission when the partner code PROPRADARTECH is used. OneFunded says the code gives 25% off all challenges. On 13 November 2026 its own site also showed the public codes NOV20 (20%) and AWARD (30%): compare them at checkout. Trustpilot withholds OneFunded\'s rating for a guideline breach, which costs 6 points under PropRadar\'s rules. The relationship has no impact on the score.',
     status: 'À surveiller',
     score: 61,
     founded: 2025,
@@ -12938,18 +12940,21 @@ function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
 }
 
 /**
- * Trustpilot rule (approved by Geyer, 2026-11-07): when Trustpilot withholds a
- * firm's rating for a breach of its guidelines, the PropRadar score is capped
- * at 64, so the firm can never sit in the 75+ band on a review profile
- * Trustpilot itself does not stand behind. The stored score is kept and shown
- * next to the cap; the cap lifts as soon as a dated check finds the rating
- * shown again (set.trustpilotNoticeLifted). Applies to affiliates the same way.
+ * Trustpilot rule (Geyer, 2026-11-19; replaces the 64 cap of 2026-11-07 and
+ * the −8 proposal): a current, documented Trustpilot guideline-breach /
+ * fake-review-removal notice costs exactly 6 points, once, with no ceiling.
+ * A dated editorial review may state that its score already includes them
+ * (`set.trustpilotPenaltyIncluded`); then nothing more is deducted.
+ * Applies to affiliates the same way. Closed firms keep their own cap.
  */
-export const TRUSTPILOT_WITHHELD_CAP = 64;
+export const TRUSTPILOT_NOTICE_PENALTY = 6;
 
-function applyTrustpilotCapRule(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld || firm.score <= TRUSTPILOT_WITHHELD_CAP) return firm;
-  return { ...firm, score: TRUSTPILOT_WITHHELD_CAP, scoreCap: { before: firm.score, cap: TRUSTPILOT_WITHHELD_CAP, reason: 'trustpilot-withheld' } };
+function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld) return firm;
+  if (getFirmUpdate(firm.slug)?.set?.trustpilotPenaltyIncluded) {
+    return { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } };
+  }
+  return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
 }
 
 /**
@@ -12995,7 +13000,7 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');
