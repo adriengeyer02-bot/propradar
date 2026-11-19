@@ -1,11 +1,144 @@
 {
   "version": 1,
   "firms": {
+    "fxify": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "One Phase", "productId": "fxi-one", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fxify.com/blog/cheapest-path-funded-50k-fxify/",
+          "note": "Official $50K standard fee dated 27 August 2026, NOT a live checkout quote. Optional add-ons/promos extra; fee reimbursement only with a qualifying first payout.",
+          "rows": [{ "size": 50000, "price": 379 }]
+        },
+        {
+          "name": "Two Phase — Standard", "productId": "fxi-two-std", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fxify.com/blog/cheapest-path-funded-50k-fxify/",
+          "note": "Official $50K standard fee dated 27 August 2026, NOT a live checkout quote. Eligible for a purchase-fee reimbursement only at a qualifying first payout.",
+          "rows": [{ "size": 50000, "price": 379 }]
+        },
+        {
+          "name": "Two Phase — Classic", "productId": "fxi-two-classic", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fxify.com/blog/cheapest-path-funded-50k-fxify/",
+          "note": "Official $50K standard fee dated 27 August 2026, NOT a live checkout quote. This Classic fee is not reimbursed.",
+          "rows": [{ "size": 50000, "price": 379 }]
+        },
+        {
+          "name": "Two Phase — Pro", "productId": "fxi-two-pro", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
+          "note": "Official published launch-price matrix from April 2026; these are historical reference fees, NOT verified live checkout quotes. Recheck before purchase.",
+          "rows": [
+            { "size": 10000, "price": 129 }, { "size": 25000, "price": 225 }, { "size": 50000, "price": 375 },
+            { "size": 100000, "price": 599 }, { "size": 150000, "price": 849 }, { "size": 200000, "price": 1099 },
+            { "size": 250000, "price": 1350 }
+          ]
+        },
+        {
+          "name": "Three Phase", "productId": "fxi-three", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fxify.com/blog/cheapest-path-funded-50k-fxify/",
+          "note": "Official $50K standard fee dated 27 August 2026, NOT a live checkout quote. Fee reimbursed only on a qualifying first payout.",
+          "rows": [{ "size": 50000, "price": 249 }]
+        }
+      ]
+    },
+    "ftmo": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "FTMO Challenge: 2-Step", "productId": "ftmo-two-step-current", "billing": "one-time", "currency": "EUR",
+          "sourceUrl": "https://ftmo.com/en/2-step-challenge/",
+          "note": "Published standard EUR fees for USD-sized simulated accounts; temporary €439 offer for the 100K account excluded (regular fee €540). Standard fee refundable only if the stated payout conditions are met.",
+          "rows": [
+            { "size": 10000, "price": 89 }, { "size": 25000, "price": 250 }, { "size": 50000, "price": 345 },
+            { "size": 100000, "price": 540 }, { "size": 200000, "price": 1080 }
+          ]
+        },
+        {
+          "name": "FTMO Challenge: 1-Step", "productId": "ftmo-one-step-current", "billing": "one-time", "currency": "EUR",
+          "sourceUrl": "https://ftmo.com/fr/1-step-challenge/",
+          "note": "Published regular EUR fees for USD-sized simulated accounts; temporary €399 offer for the 100K account excluded (regular fee €499). 1-Step fee is non-refundable.",
+          "rows": [
+            { "size": 10000, "price": 79 }, { "size": 25000, "price": 199 }, { "size": 50000, "price": 319 },
+            { "size": 100000, "price": 499 }, { "size": 200000, "price": 999 }
+          ]
+        },
+        {
+          "name": "FTMO Instant Account", "productId": "ftmo-instant-current", "billing": "one-time", "currency": "EUR",
+          "sourceUrl": "https://ftmo.com/en/instant-account/",
+          "note": "Published EUR fees for USD-sized simulated accounts. These immediate-access purchase fees are non-refundable.",
+          "rows": [
+            { "size": 5000, "price": 169 }, { "size": 10000, "price": 339 }, { "size": 25000, "price": 749 },
+            { "size": 50000, "price": 1499 }, { "size": 100000, "price": 2999 }
+          ]
+        }
+      ]
+    },
+    "the5ers": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "High Stakes (two-step)", "productId": "the5ers-high-stakes-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
+          "note": "The5ers' 3 November 2026 official fee example is for the 100K High Stakes plan. Conditional Hub credits and any payout-linked fee recovery are not checkout discounts.",
+          "rows": [{ "size": 100000, "price": 545 }]
+        },
+        {
+          "name": "Bootcamp (three-stage) — total fee", "productId": "the5ers-bootcamp-current", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://the5ers.com/faqs/are-there-any-hidden-fees-or-recurring-fees/",
+          "note": "TOTAL cost if the challenge is passed, not the initial checkout charge. The first part is paid on entry; the remaining part is due ONLY on passing. Official matrix updated 2 November 2026.",
+          "rows": [
+            { "size": 20000, "price": 72, "upfrontPrice": 22, "completionFee": 50 },
+            { "size": 100000, "price": 300, "upfrontPrice": 95, "completionFee": 205 },
+            { "size": 250000, "price": 575, "upfrontPrice": 225, "completionFee": 350 }
+          ]
+        }
+      ]
+    },
+    "tradeify": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "Growth Evaluation", "productId": "tradeify-growth-eval", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+          "note": "Standard one-time fees; no activation charge. Reset fees, optional services and temporary discounts are excluded.",
+          "rows": [
+            { "size": 25000, "price": 99 }, { "size": 50000, "price": 145 },
+            { "size": 100000, "price": 255 }, { "size": 150000, "price": 369 }
+          ]
+        },
+        {
+          "name": "Select Evaluation — standard (40% consistency)", "productId": "tradeify-select-eval", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+          "note": "40% best-day consistency; 50% add-on costs more. No activation charge. Select 300K has separate KYC and purchase restrictions.",
+          "rows": [
+            { "size": 25000, "price": 109 }, { "size": 50000, "price": 165 }, { "size": 100000, "price": 265 },
+            { "size": 150000, "price": 369 }, { "size": 300000, "price": 570 }
+          ]
+        },
+        {
+          "name": "Select Evaluation — 50% consistency add-on", "productId": "tradeify-select-eval", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+          "note": "Total purchase price WITH the optional 50% best-day consistency upgrade. Not offered on Select 300K.",
+          "rows": [
+            { "size": 25000, "price": 135 }, { "size": 50000, "price": 205 },
+            { "size": 100000, "price": 329 }, { "size": 150000, "price": 459 }
+          ]
+        },
+        {
+          "name": "Lightning Funded", "productId": "tradeify-lightning", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference",
+          "note": "Directly simulated funded account; no evaluation, activation fee or resets. Price excludes optional services and promotions.",
+          "rows": [
+            { "size": 25000, "price": 345 }, { "size": 50000, "price": 492 },
+            { "size": 100000, "price": 660 }, { "size": 150000, "price": 796 }
+          ]
+        }
+      ]
+    },
     "bullwaves-prime": {
       "checkedOn": "2026-11-16",
       "programs": [
         {
-          "name": "1 Step Challenge", "billing": "one-time", "currency": "USD",
+          "name": "1 Step Challenge", "productId": "bullwaves-prime-1-step", "billing": "one-time", "currency": "USD",
           "sourceUrl": "https://prime.bullwaves.com/pricing",
           "note": "Published fees before add-ons; 10% target, 4% daily drawdown and 8% maximum drawdown. Prices checked 16 November 2026.",
           "rows": [
@@ -14,7 +147,7 @@
           ]
         },
         {
-          "name": "2 Step Challenge", "billing": "one-time", "currency": "USD",
+          "name": "2 Step Challenge", "productId": "bullwaves-prime-2-step", "billing": "one-time", "currency": "USD",
           "sourceUrl": "https://prime.bullwaves.com/pricing",
           "note": "Published fees before add-ons. Accounts purchased from 12 November 2026 use the updated 8% static maximum drawdown; old accounts retain their purchase-date rules.",
           "rows": [
@@ -29,6 +162,7 @@
       "programs": [
         {
           "name": "Zero",
+          "productId": "miltraders-zero",
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
@@ -41,6 +175,7 @@
         },
         {
           "name": "Pro",
+          "productId": "miltraders-pro",
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
@@ -53,6 +188,7 @@
         },
         {
           "name": "Instant",
+          "productId": "miltraders-instant",
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://intercom.help/miltraders/en/articles/16001309-how-much-do-miltraders-accounts-cost",
@@ -70,6 +206,7 @@
       "programs": [
         {
           "name": "1-Phase Challenge — standard",
+          "productId": "x-funded-1-phase",
           "billing": "one-time",
           "currency": "EUR",
           "sourceUrl": "https://x-funded.com/",
@@ -85,6 +222,7 @@
         },
         {
           "name": "2-Phase Challenge — standard",
+          "productId": "x-funded-2-phase",
           "billing": "one-time",
           "currency": "EUR",
           "sourceUrl": "https://x-funded.com/",
@@ -100,6 +238,7 @@
         },
         {
           "name": "Instant Funding",
+          "productId": "x-funded-instant",
           "billing": "one-time",
           "currency": "EUR",
           "sourceUrl": "https://x-funded.com/instant-funding/",
@@ -121,6 +260,7 @@
       "programs": [
         {
           "name": "1-Step Evaluation",
+          "productId": "foxx-1-step",
           "billing": "one-time",
           "currency": "EUR",
           "sourceUrl": "https://www.foxx-funded.com/",
@@ -142,6 +282,7 @@
       "programs": [
         {
           "name": "Trading Combine – Standard Path",
+          "productId": "topstep-trading-combine-current",
           "billing": "monthly",
           "currency": "USD",
           "sourceUrl": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
@@ -163,6 +304,7 @@
         },
         {
           "name": "Trading Combine – No Activation Fee Path",
+          "productId": "topstep-trading-combine-current",
           "billing": "monthly",
           "currency": "USD",
           "sourceUrl": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions",
@@ -189,6 +331,7 @@
       "programs": [
         {
           "name": "Zero",
+          "productId": "alpha-futures-zero",
           "billing": "monthly",
           "currency": "USD",
           "sourceUrl": "https://alpha-futures.com/",
@@ -210,6 +353,7 @@
         },
         {
           "name": "Standard",
+          "productId": "alpha-futures-standard",
           "billing": "monthly",
           "currency": "USD",
           "sourceUrl": "https://alpha-futures.com/",
@@ -280,6 +424,7 @@
       "programs": [
         {
           "name": "Stellar 2-Step",
+          "productId": "fundednext-stellar-two-current",
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://fundednext.com/cfds/stellar-2-step",
@@ -313,6 +458,7 @@
         },
         {
           "name": "Stellar 1-Step",
+          "productId": "fundednext-stellar-one-current",
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://fundednext.com/cfds/stellar-1-step",
@@ -346,6 +492,7 @@
         },
         {
           "name": "Stellar Lite",
+          "productId": "fundednext-stellar-lite-current",
           "billing": "one-time",
           "currency": "USD",
           "sourceUrl": "https://fundednext.com/cfds/stellar-lite",
