@@ -3377,7 +3377,7 @@
       ]
     },
     "e8-futures": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3406,6 +3406,12 @@
           "summary": "Restrictive-rules audit: read the E8 Signature Futures and E8 Zero pages, the comparison page and the E8 Funding LLC Terms of Service; 12 rules across E8 Signature Futures and E8 Zero.",
           "source": "https://e8futures.com/e8-signature-futures",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 3 new restrictive rules; 3 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+          "fields": ["auditSummary", "newsTrading", "products", "restrictiveRules", "verdict"]
         }
       ],
       "setEntities": [
@@ -3451,33 +3457,81 @@
         {
           "label": "E8 Funding LLC Terms of Service (official, 2026-11-18)",
           "url": "https://e8futures.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "label": "e8futures.com official page (read 2026-11-19)",
+          "url": "https://e8futures.com/compare-simfi-funded-accounts"
         }
       ],
       "set": {
         "priceFrom": 120,
         "profitSplit": 80,
         "drawdownType": "EOD",
-        "payoutDelay": "on demand once rules are met; first payout possible after 3 days, then every 5 profitable days, up to 4 payouts per account"
+        "payoutDelay": "on demand once rules are met; first payout possible after 3 days, then every 5 profitable days, up to 4 payouts per account",
+        "newsTrading": "Allowed",
+        "verdict": "E8 Futures, the futures section of E8 Markets, sells the E8 Signature and E8 Zero (MAX and Starter) one-phase evaluations with end-of-day dynamic drawdowns. Funded accounts close after 4 payouts with per-payout caps, and the terms let E8 withhold payouts at its sole discretion. Payout evidence was not verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. E8 Futures is the futures section of E8 Markets (shared branding and footer). It sells E8 Signature Futures (25K to 150K, list $120 to $450, 6% target, 2.66-4% end-of-day dynamic drawdown, 35% best-day rule, 80% split, no overnight positions) and E8 Zero (MAX 25K to 200K, list $228 to $1,088; Starter 25K to 150K), which has no daily loss limit, no consistency rule on the funded account and an 80% or 100% split. Prices for both programmes were shown at a discount with code E8. On the funded account, both programmes end after 4 payouts with per-cycle caps (for example $2,000-$3,000 on Signature $100K and $5,000 on Zero MAX $100K). Signature requires a buffer equal to the drawdown to stay in the account, and Zero states that profit left in the account 'can never be requested'. The E8 Funding LLC terms (Texas law, AAA arbitration) let E8 'withhold or revoke' payouts and decide 'in its sole discretion' whether to distribute one (5.1, 5.3), invalidate data generated through 'automation' (7.4, 9.1(a)), and terminate accounts for chargebacks or 'Prolonged account inactivity' without a defined period. They state payouts are processed within 7 days. Payout evidence and the regulatory status of the entities were not verified."
       },
       "setProducts": [
         {
           "id": "e8-signature-futures",
           "name": "E8 Signature Futures (1-step)",
           "type": "Futures evaluation",
-          "description": "List price $120 (25K) to $450 (150K); shown with a 25% discount on 29 Oct 2026.",
+          "description": "One-phase futures evaluation. List price $120 (25K) to $450 (150K), shown with a 25% discount on 19 Nov 2026. No activation fee. Contract limit scales with account size (2 to 12 contracts). Intraday only: no positions held overnight, trading hours 17:15-15:10 CT. Up to 4 payouts per account with per-payout caps, then a free new challenge.",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "entryFeeMin": 120,
           "entryFeeMax": 450,
           "profitTarget": "6%",
-          "maxDailyLoss": "2% soft daily pause in the performance stage; challenge-stage daily limit not stated",
-          "maxDrawdown": "2.66% to 4%, end-of-day dynamic from the highest end-of-day balance, locking at the starting balance",
+          "maxDailyLoss": "2% soft daily pause in the performance stage (trading resumes after rollover); challenge-stage daily limit not stated",
+          "maxDrawdown": "2.66% to 4%, end-of-day dynamic",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://e8futures.com/e8-signature-futures",
+          "drawdownDetails": "End-of-day dynamic drawdown from the highest end-of-day balance, locking at the starting balance ($3,000 on the $100K account). A buffer equal to the drawdown must stay in the account at each payout.",
           "profitSplit": "80%",
           "platforms": ["Tradelocker", "cTrader", "Match Trade"],
           "tradableAssets": ["Futures"],
-          "minTradingDays": "first payout after 3 days; then 5 profitable days between payouts",
+          "minTradingDays": "pass in as little as 1 day; first payout after 3 days; then 5 profitable days (0.3%+ realized) between payouts",
           "hasConsistencyRule": true,
-          "consistencyRule": "35% best-day rule: no single day may exceed 35% of total profits (official page, 29 Oct 2026)."
+          "consistencyRule": "35% best-day rule: no single day may exceed 35% of total generated profits."
+        },
+        {
+          "id": "e8-zero-max",
+          "name": "E8 Zero MAX",
+          "type": "Futures evaluation",
+          "description": "One-phase futures evaluation with no daily loss limit, daily payout requests and an 80% or 100% split chosen at purchase (the 100% option costs more; amount not stated). List price $228 (25K) to $1,088 (200K) for the default 80% option, shown with a 35% discount on 19 Nov 2026. Up to 4 payouts per account, capped at $1,500 / $3,000 / $5,000 / $7,000 per cycle (25K / 50K / 100K / 200K), then a free new challenge.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 228,
+          "entryFeeMax": 1088,
+          "profitTarget": "6% to 6.75% ($6,500 on $100K)",
+          "maxDailyLoss": "none",
+          "maxDrawdown": "3% end-of-day dynamic on the $100K account ($3,000); other sizes not stated",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://e8futures.com/e8-zero",
+          "drawdownDetails": "Based on the highest end-of-day balance; locks at the starting balance, and at breakeven after the first payout.",
+          "profitSplit": "80% or 100% (chosen at purchase)",
+          "platforms": ["Tradelocker", "cTrader", "Match Trade"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "none stated",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Challenge only: no single day may exceed 40% of total generated profits; no consistency rule on the Performance account."
+        },
+        {
+          "id": "e8-zero-starter",
+          "name": "E8 Zero Starter",
+          "type": "Futures evaluation",
+          "description": "Lower-cap variant of E8 Zero: 'No consistency in performance · Daily payouts · Up to 100% payout'. Payout cap per cycle $600 / $1,000 / $1,600 / $1,995 (25K / 50K / 100K / 150K), up to 4 payouts per account. Prices, target and drawdown are not shown separately for Starter.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "not stated",
+          "maxDailyLoss": "not stated",
+          "maxDrawdown": "not stated",
+          "profitSplit": "up to 100%",
+          "platforms": ["Tradelocker", "cTrader", "Match Trade"],
+          "tradableAssets": ["Futures"],
+          "hasConsistencyRule": true,
+          "consistencyRule": "Challenge: 40% best-day rule (E8 Zero page); no consistency rule on the Performance account."
         }
       ],
       "auditedPrograms": [
@@ -3609,6 +3663,36 @@
           "clarity": "vague",
           "rule": "Terms §12.2(d) lists \"Prolonged account inactivity\" as a ground for termination, without a defined period.",
           "impact": "An inactive account can be closed; the threshold is not stated.",
+          "source": "https://e8futures.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "program": "All programmes (Terms of Service)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 9.1(a) prohibit 'Using bots, scripts, crawlers, automation software, or AI agents to interact with or manipulate the Platform'; 7.4 states that data 'generated through manipulation, automation, collusion, or gaming of Platform features will be invalidated', and 9.2(b) allows E8 to 'Invalidate your performance data and deny any pending or future rewards'.",
+          "impact": "Automated trading tools can lead to invalidated results and refused payouts; the terms do not say whether ordinary trading EAs are covered.",
+          "source": "https://e8futures.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "program": "All programmes (Terms of Service)",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 4.3(b): 'You will not initiate any chargeback or reversal unless unauthorized use has occurred'; 4.3(c): 'attempted reversals may result in permanent account termination, legal enforcement, and data invalidation'; 4.4 calls a chargeback filed without first contacting E8 'a material breach'.",
+          "impact": "A payment dispute can end the account permanently.",
+          "source": "https://e8futures.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "program": "All programmes (Terms of Service)",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "E8 Funding LLC 'does not offer services to residents of' Cuba, Syria, Iran, Lebanon, Iraq, Yemen, North Korea, Russia, Ukraine and Belarus; KYC (photo ID, proof of address) is required and 'Refusal to cooperate may result in suspension, limitation, or termination' (3.3, 12.2(c)).",
+          "impact": "Residents of listed countries cannot use the service, and accounts without completed KYC can be closed.",
           "source": "https://e8futures.com/e8-markets-terms-and-conditions"
         }
       ]
@@ -6832,7 +6916,7 @@
       ]
     },
     "funding-your-trades": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -6857,6 +6941,12 @@
           "summary": "Restrictive-rules audit: read the official FAQ (consistency rule, FYT Classic vs Prime, FYT Prime model, instant models compared, payout eligibility, prohibited usage, inactivity, rule violations) and Terms of Services; 11 rules across 1-Step, 2-Step Pro, Instant Plus and Instant Prime.",
           "source": "https://fundingyourtrades.com/faq/consistency-rule/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 3 new restrictive rules; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://fundingyourtrades.com/terms-of-services/",
+          "fields": ["auditSummary", "payoutDelay", "restrictiveRules", "verdict"]
         }
       ],
       "setEntities": [
@@ -6899,11 +6989,34 @@
         {
           "label": "Funding Your Trades payout eligibility (official FAQ, 2026-11-18)",
           "url": "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/"
+        },
+        {
+          "label": "fundingyourtrades.com official page (read 2026-11-19)",
+          "url": "https://fundingyourtrades.com/"
+        },
+        {
+          "label": "fundingyourtrades.com official page (read 2026-11-19)",
+          "url": "https://fundingyourtrades.com/product/1-step-challenge/"
+        },
+        {
+          "label": "fundingyourtrades.com official page (read 2026-11-19)",
+          "url": "https://fundingyourtrades.com/product-category/challenge/"
+        },
+        {
+          "label": "fundingyourtrades.com official page (read 2026-11-19)",
+          "url": "https://fundingyourtrades.com/challenges/instant-funding/"
+        },
+        {
+          "label": "fundingyourtrades.com official page (read 2026-11-19)",
+          "url": "https://fundingyourtrades.com/new-home/"
         }
       ],
       "set": {
         "newsTrading": "Allowed",
-        "drawdownType": "Hybride"
+        "drawdownType": "Hybride",
+        "payoutDelay": "first payout on demand, then every 7 days on funded challenge accounts; Instant accounts every 14 days after 10 trading days; verification 48-72 hours",
+        "verdict": "Funding Your Trades sells 1-Step, 2-Step, 2-Step Pro and 3-Step challenges with a Classic or Prime funded model, plus Instant Plus and Instant Prime accounts. The FAQ and terms impose consistency rules that clear gains when exceeded, split cuts on the Prime model and broad discretionary termination clauses. Per-size prices and payout evidence were not verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. Funding Your Trades sells 1-Step, 2-Step, 2-Step Pro and 3-Step challenges (each with a Classic or Prime funded model) and Instant Plus and Instant Prime accounts; product pages show only price ranges ($30 to $997.85 across challenges), so per-size list prices are not recorded. The consistency FAQ sets a 30% best-day limit on Classic funded accounts, 25% on Instant Funding and 20% on Instant Plus; a request above it is rejected and the gains are cleared. The Prime model reduces the split by 10% per soft breach (3-minute minimum hold, 1.5% per-trade loss cap, 5-minute news window). Instant Plus uses a 4% trailing drawdown and Instant Prime a 6% trailing drawdown capped at the starting balance. The terms (section 10.3) list prohibited practices, including copy trading without written consent, cross-account hedging and 'Any unethical trading practice', with termination and forfeiture of profits as consequences, and require IP use consistent with the KYC country; section 15.1 bans accounts involved in payment disputes. The payout FAQ states that the first payout is on demand, later ones every 7 days (Instant accounts every 14 days), with a $100 minimum. Official documents conflict on Instant Prime trading days and consistency. The operator, PrimeWorks International FZ LLC, is named without jurisdiction or address. Trustpilot withholds the firm's rating for a guideline breach. Payout evidence was not verified."
       },
       "addIncidents": [
         "Trustpilot check on 2026-11-09: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Same notices on the au mirror. Trustpilot shows no date for these notices (https://www.trustpilot.com/review/fundingyourtrades.com)."
@@ -7036,6 +7149,36 @@
           "rule": "'Accounts left inactive for 30 consecutive days will be breached, affecting both challenge and simulated funded stage.'",
           "impact": "An idle account is closed after 30 days.",
           "source": "https://fundingyourtrades.com/faq/30-day-inactivity-rule/"
+        },
+        {
+          "program": "All programmes (Terms of Services)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 10.3 prohibits high-frequency trading, 'Server spamming', arbitrage 'in any form', 'Tick scalping', 'Hedging between accounts or across firms', and 'Copy trading or account management by a third party without prior written consent'; these 'may result in immediate account termination, forfeiture of profits, and disqualification from current or future programs.'",
+          "impact": "Copy trading without written consent, cross-account hedging or latency strategies can end the account and cancel its profits.",
+          "source": "https://fundingyourtrades.com/terms-of-services/"
+        },
+        {
+          "program": "All programmes (Terms of Services)",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 15.1: 'Accounts involved in disputes will be banned, and no further accounts will be entertained', in the clause on payment disputes.",
+          "impact": "Opening a payment dispute leads to the account being banned and no new accounts accepted.",
+          "source": "https://fundingyourtrades.com/terms-of-services/"
+        },
+        {
+          "program": "All programmes (Terms of Services)",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms section 22 lists restricted countries and territories, including Afghanistan, Cuba, Iran, Iraq, Libya, Myanmar, North Korea, Russia, Somalia, Sudan, Syria, Ukraine, Venezuela and Yemen; section 10.2 states that traders associated with proprietary trading firms, 'including their owners and employees, are strictly prohibited'. No consequence is stated.",
+          "impact": "Residents of the listed countries and prop-firm staff cannot use the service.",
+          "source": "https://fundingyourtrades.com/terms-of-services/"
         }
       ]
     },
@@ -9837,9 +9980,13 @@
       ]
     },
     "my-crypto-funding": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
-        "officialWebsite": "https://mycryptofunding.org/"
+        "officialWebsite": "https://mycryptofunding.org/",
+        "profitSplit": 80,
+        "payoutDelay": "Payouts can be requested every 15 traded days or 30 calendar days once all evaluation stages are passed; KYC required before any payout",
+        "verdict": "My Crypto Funding offers a two-phase crypto-focused evaluation with funding up to $200,000; sizes and prices were not readable on the official site. Its terms cap profit at $10,000 per trade or per day, ban hedging and HFT, and let the firm deny payouts at its sole discretion.",
+        "auditSummary": "Official-source review dated 19 November 2026. The homepage describes a two-phase evaluation ('The Test' and 'The Confirmation') with funding up to $200,000, leverage up to 1:100 and no time limit, but shows no programme names, sizes or prices, and the FAQ blocks automated reading. The terms and conditions of My Crypto Funding Ltd (Forma House, 40 Bowling Green Lane, London) set an 80% starting split and payouts every 15 traded days or 30 calendar days after a mandatory KYC form; a KYC mismatch breaches the account and denies pending payouts. Section 6 prohibits single trades or same-day trades exceeding $10,000 profit, a cumulative $200,000 funding limit, hedging or reverse trading across accounts, arbitrage and HFT, strategies 'difficult to replicate in the real market', shared IP use by different people and 'gambling' (80%+ of profit from one trade), with suspension and forfeiture of profits and fees. Sections 19.3-19.4 let the company suspend accounts and deny payouts at its sole discretion; section 3.1 excludes refunds for incomplete phases. Programme pricing, payout evidence and the company registration remain unverified."
       },
       "changelog": [
         {
@@ -9853,6 +10000,12 @@
           "summary": "Restrictive-rules audit: read the homepage and the terms and conditions (FAQ blocks automated reading); 6 rules recorded against the evaluation programme.",
           "source": "https://mycryptofunding.org/terms-and-conditions/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 3 new restrictive rules; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://mycryptofunding.org/terms-and-conditions/",
+          "fields": ["auditSummary", "payoutDelay", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "addSources": [
@@ -9863,6 +10016,10 @@
         {
           "label": "My Crypto Funding terms and conditions (official, 2026-11-18)",
           "url": "https://mycryptofunding.org/terms-and-conditions/"
+        },
+        {
+          "label": "mycryptofunding.org official page (read 2026-11-19)",
+          "url": "https://mycryptofunding.org/"
         }
       ],
       "auditedPrograms": [
@@ -9930,6 +10087,36 @@
           "clarity": "buried",
           "rule": "Terms 4.1.13: payouts can be requested \"every 15 traded days or 30 calendar days\".",
           "impact": "Sets the minimum interval between payout requests.",
+          "source": "https://mycryptofunding.org/terms-and-conditions/"
+        },
+        {
+          "program": "Evaluation and funded accounts",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 6.1(xii) prohibit 'Hedging or reverse trading (in the same or different account)'; 6.2: violations 'may result in account suspension and forfeiture of profits and fees'.",
+          "impact": "Opposite positions, including across accounts, can lead to suspension and loss of profits and fees.",
+          "source": "https://mycryptofunding.org/terms-and-conditions/"
+        },
+        {
+          "program": "Evaluation and funded accounts",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 6.1(xi) also prohibit 'multiple trades that add up to more than $10,000 profit on the same day'; consequence under 6.2 is suspension and 'forfeiture of profits and fees'.",
+          "impact": "A day with more than $10,000 of combined profit can lead to suspension and loss of profits.",
+          "source": "https://mycryptofunding.org/terms-and-conditions/"
+        },
+        {
+          "program": "Evaluation and funded accounts",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms 6.1(vi) prohibit 'Strategies difficult to replicate in the real market', 6.1(ix) 'activities that may harm the company's interests' and 6.1(xvi) state 'Disrespecting staff will result in indefinite suspension'; 6.2 penalties are suspension and forfeiture 'which will be determined by the company'.",
+          "impact": "Undefined criteria can lead to suspension and loss of profits at the firm's assessment.",
           "source": "https://mycryptofunding.org/terms-and-conditions/"
         }
       ]
@@ -13094,7 +13281,7 @@
       ]
     },
     "top-one-futures": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -13125,6 +13312,12 @@
           "summary": "Restrictive-rules audit: read the help-centre articles on prohibited practices, minimum trade time, IP restrictions, path to live, news rules and payout requirements for Elite, Elite ACCESS, Elite Daily and Instant Sim Funded; 16 rules across 4 programmes.",
           "source": "https://help.toponefutures.com/en/articles/11021584-prohibited-trading-practices",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 10 new restrictive rules; 5 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://toponefutures.com/",
+          "fields": ["auditSummary", "drawdownType", "eaAllowed", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "setEntities": [
@@ -13179,6 +13372,30 @@
         {
           "label": "Top One Futures Instant Sim Funded overview (official, 2026-11-18)",
           "url": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program"
+        },
+        {
+          "label": "toponefutures.com official page (read 2026-11-19)",
+          "url": "https://toponefutures.com/"
+        },
+        {
+          "label": "help.toponefutures.com official page (read 2026-11-19)",
+          "url": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview"
+        },
+        {
+          "label": "help.toponefutures.com official page (read 2026-11-19)",
+          "url": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+        },
+        {
+          "label": "help.toponefutures.com official page (read 2026-11-19)",
+          "url": "https://help.toponefutures.com/en/articles/14595166-elite-access-daily-progression-rule-50"
+        },
+        {
+          "label": "help.toponefutures.com official page (read 2026-11-19)",
+          "url": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview"
+        },
+        {
+          "label": "help.toponefutures.com official page (read 2026-11-19)",
+          "url": "https://help.toponefutures.com/en/articles/12707415-ignite-accounts-payout-requirements"
         }
       ],
       "set": {
@@ -13186,24 +13403,115 @@
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 5269,
         "trustpilotSourceUrl": "https://au.trustpilot.com/review/toponefutures.com?page=3",
-        "profitSplit": 90
+        "profitSplit": 90,
+        "payoutDelay": "Daily on Elite Daily; every 5 days on Elite Access and Instant Sim Funded (homepage); Ignite on reaching each 5% target; processing stated as averaging under 12 hours",
+        "eaAllowed": "No",
+        "newsTrading": "Variable",
+        "verdict": "Top One Futures sells simulated futures accounts: Elite Daily and Elite Access one-phase evaluations, and Instant Sim Funded and Ignite accounts without evaluation, at a 90% split. Funded accounts carry end-of-day trailing drawdowns, 15% to 40% consistency rules, per-request payout caps and a review after three payouts that closes the sim account.",
+        "auditSummary": "Official-source review dated 19 November 2026. The homepage sells four futures programmes in 25K to 150K sizes: Elite Daily (one phase, 6% target, one-time list price $178 to $549, daily payouts), Elite Access ($39 evaluation per the help centre plus a $139 to $359 activation fee), Instant Sim Funded ($419 to $939) and Ignite ($218 to $799, copy trading across up to 10 same-size accounts). All use end-of-day trailing drawdowns that lock at $100 above the starting balance. The help centre sets a 15% (Ignite), 20% (Instant), 25% (Elite) or 40% (Elite Access funded, Elite Daily evaluation) best-day consistency rule, payout caps per request and minimum payouts of $250 to $500. Bots and EAs are banned, trades under 10 seconds can lose their profits, VPN use is prohibited, and a news window of 2 minutes applies on funded Elite accounts. After three payouts (five on Elite Daily) a risk review may move the trader to one live account and close the sim accounts. The terms (Top One Futures, LLC, Cheyenne, Wyoming) add that multiple emails are a violation, that either party may cancel 'at any time for any reason', that there are no refunds, and name no governing law or country list. Payout evidence and the broker relationship were not verified."
       },
       "setProducts": [
         {
           "id": "top-one-elite-evaluation",
           "name": "Elite Evaluation",
           "type": "Futures evaluation",
-          "description": "Purchase price not stated in the help article; one-time $149 activation fee after passing; resets $29 (25K) to $119 (150K). Elite ACCESS, Elite DAILY and Ignite accounts also exist.",
+          "description": "Purchase price not stated in the help article and the programme is not on the homepage price grid read on 19 Nov 2026; one-time $149 activation fee after passing; resets $29 (25K) to $119 (150K).",
           "accountSizeMin": 25000,
           "accountSizeMax": 150000,
           "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
           "maxDailyLoss": "2.5% of the end-of-day balance; trading pauses for the day",
           "maxDrawdown": "$1,000 (25K) to $4,500 (150K), trailing on the end-of-day balance, locks at the drawdown limit plus $100",
-          "profitSplit": "not stated in the help article",
-          "platforms": ["not stated"],
+          "profitSplit": "90%",
+          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
           "tradableAssets": ["Futures"],
           "hasConsistencyRule": true,
-          "consistencyRule": "None in the evaluation; on Sim Funded accounts no single day may exceed 25% of total profits (official help article, 29 Oct 2026)."
+          "consistencyRule": "None in the evaluation; on Sim Funded accounts no single day may exceed 25% of total profits."
+        },
+        {
+          "id": "top-one-elite-daily",
+          "name": "Elite DAILY (V2)",
+          "type": "Futures evaluation",
+          "description": "One-phase evaluation with daily payouts from day 1 on the funded account. List price (one-time) $178 (25K) to $549 (150K); monthly billing also offered. No activation fee. Max contracts 1 to 7. Funded: $500 minimum payout, $750 to $2,250 maximum per request, buffer $1,500 to $4,500. Up to 5 funded accounts.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 178,
+          "entryFeeMax": 549,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "$500 (25K), $1,000 (50K), $1,250 (100K), $1,750 (150K), evaluation and funded",
+          "maxDrawdown": "Evaluation $1,000 to $4,500; funded $1,000 to $3,500, locks at starting balance plus $100",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview",
+          "drawdownDetails": "Trails the highest closed balance at end of day; equity checked in real time.",
+          "profitSplit": "90%",
+          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "not stated for the evaluation; 1 on the funded account",
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% best-day rule during the evaluation only; on the funded account at least 50% of each payout must come from profit since the previous payout."
+        },
+        {
+          "id": "top-one-elite-access",
+          "name": "Elite ACCESS",
+          "type": "Futures evaluation",
+          "description": "One-phase evaluation (1-day minimum, 30 days to pass). The help centre states a $39 one-time evaluation fee and a $139 to $359 activation fee after passing; the homepage shows $139 to $359 crossed out with $39. Funded: 5 profitable days per payout, $500 minimum, $1,000 to $2,500 maximum per request, buffer $1,500 to $4,500.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "profitTarget": "6%: $1,500 (25K) to $9,000 (150K)",
+          "maxDailyLoss": "None in evaluation; funded soft breach $500 (25K) to $1,750 (150K)",
+          "maxDrawdown": "Evaluation $1,000 to $4,000; funded $1,000 to $3,500",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview",
+          "drawdownDetails": "End-of-day trailing; breach level checked in real time.",
+          "profitSplit": "90%",
+          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "1 (evaluation); 5 profitable days per payout (funded)",
+          "hasConsistencyRule": true,
+          "consistencyRule": "None in evaluation; 40% best-day rule on the funded account; from the second payout at least 50% of each request must come from new profit."
+        },
+        {
+          "id": "top-one-instant-sim-funded",
+          "name": "Instant Sim Funded",
+          "type": "Instant funding",
+          "description": "No evaluation. One-time list price $419 (25K) to $939 (150K). Rules '2.0' for purchases from 27 Jul 2026: maximum per payout $1,000 to $3,000. Payouts every 5 days according to the homepage.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 419,
+          "entryFeeMax": 939,
+          "profitTarget": "none",
+          "maxDailyLoss": "$625 (25K), $1,250 (50K), $2,500 (100K), $3,000 (150K) (2.0), soft breach",
+          "maxDrawdown": "$1,000 (25K), $2,000 (50K), $4,000 (100K), $5,250 (150K) (2.0); locks at starting balance plus $100",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program",
+          "drawdownDetails": "Trails the highest closed balance, never moves down; equity at or below the level at any moment closes the account; locks once profit reaches the drawdown plus $100 or after the first payout.",
+          "profitSplit": "90%",
+          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No single day may exceed 20% of total profit; resets after each payout."
+        },
+        {
+          "id": "top-one-ignite",
+          "name": "Ignite",
+          "type": "Instant funding",
+          "description": "Instant funded account, no evaluation, one-time list price $218 (25K) to $799 (150K), no monthly or activation fee. Copy trading allowed across up to 10 accounts of the same size. Each payout needs 5% new profit; $250 minimum, $500 to $2,000 maximum per request. All trades closed by 4:00 pm ET.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 218,
+          "entryFeeMax": 799,
+          "profitTarget": "5% per payout cycle: $1,250 (25K) to $7,500 (150K)",
+          "maxDailyLoss": "$500 (25K), $1,000 (50K), $2,000 (100K), $3,000 (150K), soft breach",
+          "maxDrawdown": "$1,000 (25K), $2,000 (50K), $4,000 (100K), $6,000 (150K); locks at starting balance plus $100",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview",
+          "drawdownDetails": "End-of-day trailing on the closing balance, real-time equity check; locks once profit reaches the drawdown plus $100 or after the first payout.",
+          "profitSplit": "90%",
+          "platforms": ["Tradovate", "NinjaTrader", "TradingView", "BlackArrow"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day may not exceed 15% of total profit at payout request."
         }
       ],
       "auditedPrograms": [
@@ -13222,6 +13530,10 @@
         {
           "key": "instant",
           "name": "Instant Sim Funded"
+        },
+        {
+          "key": "ignite",
+          "name": "Ignite (instant funding)"
         }
       ],
       "restrictiveRules": [
@@ -13384,15 +13696,119 @@
           "rule": "The drawdown \"trails your highest closed balance but never moves down\", checked in real time on equity, and locks at $100 above the starting balance once profits reach the drawdown plus $100. \"A breached account is closed.\"",
           "impact": "Early profits raise the breach level on the funded account.",
           "source": "https://help.toponefutures.com/en/articles/11020805-overview-of-the-instant-sim-funded-program"
+        },
+        {
+          "program": "Ignite (funded)",
+          "appliesTo": ["ignite"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "At payout request the \"single best trading day cannot account for more than 15% of your total accumulated profit\".",
+          "impact": "A payout cannot be requested while one day exceeds 15% of total profit.",
+          "source": "https://help.toponefutures.com/en/articles/12707415-ignite-accounts-payout-requirements"
+        },
+        {
+          "program": "Ignite (funded)",
+          "appliesTo": ["ignite"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Each payout requires a new 5% profit target (5% of the balance left after the previous withdrawal); maximum per request $500 (25K), $1,000 (50K), $1,500 (100K), $2,000 (150K); minimum payout $250.",
+          "impact": "Withdrawals are limited per cycle and each cycle needs a fresh 5% gain.",
+          "source": "https://help.toponefutures.com/en/articles/12707415-ignite-accounts-payout-requirements"
+        },
+        {
+          "program": "Ignite (funded)",
+          "appliesTo": ["ignite"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Maximum drawdown $1,000 to $6,000, end-of-day trailing on the closing balance and checked in real time on equity; it locks at $100 above the starting balance once profit reaches the drawdown plus $100 or after the first payout.",
+          "impact": "Early profits raise the breach level of the funded account until the lock.",
+          "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview"
+        },
+        {
+          "program": "Ignite (funded)",
+          "appliesTo": ["ignite"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "\"All trades must close by 4:00 pm ET\"; overnight positions are not allowed.",
+          "impact": "Positions cannot be held overnight.",
+          "source": "https://help.toponefutures.com/en/articles/12671168-ignite-accounts-overview"
+        },
+        {
+          "program": "Elite DAILY (funded, V2)",
+          "appliesTo": ["daily"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Funded trailing drawdown $1,000 (25K) to $3,500 (150K), end-of-day trailing on the highest closed balance with real-time equity checks; it locks at $25,100 to $150,100.",
+          "impact": "Profits raise the breach level of the funded account until it locks just above the starting balance.",
+          "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview"
+        },
+        {
+          "program": "Elite DAILY (evaluation, V2)",
+          "appliesTo": ["daily"],
+          "category": "consistency",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Evaluation consistency rule of 40%: no single day may exceed 40% of total profit; the article says it applies during the evaluation only.",
+          "impact": "Passing the evaluation needs profit spread over several days.",
+          "source": "https://help.toponefutures.com/en/articles/15056075-elite-daily-v2-overview"
+        },
+        {
+          "program": "Elite ACCESS (funded)",
+          "appliesTo": ["access"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Funded maximum drawdown $1,000 (25K) to $3,500 (150K), end-of-day trailing, with the breach level checked in real time so that equity at or below it at any moment breaches the account.",
+          "impact": "Profits raise the breach level of the funded account.",
+          "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+        },
+        {
+          "program": "All account types (terms)",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 3: \"The use of different emails to open multiple accounts is a strict violation\"; section 4 also prohibits hedging or arbitrage between accounts. Section 4: violations \"may result in account termination, forfeiture of profits, and removal\", without refund.",
+          "impact": "Opening accounts under several emails or hedging between accounts can end all of them and cancel their profits; stated only in the terms.",
+          "source": "https://www.toponefutures.com/terms-and-conditions"
+        },
+        {
+          "program": "All account types (terms)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms section 15: \"Either party may cancel this agreement at any time for any reason\"; section 16 lets the company withhold or forfeit payouts \"where permitted by our Terms\"; the preamble allows suspension or termination at the company's sole discretion.",
+          "impact": "The agreement, and with it pending payouts, can be ended without a stated cause.",
+          "source": "https://www.toponefutures.com/terms-and-conditions"
+        },
+        {
+          "program": "All account types (terms)",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "vague",
+          "rule": "Terms section 16: identity verification through a third-party provider may be required, including after an evaluation; \"Users from restricted or prohibited jurisdictions are not permitted\", but no country list is given.",
+          "impact": "Eligibility by country cannot be checked from the terms before purchase.",
+          "source": "https://www.toponefutures.com/terms-and-conditions"
         }
       ]
     },
     "top-one-trader": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "profitSplit": 80,
-        "payoutDelay": "Funded FLASH / 2-Step Plus / NOVA: usually every 14 days; faster cycles require eligible add-ons. Rise payouts carry a 2% processing fee.",
-        "auditSummary": "Deep review, 17 November 2026: June 2026 terms identify Top One Trader, LLC while its footer also names an Anjouan-based Top One Trader Ltd and site-stated licence L15829/TOT; legal registration/licensing was not independently checked. Official payout help documents the 14-day cadence, 2% RiseWorks processing fee, KYC, risk review and programme-specific rules. NOVA funded accounts require a 2% minimum withdrawal, <=20% ESS, locking drawdown after payout and a stated $25k rolling 30-day aggregate cap, subject to separately published loyalty-tier limits. PayoutTrail and PropTested independently monitor RiseUSD transactions attributed to Top One Trader on Arbitrum; a representative successful 8 Nov transaction is traceable on Arbiscan, but wallet attribution remains third-party and does not guarantee individual claims. Trustpilot's rating remains withheld after a guideline-breach/fake-review notice."
+        "payoutDelay": "Every 14 days on FLASH, 2-Step PRO V2, 2-Step Plus, NOVA, Instant Prime and Magnum (weekly with paid add-on); every 30 days on Instant Funding. Minimum 2% (3% on PRO V2); 2% Rise processing fee.",
+        "auditSummary": "Official-source review dated 19 November 2026. The pricing pages, rules page, June 2026 Terms and help-centre articles were read. Challenges: 1-Step FLASH ($64 to $1,079 list, 10% target, 4% daily, 7% trailing drawdown, 3% funded daily profit cap), 2-Step PRO V2 ($69 to $1,398, 8% then 5%, 9% static, payouts capped at 6% or $15,000 per request), 2-Step Plus ($78 to $998, 10% then 5%, 8% static, five 0.5% profitable days before each payout) and NOVA ($1 to start plus an activation fee after passing). Sim-funded accounts: Instant Funding ($135 to $2,537, 6% trailing, 15% consistency, split 60% rising to 90%, 30-day payouts, possible video interview before a withdrawal), Instant Prime ($94 to $1,776, 5% trailing, ESS 20%, split 80% to 100%) and a limited-time Magnum ($3,495 for $500K, $5,995 for $1M, 4% trailing, $25,000 per rolling 30 days). Across programmes the terms state a VPN ban, a 5-minute minimum hold for profitable trades, a 30-day inactivity breach, funded lot-exposure caps, mandatory stop losses on several accounts, an EA ban with forfeiture of gains, and a sole-discretion clause on risk practices. Payouts run every 14 days on most accounts through Rise with a 2% fee. The Terms name Top One Trader, LLC; the footer names Top One Trader Ltd in Anjouan with a firm-stated licence that PropRadar has not verified. Trustpilot withholds the rating after a guideline breach.",
+        "newsTrading": "Variable",
+        "eaAllowed": "Variable",
+        "drawdownType": "Hybride",
+        "verdict": "Top One Trader sells FLASH, 2-Step PRO V2, 2-Step Plus and NOVA challenges plus Instant Funding, Instant Prime and Magnum sim-funded accounts. The fine print adds a 5-minute hold rule, a VPN ban, $25,000 rolling payout caps, split ladders starting at 60% or 80%, funded lot caps and an EA ban. Payout evidence is third-party only and the Anjouan licence is unverified."
       },
       "setEntities": [
         {
@@ -13476,6 +13892,12 @@
           "summary": "Restrictive-rules audit: read the official pricing section, Terms and Conditions and help articles on IP/VPN, minimum hold time, soft/hard breaches, prohibited strategies, FLASH news, Instant Funding, Prime, NOVA payouts and 2-Step Pro V2 payouts; 13 rules across FLASH, 2-Step PRO, 2-Step Plus, Instant and NOVA.",
           "source": "https://help.toponetrader.com/en/articles/8733438-are-there-ip-address-restrictions",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 16 new restrictive rules; 7 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+          "fields": ["auditSummary", "drawdownType", "eaAllowed", "newsTrading", "payoutDelay", "products", "restrictiveRules", "verdict"]
         }
       ],
       "addIncidents": [
@@ -13517,6 +13939,34 @@
         {
           "label": "Top One Trader Terms and Conditions (official, 2026-11-18)",
           "url": "https://www.toponetrader.com/terms-and-conditions"
+        },
+        {
+          "label": "toponetrader.com official page (read 2026-11-19)",
+          "url": "https://www.toponetrader.com/"
+        },
+        {
+          "label": "toponetrader.com official page (read 2026-11-19)",
+          "url": "https://www.toponetrader.com/coupon-code-pricing"
+        },
+        {
+          "label": "toponetrader.com official page (read 2026-11-19)",
+          "url": "https://www.toponetrader.com/nova"
+        },
+        {
+          "label": "help.toponetrader.com official page (read 2026-11-19)",
+          "url": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types"
+        },
+        {
+          "label": "help.toponetrader.com official page (read 2026-11-19)",
+          "url": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview"
+        },
+        {
+          "label": "help.toponetrader.com official page (read 2026-11-19)",
+          "url": "https://help.toponetrader.com/en/articles/12575317-what-are-the-rules-for-the-instant-funding-account"
+        },
+        {
+          "label": "help.toponetrader.com official page (read 2026-11-19)",
+          "url": "https://help.toponetrader.com/en/articles/9929494-understanding-the-profit-split-instant-funding"
         }
       ],
       "addPayoutProofs": [
@@ -13549,6 +13999,10 @@
         {
           "key": "nova",
           "name": "NOVA Challenge"
+        },
+        {
+          "key": "magnum",
+          "name": "Magnum (instant sim-funded $500K / $1M)"
         }
       ],
       "restrictiveRules": [
@@ -13681,6 +14135,320 @@
           "rule": "'Not placing a trade at least once every 30 days' is a hard breach: the account is closed and any gains forfeited.",
           "impact": "An account idle for 30 days is closed.",
           "source": "https://help.toponetrader.com/en/articles/8318258-what-are-the-soft-breach-and-hard-breach-rules"
+        },
+        {
+          "program": "All programmes — Terms of Use, prohibited uses (EAs, HFT, signals)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "The Terms state 'Using any type of commercially available EA with automated trading strategies is strictly forbidden' and 'Masking of EAs is forbidden', with 'the immediate closing of your account and the forfeiture of any gains'; for HFT or tick scalping the Company 'will deduct any gains produced from trades violating this policy'; following signal programs where multiple traders execute the same trades is prohibited. Help articles add that EAs are not permitted on funded 2-Step PRO V2, 2-Step Plus, Instant Funding and Magnum accounts.",
+          "impact": "Running an off-the-shelf EA can end the account with its gains; HFT-style profits are removed from the payout.",
+          "source": "https://www.toponetrader.com/terms-and-conditions"
+        },
+        {
+          "program": "1-Step FLASH — funded stage",
+          "appliesTo": ["flash"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Funded FLASH accounts have a 3% daily profit cap: profit above it is voided, which is 'not a breach'. The comparison article also lists a '$25k/month max payout'.",
+          "impact": "Profit above 3% of the account in one day does not count toward the payout.",
+          "source": "https://checkout.toponetrader.com/rules/"
+        },
+        {
+          "program": "Instant Funding — funded",
+          "appliesTo": ["instant"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "A trader may keep a maximum of '$25,000 in net profits and total withdrawals within any thirty (30) day period' across all accounts; profits above that are deducted from the trading balance.",
+          "impact": "Profits above $25,000 per 30 days can be removed rather than carried over.",
+          "source": "https://help.toponetrader.com/en/articles/9929793-when-can-i-request-a-payout-instant-funding"
+        },
+        {
+          "program": "Magnum — funded",
+          "appliesTo": ["magnum"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Payouts are capped at $25,000 per customer per rolling 30 days, and a minimum of $10,000 profit (2% of the $500K balance) is required before a withdrawal.",
+          "impact": "On a $500K account, monthly withdrawals cannot exceed $25,000 whatever the profit.",
+          "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time"
+        },
+        {
+          "program": "2-Step Plus — funded",
+          "appliesTo": ["2stepplus"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "A payout cap applies per payout cycle ('the remaining balance stays on the account and can be withdrawn in future payout cycles'); funded max profit is 5% per day, treated as a soft breach.",
+          "impact": "Large profits are paid out over several cycles, and a day above 5% profit counts as a soft breach.",
+          "source": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview"
+        },
+        {
+          "program": "Instant Funding — profit split",
+          "appliesTo": ["instant"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "'60% on your first payout, rising by 10% per payout', reaching 90% from the fourth payout; the homepage pricing card shows a 90% split.",
+          "impact": "The first three payouts are paid at 60%, 70% and 80% instead of the headline 90%.",
+          "source": "https://help.toponetrader.com/en/articles/9929494-understanding-the-profit-split-instant-funding"
+        },
+        {
+          "program": "Magnum — profit split",
+          "appliesTo": ["magnum"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Profit split is 80% on the first payout, 90% on the second and 100% from the third; 100% from the first payout only with a paid add-on.",
+          "impact": "The first two payouts are paid below the headline split.",
+          "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time"
+        },
+        {
+          "program": "Instant Funding — payout review",
+          "appliesTo": ["instant"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Top One Trader 'may require a video interview' before processing a withdrawal; it must be completed within one week of the request, or 'the withdrawal may be denied'. Payouts also require a 15% consistency score and follow a 30-day cycle.",
+          "impact": "A payout can be refused if the interview is not completed within a week.",
+          "source": "https://help.toponetrader.com/en/articles/9929793-when-can-i-request-a-payout-instant-funding"
+        },
+        {
+          "program": "1-Step FLASH — funded stage",
+          "appliesTo": ["flash"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The 7% maximum drawdown is trailing and a hard breach on challenge and funded accounts; it locks at the starting balance when a payout is requested (the comparison article adds: or after a 7% gain).",
+          "impact": "Until the lock, the loss floor rises with gains, so giving back profits can breach the funded account.",
+          "source": "https://checkout.toponetrader.com/rules/"
+        },
+        {
+          "program": "Magnum — funded",
+          "appliesTo": ["magnum"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Maximum trailing drawdown of 4% of initial balance ($20,000), a hard breach; it trails the closing balance until a +4% gain, then locks at the starting balance.",
+          "impact": "Until the account is 4% up, the loss floor rises with each new closing-balance high.",
+          "source": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time"
+        },
+        {
+          "program": "1-Step FLASH and 2-Step PRO V2 — profitable days",
+          "appliesTo": ["flash", "2steppro"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FLASH requires 'at least 3 profitable trading days' to advance; 2-Step PRO V2 requires 3 profitable days per phase, each at least 0.5%.",
+          "impact": "Hitting the target in fewer profitable days does not pass the phase.",
+          "source": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview"
+        },
+        {
+          "program": "2-Step Plus — profitable days",
+          "appliesTo": ["2stepplus"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Five separate days closing with at least 0.5% net profit are required to finish a phase or to request a payout.",
+          "impact": "A payout request waits until five qualifying profitable days are recorded.",
+          "source": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview"
+        },
+        {
+          "program": "2-Step PRO V2, 2-Step Plus, NOVA, Instant Funding, Magnum — funded news",
+          "appliesTo": ["2steppro", "2stepplus", "nova", "instant", "magnum"],
+          "category": "news",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "News trading is allowed in the challenge phases but not on funded 2-Step PRO V2, 2-Step Plus and NOVA accounts; it is 'Not allowed' on Instant Funding (Instant Prime: allowed with an add-on); on Magnum trading is blocked within 5 minutes either side of high-impact news unless an add-on is bought. The pages read do not state a payout consequence for these programmes.",
+          "impact": "Funded traders must stay out of high-impact news windows.",
+          "source": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types"
+        },
+        {
+          "program": "Instant Funding / Instant Prime and Magnum — weekend",
+          "appliesTo": ["instant", "magnum"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Weekend holding is 'Not allowed' on Instant Funding unless the weekend holding add-on is bought (a soft breach otherwise); the homepage FAQ says the add-on must be purchased on Instant Funding and Prime accounts; Magnum: not allowed by default, add-on available.",
+          "impact": "Positions must be closed before the weekend unless a paid add-on is bought.",
+          "source": "https://help.toponetrader.com/en/articles/12575317-what-are-the-rules-for-the-instant-funding-account"
+        },
+        {
+          "program": "All programmes — funded lot exposure, stop loss and Equity Shield",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Simulated funded accounts have a hard-enforced maximum lot exposure (1 lot on $5k, 2 on $10k, 5 on $25k, 10 on $50k, 20 on $100k and above): 'if your total open lots exceed the limit, all open trades are closed (soft breach)'. FLASH, Instant and Magnum also require a stop loss on every trade unless an add-on is bought, and Equity Shield closes trades when open losses exceed 2% on one symbol or 2.5% in total.",
+          "impact": "Positions above the lot cap or without a stop loss are closed automatically.",
+          "source": "https://help.toponetrader.com/en/articles/8318242-are-there-any-lot-size-restrictions"
+        },
+        {
+          "program": "2-Step PRO V2, 2-Step Plus, Magnum — soft-breach limits",
+          "appliesTo": ["2steppro", "2stepplus", "magnum"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "2-Step PRO V2 allows a 'Maximum of 8' soft breaches per account: 'Once the limit is reached, the account may be breached or restricted.' 2-Step Plus lists a soft-breach limit of 4 (with a 1% Equity Shield) and Magnum a maximum of 5; the Magnum article does not say what happens after the fifth.",
+          "impact": "Repeated Equity Shield, lot or stop-loss hits can lead to the account being breached at the firm's discretion.",
+          "source": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "top-one-trader-flash",
+          "name": "1-Step FLASH",
+          "type": "Challenge",
+          "description": "One-step challenge, list price $64 (5K) to $1,079 (200K). 3 profitable days to pass, 3% daily profit cap when funded, payouts every 14 days (weekly with add-on), minimum payout 2%. Leverage 10:1 (crypto 2:1). Stop loss required unless add-on.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 64,
+          "entryFeeMax": 1079,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4% of initial balance",
+          "maxDrawdown": "7%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://checkout.toponetrader.com/rules/",
+          "drawdownDetails": "7% of initial balance, trailing; locks at the starting balance when a payout is requested or after a 7% gain.",
+          "profitSplit": "80% (90% with add-on)",
+          "platforms": ["MetaTrader 5", "MatchTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Oil", "Crypto"],
+          "minTradingDays": "3 profitable days (0.5% each)",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule; 3% daily profit cap on funded accounts."
+        },
+        {
+          "id": "top-one-trader-2-step-pro",
+          "name": "2-Step PRO (V2)",
+          "type": "Challenge",
+          "description": "Two-phase challenge (accounts bought after 18 May), list price $69 (5K) to $1,398 (300K). Payouts bi-weekly (weekly with add-on), minimum 3%, capped at 6% of the account and $15,000 per request; max profit per day $3,000 ($4,000 on 300K). Fee refunded on the 4th payout. EAs not permitted when funded.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 300000,
+          "entryFeeMin": 69,
+          "entryFeeMax": 1398,
+          "profitTarget": "8% then 5%",
+          "maxDailyLoss": "4% of initial balance",
+          "maxDrawdown": "9%",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.toponetrader.com/en/articles/15164777-2-step-pro-v2-overview",
+          "drawdownDetails": "9% maximum loss, static: 'it does not trail upward as the account grows.'",
+          "profitSplit": "85% (up to 100% with add-on)",
+          "platforms": ["MetaTrader 5", "MatchTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "3 profitable days per phase (0.5% each)",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No consistency rule; per-payout cap of 6% / $15,000 and daily profit cap."
+        },
+        {
+          "id": "top-one-trader-2-step-plus",
+          "name": "2-Step Plus",
+          "type": "Challenge",
+          "description": "Two-phase challenge with coaching course access, list price $78 (5K) to $998 (100K). Five 0.5% profitable days per phase and before each payout; payouts bi-weekly, minimum 2%, per-cycle cap; funded max profit 5% per day; EAs and news restricted when funded; $2.50 per side commission.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 78,
+          "entryFeeMax": 998,
+          "profitTarget": "10% then 5%",
+          "maxDailyLoss": "4% (from previous day's highest balance or equity)",
+          "maxDrawdown": "8% (10% during a limited launch promotion)",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.toponetrader.com/en/articles/13391994-2-step-plus-overview",
+          "drawdownDetails": "'The drawdown is static and does not trail.'",
+          "profitSplit": "80% (90% with add-on); homepage card shows 90%",
+          "platforms": ["MetaTrader 5", "MatchTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "minTradingDays": "5 profitable days (0.5% each)",
+          "hasConsistencyRule": false,
+          "consistencyRule": "'NO CONSISTENCY target'."
+        },
+        {
+          "id": "top-one-trader-instant-funding",
+          "name": "Instant Funding",
+          "type": "Instant funding",
+          "description": "Sim-funded account without challenge, list price $135 (5K) to $2,537 (200K). Payouts every 30 days (first 30 days after delivery), minimum 2%, $25,000 per 30-day cap, possible video interview. Split 60% rising 10% per payout to 90%. Weekend holding and EAs not allowed; stop loss required; 10 soft breaches max.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 135,
+          "entryFeeMax": 2537,
+          "profitTarget": "none",
+          "maxDailyLoss": "3% of initial balance",
+          "maxDrawdown": "6%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.toponetrader.com/en/articles/12575317-what-are-the-rules-for-the-instant-funding-account",
+          "drawdownDetails": "6% of initial balance, trailing; locks at the initial balance after a payout request or a gain above 6%.",
+          "profitSplit": "60% first payout, +10% per payout, 90% maximum",
+          "platforms": ["MetaTrader 5", "MatchTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Consistency score must remain at 15% or below (accounts bought on or after 14 October 2025)."
+        },
+        {
+          "id": "top-one-trader-instant-prime",
+          "name": "Instant Prime Exclusive",
+          "type": "Instant funding",
+          "description": "Sim-funded account without challenge, list price $94 (5K) to $1,776 (200K), fee presented as 100% refundable. Payouts every 14 days; split 80%, 90%, then 100% from the third payout; news allowed with add-on; 5 soft breaches max.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 94,
+          "entryFeeMax": 1776,
+          "profitTarget": "none",
+          "maxDailyLoss": "2.5% of initial balance",
+          "maxDrawdown": "5%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+          "drawdownDetails": "5% trailing; locks after a payout or a gain above 5%.",
+          "profitSplit": "80% first payout, 90% second, 100% from third",
+          "platforms": ["MetaTrader 5", "MatchTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "ESS (Equity Stability Score) 20% or below before a payout."
+        },
+        {
+          "id": "top-one-trader-magnum",
+          "name": "Magnum",
+          "type": "Instant funding",
+          "description": "Large instant sim-funded account ($500K or $1M), list price $3,495 / $5,995, one per customer, marked 'Limited time'. First payout after 14 days then bi-weekly, minimum $10,000 on 500K, $25,000 per rolling 30-day cap, split 80/90/100%. EAs, copy trading, weekend holding and news trading not allowed without add-ons; 5-minute minimum hold for profitable trades.",
+          "accountSizeMin": 500000,
+          "accountSizeMax": 1000000,
+          "entryFeeMin": 3495,
+          "entryFeeMax": 5995,
+          "profitTarget": "none",
+          "maxDailyLoss": "2% of initial balance",
+          "maxDrawdown": "4%",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.toponetrader.com/en/articles/17032981-magnum-500k-account-limited-time",
+          "drawdownDetails": "4% of initial balance trailing the closing balance until +4%, then locked at the starting balance ($500K account; $1M parameters from the homepage table).",
+          "profitSplit": "80% first payout, 90% second, 100% from third",
+          "platforms": ["MetaTrader 5", "MatchTrader", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "ESS target 15% per the Magnum article (homepage shows 12%/15% for $500K and 20% for $1M)."
+        },
+        {
+          "id": "top-one-trader-nova",
+          "name": "NOVA Challenge",
+          "type": "Challenge",
+          "description": "One-step 'pay after you pass' challenge, $5K to $300K: $1 to start, activation fee due after passing (two figures shown per size, from $59/$29 on 5K to $1,247/$623 on 300K, list vs discount not labelled). Funded payouts every 14 days, minimum 2%, ESS 20% or below, $25,000 rolling 30-day cap.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 300000,
+          "profitTarget": "5%",
+          "maxDailyLoss": "none in Step 1; 3% funded",
+          "maxDrawdown": "6% Step 1; 5% funded",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+          "drawdownDetails": "Trailing 6% in Step 1 and 5% when funded; locks at the starting balance after a payout.",
+          "profitSplit": "90% (up to 100% with add-on); NOVA page shows 'up to 100%'",
+          "platforms": ["MetaTrader 5", "TradeLocker"],
+          "tradableAssets": ["Forex", "Indices", "Metals", "Crypto"],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded ESS must be 20% or below for a payout."
         }
       ]
     },
@@ -15667,7 +16435,7 @@
       ]
     },
     "wsfunded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-26",
@@ -15698,6 +16466,12 @@
           "summary": "Restrictive-rules audit: read the plan tables, the main FAQ and help articles on prohibited strategies, softbreaches, Instant Pro and Power; 14 rules across Instant Pro, Instant, Two Phase, Rapid and Power.",
           "source": "https://faq.wsfunded.com/en/articles/8772868-what-strategies-are-not-allowed",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 8 new restrictive rules; 1 outdated rule(s) removed; 7 programmes; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://wsfunded.com/en/terms-conditions",
+          "fields": ["auditSummary", "eaAllowed", "newsTrading", "products", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
@@ -15705,7 +16479,11 @@
         "trustpilotReviewCount": 4858,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/wsfunded.com",
         "drawdownType": "Hybride",
-        "payoutDelay": "Instant Pro: first payout after 15 days, then every 10 days; 1-Phase Power: \"first payout is available 14 days after becoming Funded\", then every 14 days"
+        "payoutDelay": "Instant Pro: first payout after 15 days, then every 10 days; 1-Phase Power: \"first payout is available 14 days after becoming Funded\", then every 14 days",
+        "eaAllowed": "Variable",
+        "newsTrading": "Restricted",
+        "verdict": "WSFunded sells instant funded accounts (Pro and Standard) and Classic, Ultra, Rapid, Prime and Power evaluations. The fine print requires a stop loss within two minutes, caps risk per trade idea, applies trailing drawdowns on funded instant and Power accounts and contains broad termination clauses. Per-size list prices and payout evidence were not verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. WSFunded sells Instant Funded Pro (2.5K to 100K, 5% trailing drawdown, 15% best-day rule) and Instant Funded Standard (2.5K to 50K, 6% trailing drawdown that never drops, 30% best-day rule), which pay first after 15 days and then every 10 days. It also sells the Classic (8%/5%, 8% static) and Ultra (10%/5%, 10% static) two-phase challenges, Rapid and Prime one-phase challenges, and Power (MT5 only, $9.99 to start, 6% trailing drawdown once funded, 20% best-day rule, payouts every 14 days). The plan tables show two unlabelled prices per size, so list prices are not recorded. The help articles require a stop loss within two minutes, cap risk per trade idea at 1% of balance (instant and Power) or 50% of the daily drawdown (two-phase), and forbid trades under 60 seconds. On funded accounts, they ban opening or closing trades within 4 minutes of red-folder news. The Terms & Conditions add that the firm may cancel participation 'for any reason it deems appropriate', a warning ladder that delays payouts on all accounts, a ban on copy trading on funded accounts and on third-party EAs (while the Classic article says EAs are allowed), and permanent suspension for bank chargebacks. Entities: WSF Technology FZCO (Dubai), WSFmarkets Ltd (Saint Lucia) and RENATICA LTD. (Cyprus, payments); the terms do not name the governing country. Payout evidence was not verified."
       },
       "addSources": [
         {
@@ -15727,6 +16505,38 @@
         {
           "label": "WSFunded FAQ: stop loss, risk per idea, news, inactivity, VPN (official, 2026-11-18)",
           "url": "https://wsfunded.com/en/faq"
+        },
+        {
+          "label": "wsfunded.com official page (read 2026-11-19)",
+          "url": "https://wsfunded.com/"
+        },
+        {
+          "label": "wsfunded.com official page (read 2026-11-19)",
+          "url": "https://wsfunded.com/en"
+        },
+        {
+          "label": "wsfunded.com official page (read 2026-11-19)",
+          "url": "https://wsfunded.com/en/new-traders"
+        },
+        {
+          "label": "wsfunded.com official page (read 2026-11-19)",
+          "url": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "label": "faq.wsfunded.com official page (read 2026-11-19)",
+          "url": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic"
+        },
+        {
+          "label": "faq.wsfunded.com official page (read 2026-11-19)",
+          "url": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra"
+        },
+        {
+          "label": "faq.wsfunded.com official page (read 2026-11-19)",
+          "url": "https://faq.wsfunded.com/en/articles/10719192-instant-standard"
+        },
+        {
+          "label": "faq.wsfunded.com official page (read 2026-11-19)",
+          "url": "https://faq.wsfunded.com/en/articles/8717151-how-many-accounts-can-i-manage"
         }
       ],
       "auditedPrograms": [
@@ -15833,16 +16643,6 @@
           "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro"
         },
         {
-          "program": "Instant Funded Pro and Instant Funded",
-          "appliesTo": ["instant-pro", "instant"],
-          "category": "funded-trailing-drawdown",
-          "severity": "major",
-          "clarity": "clear",
-          "rule": "The funded account uses a dynamic (trailing) maximum drawdown (5% on Instant Pro, 6% on Instant) that locks at the starting balance only after a withdrawal.",
-          "impact": "Open profit raises the breach level on the funded account until a withdrawal is made.",
-          "source": "https://faq.wsfunded.com/en/articles/10719208-instant-pro"
-        },
-        {
           "program": "Funded accounts except Power (not stated there)",
           "appliesTo": ["instant-pro", "instant", "2phase", "rapid"],
           "category": "news",
@@ -15891,6 +16691,226 @@
           "rule": "Softbreaches 'may trigger temporary suspensions', and repeated softbreaches 'may result in your account being considered in breach' under internal policies; no count or duration is stated.",
           "impact": "Accumulated minor violations can end the account at the firm's discretion.",
           "source": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach"
+        },
+        {
+          "program": "All programmes (Terms & Conditions)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms 7.27: 'Copy trading will not be permitted on funded accounts'; 7.5: 'The use of any software on the simulated demo account, including artificial intelligence' is not permitted; 7.18: accounts using third-party EAs 'will be cancelled, blocked and no remuneration payment will be made'. The Classic plan article states 'EAs (Expert Advisors): Allowed', so the official documents conflict.",
+          "impact": "Using an EA or copy trading on a funded account can cancel the account and its payout, despite the FAQ allowing EAs.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "program": "All programmes (Terms & Conditions)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The Company may 'cancel or suspend any Trader's participation in the programme for any reason it deems appropriate'; after a prohibited practice the trader 'will not be entitled to participate in profit sharing or receive refunds for fees paid'.",
+          "impact": "Participation, and with it pending profit sharing, can be ended on the firm's own judgement.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "program": "All programmes (Terms & Conditions)",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms 8.4 warning ladder: first warning 'Reduction of leverage for 20 working days and delay of payouts on all accounts'; second warning a further leverage reduction for 60 working days and 'a further delay in payouts'; third warning 'Permanent removal from the platform'.",
+          "impact": "A warning on one account delays payouts on every account the trader holds.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "program": "Power One Phase — funded (Terms & Conditions)",
+          "appliesTo": ["power"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 7.25: 'Trading during high-impact news events is not permitted on funded accounts' (4 minutes before and after); a prohibited practice means the trader 'will not be entitled to participate in profit sharing'. The Power article does not mention a news restriction.",
+          "impact": "News-window trading on a funded Power account can cost the profit share, although the programme page is silent on it.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "program": "Power One Phase — funded",
+          "appliesTo": ["power"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "'Maximum Trailing Drawdown (FUNDED Phase Only) will be 6%'; the challenge uses a 6% drawdown below the initial balance.",
+          "impact": "The loss floor rises with equity highs on the account that pays out.",
+          "source": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power"
+        },
+        {
+          "program": "Instant Funded Pro and Instant Funded",
+          "appliesTo": ["instant-pro", "instant"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Instant Pro: 'Max Total Drawdown – 5% (Trailing)', rising with new highs and locking at the starting balance after a withdrawal. Instant Standard: 6% trailing from peak balance; the level 'never drops' and withdrawals do not reset the breach line.",
+          "impact": "Open profit raises the breach level on these funded-from-start accounts; on Instant Standard it does not lock after a withdrawal.",
+          "source": "https://faq.wsfunded.com/en/articles/10719192-instant-standard"
+        },
+        {
+          "program": "All programmes (Terms & Conditions)",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Clients who request 'chargebacks through their bank will be permanently suspended from the Platform'.",
+          "impact": "A bank payment dispute ends access to all accounts.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "program": "All programmes (Terms & Conditions)",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Services are not offered to residents of jurisdictions 'including but not limited to the United States', Singapore, Russia, the UAE, FATF-listed and sanctioned jurisdictions; purchasers flagged as high risk who do not provide requested documents within 24 hours can have access revoked. Power is also unavailable in Spain and Andorra.",
+          "impact": "Residents of listed countries cannot use the service; KYC requests have a 24-hour deadline for high-risk purchasers.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "wsfunded-instant-pro",
+          "name": "Instant Funded Pro",
+          "type": "Instant funding",
+          "description": "Funded from the start, no profit target. Sizes 2.5K to 100K. Leverage 1:50 on forex. 1% maximum risk per trade idea; stop loss within 2 minutes; funded news window 4 minutes either side of red-folder events. Price list not recorded: two unlabelled prices are shown per size.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "none",
+          "maxDailyLoss": "3% of initial balance",
+          "maxDrawdown": "5% trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+          "drawdownDetails": "Tracks the account's peak balance and locks at the starting balance after a withdrawal.",
+          "profitSplit": "80% per the help-article example (home page shows 90% on instant plans)",
+          "platforms": ["MetaTrader 5", "Match-Trader", "cTrader"],
+          "tradableAssets": ["Forex", "Metals", "Commodities", "Stocks", "Indices", "Crypto"],
+          "minTradingDays": "4 profitable days of at least 0.5% of initial balance before a reward; first payout after 15 days, then every 10 days",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Biggest winning day may not exceed 15% of total profits before a reward."
+        },
+        {
+          "id": "wsfunded-instant-standard",
+          "name": "Instant Funded (Standard)",
+          "type": "Instant funding",
+          "description": "Funded from the start, no profit target. Sizes 2.5K to 50K. Leverage 1:30 on forex. 1% maximum risk per trade idea; stop loss within 2 minutes; funded news window 4 minutes either side of red-folder events. Price list not recorded: two unlabelled prices are shown per size.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 50000,
+          "profitTarget": "none",
+          "maxDailyLoss": "3% of initial balance (measured at 17:00 New York)",
+          "maxDrawdown": "6% trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+          "drawdownDetails": "Trails the peak balance and never drops; withdrawals do not reset the breach line.",
+          "profitSplit": "80% per the help-article example (home page shows 90% on instant plans)",
+          "platforms": ["MetaTrader 5", "Match-Trader", "cTrader"],
+          "tradableAssets": ["Forex", "Metals", "Commodities", "Stocks", "Indices", "Crypto"],
+          "minTradingDays": "4 profitable days of at least 0.5% of initial balance before a reward; first payout after 15 days, then every 10 days",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Biggest winning day may not exceed 30% of total profit before a reward."
+        },
+        {
+          "id": "wsfunded-classic-2phase",
+          "name": "Wall Street Classic (2 Phases)",
+          "type": "Challenge",
+          "description": "Two-phase evaluation, sizes 2.5K to 100K, no maximum time, leverage 1:100. Stop loss within 2 minutes; maximum risk per trade idea 50% of the daily drawdown; 30-day inactivity limit. Payout after 15 days, then every 10 days. Price list not recorded: two unlabelled prices are shown per size.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "8% (phase 1), 5% (phase 2)",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "8% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+          "drawdownDetails": "Measured from the starting balance and does not move.",
+          "profitSplit": "80%",
+          "platforms": ["MetaTrader 5", "Match-Trader", "cTrader"],
+          "tradableAssets": ["Forex", "Metals", "Commodities", "Stocks", "Indices", "Crypto"],
+          "minTradingDays": "4",
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "wsfunded-ultra-2phase",
+          "name": "Wall Street Ultra (2 Phases)",
+          "type": "Challenge",
+          "description": "Two-phase evaluation, sizes 2.5K to 100K, no maximum time, leverage 1:100. Stop loss within 2 minutes; maximum risk per trade idea 50% of the daily drawdown; 30-day inactivity limit. Payout within 15 days, then every 10 days. Price list not recorded: two unlabelled prices are shown per size.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "10% (phase 1), 5% (phase 2)",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "10% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+          "drawdownDetails": "Measured from the starting balance.",
+          "profitSplit": "80%",
+          "platforms": ["MetaTrader 5", "Match-Trader", "cTrader"],
+          "tradableAssets": ["Forex", "Metals", "Commodities", "Stocks", "Indices", "Crypto"],
+          "minTradingDays": "4",
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "wsfunded-rapid-1phase",
+          "name": "Rapid One Phase",
+          "type": "Challenge",
+          "description": "One-phase evaluation listed on the official plan table, sizes 2.5K to 100K, leverage 1:30. A second table labelled Rapid shows 6%/6% targets with no daily limit; which variant is current is not stated. Price list not recorded.",
+          "accountSizeMin": 2500,
+          "accountSizeMax": 100000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "6% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://wsfunded.com/en",
+          "profitSplit": "80%",
+          "platforms": ["MetaTrader 5", "Match-Trader", "cTrader"],
+          "tradableAssets": ["Forex", "Metals", "Commodities", "Stocks", "Indices", "Crypto"],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "wsfunded-prime-1phase",
+          "name": "Prime One Phase",
+          "type": "Challenge",
+          "description": "One-phase evaluation shown on the official plan table in 50K and 100K sizes, leverage 1:20. Its help article was not read.",
+          "accountSizeMin": 50000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 75,
+          "entryFeeMax": 110,
+          "profitTarget": "5%",
+          "maxDailyLoss": "1%",
+          "maxDrawdown": "3% static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://wsfunded.com/en",
+          "profitSplit": "not stated",
+          "platforms": ["not stated"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": false
+        },
+        {
+          "id": "wsfunded-power-1phase",
+          "name": "Wall Street Power (1 Phase)",
+          "type": "Challenge",
+          "description": "One-phase evaluation on MT5 only, sizes 5K to 100K. $9.99 to start; 'the remaining amount is billed when moving to Funded' (after-passing prices $48 to $540). Leverage 1:30 forex. 1% maximum risk per trade idea. Not available in Spain and Andorra. First payout 14 days after becoming funded, then every 14 days.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 9.99,
+          "entryFeeMax": 9.99,
+          "profitTarget": "6%",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6% below initial balance in the challenge; 6% trailing on the funded account",
+          "drawdownType": "Hybride",
+          "drawdownSource": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power",
+          "drawdownDetails": "Static 6% in Phase 1; 'Maximum Trailing Drawdown (FUNDED Phase Only) will be 6%'.",
+          "profitSplit": "not stated",
+          "platforms": ["MetaTrader 5"],
+          "tradableAssets": ["Forex", "Metals", "Commodities", "Stocks", "Indices", "Crypto"],
+          "minTradingDays": "4 in Phase 1; funded payout needs 3 days of at least 0.5% profit",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Funded stage only: no single day's profit may exceed 20% of total profits."
         }
       ]
     },
@@ -16119,7 +17139,7 @@
       ]
     },
     "dna-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "DNA Funded 1 Phase / 2 Phase / Rapid / Instant — first three payouts",
@@ -16150,6 +17170,56 @@
           "category": "funded-trailing-drawdown",
           "severity": "major",
           "clarity": "buried"
+        },
+        {
+          "program": "All programmes - funded stage",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FAQ: 'certain strategies are strictly prohibited in the funded stage', including high-frequency trading, hedge arbitrage, tick scalping, grid trading and copying other traders' trades; 'Copy trading is allowed in the Evaluation Stage, however it is not allowed in the Funded Stage.' Third-party EAs must be verified before use on a live account. The FAQ does not state the consequence.",
+          "impact": "Rules out several automated and copy strategies once funded.",
+          "source": "https://dnafunded.com/faqs/"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FAQ: 'Traders may trade news, except during the restricted period of 10 minutes before and after major data releases', also covering high-impact 'market-shocks'.",
+          "impact": "No trading in a 20-minute window around major releases.",
+          "source": "https://dnafunded.com/faqs/"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FAQ: 'traders must remain active by placing at least one trade every 30 days to avoid account inactivity.'",
+          "impact": "An account without a trade for 30 days is treated as inactive.",
+          "source": "https://dnafunded.com/faqs/"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FAQ: services are not offered to residents of listed countries including Australia, Cuba, Iran, Lebanon, Syria, North Korea, Libya, Russia, Sudan and Somalia; traders must be 18+ and accounts must be in the trader's own name.",
+          "impact": "Residents of the listed countries cannot buy accounts.",
+          "source": "https://dnafunded.com/faqs/"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FAQ: 'You can however have up to three challenges at one time totalling a maximum of USD 600k in funding.'",
+          "impact": "Caps the number and total size of accounts held at once.",
+          "source": "https://dnafunded.com/faqs/"
         }
       ],
       "changelog": [
@@ -16170,6 +17240,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 42 to 44: the earlier manual deduction (\"Score 44 to 42 for the newly evidenced non-carry-forward payout cap\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 5 new restrictive rules; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://dnafunded.com/product-category/two-phase/",
+          "fields": ["auditSummary", "eaAllowed", "newsTrading", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
@@ -16177,7 +17253,11 @@
         "drawdownType": "Hybride",
         "payoutDelay": "14 days between payout requests (7 with paid Earlier Payout add-on); approved requests typically processed in 24–48 hours, subject to risk review",
         "priceFrom": 49,
-        "score": 44
+        "score": 44,
+        "newsTrading": "Restricted",
+        "eaAllowed": "Yes",
+        "verdict": "DNA Funded lists 1 Phase, 2 Phase, Rapid and Instant Funding accounts ($49-$1,209), but its product pages stated on 19 November 2026 that new orders are currently paused. Earlier-read terms cap the first three payouts at 5% of account size and limit any day to 30% of a payout request.",
+        "auditSummary": "Official-source review dated 19 November 2026. The product pages list 2 Phase accounts from $49 (5K) to $1,079 (200K) with 8%/5% targets, 5% daily and 8% total loss and five trading days, Instant Funding from $199 (5K) to $979 (50K), and a $100,000 Rapid challenge at $549 with a 5% target, 3% daily and 5% total loss; the pages also state that MT5 accounts are migrating to TradeLocker and that new orders are currently paused. The FAQ restricts trading 10 minutes before and after major releases, bans high-frequency trading, hedge arbitrage, tick scalping, grid trading and copy trading on funded accounts, requires one trade every 30 days, limits traders to three challenges totalling $600,000 and excludes residents of listed countries. The March 2026 rules read on 18 November cap each of the first three payouts at 5% of account size, apply a 30% best-day limit and a 14-day wait, and keep payout approval at the company's discretion; they could not be re-read today. Payout evidence, the legal entity and the firm's current operating status remain unverified."
       },
       "setProducts": [
         {
@@ -16273,6 +17353,26 @@
         {
           "label": "DNA Funded FAQ (official)",
           "url": "https://dnafunded.com/faqs/"
+        },
+        {
+          "label": "dnafunded.com official page (read 2026-11-19)",
+          "url": "https://dnafunded.com/product-category/two-phase/"
+        },
+        {
+          "label": "dnafunded.com official page (read 2026-11-19)",
+          "url": "https://dnafunded.com/product/50000-two-phase-evaluation-phase-1/"
+        },
+        {
+          "label": "dnafunded.com official page (read 2026-11-19)",
+          "url": "https://dnafunded.com/product-category/instant-funding/"
+        },
+        {
+          "label": "dnafunded.com official page (read 2026-11-19)",
+          "url": "https://dnafunded.com/product/100000-rapid-challenge/"
+        },
+        {
+          "label": "thegodfunded.com official page (read 2026-11-19)",
+          "url": "https://thegodfunded.com/en/news/dna-funded-goes-dark-no-support-no-social-media-and-an-abandoned-discord/"
         }
       ],
       "auditedPrograms": [
@@ -16295,7 +17395,7 @@
       ]
     },
     "funded-bull": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -16320,14 +17420,24 @@
           "summary": "Restrictive-rules audit: read the homepage, trading-rules page and Terms of Use; 7 rules across 1 Step, 2 Step and 3 Step; 2 Step product read on the homepage replaces the placeholder.",
           "source": "https://fundedbull.com/trading-rules/",
           "fields": ["restrictiveRules", "products"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 3 new restrictive rules; 3 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://fundedbull.com/terms/",
+          "fields": ["auditSummary", "drawdownType", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
-        "payoutDelay": "\"Initial payouts are made after a 14-day period, with subsequent payouts processed within 7 days\" (Terms 5.2.3)",
+        "payoutDelay": "First payout after 14 days (and 5 trading days), then every 7 days (Terms 5.2.3); trading locked while a payout is processed",
         "trustpilotRating": 2.8,
         "trustpilotReviewCount": 15,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedbull.com",
-        "profitSplit": 90
+        "profitSplit": 90,
+        "newsTrading": "Restricted",
+        "drawdownType": "Hybride",
+        "verdict": "FundedBull (RateRight Pte. Ltd., Singapore) sells simulated 1, 2 and 3 Step challenges from $5K to $250K with a 90% split and 50:1 leverage; only the 2 Step $25K price ($189) is shown publicly. The terms require consistent strategy and position size between phases, cap risk at 2% per trade, allow one account per person and let the firm terminate for any reason.",
+        "auditSummary": "Official-source review dated 19 November 2026. The Terms describe three challenges: One-Step (9% target, 3% daily, 6% trailing), Two-Step (8% then 5%, 4% daily, 8% static) and Three-Step (6% per phase, 4% daily, 7% static), all $5K to $250K with five minimum trading days, unlimited time and 50:1 leverage; Lite plans (50/50) and a $1 promo plan (20% share) also exist. Only the 2 Step $25K list price of $189 is shown; the checkout could not be read. Funded traders keep 90%; the first payout comes after 14 days and five trading days of at least 0.5% of the target, then every 7 days, with trading locked while a payout is processed. The homepage states a $500 minimum payout, while Terms 5.2.1 set $200 or 2% of account size. The Terms require strategy and position size to stay consistent between phases, expect no more than 2% risk per trade, prohibit AI, HFT and unauthorised copy trading, close accounts after 15 days of inactivity, allow one account per person, and let FundedBull terminate 'for any reason', with forfeiture of profits for violations. News trading is barred 5 minutes around events on challenge accounts only. Payout evidence was not verified."
       },
       "addSources": [
         {
@@ -16337,6 +17447,10 @@
         {
           "label": "Official page read 2026-11-15",
           "url": "https://fundedbull.com/terms/"
+        },
+        {
+          "label": "fundedbull.com official page (read 2026-11-19)",
+          "url": "https://fundedbull.com/"
         }
       ],
       "auditedPrograms": [
@@ -16423,20 +17537,90 @@
           "rule": "On challenge accounts, trading is not allowed '5 minutes before and 5 minutes after news events'; no news restriction is set for funded accounts.",
           "impact": "Constrains news trading during the evaluation.",
           "source": "https://fundedbull.com/trading-rules/"
+        },
+        {
+          "program": "All programmes — minimum payout in the terms",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms 5.2.1: minimum profit share of $200 on $5,000 and $10,000 accounts and 2% of account size on $25,000 to $250,000 accounts (examples given: $500 on 25K, $5,000 on 250K). The homepage shows a flat $500 minimum payout.",
+          "impact": "On larger accounts a payout cannot be requested until the trader's share reaches 2% of the account size.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        {
+          "program": "All programmes — one account per person",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms 2.7: one account per person, additional accounts need prior approval, and creating multiple accounts can lead to termination of all related accounts; 6.1.8-6.1.9 prohibit trading on another person's behalf or letting third parties trade.",
+          "impact": "Opening extra accounts without approval can end all of them; stated only in the terms.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        {
+          "program": "All programmes — restricted countries",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Services are not provided to residents of 22 listed countries including Pakistan, Russia, Iran, Iraq, Vietnam, Venezuela and Hong Kong (Terms 2.2, homepage); identity and source-of-funds documents may be requested at any time, and failure may lead to suspension or termination (2.6, 2.11).",
+          "impact": "Residents of the listed countries cannot use the service; KYC can be requested at any stage.",
+          "source": "https://fundedbull.com/terms/"
         }
       ],
       "setProducts": [
         {
+          "id": "funded-bull-1-step",
+          "name": "1 Step Challenge",
+          "type": "Challenge",
+          "description": "One-phase evaluation described in Terms 4.1.1. Prices not readable (checkout blocks automated reading). Unlimited trading period, 15-day inactivity limit, leverage 50:1.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 250000,
+          "profitTarget": "9%",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "6%, trailing",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://fundedbull.com/terms/",
+          "drawdownDetails": "Terms 1.8.8 define drawdown as a percentage of the account's highest equity point.",
+          "profitSplit": "90%",
+          "platforms": ["DXTrade", "Match-Trader", "cTrader"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "5",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No percentage rule; strategy and position sizing must stay consistent between challenge and funded phases (trading rules 'Replicability'; Terms 4.1, 6.1.10)."
+        },
+        {
           "id": "funded-bull-2-step",
           "name": "2 Step Challenge",
           "type": "Challenge",
-          "description": "Two-phase evaluation. List price $189 for the $25K account before discount codes; other sizes' prices were not shown on the page read. FundedBull also sells 1 Step and 3 Step challenges whose rules were not shown on the homepage. Funded account: 4% daily / 8% maximum loss, $500 minimum payout, first payout after 14 days then every 7 days.",
+          "description": "Two-phase evaluation. List price $189 for the $25K account before discount codes; other sizes' prices were not readable. Funded account: 4% daily / 8% maximum loss, unlimited period, $500 minimum payout on the homepage (2% of size from 25K in Terms 5.2.1), first payout after 14 days then every 7 days. Leverage 50:1, no stop loss required.",
           "accountSizeMin": 5000,
           "accountSizeMax": 250000,
           "profitTarget": "8% (step 1), 5% (step 2)",
           "maxDailyLoss": "4%",
-          "maxDrawdown": "8%",
-          "drawdownSource": "https://fundedbull.com/",
+          "maxDrawdown": "8%, static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://fundedbull.com/terms/",
+          "profitSplit": "90%",
+          "platforms": ["DXTrade", "Match-Trader", "cTrader"],
+          "tradableAssets": ["not stated"],
+          "minTradingDays": "5",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No percentage rule; strategy and position sizing must stay consistent between challenge and funded phases (trading rules 'Replicability'; Terms 4.1, 6.1.10)."
+        },
+        {
+          "id": "funded-bull-3-step",
+          "name": "3 Step Challenge",
+          "type": "Challenge",
+          "description": "Three-phase evaluation described in Terms 4.1.3. Prices not readable (checkout blocks automated reading). Unlimited trading period, leverage 50:1.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 250000,
+          "profitTarget": "6% per phase (three phases)",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "7%, static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://fundedbull.com/terms/",
           "profitSplit": "90%",
           "platforms": ["DXTrade", "Match-Trader", "cTrader"],
           "tradableAssets": ["not stated"],
@@ -16638,7 +17822,7 @@
       ]
     },
     "atmos-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -16657,34 +17841,89 @@
           "summary": "Restrictive-rules audit: read the rules page, Nova page, help-centre articles for 2-Step Standard and Instant Funding, and the AtmosFunded Ltd customer agreement v2 (Aug 2025); 9 rules across Nova, 2-Step Standard and Instant Funding. News window conflicts between the rules page (2 min) and the agreement (5 min).",
           "source": "https://atmosfunded.com/rules/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 6 new restrictive rules; 3 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://help.atmosfunded.com/en/articles/12380567-compare-challenges-which-one-is-right-for-me",
+          "fields": ["auditSummary", "drawdownType", "eaAllowed", "newsTrading", "payoutDelay", "products", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
         "profitSplit": 90,
-        "payoutDelay": "on demand on 1-Step Nova; every 14 days on 2-Step and Instant Funding; the page gives processing as both 'within hours' and '2-5 business days' (FAQ)",
+        "payoutDelay": "On demand on 1-Step Nova after 7 profitable funded days; every 14 days on 2-Step Standard and Instant Funding; $100 minimum; processing 2-5 business days (help centre)",
         "trustpilotRating": 3.5,
         "trustpilotReviewCount": 340,
-        "trustpilotSourceUrl": "https://au.trustpilot.com/review/atmosfunded.com"
+        "trustpilotSourceUrl": "https://au.trustpilot.com/review/atmosfunded.com",
+        "eaAllowed": "Variable",
+        "newsTrading": "Restricted",
+        "drawdownType": "Hybride",
+        "verdict": "Atmos Funded sells simulated forex/CFD accounts: a pay-after-passing 1-Step Nova ($5 then a $79 to $1,029 funded fee), a 2-Step Standard challenge ($63 to $989) and Instant Funding ($75 to $649). The terms ban commercial EAs and cross-account hedging, set a short-trade policy, remove profit from trades near news and allow termination without cause.",
+        "auditSummary": "Official-source review dated 19 November 2026. Atmos Funded describes three main programmes in its help centre: 1-Step Nova (5% target, 4% daily, 8% trailing loss, $5 evaluation then a funded fee of $79 for 10K to $1,029 for 200K, on-demand payouts after seven profitable days of 0.5%, 1% per-symbol daily risk limit), 2-Step Standard (10% then 5%, 5% daily, 10% static, three days per phase, $63 to $989, 14-day payouts) and Instant Funding (3% daily, 5% trailing that locks at the initial balance on payout, 20% consistency, $75 to $649). The rules page removes profit from funded trades within 2 minutes of high-impact news (the customer agreement says 5 minutes), bans commercial EAs, martingale, grid and hedging across accounts, and closes breached accounts with profits forfeited. The AtmosFunded Ltd customer agreement (Cyprus law) adds a 45-second minimum hold and 30 trades per hour soft limits, IP and device rules, termination 'without cause' at the company's discretion, and a standard 80/20 split with higher splits sold as add-ons, while marketing pages state up to 90%. Payout evidence and the Comoros licence were not verified."
       },
       "setProducts": [
+        {
+          "id": "atmos-nova",
+          "name": "1-Step Nova",
+          "type": "Challenge",
+          "description": "Pay-after-passing model: evaluation from $5 for any size, then a funded fee of $79 (10K), $184 (25K), $345 (50K), $569 (100K) or $1,029 (200K). On-demand payouts after 7 profitable funded days (0.5% each), $100 minimum, 2-5 business days. EAs allowed; news window of 2 minutes.",
+          "accountSizeMin": 10000,
+          "accountSizeMax": 200000,
+          "entryFeeMin": 5,
+          "entryFeeMax": 5,
+          "profitTarget": "5%",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "8%, trailing; locks at the initial balance once a payout is requested",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge",
+          "profitSplit": "up to 90% (80/20 standard split in the customer agreement; higher split as paid add-on)",
+          "platforms": ["MT5"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "minTradingDays": "0 in the challenge; 7 profitable days per funded payout",
+          "hasConsistencyRule": false,
+          "consistencyRule": "No percentage rule; funded payouts need 7 profitable days of at least 0.5% of the initial balance."
+        },
         {
           "id": "atmos-2-step-standard",
           "name": "2-Step Standard",
           "type": "Challenge",
-          "description": "Fee $63 (5K) to $989 (200K); $549 for 100K is labelled full price before discounts. No activation fee. 1-Step Nova (from $5 plus an activation fee) and Instant Funding are also sold; their sizes are not stated per program.",
+          "description": "Two-phase evaluation, list price $63 (5K) to $989 (200K), no activation fee. Payouts every 14 days on the funded account, $100 minimum. EAs allowed (commercial EAs prohibited). Leverage 1:50 forex, 1:15 metals, 1:10 indices, 1:2 crypto (help centre).",
           "accountSizeMin": 5000,
           "accountSizeMax": 200000,
           "entryFeeMin": 63,
           "entryFeeMax": 989,
           "profitTarget": "10% in phase 1, 5% in phase 2",
           "maxDailyLoss": "5%",
-          "maxDrawdown": "10%, fixed",
-          "profitSplit": "up to 90%",
-          "platforms": ["not stated"],
-          "tradableAssets": ["not stated"],
-          "minTradingDays": "not stated",
+          "maxDrawdown": "10%, static",
+          "drawdownType": "Static",
+          "drawdownSource": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge",
+          "profitSplit": "up to 90% with add-ons (80/20 standard split in the customer agreement)",
+          "platforms": ["MT5"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "minTradingDays": "3 per phase (a day with 0.5% profit counts)",
           "hasConsistencyRule": false,
-          "consistencyRule": "not stated on the homepage for this program (29 Oct 2026); Instant Funding has a 20% consistency rule."
+          "consistencyRule": "none"
+        },
+        {
+          "id": "atmos-instant-funding",
+          "name": "Instant Funding",
+          "type": "Instant funding",
+          "description": "No evaluation, list price $75 (5K) to $649 (100K); maximum allocation $200K. 14-day payout cycle (the customer agreement says 5 days). Drawdown locks at the initial balance once a payout is requested, so a buffer must be kept.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "entryFeeMin": 75,
+          "entryFeeMax": 649,
+          "profitTarget": "none",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "5%, trailing; locks at the initial balance on payout request",
+          "drawdownType": "Trailing",
+          "drawdownSource": "https://help.atmosfunded.com/en/articles/12380563-instant-funding",
+          "profitSplit": "up to 90% with add-ons (80/20 standard split in the customer agreement)",
+          "platforms": ["MT5"],
+          "tradableAssets": ["Forex", "Metals", "Indices", "Crypto"],
+          "minTradingDays": "none",
+          "hasConsistencyRule": true,
+          "consistencyRule": "No single day may exceed 20% of total profit (based on equity)."
         }
       ],
       "addSources": [
@@ -16703,6 +17942,26 @@
         {
           "label": "AtmosFunded Ltd customer agreement and risk management policy v2 (official PDF, 2026-11-18)",
           "url": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf"
+        },
+        {
+          "label": "atmosfunded.com official page (read 2026-11-19)",
+          "url": "https://atmosfunded.com/llms.txt"
+        },
+        {
+          "label": "help.atmosfunded.com official page (read 2026-11-19)",
+          "url": "https://help.atmosfunded.com/en/articles/12380567-compare-challenges-which-one-is-right-for-me"
+        },
+        {
+          "label": "help.atmosfunded.com official page (read 2026-11-19)",
+          "url": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge"
+        },
+        {
+          "label": "help.atmosfunded.com official page (read 2026-11-19)",
+          "url": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge"
+        },
+        {
+          "label": "help.atmosfunded.com official page (read 2026-11-19)",
+          "url": "https://help.atmosfunded.com/en/articles/12380605-how-payouts-work"
         }
       ],
       "auditedPrograms": [
@@ -16810,6 +18069,66 @@
           "rule": "'3 per phase (0.5% counts as a profitable day)'.",
           "impact": "Each evaluation phase needs at least three trading days.",
           "source": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge"
+        },
+        {
+          "program": "1-Step Nova — funded payouts",
+          "appliesTo": ["nova"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Funded stage: payouts need 7 profitable days, each with at least 0.5% of the initial balance (not necessarily consecutive); eligibility starts on the 8th day and the 7 days reset after each payout.",
+          "impact": "Each Nova payout needs a fresh set of seven qualifying days.",
+          "source": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge"
+        },
+        {
+          "program": "1-Step Nova — funded risk limit",
+          "appliesTo": ["nova"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Funded stage 'risk protection': combined closed and floating risk per symbol should not exceed 1% in a single day. The article does not state the consequence of exceeding it.",
+          "impact": "Limits position size per instrument each day on the funded account.",
+          "source": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge"
+        },
+        {
+          "program": "1-Step Nova — trailing drawdown on the funded account",
+          "appliesTo": ["nova"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Funded stage keeps an 8% trailing maximum loss; once a payout is requested the drawdown locks at the initial account balance, so 'a full withdrawal would breach the drawdown' and a buffer must be kept.",
+          "impact": "The loss limit follows gains until the first payout, and only part of the profit can be withdrawn without breaching.",
+          "source": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge"
+        },
+        {
+          "program": "All programmes — cross-account hedging and mirroring",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The rules page lists hedging across multiple accounts as a breach trigger, after which 'the account is immediately closed' and profits are forfeited; the customer agreement (Schedule A 2.1(iv)-(v), clause 8.1(xi)) also forbids opposite positions across accounts, 'coordinated trading activities across different accounts to mirror positions' without authorisation, and arbitrage across accounts.",
+          "impact": "Holding opposite or mirrored positions across several accounts can close them and forfeit their profits.",
+          "source": "https://atmosfunded.com/rules/"
+        },
+        {
+          "program": "All programmes — termination without cause",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Customer agreement clause 8.3: the company may terminate 'without cause' in its 'sole and absolute discretion' with written notice; clauses 2.7 and 7.5 state that loss of access carries no compensation and no refund of fees; Schedule A 5 allows payments owed after a hard breach to be halted, withdrawn or set off.",
+          "impact": "The account and pending payouts can be ended without a stated reason; stated only in the agreement.",
+          "source": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf"
+        },
+        {
+          "program": "All programmes — restricted countries",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "vague",
+          "rule": "Products are not offered in countries that 'include, but [are] not limited to' the United States, Belgium, Russia, Iraq, Belarus, Ukraine, Yemen and Zimbabwe (rules page); the agreement's list (Schedule A 5) also names the UAE and Iran and may be updated by the company.",
+          "impact": "Eligibility depends on an open-ended country list.",
+          "source": "https://atmosfunded.com/rules/"
         }
       ]
     },
@@ -18773,7 +20092,7 @@
       }
     },
     "directfundedtrader": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -18792,12 +20111,20 @@
           "summary": "Restrictive-rules audit: read the official FAQ and trading rules, the home-page pricing tables and the terms of services; 9 rules across Evaluation, Turbo, Fast Funding and Instant Funding.",
           "source": "https://directfundedtrader.com/faq-rules",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 5 new restrictive rules; 3 programmes; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
+          "source": "https://directfundedtrader.com/faq-rules",
+          "fields": ["auditSummary", "eaAllowed", "newsTrading", "payoutDelay", "products", "restrictiveRules", "verdict"]
         }
       ],
       "set": {
-        "payoutDelay": "first profit share after four trading weeks, then every two trading weeks (Evaluation and Fast Funding)",
+        "payoutDelay": "First reward after four trading weeks, then every 14 days; minimum $100; trader must be in profit at the end of the cycle",
         "newsTrading": "Restricted",
-        "eaAllowed": "Yes"
+        "eaAllowed": "Yes",
+        "verdict": "DirectFundedTrader (DFT GROUP LLC, Dubai address) sells Evaluation, Turbo, Fast Funding and Instant Funding demo programmes up to $200,000. The FAQ ends accounts for trades under 60 seconds, a missing stop-loss after 30 seconds or a changed MT5 password, and its split terms conflict with the home page. Per-size prices and payout evidence were not verified.",
+        "auditSummary": "Official-source review dated 19 November 2026. DirectFundedTrader, operated by DFT GROUP LLC at a Dubai address per its Terms, sells four demo programmes: a 2-phase Evaluation (8% and 5% targets, 5% daily and 10% overall loss, 5 days per phase, 1:100), Turbo (started for $9.99 with the rest paid after passing; 6% target, 3% / 8%, 2 days), Fast Funding Standard (10% target, 4% / 7%, no weekend holding) and Instant Funding (3% / 6%, 2% single-trade loss, 30% consistency). Per-size list prices are not shown in the official configurator; DFT50 and DFT99 offers are displayed. The FAQ disables accounts for trades closed in under 60 seconds, for a funded trade without a stop-loss after 30 seconds and for a changed MT5 master password; it bans HFT, arbitrage, tick scalping, grid/martingale, \"one-sided betting\" and copying others without warning, requires funded trades closed 5 minutes around high-impact news and 3 trades a week, lists seven restricted countries including the UAE, and asks for proof before using other IPs or a VPS. Rewards start after four trading weeks, then every 14 days, with a $100 minimum and only if the cycle ends in profit; the FAQ sets an 80% default rising to 100% after five consecutive rewards, while the home page ties 100/80/70% to the payout frequency. Terms sections 3 and 15 allow termination at the firm's discretion and without notice, and fees are non-refundable once trading starts. Unverified: prices by size, the funded agreement, governing law and independent payout evidence."
       },
       "addSources": [
         {
@@ -18807,6 +20134,14 @@
         {
           "label": "DirectFundedTrader terms of services (official, 2026-11-18)",
           "url": "https://directfundedtrader.com/termsandservices"
+        },
+        {
+          "label": "directfundedtrader.com official page (read 2026-11-19)",
+          "url": "https://directfundedtrader.com/"
+        },
+        {
+          "label": "directfundedtrader.com official page (read 2026-11-19)",
+          "url": "https://directfundedtrader.com/turbo"
         }
       ],
       "addIncidents": [
@@ -18920,6 +20255,113 @@
           "rule": "Terms section 3 reserves the right 'to refuse or cancel service, terminate accounts' at the firm's sole discretion; section 6 bars 'any software, artificial intelligence, high-speed or mass data entry which might give you an unfair advantage'.",
           "impact": "Accounts can be terminated on broadly worded grounds decided by the firm.",
           "source": "https://directfundedtrader.com/termsandservices"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Changing the MT5 master password results in the account being \"VIOLATED and terminated instantly\".",
+          "impact": "A password change on the trading account ends the account.",
+          "source": "https://directfundedtrader.com/faq-rules"
+        },
+        {
+          "program": "All programmes — funded stage",
+          "appliesTo": ["*"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The FAQ says the funded share is 80% by default and reaches 100% only after \"more than five consecutive rewards\"; the home and Turbo pages instead tie the share to the reward period chosen (monthly 100%, biweekly 80%, weekly 70%) under the headline \"Keep up 100% profit share!\".",
+          "impact": "Early or more frequent payouts are paid at 70-80% rather than the advertised 100%, and the official pages disagree on the condition.",
+          "source": "https://directfundedtrader.com/faq-rules",
+          "status": "conflicting"
+        },
+        {
+          "program": "All programmes — funded stage",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "To receive a reward the trader must be \"in profit at the end of the trading cycle\", and \"The minimum withdrawal amount for a reward is 100$\"; the first reward comes after four trading weeks, then every 14 days.",
+          "impact": "A cycle that ends below the starting balance, or with less than $100 of profit, produces no payout.",
+          "source": "https://directfundedtrader.com/faq-rules"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The platform is \"not accessible in certain countries\": UAE, Pakistan, Vietnam, Iran, Myanmar, Albania and Kosova are listed; identity verification is mandatory before funding and is repeated \"periodically over time\".",
+          "impact": "Residents of the listed countries cannot use the programmes; funded traders can be asked to re-verify identity.",
+          "source": "https://directfundedtrader.com/faq-rules"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "On trading from multiple IP addresses the FAQ says \"We recommend not to\"; trading from another location or through a VPS requires sending proof to support. No consequence is stated.",
+          "impact": "Changing location or using a VPS needs prior justification to support.",
+          "source": "https://directfundedtrader.com/faq-rules"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "directfundedtrader-evaluation",
+          "name": "Evaluation (2-phase)",
+          "type": "Challenge",
+          "description": "Two-phase evaluation on demo accounts from $5,000 to $200,000 (configurator sizes), leverage 1:100, unlimited time, weekend holding allowed. Funded traders must set a stop-loss within 30 seconds, close trades 5 minutes around high-impact news and place at least 3 trades a week on different days. Per-size list prices not readable on the official configurator.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 200000,
+          "profitTarget": "8% (Phase 1), 5% (Phase 2)",
+          "maxDailyLoss": "5%",
+          "maxDrawdown": "10% of initial balance",
+          "drawdownType": "Static",
+          "drawdownSource": "https://directfundedtrader.com/faq-rules",
+          "drawdownDetails": "FAQ: balance or equity \"can't go below\" the level 10% under the initial balance at any time.",
+          "profitSplit": "80% by default; up to 100% (conditions conflict between FAQ and home page)",
+          "platforms": ["MT5"],
+          "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "5 days per phase",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated for this programme"
+        },
+        {
+          "id": "directfundedtrader-turbo",
+          "name": "Turbo",
+          "type": "Challenge",
+          "description": "One-phase challenge started for $9.99, with the rest of the fee paid as an activation fee after passing (example shown: $479 challenge fee, $469.01 after passing; size not stated). Sizes $15,000 to $200,000, leverage 1:100, unlimited time.",
+          "accountSizeMin": 15000,
+          "accountSizeMax": 200000,
+          "profitTarget": "6%",
+          "maxDailyLoss": "3%",
+          "maxDrawdown": "8%",
+          "profitSplit": "Monthly 100%, biweekly 80%, weekly 70% (reward period tiers)",
+          "platforms": ["MT5"],
+          "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "2 days",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated for this programme"
+        },
+        {
+          "id": "directfundedtrader-fastfunding",
+          "name": "Fast Funding (1-phase) Standard",
+          "type": "Challenge",
+          "description": "One-phase challenge up to $100,000, leverage 1:50, unlimited time; weekend holding not allowed (trades closed automatically before the weekend). A separate unlabelled home-page table shows a 1:50 one-phase variant with 5% daily and 10% overall loss and 5 minimum days.",
+          "accountSizeMin": 5000,
+          "accountSizeMax": 100000,
+          "profitTarget": "10%",
+          "maxDailyLoss": "4%",
+          "maxDrawdown": "7%",
+          "profitSplit": "80% by default; up to 100% (conditions conflict between FAQ and home page)",
+          "platforms": ["MT5"],
+          "tradableAssets": ["Forex", "Indices", "Commodities", "Crypto"],
+          "minTradingDays": "not stated",
+          "hasConsistencyRule": false,
+          "consistencyRule": "not stated for this programme"
         }
       ]
     },
@@ -19631,11 +21073,18 @@
       }
     },
     "lvlup-futures": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 4.2,
         "trustpilotReviewCount": 13,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lvlupfutures.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/lvlupfutures.com",
+        "profitSplit": 80,
+        "payoutDelay": "Lvlup: every 14 days, capped at 10% of the starting balance; Starter: after 5 profitable days, up to 5 payouts; processed in about 24-48 hours",
+        "newsTrading": "Allowed",
+        "eaAllowed": "Yes",
+        "drawdownType": "EOD",
+        "verdict": "Lvlup Futures sells one-step futures evaluations in two forms: Lvlup accounts (80% split, activation fee after passing, payouts every 14 days capped at 10% of the balance) and Starter accounts (100% split, at most five payouts capped at $1,000-$3,000). Both use an EOD trailing drawdown and a 40% consistency rule; assessments are run by Prop Account, LLC, whose terms were not read.",
+        "auditSummary": "Official-source review dated 19 November 2026. Lvlup Futures, operated by LVLUP One UG (haftungsbeschränkt) in Stralsund, Germany (HRB 23184), sells one-step futures evaluations whose assessments are \"offered and conducted exclusively by Prop Account, LLC\"; funded accounts need a separate Trader Agreement with that company. Lvlup accounts (25K-150K, list $194-$714 one-time or $117-$476 per month) carry a 5% EOD trailing drawdown that locks at the starting balance after 6% profit, no daily loss limit, 5 minimum trading days, a 40% best-day consistency rule checked at each payout, an activation fee after passing, an 80% split and payouts every 14 days capped at 10% of the starting balance. Starter accounts (list $129-$324, no activation fee) run 30 days from the first trade, pay 100% but only up to 50% of profit per request within a $1,000-$3,000 cap, lock during a pending payout and close permanently after the fifth payout. The rules page caps contracts by size and total allocation at $1,000,000, requires positions flat by 15:55 CST and over weekends, allows news trading and own bots, and makes HFT, cross-account hedging, copying between people, group trading, arbitrage and account sharing a Hard Breach; \"all-in trading\" and strategy switching are prohibited without numeric thresholds, and activity may be reviewed before funding or payout. Unverified: the Client Terms hosted by the evaluation provider (not read), the provider's jurisdiction, and independent payout evidence."
       },
       "changelog": [
         {
@@ -19655,6 +21104,12 @@
           "summary": "Restrictive-rules audit: read the rules page, FAQ and Elite page; 12 rules across the Lvlup and Starter accounts.",
           "source": "https://lvlupfutures.com/rules",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 3 new restrictive rules; 2 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://lvlupfutures.com/rules",
+          "fields": ["auditSummary", "drawdownType", "eaAllowed", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "auditedPrograms": [
@@ -19787,6 +21242,36 @@
           "rule": "Prohibited conduct includes 'All-in trading and excessive leverage' and 'manipulative strategy switching' (trading must reflect a genuine strategy, not a temporary high-risk method used to pass), without numeric thresholds; listed penalties include termination, loss of funded or payout eligibility and forfeiture of profit, and trading activity 'may be reviewed before Funded approval or payout processing'.",
           "impact": "Profits can be forfeited on the firm's assessment of risk-taking or strategy changes.",
           "source": "https://lvlupfutures.com/rules"
+        },
+        {
+          "program": "Starter — evaluation",
+          "appliesTo": ["starter"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Starter evaluations run for a fixed 30-day period from the first executed trade and do not renew; Lvlup accounts have no fixed expiry date.",
+          "impact": "A Starter evaluation not passed within 30 days of its first trade ends without a funded account.",
+          "source": "https://lvlupfutures.com/rules"
+        },
+        {
+          "program": "Starter — funded",
+          "appliesTo": ["starter"],
+          "category": "payout-conditions",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Starter account is locked while a payout request is pending and unlocks once the payout is approved.",
+          "impact": "No trading is possible between a Starter payout request and its approval.",
+          "source": "https://lvlupfutures.com/rules"
+        },
+        {
+          "program": "Both account types",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Prohibited activity also includes exploiting delayed feeds, incorrect quotes, platform errors or latency, front-running, arbitrage between Lvlup accounts or with other firms, coordinated group or signal trading, third-party passing, account sharing and trading on insider information; listed outcomes include suspension, termination, loss of funded or payout eligibility, forfeiture of profit and loss of fees, and prohibited trading is a Hard Breach that closes the account.",
+          "impact": "Any of these practices can end the account and cancel profits.",
+          "source": "https://lvlupfutures.com/rules"
         }
       ],
       "addSources": [
@@ -19797,6 +21282,64 @@
         {
           "label": "Lvlup Futures FAQ (official, read 2026-11-18)",
           "url": "https://lvlupfutures.com/faqs"
+        },
+        {
+          "label": "lvlupfutures.com official page (read 2026-11-19)",
+          "url": "https://lvlupfutures.com/"
+        },
+        {
+          "label": "lvlupfutures.com official page (read 2026-11-19)",
+          "url": "https://www.lvlupfutures.com/elite"
+        },
+        {
+          "label": "lvlupfutures.com official page (read 2026-11-19)",
+          "url": "https://lvlupfutures.com/imprint"
+        }
+      ],
+      "setProducts": [
+        {
+          "id": "lvlup-futures-lvlup",
+          "name": "Lvlup Evaluation",
+          "type": "Futures evaluation",
+          "description": "One-step futures evaluation in 25K, 50K, 100K and 150K sizes, sold monthly (list from $117/month) or one-time (list from $194). An activation fee is due within 30 days of passing ($194/$338/$554/$714 one-time or $129/$225/$369/$476 monthly by size, per the rules page). Funded: 80% split, payouts every 14 days capped at 10% of the starting balance, 40% consistency checked at each payout. Assessments are offered by Prop Account, LLC.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 117,
+          "entryFeeMax": 714,
+          "profitTarget": "$1,500 / $3,000 / $7,000 / $12,000 (25K / 50K / 100K / 150K)",
+          "maxDailyLoss": "None (no daily loss limit)",
+          "maxDrawdown": "$1,250 / $2,500 / $5,000 / $7,500 (5%) end-of-day trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://lvlupfutures.com/rules",
+          "drawdownDetails": "5% EOD trailing drawdown on the highest end-of-day balance; on the funded account it locks at the starting balance once the account reaches 6% profit, and a payout does not reset it.",
+          "profitSplit": "80%",
+          "platforms": ["Tickblaze", "Volumetrica"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "5 days",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Best day cannot exceed 40% of total accumulated profit, in evaluation and when a funded payout is requested; not an automatic breach."
+        },
+        {
+          "id": "lvlup-futures-starter",
+          "name": "Starter Evaluation",
+          "type": "Futures evaluation",
+          "description": "One-step futures evaluation in 25K, 50K, 100K and 150K sizes, one-time fee only (list $129 to $324), no activation fee. The evaluation lasts 30 days from the first trade. Funded: 100% split, payouts after 5 profitable trading days, up to 50% of profit per request within a cap of $1,000 to $3,000 (minimum $500), and the account closes permanently after the fifth approved payout. Assessments are offered by Prop Account, LLC.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 150000,
+          "entryFeeMin": 129,
+          "entryFeeMax": 324,
+          "profitTarget": "$1,500 / $3,000 / $7,000 / $12,000 (25K / 50K / 100K / 150K)",
+          "maxDailyLoss": "None (no daily loss limit)",
+          "maxDrawdown": "$1,000 / $2,000 / $3,000 / $4,500 end-of-day trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://lvlupfutures.com/rules",
+          "drawdownDetails": "End-of-day trailing drawdown of 3-4% depending on size; reaching it is a Hard Breach.",
+          "profitSplit": "100%",
+          "platforms": ["Tickblaze", "Volumetrica"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "5 days",
+          "hasConsistencyRule": true,
+          "consistencyRule": "40% best-day rule during the evaluation only; no consistency rule once funded."
         }
       ]
     },
@@ -19909,9 +21452,15 @@
       ]
     },
     "klein-funding-crypto": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
-        "officialWebsite": "https://kleinfunding.com/"
+        "officialWebsite": "https://kleinfunding.com/",
+        "profitSplit": 85,
+        "payoutDelay": "Requests on the 10th and 20th of each month once the funded account is 10 days old; processed in 24-48 hours",
+        "newsTrading": "Restricted",
+        "drawdownType": "Static",
+        "verdict": "Klein Funding sells 1-Step and 2-Step crypto-focused evaluations on TradeLocker from $49 to $539, with a static drawdown and a 70% first split rising to 85%. The FAQ voids profit made two minutes either side of high-impact news, breaches accounts that repeatedly trade two evaluations at once, and limits payouts to the 10th and 20th. No legal entity or readable terms were found.",
+        "auditSummary": "Official-source review dated 19 November 2026. Klein Funding (brand \"Klein Funding Crypto\") sells a 1-Step evaluation (3% daily / 6% overall loss, at least 4 trading days) and a 2-Step evaluation (4% / 8%), both with a static drawdown, no time limit and simulated sizes up to $6,000 to $100,000 at list prices of $49-$539 (1-Step) and $49-$439 (2-Step) per the official FAQ; profit-target percentages are not given in the text of the pages read. Trading is on TradeLocker (crypto, forex, indices, metals). The FAQ states that profits made within two minutes before or after a red-folder news event are removed as a soft breach, three soft breaches becoming a hard breach; that trading more than one evaluation at a time triggers a warning and then a breach; that hedging, arbitrage, latency, HFT, tick scalping, group trading and holding over half of trades under one minute are prohibited; and that shared households, devices, IPs or VPS are not allowed, with $400,000 of funded capital per trader. The pricing page adds a nightly 11:30-11:59 PM CET reset window with no trading, and it conflicts with the FAQ on minimum days for the 2-Step. Payouts: 70% first share, 85% after (90% with a paid add-on), requested on the 10th and 20th once the funded account is 10 days old, processed in 24-48 hours; the FAQ cites a \"no payout denial policy\". Fees are non-refundable. Unverified: the Terms of Use (page not reachable), the legal entity, and independent payout evidence."
       },
       "addSources": [
         {
@@ -19925,6 +21474,10 @@
         {
           "label": "Klein Funding pricing and rules (official, 2026-11-18)",
           "url": "https://kleinfunding.com/pricing"
+        },
+        {
+          "label": "kleinfunding.com official page (read 2026-11-19)",
+          "url": "https://kleinfunding.com/refund-policy"
         }
       ],
       "changelog": [
@@ -19939,6 +21492,12 @@
           "summary": "Restrictive-rules audit: read the official FAQ and pricing page (sizes $6,000-$100,000, list prices $49-$539, static drawdown); 7 rules across the 1-Step and 2-Step evaluations.",
           "source": "https://kleinfunding.com/faqs",
           "fields": ["restrictiveRules", "products"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 5 new restrictive rules; 1 outdated rule(s) removed; 2 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://kleinfunding.com/faqs",
+          "fields": ["auditSummary", "drawdownType", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "auditedPrograms": [
@@ -20015,11 +21574,52 @@
         {
           "program": "All programmes",
           "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"You may trade your Funded Accounts simultaneously, but you may not trade more than one Evaluation at a time.\" If an account is found trading multiple evaluations at once \"a warning will be sent out\"; \"if the issue repeats, a breach will ensue.\"",
+          "impact": "Trading two evaluations in parallel a second time breaches the account.",
+          "source": "https://kleinfunding.com/faqs"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "\"We do not allow hedging within a single trading account, across accounts held by the same trader\" (or between traders); opposite positions on different instruments are allowed. The FAQ does not state the consequence.",
+          "impact": "Same-instrument hedging, even inside one account, is a prohibited practice whose sanction is not specified.",
+          "source": "https://kleinfunding.com/faqs"
+        },
+        {
+          "program": "1-Step Evaluation",
+          "appliesTo": ["1step"],
           "category": "min-trading-days",
           "severity": "minor",
           "clarity": "clear",
-          "rule": "Minimum trading days are required in both the evaluation and funded stages (a trading day has at least one transaction); the number is not stated on the pricing page.",
-          "impact": "Progress and payouts wait for a minimum number of trading days.",
+          "rule": "\"you must trade on at least 4 different days for 1 phased evaluations\"; a trading day is one with at least one transaction and days need not be consecutive.",
+          "impact": "The 1-Step evaluation cannot be passed in fewer than four trading days.",
+          "source": "https://kleinfunding.com/faqs"
+        },
+        {
+          "program": "2-Step Evaluation",
+          "appliesTo": ["2step"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "vague",
+          "rule": "The FAQ says \"For 2 phased evaluations, there is no minimum trading days requirement\", while the pricing/rules page says traders must trade a set (unstated) number of days during the evaluation and funded stages.",
+          "impact": "Official pages disagree on whether a minimum number of trading days applies to the 2-Step evaluation and funded stage.",
+          "source": "https://kleinfunding.com/pricing",
+          "status": "conflicting"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The daily loss limit resets each day between 11:30 PM and 11:59 PM CET and trading is not allowed during this reset window.",
+          "impact": "A nightly window of about 30 minutes in which no trades can be placed, including on 24/7 crypto markets.",
           "source": "https://kleinfunding.com/pricing"
         }
       ],
@@ -20028,19 +21628,21 @@
           "id": "klein-funding-1step",
           "name": "1-Step Evaluation",
           "type": "Challenge",
-          "description": "One-phase evaluation, $6,000 to $100,000 simulated accounts. Static drawdown; first profit share 70%, then 85% (90% with paid add-on). Profit target not stated on the pages read.",
+          "description": "One-phase evaluation on TradeLocker, simulated accounts up to $6,000, $13,000, $30,000, $50,000 or $100,000 (list prices $49 to $539 in the official FAQ). Static drawdown, no time limit, KYC after passing. First profit share 70%, then 85% (90% from the first payout with a paid add-on). Profit target percentage not stated in the text of the pages read.",
           "accountSizeMin": 6000,
           "accountSizeMax": 100000,
           "entryFeeMin": 49,
           "entryFeeMax": 539,
           "profitTarget": "not stated",
-          "maxDailyLoss": "3% of initial balance",
-          "maxDrawdown": "6% of initial balance",
+          "maxDailyLoss": "3% (higher of balance or equity at the daily reset)",
+          "maxDrawdown": "6% of initial balance (equity)",
           "drawdownType": "Static",
-          "drawdownSource": "https://kleinfunding.com/faqs",
+          "drawdownSource": "https://kleinfunding.com/pricing",
+          "drawdownDetails": "\"Your drawdown limit is always static, never follows as you make profit.\"",
           "profitSplit": "70% first payout, then 85% (90% with add-on)",
-          "platforms": ["not stated"],
+          "platforms": ["TradeLocker"],
           "tradableAssets": ["Crypto", "Forex", "Indices", "Metals"],
+          "minTradingDays": "4 days",
           "hasConsistencyRule": false,
           "consistencyRule": "No consistency rule stated in the official FAQ"
         },
@@ -20048,19 +21650,21 @@
           "id": "klein-funding-2step",
           "name": "2-Step Evaluation",
           "type": "Challenge",
-          "description": "Two-phase evaluation, $6,000 to $100,000 simulated accounts. Static drawdown; first profit share 70%, then 85% (90% with paid add-on). Profit targets not stated on the pages read.",
+          "description": "Two-phase evaluation on TradeLocker, simulated accounts up to $6,000, $13,000, $30,000, $50,000 or $100,000 (list prices $49 to $439 in the official FAQ). Static drawdown, no time limit, KYC after phase 2. First profit share 70%, then 85% (90% from the first payout with a paid add-on). Profit target percentages not stated in the text of the pages read.",
           "accountSizeMin": 6000,
           "accountSizeMax": 100000,
           "entryFeeMin": 49,
           "entryFeeMax": 439,
           "profitTarget": "not stated",
-          "maxDailyLoss": "4% of initial balance",
-          "maxDrawdown": "8% of initial balance",
+          "maxDailyLoss": "4% (higher of balance or equity at the daily reset)",
+          "maxDrawdown": "8% of initial balance (equity)",
           "drawdownType": "Static",
-          "drawdownSource": "https://kleinfunding.com/faqs",
+          "drawdownSource": "https://kleinfunding.com/pricing",
+          "drawdownDetails": "\"Your drawdown limit is always static, never follows as you make profit.\"",
           "profitSplit": "70% first payout, then 85% (90% with add-on)",
-          "platforms": ["not stated"],
+          "platforms": ["TradeLocker"],
           "tradableAssets": ["Crypto", "Forex", "Indices", "Metals"],
+          "minTradingDays": "not stated (FAQ: none; pricing page: a set number of days)",
           "hasConsistencyRule": false,
           "consistencyRule": "No consistency rule stated in the official FAQ"
         }
@@ -20138,14 +21742,18 @@
       ]
     },
     "funded-futures-network": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 3.5,
         "trustpilotReviewCount": 560,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/fundedfuturesnetwork.com",
         "profitSplit": 80,
         "drawdownType": "EOD",
-        "payoutDelay": "Sim Funded Pro: payouts \"can be requested the same day you're eligible\"; minimum $500, maximum $10,000 per payout (cumulative across accounts); Institution accounts: same-business-day payouts"
+        "payoutDelay": "MAX Standard funded: payouts can be requested the same day you are eligible; minimum $500, per-account caps, maximum $10,000 per user per payout across all accounts",
+        "newsTrading": "Variable",
+        "eaAllowed": "Variable",
+        "verdict": "Funded Futures Network sells two one-time-fee futures evaluations, MAX Standard ($148-$658) and STEADY ($149-$750), both with end-of-day drawdowns locking at starting balance + $100. Funded payouts are capped per payout and accounts move to a live review after 4 (MAX) or 5 (STEADY) payouts. Its Terms of Use could not be read in this review.",
+        "auditSummary": "Official-source review dated 19 November 2026. The pricing pages list MAX Standard ($148-$658, 25K-250K, five trading days of $150+, 40% consistency in evaluation and funded, 50K rules: $3,000 target, $1,250 daily loss, $2,000 EOD drawdown) and STEADY ($149-$750, two winning days, no daily loss limit, 52% consistency in evaluation only, EOD trailing drawdown from $1,200 to $5,500). The heaviest conditions are the live review that closes all sim accounts after 4 payouts on one MAX account or 10 since the last review, the STEADY live review after 5 payouts, per-payout caps ($1,000 then $1,250 on MAX 50K; $1,000-$3,000 by size on STEADY) with a $10,000 per-user ceiling, a hedging ban that ends funding eligibility, a 5-account copy-trading limit, closure by 4:50pm EST, a T1 news blackout on funded stages and a help-centre inactivity rule cancelling accounts with fewer than 3 qualifying days in 29 days. The FAQ states an 80/20 split on Sim Funded Pro and 90/10 on Institution accounts, and same-day payout requests once eligible. Official pages disagree on news trading, automation and the Buy 1 Get 1 offer for STEADY. The Terms of Use (Termly), risk disclosure and most help-centre articles could not be read, and payout evidence was not audited."
       },
       "setEntities": [
         {
@@ -20167,6 +21775,26 @@
         {
           "label": "Official page read 2026-11-15",
           "url": "https://fundedfuturesnetwork.com/faq"
+        },
+        {
+          "label": "fundedfuturesnetwork.com official page (read 2026-11-19)",
+          "url": "https://fundedfuturesnetwork.com/accounts"
+        },
+        {
+          "label": "fundedfuturesnetwork.com official page (read 2026-11-19)",
+          "url": "https://fundedfuturesnetwork.com/payouts"
+        },
+        {
+          "label": "steady.fundedfuturesnetwork.com official page (read 2026-11-19)",
+          "url": "https://steady.fundedfuturesnetwork.com/"
+        },
+        {
+          "label": "fundedfuturesnetwork.zendesk.com official page (read 2026-11-19)",
+          "url": "https://fundedfuturesnetwork.zendesk.com/hc/en-us/articles/52807758679835-Article-6-5-Account-Inactivity-Policy"
+        },
+        {
+          "label": "ca.trustpilot.com official page (read 2026-11-19)",
+          "url": "https://ca.trustpilot.com/review/fundedfuturesnetwork.com"
         }
       ],
       "changelog": [
@@ -20193,12 +21821,22 @@
           "summary": "Restrictive-rules audit: read the official homepage pricing section (MAX Standard) and the FAQ; 10 rules on MAX Standard. MAX Standard product added from the pricing section.",
           "source": "https://fundedfuturesnetwork.com/",
           "fields": ["restrictiveRules", "products"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 7 new restrictive rules; 2 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
+          "source": "https://fundedfuturesnetwork.com/accounts",
+          "fields": ["auditSummary", "drawdownType", "eaAllowed", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
         }
       ],
       "auditedPrograms": [
         {
           "key": "max-standard",
           "name": "MAX Standard"
+        },
+        {
+          "key": "steady",
+          "name": "STEADY"
         }
       ],
       "restrictiveRules": [
@@ -20301,6 +21939,76 @@
           "rule": "The FAQ states: 'All final decisions are at the sole discretion of FFN.'",
           "impact": "Rule disputes, including payout decisions, are settled at the firm's discretion.",
           "source": "https://fundedfuturesnetwork.com/faq"
+        },
+        {
+          "program": "STEADY - funded",
+          "appliesTo": ["steady"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Funded accounts first build a buffer equal to the drawdown; 'per-payout caps start at $1,000-$3,000 by size and rise from your 4th payout'; withdrawals across all accounts are capped at $10,000 per payout.",
+          "impact": "Profit above the per-payout cap waits for later payouts.",
+          "source": "https://steady.fundedfuturesnetwork.com/"
+        },
+        {
+          "program": "STEADY - funded",
+          "appliesTo": ["steady"],
+          "category": "account-ends-after-payouts",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "'After 5 payouts your account goes to live review.'",
+          "impact": "The simulated funded account ends by design after five payouts and moves to a live review.",
+          "source": "https://steady.fundedfuturesnetwork.com/"
+        },
+        {
+          "program": "STEADY - evaluation",
+          "appliesTo": ["steady"],
+          "category": "consistency",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Evaluation only: no single day may exceed 52% of total profit; the page states there is no consistency rule once funded.",
+          "impact": "A large winning day can delay passing the evaluation; no effect on funded payouts.",
+          "source": "https://steady.fundedfuturesnetwork.com/"
+        },
+        {
+          "program": "STEADY - evaluation",
+          "appliesTo": ["steady"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Minimum 2 winning days to pass, with a minimum winning day of $100 (25K) to $350 (250K).",
+          "impact": "Sets a minimum pace to pass.",
+          "source": "https://steady.fundedfuturesnetwork.com/"
+        },
+        {
+          "program": "MAX Standard - funded",
+          "appliesTo": ["max-standard"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "50K funded contract scaling by profit: 2 Mini (20 Micros) at $0-$1,000, 3 Mini (30 Micros) at $1,001-$2,000, 4 Mini (40 Micros) from $2,001; maximum 4 Mini (40 Micros).",
+          "impact": "Position size is limited until the funded account builds profit.",
+          "source": "https://fundedfuturesnetwork.com/payouts"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Help article 6.5: 'you must complete at least 3 qualifying trading days within every 29-day period' (a qualifying day closes with realized P&L of at least $5); 'The requirement applies to all accounts'; otherwise the account 'is automatically cancelled', with no warning or manual review.",
+          "impact": "An account with fewer than three qualifying days in any 29-day window is cancelled.",
+          "source": "https://fundedfuturesnetwork.zendesk.com/hc/en-us/articles/52807758679835-Article-6-5-Account-Inactivity-Policy"
+        },
+        {
+          "program": "All programmes - funded",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "FAQ: 'You can have up to 5 active Sim Funded accounts at one time'; an extra pass 'waits in your queue' until a slot opens.",
+          "impact": "Limits how many funded accounts can trade at once.",
+          "source": "https://fundedfuturesnetwork.com/faq"
         }
       ],
       "setProducts": [
@@ -20308,7 +22016,7 @@
           "id": "funded-futures-network-max-standard",
           "name": "MAX Standard",
           "type": "Futures evaluation",
-          "description": "One-time fee $148 (25K) to $658 (250K) list price; a 70% code-based promotion is not applied. Full rules shown only for 50K: $3,000 target, $1,250 daily loss limit, $2,000 EOD drawdown locking at starting balance + $100, $100 reset fee, no activation fee; funded payouts capped at $1,000 (payouts 1-3) then $1,250, live review after 4 payouts on one account.",
+          "description": "One-time fee $148 (25K) to $658 (250K) list price; promotional codes not applied. Full rules shown only for 50K: $3,000 target, $1,250 daily loss limit, $2,000 EOD drawdown locking at starting balance + $100, 5 trading days of $150+, $100 reset fee, no activation fee; funded 80% split, $500 minimum payout, payouts capped at $1,000 (payouts 1-3) then $1,250, $625 one-time funded reset before any payout, live review after 4 payouts on one account or 10 since the last live review (all sim accounts close).",
           "accountSizeMin": 25000,
           "accountSizeMax": 250000,
           "entryFeeMin": 148,
@@ -20317,13 +22025,36 @@
           "maxDailyLoss": "$1,250 on 50K; other sizes not stated",
           "maxDrawdown": "$2,000 EOD on 50K; other sizes not stated",
           "drawdownType": "EOD",
-          "drawdownSource": "https://fundedfuturesnetwork.com/",
+          "drawdownSource": "https://fundedfuturesnetwork.com/accounts",
+          "drawdownDetails": "End-of-day drawdown in evaluation and funded stages; locks at starting balance + $100 (50K).",
           "profitSplit": "80%",
-          "platforms": ["not stated"],
+          "platforms": ["Onyx", "Quantower (FundX)", "EdgeProX", "MotiveWave Mobile"],
           "tradableAssets": ["Futures"],
           "minTradingDays": "5 ($150+ each, 50K)",
           "hasConsistencyRule": true,
-          "consistencyRule": "40% in evaluation and funded (official homepage, 18 Nov 2026)."
+          "consistencyRule": "40% in evaluation and funded (50K specification on the official accounts page)."
+        },
+        {
+          "id": "funded-futures-network-steady",
+          "name": "STEADY",
+          "type": "Futures evaluation",
+          "description": "One-time fee $149 (25K) to $750 (250K) list price; no activation or monthly fee. Pass in as few as 2 winning days, no daily loss limit, no time limit, no exhibition phase; EOD trailing drawdown locking at starting balance + $100. Funded accounts first build a buffer equal to the drawdown; per-payout caps $1,000-$3,000 by size rising from the 4th payout; live review after 5 payouts; up to 90/10 split in a live funded account.",
+          "accountSizeMin": 25000,
+          "accountSizeMax": 250000,
+          "entryFeeMin": 149,
+          "entryFeeMax": 750,
+          "profitTarget": "$2,000 (25K), $3,000 (50K), $6,000 (100K), $9,000 (150K), $15,000 (250K)",
+          "maxDailyLoss": "None",
+          "maxDrawdown": "$1,200 (25K), $2,000 (50K), $3,200 (100K), $4,700 (150K), $5,500 (250K), end-of-day trailing",
+          "drawdownType": "EOD",
+          "drawdownSource": "https://steady.fundedfuturesnetwork.com/",
+          "drawdownDetails": "End-of-day trailing drawdown that locks at starting balance + $100; whether it is kept on the funded stage is not stated.",
+          "profitSplit": "Up to 90% in a live funded account; sim funded split not stated",
+          "platforms": ["FundX", "EdgeProX", "ONYX", "Rithmic-compatible platforms (Quantower, Sierra Chart, Jigsaw)"],
+          "tradableAssets": ["Futures"],
+          "minTradingDays": "2 winning days ($100-$350 minimum winning day by size)",
+          "hasConsistencyRule": true,
+          "consistencyRule": "Evaluation only: no single day above 52% of total profit; no consistency rule once funded."
         }
       ]
     },
