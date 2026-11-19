@@ -136,6 +136,8 @@ export type PropFirm = {
   scoreCap?: { before: number; cap: number; reason: 'trustpilot-withheld' };
   /** Restrictive-rules penalty (SCORING.md section 2), set when it lowered the score. */
   rulesPenalty?: { before: number; penalty: number };
+  /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
+  closedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
@@ -12916,7 +12918,7 @@ export const CLOSED_FIRM_SCORE_CAP = 29;
 
 function applyClosedScoreRule(firm: PropFirm): PropFirm {
   if (firm.status !== 'Fermée' || firm.score <= CLOSED_FIRM_SCORE_CAP) return firm;
-  return { ...firm, score: CLOSED_FIRM_SCORE_CAP };
+  return { ...firm, score: CLOSED_FIRM_SCORE_CAP, closedCap: { before: firm.score, cap: CLOSED_FIRM_SCORE_CAP } };
 }
 
 /**
