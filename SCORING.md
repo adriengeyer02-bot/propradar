@@ -139,10 +139,10 @@ counted, `blocking` when it voids profits or breaches the account.
   40 → 9, 60 → 10. (A straight sum capped at 12 was tried first: on the
   2026-11-18 audit of 77 firms, 75 hit the cap, so it no longer told firms
   apart. The curve keeps the approved weights and the 12-point ceiling.)
-- Implementation: `app/lib/restrictiveRules.ts` (`computeRulesPenalty`). The
-  switch `RULES_PENALTY_ENABLED` stays off until Geyer approves the score
-  impact in a sensitive PR; until then rules are shown with their severity
-  and clarity tags but scores do not move.
+- Implementation: `app/lib/restrictiveRules.ts` (`computeRulesPenalty`).
+  The switch `RULES_PENALTY_ENABLED` is currently **enabled** in `main`:
+  the calculated penalty affects the displayed score and its breakdown.
+  Treat changes to this switch as sensitive.
 - Rules without `category`, `severity`, `clarity` and `appliesTo` are shown
   but not counted (legacy entries). Classify them before relying on the total.
 
