@@ -106,6 +106,15 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                     {step.delta ? <span className="psb-bar-cut" style={{ left: `${step.value}%`, width: `${step.delta}%` }} /> : null}
                   </div>
                   <p>{step.detail}</p>
+                  {step.kind === 'rules' && step.delta > 0 ? (
+                    <div className="psb-rule-equation">
+                      <span><strong>{view.steps[0].value}</strong><small>{copy.editorial}</small></span>
+                      <b aria-hidden="true">−</b>
+                      <span><strong>{step.delta}</strong><small>{copy.rules}</small></span>
+                      <b aria-hidden="true">=</b>
+                      <span><strong>{step.value}</strong><small>{copy.afterRules}</small></span>
+                    </div>
+                  ) : null}
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
                   {step.kind === 'rules' && view.programs.length ? (
                     <div className="psb-programs">
@@ -124,10 +133,11 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                   {step.kind === 'rules' && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
+                      {step.delta > 0 ? <p className="psb-raw-notice">{fill(copy.rawWeightNotice, { penalty: step.delta })}</p> : null}
                       <ul>
                         {view.heaviest.map((rule, ruleIndex) => (
                           <li key={ruleIndex}>
-                            <span className={`psb-pts psb-sev-${rule.severityKey}`}>{rule.points} {copy.points}</span>
+                            <span className="psb-pts psb-raw-points">{rule.points} {copy.rawPoints}</span>
                             <span>
                               <strong>{rule.program}</strong> · {rule.severity} · {rule.clarity}
                               <em>{rule.text}</em>
