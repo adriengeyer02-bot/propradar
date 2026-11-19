@@ -60,7 +60,7 @@ import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
 import GuideCover from '../../../components/guide-visuals/GuideCover';
 import { DEPENDENCY_COVER } from '../../../lib/guideCovers';
-import { formatAccountSize, formatListPrice, getPriceTable } from '../../../lib/priceTables';
+import { formatAccountSize, formatListPrice, getPriceTable, pricePreviewRows } from '../../../lib/priceTables';
 import { getAuditCaseFile } from '../../../lib/auditCaseFiles';
 import { entityCountries } from '../../../lib/jurisdictions';
 import { getClosureRecord } from '../../../lib/closures';
@@ -1056,6 +1056,29 @@ export default async function FirmPage({ params }: Props) {
                     {f.noConsistency}
                   </p>
                 )}
+                {firm.status !== 'Fermée' ? priceTable?.programs.filter((program) => program.productId === product.id).map((program) => (
+                  <div className="pr-product-prices" key={program.name}>
+                    <div className="pr-product-prices-head">
+                      <strong>{tx(program.name)}</strong>
+                      <span>{f.priceList}{program.billing === 'monthly' ? ` ${f.perMonth}` : ''}</span>
+                    </div>
+                    <div className="pr-product-price-tiers">
+                      {pricePreviewRows(program).map((row) => (
+                        <div className="pr-product-price-tier" key={row.size}>
+                          <span>{formatAccountSize(row.size)}</span>
+                          <strong>{formatListPrice(row.price, program.currency)}</strong>
+                          {row.upfrontPrice != null && row.completionFee != null ? (
+                            <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="pr-product-prices-links">
+                      <a href="#prices">{f.priceTableTitle} ↓</a>
+                      <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
+                    </div>
+                  </div>
+                )) : null}
                 {product.linkToStart ? (
                   <a
                     href={product.linkToStart}
@@ -1095,7 +1118,13 @@ export default async function FirmPage({ params }: Props) {
                       {program.rows.map((row) => (
                         <tr key={row.size}>
                           <th scope="row">{formatAccountSize(row.size)}</th>
-                          <td>{formatListPrice(row.price, program.currency)}{program.billing === 'monthly' ? <small>{f.perMonth}</small> : null}</td>
+                          <td>
+                            {formatListPrice(row.price, program.currency)}
+                            {program.billing === 'monthly' ? <small>{f.perMonth}</small> : null}
+                            {row.upfrontPrice != null && row.completionFee != null ? (
+                              <small className="pr-price-split">{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
+                            ) : null}
+                          </td>
                         </tr>
                       ))}
                     </tbody>

@@ -351,6 +351,19 @@ html body .topbar .nav .nav-link-active:hover {
 .pr-price-table thead th { border-top: 0; color: var(--muted); font-size: 0.78rem; font-weight: 600; }
 .pr-price-table thead th:last-child { text-align: right; }
 .pr-price-table .pr-fineprint { margin: 0; }
+.pr-price-table .pr-price-split { display: block; margin: 2px 0 0; font-size: 0.72rem; font-weight: 500; }
+.pr-product-prices { display: grid; gap: 10px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2, rgba(64, 180, 180, 0.045)); }
+.pr-product-prices-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; }
+.pr-product-prices-head strong { font-size: 0.9rem; }
+.pr-product-prices-head span { color: var(--muted); font-size: 0.73rem; }
+.pr-product-price-tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.pr-product-price-tier { display: grid; align-content: start; gap: 2px; min-width: 0; padding: 9px 8px; border-radius: 7px; background: var(--surface); border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.pr-product-price-tier > span { font-size: 0.76rem; color: var(--muted); }
+.pr-product-price-tier > strong { font-size: 1.15rem; color: var(--text); white-space: nowrap; }
+.pr-product-price-tier > small { font-size: 0.67rem; color: var(--muted); }
+.pr-product-prices-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 12px; }
+.pr-product-prices-links a { font-size: 0.76rem; font-weight: 650; color: var(--accent); text-decoration: none; }
+.pr-product-prices-links a:hover { text-decoration: underline; }
 
 /* /prop-firms-india */
 .pr-india-table { display: grid; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 12px; }

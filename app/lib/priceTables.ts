@@ -6,9 +6,11 @@ import data from '../data/price-tables.json';
  * converted, and temporary code discounts are never applied. Firms without a
  * table keep their "from" price only.
  */
-export type PriceRow = { size: number; price: number };
+export type PriceRow = { size: number; price: number; upfrontPrice?: number; completionFee?: number };
 export type PriceProgram = {
   name: string;
+  /** Exact audited product id; never infer a price from a similarly named plan. */
+  productId?: string;
   billing: 'one-time' | 'monthly';
   currency: 'USD' | 'EUR' | 'GBP';
   sourceUrl: string;
@@ -25,6 +27,12 @@ export function getPriceTable(slug: string): FirmPriceTable | undefined {
 
 export function priceTableSlugs() {
   return Object.keys(tables);
+}
+
+/** Show familiar account sizes in the product card, leaving all tiers in the table. */
+export function pricePreviewRows(program: PriceProgram): PriceRow[] {
+  const familiar = program.rows.filter((row) => [25000, 50000, 100000].includes(row.size));
+  return (familiar.length ? familiar : program.rows).slice(0, 3);
 }
 
 const SYMBOL: Record<PriceProgram['currency'], string> = { USD: '$', EUR: '€', GBP: '£' };
