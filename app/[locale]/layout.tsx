@@ -7,7 +7,6 @@ import '../site.css';
 import ActiveNavLink from '../components/ActiveNavLink';
 import RiskEvidenceMenu from '../components/RiskEvidenceMenu';
 import SiteSearch from '../components/SiteSearch';
-import ThemeToggle from '../components/ThemeToggle';
 import RouteTransition from '../components/RouteTransition';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import LocaleNotice from '../components/LocaleNotice';
@@ -21,21 +20,6 @@ import { propFirms } from '../lib/propFirms';
 import { FOUNDER, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
 import IntentLink from '../components/IntentLink';
 import { DISCORD_URL, communityCopy } from '../lib/community';
-
-const themeInitScript = `
-  (function () {
-    try {
-      var savedTheme = localStorage.getItem('propradar-theme');
-      var theme = savedTheme === 'light' || savedTheme === 'dark'
-        ? savedTheme
-        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.dataset.theme = theme;
-      document.documentElement.style.colorScheme = theme;
-    } catch {
-      document.documentElement.dataset.theme = 'light';
-    }
-  })();
-`;
 
 const discordBannerInitScript = `
   try {
@@ -151,10 +135,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   viewportFit: 'cover',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f2f4f7' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0d12' },
-  ],
+  themeColor: '#0a0d12',
+  colorScheme: 'dark',
 };
 
 export default async function RootLayout({
@@ -174,8 +156,8 @@ export default async function RootLayout({
     <html
       lang={HTML_LANG[locale]}
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      data-theme="dark"
       className={archivo.variable}
-      suppressHydrationWarning
     >
       <head>
         {/* Google Tag Manager container shared across all languages and pages. */}
@@ -188,7 +170,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TNQWH42C');`,
           }}
         />
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script dangerouslySetInnerHTML={{ __html: discordBannerInitScript }} />
         <script
           type="application/ld+json"
@@ -232,7 +213,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <div className="header-actions">
                 <SiteSearch label={c.search} />
                 <LanguageSwitcher label={c.language} />
-                <ThemeToggle />
               </div>
             </div>
           </header>
