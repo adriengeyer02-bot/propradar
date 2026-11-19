@@ -89,6 +89,7 @@ const sw: Messages = {
     metaDescription: 'Linganisha zaidi ya prop firm {count} kwa kujitegemea: bei, sheria, malipo, Trustpilot na taarifa za kisheria.',
     kicker: 'Tathmini huru · Ushahidi kwanza',
     h1: 'Linganisha prop firm kwa kujitegemea',
+    tagline: 'Imeundwa kuwalinda wafanyabiashara wa fedha',
     lead: 'Kabla ya kulipia challenge, linganisha bei, sheria, ushahidi wa malipo na kampuni zinazoendesha prop firm {count}.',
     coverageAria: 'Wigo wa data za PropRadar',
     firmsTracked: 'Prop firm zinazofuatiliwa',

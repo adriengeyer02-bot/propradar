@@ -155,6 +155,7 @@ const ja: Messages = {
     "metaDescription": "プロップファームの独立レビュー：{count} 社以上のチャレンジ価格、ルール、出金の証拠、Trustpilot の状況、法人を比較。すべての情報に出典があります。",
     "kicker": "独立。証拠を第一に。",
     "h1": "独立したプロップファーム比較サイト",
+    "tagline": "トレーダーを守るためにつくられた",
     "lead": "チャレンジに支払う前に、{count} 社のプロップファームのルール、価格、出金の証拠、運営法人を比較できます。",
     "coverageAria": "PropRadar のデータ範囲",
     "firmsTracked": "社を追跡",

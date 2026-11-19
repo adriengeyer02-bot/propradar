@@ -159,6 +159,7 @@ const en = {
     metaDescription: 'Independent prop firm reviews: compare challenge prices, rules, payout evidence, Trustpilot status and legal entities for {count}+ firms. Every fact sourced.',
     kicker: 'Independent. Evidence first.',
     h1: 'Independent prop firm comparator',
+    tagline: 'Built to protect traders',
     lead: 'Compare challenge rules, prices, payout evidence and the legal entity behind {count} prop firms before you pay for a challenge.',
     coverageAria: 'PropRadar dataset coverage',
     firmsTracked: 'firms tracked',

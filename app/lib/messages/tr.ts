@@ -138,6 +138,7 @@ const tr: Messages = {
     metaDescription: 'Bağımsız prop firm incelemeleri: {count}+ firmanın fiyatlarını, kurallarını, ödeme kanıtlarını, Trustpilot durumunu ve tüzel kişilerini karşılaştırın.',
     kicker: 'Bağımsız. Önce kanıt.',
     h1: 'Bağımsız prop firm karşılaştırıcısı',
+    tagline: 'Traderları korumak için tasarlandı',
     lead: 'Bir değerlendirme ücreti ödemeden önce {count} prop firmanın kurallarını, fiyatlarını, ödeme kanıtlarını ve arkasındaki şirketleri karşılaştırın.',
     coverageAria: 'PropRadar veri kapsamı',
     firmsTracked: 'takip edilen firma',

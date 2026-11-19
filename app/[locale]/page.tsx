@@ -108,7 +108,7 @@ export default async function HomePage({ params }: Props) {
             {h.kicker}
           </div>
           <h1 id="home-title">{h.h1}</h1>
-          <p className="home-v2-tagline" lang="en">Built to protect traders</p>
+          <p className="home-v2-tagline">{h.tagline}</p>
           <a
             className="home-v2-award"
             href="https://www.myfxbook.com/articles/best-prop-firm-comparison-websites-in-2026-20-sites-reviewed-and-compared/89#propradar-review"
