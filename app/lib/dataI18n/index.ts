@@ -11,6 +11,7 @@ import { foxxFundedFrench } from '../foxxFunded';
 import { xFundedTranslations } from '../xFundedI18n';
 import { milTradersTranslations } from '../milTradersI18n';
 import { translatedAuditText } from './auditTranslations';
+import { narrativeOriginals, stripScoreClaims } from '../scoreClaims';
 
 /**
  * Translations of the firm data that readers see most (program rules, payout
@@ -25,5 +26,16 @@ const DATA: Partial<Record<Locale, Record<string, string>>> = { fr: { ...fr, ...
 
 export function td(locale: Locale, text: string | undefined | null): string {
   if (!text) return text ?? '';
+  // A verdict/summary shown without its score sentence: translate the reviewed
+  // original, then drop the same score statement from the translation.
+  const original = narrativeOriginals.get(text.trim());
+  if (original) {
+    const translated = lookup(locale, original);
+    return translated === original ? text : stripScoreClaims(translated);
+  }
+  return lookup(locale, text);
+}
+
+function lookup(locale: Locale, text: string): string {
   return translatedAuditText(locale, text) ?? milTradersTranslations[locale]?.[text.trim()] ?? xFundedTranslations[locale]?.[text.trim()] ?? DATA[locale]?.[text.trim()] ?? text;
 }

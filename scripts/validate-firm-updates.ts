@@ -89,6 +89,12 @@ for (const [slug, update] of Object.entries(current.firms ?? {})) {
       errors.push(`${where}.restrictiveRules: at least one rule source must appear in the dated changelog`);
     }
   }
+  for (const field of ['verdict', 'auditSummary'] as const) {
+    const text = update.set?.[field];
+    if (text && text !== previous.firms?.[slug]?.set?.[field] && /\b\d{1,3}\s*\/\s*100\b/.test(text)) {
+      errors.push(`${where}.set.${field}: do not write the score ("NN/100") in narrative text; it is computed and explained in the score dialog (SCORING.md 1)`);
+    }
+  }
   if (update.auditedPrograms !== undefined) {
     const keys = (update.auditedPrograms ?? []).map((program) => program.key);
     if (!Array.isArray(update.auditedPrograms) || !keys.length || keys.some((key) => !key?.trim() || key === '*')) errors.push(`${where}.auditedPrograms: non-empty list of { key, name }`);

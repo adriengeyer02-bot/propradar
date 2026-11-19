@@ -1,5 +1,7 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
+import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
+import { toEnglishText } from './i18n';
 import { foxxFunded } from './foxxFunded';
 import { xFunded } from './xFunded';
 import { milTraders } from './milTraders';
@@ -12974,7 +12976,26 @@ function applyPartnerOffer(firm: PropFirm): PropFirm {
   return offer && firm.status !== 'Fermée' ? { ...firm, partnerOffer: offer } : firm;
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyPartnerOffer);
+/**
+ * Verdicts and audit summaries never state the score (scoreClaims.ts): the
+ * displayed score is computed and explained in the score dialog. The original
+ * text is registered so translations can still be looked up.
+ */
+function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
+  const strip = (text: string) => {
+    const stripped = stripScoreClaims(text);
+    if (stripped !== text) {
+      narrativeOriginals.set(stripped.trim(), text.trim());
+      narrativeOriginals.set(toEnglishText(stripped).trim(), toEnglishText(text).trim());
+    }
+    return stripped;
+  };
+  const verdict = strip(firm.verdict);
+  const auditSummary = firm.auditSummary ? strip(firm.auditSummary) : firm.auditSummary;
+  return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');
