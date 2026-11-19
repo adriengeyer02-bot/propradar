@@ -15,6 +15,9 @@ import EntityChain from '../../../components/ui/EntityChain';
 import ReliabilityRadar from '../../../components/ui/ReliabilityRadar';
 import RiskPip from '../../../components/ui/RiskPip';
 import ScoreRing from '../../../components/ui/ScoreRing';
+import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
+import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
+import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../../lib/riskTone';
@@ -589,6 +592,52 @@ export default async function FirmPage({ params }: Props) {
     program,
     rules: firmRules.filter((rule) => rule.program === program),
   }));
+  const scoreCopy = scoreMethodCopy(locale);
+  const breakdown = getScoreBreakdown(firm);
+  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
+  {
+    const rules = breakdown.rules;
+    const applied = Boolean(rules?.applied && rules.penalty);
+    scoreSteps.push({
+      kind: 'rules',
+      label: scoreCopy.rules,
+      detail: rules
+        ? fmt(scoreCopy.rulesDetail, { counted: rules.counted, programs: rules.programs.length, load: rules.rawLoad })
+        : breakdown.unclassifiedOnly ? fmt(scoreCopy.rulesUnclassified, { n: breakdown.unclassifiedOnly }) : scoreCopy.rulesNone,
+      value: applied ? breakdown.editorial - rules!.penalty : breakdown.editorial,
+      delta: applied ? rules!.penalty : 0,
+      note: rules && rules.penalty && !applied ? scoreCopy.rulesNotApplied : undefined,
+    });
+  }
+  if (breakdown.trustpilotCap) scoreSteps.push({ kind: 'trustpilot', label: scoreCopy.trustpilotCap, detail: fmt(scoreCopy.trustpilotCapDetail, { cap: breakdown.trustpilotCap.cap }), value: breakdown.trustpilotCap.cap, delta: breakdown.trustpilotCap.before - breakdown.trustpilotCap.cap });
+  if (breakdown.closedCap) scoreSteps.push({ kind: 'closed', label: scoreCopy.closedCap, detail: fmt(scoreCopy.closedCapDetail, { cap: breakdown.closedCap.cap }), value: breakdown.closedCap.cap, delta: breakdown.closedCap.before - breakdown.closedCap.cap });
+  const scoreView: ScoreBreakdownView = {
+    name: firm.name,
+    score: firm.score,
+    tone: scoreTone(firm.score),
+    steps: scoreSteps,
+    signals: [
+      { label: f.legal, value: v(regulatoryAudit.riskLevel), tone: legalTone(regulatoryAudit.riskLevel) },
+      { label: f.payout, value: v(toEnglishText(firm.reviewSignals.payoutRisk)), tone: payoutTone(firm.reviewSignals.payoutRisk) },
+      { label: f.trustpilot, value: v(trustpilotPip(firm).value), tone: trustpilotPip(firm).tone },
+      { label: scoreCopy.reviewed, value: formatDateLong(locale, firm.lastReviewed), tone: 'none' },
+    ],
+    programs: breakdown.rules?.programs.map(({ name, load }) => ({ name: tx(name), load })) ?? [],
+    heaviest: breakdown.rules?.heaviest.map(({ rule, points }) => {
+      const text = tx(rule.rule);
+      return {
+        text: text.length > 170 ? `${text.slice(0, 167).trimEnd()}…` : text,
+        program: tx(rule.program),
+        severity: f.rulesSeverity[rule.severity!],
+        severityKey: rule.severity!,
+        clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
+        points: Math.round(points * 10) / 10,
+      };
+    }) ?? [],
+    rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
+    methodHref: L('/audit'),
+    rulesHref: '#rules',
+  };
   const isClosedOrParked = firm.status === 'Fermée'
     || /\b(?:domain.sale|for sale|parked|listed for sale|domain sold|acquired|acquisition)\b/i.test(firm.listedDomainWarning ?? '');
   const firmDecision = decisionLabel(firm);
@@ -883,7 +932,9 @@ export default async function FirmPage({ params }: Props) {
           )}
 
           <aside className="pr-firm-scorecard" aria-label={fmt(f.scoreAria, { name: firm.name })}>
-            <ScoreRing score={firm.score} size="lg" animate />
+            <ScoreBreakdownDialog view={scoreView} copy={scoreCopy}>
+              <ScoreRing score={firm.score} size="lg" animate />
+            </ScoreBreakdownDialog>
             <div className="pr-firm-scorecard-body">
               <span className="pr-firm-scorecard-label">{f.propradarScore}</span>
               {isClosedOrParked ? <ClosedFirmArchiveLabel locale={locale} /> : null}
