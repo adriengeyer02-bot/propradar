@@ -122,7 +122,7 @@ const ha: Messages = {
     toolsTitle: 'Zaɓi matakin bincike na gaba.',
     toolsNote: 'Hanyoyi huɗu na yanke shawara bisa hujja.',
     tools: [
-      { label: 'Mai kwatantawa', title: 'Kwatanta prop firm {count} tare.',
+      { label: 'Mai kwatantawa', title: 'Kwatanta prop firm daban-daban.',
         text: 'Tace da maki, kasuwa, haɗarin biyan riba, farashi da dokoki.',
         action: 'Buɗe mai kwatantawa' },
       { label: 'Jagorar challenge', title: 'Ta yaya challenge yake aiki?',

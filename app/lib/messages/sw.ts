@@ -114,7 +114,7 @@ const sw: Messages = {
     toolsEyebrow: 'Zana kuu', toolsTitle: 'Chagua hatua ya utafiti.',
     toolsNote: 'Njia nne za kufanya uamuzi kwa kutumia ushahidi.',
     tools: [
-      { label: 'Kilinganishi', title: 'Linganisha prop firm {count} sambamba.',
+      { label: 'Kilinganishi', title: 'Linganisha prop firm mbalimbali sambamba.',
         text: 'Chuja kwa alama, masoko, hatari ya malipo na sheria, bei na masharti.', action: 'Fungua kilinganishi' },
       { label: 'Mwongozo wa challenge', title: 'Challenge ya prop firm hufanyaje kazi?',
         text: 'Kagua ada, malengo ya faida, hasara za siku na drawdown kwa vyanzo rasmi.', action: 'Linganisha challenge' },

@@ -127,7 +127,7 @@ const am: Messages = {
     toolsTitle: 'ቀጣዩን የምርምር ደረጃ ይምረጡ።',
     toolsNote: 'በማስረጃ የተመሠረቱ አራት የውሳኔ መንገዶች።',
     tools: [
-      { label: 'ማነፃፀሪያ', title: '{count} prop firm አነፃፅር።',
+      { label: 'ማነፃፀሪያ', title: 'prop firm አነፃፅር።',
         text: 'በውጤት፣ በገበያ፣ በክፍያ አደጋ፣ በዋጋና በህጎች ያጣሩ።',
         action: 'ማነፃፀሪያ ይክፈቱ' },
       { label: 'የchallenge መመሪያ', title: 'የprop firm challenge እንዴት ይሠራል?',
