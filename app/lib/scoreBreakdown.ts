@@ -25,7 +25,7 @@ export type ScoreBreakdown = {
   };
   /** Rules shown on the page that are not classified yet (no scoring fields). */
   unclassifiedOnly: number;
-  trustpilotCap?: { cap: number; before: number };
+  trustpilot?: { penalty: number; included: boolean; before: number };
   closedCap?: { cap: number; before: number };
   final: number;
   maxPenalty: number;
@@ -36,7 +36,7 @@ export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
   const allRules = update?.restrictiveRules ?? [];
   const result = computeRulesPenalty(update);
   const applied = Boolean(firm.rulesPenalty);
-  const editorial = firm.rulesPenalty?.before ?? firm.scoreCap?.before ?? firm.closedCap?.before ?? firm.score;
+  const editorial = firm.rulesPenalty?.before ?? firm.trustpilotPenalty?.before ?? firm.closedCap?.before ?? firm.score;
   const heaviest = allRules
     .filter(isScoredRule)
     .map((rule) => ({ rule, points: rulePoints(rule) }))
@@ -56,7 +56,7 @@ export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
         }
       : undefined,
     unclassifiedOnly: result ? 0 : allRules.length,
-    trustpilotCap: firm.scoreCap ? { cap: firm.scoreCap.cap, before: firm.scoreCap.before } : undefined,
+    trustpilot: firm.trustpilotPenalty,
     closedCap: firm.closedCap,
     final: firm.score,
     maxPenalty: RULES_PENALTY_MAX,

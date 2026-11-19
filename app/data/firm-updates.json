@@ -1796,17 +1796,22 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 62 to 66: the earlier manual deduction (\"Explicit two-minute minimum hold, 1%/2% funded Guardian Shield, payout split drop to 50% at first Instant Shield trigger, second hard breach, 20% best-day Instant ratio. Score 66 to 62.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Trustpilot again withholds the rating with a guideline-breach and fake-review-removal notice (checked on www and uk). The 7 November rating (3.1/5) is no longer shown; that earlier lift stays in this history. The single Trustpilot −6 of the 19 November scale now applies.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "incidents"]
         }
       ],
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "addIncidents": [
+        "Trustpilot check on 2026-11-19: the profile again shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" (2,125 reviews listed; same notice on uk.trustpilot.com). Trustpilot does not say who wrote the removed reviews. The rating seen again on 2026-11-07 stays in the update history (https://www.trustpilot.com/review/blueguardian.com).",
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/blueguardian.com)."
       ],
       "set": {
-        "trustpilotRating": 3.1,
-        "trustpilotReviewCount": 2151,
+        "trustpilotReviewCount": 2125,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/blueguardian.com",
-        "trustpilotNoticeLifted": "2026-11-07",
         "drawdownType": "Hybride",
         "score": 66,
         "verdict": "Blue Guardian sells genuinely different 2026 challenge and instant models. Most one-step/instant CFDs trail closed balance, whereas 2-Step Standard and Nano are static. Published anti-tick-scalping terms require a two-minute trade hold on relevant CFD offers; the FAQ reviewed does not specify an SL/TP exception, so PropRadar does not assume one. Instant Standard Guardian Shield triggers at 1% combined floating loss: first trigger permanently cuts profit split to 50%, second closes the account. These especially restrictive conditions lower the editorial score from 66 to 62/100.",
@@ -7814,11 +7819,12 @@
         }
       ],
       "set": {
-        "score": 58,
+        "score": 60,
         "payoutDelay": "Model-dependent eligibility; requests on weekdays, normally processed in 2 business days after first-payout KYC. Minimum $100 except Instant Daily; payout caps, deductions and a 3% processing fee apply.",
         "verdict": "GOAT Funded Trader remains commercially active and publishes a detailed payout help centre, but its high-friction reward rules and the Trustpilot rating-withholding/fake-review notice make it a watchlist firm. The score is 58/100: review integrity is penalized by eight points in the editorial calibration, while further caution reflects deductions, eligibility tests and risk-team discretion. The existence of customer complaints does not establish that any specific payout was improperly refused.",
         "auditSummary": "18 November 2026 programme deep dive adds model-specific conditions to the existing 58/100 Trustpilot and payout-integrity review. 1-Step post-1-August 2026: 10% evaluation target, 3% daily, 6% static maximum, three profitable days; initial two payouts capped at 6% of initial size or $10K and profits above $3,000 on a day removed. 2-Step Standard: 8%/6% goals, 4% daily and 10% fixed total; funded GOAT Guard can cut the split to 50% at 2% simultaneous floating loss, and repeat breach closes, while some cheaper 1% Guard offers trigger immediate closure. Instant GOAT: 6% real-time equity trailing max, 3% daily, 2% simultaneous floating hard loss, 15% best-day and five days ≥0.5% before rewards. Instant Premium: 6% trailing, 1% floating hard loss for purchases after 2 September, five 0.5%-profitable days, no blanket concentration. Instant Daily: 3% real-time trailing, only 1% floating loss, expires after 30 days, payout per request limited to 1%-3% account size; payout locks floor at original capital, so emptying remaining profits can immediately breach. Existing initial reward restrictions, account matching, KYC and Trustpilot withhold notice remain intact. 58 points unchanged; do not assert review-removal attribution or universal programme rules.",
-        "drawdownType": "Hybride"
+        "drawdownType": "Hybride",
+        "trustpilotPenaltyIncluded": "2026-11-19"
       },
       "changelog": [
         {
@@ -7872,9 +7878,15 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Recalibrated to the 19 November Trustpilot scale: the 18 November editorial score explicitly embedded an eight-point Trustpilot review-integrity penalty; the scale is now a single six-point deduction, so the two excess points are restored (editorial score 58 to 60). The six points stay included in this editorial score and are not deducted again. Other documented deductions (reward caps, deductions, eligibility and risk-review constraints) are unchanged.",
+          "source": "https://www.trustpilot.com/review/goatfundedtrader.com",
+          "fields": ["score", "trustpilotPenaltyIncluded"]
         }
       ],
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "addIncidents": [
         "Trustpilot check on 2026-10-23: the profile shows no TrustScore and states \"This company's rating is unavailable due to a breach of our guidelines.\" and \"We've removed a number of fake reviews for this company.\" Trustpilot shows no date for these notices (https://www.trustpilot.com/review/goatfundedtrader.com)."
       ],

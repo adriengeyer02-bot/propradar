@@ -77,6 +77,12 @@ export type FirmUpdate = {
      * shown again. Needs Geyer's approval (the validator flags it).
      */
     trustpilotNoticeLifted: string;
+    /**
+     * Date of the dated editorial review whose `score` already includes the
+     * single Trustpilot −6 (SCORING.md 1): the pipeline then does not deduct
+     * it again. Absent = the −6 is applied automatically while the notice is current.
+     */
+    trustpilotPenaltyIncluded: string;
     /** Corrects the listed official site (the base profile pointed to the wrong domain). */
     officialWebsite: string;
     /** Verified locally stored historical brand logo. Never used as a purchase link. */

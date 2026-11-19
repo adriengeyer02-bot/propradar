@@ -610,7 +610,13 @@ export default async function FirmPage({ params }: Props) {
       note: rules && rules.penalty && !applied ? scoreCopy.rulesNotApplied : undefined,
     });
   }
-  if (breakdown.trustpilotCap) scoreSteps.push({ kind: 'trustpilot', label: scoreCopy.trustpilotCap, detail: fmt(scoreCopy.trustpilotCapDetail, { cap: breakdown.trustpilotCap.cap }), value: breakdown.trustpilotCap.cap, delta: breakdown.trustpilotCap.before - breakdown.trustpilotCap.cap });
+  if (breakdown.trustpilot) scoreSteps.push({
+    kind: 'trustpilot',
+    label: scoreCopy.trustpilotCap,
+    detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
+    value: breakdown.trustpilot.before - breakdown.trustpilot.penalty,
+    delta: breakdown.trustpilot.penalty,
+  });
   if (breakdown.closedCap) scoreSteps.push({ kind: 'closed', label: scoreCopy.closedCap, detail: fmt(scoreCopy.closedCapDetail, { cap: breakdown.closedCap.cap }), value: breakdown.closedCap.cap, delta: breakdown.closedCap.before - breakdown.closedCap.cap });
   const scoreView: ScoreBreakdownView = {
     name: firm.name,
@@ -941,7 +947,7 @@ export default async function FirmPage({ params }: Props) {
               {isClosedOrParked ? <ClosedFirmArchiveLabel locale={locale} /> : null}
               <strong className={`pr-firm-decision pr-tone-${decisionTone(firmDecision)}`}>{f.decision[firmDecision]}</strong>
               {firm.rulesPenalty ? <p className="pr-score-cap"><a href="#rules">{fmt(f.rulesPenaltyNote, { penalty: firm.rulesPenalty.penalty, before: firm.rulesPenalty.before })}</a></p> : null}
-              {firm.scoreCap ? <p className="pr-score-cap">{fmt(f.scoreCapped, { cap: firm.scoreCap.cap, before: firm.scoreCap.before })}</p> : null}
+              {firm.trustpilotPenalty?.penalty ? <p className="pr-score-cap">{fmt(scoreCopy.trustpilotNote, { penalty: firm.trustpilotPenalty.penalty, before: firm.trustpilotPenalty.before })}</p> : null}
               <div className="pr-scorecard-pips">
                 <RiskPip label={f.payout} value={v(toEnglishText(firm.reviewSignals.payoutRisk))} tone={payoutTone(firm.reviewSignals.payoutRisk)} />
                 <RiskPip label={f.legal} value={v(regulatoryAudit.riskLevel)} tone={legalTone(regulatoryAudit.riskLevel)} />
