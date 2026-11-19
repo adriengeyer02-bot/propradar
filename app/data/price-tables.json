@@ -525,6 +525,191 @@
           ]
         }
       ]
-    }
-  }
+    },
+    "atmos-funded": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "1-Step Nova (funded fee after passing)", "productId": "atmos-nova", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.atmosfunded.com/en/articles/13959447-nova-challenge",
+          "note": "Rows are the funded fee paid after passing; the evaluation itself costs $5 for any size.",
+          "rows": [{ "size": 10000, "price": 79 }, { "size": 25000, "price": 184 }, { "size": 50000, "price": 345 }, { "size": 100000, "price": 569 }, { "size": 200000, "price": 1029 }]
+        },
+        {
+          "name": "2-Step Standard", "productId": "atmos-2-step-standard", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.atmosfunded.com/en/articles/12380559-2-step-standard-challenge",
+          "note": "Help-centre list prices; homepage price grid is JavaScript-only.",
+          "rows": [{ "size": 5000, "price": 63 }, { "size": 10000, "price": 94 }, { "size": 25000, "price": 214 }, { "size": 50000, "price": 329 }, { "size": 100000, "price": 549 }, { "size": 200000, "price": 989 }]
+        },
+        {
+          "name": "Instant Funding", "productId": "atmos-instant-funding", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://help.atmosfunded.com/en/articles/12380563-instant-funding",
+          "rows": [{ "size": 5000, "price": 75 }, { "size": 10000, "price": 124 }, { "size": 25000, "price": 240 }, { "size": 50000, "price": 374 }, { "size": 100000, "price": 649 }]
+        }
+      ]
+    },
+    "dna-funded": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "2 Phase", "productId": "dna-2-phase-march-2026", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://dnafunded.com/product-category/two-phase/",
+          "note": "Single price shown per product, no sale price; product pages state 'New orders are currently paused'.",
+          "rows": [{ "size": 5000, "price": 49 }, { "size": 10000, "price": 79 }, { "size": 25000, "price": 159 }, { "size": 50000, "price": 289 }, { "size": 100000, "price": 549 }, { "size": 200000, "price": 1079 }]
+        },
+        {
+          "name": "Instant Funding", "productId": "dna-instant-march-2026", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://dnafunded.com/product-category/instant-funding/",
+          "note": "Single price shown per product, no sale price; the page states new orders are currently paused.",
+          "rows": [{ "size": 5000, "price": 199 }, { "size": 10000, "price": 309 }, { "size": 25000, "price": 559 }, { "size": 50000, "price": 979 }]
+        }
+      ]
+    },
+    "e8-futures": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "E8 Signature Futures", "productId": "e8-signature-futures", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://e8futures.com/e8-signature-futures",
+          "note": "Struck-through list prices; shown with 25% off ($90 / $128 / $210 / $338). The Signature page does not state the billing; the E8 Zero and home pages call futures challenge fees one-time.",
+          "rows": [{ "size": 25000, "price": 120 }, { "size": 50000, "price": 170 }, { "size": 100000, "price": 280 }, { "size": 150000, "price": 450 }]
+        },
+        {
+          "name": "E8 Zero MAX (80% split)", "productId": "e8-zero-max", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://e8futures.com/e8-zero",
+          "note": "Struck-through list prices in the configurator with MAX selected; shown with 35% off ($149 / $214 / $383 / $708). The 100% split option costs more (amount not stated).",
+          "rows": [{ "size": 25000, "price": 228 }, { "size": 50000, "price": 328 }, { "size": 100000, "price": 588 }, { "size": 200000, "price": 1088 }]
+        }
+      ]
+    },
+    "funded-bull": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "2 Step Challenge", "productId": "funded-bull-2-step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedbull.com/",
+          "note": "Only the $25K price is shown on the homepage ($189 list, $152 with the BULL 20% code); other sizes not readable because the checkout blocks automated reading.",
+          "rows": [{ "size": 25000, "price": 189 }]
+        }
+      ]
+    },
+    "funded-futures-network": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "MAX Standard", "productId": "funded-futures-network-max-standard", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://fundedfuturesnetwork.com/accounts",
+          "note": "List prices; the page also shows prices after the 70% NEXUS code.",
+          "rows": [{ "size": 25000, "price": 148 }, { "size": 50000, "price": 178 }, { "size": 100000, "price": 348 }, { "size": 150000, "price": 408 }, { "size": 250000, "price": 658 }]
+        },
+        {
+          "name": "STEADY", "productId": "funded-futures-network-steady", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://steady.fundedfuturesnetwork.com/",
+          "note": "List prices; the page also shows prices after the 50% DOUBLE50 code.",
+          "rows": [{ "size": 25000, "price": 149 }, { "size": 50000, "price": 229 }, { "size": 100000, "price": 308 }, { "size": 150000, "price": 585 }, { "size": 250000, "price": 750 }]
+        }
+      ]
+    },
+    "klein-funding-crypto": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "1-Step Evaluation", "productId": "klein-funding-1step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://kleinfunding.com/faqs",
+          "note": "Sizes are stated as \"up to\" each amount; no price shown as discounted.",
+          "rows": [{ "size": 6000, "price": 49 }, { "size": 13000, "price": 99 }, { "size": 30000, "price": 239 }, { "size": 50000, "price": 339 }, { "size": 100000, "price": 539 }]
+        },
+        {
+          "name": "2-Step Evaluation", "productId": "klein-funding-2step", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://kleinfunding.com/faqs",
+          "note": "Sizes are stated as \"up to\" each amount; no price shown as discounted.",
+          "rows": [{ "size": 6000, "price": 49 }, { "size": 13000, "price": 99 }, { "size": 30000, "price": 199 }, { "size": 50000, "price": 279 }, { "size": 100000, "price": 439 }]
+        }
+      ]
+    },
+    "lvlup-futures": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "Lvlup Evaluation (one-time)", "productId": "lvlup-futures-lvlup", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://lvlupfutures.com/",
+          "note": "\"Regular price from\" before the NOV26 40% coupon. Activation fee due after passing.",
+          "rows": [{ "size": 25000, "price": 194 }, { "size": 50000, "price": 338 }, { "size": 100000, "price": 554 }, { "size": 150000, "price": 714 }]
+        },
+        {
+          "name": "Lvlup Evaluation (monthly)", "productId": "lvlup-futures-lvlup", "billing": "monthly", "currency": "USD",
+          "sourceUrl": "https://lvlupfutures.com/",
+          "note": "\"Regular price from\" per month before the NOV26 coupon (coupon applies to the first month). Activation fee due after passing.",
+          "rows": [{ "size": 25000, "price": 117 }, { "size": 50000, "price": 201 }, { "size": 100000, "price": 345 }, { "size": 150000, "price": 476 }]
+        },
+        {
+          "name": "Starter Evaluation", "productId": "lvlup-futures-starter", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://lvlupfutures.com/",
+          "note": "\"Regular price from\" before the NOV26 40% coupon. No activation fee.",
+          "rows": [{ "size": 25000, "price": 129 }, { "size": 50000, "price": 194 }, { "size": 100000, "price": 259 }, { "size": 150000, "price": 324 }]
+        }
+      ]
+    },
+    "top-one-futures": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "Elite DAILY", "productId": "top-one-elite-daily", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://toponefutures.com/",
+          "note": "Crossed-out one-time list prices; monthly billing also offered. Sale prices with code BLACKFRIDAY not recorded.",
+          "rows": [{ "size": 25000, "price": 178 }, { "size": 50000, "price": 218 }, { "size": 100000, "price": 398 }, { "size": 150000, "price": 549 }]
+        },
+        {
+          "name": "Instant Sim Funded", "productId": "top-one-instant-sim-funded", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://toponefutures.com/",
+          "rows": [{ "size": 25000, "price": 419 }, { "size": 50000, "price": 679 }, { "size": 100000, "price": 821 }, { "size": 150000, "price": 939 }]
+        },
+        {
+          "name": "Ignite", "productId": "top-one-ignite", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://toponefutures.com/",
+          "rows": [{ "size": 25000, "price": 218 }, { "size": 50000, "price": 398 }, { "size": 100000, "price": 563 }, { "size": 150000, "price": 799 }]
+        }
+      ]
+    },
+    "top-one-trader": {
+      "checkedOn": "2026-11-19",
+      "programs": [
+        {
+          "name": "1-Step FLASH", "productId": "top-one-trader-flash", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.toponetrader.com/coupon-code-pricing",
+          "note": "Struck-through list prices; the $1,079 tier is labelled $200K on the homepage (the coupon page repeats '$100,000').",
+          "rows": [{ "size": 5000, "price": 64 }, { "size": 10000, "price": 107 }, { "size": 25000, "price": 215 }, { "size": 50000, "price": 286 }, { "size": 100000, "price": 575 }, { "size": 200000, "price": 1079 }]
+        },
+        {
+          "name": "2-Step PRO (V2)", "productId": "top-one-trader-2-step-pro", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.toponetrader.com/",
+          "note": "List prices before the BLACKFRIDAY code; same originals on the coupon-code pricing page except $300K, which is priced on the homepage only.",
+          "rows": [{ "size": 5000, "price": 69 }, { "size": 10000, "price": 162 }, { "size": 25000, "price": 209 }, { "size": 50000, "price": 435 }, { "size": 100000, "price": 541 }, { "size": 150000, "price": 863 }, { "size": 300000, "price": 1398 }]
+        },
+        {
+          "name": "2-Step Plus", "productId": "top-one-trader-2-step-plus", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.toponetrader.com/coupon-code-pricing",
+          "note": "Struck-through list prices before the SUMMER code.",
+          "rows": [{ "size": 5000, "price": 78 }, { "size": 10000, "price": 149 }, { "size": 25000, "price": 315 }, { "size": 50000, "price": 510 }, { "size": 100000, "price": 998 }]
+        },
+        {
+          "name": "Instant Funding", "productId": "top-one-trader-instant-funding", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.toponetrader.com/coupon-code-pricing",
+          "note": "Struck-through list prices (15% consistency variant).",
+          "rows": [{ "size": 5000, "price": 135 }, { "size": 10000, "price": 226 }, { "size": 25000, "price": 423 }, { "size": 50000, "price": 586 }, { "size": 100000, "price": 1142 }, { "size": 200000, "price": 2537 }]
+        },
+        {
+          "name": "Instant Prime Exclusive", "productId": "top-one-trader-instant-prime", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.toponetrader.com/coupon-code-pricing",
+          "note": "Struck-through list prices.",
+          "rows": [{ "size": 5000, "price": 94 }, { "size": 10000, "price": 223 }, { "size": 25000, "price": 296 }, { "size": 50000, "price": 410 }, { "size": 100000, "price": 798 }, { "size": 200000, "price": 1776 }]
+        },
+        {
+          "name": "Magnum", "productId": "top-one-trader-magnum", "billing": "one-time", "currency": "USD",
+          "sourceUrl": "https://www.toponetrader.com/coupon-code-pricing",
+          "note": "Struck-through list prices; offered as a limited-time account, one per customer.",
+          "rows": [{ "size": 500000, "price": 3495 }, { "size": 1000000, "price": 5995 }]
+        }
+      ]
+    }  }
 }
