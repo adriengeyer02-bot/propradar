@@ -6,6 +6,8 @@ export type ProgramPromotion = {
   productIds: string[];
   offer: string;
   code?: string;
+  /** Account sizes whose published list price should be visible beside this offer. */
+  highlightedSizes?: number[];
   terms: string;
   sourceUrl: string;
   checkedOn: string;

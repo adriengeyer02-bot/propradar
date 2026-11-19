@@ -547,6 +547,8 @@ const it: Messages = {
     oneTime: "una tantum",
     priceSource: "Pagina prezzi",
     pricePromoTitle: "Offerta per questo programma",
+    pricePromoTermsLabel: "Condizioni e fonte dell'offerta",
+    programDetails: "Fasi e regole del programma",
     pricePromoCode: "Codice",
     pricePromoExpires: "Scade il",
     pricePromoCheckout: "Verifica lo sconto e il totale prima del pagamento.",

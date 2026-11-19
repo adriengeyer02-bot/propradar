@@ -547,6 +547,8 @@ const zh: Messages = {
     "oneTime": "一次性",
     "priceSource": "价格页面",
     pricePromoTitle: '此项目优惠',
+    pricePromoTermsLabel: '优惠条件与来源',
+    programDetails: '项目阶段与规则',
     pricePromoCode: '优惠码',
     pricePromoExpires: '截止日期',
     pricePromoCheckout: '付款前请核对折扣和最终金额。',

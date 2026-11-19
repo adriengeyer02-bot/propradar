@@ -551,6 +551,8 @@ const en = {
     oneTime: "one-time",
     priceSource: "Pricing page",
     pricePromoTitle: "Offer on this program",
+    pricePromoTermsLabel: "Offer terms and source",
+    programDetails: "Program steps and rules",
     pricePromoCode: "Code",
     pricePromoExpires: "Ends",
     pricePromoCheckout: "Confirm the discount and final total at checkout.",

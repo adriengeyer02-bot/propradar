@@ -2,6 +2,41 @@
   "version": 1,
   "promotions": [
     {
+      "id": "fundednext-novstr-stellar-two-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-two-current"],
+      "offer": "6K · $34.99 · −41% / −30% US", "code": "NOVSTR",
+      "highlightedSizes": [6000],
+      "terms": "Only Stellar 2-Step 6K: $59.99 to $34.99 globally (41% off), or $49.99 to $34.99 in the US (30% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
+      "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
+      "checkedOn": "2026-11-19"
+    },
+    {
+      "id": "fundednext-novstr-stellar-one-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-one-current"],
+      "offer": "6K · $44.99 · −31% / −19% US", "code": "NOVSTR",
+      "highlightedSizes": [6000],
+      "terms": "Only Stellar 1-Step 6K: $65.99 to $44.99 globally (31% off), or $55.99 to $44.99 in the US (19% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
+      "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
+      "checkedOn": "2026-11-19"
+    },
+    {
+      "id": "fundednext-novstr-stellar-lite-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-lite-current"],
+      "offer": "5K · $29.99 · −9%", "code": "NOVSTR",
+      "highlightedSizes": [5000],
+      "terms": "Only Stellar Lite 5K: $32.99 to $29.99 (9% off), including in the US. Larger sizes are excluded. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
+      "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
+      "checkedOn": "2026-11-19"
+    },
+    {
+      "id": "fundednext-novins-stellar-instant-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-instant-current"],
+      "offer": "−30% · 2K–20K", "code": "NOVINS",
+      "terms": "30% off all Stellar Instant account sizes, including the US. One use per trader; resets excluded. Double Up add-on is disabled during the offer. No fixed end date has been published; confirm eligibility and total at checkout.",
+      "sourceUrl": "https://help.fundednext.com/en/articles/17833714-what-is-the-fundednext-stellar-instant-november-kickoff-offer",
+      "checkedOn": "2026-11-19"
+    },
+    {
       "id": "fundedtradingplus-size20-2026", "slug": "funded-trading-plus",
       "productIds": ["ftp-express-current", "ftp-classic-current"],
       "offer": "−20% (100K–200K)", "code": "SIZE20",

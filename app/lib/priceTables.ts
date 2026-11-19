@@ -30,9 +30,13 @@ export function priceTableSlugs() {
 }
 
 /** Show familiar account sizes in the product card, leaving all tiers in the table. */
-export function pricePreviewRows(program: PriceProgram): PriceRow[] {
+export function pricePreviewRows(program: PriceProgram, highlightedSizes: number[] = []): PriceRow[] {
   const familiar = program.rows.filter((row) => [25000, 50000, 100000].includes(row.size));
-  return (familiar.length ? familiar : program.rows).slice(0, 3);
+  const preview = (familiar.length ? familiar : program.rows).slice(0, 3);
+  const highlighted = program.rows.filter((row) => highlightedSizes.includes(row.size));
+  return highlighted.length
+    ? [...highlighted, ...preview.filter((row) => !highlighted.includes(row))].slice(0, 3)
+    : preview;
 }
 
 const SYMBOL: Record<PriceProgram['currency'], string> = { USD: '$', EUR: '€', GBP: '£' };

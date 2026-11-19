@@ -1026,25 +1026,17 @@ export default async function FirmPage({ params }: Props) {
         {firm.products.length > 0 ? (
           <div className="grid-2">
             {firm.products.map((product) => (
-              <article className="card product-card pr-product" key={product.id}>
+              <article className="card product-card pr-product pr-product-compact" key={product.id}>
                 <div className="pr-product-tags">
                   <span className="pr-tag">{v(product.type)}</span>
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
                 <h3>{tx(product.name)}</h3>
-                <p className="muted">{tx(product.description)}</p>
-                <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
-                <dl className="pr-product-meta">
-                  <div>
-                    <dt>{f.gaps['Drawdown type']}</dt>
-                    <dd>
-                      <strong>{product.drawdownType ? tx(product.drawdownType) : f.rulesEmptyTag}</strong>
-                      {product.drawdownDetails ? <span className="pr-product-dd-detail">{tx(product.drawdownDetails)}</span> : null}
-                      {product.drawdownSource ? <a className="pr-product-dd-source" href={product.drawdownSource} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}
-                    </dd>
-                  </div>
-                  <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
-                  <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
+                <p className="muted pr-product-intro">{tx(product.description)}</p>
+                <dl className="pr-product-highlights">
+                  <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
+                  <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
+                  <div><dt>{f.path.paid}</dt><dd>{tx(product.profitSplit)}</dd></div>
                 </dl>
                 {product.hasConsistencyRule ? (
                   <p className="pr-product-rule pr-tone-watch">
@@ -1057,6 +1049,24 @@ export default async function FirmPage({ params }: Props) {
                     {f.noConsistency}
                   </p>
                 )}
+                {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
+                  <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
+                    <div className="pr-program-promo-head">
+                      <span>{f.pricePromoTitle}</span>
+                      <strong>{promo.offer}</strong>
+                    </div>
+                    {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
+                    <details className="pr-program-promo-details">
+                      <summary>{f.pricePromoTermsLabel}</summary>
+                      <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+                      <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
+                      <div className="pr-program-promo-foot">
+                        <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
+                        <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
+                      </div>
+                    </details>
+                  </aside>
+                )) : null}
                 {firm.status !== 'Fermée' ? priceTable?.programs.filter((program) => program.productId === product.id).map((program) => (
                   <div className="pr-product-prices" key={program.name}>
                     <div className="pr-product-prices-head">
@@ -1064,7 +1074,7 @@ export default async function FirmPage({ params }: Props) {
                       <span>{f.priceList}{program.billing === 'monthly' ? ` ${f.perMonth}` : ''}</span>
                     </div>
                     <div className="pr-product-price-tiers">
-                      {pricePreviewRows(program).map((row) => (
+                      {pricePreviewRows(program, getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? [])).map((row) => (
                         <div className="pr-product-price-tier" key={row.size}>
                           <span>{formatAccountSize(row.size)}</span>
                           <strong>{formatListPrice(row.price, program.currency)}</strong>
@@ -1080,21 +1090,25 @@ export default async function FirmPage({ params }: Props) {
                     </div>
                   </div>
                 )) : null}
-                {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
-                  <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
-                    <div className="pr-program-promo-head">
-                      <span>{f.pricePromoTitle}</span>
-                      <strong>{promo.offer}</strong>
-                    </div>
-                    {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
-                    <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
-                    <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
-                    <div className="pr-program-promo-foot">
-                      <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
-                      <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
-                    </div>
-                  </aside>
-                )) : null}
+                <details className="pr-product-details">
+                  <summary>{f.programDetails}</summary>
+                  <div className="pr-product-details-content">
+                    <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
+                    <dl className="pr-product-meta">
+                      <div>
+                        <dt>{f.gaps['Drawdown type']}</dt>
+                        <dd>
+                          <strong>{product.drawdownType ? tx(product.drawdownType) : f.rulesEmptyTag}</strong>
+                          {product.drawdownDetails ? <span className="pr-product-dd-detail">{tx(product.drawdownDetails)}</span> : null}
+                          {product.drawdownSource ? <a className="pr-product-dd-source" href={product.drawdownSource} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}
+                        </dd>
+                      </div>
+                      <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
+                      <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
+                    </dl>
+                    {product.hasConsistencyRule ? <p className="pr-product-rule pr-tone-watch">{tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}</p> : null}
+                  </div>
+                </details>
                 {firm.status !== 'Fermée' && (firm.partnerOffer?.href || product.linkToStart) ? (
                   <a
                     href={firm.partnerOffer?.href || product.linkToStart}

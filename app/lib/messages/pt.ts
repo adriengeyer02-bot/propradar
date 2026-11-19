@@ -635,6 +635,8 @@ const pt: Messages = {
     "oneTime": "pagamento único",
     "priceSource": "Página de preços",
     "pricePromoTitle": "Oferta para este programa",
+    "pricePromoTermsLabel": "Condições e fonte da oferta",
+    "programDetails": "Etapas e regras do programa",
     "pricePromoCode": "Código",
     "pricePromoExpires": "Termina em",
     "pricePromoCheckout": "Confirme o desconto e o total antes de pagar.",
