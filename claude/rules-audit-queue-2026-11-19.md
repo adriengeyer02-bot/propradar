@@ -26,16 +26,22 @@ Before this batch: **197 profiles, 118 with categorised rules, 79 without**. Of 
 
 Neither firm is marked "fully audited" by this pass. These are **potential contractual consequences**, not independently established payout refusal incidents.
 
-**Calculated movement on the new non-overlapping PR, for Adrien's approval:**
+**Recalibrated movement on the non-overlapping PR, for Adrien's review:**
 
 | Firm | Existing public score | Proposed score | Computed rules deduction | Other applied deduction |
 | --- | ---: | ---: | ---: | ---: |
-| Forex Funds Flow | 57 | **48** | −9 | None |
+| Forex Funds Flow | 57 | **51** | −6 | None |
 
 This is a formula result, not a manual editorial reduction. It is sensitive and the corresponding PR must remain open for approval. A draft calculation for PipFarm indicated a possible rules deduction of 7; **it is intentionally not included**, because PR #148 already edits its score and contract and still reflects an older Trustpilot scale.
 
 ## Next targets
 
 First resolve the remaining non-closed firms without categorised rules (including Nations Trading, Fundings4u, MiFunder, Purdia Capital and MyFundedCapital) where usable primary documents can be found. Then re-review the 119 profiles with existing structured rules to verify whether all current CGU, FAQs and main programmes have been fully covered. Archived firms remain on the inventory, but historical terms must not be represented as current sales conditions.
+
+### Proportionality recalibration (approved by Adrien, 19 November)
+
+See `claude/rules-calibration-2026-11-19.md` and run `node scripts/report-rules-calibration.cjs` to prioritise **potential** severity/clarity overclassification. A general discretionary power to refuse rewards or close accounts must be counted **once**, not used to inflate every specifically stated trading ban. A navigable, specifically headed official trading-rules section is not automatically `buried` just because it is in the Terms. The source must explicitly state each individual rule's consequence to justify `major` or `blocking`. The broader clause itself can be `blocking` and `vague` if it expressly allows arbitrary reward rejection. This principle awaits synchronized wording in `SCORING.md` under existing PR #186; keep dependent score changes under review until consistent.
+
+**Forex Funds Flow proposed recalibration:** editorial score **57**, raw rule load **42 → 20**, actual rules penalty **−9 → −6**, proposed buyer-facing score **48 → 51**. This corrects the earlier overclassification without removing the disclosed payout-discretion risk. Full programme FAQ and payout audit remain unfinished. **PR #192 still requires owner review; its previous −9 description must be updated before merging.**
 
 Pending owner review: this first batch may change public scores via the activated rules calculator. Do not merge automatically if the validator reports a sensitive movement.
