@@ -4,11 +4,11 @@
 
 | Ensemble | Dossiers dans la file | Fiches V5 complètes | En attente V5 |
 | --- | ---: | ---: | ---: |
-| C01–C04, repris de ChatGPT | 66 | 3 (Alpha, Maven approuvées ; TradeDay proposée) | 63 |
+| C01–C04, repris de ChatGPT | 66 | 3 (Alpha, Maven, TradeDay approuvées) | 63 |
 | N01–N03, repris de Claude | 56 | 8 (N01, toutes approuvées) | 48 |
-| **Total** | **122** | **11 (dont 10 publiées)** | **111** |
+| **Total** | **122** | **11 (dont 11 approuvées)** | **111** |
 
-Chaque fiche V5 complète contient les 13 sous-notes sourcées, les retraits B2, l'état Trustpilot, la confiance et l'ancienne note. La publication des **10 fiches approuvées** est verrouillée dans `app/data/scoring-v5-published.json` par **slug + date + score final**. **TradeDay 75→67 est une proposition sensible non approuvée : sa note publique reste inchangée.** Les 111 dossiers non réaudités conservent leur score antérieur, identifié par la méthode historique au clic.
+Chaque fiche V5 complète contient les 13 sous-notes sourcées, les retraits B2, l'état Trustpilot, la confiance et l'ancienne note. La publication des **11 fiches approuvées** est verrouillée dans `app/data/scoring-v5-published.json` par **slug + date + score final**. **TradeDay 75→67 a reçu l'accord explicite d'Adrien après la proposition #239.** Les 111 dossiers non réaudités conservent leur score antérieur, identifié par la méthode historique au clic.
 
 Prochain ordre d'instruction :
 
