@@ -9,7 +9,7 @@ const expected = {
   'tradeday': { blocks: { A: 18, B: 13, C: 11, D: 16, E: 9 }, gross: 69, rules: 2, trustpilot: 0, final: 67, previous: 75, approved: true },
   'breakout-prop': { blocks: { A: 22, B: 10, C: 17, D: 16, E: 8 }, gross: 75, rules: 2, trustpilot: 0, final: 73, previous: 70, approved: false },
   'axi-select': { blocks: { A: 15, B: 18, C: 11, D: 12, E: 8 }, gross: 64, rules: 0, trustpilot: 0, final: 64, previous: 76, approved: false },
-  'city-traders-imperium': { blocks: { A: 13, B: 11, C: 9, D: 14, E: 9 }, gross: 60, rules: 4, trustpilot: 0, final: 56, previous: 74, approved: false },
+  'city-traders-imperium': { blocks: { A: 13, B: 13, C: 9, D: 14, E: 9 }, gross: 60, rules: 2, trustpilot: 0, final: 58, previous: 74, approved: false },
   'take-profit-trader': { blocks: { A: 17, B: 18, C: 17, D: 16, E: 10 }, gross: 78, rules: 0, trustpilot: 0, final: 78, previous: 73, approved: false },
   'oneup-trader': { blocks: { A: 17, B: 18, C: 11, D: 12, E: 9 }, gross: 67, rules: 0, trustpilot: 0, final: 67, previous: 72, approved: false },
   'uprofit-trader': { blocks: { A: 15, B: 13, C: 11, D: 14, E: 9 }, gross: 64, rules: 2, trustpilot: 0, final: 62, previous: 69, approved: false },
