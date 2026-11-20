@@ -1,0 +1,162 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "rankStart": 24,
+  "rankEnd": 43,
+  "status": "editorial-draft-not-live",
+  "auditGate": "For every firm check official payout terms, full contract, programme-specific rules, entity, user signals. If the seller is not accepting new customers or the relevant contract cannot be tied to the product, score=null: retain legacy note, confidence limited. No automatic half-points for absent evidence.",
+  "firms": [
+    {
+      "slug": "fxify", "before": 67, "confidence": "moyenne", "scores": {"A":[8,8,5],"B":[7,5,4,5],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/","contract":"https://fxify.com/agreement/","program":"https://fxify.com/faqs/all-faqs/what-are-the-rules-for-the-assessment-account/","entity":"https://fxify.com/agreement/","offer":"https://fxify.com/blog/introducing-fxify-2-phase-pro/"},
+      "b1": "Pratiques interdites interprétables (tailles de positions et expositions jugées excessives) et possibilité de retirer des gains sur violation de conduite ; aucun refus réel inféré.",
+      "b2": "La fréquence des retraits dans l'ancien User Agreement ne recoupe pas directement les nouveaux programmes ; documenter les versions au lieu de dénoncer une contradiction globale.",
+      "b3": "Changements des conditions applicables selon programme et génération ; droits acquis pas intégralement vérifiés.",
+      "hold": "Confirmer le calendrier contractuel des nouveaux comptes et la juridiction effective de l'entité signataire."
+    },
+    {
+      "slug": "tickticktrader", "before": 67, "confidence": "limitee", "scores": null,
+      "sources": {"payout":"https://app.tickticktrader.com/signup/kVBOWMcC?provider=Projectx&type=s2fplus","contract":"https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement","program":"https://app.tickticktrader.com/signup/kVBOWMcC?provider=Projectx&type=s2fplus","entity":"https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement","offer":"https://app.tickticktrader.com/signup/kVBOWMcC?provider=Projectx&type=s2fplus"},
+      "blocker": "Le checkout affiche la suspension des nouvelles ventes et souscriptions durant des changements opérationnels. Vérifier réouverture et droits des clients existants avant d'attribuer une note d'offre active.",
+      "evidence": "https://app.tickticktrader.com/signup/kVBOWMcC?provider=Projectx&type=s2fplus"
+    },
+    {
+      "slug": "funderpro", "before": 67, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[10,5,5,5],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://support.funderpro.com/en/articles/419844-how-does-reward-frequency-and-eligibility-work-for-funderpro-challenges","contract":"https://funderpro.com/instant-account-terms-and-conditions/","program":"https://support.funderpro.com/en/articles/527811-instant-how-drawdown-works-in-instant-program","entity":"https://funderpro.com/terms-conditions/","offer":"https://funderpro.com/how-it-works/"},
+      "b1": "Forfeiture des récompenses en cas de contournement de restrictions ou d'identité, sujet documenté ; distinguer sanction pour fraude de mécanisme de refus arbitraire.",
+      "b2": "Exemple numérique du verrouillage de drawdown Instant divergent entre FAQ et clause signée ; affecter seulement au programme concerné.",
+      "b3": "Droits d'un compte existant si les contrôles de risque évoluent : clause à rapprocher de l'achat et de la date.",
+      "hold": "Notice Trustpilot −6 unique ; résoudre précisément les exemples de drawdown Instant."
+    },
+    {
+      "slug": "tradefundrr", "before": 67, "confidence": "limitee", "scores": null,
+      "sources": {"payout":"https://tradefundrr.com/","contract":"https://tradefundrr.com/options-trader-funding/index.html","program":"https://tradefundrr.com/pages/futures","entity":"https://tradefundrr.com/","offer":"https://tradefundrr.com/stock-trader-funding/index.html"},
+      "blocker": "Frais d'activation et abonnement de plateforme par produit recensés ; le programme Pro implique une contribution de capital personnel et un accord distinct non recoupé. Ne pas rénoter tous les marchés sans cet accord.",
+      "evidence": "https://tradefundrr.com/"
+    },
+    {
+      "slug": "funding-pips", "before": 66, "confidence": "moyenne", "scores": {"A":[9,8,5],"B":[5,7,4,5],"C":[6,3,2],"D":[4,5,5],"E":[4,2,2]},
+      "sources": {"payout":"https://help.fundingpips.com/hc/en-us/articles/34504564970385-Reward-Methods","contract":"https://fundingpips.com/legal/terms-and-conditions","program":"https://help.fundingpips.com/hc/en-us/articles/48368490585105-Compare-Account-Models","entity":"https://fundingpips.com/legal/terms-and-conditions","offer":"https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"},
+      "b1": "CGU autorisent à retenir la rémunération durant des entretiens de risque et à qualifier une conduite interdite à la discrétion du fournisseur ; risque contractuel fort, pas preuve de refus vécu.",
+      "b2": "Payout à la demande/bihebdomadaire et split dépendent du plan ; réconciliation documentaire effectuée par modèle sans faux conflit.",
+      "b3": "Modification des restrictions en cas de suspicion soumise à la discrétion du fournisseur ; protection des rewards déjà éligibles à préciser.",
+      "hold": "Note gagnant 10 points soumise à validation ; vérifier toute mise à jour des conditions et la portée des transferts crypto observés."
+    },
+    {
+      "slug": "brightfunded", "before": 66, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[10,7,5,5],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://brightfunded.com/how-it-works","contract":"https://brightfunded.com/terms-and-conditions","program":"https://help.brightfunded.com/en/articles/18457132-what-are-the-current-rules-for-the-evaluation-process","entity":"https://brightfunded.com/cfds/how-it-works","offer":"https://brightfunded.com/cfds"},
+      "b1": "CGU donnent à la firme le choix d'accepter un trader au programme funded, sans démontrer par cette seule clause un droit de reprendre un payout déjà acquis.",
+      "b2": "Ne pas confondre anciennes évaluations, nouvelles formules CFD et programme Futures aux contrats séparés.",
+      "b3": "Versions historiques et changements à rattacher à la date de commande ; aucune révocation rétroactive prouvée.",
+      "hold": "Notice Trustpilot −6 unique ; demander l'accord funded correspondant à la formule choisie."
+    },
+    {
+      "slug": "pipfarm", "before": 66, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[11,7,5,4],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://help.pipfarm.com/articles/8246911-pay-with-profits-payouts","contract":"https://pipfarm.com/terms-and-conditions","program":"https://help.pipfarm.com/articles/3262423-payout-trailing-instant-account","entity":"https://pipfarm.com/terms-and-conditions","offer":"https://pipfarm.com/"},
+      "b1": "PWP fee sur premier retrait et limites de payout publiques ; pas de perte arbitraire de reward établie à partir de ces seules caractéristiques.",
+      "b2": "FAQ générique, compte Pay with Profits et achats avant/après le 1er novembre ont des caps distincts ; différence de programme/édition, pas contradiction globale démontrée.",
+      "b3": "Protections d'anciennes conditions explicitement décrites pour certains comptes, réévaluer selon date d'achat.",
+      "hold": "Notice Trustpilot −6 unique ; auditer les conditions précises du plan avant toute intégration."
+    },
+    {
+      "slug": "for-traders", "before": 66, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[10,7,4,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://fortraders.com/terms-and-conditions","contract":"https://fortraders.com/terms-and-conditions","program":"https://fortraders.com/our-rules","entity":"https://fortraders.com/terms-and-conditions","offer":"https://fortraders.com/how-it-works"},
+      "b1": "Rejet de récompense prévu si paramètres, KYC ou CGU ne sont pas respectés ; la règle chiffrée de concentration de gains reste une condition connue, pas arbitraire par elle-même.",
+      "b2": "Les conditions de consistance ne s'appliquent pas identiquement au Forex Instant, Fast Static et Classic ; conserver le périmètre exact.",
+      "b3": "Clauses de changement et contrat Member Program après passage à vérifier pour les comptes déjà achetés.",
+      "hold": "Notice Trustpilot −6 unique ; vérifier l'accord post-évaluation de chaque programme."
+    },
+    {
+      "slug": "leeloo-trading", "before": 63, "confidence": "moyenne", "scores": {"A":[7,8,1],"B":[7,6,4,4],"C":[6,3,2],"D":[3,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://www.leelootrading.com/terms-of-service","contract":"https://www.leelootrading.com/terms-conditions","program":"https://www.leelootrading.com/support","entity":"https://www.leelootrading.com/terms-of-service","offer":"https://www.leelootrading.com/"},
+      "b1": "Termes 'toxic flow' et 'trading not replicable' non quantifiés utilisés en revue de rémunération ; risque B1, pas incident A2 sans preuve externe distincte.",
+      "b2": "Le plafond lifetime des récompenses ne doit pas être confondu avec un cap par demande et les modèles du compte Performance sont spécifiques.",
+      "b3": "Conséquences de clôture et modifications dans les termes à vérifier pour gains déjà déterminés.",
+      "hold": "Source indépendante de payout et portée des frais récurrents manquantes."
+    },
+    {
+      "slug": "funding-traders", "before": 63, "confidence": "moyenne", "scores": {"A":[8,8,1],"B":[8,7,5,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://fundingtraders.com/withdrawal-policy","contract":"https://fundingtraders.com/terms-of-service","program":"https://fundingtraders.com/help/en/articles/17589312-2-step-day-swing","entity":"https://fundingtraders.com/terms-of-service","offer":"https://fundingtraders.com/"},
+      "b1": "Toute violation des règles peut invalider une demande, mais un texte publié exige aussi la notification de la conformité ; contrôler définitions et droit de contestation.",
+      "b2": "Cycles 21 jours et add-on 14 jours diffèrent explicitement par programme ; n'inférer aucune contradiction automatique.",
+      "b3": "Les conditions de recours et le calendrier durant un appel doivent être examinés pour les rewards déjà dues.",
+      "hold": "Notice Trustpilot −6 unique ; contrôler conditions spécifiques Instant/Next-Gen du compte acheté."
+    },
+    {
+      "slug": "ftuk", "before": 63, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[6,5,3,4],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout","contract":"https://ftuk.com/terms-of-service","program":"https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression","entity":"https://ftuk.com/terms-of-service","offer":"https://ftuk.com/"},
+      "b1": "Clauses de réduction des payouts entre 0 et 50 % et annulation en cas de comportement jugé interdit, parfois subjectif ; sanction unique contractuelle B1.",
+      "b2": "Instant Funding bihebdomadaire sur page commerciale, 'On Demand' sur une page d'aide pour des niveaux précis ; périmètre exact restant à résoudre.",
+      "b3": "Revue discrétionnaire de chaque cycle et résiliation potentielle ; protection du droit au payout déjà approuvé non pleinement établie.",
+      "hold": "Source de payout indépendante manquante ; contrat Futures/Forex à valider séparément."
+    },
+    {
+      "slug": "aqua-funded", "before": 62, "confidence": "moyenne", "scores": {"A":[8,8,1],"B":[10,7,5,5],"C":[6,3,2],"D":[4,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://www.aquafunded.com/legal/terms-and-conditions","contract":"https://www.aquafunded.com/legal/terms-and-conditions","program":"https://www.aquafunded.com/legal/terms-and-conditions","entity":"https://www.aquafunded.com/legal/terms-and-conditions","offer":"https://www.aquafunded.com/"},
+      "b1": "Réduction de split 50 % puis 25 % sous déclencheur flottant de −1 % de PnL et clôture au troisième : règle objective annoncée, non clause arbitraire.",
+      "b2": "Différents comptes aux limites de drawdown et caps publiés, ne pas appliquer le même régime à tous les programmes.",
+      "b3": "Portée des clauses de révision sur comptes achetés non intégralement vérifiée.",
+      "hold": "Notice Trustpilot −6 unique ; sources externes de payout à compléter."
+    },
+    {
+      "slug": "hantec-trader", "before": 62, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[4,6,3,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/","contract":"https://rzrfunded.com/terms-conditions/","program":"https://help.rzrfunded.com/en/support/solutions/articles/158000471185-what-is-the-24-hour-payout-guarantee-","entity":"https://rzrfunded.com/terms-conditions/","offer":"https://rzrfunded.com/"},
+      "b1": "Après l'étape funded ou même après approbation, les CGU gardent la faculté de void, reduce, reclaim payouts au titre de Prohibited Trading selon la décision de la firme.",
+      "b2": "Rebrand Hantec Trader → RZR Funded et prix/règles des produits nouveaux : distinguer l'entité et les versions contractuelles.",
+      "b3": "Réexamen potentiellement post-approbation : droits acquis moins protégés, sans présumer de recours effectif.",
+      "hold": "Contrôle d'immatriculation Saint-Lucie et véritable continuité de la firme rebrandée à finaliser."
+    },
+    {
+      "slug": "hola-prime", "before": 62, "confidence": "moyenne", "scores": {"A":[9,8,3],"B":[6,6,4,5],"C":[6,3,2],"D":[4,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://www.holaprime.com/rulebook/payouts-profit-splits-rewards/","contract":"https://holaprime.com/terms-conditions/","program":"https://holaprime.com/rulebook/schedules/","entity":"https://holaprime.com/terms-conditions/","offer":"https://holaprime.com/"},
+      "b1": "Les pratiques de 'gambling' et 'quick strike' interdites sont larges ; des contrôles de conformité pouvant affecter les rewards subsistent malgré des règles classiques connues.",
+      "b2": "Nombre de jours rentables et fenêtres de retrait dépendent du plan Pro/Fly/Direct et de la durée d'engagement.",
+      "b3": "Le programme de vérification KYC peut demander un entretien ; stabilité des droits de gains anciens à confirmer.",
+      "hold": "Ne pas assimiler l'annonce d'un audit par Deloitte à un rapport de paiement audité indépendant déjà disponible. Hausse sensible à valider."
+    },
+    {
+      "slug": "lark-funding", "before": 61, "confidence": "moyenne", "scores": {"A":[8,8,1],"B":[8,5,4,4],"C":[5,3,2],"D":[4,4,4],"E":[3,2,2]},
+      "sources": {"payout":"https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work","contract":"https://larkfunding.com/terms-of-use","program":"https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work","entity":"https://larkfunding.com/terms-of-use","offer":"https://larkfunding.com/"},
+      "b1": "Règle de gambling/all-or-nothing et appréciation suspecte de l'usage de VPN : danger de lecture discrétionnaire, mais compte rendu d'incident externe absent.",
+      "b2": "FAQ générale payout 14 jours et page spéciale instant à la demande ; distinguer programmes et versions avant une sanction de cohérence.",
+      "b3": "Aucune preuve de reprise rétroactive de gains ; termes du programme relevant de la période de commande à contrôler.",
+      "hold": "Registre, preuves tierces de payouts et calendrier du plan Instant doivent être approfondis."
+    },
+    {
+      "slug": "bulenox", "before": 61, "confidence": "moyenne", "scores": {"A":[7,7,1],"B":[5,5,3,4],"C":[5,3,2],"D":[4,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://bulenox.com/help-center/momentum","contract":"https://bulenox.com/legal/Terms_of_Use.pdf","program":"https://bulenox.com/help-center/momentum","entity":"https://bulenox.com/legal/Terms_of_Use.pdf","offer":"https://bulenox.com/"},
+      "b1": "CGU octobre 2026 : soupçon d'abuse pouvant déclencher un refus de réclamer un profit. Ce droit unilatéral est le vrai risque, pas les règles de tenue overnight.",
+      "b2": "Certaines rubriques du centre d'aide sont identifiées mais leurs montants de payout caps/consistance étaient illisibles durant l'audit.",
+      "b3": "Discrétion sur passage après trois payouts ; l'effet sur les gains cumulés doit être clarifié.",
+      "hold": "Conditions précises des caps Momentum encore indisponibles dans la source auditée ; note sensible à confirmer."
+    },
+    {
+      "slug": "finotive-funding", "before": 61, "confidence": "moyenne", "scores": {"A":[9,8,2],"B":[7,8,4,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://finotivefunding.com/terms-and-conditions","contract":"https://finotivefunding.com/terms-and-conditions","program":"https://finotivefunding.com/rules","entity":"https://finotivefunding.com/terms-and-conditions","offer":"https://finotivefunding.com/"},
+      "b1": "Le mécanisme objectif de strikes sur exposition notional et baisse annoncée du reward split ne relève pas d'un arbitraire ; d'autres remises à zéro de trades sous haute volatilité restent à surveiller.",
+      "b2": "Conditions officielles détaillées par taille et type de compte ; aucune divergence produit non établie n'est déduite automatiquement.",
+      "b3": "Contrôle des modifications et révision de gains sous incident technique/volatilité à compléter.",
+      "hold": "Notice Trustpilot −6 unique ; source indépendante de payouts non trouvée dans le dossier."
+    },
+    {
+      "slug": "ment-funding", "before": 61, "confidence": "moyenne", "scores": {"A":[7,7,1],"B":[7,5,4,4],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://mentfunding.com/terms-of-service","contract":"https://mentfunding.com/terms-of-service","program":"https://mentfunding.com/","entity":"https://mentfunding.com/terms-of-service","offer":"https://mentfunding.com/"},
+      "b1": "Gambling ou risque excessif sans seuil uniforme : possibilité de refuser la récompense pour conduite jugée hors standards ; la règle de wallet partagé est plus objective et ne justifie pas le même reproche.",
+      "b2": "Les critères 33 % ou 35 % de consistance concernent des plans et générations distincts ; clarifier avant de reprocher des textes contradictoires.",
+      "b3": "Droits lors de suspension d'un payout pour wallet partagé et voies de recours à compléter.",
+      "hold": "Incidents de payout, entité signataire exacte et modalité de compte funded à vérifier avant publication."
+    },
+    {
+      "slug": "traders-central", "before": 61, "confidence": "limitee", "scores": null,
+      "sources": {"payout":"https://traderscentral.com/","contract":"https://traderscentral.com/","program":"https://traderscentral.com/","entity":"https://traderscentral.com/","offer":"https://traderscentral.com/"},
+      "blocker": "Le site ne fournit plus de programme de trading vérifiable à l'URL auditée. Des mentions de rapprochement avec Alpha Capital Group circulent, mais la situation juridique et l'accès des clients ne sont pas établis ; conserver l'ancienne note comme historique et suspendre toute re-note active.",
+      "evidence": "https://finance.yahoo.com/news/alpha-capital-group-acquires-traders-012200502.html"
+    },
+    {
+      "slug": "rocket21-challenge", "before": 60, "confidence": "limitee", "scores": null,
+      "sources": {"payout":"https://rocket21challenge.com/","contract":"https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21.pdf","program":"https://rocket21challenge.com/","entity":"https://rocket21challenge.com/","offer":"https://rocket21challenge.com/"},
+      "blocker": "Site officiel non accessible à plusieurs dates en 2026, aucune fermeture officiellement déclarée retrouvée. Ne pas attribuer un score d'achat actif ni appliquer automatiquement le plafond de fermeture 29 sans confirmation.",
+      "evidence": "https://mypropgenius.com/rule-changes/2026-10/"
+    }
+  ]
+}
