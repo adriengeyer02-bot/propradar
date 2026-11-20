@@ -629,7 +629,7 @@ export default async function FirmPage({ params }: Props) {
   const scoreCopy = scoreMethodCopy(locale);
   const breakdown = getScoreBreakdown(firm);
   const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
-  {
+  if (breakdown.rules?.applied) {
     const rules = breakdown.rules;
     const applied = Boolean(rules?.applied && rules.penalty);
     scoreSteps.push({
@@ -662,8 +662,8 @@ export default async function FirmPage({ params }: Props) {
       { label: f.trustpilot, value: v(trustpilotPip(firm).value), tone: trustpilotPip(firm).tone },
       { label: scoreCopy.reviewed, value: formatDateLong(locale, firm.lastReviewed), tone: 'none' },
     ],
-    programs: breakdown.rules?.programs.map(({ name, load }) => ({ name: tx(name), load })) ?? [],
-    heaviest: breakdown.rules?.heaviest.map(({ rule, points }) => {
+    programs: breakdown.rules?.applied ? breakdown.rules.programs.map(({ name, load }) => ({ name: tx(name), load })) : [],
+    heaviest: breakdown.rules?.applied ? breakdown.rules.heaviest.map(({ rule, points }) => {
       const text = tx(rule.rule);
       return {
         text: text.length > 170 ? `${text.slice(0, 167).trimEnd()}…` : text,
@@ -673,8 +673,8 @@ export default async function FirmPage({ params }: Props) {
         clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
         points: Math.round(points * 10) / 10,
       };
-    }) ?? [],
-    rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
+    }) : [],
+    rulesNotes: breakdown.rules?.applied && breakdown.rules.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
     methodHref: L('/audit'),
     rulesHref: '#rules',
   };
