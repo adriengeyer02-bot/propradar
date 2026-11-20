@@ -138,8 +138,9 @@ les seize budgets et rejeter toute déduction d'un fait en double.
 Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 `app/lib/scoringV4.ts` et l'activation explicite dans
 `app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
-32 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
-66/100, Crypto Fund Trader 62/100 et MyFundedCapital 75/100).
+33 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
+66/100, Crypto Fund Trader 62/100, MyFundedCapital 75/100 et Blue Guardian
+61/100).
 La note, le classement, les comparateurs et la
 fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
 note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
@@ -161,6 +162,23 @@ notes de confiance `limitee` du deuxième lot et TickTickTrader, TradeFundrr,
 Traders Central, Rocket21 (pièces contractuelles ou activité actuelle
 insuffisamment vérifiées). Ils conservent leur ancienne chaîne de calcul et
 leur note historique jusqu'à une nouvelle revue sérieuse.
+
+**Lot suivant, 20 fiches encore historiques (ancienne note 52 à 55) :**
+Blue Guardian passe de 53 à **61/100** après lecture des CGU, de la FAQ
+payout du 17/11/2026 et des règles par produit. Décomposition
+**A20/B18/C10/D11/E8 = 67 éditorial, puis −6 Trustpilot exactement une
+fois**. Le suivi indépendant de 1,37 M$ de paiements crypto en T1 2026
+justifie A3=4/5, sans prouver le paiement de tous les comptes. L'avertissement
+Trustpilot est toujours actif le 20/11/2026. La faible protection en B1
+porte sur la décision définitive de refuser des payouts pour des profils
+multiples à la seule appréciation de la firme, **pas** sur les règles
+techniques chiffrées (consistance, minimum 2 minutes, Guardian Shield).
+La confiance reste moyenne faute de contrat Trader Agreement signé et de
+registre externe complet. **Atlas Funded 55→66 (+11)** n'est qu'une
+proposition éditoriale et attend l'autorisation explicite d'Adrien ;
+18 autres dossiers sont retenus pour pièces manquantes, identités non
+authentifiées, statut de domaine ou contrat de rémunération distinct.
+Voir `app/data/scoring-v4-batch-5.json` et la revue du lot associée.
 
 Les notes activées restent de confiance **moyenne**, jamais présentées comme
 des vérifications bancaires exhaustives. Le script
