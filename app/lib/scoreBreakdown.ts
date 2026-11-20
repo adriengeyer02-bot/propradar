@@ -1,6 +1,6 @@
 import type { PropFirm } from './propFirms';
 import { getFirmUpdate, type RestrictiveRule } from './firmUpdates';
-import { computeRulesPenalty, isScoredRule, rulePoints, RULES_PENALTY_ENABLED, RULES_PENALTY_MAX } from './restrictiveRules';
+import { computeRulesPenalty, isScoredRule, ruleKind, rulePoints, RULES_PENALTY_ENABLED, RULES_PENALTY_MAX } from './restrictiveRules';
 import { getPublishedV4Score, isPublishedV4, type PublishedV4Score } from './scoringV4Published';
 
 /**
@@ -40,9 +40,27 @@ export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
     ? getPublishedV4Score(firm)
     : undefined;
   if (v4) {
+    // V4 already scores discretionary/unclear clauses within contractual
+    // criteria B1–B4. Surface the evidence, never subtract legacy points again.
+    const allRules = update?.restrictiveRules ?? [];
+    const scoredRules = allRules.filter(isScoredRule);
+    const heaviest = scoredRules
+      .filter((rule) => ruleKind(rule) === 'risk')
+      .map((rule) => ({ rule, points: rulePoints(rule) }))
+      .sort((a, b) => b.points - a.points)
+      .slice(0, 4);
     return {
       editorial: v4.editorial,
       v4,
+      rules: {
+        penalty: 0,
+        applied: false,
+        rawLoad: 0,
+        programs: [],
+        counted: scoredRules.length,
+        uncounted: allRules.length - scoredRules.length,
+        heaviest,
+      },
       unclassifiedOnly: 0,
       trustpilot: firm.trustpilotPenalty,
       final: firm.score,
