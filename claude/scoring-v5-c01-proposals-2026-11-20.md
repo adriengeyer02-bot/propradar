@@ -2,7 +2,7 @@
 
 **Décision de publication ultérieure :** Adrien a demandé le 20 novembre 2026 la mise en ligne des notes V5 sourcées et de la fenêtre Apex. Les propositions C01 Alpha Capital Group (67) et Maven Trading (63) ont donc une approbation explicite de score/date dans `app/data/scoring-v5-published.json` ; leurs fichiers d'audit restent des dossiers de preuve au statut « proposition ». Les 64 autres firmes C01–C04 ne sont pas migrées par cette décision.
 
-**État au 20 novembre :** Alpha, Maven et **TradeDay** ont désormais reçu un accord explicite d'Adrien pour publication V5. L'activation de TradeDay est verrouillée par sa note datée dans `scoring-v5-published.json`.
+**État au 20 novembre :** Alpha, Maven et **TradeDay** ont reçu un accord explicite d'Adrien pour publication V5. L'activation de TradeDay est verrouillée par sa note datée dans `scoring-v5-published.json`. **Breakout Prop est le quatrième dossier C01 complet, uniquement en proposition non publiée.**
 
 Le fichier canonique vérifiable est `app/data/scoring-v5-proposals-c01.json` : 13 sous-notes pour chaque firme, justification, liens par critère, faits négatifs identifiés sans double sanction. Il est volontairement distinct de `app/data/scoring-v5-published.json`. L'ancienne note V4 reste celle du site jusqu'à validation des écarts et fusion du moteur V5.
 
@@ -13,14 +13,16 @@ Le fichier canonique vérifiable est `app/data/scoring-v5-proposals-c01.json` : 
 | **Alpha Capital Group** | 74 | 25 | 8 | 15 | 16 | 9 | 73 | −2 | −6 | **67** | **−7** |
 | **Maven Trading** | 72 | 19 | 12 | 14 | 16 | 8 | 69 | −6 | −6 | **63** | **−9** |
 | **TradeDay — approuvé** | 75 | 18 | 13 | 11 | 16 | 9 | 67 | −2 | 0 | **67** | **−8** |
+| **Breakout Prop — en proposition** | 70 | 22 | 10 | 17 | 16 | 8 | 73 | −2 | 0 | **73** | **+3** |
 
 La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 déjà inclus. Pour le dialogue demandé par Adrien, la décomposition *visuelle* reconstitue une note éditoriale avant la déduction B2, sans changer le calcul :
 
 - Alpha : **75 éditorial avant règles −2 règles contraignantes −6 Trustpilot = 67**.
 - Maven : **75 éditorial avant règles −6 règles contraignantes −6 Trustpilot = 63**.
 - TradeDay : **69 éditorial avant règles −2 règles contraignantes = 67**, approuvé après la revue de la PR #239.
+- Breakout Prop : **75 éditorial avant règles −2 règles contraignantes = 73**, proposition non approuvée et non publique.
 
-## TradeDay — audit V5 documentaire, proposition soumise à validation
+## TradeDay — audit V5 approuvé et publié
 
 **TradeDay LLC / tradeday.com / Quick Pay et Fast Pass 25K–150K, évaluation, Funded Sim et Funded Live / 20 novembre 2026 / actif.** Ancienne note 75/100 ; nouvelle note approuvée **67/100 (−8), confiance faible**. Les 13 évaluations et URL par sous-critère sont dans `app/data/scoring-v5-proposals-c01.json`. L'accord explicite d'Adrien a été obtenu après l'ouverture de la PR #239.
 
@@ -48,6 +50,38 @@ La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 
 
 **Non vérifié :** numéro d'enregistrement et statut actuel de TradeDay LLC au registre Illinois, contrat exact Funded SIM/LIVE signé, dernier écran du checkout, confirmation indépendante du portefeuille Rise/TradeDay, suivi de cas de payout au regard de leurs dates contractuelles, issue de la plainte BBB. Ces réserves restent visibles dans le dossier malgré l'accord de publication de la baisse de huit points.
 
+## Breakout Prop — audit V5 documentaire, proposition non publiée
+
+**Breakout Trading Group LLC (évaluation Delaware) / Payward Oceanic Ltd (FTA funded, BVI) / breakoutprop.com / Classic-Pro-Turbo 1-Step, Spark002 distingué / 20 novembre 2026 / actif.** Score affiché antérieur **70/100**, score V5 **proposé 73/100 (+3)**, confiance **moyenne**. Aucune entrée Breakout dans le manifeste des notes V5 approuvées ; aucune modification de sa fiche publique à ce stade.
+
+| Critère | Note | Justification déterminante |
+| --- | ---: | --- |
+| A1 | 8/10 | Payout à la demande, min 50 USD nets, split 80/90, règles d'éligibilité, absence de caps et processus USDC publiés. Les **frais de retrait/gas ne sont pas clairement précisés** : élément split+minimum+frais = 0/2 strictement. |
+| A2 | 9/10 | Payout Junction recoupe des transactions USDC depuis décembre 2024, avec flux datés espacés >6 mois ; palier 12 mois, pas 24. Pas de refus grave corroboré aux seuils V5 identifié dans la recherche du jour. |
+| A3 | 5/5 | Règlements on-chain à l'échelle de l'opérateur revendiqués comme vérifiés sur 12+ mois ; un suivi externe détaille sa méthode. Réserve : le portefeuille peut aussi payer des affiliés ; total et identité de chaque destinataire non garantis. |
+| B1 | **2/15** | **FTA POL §§5(y), 6(b)-(c)** : résiliation à la discrétion absolue, y compris sur critère confidentiel, et possibilité de perdre des Performance Splits, sans protection/recours explicite des gains accumulés. |
+| B2 | **8/10** | **−2 une seule fois** pour les interdictions de trading aux critères vagues des §§3(b)(v)-(viii) du FTA. Aucune pénalité sur les drawdowns, news, copy trading ou limits clairement publiés. La perte de rémunération est déjà cotée B1. |
+| C1 | 7/10 | Séparation des contrats Breakout Delaware / POL BVI confirmée par FTA, accord d'évaluation, SEC et conditions Kraken ; dernière étape du panier et version signée non comparées. |
+| C2 | 6/6 | POL actuellement inscrite au registre officiel de la **BVI FSC** (fiche 01/10/2026) et LEI actif n°2061297. Statut 2026 de la LLC Delaware non extrait, régulation VASP ≠ garantie du programme prop. |
+| C3 | 4/4 | Recherche FCA/AMF/CFTC/IOSCO sans avertissement matériel spécifiquement associé à la firme et à ce service, au 20/11 ; aucune obligation fictive de licence de courtier imputée. |
+| D1 | 8/8 | Prix USD, add-on, objectifs et drawdowns par programme, conditions de trading/KYC, sanctions, pays exclus publiés. Le manque de frais USDC est imputé uniquement à A1. |
+| D2 | 6/6 | Accords complets publics, annexe datée du 29/10/2026, régime de modification/notices pour les titulaires existants énoncé au FTA §19 ; pas de rétroactivité effective prouvée. |
+| D3 | 2/6 | Checkout final non contrôlé ; promesse commerciale « no approval delays » face à la FAQ décrivant une approbation de 12–24 h, sans établir un délai réel abusif ; rôle Breakout/POL et nature simulée présentés clairement. |
+| E1 | 4/6 | Lancement public vérifié **29 novembre 2023**, soit 35 mois et 22 jours au 20/11/2026, non encore 36 mois. |
+| E2 | 4/4 | Canal email/chat, réponses observables, recours KYC et notifications contractuelles, revue d'un cas technique documentée par un trader avec réponse de Breakout (16/11) ; non assimilé à preuve générale de performance du support. |
+
+**Calcul :** A22 + B10 + C17 + D16 + E8 = **73**. Pour l'interface demandée : **75 « Editorial Score » −2 « Restrictive Rules » = 73**, Trustpilot 0, aucun plafond. Le site Trustpilot affiche au 20/11 une note chiffrée ordinaire (pas d'alerte officielle de suppression/rétention), donc aucun retrait automatique. Le score V5 proposé reste **non publié**, quel que soit son sens.
+
+**Registre de faits documentaires (consultation 20/11/2026) :**
+
+1. **BKO-01 — Droit aux Performance Splits :** le [FTA public POL](https://www.breakoutprop.com/funded-trader-agreement/) §5(y) et §6 détaille résiliation discrétionnaire et non-entitlement ; **B1 uniquement**. Ce risque contractuel n'est pas une preuve de paiement refusé.
+2. **BKO-02 — Sanctions pour pratiques floues :** [FTA §3(b)](https://www.breakoutprop.com/funded-trader-agreement/) (relation fournisseur, risque réglementaire selon POL) et [FAQ funded](https://intercom.help/breakoutprop/en/articles/11647201-what-trading-practices-are-prohibited-in-my-funded-account) ; **B2 −2** une fois ; aucune retenue pour les stratégies clairement interdites indépendantes.
+3. **BKO-03 — Cohérence de délais annoncés :** [tarification](https://www.breakoutprop.com/pricing/) (« no approval delays ») versus [FAQ payout](https://intercom.help/breakoutprop/en/articles/11647224-when-can-i-request-a-payout-from-my-funded-account) (approbation POL de 12–24 h). **D3 uniquement**, pas B2 ni A2.
+4. **BKO-04 — Preuves de versements :** [Payout Junction](https://payoutjunction.com/firms/breakout) (déc. 2024–nov. 2026), [méthode indépendante alternative](https://damnpropfirms.com/payouts/methodology/) ; soutient A2/A3 sous des dimensions **différentes** (régularité vs force de preuve). Les transferts de commissions d'affiliés sont un biais possible, pas des refus établis.
+5. **BKO-05 — Entité et activité :** [accord d'évaluation](https://www.breakoutprop.com/breakout-evaluation-agreement/), [FTA](https://www.breakoutprop.com/funded-trader-agreement/), [SEC Form D](https://www.sec.gov/Archives/edgar/data/2029382/000110465925086820/xslFormDX08/primary_doc.xml), [registre officiel BVI FSC](https://www.bvifsc.vg/regulated-entities/payward-oceanic-ltd), [LEI](https://lei.bloomberg.com/leis/view/254900Y9H8TYQYVUR623), [Kraken conditions](https://www.kraken.com/tr/legal/eea-terms) et [communiqué de lancement du 29/11/2023](https://www.newsfilecorp.com/release/189043). Entité funded vérifiée ; dernier achat et certificat Delaware actuels non testés.
+
+**À vérifier avant publication :** version effective du contrat signé par le trader, éventuelles annexes spécifiques à Spark002/Kraken Funded (ne pas mélanger les produits), concordance checkout → société du paiement, statut Delaware 2026, frais exacts du virement USDC, association indépendante du portefeuille crypto à POL/Breakout et nature de chaque transfert, éventuels incidents de paiement corroborés qui ne ressortent pas du corpus. **Pas d'approbation implicite d'Adrien.**
+
 ## Alpha Capital Group — risques et preuve positive
 
 1. **B1 = 0/15**, cause principale. Le [Schedule 2 §2.2 des CGU](https://alphacapitalgroup.uk/terms-and-conditions) dit que la firme peut octroyer les frais de performance à sa seule discrétion ; le §2.6 autorise un non-paiement si elle considère un trade contraire aux règles. Le §2.2 est une discrétion sur le principe de la rémunération, pas simplement sur l'exécution d'une fraude définie : palier **0** de la V5. En parallèle, le §9.1.7 laisse à Alpha la définition des stratégies interdites : **B2 = 8**, −2 pour ce pouvoir *distinct* portant sur la validité du trading. Les règles ordinaires par programme restent non pénalisées.
@@ -74,4 +108,5 @@ La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 
 
 - Chaque pénalité liée à un *fait* porte une identité unique dans le JSON et le moteur refuse les doublons. Aucune plainte non corroborée n'est convertie en A2=6/4/2.
 - Les notes Alpha, Maven et **TradeDay 75→67** disposent toutes de l'accord explicite de publication d'Adrien. Conserver leurs réserves documentaires pour les contrôles futurs.
-- Les sept autres dossiers du lot C01 restent à réviser en V5. C02–C04 et les dossiers N sont suivis séparément, sans réutiliser automatiquement les anciennes sous-notes V4.
+- Breakout Prop **70→73** est proposé, son FTA funded étant maintenant public et plus explicite que le dossier V4 ; il ne dispose pas d'une approbation de publication et reste à 70 sur le site.
+- Les six autres dossiers du lot C01 restent à réviser en V5. C02–C04 et les dossiers N sont suivis séparément, sans réutiliser automatiquement les anciennes sous-notes V4.
