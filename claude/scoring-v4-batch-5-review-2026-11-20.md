@@ -37,7 +37,7 @@ Sources de première main : [CGU](https://blueguardian.com/terms-and-conditions/
 [paiements déclarés](https://blueguardian.com/payouts),
 [suivi on-chain indépendant T1](https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026).
 
-### Proposition sensible non publiée : Atlas Funded 55 → 66 (+11)
+### Note sensible publiée après validation : Atlas Funded 55 → 66 (+11)
 
 A18 / B20 / C10 / D11 / E7. Ses CGU actuelles établissent le paiement
 ordinaire **30 jours après le premier trade financé**, ensuite tous les
@@ -48,8 +48,9 @@ en **1 à 5 jours ouvrés**. Les CGU §5.2/5.4 permettent de classer une
 stratégie de « gambling » sans seuil et d'annuler des gains ; un recours
 dans les dix jours et le droit aux critiques honnêtes sont cependant écrits.
 Une page Start Access affiche $1 puis $5, et les CGU mentionnent Atlas Vanquish
-FZCO (fournisseur) ainsi qu'Atlas Funded LTD (Saint Lucia). À réconcilier
-avant validation. **Ne pas publier +11 sans l'accord d'Adrien.**
+FZCO (fournisseur) ainsi qu'Atlas Funded LTD (Saint Lucia). **Adrien a validé
+la note le 20 novembre 2026**, sans lever ces réserves documentaires ;
+confiance moyenne et revue juridique complémentaire nécessaire.
 
 Sources : [CGU actuelles](https://www.atlasfunded.com/terms),
 [Start Access](https://www.atlasfunded.com/start-access),
