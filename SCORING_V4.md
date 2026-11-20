@@ -138,18 +138,23 @@ les seize budgets et rejeter toute déduction d'un fait en double.
 Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 `app/lib/scoringV4.ts` et l'activation explicite dans
 `app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
-31 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
-66/100 et Crypto Fund Trader 62/100, deux évolutions de moins de 10 points).
+32 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
+66/100, Crypto Fund Trader 62/100 et MyFundedCapital 75/100).
 La note, le classement, les comparateurs et la
 fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
 note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
 
-**Lot rangs historiques 44–63 :** ces deux firmes sont publiées avec une
+**Lot rangs historiques 44–63 :** les trois firmes sont publiées avec une
 confiance moyenne, leurs clauses de récompense étudiées en B1 et aucune
-preuve indépendante d'impayé inventée en A2. La proposition MyFundedCapital
-59→75 (+16) reste **non publiée**, soumise à l'accord d'Adrien ; 17 autres
-fiches attendent encore leurs documents contractuels. Voir la PR #207 pour
-le rapport détaillé et les sources, sans toucher aux audits de Claude.
+preuve indépendante d'impayé inventée en A2. **MyFundedCapital 59→75 (+16)**
+a reçu l'accord éditorial conditionnel explicite d'Adrien le 20 novembre
+2026 après vérification des CGU, FAQ, calendrier par programme et de la
+présence de deux entités nommées sur la page officielle de contact. Son
+*Funded Trader Agreement* reste délivré dans le dashboard et la vérification
+indépendante de son immatriculation UAE reste à poursuivre : ne jamais
+qualifier cet audit d'exhaustif ou de confiance élevée. **17 autres fiches**
+attendent encore leurs documents contractuels. Voir la PR #207 pour le
+rapport détaillé et les sources, sans toucher aux audits de Claude.
 
 **14 autres dossiers déjà examinés ne sont pas publiés en V4 :** les dix
 notes de confiance `limitee` du deuxième lot et TickTickTrader, TradeFundrr,
