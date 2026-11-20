@@ -10,6 +10,7 @@ const expected = {
   'top-one-trader': { previous: 50, gross: 70, rules: 4, trustpilot: 6, final: 60, b1: 5 },
   onefunded: { previous: 47, gross: 70, rules: 4, trustpilot: 6, final: 60, b1: 5 },
   'bem-funding': { previous: 46, gross: 66, rules: 6, trustpilot: 6, final: 54, b1: 5 },
+  thinkcapital: { previous: 59, gross: 72, rules: 6, trustpilot: 6, final: 60, b1: 5 },
 };
 assert.equal(proposals.version, 5);
 assert.equal(proposals.firms.length, Object.keys(expected).length);
