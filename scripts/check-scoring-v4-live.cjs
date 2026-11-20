@@ -17,11 +17,11 @@ const { V4_CRITERIA } = require('../app/lib/scoringV4.ts');
 const groups = [1, 2, 3].map((number) => require(`../app/data/scoring-v4-batch-${number}.json`));
 const legacy = [...groups[1].firms.filter((row) => row.confidence === 'limitee').map((row) => row.slug), ...groups[2].firms.filter((row) => row.scores === null).map((row) => row.slug)];
 
-assert.equal(V4_PUBLISHED_SLUGS.length, 37);
-assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 37);
+assert.equal(V4_PUBLISHED_SLUGS.length, 39);
+assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 39);
 assert.equal(legacy.length, 14);
 const scored = propFirms.filter((firm) => getScoreBreakdown(firm).v4);
-assert.equal(scored.length, 37, 'exactly 37 firms should use the V4 score in production');
+assert.equal(scored.length, 39, 'exactly 39 firms should use the V4 score in production');
 assert.deepEqual(scored.map((firm) => firm.slug).sort(), [...V4_PUBLISHED_SLUGS].sort());
 assert.ok(topFirms.every((firm, i) => i === 0 || topFirms[i - 1].score >= firm.score));
 
@@ -59,8 +59,12 @@ assert.equal(getFirmBySlug('atlas-funded').score, 66, 'owner-approved Atlas Fund
 assert.equal(getFirmBySlug('traders-launch').score, 61, 'Traders Launch V4 review with conditional rewards');
 assert.equal(getFirmBySlug('funded-bull').score, 55, 'Funded Bull broad profit forfeiture is counted only under B1');
 assert.equal(getFirmBySlug('ofp-funding').score, 58, 'OFP Funding 64 editorial less one existing Trustpilot warning of 6');
+assert.equal(getFirmBySlug('get-leveraged').score, 59, 'GetLeveraged V4 official terms plus CySEC warning counted under C3');
+assert.equal(getFirmBySlug('miltraders').score, 58, 'MilTraders V4 mandatory Live switch, retroactive program rules penalized only once');
+assert.equal(getScoreBreakdown(getFirmBySlug('get-leveraged')).v4.trustpilotPenalty, 0, 'current Trustpilot rating active, historical notice not double-counted');
+assert.equal(getScoreBreakdown(getFirmBySlug('miltraders')).v4.trustpilotPenalty, 0, 'no active withheld-score notice');
 assert.equal(getScoreBreakdown(getFirmBySlug('ofp-funding')).v4.trustpilotPenalty, 6);
 assert.equal(getScoreBreakdown(getFirmBySlug('blue-guardian')).v4.trustpilotPenalty, 6);
 assert.equal(getFirmBySlug('tickticktrader').score, 67);
 assert.equal(getFirmBySlug('rocket21-challenge').score, 60);
-console.log(`\n✓ V4 live: 37 final scores, 14 previous incomplete files left on legacy. Each score has five blocks and no double deductions.`);
+console.log(`\n✓ V4 live: 39 final scores, 14 previous incomplete files left on legacy. Each score has five blocks and no double deductions.`);
