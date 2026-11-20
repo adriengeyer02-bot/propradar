@@ -6,7 +6,7 @@ import type { FirmUpdate, RestrictiveRule } from './firmUpdates';
  * classification into points, so every editor scores the same way.
  */
 
-/** Off until Geyer approves the score impact (sensitive change, CLAUDE.md rule 6). */
+/** Penalty applied to displayed scores (approved by Geyer; changes to this switch are sensitive). */
 export const RULES_PENALTY_ENABLED = true;
 
 export const RULES_PENALTY_MAX = 12;
@@ -14,7 +14,32 @@ export const RULES_PENALTY_MAX = 12;
 export const RULES_PENALTY_SCALE = 30;
 
 export const SEVERITY_POINTS = { minor: 1, major: 3, blocking: 5 } as const;
-export const CLARITY_FACTOR = { clear: 1, buried: 1.5, vague: 2 } as const;
+/**
+ * Geyer, 2026-11-20: a published, quantified trading rule weighs little; the
+ * penalty comes mainly from contractual risks (ambiguous, discretionary or
+ * contradictory clauses that allow a subjective reading or a payout refusal).
+ */
+export const CLARITY_FACTOR = { clear: 0.25, buried: 0.5, vague: 2 } as const;
+export const RISK_FACTOR = 2;
+
+/**
+ * Classic offer mechanics (minimum trading days, funded-stage drawdown type)
+ * belong to the offer characteristics, not to the constraints: never counted.
+ */
+export const CLASSIC_CATEGORIES: ReadonlySet<string> = new Set(['min-trading-days', 'funded-trailing-drawdown']);
+
+/**
+ * classic: offer mechanics, shown with the offer, not in the constraints;
+ * risk: discretionary, undefined or contradictory clause (subjective reading,
+ * possible payout refusal); restriction: a specific, stated rule to know.
+ */
+export type RuleKind = 'classic' | 'restriction' | 'risk';
+
+export function ruleKind(rule: RestrictiveRule): RuleKind {
+  if (rule.category && CLASSIC_CATEGORIES.has(rule.category)) return 'classic';
+  if (rule.status === 'conflicting' || rule.clarity === 'vague' || rule.category === 'discretionary-clause') return 'risk';
+  return 'restriction';
+}
 
 export type ProgramLoad = { key: string; name: string; load: number; rules: number };
 export type RulesPenalty = {
@@ -33,8 +58,10 @@ export function isScoredRule(rule: RestrictiveRule) {
 
 export function rulePoints(rule: RestrictiveRule) {
   if (!isScoredRule(rule)) return 0;
-  const clarity = rule.status === 'conflicting' ? 'vague' : rule.clarity!;
-  return SEVERITY_POINTS[rule.severity!] * CLARITY_FACTOR[clarity];
+  const kind = ruleKind(rule);
+  if (kind === 'classic') return 0;
+  if (kind === 'risk') return SEVERITY_POINTS[rule.severity!] * RISK_FACTOR;
+  return SEVERITY_POINTS[rule.severity!] * CLARITY_FACTOR[rule.clarity!];
 }
 
 export function penaltyFromLoad(rawLoad: number) {
@@ -46,6 +73,7 @@ export function penaltyFromLoad(rawLoad: number) {
 export function computeRulesPenalty(update: Pick<FirmUpdate, 'restrictiveRules' | 'auditedPrograms'> | undefined): RulesPenalty | undefined {
   const rules = update?.restrictiveRules ?? [];
   const scored = rules.filter(isScoredRule);
+  const counted = scored.filter((rule) => ruleKind(rule) !== 'classic');
   if (!scored.length) return undefined;
   const declared = update?.auditedPrograms ?? [];
   const programs = declared.length
@@ -57,6 +85,7 @@ export function computeRulesPenalty(update: Pick<FirmUpdate, 'restrictiveRules' 
     let count = 0;
     for (const rule of scored) {
       if (!rule.appliesTo!.includes('*') && !rule.appliesTo!.includes(key)) continue;
+      if (ruleKind(rule) === 'classic') continue;
       count += 1;
       best.set(rule.category!, Math.max(best.get(rule.category!) ?? 0, rulePoints(rule)));
     }
@@ -64,5 +93,5 @@ export function computeRulesPenalty(update: Pick<FirmUpdate, 'restrictiveRules' 
     return { key, name, load: Math.round(load * 10) / 10, rules: count };
   });
   const rawLoad = Math.round((loads.reduce((sum, item) => sum + item.load, 0) / loads.length) * 10) / 10;
-  return { penalty: penaltyFromLoad(rawLoad), rawLoad, programs: loads, countedRules: scored.length, uncountedRules: rules.length - scored.length };
+  return { penalty: penaltyFromLoad(rawLoad), rawLoad, programs: loads, countedRules: counted.length, uncountedRules: rules.length - scored.length };
 }

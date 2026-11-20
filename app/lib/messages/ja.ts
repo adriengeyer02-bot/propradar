@@ -627,6 +627,7 @@ const ja: Messages = {
     "rulesSeverity": { "minor": "軽微", "major": "重大", "blocking": "致命的" },
     "rulesClarity": { "clear": "明記あり", "buried": "規約内のみ", "vague": "裁量的・不明確" },
     "rulesPenaltyNote": "制限ルールによる減点：−{penalty} 点（ルール減点前の編集スコア：{before}）。",
+    rulesUi: {"restrictionsShort": "制限", "risksShort": "契約上のリスク", "nav": "ルールと制約", "title": "ルールと制約", "intro": "プログラムごとのメニューです。個別の制限は公表・数値化されたルール、契約上のリスクは曖昧・裁量的・矛盾する条項で、解釈の余地や出金拒否につながり得ます。ドローダウン、利益目標、最低取引日数はオファーの特徴に記載しています。", "all": "すべてのプログラム", "restrictions": "知っておくべき個別の制限", "restrictionsHint": "公表・数値化済み：スコアへの影響は小さい。", "risks": "契約上のリスク", "risksHint": "曖昧または裁量的な文言、出金への影響の可能性：スコアに最も影響します。", "strong": "特に厳しい", "classicTitle": "規約で確認した通常ルール", "classicNote": "最低取引日数と資金提供段階のドローダウン規則（出典付き）。オファーの仕組みであり制約ではないため、スコアを下げません。"},
     "priceTableTitle": "口座サイズ別の価格",
     "priceTableLead": "{date} に {name} の公式料金ページで確認した定価（期間限定の割引コード適用前）。税金・リセット・オプションは含みません。",
     "priceSize": "口座サイズ",

@@ -543,6 +543,7 @@ const en = {
     rulesSeverity: { minor: "Minor", major: "Major", blocking: "Blocking" },
     rulesClarity: { clear: "Clearly stated", buried: "Only in the terms", vague: "Discretionary or unclear" },
     rulesPenaltyNote: "Restrictive-rules penalty: −{penalty} points (editorial score before rules: {before}).",
+    rulesUi: {"restrictionsShort": "Restrictions", "risksShort": "Contractual risks", "nav": "Rules & constraints", "title": "Rules and constraints", "intro": "One menu per programme. Specific restrictions are stated, quantified rules to know; contractual risks are ambiguous, discretionary or contradictory clauses that leave room for interpretation or a payout refusal. Drawdown, profit target and minimum trading days stay with the offer characteristics.", "all": "All programmes", "restrictions": "Specific restrictions to know", "restrictionsHint": "Stated and quantified: they weigh little in the score.", "risks": "Contractual risks", "risksHint": "Unclear or discretionary wording, possible impact on payouts: these weigh most in the score.", "strong": "Particularly restrictive", "classicTitle": "Classic rules read in the terms", "classicNote": "Minimum trading days and funded-stage drawdown rules, with their source. They are offer mechanics, not constraints, and do not lower the score."},
     priceTableTitle: "Prices by account size",
     priceTableLead: "List prices read on {name}'s own pricing pages on {date}, before temporary discount codes. Taxes, resets and add-ons are not included.",
     priceSize: "Account size",

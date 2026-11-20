@@ -17,6 +17,7 @@ import RiskPip from '../../../components/ui/RiskPip';
 import ScoreRing from '../../../components/ui/ScoreRing';
 import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
 import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
+import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
@@ -589,10 +590,42 @@ export default async function FirmPage({ params }: Props) {
   const firmPublicUrl = firm.listedDomainWarning ? pageUrl : firm.sources[0]?.url ?? pageUrl;
   const firmChangelog = getFirmChangelog(firm.slug);
   const firmRules = getFirmUpdate(firm.slug)?.restrictiveRules ?? [];
-  const rulesByProgram = [...new Set(firmRules.map((rule) => rule.program))].map((program) => ({
-    program,
-    rules: firmRules.filter((rule) => rule.program === program),
-  }));
+  // Rules and constraints (Geyer, 2026-11-20): one closed menu per programme,
+  // specific restrictions separated from contractual risks; classic offer
+  // mechanics (minimum days, funded drawdown) stay with the offer.
+  const classicRules = firmRules.filter((rule) => ruleKind(rule) === 'classic');
+  const constraintRules = firmRules.filter((rule) => ruleKind(rule) !== 'classic');
+  const auditedPrograms = getFirmUpdate(firm.slug)?.auditedPrograms ?? [];
+  const severityRank = (rule: (typeof firmRules)[number]) => (rule.severity === 'blocking' ? 0 : rule.severity === 'major' ? 1 : 2);
+  // A rule is firm-wide when it says '*', names every audited programme, or is
+  // not classified yet (no programme scope recorded).
+  const isFirmWide = (rule: (typeof firmRules)[number]) => !rule.appliesTo?.length
+    || rule.appliesTo.includes('*')
+    || (auditedPrograms.length > 1 && auditedPrograms.every(({ key }) => rule.appliesTo!.includes(key)));
+  const rulesByProgram = (auditedPrograms.length
+    ? [
+        { key: '*', program: f.rulesUi.all, rules: constraintRules.filter(isFirmWide) },
+        ...auditedPrograms.map(({ key, name }) => ({
+          key,
+          program: tx(name),
+          rules: constraintRules.filter((rule) => !isFirmWide(rule) && rule.appliesTo!.includes(key)),
+        })),
+      ]
+    : [...new Set(constraintRules.map((rule) => rule.program))].map((program) => ({
+        key: program,
+        program: tx(program),
+        rules: constraintRules.filter((rule) => rule.program === program),
+      })))
+    .filter((group) => group.rules.length)
+    .map((group) => {
+      const sorted = [...group.rules].sort((a, b) => severityRank(a) - severityRank(b));
+      return {
+        ...group,
+        restrictions: sorted.filter((rule) => ruleKind(rule) === 'restriction'),
+        risks: sorted.filter((rule) => ruleKind(rule) === 'risk'),
+        strong: sorted.some((rule) => rule.severity === 'blocking'),
+      };
+    });
   const scoreCopy = scoreMethodCopy(locale);
   const breakdown = getScoreBreakdown(firm);
   const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
@@ -1007,7 +1040,7 @@ export default async function FirmPage({ params }: Props) {
           label={f.navLabel}
           items={[
             ...(firm.products.length ? [{ id: 'produits', label: f.nav.offers }] : []),
-            { id: 'rules', label: f.nav.rules },
+            { id: 'rules', label: f.rulesUi.nav },
             { id: 'decision', label: f.nav.decision },
             ...(auditCaseFile ? [{ id: 'case-timeline', label: f.nav.timeline }] : []),
             { id: 'regulatory', label: f.nav.legal },
@@ -1173,39 +1206,76 @@ export default async function FirmPage({ params }: Props) {
             </div>
           </div>
         ) : null}
+        {classicRules.length ? (
+          <div className="pr-classic-rules">
+            <details className="pr-rules-menu">
+              <summary><span className="pr-rules-menu-name">{f.rulesUi.classicTitle}</span><span className="pr-rules-menu-counts"><b>{classicRules.length}</b></span></summary>
+              <div className="pr-rules-menu-body">
+                <p className="pr-rules-block-hint">{f.rulesUi.classicNote}</p>
+                <ul className="pr-rules-list">
+                  {classicRules.map((rule, index) => (
+                    <li key={`${rule.source}-${index}`}>
+                      <span className="pr-rules-stage">{tx(rule.program)}</span>
+                      <p>{tx(rule.rule)}</p>
+                      <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+          </div>
+        ) : null}
       </section>
 
       <section className="container pr-section pr-restrictive-rules" id="rules" aria-labelledby={`rules-${firm.slug}`}>
         <header className="pr-section-head">
           <div>
             <div className="eyebrow">{f.checkedLabel} · {firmRules.length ? <time dateTime={getFirmUpdate(firm.slug)?.reviewedAt}>{getFirmUpdate(firm.slug)?.reviewedAt}</time> : f.rulesEmptyTag}</div>
-            <h2 id={`rules-${firm.slug}`}>{f.rulesTitle}</h2>
+            <h2 id={`rules-${firm.slug}`}>{f.rulesUi.title}</h2>
           </div>
-          {firmRules.length ? <div className="pr-section-meta"><span>{fmt(f.rulesCount, { n: firmRules.length })}</span></div> : null}
+          {constraintRules.length ? (
+            <div className="pr-section-meta">
+              <span>{f.rulesUi.restrictionsShort} <b>{constraintRules.filter((rule) => ruleKind(rule) === 'restriction').length}</b></span>
+              <span>{f.rulesUi.risksShort} <b>{constraintRules.filter((rule) => ruleKind(rule) === 'risk').length}</b></span>
+            </div>
+          ) : null}
         </header>
-        <p className="pr-section-lead">{f.rulesIntro}</p>
+        <p className="pr-section-lead">{f.rulesUi.intro}</p>
         {rulesByProgram.length ? (
-          <div className="pr-rules-program-grid">
-            {rulesByProgram.map(({ program, rules }) => (
-              <article className="pr-rules-program" key={program}>
-                <h3>{tx(program)}</h3>
-                <ul className="pr-rules-list">
-                  {rules.map((rule, index) => (
-                    <li key={`${rule.source}-${index}`} className={rule.status === 'conflicting' ? 'pr-rules-conflict' : ''}>
-                      <p>{tx(rule.rule)}</p>
-                      <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {tx(rule.impact)}</p>
-                      {rule.severity && rule.clarity ? (
-                        <span className="pr-rules-tags">
-                          <span className={`pr-tag pr-tone-${rule.severity === 'blocking' ? 'risk' : rule.severity === 'major' ? 'watch' : 'none'}`}>{f.rulesSeverity[rule.severity]}</span>
-                          <span className="pr-tag pr-tone-none">{f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity]}</span>
-                        </span>
-                      ) : null}
-                      {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
-                      <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+          <div className="pr-rules-menus">
+            {rulesByProgram.map((group) => (
+              <details className="pr-rules-menu" key={group.key}>
+                <summary>
+                  <span className="pr-rules-menu-name">{group.program}</span>
+                  <span className="pr-rules-menu-counts">
+                    {group.restrictions.length ? <span>{f.rulesUi.restrictionsShort} <b>{group.restrictions.length}</b></span> : null}
+                    {group.risks.length ? <span className="pr-rules-menu-risk">{f.rulesUi.risksShort} <b>{group.risks.length}</b></span> : null}
+                    {group.strong ? <span className="pr-rules-strong-dot" title={f.rulesUi.strong} aria-label={f.rulesUi.strong} /> : null}
+                  </span>
+                </summary>
+                <div className="pr-rules-menu-body">
+                  {([['restriction', group.restrictions, f.rulesUi.restrictions, f.rulesUi.restrictionsHint], ['risk', group.risks, f.rulesUi.risks, f.rulesUi.risksHint]] as const).map(([kind, list, title, hint]) => list.length ? (
+                    <div className={`pr-rules-block pr-rules-block-${kind}`} key={kind}>
+                      <h3>{title}</h3>
+                      <p className="pr-rules-block-hint">{hint}</p>
+                      <ul className="pr-rules-list">
+                        {list.map((rule, index) => (
+                          <li key={`${rule.source}-${index}`} className={rule.status === 'conflicting' ? 'pr-rules-conflict' : ''}>
+                            <span className="pr-rules-stage">{tx(rule.program)}</span>
+                            <p>
+                              {rule.severity === 'blocking' ? <span className="pr-rules-strong" title={f.rulesUi.strong}><span className="pr-rules-strong-dot" aria-hidden="true" />{f.rulesUi.strong}</span> : null}
+                              {tx(rule.rule)}
+                            </p>
+                            <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {tx(rule.impact)}</p>
+                            {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
+                            <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null)}
+                </div>
+              </details>
             ))}
           </div>
         ) : (
