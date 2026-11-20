@@ -672,12 +672,13 @@ export default async function FirmPage({ params }: Props) {
     heaviest: breakdown.rules?.heaviest.map(({ rule, points }) => {
       const text = tx(rule.rule);
       return {
-        text: text.length > 170 ? `${text.slice(0, 167).trimEnd()}…` : text,
+        text: text.length > 130 ? `${text.slice(0, 127).trimEnd()}…` : text,
         program: tx(rule.program),
         severity: f.rulesSeverity[rule.severity!],
         severityKey: rule.severity!,
         clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
         points: Math.round(points * 10) / 10,
+        kind: ruleKind(rule),
       };
     }) ?? [],
     rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
