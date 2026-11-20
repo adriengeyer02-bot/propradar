@@ -168,8 +168,8 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                               <b>−{item.points}</b>
                             </div>
                             <p>{item.clause}</p>
-                            <p><span>{view.v5Evidence.copy.consequence} :</span> {item.consequence}</p>
-                            <a href={item.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence.copy.source} ↗</a>
+                            <p><span>{view.v5Evidence!.copy.consequence} :</span> {item.consequence}</p>
+                            <a href={item.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence!.copy.source} ↗</a>
                           </li>
                         ))}
                       </ul>
