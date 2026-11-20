@@ -1767,7 +1767,6 @@ const corePropFirms: PropFirm[] = [
         {
           name: 'MAVEN LLC',
           jurisdiction: 'United Arab Emirates, DIEZ',
-          registrationNumber: 'Historical company registration not independently verified',
           registeredAddress: 'DSO-IFZA, IFZA Properties, Dubai Silicon Oasis, Dubai',
           role: 'Historical operator name from older legal texts; not named as current contracting company in Terms v2026.3. The numeric identifier 105072496000001 used in earlier audits is identified in the current contract as a corporate TAX number, not an independently verified MAVEN LLC registration.',
         },
