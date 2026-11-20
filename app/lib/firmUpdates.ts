@@ -135,6 +135,29 @@ export function getFirmUpdate(slug: string): FirmUpdate | undefined {
   return { ...update, scoringVersion: 4, set: update.set ? { ...update.set, trustpilotPenaltyIncluded: undefined } : undefined };
 }
 
+/** Align the entire public profile with the dated V5 evidence, not just the score ring. */
+function applyPublishedV5Evidence(firm: PropFirm, audit: NonNullable<ReturnType<typeof getPublishedV5Score>>): PropFirm {
+  const independent = audit.positivePayoutEvidence;
+  const proof: PayoutProof | undefined = independent ? {
+    date: audit.checkedOn,
+    kind: independent.source.includes('payoutjunction.com/') ? 'onchain' : 'press',
+    publisher: independent.source.includes('payoutjunction.com/') ? 'Payout Junction' : 'Source indépendante citée dans l’audit V5',
+    quote: independent.reason,
+    url: independent.source,
+    firmReported: false,
+  } : undefined;
+  const payoutProofs = [...(firm.payoutProofs ?? [])];
+  if (proof && !payoutProofs.some((item) => item.url === proof.url)) payoutProofs.unshift(proof);
+  return {
+    ...firm,
+    score: audit.afterRules,
+    lastReviewed: firm.lastReviewed > audit.checkedOn ? firm.lastReviewed : audit.checkedOn,
+    payoutProof: Boolean(independent),
+    payoutProofs,
+    legalVerified: audit.contractingEntityVerified,
+  };
+}
+
 export function getFirmChangelog(slug: string): FirmChangelogEntry[] {
   return [...(updates[slug]?.changelog ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 }
@@ -162,7 +185,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     const update = updates[firm.slug];
     if (!update) {
       const v5 = getPublishedV5Score(firm);
-      if (v5 && v5.final !== null) return { ...firm, score: v5.afterRules, lastReviewed: firm.lastReviewed > v5.checkedOn ? firm.lastReviewed : v5.checkedOn };
+      if (v5 && v5.final !== null) return applyPublishedV5Evidence(firm, v5);
       const v4 = getPublishedV4Score(firm);
       return v4 ? { ...firm, score: v4.editorial, lastReviewed: firm.lastReviewed > v4.checkedOn ? firm.lastReviewed : v4.checkedOn } : firm;
     }
@@ -329,9 +352,7 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
     const v5 = getPublishedV5Score(next, latestScoreReview);
     if (v5 && v5.final !== null) {
-      next.score = v5.afterRules;
-      next.lastReviewed = next.lastReviewed > v5.checkedOn ? next.lastReviewed : v5.checkedOn;
-      return next;
+      return applyPublishedV5Evidence(next, v5);
     }
     const v4 = getPublishedV4Score(next, latestScoreReview);
     if (v4) {

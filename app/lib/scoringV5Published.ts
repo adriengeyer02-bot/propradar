@@ -41,5 +41,10 @@ export function getPublishedV5Score(firm: PropFirm, latestScoreReview?: string) 
     trustpilotActiveNotice: Boolean(firm.reviewSignals.trustpilotRatingWithheld),
   }), checkedOn: card.checkedOn, ruleDeductions: card.ruleDeductions ?? [],
     contractProtection: { points: card.criteria.B1.points, reason: card.criteria.B1.reason, source: card.criteria.B1.sources[0] },
+    contractingEntityVerified: card.criteria.C1.points >= 7,
+    positivePayoutEvidence: card.criteria.A3.points >= 3 ? {
+      reason: card.criteria.A3.reason,
+      source: card.criteria.A3.sources.find((url) => url.includes('payoutjunction.com/firms/')) ?? card.criteria.A3.sources[0],
+    } : undefined,
   };
 }
