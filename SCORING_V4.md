@@ -138,9 +138,10 @@ les seize budgets et rejeter toute déduction d'un fait en double.
 Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 `app/lib/scoringV4.ts` et l'activation explicite dans
 `app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
-34 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
+37 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
 66/100, Crypto Fund Trader 62/100, MyFundedCapital 75/100 et Blue Guardian
-61/100, puis Atlas Funded 66/100).
+61/100, puis Atlas Funded 66/100, Traders Launch 61/100, Funded Bull
+55/100 et OFP Funding 58/100).
 La note, le classement, les comparateurs et la
 fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
 note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
@@ -182,6 +183,39 @@ uniquement. Confiance moyenne, registres et accord funded à approfondir ;
 18 autres dossiers sont retenus pour pièces manquantes, identités non
 authentifiées, statut de domaine ou contrat de rémunération distinct.
 Voir `app/data/scoring-v4-batch-5.json` et la revue du lot associée.
+
+**Lot suivant de 20 fiches historiques (ancienne note 50 à 52) :**
+trois nouvelles évaluations sont activées, après contrôle des documents
+officiels et des audits récents de Claude, sans supprimer ses menus de règles :
+
+| Firme | Avant | A | B | C | D | E | Trustpilot | Après | Confiance |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Traders Launch | 52 | 16 | 16 | 10 | 12 | 7 | 0 | **61** | moyenne |
+| Funded Bull | 51 | 15 | 15 | 10 | 11 | 4 | 0 | **55** | moyenne |
+| OFP Funding | 50 | 16 | 18 | 13 | 10 | 7 | −6 | **58** | moyenne |
+
+**Traders Launch :** les conditions futures et crypto précisent le rythme
+quotidien des retraits ; les CGU maintiennent un pouvoir discrétionnaire
+sur les gains et des exclusions pour certains programmes partenaires (B1).
+**Funded Bull :** la perte possible de tous les profits après une résiliation
+fondée sur la seule appréciation de la plateforme (§2.9) justifie B1=2/15,
+sans sanction automatique des limites de risque objectives. Un écart de
+minimum de retrait entre les CGU et la vitrine reste à réconcilier.
+**OFP Funding :** l'entité britannique est vérifiée dans Companies House ;
+les conditions de payout et d'inconsistency restent distinguées. La notice
+Trustpilot déjà présente dans les données entraîne **un seul −6** hors
+des 64 points éditoriaux, et aucun point n'est retiré une deuxième fois
+pour cet avis. Ces trois dossiers gardent une confiance **moyenne** : pas de
+preuve exhaustive indépendante que tous les payouts aient été honorés.
+
+**17 autres fiches restent en note historique**, notamment E8 Futures dont
+l'ESPA prioritaire manque, et Lvlup Futures dont l'accord rémunérateur
+implique un tiers. **Atmos Funded :** une nouvelle notice de note retenue
+sur Trustpilot a été constatée le 20/11/2026, mais les données historiques
+ne portent pas encore ce signal. L'événement et son éventuelle incidence
+sur la note nécessitent une décision éditoriale séparée ; ni flag ni −6
+nouveaux ne sont activés dans ce lot. Voir
+`app/data/scoring-v4-batch-6.json` et la revue documentaire détaillée.
 
 Les notes activées restent de confiance **moyenne**, jamais présentées comme
 des vérifications bancaires exhaustives. Le script
