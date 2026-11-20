@@ -42,6 +42,7 @@ export type ScoreMethodCopy = {
   rulesSimple: string;
   riskTag: string;
   restrictionTag: string;
+  allPrograms: string;
   simpleScale: [string, string, string, string];
 };
 
@@ -90,6 +91,7 @@ const en: ScoreMethodCopy = {
   rulesSimple: "Points taken off for the fine print, mostly for unclear or discretionary clauses that could block a payout. Clearly published rules cost very little.",
   riskTag: "Unclear clause",
   restrictionTag: "Published rule",
+  allPrograms: 'All programs',
   simpleScale: ["Unclear or discretionary clauses that could block a payout cost the most.", "Rules published clearly, with figures (news, lot size, consistency…), cost very little.", "A current Trustpilot notice about removed fake reviews: −6 points, once.", "A closed firm: score capped at 29."],
 };
 
@@ -138,6 +140,7 @@ const fr: ScoreMethodCopy = {
   rulesSimple: "Points retirés pour les petites lignes, surtout pour les clauses floues ou discrétionnaires qui peuvent bloquer un paiement. Les règles publiées clairement coûtent très peu.",
   riskTag: "Clause floue",
   restrictionTag: "Règle publiée",
+  allPrograms: 'Tous les programmes',
   simpleScale: ["Les clauses floues ou discrétionnaires qui peuvent bloquer un paiement coûtent le plus.", "Les règles publiées clairement, chiffres à l’appui (annonces, taille de lot, cohérence…), coûtent très peu.", "Un avertissement Trustpilot en cours sur des faux avis supprimés : −6 points, une seule fois.", "Une firme fermée : note plafonnée à 29."],
 };
 
@@ -186,6 +189,7 @@ const de: ScoreMethodCopy = {
   rulesSimple: "Abzug für das Kleingedruckte, vor allem für unklare oder ermessensabhängige Klauseln, die eine Auszahlung blockieren können. Klar veröffentlichte Regeln kosten sehr wenig.",
   riskTag: "Unklare Klausel",
   restrictionTag: "Veröffentlichte Regel",
+  allPrograms: 'Alle Programme',
   simpleScale: ["Unklare oder ermessensabhängige Klauseln, die eine Auszahlung blockieren können, kosten am meisten.", "Klar veröffentlichte Regeln mit Zahlen (News, Lotgröße, Konsistenz…) kosten sehr wenig.", "Ein aktueller Trustpilot-Hinweis auf entfernte Fake-Bewertungen: −6 Punkte, einmalig.", "Eine geschlossene Firma: Score auf 29 begrenzt."],
 };
 
@@ -234,6 +238,7 @@ const it: ScoreMethodCopy = {
   rulesSimple: "Punti tolti per le clausole in piccolo, soprattutto quelle vaghe o discrezionali che possono bloccare un pagamento. Le regole pubblicate chiaramente costano pochissimo.",
   riskTag: "Clausola vaga",
   restrictionTag: "Regola pubblicata",
+  allPrograms: 'Tutti i programmi',
   simpleScale: ["Le clausole vaghe o discrezionali che possono bloccare un pagamento costano di più.", "Le regole pubblicate chiaramente, con cifre (news, lotti, coerenza…), costano pochissimo.", "Un avviso Trustpilot in corso su recensioni false rimosse: −6 punti, una sola volta.", "Una società chiusa: punteggio limitato a 29."],
 };
 
@@ -282,6 +287,7 @@ const es: ScoreMethodCopy = {
   rulesSimple: "Puntos restados por la letra pequeña, sobre todo por cláusulas vagas o discrecionales que pueden bloquear un pago. Las reglas publicadas con claridad cuestan muy poco.",
   riskTag: "Cláusula vaga",
   restrictionTag: "Regla publicada",
+  allPrograms: 'Todos los programas',
   simpleScale: ["Las cláusulas vagas o discrecionales que pueden bloquear un pago son las que más restan.", "Las reglas publicadas con claridad y cifras (noticias, tamaño de lote, consistencia…) restan muy poco.", "Un aviso vigente de Trustpilot por reseñas falsas eliminadas: −6 puntos, una sola vez.", "Una empresa cerrada: puntuación limitada a 29."],
 };
 
@@ -330,6 +336,7 @@ const pt: ScoreMethodCopy = {
   rulesSimple: "Pontos retirados pelas letras miúdas, sobretudo cláusulas vagas ou discricionárias que podem bloquear um pagamento. Regras publicadas com clareza custam muito pouco.",
   riskTag: "Cláusula vaga",
   restrictionTag: "Regra publicada",
+  allPrograms: 'Todos os programas',
   simpleScale: ["Cláusulas vagas ou discricionárias que podem bloquear um pagamento são as que mais pesam.", "Regras publicadas com clareza e números (notícias, lote, consistência…) pesam muito pouco.", "Um aviso atual do Trustpilot sobre avaliações falsas removidas: −6 pontos, uma vez.", "Uma empresa encerrada: pontuação limitada a 29."],
 };
 
@@ -378,6 +385,7 @@ const zh: ScoreMethodCopy = {
   rulesSimple: "因细则扣分，主要针对可能阻止出金的含糊或酌情条款。清楚公布的规则扣分很少。",
   riskTag: "含糊条款",
   restrictionTag: "已公布规则",
+  allPrograms: '所有计划',
   simpleScale: ["可能阻止出金的含糊或酌情条款扣分最多。", "清楚公布并有具体数字的规则（新闻、手数、一致性等）扣分很少。", "Trustpilot 当前关于删除虚假评论的提示：一次性扣 6 分。", "已关闭的公司：评分上限 29。"],
 };
 
@@ -426,6 +434,7 @@ const ja: ScoreMethodCopy = {
   rulesSimple: "細則による減点です。主に出金を妨げ得る曖昧・裁量的な条項が対象で、明確に公表されたルールの減点はごくわずかです。",
   riskTag: "曖昧な条項",
   restrictionTag: "公表ルール",
+  allPrograms: '全プログラム',
   simpleScale: ["出金を妨げ得る曖昧・裁量的な条項が最も大きく減点されます。", "数値付きで明確に公表されたルール（指標発表、ロット、一貫性など）の減点はごくわずかです。", "削除された偽レビューに関する現在の Trustpilot 通知：1 回のみ −6 点。", "閉鎖した会社：スコア上限 29。"],
 };
 
@@ -474,6 +483,7 @@ const hi: ScoreMethodCopy = {
   rulesSimple: "बारीक शर्तों के लिए अंक कटे, ख़ासकर अस्पष्ट या विवेकाधीन शर्तों के लिए जो भुगतान रोक सकती हैं। साफ़ प्रकाशित नियमों का असर बहुत कम है।",
   riskTag: "अस्पष्ट शर्त",
   restrictionTag: "प्रकाशित नियम",
+  allPrograms: 'सभी प्रोग्राम',
   simpleScale: ["भुगतान रोक सकने वाली अस्पष्ट या विवेकाधीन शर्तें सबसे ज़्यादा अंक घटाती हैं।", "आँकड़ों के साथ साफ़ प्रकाशित नियम (न्यूज़, लॉट, कंसिस्टेंसी…) बहुत कम घटाते हैं।", "हटाई गई फ़र्ज़ी समीक्षाओं पर Trustpilot की मौजूदा सूचना: −6 अंक, एक बार।", "बंद फ़र्म: स्कोर अधिकतम 29।"],
 };
 
@@ -522,6 +532,7 @@ const tr: ScoreMethodCopy = {
   rulesSimple: "İnce ayrıntılar için düşülen puan; özellikle ödemeyi engelleyebilecek belirsiz veya takdire bağlı maddeler. Açıkça yayımlanmış kurallar çok az puan götürür.",
   riskTag: "Belirsiz madde",
   restrictionTag: "Yayımlanmış kural",
+  allPrograms: 'Tüm programlar',
   simpleScale: ["Ödemeyi engelleyebilecek belirsiz veya takdire bağlı maddeler en çok puan götürür.", "Rakamlarla açıkça yayımlanmış kurallar (haber, lot, tutarlılık…) çok az puan götürür.", "Silinen sahte yorumlarla ilgili güncel Trustpilot uyarısı: bir kez −6 puan.", "Kapanmış firma: puan en fazla 29."],
 };
 
@@ -570,6 +581,7 @@ const ar: ScoreMethodCopy = {
   rulesSimple: "نقاط مخصومة بسبب التفاصيل الدقيقة، خاصة البنود الغامضة أو التقديرية التي قد تمنع الدفع. القواعد المنشورة بوضوح تكلّف القليل جدًا.",
   riskTag: "بند غامض",
   restrictionTag: "قاعدة منشورة",
+  allPrograms: 'جميع البرامج',
   simpleScale: ["البنود الغامضة أو التقديرية التي قد تمنع الدفع هي الأكثر تكلفة.", "القواعد المنشورة بوضوح وبالأرقام (الأخبار، حجم العقد، الاتساق…) تكلّف القليل جدًا.", "تنبيه Trustpilot قائم بشأن حذف تقييمات مزيفة: −6 نقاط، مرة واحدة.", "شركة مغلقة: التقييم بحد أقصى 29."],
 };
 
@@ -618,6 +630,7 @@ const ko: ScoreMethodCopy = {
   rulesSimple: "세부 조항으로 깎인 점수입니다. 주로 출금을 막을 수 있는 모호하거나 재량적인 조항 때문이며, 명확히 공개된 규칙은 거의 영향이 없습니다.",
   riskTag: "모호한 조항",
   restrictionTag: "공개된 규칙",
+  allPrograms: '모든 프로그램',
   simpleScale: ["출금을 막을 수 있는 모호하거나 재량적인 조항이 가장 크게 감점됩니다.", "수치와 함께 명확히 공개된 규칙(뉴스, 랏, 일관성 등)은 감점이 매우 작습니다.", "삭제된 가짜 리뷰에 대한 현재 Trustpilot 공지: 1회 −6점.", "폐업한 회사: 점수 상한 29."],
 };
 
@@ -666,6 +679,7 @@ const sw: ScoreMethodCopy = {
   rulesSimple: "Pointi zilizokatwa kwa masharti madogo, hasa vifungu visivyo wazi au vya hiari vinavyoweza kuzuia malipo. Sheria zilizochapishwa wazi zinagharimu kidogo sana.",
   riskTag: "Kifungu kisicho wazi",
   restrictionTag: "Sheria iliyochapishwa",
+  allPrograms: 'Programu zote',
   simpleScale: ["Vifungu visivyo wazi au vya hiari vinavyoweza kuzuia malipo vinagharimu zaidi.", "Sheria zilizochapishwa wazi kwa takwimu (habari, ukubwa wa loti, uthabiti…) zinagharimu kidogo sana.", "Tangazo la sasa la Trustpilot kuhusu maoni bandia yaliyofutwa: pointi −6, mara moja.", "Kampuni iliyofungwa: alama isizidi 29."],
 };
 
@@ -714,6 +728,7 @@ const ha: ScoreMethodCopy = {
   rulesSimple: "Makin da aka cire saboda ƙananan sharuɗɗa, musamman sharuɗɗa marasa bayyananne ko na son rai da za su iya hana biyan kuɗi. Dokokin da aka wallafa a fili ba su da tsada sosai.",
   riskTag: "Sharaɗi mara bayyananne",
   restrictionTag: "Dokar da aka wallafa",
+  allPrograms: 'Duk shirye-shirye',
   simpleScale: ["Sharuɗɗa marasa bayyananne ko na son rai da za su iya hana biyan kuɗi su ne mafi tsada.", "Dokokin da aka wallafa a fili da adadi (labarai, girman lot, daidaito…) ba su da tsada sosai.", "Sanarwar Trustpilot ta yanzu game da cire bita na ƙarya: maki −6, sau ɗaya.", "Kamfanin da aka rufe: maki ba zai wuce 29 ba."],
 };
 
@@ -762,6 +777,7 @@ const am: ScoreMethodCopy = {
   rulesSimple: "በጥቃቅን ውሎች ምክንያት የተቀነሱ ነጥቦች፣ በተለይ ክፍያን ሊያግዱ የሚችሉ ግልጽ ያልሆኑ ወይም በፍላጎት የሚወሰኑ አንቀጾች። በግልጽ የታተሙ ህጎች በጣም ትንሽ ያስከፍላሉ።",
   riskTag: "ግልጽ ያልሆነ አንቀጽ",
   restrictionTag: "የታተመ ህግ",
+  allPrograms: 'ሁሉም ፕሮግራሞች',
   simpleScale: ["ክፍያን ሊያግዱ የሚችሉ ግልጽ ያልሆኑ ወይም በፍላጎት የሚወሰኑ አንቀጾች ብዙ ያስከፍላሉ።", "በቁጥር በግልጽ የታተሙ ህጎች (ዜና፣ የሎት መጠን፣ ወጥነት…) በጣም ትንሽ ያስከፍላሉ።", "የተወገዱ የሐሰት ግምገማዎችን በተመለከተ የአሁኑ የTrustpilot ማስታወቂያ፦ −6 ነጥቦች፣ አንድ ጊዜ።", "የተዘጋ ኩባንያ፦ ውጤቱ እስከ 29።"],
 };
 
