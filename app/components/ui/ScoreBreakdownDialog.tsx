@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
+import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
 
 export type ScoreStep = {
   kind: 'editorial' | 'rules' | 'trustpilot' | 'closed';
@@ -17,6 +18,11 @@ export type ScoreStep = {
 export type ScoreBreakdownView = {
   name: string;
   score: number;
+  v4?: {
+    values: [number, number, number, number, number];
+    maxima: [number, number, number, number, number];
+    copy: ScoreV4Copy;
+  };
   tone: string;
   steps: ScoreStep[];
   signals: { label: string; value: string; tone: string }[];
@@ -91,6 +97,25 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               </div>
               <h2 id={titleId}>{fill(copy.title, { name: view.name, score: view.score })}</h2>
             </header>
+
+            {view.v4 ? (
+              <section className="psb-v4 prg-hud-reveal" style={delay(2)} aria-label={view.v4.copy.title}>
+                <div className="psb-v4-heading">
+                  <strong>{view.v4.copy.title}</strong>
+                  <small>{view.v4.copy.subtitle}</small>
+                </div>
+                <ol className="psb-v4-list">
+                  {view.v4.values.map((points, index) => (
+                    <li key={index}>
+                      <div><span>{view.v4!.copy.blocks[index]}</span><strong>{points}<small>/{view.v4!.maxima[index]}</small></strong></div>
+                      <div className="psb-v4-track" aria-hidden="true"><i style={{ width: `${Math.round(100 * points / view.v4!.maxima[index])}%` }} /></div>
+                    </li>
+                  ))}
+                </ol>
+                <p className="psb-v4-confidence">{view.v4.copy.confidence}</p>
+                <p className="psb-v4-hint">{view.v4.copy.method}</p>
+              </section>
+            ) : null}
 
             <ol className="psb-steps">
               {view.steps.map((step, index) => (
@@ -169,11 +194,16 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               </div>
             ) : null}
 
-            <details className="psb-scale prg-hud-reveal" style={delay(view.steps.length + 4)}>
+            {view.v4 ? (
+              <div className="psb-v4-explain prg-hud-reveal" style={delay(view.steps.length + 4)}>
+                <p>{view.v4.copy.restriction}</p>
+                <p>{view.v4.copy.caution}</p>
+              </div>
+            ) : <details className="psb-scale prg-hud-reveal" style={delay(view.steps.length + 4)}>
               <summary>{copy.scaleTitle}</summary>
               <ul>{copy.scale.map((line) => <li key={line}>{line}</li>)}</ul>
               <p className="psb-note">{copy.affiliation}</p>
-            </details>
+            </details>}
 
             <footer className="prg-hud-footer prg-hud-reveal" style={delay(view.steps.length + 5)}>
               <div>

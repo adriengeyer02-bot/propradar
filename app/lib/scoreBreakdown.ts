@@ -14,6 +14,8 @@ export type ScoreBreakdownRule = {
 
 export type ScoreBreakdown = {
   editorial: number;
+  /** Validated V4 five-block breakdown; no second legacy rules deduction. */
+  v4?: NonNullable<PropFirm['scoreV4']>;
   rules?: {
     penalty: number;
     applied: boolean;
@@ -32,6 +34,16 @@ export type ScoreBreakdown = {
 };
 
 export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
+  if (firm.scoreV4) {
+    return {
+      editorial: firm.scoreV4.editorial,
+      v4: firm.scoreV4,
+      unclassifiedOnly: 0,
+      trustpilot: firm.trustpilotPenalty,
+      final: firm.score,
+      maxPenalty: 0,
+    };
+  }
   const update = getFirmUpdate(firm.slug);
   const allRules = update?.restrictiveRules ?? [];
   const result = computeRulesPenalty(update);

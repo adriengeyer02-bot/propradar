@@ -132,3 +132,26 @@ Les outils de calcul V3 40/25, les documents `SCORING_V3.md`, la politique
 historique `SCORING.md` et les PR en cours doivent être réconciliés avec
 cette décision **avant toute bascule publique**. Un moteur V4 doit valider
 les seize budgets et rejeter toute déduction d'un fait en double.
+
+## 6. Déploiement progressif (20 novembre 2026)
+
+Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
+`app/lib/scoringV4.ts` et l'activation explicite dans
+`app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
+29 fiches uniquement**. La note, le classement, les comparateurs et la
+fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
+note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
+
+**14 autres dossiers déjà examinés ne sont pas publiés en V4 :** les dix
+notes de confiance `limitee` du deuxième lot et TickTickTrader, TradeFundrr,
+Traders Central, Rocket21 (pièces contractuelles ou activité actuelle
+insuffisamment vérifiées). Ils conservent leur ancienne chaîne de calcul et
+leur note historique jusqu'à une nouvelle revue sérieuse.
+
+Les notes activées restent de confiance **moyenne**, jamais présentées comme
+des vérifications bancaires exhaustives. Le script
+`node scripts/check-scoring-v4-live.cjs` interdit de les mélanger avec les
+dossiers bloqués et contrôle l'absence de double malus Trustpilot/règles.
+Pour toute nouvelle firme, ajouter explicitement son slug à la liste de
+publication **seulement après audit et autorisation** ; ne jamais activer
+automatiquement toutes les futures lignes d'un lot brouillon.

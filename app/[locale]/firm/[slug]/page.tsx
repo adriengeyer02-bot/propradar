@@ -17,6 +17,7 @@ import RiskPip from '../../../components/ui/RiskPip';
 import ScoreRing from '../../../components/ui/ScoreRing';
 import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
 import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
+import { scoreV4Copy } from '../../../lib/scoreV4I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
@@ -628,8 +629,8 @@ export default async function FirmPage({ params }: Props) {
     });
   const scoreCopy = scoreMethodCopy(locale);
   const breakdown = getScoreBreakdown(firm);
-  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
-  {
+  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: breakdown.v4 ? scoreV4Copy(locale).method : scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
+  if (!breakdown.v4) {
     const rules = breakdown.rules;
     const applied = Boolean(rules?.applied && rules.penalty);
     scoreSteps.push({
@@ -654,6 +655,11 @@ export default async function FirmPage({ params }: Props) {
   const scoreView: ScoreBreakdownView = {
     name: firm.name,
     score: firm.score,
+    v4: breakdown.v4 ? {
+      values: [breakdown.v4.blocks.A, breakdown.v4.blocks.B, breakdown.v4.blocks.C, breakdown.v4.blocks.D, breakdown.v4.blocks.E],
+      maxima: [25, 35, 15, 15, 10],
+      copy: scoreV4Copy(locale),
+    } : undefined,
     tone: scoreTone(firm.score),
     steps: scoreSteps,
     signals: [
