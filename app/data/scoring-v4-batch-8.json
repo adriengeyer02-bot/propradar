@@ -1,0 +1,612 @@
+{
+ "version": 4,
+ "checkedOn": "2026-11-20",
+ "status": "8-publications-claude-lot-N02",
+ "method": "Lot N02 (Claude) du tableau de suivi du 20/11/2026, même méthode que le lot N01 (SCORING_V4.md). Publication uniquement en confiance moyenne.",
+ "firms": [
+  {
+   "slug": "blufx",
+   "before": 38,
+   "scores": null,
+   "auditState": "Domaine officiel non exploité par la firme : blufx.co.uk répond le 2026-11-20 par une redirection 302 vers propfirmswitch.com, site comparateur tiers qui ne mentionne pas BluFX ; Trustpilot indique « not possible to leave a review here anymore because the company's website has closed » (aucun avis depuis août 2023). Companies House : BLUFX LTD (n° 10819120, 1a Old Bond Street, Londres) est en liquidation judiciaire (« Compulsory liquidation », pétition du 25/09/2024, liquidation ouverte le 13/11/2024, Official Receiver). Aucune offre en vente : pas de note V4.",
+   "source": "https://blufx.co.uk/",
+   "next": "Confirmer par une source primaire que BLUFX LTD (10819120) est bien la société de la marque BluFX (anciennes CGU archivées, mentions légales), puis décider d'un dossier closures.ts avec la date de liquidation du registre."
+  },
+  {
+   "slug": "bullwaves-prime",
+   "before": 40,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     7,
+     7,
+     1
+    ],
+    "B": [
+     3,
+     4,
+     5,
+     4
+    ],
+    "C": [
+     6,
+     3,
+     3
+    ],
+    "D": [
+     4,
+     4,
+     3
+    ],
+    "E": [
+     2,
+     2,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://prime.bullwaves.com/news/how-payouts-work",
+    "contract": "https://roryyemdtbpsldyoafqv.supabase.co/storage/v1/object/public/bullwaves-media/legal-import/prime/89f16511ae856e1c132c6c05881270fb97522000b81ac85a4c70b19cd2be6533.pdf",
+    "program": "https://prime.bullwaves.com/trading-rules",
+    "entity": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No8_2025.pdf",
+    "offer": "https://prime.bullwaves.com/pricing"
+   },
+   "b1": "CGU janv. 2025 §7.6-7.7 : la société « retains discretion to ascertain » une activité interdite et peut, « at its sole discretion », exclure les résultats ou résilier ; §25.6 permet de refuser la récompense si elle « suspect[s] » un manquement ; la page de règles ajoute des catégories vagues (« one-sided betting », « toxic trading », « gambling, not disciplined trading ») avec retrait de profits « at Bullwaves Prime's sole discretion ». Fait unique compté en B1 seulement : B1=3/15. Les règles chiffrées (SL sous 60 s, 2/5 min de détention, 2 % par idée, consistance 15 %/30-40 %, lots) ne sont pas déduites.",
+   "b2": "Le conflit de plafond 6 % est levé : la page de règles relue le 20/11/2026 indique désormais « No payout size cap applies », comme le guide payout. Restent : CGU qui définissent « Company » comme « Bullwaves Prime Ltd » (§30.1.6) alors que l'opérateur est Moonance LLC, une adresse Seychelles (§20.2) à côté du siège de Kingstown, une date d'entrée en vigueur (01/11/2024) différente de la couverture (janv. 2025), aucun pourcentage de split dans les CGU, et l'obligation de SL sous 60 s présente dans le guide payout mais pas sur la page de règles. B2=4/8.",
+   "b3": "§4.5 : « The change does not affect the Services purchased before the change is notified » ; préavis de 5 jours ouvrés (§24.1). Le passage au drawdown statique 8 % du 2-Step ne s'applique qu'aux achats depuis le 12/11/2026. Aucune modification rétroactive de gains acquis établie ; §25.7 (saisie du compte « for indefinite period ») reste une réserve. B3=5/7.",
+   "hold": "A15 B16 C12 D11 E6 = 60/100 éditorial, puis −6 Trustpilot (notice déjà au dossier, toujours active le 20/11/2026) = 54/100, contre 40 affiché (+14, mouvement sensible à soumettre à Geyer). Réserves : clauses discrétionnaires sur les récompenses (B1), aucune preuve de payout indépendante (flux de payouts publié par la firme seulement), split absent des CGU, 1-Step sans qualification statique/suiveur du drawdown. Confiance moyenne : CGU, règles, guide payout et grille de prix lus sur pages officielles ; entité nommée et corroborée par la Gazette de Saint-Vincent.",
+   "next": "Qualification statique/suiveur du drawdown 1-Step ; version datée des CGU qui reflète la page de règles actuelle ; adresse et enregistrement de « Bullwaves Prime Ltd » cité en §30.1.6 ; recherche ciblée des listes FCA/CONSOB/AMF/CNMV (recherche web sans résultat, registres non interrogés un par un) ; preuve de payout indépendante."
+  },
+  {
+   "slug": "dei-funded",
+   "before": 38,
+   "scores": null,
+   "auditState": "Domaine officiel réaffecté : deifunded.com répond le 2026-11-20 par une redirection 302 vers datasidney.xyz, qui sert des pronostics de loterie togel (Sydney Pools) sans rapport avec une prop firm. Aucune offre, contrat ou politique de payout Dei Funded en ligne ; Trustpilot sans avis depuis le 17/10/2024. Firme n'exploitant plus d'offre propre : pas de note V4.",
+   "source": "https://deifunded.com/",
+   "next": "Trouver une source primaire datée (registre de la société, annonce archivée) pour décider d'un dossier de fermeture ; sinon laisser en archive surveillée."
+  },
+  {
+   "slug": "directfundedtrader",
+   "before": 43,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     4,
+     3,
+     3,
+     3
+    ],
+    "C": [
+     4,
+     2,
+     2
+    ],
+    "D": [
+     2,
+     3,
+     3
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://directfundedtrader.com/faq-rules",
+    "contract": "https://directfundedtrader.com/termsandservices",
+    "program": "https://directfundedtrader.com/",
+    "entity": "https://directfundedtrader.com/termsandservices",
+    "offer": "https://directfundedtrader.com/turbo"
+   },
+   "b1": "CGU §3 et §15 : refus/annulation de service et résiliation de compte « at its sole discretion », « at any time, without notice » ; la FAQ prévoit la résiliation « without any warning » pour une liste incluant une pratique non définie (« one-sided betting »). L'accord funded qui régirait les récompenses n'est pas publié. B1=4 ; les règles chiffrées (60 s, stop-loss 30 s, news, 3 trades/semaine) ne sont pas comptées ici.",
+   "b2": "Le partage diverge entre pages officielles : FAQ 80 % puis 100 % après plus de cinq récompenses consécutives, contre accueil/Turbo 100/80/70 % selon la fréquence choisie ; un tableau 1-phase non étiqueté (5 %/10 %) coexiste avec Fast Funding Standard (4 %/7 %). B2=3.",
+   "b3": "CGU §1 : modification « at any time in its sole discretion », l'usage continu valant acceptation, sans protection écrite des comptes déjà achetés ; aucun changement rétroactif effectivement appliqué n'est établi. B3=3.",
+   "hold": "A13 B13 C8 D8 E5 = 47/100 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 41/100 (avant 43, −2). Réserves : prix par taille non lisibles au configurateur, DFT GROUP LLC nommée avec adresse Meydan (Dubaï) sans numéro ni registre, droit applicable non indiqué (§11 « local court »), aucune preuve de payout. Confiance moyenne (CGU, FAQ payout et programmes lus).",
+   "next": "Prix catalogue par taille (checkout), accord funded, immatriculation de DFT GROUP LLC (registre Dubaï/Meydan Free Zone), réconciliation du split FAQ/accueil, preuves de payout indépendantes."
+  },
+  {
+   "slug": "dna-funded",
+   "before": 41,
+   "scores": null,
+   "auditState": "Ventes suspendues, firme ne commercialisant plus son offre : la fiche produit officielle https://dnafunded.com/product/100000-rapid-challenge/ relue le 2026-11-20 affiche « New orders are currently paused » (déjà constaté le 19/11), la page d'accueil et la catégorie 2 Phase renvoient une erreur au chargement ce jour, et TheGodFunded (09/10/2026) rapporte support inactif, réseaux sociaux supprimés et Discord non modéré, sans annonce officielle de fermeture. Pas de note V4 tant que l'offre n'est pas rouverte ou la fermeture confirmée.",
+   "source": "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+   "next": "Relire le site en fin de mois : réouverture des ventes (alors noter sur le PDF de mars 2026 + entité DNA Funded Ltd à vérifier en registre) ou annonce/constat de fermeture (alors dossier closures.ts avec source datée et plafond 29, sur décision de Geyer)."
+  },
+  {
+   "slug": "foxx-funded",
+   "before": 36,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     1,
+     3,
+     3,
+     4
+    ],
+    "C": [
+     5,
+     3,
+     3
+    ],
+    "D": [
+     3,
+     3,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://www.foxx-funded.com/payout/",
+    "contract": "https://www.foxx-funded.com/terms-and-conditions/",
+    "program": "https://www.foxx-funded.com/faqs/",
+    "entity": "https://www.foxx-funded.com/",
+    "offer": "https://www.foxx-funded.com/"
+   },
+   "b1": "CGU §22.4 : « Payouts remain entirely discretionary and subject to internal compliance review » et refus fondé sur le « trading style or behavior » « final, binding, and non-appealable » ; §22.3 approbation des comptes « at their sole discretion ». Aucune garantie d'un reward éligible ni voie d'appel, d'où B1=1. Les règles chiffrées (25 % de consistance, 2 % de risque, délais) ne sont pas déduites.",
+   "b2": "Instant Funding : 50 %→80 % sur la page payout contre « up to 90% » sur la page Instant ; la carte Instant de l'accueil reprend « 1 step » et un objectif Phase 1 ; les CGU (effectives 26/10/2024) ne nomment que SEMIZU L.L.C-FZ alors que le pied de page ajoute Foxx Limited (Sainte-Lucie) ; les EAU figurent parmi les pays exclus alors que Semizu est à Dubaï.",
+   "b3": "§1.3 : modification à tout moment à la seule discrétion de la firme, acceptation par usage continu, sans préavis ; §8.1 idem pour les guidelines. L'accueil indique « Terms in force at the time of purchase apply ». Aucune modification rétroactive constatée.",
+   "hold": "A13 B11 C11 D10 E5 = 50 points éditoriaux, puis −6 Trustpilot (notice au dossier, toujours active le 2026-11-20) appliqué par le code = 44/100 (avant 36, +8). Réserves : pouvoir discrétionnaire et non contestable sur les payouts (B1), vitrine de payouts explicitement « does not represent verified client payouts » (A3=1, non vérifié), délai de traitement après approbation non chiffré, immatriculations (Sainte-Lucie 2026-00126, Semizu 2423826) déclarées mais non vérifiées dans un registre, pas de remboursement des frais (§7.2). Confiance moyenne.",
+   "next": "Registres Sainte-Lucie et Dubaï (DMCC/Meydan) pour les deux entités ; contenu des onglets « What we allow / don't allow » de la FAQ (news, EA) ; délai et frais de paiement Rise ; politique de remboursement PDF ; grille de prix Instant complète."
+  },
+  {
+   "slug": "funded-trader-markets",
+   "before": 43,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     7,
+     7,
+     1
+    ],
+    "B": [
+     3,
+     2,
+     3,
+     4
+    ],
+    "C": [
+     4,
+     3,
+     2
+    ],
+    "D": [
+     3,
+     3,
+     4
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://fundedtradermarkets.com/faq/what-withdrawal-methods-are-available-at-funded-trader-markets",
+    "contract": "https://fundedtradermarkets.com/terms-conditions",
+    "program": "https://fundedtradermarkets.com/programs",
+    "entity": "https://fundedtradermarkets.com/terms-conditions",
+    "offer": "https://fundedtradermarkets.com/1-step"
+   },
+   "b1": "CGU §5.F « block any Trader from participating in the program for any reason », §4.J récompenses « deemed invalid and void » et remise à zéro « at its sole discretion », §4.H.2 perte possible de la récompense pour un appel de vérification manqué, §5.C critère vague de « stratégie différente » en funded. B1=3 ; Shield 1 %, ratios best-day et durée minimale d'une minute restent des règles chiffrées non déduites.",
+   "b2": "Les mêmes CGU nomment trois cocontractants (Formed Technologies INT FZCO, FTM Funded Trader Markets LTD à Chypre, « Funded Trader Markets s.r.o. ») et deux adresses Sainte-Lucie différentes ; les pages 2-Step/1-Step donnaient en octobre des daily/splits contradictoires. B2=2.",
+   "b3": "§1.C : la firme peut « pause, substitute, alter, revise, or discontinue this Agreement at any given time », usage continu = acceptation, §9.A guidelines modifiables incorporées au contrat ; pas de changement rétroactif de récompenses acquises établi. B3=3.",
+   "hold": "A15 B12 C9 D10 E6 = 52/100 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 46/100 (avant 43, +3). Réserves : identité contractante incohérente dans les CGU, entité FZCO (n° 36580) non vérifiée en registre, prix par taille lus seulement pour Nitro, aucune preuve de payout indépendante. Confiance moyenne.",
+   "next": "Vérifier Formed Technologies INT FZCO (DSO) et FTM Funded Trader Markets LTD HE462185 (registre chypriote), lire la Refund Policy citée en §4.G, prix des autres tailles, preuves de payout."
+  },
+  {
+   "slug": "funding-frontier",
+   "before": 42,
+   "scores": null,
+   "auditState": "Non noté : le domaine officiel fundingfrontier.com était en boucle de redirection le 17/11/2026 et ne répondait toujours pas le 20/11/2026 (erreur serveur) ; aucune offre, CGU actuelles ni checkout vérifiables. Fermeture non confirmée : la note historique est conservée.",
+   "source": "https://fundingfrontier.com/legal-terms/",
+   "next": "Revérifier le domaine (ou un domaine de remplacement annoncé officiellement), confirmer l'immatriculation RAKEZ de First Frontier FZ-LLC, chercher une annonce de fermeture datée."
+  },
+  {
+   "slug": "gry-funding",
+   "before": 44,
+   "scores": null,
+   "auditState": "Non noté : marque annoncée comme rachetée (communiqué IssueWire du 07/10/2024, Goated FX / Only Funds FX) ; gryfunding.com sans page de vente ni CGU vérifiable (contrôle externe d'octobre 2026 hors ligne ; le 20/11/2026 le site ne répond pas à la lecture automatisée). Aucun contrat, produit ni entité contractante actuelle lisible : rien à noter sur la grille V4.",
+   "source": "https://gryfunding.com/terms-and-conditions/",
+   "next": "Identifier un éventuel site successeur (Goated FX / Only Funds FX) et son contrat ; à défaut, documenter une fermeture par une source datée avant tout passage en « Fermée » (décision de Geyer)."
+  },
+  {
+   "slug": "hash-hedge",
+   "before": 44,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     7,
+     8,
+     1
+    ],
+    "B": [
+     5,
+     4,
+     6,
+     4
+    ],
+    "C": [
+     5,
+     2,
+     2
+    ],
+    "D": [
+     3,
+     3,
+     4
+    ],
+    "E": [
+     3,
+     2,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://www.hashhedge.com/commercial-terms",
+    "contract": "https://www.hashhedge.com/terms-and-conditions",
+    "program": "https://hashhedge.gitbook.io/hashhedge-user-guide/rules/challenge-rules.md",
+    "entity": "https://www.hashhedge.com/commercial-terms",
+    "offer": "https://www.hashhedge.com/"
+   },
+   "b1": "CGU 4.5 : la société peut « in its sole discretion and without prior notice » annuler ordres ou résultats pour une activité « unfair, abusive, manipulative, or otherwise harmful », termes non définis (seul « arbitrage-based abuse » l'est) ; Commercial Terms 4.4/6.3 : la disqualification fait perdre les payouts en attente ; 4.6 : IP/appareils partagés comme indices de coordination. Atténuation réelle : la disqualification pour conduite à apprécier n'intervient qu'après une décision « Outcome A (Confirmed Breach) » (16.4) avec procédure de Hold. B1=5.",
+   "b2": "Écarts entre pages officielles : accueil (objectif 10 %, perte journalière 3 %, drawdown 6 % dans le tableau de prix ; mais +8 %/+6 % et 5 %/8-10 % dans la section terminal) contre guide (5 % puis 6 % en deux étapes) ; « up to 90/10 » contre 80 % par défaut (90 % seulement avec l'add-on). B2=4.",
+   "b3": "CGU 2.1 modification « at our sole discretion », mais 2.5 : les changements « shall not alter the conditions applicable to an existing purchase » sauf accord, loi ou régulateur ; Commercial Terms 1.2 et 7.4 limitent les changements de ratio et d'add-ons aux achats futurs. Procédure de Hold avec plafond de 90 jours avant arbitrage. Rien de rétroactif établi. B3=6.",
+   "hold": "A16 B19 C9 D10 E7 = 61/100 (avant 44, +17 : mouvement sensible, accord de Geyer requis). Pas de notice Trustpilot, donc pas de −6. Réserves : deux sociétés (Empower Academy Ltd, EAU, 01011157, vendeur et opérateur ; FinSmart Solution Ltd, Seychelles, 246832, débiteur des rewards) seulement auto-déclarées, sans adresse ; droit anglais, arbitrage CCI siège Dubaï ; plafond de 10 000 $ par 14 jours ; « 17,800+ payouts » déclarés par la firme ; garantie contractuelle de triple paiement au-delà de 72 h (Commercial Terms §3) non testée. Confiance moyenne.",
+   "next": "Registres EAU et Seychelles pour les deux sociétés ; prix du Two-stage (le tableau d'accueil 99-999 $ correspond au One-stage) ; réconcilier les objectifs/limites affichés sur l'accueil et le guide ; preuve indépendante d'un paiement."
+  },
+  {
+   "slug": "quantec-trading-capital",
+   "before": 34,
+   "scores": null,
+   "auditState": "Pas d'offre propre exploitable : le domaine listé quantectradingcapital.com reste injoignable le 2026-11-20 (robots.txt non joignable, comme « no DNS » le 12-14/11). Le domaine du profil Trustpilot, quantectrading.com, répond de nouveau le 2026-11-20 (il renvoyait l'erreur SSL 526 le 14/11) mais n'affiche qu'un gabarit inachevé : tarifs « One Step »/« Two Step » vides, texte de remplissage « Add Your Heading Text Here », aucun lien d'achat, aucune CGU, FAQ, entité ni contact lisible. Aucun contrat ni politique de payout : pas de note V4.",
+   "source": "https://quantectradingcapital.com/terms-and-conditions/",
+   "next": "Contrôle manuel dans un navigateur de quantectrading.com (liens réels, checkout, pied de page, entité) ; si une offre réelle réapparaît, auditer CGU et payout. Sinon décider du statut avec une source externe datée."
+  },
+  {
+   "slug": "sabiotrade",
+   "before": 43,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     2,
+     4,
+     4,
+     4
+    ],
+    "C": [
+     7,
+     4,
+     2
+    ],
+    "D": [
+     4,
+     4,
+     4
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://sabiotrade.us/",
+    "contract": "https://sabiotrade.us/terms",
+    "program": "https://sabiotrade.us/",
+    "entity": "https://www.solocheck.ie/Irish-Company/Codevil-It-Engineering-Limited-680139",
+    "offer": "https://sabiotrade.us/"
+   },
+   "b1": "CGU §4 : « the Company may, at its sole discretion, adjust, reduce, or withhold any Performance Reward », y compris en attente ; §5 taux et méthodes « discretionary » ; Règles §7 : « grant, adjust, decline, or withhold » selon une évaluation « holistic ». Protection contractuelle quasi nulle des récompenses éligibles : B1=2. Consistance 40 %/55 % et trailing 6 % non déduits.",
+   "b2": "Consistance différente entre l'accueil (seuil par trade) et les Règles §5/§7(d) (40 % best day, 55 % par trade) ; les CGU ne fixent ni split ni fréquence que l'accueil affiche (80/90 %, tous les 7 jours). B2=4.",
+   "b3": "Préambule et §9 : modification à tout moment, usage continu = acceptation ; mais les conséquences de la Règle §8 ne visent que les comptes créés depuis le 2 février 2026, signe de non-rétroactivité. Rien de rétroactif établi. B3=4.",
+   "hold": "A13 B14 C13 D12 E6 = 58/100 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 52/100 (avant 43, +9 : mouvement à soumettre). Réserves : récompenses entièrement discrétionnaires (B1), aucun payout vérifié, lecture via sabiotrade.us (sabiotrade.com redirige depuis les US). Entité irlandaise vérifiée (statut Normal, comptes à jour). Confiance moyenne.",
+   "next": "Version non-US de l'offre (sabiotrade.com hors redirection), plateforme et prestataire, conditions des bundles Pro 3/Pro 12, preuves de payout indépendantes, consultation directe du CRO (core.cro.ie)."
+  },
+  {
+   "slug": "sfx-funded",
+   "before": 43,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     4,
+     7,
+     1
+    ],
+    "B": [
+     1,
+     2,
+     2,
+     3
+    ],
+    "C": [
+     5,
+     4,
+     2
+    ],
+    "D": [
+     2,
+     3,
+     3
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://sfxfunded.com/help/payout-guarantee",
+    "contract": "https://sfxfunded.com/docs/terms-of-service",
+    "program": "https://sfxfunded.com/2-step-challenge",
+    "entity": "https://sfxfunded.com/docs/terms-of-service",
+    "offer": "https://sfxfunded.com/instant-funding"
+   },
+   "b1": "CGU §3.3 « all payouts are fully at the discretion of the Company » et §3.11 ; §9.11 résiliation « at any time and for any reason » ; l'équipe risque peut déduire tous les profits, refuser un retrait ou réduire le split à 20-25 % sur des critères non mesurables (« Overtrading », « Poor Money Management »). B1=1. Stability Index, VPN et limites de couches non déduits.",
+   "b2": "Trois cadences officielles (à la demande, 14 jours ouvrés, 21 jours/5 jours payants), « 100% Refundable » contre remboursement seulement au 5e payout (Refund Policy), §7.6 contre §18.3 sur l'effet des changements. B2=2.",
+   "b3": "§18.3 permet d'appliquer les modifications « with effect for the contract previously entered into », en contradiction avec §7.6 (non applicables aux services déjà achetés) ; rétroactivité permise par le texte mais aucun cas appliqué établi. B3=2.",
+   "hold": "A12 B8 C11 D8 E5 = 44/100 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 38/100 (avant 43, −5 : mouvement à soumettre). Réserves : payouts discrétionnaires par contrat, règles lourdes dans le help centre Intercom, seuls les prix 100K affichés, entité FZCO non vérifiée en registre, aucune preuve de payout. Confiance moyenne.",
+   "next": "Vérifier SFX International FZCO (DSO-FZCO-21983) au registre DSO/IFZA, prix des autres tailles, cadence de payout réellement applicable, preuves de payout indépendantes."
+  },
+  {
+   "slug": "superfunded",
+   "before": 44,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     6,
+     8,
+     1
+    ],
+    "B": [
+     3,
+     3,
+     4,
+     4
+    ],
+    "C": [
+     1,
+     1,
+     2
+    ],
+    "D": [
+     4,
+     3,
+     3
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+    "contract": "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+    "program": "https://superfunded.com/challenges/",
+    "entity": "https://superfunded.com/faqs/",
+    "offer": "https://superfunded.com/challenges/"
+   },
+   "b1": "Rules V2 (22/10/2026, audit du 18/11) : l'équipe Risk a la « sole and absolute discretion in determining whether Payouts are approved », sans critère au-delà des règles listées. Clause directe sur l'approbation de tout payout : B1=3. Le plafond de 5 % sur les trois premiers payouts, la règle de répartition 40/30 %, la limite de 2,5 % par trade et la fenêtre news sont chiffrés et ne sont pas comptés ici.",
+   "b2": "FAQ du 20/11/2026 : premier retrait après 30 jours (15 jours avec add-on) contre 14 jours dans les Rules V2 ; FAQ « maximum drawdown is static » pour tous contre « trailing » pour le One Phase dans une autre réponse ; vitrine « up to 90% » contre 70/80/90 % (Two Phase) et 80 % (One Phase). B2=3.",
+   "b3": "Clause de modification des Rules V2 non relue (PDF inaccessible le 20/11 depuis notre environnement) ; aucun changement rétroactif établi. Valeur moyenne B3=4, confiance abaissée plutôt que pénalité.",
+   "hold": "A15 B14 C4 D10 E6 = 49 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 43/100 (avant 44, −1). Réserve principale : aucune entité contractante, adresse ni droit applicable nommés sur les pages officielles lues (FAQ, accueil, défis) ; aucun chiffre de payouts publié ni preuve indépendante. Confiance limitée (entité non nommée) : non publiable en l'état.",
+   "next": "Trouver l'entité contractante (CGU/Privacy/checkout ; une piste estonienne apparaît dans un article du site, non lisible) et la vérifier au registre ; relire la clause de modification des Rules V2 ; réconcilier FAQ (30/15 jours) et Rules V2 (14 jours)."
+  },
+  {
+   "slug": "sure-leverage",
+   "before": 44,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     8,
+     8,
+     1
+    ],
+    "B": [
+     8,
+     5,
+     4,
+     4
+    ],
+    "C": [
+     5,
+     2,
+     2
+    ],
+    "D": [
+     2,
+     3,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules-sure-leverage-funding",
+    "contract": "https://sureleveragefunding.com/terms-and-conditions/",
+    "program": "https://help.sureleveragefunding.com/en/articles/12141596-instant-funding-static-faq-rules",
+    "entity": "https://sureleveragefunding.com/",
+    "offer": "https://help.sureleveragefunding.com/en/articles/16100455-one-step-pro-futures-style"
+   },
+   "b1": "Les règles générales et par programme lues sont mécaniques : déductions de « soft breach » chiffrées (news ±5 min, trades < 2 min), refus si profit ramené à zéro ou ≥ 50 % de trades en soft breach, split divisé par deux puis clôture ; aucune clause « sole discretion » ou notion vague de « gambling » sur ces pages. Les CGU elles-mêmes n'ont pas pu être lues (page rendue en JavaScript) : B1=8 provisoire, confiance abaissée.",
+   "b2": "Le 2 Step Challenge (plus vendu) reste documenté à côté de nombreuses variantes (Instant Static, Trailing, Lite, Zero, Intro, Futures Style, One Step Pro, 2 Step Drop Out) ; split affiché 80 % contre échelles 50→80 % (Instant Static) et 50 % (Intro). B2=5.",
+   "b3": "Effet des changements de règles sur les comptes existants non indiqué dans les pages lues ; CGU non lues ; aucune rétroactivité établie. B3=4.",
+   "hold": "A17 B21 C9 D9 E5 = 61 éditorial, −6 Trustpilot (notice au dossier, toujours active selon le miroir uk.trustpilot.com le 20/11/2026) = 55/100 (avant 44, +11 : mouvement sensible). Réserves : CGU non lues, prix catalogue non lus, entités (ASAP Solutions FZ-LLC, EAU ; Sure Leverage Funding Ltd, Sainte-Lucie, 2025-00514) auto-déclarées. Paiement annoncé sous 24 h ouvrées, +10 % de split en cas de retard, frais 2 % ou 10 $ (Rise ou USDT). Confiance limitée : non publiable en l'état.",
+   "next": "Lire les CGU et la politique de remboursement (rendu navigateur), la grille de prix par programme et les nouvelles variantes (Zero, Lite, Futures Style, Drop Out) ; registres RAK et Sainte-Lucie."
+  },
+  {
+   "slug": "t4tcapital",
+   "before": 38,
+   "scores": null,
+   "auditState": "Pas d'offre propre vérifiable : www.t4tcapital.com ne répond pas le 2026-11-20 (robots.txt injoignable, page non récupérée), et la marque voisine t4tcapitalfm.com redirige (302) vers traders4traders.com, site distinct dont le contrat n'est pas celui de la fiche. Aucun checkout, CGU ou politique de payout T4TCapital lisible : pas de note V4.",
+   "source": "https://www.t4tcapital.com/",
+   "next": "Décision éditoriale : archiver la fiche T4TCapital, ou créer/auditer une fiche Traders4Traders séparée (CGU, entité, payouts) si la succession juridique est établie par une source primaire."
+  },
+  {
+   "slug": "the-funded-trader",
+   "before": 35,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     3,
+     2,
+     1
+    ],
+    "B": [
+     5,
+     3,
+     3,
+     3
+    ],
+    "C": [
+     4,
+     2,
+     3
+    ],
+    "D": [
+     2,
+     3,
+     2
+    ],
+    "E": [
+     1,
+     2,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://www.financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/",
+    "contract": "https://www.thefundedtraderprogram.com/terms-of-use/index.html",
+    "program": "https://www.thefundedtraderprogram.com/",
+    "entity": "https://www.thefundedtraderprogram.com/terms-of-use/index.html",
+    "offer": "https://www.thefundedtraderprogram.com/"
+   },
+   "b1": "Non vérifié aujourd'hui : thefundedtraderprogram.com bloque toute lecture automatisée (CGU, accueil, dashboard et flux en erreur client le 2026-11-20 ; déjà listé comme bloquant le 18/11). Le dossier du 08/11 n'archive aucune clause discrétionnaire ; valeur médiane provisoire, confiance abaissée.",
+   "b2": "Non vérifié : le dossier distingue offres actuelles et obligations héritées ; les pages produit et la FAQ actuelles n'ont pas pu être relues. Les pages de blog indexées décrivent d'anciens programmes (King's Program) à ne pas confondre avec l'offre actuelle.",
+   "b3": "Les comptes en pause et les payouts convertis en plans de paiement après mars 2024 sont comptés une seule fois en A2 ; aucune autre modification rétroactive documentée. Clause de modification actuelle non relue.",
+   "hold": "A6 B14 C9 D7 E4 = 40/100 éditorial provisoire (avant 35, +5 ; aucune notice Trustpilot, pas de −6). A2=2 : Finance Magnates rapporte le 14/03/2024 l'arrêt de tous les payouts confirmé par la firme (« self-imposed internal audit ») et le 20/11/2024 la déclaration de la firme que « 900 traders are still awaiting payment », sans réconciliation publique ultérieure. Litige D'Arcangelo (W.D. Tex. 1:23-cv-01472) : ordonnance procédurale du 21/03/2025 sur une demande de rejet, différend entre associés, pas de constat sur le fond ni de grief de payout, non compté. Confiance limitée : contrat, prix et règles actuels illisibles aujourd'hui ; ne pas publier.",
+   "next": "Lecture manuelle (navigateur) des CGU, de la page payout et des programmes actuels ; registre (Texas/Delaware) de The Funded Trader LLC ; toute source publique sur l'apurement du solde des 900 traders et des comptes en pause."
+  },
+  {
+   "slug": "traddoo",
+   "before": 38,
+   "scores": null,
+   "auditState": "Ne vend plus d'offre propre : le domaine officiel traddoo.com renvoie le 2026-11-20 une redirection 302 vers expireddomains.com/domain/traddoo.com (domaine expiré, aucune page de la firme). Finance Magnates a rapporté le 2024-09-11 la suspension « temporaire » des ventes de challenges aux nouveaux clients ; aucun nouveau domaine officiel ni relance trouvé. Aucun contrat, checkout ou politique de payout lisible : pas de note V4. L'inaccessibilité n'est pas en soi une fermeture confirmée.",
+   "source": "https://traddoo.com/",
+   "next": "Décision éditoriale : statut Fermée seulement avec une source externe datée de fin d'activité (aucune trouvée). Sinon garder la fiche en surveillance avec l'avertissement actuel."
+  },
+  {
+   "slug": "willis-capital",
+   "before": 33,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     1,
+     2,
+     3,
+     2
+    ],
+    "C": [
+     4,
+     3,
+     3
+    ],
+    "D": [
+     1,
+     3,
+     2
+    ],
+    "E": [
+     2,
+     2,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://www.wfunded.io/en/faq",
+    "contract": "https://www.wfunded.io/en/terms-and-conditions",
+    "program": "https://www.wfunded.io/en/programs/standard",
+    "entity": "https://www.wfunded.io/en/terms-and-conditions",
+    "offer": "https://www.wfunded.io/en/checkout"
+   },
+   "b1": "CGU WFunded : §5.3 permet d'« cancel any pending payouts, void any profits generated on the account » au titre d'une politique de réputation, §5.4 profits « voided at the sole discretion of WFunded », §5.2 rejet de payouts en attente, §5.1 interdiction de « treating trading as a game of chance » appréciée « in its sole and absolute discretion », et résiliation « for any reason ». Plusieurs voies subjectives de retrait des gains, aucune procédure de contestation : B1=1.",
+   "b2": "Incohérences : page Standard 5 %/10 % de drawdown dans le texte contre 4 %/6 % dans le tableau ; CGU décrivant des comptes live alors que le pied de page dit « virtual funds » ; calendrier « agreed-upon schedule » (CGU §5.1) contre premier retrait mensuel puis bimensuel (FAQ) ; programmes nommés SkillCheck Standard/Expedited d'un côté, Two-Phase/One-Phase/Direct Funding au checkout.",
+   "b3": "Modification « at any time », acceptation par participation continue, sans préavis ni clause de non-rétroactivité. Aucune modification rétroactive de gains acquis établie par une source fiable (les avis Trustpilot sur des migrations de plateforme restent des allégations).",
+   "hold": "A13 B8 C10 D6 E5 = 42/100 éditorial (avant 33, +9 ; aucune notice Trustpilot, donc pas de −6). Réserves : nombreux pouvoirs discrétionnaires sur les gains (B1), prix et tailles de compte non identifiables avant achat (checkout « $0 », D1/B4), drawdown incohérent, entité nigériane nommée avec un numéro RC non vérifié au registre CAC, aucune preuve indépendante de payout (TechCabal ne reprend que des déclarations de la firme). Confiance limitée : prix et calendrier contractuel non lus, et identité Willis Capital/WFunded à trancher éditorialement.",
+   "next": "Registre CAC (Nigeria) pour Western Sahara Worldwide Services LTD RC 1573472 ; prix et tailles réels au checkout (rendu navigateur) ; type de drawdown en phase financée ; décider si la fiche doit être renommée WFunded (le profil Trustpilot williscapitals.com s'affiche WFUNDED et un second profil wfunded.io existe : 3,4/45)."
+  },
+  {
+   "slug": "x-funded",
+   "before": 44,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     6,
+     8,
+     1
+    ],
+    "B": [
+     3,
+     4,
+     2,
+     4
+    ],
+    "C": [
+     3,
+     2,
+     2
+    ],
+    "D": [
+     3,
+     3,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://help.x-funded.com/payout-policy-dashboard/when-will-i-receive-my-payout/",
+    "contract": "https://x-funded.com/terms-and-conditions/",
+    "program": "https://x-funded.com/instant-funding/",
+    "entity": "https://x-funded.com/terms-and-conditions/",
+    "offer": "https://x-funded.com/"
+   },
+   "b1": "CGU (Amendments and Termination) : suspension ou résiliation « under our sole discretion » et « for any reason whatsoever and without limitation » ; sanctions pouvant inclure « refusal of payouts » et « any other measures deemed necessary by XFunded » pour des notions larges (« misuse the platform »). B1=3. Les règles chiffrées (stop loss 5 min / 2 min, 45 %/20 % par idée de trade, 1 % de risque, news, week-end) ne sont pas comptées ici.",
+   "b2": "Accueil « weekly » contre CGU « bi-weekly » ; Instant : 80 % dans les avantages contre « up to 100% » dans le tableau ; clause d'arbitrage aux EAU contre compétence exclusive des tribunaux des EAU dans la même page. B2=4 (le conflit d'entités est compté en C1 seulement).",
+   "b3": "Modification des CGU « at any time, at our sole discretion », acceptation par usage continu et obligation de suivre « the rules in effect at all times » ; la politique de split des comptes affiliés (03/08/2026) prévoit des ajustements rétroactifs. B3=2.",
+   "hold": "A15 B13 C7 D10 E5 = 50 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 44/100 (avant 44, inchangé). Réserves : contractant OTHERSIDE LLC (EAU) sans numéro ni adresse, alors que le pied de page nomme XFunded LTD (Sainte-Lucie, 2026-00127) ; droit des EAU ; remboursement quasi exclu ; split de base 50 % pour les comptes parrainés après le premier payout ; « plus de 5 M$ » déclarés par la firme seulement. Confiance moyenne.",
+   "next": "Réconcilier OTHERSIDE LLC et XFunded LTD (quelle société paie les rewards) et vérifier les registres EAU / Sainte-Lucie ; ancienneté d'exploitation ; preuve indépendante de paiement."
+  }
+ ]
+}

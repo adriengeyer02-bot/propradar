@@ -13,6 +13,7 @@ import batch5Published from '../data/scoring-v4-batch-5-published.json';
 import batch6Published from '../data/scoring-v4-batch-6-published.json';
 import completionC01Published from '../data/scoring-v4-completion-c01-published.json';
 import batch7Published from '../data/scoring-v4-batch-7-published.json';
+import batch8Published from '../data/scoring-v4-batch-8-published.json';
 import type { PropFirm } from './propFirms';
 import { computeV4Scorecard, V4_BLOCKS, type V4Scorecard, type V4Criterion, type V4Assessment } from './scoringV4';
 
@@ -43,6 +44,8 @@ export const V4_PUBLISHED_SLUGS = [
   'alpha-capital-group', 'maven-trading',
   // Claude, lot N01 (2026-11-20): medium-confidence audits only.
   'get-leveraged', 'miltraders', 'top-one-trader', 'alpha-futures', 'bem-funding', 'upcomers', 'thinkcapital', 'tiger-funded',
+  // Claude, lot N02 (2026-11-20).
+  'bullwaves-prime', 'directfundedtrader', 'foxx-funded', 'funded-trader-markets', 'hash-hedge', 'sabiotrade', 'sfx-funded', 'x-funded',
 ] as const;
 
 type FullReview = (typeof batch1.firms)[number];
@@ -56,8 +59,9 @@ for (const row of batch5Published.firms as CompactReview[]) reviews.set(row.slug
 for (const row of batch6Published.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of completionC01Published.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of batch7Published.firms as CompactReview[]) reviews.set(row.slug, row);
+for (const row of batch8Published.firms as CompactReview[]) reviews.set(row.slug, row);
 
-if (approved.size !== V4_PUBLISHED_SLUGS.length || approved.size !== 47) throw Error('V4: publication manifest must contain exactly 47 unique firms');
+if (approved.size !== V4_PUBLISHED_SLUGS.length || approved.size !== 55) throw Error('V4: publication manifest must contain exactly 55 unique firms');
 for (const slug of approved) {
   const row = reviews.get(slug);
   if (!row || row.confidence !== 'moyenne' || ('scores' in row && row.scores === null)) {
