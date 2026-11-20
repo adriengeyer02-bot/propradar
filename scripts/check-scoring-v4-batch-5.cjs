@@ -8,7 +8,7 @@ assert.equal(batch.version, 4);
 assert.deepEqual(batch.firms.map(({ slug }) => slug), expected);
 assert.equal(new Set(expected).size, 20);
 assert.equal(batch.firms.filter(({ scores }) => scores === null).length, 18);
-assert.deepEqual(published.firms.map(({ slug }) => slug), ['blue-guardian']);
+assert.deepEqual(published.firms.map(({ slug }) => slug), ['blue-guardian', 'atlas-funded']);
 for (const row of batch.firms) {
   assert.ok(row.source.startsWith('https://'), `${row.slug}: source`);
   if (!row.scores) {
@@ -29,14 +29,15 @@ for (const row of batch.firms) {
   const publish = published.firms.find((firm) => firm.slug === row.slug);
   if (publish) {
     assert.deepEqual(row.scores, publish.scores);
-    assert.equal(final, 61);
-    assert.equal(final - row.before, 8, 'non-sensitive publication only');
+    assert.equal(final, row.slug === 'blue-guardian' ? 61 : 66);
+    if (final - row.before >= 10) {
+      assert.match(row.auditState, /approuve-2026-11-20/);
+      assert.match(row.hold, /approuv/);
+    } else assert.equal(final - row.before, 8);
   } else {
-    assert.equal(row.auditState, 'proposition-sensible-a-valider');
-    assert.ok(Math.abs(final - row.before) >= 10, 'sensitive score requires owner approval');
-    assert.equal(final, 66);
+    assert.fail(`${row.slug}: no numerical V4 proposal should be accidentally unpublished or activated without a publication decision`);
   }
   console.log(`${row.slug}: A/B/C/D/E = ${Object.entries(row.scores).map(([k, v]) => `${k}${v.reduce((a, b) => a + b, 0)}`).join(' / ')} ; éditorial ${editorial}, Trustpilot −${trustpilot}, final ${final}, delta ${final-row.before >= 0 ? '+' : ''}${final-row.before}`);
 }
-assert.equal(published.firms[0].confidence, 'moyenne');
-console.log('✓ 20 revues, 2 notes 16 critères, 1 seule publiée, 1 sensible en attente et 18 audits retenus.');
+assert.ok(published.firms.every((row) => row.confidence === 'moyenne'));
+console.log('✓ 20 revues, 2 notes 16 critères publiées (dont Atlas approuvée), 18 audits retenus.');

@@ -138,9 +138,9 @@ les seize budgets et rejeter toute déduction d'un fait en double.
 Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 `app/lib/scoringV4.ts` et l'activation explicite dans
 `app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
-33 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
+34 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
 66/100, Crypto Fund Trader 62/100, MyFundedCapital 75/100 et Blue Guardian
-61/100).
+61/100, puis Atlas Funded 66/100).
 La note, le classement, les comparateurs et la
 fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
 note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
@@ -174,8 +174,11 @@ porte sur la décision définitive de refuser des payouts pour des profils
 multiples à la seule appréciation de la firme, **pas** sur les règles
 techniques chiffrées (consistance, minimum 2 minutes, Guardian Shield).
 La confiance reste moyenne faute de contrat Trader Agreement signé et de
-registre externe complet. **Atlas Funded 55→66 (+11)** n'est qu'une
-proposition éditoriale et attend l'autorisation explicite d'Adrien ;
+registre externe complet. **Atlas Funded 55→66 (+11)** a reçu l'accord
+explicite d'Adrien le 20/11/2026 : A18/B20/C10/D11/E7 ; ses CGU détaillent
+les conditions de retrait mais prévoient aussi une requalification subjective
+de stratégies en `gambling` pouvant affecter les rewards, appréciée en B1
+uniquement. Confiance moyenne, registres et accord funded à approfondir ;
 18 autres dossiers sont retenus pour pièces manquantes, identités non
 authentifiées, statut de domaine ou contrat de rémunération distinct.
 Voir `app/data/scoring-v4-batch-5.json` et la revue du lot associée.

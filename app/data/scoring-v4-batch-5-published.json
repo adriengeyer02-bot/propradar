@@ -1,7 +1,7 @@
 {
   "version": 4,
   "checkedOn": "2026-11-20",
-  "status": "publication-individuelle-validee-non-sensible",
+  "status": "2-publications-individuellement-validees",
   "firms": [
     {
       "slug": "blue-guardian",
@@ -27,6 +27,19 @@
       "b3": "La version courante des CGU prévaut et la firme peut les modifier unilatéralement. Aucun cas prouvé de rétroactivité appliquée aux gains acquis; seule la protection écrite est jugée.",
       "hold": "A20 B18 C10 D11 E8 = 67 avant −6 Trustpilot (avertissement actif confirmé le 20/11), soit 61/100. Finance Magnates Intelligence suit 1,37 M$ de paiements crypto en T1 2026 : vraie preuve positive partielle, pas validation de tous les payouts. Contrat de trader financé et immatriculations non intégralement vérifiés : confiance moyenne.",
       "next": "Réexaminer le contrat Trader Agreement au moment d'une prochaine remise publique et la levée éventuelle de l'avertissement Trustpilot."
+    },
+    {
+      "slug": "atlas-funded",
+      "before": 55,
+      "confidence": "moyenne",
+      "scores": { "A": [8, 8, 2], "B": [6, 4, 5, 5], "C": [5, 3, 2], "D": [3, 4, 4], "E": [3, 2, 2] },
+      "source": "https://www.atlasfunded.com/terms",
+      "sources": { "payout": "https://www.atlasfunded.com/terms", "contract": "https://www.atlasfunded.com/terms", "program": "https://help.atlasfunded.com/rules", "entity": "https://www.atlasfunded.com/terms", "offer": "https://www.atlasfunded.com/start-access" },
+      "b1": "CGU §5.2 : requalification de certaines stratégies en gambling sans seuil chiffré, avec conséquence possible sur les rewards (§5.4). §3.4 permet une contestation dans les dix jours et §7 protège les critiques honnêtes.",
+      "b2": "Start Access affiche des prix différents selon les sections; FAQ et CGU ne doivent pas masquer les délais du premier payout. Modèles 1-Step, 2-Step, Instant et Futures distingués.",
+      "b3": "Les add-ons ne modifient pas les paiements déjà effectués. Aucune pratique rétroactive sur des gains acquis n'est établie.",
+      "hold": "A18 B20 C10 D11 E7 = 66/100 sans pénalité Trustpilot. Hausse de +11 validée par Adrien le 20/11/2026. Registres des entités Atlas Vanquish FZCO et Atlas Funded LTD, contrat funded et preuve externe globale des payouts incomplets : confiance moyenne.",
+      "next": "Confirmer le prix au checkout par modèle, l'entité débitrice du reward et les preuves de paiement tierces."
     }
   ]
 }
