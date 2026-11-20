@@ -1,0 +1,10 @@
+{
+  "version": 5,
+  "approvals": [
+    { "slug": "alpha-capital-group", "checkedOn": "2026-11-20", "expectedFinal": 67 },
+    { "slug": "maven-trading", "checkedOn": "2026-11-20", "expectedFinal": 63 },
+    { "slug": "get-leveraged", "checkedOn": "2026-11-20", "expectedFinal": 56 },
+    { "slug": "alpha-futures", "checkedOn": "2026-11-20", "expectedFinal": 64 }
+  ],
+  "approvalContext": "Adrien Geyer demande explicitement la publication des notes V5 et du détail au clic le 20 novembre 2026. Toutes les autres fiches restent en barème antérieur jusqu'à audit indépendant."
+}

@@ -1,0 +1,67 @@
+{
+  "version": 5,
+  "batch": "N01 — reprise ChatGPT des dossiers Claude, autorisée le 20 novembre 2026",
+  "checkedOn": "2026-11-20",
+  "publication": "Dossiers sources ; publication uniquement si le slug, la date et le total sont approuvés dans scoring-v5-published.json",
+  "firms": [
+    {
+      "slug": "get-leveraged",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 59,
+      "criteria": {
+        "A1": { "points": 8, "reason": "CGU §8 et FAQ : demande, délais, méthodes, frais et minimum 100 USD, split et jours par programme publiés ; absence de liste exhaustive des plafonds/exclusions de profits pour tous les programmes ONE/Instant, d'où 0 sur l'élément 4.", "sources": ["https://getleveraged.com/terms/", "https://getleveraged.com/fr/faq/payouts-and-profit-split/"] },
+        "A2": { "points": 8, "reason": "Neutralité : aucun incident matériel suffisamment corroboré au seuil V5 (deux retards >14 jours ou refus récurrents) identifié ; aucune série indépendante documentée sur au moins douze mois ne justifie 9/10.", "sources": ["https://getleveraged.com/terms/", "https://www.trustpilot.com/review/getleveraged.com"] },
+        "A3": { "points": 1, "reason": "CGU §11.5 présente ses témoignages clients comme des exemples de rewards ; pas de versements authentifiés par un tiers pour l'entité GetLeveraged dans les sources examinées.", "sources": ["https://getleveraged.com/terms/", "https://getleveraged.com/about/"] },
+        "B1": { "points": 5, "reason": "§8.3 autorise à approuver un reward pour un montant différent ou à le refuser selon l'appréciation de la firme ; §7.2 conserve une catégorie d'abus ouverte. §8.3 et §12.4 imposent une justification écrite et prévoient un appel : protection partielle, mais les rewards restent recalculables sur des motifs non entièrement objectifs.", "sources": ["https://getleveraged.com/terms/"], "negativeFactIds": ["leveraged-discretionary-reward-recalculation-8-3"] },
+        "B2": { "points": 8, "reason": "−2 pour §7.2 : la catégorie ouverte « any other deliberate abuse » est appréciée par la firme, sans liste fermée de comportements. Les drawdowns, jours, news et restrictions chiffrées ne coûtent rien.", "sources": ["https://getleveraged.com/terms/", "https://getleveraged.com/faq-category/prohibited-trading-practices/"], "negativeFactIds": ["leveraged-open-ended-abuse-7-2"] },
+        "C1": { "points": 4, "reason": "CGU identifient GetLeveraged Ltd (Saint-Lucie, 2025-00808) et le prestataire chypriote Leveraged Capital Management Ltd, mais aucun extrait indépendant du registre de Sainte-Lucie ni récapitulatif de commande signé n'a pu être rapproché de la partie contractante. Le prestataire de facturation n'est pas présumé être la partie contractante.", "sources": ["https://getleveraged.com/terms/", "https://getleveraged.com/"] },
+        "C2": { "points": 3, "reason": "Le numéro 2025-00808 est publié par la firme sans contrôle indépendant de situation actuelle au registre de Sainte-Lucie ; statut non vérifiable au seuil V5. L'existence du prestataire chypriote ne vérifie pas l'opérateur.", "sources": ["https://getleveraged.com/terms/", "https://getleveraged.com/about/"] },
+        "C3": { "points": 2, "reason": "Avertissement CySEC officiel du 7 avril 2026 visant précisément getleveraged.com comme site non lié à une entité autorisée pour des services d'investissement ; portée de cette alerte pour l'offre contractuellement simulée non tranchée. Pas d'affirmation que cet agrément est obligatoirement requis pour la simulation.", "sources": ["https://fi.ee/sites/default/files/2026-04/GetFile.pdf", "https://getleveraged.com/terms/"], "negativeFactIds": ["leveraged-cysec-2026-warning"] },
+        "D1": { "points": 8, "reason": "Prix et produits affichés ; modalités d'évaluation, restrictions par programme, pays exclus et KYC dans les CGU/FAQ ; les parcours d'achat individuels restent à tester.", "sources": ["https://getleveraged.com/", "https://getleveraged.com/faq/", "https://getleveraged.com/terms/"] },
+        "D2": { "points": 6, "reason": "CGU librement accessibles (+2), version 2.0 entrée en vigueur le 27 octobre 2026 et mise à jour 17 novembre (+2), §7.5 et §17 clarifient l'application prospective des changements et la protection des achats existants (+2).", "sources": ["https://getleveraged.com/terms/"] },
+        "D3": { "points": 4, "reason": "CGU et FAQ globalement cohérentes sur la nature simulée, l'opérateur et l'agent de paiement (+2) ; absence de contradiction non-trading actuelle établie (+2) ; dernier écran de checkout non vérifié (0).", "sources": ["https://getleveraged.com/terms/", "https://getleveraged.com/faq/"] },
+        "E1": { "points": 2, "reason": "Activité de la prop firm documentée en 2025–2026 (entre 6 et 17 mois), pas 36 mois de preuve opérationnelle indépendante.", "sources": ["https://getleveraged.com/about/", "https://getleveraged.com/terms/"] },
+        "E2": { "points": 3, "reason": "Email et tableau de bord officiels (+1), réponses publiques de l'équipe sur Trustpilot documentant une joignabilité (+1), §12.4 procédure d'appel (+1) ; pas de résolution indépendante d'une demande non-payout vérifiée (+0).", "sources": ["https://getleveraged.com/terms/", "https://www.trustpilot.com/review/getleveraged.com"] }
+      },
+      "ruleDeductions": [
+        { "factId": "leveraged-open-ended-abuse-7-2", "kind": "ambiguite", "points": 2, "program": "Leveraged · tous les programmes", "phase": "Évaluation et compte Reward", "clause": "CGU §7.2 : « any other deliberate abuse » est défini par la firme au cas par cas.", "consequence": "Un trader peut perdre l'éligibilité aux récompenses après une qualification subjective de sa stratégie.", "source": "https://getleveraged.com/terms/" }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "alpha-futures",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 64,
+      "criteria": {
+        "A1": { "points": 10, "reason": "Tableau actualisé du 26 octobre 2026 et Schedule 4 : calendrier, premier retrait, split et minimum, winning days/consistency, plafonds et exclusions, démarches et délais de traitement (3 à 14 jours ouvrés dans les CGU).", "sources": ["https://alpha-futures.com/posts/alpha-futures-payout-rules-2026", "https://alpha-futures.com/terms-and-conditions"] },
+        "A2": { "points": 4, "reason": "Incident récurrent affectant plusieurs clients : fermeture du plan Premium en juillet 2026 et rewards en attente confirmés par la firme, qui annonçait encore en septembre des paiements en lots jusqu'à octobre ; réponses publiques de novembre indiquent un reliquat. Ce niveau ne signifie PAS un arrêt général des paiements, et l'état exact de chaque dossier n'est pas public.", "sources": ["https://www.financemagnates.com/forex/ninjatrader-and-alpha-futures-breakup-turns-bitter-exposing-a-big-industry-risk/", "https://alpha-futures.com/posts/alpha-futures-payout-update-five-business-days-or-less", "https://www.trustpilot.com/review/alpha-futures.com?page=5"], "negativeFactIds": ["alpha-futures-premium-unpaid-2026"] },
+        "A3": { "points": 5, "reason": "Payout Junction rattache publiquement la marque alpha-futures.com à 16 107 transactions Rise vérifiées entre septembre 2024 et novembre 2026, pour plus de 33 M USD. Couverture limitée aux paiements on-chain suivis, sans attester que les dossiers Premium en attente sont réglés.", "sources": ["https://payoutjunction.com/firms/alphafutures", "https://payoutjunction.com/methodology"] },
+        "B1": { "points": 0, "reason": "Schedule 4 §1.2.2 : les CGU disent que la firme peut fournir les Analyst Performance Fees à sa seule discrétion ; §1.2.6 laisse le refus à son appréciation pour des pratiques jugées contraires. Aucune garantie générale de récompense acquise ni procédure contradictoire équivalente à un recours formalisé n'est décrite.", "sources": ["https://alpha-futures.com/terms-and-conditions"], "negativeFactIds": ["alpha-futures-sole-discretion-fees-1-2-2"] },
+        "B2": { "points": 6, "reason": "−2 CGU §8.1.7 : pouvoir de définir les stratégies non permises à sa discrétion ; −2 Schedule 5 : part « large » de gains issus de trades <2 minutes et « gambling tendencies » sans seuil déterminant. Les fenêtres news, tailles et consistency claires ne coûtent rien.", "sources": ["https://alpha-futures.com/terms-and-conditions"], "negativeFactIds": ["alpha-futures-arbitrary-trading-8-1-7", "alpha-futures-undefined-scalping-schedule5"] },
+        "C1": { "points": 7, "reason": "Alpha Futures Limited n°15655643 identifiée dans les CGU et active dans Companies House ; le dernier écran d'achat/accord Qualified et le rôle opérationnel de certaines adresses n'ont pas été rapprochés intégralement.", "sources": ["https://alpha-futures.com/terms-and-conditions", "https://find-and-update.company-information.service.gov.uk/company/15655643"] },
+        "C2": { "points": 6, "reason": "Companies House : Active, comptes au 31 mars 2025 déposés, prochains comptes attendus le 31 décembre 2026, confirmation statement 2026 à jour.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/15655643"] },
+        "C3": { "points": 4, "reason": "Recherche datée FCA/CFTC/NFA par dénomination et domaine, aucun avertissement officiel matériel précisément relié à la simulation Alpha Futures Limited identifié ; absence de licence de courtage non pénalisée à elle seule.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/15655643", "https://alpha-futures.com/terms-of-use"] },
+        "D1": { "points": 8, "reason": "Prix, objectifs et drawdowns par compte, règles news et sanctions dans le help center et le Schedule 5 ; restrictions territoriales et identité requise dans les CGU.", "sources": ["https://alpha-futures.com/posts/alpha-futures-payout-rules-2026", "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview", "https://alpha-futures.com/terms-and-conditions"] },
+        "D2": { "points": 4, "reason": "CGU publiques (+2) et entrée en vigueur datée 27 juillet 2026 (+2) ; §8.1.8 fait appliquer les modifications dès publication, sans préciser la protection de tous les comptes en cours (+0).", "sources": ["https://alpha-futures.com/terms-and-conditions"] },
+        "D3": { "points": 4, "reason": "CGU, help center et article du 26 octobre cohérents sur les plans actuels (+2), simulation et opérateur explicités (+2) ; comparaison du panier final avec les prix d'appel non réalisée (+0).", "sources": ["https://alpha-futures.com/terms-and-conditions", "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026"] },
+        "E1": { "points": 4, "reason": "Exploitation de la prop firm étayée par des paiements Rise dès septembre 2024, soit 26 mois au 20 novembre 2026 : palier 18–35 mois.", "sources": ["https://payoutjunction.com/firms/alphafutures", "https://find-and-update.company-information.service.gov.uk/company/15655643"] },
+        "E2": { "points": 2, "reason": "Support officiel publié (+1), réponse publique utile documentée sur une question de dossier Premium hors résolution du paiement lui-même (+1) ; procédure d'escalade formelle et résolution non-payout indépendante non confirmées (+0+0).", "sources": ["https://alpha-futures.com/terms-and-conditions", "https://www.trustpilot.com/review/alpha-futures.com?page=5"] }
+      },
+      "ruleDeductions": [
+        { "factId": "alpha-futures-arbitrary-trading-8-1-7", "kind": "ambiguite", "points": 2, "program": "Alpha Futures · tous les comptes", "phase": "Évaluation et Qualified", "clause": "CGU §8.1.7 : Alpha peut qualifier une stratégie de non autorisée à sa propre discrétion.", "consequence": "Fermeture possible d'un compte après une interprétation non prédéfinie d'un style de trading.", "source": "https://alpha-futures.com/terms-and-conditions" },
+        { "factId": "alpha-futures-undefined-scalping-schedule5", "kind": "ambiguite", "points": 2, "program": "Alpha Futures · tous les comptes", "phase": "Évaluation et Qualified", "clause": "Schedule 5 : les profits de trades de moins de 2 minutes deviennent problématiques s'ils représentent une part « large » non quantifiée.", "consequence": "Une part de profits peut être jugée inéligible ou le compte sanctionné sans seuil de concentration publié.", "source": "https://alpha-futures.com/terms-and-conditions" }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ]
+}

@@ -3,9 +3,10 @@
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
 import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
+import type { V5RuleDeduction } from '../../lib/scoringV5';
 
 export type ScoreStep = {
-  kind: 'editorial' | 'rules' | 'trustpilot' | 'closed';
+  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'closed';
   label: string;
   detail: string;
   /** Score after this step. */
@@ -18,7 +19,8 @@ export type ScoreStep = {
 export type ScoreBreakdownView = {
   name: string;
   score: number;
-  v4?: {
+  pillars?: {
+    version: 4 | 5;
     values: [number, number, number, number, number];
     maxima: [number, number, number, number, number];
     copy: ScoreV4Copy;
@@ -29,6 +31,13 @@ export type ScoreBreakdownView = {
   programs: { name: string; load: number }[];
   heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
+  v5Evidence?: {
+    deductions: V5RuleDeduction[];
+    contractProtection: { points: number; reason: string; source: string };
+    checkedOn: string;
+    limitedPayoutProof: boolean;
+    copy: { contract: string; consequence: string; source: string; evidence: string; limited: string; rulesClarification: string };
+  };
   methodHref: string;
   rulesHref: string;
 };
@@ -59,13 +68,14 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
 
   const delay = (index: number) => ({ '--reveal-delay': `${80 + index * 70}ms` }) as CSSProperties;
   // Legacy accounts keep their actual −N rules step. Published V4 accounts
-  // instead show risks already accounted for in B1–B4, never a second penalty.
-  const steps: ScoreStep[] = view.v4 && !view.steps.some((step) => step.kind === 'rules')
+  // show a zero *additional* deduction because their contract risks already
+  // affect B1–B4. V5 scorecards will expose their own B2 deduction explicitly.
+  const steps: ScoreStep[] = view.pillars?.version === 4 && !view.steps.some((step) => step.kind === 'rules')
     ? view.steps.flatMap((step): ScoreStep[] => step.kind === 'editorial'
       ? [step, {
           kind: 'rules',
           label: copy.rules,
-          detail: view.v4!.copy.restriction,
+          detail: view.pillars!.copy.restriction,
           value: step.value,
           delta: 0,
         }]
@@ -110,22 +120,63 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               <h2 id={titleId}>{fill(copy.title, { name: view.name, score: view.score })}</h2>
             </header>
 
+            {view.pillars ? (
+              <section className="psb-v4 prg-hud-reveal" style={delay(2)} aria-label={view.pillars.copy.title}>
+                <div className="psb-v4-heading">
+                  <strong>{view.pillars.copy.title}</strong>
+                  <small>{view.pillars.copy.subtitle}</small>
+                </div>
+                <ol className="psb-v4-list">
+                  {view.pillars.values.map((value, index) => (
+                    <li key={index}>
+                      <div>
+                        <span>{view.pillars!.copy.blocks[index]}</span>
+                        <strong>{value}<small>/{view.pillars!.maxima[index]}</small></strong>
+                      </div>
+                      <div className="psb-v4-track" aria-hidden="true">
+                        <i style={{ width: `${Math.min(100, Math.max(0, 100 * value / view.pillars!.maxima[index]))}%` }} />
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ) : null}
+
             <ol className="psb-steps">
               {steps.map((step, index) => (
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
                   <div className="psb-step-line">
                     <span className="psb-step-label">{step.label}</span>
                     <span className={`psb-step-value${step.delta ? ' psb-step-minus' : ''}`}>
-                      {step.kind === 'editorial' ? step.value : view.v4 && step.kind === 'rules' ? '✓' : step.delta ? `−${step.delta}` : '0'}
+                      {step.kind === 'editorial' ? step.value : step.delta ? `−${step.delta}` : '0'}
                     </span>
                   </div>
                   <div className="psb-bar" aria-hidden="true">
                     <span className="psb-bar-fill" style={{ width: `${step.value}%` }} />
                     {step.delta ? <span className="psb-bar-cut" style={{ left: `${step.value}%`, width: `${step.delta}%` }} /> : null}
                   </div>
-                  <p>{step.kind === 'rules' && step.delta > 0 ? copy.rulesSimple : step.detail}</p>
+                  <p>{step.kind === 'rules' && step.delta > 0 && !view.v5Evidence ? copy.rulesSimple : step.detail}</p>
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
-                  {step.kind === 'rules' && (step.delta > 0 || Boolean(view.v4)) && view.heaviest.length ? (
+                  {step.kind === 'rules' && view.v5Evidence && step.delta > 0 ? (
+                    <div className="psb-v5-clauses">
+                      <span className="prg-hud-label">{view.v5Evidence.copy.evidence}</span>
+                      <ul>
+                        {view.v5Evidence.deductions.map((item) => (
+                          <li key={item.factId}>
+                            <div className="psb-v5-clause-heading">
+                              <strong>{item.program} <small>· {item.phase}</small></strong>
+                              <b>−{item.points}</b>
+                            </div>
+                            <p>{item.clause}</p>
+                            <p><span>{view.v5Evidence!.copy.consequence} :</span> {item.consequence}</p>
+                            <a href={item.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence!.copy.source} ↗</a>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="psb-v5-footnote">{view.v5Evidence.copy.rulesClarification}</p>
+                    </div>
+                  ) : null}
+                  {step.kind === 'rules' && !view.v5Evidence && (step.delta > 0 || Boolean(view.pillars)) && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
                       <ul>
@@ -151,6 +202,16 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               </li>
             </ol>
 
+            {view.v5Evidence ? (
+              <section className="psb-v5-contract prg-hud-reveal" style={delay(steps.length + 3)}>
+                <div><strong>{view.v5Evidence.copy.contract}</strong><b>{view.v5Evidence.contractProtection.points}/15</b></div>
+                <p>{view.v5Evidence.contractProtection.reason}</p>
+                <a href={view.v5Evidence.contractProtection.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence.copy.source} ↗</a>
+                {view.v5Evidence.limitedPayoutProof ? <p className="psb-v5-limited">{view.v5Evidence.copy.limited}</p> : null}
+                <small>{view.v5Evidence.checkedOn}</small>
+              </section>
+            ) : null}
+
             {view.signals.length ? (
               <div className="psb-signals prg-hud-reveal" style={delay(steps.length + 3)}>
                 <span className="prg-hud-label">{copy.signals}</span>
@@ -164,11 +225,11 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
 
             <details className="psb-scale prg-hud-reveal" style={delay(steps.length + 4)}>
               <summary>{copy.scaleTitle}</summary>
-              {view.v4 ? (
+              {view.pillars ? (
                 <>
-                  <p>{view.v4.copy.method}</p>
-                  <p>{view.v4.copy.caution}</p>
-                  <p className="psb-note">{view.v4.copy.confidence}</p>
+                  <p>{view.pillars.copy.method}</p>
+                  <p>{view.pillars.copy.caution}</p>
+                  <p className="psb-note">{view.pillars.copy.confidence}</p>
                 </>
               ) : (
                 <>
