@@ -347,6 +347,19 @@ function LocalizedGuidesHub({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      {locale === 'fr' ? (
+        <section className="section" aria-labelledby="instrument-explainer-fr">
+          <div className="guide-living-panel">
+            <div>
+              <div className="eyebrow">Nouveau guide pédagogique</div>
+              <h2 id="instrument-explainer-fr">Futures, CFD et options : les vraies différences</h2>
+              <p>Un tableau comparatif, les risques de levier et un exemple chiffré, avec les sources officielles.</p>
+            </div>
+            <Link href="/fr/guides/futures-cfd-options" className="btn btn-primary">Lire l’article</Link>
+          </div>
+        </section>
+      ) : null}
+
       <GuideLibrary guides={cards} labels={libraryLabels(locale)} coverLabels={getMessages(locale).cover} />
 
       <section className="section">
@@ -508,6 +521,17 @@ export default async function GuidesHubPage({ params }: Props) {
         <div className="guide-brief-actions">
           <Link href={latestBriefPath} className="btn btn-primary">Read this issue</Link>
           <Link href="/radar-brief" className="btn">Browse the archive</Link>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="instrument-explainer-en">
+        <div className="guide-living-panel">
+          <div>
+            <div className="eyebrow">New trading explainer</div>
+            <h2 id="instrument-explainer-en">Futures vs CFDs vs options: what really changes?</h2>
+            <p>Exchange vs broker, margin vs premium, a worked example and official sources.</p>
+          </div>
+          <Link href="/guides/futures-cfd-options" className="btn btn-primary">Read the article</Link>
         </div>
       </section>
 
