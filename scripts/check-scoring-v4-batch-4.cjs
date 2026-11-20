@@ -20,12 +20,23 @@ assert.equal(batch.status, 'propositions-edito-non-publiees');
 assert.deepEqual(batch.firms.map(({slug}) => slug), expected);
 assert.equal(batch.firms.length, 20);
 const proposed = new Map([['myfundedcapital', 75], ['elite-trader-funding', 66], ['crypto-fund-trader', 62]]);
+// These two are enabled independently by PR #208. This audit PR must work
+// both before and after it lands on main, without changing frozen baselines.
+const publishedSeparately = new Set(['elite-trader-funding', 'crypto-fund-trader']);
 let heldCount = 0;
+let separatelyLive = 0;
 for (const row of batch.firms) {
   const firm = getFirmBySlug(row.slug);
   assert.ok(firm, `${row.slug}: missing firm`);
-  assert.equal(row.before, firm.score, `${row.slug}: baseline changed before audit; recalibrate the queue`);
-  assert.equal(getScoreBreakdown(firm).v4, undefined, `${row.slug}: V4 was unexpectedly activated`);
+  const current = getScoreBreakdown(firm).v4;
+  if (publishedSeparately.has(row.slug) && current) {
+    assert.equal(firm.score, proposed.get(row.slug), `${row.slug}: unexpected V4 publication`);
+    assert.equal(current.operationalScore, proposed.get(row.slug), `${row.slug}: visible total differs`);
+    ++separatelyLive;
+  } else {
+    assert.equal(row.before, firm.score, `${row.slug}: baseline changed before audit; recalibrate the queue`);
+    assert.equal(current, undefined, `${row.slug}: V4 was unexpectedly activated`);
+  }
   assert.match(row.source, /^https:\/\/\S+\.\S+$/);
   assert.ok(row.next.length > 45 && row.auditState.length > 5, `${row.slug}: missing action item`);
   if (!proposed.has(row.slug)) {
@@ -56,4 +67,4 @@ for (const row of batch.firms) {
   assert.ok(result.trustpilotPenalty <= 6, `${row.slug}: double Trustpilot penalty`);
 }
 assert.equal(heldCount, 17);
-console.log(`✓ 20 dossiers historiques : 3 notes V4 proposées et contrôlées (75, 66, 62) ; 17 retenues ; aucune activation publique.`);
+console.log(`✓ 20 dossiers historiques : 3 notes V4 validées (75, 66, 62) ; 17 retenues ; ${separatelyLive}/2 déjà publiées par la PR #208 ; aucune activation due à cet audit.`);
