@@ -1,0 +1,367 @@
+{
+ "version": 4,
+ "checkedOn": "2026-11-20",
+ "status": "8-publications-claude-lot-N01",
+ "firms": [
+  {
+   "slug": "get-leveraged",
+   "before": 50,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     8,
+     8,
+     1
+    ],
+    "B": [
+     5,
+     6,
+     6,
+     5
+    ],
+    "C": [
+     5,
+     4,
+     1
+    ],
+    "D": [
+     3,
+     4,
+     3
+    ],
+    "E": [
+     2,
+     2,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://getleveraged.com/fr/faq/payouts-and-profit-split/",
+    "contract": "https://getleveraged.com/terms/",
+    "program": "https://getleveraged.com/faq/what-is-the-turbo-program/",
+    "entity": "https://www.mof.gov.cy/mof/gpo/gazette.nsf/BDF290E757EB7A6AC2258C4600244618/$file/4507%207%203%202025%20PARARTHMA%205o%20MEROS%20I.pdf",
+    "offer": "https://getleveraged.com/faq/what-is-the-leveraged-instant-program/"
+   },
+   "b1": "La page « if you cross the line » permet de traiter comme prohibée toute conduite « uncommercial, manipulative, or inconsistent » avec retrait de profits ou refus de reward, « not every case is handled the same way », et le repère de 2 minutes pour le micro-scalping n'est pas une règle ferme ; les CGU §8.3 autorisent un reward « for a different amount » ou un refus. Atténuation : §8.3 impose d'indiquer par écrit la règle violée et §12.4 ouvre un appel sous 10 jours ouvrés, d'où B1=5 et non plus bas.",
+   "b2": "Calendrier par programme cohérent entre FAQ payout (Turbo 14 jours + 3 jours ≥0,5 % + score <20 %, Sprint premier reward immédiat, Classic tous les 14 jours) et CGU (paiement sous 2 jours ouvrés après approbation). Petites réserves : CGU « Version 2.0 · Effective 27-Oct-2026 » mais « Last updated: November 17, 2026 », et la FAQ payout ne couvre pas ONE ni Instant.",
+   "b3": "Point fort : CGU §7.5 « A change applies only to accounts bought after its effective date », §17.2 préavis de 14 jours et paiement des rewards approuvés en cas de clôture, §17.3 pas d'effet sur les comptes déjà achetés. Aucune modification rétroactive constatée.",
+   "hold": "A17 B22 C10 D10 E6 = 65/100 éditorial (avant 50, +15, mouvement sensible). Réserves : immatriculation de GetLeveraged Ltd (Sainte-Lucie 2025-00808) seulement déclarée par la firme, l'agent de paiement chypriote HE471661 étant lui vérifié au Journal officiel ; avertissement CySEC du 7 avril 2026 nommant getleveraged.com (C3=1, sans conclure à une obligation de licence pour un produit simulé) ; aucune preuve de payout indépendante (A3=1, non vérifié) ; frais différés du Turbo et trailing 6 % en phase Rewards. Notice Trustpilot de nouveau active le 2026-11-20 (voir notes) : si Geyer la réactive, final 59. Confiance moyenne.",
+   "next": "Extrait du registre de Sainte-Lucie pour GetLeveraged Ltd ; FAQ payout méthodes/frais et délais pour ONE et Instant ; montant exact du frais de passage Turbo au checkout ; décision sur la notice Trustpilot réapparue."
+  },
+  {
+   "slug": "miltraders",
+   "before": 50,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     8,
+     8,
+     1
+    ],
+    "B": [
+     4,
+     3,
+     2,
+     5
+    ],
+    "C": [
+     5,
+     4,
+     2
+    ],
+    "D": [
+     4,
+     3,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://intercom.help/miltraders/en/articles/14642755-what-are-the-progressive-payout-caps",
+    "contract": "https://miltraders.com/terms/",
+    "program": "https://miltraders.com/faqs/",
+    "entity": "https://miltraders.com/terms/",
+    "offer": "https://miltraders.com/pricing/"
+   },
+   "b1": "CGU art. 11.1-11.2 : le « gambling » inclut toute position dont la perte potentielle égale « all, or nearly all » du drawdown et « the final assessment ... rests with MILTRADERS » ; art. 12.5 : le payout demandé peut être approuvé ou refusé à la discrétion de la firme, avec clôture et bannissement. S'y ajoutent la suspension d'un payout sur simple signalement VPN/hébergement (4.3-4.5) et la sélection Live obligatoire à « sole discretion » (10.1-10.3). B1=4 ; les plafonds, jours gagnants et ratios de meilleur jour, chiffrés, ne sont pas déduits.",
+   "b2": "Contradictions documentées entre FAQ et CGU : la FAQ dit « MILTRADERS honors the payout currently requested » quand l'art. 12.5 permet un refus ; la FAQ présente le compte Live comme une offre alors que les CGU le rendent obligatoire ; la FAQ annonce 90 % sans la phase Live à 80 % des trois premiers payouts (10.6). B2=3.",
+   "b3": "CGU 1.3, 2.2 et 19.2 : une modification des Program Rules « applies to all accounts, including accounts purchased before the change », les CGU actuelles remplaçant les accords antérieurs « whatever its date of purchase ». Clause explicitement rétroactive (pas une simple clause de modification future), sans usage abusif prouvé ; procédure de réclamation interne existante. B3=2.",
+   "hold": "A17 B14 C11 D11 E5 = 58/100 (avant 50, +8). Entité MILTRADERS L.L.C-FZ, Meydan Free Zone, Formation n° 2643914, nommée dans les CGU mais non confirmée dans un registre externe ; droit anglais, arbitrage LCIA siège Dubaï, réclamation par chat avec réponse sous 7 jours ouvrés. Chiffres de payouts uniquement déclarés par la firme (A3=1). Avis Trustpilot très peu nombreux (13). Confiance moyenne.",
+   "next": "Confirmer la licence Meydan Free Zone 2643914.01 dans un registre ; relire Trustpilot (page non lisible le 2026-11-20) ; vérifier si la FAQ a été alignée sur les art. 10 et 12.5 ; contrôler les listes FCA/CONSOB/CNMV/AMF directement (résultats I-SCAN non lisibles)."
+  },
+  {
+   "slug": "top-one-trader",
+   "before": 47,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     7,
+     8,
+     2
+    ],
+    "B": [
+     2,
+     4,
+     3,
+     4
+    ],
+    "C": [
+     3,
+     1,
+     3
+    ],
+    "D": [
+     4,
+     4,
+     5
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://help.toponetrader.com/en/articles/13833385-nova-payout-rules",
+    "contract": "https://www.toponetrader.com/terms-and-conditions",
+    "program": "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+    "entity": "https://www.toponetrader.com/terms-and-conditions",
+    "offer": "https://www.toponetrader.com/coupon-code-pricing"
+   },
+   "b1": "CGU (juin 2026) : interdiction de toute pratique que la firme juge « in its sole discretion » hors des « acceptable risk practices », « gambling behavior » non défini pouvant entraîner la déduction des profits, clause anti-dénigrement prévoyant la « forfeiture of profits », et aucune voie de contestation décrite. B1=2/15 ; les règles chiffrées (5 minutes, caps de 25 000 $, lots, consistance, news, EA) ne sont pas pénalisées ici.",
+   "b2": "Centre d'aide détaillé par programme, mais les CGU nomment Top One Trader, LLC, le pied de page Top One Trader Ltd (Anjouan) et les comptes financés relèvent d'un « separate agreement with Top One Funding » ; les cartes tarifaires affichent 90 %/« up to 100 % » alors que les splits démarrent à 60 % (Instant) ou 80 %. B2=4/8.",
+   "b3": "Modifications « at any time and within its sole and absolute discretion », acceptation par usage continu, date d'effet non définie et effet sur les comptes existants non précisé ; la firme date toutefois ses versions (PRO V2 après le 18 mai, consistance Instant après le 14/10/2025). Aucune rétroactivité prouvée. B3=3/7.",
+   "hold": "A17 B13 C7 D13 E6 = 56 éditorial, puis −6 Trustpilot (notice déjà au dossier, toujours active le 20/11/2026) = 50/100, +3 par rapport à 47. Réserves : entité LLC sans État ni immatriculation vérifiés, licence d'Anjouan L15829/TOT déclarée seulement, aucun droit applicable ni mode de règlement des litiges dans les CGU, accord financé avec « Top One Funding » non lu. Transferts RiseUSD on-chain attribués par un tiers : A3=2, sans preuve que tous les comptes sont payés. Confiance moyenne.",
+   "next": "Identifier l'État et le numéro de Top One Trader, LLC et l'entité « Top One Funding » ; lire l'accord des comptes financés ; vérifier auprès du régulateur d'Anjouan la licence L15829/TOT."
+  },
+  {
+   "slug": "alpha-futures",
+   "before": 46,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     8,
+     5,
+     2
+    ],
+    "B": [
+     4,
+     6,
+     3,
+     4
+    ],
+    "C": [
+     8,
+     4,
+     2
+    ],
+    "D": [
+     4,
+     4,
+     4
+    ],
+    "E": [
+     3,
+     2,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
+    "contract": "https://alpha-futures.com/terms-and-conditions",
+    "program": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/15655643",
+    "offer": "https://alpha-futures.com/"
+   },
+   "b1": "CGU Schedule 4 §1.2.6 : la performance fee « will not be paid where we ascertain, in our sole discretion » une violation ; §8.1.7 et Schedule 5 (« gambling tendencies », part non définie de profits de scalping courts) ; §26.1 constatations « final and binding ». Ce pouvoir subjectif justifie B1=4/15 ; les règles chiffrées (news 2 min, consistance 40/20 %, caps par requête, clôture 16h20 ET) ne prennent aucun malus.",
+   "b2": "Règles par programme globalement cohérentes entre page payout 2026, aide Standard et CGU (consistance 50 % évaluation / 40 % qualifié, Direct 20 %, Advanced sans consistance). Écarts mineurs : Zero vendu « sans consistance » au stade évaluation mais 40 % en qualifié, deux adresses (Harpenden au registre, Londres pour les notifications), interdiction des bots enfouie dans le Schedule 5.",
+   "b3": "§4.1 modification à sa seule discrétion, règles du Schedule 5 applicables dès publication (§8.1.8), information par e-mail limitée aux changements matériels d'un challenge en cours ; faculté d'annuler avant un changement matériel (§2.6). La fermeture du plan Premium est comptée en A2 uniquement (anti-cumul).",
+   "hold": "A15 B17 C14 D12 E6 = 64/100 (éditorial, aucune notice Trustpilot), contre 46 affichés (+18, variation sensible à soumettre à Adrien). A2=5 pour l'annulation documentée par Finance Magnates des demandes de rewards Premium en attente lors de la rupture avec NinjaTrader (juillet 2026), responsabilité contractuelle non tranchée. A3=2 : 70 M$ déclarés par la firme + un transfert Arbitrum attribué par un tiers. Entité vérifiée à Companies House (active, comptes à jour). Confiance moyenne.",
+   "next": "Contrat de compte qualifié signé, preuve indépendante de payouts sur les plans actuels, suivi d'éventuelles suites judiciaires NinjaTrader/Alpha, contrôle exhaustif CFTC/NFA (C3=2 par prudence)."
+  },
+  {
+   "slug": "bem-funding",
+   "before": 46,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     6,
+     8,
+     1
+    ],
+    "B": [
+     3,
+     4,
+     5,
+     4
+    ],
+    "C": [
+     4,
+     3,
+     2
+    ],
+    "D": [
+     3,
+     3,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://bemfunding.com/terms-of-use/bem-one",
+    "contract": "https://bemfunding.com/terms-and-conditions",
+    "program": "https://bemfunding.com/terms-of-use/bem-classic-normal",
+    "entity": "https://bemfunding.com/terms-and-conditions",
+    "offer": "https://bemfunding.com/"
+   },
+   "b1": "CGU §14 (pratiques interdites appréciées « at our own discretion ») et §15 (mesures « We consider appropriate », y compris annulation des comptes « or rewards thereunder ») ; page Prohibited Trading Practices : catégories vagues (« resembles gambling », stratégies « cannot reasonably be replicated ») avec retrait des profits. B1=3/15 ; l'entretien de risque, la règle news 4 min, la limite 1,2 %/symbole et l'Equity Guard sont des règles publiées, sans malus.",
+   "b2": "Incohérences : split 80 % vs « up to 90 % », délais de payout (on demand, 6 h, 1–2 jours, « weekly » en méta), deux listes de pays exclus divergentes (UAE exclue alors que l'opérateur y est établi), CGU datées 26/10/2026 et « Effective 13/04/2026 », nom LLC vs LLC-FZ. Les CGU ne fixent aucun délai de payout.",
+   "b3": "§1 : changements matériels non rétroactifs pour les challenges achetés ou commencés ; §7 : modifications de frais/paramètres sans effet sur les services achetés ; préavis de 7 jours (§16). Les gains déjà éligibles ne sont pas expressément protégés (§15).",
+   "hold": "A15 B16 C9 D10 E5 = 55 éditorial, −6 Trustpilot (notice déjà au dossier, toujours active le 20/11) = 49/100 (+3 vs 46). A3=1 : « 3M+ Paid Out » déclaré par la firme. Entités nommées (BEX Software Development LLC-FZ, Dubaï ; BEM Ltd. Sainte-Lucie 2026-00240) sans contrôle de registre. Confiance moyenne : CGU et Terms of Use par programme lus, prix complets non affichés hors BEM One 5K.",
+   "next": "Registre UAE de BEX Software Development LLC-FZ et registre de Sainte-Lucie ; grille de prix par taille pour One Only/Classic/Swing ; délai de payout contractuel ; preuve indépendante de payouts."
+  },
+  {
+   "slug": "upcomers",
+   "before": 46,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     8,
+     8,
+     1
+    ],
+    "B": [
+     3,
+     5,
+     4,
+     4
+    ],
+    "C": [
+     5,
+     4,
+     2
+    ],
+    "D": [
+     2,
+     3,
+     4
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://help.upcomers.com/en/articles/12688538-payout-structure-cfd-perpetuals",
+    "contract": "https://www.upcomers.com/policies/terms-conditions",
+    "program": "https://help.upcomers.com/en/articles/17292992-1-step-horizon-challenge-cfd-complete-rules-overview",
+    "entity": "https://companieshousecyprus.com/company/C490773",
+    "offer": "https://app.upcomers.com/en/buy"
+   },
+   "b1": "CGU §5.5 : Upcomers peut « unilaterally determine, at our own discretion » d'autres stratégies interdites ; §5.2.9 actions « inconsistent with standard trading practices » ; §5.6 annulation de tous les services à sa discrétion ; s'y rattache la réduction permanente de 50 % après un payout partiellement approuvé pour « strategy violation ». B1=3/15. Caps par paliers, risque 1,5 %/trade, Best Day 20 % et jours profitables : règles publiées, sans malus.",
+   "b2": "Plafond d'allocation agrégée de 1,5 M$ dans les CGU vs tailles de 2 M$ affichées ; disclaimer « non-refundable unless… » vs droit de rétractation de 14 jours (§4.2) ; table de payout générale soumise aux exceptions produit. Le reste des pages d'aide par programme est cohérent.",
+   "b3": "§11.4 : préavis de 7 jours, droit de refuser avec remboursement, mais modifications applicables aux contrats existants ; §4.3 frais/paramètres sans effet sur les commandes existantes ; §4.9 BOGO acquis protégés. Rewards en attente non expressément protégés.",
+   "hold": "A17 B16 C11 D9 E6 = 59 éditorial, −6 Trustpilot (notice au dossier, active le 20/11) = 53/100 (+7 vs 46). A3=1 : 11,1 M$ déclarés par la firme. D1=2 : prix catalogue masqués par des remises permanentes et frais de payout crypto 19,90 $ + 30 %. UPCOMERS LTD (Chypre) confirmée au registre mais sans rôle contractuel ; le fournisseur contractant Royal Flow FZCO (licence IFZA 35886) n'est pas vérifié. Affilié : même standard. Confiance moyenne.",
+   "next": "Registre IFZA de Royal Flow FZCO ; prix catalogue hors promotion ; clarification écrite 1,5 M$ vs 2 M$ ; preuve indépendante de payouts."
+  },
+  {
+   "slug": "thinkcapital",
+   "before": 45,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     7,
+     8,
+     1
+    ],
+    "B": [
+     5,
+     5,
+     4,
+     4
+    ],
+    "C": [
+     8,
+     3,
+     3
+    ],
+    "D": [
+     3,
+     4,
+     4
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://www.thinkcapital.com/instant-funding/",
+    "contract": "https://www.thinkcapital.com/terms-of-services/",
+    "program": "https://www.thinkcapital.com/tc-faqs/introduction-to-thinkcapital-programs/nexus-challenge/",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/10537331",
+    "offer": "https://www.thinkcapital.com/instant-funding/"
+   },
+   "b1": "La FAQ des stratégies interdites permet avertissement, suspension ou bannissement pour un 'gambling/punting' non chiffré, et des déductions de profits pour 'layering' ou volumes jugés sans logique, sans seuil: B1=5/15. Les fenêtres news, la consistance Bolt (20/25%, qui retarde sans casser) et les jours profitables sont des contraintes publiées, sans malus.",
+   "b2": "CGU (TFG (Payments) Limited) et pages produit cohérentes par route Bolt/Bolt Flex/Nexus/Dual Step/Lightning; réserves: la règle EA renvoie à des 'comptes où ils ne sont pas autorisés' sans les lister, et le type de drawdown Dual Step n'est pas indiqué.",
+   "b3": "Aucune modification rétroactive de gains éligibles établie; le texte de modification des CGU n'a pas pu être relu aujourd'hui (page rendue en JavaScript), évaluation fondée sur l'audit du 17/11/2026.",
+   "hold": "A16 B18 C14 D11 E6 = 65 points éditoriaux, puis -6 Trustpilot (notice déjà au dossier) = 59/100 (+14 vs 45). Entité TFG (Payments) Limited vérifiée à Companies House (10537331, active, comptes à jour); la régulation ThinkMarkets ne couvre pas le challenge simulé. Aucune preuve indépendante de payout lue (A3=1). Confiance moyenne.",
+   "next": "Relire le texte intégral des CGU (droit applicable, clause de modification, recours) dans un navigateur; montant des payouts et délais de la FAQ payout (rendue en JS); prix maximum et plateformes par programme."
+  },
+  {
+   "slug": "tiger-funded",
+   "before": 45,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     6,
+     8,
+     1
+    ],
+    "B": [
+     3,
+     4,
+     3,
+     4
+    ],
+    "C": [
+     6,
+     3,
+     3
+    ],
+    "D": [
+     3,
+     4,
+     3
+    ],
+    "E": [
+     2,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://tigerfunded.com/faq",
+    "contract": "https://tigerfunded.com/terms-of-service",
+    "program": "https://tigerfunded.com/rules",
+    "entity": "https://tigerfunded.com/payouts",
+    "offer": "https://tigerfunded.com/"
+   },
+   "b1": "CGU §4.1 (sanctions 'at our sole discretion'), §12 (résiliation 'for any reason') et §6 (un payout rejeté peut rendre le compte définitivement inéligible, sans procédure de recours), plus §7 (connexions depuis d'autres pays traitables comme violation): B1=3/15. La règle de marge 80%, le plafond 2% par idée, la consistance 15% Instant Pro et les 5 jours qualifiants restent des contraintes publiées.",
+   "b2": "La page d'accueil annonce l'absence de règle de consistance alors que la FAQ Q34 impose 15% sur Instant Pro; les CGU §5.1 (frais non remboursables) et §5.4 ('refundable fee') se contredisent; le calendrier CGU (14 jours ouvrés puis règle de 7 jours ouvrés non expliquée) cadre mal avec la promesse de 48 h.",
+   "b3": "CGU modifiables à tout moment, acceptation par usage continu, sans protection explicite des comptes existants ni des gains acquis; aucun effet rétroactif effectivement prouvé.",
+   "hold": "A15 B14 C12 D10 E5 = 56 points éditoriaux, puis -6 Trustpilot (notice déjà au dossier) = 50/100 (+5 vs 45). Deux entités nommées avec numéros (ALPHAEDGE PRO – FZCO, Dubaï; Alphaedgepro Services (Europe) Ltd, HE479670), droit des EAU et tribunaux de Dubaï; registre chypriote non consulté. Flux de payouts auto-publié et déclaré illustratif: A3=1. Confiance moyenne.",
+   "next": "Vérifier HE479670 au registre chypriote et la licence DSO; lire la politique de remboursement et un éventuel accord funded; réconcilier homepage/FAQ sur la consistance."
+  }
+ ]
+}

@@ -252,3 +252,14 @@ dossiers bloqués et contrôle l'absence de double malus Trustpilot/règles.
 Pour toute nouvelle firme, ajouter explicitement son slug à la liste de
 publication **seulement après audit et autorisation** ; ne jamais activer
 automatiquement toutes les futures lignes d'un lot brouillon.
+
+**Lot N01 (Claude), 20 fiches « V4 à lancer » :** 8 notes publiées en
+confiance moyenne — Get Leveraged 59, MilTraders 58, Top One Trader 50,
+Alpha Futures 64, BEM Funding 49, Upcomers 53, ThinkCapital 59, Tiger
+Funded 50 (−6 Trustpilot inclus quand la notice est active). 12 dossiers
+restent sur la note historique (confiance limitée ou non notés : My Flash
+Funding repris par Sway Funded, MyFxCapital injoignable). Notice Trustpilot
+réapparue pour Get Leveraged et nouvelle pour Klein Funding (20/11/2026),
+chacune comptée une seule fois. Voir `app/data/scoring-v4-batch-7.json` et
+`claude/scoring-v4-batch-7-review-2026-11-20.md` (désaccord signalé sur le
+B1 de FTMO, non modifié).
