@@ -16,7 +16,8 @@
 .psb-v4-list small { color: var(--hud-faint); font-weight: 500; }
 .psb-v4-track { margin-top: 5px; height: 5px; overflow: hidden; border-radius: 9px; background: color-mix(in srgb, var(--hud-ink) 11%, transparent); }
 .psb-v4-track i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
-.psb-v4-confidence { color: var(--accent); font-size: 11px; font-weight: 650; margin: 14px 0 4px; }
+/* The evidence-confidence tier remains in editorial records but is not displayed in the score modal. */
+.psb-v4-confidence { display: none; }
 .psb-v4-hint { color: var(--hud-faint); font-size: 11px; line-height: 1.55; margin: 0; }
 .psb-v4-explain { margin: 0 0 18px; padding: 10px 13px; border-left: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 5%, transparent); }
 .psb-v4-explain p { color: var(--hud-faint); font-size: 11px; line-height: 1.6; margin: 3px 0; }
