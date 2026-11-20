@@ -15,7 +15,7 @@ Le fichier canonique vérifiable est `app/data/scoring-v5-proposals-c01.json` : 
 | **TradeDay — approuvé** | 75 | 18 | 13 | 11 | 16 | 9 | 67 | −2 | 0 | **67** | **−8** |
 | **Breakout Prop — en proposition** | 70 | 22 | 10 | 17 | 16 | 8 | 73 | −2 | 0 | **73** | **+3** |
 | **Axi Select — en proposition** | 76 | 15 | 18 | 11 | 12 | 8 | 64 | 0 | 0 | **64** | **−12** |
-| **City Traders Imperium — en proposition** | 74 | 13 | 11 | 9 | 14 | 9 | 56 | −4 | 0 | **56** | **−18** |
+| **City Traders Imperium — en proposition** | 74 | 13 | 13 | 9 | 14 | 9 | 58 | −2 | 0 | **58** | **−16** |
 | **Take Profit Trader — en proposition** | 73 | 17 | 18 | 17 | 16 | 10 | 78 | 0 | 0 | **78** | **+5** |
 | **OneUp Trader — en proposition** | 72 | 17 | 18 | 11 | 12 | 9 | 67 | 0 | 0 | **67** | **−5** |
 | **UProfit Trader — en proposition** | 69 | 15 | 13 | 11 | 14 | 9 | 62 | −2 | 0 | **62** | **−7** |
@@ -28,7 +28,7 @@ La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 
 - TradeDay : **69 éditorial avant règles −2 règles contraignantes = 67**, approuvé après la revue de la PR #239.
 - Breakout Prop : **75 éditorial avant règles −2 règles contraignantes = 73**, proposition non approuvée et non publique.
 - Axi Select : **64**, pas de pénalité de règle ni Trustpilot, proposition non publique.
-- CTI : **60 éditorial −4 règles = 56**, avec l'avertissement de régulateur circonscrit à la licence revendiquée (C3=2).
+- CTI : **60 éditorial −2 règles = 58**, une seule ambiguïté de trading/conséquences ; avertissement de régulateur circonscrit à la licence revendiquée (C3=2).
 - Take Profit Trader : **78**, éléments de paiement PRO/PRO+ documentés, mais contrat de rewards individuel non public.
 - OneUp Trader : **67**, risque principal : identité de l'entité partenaire qui contracte et verse les gains non confirmée.
 - UProfit Trader : **64 éditorial −2 règles = 62**, pertes de rewards possibles selon le guide de bonnes pratiques §9.1 (B1).
@@ -130,11 +130,11 @@ Tous les éléments ci-dessous sont des **propositions** : les 13 notes détaill
 
 **AXI-F02 (contrat non public) :** date et rythme de versement mensuel dans l'[aide dédiée](https://help.axi.com/en-US/axiv2--axicorp-prod/article/VwEhaP1j-how-and-when-are-axi-select-payouts-transferred), mais absence de copie publique de la convention Select signée et de rapprochement des pays/entités ; **B1=8 provisoire**, C1=4, C2=3 et D2=2. [Documentation légale par entité](https://www.axi.com/int/legal-documentation). Les volumes et certificats publiés par Axi ne constituent pas une validation indépendante des paiements. [Lancement daté du 18/09/2023](https://www.globenewswire.com/de/news-release/2023/09/18/2744375/0/en/Axi-launches-Axi-Select-a-pioneering-all-inclusive-capital-allocation-programme-offering-skilled-traders-funding-of-up-to-1-000-000-USD.html) → E1=6. **Non vérifié :** accord individuel, frais exacts, statut de la partie Select par résidence, payouts indépendants, dernier checkout.
 
-#### CTI-01 — City Traders Imperium : **74 → 56 (−18)**
+#### CTI-01 — City Traders Imperium : **74 → 58 (−16)**
 
-**citytradersimperium.com / City Traders Imperium Limited (Comores, n°15969 déclaré), CTI FZCO (Dubai, académie) / 1-Step, 2-Step, Instant, Direct / actif / confiance faible.** Vecteur : **A1=4, A2=8, A3=1 ; B1=5, B2=6 ; C1=4, C2=3, C3=2 ; D1=8, D2=4, D3=2 ; E1=6, E2=3** ; A13+B11+C9+D14+E9=**56**. Calcul visuel **60 éditorial −4 de règles = 56**. Il n'y a **pas** de plafond 55 : C1≠0, pas de strike-off non suspendu de l'opérateur actuel.
+**citytradersimperium.com / City Traders Imperium Limited (Comores, n°15969 déclaré), CTI FZCO (Dubai, académie) / 1-Step, 2-Step, Instant, Direct / actif / confiance faible.** Vecteur : **A1=4, A2=8, A3=1 ; B1=5, B2=8 ; C1=4, C2=3, C3=2 ; D1=8, D2=4, D3=2 ; E1=6, E2=3** ; A13+B13+C9+D14+E9=**58**. Calcul visuel **60 éditorial −2 de règles = 58**. Il n'y a **pas** de plafond 55 : C1≠0, pas de strike-off non suspendu de l'opérateur actuel.
 
-**CTI-F01 (clauses courantes) :** le [PDF officiel 2026](https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf) est [lié comme version faisant autorité](https://citytradersimperium.com/terms-conditions-of-service/). Son §8.11 retire le droit aux récompenses en cas de violation (**B1=5**, l'accord de récompense du tiers restant non public) ; §9.5 laisse qualifier un trading interdit discrétionnairement (**B2 −2**) ; §9.6(e) permet une limitation de risque à 1 % ou une réduction de levier selon l'appréciation du risque (**B2 −2**, déclencheur distinct). Aucune retenue pour les règles chiffrées claires. L'incertitude sur les fenêtres de retrait Direct est traitée **en A1** sans −2 supplémentaire en B2.
+**CTI-F01 (clauses courantes) :** le [PDF officiel 2026](https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf) est [lié comme version faisant autorité](https://citytradersimperium.com/terms-conditions-of-service/). Son §8.11 retire le droit aux récompenses en cas de violation (**B1=5**, l'accord de récompense du tiers restant non public) ; §9.5 laisse qualifier un trading interdit discrétionnairement (**B2 −2**), avec possibilité de limiter le risque à 1 % ou de réduire le levier en §9.6(e). **Ce dernier pouvoir est la conséquence du même mécanisme et ne reçoit pas un second −2.** Aucune retenue pour les règles chiffrées claires. L'incertitude sur les fenêtres de retrait Direct est traitée **en A1** sans −2 supplémentaire en B2.
 
 **CTI-F02 (statut et prétendue licence) :** le [site de la firme](https://citytradersimperium.com/contact-us/) affiche la licence L15969/CTI ; un [répertoire se présentant comme Anjouan Offshore Finance Authority](https://anjouanoffshorefinanceauthority.org/register/city-traders-imperium/) porte cette référence, mais la **[Banque centrale des Comores](https://banque-comores.km/uploads/COMMUNIQUE-DE-LA-BCC-SUR-LEXERCICE-ILLEGAL-DACTIVITES-BANCAIRES-OFFSHORES%283%29.pdf)** a mis en garde en 2022 contre des structures de ce nom prétendant délivrer des agréments bancaires/financiers. Cette alerte concerne **l'émetteur prétendu de licence, pas une sanction spécifique de CTI ni une démonstration que sa simulation nécessite une licence de courtier** : C3=2 (portée incertaine), C2=3 (registre sociétaire officiel actuel non obtenu). L'[ancienne société britannique n°11463147 dissoute](https://find-and-update.company-information.service.gov.uk/company/11463147) ne doit pas être confondue avec l'opérateur actuel comorien. **Non vérifié :** acte de constitution de la société Comores, reconnaissance de la licence, convention finale de reward, contrat signé et frais complets de payout.
 
@@ -168,7 +168,7 @@ Tous les éléments ci-dessous sont des **propositions** : les 13 notes détaill
 
 ### Décisions requises avant fusion
 
-Les **sept** propositions non publiques sont **Breakout 70→73, Axi 76→64, CTI 74→56, TPT 73→78, OneUp 72→67, UProfit 69→62 et FT+ 68→67**. Au minimum, les baisses **Axi −12, CTI −18, OneUp −5 et UProfit −7** requièrent validation nominative par Adrien. L'augmentation TPT +5 et les deux autres propositions restent également bloquées par le manifeste daté tant qu'Adrien n'a pas expressément approuvé leur note. Aucune de ces nouvelles notes ne doit être injectée implicitement dans `scoring-v5-published.json`.
+Les **sept** propositions non publiques sont **Breakout 70→73, Axi 76→64, CTI 74→58, TPT 73→78, OneUp 72→67, UProfit 69→62 et FT+ 68→67**. Au minimum, les baisses **Axi −12, CTI −16, OneUp −5 et UProfit −7** requièrent validation nominative par Adrien. L'augmentation TPT +5 et les deux autres propositions restent également bloquées par le manifeste daté tant qu'Adrien n'a pas expressément approuvé leur note. Aucune de ces nouvelles notes ne doit être injectée implicitement dans `scoring-v5-published.json`.
 
 ### Garde-fous de suite
 
