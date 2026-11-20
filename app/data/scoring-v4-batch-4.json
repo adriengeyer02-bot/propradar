@@ -1,0 +1,30 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "status": "audit-en-cours-non-publie",
+  "rankStartLegacy": 44,
+  "rankEndLegacy": 63,
+  "method": "Uniform evidence gate: signed programme contract, payout eligibility, programme rules, contracting entity, verified external signals. Never infer payment denial from subjective clauses alone. No scores assigned until the full gate is satisfied.",
+  "firms": [
+    {"slug":"the-concept-trading","before":60,"scores":null,"auditState":"incomplet","source":"https://new.theconcepttrading.com/terms-and-conditions/","next":"Recouper matrice des versements, versions de programme et contrat de compte financé."},
+    {"slug":"goat-funded-trader","before":59,"scores":null,"auditState":"incomplet","source":"https://help.goatfundedtrader.com/en/articles/7208402-what-is-the-refund-policy","next":"Distinguer refus de collaboration pour style et droits aux gains déjà acquis ; vérification Trustpilot."},
+    {"slug":"rebelsfunding","before":59,"scores":null,"auditState":"incomplet","source":"https://www.rebelsfunding.com/rf-content/uploads/2026/10/RebelsFunding-General-Terms-and-Conditions-EN-SK.pdf","next":"Comparer les conditions 2026 avec l'accord RCF du compte proposé."},
+    {"slug":"myfundedcapital","before":59,"scores":null,"auditState":"incomplet","source":"https://myfundedcapital.com/terms-and-conditions/","next":"Rattacher les changements de dates d'octobre 2026 aux comptes achetés."},
+    {"slug":"elite-trader-funding","before":58,"scores":null,"auditState":"incomplet","source":"https://elitetraderfunding.app/terms-of-service","next":"Examiner réaffectation discrétionnaire de rewards vers compte LIVE ELITE/Vault."},
+    {"slug":"lux-trading-firm","before":58,"scores":null,"auditState":"incomplet","source":"https://luxtradingfirm.com/t_c/","next":"Contrat actuel, limites de payout et variantes récentes à réconcilier."},
+    {"slug":"ic-funded","before":58,"scores":null,"auditState":"incomplet","source":"https://www.icfunded.com/terms-and-conditions","next":"Identifier l'entité signataire, le funded agreement et les restrictions interprétables."},
+    {"slug":"fxrk","before":58,"scores":null,"auditState":"alerte-regulateur-a-recouper","source":"https://www.fsma.be/sites/default/files/media/files/2025-02/20250217_fxrk.pdf","next":"Vérifier société/site nommés dans les alertes et domaine actuel; ne pas confondre autre FXRK."},
+    {"slug":"tentrade","before":58,"scores":null,"auditState":"incomplet","source":"https://tentrade.com/wp-content/uploads/2026/03/Funded-Terms-2026.pdf","next":"Distinguer l'appréciation discrétionnaire des stratégies et les restrictions chiffrées."},
+    {"slug":"apex-trader-funding","before":57,"scores":null,"auditState":"incomplet","source":"https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/","next":"Vérifier contrat PA/Live, limites payout, consistance sans malus technique."},
+    {"slug":"forex-funds-flow","before":57,"scores":null,"auditState":"incomplet","source":"https://forexfundsflow.com/terms-conditions","next":"Étudier étendue du rejet de rewards et procédure de contestation."},
+    {"slug":"bespoke-funding-program","before":56,"scores":null,"auditState":"domaine-et-statut-a-verifier","source":"https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom","next":"Vérifier fermeture, propriétaire du domaine, empêcher un checkout vers un site non lié."},
+    {"slug":"sway-funded","before":56,"scores":null,"auditState":"incomplet","source":"https://my.swayfunded.com/p/terms","next":"Revoir pouvoirs de conformité sur les rewards éligibles."},
+    {"slug":"nova-funding","before":56,"scores":null,"auditState":"domaine-et-statut-a-verifier","source":"https://novafunding.com/","next":"Confirmer la propriété du domaine actuellement lié à un autre secteur d'activité."},
+    {"slug":"nations-trading","before":56,"scores":null,"auditState":"incomplet","source":"https://nationstrading.com/","next":"Vérifier que la prop firm vend encore ses programmes et retrouver les CGU officielles."},
+    {"slug":"the-forex-funder","before":56,"scores":null,"auditState":"incomplet","source":"https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account","next":"Les FAQ datent de 2024; retrouver contrat et politique 2026 et accord funded."},
+    {"slug":"leveled-up-society","before":56,"scores":null,"auditState":"alerte-regulateur-a-recouper","source":"https://www.fsma.be/fr/leveled-society-httpsleveledupsocietycom","next":"Confirmer personne morale, périmètre d'alerte et éventuelle fermeture réelle."},
+    {"slug":"aurafunded","before":56,"scores":null,"auditState":"incomplet","source":"https://help.aurafunded.com/en/articles/10174531-consistency-rule","next":"Lire CGU complètes et ne pas sanctionner la simple consistance 35%."},
+    {"slug":"alphaproptraders","before":56,"scores":null,"auditState":"incomplet","source":"https://alphaproptraders.com/","next":"Contrat officiel et offre active non localisés à ce stade."},
+    {"slug":"crypto-fund-trader","before":55,"scores":null,"auditState":"incomplet","source":"https://cryptofundtrader.com/terms-and-conditions/","next":"Évaluer clause de non-critique et entretiens conditionnant les scholarships, par programme."}
+  ]
+}
