@@ -19854,7 +19854,84 @@
       ]
     },
     "forex-funds-flow": {
-      "reviewedAt": "2026-10-30",
+      "reviewedAt": "2026-11-19",
+      "auditedPrograms": [
+        { "key": "1step", "name": "1-Step Challenge" },
+        { "key": "2step", "name": "2-Step Challenge" },
+        { "key": "instant", "name": "Instant Funding (Static)" }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "All main programmes — 80% margin concentration",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The Terms prohibit an all-or-nothing position when 80% or more of available margin is used on one or several simultaneous trade ideas. The Terms list an account breach on the third occurrence but do not describe the earlier escalation steps in the accessible text.",
+          "impact": "Large concentrated positions can breach the account even if other loss-limit thresholds are not hit. The escalation before the third event should be confirmed with support.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        },
+        {
+          "program": "All main programmes — minimum two-minute hold",
+          "appliesTo": ["*"],
+          "category": "min-hold-time",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Terms state that every position must remain open at least two minutes; a stop-loss execution before two minutes can still trigger a warning. The text does not say that a single short stop-loss always voids profit.",
+          "impact": "Even automatic protective exits before two minutes can generate a compliance warning; no automatic payout cancellation is established for a first warning.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        },
+        {
+          "program": "All main programmes — high-impact news window",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Terms prohibit trading in the five minutes before and after high-impact news, and require closing trades, pending orders, stop-loss and take-profit instructions beforehand. A swing-trade exception covers positions opened at least five hours before the scheduled announcement. No separate, automatic account or reward sanction is specified for this restriction.",
+          "impact": "Traders must close even protective orders before the news window unless the stated swing exception applies. The general discretionary enforcement power is counted separately, not repeated here.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        },
+        {
+          "program": "All main programmes — cross-account copying limits",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Terms forbid copying trades among more than two FFF accounts, and forbid trade copying from external firm accounts and outside signal/copy services. EAs need staff approval; HFT, tick-scalping and latency arbitrage tools are banned. No separate, automatic account or reward sanction is specified for these practices.",
+          "impact": "Traders using copy systems or automated strategies must check their eligibility before purchase. The general discretionary enforcement power is counted separately, not repeated here.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        },
+        {
+          "program": "All main programmes — hedging and opposite trades",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Terms prohibit hedging not only across firms and personal accounts but also within the same account, including simultaneous opposite-position loops used to bypass trading limits. No separate, automatic account or reward sanction is specified for this rule.",
+          "impact": "Even protective hedging in one account is restricted. The general discretionary enforcement power is counted separately, not repeated here.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        },
+        {
+          "program": "All main programmes — directional concentration",
+          "appliesTo": ["*"],
+          "category": "consistency",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The Terms do not allow 85% or more of a trader's positions to be in one direction. Artificial small 0.01-lot counter-trades used to balance history are not allowed either. No separate, automatic reward or account sanction is stated for this threshold.",
+          "impact": "A trader who consistently trades in one direction must still monitor this unusual restriction, even if the instant product has no conventional best-day consistency rule. The general enforcement power is counted separately.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        },
+        {
+          "program": "All main programmes — future rule and access changes",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The general enforcement clause allows Forex Funds Flow to investigate rule breaches and potentially suspend or terminate accounts and reject rewards, without prior notice. Separate clauses allow programme rules to be changed at any time or access to end if service is no longer commercially viable. The Terms do not establish that previously earned valid rewards are automatically forfeited solely because of a commercial termination.",
+          "impact": "This is a real but discretionary contractual risk to rewards and account access, counted once across the listed restrictions. It is not proof of any unjustified payout refusal or of automatic retroactive forfeiture.",
+          "source": "https://forexfundsflow.com/es/terms-conditions"
+        }
+      ],
       "changelog": [
         {
           "date": "2026-10-30",
@@ -19864,13 +19941,31 @@
             "trustpilotRating",
             "trustpilotReviewCount"
           ]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Initial primary-contract restrictive-rules audit: read the publicly indexed full official Terms and Conditions (trading prohibitions, discretionary rights, termination, Schedule A) and compared with the official programme pages and FAQ section list. Seven grouped restrictions are classified across 1-Step, 2-Step and Instant Static. Full individual FAQ answers, FFF Boost current sales terms and real payout experience are not yet verified, so this remains a partial audit rather than proof of denied withdrawals.",
+          "source": "https://forexfundsflow.com/es/terms-conditions",
+          "fields": ["restrictiveRules", "auditSummary"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Reclassified the seven contract restrictions under the approved proportionality principle: the official Terms have a plainly navigable Prohibited Trading Practices section; the generic discretionary power to reject rewards or close an account is now scored once, not re-applied to every trading restriction. Only the 80% margin threshold expressly describes an account breach after three occurrences. The actual payout consequences of the other prohibitions remain unverified; the FAQ and programme-specific audit is incomplete.",
+          "source": "https://forexfundsflow.com/es/terms-conditions",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
         "trustpilotRating": 3.6,
         "trustpilotReviewCount": 265,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/forexfundsflow.com"
-      }
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/forexfundsflow.com",
+        "auditSummary": "19 November 2026 — partial official-contract review of Forex Funds Flow. The company website promotes one-step, two-step and static instant evaluation products; the published Terms contain additional conditions including an 80%-of-margin concentration threshold, a two-minute minimum holding period even for protective stops, a five-minute high-impact-news window, restrictions on copying trades and hedging, and an 85%-same-direction trading limit. The Terms permit investigation, possible suspension, refusal of rewards and termination for violations generally; individual events and payout refusals have not been independently established. The firm also reserves broad rights to change program conditions and end access when its service is no longer commercially viable; the text does not prove retroactive forfeiture of valid earned rewards. Current details of FFF Boost, complete linked FAQ answers and independent bank-level payout proof remain unverified. The recorded rules describe exposure under the contract, not a finding of actual misconduct."
+      },
+      "addSources": [
+        { "label": "Forex Funds Flow current Terms and Conditions — prohibitions and Schedule A", "url": "https://forexfundsflow.com/es/terms-conditions" },
+        { "label": "Forex Funds Flow official FAQ catalogue (programme sections)", "url": "https://www.forexfundsflow.com/faq" },
+        { "label": "Forex Funds Flow programme pricing and trading overview", "url": "https://www.forexfundsflow.com/" }
+      ]
     },
     "traders-launch": {
       "reviewedAt": "2026-11-18",
