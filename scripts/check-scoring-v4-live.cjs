@@ -17,11 +17,11 @@ const { V4_CRITERIA } = require('../app/lib/scoringV4.ts');
 const groups = [1, 2, 3].map((number) => require(`../app/data/scoring-v4-batch-${number}.json`));
 const legacy = [...groups[1].firms.filter((row) => row.confidence === 'limitee').map((row) => row.slug), ...groups[2].firms.filter((row) => row.scores === null).map((row) => row.slug)];
 
-assert.equal(V4_PUBLISHED_SLUGS.length, 33);
-assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 33);
+assert.equal(V4_PUBLISHED_SLUGS.length, 34);
+assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 34);
 assert.equal(legacy.length, 14);
 const scored = propFirms.filter((firm) => getScoreBreakdown(firm).v4);
-assert.equal(scored.length, 33, 'exactly 33 firms should use the V4 score in production');
+assert.equal(scored.length, 34, 'exactly 34 firms should use the V4 score in production');
 assert.deepEqual(scored.map((firm) => firm.slug).sort(), [...V4_PUBLISHED_SLUGS].sort());
 assert.ok(topFirms.every((firm, i) => i === 0 || topFirms[i - 1].score >= firm.score));
 
@@ -55,7 +55,8 @@ assert.equal(getFirmBySlug('elite-trader-funding').score, 66);
 assert.equal(getFirmBySlug('crypto-fund-trader').score, 62);
 assert.equal(getFirmBySlug('myfundedcapital').score, 75, 'owner-approved MFC re-score');
 assert.equal(getFirmBySlug('blue-guardian').score, 61, 'Blue Guardian independent blockchain payout evidence plus one active Trustpilot −6');
+assert.equal(getFirmBySlug('atlas-funded').score, 66, 'owner-approved Atlas Funded re-score');
 assert.equal(getScoreBreakdown(getFirmBySlug('blue-guardian')).v4.trustpilotPenalty, 6);
 assert.equal(getFirmBySlug('tickticktrader').score, 67);
 assert.equal(getFirmBySlug('rocket21-challenge').score, 60);
-console.log(`\n✓ V4 live: 33 final scores, 14 previous incomplete files left on legacy. Each score has five blocks and no double deductions.`);
+console.log(`\n✓ V4 live: 34 final scores, 14 previous incomplete files left on legacy. Each score has five blocks and no double deductions.`);
