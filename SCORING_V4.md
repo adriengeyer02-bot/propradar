@@ -138,10 +138,10 @@ les seize budgets et rejeter toute déduction d'un fait en double.
 Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 `app/lib/scoringV4.ts` et l'activation explicite dans
 `app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
-37 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
+39 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
 66/100, Crypto Fund Trader 62/100, MyFundedCapital 75/100 et Blue Guardian
 61/100, puis Atlas Funded 66/100, Traders Launch 61/100, Funded Bull
-55/100 et OFP Funding 58/100).
+55/100 et OFP Funding 58/100, puis Alpha Capital Group 74/100 et Maven Trading 72/100).
 La note, le classement, les comparateurs et la
 fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
 note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
@@ -158,7 +158,7 @@ qualifier cet audit d'exhaustif ou de confiance élevée. **17 autres fiches**
 attendent encore leurs documents contractuels. Voir la PR #207 pour le
 rapport détaillé et les sources, sans toucher aux audits de Claude.
 
-**14 autres dossiers déjà examinés ne sont pas publiés en V4 :** les dix
+**12 autres dossiers des premiers lots ne sont pas publiés en V4 :** huit
 notes de confiance `limitee` du deuxième lot et TickTickTrader, TradeFundrr,
 Traders Central, Rocket21 (pièces contractuelles ou activité actuelle
 insuffisamment vérifiées). Ils conservent leur ancienne chaîne de calcul et
@@ -216,6 +216,34 @@ ne portent pas encore ce signal. L'événement et son éventuelle incidence
 sur la note nécessitent une décision éditoriale séparée ; ni flag ni −6
 nouveaux ne sont activés dans ce lot. Voir
 `app/data/scoring-v4-batch-6.json` et la revue documentaire détaillée.
+
+
+**Reprise des dossiers incomplets — lot C01 :** dix anciennes fiches de
+confiance limitée ont été reprises. Deux dossiers disposent maintenant d'un
+noyau contractuel et d'une identification suffisamment solides pour un score V4
+**de confiance moyenne** :
+
+| Firme | Avant | A | B | C | D | E | Trustpilot | Final |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Alpha Capital Group | 71 | 19 | 26 | 14 | 13 | 8 | −6 | **74** |
+| Maven Trading | 67 | 18 | 25 | 14 | 13 | 8 | −6 | **72** |
+
+Chez **Alpha Capital**, la société UK est vérifiée par Companies House,
+les annexes contractuelles de payout sont publiques, mais §2.6 laisse une
+appréciation subjective sur les violations de règles : **B1 seulement**, pas
+un refus réel prouvé en A2. Chez **Maven**, les CGU v2026.3 nomment MAVEN
+EDU - FZCO (également trouvée dans le répertoire gouvernemental KHDA) et
+protègent en principe les rewards acquis, bien que §13.2 conserve un pouvoir
+large de résiliation. Une lacune dans l'annexe des produits Static/Predictions
+est notée en B2 **une seule fois**. Les notices Trustpilot des deux firmes
+sont toujours actives au 20/11/2026 : **un unique −6 extérieur aux 100**.
+Aucune consistance/news/drawdown connue et annoncée n'entraîne un retrait
+supplémentaire. Huit autres fiches (Axi Select, TradeDay, CTI, Take Profit
+Trader, OneUp Trader, Breakout, UProfit et Funded Trading Plus) restent dans
+l'ancien moteur dans l'attente d'accords de récompenses ou de versions de
+contrats déterminants. Voir le détail sourcé dans
+`claude/scoring-v4-completion-c01-review-2026-11-20.md` et les deux scorecards
+`app/data/scoring-v4-completion-c01-published.json`.
 
 Les notes activées restent de confiance **moyenne**, jamais présentées comme
 des vérifications bancaires exhaustives. Le script
