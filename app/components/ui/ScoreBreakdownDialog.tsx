@@ -169,12 +169,6 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               </div>
             ) : null}
 
-            <details className="psb-scale prg-hud-reveal" style={delay(view.steps.length + 4)}>
-              <summary>{copy.scaleTitle}</summary>
-              <ul>{copy.scale.map((line) => <li key={line}>{line}</li>)}</ul>
-              <p className="psb-note">{copy.affiliation}</p>
-            </details>
-
             <footer className="prg-hud-footer prg-hud-reveal" style={delay(view.steps.length + 5)}>
               <div>
                 <a href={view.rulesHref} onClick={() => setOpen(false)}>{copy.seeRules}<span aria-hidden="true">↓</span></a>
