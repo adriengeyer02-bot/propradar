@@ -6,13 +6,12 @@ any change, in this order:
 1. `CLAUDE.md`: the project rules for every agent, despite its name (data
    files, sources, editorial and legal rules, sensitive changes, checks before
    merge).
-2. `SCORING.md`: **authoritative scoring policy for all agents**.
-   Restrictive-rules penalty, **one Trustpilot -6 (no 64 cap, approved
-   2026-11-19)**, closure handling, payout/rule priorities and
-   **no double counting of the same fact**. This supersedes any earlier
-   -8 or 64-cap wording in `CLAUDE.md`, `README.md` or open PRs until
-   those files are synchronized. Classify restrictive rules; the code
-   computes their separate penalty.
+2. `SCORING_V4.md`: **current target policy and active score calculation**
+   for the 29 individually approved V4 firms (25/35/15/15/10, one Trustpilot
+   −6, no standalone restrictive-rules deduction; owner approval 2026-11-20).
+   `SCORING.md` documents the **legacy pipeline only**, for the remaining
+   firms that have not passed the V4 publication gate. Do not silently apply
+   legacy deductions to V4 scores, and do not activate incomplete audits.
 3. `claude/README.md`: short, dated implementation brief for Claude
    (including how to correct manual scores that embedded the former -8).
 4. `README.md`: product overview (French).

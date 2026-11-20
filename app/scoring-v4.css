@@ -1,0 +1,26 @@
+/* V4: the five score pillars at a glance, without crowding the product rules. */
+.psb-v4 {
+  margin: 6px 0 18px;
+  padding: 16px;
+  border: 1px solid var(--hud-line);
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--hud-ink) 3%, transparent);
+}
+.psb-v4-heading { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+.psb-v4-heading strong { color: var(--hud-ink); font-size: 14px; }
+.psb-v4-heading small { color: var(--hud-faint); font-size: 11px; }
+.psb-v4-list { display: grid; gap: 13px; padding: 0; margin: 0; list-style: none; }
+.psb-v4-list li > div:first-child { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.psb-v4-list span { font-size: 12px; line-height: 1.4; color: var(--hud-ink); }
+.psb-v4-list strong { flex-shrink: 0; color: var(--accent); font-size: 13px; font-variant-numeric: tabular-nums; }
+.psb-v4-list small { color: var(--hud-faint); font-weight: 500; }
+.psb-v4-track { margin-top: 5px; height: 5px; overflow: hidden; border-radius: 9px; background: color-mix(in srgb, var(--hud-ink) 11%, transparent); }
+.psb-v4-track i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+.psb-v4-confidence { color: var(--accent); font-size: 11px; font-weight: 650; margin: 14px 0 4px; }
+.psb-v4-hint { color: var(--hud-faint); font-size: 11px; line-height: 1.55; margin: 0; }
+.psb-v4-explain { margin: 0 0 18px; padding: 10px 13px; border-left: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.psb-v4-explain p { color: var(--hud-faint); font-size: 11px; line-height: 1.6; margin: 3px 0; }
+@media (max-width: 440px) {
+  .psb-v4 { padding: 12px; }
+  .psb-v4-list span { font-size: 11px; }
+}

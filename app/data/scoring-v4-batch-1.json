@@ -1,0 +1,87 @@
+{
+  "version": 4,
+  "description": "PREVIEW ONLY — first three firms by existing displayed rating on 2026-11-20. Preserve Claude's audits; human approval required before publishing.",
+  "firms": [
+    {
+      "slug": "ftmo",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 83,
+      "trustpilotActiveNotice": false,
+      "closed": false,
+      "criteria": {
+        "A1": { "points": 9, "verification": "verifie", "reason": "Demande de récompense décrite avec cycle de 14 jours et étapes de validation ; vérifier le parcours précis du compte acheté.", "sources": ["https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/"] },
+        "A2": { "points": 9, "verification": "partiel", "reason": "Pas de série de refus arbitraires indépendamment établie dans le dossier audité ; les plaintes individuelles ne démontrent pas un incident. Couverture indépendante des litiges incomplète, appréciation provisoire.", "sources": ["https://www.trustpilot.com/review/ftmo.com", "https://ftmo.com/en/forbidden-trading-practices/"] },
+        "A3": { "points": 3, "verification": "verifie", "reason": "Payouts chiffrés publiés dans la presse mais déclarés par FTMO ; pas de vérification bancaire indépendante de l'ensemble des montants.", "sources": ["https://www.financemagnates.com/forex/ftmo-adds-200-million-to-lifetime-payouts-in-one-year-as-monthly-rewards-near-15-million/"] },
+        "B1": { "points": 12, "verification": "verifie", "reason": "Interdiction de tailles de position 'substantially larger' et exposition appréciée sans seuil chiffré ; les récompenses potentielles peuvent être perdues. Une seule réserve B1, aucun refus réel inféré.", "sources": ["https://ftmo.com/en/forbidden-trading-practices/"], "negativeFactIds": ["ftmo-subjective-size-forfeiture"] },
+        "B2": { "points": 8, "verification": "verifie", "reason": "1-Step, 2-Step et Instant ont des limites distinctes mais décrites ; ouvrir un trade près d'une coupure de marché n'est pas la même chose que conserver un trade Swing autorisé. Aucune incohérence artificielle retenue.", "sources": ["https://ftmo.com/en/comparison-table/", "https://ftmo.com/en/faq/can-i-hold-positions-overnight-or-over-the-weekend/", "https://ftmo.com/en/forbidden-trading-practices/"] },
+        "B3": { "points": 6, "verification": "partiel", "reason": "Versions contractuelles et changements de règles à contrôler pour les comptes anciens ; aucun retrait rétroactif effectif de droits acquis n'est affirmé.", "sources": ["https://ftmo.com/en/terms-and-conditions/", "https://ftmo.com/en/trading-objectives/"] },
+        "B4": { "points": 5, "verification": "verifie", "reason": "Objectifs, news, Swing et interdictions consultables publiquement par modèle ; la technicité normale n'est pas sanctionnée.", "sources": ["https://ftmo.com/en/trading-objectives/", "https://ftmo.com/en/forbidden-trading-practices/"] },
+        "C1": { "points": 8, "verification": "verifie", "reason": "Identifiant 09213651 et adresse recoupés sur l'empreinte FTMO et la publication du registre tchèque datée du 3 novembre 2026 ; restructuration de sociétés à noter sans la qualifier abusivement de disparition.", "sources": ["https://ftmo.com/en/imprint/", "https://ov.gov.cz/zapis/25456204", "https://lei.bloomberg.com/leis/view/315700CSL764OHW1V489"] },
+        "C2": { "points": 4, "verification": "verifie", "reason": "Adresse, société et contact juridique indiqués ; juridiction et contrat varient potentiellement selon l'entité et la zone.", "sources": ["https://ftmo.com/en/imprint/", "https://ftmo.com/en/terms-and-conditions/"] },
+        "C3": { "points": 2, "verification": "partiel", "reason": "Aucune alerte officielle pertinente établie dans les pièces examinées, mais une recherche des registres internationaux n'est pas exhaustive ; ne pas confondre produit simulé et courtage.", "sources": ["https://www.fca.org.uk/scamsmart/warning-list", "https://ftmo.com/en/imprint/"] },
+        "D1": { "points": 4, "verification": "verifie", "reason": "Tarifs en euros et modèles séparés ; comparaison réelle à frais et taille de compte équivalents encore partielle.", "sources": ["https://ftmo.com/en/comparison-table/"] },
+        "D2": { "points": 5, "verification": "verifie", "reason": "Récompenses et profit split explicités pour les variantes de programme, sans malus pour une simple règle de consistance.", "sources": ["https://ftmo.com/en/comparison-table/"] },
+        "D3": { "points": 5, "verification": "verifie", "reason": "Drawdown statique 2-Step, EOD suiveur 1-Step et intraday Instant présentés séparément ; caractéristiques normales, pas infractions.", "sources": ["https://ftmo.com/en/trading-objectives/"] },
+        "E1": { "points": 4, "verification": "verifie", "reason": "Historique opérationnel continu et structure identifiée, avec acquisition OANDA divulguée ; ancienneté seule ne crée pas le maximum.", "sources": ["https://ftmo.com/en/imprint/", "https://www.oanda.com/group/press-release/oanda-acquired-by-ftmo/"] },
+        "E2": { "points": 3, "verification": "verifie", "reason": "Avis nombreux et contextualisés ; les témoignages ne sont pas assimilés à des preuves bancaires ou à des plaintes établies.", "sources": ["https://www.trustpilot.com/review/ftmo.com"] },
+        "E3": { "points": 3, "verification": "partiel", "reason": "Plateformes annoncées et activité continue dans le dossier ; absence d'audit de disponibilité indépendant en temps réel.", "sources": ["https://ftmo.com/en/trading-platforms/", "https://ftmo.com/en/imprint/"] }
+      }
+    },
+    {
+      "slug": "topstep",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 79,
+      "trustpilotActiveNotice": false,
+      "closed": false,
+      "criteria": {
+        "A1": { "points": 9, "verification": "verifie", "reason": "Parcours Express Funded et Live distincts ; plafonds et jours gagnants indiqués officiellement. Ni les plafonds affichés ni la consistance ne sont des fautes cachées.", "sources": ["https://help.topstep.com/en/articles/8284233-topstep-payout-policy"] },
+        "A2": { "points": 9, "verification": "partiel", "reason": "Le dossier ne prouve pas de série de refus injustifiés ; revue indépendante des différends incomplète et signalée comme telle.", "sources": ["https://www.trustpilot.com/review/topstep.com", "https://www.topstep.com/terms-of-use"] },
+        "A3": { "points": 2, "verification": "verifie", "reason": "Montants cumulés annoncés par Topstep sur son site ; aucune attestation de paiement indépendant du total publié.", "sources": ["https://www.topstep.com/paid-lp"] },
+        "B1": { "points": 9, "verification": "verifie", "reason": "La définition contractuelle de stratégie 'not viable' et les tailles 'substantially larger' sont subjectives ; résultats peuvent être supprimés. Les accords de compte funded séparés limitent la portée d'une conclusion générale.", "sources": ["https://www.topstep.com/terms-of-use"], "negativeFactIds": ["topstep-subjective-strategy-profit-removal"] },
+        "B2": { "points": 7, "verification": "partiel", "reason": "CGU générale et politique payout cohérentes sur leurs périmètres ; accords spécifiques Express et Live non intégralement recoupés ici.", "sources": ["https://www.topstep.com/terms-of-use", "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"] },
+        "B3": { "points": 5, "verification": "verifie", "reason": "Paramètres du Combine et trading rules peuvent changer sans notification ; ne prétend pas démontrer qu'une récompense déjà due a réellement été reprise.", "sources": ["https://www.topstep.com/terms-of-use"], "negativeFactIds": ["topstep-discretionary-rule-changes"] },
+        "B4": { "points": 5, "verification": "verifie", "reason": "Limites, consistance et plafonds répertoriés dans l'aide par type de compte.", "sources": ["https://help.topstep.com/en/articles/8284233-topstep-payout-policy", "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"] },
+        "C1": { "points": 7, "verification": "partiel", "reason": "Topstep LLC identifiée comme Delaware LLC dans les CGU, filiale brokerage nommée ; vérification du registre Delaware et des contrats funded restant à conclure.", "sources": ["https://www.topstep.com/terms-of-use"] },
+        "C2": { "points": 3, "verification": "partiel", "reason": "Droit contractuel et entités divulgués, mais identification de la voie de recours du trader funded à préciser.", "sources": ["https://www.topstep.com/terms-of-use"] },
+        "C3": { "points": 2, "verification": "partiel", "reason": "La société de courtage liée se déclare NFA member ; son statut ne couvre pas automatiquement la prestation de prop trading ; alertes à vérifier par entité.", "sources": ["https://www.nfa.futures.org/basicnet/", "https://www.topstep.com/terms-of-use"] },
+        "D1": { "points": 4, "verification": "verifie", "reason": "Prix mensuels publiés ; il faut inclure l'activation éventuelle dans le coût total pour chaque parcours.", "sources": ["https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"] },
+        "D2": { "points": 5, "verification": "verifie", "reason": "Split 90/10 et fréquence selon compte ; plafonds publics considérés comme un paramètre produit, pas une faute arbitraire.", "sources": ["https://help.topstep.com/en/articles/8284233-topstep-payout-policy"] },
+        "D3": { "points": 4, "verification": "verifie", "reason": "Maximum loss et comportement EOD expliqués ; moins souple qu'un drawdown fixe mais aucune pénalité de conformité pour un seuil connu.", "sources": ["https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"] },
+        "E1": { "points": 4, "verification": "verifie", "reason": "Opérateur historique avec CGU et activité actualisées publiquement.", "sources": ["https://www.topstep.com/terms-of-use", "https://www.topstep.com/"] },
+        "E2": { "points": 3, "verification": "partiel", "reason": "Avis et signal d'utilisateurs consultables ; aucune plainte isolée transformée en refus injustifié avéré.", "sources": ["https://www.trustpilot.com/review/topstep.com"] },
+        "E3": { "points": 3, "verification": "partiel", "reason": "Plateforme, tableau de bord et retrait fonctionnel documentés ; stabilité non mesurée par monitoring indépendant.", "sources": ["https://help.topstep.com/en/articles/8284233-topstep-payout-policy"] }
+      }
+    },
+    {
+      "slug": "the5ers",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 76,
+      "trustpilotActiveNotice": false,
+      "closed": false,
+      "criteria": {
+        "A1": { "points": 8, "verification": "verifie", "reason": "Premier retrait après 14 jours ; certains plafonds publiés, mais seuil unilatéral de paiements en tranches non annoncé à l'avance.", "sources": ["https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/", "https://the5ers.com/terms-and-conditions/"] },
+        "A2": { "points": 9, "verification": "partiel", "reason": "Les plaintes d'utilisateurs ne constituent pas la preuve indépendante d'un refus injustifié ; couverture de litiges non exhaustive, un point réservé par prudence.", "sources": ["https://www.trustpilot.com/review/the5ers.com", "https://the5ers.com/terms-and-conditions/"] },
+        "A3": { "points": 5, "verification": "verifie", "reason": "Transactions crypto agrégées par un observateur externe pour T1 2026 ; preuve de paiements observés, pas d'un taux global de réussite de toutes les demandes.", "sources": ["https://datalab.financemagnates.com/market-insights/tracked-prop-firm-crypto-payouts-doubled-to-115m-in-q1-2026"] },
+        "B1": { "points": 6, "verification": "verifie", "reason": "CGU prévoient confiscation des récompenses au titre de 'viable trading strategy' jugé à la seule discrétion, vérification sous cinq jours et propos publics 'disparaging' non définis. Même catégorie de risque, pas un retrait additionnel sur les avis ou les payouts.", "sources": ["https://the5ers.com/terms-and-conditions/"], "negativeFactIds": ["the5ers-subjective-trading-forfeiture", "the5ers-interview-pending-payout", "the5ers-public-statement-reward-forfeiture"] },
+        "B2": { "points": 6, "verification": "verifie", "reason": "Explications officielles du plancher Bootcamp/Hyper-Growth discordantes entre FAQ et contenu pédagogique ; différence non attribuée à une pratique payout avérée, et non re-sanctionnée dans D3.", "sources": ["https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/", "https://the5ers.com/bootcamp/"], "negativeFactIds": ["the5ers-bootcamp-floor-documentation-mismatch"] },
+        "B3": { "points": 3, "verification": "verifie", "reason": "CGU rendent certains changements de règles immédiatement opposables, même sans notification ; pas de preuve qu'un retrait a été révoqué rétroactivement dans un cas concret.", "sources": ["https://the5ers.com/terms-and-conditions/"], "negativeFactIds": ["the5ers-unnotified-trading-rules-change"] },
+        "B4": { "points": 4, "verification": "verifie", "reason": "Principales règles publiques et menus par programme disponibles, mais plusieurs obligations transversales sont noyées dans les longues CGU.", "sources": ["https://the5ers.com/terms-and-conditions/", "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"] },
+        "C1": { "points": 8, "verification": "verifie", "reason": "Five Percent Online Ltd UK numéro 12553363 confirmée par Companies House ; conserver le périmètre exact des entités étrangères de l'accord.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/12553363", "https://the5ers.com/terms-and-conditions/"] },
+        "C2": { "points": 4, "verification": "verifie", "reason": "Adresse, droit applicable et tribunaux mentionnés dans les CGU, malgré la pluralité de sociétés.", "sources": ["https://the5ers.com/terms-and-conditions/", "https://find-and-update.company-information.service.gov.uk/company/12553363"] },
+        "C3": { "points": 2, "verification": "partiel", "reason": "Pas d'alerte pertinente indépendamment établie dans ce lot ; consultation partielle, sans présumer une autorisation financière requise pour produit simulé.", "sources": ["https://www.fca.org.uk/scamsmart/warning-list", "https://the5ers.com/terms-and-conditions/"] },
+        "D1": { "points": 4, "verification": "partiel", "reason": "Plusieurs parcours aux coûts et éventuels frais différents ; quelques pages de tarif à actualiser hors promotions.", "sources": ["https://the5ers.com/bootcamp/", "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"] },
+        "D2": { "points": 4, "verification": "verifie", "reason": "Partage 80 % au départ High Stakes et 50 % sur Bootcamp/Hyper-Growth, avec potentiel de progression ; valeur variable selon route.", "sources": ["https://the5ers.com/faqs/how-much-is-the-profit-split-in-the5ers/"] },
+        "D3": { "points": 5, "verification": "verifie", "reason": "Maximum loss et modalités propres aux programmes publiés. L'ambiguïté rédactionnelle est comptée seulement dans B2 ; pas de deuxième retrait sur le trailing.", "sources": ["https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/", "https://the5ers.com/bootcamp/"] },
+        "E1": { "points": 4, "verification": "verifie", "reason": "Société enregistrée et exploitation documentée sur plusieurs années ; aucune présomption de fiabilité absolue.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/12553363"] },
+        "E2": { "points": 3, "verification": "verifie", "reason": "Grand nombre d'avis, contextualisés sans leur attribuer un statut de preuve de paiement ou de non-paiement.", "sources": ["https://www.trustpilot.com/review/the5ers.com"] },
+        "E3": { "points": 3, "verification": "partiel", "reason": "Prestation commerciale active et méthodes de paiement suivies ; incidents de plateformes non vérifiés en continu.", "sources": ["https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/", "https://the5ers.com/terms-and-conditions/"] }
+      }
+    }
+  ]
+}
