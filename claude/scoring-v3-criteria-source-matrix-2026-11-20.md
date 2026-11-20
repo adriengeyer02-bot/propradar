@@ -11,7 +11,16 @@ sur des déductions automatiques ni présumer qu’une société n’a pas payé
 - Firmes fermées, hors classement : **38**.
 - Firmes ouvertes sans preuve indépendante **étiquetée** dans le dossier : **147**.
 - Firmes ouvertes avec une clause candidate de risque contractuel : **90**.
+- Firmes ouvertes sans preuve indépendante étiquetée **et** avec alerte Trustpilot active : **39**.
 - Fichiers : `scoring-v3-criteria-matrix-2026-11-20-part-1.csv` à `part-5.csv`, 40 firmes par lot (37 dans le dernier).
+
+**Attention à la sévérité réelle du nouveau barème :** sans preuve indépendante de payout
+sur le critère A1 (18 points), le demi-crédit neutre vaut 9. Même si les quatorze
+autres critères obtenaient leur maximum, un dossier restant dans cet état aurait
+un **plafond purement théorique de 91** avant Trustpilot, **85** avec l’alerte -6.
+Ce plafond n’est ni une note recommandée ni la preuve de mauvaise conduite.
+Il faut rechercher les justificatifs, pas attribuer 18/18 sur une affirmation marketing
+ou forcer une note historique à 90 sans décomposition documentée.
 
 ## Vérification prioritaire des sources contractuelles
 
