@@ -1,0 +1,164 @@
+{
+  "version": 5,
+  "batch": "C02-C04",
+  "checkedOn": "2026-11-20",
+  "publication": "Propositions non approuvées. Les contrôles de statut n'ont pas de note concurrentielle et nécessitent une validation distincte avant archivage. Ne pas toucher au manifeste public.",
+  "firms": [
+    {
+      "slug": "tradefundrr",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 67,
+      "criteria": {
+        "A1": { "points": 8, "reason": "Options Growth/Prop/Express : premier retrait à 5–10 jours selon produit (+2), jours profitables et cohérence de 30 % (+2), plafond de 50 % du profit puis 100 % à partir du septième retrait avec plafonds par cycle (+2), calendrier vendredi et procédure par compte (+2). Split 80/20 et seuil 250 USD sont annoncés mais frais précis de virement non confirmés pour toutes les routes (0).", "sources": ["https://tradefundrr.com/options-trader-funding/", "https://tradefundrr.com/options-trader-funding/prop/faq/", "https://tradefundrr.com/"] },
+        "A2": { "points": 8, "reason": "Palier neutre : avis clients et réponses de la firme décrivent des versements, sans historique externe indépendant de 12–24 mois ni série de refus injustifiés corroborés. Ne pas assimiler des témoignages vérifiés par Trustpilot à des virements vérifiés.", "sources": ["https://www.trustpilot.com/review/tradefundrr.com", "https://tradefundrr.com/options-trader-funding/"] },
+        "A3": { "points": 1, "reason": "Témoignages et captures promotionnelles seulement ; aucune attribution indépendante vérifiée de paiements à l'échelle de la firme.", "sources": ["https://tradefundrr.com/", "https://www.trustpilot.com/review/tradefundrr.com"] },
+        "B1": { "points": 8, "reason": "Provisoire NON VÉRIFIABLE : conditions générales présentes dans un visualiseur Termly rendu par JavaScript, texte intégral et convention individuelle Prop non reproductibles lors du contrôle. La seule politique de remboursement de frais n'établit pas la protection des récompenses déjà acquises. Appliquer le palier par défaut, pas 15.", "sources": ["https://app.termly.io/policy-viewer/policy.html?policyUUID=8ae59468-1120-4330-8ca7-97112729076b", "https://tradefundrr.com/pages/fee-refund-policy"] },
+        "B2": { "points": 10, "reason": "Minimum de conservation 15 secondes, limites journalières, règle de cohérence 30 % et caps annoncés par produit ; aucun traitement rétroactif ou retrait asymétrique sur une catégorie de trades vérifié. Le conflit commercial sur le remboursement des frais est imputé à D3, pas ici.", "sources": ["https://tradefundrr.com/options-trader-funding/", "https://tradefundrr.com/pages/fee-refund-policy"] },
+        "C1": { "points": 4, "reason": "TradeFundrr, LLC est nommée comme cocontractant Pre-Prop/Prop et bénéficiaire des frais. T3 Global est un opérateur distinct du programme réel Pro ; la concordance du registre officiel avec un contrat et une commande n'est pas vérifiée.", "sources": ["https://tradefundrr.com/", "https://tradefundrr.com/stock-trader-funding/pro/"] },
+        "C2": { "points": 3, "reason": "Statut juridique actuel de TradeFundrr, LLC non confirmé par extrait officiel daté ; l'âge de T3 Trading Group ne renseigne pas son statut.", "sources": ["https://tradefundrr.com/", "https://bestprops.com/what-is-tradefundrr/"] },
+        "C3": { "points": 4, "reason": "Recherche par nom juridique et marque sans avertissement réglementaire applicable confirmé ; la licence FINRA/SEC affichée concerne T3 Trading Group, pas TradeFundrr ni T3 Global.", "sources": ["https://tradefundrr.com/", "https://tradefundrr.com/stock-trader-funding/pro/"] },
+        "D1": { "points": 6, "reason": "Prix, abonnement de 99 USD et activation des comptes (+2), objectifs/drawdown selon produit (+2), restrictions 15 secondes, consistency et sanctions documentées (+2). Liste exhaustive des juridictions, contrôles KYC et conditions d'accès non retrouvée (0).", "sources": ["https://tradefundrr.com/options-trader-funding/", "https://tradefundrr.com/options-trader-funding/prop/faq/"] },
+        "D2": { "points": 0, "reason": "Le lien des CGU renvoie à un visualiseur Termly non lisible sans exécution JavaScript lors de l'audit ; aucune version applicable au contrat Prop, date d'effet ou régime de modification des comptes existants vérifiable par le corpus. La politique de remboursement datée d'octobre n'est pas la CGU générale.", "sources": ["https://app.termly.io/policy-viewer/policy.html?policyUUID=8ae59468-1120-4330-8ca7-97112729076b", "https://tradefundrr.com/pages/fee-refund-policy"] },
+        "D3": { "points": 2, "reason": "Distinction claire simulation Pre-Prop/Prop et capital réel Pro chez T3 Global (+2). Contradiction non résolue : page commerciale promet encore remboursement des frais au premier payout, tandis que la politique du 26 octobre 2026 exclut les nouvelles commandes ; checkout final non comparé (0+0).", "sources": ["https://tradefundrr.com/options-trader-funding/", "https://tradefundrr.com/pages/fee-refund-policy", "https://tradefundrr.com/"] , "negativeFactIds": ["tradefundrr-rebate-promo-vs-policy-oct26"] },
+        "E1": { "points": 6, "reason": "Activité de financement simulé TradeFundrr documentée par une offre publique de masterclass et échanges datés de septembre 2023, soit plus de 36 mois ; ne pas compter l'âge de T3.", "sources": ["https://www.tradefundrr.co/masterclass-registration", "https://test.elitetrader.com/et/threads/need-a-prop-firm-for-us-stock-options.376211/"] },
+        "E2": { "points": 2, "reason": "Support courriel et téléphone identifiables (+1), retour d'expérience daté sur joignabilité (+1) ; procédure de recours contractuelle et exemple d'escalade réellement résolue non vérifiés (+0+0).", "sources": ["https://tradefundrr.com/", "https://www.trustpilot.com/review/tradefundrr.com"] }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "hyrotrader",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 55,
+      "criteria": {
+        "A1": { "points": 8, "reason": "Payout sur demande / généralement 24 h (+2), split 80 % à 90 %, seuil net 25 USD et pas de frais annoncés (+2), Hyro Instant trois jours qualifiants et règles selon plan (+2), demande via interface et virement USDT/USDC (+2). Plafonds ou mention explicite d'absence de plafond pour tous plans non retrouvés (0).", "sources": ["https://www.hyrotrader.com/", "https://www.hyrotrader.com/terms-and-conditions/", "https://www.hyrotrader.com/transparency/"] },
+        "A2": { "points": 8, "reason": "Historique blockchain public depuis avril 2026, mais pas 12 mois d'attribution indépendante du payeur ; pas de deux retards distincts suffisamment corroborés ou de série de refus injustifiés démontrée. Neutralité en l'absence d'incident matériel établi.", "sources": ["https://www.hyrotrader.com/transparency/", "https://www.trustpilot.com/review/hyrotrader.com"] },
+        "A3": { "points": 2, "reason": "Table de transactions Solana avec identifiants consultables et deux portefeuilles publiés depuis avril 2026 ; Solscan rend les mouvements vérifiables, mais leur attribution à des traders réels et l'ensemble des méthodes de paiement sont déclarés par la firme et non audités indépendamment.", "sources": ["https://www.hyrotrader.com/transparency/", "https://solscan.io/tx/2tWys9oPrvR2uDXEo4iSBRPraLY274Nr8pKxbfCR3DrhYDnEZCmb18DYTJhZLMJwhWxSSbYDt3LFdvwCYViuwNAw"] },
+        "B1": { "points": 8, "reason": "Provisoire : CGU d'évaluation §13.4 limitent la retenue aux contrôles KYC/sanctions ou pratique interdite confirmée ; toutefois les récompenses sont dues exclusivement par HYROTRADER TECHNOLOGIES LTD sous convention Funded Trader distincte §6.4 non accessible, ce qui empêche d'affirmer un recours ou une protection de gains acquis contractuellement vérifiés.", "sources": ["https://www.hyrotrader.com/terms-and-conditions/"] },
+        "B2": { "points": 8, "reason": "−2 uniquement pour §10.2(n), modification « matérielle » de stratégie/instruments/profil de risque invalidant l'objectif de l'évaluation sans seuil publié. Les règles de perte, hedge inter-comptes, drawdown, KYC et antirétroactivité §6.3 sont objectives ou expressément expliquées et ne coûtent rien.", "sources": ["https://www.hyrotrader.com/terms-and-conditions/", "https://www.hyrotrader.com/trading-rules/index.html.md"], "negativeFactIds": ["hyro-vague-material-strategy-change-10-2-n"] },
+        "C1": { "points": 4, "reason": "CGU v1.17 distinguent HYRO TECHNOLOGIES FZ-LLC RAKEZ #FDBC5283 (défi/frais), HYROTRADER TECHNOLOGIES LTD BVI #2166693 (contrat Funded/récompense) et Hyro Finance j.s.a. (agent EEE), mais aucun extrait officiel indépendant du registre BVI/RAKEZ et aucun contrat Funded signé vérifié.", "sources": ["https://www.hyrotrader.com/terms-and-conditions/"] },
+        "C2": { "points": 3, "reason": "Statut officiel actuel de la société BVI qui doit payer et de la société RAKEZ qui vend l'évaluation non confirmé par registre à jour ; licences déclarées dans les CGU non assimilées à un certificat de good standing.", "sources": ["https://www.hyrotrader.com/terms-and-conditions/"] },
+        "C3": { "points": 4, "reason": "Recherche datée sans avertissement public d'autorité matériellement applicable à l'entité de ce service simulé identifié. L'absence d'agrément de broker ne suffit pas à sanctionner un simulateur.", "sources": ["https://www.hyrotrader.com/terms-and-conditions/", "https://www.hyrotrader.com/about-us/"] },
+        "D1": { "points": 8, "reason": "Tarifs et remboursements de dépôts par formule (+2), étapes/targets/drawdowns Hyro Core, One, Two, Instant (+2), limites et restrictions par phase (+2), KYC et juridictions interdites aux §§11–12 (+2).", "sources": ["https://www.hyrotrader.com/", "https://www.hyrotrader.com/terms-and-conditions/", "https://www.hyrotrader.com/trading-rules/index.html.md"] },
+        "D2": { "points": 6, "reason": "CGU publiques et complètes (+2), v1.17 en vigueur depuis le 4 novembre 2026 (+2), §§6.3 et 19 détaillent préavis, droits des comptes existants, refus et remboursement (+2).", "sources": ["https://www.hyrotrader.com/terms-and-conditions/"] },
+        "D3": { "points": 4, "reason": "Pages principales, règles de simulation et CGU alignées sans contradiction matérielle supplémentaire identifiée (+2) ; rôles Provider/entité récompense/agent de paiement et simulation explicités (+2). Dernière étape de paiement non parcourue (+0).", "sources": ["https://www.hyrotrader.com/", "https://www.hyrotrader.com/terms-and-conditions/"] },
+        "E1": { "points": 6, "reason": "Lancement HyroTrader en août 2023 documenté par un communiqué daté du 23 septembre 2024 ; >36 mois en novembre 2026.", "sources": ["https://s24.q4cdn.com/538403808/files/doc_news/Crypto-Proprietary-Trading-Firm-HyroTrader-Experiences-Rapid-Growth-2024.pdf", "https://www.hyrotrader.com/about-us/"] },
+        "E2": { "points": 3, "reason": "Canaux officiels distincts support/legal (+1), interactions publiquement observables avec clients (+1), mécanisme de plainte §24 avec réponse attendue sous trente jours (+1) ; qualité d'une solution documentée à litige hors payout non vérifiée (+0).", "sources": ["https://www.hyrotrader.com/terms-and-conditions/", "https://www.trustpilot.com/review/hyrotrader.com"] }
+      },
+      "ruleDeductions": [
+        { "factId": "hyro-vague-material-strategy-change-10-2-n", "kind": "ambiguite", "points": 2, "program": "HyroTrader · Challenge et passage funded", "phase": "Évaluation puis Funded Trader", "clause": "CGU §10.2(n) : changement matériel de stratégie, d'instruments ou de profil de risque qui défait l'objet du challenge, sans seuil quantifié.", "consequence": "Suspension du compte et perte possible des récompenses en cas de qualification du changement comme pratique interdite.", "source": "https://www.hyrotrader.com/terms-and-conditions/" }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "fx2-funding",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 55,
+      "criteria": {
+        "A1": { "points": 6, "reason": "FAQ CFD : premier versement 14 jours après premier trade (+2), évaluation sans minimum de jours et vérification KYC (+2), retrait par tableau de bord et étapes de validation (+2). Frais de payout non exhaustifs avec split/mini par route (0) ; caps d'encaissement et exclusions pour toutes les variantes non explicités (0). Ne pas confondre avec futur programme futures à cycle de 30 jours.", "sources": ["https://fx2funding.com/faqs/", "https://fx2funding.com/funding-programs/"] },
+        "A2": { "points": 8, "reason": "Avis de paiement et plaintes clients contradictoires, dont une plainte détaillée non arbitrée ; aucune série distincte de refus injustifiés confirmés ni dates de retard contractuel reproduites. Ne pas assimiler une plainte Trustpilot à une décision judiciaire.", "sources": ["https://www.trustpilot.com/review/fx2funding.com", "https://fx2funding.com/faqs/"] },
+        "A3": { "points": 1, "reason": "Témoignages et déclarations marketing de paiements, sans échantillon de virements attribués à Prop Account LTD indépendant et vérifiable.", "sources": ["https://fx2funding.com/testimonials/", "https://www.trustpilot.com/review/fx2funding.com"] },
+        "B1": { "points": 8, "reason": "Provisoire NON VÉRIFIABLE : les anciennes CGU 2024 de FX2 Funding, LLC permettent de retenir des paiements pour trading jugé risqué, mais le site actuel attribue les récompenses à un contrat Funded séparé avec Prop Account LTD qui n'est pas public. Ne pas transférer automatiquement la clause de l'ancien LLC au cocontractant inconnu.", "sources": ["https://fx2funding.com/terms-conditions-2/", "https://fx2funding.com/terms-and-conditions/", "https://fx2funding.com/faqs/"] },
+        "B2": { "points": 10, "reason": "Drawdown, retrait total qui réduit la marge de sécurité, trading news et objectifs exposés comme conditions. Ancien texte 2024 non attribuable à coup sûr aux programmes courants ; aucune contradiction de trading contemporaine suffisamment corroborée pour −2.", "sources": ["https://fx2funding.com/faqs/", "https://fx2funding.com/funding-programs/"] },
+        "C1": { "points": 4, "reason": "FX2 Funding, LTD Sainte-Lucie #2025-00108 se dit affilié marketing ; Prop Account LTD est nommé comme encaisseur et partie au Trader Agreement, mais SANS juridiction, numéro ni copie du contrat. Page About parle encore de FX2 Funding LLC US. L'identité exacte du cocontractant reste non confirmée.", "sources": ["https://fx2funding.com/about-us/", "https://fx2funding.com/terms-and-conditions/", "https://find-and-update.company-information.service.gov.uk/company/10449848"] },
+        "C2": { "points": 3, "reason": "ALERTE : PROP ACCOUNT LTD britannique #10449848, anciennement FOREST PARK FX, officiellement dissoute le 3 novembre 2026, alors que le site FX2 cite ce même nom sans identifiants. Liens rapportés dans la presse mais pas de contrat actuel ni de preuve de succession : rattachement légal non établi, donc statut DU VRAI cocontractant inconnu (3), PAS dissolution imputée/cap automatique.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/10449848", "https://find-and-update.company-information.service.gov.uk/company/10449848/filing-history", "https://fx2funding.com/about-us/", "https://davefinances.com/prop-account-uk-firm-dissolved-as-prop-sites-still-name-it/"] },
+        "C3": { "points": 4, "reason": "L'alerte FCA du 18 décembre 2023 vise fx2funding.ORG et une adresse londonienne, pas l'actuel fx2funding.COM / opérateur Prop Account LTD ; aucune identité de contrôle établie. Ne pas lui imputer un avertissement officiel sans lien prouvé.", "sources": ["https://www.fca.org.uk/news/warnings/fx2-funding", "https://fx2funding.com/about-us/"] },
+        "D1": { "points": 6, "reason": "Objectifs/drawdowns par catégorie dans la FAQ (+2), restrictions et conséquences par produit discutées (+2), KYC et pays exclus affichés (+2) ; le détail de prix/activation de chaque route n'est pas intégralement lisible et reproductible (+0).", "sources": ["https://fx2funding.com/faqs/", "https://fx2funding.com/funding-programs/", "https://fx2funding.com/about-us/"] },
+        "D2": { "points": 0, "reason": "Page 'Terms' actuelle accessible mais n'expose que pied de page ; texte détaillé parallèle daté de juillet 2024 nomme un ancien FX2 Funding, LLC au lieu de l'opérateur Prop Account LTD 2026. Conditions applicables à la commande actuelle, date et politique de changement non identifiables.", "sources": ["https://fx2funding.com/terms-and-conditions/", "https://fx2funding.com/terms-conditions-2/"] },
+        "D3": { "points": 0, "reason": "Parcours de paiement et contrat du cocontractant non vérifiés (+0) ; divergences LLC US/LTD Sainte-Lucie/Prop Account LTD et page juridique vide (+0) ; l'opérateur réel et sa responsabilité des gains n'ont pas une concordance vérifiée malgré l'aveu de simulation (+0).", "sources": ["https://fx2funding.com/about-us/", "https://fx2funding.com/terms-and-conditions/", "https://fx2funding.com/faqs/"], "negativeFactIds": ["fx2-legal-entities-materially-inconsistent"] },
+        "E1": { "points": 6, "reason": "Site et présentation des fondateurs situent le lancement du service FX2 en novembre 2022 ; durée d'exploitation de la marque >36 mois, non transférable automatiquement au prestataire Prop Account LTD.", "sources": ["https://fx2funding.com/about-us/", "https://fx2funding.com/futures/about/"] },
+        "E2": { "points": 2, "reason": "Contacts publiés (+1), interaction observable avec clients (+1), mais mécanisme d'escalade de l'opérateur de contrat et résolution de réclamation vérifiables absents (0+0).", "sources": ["https://fx2funding.com/contact/", "https://www.trustpilot.com/review/fx2funding.com"] }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "quant-tekel",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 55,
+      "criteria": {
+        "A1": { "points": 6, "reason": "QT One : premier cycle de 4 jours ; QT Two/Instant : cycles de 14 jours (+2). Jours funded, consistency et stop-loss publiés par plan (+2). Demande via dashboard en fin de cycle (+2). Barème de frais de retrait et minima/caps clairement applicables à CHAQUE nouvelle variante incomplets malgré certaines FAQ anciennes (0+0).", "sources": ["https://qtfunded.quanttekel.com/evaluations/", "https://qtfunded.quanttekel.com/what-is-prop/", "https://qtfunded.quanttekel.com/terms-of-service/"] },
+        "A2": { "points": 8, "reason": "Une plainte détaillée datée et formulaire officiel de résolution pour comptes affectés montrent un signal à instruire, mais ni nombre de dossiers distincts, ni échéances dépassées, ni preuve de non-résolution vérifiés : le seuil V5 de 6 ou moins n'est pas établi. Pas d'attribution d'un incident générique à chaque client.", "sources": ["https://qtfunded.quanttekel.com/payout-resolution/", "https://www.trustpilot.com/review/qtfunded.quanttekel.com"] },
+        "A3": { "points": 1, "reason": "Certificats de payout et 17 M USD auto-déclarés sur le catalogue ; absence de transferts indépendants liés à l'entité SVG sur six mois ou plus.", "sources": ["https://qtfunded.quanttekel.com/evaluations/", "https://qtfunded.quanttekel.com/about/"] },
+        "B1": { "points": 5, "reason": "Conditions générales 'Responsible Trading' : notions ouvertes de 'toxic trading' et 'unprofessional behaviours' avec conséquence explicite 'denied performance fees' ; aucune limitation chiffrée exhaustive ni réexamen protecteur. Ce fait unique ne donne AUCUN second retrait B2.", "sources": ["https://qtfunded.quanttekel.com/terms-and-conditions-general/"], "negativeFactIds": ["qt-toxic-behaviour-can-deny-earned-fees"] },
+        "B2": { "points": 10, "reason": "Restrictions chiffrées à la comparaison QT One/Two/Instant ; la catégorie 'toxic trading' déjà imputée aux gains B1 n'est pas redécomptée. Promotion giveaway : obligation objective de publications avant payout, explicitement réservée aux comptes offerts et distincte des challenges payants, non pénalisée comme trading.", "sources": ["https://qtfunded.quanttekel.com/evaluations/", "https://qtfunded.quanttekel.com/terms-and-conditions-general/"] },
+        "C1": { "points": 4, "reason": "QTFunded nomme Quant Tekel LLC/Quant Tekel SVG #3984 LLC 2025 comme vendeur du challenge ; QT Treasury Limited Chypre #HE487624, agent de paiement, et Quant Tekel (Pty) Ltd FSCA = courtier SEPARÉ. Le texte 'Quant Tekel LLC Limited' et absence d'extrait SVG/checkout empêchent vérification complète.", "sources": ["https://qtfunded.quanttekel.com/terms-and-conditions-general/", "https://qtfunded.quanttekel.com/about/"] },
+        "C2": { "points": 3, "reason": "Quant Tekel LLC SVG, cocontractant courant, statut officiel pas retrouvé. La société britannique QUANT TEKEL LTD #15923693 est ACTIVE avec proposition de radiation NON suspendue et comptes en retard, mais décrite dans des CGU d'un AUTRE domaine comme simple agent de paiement, non vendeur du challenge : aucun C2=2 et aucun plafond 55 transposés à l'entité SVG sans preuve.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/15923693", "https://quanttekel.com/terms-conditions/", "https://qtfunded.quanttekel.com/terms-and-conditions-general/"] },
+        "C3": { "points": 4, "reason": "Pas d'alerte officielle identifiée et attribuable à Quant Tekel LLC SVG après recherche. Licence FSCA #53227 du courtier sud-africain ne s'étend pas au programme de simulation.", "sources": ["https://qtfunded.quanttekel.com/terms-and-conditions-general/", "https://qtfunded.quanttekel.com/about/"] },
+        "D1": { "points": 6, "reason": "Comparatif d'objectifs, pertes et étapes par plan (+2), limites et restrictions news/stoploss par phase (+2), pays et KYC dans les conditions (+2). Prix dynamique en page d'évaluation rendu '—' sans comparaison reproductible des frais totaux de chaque variante (0).", "sources": ["https://qtfunded.quanttekel.com/evaluations/", "https://qtfunded.quanttekel.com/terms-of-service/"] },
+        "D2": { "points": 4, "reason": "Conditions générales et de services en accès libre (+2), CGU de service datées du 19 février 2026 (+2), mais effet immédiat des modifications après publication sans préservation claire des comptes antérieurs (+0).", "sources": ["https://qtfunded.quanttekel.com/terms-of-service/", "https://qtfunded.quanttekel.com/terms-and-conditions-general/"] },
+        "D3": { "points": 2, "reason": "Simulation et séparation opérateur SVG, courtier (Pty) et trésorerie chypriote détaillées dans les conditions (+2). Absence de parcours d'achat final (+0) ; page About promet split de départ 80 % tandis que comparatif QT One l'affiche à 70 %, divergence commerciale contemporaine (+0).", "sources": ["https://qtfunded.quanttekel.com/evaluations/", "https://qtfunded.quanttekel.com/about/", "https://qtfunded.quanttekel.com/terms-and-conditions-general/"], "negativeFactIds": ["qt-about-vs-qt-one-starting-split"] },
+        "E1": { "points": 4, "reason": "Activité prop firm Quant Tekel et antécédent AscendX documentés dans la presse en septembre 2024 ; 18–35 mois à date, sans attribuer l'âge d'un courtier à l'entité SVG créée en 2025.", "sources": ["https://www.financemagnates.com/forex/prop-firm-quanttekel-introduces-broker-services-after-rebranding-from-ascendx-capital/", "https://qtfunded.quanttekel.com/about/"] },
+        "E2": { "points": 2, "reason": "Email/ticket officiels (+1), procédure de plainte et de résolution proposée aux comptes affectés (+1). Délai et efficacité effectifs du support et réponse utile hors litige payout non établis (+0+0).", "sources": ["https://qtfunded.quanttekel.com/payout-resolution/", "https://qtfunded.quanttekel.com/terms-of-service/"] }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ],
+  "statusReviews": [
+    {
+      "slug": "tickticktrader",
+      "checkedOn": "2026-11-20",
+      "previousDisplayedScore": 67,
+      "score": null,
+      "currentOfferStatus": "ventes_non_verifiables_suspendues_selon_derniere_page_officielle_indexee",
+      "confidence": "faible",
+      "finding": "Dernier formulaire officiel indexé : purchases and new subscriptions temporarily suspended during operational changes. Page inaccessible au contrôle du 20 novembre ; pas de fermeture juridique démontrée, donc vérification commerciale/contractuelle exigée avant tout classement actif.",
+      "sources": ["https://app.tickticktrader.com/signup/kVBOWMcC?provider=Projectx&type=s2fplus", "https://www.trustpilot.com/review/tickticktrader.com"],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "traders-central",
+      "checkedOn": "2026-11-20",
+      "previousDisplayedScore": 61,
+      "score": null,
+      "currentOfferStatus": "ancien_programme_non_verifiable",
+      "confidence": "moyenne",
+      "finding": "Communiqué du 17 avril 2023 : Alpha Capital Group acquiert la PROPRIÉTÉ INTELLECTUELLE de Traders Central Fund Corp, non la totalité de la société, de ses engagements ou de ses contrats. Aucune offre Traders Central actuelle achetable/documentée n'a été établie. Ne pas rattacher automatiquement les traders existants à Alpha.",
+      "sources": ["https://www.newsfilecorp.com/release/161688", "https://traderscentral.com/"],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "rocket21-challenge",
+      "checkedOn": "2026-11-20",
+      "previousDisplayedScore": 60,
+      "score": null,
+      "currentOfferStatus": "site_inaccessible_fermeture_non_confirmee",
+      "confidence": "faible",
+      "finding": "Domaine de challenge injoignable lors des derniers contrôles documentés par observateurs ; pas de déclaration officielle de fermeture obtenue. Ancien contrat Prop Trade Tech LLC n'est pas preuve de vente actuelle. Suspendre classement actif sous réserve de confirmation, sans présumer liquidation.",
+      "sources": ["https://rocket21challenge.com/", "https://mypropgenius.com/closed-firms/", "https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21.pdf"],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "fundedlions",
+      "checkedOn": "2026-11-20",
+      "previousDisplayedScore": 55,
+      "score": null,
+      "currentOfferStatus": "offre_inactive_fermeture_definitive_a_confirmer",
+      "confidence": "faible",
+      "finding": "Agrégateur signale annonce de cessation du 15 août 2024 et domaine sans DNS récent ; autre couverture presse à l'époque décrit une suspension pour migration MT5. Sans retrouver la déclaration originale de la société, ne pas trancher juridiquement entre fermeture et suspension prolongée.",
+      "sources": ["https://mypropgenius.com/closed-firms/", "https://www.economywatch.com/fundedlions-suspends-operations-amid-platform-transition-to-metatrader-5", "https://fundedlions.com/"],
+      "ownerApprovalRequired": true
+    }
+  ]
+}
