@@ -138,10 +138,10 @@ les seize budgets et rejeter toute déduction d'un fait en double.
 Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 `app/lib/scoringV4.ts` et l'activation explicite dans
 `app/lib/scoringV4Published.ts` remplacent les anciennes déductions **pour
-37 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
+39 fiches uniquement** (29 du premier déploiement, puis Elite Trader Funding
 66/100, Crypto Fund Trader 62/100, MyFundedCapital 75/100 et Blue Guardian
 61/100, puis Atlas Funded 66/100, Traders Launch 61/100, Funded Bull
-55/100 et OFP Funding 58/100).
+55/100 et OFP Funding 58/100, puis GetLeveraged 59/100 et MilTraders 58/100).
 La note, le classement, les comparateurs et la
 fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
 note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
@@ -216,6 +216,50 @@ ne portent pas encore ce signal. L'événement et son éventuelle incidence
 sur la note nécessitent une décision éditoriale séparée ; ni flag ni −6
 nouveaux ne sont activés dans ce lot. Voir
 `app/data/scoring-v4-batch-6.json` et la revue documentaire détaillée.
+
+**Lot historique suivant, 20 fiches de 44 à 50 avant V4 :** deux dossiers
+présentent un noyau CGU, payout et programmes suffisamment recoupé pour une
+publication de confiance moyenne, sans hausse sensible non approuvée :
+
+| Firme | Avant | A | B | C | D | E | Trustpilot | Après | Confiance |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| GetLeveraged | 50 | 16 | 22 | 8 | 8 | 5 | 0 | **59** | moyenne |
+| MilTraders | 50 | 16 | 17 | 10 | 10 | 5 | 0 | **58** | moyenne |
+
+**GetLeveraged :** les CGU du 17/11/2026 prévoient une revue écrite et un
+recours interne, ainsi qu'une protection notable contre la rétroactivité des
+règles. Une marge subjective subsiste sur certaines stratégies jugées abusives
+ou sur les demandes de payout (B1). CySEC a inclus précisément
+`getleveraged.com` dans une alerte du 07/04/2026 relative à des services
+d'investissement dépourvus d'autorisation ; **C3=0**, sans en déduire qu'un
+service d'évaluation purement simulé doit automatiquement être licencié ni
+qu'un payout aurait été refusé injustement. La notation Trustpilot est à
+nouveau visible, donc aucun −6 au titre d'une ancienne notice historique.
+
+**MilTraders :** les CGU protègent relativement un payout demandé (§9.4),
+mais une sélection Live imposée (§10) met fin aux comptes simulés et aux
+gains non encore demandés, avec risque de KYC broker. Les clauses de
+`gambling behavior` gardent aussi une part d'appréciation (B1). Surtout,
+les §1.3/2.2 appliquent les règles les plus récentes à des comptes déjà
+achetés : ce **risque de stabilité des droits** est noté une seule fois en
+B3, pas imputé comme incident réel A2. La firme indique 48 h de traitement
+après approbation, sans justificatif indépendant généralisable. Confiance
+moyenne, registre UAE à contrôler.
+
+**18 autres fiches sont retenues en note historique** pour pièces de
+rémunération manquantes, versions ou entités contradictoires, ou nouveau
+signal sensible. Notamment : les CGU Clarity Traders du 03/11/2026
+contiennent des champs `[X]` non finalisés sur le payout ; Ultimate Traders
+annonce une durée illimitée quand ses CGU prévoient 30 jours et renvoient
+le funded agreement à un tiers non nommé ; Upcomers autorise le refus d'un
+Trader Program par un tiers pour n'importe quel motif et publie une réduction
+permanente de 50 % des futurs payouts après certains resets ; Alpha Futures
+fait l'objet d'une revue des arriérés Premium de juillet/septembre 2026.
+Pour Alpha, l'annonce de paiements par lots ultérieure interdit d'affirmer
+que tous les payouts Premium sont définitivement perdus. **Klein Funding :**
+une notice Trustpilot active apparaît à vérifier séparément dans les données
+avant toute nouvelle pénalité. Voir `app/data/scoring-v4-batch-7.json` et
+`claude/scoring-v4-batch-7-review-2026-11-20.md`.
 
 Les notes activées restent de confiance **moyenne**, jamais présentées comme
 des vérifications bancaires exhaustives. Le script
