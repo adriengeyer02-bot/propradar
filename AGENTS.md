@@ -25,6 +25,12 @@ any change, in this order:
 
 Work outside your area only when Geyer asks for it, and say so in the PR.
 
+**V4 audit split (Geyer's tracking sheet of 2026-11-20):** Claude takes the
+56 "V4 à lancer" files, lots **N01–N03** (Get Leveraged … Guardeer Funding),
+and flags disagreements on already published V4 notes before any change.
+ChatGPT/Codex keeps the 66 "à compléter" files, lots **C01–C04**. Do not
+publish a V4 note for a firm of the other agent's lots.
+
 ## Avoid stepping on each other
 
 - **Before you start**, list the open pull requests
