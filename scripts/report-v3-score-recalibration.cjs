@@ -42,6 +42,24 @@ const rows = propFirms.map((firm) => {
   const riskRules = rules.filter((rule) => ruleKind(rule) === 'risk');
   const independentProofs = (firm.payoutProofs ?? []).filter((proof) => !proof.firmReported);
   const firmReportedProofs = (firm.payoutProofs ?? []).filter((proof) => proof.firmReported);
+  // Coverage is a review queue, not proof of eligibility for any V3 points.
+  // A URL's presence does not mean that its content was independently checked.
+  const sourceUrls = [
+    ...firm.sources, ...firm.regulatoryAudit.sources, ...(update?.addSources ?? []),
+  ].map((item) => item.url);
+  const ruleUrls = rules.map((rule) => rule.source);
+  const contractSourceCandidates = [...new Set([...sourceUrls, ...ruleUrls].filter((url) =>
+    /\bterms\b|conditions|agreement|\/faq|\/rules|polic|prohibited|forbidden/i.test(url)))];
+  const payoutPolicyCandidates = [...new Set([...sourceUrls, ...ruleUrls].filter((url) =>
+    /payout|withdraw|rewards?|performance.fee/i.test(url)))];
+  const missing = [];
+  if (!independentProofs.length) missing.push('A: preuve payout indépendante non référencée');
+  if (!payoutPolicyCandidates.length) missing.push('A: source dédiée à la politique de retrait à retrouver');
+  if (!update?.auditedPrograms?.length) missing.push('B: périmètre des programmes à documenter');
+  if (!contractSourceCandidates.length) missing.push('B: contrat/FAQ officiels à relier');
+  if (!firm.regulatoryAudit.entities.length) missing.push('C: entité contractante à vérifier');
+  if (!firm.products.length || (firm.provisional?.length ?? 0) > 0) missing.push('D: offre/prix provisoires à confirmer');
+  if (!firm.reviewSignals.trustpilotSourceUrl) missing.push('E: provenance de l’avis consommateur à vérifier');
   // Always show the same before/after regardless of whether the V3 switch
   // is currently enabled in this checkout. This keeps the report reproducible
   // on both the old main branch and a V3 preview branch.
@@ -83,6 +101,13 @@ const rows = propFirms.map((firm) => {
     trustpilotNotice: Boolean(firm.reviewSignals.trustpilotRatingWithheld),
     independentProofs: independentProofs.length,
     firmReportedProofs: firmReportedProofs.length,
+    payoutPolicySourceCandidates: payoutPolicyCandidates.length,
+    contractSourceCandidates: contractSourceCandidates.length,
+    legalEntityCandidates: firm.regulatoryAudit.entities.length,
+    offerProductCount: firm.products.length,
+    provisionalOfferFields: (firm.provisional ?? []).join(' | '),
+    reviewSourceRecorded: Boolean(firm.reviewSignals.trustpilotSourceUrl),
+    v3CoverageActions: missing.join(' | '),
     payoutProofSourceUrls: (firm.payoutProofs ?? []).map((proof) => proof.url).join(' | '),
     riskClauseSourceUrls: [...new Set(riskRules.map((rule) => rule.source))].join(' | '),
     auditSources: firm.sources.length + firm.regulatoryAudit.sources.length + (update?.addSources?.length ?? 0),
@@ -102,6 +127,8 @@ const csvColumns = [
   'slug', 'firm', 'status', 'legacyScore', 'editorial', 'legacyRulesPenalty',
   'withoutLegacyPenalty', 'delta', 'trustpilotPenalty', 'payoutRisk',
   'regulatorRisk', 'trustpilotNotice', 'independentProofs', 'firmReportedProofs',
+  'payoutPolicySourceCandidates', 'contractSourceCandidates', 'legalEntityCandidates',
+  'offerProductCount', 'provisionalOfferFields', 'reviewSourceRecorded', 'v3CoverageActions',
   'payoutProofSourceUrls', 'riskClauseSourceUrls', 'auditSources', 'lastReviewed', 'auditStatus',
   'programmeCount', 'ruleCount', 'riskClausesForReview',
   'sourceConflictsForReview', 'priority', 'priorityReason', 'verification',
@@ -135,6 +162,9 @@ const md = [
   `- Fiches avec au moins une clause candidate au risque contractuel : **${open.filter((row) => row.riskClausesForReview > 0).length}**.`,
   `- Fiches sans preuve indépendante étiquetée dans les données : **${open.filter((row) => row.independentProofs === 0).length}** (absence de pièce dans le fichier ≠ absence de payout).`,
   `- Avertissements Trustpilot en cours sur des firmes ouvertes : **${open.filter((row) => row.trustpilotNotice).length}** (sanction séparée de -6 inchangée).`,
+  `- Absence de source candidate dédiée aux retraits dans le dossier : **${open.filter((row) => row.payoutPolicySourceCandidates === 0).length}**.`,
+  `- Entité légale non renseignée dans le dossier : **${open.filter((row) => row.legalEntityCandidates === 0).length}**.`,
+  `- Périmètre des programmes non documenté : **${open.filter((row) => row.programmeCount === 0).length}**.`,
   '',
   '## Exemples à contrôler avant tout changement de classement',
   '',
