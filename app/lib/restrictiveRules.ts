@@ -6,8 +6,14 @@ import type { FirmUpdate, RestrictiveRule } from './firmUpdates';
  * classification into points, so every editor scores the same way.
  */
 
-/** Penalty applied to displayed scores (approved by Geyer; changes to this switch are sensitive). */
-export const RULES_PENALTY_ENABLED = true;
+/**
+ * V3 migration preview: objective trading restrictions remain visible in the
+ * product menus, but the former separate automatic rules deduction is off.
+ * Contractual payout risk must be assessed inside the sourced editorial
+ * scorecard, not deducted a second time. SENSITIVE: do not merge until the
+ * 197-firm V3 scoring reconciliation has been approved by Geyer.
+ */
+export const RULES_PENALTY_ENABLED = false;
 
 export const RULES_PENALTY_MAX = 12;
 /** Raw load at which the penalty reaches ~63% of the maximum (diminishing returns). */
