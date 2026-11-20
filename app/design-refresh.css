@@ -1023,3 +1023,7 @@ html body .pr-payout-proof-tag.is-firm { color: var(--tone-watch); border-color:
 html body .pr-payout-proof-tag.is-independent { color: var(--tone-good); border-color: var(--tone-good); }
 html body .pr-payout-proofs .pr-payout-proof-text { margin: 6px 0; font-size: 15px; font-weight: 600; color: var(--text); }
 html body .pr-payout-proofs li a { font-size: 13px; color: var(--accent); }
+/* Simplified score dialog (2026-11-20): plain tags instead of raw points */
+.psb-heaviest .psb-pts { font: 600 11px/1.3 inherit; font-family: inherit; min-width: 0; padding: 3px 8px; border-radius: 999px; }
+.psb-kind-risk { color: var(--tone-risk, #f87171); }
+.psb-kind-rule { color: var(--muted, #94a3b8); }

@@ -39,6 +39,10 @@ export type ScoreMethodCopy = {
   affiliation: string;
   fullMethod: string;
   seeRules: string;
+  rulesSimple: string;
+  riskTag: string;
+  restrictionTag: string;
+  simpleScale: [string, string, string, string];
 };
 
 const en: ScoreMethodCopy = {
@@ -83,6 +87,10 @@ const en: ScoreMethodCopy = {
   affiliation: 'Affiliation never moves a score: partner firms follow exactly the same rules.',
   fullMethod: 'Full methodology',
   seeRules: 'See every rule',
+  rulesSimple: "Points taken off for the fine print, mostly for unclear or discretionary clauses that could block a payout. Clearly published rules cost very little.",
+  riskTag: "Unclear clause",
+  restrictionTag: "Published rule",
+  simpleScale: ["Unclear or discretionary clauses that could block a payout cost the most.", "Rules published clearly, with figures (news, lot size, consistency…), cost very little.", "A current Trustpilot notice about removed fake reviews: −6 points, once.", "A closed firm: score capped at 29."],
 };
 
 const fr: ScoreMethodCopy = {
@@ -127,6 +135,10 @@ const fr: ScoreMethodCopy = {
   affiliation: 'L’affiliation ne change jamais une note : les firmes partenaires suivent exactement les mêmes règles.',
   fullMethod: 'Méthodologie complète',
   seeRules: 'Voir toutes les règles',
+  rulesSimple: "Points retirés pour les petites lignes, surtout pour les clauses floues ou discrétionnaires qui peuvent bloquer un paiement. Les règles publiées clairement coûtent très peu.",
+  riskTag: "Clause floue",
+  restrictionTag: "Règle publiée",
+  simpleScale: ["Les clauses floues ou discrétionnaires qui peuvent bloquer un paiement coûtent le plus.", "Les règles publiées clairement, chiffres à l’appui (annonces, taille de lot, cohérence…), coûtent très peu.", "Un avertissement Trustpilot en cours sur des faux avis supprimés : −6 points, une seule fois.", "Une firme fermée : note plafonnée à 29."],
 };
 
 const de: ScoreMethodCopy = {
@@ -171,6 +183,10 @@ const de: ScoreMethodCopy = {
   affiliation: 'Affiliate-Beziehungen ändern nie eine Wertung: Partnerfirmen folgen denselben Regeln.',
   fullMethod: 'Vollständige Methodik',
   seeRules: 'Alle Regeln ansehen',
+  rulesSimple: "Abzug für das Kleingedruckte, vor allem für unklare oder ermessensabhängige Klauseln, die eine Auszahlung blockieren können. Klar veröffentlichte Regeln kosten sehr wenig.",
+  riskTag: "Unklare Klausel",
+  restrictionTag: "Veröffentlichte Regel",
+  simpleScale: ["Unklare oder ermessensabhängige Klauseln, die eine Auszahlung blockieren können, kosten am meisten.", "Klar veröffentlichte Regeln mit Zahlen (News, Lotgröße, Konsistenz…) kosten sehr wenig.", "Ein aktueller Trustpilot-Hinweis auf entfernte Fake-Bewertungen: −6 Punkte, einmalig.", "Eine geschlossene Firma: Score auf 29 begrenzt."],
 };
 
 const it: ScoreMethodCopy = {
@@ -215,6 +231,10 @@ const it: ScoreMethodCopy = {
   affiliation: 'L’affiliazione non cambia mai un punteggio: le società partner seguono le stesse regole.',
   fullMethod: 'Metodologia completa',
   seeRules: 'Vedi tutte le regole',
+  rulesSimple: "Punti tolti per le clausole in piccolo, soprattutto quelle vaghe o discrezionali che possono bloccare un pagamento. Le regole pubblicate chiaramente costano pochissimo.",
+  riskTag: "Clausola vaga",
+  restrictionTag: "Regola pubblicata",
+  simpleScale: ["Le clausole vaghe o discrezionali che possono bloccare un pagamento costano di più.", "Le regole pubblicate chiaramente, con cifre (news, lotti, coerenza…), costano pochissimo.", "Un avviso Trustpilot in corso su recensioni false rimosse: −6 punti, una sola volta.", "Una società chiusa: punteggio limitato a 29."],
 };
 
 const es: ScoreMethodCopy = {
@@ -259,6 +279,10 @@ const es: ScoreMethodCopy = {
   affiliation: 'La afiliación nunca cambia una puntuación: las empresas asociadas siguen las mismas reglas.',
   fullMethod: 'Metodología completa',
   seeRules: 'Ver todas las reglas',
+  rulesSimple: "Puntos restados por la letra pequeña, sobre todo por cláusulas vagas o discrecionales que pueden bloquear un pago. Las reglas publicadas con claridad cuestan muy poco.",
+  riskTag: "Cláusula vaga",
+  restrictionTag: "Regla publicada",
+  simpleScale: ["Las cláusulas vagas o discrecionales que pueden bloquear un pago son las que más restan.", "Las reglas publicadas con claridad y cifras (noticias, tamaño de lote, consistencia…) restan muy poco.", "Un aviso vigente de Trustpilot por reseñas falsas eliminadas: −6 puntos, una sola vez.", "Una empresa cerrada: puntuación limitada a 29."],
 };
 
 const pt: ScoreMethodCopy = {
@@ -303,6 +327,10 @@ const pt: ScoreMethodCopy = {
   affiliation: 'A afiliação nunca altera uma pontuação: as empresas parceiras seguem exatamente as mesmas regras.',
   fullMethod: 'Metodologia completa',
   seeRules: 'Ver todas as regras',
+  rulesSimple: "Pontos retirados pelas letras miúdas, sobretudo cláusulas vagas ou discricionárias que podem bloquear um pagamento. Regras publicadas com clareza custam muito pouco.",
+  riskTag: "Cláusula vaga",
+  restrictionTag: "Regra publicada",
+  simpleScale: ["Cláusulas vagas ou discricionárias que podem bloquear um pagamento são as que mais pesam.", "Regras publicadas com clareza e números (notícias, lote, consistência…) pesam muito pouco.", "Um aviso atual do Trustpilot sobre avaliações falsas removidas: −6 pontos, uma vez.", "Uma empresa encerrada: pontuação limitada a 29."],
 };
 
 const zh: ScoreMethodCopy = {
@@ -347,6 +375,10 @@ const zh: ScoreMethodCopy = {
   affiliation: '联盟合作从不影响评分：合作公司遵循完全相同的规则。',
   fullMethod: '完整方法论',
   seeRules: '查看全部规则',
+  rulesSimple: "因细则扣分，主要针对可能阻止出金的含糊或酌情条款。清楚公布的规则扣分很少。",
+  riskTag: "含糊条款",
+  restrictionTag: "已公布规则",
+  simpleScale: ["可能阻止出金的含糊或酌情条款扣分最多。", "清楚公布并有具体数字的规则（新闻、手数、一致性等）扣分很少。", "Trustpilot 当前关于删除虚假评论的提示：一次性扣 6 分。", "已关闭的公司：评分上限 29。"],
 };
 
 const ja: ScoreMethodCopy = {
@@ -391,6 +423,10 @@ const ja: ScoreMethodCopy = {
   affiliation: 'アフィリエイトはスコアを変えません。提携会社にも同じルールが適用されます。',
   fullMethod: '方法論の全文',
   seeRules: 'すべてのルールを見る',
+  rulesSimple: "細則による減点です。主に出金を妨げ得る曖昧・裁量的な条項が対象で、明確に公表されたルールの減点はごくわずかです。",
+  riskTag: "曖昧な条項",
+  restrictionTag: "公表ルール",
+  simpleScale: ["出金を妨げ得る曖昧・裁量的な条項が最も大きく減点されます。", "数値付きで明確に公表されたルール（指標発表、ロット、一貫性など）の減点はごくわずかです。", "削除された偽レビューに関する現在の Trustpilot 通知：1 回のみ −6 点。", "閉鎖した会社：スコア上限 29。"],
 };
 
 const hi: ScoreMethodCopy = {
@@ -435,6 +471,10 @@ const hi: ScoreMethodCopy = {
   affiliation: 'एफ़िलिएशन कभी स्कोर नहीं बदलता: साझेदार फ़र्मों पर भी वही नियम लागू होते हैं।',
   fullMethod: 'पूरी कार्यप्रणाली',
   seeRules: 'सभी नियम देखें',
+  rulesSimple: "बारीक शर्तों के लिए अंक कटे, ख़ासकर अस्पष्ट या विवेकाधीन शर्तों के लिए जो भुगतान रोक सकती हैं। साफ़ प्रकाशित नियमों का असर बहुत कम है।",
+  riskTag: "अस्पष्ट शर्त",
+  restrictionTag: "प्रकाशित नियम",
+  simpleScale: ["भुगतान रोक सकने वाली अस्पष्ट या विवेकाधीन शर्तें सबसे ज़्यादा अंक घटाती हैं।", "आँकड़ों के साथ साफ़ प्रकाशित नियम (न्यूज़, लॉट, कंसिस्टेंसी…) बहुत कम घटाते हैं।", "हटाई गई फ़र्ज़ी समीक्षाओं पर Trustpilot की मौजूदा सूचना: −6 अंक, एक बार।", "बंद फ़र्म: स्कोर अधिकतम 29।"],
 };
 
 const tr: ScoreMethodCopy = {
@@ -479,6 +519,10 @@ const tr: ScoreMethodCopy = {
   affiliation: 'Ortaklık hiçbir puanı değiştirmez: iş ortağı firmalar da aynı kurallara tabidir.',
   fullMethod: 'Tam metodoloji',
   seeRules: 'Tüm kuralları gör',
+  rulesSimple: "İnce ayrıntılar için düşülen puan; özellikle ödemeyi engelleyebilecek belirsiz veya takdire bağlı maddeler. Açıkça yayımlanmış kurallar çok az puan götürür.",
+  riskTag: "Belirsiz madde",
+  restrictionTag: "Yayımlanmış kural",
+  simpleScale: ["Ödemeyi engelleyebilecek belirsiz veya takdire bağlı maddeler en çok puan götürür.", "Rakamlarla açıkça yayımlanmış kurallar (haber, lot, tutarlılık…) çok az puan götürür.", "Silinen sahte yorumlarla ilgili güncel Trustpilot uyarısı: bir kez −6 puan.", "Kapanmış firma: puan en fazla 29."],
 };
 
 const ar: ScoreMethodCopy = {
@@ -523,6 +567,10 @@ const ar: ScoreMethodCopy = {
   affiliation: 'الشراكة التسويقية لا تغيّر أي تقييم: تخضع الشركات الشريكة للقواعد نفسها.',
   fullMethod: 'المنهجية الكاملة',
   seeRules: 'عرض كل القواعد',
+  rulesSimple: "نقاط مخصومة بسبب التفاصيل الدقيقة، خاصة البنود الغامضة أو التقديرية التي قد تمنع الدفع. القواعد المنشورة بوضوح تكلّف القليل جدًا.",
+  riskTag: "بند غامض",
+  restrictionTag: "قاعدة منشورة",
+  simpleScale: ["البنود الغامضة أو التقديرية التي قد تمنع الدفع هي الأكثر تكلفة.", "القواعد المنشورة بوضوح وبالأرقام (الأخبار، حجم العقد، الاتساق…) تكلّف القليل جدًا.", "تنبيه Trustpilot قائم بشأن حذف تقييمات مزيفة: −6 نقاط، مرة واحدة.", "شركة مغلقة: التقييم بحد أقصى 29."],
 };
 
 const ko: ScoreMethodCopy = {
@@ -567,6 +615,10 @@ const ko: ScoreMethodCopy = {
   affiliation: '제휴는 점수를 바꾸지 않습니다. 제휴 회사도 같은 규칙을 따릅니다.',
   fullMethod: '전체 방법론',
   seeRules: '모든 규정 보기',
+  rulesSimple: "세부 조항으로 깎인 점수입니다. 주로 출금을 막을 수 있는 모호하거나 재량적인 조항 때문이며, 명확히 공개된 규칙은 거의 영향이 없습니다.",
+  riskTag: "모호한 조항",
+  restrictionTag: "공개된 규칙",
+  simpleScale: ["출금을 막을 수 있는 모호하거나 재량적인 조항이 가장 크게 감점됩니다.", "수치와 함께 명확히 공개된 규칙(뉴스, 랏, 일관성 등)은 감점이 매우 작습니다.", "삭제된 가짜 리뷰에 대한 현재 Trustpilot 공지: 1회 −6점.", "폐업한 회사: 점수 상한 29."],
 };
 
 const sw: ScoreMethodCopy = {
@@ -611,6 +663,10 @@ const sw: ScoreMethodCopy = {
   affiliation: 'Ushirika haubadilishi alama kamwe: kampuni washirika hufuata sheria zilezile.',
   fullMethod: 'Mbinu kamili',
   seeRules: 'Ona sheria zote',
+  rulesSimple: "Pointi zilizokatwa kwa masharti madogo, hasa vifungu visivyo wazi au vya hiari vinavyoweza kuzuia malipo. Sheria zilizochapishwa wazi zinagharimu kidogo sana.",
+  riskTag: "Kifungu kisicho wazi",
+  restrictionTag: "Sheria iliyochapishwa",
+  simpleScale: ["Vifungu visivyo wazi au vya hiari vinavyoweza kuzuia malipo vinagharimu zaidi.", "Sheria zilizochapishwa wazi kwa takwimu (habari, ukubwa wa loti, uthabiti…) zinagharimu kidogo sana.", "Tangazo la sasa la Trustpilot kuhusu maoni bandia yaliyofutwa: pointi −6, mara moja.", "Kampuni iliyofungwa: alama isizidi 29."],
 };
 
 const ha: ScoreMethodCopy = {
@@ -655,6 +711,10 @@ const ha: ScoreMethodCopy = {
   affiliation: 'Haɗin gwiwa ba ya canza maki: kamfanonin abokan hulɗa suna bin dokoki iri ɗaya.',
   fullMethod: 'Cikakken tsari',
   seeRules: 'Duba dukkan dokoki',
+  rulesSimple: "Makin da aka cire saboda ƙananan sharuɗɗa, musamman sharuɗɗa marasa bayyananne ko na son rai da za su iya hana biyan kuɗi. Dokokin da aka wallafa a fili ba su da tsada sosai.",
+  riskTag: "Sharaɗi mara bayyananne",
+  restrictionTag: "Dokar da aka wallafa",
+  simpleScale: ["Sharuɗɗa marasa bayyananne ko na son rai da za su iya hana biyan kuɗi su ne mafi tsada.", "Dokokin da aka wallafa a fili da adadi (labarai, girman lot, daidaito…) ba su da tsada sosai.", "Sanarwar Trustpilot ta yanzu game da cire bita na ƙarya: maki −6, sau ɗaya.", "Kamfanin da aka rufe: maki ba zai wuce 29 ba."],
 };
 
 const am: ScoreMethodCopy = {
@@ -699,6 +759,10 @@ const am: ScoreMethodCopy = {
   affiliation: 'የአጋርነት ግንኙነት ውጤትን አይለውጥም፦ አጋር ኩባንያዎችም ተመሳሳይ ህጎችን ይከተላሉ።',
   fullMethod: 'ሙሉ ዘዴ',
   seeRules: 'ሁሉንም ህጎች ይመልከቱ',
+  rulesSimple: "በጥቃቅን ውሎች ምክንያት የተቀነሱ ነጥቦች፣ በተለይ ክፍያን ሊያግዱ የሚችሉ ግልጽ ያልሆኑ ወይም በፍላጎት የሚወሰኑ አንቀጾች። በግልጽ የታተሙ ህጎች በጣም ትንሽ ያስከፍላሉ።",
+  riskTag: "ግልጽ ያልሆነ አንቀጽ",
+  restrictionTag: "የታተመ ህግ",
+  simpleScale: ["ክፍያን ሊያግዱ የሚችሉ ግልጽ ያልሆኑ ወይም በፍላጎት የሚወሰኑ አንቀጾች ብዙ ያስከፍላሉ።", "በቁጥር በግልጽ የታተሙ ህጎች (ዜና፣ የሎት መጠን፣ ወጥነት…) በጣም ትንሽ ያስከፍላሉ።", "የተወገዱ የሐሰት ግምገማዎችን በተመለከተ የአሁኑ የTrustpilot ማስታወቂያ፦ −6 ነጥቦች፣ አንድ ጊዜ።", "የተዘጋ ኩባንያ፦ ውጤቱ እስከ 29።"],
 };
 
 const COPY: Record<Locale, ScoreMethodCopy> = { en, fr, de, it, es, pt, zh, ja, hi, tr, ar, ko, sw, ha, am };

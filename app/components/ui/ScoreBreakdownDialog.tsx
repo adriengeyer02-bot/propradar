@@ -21,7 +21,7 @@ export type ScoreBreakdownView = {
   steps: ScoreStep[];
   signals: { label: string; value: string; tone: string }[];
   programs: { name: string; load: number }[];
-  heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number }[];
+  heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
   methodHref: string;
   rulesHref: string;
@@ -51,7 +51,6 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
     if (!open && dialog.open) dialog.close();
   }, [open]);
 
-  const maxLoad = Math.max(30, ...view.programs.map((program) => program.load));
   const delay = (index: number) => ({ '--reveal-delay': `${80 + index * 70}ms` }) as CSSProperties;
 
   return (
@@ -105,41 +104,17 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                     <span className="psb-bar-fill" style={{ width: `${step.value}%` }} />
                     {step.delta ? <span className="psb-bar-cut" style={{ left: `${step.value}%`, width: `${step.delta}%` }} /> : null}
                   </div>
-                  <p>{step.detail}</p>
-                  {step.kind === 'rules' && step.delta > 0 ? (
-                    <div className="psb-rule-equation">
-                      <span><strong>{view.steps[0].value}</strong><small>{copy.editorial}</small></span>
-                      <b aria-hidden="true">−</b>
-                      <span><strong>{step.delta}</strong><small>{copy.rules}</small></span>
-                      <b aria-hidden="true">=</b>
-                      <span><strong>{step.value}</strong><small>{copy.afterRules}</small></span>
-                    </div>
-                  ) : null}
+                  <p>{step.kind === 'rules' && step.delta > 0 ? copy.rulesSimple : step.detail}</p>
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
-                  {step.kind === 'rules' && view.programs.length ? (
-                    <div className="psb-programs">
-                      <span className="prg-hud-label">{copy.programLoad}</span>
-                      <ul>
-                        {view.programs.map((program) => (
-                          <li key={program.name}>
-                            <span className="psb-program-name">{program.name}</span>
-                            <span className="psb-program-bar" aria-hidden="true"><i style={{ width: `${Math.min(100, (program.load / maxLoad) * 100)}%` }} /></span>
-                            <span className="psb-program-load">{program.load}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                  {step.kind === 'rules' && view.heaviest.length ? (
+                  {step.kind === 'rules' && step.delta > 0 && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
-                      {step.delta > 0 ? <p className="psb-raw-notice">{fill(copy.rawWeightNotice, { penalty: step.delta })}</p> : null}
                       <ul>
-                        {view.heaviest.map((rule, ruleIndex) => (
+                        {view.heaviest.slice(0, 3).map((rule, ruleIndex) => (
                           <li key={ruleIndex}>
-                            <span className="psb-pts psb-raw-points">{rule.points} {copy.rawPoints}</span>
+                            <span className={`psb-pts psb-kind-${rule.kind === 'risk' ? 'risk' : 'rule'}`}>{rule.kind === 'risk' ? copy.riskTag : copy.restrictionTag}</span>
                             <span>
-                              <strong>{rule.program}</strong> · {rule.severity} · {rule.clarity}
+                              <strong>{rule.program}</strong>
                               <em>{rule.text}</em>
                             </span>
                           </li>
@@ -147,7 +122,6 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                       </ul>
                     </div>
                   ) : null}
-                  {step.kind === 'rules' ? view.rulesNotes.map((note) => <p key={note} className="psb-note">{note}</p>) : null}
                 </li>
               ))}
               <li className="psb-step psb-step-final prg-hud-reveal" style={delay(view.steps.length + 2)}>
@@ -171,7 +145,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
 
             <details className="psb-scale prg-hud-reveal" style={delay(view.steps.length + 4)}>
               <summary>{copy.scaleTitle}</summary>
-              <ul>{copy.scale.map((line) => <li key={line}>{line}</li>)}</ul>
+              <ul>{copy.simpleScale.map((line) => <li key={line}>{line}</li>)}</ul>
               <p className="psb-note">{copy.affiliation}</p>
             </details>
 
