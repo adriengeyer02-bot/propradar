@@ -1802,6 +1802,12 @@
           "summary": "Trustpilot again withholds the rating with a guideline-breach and fake-review-removal notice (checked on www and uk). The 7 November rating (3.1/5) is no longer shown; that earlier lift stays in this history. The single Trustpilot −6 of the 19 November scale now applies.",
           "source": "https://www.trustpilot.com/review/blueguardian.com",
           "fields": ["trustpilotRating", "trustpilotReviewCount", "incidents"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 12 new classified restrictive rules.",
+          "source": "https://blueguardian.com/terms-and-conditions/",
+          "fields": ["restrictiveRules"]
         }
       ],
       "reviewedAt": "2026-11-19",
@@ -1841,7 +1847,7 @@
           "rule": "Official current product cards require a minimum hold time of 2 minutes for tick-scalping control; reviewed pages do not state a stop-loss or take-profit exception.",
           "impact": "An otherwise normal fast exit may require a compliance clarification. Until written confirmation, do not claim that automatically filled protective orders are exempt or forbidden.",
           "source": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules",
-          "appliesTo": ["1step", "2step", "instant-standard", "instant-starter"],
+          "appliesTo": ["1step", "2step", "instant-standard", "instant-starter", "nano"],
           "category": "min-hold-time",
           "severity": "major",
           "clarity": "clear"
@@ -1865,6 +1871,126 @@
           "category": "consistency",
           "severity": "major",
           "clarity": "clear"
+        },
+        {
+          "program": "1 Step Standard, 2 Step Standard and Instant Starter — funded Guardian Shield",
+          "appliesTo": ["1step", "2step", "instant-starter"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"If your open trades reach a combined 2% floating loss, Guardian Shield will usually close all open trades\" (1 Step and 2 Step Standard funded; 1% / $50 on Instant Starter). A first trigger cuts the profit split to 50% permanently; a second permanently breaches the account.",
+          "impact": "A combined floating loss of 2% (1% on Instant Starter) closes trades, halves the profit split for the rest of the account's life on the first occurrence and ends the account on the second.",
+          "source": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+        },
+        {
+          "program": "All CFD plans — margin use (\"all or nothing\" gambling)",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Prohibited trading strategies article (CFD): \"Using more than 80% of your margin on open trades counts as 'all or nothing' gambling\"; consequences include payout rejection, profit removal or termination. The Terms add that Blue Guardian may refuse a withdrawal or terminate if it deems the customer \"abused margin availability\".",
+          "impact": "Using more than 80% of available margin at once can lead to profits removed, a payout refused or the account closed.",
+          "source": "https://help.blueguardian.com/en/articles/18426719-prohibited-trading-strategies"
+        },
+        {
+          "program": "Funded accounts from 1 Step, 2 Step, 2 Step Nano evaluations and Instant Standard — news",
+          "appliesTo": ["1step", "2step", "nano", "instant-standard"],
+          "category": "news",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "CFD news trading rules: no opening or closing trades on affected instruments from 5 minutes before to 5 minutes after high-impact news, and FOMC events of any impact. \"Profit made in that window, or heavily driven by the news, will be removed, but your account won't be breached.\" Evaluations and Instant Starter are not restricted.",
+          "impact": "Profit from trades in the window is removed; profit judged \"heavily driven by the news\" outside it can also be removed, a criterion the article does not define.",
+          "source": "https://help.blueguardian.com/en/articles/18426788-cfd-news-trading-rules"
+        },
+        {
+          "program": "All plans — devices (CID) and account sharing",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Account rules article: \"you must not log in to your account from a device that has been used to log in to another trader's account\", including devices of friends, family, colleagues, trading communities, \"shared computers and VPS services\". A device-ID (CID) match means accounts \"are treated as linked\" and is usually reviewed at payout; violations \"can lead to an immediate hard breach, payout denial and a permanent blacklist\", including \"Removal of profits earned on the account\". \"All decisions by our Risk Team are final.\"",
+          "impact": "Logging in from a device or shared VPS that another trader has used can lead, at payout review, to profits removed, the payout denied and the account closed.",
+          "source": "https://help.blueguardian.com/en/articles/18426721-account-rules-ownership-devices-and-fair-use"
+        },
+        {
+          "program": "All CFD plans — automated and coordinated trading",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Prohibited trading strategies (CFD): \"high-frequency trading and arbitrage bots\", reverse/latency/hedge arbitrage, \"Trade emulators\", strategies exploiting the absence of slippage, hedging between separate accounts and \"Coordinated trading with other people, such as placing identical or opposing trades across different accounts\" are prohibited. Copy trading \"is only allowed between accounts you legally own.\" \"Breaking these rules can lead to profits being removed, payouts being denied or your account being closed.\"",
+          "impact": "Trades judged to be HFT, arbitrage, emulation or coordinated with another trader can cost the profits, the payout or the account.",
+          "source": "https://help.blueguardian.com/en/articles/18426719-prohibited-trading-strategies"
+        },
+        {
+          "program": "All plans — discretionary risk review",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms (Trading Styles; Risk Management): \"Blue Guardian may perform a risk review on accounts at any stage of the process\" and may terminate or refuse a withdrawal if it deems the customer has not applied appropriate risk management. Prohibited Strategies (a)-(d) include undefined \"excessive\" risk per trade, cumulative risk and risk around news (\"Boom or Bust\"). Help article 'What happens if I break a rule?': Blue Guardian \"can act on any account found to break our terms, even if the system didn't flag it at the time\", may void profits and deny payouts; decisions are \"final and binding\".",
+          "impact": "A payout can be refused after a later review on the basis of risk-taking the documents do not quantify.",
+          "source": "https://blueguardian.com/terms-and-conditions/"
+        },
+        {
+          "program": "All CFD plans — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "\"Place at least one trade within your account's inactivity period\": 30 days for all CFD accounts, counted from account creation (not from the first trade); otherwise \"the account is treated as inactive and breached.\"",
+          "impact": "A CFD account with no trade for 30 days, including a newly bought account not yet used, is breached.",
+          "source": "https://help.blueguardian.com/en/articles/18426606-account-inactivity-rule"
+        },
+        {
+          "program": "Instant Starter — single payout",
+          "appliesTo": ["instant-starter"],
+          "category": "account-ends-after-payouts",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"One payout only; crypto only, minimum $100.\" A request tops out at $250 profit ($225 at the 90% split). \"After your payout, the account is permanently closed.\"",
+          "impact": "The account ends by design after one payout of at most $250 profit; profit above that is not paid.",
+          "source": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules"
+        },
+        {
+          "program": "Instant Starter — consistency",
+          "appliesTo": ["instant-starter"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "\"Your best day must be below 15% of your total profit\", together with at least 5 trading days of 0.5% profit or more, before the single payout.",
+          "impact": "The payout request is held until no single day exceeds 15% of total profit.",
+          "source": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules"
+        },
+        {
+          "program": "Instant Standard $200K / $300K / $400K — first payouts",
+          "appliesTo": ["instant-standard"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "How payouts work: for Instant $200K/$300K/$400K, \"the first two payouts are capped at $10,000 each. After that, there is no cap.\"",
+          "impact": "On the largest Instant Standard sizes, profit above $10,000 must wait beyond the first two payouts.",
+          "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work"
+        },
+        {
+          "program": "All plans — payout review",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "How payouts work: \"All payouts are subject to compliance, account rules and risk review\"; during review \"your account is set to read-only. You can trade again once it is approved.\" Eligible requests are processed within 24 business hours. KYC is required before the first payout.",
+          "impact": "Trading is paused while a payout is reviewed, and the review can lead to refusal under the rules above.",
+          "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work"
+        },
+        {
+          "program": "All CFD plans — restricted countries",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "\"People with citizenship or residency in a restricted country can't open or keep an account for that product\" (CFD list: Afghanistan, Albania, Algeria, Cuba, Iran, Jordan, Libya, Myanmar, North Korea, Philippines, Senegal, Syria, Vietnam), also covering OFAC-sanctioned countries and countries restricted by partners. The article does not say what happens to existing accounts or profits.",
+          "impact": "Citizenship alone, not only residence, in a listed country bars keeping an account; the fate of profits on an existing account is not stated.",
+          "source": "https://help.blueguardian.com/en/articles/18426607-who-can-sign-up-age-and-restricted-countries"
         }
       ],
       "addSources": [
@@ -1883,6 +2009,10 @@
         {
           "label": "Blue Guardian withdrawn Express futures notice",
           "url": "https://help.blueguardian.com/en/articles/18426764-express-account-rules"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://blueguardian.com/terms-and-conditions/"
         }
       ],
       "setProducts": [
@@ -4015,7 +4145,7 @@
       ]
     },
     "earn2trade": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -4056,6 +4186,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 6 new classified restrictive rules.",
+          "source": "https://www.earn2trade.com/terms-and-conditions",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -4087,6 +4223,10 @@
         {
           "label": "Earn2Trade funded LiveSim/Live rules and fixed TCP 200K/400K exception",
           "url": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://www.earn2trade.com/terms-and-conditions"
         }
       ],
       "restrictiveRules": [
@@ -4109,6 +4249,67 @@
           "category": "min-trading-days",
           "severity": "minor",
           "clarity": "clear"
+        },
+        {
+          "program": "Trader Career Path / Gauntlet Mini — funded LiveSim",
+          "appliesTo": ["*"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Withdrawal policy: \"LiveSim Max Withdrawal is the total you can withdraw from a LiveSim account\" (not a per-withdrawal limit): TCP 25 $1,750, TCP 50 $3,000, TCP 100 $6,000, all Gauntlet Mini sizes $5,000; TCP 150 and above show N/A. Reaching it, the account is \"automatically moved to a Live account\".",
+          "impact": "Total withdrawals from a LiveSim account are capped per size; further payouts depend on the move to a Live account, whose effect on balance and profits the help centre does not describe.",
+          "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy"
+        },
+        {
+          "program": "Trader Career Path / Gauntlet Mini — funded withdrawals",
+          "appliesTo": ["*"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Withdrawal policy: the profit split \"is not based on accumulated profit, it is based on the single withdrawal size\": 50% below a size threshold and 80% at or above it (TCP 25 $1,500; TCP/GM 50 $2,250; TCP/GM 100 $3,000; TCP/GM 150 $4,000; TCP/GM 200 $5,000). TCP 400 uses a fixed 60/40 split.",
+          "impact": "A withdrawal below the threshold is paid at 50% instead of 80%, so smaller or more frequent withdrawals receive a lower share.",
+          "source": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy"
+        },
+        {
+          "program": "All Earn2Trade programmes — trade copiers",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Help article: \"The use of trade copiers is not allowed on any of our programs\"; a trader who passes and is found to have used them \"may be denied your accounts or withdrawals\", with no refund, and copiers stay prohibited on LiveSim/Live. The Terms and Conditions instead say a trader who passes using trade copiers receives \"only one account (LiveSim® or Live Account)\" and that copiers are not permitted on the live/LiveSim account once passed.",
+          "impact": "Using a trade copier across evaluations can lead to denied funded accounts or withdrawals per the help centre, while the terms describe a narrower consequence; the two official texts differ.",
+          "source": "https://help.earn2trade.com/en/articles/12034590-am-i-allowed-to-copy-trades-across-multiple-accounts",
+          "status": "conflicting"
+        },
+        {
+          "program": "All Earn2Trade programmes — prohibited conduct",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Help article (dated 6 May 2024) and Terms list prohibited conduct including \"Executing an unrealistic number of contracts in a single day\", trading \"in a manner that does not align with actual market practices\", ultra-fast data entry or AI \"that could potentially manipulate\", trading between connected accounts and trading on behalf of others. Stated actions \"may include\" a warning, \"Deleting the trading data from the affected day\", resetting the account or \"Permanently closing the trader's account\". Terms: E2T \"in its sole discretion, may terminate your password, account or use of the Service\" for breach.",
+          "impact": "Profits from a day judged non-compliant can be deleted or the account closed; terms such as \"unrealistic number of contracts\" are not quantified.",
+          "source": "https://help.earn2trade.com/en/articles/9286647-prohibited-conduct-in-earn2trade-evaluations-and-in-the-livesim-live-trading-environment"
+        },
+        {
+          "program": "All Earn2Trade programmes — countries and payout provider",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms: users from countries newly added to the sanctions list \"will not be able to continue or reset your evaluation\", without refund; giving false country information leads to \"an immediate ban and deletion from our services without a refund\". Withdrawal policy: \"Withdrawal methods are not optional\" and \"Rise does not support payouts for traders in certain U.S. territories\" (Iowa, Minnesota, South Carolina, Guam, Puerto Rico, U.S. Virgin Islands) or Haiti.",
+          "impact": "Residents of a newly sanctioned country lose their running evaluation without refund; residents of the listed US states/territories or Haiti depend on an alternative payout method the policy does not guarantee.",
+          "source": "https://www.earn2trade.com/terms-and-conditions"
+        },
+        {
+          "program": "All Earn2Trade programmes — dormant accounts",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms: accounts \"dormant for a period of over 120 days\" (no successful dashboard login or contact with Earn2Trade) are disabled; they can be reactivated on request.",
+          "impact": "An account left without login for over 120 days is disabled until the trader asks for reactivation.",
+          "source": "https://www.earn2trade.com/terms-and-conditions"
         }
       ],
       "setProducts": [
@@ -4614,7 +4815,7 @@
       ]
     },
     "fintokei": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "changelog": [
         {
           "date": "2026-10-27",
@@ -4666,6 +4867,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 10 new classified restrictive rules.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -4709,6 +4916,10 @@
         {
           "label": "Fintokei ProTrader vs Swing EOD equity/balance distinction",
           "url": "https://support.fintokei.com/en/articles/12058210-what-is-the-difference-between-protrader-and-protrader-swing"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
         }
       ],
       "addPayoutProofs": [
@@ -4747,6 +4958,108 @@
           "rule": "Both have 10% static total loss and 5% daily; ordinary ProTrader uses EOD equity for the next daily baseline, while Swing uses closed balance.",
           "impact": "Floating profit or loss near rollover affects the variants differently; choose the exact model before comparing loss thresholds.",
           "source": "https://support.fintokei.com/en/articles/12058210-what-is-the-difference-between-protrader-and-protrader-swing"
+        },
+        {
+          "program": "All Fintokei programmes — prohibited trading practices",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "General Terms V17 art. V.2.xvii prohibit \"gambling or unsustainable practices\", listing among others overleveraging, one-sided bets, account rolling, \"Achieving the Profit Target in one trade (or in a few similar trades on the same instrument within one day)\" and \"trading similar to randomness\". Art. V.7: \"the Company retains complete discretion to ascertain whether any activity, behaviour, or its characteristics fall\" within these categories. Under art. V.3 the consequence can be failure of the Service conditions, suspension, and \"you are not entitled to any performance reward payouts\".",
+          "impact": "Reaching a target or a large profit in one or a few trades can be classified by Fintokei as gambling, at its discretion, with loss of the related performance rewards. The criteria are only stated in the General Terms.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — termination for non-compliance",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "General Terms V17 art. XXII.7: non-compliance with listed articles of the Terms (or with regulatory/AML conditions), including on a suspicion of non-compliance, \"represents a material breach\"; Fintokei \"is entitled to terminate any and all your Contract at any time without notice\" and \"you will lose the entitlement to any Performance reward etc. already paid or to be paid entirely.\"",
+          "impact": "A breach, or a suspected breach, of the Terms can end every contract of the trader and remove entitlement to rewards both unpaid and already paid; the clause is only in the General Terms.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — IP addresses, VPN and devices",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "General Terms V17 art. V.2.vii, viii and x prohibit sharing one trading device between customers, giving account access to other persons, and using \"multiple IP addresses from many countries\"; \"Trading IP's must show from the same region as the billing address.\" The help article on IP addresses says regular use of VPNs or proxies to hide or change the IP address is treated as a potential violation; if the practice continues without an exception, accounts may be terminated, with no refunds or payouts for breached accounts.",
+          "impact": "Trading from an IP region different from the billing address, regular VPN/proxy use or a shared device can lead to termination of all accounts involved and loss of payouts. Occasional travel is allowed per the help article.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — tick scalping",
+          "appliesTo": ["*"],
+          "category": "min-hold-time",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "General Terms V17 art. V.2.i prohibits latency arbitrage, reverse arbitrage, tick scalping and HFT. Appendix 1 (Ad 1): \"placing trades that last less than 5 seconds is considered as \"tick scalping\" and is prohibited\", with a 10% volume threshold; a warning is given first, then the account is breached.",
+          "impact": "Repeated trades held under 5 seconds above the stated volume threshold lead to a warning, then an account breach.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — EAs, signals and copy trading",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "General Terms V17 art. V.2.ii-vi prohibit relying entirely on third-party signals, bots or software, EAs \"on purpose created to\" pass evaluations, copying other people's trades manually or via copy-trading systems, reverse copying between accounts, and using \"the same or similar strategy\" or trades as a mentor. Art. V.3: prohibited trading can mean \"you are not entitled to any performance reward payouts\".",
+          "impact": "Copy trading, third-party signals or mirroring a mentor's trades can remove payout entitlement; the terms do not define \"similar\".",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — individually imposed restrictions",
+          "appliesTo": ["*"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The help article \"Other restrictions that may be part of Consistency rules\" (and General Terms art. V.3.ii-iii) says Fintokei may apply, \"depending on your specific behavior\", individual restrictions to active and future accounts: a 40% consistency rule (no single day may make 40% or more of the cycle profit, otherwise the payout is not processed until more profit is made), a net-positive policy (all active accounts must be at or above starting balance at the prior end of day before any payout), a daily profit cap of 1% (soft breach, account read-only until midnight UTC), reduced leverage, lot exposure and news limits, restricted instant payouts and reduced capital allocation. They can stay for an indefinite period and apply to future challenges; review possible after 3 to 6 months.",
+          "impact": "If Fintokei applies these restrictions to a trader, payouts can be held until consistency or net-positive conditions are met across all accounts; the triggering criteria are not defined.",
+          "source": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules"
+        },
+        {
+          "program": "All Fintokei programmes — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "General Terms V17 art. VII.B.4: \"your account will be breached and closed if there is no trade made, open or closed in any 30-day period.\" Art. VI.7: a challenge not activated within 30 calendar days is suspended; renewal can be requested within 6 months, otherwise services end \"without any right to a refund of the Price\".",
+          "impact": "An account with no trade for 30 days is breached; an unactivated challenge is lost without refund after 6 months.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — KYC and information requests",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "General Terms V17 art. VIII.2: Fintokei may request trade explanations, an interview, trading statements from other firms and source code of trading algorithms or API connections; \"The Customer must respond to such inquiries within 24 hours of receiving the request.\" Art. VIII.5: failure to comply \"will be considered a material breach of the Contract\". Art. VIII.6: it is at the Company's \"sole discretion to reject entering into the Virtually funded phase Contract for any or no reason\". Art. II.2: restrictions apply by residence, nationality or registration; the banned-country list \"may be adjusted from time to time\".",
+          "impact": "Missing the 24-hour reply window or a due-diligence request is a material breach (which art. XXII.7 links to loss of rewards); funded-phase entry can be refused without a reason.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        },
+        {
+          "program": "All Fintokei programmes — pre-payout review",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "General Terms V17 art. V.5: \"before processing any Performance reward payout, the Company may review your trading activity\", with automated detection of prohibited trading (art. V.4); penalties are retracted only if the customer \"can demonstrate otherwise beyond a reasonable doubt\". The help article \"When will I receive my payout?\" says requests are \"automatically approved within seconds\" and contrasts this with manual reviews at other firms.",
+          "impact": "The terms allow a review that can hold or refuse a payout, while the help centre describes automatic approval; the two official documents differ.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+          "status": "conflicting"
+        },
+        {
+          "program": "All Fintokei programmes — changes to conditions",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "General Terms V17 art. IX.8: trading conditions and success parameters may change \"without specific notification\"; preamble 4: Fintokei may \"update, change or replace any part of these Terms by posting updates\", continued use meaning acceptance. Art. XXVI states changes are made \"after giving you one month's notice or by posting updates and changes to our website\". Art. XXVIII.8 keeps the previous StartTrader rules for StartTrader contracts bought before 21 October 2026.",
+          "impact": "Success parameters of running accounts can change without individual notice; the notice period stated in the terms is inconsistent.",
+          "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+          "status": "conflicting"
         }
       ],
       "setProducts": [
@@ -4958,7 +5271,7 @@
       ]
     },
     "ftmo": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 4.8,
         "trustpilotReviewCount": 56103,
@@ -5022,6 +5335,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 89 to 91: the earlier manual deduction (\"Editorial score 91 to 89 due payout concentration gates, not a company closure or allegation.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://ftmo.com/en/trading-objectives/",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 5 new classified restrictive rules.",
+          "source": "https://ftmo.com/en/forbidden-trading-practices/",
+          "fields": ["restrictiveRules"]
         }
       ],
       "addSources": [
@@ -5056,6 +5375,10 @@
         {
           "label": "FTMO Instant current tiers",
           "url": "https://ftmo.com/en/instant-account/"
+        },
+        {
+          "label": "Terms & conditions (partly readable, 2026-11-19)",
+          "url": "https://cdn.ftmo.com/docs/terms-and-conditions/b1d80f4da76c4bd4bcd42a5807727e34"
         }
       ],
       "setEntities": [
@@ -5128,6 +5451,57 @@
           "rule": "2-Step retains the static 10% maximum and 5% daily loss, with four evaluation trading days and different rules from the EOD trailing 1-Step.",
           "impact": "Do not transfer the 1-Step consistency and trailing figures to the legacy-style 2-Step purchase.",
           "source": "https://ftmo.com/en/comparison-table/"
+        },
+        {
+          "program": "FTMO Account (non-Swing, after evaluation) and FTMO Instant Account — news",
+          "appliesTo": ["2step", "1step", "instant"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "FTMO \"restricts order execution for 2 minutes before and 2 minutes after selected news releases\" on symbols containing the affected currency or asset. The restriction \"applies to any order execution, including your Stop Loss, Take Profit or any other pending orders.\" Swing accounts and accounts in the Challenge or Verification are exempt. \"Violating this rule may result in termination of an FTMO Account / FTMO Instant Account.\"",
+          "impact": "On a funded Standard or Instant account, a stop-loss or take-profit that fills inside the 4-minute window counts as a violation and can end the account; profits on it are not protected.",
+          "source": "https://ftmo.com/en/faq/can-i-trade-news/"
+        },
+        {
+          "program": "FTMO Account (non-Swing, after evaluation) and FTMO Instant Account — market breaks",
+          "appliesTo": ["2step", "1step", "instant"],
+          "category": "weekend-overnight",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "FTMO \"restricts holding positions through market breaks longer than 2 hours\"; all positions must be closed before such a break. Swing accounts and accounts in the FTMO Challenge or Verification are exempt. Violating it \"may result in termination of an FTMO Account / FTMO Instant Account.\"",
+          "impact": "Funded Standard and Instant traders must be flat before weekends and other breaks over two hours; a position left open can end the account.",
+          "source": "https://ftmo.com/en/faq/can-i-hold-positions-overnight-or-over-the-weekend/"
+        },
+        {
+          "program": "All FTMO accounts — gap trading",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The Forbidden Trading Practices page bans \"gap trading\", defined as opening trades when major events are scheduled, or \"two hours or less before a relevant financial market is closed for at least two hours.\" Possible consequences include \"forfeiture of any potential Rewards\" or \"termination of all agreements you have with us.\" The page does not exempt Swing or evaluation accounts, while the FAQ says Swing and evaluation accounts may hold positions through news and market breaks.",
+          "impact": "A Swing or evaluation trader relying on the FAQ exemption could still be found to have opened a position too close to a scheduled event or weekend close; which text prevails is not stated.",
+          "source": "https://ftmo.com/en/forbidden-trading-practices/",
+          "status": "conflicting"
+        },
+        {
+          "program": "All FTMO accounts — forbidden trading practices",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Trades that \"contradict how trading is actually performed in the financial markets (e.g., overleveraging, overexposure, one-sided bets, account rolling)\" are forbidden, as is opening \"substantially larger position sizes compared to your other simulated trades, on any of your accounts\" or a \"substantially smaller or larger number of positions\". None of these terms is quantified. A breach \"may result in corrective actions, including, but not limited to\" removal of trades, \"forfeiture of any potential Rewards\" or termination of all agreements.",
+          "impact": "Rewards can be forfeited for sizing or exposure judged excessive without a published threshold; the trader cannot check compliance in advance.",
+          "source": "https://ftmo.com/en/forbidden-trading-practices/"
+        },
+        {
+          "program": "All FTMO accounts — capital allocation and identical strategies",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "\"The total capital allocation across all accounts and products is limited to $400,000 per trader or strategy\" (before scaling; higher with the Premium Programme). Where trading is identical or substantially similar across accounts, including trades copied from the same third-party source, and the total exceeds the limit, FTMO \"reserves the right to suspend the affected accounts.\" The strategy FAQ warns a third-party EA can lead to being \"denied the FTMO Account\" under this rule.",
+          "impact": "A trader using a commercial EA or signal also used by unrelated FTMO clients can have accounts suspended or a funded account refused because of other people's capital, which the trader cannot see.",
+          "source": "https://ftmo.com/en/faq/how-many-accounts-can-i-have/"
         }
       ],
       "setProducts": [
@@ -6217,9 +6591,15 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 75 to 79: the earlier manual deduction (\"Documented the exact Quick Strike profit-ratio rule for sub-30-second trades, its very different evaluation and funded consequences, news 40% profit allocation, EA restriction above $50K and post-12-Oct Lite trading days. Score 79 to 75.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 10 new classified restrictive rules.",
+          "source": "https://fundednext.com/terms-of-service",
+          "fields": ["restrictiveRules"]
         }
       ],
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 4.5,
         "trustpilotReviewCount": 83306,
@@ -6250,6 +6630,10 @@
         {
           "label": "FundedNext Stellar Instant separate terms",
           "url": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://fundednext.com/terms-of-service"
         }
       ],
       "addIncidents": [
@@ -6311,6 +6695,106 @@
           "category": "news",
           "severity": "major",
           "clarity": "clear"
+        },
+        {
+          "program": "Stellar 1-Step, 2-Step and Lite — FundedNext Account risk limit",
+          "appliesTo": ["1step", "2step", "lite"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Traders must \"limit risk to a maximum of 3% at any given time in the FundedNext Account\", measured cumulatively across open positions and all entries of one trading idea, against the initial balance. First violation: warning and 100% of the violating trades' profit deducted from that cycle's reward. Second: 100% deduction and the account is permanently reclassified, \"Allowable cumulative risk is reduced to 1% at a given time.\" If deductions reach the cycle's net profit, no reward is issued.",
+          "impact": "Profitable trades that exceeded the risk ceiling are removed from the reward, and a repeat permanently lowers the allowed risk to 1%.",
+          "source": "https://help.fundednext.com/en/articles/14702245-what-are-the-risk-limits-on-a-fundednext-account"
+        },
+        {
+          "program": "All Stellar programmes — gambling behaviour",
+          "appliesTo": ["*"],
+          "category": "split-reduction",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "\"Gambling behaviors such as overleveraging, over-risking, a non-repeatable trading style\" are enforced under the Risk parameter, identified from indicators such as losses outweighing average gains, breaching several accounts in a short span or unrealistic targets. The trader must then choose On-Demand Performance Rewards with a 40% Consistency Rule or an \"Adjusted Profit Split\" (percentage not stated); \"it applies across all active FundedNext Accounts.\"",
+          "impact": "A trader classified on these indicators gets either a consistency gate or a lower split on every active account; the reduced split is not published.",
+          "source": "https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies"
+        },
+        {
+          "program": "All Stellar programmes — discretionary Performance Reward",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The Performance Reward is granted \"at its sole discretion\" (Terms of Service, definitions); approval \"does not, in itself, create an automatic entitlement\" (12.2). Before payment FundedNext may \"withhold, deny or reverse Performance Rewards\" on \"indications of fraud, abuse, manipulation or exploitation of failures\" or KYC irregularities (12.6), and amounts may be \"denied, withheld, cancelled, reversed, recovered, set off and/or clawed back\" (9.8.1). The list of prohibited practices \"is not exhaustive\" (Challenge Terms 8.21).",
+          "impact": "A reward is not owed until paid, and can be refused on 'indications' rather than a defined breach, including after it has been calculated.",
+          "source": "https://fundednext.com/terms-of-service"
+        },
+        {
+          "program": "All Stellar programmes — contractual penalty",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "For prohibited conduct, including attempts or collusion, FundedNext may impose \"a contractual penalty of up to $2,500 for each Prohibited Conduct\" (Terms of Service 9.4(i)); the Challenge Terms (9.8) allow it per trade, strategy pattern, account, device or arrangement, and (9.9) allow it to be set off against amounts otherwise payable.",
+          "impact": "Beyond losing a reward, a trader found in breach can owe money, deducted from pending rewards.",
+          "source": "https://fundednext.com/cfd-challenge-terms"
+        },
+        {
+          "program": "All Stellar programmes — non-disparagement",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Section 24 bans \"acts of defamation, discrediting, disparagement, reputational attack or negative propaganda\" on social media, forums, review platforms and in communications to third parties, including accusations \"without verifiable factual basis\". The user must remove content within 24 hours of notice; a breach is \"a material breach\" allowing FundedNext to \"withhold, deny, adjust or reverse Performance Rewards\" and impose a contractual penalty. Truthful reviews and regulator complaints are not expressly excluded.",
+          "impact": "A negative public review can lead to rewards being withheld; 'disparagement' and 'negative propaganda' are not defined.",
+          "source": "https://fundednext.com/terms-of-service"
+        },
+        {
+          "program": "All Stellar programmes — devices, IP and VPN",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "\"Sharing devices with other traders is strictly prohibited, regardless of the relationship\"; FundedNext states a \"zero-tolerance stance\" and \"will terminate the account\", with the reward or refund adjusted or denied. The Terms of Service ban \"shared devices, shared IP environments, virtual machines, VPS clusters\" shared with other users (9.1(u)) and VPNs or location spoofing (5.6), and allow device fingerprinting and IP checks (5.7).",
+          "impact": "Two family members trading from the same computer or network can lose their accounts and rewards.",
+          "source": "https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies"
+        },
+        {
+          "program": "All Stellar programmes — cross-account hedging, copy trading and hyperactivity",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "\"Hedging across multiple accounts is prohibited\" and \"can result in account termination\"; \"Copy-Trading between multiple accounts not owned by the same individual\" is prohibited. Hyperactivity is \"200 trades or 2,000 server messages\" in a day: warnings escalate and the third occurrence is a breach.",
+          "impact": "Using a shared signal service or exceeding the daily trade count can end the account.",
+          "source": "https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies"
+        },
+        {
+          "program": "All Stellar programmes — market settlement window",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "For trading during market settlement (00:00–02:00 server time), FundedNext \"reserves the right\" to review accounts, void trades or terminate the account. No threshold is stated.",
+          "impact": "Trades opened around the daily rollover can be voided at the firm's discretion.",
+          "source": "https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies"
+        },
+        {
+          "program": "Stellar 1-Step, 2-Step and Lite — allocation and country caps",
+          "appliesTo": ["1step", "2step", "lite"],
+          "category": "country-kyc",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Aggregate simulated capital is capped at $300,000 across Stellar 1-Step, 2-Step and Lite; passed challenges beyond the cap are paused before the FundedNext phase. Traders in Cambodia, Mongolia, Slovakia, Slovenia, Taiwan, Ukraine, the Czech Republic and Pakistan have a \"maximum allocation of $50,000\", and earlier buyers of $100,000 or $200,000 accounts there \"will not be eligible to reset their account.\"",
+          "impact": "Residents of the listed countries cannot be funded above $50,000 even if they bought and passed larger challenges.",
+          "source": "https://help.fundednext.com/en/articles/8027523-how-many-accounts-can-i-have-with-fundednext"
+        },
+        {
+          "program": "Stellar 1-Step, 2-Step and Lite — activation deadline",
+          "appliesTo": ["1step", "2step", "lite"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Challenge Terms 10.7: access is suspended if the customer \"does not commence trading activity within thirty (30) calendar days of purchase\".",
+          "impact": "A challenge left unused for 30 days after purchase is suspended.",
+          "source": "https://fundednext.com/cfd-challenge-terms"
         }
       ],
       "setProducts": [
@@ -7568,7 +8052,7 @@
       ]
     },
     "fxify": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 6663,
@@ -7637,6 +8121,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 6 new classified restrictive rules.",
+          "source": "https://fxify.com/wp-content/uploads/2024/12/GENERAL-TERMS-AND-CONDITIONS-FXIFY.pdf",
+          "fields": ["restrictiveRules"]
         }
       ],
       "addSources": [
@@ -7671,6 +8161,10 @@
         {
           "label": "FXIFY Instant Lite drawdown, size and ten-trading-day payout",
           "url": "https://fxify.com/newsroom/introducing-fxify-instant-funding-lite/"
+        },
+        {
+          "label": "Terms & conditions (partly readable, 2026-11-19)",
+          "url": "https://fxify.com/wp-content/uploads/2024/12/GENERAL-TERMS-AND-CONDITIONS-FXIFY.pdf"
         }
       ],
       "setEntities": [
@@ -7739,6 +8233,68 @@
           "category": "news",
           "severity": "blocking",
           "clarity": "clear"
+        },
+        {
+          "program": "All programmes — prohibited strategies and discretion",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The General Terms ban trades contrary to real market practice \"(E.G. OVERLEVERAGING, OVEREXPOSURE, ONE-SIDED BETS, ACCOUNT ROLLING, STATISTICAL ARBITRAGE)\" (5.4.1.7) and \"opening substantially larger position sizes compared to Customer's other trades\"; \"The Provider reserves the right to determine, at its own discretion, whether certain trades\" are prohibited (5.4.3), and the prohibited list may be altered \"AT ANY TIME\" (5.4.1.8). High-frequency trading is described only as trades \"in fractions of a second\". The strategies FAQ states: \"Engaging in prohibited strategies will result in account termination and voided profits.\"",
+          "impact": "Profits can be voided for sizing or strategies FXIFY judges prohibited, without published thresholds.",
+          "source": "https://fxify.com/wp-content/uploads/2024/12/GENERAL-TERMS-AND-CONDITIONS-FXIFY.pdf"
+        },
+        {
+          "program": "All programmes — shared EAs (herd trading)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "Herd trading and collusion are prohibited: \"This includes using the same EA from the same company as it would lead to coordinated trades.\" Reverse and group hedging (\"offsetting positions across accounts\") is also prohibited. Consequence: \"account termination and voided profits.\"",
+          "impact": "A trader running a commercial EA that other FXIFY clients also run can have profits voided, regardless of independent intent.",
+          "source": "https://fxify.com/faqs/all-faqs/what-strategies-can-i-use/"
+        },
+        {
+          "program": "Instant Funding Lite — automation",
+          "appliesTo": ["instant-lite"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"Prohibited strategies are the same as FXIFY challenges\" with one addition: \"no EA's, bots or copytraders are allow\" [sic].",
+          "impact": "Any automated or copied trading on Instant Funding Lite falls under prohibited strategies (termination and voided profits per the strategies FAQ).",
+          "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-faq/instant-funding-lite-what-strategies-are-allowed-or-prohibited/"
+        },
+        {
+          "program": "All programmes — high-leverage news trading",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The strategies FAQ lists \"High Leverage News Trading: Placing large, leveraged positions around major news events, akin to gambling\" as prohibited (termination and voided profits). FXIFY's prohibited-strategies article says high leverage news trading is allowed \"within limits\". Neither page defines the size or leverage that crosses the line.",
+          "impact": "A trader cannot tell from official pages how large a news-time position may be before its profits are voided.",
+          "source": "https://fxify.com/faqs/all-faqs/what-strategies-can-i-use/",
+          "status": "conflicting"
+        },
+        {
+          "program": "All programmes — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "\"If you do not place a trade at least once every 60 days on your account ... we will consider you inactive and your account will be breached.\" The Instant Funding Lite FAQ states the same 60-calendar-day rule.",
+          "impact": "An account with no trade for 60 days is breached.",
+          "source": "https://fxify.com/faqs/all-faqs/is-there-a-breach-for-inactivity/"
+        },
+        {
+          "program": "Funded accounts — withdrawal frequency in the trader agreement",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The User Agreement (section 5, page modified 25 March 2025) says withdrawals \"can be requested no more than once every 30 days\", while FXIFY's current programme material describes shorter cycles (for example ten-day payouts on 2-Phase Pro). The agreement does not say which programmes the 30-day limit covers.",
+          "impact": "The signed agreement allows a longer payout interval than the one advertised; which applies is not stated.",
+          "source": "https://fxify.com/agreement/",
+          "status": "conflicting"
         }
       ],
       "setProducts": [
@@ -8216,6 +8772,76 @@
           "category": "payout-conditions",
           "severity": "minor",
           "clarity": "clear"
+        },
+        {
+          "program": "All RZR Funded accounts — short-hold 'scalping' profits",
+          "appliesTo": ["*"],
+          "category": "min-hold-time",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms clause 7: \"Scalping shall be deemed to occur where the aggregate net profits derived from trades held for less than 3 minutes\" make up \"thirty percent (30%) or more of the total net profits\" in the assessment period (not defined). \"Isolated instances\" below that threshold are not scalping. The Company may \"adjust, reduce, or remove profits attributable to such trades\", restrict, suspend or terminate the account; its determination is \"final and binding\".",
+          "impact": "If trades under three minutes produce 30% or more of net profit, those profits can be removed and the account ended.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "program": "All RZR Funded accounts — prohibited trading enforcement",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Clause 7 lists Prohibited Trading, including \"all or nothing trading\": \"Trading behavior that involves risking the entire daily loss limit or maximum drawdown\" or a \"substantial portion\" of either on one or concurrent trades. Enforcement may include \"withholding, cancellation, reduction, or recovery of simulated profits, revenue share, or payouts\" and \"Forfeiture of fees in cases of material breach\"; \"The Company may take proportionate enforcement action without prior notice, explanation, or evidence.\"",
+          "impact": "Payouts can be withheld or clawed back on an undefined 'substantial portion' test, and the terms allow action without giving the trader evidence.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "program": "All RZR Funded accounts — linked IP, device or VPN",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Clause 7 prohibits operating or controlling multiple accounts, including \"through the use of shared, masked, or linked device identifiers (including CID/Device ID), IP addresses, VPNs, proxies\" or \"virtual machines\". Enforcement can extend to \"existing, future, or technically connected accounts via IP address, device ID, CID, VPN, proxy\".",
+          "impact": "Accounts that share an IP, device or VPN exit with another account can be treated as one owner and sanctioned together, including withholding payouts.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "program": "All RZR Funded accounts — KYC and payout destination",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Clause 6: KYC may be requested at any stage and is required before any payout; \"Payouts will only be made to a bank account or wallet held in the Customer's own name.\" If the customer fails or refuses KYC, or information is false or inconsistent, \"the Company may reject any payout, forfeit simulated profits and close the Customer's accounts.\" Clause 3.2: services are \"not available to residents of certain jurisdictions, including but not limited to the United Kingdom\"; the rewards page says Instant programmes are not available to residents of the UK, Mauritius, Hong Kong and Singapore.",
+          "impact": "Profits are forfeited if KYC fails or details are judged inconsistent, and payouts cannot go to a third-party account.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "program": "All RZR Funded accounts — Risk Management Group (retroactive)",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "Clause 8: the Company may place a customer in a Risk Management Group (RMG) for activity that \"appears to constitute Prohibited Trading\". RMG imposes leverage caps on all existing and future accounts (FX 1:30, indices 1:5, commodities 1:5, metals 1:3, crypto 1:1) and possibly \"reduced trade size, limited asset access, or temporary freezes\", and lets the Company reclassify trades and adjust results. \"RMG placement may apply retroactively to trading activity that occurred before placement is enforced.\" Removal follows \"Successfully receiving three (3) payouts on a single RZR Funded account\" or the Company's own decision.",
+          "impact": "A trader flagged on an 'appears to' basis can see past trades reclassified and every account restricted until three further payouts are made.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "program": "All RZR Funded accounts — risk controls changed without notice",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "Clause 3.6: \"The Company may, at any time and without prior notice, apply, change or remove risk controls\" on any account, including leverage, margin, position size, same-direction exposure, drawdown parameters and allocated capital, independent of any rule breach.",
+          "impact": "Position-size and drawdown limits on a running account can change at any time without notice.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "program": "Challenge and funded accounts — same strategy across accounts above $400,000",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Clause 7 prohibits using the same or substantially similar strategy across multiple accounts \"where the aggregate allocated or notional capital of such accounts exceeds USD 400,000\", counting accounts \"directly or indirectly controlled by the Customer\" or coordinated with others. Hedging is allowed within one account but \"prohibited across separate accounts\". General clause 7 enforcement applies.",
+          "impact": "Copying one's own strategy over several accounts totalling more than $400,000 can lead to payouts being withheld and accounts closed.",
+          "source": "https://rzrfunded.com/terms-conditions/"
         }
       ],
       "set": {
@@ -8270,9 +8896,15 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 7 new classified restrictive rules.",
+          "source": "https://rzrfunded.com/terms-conditions/",
+          "fields": ["restrictiveRules"]
         }
       ],
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "addSources": [
         {
           "label": "Press release: Hantec Trader becomes RZR Funded (2026-10-19)",
@@ -8297,6 +8929,10 @@
         {
           "label": "RZR current Trustpilot profile",
           "url": "https://www.trustpilot.com/review/rzrfunded.com"
+        },
+        {
+          "label": "Terms & conditions (partly readable, 2026-11-19)",
+          "url": "https://rzrfunded.com/terms-conditions/"
         }
       ],
       "setProducts": [
@@ -8392,7 +9028,7 @@
       ]
     },
     "hola-prime": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "2-Step Pro / Prime and 1-Step Prime — funded withdrawal choice",
@@ -8423,6 +9059,96 @@
           "category": "news",
           "severity": "blocking",
           "clarity": "clear"
+        },
+        {
+          "program": "All Hola Prime accounts — gambling, speculative and inconsistent trading",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Section 22 of the terms prohibits \"abusive or exploitative trading strategies such as, but not limited to, gambling\", including practices that \"resemble gambling rather than a structured and repeatable trading strategy\" or are \"materially dependent on concentrated, excessive, or non-repeatable trading outcomes\". Section 22.3.5 also prohibits significant deviations from a trader's proven strategy (switching between EA and manual trading, changing asset classes, margin use or risk exposure), which \"may result in an account review, suspension or denial of Performance Rewards\". Where Risk Management finds prohibited trading, or conduct that \"in our reasonable assessment\" is designed to circumvent the policies, it \"will result in forfeiture of any accrued trader payout, and fees paid to the Company\".",
+          "impact": "Accrued payouts and fees can be forfeited on the firm's own assessment of what counts as gambling-like or inconsistent trading; the terms give no objective threshold.",
+          "source": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "program": "All Hola Prime accounts — VPN, restricted countries and shared devices",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The prohibited-practices page bans \"Using a VPN to circumvent geographical restrictions or disguise access from a restricted country or region\" and \"Trading from another trader's device, sharing laptops, desktops, tablets, or mobile phones with other traders\"; restricted-country access or VPN routing through a restricted country \"will lead to account termination\". Terms section 20 adds that \"the use of VPNs or VPS to bypass restrictions or the rules are strictly prohibited\".",
+          "impact": "A login routed through a restricted region or a device shared with another participant can end the account, whatever its profit.",
+          "source": "https://holaprime.com/trading-rules-list/trading-rules-prohibited-trading-practices/"
+        },
+        {
+          "program": "All Hola Prime accounts — EAs, copy trading and HFT",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "EAs \"are permitted only on MT5 accounts where the EA usage add on has been purchased\"; prohibited EA activity \"may result in account cancellation and permanent ban\" with fees non-refundable. Copy trading is allowed only between accounts owned by the same person, limited to \"a maximum of one Master Account and one Copier Account\" on funded accounts, and copying from other prop firms is \"strictly prohibited\" (accounts purchased on or after 15 September 2026); breaches mean \"all associated accounts will be immediately terminated\". Tick scalping/HFT with \"sophisticated expert advisers\" is not allowed.",
+          "impact": "Automated or copied trading outside these limits can end every linked account; EA use requires a paid add-on.",
+          "source": "https://holaprime.com/trading-rules-list/trading-rules-prohibited-trading-practices/"
+        },
+        {
+          "program": "2-Step Pro — maximum position size",
+          "appliesTo": ["pro-prime-2step"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 21.9 sets a Maximum Position Size, \"the highest total number of lots you are permitted to hold open at any moment\". For 2-Step Pro Forex a breach closes all open trades and disables the account; \"Profits from trades that exceeded the specified limits will be deducted from the account\", and a second breach brings \"a reduction of the remaining profit split to 30%\" and termination.",
+          "impact": "Profit from oversized positions is removed, and a repeat breach cuts the split to 30% and ends the account. The section names 2-Step Pro only; the audited key groups Pro and Prime.",
+          "source": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "program": "1-Step Prime, 2-Step Prime / Pro and Direct (Forex) — risk per trade idea",
+          "appliesTo": ["pro-prime-2step", "prime-1step", "direct"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms section 21.11: \"The Risk Limit means that the total potential loss across all positions based on the same trading idea must not exceed X%\", 2% on these Forex accounts. Stop-loss orders are mandatory; a trade closed without one is treated as carrying infinite risk.",
+          "impact": "Positions sized above 2% of risk per idea, or without a stop loss, breach the rule regardless of outcome.",
+          "source": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "program": "1-Step / 2-Step Fly and Direct Fly — funded order size",
+          "appliesTo": ["fly", "direct-fly"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "A note in terms section 21.9 caps orders at 5 lots per order on 1-Step Fly, 2-Step Fly and Direct Fly simulated funded accounts. The consequence of exceeding it is not stated separately.",
+          "impact": "Funded Fly and Direct Fly traders cannot scale a single order above 5 lots.",
+          "source": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "program": "All Hola Prime accounts — KYC interview before first payout",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 8.2.3: \"Customers are required to complete a mandatory KYC verification interview before their first payout is processed\", and a follow-up interview may be requested \"at any stage\". Section 8.6: \"Failure to pass the KYC verification process will result in the rejection of the Customer's account application\" with no refund of fees; failing AML screening counts as failing KYC.",
+          "impact": "The first payout depends on passing an interview; a failed KYC or AML check ends the account without a fee refund.",
+          "source": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "program": "Forex simulated funded and Direct accounts — country allocation cap",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms section 21.12: \"Maximum capital allocation will be restricted to $90K for below countries\": Nigeria, Malaysia, Indonesia, Cambodia, Israel, Thailand, Botswana, Mongolia, Kazakhstan, Jamaica, Mozambique (the general Forex cap is $400K).",
+          "impact": "Residents of these 11 countries can hold far less funded capital than the advertised maximum.",
+          "source": "https://holaprime.com/terms-conditions/"
+        },
+        {
+          "program": "All Forex accounts — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms section 21.5: \"Accounts inactive for 30 consecutive calendar days will be permanently suspended.\" Only an opened trade counts; modifying SL/TP or placing pending orders does not.",
+          "impact": "An account left without a new trade for 30 days is suspended permanently.",
+          "source": "https://holaprime.com/terms-conditions/"
         }
       ],
       "changelog": [
@@ -8472,6 +9198,12 @@
           "date": "2026-11-18",
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://www.holaprime.com/rulebook/schedules/",
+          "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 9 new classified restrictive rules.",
+          "source": "https://holaprime.com/terms-conditions/",
           "fields": ["restrictiveRules"]
         }
       ],
@@ -8539,6 +9271,10 @@
         {
           "label": "Financial press on the Deloitte review's limited scope",
           "url": "https://www.financemagnates.com/forex/analysis/hola-prime-brings-in-deloitte-to-audit-payouts-as-trust-gap-widens-across-prop-firms/"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://holaprime.com/terms-conditions/"
         }
       ],
       "auditedPrograms": [
@@ -9144,7 +9880,7 @@
       ]
     },
     "lark-funding": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "restrictiveRules": [
         {
           "program": "1-Step / 2-Step / 3-Step — payouts",
@@ -9175,6 +9911,87 @@
           "category": "lot-risk-limit",
           "severity": "blocking",
           "clarity": "clear"
+        },
+        {
+          "program": "All Lark accounts — $10,000 daily / per-trade gain limit",
+          "appliesTo": ["*"],
+          "category": "payout-cap",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The prohibited-strategies article states: \"The daily and/or per-trade gain limit is set to $10,000.\" On challenge accounts \"A single violation requires a restart from Phase 1.\" On simulated funded accounts \"Trades exceeding the $10,000 limit will be excluded from account\", and three violations breach the account with no payout. The homepage says the opposite: \"Once funded, there is no cap on simulated gains\".",
+          "impact": "Profit above $10,000 in a day or on one trade is removed on funded accounts and can end the account after three times, despite the homepage's 'no cap' statement.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies",
+          "status": "conflicting"
+        },
+        {
+          "program": "All Lark accounts — all-or-nothing and gambling-style trading",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "\"Lark Funding strictly prohibits all-or-nothing trading and gambling-style behavior.\" For repeated offences \"the Company reserves the right to immediately close your account\", which may include forfeiting fees, at the Company's sole discretion. The article does not define the behaviour beyond the $10,000 gain limit.",
+          "impact": "An account can be closed on the firm's own judgment of 'gambling-style' trading.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies"
+        },
+        {
+          "program": "All Lark accounts — HFT and copy trading",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "\"Lark Funding does not allow HFT\"; a trader using it breaches the Terms of Use and \"will lose their trading privileges\". \"Copy trading is only permitted if the trader owns and controls all accounts involved\"; signal services, group trading and account-passing services are not allowed. Opposite trades across accounts or prop firms (group hedging) are prohibited.",
+          "impact": "High-frequency or third-party copied trading ends trading privileges.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies"
+        },
+        {
+          "program": "All Lark accounts — VPN/VPS during identity checks",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "VPNs and VPSs are allowed but \"strongly discourage[d]\"; if \"suspicious activity is found on your account\" their use \"will be a significant factor\" in deciding a terms violation. Using a VPN or VPS during KYC/AML verification is prohibited, and \"your account may not be funded or your funded account may be disabled or breached.\"",
+          "impact": "Completing identity verification through a VPN can stop funding or breach a funded account.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/7174234-can-i-use-a-vpn"
+        },
+        {
+          "program": "All Lark accounts — inactivity",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "\"We require traders to place at least one trade every 30 days to keep their accounts active.\" An account breached for 30 days of inactivity can ask support to lift the breach; reinstatement is not guaranteed after a long period.",
+          "impact": "An account left untraded for 30 days is breached.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/7174035-is-there-a-breach-for-inactivity"
+        },
+        {
+          "program": "Single-share CFDs — earnings, dividends and corporate actions",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Holding a single-share equity CFD position through an earnings release, dividend distribution or other corporate action is prohibited; positions must be closed by 3:50 pm ET on the event day (or the previous trading day for pre-market events). A violation is \"an immediate, hard breach of your account\" and gains or losses on the position are removed from all gain calculations.",
+          "impact": "One share CFD held through earnings ends the account, separately from the general 'no news restrictions' statement.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies"
+        },
+        {
+          "program": "Instant Master Account — trailing drawdown on the funded account",
+          "appliesTo": ["instant"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "\"8% Max Trailing Drawdown Limit\": \"The breach level trails the highest closed balance recorded on the account\" and locks at the initial balance once the account reaches an 8% gain or when the first payout is requested; it \"does not reset upon requesting a payout.\"",
+          "impact": "Profit on the Instant account raises the breach floor until the 8% lock, so withdrawals are made against a moving limit.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/10336809-instant-master-account-details"
+        },
+        {
+          "program": "All Lark accounts — payout processor availability",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Restricted: Iran, North Korea, Myanmar, the Russian Federation, Belarus and Quebec. \"We currently process payouts through Riseworks, so please ensure that it is available in your country and region.\" The article states no consequence if Riseworks is unavailable.",
+          "impact": "A trader in a country Riseworks does not serve has no stated alternative payout route.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8028220-what-countries-are-we-available-in"
         }
       ],
       "setProducts": [
@@ -9252,6 +10069,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 8 new classified restrictive rules.",
+          "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -9275,6 +10098,10 @@
         {
           "label": "Lark Funding excluded jurisdictions (official, 2026-11-17)",
           "url": "https://helpdesk.larkfunding.com/en/articles/8028220-what-countries-are-we-available-in"
+        },
+        {
+          "label": "Terms & conditions (partly readable, 2026-11-19)",
+          "url": "https://larkfunding.com/terms-of-use"
         }
       ],
       "auditedPrograms": [
@@ -9313,17 +10140,47 @@
           "clarity": "clear"
         },
         {
-          "program": "Leeloo — reward requests",
-          "rule": "Terms reserve manual checks and account-dependent payout limits; approval is not automatic on reaching the profit objective.",
-          "impact": "The payout window and available amount must be read in the specific Performance Account's terms.",
-          "source": "https://www.leelootrading.com/terms-of-service",
+          "program": "Performance Account — lifetime payout ceiling",
+          "appliesTo": ["performance"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The homepage product card for the Performance Account says \"Earn back what you invest, plus 5%. Lifetime ceiling. Predictable.\" and \"Earn back up to your paid-in, plus 5%.\" Terms section 8 adds that \"Leeloo is not obligated to pay the Trader more than the maximum payout amount\".",
+          "impact": "Total payouts on a Performance Account are capped at the fees paid plus 5%, whatever profit the account shows; it works as a fee refund with a small premium rather than an open profit share.",
+          "source": "https://www.leelootrading.com/"
+        },
+        {
+          "program": "All Leeloo accounts — reckless trading, gambling and non-replicable behaviour",
           "appliesTo": ["*"],
           "category": "discretionary-clause",
-          "severity": "major",
-          "clarity": "vague"
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms section 8: \"Trading activity is reviewed to identify behaviors that would not translate to real market conditions\", \"including but not limited to toxic flow, latency arbitrage, and price feed exploitation.\" \"Reckless trading, gambling behavior are prohibited and your accounts will be closed\". Neither term is defined. The footer states: \"Reward payouts, if offered, are discretionary and subject to program eligibility, compliance requirements\".",
+          "impact": "Accounts can be closed on Leeloo's own review of whether trading looks reckless or gambling-like, with no objective threshold in the terms.",
+          "source": "https://www.leelootrading.com/terms-conditions"
+        },
+        {
+          "program": "All Leeloo accounts — copy trading and coordinated trading",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 8: \"Copying trades across users is expressly prohibited and your accounts will be closed.\" \"Coordinated trading, account farming, signal mirroring is prohibited\".",
+          "impact": "Following a signal service or mirroring another trader closes the accounts involved.",
+          "source": "https://www.leelootrading.com/terms-conditions"
+        },
+        {
+          "program": "Performance Account — verification and approval",
+          "appliesTo": ["performance"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms section 6: \"Leeloo may require verification and approval for certain types of accounts\" (name, address and \"a form of valid government-issued identification\"). \"Users for these Accounts may be rejected at any time, for any reason, at Leeloo's sole discretion.\" No list of restricted countries is given; section 3 says some countries may forbid participation.",
+          "impact": "A trader who qualifies can still be refused the account at any time without a stated reason; fees are non-refundable under section 8.",
+          "source": "https://www.leelootrading.com/terms-conditions"
         }
       ],
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 3.1,
         "trustpilotReviewCount": 608,
@@ -9357,6 +10214,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 65 to 70: the earlier manual deduction (\"Reassessed score from 70 to 65 for discretionary reward eligibility, not a confirmed closure or misconduct finding.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://www.leelootrading.com/support",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 4 new classified restrictive rules, 1 outdated rule(s) removed.",
+          "source": "https://www.leelootrading.com/terms-conditions",
+          "fields": ["restrictiveRules"]
         }
       ],
       "addSources": [
@@ -9367,6 +10230,10 @@
         {
           "label": "Leeloo terms (31 March 2026)",
           "url": "https://www.leelootrading.com/terms-of-service"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://www.leelootrading.com/terms-conditions"
         }
       ],
       "auditedPrograms": [
@@ -9510,18 +10377,67 @@
           "clarity": "clear"
         },
         {
-          "program": "Lux — Career Plan trading-rules page (current application unverified)",
-          "rule": "Another official page still describes monthly withdrawals, a 75% split, and a relative/hybrid drawdown instead of the 80% on-demand terms elsewhere.",
-          "impact": "The two published rule sets may concern different or older programmes. The applicable signed programme agreement needs confirmation.",
-          "source": "https://luxtradingfirm.com/trading-rules/",
-          "status": "conflicting",
+          "program": "All Lux accounts — termination in the firm's 'sole judgment'",
           "appliesTo": ["*"],
-          "category": "payout-conditions",
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms section 9.1: \"Lux Trading Firm may, in its own sole judgment, terminate the account of a client\", including for \"performing acts Lux considers cheating\" (9.1.4), \"Gross negligence or Malicious Intent\" (9.1.5), \"Making false accusations, posting fake reviews or comments (reviews or comments that do not reflect a genuine and/or factual experience with Lux services)\" (9.1.6) and behaviour that is \"abusive or disrespectful\" to Lux or its staff (9.1.7). Section 15.5 adds that after \"three documented breaches\" of the personalised risk-management rules Lux may expel the trader and close the account.",
+          "impact": "An account and its profits can be ended on grounds the firm itself assesses, including what it considers cheating or a non-factual public review.",
+          "source": "https://luxtradingfirm.com/t_c-2/"
+        },
+        {
+          "program": "1-Step Evaluation — single-position profit cap",
+          "appliesTo": ["1step"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"Each individual position is subject to a maximum realized profit of 5% of the profit target in each stage.\" Splitting entries or resetting stops to get around it is \"considered cheating\", leading to \"termination of account and a possible ban from the program\". The same page sets maximum risk at \"5% of RRC\" per trade and requires a stop loss on every trade.",
+          "impact": "A single winning position cannot contribute more than 5% of the stage target, and working around the cap ends the account.",
+          "source": "https://luxtradingfirm.com/rules-of-engagement-3/"
+        },
+        {
+          "program": "1-Step Evaluation — news bracketing and stop-loss changes around news",
+          "appliesTo": ["1step"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"No Stop-Loss adjustments are allowed within 30 seconds before or after a news event.\" \"Traders are not permitted to engage in news bracketing\"; doing so means \"immediate account termination and forfeiture of any accumulated profits.\"",
+          "impact": "Straddling a news release ends the account and removes accumulated profit.",
+          "source": "https://luxtradingfirm.com/rules-of-engagement-3/"
+        },
+        {
+          "program": "1-Step Evaluation — HFT and arbitrage",
+          "appliesTo": ["1step"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "\"High-Frequency Trading (HFT) is strictly prohibited\", including \"generating more than 2,500 server messages within 24 hours\", and \"will result in the termination of your account\". Arbitrage trading leads to \"immediate account termination and forfeiture of any accumulated profits.\" Copy trading and well-behaved EAs are otherwise allowed.",
+          "impact": "An EA or strategy that sends many orders can cross the 2,500-message threshold and end the account.",
+          "source": "https://luxtradingfirm.com/rules-of-engagement-3/"
+        },
+        {
+          "program": "All Lux accounts — sanctioned-country payment methods",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms section 11.1: residents of a sanctioned country \"will be refused access to international wire transactions, Paypal, or Wise service. Any use or attempt of use of these services will result in immediate access termination\", with \"no right to a refund, reset, or new account\". Proof of residency is required at checkout; \"Crypto transaction are exempted from this rule.\" The sanctioned-country list is referenced but not reproduced in the terms.",
+          "impact": "A trader from a listed country who tries a bank, PayPal or Wise payout can lose access entirely; only crypto is available to them.",
+          "source": "https://luxtradingfirm.com/t_c-2/"
+        },
+        {
+          "program": "All Lux accounts — amendments without notice",
+          "appliesTo": ["*"],
+          "category": "other",
           "severity": "major",
-          "clarity": "vague"
+          "clarity": "vague",
+          "rule": "Terms section 7.1: Lux \"may amend these Terms and Conditions and any applicable prices or fees at any time. All changes or additions have an immediate effect, without notification being required.\" Under 7.2 a client who objects may terminate, and termination \"will never result in any repayment obligation\". Section 9.4 keeps accounts activated before 22 September 2025 under the trading rules then in force; no equivalent protection is stated for later terms changes.",
+          "impact": "Contract terms can change for an account already bought without notice; the only remedy is to leave without a refund.",
+          "source": "https://luxtradingfirm.com/t_c-2/"
         }
       ],
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 627,
@@ -9575,6 +10491,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://luxtradingfirm.com/rules-of-engagement-3/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 6 new classified restrictive rules, 1 outdated rule(s) removed.",
+          "source": "https://luxtradingfirm.com/t_c-2/",
+          "fields": ["restrictiveRules"]
         }
       ],
       "setProducts": [
@@ -9615,6 +10537,10 @@
         {
           "label": "Lux Trading Firm Ltd UK corporate register",
           "url": "https://find-and-update.company-information.service.gov.uk/company/13160991"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://luxtradingfirm.com/t_c-2/"
         }
       ],
       "auditedPrograms": [
@@ -12695,7 +13621,7 @@
       ]
     },
     "the5ers": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 4.7,
         "trustpilotReviewCount": 41676,
@@ -12748,6 +13674,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 83 to 85: the earlier manual deduction (\"Score 85 to 83 for programme complexity and payout gates.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 9 new classified restrictive rules.",
+          "source": "https://the5ers.com/terms-and-conditions/",
+          "fields": ["restrictiveRules"]
         }
       ],
       "addSources": [
@@ -12766,6 +13698,10 @@
         {
           "label": "The5ers high-stakes payout/news restrictions",
           "url": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://the5ers.com/terms-and-conditions/"
         }
       ],
       "addPayoutProofs": [
@@ -12823,6 +13759,96 @@
           "impact": "Do not assume the floor is static or trailing based on one marketing explanation; obtain the purchased programme contract and live dashboard threshold.",
           "source": "https://the5ers.com/faqs/what-is-drawdown-and-how-is-it-calculated/",
           "status": "conflicting"
+        },
+        {
+          "program": "All programmes — prohibited trading practices",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The terms ban \"other conduct which in the sole discretion of the Company, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy\" (Trading Rule 19). The prohibited-practices FAQ adds unquantified items such as \"one-sided bets\", \"bulk trading, is when multiple trades are open simultaneously\", position sizes \"substantially larger or smaller than your typical trading activity\", \"disproportionate concentrated exposure\" and \"speculative position-taking that resembles gambling\". On a breach the FAQ states: \"Any refund or profit will not be processed, and you will be permanently banned.\" (prohibited-trading-practices FAQ)",
+          "impact": "Earned profit can be withheld and the trader banned on criteria with no published threshold, assessed at the firm's sole discretion; the rules apply to evaluation and funded accounts.",
+          "source": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "program": "All programmes — verification interview",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Section 3.2: if the Company requests an interview, scheduling and conducting it \"must take place within five (5) business days from the date of the request.\" Failure \"will result in the denial of any pending payouts, immediate cancellation of all associated accounts, and termination of the collaboration.\" The verification process may be conducted \"at any time on our sole discretion.\"",
+          "impact": "A trader who is unavailable for five business days after an interview request (travel, illness) loses pending payouts and every linked account.",
+          "source": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "program": "All programmes — public statements",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Section 10.1 (item 11) allows termination for \"any defamatory, disparaging, or harmful statements about the Company, its employees, or the Services on any public platform, including but not limited to social media networks, public groups, forums, or review sites\", including publishing support tickets or chats. It is \"a fundamental breach\": accounts terminated \"without any refund of fees paid\" and \"any accrued profits or Reward Balance shall be immediately forfeited.\"",
+          "impact": "A negative public review or a posted support exchange can cost the trader accrued profits; 'disparaging' and 'harmful' are not defined.",
+          "source": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "program": "All funded accounts — large payouts",
+          "appliesTo": ["*"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "Section 7.6: the Company \"reserves the right, at its sole and absolute discretion, to establish a maximum payout amount permitted per single transaction\". Above that unpublished Payout Threshold, \"the approved payout amount shall be disbursed in consecutive weekly installments of $10,000\" until paid in full. The threshold is not stated and may change without notice.",
+          "impact": "A large approved payout can be spread over several weeks at $10,000 per week; the trader cannot know in advance from what amount this applies.",
+          "source": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "program": "All programmes — VPN and geographic restrictions",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Section 1.9: \"circumvention of geographical restrictions (including through the use of VPN or any other technical means)\" is \"a fundamental breach of the Terms.\" Section 1.10: if this or residence in a forbidden/sanctioned territory is discovered \"at any stage (including during or after the KYC process)\", the account can be closed immediately. Section 1.11: no refund of fees and \"Any accrued balance of profits or rewards shall be canceled and forfeited.\"",
+          "impact": "Using a VPN that masks location, or later being found resident in a restricted country, can void all accrued profits even after KYC.",
+          "source": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "program": "All programmes — copy trading and third-party EAs",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Prohibited: \"Trade coordination or copy trading with other traders or accounts\", an \"EA from a third party, where other traders have the same trades open\", \"Using an EA from a provider where the trader does not own the source code\", and EAs generating \"an excessive number of server requests\". Consequence: \"Any refund or profit will not be processed, and you will be permanently banned.\"",
+          "impact": "A commercial EA bought without its source code is enough to lose profits, even if no other trader uses it.",
+          "source": "https://www.the5ers.com/faqs/prohibited-trading-practices/"
+        },
+        {
+          "program": "All programmes — short-duration trading",
+          "appliesTo": ["*"],
+          "category": "min-hold-time",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Prohibited: \"High-frequency trading, in which the majority of trade durations span is measured within a few seconds or less\" and \"Tick Scalping\". No minimum duration in seconds is published. Consequence: profit not processed and permanent ban.",
+          "impact": "Scalpers cannot tell how short is too short; the threshold ('a few seconds') is not defined.",
+          "source": "https://www.the5ers.com/faqs/prohibited-trading-practices/"
+        },
+        {
+          "program": "All programmes — changes to rules",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "\"We may modify these Terms from time to time in Our sole discretion\" and \"You shall be bound by such modifications effective immediately upon posting on the Website.\" Trading Rules and Prohibited Conduct \"are subject to change at any time and from time to time, with or without notice.\" Only fees and programme parameters carry a carve-out: \"The change does not affect the Services purchased before the change is notified.\"",
+          "impact": "Trading rules on an account already bought can change without notice; only fees and parameters are protected for existing purchases.",
+          "source": "https://the5ers.com/terms-and-conditions/"
+        },
+        {
+          "program": "The5ers High Stakes — inactivity",
+          "appliesTo": ["high-stakes"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Evaluation accounts expire after 30 consecutive days of inactivity and funded accounts after 60 consecutive days.",
+          "impact": "A funded High Stakes trader who pauses for two months loses the account.",
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
         }
       ],
       "setProducts": [
@@ -14578,7 +15604,7 @@
       ]
     },
     "topstep": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-19",
       "set": {
         "trustpilotRating": 3.7,
         "trustpilotReviewCount": 15052,
@@ -14608,6 +15634,10 @@
         {
           "label": "Topstep separate 55%/40% consistency conditions",
           "url": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-19)",
+          "url": "https://www.topstep.com/terms-of-use"
         }
       ],
       "changelog": [
@@ -14669,6 +15699,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 82 to 84: the earlier manual deduction (\"Score 84 to 82 for funded gating, not alleged nonpayment.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-19",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 8 new classified restrictive rules.",
+          "source": "https://www.topstep.com/terms-of-use",
+          "fields": ["restrictiveRules"]
         }
       ],
       "addIncidents": ["Court filing: on 2026-04-09 Vincent McCrudden, representing himself, filed a complaint against Topstepfunded LLC, Topstep LLC, TopstepTrader LLC and five individuals in the US District Court for the Middle District of Florida (case 3:26-cv-00816). These are allegations; the docket read showed no ruling on the merits, and the defendants had said they would move to compel arbitration (https://dockets.justia.com/docket/florida/flmdce/3:2026cv00816/457513)."],
@@ -14719,6 +15755,86 @@
           "rule": "Daily Loss Limit is not necessarily universal: checkout can add DLL and change a funded payout cap; self-set personal loss controls are distinct from mandatory MLL.",
           "impact": "Do not present an optional daily lockout as a compulsory hard breach for every Topstep programme.",
           "source": "https://help.topstep.com/en/articles/10490293-daily-loss-limit-in-the-trading-combine-and-express-funded-account"
+        },
+        {
+          "program": "Express Funded Account — payout size",
+          "appliesTo": ["combine"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Each Express Funded Account payout is limited to \"50% of your account balance up to the cap\", with caps from $2,000 to $6,000 depending on account size and payout path. \"Minimum Payout: $125.\" Live Funded Account payouts are not capped.",
+          "impact": "Only part of the accumulated profit can be withdrawn per request on the simulated funded account; the rest stays exposed to the Maximum Loss Limit.",
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+        },
+        {
+          "program": "Express Funded Account — Standard payout path",
+          "appliesTo": ["combine"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "A Standard payout requires \"5 winning days of $150+ Net P&L\" (not necessarily consecutive); after each payout \"your 5-day count restarts\". At least $0.01 must have been earned since the last payout (first payout exempt).",
+          "impact": "Each payout needs a new set of five qualifying days, so profits made in fewer, larger days wait longer.",
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+        },
+        {
+          "program": "Trading Combine, Express Funded and Live — prohibited conduct",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Section 27 bans conduct that \"knowingly or unknowingly circumvents targets and rules\", \"Taking advantage of the simulated environment\", and anything that \"is intended to game the market, is not a viable trading strategy\"; section 8 treats \"substantially (i) larger position sizes\" or \"(ii) a smaller or larger number of positions compared to your other trades\" as failing risk standards. Topstep may \"remove any Simulated Account profits, delete a trading day, reset an Account, or ban a User\"; where profits were gained through the simulated environment after graduating, \"you will not be entitled to receive any withdrawals from any other account maintained with Topstep\", \"all of which will be forfeited and closed immediately.\" The help centre adds \"Delay or denial of a Payout request\", decided \"case-by-case based on severity and history.\"",
+          "impact": "Profits and withdrawals on every Topstep account can be removed for conduct the firm classifies as prohibited under undefined standards, including unknowing circumvention.",
+          "source": "https://www.topstep.com/terms-of-use"
+        },
+        {
+          "program": "All accounts — VPN, proxy and remote access",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Section 28: \"Using any VPN, VPS, proxy (including residential), or other service masking your IP address or location on Accounts is strictly prohibited, and violations may result in account termination and forfeiture of profits\"; location spoofing apps and remote access tools are also banned.",
+          "impact": "Trading through a VPS or VPN (common for automated setups) can cost the account and its profits.",
+          "source": "https://www.topstep.com/terms-of-use"
+        },
+        {
+          "program": "All accounts — coordinated trading and cross-account hedging",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Prohibited: \"performing trades in concert with others (including unconnected accounts or third parties)\", \"holding opposite positions across multiple accounts simultaneously\", \"repeatedly hitting the Maximum Loss Limit in one account and switching to another\" (account stacking), and trading on behalf of others. Listed consequences include \"Delay or denial of a Payout request\" and \"Permanent account closure\".",
+          "impact": "Following the same signals as other traders, or hedging between one's own accounts, can lead to payout denial or closure.",
+          "source": "https://help.topstep.com/en/articles/10296582-prohibited-conduct"
+        },
+        {
+          "program": "Express Funded Account — live restricted jurisdictions",
+          "appliesTo": ["combine"],
+          "category": "country-kyc",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Section 30: in Live Restricted Jurisdictions (where Topstep \"does not maintain an active relationship with a futures commission merchant partner who accepts live traders\"), \"any such Express Funded Account will operate exclusively in a simulated trading environment\" and \"Restricted Participants will not migrate from an Express Funded Account to a Live Funded Account, regardless of trading performance\".",
+          "impact": "Traders in those countries stay on the capped simulated payout path permanently; the uncapped Live Funded payouts are not available to them.",
+          "source": "https://www.topstep.com/terms-of-use"
+        },
+        {
+          "program": "Trading Combine — activation deadline",
+          "appliesTo": ["combine"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Section 9: \"If you do not activate the Trading Combine® within 30 calendar days of the date on which it was made available to you, your access to it will be suspended\"; it must be renewed within 6 months of the suspension, \"otherwise we will terminate the provision of the Services\" without a fee refund.",
+          "impact": "A Combine bought but not started within 30 days is suspended and can be lost after six months.",
+          "source": "https://www.topstep.com/terms-of-use"
+        },
+        {
+          "program": "All accounts — changes to rules",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "Trading Rules are \"subject to change by Topstep in its sole and absolute discretion from time to time\" and account parameters \"remain subject to adjustment and change from time to time, without notice\" (sections 27 and 9). Changes to the Terms themselves require notice.",
+          "impact": "Rules and parameters on an existing account can change without notice; the terms do not protect accounts already bought.",
+          "source": "https://www.topstep.com/terms-of-use"
         }
       ],
       "setProducts": [
