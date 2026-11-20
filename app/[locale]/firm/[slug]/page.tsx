@@ -18,7 +18,7 @@ import ScoreRing from '../../../components/ui/ScoreRing';
 import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
 import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
 import { scoreV4Copy } from '../../../lib/scoreV4I18n';
-import { scoreV5Copy, scoreV5LegalCapCopy } from '../../../lib/scoreV5I18n';
+import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
@@ -637,7 +637,7 @@ export default async function FirmPage({ params }: Props) {
     scoreSteps.push({
       kind: 'rules',
       label: scoreCopy.rules,
-      detail: rules
+      detail: breakdown.v5 ? scoreV5Copy(locale).restriction : rules
         ? fmt(scoreCopy.rulesDetail, { counted: rules.counted, programs: rules.programs.length, load: rules.rawLoad })
         : breakdown.unclassifiedOnly ? fmt(scoreCopy.rulesUnclassified, { n: breakdown.unclassifiedOnly }) : scoreCopy.rulesNone,
       value: applied ? breakdown.editorial - rules!.penalty : breakdown.editorial,
@@ -694,6 +694,13 @@ export default async function FirmPage({ params }: Props) {
       };
     }) ?? [],
     rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
+    v5Evidence: breakdown.v5 ? {
+      deductions: breakdown.v5.ruleDeductions,
+      contractProtection: breakdown.v5.contractProtection,
+      checkedOn: breakdown.v5.checkedOn,
+      limitedPayoutProof: breakdown.v5.independentPayoutProofLimited,
+      copy: scoreV5EvidenceCopy(locale),
+    } : undefined,
     methodHref: L('/audit'),
     rulesHref: '#rules',
   };

@@ -36,6 +36,18 @@ export type V5Assessment = {
   negativeFactIds?: string[];
 };
 
+/** Each visible −2 B2 item must identify a real, sourced clause and its effect. */
+export type V5RuleDeduction = {
+  factId: string;
+  kind: 'contradiction' | 'ambiguite' | 'retroactivite' | 'asymetrie';
+  points: 2;
+  program: string;
+  phase: string;
+  clause: string;
+  consequence: string;
+  source: string;
+};
+
 export type V5Scorecard = {
   slug: string;
   checkedOn: string;
@@ -43,6 +55,7 @@ export type V5Scorecard = {
   confidence: V5Confidence;
   previousDisplayedScore: number;
   criteria: Record<V5Criterion, V5Assessment>;
+  ruleDeductions?: V5RuleDeduction[];
   trustpilotActiveNotice: boolean;
   /** True only after verifying a missing contracting entity, not a missing registry link. */
   contractingEntityMissing: boolean;
@@ -107,6 +120,28 @@ export function computeV5Scorecard(card: V5Scorecard): V5ScoreResult {
   }
   const afterRules = Object.values(blocks).reduce((sum, n) => sum + n, 0);
   const rulesPenalty = V5_CRITERIA.B2 - card.criteria.B2.points;
+  const details = card.ruleDeductions ?? [];
+  if (details.reduce((sum, item) => sum + item.points, 0) !== rulesPenalty) {
+    throw Error(`${card.slug}: B2 rule details do not equal the displayed deduction`);
+  }
+  const detailFacts = new Set<string>();
+  const kindCounts = { contradiction: 0, ambiguite: 0, retroactivite: 0, asymetrie: 0 };
+  for (const item of details) {
+    if (item.points !== 2 || !['contradiction', 'ambiguite', 'retroactivite', 'asymetrie'].includes(item.kind)
+      || !item.program?.trim() || !item.phase?.trim() || !item.clause?.trim() || !item.consequence?.trim()
+      || !/^https:\/\/\S+/.test(item.source) || !card.criteria.B2.sources.includes(item.source)
+      || !card.criteria.B2.negativeFactIds?.includes(item.factId) || detailFacts.has(item.factId)) {
+      throw Error(`${card.slug}: invalid or duplicate sourced B2 rule detail`);
+    }
+    detailFacts.add(item.factId);
+    kindCounts[item.kind] += item.points;
+  }
+  if (kindCounts.contradiction > 4 || kindCounts.ambiguite > 4 || kindCounts.retroactivite > 2 || kindCounts.asymetrie > 2) {
+    throw Error(`${card.slug}: B2 category penalty cap exceeded`);
+  }
+  if (details.length !== (card.criteria.B2.negativeFactIds ?? []).length) {
+    throw Error(`${card.slug}: every penalised B2 fact requires a visible rule detail`);
+  }
   const editorialGross = afterRules + rulesPenalty;
   const trustpilotPenalty: 0 | 6 = card.trustpilotActiveNotice ? 6 : 0;
   const adjusted = Math.max(0, afterRules - trustpilotPenalty);

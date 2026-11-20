@@ -17,6 +17,11 @@ assert.equal(perfect.final, 100);
 
 const withPenalties = sample();
 withPenalties.criteria.B2.points = 6;
+withPenalties.criteria.B2.negativeFactIds = ['vague-rule-1', 'vague-rule-2'];
+withPenalties.ruleDeductions = ['vague-rule-1', 'vague-rule-2'].map((factId) => ({
+  factId, kind: 'ambiguite', points: 2, program: 'Test program', phase: 'Funded',
+  clause: 'Unclear contract clause', consequence: 'The account may be closed', source: 'https://example.org/terms',
+}));
 withPenalties.trustpilotActiveNotice = true;
 const adjusted = computeV5Scorecard(withPenalties);
 assert.equal(adjusted.editorialGross, 100);
@@ -24,6 +29,19 @@ assert.equal(adjusted.rulesPenalty, 4);
 assert.equal(adjusted.afterRules, 96);
 assert.equal(adjusted.trustpilotPenalty, 6);
 assert.equal(adjusted.final, 90);
+
+const missingRules = sample();
+missingRules.criteria.B2.points = 8;
+assert.throws(() => computeV5Scorecard(missingRules), /rule details/);
+
+const doubleRules = sample();
+doubleRules.criteria.B2.points = 6;
+doubleRules.criteria.B2.negativeFactIds = ['one', 'two'];
+doubleRules.ruleDeductions = ['one', 'one'].map((factId) => ({
+  factId, kind: 'ambiguite', points: 2, program: 'One', phase: 'Funded',
+  clause: 'A', consequence: 'B', source: 'https://example.org/terms',
+}));
+assert.throws(() => computeV5Scorecard(doubleRules), /duplicate sourced B2/);
 
 const missingEntity = sample();
 missingEntity.criteria.C1.points = 0;

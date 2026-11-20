@@ -36,6 +36,25 @@ export function scoreV5LegalCapCopy(locale: Locale, cap: number) {
     : `Unverified contracting entity or active, unsuspended strike-off: score capped at ${cap}.` };
 }
 
+/** Labels for the clause-by-clause V5 display; descriptions remain verbatim audit evidence. */
+export function scoreV5EvidenceCopy(locale: Locale) {
+  return locale === 'fr' ? {
+    contract: 'Protection des récompenses acquises (B1)',
+    consequence: 'Conséquence possible',
+    source: 'Lire la clause officielle',
+    evidence: 'Clauses responsables du retrait',
+    limited: 'Preuves indépendantes de paiement limitées : pas de validation implicite des payouts.',
+    rulesClarification: 'Une règle ordinaire, claire et annoncée (drawdown, news, consistance…) ne retire aucun point. Ces retraits sont déjà intégrés dans le pilier Contrat et règles : aucun double malus.',
+  } : {
+    contract: 'Protection of earned rewards (B1)',
+    consequence: 'Possible consequence',
+    source: 'Read official clause',
+    evidence: 'Clauses behind this deduction',
+    limited: 'Independent payout evidence is limited: payout reliability is not verified by this score.',
+    rulesClarification: 'Clearly announced standard limits (drawdown, news, consistency…) cause no deduction. These B2 items already count within the Contract & rules pillar; they are not charged twice.',
+  };
+}
+
 export function scoreV5Copy(locale: Locale): ScoreV4Copy {
   const v4 = scoreV4Copy(locale);
   return {

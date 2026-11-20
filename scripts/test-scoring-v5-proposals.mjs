@@ -16,7 +16,7 @@ for (const card of proposalFile.firms) {
   assert.equal(seen.has(card.slug), false, 'No duplicated firm proposal');
   seen.add(card.slug);
   assert.ok(expected[card.slug], `Unexpected C01 firm ${card.slug}`);
-  assert.equal(publishedFile.firms.some((firm) => firm.slug === card.slug), false, 'Proposals must not be publicly activated');
+  const approved = publishedFile.approvals.find((firm) => firm.slug === card.slug);
   const score = computeV5Scorecard(card);
   const want = expected[card.slug];
   assert.deepEqual(score.blocks, want.blocks);
@@ -24,7 +24,9 @@ for (const card of proposalFile.firms) {
   assert.equal(score.rulesPenalty, want.rules);
   assert.equal(score.trustpilotPenalty, want.trustpilot);
   assert.equal(score.final, want.final);
+  assert.equal(approved?.checkedOn, card.checkedOn, 'Only this audited version may be public');
+  assert.equal(approved?.expectedFinal, score.final, 'Publication approval must bind the exact final score');
   assert.equal(card.previousDisplayedScore, want.previous);
   console.log(`${card.slug}: ${score.editorialGross} brut affiché − ${score.rulesPenalty} règles − ${score.trustpilotPenalty} Trustpilot = ${score.final} final (ancien ${want.previous})`);
 }
-console.log('V5 C01 proposals OK — unpublished until Adrien validates');
+console.log('V5 C01 proposals OK — only individually approved scorecards may publish');

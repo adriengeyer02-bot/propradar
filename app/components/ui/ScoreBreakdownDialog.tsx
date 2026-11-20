@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
 import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
+import type { V5RuleDeduction } from '../../lib/scoringV5';
 
 export type ScoreStep = {
   kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'closed';
@@ -30,6 +31,13 @@ export type ScoreBreakdownView = {
   programs: { name: string; load: number }[];
   heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
+  v5Evidence?: {
+    deductions: V5RuleDeduction[];
+    contractProtection: { points: number; reason: string; source: string };
+    checkedOn: string;
+    limitedPayoutProof: boolean;
+    copy: { contract: string; consequence: string; source: string; evidence: string; limited: string; rulesClarification: string };
+  };
   methodHref: string;
   rulesHref: string;
 };
@@ -147,9 +155,28 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                     <span className="psb-bar-fill" style={{ width: `${step.value}%` }} />
                     {step.delta ? <span className="psb-bar-cut" style={{ left: `${step.value}%`, width: `${step.delta}%` }} /> : null}
                   </div>
-                  <p>{step.kind === 'rules' && step.delta > 0 ? copy.rulesSimple : step.detail}</p>
+                  <p>{step.kind === 'rules' && step.delta > 0 && !view.v5Evidence ? copy.rulesSimple : step.detail}</p>
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
-                  {step.kind === 'rules' && (step.delta > 0 || Boolean(view.pillars)) && view.heaviest.length ? (
+                  {step.kind === 'rules' && view.v5Evidence && step.delta > 0 ? (
+                    <div className="psb-v5-clauses">
+                      <span className="prg-hud-label">{view.v5Evidence.copy.evidence}</span>
+                      <ul>
+                        {view.v5Evidence.deductions.map((item) => (
+                          <li key={item.factId}>
+                            <div className="psb-v5-clause-heading">
+                              <strong>{item.program} <small>· {item.phase}</small></strong>
+                              <b>−{item.points}</b>
+                            </div>
+                            <p>{item.clause}</p>
+                            <p><span>{view.v5Evidence.copy.consequence} :</span> {item.consequence}</p>
+                            <a href={item.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence.copy.source} ↗</a>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="psb-v5-footnote">{view.v5Evidence.copy.rulesClarification}</p>
+                    </div>
+                  ) : null}
+                  {step.kind === 'rules' && !view.v5Evidence && (step.delta > 0 || Boolean(view.pillars)) && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
                       <ul>
@@ -174,6 +201,16 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                 </div>
               </li>
             </ol>
+
+            {view.v5Evidence ? (
+              <section className="psb-v5-contract prg-hud-reveal" style={delay(steps.length + 3)}>
+                <div><strong>{view.v5Evidence.copy.contract}</strong><b>{view.v5Evidence.contractProtection.points}/15</b></div>
+                <p>{view.v5Evidence.contractProtection.reason}</p>
+                <a href={view.v5Evidence.contractProtection.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence.copy.source} ↗</a>
+                {view.v5Evidence.limitedPayoutProof ? <p className="psb-v5-limited">{view.v5Evidence.copy.limited}</p> : null}
+                <small>{view.v5Evidence.checkedOn}</small>
+              </section>
+            ) : null}
 
             {view.signals.length ? (
               <div className="psb-signals prg-hud-reveal" style={delay(steps.length + 3)}>

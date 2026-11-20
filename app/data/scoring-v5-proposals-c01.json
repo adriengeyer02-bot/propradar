@@ -2,7 +2,7 @@
   "version": 5,
   "batch": "C01",
   "checkedOn": "2026-11-20",
-  "publication": "NON — propositions non validées ; ne pas importer dans scoring-v5-published.json",
+  "publication": "Dossiers sources immuables ; publication uniquement si le slug, la date et le total sont approuvés dans scoring-v5-published.json",
   "firms": [
     {
       "slug": "alpha-capital-group",
@@ -25,6 +25,18 @@
         "E1": { "points": 6, "reason": "Service prop annoncé lancé en novembre 2021 ; activité documentée et indépendante depuis plus de 36 mois.", "sources": ["https://alphacapitalgroup.uk/about", "https://payoutjunction.com/firms/alphacapitalgroup"] },
         "E2": { "points": 3, "reason": "Canal de support et contact publiés (+1), réponses d'équipe observables dans les avis de clients (+1), voies de contestation CGU/équipe publiées (+1) ; utilité d'un dossier non-payout résolu non directement vérifiée (0).", "sources": ["https://alphacapitalgroup.uk/contact-us", "https://alphacapitalgroup.uk/terms-and-conditions", "https://www.trustpilot.com/review/alphacapitalgroup.uk"] }
       },
+      "ruleDeductions": [
+        {
+          "factId": "alpha-vague-trading-prohibition-9-1-7",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Alpha Capital Group · tous les programmes",
+          "phase": "Évaluation et compte Analyst",
+          "clause": "CGU §9.1.7 : Alpha conserve un pouvoir de qualifier certains trades ou stratégies d'interdits, sans seuil exhaustif.",
+          "consequence": "Fermeture du compte possible après interprétation d'un comportement non précisément défini.",
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions"
+        }
+      ],
       "trustpilotActiveNotice": true,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
@@ -51,6 +63,38 @@
         "E1": { "points": 6, "reason": "Activité de challenge prop trading documentée par vidéo de trader financé dès avril 2023 et témoignages sur 2022–2026, donc plus de 36 mois.", "sources": ["https://www.youtube.com/watch?v=rOpvXISuWMs", "https://maventrading.com/about"] },
         "E2": { "points": 2, "reason": "Support mail et formulaire publics (+1), escalade formalisée du litige en §12 (+1) ; la vignette de dialogue simulé sur la page contact ne prouve pas une réponse effectivement obtenue et utile par un client (0+0).", "sources": ["https://maventrading.com/contact", "https://maventrading.com/terms-and-conditions"] }
       },
+      "ruleDeductions": [
+        {
+          "factId": "maven-discretionary-one-percent-rule-5-7",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Maven · programmes soumis au contrôle de risque",
+          "phase": "Compte financé simulé",
+          "clause": "CGU §5.7 : la firme peut imposer discrétionnairement une limite de risque de 1 %.",
+          "consequence": "Règle supplémentaire décidée pendant l'exploitation du compte, avec risque de violation non anticipée.",
+          "source": "https://maventrading.com/terms-and-conditions"
+        },
+        {
+          "factId": "maven-open-ended-gamifying-4-3",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Maven · programmes concernés par §4.3",
+          "phase": "Évaluation et compte financé simulé",
+          "clause": "CGU §4.3 : catégorie ouverte de comportement « gamifying » malgré certains exemples chiffrés.",
+          "consequence": "Qualification subjective d'une stratégie et sanction possible du compte.",
+          "source": "https://maventrading.com/terms-and-conditions"
+        },
+        {
+          "factId": "maven-asymmetric-short-trades-4-5",
+          "kind": "asymetrie",
+          "points": 2,
+          "program": "Maven · OMO et Mini",
+          "phase": "Compte financé simulé",
+          "clause": "CGU §4.5 : les profits des trades de moins de 150 secondes peuvent être retirés tandis que leurs pertes restent comptées.",
+          "consequence": "Réduction asymétrique du résultat disponible pour demander une récompense.",
+          "source": "https://maventrading.com/terms-and-conditions"
+        }
+      ],
       "trustpilotActiveNotice": true,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
