@@ -1,0 +1,97 @@
+{
+ "version": 4,
+ "checkedOn": "2026-11-20",
+ "status": "2-publications-claude-lot-N03",
+ "firms": [
+  {
+   "slug": "levels",
+   "before": 27,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     2,
+     2,
+     3,
+     3
+    ],
+    "C": [
+     5,
+     2,
+     0
+    ],
+    "D": [
+     3,
+     3,
+     3
+    ],
+    "E": [
+     2,
+     1,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://docs.lv.ls/using-the-platform/payouts.md",
+    "contract": "https://lv.ls/terms-and-conditions/",
+    "program": "https://docs.lv.ls/the-challenge/starting-your-first-challenge.md",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/09383987",
+    "offer": "https://lv.ls/"
+   },
+   "b1": "Payment Terms §3 : les frais n'ouvrent droit à aucun « Financial rewards, bonuses, prizes, or payouts » et ne garantissent « any outcome … reward » ; la doc payouts ajoute « the Company has final authority over the outcome of the Platform » ; Platform Terms 7.1 : suspension ou résiliation « at any time, with or without notice ». B1=2 (un seul fait : absence de droit contractuel au paiement face à la doc qui en promet). Les limites de pips (60/30, 100/50, 200/100, stop 5 pips) ne sont pas comptées.",
+   "b2": "Accueil « as little as $50 » contre frais de $100/$500/$1 000 dans la doc ; FAQ « commodities » contre CGU FX uniquement ; « No drawdown » contre « hidden drawdown » ; CGU avec gabarits non remplis ([Company Name], [Governing Jurisdiction], [Privacy Policy URL]) et arbitrage vs droit britannique. B2=2.",
+   "b3": "Platform Terms 1.3 : révision à tout moment, effet à la publication, acceptation par usage continu ; en contrepartie la doc dit que les bonus payés sont « final and cannot be reclaimed ». B3=3.",
+   "hold": "A13 B10 C7 D9 E4 = 43/100 éditorial (avant 27, +16, mouvement sensible). Aucun −6 Trustpilot. Réserves : avertissement FCA du 13/07/2023 visant « Levels LV.LS » (relayé par l'AFM, C3=0), CGU qui ne reconnaissent pas de droit au payout, gabarits non remplis, produit atypique (échelle de pips à paliers fixes, pas de split), aucune preuve de paiement. Confiance moyenne (CGU, doc produit et registre lus), à soumettre à Geyer.",
+   "next": "Version de l'avertissement FCA sur fca.org.uk (page AFM bloquée aujourd'hui) et éventuelle levée ; lien formel entre « Chancery Lane Traders » des CGU et la société 09383987 (aucun numéro dans les CGU) ; preuve indépendante d'un paiement de palier ; réconciliation prix $50/$100."
+  },
+  {
+   "slug": "titan-capital-markets",
+   "before": 24,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     6,
+     7,
+     1
+    ],
+    "B": [
+     4,
+     4,
+     4,
+     3
+    ],
+    "C": [
+     4,
+     2,
+     3
+    ],
+    "D": [
+     2,
+     4,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://support.tgmarkets.com/articles/performance-fee-policy",
+    "contract": "https://titancapital.tgmarkets.com/terms-conditions/",
+    "program": "https://titancapital.tgmarkets.com/evaluations/",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/15229528",
+    "offer": "https://titancapital.tgmarkets.com/evaluations/"
+   },
+   "b1": "Deux pouvoirs subjectifs sur des gains éligibles : la règle « excessive margin usage / reckless overleveraging » sans seuil chiffré, tranchée par la Risk Team et sanctionnée en hard breach, et la clause « Black Swan » permettant d'invalider des trades à la discrétion de l'équipe risque ; les CGU déclarent aussi nuls les profits antérieurs au KYC approuvé. B1=4/15. Les règles chiffrées (SL sous 60 s, exposition 2 %/3 %, news ±3 min, consistance 20 % Instant, inactivité 30 jours, EA) restent des contraintes publiées, sans malus autonome.",
+   "b2": "Les CGU du 17/12/2025 nomment TFT TITAN SOLUTIONS LIMITED comme fournisseur, mais aussi TG Markets LTD comme partie au contrat et un merchant of record tiers (Odeonpay/Paysagi), avec une mention d'âge incohérente ; les règles par programme sont réparties entre la page évaluations et une dizaine d'articles d'aide. B2=4/8.",
+   "b3": "La règle SL obligatoire ne s'applique qu'aux comptes ouverts à partir du 1/12/2025 (pas d'effet rétroactif sur ce point) ; aucune modification rétroactive de gains acquis n'est établie. Contestation limitée à la revue interne de la Risk Team. B3=4/7.",
+   "hold": "A14 B15 C9 D10 E4 = 52 points éditoriaux, puis −6 Trustpilot (notice déjà au dossier, toujours active le 20/11/2026) = 46/100, contre 24 affichés (+22, mouvement sensible à soumettre à Geyer). Réserves : fournisseur UK sous proposition active de radiation avec comptes et confirmation statement en retard ; contrepartie TG Markets LTD non authentifiée ; prix catalogue non affichés (promotion seule) ; aucune preuve indépendante de payouts. Confiance moyenne (CGU et programmes lus les 17–18/11 sur pages officielles, entité nommée et trouvée au registre).",
+   "next": "Relire aujourd'hui les CGU (accès bloqué le 20/11 dans ce passage) pour le droit applicable, la procédure de réclamation et la clause de modification ; authentifier l'immatriculation de TG Markets LTD ; suivre l'issue de la proposition de radiation (Gazette) ; relever les prix catalogue hors promotion et la plateforme."
+  }
+ ]
+}
