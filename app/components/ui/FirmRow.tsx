@@ -113,7 +113,7 @@ export default function FirmRow({ firm, rank, children, subline, href, locale = 
   const tp = trustpilotPip(firm);
   const countries = entityCountries(firm.regulatoryAudit.entities).map((c) => ({ ...c, name: countryLabel(locale, c.code, c.name) }));
   return (
-    <Link href={href ?? localePath(locale, `/firm/${firm.slug}`)} className={`pr-firm-row pr-edge-${scoreTone(firm.score)}`} role="row">
+    <Link href={href ?? localePath(locale, `/firm/${firm.slug}`)} className={`pr-firm-row pr-edge-${scoreTone(firm.score)}`} role="row" data-propradar-slug={firm.slug} data-propradar-score={firm.score}>
       <span className="pr-firm-id" role="cell">
         {typeof rank === 'number' ? <span className="pr-firm-rank" aria-hidden="true">{rank}</span> : null}
         <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="sm" />
