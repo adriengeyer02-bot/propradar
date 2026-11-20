@@ -1,0 +1,60 @@
+{
+  "version": 5,
+  "batch": "C01",
+  "checkedOn": "2026-11-20",
+  "publication": "NON — propositions non validées ; ne pas importer dans scoring-v5-published.json",
+  "firms": [
+    {
+      "slug": "alpha-capital-group",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 74,
+      "criteria": {
+        "A1": { "points": 10, "reason": "CGU Schedule 2 et annexes Pro/One/Direct/Swing : premier retrait, split et minima, règles d'éligibilité, plafonds et profits exclus, demande par tableau de bord et transfert Rise/Wise/banque (2 jours ouvrés, 14 si vérification).", "sources": ["https://alphacapitalgroup.uk/terms-and-conditions", "https://help.alphacapitalgroup.uk/en/articles/7060904-what-happens-once-the-evaluation-process-is-passed"] },
+        "A2": { "points": 10, "reason": "Payout Junction répertorie des paiements Rise vérifiés par son propre contrôle blockchain depuis novembre 2023, à plusieurs dates jusqu'en novembre 2026 ; les litiges médiatisés consultés relaient des allégations qui ne prouvent pas une série de refus injustifiés.", "sources": ["https://payoutjunction.com/firms/alphacapitalgroup", "https://payoutjunction.com/methodology", "https://financefeeds.com/alpha-capital-trader-alleges-25k-payout-rejected-under-undisclosed-risk-rule/"] },
+        "A3": { "points": 5, "reason": "Suivi indépendant revendiqué de milliers de règlements Rise sur plus de 12 mois, avec historique novembre 2023–novembre 2026 ; cette échelle satisfait le palier 5 sous réserve de pouvoir reproduire l'appariement des portefeuilles si contesté. Ce n'est pas un audit des virements bancaires.", "sources": ["https://payoutjunction.com/firms/alphacapitalgroup", "https://payoutjunction.com/methodology", "https://payoutproofs.com/firms/alpha-capital-group"] },
+        "B1": { "points": 0, "reason": "Schedule 2 §2.2 prévoit le versement même des Analyst Performance Fees à la seule discrétion de la firme ; §2.6 autorise leur non-paiement pour une violation qu'elle détermine elle-même. La rémunération n'est pas contractuellement garantie sans cette appréciation.", "sources": ["https://alphacapitalgroup.uk/terms-and-conditions"], "negativeFactIds": ["alpha-fees-at-sole-discretion-schedule2-2-2"] },
+        "B2": { "points": 8, "reason": "−2 pour §9.1.7 : Alpha se réserve de déterminer elle-même quels trades/stratégies/situations sont interdits et peut fermer le compte. Pas de malus pour les limites objectives de news, lot, drawdown ou cohérence.", "sources": ["https://alphacapitalgroup.uk/terms-and-conditions"], "negativeFactIds": ["alpha-vague-trading-prohibition-9-1-7"] },
+        "C1": { "points": 7, "reason": "Alpha Capital Group Limited n°13719951 est identifiée dans les CGU et chez Companies House ; l'accord individuel Qualified Analyst et la concordance du récapitulatif de commande ne sont pas tous consultables publiquement.", "sources": ["https://alphacapitalgroup.uk/terms-and-conditions", "https://find-and-update.company-information.service.gov.uk/company/13719951"] },
+        "C2": { "points": 6, "reason": "Companies House indique Active, comptes clos au 31 mars 2025 déposés, suivants attendus fin 2026, confirmation statement 2026 enregistrée.", "sources": ["https://find-and-update.company-information.service.gov.uk/company/13719951"] },
+        "C3": { "points": 2, "reason": "L'AFM conserve une alerte étrangère du 23 novembre 2023 visant exactement alphacapitalgroup.uk et renvoyant vers une ancienne alerte FCA ; la page FCA d'origine n'est plus accessible, donc statut et portée actuelle non établis. Ne pas confondre avec l'alerte SFC 2026 du domaine différent alphacapital-group.com.", "sources": ["https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/a/alpha-capital-group---httpsalphacapitalgroupuk", "https://www.sfc.hk/en/alert-list/3483", "https://alphacapitalgroup.uk/official-channels"], "negativeFactIds": ["alpha-historical-fca-warning-afm-2023"] },
+        "D1": { "points": 8, "reason": "Pages produit et CGU détaillent frais, modèles et drawdowns, restrictions selon la phase, pays limités et KYC.", "sources": ["https://alphacapitalgroup.uk/product", "https://alphacapitalgroup.uk/terms-and-conditions", "https://help.alphacapitalgroup.uk/en/articles/8775575-countries-with-limitations"] },
+        "D2": { "points": 4, "reason": "CGU librement accessibles (+2) et changements/notification aux comptes existants décrits aux §5.1–5.3 (+2) ; aucune date de version globale vérifiée sur la page CGU (0).", "sources": ["https://alphacapitalgroup.uk/terms-and-conditions"], "negativeFactIds": ["alpha-current-terms-version-undated"] },
+        "D3": { "points": 4, "reason": "Règles FAQ et CGU comparées sans contradiction matérielle supplémentaire confirmée (+2), simulation explicitée (+2) ; parcours de commande final pas vérifié (0).", "sources": ["https://alphacapitalgroup.uk/terms-and-conditions", "https://alphacapitalgroup.uk/product"] },
+        "E1": { "points": 6, "reason": "Service prop annoncé lancé en novembre 2021 ; activité documentée et indépendante depuis plus de 36 mois.", "sources": ["https://alphacapitalgroup.uk/about", "https://payoutjunction.com/firms/alphacapitalgroup"] },
+        "E2": { "points": 3, "reason": "Canal de support et contact publiés (+1), réponses d'équipe observables dans les avis de clients (+1), voies de contestation CGU/équipe publiées (+1) ; utilité d'un dossier non-payout résolu non directement vérifiée (0).", "sources": ["https://alphacapitalgroup.uk/contact-us", "https://alphacapitalgroup.uk/terms-and-conditions", "https://www.trustpilot.com/review/alphacapitalgroup.uk"] }
+      },
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "maven-trading",
+      "checkedOn": "2026-11-20",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 72,
+      "criteria": {
+        "A1": { "points": 10, "reason": "CGU version 2026.3 §10 et annexes : échéances par programme, split, minima, jours et consistency, caps 10 000 USD/30 jours et exemptions, demande, contrôle et méthodes de versement.", "sources": ["https://maventrading.com/terms-and-conditions", "https://maventrading.com/static-1-step"] },
+        "A2": { "points": 8, "reason": "Neutralité V5 : des plaintes isolées documentées n'établissent pas deux refus injustifiés corroborés, ni des retards distincts de 14 jours après échéance ; aucun historique indépendant de 12 mois ne permet d'attribuer 9 ou 10.", "sources": ["https://maventrading.com/terms-and-conditions", "https://firmtiers.com/blog/maven-trading-failed-funded-account-trader-says-payout-denied", "https://propfirmmatch.com/prop-firms/maven-trading/reviews"] },
+        "A3": { "points": 1, "reason": "Chiffres marketing, avis Feefo/Trustpilot et témoignages de clients sans authentification externe de règlements à l'échelle de la firme ; pas de relevé bancaire indépendant trouvé.", "sources": ["https://maventrading.com/about", "https://maventrading.com/reviews", "https://maventrading.com/"] },
+        "B1": { "points": 8, "reason": "§13.2 laisse résilier pour toute raison jugée nécessaire, mais §11.2, §13.4 et §16.2 protègent les rewards approuvés/acquis ; pas de confiscation discrétionnaire EXPLICITE des sommes déjà dues.", "sources": ["https://maventrading.com/terms-and-conditions"], "negativeFactIds": ["maven-any-reason-termination-13-2"] },
+        "B2": { "points": 4, "reason": "−2 pour discrétion sur la règle de risque 1% (§5.7), −2 pour la catégorie de 'gamifying' ouverte malgré un exemple chiffré (§4.3), −2 pour retrait des profits <150s en conservant les pertes pour OMO/Mini (§4.5). Restrictions ordinaires claires : 0 malus.", "sources": ["https://maventrading.com/terms-and-conditions"], "negativeFactIds": ["maven-discretionary-one-percent-rule-5-7", "maven-open-ended-gamifying-4-3", "maven-asymmetric-short-trades-4-5"] },
+        "C1": { "points": 7, "reason": "MAVEN EDU - FZCO identifiée dans les CGU avec licence déclarée 60823 et listée dans l'annuaire officiel KHDA ; concordance licence DIEZ/checkout et rôle de Maventrade LTD Saint Lucia à compléter.", "sources": ["https://maventrading.com/terms-and-conditions", "https://web.khda.gov.ae/en/education-directory/Training/Training-Details?CenterID=506634", "https://maventrading.com/"] },
+        "C2": { "points": 3, "reason": "Présence au répertoire officiel KHDA vérifiée, mais pas de certificat récent de situation ni de dépôt statutaire du registre DIEZ ; statut administratif exact non vérifiable au niveau exigé par le palier 6.", "sources": ["https://web.khda.gov.ae/en/education-directory/Training/Training-Details?CenterID=506634", "https://maventrading.com/about"] },
+        "C3": { "points": 4, "reason": "Recherche datée par dénomination exacte auprès des autorités concernées ; pas d'avertissement officiel matériel spécifiquement relié à MAVEN EDU - FZCO identifié. Ne pas confondre avec Maven Securities.", "sources": ["https://web.khda.gov.ae/en/education-directory/Training/Training-Details?CenterID=506634", "https://maventrading.com/terms-and-conditions"] },
+        "D1": { "points": 8, "reason": "Prix par variante, paramètres des phases, restrictions et sanctions par produit sur catalogue/FAQ/CGU, pays interdits et KYC publiés.", "sources": ["https://maventrading.com/pricing", "https://maventrading.com/static-1-step", "https://maventrading.com/terms-and-conditions", "https://maventrading.com/risk-disclosure"] },
+        "D2": { "points": 6, "reason": "CGU publiques (+2), version 2026.3 datée du 5 novembre (+2), §16.1–16.2 protègent explicitement les commandes existantes et expliquent la notification (+2).", "sources": ["https://maventrading.com/terms-and-conditions"] },
+        "D3": { "points": 2, "reason": "Catalogue/prix et dernière étape de commande non comparés jusqu'au paiement (0) ; Static 1-Step du catalogue absent de la liste §3.1 et Schedule 1, cohérence documentaire incomplète (0) ; simulation et rôle de l'opérateur explicités (+2).", "sources": ["https://maventrading.com/terms-and-conditions", "https://maventrading.com/static-1-step", "https://maventrading.com/pricing"], "negativeFactIds": ["maven-static-missing-from-terms-schedule1"] },
+        "E1": { "points": 6, "reason": "Activité de challenge prop trading documentée par vidéo de trader financé dès avril 2023 et témoignages sur 2022–2026, donc plus de 36 mois.", "sources": ["https://www.youtube.com/watch?v=rOpvXISuWMs", "https://maventrading.com/about"] },
+        "E2": { "points": 2, "reason": "Support mail et formulaire publics (+1), escalade formalisée du litige en §12 (+1) ; la vignette de dialogue simulé sur la page contact ne prouve pas une réponse effectivement obtenue et utile par un client (0+0).", "sources": ["https://maventrading.com/contact", "https://maventrading.com/terms-and-conditions"] }
+      },
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ]
+}
