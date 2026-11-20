@@ -1,0 +1,32 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "status": "publication-individuelle-validee-non-sensible",
+  "firms": [
+    {
+      "slug": "blue-guardian",
+      "before": 53,
+      "confidence": "moyenne",
+      "scores": {
+        "A": [8, 8, 4],
+        "B": [4, 6, 3, 5],
+        "C": [5, 3, 2],
+        "D": [3, 4, 4],
+        "E": [4, 2, 2]
+      },
+      "source": "https://blueguardian.com/terms-and-conditions/",
+      "sources": {
+        "payout": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+        "contract": "https://blueguardian.com/terms-and-conditions/",
+        "program": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+        "entity": "https://blueguardian.com/terms-and-conditions/",
+        "offer": "https://blueguardian.com/payouts"
+      },
+      "b1": "CGU : pour les comptes/profils multiples, qualification à la sole and absolute discretion de la firme, avec pouvoir de refuser des rewards et décision finale. Pas d'autre retrait sur la simple consistance, le minimum deux minutes ou Guardian Shield, tous publiés et chiffrés.",
+      "b2": "FAQ payout du 17/11/2026 segmentée par CFD et Futures; frais de 3%, seuils, plafonds et chronologie détaillés par programme.",
+      "b3": "La version courante des CGU prévaut et la firme peut les modifier unilatéralement. Aucun cas prouvé de rétroactivité appliquée aux gains acquis; seule la protection écrite est jugée.",
+      "hold": "A20 B18 C10 D11 E8 = 67 avant −6 Trustpilot (avertissement actif confirmé le 20/11), soit 61/100. Finance Magnates Intelligence suit 1,37 M$ de paiements crypto en T1 2026 : vraie preuve positive partielle, pas validation de tous les payouts. Contrat de trader financé et immatriculations non intégralement vérifiés : confiance moyenne.",
+      "next": "Réexaminer le contrat Trader Agreement au moment d'une prochaine remise publique et la levée éventuelle de l'avertissement Trustpilot."
+    }
+  ]
+}
