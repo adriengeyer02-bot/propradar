@@ -133,7 +133,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                           <li key={ruleIndex}>
                             <span className={`psb-pts psb-kind-${rule.kind === 'risk' ? 'risk' : 'rule'}`}>{rule.kind === 'risk' ? copy.riskTag : copy.restrictionTag}</span>
                             <span>
-                              <strong>{rule.program}</strong>
+                              <strong>{rule.program === 'All programs' || rule.program === 'All programmes' ? copy.allPrograms : rule.program}</strong>
                               <em>{rule.text}</em>
                             </span>
                           </li>
