@@ -10,7 +10,8 @@
     { "slug": "onefunded", "checkedOn": "2026-11-20", "expectedFinal": 60 },
     { "slug": "bem-funding", "checkedOn": "2026-11-20", "expectedFinal": 54 },
     { "slug": "thinkcapital", "checkedOn": "2026-11-20", "expectedFinal": 60 },
-    { "slug": "tiger-funded", "checkedOn": "2026-11-20", "expectedFinal": 47 }
+    { "slug": "tiger-funded", "checkedOn": "2026-11-20", "expectedFinal": 47 },
+    { "slug": "tradeday", "checkedOn": "2026-11-20", "expectedFinal": 67 }
   ],
-  "approvalContext": "Adrien Geyer demande explicitement la publication des notes V5 et du détail au clic le 20 novembre 2026. Toutes les autres fiches restent en barème antérieur jusqu'à audit indépendant."
+  "approvalContext": "Adrien Geyer demande explicitement la publication des notes V5 et du détail au clic le 20 novembre 2026. Il a ensuite approuvé spécifiquement la baisse TradeDay 75→67 de la PR #239 et demandé sa publication. Toutes les autres fiches restent en barème antérieur jusqu'à audit indépendant."
 }

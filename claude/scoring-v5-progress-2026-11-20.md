@@ -4,11 +4,11 @@
 
 | Ensemble | Dossiers dans la file | Fiches V5 complètes | En attente V5 |
 | --- | ---: | ---: | ---: |
-| C01–C04, repris de ChatGPT | 66 | 2 (Alpha Capital Group, Maven Trading) | 64 |
-| N01–N03, repris de Claude | 56 | 2 (Get Leveraged, Alpha Futures) | 54 |
-| **Total** | **122** | **4** | **118** |
+| C01–C04, repris de ChatGPT | 66 | 3 (Alpha, Maven, TradeDay approuvées) | 63 |
+| N01–N03, repris de Claude | 56 | 8 (N01, toutes approuvées) | 48 |
+| **Total** | **122** | **11 (dont 11 approuvées)** | **111** |
 
-Les quatre fiches sont assorties de 13 notes sourcées, du détail de chaque retrait B2, de l'état Trustpilot, d'une confiance d'audit et de l'ancienne note. La demande de publication d'Adrien est enregistrée dans `app/data/scoring-v5-published.json` par **slug + date + score V5 final**. Les notes des 118 autres firmes ne sont pas prétendues révisées : elles gardent leur score antérieur, identifié par la méthode historique au clic.
+Chaque fiche V5 complète contient les 13 sous-notes sourcées, les retraits B2, l'état Trustpilot, la confiance et l'ancienne note. La publication des **11 fiches approuvées** est verrouillée dans `app/data/scoring-v5-published.json` par **slug + date + score final**. **TradeDay 75→67 a reçu l'accord explicite d'Adrien après la proposition #239.** Les 111 dossiers non réaudités conservent leur score antérieur, identifié par la méthode historique au clic.
 
 Prochain ordre d'instruction :
 
