@@ -14,6 +14,9 @@ Trustpilot et plafonds de fermeture restent inchangés.
 - Fiches avec au moins une clause candidate au risque contractuel : **90**.
 - Fiches sans preuve indépendante étiquetée dans les données : **147** (absence de pièce dans le fichier ≠ absence de payout).
 - Avertissements Trustpilot en cours sur des firmes ouvertes : **43** (sanction séparée de -6 inchangée).
+- Absence de source candidate dédiée aux retraits dans le dossier : **97**.
+- Entité légale non renseignée dans le dossier : **0**.
+- Périmètre des programmes non documenté : **36**.
 
 ## Exemples à contrôler avant tout changement de classement
 
