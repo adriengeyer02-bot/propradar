@@ -500,6 +500,12 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 12 new classified restrictive rules.",
           "source": "https://miltraders.com/terms/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://miltraders.com/terms/",
+          "fields": ["entities"]
         }
       ],
       "addPayoutProofs": [
@@ -530,6 +536,15 @@
         {
           "label": "Terms & conditions read in full (2026-11-20)",
           "url": "https://miltraders.com/terms/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "MILTRADERS L.L.C-FZ",
+          "jurisdiction": "United Arab Emirates (Meydan Free Zone, Dubai)",
+          "registrationNumber": "Formation No. 2643914; Licence No. 2643914.01 (stated in the terms; not checked in an external registry)",
+          "registeredAddress": "Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, United Arab Emirates",
+          "role": "Contracting operator named in terms art. 1.1"
         }
       ]
     },
@@ -660,7 +675,7 @@
       "set": {
         "listedDomainWarning": null,
         "officialWebsite": "https://quantxfund.io/",
-        "payoutDelay": "1-Step: every 5 profitable days; 2-Step and Instant: biweekly. Processing usually 1–3 business days (company policy, not independently verified).",
+        "payoutDelay": "1-Step: every 5 profitable days; 2-Step and Instant: bi-weekly. Payouts processed within 2 business days, then 1-3 business days depending on payment method (crypto); $600 minimum and KYC required.",
         "verdict": "Aeon Funded is now branded Quantx, as confirmed by the firm's own manifesto. The operator named in current terms is EVC Holdings LTD, operating from Dubai; its corporate registration number and the claimed dealing-desk economics have not been independently verified. Payout marketing must be distinguished from transfers proved to have reached traders.",
         "auditSummary": "Deep review, 17 November 2026: Quantx's first-party manifesto explicitly identifies the Aeon Funded rebrand, correcting an older PropRadar domain warning. Current terms identify EVC Holdings LTD; the AML policy gives a Dubai business address but no independently checked company-registration number. All evaluation trading is described as simulated, without a licensed brokerage service. The official help article sets a $600 minimum withdrawal, KYC, a 2.5% profit threshold and five profitable days (each at least 0.5%) for accounts below $50k. Terms prohibit bots/copying, require geographic IP consistency and refund challenge fees only with the third performance reward. Quantx claims more than $570,000 distributed since May 2025, but no independently attributed bank or on-chain payout series was verified in this audit."
       },
@@ -748,6 +763,12 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 1 new classified restrictive rules.",
           "source": "https://quantxfund.io/terms",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: payoutDelay.",
+          "source": "https://quantxfund.io/help/how-can-i-request-a-payout-13765982",
+          "fields": ["payoutDelay"]
         }
       ],
       "auditedPrograms": [
@@ -1029,7 +1050,7 @@
       ]
     },
     "alpha-futures": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -1090,6 +1111,12 @@
           "summary": "Restrictive-rules audit: read the official terms and conditions (Schedules 2, 4 and 5) and the official 2026 payout rules page; 8 rules across Zero, Standard, Advanced and Direct.",
           "source": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: payoutDelay.",
+          "source": "https://alpha-futures.com/terms-and-conditions",
+          "fields": ["payoutDelay"]
         }
       ],
       "set": {
@@ -1102,7 +1129,7 @@
         "trustpilotRating": 4.3,
         "trustpilotReviewCount": 6304,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/alpha-futures.com",
-        "payoutDelay": "up to 4 payouts a month once 5 winning days of $200 or more are reached; no fixed payout dates"
+        "payoutDelay": "up to 4 payouts a month once 5 winning days of $200 or more are reached; terms: withdrawals processed within 3 business days, up to 14 business days if extra verification is required"
       },
       "setLegalReview": {
         "summary": "The official UK operator and simulation contract are identifiable, but the July 2026 closure of Premium accounts and cancellation of pending reward claims represents a material documented counterparty event. The firm continues selling other plans; contractual fault in the NinjaTrader dispute was not adjudicated for this audit.",
@@ -3688,7 +3715,7 @@
       ]
     },
     "clarity-traders": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -3713,6 +3740,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 4 new restrictive rules; 3 programmes; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
           "source": "https://www.claritytraders.com/terms-and-conditions",
           "fields": ["auditSummary", "products", "restrictiveRules", "verdict"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://www.claritytraders.com/terms-and-conditions",
+          "fields": ["entities"]
         }
       ],
       "addIncidents": [
@@ -3945,6 +3978,14 @@
           "minTradingDays": "none to pass; 7 trading days on the funded account before the first payout",
           "hasConsistencyRule": true,
           "consistencyRule": "Funded only: no single day can make up more than 20% of the requested payout."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Clarity Traders LLC",
+          "jurisdiction": "United States (Delaware)",
+          "registeredAddress": "8 The Green, Suite B, Dover, Delaware 19901, USA (Terms; footer gives 8 The Green Street, STE A)",
+          "role": "Contracting company named in the Terms and Conditions (last updated 2026-11-03)"
         }
       ]
     },
@@ -6794,7 +6835,7 @@
       ]
     },
     "fundedelite": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -6825,6 +6866,12 @@
           "summary": "Restrictive-rules audit: read the homepage, Terms and Conditions and Elite Atom FAQ (other FAQ articles could not be fetched); 13 rules across Catalyst, Flash Activation, Instant Funding, Lite and Elite Atom, two flagged as conflicting between official texts.",
           "source": "https://fundedelite.com/terms-and-conditions",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://fundedelite.com/terms-and-conditions",
+          "fields": ["entities"]
         }
       ],
       "addIncidents": [
@@ -7021,6 +7068,15 @@
           "rule": "Funded Atom 1-Step accounts have a 4% daily loss and a 6% trailing maximum loss (2-Step: 10% static).",
           "impact": "The maximum-loss level trails profits on the funded 1-Step account.",
           "source": "https://faq.fundedelite.com/en/articles/17638456-elite-atom-challenge-faq"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Quantum SRL (trading as Funded Elite)",
+          "jurisdiction": "Italy",
+          "registrationNumber": "P.IVA 03095010595",
+          "registeredAddress": "Via Maira 13, 04100 Latina, Italy",
+          "role": "Contracting entity named in the official terms (sections 1 and 27); Italian law, exclusive jurisdiction of the Tribunale di Latina (21.1-21.2). Registry not independently checked."
         }
       ]
     },
@@ -12572,7 +12628,7 @@
       ]
     },
     "onefunded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -12609,6 +12665,12 @@
           "summary": "Restrictive-rules audit: read the How it works page and the consistency, max exposure, prohibited practices, news, EA, inactivity, stop-loss and devices/IP help articles; 9 rules across Flash, Core, Value and Instant.",
           "source": "https://help.onefunded.com/max-exposure-rule/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://onefunded.com/terms-and-conditions/",
+          "fields": ["entities"]
         }
       ],
       "addIncidents": [
@@ -12783,6 +12845,21 @@
           "rule": "Trading from several devices and IPs is allowed, but the IP region 'should remain consistent'; on a detected region change the team may request 'an airline ticket, passport stamp, or live video confirmation of your location'. Devices or IPs tied to another user's account or to suspicious activity may lead to termination.",
           "impact": "A change of location can add a verification step before the account or payout proceeds.",
           "source": "https://help.onefunded.com/multiple-devices-andor-ip-addresses/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Brynex Tech Limited",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "15918986",
+          "registeredAddress": "71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom",
+          "role": "Contracting party ('Provider') in the Terms and Conditions §1.1; technology and platform service provider per the site footer; registry: active, incorporated 2024-08-27"
+        },
+        {
+          "name": "OneFunded Capital Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registeredAddress": "Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Named on the official disclaimer/footer as providing certain services to clients trading via MT5; registration not stated, not checked"
         }
       ]
     },
@@ -14931,7 +15008,7 @@
       ]
     },
     "thinkcapital": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -14967,6 +15044,12 @@
           "summary": "Restrictive-rules audit: read the official pricing table, Bolt page, Penalties FAQ, prohibited-strategies, consistency, news and profitable-days FAQs; 8 rules across Lightning, Dual Step, Nexus and Bolt.",
           "source": "https://www.thinkcapital.com/tc-faqs/penalties-faq-section/penalties-faq-section/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/10537331",
+          "fields": ["entities"]
         }
       ],
       "addIncidents": [
@@ -15129,6 +15212,15 @@
           "rule": "Traders using order layering 'may face disciplinary actions, including profit deductions from layered orders'; large-volume trades without a logical strategy 'may result in warnings, trade limitations, or account suspension'. No thresholds are given.",
           "impact": "Profits from orders the firm classes as layered can be deducted from a payout.",
           "source": "https://www.thinkcapital.com/tc-faqs/general-faqs/guidelines-regarding-trading-strategies-contrary-to-thinkcapitals-terms-of-use-policy-2/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "TFG (Payments) Limited",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "Companies House 10537331 (active, incorporated 2016-12-22)",
+          "registeredAddress": "167-169 Great Portland Street, 5th Floor, London W1W 5PF",
+          "role": "Contracting provider of ThinkCapital simulated trading programmes (named in official Terms of Service)"
         }
       ]
     },
@@ -18134,6 +18226,12 @@
           "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 4 new classified restrictive rules.",
           "source": "https://www.ultimatetraders.com/faq/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://find-and-update.company-information.service.gov.uk/company/14665391",
+          "fields": ["entities"]
         }
       ],
       "set": {
@@ -18270,6 +18368,15 @@
           "rule": "\"At least one position must be opened on at least 3 separate days to qualify\", in both Classic phases and in the Speedy phase; the Speedy page says the requirement is dropped on the funded account.",
           "impact": "An evaluation cannot be passed in fewer than three trading days.",
           "source": "https://www.ultimatetraders.com/trading-rules/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "ULTIMATE TRADERS EVALUATION LTD",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "14665391",
+          "registeredAddress": "Acre House, 11-15 William Road, London, NW1 3ER, United Kingdom",
+          "role": "Evaluation operator named in the existing file; registry confirms company active (incorporated 2023-02-15, SIC 82990, accounts to 2025-12-31 filed)"
         }
       ]
     },
@@ -18629,6 +18736,12 @@
           "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 8 new classified restrictive rules.",
           "source": "https://faq.wemastertrade.com/terms-and-conditions/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://faq.wemastertrade.com/terms-and-conditions/",
+          "fields": ["entities"]
         }
       ],
       "addIncidents": [
@@ -18822,6 +18935,22 @@
           "rule": "Terms, section 10: traders whose \"total lifetime reward yield above USD 1,000\" may be required, \"at the Company's discretion\", to participate in a recorded video interview. The terms do not say what happens if the interview is not completed.",
           "impact": "After USD 1,000 in total rewards, a recorded interview may be required; its effect on pending payouts is not stated.",
           "source": "https://faq.wemastertrade.com/terms-and-conditions/"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Diretio Holding Ltd",
+          "jurisdiction": "Cyprus",
+          "registrationNumber": "HE 481457",
+          "registeredAddress": "Limassol, Cyprus",
+          "role": "Payment agent for users outside Canada (Terms §6.7); not identified as the contracting party"
+        },
+        {
+          "name": "WeCopy Fintech Inc.",
+          "jurisdiction": "Canada",
+          "registrationNumber": "BC1333534",
+          "registeredAddress": "Vancouver, BC, Canada",
+          "role": "Payment agent for users in Canada (Terms §6.7)"
         }
       ]
     },
@@ -21898,7 +22027,7 @@
       ]
     },
     "bem-funding": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-10-29",
@@ -21928,6 +22057,12 @@
           "summary": "Restrictive-rules audit: read the BEM One, BEM One Only and BEM Classic Terms of Use, the Prohibited Trading Practices page and the general Terms and Conditions; 14 rules across BEM One, BEM One Only and BEM Classic.",
           "source": "https://bemfunding.com/prohibited-trading-practices",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://bemfunding.com/terms-and-conditions",
+          "fields": ["entities"]
         }
       ],
       "set": {
@@ -22123,6 +22258,20 @@
           "impact": "Eligibility by country is unclear from the official text.",
           "source": "https://bemfunding.com/terms-and-conditions",
           "status": "conflicting"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "BEX Software Development LLC-FZ",
+          "jurisdiction": "United Arab Emirates",
+          "registeredAddress": "The Meydan Hotel, Grandstand, 6th Floor, Meydan Road, Nad Al Sheba, Dubai",
+          "role": "Operator of bemfunding.com ('BEM Funding'); operates DXtrade and cTrader per the official terms; registration number not stated."
+        },
+        {
+          "name": "BEM Ltd.",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2026-00240",
+          "role": "Operates the MT5 platform per the official terms."
         }
       ]
     },
@@ -24171,7 +24320,7 @@
       ]
     },
     "upcomers": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24407,7 +24556,7 @@
       ]
     },
     "forexive": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24438,6 +24587,12 @@
           "summary": "Restrictive-rules audit: read the challenges page, rules page, General and Instant FAQ and Instant help articles; 13 rules across Access, 1-Step, 2-Step and Instant Funding. The /rules page still lists news, weekend and account-use policies as 'To be confirmed'.",
           "source": "https://forexive.com/faq/general",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://forexive.com/terms",
+          "fields": ["entities"]
         }
       ],
       "set": {
@@ -24620,6 +24775,15 @@
           "rule": "Traders are advised to use \"a single IP address\"; travel needs advance notice; a breach leads to a warning and profit deduction plus an account reset if profitable, and severe cases to termination without profit share.",
           "impact": "Unannounced IP changes can cost profits and reset the account.",
           "source": "https://forexive.com/faq/general"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "FOREXIVE LTD",
+          "jurisdiction": "United Kingdom",
+          "registrationNumber": "Companies House 15746920 (active, incorporated 2024-05-28, formerly HF GLOBAL SOLUTIONS LTD)",
+          "registeredAddress": "3rd Floor, 86-90 Paul Street, London EC2A 4NE",
+          "role": "Provider under the GTC (challenge services); the funded FOREXIVETrader programme is run by an unnamed third party (GTC §7)"
         }
       ]
     },
@@ -25416,7 +25580,7 @@
       ]
     },
     "klein-funding-crypto": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-20",
       "set": {
         "officialWebsite": "https://kleinfunding.com/",
         "profitSplit": 85,
@@ -25424,7 +25588,8 @@
         "newsTrading": "Restricted",
         "drawdownType": "Static",
         "verdict": "Klein Funding sells 1-Step and 2-Step crypto-focused evaluations on TradeLocker from $49 to $539, with a static drawdown and a 70% first split rising to 85%. The FAQ voids profit made two minutes either side of high-impact news, breaches accounts that repeatedly trade two evaluations at once, and limits payouts to the 10th and 20th. No legal entity or readable terms were found.",
-        "auditSummary": "Official-source review dated 19 November 2026. Klein Funding (brand \"Klein Funding Crypto\") sells a 1-Step evaluation (3% daily / 6% overall loss, at least 4 trading days) and a 2-Step evaluation (4% / 8%), both with a static drawdown, no time limit and simulated sizes up to $6,000 to $100,000 at list prices of $49-$539 (1-Step) and $49-$439 (2-Step) per the official FAQ; profit-target percentages are not given in the text of the pages read. Trading is on TradeLocker (crypto, forex, indices, metals). The FAQ states that profits made within two minutes before or after a red-folder news event are removed as a soft breach, three soft breaches becoming a hard breach; that trading more than one evaluation at a time triggers a warning and then a breach; that hedging, arbitrage, latency, HFT, tick scalping, group trading and holding over half of trades under one minute are prohibited; and that shared households, devices, IPs or VPS are not allowed, with $400,000 of funded capital per trader. The pricing page adds a nightly 11:30-11:59 PM CET reset window with no trading, and it conflicts with the FAQ on minimum days for the 2-Step. Payouts: 70% first share, 85% after (90% with a paid add-on), requested on the 10th and 20th once the funded account is 10 days old, processed in 24-48 hours; the FAQ cites a \"no payout denial policy\". Fees are non-refundable. Unverified: the Terms of Use (page not reachable), the legal entity, and independent payout evidence."
+        "auditSummary": "Official-source review dated 19 November 2026. Klein Funding (brand \"Klein Funding Crypto\") sells a 1-Step evaluation (3% daily / 6% overall loss, at least 4 trading days) and a 2-Step evaluation (4% / 8%), both with a static drawdown, no time limit and simulated sizes up to $6,000 to $100,000 at list prices of $49-$539 (1-Step) and $49-$439 (2-Step) per the official FAQ; profit-target percentages are not given in the text of the pages read. Trading is on TradeLocker (crypto, forex, indices, metals). The FAQ states that profits made within two minutes before or after a red-folder news event are removed as a soft breach, three soft breaches becoming a hard breach; that trading more than one evaluation at a time triggers a warning and then a breach; that hedging, arbitrage, latency, HFT, tick scalping, group trading and holding over half of trades under one minute are prohibited; and that shared households, devices, IPs or VPS are not allowed, with $400,000 of funded capital per trader. The pricing page adds a nightly 11:30-11:59 PM CET reset window with no trading, and it conflicts with the FAQ on minimum days for the 2-Step. Payouts: 70% first share, 85% after (90% with a paid add-on), requested on the 10th and 20th once the funded account is 10 days old, processed in 24-48 hours; the FAQ cites a \"no payout denial policy\". Fees are non-refundable. Unverified: the Terms of Use (page not reachable), the legal entity, and independent payout evidence.",
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/kleinfunding.com"
       },
       "addSources": [
         {
@@ -25462,6 +25627,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 5 new restrictive rules; 1 outdated rule(s) removed; 2 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text. Some official documents could not be read on this date; see the audit summary.",
           "source": "https://kleinfunding.com/faqs",
           "fields": ["auditSummary", "drawdownType", "newsTrading", "payoutDelay", "products", "profitSplit", "restrictiveRules", "verdict"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Trustpilot guideline-breach notice recorded (rating withheld, fake reviews removed), read on 2026-11-20: single −6.",
+          "source": "https://ie.trustpilot.com/review/kleinfunding.com",
+          "fields": ["trustpilotSourceUrl", "incidents"]
         }
       ],
       "auditedPrograms": [
@@ -25632,6 +25803,9 @@
           "hasConsistencyRule": false,
           "consistencyRule": "No consistency rule stated in the official FAQ"
         }
+      ],
+      "addIncidents": [
+        "On 2026-11-20 Trustpilot showed on kleinfunding.com (486 reviews): \"This company's rating is unavailable due to a breach of our guidelines\" and \"We've removed a number of fake reviews for this company\". Trustpilot does not say who wrote the removed reviews."
       ]
     },
     "quantec-trading-capital": {
@@ -27265,7 +27439,7 @@
       ]
     },
     "get-leveraged": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -27302,16 +27476,26 @@
           "summary": "Restrictive-rules audit: read the official terms, the FAQ prohibited-practices, consequences, news, consistency, inactivity, VPN and payout pages, and the Turbo, ONE, Instant, Sprint and Junior programme pages; 9 rules across Turbo, ONE, Instant, Sprint and Classic.",
           "source": "https://getleveraged.com/faq/what-is-prohibited/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Trustpilot guideline-breach notice shown again on 2026-11-20 (fake reviews removed); the 2026-11-17 lift no longer applies, so the single −6 applies again.",
+          "source": "https://www.trustpilot.com/review/getleveraged.com",
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "incidents"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N01): facts read on official pages or registries on 2026-11-20: profitSplit.",
+          "source": "https://getleveraged.com/fr/faq/payouts-and-profit-split/",
+          "fields": ["profitSplit"]
         }
       ],
       "set": {
         "verdict": "Active simulated-account challenge provider with identified Saint Lucia operator and Cyprus billing agent. Its current Trustpilot rating is displayed again, but a prior review-integrity notice and a published CySEC investment-services warning materially affect the strength of its public trust signals. Verify each program's payout and deferred-fee rules before buying.",
         "auditSummary": "17 November 2026 deeper review: official October 2026 terms identify GetLeveraged Ltd (Saint Lucia registration 2025-00808), distinct from Cyprus payment agent Leveraged Capital Management LTD (HE471661 in the official Gazette). The terms describe fully simulated accounts rather than real-money trading. CySEC's 7 April 2026 warning includes getleveraged.com as unauthorised for investment services; whether a particular simulated evaluation service legally requires authorisation is a separate question, not determined by the website notice alone. Trustpilot now displays 4.5/5 and 1,312 reviews, while a documented earlier rating-withheld/fake-review-removal notice remains relevant history. Eligibility differs by program: Turbo's initial reward typically requires 14 days and a 20% best-day limit; Sprint/Classic differ. The low advertised Turbo signup amount may be followed by a substantial funded-stage fee. No independently matched bank receipt or on-chain payout transfer was authenticated for this review.",
-        "trustpilotRating": 4.5,
-        "trustpilotReviewCount": 1312,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/getleveraged.com",
-        "trustpilotNoticeLifted": "2026-11-17",
-        "payoutDelay": "Program-dependent: Turbo first payout after 14 calendar days plus three qualifying profit days and a 20% best-day cap; Sprint and Classic follow different schedules. Check the current program's official FAQ before purchase."
+        "payoutDelay": "Program-dependent: Turbo first payout after 14 calendar days plus three qualifying profit days and a 20% best-day cap; Sprint and Classic follow different schedules. Check the current program's official FAQ before purchase.",
+        "profitSplit": 80
       },
       "setEntities": [
         {
@@ -27403,7 +27587,11 @@
           "url": "https://getleveraged.com/faq/what-is-the-leveraged-instant-program/"
         }
       ],
-      "addIncidents": ["2026-04-07 — The Cyprus Securities and Exchange Commission published getleveraged.com among websites not authorised to provide investment services. This does not alone decide the licence treatment of its simulated challenges. Primary notice: https://fi.ee/sites/default/files/2026-04/GetFile.pdf", "2026-11-16 — Historical Trustpilot guideline-breach and fake-reviews-removal notice recorded by PropTested while the rating was withheld; on 17 November Trustpilot again displayed a numerical rating. Source: https://proptested.com/firms/leveraged"],
+      "addIncidents": [
+        "2026-04-07 — The Cyprus Securities and Exchange Commission published getleveraged.com among websites not authorised to provide investment services. This does not alone decide the licence treatment of its simulated challenges. Primary notice: https://fi.ee/sites/default/files/2026-04/GetFile.pdf",
+        "2026-11-16 — Historical Trustpilot guideline-breach and fake-reviews-removal notice recorded by PropTested while the rating was withheld; on 17 November Trustpilot again displayed a numerical rating. Source: https://proptested.com/firms/leveraged",
+        "On 2026-11-20 Trustpilot again showed the notice \"This company's rating is unavailable due to a breach of our guidelines\" and \"We've removed a number of fake reviews for this company\" on getleveraged.com (1,282 reviews); the visible rating recorded on 2026-11-17 is no longer shown. Trustpilot does not say who wrote the removed reviews."
+      ],
       "auditedPrograms": [
         {
           "key": "turbo",
