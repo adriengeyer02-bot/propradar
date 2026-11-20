@@ -34,7 +34,7 @@ export function GET() {
     `Data last updated ${updated}. ${openFirms.length} open firms and ${closed.length} closed firms tracked; ${documentedClosures.length} closures documented with a dated source.`,
     '',
     'Rules every page follows: every fact has a public source and a date; facts, not verdicts; no estimated numbers (unknown values say "not stated" or "to verify"); every update is kept in a dated history; affiliate links never change a score.',
-    'The PropRadar score (0-100) is editorial, set by hand from the firm file, with fixed rules: bands 75+, 50-74, under 50; minus a computed restrictive-rules penalty (at most 12) and minus 6 points, once, while Trustpilot withholds the rating for a guideline breach; closed firms are capped at 29.',
+    'PropRadar is migrating to a payout-first 100-point rubric (40 payouts, 25 contractual rights, 15 identity, 15 programme value, 5 track record). Historical editorial scores await full A/B/C/D/E re-audit. Objective trading restrictions remain visible without a separate automatic penalty. A current documented Trustpilot guideline-breach notice costs 6 points once; closed firms are capped at 29.',
     'When citing PropRadar, cite the firm page and its review date. Confirm prices and rules on the firm\'s own site before buying.',
     '',
     '## Key pages',
