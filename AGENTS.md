@@ -7,7 +7,7 @@ any change, in this order:
    files, sources, editorial and legal rules, sensitive changes, checks before
    merge).
 2. `SCORING_V4.md`: **current target policy and active score calculation**
-   for the 31 individually published V4 firms (25/35/15/15/10, one Trustpilot
+   for the 32 individually published V4 firms (25/35/15/15/10, one Trustpilot
    −6, no standalone restrictive-rules deduction; owner approval 2026-11-20).
    `SCORING.md` documents the **legacy pipeline only**, for the remaining
    firms that have not passed the V4 publication gate. Do not silently apply

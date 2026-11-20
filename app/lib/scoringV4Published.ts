@@ -34,7 +34,7 @@ export const V4_PUBLISHED_SLUGS = [
   'fxify', 'funderpro', 'funding-pips', 'brightfunded', 'pipfarm', 'for-traders',
   'leeloo-trading', 'funding-traders', 'ftuk', 'aqua-funded', 'hantec-trader',
   'hola-prime', 'lark-funding', 'bulenox', 'finotive-funding', 'ment-funding',
-  'elite-trader-funding', 'crypto-fund-trader',
+  'elite-trader-funding', 'crypto-fund-trader', 'myfundedcapital',
 ] as const;
 
 type FullReview = (typeof batch1.firms)[number];
@@ -45,7 +45,7 @@ for (const row of batch2.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of batch3.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of batch4Published.firms as CompactReview[]) reviews.set(row.slug, row);
 
-if (approved.size !== V4_PUBLISHED_SLUGS.length || approved.size !== 31) throw Error('V4: publication manifest must contain exactly 31 unique firms');
+if (approved.size !== V4_PUBLISHED_SLUGS.length || approved.size !== 32) throw Error('V4: publication manifest must contain exactly 32 unique firms');
 for (const slug of approved) {
   const row = reviews.get(slug);
   if (!row || row.confidence !== 'moyenne' || ('scores' in row && row.scores === null)) {
