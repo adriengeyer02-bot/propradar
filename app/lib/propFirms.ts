@@ -1757,26 +1757,26 @@ const corePropFirms: PropFirm[] = [
     auditStatus: 'Partiellement vérifié',
     auditSummary:
       'Official Terms version 2026.3 (5 November 2026) names MAVEN EDU - FZCO as the contracting operator in Dubai (trade licence 60823), independently cross-referenced in Dubai KHDA's business directory. Accounts are simulated, without customer deposits or brokerage. Sections 6.4 and 6.6 preserve mandatory consumer rights and legitimate payment disputes. Older legal materials referred to MAVEN LLC: account holders under historic contracts should confirm which entity remains liable. A separate signed agreement, trade licence register extract, and independent bank-level payout evidence have not been obtained.',
-    auditSourcesChecked: ['Official site', 'Terms and Conditions', 'Risk Disclosure', 'Footer disclaimer', 'Exact-name article/news search'],
+    auditSourcesChecked: ['Official site', 'Terms and Conditions v2026.3', 'Dubai KHDA business directory', 'Risk Disclosure', 'Footer disclaimer', 'Exact-name article/news search'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
-      lastChecked: '2026-07-08',
+      lastChecked: '2026-11-20',
       summary:
         'Medium-to-high legal risk pending continuity verification. Current Terms v2026.3 identify MAVEN EDU - FZCO (Dubai, trade licence 60823), corroborated by the government KHDA directory; earlier terms named MAVEN LLC, whose legal relationship to current funded agreements must still be checked. Simulated cash rewards are expressly contractual, and eligible accrued rewards survive termination where legally due (§§11.2, 13.4), but §13.2 still permits termination for any reason the firm considers necessary. Mandatory refund rights and legitimate payment disputes are preserved in §§6.4/6.6.',
       entities: [
         {
           name: 'MAVEN LLC',
           jurisdiction: 'United Arab Emirates, DIEZ',
-          registrationNumber: '105072496000001',
+          registrationNumber: 'Historical company registration not independently verified',
           registeredAddress: 'DSO-IFZA, IFZA Properties, Dubai Silicon Oasis, Dubai',
-          role: 'Entity referenced in older public legal texts, not the operator named in the current Terms v2026.3; legal continuity requires documentary reconciliation.',
+          role: 'Historical operator name from older legal texts; not named as current contracting company in Terms v2026.3. The numeric identifier 105072496000001 used in earlier audits is identified in the current contract as a corporate TAX number, not an independently verified MAVEN LLC registration.',
         },
         {
           name: 'Maven Edu - FZCO',
           jurisdiction: 'United Arab Emirates, DSO-IFZA',
           registrationNumber: '006-0060823-070425',
           registeredAddress: 'DSO-IFZA, IFZA Properties, Dubai Silicon Oasis',
-          role: 'Contracting company explicitly named in Terms v2026.3 (licence 60823); Dubai KHDA lists MAVEN EDU - FZCO. Older MAVEN LLC relationship remains to be documented.',
+          role: 'Current contracting company: Terms v2026.3 give trade licence 60823 and corporate tax number 105072496000001; Dubai KHDA independently lists MAVEN EDU - FZCO. Older MAVEN LLC relationship remains to be documented.',
         },
       ],
       regulatoryStatus: [
