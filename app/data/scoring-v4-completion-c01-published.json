@@ -1,0 +1,47 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "batch": "C01",
+  "status": "approuvee-publication-ciblee",
+  "note": "Deux audits initialement limites du lot 2, termines avec contrats complets et identification independante. Les huit autres dossiers C01 restent historiques; aucune penalite automatique de regle de trading.",
+  "firms": [
+    {
+      "slug": "alpha-capital-group",
+      "before": 71,
+      "confidence": "moyenne",
+      "scores": {"A": [8, 8, 3], "B": [9, 7, 5, 5], "C": [8, 4, 2], "D": [4, 5, 4], "E": [4, 2, 2]},
+      "sources": {
+        "payout": "https://alphacapitalgroup.uk/terms-and-conditions",
+        "contract": "https://alphacapitalgroup.uk/terms-and-conditions",
+        "program": "https://alphacapitalgroup.uk/terms-and-conditions",
+        "entity": "https://find-and-update.company-information.service.gov.uk/company/13719951",
+        "offer": "https://alphacapitalgroup.uk/product"
+      },
+      "finding": "CGU publiques Schedule 2, avec partage 80/90% et versements Rise/Wise/virement sous deux jours ouvrables, quatorze en verification. L'article 2.6 autorise toutefois le refus de performance fee selon l'appreciation de la firme en cas de regle enfreinte : risque B1, pas incident A2 prouve. Les plafonds de risque par idee, restrictions news et VPN sont publics et ne sont pas une deduction de penalite. Trustpilot retient toujours le TrustScore : -6 une fois. L'entite britannique est verifiee dans Companies House.",
+      "findingSource": "https://alphacapitalgroup.uk/terms-and-conditions",
+      "b1": "Schedule 2 art. 2.6 : non-paiement possible selon la propre appreciation de la firme pour une infraction aux regles; protection imparfaite des rewards. Aucun refus injustifie independamment etabli par cette clause.",
+      "b2": "Les annexes publiques Alpha Pro, One, Direct et Swing distinguent les drawdowns et le calendrier de remuneration. Ne pas confondre etape d'evaluation et Qualified Analyst.",
+      "b3": "Modalites publiques de modification a relire pour les achats anterieurs; aucun effet retroactif concret prouve. La decision discretionnaire art. 2.6 n'est penalisee qu'en B1.",
+      "hold": "Moyenne, pas elevee : le contrat signe pour chaque Qualified Account est remis depuis le dashboard et les chiffres de payout repris par la presse viennent initialement de la firme. Avis Trustpilot actif verifie le 20 novembre 2026. Ne pas assimiler ACG Markets Seychelles a la societe contractante britannique."
+    },
+    {
+      "slug": "maven-trading",
+      "before": 67,
+      "confidence": "moyenne",
+      "scores": {"A": [8, 8, 2], "B": [10, 4, 6, 5], "C": [8, 4, 2], "D": [4, 5, 4], "E": [4, 2, 2]},
+      "sources": {
+        "payout": "https://maventrading.com/terms-and-conditions",
+        "contract": "https://maventrading.com/terms-and-conditions",
+        "program": "https://maventrading.com/terms-and-conditions",
+        "entity": "https://web.khda.gov.ae/en/education-directory/Training/Training-Details?CenterID=506634",
+        "offer": "https://maventrading.com/pricing"
+      },
+      "finding": "CGU version 2026.3 du 5 novembre : MAVEN EDU - FZCO, licence UAE n°60823, identifiee aussi dans l'annuaire public de Dubai KHDA. Art. 10 encadre les rewards, plafond partage de 10000 USD sur 30 jours pour plusieurs comptes, droit acquis protege selon art. 13.4 et 16. Resiliation art. 13.2 comporte toutefois 'any reason it sees necessary'. La navigation propose Static 1-Step, absent du tableau contractuel Schedule 1 : lacune uniquement B2, sans double decompte en B4. Notice Trustpilot active -6 une fois.",
+      "findingSource": "https://maventrading.com/terms-and-conditions",
+      "b1": "Art. 13.2 maintient un motif general de resiliation, mais 13.4 et 11.2 reservent explicitement les rewards eligibles acquis; sanctionner la marge de discretion en B1 seulement, pas comme refus reel de payout.",
+      "b2": "Schedule 1 differencie Standard 1/2/3, OMO, BNPL, Instant et Mini et fixe les caps et delais; cependant Static 1-Step et les Prediction Markets visibles au catalogue n'y sont pas entierement recenses.",
+      "b3": "Art. 16 : nouvelles regles non retroactives pour commandes acceptees sauf loi/consentement requis; art. 13.4 : obligation de recompense acquise conservee sous reserve des conditions legales.",
+      "hold": "Moyenne : trade licence numerotee et nom de societe corroborés par l'annuaire public KHDA, sans copie du registre DIEZ ni preuve bancaire exhaustive. Verification des conditions de Static 1-Step et de Predictions au checkout encore necessaire. Trustpilot retient le TrustScore au 20 novembre 2026."
+    }
+  ]
+}
