@@ -1,0 +1,26 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "status": "approved-non-sensitive-2-from-ranks-44-63",
+  "method": "V4 25/35/15/15/10; current official contract/payout/programme sources. No separately deducted consistency rule. A contractual risk B1 is not a proven refused payout A2.",
+  "firms": [
+    {
+      "slug": "elite-trader-funding", "before": 58, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[3,7,2,5],"C":[6,3,2],"D":[4,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://elitetraderfunding.app/help/how-do-payouts-work?version=latest","contract":"https://elitetraderfunding.app/terms-of-service","program":"https://elitetraderfunding.app/help/reward-withdrawal-options","entity":"https://elitetraderfunding.app/terms-of-service","offer":"https://elitetraderfunding.app/help/how-do-payouts-work?version=latest"},
+      "b1":"Clauses 4 novembre 2026 : lors de la conversion LIVE ELITE, les demandes en attente peuvent être réaffectées à du capital LIVE ou Vault au choix de la firme plutôt que payées en monnaie.",
+      "b2":"Règles de reward et produits SIM/LIVE publiés. Consistance chiffrée non sanctionnée.",
+      "b3":"Montants et conditions de reward modifiables sans préavis, y compris sur produits existants; droits déjà approuvés à distinguer.",
+      "hold":"Vérifier liquidité des allocations Vault et registre de la LLC; aucune preuve indépendante d'un impayé injustifié.",
+      "next":"Surveiller le contrat LIVE ELITE Vault et ses effets sur les demandes approuvées."
+    },
+    {
+      "slug": "crypto-fund-trader", "before": 55, "confidence": "moyenne", "scores": {"A":[7,8,2],"B":[1,6,2,4],"C":[8,3,2],"D":[4,4,4],"E":[3,2,2]},
+      "sources": {"payout":"https://cryptofundtrader.com/faq/","contract":"https://cryptofundtrader.com/terms-and-conditions/","program":"https://cryptofundtrader.com/faq/","entity":"https://www.uid.admin.ch/Detail.aspx?lang=fr&uid_id=CHE-162.567.204","offer":"https://cryptofundtrader.com/"},
+      "b1":"Art. 14.2 : scholarship pouvant ne pas être payée malgré objectif atteint, avec recours au remboursement des frais. Entretiens et clause de critique publique affectent aussi les rewards : risque B1 sans incident A2 prouvé.",
+      "b2":"Payouts et critères distincts pour 1-Step, 2-Phase, Ascend et Break; ne pas généraliser entre les formules.",
+      "b3":"Art. 1.3 : politiques modifiables à la discrétion de la firme, sans garantie explicite des comptes antérieurs; aucun acte rétroactif prouvé.",
+      "hold":"SWISS RLCRATES AG CHE-162.567.204 active au registre UID suisse. Réserve publiée par la société non assimilée à un audit bancaire externe.",
+      "next":"Rechercher des décisions indépendantes sur les demandes de reward et les conditions de tickets Ascend."
+    }
+  ]
+}
