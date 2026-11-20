@@ -74,10 +74,13 @@ export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
     // criteria B1–B4. Surface the evidence, never subtract legacy points again.
     const allRules = update?.restrictiveRules ?? [];
     const scoredRules = allRules.filter(isScoredRule);
-    const heaviest = scoredRules
-      .filter((rule) => ruleKind(rule) === 'risk')
-      .map((rule) => ({ rule, points: rulePoints(rule) }))
-      .sort((a, b) => b.points - a.points)
+    // The dialog presents the most relevant risks first, then a few clearly
+    // published restrictions for context. Neither list adds a V4 deduction.
+    const heaviest = [
+      ...scoredRules.filter((rule) => ruleKind(rule) === 'risk'),
+      ...scoredRules.filter((rule) => ruleKind(rule) === 'restriction'),
+    ].map((rule) => ({ rule, points: rulePoints(rule) }))
+      .sort((a, b) => Number(ruleKind(b.rule) === 'risk') - Number(ruleKind(a.rule) === 'risk') || b.points - a.points)
       .slice(0, 4);
     return {
       editorial: v4.editorial,

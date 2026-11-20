@@ -122,8 +122,9 @@ peuvent avoir des effets distincts, sans inventer un incident supplémentaire.
    non comme 197 notes définitives. Les anciennes sous-notes B2 sur dix
    points ne sont pas interchangeables avec B1 sur quinze points.
 4. Tenir un tableau `ancienne note / A / B / C / D / E / Trustpilot /
-   fermeture / nouvelle note / confiance / sources / date` ; exposer les
-   cinq blocs dans le dialogue public, pas la litanie des clauses techniques.
+   fermeture / nouvelle note / confiance / sources / date` ; conserver les
+   cinq blocs dans le dossier d'audit et la méthodologie, sans encombrer la
+   fenêtre publique de notation.
 5. **Ne pas activer l'aperçu de la PR #199** : le retrait de l'ancien malus
    à lui seul ne constitue pas le nouveau barème et pourrait surévaluer
    certaines firmes aux clauses de payouts très subjectives.
@@ -143,8 +144,16 @@ Adrien a demandé la **mise en ligne des notes V4 recalibrées**. Le moteur
 61/100, puis Atlas Funded 66/100, Traders Launch 61/100, Funded Bull
 55/100 et OFP Funding 58/100, puis Alpha Capital Group 74/100 et Maven Trading 72/100).
 La note, le classement, les comparateurs et la
-fenêtre de note lisent tous le **même `firm.score` final**. Le clic sur cette
-note affiche les cinq blocs A/B/C/D/E (pas les poids bruts des restrictions).
+fenêtre de note lisent tous le **même `firm.score` final**. Décision visuelle
+du 20 novembre 2026 : le clic sur la note reprend la fenêtre validée « Score
+file » avec seulement deux étapes principales, « Editorial score » puis
+« Restrictive rules », les règles les plus importantes, la note affichée et
+les signaux au dossier. Les cinq blocs A/B/C/D/E restent dans la méthode
+d'audit, sans section supplémentaire dans cette fenêtre. Sur les fiches V4,
+les risques contractuels ont déjà été pris en compte en B1–B4 : la fenêtre
+doit le préciser, **sans afficher de nouveau malus fictif**. Les éventuels
+ajustements Trustpilot ou de fermeture restent visibles en notes secondaires,
+pour que le chemin entre la note éditoriale et la note affichée soit fidèle.
 
 **Lot rangs historiques 44–63 :** les trois firmes sont publiées avec une
 confiance moyenne, leurs clauses de récompense étudiées en B1 et aucune
