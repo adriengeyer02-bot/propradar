@@ -1,4 +1,5 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
+import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
 import { toEnglishText } from './i18n';
@@ -140,6 +141,8 @@ export type PropFirm = {
   rulesPenalty?: { before: number; penalty: number };
   /** Trustpilot −6 (SCORING.md 1): applied, or already included in a dated editorial score. */
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
+  /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
+  v5SafetyCap?: { before: number; cap: 55 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
@@ -12933,6 +12936,9 @@ function applyClosedScoreRule(firm: PropFirm): PropFirm {
  * is approved (RULES_PENALTY_ENABLED).
  */
 function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
+  // V5 B2 has already reduced the editorial score. A second legacy rules
+  // deduction would punish the same contract clause twice.
+  if (isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
   if (!RULES_PENALTY_ENABLED || firm.status === 'Fermée') return firm;
   const result = computeRulesPenalty(getFirmUpdate(firm.slug));
   if (!result?.penalty) return firm;
@@ -12955,6 +12961,13 @@ function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
     return { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } };
   }
   return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
+}
+
+function applyV5SafetyCapRule(firm: PropFirm): PropFirm {
+  if (getFirmUpdate(firm.slug)?.scoringVersion !== 5 && !(!getFirmUpdate(firm.slug) && isPublishedV5(firm.slug))) return firm;
+  const v5 = getPublishedV5Score(firm);
+  if (!v5 || firm.status === 'Fermée' || v5.safetyCap === null || firm.score <= v5.safetyCap) return firm;
+  return { ...firm, score: v5.safetyCap, v5SafetyCap: { before: firm.score, cap: 55 } };
 }
 
 /**
@@ -13000,7 +13013,7 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

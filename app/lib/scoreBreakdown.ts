@@ -2,6 +2,7 @@ import type { PropFirm } from './propFirms';
 import { getFirmUpdate, type RestrictiveRule } from './firmUpdates';
 import { computeRulesPenalty, isScoredRule, ruleKind, rulePoints, RULES_PENALTY_ENABLED, RULES_PENALTY_MAX } from './restrictiveRules';
 import { getPublishedV4Score, isPublishedV4, type PublishedV4Score } from './scoringV4Published';
+import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
 
 /**
  * Step-by-step explanation of a firm's displayed score (SCORING.md): the
@@ -17,6 +18,7 @@ export type ScoreBreakdown = {
   editorial: number;
   /** Validated V4 five-block breakdown; no second legacy rules deduction. */
   v4?: PublishedV4Score;
+  v5?: NonNullable<ReturnType<typeof getPublishedV5Score>>;
   rules?: {
     penalty: number;
     applied: boolean;
@@ -30,12 +32,40 @@ export type ScoreBreakdown = {
   unclassifiedOnly: number;
   trustpilot?: { penalty: number; included: boolean; before: number };
   closedCap?: { cap: number; before: number };
+  safetyCap?: { cap: number; before: number };
   final: number;
   maxPenalty: number;
 };
 
 export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
   const update = getFirmUpdate(firm.slug);
+  const v5 = (update?.scoringVersion === 5 || (!update && isPublishedV5(firm.slug)))
+    ? getPublishedV5Score(firm) : undefined;
+  if (v5) {
+    const allRules = update?.restrictiveRules ?? [];
+    const classified = allRules.filter(isScoredRule);
+    return {
+      editorial: v5.editorialGross,
+      v5,
+      rules: {
+        penalty: v5.rulesPenalty,
+        applied: true,
+        rawLoad: v5.rulesPenalty,
+        programs: [],
+        counted: classified.length,
+        uncounted: allRules.length - classified.length,
+        heaviest: classified.filter((rule) => ruleKind(rule) === 'risk')
+          .map((rule) => ({ rule, points: rulePoints(rule) }))
+          .sort((a, b) => b.points - a.points).slice(0, 4),
+      },
+      unclassifiedOnly: allRules.length - classified.length,
+      trustpilot: firm.trustpilotPenalty,
+      safetyCap: firm.v5SafetyCap,
+      closedCap: firm.closedCap,
+      final: firm.score,
+      maxPenalty: 10,
+    };
+  }
   const v4 = (update?.scoringVersion === 4 || (!update && isPublishedV4(firm.slug)))
     ? getPublishedV4Score(firm)
     : undefined;
