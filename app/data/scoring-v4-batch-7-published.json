@@ -1,0 +1,31 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "status": "2-publications-individuellement-verifiees",
+  "firms": [
+    {
+      "slug": "get-leveraged",
+      "before": 50,
+      "confidence": "moyenne",
+      "scores": { "A": [7, 8, 1], "B": [6, 5, 6, 5], "C": [5, 3, 0], "D": [2, 3, 3], "E": [2, 2, 1] },
+      "sources": { "payout": "https://getleveraged.com/terms/", "contract": "https://getleveraged.com/terms/", "program": "https://getleveraged.com/fr/faq/payouts-and-profit-split/", "entity": "https://fi.ee/sites/default/files/2026-04/GetFile.pdf", "offer": "https://getleveraged.com/" },
+      "b1": "§7.2/8.3 laissent à la firme l'appréciation de certaines pratiques abusives non totalement chiffrées et le droit de remplacer un reward par un nouveau compte; une notification écrite et un recours interne (§12.4) atténuent ce risque. Il est retenu en B1, non A2.",
+      "b2": "CGU mises à jour le 17 novembre 2026, avec règles de performance Turbo, Sprint et Classic et frais d'activation distincts à rapprocher des options réellement achetées.",
+      "b3": "§7.5 préserve les règles des comptes déjà achetés, prévoit un préavis de 14 jours et exclut les nouvelles règles appliquées rétroactivement aux trades antérieurs. Des exceptions encadrées existent en cas de droit ou abus et une reprise de reward payé en cas de pratique interdite identifiée dans les 90 jours.",
+      "hold": "A16 B22 C8 D8 E5 = 59/100 (+9), sans −6 Trustpilot car la note est actuellement visible. CySEC a inscrit le domaine getleveraged.com dans une alerte datée 7 avril 2026 sur des sites sans autorisation pour des services d'investissement; C3=0. Le site se présente comme un simulateur : l'alerte ne suffit pas à qualifier juridiquement toutes ses prestations, ni à établir un payout refusé. GetLeveraged Ltd et l'agent de paiement sont nommés, registres et preuve bancaire générale non vérifiés. Confiance moyenne.",
+      "next": "Contrôler registres de sociétés et éventuel changement de la notice CySEC, puis concordance des frais au checkout."
+    },
+    {
+      "slug": "miltraders",
+      "before": 50,
+      "confidence": "moyenne",
+      "scores": { "A": [7, 8, 1], "B": [5, 7, 0, 5], "C": [5, 3, 2], "D": [3, 4, 3], "E": [2, 1, 2] },
+      "sources": { "payout": "https://miltraders.com/terms/", "contract": "https://miltraders.com/terms/", "program": "https://miltraders.com/faqs/", "entity": "https://miltraders.com/risk-disclosure/", "offer": "https://miltraders.com/" },
+      "b1": "§9.4 énumère les motifs de refus et garantit un recours interne, mais §10 permet de basculer le trader obligatoirement en Live, de fermer les comptes simulés et de perdre les rewards simulés non demandés; refus de KYC par le broker : clôture sans remboursement (§10.9). §12.5 permet aussi une appréciation de gambling behavior avec perte d'un payout demandé. B1=5.",
+      "b2": "Zero, Pro et Instant ont chacun leurs buffers, jours gagnants et caps. Les CGU complètes détaillent le paiement (48 heures de traitement annoncées, compte Rise/bank/USDC), sans transformer ces déclarations en preuve indépendante.",
+      "b3": "§1.3/2.2 remplacent les anciens accords et appliquent les règles mises à jour à des comptes achetés avant le changement : aucune protection générale de version. Ce fait vaut B3=0 et n'est pas déduit une deuxième fois en B2/A2.",
+      "hold": "A16 B17 C10 D10 E5 = 58/100 (+8), pas de notice Trustpilot retenue. À la date du contrôle, 16 avis actifs, 4,0/5, échantillon insuffisant pour une preuve de payout. MILTRADERS L.L.C-FZ, formation 2643914 et licence Meydan 2643914.01 nommées dans les CGU, immatriculation officielle et transferts bancaires non vérifiés. Confiance moyenne.",
+      "next": "Vérifier l'accord de courtage Live et le traitement des gains non demandés, l'immatriculation UAE et des transferts indépendants."
+    }
+  ]
+}
