@@ -10,6 +10,7 @@ import batch2 from '../data/scoring-v4-batch-2.json';
 import batch3 from '../data/scoring-v4-batch-3.json';
 import batch4Published from '../data/scoring-v4-batch-4-published.json';
 import batch5Published from '../data/scoring-v4-batch-5-published.json';
+import batch6Published from '../data/scoring-v4-batch-6-published.json';
 import type { PropFirm } from './propFirms';
 import { computeV4Scorecard, V4_BLOCKS, type V4Scorecard, type V4Criterion, type V4Assessment } from './scoringV4';
 
@@ -36,6 +37,7 @@ export const V4_PUBLISHED_SLUGS = [
   'leeloo-trading', 'funding-traders', 'ftuk', 'aqua-funded', 'hantec-trader',
   'hola-prime', 'lark-funding', 'bulenox', 'finotive-funding', 'ment-funding',
   'elite-trader-funding', 'crypto-fund-trader', 'myfundedcapital', 'blue-guardian', 'atlas-funded',
+  'traders-launch', 'funded-bull', 'ofp-funding',
 ] as const;
 
 type FullReview = (typeof batch1.firms)[number];
@@ -46,8 +48,9 @@ for (const row of batch2.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of batch3.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of batch4Published.firms as CompactReview[]) reviews.set(row.slug, row);
 for (const row of batch5Published.firms as CompactReview[]) reviews.set(row.slug, row);
+for (const row of batch6Published.firms as CompactReview[]) reviews.set(row.slug, row);
 
-if (approved.size !== V4_PUBLISHED_SLUGS.length || approved.size !== 34) throw Error('V4: publication manifest must contain exactly 34 unique firms');
+if (approved.size !== V4_PUBLISHED_SLUGS.length || approved.size !== 37) throw Error('V4: publication manifest must contain exactly 37 unique firms');
 for (const slug of approved) {
   const row = reviews.get(slug);
   if (!row || row.confidence !== 'moyenne' || ('scores' in row && row.scores === null)) {
