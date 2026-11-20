@@ -1756,7 +1756,7 @@ const corePropFirms: PropFirm[] = [
     weaknesses: ['Recent track record', 'Small account sizes mostly useful for testing', 'Earlier MAVEN LLC naming still needs to be reconciled with current MAVEN EDU - FZCO contract'],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official Terms version 2026.3 (5 November 2026) names MAVEN EDU - FZCO as the contracting operator in Dubai (trade licence 60823), independently cross-referenced in Dubai KHDA's business directory. Accounts are simulated, without customer deposits or brokerage. Sections 6.4 and 6.6 preserve mandatory consumer rights and legitimate payment disputes. Older legal materials referred to MAVEN LLC: account holders under historic contracts should confirm which entity remains liable. A separate signed agreement, trade licence register extract, and independent bank-level payout evidence have not been obtained.',
+      'Official Terms version 2026.3 (5 November 2026) names MAVEN EDU - FZCO as the contracting operator in Dubai (trade licence 60823), independently cross-referenced in the Dubai KHDA business directory. Accounts are simulated, without customer deposits or brokerage. Sections 6.4 and 6.6 preserve mandatory consumer rights and legitimate payment disputes. Older legal materials referred to MAVEN LLC: account holders under historic contracts should confirm which entity remains liable. A separate signed agreement, trade licence register extract, and independent bank-level payout evidence have not been obtained.',
     auditSourcesChecked: ['Official site', 'Terms and Conditions v2026.3', 'Dubai KHDA business directory', 'Risk Disclosure', 'Footer disclaimer', 'Exact-name article/news search'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
