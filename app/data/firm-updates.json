@@ -1345,7 +1345,7 @@
       ]
     },
     "apex-trader-funding": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-10-28",
@@ -1388,6 +1388,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed. Editorial score restored from 63 to 66: the earlier manual deduction (\"Score 66 to 63 for restrictive earned-account payout structure, no new legal allegations.\") is replaced by the computed restrictive-rules penalty, so it is not counted twice.",
           "source": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
           "fields": ["restrictiveRules", "score"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 12 new classified restrictive rules.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -1423,6 +1429,10 @@
         {
           "label": "Apex EOD PA payments and six-payout closure",
           "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-20)",
+          "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
         }
       ],
       "setLegalReview": {
@@ -1462,6 +1472,126 @@
           "category": "account-ends-after-payouts",
           "severity": "blocking",
           "clarity": "clear"
+        },
+        {
+          "program": "Apex Performance Accounts — Rewards (User Agreement §11, §12, §30)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "The User Agreement states Rewards 'are discretionary and do not represent a legal asset, entitlement, or obligation of the Company', 'may be withheld, forfeited, or rescinded at any time in the Company's sole discretion', and that Apex may 'deny, modify, reduce, cap, delay, or revoke Reward distributions for any reason or no reason'. Determinations are 'final and binding' and 'not subject to appeal or review'. §11 lists penalties applied 'at its sole discretion' for any breach, including loss of unpaid Rewards, repayment of distributed Rewards, removal of profits and deletion of trading days. §30 says changes to the Agreement, Trading Rules or Reward policies take effect upon posting.",
+          "impact": "Meeting the published payout criteria does not create a contractual right to a payout under the agreement's own wording; Apex keeps a stated right to refuse, reduce or claw back Rewards, and rules can change for open accounts.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Performance Accounts — graduation and professional-proficiency termination (User Agreement §14-§15)",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Apex may terminate Trading Accounts if it determines 'in its sole discretion' that a user's 'trading activity, strategies, or demonstrated level of sophistication materially exceeds the level contemplated', with indicators including 'consistently exceptional performance'; it may then 'deny or revoke any unpaid Rewards'. Under 'Graduation', the Company may also remove a user at any time and decide 'at it's sole discretion' whether any final distribution is paid. Users in the Affiliate Business Development Program may be exempted.",
+          "impact": "Strong, consistent performance can itself be a stated ground for account termination and loss of unpaid Rewards; no objective threshold is published.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Performance Accounts — dormant account policy (User Agreement §16)",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "A Performance Account is deemed dormant unless it has at least two trading days per rolling 30-day cycle with at least $50 profit on each of those days. Apex may deactivate or permanently terminate dormant PAs without notice, and 'any Rewards associated with the Performance Account(s) will be permanently forfeited regardless of prior performance or qualification status', including lifetime/one-time-payment plans.",
+          "impact": "Keeping a PA open requires two profitable days (not just trading days) every 30 days; a PA that misses this can be closed and its unpaid Rewards lost.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Evaluation and Performance Accounts — account and resource sharing",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "'Sharing MAC addresses, computers, IPs, credit cards, or trade copying with other traders is strictly forbidden. Violations will result in account closure, forfeiture of funds'. VPNs, proxy servers, cloud servers or anonymizing tools may not be used to misrepresent identity, device or location to circumvent rules or geographic restrictions.",
+          "impact": "Trading from a shared computer or IP (for example in a household or office) can lead to closure and forfeiture under this clause.",
+          "source": "https://apextraderfunding.com/help-center/getting-started/prohibited-activities/"
+        },
+        {
+          "program": "Apex Evaluation and Performance Accounts — positions closed by 4:59 PM ET",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "All positions must be closed by 4:59:00 PM ET; 'any positions that are open at 5:00:00 PM ET may result in a failed and terminated Trading Account'. The Prohibited Activities page adds that traders holding through the market close 'will forfeit their accounts and all associated balances'.",
+          "impact": "Holding a position past the daily close is not just a constraint: the stated consequence is account termination and loss of balance.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Evaluation and Performance Accounts — no automation (User Agreement)",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Automated execution, pre-configured bots, scripts or strategies that place, modify or cancel orders are prohibited (signal/alert tools that do not place orders are allowed). Violations 'may result in immediate termination of the User's account and forfeiture of any pending or unpaid Rewards, at the Company's sole discretion'. HFT and non-directional bracket orders around price are also listed as prohibited.",
+          "impact": "Any order-placing automation can cost pending Rewards, not only the account.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Evaluation and Performance Accounts — risk-management standards",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "All trades must have 'pending or mental stop losses'; strategies with small targets and disproportionately large risk are banned (example: 5-tick target with 150-tick stop); using the trailing threshold as a stop loss is prohibited; any trading that 'fails to demonstrate consistent growth and sustainability' or deviates from what the trader 'would use in a personally funded account' is prohibited. Failure 'may result in placement in Trader Probation'.",
+          "impact": "Several of these standards ('unsustainable', 'professional standards') are not defined numerically, so whether a strategy complies is decided by Apex after the fact.",
+          "source": "https://apextraderfunding.com/help-center/getting-started/prohibited-activities/"
+        },
+        {
+          "program": "Apex Evaluation and Performance Accounts — news and hedging",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "minor",
+          "clarity": "vague",
+          "rule": "Trading during news is allowed for a normal strategy, but 'news trading strategies that chase the market or place orders on both sides' to 'gamble the outcome of news' are not allowed. Holding long and short positions on the same or correlated instruments simultaneously is 'strictly prohibited'.",
+          "impact": "News trading is permitted in principle; the boundary with a prohibited news strategy is left to Apex's judgment.",
+          "source": "https://apextraderfunding.com/help-center/getting-started/prohibited-activities/"
+        },
+        {
+          "program": "Apex Performance Accounts — payment method in own name",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Fees must be paid with a card or bank account in the user's own name and Rewards go only to a bank account in the user's own name. 'Using a payment source that does not belong to you may result in you forfeiting any Rewards, being required to repay any Rewards previously issued, and termination of your Accounts'.",
+          "impact": "Paying with a family member's or company card can void Rewards, including ones already paid.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Performance Accounts — verification and audits (User Agreement §13)",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Apex may 'at any time, for any reason' audit identity, tools, software, hardware and trading behaviour, and may require notarized documents, bank statements, a live trading session with a Company representative or video recordings with commentary; the user must respond within 48 hours. Failure to cooperate, or a determination 'based on the results of an audit' that termination is appropriate, may close accounts with forfeiture of unpaid Rewards.",
+          "impact": "A payout can be held during an audit and lost if the 48-hour response window is missed or the audit outcome is negative.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Performance Accounts — chargebacks and refunds",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "If a user receives a Reward and later initiates a chargeback, refund request or clawback for any subscription fee, 'you will forfeit all Rewards associated with the subscription period being refunded', whether the reversal is full or partial; Apex may void unpaid Rewards, offset paid ones against future distributions or invoice the user.",
+          "impact": "Disputing a subscription charge can cancel or claw back Rewards tied to that period.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "program": "Apex Performance Accounts — household account limit",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Each individual and household (family members, roommates or others at the same address, and associated business entities) is limited to 20 Performance Accounts combined; Apex decides 'in its sole discretion' whether accounts breach this using shared address, IP, payment method or device usage.",
+          "impact": "Two traders living at the same address share one 20-PA limit.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
         }
       ],
       "setProducts": [
@@ -1860,33 +1990,31 @@
       ]
     },
     "bespoke-funding-program": {
-      "reviewedAt": "2026-11-08",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-10-28",
           "summary": "Trustpilot read for the first time: 3.2 TrustScore across 1,193 reviews; the Trustpilot page shows the notice \"This company has received regulatory attention\" (no detail given on the page). Price and profit split not re-read on the official site, left unchanged.",
           "source": "https://www.trustpilot.com/review/bespokefundingprogram.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
+          "fields": ["trustpilotRating", "trustpilotReviewCount"]
         },
         {
           "date": "2026-11-07",
           "summary": "FCA warning-list entry found (first published 31/10/2023, last updated 01/11/2023) and added as a dated, quoted incident. It matches the regulatory-attention notice on the firm's Trustpilot page. No status or score change.",
           "source": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom",
-          "fields": [
-            "incidents"
-          ]
+          "fields": ["incidents"]
         },
         {
           "date": "2026-11-08",
           "summary": "Trustpilot refreshed: 3.1 TrustScore (previously 3.2) across 1,185 reviews. The page also states: \"This company has received regulatory attention.\" (already recorded).",
           "source": "https://www.trustpilot.com/review/bespokefundingprogram.com",
-          "fields": [
-            "trustpilotReviewCount",
-            "trustpilotRating"
-          ]
+          "fields": ["trustpilotReviewCount", "trustpilotRating"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 5 new classified restrictive rules.",
+          "source": "https://www.bespokefundingprogram.com/term-condition/",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -1901,6 +2029,68 @@
         {
           "label": "FCA warning list: Bespoke Funding Program Limited",
           "url": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-20)",
+          "url": "https://www.bespokefundingprogram.com/term-condition/"
+        }
+      ],
+      "auditedPrograms": [
+        {
+          "key": "evaluation",
+          "name": "Bespoke evaluation programmes (pricing page unreadable; terms apply to all)"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms (Term and Termination): the Company may terminate the Services or access \"in its sole and absolute discretion and without prior notice\". Before any funded account is issued, the Company and the Broker review the trader's activity and, if they find Prohibited Trading, \"the Trader shall not receive a funded account\"; Prohibited Trading leads to termination that \"may include forfeiture of any fees paid\". Prohibitions include loosely defined items such as \"Consistent use of Dollar-cost averaging (DCA)\" and trading \"in any way that... may result in the canceling of trades\".",
+          "impact": "Passing the evaluation does not guarantee a funded account, and access can be ended at the firm's discretion without notice or fee refund.",
+          "source": "https://www.bespokefundingprogram.com/term-condition/"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms (Prohibited Uses, martingale): \"trades will be void after adding more than two positions whilst in drawdown\"; such trades are \"deducted from overall payout on funded accounts\", and challenge phases using martingale are voided and refunded.",
+          "impact": "Adding a third position to a losing trade can remove that profit from the funded payout.",
+          "source": "https://www.bespokefundingprogram.com/term-condition/"
+        },
+        {
+          "program": "All programmes — single-share equity CFDs",
+          "appliesTo": ["*"],
+          "category": "news",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms (Prohibited Uses): holding a single-share equity CFD into an earnings release (it must be closed by 3:50 pm Eastern on the release day for after-market releases, or the previous day for pre-market releases) \"will constitute an immediate, hard breach of your account\", and any gain or loss on the position is removed from profit calculations. Separately, placing opposing buy/sell limit or stop orders at the same time (example: \"during red folder news\") is prohibited.",
+          "impact": "Holding a stock CFD through earnings ends the account; bracketing news with opposite pending orders is treated as Prohibited Trading.",
+          "source": "https://www.bespokefundingprogram.com/term-condition/"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms (Prohibited Uses) list \"Utilizing an EA to pass an assessment and then manual trading the funded account\", \"any third-party strategy, off-the-shelf strategy or one marketed to pass assessment accounts\", \"Group trading\", \"Hedging, between accounts\", \"Cross trading between Bespoke and other proprietary firms\" and exploiting latency. Using trade signals means \"your account will be breached and no refund will be issued\", and such traders \"will be monitored for future accounts\".",
+          "impact": "Using a bought EA, signals, or hedging against another account (including at another prop firm) can end the account without refund.",
+          "source": "https://www.bespokefundingprogram.com/term-condition/"
+        },
+        {
+          "program": "Funded/live accounts — payout",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms (Refund Policy): \"Clients who trade on live accounts need to make a minimum of 0.5% of profits before they can withdraw their profit split.\"",
+          "impact": "No profit split can be withdrawn until the account is at least 0.5% in profit.",
+          "source": "https://www.bespokefundingprogram.com/term-condition/"
         }
       ]
     },
@@ -11564,7 +11754,7 @@
       ]
     },
     "moneta-funded": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -11576,10 +11766,13 @@
           "date": "2026-10-29",
           "summary": "Trustpilot read for the first time: 4.6 TrustScore across 284 reviews, claimed profile, no Trustpilot warning. Price and profit split not re-read on the official site, left unchanged.",
           "source": "https://www.trustpilot.com/review/monetafunded.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount"
-          ]
+          "fields": ["trustpilotRating", "trustpilotReviewCount"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Terms and FAQ pass (full terms, FAQ and help centre): 15 new classified restrictive rules.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -11601,6 +11794,185 @@
         {
           "label": "Moneta Funded contract September 2026, payout consistency and profit caps (official PDF)",
           "url": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        }
+      ],
+      "auditedPrograms": [
+        {
+          "key": "1step-daily",
+          "name": "1-Step Daily"
+        },
+        {
+          "key": "2step",
+          "name": "2-Step Challenge"
+        },
+        {
+          "key": "instant",
+          "name": "Instant Funding"
+        },
+        {
+          "key": "instant-pro",
+          "name": "Instant Funding Pro"
+        },
+        {
+          "key": "phoenix",
+          "name": "Phoenix"
+        },
+        {
+          "key": "sprint",
+          "name": "Sprint Challenge"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "All programmes — payout review",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms clause 6.9: Moneta Funded \"may place any Payout request on hold\" for trading, risk, account-association, compliance or abuse reviews and, if it determines \"in its sole discretion\" that Prohibited Conduct occurred, \"may delay, reduce, deduct from, refuse, cancel, or void any Payout request, whether pending or future\". Prohibited Conduct (clause 5.2) includes \"any activity that we determine, in our sole discretion, constitutes abusive trading or provides an unfair advantage\", \"one-sided betting\" (positions \"without proper market analysis\") and behaviour \"not reproducible or sustainable in real markets\". Clause 5.3 allows immediate termination without refund.",
+          "impact": "A pending or future payout can be reduced or cancelled on the firm's own assessment, including under prohibitions without objective thresholds; the account can also be closed without a fee refund.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "vpn-ip-device",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms clause 5.2(f) prohibits \"Accessing multiple accounts from the same IP address or allowing an account to be used from multiple IP addresses\". Breach of clause 5.2 allows termination without refund (5.3) and refusal or voiding of payouts (6.9). The help-centre list of prohibited methods does not mention this IP rule.",
+          "impact": "Logging in from more than one IP address, or running two accounts from one IP (for example a shared household connection), can lead to account termination and cancelled payouts.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "The help centre lists Martingale, reverse trading, high-frequency trading, order spamming, hedging and grid trading, latency arbitrage, tick scalping, demo-environment exploitation and account sharing as prohibited, and third-party or commercial EAs and signal services are not permitted (terms 5.2(q): no EA \"that is not developed by you\"); EAs are not allowed on the Sprint Challenge. \"Use of any prohibited strategies will result in immediate account termination\"; unauthorised EA use \"may be subject to profit adjustment or account action\".",
+          "impact": "Using a bought or third-party EA, grid or hedging approach can end the account and remove profits before payout.",
+          "source": "https://help.monetafunded.com/en/articles/12146808-which-trading-methods-aren-t-allowed"
+        },
+        {
+          "program": "Instant Funding — funded account",
+          "appliesTo": ["instant"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Instant Funding accounts carry a consistency limit chosen at purchase (15% or 20%): best-day realised P&L divided by total realised P&L in the payout cycle must stay within the limit (terms clause 5.1F). If exceeded, \"the Account will not be eligible for a Payout until sufficient additional realised profit has been generated\". The rule resets after each payout.",
+          "impact": "A single strong day blocks the payout until enough further profit dilutes it; the cheaper 15% option is stricter.",
+          "source": "https://help.monetafunded.com/en/articles/13345521-how-does-the-consistency-rule-work-at-moneta-funded"
+        },
+        {
+          "program": "Instant Funding Pro",
+          "appliesTo": ["instant-pro"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Instant Funding Pro has a Maximum Profit Per Day of 4% of the starting balance, measured from equity at the 22:00 UTC snapshot. Once reached, open trades close automatically, trading is disabled until the next reset, and profit above the cap does not count (terms clause 5.1G: it \"may be excluded from eligible Account profit\").",
+          "impact": "Gains above 4% in a day are closed out and are not payable.",
+          "source": "https://help.monetafunded.com/en/articles/17017943-instant-funding-pro-account"
+        },
+        {
+          "program": "1-Step Daily — funded account",
+          "appliesTo": ["1step-daily"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "1-Step Daily payouts are capped per request: $1,000 on a $50K account, $2,000 on $100K and $4,000 on $200K. Terms clause 6.10: eligible profit above the Maximum Payout Per Request \"may be eligible for a subsequent Payout request\". All positions must be closed before requesting.",
+          "impact": "Profit above the per-request cap stays on the account and remains exposed to the 2% static maximum loss until a later request.",
+          "source": "https://help.monetafunded.com/en/articles/16822203-how-do-daily-payouts-work-on-1-step-daily"
+        },
+        {
+          "program": "Funded accounts — floating loss per symbol",
+          "appliesTo": ["1step-daily", "2step", "instant", "instant-pro", "phoenix"],
+          "category": "lot-risk-limit",
+          "severity": "blocking",
+          "clarity": "clear",
+          "rule": "A floating loss on one symbol of 2% of account size (3% on 2-Step with the 5% daily-loss option and on Instant Funding Pro) closes all open trades, disables trading until the 22:00 UTC reset and moves the account to a 1.5% risk-per-trade-idea limit. Once on that limit, exceeding 1.5% breaches the account with no further warning. The limit can be lifted after 14 days and 20 trades on a separate funded account.",
+          "impact": "A second excursion beyond 1.5% on one trade idea ends the funded account, well inside the published daily and maximum loss limits.",
+          "source": "https://help.monetafunded.com/en/articles/17018053-max-floating-loss-allowed-on-funded-accounts"
+        },
+        {
+          "program": "Funded accounts — risk team restriction",
+          "appliesTo": ["1step-daily", "2step", "instant", "instant-pro", "phoenix"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms clause 5.1J: the Risk Team \"may impose an additional Risk Per Trade Idea limit\" where activity shows \"excessive concentration, repeated risk warnings, unsustainable risk exposure, material risk escalation or other risk-management concerns\", and may apply it to all funded accounts of the trader; exceeding a notified limit \"may result in the affected Account being breached\". The help article states only the affected account is restricted after a floating-loss trigger.",
+          "impact": "A tighter per-trade risk limit can be applied on the firm's assessment, across all of a trader's funded accounts, and breaking it ends the account.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        },
+        {
+          "program": "1-Step Daily, 2-Step, Instant Funding, Sprint",
+          "appliesTo": ["1step-daily", "2step", "instant", "sprint"],
+          "category": "news",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "Opening or closing a trade (including TP/SL triggers) is barred from 5 minutes before to 5 minutes after a scheduled high-impact event on instruments tied to the affected currency; trades opened at least 2 hours earlier may close in the window. \"Net profits generated from trades that violate this rule may be subject to deduction\"; repeated attempts \"may result in account restriction or violation\". Sprint also bars gap, market-open and market-close trading.",
+          "impact": "Profit from trades in the news window can be deducted from the payout; repeated cases can end the account.",
+          "source": "https://help.monetafunded.com/en/articles/12542447-news-trading-at-moneta-funded"
+        },
+        {
+          "program": "Instant Funding Pro, Phoenix",
+          "appliesTo": ["instant-pro", "phoenix"],
+          "category": "news",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "The comparison page and the news-trading article say news trading is allowed on Instant Funding Pro and Phoenix (\"the restrictions below do not apply\"), but the prohibited-methods article states \"Moneta Funded does not allow traders to engage in news trading across all accounts (evaluation & funded)\" without exception, and terms clause 5.2(h) lists news trading as Prohibited Conduct with no programme carve-out.",
+          "impact": "Official documents disagree on whether news trades on these two programmes can lead to profit deduction or payout refusal; obtain written confirmation before trading news.",
+          "source": "https://help.monetafunded.com/en/articles/12146808-which-trading-methods-aren-t-allowed",
+          "status": "conflicting"
+        },
+        {
+          "program": "Instant Funding, Instant Funding Pro — payout",
+          "appliesTo": ["instant", "instant-pro"],
+          "category": "funded-trailing-drawdown",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The funded account uses a trailing maximum loss (5% on Instant Funding bought from 2 July 2026, 6% before; 8% on Instant Funding Pro). For accounts bought after 21 September 2026 it locks at the initial balance \"at payout approval\" and does not reset; \"Withdrawing all available profit may leave no buffer and can cause the account to be breached immediately\".",
+          "impact": "Withdrawing the full profit can end the account on approval, so part of each payout effectively has to be left as buffer.",
+          "source": "https://help.monetafunded.com/en/articles/17017469-instant-funding-account"
+        },
+        {
+          "program": "2-Step and Phoenix — funded",
+          "appliesTo": ["2step", "phoenix"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "Payouts require 3 profitable days of at least 0.5% each (2-Step funded stage; Phoenix, together with a 14-day interval from the first trade). Days count only if Min(midnight balance, midnight equity) minus previous-day balance meets the threshold (terms 5.1E).",
+          "impact": "Profit concentrated on fewer than three qualifying days does not unlock a payout.",
+          "source": "https://help.monetafunded.com/en/articles/12533211-phoenix-scaling-program"
+        },
+        {
+          "program": "Sprint Challenge",
+          "appliesTo": ["sprint"],
+          "category": "account-ends-after-payouts",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms clause 6.12: \"Following successful payment of the applicable Sprint Payout, the Sprint Account will be permanently closed. Continued trading on the same Sprint Account is not available following Payout.\" If the target is not reached within the 1h/2h/4h/8h window the account may be closed.",
+          "impact": "Each Sprint purchase yields at most one payout; the account ends by design.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        },
+        {
+          "program": "All programmes — KYC and payout method",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms clauses 6.1-6.3: payouts require completed identity/AML checks; the firm \"reserves the right to refuse or delay a Payout request\" if source-of-funds or source-of-wealth information is not provided; payouts must go to the same method and account details used to pay the evaluation fee. Annex A bans Afghanistan, Cuba, Myanmar, Thailand, North Korea, UAE, Venezuela and Vietnam (the help-centre list also includes Iran).",
+          "impact": "A payout can be held until source-of-funds documents are accepted, and cannot be sent to a different method than the one used to pay the fee.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        },
+        {
+          "program": "All programmes — public statements",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms clause 5.4: \"Defamatory Conduct\", including \"false, misleading, or harmful statements, reviews, or content\" on review sites such as Trustpilot, \"as determined by the Company in its sole discretion\", leads to \"immediate and permanent termination of their Account and all Services, without any refund of Fees paid\", and the firm may seek damages.",
+          "impact": "An account can be terminated on the firm's own assessment of a trader's public review or post.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
         }
       ]
     },
@@ -23397,34 +23769,31 @@
       ]
     },
     "fxci": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-09",
           "summary": "First Trustpilot reading: 1.9/5 from 137 reviews on the nz mirror; the uk mirror shows the same 1.9 and 137. No withheld-rating notice.",
           "source": "https://nz.trustpilot.com/review/fxci.com",
-          "fields": [
-            "trustpilotRating",
-            "trustpilotReviewCount",
-            "trustpilotSourceUrl"
-          ]
+          "fields": ["trustpilotRating", "trustpilotReviewCount", "trustpilotSourceUrl"]
         },
         {
           "date": "2026-11-09",
           "summary": "Official pages read: \"Keep up to 85% profit share with FXCI\" (home page); help center: EAs and HFT bots allowed \"only during the Evaluation stage and is prohibited on a Funded account\". Account sizes are shown in EUR (€10,000 to €200,000) without prices, so no products recorded; drawdown 5% daily / 10% total of the initial balance, type not named.",
           "source": "https://fxci.com/",
-          "fields": [
-            "profitSplit",
-            "eaAllowed"
-          ]
+          "fields": ["profitSplit", "eaAllowed"]
         },
         {
           "date": "2026-11-14",
           "summary": "Ownership fact added: OneFunded announced on 13 November 2025 that it acquired the FXCI brand and that \"FXCI traders will seamlessly transition to the OneFunded platform\". The official fxci.com domain failed to resolve in PropRadar's checks of 12–14 November 2026; to recheck before any status change. (OneFunded is a PropRadar affiliate; this has no effect on either score.)",
           "source": "https://www.newsfilecorp.com/release/274356/OneFunded-Acquires-FXCI-to-Accelerate-Global-Leadership-in-Prop-Trading",
-          "fields": [
-            "entities"
-          ]
+          "fields": ["entities"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 5 new classified restrictive rules.",
+          "source": "https://fxci.com/terms-and-conditions/",
+          "fields": ["restrictiveRules"]
         }
       ],
       "set": {
@@ -23442,6 +23811,68 @@
         {
           "label": "OneFunded press release: acquisition of FXCI (13 Nov 2025)",
           "url": "https://www.newsfilecorp.com/release/274356/OneFunded-Acquires-FXCI-to-Accelerate-Global-Leadership-in-Prop-Trading"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-20)",
+          "url": "https://fxci.com/terms-and-conditions/"
+        }
+      ],
+      "auditedPrograms": [
+        {
+          "key": "2phase",
+          "name": "Two-phase Challenge (EUR 10k-200k, as defined in Terms §13)"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "Two-phase Challenge — funded recognition",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms §13.5-13.10: after Phase 2 the participant requests a final evaluation; completing the assessments \"may lead to an invitation\" to become a \"FXCI EXPERT\" under a separate consulting agreement. \"The Provider reserves the right to accept or refuse to recognize a participant as a FXCI EXPERT at its discretion\", and its decision on completion of the Assessments \"is final and not subject to appeal\". §7.3: from simulated results \"you will not be entitled to compensation or gains\".",
+          "impact": "Passing both phases does not by contract guarantee a funded status or any profit share; access to rewards depends on a discretionary invitation and a separate agreement.",
+          "source": "https://fxci.com/terms-and-conditions/"
+        },
+        {
+          "program": "All accounts — termination",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms §21.1: the Provider may \"terminate or suspend your access to the Provider's Services without prior notice for any reason\", including (§21.1.7) \"without specifying the reasons\". §6.8: \"The Provider reserves the right to designate any other activity as prohibited\"; §6.9 such activity \"may result in immediate termination of access\". §14.1: breaches may end access without refund.",
+          "impact": "Access, and with it any pending reward, can be ended without a stated reason or a defined list of prohibited conduct.",
+          "source": "https://fxci.com/terms-and-conditions/"
+        },
+        {
+          "program": "All accounts — prohibited trading practices",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms §6.7 bars \"predatory, forbidden, unlawful, illegal or prohibited trading practices including, but not limited to\" opposite positions to manipulate test trading, exploiting platform errors or delays, cross-account hedging, delayed data feeds, \"use of arbitrage or tick scalping strategies\", \"employing software, artificial intelligence, ultra-high-speed capabilities, or mass data entry\" and running the same strategy as other customers.",
+          "impact": "Under §6.9 these practices can lead to immediate termination; the list is open-ended ('not limited to').",
+          "source": "https://fxci.com/terms-and-conditions/"
+        },
+        {
+          "program": "Funded stage",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Help centre: using EAs and HFT bots is allowed \"only during the Evaluation stage and is prohibited on a Funded account\".",
+          "impact": "A strategy automated during the evaluation must be traded manually once funded.",
+          "source": "https://help.fxci.com/are-eas-and-hft-bots-allowed/"
+        },
+        {
+          "program": "All accounts — eligibility",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms §5.3: services are not available to a person who \"is of nationality or is residing in Prohibited Jurisdictions\" (list in §5.4), \"is subject to the relevant international sanctions\" or \"has a criminal record\". §5.2: services may be accessed only from countries where they are accessible.",
+          "impact": "Eligibility is tied to nationality as well as residence, and to criminal record; ineligible users can be terminated under §21.1.",
+          "source": "https://fxci.com/terms-and-conditions/"
         }
       ]
     },
@@ -24831,7 +25262,7 @@
       ]
     },
     "purdia-capital": {
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-20",
       "set": {
         "officialWebsite": "https://purdia.com/"
       },
@@ -24839,6 +25270,10 @@
         {
           "label": "Purdia Capital official site",
           "url": "https://purdia.com/"
+        },
+        {
+          "label": "Terms & conditions (partly readable, 2026-11-20)",
+          "url": "https://purdia.com/knowledgebase/general/policies-and-compliance"
         }
       ],
       "changelog": [
@@ -24846,9 +25281,137 @@
           "date": "2026-11-14",
           "summary": "Official domain corrected: the listed purdiacapital.com did not resolve on 12–14 November 2026, while purdia.com loads with the title \"Purdia Capital — Transparent Proprietary Trading\" and sells evaluations; Trustpilot's \"Purdia Capital LLC\" profile links purdia.com.",
           "source": "https://purdia.com/",
-          "fields": [
-            "officialWebsite"
-          ]
+          "fields": ["officialWebsite"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 10 new classified restrictive rules.",
+          "source": "https://purdia.com/knowledgebase/general/policies-and-compliance",
+          "fields": ["restrictiveRules"]
+        }
+      ],
+      "auditedPrograms": [
+        {
+          "key": "instant",
+          "name": "Instant Funded (25k / 50k)"
+        },
+        {
+          "key": "pioneer",
+          "name": "100K Pioneer (Instant, pilot)"
+        },
+        {
+          "key": "static",
+          "name": "Static Instant Funded (100k / 150k)"
+        },
+        {
+          "key": "pro-eval",
+          "name": "100k Pro Evaluation"
+        },
+        {
+          "key": "eod-eval",
+          "name": "EOD Evaluation (50k / 100k)"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "All accounts purchased on or after 1 October 2026 (Evaluation, Sim Funded, Live Funded)",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Accounts purchased on or after October 1, 2026 \"will be permanently closed if no trade is executed for 14 consecutive calendar days\". An extension can be requested in advance, but \"approval is discretionary\" and accounts closed for inactivity \"cannot be reopened\".",
+          "impact": "Two weeks without a trade ends the account, including a funded one, with no reopening; a planned absence depends on a discretionary extension.",
+          "source": "https://purdia.com/knowledgebase/general/policies-and-compliance"
+        },
+        {
+          "program": "100K Pioneer — funded (pilot)",
+          "appliesTo": ["pioneer"],
+          "category": "payout-cap",
+          "severity": "major",
+          "clarity": "clear",
+          "rule": "The pricing card lists a \"Retained Buffer $3,000\" and \"First Payout Up to $2,500\". The knowledgebase describes the Protected Buffer as \"a minimum balance that cannot be withdrawn\" while the trader progresses toward a Live Funded Account.",
+          "impact": "The first withdrawal is capped and part of the profit must stay in the account until the Live Funded stage.",
+          "source": "https://purdia.com/programs"
+        },
+        {
+          "program": "Instant Funded and 100K Pioneer — payout eligibility",
+          "appliesTo": ["instant", "pioneer"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "clear",
+          "rule": "The pricing cards list a \"Payout qualification target\" together with minimum days (10 on Instant Funded, 7 on Pioneer) and minimum profitable days (\"5 × $200+\" on 50k, \"5 × $125+\" on 25k, \"5 × $300+\" on Pioneer). Trading and profitable days are counted midnight to midnight ET.",
+          "impact": "A payout needs both a profit threshold and a set number of qualifying days, so the first withdrawal cannot come before those days are completed.",
+          "source": "https://purdia.com/programs"
+        },
+        {
+          "program": "Sim Funded to Live Funded transition",
+          "appliesTo": ["*"],
+          "category": "payout-conditions",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Live Funded Accounts require brokerage onboarding, identity verification and compliance approval; \"Final approval decisions are made entirely by the brokerage and compliance teams. Purdia Capital does not control, influence, or override these determinations.\" Payouts taken from the interim Temp Sim Funded Account \"directly reduce the amount of capital ultimately eligible to transfer into the Live Funded Account\".",
+          "impact": "Moving to live funding depends on a third-party broker decision the firm says it cannot override, and withdrawing while waiting lowers the live allocation.",
+          "source": "https://purdia.com/knowledgebase/general/policies-and-compliance"
+        },
+        {
+          "program": "All accounts — country eligibility",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "major",
+          "clarity": "vague",
+          "rule": "Prohibited-country restrictions \"are determined primarily by our brokerage and compliance partners and may change at any time without prior notice. As a result, eligibility may change even after prior approval or account activity.\"",
+          "impact": "A trader already approved and trading can lose eligibility if the partner list changes; the summary does not say what happens to accrued profit.",
+          "source": "https://purdia.com/knowledgebase/general/policies-and-compliance"
+        },
+        {
+          "program": "All accounts — payout processing",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Purdia uses \"automated and manual fraud prevention, payment verification, and compliance review procedures\"; accounts \"may be temporarily restricted or placed under review\" while identity, payment-method ownership or other documents are requested. Payouts are processed manually on business days and timing can vary with \"compliance review\".",
+          "impact": "A payout can be delayed while an account is under review; no maximum review time is stated in the summary.",
+          "source": "https://purdia.com/knowledgebase/general/policies-and-compliance"
+        },
+        {
+          "program": "All accounts — account ownership",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "\"Purdia Capital permits only one user account per individual and per household.\" Accounts may not be shared, transferred, operated for another person or used to circumvent household limits. Traders may run up to three accounts at once across all stages.",
+          "impact": "Two traders living at the same address cannot each hold a user account; the summary does not state the consequence of a breach.",
+          "source": "https://purdia.com/knowledgebase/general/policies-and-compliance"
+        },
+        {
+          "program": "All accounts — automation",
+          "appliesTo": ["*"],
+          "category": "ea-copy-hft",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Semi-automated trading and trade copiers are permitted if the trader \"remains actively involved\"; \"Fully automated 'set-and-forget' trading systems that operate without active trader oversight are not permitted.\"",
+          "impact": "Unattended bots are excluded; the line between semi- and fully-automated is not defined.",
+          "source": "https://purdia.com/knowledgebase/general/rules-and-risk-management"
+        },
+        {
+          "program": "All accounts — prohibited practices",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "\"The primary prohibited practice is hedging between highly correlated positions or accounts.\" Traders \"may not attempt to exploit technical issues, platform behavior, or operational loopholes.\"",
+          "impact": "Correlated hedges across accounts are barred; the consequence of a breach is not stated in the summary.",
+          "source": "https://purdia.com/knowledgebase/general/rules-and-risk-management"
+        },
+        {
+          "program": "All accounts — session close",
+          "appliesTo": ["*"],
+          "category": "weekend-overnight",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "\"all positions and working orders are automatically closed prior to the daily market close.\"",
+          "impact": "No overnight holding; positions are flattened by the platform each day.",
+          "source": "https://purdia.com/knowledgebase/general/rules-and-risk-management"
         }
       ]
     },
@@ -25460,17 +26023,38 @@
       ]
     },
     "mifunder": {
-      "reviewedAt": "2026-11-17",
+      "reviewedAt": "2026-11-20",
       "changelog": [
-        {"date":"2026-11-17","summary":"Official mifunder.com domain returned HTTP 521 at the time of a direct check: unavailability is not evidence of closure, an ownership transfer or unpaid traders. Current support, rules and checkout cannot be independently verified.","source":"https://mifunder.com/","fields":["verdict","auditSummary","legalReview"]},
-        {"date":"2026-11-17","summary":"Historical MiFunder deployment, with terms explicitly dated 24 Aug 2023, names Gigimobile Technology Solutions PTY Ltd (2023/535414/07) in South Africa. Off-domain historical wording is not proof of the present contracting party.","source":"https://mi-funder.vercel.app/legal/terms-of-service","fields":["entities","legalReview"]}
+        {
+          "date": "2026-11-17",
+          "summary": "Official mifunder.com domain returned HTTP 521 at the time of a direct check: unavailability is not evidence of closure, an ownership transfer or unpaid traders. Current support, rules and checkout cannot be independently verified.",
+          "source": "https://mifunder.com/",
+          "fields": ["verdict", "auditSummary", "legalReview"]
+        },
+        {
+          "date": "2026-11-17",
+          "summary": "Historical MiFunder deployment, with terms explicitly dated 24 Aug 2023, names Gigimobile Technology Solutions PTY Ltd (2023/535414/07) in South Africa. Off-domain historical wording is not proof of the present contracting party.",
+          "source": "https://mi-funder.vercel.app/legal/terms-of-service",
+          "fields": ["entities", "legalReview"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "Terms and FAQ pass (FAQ and help centre (terms partly readable)): 7 new classified restrictive rules.",
+          "source": "https://mifunder.com/legal/terms-of-service",
+          "fields": ["restrictiveRules"]
+        }
       ],
       "set": {
         "auditSummary": "17 Nov 2026: mifunder.com returned HTTP 521 during a direct reachability check. This does not establish closure but blocks independent verification of today's products, prices, customer support, payouts and checkout. A distinct MiFunder historical deployment hosts 2023 terms naming South African Gigimobile Technology Solutions PTY Ltd, registration 2023/535414/07. Those old terms cannot authenticate the current operator. No independent payout settlement evidence found.",
         "verdict": "Primary domain unavailable during this audit (HTTP 521). Historic terms expose a possible South African contracting company but do not identify today's operator. Maintain watchlist; verify operational website, registered seller and actual payouts before any purchase."
       },
       "setEntities": [
-        {"name":"Gigimobile Technology Solutions PTY Ltd","jurisdiction":"To verify (South Africa, 2023 historical terms only)","registrationNumber":"2023/535414/07 (stated in historical terms, registry not independently checked)","role":"Company named in 24 August 2023 MiFunder terms on a separate Vercel deployment; current operating and billing roles unconfirmed."}
+        {
+          "name": "Gigimobile Technology Solutions PTY Ltd",
+          "jurisdiction": "To verify (South Africa, 2023 historical terms only)",
+          "registrationNumber": "2023/535414/07 (stated in historical terms, registry not independently checked)",
+          "role": "Company named in 24 August 2023 MiFunder terms on a separate Vercel deployment; current operating and billing roles unconfirmed."
+        }
       ],
       "setLegalReview": {
         "summary": "At the November 2026 check, mifunder.com did not serve its website (HTTP 521). That point-in-time failure does not prove permanent shutdown. Historical terms from August 2023 on an off-domain MiFunder deployment name Gigimobile Technology Solutions PTY Ltd, South Africa, but current company registration and control of the official domain were not verified. Historical terms treat the evaluation as demo trading, deny an automatic funded offer after passing and set harsh chargeback restrictions. No third-party payout confirmation was located.",
@@ -25478,11 +26062,104 @@
         "complaintsAndDisputes": ["Old terms say a successful assessment does not guarantee a funded trader offer; current terms may differ.", "Old dispute wording threatens blacklisting on chargebacks; do not assume it is today's policy.", "Current customer support, refunds and payout conditions could not be checked."],
         "redFlags": ["Official domain unavailable at this check; closure not established.", "Only off-domain historical terms identify a legal entity.", "No independent customer payout settlement located."],
         "sources": [
-          {"label":"Official MiFunder domain checked 17 Nov 2026","url":"https://mifunder.com/"},
-          {"label":"Historical MiFunder Terms dated 24 Aug 2023","url":"https://mi-funder.vercel.app/legal/terms-of-service"}
+          {
+            "label": "Official MiFunder domain checked 17 Nov 2026",
+            "url": "https://mifunder.com/"
+          },
+          {
+            "label": "Historical MiFunder Terms dated 24 Aug 2023",
+            "url": "https://mi-funder.vercel.app/legal/terms-of-service"
+          }
         ]
       },
-      "addSources": [{"label":"MiFunder historical legal terms (not current ownership proof)","url":"https://mi-funder.vercel.app/legal/terms-of-service"}]
+      "addSources": [
+        {
+          "label": "MiFunder historical legal terms (not current ownership proof)",
+          "url": "https://mi-funder.vercel.app/legal/terms-of-service"
+        },
+        {
+          "label": "Terms & conditions read in full (2026-11-20)",
+          "url": "https://mifunder.com/legal/terms-of-service"
+        }
+      ],
+      "auditedPrograms": [
+        {
+          "key": "evaluation",
+          "name": "MiFunder evaluation programmes (pricing page unreadable; terms apply to all)"
+        }
+      ],
+      "restrictiveRules": [
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "discretionary-clause",
+          "severity": "blocking",
+          "clarity": "vague",
+          "rule": "Terms 11.1: the Funded Trader offer is at the Company's sole discretion, and paying the fee or passing does not oblige an offer. 12.2 prohibits any strategy the Company considers not to represent trading in good faith; under 12.3 a breach allows suspension or termination without notice and the trader \"will forfeit any fees or payments you are entitled to\". 18.2: the Company may terminate \"for any reason and without cause at any time\".",
+          "impact": "Earned trader payments can be forfeited on the firm's own assessment of 'good faith' trading, and a passed evaluation does not guarantee a funded account.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "program": "All programmes — withdrawals",
+          "appliesTo": ["*"],
+          "category": "consistency",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms clause 19.3: when a single trade \"contributes more than 50% to their overall win\", the worked example removes that trade's profit from the withdrawable amount ($10,000 total win, $5,000 trade removed). Clause 19.2: trades opened within 30 seconds are combined and \"The 50% rule also would apply directly to the combined trades\".",
+          "impact": "Profit from one dominant trade (or a cluster opened within 30 seconds) can be excluded from the payout.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "program": "All programmes — withdrawals",
+          "appliesTo": ["*"],
+          "category": "lot-risk-limit",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms clause 19.1: an average lot size is computed over the whole trading history; the allowed range is that average plus 100% to minus 75%, and \"The profitable trades that fall outside the trade range will be removed\". In the funded phase, simultaneous trades on the same pair are treated as one aggregate position.",
+          "impact": "Profitable trades sized well above or below the trader's own average are deducted from the withdrawable profit.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "min-trading-days",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms clause 19.3 states traders need \"a minimum of 5 trading days\".",
+          "impact": "A payout cannot be reached in fewer than five trading days.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "program": "All programmes",
+          "appliesTo": ["*"],
+          "category": "inactivity",
+          "severity": "minor",
+          "clarity": "buried",
+          "rule": "Terms clause 18.1: if you \"do not use or access your Account or the Trading Platform for 6 consecutive months\", the Company may treat this as discontinuation and close or restrict the account; 18.1(e) says a Funded Trader still receives remaining earned Trader Payments.",
+          "impact": "An account left unused for six months can be closed.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "program": "All programmes — chargebacks",
+          "appliesTo": ["*"],
+          "category": "other",
+          "severity": "blocking",
+          "clarity": "buried",
+          "rule": "Terms clause 8.3: a user linked to a card dispute or chargeback is blacklisted; for withdrawals the Company may decline the request and suspend the account, with exceptions at its \"sole discretion\". Clause 8.2: unsubstantiated chargebacks may make the trader liable for the Company's costs, including legal costs on a full indemnity basis.",
+          "impact": "Any card dispute linked to the trader can lead to a refused withdrawal and a suspended account.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "program": "Funded stage — onboarding",
+          "appliesTo": ["*"],
+          "category": "country-kyc",
+          "severity": "major",
+          "clarity": "buried",
+          "rule": "Terms clause 11.3: onboarding as a Funded Trader may require further checks including \"criminal history and bankruptcy checks and bank account information\"; under clause 4 (residency) monies paid are non-refundable if the trader breaches the residency representations, and the Company may suspend or terminate without notice for sanctions compliance.",
+          "impact": "The funded stage, and so any payout, depends on checks beyond identity, and a residency breach forfeits fees.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        }
+      ]
     },
     "tradersedgefx": {
       "reviewedAt": "2026-11-18",

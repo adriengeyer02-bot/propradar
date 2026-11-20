@@ -179,11 +179,6 @@ export const auditFrenchDetails: Record<string, {
     products:[{name:'Trading Combine puis Express Funded obtenu',drawdownDetails:'Seuil suiveur relevé après la clôture EOD, mais violation contrôlée en séance. Le compte Express démarre avec solde zéro.',maxDrawdown:'Seuil EOD suiveur de 2 000 / 3 000 / 4 500 $',consistencyRule:'Combine : 55 % de l’objectif ; parcours XFA Consistency : 40 % des gains et trois jours.'}]
   },
   'apex-trader-funding': {
-    restrictiveRules:[
-      {program:'Apex EOD et Intraday — évaluations',rule:'EOD relève son seuil après la clôture ; Intraday le fait immédiatement selon l’équité latente. L’évaluation ne comporte ni consistance ni nombre minimum de jours.',impact:'Les deux mécanismes de perte ne sont pas interchangeables.'},
-      {program:'Apex EOD Performance Account — retraits',rule:'Cinq journées gagnantes selon le montant propre à chaque taille, meilleure journée sous 50 % des profits, réserve permanente perte maximale +100 $ et retrait d’au moins 500 $.',impact:'Plusieurs conditions peuvent bloquer un compte pourtant gagnant.'},
-      {program:'Apex EOD et Intraday — durée du compte financé',rule:'Six retraits maximum par compte Performance Account, plafonnés selon taille et numéro de demande ; le compte ferme ensuite.',impact:'Pour continuer les retraits, il faut réussir une nouvelle évaluation.'}
-    ],
     products:[
       {name:'Évaluation EOD trailing',drawdownDetails:'Seuil recalculé après clôture sur le solde EOD ; violation possible à tout moment lors de la séance suivante.',maxDrawdown:'Suiveur EOD de 1 000 à 4 000 $'},
       {name:'Évaluation trailing intraday',drawdownDetails:'Le seuil peut se resserrer instantanément après un plus haut de gain latent.',maxDrawdown:'Suiveur intraday selon le pic d’équité'}
