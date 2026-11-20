@@ -42,6 +42,11 @@ export default async function FrHubPage({ params }: { params: Promise<{ locale: 
       </header>
 
       <section className="guide-article fr-hub-list" aria-label="Guides disponibles">
+        <article>
+          <div className="eyebrow">Nouveau guide pédagogique · 20 novembre 2026</div>
+          <h2><Link href="/fr/guides/futures-cfd-options">Futures, CFD et options : quelles sont les vraies différences ?</Link></h2>
+          <p>Tableau comparatif, levier, marge, prime, échéance, frais et exemple chiffré avec sources AMF, CME, ESMA et OIC.</p>
+        </article>
         {frArticles.map((article) => (
           <article key={article.slug}>
             <div className="eyebrow">{article.eyebrow}</div>
