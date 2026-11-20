@@ -1,0 +1,150 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "rankStart": 4,
+  "rankEnd": 23,
+  "status": "proposition-non-publiee",
+  "note": "Twenty provisional V4 score allocations sourced from the existing Claude audits and selected official terms, not 20 signed-off reaudits. Partial coverage must be completed before production.",
+  "firms": [
+    {
+      "slug": "axi-select", "before": 76, "confidence": "limitee", "scores": {"A":[7,8,2],"B":[11,7,5,4],"C":[7,3,2],"D":[5,4,4],"E":[4,2,3]},
+      "sources": {"payout":"https://help.axi.com/en-US/axiv2--axicorp-prod/article/rBpGJlIt-how-do-i-withdraw-from-my-axi-select-account","contract":"https://www.axi.com/int/funded-trader-program","program":"https://www.axi.com/int/funded-trader-program","entity":"https://www.axi.com/int/funded-trader-program","offer":"https://www.axi.com/int/funded-trader-program"},
+      "finding": "Axi Select utilise un compte réel financé par le trader. Un retrait de ses fonds peut diminuer l'allocation et les profits mensuels : règle publiée, à expliquer précisément, pas une preuve de retrait arbitraire.",
+      "findingSource": "https://help.axi.com/en-US/axiv2--axicorp-prod/article/Xi1qeq4R-will-withdrawals-impact-my-profits-in-axi-select",
+      "hold": "Contrat de la contrepartie par région, preuves de récompenses et traitement des profits acquis encore à confirmer."
+    },
+    {
+      "slug": "trade-the-pool", "before": 75, "confidence": "moyenne", "scores": {"A":[7,8,2],"B":[6,7,3,4],"C":[8,3,2],"D":[4,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://tradethepool.com/program-terms/","contract":"https://tradethepool.com/terms-and-conditions/","program":"https://tradethepool.com/the-program/","entity":"https://tradethepool.com/terms-and-conditions/","offer":"https://tradethepool.com/the-program/"},
+      "finding": "Comme chez The5ers, des clauses de propos publics et de récompenses confisquées sont formulées largement, avec seuil de payout discrétionnaire ; elles pèsent sur B1/B3 et non sur A2 faute de refus établi.",
+      "findingSource": "https://tradethepool.com/terms-and-conditions/",
+      "hold": "Déterminer quelles conditions générales prévalent sur les Program Terms pour chaque compte MAX/FLEX et vérifier les preuves de payout indépendantes."
+    },
+    {
+      "slug": "tradeday", "before": 75, "confidence": "limitee", "scores": {"A":[9,8,2],"B":[10,5,5,4],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://www.tradeday.com/","contract":"https://www.tradeday.com/","program":"https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading","entity":"https://www.tradeday.com/about","offer":"https://www.tradeday.com/"},
+      "finding": "Audit Claude : la promesse générale d'absence de jours minimum diffère des nouvelles offres Fast Pass à trois jours ; versions et parcours à rapprocher, sans assimiler la consistance à une faute.",
+      "findingSource": "https://www.tradeday.com/blog-posts/tradeday-2-0---the-next-evolution-of-prop-trading",
+      "hold": "Contrat et politique de payout du nouveau programme non lus intégralement ; note non publiable en l'état."
+    },
+    {
+      "slug": "city-traders-imperium", "before": 74, "confidence": "limitee", "scores": {"A":[7,8,2],"B":[10,7,5,5],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://citytradersimperium.com/direct-funding/","contract":"https://citytradersimperium.com/","program":"https://citytradersimperium.com/choosing-your-funding-program/","entity":"https://citytradersimperium.com/","offer":"https://citytradersimperium.com/direct-funding/"},
+      "finding": "Direct Funding commence avec une allocation inférieure au capital publicitaire et des retraits différés ; ces conditions de vente doivent apparaître, mais pas devenir des accusations de retenue arbitraire.",
+      "findingSource": "https://citytradersimperium.com/direct-funding/",
+      "hold": "Contrat des gains acquis et preuves tierces de paiement restent insuffisamment recoupés."
+    },
+    {
+      "slug": "audacity-capital", "before": 73, "confidence": "moyenne", "scores": {"A":[9,8,2],"B":[11,6,6,5],"C":[7,3,2],"D":[5,5,5],"E":[4,2,3]},
+      "sources": {"payout":"https://audacity.capital/knowledge-center/general/","contract":"https://audacity.capital/terms-and-conditions/","program":"https://audacity.capital/knowledge-center/ability-one/","entity":"https://audacity.capital/terms-and-conditions/","offer":"https://audacity.capital/knowledge-center/ftp/"},
+      "finding": "La sanction de refus de payout est liée dans les CGU à un manquement raisonnablement déterminé ; une divergence sur les minimum trading days d'Ability One subsiste et relève de B2, pas d'un malus de consistance.",
+      "findingSource": "https://audacity.capital/terms-and-conditions/",
+      "hold": "Notice Trustpilot −6 conservée une fois ; vérifier qu'elle est toujours active au moment de l'intégration."
+    },
+    {
+      "slug": "take-profit-trader", "before": 73, "confidence": "limitee", "scores": {"A":[8,8,1],"B":[10,7,5,5],"C":[7,3,2],"D":[5,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules","contract":"https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules","program":"https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172006753821-PRO-Account-Rules","entity":"https://takeprofittrader.com/","offer":"https://takeprofittrader.com/"},
+      "finding": "Une règle de drawdown intraday sur le funded PRO a un effet concret sur le buffer de retrait, mais c'est une condition annoncée, pas une règle cachée ni un incident de payout.",
+      "findingSource": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15172219527581-PRO-Account-Profit-Split-Withdrawal-Rules",
+      "hold": "Accord PRO distinct de la FAQ, entité légale et preuves tierces de paiement à vérifier."
+    },
+    {
+      "slug": "myfundedfutures", "before": 73, "confidence": "moyenne", "scores": {"A":[9,9,5],"B":[8,7,5,5],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://myfundedfutures.com/plans/rapid","contract":"https://myfundedfutures.com/terms","program":"https://myfundedfutures.com/plans/rapid","entity":"https://myfundedfutures.com/terms","offer":"https://myfundedfutures.com/plans/rapid"},
+      "finding": "Preuve agrégée de flux crypto observés par un tiers ; les CGU autorisent des annulations et sanctions pour comportements interdits, le contrôle doit préciser leur seuil et la protection des récompenses.",
+      "findingSource": "https://myfundedfutures.com/terms",
+      "hold": "Portée des clauses de résiliation et conditions précises Builder/Rapid à relire avant hausse publique de huit points."
+    },
+    {
+      "slug": "tradeify", "before": 72, "confidence": "moyenne", "scores": {"A":[9,8,2],"B":[7,8,4,5],"C":[7,3,2],"D":[5,5,4],"E":[4,3,2]},
+      "sources": {"payout":"https://tradeify.co/funded-trader-agreement","contract":"https://tradeify.co/funded-trader-agreement","program":"https://help.tradeify.co/en/articles/10468318-guidelines-for-traders","entity":"https://tradeify.co/terms-of-use","offer":"https://intercom.help/tradeify/en/articles/14369021-tradeify-pricing-reference"},
+      "finding": "L'accord funded permet de suspendre un payout approuvé durant une enquête de conformité et éventuellement de le confisquer ; son périmètre et ses garanties procédurales sont publics, mais représentent un risque contractuel B1.",
+      "findingSource": "https://tradeify.co/funded-trader-agreement",
+      "hold": "Distinguer les parcours Select, Growth et Lightning ; statistiques de réussite auto-publiées, pas preuve de payout indépendant."
+    },
+    {
+      "slug": "oneup-trader", "before": 72, "confidence": "limitee", "scores": {"A":[8,8,1],"B":[10,7,5,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://help.oneuptrader.com/article/376-profit-info","contract":"https://help.oneuptrader.com/article/372-funded-trader-rules","program":"https://help.oneuptrader.com/article/387-what-are-the-rules-of-the-evaluation","entity":"https://oneuptrader.com/","offer":"https://oneuptrader.com/"},
+      "finding": "Une obligation de maintenir une certaine activité hebdomadaire et le scalping de moins de dix secondes sont écrits ; ils doivent figurer dans les règles par produit, sans malus de tromperie.",
+      "findingSource": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+      "hold": "Contrat de résiliation des droits acquis et sources de payouts indépendantes manquants."
+    },
+    {
+      "slug": "alpha-capital-group", "before": 71, "confidence": "limitee", "scores": {"A":[8,8,5],"B":[10,7,5,5],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work","contract":"https://help.alphacapitalgroup.uk/en/articles/8420522-what-is-the-ip-rule-are-vpns-and-vpss-allowed","program":"https://help.alphacapitalgroup.uk/en/articles/6934220-what-is-the-maximum-total-loss","entity":"https://alphacapitalgroup.uk/","offer":"https://alphacapitalgroup.uk/posts/how-much-does-a-prop-firm-evaluation-cost-2026"},
+      "finding": "Max Risk Rule chiffrée et obligation d'annoncer VPN/VPS ; sanctions annoncées mais preuve d'un droit arbitraire sur payout acquis non consolidée dans le présent lot.",
+      "findingSource": "https://help.alphacapitalgroup.uk/en/articles/15888623-what-is-the-max-risk-rule-and-how-does-it-work",
+      "hold": "Notice Trustpilot −6 conservée, vérifier sa persistance ; accord contractuel complet à lire avant publication."
+    },
+    {
+      "slug": "earn2trade", "before": 71, "confidence": "moyenne", "scores": {"A":[7,8,2],"B":[9,7,5,5],"C":[6,3,2],"D":[4,4,4],"E":[4,2,2]},
+      "sources": {"payout":"https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation","contract":"https://www.earn2trade.com/terms-and-conditions","program":"https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules","entity":"https://www.earn2trade.com/terms-and-conditions","offer":"https://www.earn2trade.com/"},
+      "finding": "La grille de retrait et split dépend du montant du retrait ; règles cohérentes si l'on distingue LiveSim/Live, mais notions de stratégies 'unrealistic' non chiffrées à surveiller en B1.",
+      "findingSource": "https://www.earn2trade.com/terms-and-conditions",
+      "hold": "Contrat exact des retraits après passage à un partenaire de funding et vérification externe des payouts."
+    },
+    {
+      "slug": "fundednext", "before": 70, "confidence": "moyenne", "scores": {"A":[8,8,5],"B":[4,6,4,4],"C":[7,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://help.fundednext.com/en/articles/17253243-stellar-instant-account","contract":"https://fundednext.com/terms-of-service","program":"https://fundednext.com/cfds/stellar-lite","entity":"https://fundednext.com/terms-of-service","offer":"https://fundednext.com/cfds/stellar-lite"},
+      "finding": "Les CGU prévoient de retenir, annuler ou reprendre des Performance Rewards sur des critères larges, parfois au jugement de la firme ; sérieux malus B1, mais pas preuve d'un incident réel pour A2.",
+      "findingSource": "https://fundednext.com/terms-of-service",
+      "hold": "Distinguer contrats régionaux et éditions de CGU ; onchain prouve des transferts observés, pas un taux de payout global."
+    },
+    {
+      "slug": "instant-funding", "before": 70, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[11,7,5,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://instantfunding.com/help/payouts/","contract":"https://instantfunding.com/wp-content/uploads/2025/12/Acello-General-Terms-and-Conditions.pdf","program":"https://instantfunding.com/help/instant-funding-program/","entity":"https://instantfunding.com/disclaimers-legal-information/","offer":"https://instantfunding.com/help/one-phase/"},
+      "finding": "Le contrat reconnaît une obligation de verser les sommes contractuellement dues ; un contrôle et une sanction sur pratiques interdites restent prévus. Les dates diffèrent selon programme.",
+      "findingSource": "https://instantfunding.com/disclaimers-legal-information/",
+      "hold": "Notice Trustpilot −6 conservée ; clarifier la version signée du contrat et la nature de ses conditions."
+    },
+    {
+      "slug": "breakout-prop", "before": 70, "confidence": "limitee", "scores": {"A":[8,8,2],"B":[10,7,5,5],"C":[8,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://www.breakoutprop.com/program-rules/","contract":"https://www.breakoutprop.com/program-rules/","program":"https://www.breakoutprop.com/program-rules/","entity":"https://www.breakoutprop.com/kraken/","offer":"https://www.breakoutprop.com/"},
+      "finding": "Les limites d'equity et l'interdiction de copy trading sont affichées ; l'absence de clause discrétionnaire prouvée dans la courte FAQ ne démontre pas la protection contractuelle des gains.",
+      "findingSource": "https://www.breakoutprop.com/program-rules/",
+      "hold": "Accord des récompenses, frais, preuves indépendantes et rôle exact de Payward/Kraken à compléter."
+    },
+    {
+      "slug": "the-trading-pit", "before": 70, "confidence": "moyenne", "scores": {"A":[7,8,2],"B":[6,7,4,5],"C":[8,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://www.thetradingpit.com/general-terms-and-conditions","contract":"https://www.thetradingpit.com/general-terms-and-conditions","program":"https://www.thetradingpit.com/futures","entity":"https://www.thetradingpit.com/general-terms-and-conditions","offer":"https://www.thetradingpit.com/futures"},
+      "finding": "Schedule A laisse la récompense à une appréciation 'reasonable discretion', éventuellement zéro ; gains déjà déterminés protégés sauf cas de fraude/règle, à traiter une fois en B1.",
+      "findingSource": "https://www.thetradingpit.com/general-terms-and-conditions",
+      "hold": "Notice Trustpilot −6 conservée ; vérifier l'applicabilité du contrat aux deux divisions et les garanties du comité de révision."
+    },
+    {
+      "slug": "e8-markets", "before": 69, "confidence": "moyenne", "scores": {"A":[8,8,5],"B":[7,7,5,5],"C":[6,3,2],"D":[4,5,5],"E":[4,2,2]},
+      "sources": {"payout":"https://help.e8markets.com/en/articles/15272556-everything-about-payouts-when-how-how-fast","contract":"https://help.e8markets.com/en/articles/6929927-trading-policies-and-prohibited-trading-strategies","program":"https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature","entity":"https://e8markets.com/","offer":"https://help.e8markets.com/en/articles/13653464-payout-request-from-e8-pro"},
+      "finding": "La politique E8 prévoit une retenue de payout si le trading n'est pas jugé 'consistent and sustainable' ; notion subjective B1, différente des limites de consistance publiées.",
+      "findingSource": "https://help.e8markets.com/en/articles/6929927-trading-policies-and-prohibited-trading-strategies",
+      "hold": "Notice Trustpilot −6 conservée ; KYC du processeur WorkMarket/Rise et offres E8 Pro/Signature à distinguer."
+    },
+    {
+      "slug": "uprofit-trader", "before": 69, "confidence": "limitee", "scores": {"A":[8,8,2],"B":[7,7,5,5],"C":[6,3,2],"D":[4,5,4],"E":[3,2,2]},
+      "sources": {"payout":"https://help.uprofittrader.com/hc/en-us/articles/49177986296468-UProfit-One-Payout-Policy","contract":"https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide","program":"https://help.uprofittrader.com/hc/en-us/articles/49177986296468-UProfit-One-Payout-Policy","entity":"https://uprofittrader.com/","offer":"https://uprofittrader.com/"},
+      "finding": "Le guide de bonnes pratiques permet d'annuler profits et paiements en cas d'actions prohibées ; les exemples et preuves à contrôler avant de juger la clause arbitraire.",
+      "findingSource": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide",
+      "hold": "Trader Agreement contractuel non lu ; plaintes et tarifs par programme à vérifier indépendamment."
+    },
+    {
+      "slug": "funded-trading-plus", "before": 68, "confidence": "limitee", "scores": {"A":[8,8,2],"B":[10,7,5,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://help.fundedtradingplus.com/payouts-overview/","contract":"https://www.fundedtradingplus.com/","program":"https://help.fundedtradingplus.com/1-step-express-program-information/","entity":"https://www.fundedtradingplus.com/","offer":"https://help.fundedtradingplus.com/2-step-classic-program-information/"},
+      "finding": "Conditions de consistance et de perte par programme publiques ; pas de grief contractuel grave prouvé dans les seuls textes courts relus, mais la CGU de remboursement doit être revue.",
+      "findingSource": "https://help.fundedtradingplus.com/payouts-overview/",
+      "hold": "Notice Trustpilot −6 conservée ; CGU intégrales, plaintes fondées et statut exact de la société à vérifier."
+    },
+    {
+      "slug": "fintokei", "before": 68, "confidence": "moyenne", "scores": {"A":[9,8,2],"B":[7,8,4,5],"C":[8,3,2],"D":[4,5,4],"E":[4,3,2]},
+      "sources": {"payout":"https://support.fintokei.com/en/articles/6538884-how-and-how-often-can-i-withdraw-my-performance-rewards-and-what-is-the-minimum-amount","contract":"https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf","program":"https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules","entity":"https://www.fintokei.com/","offer":"https://support.fintokei.com/en/articles/6538822-how-does-the-protrader-challenge-work-what-are-the-rules"},
+      "finding": "V17 comporte des pouvoirs de suspension sur suspicion et des standards 'unsustainable practices' ; plusieurs contraintes sont normalement mesurables et ne doivent plus générer le −9 mécanique.",
+      "findingSource": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+      "hold": "Hausse proposée de 10 points : validation d'Adrien impérative et revue de l'accord Provider des récompenses dues."
+    },
+    {
+      "slug": "maven-trading", "before": 67, "confidence": "limitee", "scores": {"A":[8,8,2],"B":[10,7,5,5],"C":[6,3,2],"D":[4,5,4],"E":[4,2,2]},
+      "sources": {"payout":"https://maventrading.com/pricing","contract":"https://maventrading.com/pricing","program":"https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/","entity":"https://maventrading.com/","offer":"https://maventrading.com/pricing"},
+      "finding": "Drawdown trailing lié à l'equity explicité sur plusieurs formules ; pas de contrat de reward suffisamment audité pour conclure sur la latitude réelle de suppression des gains.",
+      "findingSource": "https://maventrading.crisp.help/en/article/what-are-the-drawdown-limits-ddpi2b/",
+      "hold": "Notice Trustpilot −6 conservée ; chercher les CGU de payout intégrales et vérifier les avis externes récents."
+    }
+  ]
+}
