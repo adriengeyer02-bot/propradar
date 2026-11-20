@@ -9,6 +9,7 @@ const expected = {
   miltraders: { previous: 58, gross: 65, rules: 2, trustpilot: 0, final: 63, b1: 5 },
   'top-one-trader': { previous: 50, gross: 70, rules: 4, trustpilot: 6, final: 60, b1: 5 },
   onefunded: { previous: 47, gross: 70, rules: 4, trustpilot: 6, final: 60, b1: 5 },
+  'bem-funding': { previous: 46, gross: 66, rules: 6, trustpilot: 6, final: 54, b1: 5 },
 };
 assert.equal(proposals.version, 5);
 assert.equal(proposals.firms.length, Object.keys(expected).length);
