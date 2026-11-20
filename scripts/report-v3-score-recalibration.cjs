@@ -34,7 +34,7 @@ require.extensions['.ts'] = (mod, filename) => {
 
 const { propFirms } = require(path.join(root, 'app/lib/propFirms.ts'));
 const { getFirmUpdate } = require(path.join(root, 'app/lib/firmUpdates.ts'));
-const { ruleKind } = require(path.join(root, 'app/lib/restrictiveRules.ts'));
+const { ruleKind, computeRulesPenalty } = require(path.join(root, 'app/lib/restrictiveRules.ts'));
 
 const rows = propFirms.map((firm) => {
   const update = getFirmUpdate(firm.slug);
@@ -42,9 +42,14 @@ const rows = propFirms.map((firm) => {
   const riskRules = rules.filter((rule) => ruleKind(rule) === 'risk');
   const independentProofs = (firm.payoutProofs ?? []).filter((proof) => !proof.firmReported);
   const firmReportedProofs = (firm.payoutProofs ?? []).filter((proof) => proof.firmReported);
-  const legacyPenalty = firm.rulesPenalty?.penalty ?? 0;
+  // Always show the same before/after regardless of whether the V3 switch
+  // is currently enabled in this checkout. This keeps the report reproducible
+  // on both the old main branch and a V3 preview branch.
+  const legacyPenalty = firm.status === 'Fermée' ? 0 : computeRulesPenalty(update)?.penalty ?? 0;
+  const hadAppliedPenalty = Boolean(firm.rulesPenalty?.penalty);
   const editorial = firm.rulesPenalty?.before ?? firm.trustpilotPenalty?.before ?? firm.closedCap?.before ?? firm.score;
-  const withoutLegacyPenalty = Math.min(100, firm.score + legacyPenalty);
+  const legacyScore = hadAppliedPenalty ? firm.score : Math.max(0, firm.score - legacyPenalty);
+  const withoutLegacyPenalty = hadAppliedPenalty ? Math.min(100, firm.score + legacyPenalty) : firm.score;
   const payoutRisk = firm.reviewSignals.payoutRisk;
   const regulatorRisk = firm.regulatoryAudit.riskLevel;
   const conflicts = rules.filter((rule) => rule.status === 'conflicting').length;
@@ -67,11 +72,11 @@ const rows = propFirms.map((firm) => {
     slug: firm.slug,
     firm: firm.name,
     status: firm.status,
-    legacyScore: firm.score,
+    legacyScore,
     editorial,
     legacyRulesPenalty: legacyPenalty,
     withoutLegacyPenalty,
-    delta: withoutLegacyPenalty - firm.score,
+    delta: withoutLegacyPenalty - legacyScore,
     trustpilotPenalty: firm.trustpilotPenalty?.penalty ?? 0,
     payoutRisk,
     regulatorRisk,
