@@ -8,7 +8,6 @@
 import batch1 from '../data/scoring-v4-batch-1.json';
 import batch2 from '../data/scoring-v4-batch-2.json';
 import batch3 from '../data/scoring-v4-batch-3.json';
-import { getFirmUpdate } from './firmUpdates';
 import type { PropFirm } from './propFirms';
 import { computeV4Scorecard, V4_BLOCKS, type V4Scorecard, type V4Criterion, type V4Assessment } from './scoringV4';
 
@@ -97,28 +96,20 @@ function compactCard(firm: PropFirm, raw: CompactReview, checkedOn: string): V4S
   };
 }
 
-/** The LAST score stage, so the old rule/Trustpilot engines never double deduct. */
-export function applyPublishedV4(firm: PropFirm): PropFirm {
-  if (!approved.has(firm.slug) || firm.status === 'Fermée') return firm;
+export function isPublishedV4(slug: string, latestScoreReview?: string): boolean {
+  return approved.has(slug) && (!latestScoreReview || latestScoreReview <= '2026-11-20');
+}
+
+export type PublishedV4Score = ReturnType<typeof computeV4Scorecard> & { checkedOn: string };
+
+/** Compute a published V4 card independently of the historical score pipeline. */
+export function getPublishedV4Score(firm: PropFirm, latestScoreReview?: string): PublishedV4Score | undefined {
+  if (!approved.has(firm.slug) || firm.status === 'Fermée') return undefined;
   const row = reviews.get(firm.slug)!;
   const checkedOn = 'checkedOn' in row ? row.checkedOn : batch3.checkedOn;
-  // A later, explicit editorial score change supersedes this frozen V4 review.
-  const subsequentScoreReview = getFirmUpdate(firm.slug)?.changelog.some((entry) => entry.date > checkedOn && entry.fields?.includes('score'));
-  if (subsequentScoreReview) return firm;
+  if (latestScoreReview && latestScoreReview > checkedOn) return undefined;
   const card: V4Scorecard = 'criteria' in row
     ? { ...row, status: 'approuvee', trustpilotActiveNotice: Boolean(firm.reviewSignals.trustpilotRatingWithheld), closed: false } as V4Scorecard
     : compactCard(firm, row, checkedOn);
-  const result = computeV4Scorecard(card);
-  return {
-    ...firm,
-    score: result.operationalScore,
-    scoreV4: { ...result, checkedOn },
-    lastReviewed: firm.lastReviewed > checkedOn ? firm.lastReviewed : checkedOn,
-    // The V4 B1/B2/B3/B4 allocation already accounts for contract clarity.
-    rulesPenalty: undefined,
-    scoreCap: undefined,
-    trustpilotPenalty: result.trustpilotPenalty
-      ? { before: result.editorial, penalty: result.trustpilotPenalty, included: false }
-      : undefined,
-  };
+  return { ...computeV4Scorecard(card), checkedOn };
 }

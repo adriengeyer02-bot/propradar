@@ -71,6 +71,8 @@ export function penaltyFromLoad(rawLoad: number) {
 
 /** Returns undefined when the firm has no scored rule (nothing to compute). */
 export function computeRulesPenalty(update: Pick<FirmUpdate, 'restrictiveRules' | 'auditedPrograms'> | undefined): RulesPenalty | undefined {
+  // Published V4 has already assessed contractual uncertainty in B1/B2/B3/B4.
+  if ((update as FirmUpdate | undefined)?.scoringVersion === 4) return undefined;
   const rules = update?.restrictiveRules ?? [];
   const scored = rules.filter(isScoredRule);
   const counted = scored.filter((rule) => ruleKind(rule) !== 'classic');

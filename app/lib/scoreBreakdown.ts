@@ -1,6 +1,7 @@
 import type { PropFirm } from './propFirms';
 import { getFirmUpdate, type RestrictiveRule } from './firmUpdates';
 import { computeRulesPenalty, isScoredRule, rulePoints, RULES_PENALTY_ENABLED, RULES_PENALTY_MAX } from './restrictiveRules';
+import { getPublishedV4Score, isPublishedV4, type PublishedV4Score } from './scoringV4Published';
 
 /**
  * Step-by-step explanation of a firm's displayed score (SCORING.md): the
@@ -15,7 +16,7 @@ export type ScoreBreakdownRule = {
 export type ScoreBreakdown = {
   editorial: number;
   /** Validated V4 five-block breakdown; no second legacy rules deduction. */
-  v4?: NonNullable<PropFirm['scoreV4']>;
+  v4?: PublishedV4Score;
   rules?: {
     penalty: number;
     applied: boolean;
@@ -34,17 +35,20 @@ export type ScoreBreakdown = {
 };
 
 export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
-  if (firm.scoreV4) {
+  const update = getFirmUpdate(firm.slug);
+  const v4 = (update?.scoringVersion === 4 || (!update && isPublishedV4(firm.slug)))
+    ? getPublishedV4Score(firm)
+    : undefined;
+  if (v4) {
     return {
-      editorial: firm.scoreV4.editorial,
-      v4: firm.scoreV4,
+      editorial: v4.editorial,
+      v4,
       unclassifiedOnly: 0,
       trustpilot: firm.trustpilotPenalty,
       final: firm.score,
       maxPenalty: 0,
     };
   }
-  const update = getFirmUpdate(firm.slug);
   const allRules = update?.restrictiveRules ?? [];
   const result = computeRulesPenalty(update);
   const applied = Boolean(firm.rulesPenalty);

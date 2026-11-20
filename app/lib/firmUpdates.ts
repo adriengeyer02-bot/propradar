@@ -1,6 +1,7 @@
 import type { Product, PropFirm, RegulatoryAudit, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
 import { firmLogoFor } from './firmLogos';
 import updatesFile from '../data/firm-updates.json';
+import { getPublishedV4Score, isPublishedV4 } from './scoringV4Published';
 
 /**
  * Data updates layer.
@@ -52,6 +53,8 @@ export type AuditedProgram = { key: string; name: string };
 
 export type FirmUpdate = {
   reviewedAt: string;
+  /** V4 publication gate; not persisted in the raw Claude audit JSON. */
+  scoringVersion?: 4;
   restrictiveRules?: RestrictiveRule[];
   auditedPrograms?: AuditedProgram[];
   set?: Partial<{
@@ -119,7 +122,13 @@ type UpdatesFile = {
 const updates = (updatesFile as UpdatesFile).firms ?? {};
 
 export function getFirmUpdate(slug: string): FirmUpdate | undefined {
-  return updates[slug];
+  const update = updates[slug];
+  if (!update) return undefined;
+  const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
+  if (!isPublishedV4(slug, latestScoreReview)) return update;
+  // V4 uses a fresh editorial score; any legacy notice-included marker must
+  // not suppress the one operational −6 required by the new V4 contract.
+  return { ...update, scoringVersion: 4, set: update.set ? { ...update.set, trustpilotPenaltyIncluded: undefined } : undefined };
 }
 
 export function getFirmChangelog(slug: string): FirmChangelogEntry[] {
@@ -147,7 +156,10 @@ export function recentFirmUpdates(days = 7): { since: string; latest: string; by
 export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
   return firms.map((firm) => {
     const update = updates[firm.slug];
-    if (!update) return firm;
+    if (!update) {
+      const v4 = getPublishedV4Score(firm);
+      return v4 ? { ...firm, score: v4.editorial, lastReviewed: firm.lastReviewed > v4.checkedOn ? firm.lastReviewed : v4.checkedOn } : firm;
+    }
 
     const set = update.set ?? {};
     const next: PropFirm = {
@@ -308,6 +320,12 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
       }
     }
 
+    const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
+    const v4 = getPublishedV4Score(next, latestScoreReview);
+    if (v4) {
+      next.score = v4.editorial;
+      next.lastReviewed = next.lastReviewed > v4.checkedOn ? next.lastReviewed : v4.checkedOn;
+    }
     return next;
   });
 }

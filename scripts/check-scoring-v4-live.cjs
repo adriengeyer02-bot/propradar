@@ -20,15 +20,15 @@ const legacy = [...groups[1].firms.filter((row) => row.confidence === 'limitee')
 assert.equal(V4_PUBLISHED_SLUGS.length, 29);
 assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 29);
 assert.equal(legacy.length, 14);
-const scored = propFirms.filter((firm) => firm.scoreV4);
+const scored = propFirms.filter((firm) => getScoreBreakdown(firm).v4);
 assert.equal(scored.length, 29, 'exactly 29 firms should use the V4 score in production');
 assert.deepEqual(scored.map((firm) => firm.slug).sort(), [...V4_PUBLISHED_SLUGS].sort());
 assert.ok(topFirms.every((firm, i) => i === 0 || topFirms[i - 1].score >= firm.score));
 
 console.log('Firme | éditorial | Trustpilot | visible | confiance');
 for (const firm of scored) {
-  const review = firm.scoreV4;
   const breakdown = getScoreBreakdown(firm);
+  const review = breakdown.v4;
   assert.equal(review.confidence, 'moyenne');
   assert.equal(review.checkedOn, '2026-11-20');
   assert.equal(breakdown.v4?.editorial, review.editorial);
@@ -44,7 +44,7 @@ for (const firm of scored) {
 for (const slug of legacy) {
   const firm = getFirmBySlug(slug);
   assert.ok(firm, `${slug}: missing legacy firm`);
-  assert.equal(firm.scoreV4, undefined, `${slug}: incomplete V4 audit accidentally published`);
+  assert.equal(getScoreBreakdown(firm).v4, undefined, `${slug}: incomplete V4 audit accidentally published`);
 }
 assert.equal(getFirmBySlug('ftmo').score, 90);
 assert.equal(getFirmBySlug('topstep').score, 81);
