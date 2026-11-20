@@ -1,5 +1,12 @@
 # PropRadar — barème V3 partagé, 100 points
 
+> **ARCHIVE / NE PLUS UTILISER POUR LES NOUVELLES NOTES.** Adrien Geyer a
+> remplacé le 20 novembre 2026 cette répartition 40/25/15/15/5 par le
+> **barème 25/35/15/15/10** de [`SCORING_V4.md`](SCORING_V4.md).
+> Le calculateur `app/lib/scoringV3.ts` n'est pas branché aux notes publiques
+> et ne doit pas être activé. Consignes courtes pour Claude :
+> [`claude/README-SCORING-FINAL-2026-11-20.md`](claude/README-SCORING-FINAL-2026-11-20.md).
+
 **Décision d'Adrien, 20 novembre 2026 : sévère sur les risques de payouts,
 juste sur les restrictions de trading.** Cette grille cible le recalibrage
 des 197 fiches. Elle est distincte du barème historique de `SCORING.md`
