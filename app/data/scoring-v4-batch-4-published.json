@@ -1,9 +1,18 @@
 {
   "version": 4,
   "checkedOn": "2026-11-20",
-  "status": "approved-non-sensitive-2-from-ranks-44-63",
+  "status": "approved-3-from-ranks-44-63",
   "method": "V4 25/35/15/15/10; current official contract/payout/programme sources. No separately deducted consistency rule. A contractual risk B1 is not a proven refused payout A2.",
   "firms": [
+    {
+      "slug": "myfundedcapital", "before": 59, "confidence": "moyenne", "scores": {"A":[9,8,1],"B":[12,6,5,5],"C":[5,3,2],"D":[4,4,4],"E":[3,2,2]},
+      "sources": {"payout":"https://myfundedcapital.com/faq/live-accounts/","contract":"https://myfundedcapital.com/terms-and-conditions/","program":"https://myfundedcapital.com/faq/trading-rules/","entity":"https://myfundedcapital.com/contact-us/","offer":"https://myfundedcapital.com/learn/payouts/"},
+      "b1":"CGU du 17 novembre 2026 : liste de motifs de refus encadrés par tests mesurables, notification des éléments et réponse contradictoire sous sept jours. Réserves sur chargebacks et contrat funded ultérieur.",
+      "b2":"FAQ et CGU récentes par programme cohérentes en principe. Une ancienne page générique donne des paramètres historiques différents. Le contact officiel identifie LLC FZ et FZCO comme deux entités, mais signer exact à recouper.",
+      "b3":"Préavis de quatorze jours pour changement substantiel, maintien des règles associées aux comptes existants sauf exceptions immédiates d'intégrité/compliance.",
+      "hold":"Décision éditoriale approuvée par Adrien le 20 novembre 2026, sous réserve d'un audit correctement sourcé. Confiance moyenne : Funded Trader Agreement non public (signé en dashboard) et numéro LLC FZ auto-déclaré sans contrôle de registre indépendant. Payouts externes non prouvés en masse.",
+      "next":"Vérifier la version signée du Funded Trader Agreement lorsque accessible, l'immatriculation UAE et la cohérence des anciennes pages; ajuster la note si des faits nouveaux sont établis."
+    },
     {
       "slug": "elite-trader-funding", "before": 58, "confidence": "moyenne", "scores": {"A":[8,8,2],"B":[3,7,2,5],"C":[6,3,2],"D":[4,4,4],"E":[4,2,2]},
       "sources": {"payout":"https://elitetraderfunding.app/help/how-do-payouts-work?version=latest","contract":"https://elitetraderfunding.app/terms-of-service","program":"https://elitetraderfunding.app/help/reward-withdrawal-options","entity":"https://elitetraderfunding.app/terms-of-service","offer":"https://elitetraderfunding.app/help/how-do-payouts-work?version=latest"},
