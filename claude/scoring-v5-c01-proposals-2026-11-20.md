@@ -2,7 +2,7 @@
 
 **Décision de publication ultérieure :** Adrien a demandé le 20 novembre 2026 la mise en ligne des notes V5 sourcées et de la fenêtre Apex. Les propositions C01 Alpha Capital Group (67) et Maven Trading (63) ont donc une approbation explicite de score/date dans `app/data/scoring-v5-published.json` ; leurs fichiers d'audit restent des dossiers de preuve au statut « proposition ». Les 64 autres firmes C01–C04 ne sont pas migrées par cette décision.
 
-**État au 20 novembre :** Alpha et Maven publiées après accord ; **TradeDay est une nouvelle proposition sensible, non approuvée et non publiée.**
+**État au 20 novembre :** Alpha, Maven et **TradeDay** ont désormais reçu un accord explicite d'Adrien pour publication V5. L'activation de TradeDay est verrouillée par sa note datée dans `scoring-v5-published.json`.
 
 Le fichier canonique vérifiable est `app/data/scoring-v5-proposals-c01.json` : 13 sous-notes pour chaque firme, justification, liens par critère, faits négatifs identifiés sans double sanction. Il est volontairement distinct de `app/data/scoring-v5-published.json`. L'ancienne note V4 reste celle du site jusqu'à validation des écarts et fusion du moteur V5.
 
@@ -12,17 +12,17 @@ Le fichier canonique vérifiable est `app/data/scoring-v5-proposals-c01.json` : 
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | **Alpha Capital Group** | 74 | 25 | 8 | 15 | 16 | 9 | 73 | −2 | −6 | **67** | **−7** |
 | **Maven Trading** | 72 | 19 | 12 | 14 | 16 | 8 | 69 | −6 | −6 | **63** | **−9** |
-| **TradeDay — à approuver** | 75 | 18 | 13 | 11 | 16 | 9 | 67 | −2 | 0 | **67** | **−8** |
+| **TradeDay — approuvé** | 75 | 18 | 13 | 11 | 16 | 9 | 67 | −2 | 0 | **67** | **−8** |
 
 La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 déjà inclus. Pour le dialogue demandé par Adrien, la décomposition *visuelle* reconstitue une note éditoriale avant la déduction B2, sans changer le calcul :
 
 - Alpha : **75 éditorial avant règles −2 règles contraignantes −6 Trustpilot = 67**.
 - Maven : **75 éditorial avant règles −6 règles contraignantes −6 Trustpilot = 63**.
-- TradeDay : **69 éditorial avant règles −2 règles contraignantes = 67**, proposition non publiée.
+- TradeDay : **69 éditorial avant règles −2 règles contraignantes = 67**, approuvé après la revue de la PR #239.
 
 ## TradeDay — audit V5 documentaire, proposition soumise à validation
 
-**TradeDay LLC / tradeday.com / Quick Pay et Fast Pass 25K–150K, évaluation, Funded Sim et Funded Live / 20 novembre 2026 / actif.** Ancienne note 75/100 ; proposition **67/100 (−8), confiance faible**. Les 13 évaluations et URL par sous-critère sont dans `app/data/scoring-v5-proposals-c01.json`. Aucun changement de note ne doit être activé sans l'accord d'Adrien.
+**TradeDay LLC / tradeday.com / Quick Pay et Fast Pass 25K–150K, évaluation, Funded Sim et Funded Live / 20 novembre 2026 / actif.** Ancienne note 75/100 ; nouvelle note approuvée **67/100 (−8), confiance faible**. Les 13 évaluations et URL par sous-critère sont dans `app/data/scoring-v5-proposals-c01.json`. L'accord explicite d'Adrien a été obtenu après l'ouverture de la PR #239.
 
 | Critère | Points | Motif déterminant |
 | --- | ---: | --- |
@@ -46,7 +46,7 @@ La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 
 
 **Pièces majeures (consultées le 20/11/2026) :** [CGU TradeDay §3 et §23](https://www.tradeday.com/terms-and-conditions), [offres Fast Pass et Quick Pay](https://www.tradeday.com/), [FAQ Fast Pass mise à jour le 12/11](https://tradeday.freshdesk.com/en/support/solutions/articles/103000405229-what-is-fast-pass-), [annonce migration du 12/11](https://www.tradeday.com/pt/blog-posts/no-more-subscriptions-tradeday-moves-to-one-time-payments---plus-60-off-every-account), [FAQ funded](https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-), [PayoutTrail avec méthode de vérification](https://www.payouttrail.com/methodology), [suivi des règlements TradeDay](https://www.payouttrail.com/firms/tradeday), [BBB](https://www.bbb.org/us/il/chicago/profile/commodity-trading-advisory-service/tradeday-llc-0654-1000112598), [Trustpilot](https://www.trustpilot.com/review/tradeday.com).
 
-**Non vérifié :** numéro d'enregistrement et statut actuel de TradeDay LLC au registre Illinois, contrat exact Funded SIM/LIVE signé, dernier écran du checkout, confirmation indépendante du portefeuille Rise/TradeDay, suivi de cas de payout au regard de leurs dates contractuelles, issue de la plainte BBB. Le dossier est **à discuter avant publication** en raison de la baisse proposée de huit points.
+**Non vérifié :** numéro d'enregistrement et statut actuel de TradeDay LLC au registre Illinois, contrat exact Funded SIM/LIVE signé, dernier écran du checkout, confirmation indépendante du portefeuille Rise/TradeDay, suivi de cas de payout au regard de leurs dates contractuelles, issue de la plainte BBB. Ces réserves restent visibles dans le dossier malgré l'accord de publication de la baisse de huit points.
 
 ## Alpha Capital Group — risques et preuve positive
 
@@ -73,5 +73,5 @@ La colonne **V5 BRUT** ci-dessus suit strictement le barème A+B+C+D+E, avec B2 
 ## Garde-fous et suite
 
 - Chaque pénalité liée à un *fait* porte une identité unique dans le JSON et le moteur refuse les doublons. Aucune plainte non corroborée n'est convertie en A2=6/4/2.
-- Les notes Alpha et Maven disposent déjà de l'accord explicite de publication. **TradeDay 75→67 reste une proposition** : aucune modification du score public ne doit être effectuée sans nouvel accord d'Adrien.
+- Les notes Alpha, Maven et **TradeDay 75→67** disposent toutes de l'accord explicite de publication d'Adrien. Conserver leurs réserves documentaires pour les contrôles futurs.
 - Les sept autres dossiers du lot C01 restent à réviser en V5. C02–C04 et les dossiers N sont suivis séparément, sans réutiliser automatiquement les anciennes sous-notes V4.
