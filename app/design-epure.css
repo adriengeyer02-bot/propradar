@@ -3575,3 +3575,29 @@ html body .header-actions .site-search-input { width: 100%; min-width: 0; }
   .lang-switch-list a { font-size: 12px; gap: 4px; padding: 7px 6px; }
   .lang-switch-list a small { font-size: 10px; }
 }
+
+/* Rules and constraints (2026-11-20): closed menu per programme, restrictions vs contractual risks */
+.pr-rules-menus { display: grid; gap: 10px; margin-top: 20px; }
+.pr-rules-menu { border: 1px solid var(--line); border-radius: var(--pr-radius); background: var(--surface); }
+.pr-rules-menu > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; cursor: pointer; list-style: none; }
+.pr-rules-menu > summary::-webkit-details-marker { display: none; }
+.pr-rules-menu > summary::after { content: '+'; flex: none; color: var(--muted); font-size: 18px; line-height: 1; }
+.pr-rules-menu[open] > summary::after { content: '−'; }
+.pr-rules-menu > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pr-rules-menu-name { font-weight: 600; font-size: 15.5px; line-height: 1.35; }
+.pr-rules-menu-counts { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px 12px; margin-left: auto; color: var(--muted); font-size: 12.5px; }
+.pr-rules-menu-risk { color: var(--tone-watch); }
+.pr-rules-strong-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--tone-risk); flex: none; }
+.pr-rules-menu-body { display: grid; gap: 22px; padding: 4px 18px 20px; border-top: 1px solid var(--line); }
+.pr-rules-block h3 { margin: 16px 0 4px; font-size: 14.5px; }
+.pr-rules-block-hint { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.pr-rules-block-risk .pr-rules-list li { border-left-color: var(--tone-risk); }
+.pr-rules-block-restriction .pr-rules-list li { border-left-color: var(--line); }
+.pr-rules-stage { display: block; margin-bottom: 4px; color: var(--muted); font-size: 12px; letter-spacing: .01em; }
+.pr-rules-strong { display: inline-flex; align-items: center; gap: 5px; margin-right: 8px; color: var(--tone-risk); font-size: 11.5px; font-weight: 600; white-space: nowrap; vertical-align: 1px; }
+.pr-classic-rules { margin-top: 18px; }
+.pr-classic-rules .pr-rules-list li { border-left-color: var(--line); }
+@media (max-width: 760px) { .pr-rules-menu > summary { padding: 13px 14px; align-items: flex-start; } .pr-rules-menu-body { padding: 2px 14px 16px; } .pr-rules-menu-counts { flex-direction: column; align-items: flex-end; gap: 2px; } }
+.pr-rules-menu-counts b, .pr-restrictive-rules .pr-section-meta b { color: var(--text); font-weight: 600; }
+.pr-rules-menu-risk b { color: var(--tone-watch); }
+.pr-restrictive-rules .pr-section-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; }

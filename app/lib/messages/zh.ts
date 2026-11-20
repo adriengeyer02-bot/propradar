@@ -539,6 +539,7 @@ const zh: Messages = {
     rulesSeverity: { minor: "轻微", major: "重要", blocking: "阻断性" },
     rulesClarity: { clear: "明确说明", buried: "仅见于条款", vague: "酌情决定或不明确" },
     rulesPenaltyNote: "限制性规则扣分：−{penalty} 分（规则扣分前的编辑评分：{before}）。",
+    rulesUi: {"restrictionsShort": "限制", "risksShort": "合同风险", "nav": "规则与限制", "title": "规则与限制", "intro": "每个项目一个菜单。具体限制是已公布并量化的规则；合同风险是含糊、酌情或相互矛盾的条款，可能被主观解释或用于拒绝出金。回撤、盈利目标和最少交易天数仍列在产品特征中。", "all": "所有项目", "restrictions": "需要了解的具体限制", "restrictionsHint": "已公布并量化：对评分影响很小。", "risks": "合同风险", "risksHint": "措辞含糊或酌情决定，可能影响出金：对评分影响最大。", "strong": "限制性特别强", "classicTitle": "条款中的常规规则", "classicNote": "最少交易天数和资助阶段的回撤规则（附来源）。它们属于产品机制，不是限制，不会降低评分。"},
     "priceTableTitle": "按账户规模的价格",
     "priceTableLead": "{date} 在 {name} 官方价格页读取的标价，未计临时折扣码。不含税费、重置费和附加项。",
     "priceSize": "账户规模",

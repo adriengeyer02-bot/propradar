@@ -329,6 +329,7 @@ const ko: Messages = {
     rulesSeverity: { minor: "경미", major: "중대", blocking: "치명적" },
     rulesClarity: { clear: "명확히 기재", buried: "약관에만 기재", vague: "재량적이거나 불명확" },
     rulesPenaltyNote: "제한 규정 감점: −{penalty}점 (규정 감점 전 편집 점수: {before}).",
+    rulesUi: {"restrictionsShort": "제한", "risksShort": "계약상 위험", "nav": "규칙과 제약", "title": "규칙과 제약", "intro": "프로그램별 메뉴입니다. 구체적 제한은 공개되고 수치로 명시된 규칙이며, 계약상 위험은 해석의 여지나 출금 거부를 허용하는 모호하거나 재량적이거나 상충하는 조항입니다. 드로다운, 수익 목표, 최소 거래일은 상품 특징에 있습니다.", "all": "모든 프로그램", "restrictions": "알아야 할 구체적 제한", "restrictionsHint": "공개·수치화됨: 점수 영향이 작습니다.", "risks": "계약상 위험", "risksHint": "모호하거나 재량적인 문구, 출금에 영향 가능: 점수에 가장 크게 작용합니다.", "strong": "특히 제한적", "classicTitle": "약관에서 확인한 일반 규칙", "classicNote": "최소 거래일과 펀딩 단계 드로다운 규칙(출처 포함). 상품 구조일 뿐 제약이 아니며 점수를 낮추지 않습니다."},
     offersEyebrow: '상품', priceTableTitle: '계좌 규모별 가격',
     priceTableLead: '{date}에 확인한 {name}의 공식 정가입니다. 임시 할인 코드, 세금, 재시험 비용 및 추가 옵션은 제외됩니다.',
     priceSize: '계좌 규모', priceList: '정가', perMonth: '/월', oneTime: '일회성', priceSource: '가격 출처',

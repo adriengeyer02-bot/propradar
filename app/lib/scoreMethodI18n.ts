@@ -74,7 +74,7 @@ const en: ScoreMethodCopy = {
   scaleTitle: 'What can lower a score',
   scale: [
     'Each restrictive rule counts by the consequence written in the firm’s own terms: minor 1 pt, major 3 pts, blocking 5 pts.',
-    'A rule stated only in the terms counts ×1.5; a discretionary or contradictory one counts ×2.',
+    'Published, quantified rules weigh little (×0.25 on the programme page, ×0.5 if only in the terms). Ambiguous, discretionary or contradictory clauses, which allow a subjective reading or a payout refusal, count ×2. Minimum days and drawdown are offer mechanics and are not counted.',
     'Loads are averaged over the main programmes and the penalty never exceeds 12 points.',
     'A current Trustpilot guideline-breach or fake-review notice: −6 points, once (no cap).',
     'A documented fake-review removal notice: up to −8 on the editorial score.',
@@ -118,7 +118,7 @@ const fr: ScoreMethodCopy = {
   scaleTitle: 'Ce qui peut faire baisser une note',
   scale: [
     'Chaque règle contraignante compte selon la conséquence écrite dans les conditions de la firme : mineure 1 pt, majeure 3 pts, bloquante 5 pts.',
-    'Une règle seulement dans les CGU compte ×1,5 ; une règle discrétionnaire ou contradictoire compte ×2.',
+    'Les règles publiées et chiffrées pèsent peu (×0,25 sur la page du programme, ×0,5 si seulement dans les CGU). Les clauses floues, discrétionnaires ou contradictoires, qui permettent une interprétation subjective ou un refus de paiement, comptent ×2. Jours minimums et drawdown relèvent de l’offre et ne comptent pas.',
     'La charge est moyennée sur les programmes principaux et la pénalité ne dépasse jamais 12 points.',
     'Avertissement Trustpilot actuel (manquement aux règles ou faux avis retirés) : −6 points, une seule fois (pas de plafond).',
     'Avis de suppression de faux avis documenté : jusqu’à −8 sur la note éditoriale.',
@@ -162,7 +162,7 @@ const de: ScoreMethodCopy = {
   scaleTitle: 'Was eine Wertung senken kann',
   scale: [
     'Jede einschränkende Regel zählt nach der in den Bedingungen der Firma genannten Folge: gering 1 Pkt., erheblich 3 Pkt., blockierend 5 Pkt.',
-    'Eine Regel nur in den AGB zählt ×1,5; eine ermessensabhängige oder widersprüchliche ×2.',
+    'Veröffentlichte, bezifferte Regeln wiegen wenig (×0,25 auf der Programmseite, ×0,5 nur in den AGB). Unklare, ermessensabhängige oder widersprüchliche Klauseln, die eine subjektive Auslegung oder Auszahlungsverweigerung erlauben, zählen ×2. Mindesttage und Drawdown gehören zum Angebot und zählen nicht.',
     'Die Last wird über die Hauptprogramme gemittelt; der Abzug beträgt nie mehr als 12 Punkte.',
     'Aktueller Trustpilot-Hinweis (Richtlinienverstoß oder entfernte Fake-Bewertungen): −6 Punkte, einmal (keine Obergrenze).',
     'Dokumentierter Hinweis auf entfernte gefälschte Bewertungen: bis zu −8 auf die redaktionelle Wertung.',
@@ -206,7 +206,7 @@ const it: ScoreMethodCopy = {
   scaleTitle: 'Cosa può abbassare un punteggio',
   scale: [
     'Ogni regola restrittiva conta secondo la conseguenza scritta nei termini della società: minore 1 pt, rilevante 3 pt, bloccante 5 pt.',
-    'Una regola presente solo nei termini conta ×1,5; una discrezionale o contraddittoria conta ×2.',
+    'Le regole pubblicate e quantificate pesano poco (×0,25 sulla pagina del programma, ×0,5 se solo nei termini). Le clausole vaghe, discrezionali o contraddittorie, che consentono un’interpretazione soggettiva o il rifiuto di un pagamento, contano ×2. Giorni minimi e drawdown fanno parte dell’offerta e non contano.',
     'Il carico è mediato sui programmi principali e la penalità non supera mai 12 punti.',
     'Avviso Trustpilot attuale (violazione delle linee guida o recensioni false rimosse): −6 punti, una volta (nessun tetto).',
     'Avviso documentato di rimozione di recensioni false: fino a −8 sul punteggio editoriale.',
@@ -250,7 +250,7 @@ const es: ScoreMethodCopy = {
   scaleTitle: 'Qué puede bajar una puntuación',
   scale: [
     'Cada regla restrictiva cuenta según la consecuencia escrita en las condiciones de la empresa: menor 1 pt, importante 3 pts, bloqueante 5 pts.',
-    'Una regla que solo figura en los términos cuenta ×1,5; una discrecional o contradictoria cuenta ×2.',
+    'Las reglas publicadas y cuantificadas pesan poco (×0,25 en la página del programa, ×0,5 si solo están en los términos). Las cláusulas vagas, discrecionales o contradictorias, que permiten una interpretación subjetiva o denegar un pago, cuentan ×2. Días mínimos y drawdown son parte de la oferta y no cuentan.',
     'La carga se promedia entre los programas principales y la penalización nunca supera 12 puntos.',
     'Aviso actual de Trustpilot (incumplimiento de normas o reseñas falsas eliminadas): −6 puntos, una vez (sin tope).',
     'Aviso documentado de eliminación de reseñas falsas: hasta −8 en la puntuación editorial.',
@@ -294,7 +294,7 @@ const pt: ScoreMethodCopy = {
   scaleTitle: 'O que pode baixar uma pontuação',
   scale: [
     'Cada regra restritiva conta pela consequência escrita nos termos da empresa: menor 1 pt, relevante 3 pts, bloqueante 5 pts.',
-    'Uma regra que só está nos termos conta ×1,5; uma discricionária ou contraditória conta ×2.',
+    'Regras publicadas e quantificadas pesam pouco (×0,25 na página do programa, ×0,5 se só estiverem nos termos). Cláusulas vagas, discricionárias ou contraditórias, que permitem interpretação subjetiva ou recusa de pagamento, contam ×2. Dias mínimos e drawdown fazem parte da oferta e não contam.',
     'A carga é a média dos programas principais e a penalização nunca passa de 12 pontos.',
     'Aviso atual do Trustpilot (violação de diretrizes ou avaliações falsas removidas): −6 pontos, uma vez (sem teto).',
     'Aviso documentado de remoção de avaliações falsas: até −8 na pontuação editorial.',
@@ -338,7 +338,7 @@ const zh: ScoreMethodCopy = {
   scaleTitle: '哪些因素会降低评分',
   scale: [
     '每条限制性规则按公司条款中写明的后果计分：轻微 1 分，重要 3 分，阻断性 5 分。',
-    '仅见于条款的规则 ×1.5；酌情决定或相互矛盾的规则 ×2。',
+    '已公布并量化的规则权重很低（项目页面 ×0.25，仅见于条款 ×0.5）。允许主观解释或拒绝出金的含糊、酌情或矛盾条款 ×2。最少交易天数和回撤属于产品机制，不计分。',
     '负荷按主要项目取平均，扣分最多 12 分。',
     '当前 Trustpilot 违规或虚假评论删除提示：扣 6 分，仅一次（无上限）。',
     '有记录的虚假评论删除通知：编辑评分最多 −8。',
@@ -382,7 +382,7 @@ const ja: ScoreMethodCopy = {
   scaleTitle: 'スコアを下げる要因',
   scale: [
     '各制限ルールは会社の規約に書かれた結果に応じて加算されます：軽微 1 点、重大 3 点、致命的 5 点。',
-    '規約にのみ記載のルールは ×1.5、裁量的または矛盾するルールは ×2。',
+    '公表・数値化されたルールの比重は小さい（プログラムページ ×0.25、規約のみ ×0.5）。主観的な解釈や出金拒否を許す曖昧・裁量的・矛盾する条項は ×2。最低日数とドローダウンはオファーの仕組みとして計算しません。',
     '負荷は主要プログラムで平均し、減点は最大 12 点です。',
     '現在の Trustpilot ガイドライン違反・偽レビュー削除の通知：−6 点を 1 回（上限なし）。',
     '偽レビュー削除の通知が記録されている場合：編集スコアから最大 −8。',
@@ -426,7 +426,7 @@ const hi: ScoreMethodCopy = {
   scaleTitle: 'स्कोर क्या घटा सकता है',
   scale: [
     'हर प्रतिबंधात्मक नियम फ़र्म की अपनी शर्तों में लिखे परिणाम के अनुसार गिना जाता है: मामूली 1 अंक, महत्वपूर्ण 3 अंक, अवरोधक 5 अंक।',
-    'केवल शर्तों में लिखा नियम ×1.5; विवेकाधीन या विरोधाभासी नियम ×2।',
+    'प्रकाशित, संख्या में बताए नियमों का भार कम है (प्रोग्राम पेज पर ×0.25, केवल शर्तों में ×0.5)। व्यक्तिपरक व्याख्या या भुगतान अस्वीकार की अनुमति देने वाली अस्पष्ट, विवेकाधीन या विरोधाभासी शर्तें ×2 गिनी जाती हैं। न्यूनतम दिन और ड्रॉडाउन ऑफ़र की व्यवस्था हैं, गिने नहीं जाते।',
     'भार मुख्य प्रोग्रामों का औसत है और कटौती कभी 12 अंक से अधिक नहीं होती।',
     'मौजूदा Trustpilot दिशानिर्देश-उल्लंघन या नकली-समीक्षा सूचना: −6 अंक, एक बार (कोई सीमा नहीं)।',
     'नकली समीक्षाएँ हटाने की दर्ज सूचना: संपादकीय स्कोर में −8 तक।',
@@ -470,7 +470,7 @@ const tr: ScoreMethodCopy = {
   scaleTitle: 'Puanı ne düşürebilir',
   scale: [
     'Her kısıtlayıcı kural, firmanın kendi şartlarında yazan sonuca göre sayılır: küçük 1 puan, önemli 3 puan, engelleyici 5 puan.',
-    'Yalnızca şartlarda yer alan kural ×1,5; takdire bağlı veya çelişkili kural ×2 sayılır.',
+    'Yayımlanmış ve sayısal kuralların ağırlığı düşüktür (program sayfasında ×0,25, yalnızca şartlarda ×0,5). Öznel yoruma veya ödeme reddine izin veren belirsiz, takdire bağlı ya da çelişkili maddeler ×2 sayılır. Asgari günler ve drawdown teklifin parçasıdır, sayılmaz.',
     'Yük, ana programların ortalamasıdır ve kesinti asla 12 puanı geçmez.',
     'Güncel Trustpilot kural ihlali veya sahte yorum uyarısı: −6 puan, bir kez (üst sınır yok).',
     'Sahte yorum kaldırma bildirimi belgelendi: editoryal puandan −8’e kadar.',
@@ -514,7 +514,7 @@ const ar: ScoreMethodCopy = {
   scaleTitle: 'ما الذي قد يخفض التقييم',
   scale: [
     'تُحتسب كل قاعدة تقييدية حسب العاقبة المكتوبة في شروط الشركة: بسيطة 1 نقطة، مهمة 3 نقاط، حاسمة 5 نقاط.',
-    'القاعدة الواردة في الشروط فقط ×1.5؛ والقاعدة التقديرية أو المتناقضة ×2.',
+    'القواعد المنشورة والمحددة بالأرقام وزنها ضعيف (×0.25 في صفحة البرنامج، ×0.5 إذا وردت في الشروط فقط). أما البنود الغامضة أو التقديرية أو المتناقضة التي تسمح بتأويل ذاتي أو برفض الدفع فتُحتسب ×2. الحد الأدنى للأيام والسحب الأقصى من آليات العرض ولا يُحتسبان.',
     'يُحسب متوسط العبء على البرامج الرئيسية ولا يتجاوز الخصم 12 نقطة أبدًا.',
     'تنبيه Trustpilot حالي (مخالفة الإرشادات أو حذف مراجعات مزيفة): −6 نقاط، مرة واحدة (بلا سقف).',
     'إشعار موثق بحذف مراجعات مزيفة: حتى −8 من التقييم التحريري.',
@@ -558,7 +558,7 @@ const ko: ScoreMethodCopy = {
   scaleTitle: '점수를 낮출 수 있는 요소',
   scale: [
     '각 제한 규정은 회사 약관에 적힌 결과에 따라 계산됩니다: 경미 1점, 중대 3점, 치명적 5점.',
-    '약관에만 있는 규정은 ×1.5, 재량적이거나 모순된 규정은 ×2.',
+    '공개·수치화된 규칙은 비중이 작습니다(프로그램 페이지 ×0.25, 약관에만 있으면 ×0.5). 주관적 해석이나 출금 거부를 허용하는 모호·재량적·상충 조항은 ×2입니다. 최소 거래일과 드로다운은 상품 구조로 계산하지 않습니다.',
     '부담은 주요 프로그램의 평균이며 감점은 최대 12점입니다.',
     '현재 Trustpilot 가이드라인 위반·가짜 리뷰 삭제 알림: −6점, 한 번(상한 없음).',
     '가짜 리뷰 삭제 공지가 기록된 경우: 편집 점수 최대 −8.',
@@ -602,7 +602,7 @@ const sw: ScoreMethodCopy = {
   scaleTitle: 'Kinachoweza kupunguza alama',
   scale: [
     'Kila sheria yenye vikwazo inahesabiwa kwa matokeo yaliyoandikwa kwenye masharti ya kampuni: ndogo pointi 1, kubwa pointi 3, inayozuia pointi 5.',
-    'Sheria iliyo kwenye masharti tu ×1.5; ya hiari au inayojipinga ×2.',
+    'Sheria zilizochapishwa zenye takwimu zina uzito mdogo (×0.25 kwenye ukurasa wa programu, ×0.5 zikiwa kwenye masharti tu). Vifungu visivyo wazi, vya hiari au vinavyopingana vinavyoruhusu tafsiri binafsi au kukataa malipo vinahesabiwa ×2. Siku za chini na drawdown ni sehemu ya ofa na hazihesabiwi.',
     'Mzigo ni wastani wa programu kuu na punguzo halizidi pointi 12.',
     'Tahadhari ya sasa ya Trustpilot (ukiukaji wa miongozo au maoni bandia kuondolewa): pointi −6, mara moja (hakuna kikomo).',
     'Taarifa iliyorekodiwa ya kuondoa maoni bandia: hadi −8 kwenye alama ya uhariri.',
@@ -646,7 +646,7 @@ const ha: ScoreMethodCopy = {
   scaleTitle: 'Abin da zai iya rage maki',
   scale: [
     'Kowace dokar takurawa ana lissafa ta bisa sakamakon da aka rubuta a sharuɗɗan kamfanin: ƙarama maki 1, babba maki 3, mai hanawa maki 5.',
-    'Dokar da ke cikin sharuɗɗa kawai ×1.5; ta ra’ayi ko mai sabani ×2.',
+    'Dokokin da aka wallafa tare da adadi ba su da nauyi sosai (×0.25 a shafin shirin, ×0.5 idan a sharuɗɗa kawai). Sharuɗɗa marasa bayyananne, na son rai ko masu karo da juna da ke ba da damar fassara ta ra’ayi ko ƙin biyan kuɗi suna ƙirga ×2. Mafi ƙarancin kwanaki da drawdown na cikin tayin ne, ba a ƙirga su.',
     'Ana ɗaukar matsakaicin nauyi a manyan shirye-shirye, kuma ragi ba ya wuce maki 12.',
     'Gargaɗin Trustpilot na yanzu (karya ƙa’ida ko cire bita na ƙarya): maki −6, sau ɗaya (babu iyaka).',
     'Sanarwar cire bita na ƙarya da aka rubuta: har zuwa −8 a makin edita.',
@@ -690,7 +690,7 @@ const am: ScoreMethodCopy = {
   scaleTitle: 'ውጤትን ምን ሊቀንስ ይችላል',
   scale: [
     'እያንዳንዱ ገዳቢ ህግ በኩባንያው ውሎች በተጻፈው ውጤት ይቆጠራል፦ ቀላል 1 ነጥብ፣ ከባድ 3 ነጥብ፣ አግድ 5 ነጥብ።',
-    'በውሎቹ ውስጥ ብቻ ያለ ህግ ×1.5፤ በፍላጎት የሚወሰን ወይም እርስ በርሱ የሚጋጭ ×2።',
+    'የታተሙና በቁጥር የተገለጹ ህጎች ክብደታቸው ትንሽ ነው (በፕሮግራሙ ገጽ ×0.25፣ በውሎቹ ብቻ ከሆነ ×0.5)። የግል ትርጉምን ወይም ክፍያን መከልከልን የሚፈቅዱ ግልጽ ያልሆኑ፣ በፍላጎት የሚወሰኑ ወይም የሚቃረኑ አንቀጾች ×2 ይቆጠራሉ። ዝቅተኛ ቀናትና ድሮዳውን የአቅርቦቱ አሠራር ናቸው፤ አይቆጠሩም።',
     'ጫናው በዋና ፕሮግራሞች አማካይ ነው፣ ቅናሹም ከ12 ነጥብ አይበልጥም።',
     'የአሁኑ የTrustpilot መመሪያ ጥሰት ወይም የሐሰት ግምገማ ማስወገድ ማስጠንቀቂያ፦ −6 ነጥቦች፣ አንድ ጊዜ (ገደብ የለም)።',
     'የሐሰት ግምገማዎች መወገድ የተመዘገበ ማስታወቂያ፦ ከአርትዖት ውጤት እስከ −8።',

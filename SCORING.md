@@ -4,8 +4,9 @@ Read this before you change any score. It applies to Claude, ChatGPT/Codex and
 any human editor. `CLAUDE.md` (editorial and legal rules) still applies in
 full; this file only covers how a score moves.
 
-Approved by Geyer on 2026-11-18 (restrictive-rules scale), then
-revised on 2026-11-19 (**Trustpilot: a single 6-point penalty, no rating cap**;
+Approved by Geyer on 2026-11-18 (restrictive-rules scale), revised on
+2026-11-20 (published rules weigh little, contractual risks weigh most:
+section 2.2), and on 2026-11-19 (**Trustpilot: a single 6-point penalty, no rating cap**;
 this supersedes the earlier 8-point proposal).
 
 ## 1. What a score is
@@ -116,13 +117,28 @@ Pick the severity from what the official text says happens, not from the
 category. A minimum hold time is `major` when short trades are simply not
 counted, `blocking` when it voids profits or breaches the account.
 
-### 2.2 Clarity multiplier
+### 2.2 Restrictions vs contractual risks (revised by Geyer, 2026-11-20)
 
-| clarity  | × | when |
-|----------|---|------|
-| `clear`  | 1   | stated on the programme's own rules or pricing page (or its main FAQ entry) |
-| `buried` | 1.5 | only in the terms and conditions or a deep help-centre article |
-| `vague`  | 2   | discretionary wording ("we reserve the right…", undefined "abuse"), or official documents contradict each other (`status: "conflicting"` counts as `vague`) |
+Every classified rule falls in one of three kinds (`ruleKind` in
+`app/lib/restrictiveRules.ts`):
+
+| kind | when | weight |
+|------|------|--------|
+| `classic` | category `min-trading-days` or `funded-trailing-drawdown`: offer mechanics, shown with the offer characteristics (not in the constraints) | **0**, never counted |
+| `restriction` | a specific, stated rule (clarity `clear` or `buried`, not a discretionary clause) | severity × **0.25** if `clear` (programme page / main FAQ), × **0.5** if `buried` (only in the terms) |
+| `risk` (contractual risk) | clarity `vague`, `status: "conflicting"`, or category `discretionary-clause`: wording that allows a subjective reading or a payout refusal | severity × **2** |
+
+Principle: a common trading rule that is published and quantified does not
+get a strong penalty; ambiguous clauses that leave room for interpretation
+or a payout refusal carry most of the penalty. Classify honestly: a clause
+is `vague` only when the official text itself is discretionary, undefined
+("abuse", "gambling", "at our sole discretion") or contradicted by another
+official page.
+
+On the firm page, the "Rules and constraints" section shows one menu per
+programme (closed by default), each split into "Specific restrictions to
+know" and "Contractual risks", with a discreet marker on `blocking` rules
+and a source link on every rule. Classic rules sit in the offers section.
 
 ### 2.3 Programme scope and firm total
 
@@ -161,12 +177,13 @@ drawdown and profit target themselves, an evaluation-only trailing drawdown
 ### 2.5 Worked example (illustrative)
 
 A futures firm with one main programme whose funded account requires five
-qualifying days (`min-trading-days`, minor, clear: 1), a 50% best-day
-consistency rule before each payout (`consistency`, major, clear: 3) and
-closes after six payouts (`account-ends-after-payouts`, blocking, clear: 5):
-load 9 → penalty 3. Editorial score 72 → displayed 69. The same firm with
-those three rules only in its terms (×1.5) and a vague "abuse" clause
-(blocking × 2 = 10) has load 23.5 → penalty 7.
+qualifying days (`min-trading-days`: classic, 0), a 50% best-day consistency
+rule before each payout (`consistency`, major, clear: 3 × 0.25 = 0.75) and
+closes after six payouts (`account-ends-after-payouts`, blocking, clear:
+5 × 0.25 = 1.25): load 2 → penalty 1. Editorial score 72 → displayed 71.
+The same firm with those two rules only in its terms (× 0.5: 1.5 + 2.5) and
+a vague "abuse" clause that can void a payout (blocking risk: 5 × 2 = 10)
+has load 14 → penalty 4.
 
 ## 3. Writing a rule entry
 
