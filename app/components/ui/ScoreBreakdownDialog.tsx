@@ -58,6 +58,19 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
   }, [open]);
 
   const delay = (index: number) => ({ '--reveal-delay': `${80 + index * 70}ms` }) as CSSProperties;
+  // Legacy accounts keep their actual −N rules step. Published V4 accounts
+  // instead show risks already accounted for in B1–B4, never a second penalty.
+  const steps: ScoreStep[] = view.v4 && !view.steps.some((step) => step.kind === 'rules')
+    ? view.steps.flatMap((step): ScoreStep[] => step.kind === 'editorial'
+      ? [step, {
+          kind: 'rules',
+          label: copy.rules,
+          detail: view.v4!.copy.restriction,
+          value: step.value,
+          delta: 0,
+        }]
+      : [step])
+    : view.steps;
 
   return (
     <>
@@ -97,32 +110,13 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               <h2 id={titleId}>{fill(copy.title, { name: view.name, score: view.score })}</h2>
             </header>
 
-            {view.v4 ? (
-              <section className="psb-v4 prg-hud-reveal" style={delay(2)} aria-label={view.v4.copy.title}>
-                <div className="psb-v4-heading">
-                  <strong>{view.v4.copy.title}</strong>
-                  <small>{view.v4.copy.subtitle}</small>
-                </div>
-                <ol className="psb-v4-list">
-                  {view.v4.values.map((points, index) => (
-                    <li key={index}>
-                      <div><span>{view.v4!.copy.blocks[index]}</span><strong>{points}<small>/{view.v4!.maxima[index]}</small></strong></div>
-                      <div className="psb-v4-track" aria-hidden="true"><i style={{ width: `${Math.round(100 * points / view.v4!.maxima[index])}%` }} /></div>
-                    </li>
-                  ))}
-                </ol>
-                <p className="psb-v4-confidence">{view.v4.copy.confidence}</p>
-                <p className="psb-v4-hint">{view.v4.copy.method}</p>
-              </section>
-            ) : null}
-
             <ol className="psb-steps">
-              {view.steps.map((step, index) => (
+              {steps.map((step, index) => (
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
                   <div className="psb-step-line">
                     <span className="psb-step-label">{step.label}</span>
                     <span className={`psb-step-value${step.delta ? ' psb-step-minus' : ''}`}>
-                      {step.kind === 'editorial' ? step.value : step.delta ? `−${step.delta}` : '0'}
+                      {step.kind === 'editorial' ? step.value : view.v4 && step.kind === 'rules' ? '✓' : step.delta ? `−${step.delta}` : '0'}
                     </span>
                   </div>
                   <div className="psb-bar" aria-hidden="true">
@@ -131,7 +125,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                   </div>
                   <p>{step.kind === 'rules' && step.delta > 0 ? copy.rulesSimple : step.detail}</p>
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
-                  {step.kind === 'rules' && step.delta > 0 && view.heaviest.length ? (
+                  {step.kind === 'rules' && (step.delta > 0 || Boolean(view.v4)) && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
                       <ul>
@@ -149,7 +143,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                   ) : null}
                 </li>
               ))}
-              <li className="psb-step psb-step-final prg-hud-reveal" style={delay(view.steps.length + 2)}>
+              <li className="psb-step psb-step-final prg-hud-reveal" style={delay(steps.length + 2)}>
                 <div className="psb-step-line">
                   <span className="psb-step-label">{copy.final}</span>
                   <span className={`psb-step-value psb-tone-${view.tone}`}>{view.score}/100</span>
@@ -158,7 +152,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
             </ol>
 
             {view.signals.length ? (
-              <div className="psb-signals prg-hud-reveal" style={delay(view.steps.length + 3)}>
+              <div className="psb-signals prg-hud-reveal" style={delay(steps.length + 3)}>
                 <span className="prg-hud-label">{copy.signals}</span>
                 <dl>
                   {view.signals.map((signal) => (
@@ -168,18 +162,23 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               </div>
             ) : null}
 
-            {view.v4 ? (
-              <div className="psb-v4-explain prg-hud-reveal" style={delay(view.steps.length + 4)}>
-                <p>{view.v4.copy.restriction}</p>
-                <p>{view.v4.copy.caution}</p>
-              </div>
-            ) : <details className="psb-scale prg-hud-reveal" style={delay(view.steps.length + 4)}>
+            <details className="psb-scale prg-hud-reveal" style={delay(steps.length + 4)}>
               <summary>{copy.scaleTitle}</summary>
-              <ul>{copy.simpleScale.map((line) => <li key={line}>{line}</li>)}</ul>
-              <p className="psb-note">{copy.affiliation}</p>
-            </details>}
+              {view.v4 ? (
+                <>
+                  <p>{view.v4.copy.method}</p>
+                  <p>{view.v4.copy.caution}</p>
+                  <p className="psb-note">{view.v4.copy.confidence}</p>
+                </>
+              ) : (
+                <>
+                  <ul>{copy.simpleScale.map((line) => <li key={line}>{line}</li>)}</ul>
+                  <p className="psb-note">{copy.affiliation}</p>
+                </>
+              )}
+            </details>
 
-            <footer className="prg-hud-footer prg-hud-reveal" style={delay(view.steps.length + 5)}>
+            <footer className="prg-hud-footer prg-hud-reveal" style={delay(steps.length + 5)}>
               <div>
                 <a href={view.rulesHref} onClick={() => setOpen(false)}>{copy.seeRules}<span aria-hidden="true">↓</span></a>
                 <a href={view.methodHref}>{copy.fullMethod}<span aria-hidden="true">→</span></a>
