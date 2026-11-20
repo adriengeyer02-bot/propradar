@@ -1,0 +1,43 @@
+{
+  "version": 4,
+  "checkedOn": "2026-11-20",
+  "status": "3-publications-individuellement-verifiees",
+  "firms": [
+    {
+      "slug": "traders-launch",
+      "before": 52,
+      "confidence": "moyenne",
+      "scores": { "A": [7, 8, 1], "B": [3, 6, 2, 5], "C": [5, 3, 2], "D": [4, 4, 4], "E": [3, 2, 2] },
+      "sources": { "payout": "https://traderslaunch.com/payout-rules", "contract": "https://www.traderslaunch.com/terms", "program": "https://traderslaunch.com/futures/rules", "entity": "https://www.traderslaunch.com/terms", "offer": "https://traderslaunch.com/crypto/rules" },
+      "b1": "CGU: récompenses conditionnelles à l'appréciation de la firme; certaines inscriptions via partenaires peuvent ne pas être éligibles. Ce risque contractuel affecte B1 seulement, sans allégation de refus réellement subi.",
+      "b2": "Payout par trader chaque 24h après +1% sur Futures SimFunded, revue à 100 000 $ cumulés; crypto 80% et futures 60/80% selon formule. Les deux pages de règles et la page payout sont lisibles.",
+      "b3": "CGU applicables immédiatement selon leur texte, y compris aux comptes existants; aucune modification rétroactive de payouts acquis prouvée.",
+      "hold": "A16 B16 C10 D12 E7 = 61/100, hausse +9; l'entité américaine est nommée sans confirmation du registre d'État et aucune preuve bancaire exhaustive. Les règles de consistance publiées n'ont pas de malus autonome. Confiance moyenne.",
+      "next": "Vérifier la pièce de financement propre au compte et le registre de la société."
+    },
+    {
+      "slug": "funded-bull",
+      "before": 51,
+      "confidence": "moyenne",
+      "scores": { "A": [6, 8, 1], "B": [2, 5, 3, 5], "C": [5, 3, 2], "D": [3, 4, 4], "E": [2, 1, 1] },
+      "sources": { "payout": "https://fundedbull.com/terms/", "contract": "https://fundedbull.com/terms/", "program": "https://fundedbull.com/trading-rules/", "entity": "https://fundedbull.com/terms/", "offer": "https://fundedbull.com/" },
+      "b1": "§2.9: arrêt discrétionnaire pour risque jugé par la plateforme avec perte de tout droit aux profits. Ce pouvoir subjectif justifie B1=2; ne pas transformer la règle de 2% de risque ou les news en violations cachées.",
+      "b2": "Seuil CGU de 200 $ pour comptes ≤10 k$ ou 2% du nominal au-delà, contre minimum générique 500 $ sur la homepage; contexte de plan à clarifier. Standard/Lite/1 $ promo ont des splits distincts.",
+      "b3": "§1.5 modifications immédiates, mais protection explicite du plan promo déjà en cours en §5.6.7. Pas de rétroactivité de payout établie.",
+      "hold": "A15 B15 C10 D11 E4 = 55/100, +4. Société singapourienne RATERIGHT PTE. LTD. et adresse déclarées, immatriculation externe et reçus de payout non vérifiés. Confiance moyenne.",
+      "next": "Réconcilier au checkout le seuil minimum de retrait et l'immatriculation indépendante."
+    },
+    {
+      "slug": "ofp-funding",
+      "before": 50,
+      "confidence": "moyenne",
+      "scores": { "A": [7, 8, 1], "B": [5, 5, 3, 5], "C": [8, 3, 2], "D": [3, 4, 3], "E": [3, 2, 2] },
+      "sources": { "payout": "https://help.ofpfunding.com/how-long-does-it-take-to-receive-my-payout-after-request/", "contract": "https://ofpfunding.com/terms-and-conditions", "program": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/", "entity": "https://find-and-update.company-information.service.gov.uk/company/15131112", "offer": "https://ofpfunding.com/" },
+      "b1": "Les CGU prévoient gel ou refus de récompense pour des stratégies prohibées sur appréciation de la firme. Les restrictions chiffrées, dont la consistance, ne prennent pas de malus distinct.",
+      "b2": "Différence de base de calcul du drawdown entre FAQ (equity clôture précédente) et CGU (§6.2.2, haut intrajournalier apparent) à réconcilier par programme; la FAQ décrit des frais de payout.",
+      "b3": "Les adaptations de conditions et contrôles de reward existent; aucun effet rétroactif sur un gain déjà éligible n'a été prouvé.",
+      "hold": "A16 B18 C13 D10 E7 = 64 points éditoriaux, moins 6 Trustpilot pour notice actuellement active, final 58/100 (+8). Entité FINTEKNOLOGY LTD UK vérifiée au registre 15131112, comptes en retard, sans alerte du régulateur attribuée. Historique de transferts bancaires non indépendant; confiance moyenne.",
+      "next": "Revoir l'avertissement Trustpilot et les divergences de calcul du drawdown à chaque modification officielle."
+    }
+  ]
+}
