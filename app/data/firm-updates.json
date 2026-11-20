@@ -29676,7 +29676,7 @@
       ]
     },
     "trading-cult": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -29701,6 +29701,12 @@
           "summary": "Restrictive-rules audit: read the official help-centre programme pages (Instant Funding, 1-Step, 2 Step; rules for evaluations bought from 21 October 2026) and the copy-trading and scalping answers; 8 rules across Instant Funding, 1-Step and 2 Step.",
           "source": "https://faq.it.tradingcult.com/cose-la-sfida-di-1-step-evaluation-challenge/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N03): facts read on official pages or registries on 2026-11-20: profitSplit.",
+          "source": "https://pro.tradingcult.com/2x-evaluation-challenges/conditions",
+          "fields": ["profitSplit"]
         }
       ],
       "set": {
@@ -29709,7 +29715,8 @@
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/tradingcult.com",
         "verdict": "TradingCult operates a live simulated-evaluation service, but its present Saint Lucia supplier has not been independently registered or linked by a formal succession document to the Seychelles/Cyprus entities reported in 2024. Trustpilot withholds its rating following a guidelines breach and fake-review removals; it does not publicly identify who submitted the reviews. The combination of counterparty uncertainty, strict trading limits and unverified payouts justifies a 40/100 watchlist score.",
         "auditSummary": "17 November 2026: TradingCult's live pro.tradingcult.com site identifies TradingCult Limited in Saint Lucia and states that the service is simulated, not brokerage trading. Finance Magnates separately reported a 2024 launch involving Cultpedia in Seychelles and Cultedge in Cyprus under the wider Traders Trust leadership; that historic affiliation is not proof that the 2026 Saint Lucia company assumed all former customer obligations. No official Saint Lucia incorporation number or signed assignment was authenticated. Trustpilot's domain-matched tradingcult.com page displayed 196 reviews and removed the numeric TrustScore for a breach of its guidelines, expressly noting removal of fake reviews; the notice does not establish who arranged them. A fresh 17 November complaint alleges immediate closure of a profitable Instant Funded account over a stop-loss risk calculation; the company replies that its 2% risk rule evaluates potential stop loss, with no first-warning protection for Instant accounts. Its official FAQ documents the rules effective 21 October 2026, including per-symbol/direction limits and duration restrictions; applicable rules may depend on purchase date. Homepage payout certificates and aggregate claims are publisher-produced, not external bank settlement evidence. PropRadar's score falls from 46 to 40 and purchases should be considered only after the exact legal supplier, account-specific rule version and independent payment track record are established.",
-        "listedDomainWarning": "HIGH-CAUTION PURCHASE NOTICE: TradingCult's site is live, but the current Saint Lucia operator has not been independently matched to a registered company number or formally linked to the older Seychelles/Cyprus entities. Trustpilot currently withholds the firm's score and reports fake-review removals without identifying who generated them. Independently authenticated trader transfer receipts were not found. PropRadar is not presenting an approved checkout link pending supplier and payout verification."
+        "listedDomainWarning": "HIGH-CAUTION PURCHASE NOTICE: TradingCult's site is live, but the current Saint Lucia operator has not been independently matched to a registered company number or formally linked to the older Seychelles/Cyprus entities. Trustpilot currently withholds the firm's score and reports fake-review removals without identifying who generated them. Independently authenticated trader transfer receipts were not found. PropRadar is not presenting an approved checkout link pending supplier and payout verification.",
+        "profitSplit": 80
       },
       "setEntities": [
         {
@@ -30314,7 +30321,7 @@
       ]
     },
     "ck-capital": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -30339,6 +30346,12 @@
           "summary": "Restrictive-rules audit: read the homepage programme table, trading objectives, help-centre answers on payout caps, payout rejection and funded-account denial, and the terms; 9 rules across 2 Step Plus, 2 Step Flex, 1 Step Plus and Instant Funding.",
           "source": "https://ckpropfirm.com/en/faq/are-there-any-payout-caps",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N03): facts read on official pages or registries on 2026-11-20: profitSplit, payoutDelay.",
+          "source": "https://ckpropfirm.com/en",
+          "fields": ["profitSplit", "payoutDelay"]
         }
       ],
       "set": {
@@ -30349,7 +30362,9 @@
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/ckcapital.co.uk",
         "verdict": "CK Capital is operating under a new domain and has a verifiable active UK company, but its original Trustpilot score is suppressed after review-guideline violations and fake-review removals. The new domain has a separate 2.2/5 profile with only 19 reviews. Numerous recent customers allege unpaid or refused rewards, while a smaller number report receiving payments. The 26/100 score reflects serious unresolved payment and reputation risk, not an allegation of criminal wrongdoing.",
         "auditSummary": "17 November 2026: The original ckcapital.co.uk domain redirects to ckpropfirm.com, whose terms name CK Capital Group LTD. Companies House independently verifies UK company 15658914 as ACTIVE and incorporated on 18 April 2024. On 3 September 2026 Kar Chan replaced Daniel Cheung as company director and person with significant control according to filings. Corporate activity does not certify challenge solvency or customer payments. Trustpilot removes the numerical rating of the old domain after a guidelines breach and states that fake reviews were removed; it does not identify who submitted them. Its historical profile still shows 432 reviews. A distinct profile created in October 2026 for ckpropfirm.com shows 2.2/5 from 19 reviews, too small a sample for direct score equivalence. Recent first-person reviews include complaints of payouts delayed months or a year and rejected, but another customer describes being paid; the competing accounts have not been independently adjudicated. The new site markets simulated challenges and self-published payout certificates, not independently authenticated bank transfers. PropRadar reduces its score from 32 to 26 and disables endorsed purchase links until payout liabilities and new terms are independently documented.",
-        "listedDomainWarning": "CRITICAL PAYMENT / REVIEW ALERT: ckcapital.co.uk now leads to ckpropfirm.com. The old CK Capital Trustpilot profile has its score withheld after a guidelines breach and fake-review removals; the new profile has a separate low rating. Multiple traders report disputed unpaid or rejected payouts. The UK company remains active, so this is NOT a closure notice. PropRadar disables purchase links until existing claims and current contractual liability are clarified."
+        "listedDomainWarning": "CRITICAL PAYMENT / REVIEW ALERT: ckcapital.co.uk now leads to ckpropfirm.com. The old CK Capital Trustpilot profile has its score withheld after a guidelines breach and fake-review removals; the new profile has a separate low rating. Multiple traders report disputed unpaid or rejected payouts. The UK company remains active, so this is NOT a closure notice. PropRadar disables purchase links until existing claims and current contractual liability are clarified.",
+        "profitSplit": 80,
+        "payoutDelay": "On request once eligible (no fixed cycle); approved payouts settled within 48 hours per official guarantee; first five payouts capped; optional 24-hour payout add-on (+25%)."
       },
       "setEntities": [
         {

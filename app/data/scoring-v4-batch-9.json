@@ -1,0 +1,358 @@
+{
+ "version": 4,
+ "checkedOn": "2026-11-20",
+ "status": "2-publications-claude-lot-N03",
+ "method": "Lot N03 (Claude) du tableau de suivi du 20/11/2026, même méthode que le lot N01 (SCORING_V4.md). Publication uniquement en confiance moyenne.",
+ "firms": [
+  {
+   "slug": "atfunded",
+   "before": 28,
+   "scores": null,
+   "auditState": "Non noté : le 20/11/2026, atfunded.com affiche toujours l'avis de l'opérateur annonçant une pause des opérations (MT5 en close-only, remboursement promis aux comptes actifs, payouts éligibles promis aux comptes financés, « further details … over the coming days »), sans boutique, sans contrat de vente ni date de reprise. La firme ne commercialise pas son offre : pas de score V4. La pause ne prouve ni une dissolution ni un défaut de paiement.",
+   "source": "https://atfunded.com/",
+   "next": "Surveiller une reprise ou une annonce de fermeture définitive datée ; entité contractante (Trustpilot indique seulement Saint-Vincent-et-les-Grenadines et un lien déclaré avec ATFX) ; toute preuve de remboursement indépendante. Si une fermeture définitive est confirmée par une source datée, créer l'enregistrement dans closures.ts."
+  },
+  {
+   "slug": "ck-capital",
+   "before": 14,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     2,
+     4,
+     4,
+     3
+    ],
+    "C": [
+     6,
+     2,
+     3
+    ],
+    "D": [
+     2,
+     3,
+     2
+    ],
+    "E": [
+     1,
+     1,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://ckpropfirm.com/en/faq/how-can-i-get-paid",
+    "contract": "https://ckpropfirm.com/en/terms-conditions",
+    "program": "https://ckpropfirm.com/en/trading-objectives",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/15658914",
+    "offer": "https://ckpropfirm.com/en"
+   },
+   "b1": "Cumul de clauses subjectives sur un même risque de perte de récompense : la Risk Team peut rejeter un payout pour une activité « that does not align » avec ses exigences, la FAQ précise que remplir les conditions « does not guarantee approval », et les CGU permettent d'exclure un trader « for any reason » (§3) et de résilier « in its sole and absolute discretion » (§10). B1=2/15, sans conclure qu'un refus injustifié a eu lieu.",
+   "b2": "Contradiction sur la consistance du 2 Step Plus (« None » par phase, 50 % dans le calculateur et sur la homepage) ; adresse du pied de page (6–7 Waterside, Station Road, Harpenden AL5 4US) différente du siège au registre (1 Allied Business Centre, Coldharbour Lane, AL5 4UT) ; la FAQ contrats nomme « CK Propfirm » et CK Capital Group LTD sans dire laquelle contracte. B2=4/8.",
+   "b3": "Renommage des programmes (Standard → Plus, Pro → Flex) annoncé à règles, tailles et prix inchangés ; contrat financé signé séparément et non public ; aucune modification rétroactive de gains éligibles établie. B3=4/7.",
+   "hold": "A13 B13 C11 D7 E3 = 47 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 41/100 (avant 14, +27 : mouvement très sensible). Réserves : nombreuses plaintes d'impayés non tranchées (signal, pas refus prouvé : A2=7) ; preuves de payout seulement publiées par la firme (A3=1) ; plafonds des cinq premiers payouts et frais 50 $ ou 3 % par retrait ; seul le 2 Step Plus a une grille de prix complète (prix catalogue 712,80 $ pour 100K, remise permanente de 85 %) ; type de drawdown non précisé hors Instant (trailing) ; CGU non relues aujourd'hui (droit applicable non vérifié), accord financé non public ; changement de directeur/PSC en sept. 2026 et déclaration de confirmation en retard au registre. Confiance limitée : non publiable en l'état.",
+   "next": "Relire les CGU complètes (droit applicable, modification, remboursement) — la page a déclenché une demande d'autorisation non traitée aujourd'hui ; lire la Return Policy et les grilles de prix 2 Step Flex, 1 Step Plus et Instant ; obtenir la nature statique/trailing/EOD des limites ; réconcilier l'adresse du pied de page avec Companies House ; suivre les réponses de la firme aux plaintes récentes."
+  },
+  {
+   "slug": "exfunded",
+   "before": 32,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     5,
+     6,
+     1
+    ],
+    "B": [
+     4,
+     3,
+     3,
+     3
+    ],
+    "C": [
+     3,
+     2,
+     2
+    ],
+    "D": [
+     4,
+     3,
+     3
+    ],
+    "E": [
+     1,
+     1,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://exfunded.sandai-investment.com/faq/",
+    "contract": "https://exfunded.sandai-investment.com/terms-condition/",
+    "program": "https://exfunded.sandai-investment.com/",
+    "entity": "https://exfunded.sandai-investment.com/terms-condition/",
+    "offer": "https://exfunded.sandai-investment.com/"
+   },
+   "b1": "La FAQ permet à ExFunded de « review the client's account without notice at any time » et de retirer les profits qu'elle juge « inappropriately gained », et interdit le « stacking » sans seuil défini (règle déjà au dossier). B1=4. Le plafond de lots (perte des profits à la 1re violation), la bande 0,5x-2x et la durée minimale de 5 min sont des règles chiffrées, non comptées ici.",
+   "b2": "Délai de payout 14 jours (pages programme) contre 10 jours (FAQ) ; règle des 5 minutes avec deux conséquences différentes ; tailles 2,5k-100k sur l'accueil contre 5k-50k sur les pages programme ; le pied de page affiche « Licensed and regulated by … SERC » et « Leading Forex Broker in Cambodia » alors que l'avertissement dit qu'ExFunded « does not offer brokerage services ». B2=3.",
+   "b3": "Les « terms » (modifiés le 04/07/2025) sont des conditions d'utilisation du site : modification « at any time » sans précision sur les comptes existants ; aucune clause sur les gains déjà éligibles ; continuité des obligations de l'ancien domaine exfunded.com non établie. B3=3.",
+   "hold": "A12 B13 C7 D10 E3 = 45/100 éditorial (avant 32, +13, mouvement sensible). Aucun −6 Trustpilot (pas de notice au dossier, page exfunded.com non chargée). Réserves : pas de contrat trader ni de politique de payout distincte (règles de reward seulement dans la FAQ), ExFunded LLC (Ghana) non vérifiée au registre, bureau de gestion à Dubaï et mention SERC/Cambodge inexpliquée, migration de domaine, montants de payout déclarés par la firme seulement. Confiance limitée : non publiable.",
+   "next": "Contrat trader / politique de payout ; registre ghanéen (ORC) pour ExFunded LLC ; lien entre ExFunded et sandai-investment.com et portée de la mention SERC ; profil Trustpilot du domaine ; preuve indépendante de paiement."
+  },
+  {
+   "slug": "funded-futures-network",
+   "before": 29,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     7,
+     8,
+     3
+    ],
+    "B": [
+     7,
+     5,
+     5,
+     4
+    ],
+    "C": [
+     4,
+     2,
+     2
+    ],
+    "D": [
+     5,
+     3,
+     4
+    ],
+    "E": [
+     3,
+     2,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://fundedfuturesnetwork.com/payouts",
+    "contract": "https://fundedfuturesnetwork.com/faq",
+    "program": "https://fundedfuturesnetwork.com/accounts",
+    "entity": "https://fundedfuturesnetwork.com/",
+    "offer": "https://steady.fundedfuturesnetwork.com/"
+   },
+   "b1": "La FAQ dit « All final decisions are at the sole discretion of FFN » et l'automatisation n'est permise qu'« at the discretion of FFN » (règle déjà au dossier) ; les Terms of Use (Termly) restent illisibles. B1=7 provisoire. Plafonds de payout, live review après 4/5 payouts, consistance 40 %, news T1, clôture 16h50 : règles publiées, non comptées.",
+   "b2": "Les pages officielles divergent sur le news trading, l'automatisation et l'offre Buy 1 Get 1 du STEADY (déjà relevé le 19/11) ; split du sim funded STEADY non indiqué. B2=5.",
+   "b3": "Aucun changement rétroactif constaté ; la clôture des comptes sim au live review est une caractéristique annoncée, non rétroactive ; clause de modification des ToU non lue. B3=5.",
+   "hold": "A18 B21 C8 D12 E7 = 66/100 éditorial (avant 29, +37, mouvement très sensible). Aucun −6 Trustpilot (pas de notice). Réserves : Terms of Use non lus (rendu JavaScript), forme et État de constitution de la LLC non indiqués, registre non vérifié, droit applicable inconnu ; registre public de payouts avec reçus Arbitrum mais plusieurs lignes partagent une même transaction. Confiance limitée : non publiable.",
+   "next": "Texte des Terms of Use Termly (navigateur), État de constitution et registre de Funded Futures Network LLC (New York DOS ou autre), recherche NFA BASIC/CFTC complète, articles 5.2/5.3 du centre d'aide (bloqués aujourd'hui)."
+  },
+  {
+   "slug": "guardeer-funding",
+   "before": 13,
+   "scores": null,
+   "auditState": "Pas d'offre exploitée : le 2026-11-20, guardeerfunding.com affiche toujours la page de maintenance « We're shifting all MT-5 accounts and upgrading our CRM system. Just wait till Wednesday we'll be live right after! » (© Guardeer Funding 2025), avec redirection annoncée vers https://funding.fortressfx.com/, qui n'a pas pu être lu le même jour (erreur côté site). Aucun contrat, prix ni checkout : ne pas noter.",
+   "source": "https://guardeerfunding.com/",
+   "next": "Décision éditoriale sur le passage en archive ; identifier toute entité juridique Guardeer/Fortress dans un registre et un éventuel engagement sur les comptes existants."
+  },
+  {
+   "slug": "kortanafx",
+   "before": 15,
+   "scores": null,
+   "auditState": "Activité suspendue par la firme elle-même : le 2026-11-20, kortanafx.com affiche toujours « We have temporarily paused operations due to losing our MT5 license » et « all operations are paused untill further notice », sans date ni annonce de reprise, alors que le tableau de défis (5K–200K, 147 $ DXTrade, split jusqu'à 100 %, retraits sous 7 jours) reste affiché. L'offre n'est pas exploitée : ne pas noter. Suspension déclarée, pas une dissolution prouvée.",
+   "source": "https://kortanafx.com/",
+   "next": "Surveiller une annonce officielle de reprise (nouvelle plateforme) ou de règlement des comptes existants ; vérifier KortanaFX F.Z.C. (Office 906, Al Serkal Building 2, Port Saeed, Dubaï) dans un registre émirati."
+  },
+  {
+   "slug": "levels",
+   "before": 27,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     5,
+     7,
+     1
+    ],
+    "B": [
+     2,
+     2,
+     3,
+     3
+    ],
+    "C": [
+     5,
+     2,
+     0
+    ],
+    "D": [
+     3,
+     3,
+     3
+    ],
+    "E": [
+     2,
+     1,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://docs.lv.ls/using-the-platform/payouts.md",
+    "contract": "https://lv.ls/terms-and-conditions/",
+    "program": "https://docs.lv.ls/the-challenge/starting-your-first-challenge.md",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/09383987",
+    "offer": "https://lv.ls/"
+   },
+   "b1": "Payment Terms §3 : les frais n'ouvrent droit à aucun « Financial rewards, bonuses, prizes, or payouts » et ne garantissent « any outcome … reward » ; la doc payouts ajoute « the Company has final authority over the outcome of the Platform » ; Platform Terms 7.1 : suspension ou résiliation « at any time, with or without notice ». B1=2 (un seul fait : absence de droit contractuel au paiement face à la doc qui en promet). Les limites de pips (60/30, 100/50, 200/100, stop 5 pips) ne sont pas comptées.",
+   "b2": "Accueil « as little as $50 » contre frais de $100/$500/$1 000 dans la doc ; FAQ « commodities » contre CGU FX uniquement ; « No drawdown » contre « hidden drawdown » ; CGU avec gabarits non remplis ([Company Name], [Governing Jurisdiction], [Privacy Policy URL]) et arbitrage vs droit britannique. B2=2.",
+   "b3": "Platform Terms 1.3 : révision à tout moment, effet à la publication, acceptation par usage continu ; en contrepartie la doc dit que les bonus payés sont « final and cannot be reclaimed ». B3=3.",
+   "hold": "A13 B10 C7 D9 E4 = 43/100 éditorial (avant 27, +16, mouvement sensible). Aucun −6 Trustpilot. Réserves : avertissement FCA du 13/07/2023 visant « Levels LV.LS » (relayé par l'AFM, C3=0), CGU qui ne reconnaissent pas de droit au payout, gabarits non remplis, produit atypique (échelle de pips à paliers fixes, pas de split), aucune preuve de paiement. Confiance moyenne (CGU, doc produit et registre lus), à soumettre à Geyer.",
+   "next": "Version de l'avertissement FCA sur fca.org.uk (page AFM bloquée aujourd'hui) et éventuelle levée ; lien formel entre « Chancery Lane Traders » des CGU et la société 09383987 (aucun numéro dans les CGU) ; preuve indépendante d'un paiement de palier ; réconciliation prix $50/$100."
+  },
+  {
+   "slug": "my-crypto-funding",
+   "before": 29,
+   "scores": null,
+   "auditState": "Non noté : Trustpilot affiche le 20/11/2026 sur le profil mycryptofunding.org « it's not possible to leave a review here anymore because the company's website has closed », et un répertoire tiers (thetrustedprop.com) classe la firme « CLOSED » (sans date). Le domaine .org renvoie encore une page d'accueil sans prix, programme ni lien d'achat identifiable, et des CGU sans numéro de société ni date. Pas d'offre vérifiablement commercialisée : pas de score V4. Fermeture non confirmée par l'opérateur lui-même.",
+   "source": "https://mycryptofunding.org/terms-and-conditions/",
+   "next": "Confirmer la fermeture par une annonce de l'opérateur ou une source de presse datée (exigée pour closures.ts) ; vérifier My Crypto Funding Ltd / MCF Markets Ltd à Companies House (aucune correspondance trouvée par recherche) ; si fermeture confirmée, statut Fermée et plafond 29 (la note historique est déjà 29)."
+  },
+  {
+   "slug": "myforexfunds",
+   "before": 20,
+   "scores": null,
+   "auditState": "Non noté : la marque ne vend pas encore d'offre en propre. La page officielle myforexfunds.com (relue le 20/11/2026) affiche « RELAUNCHING NOVEMBER 23, 2026 », une liste d'attente et aucun bouton d'achat ni prix ; les CGU (« Last Updated: September 28, 2026 ») ne contiennent ni conditions de payout ni droit applicable. Le nouvel exploitant Global Solutions Operations FZE déclare avoir acquis la marque le 1/08/2026 sans reprendre les obligations de Traders Global Group. À auditer après l'ouverture effective.",
+   "source": "https://myforexfunds.com/terms-of-use/",
+   "next": "Après le 23/11/2026 : lire le contrat trader, la politique de payout, les règles Evolution/Accelerated et les prix ; vérifier la licence DWTCA L-4713 de Global Solutions Operations FZE et Globeline Markets Ltd (Sainte-Lucie 2026-00192) dans les registres."
+  },
+  {
+   "slug": "neg-markets",
+   "before": 18,
+   "scores": null,
+   "auditState": "Aucune offre exploitée vérifiable : le 2026-11-20, negmarkets.com n'a pas pu être lu (le site ne répond pas, robots.txt injoignable), ce qui confirme l'indisponibilité déjà relevée le 2026-10-11 par MyPropGenius (erreur d'hébergement, aucune annonce officielle de fermeture). Aucun contrat, checkout, politique de payout ni entité contractante n'est lisible. Ne pas noter ; ce n'est pas une fermeture juridique prouvée.",
+   "source": "https://negmarkets.com/",
+   "next": "Décision éditoriale : archive « inactive » ou maintien en surveillance ; si un site revient, identifier l'entité (registre), les CGU et la politique de payout. Ne pas confondre avec negomarkets.com (société française sans lien)."
+  },
+  {
+   "slug": "prop-number-one",
+   "before": 26,
+   "scores": null,
+   "auditState": "Non noté faute de pièces lisibles, pas pour fermeture : le 20/11/2026, propnumberone.com, /instant-funding et /fr/payouts ne renvoient qu'un squelette JavaScript (aucun texte), le PDF de CGU d'avril 2025 échoue au chargement et Firecrawl n'a plus de crédits. Le dossier ne contient ni conditions de payout, ni clauses de récompense, ni programmes réels (produit générique « To verify ») : aucun score A/B/D ne peut être étayé. L'indexation actuelle montre surtout des pages de comparaison d'autres prop firms ; la vente d'un challenge propre n'est pas confirmée aujourd'hui.",
+   "source": "https://propnumberone.com/wp-content/uploads/2025/04/Overview.pdf",
+   "next": "Lecture manuelle (navigateur) du site et du PDF : programmes, prix, conditions de payout, clauses discrétionnaires, droit applicable ; vérifier si propnumberone.com vend encore un challenge propre ou n'est plus qu'un site de comparaison ; contrôle DSO de l'entité."
+  },
+  {
+   "slug": "real-funds-trader",
+   "before": 21,
+   "scores": null,
+   "auditState": "Non noté : domaine officiel realfundstrader.com toujours injoignable le 20/11/2026 (robots.txt non lisible), aucune CGU, offre ou entité lisible ; Trustpilot indique que le site de la société est fermé et le dernier avis date du 19/09/2024. Inactivité commerciale, pas de fermeture formelle sourcée.",
+   "source": "https://realfundstrader.com/terms-and-conditions/",
+   "next": "Si une source externe datée confirme la fin d'activité, envisager le statut Fermée avec un enregistrement dans closures.ts ; sinon surveiller une éventuelle réutilisation de la marque."
+  },
+  {
+   "slug": "the-prop-game",
+   "before": 16,
+   "scores": null,
+   "auditState": "Exploitation non authentifiée : le 2026-11-20, thepropgame.com a renvoyé une page de défis (titre « Pay your Challenge Fees from your Profit Split », frais par étape, split 70 % porté à 90 % avec add-on, 10 %/5 % d'objectif, 4 % journalier, 10 % max) MAIS sans pied de page, sans société ni adresse, sans lien vers CGU/FAQ, sans destination des boutons d'achat, avec une section « Recent Payouts » vide et un texte de remplissage (lorem ipsum) ; la page CGU n'a pas pu être lue. Trustpilot indique le même jour que le site de la société est fermé. Ni opérateur, ni contrat, ni checkout vérifiables : ne pas noter.",
+   "source": "https://thepropgame.com/terms-and-conditions/",
+   "next": "Contrôle manuel dans un navigateur : le domaine est-il de nouveau enregistré par l'ancien opérateur ou par un tiers ? Identifier l'entité (registre de Singapour annoncé historiquement), les CGU et un checkout réel avant toute réévaluation ; ne pas lever l'avertissement sur la seule base de cette page."
+  },
+  {
+   "slug": "titan-capital-markets",
+   "before": 24,
+   "confidence": "moyenne",
+   "scores": {
+    "A": [
+     6,
+     7,
+     1
+    ],
+    "B": [
+     4,
+     4,
+     4,
+     3
+    ],
+    "C": [
+     4,
+     2,
+     3
+    ],
+    "D": [
+     2,
+     4,
+     4
+    ],
+    "E": [
+     2,
+     1,
+     1
+    ]
+   },
+   "sources": {
+    "payout": "https://support.tgmarkets.com/articles/performance-fee-policy",
+    "contract": "https://titancapital.tgmarkets.com/terms-conditions/",
+    "program": "https://titancapital.tgmarkets.com/evaluations/",
+    "entity": "https://find-and-update.company-information.service.gov.uk/company/15229528",
+    "offer": "https://titancapital.tgmarkets.com/evaluations/"
+   },
+   "b1": "Deux pouvoirs subjectifs sur des gains éligibles : la règle « excessive margin usage / reckless overleveraging » sans seuil chiffré, tranchée par la Risk Team et sanctionnée en hard breach, et la clause « Black Swan » permettant d'invalider des trades à la discrétion de l'équipe risque ; les CGU déclarent aussi nuls les profits antérieurs au KYC approuvé. B1=4/15. Les règles chiffrées (SL sous 60 s, exposition 2 %/3 %, news ±3 min, consistance 20 % Instant, inactivité 30 jours, EA) restent des contraintes publiées, sans malus autonome.",
+   "b2": "Les CGU du 17/12/2025 nomment TFT TITAN SOLUTIONS LIMITED comme fournisseur, mais aussi TG Markets LTD comme partie au contrat et un merchant of record tiers (Odeonpay/Paysagi), avec une mention d'âge incohérente ; les règles par programme sont réparties entre la page évaluations et une dizaine d'articles d'aide. B2=4/8.",
+   "b3": "La règle SL obligatoire ne s'applique qu'aux comptes ouverts à partir du 1/12/2025 (pas d'effet rétroactif sur ce point) ; aucune modification rétroactive de gains acquis n'est établie. Contestation limitée à la revue interne de la Risk Team. B3=4/7.",
+   "hold": "A14 B15 C9 D10 E4 = 52 points éditoriaux, puis −6 Trustpilot (notice déjà au dossier, toujours active le 20/11/2026) = 46/100, contre 24 affichés (+22, mouvement sensible à soumettre à Geyer). Réserves : fournisseur UK sous proposition active de radiation avec comptes et confirmation statement en retard ; contrepartie TG Markets LTD non authentifiée ; prix catalogue non affichés (promotion seule) ; aucune preuve indépendante de payouts. Confiance moyenne (CGU et programmes lus les 17–18/11 sur pages officielles, entité nommée et trouvée au registre).",
+   "next": "Relire aujourd'hui les CGU (accès bloqué le 20/11 dans ce passage) pour le droit applicable, la procédure de réclamation et la clause de modification ; authentifier l'immatriculation de TG Markets LTD ; suivre l'issue de la proposition de radiation (Gazette) ; relever les prix catalogue hors promotion et la plateforme."
+  },
+  {
+   "slug": "traders-with-edge",
+   "before": 22,
+   "scores": null,
+   "auditState": "Non noté : aucune offre propre vérifiable. Le 20/11/2026, traderswithedge.com renvoie de nouveau une page promotionnelle (80 % payés tous les quinze jours, jusqu'à 3 M$, GO Markets, Symbiosis Capital), mais sans aucun lien exploitable, sans pied de page, sans entité, sans CGU, sans prix ni checkout ; Trustpilot indique que le site de la société est fermé et le dernier avis date du 14/04/2026. Une vitrine statique ne prouve pas une exploitation commerciale.",
+   "source": "https://traderswithedge.com/",
+   "next": "Vérifier à la main (navigateur) si la page du 20/11 est une vitrine active ou un reste en cache, retrouver un exploitant, des CGU et un checkout ; sinon conserver l'état inactif sans conclure à une fermeture formelle."
+  },
+  {
+   "slug": "trading-cult",
+   "before": 32,
+   "confidence": "limitee",
+   "scores": {
+    "A": [
+     4,
+     8,
+     1
+    ],
+    "B": [
+     6,
+     4,
+     4,
+     2
+    ],
+    "C": [
+     2,
+     1,
+     2
+    ],
+    "D": [
+     2,
+     3,
+     3
+    ],
+    "E": [
+     3,
+     1,
+     2
+    ]
+   },
+   "sources": {
+    "payout": "https://faq.it.tradingcult.com/cose-la-sfida-di-1-step-evaluation-challenge/",
+    "contract": "https://faq.fr.tradingcult.com/existe-t-il-des-pratiques-ou-des-methodes-commerciales-interdites/",
+    "program": "https://pro.tradingcult.com/2x-evaluation-challenges/conditions",
+    "entity": "https://pro.tradingcult.com/",
+    "offer": "https://pro.tradingcult.com/"
+   },
+   "b1": "Les CGU n'ont pas pu être lues (le lien tradingcult.com/terms-conditions redirige vers l'accueil, rendu en JavaScript). Les règles connues du centre d'aide sont chiffrées (2 % de risque, 30 s, consistance 25/30 %, plafond 6 %) et ne comptent pas en B1 ; seule la notion non définie de « tick scalping » relève du subjectif. B1=6 provisoire, faute de contrat lu.",
+   "b2": "Centre d'aide multilingue cohérent avec les pages de conditions (2-Step 8 %/5 %, 5 %/10 %, split 80/20) ; mais pages produit sans tailles ni prix lisibles et entité Sainte-Lucie (site, au dossier) contre Seychelles (profil Trustpilot). B2=4.",
+   "b3": "Les règles du 21/10/2026 s'appliquent aux évaluations achetées à partir de cette date (pas d'effet rétroactif annoncé) ; clause de modification des CGU non lue. B3=4.",
+   "hold": "A13 B16 C5 D8 E6 = 48 éditorial, −6 Trustpilot (notice au dossier, toujours active le 20/11/2026) = 42/100 (avant 32, +10, mouvement sensible). Réserves : CGU inaccessibles, prix non lus, TradingCult Limited (Sainte-Lucie) sans numéro, succession avec Cultpedia/Cultedge non établie, preuves de payout publiées par la firme seulement. Confiance limitée : non publiable.",
+   "next": "Texte des CGU / contrat funded (navigateur), grille de prix par taille, numéro d'immatriculation à Sainte-Lucie, calendrier de payout, preuve indépendante de paiement."
+  }
+ ]
+}

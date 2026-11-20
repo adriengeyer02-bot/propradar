@@ -270,3 +270,10 @@ Hash Hedge 61, SabioTrade 52, SFX Funded 38, X Funded 44. 12 dossiers restent
 historiques (domaines redirigés ou hors service, ventes suspendues, CGU
 illisibles). Voir `app/data/scoring-v4-batch-8.json` et
 `claude/scoring-v4-batch-8-review-2026-11-20.md`.
+
+**Lot N03 (Claude) :** 2 notes publiées en confiance moyenne — Levels 43 et
+Titan Capital Markets 46. Les 14 autres fiches (pauses d'exploitation,
+domaines hors service, relance annoncée de My Forex Funds le 23/11/2026, CGU
+illisibles) restent sur la note historique. Voir
+`app/data/scoring-v4-batch-9.json` et `claude/scoring-v4-batch-9-review-2026-11-20.md`.
+Bilan Claude N01–N03 : 18 notes V4 publiées, 38 dossiers en attente.
