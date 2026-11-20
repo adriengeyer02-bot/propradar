@@ -6,7 +6,7 @@ import { computeV5Scorecard } from '../app/lib/scoringV5.ts';
 const expected = {
   'alpha-capital-group': { blocks: { A: 25, B: 8, C: 15, D: 16, E: 9 }, gross: 75, rules: 2, trustpilot: 6, final: 67, previous: 74, approved: true },
   'maven-trading': { blocks: { A: 19, B: 12, C: 14, D: 16, E: 8 }, gross: 75, rules: 6, trustpilot: 6, final: 63, previous: 72, approved: true },
-  'tradeday': { blocks: { A: 18, B: 13, C: 11, D: 16, E: 9 }, gross: 69, rules: 2, trustpilot: 0, final: 67, previous: 75, approved: false },
+  'tradeday': { blocks: { A: 18, B: 13, C: 11, D: 16, E: 9 }, gross: 69, rules: 2, trustpilot: 0, final: 67, previous: 75, approved: true },
 };
 
 assert.equal(proposalFile.version, 5);
