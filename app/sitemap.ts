@@ -79,7 +79,8 @@ const latestFirmData = propFirms.reduce((latest, firm) => {
 }, '2026-01-01');
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return withTranslations([
+  return [
+    ...withTranslations([
     ...staticRoutes.map((route) => ({
       url: `${SITE_URL}${route.path}`,
       lastModified: new Date(route.lastModified > latestFirmData ? route.lastModified : latestFirmData),
@@ -137,5 +138,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: index === 0 ? ('weekly' as const) : ('monthly' as const),
       priority: index === 0 ? 0.86 : 0.74,
     })),
-  ]);
+    ]),
+    // This two-language explainer is intentionally independent from the SEO guide
+    // registry while an older SEO PR is being reviewed. Do not enumerate other
+    // locales: no translated article exists there.
+    ...(['/guides/futures-cfd-options', '/fr/guides/futures-cfd-options'] as const).map((path) => ({
+      url: `${SITE_URL}${path}`,
+      lastModified: new Date('2026-11-20'),
+      changeFrequency: 'monthly' as const,
+      priority: path.startsWith('/fr/') ? 0.74 : 0.82,
+      alternates: {
+        languages: {
+          en: `${SITE_URL}/guides/futures-cfd-options`,
+          fr: `${SITE_URL}/fr/guides/futures-cfd-options`,
+          'x-default': `${SITE_URL}/guides/futures-cfd-options`,
+        },
+      },
+    })),
+  ];
 }
