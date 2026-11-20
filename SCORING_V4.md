@@ -263,3 +263,10 @@ réapparue pour Get Leveraged et nouvelle pour Klein Funding (20/11/2026),
 chacune comptée une seule fois. Voir `app/data/scoring-v4-batch-7.json` et
 `claude/scoring-v4-batch-7-review-2026-11-20.md` (désaccord signalé sur le
 B1 de FTMO, non modifié).
+
+**Lot N02 (Claude) :** 8 notes publiées en confiance moyenne — Bullwaves
+Prime 54, DirectFundedTrader 41, FOXX Funded 44, Funded Trader Markets 46,
+Hash Hedge 61, SabioTrade 52, SFX Funded 38, X Funded 44. 12 dossiers restent
+historiques (domaines redirigés ou hors service, ventes suspendues, CGU
+illisibles). Voir `app/data/scoring-v4-batch-8.json` et
+`claude/scoring-v4-batch-8-review-2026-11-20.md`.

@@ -16,15 +16,16 @@ const { V4_PUBLISHED_SLUGS } = require('../app/lib/scoringV4Published.ts');
 const { V4_CRITERIA } = require('../app/lib/scoringV4.ts');
 const groups = [1, 2, 3].map((number) => require(`../app/data/scoring-v4-batch-${number}.json`));
 const batch7 = require('../app/data/scoring-v4-batch-7.json');
+const batch8 = require('../app/data/scoring-v4-batch-8.json');
 const legacy = [...groups[1].firms.filter((row) => row.confidence === 'limitee' && !V4_PUBLISHED_SLUGS.includes(row.slug)).map((row) => row.slug), ...groups[2].firms.filter((row) => row.scores === null).map((row) => row.slug)];
-const legacy7 = batch7.firms.filter((row) => row.scores === null || row.confidence !== 'moyenne').map((row) => row.slug);
+const legacy7 = [...batch7.firms, ...batch8.firms].filter((row) => row.scores === null || row.confidence !== 'moyenne').map((row) => row.slug);
 
-assert.equal(V4_PUBLISHED_SLUGS.length, 47);
-assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 47);
+assert.equal(V4_PUBLISHED_SLUGS.length, 55);
+assert.equal(new Set(V4_PUBLISHED_SLUGS).size, 55);
 assert.equal(legacy.length, 12);
-assert.equal(legacy7.length, 12);
+assert.equal(legacy7.length, 24);
 const scored = propFirms.filter((firm) => getScoreBreakdown(firm).v4);
-assert.equal(scored.length, 47, 'exactly 47 firms should use the V4 score in production');
+assert.equal(scored.length, 55, 'exactly 55 firms should use the V4 score in production');
 assert.deepEqual(scored.map((firm) => firm.slug).sort(), [...V4_PUBLISHED_SLUGS].sort());
 assert.ok(topFirms.every((firm, i) => i === 0 || topFirms[i - 1].score >= firm.score));
 
@@ -70,4 +71,4 @@ assert.equal(getScoreBreakdown(getFirmBySlug('alpha-capital-group')).v4.trustpil
 assert.equal(getScoreBreakdown(getFirmBySlug('maven-trading')).v4.trustpilotPenalty, 6);
 assert.equal(getFirmBySlug('tickticktrader').score, 67);
 assert.equal(getFirmBySlug('rocket21-challenge').score, 60);
-console.log(`\n✓ V4 live: 47 final scores, 24 incomplete files left on legacy. Each score has five blocks and no double deductions.`);
+console.log(`\n✓ V4 live: 55 final scores, 36 incomplete files left on legacy. Each score has five blocks and no double deductions.`);

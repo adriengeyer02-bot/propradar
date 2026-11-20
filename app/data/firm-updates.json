@@ -549,7 +549,7 @@
       ]
     },
     "foxx-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-15",
@@ -574,6 +574,12 @@
           "summary": "Restrictive-rules audit: read the official terms and conditions (section 22), the terms PDF, the FAQ rules card, the payout page and the Instant Funding page; 7 rules across the 1-Step Evaluation and Instant Funding.",
           "source": "https://www.foxx-funded.com/terms-and-conditions/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: payoutDelay, entities.",
+          "source": "https://www.foxx-funded.com/",
+          "fields": ["payoutDelay", "entities"]
         }
       ],
       "auditedPrograms": [
@@ -667,6 +673,25 @@
         {
           "label": "FOXX Funded terms PDF (official, older version, 2026-11-18)",
           "url": "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf"
+        }
+      ],
+      "set": {
+        "payoutDelay": "1-Step: first after 14 trading days, then every 7; Instant: first after 4 weeks, then every 2 weeks; business days, subject to account review."
+      },
+      "setEntities": [
+        {
+          "name": "Foxx Limited",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2026-00126 (stated by the firm, not checked in a registry)",
+          "registeredAddress": "Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia",
+          "role": "Service provider on MT5 named in the site footer"
+        },
+        {
+          "name": "SEMIZU L.L.C-FZ (trading as Foxx Funding)",
+          "jurisdiction": "United Arab Emirates",
+          "registrationNumber": "2423826 (stated in the footer, not checked in a registry)",
+          "registeredAddress": "Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, UAE",
+          "role": "Contracting party named in terms §1.1; Dubai law and DIAC arbitration (§14)"
         }
       ]
     },
@@ -13548,7 +13573,7 @@
       ]
     },
     "sabiotrade": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "addSources": [
         {
           "label": "FXEmpire SabioTrade profile",
@@ -13598,6 +13623,12 @@
           "summary": "Restrictive-rules audit: read the official terms and conditions and plan page on sabiotrade.us (sabiotrade.com redirected there from the US); 6 rules across the Essential-Supreme, Blaze-Apex and Pro plans.",
           "source": "https://sabiotrade.us/terms",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: payoutDelay, entities.",
+          "source": "https://sabiotrade.us/terms",
+          "fields": ["payoutDelay", "entities"]
         }
       ],
       "addIncidents": [
@@ -13610,7 +13641,7 @@
         "trustpilotReviewCount": 705,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/sabiotrade.com",
         "drawdownType": "Trailing",
-        "payoutDelay": "weekly reward frequency",
+        "payoutDelay": "Performance reward request once every 7 days when conditions are met (minimum 7 days after the previous reward)",
         "newsTrading": "Allowed"
       },
       "setLegalReview": {
@@ -13709,6 +13740,15 @@
           "impact": "An account with no new trade for more than 30 days is breached.",
           "source": "https://sabiotrade.us/terms"
         }
+      ],
+      "setEntities": [
+        {
+          "name": "CODEVIL IT ENGINEERING LIMITED",
+          "jurisdiction": "Ireland",
+          "registrationNumber": "680139",
+          "registeredAddress": "2c Grangegorman Lower, Smithfield, Dublin 7, D07 A433, Ireland",
+          "role": "Contracting company trading as SabioTrade (Terms preamble)"
+        }
       ]
     },
     "smart-prop-trader": {
@@ -13743,7 +13783,7 @@
       ]
     },
     "sure-leverage": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "set": {
         "officialWebsite": "https://sureleveragefunding.com/",
         "score": 53,
@@ -13752,7 +13792,7 @@
         "trustpilotReviewCount": 1356,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/sureleveragefunding.com",
         "profitSplit": 80,
-        "payoutDelay": "on request once requirements are met, with a stated 24-hour processing guarantee (exceptions for weekends, holidays and compliance reviews)"
+        "payoutDelay": "Eligible payouts processed within 24 business hours (exceptions: weekends, bank holidays, compliance or risk reviews); extra 10% split if late; via Rise or USDT (TRC20), fee 2% or $10, whichever is higher."
       },
       "setEntities": [
         {
@@ -13845,6 +13885,12 @@
           "summary": "Restrictive-rules audit: read the official help-centre General Rules and the 2 Step, Instant Funding Static, Instant Funding Trailing and One Step Pro articles; 14 rules across four programmes.",
           "source": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules-sure-leverage-funding",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: payoutDelay.",
+          "source": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules-sure-leverage-funding",
+          "fields": ["payoutDelay"]
         }
       ],
       "auditedPrograms": [
@@ -18955,7 +19001,7 @@
       ]
     },
     "willis-capital": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "set": {
         "officialWebsite": "https://wfunded.io/",
         "status": "À surveiller",
@@ -18964,7 +19010,11 @@
         "auditSummary": "17 November 2026: Preserve the already verified Willis Capital-to-WFunded rebrand documented by TechCabal and the exact Trustpilot profile. The reviewed historic domain williscapital.com is parked; it is NOT the current registration or purchasing destination. The functioning wfunded.io homepage explicitly names Western Sahara Worldwide Services (WSWS) as managing company, gives a Lagos contact address, describes educational/simulated challenge programmes and says no real funds are traded. Its claim of incorporation was not independently checked in a Nigerian registry. Trustpilot on williscapitals.com (plural) has renamed its profile WFUNDED and shows 3.4/5 from 294 reviews; several 2026 reviewers report payout delays, changed trading platforms or frozen accounts, all unadjudicated allegations. The independent comparator TheTrustedProp marks the old Willis Capital brand closed, which does not establish that today's WFunded company has stopped operating. Never equate the parked singular domain with the active plural review identity, and do not represent unverified payouts as proof of solvency.",
         "trustpilotRating": 3.4,
         "trustpilotReviewCount": 294,
-        "trustpilotSourceUrl": "https://www.trustpilot.com/review/williscapitals.com"
+        "trustpilotSourceUrl": "https://www.trustpilot.com/review/williscapitals.com",
+        "profitSplit": 80,
+        "payoutDelay": "First withdrawal after one month, then every two weeks; processed within 24 hours; $100 minimum (FAQ)",
+        "newsTrading": "Allowed; funded traders need a stop loss placed at least 15 minutes before the news event",
+        "eaAllowed": "Yes, except HFT, grid/martingale, arbitrage and tick scalping"
       },
       "changelog": [
         {
@@ -18990,6 +19040,12 @@
           "summary": "Restrictive-rules audit on the successor WFunded site: read the official FAQ and Terms and Conditions; 8 rules across SkillCheck Standard and SkillCheck Expedited.",
           "source": "https://www.wfunded.io/en/terms-and-conditions",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: profitSplit, payoutDelay, newsTrading, eaAllowed.",
+          "source": "https://www.wfunded.io/en/faq",
+          "fields": ["profitSplit", "payoutDelay", "newsTrading", "eaAllowed"]
         }
       ],
       "setEntities": [
@@ -22610,7 +22666,7 @@
       ]
     },
     "sfx-funded": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-20",
       "restrictiveRules": [
         {
           "program": "SFX rewards — 48-hour processing promise",
@@ -22787,6 +22843,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 10 new restrictive rules; 3 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
           "source": "https://sfxfunded.com/docs/terms-of-service",
           "fields": ["auditSummary", "newsTrading", "products", "restrictiveRules", "verdict"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://sfxfunded.com/docs/terms-of-service",
+          "fields": ["entities"]
         }
       ],
       "setProducts": [
@@ -22902,10 +22964,19 @@
           "key": "instant",
           "name": "Instant Plans (Standard, Pro, Flex)"
         }
+      ],
+      "setEntities": [
+        {
+          "name": "SFX International FZCO",
+          "jurisdiction": "United Arab Emirates",
+          "registrationNumber": "DSO-FZCO-21983 (company-stated)",
+          "registeredAddress": "23691-001, A2 Building, IFZA Business Park, DDP, DSO, Dubai, UAE",
+          "role": "Provider trading as SFX Funded (Terms preamble); Terms state it is not registered or regulated as a financial firm"
+        }
       ]
     },
     "funded-trader-markets": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-20",
       "restrictiveRules": [
         {
           "program": "FTM 2-Step Plus — Shield Risk Protocol on funded accounts",
@@ -23124,6 +23195,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 15 new restrictive rules; 1 outdated rule(s) removed; 5 programmes; list prices by account size; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
           "source": "https://fundedtradermarkets.com/programs",
           "fields": ["auditSummary", "eaAllowed", "newsTrading", "payoutDelay", "products", "restrictiveRules", "verdict"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://fundedtradermarkets.com/terms-conditions",
+          "fields": ["entities"]
         }
       ],
       "set": {
@@ -23315,6 +23392,15 @@
           "minTradingDays": "5 profitable days of at least 0.5%",
           "hasConsistencyRule": true,
           "consistencyRule": "No single day above 15% of total profit before withdrawal."
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "Formed Technologies INT FZCO",
+          "jurisdiction": "United Arab Emirates",
+          "registrationNumber": "36580 (company-stated)",
+          "registeredAddress": "Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, UAE",
+          "role": "Contracting entity for all clients per the Terms' Contracting & Payment Disclosure (the Introduction also names FTM Funded Trader Markets LTD, Cyprus, HE462185)"
         }
       ]
     },
@@ -24046,7 +24132,7 @@
       }
     },
     "directfundedtrader": {
-      "reviewedAt": "2026-11-19",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-09",
@@ -24071,6 +24157,12 @@
           "summary": "Deep official-source review (pricing, FAQ/help centre and terms): 5 new restrictive rules; 3 programmes; payout and trading terms; sourced verdict and audit summary replacing the watchlist text.",
           "source": "https://directfundedtrader.com/faq-rules",
           "fields": ["auditSummary", "eaAllowed", "newsTrading", "payoutDelay", "products", "restrictiveRules", "verdict"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://directfundedtrader.com/termsandservices",
+          "fields": ["entities"]
         }
       ],
       "set": {
@@ -24316,6 +24408,14 @@
           "minTradingDays": "not stated",
           "hasConsistencyRule": false,
           "consistencyRule": "not stated for this programme"
+        }
+      ],
+      "setEntities": [
+        {
+          "name": "DFT GROUP LLC",
+          "jurisdiction": "United Arab Emirates",
+          "registeredAddress": "Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E.",
+          "role": "Operator named in the Terms of Services"
         }
       ]
     },
@@ -30456,7 +30556,7 @@
       "addIncidents": ["2024-05-10 — Industry coverage says Firmity Funding is no longer operating, citing long payout waits and disrupted trader communications. The report's claimed aggregate liabilities have not been independently verified. Source: https://propfirmfactory.beehiiv.com/p/another-firm-falls"]
     },
     "hash-hedge": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-17",
@@ -30481,6 +30581,12 @@
           "summary": "Restrictive-rules audit: read the official user guide (rules, buy a Challenge), the terms and conditions and the commercial terms; 6 rules across the Two-stage and One-stage Challenges. Programs filled from the user guide.",
           "source": "https://www.hashhedge.com/commercial-terms",
           "fields": ["restrictiveRules", "products"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: payoutDelay.",
+          "source": "https://www.hashhedge.com/commercial-terms",
+          "fields": ["payoutDelay"]
         }
       ],
       "set": {
@@ -30492,7 +30598,8 @@
         "trustpilotReviewCount": 120,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/hashhedge.com",
         "verdict": "Hash Hedge has an active crypto prop-trading service, a 4.5/5 Trustpilot profile from 120 reviews and substantially clearer November 2026 legal documentation than previously available. Crucially, its UAE challenge seller is not the Seychelles company contractually liable for rewards, and the standard contractual profit share is 80% unless modified by the purchased plan. The entities' registrations and individual payout receipts remain independently unverified. The score rises from 36 to a cautious 49/100.",
-        "auditSummary": "17 November 2026: Hash Hedge publishes terms last revised 5 November 2026. The UAE company Empower Academy Ltd (self-reported registration 01011157) runs the platform, sells simulated evaluation plans, administers risk checks and decides holds; under separate Commercial Terms, Seychelles FinSmart Solution Ltd (self-reported registration 246832) owes live-stage reward payments and is not responsible for evaluation fees or refunds. The legal split increases contractual complexity and cross-border recovery risk; the government registration records were not independently checked. Section 1.1 of Commercial Terms specifies an 80% standard allocation, potentially varied by the exact plan/add-on, while some marketing states up to 90%. Trustpilot's domain-matched page shows 4.5 from 120 reviews on the audit date; an invited or otherwise unverified payout account is not proof of bank or on-chain delivery. Following an October 2026 complaint, Hash Hedge publicly confirmed a one-day system outage but contested that it caused the later challenge failure; neither user's account record nor server logs were independently audited. Score 49/100 balances meaningful first-party disclosures against offshore payout obligations, changing plan conditions and limited external payment verification."
+        "auditSummary": "17 November 2026: Hash Hedge publishes terms last revised 5 November 2026. The UAE company Empower Academy Ltd (self-reported registration 01011157) runs the platform, sells simulated evaluation plans, administers risk checks and decides holds; under separate Commercial Terms, Seychelles FinSmart Solution Ltd (self-reported registration 246832) owes live-stage reward payments and is not responsible for evaluation fees or refunds. The legal split increases contractual complexity and cross-border recovery risk; the government registration records were not independently checked. Section 1.1 of Commercial Terms specifies an 80% standard allocation, potentially varied by the exact plan/add-on, while some marketing states up to 90%. Trustpilot's domain-matched page shows 4.5 from 120 reviews on the audit date; an invited or otherwise unverified payout account is not proof of bank or on-chain delivery. Following an October 2026 complaint, Hash Hedge publicly confirmed a one-day system outage but contested that it caused the later challenge failure; neither user's account record nor server logs were independently audited. Score 49/100 balances meaningful first-party disclosures against offshore payout obligations, changing plan conditions and limited external payment verification.",
+        "payoutDelay": "Payout day chosen 14 to 60 days after the first trade of the cycle; USD 1 minimum, USD 10,000 maximum per 14 days; valid requests not paid within 72 hours are owed three times the amount (Commercial Terms s.3); re-verification may be required."
       },
       "setEntities": [
         {
@@ -31263,7 +31370,7 @@
       "changelog": [{"date":"2026-11-18","summary":"Updated original March 2024 temporary-suspension context, Easton ownership uncertainty, lack of verifiable resumption and historical Trustpilot 4.0/5 (1,066). Kept archival 8/100 and commercial closure status without claiming proved legal dissolution or complete nonpayment.","source":"https://fxnewsgroup.com/forex-news/retail-forex/skilled-funded-traders-becomes-second-easton-prop-firm-shut/","fields":["score","verdict","auditSummary","listedDomainWarning","legalReview","trustpilotRating","trustpilotReviewCount","trustpilotSourceUrl"]}]
     },
     "x-funded": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "restrictiveRules": [
         {
           "program": "1-Phase and 2-Phase funded — mandatory stop loss",
@@ -31345,6 +31452,12 @@
           "summary": "Restrictive rules classified under SCORING.md (category, severity, clarity, programmes) so the shared penalty can be computed.",
           "source": "https://x-funded.com/terms-and-conditions/",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: entities.",
+          "source": "https://x-funded.com/terms-and-conditions/",
+          "fields": ["entities"]
         }
       ],
       "addPayoutProofs": [
@@ -31370,16 +31483,35 @@
           "key": "instant",
           "name": "Instant Funding"
         }
+      ],
+      "setEntities": [
+        {
+          "name": "OTHERSIDE LLC",
+          "jurisdiction": "United Arab Emirates",
+          "role": "Contracting party named in the terms and conditions (registration number and address not stated)"
+        },
+        {
+          "name": "XFunded LTD",
+          "jurisdiction": "Saint Lucia",
+          "registrationNumber": "2026-00127",
+          "role": "Company named in the website footer; relationship to OTHERSIDE LLC not stated"
+        }
       ]
     },
     "bullwaves-prime": {
-      "reviewedAt": "2026-11-18",
+      "reviewedAt": "2026-11-20",
       "changelog": [
         {
           "date": "2026-11-18",
           "summary": "Restrictive-rules audit: read the official trading-rules page and the payout guide; 13 rules across the 1 Step and 2 Step Challenges; the two pages disagree on the payout cap.",
           "source": "https://prime.bullwaves.com/trading-rules",
           "fields": ["restrictiveRules"]
+        },
+        {
+          "date": "2026-11-20",
+          "summary": "V4 audit (lot N02): facts read on official pages or registries on 2026-11-20: profitSplit, payoutDelay, entities.",
+          "source": "https://prime.bullwaves.com/legal",
+          "fields": ["profitSplit", "payoutDelay", "entities"]
         }
       ],
       "auditedPrograms": [
@@ -31533,6 +31665,24 @@
         {
           "label": "Bullwaves Prime payout guide (official, 2026-11-18)",
           "url": "https://prime.bullwaves.com/news/how-payouts-work"
+        }
+      ],
+      "set": {
+        "profitSplit": 80,
+        "payoutDelay": "First request 15 calendar days after first trade, then every 15 days; 10 active days and 10 qualifying closed trades before the first payout; processed in 2–5 business days; $50 minimum, $30 wire fee, no USDT-ERC20 fee"
+      },
+      "setEntities": [
+        {
+          "name": "Moonance LLC",
+          "jurisdiction": "Saint Vincent and the Grenadines",
+          "registrationNumber": "2141 LLC 2022",
+          "registeredAddress": "First Floor, First St Vincent Bank Ltd Building, James Street, Kingstown, St. Vincent and the Grenadines",
+          "role": "Operator / contracting party (Bullwaves Prime trading name)"
+        },
+        {
+          "name": "Equitex Capital Limited",
+          "jurisdiction": "Seychelles",
+          "role": "Technology provider; CFD broker trading as Bullwaves (licence SD185)"
         }
       ]
     }
