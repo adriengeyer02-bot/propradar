@@ -1215,7 +1215,7 @@ const corePropFirms: PropFirm[] = [
     weaknesses: ['More complex drawdown rules', 'Less suited to forex/CFD traders'],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official rules rechecked July 15, 2026. The Trading Combine uses a 50% consistency target; Express Funded Account Standard and Consistency paths use different payout qualification rules. Payout eligibility, caps and split can also depend on the account cohort.',
+      'Official rules rechecked July 15, 2026. Official Topstep rules checked 2026-11-21: Trading Combine uses a 55% Consistency Target (best day versus profit target); Express Funded Account Consistency requires 3 trading days and a 40% objective for payout eligibility; XFA Standard requires five $150+ winning days, with no 40% consistency objective. Sources: https://help.topstep.com/en/articles/8284208-consistency-at-topstep and https://help.topstep.com/en/articles/8284233-topstep-payout-policy. Payout eligibility, caps and split can also depend on the account cohort.',
     auditSourcesChecked: ['Official site', 'Trading Combine parameters', 'Express Funded Account parameters', 'Official payout policy', 'Trustpilot'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
