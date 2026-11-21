@@ -62,5 +62,5 @@ for(const f of batch.statusReviews){
   assert.ok(f.finding.length>100);
   console.log(f.slug+': status-review only; no numeric V5 rating');
 }
-assert.equal(seen.size,9);
+assert.equal(seen.size,11);
 console.log('V5 batch validated: 4 full scorecards + 7 C03 status reviews, 0 public approvals');
