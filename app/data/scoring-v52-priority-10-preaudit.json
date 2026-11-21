@@ -11,7 +11,16 @@
       "currentLegacyScore": 91,
       "existingAuditStatus": "Vérifié multi-source",
       "existingAuditSummary": "Official FTMO sources and Trustpilot page checked: track record, public rules and review volume are coherent. Still monitor individual disputes linked to rules, KYC and execution.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://ftmo.com/en/terms-and-conditions/",
+        "https://ftmo.com/",
+        "https://ftmo.com/faq/can-i-trade-news/",
+        "https://fxnewsgroup.com/forex-news/retail-forex/oanda-acquired-by-czech-prop-firm-ftmo/",
+        "https://www.trustpilot.com/review/ftmo.com",
+        "https://ftmo.com/en/trading-objectives/",
+        "https://ftmo.com/en/faq/",
+        "https://www.trustpilot.com/review/the5ers.com"
+      ],
       "knownLegalEntities": [
         {
           "name": "FTMO s.r.o. / FTMO Trading Global s.r.o.",
@@ -47,7 +56,15 @@
       "currentLegacyScore": 85,
       "existingAuditStatus": "Vérifié multi-source",
       "existingAuditSummary": "Official The5ers sources and Trustpilot page checked. High Stakes and the current Futures program must be separated: the Futures page advertises news trading as allowed and applies a per-position consistency rule.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://find-and-update.company-information.service.gov.uk/company/12553363",
+        "https://the5ers.com/terms-conditions/",
+        "https://the5ers.com/",
+        "https://www.the5ers.com/futures/",
+        "https://www.trustpilot.com/review/the5ers.com",
+        "https://the5ers.com/programs/",
+        "https://www.trustpilot.com/review/fundednext.com"
+      ],
       "knownLegalEntities": [
         {
           "name": "Five Percent Online Ltd",
@@ -95,7 +112,11 @@
       "currentLegacyScore": 79,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official sources and Trustpilot page checked. Review volume is very high, but the low response rate to negative reviews and heavy discount logic require a careful reading.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://fundednext.com/",
+        "https://help.fundednext.com/",
+        "https://www.trustpilot.com/review/fundednext.com"
+      ],
       "knownLegalEntities": [
         {
           "name": "FundedNext Ltd",
@@ -147,7 +168,17 @@
       "currentLegacyScore": 84,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official rules rechecked July 15, 2026. The Trading Combine uses a 50% consistency target; Express Funded Account Standard and Consistency paths use different payout qualification rules. Payout eligibility, caps and split can also depend on the account cohort.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://www.topstep.com/",
+        "https://www.topstep.com/risk-disclosure/",
+        "https://www.topstep.com/terms-of-use/",
+        "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+        "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
+        "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+        "https://www.topstepbrokerage.com/",
+        "https://help.topstep.com/"
+      ],
       "knownLegalEntities": [
         {
           "name": "Topstep LLC",
@@ -187,7 +218,11 @@
       "currentLegacyScore": 76,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official Terms and Program Terms checked. Trade The Pool is operated by Five Percent Online Ltd in Israel and describes the evaluation as simulated trading with fictitious funds. The terms add KYC/AML checks, forbidden territories, video-interview discretion, no guaranteed funded acceptance and Israeli/Tel Aviv dispute jurisdiction. Exact-name article/news searches did not surface reliable mainstream financial press for this brand in this pass.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://tradethepool.com/",
+        "https://tradethepool.com/terms-and-conditions/",
+        "https://tradethepool.com/program-terms/"
+      ],
       "knownLegalEntities": [
         {
           "name": "Five Percent Online Ltd",
@@ -239,7 +274,13 @@
       "currentLegacyScore": 75,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official Terms version 2026.3 (5 November 2026) names MAVEN EDU - FZCO as the contracting operator in Dubai (trade licence 60823), independently cross-referenced in the Dubai KHDA business directory. Accounts are simulated, without customer deposits or brokerage. Sections 6.4 and 6.6 preserve mandatory consumer rights and legitimate payment disputes. Older legal materials referred to MAVEN LLC: account holders under historic contracts should confirm which entity remains liable. A separate signed agreement, trade licence register extract, and independent bank-level payout evidence have not been obtained.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://e8markets.com/",
+        "https://e8markets.com/terms-and-conditions/",
+        "https://help.e8markets.com/",
+        "https://www.trustpilot.com/review/e8markets.com",
+        "https://www.trustpilot.com/review/fundingpips.com"
+      ],
       "knownLegalEntities": [
         {
           "name": "Digital Renaissance LLC",
@@ -295,7 +336,10 @@
       "currentLegacyScore": 69,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official site and legal Terms checked. AquaFunded discloses Aqua Funded FZCO in Dubai Silicon Oasis / DDP, Dubai, and frames its products as simulated trading evaluation plans, not investments. Terms include DIAC arbitration in Dubai, class-action waiver language, prohibited-trading review before funded access, demo-capital account wording and strong discretion to deny withdrawals or terminate accounts for risk-management concerns.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://www.aquafunded.com/",
+        "https://www.aquafunded.com/legal/terms-and-conditions"
+      ],
       "knownLegalEntities": [
         {
           "name": "Aqua Funded FZCO",
@@ -331,7 +375,12 @@
       "currentLegacyScore": 73,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official homepage, Terms, consistency and news-rule help pages checked. BrightFunded states that evaluation-stage news trading is allowed, while funded accounts restrict execution from five minutes before to five minutes after selected events. The official help center currently states that BrightFunded does not enforce a consistency rule.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://brightfunded.com/",
+        "https://brightfunded.com/terms-conditions",
+        "https://help.brightfunded.com/en/articles/12577176-does-brightfunded-have-a-consistency-rule",
+        "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news"
+      ],
       "knownLegalEntities": [
         {
           "name": "Bright Global FZCO",
@@ -371,7 +420,11 @@
       "currentLegacyScore": 76,
       "existingAuditStatus": "Partiellement vérifié",
       "existingAuditSummary": "Official Program Terms checked. Funded Trading Plus is the trading name of Acello Ltd, England and Wales company number 12696083. Terms state FTP is not FCA-authorised or regulated because it is not providing regulated products/services, and that programs are simulated trading accounts with simulated funds and no real-market trades. Refund and payout eligibility are tightly tied to first simulated trade, cancellation-period rules and FTP risk review.",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://instantfunding.com/",
+        "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf",
+        "https://find-and-update.company-information.service.gov.uk/company/12696083"
+      ],
       "knownLegalEntities": [
         {
           "name": "Instant Funding / Acello Ltd",
@@ -423,7 +476,14 @@
       "currentLegacyScore": 66,
       "existingAuditStatus": "Vérifié multi-source",
       "existingAuditSummary": "Official 2026 privacy and provider-program documents, support pages, a Czech registry-derived company profile and Czech business-press coverage checked. The documents identify Fintokei a.s. and clearly describe simulated trading, but Fintokei\\",
-      "knownOfficialOrSourceLinks": [],
+      "knownOfficialOrSourceLinks": [
+        "https://blueguardian.com/",
+        "https://blueguardian.com/terms-and-conditions/",
+        "https://checkout.blueguardian.com/",
+        "https://find-and-update.company-information.service.gov.uk/company/12087566",
+        "https://blueguardian.com/payouts/",
+        "https://www.trustpilot.com/review/blueguardian.com"
+      ],
       "knownLegalEntities": [
         {
           "name": "Blue Guardian Limited",
