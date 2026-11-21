@@ -2,7 +2,7 @@
   "version": 5,
   "batch": "C03-priority",
   "checkedOn": "2026-11-21",
-  "publication": "Three source-backed V5 proposals on the canonical 122-firm queue; no owner approval and no publication of public scores",
+  "publication": "Five source-backed V5 proposals on the canonical 122-firm queue; no owner approval and no publication",
   "firms": [
     {
       "slug": "goat-funded-trader",
@@ -398,6 +398,275 @@
           "clause": "CGU §7 et Program Rules : comportement de risque jugé excessif ou apparenté au jeu, en complément d'exemples de risques chiffrés.",
           "consequence": "Évaluation susceptible d'échouer ou compte clôturé sur une interprétation qualitative non entièrement délimitée ; le contrat RCF devra être examiné séparément.",
           "source": "https://www.rebelsfunding.com/terms-and-conditions/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "ic-funded",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 58,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Le 2-Step Professional décrit le premier retrait à 14 jours calendaires minimum et 5 journées profitables, puis calendrier de 14 jours et nombre de jours qualifiants distincts aux retraits suivants (+2 rythme, +2 eligibility). Le split 80/20, sans frais bancaires exhaustifs ou seuil minimum prouvé, ne valide pas tout le bloc split+min+frais (0). Caps par variante pas tous explicités (0). Procédure depuis l'espace funded et règles de payout exposées (+2).",
+          "sources": [
+            "https://www.icfunded.com/rules",
+            "https://www.icfunded.com/pricing",
+            "https://www.icfunded.com/faqs"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Avis clients et auto-déclarations contradictoires, mais ni deux refus injustifiés distincts indépendamment corroborés, ni série indépendante de paiements à échéances vérifiées sur 12 mois. Palier neutre, sans convertir une plainte en verdict ou l'absence de preuve en défaillance.",
+          "sources": [
+            "https://www.trustpilot.com/review/www.icfunded.com",
+            "https://www.icfunded.com/faqs"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La page commerciale évoque des paiements vérifiés et des témoignages, mais aucun ensemble de transferts bancaires ou blockchain attribués de façon indépendante à IC Funded Evaluations LTD et à ses traders n'a été recoupé.",
+          "sources": [
+            "https://www.icfunded.com/pricing",
+            "https://www.trustpilot.com/review/www.icfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "CGU §§11.3–11.4 : la société peut qualifier une pratique d'interdite sans qu'elle soit énumérée et, en conséquence, retirer les profits ou refuser une récompense. Le contrat financé individuel est annoncé comme séparé au §16 et n'a pas été obtenu. Pouvoir matériel de retenue : B1=5. Pas d'allégation de refus abusif effectivement démontré.",
+          "sources": [
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Un seul fait distinct de la conséquence de paiement B1 : §12.2–12.4 qualifie les « deviations » de volume/taille/stratégie de significatives ou injustifiées sans seuil universel, et peut fermer le compte même si les limites objectives sont respectées. −2 pour l'ambiguïté de conformité ; les pertes/jours/news strictement chiffrés n'entraînent pas de points en moins.",
+          "sources": [
+            "https://www.icfunded.com/terms-and-conditions",
+            "https://www.icfunded.com/rules"
+          ],
+          "negativeFactIds": [
+            "ic-funded-open-ended-consistency-12"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le site identifie IC Funded Evaluations LTD, Saint-Lucie #2024-00388, tandis que IC Funded Tech Solutions Ltd est présentée comme une entité affiliée distincte. Le registre LEI externe #894500XIZX315U6MQ328 rapproche le nom et le numéro. Contrat funded et dernier écran de paiement non vérifiés, donc pas de 10.",
+          "sources": [
+            "https://www.icfunded.com/about",
+            "https://lei.bloomberg.com/leis/view/894500XIZX315U6MQ328",
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "LEI externe indique l'entité active dans une version historique, mais la dernière mise à jour accessible du dossier est antérieure au contrôle du 21 novembre 2026. Sans certificat officiel Saint-Lucie récent ou statut 2026 actualisé, pas de palier 6 confirmé ni de dissolution présumée.",
+          "sources": [
+            "https://lei.bloomberg.com/leis/view/894500XIZX315U6MQ328",
+            "https://www.icfunded.com/about"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche d'avertissements par marque, domaine et nom de la firme sans alerte réglementaire précise attribuable à la simulation IC Funded établie. La relation marketing avec le groupe IC Markets ne constitue ni garantie financière ni licence automatiquement transférable.",
+          "sources": [
+            "https://www.icfunded.com/about",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Tarifs/challenges, tailles 5K–500K et phases, objectifs/drawdowns, restrictions de news, tailles et comportement, KYC et zones restreintes sont détaillés dans le catalogue, les règles et CGU accessibles.",
+          "sources": [
+            "https://www.icfunded.com/pricing",
+            "https://www.icfunded.com/rules",
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU actuelles librement lisibles (+2). Aucune date de version précise affichée dans le texte lu (0), et §§6.4/22 autorisent des changements à tout moment, sans protection des achats antérieurs suffisamment détaillée (0).",
+          "sources": [
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "La simulation, la différence entre évaluation et compte funded, le 2-Step et les règles de payout sont expliqués de façon cohérente entre les offres et les CGU (+2+2) ; dernier checkout et accord funded personnalisé non comparés (+0).",
+          "sources": [
+            "https://www.icfunded.com/pricing",
+            "https://www.icfunded.com/rules",
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le prestataire IC Funded Evaluations LTD est enregistré en juin 2024 selon LEI, et des produits/avis sont documentés en 2024–2026. Sans preuve du service antérieure à novembre 2023, ancienneté du programme entre 18 et 35 mois : 4/6.",
+          "sources": [
+            "https://lei.bloomberg.com/leis/view/894500XIZX315U6MQ328",
+            "https://www.trustpilot.com/review/www.icfunded.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support e-mail/ticket et centre FAQ publiquement disponibles (+1), réponses aux utilisateurs observables (+1). Le traitement utile d'un différend technique hors rémunération et une voie de recours effective indépendamment documentés manquent (+0+0).",
+          "sources": [
+            "https://www.icfunded.com/faqs",
+            "https://www.trustpilot.com/review/www.icfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "ic-funded-open-ended-consistency-12",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "IC Funded · évaluation et compte simulé financé",
+          "phase": "Trading et maintien du compte",
+          "clause": "CGU §12.2–12.4 : variations « significatives ou injustifiées » de la stratégie ou de la taille de position, sans seuil exhaustif.",
+          "consequence": "Disqualification possible d'un compte respectant des drawdowns chiffrés si la variation est jugée incompatible avec la consistency ; le pouvoir de refuser une récompense est déjà coté en B1.",
+          "source": "https://www.icfunded.com/terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "the-concept-trading",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 60,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Les CGU §12.17 ne permettent qu'un payout par mois, tandis que l'option éligible « 90 % Lock Rule » annonce une fréquence hebdomadaire ; l'applicabilité du régime spécial aux CGU générales n'est pas contractuellement réconciliée : cadence non validée (+0). Les seuils/targets de niveau et éligibilité (+2), matrices de plafonds par niveau (+2) et demande d'un payout ou Lock Rule auprès de l'équipe (+2) sont expliqués. Frais/split/minimums nets par rail non exhaustifs (0).",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/all-rules/",
+            "https://prop.theconcepttrader.com/prop-trading/"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Absence de série de règlements indépendants et de retards contractuels multiples objectivement démontrés ; avis, captures et affirmations de trading réel ne suffisent ni à prouver deux refus injustifiés ni à justifier un palier 9.",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/prop-trading/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Témoignages promotionnels et références aux comptes Prop, sans relevés de paiements indépendants attribués par une pièce tierce et réconciliés avec The Concept AU/NZ Pty Ltd ou son broker partenaire.",
+          "sources": [
+            "https://prop.theconcepttrader.com/prop-trading/",
+            "https://prop.theconcepttrader.com/terms-and-conditions/"
+          ]
+        },
+        "B1": {
+          "points": 8,
+          "reason": "CGU §12.19 : droit au partage des profits renvoyé à la clause 3 d'un Contractor Service Agreement distinct, non trouvé librement dans sa version signée. §12.10 prévoit une fermeture unilatérale du compte. Les effets sur une récompense déjà acquise restent non vérifiables : palier provisoire 8 et non confiscation supposée.",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Règle de comportement « not commercially replicable » §12.24, avec compte susceptible d'être breached mais sans seuil objectif complet : une seule ambiguïté B2 −2. Les règles 42 jours, objectifs par niveau et limites de drawdown clairement publiés ne sont pas pénalisés. Ne pas doubler la retenue B1 relative au contrat de rémunération absent.",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/all-rules/"
+          ],
+          "negativeFactIds": [
+            "concept-commercially-replicable-trading-12-24"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "The Concept AU/NZ Pty Ltd ACN 652 938 399 et ABN 78 652 938 399 sont cités dans le contrat de prop et confirmés par le registre ABN australien. The Concept Limited Sainte-Lucie gère une offre de courtage distincte : ne pas attribuer ses éventuelles licences aux comptes Prop. Le contrat de service du trader et le checkout doivent encore être rapprochés.",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://abr.business.gov.au/ABN/View?abn=78652938399",
+            "https://theconcepttrader.com/"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "ABN Lookup, registre public australien, indique THE CONCEPT AU/NZ PTY LTD 'Active' et son nom commercial THE CONCEPT TRADING enregistré depuis août 2021 ; registre consultable 2026. Cela ne prouve pas la solvabilité ou la certification du programme financé.",
+          "sources": [
+            "https://abr.business.gov.au/ABN/View?abn=78652938399"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Aucune sanction officielle actuelle précisément liée à The Concept AU/NZ Pty Ltd et son service prop n'a été confirmée dans le corpus de régulateurs consulté. Son statut de représentant autorisé concerne les activités financières déterminées par l'autorisation, pas nécessairement l'évaluation prop ni les profits versés.",
+          "sources": [
+            "https://prop.theconcepttrader.com/financial-services-guide/",
+            "https://abr.business.gov.au/ABN/View?abn=78652938399"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les prix des niveaux, objectifs, pertes statiques et taux de partage par modèle, l'éligibilité au Lock Rule, restrictions trading et procédures de compte sont publiés, ainsi que les conditions générales et informations sur accès au prestataire broker.",
+          "sources": [
+            "https://prop.theconcepttrader.com/prop-trading/",
+            "https://prop.theconcepttrader.com/all-rules/",
+            "https://prop.theconcepttrader.com/terms-and-conditions/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU intégrales publiées (+2) mais version de contrat applicable à la commande actuelle non datée de manière reproductible (+0). La version miroir historique diffère sur inactivité (4 semaines) tandis que la page actuelle prévoit 42 jours, sans calendrier de migration explicite des anciens comptes (+0).",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://new.theconcepttrading.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/all-rules/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Checkout final et Contractor Service Agreement non vérifiés (+0) ; exception hebdomadaire Lock Rule contre plafond mensuel des CGU non rapprochée contractuellement (+0) ; parties AU/NZ et broker Saint-Lucie sont distinguées mais le compte Prop peut être live, démo ou hybride et l'obligation réelle du débiteur n'est pas entièrement claire dans la version signée (+0).",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/all-rules/",
+            "https://theconcepttrader.com/"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "La marque The Concept Trading est enregistrée auprès de l'ABN australien depuis août 2021 et des programmes de trading prop sont documentés par des brochures publiques dès 2022 ; plus de 36 mois d'exploitation du service prop à la date d'audit.",
+          "sources": [
+            "https://abr.business.gov.au/ABN/View?abn=78652938399",
+            "https://prop.theconcepttrader.com/prop-trading/"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Contact support et procédure de plainte publiés (+1), réponse de la firme aux sollicitations et équipe client identifiables (+1), renvoi après 5 jours à un organisme externe de traitement des litiges selon les CGU (+1) ; aucune issue résolue hors paiement indépendamment reproduite (+0).",
+          "sources": [
+            "https://new.theconcepttrading.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/faq/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "concept-commercially-replicable-trading-12-24",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "The Concept Trading · programme Prop",
+          "phase": "Comportement financé / évaluation",
+          "clause": "CGU §12.24 : interdiction d'activités « not commercially replicable in real market environments », sans tests exhaustifs d'applicabilité.",
+          "consequence": "Une stratégie peut être qualifiée de comportement exploitant le programme, entraînant la perte du compte malgré des limites de drawdown respectées ; le droit aux payouts relève séparément du Contractor Agreement.",
+          "source": "https://prop.theconcepttrader.com/terms-and-conditions/"
         }
       ],
       "trustpilotActiveNotice": false,
