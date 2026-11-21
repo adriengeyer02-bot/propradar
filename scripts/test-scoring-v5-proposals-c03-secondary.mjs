@@ -9,9 +9,9 @@ const c03 = new Set(['the-concept-trading','goat-funded-trader','rebelsfunding',
 const old = new Set([...c01.firms,...n01.firms].map(f=>f.slug));
 const otherDrafts = new Set(['breakout-prop','axi-select','city-traders-imperium','take-profit-trader','oneup-trader','uprofit-trader','funded-trading-plus','tradefundrr','hyrotrader','fx2-funding','quant-tekel','goat-funded-trader','apex-trader-funding','rebelsfunding','ic-funded','the-concept-trading']);
 const expected = {
-  'lux-trading-firm':{before:58,blocks:{A:15,B:14,C:15,D:16,E:8},editorial:72,rules:4,final:68},
-  tentrade:{before:58,blocks:{A:15,B:13,C:17,D:14,E:6},editorial:67,rules:2,final:65},
-  'sway-funded':{before:56,blocks:{A:15,B:16,C:11,D:10,E:6},editorial:60,rules:2,final:58},
+  'lux-trading-firm':{before:58,blocks:{A:15,B:16,C:15,D:16,E:8},editorial:72,rules:2,final:70},
+  tentrade:{before:58,blocks:{A:15,B:15,C:17,D:14,E:6},editorial:67,rules:0,final:67},
+  'sway-funded':{before:56,blocks:{A:15,B:18,C:11,D:10,E:6},editorial:60,rules:0,final:60},
   'forex-funds-flow':{before:57,blocks:{A:15,B:13,C:11,D:10,E:6},editorial:57,rules:2,final:55}
 };
 assert.equal(batch.version,5);
