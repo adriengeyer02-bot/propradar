@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-21",
   "status": "PARTIAL_OFFICIAL_DOCUMENT_AUDITS",
   "publication": "NOT_APPROVED",
-  "method": "Official help and program pages inspected. These document stated rules only; no independent payout verification or complete 13-criterion review.",
+  "method": "Official help and program pages inspected. These document stated rules only; no independent payout verification or complete 13-criterion review. Cross-checked additional current official program-specific FAQ pages; contradictions flagged rather than silently resolved.",
   "audits": [
     {
       "slug": "the5ers",
@@ -25,9 +25,17 @@
           "source": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
           "finding": "High Stakes Pro: payouts every 14 days, $50K account payout cap $3000 and minimum P&L $300; $100K cap $4000 and minimum P&L $500. Evaluate phase has no payouts.",
           "consequence": "Payout ceiling and minimum vary by account size."
+        },
+        {
+          "criterion": "B2",
+          "kind": "source-scope-clarification",
+          "candidateDeduction": 0,
+          "source": "https://www.the5ers.com/faqs/is-news-trading-allowed-in-the-high-stakes-program2024/",
+          "finding": "Dedicated High Stakes FAQ updated 2026-09-15 says restricted news executions are new position openings only; preexisting SL/TP may execute. Do not treat all pending exits as violations.",
+          "consequence": "Avoid overstating news restrictions."
         }
       ],
-      "conflictToResolve": "Official FAQ articles differ on whether all orders versus only new-position opening executions trigger news restriction; reconcile applicable version before publication."
+      "conflictToResolve": "The dedicated High Stakes FAQ updated 2026-09-15 clarifies the news window applies to opening NEW positions, including pending entry orders, not existing position SL/TP executions. Prefer specific newer program FAQ over generic 2026-08-10 FAQ, and confirm contract version."
     },
     {
       "slug": "fundednext",
@@ -41,6 +49,14 @@
           "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
           "finding": "For affected funded Stellar accounts, 5 minutes before and after high-impact news, only 40% of profitable trade result counts toward balance while losses remain fully counted. Market and pending orders including TP/SL are covered.",
           "consequence": "Trader retains only part of gains but full losses on news-window executions."
+        },
+        {
+          "criterion": "B2",
+          "kind": "program-scope-correction",
+          "candidateDeduction": 0,
+          "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+          "finding": "Stellar Instant product page also advertises 40% profit credit for correlated high-impact news-window trades and full loss retention. Original general FAQ names only 1-Step/2-Step/Lite; this is a cross-document scope discrepancy requiring verification, not grounds to omit Instant.",
+          "consequence": "Apply rule only after product-level reconciliation."
         }
       ],
       "conflictToResolve": null
@@ -81,9 +97,25 @@
           "source": "https://help.e8markets.com/en/articles/9453418-is-there-any-consistency-rule",
           "finding": "E8 Zero consistency applies in Challenge, not Performance; E8 Pro and E8 Zero Performance have no consistency rule. E8 One and Signature Performance use product-specific best-day requirements.",
           "consequence": "A global 'E8 has a consistency rule' label would mislead."
+        },
+        {
+          "criterion": "B2",
+          "kind": "asymmetric-news-profit-removal",
+          "candidateDeduction": 3,
+          "source": "https://help.e8markets.com/en/articles/11775980-e8-one",
+          "finding": "E8 One SimFi Performance: high-impact news window 5 minutes before and after; opening, closing, SL/TP and pending executions prohibited, profits may be removed. Challenge phase permits news trading. Exact treatment of losses is not specified in this source, so asymmetry must not be asserted as established.",
+          "consequence": "Profit removal may affect payout eligibility; verify whether losses remain counted before classifying as V5.2 asymmetric profits/losses."
+        },
+        {
+          "criterion": "B1",
+          "kind": "qualitative-strategy-discretion",
+          "candidateDeduction": null,
+          "source": "https://help.e8markets.com/en/articles/6929927-trading-policies-and-prohibited-trading-strategies",
+          "finding": "Updated E8 policy says the risk team may require extended trading history to demonstrate consistent sustainable strategy and may restrict trading, terminate agreement or withhold payouts. This includes a specifically described E8 One all-or-nothing trading rule. Assess full contractual remedy/appeal before B1 scoring.",
+          "consequence": "Reward may be withheld after discretionary sustainability review, even if quantitative targets met."
         }
       ],
-      "conflictToResolve": "Verify any newer FAQ revisions and product-specific restrictions before release."
+      "conflictToResolve": "The E8 One news window and discretionary risk-team reviews are product-specific; do not apply them indiscriminately to E8 Pro/Zero/Classic. Reconcile latest FAQs and full contract before final scoring."
     }
   ],
   "remainingPerFirm": [
