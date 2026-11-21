@@ -1,0 +1,578 @@
+{
+  "version": 5,
+  "batch": "C03-secondary",
+  "checkedOn": "2026-11-21",
+  "publication": "Four V5 scorecards and one no-score status review only; no public approvals or changes to scoring-v5-published.json; ratings require owner review.",
+  "firms": [
+    {
+      "slug": "lux-trading-firm",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 58,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Offre actuelle : rémunération annoncée sur demande sans période fixe (+2), règles d'éligibilité par étape et limites de risque documentées (+2), formulaire de demande et déroulement des retraits décrit (+2). Le triplet split/minimum/frais et les plafonds de chaque plan ne sont pas réunis complètement dans une version actuelle opposable (0+0).",
+          "sources": [
+            "https://luxtradingfirm.com/rules-of-engagement-3/",
+            "https://luxtradingfirm.com/78534-2/",
+            "https://luxtradingfirm.com/t_c-2/"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Trustpilot contient des récits de difficultés de retrait et de règles de risque, mais aucune série d'au moins deux refus injustifiés indépendamment corroborés ni historique de 12 mois de transferts authentifiés attribuables à Lux n'a été trouvée. Palier neutre 8, sans assimiler avis et constat judiciaire.",
+          "sources": [
+            "https://www.trustpilot.com/review/luxtradingfirm.com",
+            "https://propfirmrules.co.uk/payouts"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Des témoignages et mentions de performance sont disponibles mais aucun relevé bancaire ou transfert on-chain attribuable à la firme sur plusieurs mois, vérifié par un tiers, n'a été établi. Les listes de clients et avis ne valent pas preuve positive indépendante.",
+          "sources": [
+            "https://www.trustpilot.com/review/luxtradingfirm.com",
+            "https://propfirmrules.co.uk/firm/lux"
+          ]
+        },
+        "B1": {
+          "points": 8,
+          "reason": "Les CGU §9.5 disent qu'une résiliation n'entraîne aucune obligation de remboursement par Lux et §9.1 prévoit de nombreux motifs d'arrêt du compte. Ce texte concerne principalement les frais d'évaluation : il ne prouve pas à lui seul l'annulation de rewards DÉJÀ acquis. Convention de gains funded non consultée, donc B1=8 provisoire plutôt qu'une confiscation inventée.",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/rules-of-engagement-3/"
+          ]
+        },
+        "B2": {
+          "points": 6,
+          "reason": "Deux mécanismes différents : §10.1 autorise à rejeter des trades pour valider une évaluation suivant le seul jugement de Lux (−2) ; §15.2–15.4 permet ensuite d'imposer des directives personnalisées avec exclusion possible sans barème homogène vérifiable (−2). Les règles 6 % static et allocations de risque publiées ne coûtent rien.",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/rules-of-engagement-3/"
+          ],
+          "negativeFactIds": [
+            "lux-sole-judgment-trades-10-1",
+            "lux-personalized-risk-rules-15"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU nomment Lux Trading Firm LTD UK #13160991 et la société est visible dans Companies House. Le footer du site nomme aussi Lux Trading Firm ME LLC-FZ aux EAU ; le responsable exact du contrat funded/compte live pour chaque région n'est pas confirmé au dernier panier.",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://find-and-update.company-information.service.gov.uk/company/13160991",
+            "https://luxtradingfirm.com/78534-2/"
+          ]
+        },
+        "C2": {
+          "points": 4,
+          "reason": "Companies House affiche LUX TRADING FIRM LTD comme Active, avec confirmation statement janvier 2026. Cependant les comptes arrêtés au 31 janvier 2026 étaient attendus au 31 octobre 2026 et l'historique visible ne montre que les comptes 2025 : statut actif mais retard administratif apparent, justifiant 4 plutôt que 6.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/13160991",
+            "https://find-and-update.company-information.service.gov.uk/company/13160991/filing-history"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche par nom juridique exact et domaine sans avertissement réglementaire grave actuel et précisément rattaché à l'opérateur prop documenté. Le fait que le service de formation/prop ne soit pas un broker FCA n'est pas une infraction présumée.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/13160991",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Prix et tailles des programmes, objectifs/maximum drawdown, limites d'EAs/copie/news et sanctions spécifiques, pays exclus et pièces d'identité sont publiés au travers des Conditions, Rules of Engagement et pages d'achat. L'existence d'une règle stricte n'est pas en elle-même un défaut.",
+          "sources": [
+            "https://luxtradingfirm.com/rules-of-engagement-3/",
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/78534-2/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU intégrales librement lisibles (+2), règles postérieures au 22 septembre 2025 explicitement séparées de celles des comptes antérieurs (+2 pour le régime existants). Absence d'une date exacte de la version des CGU générales opposable au panier 2026 (0).",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/trading-rules/",
+            "https://luxtradingfirm.com/rules-of-engagement-3/"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "La différence entre les règles Legacy d'avant septembre 2025 et la gamme actuelle est explicitement clarifiée (+2) ; la structure d'évaluation puis funded est expliquée (+2). L'alignement de la facture finale UK/EAU n'est pas vérifié (0).",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/rules-of-engagement-3/",
+            "https://luxtradingfirm.com/78534-2/"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Activité de la marque prop documentée par site et avis publics depuis 2021 ; la création de la LTD britannique en 2021 est indépendante mais cohérente avec cet historique. L'exploitation de la prop firm excède 36 mois en novembre 2026.",
+          "sources": [
+            "https://www.trustpilot.com/review/luxtradingfirm.com",
+            "https://find-and-update.company-information.service.gov.uk/company/13160991"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Adresse de support/téléphone et équipe Risk Desk identifiables (+1), réponses de l'équipe dans les retours publics (+1) ; procédure structurée d'appel en matière de pertes non rémunération et résolution indépendante d'un ticket non-payout non reproduites (0+0).",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://www.trustpilot.com/review/luxtradingfirm.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "lux-sole-judgment-trades-10-1",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Lux Trading Firm · Evaluation / Scaling",
+          "phase": "Validation de l'évaluation",
+          "clause": "CGU §10.1 : Lux peut, à son seul jugement, ne pas retenir certains trades dans le calcul d'accès au palier suivant.",
+          "consequence": "Un objectif chiffré atteint peut ne pas suffire pour franchir la phase si certains trades sont exclus sans critère exhaustif.",
+          "source": "https://luxtradingfirm.com/t_c-2/"
+        },
+        {
+          "factId": "lux-personalized-risk-rules-15",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Lux Trading Firm · stages Advanced/Professional/Expert/Fund Manager",
+          "phase": "Risque individualisé après progression",
+          "clause": "CGU §15.2–15.4 : règles personnalisées communiquées par le Risk Desk, avec exclusion possible en cas de non-respect, sans grille homogène préalable.",
+          "consequence": "Des limites additionnelles communiquées après l'achat peuvent déterminer le maintien du compte funded.",
+          "source": "https://luxtradingfirm.com/t_c-2/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "tentrade",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 58,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Catalogue 2026 : paiement standard tous les 15 jours (+2), cinq à dix jours minimum et exclusions définies par plan (+2), plafonds de chaque taille de compte TenEdge/TenExpress (+2). Le triplet split/minimum/frais de virement exhaustif et la procédure finale de demande dans le portail funded n'ont pas été reproduits de bout en bout (0+0).",
+          "sources": [
+            "https://tentrade.com/en/trade/funded-accounts/funded-trader/",
+            "https://tentrade.com/en/company/legal-documentations/",
+            "https://tentrade.com/wp-content/uploads/2026/04/Withdrawal-and-Payout-Policy-1.pdf"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Les avis récents décrivent des paiements et parfois des délais mais aucune série de retards dépassant 14 jours après l'échéance contractuelle n'a été indépendamment corroborée au seuil V5 ; pas non plus de vérification externe de transferts sur au moins 12 mois pour 9/10.",
+          "sources": [
+            "https://www.trustpilot.com/review/tentrade.com",
+            "https://tentrade.com/en/trade/funded-accounts/funded-trader/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Volume cumulatif financé revendiqué par TenTrade et récits d'utilisateurs sur Trustpilot, sans rapprochement indépendant daté de virements du programme funded sur six mois ou plus. L'agrément de courtier ne prouve pas que chaque récompense est payée.",
+          "sources": [
+            "https://www.trustpilot.com/review/tentrade.com",
+            "https://tentrade.com/en/company/about-us/"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "Funded Trader Terms 2026, chapitre 'Cancellation of Trades, Account Reset, and Payout Denial' : une infraction même raisonnablement soupçonnée à la définition extensive des stratégies interdites permet de refuser un payout ou de confisquer la récompense, avec décision annoncée comme finale. Sanction sur gains sans procédure contradictoire suffisante : B1=5, sans alléguer un refus réellement survenu.",
+          "sources": [
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+            "https://tentrade.com/en/company/legal-documentations/"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Une clause DIFFÉRENTE du retrait sur suspicion : les descriptions d'« ultra-fast scalping » et « tick scalping » des listes de stratégies prohibées restent non chiffrées, alors que la sanction de perte de compte est explicite : une ambiguïté de trading, −2. Le pouvoir de refuser des rewards est déjà imputé à B1 et n'est pas redéduit.",
+          "sources": [
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+            "https://tentrade.com/en/trade/funded-accounts/funded-trader/"
+          ],
+          "negativeFactIds": [
+            "tentrade-unquantified-ultra-fast-scalping"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "TenTrade identifie Evalanch Ltd Seychelles #8429760-1 comme opérateur, confirmé au registre public de la Seychelles FSA sous marque TENTRADE. Cependant l'accord funded et l'interface de paiement ne sont pas réconciliés pour chaque gamme, les sociétés de paiement chypriotes étant séparées.",
+          "sources": [
+            "https://tentrade.com/en/",
+            "https://fsaseychelles.sc/regulated-entities/capital-markets",
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Le registre courant de la Financial Services Authority des Seychelles référence Evalanch Ltd parmi les Securities Dealers avec marque TenTrade/10Trade, corroborant l'activité régulée de cette contrepartie. Cela n'accorde pas par transfert de garantie universelle sur les payouts du challenge.",
+          "sources": [
+            "https://fsaseychelles.sc/regulated-entities/capital-markets",
+            "https://tentrade.com/en/"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Contrôle ciblé des autorités sans avertissement récent et matériel précisément attribué à Evalanch Ltd/TenTrade relevé. La licence FSA SD082 appartient au courtier aux Seychelles, non à ses partenaires administratifs en Europe.",
+          "sources": [
+            "https://fsaseychelles.sc/regulated-entities/capital-markets",
+            "https://tentrade.com/en/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Catalogue 2026 détaillé : tarifs de candidature, phases/targets/drawdowns par taille, règles de trading/sanctions, KYC, pays interdits et limites territoriales. Il faut comparer TenEdge et TenExpress séparément, anciens modèles Ten Freedom exclus des conditions actuelles.",
+          "sources": [
+            "https://tentrade.com/en/trade/funded-accounts/funded-trader/",
+            "https://tentrade.com/en/company/legal-documentations/",
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Accords funded et Withdrawal Policy publiquement disponibles (+2), documents identifiés comme édition 2025/2026 dans le corpus juridique (+2). L'accord autorise une modification sans préavis et sans droit explicite de conserver les conditions des clients antérieurs (+0).",
+          "sources": [
+            "https://tentrade.com/en/company/legal-documentations/",
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+            "https://tentrade.com/wp-content/uploads/2026/04/Withdrawal-and-Payout-Policy-1.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La nature des activités de courtage et des programmes funded sous marque Evalanch est exposée (+2), mais les PDF ont encore des exemples de gammes Ten Freedom/anciens cycles alors que le catalogue actuel propose TenEdge/TenExpress ; concordance des documents du nouveau produit et du checkout incomplète (0+0).",
+          "sources": [
+            "https://tentrade.com/en/trade/funded-accounts/funded-trader/",
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+            "https://tentrade.com/en/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le compte Trustpilot et le centre d'aide documentent l'offre funded à partir de 2024 ; cela établit plus de 18 mois mais pas l'activité de CETTE prop firm avant novembre 2023. Ne pas substituer la date d'agrément du courtier au lancement du service prop.",
+          "sources": [
+            "https://www.trustpilot.com/review/tentrade.com",
+            "https://tentrade.com/en/trade/funded-accounts/funded-trader/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support officiel par email et centre d'aide (+1) et réponses de l'équipe sur Trustpilot (+1), sans processus d'escalade funded et résolution documentée d'un incident hors payout reproduits (+0+0).",
+          "sources": [
+            "https://www.trustpilot.com/review/tentrade.com",
+            "https://tentrade.com/en/company/legal-documentations/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "tentrade-unquantified-ultra-fast-scalping",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "TenTrade · funded legacy models in Funded Trader Terms",
+          "phase": "Trading funded",
+          "clause": "Funded Trader Terms : interdictions d'ultra-fast scalping et tick scalping sans seuil temporel précis, avec suppression du compte annoncée.",
+          "consequence": "Des trades courts peuvent être classés comme interdits sur une qualification non chiffrée ; applicabilité aux nouveaux TenEdge/TenExpress à confirmer.",
+          "source": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "sway-funded",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 56,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "L'offre commerciale indique récompenses à la demande et versement annoncé sous 24 heures (+2), conditions d'accès spécifiques Rapid/Regular/Instant publiées en aide (+2), procédure par compte et méthode de paiement annoncées (+2). Split exact avec seuil mini/frais exhaustifs et caps des programmes non réunis dans un contrat signé et versionné (0+0).",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://swayfunded.kb.help/our-challenges/",
+            "https://my.swayfunded.com/p/terms"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Avis et allégations contradictoires sans deux refus injustifiés ou retards de plus de 14 jours par rapport aux conditions du contrat, corroborés indépendamment. Pas non plus d'historique bancaire/on-chain de 12 mois imputable à la nouvelle société 2026 : palier neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/swayfunded.com",
+            "https://www.swayfunded.com/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La homepage affiche de nombreux montants et cartes de profit et Trustpilot contient des témoignages, mais ce flux est publié par l'opérateur sans transaction/bénéficiaire vérifiés par une source indépendante ; pas de preuve satisfaisante au palier 3–5.",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://www.trustpilot.com/review/swayfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 8,
+          "reason": "Les CGU de l'ancien portail §14.2 ne garantissent pas de futurs paiements et les récompenses sont payées selon les règles de la page, dont la version est changeante. Les conditions actuelles associées à SF Funded LTD ne sont pas entièrement reproduites dans l'extraction (la page /terms rend par défaut l'accord affilié). Aucune confiscation explicite de récompenses acquises attribuable à la nouvelle partie n'est vérifiée : palier provisoire 8.",
+          "sources": [
+            "https://my.swayfunded.com/p/terms",
+            "https://www.swayfunded.com/terms"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Les conditions du portail §7.5 permettent à l'entreprise de décider seule qu'une stratégie tombe sous la rubrique Prohibited Trading, avec perte de compte ; −2 pour cette latitude de trading. La possibilité de changements futurs est documentée en D2 et n'est PAS qualifiée rétroactive sans texte applicable actuel ; objectifs/drawdowns clairs non sanctionnés.",
+          "sources": [
+            "https://my.swayfunded.com/p/terms",
+            "https://swayfunded.kb.help/our-challenges/"
+          ],
+          "negativeFactIds": [
+            "sway-discretionary-prohibited-trading-7-5"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Le site 2026 nomme SF FUNDED LTD Sainte-Lucie #2026-00408, avec Corvexia Holding LTD Chypre #HE489845 comme agent de paiement distinct. L'ancien portail parle de Sway Funded FZCO : preuve de succession contractuelle et registre officiel de la nouvelle société non recoupés, d'où seulement 4.",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://my.swayfunded.com/p/terms",
+            "https://www.swayfunded.com/terms?document=refunds-and-cancellation-policy"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "L'immatriculation Saint-Lucie #2026-00408 et l'agent chypriote sont déclarés sur le site, mais extrait officiel de situation du cocontractant courant non disponible. Le statut historique de la marque depuis 2024 ne vaut pas un certificat de bonne tenue 2026.",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://www.swayfunded.com/terms"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche ciblée par noms SF Funded LTD et Sway Funded sans avertissement grave matériel imputable à la prestation simulée confirmé. Pas de malus pour l'absence de licence d'un broker si le service est strictement une simulation déclarée.",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Formules et frais d'entrée accessibles sur le site et conditions d'évaluation par Rapid/Regular/Instant (+2+2), règles de trading et limitations expliquées en FAQ (+2). Vérification complète des zones interdites/KYC de la nouvelle entité sur toutes les offres non établie (0).",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://swayfunded.kb.help/our-challenges/",
+            "https://my.swayfunded.com/p/terms"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Conditions accessibles publiquement sur le portail actuel ou historique (+2) ; la page /terms présente un sélecteur dynamique dont le texte initial est l'accord des affiliés, sans date/identification certaine de la version CLIENT à la commande (0). Effet de futurs changements sur les comptes déjà achetés non garanti (0).",
+          "sources": [
+            "https://www.swayfunded.com/terms",
+            "https://my.swayfunded.com/p/terms"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le nouveau footer explique clairement la nature simulée des comptes et la différence entre entité vendeur SF Funded LTD et agent Corvexia (+2). La correspondance avec l'ancien contrat 'Sway Funded FZCO' et les nouveaux termes du client n'est pas établie (+0), ni le checkout final (+0).",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://my.swayfunded.com/p/terms"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Trustpilot affiche une activité de marque depuis mars 2024, soit environ 32 mois en novembre 2026. On ne reporte pas automatiquement la longévité de marque sur la société SF Funded LTD constituée en 2026 ; 18–35 mois de service documentés.",
+          "sources": [
+            "https://www.trustpilot.com/review/swayfunded.com",
+            "https://www.swayfunded.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Email d'assistance officiel et système de ticket/canaux chat (+1), échanges réponses de la société sur les avis (+1), mais voie indépendante d'appel et issue de litige technique documentée de façon vérifiable non reproduites (+0+0).",
+          "sources": [
+            "https://www.trustpilot.com/review/swayfunded.com",
+            "https://www.swayfunded.com/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "sway-discretionary-prohibited-trading-7-5",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Sway Funded · challenges historiques",
+          "phase": "Challenge / passage funded",
+          "clause": "Anciennes conditions portail §7.5 : l'entreprise détermine seule les actes relevant de Prohibited Trading et peut fermer l'accès.",
+          "consequence": "Un trader peut se voir retirer la qualification funded sur interprétation de stratégie ; l'applicabilité aux contrats 2026 de SF Funded LTD est encore à démontrer.",
+          "source": "https://my.swayfunded.com/p/terms"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "forex-funds-flow",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 57,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Offre FFF Boost : calendrier tous les trois jours (+2), minimum de trois jours de trading et critères d'éligibilité (+2), parcours Request Payout du dashboard avec KYC et procédure de traitement (+2). Split 65→80 % et minimum 50 USD affichés mais frais de transfert complets non établis (0) ; caps ou absence explicite selon toutes les variantes manquants (0).",
+          "sources": [
+            "https://forexfundsflow.com/challenge",
+            "https://www.forexfundsflow.com/blogs/fff-dashboard-tutorial-for-payout-requests0405202602",
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Trustpilot contient plusieurs récits de retards en juillet 2026, avec des dates inférieures au seuil de 14 jours supplémentaires et issue non uniformément vérifiée. La série ne permet pas de démontrer au moins deux retards distincts de plus de 14 jours hors délai contractuel, ni cinq refus non résolus ; ne pas inventer une interruption générale.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexfundsflow.com",
+            "https://mypropgenius.com/closed-firms/forex-funds-flow/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Témoignages et marketing sur des demandes récompensées, mais aucun ensemble de transferts authentifiés et reliés par tiers à l'opérateur de Saint-Lucie/Hong Kong n'a été corroboré pour les programmes actuels.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexfundsflow.com",
+            "https://forexfundsflow.com/challenge"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "Schedule A FFF Boost prévoit la perte des payouts lors de violations et §5.3 laisse la qualification et les conséquences ouvertes ; aucune protection contradictoire explicite des récompenses déjà calculées, pouvoirs de suppression non objectivés entièrement. B1=5 sans imputer ce fait à nouveau en B2.",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Règle distincte de §5.3 sur le paiement : §5.2.17 interdit les « gambling/random lot spikes » sans seuil chiffré exhaustif, avec rupture de compte possible. −2 pour ce critère de TRADING subjectif ; interdiction d'utiliser 80 % de marge et règle des 2 minutes déjà publiées ne subissent aucun retrait automatique.",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions"
+          ],
+          "negativeFactIds": [
+            "fff-unquantified-random-lot-spikes-5-2-17"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Le site affiche Fx Funds Flow Limited Sainte-Lucie #2025-00415 et FF Flow Limited #78177928. La version longue des CGU présente cette seconde partie comme Hong Kong, tandis que le footer actuel la présente également comme Sainte-Lucie : rôle réel et registre de l'entité #78177928 non confirmés, pas 7 ou 10.",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions",
+            "https://www.forexfundsflow.com/about"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Les références Saint-Lucie et Hong Kong sont publiées par l'entreprise mais aucun extrait officiel de situation des deux contractants ni novation juridique n'a été recoupé au 21/11/2026. C2 neutre non vérifiable, aucune dissolution ni strike-off attribuée.",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions",
+            "https://www.forexfundsflow.com/about"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche ciblée par domaine et dénominations des deux prestataires sans sanction officielle grave et directement applicable au challenge simulé identifiée. L'absence de licence de courtage n'est pas une faute pour la simulation clairement déclarée.",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Prix, tailles et frais Boost/Instant, objectifs/drawdowns et interdictions news/EA/risque expliqués (+2+2+2). Liste exhaustive d'accès territorial et contrôles KYC par formule non vérifiée au contrat d'achat (0).",
+          "sources": [
+            "https://forexfundsflow.com/challenge",
+            "https://www.forexfundsflow.com/faq",
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU consultables gratuitement (+2) ; date de version/entrée en vigueur actuelle absente du texte inspecté (+0) ; §6.1 prévoit avertissement des clients au moins sept jours avant modifications et droit de refuser, avec fin du contrat (+2).",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Pas de checkout final (+0). Contradictions matérielles non-trading : Schedule A parle d'accès à du capital réel dans FFF Boost alors que les §§2–3 et le footer affirment simulation intégrale, et le statut pays du second opérateur varie entre deux pages officielles (+0 cohérence, +0 rôles). Ne pas déduire ces incohérences EN PLUS comme malus B2.",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions",
+            "https://www.forexfundsflow.com/about",
+            "https://forexfundsflow.com/challenge"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Activité publiquement documentée depuis au moins mai 2025 via fiche Trustpilot revendiquée et pages tarifaires plus anciennes, soit environ 18 mois au contrôle novembre 2026 : palier 18–35 mois, pas 36 mois.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexfundsflow.com",
+            "https://www.forexfundsflow.com/about"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Email et FAQ en accès public (+1), interactions d'assistance attestées par les réponses sur Trustpilot (+1) ; pas de recours indépendant décrit ni d'exemple vérifié de résolution d'un litige NON lié aux paiements (+0+0).",
+          "sources": [
+            "https://www.forexfundsflow.com/faq",
+            "https://www.trustpilot.com/review/forexfundsflow.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "fff-unquantified-random-lot-spikes-5-2-17",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Forex Funds Flow · FFF Boost et évaluations simulées",
+          "phase": "Trading/qualité de stratégie",
+          "clause": "CGU §5.2.17 : « gambling/random lot spikes » interdits sans seuil de qualification exhaustif, sanctions de §5.3.",
+          "consequence": "Des positions peuvent être classées excessives sans mesure publiée pour tous les styles ; le pouvoir de confisquer des récompenses est compté seulement B1.",
+          "source": "https://forexfundsflow.com/terms-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ],
+  "statusReviews": [
+    {
+      "slug": "bespoke-funding-program",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "uk_company_dissolved_current_seller_unverified",
+      "confidence": "elevee_sur_dissolution_faible_sur_succession",
+      "finding": "Companies House confirme BESPOKE FUNDING PROGRAM LTD (UK #14377446) dissoute le 4 août 2026. La marque a été retirée de Prop Firm Match après alertes de retards dès 2024, et les domaines consultés ne fournissent pas de checkout opérationnel fiable. Ce registre ne prouve PAS à lui seul qu'aucun nouvel opérateur ne peut avoir repris la marque ni le sort de toutes les créances des traders. Exiger contrat/numéro juridique du vendeur 2026 avant toute remise au classement actif.",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/14377446",
+        "https://propfirmmatch.com/unlisted-prop-firms/bespoke-funding-program",
+        "https://fxnewsgroup.com/forex-news/retail-forex/prop-firm-bespoke-funding-delisted-from-propfirmmatch-following-payout-delay-reports/",
+        "https://bespokefundingprogram.com/"
+      ],
+      "ownerApprovalRequired": true
+    }
+  ]
+}
