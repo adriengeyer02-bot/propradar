@@ -1,9 +1,9 @@
 {
   "version": "5.2",
   "date": "2026-11-21",
-  "status": "BATCH_02_UNSCORED_EVIDENCE_INVENTORY",
+  "status": "BATCH_02_ACTIVE_OFFICIAL_REVIEWS",
   "count": 20,
-  "note": "20 previously unscored firms extracted directly from site data. These are not completed audits; existing site claims are not proof and legacy scores must not be converted without 13 sourced criteria.",
+  "note": "20 firms inventoried; FTMO and Topstep now have official payout and restriction evidence recorded. No new firm has all 13 criteria completed; no fabricated scores.",
   "audits": [
     {
       "slug": "ftmo",
@@ -28,7 +28,11 @@
       "criteria": {
         "A1": {
           "points": null,
-          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+          "verification": "OFFICIAL_TERMS_REVIEWED_INCOMPLETE",
+          "sources": [
+            "https://ftmo.com/faq/how-do-i-withdraw-my-profits/",
+            "https://ftmo.com/en/instant-account/"
+          ]
         },
         "A2": {
           "points": null,
@@ -44,7 +48,7 @@
         },
         "B2": {
           "points": null,
-          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+          "verification": "PROGRAM_RESTRICTIONS_DOCUMENTED_NOT_FULLY_SCORED"
         },
         "C1": {
           "points": null,
@@ -80,7 +84,41 @@
         }
       },
       "v52Score": null,
-      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+      "reviewStatus": "OFFICIAL_PAYOUT_TERMS_VERIFIED_PARTIAL_13_CRITERIA",
+      "verifiedOfficialFindings": [
+        {
+          "criterion": "A1",
+          "program": "FTMO 1-Step and Instant",
+          "phase": "FTMO Account",
+          "source": "https://ftmo.com/faq/how-do-i-withdraw-my-profits/",
+          "fact": "Reward request after 14th day from first trade; no open positions or pending orders; 90% reward share; review in 1–2 business days and transfer typically 1–2 business days after invoice approval.",
+          "effect": "Eligibility timeline and share are explicit."
+        },
+        {
+          "criterion": "A1",
+          "program": "FTMO 2-Step",
+          "phase": "FTMO Account",
+          "source": "https://ftmo.com/faq/how-do-i-withdraw-my-profits/",
+          "fact": "Default reward share 80%; rises to 90% under qualifying scaling/premium program.",
+          "effect": "Do not use one universal profit split."
+        },
+        {
+          "criterion": "B2",
+          "program": "FTMO Instant",
+          "phase": "After reward withdrawal",
+          "source": "https://ftmo.com/faq/how-do-i-withdraw-my-profits/",
+          "fact": "Maximum Loss Limit does not reset following reward withdrawal.",
+          "effect": "Withdrawal can reduce remaining account loss buffer; explicit published condition."
+        },
+        {
+          "criterion": "B2",
+          "program": "FTMO Instant",
+          "phase": "Trading objectives",
+          "source": "https://ftmo.com/en/instant-account/",
+          "fact": "Published objectives include 10% maximum loss, 3% maximum daily loss and 30% consistency.",
+          "effect": "Apply only to Instant; do not confuse with Challenge products."
+        }
+      ]
     },
     {
       "slug": "the5ers",
@@ -260,7 +298,10 @@
       "criteria": {
         "A1": {
           "points": null,
-          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+          "verification": "OFFICIAL_TERMS_REVIEWED_INCOMPLETE",
+          "sources": [
+            "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+          ]
         },
         "A2": {
           "points": null,
@@ -276,7 +317,7 @@
         },
         "B2": {
           "points": null,
-          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+          "verification": "PROGRAM_RESTRICTIONS_DOCUMENTED_NOT_FULLY_SCORED"
         },
         "C1": {
           "points": null,
@@ -312,7 +353,41 @@
         }
       },
       "v52Score": null,
-      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+      "reviewStatus": "OFFICIAL_PAYOUT_TERMS_VERIFIED_PARTIAL_13_CRITERIA",
+      "verifiedOfficialFindings": [
+        {
+          "criterion": "A1",
+          "program": "XFA Standard",
+          "phase": "Express Funded Account",
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "fact": "Five nonconsecutive days of at least $150 net profit; 90/10 split; minimum $125 payout; request 50% of eligible balance with per-account cap $2000/$3000/$5000 for 50K/100K/150K.",
+          "effect": "Payout eligibility depends on winning-day count and account size."
+        },
+        {
+          "criterion": "A1",
+          "program": "XFA Consistency",
+          "phase": "Express Funded Account",
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "fact": "Three trading days and best single day at most 40% of total net profit; per-request caps $3000/$4000/$6000 for 50K/100K/150K.",
+          "effect": "Consistency must be recalculated after each payout."
+        },
+        {
+          "criterion": "B2",
+          "program": "XFA both paths",
+          "phase": "After payout",
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "fact": "Maximum Loss Limit permanently resets to $0 after a payout, and winning-day or consistency window restarts.",
+          "effect": "Withdrawal changes risk buffer and next payout eligibility."
+        },
+        {
+          "criterion": "A1",
+          "program": "Live Funded Account",
+          "phase": "Live",
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "fact": "Five $150+ winning days for each payout cycle, withdraw up to 50% of balance without a dollar cap; 90/10 profit split.",
+          "effect": "Live terms are not XFA caps."
+        }
+      ]
     },
     {
       "slug": "trade-the-pool",
