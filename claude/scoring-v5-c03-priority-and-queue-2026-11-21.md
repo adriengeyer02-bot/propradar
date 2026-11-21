@@ -9,8 +9,10 @@
 | GOAT Funded Trader | 59 | 22 | 13 | 14 | 12 | 8 | 69 | 71 | −2 | −6 | **63/100** |
 | Apex Trader Funding | 57 | 17 | 8 | 14 | 14 | 8 | 61 | 63 | −2 | 0 | **61/100** |
 | RebelsFunding | 59 | 15 | 16 | 11 | 18 | 7 | 67 | 69 | −2 | 0 | **67/100** |
+| IC Funded | 58 | 15 | 13 | 14 | 14 | 6 | 62 | 64 | −2 | 0 | **62/100** |
+| The Concept Trading | 60 | 15 | 16 | 17 | 10 | 9 | 67 | 69 | −2 | 0 | **67/100** |
 
-**Équations :** GOAT 71−2−6=63 ; Apex 63−2=61 ; Rebels 69−2=67. **Le B2 à 8 est DÉJÀ inclus dans le total des cinq piliers** : le « −2 » n'est qu'une décomposition de présentation, pas une seconde retenue. Aucun plafond 55, aucune allégation de fraude ou de refus injustifié établie par ce lot. Niveau de confiance : **moyen** pour les trois, avec réserves contractuelles explicites.
+**Équations :** GOAT 71−2−6=63 ; Apex 63−2=61 ; Rebels 69−2=67 ; IC Funded 64−2=62 ; The Concept Trading 69−2=67. **Le B2 à 8 est DÉJÀ inclus dans le total des cinq piliers** : le « −2 » n'est qu'une décomposition de présentation, pas une seconde retenue. Aucun plafond 55, aucune allégation de fraude ou de refus injustifié établie par ce lot. Niveau de confiance : **moyen** pour les trois, avec réserves contractuelles explicites.
 
 ## GOAT Funded Trader — 59 → 63
 
@@ -41,6 +43,25 @@
 - **A2=8 / A3=1 ; C1=4 / C2=3 :** revendications marketing de payouts et identité slovaque cohérente dans les documents de l'entreprise, mais **pas de relevés de paiements externes attribués ni d'extrait officiel récent du registre des deux parties**. La confiance moyenne est liée à la documentation accessible, **pas** à une preuve bancaire établie.
 - **À demander :** RCF Account Contract version signée, identité et statut officiel de FRCSM, conditions de réclamation, éléments de paiement indépendants.
 
+## IC Funded — 58 → 62
+
+- **Contrat officiel / B1=5.** Les [CGU IC Funded](https://www.icfunded.com/terms-and-conditions), §§11.3–11.4, permettent de qualifier des stratégies d'interdites même si elles ne sont pas nommées, puis de retirer des gains ou refuser des payouts. L'accord funded est distinct (§16), et **sa version signée manque** : il ne faut pas affirmer l'existence d'un refus de payout abusif ni noter automatiquement 0/15.
+- **Règles contraignantes / B2=8.** Autre clause, §12 : une variation « significative ou injustifiée » de taille de lot et de style de trading peut conduire à disqualification, sans seuil précis. **−2 une seule fois** pour cette condition de conformité subjective. Le pouvoir de retirer la récompense au titre de §11.4 est **déjà traité B1**.
+- **Retraits / A1=6.** Les [règles officielles 2-Step Professional](https://www.icfunded.com/rules) indiquent 14 jours et cinq jours profitables pour la première demande, trois jours pour la suivante, aucune exigence de jour profitable ensuite ; split 80/20. Le calendrier est explicite, mais ni barème complet de frais bancaires ni plafond/absence de plafond n'ont été confirmés pour toutes les variantes.
+- **Identité / C1=7, C2=3.** [À propos](https://www.icfunded.com/about) nomme **IC Funded Evaluations LTD, Sainte-Lucie 2024-00388** ; le [LEI externe](https://lei.bloomberg.com/leis/view/894500XIZX315U6MQ328) recoupe identité et numéro, avec statut indiqué actif dans une fiche dont la dernière révision accessible remonte à 2025. **Ne pas assimiler ce LEI à un certificat officiel de situation novembre 2026.** Les comptes simulés ne reçoivent pas par défaut les garanties d'IC Markets.
+- **Preuves de gains / A2=8, A3=1** : le marketing parle de payouts « verified », mais les éléments publics consultés ne rapprochent pas de façon indépendante plusieurs virements de l'entité aux traders. La [fiche Trustpilot](https://www.trustpilot.com/review/www.icfunded.com) affiche un TrustScore et non une note suspendue par l'opérateur : **0 pénalité Trustpilot**, même si les avis sont mitigés.
+- **D2=2 ; E1=4.** Conditions accessibles mais sans version datée opposable et mise à jour discrétionnaire ; début de l'entité évaluatrice juin 2024, pas de preuve de trois ans de service prop avant novembre 2023. Vérifier checkout et contrat funded avant toute publication.
+
+## The Concept Trading — 60 → 67
+
+- **Identité / C1=7, C2=6.** Les [CGU de prop trading](https://prop.theconcepttrader.com/terms-and-conditions/) nomment **THE CONCEPT AU/NZ PTY LTD (ACN 652 938 399)**. Le [registre public australien ABN 78 652 938 399](https://abr.business.gov.au/ABN/View?abn=78652938399) indique la société et le nom commercial **actifs**, ce qui n'est **pas** une preuve de payouts ou de contrat personnel garanti. [The Concept Limited à Sainte-Lucie](https://theconcepttrader.com/) présente une activité de courtage distincte ; ne pas lui attribuer indûment la responsabilité de tous les comptes prop.
+- **Payout / A1=6, D3=0 : nuance importante.** Les [CGU §12.17](https://prop.theconcepttrader.com/terms-and-conditions/) indiquent **un versement par mois**, tandis que la [90 % Lock Rule](https://prop.theconcepttrader.com/all-rules/) prévoit **des paiements hebdomadaires pour des comptes expressément éligibles et bloqués à un niveau**. Il peut s'agir d'une **exception contractuelle légitime**, pas forcément d'une contradiction ; toutefois l'articulation hiérarchique avec §12.17 et l'accord individuel n'est pas vérifiée. Ne pas sanctionner B2 sans preuve que les deux textes sont opposés pour le même produit.
+- **Contrat de rémunération / B1=8 provisoire.** Les [CGU §12.19](https://prop.theconcepttrader.com/terms-and-conditions/) renvoient au **Contractor Service Agreement** séparé, à sa clause 3, que nous n'avons pas consultée jusqu'à signature. §12.10 donne une faculté de fermeture de compte. Aucune conclusion ne peut être tirée quant au droit effectif aux sommes déjà acquises sans ce contrat.
+- **B2=8 :** §12.24 permet de disqualifier un compte sur des pratiques qui ne seraient pas **commercialement reproductibles sur un marché réel**, sans seuil exhaustif. **−2 pour cette seule appréciation**, distincte du contrat de rémunération B1. Les six semaines d'inactivité, les objectifs par niveau et le drawdown statique clairement publiés ne coûtent rien.
+- **D2=2.** Une [ancienne page de CGU en miroir](https://new.theconcepttrading.com/terms-and-conditions/) parle de **4 semaines** d'inactivité, tandis que les [CGU actuelles](https://prop.theconcepttrader.com/terms-and-conditions/) et [règles](https://prop.theconcepttrader.com/all-rules/) indiquent **42 jours**. Ancienne version ≠ preuve que la restriction actuelle est cachée ; relever l'absence de procédure de version datée plutôt que multiplier les malus.
+- **Ancienneté / E1=6 :** [enregistrement du nom commercial depuis août 2021](https://abr.business.gov.au/ABN/View?abn=78652938399), services prop historiques documentés depuis 2022 ; cela ne prouve ni solvabilité ni affiliation réglementaire du programme.
+- **À obtenir avant publication :** le contrat service de trader §3, tableau exact de payouts pour chaque offre, pays et contrepartie du compte personnel, preuve indépendante de règlements, checkout final et protocole de dérogation à la limite mensuelle pour la Lock Rule.
+
 ## Rectification du compteur : file prioritaire ≠ tous les audits réalisés
 
 Le [script de file officielle](../scripts/check-v5-progress.mjs) constitue une sélection de **122 dossiers à reprendre** : 66 C01–C04 et 56 N01–N03. Les **six nouvelles notes de la PR #242** (FXIFY, FunderPro, FundingPips, Leeloo, FTUK et Bulenox) sont des audits V5 supplémentaires **en dehors de cette file** ; elles restent utiles mais **ne peuvent pas diminuer les 122**.
@@ -50,9 +71,9 @@ Le [script de file officielle](../scripts/check-v5-progress.mjs) constitue une s
 | `main` approuvé | 11 | publié |
 | PR #240, C01 | 7 | proposé seulement |
 | PR #241, C02–C04 | 4 | proposé seulement |
-| **Cette PR, C03 prioritaire** | **3** | **proposé seulement** |
-| **Total file prioritaire documentée** | **25/122** | 11 publiés ; 14 propositions |
-| **Restants à chiffrer dans cette file** | **97** | sans scorecard V5 complète |
+| **Cette PR, C03 prioritaire** | **5** | **proposé seulement** |
+| **Total file prioritaire documentée** | **27/122** | 11 publiés ; 16 propositions |
+| **Restants à chiffrer dans cette file** | **95** | sans scorecard V5 complète |
 
 La PR #241 contient en outre **4 enquêtes de statut**, sans nouvelle note V5, non ajoutées aux 25 ; la PR #242 contient **6 audits bonus** hors file. Le compteur public du projet doit être ajusté **après fusion des PR et réconciliation des doublons** ; ne pas modifier subrepticement la liste live.
 
