@@ -182,14 +182,11 @@
           ]
         },
         "B2": {
-          "points": 8,
-          "reason": "Une clause DIFFÉRENTE du retrait sur suspicion : les descriptions d'« ultra-fast scalping » et « tick scalping » des listes de stratégies prohibées restent non chiffrées, alors que la sanction de perte de compte est explicite : une ambiguïté de trading, −2. Le pouvoir de refuser des rewards est déjà imputé à B1 et n'est pas redéduit.",
+          "points": 10,
+          "reason": "Le document Funded Trader Terms actuellement lié par la page Legal Documents cite des catégories non quantifiées d'ultra-fast scalping, mais décrit aussi des modèles Ten Freedom/Legacy dont l'applicabilité aux TenEdge/TenExpress vendus en novembre 2026 n'est pas établie. Les règles de trading actuelles réellement opposables aux nouveaux produits ne permettent pas une pénalité B2 sourcée à ce stade. Réserve documentaire, 0 retrait, et interdiction de reprendre une sanction historique pour un autre modèle.",
           "sources": [
             "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
             "https://tentrade.com/en/trade/funded-accounts/funded-trader/"
-          ],
-          "negativeFactIds": [
-            "tentrade-unquantified-ultra-fast-scalping"
           ]
         },
         "C1": {
@@ -261,18 +258,7 @@
           ]
         }
       },
-      "ruleDeductions": [
-        {
-          "factId": "tentrade-unquantified-ultra-fast-scalping",
-          "kind": "ambiguite",
-          "points": 2,
-          "program": "TenTrade · funded legacy models in Funded Trader Terms",
-          "phase": "Trading funded",
-          "clause": "Funded Trader Terms : interdictions d'ultra-fast scalping et tick scalping sans seuil temporel précis, avec suppression du compte annoncée.",
-          "consequence": "Des trades courts peuvent être classés comme interdits sur une qualification non chiffrée ; applicabilité aux nouveaux TenEdge/TenExpress à confirmer.",
-          "source": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
-        }
-      ],
+      "ruleDeductions": [],
       "trustpilotActiveNotice": false,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
@@ -319,14 +305,11 @@
           ]
         },
         "B2": {
-          "points": 8,
-          "reason": "Les conditions du portail §7.5 permettent à l'entreprise de décider seule qu'une stratégie tombe sous la rubrique Prohibited Trading, avec perte de compte ; −2 pour cette latitude de trading. La possibilité de changements futurs est documentée en D2 et n'est PAS qualifiée rétroactive sans texte applicable actuel ; objectifs/drawdowns clairs non sanctionnés.",
+          "points": 10,
+          "reason": "La clause vague Prohibited Trading §7.5 a été identifiée dans un portail plus ancien parlant de Sway Funded FZCO, mais le site vend maintenant via SF Funded LTD Saint Lucia #2026-00408. Sans document de novation ni preuve que la clause lie les nouveaux achats, une pénalité B2 serait injustifiée. Les règles Rapid/Regular/Instant clairement publiées restent à 0 retrait ; réserve liée à la version en vigueur.",
           "sources": [
             "https://my.swayfunded.com/p/terms",
             "https://swayfunded.kb.help/our-challenges/"
-          ],
-          "negativeFactIds": [
-            "sway-discretionary-prohibited-trading-7-5"
           ]
         },
         "C1": {
@@ -396,18 +379,7 @@
           ]
         }
       },
-      "ruleDeductions": [
-        {
-          "factId": "sway-discretionary-prohibited-trading-7-5",
-          "kind": "ambiguite",
-          "points": 2,
-          "program": "Sway Funded · challenges historiques",
-          "phase": "Challenge / passage funded",
-          "clause": "Anciennes conditions portail §7.5 : l'entreprise détermine seule les actes relevant de Prohibited Trading et peut fermer l'accès.",
-          "consequence": "Un trader peut se voir retirer la qualification funded sur interprétation de stratégie ; l'applicabilité aux contrats 2026 de SF Funded LTD est encore à démontrer.",
-          "source": "https://my.swayfunded.com/p/terms"
-        }
-      ],
+      "ruleDeductions": [],
       "trustpilotActiveNotice": false,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
