@@ -1,0 +1,382 @@
+{
+  "version": 5,
+  "batch": "C03-status-plus-C04-firm-audits",
+  "checkedOn": "2026-11-21",
+  "publication": "Two complete C04 V5 proposals and 7 C03 status reviews without competitive score; NONE approved or published.",
+  "firms": [
+    {
+      "slug": "e8-futures",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 52,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Pour Signature Futures, les CGU donnent le traitement sous sept jours et la FAQ précise l'éligibilité au premier cycle (+2), le split et seuil net minimum 100 USD mais pas tous frais de rail (+0), le 35 % best-day et cinq jours profitables entre payouts (+2), caps par taille et 5 versements avec profits non reportables (+2), et procédure de retrait via tableau de bord/PII (+2). Ces conditions ne sont pas celles de tous produits E8, en particulier Zero Futures.",
+          "sources": [
+            "https://helpfutures.e8markets.com/en/articles/11864618-e8-signature-futures",
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Le tracker indépendant Payout Junction retrace des paiements Rise E8Markets depuis 2023, mais agrège FOREX/CRYPTO/FUTURES : aucun historique de 12 ou 24 mois n'est isolé pour la sous-gamme E8 Futures. Il ne suffit donc pas pour A2=9/10 sur la division précise ; aucune série de retards ou refus injustifiés indépendants n'est établie. Palier neutre 8.",
+          "sources": [
+            "https://payoutjunction.com/firms/e8markets",
+            "https://payoutjunction.com/weekly/2026-w46",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "Payout Junction offre une preuve transactionnelle indépendante à l'échelle de la MARQUE E8Markets depuis novembre 2023, cependant pas un sous-registre identifié Futures. Attribution positive de paiements à la marque crédible mais séparation du programme non achevée : A3=2, pas 5 pour les futures par transfert automatique des chiffres de la maison mère.",
+          "sources": [
+            "https://payoutjunction.com/firms/e8markets",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "CGU E8 Funding LLC §5.1–5.3 : en cas de non-conformité déterminée à sa seule appréciation, E8 peut retenir ou retirer des récompenses ; ESPA et accord E8 Trader définissant des protections supplémentaires ne sont pas rapprochés dans une version individuelle. Droit de suppression explicite et large : B1=5. Ne pas transformer cette faculté juridique en incidents avérés.",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "e8-sole-discretion-revoke-awards-5-1"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Payout caps, cinq retraits maximum, 35 % best-day et exclusion des profits de cycles antérieurs sont annoncés distinctement pour Signature après le 14 juillet 2026. §5.1 et ses pouvoirs de refus sont déjà dans B1. Le §6.5 permet de modifier des fonctionnalités rétroactivement, mais aucun changement défavorable effectivement appliqué à des comptes antérieurs sur le même programme n'est établi : pas de −2 B2 sans occurrence vérifiée.",
+          "sources": [
+            "https://helpfutures.e8markets.com/en/articles/11864618-e8-signature-futures",
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "L'accord contractuel nomme E8 Funding LLC au Texas, le footer distingue E8 Markets Ltd Sainte-Lucie #2025-00347 sur MT5 et Digital Renaissance LLC Porto Rico pour le site. L'identité nommée est plausible mais le registre officiel texan et l'entité figurant sur facture des produits Futures n'ont pas été vérifiés conjointement ; ne pas attribuer la solvabilité d'un prestataire à un autre.",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://e8futures.com/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "La LLC texane contractante est déclarée dans les CGU mais aucun extrait de situation officiel daté novembre 2026 n'a été rapproché du checkout E8 Futures, donc statut non vérifiable au niveau C2=6. Aucune dissolution attribuable n'a été établie.",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://e8futures.com/"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche datée d'avertissements institutionnels sur E8 Funding LLC et E8 Markets sans sanction officielle directement applicable au programme Futures simulé identifiée dans le corpus. L'absence d'un agrément de courtage n'est pas, à elle seule, une sanction pour un programme simulé.",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les prix d'entrée, tailles de compte, profit targets, plafonds EOD, pauses et limites journalières, plages news/overnight, KYC et exclusions géographiques sont accessibles via les comparatifs Futures et CGU. Différenciation explicite Zero Futures et Signature Futures, sans transférer les règles de Forex à Futures.",
+          "sources": [
+            "https://e8futures.com/",
+            "https://helpfutures.e8markets.com/en/articles/11864618-e8-signature-futures",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature",
+            "https://e8futures.com/e8-markets-terms-and-conditions"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU juridiquement accessibles (+2) et datées du 3 novembre 2025 (+2). §§1.4 et 6.5 autorisent des changements immédiats, y compris rétroactifs de fonctionnalités, sans garantie claire de préservation de la structure de payout existante (+0).",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les textes expliquent les comptes simulés et distinguent opérateur de simulation, marque et prestataire MT5 (+2). L'incorporation ESPA, les anciens chiffres payout de plusieurs produits et le checkout final Futures ne sont pas tous conciliés (0+0), et une page Signature mélange dans une sous-section un libellé Forex plutôt que Futures, insuffisant à lui seul pour une contradiction applicable mais nécessitant une correction éditoriale.",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature",
+            "https://helpfutures.e8markets.com/en/articles/11864618-e8-signature-futures"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le lancement E8 Futures est documenté fin 2024 ; cela ne démontre pas 36 mois d'activité du programme Futures au 21 novembre 2026, même si E8Markets est plus ancien. Palier 18–35 mois.",
+          "sources": [
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature",
+            "https://bestprops.com/what-is-e8-markets/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Help center Futures et contact support publiés (+1) ; réponses de l'équipe accessibles via le service client et Trustpilot (+1). Pas de procédure de recours indépendante efficace démontrée ni résolution vérifiable d'une contestation non-payout (+0+0).",
+          "sources": [
+            "https://e8futures.com/",
+            "https://www.trustpilot.com/review/e8markets.com"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "lucid-trading",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "LucidFlex : délai on-demand annoncé et paiement sous 2 jours ouvrés (+2) ; split 90 % et minimum 500 USD mais frais de tous canaux non documentés (+0) ; cinq jours positifs minimum et profit net sur cycle (+2) ; retrait jusqu'à 50 % des profits dans caps par taille, maximum cinq payouts (+2) ; procédure en dashboard et validation du funded précisée (+2). Les règles LucidPro/Daily/Direct distinctes ne sont pas mélangées.",
+          "sources": [
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+            "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+            "https://lucidtrading.com/general-faq/"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Les nombreux avis clients datés rapportent paiements et litiges, mais aucune série sur 12 mois de transactions attribuées indépendamment au débiteur de la société ne permet le palier 9/10 et les cas individuels négatifs ne suffisent pas à prouver deux refus injustifiés, après examen des versions et dates du contrat. Palier neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/lucidtrading.com",
+            "https://lucidtrading.com/general-faq/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Montants auto-annoncés, confirmations d'utilisateurs et avis Trustpilot vérifiés comme auteurs, mais pas de relevés de transfert indépendants et attribuables Lucid Trading Group LLC, vérifiables par bénéficiaire et période. Le terme Trustpilot « Verified » ne signifie pas vérification d'un virement.",
+          "sources": [
+            "https://www.trustpilot.com/review/lucidtrading.com",
+            "https://lucidtrading.com/"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "CGU datées 13 novembre 2026, §Prohibited Uses : l'opérateur peut recalculer le solde, retenir ou refuser le paiement et fermer le compte sans remboursement, après appréciation de violation, et §Identity Verification permet de retenir des rewards pendant l'enquête. Un contrôle humain est mentionné, mais le pouvoir de retenir les gains reste large. B1=5, pas un jugement d'abus de fait.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/"
+          ],
+          "negativeFactIds": [
+            "lucid-terms-2026-sole-discretion-withhold-90"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Une ambiguïté DISTINCTE du paiement : les CGU classent parmi les stratégies prohibées celles qui ne seraient pas « representative of responsible trading in live markets » et le « microscalping », sans seuil temporel complet. Cela peut mener à résiliation de compte indépendamment du pouvoir de refuser une récompense déjà évalué en B1 : −2 une fois. Les 40 % consistency et 5 jours LucidFlex publiés coûtent 0.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts"
+          ],
+          "negativeFactIds": [
+            "lucid-vague-responsible-trading-microscalping-74"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Lucid Trading Group LLC Delaware est citée dans les CGU comme contrepartie. La fiche officielle Florida Sunbiz pour son enregistrement étranger M26000016198 active confirme le même nom et l'État Delaware. Concordance facture du dernier achat et compte Live tiers non vérifiée, donc pas 10.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m26000016198-cba252eb-40ff-4e36-9949-8d4ae29cc6a6&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LUCIDTITLEGROUP+L230001998710&searchNameOrder=LUCIDTRADINGGROUP+M260000161980"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Florida Sunbiz enregistre Lucid Trading Group LLC au statut ACTIVE depuis le 12 octobre 2026 en tant que LLC étrangère du Delaware. Aucun rapport annuel Floride n'est encore exigible immédiatement après cette inscription ; absence de rapport ici n'est pas un retard. Statut d'enregistrement officiel courant vérifié.",
+          "sources": [
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m26000016198-cba252eb-40ff-4e36-9949-8d4ae29cc6a6&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LUCIDTITLEGROUP+L230001998710&searchNameOrder=LUCIDTRADINGGROUP+M260000161980"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche ciblée d'avertissements réglementaires précis au nom Lucid Trading Group LLC dans le corpus officiel, aucun constat actuel matériel concernant la simulation n'a été identifié ; ne pas considérer une société de simulation comme broker enregistré par défaut.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/index.htm"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Pages produits et FAQ détaillent frais de challenge, tailles, pertes, caps, LucidFlex/Pro/Daily/Direct, KYC, restrictions générales et règles de trading par produit/phase. Les comptes live partenaires sont explicitement distingués des comptes de simulation.",
+          "sources": [
+            "https://lucidtrading.com/general-faq/",
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+            "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+            "https://lucidtrading.com/terms-of-use/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU complètes consultables (+2), dernière version 13 novembre 2026 (+2), mais les changements prennent effet lors de la mise en ligne et sont applicables à l'usage continu sans droit clairement réservé aux anciens comptes (+0), même si certaines FAQ protègent explicitement les versions antérieures de leurs split.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "FAQ et conditions sont cohérentes sur les programmes LucidFlex/Pro et sur la nature simulée et le passage vers des accords Live distincts (+2+2). Le checkout, les frais de paiement et l'accord individuel de compte funded ne sont pas rapprochés (+0).",
+          "sources": [
+            "https://lucidtrading.com/general-faq/",
+            "https://lucidtrading.com/risk-disclosure-statement/",
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+            "https://lucidtrading.com/terms-of-use/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Lancement Lucid Trading identifié en avril 2025 par presse et archives sociales, soit environ 19 mois à date de novembre 2026 : palier 18–35 mois. Ne pas compter l'âge du domaine comme antériorité du service.",
+          "sources": [
+            "https://bestprops.com/what-is-lucid-trading/",
+            "https://bestprops.com/prop-firms/lucid-trading/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Canaux d'assistance et de revue humaine via support chat publiés (+1), nombreux retours clients sur la joignabilité et réponses du support (+1). La possibilité de demander une revue ne démontre pas qu'une contestation technique hors payout a été utilement résolue ; +0 pour le dernier critère et procédure d'escalade complète non vérifiée (+0).",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://www.trustpilot.com/review/lucidtrading.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "lucid-vague-responsible-trading-microscalping-74",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Lucid Trading — LucidFlex/Pro/Daily/Direct simulés",
+          "phase": "Trading et maintien du compte",
+          "clause": "Terms of Use §Prohibited Uses : définition ouverte de ce qui est « representative of responsible trading in live markets », combinée à « microscalping », sans seuil temporel universel.",
+          "consequence": "Une stratégie pourtant conforme aux limites chiffrées peut entraîner retrait de trades ou clôture du compte, selon l'appréciation de Lucid. Le pouvoir de refuser la récompense est compté une seule fois en B1.",
+          "source": "https://lucidtrading.com/terms-of-use/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ],
+  "statusReviews": [
+    {
+      "slug": "nova-funding",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "domains_redirect_unrelated_no_current_offer",
+      "confidence": "faible",
+      "finding": "Le domaine historique novafunding.com redirige vers fundmylawsuitnow.com, société de financement de litiges sans rapport prouvé. L'autre ancien domaine nova-funding.com redirige vers un site de jeux sans rapport ; la marque Nova Funded sur novafunded.com est DISTINCTE. La fermeture juridique, les dettes envers clients et une éventuelle nouvelle société prop ne sont pas établies ; l'offre de Nova Funding ne peut plus être recommandée comme active sans nouveau contrat vérifiable.",
+      "sources": [
+        "https://novafunding.com/",
+        "https://nova-funding.com/",
+        "https://novafunded.com/",
+        "https://vettedpropfirms.com/nova-funding-appears-to-shut-down-amid-scam-allegations/"
+      ],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "aurafunded",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "former_domain_redirects_to_unrelated_site_help_center_still_visible",
+      "confidence": "faible",
+      "finding": "Le domaine historique aurafunded.com redirige vers aurapips.com qui publie maintenant un contenu de jeux/commerce sans rapport avec une offre de challenge. Pourtant help.aurafunded.com est encore lisible avec des règles de lot size et payout. Impossible de prouver une offre achetable actuelle, et la présence du help center n'est pas confirmation d'exploitation. Ne pas déplacer l'utilisateur vers le domaine redirigé, ni attribuer les nouvelles pages à l'ancien opérateur.",
+      "sources": [
+        "https://aurafunded.com/",
+        "https://help.aurafunded.com/en/articles/10174531-consistency-rule",
+        "https://propfirmtier.com/en/firms"
+      ],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "leveled-up-society",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "historical_firm_reported_closed_domain_reused_regulator_warning_scope_review",
+      "confidence": "faible",
+      "finding": "Finance Magnates a documenté la fermeture de Leveled Up Society en 2023. Le domaine leveledupsociety.com redirige vers leveleduptraders.com, signalé réutilisé pour une activité sans lien, selon contrôles tiers d'octobre 2026. Une page FSMA mentionne le nom historique mais sa portée sur l'activité d'évaluation simulée n'est pas suffisamment établie. Ne pas affirmer qu'une nouvelle société portant une marque proche est identique ni router les traders vers le domaine historique.",
+      "sources": [
+        "https://www.tradingview.com/news/financemagnates%3A099925cdd094b%3A0-exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+        "https://www.fsma.be/fr/leveled-society-httpsleveledupsocietycom",
+        "https://leveledupsociety.com/",
+        "https://mypropgenius.com/closed-firms/"
+      ],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "the-forex-funder",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "offer_and_current_operator_unverified_acquisition_2024",
+      "confidence": "faible",
+      "finding": "Le site theforexfunder.com renvoie une réponse 403 lors de la recherche et une inspection externe d'octobre 2026 le décrit comme non opérationnel. La société annonçait son acquisition par AXE Securities le 26 août 2024 ; cela ne prouve pas que l'acheteur a repris les dettes anciennes ni qu'une offre actuelle peut être achetée. Les règles accessibles au centre d'aide datent principalement de 2024, donc pas de score concurrentiel actuel.",
+      "sources": [
+        "https://theforexfunder.com/",
+        "https://mypropgenius.com/closed-firms/theforexfunder/",
+        "https://support.theforexfunder.com/en/collections/10321339-the-forex-funder-rules",
+        "https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/"
+      ],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "nations-trading",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "no_current_offer_or_contract_verified",
+      "confidence": "faible",
+      "finding": "Le domaine nationstrading.com ne restitue aucun catalogue ou contrat de challenge actuel utilisable dans la consultation 21 novembre 2026. Les règles de min. 10 jours et frais crypto ne sont évoquées que par des comparateurs et une page Trustpilot conservant des conditions historiques. Ces copies ne valent pas une vente active, ni une preuve de fermeture juridique ; vérifier propriétaire du checkout et CGU 2026 avant toute note V5.",
+      "sources": [
+        "https://nationstrading.com/",
+        "https://www.trustpilot.com/review/nationstrading.com",
+        "https://propfirm201.com/firms/nations-trading"
+      ],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "alphaproptraders",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 56,
+      "score": null,
+      "currentOfferStatus": "landing_page_legacy_portal_and_current_terms_unverified",
+      "confidence": "faible",
+      "finding": "Le site alphaproptraders.com affiche toujours une roadmap 2024–2025 et des promesses de tokenisation de participations numériques, avec lien vers un portail platform.alphaproptraders.com indisponible à la consultation. Aucune convention funded datée 2026 ni dernier achat, ni identité du payeur actuel n'ont été vérifiés. Cette page existante ne prouve ni que de nouveaux challenges sont achetables ni la fermeture de la société.",
+      "sources": [
+        "https://alphaproptraders.com/",
+        "https://platform.alphaproptraders.com/",
+        "https://propfirmmatch.com/unlisted-prop-firms/alphaproptraders"
+      ],
+      "ownerApprovalRequired": true
+    },
+    {
+      "slug": "fxrk",
+      "checkedOn": "2026-11-21",
+      "previousDisplayedScore": 58,
+      "score": null,
+      "currentOfferStatus": "new_framer_offer_historical_domain_warned_by_cnmv_scope_unresolved",
+      "confidence": "faible",
+      "finding": "FXRK dispose d'un site de règles Framer datées mars 2026 annonçant les Instant et les deux étapes, avec changement des conditions dès le 17 mars. L'ancien domaine fxrk.com renvoie 404 ; la CNMV espagnole publie un avertissement du 17 février 2025 visant exactement FXRK / fxrk.com pour absence d'autorisation de services d'investissement. Les nouveaux textes Framer mentionnent Challenge Technologies FZCO UAE et FXRK Markets Ltd Sainte-Lucie #2025-00737, mais continuité juridique, contrat du checkout et portée de l'alerte pour la simulation NE sont PAS encore reliés. Ce signal n'est pas une sanction prouvée du programme simulé. Pas de score V5 chiffré tant que l'identité du vendeur ne peut être recoupée.",
+      "sources": [
+        "https://www.cnmv.es/portal/resultadobusqueda?lang=en&nombre=fxrk.com&tipo=1",
+        "https://fxrk.framer.website/help-center/help-center-articles/new-trading-conditions",
+        "https://fxrk.framer.website/",
+        "https://fxrk.com/"
+      ],
+      "ownerApprovalRequired": true
+    }
+  ]
+}
