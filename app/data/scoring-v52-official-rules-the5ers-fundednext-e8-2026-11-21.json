@@ -1,0 +1,97 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-21",
+  "status": "PARTIAL_OFFICIAL_DOCUMENT_AUDITS",
+  "publication": "NOT_APPROVED",
+  "method": "Official help and program pages inspected. These document stated rules only; no independent payout verification or complete 13-criterion review.",
+  "audits": [
+    {
+      "slug": "the5ers",
+      "program": "High Stakes",
+      "phase": "Evaluation and Pro account where applicable",
+      "findings": [
+        {
+          "criterion": "B2",
+          "kind": "asymmetric-profit-loss-treatment",
+          "candidateDeduction": 3,
+          "source": "https://the5ers.com/faqs/can-i-trade-during-news/",
+          "finding": "High Stakes: orders executed within 2 minutes either side of high-impact news can have profits removed while losses remain. The rule concerns order execution, including triggered pending entries, not simply holding a preexisting position.",
+          "consequence": "Profitable news-window executions can be excluded while losing executions count."
+        },
+        {
+          "criterion": "A1",
+          "kind": "payout-eligibility",
+          "candidateDeduction": 0,
+          "source": "https://the5ers.com/faqs/payout-policy-and-hub-credit-in-the-high-stakes-program/",
+          "finding": "High Stakes Pro: payouts every 14 days, $50K account payout cap $3000 and minimum P&L $300; $100K cap $4000 and minimum P&L $500. Evaluate phase has no payouts.",
+          "consequence": "Payout ceiling and minimum vary by account size."
+        }
+      ],
+      "conflictToResolve": "Official FAQ articles differ on whether all orders versus only new-position opening executions trigger news restriction; reconcile applicable version before publication."
+    },
+    {
+      "slug": "fundednext",
+      "program": "Stellar 1-Step, Stellar 2-Step, Stellar Lite",
+      "phase": "FundedNext Account only, not Challenge",
+      "findings": [
+        {
+          "criterion": "B2",
+          "kind": "asymmetric-profit-loss-treatment",
+          "candidateDeduction": 3,
+          "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
+          "finding": "For affected funded Stellar accounts, 5 minutes before and after high-impact news, only 40% of profitable trade result counts toward balance while losses remain fully counted. Market and pending orders including TP/SL are covered.",
+          "consequence": "Trader retains only part of gains but full losses on news-window executions."
+        }
+      ],
+      "conflictToResolve": null
+    },
+    {
+      "slug": "e8-markets",
+      "program": "E8 One, E8 Signature, E8 Zero, E8 Pro",
+      "phase": "SimFi Challenge versus Performance separated",
+      "findings": [
+        {
+          "criterion": "A1",
+          "kind": "published-payout-eligibility",
+          "candidateDeduction": 0,
+          "source": "https://help.e8markets.com/en/articles/9448349-what-is-payout-on-demand",
+          "finding": "E8 One Performance has 40% Best Day and payout net-profit threshold >50% daily drawdown. E8 Signature Performance has 35% Best Day, minimum payout $100, five 0.3%-profitable days between payouts after first, buffer and size-based payout caps.",
+          "consequence": "Eligibility and available withdrawal differ materially by product."
+        },
+        {
+          "criterion": "A1",
+          "kind": "published-payout-mechanism",
+          "candidateDeduction": 0,
+          "source": "https://help.e8markets.com/en/articles/13653464-payout-request-from-e8-pro",
+          "finding": "E8 Pro Performance has no consistency rule or payout cap, requests daily after 1% profit; only 50% of profits are requestable and remaining 50% retained as buffer. Static drawdown moves to initial balance at first payout.",
+          "consequence": "Headline profit split is not equivalent to immediate withdrawal of 100% of generated profits."
+        },
+        {
+          "criterion": "B1",
+          "kind": "discretionary-payout-withholding",
+          "candidateDeduction": null,
+          "source": "https://help.e8markets.com/en/articles/6929927-trading-policies-and-prohibited-trading-strategies",
+          "finding": "Risk team reserves ability to impose restrictions, terminate agreement or withhold payouts if it judges trading not consistent or sustainable. Full contractual terms and appeal process needed before B1 points.",
+          "consequence": "Payout can depend on qualitative strategy assessment beyond numeric limits."
+        },
+        {
+          "criterion": "B2",
+          "kind": "program-differentiation",
+          "candidateDeduction": 0,
+          "source": "https://help.e8markets.com/en/articles/9453418-is-there-any-consistency-rule",
+          "finding": "E8 Zero consistency applies in Challenge, not Performance; E8 Pro and E8 Zero Performance have no consistency rule. E8 One and Signature Performance use product-specific best-day requirements.",
+          "consequence": "A global 'E8 has a consistency rule' label would mislead."
+        }
+      ],
+      "conflictToResolve": "Verify any newer FAQ revisions and product-specific restrictions before release."
+    }
+  ],
+  "remainingPerFirm": [
+    "A2 incident corroboration",
+    "A3 independent payout evidence",
+    "B1 full contracting agreement and appeals",
+    "C1-C3 registry and official enforcement",
+    "D1-D3 disclosures and audit freshness",
+    "E1-E2 age and support"
+  ]
+}
