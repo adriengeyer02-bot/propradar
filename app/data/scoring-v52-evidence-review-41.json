@@ -1,0 +1,1469 @@
+{
+  "version": "5.2",
+  "createdOn": "2026-11-21",
+  "status": "REVIEW_QUEUE_NOT_PUBLIC",
+  "method": "Flags extracted from existing candidate scorecards, not independent web revalidation",
+  "counts": {
+    "firms": 41,
+    "criticalPayout": 26,
+    "criticalContract": 26,
+    "withVerificationGaps": 31
+  },
+  "rows": [
+    {
+      "slug": "lucid-trading",
+      "candidateScore": 64,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.trustpilot.com/review/lucidtrading.com",
+            "https://lucidtrading.com/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "A3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.trustpilot.com/review/lucidtrading.com",
+            "https://lucidtrading.com/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m26000016198-cba252eb-40ff-4e36-9949-8d4ae29cc6a6&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LUCIDTITLEGROUP+L230001998710&searchNameOrder=LUCIDTRADINGGROUP+M260000161980"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "E2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://www.trustpilot.com/review/lucidtrading.com"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tiger-funded",
+      "candidateScore": 40,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://tigerfunded.com/payouts",
+            "https://theindustryspread.com/tiger-funded-review-tiger-guard-payout-rules/",
+            "https://payoutjunction.com/how-to-check-prop-firm-payouts"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://tigerfunded.com/terms-of-service",
+            "https://tigerfunded.com/faq"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://tigerfunded.com/rules",
+            "https://tigerfunded.com/faq",
+            "https://tigerfunded.com/terms-of-service"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "A2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.trustpilot.com/review/tigerfunded.com",
+            "https://theindustryspread.com/tiger-funded-review-tiger-guard-payout-rules/",
+            "https://tigerfunded.com/terms-of-service"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://tigerfunded.com/terms-of-service",
+            "https://www.mof.gov.cy/mof/gpo/gazette.nsf/CD10616BF485B675C2258CFC001F90C2/$file/4528%205%209%202025%20PARARTHMA%205o%20MEROS%20I.pdf",
+            "https://companiesregistry.cy/company-details/alphaedgepro-services-europe-ltd-479670/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.companies.gov.cy/en/21-eservices/esearch-in-business-entity-s-registry",
+            "https://companiesregistry.cy/company-details/alphaedgepro-services-europe-ltd-479670/",
+            "https://tigerfunded.com/terms-of-service"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "city-traders-imperium",
+      "candidateScore": 53,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://citytradersimperium.com/about-us/",
+            "https://citytradersimperium.com/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://citytradersimperium.com/terms-conditions-of-service/",
+            "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://citytradersimperium.com/terms-conditions-of-service/",
+            "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://anjouanoffshorefinanceauthority.org/register/city-traders-imperium/",
+            "https://banque-comores.km/uploads/COMMUNIQUE-DE-LA-BCC-SUR-LEXERCICE-ILLEGAL-DACTIVITES-BANCAIRES-OFFSHORES%283%29.pdf",
+            "https://find-and-update.company-information.service.gov.uk/company/11463147"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://citytradersimperium.com/about-us/",
+            "https://citytradersimperium.com/terms-conditions-of-service/",
+            "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "forex-funds-flow",
+      "candidateScore": 50,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.trustpilot.com/review/forexfundsflow.com",
+            "https://forexfundsflow.com/challenge"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://forexfundsflow.com/terms-conditions",
+            "https://www.forexfundsflow.com/about"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://forexfundsflow.com/challenge",
+            "https://www.forexfundsflow.com/faq",
+            "https://forexfundsflow.com/terms-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "get-leveraged",
+      "candidateScore": 51,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://getleveraged.com/terms/",
+            "https://getleveraged.com/about/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://getleveraged.com/terms/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://getleveraged.com/terms/",
+            "https://getleveraged.com/faq-category/prohibited-trading-practices/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://getleveraged.com/terms/",
+            "https://getleveraged.com/about/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://getleveraged.com/terms/",
+            "https://getleveraged.com/faq/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "miltraders",
+      "candidateScore": 58,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://intercom.help/miltraders/en/articles/16007282-how-do-i-know-miltraders-actually-pays",
+            "https://payoutjunction.com/how-to-check-prop-firm-payouts"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://miltraders.com/terms/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://miltraders.com/terms/",
+            "https://miltraders.com/faqs/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://miltraders.com/terms/",
+            "https://www.meydanfz.ae/blog/trade-license-verification-uae"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://miltraders.com/risk-disclosure/",
+            "https://announcements.meydanfz.ae/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "apex-trader-funding",
+      "candidateScore": 58,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.trustpilot.com/review/apextraderfunding.com",
+            "https://apextraderfunding.com/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/helpful-items/1099-forms-and-tax-information/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bem-funding",
+      "candidateScore": 47,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://bemfunding.com/",
+            "https://bemfunding.com/leaderboard",
+            "https://payoutjunction.com/how-to-check-prop-firm-payouts"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://bemfunding.com/terms-and-conditions",
+            "https://bemfunding.com/prohibited-trading-practices",
+            "https://bemfunding.com/terms-of-use/bem-classic-normal"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://bemfunding.com/terms-and-conditions",
+            "https://bemfunding.com/prohibited-trading-practices",
+            "https://bemfunding.com/terms-of-use/bem-classic-normal"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://bemfunding.com/challenges",
+            "https://bemfunding.com/terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ic-funded",
+      "candidateScore": 57,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.icfunded.com/pricing",
+            "https://www.trustpilot.com/review/www.icfunded.com"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.icfunded.com/terms-and-conditions",
+            "https://www.icfunded.com/rules"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.icfunded.com/about",
+            "https://lei.bloomberg.com/leis/view/894500XIZX315U6MQ328",
+            "https://www.icfunded.com/terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "uprofit-trader",
+      "candidateScore": 57,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://uprofit.com/day-programs",
+            "https://www.trustpilot.com/review/www.uprofit.com"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "A1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.uprofittrader.com/hc/en-us/articles/32526417608212-UProfit-DAY-Payout-Policy",
+            "https://help.uprofittrader.com/hc/en-us/articles/49177986296468-UProfit-One-Payout-Policy",
+            "https://help.uprofittrader.com/hc/en-us/articles/52062715698580-UProfit-Flex-Payout-Policy",
+            "https://help.uprofittrader.com/hc/en-us/articles/52063548100500-UProfit-Soft-Payout-Policy"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bulenox",
+      "candidateScore": 59,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://bulenox.com/",
+            "https://bulenox.com/legal/Terms_of_Use.pdf"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://bulenox.com/legal/Terms_of_Use.pdf"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://bulenox.com/legal/Terms_of_Use.pdf",
+            "https://bulenox.com/contact"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "onefunded",
+      "candidateScore": 54,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://onefunded.com/",
+            "https://payoutjunction.com/how-to-check-prop-firm-payouts"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://onefunded.com/terms-and-conditions/",
+            "https://help.onefunded.com/prohibited-trading-practices-on-onefunded/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://onefunded.com/terms-and-conditions/",
+            "https://help.onefunded.com/prohibited-trading-practices-on-onefunded/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ftuk",
+      "candidateScore": 61,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://ftuk.com/",
+            "https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://ftuk.com/terms-of-service"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "quant-tekel",
+      "candidateScore": 55,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://qtfunded.quanttekel.com/evaluations/",
+            "https://qtfunded.quanttekel.com/about/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tentrade",
+      "candidateScore": 63,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.trustpilot.com/review/tentrade.com",
+            "https://tentrade.com/en/company/about-us/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+            "https://tentrade.com/en/company/legal-documentations/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "e8-futures",
+      "candidateScore": 60,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://payoutjunction.com/firms/e8markets",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://e8futures.com/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://e8futures.com/e8-markets-terms-and-conditions",
+            "https://e8futures.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "funderpro",
+      "candidateScore": 57,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://whatprop.com/prop-firms/funder-pro",
+            "https://support.funderpro.com/en/articles/378136-how-can-i-receive-my-rewards"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://funderpro.com/instant-account-terms-and-conditions/",
+            "https://funderpro.com/terms-conditions/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://funderpro.com/terms-conditions/",
+            "https://funderpro.com/instant-account-terms-and-conditions/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://funderpro.com/terms-conditions/",
+            "https://funderpro.com/instant-account-terms-and-conditions/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "goat-funded-trader",
+      "candidateScore": 60,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "E2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+            "https://www.trustpilot.com/review/goatfundedtrader.com"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "oneup-trader",
+      "candidateScore": 63,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.oneuptrader.com/",
+            "https://www.trustpilot.com/review/oneuptrader.com"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "A2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.trustpilot.com/review/oneuptrader.com",
+            "https://help.oneuptrader.com/article/376-profit-info"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.oneuptrader.com/article/520-getting-funded-process",
+            "https://www.oneuptrader.com/terms-conditions/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.oneuptrader.com/terms-conditions/",
+            "https://www.oneuptrader.com/privacy-policy/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-concept-trading",
+      "candidateScore": 62,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://prop.theconcepttrader.com/prop-trading/",
+            "https://prop.theconcepttrader.com/terms-and-conditions/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/all-rules/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://prop.theconcepttrader.com/terms-and-conditions/",
+            "https://prop.theconcepttrader.com/all-rules/",
+            "https://theconcepttrader.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tradeday",
+      "candidateScore": 62,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://www.payouttrail.com/firms/tradeday",
+            "https://www.payouttrail.com/methodology",
+            "https://www.tradeday.com/pt/blog-posts/no-more-subscriptions-tradeday-moves-to-one-time-payments---plus-60-off-every-account"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.tradeday.com/terms-and-conditions",
+            "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008889-what-are-the-rules-for-funded-funded-sim-and-funded-live-traders-"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.tradeday.com/",
+            "https://tradeday.freshdesk.com/en/support/solutions/articles/103000405229-what-is-fast-pass-",
+            "https://www.tradeday.com/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.tradeday.com/terms-and-conditions",
+            "https://www.tradeday.com/pt/blog-posts/no-more-subscriptions-tradeday-moves-to-one-time-payments---plus-60-off-every-account",
+            "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008676-what-is-tradeday-"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tradefundrr",
+      "candidateScore": 58,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://tradefundrr.com/",
+            "https://www.trustpilot.com/review/tradefundrr.com"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=8ae59468-1120-4330-8ca7-97112729076b",
+            "https://tradefundrr.com/pages/fee-refund-policy"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://tradefundrr.com/",
+            "https://tradefundrr.com/stock-trader-funding/pro/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "E2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://tradefundrr.com/",
+            "https://www.trustpilot.com/review/tradefundrr.com"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "alpha-capital-group",
+      "candidateScore": 66,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://alphacapitalgroup.uk/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://alphacapitalgroup.uk/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://alphacapitalgroup.uk/terms-and-conditions",
+            "https://alphacapitalgroup.uk/product"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "axi-select",
+      "candidateScore": 60,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.axi.com/int/funded-trader-program",
+            "https://help.axi.com/en-US/axiv2--axicorp-prod/article/juIXl3Mq-how-do-i-access-the-payouts-dashboard-in-axi-select"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.axi.com/int/legal-documentation",
+            "https://www.axi.com/int/funded-trader-program"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.axi.com/int/funded-trader-program",
+            "https://help.axi.com/fr-FR/axiv2--axicorp-prod/article/3CQZX-Fz-questce-quun-compte-dallocation-axi-select-"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "funded-trading-plus",
+      "candidateScore": 62,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.fundedtradingplus.com/",
+            "https://www.trustpilot.com/review/fundedtradingplus.com"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://help.fundedtradingplus.com/risk-review-policy/",
+            "https://help.fundedtradingplus.com/how-do-i-demonstrate-good-risk-management/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.fundedtradingplus.com/terms-conditions/",
+            "https://help.fundedtradingplus.com/what-is-funded-trading-plus/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fx2-funding",
+      "candidateScore": 54,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://fx2funding.com/testimonials/",
+            "https://www.trustpilot.com/review/fx2funding.com"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://fx2funding.com/terms-conditions-2/",
+            "https://fx2funding.com/terms-and-conditions/",
+            "https://fx2funding.com/faqs/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://fx2funding.com/about-us/",
+            "https://fx2funding.com/terms-and-conditions/",
+            "https://fx2funding.com/faqs/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "leeloo-trading",
+      "candidateScore": 55,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://payouttrail.com/firms/leeloo-trading"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.leelootrading.com/terms-conditions",
+            "https://www.leelootrading.com/beginner"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.leelootrading.com/terms-conditions",
+            "https://www.leelootrading.com/support"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lux-trading-firm",
+      "candidateScore": 64,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.trustpilot.com/review/luxtradingfirm.com",
+            "https://propfirmrules.co.uk/firm/lux"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/rules-of-engagement-3/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://luxtradingfirm.com/t_c-2/",
+            "https://luxtradingfirm.com/rules-of-engagement-3/",
+            "https://luxtradingfirm.com/78534-2/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "maven-trading",
+      "candidateScore": 56,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://maventrading.com/about",
+            "https://maventrading.com/reviews",
+            "https://maventrading.com/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://maventrading.com/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://web.khda.gov.ae/en/education-directory/Training/Training-Details?CenterID=506634",
+            "https://maventrading.com/about"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rebelsfunding",
+      "candidateScore": 62,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.rebelsfunding.com/",
+            "https://www.rebelsfunding.com/mariana-v-funded-trader-interview-5000-payout/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://www.rebelsfunding.com/all-the-rules/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://my.rebelsfunding.com/faq/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "thinkcapital",
+      "candidateScore": 53,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://www.payouttrail.com/firms/thinkcapital",
+            "https://www.payouttrail.com/methodology",
+            "https://www.thinkcapital.com/thinkcapital-reviews/"
+          ]
+        },
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.thinkcapital.com/terms-of-services/",
+            "https://www.thinkcapital.com/tc-faqs/general-faqs/what-are-thinkcapitals-guidelines-regarding-gambling-or-reckless-trading-behavior-on-the-platform/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.thinkcapital.com/terms-of-services/",
+            "https://www.thinkcapital.com/tc-faqs/general-faqs/what-are-thinkcapitals-guidelines-regarding-gambling-or-reckless-trading-behavior-on-the-platform/",
+            "https://www.thinkcapital.com/tc-faqs/general-faqs/guidelines-regarding-trading-strategies-contrary-to-thinkcapitals-terms-of-use-policy/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "top-one-trader",
+      "candidateScore": 56,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.toponetrader.com/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.toponetrader.com/terms-and-conditions",
+            "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.toponetrader.com/en/articles/10912482-comparison-of-account-types",
+            "https://help.toponetrader.com/en/articles/8519504-how-do-i-get-my-refund-after-passing-a-challenge",
+            "https://www.toponetrader.com/terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "alpha-futures",
+      "candidateScore": 62,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://alpha-futures.com/terms-and-conditions"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://alpha-futures.com/terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "blusky-trading",
+      "candidateScore": 75,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12109372-blusky-risk-team-reviews",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "D3",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+            "https://blusky.pro/terms-and-conditions/"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "breakout-prop",
+      "candidateScore": 70,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "B1",
+          "issue": "Broad or arbitrary contractual withholding of rewards; verify current terms",
+          "sources": [
+            "https://www.breakoutprop.com/funded-trader-agreement/"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.breakoutprop.com/funded-trader-agreement/",
+            "https://intercom.help/breakoutprop/en/articles/11647201-what-trading-practices-are-prohibited-in-my-funded-account"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "take-profit-trader",
+      "candidateScore": 64,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.trustpilot.com/review/takeprofittrader.com",
+            "https://takeprofittrader.com/"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "B1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://takeprofittrader.com/terms",
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sway-funded",
+      "candidateScore": 56,
+      "flags": [
+        {
+          "priority": "critical",
+          "criterion": "A3",
+          "issue": "No sufficiently independent payout evidence; V5.2 ceiling 64",
+          "sources": [
+            "https://www.swayfunded.com/",
+            "https://www.trustpilot.com/review/swayfunded.com"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "blueberry-funded",
+      "candidateScore": 54,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://traderpayout.com/payouts",
+            "https://payouttrail.com/trusted"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "A1",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.blueberryfunded.com/en/articles/10622848-how-to-request-a-payout-from-your-earnings-account",
+            "https://help.blueberryfunded.com/en/articles/16390565-why-can-t-i-request-a-payout"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://blueberryfunded.com/about/",
+            "https://help.blueberryfunded.com/en/articles/17139695-about-blueberry-funded"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hyrotrader",
+      "candidateScore": 67,
+      "flags": [
+        {
+          "priority": "high",
+          "criterion": "A3",
+          "issue": "Partial payout evidence; V5.2 ceiling 69",
+          "sources": [
+            "https://www.hyrotrader.com/transparency/",
+            "https://solscan.io/tx/2tWys9oPrvR2uDXEo4iSBRPraLY274Nr8pKxbfCR3DrhYDnEZCmb18DYTJhZLMJwhWxSSbYDt3LFdvwCYViuwNAw"
+          ]
+        },
+        {
+          "priority": "high",
+          "criterion": "B2",
+          "issue": "Verify every rule is current and phase-specific, with no double counting B1",
+          "sources": [
+            "https://www.hyrotrader.com/terms-and-conditions/",
+            "https://www.hyrotrader.com/trading-rules/index.html.md"
+          ]
+        },
+        {
+          "priority": "medium",
+          "criterion": "E2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://www.hyrotrader.com/terms-and-conditions/",
+            "https://www.trustpilot.com/review/hyrotrader.com"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "funding-pips",
+      "candidateScore": 68,
+      "flags": [
+        {
+          "priority": "medium",
+          "criterion": "C2",
+          "issue": "Existing audit text explicitly identifies a verification gap",
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/48368490585105-Compare-Account-Models"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fxify",
+      "candidateScore": 79,
+      "flags": []
+    }
+  ]
+}
