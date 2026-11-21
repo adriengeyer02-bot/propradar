@@ -15,11 +15,13 @@ const expected = {
   'goat-funded-trader': { before:59, blocks:{A:22,B:13,C:14,D:12,E:8}, editorial:71, rules:2, trustpilot:6, final:63 },
   'apex-trader-funding': { before:57, blocks:{A:17,B:8,C:14,D:14,E:8}, editorial:63, rules:2, trustpilot:0, final:61 },
   'rebelsfunding': { before:59, blocks:{A:15,B:16,C:11,D:18,E:7}, editorial:69, rules:2, trustpilot:0, final:67 },
+  'ic-funded': { before:58, blocks:{A:15,B:13,C:14,D:14,E:6}, editorial:64, rules:2, trustpilot:0, final:62 },
+  'the-concept-trading': { before:60, blocks:{A:15,B:16,C:17,D:10,E:9}, editorial:69, rules:2, trustpilot:0, final:67 },
 };
 assert.equal(proposals.version,5);
 assert.equal(proposals.batch,'C03-priority');
 assert.equal(proposals.checkedOn,'2026-11-21');
-assert.equal(proposals.firms.length,3);
+assert.equal(proposals.firms.length,5);
 const seen=new Set();
 for (const f of proposals.firms) {
   assert.ok(c03.has(f.slug), f.slug + ' not in canonical C03 122-firm roster');
@@ -51,5 +53,5 @@ for (const f of proposals.firms) {
   assert.equal(f.criteria.B2.negativeFactIds[0],f.ruleDeductions[0].factId);
   console.log(f.slug+': '+w.before+' → '+s.final+'; editorial '+s.editorialGross+' − rules '+s.rulesPenalty+' − Trustpilot '+s.trustpilotPenalty);
 }
-assert.equal(seen.size,3);
-console.log('C03 V5 priority: 3 proposed scorecards, 39 sourced criteria, no public publication');
+assert.equal(seen.size,5);
+console.log('C03 V5 priority: 5 proposed scorecards, 65 sourced criteria, no public publication');
