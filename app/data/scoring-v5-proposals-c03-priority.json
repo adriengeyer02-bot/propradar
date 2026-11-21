@@ -1,0 +1,409 @@
+{
+  "version": 5,
+  "batch": "C03-priority",
+  "checkedOn": "2026-11-21",
+  "publication": "Three source-backed V5 proposals on the canonical 122-firm queue; no owner approval and no publication of public scores",
+  "firms": [
+    {
+      "slug": "goat-funded-trader",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 59,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "La FAQ donne les fenêtres et délais de retrait selon formule, une demande du solde entier dans le dashboard, le traitement annoncé en deux jours ouvrés, les plafonds par rail et plafonds des premières récompenses. Impossible de consolider split, minimum et frais exacts pour toutes les formules en une règle opposable : sous-bloc 2 non acquis.",
+          "sources": [
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+            "https://help.goatfundedtrader.com/en/articles/9549359-all-about-rewards-and-profit-splits"
+          ]
+        },
+        "A2": {
+          "points": 9,
+          "reason": "Le suivi externe des transferts Rise/Arbitrum indique une traçabilité depuis le 28 novembre 2024 et des mouvements jusqu'en novembre 2026 : deux dates séparées de plus de six mois et plus de douze mois observés, mais pas encore 24 mois au 21 novembre. Le suivi ne prouve pas que chaque demande a été honorée ni les délais réels.",
+          "sources": [
+            "https://www.propfirmloop.com/payout-tracker/goat-funded-trader/",
+            "https://payoutjunction.com/alltime"
+          ]
+        },
+        "A3": {
+          "points": 5,
+          "reason": "Historique de règlements on-chain reliés publiquement à la firme pendant plus de douze mois et référencés par un observateur tiers ; ne couvre pas nécessairement les transferts bancaires et ne certifie pas chaque bénéficiaire.",
+          "sources": [
+            "https://www.propfirmloop.com/payout-tracker/goat-funded-trader/",
+            "https://payoutjunction.com/methodology"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "§8.1 des CGU générales refuse toute garantie de récompense monétaire et §11.4 permet une rupture unilatérale du lien avec éventuel remboursement des frais. Le Trader Agreement, signé seulement à la première demande de payout, n'a pas été obtenu pour établir les recours et la protection des gains acquis ; retenue potentielle large documentée, sans affirmer un refus abusif de paiement.",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "−2 une seule fois pour la qualification discrétionnaire de stratégies ou multi-comptes permis selon la seule appréciation de la firme aux §§4.4–4.6. Le mécanisme général de rémunération §8.1 est imputé en B1 ; les jours, plafonds et minimums de conservation clairement expliqués n'ajoutent pas de malus.",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades"
+          ],
+          "negativeFactIds": [
+            "goat-trading-strategy-subjective-4-4"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Wishes Tower International Limited BRN 76428795 est nommée dans les CGU et figure dans la liste officielle des sociétés enregistrées à Hong Kong en avril 2024. Le dernier checkout et le Trader Agreement signé au premier payout n'ont pas été comparés ; rôle d'une ancienne entité Saint-Lucie présente dans une politique de remboursement à reconstituer.",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://www.cr.gov.hk/docs/wrpt/RNC063_2024.04.08-2024.04.14.pdf",
+            "https://www.goatfundedtrader.com/refund-policy"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "La liste officielle de Hong Kong confirme la création de Wishes Tower International Limited en avril 2024, mais ne démontre pas le statut administratif ACTUEL de la société au 21 novembre 2026 ; extrait de situation récent non obtenu.",
+          "sources": [
+            "https://www.cr.gov.hk/docs/wrpt/RNC063_2024.04.08-2024.04.14.pdf",
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche ciblée par marque, domaine et dénomination juridique auprès des listes publiques accessibles sans mise en garde directement attribuable à ce programme identifiée ; ne pas inférer un agrément de courtage d'une immatriculation.",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les tailles/prix des offres, pertes/objectifs et sanctions, politiques de retrait par méthode et les contrôles KYC et pays sont documentés dans le catalogue, le centre d'aide et les CGU, par familles de produits.",
+          "sources": [
+            "https://www.goatfundedtrader.com/model",
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Conditions générales publiquement accessibles (+2), mais la page consultée comporte des indications de version et dates qui ne permettent pas de certifier la version effectivement signée au payout (0) ; §1.3 et §8.1 laissent une modification discrétionnaire sans protection d'anciens comptes suffisamment décrite (0).",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les CGU expliquent la simulation et nomment une société commerciale (+2). Concordance des promesses de délai garanti avec les CGU sans garantie monétaire et l'accord individuel du premier retrait non établie (+0) ; panier final non vérifié (+0).",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Le service annonce des conditions effectives dès juin 2023 et un suivi de clientèle/publications historiques antérieur à novembre 2023 ; activité de programme >36 mois au 21 novembre 2026, distincte de la création en avril 2024 de la société HK actuelle.",
+          "sources": [
+            "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+            "https://www.goatfundedtrader.com/how-it-works"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support accessible et réponses publiques identifiables sur Trustpilot (+2) ; procédure de contestation des décisions du Risk Team et exemple de recours technique hors payout résolu non vérifiés de manière indépendante (+0).",
+          "sources": [
+            "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+            "https://www.trustpilot.com/review/goatfundedtrader.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "goat-trading-strategy-subjective-4-4",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "GOAT Funded Trader · évaluations et accès funded",
+          "phase": "Qualification et maintien du compte",
+          "clause": "CGU §§4.4–4.6 : qualification de stratégies, d'arbitrages inter-comptes et du profil de risque à la seule appréciation de la firme.",
+          "consequence": "Une activité respectant les limites chiffrées peut être jugée interdite, avec exclusion du programme et refus d'accès au funded.",
+          "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "apex-trader-funding",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 57,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Performance Account EOD : demande après cinq jours distincts atteignant le bénéfice minimum quotidien, répartition annoncée à 100 %, tableau des caps et seuils, procédure de retrait sur interface et limites de six versements. Les frais complets par rail et conditions après passage Live n'ont pas été consolidés : élément 'split+minimum+frais' non acquis.",
+          "sources": [
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Aucune série de paiements indépendamment rapprochés du débiteur et des bénéficiaires sur douze mois n'a été établie ; les plaintes existantes ne prouvent pas à elles seules deux refus injustifiés corroborés, palier neutre V5.",
+          "sources": [
+            "https://www.trustpilot.com/review/apextraderfunding.com",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Montants cumulés affichés par l'opérateur et témoignages d'utilisateurs, mais pas de flux bancaires ou on-chain attribuables indépendamment au programme et à son débiteur à l'échelle de la firme dans le corpus contrôlé.",
+          "sources": [
+            "https://www.trustpilot.com/review/apextraderfunding.com",
+            "https://apextraderfunding.com/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "User Agreement section Rewards : les distributions ne sont pas des dettes ni des droits opposables ; la société affirme n'avoir aucune obligation contractuelle de verser une récompense, et peut refuser/réduire/révoquer pour tout motif, avec décision finale sans recours ordinaire (§ Rewards, lignes 211–217). Correspond exactement au palier B1=0 ; ne pas retraiter cette même discrétion en B2.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Une ambiguïté distincte de la rémunération générale : section Professional Traders permet de qualifier une stratégie de trop sophistiquée ou un client d'excessivement expérimenté sans seuil déterminant, et de fermer un compte, même si les objectifs chiffrés sont respectés. −2 uniquement, les règles EOD et Intraday distinctes ne sont pas une contradiction.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+          ],
+          "negativeFactIds": [
+            "apex-professional-proficiency-subjective-program-15"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Apex Trader Funding Inc est nommée dans le User Agreement et dans sa documentation fiscale (adresse Austin, EIN). Les registres et pièces publiques identifient cette partie ; concordance du dernier écran du panier de chacune des variantes et contrat Live distinct non vérifiée.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/helpful-items/1099-forms-and-tax-information/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Les documents fiscaux identifient la société texane et une immatriculation historique est rapportée, mais l'extrait officiel du statut administratif Texas courant et ses formalités 2026 n'ont pas pu être obtenus. Pas de radiation ni de dissolution présumée.",
+          "sources": [
+            "https://apextraderfunding.com/help-center/helpful-items/1099-forms-and-tax-information/",
+            "https://apextraderfunding.com/terms-of-use/"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche d'avertissements officiels ciblée sur Apex Trader Funding Inc et son domaine sans sanction réglementaire grave actuelle directement reliée au programme simulé confirmée. Les plaintes privées, même graves, ne sont pas des décisions officielles.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/index.htm"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Prix/abonnements, objectifs, pertes et règles de chaque évaluation et PA, sanctions et plafonds de retraits EOD/Intraday, critères d'inscription et vérification d'identité publiés par Apex. Les produits Legacy antérieurs au changement de 2026 sont traités à part.",
+          "sources": [
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+            "https://apextraderfunding.com/help-center/helpful-items/status-updates/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Accord utilisateur public et opposable accessible (+2). Sa date d'effet est variable selon l'acceptation du compte et aucune date de version statique auditée n'est donnée (+0). Les listes d'activités interdites et les règles peuvent changer sans préavis, sans disposition générale attestant la protection des comptes achetés (+0).",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Les pages de PA EOD et Intraday sont distinguées et les CGU définissent la nature simulée et le passage éventuel à un contrat Live séparé (+2+2). Dernier écran de paiement et version individuelle acceptée non rapprochés (+0).",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Apex propose des évaluations de traders depuis au moins 2021, activité supérieure à trois ans documentée par son historique public et celui de l'entreprise, sans confondre création et continuité contractuelle.",
+          "sources": [
+            "https://apextraderfunding.com/terms-of-use/",
+            "https://apextraderfunding.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Centre d'aide et support identifiables (+1), réponses et mises à jour de support accessibles (+1), mais mécanisme de recours EFFECTIF sur récompenses non garanti par l'accord et dossier hors-payout résolu non établi (+0+0).",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "apex-professional-proficiency-subjective-program-15",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "Apex Trader Funding · Evaluation/Performance Account (programme simulé)",
+          "phase": "Maintien d'accès et graduation",
+          "clause": "User Agreement §15 : l'entreprise peut considérer un trader trop expérimenté/professionnel à partir de critères non exhaustifs et fermer les comptes.",
+          "consequence": "Compte et éligibilité au programme peuvent être supprimés selon la qualification d'une sophistication jugée incompatible avec l'objectif éducatif ; les récompenses demeurent cotées seulement en B1.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "rebelsfunding",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 59,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "RCF : première demande au moins 14 jours calendaires après le premier trade, traitement de la Cash Portion approuvée dans les 14 jours après la plus tardive des validations KYC/tax et décision d'approbation (+2) ; jours et risque par formule (+2) ; étapes de demande et paiement (+2). Les frais/splits exhaustifs par rail et l'absence ou présence de caps d'ensemble ne sont pas réunis pour toutes les formules (+0+0).",
+          "sources": [
+            "https://my.rebelsfunding.com/faq/",
+            "https://www.rebelsfunding.com/all-the-rules/"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Absence d'une série indépendante de paiements traçables permettant le palier 9/10 et absence de série de refus injustifiés vérifiés selon les seuils stricts V5. Les 3 millions USD revendiqués dans le marketing ne prouvent ni paiements complets ni dysfonctionnement.",
+          "sources": [
+            "https://www.rebelsfunding.com/",
+            "https://my.rebelsfunding.com/faq/",
+            "https://www.trustpilot.com/review/rebelsfunding.com"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Témoignages d'utilisateurs et chiffre de paiements publiés principalement par la firme ; pas d'échantillon externe vérifiant nom du payeur, preuve bancaire et bénéficiaire sur plusieurs mois.",
+          "sources": [
+            "https://www.rebelsfunding.com/",
+            "https://www.rebelsfunding.com/mariana-v-funded-trader-interview-5000-payout/"
+          ]
+        },
+        "B1": {
+          "points": 8,
+          "reason": "Les CGU de l'évaluation promettent seulement une candidature potentielle au programme RCF. Les droits à rémunération relèvent d'un contrat RCF tripartite RIFM/FRCSM/trader, distinct de l'achat de l'évaluation, dont le texte intégral signé n'a pas été recoupé ; aucune protection maximale ni confiscation arbitraire concrète n'est présumée. Palier provisoire non vérifiable.",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://my.rebelsfunding.com/faq/"
+          ]
+        },
+        "B2": {
+          "points": 8,
+          "reason": "Une clause ouverte de trading excessif/« gambling » dans les règles d'évaluation peut mener à un arrêt du programme sans seuil exhaustif (§7 et Program Rules), pénalité −2. Les jours, durée minimale, news et limite chiffrée de risque en phase RCF sont explicités : aucune autre retenue automatique ; l'accès RCF non garanti relève de B1/conditions, non du même retrait B2.",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://www.rebelsfunding.com/all-the-rules/"
+          ],
+          "negativeFactIds": [
+            "rebels-open-ended-market-risk-practices-7"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "RIFM s.r.o. est nommée avec identifiant slovaque 48 116 700 ; FRCSM s.r.o. est citée comme partie distincte du futur contrat RCF. Les pièces de situation du registre officiel actuel, les numéros de la partie RCF et l'accord signé n'ont pas été rapprochés : C1=4, pas 7/10 sur une seule auto-déclaration.",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://my.rebelsfunding.com/faq/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "L'immatriculation et l'adresse slovaques sont déclarées et recoupées dans plusieurs documents officiels du site, mais aucun extrait indépendant du registre des entreprises au 21/11/2026 n'a été obtenu pour confirmer le statut actuel de chaque partie RCF.",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://www.rebelsfunding.com/data-protection/"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Contrôle ciblé d'avertissements par marque/domaine/nom RIFM sans constat réglementaire matériel directement attribué au service simulé ; absence d'agrément de courtage ne constitue pas en soi une infraction pour les comptes simulés.",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Program Rules 3.2 et FAQ 17 novembre détaillent les prix, variantes, objectifs, drawdowns, taille et restrictions par phase ainsi que procédures RCF, KYC et zones d'éligibilité. La distinction entre Evaluation et RCF évite les mélanges de règles.",
+          "sources": [
+            "https://www.rebelsfunding.com/all-the-rules/",
+            "https://my.rebelsfunding.com/faq/",
+            "https://www.rebelsfunding.com/know-your-customer/"
+          ]
+        },
+        "D2": {
+          "points": 6,
+          "reason": "CGU librement disponibles (+2), version datée du 11 novembre 2026 pour les nouveaux contrats (+2), application des amendements aux contrats existants limitée par le droit applicable et le contrat séparé RCF (+2). L'ancien document d'août ne doit pas être considéré comme version actuelle pour de nouveaux achats.",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://lb.rebelsfunding.com/terms-and-conditions/"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Les textes de novembre alignent une simulation d'évaluation sans entitlement automatique et un contrat tripartite RCF distinct (+2 cohérence et +2 explication). Le dernier panier et le contrat personnalisé n'ont pas été inspectés (+0).",
+          "sources": [
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://www.rebelsfunding.com/all-the-rules/",
+            "https://my.rebelsfunding.com/faq/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le site annonce lancement en 2023 sans mois exact prouvé : au 21 novembre 2026, on ne peut attester strictement 36 mois révolus à partir de cette seule année ; palier conservateur 18–35 mois jusqu'à preuve d'une date précise.",
+          "sources": [
+            "https://www.rebelsfunding.com/"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Email/contact officiel (+1), interactions de support documentées (+1) et procédure de contestation/consommateur dans les CGU (+1), sans preuve indépendante de résolution d'un litige hors payout (+0).",
+          "sources": [
+            "https://www.rebelsfunding.com/contact/",
+            "https://www.rebelsfunding.com/terms-and-conditions/",
+            "https://www.trustpilot.com/review/rebelsfunding.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "rebels-open-ended-market-risk-practices-7",
+          "kind": "ambiguite",
+          "points": 2,
+          "program": "RebelsFunding · évaluation RF",
+          "phase": "Evaluation simulée, pas automatiquement comptes RCF",
+          "clause": "CGU §7 et Program Rules : comportement de risque jugé excessif ou apparenté au jeu, en complément d'exemples de risques chiffrés.",
+          "consequence": "Évaluation susceptible d'échouer ou compte clôturé sur une interprétation qualitative non entièrement délimitée ; le contrat RCF devra être examiné séparément.",
+          "source": "https://www.rebelsfunding.com/terms-and-conditions/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ]
+}
