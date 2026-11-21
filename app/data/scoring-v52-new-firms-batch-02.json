@@ -1,0 +1,1536 @@
+{
+  "version": "5.2",
+  "date": "2026-11-21",
+  "status": "BATCH_02_UNSCORED_EVIDENCE_INVENTORY",
+  "count": 20,
+  "note": "20 previously unscored firms extracted directly from site data. These are not completed audits; existing site claims are not proof and legacy scores must not be converted without 13 sourced criteria.",
+  "audits": [
+    {
+      "slug": "ftmo",
+      "name": "FTMO",
+      "status": "Active",
+      "legacyScore": 91,
+      "auditStatus": "Vérifié multi-source",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official FTMO sources and Trustpilot page checked: track record, public rules and review volume are coherent. Still monitor individual disputes linked to rules, KYC and execution.",
+      "officialLinksFromSite": [
+        "https://ftmo.com/en/terms-and-conditions/",
+        "https://ftmo.com/",
+        "https://ftmo.com/faq/can-i-trade-news/",
+        "https://ftmo.com/en/trading-objectives/",
+        "https://ftmo.com/en/faq/"
+      ],
+      "programNames": [
+        "FTMO Challenge",
+        "High Stakes",
+        "Evaluation"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "the5ers",
+      "name": "The5ers",
+      "status": "Active",
+      "legacyScore": 85,
+      "auditStatus": "Vérifié multi-source",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official The5ers sources and Trustpilot page checked. High Stakes and the current Futures program must be separated: the Futures page advertises news trading as allowed and applies a per-position consistency rule.",
+      "officialLinksFromSite": [
+        "https://the5ers.com/terms-conditions/",
+        "https://the5ers.com/",
+        "https://www.the5ers.com/futures/",
+        "https://the5ers.com/programs/"
+      ],
+      "programNames": [
+        "High Stakes",
+        "Evaluation",
+        "Trading Combine"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "fundednext",
+      "name": "FundedNext",
+      "status": "Active",
+      "legacyScore": 79,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official sources and Trustpilot page checked. Review volume is very high, but the low response rate to negative reviews and heavy discount logic require a careful reading.",
+      "officialLinksFromSite": [
+        "https://fundednext.com/",
+        "https://help.fundednext.com/"
+      ],
+      "programNames": [
+        "Evaluation",
+        "Trading Combine",
+        "EOD Evaluation Account",
+        "Intraday Trailing Evaluation Account"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "topstep",
+      "name": "Topstep",
+      "status": "Active",
+      "legacyScore": 84,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official rules rechecked July 15, 2026. Official Topstep rules checked 2026-11-21: Trading Combine uses a 55% Consistency Target (best day versus profit target); Express Funded Account Consistency requires 3 trading days and a 40% objective for payout eligibility; XFA Standard requires five $150+ winning days, with no 40% consistency objective. Sources: https://help.topstep.com/en/articles/8284208-consistency-at-topstep and https://help.topstep.com/en/articles/8284233-topstep-payout-policy. Payout eligibility, caps and split can also depend on ",
+      "officialLinksFromSite": [
+        "https://www.topstep.com/",
+        "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+        "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "https://www.topstep.com/risk-disclosure/",
+        "https://www.topstep.com/terms-of-use/",
+        "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
+        "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+        "https://help.topstep.com/"
+      ],
+      "programNames": [
+        "Trading Combine",
+        "EOD Evaluation Account",
+        "Intraday Trailing Evaluation Account",
+        "Stock Trading Program"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "trade-the-pool",
+      "name": "Trade The Pool",
+      "status": "Active",
+      "legacyScore": 76,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official Terms and Program Terms checked. Trade The Pool is operated by Five Percent Online Ltd in Israel and describes the evaluation as simulated trading with fictitious funds. The terms add KYC/AML checks, forbidden territories, video-interview discretion, no guaranteed funded acceptance and Israeli/Tel Aviv dispute jurisdiction. Exact-name article/news searches did not surface reliable mainstream financial press for this brand in this pass.",
+      "officialLinksFromSite": [
+        "https://tradethepool.com/",
+        "https://tradethepool.com/terms-and-conditions/",
+        "https://tradethepool.com/program-terms/"
+      ],
+      "programNames": [
+        "Stock Trading Program",
+        "E8 Challenge",
+        "Evaluation",
+        "Maven Challenge"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "e8-markets",
+      "name": "E8 Markets",
+      "status": "Active",
+      "legacyScore": 75,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official Terms version 2026.3 (5 November 2026) names MAVEN EDU - FZCO as the contracting operator in Dubai (trade licence 60823), independently cross-referenced in the Dubai KHDA business directory. Accounts are simulated, without customer deposits or brokerage. Sections 6.4 and 6.6 preserve mandatory consumer rights and legitimate payment disputes. Older legal materials referred to MAVEN LLC: account holders under historic contracts should confirm which entity remains liable. A separate signed agreement, trade licence register extract, and in",
+      "officialLinksFromSite": [
+        "https://e8markets.com/",
+        "https://e8markets.com/terms-and-conditions/",
+        "https://help.e8markets.com/"
+      ],
+      "programNames": [
+        "E8 Challenge",
+        "Evaluation",
+        "Maven Challenge",
+        "Alpha Pro Evaluation"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "aqua-funded",
+      "name": "AquaFunded",
+      "status": "À surveiller",
+      "legacyScore": 69,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official site and legal Terms checked. AquaFunded discloses Aqua Funded FZCO in Dubai Silicon Oasis / DDP, Dubai, and frames its products as simulated trading evaluation plans, not investments. Terms include DIAC arbitration in Dubai, class-action waiver language, prohibited-trading review before funded access, demo-capital account wording and strong discretion to deny withdrawals or terminate accounts for risk-management concerns.",
+      "officialLinksFromSite": [
+        "https://www.aquafunded.com/",
+        "https://www.aquafunded.com/legal/terms-and-conditions"
+      ],
+      "programNames": [
+        "Instant Funding / Challenges",
+        "GOAT Challenges / Instant",
+        "BrightFunded Evaluation",
+        "Instant Funding Account"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "brightfunded",
+      "name": "BrightFunded",
+      "status": "Active",
+      "legacyScore": 73,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official homepage, Terms, consistency and news-rule help pages checked. BrightFunded states that evaluation-stage news trading is allowed, while funded accounts restrict execution from five minutes before to five minutes after selected events. The official help center currently states that BrightFunded does not enforce a consistency rule.",
+      "officialLinksFromSite": [
+        "https://brightfunded.com/",
+        "https://brightfunded.com/terms-conditions",
+        "https://help.brightfunded.com/en/articles/12577176-does-brightfunded-have-a-consistency-rule",
+        "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news"
+      ],
+      "programNames": [
+        "BrightFunded Evaluation",
+        "Instant Funding Account",
+        "Funded Trading Plus Programs",
+        "Blue Guardian Programs"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "instant-funding",
+      "name": "Instant Funding",
+      "status": "Active",
+      "legacyScore": 76,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-15",
+      "summary": "Official Program Terms checked. Funded Trading Plus is the trading name of Acello Ltd, England and Wales company number 12696083. Terms state FTP is not FCA-authorised or regulated because it is not providing regulated products/services, and that programs are simulated trading accounts with simulated funds and no real-market trades. Refund and payout eligibility are tightly tied to first simulated trade, cancellation-period rules and FTP risk review.",
+      "officialLinksFromSite": [
+        "https://instantfunding.com/",
+        "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf"
+      ],
+      "programNames": [
+        "Instant Funding Account",
+        "Funded Trading Plus Programs",
+        "Blue Guardian Programs",
+        "Fintokei Programs"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "blue-guardian",
+      "name": "Blue Guardian",
+      "status": "À surveiller",
+      "legacyScore": 66,
+      "auditStatus": "Vérifié multi-source",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Official 2026 privacy and provider-program documents, support pages, a Czech registry-derived company profile and Czech business-press coverage checked. The documents identify Fintokei a.s. and clearly describe simulated trading, but Fintokei\\",
+      "officialLinksFromSite": [
+        "https://blueguardian.com/",
+        "https://blueguardian.com/terms-and-conditions/",
+        "https://checkout.blueguardian.com/",
+        "https://blueguardian.com/payouts/"
+      ],
+      "programNames": [
+        "Blue Guardian Programs",
+        "Fintokei Programs",
+        "Funded Trader Programs"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "fintokei",
+      "name": "Fintokei",
+      "status": "Active",
+      "legacyScore": 77,
+      "auditStatus": "Vérifié multi-source",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Official 2026 privacy and provider-program documents, support pages, a Czech registry-derived company profile and Czech business-press coverage checked. The documents identify Fintokei a.s. and clearly describe simulated trading, but Fintokei\\",
+      "officialLinksFromSite": [
+        "https://www.fintokei.com/",
+        "https://www.fintokei.com/wp-content/uploads/2026/06/05_2026_Privacy-Policy_EN_V5.pdf",
+        "https://www.fintokei.com/downloads/Fintokei_provider_program_TaC_ProTrader_FPP.pdf",
+        "https://support.fintokei.com/en/collections/3622196-about-fintokei"
+      ],
+      "programNames": [
+        "Fintokei Programs",
+        "Funded Trader Programs",
+        "CTI 1-Step Challenge",
+        "CTI 2-Step Challenge",
+        "CTI Instant Funding",
+        "CTI Instant Funding Pro"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "audacity-capital",
+      "name": "Audacity Capital",
+      "status": "Active",
+      "legacyScore": 79,
+      "auditStatus": "Vérifié multi-source",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Official legal disclosures, rules/help pages and industry-press coverage checked. Audacity Capital discloses a Dubai payment facilitator, a Comoros trading operator, a UK office and a Cyprus payment partner. Finance Magnates also documented a temporary pause in new US registrations in February 2024 during the MetaQuotes disruption. That report is historical and does not prove a current restriction, so present eligibility must still be confirmed.",
+      "officialLinksFromSite": [
+        "https://audacity.capital/",
+        "https://www.audacity.capital/terms-and-conditions/",
+        "https://audacity.capital/press-media/",
+        "https://help.audacity.capital/hc/en-gb/articles/31929047154834-What-are-the-prohibited-strategies"
+      ],
+      "programNames": [
+        "Funded Trader Programs",
+        "CTI 1-Step Challenge",
+        "CTI 2-Step Challenge",
+        "CTI Instant Funding",
+        "CTI Instant Funding Pro"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "pipfarm",
+      "name": "PipFarm",
+      "status": "À surveiller",
+      "legacyScore": 72,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": null,
+      "summary": "Limited source and press pass completed. The official PipFarm domain and likely Terms URL were reachable only with little or no usable text in this environment. Exact-name article/news searches did not surface reliable mainstream or financial-press coverage for the prop-firm brand. Entity, jurisdiction, full terms, refund policy and simulated/non-broker wording remain unverified.",
+      "officialLinksFromSite": [
+        "https://pipfarm.com/",
+        "https://pipfarm.com/terms-and-conditions/"
+      ],
+      "programNames": [
+        "PipFarm Programs",
+        "Lark Funding Programs",
+        "Bespoke Programs",
+        "Futures Plans",
+        "TPT Test / PRO"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "lark-funding",
+      "name": "Lark Funding",
+      "status": "À surveiller",
+      "legacyScore": 68,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Limited source and press pass completed. Lark Funding official domain returned only minimal image/page text in this environment, and likely legal URLs did not expose readable terms. Exact-name article/news searches did not surface reliable mainstream or financial-press coverage for the prop-firm brand. Legal entity, jurisdiction, refund rules and simulated/non-broker wording remain unverified.",
+      "officialLinksFromSite": [
+        "https://larkfunding.com/",
+        "https://larkfunding.com/terms-and-conditions/"
+      ],
+      "programNames": [
+        "Lark Funding Programs",
+        "Bespoke Programs",
+        "Futures Plans",
+        "TPT Test / PRO",
+        "Gauntlet / Trader Career Path"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "bespoke-funding-program",
+      "name": "Bespoke Funding Program",
+      "status": "À surveiller",
+      "legacyScore": 61,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Limited-source audit completed. The stored official domain returned no usable page text in this pass, likely legal URLs did not surface, and exact-name article/news searches did not find reliable mainstream or financial-press coverage. PropRadar keeps this as a watchlist archive rather than a buyable recommendation until entity, terms, refund and operating status are confirmed from readable documents.",
+      "officialLinksFromSite": [
+        "https://bespokefundingprogram.com/"
+      ],
+      "programNames": [
+        "Bespoke Programs",
+        "Futures Plans",
+        "TPT Test / PRO",
+        "Gauntlet / Trader Career Path"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "tradeify",
+      "name": "Tradeify",
+      "status": "Active",
+      "legacyScore": 72,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Official site, Terms of Use, Funded Trader Agreement and footer disclosures checked. Tradeify identifies Tradeify Holdings, Corp as the site/services company, discloses a Boca Raton address, presents evaluation and simulated-funded accounts, and states that account funds remain company property and are demo funds unless otherwise stated. The footer also discloses Tradeify Brokerage LLC d/b/a Slay Markets as a CFTC-registered introducing broker and NFA member, which should be separated from ordinary Tradeify evaluation/sim-funded accounts.",
+      "officialLinksFromSite": [
+        "https://tradeify.co/",
+        "https://tradeify.co/terms-of-use",
+        "https://tradeify.co/funded-trader-agreement"
+      ],
+      "programNames": [
+        "Futures Plans",
+        "TPT Test / PRO",
+        "Gauntlet / Trader Career Path",
+        "OneUp Evaluation"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "earn2trade",
+      "name": "Earn2Trade",
+      "status": "Active",
+      "legacyScore": 78,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-13",
+      "summary": "Official Terms, partner disclosures and the 6 July 2026 evaluation-rule update checked against independent futures-industry coverage. Earn2Trade removed its explicit ten-day minimum for new purchases, retained a 30% consistency rule and introduced a tiered profit split. Earn2Trade, LLC remains a service/evaluation provider rather than a broker-dealer; funded progression depends on partner entities and the selected program.",
+      "officialLinksFromSite": [
+        "https://www.earn2trade.com/",
+        "https://www.earn2trade.com/terms-and-conditions",
+        "https://www.earn2trade.com/blog/earn2trade-evaluation-rules-profit-split-update/",
+        "https://www.earn2trade.com/partners"
+      ],
+      "programNames": [
+        "Gauntlet / Trader Career Path",
+        "OneUp Evaluation",
+        "Elite Evaluations",
+        "TickTickTrader Accounts"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "elite-trader-funding",
+      "name": "Elite Trader Funding",
+      "status": "À surveiller",
+      "legacyScore": 64,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": null,
+      "summary": "Official site and 2026 Terms of Service checked. Elite Trader Funding identifies Elite Trader Funding LLC, discloses synthetic/non-genuine currency for non-LIVE ELITE accounts, states that ETF is not a broker-dealer, CTA, FCM or CPO, and says it is not regulated by CFTC/NFA rules. Terms also include a discretionary LIVE ELITE transition model and strict refund/chargeback provisions.",
+      "officialLinksFromSite": [
+        "https://elitetraderfunding.app/",
+        "https://elitetraderfunding.app/terms-of-service"
+      ],
+      "programNames": [
+        "Elite Evaluations",
+        "TickTickTrader Accounts",
+        "Leeloo Evaluation",
+        "UProfit Evaluations",
+        "MyFundedFutures Accounts"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "tickticktrader",
+      "name": "TickTickTrader",
+      "status": "À surveiller",
+      "legacyScore": 68,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": null,
+      "summary": "Official site and Terms checked. TickTickTrader discloses TickTickTrader Ltd, Isle of Man address and company registration number 137735C. Terms say all evaluation accounts are paper trading accounts in a simulation environment, and the footer says TickTickTrader exclusively provides simulation accounts for educational purposes. Refund terms are strict and state that subscriptions are final.",
+      "officialLinksFromSite": [
+        "https://tickticktrader.com/",
+        "https://tickticktrader.com/terms-conditions"
+      ],
+      "programNames": [
+        "TickTickTrader Accounts",
+        "Leeloo Evaluation",
+        "UProfit Evaluations",
+        "MyFundedFutures Accounts",
+        "Bulenox Evaluation"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    },
+    {
+      "slug": "myfundedfutures",
+      "name": "MyFundedFutures",
+      "status": "Active",
+      "legacyScore": 73,
+      "auditStatus": "Partiellement vérifié",
+      "sourceReviewDate": "2026-07-19",
+      "summary": "Official site, Terms of Use PDF and Risk Disclosure PDF checked. Bulenox discloses Bulenox LLC with a Wilmington, Delaware address, frames the service as professional development training, states all sales are final/no refunds, and uses CFTC Rule 4.41 simulated-performance language. No broker/FCM or live-account regulatory disclosure was captured in this pass.",
+      "officialLinksFromSite": [
+        "https://myfundedfutures.com/",
+        "https://myfundedfutures.com/terms",
+        "https://help.myfundedfutures.com/"
+      ],
+      "programNames": [
+        "MyFundedFutures Accounts",
+        "Bulenox Evaluation",
+        "Fast Track Futures"
+      ],
+      "criteria": {
+        "A1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "A3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "B2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "C3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "D3": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E1": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        },
+        "E2": {
+          "points": null,
+          "verification": "NOT_ASSESSED_IN_THIS_BATCH"
+        }
+      },
+      "v52Score": null,
+      "reviewStatus": "BASELINE_EXTRACTED_NEEDS_SOURCE_VERIFICATION"
+    }
+  ]
+}
