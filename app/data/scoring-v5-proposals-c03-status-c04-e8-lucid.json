@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "batch": "C03-status-plus-C04-firm-audits",
+  "batch": "C03-status-plus-C04-four-firm-audits",
   "checkedOn": "2026-11-21",
-  "publication": "Two complete C04 V5 proposals and 7 C03 status reviews without competitive score; NONE approved or published.",
+  "publication": "Four complete C04 V5 proposals and seven C03 status reviews without competitive score; NONE approved or published.",
   "firms": [
     {
       "slug": "e8-futures",
@@ -263,6 +263,259 @@
         }
       ],
       "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "blusky-trading",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les demandes sont traitées chaque jour pour les Sim Funded éligibles (+2), les règles de jours/buffer et d'éligibilité par gamme sont publiées (+2), les plafonds par semaine et le plafond de transition cumulée en Live sont précisés (+2), le bouton dashboard et les rails Rise/Gusto avec délais sont expliqués (+2). Les programmes Direct to Funded 50 %→80 %, Instant 80 % et Sim standard 90 % ont des splits connus, mais le triplet seuil net et frais pour tous rails/formules n'est pas exhaustif (+0).",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12292284-sim-funded-payouts",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded"
+          ]
+        },
+        "A2": {
+          "points": 10,
+          "reason": "Un observateur externe recoupe des règlements Rise attribués à BluSky depuis le 14 novembre 2024 jusqu'au contrôle de novembre 2026, soit plus de 24 mois, avec plusieurs dates et une activité récente. Cette série positive ne garantit ni les méthodes hors Rise ni chaque demande ; aucune interruption générale fiable ni grave incident non résolu ne ressort des sources recoupées au seuil V5.",
+          "sources": [
+            "https://propfirmwise.com/payouts/blusky-trading",
+            "https://propfirmpayouts.io/payout-tracker/blusky"
+          ]
+        },
+        "A3": {
+          "points": 5,
+          "reason": "Les mouvements on-chain publiés par des observateurs tiers, transaction par transaction et attribués à la marque BluSky sur une période supérieure à douze mois, constituent une preuve positive indépendante des règlements Rise. Le montant total de la firme et les virements par Gusto ne sont pas automatiquement validés.",
+          "sources": [
+            "https://propfirmwise.com/payouts/blusky-trading",
+            "https://damnpropfirms.com/futures-prop-firms/blusky/payouts/"
+          ]
+        },
+        "B1": {
+          "points": 5,
+          "reason": "Le centre d'aide BluSky indique que des revues Risk Team peuvent survenir pour tout motif, suspendent les payouts et aboutir à une modification du split ou à une fermeture avec décision finale ; le refus du courtier après une invitation Live peut faire perdre l'intégralité des profits Sim. Des retenues ou réductions de récompenses déjà simulées sont possibles sans critères de proportionnalité complets. Une protection contractuelle forte ne peut donc être présumée.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12109372-blusky-risk-team-reviews",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ],
+          "negativeFactIds": [
+            "blusky-risk-team-reviews-split-or-sim-forfeiture"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les seuils de profit quotidiens/hebdomadaires, règles de drawdown, 21 % de consistency Instant, limites de contrats, revue Live, et interdiction de trader pendant une revue sont publiés selon phase. Les décisions sur la rémunération ou l'invitation Live sont imputées à B1, pas une seconde fois à B2. Aucun texte actuel confirmé ne démontre une contradiction sur le MÊME programme ni rétroactivité défavorable effective.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU et la procédure fiscale nomment BLUSKY TRADING COMPANY LLC, opérateur de Floride ; registre Sunbiz sous L22000305297 concordant. Merchant of Record Odeonpay ALE S.R.L en Roumanie est un encaisseur technique et non contractant de simulation. Le checkout individuel et la contrepartie de l'accord live broker n'ont pas été rapprochés : 7, pas 10.",
+          "sources": [
+            "https://blusky.pro/terms-and-conditions/",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&SearchNameOrder=BLUSKYTRADINGGROUP+L220000703680",
+            "https://help.blusky.pro/en/articles/12292284-sim-funded-payouts"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "La Florida Division of Corporations inscrit BLUSKY TRADING COMPANY LLC au statut ACTIVE, dépôt initial 8 juillet 2022, et affiche un annual report déposé le 30 mars 2026. Le statut de la LLC contractante est directement confirmé, sans transposer la licence d'un broker partenaire.",
+          "sources": [
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&SearchNameOrder=BLUSKYTRADINGGROUP+L220000703680"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Aucune alerte d'autorité actuelle précisément attribuable à la société de simulation BluSky Trading Company LLC identifiée après contrôle du nom et du domaine. Les exigences KYC/AML du clearing firm ne sont ni une sanction ni une certification des paiements simulés.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12434004-list-of-countries-we-cannot-offer-services-to-can-i-trade-with-blusky",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Tarifs et phases d'évaluation, objectifs/drawdown, split, jours/consistency, restrictions et sanctions sont documentés par gamme ; conditions d'accès, identité, résidence et restrictions territoriales figurent dans le centre d'aide. Les Direct, Instant, Launch et Orbit possèdent des régimes différents et ne sont pas mélangés.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/12434004-list-of-countries-we-cannot-offer-services-to-can-i-trade-with-blusky"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU en accès public (+2), page modifiée le 1er juillet 2026 et révisions programmatiques du 1er octobre clairement datées (+2). La progression vers Live/Bonus Vault prévoit un maintien spécifique des anciens comptes, mais aucun régime de modification PROTECTEUR universel des rémunérations des clients existants n'est démontré dans le corpus (+0).",
+          "sources": [
+            "https://blusky.pro/terms-and-conditions/",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "FAQ récentes identifient simulation, Buffer, Sim Funded, Bonus Vault, invitation vers Live Brokerage et rôles de leurs partenaires (+2) ; les tableaux de split varient explicitement selon Direct, Instant et Sim standard sans contradiction entre mêmes produits confirmée (+2). Le dernier panier, les frais Rise et le contrat live externe n'ont pas été vérifiés (+0).",
+          "sources": [
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+            "https://blusky.pro/terms-and-conditions/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La LLC est enregistrée depuis juillet 2022, mais l'exploitation de comptes Sim Funded rémunérés comme programme prop n'est démontrée par les règlements vérifiés qu'à partir de novembre 2024. C'est une activité de 18–35 mois, pas 36 mois sur la seule ancienneté de l'immatriculation.",
+          "sources": [
+            "https://propfirmwise.com/payouts/blusky-trading",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&SearchNameOrder=BLUSKYTRADINGGROUP+L220000703680"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support officiel BluSky et Risk Team joignables par ticket/courriel (+1), réponses accessibles dans l'aide et retours clients sur canaux publics (+1), mais les décisions Risk Team sont annoncées comme finales, sans procédure de contestation contradictoire documentée ni cas non-payout résolu indépendamment (+0+0).",
+          "sources": [
+            "https://blusky.pro/contact-us/",
+            "https://help.blusky.pro/en/articles/12109372-blusky-risk-team-reviews",
+            "https://www.trustpilot.com/review/blusky.pro"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "blueberry-funded",
+      "checkedOn": "2026-11-21",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Le support décrit un premier payout à 14 jours, ou 7 avec option d'achat (+2), les jours rentables/conditions d'éligibilité de chaque programme et achat daté (+2), la procédure dashboard, seuil de requête et traitement avec Rise/crypto/broker (+2). La documentation annonce le split standard 80 % et des minimums 100/200 USD ou 1 % Flex, sans frais de règlement complets par rail (+0) ; les caps ou absence explicite de caps sur toutes les variantes ne sont pas vérifiés (+0).",
+          "sources": [
+            "https://help.blueberryfunded.com/en/articles/10622848-how-to-request-a-payout-from-your-earnings-account",
+            "https://help.blueberryfunded.com/en/articles/16390565-why-can-t-i-request-a-payout"
+          ]
+        },
+        "A2": {
+          "points": 8,
+          "reason": "Des avis de traders rapportent paiements et retards contestés ; Trustpilot a supprimé sa note pour violation de ses règles, mais cela n'établit PAS deux refus ou deux retards de plus de 14 jours injustifiés, corroborés individuellement. Les trackers on-chain signalent des transactions de la marque sans historique suffisamment réconcilié avec le vendeur SVG pour relever le palier A2. La pénalité Trustpilot sera appliquée UNE seule fois hors A2.",
+          "sources": [
+            "https://www.trustpilot.com/review/blueberryfunded.com",
+            "https://traderpayout.com/payouts"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "Des bases indépendantes classent Blueberry Funded parmi les firmes avec règlements Rise mesurables ; en revanche, les adresses contrôlées, la durée de couverture et l'attribution juridique au payeur SVG n'ont pas été rapprochées audit-trader. Indice crédible mais validation indépendante complète non achevée : palier provisoire 2, pas 5.",
+          "sources": [
+            "https://traderpayout.com/payouts",
+            "https://payouttrail.com/trusted"
+          ]
+        },
+        "B1": {
+          "points": 8,
+          "reason": "Les CGU 2024 de Blueberry Markets (SVG) LLC §11.6 prévoient le paiement lorsqu'un trader respecte les critères, et §18.5 préserve en principe les droits à paiements acquis même après résiliation sans motif ; cependant §12.3 permet confiscation lors de violation et le Simulated Funded Trader Contract 2026 n'est signé qu'au moment du passage en funded et n'est pas accessible ici. Ne pas transférer les protections du contrat 2024 à une édition funded 2026 non relue : 8 provisoire, pas 15 ni 2.",
+          "sources": [
+            "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf",
+            "https://help.blueberryfunded.com/en/articles/9550914-what-verification-requirements-are-needed-for-rewards"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "La règle de suppression des profits des trades synthétiques tenus moins de 5 minutes ne s'applique qu'aux comptes synthétiques financés achetés depuis le 8 octobre 2026, et est annoncée clairement ; elle ne ferme pas le compte ni ne crée de breach. Sans preuve que les PERTES des mêmes trades sont conservées dans le calcul tandis que les profits sont retirés, aucune pénalité d'asymétrie n'est établie. Les règles 25 % de consistency synthétique et 15 % Instant Lite à partir d'août sont distinctes et publiées ; aucun changement rétroactif prouvé.",
+          "sources": [
+            "https://help.blueberryfunded.com/en/articles/10622848-how-to-request-a-payout-from-your-earnings-account",
+            "https://help.blueberryfunded.com/en/articles/17225549-is-there-a-minimum-hold-time-on-synthetic-trades",
+            "https://help.blueberryfunded.com/en/articles/16390565-why-can-t-i-request-a-payout"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Le site et les CGU nomment Blueberry Markets (SVG) LLC, numéro déclaré 2090 LLC 2022 à Saint-Vincent-et-les-Grenadines. Le fournisseur du compte financé signerait un Simulated Funded Trader Contract distinct, sans extrait officiel du registre SVG ni checkout financier final ; rôle du groupe Blueberry Markets broker distinct de la partie au contrat simulated. Identité déclarée mais rattachement complet non confirmé.",
+          "sources": [
+            "https://blueberryfunded.com/about/",
+            "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf",
+            "https://help.blueberryfunded.com/en/articles/17139695-about-blueberry-funded"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro 2090 LLC 2022 est publié par la firme ; statut à jour de Blueberry Markets (SVG) LLC au registre de Saint-Vincent non vérifié de manière indépendante. L'affiliation au courtier Blueberry Markets n'établit pas le certificat de good standing de la société prop. Aucune radiation officiellement attribuée n'est confirmée.",
+          "sources": [
+            "https://blueberryfunded.com/about/",
+            "https://help.blueberryfunded.com/en/articles/17139695-about-blueberry-funded"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Contrôle daté du nom et des domaines sans avertissement officiel grave visant précisément le service de comptes simulés de Blueberry Markets (SVG) LLC confirmé ; un agrément de courtier d'une société partenaire n'est pas automatiquement reporté à l'opérateur prop.",
+          "sources": [
+            "https://help.blueberryfunded.com/en/articles/17139695-about-blueberry-funded",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Offres actuelles Prime/Flex/Instant/Synthetic publiées avec tarifs, étapes et drawdowns (+2+2), conditions de news, profil de risque, 5 minutes synthétique, days/consistency et sanctions par produit (+2), KYC/2FA et juridictions restreintes (+2). Les programmes d'actions historiques ne sont plus achetables ; régimes anciens explicitement maintenus pour anciens détenteurs.",
+          "sources": [
+            "https://blueberryfunded.com/",
+            "https://help.blueberryfunded.com/en/articles/16390565-why-can-t-i-request-a-payout",
+            "https://help.blueberryfunded.com/en/articles/10622848-how-to-request-a-payout-from-your-earnings-account",
+            "https://help.blueberryfunded.com/en/articles/9550914-what-verification-requirements-are-needed-for-rewards"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les CGU principales version 2024 sont consultables librement (+2), mais la conformité de ce texte avec la convention individuelle funded et les règles d'août/octobre 2026 n'est pas démontrée par une version signée datée (0) ; la protection des achats existants est indiquée par FAQ programme, pas par une hiérarchie contractuelle universelle vérifiée (0).",
+          "sources": [
+            "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf",
+            "https://help.blueberryfunded.com/en/articles/9550914-what-verification-requirements-are-needed-for-rewards",
+            "https://help.blueberryfunded.com/en/articles/9812246-does-blueberry-funded-enforce-a-consistency-rule-in-trading"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La nature purement simulée et l'entité vendeur de Saint-Vincent sont explicités (+2). Le marketing générique prétend éliminer la consistency tandis que les programmes synthétiques et Instant Lite récents en ont une, et la convention funded actuelle n'est pas reproduite avec le contrat général 2024 : cohérence cross-produit non entièrement prouvée (0). Le checkout final n'a pas été inspecté (0).",
+          "sources": [
+            "https://blueberryfunded.com/",
+            "https://help.blueberryfunded.com/en/articles/16390565-why-can-t-i-request-a-payout",
+            "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La prop firm Blueberry Funded dispose de témoignages et de documents de programme datés de 2024 et de conditions 2026, soit entre 18 et 35 mois d'activité vérifiable. L'âge d'une société du groupe Blueberry Markets depuis 2022 ou l'expérience des brokers de l'équipe ne valent pas ancienneté propre de ce challenge.",
+          "sources": [
+            "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf",
+            "https://www.trustpilot.com/review/blueberryfunded.com"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Support officiel courriel avec échanges publics démontrant joignabilité (+1+1), CGU historiques §22 prévoient négociation puis arbitrage et procédures de recours de litige (+1), mais aucun échantillon authentifié de résolution effective d'incident NON lié aux gains et applicable aux contrats actuels n'a été recoupé (+0).",
+          "sources": [
+            "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf",
+            "https://www.trustpilot.com/review/blueberryfunded.com",
+            "https://help.blueberryfunded.com/en/articles/9550914-what-verification-requirements-are-needed-for-rewards"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": true,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
