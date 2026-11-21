@@ -45,15 +45,14 @@
           ]
         },
         "B2": {
-          "points": 6,
-          "reason": "Deux mécanismes différents : §10.1 autorise à rejeter des trades pour valider une évaluation suivant le seul jugement de Lux (−2) ; §15.2–15.4 permet ensuite d'imposer des directives personnalisées avec exclusion possible sans barème homogène vérifiable (−2). Les règles 6 % static et allocations de risque publiées ne coûtent rien.",
+          "points": 8,
+          "reason": "Une seule pénalité −2 : CGU §10.1 autorise le rejet de certains trades lors de la validation d'évaluation ou de scaling selon le seul jugement de Lux, sans seuil objectif exhaustif. Les règles individuelles du Risk Desk (§15.2–15.6) sont notifiées, prévoient trois manquements documentés avant expulsion et ne constituent PAS une seconde pénalité automatique. Les drawdowns et règles de risque clairement publiés coûtent 0.",
           "sources": [
             "https://luxtradingfirm.com/t_c-2/",
             "https://luxtradingfirm.com/rules-of-engagement-3/"
           ],
           "negativeFactIds": [
-            "lux-sole-judgment-trades-10-1",
-            "lux-personalized-risk-rules-15"
+            "lux-sole-judgment-trades-10-1"
           ]
         },
         "C1": {
@@ -134,16 +133,6 @@
           "phase": "Validation de l'évaluation",
           "clause": "CGU §10.1 : Lux peut, à son seul jugement, ne pas retenir certains trades dans le calcul d'accès au palier suivant.",
           "consequence": "Un objectif chiffré atteint peut ne pas suffire pour franchir la phase si certains trades sont exclus sans critère exhaustif.",
-          "source": "https://luxtradingfirm.com/t_c-2/"
-        },
-        {
-          "factId": "lux-personalized-risk-rules-15",
-          "kind": "ambiguite",
-          "points": 2,
-          "program": "Lux Trading Firm · stages Advanced/Professional/Expert/Fund Manager",
-          "phase": "Risque individualisé après progression",
-          "clause": "CGU §15.2–15.4 : règles personnalisées communiquées par le Risk Desk, avec exclusion possible en cas de non-respect, sans grille homogène préalable.",
-          "consequence": "Des limites additionnelles communiquées après l'achat peuvent déterminer le maintien du compte funded.",
           "source": "https://luxtradingfirm.com/t_c-2/"
         }
       ],
