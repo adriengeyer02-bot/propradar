@@ -10404,7 +10404,7 @@ const universePropFirms: PropFirm[] = [
       redFlags: [
         'Official primary domain and legal-terms URL both return Cloudflare HTTP 521 on 2026-11-22.',
         'The 2023 third-party mirror is not verified as a current enforceable contract.',
-        'No concrete legal entity captured.'
+        'No concrete legal entity captured.',
         'Broker/platform-like marketing with non-broker disclaimer.',
         'Reset add-ons can create fee and rule-dispute risk.',
       ],
