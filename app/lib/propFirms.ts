@@ -12369,7 +12369,7 @@ const universePropFirms: PropFirm[] = [
     headquarters: 'Malta',
     priceFrom: 56,
     profitSplit: 90,
-    payoutProof: true,
+    payoutProof: false,
     incidents: 4,
     styles: ['Forex', 'CFD', 'TradeLocker', 'Simulated evaluation'],
     productName: 'Cove Funded Challenges',
@@ -12386,7 +12386,7 @@ const universePropFirms: PropFirm[] = [
     consistencyRule: 'Not clearly captured; full program and add-on rules must be checked before purchase.',
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official site, Terms and Risk Disclosure checked. Cove Funded discloses Collective Holdings Limited with a Malta address. Footer says COVEFUNDED is not a broker, does not accept deposits, provides demo accounts in a simulated trading environment, and its platform/data feed is powered by third-party liquidity providers. Terms are short and include a no-refund policy plus Malta governing law.',
+      'No independently attributable completed payout proof captured in the July 2026 source review; payoutProof is unverified, not evidence of non-payment. Official site, Terms and Risk Disclosure checked. Cove Funded discloses Collective Holdings Limited with a Malta address. Footer says COVEFUNDED is not a broker, does not accept deposits, provides demo accounts in a simulated trading environment, and its platform/data feed is powered by third-party liquidity providers. Terms are short and include a no-refund policy plus Malta governing law.',
     auditSourcesChecked: ['Official site', 'Terms and Conditions', 'Risk Disclosure', 'Privacy Policy', 'Trustpilot link'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
