@@ -3409,108 +3409,144 @@
       "criteria": {
         "A1": {
           "points": 8,
-          "reason": "Les pages de comptes et FAQ précisent le coût d'activation, le seuil minimum, caps de payout de $10 000 par utilisateur, buffers permanents, split 90/10 en Live et étapes de retrait. Fréquence/éligibilité/caps/procédure sont documentés, frais bancaires complets manquent : A1=8.",
+          "reason": "Les pages de comptes, FAQ et l'Agreement distinguent les demandes on-demand et la cadence de traitement, les contraintes de jours/consistency et buffers, les plafonds par compte et 10 000 USD par utilisateur, et le parcours KYC et retrait. +2 calendrier, +2 éligibilité, +2 plafonds, +2 procédure. Le split et les minima apparaissent mais les coûts de chaque rail et les frais effectifs de payout selon la gamme ne sont pas entièrement réconciliés : +0 pour la rubrique split+frais. Les promesses marketing 'same day' ne prouvent pas le dénouement du virement.",
           "sources": [
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf",
             "https://blog.fundedfuturesnetwork.com/faq",
-            "https://fundedfuturesnetwork.com/accounts"
+            "https://fundedfuturesnetwork.com/accounts",
+            "https://rulesofprop.com/firms/funded-futures-network/"
           ]
         },
         "A2": {
           "points": 6,
-          "reason": "Ledger en ligne et avis publics ne prouvent pas à eux seuls 24 mois de règlements réguliers vérifiés par tiers, et aucun incident grave corroboré au seuil A2 n'a été documenté dans le présent contrôle. A2=6 neutre.",
+          "reason": "Trustpilot comprend plusieurs cas DISTINCTS datés de retraits restés en attente en octobre–novembre 2026 (dont une demande du 2 octobre et un versement marqué payé vers Rise le 28 octobre sans finalisation attestée); la firme répond publiquement et reconnaît des dossiers à investiguer. Mais dates exactes d'échéance, cause finale du retard et pièces tierces compensées manquent pour conclure rigoureusement à deux retards >14 jours au-delà de l'engagement contractuel ou à des refus injustifiés. A2=6 est provisoire et sous revue d'incidents, NON preuve d'une absence de problèmes.",
           "sources": [
-            "https://blog.fundedfuturesnetwork.com/payouts",
-            "https://fundedfuturesnetwork.com/"
+            "https://www.trustpilot.com/review/fundedfuturesnetwork.com",
+            "https://rulesofprop.com/firms/funded-futures-network/",
+            "https://blog.fundedfuturesnetwork.com/faq"
           ]
         },
         "A3": {
           "points": 1,
-          "reason": "Le tableau de versements publie dates et montants mais est hébergé sur le domaine du groupe; sans vérificateur indépendant du règlement final et des bénéficiaires, A3=1 pour l'annonce seulement.",
+          "reason": "Le 'Verified Payouts' ledger est publié et contrôlé par FFN, pas rapproché par un organisme extérieur des virements compensés, émetteurs et bénéficiaires authentifiés, programmes et dates sur un échantillon multi-clients. Les témoignages Trustpilot ne suffisent pas à améliorer A3. Palier auto-déclaré 1, plafonnement probatoire 64.",
           "sources": [
             "https://blog.fundedfuturesnetwork.com/payouts",
-            "https://fundedfuturesnetwork.com/"
+            "https://www.trustpilot.com/review/fundedfuturesnetwork.com",
+            "https://rulesofprop.com/firms/funded-futures-network/"
           ]
         },
         "B1": {
-          "points": 6,
-          "reason": "Les règles de paiement incluent des revues, buffers, arrêt du compte à certains événements et discrétion sur l'admission en live; aucun contrat Live de rewards acquis n'a été obtenu ici. B1=6 provisoire faute de preuve d'une confiscation arbitraire déjà acquise.",
+          "points": 0,
+          "reason": "Le vrai Trader Agreement de FFN Cap LLC, §5, prévoit fermeture du compte et confiscation de tous les profits à toute violation des règles; la clause 16.12 donne à la firme SEULE la qualification de gambling, et les CGU générales autorisent fermeture de tout compte 'for any reason with no exceptions'. Certaines règles HFT/news prévoient explicitement absence de recours. L'association de résiliation arbitraire et perte des profits du compte, sans procédure de recours opposable vérifiée, justifie B1=0 sous la grille V5.2, sous réserve de la protection éventuelle de rewards déjà versés (non réversibles). Ce fait mesure la PROTECTION des rewards; l'ambiguïté de la STRATÉGIE est classée distinctement en B2.",
           "sources": [
-            "https://blog.fundedfuturesnetwork.com/faq",
-            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf",
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92",
+            "https://rulesofprop.com/firms/funded-futures-network/"
+          ],
+          "negativeFactIds": [
+            "ffn-funded-agreement-section5-profit-forfeiture"
           ]
         },
         "B2": {
-          "points": 10,
-          "reason": "Les T1 news sont explicitement listées FOMC/NFP/CPI et fenêtre ±1 minute, le copy limit 5 comptes et la clôture journalière 16:50 ET sont chiffrées. Sans clause subjective précise entraînant sanctions nouvelles documentée, B2=10 et zéro malus pour règles annoncées.",
+          "points": 7,
+          "reason": "Le §16.12 du Trader Agreement autorise la firme à décider à sa seule discrétion ce qui constitue du 'gambling', sans limite de risque exhaustive; §4 mentionne aussi des trades pouvant porter préjudice à la relation broker, et la sanction peut être la clôture du compte. Un défaut unique de définition de stratégie vaut −3 B2. Les limites numériques HFT (5 secondes/30 %) et fenêtres news explicites ne coûtent rien *en tant que seuils publiés*. Ne pas rajouter la confiscation déjà traitée en B1 comme seconde pénalité.",
           "sources": [
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf",
+            "https://rulesofprop.com/firms/funded-futures-network/",
             "https://fundedfuturesnetwork.com/faq"
+          ],
+          "negativeFactIds": [
+            "ffn-funded-agreement-1612-discretionary-gambling"
           ]
         },
         "C1": {
-          "points": 4,
-          "reason": "Le site donne une adresse à New York et l'offre FFN, mais n'identifie pas assez complètement le nom légal, le numéro de formation et la partie du Trader Agreement actuel; C1=4 pour identification partielle, non C1=10.",
+          "points": 7,
+          "reason": "Contrôles officiels de Floride : Funded Futures Network LLC n°L22000267808 (vendeur/site), FFN Cap LLC n°L22000325983 (débiteur du Trader Agreement) existent, avec actionnariat/gestion liée et adresses cohérentes. Les deux sociétés sont identifiées, mais leur responsabilité réciproque et le lien contractuel avant/après activation/checkout ne sont pas suffisamment explicités aux acheteurs : C1=7, pas 4 ni 10.",
           "sources": [
-            "https://fundedfuturesnetwork.com/",
-            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+            "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000267808-ef268e24-6504-4505-a9de-a2ecfd86df50&directionType=Initial&inquirytype=EntityName&listNameOrder=FUNDECONUSA+L190002146180&searchNameOrder=FUNDEDFUTURESNETWORK+L220002678080&searchTerm=FUNDECON+USA%2C+LLC",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000325983-8d56024d-c38a-4937-9ba3-0a3f28b85df7&directionType=ForwardList&inquirytype=OfficerRegisteredAgentName&listNameOrder=TYILLIANGREGORYJ+L170001473950&searchNameOrder=TYJCAPITALLLC+L220003259833&searchTerm=Tyg+Media+Llc",
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf"
           ]
         },
         "C2": {
-          "points": 3,
-          "reason": "La marque existe dans les offres mais un extrait à jour du registre de la société vendeuse n'a pas été rapproché; le texte Termly accessible sans annexe ne suffit pas à prouver good standing. C2=3.",
+          "points": 6,
+          "reason": "Sunbiz Florida vérifie les DEUX sociétés en statut ACTIVE, annual reports du 26 février 2026 pour Funded Futures Network LLC et FFN Cap LLC. Les deux entités réelles du service évalué sont actives avec formalités 2026 à jour : C2=6 et aucun plafond juridique de 55 pour radiation.",
           "sources": [
-            "https://fundedfuturesnetwork.com/",
-            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+            "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000267808-ef268e24-6504-4505-a9de-a2ecfd86df50&directionType=Initial&inquirytype=EntityName&listNameOrder=FUNDECONUSA+L190002146180&searchNameOrder=FUNDEDFUTURESNETWORK+L220002678080&searchTerm=FUNDECON+USA%2C+LLC",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000325983-8d56024d-c38a-4937-9ba3-0a3f28b85df7&directionType=ForwardList&inquirytype=OfficerRegisteredAgentName&listNameOrder=TYILLIANGREGORYJ+L170001473950&searchNameOrder=TYJCAPITALLLC+L220003259833&searchTerm=Tyg+Media+Llc"
           ]
         },
         "C3": {
           "points": 2,
-          "reason": "Pas de sanction officielle grave nominative vérifiée sur le bon fournisseur dans ce contrôle limité, les recherches de registres des États et autorités n'étant pas exhaustives. C3=2, sans traiter la simulation comme un broker.",
+          "reason": "Les pièces primaires examinées n'établissent aucune sanction actuelle grave visant ces deux LLC et ce produit simulé, mais la recherche exhaustive des avertissements CFTC/NFA/États et de leur application reste incomplète. C3=2 provisoire, sans pénaliser automatiquement absence de licence FCM non requise pour un challenge de simulation.",
           "sources": [
-            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92",
-            "https://fundedfuturesnetwork.com/faq"
+            "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000267808-ef268e24-6504-4505-a9de-a2ecfd86df50&directionType=Initial&inquirytype=EntityName&listNameOrder=FUNDECONUSA+L190002146180&searchNameOrder=FUNDEDFUTURESNETWORK+L220002678080&searchTerm=FUNDECON+USA%2C+LLC",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000325983-8d56024d-c38a-4937-9ba3-0a3f28b85df7&directionType=ForwardList&inquirytype=OfficerRegisteredAgentName&listNameOrder=TYILLIANGREGORYJ+L170001473950&searchNameOrder=TYJCAPITALLLC+L220003259833&searchTerm=Tyg+Media+Llc",
+            "https://storage.googleapis.com/ffn-files/FFN%20Risk%20Disclosure%20Statement.pdf"
           ]
         },
         "D1": {
-          "points": 8,
-          "reason": "Catalogue de produits et frais d'activation, objectifs et seuils de drawdown, règles news, copy et overnight, pays et produits disponibles sont publiés par gammes. Quatre éléments D1 documentés.",
+          "points": 6,
+          "reason": "Objectifs, tailles et drawdowns par plans sont annoncés (+2), les restrictions futures et conséquences sont consultables dans le centre d'aide et le Trader Agreement (+2), pays et KYC sont documentés (+2). Mais l'annonce 'no activation fee' de certaines offres et une activation de 120 USD sur d'autres supports contemporains, ainsi que coûts de données Live, empêchent de considérer le coût COMPLET du parcours comme uniformément vérifié pour chaque gamme (+0 prix). Total D1=6.",
           "sources": [
+            "https://fundedfuturesnetwork.com/accounts",
             "https://fundedfuturesnetwork.com/faq",
-            "https://fundedfuturesnetwork.com/accounts"
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf",
+            "https://rulesofprop.com/firms/funded-futures-network/"
           ]
         },
         "D2": {
-          "points": 2,
-          "reason": "Les conditions de service liées via Termly sont accessibles, mais l'ancienne et la nouvelle politique Live, version applicable et modification d'une cohorte ne sont pas entièrement établies. D2=2 pour accès public seulement.",
+          "points": 4,
+          "reason": "Les Terms of Use (datés 22/07/2022) et le Trader Agreement sont consultables (+2) et une date de version ancienne est identifiable (+2). Cependant le §9 autorise la modification des règles en vigueur sur simple notification et le §16.5 leur modification par la firme, sans garantie opposable de droits acquis ou de protection des anciennes cohortes (+0). Aucune pénalité B2 de rétroactivité factuelle n'est appliquée sans preuve de changement effectivement rétroactif.",
           "sources": [
-            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92",
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf",
+            "https://rulesofprop.com/firms/funded-futures-network/"
           ]
         },
         "D3": {
           "points": 2,
-          "reason": "Le parcours distingue Evaluation, Exhibition, Sim Funded et Live avec buffers et cap, mais contrat Live, nature des revenus et checkout ne sont pas complètement vérifiés, D3=2.",
+          "reason": "L'évaluation, le compte simulé et l'éventuel live sont distingués dans les disclosures (+2). En revanche, le marketing 'same-day payouts' et les délais de traitement et règlements bancaires réels divergent; les frais d'activation varient selon la page, et le Trader Agreement est conclu avec FFN Cap LLC alors que la vente présente FFN Network LLC. Ces divergences empêchent d'attribuer les deux autres items (checkout et cohérence FAQ/contrat).",
           "sources": [
+            "https://storage.googleapis.com/ffn-files/FFN%20Risk%20Disclosure%20Statement.pdf",
+            "https://fundedfuturesnetwork.com/accounts",
             "https://blog.fundedfuturesnetwork.com/faq",
-            "https://fundedfuturesnetwork.com/faq"
+            "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf",
+            "https://rulesofprop.com/firms/funded-futures-network/"
           ]
         },
         "E1": {
-          "points": 6,
-          "reason": "Le site déclare une activité FFN depuis 2022, des témoignages datés 2024 et offres de comptes toujours en 2026; au moins 36 mois d'activité plausiblement documentée sur service prop firm : E1=6.",
+          "points": 4,
+          "reason": "Funded Futures Network LLC a été enregistrée en juin 2022 et FFN Cap LLC en juillet 2022, mais l'immatriculation ne prouve pas à elle seule 36 mois de ventes de challenges. Des traces commerciales et avis de 2024–2026 soutiennent au moins 18–35 mois de service exploité; la date opérationnelle pré-novembre 2023 ne peut pas être reliée ici avec assez de certitude à des clients, d'où palier conservateur E1=4 plutôt que 6.",
           "sources": [
-            "https://fundedfuturesnetwork.com/",
-            "https://blog.fundedfuturesnetwork.com/faq"
+            "https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000267808-ef268e24-6504-4505-a9de-a2ecfd86df50&directionType=Initial&inquirytype=EntityName&listNameOrder=FUNDECONUSA+L190002146180&searchNameOrder=FUNDEDFUTURESNETWORK+L220002678080&searchTerm=FUNDECON+USA%2C+LLC",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000325983-8d56024d-c38a-4937-9ba3-0a3f28b85df7&directionType=ForwardList&inquirytype=OfficerRegisteredAgentName&listNameOrder=TYILLIANGREGORYJ+L170001473950&searchNameOrder=TYJCAPITALLLC+L220003259833&searchTerm=Tyg+Media+Llc",
+            "https://fundedfuturesnetwork.com/about",
+            "https://www.trustpilot.com/review/fundedfuturesnetwork.com"
           ]
         },
         "E2": {
-          "points": 3,
-          "reason": "Support, help desk, FAQ et réponses ponctuelles documentent canaux joignables et aide par produit; procédure de recours indépendante et satisfaction des plaintes non contrôlées : E2=3.",
+          "points": 2,
+          "reason": "Email de support et centre d'aide officiels (+1), réponses publiques de la firme à des demandes réelles, y compris dossiers de paiement restés bloqués (+1). Pas de recours formel et indépendant garanti pour la sanction HFT/news, ni d'indicateur corroboré de résolution générale et équitable; aucun point supplémentaire. E2=2.",
           "sources": [
             "https://fundedfuturesnetwork.com/faq",
-            "https://fundedfuturesnetwork.com/"
+            "https://www.trustpilot.com/review/fundedfuturesnetwork.com",
+            "https://rulesofprop.com/firms/funded-futures-network/"
           ]
         }
       },
-      "ruleDeductions": [],
+      "ruleDeductions": [
+        {
+          "factId": "ffn-funded-agreement-1612-discretionary-gambling",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Funded Futures Network / FFN Cap LLC — accounts Sim-Funded Pro, STEADY et Live selon convention appliquée",
+          "phase": "Revue de la stratégie simulée et du funded avant validation du payout / fermeture",
+          "clause": "Trader Agreement §§4 et 16.12 : la société apprécie à sa seule discrétion le 'gambling', les all-or-nothing bets et le risque de nuire à la relation broker, sans grille de seuils objectifs commune à tous programmes.",
+          "consequence": "Des profits peuvent être confisqués à la clôture si le style est requalifié subjectivement, même si les limites chiffrées ont été respectées; la perte des rewards est évaluée UNE fois en B1.",
+          "source": "https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf"
+        }
+      ],
       "trustpilotActiveNotice": false,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
