@@ -8,11 +8,13 @@
     "v52_publication_gate": 11,
     "v52_recalculated_needs_evidence_check": 24,
     "status_review_no_score": 12,
-    "missing_full_13_criterion_audit": 75,
-    "withCompleteV52Scorecard": 35,
-    "withoutNumericV52Scorecard": 87,
+    "missing_full_13_criterion_audit": 74,
+    "withCompleteV52Scorecard": 36,
+    "withoutNumericV52Scorecard": 86,
     "sourceBackedOutsidePriority": 6,
-    "allMigratedScorecards": 41
+    "allMigratedScorecards": 41,
+    "v52_native_score_proposal_needs_approval": 1,
+    "allSourceBackedV52Scorecards": 42
   },
   "extraScoredOutside122": [
     {
@@ -532,13 +534,13 @@
       "slug": "funded7",
       "group": "C04",
       "legacyScore": 55,
-      "state": "missing_full_13_criterion_audit",
-      "v52Candidate": null,
-      "payoutProofLevel": null,
-      "confidence": null,
-      "sourcePr": null,
+      "state": "v52_native_score_proposal_needs_approval",
+      "v52Candidate": 56,
+      "payoutProofLevel": 1,
+      "confidence": "faible",
+      "sourcePr": 246,
       "starterSource": "https://funded7.com/terms-and-conditions/",
-      "sourcePath": "PRs #241/#245",
+      "sourcePath": "app/data/scoring-v52-new-audits.json (source checks 2026-11-22)",
       "ownerReviewNeeded": true
     },
     {
