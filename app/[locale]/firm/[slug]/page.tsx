@@ -633,28 +633,56 @@ export default async function FirmPage({ params }: Props) {
   const ruleCopy = scoreRuleCopy(locale);
   const breakdown = getScoreBreakdown(firm);
   const modernCopy = breakdown.v52 ? scoreV52Copy(locale) : scoreV5Copy(locale);
-  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: breakdown.v5 ? modernCopy.method : breakdown.v4 ? scoreV4Copy(locale).method : scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
-  if (!breakdown.v4) {
+  // V4 scores already include B1/B4 lost points. The modal reconstructs an
+  // explanatory pre-B1/B4 base so its visible arithmetic reconciles with the
+  // *unchanged* published net score (e.g. FXIFY 83 − 8 = 75). This is not a
+  // re-score nor an additional penalty.
+  const v4IncludedLoss = breakdown.v4
+    ? breakdown.v4.embeddedRuleImpact.rewardProtectionLoss + breakdown.v4.embeddedRuleImpact.tradingRulesLoss
+    : 0;
+  const displayedBase = breakdown.editorial + v4IncludedLoss;
+  const scoreSteps: ScoreStep[] = [{
+    kind: 'editorial',
+    label: breakdown.v4 ? ruleCopy.reconstructedBase : scoreCopy.editorial,
+    detail: breakdown.v5 ? modernCopy.method : breakdown.v4 ? ruleCopy.reconstructedDetail : scoreCopy.editorialDetail,
+    value: displayedBase,
+    delta: 0,
+  }];
+  if (breakdown.v4) {
+    scoreSteps.push({
+      kind: 'rules',
+      label: ruleCopy.v4RuleLabel,
+      detail: ruleCopy.includedDetail,
+      value: breakdown.editorial,
+      delta: v4IncludedLoss,
+    });
+  } else {
     const rules = breakdown.rules;
     const applied = Boolean(rules?.applied && rules.penalty);
+    // The engine floors at zero. Show the actual points removed rather than
+    // claiming the whole nominal cost was subtracted past zero.
+    const actualRuleDelta = applied ? Math.min(breakdown.editorial, rules!.penalty) : 0;
     scoreSteps.push({
       kind: 'rules',
       label: scoreCopy.rules,
       detail: breakdown.v5 ? modernCopy.restriction : rules
         ? fmt(scoreCopy.rulesDetail, { counted: rules.counted, programs: rules.programs.length, load: rules.rawLoad })
         : breakdown.unclassifiedOnly ? fmt(scoreCopy.rulesUnclassified, { n: breakdown.unclassifiedOnly }) : scoreCopy.rulesNone,
-      value: applied ? breakdown.editorial - rules!.penalty : breakdown.editorial,
-      delta: applied ? rules!.penalty : 0,
+      value: Math.max(0, breakdown.editorial - actualRuleDelta),
+      delta: actualRuleDelta,
       note: rules && rules.penalty && !applied ? scoreCopy.rulesNotApplied : undefined,
     });
   }
-  if (breakdown.trustpilot) scoreSteps.push({
-    kind: 'trustpilot',
-    label: scoreCopy.trustpilotCap,
-    detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
-    value: breakdown.trustpilot.before - breakdown.trustpilot.penalty,
-    delta: breakdown.trustpilot.penalty,
-  });
+  if (breakdown.trustpilot) {
+    const afterTrustpilot = Math.max(0, breakdown.trustpilot.before - breakdown.trustpilot.penalty);
+    scoreSteps.push({
+      kind: 'trustpilot',
+      label: scoreCopy.trustpilotCap,
+      detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
+      value: afterTrustpilot,
+      delta: breakdown.trustpilot.before - afterTrustpilot,
+    });
+  }
   if (breakdown.payoutEvidenceCap) {
     const evidence = scoreV52EvidenceCapCopy(locale, breakdown.payoutEvidenceCap.cap);
     scoreSteps.push({ kind: 'proof', label: evidence.label, detail: evidence.detail,

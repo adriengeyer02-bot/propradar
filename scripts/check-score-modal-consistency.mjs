@@ -49,10 +49,18 @@ for(const slug of v4Slugs){
   assert.ok(Number.isInteger(b4)&&b4>=0&&b4<=5,slug+' B4 not verifiable');
   const missing=15-b1+5-b4;
   assert.equal(ruleAmountDisplay(missing,true,0).points,missing,slug+' V4 double accounting');
+  const v4Editorial = row.criteria
+    ? Object.values(row.criteria).reduce((total,item)=>total+item.points,0)
+    : Object.values(row.scores).flat().reduce((total,points)=>total+points,0);
+  const displayedBase=v4Editorial+missing;
+  assert.ok(displayedBase<=100,slug+' reconstructed V4 base above 100');
+  assert.equal(displayedBase-missing,v4Editorial,slug+' dialog arithmetic mismatch');
 }
 const fxify=v4Rows.get('fxify');
 assert.ok(fxify);
 assert.equal(15-(fxify.criteria?.B1?.points??fxify.scores?.B?.[0])+5-(fxify.criteria?.B4?.points??fxify.scores?.B?.[3]),8,'FXIFY should show −8 already included');
+assert.equal(Object.values(fxify.scores).flat().reduce((sum,n)=>sum+n,0),75,'FXIFY final V4 must remain 75');
+assert.equal(75+8,83,'FXIFY reconstructed displayed base must be 83');
 
 // All 58 gate-approved V5.2 firms: exactly one application of B2 and
 // Trustpilot, plus evidence/legal caps, without inventing risk points.
@@ -78,6 +86,9 @@ for(const approval of gate){
     const legal=(card.contractingEntityMissing||card.activeUnsuspendedStrikeOff)?55:100;
     const expected=card.closed?null:Math.max(0,Math.min(points-trustpilot,proof,legal));
     assert.equal(expected,approval.expectedFinal,approval.slug+' final was changed by modal logic');
+    const gross=points+penalty;
+    const finalFromSteps=Math.min(Math.min(Math.max(0,gross-penalty-trustpilot),proof),legal);
+    assert.equal(finalFromSteps,approval.expectedFinal,approval.slug+' native V5.2 equation mismatch');
     const ids=new Set();
     for(const rule of card.ruleDeductions){
       assert.ok(rule.source.startsWith('https://')&&rule.program&&rule.phase&&rule.consequence,approval.slug+' incomplete B2 clause');
@@ -90,6 +101,9 @@ for(const approval of gate){
     const row=convertedMap.get(approval.slug);
     assert.ok(row,approval.slug+' has no published V5.2 source');
     assert.equal(row.v52,approval.expectedFinal,approval.slug+' V5.2 conversion differed');
+    const subtotal=Object.values(row.criteriaV52).reduce((sum,n)=>sum+n,0);
+    const finalFromSteps=Math.min(Math.max(0,subtotal-row.trustpilotPenalty),row.payoutEvidenceCap,row.legalCap);
+    assert.equal(finalFromSteps,approval.expectedFinal,approval.slug+' migrated V5.2 equation mismatch');
     const penalty=row.ruleDeductions.reduce((sum,x)=>sum+x.points,0);
     assert.equal(penalty,10-row.criteriaV52.B2,approval.slug+' migrated B2 mismatch');
     assert.equal(ruleAmountDisplay(null,true,penalty).points,penalty);
@@ -112,6 +126,14 @@ for(const [slug,update] of Object.entries(allUpdates)){
   notClassified+=rules.length-n;
   if(n===0)assert.equal(ruleAmountDisplay(null,false,0).points,null,'Unverified legacy rules must not be zero: '+slug);
 }
+// Regression: do not reintroduce '75 − 8 = 75' via a UI-only edit.
+const page=source('app/[locale]/firm/[slug]/page.tsx');
+const modal=source('app/components/ui/ScoreBreakdownDialog.tsx');
+assert.ok(page.includes('const displayedBase = breakdown.editorial + v4IncludedLoss;'),'Missing V4 reconstructed baseline');
+assert.ok(page.includes('value: breakdown.editorial,') && page.includes('delta: v4IncludedLoss'),'Missing V4 rules subtraction');
+assert.ok(modal.includes('const scoreReconciles ='),'Missing arithmetic consistency check');
+assert.ok(modal.includes('editorial.value - effectiveRuleDelta - adjustmentLoss'),'Missing exact score equation');
+assert.ok(modal.includes('{showEquation ? ('),'Missing equation display');
 const catalog=[...new Set([...source('app/lib/propFirms.ts').matchAll(/\bslug:\s*['"]([a-z0-9-]+)['"]/g)].map(m=>m[1]))];
 assert.ok(catalog.length>=150,'Unexpectedly small base catalog; recheck data source');
 console.log(JSON.stringify({catalogEntries:catalog.length,updates:Object.keys(allUpdates).length,ruleRecords:withRecords,classifiedRules:classified,unclassifiedRules:notClassified,v4Audited:v4Slugs.length,v52Native:checkedNative,v52Migrated:checkedMigrated,v52WithB2Deductions:withDeductions,locales:locales.length,passed:true},null,2));

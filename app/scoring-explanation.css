@@ -223,3 +223,26 @@
   font-size: 11px;
   line-height: 1.5;
 }
+
+
+/* The audit arithmetic is visible and reconciles against the displayed score:
+   V4 reconstructed base − B1/B4 gaps − Trustpilot/caps = public score. */
+.psb-equation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 6px 9px;
+  padding: 11px 0 9px 22px;
+  color: var(--hud-faint);
+  font: 700 14px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 1px solid var(--hud-line);
+}
+.psb-equation strong { color: var(--hud-ink); }
+.psb-equation > span, .psb-equation-deduction { display: inline-flex; align-items: baseline; gap: 5px; }
+.psb-equation b { color: var(--accent); font-size: 18px; }
+.psb-equation b small { color: var(--hud-faint); font-size: 10px; }
+@media (max-width: 440px) {
+  .psb-equation { gap: 6px; font-size: 12px; }
+}
