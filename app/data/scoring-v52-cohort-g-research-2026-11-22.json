@@ -125,6 +125,149 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "ck-capital",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 14,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Conditions de payout relativement documentées : split 80/20, minimum officiellement absent et frais de retrait $50 ou 3% (+2) ; consistance, buffer et 1% de profits entre retraits définis (+2) ; caps progressifs des cinq premiers versements et catégories de retrait limitées (+2) ; demande par dashboard, rail Rise/fiat/crypto et disbursement annoncé sous deux jours OUVRABLES après approbation (+2). En revanche aucune borne ferme sur le délai d'approbation/versement du PREMIER payout : le simple « dès profit suffisant » n'établit pas le délai total (+0).",
+          "sources": [
+            "https://ckpropfirm.com/en/faq/payouts-profit-splits",
+            "https://ckpropfirm.com/en/faq/how-can-i-get-paid",
+            "https://ckpropfirm.com/en/faq/why-was-my-payout-charged-a-fee",
+            "https://ckpropfirm.com/en/payouts"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "V5.2 neutre faute d'un historique indépendant régulier sur douze mois ou d'un dossier juridiquement attribuable démontrant au moins les seuils d'incidents requis. Les plaintes 2026 Trustpilot et Forex Peace Army sur des retards ou refus sont nombreuses, spécifiques et doivent être investiguées, mais une déclaration d'utilisateur seule sans rapprochement des contrats, dates d'échéance, transferts et motifs n'est pas une preuve indépendante corroborée de refus injustifié. NE PAS présenter 6 comme preuve de fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/ckcapital.co.uk",
+            "https://www.trustpilot.com/review/ckpropfirm.com",
+            "https://www.forexpeacearmy.com/community/threads/ck-capital-prop-firm-refused-to-pay-out.88625/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "CK Propfirm annonce publiquement $1,385,127.63 de payouts et montre des certificats et un tableau « Verified reward records, published by CK Propfirm ». Ce sont des enregistrements contrôlés par l'opérateur lui-même, non une vérification finale par tiers indépendant avec preuve de bénéficiaire et règlement, ni une série indépendante 12 mois. A3=1 (autodéclaration seulement).",
+          "sources": [
+            "https://ckpropfirm.com/en/payouts",
+            "https://ckpropfirm.com/en"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "PROVISOIRE et confiance faible. Les CGU publiques §7 excluent toute garantie de rémunération future, et §10 permet la résiliation à la seule discrétion de la firme ; cependant la FAQ officielle annonce qu'un SECOND accord formel régira les récompenses du compte funded APRÈS réussite. Ce contrat de performance signé n'est pas public/inspecté : impossible d'établir confiscation objective de gains acquis. Le référentiel V5.2 impose B1=6 provisoire quand les CGU pertinentes des rewards sont introuvables, même si le langage pré-funded est très défavorable. À revoir impérativement avant validation.",
+          "sources": [
+            "https://ckpropfirm.com/en/terms-conditions",
+            "https://ckpropfirm.com/en/faq/are-there-any-contracts-between-myself-and-ck-prop-firm",
+            "https://ckpropfirm.com/en/faq/why-was-my-funded-account-denied"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les CGU §3 interdisent notamment toute stratégie « qui met en péril la relation avec le broker » sans seuil objectif ; le compte peut être terminé et l'évaluation refusée. Une ambiguïté matérielle autonome = −3. Les limitations numériques sur news 8 minutes, lot maximum et consistence 30 % ne sont pas punies. Le risque de non-garantie des profits du §7 relève de B1, pas une seconde fois de B2.",
+          "sources": [
+            "https://ckpropfirm.com/en/terms-conditions",
+            "https://ckpropfirm.com/en/faq/1-step-plus-challenge"
+          ],
+          "negativeFactIds": [
+            "ck-broker-relations-vague"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU identifient CK CAPITAL GROUP LTD et Companies House retrouve cette société sous n°15658914, active. La branche CK Capital initiale a été documentée dès 2024, mais le site et les CGU du 14/10/2026 persistent à employer l'ancienne adresse officielle de Harpenden, alors que Companies House affiche 1 Allied Business Centre. Le contrat commercial et l'acheteur checkout sont nominativement cohérents mais le funded agreement signé et certains rôles demeurent non vérifiés. C1=7, pas 10.",
+          "sources": [
+            "https://ckpropfirm.com/en/terms-conditions",
+            "https://find-and-update.company-information.service.gov.uk/company/15658914",
+            "https://find-and-update.company-information.service.gov.uk/company/15658914/filing-history",
+            "https://www.financemagnates.com/forex/brokers/prop-firm-ck-capital-seeks-growth-in-competitive-north-american-market/"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Companies House identifie CK CAPITAL GROUP LTD n°15658914 au statut ACTIVE, dernier jeu de comptes arrêté au 30 avril 2025 et confirmation statement du 11 septembre 2026, obligations 2026 pas encore exigibles. Aucun strike-off actif identifié pour cette même entité au jour du contrôle ; C2=6. Ceci n'atteste AUCUN paiement de traders.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15658914",
+            "https://find-and-update.company-information.service.gov.uk/company/15658914/filing-history"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche nominative et par domaine (CK Capital Group Ltd / CK Capital / CK Propfirm, 22/11/2026) : aucun avertissement officiel de régulateur ou sanction grave directement applicable au service simulé corroboré. Les plaintes Trustpilot ne constituent pas une sanction publique. L'absence d'agrément broker n'est pas une faute démontrée pour des comptes de simulation.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15658914",
+            "https://ckpropfirm.com/en/terms-conditions",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Le site publie prix et tarifs des programmes (+2), cibles 10% puis 5%, drawdown 3% journalier / 6% trailing EOD et états par modèle (+2), limites news ±8 min, lots et règles de consistance par phase (+2), pays exclus, KYC et conditions d'achat (+2). Le flou juridique B1 n'est pas déplacé vers la grille des spécifications d'offre.",
+          "sources": [
+            "https://ckpropfirm.com/en",
+            "https://ckpropfirm.com/en/trading-objectives",
+            "https://ckpropfirm.com/en/faq/1-step-plus-challenge",
+            "https://ckpropfirm.com/en/terms-conditions"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU publiques accessibles (+2) et date de version indiquée « Last updated: October 14, 2026 » (+2), mais la société peut modifier/amender ou retirer les règles unilatéralement, sans archive traçable ni protection des contrats existants explicitement démontrée (+0). Aucun épisode de changement rétroactif appliqué n'est attesté ; pas de −4 B2 automatique.",
+          "sources": [
+            "https://ckpropfirm.com/en/terms-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le site explique que tous les comptes, même funded, sont simulés (+2). Mais l'ancienne adresse de siège est toujours affichée dans les mentions du site malgré registre à jour ; la FAQ 1-Step Plus nomme les plafonds de retrait comme seuils minimums alors que la FAQ payout révisée le 17/11 précise qu'il s'agit de caps. Les deux sous-critères cohérence offre/checkout et FAQ/contrat restent à 0 faute de réconciliation.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15658914",
+            "https://ckpropfirm.com/en/terms-conditions",
+            "https://ckpropfirm.com/en/faq/1-step-plus-challenge",
+            "https://ckpropfirm.com/en/faq/payouts-profit-splits"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La presse financière spécialisée Finance Magnates du 18 septembre 2024 atteste que CK Capital vendait déjà ses programmes prop depuis plusieurs mois et nomme le fondateur, relié à CK Capital Group Ltd. Âge opérationnel prouvé ~26–30 mois au 22 novembre 2026 : palier 18–35 mois =4, sans faire valoir de simple âge de domaine.",
+          "sources": [
+            "https://www.financemagnates.com/forex/brokers/prop-firm-ck-capital-seeks-growth-in-competitive-north-american-market/",
+            "https://find-and-update.company-information.service.gov.uk/company/15658914"
+          ]
+        },
+        "E2": {
+          "points": 1,
+          "reason": "Canal de service/ticket CK officiel public (+1). La société annonce un support 24/7, mais aucune réponse à une demande témoin, taux de résolution ou procédure de plainte formalisée et vérifiable ne sont établis ; des avis se contredisent et plusieurs allèguent blocages du support. Ne pas accorder les trois autres points.",
+          "sources": [
+            "https://ckpropfirm.com/en/contact",
+            "https://www.trustpilot.com/review/ckcapital.co.uk",
+            "https://www.trustpilot.com/review/ckpropfirm.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "ck-broker-relations-vague",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "CK Propfirm — évaluations régies par les CGU générales",
+          "phase": "Évaluation avant contrat funded",
+          "clause": "CGU §3 Prohibited Uses : « Trading in any way that jeopardizes the relationship that the Company has with a broker » sans seuil ni critère concret",
+          "consequence": "Disqualification de l'évaluation et perte des frais engagés pour une stratégie que l'opérateur qualifie unilatéralement de dommageable à sa relation broker",
+          "source": "https://ckpropfirm.com/en/terms-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "statusReviews": [
@@ -227,26 +370,6 @@
         "Vérifier communiqué de reprise et nouvel opérateur plateforme",
         "Vérifier traitement des comptes et rewards pendants",
         "Désactiver tout appel à achat si site encore marqué pause"
-      ],
-      "checkedOn": "2026-11-22",
-      "v52Final": null,
-      "publicationAllowed": false
-    },
-    {
-      "slug": "ck-capital",
-      "classification": "NEW_BRAND_UK_ENTITY_ACTIVE_PUBLIC_ADDRESS_STALE_CONTRACT_REVIEW",
-      "note": "Le domaine ckcapital.co.uk renvoie aujourd'hui vers ckpropfirm.com. Les CGU CK Propfirm nomment CK Capital Group LTD, et Companies House confirme l'entité ACTIVE n°15658914, société incorporée le 18/04/2024 (comptes 2025 et confirmation 2026 déposés). IMPORTANT : le site dit que le siège enregistré est au 6-7 Waterside Station Road, mais Companies House indique un transfert au 1 Allied Business Centre, Coldharbour Lane le 26/06/2025; les CGU datées du 14/10/2026 gardent donc une adresse de siège périmée. Leur droit d'arbitrage à Québec pour une société UK et leur pouvoir large de résilier nécessitent examen. Une personne juridique existe, mais l'entité exacte du checkout/funded et les payouts réels restent à réconcilier. Ne pas publier une correction du score historique 14 sans audit V5.2 complet.",
-      "sources": [
-        "https://ckcapital.co.uk/",
-        "https://ckpropfirm.com/en/terms-conditions",
-        "https://ckpropfirm.com/en/faq/payouts-profit-splits",
-        "https://find-and-update.company-information.service.gov.uk/company/15658914",
-        "https://find-and-update.company-information.service.gov.uk/company/15658914/filing-history"
-      ],
-      "next": [
-        "Relever le contrat funded signé et le vendeur du checkout pour relier à CK Capital Group LTD",
-        "Demander correction de l'ancienne adresse enregistrée (site / registre), contrôler arbitration Quebec",
-        "Auditer les 13 sous-notes, A3 payouts indépendants et clause B2 d'interdictions subjectives"
       ],
       "checkedOn": "2026-11-22",
       "v52Final": null,
