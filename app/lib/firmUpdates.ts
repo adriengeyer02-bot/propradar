@@ -180,9 +180,10 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
       incidents: 0,
       reviewSignals: {
         ...firm.reviewSignals,
-        payoutRisk: 'Moyen' as const,
-        payoutIncidentStatus: 'À surveiller' as const,
-        payoutRiskScore: 45,
+        // A2 remains neutral and we have no independently corroborated
+        // payout-incident count. Keep the payout-risk LABEL unassessed; describe
+        // the DOCUMENTED contractual risk and pending complaints instead.
+        radarVerdict: 'The November 2026 V5.2 assessment confirms that the funded Trader Agreement permits forfeiture of account profits after rule breaches and gives FFN broad discretion over certain gambling definitions. Final trader payouts remain independently unverified; public delayed-payout allegations are under investigation, not established as unjustified refusals. Review exact funded terms before purchase.',
         lastSignalCheck: audit.checkedOn,
         ...(auditedTrustpilot === undefined ? {} : {trustpilotRatingWithheld: auditedTrustpilot}),
       },
