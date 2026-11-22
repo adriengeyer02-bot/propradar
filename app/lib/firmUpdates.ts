@@ -140,7 +140,7 @@ export function getFirmUpdate(slug: string): FirmUpdate | undefined {
 }
 
 /** Align the entire public profile with the dated V5 evidence, not just the score ring. */
-function applyPublishedV5Evidence(firm: PropFirm, audit: NonNullable<ReturnType<typeof getPublishedV5Score>>): PropFirm {
+function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<ReturnType<typeof getPublishedV5Score>>, 'afterRules' | 'checkedOn' | 'positivePayoutEvidence' | 'contractingEntityVerified'>): PropFirm {
   const independent = audit.positivePayoutEvidence;
   const proof: PayoutProof | undefined = independent ? {
     date: audit.checkedOn,
