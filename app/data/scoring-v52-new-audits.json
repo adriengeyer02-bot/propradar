@@ -1,0 +1,7 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-22",
+  "status": "NO_NEW_SCORECARD_APPROVED_YET",
+  "audits": [],
+  "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
+}
