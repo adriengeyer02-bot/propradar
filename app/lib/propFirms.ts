@@ -12252,7 +12252,7 @@ const universePropFirms: PropFirm[] = [
     slug: 'indigo-trader-funding',
     name: 'Indigo Trader Funding',
     website: 'https://indigotraderfunding.com/',
-    status: 'À surveiller',
+    status: 'Fermée',
     score: 31,
     founded: 2023,
     priceFrom: 0,
@@ -12262,8 +12262,8 @@ const universePropFirms: PropFirm[] = [
     ],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'No usable official website, legal documents or operating-status proof was captured for Indigo Trader Funding. Exact-name article/news searches did not surface reliable mainstream or financial-press coverage for the prop-firm brand. Treat as unverified until a current domain, entity and terms are sourced.',
-    auditSourcesChecked: ['Official-looking URL reachability', 'Trustpilot search', 'Exact-name article/news search'],
+      'Indigo Trader Funding announced cessation of trading in August 2024. Public reporting documents its UK company dissolution on 5 November 2024. Archived for historical research only; no new account purchases. Customer refund outcomes are not independently confirmed.',
+    auditSourcesChecked: ['Indigo Trader Funding closure announcement reported by BrokersView (2024-08-22)', 'PropFirmly company closure and Companies House dissolution timeline (2026-10-25)', 'Historical company register reference'],
     regulatoryAudit: {
       riskLevel: 'High',
       lastChecked: '2026-07-08',
