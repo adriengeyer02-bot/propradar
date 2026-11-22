@@ -4454,8 +4454,8 @@
           ]
         },
         "B1": {
-          "points": 3,
-          "reason": "Le contrat et les FAQ réservent des contrôles et refus pour violations de stratégie, sans droit clairement opposable aux gains avant validation, et avec sanctions pouvant atteindre le compte. B1=3 selon les clauses disponibles.",
+          "points": 0,
+          "reason": "FOXX official Terms §5.1 disent que la sélection d'un trader entraîne un accord de trading avec « Bespoke Funding », société distincte non identifiée ailleurs dans le footer qui liste Foxx Limited et Semizu L.L.C.-FZ. Sans contrat funded du débiteur et protection des gains acquis opposable au consommateur, B1=0 pour le risque structurel de contrepartie (ne constitue pas une allégation de non-paiement).",
           "sources": [
             "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
             "https://www.foxx-funded.com/faqs/"
@@ -4463,10 +4463,10 @@
         },
         "B2": {
           "points": 7,
-          "reason": "La politique interdit « all-or-nothing » et changements de style qualifiés de gambling sans seuil universel complet; des trades peuvent être exclus ou l'accès supprimé. Une ambiguïté B2 −3 seulement, pas de déduction pour les limites chiffrées de 2% par trade.",
+          "reason": "Terms §4.4 interdisent tout trading que la firme estime nuisible à sa relation avec les brokers, sans critère objectif précis, avec résiliation du programme comme effet. Un fait de trading vague vaut B2 −3 ; l'incertitude sur le contrat funded est traitée en B1/D3, pas soustraite une seconde fois ici.",
           "sources": [
-            "https://www.foxx-funded.com/faqs/",
-            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf"
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/"
           ],
           "negativeFactIds": [
             "foxx-funded-ambiguite-nov2026"
@@ -4513,10 +4513,11 @@
           ]
         },
         "D3": {
-          "points": 2,
-          "reason": "Le site affirme « real transfers » et « trade firm's money » tout en indiquant que les comptes funded sont des démonstrations et que les rewards dépendent de l'accord individuel. D3=2 faute de concordance parfaite.",
+          "points": 0,
+          "reason": "Incohérence contractuelle importante : le footer présente Foxx Limited et Semizu, tandis que les CGU §5.1 désignent Bespoke Funding comme contrepartie du trader accepté; des pages marketing parlent par ailleurs de « real payouts » tout en déclarant la simulation. Tant qu'une version corrigée du contrat ou l'accord de la contrepartie n'est pas obtenu, D3=0.",
           "sources": [
-            "https://www.foxx-funded.com/",
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/",
             "https://www.foxx-funded.com/payout/"
           ]
         },
@@ -4544,9 +4545,9 @@
           "points": 3,
           "program": "Foxx 1-Step / Instant simulated",
           "phase": "Évaluation/funded et vérification de stratégie avant récompense",
-          "clause": "Interdiction de stratégies all-or-nothing, de changements brusques et de conduite assimilée au gambling, sans métrique commune documentée selon chaque plan.",
+          "clause": "Terms §4.4 interdit toute activité de trading jugée nuisible à la relation avec les brokers sans définition chiffrée; des sanctions de terminaison sont prévues.",
           "consequence": "La firme peut sanctionner au contrôle une technique conforme aux pertes chiffrées, sans que la qualification soit prévisible.",
-          "source": "https://www.foxx-funded.com/faqs/"
+          "source": "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf"
         }
       ],
       "trustpilotActiveNotice": true,
@@ -4596,10 +4597,10 @@
         },
         "B2": {
           "points": 7,
-          "reason": "Des interdictions de style (trading abusif, exploitation de règles, comportement assimilé au gambling) apparaissent dans l'écosystème d'aide et de conditions, sans critères quantifiés exhaustifs par produit. Un seul défaut de définition B2 −3, les conditions news et consistency chiffrées restant sans malus.",
+          "reason": "Le guide officiel « Prohibited Trading Styles/Strategy » du 17 août 2026 laisse une appréciation ouverte de « one-sided bets », changement de trading style, prise de risque inhabituelle et « opposite-direction recovery » au-delà de la fenêtre indicative de dix minutes. La firme peut supprimer profits, réduire split et refuser withdrawal; B2 −3 pour un défaut de clarté de stratégie, sans recompter l'effet reward en B1.",
           "sources": [
-            "https://sfxfunded.com/docs/terms-of-service",
-            "https://sfxfunded.com/compare-plans"
+            "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy",
+            "https://sfxfunded.com/docs/terms-of-service"
           ],
           "negativeFactIds": [
             "sfx-funded-ambiguite-nov2026"
@@ -4607,10 +4608,10 @@
         },
         "C1": {
           "points": 7,
-          "reason": "Les CGU et le footer situent l'exploitation commerciale à l'IFZA Dubai, identifiant SFX Funded et sa structure locale annoncée; le nom légal complet et l'entité débitrice des rewards demandent un rapprochement de l'immatriculation : C1=7 partiel.",
+          "reason": "Le footer officiel des conditions nomme SFX International FZCO comme opérateur de SFX Funded, avec adresse IFZA Dubai, tandis que les services technologiques peuvent être portés par affiliées. C1=7 pour opérateur contractant déclaré, sans certificat officiel de rôle du débiteur reward et du checkout.",
           "sources": [
-            "https://sfxfunded.com/about",
-            "https://sfxfunded.com/docs/terms-of-service"
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://sfxfunded.com/contact"
           ]
         },
         "C2": {
@@ -4674,9 +4675,9 @@
           "points": 3,
           "program": "SFX Funded Ascend / Rapid / Instant",
           "phase": "Évaluation/funded et vérification de stratégie avant récompense",
-          "clause": "Clauses de comportement abusif/gambling ou de contournement de l'esprit des programmes, sans seuil transversal complet sur les produits SFX.",
+          "clause": "Official SFX help guide (17 Aug 2026) : « opposite-direction recovery » possible après 10-min window, « one-sided bets » et stratégie jugée irrationnelle; sanctions de payout à la discrétion de risk team.",
           "consequence": "L'équipe risque peut rejeter un trader par qualification ouverte de stratégie lors du payout.",
-          "source": "https://sfxfunded.com/docs/terms-of-service"
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
         }
       ],
       "trustpilotActiveNotice": true,
