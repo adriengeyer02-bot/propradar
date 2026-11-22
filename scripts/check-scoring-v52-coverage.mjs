@@ -4,6 +4,7 @@ import converted from '../app/data/scoring-v52-all-existing-audits-2026-11-21.js
 import published from '../app/data/scoring-v52-published.json' with {type:'json'};
 import native from '../app/data/scoring-v52-new-audits.json' with {type:'json'};
 import statuses from '../app/data/scoring-v52-c04-operational-status-review-2026-11-22.json' with {type:'json'};
+import {computeV52Scorecard} from '../app/lib/scoringV52.ts';
 const unique=new Set(queue.rows.map(x=>x.slug));
 assert.equal(queue.version,'5.2');
 assert.equal(queue.rows.length,122);
@@ -31,7 +32,9 @@ assert.deepEqual(new Set(published.approvals.map(x=>x.slug)),new Set(queue.rows.
 for(const row of queue.rows){
   const migrated=converted.rows.find(x=>x.slug===row.slug);
   if(row.state==='v52_native_score_proposal_needs_approval') {
-    assert.equal(row.v52Candidate,native.audits.find(x=>x.slug===row.slug)?.criteria&&native.audits.find(x=>x.slug===row.slug)?.criteria?Object.values(native.audits.find(x=>x.slug===row.slug).criteria).reduce((s,c)=>s+c.points,0):NaN,row.slug+' native score differs');
+    const audit=native.audits.find(x=>x.slug===row.slug);
+    assert.ok(audit,row.slug+' native audit missing');
+    assert.equal(row.v52Candidate,computeV52Scorecard(audit).final,row.slug+' native final score differs');
     assert.equal(Boolean(migrated),false,'Native score wrongly counted as mechanical migration');
   } else if(row.v52Candidate!==null){assert.ok(migrated);assert.equal(row.v52Candidate,migrated.v52)}
   else assert.equal(Boolean(migrated),false,'Unlisted converted firm '+row.slug);
