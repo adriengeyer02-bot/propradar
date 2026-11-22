@@ -223,6 +223,48 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
         'Product-specific futures payout FAQ and independent-incident review',
       ],
     } : {}),
+    // The 17 November Titan profile incorrectly described the UK supplier's
+    // strike-off action as active. Companies House filing history shows the
+    // action was SUSPENDED on 23 October 2026. Preserve outstanding
+    // compliance concerns, without asserting an ongoing unsuspended strike-off.
+    ...(native && firm.slug === 'titan-capital-markets' ? {
+      listedDomainWarning: 'UK supplier TFT TITAN SOLUTIONS LIMITED (15229528) is ACTIVE; compulsory strike-off action was SUSPENDED on 23 October 2026 according to Companies House filing history. Outstanding filing requirements still warrant monitoring. Titan contracts name multiple parties; Trustpilot withholds its rating after a guidelines breach. Verify the contracting party, funded rules and KYC before buying. Purchase links remain disabled pending clarification.',
+      regulatoryAudit: {
+        ...firm.regulatoryAudit,
+        lastChecked: audit.checkedOn,
+        summary: 'Companies House confirms TFT TITAN SOLUTIONS LIMITED (UK 15229528) is active and that compulsory strike-off action was SUSPENDED on 23 October 2026, not an ongoing active unsuspended proposal. Accounts/confirmation obligations still require verification. The terms also mention TG Markets LTD and an external merchant of record, whose roles require reconciliation. Trustpilot withheld the domain-matched score after a guidelines breach; that private platform notice is distinct from UK corporate status.',
+        entities: firm.regulatoryAudit.entities.map((entity) => entity.name.toLowerCase().includes('tft titan')
+          ? {...entity, role:'UK service supplier identified in Titan terms; ACTIVE on Companies House, strike-off action SUSPENDED 23 October 2026; verify overdue statutory filings'}
+          : entity),
+        regulatoryStatus: [
+          'UK Companies House filing history for TFT TITAN SOLUTIONS LIMITED 15229528: ACTIVE, with compulsory strike-off action SUSPENDED on 23 October 2026; no completed dissolution is asserted.',
+          'Any overdue accounts or confirmation filings remain compliance matters to verify, without describing the strike-off action as ongoing.',
+          'Titan terms also mention TG Markets LTD and external payment agents; current funded and reward obligations require contract-by-contract review.',
+        ],
+        redFlags: [
+          'Corporate filings and previously proposed compulsory strike-off require continued monitoring; action recorded as SUSPENDED on 23 October 2026.',
+          'Trustpilot rating withheld following a platform-guidelines breach; no duplicate score deduction.',
+          'Supplier/contracting party and payout merchant terminology differs across official documents.',
+          'Fast payout claims have no fully independent recipient-level settlement proof in the V5.2 dossier.',
+        ],
+        sources: [
+          ...firm.regulatoryAudit.sources.filter((item) => !item.url.includes('company-information.service.gov.uk/company/15229528')),
+          {label:'UK Companies House — TFT TITAN SOLUTIONS LIMITED filing history',url:'https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history'},
+        ],
+      },
+      incidentsDetails: (firm.incidentsDetails ?? []).map((item) =>
+        /(?:active proposal to strike off|active strike-off proposal)/i.test(item)
+          ? '2026-11-22 — Updated Companies House check: UK supplier TFT Titan Solutions Limited 15229528 remains ACTIVE, but the compulsory strike-off action was SUSPENDED on 23 October 2026; verify pending statutory filings. Source: https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history'
+          : item),
+      reviewSignals: {
+        ...firm.reviewSignals,
+        ...(auditedTrustpilot === undefined ? {} : {trustpilotRatingWithheld: auditedTrustpilot}),
+        payoutIssues: (firm.reviewSignals.payoutIssues ?? []).map((item) =>
+          /(?:active proposal to strike off|active strike-off proposal)/i.test(item)
+            ? 'Companies House strike-off action for the UK supplier was SUSPENDED on 23 October 2026; statutory filings still require follow-up.'
+            : item),
+      },
+    } : {}),
   };
 }
 
