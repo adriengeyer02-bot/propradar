@@ -12255,7 +12255,7 @@ const universePropFirms: PropFirm[] = [
     slug: 'indigo-trader-funding',
     name: 'Indigo Trader Funding',
     website: 'https://indigotraderfunding.com/',
-    status: 'Fermée',
+    status: 'À surveiller',
     score: 31,
     founded: 2023,
     priceFrom: 0,
@@ -12265,8 +12265,8 @@ const universePropFirms: PropFirm[] = [
     ],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Indigo Trader Funding announced cessation of trading in August 2024. Public reporting documents its UK company dissolution on 5 November 2024. Archived for historical research only; no new account purchases. Customer refund outcomes are not independently confirmed.',
-    auditSourcesChecked: ['Indigo Trader Funding closure announcement reported by BrokersView (2024-08-22)', 'PropFirmly company closure and Companies House dissolution timeline (2026-10-25)', 'Historical company register reference'],
+      'No usable official website, legal documents or operating-status proof was captured for Indigo Trader Funding. Exact-name article/news searches did not surface reliable mainstream or financial-press coverage for the prop-firm brand. Treat as unverified until a current domain, entity and terms are sourced.',
+    auditSourcesChecked: ['Official-looking URL reachability', 'Trustpilot search', 'Exact-name article/news search'],
     regulatoryAudit: {
       riskLevel: 'High',
       lastChecked: '2026-07-08',
@@ -12576,15 +12576,15 @@ const universePropFirms: PropFirm[] = [
     slug: 'infinity-forex-funds',
     name: 'Infinity Forex Funds',
     website: 'https://infinityforexfunds.com/',
-    status: 'Fermée',
+    status: 'À surveiller',
     score: 34,
     founded: 2023,
     priceFrom: 0,
     incidents: 4,
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Archived 2026-11-22: no active challenge sales; current official Terms of Use explicitly say no products are sold. Current domain checked. infinityforexfunds.com is now an informational forex toolkit / education site rather than a captured prop-firm checkout. Its Terms of Use say it is purely informational, does not provide financial services, does not sell products and does not solicit investments or funds from users.',
-    auditSourcesChecked: ['Current domain checked 2026-11-22', 'Terms of Use checked 2026-11-22', 'Privacy Policy', 'CNMV republished AFM warning', 'Trustpilot search'],
+      'Current domain checked. infinityforexfunds.com is now an informational forex toolkit / education site rather than a captured prop-firm checkout. Its Terms of Use say it is purely informational, does not provide financial services, does not sell products and does not solicit investments or funds from users.',
+    auditSourcesChecked: ['Current domain', 'Terms of Use', 'Privacy Policy link', 'Trustpilot search'],
     regulatoryAudit: {
       riskLevel: 'High',
       lastChecked: '2026-07-08',
