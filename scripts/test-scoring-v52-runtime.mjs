@@ -10,7 +10,16 @@ const allowed=['A1','A2','A3','B1','B2','C1','C2','C3','D1','D2','D3','E1','E2']
 assert.equal(all.rows.length,41,'All source-backed V5 files must be preserved');
 assert.equal(gate.version,'5.2');
 assert.equal(gate.approvals.length,oldGate.approvals.length,'No silent approval of unreviewed firms');
-assert.equal(intake.audits.length,0,'No invented new scorecards without review');
+assert.equal(intake.audits.length,1,'Exactly one verified native V5.2 scorecard in the intake');
+const first=intake.audits[0];
+assert.equal(first.slug,'funded7');
+assert.equal(first.status,'proposition');
+assert.equal(first.checkedOn,'2026-11-22');
+assert.equal(first.ruleDeductions.length,1);
+assert.equal(first.criteria.B2.points,7);
+assert.equal(first.trustpilotActiveNotice,false);
+assert.equal(computeV52Scorecard(first).final,56,'Funded7 native score and caps must remain in sync');
+assert.ok(!gate.approvals.some(a=>a.slug===first.slug),'Native proposal must not become public without owner approval');
 const active=new Set(), listed=new Set();
 for(const row of all.rows){
   assert.ok(!listed.has(row.slug),'Duplicate V5.2 migration '+row.slug);
