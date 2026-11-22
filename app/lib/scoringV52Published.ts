@@ -1,7 +1,7 @@
 /**
- * Controlled V5.2 rollout: ONLY the same 11 V5 scorecards already approved,
- * recalculated on the frozen, source-linked corpus. Other V5.2 candidates are
- * strictly NOT public until their individual proof and contract audit passes.
+ * V5.2 published gate: 11 prior-approved migrations + 28 native source-linked
+ * scores explicitly approved by the owner on 2026-11-22. The 24 other mechanical
+ * conversions remain private until each evidence/contract review is complete.
  */
 import whitelist from '../data/scoring-v52-published.json';
 import oldWhitelist from '../data/scoring-v5-published.json';
@@ -55,12 +55,22 @@ export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
   if(!isPublishedV52(firm.slug,latestScoreReview)) return undefined;
   const origin=approved.get(firm.slug)!;
   const card=origin.card;
-  const currentFlag=Boolean(firm.reviewSignals.trustpilotRatingWithheld);
+  // A native audit explicitly examined the Trustpilot withholding notice at its
+  // checkedOn date. Earlier site metadata can be stale: use the newer audited
+  // snapshot unless an even newer public-signal check supersedes it.
+  const nativeNoticeCurrent=origin.kind==='native' && !(firm.reviewSignals.lastSignalCheck>card.checkedOn);
+  const currentFlag=nativeNoticeCurrent?origin.card.trustpilotActiveNotice:Boolean(firm.reviewSignals.trustpilotRatingWithheld);
   const result=origin.kind==='migration'
     ?computeV52Candidate({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag})
     :computeV52Scorecard({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag});
   return {...result,
     checkedOn:card.checkedOn,
+    nativeAudit:origin.kind==='native'?{
+      A3:card.criteria.A3.points,
+      B1:card.criteria.B1.points,
+      C1:card.criteria.C1.points,
+      trustpilotNotice:nativeNoticeCurrent?origin.card.trustpilotActiveNotice:undefined,
+    }:undefined,
     independentPayoutProofLimited:card.criteria.A3.points<3,
     contractProtection:{points:result.criteriaPoints.B1,reason:card.criteria.B1.reason,source:card.criteria.B1.sources[0]},
     contractingEntityVerified:card.criteria.C1.points>=7,
