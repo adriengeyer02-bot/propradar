@@ -1,7 +1,7 @@
 {
   "version": "5.2",
   "effectiveDecision": "2026-11-22",
-  "publication": "ONLY prior approved V5 slugs are eligible for controlled V5.2 rollout. 30 further mechanically converted candidates in PR #246 remain unapproved pending current proof review. This whitelist is applied only after merge and CI.",
+  "publication": "Owner explicitly authorized publication of all 28 native 13-criterion V5.2 audits on 2026-11-22, alongside the 11 previously approved V5 migrations. Trustpilot evidence and legal identities remain source-dated; 24 mechanically migrated candidates are excluded pending verification. Scores reflect editorial risk assessment (not payment certifications).",
   "approvals": [
     {
       "slug": "alpha-capital-group",
@@ -79,6 +79,146 @@
       "expectedFinal": 62,
       "sourceV5Final": 67,
       "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "funded7",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 56
+    },
+    {
+      "slug": "top-one-futures",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 67
+    },
+    {
+      "slug": "wegetfunded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 52
+    },
+    {
+      "slug": "purdia-capital",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 62
+    },
+    {
+      "slug": "daytraders-com",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 52
+    },
+    {
+      "slug": "equity-edge",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 53
+    },
+    {
+      "slug": "alpine-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 59
+    },
+    {
+      "slug": "funded-squad",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 41
+    },
+    {
+      "slug": "orion-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 60
+    },
+    {
+      "slug": "wsfunded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 59
+    },
+    {
+      "slug": "moneta-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 59
+    },
+    {
+      "slug": "tradexprop",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 51
+    },
+    {
+      "slug": "funder-trading",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 52
+    },
+    {
+      "slug": "fundyourfx",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 58
+    },
+    {
+      "slug": "monevis",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 54
+    },
+    {
+      "slug": "fundedhive",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 49
+    },
+    {
+      "slug": "sabiotrade",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 42
+    },
+    {
+      "slug": "clarity-traders",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 48
+    },
+    {
+      "slug": "tradersedgefx",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 55
+    },
+    {
+      "slug": "lvlup-futures",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 57
+    },
+    {
+      "slug": "atmos-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 52
+    },
+    {
+      "slug": "tx3-funding",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 60
+    },
+    {
+      "slug": "fundedelite",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 51
+    },
+    {
+      "slug": "upcomers",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 56
+    },
+    {
+      "slug": "funding-your-trades",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 52
+    },
+    {
+      "slug": "funded-trader-markets",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 58
+    },
+    {
+      "slug": "funded-futures-network",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 55
+    },
+    {
+      "slug": "directfundedtrader",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 47
     }
   ]
 }
