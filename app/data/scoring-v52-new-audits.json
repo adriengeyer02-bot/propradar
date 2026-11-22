@@ -2395,6 +2395,638 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "tradersedgefx",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les tableaux de plans TEFX publient 15 ou 30 jours depuis le premier trade, 5 ou 10 jours de trading, splits 70/30 ou 50/50, plafonds de 3 000 à 12 000 USD et demande en phase simulated live. Quatre items A1 documentés, frais du canal de versement non vérifiés.",
+          "sources": [
+            "https://tradersedgefx.com/",
+            "https://tradersedgefx.com/Instant-Simulated-TEFX-FAQs/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis mitigés et les annonces maison ne documentent ni 12 mois de règlements indépendants datés ni deux refus contractuellement injustifiés corroborés. A2 neutre 6, pas un certificat de fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/tradersedgefx.com",
+            "https://tradersedgefx.com/Overall-Rules-and-Conditions/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Des déclarations de récompense et témoignages figurent sur les pages TEFX, mais ni attestations de paiements compensés ni multi-bénéficiaires indépendamment attribués à TradersEdgeFX LLC ne sont disponibles : A3=1.",
+          "sources": [
+            "https://tradersedgefx.com/",
+            "https://www.trustpilot.com/review/tradersedgefx.com"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les CGU confèrent à TEFX un pouvoir large de refus de service et d'exclusion du funded (§3), mais la confiscation d'un reward déjà approuvé n'est pas identifiée de façon suffisamment directe dans les pièces lues. B1 provisoire 6 et confiance faible.",
+          "sources": [
+            "https://tradersedgefx.com/terms-of-services/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les CGU interdisent pratiques entraînant de simples « reasonable concerns » pour le broker, stratégies à « sole discretion » et exposition disproportionnée non définie; risque de fermeture indépendant du refus de rewards : B2=7 après un −3.",
+          "sources": [
+            "https://tradersedgefx.com/terms-of-services/"
+          ],
+          "negativeFactIds": [
+            "tradersedgefx-trading-ambiguity-20261122"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les pages marketing identifient TradersEdgeFX LLC, et les termes indiquent une société aux Bahamas; le numéro de registre et le vendeur effectivement facturant chaque produit ne sont pas vérifiés. C1=4, lien juridique incomplet.",
+          "sources": [
+            "https://tradersedgefx.com/terms-of-services/",
+            "https://tradersedgefx.com/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "L'activité du portail ne démontre pas l'état du registre bahaméen pour TradersEdgeFX LLC, ni l'existence du contrat funded distinct. C2=3 faute de certificat officiel récent, sans conclure à une dissolution.",
+          "sources": [
+            "https://tradersedgefx.com/terms-of-services/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune alerte réglementaire actuelle et nominative n'est établie dans les pièces recensées ; enquête exhaustive dans les Bahamas et autres juridictions non finalisée. C3=2 provisoire; aucune licence broker automatique exigée.",
+          "sources": [
+            "https://tradersedgefx.com/terms-of-services/",
+            "https://www.trustpilot.com/review/tradersedgefx.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Le comparatif des 1-Step, 2-Step et Instant expose prix, objectifs, drawdown, restrictions sur les stratégies et critères de pays/KYC; quatre familles D1 sont documentées sur le site, sans juger la sévérité ordinaire comme faute.",
+          "sources": [
+            "https://tradersedgefx.com/",
+            "https://tradersedgefx.com/Overall-Rules-and-Conditions/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les CGU sont accessibles mais l'entrée en vigueur actuelle et l'effet des amendements sur des comptes déjà achetés ne sont pas datés par cohorte; aucun changement rétroactif concret prouvé, donc D2=2 sans déduction B2 supplémentaire.",
+          "sources": [
+            "https://tradersedgefx.com/terms-of-services/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les descriptifs marketing et tables de compte contiennent des différences de split selon produits et des libellés génériques 80% qui doivent être rattachés à la bonne offre; le funded agreement n'est pas publié au complet, D3=2.",
+          "sources": [
+            "https://tradersedgefx.com/",
+            "https://tradersedgefx.com/terms-of-services/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Des avis et catalogues TEFX sont traçables depuis 2024, ce qui étaye au moins 18 mois de service, mais pas trois ans d'exploitation démontrée. E1=4 pour ancienneté opérationnelle raisonnablement vérifiée.",
+          "sources": [
+            "https://www.trustpilot.com/review/tradersedgefx.com",
+            "https://tradersedgefx.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Centre FAQ, emails de réclamation et réponses publiques aux avis existent, mais aucune procédure d'appel indépendante avec résultats audités n'est établie : E2=2, sans assimiler réactivité et résolution.",
+          "sources": [
+            "https://tradersedgefx.com/Overall-Rules-and-Conditions/",
+            "https://www.trustpilot.com/review/tradersedgefx.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "tradersedgefx-trading-ambiguity-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "TEFX · 1-Step, 2-Step, Instant",
+          "phase": "Trading et revue de compte avant funded/reward",
+          "clause": "CGU §3 : one-sided bets, justified concerns of broker harm et disruptive practices à discrétion unilatérale.",
+          "consequence": "Un trading respectant drawdown et jours peut être déclaré non conforme sans seuil prédéfini, entraînant clôture et perte d'accès.",
+          "source": "https://tradersedgefx.com/terms-of-services/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "lvlup-futures",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 10,
+          "reason": "Les comparatifs Lvlup/Starter indiquent 14 jours, splits 80% et 100%, consistency 40%, montants plafonnés par produits, procédure de demande et absence de frais internes de retrait. Les cinq composantes d'information A1 sont publiques, sans présumer d'une payoutabilité.",
+          "sources": [
+            "https://lvlupfutures.com/",
+            "https://lvlupfutures.com/evaluation",
+            "https://lvlupfutures.com/rules"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "La marque n'a qu'un historique d'avis récents en 2026 et ne possède pas 12 mois de paiements multi-clients vérifiés indépendamment; des certificats maison ne suffisent pas. A2=6 neutre en absence d'incidents répondant au seuil de preuve.",
+          "sources": [
+            "https://www.trustpilot.com/review/lvlupfutures.com",
+            "https://lvlupfutures.com/faqs"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site propose des certificats de payout et des chiffres annoncés, mais sans preuve de transaction finale vérifiée chez Prop Account LC, émetteur, bénéficiaire et programme. A3=1 promotionnel uniquement.",
+          "sources": [
+            "https://lvlupfutures.com/",
+            "https://www.trustpilot.com/review/lvlupfutures.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les conditions opposables de Dashboard Analytix prévoient la confiscation de fees owed et le retrait de trades en cas de prohibited trading, sans recours encadré sur rewards acquis; B1=3 provisoire, à revalider sur le Trader Agreement séparé.",
+          "sources": [
+            "https://dashboardanalytix.com/client-terms-and-policies/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le contrat de l'opérateur permet de définir à sa discrétion le changement de stratégie en funded et le gambling excessif sans seuil exhaustif. Seul ce fait de trading vague coûte 3 points; le drawdown EOD et les 5 jours chiffrés ne sont pas sanctionnés.",
+          "sources": [
+            "https://dashboardanalytix.com/client-terms-and-policies/"
+          ],
+          "negativeFactIds": [
+            "lvlup-futures-trading-ambiguity-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "L'imprint allemand identifie LVLUP One UG (HRB 23184), mais explicite que le vendeur d'évaluation est Prop Account LLC et le contrat funded relève de Prop Account LC. Rôles marketing et vendeur décrits, identités externes non complètement rapprochées : C1=7.",
+          "sources": [
+            "https://lvlupfutures.com/imprint",
+            "https://dashboardanalytix.com/client-terms-and-policies/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro de registre allemand figure sur l'imprint, mais le registre américain/cayman du vendeur réel et le dernier good standing des parties non recoupés sur source officielle. C2=3, présence web insuffisante à elle seule.",
+          "sources": [
+            "https://lvlupfutures.com/imprint",
+            "https://dashboardanalytix.com/client-terms-and-policies/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure officielle grave contre les entités exactes n'est démontrée dans ce contrôle partiel. Le statut réglementaire d'une évaluation simulée ne doit pas être assimilé à celui d'un broker : C3=2 tant que recherche exhaustive incomplète.",
+          "sources": [
+            "https://lvlupfutures.com/imprint",
+            "https://dashboardanalytix.com/client-terms-and-policies/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Catalogue officiel présente prix et frais d'activation, objectifs, trailing drawdown et consistency par plan, restrictions de trading et accès KYC/pays; les quatre familles D1 ont des pages explicites et peuvent être comparées par programme.",
+          "sources": [
+            "https://lvlupfutures.com/",
+            "https://lvlupfutures.com/rules"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les conditions de l'opérateur sont consultables mais la page liée ne fixe pas de garantie lisible pour anciennes cohortes et ses clauses autorisent modifications unilatérales. Sans preuve d'une modification effectivement rétroactive, D2=2 seulement.",
+          "sources": [
+            "https://dashboardanalytix.com/client-terms-and-policies/"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "L'imprint distingue clairement LVLUP UG, Prop Account LLC et Prop Account LC, et les pages Starter/Lvlup différencient split et activation. Le checkout externe restant à rapprocher, deux items de cohérence D3 sont remplis.",
+          "sources": [
+            "https://lvlupfutures.com/imprint",
+            "https://lvlupfutures.com/evaluation"
+          ]
+        },
+        "E1": {
+          "points": 1,
+          "reason": "Les premières traces de Lvlup Futures sont observables en avril-mai 2026 : moins de six mois d'exploitation démontrés en novembre n'est pas certain; faute de 6 mois pleinement attestés depuis les premières ventes, palier E1=1 prudent.",
+          "sources": [
+            "https://www.trustpilot.com/review/lvlupfutures.com",
+            "https://lvlupfutures.com/"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Email, téléphone et support live sont publiés et les avis décrivent une joignabilité réelle; pas de procédure d'appel externe prouvée, E2=3 pour trois indicateurs de support sans mesure de résolution complète.",
+          "sources": [
+            "https://lvlupfutures.com/imprint",
+            "https://www.trustpilot.com/review/lvlupfutures.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "lvlup-futures-trading-ambiguity-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Lvlup Futures · Prop Account LLC assessments / Prop Account LC Trader Agreement",
+          "phase": "Trading, revue de stratégie et passage funded",
+          "clause": "Conditions Dashboard Analytix : stratégie identique entre assessment et funded à la seule appréciation de l'entreprise, gambling excessif sans pourcentage universel.",
+          "consequence": "Le fait de changer de stratégie ou de risquer une portion jugée substantielle peut déclencher un breach après coup, sans seuil commun clair.",
+          "source": "https://dashboardanalytix.com/client-terms-and-policies/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "atmos-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 50,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les règles Atmos indiquent $100 minimum, retrait tous les 14 jours, traitement annoncé 2–5 jours ouvrés, méthode dashboard et conditions de funded. Frais par canal et plafonds exacts selon Nova/2-Step/Instant ne sont pas exhaustifs, donc A1=8.",
+          "sources": [
+            "https://atmosfunded.com/rules/",
+            "https://help.atmosfunded.com/en/articles/12380605-how-payouts-work"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis incluent des témoignages contradictoires de règlements et refus, mais sans dossiers de règles, règlements dus et contre-preuves indépendantes nécessaires au seuil A2 négatif; aucune série 12 mois tierce établie : neutre 6.",
+          "sources": [
+            "https://www.trustpilot.com/review/atmosfunded.com",
+            "https://help.atmosfunded.com/en/articles/12380605-how-payouts-work"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site mentionne des versements et un courtier partenaire mais n'apporte pas une chaîne bancaire ou blockchain multi-bénéficiaires attribuée indépendamment à chaque programme. A3=1 et pas de transfert automatique de réputation de Taurex.",
+          "sources": [
+            "https://atmosfunded.com/",
+            "https://www.trustpilot.com/review/atmosfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les règles prévoient la perte de profits de compte lors de breach, sans recours contractuel suffisamment clair concernant les rewards acquis avant incident; aucun contrat funded individuel obtenu. B1=6 provisoire, ne pas inventer confiscation arbitraire d'un paiement approuvé.",
+          "sources": [
+            "https://atmosfunded.com/rules/",
+            "https://atmosfunded.com/legal/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le programme Anti-Gambling interdit « one-sided bets », « aggressive averaging » et changements de méthode significatifs sans seuil universel visible sur les règles principales, sanctions de profit removal ou closure : unique B2 −3.",
+          "sources": [
+            "https://atmosfunded.com/rules/"
+          ],
+          "negativeFactIds": [
+            "atmos-funded-trading-ambiguity-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Page légale rattache les produits et paiements à AtmosFunded Ltd HE471627 à Chypre, tandis que plusieurs pages désignent Atmos Global Ltd Comores comme opérateur de trading; rôles de contractualisation exacte insuffisamment réconciliés : C1=7.",
+          "sources": [
+            "https://atmosfunded.com/legal/",
+            "https://atmosfunded.com/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro chypriote et la société comorienne apparaissent sur le site, mais leur statut registre officiel actuel et qualité du débiteur du funded n'ont pas été recoupés par pièce récente indépendante. C2=3 sans accusation d'irrégularité.",
+          "sources": [
+            "https://atmosfunded.com/legal/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas d'avertissement juridique matériel nominatif officiellement vérifié dans le dossier et recherches complètes Chypre/Comores non finalisées. Une prop firm simulée ne devient pas broker régulé par son branding : C3=2 provisoire.",
+          "sources": [
+            "https://atmosfunded.com/legal/",
+            "https://www.trustpilot.com/review/atmosfunded.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les challenges, tarifs, objectifs, drawdown, restrictions news/EA et KYC/pays sont publiés par gamme, y compris Nova, 2-Step et Instant. Quatre items D1 couverts; règles exigeantes mais objectives n'enlèvent aucun point B2.",
+          "sources": [
+            "https://atmosfunded.com/rules/",
+            "https://atmosfunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Portail légal affiche des accords PDF datés et politiques de réclamation, mais leurs versions opérationnelles successives et applicabilité aux comptes existants n'ont pas été indépendamment déterminées : D2=4 pour accès et version seulement.",
+          "sources": [
+            "https://atmosfunded.com/legal/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les pages disent « All ... services » AtmosFunded Ltd à Chypre puis « trading exclusively » Atmos Global Ltd aux Comores, sans distinguer le contrat de trader par programme; cette dualité réduit la vérifiabilité D3=2.",
+          "sources": [
+            "https://atmosfunded.com/legal/",
+            "https://atmosfunded.com/rules/"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Historique de cette marque visible depuis 2025, sans preuve d'activité opérationnelle continue de 18 mois avant mai 2025. Palier 6–17 mois E1=2 et non l'âge plus long de Taurex.",
+          "sources": [
+            "https://www.trustpilot.com/review/atmosfunded.com",
+            "https://atmosfunded.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support et policy de complaint sont consultables, de nombreux avis reçoivent des réponses, mais aucun taux de résolution indépendant des réclamations n'est mesuré : E2=2, confiance faible.",
+          "sources": [
+            "https://atmosfunded.com/legal/",
+            "https://www.trustpilot.com/review/atmosfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "atmos-funded-trading-ambiguity-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Atmos · Nova, 2-Step, Instant",
+          "phase": "Trading funded et revue avant retrait",
+          "clause": "Règles publiques §9 : one-sided bets, aggressive averaging, significant changes of style interdits sans seuil transversal détaillé sur cette page.",
+          "consequence": "Un trade conforme au drawdown peut être qualifié de gambling, causant suppression des profits ou breach.",
+          "source": "https://atmosfunded.com/rules/"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "tx3-funding",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 50,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "FAQ TX3 distingue Flex 14 jours, Pro on-demand après journées requises, Instant Standard/Pro, caps et buffers, split 80% sur Flex, demande Rise et KYC. Quatre items A1 complets; tous frais du rail pour toutes gammes non recoupés.",
+          "sources": [
+            "https://faq.tx3funding.com/payout-requests",
+            "https://faq.tx3funding.com/payouts-and-withdrawal-policy",
+            "https://faq.tx3funding.com/payouts-guide-payouts-on-demand-pro-challenge"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Des avis récents signalent des paiements différés et comptes suspendus, mais les documents bancaires, échéances contractuelles et arbitrage des violations ne sont pas indépendamment corroborés à seuil A2 négatif. Neutre A2=6, non exonératoire.",
+          "sources": [
+            "https://www.trustpilot.com/review/www.tx3funding.com",
+            "https://faq.tx3funding.com/payouts-and-withdrawal-policy"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site et les avis publient des montants et délais de payout, sans échantillon indépendant de règlements finaux au nom de TX3 Funding FZCO et du bon produit Forex/Futures : A3=1.",
+          "sources": [
+            "https://www.tx3funding.com/en",
+            "https://www.trustpilot.com/review/www.tx3funding.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les Terms §7, §9, §11 autorisent forfeiture de payouts pour violation, soupçon de fraude, risk compliance, avec droit d'appel insuffisamment opposable aux gains acquis. B1=3, sous réserve du Customer Agreement spécifique.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "CGU listent explicitement copy trading non autorisé, collusion, exploitation de latence, automatisation et chargebacks; aucune clause de TRADING matérielle vaguement formulée avec perte de compte indépendante des pouvoirs de reward évalués en B1 n'a été démontrée. B2=10 sans malus inventé.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms",
+            "https://faq.tx3funding.com/payout-requests"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Terms désignent TX3 Funding FZCO (UAE) tandis que la home cite TX3 Funding LLC dans les technologies/plateformes. Le parcours vendeur/agent de paiement et les programmes Futures vs FX doivent être rapprochés : C1=7.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms",
+            "https://www.tx3funding.com/en"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Malgré la marque connue et les conditions actuelles, registre de formation de FZCO et statuts officiels de TX3 LLC n'ont pas été contrôlés à date : C2=3 provisoire, sans présumer activité légale ou radiation.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Les sources examinées ne suffisent pas à prouver un avertissement grave du régulateur applicable à cet opérateur et à cette simulation; contrôle officiel UAE et US incomplet. C3=2 neutre pour recherche réglementaire partielle.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms",
+            "https://www.trustpilot.com/review/www.tx3funding.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Pages FX et Futures différencient les coûts, objectifs, risques, restrictions, KYC et pays; quatre catégories D1 documentées. Une règle chiffrée de price-limit est une condition publiée, non une pénalité intrinsèque.",
+          "sources": [
+            "https://www.tx3funding.com/en",
+            "https://faq.tx3funding.com/payout-requests"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les Terms sont publics mais les changements peuvent être postés sans garantie explicitement opposable aux anciens comptes, et date de version visible insuffisante : D2=2 pour accès seulement.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "FAQ Flex/Pro/Instant précise les conditions par phase et la nature simulée, mais la distinction exacte entre TX3 FZCO et TX3 LLC et le checkout Futures n'est pas entièrement réconciliée : D3=4 pour deux points documentés.",
+          "sources": [
+            "https://www.tx3funding.com/en/terms",
+            "https://faq.tx3funding.com/payouts-guide-payouts-on-demand-pro-challenge"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Les anciens services de la marque TopTier Trader, actuellement TX3, remontent à 2023/24; l'histoire exacte des vendeurs et de l'offre doit rester distinguée. Palier 18–35 mois E1=4 conservateur.",
+          "sources": [
+            "https://www.trustpilot.com/review/www.tx3funding.com",
+            "https://www.tx3funding.com/en"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Help center et support email existent, et réponse aux tickets/avis est attestée ponctuellement; aucune validation indépendante du délai et du taux de résolution ne justifie davantage. E2=2.",
+          "sources": [
+            "https://faq.tx3funding.com/payout-requests",
+            "https://www.trustpilot.com/review/www.tx3funding.com"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "fundedelite",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 46,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Le centre d'aide détaille l'échéance du 1er retrait pour Instant/Elite et Flash, splits de 70 à 95%, minimums de jours et procédure. Les frais et caps par pays/taille ne sont pas tous clos, donc quatre groupes A1 +2 chacun.",
+          "sources": [
+            "https://faq.fundedelite.com/en/articles/17437349-when-can-i-request-a-payout",
+            "https://faq.fundedelite.com/en/articles/17437345-what-is-a-reward-and-how-much-do-i-keep",
+            "https://faq.fundedelite.com/en/articles/17437354-how-will-i-be-paid-and-what-are-the-fees"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis comprennent plusieurs contestations sur le contrôle IP et les gains, sans données indépendantes suffisantes pour qualifier deux refus injustifiés distincts sur la même convention. A2 neutre 6 et confiance faible, sans nier les litiges.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedelite.com",
+            "https://fundedelite.com/terms-and-conditions"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Des comptages marketing et témoignages ne constituent pas un rapprochement entre Quantum SRL, banques, bénéficiaires finaux et comptes funded. Pas de registre tiers complet de paiements compensés : A3=1.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedelite.com",
+            "https://fundedelite.com/terms-and-conditions"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Le contrat permet revues et interviews Risk Team à discrétion pendant le payout, sans recours protecteur explicite pour rewards acquis et avec retenue possible en cas de soupçon. B1=3 provisoire.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "§6.4 impose continuité de méthodologie « professional » et interdit le glissement vers « gambling » sans métrique générale; une stratégie non interdite numériquement peut être sanctionnée en funded, d'où B2=7 sur un seul fait.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "fundedelite-trading-ambiguity-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "CGU nomment Quantum SRL, Italie, P.IVA 03095010595, mais d'autres pages citent FundedElite Ltd Sainte-Lucie; la part exacte de chaque société dans le funded et le checkout reste à contrôler indépendamment. C1=7.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions",
+            "https://faq.fundedelite.com/en/articles/17437205-instant-and-instant-elite"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro fiscal italien est fourni mais la fiche officielle actuelle et le bon statut de l'entité Sainte-Lucie intervenant selon produit ne sont pas recoupés. C2=3 faute de preuve de good standing.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de mesure officielle grave nominative rattachée à l'opérateur contractant et à l'évaluation simulée confirmée, mais revue réglementaire complète non achevée. C3=2 provisoire, sans assimiler plainte à sanction.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions",
+            "https://www.trustpilot.com/review/fundedelite.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "CGU et FAQ publient prix, produits, objectifs, drawdowns, restrictions et KYC. Quatre familles D1 affichées, y compris les ratios Instant Elite et les jours minimum; pas de malus pour les limites chiffrées.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions",
+            "https://faq.fundedelite.com/en/articles/17437205-instant-and-instant-elite"
+          ]
+        },
+        "D2": {
+          "points": 6,
+          "reason": "CGU accessibles et datées dans leur version courante; §6.3 prévoit que les modifications des paramètres ne touchent pas les services achetés avant notification, donc D2=6 sur texte de protection, sans extrapoler une protection de toute clause.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Documentation distingue les Payout Credits non retirables et vraies récompenses, mais l'existence de plusieurs entités et les interviews étendues ne permet pas d'attribuer toute la cohérence du parcours contractuel. D3=2.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions",
+            "https://faq.fundedelite.com/en/articles/17437345-what-is-a-reward-and-how-much-do-i-keep"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Références de lancement en 2025-2026; ancienneté prop firm démontrée de 6–17 mois, pas trois ans; E1=2, distincte de l'âge de l'entreprise italienne.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedelite.com",
+            "https://fundedelite.com/terms-and-conditions"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support officiel et réponses ponctuelles existent, mais traitement des litiges de payout et procédures de recours opposables insuffisamment indépendamment validés : E2=2.",
+          "sources": [
+            "https://fundedelite.com/terms-and-conditions",
+            "https://www.trustpilot.com/review/fundedelite.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "fundedelite-trading-ambiguity-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "FundedElite · evaluations / Elite simulated",
+          "phase": "Évaluation et contrôle de continuité de stratégie en funded",
+          "clause": "§6.4 : bascule d'une stratégie professionnelle vers une stratégie de gambling, sans seuil de risque chiffré transversal.",
+          "consequence": "Le trader peut être disqualifié par appréciation de professionnalisme malgré des objectifs et drawdowns respectés.",
+          "source": "https://fundedelite.com/terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
