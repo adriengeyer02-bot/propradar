@@ -1,7 +1,142 @@
 {
   "version": "5.2",
   "checkedOn": "2026-11-22",
-  "status": "NO_NEW_SCORECARD_APPROVED_YET",
-  "audits": [],
+  "status": "FIRST_NATIVE_V52_SCORECARD_PROPOSED_NOT_PUBLIC",
+  "audits": [
+    {
+      "slug": "funded7",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 55,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Payouts chaque 7 jours, demande en dashboard avec KYC, règles QC statistique et caps de 10 000 USD par client/mois ; split 80/20 et minimum 100 USD connus, mais frais de chaque rail non exhaustifs. +2 délai, +2 conditions, +2 plafonds, +2 démarche, 0 split+frais.",
+          "sources": [
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/",
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/rule-1-payout-criteria/",
+            "https://funded7.com/challenge-comparison/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Aucun incident grave au seuil de cas indépendamment documentés n'a été confirmé, mais aucune série de virements indépendants sur douze mois ne justifie A2 9/10. Avis clients contradictoires sans rapprochement bancaire : score neutre V5.2 de 6, et non preuve de fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/funded7.com",
+            "https://propanalyse.com/firms/funded7/legit/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Annonce de paiements et témoignages par la firme, mais absence d'un échantillon public de virements effectivement compensés et vérifiés par un tiers ou d'une série on-chain rattachée à ses programmes : seul le niveau auto-déclaré est établi.",
+          "sources": [
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/",
+            "https://propanalyse.com/firms/funded7/legit/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "CGU Provision 11 : absence de droit à une rémunération simulée sauf convention contraire ; FAQ promet des payouts, mais convention funded distincte non obtenue. Pouvoir de résilier les services, sans preuve suffisante de confiscation arbitraire d'un droit déjà acquis dans le contrat financé : 6 provisoire et confiance faible.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Deux paragraphes actuels intitulés Evaluation Limits se contredisent sur la détention simultanée de challenges du même plan et de la même taille : interdiction dans le premier, autorisation d'identiques avec cap d'allocation dans le second, sans règle de priorité. −3 pour contradiction ; tests QC et seuils de taille sont chiffrés : aucun autre malus.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/rule-1-payout-criteria/"
+          ],
+          "negativeFactIds": [
+            "funded7-dual-evaluation-limits-current"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "CGU nomment ICHIBAN TECH LTD Chypre HE470329 et SUCCESSIO LTD Seychelles 245758. LEI tiers recoupe ICHIBAN TECH, mais le débiteur du payout et la société facturante entre les deux ne sont pas vérifiés au dernier checkout : identité partielle 7.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://lei.bloomberg.com/leis/view/875500AYFJ97WP34QF59"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "LEI de l'entité Chypre affiche ACTIVE et contrôle de janvier 2026, mais ni good standing novembre 2026 ni statut officiel de SUCCESSIO LTD Seychelles n'a été recoupé pour identifier l'actuel débiteur : statut incomplet, 3 et aucune dissolution imputée.",
+          "sources": [
+            "https://lei.bloomberg.com/leis/view/875500AYFJ97WP34QF59",
+            "https://funded7.com/terms-and-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Avertissement officiel matériel applicable à cette offre simulée non confirmé dans la recherche nominative, mais interrogation des registres de sanctions des juridictions de chaque partie contractante non exhaustive : vérification partielle 2 et aucun malus pour absence de licence broker non requise.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Comparatif officiel documente objectifs, drawdowns, leviers et plans (+2), CGU et FAQ indiquent les règles de trading et sanctions (+2), pays exclus et contrôles KYC sont publiés (+2). Dernier prix facturé, add-ons et frais à l'achat non vérifiés de bout en bout : +0.",
+          "sources": [
+            "https://funded7.com/challenge-comparison/",
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/rule-1-payout-criteria/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU intégrales librement accessibles (+2), mais sans date de version identifiable liée au dernier achat (+0) et modification unilatérale sans préavis et sans garantie universelle pour les comptes existants (+0). Pas de rétroactivité B2 sans application adverse avérée.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le caractère simulé est déclaré sans ambiguïté dans la Provision 11 (+2). Dernier checkout et partie facturante non recoupés (+0), accord funded exception des rémunérations non vérifié pour confirmer FAQ/CGU (+0). La contradiction multi-comptes relève déjà uniquement de B2.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La firme annonce son lancement en mai 2025 ; au 22 novembre 2026, activité documentée dans la tranche 18–35 mois (4). Ne pas confondre l'immatriculation de la société en janvier 2025 avec une exploitation antérieure du programme.",
+          "sources": [
+            "https://beta.funded7.com/blog/funded7-joins-propinder-japans-second-largest-prop-firm-brings-a-new-standard-to-prop-trading/",
+            "https://lei.bloomberg.com/leis/view/875500AYFJ97WP34QF59"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Adresse de support et centre d'aide identifiables (+1) et réponses publiques de l'équipe visibles sur Trustpilot (+1). Pas de preuve d'escalade effective des litiges ni résolution indépendante de plainte technique hors paiement (+0+0).",
+          "sources": [
+            "https://www.trustpilot.com/review/funded7.com",
+            "https://funded7.com/faqs/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "funded7-dual-evaluation-limits-current",
+          "kind": "contradiction",
+          "points": 3,
+          "program": "Funded7 · évaluations de même plan/taille",
+          "phase": "Achat et nombre de challenges simultanés",
+          "clause": "CGU Provision 1, deux clauses « Evaluation Limits » : l'une interdit des challenges identiques concurrents, l'autre les autorise sous réserve de l'allocation agrégée.",
+          "consequence": "Le client ne sait pas avec certitude si l'achat de comptes identiques entraîne une violation ou une résiliation.",
+          "source": "https://funded7.com/terms-and-conditions/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
 }
