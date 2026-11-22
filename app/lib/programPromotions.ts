@@ -11,9 +11,6 @@ export type ProgramPromotion = {
   terms: string;
   sourceUrl: string;
   checkedOn: string;
-  /** Officially sourced list and discounted prices for an exact product, size and region. */
-  priceExamples?: Array<{ product: string; accountSize: number; currency: 'USD' | 'EUR' | 'GBP'; before: number; after: number; region?: 'US' | 'outside-US' }>;
-  priceSourceUrl?: string;
   endsOn?: string;
   expiresAt?: string;
 };
@@ -32,19 +29,4 @@ export function isProgramPromotionCurrent(promo: ProgramPromotion, today = new D
 
 export function getProgramPromotions(slug: string, productId: string, today = new Date()) {
   return programPromotions.filter((promo) => promo.slug === slug && promo.productIds.includes(productId) && isProgramPromotionCurrent(promo, today));
-}
-
-/** Price comparison is only displayed for a sourced, exact product/size match. */
-export function getVerifiedPromoPrices(slug: string, productId: string, today = new Date()) {
-  return getProgramPromotions(slug, productId, today).flatMap((promo) =>
-    (promo.priceExamples ?? []).map((price) => ({
-      ...price,
-      saved: Math.round((price.before - price.after) * 100) / 100,
-      discountPercent: Math.round((1 - price.after / price.before) * 100),
-      code: promo.code,
-      sourceUrl: promo.priceSourceUrl ?? promo.sourceUrl,
-      checkedOn: promo.checkedOn,
-      expiresAt: promo.expiresAt,
-    })).filter((price) => price.before > price.after && price.after >= 0)
-  );
 }
