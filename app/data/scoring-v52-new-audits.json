@@ -572,6 +572,280 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "daytraders-com",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "EOD Pro: premier versement après 8 Qualifying Days, 100 % de profit simulé éligible, demande ≥500 USD par incréments de 50, consistency 30 % et plafonds par taille 1 000 à 5 000 USD; demande via tableau de bord puis Plane ou DT Wallet. Frais du rail de retrait non exhaustifs : le poste split+minimum+frais n'est pas crédité. +2 fréquence, +2 éligibilité, +2 plafonds, +2 procédure.",
+          "sources": [
+            "https://daytraders.com/help/articles/17684739-eod-payouts",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout",
+            "https://daytraders.com/help/articles/17684736-eod-pro-account"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Pas de série de refus de paiement injustifiés indépendamment corroborés au seuil V5.2 dans ce contrôle ; les avis Trustpilot et le registre de payouts émis par la firme ne suffisent pas à établir 12 mois de paiements indépendants. A2=6 est le neutre et ne certifie aucune fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/daytraders.com",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout",
+            "https://responsibletrading.com/futures-firms/daytraders-review/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le ledger de payouts et les communiqués chiffrés relèvent de l'opérateur lui-même ; le paiement par Plane est décrit, mais ni attestation bancaire tierce ni multi-bénéficiaires authentifiés publiquement et attribués aux programmes ne sont disponibles ici. Ne pas attribuer A3=4 à un historique auto-déclaré.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704099-about-daytraders",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout",
+            "https://responsibletrading.com/futures-firms/daytraders-review/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Section 28 des Terms (version 05/03/2025) : la firme peut altérer ou annuler sans contrepartie un Reward déjà gagné si elle juge le client en infraction, même sans lien entre l'infraction et la récompense. Le caractère acquis et l'articulation avec les accords Pro/S2F ne sont pas protégés par recours opposable dans les pièces consultées : B1=3 pour risque de rewards acquis, distinct de la définition des stratégies en B2.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17684739-eod-payouts"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Section 26 interdit des positions 'substantially larger', 'grossly overleveraged' et les activités causant 'reasonable concerns' de dommage à la firme sans seuil exhaustif ; l'appréciation seule peut provoquer suppression de trades, profits ou fermeture. Un fait de trading vague −3, sans seconde pénalité pour les conditions chiffrées de drawdown, consistency ou jours.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17684736-eod-pro-account"
+          ],
+          "negativeFactIds": [
+            "daytraders-c04-unbounded-noncompliant-trading-definitions"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les Terms nomment Day Traders LLC, LLC du Nevada, comme entité qui vend le service et identifient un processeur Collecto distinct. L'extrait de registre officiel du Nevada, numéro d'immatriculation et correspondance du checkout contemporain n'ont pas été authentifiés : entité juridique déclarée avec identité indépendante incomplète, palier conservateur C1=4.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704104-billing"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Les Terms indiquent le Nevada et le site exploite un centre d'aide actif, mais le statut officiel à date de Day Traders LLC n'a pas pu être recoupé dans un extrait complet du registre du Nevada. Le statut reste 'non vérifiable' ici, sans accusation de radiation ou de dissolution.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704099-about-daytraders"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Ce contrôle de sources n'établit aucune sanction officielle financière actuelle visant exactement cette société et cette offre de simulation ; recherche exhaustive des alertes CFTC/NFA/autorités locales non achevée. Aucune licence de broker n'est exigée par défaut pour un challenge simulé : C3 provisoire 2.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704099-about-daytraders"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Tableaux officiels par Trail/Static/EOD/S2F/S2L précisent objectifs, types de drawdown et split (+2) ; règles de positions, période et conséquences par offre accessibles (+2) ; KYC et conditions d'accès documentés (+2). Les prix finaux, abonnements et add-ons diffèrent selon checkout, non recoupé sur toutes les tailles : +0 prix. Total 6/8.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+            "https://daytraders.com/help/articles/17684736-eod-pro-account",
+            "https://daytraders.com/help/articles/17704104-billing",
+            "https://daytraders.com/help/articles/17704103-who-can-sign-up"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Terms de portée générale consultables et datés du 05/03/2025 ; autres guides datés 2026. Il n'existe pas dans ce contrôle d'engagement opposable décrivant l'effet des modifications sur chaque cohorte. La page Billing Terms de juillet décrit une tarification lifetime seule alors que le guide plus récent d'octobre propose Monthly ou Lifetime : vérifier la version applicable.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704104-billing",
+            "https://daytraders.com/help/articles/10023854-billing-terms"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le guide de comparaison et les fiches EOD/S2F décrivent correctement les phases et retires simulés (+2). En revanche, une ancienne page Billing Terms lifetime-only coexiste avec Monthly/Lifetime courant et la description juridique de la simulation laisse incertaine la transition vers Live et les contrats distincts ; checkout complet et cohérence documentaire non reconfirmés (0+0).",
+          "sources": [
+            "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+            "https://daytraders.com/help/articles/17704104-billing",
+            "https://daytraders.com/help/articles/10023854-billing-terms",
+            "https://daytraders.com/help/articles/17704078-terms-of-use"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le profil Trustpilot est revendiqué depuis août 2024 avec avis historiques et DayTraders documente sa présence publique en 2024–2026 ; cela soutient au moins 18 à 35 mois d'activité du service, mais pas l'intervalle de 36 mois prouvé par pièces d'exploitation antérieures à novembre 2023. Ne pas confondre déclaration 'founded 2023' et historique opérationnel vérifié.",
+          "sources": [
+            "https://www.trustpilot.com/review/daytraders.com",
+            "https://daytraders.com/help/articles/17704099-about-daytraders"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Aide officielle et canal d'assistance accessibles (+1), et plusieurs réponses publiques de l'entreprise à des avis avec références de support (+1). Pas de procédure d'appel indépendante assortie de délais ni d'échantillon vérifié de résolution de litiges ordinaires assez probant pour les deux derniers points.",
+          "sources": [
+            "https://www.trustpilot.com/review/daytraders.com",
+            "https://daytraders.com/help/articles/10024188-our-policies-at-daytraders-com-what-you-need-to-know",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "daytraders-c04-unbounded-noncompliant-trading-definitions",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "DayTraders.com · évaluations EOD/Trail/Static et comptes Pro/S2F",
+          "phase": "Trading et revue de conformité avant retrait",
+          "clause": "Terms of Use §26 : pratiques « substantially larger », « grossly overleveraged », « reasonable concerns ... financial or other harm » et décision discrétionnaire sur la pratique non conforme.",
+          "consequence": "Un trader respectant ses seuils chiffrés peut voir certains profits simulés supprimés ou son compte clos sur une qualification qualitative non bornée.",
+          "source": "https://daytraders.com/help/articles/17704078-terms-of-use"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "equity-edge",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Pour Legacy/Swift/Flagship: paiement demandé au 14e jour calendaire après premier trade funded, 80 % de split, VIP 90 % on-demand ; demande avant 17h UK et traitement annoncé 48h ouvrées si vérifications satisfaites. Instant différent (90 %). +2 calendrier, +2 éligibilité générale, +2 procédure ; seuil minimum/frais de rail et plafonds exhaustifs non confirmés (+0 +0).",
+          "sources": [
+            "https://equityedge.io/funded-traders/payout-process",
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Un tracker tiers affiche des versements attribués à la marque depuis septembre 2026 mais cet historique est inférieur à 12 mois, sans six mois de séparation entre points auditables ; les plaintes et témoignages publics ne prouvent ni série de refus injustifiés ni absence d'incidents. Palier neutre A2=6, à réexaminer si des cas datés corroborés émergent.",
+          "sources": [
+            "https://payouttrackerpro.com/firms/equity-edge/",
+            "https://www.trustpilot.com/review/equityedge.io"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "Payout Tracker Pro dit avoir examiné des registres de paiement non crypto à plusieurs dates, mais ne publie ni émetteur vérifiable, ni référence de règlement final consultable, ni échantillon attribué aux programmes Legacy/Swift/Instant et bénéficiaires. Matériau daté et tiers utile mais chaîne de preuve incomplète : A3=2, pas 4/5 ni fiable certifié.",
+          "sources": [
+            "https://payouttrackerpro.com/firms/equity-edge/",
+            "https://equityedge.io/terms-and-conditions"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les CGU du 06/10/2026 §6 permettent refus du payout après revue de conformité sur simple suspicion de violations, incohérence de localisation ou manipulation ; §9 autorise la perte de soldes après chargeback sans critères de liquidation des rewards acquis. L'appel §10 existe mais la décision est dite finale : protection faible sur les gains acquis, B1=3.",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La liste officielle des pratiques interdites inclut 'toxic trading flow' et 'one sided betting' sans seuil objectif ni définition exhaustive ; violations entraînent interdiction et possible refus de gains. Une ambiguïté indépendante de la discrétion de revue des paiements évaluée en B1 : −3 une seule fois. Les fenêtres news de 4/10/16 min, elles, sont objectives et ne coûtent rien.",
+          "sources": [
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+            "https://equityedge.io/terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "equityedge-c04-open-ended-toxic-flow-and-one-sided-betting"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le contrat attribue explicitement plateforme à Equity Edge Ltd (Sainte-Lucie, numéro annoncé 2025-00306) et administration/paiements à Equity Edge Analytics Ltd (Royaume-Uni, 15263705) ; Companies House confirme la société UK, mais l'opérateur Sainte-Lucie et Odeonpay/Paysagi ne sont pas indépendamment rapprochés de chaque checkout. Identité partiellement recoupée : 7.",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://find-and-update.company-information.service.gov.uk/company/15263705"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Companies House indique EQUITY EDGE ANALYTICS LTD active avec dernière confirmation 28/05/2026. Cela ne certifie pas le good standing du véritable opérateur Equity Edge Ltd à Sainte-Lucie, dont le numéro vient du site uniquement : C2=3 pour la chaîne de contractants, sans insinuation de radiation.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15263705",
+            "https://equityedge.io/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de sanction officielle nommément corroborée relative aux services de simulation dans les sources retenues, mais la recherche officielle complète dans les juridictions d'exploitation, UK et Sainte-Lucie, demeure incomplète. Aucune assimilation abusive à une activité de courtage réglementée. Valeur prudente C3=2.",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://find-and-update.company-information.service.gov.uk/company/15263705"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Le règlement précise six variantes Legacy/Swift/Flagship et Instant, objectifs et drawdowns (+2), limitations par programme sur news, weekend, EA, hedging, avec sanctions (+2), et exclusions de pays ainsi que KYC (+2). Les prix courants et suppléments à la dernière étape de commande ne sont pas entièrement vérifiés pour chaque gamme : +0 prix.",
+          "sources": [
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+            "https://equityedge.io/terms-and-conditions",
+            "https://equityedge.io/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU publiques datées du 06/10/2026 et accords Instant accessibles ; le contrat ne garantit pas explicitement le maintien des anciennes règles pour les comptes existants ni un préavis opposable en cas de modification. Date et accès (+4), protection des modifications non établie (+0).",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://equityedge.io/instant-accounts/legal-agreement-for-instant-accounts"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le centre d'aide et le processus officiel concordent globalement sur la cadence de 14 jours (+2). En revanche la clause 19 de non-affiliation affirme de façon contradictoire l'absence de lien avec les deux entités que les articles précédents présentent comme opérateur et service UK ; rôle du merchant of record, cohérence du checkout et version de chaque contrat restent à éclaircir (0+0).",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://equityedge.io/funded-traders/payout-process",
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "La fiche Trustpilot revendiquée depuis juillet 2025 et les offres récentes démontrent une activité commerciale d'au moins 6 à 17 mois sous cette marque au 22/11/2026. L'immatriculation UK en 2023 ne prouve pas une prop firm opérationnelle depuis cette date : palier E1=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/equityedge.io",
+            "https://find-and-update.company-information.service.gov.uk/company/15263705"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "CGU publient support@equityedge.io (+1), observations externes récentes décrivent des réponses d'assistance effectives (+1), procédure écrite d'appel des décisions avec réponse annoncée dans les 10 jours ouvrés (+1). L'issue favorable de litiges ordinaires ne peut être suffisamment mesurée ici (+0).",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://www.trustpilot.com/review/equityedge.io"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "equityedge-c04-open-ended-toxic-flow-and-one-sided-betting",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Equity Edge · Legacy, Swift, Flagship et Instant",
+          "phase": "Trading simulé et revue des stratégies avant versement",
+          "clause": "Trading Rules §3 : « toxic trading flow », « one sided betting » dans la liste des stratégies interdites sans seuil public précis ; clause distincte de §6 CGU (revue de payout).",
+          "consequence": "Des profits d'une stratégie conforme aux drawdowns pourraient être retirés après qualification subjective comme flux toxique ou pari unidirectionnel.",
+          "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
