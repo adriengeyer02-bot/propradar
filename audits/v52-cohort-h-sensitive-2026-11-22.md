@@ -140,3 +140,19 @@
 - FXIFY : nouvelle version GTC 2026 identifiée, mais non comparée clause par clause à la version effectivement acceptée. D2 conserve les points du corpus 2026-11-21 **sous réserve**, ce qui bloque toute approbation automatique.
 - Répondre aux objections éventuelles des firmes par des preuves externes A3 acceptant les **mêmes** exigences quel que soit le rail et en protégeant les données personnelles des bénéficiaires.
 - Vérifier le test `npm run check:scoring-v52` et TypeScript avant mise en revue ; cela contrôle le calcul, pas la vérité de chaque clause.
+
+
+## Contrôle de cohérence sur le classement V5.2 déjà public : 4 dossiers A3 forts
+
+Les **58 scores V5.2 approuvés actuellement en production** contiennent **4 profils avec A3>=4**. Tous sont conservés à leur note actuelle et placés en **revue probatoire ciblée**, pas auto-déclassés.
+
+| Firme publiée | A3 actuel | Note actuellement approuvée | Sources à réconcilier |
+|---|---:|---:|---|
+| Alpha Capital Group | 5/5 | 66/100 | [Payout Junction](https://payoutjunction.com/firms/alphacapitalgroup) et [méthode](https://payoutjunction.com/methodology) |
+| Alpha Futures | 5/5 | 62/100 | [Payout Junction](https://payoutjunction.com/firms/alphafutures) et méthode |
+| Top One Trader | 5/5 | 56/100 | [Payout Junction](https://payoutjunction.com/firms/toponetrader) et méthode |
+| Top One Futures | 4/5 | 67/100 | [Prop Firm Loop](https://propfirmloop.com/payout-tracker/top-one-futures/) ; vérifier adresses et typologie des destinataires |
+
+**Pourquoi :** pour ces sociétés également, un tiers doit confirmer que l'échantillon on-chain correspond à des **récompenses de traders du bon programme**, et non seulement à des paiements sortant du portefeuille de la marque, potentiellement mixtes. Le critère A3=5 suppose aussi douze mois de paiements tracés et plusieurs bénéficiaires indépendants, directement ou par méthode d'audit vérifiable. On ne peut pas baisser ces quatre scores publics par analogie sans reconcilier leurs propres pièces : ceci est une **file de contrôle**, pas une conclusion de non-paiement.
+
+La matrice machine est dans `app/data/scoring-v52-cohort-h-published-a3-verification-queue-2026-11-22.json`. Les candidats H sur FXIFY et BluSky restent séparés des notes déjà approuvées.
