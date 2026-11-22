@@ -659,24 +659,30 @@ export default async function FirmPage({ params }: Props) {
   } else {
     const rules = breakdown.rules;
     const applied = Boolean(rules?.applied && rules.penalty);
+    // The engine floors at zero. Show the actual points removed rather than
+    // claiming the whole nominal cost was subtracted past zero.
+    const actualRuleDelta = applied ? Math.min(breakdown.editorial, rules!.penalty) : 0;
     scoreSteps.push({
       kind: 'rules',
       label: scoreCopy.rules,
       detail: breakdown.v5 ? modernCopy.restriction : rules
         ? fmt(scoreCopy.rulesDetail, { counted: rules.counted, programs: rules.programs.length, load: rules.rawLoad })
         : breakdown.unclassifiedOnly ? fmt(scoreCopy.rulesUnclassified, { n: breakdown.unclassifiedOnly }) : scoreCopy.rulesNone,
-      value: applied ? breakdown.editorial - rules!.penalty : breakdown.editorial,
-      delta: applied ? rules!.penalty : 0,
+      value: Math.max(0, breakdown.editorial - actualRuleDelta),
+      delta: actualRuleDelta,
       note: rules && rules.penalty && !applied ? scoreCopy.rulesNotApplied : undefined,
     });
   }
-  if (breakdown.trustpilot) scoreSteps.push({
-    kind: 'trustpilot',
-    label: scoreCopy.trustpilotCap,
-    detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
-    value: breakdown.trustpilot.before - breakdown.trustpilot.penalty,
-    delta: breakdown.trustpilot.penalty,
-  });
+  if (breakdown.trustpilot) {
+    const afterTrustpilot = Math.max(0, breakdown.trustpilot.before - breakdown.trustpilot.penalty);
+    scoreSteps.push({
+      kind: 'trustpilot',
+      label: scoreCopy.trustpilotCap,
+      detail: breakdown.trustpilot.included ? scoreCopy.trustpilotIncluded : fmt(scoreCopy.trustpilotCapDetail, { penalty: breakdown.trustpilot.penalty }),
+      value: afterTrustpilot,
+      delta: breakdown.trustpilot.before - afterTrustpilot,
+    });
+  }
   if (breakdown.payoutEvidenceCap) {
     const evidence = scoreV52EvidenceCapCopy(locale, breakdown.payoutEvidenceCap.cap);
     scoreSteps.push({ kind: 'proof', label: evidence.label, detail: evidence.detail,
