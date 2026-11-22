@@ -3686,6 +3686,1259 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "fidelcrest",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 52,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Le site distingue conditions des programmes, split et échéances indicatives de demande, mais la convention du partenaire qui règle effectivement les profits, les frais et l'éligibilité de tous les plans 2026 ne sont pas réconciliés. A1=6 et non 10.",
+          "sources": [
+            "https://fidelcrest.com/profit-splits",
+            "https://fidelcrest.com/knowledge-base"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "L'historique de la marque est long mais ni une série de paiements multi-bénéficiaires vérifiés indépendamment sur 12 mois, ni deux refus injustifiés prouvés ne ressortent des pièces examinées. A2=6 neutre, sans effacer des litiges antérieurs.",
+          "sources": [
+            "https://www.trustpilot.com/review/fidelcrest.com",
+            "https://fidelcrest.com/profit-splits"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les récompenses et commissions annoncées par Fidelcrest ne sont pas adossées à une chaîne indépendante reliant règlement final, entité débitrice tierce, programme et bénéficiaires sur plusieurs dates. A3=1 marketing/autodéclaré.",
+          "sources": [
+            "https://fidelcrest.com/profit-splits",
+            "https://www.trustpilot.com/review/fidelcrest.com"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Le §6.8 et le §7 des General Terms disent que le passage du challenge ne garantit pas l'accès au programme et qu'une société tierce, non nommée, décide seule du contrat funded. Fidelcrest Ltd décline expressément toute responsabilité sur ce contrat. B1=0 pour l'absence de protection contractuelle identifiable des rewards promises.",
+          "sources": [
+            "https://fidelcrest.com/general-terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les interdictions du §5.4 autorisent une appréciation large de pratiques jugées incompatibles avec une stratégie durable, pouvant conduire à retraits de trades ou annulation. Une qualification de trading insuffisamment bornée coûte −3 B2; les jours et pertes maximums chiffrés ne sont pas sanctionnés.",
+          "sources": [
+            "https://fidelcrest.com/general-terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "fidelcrest-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le vendeur des évaluations est nommé Fidelcrest Ltd, Chypre, HE413263, tandis que le débiteur du programme trader est une société tierce non désignée dans les CGU. C1=7 pour vendeur traçable, mais identité du débiteur du payout non complète.",
+          "sources": [
+            "https://fidelcrest.com/general-terms-and-conditions",
+            "https://fidelcrest.com/fidelcrest-about-us"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéro chypriote HE413263, nom et adresse du fournisseur sont publics, mais aucun extrait actualisé du registre des sociétés chypriotes vérifiant statut et responsable des payouts n'a été recoupé ici. C2=3 sans allégation de dissolution.",
+          "sources": [
+            "https://fidelcrest.com/fidelcrest-about-us"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure administrative grave applicable avec certitude à Fidelcrest Ltd et au contrat simulé n'a été confirmée dans le dossier; recherche officielle exhaustive encore incomplète. C3=2 provisoire.",
+          "sources": [
+            "https://fidelcrest.com/fidelcrest-about-us",
+            "https://www.trustpilot.com/review/fidelcrest.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les programmes Micro/Pro décrivent prix, cibles, jours minimums, drawdowns et restrictions, avec exclusions territoriales et comportement sous CGU. D1=8 pour familles visibles, non pour promesse de payout garanti.",
+          "sources": [
+            "https://fidelcrest.com/profit-splits",
+            "https://fidelcrest.com/knowledge-base",
+            "https://fidelcrest.com/general-terms-and-conditions"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les General Terms sont consultables et structurées avec date/archive historique. Les droits des anciennes cohortes face aux changements des programmes de tiers ne sont pas précisément protégés. D2=4.",
+          "sources": [
+            "https://fidelcrest.com/general-terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La simulation de l'évaluation est annoncée, mais le trader peut croire contracter un funded auprès de Fidelcrest alors que §7 renvoie à un débiteur tiers inconnu. Cohérence limitée de l'offre : D3=2.",
+          "sources": [
+            "https://fidelcrest.com/general-terms-and-conditions",
+            "https://fidelcrest.com/fidelcrest-about-us"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Fidelcrest présente une activité depuis 2018 et archives officielles datées antérieures à 2023. Le service existe depuis au moins 36 mois, sans que cela confirme des payouts réguliers récents. E1=6.",
+          "sources": [
+            "https://fidelcrest.com/fidelcrest-about-us"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Une FAQ et des canaux de support sont accessibles, mais aucune procédure de recours opposable contre le partenaire tiers en cas de refus de reward n'a été authentifiée. E2=2.",
+          "sources": [
+            "https://fidelcrest.com/knowledge-base",
+            "https://www.trustpilot.com/review/fidelcrest.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "fidelcrest-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Fidelcrest Pro/Micro evaluations",
+          "phase": "Trading en challenge et/ou contrôle funded avant versement",
+          "clause": "General Terms §5.4 : restrictions qualitatives de trading et suppression possible de trades sans barème complet par programme.",
+          "consequence": "Une stratégie autrement conforme aux objectifs peut être requalifiée et ses résultats annulés.",
+          "source": "https://fidelcrest.com/general-terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "now-trade-funded",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 50,
+      "criteria": {
+        "A1": {
+          "points": 4,
+          "reason": "La Schedule of Assessment 2024 décrit calendriers, profit splits et limitations de plusieurs produits, mais les délais de règlement, frais, méthode et conditions applicables aux challenges commercialisés en novembre 2026 ne sont pas publiquement recoupés dans un même contrat. A1=4 provisoire.",
+          "sources": [
+            "https://nowtradefunded.com/",
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les publicités de retrait rapide et témoignages ne satisfont pas à la preuve indépendante de 12 mois de versements, ni à deux cas de refus injustifiés documentés. A2=6 neutre et très faible confiance sur l'historique.",
+          "sources": [
+            "https://nowtradefunded.com/",
+            "https://fundedcentral.com/en/firms/now-trade-funded"
+          ]
+        },
+        "A3": {
+          "points": 0,
+          "reason": "La documentation publique vérifiée ne fournit aucune transaction finale indépendante attribuée à l'opérateur du challenge et à un bénéficiaire identifiable; la déclaration d'un paiement accéléré n'est pas une preuve positive. A3=0.",
+          "sources": [
+            "https://nowtradefunded.com/",
+            "https://fundedcentral.com/en/firms/now-trade-funded"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "L'annexe programme décrit le parcours d'évaluation mais le contrat général et le bénéficiaire juridiquement responsable du payout ne sont pas disponibles en version à jour vérifiable. B1=6 provisoire par défaut de contrat funded, sans supposer confiscation arbitraire.",
+          "sources": [
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf",
+            "https://nowtradefunded.com/wp-content/uploads/2024/03/Proptradetech-terms-and-conditions-NowTrade-1.pdf"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les tableaux de seuils de perte, consistance et durée exposent des règles objectivement chiffrées. Sans disposition actuelle source-vérifiée laissant une sanction subjective de trading distincte, aucune soustraction B2 supplémentaire ne peut être établie, B2=10.",
+          "sources": [
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf",
+            "https://nowtradefunded.com/challenges/"
+          ]
+        },
+        "C1": {
+          "points": 0,
+          "reason": "Le portail affiche Now Trade Funded et une annexe signée en 2024, mais aucune raison sociale avec numéro de registre actuelle, vendeur de challenge et contractant funded n'est indépendamment identifiée. C1=0 investigué, cap juridique 55.",
+          "sources": [
+            "https://nowtradefunded.com/",
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Site et produits existent en ligne, mais le registre de la personne morale vendeuse n'a pu être identifié et contrôlé, aucune dissolution n'est présumée. C2=3 pour statut inconnu et non 6.",
+          "sources": [
+            "https://nowtradefunded.com/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Le contrôle des bases d'avertissements officielles applicable à un fournisseur non identifié reste insuffisant; aucune sanction nominative n'est imputée au seul branding. C3=2 provisoire.",
+          "sources": [
+            "https://nowtradefunded.com/",
+            "https://fundedcentral.com/en/firms/now-trade-funded"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Les plans officiels exposent objectifs, prix indicatifs, drawdowns et plusieurs règles de challenge ainsi que restrictions territoriales dans l'annexe. D1=6, le checkout effectif et les frais doivent être reproduits.",
+          "sources": [
+            "https://nowtradefunded.com/challenges/",
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "L'annexe porte une date de 2024 mais le contrat principal 2024 est difficile à récupérer et la version effectivement acceptée en 2026 n'est pas démontrée. D2=2 pour existence des textes.",
+          "sources": [
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf",
+            "https://nowtradefunded.com/wp-content/uploads/2024/03/Proptradetech-terms-and-conditions-NowTrade-1.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le marketing parle de technologie de risque blockchain et de paiements rapides, alors que la documentation examinée confirme seulement des comptes simulés et une Schedule of Assessment historique. D3=2 faute de concordance du checkout actuel.",
+          "sources": [
+            "https://nowtradefunded.com/",
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Des traces du programme et une annexe officielle sont datées de 2024, plus de 18 mois avant novembre 2026, sans historique continu de trois ans prouvé. E1=4.",
+          "sources": [
+            "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Le site publie ses canaux de contact et sa documentation de challenge, sans dossier indépendant montrant qualité de traitement, délais de médiation ou recours réel des traders. E2=2.",
+          "sources": [
+            "https://nowtradefunded.com/"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": true,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "fundings4u",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 50,
+      "criteria": {
+        "A1": {
+          "points": 4,
+          "reason": "FundingForU affiche diverses cadences Daily/Weekly/Bi-weekly/On-Demand et un premier reward après douze jours selon plan, mais des widgets contradictoires et l'absence de conditions contractuelles complètes rendent split, frais, caps et parcours de demande peu contrôlables. A1=4 seulement.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le site publie des montants de reward, noms tronqués et témoignages, sans preuve de paiement indépendamment compensé sur 12 mois et sans incidents contractuels corroborés. A2=6 neutre signifie absence de dossiers qualifiés, pas bonne réputation.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Un tableau de 48 rewards et des historiques carte/Rise/crypto sont affichés par l'opérateur; ils ne prouvent ni identité des bénéficiaires ni transfert final authentifié par tiers. A3=1 pour éléments promotionnels uniquement.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les annonces promettent jusqu'à 80 % de partage mais aucun accord funded en vigueur n'est accessible et n'encadre précisément le droit aux gains déjà acquis. B1=6 provisoire pour manque documentaire, pas constat de confiscation.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les pertes maximales, profit targets, news et consistency annoncés sont des paramètres chiffrés ou permis. Aucun texte exploitable ne confirme une interdiction de stratégie vague sanctionnée distinctement; B2=10 provisoire faute de preuve de défaut précis.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "C1": {
+          "points": 0,
+          "reason": "La page officielle ne donne pas le nom complet, juridiction et numéro vérifiable du véritable vendeur ni du débiteur des rewards. Investigation effectuée sur les pages disponibles, C1=0 et plafond juridique de 55.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le domaine est actif mais n'indique aucun identifiant permettant de vérifier le statut d'une société dans un registre; C2=3 statut inconnu, et non conclusion de fermeture.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction officielle nominative n'a pu être rapprochée d'un opérateur légal non identifié. C3=2 provisoire, recherche incomplète par définition.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "D1": {
+          "points": 4,
+          "reason": "Le site donne des schémas 2-step/instant, cibles 6%/3%, pertes 4%/8% mais pas de prix et variantes contractuelles intégralement vérifiés ni liste juridictionnelle opposable. D1=4.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Des liens génériques Legal/Terms sont visibles sans version contractuelle datée pleinement consultable à laquelle raccorder une cohorte 2026. D2=2 par visibilité partielle, sans affirmer une violation rétroactive.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Un bloc commercial annonce à la fois 'up to 80%' et une statistique '31% Profit Split', tandis qu'une liste de rewards est présentée sans contrôle externe. D3=0 tant que l'offre actuelle et les vrais droits ne sont pas réconciliés.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Le copyright du site indique 2024 et des listes de comptes en 2026, ce qui permet au mieux un historique court de 6–17 mois contrôlé; E1=2, sans reprendre les montants marketing.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        },
+        "E2": {
+          "points": 1,
+          "reason": "Un accès au help center et au formulaire support apparaît, mais pas de procédure de recours vérifiable ni d'exemple documenté de traitement équitable d'une contestation. E2=1.",
+          "sources": [
+            "https://fundings4u.com/"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": true,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "ultimate-traders",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 48,
+      "criteria": {
+        "A1": {
+          "points": 4,
+          "reason": "Les pages challenge précisent objectifs, splits revendiqués et cycles généraux; la contrepartie des gains est pourtant une société tierce non identifiée (§11) et les frais de rail, conditions contractuelles et caps du payout sont absents. A1=4.",
+          "sources": [
+            "https://www.ultimatetraders.com/trading-rules/",
+            "https://www.ultimatetraders.com/faq/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le volume de témoignages ne fournit pas une série de paiements finaux multi-bénéficiaires vérifiés pendant un an ni deux refus injustifiés entièrement documentés. A2=6 neutre, distinct du défaut précis de cohérence dans les CGU.",
+          "sources": [
+            "https://www.ultimatetraders.com/faq/",
+            "https://theindustryspread.com/ultimate-traders-review-30-day-clock-contract/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les preuves de récompenses sont annoncées par des supports commerciaux sans chaîne indépendante d'attribution à l'émetteur/funded tiers et à des bénéficiaires identifiés : A3=1, cap64 si nécessaire.",
+          "sources": [
+            "https://www.ultimatetraders.com/faq/",
+            "https://theindustryspread.com/ultimate-traders-review-30-day-clock-contract/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Le §11 précise qu'une société tierce peut proposer le programme funded après réussite et que Ultimate Traders Evaluation Ltd n'en est pas partie. La créance et le recours sur rewards futures sont sans débiteur nommé : B1=0.",
+          "sources": [
+            "https://www.ultimatetraders.com/terms-and-conditions/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La page Trading Rules annonce pour Speedy « no fixed time period », tandis que les Terms §10.6 imposent 30 jours calendaires (idem §9.3 pour Classic). Contradiction officielle de durée d'évaluation qui peut entraîner annulation : B2=7 après −3.",
+          "sources": [
+            "https://www.ultimatetraders.com/terms-and-conditions/",
+            "https://www.ultimatetraders.com/trading-rules/"
+          ],
+          "negativeFactIds": [
+            "ultimate-traders-contradiction-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 10,
+          "reason": "Ultimate Traders Evaluation Ltd est précisément identifiée au Royaume-Uni, société n°14665391, sur les CGU et Companies House. C1=10 pour le vendeur; cela ne rend pas la société tierce funded identifiable, problème déjà évalué en B1.",
+          "sources": [
+            "https://www.ultimatetraders.com/terms-and-conditions/",
+            "https://find-and-update.company-information.service.gov.uk/company/14665391"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Companies House montre Ultimate Traders Evaluation Ltd active, immatriculée en février 2023 et une confirmation déposée en février 2026. C2=6 pour statut officiellement vérifié.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/14665391"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Un avertissement FMA néo-zélandais existe au nom 'Ultimate Traders' mais son rattachement à la personne morale UK et au domaine ultimatetraders.com n'a pas été établi ici; aucun malus de sanction non attribuée n'est appliqué. C3=2 en attendant ce rapprochement.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/14665391"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Le site documente prix et cibles, limites de pertes de 4/6 % et 6/12 %, minimum de trois jours et conditions news; le conflit sur la durée empêche la transparence complète. D1=6.",
+          "sources": [
+            "https://www.ultimatetraders.com/trading-rules/",
+            "https://www.ultimatetraders.com/terms-and-conditions/"
+          ]
+        },
+        "D2": {
+          "points": 6,
+          "reason": "CGU détaillées accessibles, §18.1 préserve la version d'achat pour l'évaluation et l'historique légal est vérifiable. D2=6 pour accès, version et protection de cohorte de challenge, sans étendre au funded tiers.",
+          "sources": [
+            "https://www.ultimatetraders.com/terms-and-conditions/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Une promesse commerciale 'no fixed time period' contredit §10.6, et le fournisseur funded n'est pas partie aux conditions de challenge; ces écarts empêchent de créditer le parcours commercial-contractuel en D3, score 0.",
+          "sources": [
+            "https://www.ultimatetraders.com/trading-rules/",
+            "https://www.ultimatetraders.com/terms-and-conditions/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Des archives publiques et registres relient l'opérateur et les évaluations à 2023, au moins 18 à 35 mois d'activité commerciale démontrée; ne pas transformer la date d'immatriculation en preuve de payout. E1=4.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/14665391",
+            "https://theindustryspread.com/ultimate-traders-review-30-day-clock-contract/"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Les Terms §17.2 instituent une procédure écrite de réclamation et un délai de réponse de 30 jours, coordonnées support disponibles, mais aucune voie neutre ni taux de résolutions attestées : E2=3.",
+          "sources": [
+            "https://www.ultimatetraders.com/terms-and-conditions/",
+            "https://www.ultimatetraders.com/faq/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "ultimate-traders-contradiction-nov2026",
+          "kind": "contradiction",
+          "points": 3,
+          "program": "Ultimate Traders Speedy 1-phase",
+          "phase": "Trading en challenge et/ou contrôle funded avant versement",
+          "clause": "Trading Rules (Speedy) : aucun délai fixe; Terms §10.6 : le challenge expire après 30 jours calendaires.",
+          "consequence": "Contradiction entre page d'offre et contrat sur délai d'expiration pouvant causer échec de l'évaluation.",
+          "source": "https://www.ultimatetraders.com/terms-and-conditions/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "bullwaves-prime",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 54,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les règles de funded distinguent premier retrait après quinze jours, puis cycles de quinze jours, minimums de jours actifs, modalités et split, avec limite de gain par cycle. Certains add-ons changent les droits, ce qui impose leur rapprochement au checkout. A1=8.",
+          "sources": [
+            "https://prime.bullwaves.com/payouts",
+            "https://prime.bullwaves.com/trading-rules",
+            "https://prime.bullwaves.com/pricing"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les témoignages Trustpilot incluent contestations et réponses du groupe, mais ils ne prouvent pas deux refus injustifiés selon les contrats en vigueur ni un an de règlements indépendants. A2=6 provisoire même en présence de plaintes.",
+          "sources": [
+            "https://www.trustpilot.com/review/prime.bullwaves.com",
+            "https://prime.bullwaves.com/payouts"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les montants et listes du portail 'Live Payouts' sont publiés par Bullwaves elle-même; pas de chaîne externe multi-bénéficiaires authentifiée du virement final. A3=1, pas de bonus pour broker partenaire.",
+          "sources": [
+            "https://prime.bullwaves.com/payouts",
+            "https://www.trustpilot.com/review/prime.bullwaves.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les conditions renvoient à des contrôles de stratégie et d'éligibilité au retrait mais n'offrent pas un recours clairement opposable pour une reward déjà acquise; suppression de profits potentielle après contrôle. B1=3 sous réserve d'un funded agreement plus protecteur non recoupé.",
+          "sources": [
+            "https://prime.bullwaves.com/legal",
+            "https://prime.bullwaves.com/trading-rules"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les règles de style interdisent « excessive risk », changement de taille / volume et incohérence selon appréciation globale, sans tous seuils de tolérance par offre. Un seul fait vague de stratégie −3 en B2; les quatre soft breaches explicitement documentés sont objectifs.",
+          "sources": [
+            "https://prime.bullwaves.com/trading-rules"
+          ],
+          "negativeFactIds": [
+            "bullwaves-prime-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le site identifie Moonance LLC, n°2141 LLC 2022, Saint-Vincent, et ETX Services Limited HE455407 Chypre distributeur; le broker Bullwaves (Equitex) est un fournisseur distinct. C1=7 car rôle du débiteur reward à relier au contrat exact.",
+          "sources": [
+            "https://prime.bullwaves.com/legal"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Immatriculations et adresses sont déclarées, mais les good standing récents de Moonance et ETX n'ont pas été rapprochés sur registres primaires; C2=3, et licence broker partenaire ne prouve pas statut de la prop firm.",
+          "sources": [
+            "https://prime.bullwaves.com/legal"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Sans avertissement officiel actuel contre Moonance pour ces challenges, une sanction C3=0 serait spéculative. Recherche multi-juridiction incomplète, C3=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/prime.bullwaves.com",
+            "https://prime.bullwaves.com/legal"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Prix/add-ons, objectifs, drawdowns, règles news, pays exclus et KYC sont détaillés sur pages tarifs, règles et légal, y compris les cohortes antérieures. D1=8.",
+          "sources": [
+            "https://prime.bullwaves.com/trading-rules",
+            "https://prime.bullwaves.com/pricing"
+          ]
+        },
+        "D2": {
+          "points": 6,
+          "reason": "Site indique que les comptes achetés avant 12 novembre 2026 restent soumis aux règles de leur date d'achat, un grandfathering explicite; version des CGU et règle de cohorte consultables, D2=6.",
+          "sources": [
+            "https://prime.bullwaves.com/trading-rules",
+            "https://prime.bullwaves.com/legal"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La page commerciale emploie un vocabulaire de 'real funds' et de broker régulé tandis que les disclosures légaux qualifient les comptes funded de simulés. Le décalage empêche d'accorder plus de deux items de D3.",
+          "sources": [
+            "https://prime.bullwaves.com/legal",
+            "https://prime.bullwaves.com/pricing"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Marque et conditions Prime accessibles depuis 2024, soit 18–35 mois d'activité approximative; l'historique plus ancien du broker partenaire n'est pas attribué à la prop firm. E1=4.",
+          "sources": [
+            "https://prime.bullwaves.com/legal",
+            "https://prime.bullwaves.com/payouts"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ, support e-mail et formations sont accessibles, mais un appel indépendant et un taux vérifié de résolution des refus n'ont pas été obtenus. E2=2.",
+          "sources": [
+            "https://prime.bullwaves.com/trading-rules",
+            "https://www.trustpilot.com/review/prime.bullwaves.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "bullwaves-prime-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Bullwaves Prime 1-Step/2-Step/Instant",
+          "phase": "Trading en challenge et/ou contrôle funded avant versement",
+          "clause": "Conditions Bullwaves : jugement de prise de risque excessive et de changement de volumes/stratégie non intégralement quantifié par produit.",
+          "consequence": "Un style par ailleurs dans les limites de drawdown peut être requalifié au contrôle de payout.",
+          "source": "https://prime.bullwaves.com/trading-rules"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "dna-funded",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 41,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Le règlement et les pages programmes distinguent la demande de reward, les cycles et conditions d'éligibilité, le split et les méthodes bancaires/crypto. Certains frais, plafonds et délais effectifs selon les add-ons et produits restent à recouper : A1=8.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Trustpilot inclut des contestations de payouts, mais l'arbitrage des règles de trading, la date d'exigibilité et le règlement effectif ne sont pas indépendamment établis pour deux refus injustifiés. Historique multi-clients ≥12 mois également non certifié : A2=6 neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les témoignages et paiements annoncés ne constituent pas une chaîne indépendante d'argent final versé par DNA Funded Ltd au bénéficiaire du programme; aucune preuve bancaire multi-client complète n'est accessible. A3=1.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "General Terms §§16,24 autorisent la confiscation de droits actuels et futurs de paiement lors d'une violation, avec récupération éventuelle de sums antérieures. Les violations peuvent relever d'une qualification large et les recours sont insuffisamment garantis : B1=0, risque contractuel élevé.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "General Terms §15(k) interdit non seulement stratégies détaillées mais aussi les techniques jugées 'gambling-focused' ou 'trading in bad faith' à l'appréciation de la société. Une seule ambiguïté de stratégie vaut −3; suppression des gains évaluée en B1 n'est pas recomptée.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ],
+          "negativeFactIds": [
+            "dna-funded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les CGU et les Website Terms attribuent le service à DNA Funded Ltd à Sainte-Lucie, mais le numéro d'immatriculation, la correspondance avec le vendeur du checkout et l'obligation juridique de payer les rewards ne sont pas recoupés auprès d'un registre indépendant. C1=4 : nom d'opérateur déclaré, non une identité complète vérifiée.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/20251030-DNA-Funded-Ltd-Website-Terms-and-Conditions.pdf",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le document mentionne une société de Sainte-Lucie, sans extrait officiel à jour du registre ni concordance indépendante du paiement par programme; C2=3, sans prétendre fermeture ou radiation.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/20251030-DNA-Funded-Ltd-Website-Terms-and-Conditions.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure officielle grave correctement attribuée à DNA Funded Ltd pour ses challenges simulés n'est documentée dans ce contrôle. Les vérifications des autorités pertinentes sont incomplètes : C3=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Pages de programmes et règles v2 détaillent prix, cibles, daily/max drawdown, news/overnight, pays et KYC. D1=8 car les familles d'information sont présentes sans juger ces restrictions objectives comme illégitimes.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+            "https://dnafunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les General Terms portent une version identifiable de 2025 et les Rules v2 sont datées 2026. La règle d'application aux comptes achetés avant la v2 et la protection des anciennes conditions ne sont pas uniformément garanties, D2=4.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La nature simulée est explicite, mais les pouvoirs très larges de récupération de rewards et certains add-ons de délai/split nécessitent davantage de clarté entre publicité, checkout et contrat. D3=2.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf",
+            "https://dnafunded.com/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Une activité commerciale DNA Funded est traçable en 2024 et 2025, soit au moins 18 mois avant le contrôle; l'âge d'autres entreprises DNA n'est pas transféré. E1=4.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ, support et portail client sont accessibles avec des réponses publiques à des contestations; aucun mécanisme indépendant de contestation et taux vérifié de résolution des refus ne sont établis, E2=2.",
+          "sources": [
+            "https://dnafunded.com/",
+            "https://www.trustpilot.com/review/dnafunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "dna-funded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "DNA Funded simulated evaluations et funded",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "CGU §15(k) : gambling-focused, bad-faith et stratégie jugée non professionnelle par la firme sans seuil complet de quantification.",
+          "consequence": "Une stratégie dans les limites chiffrées peut être disqualifiée sur qualification de style, indépendamment du droit aux rewards traité en B1.",
+          "source": "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "foxx-funded",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 44,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les FAQ et pages payout documentent profit split, calendrier de demande, KYC et principales restrictions de pertes; les frais de paiement et caps selon programme/rail ne sont pas entièrement réconciliés avec le Trader Agreement. A1=8.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/payout/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis relatent des refus de payout contestés, mais sans preuve indépendante suffisante de deux paiements contractuellement dus et injustement refusés; les annonces de récompenses ne démontrent pas une régularité de 12 mois. A2=6 neutre, pas un quitus.",
+          "sources": [
+            "https://www.trustpilot.com/review/foxx-funded.com",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site publie certificats et témoignages, mais pas une chaîne indépendante vérifiant transactions finales, programme, émetteur et bénéficiaires sur plusieurs dates. A3=1 limité au marketing.",
+          "sources": [
+            "https://www.foxx-funded.com/",
+            "https://www.trustpilot.com/review/foxx-funded.com"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "FOXX official Terms §5.1 disent que la sélection d'un trader entraîne un accord de trading avec « Bespoke Funding », société distincte non identifiée ailleurs dans le footer qui liste Foxx Limited et Semizu L.L.C.-FZ. Sans contrat funded du débiteur et protection des gains acquis opposable au consommateur, B1=0 pour le risque structurel de contrepartie (ne constitue pas une allégation de non-paiement).",
+          "sources": [
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Terms §4.4 interdisent tout trading que la firme estime nuisible à sa relation avec les brokers, sans critère objectif précis, avec résiliation du programme comme effet. Un fait de trading vague vaut B2 −3 ; l'incertitude sur le contrat funded est traitée en B1/D3, pas soustraite une seconde fois ici.",
+          "sources": [
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/"
+          ],
+          "negativeFactIds": [
+            "foxx-funded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le footer identifie Foxx Limited (2026-00126) Sainte-Lucie pour MT5 et Semizu L.L.C.-FZ n°2423826 aux Émirats; le rôle exact de chaque vendeur et du débiteur de rewards reste à confronter. C1=7.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/assets/amlPolicy-BCJe7msf.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéros commerciaux sont publiés sur le site et la politique AML désigne Semizu, mais good-standing récents de Sainte-Lucie et UAE non certifiés auprès de leurs registres. C2=3 sans statut illégal présumé.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/assets/amlPolicy-BCJe7msf.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de sanction publique grave nominative officiellement prouvée dans les pièces vérifiées; avis clients et note Trustpilot supprimée ne sont pas des sanctions réglementaires. C3=2 provisoire.",
+          "sources": [
+            "https://www.trustpilot.com/review/foxx-funded.com",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "FAQ indique cibles, pertes maximales statiques, risque 2% par trade, consistency 25%, jours mini, type de simulation et KYC; les pages d'offre affichent des prix. Quatre familles D1 documentées.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les termes PDF et FAQ actuels sont accessibles, mais version exacte acceptée pour les différents checkout et préservation des anciens comptes ne sont pas totalement vérifiables : D2=4.",
+          "sources": [
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Incohérence contractuelle importante : le footer présente Foxx Limited et Semizu, tandis que les CGU §5.1 désignent Bespoke Funding comme contrepartie du trader accepté; des pages marketing parlent par ailleurs de « real payouts » tout en déclarant la simulation. Tant qu'une version corrigée du contrat ou l'accord de la contrepartie n'est pas obtenu, D3=0.",
+          "sources": [
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/payout/"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Le domaine et la société sous sa marque actuelle ont une activité documentée en 2026, sans antériorité ferme de 18 mois pour cette firme; E1=2.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.trustpilot.com/review/foxx-funded.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ et support restent joignables et l'entreprise répond ponctuellement à des avis, mais traitement des contestations de payout et taux de résolution n'ont pas été audités de manière indépendante. E2=2.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.trustpilot.com/review/foxx-funded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "foxx-funded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Foxx 1-Step / Instant simulated",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "Terms §4.4 interdit toute activité de trading jugée nuisible à la relation avec les brokers sans définition chiffrée; des sanctions de terminaison sont prévues.",
+          "consequence": "La firme peut sanctionner au contrôle une technique conforme aux pertes chiffrées, sans que la qualification soit prévisible.",
+          "source": "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "sfx-funded",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 38,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Les documents officiels SFX donnent plusieurs calendriers non réconciliés : retrait à la demande après trois jours pour certains produits, puis quinze jours/14 jours ouvrés et parfois cycle de vingt-et-un jours. Split, conditions et méthode de demande sont visibles, mais un client ne peut déterminer sans lever la contradiction la date exigible de chaque reward. A1=6 plutôt que dix.",
+          "sources": [
+            "https://sfxfunded.com/help/payout-on-demand",
+            "https://sfxfunded.com/help/payout-timing-ascend",
+            "https://sfxfunded.com/docs/terms-of-service"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les témoignages et litiges Trustpilot doivent être évalués avec les contrats et dates exigibles; pas de série indépendante multi-bénéficiaires sur douze mois ni deux refus injustifiés objectivés. A2=6 neutre malgré le volume d'avis.",
+          "sources": [
+            "https://www.trustpilot.com/review/sfxfunded.com",
+            "https://sfxfunded.com/help/payout-on-demand"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les garanties de payout SFX et les témoignages sont des affirmations commerciales, non une preuve bancaire/crypto rapprochée par un tiers des flux effectivement compensés au profit de clients et programmes distincts : A3=1.",
+          "sources": [
+            "https://sfxfunded.com/",
+            "https://www.trustpilot.com/review/sfxfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Audit V4 primaire du 20/11 : CGU SFX §3.3 'all payouts are fully at the discretion of the Company' et §9.11 'at any time and for any reason', tandis que le guide officiel autorise retrait de tous profits, refus de payout et réduction du split à 20–25% après qualification de trading abusif. Aucune voie d'appel opposable sur rewards acquises. B1=0, non une accusation de refus injustifié prouvé.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le guide officiel « Prohibited Trading Styles/Strategy » du 17 août 2026 laisse une appréciation ouverte de « one-sided bets », changement de trading style, prise de risque inhabituelle et « opposite-direction recovery » au-delà de la fenêtre indicative de dix minutes. La firme peut supprimer profits, réduire split et refuser withdrawal; B2 −3 pour un défaut de clarté de stratégie, sans recompter l'effet reward en B1.",
+          "sources": [
+            "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy",
+            "https://sfxfunded.com/docs/terms-of-service"
+          ],
+          "negativeFactIds": [
+            "sfx-funded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le footer officiel des conditions nomme SFX International FZCO comme opérateur de SFX Funded, avec adresse IFZA Dubai, tandis que les services technologiques peuvent être portés par affiliées. C1=7 pour opérateur contractant déclaré, sans certificat officiel de rôle du débiteur reward et du checkout.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://sfxfunded.com/contact"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Adresse, licence commerciale et numéro IFZA sont annoncés, mais le registre officiel actualisé confirmant statut des sociétés exploitantes et le vendeur checkout n'a pas été recoupé. C2=3, sans présumer irrégularité.",
+          "sources": [
+            "https://sfxfunded.com/about"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction grave ciblant la bonne entité opérant l'évaluation simulée n'est vérifiée dans les sources présentes, recherche réglementaire incomplète; Trustpilot n'est pas traité comme sanction publique de marché. C3=2.",
+          "sources": [
+            "https://sfxfunded.com/about",
+            "https://www.trustpilot.com/review/sfxfunded.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Comparateur distingue 2-Step, Rapid, Instant, coûts, objectifs, drawdowns et restrictions, avec pages pays/KYC et payouts par phase. Quatre catégories D1 accessibles.",
+          "sources": [
+            "https://sfxfunded.com/compare-plans",
+            "https://sfxfunded.com/help/instant-funding"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les CGU sont consultables via le portail, mais le contrôle V4 a recensé une contradiction entre §7.6 (les modifications ne toucheraient pas les achats existants) et §18.3 (possibilité d'effet sur contrat déjà conclu). Accès public crédité +2, pas de garantie solide des cohortes. Aucun cas concret rétroactif établi, donc pas de déduction B2 −4.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Le site et ses produits affichent trois échéances de retrait non harmonisées ; une promotion '100% Refundable' diverge de la Refund Policy limitant remboursement au cinquième payout, et les CGU §7.6/§18.3 se contredisent sur la rétroactivité. À défaut de preuve de cohérence du contrat et des offres, D3=0.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://sfxfunded.com/help/payout-on-demand",
+            "https://sfxfunded.com/help/payout-timing-ascend",
+            "https://sfxfunded.com/instant-funding"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces officielles et service public existent depuis au moins 2024, soit 18–35 mois en novembre 2026, sans recourir à l'âge d'un broker tiers : E1=4.",
+          "sources": [
+            "https://sfxfunded.com/about"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "SFX publie e-mail, Discord et centre d'aide (canaux joignables), mais une procédure de contestation neutre et des décisions de payout favorables indépendamment confirmées ne sont pas établies; les clauses de clôture et de discrétion limitent fortement la portée de ces outils. E2=2.",
+          "sources": [
+            "https://sfxfunded.com/",
+            "https://www.trustpilot.com/review/sfxfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "sfx-funded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "SFX Funded Ascend / Rapid / Instant",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "Official SFX help guide (17 Aug 2026) : « opposite-direction recovery » possible après 10-min window, « one-sided bets » et stratégie jugée irrationnelle; sanctions de payout à la discrétion de risk team.",
+          "consequence": "L'équipe risque peut rejeter un trader par qualification ouverte de stratégie lors du payout.",
+          "source": "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "superfunded",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 44,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les Rules and Conditions et General Terms renseignent parcours de payout, partage des récompenses, KYC, minimums de jours de trading et demande de bank/wallet. Les frais par rail et limites de payout de tous programmes ne sont pas rapprochés sur la version 2026 : A1=8.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le profil Trustpilot affiche un problème officiel d'intégrité des avis, qui n'est ni deux refus injustifiés ni un historique vérifié de vrais payouts sur douze mois. A2=6 neutre; −6 Trustpilot appliqué séparément et une seule fois.",
+          "sources": [
+            "https://www.trustpilot.com/review/superfunded.com",
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les déclarations de rewards et témoignages du groupe ne fournissent pas un échantillon de transactions finales indépendamment attribuées à Radias PTT FZ-LLC et plusieurs bénéficiaires vérifiés : A3=1.",
+          "sources": [
+            "https://superfunded.com/",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "General Terms §13 écarte toute garantie de payout et prévoit forfaiture des droits en cas de non-conformité appréciée par l'entreprise. Les clauses §16 et §24 permettent pertes des droits existants/futurs et recouvrement de sommes après breach. B1=0 pour faible protection.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les interdictions incluent comportement de type gambling, trading en bad faith et atteinte à la relation avec prestataires sans paramètres objectivement exhaustifs; B2 −3 pour une famille de stratégies vague, sans doubler la conséquence de perte des droits B1.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://superfunded.com/wp-content/uploads/2025/09/Rules-and-Conditions-SuperFunded-9.pdf"
+          ],
+          "negativeFactIds": [
+            "superfunded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les General Terms identifient Radias PTT FZ-LLC comme vendeur et TradeSim Pty Ltd comme prestataire technique, mais aucun numéro de registre primaire ni document indépendant confirmant le débiteur des rewards au checkout n'a été obtenu. C1=4 pour une identité déclarative, en cohérence avec les autres audits à preuve juridique limitée.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "L'opérateur émirien est désigné sans extrait récent du registre IFZA/zone franche ni attestation d'activité du débiteur de reward en novembre 2026; C2=3 sans conclure dissolution.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Le document ne prouve aucune mesure officielle grave contre Radias pour cette simulation, et les bases judiciaires/réglementaires n'ont pas été exhaustivement interrogées. C3=2, distinct de la pénalité Trustpilot.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les annexes par formule et CGU expliquent produits, prix, profit targets/drawdowns, trading rules, pays/KYC; quatre items D1 documentés, même si une version postérieure 2026 doit être lue séparément.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+            "https://superfunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU version avril 2025 et règles révisées en 2026 identifiables, mais protection du client acheté avant la version 2026 et portée de révision non établies de façon contractuelle universelle. D2=4.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Les CGU expliquent explicitement qu'il s'agit de trading simulé, les annexes font partie intégrante du contrat; la politique de payout reste conditionnelle et révisions de 2026 non réconciliées avec chaque offre. D3=4.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "La marque et ses programmes figurent dans des traces datées de 2025–2026; six à dix-sept mois de services suffisamment démontrés, pas 36 mois indépendants. E1=2.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support, portail et contact existent ; aucune voie indépendante de contestation de rewards, ni taux corroboré de résolution positive des différends. E2=2.",
+          "sources": [
+            "https://superfunded.com/",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "superfunded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "SuperFunded simulated assessment and funded rewards",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "General Terms §15 interdit aussi conduite apparemment assimilée au gambling / mauvaise foi de stratégie, avec appréciation non chiffrée.",
+          "consequence": "Le bénéfice du challenge peut être invalidé pour cause qualitative malgré des limites explicites de pertes.",
+          "source": "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funding-frontier",
+      "checkedOn": "2026-11-22",
+      "status": "approuvee",
+      "confidence": "faible",
+      "previousDisplayedScore": 42,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les pages Rules & FAQs publient cadences, caps et consistency de Classic/PRO, taux de profit-split et procédure de demande, mais les frais de rails et conditions particulières de chaque programme ne sont pas entièrement rapprochés. A1=8.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis et la promesse de payout garantie ne constituent pas une série indépendante de transferts sur douze mois, et le texte des CGU très défavorable ne prouve pas à lui seul deux refus injustifiés réalisés. A2=6 neutre en attente d'incidents authentifiés.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les annonces de reward et la garantie sont publiées par le vendeur lui-même, pas par un vérificateur indépendant relié à plusieurs bénéficiaires et règlements compensés. A3=1.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Les CGU §§7.3,16 permettent refus du retrait et réduction du split à 25% par appréciation du risque, avec tentative contractuelle de renoncer au droit de saisir les tribunaux ou de contester les décisions. Sans présumer de la validité de ces renonciations au regard du droit applicable, la protection pratique des rewards est très faible : B1=0.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les CGU §7.3 exigent de conserver la même stratégie et autorisent à refuser le retrait lors d'un 'significant change of behaviour' à la seule appréciation de First Frontier. Une ambiguïté B2 −3. Le pouvoir de refus des récompenses, déjà en B1, n'est pas déduit une deuxième fois.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ],
+          "negativeFactIds": [
+            "funding-frontier-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les conditions identifient First Frontier FZ-LLC, registre RAK Economic Zone 0000004042431, UAE, avec lieu et opérateur de la marque Funding Frontier; C1=7 pour identité déclarée, sans registre indépendant récent.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro et l'adresse apparaissent au contrat, mais un extrait officiel du RAKEZ attestant good standing de novembre 2026 n'a pas été recoupé; C2=3, sans alléguer radiation.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Des clauses de renonciation à droits apparemment extrêmes appellent un examen juridique, mais ne prouvent pas à elles seules une sanction officielle par autorité identifiée : C3=2, vérification réglementaire incomplète.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Challenges Instant, 1 Step, 2 Step publient prix, objectifs, drawdowns, statut simulé, règles et modalités pays/KYC. Quatre familles D1 documentées, sans certifier la qualité du recours.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU sont librement accessibles mais mentionnent mises à jour immédiates sans préavis, et la fin comporte « Last Updated: [Current Date] », champ non complété. D2=2 pour accès seulement; aucune rétroactivité avérée B2 −4 sans dossier daté.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "La communication promet une évaluation sérieuse et une Payout Guarantee, mais la partie juridique prévoit médiation non contraignante à frais du trader et large refus des demandes; la cohérence commerciale/contractuelle de cette protection est insuffisante : D3=0.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Marque et CGU publique 2024, service antérieur à novembre 2025 d'au moins 18 mois plausible sans dossier complet de 36 mois de ventes vérifiées : E1=4.",
+          "sources": [
+            "https://fundingfrontier.com/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "E2": {
+          "points": 1,
+          "reason": "Canaux support et promesses de réponse existent (+1), mais §16 réserve le choix du médiateur à l'opérateur, la médiation non contraignante est payée par le trader et les possibilités d'appel sont réduites; E2=1 sans preuve de recours neutre.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "funding-frontier-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Funding Frontier Classic et PRO funded",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "CGU §7.3 : interdiction non chiffrée de changement 'significant' de comportement/stratégie à la seule discrétion de First Frontier.",
+          "consequence": "Une stratégie compatible avec drawdown et jours mini peut être jugée différente et sa récompense refusée.",
+          "source": "https://fundingfrontier.com/legal-terms/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."

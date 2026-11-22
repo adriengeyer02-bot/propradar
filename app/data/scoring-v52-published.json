@@ -1,7 +1,7 @@
 {
   "version": "5.2",
   "effectiveDecision": "2026-11-22",
-  "publication": "Owner explicitly authorized publication of all 28 native 13-criterion V5.2 audits on 2026-11-22, alongside the 11 previously approved V5 migrations. Trustpilot evidence and legal identities remain source-dated; 24 mechanically migrated candidates are excluded pending verification. Scores reflect editorial risk assessment (not payment certifications).",
+  "publication": "Owner-authorized continued V5.2 editorial rollout: 11 prior V5 migrations + 38 fully source-linked native audit scorecards (28 previous, 10 cohort D 2026-11-22); all 24 other conversions remain unapproved. Scores are editorial risk assessments with dated sources, not certification of paid rewards or favourable recommendation. Legacy comparisons are not valid V5→V5.2 backtests unless evidence held constant.",
   "approvals": [
     {
       "slug": "alpha-capital-group",
@@ -219,6 +219,56 @@
       "slug": "directfundedtrader",
       "checkedOn": "2026-11-22",
       "expectedFinal": 47
+    },
+    {
+      "slug": "fidelcrest",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 54
+    },
+    {
+      "slug": "now-trade-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 47
+    },
+    {
+      "slug": "fundings4u",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 41
+    },
+    {
+      "slug": "ultimate-traders",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 55
+    },
+    {
+      "slug": "bullwaves-prime",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 53
+    },
+    {
+      "slug": "dna-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 51
+    },
+    {
+      "slug": "foxx-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 44
+    },
+    {
+      "slug": "sfx-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 42
+    },
+    {
+      "slug": "superfunded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 45
+    },
+    {
+      "slug": "funding-frontier",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 49
     }
   ]
 }
