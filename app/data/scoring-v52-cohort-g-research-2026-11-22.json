@@ -1,0 +1,238 @@
+{
+  "version": "5.2",
+  "cohort": "G",
+  "checkedOn": "2026-11-22",
+  "status": "research_proposals_not_approved_no_live_scores",
+  "audits": [
+    {
+      "slug": "exfunded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 39,
+      "criteria": {
+        "A1": {
+          "points": 4,
+          "reason": "ExFunded 1-step et 2-step : les critères de jours rentables, cohérence des lots, durée des trades et plafonds de retrait sont expliqués (+2 éligibilité, +2 plafonds). Mais la page produit annonce un premier versement après 14 jours tandis que la FAQ parle de 10 jours après financement et d'un addon hebdomadaire ; calendrier du plan standard non réconcilié (0). Split 70/80/90 et minima sont indiqués, pas les frais complets (0). Procédure de transfert et mode final non détaillés (0).",
+          "sources": [
+            "https://exfunded.sandai-investment.com/exfunded-step-1-challenge/",
+            "https://exfunded.sandai-investment.com/exfunded-2-step-challenge/",
+            "https://exfunded.sandai-investment.com/faq/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Palier neutre V5.2 : les allégations commerciales de 0 refus et les alertes historiques non réconciliées ne suffisent ni à établir deux refus injustifiés indépendants ni une régularité bancaire sur 12 mois. Aucun incident grave daté de l'opérateur actuel et corroboré à un niveau permettant le palier inférieur dans ce dossier.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/faq/",
+            "https://exfunded.sandai-investment.com/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La page d'accueil actuelle revendique plus d'un million de dollars payés et une vitesse de traitement. Il s'agit de chiffres émis par la firme ; aucun transfert bancaire ou on-chain final attribué à ExFunded LLC, au programme et au bénéficiaire n'a été indépendamment authentifié.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "FAQ « Account Misuse or Unauthorized Access » puis « prohibited trading strategies » : ExFunded se réserve le droit de retirer tout profit réputé indû, de facturer des coûts à sa seule discrétion et d'annuler les transactions sans préavis ; la règle chiffrée de lots peut entraîner la confiscation de tous les profits dès la première violation. Aucun recours contractuel spécifique aux récompenses acquises n'est établi. Fait traité ici UNIQUEMENT, pas en B2.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/faq/"
+          ],
+          "negativeFactIds": [
+            "exfunded-funded-profit-forfeiture-discretion"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les interdictions de scalping (< 5 minutes ou seuil de 5 pips moyen), de stacking (< 5 minutes entre ouvertures en phase funded), de copieurs et d'EAs sont matériellement quantifiées ou nommées dans la FAQ. Aucun cas DISTINCT de contradiction matérielle, changement rétroactif ou asymétrie profit-perte sur une même classe de trades n'a été établi. La discrétion sur la confiscation déjà cotée en B1 n'est pas facturée une seconde fois.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/faq/"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les conditions juridiques du sous-domaine identifient « ExFunded LLC » et une adresse à Accra, Ghana, mais ne donnent aucun numéro d'immatriculation ni chaîne de cession du domaine historique exfunded.com vers le sous-domaine sandai-investment.com. Identité nominale présente, lien au checkout et contrat funded restant incomplets.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/terms-condition/",
+            "https://exfunded.sandai-investment.com/",
+            "https://exfunded.com/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le registre officiel du Ghana ORC propose une recherche documentaire d'entité, mais aucune fiche ORC datée avec numéro et état juridique de « ExFunded LLC » n'a été obtenue et authentifiée ici. Classement statut non vérifiable, sans prétendre que la société est dissoute ou radiée.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/terms-condition/",
+            "https://orc.gov.gh/service-entity-information-search.php"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Absence d'avertissement officiel nominatif corroboré lors de cette recherche, mais impossibilité de rattacher exhaustivement la recherche à un identifiant d'entreprise et à un vendeur contractant effectivement enregistré : contrôle des avertissements incomplet, palier C3=2 et non 4. Ne pas inférer une obligation de licence de courtier pour le service simulé.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/terms-condition/",
+            "https://orc.gov.gh/service-entity-information-search.php"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Tarifs détaillés en FAQ pour 1-step/2-step (+2), objectifs, pertes journalières/globales et étapes des deux challenges (+2), interdictions copieurs/EA/scalping et sanctions avec périmètre funded et durées (+2), contrôle KYC et pays exclus US/Canada/OFAC (+2). Les discordances sur conditions de payout sont réservées à A1 et D3, sans soustraction du détail de programmes ici.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/faq/",
+            "https://exfunded.sandai-investment.com/exfunded-step-1-challenge/",
+            "https://exfunded.sandai-investment.com/exfunded-2-step-challenge/",
+            "https://exfunded.sandai-investment.com/terms-condition/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "La page Terms & Condition est librement accessible et identifie le nom ExFunded LLC (+2). Elle ne contient pas de date de version du contrat commercial funded, ni d'historique d'amendements garantissant le traitement des comptes existants (+0+0). La mention copyright n'est pas une date contractuelle.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/terms-condition/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "L'identité historique .com et la boutique du sous-domaine actuel ne sont pas juridiquement liées par une cession vérifiée (0). La FAQ promet de demander après 10 jours tandis que les deux fiches produit parlent de 14 jours ; la cohérence contractuelle n'est pas résolue (0). Les pages disent à la fois « funded live account » et tous comptes virtuels/simulés, sans rôle contractuel clair du broker, donc cohérence simulateur et opérateurs non accordée (0).",
+          "sources": [
+            "https://exfunded.sandai-investment.com/terms-condition/",
+            "https://exfunded.sandai-investment.com/faq/",
+            "https://exfunded.sandai-investment.com/exfunded-step-1-challenge/",
+            "https://exfunded.sandai-investment.com/exfunded-2-step-challenge/"
+          ]
+        },
+        "E1": {
+          "points": 0,
+          "reason": "Une ancienneté de domaine et la mention ©2025 ne prouvent pas une activité opérationnelle continue de la même firme ni du même opérateur pendant six mois. Aucune date de lancement ou d'activité d'évaluation attribuable au vendeur actuel n'a été authentifiée au seuil E1 : score 0, sans pénalité supplémentaire liée au seul âge.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/",
+            "https://exfunded.sandai-investment.com/terms-condition/"
+          ]
+        },
+        "E2": {
+          "points": 1,
+          "reason": "Un e-mail de support officiel est fourni dans les Terms (+1). Aucune vérification de réponse exploitable, aucune procédure interne de réclamation/escalade sur le refus de rewards et aucune résolution indépendante documentée n'ont été établies (+0+0+0). Le simple recours aux tribunaux n'est pas une procédure de support.",
+          "sources": [
+            "https://exfunded.sandai-investment.com/terms-condition/"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ],
+  "statusReviews": [
+    {
+      "slug": "t4tcapital",
+      "classification": "CHECKOUT_EXISTS_TERMS_AND_ENTITY_UNVERIFIED",
+      "note": "La marque T4TCapitalFM présente une page de vente et une inscription 2026 ; une seconde ligne de produits décrit des conditions différentes, et la page Terms of Use du vendeur ne peut être réconciliée. Correspondance T4TCapital/T4TCapitalFM/Traders4Traders non attestée par registre. Ne pas réutiliser le juridique d'une société homonyme.",
+      "sources": [
+        "https://t4tcapitalfm.com/pt/",
+        "https://client.t4tcapitalfm.com/register",
+        "https://propfirmmap.com/blog/t4tcapitalfm-review"
+      ],
+      "next": [
+        "Récupérer CGU commerciales au checkout du programme exact",
+        "Vérifier la société/ACN du vendeur avec registre officiel",
+        "Séparer 1-Step adaptable et produits de la boutique"
+      ],
+      "checkedOn": "2026-11-22",
+      "v52Final": null,
+      "publicationAllowed": false
+    },
+    {
+      "slug": "the-funded-trader",
+      "classification": "HOSTING_UNAVAILABLE_LEGAL_CLOSURE_UNCONFIRMED",
+      "note": "Contrôle tiers du 7–9 novembre 2026 : site, tableau de bord et CGU ont retourné HTTP 402 « deployment temporarily paused » ; les archives officielles de 2026 attestent des offres anciennes mais aucun checkout vérifiable actuel. Incident d'hébergement ≠ dissolution ni extinction des obligations. Plaintes et presse historiques à instruire par dates et règlements indépendants.",
+      "sources": [
+        "https://thefundedtraderprogram.com/",
+        "https://bestprops.com/prop-firms/the-funded-trader/",
+        "https://bestprops.com/status/the-funded-trader-status/"
+      ],
+      "next": [
+        "Vérifier réouverture checkout/dashboard",
+        "Retrouver contrat funded et société actuelle, preuves statutaires",
+        "Rapprocher les paiements historiques, distinguer dossiers réglés et impayés"
+      ],
+      "checkedOn": "2026-11-22",
+      "v52Final": null,
+      "publicationAllowed": false
+    },
+    {
+      "slug": "traddoo",
+      "classification": "COMMERCIAL_ACTIVITY_DISPUTED",
+      "note": "Une ancienne page traddoo.com est indexée avec une offre futures, mais des vérifications tierces de juillet-octobre 2026 signalent un domaine hors service ou une offre inactive. Sans constat actuel du vendeur, le statut n'est pas définitivement classé fermé ni actif.",
+      "sources": [
+        "https://traddoo.com/",
+        "https://joinprop.com/prop-firm/traddoo/",
+        "https://propfirmtier.com/en/firms/traddoo"
+      ],
+      "next": [
+        "Vérifier page de paiement et CGU serveur actuels",
+        "Obtenir un avis officiel de fermeture ou reprise",
+        "Ne pas reprendre des conditions forex 2024 pour la plateforme futures"
+      ],
+      "checkedOn": "2026-11-22",
+      "v52Final": null,
+      "publicationAllowed": false
+    },
+    {
+      "slug": "willis-capital",
+      "classification": "THIRD_PARTY_CLOSED_PRIMARY_NOT_LOCATED",
+      "note": "Le comparateur TheTrustedProp classe Willis Capital comme fermé en 2026, mais aucune notification officielle de fermeture, date de cessation ou registre de l'opérateur correspondant n'a été authentifié. Conservation d'un doute de statut, sans invention d'une note V5.2.",
+      "sources": [
+        "https://thetrustedprop.com/prop-firms/willis-capital/overview"
+      ],
+      "next": [
+        "Identifier site officiel et société exacte",
+        "Vérifier registre et archive de vente",
+        "Aucun statut légal « dissoute » sans preuve"
+      ],
+      "checkedOn": "2026-11-22",
+      "v52Final": null,
+      "publicationAllowed": false
+    },
+    {
+      "slug": "atfunded",
+      "classification": "OFFICIAL_PAUSE_REFUNDS_UNVERIFIED",
+      "note": "Annonce officielle ATFunded : opérations suspendues, MT5 passé en mode close-only, promesse de rembourser tous comptes actifs et de régler les récompenses éligibles. Aucune preuve que chaque client a effectivement été remboursé n'a été authentifiée dans ce contrôle ; ce n'est pas un arrêt de paiement confirmé.",
+      "sources": [
+        "https://atfunded.com/faq/is-atfunded-legit/",
+        "https://traderstrusted.com/companies/atfunded/"
+      ],
+      "next": [
+        "Vérifier reprise commerciale ou statut archivé",
+        "Authentifier une période et des règlements de remboursements/rewards",
+        "Ne pas compter une promesse comme paiement A3"
+      ],
+      "checkedOn": "2026-11-22",
+      "v52Final": null,
+      "publicationAllowed": false
+    },
+    {
+      "slug": "kortanafx",
+      "classification": "OFFICIAL_PAUSE_PLATFORM_LICENSE",
+      "note": "Site officiel annonce la suspension provisoire de toutes opérations après perte de licence MT5, alors que les anciennes offres et liens d'achat restent visibles. Les CGU détaillent sanctions et retrait de profits, mais elles ne rendent pas le programme achetable tant que la suspension est officielle.",
+      "sources": [
+        "https://www.kortanafx.com/",
+        "https://www.kortanafx.com/terms.html"
+      ],
+      "next": [
+        "Vérifier communiqué de reprise et nouvel opérateur plateforme",
+        "Vérifier traitement des comptes et rewards pendants",
+        "Désactiver tout appel à achat si site encore marqué pause"
+      ],
+      "checkedOn": "2026-11-22",
+      "v52Final": null,
+      "publicationAllowed": false
+    }
+  ],
+  "methodology": "SCORING_V5_2.md",
+  "notes": "FXIFY and other published scores are not modified. This is a separate research artifact pending independent editorial review. ExFunded contracting entity and current checkout are not independently authenticated; do not make purchase claims."
+}
