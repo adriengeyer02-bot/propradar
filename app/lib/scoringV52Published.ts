@@ -11,35 +11,54 @@ import type { PropFirm } from './propFirms';
 import type { V5Scorecard } from './scoringV5';
 import { computeV5Scorecard } from './scoringV5';
 import { computeV52Candidate } from './scoringV52Candidate';
+import freshAudits from '../data/scoring-v52-new-audits.json';
+import { computeV52Scorecard, type V52Scorecard } from './scoringV52';
 
+type AuditOrigin = {kind:'migration';card:V5Scorecard}|{kind:'native';card:V52Scorecard};
 const source = new Map<string,V5Scorecard>();
 for(const card of [...c01.firms,...n01.firms] as V5Scorecard[]) {
   if (source.has(card.slug)) throw Error('V5.2 duplicate source '+card.slug);
   source.set(card.slug,card);
 }
-const approved = new Map<string,V5Scorecard>();
-const publishedPreviously = new Set(oldWhitelist.approvals.map(x=>x.slug));
-if(whitelist.approvals.length!==oldWhitelist.approvals.length) throw Error('V5.2: scope of approved V5 firms changed');
-for(const entry of whitelist.approvals) {
-  const card=source.get(entry.slug);
-  const original=oldWhitelist.approvals.find(a=>a.slug===entry.slug);
-  if (!card||!original||!publishedPreviously.has(entry.slug)||approved.has(entry.slug)) throw Error('V5.2: unknown or duplicate approved slug '+entry.slug);
-  if(card.checkedOn!==entry.checkedOn||original.checkedOn!==entry.checkedOn||entry.sourceV5Final!==original.expectedFinal) throw Error('V5.2: source version changed '+entry.slug);
-  const old=computeV5Scorecard({...card,status:'approuvee'});
-  if(old.final!==original.expectedFinal) throw Error('V5.2: prior evidence changed '+entry.slug);
-  const next=computeV52Candidate({...card,status:'approuvee'});
-  if(next.final!==entry.expectedFinal) throw Error('V5.2: candidate score changed without reapproval '+entry.slug);
-  approved.set(entry.slug,{...card,status:'approuvee'});
+const newCards=new Map<string,V52Scorecard>();
+for(const card of freshAudits.audits as V52Scorecard[]){
+  if(newCards.has(card.slug)||source.has(card.slug)) throw Error('V5.2 duplicate new audit '+card.slug);
+  // Full 13-criterion and unique B2 fact check, even when not yet approved.
+  computeV52Scorecard({...card,status:'proposition'});
+  newCards.set(card.slug,card);
 }
+const approved = new Map<string,AuditOrigin>();
+const publishedPreviously = new Set(oldWhitelist.approvals.map(x=>x.slug));
+if(whitelist.approvals.length<oldWhitelist.approvals.length) throw Error('V5.2: previously approved firm missing');
+for(const entry of whitelist.approvals) {
+  if(approved.has(entry.slug)) throw Error('V5.2: duplicate approval '+entry.slug);
+  const original=oldWhitelist.approvals.find(a=>a.slug===entry.slug);
+  if(original) {
+    const card=source.get(entry.slug);
+    if(!card||!publishedPreviously.has(entry.slug)||card.checkedOn!==entry.checkedOn||original.checkedOn!==entry.checkedOn||entry.sourceV5Final!==original.expectedFinal) throw Error('V5.2: prior V5 audit source changed '+entry.slug);
+    if(computeV5Scorecard({...card,status:'approuvee'}).final!==original.expectedFinal) throw Error('V5.2: prior audit arithmetic changed '+entry.slug);
+    if(computeV52Candidate({...card,status:'approuvee'}).final!==entry.expectedFinal) throw Error('V5.2: converted score changed '+entry.slug);
+    approved.set(entry.slug,{kind:'migration',card:{...card,status:'approuvee'}});
+  } else {
+    const card=newCards.get(entry.slug);
+    if(!card||card.checkedOn!==entry.checkedOn||computeV52Scorecard({...card,status:'approuvee'}).final!==entry.expectedFinal) throw Error('V5.2: new card lacks matched approval '+entry.slug);
+    approved.set(entry.slug,{kind:'native',card:{...card,status:'approuvee'}});
+  }
+}
+for(const name of publishedPreviously)if(!approved.has(name))throw Error('V5.2: approved V5 firm was lost '+name);
 
 export function isPublishedV52(slug:string,latestScoreReview?:string):boolean {
-  const card=approved.get(slug);
-  return Boolean(card&&(!latestScoreReview||latestScoreReview<=card.checkedOn));
+  const source=approved.get(slug);
+  return Boolean(source&&(!latestScoreReview||latestScoreReview<=source.card.checkedOn));
 }
 export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
   if(!isPublishedV52(firm.slug,latestScoreReview)) return undefined;
-  const card=approved.get(firm.slug)!;
-  const result=computeV52Candidate({...card,closed:firm.status==='Fermée',trustpilotActiveNotice:Boolean(firm.reviewSignals.trustpilotRatingWithheld)});
+  const origin=approved.get(firm.slug)!;
+  const card=origin.card;
+  const currentFlag=Boolean(firm.reviewSignals.trustpilotRatingWithheld);
+  const result=origin.kind==='migration'
+    ?computeV52Candidate({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag})
+    :computeV52Scorecard({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag});
   return {...result,
     checkedOn:card.checkedOn,
     independentPayoutProofLimited:card.criteria.A3.points<3,
