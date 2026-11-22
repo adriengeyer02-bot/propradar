@@ -1,5 +1,6 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
+import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
 import { toEnglishText } from './i18n';
@@ -143,6 +144,8 @@ export type PropFirm = {
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
   v5SafetyCap?: { before: number; cap: 55 };
+  /** V5.2 evidence ceiling; a cap, not a second score deduction. */
+  v52PayoutCap?: { before: number; cap: 64 | 69 | 79 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
@@ -12938,7 +12941,7 @@ function applyClosedScoreRule(firm: PropFirm): PropFirm {
 function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
   // V5 B2 has already reduced the editorial score. A second legacy rules
   // deduction would punish the same contract clause twice.
-  if (isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
+  if (isPublishedV52(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5.2 || isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
   if (!RULES_PENALTY_ENABLED || firm.status === 'Fermée') return firm;
   const result = computeRulesPenalty(getFirmUpdate(firm.slug));
   if (!result?.penalty) return firm;
@@ -12963,7 +12966,25 @@ function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
   return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
 }
 
+/** Apply V5.2 proof ceiling and (if required) legal ceiling AFTER Trustpilot once. */
+function applyV52CapsRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée') return firm;
+  const audit = getPublishedV52Score(firm);
+  if (!audit) return firm;
+  let next = firm;
+  const proof = audit.payoutEvidenceCap;
+  if (proof !== null && next.score > proof) {
+    next = { ...next, score: proof, v52PayoutCap: { before: next.score, cap: proof } };
+  }
+  const legal = audit.safetyCap;
+  if (legal !== null && next.score > legal) {
+    next = { ...next, score: legal, v5SafetyCap: { before: next.score, cap: legal } };
+  }
+  return next;
+}
+
 function applyV5SafetyCapRule(firm: PropFirm): PropFirm {
+  if (isPublishedV52(firm.slug)) return firm; // legal cap already applied by V5.2 pipeline
   if (getFirmUpdate(firm.slug)?.scoringVersion !== 5 && !(!getFirmUpdate(firm.slug) && isPublishedV5(firm.slug))) return firm;
   const v5 = getPublishedV5Score(firm);
   if (!v5 || firm.status === 'Fermée' || v5.safetyCap === null || firm.score <= v5.safetyCap) return firm;
@@ -13013,7 +13034,7 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV52CapsRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');
