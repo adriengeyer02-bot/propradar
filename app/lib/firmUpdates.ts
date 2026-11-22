@@ -140,7 +140,7 @@ export function getFirmUpdate(slug: string): FirmUpdate | undefined {
 }
 
 /** Align the entire public profile with the dated V5 evidence, not just the score ring. */
-function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<ReturnType<typeof getPublishedV5Score>>, 'afterRules' | 'checkedOn' | 'positivePayoutEvidence' | 'contractingEntityVerified'>): PropFirm {
+function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<ReturnType<typeof getPublishedV5Score>>, 'afterRules' | 'checkedOn' | 'positivePayoutEvidence' | 'contractingEntityVerified'> & { nativeAudit?: { A3:number; B1:number; C1:number; trustpilotNotice?:boolean } }): PropFirm {
   const independent = audit.positivePayoutEvidence;
   const proof: PayoutProof | undefined = independent ? {
     date: audit.checkedOn,
@@ -152,6 +152,8 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
   } : undefined;
   const payoutProofs = [...(firm.payoutProofs ?? [])];
   if (proof && !payoutProofs.some((item) => item.url === proof.url)) payoutProofs.unshift(proof);
+  const native = audit.nativeAudit;
+  const auditedTrustpilot = native?.trustpilotNotice;
   return {
     ...firm,
     score: audit.afterRules,
@@ -159,6 +161,16 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
     payoutProof: Boolean(independent),
     payoutProofs,
     legalVerified: audit.contractingEntityVerified,
+    // Keep the public summary consistent with the score the visitor sees.
+    // Historical partial audit notes are not a substitute for the new V5.2 audit.
+    ...(native ? {
+      auditStatus: 'Partiellement vérifié' as const,
+      auditSummary: `V5.2 audit dated ${audit.checkedOn}: 13 source-linked risk criteria. Independently verified final payouts remain limited (payment proof A3 ${native.A3}/5); reward protection B1 ${native.B1}/15 and contracting identity C1 ${native.C1}/10 are documented in the clickable score breakdown. This remains an editorial risk assessment, not a payout guarantee.`,
+    } : {}),
+    ...(auditedTrustpilot === undefined ? {} : {
+      reviewSignals: { ...firm.reviewSignals, trustpilotRatingWithheld: auditedTrustpilot },
+      ...(auditedTrustpilot ? { trustpilotRating: 0 } : {}),
+    }),
   };
 }
 
