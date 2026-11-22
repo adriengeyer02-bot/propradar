@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
 import type { ScoreRuleCopy } from '../../lib/scoreRuleCopy';
+import { ruleAmountDisplay } from '../../lib/ruleAmountDisplay';
 import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
 import type { V5RuleDeduction } from '../../lib/scoringV5';
 import type { V52Rule } from '../../lib/scoringV52Candidate';
@@ -32,7 +33,6 @@ export type ScoreBreakdownView = {
   ruleCopy: ScoreRuleCopy;
   /** True only when the rules amount is an actually assessed score component. */
   ruleAmountAudited: boolean;
-  ruleAmountApplied: boolean;
   signals: { label: string; value: string; tone: string }[];
   programs: { name: string; load: number }[];
   heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; source?: string; kind?: 'restriction' | 'risk' | 'classic' }[];
@@ -92,6 +92,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
     ? view.v4RuleImpact.rewardLoss + view.v4RuleImpact.tradingLoss
     : null;
   const rulesAudited = view.ruleAmountAudited || v4IncludedImpact !== null;
+  const ruleAmount = ruleAmountDisplay(v4IncludedImpact, rulesAudited, rules.delta);
 
   return (
     <>
@@ -136,11 +137,10 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
                   <div className="psb-step-line">
                     <span className="psb-step-label">{step.label}</span>
-                    <span className={`psb-step-value${(step.delta > 0 || (step.kind === 'rules' && (v4IncludedImpact ?? 0) > 0)) ? ' psb-step-minus' : ''}${step.kind === 'rules' && !rulesAudited ? ' psb-step-pending' : ''}`}>
+                    <span className={`psb-step-value${step.kind === 'rules' && ruleAmount.points !== null && ruleAmount.points > 0 ? ' psb-step-minus' : ''}${step.kind === 'rules' && ruleAmount.kind === 'pending' ? ' psb-step-pending' : ''}`}>
                       {step.kind === 'editorial' ? step.value
-                        : v4IncludedImpact !== null ? (v4IncludedImpact > 0 ? `−${v4IncludedImpact}` : '0')
-                        : !rulesAudited ? view.ruleCopy.pending
-                        : step.delta > 0 ? `−${step.delta}` : '0'}
+                        : ruleAmount.kind === 'pending' ? view.ruleCopy.pending
+                        : ruleAmount.points > 0 ? `−${ruleAmount.points}` : '0'}
                     </span>
                   </div>
                   <div className="psb-bar" aria-hidden="true">
