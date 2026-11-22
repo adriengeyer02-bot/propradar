@@ -684,7 +684,6 @@ export default async function FirmPage({ params }: Props) {
     steps: scoreSteps,
     ruleCopy,
     ruleAmountAudited: Boolean(breakdown.v4 || breakdown.v5 || breakdown.rules?.applied),
-    ruleAmountApplied: Boolean(!breakdown.v4 && breakdown.rules?.applied),
     signals: [
       { label: f.legal, value: v(regulatoryAudit.riskLevel), tone: legalTone(regulatoryAudit.riskLevel) },
       { label: f.payout, value: v(toEnglishText(firm.reviewSignals.payoutRisk)), tone: payoutTone(firm.reviewSignals.payoutRisk) },
