@@ -111,3 +111,60 @@
   .psb-rule-equation small { font-size: 9px; }
   .psb-heaviest .psb-raw-points { min-width: 62px; padding: 4px; }
 }
+
+
+/* November 2026: a scored impact is visible without ever applying it twice.
+   V4 B1/B4 lost points are already included in the editorial score. */
+.psb-v4-embedded-impact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 11px;
+}
+.psb-v4-embedded-impact > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 9px;
+  padding: 10px 11px;
+  border: 1px solid var(--hud-line);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--hud-ink) 3%, transparent);
+}
+.psb-v4-embedded-impact span {
+  max-width: 72%;
+  color: var(--hud-faint);
+  font-size: 11px;
+  line-height: 1.45;
+}
+.psb-v4-embedded-impact strong {
+  white-space: nowrap;
+  color: var(--tone-risk);
+  font: 750 15px/1.25 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+.psb-v4-embedded-impact strong small {
+  color: var(--hud-faint);
+  font-size: 10px;
+  font-weight: 500;
+}
+/* V5/V5.2: the exact source-backed B2 impact beside the actual clause. */
+.psb-v5-evidence li {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  column-gap: 9px;
+}
+.psb-v5-rule-points {
+  padding: 4px 7px;
+  border: 1px solid color-mix(in srgb, var(--tone-risk) 45%, var(--hud-line));
+  border-radius: 5px;
+  color: var(--tone-risk);
+  background: color-mix(in srgb, var(--tone-risk) 8%, transparent);
+  font: 750 12px/1.25 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+@media (max-width: 440px) {
+  .psb-v4-embedded-impact { grid-template-columns: 1fr; gap: 6px; }
+  .psb-v5-evidence li { grid-template-columns: auto minmax(0, 1fr); }
+  .psb-v5-rule-points { grid-column: 2; justify-self: start; }
+}
