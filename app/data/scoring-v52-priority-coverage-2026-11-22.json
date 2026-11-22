@@ -8,13 +8,13 @@
     "v52_publication_gate": 11,
     "v52_recalculated_needs_evidence_check": 24,
     "status_review_no_score": 14,
-    "missing_full_13_criterion_audit": 66,
-    "withCompleteV52Scorecard": 42,
-    "withoutNumericV52Scorecard": 80,
+    "missing_full_13_criterion_audit": 65,
+    "withCompleteV52Scorecard": 43,
+    "withoutNumericV52Scorecard": 79,
     "sourceBackedOutsidePriority": 6,
     "allMigratedScorecards": 41,
-    "v52_native_score_proposal_needs_approval": 7,
-    "allSourceBackedV52Scorecards": 48
+    "v52_native_score_proposal_needs_approval": 8,
+    "allSourceBackedV52Scorecards": 49
   },
   "extraScoredOutside122": [
     {
@@ -742,13 +742,13 @@
       "slug": "funded-squad",
       "group": "C04",
       "legacyScore": 51,
-      "state": "missing_full_13_criterion_audit",
-      "v52Candidate": null,
-      "payoutProofLevel": null,
-      "confidence": null,
+      "state": "v52_native_score_proposal_needs_approval",
+      "v52Candidate": 41,
+      "payoutProofLevel": 1,
+      "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundedsquad.com/terms-of-service",
-      "sourcePath": "PRs #241/#245",
+      "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
       "ownerReviewNeeded": true
     },
     {
