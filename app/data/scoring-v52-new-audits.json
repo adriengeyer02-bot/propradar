@@ -846,6 +846,148 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "alpine-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 54,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Base Camp Instant Funding : demandes par seuils de +5% et niveau, premiers deux montants bloqués jusqu'au troisième sans add-on On-Demand, barème chiffré par taille (100 USD dès 10k, 1 000 USD sur 100k), et parcours Rise à étapes explicites. Alpine 2-Step annonce cycle de 14 jours. +2 calendrier, +2 conditions, +2 plafonds, +2 demande; split et frais réels de chaque méthode et programme non vérifiés exhaustivement : +0.",
+          "sources": [
+            "https://alpinefunded.com/faq/base-camp-payouts/",
+            "https://alpinefunded.com/faq/payouts-crypto-bank-transfers/",
+            "https://alpinefunded.com/how-it-works/",
+            "https://alpinefunded.com/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les plaintes publiques concernent notamment la date réelle du versement et l'activation du palier 3, mais le contrôle ne dispose pas de deux refus injustifiés distincts, datés et indépendamment corroborés selon le protocole A2. L'entreprise ne dispose pas ici d'une série indépendante datée de règlements sur 12 mois. A2=6 est neutre, pas une exonération.",
+          "sources": [
+            "https://www.trustpilot.com/review/alpinefunded.com",
+            "https://alpinefunded.com/faq/base-camp-payouts/",
+            "https://joinprop.com/prop-firm/alpine-funded/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site diffuse certificats de récompenses et total global de 1,9 M USD revendiqué. Rise est annoncé comme prestataire de traitement après autorisation, sans journal bancaire public de règlements compensés, attribution de bénéficiaires et mandat du tiers payeur. Les certificats marketing et avis Trustpilot ne suffisent pas à établir A3 supérieur à 1.",
+          "sources": [
+            "https://alpinefunded.com/",
+            "https://alpinefunded.com/about-us/",
+            "https://alpinefunded.com/faq/payouts-crypto-bank-transfers/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU en vigueur §4.6 laissent à Alpine Funded la discrétion sur l'éligibilité aux récompenses et bonus des achats promotionnels; §4.7 prévoit perte des droits à récompenses de comptes passés en cas de chargeback. §9.2–9.6 : tiers financeur non nommé libre d'admettre/refuser, et Alpine décline responsabilité de ses versements. Le contrat funded tiers n'a pas été fourni : pouvoir large et recours limité sur les récompenses, B1=3 provisoire; à reconsidérer selon convention gagnant.",
+          "sources": [
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://joinprop.com/prop-firm/alpine-funded/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Clauses 7.1(h)-(i), 7.2–7.3 : stratégie à risque « unsustainably high », trading non professionnel ou portant préjudice à la réputation, taille « disproportionately large », fréquence « significantly » inhabituelle ; Alpine juge seule ce qui constitue une pratique interdite. La sanction peut entraîner retrait de trades et clôture. Un seul malus −3 sur le comportement flou, sans sanctionner une limite chiffrée et annoncée comme la fenêtre news ±5 minutes.",
+          "sources": [
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/how-it-works/"
+          ],
+          "negativeFactIds": [
+            "alpine-funded-gtc-7-unbounded-professional-risk-terms"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le fournisseur du challenge Alpine Funded GmbH (Cham), UID CHE-159.158.124, concorde avec le registre fédéral suisse et les CGU. Mais les §§9.2–9.3 nomment une entreprise tierce distincte comme cocontractant du funded et responsable du payout, sans identifier ce tiers ni son registre : identité vérifiée pour l'évaluation, chaîne des paiements incomplète (C1=7).",
+          "sources": [
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/about-us/"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "L'autorité fédérale suisse (registre UID) affiche Alpine Funded GmbH CHE-159.158.124 en statut actif, à Sinserstrasse 67, Cham, cohérent avec les CGU et l'offre ; aucun indice de radiation active au registre consulté. Ce statut vérifie le fournisseur suisse, non l'entreprise inconnue du contrat funded.",
+          "sources": [
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124",
+            "https://alpinefunded.com/terms-and-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure officielle précise et actuelle contre Alpine Funded GmbH n'est établie dans les sources consultées, mais les recherches complètes d'avertissements des autorités et du partenaire de financement non nommé restent inachevées. Ce service de simulation ne doit pas être pénalisé pour absence d'une licence de courtage non exigée ; valeur provisoire 2.",
+          "sources": [
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Les pages publiques donnent taille du compte, drawdown, objectifs et étapes par Base Camp, Alpine 2-Step et Alpine Pass (+2), types de trading interdits et sanctions par phase avec CGU et FAQ (+2), ainsi que contrôle KYC et exclusions géographiques (+2). Les add-ons et prix finaux de toute combinaison avant paiement ne sont pas vérifiés de bout en bout (+0).",
+          "sources": [
+            "https://alpinefunded.com/how-it-works/",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU intégrales téléchargeables, fichier PDF 260929 (29 septembre 2026), accessibles depuis la page légale. §2.1 autorise une mise à jour unilatérale à tout moment en imposant au client de vérifier la dernière version, sans protection explicite des cohortes déjà achetées. Accès + date =4; absence de garantie contractuelle sur rétroactivité =0, sans appliquer B2 −4 faute de changement rétroactif DÉMONTRÉ.",
+          "sources": [
+            "https://alpinefunded.com/terms-and-conditions/",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La FAQ de Base Camp publie la rétention des deux premiers payouts jusqu'au troisième, tandis que l'accueil promet des récompenses à la demande en 24h; il faut expliquer la différence entre 'demande' et règlement effectif et entre Base Camp et 2-Step. L'entité tierce non nommée responsable du funded et des paiements dans les CGU contredit l'impression donnée par la promesse d'Alpine de payer elle-même. Présentation des comptes simulés cohérente (+2) mais parcours/checkout et rôles contractuels non totalement cohérents (+0+0).",
+          "sources": [
+            "https://alpinefunded.com/faq/base-camp-payouts/",
+            "https://alpinefunded.com/",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/how-it-works/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Premier article du centre d'aide daté du 02/08/2024 décrit le service Alpine Funded ouvert ; la fiche historique de la firme et le registre suisse du début 2024 recoupent son existence opérationnelle depuis au moins 27 mois. Palier 18–35 mois (4), sans extrapoler à 36 mois ni confondre trading privé du fondateur et activité de la firme.",
+          "sources": [
+            "https://help.alpinefunded.com/en/articles/9691400-what-is-alpine-funded",
+            "https://alpinefunded.com/about-us/",
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Support officiel par mail et formulaire (+1), réponses actuelles de l'entreprise et témoignages circonstanciés attestant une joignabilité au moins ponctuelle (+1), procédure contractuelle de plainte avec objectif 30 jours et réponse écrite (§16.3) (+1). Pas de preuve indépendante suffisante pour accorder le point de résolution efficace des litiges généraux (+0).",
+          "sources": [
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://www.trustpilot.com/review/alpinefunded.com",
+            "https://alpinefunded.com/faq/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "alpine-funded-gtc-7-unbounded-professional-risk-terms",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Alpine Funded · Base Camp Instant, 2-Step/Peak et règles générales de trading simulé",
+          "phase": "Trading / examen des comportements interdits avant décision funded et payout",
+          "clause": "CGU §7.1(h)-(i) et §7.2–7.3 : unsustainably high risk, pratiques non professionnelles ou préjudice réputationnel, tailles/fréquences anormales ; qualification par la seule discrétion de la firme.",
+          "consequence": "Une stratégie respectant les drawdowns chiffrés peut néanmoins être déclarée non professionnelle ; trades/profits simulés supprimés et comptes résiliés.",
+          "source": "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
