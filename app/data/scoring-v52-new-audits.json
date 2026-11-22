@@ -4939,6 +4939,659 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "wemastertrade",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 45,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "WeMasterTrade — Les ratios de split des packages Learning, Standard et 51010 varient de 10% à 90% selon les seuils; calendriers et frais de versement des différentes cohortes ne sont pas réconciliés sur une seule grille.",
+          "sources": [
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "WeMasterTrade — Ni deux refus de payout injustifiés vérifiés indépendamment avec relevés et échéances, ni douze mois de virements finaux multi-clients corroborés. A2=6 neutre, non quitus.",
+          "sources": [
+            "https://www.trustpilot.com/review/wemastertrade.com",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "WeMasterTrade — Les certificats, chiffres marketing ou témoignages ne prouvent pas indépendamment le paiement final à plusieurs bénéficiaires et l'identité de la contrepartie. A3=1 auto-déclaré.",
+          "sources": [
+            "https://www.trustpilot.com/review/wemastertrade.com",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "WeMasterTrade — CGU §10 : termination des services sans préavis, interview vidéo possible au-delà de 1000 USD de lifetime reward, sanctions incluant suppression des profits après qualification du trading; protection opposable des rewards acquises non démontrée.",
+          "sources": [
+            "https://www.trustpilot.com/review/wemastertrade.com",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "WeMasterTrade — CGU qualifient 'toxic trading' et 'gambling-like behavior' selon la Risk Team sans seuil complet commun aux packages, avec possibilité de nouvelles conditions avant paiement.",
+          "sources": [
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ],
+          "negativeFactIds": [
+            "wemastertrade-qualitative-strategy-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "WeMasterTrade — Une version de l'aide nomme WeMasterTrade LTD n°2025-00321 en Sainte-Lucie; contrats MENA et plateforme WeCopyTrade ne réconcilient pas entièrement le vendeur et le débiteur de rewards.",
+          "sources": [
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "WeMasterTrade — Identification juridique affichée sans extrait de registre indépendant récent des contreparties exactes. C2=3, aucune radiation affirmée.",
+          "sources": [
+            "https://faq.wemastertrade.com/en_gb/profit-sharing/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "WeMasterTrade — Pas de sanction officielle grave attribuée avec certitude au bon fournisseur de simulation dans la revue partielle; Trustpilot n'est pas un régulateur de marchés. C3=2 provisoire.",
+          "sources": [
+            "https://faq.wemastertrade-mena.com/prohibited-conduct-at-wemastertrade/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "WeMasterTrade — Catalogue expose les familles prix, objectifs/drawdowns, stratégies restreintes et KYC/pays; présentation selon produit non totalement unifiée.",
+          "sources": [
+            "https://www.trustpilot.com/review/wemastertrade.com",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "WeMasterTrade — Conditions et versions accessibles, mais les droits de toutes les cohortes face aux révisions restent à établir.",
+          "sources": [
+            "https://wemastertrade.com/customer-compensation-disclosure/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "WeMasterTrade — Les programmes Learning/NoPC/Standard appliquent des splits radicalement différents et certaines exigences d'interview ne sont pas exposées dans un parcours de checkout uniforme.",
+          "sources": [
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "WeMasterTrade — Traces commerciales depuis 2024–2025, mais continuité de 36 mois et paiements indépendants non démontrés.",
+          "sources": [
+            "https://faq.wemastertrade.com/en_gb/profit-sharing/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "WeMasterTrade — Support, aide et réponses sont accessibles, mais pas de voie d'appel neutre et de statistiques de résolution indépendantes.",
+          "sources": [
+            "https://faq.wemastertrade-mena.com/prohibited-conduct-at-wemastertrade/",
+            "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "wemastertrade-qualitative-strategy-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "WeMasterTrade — simulated evaluation/funded program",
+          "phase": "Contrôle de style en challenge ou avant reward",
+          "clause": "CGU qualifient 'toxic trading' et 'gambling-like behavior' selon la Risk Team sans seuil complet commun aux packages, avec possibilité de nouvelles conditions avant paiement.",
+          "consequence": "Requalification potentielle de transactions dans les limites chiffrées, avec refus de la récompense ou fermeture du compte.",
+          "source": "https://faq.wemastertrade-mena.com/terms-and-conditions/"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "forexive",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 44,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "FOREXIVE — Les FAQ distinguent premier reward après quatre semaines pour 1-Step puis cadence quatorzaine, Instant et autres parcours, et Rise. Tous frais, caps et délais par formule ne sont pas réunis.",
+          "sources": [
+            "https://forexive.com/faq/general",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "FOREXIVE — Ni deux refus de payout injustifiés vérifiés indépendamment avec relevés et échéances, ni douze mois de virements finaux multi-clients corroborés. A2=6 neutre, non quitus.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexive.com",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "FOREXIVE — Les certificats, chiffres marketing ou témoignages ne prouvent pas indépendamment le paiement final à plusieurs bénéficiaires et l'identité de la contrepartie. A3=1 auto-déclaré.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexive.com",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "FOREXIVE — Les FAQ disent qu'une seule règle funded violée rend les gains non retirables. Le contrat existe, mais protection des rewards déjà validées et recours externe restent insuffisamment établis.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexive.com",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "FOREXIVE — Les FAQ visent les pratiques abusives, manipulatrices ou non éthiques, en sus des limites news chiffrées, sans classification exhaustive avec seuil de risque.",
+          "sources": [
+            "https://wp.forexive.com/terms-conditions2/"
+          ],
+          "negativeFactIds": [
+            "forexive-qualitative-strategy-20261122"
+          ]
+        },
+        "C1": {
+          "points": 10,
+          "reason": "FOREXIVE — FOREXIVE LTD n°15746920 est nommé dans CGU et FAQ et se retrouve sur Companies House; le cocontractant d'évaluation est identifiable.",
+          "sources": [
+            "https://forexive.com/rewards",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "FOREXIVE — Companies House a enregistré comptes annuels le 23 mars 2026 et confirmation le 28 juin 2026 pour FOREXIVE LTD : preuve d'immatriculation active récente.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15746920/filing-history"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "FOREXIVE — Pas de sanction officielle grave attribuée avec certitude au bon fournisseur de simulation dans la revue partielle; Trustpilot n'est pas un régulateur de marchés. C3=2 provisoire.",
+          "sources": [
+            "https://forexive.com/rules",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "FOREXIVE — Catalogue expose les familles prix, objectifs/drawdowns, stratégies restreintes et KYC/pays; présentation selon produit non totalement unifiée.",
+          "sources": [
+            "https://wp.forexive.com/terms-conditions2/",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "FOREXIVE — Conditions et versions accessibles, mais les droits de toutes les cohortes face aux révisions restent à établir.",
+          "sources": [
+            "https://www.trustpilot.com/review/forexive.com",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "FOREXIVE — Pages promotionnelles annoncent processing en 24h après approbation, mais condition d'approbation et délai bancaire final sont deux choses différentes.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15746920/filing-history",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "FOREXIVE — La marque et des offres commerciales sont datées depuis 2024–2025, sans certifier un historique de payouts indépendants.",
+          "sources": [
+            "https://forexive.com/rewards",
+            "https://forexive.com/faq/general"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FOREXIVE — Support, aide et réponses sont accessibles, mais pas de voie d'appel neutre et de statistiques de résolution indépendantes.",
+          "sources": [
+            "https://forexive.com/faq/general",
+            "https://forexive.com/faq/general"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "forexive-qualitative-strategy-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "FOREXIVE — simulated evaluation/funded program",
+          "phase": "Contrôle de style en challenge ou avant reward",
+          "clause": "Les FAQ visent les pratiques abusives, manipulatrices ou non éthiques, en sus des limites news chiffrées, sans classification exhaustive avec seuil de risque.",
+          "consequence": "Requalification potentielle de transactions dans les limites chiffrées, avec refus de la récompense ou fermeture du compte.",
+          "source": "https://wp.forexive.com/terms-conditions2/"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "hash-hedge",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 61,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Hash Hedge — Commercial Terms 5 novembre 2026 : partage 80% par défaut (90% avec add-on), minimum $1, cap $10,000 sur 14 jours, cycle 14–60 jours et condition KYC. Frais de chaque rail non validés.",
+          "sources": [
+            "https://www.hashhedge.com/terms-and-conditions",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Hash Hedge — Ni deux refus de payout injustifiés vérifiés indépendamment avec relevés et échéances, ni douze mois de virements finaux multi-clients corroborés. A2=6 neutre, non quitus.",
+          "sources": [
+            "https://www.hashhedge.com/terms-and-conditions",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Hash Hedge — Les certificats, chiffres marketing ou témoignages ne prouvent pas indépendamment le paiement final à plusieurs bénéficiaires et l'identité de la contrepartie. A3=1 auto-déclaré.",
+          "sources": [
+            "https://www.hashhedge.com/terms-and-conditions",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "B1": {
+          "points": 9,
+          "reason": "Hash Hedge — Commercial Terms et CGU protègent les montants acquis hors violation confirmée et prévoient Hold, Outcome A, recours après backstop de 90 jours, et promesse triple payout après retard >72h. Pas de garantie d'exécution indépendante; B1=9.",
+          "sources": [
+            "https://www.hashhedge.com/",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Hash Hedge — Les CGU permettent de juger un trading unfair, abusive ou harmful sans définir tous les seuils, avec éventuelle perte de rewards après Outcome A.",
+          "sources": [
+            "https://www.hashhedge.com/terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "hash-hedge-qualitative-strategy-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Hash Hedge — Commercial Terms §8 : FinSmart Solution Ltd n°246832 Seychelles est responsable des rewards; Empower Academy Ltd n°01011157 EAU gère l'évaluation, rôles définis mais registres indépendants non consultés.",
+          "sources": [
+            "https://www.hashhedge.com/terms-and-conditions",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Hash Hedge — Identification juridique affichée sans extrait de registre indépendant récent des contreparties exactes. C2=3, aucune radiation affirmée.",
+          "sources": [
+            "https://www.hashhedge.com/commercial-terms",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Hash Hedge — Pas de sanction officielle grave attribuée avec certitude au bon fournisseur de simulation dans la revue partielle; Trustpilot n'est pas un régulateur de marchés. C3=2 provisoire.",
+          "sources": [
+            "https://www.hashhedge.com/faq",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Hash Hedge — Catalogue expose les familles prix, objectifs/drawdowns, stratégies restreintes et KYC/pays; présentation selon produit non totalement unifiée.",
+          "sources": [
+            "https://www.hashhedge.com/",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "D2": {
+          "points": 6,
+          "reason": "Hash Hedge — CGU §2.5 préservent en principe la cohorte achetée contre les changements, Commercial Terms datées au 5 novembre et limites explicites aux futurs ratios.",
+          "sources": [
+            "https://tradersfundhub.com/blog/hash-hedge-review",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Hash Hedge — Accueil mentionne jusqu'à 90% et objectifs variables, tandis que Commercial Terms fixent 80% sans add-on; il faut corréler affichage et bon plan.",
+          "sources": [
+            "https://www.hashhedge.com/terms-and-conditions",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Hash Hedge — Offres et avis datés depuis 2024, sans preuve documentaire de 36 mois de fonctionnement continu.",
+          "sources": [
+            "https://www.hashhedge.com/commercial-terms",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Hash Hedge — Support, aide et réponses sont accessibles, mais pas de voie d'appel neutre et de statistiques de résolution indépendantes.",
+          "sources": [
+            "https://www.hashhedge.com/faq",
+            "https://www.hashhedge.com/terms-and-conditions"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "hash-hedge-qualitative-strategy-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Hash Hedge — simulated evaluation/funded program",
+          "phase": "Contrôle de style en challenge ou avant reward",
+          "clause": "Les CGU permettent de juger un trading unfair, abusive ou harmful sans définir tous les seuils, avec éventuelle perte de rewards après Outcome A.",
+          "consequence": "Requalification potentielle de transactions dans les limites chiffrées, avec refus de la récompense ou fermeture du compte.",
+          "source": "https://www.hashhedge.com/terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "sure-leverage",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 44,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Sure Leverage Funding — Le centre d'aide publie cycles distincts par Instant/1/2-Step, frais de chaque reward à 2% ou 10 USD minimum, payout et KYC; caps de certaines promotions restent à relier au checkout.",
+          "sources": [
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Sure Leverage Funding — Ni deux refus de payout injustifiés vérifiés indépendamment avec relevés et échéances, ni douze mois de virements finaux multi-clients corroborés. A2=6 neutre, non quitus.",
+          "sources": [
+            "https://www.trustpilot.com/review/sureleveragefunding.com",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Sure Leverage Funding — Les certificats, chiffres marketing ou témoignages ne prouvent pas indépendamment le paiement final à plusieurs bénéficiaires et l'identité de la contrepartie. A3=1 auto-déclaré.",
+          "sources": [
+            "https://www.trustpilot.com/review/sureleveragefunding.com",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Sure Leverage Funding — Les règles et contrôles de compliance prévoient fermeture/forfeiture si breach; aucun funded agreement indépendant ne garantit l'opposabilité des rewards précédemment acquis. B1=3, contrat à contre-vérifier.",
+          "sources": [
+            "https://sureleveragefunding.com/payouts",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Sure Leverage Funding — La qualification de conduite abusive ou de risque type gambling reste partiellement subjective dans les General Rules, sans valeur limite universelle dans chaque produit.",
+          "sources": [
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ],
+          "negativeFactIds": [
+            "sure-leverage-qualitative-strategy-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Sure Leverage Funding — Le footer nomme ASAP Solutions FZ-LLC à Ras Al Khaimah UAE comme vendeur et fait référence à une société Sainte-Lucie 2025-00514 : fonctions commerciales attribuées, débiteur de rewards non vérifié de bout en bout.",
+          "sources": [
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Sure Leverage Funding — Identification juridique affichée sans extrait de registre indépendant récent des contreparties exactes. C2=3, aucune radiation affirmée.",
+          "sources": [
+            "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Sure Leverage Funding — Pas de sanction officielle grave attribuée avec certitude au bon fournisseur de simulation dans la revue partielle; Trustpilot n'est pas un régulateur de marchés. C3=2 provisoire.",
+          "sources": [
+            "https://sureleveragefunding.com/faq",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Sure Leverage Funding — Catalogue expose les familles prix, objectifs/drawdowns, stratégies restreintes et KYC/pays; présentation selon produit non totalement unifiée.",
+          "sources": [
+            "https://sureleveragefunding.com/payouts",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Sure Leverage Funding — Article de FAQ daté du 20 août 2026 limite une version des règles à certains comptes achetés depuis cette date; pas de protection générale prouvée pour toutes les autres cohortes.",
+          "sources": [
+            "https://www.trustpilot.com/review/sureleveragefunding.com",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Sure Leverage Funding — Des nuances entre offres et FAQ requièrent de rapprocher le checkout effectif du contrat funded.",
+          "sources": [
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Sure Leverage Funding — La marque et des offres commerciales sont datées depuis 2024–2025, sans certifier un historique de payouts indépendants.",
+          "sources": [
+            "https://help.sureleveragefunding.com/en/articles/16546983-instant-funding-zero-no-consistency-rule",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Sure Leverage Funding — Support, aide et réponses sont accessibles, mais pas de voie d'appel neutre et de statistiques de résolution indépendantes.",
+          "sources": [
+            "https://sureleveragefunding.com/faq",
+            "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "sure-leverage-qualitative-strategy-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Sure Leverage Funding — simulated evaluation/funded program",
+          "phase": "Contrôle de style en challenge ou avant reward",
+          "clause": "La qualification de conduite abusive ou de risque type gambling reste partiellement subjective dans les General Rules, sans valeur limite universelle dans chaque produit.",
+          "consequence": "Requalification potentielle de transactions dans les limites chiffrées, avec refus de la récompense ou fermeture du compte.",
+          "source": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "titan-capital-markets",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 46,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Titan Capital Markets — Payout Policy précise jour de demande attribué, processing deux jours ouvrés après accord, limites de jours et splits; tous frais et caps des formules Instant/2-Step non consolidés.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/performance-fee-policy",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Titan Capital Markets — Ni deux refus de payout injustifiés vérifiés indépendamment avec relevés et échéances, ni douze mois de virements finaux multi-clients corroborés. A2=6 neutre, non quitus.",
+          "sources": [
+            "https://www.trustpilot.com/review/titancapitalmarkets.co.uk",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Titan Capital Markets — Les certificats, chiffres marketing ou témoignages ne prouvent pas indépendamment le paiement final à plusieurs bénéficiaires et l'identité de la contrepartie. A3=1 auto-déclaré.",
+          "sources": [
+            "https://www.trustpilot.com/review/titancapitalmarkets.co.uk",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Titan Capital Markets — Les soft breaches funded impliquent explicitement forfeiture de profits et remise à zéro. Risk Team peut aussi apprécier un hard breach sur usage de marge excessif, sans recours externe opposable aux gains : B1=0.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Titan Capital Markets — Le Gambling Rule laisse la Risk Team définir reckless overleveraging et insufficient free margin sans seuil unique complet : une seule ambiguïté de stratégie, −3.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/gambling-rule/"
+          ],
+          "negativeFactIds": [
+            "titan-capital-markets-qualitative-strategy-20261122"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Titan Capital Markets — Le site et contrats citent TFT TITAN SOLUTIONS LIMITED au Royaume-Uni (15229528), TG Markets LTD et prestataires de paiement : parties exactes du service et du reward non totalement conciliées.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/2-step-evaluation-rules",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "C2": {
+          "points": 4,
+          "reason": "Titan Capital Markets — Registre UK : TFT TITAN SOLUTIONS LIMITED active, avec action de radiation obligatoire SUSPENDUE le 23 octobre 2026; pièces en retard justifient prudence, mais aucune radiation en cours non suspendue à plafonner.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Titan Capital Markets — Pas de sanction officielle grave attribuée avec certitude au bon fournisseur de simulation dans la revue partielle; Trustpilot n'est pas un régulateur de marchés. C3=2 provisoire.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/performance-fee-policy",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Titan Capital Markets — Catalogue expose les familles prix, objectifs/drawdowns, stratégies restreintes et KYC/pays; présentation selon produit non totalement unifiée.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/hard-soft-breaches",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Titan Capital Markets — Guide Stop-Loss applique explicitement une nouvelle règle aux comptes ouverts depuis le 1er décembre 2025, sans preuve de protection complète des autres cohortes.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/gambling-rule/",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Titan Capital Markets — Des nuances entre offres et FAQ requièrent de rapprocher le checkout effectif du contrat funded.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15229528/filing-history",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Titan Capital Markets — La marque et des offres commerciales sont datées depuis 2024–2025, sans certifier un historique de payouts indépendants.",
+          "sources": [
+            "https://www.trustpilot.com/review/titancapitalmarkets.co.uk",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Titan Capital Markets — Support, aide et réponses sont accessibles, mais pas de voie d'appel neutre et de statistiques de résolution indépendantes.",
+          "sources": [
+            "https://support.tgmarkets.com/articles/2-step-evaluation-rules",
+            "https://support.tgmarkets.com/articles/performance-fee-policy"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "titan-capital-markets-qualitative-strategy-20261122",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Titan Capital Markets — simulated evaluation/funded program",
+          "phase": "Contrôle de style en challenge ou avant reward",
+          "clause": "Le Gambling Rule laisse la Risk Team définir reckless overleveraging et insufficient free margin sans seuil unique complet : une seule ambiguïté de stratégie, −3.",
+          "consequence": "Requalification potentielle de transactions dans les limites chiffrées, avec refus de la récompense ou fermeture du compte.",
+          "source": "https://support.tgmarkets.com/articles/gambling-rule/"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
