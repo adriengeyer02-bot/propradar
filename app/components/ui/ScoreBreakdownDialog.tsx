@@ -138,7 +138,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                     <span className="psb-step-label">{step.label}</span>
                     <span className={`psb-step-value${(step.delta > 0 || (step.kind === 'rules' && (v4IncludedImpact ?? 0) > 0)) ? ' psb-step-minus' : ''}${step.kind === 'rules' && !rulesAudited ? ' psb-step-pending' : ''}`}>
                       {step.kind === 'editorial' ? step.value
-                        : v4IncludedImpact !== null ? `−${v4IncludedImpact}`
+                        : v4IncludedImpact !== null ? (v4IncludedImpact > 0 ? `−${v4IncludedImpact}` : '0')
                         : !rulesAudited ? view.ruleCopy.pending
                         : step.delta > 0 ? `−${step.delta}` : '0'}
                     </span>
@@ -159,11 +159,11 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                     <div className="psb-v4-embedded-impact" aria-label={view.pillars?.copy.restriction}>
                       <div>
                         <span>{view.v4RuleImpact.rewardLabel}</span>
-                        <strong>−{view.v4RuleImpact.rewardLoss} <small>/15</small></strong>
+                        <strong>{view.v4RuleImpact.rewardLoss > 0 ? `−${view.v4RuleImpact.rewardLoss}` : '0'} <small>/15</small></strong>
                       </div>
                       <div>
                         <span>{view.v4RuleImpact.tradingLabel} (B4)</span>
-                        <strong>−{view.v4RuleImpact.tradingLoss} <small>/5</small></strong>
+                        <strong>{view.v4RuleImpact.tradingLoss > 0 ? `−${view.v4RuleImpact.tradingLoss}` : '0'} <small>/5</small></strong>
                       </div>
                     </div>
                   ) : null}
