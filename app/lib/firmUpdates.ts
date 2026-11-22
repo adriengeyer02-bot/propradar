@@ -3,6 +3,7 @@ import { firmLogoFor } from './firmLogos';
 import updatesFile from '../data/firm-updates.json';
 import { getPublishedV4Score, isPublishedV4 } from './scoringV4Published';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
+import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
 
 /**
  * Data updates layer.
@@ -55,7 +56,7 @@ export type AuditedProgram = { key: string; name: string };
 export type FirmUpdate = {
   reviewedAt: string;
   /** Published, independently approved audit gate; not in raw Claude JSON. */
-  scoringVersion?: 4 | 5;
+  scoringVersion?: 4 | 5 | 5.2;
   restrictiveRules?: RestrictiveRule[];
   auditedPrograms?: AuditedProgram[];
   set?: Partial<{
@@ -126,6 +127,9 @@ export function getFirmUpdate(slug: string): FirmUpdate | undefined {
   const update = updates[slug];
   if (!update) return undefined;
   const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
+  if (isPublishedV52(slug, latestScoreReview)) {
+    return { ...update, scoringVersion: 5.2, set: update.set ? { ...update.set, trustpilotPenaltyIncluded: undefined } : undefined };
+  }
   if (isPublishedV5(slug, latestScoreReview)) {
     return { ...update, scoringVersion: 5, set: update.set ? { ...update.set, trustpilotPenaltyIncluded: undefined } : undefined };
   }
@@ -184,6 +188,8 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
   return firms.map((firm) => {
     const update = updates[firm.slug];
     if (!update) {
+      const v52 = getPublishedV52Score(firm);
+      if (v52 && v52.final !== null) return applyPublishedV5Evidence(firm, v52);
       const v5 = getPublishedV5Score(firm);
       if (v5 && v5.final !== null) return applyPublishedV5Evidence(firm, v5);
       const v4 = getPublishedV4Score(firm);
@@ -350,10 +356,10 @@ export function applyFirmUpdates(firms: PropFirm[]): PropFirm[] {
     }
 
     const latestScoreReview = update.changelog.filter((entry) => entry.fields?.includes('score')).map((entry) => entry.date).sort().pop();
+    const v52 = getPublishedV52Score(next, latestScoreReview);
+    if (v52 && v52.final !== null) return applyPublishedV5Evidence(next, v52);
     const v5 = getPublishedV5Score(next, latestScoreReview);
-    if (v5 && v5.final !== null) {
-      return applyPublishedV5Evidence(next, v5);
-    }
+    if (v5 && v5.final !== null) return applyPublishedV5Evidence(next, v5);
     const v4 = getPublishedV4Score(next, latestScoreReview);
     if (v4) {
       next.score = v4.editorial;
