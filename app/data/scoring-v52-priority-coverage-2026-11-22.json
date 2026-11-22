@@ -8,13 +8,13 @@
     "v52_publication_gate": 11,
     "v52_recalculated_needs_evidence_check": 24,
     "status_review_no_score": 14,
-    "missing_full_13_criterion_audit": 69,
-    "withCompleteV52Scorecard": 39,
-    "withoutNumericV52Scorecard": 83,
+    "missing_full_13_criterion_audit": 67,
+    "withCompleteV52Scorecard": 41,
+    "withoutNumericV52Scorecard": 81,
     "sourceBackedOutsidePriority": 6,
     "allMigratedScorecards": 41,
-    "v52_native_score_proposal_needs_approval": 4,
-    "allSourceBackedV52Scorecards": 45
+    "v52_native_score_proposal_needs_approval": 6,
+    "allSourceBackedV52Scorecards": 47
   },
   "extraScoredOutside122": [
     {
@@ -638,13 +638,13 @@
       "slug": "equity-edge",
       "group": "C04",
       "legacyScore": 53,
-      "state": "missing_full_13_criterion_audit",
-      "v52Candidate": null,
-      "payoutProofLevel": null,
-      "confidence": null,
+      "state": "v52_native_score_proposal_needs_approval",
+      "v52Candidate": 53,
+      "payoutProofLevel": 2,
+      "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://equityedge.io/terms-and-conditions",
-      "sourcePath": "PRs #241/#245",
+      "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
       "ownerReviewNeeded": true
     },
     {
@@ -729,13 +729,13 @@
       "slug": "daytraders-com",
       "group": "C04",
       "legacyScore": 51,
-      "state": "missing_full_13_criterion_audit",
-      "v52Candidate": null,
-      "payoutProofLevel": null,
-      "confidence": null,
+      "state": "v52_native_score_proposal_needs_approval",
+      "v52Candidate": 52,
+      "payoutProofLevel": 1,
+      "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://daytraders.com/help/articles/17704078-terms-of-use",
-      "sourcePath": "PRs #241/#245",
+      "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
       "ownerReviewNeeded": true
     },
     {
