@@ -59,7 +59,8 @@ export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
   // checkedOn date. Earlier site metadata can be stale: use the newer audited
   // snapshot unless an even newer public-signal check supersedes it.
   const nativeNoticeCurrent=origin.kind==='native' && !(firm.reviewSignals.lastSignalCheck>card.checkedOn);
-  const currentFlag=nativeNoticeCurrent?origin.card.trustpilotActiveNotice:Boolean(firm.reviewSignals.trustpilotRatingWithheld);
+  const currentFlag=origin.kind==='native' && nativeNoticeCurrent
+    ?origin.card.trustpilotActiveNotice:Boolean(firm.reviewSignals.trustpilotRatingWithheld);
   const result=origin.kind==='migration'
     ?computeV52Candidate({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag})
     :computeV52Scorecard({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag});
