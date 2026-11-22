@@ -10,8 +10,8 @@ const allowed=['A1','A2','A3','B1','B2','C1','C2','C3','D1','D2','D3','E1','E2']
 assert.equal(all.rows.length,41,'All source-backed V5 files must be preserved');
 assert.equal(gate.version,'5.2');
 assert.equal(gate.approvals.length,oldGate.approvals.length,'No silent approval of unreviewed firms');
-const expectedNative={'funded7':56,'top-one-futures':67,'wegetfunded':52,'purdia-capital':62,'daytraders-com':52,'equity-edge':53,'alpine-funded':59};
-assert.equal(intake.audits.length,7,'Seven native V5.2 source-backed proposals expected');
+const expectedNative={'funded7':56,'top-one-futures':67,'wegetfunded':52,'purdia-capital':62,'daytraders-com':52,'equity-edge':53,'alpine-funded':59,'funded-squad':41};
+assert.equal(intake.audits.length,8,'Eight native V5.2 source-backed proposals expected');
 assert.deepEqual(new Set(intake.audits.map(x=>x.slug)),new Set(Object.keys(expectedNative)));
 for(const audit of intake.audits){
   assert.equal(audit.status,'proposition',audit.slug+' accidentally approved');
