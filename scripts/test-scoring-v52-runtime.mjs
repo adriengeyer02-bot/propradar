@@ -10,16 +10,17 @@ const allowed=['A1','A2','A3','B1','B2','C1','C2','C3','D1','D2','D3','E1','E2']
 assert.equal(all.rows.length,41,'All source-backed V5 files must be preserved');
 assert.equal(gate.version,'5.2');
 assert.equal(gate.approvals.length,oldGate.approvals.length,'No silent approval of unreviewed firms');
-assert.equal(intake.audits.length,1,'Exactly one verified native V5.2 scorecard in the intake');
-const first=intake.audits[0];
-assert.equal(first.slug,'funded7');
-assert.equal(first.status,'proposition');
-assert.equal(first.checkedOn,'2026-11-22');
-assert.equal(first.ruleDeductions.length,1);
-assert.equal(first.criteria.B2.points,7);
-assert.equal(first.trustpilotActiveNotice,false);
-assert.equal(computeV52Scorecard(first).final,56,'Funded7 native score and caps must remain in sync');
-assert.ok(!gate.approvals.some(a=>a.slug===first.slug),'Native proposal must not become public without owner approval');
+const expectedNative={'funded7':56,'top-one-futures':67,'wegetfunded':52,'purdia-capital':62};
+assert.equal(intake.audits.length,4,'Four native V5.2 source-backed proposals expected');
+assert.deepEqual(new Set(intake.audits.map(x=>x.slug)),new Set(Object.keys(expectedNative)));
+for(const audit of intake.audits){
+  assert.equal(audit.status,'proposition',audit.slug+' accidentally approved');
+  assert.equal(audit.checkedOn,'2026-11-22',audit.slug+' date');
+  assert.equal(Object.keys(audit.criteria).length,13,audit.slug+' missing criteria');
+  assert.equal(computeV52Scorecard(audit).final,expectedNative[audit.slug],audit.slug+' native calculation');
+  assert.equal(audit.ruleDeductions.reduce((s,r)=>s+r.points,0),10-audit.criteria.B2.points,audit.slug+' clause cost');
+  assert.ok(!gate.approvals.some(x=>x.slug===audit.slug),'Unapproved score is public: '+audit.slug);
+}
 const active=new Set(), listed=new Set();
 for(const row of all.rows){
   assert.ok(!listed.has(row.slug),'Duplicate V5.2 migration '+row.slug);
