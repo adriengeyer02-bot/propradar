@@ -3820,7 +3820,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 55,
+      "previousDisplayedScore": 50,
       "criteria": {
         "A1": {
           "points": 4,
@@ -4040,7 +4040,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 63,
+      "previousDisplayedScore": 48,
       "criteria": {
         "A1": {
           "points": 4,
@@ -4168,7 +4168,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 40,
+      "previousDisplayedScore": 54,
       "criteria": {
         "A1": {
           "points": 8,
@@ -4298,7 +4298,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 44,
+      "previousDisplayedScore": 41,
       "criteria": {
         "A1": {
           "points": 8,
@@ -4427,7 +4427,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 36,
+      "previousDisplayedScore": 44,
       "criteria": {
         "A1": {
           "points": 8,
@@ -4560,15 +4560,15 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 57,
+      "previousDisplayedScore": 38,
       "criteria": {
         "A1": {
-          "points": 10,
-          "reason": "Centre d'aide SFX distingue on-demand après trois jours avec split 40%, premier payout à 14 jours avec split 85% selon programme, quinzaine en jours ouvrés après premier, méthode crypto/banque, KYC et traitement annoncé en 48h ouvrées. A1=10 pour les cinq rubriques documentées, par produit.",
+          "points": 6,
+          "reason": "Les documents officiels SFX donnent plusieurs calendriers non réconciliés : retrait à la demande après trois jours pour certains produits, puis quinze jours/14 jours ouvrés et parfois cycle de vingt-et-un jours. Split, conditions et méthode de demande sont visibles, mais un client ne peut déterminer sans lever la contradiction la date exigible de chaque reward. A1=6 plutôt que dix.",
           "sources": [
             "https://sfxfunded.com/help/payout-on-demand",
-            "https://sfxfunded.com/help/payout-methods",
-            "https://sfxfunded.com/help/instant-funding"
+            "https://sfxfunded.com/help/payout-timing-ascend",
+            "https://sfxfunded.com/docs/terms-of-service"
           ]
         },
         "A2": {
@@ -4588,11 +4588,11 @@
           ]
         },
         "B1": {
-          "points": 3,
-          "reason": "La promesse de paiement en 48 heures comporte des conditions de conformité et exceptions; l'accord funded ne démontre pas une protection opposable contre les refus discrétionnaires de rewards déjà acquises. B1=3 sous réserve de lecture d'un contrat individuel à jour.",
+          "points": 0,
+          "reason": "Audit V4 primaire du 20/11 : CGU SFX §3.3 'all payouts are fully at the discretion of the Company' et §9.11 'at any time and for any reason', tandis que le guide officiel autorise retrait de tous profits, refus de payout et réduction du split à 20–25% après qualification de trading abusif. Aucune voie d'appel opposable sur rewards acquises. B1=0, non une accusation de refus injustifié prouvé.",
           "sources": [
             "https://sfxfunded.com/docs/terms-of-service",
-            "https://sfxfunded.com/help/payout-on-demand"
+            "https://intercom.help/sfx-15a6836318fd/en/articles/9287375-prohibited-trading-styles-strategy"
           ]
         },
         "B2": {
@@ -4638,18 +4638,20 @@
           ]
         },
         "D2": {
-          "points": 4,
-          "reason": "CGU consultables avec dates de versions, mais l'effet exact de mises à jour sur cohortes et accords funded déjà signés n'est pas indépendant vérifié. D2=4.",
+          "points": 2,
+          "reason": "Les CGU sont consultables via le portail, mais le contrôle V4 a recensé une contradiction entre §7.6 (les modifications ne toucheraient pas les achats existants) et §18.3 (possibilité d'effet sur contrat déjà conclu). Accès public crédité +2, pas de garantie solide des cohortes. Aucun cas concret rétroactif établi, donc pas de déduction B2 −4.",
           "sources": [
             "https://sfxfunded.com/docs/terms-of-service"
           ]
         },
         "D3": {
-          "points": 4,
-          "reason": "Nature simulée et profils de produits clairement décrits; les splits très différents entre programmes sont documentés mais les conditions exactes du checkout et du funded contract restent à rapprocher. D3=4.",
+          "points": 0,
+          "reason": "Le site et ses produits affichent trois échéances de retrait non harmonisées ; une promotion '100% Refundable' diverge de la Refund Policy limitant remboursement au cinquième payout, et les CGU §7.6/§18.3 se contredisent sur la rétroactivité. À défaut de preuve de cohérence du contrat et des offres, D3=0.",
           "sources": [
-            "https://sfxfunded.com/compare-plans",
-            "https://sfxfunded.com/"
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://sfxfunded.com/help/payout-on-demand",
+            "https://sfxfunded.com/help/payout-timing-ascend",
+            "https://sfxfunded.com/instant-funding"
           ]
         },
         "E1": {
@@ -4660,8 +4662,8 @@
           ]
         },
         "E2": {
-          "points": 3,
-          "reason": "Aide en ligne dense, e-mail et Discord accessibles, nombreux articles par produit; preuve d'un traitement effectif de demandes existe, sans recours neutre ni résolution indépendante complète. E2=3.",
+          "points": 2,
+          "reason": "SFX publie e-mail, Discord et centre d'aide (canaux joignables), mais une procédure de contestation neutre et des décisions de payout favorables indépendamment confirmées ne sont pas établies; les clauses de clôture et de discrétion limitent fortement la portée de ces outils. E2=2.",
           "sources": [
             "https://sfxfunded.com/",
             "https://www.trustpilot.com/review/sfxfunded.com"
@@ -4690,7 +4692,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 54,
+      "previousDisplayedScore": 44,
       "criteria": {
         "A1": {
           "points": 8,
@@ -4819,7 +4821,7 @@
       "checkedOn": "2026-11-22",
       "status": "approuvee",
       "confidence": "faible",
-      "previousDisplayedScore": 52,
+      "previousDisplayedScore": 42,
       "criteria": {
         "A1": {
           "points": 8,
