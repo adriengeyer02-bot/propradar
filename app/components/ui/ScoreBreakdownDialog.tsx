@@ -32,6 +32,8 @@ export type ScoreBreakdownView = {
   programs: { name: string; load: number }[];
   heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
+  /** V4 criteria B1/B4 shortfall is within the editorial score, never an extra deduction. */
+  v4RuleImpact?: { rewardLoss: number; tradingLoss: number; rewardLabel: string; tradingLabel: string };
   v5Evidence?: {
     deductions: (V5RuleDeduction | V52Rule)[];
     contractProtection: { points: number; reason: string; source: string };
@@ -81,6 +83,9 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
   };
   const steps: ScoreStep[] = [editorial, rules];
   const adjustments = view.steps.filter((step) => step.kind !== 'editorial' && step.kind !== 'rules');
+  const v4IncludedImpact = view.v4RuleImpact
+    ? view.v4RuleImpact.rewardLoss + view.v4RuleImpact.tradingLoss
+    : null;
 
   return (
     <>
@@ -125,8 +130,10 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
                   <div className="psb-step-line">
                     <span className="psb-step-label">{step.label}</span>
-                    <span className={`psb-step-value${step.delta ? ' psb-step-minus' : ''}`}>
-                      {step.kind === 'editorial' ? step.value : step.delta ? `−${step.delta}` : '—'}
+                    <span className={`psb-step-value${(step.delta > 0 || (step.kind === 'rules' && v4IncludedImpact !== null && v4IncludedImpact > 0)) ? ' psb-step-minus' : ''}`}>
+                      {step.kind === 'editorial' ? step.value
+                        : step.kind === 'rules' && v4IncludedImpact !== null ? `−${v4IncludedImpact}`
+                        : step.delta > 0 ? `−${step.delta}` : '0'}
                     </span>
                   </div>
                   <div className="psb-bar" aria-hidden="true">
@@ -135,6 +142,18 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                   </div>
                   <p>{step.kind === 'rules' && step.delta > 0 && !view.v5Evidence ? copy.rulesSimple : step.detail}</p>
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
+                  {step.kind === 'rules' && view.v4RuleImpact ? (
+                    <div className="psb-v4-embedded-impact" aria-label={view.pillars?.copy.restriction}>
+                      <div>
+                        <span>{view.v4RuleImpact.rewardLabel}</span>
+                        <strong>−{view.v4RuleImpact.rewardLoss} <small>/15</small></strong>
+                      </div>
+                      <div>
+                        <span>{view.v4RuleImpact.tradingLabel} (B4)</span>
+                        <strong>−{view.v4RuleImpact.tradingLoss} <small>/5</small></strong>
+                      </div>
+                    </div>
+                  ) : null}
                   {step.kind === 'editorial' && adjustments.length ? (
                     <div className="psb-adjustments">
                       {adjustments.map((adjustment) => (
@@ -161,6 +180,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                               <span className="psb-v5-consequence">{view.v5Evidence!.copy.consequence}: {item.consequence}</span>
                               <a href={item.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence!.copy.source} ↗</a>
                             </span>
+                            <b className="psb-v5-rule-points">−{item.points}</b>
                           </li>
                         ))}
                       </ul>
