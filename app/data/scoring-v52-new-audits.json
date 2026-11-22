@@ -4292,6 +4292,650 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "dna-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 44,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Le règlement et les pages programmes distinguent la demande de reward, les cycles et conditions d'éligibilité, le split et les méthodes bancaires/crypto. Certains frais, plafonds et délais effectifs selon les add-ons et produits restent à recouper : A1=8.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Trustpilot inclut des contestations de payouts, mais l'arbitrage des règles de trading, la date d'exigibilité et le règlement effectif ne sont pas indépendamment établis pour deux refus injustifiés. Historique multi-clients ≥12 mois également non certifié : A2=6 neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les témoignages et paiements annoncés ne constituent pas une chaîne indépendante d'argent final versé par DNA Funded Ltd au bénéficiaire du programme; aucune preuve bancaire multi-client complète n'est accessible. A3=1.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "General Terms §§16,24 autorisent la confiscation de droits actuels et futurs de paiement lors d'une violation, avec récupération éventuelle de sums antérieures. Les violations peuvent relever d'une qualification large et les recours sont insuffisamment garantis : B1=0, risque contractuel élevé.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "General Terms §15(k) interdit non seulement stratégies détaillées mais aussi les techniques jugées 'gambling-focused' ou 'trading in bad faith' à l'appréciation de la société. Une seule ambiguïté de stratégie vaut −3; suppression des gains évaluée en B1 n'est pas recomptée.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ],
+          "negativeFactIds": [
+            "dna-funded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Website Terms désignent DNA Funded Ltd constituée à Sainte-Lucie, tandis que les CGU d'administration citent les prestataires de technologies tiers. C1=7 : opérateur identifié mais immatriculation officielle et payeur exact à rapprocher du checkout.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/20251030-DNA-Funded-Ltd-Website-Terms-and-Conditions.pdf",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le document mentionne une société de Sainte-Lucie, sans extrait officiel à jour du registre ni concordance indépendante du paiement par programme; C2=3, sans prétendre fermeture ou radiation.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/20251030-DNA-Funded-Ltd-Website-Terms-and-Conditions.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure officielle grave correctement attribuée à DNA Funded Ltd pour ses challenges simulés n'est documentée dans ce contrôle. Les vérifications des autorités pertinentes sont incomplètes : C3=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Pages de programmes et règles v2 détaillent prix, cibles, daily/max drawdown, news/overnight, pays et KYC. D1=8 car les familles d'information sont présentes sans juger ces restrictions objectives comme illégitimes.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+            "https://dnafunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les General Terms portent une version identifiable de 2025 et les Rules v2 sont datées 2026. La règle d'application aux comptes achetés avant la v2 et la protection des anciennes conditions ne sont pas uniformément garanties, D2=4.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2026/03/DNA-Funded-Ltd-Rules-and-Conditions-V.2.pdf",
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La nature simulée est explicite, mais les pouvoirs très larges de récupération de rewards et certains add-ons de délai/split nécessitent davantage de clarté entre publicité, checkout et contrat. D3=2.",
+          "sources": [
+            "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf",
+            "https://dnafunded.com/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Une activité commerciale DNA Funded est traçable en 2024 et 2025, soit au moins 18 mois avant le contrôle; l'âge d'autres entreprises DNA n'est pas transféré. E1=4.",
+          "sources": [
+            "https://www.trustpilot.com/review/dnafunded.com",
+            "https://dnafunded.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ, support et portail client sont accessibles avec des réponses publiques à des contestations; aucun mécanisme indépendant de contestation et taux vérifié de résolution des refus ne sont établis, E2=2.",
+          "sources": [
+            "https://dnafunded.com/",
+            "https://www.trustpilot.com/review/dnafunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "dna-funded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "DNA Funded simulated evaluations et funded",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "CGU §15(k) : gambling-focused, bad-faith et stratégie jugée non professionnelle par la firme sans seuil complet de quantification.",
+          "consequence": "Une stratégie dans les limites chiffrées peut être disqualifiée sur qualification de style, indépendamment du droit aux rewards traité en B1.",
+          "source": "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "foxx-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 36,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les FAQ et pages payout documentent profit split, calendrier de demande, KYC et principales restrictions de pertes; les frais de paiement et caps selon programme/rail ne sont pas entièrement réconciliés avec le Trader Agreement. A1=8.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/payout/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis relatent des refus de payout contestés, mais sans preuve indépendante suffisante de deux paiements contractuellement dus et injustement refusés; les annonces de récompenses ne démontrent pas une régularité de 12 mois. A2=6 neutre, pas un quitus.",
+          "sources": [
+            "https://www.trustpilot.com/review/foxx-funded.com",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site publie certificats et témoignages, mais pas une chaîne indépendante vérifiant transactions finales, programme, émetteur et bénéficiaires sur plusieurs dates. A3=1 limité au marketing.",
+          "sources": [
+            "https://www.foxx-funded.com/",
+            "https://www.trustpilot.com/review/foxx-funded.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Le contrat et les FAQ réservent des contrôles et refus pour violations de stratégie, sans droit clairement opposable aux gains avant validation, et avec sanctions pouvant atteindre le compte. B1=3 selon les clauses disponibles.",
+          "sources": [
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La politique interdit « all-or-nothing » et changements de style qualifiés de gambling sans seuil universel complet; des trades peuvent être exclus ou l'accès supprimé. Une ambiguïté B2 −3 seulement, pas de déduction pour les limites chiffrées de 2% par trade.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf"
+          ],
+          "negativeFactIds": [
+            "foxx-funded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le footer identifie Foxx Limited (2026-00126) Sainte-Lucie pour MT5 et Semizu L.L.C.-FZ n°2423826 aux Émirats; le rôle exact de chaque vendeur et du débiteur de rewards reste à confronter. C1=7.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/assets/amlPolicy-BCJe7msf.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéros commerciaux sont publiés sur le site et la politique AML désigne Semizu, mais good-standing récents de Sainte-Lucie et UAE non certifiés auprès de leurs registres. C2=3 sans statut illégal présumé.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/assets/amlPolicy-BCJe7msf.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de sanction publique grave nominative officiellement prouvée dans les pièces vérifiées; avis clients et note Trustpilot supprimée ne sont pas des sanctions réglementaires. C3=2 provisoire.",
+          "sources": [
+            "https://www.trustpilot.com/review/foxx-funded.com",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "FAQ indique cibles, pertes maximales statiques, risque 2% par trade, consistency 25%, jours mini, type de simulation et KYC; les pages d'offre affichent des prix. Quatre familles D1 documentées.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.foxx-funded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les termes PDF et FAQ actuels sont accessibles, mais version exacte acceptée pour les différents checkout et préservation des anciens comptes ne sont pas totalement vérifiables : D2=4.",
+          "sources": [
+            "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+            "https://www.foxx-funded.com/faqs/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le site affirme « real transfers » et « trade firm's money » tout en indiquant que les comptes funded sont des démonstrations et que les rewards dépendent de l'accord individuel. D3=2 faute de concordance parfaite.",
+          "sources": [
+            "https://www.foxx-funded.com/",
+            "https://www.foxx-funded.com/payout/"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Le domaine et la société sous sa marque actuelle ont une activité documentée en 2026, sans antériorité ferme de 18 mois pour cette firme; E1=2.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.trustpilot.com/review/foxx-funded.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ et support restent joignables et l'entreprise répond ponctuellement à des avis, mais traitement des contestations de payout et taux de résolution n'ont pas été audités de manière indépendante. E2=2.",
+          "sources": [
+            "https://www.foxx-funded.com/faqs/",
+            "https://www.trustpilot.com/review/foxx-funded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "foxx-funded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Foxx 1-Step / Instant simulated",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "Interdiction de stratégies all-or-nothing, de changements brusques et de conduite assimilée au gambling, sans métrique commune documentée selon chaque plan.",
+          "consequence": "La firme peut sanctionner au contrôle une technique conforme aux pertes chiffrées, sans que la qualification soit prévisible.",
+          "source": "https://www.foxx-funded.com/faqs/"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "sfx-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 57,
+      "criteria": {
+        "A1": {
+          "points": 10,
+          "reason": "Centre d'aide SFX distingue on-demand après trois jours avec split 40%, premier payout à 14 jours avec split 85% selon programme, quinzaine en jours ouvrés après premier, méthode crypto/banque, KYC et traitement annoncé en 48h ouvrées. A1=10 pour les cinq rubriques documentées, par produit.",
+          "sources": [
+            "https://sfxfunded.com/help/payout-on-demand",
+            "https://sfxfunded.com/help/payout-methods",
+            "https://sfxfunded.com/help/instant-funding"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les témoignages et litiges Trustpilot doivent être évalués avec les contrats et dates exigibles; pas de série indépendante multi-bénéficiaires sur douze mois ni deux refus injustifiés objectivés. A2=6 neutre malgré le volume d'avis.",
+          "sources": [
+            "https://www.trustpilot.com/review/sfxfunded.com",
+            "https://sfxfunded.com/help/payout-on-demand"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les garanties de payout SFX et les témoignages sont des affirmations commerciales, non une preuve bancaire/crypto rapprochée par un tiers des flux effectivement compensés au profit de clients et programmes distincts : A3=1.",
+          "sources": [
+            "https://sfxfunded.com/",
+            "https://www.trustpilot.com/review/sfxfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "La promesse de paiement en 48 heures comporte des conditions de conformité et exceptions; l'accord funded ne démontre pas une protection opposable contre les refus discrétionnaires de rewards déjà acquises. B1=3 sous réserve de lecture d'un contrat individuel à jour.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://sfxfunded.com/help/payout-on-demand"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Des interdictions de style (trading abusif, exploitation de règles, comportement assimilé au gambling) apparaissent dans l'écosystème d'aide et de conditions, sans critères quantifiés exhaustifs par produit. Un seul défaut de définition B2 −3, les conditions news et consistency chiffrées restant sans malus.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service",
+            "https://sfxfunded.com/compare-plans"
+          ],
+          "negativeFactIds": [
+            "sfx-funded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU et le footer situent l'exploitation commerciale à l'IFZA Dubai, identifiant SFX Funded et sa structure locale annoncée; le nom légal complet et l'entité débitrice des rewards demandent un rapprochement de l'immatriculation : C1=7 partiel.",
+          "sources": [
+            "https://sfxfunded.com/about",
+            "https://sfxfunded.com/docs/terms-of-service"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Adresse, licence commerciale et numéro IFZA sont annoncés, mais le registre officiel actualisé confirmant statut des sociétés exploitantes et le vendeur checkout n'a pas été recoupé. C2=3, sans présumer irrégularité.",
+          "sources": [
+            "https://sfxfunded.com/about"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction grave ciblant la bonne entité opérant l'évaluation simulée n'est vérifiée dans les sources présentes, recherche réglementaire incomplète; Trustpilot n'est pas traité comme sanction publique de marché. C3=2.",
+          "sources": [
+            "https://sfxfunded.com/about",
+            "https://www.trustpilot.com/review/sfxfunded.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Comparateur distingue 2-Step, Rapid, Instant, coûts, objectifs, drawdowns et restrictions, avec pages pays/KYC et payouts par phase. Quatre catégories D1 accessibles.",
+          "sources": [
+            "https://sfxfunded.com/compare-plans",
+            "https://sfxfunded.com/help/instant-funding"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU consultables avec dates de versions, mais l'effet exact de mises à jour sur cohortes et accords funded déjà signés n'est pas indépendant vérifié. D2=4.",
+          "sources": [
+            "https://sfxfunded.com/docs/terms-of-service"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Nature simulée et profils de produits clairement décrits; les splits très différents entre programmes sont documentés mais les conditions exactes du checkout et du funded contract restent à rapprocher. D3=4.",
+          "sources": [
+            "https://sfxfunded.com/compare-plans",
+            "https://sfxfunded.com/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces officielles et service public existent depuis au moins 2024, soit 18–35 mois en novembre 2026, sans recourir à l'âge d'un broker tiers : E1=4.",
+          "sources": [
+            "https://sfxfunded.com/about"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Aide en ligne dense, e-mail et Discord accessibles, nombreux articles par produit; preuve d'un traitement effectif de demandes existe, sans recours neutre ni résolution indépendante complète. E2=3.",
+          "sources": [
+            "https://sfxfunded.com/",
+            "https://www.trustpilot.com/review/sfxfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "sfx-funded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "SFX Funded Ascend / Rapid / Instant",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "Clauses de comportement abusif/gambling ou de contournement de l'esprit des programmes, sans seuil transversal complet sur les produits SFX.",
+          "consequence": "L'équipe risque peut rejeter un trader par qualification ouverte de stratégie lors du payout.",
+          "source": "https://sfxfunded.com/docs/terms-of-service"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "superfunded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 54,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les Rules and Conditions et General Terms renseignent parcours de payout, partage des récompenses, KYC, minimums de jours de trading et demande de bank/wallet. Les frais par rail et limites de payout de tous programmes ne sont pas rapprochés sur la version 2026 : A1=8.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le profil Trustpilot affiche un problème officiel d'intégrité des avis, qui n'est ni deux refus injustifiés ni un historique vérifié de vrais payouts sur douze mois. A2=6 neutre; −6 Trustpilot appliqué séparément et une seule fois.",
+          "sources": [
+            "https://www.trustpilot.com/review/superfunded.com",
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les déclarations de rewards et témoignages du groupe ne fournissent pas un échantillon de transactions finales indépendamment attribuées à Radias PTT FZ-LLC et plusieurs bénéficiaires vérifiés : A3=1.",
+          "sources": [
+            "https://superfunded.com/",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "General Terms §13 écarte toute garantie de payout et prévoit forfaiture des droits en cas de non-conformité appréciée par l'entreprise. Les clauses §16 et §24 permettent pertes des droits existants/futurs et recouvrement de sommes après breach. B1=0 pour faible protection.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les interdictions incluent comportement de type gambling, trading en bad faith et atteinte à la relation avec prestataires sans paramètres objectivement exhaustifs; B2 −3 pour une famille de stratégies vague, sans doubler la conséquence de perte des droits B1.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://superfunded.com/wp-content/uploads/2025/09/Rules-and-Conditions-SuperFunded-9.pdf"
+          ],
+          "negativeFactIds": [
+            "superfunded-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les General Terms nomment Radias PTT FZ-LLC, aux Émirats, et TradeSim Pty Ltd prestataire de technologie non partie au contrat; C1=7 car vendeur nommé, mais agent exact de paiement/structure actuelle non recoupés.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "L'opérateur émirien est désigné sans extrait récent du registre IFZA/zone franche ni attestation d'activité du débiteur de reward en novembre 2026; C2=3 sans conclure dissolution.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Le document ne prouve aucune mesure officielle grave contre Radias pour cette simulation, et les bases judiciaires/réglementaires n'ont pas été exhaustivement interrogées. C3=2, distinct de la pénalité Trustpilot.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Les annexes par formule et CGU expliquent produits, prix, profit targets/drawdowns, trading rules, pays/KYC; quatre items D1 documentés, même si une version postérieure 2026 doit être lue séparément.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf",
+            "https://superfunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU version avril 2025 et règles révisées en 2026 identifiables, mais protection du client acheté avant la version 2026 et portée de révision non établies de façon contractuelle universelle. D2=4.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Les CGU expliquent explicitement qu'il s'agit de trading simulé, les annexes font partie intégrante du contrat; la politique de payout reste conditionnelle et révisions de 2026 non réconciliées avec chaque offre. D3=4.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://superfunded.com/wp-content/uploads/2026/10/SuperFunded-Rules-and-Conditions-V2-22.10.26.pdf"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "La marque et ses programmes figurent dans des traces datées de 2025–2026; six à dix-sept mois de services suffisamment démontrés, pas 36 mois indépendants. E1=2.",
+          "sources": [
+            "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support, portail et contact existent ; aucune voie indépendante de contestation de rewards, ni taux corroboré de résolution positive des différends. E2=2.",
+          "sources": [
+            "https://superfunded.com/",
+            "https://www.trustpilot.com/review/superfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "superfunded-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "SuperFunded simulated assessment and funded rewards",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "General Terms §15 interdit aussi conduite apparemment assimilée au gambling / mauvaise foi de stratégie, avec appréciation non chiffrée.",
+          "consequence": "Le bénéfice du challenge peut être invalidé pour cause qualitative malgré des limites explicites de pertes.",
+          "source": "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funding-frontier",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 52,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les pages Rules & FAQs publient cadences, caps et consistency de Classic/PRO, taux de profit-split et procédure de demande, mais les frais de rails et conditions particulières de chaque programme ne sont pas entièrement rapprochés. A1=8.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis et la promesse de payout garantie ne constituent pas une série indépendante de transferts sur douze mois, et le texte des CGU très défavorable ne prouve pas à lui seul deux refus injustifiés réalisés. A2=6 neutre en attente d'incidents authentifiés.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les annonces de reward et la garantie sont publiées par le vendeur lui-même, pas par un vérificateur indépendant relié à plusieurs bénéficiaires et règlements compensés. A3=1.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Les CGU §§7.3,16 permettent refus du retrait et réduction du split à 25% par appréciation du risque, avec tentative contractuelle de renoncer au droit de saisir les tribunaux ou de contester les décisions. Sans présumer de la validité de ces renonciations au regard du droit applicable, la protection pratique des rewards est très faible : B1=0.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les CGU §7.3 exigent de conserver la même stratégie et autorisent à refuser le retrait lors d'un 'significant change of behaviour' à la seule appréciation de First Frontier. Une ambiguïté B2 −3. Le pouvoir de refus des récompenses, déjà en B1, n'est pas déduit une deuxième fois.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ],
+          "negativeFactIds": [
+            "funding-frontier-ambiguite-nov2026"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les conditions identifient First Frontier FZ-LLC, registre RAK Economic Zone 0000004042431, UAE, avec lieu et opérateur de la marque Funding Frontier; C1=7 pour identité déclarée, sans registre indépendant récent.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro et l'adresse apparaissent au contrat, mais un extrait officiel du RAKEZ attestant good standing de novembre 2026 n'a pas été recoupé; C2=3, sans alléguer radiation.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Des clauses de renonciation à droits apparemment extrêmes appellent un examen juridique, mais ne prouvent pas à elles seules une sanction officielle par autorité identifiée : C3=2, vérification réglementaire incomplète.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Challenges Instant, 1 Step, 2 Step publient prix, objectifs, drawdowns, statut simulé, règles et modalités pays/KYC. Quatre familles D1 documentées, sans certifier la qualité du recours.",
+          "sources": [
+            "https://fundingfrontier.com/rules-faqs/",
+            "https://fundingfrontier.com/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU sont librement accessibles mais mentionnent mises à jour immédiates sans préavis, et la fin comporte « Last Updated: [Current Date] », champ non complété. D2=2 pour accès seulement; aucune rétroactivité avérée B2 −4 sans dossier daté.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "La communication promet une évaluation sérieuse et une Payout Guarantee, mais la partie juridique prévoit médiation non contraignante à frais du trader et large refus des demandes; la cohérence commerciale/contractuelle de cette protection est insuffisante : D3=0.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Marque et CGU publique 2024, service antérieur à novembre 2025 d'au moins 18 mois plausible sans dossier complet de 36 mois de ventes vérifiées : E1=4.",
+          "sources": [
+            "https://fundingfrontier.com/",
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        },
+        "E2": {
+          "points": 1,
+          "reason": "Canaux support et promesses de réponse existent (+1), mais §16 réserve le choix du médiateur à l'opérateur, la médiation non contraignante est payée par le trader et les possibilités d'appel sont réduites; E2=1 sans preuve de recours neutre.",
+          "sources": [
+            "https://fundingfrontier.com/legal-terms/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "funding-frontier-ambiguite-nov2026",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Funding Frontier Classic et PRO funded",
+          "phase": "Évaluation/funded et vérification de stratégie avant récompense",
+          "clause": "CGU §7.3 : interdiction non chiffrée de changement 'significant' de comportement/stratégie à la seule discrétion de First Frontier.",
+          "consequence": "Une stratégie compatible avec drawdown et jours mini peut être jugée différente et sa récompense refusée.",
+          "source": "https://fundingfrontier.com/legal-terms/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
