@@ -13,8 +13,9 @@
     "withoutNumericV52Scorecard": 59,
     "sourceBackedOutsidePriority": 6,
     "allMigratedScorecards": 41,
-    "v52_native_score_proposal_needs_approval": 28,
-    "allSourceBackedV52Scorecards": 69
+    "v52_native_score_proposal_needs_approval": 0,
+    "allSourceBackedV52Scorecards": 69,
+    "v52_native_published": 28
   },
   "extraScoredOutside122": [
     {
@@ -534,14 +535,15 @@
       "slug": "funded7",
       "group": "C04",
       "legacyScore": 55,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 56,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": 246,
       "starterSource": "https://funded7.com/terms-and-conditions/",
       "sourcePath": "app/data/scoring-v52-new-audits.json (source checks 2026-11-22)",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "getcryptofunded",
@@ -560,14 +562,15 @@
       "slug": "alpine-funded",
       "group": "C04",
       "legacyScore": 54,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 59,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://alpinefunded.com/terms-and-conditions/",
       "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "blusky-trading",
@@ -599,27 +602,29 @@
       "slug": "purdia-capital",
       "group": "C04",
       "legacyScore": 53,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 62,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": 246,
       "starterSource": "https://purdia.com/",
       "sourcePath": "app/data/scoring-v52-new-audits.json (audited 2026-11-22)",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "orion-funded",
       "group": "C04",
       "legacyScore": 53,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 60,
       "payoutProofLevel": 3,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "lucid-trading",
@@ -638,27 +643,29 @@
       "slug": "equity-edge",
       "group": "C04",
       "legacyScore": 53,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 53,
       "payoutProofLevel": 2,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://equityedge.io/terms-and-conditions",
       "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "wegetfunded",
       "group": "C04",
       "legacyScore": 53,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 52,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": 246,
       "starterSource": "https://wegetfunded.com/legal/terms",
       "sourcePath": "app/data/scoring-v52-new-audits.json (audited 2026-11-22)",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "fidelcrest",
@@ -677,40 +684,43 @@
       "slug": "funder-trading",
       "group": "C04",
       "legacyScore": 52,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 52,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundertrading.com/terms-conditions/",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "wsfunded",
       "group": "C04",
       "legacyScore": 52,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 59,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://wsfunded.com/en/terms-conditions",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "moneta-funded",
       "group": "C04",
       "legacyScore": 52,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 59,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://www.monetafunded.com/general-rules/",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "e8-futures",
@@ -729,53 +739,57 @@
       "slug": "daytraders-com",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 52,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://daytraders.com/help/articles/17704078-terms-of-use",
       "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "funded-squad",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 41,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundedsquad.com/terms-of-service",
       "sourcePath": "V5.2 C04 2026-11-22 — native 13-criterion audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "top-one-futures",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 67,
       "payoutProofLevel": 4,
       "confidence": "moyenne",
       "sourcePr": 246,
       "starterSource": "https://www.toponefutures.com/terms-and-conditions",
       "sourcePath": "app/data/scoring-v52-new-audits.json (audited 2026-11-22)",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "tradexprop",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 51,
       "payoutProofLevel": 2,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://tradexprop.com/terms-of-use/",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "fxci",
@@ -794,14 +808,15 @@
       "slug": "monevis",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 54,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://monevis.com/payouts",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "mifunder",
@@ -820,66 +835,71 @@
       "slug": "tradersedgefx",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 55,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://tradersedgefx.com/terms-of-services/",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "fundyourfx",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 58,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundyourfx.com/terms-conditions",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "lvlup-futures",
       "group": "C04",
       "legacyScore": 51,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 57,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://lvlupfutures.com/imprint",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "atmos-funded",
       "group": "C04",
       "legacyScore": 50,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 52,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://atmosfunded.com/legal/",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "tx3-funding",
       "group": "C04",
       "legacyScore": 50,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 60,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://www.tx3funding.com/en/terms",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "now-trade-funded",
@@ -950,14 +970,15 @@
       "slug": "fundedhive",
       "group": "N01",
       "legacyScore": 49,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 49,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundedhive.com/static/assets/download/terms-and-conditions.pdf?t=1743541676",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "my-flash-funding",
@@ -976,14 +997,15 @@
       "slug": "clarity-traders",
       "group": "N01",
       "legacyScore": 48,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 48,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://www.claritytraders.com/terms-and-conditions",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "klein-funding-crypto",
@@ -1067,40 +1089,43 @@
       "slug": "fundedelite",
       "group": "N01",
       "legacyScore": 46,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 51,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundedelite.com/terms-and-conditions",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "funding-your-trades",
       "group": "N01",
       "legacyScore": 46,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 52,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundingyourtrades.com/terms-of-services/",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "upcomers",
       "group": "N01",
       "legacyScore": 46,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 56,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://www.upcomers.com/policies/terms-conditions",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "myfxcapital",
@@ -1210,14 +1235,15 @@
       "slug": "directfundedtrader",
       "group": "N02",
       "legacyScore": 43,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 47,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://directfundedtrader.com/termsandservices",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "dna-funded",
@@ -1249,14 +1275,15 @@
       "slug": "funded-trader-markets",
       "group": "N02",
       "legacyScore": 43,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 58,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundedtradermarkets.com/terms-conditions",
       "sourcePath": "V5.2 batch10-b 2026-11-22 — 13-criterion sourced audit",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "funding-frontier",
@@ -1314,14 +1341,15 @@
       "slug": "sabiotrade",
       "group": "N02",
       "legacyScore": 43,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 42,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://sabiotrade.us/terms",
       "sourcePath": "V5.2 batch10 2026-11-22 — 13-criterion source-linked proposal",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "sfx-funded",
@@ -1470,14 +1498,15 @@
       "slug": "funded-futures-network",
       "group": "N03",
       "legacyScore": 29,
-      "state": "v52_native_score_proposal_needs_approval",
+      "state": "v52_native_published",
       "v52Candidate": 55,
       "payoutProofLevel": 1,
       "confidence": "faible",
       "sourcePr": null,
       "starterSource": "https://fundedfuturesnetwork.com/faq",
       "sourcePath": "V5.2 forensic re-audit 2026-11-22: funded agreement + Florida registries; old 29 legacy not comparable",
-      "ownerReviewNeeded": true
+      "ownerReviewNeeded": false,
+      "publicationApprovalDate": "2026-11-22"
     },
     {
       "slug": "guardeer-funding",
