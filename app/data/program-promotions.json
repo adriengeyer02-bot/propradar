@@ -2,254 +2,111 @@
   "version": 1,
   "promotions": [
     {
-      "id": "fundednext-novstr-stellar-two-2026",
-      "slug": "fundednext",
-      "productIds": [
-        "fundednext-stellar-two-current"
-      ],
-      "offer": "6K · $34.99 · −41% / −30% US",
-      "code": "NOVSTR",
-      "highlightedSizes": [
-        6000
-      ],
+      "id": "fundednext-novstr-stellar-two-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-two-current"],
+      "offer": "6K · $34.99 · −41% / −30% US", "code": "NOVSTR",
+      "highlightedSizes": [6000],
       "terms": "Only Stellar 2-Step 6K: $59.99 to $34.99 globally (41% off), or $49.99 to $34.99 in the US (30% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
-      "checkedOn": "2026-11-19",
-      "priceExamples": [
-        {
-          "product": "Stellar 2-Step",
-          "accountSize": 6000,
-          "currency": "USD",
-          "before": 59.99,
-          "after": 34.99,
-          "region": "outside-US"
-        },
-        {
-          "product": "Stellar 2-Step",
-          "accountSize": 6000,
-          "currency": "USD",
-          "before": 49.99,
-          "after": 34.99,
-          "region": "US"
-        }
-      ]
+      "checkedOn": "2026-11-19"
     },
     {
-      "id": "fundednext-novstr-stellar-one-2026",
-      "slug": "fundednext",
-      "productIds": [
-        "fundednext-stellar-one-current"
-      ],
-      "offer": "6K · $44.99 · −31% / −19% US",
-      "code": "NOVSTR",
-      "highlightedSizes": [
-        6000
-      ],
+      "id": "fundednext-novstr-stellar-one-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-one-current"],
+      "offer": "6K · $44.99 · −31% / −19% US", "code": "NOVSTR",
+      "highlightedSizes": [6000],
       "terms": "Only Stellar 1-Step 6K: $65.99 to $44.99 globally (31% off), or $55.99 to $44.99 in the US (19% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
-      "checkedOn": "2026-11-19",
-      "priceExamples": [
-        {
-          "product": "Stellar 1-Step",
-          "accountSize": 6000,
-          "currency": "USD",
-          "before": 65.99,
-          "after": 44.99,
-          "region": "outside-US"
-        },
-        {
-          "product": "Stellar 1-Step",
-          "accountSize": 6000,
-          "currency": "USD",
-          "before": 55.99,
-          "after": 44.99,
-          "region": "US"
-        }
-      ]
+      "checkedOn": "2026-11-19"
     },
     {
-      "id": "fundednext-novstr-stellar-lite-2026",
-      "slug": "fundednext",
-      "productIds": [
-        "fundednext-stellar-lite-current"
-      ],
-      "offer": "5K · $29.99 · −9%",
-      "code": "NOVSTR",
-      "highlightedSizes": [
-        5000
-      ],
+      "id": "fundednext-novstr-stellar-lite-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-lite-current"],
+      "offer": "5K · $29.99 · −9%", "code": "NOVSTR",
+      "highlightedSizes": [5000],
       "terms": "Only Stellar Lite 5K: $32.99 to $29.99 (9% off), including in the US. Larger sizes are excluded. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
-      "checkedOn": "2026-11-19",
-      "priceExamples": [
-        {
-          "product": "Stellar Lite",
-          "accountSize": 5000,
-          "currency": "USD",
-          "before": 32.99,
-          "after": 29.99
-        }
-      ]
+      "checkedOn": "2026-11-19"
     },
     {
-      "id": "fundednext-novins-stellar-instant-2026",
-      "slug": "fundednext",
-      "productIds": [
-        "fundednext-stellar-instant-current"
-      ],
-      "offer": "−30% · 2K–20K",
-      "code": "NOVINS",
+      "id": "fundednext-novins-stellar-instant-2026", "slug": "fundednext",
+      "productIds": ["fundednext-stellar-instant-current"],
+      "offer": "−30% · 2K–20K", "code": "NOVINS",
       "terms": "30% off all Stellar Instant account sizes, including the US. One use per trader; resets excluded. Double Up add-on is disabled during the offer. No fixed end date has been published; confirm eligibility and total at checkout.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833714-what-is-the-fundednext-stellar-instant-november-kickoff-offer",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "fundedtradingplus-size20-2026",
-      "slug": "funded-trading-plus",
-      "productIds": [
-        "ftp-express-current",
-        "ftp-classic-current"
-      ],
-      "offer": "−20% (100K–200K)",
-      "code": "SIZE20",
+      "id": "fundedtradingplus-size20-2026", "slug": "funded-trading-plus",
+      "productIds": ["ftp-express-current", "ftp-classic-current"],
+      "offer": "−20% (100K–200K)", "code": "SIZE20",
       "terms": "100K–200K challenges only. The firm lists SIZE30 for 5K–10K (30%) and SIZE25 for 25K–50K (25%). Eligibility varies with the selected product; not claimed for $4 Activation Accounts.",
       "sourceUrl": "https://www.fundedtradingplus.com/prop-trading-challenges/one-step",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "fxify-black35-2026",
-      "slug": "fxify",
-      "productIds": [
-        "fxi-one",
-        "fxi-two-std",
-        "fxi-two-classic",
-        "fxi-two-pro",
-        "fxi-three"
-      ],
-      "offer": "−35%",
-      "code": "BLACK35",
-      "terms": "All FXIFY programs except Instant Funding Lite; up to 3 uses per trader. The detailed official terms say 9 December, while a homepage banner says 11 December: we use the earlier expiry. Price examples verified from FXIFY's own Black Friday landing page, not generalized to other sizes.",
+      "id": "fxify-black35-2026", "slug": "fxify",
+      "productIds": ["fxi-one", "fxi-two-std", "fxi-two-classic", "fxi-two-pro", "fxi-three"],
+      "offer": "−35%", "code": "BLACK35",
+      "terms": "All FXIFY programs except Instant Funding Lite; up to 3 uses per trader. The detailed official terms say 9 December, while a homepage banner says 11 December: we use the earlier expiry.",
       "sourceUrl": "https://fxify.com/blog/best-current-prop-firm-discount-codes-november-2026/",
-      "checkedOn": "2026-11-22",
-      "endsOn": "2026-12-09",
-      "expiresAt": "2026-12-10T04:59:00Z",
-      "priceExamples": [
-        {
-          "product": "3-Phase evaluation",
-          "accountSize": 5000,
-          "currency": "USD",
-          "before": 39,
-          "after": 25.35
-        },
-        {
-          "product": "Lightning evaluation",
-          "accountSize": 10000,
-          "currency": "USD",
-          "before": 59,
-          "after": 38.35
-        },
-        {
-          "product": "Instant Funding Standard",
-          "accountSize": 1000,
-          "currency": "USD",
-          "before": 69,
-          "after": 44.85
-        }
-      ],
-      "priceSourceUrl": "https://fxify.com/black-friday-account/"
+      "checkedOn": "2026-11-19", "endsOn": "2026-12-09", "expiresAt": "2026-12-10T04:59:00Z"
     },
     {
-      "id": "tradeify-nov-2026",
-      "slug": "tradeify",
-      "productIds": [
-        "tradeify-growth-eval",
-        "tradeify-select-eval",
-        "tradeify-lightning"
-      ],
-      "offer": "−30% · −45% (25K)",
-      "code": "NOV",
+      "id": "tradeify-nov-2026", "slug": "tradeify",
+      "productIds": ["tradeify-growth-eval", "tradeify-select-eval", "tradeify-lightning"],
+      "offer": "−30% · −45% (25K)", "code": "NOV",
       "terms": "30% across eligible accounts; 45% on 25K accounts, excluding the Inter Miami plan. Resets are not included. Check the actual subtotal and chosen options.",
       "sourceUrl": "https://tradeify.co/",
-      "checkedOn": "2026-11-19",
-      "endsOn": "2026-11-30",
-      "expiresAt": "2026-12-01T04:59:00Z"
+      "checkedOn": "2026-11-19", "endsOn": "2026-11-30", "expiresAt": "2026-12-01T04:59:00Z"
     },
     {
-      "id": "e8-first-order-2026",
-      "slug": "e8-markets",
-      "productIds": [
-        "e8-one-current"
-      ],
-      "offer": "−15%",
-      "code": "E8",
+      "id": "e8-first-order-2026", "slug": "e8-markets",
+      "productIds": ["e8-one-current"],
+      "offer": "−15%", "code": "E8",
       "terms": "First order only; price and discount were displayed on E8 One's official configurator. Other product configurations may differ.",
       "sourceUrl": "https://e8markets.com/?market=forex",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "tpt-nofee40-2026",
-      "slug": "take-profit-trader",
-      "productIds": [
-        "tpt-test"
-      ],
-      "offer": "−40%",
-      "code": "NOFEE40",
+      "id": "tpt-nofee40-2026", "slug": "take-profit-trader",
+      "productIds": ["tpt-test"],
+      "offer": "−40%", "code": "NOFEE40",
       "terms": "40% off eligible NEW TEST subscriptions for the account's active lifetime and PRO activation fee waived, while the limited-time sign-up promotion remains available.",
       "sourceUrl": "https://try.takeprofittrader.com/futures-traders-tab1-0725",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "fundingpips-hello-2026",
-      "slug": "funding-pips",
-      "productIds": [
-        "pips-one-step-flex",
-        "pips-two-step-standard",
-        "pips-two-step-pro",
-        "pips-zero-direct"
-      ],
-      "offer": "−20%",
-      "code": "HELLO",
+      "id": "fundingpips-hello-2026", "slug": "funding-pips",
+      "productIds": ["pips-one-step-flex", "pips-two-step-standard", "pips-two-step-pro", "pips-zero-direct"],
+      "offer": "−20%", "code": "HELLO",
       "terms": "First purchase only; the firm's onboarding guide EXCLUDES 100K accounts. Apply the code before payment; the firm does not retroactively credit forgotten discounts.",
       "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/44390730743825-Get-Started",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "ftmo-two-step-100k-2026",
-      "slug": "ftmo",
-      "productIds": [
-        "ftmo-two-step-current"
-      ],
+      "id": "ftmo-two-step-100k-2026", "slug": "ftmo",
+      "productIds": ["ftmo-two-step-current"],
       "offer": "100K · €439 / €540",
       "terms": "The official FTMO 2-Step page displays €439 next to the regular €540 for a USD 100K account. No coupon is specified; eligibility and final checkout fee must be confirmed.",
       "sourceUrl": "https://ftmo.com/en/2-step-challenge/",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "ftmo-one-step-100k-2026",
-      "slug": "ftmo",
-      "productIds": [
-        "ftmo-one-step-current"
-      ],
+      "id": "ftmo-one-step-100k-2026", "slug": "ftmo",
+      "productIds": ["ftmo-one-step-current"],
       "offer": "100K · €399 / €499",
       "terms": "The official FTMO 1-Step page displays €399 next to the regular €499 for a USD 100K account. No coupon is specified; eligibility and final checkout fee must be confirmed.",
       "sourceUrl": "https://ftmo.com/fr/1-step-challenge/",
       "checkedOn": "2026-11-19"
     },
     {
-      "id": "funderpro-bf30-2026",
-      "slug": "funderpro",
-      "productIds": [
-        "funderpro-one-phase",
-        "funderpro-classic",
-        "funderpro-pro"
-      ],
-      "offer": "−30%",
-      "code": "BF30",
+      "id": "funderpro-bf30-2026", "slug": "funderpro",
+      "productIds": ["funderpro-one-phase", "funderpro-classic", "funderpro-pro"],
+      "offer": "−30%", "code": "BF30",
       "terms": "FunderPro's official X account announced 30% off its challenge plans for 16–22 November. Instant is NOT confirmed as eligible, and the checkout was not independently tested.",
       "sourceUrl": "https://x.com/FunderPro/status/2122238260558602680",
-      "checkedOn": "2026-11-19",
-      "endsOn": "2026-11-22",
-      "expiresAt": "2026-11-22T23:59:00Z"
+      "checkedOn": "2026-11-19", "endsOn": "2026-11-22", "expiresAt": "2026-11-22T23:59:00Z"
     }
   ]
 }
