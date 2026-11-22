@@ -47,6 +47,8 @@ export type PromoDeal = {
   checkoutTip?: string;
   featured?: boolean;
   heroRank?: number;
+  /** Exact sourced before/after price for the named challenge; never extrapolate to other plans. */
+  priceExample?: { plan: string; accountSize: number; currency: 'USD' | 'EUR' | 'GBP'; before: number; after: number; checkedOn: string; sourceUrl: string };
   /** Exact expiration, so a seasonal offer is not published after it ends. */
   expiresAt?: string;
   /**
@@ -60,7 +62,8 @@ const allPromoDeals: PromoDeal[] = [
   {
     slug: 'blue-guardian',
     label: 'Transparent partner code',
-    title: 'PROPRADAR: 25% off eligible Blue Guardian accounts',
+    title: 'PROPRADAR: Elite Futures 100K $330 → $247.50 (−25%)',
+    priceExample: { plan: 'Elite Futures', accountSize: 100000, currency: 'USD', before: 330, after: 247.5, checkedOn: '2026-11-15', sourceUrl: BLUE_GUARDIAN_AFFILIATE_URL },
     code: BLUE_GUARDIAN_PROMO_CODE,
     value: '25%',
     category: 'affiliate',
@@ -98,7 +101,8 @@ const allPromoDeals: PromoDeal[] = [
   {
     slug: 'e8-markets',
     label: 'Official code + affiliate',
-    title: 'E8: 15% off the first order with the public code E8',
+    title: 'E8: 100K E8 One $488 → $415 (code E8, first order)',
+    priceExample: { plan: 'E8 One', accountSize: 100000, currency: 'USD', before: 488, after: 415, checkedOn: '2026-11-13', sourceUrl: E8_AFFILIATE_URL },
     code: 'E8',
     value: '15%',
     category: 'code',
@@ -117,7 +121,8 @@ const allPromoDeals: PromoDeal[] = [
   {
     slug: 'upcomers',
     label: 'Transparent partner code',
-    title: 'Upcomers partner code kkscxhro (affiliate link)',
+    title: 'Upcomers 100K $1,090 → $109 (public discount also available)',
+    priceExample: { plan: '100K challenge', accountSize: 100000, currency: 'USD', before: 1090, after: 109, checkedOn: '2026-11-14', sourceUrl: UPCOMERS_AFFILIATE_URL },
     code: UPCOMERS_PROMO_CODE,
     value: 'Code',
     category: 'affiliate',
