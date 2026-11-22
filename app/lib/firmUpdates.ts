@@ -171,6 +171,57 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: Pick<NonNullable<Return
       reviewSignals: { ...firm.reviewSignals, trustpilotRatingWithheld: auditedTrustpilot },
       ...(auditedTrustpilot ? { trustpilotRating: 0 } : {}),
     }),
+    // FFN's July 2026 partial profile explicitly said no contract/entity could be
+    // found. The November 2026 V5.2 file includes the funded agreement and two
+    // ACTIVE Florida entities. Keep the public narrative and legal card aligned
+    // with the revised 55/100 rating rather than repeating a superseded finding.
+    ...(native && firm.slug === 'funded-futures-network' ? {
+      verdict: 'Funded Futures Network offers MAX and STEADY futures evaluations. Its funded Trader Agreement permits forfeiture of account profits for rule breaches and lets the firm determine some gambling violations at its discretion. The two related Florida entities are active, but independently verified final trader payouts remain limited. PropRadar V5.2: 55/100, proceed carefully.',
+      incidents: 0,
+      reviewSignals: {
+        ...firm.reviewSignals,
+        payoutRisk: 'Moyen' as const,
+        payoutIncidentStatus: 'À surveiller' as const,
+        payoutRiskScore: 45,
+        lastSignalCheck: audit.checkedOn,
+        ...(auditedTrustpilot === undefined ? {} : {trustpilotRatingWithheld: auditedTrustpilot}),
+      },
+      regulatoryAudit: {
+        ...firm.regulatoryAudit,
+        riskLevel: 'High' as const,
+        lastChecked: audit.checkedOn,
+        summary: 'The 22 November 2026 V5.2 review confirmed that Funded Futures Network LLC (L22000267808) and FFN Cap LLC (L22000325983) are active in the Florida business register with February 2026 filings. The funded Trader Agreement names FFN Cap LLC, allows profit forfeiture after breaches and gives FFN broad discretion to identify gambling. Allocation of each company\'s obligations, trader payout finality and any broker/FCM arrangements require additional checking.',
+        entities: [
+          {name: 'Funded Futures Network LLC', jurisdiction: 'United States (Florida)', registrationNumber: 'L22000267808', role: 'Challenge offer / brand operator; ACTIVE in Florida register'},
+          {name: 'FFN Cap LLC', jurisdiction: 'United States (Florida)', registrationNumber: 'L22000325983', role: 'Entity named in funded Trader Agreement; ACTIVE in Florida register'},
+        ],
+        regulatoryStatus: [
+          'Both identified Florida LLCs are ACTIVE according to official business filings in 2026; this is not proof of payment reliability.',
+          'The funded agreement, including clauses 5 and 16.12, has been reviewed for contractual reward/strategy risk.',
+          'Broker/FCM relationships, NFA/CFTC applicability and any additional regulatory warnings remain pending independent review.',
+        ],
+        complaintsAndDisputes: [
+          'October-November 2026 public complaints report delayed or disputed Rise payouts; due dates, completed bank/crypto settlements and alleged rule breaches require individual corroboration.',
+          'No count of unjustified reward refusals is established solely from online allegations; A2 is neutral 6/10 pending incident review.',
+        ],
+        redFlags: [
+          'Broad contract-based forfeiture of account profits for rule breaches (B1=0/15).',
+          'Gambling and broker-harm determinations use open-ended discretion in the funded agreement (B2=7/10).',
+          'Self-hosted payout ledger is not independent verification of final transfers (A3=1/5).',
+        ],
+        sources: [
+          {label:'FFN funded Trader Agreement',url:'https://storage.googleapis.com/ffn-files/FFN_TRADER_AGREEMENT.pdf'},
+          {label:'Florida register — Funded Futures Network LLC',url:'https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?aggregateId=flal-l22000267808-ef268e24-6504-4505-a9de-a2ecfd86df50&directionType=Initial&inquirytype=EntityName&listNameOrder=FUNDECONUSA+L190002146180&searchNameOrder=FUNDEDFUTURESNETWORK+L220002678080&searchTerm=FUNDECON+USA%2C+LLC'},
+          {label:'Florida register — FFN Cap LLC',url:'https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000325983-8d56024d-c38a-4937-9ba3-0a3f28b85df7&directionType=ForwardList&inquirytype=OfficerRegisteredAgentName&listNameOrder=TYILLIANGREGORYJ+L170001473950&searchNameOrder=TYJCAPITALLLC+L220003259833&searchTerm=Tyg+Media+Llc'},
+          {label:'FFN Trustpilot review record',url:'https://www.trustpilot.com/review/fundedfuturesnetwork.com'},
+        ],
+      },
+      auditSourcesChecked: [
+        'Trader Agreement — funded rewards and subjective strategy clauses',
+        'Florida official registry — both LLCs and 2026 filings',
+        'Product-specific futures payout FAQ and independent-incident review',
+      ],
+    } : {}),
   };
 }
 
