@@ -168,3 +168,58 @@
   .psb-v5-evidence li { grid-template-columns: auto minmax(0, 1fr); }
   .psb-v5-rule-points { grid-column: 2; justify-self: start; }
 }
+
+
+/* Same scoring disclosure for every firm: audited debit, already-included
+   shortfall, or pending evidence are three visually different states. */
+.psb-step-value.psb-step-pending {
+  max-width: 52%;
+  color: var(--hud-faint);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: right;
+}
+.psb-rule-accounting-note {
+  display: inline-block;
+  margin: 7px 0 1px;
+  color: var(--hud-faint);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.psb-heaviest .psb-rule-source,
+.psb-v5-b1-impact a {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--accent);
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.psb-v5-b1-impact {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--hud-line);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--hud-ink) 3%, transparent);
+}
+.psb-v5-b1-impact > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 12px;
+}
+.psb-v5-b1-impact strong { font-weight: 700; }
+.psb-v5-b1-impact b {
+  color: var(--hud-ink);
+  font: 750 15px/1.3 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: nowrap;
+}
+.psb-step .psb-v5-b1-impact p {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.5;
+}
