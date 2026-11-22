@@ -21,6 +21,7 @@ import { scoreV4Copy } from '../../../lib/scoreV4I18n';
 import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy, scoreV52Copy, scoreV52EvidenceCapCopy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
+import { scoreRuleCopy } from '../../../lib/scoreRuleCopy';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../../lib/riskTone';
@@ -629,6 +630,7 @@ export default async function FirmPage({ params }: Props) {
       };
     });
   const scoreCopy = scoreMethodCopy(locale);
+  const ruleCopy = scoreRuleCopy(locale);
   const breakdown = getScoreBreakdown(firm);
   const modernCopy = breakdown.v52 ? scoreV52Copy(locale) : scoreV5Copy(locale);
   const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: breakdown.v5 ? modernCopy.method : breakdown.v4 ? scoreV4Copy(locale).method : scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
@@ -680,6 +682,9 @@ export default async function FirmPage({ params }: Props) {
     } : undefined,
     tone: scoreTone(firm.score),
     steps: scoreSteps,
+    ruleCopy,
+    ruleAmountAudited: Boolean(breakdown.v4 || breakdown.v5 || breakdown.rules?.applied),
+    ruleAmountApplied: Boolean(!breakdown.v4 && breakdown.rules?.applied),
     signals: [
       { label: f.legal, value: v(regulatoryAudit.riskLevel), tone: legalTone(regulatoryAudit.riskLevel) },
       { label: f.payout, value: v(toEnglishText(firm.reviewSignals.payoutRisk)), tone: payoutTone(firm.reviewSignals.payoutRisk) },
@@ -697,6 +702,7 @@ export default async function FirmPage({ params }: Props) {
         clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
         points: Math.round(points * 10) / 10,
         kind: ruleKind(rule),
+        source: rule.source,
       };
     }) ?? [],
     rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
@@ -705,8 +711,8 @@ export default async function FirmPage({ params }: Props) {
     v4RuleImpact: breakdown.v4 ? {
       rewardLoss: breakdown.v4.embeddedRuleImpact.rewardProtectionLoss,
       tradingLoss: breakdown.v4.embeddedRuleImpact.tradingRulesLoss,
-      rewardLabel: scoreV5EvidenceCopy(locale).contract,
-      tradingLabel: scoreCopy.rules,
+      rewardLabel: ruleCopy.rewardLabel,
+      tradingLabel: ruleCopy.tradingLabel,
     } : undefined,
     v5Evidence: breakdown.v5 ? {
       deductions: breakdown.v5.ruleDeductions,
