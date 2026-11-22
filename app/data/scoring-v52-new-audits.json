@@ -572,6 +572,580 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "daytraders-com",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "EOD Pro: premier versement après 8 Qualifying Days, 100 % de profit simulé éligible, demande ≥500 USD par incréments de 50, consistency 30 % et plafonds par taille 1 000 à 5 000 USD; demande via tableau de bord puis Plane ou DT Wallet. Frais du rail de retrait non exhaustifs : le poste split+minimum+frais n'est pas crédité. +2 fréquence, +2 éligibilité, +2 plafonds, +2 procédure.",
+          "sources": [
+            "https://daytraders.com/help/articles/17684739-eod-payouts",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout",
+            "https://daytraders.com/help/articles/17684736-eod-pro-account"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Pas de série de refus de paiement injustifiés indépendamment corroborés au seuil V5.2 dans ce contrôle ; les avis Trustpilot et le registre de payouts émis par la firme ne suffisent pas à établir 12 mois de paiements indépendants. A2=6 est le neutre et ne certifie aucune fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/daytraders.com",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout",
+            "https://responsibletrading.com/futures-firms/daytraders-review/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le ledger de payouts et les communiqués chiffrés relèvent de l'opérateur lui-même ; le paiement par Plane est décrit, mais ni attestation bancaire tierce ni multi-bénéficiaires authentifiés publiquement et attribués aux programmes ne sont disponibles ici. Ne pas attribuer A3=4 à un historique auto-déclaré.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704099-about-daytraders",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout",
+            "https://responsibletrading.com/futures-firms/daytraders-review/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Section 28 des Terms (version 05/03/2025) : la firme peut altérer ou annuler sans contrepartie un Reward déjà gagné si elle juge le client en infraction, même sans lien entre l'infraction et la récompense. Le caractère acquis et l'articulation avec les accords Pro/S2F ne sont pas protégés par recours opposable dans les pièces consultées : B1=3 pour risque de rewards acquis, distinct de la définition des stratégies en B2.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17684739-eod-payouts"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Section 26 interdit des positions 'substantially larger', 'grossly overleveraged' et les activités causant 'reasonable concerns' de dommage à la firme sans seuil exhaustif ; l'appréciation seule peut provoquer suppression de trades, profits ou fermeture. Un fait de trading vague −3, sans seconde pénalité pour les conditions chiffrées de drawdown, consistency ou jours.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17684736-eod-pro-account"
+          ],
+          "negativeFactIds": [
+            "daytraders-c04-unbounded-noncompliant-trading-definitions"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les Terms nomment Day Traders LLC, LLC du Nevada, comme entité qui vend le service et identifient un processeur Collecto distinct. L'extrait de registre officiel du Nevada, numéro d'immatriculation et correspondance du checkout contemporain n'ont pas été authentifiés : entité juridique déclarée avec identité indépendante incomplète, palier conservateur C1=4.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704104-billing"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Les Terms indiquent le Nevada et le site exploite un centre d'aide actif, mais le statut officiel à date de Day Traders LLC n'a pas pu être recoupé dans un extrait complet du registre du Nevada. Le statut reste 'non vérifiable' ici, sans accusation de radiation ou de dissolution.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704099-about-daytraders"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Ce contrôle de sources n'établit aucune sanction officielle financière actuelle visant exactement cette société et cette offre de simulation ; recherche exhaustive des alertes CFTC/NFA/autorités locales non achevée. Aucune licence de broker n'est exigée par défaut pour un challenge simulé : C3 provisoire 2.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704099-about-daytraders"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Tableaux officiels par Trail/Static/EOD/S2F/S2L précisent objectifs, types de drawdown et split (+2) ; règles de positions, période et conséquences par offre accessibles (+2) ; KYC et conditions d'accès documentés (+2). Les prix finaux, abonnements et add-ons diffèrent selon checkout, non recoupé sur toutes les tailles : +0 prix. Total 6/8.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+            "https://daytraders.com/help/articles/17684736-eod-pro-account",
+            "https://daytraders.com/help/articles/17704104-billing",
+            "https://daytraders.com/help/articles/17704103-who-can-sign-up"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Terms de portée générale consultables et datés du 05/03/2025 ; autres guides datés 2026. Il n'existe pas dans ce contrôle d'engagement opposable décrivant l'effet des modifications sur chaque cohorte. La page Billing Terms de juillet décrit une tarification lifetime seule alors que le guide plus récent d'octobre propose Monthly ou Lifetime : vérifier la version applicable.",
+          "sources": [
+            "https://daytraders.com/help/articles/17704078-terms-of-use",
+            "https://daytraders.com/help/articles/17704104-billing",
+            "https://daytraders.com/help/articles/10023854-billing-terms"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le guide de comparaison et les fiches EOD/S2F décrivent correctement les phases et retires simulés (+2). En revanche, une ancienne page Billing Terms lifetime-only coexiste avec Monthly/Lifetime courant et la description juridique de la simulation laisse incertaine la transition vers Live et les contrats distincts ; checkout complet et cohérence documentaire non reconfirmés (0+0).",
+          "sources": [
+            "https://daytraders.com/help/articles/17704132-plan-comparison-overview",
+            "https://daytraders.com/help/articles/17704104-billing",
+            "https://daytraders.com/help/articles/10023854-billing-terms",
+            "https://daytraders.com/help/articles/17704078-terms-of-use"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le profil Trustpilot est revendiqué depuis août 2024 avec avis historiques et DayTraders documente sa présence publique en 2024–2026 ; cela soutient au moins 18 à 35 mois d'activité du service, mais pas l'intervalle de 36 mois prouvé par pièces d'exploitation antérieures à novembre 2023. Ne pas confondre déclaration 'founded 2023' et historique opérationnel vérifié.",
+          "sources": [
+            "https://www.trustpilot.com/review/daytraders.com",
+            "https://daytraders.com/help/articles/17704099-about-daytraders"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Aide officielle et canal d'assistance accessibles (+1), et plusieurs réponses publiques de l'entreprise à des avis avec références de support (+1). Pas de procédure d'appel indépendante assortie de délais ni d'échantillon vérifié de résolution de litiges ordinaires assez probant pour les deux derniers points.",
+          "sources": [
+            "https://www.trustpilot.com/review/daytraders.com",
+            "https://daytraders.com/help/articles/10024188-our-policies-at-daytraders-com-what-you-need-to-know",
+            "https://daytraders.com/help/articles/17704121-how-to-request-a-payout"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "daytraders-c04-unbounded-noncompliant-trading-definitions",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "DayTraders.com · évaluations EOD/Trail/Static et comptes Pro/S2F",
+          "phase": "Trading et revue de conformité avant retrait",
+          "clause": "Terms of Use §26 : pratiques « substantially larger », « grossly overleveraged », « reasonable concerns ... financial or other harm » et décision discrétionnaire sur la pratique non conforme.",
+          "consequence": "Un trader respectant ses seuils chiffrés peut voir certains profits simulés supprimés ou son compte clos sur une qualification qualitative non bornée.",
+          "source": "https://daytraders.com/help/articles/17704078-terms-of-use"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "equity-edge",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Pour Legacy/Swift/Flagship: paiement demandé au 14e jour calendaire après premier trade funded, 80 % de split, VIP 90 % on-demand ; demande avant 17h UK et traitement annoncé 48h ouvrées si vérifications satisfaites. Instant différent (90 %). +2 calendrier, +2 éligibilité générale, +2 procédure ; seuil minimum/frais de rail et plafonds exhaustifs non confirmés (+0 +0).",
+          "sources": [
+            "https://equityedge.io/funded-traders/payout-process",
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Un tracker tiers affiche des versements attribués à la marque depuis septembre 2026 mais cet historique est inférieur à 12 mois, sans six mois de séparation entre points auditables ; les plaintes et témoignages publics ne prouvent ni série de refus injustifiés ni absence d'incidents. Palier neutre A2=6, à réexaminer si des cas datés corroborés émergent.",
+          "sources": [
+            "https://payouttrackerpro.com/firms/equity-edge/",
+            "https://www.trustpilot.com/review/equityedge.io"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "Payout Tracker Pro dit avoir examiné des registres de paiement non crypto à plusieurs dates, mais ne publie ni émetteur vérifiable, ni référence de règlement final consultable, ni échantillon attribué aux programmes Legacy/Swift/Instant et bénéficiaires. Matériau daté et tiers utile mais chaîne de preuve incomplète : A3=2, pas 4/5 ni fiable certifié.",
+          "sources": [
+            "https://payouttrackerpro.com/firms/equity-edge/",
+            "https://equityedge.io/terms-and-conditions"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les CGU du 06/10/2026 §6 permettent refus du payout après revue de conformité sur simple suspicion de violations, incohérence de localisation ou manipulation ; §9 autorise la perte de soldes après chargeback sans critères de liquidation des rewards acquis. L'appel §10 existe mais la décision est dite finale : protection faible sur les gains acquis, B1=3.",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La liste officielle des pratiques interdites inclut 'toxic trading flow' et 'one sided betting' sans seuil objectif ni définition exhaustive ; violations entraînent interdiction et possible refus de gains. Une ambiguïté indépendante de la discrétion de revue des paiements évaluée en B1 : −3 une seule fois. Les fenêtres news de 4/10/16 min, elles, sont objectives et ne coûtent rien.",
+          "sources": [
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+            "https://equityedge.io/terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "equityedge-c04-open-ended-toxic-flow-and-one-sided-betting"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le contrat attribue explicitement plateforme à Equity Edge Ltd (Sainte-Lucie, numéro annoncé 2025-00306) et administration/paiements à Equity Edge Analytics Ltd (Royaume-Uni, 15263705) ; Companies House confirme la société UK, mais l'opérateur Sainte-Lucie et Odeonpay/Paysagi ne sont pas indépendamment rapprochés de chaque checkout. Identité partiellement recoupée : 7.",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://find-and-update.company-information.service.gov.uk/company/15263705"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Companies House indique EQUITY EDGE ANALYTICS LTD active avec dernière confirmation 28/05/2026. Cela ne certifie pas le good standing du véritable opérateur Equity Edge Ltd à Sainte-Lucie, dont le numéro vient du site uniquement : C2=3 pour la chaîne de contractants, sans insinuation de radiation.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/15263705",
+            "https://equityedge.io/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de sanction officielle nommément corroborée relative aux services de simulation dans les sources retenues, mais la recherche officielle complète dans les juridictions d'exploitation, UK et Sainte-Lucie, demeure incomplète. Aucune assimilation abusive à une activité de courtage réglementée. Valeur prudente C3=2.",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://find-and-update.company-information.service.gov.uk/company/15263705"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Le règlement précise six variantes Legacy/Swift/Flagship et Instant, objectifs et drawdowns (+2), limitations par programme sur news, weekend, EA, hedging, avec sanctions (+2), et exclusions de pays ainsi que KYC (+2). Les prix courants et suppléments à la dernière étape de commande ne sont pas entièrement vérifiés pour chaque gamme : +0 prix.",
+          "sources": [
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines",
+            "https://equityedge.io/terms-and-conditions",
+            "https://equityedge.io/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU publiques datées du 06/10/2026 et accords Instant accessibles ; le contrat ne garantit pas explicitement le maintien des anciennes règles pour les comptes existants ni un préavis opposable en cas de modification. Date et accès (+4), protection des modifications non établie (+0).",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://equityedge.io/instant-accounts/legal-agreement-for-instant-accounts"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le centre d'aide et le processus officiel concordent globalement sur la cadence de 14 jours (+2). En revanche la clause 19 de non-affiliation affirme de façon contradictoire l'absence de lien avec les deux entités que les articles précédents présentent comme opérateur et service UK ; rôle du merchant of record, cohérence du checkout et version de chaque contrat restent à éclaircir (0+0).",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://equityedge.io/funded-traders/payout-process",
+            "https://equityedge.io/trading-rules/trading-rules-and-guidelines"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "La fiche Trustpilot revendiquée depuis juillet 2025 et les offres récentes démontrent une activité commerciale d'au moins 6 à 17 mois sous cette marque au 22/11/2026. L'immatriculation UK en 2023 ne prouve pas une prop firm opérationnelle depuis cette date : palier E1=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/equityedge.io",
+            "https://find-and-update.company-information.service.gov.uk/company/15263705"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "CGU publient support@equityedge.io (+1), observations externes récentes décrivent des réponses d'assistance effectives (+1), procédure écrite d'appel des décisions avec réponse annoncée dans les 10 jours ouvrés (+1). L'issue favorable de litiges ordinaires ne peut être suffisamment mesurée ici (+0).",
+          "sources": [
+            "https://equityedge.io/terms-and-conditions",
+            "https://www.trustpilot.com/review/equityedge.io"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "equityedge-c04-open-ended-toxic-flow-and-one-sided-betting",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Equity Edge · Legacy, Swift, Flagship et Instant",
+          "phase": "Trading simulé et revue des stratégies avant versement",
+          "clause": "Trading Rules §3 : « toxic trading flow », « one sided betting » dans la liste des stratégies interdites sans seuil public précis ; clause distincte de §6 CGU (revue de payout).",
+          "consequence": "Des profits d'une stratégie conforme aux drawdowns pourraient être retirés après qualification subjective comme flux toxique ou pari unidirectionnel.",
+          "source": "https://equityedge.io/trading-rules/trading-rules-and-guidelines"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "alpine-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 54,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Base Camp Instant Funding : demandes par seuils de +5% et niveau, premiers deux montants bloqués jusqu'au troisième sans add-on On-Demand, barème chiffré par taille (100 USD dès 10k, 1 000 USD sur 100k), et parcours Rise à étapes explicites. Alpine 2-Step annonce cycle de 14 jours. +2 calendrier, +2 conditions, +2 plafonds, +2 demande; split et frais réels de chaque méthode et programme non vérifiés exhaustivement : +0.",
+          "sources": [
+            "https://alpinefunded.com/faq/base-camp-payouts/",
+            "https://alpinefunded.com/faq/payouts-crypto-bank-transfers/",
+            "https://alpinefunded.com/how-it-works/",
+            "https://alpinefunded.com/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les plaintes publiques concernent notamment la date réelle du versement et l'activation du palier 3, mais le contrôle ne dispose pas de deux refus injustifiés distincts, datés et indépendamment corroborés selon le protocole A2. L'entreprise ne dispose pas ici d'une série indépendante datée de règlements sur 12 mois. A2=6 est neutre, pas une exonération.",
+          "sources": [
+            "https://www.trustpilot.com/review/alpinefunded.com",
+            "https://alpinefunded.com/faq/base-camp-payouts/",
+            "https://joinprop.com/prop-firm/alpine-funded/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site diffuse certificats de récompenses et total global de 1,9 M USD revendiqué. Rise est annoncé comme prestataire de traitement après autorisation, sans journal bancaire public de règlements compensés, attribution de bénéficiaires et mandat du tiers payeur. Les certificats marketing et avis Trustpilot ne suffisent pas à établir A3 supérieur à 1.",
+          "sources": [
+            "https://alpinefunded.com/",
+            "https://alpinefunded.com/about-us/",
+            "https://alpinefunded.com/faq/payouts-crypto-bank-transfers/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU en vigueur §4.6 laissent à Alpine Funded la discrétion sur l'éligibilité aux récompenses et bonus des achats promotionnels; §4.7 prévoit perte des droits à récompenses de comptes passés en cas de chargeback. §9.2–9.6 : tiers financeur non nommé libre d'admettre/refuser, et Alpine décline responsabilité de ses versements. Le contrat funded tiers n'a pas été fourni : pouvoir large et recours limité sur les récompenses, B1=3 provisoire; à reconsidérer selon convention gagnant.",
+          "sources": [
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://joinprop.com/prop-firm/alpine-funded/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Clauses 7.1(h)-(i), 7.2–7.3 : stratégie à risque « unsustainably high », trading non professionnel ou portant préjudice à la réputation, taille « disproportionately large », fréquence « significantly » inhabituelle ; Alpine juge seule ce qui constitue une pratique interdite. La sanction peut entraîner retrait de trades et clôture. Un seul malus −3 sur le comportement flou, sans sanctionner une limite chiffrée et annoncée comme la fenêtre news ±5 minutes.",
+          "sources": [
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/how-it-works/"
+          ],
+          "negativeFactIds": [
+            "alpine-funded-gtc-7-unbounded-professional-risk-terms"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Le fournisseur du challenge Alpine Funded GmbH (Cham), UID CHE-159.158.124, concorde avec le registre fédéral suisse et les CGU. Mais les §§9.2–9.3 nomment une entreprise tierce distincte comme cocontractant du funded et responsable du payout, sans identifier ce tiers ni son registre : identité vérifiée pour l'évaluation, chaîne des paiements incomplète (C1=7).",
+          "sources": [
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/about-us/"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "L'autorité fédérale suisse (registre UID) affiche Alpine Funded GmbH CHE-159.158.124 en statut actif, à Sinserstrasse 67, Cham, cohérent avec les CGU et l'offre ; aucun indice de radiation active au registre consulté. Ce statut vérifie le fournisseur suisse, non l'entreprise inconnue du contrat funded.",
+          "sources": [
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124",
+            "https://alpinefunded.com/terms-and-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure officielle précise et actuelle contre Alpine Funded GmbH n'est établie dans les sources consultées, mais les recherches complètes d'avertissements des autorités et du partenaire de financement non nommé restent inachevées. Ce service de simulation ne doit pas être pénalisé pour absence d'une licence de courtage non exigée ; valeur provisoire 2.",
+          "sources": [
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Les pages publiques donnent taille du compte, drawdown, objectifs et étapes par Base Camp, Alpine 2-Step et Alpine Pass (+2), types de trading interdits et sanctions par phase avec CGU et FAQ (+2), ainsi que contrôle KYC et exclusions géographiques (+2). Les add-ons et prix finaux de toute combinaison avant paiement ne sont pas vérifiés de bout en bout (+0).",
+          "sources": [
+            "https://alpinefunded.com/how-it-works/",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU intégrales téléchargeables, fichier PDF 260929 (29 septembre 2026), accessibles depuis la page légale. §2.1 autorise une mise à jour unilatérale à tout moment en imposant au client de vérifier la dernière version, sans protection explicite des cohortes déjà achetées. Accès + date =4; absence de garantie contractuelle sur rétroactivité =0, sans appliquer B2 −4 faute de changement rétroactif DÉMONTRÉ.",
+          "sources": [
+            "https://alpinefunded.com/terms-and-conditions/",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La FAQ de Base Camp publie la rétention des deux premiers payouts jusqu'au troisième, tandis que l'accueil promet des récompenses à la demande en 24h; il faut expliquer la différence entre 'demande' et règlement effectif et entre Base Camp et 2-Step. L'entité tierce non nommée responsable du funded et des paiements dans les CGU contredit l'impression donnée par la promesse d'Alpine de payer elle-même. Présentation des comptes simulés cohérente (+2) mais parcours/checkout et rôles contractuels non totalement cohérents (+0+0).",
+          "sources": [
+            "https://alpinefunded.com/faq/base-camp-payouts/",
+            "https://alpinefunded.com/",
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://alpinefunded.com/how-it-works/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Premier article du centre d'aide daté du 02/08/2024 décrit le service Alpine Funded ouvert ; la fiche historique de la firme et le registre suisse du début 2024 recoupent son existence opérationnelle depuis au moins 27 mois. Palier 18–35 mois (4), sans extrapoler à 36 mois ni confondre trading privé du fondateur et activité de la firme.",
+          "sources": [
+            "https://help.alpinefunded.com/en/articles/9691400-what-is-alpine-funded",
+            "https://alpinefunded.com/about-us/",
+            "https://www.uid.admin.ch/Detail.aspx?uid_id=CHE159158124"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Support officiel par mail et formulaire (+1), réponses actuelles de l'entreprise et témoignages circonstanciés attestant une joignabilité au moins ponctuelle (+1), procédure contractuelle de plainte avec objectif 30 jours et réponse écrite (§16.3) (+1). Pas de preuve indépendante suffisante pour accorder le point de résolution efficace des litiges généraux (+0).",
+          "sources": [
+            "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf",
+            "https://www.trustpilot.com/review/alpinefunded.com",
+            "https://alpinefunded.com/faq/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "alpine-funded-gtc-7-unbounded-professional-risk-terms",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Alpine Funded · Base Camp Instant, 2-Step/Peak et règles générales de trading simulé",
+          "phase": "Trading / examen des comportements interdits avant décision funded et payout",
+          "clause": "CGU §7.1(h)-(i) et §7.2–7.3 : unsustainably high risk, pratiques non professionnelles ou préjudice réputationnel, tailles/fréquences anormales ; qualification par la seule discrétion de la firme.",
+          "consequence": "Une stratégie respectant les drawdowns chiffrés peut néanmoins être déclarée non professionnelle ; trades/profits simulés supprimés et comptes résiliés.",
+          "source": "https://alpinefunded.com/wp-content/uploads/2026/09/TC-260929.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funded-squad",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Règles officielles des 1-Step et 2-Step détaillant cycle de deux semaines (certaines variantes on demand avec add-on), split de 80 % jusqu'à 100 % selon option, minimum 100 USD (12,50 USD Instant Rapid), frais crypto de 5–12 USD et Rise 30 USD, KYC et demande via dashboard. Calendrier +2, split/minimum/frais +2, conditions +2, procédure +2 ; caps de reward par taille et catégorie non réconciliés sur tous les programmes : +0.",
+          "sources": [
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://intercom.help/fundedsquad/en/articles/12304355-2-step-squad-evaluation-account-overview",
+            "https://intercom.help/fundedsquad/en/articles/12304328-1-step-evaluation-account-overview"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Plusieurs avis individuels récents contestent refus de paiements et examens de règles, mais les relevés de trade, contrats, versements dus et réponses de la firme ne sont pas authentifiés par un tiers indépendant. Impossible d'affirmer ≥2 refus injustifiés au seuil V5.2 ou 12 mois de payout régulier indépendant : neutre A2=6, sans disculpation ni accusation.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedsquad.com",
+            "https://www.fxroll.com/prop-firms/fundedsquad",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Rise et crypto sont annoncés comme rails de payout, et le site publie des témoignages; aucune preuve bancaire ou blockchain de règlement final ne lie de manière indépendante firme/produit/bénéficiaire sur échantillon public. Le comparateur FXROLL indique ne disposer d'aucun payout authentifié sur cette marque. A3=1 pour pièces auto-déclarées; aucun avantage dû à la technologie Rise.",
+          "sources": [
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://www.fxroll.com/prop-firms/fundedsquad",
+            "https://www.trustpilot.com/review/fundedsquad.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU §8.1 ne garantissent aucune rémunération future, §4.4/§4.5 confèrent des pouvoirs étendus sur les comptes, et la revue Risk Team peut aboutir à refus intégral de retrait; aucun contrat funded complémentaire protégeant de façon opposable les récompenses acquises n'a été recoupé. B1=3 provisoire pour absence de critères protecteurs suffisants, indépendamment des seules interdictions de trading de B2.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://intercom.help/fundedsquad/en/articles/12303438-prohibited-trading-strategies"
+          ]
+        },
+        "B2": {
+          "points": 4,
+          "reason": "Deux risques DISTINCTS : (a) CGU §4.4 'jeopardizing broker relationships', stratégies utilisées 'inappropriately', réglementations non quantifiées → clause de trading à interprétation ouverte, −3 ; (b) guide Challenge Account Trading Rules : une position ouverte avant la fenêtre news et close en profit pendant la fenêtre voit son PROFIT retiré, mais ses PERTES restent, asymétrie matériellement explicite, −3. Les règles de durée minimum 60 s après le 21/10/2026 et de marge 70 % chiffrées ne coûtent aucun point. B2=4.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+            "https://intercom.help/fundedsquad/en/articles/12303438-prohibited-trading-strategies"
+          ],
+          "negativeFactIds": [
+            "fundedsquad-unbounded-broker-harm-prohibited-trading",
+            "fundedsquad-news-profit-removed-loss-kept"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "CGU présentent DEVIONICS TECHNOLOGY – FZCO comme opérateur. Risk Disclosure présente une société affiliée FundedSquad Ltd, Saint Lucia n°2026-00549, et un rôle éventuel dans les règlements ; aucun extrait UAE officiel pour Devionics ni dernier vendeur au checkout ni certificat Saint Lucia n'a été authentifié. Nom juridique existe, rattachement juridique et débiteur des payouts incomplets : C1=4 sans accusation de société fictive.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Aucun extrait officiel de licence courante / good standing des deux sociétés n'a pu être obtenu lors de cette vérification; société UAE déclarée, société affiliée à Sainte-Lucie déclarée et site actif ne suffisent pas à prouver 'active et à jour'. C2=3 statut officiel indéterminé et aucune radiation présumée.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Les sources disponibles ne démontrent pas une sanction actuelle nominative de Devionics Technology FZCO/FundedSquad Ltd, mais vérifications réglementaires exhaustives UAE et Sainte-Lucie non terminées. Offre de simulation non confondue avec broker nécessitant un agrément; C3=2 provisoire.",
+          "sources": [
+            "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://fundedsquad.com/terms-of-service"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Fiches par compte et phase donnent cibles, drawdowns, règles de durée, positions et news avec sanctions (+2 objectifs, +2 contraintes); le payout guide et les pages légales publient KYC et restrictions de pays (+2). Les prix/remises/add-ons exacts à la dernière étape d'achat pour toute gamme ne sont pas recoupés (+0).",
+          "sources": [
+            "https://intercom.help/fundedsquad/en/articles/12304355-2-step-squad-evaluation-account-overview",
+            "https://intercom.help/fundedsquad/en/articles/12304328-1-step-evaluation-account-overview",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://fundedsquad.com/risk-disclosure"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les Terms of Service sont librement disponibles (+2) et permettent modification unilatérale à tout moment (§1.3); la page consultée ne fournit pas de date d'entrée en vigueur identifiable pour toutes les cohortes (+0) ni garantie d'application prospective aux comptes achetés (+0). Le changement du minimum de durée daté 21/10/2026 n'est pas pénalisé rétroactivement car les conditions anciennes sont explicitement maintenues.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les pages modèles et payouts détaillent les différences de cycles, l'ancienneté de la règle 120 s et le nouveau régime 60 s (+2 cohérence documentaire). Toutefois le contrat emploie 'live account' tandis que le Risk Disclosure précise que les comptes sont simulés, et l'identité du merchant/payout provider entre UAE et Sainte-Lucie demeure imparfaite; dernier checkout et rôles exacts non vérifiés (+0+0).",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces indépendantes depuis janvier 2024 sur la marque/domaine et profil d'entreprise LinkedIn fondé 2024, plus offres et avis documentés en 2025–2026. Activité prop firm pendant au moins 18 mois plausible et corroborée, mais aucun historique opérationnel certain de 36 mois : E1=4.",
+          "sources": [
+            "https://www.linkedin.com/company/funded-squad",
+            "https://www.fxroll.com/prop-firms/fundedsquad",
+            "https://www.trustpilot.com/review/fundedsquad.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support@fundedsquad.com et centre d'aide/chat identifiés (+1); les avis décrivent des échanges réels avec support et Risk Team, mais qualité contestée (+1 uniquement joignabilité). Aucun processus indépendant d'appel assorti de délai opposable, ni échantillon extérieur de litiges résolus ne justifie les deux points restants.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedsquad.com",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://fundedsquad.com/faqs"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "fundedsquad-unbounded-broker-harm-prohibited-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "FundedSquad · évaluations 1-Step, 2-Step et modèles Instant (CGU générales)",
+          "phase": "Trading et revue de stratégie avant entrée funded/payout",
+          "clause": "Terms of Service §4.4 : pratiques pouvant 'jeopardize' la relation broker, systèmes tiers 'inappropriately' et réglementation broker sans seuil matériel exhaustif.",
+          "consequence": "L'opérateur peut qualifier après coup une stratégie de pratique interdite et annuler l'accès malgré des objectifs et drawdowns respectés.",
+          "source": "https://fundedsquad.com/terms-of-service"
+        },
+        {
+          "factId": "fundedsquad-news-profit-removed-loss-kept",
+          "kind": "asymetrie",
+          "points": 3,
+          "program": "FundedSquad · Evaluation Funded (news trading, pas phase Evaluation)",
+          "phase": "Fermeture d'un trade déjà ouvert avant la fenêtre news mais clôturé pendant l'annonce",
+          "clause": "Challenge Account Trading Rules, scénario « Evaluation Funded » : un trade ouvert avant la fenêtre puis clôturé dans cette fenêtre voit le profit retiré lors du contrôle ; les pertes restent à la charge du trader.",
+          "consequence": "Le même type d'exécution ne préserve pas le gain profitable, tout en conservant la perte réalisée, indépendamment de l'absence d'infraction du compte.",
+          "source": "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
