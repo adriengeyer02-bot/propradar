@@ -3027,6 +3027,494 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "upcomers",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 46,
+      "criteria": {
+        "A1": {
+          "points": 10,
+          "reason": "Le centre d'aide indique l'accès aux rewards après satisfaction du programme, minimum $50 brut puis $45 au solde payé, frais de transaction et choix virement/crypto, caps par CFD et Futures et demande en dashboard. Tous les cinq champs A1 sont documentés.",
+          "sources": [
+            "https://help.upcomers.com/en/articles/12639806-how-do-payouts-work-at-upcomers",
+            "https://help.upcomers.com/en/articles/15956295-minimum-payout-amount",
+            "https://help.upcomers.com/en/articles/12688538-payout-structure-cfd-perpetuals",
+            "https://help.upcomers.com/en/articles/12640111-payout-methods"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis récents mentionnent des refus de retraits et des réussites, mais aucune série de 12 mois de règlements indépendants ni dossier contradictoire multi-client entièrement vérifié. A2 neutre 6, sans valider ces plaintes ni les nier.",
+          "sources": [
+            "https://www.trustpilot.com/review/upcomers.com",
+            "https://help.upcomers.com/en/articles/12639806-how-do-payouts-work-at-upcomers"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site affiche certificats et histoires de payouts qui restent de nature marketing; aucune piste publique tierce de règlement final multi-bénéficiaires attribuée à Royal Flow FZCO et au programme exact n'est établie. A3=1.",
+          "sources": [
+            "https://www.trustpilot.com/review/upcomers.com",
+            "https://help.upcomers.com/en/articles/12639806-how-do-payouts-work-at-upcomers"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les CGU §7.8 laissent à la firme la décision d'entrer ou non en Trader Program après un challenge réussi, sans droit opposable ni recours garanti pour les rémunérations futures. B1=3 provisoire pour faible protection, pas preuve d'une confiscation avérée.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les clauses §5.5 autorisent explicitement la firme à définir d'autres stratégies interdites et leurs seuils « at our own discretion », avec suppression de trades ou fermeture §5.6. Une ambiguïté de trading B2 −3, distincte de B1.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions"
+          ],
+          "negativeFactIds": [
+            "upcomers-20261122-undefined-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU identifient Royal Flow FZCO licence 35886 UAE, Upcomers Ltd Sainte-Lucie et Upcomers LTD Chypre; vendeur de TradeLocker et autres plateformes est expliqué, mais rapprochement de la société débitrice de rewards par programme incomplet : C1=7.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions",
+            "https://www.upcomers.com/policies"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéros de société et adresses sont déclarés dans les CGU mais extraits officiels de good standing des trois opérateurs non obtenus dans ce contrôle; C2=3, sans présomption de dissolution.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de décision de régulateur grave, actuelle et nominative vérifiée contre l'opérateur concerné dans cette revue limitée; contrôles exhaustifs UAE/Sainte-Lucie/Chypre non réalisés. C3=2 provisoire.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions",
+            "https://www.trustpilot.com/review/upcomers.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Tarifs et plans CFD/Futures/Perpetual, objectifs, pertes, restrictions de stratégie et KYC/pays sont détaillés sur le site et l'aide. Les quatre familles D1 sont publiées par gamme, non traitées comme identiques.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions",
+            "https://help.upcomers.com/en/articles/12688538-payout-structure-cfd-perpetuals"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU accessibles et anciennes dates d'entrée en vigueur traçables; les droits d'une cohorte lors de modifications unilatérales ne sont pas totalement préservés dans la version actuelle : D2=4 provisoire.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Documents distinguent les trois opérateurs et futures/CFD, mais la contractualisation des rewards selon chaque plateforme et la décision facultative d'entrer dans Trader Program restent peu conciliables avec le parcours promotionnel. D3=4.",
+          "sources": [
+            "https://www.upcomers.com/policies/terms-conditions",
+            "https://help.upcomers.com/en/articles/12639806-how-do-payouts-work-at-upcomers"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Publications et programmes Upcomers sont visibles depuis 2023–2024 ; au moins 18–35 mois de service sont plausibles, sans reconstituer un historique de 36 mois sous la personne morale actuelle. E1=4.",
+          "sources": [
+            "https://www.trustpilot.com/review/upcomers.com",
+            "https://www.upcomers.com/policies"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Centre d'aide, assistance et réponses publiques à des avis contestés documentent plusieurs canaux et joignabilité; procédure de réclamation interne existe, aucune preuve de résolution indépendante générale : E2=3.",
+          "sources": [
+            "https://www.trustpilot.com/review/upcomers.com",
+            "https://help.upcomers.com/en/articles/12639806-how-do-payouts-work-at-upcomers"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "upcomers-20261122-undefined-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Upcomers · CFD, Futures et autres programmes simulés",
+          "phase": "Trading et contrôle de stratégie avant reward",
+          "clause": "CGU §5.5 et §5.6 : autres types de trading interdit ou paramètres définis unilatéralement à discrétion.",
+          "consequence": "Une stratégie peut être interdite a posteriori et les transactions supprimées du PnL malgré le respect des limites chiffrées.",
+          "source": "https://www.upcomers.com/policies/terms-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funding-your-trades",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 46,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "FAQ précise premier payout après profit/cycle applicable, suivants tous les 7 jours après nouveau trade, interviews, traitement 24–48 heures, split et demande via dashboard. Les caps et coûts complets selon rail et taille ne sont pas réconciliés : A1=8.",
+          "sources": [
+            "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/",
+            "https://fundingyourtrades.com/faq/what-withdrawal-methods-are-available/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Trustpilot présente des retards et refus allégués en 2026, sans contrats, relevés de trading ni décisions indépendamment vérifiées pour appliquer A2=4 ou 2; une série régulière 12 mois indépendante est aussi absente. A2=6 neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundingyourtrades.com",
+            "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le ledger rewards.fundingyourtrades.com appartient à la firme. Une transaction on-chain annoncée ne démontre pas toute la chaîne client–émetteur–programme et l'authenticité du bénéficiaire : A3=1 malgré les hashes commerciaux.",
+          "sources": [
+            "https://rewards.fundingyourtrades.com/",
+            "https://www.trustpilot.com/review/fundingyourtrades.com"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Le contrat général permet refus de service et modification immédiate et laisse les conditions de reward aux règles séparées; la confiscation arbitraire de gains déjà approuvés n'est pas suffisamment démontrée. B1=6 provisoire faute de funded agreement complet.",
+          "sources": [
+            "https://fundingyourtrades.com/terms-of-services/"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les guidelines publiées visent exploitation de latence, EA/copy et prises de risque; aucune clause actuelle objectivement identifiée dans ce contrôle ne définit une catégorie indéterminée de trading pénalisable au-delà des clauses de reward analysées en B1 : B2=10 provisoire.",
+          "sources": [
+            "https://fundingyourtrades.com/faq/general-guidelines-prohibited-usage/",
+            "https://fundingyourtrades.com/faq/instant-funding-rules/"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Terms nomment seulement « FUNDING YOUR TRADES » comme fournisseur, avec Paysagi/Odeonpay en Merchant of Record et mentions externes de PrimeWorks International FZ LLC non authentifiées au contrat. Nom de la partie insuffisamment rattaché : C1=4.",
+          "sources": [
+            "https://fundingyourtrades.com/terms-of-services/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Ni numéro courant ni registre officiel du fournisseur ultime de challenge et d'un éventuel débiteur des rewards n'ont été corroborés. C2=3 faute de certificat d'activité, sans insinuer fermeture.",
+          "sources": [
+            "https://fundingyourtrades.com/terms-of-services/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction officielle applicable précisément à l'opérateur des programmes simulés ne ressort des sources contrôlées; recherches réglementaires complètes et qualification exacte du fournisseur manquantes : C3=2.",
+          "sources": [
+            "https://fundingyourtrades.com/terms-of-services/",
+            "https://www.trustpilot.com/review/fundingyourtrades.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Offres, frais de challenge, objectifs et pertes, interdictions de méthodes ainsi que accès KYC sont décrits dans la FAQ et le catalogue. Quatre catégories D1 publiées, sans traiter la revue de payouts comme preuve de règlement.",
+          "sources": [
+            "https://fundingyourtrades.com/faq/instant-funding-rules/",
+            "https://fundingyourtrades.com/faq/general-guidelines-prohibited-usage/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU accessibles mais sans chronologie juridique pleinement datée pour les anciens comptes; modifications effectives dès publication, sans preuve d'une modification rétroactive effectivement réalisée. D2=2, pas de pénalité automatique B2 de −4.",
+          "sources": [
+            "https://fundingyourtrades.com/terms-of-services/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Règles FAQ et comparaison de comptes différencient instant/classic et restent accessibles, mais la partie qui doit juridiquement régler les rewards et sa relation à Paysagi ne sont pas éclaircies. D3=2 malgré la disponibilité documentaire.",
+          "sources": [
+            "https://fundingyourtrades.com/terms-of-services/",
+            "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces commerciales et avis vérifiables depuis 2024, ce qui atteste au moins 18 à 35 mois d'activité, non une responsabilité de l'opérateur tiers; E1=4.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundingyourtrades.com",
+            "https://fundingyourtrades.com/terms-of-services/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support et demandes de paiement par chat sont opérationnels selon observations publiques et FAQ, mais qualité de recours et taux de résolution indépendante insuffisants : E2=2.",
+          "sources": [
+            "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/",
+            "https://www.trustpilot.com/review/fundingyourtrades.com"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funded-trader-markets",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 43,
+      "criteria": {
+        "A1": {
+          "points": 10,
+          "reason": "FAQ distingue cadence on-demand sous conditions, split 80→90%, seuil de 1% de profit simulé, caps par taille, buffer, frais de crypto 5%, Rise et demande dashboard. Les cinq familles A1 sont détaillées et accessibles.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/faq/category/payments-and-withdrawals",
+            "https://www.fundedtradermarkets.com/faq"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le ledger live depuis 2024 reste publié et contrôlé par la firme; sans validation indépendante des émetteurs/beneficiaries, il ne suffit pas à A2=9/10. Plaintes isolées sans décision objective ne prouvent pas refus injustifiés : A2=6 neutre.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/rewards",
+            "https://www.fundedtradermarkets.com/faq"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La firme affiche 10,9 M USD de rewards et des pseudonymes avec flux daté, mais ni contrôle indépendant documenté du caractère final des règlements, ni liaison bénéficiaires/agents/paiements multi-clients. A3=1, pas 5.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/rewards",
+            "https://www.fundedtradermarkets.com/faq/category/payments-and-withdrawals"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "CGU autorisent le refus de service et la fin de participation après violation, mais le Trader Agreement funded individuel n'est pas fourni et n'établit pas une confiscation discrétionnaire de gains déjà définitivement acquis. B1=6 provisoire.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "CGU §5.C incluent « jeopardizes broker relationship » et changement de stratégie apprécié à discrétion sans seuil commun; clause de TRADING ouverte, B2 −3, sans sanctionner consistency, buffer ou jours clairement quantifiés.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions"
+          ],
+          "negativeFactIds": [
+            "funded-trader-markets-20261122-undefined-trading"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "La page Terms cite comme fournisseurs à différents endroits FTM Cyprus HE462185, Saint Lucia 2025-00239 et encore l'ancien nom Funded Trader Markets s.r.o., tandis que la FAQ nomme Formed Technologies INT FZCO comme cocontractant unique; identité contractuelle réellement contradictoire : C1=4.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions",
+            "https://www.fundedtradermarkets.com/faq"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Certaines immatriculations sont annoncées, mais bonne partie contractante non déterminée et statut actuel de chaque société non rapproché de registres officiels contemporains. C2=3 et contrôle approfondi prioritaire.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions",
+            "https://www.fundedtradermarkets.com/faq"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction officielle grave pertinente contre la bonne partie n'est établie dans les éléments étudiés; périmètres UAE, Chypre, Sainte-Lucie et éventuelle s.r.o. insuffisamment interrogés. C3=2 provisoire.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "FAQ indique prix, objectifs, drawdowns, plafonds, restrictions de trading et pays/KYC par modèle; quatre catégories D1 documentées, sans accorder une réputation de paiement par publication d'un leaderboard.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/faq",
+            "https://www.fundedtradermarkets.com/faq/category/general-trading-rules"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Conditions accessibles mais mélange de versions/anciens noms et effet des mises à jour à discrétion sans date fiable d'applicabilité par cohorte : D2=2 seulement.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Contradiction matérielle sur l'identité du cocontractant entre Terms et FAQ et dépendance de trois opérateurs rendent le checkout actuel incertain; les produits restent décrits mais contrat de payout non cohérent, D3=2.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/terms-conditions",
+            "https://www.fundedtradermarkets.com/faq"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le site revendique des versements depuis 2024 et les offres datées existent depuis cette période; au moins 18 mois d'activité probables sans rattachement complet au même vendeur juridique. E1=4.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/rewards",
+            "https://www.fundedtradermarkets.com/"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Help center, contact et réponses publiques accessibles; parcours de demande détaillé mais procédure d'appel et taux de résolution des différends non auditables : E2=3 conservateur.",
+          "sources": [
+            "https://www.fundedtradermarkets.com/faq",
+            "https://www.fundedtradermarkets.com/faq/category/payments-and-withdrawals"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "funded-trader-markets-20261122-undefined-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Funded Trader Markets · comptes simulés Challenge/Funded",
+          "phase": "Trading et contrôle stratégique au passage funded",
+          "clause": "CGU §5.C : risque de mettre en péril la relation avec broker, changement de stratégie à discrétion sans métrique publique commune.",
+          "consequence": "Une stratégie conforme au drawdown peut déclencher l'exclusion sur critères qualitatifs non bornés.",
+          "source": "https://www.fundedtradermarkets.com/terms-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funded-futures-network",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 29,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les pages de comptes et FAQ précisent le coût d'activation, le seuil minimum, caps de payout de $10 000 par utilisateur, buffers permanents, split 90/10 en Live et étapes de retrait. Fréquence/éligibilité/caps/procédure sont documentés, frais bancaires complets manquent : A1=8.",
+          "sources": [
+            "https://blog.fundedfuturesnetwork.com/faq",
+            "https://fundedfuturesnetwork.com/accounts"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Ledger en ligne et avis publics ne prouvent pas à eux seuls 24 mois de règlements réguliers vérifiés par tiers, et aucun incident grave corroboré au seuil A2 n'a été documenté dans le présent contrôle. A2=6 neutre.",
+          "sources": [
+            "https://blog.fundedfuturesnetwork.com/payouts",
+            "https://fundedfuturesnetwork.com/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le tableau de versements publie dates et montants mais est hébergé sur le domaine du groupe; sans vérificateur indépendant du règlement final et des bénéficiaires, A3=1 pour l'annonce seulement.",
+          "sources": [
+            "https://blog.fundedfuturesnetwork.com/payouts",
+            "https://fundedfuturesnetwork.com/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les règles de paiement incluent des revues, buffers, arrêt du compte à certains événements et discrétion sur l'admission en live; aucun contrat Live de rewards acquis n'a été obtenu ici. B1=6 provisoire faute de preuve d'une confiscation arbitraire déjà acquise.",
+          "sources": [
+            "https://blog.fundedfuturesnetwork.com/faq",
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les T1 news sont explicitement listées FOMC/NFP/CPI et fenêtre ±1 minute, le copy limit 5 comptes et la clôture journalière 16:50 ET sont chiffrées. Sans clause subjective précise entraînant sanctions nouvelles documentée, B2=10 et zéro malus pour règles annoncées.",
+          "sources": [
+            "https://fundedfuturesnetwork.com/faq"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Le site donne une adresse à New York et l'offre FFN, mais n'identifie pas assez complètement le nom légal, le numéro de formation et la partie du Trader Agreement actuel; C1=4 pour identification partielle, non C1=10.",
+          "sources": [
+            "https://fundedfuturesnetwork.com/",
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "La marque existe dans les offres mais un extrait à jour du registre de la société vendeuse n'a pas été rapproché; le texte Termly accessible sans annexe ne suffit pas à prouver good standing. C2=3.",
+          "sources": [
+            "https://fundedfuturesnetwork.com/",
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas de sanction officielle grave nominative vérifiée sur le bon fournisseur dans ce contrôle limité, les recherches de registres des États et autorités n'étant pas exhaustives. C3=2, sans traiter la simulation comme un broker.",
+          "sources": [
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92",
+            "https://fundedfuturesnetwork.com/faq"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Catalogue de produits et frais d'activation, objectifs et seuils de drawdown, règles news, copy et overnight, pays et produits disponibles sont publiés par gammes. Quatre éléments D1 documentés.",
+          "sources": [
+            "https://fundedfuturesnetwork.com/faq",
+            "https://fundedfuturesnetwork.com/accounts"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les conditions de service liées via Termly sont accessibles, mais l'ancienne et la nouvelle politique Live, version applicable et modification d'une cohorte ne sont pas entièrement établies. D2=2 pour accès public seulement.",
+          "sources": [
+            "https://app.termly.io/policy-viewer/policy.html?policyUUID=fb76d3c3-5faa-4e01-99e0-ba7b7033df92"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le parcours distingue Evaluation, Exhibition, Sim Funded et Live avec buffers et cap, mais contrat Live, nature des revenus et checkout ne sont pas complètement vérifiés, D3=2.",
+          "sources": [
+            "https://blog.fundedfuturesnetwork.com/faq",
+            "https://fundedfuturesnetwork.com/faq"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Le site déclare une activité FFN depuis 2022, des témoignages datés 2024 et offres de comptes toujours en 2026; au moins 36 mois d'activité plausiblement documentée sur service prop firm : E1=6.",
+          "sources": [
+            "https://fundedfuturesnetwork.com/",
+            "https://blog.fundedfuturesnetwork.com/faq"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Support, help desk, FAQ et réponses ponctuelles documentent canaux joignables et aide par produit; procédure de recours indépendante et satisfaction des plaintes non contrôlées : E2=3.",
+          "sources": [
+            "https://fundedfuturesnetwork.com/faq",
+            "https://fundedfuturesnetwork.com/"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
