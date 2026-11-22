@@ -10,8 +10,8 @@ const allowed=['A1','A2','A3','B1','B2','C1','C2','C3','D1','D2','D3','E1','E2']
 assert.equal(all.rows.length,41,'All source-backed V5 files must be preserved');
 assert.equal(gate.version,'5.2');
 assert.equal(gate.approvals.length,oldGate.approvals.length,'No silent approval of unreviewed firms');
-const expectedNative={'funded7':56,'top-one-futures':67,'wegetfunded':52,'purdia-capital':62,'daytraders-com':52,'equity-edge':53,'alpine-funded':59,'funded-squad':41,'orion-funded':60,'wsfunded':59,'moneta-funded':59,'tradexprop':51,'funder-trading':52,'fundyourfx':58,'monevis':54,'fundedhive':49,'sabiotrade':42,'clarity-traders':48};
-assert.equal(intake.audits.length,18,'Eighteen native V5.2 source-backed proposals expected');
+const expectedNative={'funded7':56,'top-one-futures':67,'wegetfunded':52,'purdia-capital':62,'daytraders-com':52,'equity-edge':53,'alpine-funded':59,'funded-squad':41,'orion-funded':60,'wsfunded':59,'moneta-funded':59,'tradexprop':51,'funder-trading':52,'fundyourfx':58,'monevis':54,'fundedhive':49,'sabiotrade':42,'clarity-traders':48,'tradersedgefx':55,'lvlup-futures':57,'atmos-funded':52,'tx3-funding':60,'fundedelite':51,'upcomers':56,'funding-your-trades':52,'funded-trader-markets':58,'funded-futures-network':61,'directfundedtrader':47};
+assert.equal(intake.audits.length,28,'Twenty-eight native V5.2 source-backed proposals expected');
 assert.deepEqual(new Set(intake.audits.map(x=>x.slug)),new Set(Object.keys(expectedNative)));
 for(const audit of intake.audits){
   assert.equal(audit.status,'proposition',audit.slug+' accidentally approved');
