@@ -16,7 +16,7 @@ import batch7Published from '../data/scoring-v4-batch-7-published.json';
 import batch8Published from '../data/scoring-v4-batch-8-published.json';
 import batch9Published from '../data/scoring-v4-batch-9-published.json';
 import type { PropFirm } from './propFirms';
-import { computeV4Scorecard, V4_BLOCKS, type V4Scorecard, type V4Criterion, type V4Assessment } from './scoringV4';
+import { computeV4Scorecard, V4_BLOCKS, V4_CRITERIA, type V4Scorecard, type V4Criterion, type V4Assessment } from './scoringV4';
 
 type CompactReview = {
   slug: string;
@@ -123,7 +123,12 @@ export function isPublishedV4(slug: string, latestScoreReview?: string): boolean
   return approved.has(slug) && (!latestScoreReview || latestScoreReview <= '2026-11-20');
 }
 
-export type PublishedV4Score = ReturnType<typeof computeV4Scorecard> & { checkedOn: string };
+/** The V4 B1/B4 shortfall is ALREADY part of the 100-point editorial score.
+ * It is not a second rules deduction, and not a per-clause B2 audit. */
+export type PublishedV4Score = ReturnType<typeof computeV4Scorecard> & {
+  checkedOn: string;
+  embeddedRuleImpact: { rewardProtectionLoss: number; tradingRulesLoss: number };
+};
 
 /** Compute a published V4 card independently of the historical score pipeline. */
 export function getPublishedV4Score(firm: PropFirm, latestScoreReview?: string): PublishedV4Score | undefined {
@@ -134,5 +139,12 @@ export function getPublishedV4Score(firm: PropFirm, latestScoreReview?: string):
   const card: V4Scorecard = 'criteria' in row
     ? { ...row, status: 'approuvee', trustpilotActiveNotice: Boolean(firm.reviewSignals.trustpilotRatingWithheld), closed: false } as V4Scorecard
     : compactCard(firm, row, checkedOn);
-  return { ...computeV4Scorecard(card), checkedOn };
+  return {
+    ...computeV4Scorecard(card),
+    checkedOn,
+    embeddedRuleImpact: {
+      rewardProtectionLoss: V4_CRITERIA.B1 - card.criteria.B1.points,
+      tradingRulesLoss: V4_CRITERIA.B4 - card.criteria.B4.points,
+    },
+  };
 }
