@@ -4342,8 +4342,8 @@
           ]
         },
         "C1": {
-          "points": 7,
-          "reason": "Website Terms désignent DNA Funded Ltd constituée à Sainte-Lucie, tandis que les CGU d'administration citent les prestataires de technologies tiers. C1=7 : opérateur identifié mais immatriculation officielle et payeur exact à rapprocher du checkout.",
+          "points": 4,
+          "reason": "Les CGU et les Website Terms attribuent le service à DNA Funded Ltd à Sainte-Lucie, mais le numéro d'immatriculation, la correspondance avec le vendeur du checkout et l'obligation juridique de payer les rewards ne sont pas recoupés auprès d'un registre indépendant. C1=4 : nom d'opérateur déclaré, non une identité complète vérifiée.",
           "sources": [
             "https://dnafunded.com/wp-content/uploads/2025/11/20251030-DNA-Funded-Ltd-Website-Terms-and-Conditions.pdf",
             "https://dnafunded.com/wp-content/uploads/2025/11/DNA-Funded-Ltd-General-Terms-and-Conditions.pdf"
@@ -4737,8 +4737,8 @@
           ]
         },
         "C1": {
-          "points": 7,
-          "reason": "Les General Terms nomment Radias PTT FZ-LLC, aux Émirats, et TradeSim Pty Ltd prestataire de technologie non partie au contrat; C1=7 car vendeur nommé, mais agent exact de paiement/structure actuelle non recoupés.",
+          "points": 4,
+          "reason": "Les General Terms identifient Radias PTT FZ-LLC comme vendeur et TradeSim Pty Ltd comme prestataire technique, mais aucun numéro de registre primaire ni document indépendant confirmant le débiteur des rewards au checkout n'a été obtenu. C1=4 pour une identité déclarative, en cohérence avec les autres audits à preuve juridique limitée.",
           "sources": [
             "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
           ]
