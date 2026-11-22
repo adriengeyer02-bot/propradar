@@ -93,6 +93,13 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
     : null;
   const rulesAudited = view.ruleAmountAudited || v4IncludedImpact !== null;
   const ruleAmount = ruleAmountDisplay(v4IncludedImpact, rulesAudited, rules.delta);
+  // The visible equation must reach the public score exactly, including
+  // Trustpilot and any actual cap impacts. Never show an invented deduction.
+  const effectiveRuleDelta = rules.delta;
+  const adjustmentLoss = adjustments.reduce((sum, item) => sum + Math.max(0, item.delta), 0);
+  const scoreReconciles = Math.max(0, editorial.value - effectiveRuleDelta - adjustmentLoss) === view.score;
+  const showEquation = rulesAudited && scoreReconciles &&
+    (effectiveRuleDelta > 0 || adjustmentLoss > 0);
 
   return (
     <>
@@ -167,7 +174,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                       </div>
                     </div>
                   ) : null}
-                  {step.kind === 'editorial' && adjustments.length ? (
+                  {step.kind === 'rules' && adjustments.length ? (
                     <div className="psb-adjustments">
                       {adjustments.map((adjustment) => (
                         <div key={adjustment.kind}>
@@ -232,7 +239,20 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                   ) : null}
                 </li>
               ))}
-              <li className="psb-step psb-step-final prg-hud-reveal" style={delay(steps.length + 2)}>
+              {showEquation ? (
+                <li className="psb-equation prg-hud-reveal" aria-label={copy.final} style={delay(steps.length + 2)}>
+                  <strong>{editorial.value}</strong>
+                  {effectiveRuleDelta > 0 ? <><span aria-hidden="true">−</span><span>{effectiveRuleDelta}</span></> : null}
+                  {adjustments.filter((item) => item.delta > 0).map((item) => (
+                    <span className="psb-equation-deduction" key={item.kind}>
+                      <span aria-hidden="true">−</span><span>{item.delta}</span>
+                    </span>
+                  ))}
+                  <span aria-hidden="true">=</span>
+                  <b>{view.score}<small>/100</small></b>
+                </li>
+              ) : null}
+              <li className="psb-step psb-step-final prg-hud-reveal" style={delay(steps.length + 3)}>
                 <div className="psb-step-line">
                   <span className="psb-step-label">{copy.final}</span>
                   <span className={`psb-step-value psb-tone-${view.tone}`}>{view.score}/100</span>
