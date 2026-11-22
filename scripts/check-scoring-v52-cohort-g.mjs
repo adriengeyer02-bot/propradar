@@ -1,0 +1,42 @@
+/** V5.2 G cohort: research-only audit, never an automatic publication gate. */
+import assert from 'node:assert/strict';
+import file from '../app/data/scoring-v52-cohort-g-research-2026-11-22.json' with { type: 'json' };
+import queue from '../app/data/scoring-v52-priority-coverage-2026-11-22.json' with { type: 'json' };
+import live from '../app/data/scoring-v52-published.json' with { type: 'json' };
+import { computeV52Scorecard } from '../app/lib/scoringV52.ts';
+assert.equal(file.version,'5.2');
+assert.equal(file.cohort,'G');
+assert.equal(file.checkedOn,'2026-11-22');
+assert.equal(file.status,'research_proposals_not_approved_no_live_scores');
+assert.equal(file.audits.length,1);
+assert.equal(file.statusReviews.length,14);
+const aud=file.audits[0];
+assert.equal(aud.slug,'exfunded');
+assert.equal(aud.status,'proposition');
+assert.equal(aud.confidence,'faible');
+assert.equal(aud.previousDisplayedScore,39);
+assert.equal(Object.keys(aud.criteria).length,13);
+assert.equal(aud.criteria.B2.points,10);
+assert.equal(aud.ruleDeductions.length,0,'No unsourced B2 points');
+assert.equal(aud.trustpilotActiveNotice,false,'No Trustpilot warning without official verified notice');
+assert.equal(aud.contractingEntityMissing,false,'Entity named but registry not verified: C1=4 rather than C1=0');
+const score=computeV52Scorecard(aud);
+assert.deepEqual(score.blocks,{A:11,B:13,C:9,D:10,E:1});
+assert.equal(score.editorialGross,44);
+assert.equal(score.afterRules,44);
+assert.equal(score.adjusted,44);
+assert.equal(score.payoutEvidenceCap,64);
+assert.equal(score.final,44);
+const pending=new Set(queue.rows.filter(x=>x.state==='missing_full_13_criterion_audit').map(x=>x.slug));
+const unique=new Set([aud.slug,...file.statusReviews.map(x=>x.slug)]);
+assert.equal(unique.size,15,'No duplicates');
+assert.ok([...unique].every(slug=>pending.has(slug)),'Cohort must come from unmet priority rows');
+assert.equal(live.approvals.length,58);
+assert.ok(!live.approvals.some(x=>unique.has(x.slug)),'No cohort G item may be published by this data');
+for(const row of file.statusReviews){
+  assert.equal(row.v52Final,null,row.slug+' unsupported numerical score');
+  assert.equal(row.publicationAllowed,false,row.slug+' unapproved status');
+  assert.ok(row.note.length>=90&&row.sources.length&&row.next.length,row.slug+' unsubstantiated review');
+  assert.ok(row.sources.every(url=>url.startsWith('https://')),row.slug+' invalid source');
+}
+console.log('V5.2 cohort G valid: 1 full ExFunded research draft 44/100 (not live); 14 status reviews with no fictional scores; 15/25 historically missing priorities examined.');
