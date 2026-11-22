@@ -129,11 +129,11 @@ for(const [slug,update] of Object.entries(allUpdates)){
 // Regression: do not reintroduce '75 − 8 = 75' via a UI-only edit.
 const page=source('app/[locale]/firm/[slug]/page.tsx');
 const modal=source('app/components/ui/ScoreBreakdownDialog.tsx');
-assert.match(page,/const displayedBase = breakdown\\.editorial \\+ v4IncludedLoss;/);
-assert.match(page,/value: breakdown\\.editorial,\\s*delta: v4IncludedLoss/);
-assert.match(modal,/const scoreReconciles =/);
-assert.match(modal,/editorial\\.value - effectiveRuleDelta - adjustmentLoss/);
-assert.match(modal,/showEquation \\?/);
+assert.ok(page.includes('const displayedBase = breakdown.editorial + v4IncludedLoss;'),'Missing V4 reconstructed baseline');
+assert.ok(page.includes('value: breakdown.editorial,') && page.includes('delta: v4IncludedLoss'),'Missing V4 rules subtraction');
+assert.ok(modal.includes('const scoreReconciles ='),'Missing arithmetic consistency check');
+assert.ok(modal.includes('editorial.value - effectiveRuleDelta - adjustmentLoss'),'Missing exact score equation');
+assert.ok(modal.includes('{showEquation ? ('),'Missing equation display');
 const catalog=[...new Set([...source('app/lib/propFirms.ts').matchAll(/\bslug:\s*['"]([a-z0-9-]+)['"]/g)].map(m=>m[1]))];
 assert.ok(catalog.length>=150,'Unexpectedly small base catalog; recheck data source');
 console.log(JSON.stringify({catalogEntries:catalog.length,updates:Object.keys(allUpdates).length,ruleRecords:withRecords,classifiedRules:classified,unclassifiedRules:notClassified,v4Audited:v4Slugs.length,v52Native:checkedNative,v52Migrated:checkedMigrated,v52WithB2Deductions:withDeductions,locales:locales.length,passed:true},null,2));
