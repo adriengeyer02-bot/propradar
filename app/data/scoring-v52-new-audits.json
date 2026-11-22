@@ -1770,6 +1770,631 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "fundyourfx",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "FAQ Instant Funding Pro et aide au retrait exposent périodes et démarches de demande, partage de profits, conditions d'éligibilité et limites disponibles. +2 calendrier, +2 split/montant indiqué, +2 éligibilité, +2 procédure; l'ensemble des caps et frais selon chaque rail n'est pas réconcilié.",
+          "sources": [
+            "https://fundyourfx.com/fr/faqs/trading-rules-guide/instant-funding-pro-complete-faq",
+            "https://helpdesk.fundyourfx.com/en/article/how-do-i-request-my-profit-share-payout-z78mq0/",
+            "https://fundyourfx.com/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le profil d'avis et les témoignages ne permettent pas de qualifier indépendamment deux refus injustifiés avec dates, ni un historique continu d'un an multi-bénéficiaires. A2=6 au palier neutre, ce qui n'atteste pas que la firme paie correctement.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundyourfx.com",
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Des récompenses et témoignages sont publiés par l'entreprise mais ne s'accompagnent pas de vérification tierce de la chaîne émetteur, règlement compensé, programme et bénéficiaire. Niveau positif auto-déclaré A3=1 seulement.",
+          "sources": [
+            "https://fundyourfx.com/",
+            "https://www.trustpilot.com/review/fundyourfx.com"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "Conditions contractuelles : le texte sur les récompenses et le payout indique explicitement leur caractère discrétionnaire et non garanti, laissant la décision finale à l'opérateur sans protection opposable de gains acquis. B1=0 en l'attente du funded agreement qui pourrait atténuer cette lecture.",
+          "sources": [
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "La documentation de règles de programmes fournit des objectifs, limites de perte, éligibilité et types de trading interdits; aucune contradiction matérielle actuelle ou clause vague de stratégie justifiant un malus autonome B2 n'a été établie avec un effet distinct du refus de reward déjà évalué en B1. B2=10 provisoire.",
+          "sources": [
+            "https://fundyourfx.com/fr/faqs/trading-rules-guide/instant-funding-pro-complete-faq",
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les CGU désignent FYFX Capital Limited comme société exploitante à Hong Kong mais le numéro de registre officiel et la concordance du dernier checkout et du prestataire de paiement ne sont pas vérifiés. Nom juridique déclaré sans rattachement tiers complet, C1=4.",
+          "sources": [
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le site et les pages de service existent, mais un extrait récent du Companies Registry Hong Kong pour FYFX Capital Limited, et la correspondance avec le vendeur actuel, n'ont pas été obtenus. C2=3 faute de contrôle du statut et sans conclusion de radiation.",
+          "sources": [
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction administrative grave précise visant exactement FYFX Capital Limited et ce service simulé n'est corroborée dans le corpus, et les vérifications de toutes juridictions et opérateurs sont incomplètes. C3=2 provisoire ; ne pas déduire l'absence de licence broker comme faute.",
+          "sources": [
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Pages programmes et FAQ affichent des tarifs, objectifs, tailles et drawdowns (+2 prix, +2 étapes), règles par phase et conséquences (+2), restrictions de localisation/KYC (+2). Les choix à la dernière étape d'achat ne sont pas tous vérifiés mais les quatre familles d'information sont affichées.",
+          "sources": [
+            "https://fundyourfx.com/",
+            "https://fundyourfx.com/fr/faqs/trading-rules-guide/instant-funding-pro-complete-faq"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les CGU actuelles sont librement consultables et le protocole de modifications prévoit un préavis de sept jours, mais les dates exactes des anciennes cohortes ne sont pas recoupées. D2=4 pour accès et modalité identifiables, sans garantie pleine du maintien des droits.",
+          "sources": [
+            "https://fundyourfx.com/terms-conditions"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Les offres de comptes et FAQ précisent la nature de la simulation et le parcours vers les rewards; cependant le contrat général réserve une décision discrétionnaire sur le payout, limitant la concordance entre promotion et droit contractuel. Accord limité sur deux éléments D3 sur trois.",
+          "sources": [
+            "https://fundyourfx.com/terms-conditions",
+            "https://fundyourfx.com/fr/faqs/trading-rules-guide/instant-funding-pro-complete-faq"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Des références publiques et archives d'offres remontent à 2021–2022 et le service possède des éléments d'activité depuis plus de 36 mois. E1=6 pour l'ancienneté du service, sans transférer ce constat à la preuve des payouts.",
+          "sources": [
+            "https://fundyourfx.com/",
+            "https://www.trustpilot.com/review/fundyourfx.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Le site propose une aide accessible et un centre de support opérationnel, avec guides de demande et échanges mentionnés sur plateformes d'avis; aucune procédure tierce de recours ni taux de litiges résolus vérifié n'est établi. E2=2.",
+          "sources": [
+            "https://helpdesk.fundyourfx.com/en/article/how-do-i-request-my-profit-share-payout-z78mq0/",
+            "https://www.trustpilot.com/review/fundyourfx.com"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "monevis",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Page payout officielle décrit cycles, split, retrait et parcours de demande (+2 calendrier, +2 conditions, +2 procédure). Les minima, frais et plafonds de toutes les tailles/challenges et du successeur de marque ne sont pas suffisamment réconciliés pour deux autres postes : A1=6.",
+          "sources": [
+            "https://monevis.com/payouts",
+            "https://monevis.com/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les déclarations commerciales et avis sur l'ancien domaine ne prouvent ni 12 mois de paiements réguliers indépendants, ni au moins deux refus injustifiés corroborés. Le changement de nom de marque rend la comparaison de périodes encore moins certaine : A2 neutre 6.",
+          "sources": [
+            "https://www.trustpilot.com/review/monevis.com",
+            "https://monevis.com/payouts"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le site affirme des payouts et présente des certificats/avis, mais aucune chaîne complète de règlement final indépendante et attribuée au même programme et à Monevis s.r.o. n'est attestée. A3=1, aucune promotion de score liée à l'usage de Rise.",
+          "sources": [
+            "https://monevis.com/payouts",
+            "https://www.trustpilot.com/review/monevis.com"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Le contrat de la prop firm et ses programmes prévoient des pouvoirs de suspension et d'exclusion du compte mais n'apportent pas ici une preuve suffisante de confiscation discrétionnaire de récompenses déjà acquises; la convention funded actuelle manque. B1=6 provisoire, confiance faible.",
+          "sources": [
+            "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "CGU §5.4.3 évoquent taille de position substantiellement plus importante et risques anormaux sans seuil général mesurable; la qualification d'un trading prohibé peut avoir un effet sur le compte. Une seule ambiguïté indépendante de B1 est déduite en B2, soit 7/10.",
+          "sources": [
+            "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf"
+          ],
+          "negativeFactIds": [
+            "monevis-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les documents identifient Monevis s.r.o. en Slovaquie avec identification 55215921 et dossier 167310/B; le rattachement juridique du domaine désormais lié à Zentro Funding et le dernier vendeur du checkout n'ont pas été indépendamment contrôlés. C1=7, identité partielle.",
+          "sources": [
+            "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf",
+            "https://www.trustpilot.com/review/monevis.com"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le numéro slovaque et le contrat historique permettent la recherche d'entité, mais aucun extrait officiel actuel vérifiant son statut et celui du nouveau vendeur éventuel n'a été rapproché dans ce contrôle. C2=3, sans affirmer fermeture ou dissolution.",
+          "sources": [
+            "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf",
+            "https://www.trustpilot.com/review/monevis.com"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune mesure officielle grave, nominative et actuelle contre le bon opérateur contractuel n'est confirmée dans les sources recueillies, mais la recherche exhaustive en Slovaquie et sur la nouvelle marque n'est pas achevée. C3=2 provisoire.",
+          "sources": [
+            "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf",
+            "https://monevis.com/"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Pages de programmes disponibles présentent les familles de prix, les objectifs et les drawdowns (+2+2) ainsi que le vocabulaire des règles de trading (+2). Pays autorisés, KYC et tous effets de la transition de marque ne sont pas validés pour le dernier point.",
+          "sources": [
+            "https://monevis.com/",
+            "https://monevis.com/faq"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Le contrat PDF est accessible et ses articles peuvent être consultés, mais la date de version opérationnelle exacte au checkout et une garantie de traitement des comptes antérieurs à la nouvelle marque ne sont pas établies. D2=2 pour accès seulement.",
+          "sources": [
+            "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les pages de payout documentent des demandes de retrait, mais la bascule visible sur le profil Trustpilot de Monevis vers Zentro Funding et l'absence d'un accord du vendeur actuel ne permettent pas d'attribuer cohérence commerciale et contractuelle complète. D3 provisoire 2.",
+          "sources": [
+            "https://www.trustpilot.com/review/monevis.com",
+            "https://monevis.com/payouts"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces commerciales publiques et avis remontent à 2024, ce qui établit une présence sur au moins 18 mois en novembre 2026 mais pas de période de 36 mois indépendante sous ce même opérateur. E1=4, sans transférer l'historique du rebranding.",
+          "sources": [
+            "https://monevis.com/",
+            "https://www.trustpilot.com/review/monevis.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Contact et formulaire d'assistance restent présentés sur le site et sur des pages FAQ, mais les preuves d'une procédure d'appel officielle et de résolution favorable de réclamations ne sont pas réunies. E2=2.",
+          "sources": [
+            "https://monevis.com/faq",
+            "https://monevis.com/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "monevis-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Monevis · évaluations CFD et comptes funded simulés",
+          "phase": "Trading et contrôle de stratégie avant payout",
+          "clause": "CGU §5.4.3 : qualification de risques « substantially larger » et transactions non conformes aux comportements usuels du marché, sans barème objectif uniforme par produit.",
+          "consequence": "La firme peut requalifier une stratégie respectant les pertes maximales et supprimer profits ou accès en l'absence d'un critère quantifié.",
+          "source": "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "fundedhive",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 49,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "FAQ et modèles de compte exposent calendrier, éligibilité, rémunération et procédure de demande de payout, mais les frais et caps de chaque rail et taille ne sont pas réconciliés. Quatre groupes documentés : calendrier, split, conditions et demande, A1=8.",
+          "sources": [
+            "https://fundedhive.com/",
+            "https://fundedhive.com/faq"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les plaintes Trustpilot, même assorties d'une alerte sur l'intégrité de la plateforme, ne sont pas automatiquement deux refus de rémunération injustifiés. Aucune série complète de 12 mois de payouts indépendants n'est établie; A2=6 neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedhive.com",
+            "https://fundedhive.com/faq"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La page Transparency comporte des hash et achats de challenges (certains transactions d'environ 19 USD), qui ne prouvent pas des paiements versés aux traders. Aucun lien indépendant avec bénéficiaires et rewards effectivement compensés : A3=1 pour annonces de payouts seulement.",
+          "sources": [
+            "https://fundedhive.com/transparency",
+            "https://fundedhive.com/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les CGU permettent suspension ou fin d'account selon l'appréciation commerciale, mais la portée sur les gains acquis et la convention de rémunération des programmes restent imparfaitement identifiées; B1=6 provisoire faute de confiscation acquise établie dans la version consultée.",
+          "sources": [
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La qualification d'un trading non commercial, excessivement risqué ou abusif est laissée en partie au seul opérateur sans barème objectif complet applicable au programme, permettant sanction des trades. Une seule déduction de clause vague B2 −3.",
+          "sources": [
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ],
+          "negativeFactIds": [
+            "fundedhive-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "CGU identifient TradingHive Technologies Limited comme gestionnaire de la plateforme, mais l'immatriculation officielle, la partie vendant effectivement au checkout et l'entité redevable des rewards n'ont pas été réconciliées. C1=4, nom déclaré non entièrement certifié.",
+          "sources": [
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le PDF contractuel identifie un nom commercial et une entreprise, mais aucun extrait à jour du registre de sa juridiction ne confirme good standing et concordance de l'entité actuellement vendeuse. C2=3, sans alléguer radiation.",
+          "sources": [
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction officielle applicable au bon opérateur pour cette offre simulée n'est prouvée dans la recherche limitée; les registres des autorités et des juridictions pertinentes ne sont pas entièrement consultés. C3=2 provisoire.",
+          "sources": [
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "La plateforme détaille coût et modèles d'achat, étapes et drawdowns, règles par compte, restrictions de trading/KYC et exclusions de pays dans ses pages disponibles (+2 chacun). La présence de ces règles n'est pas une preuve de paiement.",
+          "sources": [
+            "https://fundedhive.com/",
+            "https://fundedhive.com/faq",
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU datées de janvier 2026 et publiquement accessibles. Les conditions d'amendement et leur application aux cohortes existantes ne constituent pas une garantie complète contre changement unilatéral : 4/6 pour accès et version.",
+          "sources": [
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les pages clients et transparence publient des transactions de challenge et du marketing de payout dans le même environnement, sans attribuer clairement la nature de chaque transaction au lecteur. Informations sur simulation existantes, mais cohérence du paiement réel et parcours checkout non entièrement confirmés : D3=2.",
+          "sources": [
+            "https://fundedhive.com/transparency",
+            "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Présence du service prop firm vérifiable depuis 2025 et contrat daté 2026; cela constitue au moins six à dix-sept mois plausibles, pas trois ans d'activité. E1=2, sans utiliser la date d'édition du domaine comme activité.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedhive.com",
+            "https://fundedhive.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ et support existent et des échanges d'assistance figurent dans des témoignages, mais l'accès à un recours opposable et un résultat documenté de réclamations ne sont pas démontrés. E2=2.",
+          "sources": [
+            "https://fundedhive.com/faq",
+            "https://www.trustpilot.com/review/fundedhive.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "fundedhive-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "FundedHive · challenges et comptes simulés",
+          "phase": "Trading et contrôle des violations avant retrait",
+          "clause": "Terms & Conditions §9.2 : interdit comportements commerciaux « uncommercial activity » et tailles/exposition excessives sans seuil limitatif complet, appréciation unilatérale de conformité.",
+          "consequence": "Une stratégie risquée mais conforme aux plafonds chiffrés pourrait être requalifiée après trading, avec suppression des profits.",
+          "source": "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "sabiotrade",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 43,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "Site Rewards et guides indiquent conditions, split de base et calendrier des demandes, procédure de retrait; les frais et caps exacts pour chaque plan, pays et taille au dernier checkout ne sont pas consolidés. A1=6 pour calendrier, éligibilité et demande.",
+          "sources": [
+            "https://sabiotrade.com/performance-rewards",
+            "https://sabiotrade.com/terms"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les avis Clients et difficultés de paiement alléguées ne constituent pas indépendamment deux dossiers prouvés de refus injustifiés; l'historique multi-bénéficiaires certifié sur 12 mois est aussi absent. A2=6 neutre, sans prétendre qu'il n'existe aucun incident.",
+          "sources": [
+            "https://www.trustpilot.com/review/sabiotrade.com",
+            "https://sabiotrade.com/performance-rewards"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les chiffres de récompenses et témoignages commerciaux ne donnent ni émetteur vérifié, ni règlement final lié aux programmes et plusieurs bénéficiaires authentifiables. A3=1 en attendant une chaîne indépendante, malgré la notoriété de la marque.",
+          "sources": [
+            "https://sabiotrade.com/performance-rewards",
+            "https://www.trustpilot.com/review/sabiotrade.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "La clause Profit Split Adjustment permet d'abaisser à 70 % la part de certaines demandes en attente si le trader est jugé non durable en gestion du risque, sans droits acquis précisément protégés; valeur B1=3, appréciation sur rewards distincte des interdictions de stratégie B2.",
+          "sources": [
+            "https://sabiotrade.com/terms"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Les textes de trading interdisent gambling et conduite non soutenable sans métrique universelle exhaustive; effet possible sur l'accès au funded. Une seule déduction B2 −3 pour incertitude sur les stratégies; la règle objective des 55 % de journée et les règles grandfathered ne sont pas déduites.",
+          "sources": [
+            "https://sabiotrade.com/trading-rules",
+            "https://sabiotrade.com/terms"
+          ],
+          "negativeFactIds": [
+            "sabiotrade-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Terms désignent CODEVIL IT ENGINEERING LIMITED, entreprise irlandaise n°680139, mais extrait courant du Companies Registration Office et partie contractante au checkout sur les pays vendus non recoupés. C1=4, identité partiellement déclarée.",
+          "sources": [
+            "https://sabiotrade.com/terms"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéro de société irlandais annoncé, mais extrait officiel actuel et correspondance des contrats avec la bonne entité non vérifiés; aucune conclusion de dissolution. C2=3 pour statut indéterminé.",
+          "sources": [
+            "https://sabiotrade.com/terms"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "L'affichage Trustpilot constitue une alerte sur les avis, pas une sanction financière officielle d'un régulateur ; aucune mesure grave applicable à CODEVIL sur ce service n'est prouvée ici. Vérifications des autorités incomplètes, C3=2.",
+          "sources": [
+            "https://sabiotrade.com/terms",
+            "https://www.trustpilot.com/review/sabiotrade.com"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Site publie prix/plans, cibles et drawdowns (+2+2), règles et sanctions trading (+2). Liste des juridictions interdites, KYC et frais appliqués à tous modèles demeurent partiels dans les pièces contrôlées : D1=6.",
+          "sources": [
+            "https://sabiotrade.com/",
+            "https://sabiotrade.com/trading-rules"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU consultables mais mention de versions applicables aux cohortes et date effective de tous les produits difficiles à établir; changement daté de février 2026 exclut explicitement les comptes existants, donc aucune pénalité B2 de rétroactivité inventée. D2=2.",
+          "sources": [
+            "https://sabiotrade.com/terms"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "La documentation des restrictions et le parcours funded donnent des bases, mais rémunération ajustable unilatéralement et définitions générales de trades durables créent un écart entre la promotion et la portée contractuelle, avec checkout non recontrôlé. D3=2.",
+          "sources": [
+            "https://sabiotrade.com/terms",
+            "https://sabiotrade.com/performance-rewards"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La marque est référencée depuis 2023/2024, ce qui atteste une activité d'au moins 18–35 mois, sans transférer une antériorité plus longue de l'entité IT irlandaise. E1=4.",
+          "sources": [
+            "https://sabiotrade.com/",
+            "https://www.trustpilot.com/review/sabiotrade.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ et support en ligne, présence de réponses publiques et canaux identifiables; pas de preuve d'une procédure de contestation neutre ni de résolutions indépendamment vérifiées. E2=2.",
+          "sources": [
+            "https://sabiotrade.com/",
+            "https://www.trustpilot.com/review/sabiotrade.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "sabiotrade-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "SabioTrade · évaluations CFD et programmes funded",
+          "phase": "Trading et revue des trades lors de la demande de reward",
+          "clause": "Conditions de trading : interdiction de « gambling », d'exécution « unsustainable » et d'absence de « sustainable risk management » sans métrique commune exhaustive selon tous les plans.",
+          "consequence": "Le trader peut voir une méthode autrement conforme aux limites chiffrées exclue sur appréciation qualitative.",
+          "source": "https://sabiotrade.com/trading-rules"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "clarity-traders",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 48,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "FAQ décrit les demandes et plusieurs règles de remboursement/récompenses (+2 fréquence, +2 éligibilité, +2 procédure). Les CGU contiennent toujours des zones à renseigner telles que « [State who pays network fees.] » et « [X] business days », empêchant de créditer split/frais et caps universels.",
+          "sources": [
+            "https://www.claritytraders.com/faq",
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Absence de dossier daté de refus de paiement injustifié multi-clients indépendant et d'historique 12 mois audité; l'alerte actuelle Trustpilot sur les avis est sanctionnée séparément et ne fait pas un incident A2. Palier neutre 6.",
+          "sources": [
+            "https://www.trustpilot.com/review/claritytraders.com",
+            "https://www.claritytraders.com/faq"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La firme présente des bénéfices et témoignages de clients, mais les récompenses effectivement compensées ne sont pas recoupées avec références bancaire/crypto, émetteur, bénéficiaires et programmes indépendants. Preuve promotionnelle A3=1 seulement.",
+          "sources": [
+            "https://www.claritytraders.com/",
+            "https://www.trustpilot.com/review/claritytraders.com"
+          ]
+        },
+        "B1": {
+          "points": 9,
+          "reason": "CGU §§8.7 et 9.4 préservent explicitement certaines récompenses approuvées mais non payées lors de terminaison et imposent une motivation de manquement, avec possibilité de répondre. Pas de protection supérieure faute de recours neutre; B1=9 provisoire, malgré les défauts de champs à compléter.",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le contrat interdit exploitation et contournement de l'esprit du programme sur qualification ouverte; les conséquences peuvent atteindre les trades et le compte. Une seule ambiguïté de stratégie, B2 −3, distincte de la protection des récompenses déjà approuvées évaluée en B1.",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions"
+          ],
+          "negativeFactIds": [
+            "clarity-traders-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "CGU identifient Clarity Traders LLC au Delaware, mais numéro de registre officiel et concordance avec le vendeur du checkout n'ont pas été recoupés indépendamment. C1=4, partie déclarée et vérification partielle.",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "La société américaine est nommée sans certificat récent de statut ni good standing du Delaware, et aucun registre n'a été vérifié dans cette revue. C2=3, aucune radiation présumée.",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas d'avertissement réglementaire grave et actuel liant nominativement cette LLC à ces challenges confirmé dans les pièces consultées. Contrôle des bases officielles non exhaustif : C3=2 provisoire.",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Produits et FAQ publient cibles et pertes maximales (+2), stratégies et sanctions par phase (+2), informations de prix (+2); conditions précises de pays exclus/KYC et checkout non rapprochées : D1=6.",
+          "sources": [
+            "https://www.claritytraders.com/faq",
+            "https://www.claritytraders.com/",
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU accessibles et datées du 3 novembre 2026 (+4). Des espaces réservés non remplis pour préavis, réseau et délais de revue ne permettent pas de créditer la protection contractuelle de changements aux anciens comptes (+0).",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les CGU comportent des champs de modèle non finalisés, notamment frais de réseau et délais de payout, empêchant de juger cohérentes toutes les pages d'offre/FAQ avec le contrat final ; nature simulée de la relation indiquée mais seulement un poste D3 crédité.",
+          "sources": [
+            "https://www.claritytraders.com/terms-and-conditions",
+            "https://www.claritytraders.com/faq"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "La présence publique du service et de ses premières offres est attestée sur une période récente approximative de 6–17 mois. Faute de sources confirmant 18 mois d'activité en novembre 2026, E1=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/claritytraders.com",
+            "https://www.claritytraders.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Des coordonnées support et des FAQ permettent de contacter et comprendre les demandes; des échanges ponctuels sont attestés, sans preuve d'un taux de résolution ni voie de recours indépendante opérationnelle. E2=2.",
+          "sources": [
+            "https://www.claritytraders.com/faq",
+            "https://www.trustpilot.com/review/claritytraders.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "clarity-traders-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Clarity Traders · challenges simulés et funded",
+          "phase": "Trading, revue de programme et décision sur compte",
+          "clause": "Terms 03/11/2026 §§7–8 : pratiques « exploit » et contournement de « the spirit » du programme avec appréciation de l'opérateur insuffisamment bornée par critères publics.",
+          "consequence": "Une stratégie respectant les objectifs chiffrés peut être qualifiée d'exploitation, entraînant exclusion ou suppression de transactions.",
+          "source": "https://www.claritytraders.com/terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
