@@ -234,18 +234,19 @@
     },
     {
       "slug": "ck-capital",
-      "classification": "NEW_BRAND_SITE_AVAILABLE_REGISTRATION_PENDING",
-      "note": "L'ancien domaine ckcapital.co.uk redirige vers ckpropfirm.com et le site 2026 affirme que CK Capital Group LTD opère les évaluations simulées. Les programmes sont renommés au 13/11/2026 et certains choix de pénalités de trading restent à rapprocher des CGU. Aucune preuve d'immatriculation officielle et continuité d'obligations anciennes n'a été collectée, ne pas transposer la note héritée de 14 ni créer un score V5.2 sans les 13 critères.",
+      "classification": "NEW_BRAND_UK_ENTITY_ACTIVE_PUBLIC_ADDRESS_STALE_CONTRACT_REVIEW",
+      "note": "Le domaine ckcapital.co.uk renvoie aujourd'hui vers ckpropfirm.com. Les CGU CK Propfirm nomment CK Capital Group LTD, et Companies House confirme l'entité ACTIVE n°15658914, société incorporée le 18/04/2024 (comptes 2025 et confirmation 2026 déposés). IMPORTANT : le site dit que le siège enregistré est au 6-7 Waterside Station Road, mais Companies House indique un transfert au 1 Allied Business Centre, Coldharbour Lane le 26/06/2025; les CGU datées du 14/10/2026 gardent donc une adresse de siège périmée. Leur droit d'arbitrage à Québec pour une société UK et leur pouvoir large de résilier nécessitent examen. Une personne juridique existe, mais l'entité exacte du checkout/funded et les payouts réels restent à réconcilier. Ne pas publier une correction du score historique 14 sans audit V5.2 complet.",
       "sources": [
         "https://ckcapital.co.uk/",
-        "https://ckpropfirm.com/en",
-        "https://ckpropfirm.com/en/risk-disclosure",
-        "https://ckpropfirm.com/en/faq/1-step-plus-challenge"
+        "https://ckpropfirm.com/en/terms-conditions",
+        "https://ckpropfirm.com/en/faq/payouts-profit-splits",
+        "https://find-and-update.company-information.service.gov.uk/company/15658914",
+        "https://find-and-update.company-information.service.gov.uk/company/15658914/filing-history"
       ],
       "next": [
-        "Chercher CK Capital Group LTD au registre Companies House avec numéro et filing actuel",
-        "Récupérer contrat acheteur et funded 2026 plus payout rail",
-        "Comparer 1 Step Plus/2 Step Plus/2 Step Flex et exclusions"
+        "Relever le contrat funded signé et le vendeur du checkout pour relier à CK Capital Group LTD",
+        "Demander correction de l'ancienne adresse enregistrée (site / registre), contrôler arbitration Quebec",
+        "Auditer les 13 sous-notes, A3 payouts indépendants et clause B2 d'interdictions subjectives"
       ],
       "checkedOn": "2026-11-22",
       "v52Final": null,
