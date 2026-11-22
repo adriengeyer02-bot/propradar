@@ -5,6 +5,7 @@ import cohort from '../app/data/scoring-v52-cohort-h-sensitive-reaudits-2026-11-
 import migrated from '../app/data/scoring-v52-all-existing-audits-2026-11-21.json' with {type:'json'};
 import published from '../app/data/scoring-v52-published.json' with {type:'json'};
 import {computeV52Scorecard} from '../app/lib/scoringV52.ts';
+import a3Watch from '../app/data/scoring-v52-cohort-h-published-a3-verification-queue-2026-11-22.json' with {type:'json'};
 
 const expected={'fxify':69,'blusky-trading':68,'lucid-trading':64,'apex-trader-funding':58,'take-profit-trader':64};
 const expectedA3={'fxify':2,'blusky-trading':2,'lucid-trading':1,'apex-trader-funding':1,'take-profit-trader':1};
@@ -41,4 +42,12 @@ for(const a of cohort.audits){
 }
 assert.equal(cohort.audits.find(x=>x.slug==='lucid-trading').criteria.B2.reason.includes('microscalping'),true);
 assert.ok(cohort.audits.find(x=>x.slug==='lucid-trading').criteria.B2.reason.includes('plus de 50%'),'Lucid precise threshold must not be treated as unsourced');
+assert.equal(a3Watch.population.publishedScores,published.approvals.length);
+assert.equal(a3Watch.population.strongA3,4);
+assert.deepEqual(new Set(a3Watch.entries.map(x=>x.slug)),new Set(['alpha-capital-group','alpha-futures','top-one-trader','top-one-futures']));
+for(const watch of a3Watch.entries){
+  assert.ok(watch.A3>=4 && watch.existingSources.length>0,'A3 source queue item invalid '+watch.slug);
+  const approval=published.approvals.find(x=>x.slug===watch.slug);
+  assert.equal(approval.expectedFinal,watch.publicScore,'No live score may be edited by queue');
+}
 console.log('Cohort H valid: 5 source-backed V5.2 research drafts, 2 payout-qualification downgrades; 58 public scores remain untouched.');
