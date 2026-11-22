@@ -3515,6 +3515,140 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "directfundedtrader",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 43,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "FAQ officielle : premier reward sur Evaluation et Fast Funding après quatre semaines de trading, puis cadence de 14 jours ; split 80% porté à 100% après plus de cinq rewards consécutives, minimum 100 USD, paiement USDT/RisePay et demande dashboard. +2 calendrier, +2 split et minimum, +2 conditions, +2 procédure ; plafond exhaustif des retraits et frais des canaux bancaires manquants : +0.",
+          "sources": [
+            "https://directfundedtrader.com/faq-rules",
+            "https://directfundedtrader.com/termsandservices"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les témoignages négatifs publics évoquent des refus de payouts et des suspensions, avec réponses contestées, mais ni les règles et journaux de trading ni les paiements exigibles ne sont vérifiés indépendamment pour identifier des refus injustifiés répétés au seuil V5.2. Pas non plus de série multi-clients traçable sur 12 mois; neutre 6, pas constat de fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/directfundedtrader.com",
+            "https://theindustryspread.com/direct-funded-trader-review-100-split-monthly-payouts/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "La FAQ annonce rémunération par USDT, RisePay et parfois Deel, et Trustpilot publie des témoignages contradictoires ; aucune série indépendante montrant émetteur DFT, programme funded, transaction finale et bénéficiaires authentifiés n'est fournie. A3=1 pour annonces et retours non authentifiés, sans valoriser le rail de paiement.",
+          "sources": [
+            "https://directfundedtrader.com/faq-rules",
+            "https://www.trustpilot.com/review/directfundedtrader.com",
+            "https://theindustryspread.com/direct-funded-trader-review-100-split-monthly-payouts/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les Terms §8 annoncent une convention individuelle signée après les évaluations ; la convention funded définissant les droits sur rewards déjà acquises n'est pas publiquement examinable ici. Les Terms prévoient résiliation du service et forum de résolution des litiges mais n'établissent pas expressément une confiscation arbitraire de gains déjà validés. En l'absence d'accord funded, B1 provisoire 6, confiance faible.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://directfundedtrader.com/faq-rules"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "CGU §6 terminent la liste des pratiques interdites par un comportement contraire à « how trading should be performed in the financial markets » ou causant dommage à DFT, sans seuil objectif. Une restriction de méthode vague à effet potentiel de terminaison vaut −3 ; la durée minimum de 60 s, news ±5 min et l'obligation de stop loss 30 s funded sont publiques et chiffrées, donc pas de malus additionnel.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://directfundedtrader.com/faq-rules"
+          ],
+          "negativeFactIds": [
+            "directfundedtrader-20261122-undefined-market-harm"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les Terms nomment DFT GROUP LLC et donnent une adresse à Dubaï, UAE, sans numéro de licence commerciale ni rattachement officiel de la LLC au registre et à l'agent payeur. Le vendeur est désigné textuellement, mais la concordance juridique du checkout et du futur funded agreement n'est pas certifiée : C1=4, non aucune entité identifiable.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://directfundedtrader.com/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Le nom DFT GROUP LLC et une adresse à Meydan Hotel sont publiés, mais l'immatriculation officielle et le statut courant de cette LLC ne sont pas confirmés par un extrait du registre des UAE. C2=3 état indéterminé, sans conclure à une dissolution ou un défaut légal.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://directfundedtrader.com/risk"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune sanction officielle grave et actuelle contre la bonne entité proposant des challenges simulés n'a été vérifiée dans la documentation consultée ; le contrôle nominatif des avertissements des juridictions pertinentes demeure incomplet. C3 provisoire 2, sans déduire un malus du seul défaut de licence de courtage non nécessaire.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://directfundedtrader.com/risk"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Les pages produit et FAQ détaillent objectifs de 8% et 5%, drawdown, différences Evaluation/Fast Funding, stratégies interdites et news, pays interdits et conditions d'accès/KYC. +2 cibles/drawdown, +2 restrictions, +2 pays/KYC. La tarification finale avec frais et variantes de toutes les options n'est pas vérifiée de bout en bout, +0 prix.",
+          "sources": [
+            "https://directfundedtrader.com/faq-rules",
+            "https://funded.directfundedtrader.com/TradingPlans",
+            "https://directfundedtrader.com/termsandservices"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les Terms sont librement accessibles, mais ne portent pas de version d'entrée en vigueur actuelle claire et l'article Changes to Terms permet une modification unilatérale par publication sans garantie pour les comptes déjà achetés. +2 accès, +0 date vérifiée, +0 application aux cohortes. Aucun changement rétroactif défavorable avéré ne justifie B2 −4.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le site et les Terms précisent le caractère simulé des comptes d'évaluation, mais la FAQ affirme qu'un compte financé est relié au live firm tandis que le pied de site annonce « all trading will occur on demo accounts only ». Le contrat individuel et les modalités complètes de la transition ne sont pas publics, empêchant de créditer cohérence commerciale et checkout ; D3=2 pour publication partielle du rôle du simulateur.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://directfundedtrader.com/faq-rules",
+            "https://directfundedtrader.com/risk"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Un avis daté de juillet 2024 indique une utilisation du service déjà durant six mois et des publications de 2023 attestent l'existence de la marque; au 22 novembre 2026, une activité depuis 2023 est plausible, mais le seuil strict de 36 mois sous le service actuellement vendu doit être corroboré par archives datées. E1=6 proposé en attente de vérification d'activité 2023, point prioritaire avant publication.",
+          "sources": [
+            "https://www.trustpilot.com/review/directfundedtrader.com",
+            "https://theindustryspread.com/direct-funded-trader-review-100-split-monthly-payouts/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Un email officiel de support figure dans les Terms et sur Trustpilot (+1), où l'entreprise a répondu publiquement à certains clients (+1 pour joignabilité ponctuelle). Pas de procédure contractuelle d'appel détaillée avec traitement indépendant ni d'échantillon vérifié de résolution favorable des requêtes ordinaires. E2=2.",
+          "sources": [
+            "https://directfundedtrader.com/termsandservices",
+            "https://www.trustpilot.com/review/directfundedtrader.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "directfundedtrader-20261122-undefined-market-harm",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "DirectFundedTrader · Evaluation deux phases et Fast Funding, contrats simulés",
+          "phase": "Contrôle de stratégies au challenge et en funded, avant demande de reward",
+          "clause": "Terms §6 : tout trading « in contradiction with how trading should be performed in the financial markets » ou « in a way which causes DFT GROUP harm » sans métrique de risque définie.",
+          "consequence": "Une stratégie respectant les objectifs chiffrés peut être requalifiée de conduite nuisible et entraîner clôture du compte sans critère universel prévisible.",
+          "source": "https://directfundedtrader.com/termsandservices"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
