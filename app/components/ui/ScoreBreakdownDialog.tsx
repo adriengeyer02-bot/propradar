@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
+import type { ScoreRuleCopy } from '../../lib/scoreRuleCopy';
 import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
 import type { V5RuleDeduction } from '../../lib/scoringV5';
 import type { V52Rule } from '../../lib/scoringV52Candidate';
@@ -28,9 +29,13 @@ export type ScoreBreakdownView = {
   };
   tone: string;
   steps: ScoreStep[];
+  ruleCopy: ScoreRuleCopy;
+  /** True only when the rules amount is an actually assessed score component. */
+  ruleAmountAudited: boolean;
+  ruleAmountApplied: boolean;
   signals: { label: string; value: string; tone: string }[];
   programs: { name: string; load: number }[];
-  heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
+  heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; source?: string; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
   /** V4 criteria B1/B4 shortfall is within the editorial score, never an extra deduction. */
   v4RuleImpact?: { rewardLoss: number; tradingLoss: number; rewardLabel: string; tradingLabel: string };
@@ -86,6 +91,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
   const v4IncludedImpact = view.v4RuleImpact
     ? view.v4RuleImpact.rewardLoss + view.v4RuleImpact.tradingLoss
     : null;
+  const rulesAudited = view.ruleAmountAudited || v4IncludedImpact !== null;
 
   return (
     <>
@@ -130,9 +136,10 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
                   <div className="psb-step-line">
                     <span className="psb-step-label">{step.label}</span>
-                    <span className={`psb-step-value${(step.delta > 0 || (step.kind === 'rules' && v4IncludedImpact !== null && v4IncludedImpact > 0)) ? ' psb-step-minus' : ''}`}>
+                    <span className={`psb-step-value${(step.delta > 0 || (step.kind === 'rules' && (v4IncludedImpact ?? 0) > 0)) ? ' psb-step-minus' : ''}${step.kind === 'rules' && !rulesAudited ? ' psb-step-pending' : ''}`}>
                       {step.kind === 'editorial' ? step.value
-                        : step.kind === 'rules' && v4IncludedImpact !== null ? `−${v4IncludedImpact}`
+                        : v4IncludedImpact !== null ? `−${v4IncludedImpact}`
+                        : !rulesAudited ? view.ruleCopy.pending
                         : step.delta > 0 ? `−${step.delta}` : '0'}
                     </span>
                   </div>
@@ -140,7 +147,13 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                     <span className="psb-bar-fill" style={{ width: `${step.value}%` }} />
                     {step.delta ? <span className="psb-bar-cut" style={{ left: `${step.value}%`, width: `${step.delta}%` }} /> : null}
                   </div>
-                  <p>{step.kind === 'rules' && step.delta > 0 && !view.v5Evidence ? copy.rulesSimple : step.detail}</p>
+                  <p>{step.kind === 'rules'
+                    ? v4IncludedImpact !== null ? view.ruleCopy.includedDetail
+                      : !rulesAudited ? view.ruleCopy.pendingDetail
+                      : step.delta > 0 && !view.v5Evidence ? copy.rulesSimple
+                      : step.detail
+                    : step.detail}</p>
+                  {step.kind === 'rules' && v4IncludedImpact !== null ? <small className="psb-rule-accounting-note">{view.ruleCopy.included}</small> : null}
                   {step.note ? <p className="psb-note">{step.note}</p> : null}
                   {step.kind === 'rules' && view.v4RuleImpact ? (
                     <div className="psb-v4-embedded-impact" aria-label={view.pillars?.copy.restriction}>
@@ -187,7 +200,20 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                       <p className="psb-v5-footnote">{view.v5Evidence.copy.rulesClarification}</p>
                     </div>
                   ) : null}
-                  {step.kind === 'rules' && !view.v5Evidence && (step.delta > 0 || Boolean(view.pillars)) && view.heaviest.length ? (
+                  {step.kind === 'rules' && view.v5Evidence ? (
+                    <div className="psb-v5-b1-impact">
+                      <div>
+                        <strong>{view.v5Evidence.copy.contract}</strong>
+                        <b>{view.v5Evidence.contractProtection.points}/15</b>
+                      </div>
+                      <p>{view.ruleCopy.noDoubleCount}</p>
+                      <a href={view.v5Evidence.contractProtection.source} target="_blank" rel="noopener noreferrer">{view.v5Evidence.copy.source} ↗</a>
+                    </div>
+                  ) : null}
+                  {step.kind === 'rules' && view.rulesNotes.length ? (
+                    <p className="psb-rule-accounting-note">{view.rulesNotes.join(' · ')}</p>
+                  ) : null}
+                  {step.kind === 'rules' && !view.v5Evidence && (step.delta > 0 || Boolean(view.pillars) || !rulesAudited) && view.heaviest.length ? (
                     <div className="psb-heaviest">
                       <span className="prg-hud-label">{copy.heaviest}</span>
                       <ul>
@@ -197,6 +223,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                             <span>
                               <strong>{rule.program === 'All programs' || rule.program === 'All programmes' ? copy.allPrograms : rule.program}</strong>
                               <em>{rule.text}</em>
+                              {rule.source?.startsWith('https://') ? <a className="psb-rule-source" href={rule.source} target="_blank" rel="noopener noreferrer">{view.ruleCopy.sourceLabel} ↗</a> : null}
                             </span>
                           </li>
                         ))}
