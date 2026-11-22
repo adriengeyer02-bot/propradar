@@ -700,6 +700,14 @@ export default async function FirmPage({ params }: Props) {
       };
     }) ?? [],
     rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
+    // V4: expose already-scored B1/B4 losses, without subtracting them from
+    // the headline score again. V5/V5.2 use their actual sourced B2 deductions.
+    v4RuleImpact: breakdown.v4 ? {
+      rewardLoss: breakdown.v4.embeddedRuleImpact.rewardProtectionLoss,
+      tradingLoss: breakdown.v4.embeddedRuleImpact.tradingRulesLoss,
+      rewardLabel: scoreV5EvidenceCopy(locale).contract,
+      tradingLabel: scoreCopy.rules,
+    } : undefined,
     v5Evidence: breakdown.v5 ? {
       deductions: breakdown.v5.ruleDeductions,
       contractProtection: breakdown.v5.contractProtection,
