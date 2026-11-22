@@ -431,6 +431,147 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "purdia-capital",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Le payout n'est pas dû pendant l'évaluation ou SFA : disponible seulement après passage en Temp SFA/LFA. Retraits ensuite demandables quotidiennement avec traitement manuel en jours ouvrés ; split standard 90/10, dollars, limites Temp SFA de 10 000 USD incluant retraits et capital transférable, buffer et rails ACH/Wise/SWIFT documentés. Les frais bancaires tiers exacts et toutes cohortes ne sont pas exhaustifs : 8/10.",
+          "sources": [
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+            "https://purdia.com/knowledgebase/general/payouts-global",
+            "https://purdia.com/knowledgebase/general/rules-and-risk-management/protected-buffer"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Plusieurs avis clients rapportent des paiements et d'autres une contestation ; une demande de paiement rejetée est contestée par la firme pour violation de règle. Aucune série de refus injustifiés corroborés ni d'historique de douze mois indépendamment rapproché des comptes bancaires n'est établie dans ce dossier : neutralité V5.2 à 6, pas de présomption de non-paiement.",
+          "sources": [
+            "https://www.trustpilot.com/review/purdia.com",
+            "https://pickmyfirm.com/firms/purdia-capital",
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les testimonials de la marque et les commentaires de traders font état de retraits, mais aucune attestation bancaire indépendante sur échantillon de bénéficiaires, ni livre de transactions blockchain attribué à l'entreprise n'a été identifié dans les sources disponibles. Purdia paie via ACH/Wise/SWIFT ; l'absence de traçage public n'est pas fraude mais A3 reste à 1 sur déclarations non authentifiées.",
+          "sources": [
+            "https://purdia.com/",
+            "https://www.trustpilot.com/review/purdia.com",
+            "https://purdia.com/knowledgebase/general/payouts-global"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les CGU autorisent clôture/suspension unilatérale pour conduite portant atteinte à la réputation, misconduct, exigences du courtier et autres motifs discrétionnaires, et précisent que des demandes de payouts non encore approuvées peuvent être annulées en cas de fermeture. Elles ne prouvent pas l'annulation de rewards déjà approuvés et en cours, explicitement exclus de cette faculté. Protection partielle 6 : risque sur demandes non approuvées sans preuve de confiscation générale.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le Risk Team peut déterminer qu'un trader est 'unacceptable risk' ou utilise un comportement de trading 'unsustainable' et retirer l'éligibilité de financement/payout sans seuil quantifié universel, source de pouvoir subjectif distinct des payouts déjà acquis traités en B1 : −3 sur cette catégorie de clause. Hedging entre instruments corrélés et automatisation non surveillée sont clairement interdits et ne coûtent rien en B2.",
+          "sources": [
+            "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview",
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/knowledgebase/general/policies-and-compliance"
+          ],
+          "negativeFactIds": [
+            "purdia-risk-team-undefined-unsustainable-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU en vigueur désignent expressément Purdia Capital LLC comme cocontractant et les canaux de paiement/assistance sont cohérents. Les statuts et dirigeants de l'entreprise ne sont pas rapprochés ici d'un extrait du registre de formation de la LLC ni d'un éventuel prestataire de courtage distinct ; identité déclarée mais pas entièrement certifiée, palier C1=7.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/privacy-policy",
+            "https://purdia.com/contact"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Purdia Capital LLC fonctionne publiquement et possède une politique contractuelle datée d'août 2026 ; le registre officiel, la juridiction et le certificat de good standing actuel de la LLC n'ont pas été produits dans ce contrôle. Une présence web ne donne pas le C2 maximal, donc valeur 3 pour situation officielle non confirmée.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/privacy-policy"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Les sources recensées ne montrent pas d'avertissement officiel nominatif vérifié visant cette entité à date, mais consultation exhaustive des alertes CFTC, NFA, FCA, registres étatiques non finalisée. La fourniture de comptes d'évaluation simulés n'exige pas automatiquement une licence broker : palier 2 en attente d'une recherche réglementaire complète.",
+          "sources": [
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms",
+            "https://purdia.com/terms-and-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Purdia publie tableaux de comptes, objectifs, minimum de journées, drawdown, limites de contrats et règles de trading par phase. Les pages de payouts distinguent clairement SFA non-payante, Temp SFA et LFA éligibles, bonus/buffers, et split 90/10. Les options produits sont documentées avec règles de clôture pour inactivité à partir du 1/10/2026.",
+          "sources": [
+            "https://purdia.com/rules",
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+            "https://purdia.com/knowledgebase/general/rules-and-risk-management/protected-buffer",
+            "https://purdia.com/knowledgebase/general/policies-and-compliance"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les CGU sont librement accessibles et portent une date du 13 août 2026, avec mention des changements par publication et acceptation continue. La firme ne garantit pas explicitement un préavis ni le maintien des conditions contractuelles acquises pour une cohorte ancienne ; 4 points pour publication et date, 0 pour protection opposable.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Le site et le centre d'aide concordent sur un parcours Evaluation → SFA → Temp SFA → Live, les critères de payout, le plafond de profits transfert et le traitement manuel. La documentation reconnaît toutefois que le courtier peut refuser une ouverture live et que Purdia reste discrétionnaire sur l'éligibilité ; sans convention live complète ni validation du checkout dernier prix, cohérence partielle 4.",
+          "sources": [
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+            "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview",
+            "https://purdia.com/rules",
+            "https://purdia.com/terms-and-conditions"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces publiques de l'entreprise et du fondateur en juillet 2024, renouvelées en 2025, puis offres documentées en 2026 : une ancienneté de l'ordre de 24 à 30 mois de la marque est plausible, sans preuve de 36 mois d'exploitation ni identité juridique anciennement immatriculée. Palier 18–35 mois (4) avec vérification à renforcer.",
+          "sources": [
+            "https://bestprops.com/what-is-purdia/",
+            "https://purdia.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Le contrat fournit support@purdia.com et le site affiche formulaire et base de connaissances active. Les pages Trustpilot contiennent des avis récents avec réactions à certains problèmes, mais pas de voie d'appel neutre ni de taux de résolution mesuré ; 2 pour accès au support et documentation, pas de présomption de qualité.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/contact",
+            "https://www.trustpilot.com/review/purdia.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "purdia-risk-team-undefined-unsustainable-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "phase": "Examen du comportement de trading et éligibilité avant payout",
+          "clause": "Funding Process Overview : le Risk Team peut retirer l'éligibilité pour 'unsustainable trading behavior', 'unacceptable risk' ou tout motif rendant la poursuite 'inappropriate' sans seuil commun publié.",
+          "consequence": "L'entreprise peut refuser la poursuite et l'accès aux retraits sur la base d'une appréciation non entièrement prévisible même si drawdown et jours sont respectés.",
+          "source": "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
