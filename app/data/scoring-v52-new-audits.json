@@ -1146,6 +1146,630 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "orion-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les CGU V3.01 indiquent cadence standard 14 jours, split 80 %, remboursement au 4e payout et contrôle préalable; FAQ détaille demande et buffer de 3 % Zero/Nova. +2 calendrier, +2 split, +2 conditions, +2 demande ; frais/caps tous programmes non rapprochés.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf",
+            "https://www.orionfunded.com/faq/payouts/payout-request"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Le tracker tiers publie des transactions attribuées à Orion en 2026, mais pas 12 mois continus recoupés sur la bonne entité et programme; les plaintes isolées n'établissent pas deux refus injustifiés. Palier neutre 6.",
+          "sources": [
+            "https://www.capitalcritic.com/prop-firm-payouts/orionfunded",
+            "https://www.capitalcritic.com/prop-firm-payouts/orionfunded"
+          ]
+        },
+        "A3": {
+          "points": 3,
+          "reason": "Des paiements on-chain datés et rapportés par un suivi tiers constituent des éléments positifs, mais l'attribution de tous les émetteurs, bénéficiaires et programmes n'est pas intégralement indépendante. A3=3 provisoire, sans revendiquer 12 mois contrôlés.",
+          "sources": [
+            "https://www.capitalcritic.com/prop-firm-payouts/orionfunded",
+            "https://www.orionfunded.com/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Les CGU §19.5 autorisent le blocage ou l'annulation de rewards lors d'une violation de confidentialité, en plus du contrôle des payouts. La clause §20.2 protège les critiques véridiques de bonne foi : aucune assimilation automatique d'avis négatif à une infraction; B1=3 provisoire.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "CGU §§9.3 et 10.1 définissent gambling et risque disproportionné sans critère numérique exhaustif et permettent requalification discrétionnaire : seul fait B2 −3. Les seuils de news spécifiques par programme ne sont pas déduits.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf"
+          ],
+          "negativeFactIds": [
+            "orion-funded-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "La version V3.01 nomme Orion Global FZCO à Dubai comme vendeur de l'évaluation tandis que le pied de site cite OGM International Ltd de Sainte-Lucie et une autre société signe le funded. Entité commerciale identifiable, chaînes contractuelles incomplètes : C1=7.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf",
+            "https://www.orionfunded.com/terms-and-conditions"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Adresse et nom de l'opérateur UAE fournis par CGU, mais extrait de registre UAE récent et good standing des intervenants Sainte-Lucie/funded non recoupés : statut juridique actuel non pleinement vérifié, C2=3 sans prétendre fermeture.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucun avertissement réglementaire grave nominatif vérifié dans le corpus consulté; contrôles complets UAE/Sainte-Lucie et partenaire funded non terminés. Ne pas pénaliser l'absence de licence broker sur comptes simulés : C3=2 provisoire.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf",
+            "https://www.trustpilot.com/review/orionfunded.com"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Page modèle et CGU exposent prix, objectifs, phases, drawdowns, news/EA/stratégies et territoires/KYC. Quatre catégories documentées (+8), sans présumer que chaque offre limitée partage ces paramètres.",
+          "sources": [
+            "https://www.orionfunded.com/",
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU V3.01 datées 16 septembre 2026 et modalités d'amendement consultables. Absence de protection claire des cohortes contre tous changements unilatéraux : accès et date +4, stabilité historique non garantie.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les CGU §7.10.1 accordent un premier retrait sans attente, la FAQ générale indique 14 jours avant toute demande; certaines offres Labs ont une règle propre, mais la portée standard reste incertaine. Le rôle funded tiers et pages multi-offres empêchent la cohérence complète : D3=2.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf",
+            "https://www.orionfunded.com/faq/payouts/payout-request"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Le profil Trustpilot revendique janvier 2024 et les offres sont actives en 2026 : près de 34 mois de présence vérifiable; allégation d'activité 2023 insuffisante pour palier 36 mois. E1=4.",
+          "sources": [
+            "https://www.trustpilot.com/review/orionfunded.com",
+            "https://www.orionfunded.com/"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Chat et support dédiés accessibles ainsi que procédure de réclamation écrite en CGU; résultats d'appels et résolution indépendante des disputes non mesurés. Trois composantes d'accès/procédure seulement, pas une garantie de réponse favorable.",
+          "sources": [
+            "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf",
+            "https://www.orionfunded.com/contact"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "orion-funded-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Orion Funded · Nova, Zero, Standard, Swing et Select",
+          "phase": "Simulation et revue avant admission au compte trader / paiement",
+          "clause": "GTC V3.01 §§9.3 et 10.1 : définitions discrétionnaires de gambling, opérations substantially larger et exposition disproportionate sans seuil ferme.",
+          "consequence": "Une stratégie respectant le drawdown peut être requalifiée de gambling et voir des trades annulés ou son accès résilié.",
+          "source": "https://storage.googleapis.com/orn-core-fe-media-prod/terms_doc/GTCs%20(V3.01)%20EN.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "wsfunded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 52,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "FAQ distingue Prime, Power, Flash et Instant : première demande 15 ou 30 jours, split souvent 80 %, au moins 4 jours rentables et seuils 4 %, demande dashboard; +2 calendrier, +2 split, +2 règles, +2 procédure; frais et plafonds exhaustifs de toute la gamme non rapprochés.",
+          "sources": [
+            "https://wsfunded.com/en/faq",
+            "https://wsfunded.com/en/terms-conditions"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Nombreux avis Trustpilot mais pas de données indépendantes sur une série de règlements 12 mois multi-bénéficiaires, ni au moins deux retards graves datés et corroborés. A2 neutre 6 sans présomption de fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/wsfunded.com",
+            "https://wsfunded.com/en/faq"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Site et FAQ annoncent paiements par Rise et partages de gains, sans registre de transactions finales vérifiables par tiers lié à WSFmarkets Ltd et aux programmes actuels. Témoignages et tableau interne seulement : A3=1.",
+          "sources": [
+            "https://wsfunded.com/en/faq",
+            "https://wsfunded.com/en/terms-conditions"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU §7.18 permettent refus de rémunération d'un funded utilisant des EA jugés inappropriés, et §§7.25–7.29 sanctions larges; pas de recours indépendant précisément documenté sur rewards acquis. Pouvoir de suppression sur compte simulé jugé B1=3 provisoire.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "CGU §7.26 prohibent des trades ressemblant à des paris significatifs sans plan clair ni méthode définie; ni seuil ni métrique uniforme, d'où −3 en B2. Le news window ±4 min, SL sous deux minutes et consistency chiffrées n'enlèvent aucun point.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions"
+          ],
+          "negativeFactIds": [
+            "wsfunded-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "CGU désignent WSFmarkets Ltd Sainte-Lucie n°2025-00117 et entités de service WSF Technology FZCO / RENATICA LTD Chypre. Vendeur et rôles techniques distingués mais checkout final et mandat payout non authentifiés : identité partielle C1=7.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Aucune vérification de certificat officiel de good standing de WSFmarkets Ltd en date du 22/11, malgré le numéro publié et l'activité visible. C2=3 statut non vérifiable plutôt qu'inventer une radiation.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Pas d'alerte officielle matérielle précise établie dans la recherche nominative limitée; contrôle de toutes juridictions de la chaîne WSF non exhaustif. Compte simulé non assimilé à courtage réglementé : C3=2.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Offres et FAQ donnent prix au checkout, cibles/drawdowns par modèle, nouvelles/news/EA et restrictions géographiques/KYC. D1=8 pour quatre éléments documentés, sans affirmer que les produits sont interchangeables.",
+          "sources": [
+            "https://wsfunded.com/en/faq",
+            "https://purchase.wsfunded.com/?account_balance=5k&challenge_type=Instant+Funded"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Conditions accessibles et versionnement des FAQ par programme vérifiable; changements d'applicabilité aux anciennes cohortes, garanties de préavis et conditions du contrat funded non sécurisés. D2=4 provisoire pour accès et références datables.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions",
+            "https://wsfunded.com/en/faq"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "FAQ et CGU différencient explicitement les parcours Instant, Power et Prime, les fenêtres news et les délais 15/30 jours; la nature simulée et les opérateurs sont indiqués. Checkout et éventuels frais/versions restent à rapprocher, donc D3=4.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions",
+            "https://wsfunded.com/en/faq"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Historique d'avis revendiqués à partir novembre 2023 et offres attestées en 2024–2026 : un historique proche ou supérieur à 36 mois peut être plausible mais preuve stricte 36 mois d'activité financée non jointe. Palier conservateur 4.",
+          "sources": [
+            "https://www.trustpilot.com/review/wsfunded.com",
+            "https://wsfunded.com/en/faq"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "CGU et FAQ publient service clients, aides et avis avec réponses; accès à assistance identifié, mais pas de chaîne indépendante de litiges résolus ni contrôle formel du processus d'appel. E2=2.",
+          "sources": [
+            "https://wsfunded.com/en/terms-conditions",
+            "https://www.trustpilot.com/review/wsfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "wsfunded-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Wall Street Funded · challenges Power/Prime/Flash/Instant",
+          "phase": "Trading en évaluation et funded, revue conformité",
+          "clause": "CGU §7.26 : « transactions resembling a significant bet without a clear plan or defined strategy », sans seuil objectif universel publié.",
+          "consequence": "Une stratégie qui respecte les pertes maximales peut être classée comme gambling sans seuil prévisible et entraîner l'annulation du funded.",
+          "source": "https://wsfunded.com/en/terms-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "moneta-funded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 52,
+      "criteria": {
+        "A1": {
+          "points": 10,
+          "reason": "CGU du 29/09/2026 et guide détaillent 14 jours, options Sprint/Instant Pro, split, frais de virement international d'au moins 20 unités, minimum et conditions, méthodes Rise/crypto/bank, plafonds par offre et demande. Cinq critères A1 couverts (+10), sans juger favorable la sévérité.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+            "https://www.monetafunded.com/educational/payouts-the-14-day-cycle-rise-usdt-usdc-and-payout-to-moneta-markets/",
+            "https://www.monetafunded.com/compare-challenges/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Avis clients et déclarations de paiement existent, mais aucun historique multi-bénéficiaires indépendant d'au moins 12 mois recoupé sur Moneta Funded Ltd. Aucun incident A2 au seuil 4/2 n'est ici corroboré : neutre 6.",
+          "sources": [
+            "https://www.trustpilot.com/review/monetafunded.com",
+            "https://www.monetafunded.com/educational/payouts-the-14-day-cycle-rise-usdt-usdc-and-payout-to-moneta-markets/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les certificats du site et annonces de Moneta Markets/Moneta Funded sont auto-déclarés. Le transfert vers un compte broker et des mentions de Rise ne prouvent pas le règlement final à un client : A3=1.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+            "https://www.monetafunded.com/educational/payouts-the-14-day-cycle-rise-usdt-usdc-and-payout-to-moneta-markets/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU §6.9 permettent, sur seule appréciation de Prohibited Conduct, de retenir, réduire, annuler ou recalculer toute demande de payout; pas de protection forte des rewards acquis ni d'appel opposable établi. B1=3.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "CGU §5.2 et §6.9 donnent un pouvoir de qualification des pratiques abusives et de refus des gains sans grille exhaustive pour chaque stratégie; une ambiguïté de trading, B2 −3, distincte du pouvoir de confiscation traité en B1.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ],
+          "negativeFactIds": [
+            "moneta-funded-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "CGU identifient Moneta Funded Ltd Sainte-Lucie n°2025-00532 et distinguent Moneta Markets Ltd n°2023-00068 pour l'option broker. Évaluation et option broker séparées; vérification indépendante de l'opérateur au registre incomplet : C1=7.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéro et adresse Sainte-Lucie vérifiés comme déclarés dans la CGU, sans extrait public officiel récent de good standing de Moneta Funded Ltd. C2=3, ne pas transférer une licence du groupe broker à la prop firm.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucun avertissement spécifique contre Moneta Funded Ltd établi dans les pièces consultées; registres des autorités concernés et périmètre de Moneta Markets non entièrement contrôlés. C3=2 provisoire.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Tableaux de challenges et CGU donnent coûts/règles, objectifs et pertes, restrictions/news et conditions d'accès KYC ainsi que juridictions de service; D1=8 pour contenu publiquement consultable, sans score marketing.",
+          "sources": [
+            "https://www.monetafunded.com/compare-challenges/",
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU version septembre 2026 datées 29 septembre, modalités de changement documentées; absence de garantie explicite de maintien des conditions de retrait pour tous comptes anciens : D2=4.",
+          "sources": [
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "CGU et centre d'aide détaillent le 14e jour, la nature de la simulation et la différence entre cash et crédit broker non retirable; les prix et les nouvelles offres doivent encore être recoupés au checkout pour D3 maximal. D3=4.",
+          "sources": [
+            "https://www.monetafunded.com/educational/payouts-the-14-day-cycle-rise-usdt-usdc-and-payout-to-moneta-markets/",
+            "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+          ]
+        },
+        "E1": {
+          "points": 2,
+          "reason": "Historique de l'offre et compte Trustpilot revendiqué depuis septembre 2025, soit environ 14 mois vérifiables, au lieu de confondre l'âge de Moneta Markets. E1=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/monetafunded.com",
+            "https://www.monetafunded.com/compare-challenges/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "FAQ et support existent, et des avis récents confirment des échanges d'assistance, mais méthode d'appel et succès de résolution de dossiers sans paiement non indépendamment attestés. E2=2.",
+          "sources": [
+            "https://www.trustpilot.com/review/monetafunded.com",
+            "https://www.monetafunded.com/educational/payouts-the-14-day-cycle-rise-usdt-usdc-and-payout-to-moneta-markets/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "moneta-funded-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Moneta Funded · 1-Step/2-Step/Instant/Sprint",
+          "phase": "Trading, qualification de prohibited conduct lors du retrait",
+          "clause": "CGU septembre 2026 §5.2 : prohibited conduct incluant stratégie abusive ou irréaliste sous appréciation de l'opérateur sans seuil général; conséquences §6.9.",
+          "consequence": "Une approche non explicitement interdite par chiffres peut être déclarée abusive après coup et conduire à un payout recalculé.",
+          "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "tradexprop",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "reason": "FAQ forex et helpdesk décrivent les retraits mensuels après le premier et la consistency, ainsi que le split. +2 calendrier, +2 éligibilité, +2 procédure. Frais exacts, caps et split selon toutes les branches crypto/Instant X non réconciliés : A1=6.",
+          "sources": [
+            "https://tradexprop.com/forex-faq/",
+            "https://tradexprop.zohodesk.com/portal/en/kb/articles/when-can-i-withdraw-my-gains-from-my-funded-account-and-how-does-it-affect-my-maximum-drawdown-28-4-2025-2"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Quelques retraits datés attribués par des tiers mais échantillon insuffisant pour établir 12 mois de régularité indépendante ou incidents matériels au seuil sanction. A2=6 neutre, pas preuve que les paiements soient fiables.",
+          "sources": [
+            "https://wikilix.com/en/prop/tradexprop/is-tradexprop-legit",
+            "https://www.trustpilot.com/review/tradexprop.com"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "Rapports de payouts datés indépendants, parfois confirmés publiquement, mais règlement final, entité payeuse et bénéficiaire contrôlés seulement en partie. A3=2 intermédiaire, insuffisant pour une recommandation sur les gains.",
+          "sources": [
+            "https://wikilix.com/en/prop/tradexprop/is-tradexprop-legit",
+            "https://www.trustpilot.com/review/tradexprop.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Terms of Use autorisent la clôture de compte avec forfeiture des sommes dues par seule discrétion en cas de pratiques gambling; manque de recours protecteur pour rémunérations déjà acquises. B1=3.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le motif de trading « gambling », position « substantial portion » du capital ou levier « excessive », manque de seuil chiffré univoque dans la clause applicable : unique défaut B2 −3.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/"
+          ],
+          "negativeFactIds": [
+            "tradexprop-20261122-vague-trading"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "CGU actuelles ouvrent sur Prop Account LLC mais enchaînent plusieurs sociétés Prop Account, Forest Park FX LTD et Cayman sans désignation du vendeur par pays au checkout; identité légale déclarée mais chaîne incomplète : C1=4.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Des sources externes signalent des formalités de strike-off du groupe UK Prop Account Ltd en 2026; cela ne prouve pas la dissolution de l'opérateur actuel LLC ni son identité. Statut de la bonne partie contractante non confirmé C2=3; pas de cap 55 sans preuve.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/",
+            "https://wikilix.com/en/prop/tradexprop/is-tradexprop-legit"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucune décision officielle grave et actuelle liant précisément la vente présente et la bonne LLC n'est prouvée ici; recherche juridictions multiples encore partielle. C3=2, sans accusation réglementaire non corroborée.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/",
+            "https://www.trustpilot.com/review/tradexprop.com"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Page et FAQ exposent programmes Forex, Crypto et Instant X, objectifs, restrictions de news et copy trading avec consignes, mais frais/pays admis et conditions checkout ne sont pas tous réconciliés : D1=6.",
+          "sources": [
+            "https://tradexprop.com/",
+            "https://tradexprop.com/forex-faq/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les CGU sont publiques, mais version datée d'entrée en vigueur peu lisible et portée sur les anciens comptes non démontrée. D2=2 pour accès seulement; modification unilatérale n'est pas preuve d'une rétroactivité effectivement appliquée.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le même texte mélange « live trading » promis après évaluation et activité purement simulée, plus opérateurs multiples; les liens prix et conditions effectives ne suffisent pas à certifier cohérence documentaire. D3=2 au mieux.",
+          "sources": [
+            "https://tradexprop.com/terms-of-use/",
+            "https://tradexprop.com/"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Profil d'avis ouvert depuis mars 2023 et références aux programmes depuis 2023 ; plus de 36 mois de présence prop firm plausible et documentée. E1=6, sans en déduire une qualité de payout.",
+          "sources": [
+            "https://www.trustpilot.com/review/tradexprop.com",
+            "https://tradexprop.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Le helpdesk Zoho est accessible et les avis indiquent des réponses; les procédures indépendantes et un taux de résolution vérifié ne sont pas disponibles. E2=2.",
+          "sources": [
+            "https://tradexprop.com/forex-faq/",
+            "https://www.trustpilot.com/review/tradexprop.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "tradexprop-20261122-vague-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "TRADEXPROP · Forex/Crypto Evaluation et Instant Funded X",
+          "phase": "Examen des stratégies lors de la validation de phase et funded",
+          "clause": "Terms of Use 'Prohibition of Gambling Practices' : disproportionate risk, trading resembling gambling, all-in et excessive leverage sans limite de risque unique par programme dans la clause.",
+          "consequence": "L'entreprise peut exclure une stratégie pour excessive gambling et fermer le compte malgré le respect de l'objectif chiffré.",
+          "source": "https://tradexprop.com/terms-of-use/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "funder-trading",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 52,
+      "criteria": {
+        "A1": {
+          "points": 4,
+          "reason": "Centre d'aide 2026 explique évaluation actions/options 22 jours, 12 jours actifs et 80 trades, mais page Payouts ne fournit pas tous délais, plafonds, split et frais de chaque compte actuel; seulement conditions et procédure minimales documentées. A1=4, faiblesse de disclosure pas pénalité de difficulté.",
+          "sources": [
+            "https://fundertrading.zendesk.com/hc/en-us/articles/21017986458899-What-are-the-Challenge-Rules-and-Guidelines",
+            "https://fundertrading.com/payouts/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Profil Trustpilot limité et cas d'avis non vérifiés ne permettent ni valider 12 mois de paiements externes multi-clients ni conclure à des refus injustifiés récurrents. A2=6 neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundertrading.com",
+            "https://fundertrading.com/payouts/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Funder Trading publie sa page de demande Payout mais pas de piste de transactions finales indépendantes liée à ses comptes actions/options. Dossier positif constitué surtout d'annonces : A3=1.",
+          "sources": [
+            "https://fundertrading.com/payouts/",
+            "https://www.trustpilot.com/review/fundertrading.com"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les terms visibles relèvent des conditions générales du site, non d'un accord exhaustif donnant une protection des rewards déjà gagnés. B1=6 provisoire faute de contrat funded accessible, sans supposer une clause de confiscation inexistante.",
+          "sources": [
+            "https://fundertrading.com/terms-conditions/",
+            "https://fundertrading.com/payouts/"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Règles publiques donnent objectifs 22 jours, 12 jours min, 80 round trips, drawdown 3 000 USD et 500 USD de perte max par jour, ainsi que taille max 1 000 shares. Aucune clause de trading matériellement vague à sanction prouvée dans ces pièces : B2=10 provisoire.",
+          "sources": [
+            "https://fundertrading.zendesk.com/hc/en-us/articles/21017986458899-What-are-the-Challenge-Rules-and-Guidelines"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "Les conditions désignent Funder Trading LLC mais sans numéro d'entreprise, juridiction de constitution définitivement recoupée ni contrat funded au checkout; entité juridique déclarée sans rattachement vérifié : C1=4.",
+          "sources": [
+            "https://fundertrading.com/terms-conditions/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Site et support fonctionnels, mais registre officiel actuel de Funder Trading LLC non fourni dans la recherche et statut de son bon homonyme incertain. C2=3 sans présomption négative.",
+          "sources": [
+            "https://fundertrading.com/terms-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Aucun avertissement nominatif applicable et sanction grave confirmé dans ce contrôle; recherche complète auprès des autorités US et registre de la LLC reste à terminer. C3=2, aucune pénalité automatique pour absence de licence broker.",
+          "sources": [
+            "https://fundertrading.com/terms-conditions/",
+            "https://fundertrading.com/disclaimer/"
+          ]
+        },
+        "D1": {
+          "points": 4,
+          "reason": "Défis de stocks/options documentent objectifs et risque par phase (+2), règles d'actifs et positions (+2); grille de frais de toutes déclinaisons et exclusions pays/KYC pas établies pour attribution des autres points. D1=4.",
+          "sources": [
+            "https://fundertrading.zendesk.com/hc/en-us/articles/21017986458899-What-are-the-Challenge-Rules-and-Guidelines",
+            "https://fundertrading.com/payouts/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Conditions web générales accessibles mais ne constituent pas un accord funded complet et daté avec protection des règles d'une cohorte. D2=2 au titre de l'accès, sans valider toutes les versions.",
+          "sources": [
+            "https://fundertrading.com/terms-conditions/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le centre de formation et les guidelines d'évaluation expliquent le parcours de simulation, mais contrat de récompenses, prix final et transition live non rapprochés. D3=2 seulement.",
+          "sources": [
+            "https://fundertrading.zendesk.com/hc/en-us/articles/21017986458899-What-are-the-Challenge-Rules-and-Guidelines",
+            "https://fundertrading.com/terms-conditions/"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Page conditions copyright 2022, profil Trustpilot revendiqué août 2023 et guides actuels attestent une activité de plus de 36 mois; E1=6, sous réserve que le service de challenge était bien actif à cette date.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundertrading.com",
+            "https://fundertrading.com/terms-conditions/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Centre de support Zendesk avec formulaire et demandes clairement accessibles (+1), réponses ponctuelles sur plateformes d'avis (+1); pas d'appel contractuel ni résolution mesurée justifiant les derniers points.",
+          "sources": [
+            "https://fundertrading.zendesk.com/hc/en-us/articles/21017986458899-What-are-the-Challenge-Rules-and-Guidelines",
+            "https://www.trustpilot.com/review/fundertrading.com"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
