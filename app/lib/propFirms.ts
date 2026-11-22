@@ -12573,15 +12573,15 @@ const universePropFirms: PropFirm[] = [
     slug: 'infinity-forex-funds',
     name: 'Infinity Forex Funds',
     website: 'https://infinityforexfunds.com/',
-    status: 'À surveiller',
+    status: 'Fermée',
     score: 34,
     founded: 2023,
     priceFrom: 0,
     incidents: 4,
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Current domain checked. infinityforexfunds.com is now an informational forex toolkit / education site rather than a captured prop-firm checkout. Its Terms of Use say it is purely informational, does not provide financial services, does not sell products and does not solicit investments or funds from users.',
-    auditSourcesChecked: ['Current domain', 'Terms of Use', 'Privacy Policy link', 'Trustpilot search'],
+      'Archived 2026-11-22: no active challenge sales; current official Terms of Use explicitly say no products are sold. Current domain checked. infinityforexfunds.com is now an informational forex toolkit / education site rather than a captured prop-firm checkout. Its Terms of Use say it is purely informational, does not provide financial services, does not sell products and does not solicit investments or funds from users.',
+    auditSourcesChecked: ['Current domain checked 2026-11-22', 'Terms of Use checked 2026-11-22', 'Privacy Policy', 'CNMV republished AFM warning', 'Trustpilot search'],
     regulatoryAudit: {
       riskLevel: 'High',
       lastChecked: '2026-07-08',
