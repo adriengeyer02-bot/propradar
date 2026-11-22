@@ -988,6 +988,164 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "funded-squad",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Règles officielles des 1-Step et 2-Step détaillant cycle de deux semaines (certaines variantes on demand avec add-on), split de 80 % jusqu'à 100 % selon option, minimum 100 USD (12,50 USD Instant Rapid), frais crypto de 5–12 USD et Rise 30 USD, KYC et demande via dashboard. Calendrier +2, split/minimum/frais +2, conditions +2, procédure +2 ; caps de reward par taille et catégorie non réconciliés sur tous les programmes : +0.",
+          "sources": [
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://intercom.help/fundedsquad/en/articles/12304355-2-step-squad-evaluation-account-overview",
+            "https://intercom.help/fundedsquad/en/articles/12304328-1-step-evaluation-account-overview"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Plusieurs avis individuels récents contestent refus de paiements et examens de règles, mais les relevés de trade, contrats, versements dus et réponses de la firme ne sont pas authentifiés par un tiers indépendant. Impossible d'affirmer ≥2 refus injustifiés au seuil V5.2 ou 12 mois de payout régulier indépendant : neutre A2=6, sans disculpation ni accusation.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedsquad.com",
+            "https://www.fxroll.com/prop-firms/fundedsquad",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Rise et crypto sont annoncés comme rails de payout, et le site publie des témoignages; aucune preuve bancaire ou blockchain de règlement final ne lie de manière indépendante firme/produit/bénéficiaire sur échantillon public. Le comparateur FXROLL indique ne disposer d'aucun payout authentifié sur cette marque. A3=1 pour pièces auto-déclarées; aucun avantage dû à la technologie Rise.",
+          "sources": [
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://www.fxroll.com/prop-firms/fundedsquad",
+            "https://www.trustpilot.com/review/fundedsquad.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU §8.1 ne garantissent aucune rémunération future, §4.4/§4.5 confèrent des pouvoirs étendus sur les comptes, et la revue Risk Team peut aboutir à refus intégral de retrait; aucun contrat funded complémentaire protégeant de façon opposable les récompenses acquises n'a été recoupé. B1=3 provisoire pour absence de critères protecteurs suffisants, indépendamment des seules interdictions de trading de B2.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://intercom.help/fundedsquad/en/articles/12303438-prohibited-trading-strategies"
+          ]
+        },
+        "B2": {
+          "points": 4,
+          "reason": "Deux risques DISTINCTS : (a) CGU §4.4 'jeopardizing broker relationships', stratégies utilisées 'inappropriately', réglementations non quantifiées → clause de trading à interprétation ouverte, −3 ; (b) guide Challenge Account Trading Rules : une position ouverte avant la fenêtre news et close en profit pendant la fenêtre voit son PROFIT retiré, mais ses PERTES restent, asymétrie matériellement explicite, −3. Les règles de durée minimum 60 s après le 21/10/2026 et de marge 70 % chiffrées ne coûtent aucun point. B2=4.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+            "https://intercom.help/fundedsquad/en/articles/12303438-prohibited-trading-strategies"
+          ],
+          "negativeFactIds": [
+            "fundedsquad-unbounded-broker-harm-prohibited-trading",
+            "fundedsquad-news-profit-removed-loss-kept"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "CGU présentent DEVIONICS TECHNOLOGY – FZCO comme opérateur. Risk Disclosure présente une société affiliée FundedSquad Ltd, Saint Lucia n°2026-00549, et un rôle éventuel dans les règlements ; aucun extrait UAE officiel pour Devionics ni dernier vendeur au checkout ni certificat Saint Lucia n'a été authentifié. Nom juridique existe, rattachement juridique et débiteur des payouts incomplets : C1=4 sans accusation de société fictive.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Aucun extrait officiel de licence courante / good standing des deux sociétés n'a pu être obtenu lors de cette vérification; société UAE déclarée, société affiliée à Sainte-Lucie déclarée et site actif ne suffisent pas à prouver 'active et à jour'. C2=3 statut officiel indéterminé et aucune radiation présumée.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Les sources disponibles ne démontrent pas une sanction actuelle nominative de Devionics Technology FZCO/FundedSquad Ltd, mais vérifications réglementaires exhaustives UAE et Sainte-Lucie non terminées. Offre de simulation non confondue avec broker nécessitant un agrément; C3=2 provisoire.",
+          "sources": [
+            "https://u.ae/en/information-and-services/business/important-digital-services/inquire-about-licences-names-and-activities",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://fundedsquad.com/terms-of-service"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Fiches par compte et phase donnent cibles, drawdowns, règles de durée, positions et news avec sanctions (+2 objectifs, +2 contraintes); le payout guide et les pages légales publient KYC et restrictions de pays (+2). Les prix/remises/add-ons exacts à la dernière étape d'achat pour toute gamme ne sont pas recoupés (+0).",
+          "sources": [
+            "https://intercom.help/fundedsquad/en/articles/12304355-2-step-squad-evaluation-account-overview",
+            "https://intercom.help/fundedsquad/en/articles/12304328-1-step-evaluation-account-overview",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://fundedsquad.com/risk-disclosure"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Les Terms of Service sont librement disponibles (+2) et permettent modification unilatérale à tout moment (§1.3); la page consultée ne fournit pas de date d'entrée en vigueur identifiable pour toutes les cohortes (+0) ni garantie d'application prospective aux comptes achetés (+0). Le changement du minimum de durée daté 21/10/2026 n'est pas pénalisé rétroactivement car les conditions anciennes sont explicitement maintenues.",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Les pages modèles et payouts détaillent les différences de cycles, l'ancienneté de la règle 120 s et le nouveau régime 60 s (+2 cohérence documentaire). Toutefois le contrat emploie 'live account' tandis que le Risk Disclosure précise que les comptes sont simulés, et l'identité du merchant/payout provider entre UAE et Sainte-Lucie demeure imparfaite; dernier checkout et rôles exacts non vérifiés (+0+0).",
+          "sources": [
+            "https://fundedsquad.com/terms-of-service",
+            "https://fundedsquad.com/risk-disclosure",
+            "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces indépendantes depuis janvier 2024 sur la marque/domaine et profil d'entreprise LinkedIn fondé 2024, plus offres et avis documentés en 2025–2026. Activité prop firm pendant au moins 18 mois plausible et corroborée, mais aucun historique opérationnel certain de 36 mois : E1=4.",
+          "sources": [
+            "https://www.linkedin.com/company/funded-squad",
+            "https://www.fxroll.com/prop-firms/fundedsquad",
+            "https://www.trustpilot.com/review/fundedsquad.com"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support@fundedsquad.com et centre d'aide/chat identifiés (+1); les avis décrivent des échanges réels avec support et Risk Team, mais qualité contestée (+1 uniquement joignabilité). Aucun processus indépendant d'appel assorti de délai opposable, ni échantillon extérieur de litiges résolus ne justifie les deux points restants.",
+          "sources": [
+            "https://www.trustpilot.com/review/fundedsquad.com",
+            "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+            "https://fundedsquad.com/faqs"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "fundedsquad-unbounded-broker-harm-prohibited-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "FundedSquad · évaluations 1-Step, 2-Step et modèles Instant (CGU générales)",
+          "phase": "Trading et revue de stratégie avant entrée funded/payout",
+          "clause": "Terms of Service §4.4 : pratiques pouvant 'jeopardize' la relation broker, systèmes tiers 'inappropriately' et réglementation broker sans seuil matériel exhaustif.",
+          "consequence": "L'opérateur peut qualifier après coup une stratégie de pratique interdite et annuler l'accès malgré des objectifs et drawdowns respectés.",
+          "source": "https://fundedsquad.com/terms-of-service"
+        },
+        {
+          "factId": "fundedsquad-news-profit-removed-loss-kept",
+          "kind": "asymetrie",
+          "points": 3,
+          "program": "FundedSquad · Evaluation Funded (news trading, pas phase Evaluation)",
+          "phase": "Fermeture d'un trade déjà ouvert avant la fenêtre news mais clôturé pendant l'annonce",
+          "clause": "Challenge Account Trading Rules, scénario « Evaluation Funded » : un trade ouvert avant la fenêtre puis clôturé dans cette fenêtre voit le profit retiré lors du contrôle ; les pertes restent à la charge du trader.",
+          "consequence": "Le même type d'exécution ne préserve pas le gain profitable, tout en conservant la perte réalisée, indépendamment de l'absence d'infraction du compte.",
+          "source": "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
