@@ -1,0 +1,704 @@
+{
+  "version": "5.2",
+  "batch": "H",
+  "checkedOn": "2026-11-22",
+  "status": "draft_not_approved_no_live_change",
+  "sourceSnapshot": "app/data/scoring-v52-all-existing-audits-2026-11-21.json",
+  "methodology": "SCORING_V5_2.md",
+  "audits": [
+    {
+      "slug": "fxify",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 67,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Délais premier payout selon programmes (sur demande, 7, 10 ou 14 jours) et traitement indicatif trois jours (+2) ; jours qualifiants 2-Phase Pro et comptes concernés (+2) ; caps 2-Phase Pro et conséquences d'un retrait intégral exposés (+2) ; bouton dashboard et contrôle Rise décrits (+2). Le couple frais de transfert et minimum garanti pour chaque variante n'est pas consolidé (+0).",
+          "sources": [
+            "https://fxify.com/blog/prop-firm-payout-process/",
+            "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/",
+            "https://fxify.com/agreement/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les transferts Rise attribués à FXIFY sont datés sur blockchain, mais la méthodologie reconnaît que des paiements de prestataires/affiliés peuvent être inclus. Sans identification indépendante de rewards attribuables aux bénéficiaires traders et programmes précis, cela ne démontre pas 12 à 24 mois de versements traders réguliers au sens A2=9/10; neutralité 6. Aucune série de refus injustifiés corroborés n'a été vérifiée.",
+          "sources": [
+            "https://payoutjunction.com/firms/fxify",
+            "https://payoutjunction.com/methodology"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "Transactions datées vérifiées sur Arbitrum depuis des adresses attribuées à FXIFY via Rise; cela constitue une preuve externe réelle, contrairement aux captures promotionnelles. Mais la catégorisation bénéficiaire trader vs affilié/vendor, le programme/phase funded et l'identité du débiteur ne sont pas rapprochés par un tiers indépendant. En outre, PayoutJunction et PropTested recensent des volumes très divergents. A3=2 avant rapprochement des six maillons requis.",
+          "sources": [
+            "https://payoutjunction.com/firms/fxify",
+            "https://payoutjunction.com/methodology",
+            "https://proptested.com/firms/fxify/payouts"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "L'Agreement mars 2025 décrit un split 75/25, option 90/10 et obligation de paiement au bénéfice du trader. Toutefois les CGU générales novembre 2024 présentent la convention de trader financé comme relevant d'une société tierce, tandis que l'Agreement appelle FXIFY Solutions Limited Prop Company. Sans convention individuelle actuelle concordante, palier provisoire 8, ni présomption de protection maximale ni confiscation avérée.",
+          "sources": [
+            "https://fxify.com/agreement/",
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/terms-of-use/"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Fenêtres de paiement, conditions de cohérence, drawdown et effets du retrait intégral sont documentés par programme. La contradiction de rôle juridique entre GTC et Agreement est affectée à D3, pas traitée comme seconde sanction de trading ; aucun fait distinct répondant au barème de retenue B2 n'a été validé.",
+          "sources": [
+            "https://fxify.com/blog/prop-firm-payout-process/",
+            "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-whats-the-min-days-in-order-to-request-a-payout/",
+            "https://fxify.com/agreement/"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "FXIFY SOLUTIONS LIMITED #14451720 existe dans Companies House et apparaît nommément dans l'Agreement comme Prop Company, mais les anciennes CGU l'appellent fournisseur des évaluations et agent de paiement extérieur au contrat trader. Identification enregistrée, rôle exact de la contrepartie funded partiellement contradictoire : 7 et non 10.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/14451720",
+            "https://fxify.com/agreement/",
+            "https://fxify.com/terms-and-conditions"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Companies House identifie FXIFY SOLUTIONS LIMITED n°14451720 ACTIVE, comptes clos octobre 2025 déposés le 31/07/2026, et confirmation statement du 30/10/2026 déposé le 11/11/2026. Le statut administratif de l'entité identifiée est à jour, mais n'établit pas qu'elle est nécessairement le débiteur des rewards du programme actuel.",
+          "sources": [
+            "https://find-and-update.company-information.service.gov.uk/company/14451720",
+            "https://find-and-update.company-information.service.gov.uk/company/14451720/filing-history"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche d'avertissements officiels au nom et domaine exact de l'opérateur sans correspondance réglementaire attribuable établie. Le service d'évaluation simulée ne devient pas courtier agréé par sa seule immatriculation britannique, et l'absence de licence broker n'est pas elle-même une alerte.",
+          "sources": [
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms",
+            "https://fxify.com/terms-and-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Offres, frais d'évaluation et add-ons décrits publiquement (+2), étapes/targets/pertes par challenge (+2), restrictions et plafonds particuliers dans la FAQ actuelle (+2), majorité/KYC/pays restreints dans les CGU (+2). Il ne s'agit pas d'une vérification de concordance du checkout final.",
+          "sources": [
+            "https://fxify.com/how-it-works/",
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/blog/prop-firm-payout-process/"
+          ]
+        },
+        "D2": {
+          "points": 6,
+          "reason": "Six points reportés de l'ancien dossier sous réserve expresse : une GTC FXIFY 2026 est désormais citée, tandis que le lien officiel d'origine /terms-and-conditions n'est pas intégralement exploitable au contrôle. L'accès à la version contractuelle effectivement acceptée et la protection contre modification des comptes existants doivent être vérifiés AVANT approbation; aucune confirmation nouvelle des +2 sur historique de changements n'est apportée.",
+          "sources": [
+            "https://fxify.com/agreement/",
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/wp-content/uploads/2026/10/GENERAL-TERMS-AND-CONDITIONS-FXIFY-2026.pdf"
+          ]
+        },
+        "D3": {
+          "points": 0,
+          "reason": "Aucun checkout final vérifié (+0). L'Agreement 2025 présente FXIFY Solutions comme Prop Company alors que les CGU 2024 la déclarent étrangère à la convention funded, et les Terms of Use évoquent un payment agent (+0). Bien que la simulation soit expliquée, l'entité responsable des récompenses n'est pas clairement réconciliée entre documents (+0).",
+          "sources": [
+            "https://fxify.com/agreement/",
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/terms-of-use/"
+          ],
+          "negativeFactIds": [
+            "fxify-funded-counterparty-mismatch-2024-vs-2025"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "La marque FXIFY opère et reçoit des avis publics depuis 2023 ; les premiers paiements indépendants suivis en février 2024 sont cohérents avec une activité antérieure de plus de trente-six mois au 20 novembre 2026, sans utiliser la date d'incorporation comme unique preuve.",
+          "sources": [
+            "https://www.trustpilot.com/review/fxify.com",
+            "https://payoutjunction.com/firms/fxify"
+          ]
+        },
+        "E2": {
+          "points": 3,
+          "reason": "Support formalisé et contact courriel (+1), canaux et suivi client observables (+1), procédure de plainte avec accusé/réponse écrite dans trente jours et droit de résiliation du contrat d'évaluation (+1) ; aucun exemple indépendant de résolution satisfaisante d'un litige non-payout n'a été reproduit (+0).",
+          "sources": [
+            "https://fxify.com/support/",
+            "https://fxify.com/terms-and-conditions"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false,
+      "publicationApproved": false,
+      "priorMigratedV52": 79,
+      "auditScope": "A2/A3/B1/B2 focused current-source reconciliation; all other V5.2 points still inherited from 2026-11-21 source-backed migrated audit and REQUIRE fresh primary verification",
+      "auditChange": "A2 10→6, A3 5→2; plafond A3=69, D2=6 ancien corpus à recontrôler. Rien de ceci n'est encore une note publique.",
+      "openChecks": [
+        "Authentifier via Rise et un tiers la ventilation trader vs fournisseur/affilié, et la phase funded.",
+        "Récupérer la version GTC 2026 effectivement acceptée et relier FXIFY Solutions Limited au funded debtor.",
+        "Résoudre les divergences de montants de trackers et documenter 12 mois de rewards traders par programme."
+      ]
+    },
+    {
+      "slug": "blusky-trading",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Les demandes sont traitées chaque jour pour les Sim Funded éligibles (+2), les règles de jours/buffer et d'éligibilité par gamme sont publiées (+2), les plafonds par semaine et le plafond de transition cumulée en Live sont précisés (+2), le bouton dashboard et les rails Rise/Gusto avec délais sont expliqués (+2). Les programmes Direct to Funded 50 %→80 %, Instant 80 % et Sim standard 90 % ont des splits connus, mais le triplet seuil net et frais pour tous rails/formules n'est pas exhaustif (+0).",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12292284-sim-funded-payouts",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les relevés Rise 2024–2026 vérifient des paiements de l'opérateur. Toutefois les trackers reconnaissent que la même comptabilité inclut fournisseurs et affiliés sans filtre public pour isoler la régularité de rewards des traders. Les conditions A2 9/10 d'un historique de payouts propre aux programmes ne sont pas remplies par ce total ; revenir au neutre 6 sans inventer d'incident négatif.",
+          "sources": [
+            "https://damnpropfirms.com/futures-prop-firms/blusky/payouts/",
+            "https://damnpropfirms.com/payouts/methodology/",
+            "https://propfirmwise.com/payouts/blusky-trading"
+          ]
+        },
+        "A3": {
+          "points": 2,
+          "reason": "L'indépendance des événements on-chain Rise est réelle : ledger Arbitrum traçable avec hashes et périodes documentées. Néanmoins certains Rise IDs correspondent à des vendors/affiliés et ni leur qualité de trader ni le programme/phase ni le versement final au bénéficiaire ne sont directement vérifiables; A3=2 en attendant un rapprochement tiers confidentiel des rewards par programme.",
+          "sources": [
+            "https://damnpropfirms.com/futures-prop-firms/blusky/payouts/",
+            "https://damnpropfirms.com/payouts/methodology/",
+            "https://help.blusky.pro/en/articles/12434429-payouts"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "Help Center BluSky Risk Team Review, consulté le 22/11/2026 : revue possible à tout moment, payout gelé jusqu'à 7 jours de trading, décision finale, possibilité de modifier le split ou de fermer le compte; si refus de qualification Live par broker, perte de l'intégralité des gains SIM. Pouvoir large de sanction/acquisition de récompense : B1=3, sans reporter le même fait dans B2.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12109372-blusky-risk-team-reviews",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ],
+          "negativeFactIds": [
+            "blusky-risk-team-reviews-split-or-sim-forfeiture"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Les seuils de profit quotidiens/hebdomadaires, règles de drawdown, 21 % de consistency Instant, limites de contrats, revue Live, et interdiction de trader pendant une revue sont publiés selon phase. Les décisions sur la rémunération ou l'invitation Live sont imputées à B1, pas une seconde fois à B2. Aucun texte actuel confirmé ne démontre une contradiction sur le MÊME programme ni rétroactivité défavorable effective.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU et la procédure fiscale nomment BLUSKY TRADING COMPANY LLC, opérateur de Floride ; registre Sunbiz sous L22000305297 concordant. Merchant of Record Odeonpay ALE S.R.L en Roumanie est un encaisseur technique et non contractant de simulation. Le checkout individuel et la contrepartie de l'accord live broker n'ont pas été rapprochés : 7, pas 10.",
+          "sources": [
+            "https://blusky.pro/terms-and-conditions/",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&SearchNameOrder=BLUSKYTRADINGGROUP+L220000703680",
+            "https://help.blusky.pro/en/articles/12292284-sim-funded-payouts"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Florida Sunbiz confirme BLUSKY TRADING COMPANY LLC n°L22000305297 au statut ACTIVE, date de constitution 8 juillet 2022 et rapport annuel 2026 déposé. L'existence juridique ne prouve ni la qualité du contrat funded ni les preuves de payouts traders.",
+          "sources": [
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&SearchNameOrder=BLUSKYTRADINGGROUP+L220000703680",
+            "https://blusky.pro/terms-and-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Aucune alerte d'autorité actuelle précisément attribuable à la société de simulation BluSky Trading Company LLC identifiée après contrôle du nom et du domaine. Les exigences KYC/AML du clearing firm ne sont ni une sanction ni une certification des paiements simulés.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/12434004-list-of-countries-we-cannot-offer-services-to-can-i-trade-with-blusky",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Tarifs et phases d'évaluation, objectifs/drawdown, split, jours/consistency, restrictions et sanctions sont documentés par gamme ; conditions d'accès, identité, résidence et restrictions territoriales figurent dans le centre d'aide. Les Direct, Instant, Launch et Orbit possèdent des régimes différents et ne sont pas mélangés.",
+          "sources": [
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/12434004-list-of-countries-we-cannot-offer-services-to-can-i-trade-with-blusky"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU en accès public (+2), page modifiée le 1er juillet 2026 et révisions programmatiques du 1er octobre clairement datées (+2). La progression vers Live/Bonus Vault prévoit un maintien spécifique des anciens comptes, mais aucun régime de modification PROTECTEUR universel des rémunérations des clients existants n'est démontré dans le corpus (+0).",
+          "sources": [
+            "https://blusky.pro/terms-and-conditions/",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "FAQ récentes identifient simulation, Buffer, Sim Funded, Bonus Vault, invitation vers Live Brokerage et rôles de leurs partenaires (+2) ; les tableaux de split varient explicitement selon Direct, Instant et Sim standard sans contradiction entre mêmes produits confirmée (+2). Le dernier panier, les frais Rise et le contrat live externe n'ont pas été vérifiés (+0).",
+          "sources": [
+            "https://help.blusky.pro/en/articles/16300869-instant-funding-direct-to-funded-and-instant-sim-funded",
+            "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+            "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying-transitioning-and-trading-a-live-account",
+            "https://blusky.pro/terms-and-conditions/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La LLC est enregistrée depuis juillet 2022, mais l'exploitation de comptes Sim Funded rémunérés comme programme prop n'est démontrée par les règlements vérifiés qu'à partir de novembre 2024. C'est une activité de 18–35 mois, pas 36 mois sur la seule ancienneté de l'immatriculation.",
+          "sources": [
+            "https://propfirmwise.com/payouts/blusky-trading",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResults?Detail=FL.DOS.Corporations.Shared.Contracts.FilingRecord&InquiryDirectionType=PreviousRecord&InquiryType=EntityName&SearchNameOrder=BLUSKYTRADINGGROUP+L220000703680"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support officiel BluSky et Risk Team joignables par ticket/courriel (+1), réponses accessibles dans l'aide et retours clients sur canaux publics (+1), mais les décisions Risk Team sont annoncées comme finales, sans procédure de contestation contradictoire documentée ni cas non-payout résolu indépendamment (+0+0).",
+          "sources": [
+            "https://blusky.pro/contact-us/",
+            "https://help.blusky.pro/en/articles/12109372-blusky-risk-team-reviews",
+            "https://www.trustpilot.com/review/blusky.pro"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false,
+      "publicationApproved": false,
+      "priorMigratedV52": 75,
+      "auditScope": "A2/A3/B1/B2 focused current-source reconciliation; all other V5.2 points still inherited from 2026-11-21 source-backed migrated audit and REQUIRE fresh primary verification",
+      "auditChange": "A2 10→6, A3 5→2; ledger inclut aussi vendors/affiliates; payout A3 limité à 2 sans rapprochement des destinataires traders.",
+      "openChecks": [
+        "Échantillonner des transferts réels Rise de rewards traders avec justificatifs tiers préservant la vie privée.",
+        "Comparer les trois programmes Sim/Direct/Instant et les cas de Risk Team avec leur contrat accepté.",
+        "Vérifier des incidents récurrents de refus ou retards indépendamment corroborés."
+      ]
+    },
+    {
+      "slug": "lucid-trading",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "LucidFlex : délai on-demand annoncé et paiement sous 2 jours ouvrés (+2) ; split 90 % et minimum 500 USD mais frais de tous canaux non documentés (+0) ; cinq jours positifs minimum et profit net sur cycle (+2) ; retrait jusqu'à 50 % des profits dans caps par taille, maximum cinq payouts (+2) ; procédure en dashboard et validation du funded précisée (+2). Les règles LucidPro/Daily/Direct distinctes ne sont pas mélangées.",
+          "sources": [
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+            "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+            "https://lucidtrading.com/general-faq/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Les nombreux avis clients datés rapportent paiements et litiges, mais aucune série sur 12 mois de transactions attribuées indépendamment au débiteur de la société ne permet le palier 9/10 et les cas individuels négatifs ne suffisent pas à prouver deux refus injustifiés, après examen des versions et dates du contrat. Palier neutre.",
+          "sources": [
+            "https://www.trustpilot.com/review/lucidtrading.com",
+            "https://lucidtrading.com/general-faq/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Montants auto-annoncés, confirmations d'utilisateurs et avis Trustpilot vérifiés comme auteurs, mais pas de relevés de transfert indépendants et attribuables Lucid Trading Group LLC, vérifiables par bénéficiaire et période. Le terme Trustpilot « Verified » ne signifie pas vérification d'un virement.",
+          "sources": [
+            "https://www.trustpilot.com/review/lucidtrading.com",
+            "https://lucidtrading.com/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU 13/11/2026 : pouvoir large de supprimer trades, modifier solde, refuser payouts ou clôturer compte en cas de pratiques jugées prohibées. Une procédure de révision humaine existe sur certains signaux microscalping, mais pas de garanties générales limitées et opposables des rewards acquis au niveau du cadre. B1=3 selon V5.2; pas de nouveau malus B2 pour cette même conséquence.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://support.lucidtrading.com/en/articles/11404742-prohibited-microscalping"
+          ],
+          "negativeFactIds": [
+            "lucid-terms-2026-sole-discretion-withhold-90"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Une seule ambiguïté distincte justifie −3 : la clause-cadre Terms of Use §Prohibited Uses sanctionne les trades « not representative of responsible trading in live markets », interprétés à la seule discrétion de Lucid, avec risque de clôture de compte. CORRECTION : la FAQ spécifique microscalping quantifie l'alerte (plus de 50% des profits issus de trades de 5 secondes ou moins), prévoit vérification humaine, avertissement et appel. Ne PAS sanctionner cette restriction objective ni la répéter en B1.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://support.lucidtrading.com/en/articles/11404742-prohibited-microscalping",
+            "https://support.lucidtrading.com/en/articles/11404736-prohibited-high-frequency-trading"
+          ],
+          "negativeFactIds": [
+            "lucid-vague-responsible-trading-microscalping-74"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Lucid Trading Group LLC Delaware est citée dans les CGU comme contrepartie. La fiche officielle Florida Sunbiz pour son enregistrement étranger M26000016198 active confirme le même nom et l'État Delaware. Concordance facture du dernier achat et compte Live tiers non vérifiée, donc pas 10.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m26000016198-cba252eb-40ff-4e36-9949-8d4ae29cc6a6&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LUCIDTITLEGROUP+L230001998710&searchNameOrder=LUCIDTRADINGGROUP+M260000161980"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Florida Sunbiz enregistre Lucid Trading Group LLC au statut ACTIVE depuis le 12 octobre 2026 en tant que LLC étrangère du Delaware. Aucun rapport annuel Floride n'est encore exigible immédiatement après cette inscription ; absence de rapport ici n'est pas un retard. Statut d'enregistrement officiel courant vérifié.",
+          "sources": [
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=forl-m26000016198-cba252eb-40ff-4e36-9949-8d4ae29cc6a6&directionType=ForwardList&inquirytype=EntityName&listNameOrder=LUCIDTITLEGROUP+L230001998710&searchNameOrder=LUCIDTRADINGGROUP+M260000161980"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche ciblée d'avertissements réglementaires précis au nom Lucid Trading Group LLC dans le corpus officiel, aucun constat actuel matériel concernant la simulation n'a été identifié ; ne pas considérer une société de simulation comme broker enregistré par défaut.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/index.htm"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Pages produits et FAQ détaillent frais de challenge, tailles, pertes, caps, LucidFlex/Pro/Daily/Direct, KYC, restrictions générales et règles de trading par produit/phase. Les comptes live partenaires sont explicitement distingués des comptes de simulation.",
+          "sources": [
+            "https://lucidtrading.com/general-faq/",
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+            "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+            "https://lucidtrading.com/terms-of-use/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU complètes consultables (+2), dernière version 13 novembre 2026 (+2), mais les changements prennent effet lors de la mise en ligne et sont applicables à l'usage continu sans droit clairement réservé aux anciens comptes (+0), même si certaines FAQ protègent explicitement les versions antérieures de leurs split.",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "FAQ et conditions sont cohérentes sur les programmes LucidFlex/Pro et sur la nature simulée et le passage vers des accords Live distincts (+2+2). Le checkout, les frais de paiement et l'accord individuel de compte funded ne sont pas rapprochés (+0).",
+          "sources": [
+            "https://lucidtrading.com/general-faq/",
+            "https://lucidtrading.com/risk-disclosure-statement/",
+            "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+            "https://lucidtrading.com/terms-of-use/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Lancement Lucid Trading identifié en avril 2025 par presse et archives sociales, soit environ 19 mois à date de novembre 2026 : palier 18–35 mois. Ne pas compter l'âge du domaine comme antériorité du service.",
+          "sources": [
+            "https://bestprops.com/what-is-lucid-trading/",
+            "https://bestprops.com/prop-firms/lucid-trading/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Canaux d'assistance et de revue humaine via support chat publiés (+1), nombreux retours clients sur la joignabilité et réponses du support (+1). La possibilité de demander une revue ne démontre pas qu'une contestation technique hors payout a été utilement résolue ; +0 pour le dernier critère et procédure d'escalade complète non vérifiée (+0).",
+          "sources": [
+            "https://lucidtrading.com/terms-of-use/",
+            "https://www.trustpilot.com/review/lucidtrading.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "lucid-vague-responsible-trading-microscalping-74",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Lucid Trading — LucidFlex/Pro/Daily/Direct simulés",
+          "phase": "Trading et maintien du compte",
+          "clause": "Terms of Use §Prohibited Uses : « not representative of responsible trading in live markets » et « sole discretion » ; ce fait est distinct de la règle microscalping désormais définie à >50% des profits réalisés sur des positions de cinq secondes ou moins.",
+          "consequence": "Disqualification ou clôture décidée en raison de critères généraux subjectifs de trading responsable; les risques sur rewards acquis restent comptés dans B1.",
+          "source": "https://lucidtrading.com/terms-of-use/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false,
+      "publicationApproved": false,
+      "priorMigratedV52": 64,
+      "auditScope": "A2/A3/B1/B2 focused current-source reconciliation; all other V5.2 points still inherited from 2026-11-21 source-backed migrated audit and REQUIRE fresh primary verification",
+      "auditChange": "B2=7 maintenu mais cause reformulée : microscalping quantifié et appel, seule clause générale de responsible trading reste −3.",
+      "openChecks": [
+        "Obtenir contrat funded individuel pour B1 et pays concernés.",
+        "Distinguer HFT, microscalping, appeals, et sanctions par programme.",
+        "Valider seller registration actuelle et conditions payout par programme."
+      ]
+    },
+    {
+      "slug": "apex-trader-funding",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 57,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Performance Account EOD : demande après cinq jours distincts atteignant le bénéfice minimum quotidien, répartition annoncée à 100 %, tableau des caps et seuils, procédure de retrait sur interface et limites de six versements. Les frais complets par rail et conditions après passage Live n'ont pas été consolidés : élément 'split+minimum+frais' non acquis.",
+          "sources": [
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Aucune série de paiements indépendamment rapprochés du débiteur et des bénéficiaires sur douze mois n'a été établie ; les plaintes existantes ne prouvent pas à elles seules deux refus injustifiés corroborés, palier neutre V5.",
+          "sources": [
+            "https://www.trustpilot.com/review/apextraderfunding.com",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Montants cumulés affichés par l'opérateur et témoignages d'utilisateurs, mais pas de flux bancaires ou on-chain attribuables indépendamment au programme et à son débiteur à l'échelle de la firme dans le corpus contrôlé.",
+          "sources": [
+            "https://www.trustpilot.com/review/apextraderfunding.com",
+            "https://apextraderfunding.com/"
+          ]
+        },
+        "B1": {
+          "points": 0,
+          "reason": "User Agreement actuel §§Rewards : les Rewards sont expressément discrétionnaires et ne constituent pas une dette ni une obligation de paiement; l'opérateur peut refuser, réduire, modifier, retarder ou révoquer pour toute raison ou sans raison, et toute décision est finale. C'est exactement le palier B1=0, indépendant de la preuve d'une non-paie réelle. Pas de double imputation B2.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "User Agreement §15 : l'entreprise peut considérer qu'un trader est trop expérimenté ou professionnel par des indices non exhaustifs de sophistication et supprimer l'accès au programme. Qualification subjective d'une stratégie/trader = −3 sur l'équité du compte, distincte du pouvoir de non-paiement B1=0. Les règles EOD de 5 jours et 50% consistency sont objectives et valent 0 malus.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+          ],
+          "negativeFactIds": [
+            "apex-professional-proficiency-subjective-program-15"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Apex Trader Funding Inc est nommée dans le User Agreement et dans sa documentation fiscale (adresse Austin, EIN). Les registres et pièces publiques identifient cette partie ; concordance du dernier écran du panier de chacune des variantes et contrat Live distinct non vérifiée.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/helpful-items/1099-forms-and-tax-information/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Les documents fiscaux identifient la société texane et une immatriculation historique est rapportée, mais l'extrait officiel du statut administratif Texas courant et ses formalités 2026 n'ont pas pu être obtenus. Pas de radiation ni de dissolution présumée.",
+          "sources": [
+            "https://apextraderfunding.com/help-center/helpful-items/1099-forms-and-tax-information/",
+            "https://apextraderfunding.com/terms-of-use/"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche d'avertissements officiels ciblée sur Apex Trader Funding Inc et son domaine sans sanction réglementaire grave actuelle directement reliée au programme simulé confirmée. Les plaintes privées, même graves, ne sont pas des décisions officielles.",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/index.htm"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Prix/abonnements, objectifs, pertes et règles de chaque évaluation et PA, sanctions et plafonds de retraits EOD/Intraday, critères d'inscription et vérification d'identité publiés par Apex. Les produits Legacy antérieurs au changement de 2026 sont traités à part.",
+          "sources": [
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+            "https://apextraderfunding.com/help-center/helpful-items/status-updates/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "Accord utilisateur public et opposable accessible (+2). Sa date d'effet est variable selon l'acceptation du compte et aucune date de version statique auditée n'est donnée (+0). Les listes d'activités interdites et les règles peuvent changer sans préavis, sans disposition générale attestant la protection des comptes achetés (+0).",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Les pages de PA EOD et Intraday sont distinguées et les CGU définissent la nature simulée et le passage éventuel à un contrat Live séparé (+2+2). Dernier écran de paiement et version individuelle acceptée non rapprochés (+0).",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Apex propose des évaluations de traders depuis au moins 2021, activité supérieure à trois ans documentée par son historique public et celui de l'entreprise, sans confondre création et continuité contractuelle.",
+          "sources": [
+            "https://apextraderfunding.com/terms-of-use/",
+            "https://apextraderfunding.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Centre d'aide et support identifiables (+1), réponses et mises à jour de support accessibles (+1), mais mécanisme de recours EFFECTIF sur récompenses non garanti par l'accord et dossier hors-payout résolu non établi (+0+0).",
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "apex-professional-proficiency-subjective-program-15",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Apex Trader Funding · Evaluation/Performance Account (programme simulé)",
+          "phase": "Maintien d'accès et graduation",
+          "clause": "User Agreement §15 : l'entreprise peut considérer un trader trop expérimenté/professionnel à partir de critères non exhaustifs et fermer les comptes.",
+          "consequence": "Compte et éligibilité au programme peuvent être supprimés selon la qualification d'une sophistication jugée incompatible avec l'objectif éducatif ; les récompenses demeurent cotées seulement en B1.",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false,
+      "publicationApproved": false,
+      "priorMigratedV52": 58,
+      "auditScope": "A2/A3/B1/B2 focused current-source reconciliation; all other V5.2 points still inherited from 2026-11-21 source-backed migrated audit and REQUIRE fresh primary verification",
+      "auditChange": "B1=0 confirmé; B2 −3 pour la classification subjective des traders professionnels; note migrée inchangée.",
+      "openChecks": [
+        "Registre officiel Texas actuel et parties contractantes.",
+        "Pièces de payouts indépendantes et coordonnées pour l'A3.",
+        "Confirmer contrat EOD/Intraday applicable à chaque achat et passage Live."
+      ]
+    },
+    {
+      "slug": "take-profit-trader",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 73,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "La FAQ officielle PRO/PRO+ en vigueur détaille retraits PRO dès le premier jour et quotidien, split 80/20 PRO et 90/10 PRO+, buffer et absence de maximum, canaux Plaid/ACH US, PayPal/Wise hors USA. Les frais complets par rail ne sont pas documentés pour toutes les situations : huit points suivant les cinq éléments binaires V5.2, sans mélanger PRO simulé avec PRO+ live.",
+          "sources": [
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+            "https://takeprofittrader.com/terms"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Palier neutre : avis de clients et captures de versement ne permettent ni un palier externe ≥12 mois ni deux refus injustifiés corroborés. Aucun arrêt général de paiement prouvé.",
+          "sources": [
+            "https://www.trustpilot.com/review/takeprofittrader.com",
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Témoignages et avis de retrait visibles, mais pas d'historique indépendant authentifiant des transferts de TakeProfitTrader LLC à plusieurs traders.",
+          "sources": [
+            "https://www.trustpilot.com/review/takeprofittrader.com",
+            "https://takeprofittrader.com/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "B1=6 PROVISOIRE : Terms of Service publics sont généraux et datent du 27 août 2024, et n'équivalent pas à un contrat du trader PRO/PRO+ signé en 2026. La FAQ annonce des rewards, mais ne donne pas la protection des gains déjà acquis en cas de résiliation. Un ancien modèle d'accord hébergé par un tiers n'est pas pris comme preuve de la version applicable; obtenir le document accepté et le relire avant toute validation.",
+          "sources": [
+            "https://takeprofittrader.com/terms",
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+          ]
+        },
+        "B2": {
+          "points": 10,
+          "reason": "Jours minimums, PRO/PRO+, buffer et news sont différenciés et publiés ; aucune contradiction matérielle actuelle ni sanction vague distincte documentée dans les textes pertinents consultés. Pas de retrait pour l'exigence objective de buffer.",
+          "sources": [
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "TAKEPROFITTRADER LLC identifiée par les CGU et le registre officiel de Floride, numéro L21000145354 ; contrat individuel de trader et rapprochement de la dernière étape du panier non disponibles.",
+          "sources": [
+            "https://takeprofittrader.com/terms",
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l21000145354-66e25221-0d62-437c-8b65-7bbed6804627&directionType=Initial&inquirytype=EntityName&listNameOrder=TAKEPROFITTRADER+L210001453540&searchNameOrder=TAKEPROFITTRADER+L210001453540&searchTerm=take+profit+trader"
+          ]
+        },
+        "C2": {
+          "points": 6,
+          "reason": "Sunbiz indique l'entité ACTIVE, constitution 29 mars 2021 et annual report 2026 déposé ; ne remplace pas la vérification de l'accord de rémunération.",
+          "sources": [
+            "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l21000145354-66e25221-0d62-437c-8b65-7bbed6804627&directionType=Initial&inquirytype=EntityName&listNameOrder=TAKEPROFITTRADER+L210001453540&searchNameOrder=TAKEPROFITTRADER+L210001453540&searchTerm=take+profit+trader"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherches du 20 novembre 2026 dans les avertissements publics FCA, AMF, CFTC par dénomination précise et domaine : pas de mise en garde matérielle applicable identifiée ; pas de faute présumée de courtage d'un challenge simulé.",
+          "sources": [
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms",
+            "https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/listes-noires-et-mises-en-garde",
+            "https://takeprofittrader.com/terms"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Frais/prix, paramètres des challenges, limites d'exposition et modalités PRO/PRO+, interdictions news et copy, KYC et zones admissibles sont documentés via FAQ et pages d'offre.",
+          "sources": [
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+            "https://takeprofittrader.com/terms",
+            "https://takeprofittrader.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU de site accessibles (+2) et datées du 27 août 2024 (+2) ; application des changements aux accords PRO/PRO+ déjà financés non clairement confirmée dans ce document générique (0).",
+          "sources": [
+            "https://takeprofittrader.com/terms"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Dernier panier et contrat Trader non rapprochés (0) ; FAQ PRO/PRO+ et CGU de site ne présentent pas de contradiction matérielle sur les éléments effectivement couverts (+2) ; distinction compte d'évaluation simulé et paiement réel expliquée (+2).",
+          "sources": [
+            "https://takeprofittrader.com/terms",
+            "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+          ]
+        },
+        "E1": {
+          "points": 6,
+          "reason": "Service prop/trader documenté depuis au moins 2022 sur des publications et avis historiques : plus de 36 mois, au-delà de la simple formation juridique en mars 2021.",
+          "sources": [
+            "https://www.trustpilot.com/review/takeprofittrader.com",
+            "https://takeprofittrader.com/"
+          ]
+        },
+        "E2": {
+          "points": 4,
+          "reason": "Assistance publique (+1), réponses individualisées accessibles sur des avis (+1), contact de contestation (+1), exemple de traitement non lié au paiement rapporté et répondu avec résultat utile (+1) ; témoignage ponctuel, pas une garantie générale.",
+          "sources": [
+            "https://www.trustpilot.com/review/takeprofittrader.com",
+            "https://takeprofittrader.com/terms"
+          ]
+        }
+      },
+      "ruleDeductions": [],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false,
+      "publicationApproved": false,
+      "priorMigratedV52": 64,
+      "auditScope": "A2/A3/B1/B2 focused current-source reconciliation; all other V5.2 points still inherited from 2026-11-21 source-backed migrated audit and REQUIRE fresh primary verification",
+      "auditChange": "B1=6 reste provisoire, faute de contrat individuel funded actuel vérifié; plafond A3=64. Note inchangée.",
+      "openChecks": [
+        "Accord individuel signé PRO/PRO+ actuel, droits acquis et clauses de retrait.",
+        "Faire vérifier des transferts financiers finaux A3 par tiers.",
+        "Consolider les frais de rails et les différenciations PRO et PRO+."
+      ]
+    }
+  ]
+}
