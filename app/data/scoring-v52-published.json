@@ -1,7 +1,7 @@
 {
   "version": "5.2",
   "effectiveDecision": "2026-11-22",
-  "publication": "Owner-authorized continued V5.2 editorial rollout: 11 prior V5 migrations + 38 fully source-linked native audit scorecards (28 previous, 10 cohort D 2026-11-22); all 24 other conversions remain unapproved. Scores are editorial risk assessments with dated sources, not certification of paid rewards or favourable recommendation. Legacy comparisons are not valid V5→V5.2 backtests unless evidence held constant.",
+  "publication": "PropRadar V5.2 owner-authorized continuous release — 11 previously approved V5 migrations + 47 native 13-criterion audits (9 in Cohort E on Nov 22, 2026; prior 38). No mechanical-only 24 re-evaluations permitted. One further active-operator audit target (MiFunder) moved to STATUS REVIEW without inventing a V5.2 rating due HTTP 521 and non-authorized mirror. Scores evidence-dated, not payout guarantees.",
   "approvals": [
     {
       "slug": "alpha-capital-group",
@@ -269,6 +269,51 @@
       "slug": "funding-frontier",
       "checkedOn": "2026-11-22",
       "expectedFinal": 49
+    },
+    {
+      "slug": "wemastertrade",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 42
+    },
+    {
+      "slug": "forexive",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 51
+    },
+    {
+      "slug": "hash-hedge",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 63
+    },
+    {
+      "slug": "sure-leverage",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 49
+    },
+    {
+      "slug": "titan-capital-markets",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 49
+    },
+    {
+      "slug": "prop-number-one",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 36
+    },
+    {
+      "slug": "trading-cult",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 40
+    },
+    {
+      "slug": "x-funded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 42
+    },
+    {
+      "slug": "levels",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 39
     }
   ]
 }

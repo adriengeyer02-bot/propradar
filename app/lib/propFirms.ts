@@ -10373,17 +10373,18 @@ const universePropFirms: PropFirm[] = [
     name: 'MiFunder',
     website: 'https://mifunder.com/',
     status: 'À surveiller',
+    listedDomainWarning: 'MiFunder official website and current legal terms returned Cloudflare error 521 on 22 November 2026. Current checkout and operating entity are unverified; this historical rating is not a V5.2 assessment. Do not purchase until official access and contractual rights can be verified.',
     score: 56,
     founded: 2023,
     priceFrom: 0,
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official site and footer checked. MiFunder states it does not provide investment services as defined in applicable regulations, is not a broker and does not accept deposits from traders. No concrete company name, jurisdiction or registration number was captured from the public page in this pass.',
+      '22 November 2026 operational update: mifunder.com and its live Terms of Service both returned a Cloudflare 521 origin-server error. A separate Vercel mirror hosts an August 2023 contract naming Gigimobile Technology Solutions PTY Ltd, but this copy is not confirmed as the current contracting offer and must not be treated as a 2026 funded agreement. Historical score remains provisional and is not an approved V5.2 calculation; no closure or unlawful conduct can be inferred from an HTTP failure.',
     regulatoryAudit: {
       riskLevel: 'Medium to high',
-      lastChecked: '2026-07-08',
+      lastChecked: '2026-11-22',
       summary:
-        'Medium-to-high regulatory risk. MiFunder gives clear non-broker/non-deposit wording, but the legal entity remains unidentified. The product markets Match Trader, Platform 5 and TradingView access plus funded-phase reset features, so detailed terms are needed before ranking it above watchlist level.',
+        'Operational status unverified on November 22, 2026. The official MiFunder website and terms return HTTP 521, preventing verification of current products, selling entity, reward contract and checkout. An older, differently hosted legal document cannot be assumed authentic for the present seller. No dissolution, criminality or payout refusal is established by this technical error.',
       entities: [
         {
           name: 'MiFunder',
@@ -10401,6 +10402,8 @@ const universePropFirms: PropFirm[] = [
         'Platform-specific rules for Match Trader, Platform 5 and TradingView need manual confirmation.',
       ],
       redFlags: [
+        'Official primary domain and legal-terms URL both return Cloudflare HTTP 521 on 2026-11-22.',
+        'The 2023 third-party mirror is not verified as a current enforceable contract.',
         'No concrete legal entity captured.',
         'Broker/platform-like marketing with non-broker disclaimer.',
         'Reset add-ons can create fee and rule-dispute risk.',

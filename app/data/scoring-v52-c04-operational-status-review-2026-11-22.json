@@ -65,6 +65,38 @@
         "Confirm registered entity in relevant jurisdiction and active corporate status",
         "If genuine operational status cannot be established, leave V5.2 score null and add buyer-facing warning only after source-level review"
       ]
+    },
+    {
+      "slug": "mifunder",
+      "previousDisplayedScore": 51,
+      "class": "PRIMARY_DOMAIN_CLOUDFLARE_521_CHECKOUT_UNVERIFIED",
+      "provisionalRecommendation": "do_not_rank_as_verified_active_sale_pending_owner_review",
+      "currentStatusVerified": false,
+      "findings": [
+        {
+          "finding": "Live November 22, 2026 fetch of https://mifunder.com/ returned Cloudflare HTTP error 521: browser and Cloudflare functioning, origin server not responding. This is not an official company closure statement.",
+          "source": "https://mifunder.com/"
+        },
+        {
+          "finding": "The original main legal terms URL also returned Cloudflare 521, meaning the current challenge purchase contract and payout conditions cannot be verified from the seller's live site.",
+          "source": "https://mifunder.com/legal/terms-of-service"
+        },
+        {
+          "finding": "A separate mi-funder.vercel.app mirror shows an older 24 August 2023 agreement with Gigimobile Technology Solutions PTY Ltd 2023/535414/07, but its ownership and authority to bind today's MiFunder seller have NOT been established. The archived text is contextual only.",
+          "source": "https://mi-funder.vercel.app/legal/terms-of-service"
+        },
+        {
+          "finding": "A dated independent review lists the original site's archived version, not a live payment and product checkout; no independently confirmed cessation or liquidation status is available.",
+          "source": "https://www.verify.trading/compare/prop-firms/mifunder"
+        }
+      ],
+      "openChecks": [
+        "Obtain a current HTTP-successful official seller checkout and exact 2026 terms on mifunder.com",
+        "Determine whether mi-funder.vercel.app is an authorized corporate site, a developer mirror, or third-party historical snapshot",
+        "Verify Gigimobile Technology Solutions PTY Ltd and the reward contracting entity in the competent official company registers",
+        "Request evidence of current funded reward obligations and operating status; do not downgrade to legally dissolved from an HTTP 521 alone",
+        "Keep the previous 51/100 marked historical/partially verified until a fresh complete 13-criterion score can be supported"
+      ]
     }
   ]
 }
