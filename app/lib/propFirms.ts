@@ -1,5 +1,6 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
+import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
 import { toEnglishText } from './i18n';
@@ -143,6 +144,8 @@ export type PropFirm = {
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
   v5SafetyCap?: { before: number; cap: 55 };
+  /** V5.2 evidence ceiling; a cap, not a second score deduction. */
+  v52PayoutCap?: { before: number; cap: 64 | 69 | 79 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
@@ -1215,7 +1218,7 @@ const corePropFirms: PropFirm[] = [
     weaknesses: ['More complex drawdown rules', 'Less suited to forex/CFD traders'],
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official rules rechecked July 15, 2026. The Trading Combine uses a 50% consistency target; Express Funded Account Standard and Consistency paths use different payout qualification rules. Payout eligibility, caps and split can also depend on the account cohort.',
+      'Official rules rechecked July 15, 2026. Official Topstep rules checked 2026-11-21: Trading Combine uses a 55% Consistency Target (best day versus profit target); Express Funded Account Consistency requires 3 trading days and a 40% objective for payout eligibility; XFA Standard requires five $150+ winning days, with no 40% consistency objective. Sources: https://help.topstep.com/en/articles/8284208-consistency-at-topstep and https://help.topstep.com/en/articles/8284233-topstep-payout-policy. Payout eligibility, caps and split can also depend on the account cohort.',
     auditSourcesChecked: ['Official site', 'Trading Combine parameters', 'Express Funded Account parameters', 'Official payout policy', 'Trustpilot'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
@@ -12369,7 +12372,7 @@ const universePropFirms: PropFirm[] = [
     headquarters: 'Malta',
     priceFrom: 56,
     profitSplit: 90,
-    payoutProof: true,
+    payoutProof: false,
     incidents: 4,
     styles: ['Forex', 'CFD', 'TradeLocker', 'Simulated evaluation'],
     productName: 'Cove Funded Challenges',
@@ -12386,7 +12389,7 @@ const universePropFirms: PropFirm[] = [
     consistencyRule: 'Not clearly captured; full program and add-on rules must be checked before purchase.',
     auditStatus: 'Partiellement vérifié',
     auditSummary:
-      'Official site, Terms and Risk Disclosure checked. Cove Funded discloses Collective Holdings Limited with a Malta address. Footer says COVEFUNDED is not a broker, does not accept deposits, provides demo accounts in a simulated trading environment, and its platform/data feed is powered by third-party liquidity providers. Terms are short and include a no-refund policy plus Malta governing law.',
+      'No independently attributable completed payout proof captured in the July 2026 source review; payoutProof is unverified, not evidence of non-payment. Official site, Terms and Risk Disclosure checked. Cove Funded discloses Collective Holdings Limited with a Malta address. Footer says COVEFUNDED is not a broker, does not accept deposits, provides demo accounts in a simulated trading environment, and its platform/data feed is powered by third-party liquidity providers. Terms are short and include a no-refund policy plus Malta governing law.',
     auditSourcesChecked: ['Official site', 'Terms and Conditions', 'Risk Disclosure', 'Privacy Policy', 'Trustpilot link'],
     regulatoryAudit: {
       riskLevel: 'Medium to high',
@@ -12938,7 +12941,7 @@ function applyClosedScoreRule(firm: PropFirm): PropFirm {
 function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
   // V5 B2 has already reduced the editorial score. A second legacy rules
   // deduction would punish the same contract clause twice.
-  if (isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
+  if (isPublishedV52(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5.2 || isPublishedV5(firm.slug) || getFirmUpdate(firm.slug)?.scoringVersion === 5) return firm;
   if (!RULES_PENALTY_ENABLED || firm.status === 'Fermée') return firm;
   const result = computeRulesPenalty(getFirmUpdate(firm.slug));
   if (!result?.penalty) return firm;
@@ -12963,7 +12966,25 @@ function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
   return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
 }
 
+/** Apply V5.2 proof ceiling and (if required) legal ceiling AFTER Trustpilot once. */
+function applyV52CapsRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée') return firm;
+  const audit = getPublishedV52Score(firm);
+  if (!audit) return firm;
+  let next = firm;
+  const proof = audit.payoutEvidenceCap;
+  if (proof !== null && next.score > proof) {
+    next = { ...next, score: proof, v52PayoutCap: { before: next.score, cap: proof } };
+  }
+  const legal = audit.safetyCap;
+  if (legal !== null && next.score > legal) {
+    next = { ...next, score: legal, v5SafetyCap: { before: next.score, cap: legal } };
+  }
+  return next;
+}
+
 function applyV5SafetyCapRule(firm: PropFirm): PropFirm {
+  if (isPublishedV52(firm.slug)) return firm; // legal cap already applied by V5.2 pipeline
   if (getFirmUpdate(firm.slug)?.scoringVersion !== 5 && !(!getFirmUpdate(firm.slug) && isPublishedV5(firm.slug))) return firm;
   const v5 = getPublishedV5Score(firm);
   if (!v5 || firm.status === 'Fermée' || v5.safetyCap === null || firm.score <= v5.safetyCap) return firm;
@@ -13013,7 +13034,7 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV52CapsRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

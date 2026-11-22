@@ -1,3 +1,5 @@
+> **INSTRUCTION PRIORITAIRE POUR CLAUDE — 22/11/2026 :** Le barème canonique est désormais **[SCORING_V5_2.md](SCORING_V5_2.md)** et la feuille de route commune est **[claude/V52_HANDOFF_2026-11-22.md](claude/V52_HANDOFF_2026-11-22.md)**. Le barème V5.2 prime sur tous les chapitres V4/legacy ci-dessous lorsqu'ils décrivent des notes, pénalités, plafonds ou étapes de publication. **Trustpilot = −6 une fois, aucun plafond Trustpilot**, mais les plafonds **A3 = 64/69/79**, le cap juridique 55 et les règles B2=−3/−4 demeurent. Ne pas abroger les tests hérités ; distinguer les firmes non migrées (affichage temporaire hérité) de celles auditées en V5.2. Les 75 audits manquants de la file sont à réaliser critère par critère, jamais à inventer à partir d'un score V4.
+
 # PropRadar - working rules for Claude
 
 PropRadar (www.propradar.tech) is an independent prop-firm comparator. Its only

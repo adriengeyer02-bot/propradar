@@ -1,0 +1,82 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-22",
+  "slug": "fundedhive",
+  "status": "OFFICIAL_TERMS_AND_FAQ_REVIEW_PARTIAL",
+  "scoreV52": null,
+  "publication": "NOT_APPROVED",
+  "sources": [
+    "https://fundedhive.com/faq",
+    "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990",
+    "https://fundedhive.com/pay_from_profits",
+    "https://fundedhive.com/transparency"
+  ],
+  "findings": [
+    {
+      "criterion": "A1",
+      "program": "Classic and Pay From Profits",
+      "phase": "Funded payout",
+      "source": "https://fundedhive.com/faq",
+      "fact": "$50 minimum, $1000 per day per ERC20 address for Classic and Pay From Profits; multiple accounts sharing address share cap. Payouts USDC ERC20, trader pays gas.",
+      "consequence": "Large profits may require multiple days to withdraw; wallet network costs apply."
+    },
+    {
+      "criterion": "A1",
+      "program": "Instant/InstantGrowth",
+      "phase": "Funded payout",
+      "source": "https://fundedhive.com/faq",
+      "fact": "$2000 daily payout cap per ERC20 address; payout only when smart-contract eligibility satisfied.",
+      "consequence": "Do not advertise unrestricted instant payouts."
+    },
+    {
+      "criterion": "B1",
+      "program": "All",
+      "phase": "Account suspension",
+      "source": "https://fundedhive.com/downloads/terms-and-conditions.pdf?t=1770042990",
+      "fact": "Section 9.1.2 permits suspension, freezing of payments and wallet assets without prior notice or stated reason in specified risk, legal, unusual-activity and security circumstances; language also says for any reason at any time.",
+      "consequence": "Broad suspension and payout-freeze authority requires legal remedy/appeal examination."
+    },
+    {
+      "criterion": "B2",
+      "program": "Pay From Profits",
+      "phase": "After evaluation",
+      "source": "https://fundedhive.com/faq",
+      "fact": "Funded fee must be fully covered from eligible A-book profit split before profit is withdrawable. Higher risk-group classification can require additional fee settlement.",
+      "consequence": "Challenge purchase price alone does not reflect cost before first payout."
+    },
+    {
+      "criterion": "B2",
+      "program": "Funded AADS",
+      "phase": "Risk-mode switch",
+      "source": "https://fundedhive.com/faq",
+      "fact": "When A-book drawdown reaches specified threshold, open positions are forcibly closed and account switches to B-book. B-book gains are not cash withdrawable and are removed on A-book reactivation; subsequent A-book gains first offset negative A-book P&L.",
+      "consequence": "Displayed trading gains may not correspond to withdrawable profits; risk threshold needs exact annex verification."
+    },
+    {
+      "criterion": "A3",
+      "program": "All",
+      "phase": "Payout evidence",
+      "source": "https://fundedhive.com/transparency",
+      "fact": "Transparency page shows transaction hashes alongside account type, nominal balance and fee; table entries do not by themselves establish independent verified trader reward transfers. Verify hash on explorer and beneficiary context.",
+      "consequence": "Do not award high A3 solely for operator-provided transaction table."
+    },
+    {
+      "criterion": "C1",
+      "program": "Corporate identity",
+      "phase": "Legal",
+      "source": "https://fundedhive.com/faq",
+      "fact": "FAQ names TradingHive Technologies Ltd as representing FundedHive DAC; exact contract counterparty and corporate registry independently unverified.",
+      "consequence": "Needs corporate registry cross-check."
+    }
+  ],
+  "pending": [
+    "A2 independent incident evidence",
+    "A3 independent on-chain payout-to-trader verification",
+    "B1 dispute and remedies in annex",
+    "B2 exact AADS risk thresholds and contractual scope",
+    "C1-C3 official registry/regulator checks",
+    "D1-D3 commercial checkout, disclosure and version",
+    "E1-E2 business age and support"
+  ],
+  "candidatePenalty": null
+}

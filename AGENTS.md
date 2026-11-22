@@ -1,3 +1,5 @@
+> **POLITIQUE ACTUELLE (décision propriétaire 2026-11-22) : V5.2.** Lire d'abord [SCORING_V5_2.md](SCORING_V5_2.md), puis [claude/V52_HANDOFF_2026-11-22.md](claude/V52_HANDOFF_2026-11-22.md). Les mentions V4/V5 et plafonds Trustpilot à 64 ci-dessous sont **historiques**. Ne jamais publier automatiquement des migrations : seules les entrées explicitement admises dans `scoring-v52-published.json` sont actives après fusion. Les nouvelles firmes sont notées nativement avec `app/lib/scoringV52.ts` (13 critères). Les agents ChatGPT et Claude travaillent désormais sur la **même** file 122, sans exclusivité ancienne C/N, en évitant les slugs traités dans d'autres PR.
+
 # Instructions for AI agents (ChatGPT/Codex, Claude and others)
 
 Several AI agents work on this repository for Geyer. Read these files before

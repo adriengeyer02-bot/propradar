@@ -1,0 +1,57 @@
+{
+  "version": "5.2",
+  "reviewedOn": "2026-11-21",
+  "status": "OFFICIAL_RULES_REVIEWED_PARTIAL_V52",
+  "firm": "brightfunded",
+  "programs": [
+    {
+      "program": "BrightFunded CFD Phase 1 and Phase 2",
+      "phase": "Evaluation",
+      "facts": [
+        {
+          "criterion": "B2",
+          "finding": "Official FAQ permits news trading during Phase 1 and Phase 2 without news-window restrictions.",
+          "source": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news",
+          "scoreImpact": "none for this fact"
+        }
+      ]
+    },
+    {
+      "program": "BrightFunded CFD Funded Account and Instant",
+      "phase": "Funded / Instant from day one",
+      "facts": [
+        {
+          "criterion": "B2",
+          "kind": "asymmetric-profit-loss-treatment",
+          "proposedDeduction": 3,
+          "finding": "For impacted instruments, executions including pending SL/TP fills within 5 minutes before or after major news result in profits being removed; losses are not reimbursed. Soft breach does not close account. 48-hour-held trades have take-profit exception.",
+          "consequence": "Positive trades may be removed from reward calculation while negative trades remain counted, creating asymmetric risk around news events.",
+          "source": "https://help.brightfunded.com/en/articles/9241694-can-i-trade-news",
+          "scoreImpact": "V5.2 B2 candidate -3 if independently confirmed current terms apply to the relevant product; do not double-count B1."
+        }
+      ]
+    },
+    {
+      "program": "BrightFunded CFD general",
+      "phase": "All phases subject to applicable current terms",
+      "facts": [
+        {
+          "criterion": "B2",
+          "finding": "Official FAQ dated 2025-10-14 states no general consistency rule and no requirement to spread profits or maintain fixed position size. Verify whether more recent terms supersede it.",
+          "source": "https://help.brightfunded.com/en/articles/12577176-does-brightfunded-have-a-consistency-rule",
+          "scoreImpact": "No consistency deduction on this evidence"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    "A1-A3 payout conditions and independently attributable evidence",
+    "B1 full reward agreement and appeals",
+    "C1-C3 entity registry and warnings",
+    "D1-D3 transparency",
+    "E1-E2 age and support",
+    "Cross-check latest full contract and whether Futures product differs"
+  ],
+  "scoreV52": null,
+  "publication": "BLOCKED_UNTIL_13_CRITERIA"
+}

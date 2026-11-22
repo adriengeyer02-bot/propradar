@@ -1,0 +1,578 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-22",
+  "status": "NATIVE_V52_SOURCE_LINKED_SCORECARDS_DRAFT_NO_NEW_APPROVAL",
+  "audits": [
+    {
+      "slug": "funded7",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 55,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Payouts chaque 7 jours, demande en dashboard avec KYC, règles QC statistique et caps de 10 000 USD par client/mois ; split 80/20 et minimum 100 USD connus, mais frais de chaque rail non exhaustifs. +2 délai, +2 conditions, +2 plafonds, +2 démarche, 0 split+frais.",
+          "sources": [
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/",
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/rule-1-payout-criteria/",
+            "https://funded7.com/challenge-comparison/"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Aucun incident grave au seuil de cas indépendamment documentés n'a été confirmé, mais aucune série de virements indépendants sur douze mois ne justifie A2 9/10. Avis clients contradictoires sans rapprochement bancaire : score neutre V5.2 de 6, et non preuve de fiabilité.",
+          "sources": [
+            "https://www.trustpilot.com/review/funded7.com",
+            "https://propanalyse.com/firms/funded7/legit/"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Annonce de paiements et témoignages par la firme, mais absence d'un échantillon public de virements effectivement compensés et vérifiés par un tiers ou d'une série on-chain rattachée à ses programmes : seul le niveau auto-déclaré est établi.",
+          "sources": [
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/",
+            "https://propanalyse.com/firms/funded7/legit/"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "CGU Provision 11 : absence de droit à une rémunération simulée sauf convention contraire ; FAQ promet des payouts, mais convention funded distincte non obtenue. Pouvoir de résilier les services, sans preuve suffisante de confiscation arbitraire d'un droit déjà acquis dans le contrat financé : 6 provisoire et confiance faible.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Deux paragraphes actuels intitulés Evaluation Limits se contredisent sur la détention simultanée de challenges du même plan et de la même taille : interdiction dans le premier, autorisation d'identiques avec cap d'allocation dans le second, sans règle de priorité. −3 pour contradiction ; tests QC et seuils de taille sont chiffrés : aucun autre malus.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/rule-1-payout-criteria/"
+          ],
+          "negativeFactIds": [
+            "funded7-dual-evaluation-limits-current"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "CGU nomment ICHIBAN TECH LTD Chypre HE470329 et SUCCESSIO LTD Seychelles 245758. LEI tiers recoupe ICHIBAN TECH, mais le débiteur du payout et la société facturante entre les deux ne sont pas vérifiés au dernier checkout : identité partielle 7.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://lei.bloomberg.com/leis/view/875500AYFJ97WP34QF59"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "LEI de l'entité Chypre affiche ACTIVE et contrôle de janvier 2026, mais ni good standing novembre 2026 ni statut officiel de SUCCESSIO LTD Seychelles n'a été recoupé pour identifier l'actuel débiteur : statut incomplet, 3 et aucune dissolution imputée.",
+          "sources": [
+            "https://lei.bloomberg.com/leis/view/875500AYFJ97WP34QF59",
+            "https://funded7.com/terms-and-conditions/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Avertissement officiel matériel applicable à cette offre simulée non confirmé dans la recherche nominative, mais interrogation des registres de sanctions des juridictions de chaque partie contractante non exhaustive : vérification partielle 2 et aucun malus pour absence de licence broker non requise.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Comparatif officiel documente objectifs, drawdowns, leviers et plans (+2), CGU et FAQ indiquent les règles de trading et sanctions (+2), pays exclus et contrôles KYC sont publiés (+2). Dernier prix facturé, add-ons et frais à l'achat non vérifiés de bout en bout : +0.",
+          "sources": [
+            "https://funded7.com/challenge-comparison/",
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/rule-1-payout-criteria/"
+          ]
+        },
+        "D2": {
+          "points": 2,
+          "reason": "CGU intégrales librement accessibles (+2), mais sans date de version identifiable liée au dernier achat (+0) et modification unilatérale sans préavis et sans garantie universelle pour les comptes existants (+0). Pas de rétroactivité B2 sans application adverse avérée.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Le caractère simulé est déclaré sans ambiguïté dans la Provision 11 (+2). Dernier checkout et partie facturante non recoupés (+0), accord funded exception des rémunérations non vérifié pour confirmer FAQ/CGU (+0). La contradiction multi-comptes relève déjà uniquement de B2.",
+          "sources": [
+            "https://funded7.com/terms-and-conditions/",
+            "https://funded7.com/faq/payouts-at-funded7-fast-flexible-and-secure/"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "La firme annonce son lancement en mai 2025 ; au 22 novembre 2026, activité documentée dans la tranche 18–35 mois (4). Ne pas confondre l'immatriculation de la société en janvier 2025 avec une exploitation antérieure du programme.",
+          "sources": [
+            "https://beta.funded7.com/blog/funded7-joins-propinder-japans-second-largest-prop-firm-brings-a-new-standard-to-prop-trading/",
+            "https://lei.bloomberg.com/leis/view/875500AYFJ97WP34QF59"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Adresse de support et centre d'aide identifiables (+1) et réponses publiques de l'équipe visibles sur Trustpilot (+1). Pas de preuve d'escalade effective des litiges ni résolution indépendante de plainte technique hors paiement (+0+0).",
+          "sources": [
+            "https://www.trustpilot.com/review/funded7.com",
+            "https://funded7.com/faqs/"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "funded7-dual-evaluation-limits-current",
+          "kind": "contradiction",
+          "points": 3,
+          "program": "Funded7 · évaluations de même plan/taille",
+          "phase": "Achat et nombre de challenges simultanés",
+          "clause": "CGU Provision 1, deux clauses « Evaluation Limits » : l'une interdit des challenges identiques concurrents, l'autre les autorise sous réserve de l'allocation agrégée.",
+          "consequence": "Le client ne sait pas avec certitude si l'achat de comptes identiques entraîne une violation ou une résiliation.",
+          "source": "https://funded7.com/terms-and-conditions/"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "top-one-futures",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "moyenne",
+      "previousDisplayedScore": 51,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Produits Elite ACCESS, Elite DAILY et Instant séparés dans le centre d'aide : split 90/10, fréquence, conditions, minimum et maxima distincts documentés. Rise doit être vérifié, les demandes sont contrôlées dans le dashboard. Les frais exacts par rail et quelques cohortes anciennes ne sont pas exhaustivement établis, d'où 8/10 plutôt que 10.",
+          "sources": [
+            "https://help.toponefutures.com/en/articles/10907392-what-are-the-requirements-to-request-a-payout",
+            "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts",
+            "https://help.toponefutures.com/en/articles/15056446-elite-daily-v2-daily-payout-rules",
+            "https://help.toponefutures.com/en/articles/15472196-important-payout-update-a-verified-rise-account-is-now-required"
+          ]
+        },
+        "A2": {
+          "points": 9,
+          "reason": "Des virements Rise liés à Top One Futures sont tracés à plusieurs dates espacées d'avril 2025 à novembre 2026 par plusieurs lecteurs indépendants des transactions. Des avis de clients signalent des contestations, mais aucune série d'incidents graves injustifiés corroborés selon les seuils A2 n'a été établie ici. Historique vérifié >12 mois mais <24 : 9.",
+          "sources": [
+            "https://propfirmloop.com/payout-tracker/top-one-futures/",
+            "https://damnpropfirms.com/futures-prop-firms/top-one-futures/payouts/",
+            "https://www.trustpilot.com/review/toponefutures.com"
+          ]
+        },
+        "A3": {
+          "points": 4,
+          "reason": "Au moins deux bases externes remontent des transactions Arbitrum de la société payeuse, avec période remontant à avril 2025. Attribution du compte Rise annoncée et méthodologie tierce documentée. Limite importante : une partie des destinataires des paiements Rise peut inclure partenaires/affiliés/fournisseurs, sans rattachement public de chaque paiement à un trader funded ; palier 4 prudent et non 5.",
+          "sources": [
+            "https://damnpropfirms.com/payouts/methodology/",
+            "https://propfirmloop.com/payout-tracker/top-one-futures/",
+            "https://damnpropfirms.com/futures-prop-firms/top-one-futures/payouts/"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU §§4,9,15 autorisent l'annulation de profits pour infractions, y compris conduite réputationnelle, et une résiliation de l'accord par chaque partie à tout moment et pour tout motif. Aucune réserve explicite des récompenses déjà acquises ni procédure d'appel contraignante n'est visible dans l'accord général. Protection faible 3/15 ; aucune affirmation de non-paiement réel n'en découle.",
+          "sources": [
+            "https://www.toponefutures.com/terms-and-conditions"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La liste d'interdits de trading §4 inclut gambling/reckless trading, excessive leverage, position sizes 'relative to account norms', 'harms our broker relationships', sans seuil matériel uniforme pour tous les programmes, exposant à annulation de gains. Une seule déduction de 3 pour cette famille de règles vagues. HFT <10 secondes, interdiction EA/copy et plafonds par programme sont explicites : aucun malus sur ces restrictions ordinaires.",
+          "sources": [
+            "https://www.toponefutures.com/terms-and-conditions",
+            "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts"
+          ],
+          "negativeFactIds": [
+            "toponefutures-vague-risk-strategy-terms"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "CGU désignent Top One Futures comme nom commercial de Top One Futures LLC, adresse de Cheyenne WY et facturation confirmée au checkout. Numéro Wyoming 2025-001636360 retracé dans une publication secondaire liée au registre officiel de l'État, mais absence ici de copie certifiée du registre rapprochée du contrat actuel : C1=7.",
+          "sources": [
+            "https://www.toponefutures.com/terms-and-conditions",
+            "https://checkout.toponefutures.com/?lang=en_US",
+            "https://wyobiz.wyo.gov/Business/filingSearch.aspx",
+            "https://bestprops.com/what-is-top-one-trader/"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Une immatriculation Wyoming datant du 17 mars 2025 est référencée et l'entreprise vend actuellement des programmes. Le registre de recherche est accessible mais aucun certificat officiel de good standing à date ni extrait de statut présent n'a été directement téléchargé ici ; C2=3, et non actif officiel vérifié.",
+          "sources": [
+            "https://wyobiz.wyo.gov/Business/filingSearch.aspx",
+            "https://bestprops.com/what-is-top-one-trader/",
+            "https://www.toponefutures.com/terms-and-conditions"
+          ]
+        },
+        "C3": {
+          "points": 4,
+          "reason": "Recherche d'avertissements officiels spécifiques à Top One Futures LLC non concluante au 22 novembre 2026 dans les sources interrogées. L'offre décrit une évaluation simulée et non des dépôts d'investissement gérés, donc absence de licence de broker ne vaut pas avertissement. À surveiller sans inventer d'injonction.",
+          "sources": [
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms",
+            "https://www.toponefutures.com/terms-and-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Documentation des programmes Elite, Elite ACCESS, Elite DAILY et Instant distinguant objectifs, drawdown EOD, cohérence, plafonds de contrats, news, jours de payout et maximum. Checkout et conditions de renouvellement explicitent les prix applicables à chaque offre. Score de transparence D1 complet sans interpréter les noms commerciaux comme un droit de retrait identique.",
+          "sources": [
+            "https://www.toponefutures.com/",
+            "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts",
+            "https://help.toponefutures.com/en/articles/15056446-elite-daily-v2-daily-payout-rules",
+            "https://checkout.toponefutures.com/?lang=en_US"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU librement consultables, datées 9 novembre 2026, avec clauses d'abonnement, résiliation, remboursements et politique en cas de différend. La section 13 réserve un changement des CGU à tout moment et l'acceptation par poursuite d'utilisation, sans protection explicite des comptes existants ou préavis obligatoire ; D2=4.",
+          "sources": [
+            "https://www.toponefutures.com/terms-and-conditions",
+            "https://www.toponefutures.com/privacy-policy"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Le checkout et la FAQ proposent des programmes et conditions de paiement comparables au texte public ; le nom de société LLC est cohérent. Les cohortes Elite DAILY V2, Elite ACCESS et Instant ont des critères de payout différents et la version écrite exacte du contrat funded additionnel n'est pas présentée ici pour chaque cohorte : cohérence documentée mais incomplète.",
+          "sources": [
+            "https://checkout.toponefutures.com/?lang=en_US",
+            "https://help.toponefutures.com/en/articles/14617600-differences-between-elite-elite-access-and-elite-daily-accounts",
+            "https://help.toponefutures.com/en/articles/10907392-what-are-the-requirements-to-request-a-payout",
+            "https://www.toponefutures.com/terms-and-conditions"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Société créée en mars 2025 et produit commercial lancé vers avril 2025. Au 22 novembre 2026, 18–19 mois opérationnels sont documentés ; 4/6 pour la tranche 18–35 mois, sans créditer le temps d'exploitation de la marque sœur Top One Trader.",
+          "sources": [
+            "https://bestprops.com/what-is-top-one-trader/",
+            "https://wyobiz.wyo.gov/Business/filingSearch.aspx",
+            "https://www.toponefutures.com/terms-and-conditions"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support email et chat, centre d'aide actif avec règles et FAQ détaillées. L'entreprise répond à des avis publics, mais la résolution de litiges refusés ou une voie d'appel indépendante n'est pas établie, et la FAQ mentionne des réponses automatisées non contractuelles : 2/4 conservateur.",
+          "sources": [
+            "https://www.toponefutures.com/terms-and-conditions",
+            "https://help.toponefutures.com/en/articles/10907392-what-are-the-requirements-to-request-a-payout",
+            "https://www.trustpilot.com/review/toponefutures.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "toponefutures-vague-risk-strategy-terms",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Top One Futures · tous programmes futures simulés",
+          "phase": "Trading et examen des règles avant payout",
+          "clause": "CGU §4 : gambling/reckless trading ; excessive leverage/large positions relative to norms ; trading harming broker relationships sans seuil exhaustif.",
+          "consequence": "Le même comportement peut être qualifié a posteriori de pratique interdite avec clôture de compte et suppression de profits, en dehors des limites chiffrées habituelles.",
+          "source": "https://www.toponefutures.com/terms-and-conditions"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "wegetfunded",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Contrat anglais du 10/11/2026 définit fenêtres de retrait du 16 au dernier jour, délai minimal de sept jours de cycle, $100 minimum, maximum 50% P&L, limites croissantes par taille, Rise avec KYC et split 70/30 Instant. Différence matérielle avec le contrat français antérieur sur minimum de jours, activation et fenêtres ; barème 8/10 malgré les documents publiés, détails à harmoniser.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/legal/terms",
+            "https://wegetfunded.com/en/faq"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "L'entreprise revendique des montants de rewards versés en 2025, mais les séries d'opérations bancaires ou Rise indépendamment identifiées au bon programme restent insuffisantes. Quelques avis adverses ne suffisent pas à établir les seuils d'incident corroboré de V5.2 ; score neutre de 6/10 sans inférer une fiabilité prouvée.",
+          "sources": [
+            "https://wegetfunded.com/",
+            "https://www.fxroll.com/prop-firms/wegetfunded",
+            "https://www.trustpilot.com/review/wegetfunded.com"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Le montant publicisé et les avis en ligne sont des déclarations non rapprochées d'un échantillon de transferts réglés et attribués à WeGetFunded LTD ou à son agent officiel par un tiers indépendant. L'utilisation de Rise ne suffit pas à rendre les payouts vérifiés. A3=1 et plafond global 64 (non atteint dans ce dossier).",
+          "sources": [
+            "https://wegetfunded.com/",
+            "https://theindustryspread.com/wegetfunded-review-110-percent-live-payout-20-percent-cash/",
+            "https://www.fxroll.com/prop-firms/wegetfunded"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU §§14–15 autorisent à la seule discrétion de WGF annulation de gains et refus de paiement pour interprétations qualitatives de stratégies, avec désactivation sans indemnisation. Aucune procédure d'appel opposable ni sauvegarde des rewards déjà générés n'est établie. Palier 3/15, sans déduire deux fois cette faculté via B2.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/legal/terms"
+          ]
+        },
+        "B2": {
+          "points": 4,
+          "reason": "Deux faits distincts et sourcés : (1) CGU françaises toujours accessibles datées mai 2026 2 Steps funded 149,90€, sept jours profitables >=0,50%, contre CGU anglaises accessibles datées novembre 2026 199€, cinq jours >=0,30%, sans version française mise à jour ; contradiction matérielle sur les modalités du même programme −3. (2) §14 définit comme prohibées des stratégies non 'realistic, consistent and responsible' ou incompatibles avec 'spirit' sans seuil objectif −3. Aucun malus ajouté sur consistency, news ou caps clairement chiffrés.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/legal/terms"
+          ],
+          "negativeFactIds": [
+            "wegetfunded-fr-en-two-step-terms-mismatch",
+            "wegetfunded-qualitative-trading-ban"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Footer contractualise WeGetFunded LTD Sainte-Lucie numéro 2025-00757 comme opérateur, tandis que Catalyst Creations FZCO Dubai licence 32875 traite la vente/paiement ; les fonctions sont déclarées, mais il manque contrôle de registre indépendant de la société étrangère et accord détaillé sur la dette de reward. Identification substantielle mais non totalement corroborée.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/legal/terms",
+            "https://wegetfunded.com/about"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Numéro d'enregistrement à Sainte-Lucie publié dans les CGU et numéro de licence IFZA à Dubai pour l'agent, mais pas de certificat en vigueur et consultation officielle du registre vérifiés à la date du 22/11/2026. Activité du site ne suffit pas pour C2=6 ; statut officiel courant non confirmé, C2=3.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "La revue spécialisée vérifie des listes AMF datées sans faire apparaître ces identités, mais cela ne vaut ni agrément ni interrogation exhaustive des listes officielles pour chaque juridiction. Aucune mesure officielle matérielle applicable démontrée ; C3=2 en attente des recherches réglementaires complètes.",
+          "sources": [
+            "https://theindustryspread.com/wegetfunded-review-110-percent-live-payout-20-percent-cash/",
+            "https://www.amf-france.org/fr/espace-epargnants/proteger-son-epargne/listes-noires"
+          ]
+        },
+        "D1": {
+          "points": 6,
+          "reason": "Descriptions des 1 Step, 2 Steps, Instant et Live précisent drawdown, consistency, frais d'activation et split en anglais, mais les versions linguistiques divergentes empêchent de garantir l'accès uniforme à la même information sur l'offre en cours, et le checkout exact n'est pas rapproché. D1=6 pour contenu documenté mais incomplet.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/en/faq",
+            "https://wegetfunded.com/"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "CGU intégrales accessibles dans deux langues avec dates propres 18 mai et 10 novembre 2026, mais dispositions d'amendement unilatéral sans notification ni preuve de version verrouillée pour les comptes déjà ouverts. La différence de traduction est pénalisée une fois en B2 comme contradiction ; D2 évalue la version et la protection des changements, pas une deuxième sanction sur ces chiffres.",
+          "sources": [
+            "https://wegetfunded.com/legal/terms",
+            "https://wegetfunded.com/en/legal/terms"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Documentation identifie la nature simulée et distingue comptes Live (+2), mais paiement via Catalyst Dubai et accord de récompenses de WGF LTD non rapprochés du dernier checkout ; incohérences sur présentation des plafonds de retrait et activation constatées, déjà sanctionnées en B2, sans deuxième retrait de points pour ce même fait. 2/6.",
+          "sources": [
+            "https://wegetfunded.com/en/legal/terms",
+            "https://wegetfunded.com/",
+            "https://wegetfunded.com/en/faq"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Historique de la marque et ancien opérateur Catalyst Creations documentés publiquement en 2024 ; société WGF LTD plus récente en 2025. On n'attribue pas à l'entité 2025 des années d'existence antérieures ; durée de marque opérationnelle dans la plage 18–35 mois, confiance limitée.",
+          "sources": [
+            "https://theindustryspread.com/wegetfunded-review-110-percent-live-payout-20-percent-cash/",
+            "https://wegetfunded.com/about",
+            "https://wegetfunded.com/en/legal/terms"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Support et FAQ identifiables, emails contact accessibles, retours clients sur Trustpilot ; aucune procédure indépendante de réclamation et vérification documentée d'une résolution adversariale n'ont été établies. Deux points provisoires pour accessibilité et documentation, pas garantie de qualité.",
+          "sources": [
+            "https://wegetfunded.com/en/faq",
+            "https://wegetfunded.com/",
+            "https://www.trustpilot.com/review/wegetfunded.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "wegetfunded-fr-en-two-step-terms-mismatch",
+          "kind": "contradiction",
+          "points": 3,
+          "program": "WeGetFunded · 2 Steps Challenge et phase WGF Funded",
+          "phase": "Activation, durée et demandes de payout",
+          "clause": "CGU FR en ligne datées 18/05/2026 : 149,90€, sept journées profitables >=0,50%. CGU EN en ligne datées 10/11/2026 : 199€, cinq jours >=0,30% ; aucune désactivation de la version FR.",
+          "consequence": "Un acheteur consultant une version linguistique différente peut payer un supplément différent ou se voir imposer d'autres conditions d'éligibilité.",
+          "source": "https://wegetfunded.com/en/legal/terms"
+        },
+        {
+          "factId": "wegetfunded-qualitative-trading-ban",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "WeGetFunded · Instant/1 Step/2 Steps (règles générales)",
+          "phase": "Trading challenge et comptes WGF",
+          "clause": "CGU §14 : techniques non réalistes, cohérentes ou responsables et comportements 'incompatibles avec l'esprit des programmes', sans critère quantifié ou liste exhaustive.",
+          "consequence": "Une stratégie non expressément interdite peut être qualifiée de manquement sur appréciation qualitative après trading ; son impact contractuel sur les rewards est évalué séparément en B1.",
+          "source": "https://wegetfunded.com/en/legal/terms"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    },
+    {
+      "slug": "purdia-capital",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 53,
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "reason": "Le payout n'est pas dû pendant l'évaluation ou SFA : disponible seulement après passage en Temp SFA/LFA. Retraits ensuite demandables quotidiennement avec traitement manuel en jours ouvrés ; split standard 90/10, dollars, limites Temp SFA de 10 000 USD incluant retraits et capital transférable, buffer et rails ACH/Wise/SWIFT documentés. Les frais bancaires tiers exacts et toutes cohortes ne sont pas exhaustifs : 8/10.",
+          "sources": [
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+            "https://purdia.com/knowledgebase/general/payouts-global",
+            "https://purdia.com/knowledgebase/general/rules-and-risk-management/protected-buffer"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Plusieurs avis clients rapportent des paiements et d'autres une contestation ; une demande de paiement rejetée est contestée par la firme pour violation de règle. Aucune série de refus injustifiés corroborés ni d'historique de douze mois indépendamment rapproché des comptes bancaires n'est établie dans ce dossier : neutralité V5.2 à 6, pas de présomption de non-paiement.",
+          "sources": [
+            "https://www.trustpilot.com/review/purdia.com",
+            "https://pickmyfirm.com/firms/purdia-capital",
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Les testimonials de la marque et les commentaires de traders font état de retraits, mais aucune attestation bancaire indépendante sur échantillon de bénéficiaires, ni livre de transactions blockchain attribué à l'entreprise n'a été identifié dans les sources disponibles. Purdia paie via ACH/Wise/SWIFT ; l'absence de traçage public n'est pas fraude mais A3 reste à 1 sur déclarations non authentifiées.",
+          "sources": [
+            "https://purdia.com/",
+            "https://www.trustpilot.com/review/purdia.com",
+            "https://purdia.com/knowledgebase/general/payouts-global"
+          ]
+        },
+        "B1": {
+          "points": 6,
+          "reason": "Les CGU autorisent clôture/suspension unilatérale pour conduite portant atteinte à la réputation, misconduct, exigences du courtier et autres motifs discrétionnaires, et précisent que des demandes de payouts non encore approuvées peuvent être annulées en cas de fermeture. Elles ne prouvent pas l'annulation de rewards déjà approuvés et en cours, explicitement exclus de cette faculté. Protection partielle 6 : risque sur demandes non approuvées sans preuve de confiscation générale.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "Le Risk Team peut déterminer qu'un trader est 'unacceptable risk' ou utilise un comportement de trading 'unsustainable' et retirer l'éligibilité de financement/payout sans seuil quantifié universel, source de pouvoir subjectif distinct des payouts déjà acquis traités en B1 : −3 sur cette catégorie de clause. Hedging entre instruments corrélés et automatisation non surveillée sont clairement interdits et ne coûtent rien en B2.",
+          "sources": [
+            "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview",
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/knowledgebase/general/policies-and-compliance"
+          ],
+          "negativeFactIds": [
+            "purdia-risk-team-undefined-unsustainable-trading"
+          ]
+        },
+        "C1": {
+          "points": 7,
+          "reason": "Les CGU en vigueur désignent expressément Purdia Capital LLC comme cocontractant et les canaux de paiement/assistance sont cohérents. Les statuts et dirigeants de l'entreprise ne sont pas rapprochés ici d'un extrait du registre de formation de la LLC ni d'un éventuel prestataire de courtage distinct ; identité déclarée mais pas entièrement certifiée, palier C1=7.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/privacy-policy",
+            "https://purdia.com/contact"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Purdia Capital LLC fonctionne publiquement et possède une politique contractuelle datée d'août 2026 ; le registre officiel, la juridiction et le certificat de good standing actuel de la LLC n'ont pas été produits dans ce contrôle. Une présence web ne donne pas le C2 maximal, donc valeur 3 pour situation officielle non confirmée.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/privacy-policy"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Les sources recensées ne montrent pas d'avertissement officiel nominatif vérifié visant cette entité à date, mais consultation exhaustive des alertes CFTC, NFA, FCA, registres étatiques non finalisée. La fourniture de comptes d'évaluation simulés n'exige pas automatiquement une licence broker : palier 2 en attente d'une recherche réglementaire complète.",
+          "sources": [
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms",
+            "https://purdia.com/terms-and-conditions"
+          ]
+        },
+        "D1": {
+          "points": 8,
+          "reason": "Purdia publie tableaux de comptes, objectifs, minimum de journées, drawdown, limites de contrats et règles de trading par phase. Les pages de payouts distinguent clairement SFA non-payante, Temp SFA et LFA éligibles, bonus/buffers, et split 90/10. Les options produits sont documentées avec règles de clôture pour inactivité à partir du 1/10/2026.",
+          "sources": [
+            "https://purdia.com/rules",
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+            "https://purdia.com/knowledgebase/general/rules-and-risk-management/protected-buffer",
+            "https://purdia.com/knowledgebase/general/policies-and-compliance"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Les CGU sont librement accessibles et portent une date du 13 août 2026, avec mention des changements par publication et acceptation continue. La firme ne garantit pas explicitement un préavis ni le maintien des conditions contractuelles acquises pour une cohorte ancienne ; 4 points pour publication et date, 0 pour protection opposable.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions"
+          ]
+        },
+        "D3": {
+          "points": 4,
+          "reason": "Le site et le centre d'aide concordent sur un parcours Evaluation → SFA → Temp SFA → Live, les critères de payout, le plafond de profits transfert et le traitement manuel. La documentation reconnaît toutefois que le courtier peut refuser une ouverture live et que Purdia reste discrétionnaire sur l'éligibilité ; sans convention live complète ni validation du checkout dernier prix, cohérence partielle 4.",
+          "sources": [
+            "https://purdia.com/knowledgebase/general/payouts-global/payouts-overview",
+            "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview",
+            "https://purdia.com/rules",
+            "https://purdia.com/terms-and-conditions"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Traces publiques de l'entreprise et du fondateur en juillet 2024, renouvelées en 2025, puis offres documentées en 2026 : une ancienneté de l'ordre de 24 à 30 mois de la marque est plausible, sans preuve de 36 mois d'exploitation ni identité juridique anciennement immatriculée. Palier 18–35 mois (4) avec vérification à renforcer.",
+          "sources": [
+            "https://bestprops.com/what-is-purdia/",
+            "https://purdia.com/"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Le contrat fournit support@purdia.com et le site affiche formulaire et base de connaissances active. Les pages Trustpilot contiennent des avis récents avec réactions à certains problèmes, mais pas de voie d'appel neutre ni de taux de résolution mesuré ; 2 pour accès au support et documentation, pas de présomption de qualité.",
+          "sources": [
+            "https://purdia.com/terms-and-conditions",
+            "https://purdia.com/contact",
+            "https://www.trustpilot.com/review/purdia.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "purdia-risk-team-undefined-unsustainable-trading",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "phase": "Examen du comportement de trading et éligibilité avant payout",
+          "clause": "Funding Process Overview : le Risk Team peut retirer l'éligibilité pour 'unsustainable trading behavior', 'unacceptable risk' ou tout motif rendant la poursuite 'inappropriate' sans seuil commun publié.",
+          "consequence": "L'entreprise peut refuser la poursuite et l'accès aux retraits sur la base d'une appréciation non entièrement prévisible même si drawdown et jours sont respectés.",
+          "source": "https://purdia.com/knowledgebase/general/getting-started/funding-process-overview"
+        }
+      ],
+      "trustpilotActiveNotice": false,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
+    }
+  ],
+  "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
+}

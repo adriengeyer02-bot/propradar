@@ -1,0 +1,250 @@
+{
+  "version": "5.2",
+  "createdOn": "2026-11-21",
+  "scope": "Four highest-priority evidence-reconciliation dossiers",
+  "disclaimer": "Candidate scores only. No score changes, no claim that official pages were reverified in this step.",
+  "rows": [
+    {
+      "slug": "lucid-trading",
+      "candidateScore": 64,
+      "sourceDate": "2026-11-21",
+      "criteriaV52": {
+        "A1": 8,
+        "A2": 6,
+        "A3": 1,
+        "B1": 3,
+        "B2": 7,
+        "C1": 7,
+        "C2": 6,
+        "C3": 4,
+        "D1": 8,
+        "D2": 4,
+        "D3": 4,
+        "E1": 4,
+        "E2": 2
+      },
+      "contractRuleDeductions": [
+        {
+          "factId": "lucid-vague-responsible-trading-microscalping-74",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Lucid Trading — LucidFlex/Pro/Daily/Direct simulés",
+          "phase": "Trading et maintien du compte",
+          "clause": "Terms of Use §Prohibited Uses : définition ouverte de ce qui est « representative of responsible trading in live markets », combinée à « microscalping », sans seuil temporel universel.",
+          "consequence": "Une stratégie pourtant conforme aux limites chiffrées peut entraîner retrait de trades ou clôture du compte, selon l'appréciation de Lucid. Le pouvoir de refuser la récompense est compté une seule fois en B1.",
+          "source": "https://lucidtrading.com/terms-of-use/"
+        }
+      ],
+      "reviewItems": [
+        {
+          "criterion": "A3",
+          "question": "Trustpilot Verified verifies review provenance, not actual bank transfer. Obtain independent payout evidence attributable to contracting entity.",
+          "source": "https://www.trustpilot.com/review/lucidtrading.com",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "B1",
+          "question": "Terms permit withholding or recalculation of rewards; confirm scope, appeal and effective date before finalizing 3/15.",
+          "source": "https://lucidtrading.com/terms-of-use/",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "B2",
+          "question": "Microscalping and responsible-trading language: identify program-specific objective thresholds, if any.",
+          "source": "https://lucidtrading.com/terms-of-use/",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        }
+      ],
+      "publicationStatus": "BLOCKED_PENDING_RECHECK",
+      "note": "Findings based on existing sourced proposal, not a fresh inspection of current external pages."
+    },
+    {
+      "slug": "tiger-funded",
+      "candidateScore": 40,
+      "sourceDate": "2026-11-20",
+      "criteriaV52": {
+        "A1": 4,
+        "A2": 6,
+        "A3": 1,
+        "B1": 0,
+        "B2": 1,
+        "C1": 7,
+        "C2": 3,
+        "C3": 4,
+        "D1": 8,
+        "D2": 6,
+        "D3": 0,
+        "E1": 4,
+        "E2": 2
+      },
+      "contractRuleDeductions": [
+        {
+          "factId": "tiger-evaluation-days-conflict",
+          "kind": "contradiction",
+          "points": 3,
+          "program": "Tiger Funded · 1-Step et 2-Step",
+          "phase": "Challenge, phase d'évaluation",
+          "clause": "Page Rules « Minimum Trading Days » : 1 jour sur 1-Step et 2-Step ; FAQ question 31 : 3 jours tradés par phase sur 1/2/3-Step.",
+          "consequence": "L'acheteur ne peut savoir si une évaluation validée en un jour sera acceptée ou si deux jours additionnels sont obligatoires.",
+          "source": "https://tigerfunded.com/rules"
+        },
+        {
+          "factId": "tiger-daily-reset-conflict",
+          "kind": "contradiction",
+          "points": 3,
+          "program": "Tiger Funded · 1-Step, 2-Step et 3-Step",
+          "phase": "Évaluation, limite de perte journalière",
+          "clause": "Page Rules « Daily Drawdown » : reset à minuit ; FAQ questions 19 et 21 : reset à 20:00 EST, avec l'exemple encore différent 17:00 EST.",
+          "consequence": "Une position ouverte à proximité du changement de journée peut dépasser la limite selon un horaire différent de celui affiché par l'autre document officiel.",
+          "source": "https://tigerfunded.com/faq"
+        },
+        {
+          "factId": "tiger-vague-live-simulation-fair-use",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Tiger Funded · Step et Instant (conditions générales)",
+          "phase": "Challenge et compte funded",
+          "clause": "CGU §7 : « Prohibited conduct includes, without limitation » les pratiques qui ne reflètent pas des conditions de marché live ou qui portent atteinte au « fair use », sans test fermé, avec sanctions de suspension/résiliation.",
+          "consequence": "Une méthode non citée dans la liste détaillée de la FAQ peut être qualifiée après coup comme simulation abusive et provoquer la fermeture du compte.",
+          "source": "https://tigerfunded.com/terms-of-service"
+        }
+      ],
+      "reviewItems": [
+        {
+          "criterion": "B2",
+          "question": "Rules says one minimum trading day; FAQ says three days per phase. Confirm current applicable version and same product cohort.",
+          "source": "https://tigerfunded.com/rules",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "B2",
+          "question": "Daily drawdown reset conflicting midnight, 20:00 EST and 17:00 EST; confirm timezone and product-specific rule.",
+          "source": "https://tigerfunded.com/faq",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "B1",
+          "question": "For-any-reason termination and payout ineligibility: verify contract versions and appeal.",
+          "source": "https://tigerfunded.com/terms-of-service",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "A3",
+          "question": "Rise-verified marketing carousel does not itself establish independently verified transfers.",
+          "source": "https://tigerfunded.com/payouts",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        }
+      ],
+      "publicationStatus": "BLOCKED_PENDING_RECHECK",
+      "note": "Findings based on existing sourced proposal, not a fresh inspection of current external pages."
+    },
+    {
+      "slug": "city-traders-imperium",
+      "candidateScore": 53,
+      "sourceDate": "2026-11-20",
+      "criteriaV52": {
+        "A1": 4,
+        "A2": 6,
+        "A3": 1,
+        "B1": 3,
+        "B2": 7,
+        "C1": 4,
+        "C2": 3,
+        "C3": 2,
+        "D1": 8,
+        "D2": 4,
+        "D3": 2,
+        "E1": 6,
+        "E2": 3
+      },
+      "contractRuleDeductions": [
+        {
+          "factId": "cti-current-open-ended-trading-9-5",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "CTI · évaluations de la société Comores sous CGU liées au 20/11/2026",
+          "phase": "Évaluation simulée",
+          "clause": "§9.5 laisse CTI qualifier à sa discrétion certaines pratiques comme interdites ; les sanctions correspondantes sont réunies au §9.6.",
+          "consequence": "Compte ou résultat d'un trade potentiellement sanctionné, ou levier et risque maximum modifiés selon §9.6(e), sans seuil exhaustif. Un seul fait et une seule déduction.",
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf"
+        }
+      ],
+      "reviewItems": [
+        {
+          "criterion": "C1",
+          "question": "Contracting party differs across site and PDF definitions (Comoros versus CTI FZCO); resolve checkout contracting entity.",
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/08/City-Traders-Imperium-Terms-Conditions.pdf",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "C2",
+          "question": "Anjouan directory is not sufficient as independent corporate registry proof; avoid inferring entity dissolution from different UK company.",
+          "source": "https://banque-comores.km/uploads/COMMUNIQUE-DE-LA-BCC-SUR-LEXERCICE-ILLEGAL-DACTIVITES-BANCAIRES-OFFSHORES%283%29.pdf",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "B1",
+          "question": "Reward forfeiture clauses may concern evaluation agreement; avoid extrapolating to separate trader reward agreement.",
+          "source": "https://citytradersimperium.com/terms-conditions-of-service/",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        }
+      ],
+      "publicationStatus": "BLOCKED_PENDING_RECHECK",
+      "note": "Findings based on existing sourced proposal, not a fresh inspection of current external pages."
+    },
+    {
+      "slug": "get-leveraged",
+      "candidateScore": 51,
+      "sourceDate": "2026-11-20",
+      "criteriaV52": {
+        "A1": 8,
+        "A2": 6,
+        "A3": 1,
+        "B1": 3,
+        "B2": 7,
+        "C1": 4,
+        "C2": 3,
+        "C3": 2,
+        "D1": 8,
+        "D2": 6,
+        "D3": 4,
+        "E1": 2,
+        "E2": 3
+      },
+      "contractRuleDeductions": [
+        {
+          "factId": "leveraged-open-ended-abuse-7-2",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Leveraged · tous les programmes",
+          "phase": "Évaluation et compte Reward",
+          "clause": "CGU §7.2 : « any other deliberate abuse » est défini par la firme au cas par cas.",
+          "consequence": "Un trader peut perdre l'éligibilité aux récompenses après une qualification subjective de sa stratégie.",
+          "source": "https://getleveraged.com/terms/"
+        }
+      ],
+      "reviewItems": [
+        {
+          "criterion": "B1",
+          "question": "§8.3 permits reward recalculation/refusal but reportedly requires written reasons and appeal; verify safeguards are operational.",
+          "source": "https://getleveraged.com/terms/",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "C1",
+          "question": "St Lucia contracting entity and Cyprus billing service must not be conflated; obtain registry verification.",
+          "source": "https://getleveraged.com/terms/",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        },
+        {
+          "criterion": "B2",
+          "question": "Open-ended abuse category distinct from reward recalculation; verify scope and no double count.",
+          "source": "https://getleveraged.com/terms/",
+          "verificationStatus": "PENDING_INDEPENDENT_RECHECK"
+        }
+      ],
+      "publicationStatus": "BLOCKED_PENDING_RECHECK",
+      "note": "Findings based on existing sourced proposal, not a fresh inspection of current external pages."
+    }
+  ]
+}

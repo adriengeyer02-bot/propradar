@@ -18,7 +18,7 @@ import ScoreRing from '../../../components/ui/ScoreRing';
 import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
 import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
 import { scoreV4Copy } from '../../../lib/scoreV4I18n';
-import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy } from '../../../lib/scoreV5I18n';
+import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy, scoreV52Copy, scoreV52EvidenceCapCopy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
@@ -630,14 +630,15 @@ export default async function FirmPage({ params }: Props) {
     });
   const scoreCopy = scoreMethodCopy(locale);
   const breakdown = getScoreBreakdown(firm);
-  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: breakdown.v5 ? scoreV5Copy(locale).method : breakdown.v4 ? scoreV4Copy(locale).method : scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
+  const modernCopy = breakdown.v52 ? scoreV52Copy(locale) : scoreV5Copy(locale);
+  const scoreSteps: ScoreStep[] = [{ kind: 'editorial', label: scoreCopy.editorial, detail: breakdown.v5 ? modernCopy.method : breakdown.v4 ? scoreV4Copy(locale).method : scoreCopy.editorialDetail, value: breakdown.editorial, delta: 0 }];
   if (!breakdown.v4) {
     const rules = breakdown.rules;
     const applied = Boolean(rules?.applied && rules.penalty);
     scoreSteps.push({
       kind: 'rules',
       label: scoreCopy.rules,
-      detail: breakdown.v5 ? scoreV5Copy(locale).restriction : rules
+      detail: breakdown.v5 ? modernCopy.restriction : rules
         ? fmt(scoreCopy.rulesDetail, { counted: rules.counted, programs: rules.programs.length, load: rules.rawLoad })
         : breakdown.unclassifiedOnly ? fmt(scoreCopy.rulesUnclassified, { n: breakdown.unclassifiedOnly }) : scoreCopy.rulesNone,
       value: applied ? breakdown.editorial - rules!.penalty : breakdown.editorial,
@@ -652,6 +653,11 @@ export default async function FirmPage({ params }: Props) {
     value: breakdown.trustpilot.before - breakdown.trustpilot.penalty,
     delta: breakdown.trustpilot.penalty,
   });
+  if (breakdown.payoutEvidenceCap) {
+    const evidence = scoreV52EvidenceCapCopy(locale, breakdown.payoutEvidenceCap.cap);
+    scoreSteps.push({ kind: 'proof', label: evidence.label, detail: evidence.detail,
+      value: breakdown.payoutEvidenceCap.cap, delta: breakdown.payoutEvidenceCap.before - breakdown.payoutEvidenceCap.cap });
+  }
   if (breakdown.safetyCap) {
     const safety = scoreV5LegalCapCopy(locale, breakdown.safetyCap.cap);
     scoreSteps.push({ kind: 'safety', label: safety.label, detail: safety.detail,
@@ -662,10 +668,10 @@ export default async function FirmPage({ params }: Props) {
     name: firm.name,
     score: firm.score,
     pillars: breakdown.v5 ? {
-      version: 5,
+      version: breakdown.v52 ? 5.2 : 5,
       values: [breakdown.v5.blocks.A, breakdown.v5.blocks.B, breakdown.v5.blocks.C, breakdown.v5.blocks.D, breakdown.v5.blocks.E],
       maxima: [25, 25, 20, 20, 10],
-      copy: scoreV5Copy(locale),
+      copy: modernCopy,
     } : breakdown.v4 ? {
       version: 4,
       values: [breakdown.v4.blocks.A, breakdown.v4.blocks.B, breakdown.v4.blocks.C, breakdown.v4.blocks.D, breakdown.v4.blocks.E],

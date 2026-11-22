@@ -4,9 +4,10 @@ import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode 
 import type { ScoreMethodCopy } from '../../lib/scoreMethodI18n';
 import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
 import type { V5RuleDeduction } from '../../lib/scoringV5';
+import type { V52Rule } from '../../lib/scoringV52Candidate';
 
 export type ScoreStep = {
-  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'closed';
+  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'proof' | 'closed';
   label: string;
   detail: string;
   /** Score after this step. */
@@ -20,7 +21,7 @@ export type ScoreBreakdownView = {
   name: string;
   score: number;
   pillars?: {
-    version: 4 | 5;
+    version: 4 | 5 | 5.2;
     values: [number, number, number, number, number];
     maxima: [number, number, number, number, number];
     copy: ScoreV4Copy;
@@ -32,7 +33,7 @@ export type ScoreBreakdownView = {
   heaviest: { text: string; program: string; severity: string; severityKey: string; clarity: string; points: number; kind?: 'restriction' | 'risk' | 'classic' }[];
   rulesNotes: string[];
   v5Evidence?: {
-    deductions: V5RuleDeduction[];
+    deductions: (V5RuleDeduction | V52Rule)[];
     contractProtection: { points: number; reason: string; source: string };
     checkedOn: string;
     limitedPayoutProof: boolean;

@@ -1,0 +1,84 @@
+{
+  "version": "5.2",
+  "effectiveDecision": "2026-11-22",
+  "publication": "ONLY prior approved V5 slugs are eligible for controlled V5.2 rollout. 30 further mechanically converted candidates in PR #246 remain unapproved pending current proof review. This whitelist is applied only after merge and CI.",
+  "approvals": [
+    {
+      "slug": "alpha-capital-group",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 66,
+      "sourceV5Final": 67,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "maven-trading",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 56,
+      "sourceV5Final": 63,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "get-leveraged",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 51,
+      "sourceV5Final": 56,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "alpha-futures",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 62,
+      "sourceV5Final": 64,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "miltraders",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 58,
+      "sourceV5Final": 63,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "top-one-trader",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 56,
+      "sourceV5Final": 60,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "onefunded",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 54,
+      "sourceV5Final": 60,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "bem-funding",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 47,
+      "sourceV5Final": 54,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "thinkcapital",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 53,
+      "sourceV5Final": 60,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "tiger-funded",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 40,
+      "sourceV5Final": 47,
+      "sourceCheckedOn": "2026-11-20"
+    },
+    {
+      "slug": "tradeday",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 62,
+      "sourceV5Final": 67,
+      "sourceCheckedOn": "2026-11-20"
+    }
+  ]
+}
