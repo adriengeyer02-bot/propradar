@@ -1,7 +1,8 @@
 /**
- * V5.2 published gate: 11 prior-approved migrations + 28 native source-linked
- * scores explicitly approved by the owner on 2026-11-22. The 24 other mechanical
- * conversions remain private until each evidence/contract review is complete.
+ * V5.2 publication gate: owner-reviewed, evidence-dated 13-criterion cards.
+ * 58 previously released + 32 explicitly approved 23 Nov 2026.
+ * CK Capital is expressly rejected; the old live score stays untouched.
+ * Mechanical source migrations remain distinct from newer native reaudits.
  */
 import whitelist from '../data/scoring-v52-published.json';
 import oldWhitelist from '../data/scoring-v5-published.json';
@@ -12,9 +13,11 @@ import type { V5Scorecard } from './scoringV5';
 import { computeV5Scorecard } from './scoringV5';
 import { computeV52Candidate } from './scoringV52Candidate';
 import freshAudits from '../data/scoring-v52-new-audits.json';
+import ownerRelease from '../data/scoring-v52-owner-approved-2026-11-23.json';
+import migratedEvidence from '../data/scoring-v52-all-existing-audits-2026-11-21.json';
 import { computeV52Scorecard, type V52Scorecard } from './scoringV52';
 
-type AuditOrigin = {kind:'migration';card:V5Scorecard}|{kind:'native';card:V52Scorecard};
+type AuditOrigin = {kind:'migration';card:V5Scorecard}|{kind:'native'|'reviewedMigration';card:V52Scorecard};
 const source = new Map<string,V5Scorecard>();
 for(const card of [...c01.firms,...n01.firms] as V5Scorecard[]) {
   if (source.has(card.slug)) throw Error('V5.2 duplicate source '+card.slug);
@@ -27,6 +30,43 @@ for(const card of freshAudits.audits as V52Scorecard[]){
   computeV52Scorecard({...card,status:'proposition'});
   newCards.set(card.slug,card);
 }
+// The 25 owner-approved conversions are in the Nov 21 41-row evidence matrix,
+// NOT in the 11 previously-published V5 card files. Preserve all 13 source links.
+const ownerCards=new Map<string,{card:V52Scorecard,kind:'native'|'reviewedMigration'}>();
+for(const card of ownerRelease.reviewedAudits as V52Scorecard[]){
+  if(ownerCards.has(card.slug)||newCards.has(card.slug)) throw Error('V5.2 reviewed duplicate '+card.slug);
+  computeV52Scorecard({...card,status:'proposition'});
+  ownerCards.set(card.slug,{card,kind:'native'});
+}
+const migratedRows=new Map(migratedEvidence.rows.map(row=>[row.slug,row]));
+for(const slug of ownerRelease.migrationSlugs){
+  const row=migratedRows.get(slug);
+  if(!row||ownerCards.has(slug)||newCards.has(slug)||source.has(slug)) throw Error('V5.2 owner approved migration missing/duplicate '+slug);
+  const criteria=Object.fromEntries((Object.keys(row.criteriaV52) as Array<keyof typeof row.criteriaV52>).map(k=>{
+    const original=row.sourceCriteria[k];
+    const points=row.criteriaV52[k];
+    // Old V5 rationales sometimes explicitly cite the former scale; make the
+    // V5.2 conversion explicit, without pretending a fresh evidence check.
+    const reason=['A2','B1','B2'].includes(k)
+      ? 'V5.2 conversion from a dated source-backed V5 audit (old '+original.points+', new '+points+'). Original evidence: '+original.reason
+      : original.reason;
+    return [k,{...original,points,reason}];
+  })) as V52Scorecard['criteria'];
+  const card:V52Scorecard={
+    slug:row.slug,checkedOn:row.checkedOn,status:'proposition',
+    confidence:row.confidence as V52Scorecard['confidence'],previousDisplayedScore:row.oldDisplayed,
+    criteria,ruleDeductions:row.ruleDeductions as V52Scorecard['ruleDeductions'],
+    trustpilotActiveNotice:row.trustpilotPenalty===6,
+    contractingEntityMissing:row.legalCap===55&&row.criteriaV52.C1===0,
+    activeUnsuspendedStrikeOff:row.legalCap===55&&row.criteriaV52.C2===2,
+    closed:false,
+  };
+  if(computeV52Scorecard(card).final!==row.v52) throw Error('V5.2 approved migration score mismatch '+slug);
+  ownerCards.set(slug,{card,kind:'reviewedMigration'});
+}
+const ownerMigrated=new Set(ownerRelease.migrationSlugs);
+const ownerApprovedSlugs=new Set([...ownerMigrated,...ownerRelease.reviewedAudits.map(card=>card.slug)]);
+if(ownerApprovedSlugs.size!==32||ownerMigrated.size!==25||ownerCards.size!==32||!ownerRelease.excludedSlugs.includes('ck-capital')||ownerApprovedSlugs.has('ck-capital')) throw Error('V5.2 owner release CK veto/count mismatch');
 const approved = new Map<string,AuditOrigin>();
 const publishedPreviously = new Set(oldWhitelist.approvals.map(x=>x.slug));
 if(whitelist.approvals.length<oldWhitelist.approvals.length) throw Error('V5.2: previously approved firm missing');
@@ -40,16 +80,23 @@ for(const entry of whitelist.approvals) {
     if(computeV52Candidate({...card,status:'approuvee'}).final!==entry.expectedFinal) throw Error('V5.2: converted score changed '+entry.slug);
     approved.set(entry.slug,{kind:'migration',card:{...card,status:'approuvee'}});
   } else {
-    const card=newCards.get(entry.slug);
-    if(!card||card.checkedOn!==entry.checkedOn||computeV52Scorecard({...card,status:'approuvee'}).final!==entry.expectedFinal) throw Error('V5.2: new card lacks matched approval '+entry.slug);
-    approved.set(entry.slug,{kind:'native',card:{...card,status:'approuvee'}});
+    const reviewed=ownerCards.get(entry.slug);
+    const card=newCards.get(entry.slug)??reviewed?.card;
+    if(!card||card.checkedOn!==entry.checkedOn||computeV52Scorecard({...card,status:'approuvee'}).final!==entry.expectedFinal) throw Error('V5.2: new/reaudited/migrated card lacks matched evidence '+entry.slug);
+    approved.set(entry.slug,{kind:reviewed?.kind??'native',card:{...card,status:'approuvee'}});
   }
 }
 for(const name of publishedPreviously)if(!approved.has(name))throw Error('V5.2: approved V5 firm was lost '+name);
+if(approved.has('ck-capital')||approved.size!==90||[...ownerApprovedSlugs].some(s=>!approved.has(s))) throw Error('V5.2: CK veto or 90-score release not enforced');
 
 export function isPublishedV52(slug:string,latestScoreReview?:string):boolean {
   const source=approved.get(slug);
-  return Boolean(source&&(!latestScoreReview||latestScoreReview<=source.card.checkedOn));
+  // Owner approved the 32 candidate snapshots on 23 Nov after reviewing the score movements.
+  // Keep the original evidence date for source traceability; only use the decision date
+  // when deciding whether this approval supersedes earlier website score edits.
+  if(!source) return false;
+  const gatingDate=ownerApprovedSlugs.has(slug)?ownerRelease.approvedOn:source.card.checkedOn;
+  return !latestScoreReview||latestScoreReview<=gatingDate;
 }
 export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
   if(!isPublishedV52(firm.slug,latestScoreReview)) return undefined;
@@ -58,8 +105,8 @@ export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
   // A native audit explicitly examined the Trustpilot withholding notice at its
   // checkedOn date. Earlier site metadata can be stale: use the newer audited
   // snapshot unless an even newer public-signal check supersedes it.
-  const nativeNoticeCurrent=origin.kind==='native' && !(firm.reviewSignals.lastSignalCheck>card.checkedOn);
-  const currentFlag=origin.kind==='native' && nativeNoticeCurrent
+  const nativeNoticeCurrent=origin.kind!=='migration' && !(firm.reviewSignals.lastSignalCheck>card.checkedOn);
+  const currentFlag=origin.kind!=='migration' && nativeNoticeCurrent
     ?origin.card.trustpilotActiveNotice:Boolean(firm.reviewSignals.trustpilotRatingWithheld);
   const result=origin.kind==='migration'
     ?computeV52Candidate({...origin.card,closed:firm.status==='Fermée',trustpilotActiveNotice:currentFlag})
