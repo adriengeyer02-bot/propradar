@@ -1,4 +1,5 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
+import statusReviewData from '../data/status-review-37-decisions-2026-11-23.json';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
 import { getPublishedV52Score, isPublishedV52 } from './scoringV52Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
@@ -13037,7 +13038,37 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV52CapsRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+// Status-only documentary review overlay, separate from all scoring and ranking logic.
+// Records for all 37 uncertain operators are available to researchers; only 11
+// verified/high-concern cases receive a buyer-facing warning and disabled purchases.
+// Never mark a whole brand legally closed solely because a historic LLC was dissolved.
+type PublicStatusDecision = typeof statusReviewData.rows[number];
+const statusReviewMap=new Map<string,PublicStatusDecision>(statusReviewData.rows.map(item=>[item.slug,item]));
+if(statusReviewMap.size!==37||statusReviewData.firmCount!==37||statusReviewData.publicWarningCount!==11||!statusReviewData.ckCapitalVeto) throw Error('37 status review invalid');
+function applyStatusReviewForBuyers(firm:PropFirm):PropFirm {
+  const decision=statusReviewMap.get(firm.slug);
+  if(!decision||decision.publicAction!=='display_warning_and_disable_new_purchases') return firm;
+  if(!decision.publicWarning||!decision.sourceLinks.length) throw Error('Missing status warning sources '+firm.slug);
+  // Preserve original sources[0], which the firm detail UI uses to detect an
+  // unsafe historic destination. Additional official evidence goes at the end.
+  const sources=[...firm.sources];
+  const seen=new Set(sources.map(item=>item.url));
+  for(const url of decision.sourceLinks.slice(0,6)){
+    if(!seen.has(url)){sources.push({label:'Status review, 23 Nov 2026',url});seen.add(url);}
+  }
+  // Existing 2026 status decisions remain watchlist entries, not judicial
+  // insolvency findings for an unrelated successor/brand.
+  return {
+    ...firm,
+    status:firm.status==='Fermée'?'Fermée':'À surveiller',
+    listedDomainWarning:decision.publicWarning,
+    lastReviewed:firm.lastReviewed>statusReviewData.reviewDate?firm.lastReviewed:statusReviewData.reviewDate,
+    sources,
+    products:firm.products.map(product=>({...product,linkToStart:undefined})),
+    partnerOffer:undefined,
+  };
+}
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV52CapsRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer).map(applyStatusReviewForBuyers);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');
