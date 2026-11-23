@@ -39,7 +39,7 @@ const fr: GuideArticleTranslations = {
       {
         heading: 'Paiements',
         paragraphs: [
-          "Le partage généralement annoncé est de 80 %, mais les options, cycles de retrait et contrats varient. La FAQ officielle consultée le 23 novembre 2026 mentionne un minimum de 100 $ par demande et **2 % de frais de traitement**. Les deux premières récompenses peuvent être plafonnées au plus faible entre **6 % du solde initial et 10 000 $** ; pour les comptes **2-Step de 5 000 $ achetés à partir du 25 juillet 2026**, le plafond est de **4 %**. Rise, virement, Skrill et crypto présentent des plafonds distincts.",
+          "Le partage généralement annoncé est de 80 %, mais les options, cycles de retrait et contrats varient. La FAQ officielle consultée le 23 novembre 2026 mentionne un minimum de 100 $ par demande (**35 $ pour les comptes Goat 1$**) et **2 % de frais de traitement**. Les deux premières récompenses peuvent être plafonnées au plus faible entre **6 % du solde initial et 10 000 $** ; pour les comptes **2-Step de 5 000 $ achetés à partir du 25 juillet 2026**, le plafond est de **4 %**. Rise, virement, Skrill et crypto présentent des plafonds distincts.",
           "Le centre d'aide indique désormais un traitement sous **2 jours ouvrés**, sous réserve du KYC au premier retrait, de la signature d'un Trader Agreement et d'un éventuel contrôle par la Risk Team. Cette annonce de traitement n'est pas une preuve indépendante de réception bancaire définitive. Lisez le contrat et la politique du produit exact avant de payer.",
         ],
       },
