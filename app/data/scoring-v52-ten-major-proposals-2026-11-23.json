@@ -1,0 +1,1430 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-23",
+  "sourceBase": "audits/v52-priority-10-contract-payout-sweep-2026-11-23.json from PR #268, supplemented with official pages and Payout Junction methodology",
+  "status": "RESEARCH_NOT_OWNER_APPROVED",
+  "liveScoreChanges": 0,
+  "counts": {
+    "firms": 10,
+    "criteria": 130,
+    "alreadyPublishedV52Unchanged": 90
+  },
+  "notes": "Scores from current public sources are provisional: contracts signed after evaluation, registry extracts and six-link payout evidence incomplete. Only Audacity.capital has official Trustpilot rating withholding. Do NOT publish without owner's explicit review.",
+  "records": [
+    {
+      "name": "FTMO",
+      "domain": "ftmo",
+      "program": "FTMO Challenge 1-Step et 2-Step, puis FTMO Account CFD simulé ; FTMO US distinct",
+      "legal": "FTMO s.r.o. cité par la mention légale du site ; référence à confirmer avec l'accord FTMO Account effectivement signé après évaluation.",
+      "scorecard": {
+        "slug": "ftmo",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 90,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "La FAQ FTMO distingue la quote-part 1-Step (90 %) et 2-Step (80 %, parfois 90 % avec progression), les minima de méthode et la demande après clôture des positions. Certains plafonds/frais par canal et date de cohorte n'ont pas été consolidés au même parcours : 8/10.",
+            "sources": [
+              "https://ftmo.com/faq/how-do-i-withdraw-my-profits/"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/ftmo.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "FTMO annonce et documente ses récompenses et des témoignages indépendants existent, mais ce lot ne relie aucun payout réel à un bénéficiaire tiers, un compte FTMO précis et un relevé final sur les six maillons : preuves publiques limitées, A3=1.",
+            "sources": [
+              "https://ftmo.com/fr/faq/comment-fonctionne-votre-regle-de-coherence/",
+              "https://www.trustpilot.com/review/ftmo.com"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "La page officielle Forbidden Trading Practices envisage la perte de récompenses potentielles après une appréciation large des stratégies à risque, notamment non raisonnablement réplicables; pouvoir de suppression sans liste exhaustive et contrat FTMO Account individuel indisponible, B1=3 provisoire.",
+            "sources": [
+              "https://ftmo.com/en/forbidden-trading-practices/"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Le critère de réplicabilité et les interdictions FTMO sont déjà utilisés comme fondement du risque de Reward B1; la cohérence chiffrée 1-Step ne se transpose pas au 2-Step. Aucune sanction B2 DISTINCTE prouvée sur une même phase/cohorte : 10/10.",
+            "sources": [
+              "https://ftmo.com/en/forbidden-trading-practices/"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Imprint identifie FTMO s.r.o. à Prague; aucun extrait de registre primaire ni rapprochement acheteur FTMO Challenge versus débiteur de l'accord FTMO Account dans les pièces analysées : identité partiellement établie, 4/10.",
+            "sources": [
+              "https://ftmo.com/en/imprint/"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://ftmo.com/en/forbidden-trading-practices/"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://ftmo.com/en/forbidden-trading-practices/"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Les pages distinguent modèles 1-Step/2-Step, objectifs et pertes, restriction EA/news, KYC et contenu de la phase simulated FTMO Account; l'information est largement disponible par produit, 8/8.",
+            "sources": [
+              "https://ftmo.com/en/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "Mentions générales et FAQ accessibles ; le contrat de Reward signé et une date/version contractuelle correspondant à la cohorte achetée ainsi que la protection des comptes existants n'ont pas toutes été établies, 4/6.",
+            "sources": [
+              "https://ftmo.com/en/forbidden-trading-practices/"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Caractère simulé explicite et objectifs de programme publiés; cohérence checkout/contrat FTMO Account et rôle du payeur final non entièrement testés, 4/6.",
+            "sources": [
+              "https://ftmo.com/en/forbidden-trading-practices/"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "FTMO propose ses services de trading simulé depuis plusieurs années, avec activité documentaire antérieure à novembre 2023 : plus de 36 mois établis pour la marque, 6/6.",
+            "sources": [
+              "https://ftmo.com/en/imprint/"
+            ]
+          },
+          "E2": {
+            "points": 3,
+            "reason": "Support officiel, assistance accessible et procédure de dialogue utilisateur visibles ; résolution tierce de litige payout et recours contradictoire détaillé non vérifiés, 3/4.",
+            "sources": [
+              "https://www.trustpilot.com/review/ftmo.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "contract_ftmo_account_not_sighted",
+        "A3_six_links_not_completed",
+        "different_1step_2step"
+      ],
+      "pillars": {
+        "A": 15,
+        "B": 13,
+        "C": 9,
+        "D": 16,
+        "E": 9
+      },
+      "raw": 62,
+      "trustpilotPenalty": 0,
+      "payoutCap": 64,
+      "proposedScore": 62,
+      "delta": -28,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://ftmo.com/en/forbidden-trading-practices/",
+        "p": "https://ftmo.com/faq/how-do-i-withdraw-my-profits/",
+        "c": "https://ftmo.com/en/imprint/",
+        "d": "https://ftmo.com/en/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/",
+        "q": "https://ftmo.com/fr/faq/comment-fonctionne-votre-regle-de-coherence/",
+        "tp": "https://www.trustpilot.com/review/ftmo.com"
+      }
+    },
+    {
+      "name": "Topstep",
+      "domain": "topstep",
+      "program": "Trading Combine / XFA Standard et Consistency / Live Funded Account futurs",
+      "legal": "Topstep LLC (conditions du site) ; TopstepFunded LLC dans les règles Live. Leur rôle dans la rémunération XFA par cohorte doit être rapproché.",
+      "scorecard": {
+        "slug": "topstep",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 81,
+        "criteria": {
+          "A1": {
+            "points": 10,
+            "reason": "Topstep distingue XFA Standard (5 winning days d'au moins $150) de Consistency (3 jours, meilleure journée max 40 %) et de Live, cap selon taille et add-on, minimum $125, frais ACH/Wire de $30 et split 90/10; cinq catégories A1 décrites par parcours, 10/10.",
+            "sources": [
+              "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/topstep.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "Topstep donne des statistiques de participants ayant reçu un payout et des témoignages, mais le dossier ne fournit pas un échantillon de règlements indépendamment rattachés à des traders XFA/Live, aux contrats et au dénouement bancaire : A3=1 sans présumer qu'il ne paie pas.",
+            "sources": [
+              "https://help.topstep.com/en/articles/16989498-i-ve-been-banned-what-are-my-options",
+              "https://www.trustpilot.com/review/topstep.com"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "Topstep précise qu'une interdiction met fin au compte et entraîne la perte des soldes et des demandes de payout en cours; les motifs du cadre 'Prohibited Conduct' et les recours ne sont pas circonscrits par l'accord individualisé ici : pouvoir sur les récompenses à confirmer, B1=3.",
+            "sources": [
+              "https://www.topstep.com/terms-of-use"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Les cinq winning days, 40 % Consistency, limites de perte et plafonds sont chiffrés. L'effet de la fermeture après ban est déjà traité en B1; pas d'autre règle vague ou rétroactivité défavorable prouvée sur le même XFA, B2=10.",
+            "sources": [
+              "https://www.topstep.com/terms-of-use"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Topstep LLC figure dans les conditions d'utilisation; TopstepFunded LLC régit le Live. Le vendeur du Combine, la partie à l'XFA et le débiteur LFA ne sont pas tous rattachés aux registres/contrats signés, C1=4.",
+            "sources": [
+              "https://www.topstep.com/live-funded-account-rules"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://www.topstep.com/terms-of-use"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://www.topstep.com/terms-of-use"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Page de payout et pages XFA/Live publient dimensions, limites, frais par rail, qualification, restrictions et éligibilité selon pays et progression, 8/8.",
+            "sources": [
+              "https://www.topstep.com/express-funded-account-rules"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "Règles Live horodatées juillet 2026 et cadres publics; garanties de grandfathering de tous les XFA anciens et accord signé ne sont pas entièrement documentés ici, 4/6.",
+            "sources": [
+              "https://www.topstep.com/terms-of-use"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Express simulé versus Live et entités différentes expliqués, avec paramètres de produits distincts; panier/contrat final et responsable des rewards XFA non recoupés, 4/6.",
+            "sources": [
+              "https://www.topstep.com/terms-of-use"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Topstep et le service de Trading Combine existent depuis plus de 36 mois avant novembre 2026, 6/6.",
+            "sources": [
+              "https://www.topstep.com/live-funded-account-rules"
+            ]
+          },
+          "E2": {
+            "points": 3,
+            "reason": "Support et help desk accessibles, FAQ d'interdiction et voies de contact identifiables, mais recours réellement indépendant à la fermeture non démontré, 3/4.",
+            "sources": [
+              "https://www.trustpilot.com/review/topstep.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "XFA_LFA_not_same_contract",
+        "no_independent_A3",
+        "country_policy_nov17"
+      ],
+      "pillars": {
+        "A": 17,
+        "B": 13,
+        "C": 9,
+        "D": 16,
+        "E": 9
+      },
+      "raw": 64,
+      "trustpilotPenalty": 0,
+      "payoutCap": 64,
+      "proposedScore": 64,
+      "delta": -17,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://www.topstep.com/terms-of-use",
+        "p": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "c": "https://www.topstep.com/live-funded-account-rules",
+        "d": "https://www.topstep.com/express-funded-account-rules",
+        "q": "https://help.topstep.com/en/articles/16989498-i-ve-been-banned-what-are-my-options",
+        "tp": "https://www.trustpilot.com/review/topstep.com"
+      }
+    },
+    {
+      "name": "MyFundedFutures",
+      "domain": "myfundedfutures",
+      "program": "Rapid (Intraday et EOD) Sim-Funded, Builder et Pro ; Perpetuals hors périmètre",
+      "legal": "MyFunded Futures, LLC désignée dans CGU. Funding Perpetuals Holdings Inc est une autre société et ne doit pas servir de preuve pour futures classiques.",
+      "scorecard": {
+        "slug": "myfundedfutures",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 81,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Rapid Sim Funded annonce une fenêtre de demande 24 h après premier trade et $500 minimum après buffer, split 90% dès 12/01/2026; Builder et Pro ont caps et consistency séparés (Pro 14 jours, $1,000). Frais et caps Rapid exhaustifs non vérifiés, A1=8.",
+            "sources": [
+              "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/myfundedfutures.com"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction attribue à MyFundedFutures des flux Rise horodatés de plusieurs années, vérifiables on-chain, mais la méthodologie avertit que certains wallets peuvent être opérationnels et les contrats/bénéficiaires restent non vérifiés : A3=2, pas un historique bancaire six maillons.",
+            "sources": [
+              "https://payoutjunction.com/firms/myfundedfutures",
+              "https://www.trustpilot.com/review/myfundedfutures.com"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "Les CGU de MyFunded Futures LLC §16.2.3 permettent retenir/confisquer des fonds, payouts ou rewards après violation; §23.1.11 emploie une appréciation large de comportements réputés dangereux ou non éthiques. Aucun recours contractuel complet n'est démontré : B1=3.",
+            "sources": [
+              "https://myfundedfutures.com/terms"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Rapid, Builder, Pro et Rapid EOD ont règles de drawdown/consistency distinctes, mais objectivement publiées. La décision de conformité de §23 est déjà retenue comme risque de Reward en B1; pas de second fait distinct vérifié, B2=10.",
+            "sources": [
+              "https://myfundedfutures.com/terms"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "CGU identifient MyFunded Futures LLC, distinguent la division Perpetuals, mais la partie du Sim Funded payout et le registre actuel du LLC ne sont pas recoupés au trader agreement, 4/10.",
+            "sources": [
+              "https://myfundedfutures.com/disclaimer"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://myfundedfutures.com/terms"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://myfundedfutures.com/terms"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Plans Rapid, Builder et Pro présentent objectifs, buffers, profits, règles de qualification et restrictions. Les tarifs du checkout par cohorte sont séparés, information abondante pour 8/8.",
+            "sources": [
+              "https://help.myfundedfutures.com/en/articles/13286542-rapid-plan-100k-a-comprehensive-look"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU publiées et règles d'aide datées août 2026, mais version signée et protection d'anciens comptes en cas de modification non réconciliées intégralement, 4/6.",
+            "sources": [
+              "https://myfundedfutures.com/terms"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Les phases simulated versus live, la firme futures et la division Perpetuals sont différenciées publiquement; le vendeur/acheteur final n'est pas testé, 4/6.",
+            "sources": [
+              "https://myfundedfutures.com/terms"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Activité et présence commerciale de MyFundedFutures à partir de 2023 et paiements traçables dans les flux publics depuis 2024 : plus de 36 mois probables à fin novembre 2026, palier 6 avec preuve d'ancienneté à archiver.",
+            "sources": [
+              "https://myfundedfutures.com/disclaimer"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Centre d'aide, tickets et réponses clients accessibles; procédure de recours relative à la confiscation de rewards et cas non-payout résolu par tiers non documentés, 2/4.",
+            "sources": [
+              "https://www.trustpilot.com/review/myfundedfutures.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "do_not_claim_24h_cash",
+        "MFF_perpetuals_separate",
+        "onchain_trader_identity_missing"
+      ],
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 16,
+        "E": 8
+      },
+      "raw": 62,
+      "trustpilotPenalty": 0,
+      "payoutCap": 69,
+      "proposedScore": 62,
+      "delta": -19,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://myfundedfutures.com/terms",
+        "p": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "c": "https://myfundedfutures.com/disclaimer",
+        "d": "https://help.myfundedfutures.com/en/articles/13286542-rapid-plan-100k-a-comprehensive-look",
+        "q": "https://payoutjunction.com/firms/myfundedfutures",
+        "tp": "https://www.trustpilot.com/review/myfundedfutures.com"
+      }
+    },
+    {
+      "name": "The5ers",
+      "domain": "the5ers",
+      "program": "High Stakes 2-Step / Bootcamp / Hyper Growth ; cycle payout funded non transférable entre modèles",
+      "legal": "CGU du 28/10/2026 identifient FIVE PERCENT ONLINE LTD (Angleterre #12553363) et société liée en Israël #515864007 ; rôle exact de la partie payeuse et de chaque programme à recouper.",
+      "scorecard": {
+        "slug": "the5ers",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 78,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "High Stakes indique des retraits à intervalle de 14 jours sur funded et une requalification du délai après scaling; Bootcamp et Hyper Growth ont modalités et frais potentiellement différents. FAQ précise montants minima/cycles mais modèle complet non reconstruit, A1=8.",
+            "sources": [
+              "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/the5ers.com"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction suit des paiements Rise attribués à The5ers depuis décembre 2023, mais rapprochement six maillons payeur-programme-bénéficiaire-finalité n'est pas documenté dans ce lot; A3=2 malgré l'activité on-chain pluriannuelle.",
+            "sources": [
+              "https://payoutjunction.com/firms/the5ers",
+              "https://www.trustpilot.com/review/the5ers.com"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU §03.2 : faute de réaliser une interview de risque dans le délai requis, des payouts en attente peuvent être refusés et comptes annulés, même sans démonstration de fraude. Perte de récompenses contractuellement prévue; recours adéquat non documenté, B1=3.",
+            "sources": [
+              "https://the5ers.com/terms-and-conditions/"
+            ]
+          },
+          "B2": {
+            "points": 7,
+            "reason": "Fait DISTINCT de l'interview B1 : §10.07(19) permet de qualifier comme non commerciale ou non viable une stratégie 'sole discretion' sans critère exhaustif, avec sanction de clôture. Cette clause de trading vague vaut −3 en B2, sans déduire à nouveau la perte de payout visée en B1.",
+            "sources": [
+              "https://the5ers.com/terms-and-conditions/"
+            ],
+            "negativeFactIds": [
+              "the5ers-uncommercial-2026"
+            ]
+          },
+          "C1": {
+            "points": 7,
+            "reason": "Deux entités nommées dans CGU et UK #12553363 recoupable au registre Companies House; rôle de l'entité israélienne et de l'agent payeur pour un High Stakes funded encore partiellement flou, 7/10 provisoire.",
+            "sources": [
+              "https://find-and-update.company-information.service.gov.uk/company/12553363"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://find-and-update.company-information.service.gov.uk/company/12553363"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://the5ers.com/terms-and-conditions/"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "High Stakes, Bootcamp, Hyper Growth affichent étapes, objectifs et pertes, KYC, pays, processus de payout et prix; les restrictions d'usage sont détaillées dans les pages officielles, D1=8.",
+            "sources": [
+              "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "CGU datées 28/10/2026 et librement accessibles; §06.3 explique que les changements de paramètres ne doivent pas toucher les services achetés avant notification, et l'actualisation des Trading Rules est annoncée, D2=6.",
+            "sources": [
+              "https://the5ers.com/terms-and-conditions/"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Simulation et trois modèles distincts sont expliqués, société anglaise/israélienne signalées; checkout et accord funded du contrat individuel non vérifiés, D3=4.",
+            "sources": [
+              "https://the5ers.com/terms-and-conditions/"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "La marque The5ers et l'exploitation du challenge sont documentées bien avant novembre 2023, ancienneté 36 mois acquise, E1=6.",
+            "sources": [
+              "https://find-and-update.company-information.service.gov.uk/company/12553363"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Centre d'aide, contact et réponses aux utilisateurs identifiables, mais preuve de résolution indépendante de contestations d'interview et d'account closure non obtenue, E2=2.",
+            "sources": [
+              "https://www.trustpilot.com/review/the5ers.com"
+            ]
+          }
+        },
+        "ruleDeductions": [
+          {
+            "factId": "the5ers-uncommercial-2026",
+            "kind": "ambiguite",
+            "points": 3,
+            "program": "High Stakes / Bootcamp / Hyper Growth couverts par CGU du 28 octobre 2026",
+            "phase": "Evaluation et compte funded — selon contrat signé",
+            "clause": "CGU §10.07(19) : activité considérée non commerciale ou stratégie non viable à la seule discrétion de l'entreprise",
+            "consequence": "Compte désactivé / qualification stratégie interdite ; risque distinct de l'obligation d'interview §03.2 notée B1",
+            "source": "https://the5ers.com/terms-and-conditions/"
+          }
+        ],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "interview_payout_forfeiture",
+        "uncommercial_strategy_subjective",
+        "entity_UK_Israel_roles"
+      ],
+      "pillars": {
+        "A": 16,
+        "B": 10,
+        "C": 12,
+        "D": 18,
+        "E": 8
+      },
+      "raw": 64,
+      "trustpilotPenalty": 0,
+      "payoutCap": 69,
+      "proposedScore": 64,
+      "delta": -14,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://the5ers.com/terms-and-conditions/",
+        "p": "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/",
+        "c": "https://find-and-update.company-information.service.gov.uk/company/12553363",
+        "d": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+        "q": "https://payoutjunction.com/firms/the5ers",
+        "tp": "https://www.trustpilot.com/review/the5ers.com"
+      }
+    },
+    {
+      "name": "Fintokei",
+      "domain": "fintokei",
+      "program": "ProTrader / ProTrader Swing / SwiftTrader / StartTrader, provider agreements par modèle",
+      "legal": "Fintokei et AXSE Brokerage Ltd Seychelles sont cités par la FAQ officielle ; convention historique Fintokei s.r.o. tchèque. Contrepartie du contrat funded actuel à clarifier.",
+      "scorecard": {
+        "slug": "fintokei",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 78,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "ProTrader, ProTrader Swing et StartTrader : 14 jours entre première trade et demande / retrait précédent; SwiftTrader : 14 jours et seuil 3%. Minimums 100 EUR/USD sauf exceptions, crypto 2,5% plus forfait ; caps selon programme non consolidés, A1=8.",
+            "sources": [
+              "https://support.fintokei.com/en/articles/6538884-how-and-how-often-can-i-withdraw-my-performance-rewards-and-what-is-the-minimum-amount"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/fintokei.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "La firme annonce des récompenses et plusieurs traders parlent de virements, mais aucun dossier avec bénéficiaire indépendant, référence bancaire et accord ProTrader signé n'est établi dans cette collecte : A3=1.",
+            "sources": [
+              "https://support.fintokei.com/en/articles/11904545-when-will-i-receive-my-payout",
+              "https://www.trustpilot.com/review/fintokei.com"
+            ]
+          },
+          "B1": {
+            "points": 6,
+            "reason": "La politique officielle couvre les récompenses et la possibilité de sanctionner une violation; faute de contrat Provider Fintokei actuel correctement raccordé à la cohorte et de clause précise sur récompenses déjà acquises, B1 neutre provisoire 6, et non 15 par absence de clause.",
+            "sources": [
+              "https://www.fintokei.com/terms-and-conditions/"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Les drawdowns 5% jour /10% total ProTrader, KYC, limites de risque et jours sont publiés. Des avis signalent des mesures de consistance après contrôle, non établies comme clause officielle objective de la cohorte : aucune pénalité B2 fondée sur un témoignage seul.",
+            "sources": [
+              "https://www.fintokei.com/terms-and-conditions/"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "La FAQ publique associe marque Fintokei à AXSE Brokerage Ltd aux Seychelles (#8424258-1), mais des documents historiques de Provider Program mentionnent une structure tchèque; partie débitrice actuelle et agreement par produit non confirmés, C1=4.",
+            "sources": [
+              "https://support.fintokei.com/en/articles/6481800-what-is-fintokei"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://www.fintokei.com/terms-and-conditions/"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://www.fintokei.com/terms-and-conditions/"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Pages ProTrader/SwiftTrader et help desk exposent tailles, pertes, objectifs, conditions de trading et éligibilité, niveau documentaire élevé malgré variantes, D1=8.",
+            "sources": [
+              "https://support.fintokei.com/en/articles/6538878-what-rules-do-i-have-to-follow-to-keep-my-protrader-account"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "Conditions publiques et contrats Provider identifiables, mais version datée opposable à tous les programmes commercialisés en novembre et grandfathering non réconciliés, D2=4.",
+            "sources": [
+              "https://www.fintokei.com/terms-and-conditions/"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Le caractère de compte virtuel et les modalités de payout sont exposés. Rôles AXSE/Fintokei Europe et checkout de chaque parcours pas alignés définitivement, D3=4.",
+            "sources": [
+              "https://www.fintokei.com/terms-and-conditions/"
+            ]
+          },
+          "E1": {
+            "points": 4,
+            "reason": "Marque Fintokei présente publiquement depuis 2023–2024, mais preuve d'activité commerciale prop remontant à 36 mois au jour de l'audit non sécurisée; palier 4 (18–35 mois) prudent.",
+            "sources": [
+              "https://support.fintokei.com/en/articles/6481800-what-is-fintokei"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Help desk documente les retraits et questions fréquentes; support identifiable, mais recours après refus ou résiliation non prouvé dans les pièces, E2=2.",
+            "sources": [
+              "https://www.trustpilot.com/review/fintokei.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "historical_provider_terms_vs_current_ENTITY",
+        "crypto_fees_2p5percent",
+        "insufficient_six_links"
+      ],
+      "pillars": {
+        "A": 15,
+        "B": 16,
+        "C": 9,
+        "D": 16,
+        "E": 6
+      },
+      "raw": 62,
+      "trustpilotPenalty": 0,
+      "payoutCap": 64,
+      "proposedScore": 62,
+      "delta": -16,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://www.fintokei.com/terms-and-conditions/",
+        "p": "https://support.fintokei.com/en/articles/6538884-how-and-how-often-can-i-withdraw-my-performance-rewards-and-what-is-the-minimum-amount",
+        "c": "https://support.fintokei.com/en/articles/6481800-what-is-fintokei",
+        "d": "https://support.fintokei.com/en/articles/6538878-what-rules-do-i-have-to-follow-to-keep-my-protrader-account",
+        "q": "https://support.fintokei.com/en/articles/11904545-when-will-i-receive-my-payout",
+        "tp": "https://www.trustpilot.com/review/fintokei.com"
+      }
+    },
+    {
+      "name": "Tradeify",
+      "domain": "tradeify",
+      "program": "Tradeify Futures: Growth/Lightning et Select Flex/Select Daily ; Tradeify FX distinct",
+      "legal": "Tradeify Holdings, Corp. citée dans Funded Trader Agreement d'octobre 2026, mais numéro d'enregistrement et prestataire Elite Live non vérifiés officiellement.",
+      "scorecard": {
+        "slug": "tradeify",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 78,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Select Flex (5-Day) vs Select Daily et Growth/Lightning publient leurs caps par taille, limites en jours et buffers; caps et conditions diffèrent pour achats pré/post 01/09/2026. Règles et canal de demande lisibles, frais complets par payout non regroupés, A1=8.",
+            "sources": [
+              "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/tradeify.co"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction suit le volume Tradeify Futures sur le rail Rise avec transactions datées, mais Tradeify FX/Tradeify 247 sont séparés et l'attribution au bénéficiaire et au compte Select n'est pas vérifiée aux six maillons : A3=2 pour le service Futures, pas transférable au Forex.",
+            "sources": [
+              "https://payoutjunction.com/firms/tradeify-futures",
+              "https://www.trustpilot.com/review/tradeify.co"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "Funded Trader Agreement §4.4 : même un payout préalablement approuvé mais impayé peut être retenu pendant une enquête sans délai maximal précis; §6.7(h)/§6.11(e) permet forfeiture de gains de la période infractionnelle, B1=3.",
+            "sources": [
+              "https://tradeify.co/funded-trader-agreement"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Règle de consistency et minimum de jours des Select Flex/Daily sont chiffrées. Le droit de suspendre/retirer des rewards pour infraction déjà sanctionné en B1 ne reçoit aucune pénalité B2 sans autre contradiction datée, B2=10.",
+            "sources": [
+              "https://tradeify.co/funded-trader-agreement"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Le trader agreement nomme Tradeify Holdings, Corp. mais ne donne pas ici de registre ni numéro; l'entité Elite Live et prestataire de paiement restent à identifier sur contrat signataire, C1=4.",
+            "sources": [
+              "https://help.tradeify.co/en/articles/17069653-risk-compliance-guidelines-faq"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://tradeify.co/funded-trader-agreement"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://tradeify.co/funded-trader-agreement"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "FAQ publie frais de comptes, phases, drawdown, restrictions trading et pays admissibles avec distinction Select/Growth/Lightning, D1=8.",
+            "sources": [
+              "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "Trader Agreement dernière modification octobre 2026 et §16 permet changements des conditions par publication; mécanisme explicite même s'il est peu protecteur. Conditions lisibles, date et applicabilité mentionnées = 6/6.",
+            "sources": [
+              "https://tradeify.co/funded-trader-agreement"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Simulated funded et Elite Live ainsi que Select/Growth sont décrits; checkout et éventuelle migration Live peuvent changer la partie contractante, sans preuve de concordance finale, D3=4.",
+            "sources": [
+              "https://tradeify.co/funded-trader-agreement"
+            ]
+          },
+          "E1": {
+            "points": 4,
+            "reason": "Activité de marque Tradeify depuis 2024 selon données et traces de clients; ancienneté de 18 à 35 mois plutôt que 36+ non certifiés, E1=4.",
+            "sources": [
+              "https://help.tradeify.co/en/articles/17069653-risk-compliance-guidelines-faq"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Support, help center et réponse aux questions publiés; contestations contractuelles et recours indépendants non vérifiés, E2=2.",
+            "sources": [
+              "https://www.trustpilot.com/review/tradeify.co"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "withhold_approved_unpaid_payout",
+        "pre_post_2026_09_01",
+        "Tradeify_FX_separate"
+      ],
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 18,
+        "E": 6
+      },
+      "raw": 62,
+      "trustpilotPenalty": 0,
+      "payoutCap": 69,
+      "proposedScore": 62,
+      "delta": -16,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://tradeify.co/funded-trader-agreement",
+        "p": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "c": "https://help.tradeify.co/en/articles/17069653-risk-compliance-guidelines-faq",
+        "d": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+        "q": "https://payoutjunction.com/firms/tradeify-futures",
+        "tp": "https://www.trustpilot.com/review/tradeify.co"
+      }
+    },
+    {
+      "name": "Audacity Capital",
+      "domain": "audacity-capital",
+      "program": "Ability Challenge 1-/2-Step, Ability One et FTP Instant — versions distinctes",
+      "legal": "CGU nomment AudaCity Global LTD n°15850 Anjouan (Comores), AudaCity International FZCO Dubai facilitateur de paiement; licence déclarée non authentifiée sur registre primaire.",
+      "scorecard": {
+        "slug": "audacity-capital",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 77,
+        "criteria": {
+          "A1": {
+            "points": 6,
+            "reason": "La FAQ Ability annonce certains paliers/cycles de retrait, mais terme du FTP ancien et 1-/2-Step modernes ne peuvent être unifiés; minimums, coûts, délais et plafonds ne sont pas tous rapprochés sur une seule cohorte, A1=6.",
+            "sources": [
+              "https://audacity.capital/knowledge-center/ability-challenge/"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/audacity.capital"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "Éléments marketing de récompenses et témoignages, mais absence dans notre corpus d'une chaîne à six maillons entre contrat Ability, payeur, trader indépendant, règlement final, tiers et dates, A3=1.",
+            "sources": [
+              "https://www.trustpilot.com/review/www.audacitycapital.co.uk",
+              "https://www.trustpilot.com/review/audacity.capital"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU : en cas de Prohibited Practice selon l'appréciation raisonnable de la société, Audacity peut ignorer les trades, clôturer le compte et refuser le payout lié. Les frontières entre comportements excessifs et récompenses acquises restent larges; B1=3.",
+            "sources": [
+              "https://audacity.capital/en/terms-and-conditions/"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "La notion de 'gambling' ou risque excessif déclenche déjà la possibilité de refus de paiement recensée en B1; pas de pénalité supplémentaire pour cette même règle. Aucun cas de changement rétroactif confirmé sur un ancien contrat, B2=10.",
+            "sources": [
+              "https://audacity.capital/en/terms-and-conditions/"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "AudaCity Global LTD n°15850 est indiqué dans CGU, avec facilitateur AudaCity International FZCO; statut et débiteur de l'Ability funded lors du checkout non vérifiés par extrait primaire, C1=4.",
+            "sources": [
+              "https://audacity.capital/terms-and-conditions/"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://audacity.capital/en/terms-and-conditions/"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://audacity.capital/en/terms-and-conditions/"
+            ]
+          },
+          "D1": {
+            "points": 6,
+            "reason": "Pages Ability et FTP décrivent étapes, objectifs et limites, mais conditions d'éligibilité/pays et frais de chaque programme non entièrement alignés à la version courante, D1=6.",
+            "sources": [
+              "https://www.trustpilot.com/review/audacity.capital"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU accessibles et préavis annoncé d'au moins 7 jours avant modification matérielle de comptes existants, mais date/version de l'accord exact du compte non fixée, D2=4.",
+            "sources": [
+              "https://audacity.capital/en/terms-and-conditions/"
+            ]
+          },
+          "D3": {
+            "points": 2,
+            "reason": "Modèle simulé et live sous approbation sont documentés, mais opérateur Anjouan et agent de paiement Dubai, contrat funded et conditions publicitaires anciens/nouveaux non réconciliés, D3=2.",
+            "sources": [
+              "https://audacity.capital/en/terms-and-conditions/"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Audacity Capital comme offre de prop trading est active depuis bien plus de trois ans d'après historique de la marque; E1=6.",
+            "sources": [
+              "https://audacity.capital/terms-and-conditions/"
+            ]
+          },
+          "E2": {
+            "points": 3,
+            "reason": "Support public et canal de contestation payout à support@audacity.capital explicitement annoncé, mais taux de résolution et recours tierce partie non vérifiés, E2=3.",
+            "sources": [
+              "https://www.trustpilot.com/review/audacity.capital"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": true,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "OFFICIAL_TRUSTPILOT_RATING_WITHHELD",
+        "Anjouan_license_unverified",
+        "no_verified_A3",
+        "risk_team_interview_clause"
+      ],
+      "pillars": {
+        "A": 13,
+        "B": 13,
+        "C": 9,
+        "D": 12,
+        "E": 9
+      },
+      "raw": 56,
+      "trustpilotPenalty": 6,
+      "payoutCap": 64,
+      "proposedScore": 50,
+      "delta": -27,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://audacity.capital/en/terms-and-conditions/",
+        "p": "https://audacity.capital/knowledge-center/ability-challenge/",
+        "c": "https://audacity.capital/terms-and-conditions/",
+        "d": "https://www.trustpilot.com/review/audacity.capital",
+        "q": "https://www.trustpilot.com/review/www.audacitycapital.co.uk",
+        "tp": "https://www.trustpilot.com/review/audacity.capital"
+      }
+    },
+    {
+      "name": "MyFundedCapital",
+      "domain": "myfundedcapital",
+      "program": "CFD 1-Step/2-Step/Instant ; Prediction Markets and Stocks séparés, cohortes du 9/10/2026 et 22/10/2026",
+      "legal": "CGU du 23/11/2026 donnent MFC Technologies LLC FZ (#2312107.01) ; pages antérieures mentionnent My Funded Capital FZCO : vendeur exact du challenge et porteur du contrat funded à rapprocher.",
+      "scorecard": {
+        "slug": "myfundedcapital",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 75,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "CGU et payout calculator distinguent 1-Step premier retrait après 7 jours, 2-Step après 14, et Instant Funded 14 jours puis 7; montant, split et fees dépendent cohorte et programme. Maximum 5k par demande pour certains, frais tous rails non consolidés, A1=8.",
+            "sources": [
+              "https://myfundedcapital.com/faq/live-accounts/"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/myfundedcapital.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "Pages propres à MyFundedCapital montrent progression/payouts, mais aucun bénéficiaire bancaire tiers et facture funded avec preuve finale indépendamment authentifiée n'a été rapproché : A3=1.",
+            "sources": [
+              "https://myfundedcapital.com/learn/payouts/from-pass-to-payout/",
+              "https://www.trustpilot.com/review/myfundedcapital.com"
+            ]
+          },
+          "B1": {
+            "points": 9,
+            "reason": "CGU 23/11 définissent des motifs de retrait/rejet pour pratiques interdites et donnent sept jours au trader pour répondre, puis sept jours à la firme. Les motifs restent sanctionnables mais un processus motivé existe : B1=9 provisoire, sous réserve de revoir le contrat individuel.",
+            "sources": [
+              "https://myfundedcapital.com/terms-and-conditions/"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Règles de consistency 35% funded, best day 50% depuis octobre et jours minimaux 3 pour cohortes ciblées sont chiffrées. Pas de règle vague distincte prouvée ou de rétroactivité défavorable appliquée, donc B2=10.",
+            "sources": [
+              "https://myfundedcapital.com/terms-and-conditions/"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Termes au 23/11 nomment MFC Technologies LLC FZ et son identifiant, mais d'autres textes du site nomment My Funded Capital FZCO; registre officiel et accord récompense de l'acheteur non rapprochés, C1=4.",
+            "sources": [
+              "https://myfundedcapital.com/tools/payout-date-calculator/"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://myfundedcapital.com/terms-and-conditions/"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://myfundedcapital.com/terms-and-conditions/"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Pages Challenge et Live Accounts détaillent modèles, risques, prix, KYC et restrictions, y compris règles nouvelles par achat; D1=8.",
+            "sources": [
+              "https://myfundedcapital.com/faq/trading-rules/"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "CGU mises à jour 23/11/2026, accessibles, et protègent explicitement les règles de payout des comptes existants contre changements ordinaires; trois critères de transparence satisfaits D2=6.",
+            "sources": [
+              "https://myfundedcapital.com/terms-and-conditions/"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Modèles simulés annoncés et calendrier de payouts différents selon cohorte; identité vendeur/porteur de dette dans les pages 2026 et checkout pas encore réconciliés, D3=4.",
+            "sources": [
+              "https://myfundedcapital.com/terms-and-conditions/"
+            ]
+          },
+          "E1": {
+            "points": 2,
+            "reason": "Le dossier ne certifie pas 18 mois complets de programme MyFundedCapital sous cet opérateur contractuel précis, mais présence commerciale documentée en 2025/2026; palier prudent E1=2 (6–17 mois) en attendant l'historique complet.",
+            "sources": [
+              "https://myfundedcapital.com/tools/payout-date-calculator/"
+            ]
+          },
+          "E2": {
+            "points": 3,
+            "reason": "Support, FAQ et recours contradictoire encadré sur sept jours prévus aux CGU; résolution d'une contestation effective non vérifiée, E2=3.",
+            "sources": [
+              "https://www.trustpilot.com/review/myfundedcapital.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "contract_entity_difference",
+        "rules_2026_10_22",
+        "check_2026_11_23_terms"
+      ],
+      "pillars": {
+        "A": 15,
+        "B": 19,
+        "C": 9,
+        "D": 18,
+        "E": 5
+      },
+      "raw": 66,
+      "trustpilotPenalty": 0,
+      "payoutCap": 64,
+      "proposedScore": 64,
+      "delta": -11,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://myfundedcapital.com/terms-and-conditions/",
+        "p": "https://myfundedcapital.com/faq/live-accounts/",
+        "c": "https://myfundedcapital.com/tools/payout-date-calculator/",
+        "d": "https://myfundedcapital.com/faq/trading-rules/",
+        "q": "https://myfundedcapital.com/learn/payouts/from-pass-to-payout/",
+        "tp": "https://www.trustpilot.com/review/myfundedcapital.com"
+      }
+    },
+    {
+      "name": "Earn2Trade",
+      "domain": "earn2trade",
+      "program": "Trader Career Path / Gauntlet Mini, puis compte LiveSim ou Live auprès du partenaire nommé",
+      "legal": "Earn2Trade LLC vend l'évaluation ; Helios Trading Partners ou Appius Trading Limited peuvent porter le compte funded. Earn2Trade n'est pas automatiquement débiteur des retraits.",
+      "scorecard": {
+        "slug": "earn2trade",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 74,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Retraits LiveSim/Live traités chaque semaine, demandes avant vendredi 14h CT, minimum net $100; jours rentables requis depuis 02/11/2026 pour nouveaux abonnements et split selon taille d'un retrait (parfois 50% vs 80%). Fees Rise pays-dependent et plusieurs caps par programme, A1=8.",
+            "sources": [
+              "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/www.earn2trade.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "Les témoignages et pages fournisseurs attestent un programme rémunérateur, mais sans preuve de virement final attribuable à une convention Helios/Appius et au bénéficiaire indépendant pour la cohorte, A3=1.",
+            "sources": [
+              "https://help.earn2trade.com/en/articles/1585409-which-proprietary-trading-firm-will-contact-me-after-i-pass-my-evaluation",
+              "https://www.trustpilot.com/review/www.earn2trade.com"
+            ]
+          },
+          "B1": {
+            "points": 6,
+            "reason": "Earn2Trade est l'évaluateur et transmet au partenaire funded; les clauses Earn2Trade évaluées ne suffisent pas à prouver la protection de récompenses déjà acquises vis-à-vis du payeur partenaire. B1 neutre 6 jusqu'à obtenir le funded agreement, sans présumer confiscation.",
+            "sources": [
+              "https://www.earn2trade.com/terms-and-conditions"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "La réforme du 02/11/2026 (cinq jours rentables qualifiants avant chaque retrait) est déclarée applicable aux nouveaux achats; anciens contrats conservés selon page officielle. Règle objective, sans preuve d'application rétroactive défavorable, B2=10.",
+            "sources": [
+              "https://www.earn2trade.com/terms-and-conditions"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Earn2Trade LLC peut être identifié comme vendeur, mais Helios Trading Partners ou Appius Trading Limited sont explicitement désignés comme partenaires une fois l'évaluation réussie; débiteur exact et contrat funded non certifiés au registre, C1=4.",
+            "sources": [
+              "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://www.earn2trade.com/terms-and-conditions"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://www.earn2trade.com/terms-and-conditions"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Offres TCP/Gauntlet, plateformes, progression et règles sont publiées avec conditions de frais et qualification; D1=8.",
+            "sources": [
+              "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU disponibles et mise à jour datée du 02/11/2026 précisant protection des anciens achats; date et numéro de la convention partner funded non identifiés, D2=4.",
+            "sources": [
+              "https://www.earn2trade.com/terms-and-conditions"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Simulation d'évaluation et passage via une société partenaire annoncés honnêtement, mais checkout/partie débitrice du compte LiveSim et facture ne sont pas rapprochés, D3=4.",
+            "sources": [
+              "https://www.earn2trade.com/terms-and-conditions"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Earn2Trade est présent dans le secteur des évaluations depuis bien avant 2023; ancienneté 36 mois acquise, E1=6.",
+            "sources": [
+              "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Support et FAQ détaillés mais aucun recours externe et résolution contradictoire de perte de Reward documenté par cas dans ce dossier, E2=2.",
+            "sources": [
+              "https://www.trustpilot.com/review/www.earn2trade.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "2026_11_02_new_cohorts_only",
+        "partner_funded_not_Earn2Trade",
+        "split_changes_by_single_withdrawal"
+      ],
+      "pillars": {
+        "A": 15,
+        "B": 16,
+        "C": 9,
+        "D": 16,
+        "E": 8
+      },
+      "raw": 64,
+      "trustpilotPenalty": 0,
+      "payoutCap": 64,
+      "proposedScore": 64,
+      "delta": -10,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://www.earn2trade.com/terms-and-conditions",
+        "p": "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "c": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+        "d": "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026",
+        "q": "https://help.earn2trade.com/en/articles/1585409-which-proprietary-trading-firm-will-contact-me-after-i-pass-my-evaluation",
+        "tp": "https://www.trustpilot.com/review/www.earn2trade.com"
+      }
+    },
+    {
+      "name": "FundedNext",
+      "domain": "fundednext",
+      "program": "Stellar 1-Step/2-Step/Lite et On-Demand, anciens achats pré-12/01/2026 séparés",
+      "legal": "CGU 05/05/2026 identifient GrowthNext F.Z.E. #28831, FundedNext Ltd #HY01023052, FundedNext Limited HK et agent de paiement Incenteco Trading LTD HE307114; le débiteur dépend du programme/pays.",
+      "scorecard": {
+        "slug": "fundednext",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 72,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "FAQ distingue Stellar 2-Step Standard (premier après 21 jours, ensuite 14) de 3-Day à 60% et On-Demand à 90% sous 2% growth et 40% consistency; différentes cohortes pré/post janvier et octobre 2026. Minima/plafonds complets de chaque offre non consolidés, A1=8.",
+            "sources": [
+              "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune série indépendante à six maillons n'a permis de conclure à 12 ou 24 mois de paiements réguliers SANS incident grave non résolu ; aucune série distincte de retards/refus injustifiés n'a été corroborée aux seuils V5.2. Le palier neutre 6 ne constitue PAS une preuve de solvabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/fundednext.com"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction suit des transactions Rise/direct crypto attribuées à FundedNext depuis février 2024; le site avertit que certaines adresses servent aussi à l'opérationnel et ne lie pas chaque transfert à un contrat Stellar et à un trader final. A3=2, non 5.",
+            "sources": [
+              "https://payoutjunction.com/firms/fundednext",
+              "https://www.trustpilot.com/review/fundednext.com"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU §9.4/9.8/20.2 autorisent retenir une Performance Reward pendant vérification et la perdre lors d'une infraction Prohibited Conduct; pas de recours indépendant opposable trouvé et motifs élargis à vérifications de comportement, B1=3.",
+            "sources": [
+              "https://fundednext.com/terms-of-service"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Quick Strike et certains paramètres d'On-Demand ont des conséquences de suppression de profits, mais les catégories et pénalités sont affichées; les pouvoirs de retenir les rewards sous contrôle relèvent déjà B1. Aucune asymétrie profits retirés/pertes conservées explicitement démontrée, B2=10.",
+            "sources": [
+              "https://fundednext.com/terms-of-service"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Quatre entités avec numéros/rôles partiellement déclarés : GrowthNext F.Z.E., FundedNext Ltd, Hong Kong Limited et Incenteco Trading LTD agent; débiteur du Stellar actuel selon acheteur non rapproché au registre/checkout, C1=4.",
+            "sources": [
+              "https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "L'immatriculation active de la bonne contrepartie du funded, pour la période du contrat, n'a pas été authentifiée avec un extrait officiel primaire daté. 3/6 = statut non vérifiable dans ce dossier, pas un constat de dissolution ni une certification d'activité.",
+            "sources": [
+              "https://fundednext.com/terms-of-service"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Aucune recherche exhaustive des avertissements et mesures officielles à toutes les juridictions du contrat actuel et de son éventuel agent n'a été menée jusqu'à conclusion; 2/4 provisoire de vérification impossible, pas une accusation.",
+            "sources": [
+              "https://fundednext.com/terms-of-service"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Catalogue Stellar 1-Step, 2-Step, Lite, Instant et On-Demand avec drawdowns, profits, news, KYC et conditions par cycle publiés; D1=8.",
+            "sources": [
+              "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "CGU publiées mai 2026 et règles de payouts mises à jour octobre, distinction d'ancienneté par achats/reset explicitée; application des modifications aux contrats existants exposée dans §22, D2=6 pour transparence.",
+            "sources": [
+              "https://fundednext.com/terms-of-service"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Simulation et tiers payeur décrits, avec conditions par modèle; checkout et désignation du fournisseur effectif non examinés complètement, D3=4.",
+            "sources": [
+              "https://fundednext.com/terms-of-service"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "FundedNext propose ses challenges depuis 2022 selon historique public; au-delà de 36 mois à novembre 2026, E1=6.",
+            "sources": [
+              "https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Centre d'aide et support clients accessibles, mais recours indépendant sur une correction de Reward et résolution effective non documentés, E2=2.",
+            "sources": [
+              "https://www.trustpilot.com/review/fundednext.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "notes": [
+        "multiple_fundednext_entities",
+        "A3_wallet_operational_warning",
+        "stellar_cohort_dates"
+      ],
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 18,
+        "E": 8
+      },
+      "raw": 64,
+      "trustpilotPenalty": 0,
+      "payoutCap": 69,
+      "proposedScore": 64,
+      "delta": -8,
+      "verifiedTraderPayoutSixLinks": false,
+      "legalPrimaryVerified": false,
+      "ownerApproved": false,
+      "refs": {
+        "t": "https://fundednext.com/terms-of-service",
+        "p": "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward",
+        "c": "https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards",
+        "d": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+        "q": "https://payoutjunction.com/firms/fundednext",
+        "tp": "https://www.trustpilot.com/review/fundednext.com"
+      }
+    }
+  ]
+}
