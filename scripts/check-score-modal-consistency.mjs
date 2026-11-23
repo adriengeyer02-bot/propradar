@@ -63,7 +63,7 @@ assert.equal(Object.values(fxify.scores).flat().reduce((sum,n)=>sum+n,0),75,'FXI
 assert.equal(75+8,83,'FXIFY reconstructed displayed base must be 83');
 
 // All 121 gate-approved V5.2 firms: exactly one application of B2 and
-// Trustpilot, plus evidence/legal caps, without inventing risk points.
+// Trustpilot and the legal safety ceiling, with NO A3 evidence cap.
 const gate=json('app/data/scoring-v52-published.json').approvals;
 const ownerRelease=json('app/data/scoring-v52-owner-approved-2026-11-23.json');
 const latestRelease=json('app/data/scoring-v52-31-owner-release-2026-11-23.json');
@@ -85,8 +85,7 @@ for(const approval of gate){
     assert.equal(penalty,10-card.criteria.B2.points,approval.slug+' B2 mismatch');
     assert.deepEqual(ruleAmountDisplay(null,true,penalty),{kind:'applied',points:penalty});
     const trustpilot=card.trustpilotActiveNotice?6:0;
-    const a3=card.criteria.A3.points;
-    const proof=a3<=1?64:a3===2?69:a3===3?79:100;
+    const proof=100; // A3 only contributes its 0–5 criterion points
     const legal=(card.contractingEntityMissing||card.activeUnsuspendedStrikeOff)?55:100;
     const expected=card.closed?null:Math.max(0,Math.min(points-trustpilot,proof,legal));
     assert.equal(expected,approval.expectedFinal,approval.slug+' final was changed by modal logic');
@@ -106,7 +105,8 @@ for(const approval of gate){
     assert.ok(row,approval.slug+' has no published V5.2 source');
     assert.equal(row.v52,approval.expectedFinal,approval.slug+' V5.2 conversion differed');
     const subtotal=Object.values(row.criteriaV52).reduce((sum,n)=>sum+n,0);
-    const finalFromSteps=Math.min(Math.max(0,subtotal-row.trustpilotPenalty),row.payoutEvidenceCap,row.legalCap);
+    assert.equal(row.payoutEvidenceCap,100,'Legacy evidence cap should not be active');
+    const finalFromSteps=Math.min(Math.max(0,subtotal-row.trustpilotPenalty),row.legalCap);
     assert.equal(finalFromSteps,approval.expectedFinal,approval.slug+' migrated V5.2 equation mismatch');
     const penalty=row.ruleDeductions.reduce((sum,x)=>sum+x.points,0);
     assert.equal(penalty,10-row.criteriaV52.B2,approval.slug+' migrated B2 mismatch');
