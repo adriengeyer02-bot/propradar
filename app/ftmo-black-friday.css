@@ -1,0 +1,140 @@
+/* FTMO Black Friday affiliate spotlight — temporary editorial placement.
+ * All typography/call-to-action stays within the PropRadar design system.
+ * Ranking, firm scores and sponsor priority are intentionally untouched. */
+.pr-ftmo-bf {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 106px;
+  gap: clamp(15px, 3vw, 32px);
+  align-items: center;
+  margin-top: clamp(10px, 2vw, 22px);
+  margin-bottom: clamp(10px, 2vw, 20px);
+  padding: clamp(19px, 2.8vw, 32px);
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 14px;
+  color: var(--text);
+  background: var(--surface);
+}
+
+.pr-ftmo-bf-main {
+  min-width: 0;
+}
+
+.pr-ftmo-bf-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--soft);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.pr-ftmo-bf h2 {
+  margin: 0;
+  max-width: 27ch;
+  font-size: clamp(23px, 3.1vw, 36px);
+  line-height: 1.12;
+  color: var(--text);
+}
+
+.pr-ftmo-bf-detail {
+  margin: 10px 0 0;
+  max-width: 68ch;
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pr-ftmo-bf-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 21px;
+  margin-top: 18px;
+}
+
+.pr-ftmo-bf-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 18px;
+  text-decoration: none;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.pr-ftmo-bf-review {
+  color: var(--accent);
+  font-size: 13.5px;
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.pr-ftmo-bf-review:hover {
+  text-decoration: underline;
+}
+
+.pr-ftmo-bf-disclosure {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.pr-ftmo-bf-art {
+  display: block;
+  width: 106px;
+  height: 224px;
+  overflow: hidden;
+  background: #060b13;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+.pr-ftmo-bf-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 600px) {
+  .pr-ftmo-bf {
+    grid-template-columns: minmax(0, 1fr) 72px;
+    padding: 16px;
+    gap: 12px;
+  }
+  .pr-ftmo-bf-art {
+    width: 72px;
+    height: 170px;
+  }
+  .pr-ftmo-bf h2 {
+    font-size: clamp(21px, 5.5vw, 27px);
+  }
+  .pr-ftmo-bf-actions {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .pr-ftmo-bf-cta {
+    padding: 0 12px;
+    min-height: 40px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 350px) {
+  .pr-ftmo-bf {
+    grid-template-columns: 1fr;
+  }
+  .pr-ftmo-bf-art {
+    display: none;
+  }
+}
