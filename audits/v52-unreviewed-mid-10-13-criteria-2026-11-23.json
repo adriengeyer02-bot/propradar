@@ -1,0 +1,1107 @@
+{
+  "version": "5.2",
+  "date": "2026-11-23",
+  "status": "draft_research_no_public_scores",
+  "audits": [
+    {
+      "slug": "aqua-funded",
+      "name": "AquaFunded",
+      "previousReconstructed": 69,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/aquafunded.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/aquafunded.com"
+        },
+        "B1": {
+          "points": 6,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "D1": {
+          "points": 6,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work"
+        },
+        "D2": {
+          "points": 2,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "D3": {
+          "points": 4,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://www.aquafunded.com/tos"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/aquafunded.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work"
+        }
+      },
+      "sums": {
+        "A": 13,
+        "B": 16,
+        "C": 9,
+        "D": 12,
+        "E": 6
+      },
+      "raw": 56,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 56,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "Les CGU prévoient une disqualification si le style funded est jugé différent de l'évaluation ; condition fondée sur une appréciation de l'opérateur. Éviter B1/B2 en double : la sanction liée à ce seul fait est en B1, B2 conservé à 10 tant qu'une autre clause vague distincte n'est pas établie.",
+      "legal": "Aqua Funded FZCO, Dubai (auto-déclaré), registre et contrat funded non rapprochés.",
+      "sources": {
+        "terms": "https://www.aquafunded.com/tos",
+        "payout": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work",
+        "trustpilot": "https://www.trustpilot.com/review/aquafunded.com"
+      }
+    },
+    {
+      "slug": "finotive-funding",
+      "name": "Finotive Funding",
+      "previousReconstructed": 69,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://help.finotivefunding.com/en/articles/984-what-conditions-must-be-met-before-a-reward-payment-can-be-approved"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/finotivefunding.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/finotivefunding.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "B2": {
+          "points": 7,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://help.finotivefunding.com/en/articles/984-what-conditions-must-be-met-before-a-reward-payment-can-be-approved"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://finotivefunding.com/terms-and-conditions"
+        },
+        "E1": {
+          "points": 6,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/finotivefunding.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://help.finotivefunding.com/en/articles/984-what-conditions-must-be-met-before-a-reward-payment-can-be-approved"
+        }
+      },
+      "sums": {
+        "A": 15,
+        "B": 10,
+        "C": 9,
+        "D": 14,
+        "E": 8
+      },
+      "raw": 56,
+      "trustpilotWithholdingVerified": true,
+      "confirmedTrustpilotPenalty": 6,
+      "proofCap": 64,
+      "conditionalResult": 50,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "CGU §§7,12 : retenue/récupération de Rewards et revue risque. La notion news « genuine directional view » reste vague (B2 −3, distincte des pouvoirs de retenir le Reward B1). Rétroactivité contractuellement permise mais application défavorable effective non démontrée : pas de −4 automatique.",
+      "legal": "Finotive Funding Technologies Limited n°11088 (DIFC), statut externe et payeur effectif non attestés.",
+      "sources": {
+        "terms": "https://finotivefunding.com/terms-and-conditions",
+        "payout": "https://help.finotivefunding.com/en/articles/984-what-conditions-must-be-met-before-a-reward-payment-can-be-approved",
+        "trustpilot": "https://www.trustpilot.com/review/finotivefunding.com"
+      }
+    },
+    {
+      "slug": "funding-traders",
+      "name": "Funding Traders",
+      "previousReconstructed": 68,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/fundingtraders.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/fundingtraders.com"
+        },
+        "B1": {
+          "points": 9,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "B2": {
+          "points": 7,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://fundingtraders.com/terms-of-service"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/fundingtraders.com"
+        },
+        "E2": {
+          "points": 3,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro"
+        }
+      },
+      "sums": {
+        "A": 15,
+        "B": 16,
+        "C": 9,
+        "D": 14,
+        "E": 7
+      },
+      "raw": 61,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 61,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "§6.3 RMG : strikes, appeal explicite 48h, mais déduction de 50/100 % du Violation Profit aux tiers 1/2. Les trades violateurs perdants entrent à zéro dans le calcul : asymétrie B2 −3, sans inférer un refus illégal.",
+      "legal": "CGU « FundingTraders Trading Evaluation » contre page contact « Funding Traders Group Ltd » n°2025-00298 ; vendeur réel incertain.",
+      "sources": {
+        "terms": "https://fundingtraders.com/terms-of-service",
+        "payout": "https://fundingtraders.com/help/en/articles/13615032-1-step-pro",
+        "trustpilot": "https://www.trustpilot.com/review/fundingtraders.com"
+      }
+    },
+    {
+      "slug": "rzr-funded",
+      "name": "RZR Funded",
+      "previousReconstructed": 68,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/rzrfunded.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/rzrfunded.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"
+        },
+        "D2": {
+          "points": 2,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://rzrfunded.com/terms-conditions/"
+        },
+        "E1": {
+          "points": 2,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/rzrfunded.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/"
+        }
+      },
+      "sums": {
+        "A": 15,
+        "B": 13,
+        "C": 9,
+        "D": 12,
+        "E": 4
+      },
+      "raw": 53,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 53,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "CGU autorisent revue et annulation de gains même après approbation pour conduite prohibée à appréciation étendue ; B1=3. Les contraintes Enhanced (risque flottant 3 %, trois jours à 0,5 %) sont objectives : B2=10.",
+      "legal": "RZR Funded Limited n°2026-00682 Sainte-Lucie, affilié HM Provider et antécédent Hantec à distinguer.",
+      "sources": {
+        "terms": "https://rzrfunded.com/terms-conditions/",
+        "payout": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
+        "trustpilot": "https://www.trustpilot.com/review/rzrfunded.com"
+      }
+    },
+    {
+      "slug": "lark-funding",
+      "name": "Lark Funding",
+      "previousReconstructed": 67,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/larkfunding.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/larkfunding.com"
+        },
+        "B1": {
+          "points": 6,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "D1": {
+          "points": 6,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"
+        },
+        "D2": {
+          "points": 2,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://larkfunding.com/terms-of-use"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/larkfunding.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work"
+        }
+      },
+      "sums": {
+        "A": 13,
+        "B": 16,
+        "C": 9,
+        "D": 10,
+        "E": 6
+      },
+      "raw": 54,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 54,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "Pages officielles : « retake or refund » si stratégie jugée trop risquée ; refus et restitution des paiements déjà approuvés non démontrés, B1 provisoire. Taux de parcours allant au payout 10,95 % annoncé pour cohorte 1-Step = chiffre interne, PAS A3.",
+      "legal": "Lark Funding Inc nommée, numéro/régime de société et contrepartie réelle non vérifiés.",
+      "sources": {
+        "terms": "https://larkfunding.com/terms-of-use",
+        "payout": "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work",
+        "trustpilot": "https://www.trustpilot.com/review/larkfunding.com"
+      }
+    },
+    {
+      "slug": "the-trading-pit",
+      "name": "The Trading Pit",
+      "previousReconstructed": 67,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://www.thetradingpit.com/futures"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/thetradingpit.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/thetradingpit.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "C1": {
+          "points": 7,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://www.thetradingpit.com/futures"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "D3": {
+          "points": 4,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://www.thetradingpitgroup.com/general-terms-and-conditions"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/thetradingpit.com"
+        },
+        "E2": {
+          "points": 3,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://www.thetradingpit.com/futures"
+        }
+      },
+      "sums": {
+        "A": 15,
+        "B": 13,
+        "C": 12,
+        "D": 16,
+        "E": 7
+      },
+      "raw": 63,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 63,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "Annexe A.3/A.8 : Reward de 0 à max à l'appréciation de la conformité des trades ; clause explicite sous B1=3, pas de double pénalité B2. §A.7 : paiement jusqu'à 30 jours après détermination du Reward, qui n'est pas le délai marketing de traitement.",
+      "legal": "The Trading Pit Challenge GmbH FL-0002.693.417-1 Liechtenstein citée, état du registre officiel à confirmer.",
+      "sources": {
+        "terms": "https://www.thetradingpitgroup.com/general-terms-and-conditions",
+        "payout": "https://www.thetradingpit.com/futures",
+        "trustpilot": "https://www.trustpilot.com/review/thetradingpit.com"
+      }
+    },
+    {
+      "slug": "ment-funding",
+      "name": "Ment Funding",
+      "previousReconstructed": 67,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://www.mentfunding.com/"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/www.mentfunding.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/www.mentfunding.com"
+        },
+        "B1": {
+          "points": 6,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "D1": {
+          "points": 6,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://www.mentfunding.com/"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://mentfunding.com/terms-of-service"
+        },
+        "E1": {
+          "points": 6,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/www.mentfunding.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://www.mentfunding.com/"
+        }
+      },
+      "sums": {
+        "A": 13,
+        "B": 16,
+        "C": 9,
+        "D": 12,
+        "E": 8
+      },
+      "raw": 58,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 58,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "Termes nomment plusieurs sociétés Prop Account LLC/Cayman et permettent suspension sur shared wallet suspect ; les règles de consistance et 0,5 % de jours positifs dépendent du plan. Ne PAS qualifier une différence CFD/Futures comme contradiction sur même programme.",
+      "legal": "Prop Account Group multientités ; entité débitrice du contrat exact non rattachée.",
+      "sources": {
+        "terms": "https://mentfunding.com/terms-of-service",
+        "payout": "https://www.mentfunding.com/",
+        "trustpilot": "https://www.trustpilot.com/review/www.mentfunding.com"
+      }
+    },
+    {
+      "slug": "elite-trader-funding",
+      "name": "Elite Trader Funding",
+      "previousReconstructed": 66,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://elitetraderfunding.app/help/how-do-payouts-work?version=latest"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/elitetraderfunding.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/elitetraderfunding.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://elitetraderfunding.app/help/how-do-payouts-work?version=latest"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "D3": {
+          "points": 4,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://elitetraderfunding.app/terms-of-service"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/elitetraderfunding.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://elitetraderfunding.app/help/how-do-payouts-work?version=latest"
+        }
+      },
+      "sums": {
+        "A": 15,
+        "B": 13,
+        "C": 9,
+        "D": 16,
+        "E": 6
+      },
+      "raw": 59,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 59,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "CGU : la firme décide à sa discrétion finale si le comportement satisfait l'audit payout ; elle peut affecter une demande au compte LIVE ELITE. ATD et audits sont liés au même pouvoir, pas de double pénalité B2. Suivre les cohortes 02/10 et les plafonds SIM.",
+      "legal": "Elite Trader Funding LLC citée ; immatriculation effective et accord Live tiers à vérifier.",
+      "sources": {
+        "terms": "https://elitetraderfunding.app/terms-of-service",
+        "payout": "https://elitetraderfunding.app/help/how-do-payouts-work?version=latest",
+        "trustpilot": "https://www.trustpilot.com/review/elitetraderfunding.com"
+      }
+    },
+    {
+      "slug": "atlas-funded",
+      "name": "Atlas Funded",
+      "previousReconstructed": 66,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://help.atlasfunded.com/payouts"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/atlasfunded.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/atlasfunded.com"
+        },
+        "B1": {
+          "points": 6,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://help.atlasfunded.com/payouts"
+        },
+        "D2": {
+          "points": 6,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "D3": {
+          "points": 4,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://www.atlasfunded.com/terms"
+        },
+        "E1": {
+          "points": 2,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/atlasfunded.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://help.atlasfunded.com/payouts"
+        }
+      },
+      "sums": {
+        "A": 15,
+        "B": 16,
+        "C": 9,
+        "D": 18,
+        "E": 4
+      },
+      "raw": 62,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 62,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "CGU datées 12/11 : ATLAS VANQUISH FZCO marque Dubai, Atlas Funded LTD n°2025-00597 fournit simulation Sainte-Lucie. Les termes de stratégie « major unexplained change » pourraient peser sur le compte ; B1 provisionnel, B2 sans second retrait. Cohortes 17/10 et 11/11 distinctes.",
+      "legal": "Deux entités désignées, registre et contrat funded/checkout non rapprochés.",
+      "sources": {
+        "terms": "https://www.atlasfunded.com/terms",
+        "payout": "https://help.atlasfunded.com/payouts",
+        "trustpilot": "https://www.trustpilot.com/review/atlasfunded.com"
+      }
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "name": "Crypto Fund Trader",
+      "previousReconstructed": 62,
+      "scope": "provisional_source_review_all_13",
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "max": 10,
+          "justification": "Information programme vérifiée en partie ; l'ensemble date premier payout / split-frais-seuil / jours / caps / parcours ne peut être pleinement certifié pour une cohorte.",
+          "url": "https://cryptofundtrader.com/faq/"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Neutre 6 : aucun corpus indépendant de 12 mois de payouts ni incident grave corroboré répondant aux seuils A2 ; avis publics non suffisants.",
+          "url": "https://www.trustpilot.com/review/cryptofundtrader.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1 : annonces commerciales, certificats maison ou témoignages sans chaîne complète payeur-programme-bénéficiaire-date-versement-tiers-indépendant.",
+          "url": "https://www.trustpilot.com/review/cryptofundtrader.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Sous-note provisoire selon la clause contractuelle sensible décrite sous la fiche ; revoir le contrat funded accepté et le degré de recours.",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Une restriction chiffrée n'est pas sanctionnée ; seul un fait distinct de B1 peut produire une déduction.",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Identité déclarée dans les termes, pas de concordance registre primaire + checkout + accord funded ; palier 4 provisoire (7 si registre et rôles vérifiés).",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 : statut légal officiel de la bonne entité non extrait directement du registre primaire ; pas de dissolution présumée.",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 : contrôle exhaustif des alertes officielles par nom exact et pays non achevé ; ni innocence ni alerte présumée.",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "D1": {
+          "points": 6,
+          "max": 8,
+          "justification": "Documents produits/CGU et centre d'aide contrôlés ; 2 points par rubrique vérifiable selon périmètre, reste à confirmer au checkout.",
+          "url": "https://cryptofundtrader.com/faq/"
+        },
+        "D2": {
+          "points": 2,
+          "max": 6,
+          "justification": "Accessibilité des CGU, version et protection des contrats existants contrôlées partiellement ; aucune rétroactivité effective présumée.",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Cohérence offre/FAQ, vendeur vs agent et simulation non entièrement rapprochés.",
+          "url": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté opérationnelle estimée à partir de la présence publique ; durée précise par programme à vérifier.",
+          "url": "https://www.trustpilot.com/review/cryptofundtrader.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Canaux de support identifiés ; réponse publique et/ou procédure de recours selon contrat, résolution indépendante non prouvée.",
+          "url": "https://cryptofundtrader.com/faq/"
+        }
+      },
+      "sums": {
+        "A": 13,
+        "B": 13,
+        "C": 9,
+        "D": 10,
+        "E": 6
+      },
+      "raw": 51,
+      "trustpilotWithholdingVerified": null,
+      "confirmedTrustpilotPenalty": 0,
+      "proofCap": 64,
+      "conditionalResult": 51,
+      "finalV52": null,
+      "publicationApproved": false,
+      "confidence": "faible",
+      "signedFundedContractVerified": false,
+      "officialRegistryVerified": false,
+      "focus": "Conditions §7 : retrait ou annulation de bénéfices à l'appréciation du fournisseur lors d'un soupçon de pratiques interdites, B1=3. Restrictions d'idées tierces peu claires mais déjà liées à ce même pouvoir : B2=10 par précaution anti double sanction.",
+      "legal": "SWISS RLCRATES AG + RLCRATES S.L. MT5 ; débiteur précis des rewards non confirmé.",
+      "sources": {
+        "terms": "https://cryptofundtrader.com/terms-and-conditions/",
+        "payout": "https://cryptofundtrader.com/faq/",
+        "trustpilot": "https://www.trustpilot.com/review/cryptofundtrader.com"
+      }
+    }
+  ]
+}
