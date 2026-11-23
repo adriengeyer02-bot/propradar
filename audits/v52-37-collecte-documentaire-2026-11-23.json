@@ -296,12 +296,12 @@
       "firm": "T4TCapital",
       "scorePublishedBefore": 38,
       "sourceDate": "2026-11-23",
-      "statusFinding": "MARQUES_ET_OPERATEURS_NON_RECONCILIÉS",
-      "statusEvidence": "T4TCapitalFM possède une inscription/checkout mais les domaines T4TCapital, T4TCapitalFM, Traders4Traders et Proptradr ne sont pas juridiquement identifiés comme un même vendeur.",
+      "statusFinding": "T4TCAPITALFM_REDIRECT_TRADERS4TRADERS_CONTRAT_FINAL_PAR_PRODUIT_NON_VERIFIE",
+      "statusEvidence": "t4tcapitalfm.com redirige vers traders4traders.com; client.t4tcapitalfm.com/register pointe Terms of Service vers www.traders4traders.com. Ces CGU désignent Traders4Traders Pty Ltd (Australie) ACN 139140373; registre officiel ASIC non vérifié. Piste de continuité primaire désormais forte, sans confirmation juridique des dettes et de la facturation historique.",
       "statusBasis": "commercial_indicators_legal_unverified",
-      "contractAndRules": "CGU au checkout de T4TCapitalFM non récupérées de manière vérifiable; aucune restriction de Traders4Traders ne doit être recopiée sans contrat commun.",
-      "payoutEvidenceFinding": "Aucun paiement final de T4TCapital actuel indépendamment corroboré. Les avis du domaine Proptradr ne sont pas attribuables sans preuve de succession.",
-      "trustpilotFinding": "Trustpilot de la marque exacte à isoler de l'ancien Proptradr; pas de masquage confirmé.",
+      "contractAndRules": "Page Traders4Traders funding : stop-loss obligatoire dès ouverture, profit du trade sans SL annulé mais perte conservée, deuxième manquement termine challenge; news ±2 min autour CPI/employment/taux, SL/TP dans fenêtre potentiellement sanctionné; autre portail Traders4Traders déclare 'news trading is fully allowed', même programme non établi. Règles standard 2.5% daily/7.5% max trailing, best day ≤50%, 5 jours. Payout hebdo min $50 80-90% selon niveau; ancien T4TCapitalFM différent. CGU australiennes prévoient remboursement sous 30 jours si aucun trade, droits consommateurs préservés.",
+      "payoutEvidenceFinding": "Aucune preuve de payout final indépendante à six maillons pour l'ancien T4TCapitalFM ni pour le produit exact du portail actif. Annonces de payouts hebdomadaires non probantes à elles seules.",
+      "trustpilotFinding": "Profil proptradr.com intitulé T4TCapital Funds Management, TrustScore 2,5/5 sur 6 avis; page Trustpilot indique profils fusionnés. Une fusion de profils ne signifie pas une retenue du TrustScore pour guideline breach. Ne pas copier le profil distinct traders4traders.com sans périmètre.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/proptradr.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -346,6 +346,31 @@
           "url": "https://www.trustpilot.com/review/proptradr.com",
           "kind": "archive_code",
           "label": "Historical T4TCapitalFM Trustpilot profile"
+        },
+        {
+          "url": "https://traders4traders.com/terms-of-service",
+          "kind": "source_primaire_cgu_courantes",
+          "label": "Traders4Traders Pty Ltd, ACN 139140373"
+        },
+        {
+          "url": "https://traders4traders.com/trader-funding",
+          "kind": "source_primaire_regles_par_produit",
+          "label": "SL gains annulés pertes conservées, news ±2m, payouts hebdomadaires"
+        },
+        {
+          "url": "https://propfirm.traders4traders.com/",
+          "kind": "source_primaire_portail_associe",
+          "label": "FAQ commerciale news fully allowed, à rapprocher programme exact"
+        },
+        {
+          "url": "https://pt.trustpilot.com/review/proptradr.com",
+          "kind": "source_primaire_plateforme_avis",
+          "label": "Profile merge statement, not score withholding"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/traders4traders.com",
+          "kind": "source_primaire_plateforme_avis",
+          "label": "Separate brand profile"
         }
       ],
       "remainingTasks": [
@@ -354,11 +379,16 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer la personne morale facturante et les CGU signées via checkout T4TCapitalFM, sans paiement-test.",
+        "Réconcilier news fully allowed du portail et ±2 minutes de la page funding pour un produit et phase identiques.",
+        "Valider l'asymétrie SL et le traitement des comptes funded signés avant évaluation B2.",
+        "Obtenir historique A3 indépendant des rewards pour le vendeur et le programme exact."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md"
     },
     {
       "slug": "traders-with-edge",
@@ -1011,12 +1041,12 @@
       "firm": "Leveled Up Society",
       "scorePublishedBefore": 56,
       "sourceDate": "2026-11-23",
-      "statusFinding": "ACTIVITÉ_ANCIENNE_SUSPENDUE_DOMAINE_REDIRECT",
-      "statusEvidence": "Finance Magnates documente une pause annoncée en octobre 2023; contrôle 2026 indique domaine redirigé vers activité de jeu sans rapport. La personne morale originale et ses dettes éventuelles non déterminées.",
+      "statusFinding": "ALERTE_OFFICIELLE_CNMV_2023_PAUSE_RECONNUE_OCT2023_DOMAINE_INACTIF_2026",
+      "statusEvidence": "Nouvelle source primaire : avertissement CNMV du 26/06/2023 visant LEVELED UP SOCIETY et leveledupsociety.com pour services d'investissement non autorisés visés par droit espagnol, périmètre trading simulé à qualifier. Finance Magnates reproduit avis historique de pause de tous les services en oct 2023 ; domaine 2026 redirige vers site sans rapport selon MyPropGenius, ouverture actuelle en boucle de redirections. Aucune dissolution légale prouvée.",
       "statusBasis": "archival_official_pause_quoted_by_press",
-      "contractAndRules": "CGU funded avant suspension uniquement archives; aucune offre 2026 confirmée.",
-      "payoutEvidenceFinding": "Pas de transfert indépendant récent ni plan de règlement revendiqué vérifié.",
-      "trustpilotFinding": "Anciens avis Leveled Up Traders à ne pas transférer à un service homonyme.",
+      "contractAndRules": "Ancienne offre 2023 deux phases et rémunération 80–85% selon presse/archives, sans contrat funded actuel récupéré. Anciennes communications sur reprise des payouts en attente non assorties de preuve bancaire indépendante. Les compteurs marketing de membres et payouts sont critiqués par la presse pour stabilité inexpliquée; ne pas les traiter comme chiffres certifiés.",
+      "payoutEvidenceFinding": "Annonce d'une reprise des payouts 2023, chiffres promotionnels 1,9 M USD et avis Trustpilot (Deel évoqué) ne prouvent pas le paiement final d'un échantillon attribuable au bon opérateur. Aucun historique indépendant actuel A3 complet.",
+      "trustpilotFinding": "Trustpilot du domaine exact www.leveledupsociety.com score affiché 3,3/5 et 1286 avis (relevé 23/11), zéro avis récent sur 12 mois; aucun bandeau de retenue du TrustScore pour guideline breach. Ne pas transférer à Leveled Up Traders ou autres homonymes.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/leveleduptraders.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1042,6 +1072,21 @@
         {
           "url": "https://www.trustpilot.com/review/leveleduptraders.com",
           "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://www.fsma.be/sites/default/files/media/files/2023-07/20230626_leveledupsociety.pdf",
+          "kind": "avis_regulateur_primaire_cnmv_miroir_fsma",
+          "label": "CNMV warning 26 Jun 2023 exact brand/domain, PDF visual page 1"
+        },
+        {
+          "url": "https://www.tradingview.com/news/financemagnates%3A099925cdd094b%3A0-exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "kind": "presse_archives_2023",
+          "label": "Finance Magnates Oct 2023 quotes suspension and payout claims"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/www.leveledupsociety.com",
+          "kind": "source_primaire_plateforme_avis",
+          "label": "Historical score visible, 1286 reviews"
         }
       ],
       "remainingTasks": [
@@ -1050,11 +1095,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Conserver l'avis officiel CNMV du 26/06/2023 en citant exactement les activités visées, sans conclure sur le simulé.",
+        "Identifier immatriculation juridique du vendeur historique et éventuel transfert des anciens paiements après pause 2023.",
+        "Obtenir preuve indépendante de paiements réellement réglés après l'annonce de reprise en octobre 2023, sans reprendre les compteurs marketing."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md"
     },
     {
       "slug": "one-of-one-funding",
@@ -2150,12 +2199,12 @@
       "firm": "Willis Capital",
       "scorePublishedBefore": 33,
       "sourceDate": "2026-11-23",
-      "statusFinding": "WFUNDED_LIÉ_PAR_INDICES_MAIS_IDENTITÉ_JURIDIQUE_NON_PROUVÉE",
-      "statusEvidence": "WFunded possède un site et CGU datées 'Updated April 2', nommant Western Sahara Worldwide Services LTD au Nigeria (RC 1573472) et un dirigeant Willis. Attention : aucun document primaire de reprise légale explicite reliant les dettes anciennes de Willis Capital n'a été obtenu.",
+      "statusFinding": "WILLIS_CAPITAL_WFUNDED_CONTINUITE_COMMERCIALE_DIRECTE_REPRISE_DE_PASSIFS_NON_ETABLIE",
+      "statusEvidence": "williscapitals.com redirige vers wfunded.io et ancien stage.williscapitals.com héberge CGU WFunded. Contrat WFunded nomme Western Sahara Worldwide Services LTD au Nigeria RC 1573472, registre CAC non consulté. Continuité commerciale bien mieux établie, mais obligations historiques Willis et transfert juridique non confirmés.",
       "statusBasis": "current_wfunded_primary_identity_unconfirmed",
-      "contractAndRules": "WFunded Terms : activation du compte live à discrétion de la firme, obligation d'adhérer à Discord, contrôle KYC, trading account possible suspendu. FAQ : inactivité 30j = breach, stop loss pour trading de news, HFT défini par « unusually large number of trades » sans seuil précis. Sanctions et frais à relier au produit exact.",
-      "payoutEvidenceFinding": "WFunded live claims ne prouvent pas paiement des comptes anciens Willis Capital ; aucune chaîne indépendante vérifiée.",
-      "trustpilotFinding": "Profil williscapitals.com non rapproché de WFunded; vérifier deux profils séparément et notice spécifique.",
+      "contractAndRules": "CGU WFunded §§5.2 et 5.3 : rejet de payout en attente et perte de profits pour communication staff jugée abusive ou propos publics considérés faux/diffamatoires; condition vidéo de témoignage et certificat dans les 7 jours du premier payout avant retraits suivants. Règles IP maximum deux adresses, préavis voyage, trading sans SL en live sanctionné. FAQ : 70/30 standard, premier payout mensuel puis bimensuel, min 100 USD. Contrat funded signé et recours à obtenir; ne pas doubler B1/B2.",
+      "payoutEvidenceFinding": "Aucune chaîne indépendante A3 vérifiée du payeur WSWS ni règlement des comptes Willis historiques. Les screenshots, retours Trustpilot, garanties de processing 24h et pages de marketing ne prouvent pas la réception définitive.",
+      "trustpilotFinding": "Trustpilot williscapitals.com redirige le visiteur vers WFunded et affiche TrustScore 3.4/5 sur 294 avis au relevé 23/11/2026, signalements variés en 2026, pas de notice de retenue TrustScore pour breach of guidelines constatée. Ne pas inférer un refus injustifié d'allégations.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/williscapitals.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -2198,6 +2247,21 @@
           "url": "https://techcabal.com/?p=162269",
           "kind": "archive_code",
           "label": "TechCabal: WFunded, formerly known as Willis Capital"
+        },
+        {
+          "url": "https://stage.williscapitals.com/en/terms-and-conditions",
+          "kind": "source_primaire_lien_de_marque",
+          "label": "Ancien sous-domaine Willis héberge CGU WFunded"
+        },
+        {
+          "url": "https://www.wfunded.io/en/checkout",
+          "kind": "source_primaire_checkout_observable",
+          "label": "Choix produits WFunded, transaction non effectuée"
+        },
+        {
+          "url": "https://www.wfunded.io/en/risk-disclosure",
+          "kind": "source_primaire_contenu",
+          "label": "Environnement simulé à réconcilier avec marketing live"
         }
       ],
       "remainingTasks": [
@@ -2206,11 +2270,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Vérifier extrait registre CAC du vendeur WSWS n°RC 1573472 et contrat effectivement émis lors des achats Willis historiques.",
+        "Obtenir consentement/migration Willis→WFunded et état indépendant de règlements des anciennes obligations.",
+        "Faire expliciter le recours pour motifs staff/réputation annulant les payouts et obligation vidéo marketing après premier retrait."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md"
     }
   ]
 }
