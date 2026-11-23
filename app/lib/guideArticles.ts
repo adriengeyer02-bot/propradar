@@ -546,6 +546,106 @@ export const guideArticles: Record<string, GuideArticle> = {
     ],
   },
 
+  'topstep-vs-apex': {
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "intro": "**Topstep vs Apex is not just a profit-split comparison.** On November 23, 2026, their contracts distinguish Topstep Express Funded Accounts (XFA) from Apex EOD Performance Accounts (PA). This review is specific to those products, not every live or legacy account.",
+    "keyPoints": [
+      "Topstep XFA Standard: 5 winning days of $150+; Consistency: 3 trading days with a 40% best-day ceiling.",
+      "Apex EOD PA: 5 qualifying days, 50% consistency, minimum $500 payout and a maximum of six approved payouts **per PA**.",
+      "Topstep baseline XFA caps vary by account size and path; Apex EOD PA caps also vary by payout number.",
+      "A favorable advertised split is not independent proof that payouts are dependable."
+    ],
+    "sections": [
+      {
+        "heading": "Payout eligibility: compare the actual funded account",
+        "paragraphs": [
+          "On Topstep XFA **Standard**, each payout cycle requires five winning days of at least $150. On XFA **Consistency**, three trading days and a 40% best-day consistency objective are required. The minimum request is $125, and new-cohort profit splits are 90/10. Each XFA payout is capped at 50% of account balance, subject to separate dollar caps; a time-limited paid Daily Loss Limit option may increase those caps.",
+          "On Apex **EOD Performance Accounts**, each payout requires five qualifying days with account-size-specific minimum daily profits, a **strictly below 50% best-day contribution**, and at least a **$500 withdrawal**. Approved payouts use a 100% split, but a PA can have **at most six approved payouts**. Following the sixth, the PA closes; a trader may qualify for a new PA with another evaluation."
+        ],
+        "compare": {
+          "columns": [
+            "Topstep XFA",
+            "Apex EOD PA"
+          ],
+          "rows": [
+            {
+              "label": "Days and consistency",
+              "values": [
+                "Standard: 5 winning days $150+; Consistency: 3 trading days and best day ≤40%",
+                "5 qualifying days; best day <50%; qualifying minimum varies by size"
+              ]
+            },
+            {
+              "label": "Minimum payout",
+              "values": [
+                "$125",
+                "$500"
+              ]
+            },
+            {
+              "label": "Advertised split",
+              "values": [
+                "90/10 for newer cohorts",
+                "100% of approved EOD PA payout"
+              ]
+            },
+            {
+              "label": "$50K example: request caps",
+              "values": [
+                "Standard $2,000; Consistency $3,000 baseline, plus 50% of balance cap",
+                "Payout 1 and 2: $1,500 each; later payouts have distinct caps"
+              ]
+            },
+            {
+              "label": "Account lifecycle",
+              "values": [
+                "Different XFA payout cycles and paths",
+                "Maximum 6 approved payouts per PA, then PA closes"
+              ]
+            }
+          ],
+          "note": "Official documentation checked 23 November 2026. Some earlier Apex cohorts and Topstep live accounts follow other rules."
+        },
+        "callout": {
+          "kind": "warning",
+          "text": "**Six payouts does not mean six lifetime withdrawals for an Apex trader.** The limit concerns one Apex Performance Account. Do not transfer these EOD rules to Apex Intraday or legacy accounts without checking their contract."
+        }
+      },
+      {
+        "heading": "Drawdown, buffer and payout safety",
+        "paragraphs": [
+          "Topstep calculates its Maximum Loss Limit from end-of-day performance but monitors breaches in real time. After an XFA's first payout, the MLL becomes fixed at $0, leaving only the remaining account balance as a risk cushion.",
+          "Apex EOD PA maintains a **Safety Net** throughout the account lifecycle; only profit above that threshold is eligible for payout. If the account falls below the required minimum after the trader requests a payout, Apex's published policy says the request can be denied. Intraday trailing Apex programs use a different drawdown model."
+        ]
+      },
+      {
+        "heading": "Decide by program and total contract, not by a discount",
+        "paragraphs": [
+          "Compare subscription and activation charges, resets, platforms, eligibility by country, and realistic time to complete qualifying days. Topstep updated its country eligibility on **November 17, 2026**. Apex distinguishes newly sold EOD and Intraday products from legacy accounts; the account purchase date matters.",
+          "For independently assessed payout risk, consult each firm's latest PropRadar audit and underlying evidence. This article reports contractual rules; it does **not** endorse a payout guarantee or change either firm's score."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Topstep: payout policy, minimum and XFA caps",
+        "url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+      },
+      {
+        "label": "Topstep: country eligibility",
+        "url": "https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep"
+      },
+      {
+        "label": "Apex: EOD payouts and six-payout account lifecycle",
+        "url": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+      },
+      {
+        "label": "Apex: Intraday Trailing PA payout terms",
+        "url": "https://apextraderfunding.com/help-center/uncategorized/intraday-trailing-drawdown-payouts/"
+      }
+    ]
+  },
   'topstep-review': {
     updated: '2026-11-23',
     intro:
@@ -561,12 +661,12 @@ export const guideArticles: Record<string, GuideArticle> = {
       {
         heading: 'Is Topstep legit?',
         paragraphs: [
-          'Topstep is an **established, US-based operator** with a long public history, a published help center and an affiliated introducing broker, Topstep Brokerage, launched in early 2026. PropRadar scores it **84/100** and has not recorded a regulator warning against it. As with every prop firm, the evaluation and the Express Funded Account are **simulated**: payouts are rewards paid by Topstep, not trading profits from a brokerage account.',
+          'Topstep is an **established, US-based operator** with a long public history, a published help center and an affiliated introducing broker, Topstep Brokerage, launched in early 2026. The **October 2026 PropRadar snapshot** rated it **84/100**; check the live firm page for the current score and scoring version. PropRadar has not recorded a regulator warning against it. As with every prop firm, the evaluation and the Express Funded Account are **simulated**: payouts are rewards paid by Topstep, not trading profits from a brokerage account.',
           'On Trustpilot the profile shows a **3.7** TrustScore across **14,955 reviews**, with Trustpilot\'s notice that the company "may be associated with high-risk investments" (checked October 23, 2026). Late 2025 complaints centred on **TopstepX platform outages** and failed stop orders.',
         ],
         stats: [
           { value: '2012', label: 'founded, Chicago' },
-          { value: '84/100', label: 'PropRadar score' },
+          { value: '84/100', label: 'Oct. 2026 PropRadar snapshot, not live' },
           { value: '3.7', label: 'Trustpilot, 14,955 reviews (Oct 23, 2026)' },
         ],
       },
@@ -630,7 +730,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       {
         heading: 'Who Topstep suits',
         paragraphs: [
-          'Monthly subscription pricing makes a **slow evaluation** more expensive than one-time-fee competitors. If you are comparing it with Apex, read our Topstep vs Apex guide, which matches each account version rule by rule.',
+          'Monthly subscription pricing makes a **slow evaluation** more expensive than one-time-fee competitors. If you are comparing it with Apex, review the separate XFA and PA payout contracts: Apex's published EOD Performance Account terms allow **six approved payouts per individual PA**, after which that PA closes. This is not a lifetime limit on the trader; compare our Topstep vs Apex guide for the exact account version.',
         ],
         fit: {
           yes: ['**Intraday futures** traders', 'Traders who want an **established operator**', 'Comfortable with a **live-monitored trailing limit**'],
