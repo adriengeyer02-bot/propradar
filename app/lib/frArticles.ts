@@ -231,9 +231,9 @@ export const frArticles: FrArticle[] = [
     eyebrow: 'Classement 2026',
     h1: 'Meilleures prop firms 2026 : le classement par fiabilité',
     answer:
-      'Il n\'existe pas de meilleure prop firm universelle, mais certaines sont nettement plus sûres que d\'autres. En octobre 2026, les scores PropRadar les plus élevés reviennent à FTMO (91/100), The5ers (85/100) et Topstep (84/100) : les historiques publics les plus longs, les règles les plus lisibles et le moins de signaux de payout non résolus.',
+      'Il n\'existe pas de meilleure prop firm universelle. Le tableau ci-dessous conserve **un relevé éditorial d’octobre 2026** : FTMO (91/100), The5ers (85/100) et Topstep (84/100). **Ce ne sont pas des notes garanties à jour** : consultez chaque fiche pour son score actuel, sa version de barème et la date des preuves, surtout pendant la migration V5.2.',
     keywords: ['meilleure prop firm', 'meilleures prop firms 2026', 'classement prop firm', 'prop firm fiable'],
-    updated: '2026-11-12',
+    updated: '2026-11-23',
     intro:
       'Choisir une prop firm, c\'est d\'abord choisir **un opérateur à qui vous confiez de l\'argent** : des frais de challenge, et plus tard des payouts. Avant de comparer les pourcentages de partage ou les codes promo, ce classement vérifie la question qui compte le plus : **cette société sera-t-elle encore là, et paiera-t-elle**, le jour où vous aurez gagné ?',
     keyPoints: [
@@ -246,7 +246,7 @@ export const frArticles: FrArticle[] = [
       {
         heading: 'Comment ce classement est construit',
         paragraphs: [
-          'Chaque prop firm suivie par PropRadar reçoit un **score sur 100**, calculé à partir de la clarté des règles, des preuves de payout, de la transparence juridique (entité, juridiction, conditions générales), des signaux d\'avis publics et de l\'ancienneté.',
+          'Chaque firme **notée et publiée** possède un score éditorial sur 100 ; les profils en attente ou fermés peuvent ne pas avoir de nouvelle note V5.2. Le barème V5.2 distingue **preuves de paiement (25 points)**, **règles contractuelles (25)**, **identité et risques juridiques (20)**, **transparence (20)** et **historique/support (10)**. Les notes précédentes restent identifiées tant que leur nouvel audit n’est pas approuvé.',
           'Les liens d\'affiliation sont signalés sur chaque fiche et **ne modifient jamais un score** : une firme partenaire garde ses points faibles affichés, et une firme sans partenariat peut être en tête.',
         ],
         callout: { kind: 'warning', text: 'Le score **n\'est pas une promesse de paiement**. C\'est un résumé des preuves disponibles à une date donnée ; chaque changement est daté dans l\'historique de la fiche.' },
@@ -265,7 +265,7 @@ export const frArticles: FrArticle[] = [
             { label: 'Prix d\'entrée', values: ['environ 155 $', 'environ 39 $', 'abonnement mensuel'] },
             { label: 'Trustpilot', values: ['4,8 (près de 55 000 avis)', '4,7 (plus de 40 000 avis)', '3,7'] },
           ],
-          note: 'Relevé en octobre 2026. PropRadar a une relation d\'affiliation avec FTMO et The5ers, pas avec Topstep : sans effet sur les scores.',
+          note: 'Capture historique octobre 2026, et non classement en direct. Confirmez les scores, barèmes, avis et tarifs actuels sur les fiches. Partenariats FTMO/The5ers signalés sans influence sur les notes.',
         },
         bulletStyle: 'check',
         bullets: [
@@ -315,7 +315,7 @@ export const frArticles: FrArticle[] = [
       {
         question: 'Quelle est la prop firm la plus fiable en 2026 ?',
         answer:
-          'Selon les preuves recensées par PropRadar en octobre 2026, FTMO obtient le score le plus élevé (91/100), suivie de The5ers (85/100) et Topstep (84/100). La meilleure firme dépend toutefois de votre marché et de votre style.',
+          'Dans le relevé d’octobre 2026, FTMO était à 91/100, The5ers à 85/100 et Topstep à 84/100. **Ce relevé historique peut différer des fiches publiques actualisées** lors du passage progressif au barème V5.2. Comparez votre marché, les règles du programme et la preuve de payout avant le score.',
       },
       {
         question: 'Les prop firms sont-elles réglementées ?',
@@ -883,7 +883,7 @@ export const frArticles: FrArticle[] = [
     answer:
       'FTMO et The5ers font partie des prop firms forex les plus fiables (91/100 et 85/100 chez PropRadar). FTMO est la référence la plus documentée mais plus chère ; The5ers est moins chère à l\'entrée et utilise souvent des limites statiques. Le choix dépend surtout de votre budget et de votre façon de gérer le drawdown.',
     keywords: ['ftmo vs the5ers', 'ftmo ou the5ers', 'the5ers avis', 'ftmo avis'],
-    updated: '2026-11-12',
+    updated: '2026-11-23',
     intro:
       'FTMO et The5ers reviennent dans presque tous les classements sérieux. Les deux sont **anciennes, transparentes et bien notées** sur Trustpilot. Elles ne s\'adressent pourtant **pas exactement au même trader**.',
     keyPoints: [
@@ -891,6 +891,7 @@ export const frArticles: FrArticle[] = [
       'FTMO : **la plus documentée**, mais plus chère (environ 155 $).',
       'The5ers : **entrée moins chère** (environ 39 $) et limites souvent **statiques**.',
       'Les règles évoluent : **vérifiez la page officielle** avant d\'acheter.',
+      'FTMO annonce **jusqu’à 30 % de réduction pour le Black Friday 2026**, sur les produits éligibles uniquement : comparez le total réellement affiché au paiement.',
     ],
     sections: [
       {
@@ -909,7 +910,7 @@ export const frArticles: FrArticle[] = [
         },
       },
       {
-        heading: 'Règles des programmes phares (relevées en juillet 2026)',
+        heading: 'Règles des programmes phares (recontrôlées en novembre 2026)',
         paragraphs: [
           'Depuis le **12 octobre 2026**, le challenge FTMO 1-Step utilise une **règle de consistance** (meilleure journée comparée au profit total) à la place de l\'ancienne « Best Day Rule », qui reste valable pour les commandes antérieures. PropRadar n\'a pas relevé de règle de meilleure journée en pourcentage sur le programme High Stakes de The5ers.',
         ],
@@ -921,14 +922,15 @@ export const frArticles: FrArticle[] = [
             { label: 'Perte journalière max', values: ['5 %', '5 %'] },
             { label: 'Perte totale max', values: ['10 %', '10 %'] },
           ],
-          note: 'Relevé en juillet 2026 : vérifiez la page officielle du programme avant d\'acheter.',
+          note: 'Conditions officielles 1-Step/2-Step FTMO et High Stakes The5ers recoupées en novembre 2026. Vérifier la date de commande et la phase du compte.',
         },
       },
       {
         heading: 'Payouts et annonces économiques',
         paragraphs: [
           '**FTMO** traite généralement les payouts en **1 à 3 jours ouvrés**. Le trading des annonces est autorisé en évaluation et sur les comptes Swing, mais certaines annonces sont **restreintes sur les comptes financés Standard**.',
-          '**The5ers** verse en général ses payouts en **quelques jours ouvrés** ; certains programmes sont moins souples pour les profils news ou scalping, à vérifier selon le programme choisi.',
+          '**The5ers High Stakes** prévoit un retrait depuis le tableau de bord tous les **14 jours** après passage en compte Pro (FAQ du 3 novembre 2026). Vérifiez les règles propres à la phase, notamment l’inactivité, les jours qualifiants et les éventuels plafonds.',
+          '**Black Friday 2026 (au 23 novembre)** : FTMO affiche **jusqu’à −30 %**, sans garantie de remise uniforme sur tous les challenges. Offre temporaire, conditions et prix final à confirmer dans le panier FTMO ; cet avantage commercial ne modifie ni le score ni les risques du compte.',
         ],
       },
       {
@@ -947,7 +949,10 @@ export const frArticles: FrArticle[] = [
     ],
     sources: [
       { label: 'FTMO : objectifs de trading', url: 'https://ftmo.com/en/trading-objectives/' },
-      { label: 'FTMO : mise à jour du 8 octobre 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
+      { label: 'FTMO : modification 1-Step du 8 octobre 2026', url: 'https://ftmo.com/fr/blog/trading-updates/mises-a-jour-de-trading-8-oct-2026/' },
+      { label: 'FTMO : objectifs de trading, produits 1-Step et 2-Step', url: 'https://ftmo.com/fr/trading-objectives/' },
+      { label: 'The5ers : règles High Stakes (3 novembre 2026)', url: 'https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/' },
+      { label: 'FTMO : page officielle et Black Friday (novembre 2026)', url: 'https://ftmo.com/en/' },
       { label: 'The5ers : programmes', url: 'https://the5ers.com/programs/' },
       { label: 'FTMO sur Trustpilot', url: 'https://www.trustpilot.com/review/ftmo.com' },
       { label: 'The5ers sur Trustpilot', url: 'https://www.trustpilot.com/review/the5ers.com' },
