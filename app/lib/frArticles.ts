@@ -715,7 +715,7 @@ export const frArticles: FrArticle[] = [
         ],
         stats: [
           { value: '2012', label: 'fondée à Chicago' },
-          { value: '84/100', label: 'score PropRadar' },
+          { value: '84/100', label: 'score oct. 2026, non actualisé' },
           { value: '3,7', label: 'Trustpilot, 14 955 avis (23 oct. 2026)' },
         ],
       },
@@ -780,6 +780,7 @@ export const frArticles: FrArticle[] = [
         heading: 'Pour qui ?',
         paragraphs: [
           'L\'abonnement mensuel rend une **évaluation lente** plus coûteuse qu\'un challenge à frais unique.',
+          "**Face à Apex**, attention aux cycles de retrait : sur ses Performance Accounts EOD actuels, Apex limite chaque compte à six payouts approuvés, puis clôture ce compte. Il ne s'agit pas d'une limite de six retraits à vie pour un trader. Les comptes Express Funded de Topstep suivent d'autres règles selon le parcours Standard ou Consistency.",
         ],
         fit: {
           yes: ['**Day traders futures**', 'Envie d\'un **opérateur établi**', 'À l\'aise avec une **limite suiveuse surveillée en direct**'],
@@ -791,6 +792,7 @@ export const frArticles: FrArticle[] = [
       { label: 'Centre d\'aide Topstep : Maximum Loss Limit', url: 'https://intercom.help/topstep-llc/en/articles/8284204' },
       { label: 'Centre d\'aide Topstep : consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
       { label: 'Topstep : politique de payout et plafonds (23 novembre 2026)', url: 'https://help.topstep.com/en/articles/8284233-topstep-payout-policy' },
+      { label: 'Apex : limite de six payouts par Performance Account EOD', url: 'https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/' },
       { label: 'Topstep : éligibilité par pays, mise à jour 17 novembre 2026', url: 'https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep' },
       { label: 'Topstep sur Trustpilot', url: 'https://www.trustpilot.com/review/topstep.com' },
     ],
