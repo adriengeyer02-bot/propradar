@@ -1,0 +1,315 @@
+{
+  "date": "2026-11-23",
+  "scope": "Ten phase-1 contract/payout/Trustpilot research dossiers from 31 incomplete V5.2 audits",
+  "partialAuditsCount": 10,
+  "completeAuditsCount": 0,
+  "proposedV52Count": 0,
+  "approvedScoresChanged": 0,
+  "firmRecords": [
+    {
+      "slug": "ftmo",
+      "name": "FTMO",
+      "currentScore": 90,
+      "product": "FTMO Challenge 1-Step / 2-Step et FTMO Account",
+      "contract": [
+        "La FAQ distingue clairement 1-Step et 2-Step : la règle de consistance du 1-Step ne doit pas être appliquée au 2-Step. L'article sur les pratiques interdites décrit des limites techniques d'EA (>2 000 requêtes serveur/jour) et une catégorie de stratégies jugées non raisonnablement réplicables sur marché réel.",
+        "La FAQ de retrait indique 90 % de profit simulé en 1-Step, 80 % par défaut en 2-Step (avec variantes de progression) et minimum de profit clôturé pour certains canaux (20 USD virement/cartes, 50 USD crypto)."
+      ],
+      "flags": [
+        "B2 candidat à analyser : notions ouvertes d'exposition/stratégie non réplicable ; ne pas sanctionner deux fois les mêmes faits en B1/B2.",
+        "Séparer risque de règle contractuelle et incident démontré de refus de payout.",
+        "Vérifier le contrat de compte financé effectivement signé et la date de cohorte."
+      ],
+      "trustpilot": "Profil exact ftmo.com actif avec avis récents ; absence de retenue du score non établie par un avis client seul.",
+      "sources": [
+        "https://ftmo.com/fr/faq/comment-fonctionne-votre-regle-de-coherence/",
+        "https://ftmo.com/en/forbidden-trading-practices/",
+        "https://ftmo.com/faq/how-do-i-withdraw-my-profits/"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/ftmo.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "topstep",
+      "name": "Topstep",
+      "currentScore": 81,
+      "product": "Trading Combine → Express Funded Account Standard / Consistency, Live distinct",
+      "contract": [
+        "EFA/XFA Standard : cinq journées gagnantes d'au moins 150 USD par demande ; Consistency : trois jours de trading et objectif de consistance 40 %. Plafond par retrait combinant 50 % du solde et un plafond en dollars lié à la taille et au parcours.",
+        "Le Maximum Loss Limit suit les soldes de fin de journée mais les franchissements sont surveillés en temps réel. Statut d'éligibilité géographique modifié le 17/11/2026 ; politique Live distincte."
+      ],
+      "flags": [
+        "Ne pas annoncer un plafond universel sans taille et parcours.",
+        "Vérifier dossier country eligibility et réactivité d'un contrat funded daté.",
+        "Un témoignage de plateforme défaillante ou d'un payout retardé n'est pas à lui seul une preuve de refus contractuel injustifié."
+      ],
+      "trustpilot": "Profil topstep.com actif ; ancienne capture 3,7 (octobre) ne doit pas être reprise comme valeur du 23 novembre.",
+      "sources": [
+        "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+        "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
+        "https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/topstep.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "myfundedfutures",
+      "name": "MyFundedFutures",
+      "currentScore": 81,
+      "product": "Rapid / Rapid EOD / Flex / Pro (comptes simulés puis Live selon approbation)",
+      "contract": [
+        "Rapid annonce une première fenêtre de retrait 24h après le premier trade sur Sim Funded SOUS réserve du buffer et du minimum, et non une arrivée bancaire garantie en 24h.",
+        "Rapid EOD et Pro comportent des mécanismes de drawdown, d'éligibilité et de transition Live distincts ; Pro décrit une règle de 50 % pendant l'évaluation, sans extension automatique au payout Sim Funded."
+      ],
+      "flags": [
+        "Traquer la date d'achat et le modèle Rapid vs Rapid EOD, qui ne partagent pas le même drawdown.",
+        "Ne pas assimiler « payout unlock » à preuve d'un transfert bancaire définitif.",
+        "Identifier la partie juridique rémunératrice du Sim Funded et la décision de passage Live."
+      ],
+      "trustpilot": "Profil exact myfundedfutures.com visible et actif ; pas de décision de malus -6 par simple lecture d'avis.",
+      "sources": [
+        "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+        "https://help.myfundedfutures.com/en/articles/13286542-rapid-plan-100k-a-comprehensive-look",
+        "https://help.myfundedfutures.com/en/articles/16158363-rapid-eod-50k-a-comprehensive-look"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/myfundedfutures.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "the5ers",
+      "name": "The5ers",
+      "currentScore": 78,
+      "product": "High Stakes / Bootcamp / Hyper Growth (cycles séparés)",
+      "contract": [
+        "High Stakes donne accès aux retraits tous les 14 jours sur Pro. La FAQ de retrait indique un cycle de 14 jours et certaines remises à zéro du compteur après scaling.",
+        "Les modèles High Stakes, Bootcamp et Hyper Growth ne doivent pas partager automatiquement une même fréquence, un même split ou une même règle de drawdown. FAQ High Stakes mise à jour novembre 2026."
+      ],
+      "flags": [
+        "Séparer règles de payout et progression du compte (scaling qui réinitialise le délai).",
+        "Vérifier contrat de récompense et entité payeur, sans interpréter la réussite du challenge comme transfert bancaire.",
+        "Version de programme et date de vente doivent figurer dans la fiche."
+      ],
+      "trustpilot": "Profil the5ers.com actif avec des avis de novembre ; toute éventuelle sanction Trustpilot doit être prouvée sur ce domaine exact.",
+      "sources": [
+        "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+        "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/",
+        "https://the5ers.com/faqs/what-are-the-minimum-withdrawal-amounts-and-limits/"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/the5ers.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "fintokei",
+      "name": "Fintokei",
+      "currentScore": 78,
+      "product": "ProTrader / ProTrader Swing / SwiftTrader / StartTrader",
+      "contract": [
+        "Payout : ProTrader/ProTrader Swing/StartTrader après au moins 14 jours depuis le premier trade ou dernier payout ; SwiftTrader exige en outre 3 % de profit initial et 14 jours. KYC requis et positions closes avant demande.",
+        "Minimum standard 100 EUR/USD (exceptions par taille), frais crypto distincts (2,5 % + forfait selon réseau). Les envois Walletory annoncés comme quasi instantanés sont conditionnés par l'onboarding indépendant du prestataire.",
+        "ProTrader : limites journalières et globales de perte 5 % et 10 % ; 30 jours sans trade entraînent une fermeture selon FAQ."
+      ],
+      "flags": [
+        "Ne pas confondre approbation instantanée affichée, envoi par Fintokei et réception finale par le trader.",
+        "Frais et disponibilité des canaux varient selon résidence et actif.",
+        "Consistance peut être appliquée à la suite d'avertissements selon l'exposition, mécanisme à documenter en B2."
+      ],
+      "trustpilot": "Profil fintokei.com actif ; avis et témoignages ne suffisent pas à valider A3.",
+      "sources": [
+        "https://support.fintokei.com/en/articles/6538884-how-and-how-often-can-i-withdraw-my-performance-rewards-and-what-is-the-minimum-amount",
+        "https://support.fintokei.com/en/articles/11904545-when-will-i-receive-my-payout",
+        "https://support.fintokei.com/en/articles/6538878-what-rules-do-i-have-to-follow-to-keep-my-protrader-account"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/fintokei.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "tradeify",
+      "name": "Tradeify",
+      "currentScore": 78,
+      "product": "Growth / Select Flex / Select Daily / Lightning / Elite Live",
+      "contract": [
+        "Select Evaluation impose 40 % de consistance et un minimum de journées selon le parcours, tandis que Growth et Lightning ont des politiques de payout différentes. Un guide Tradeify mentionne 35 % sur Growth Funded et 20-30 % sur Lightning.",
+        "Plafonds Select Flex/Daily différents et changements selon achats avant/après le 01/09/2026 ; conversion vers Elite Live et mécanismes de sélection sont distincts des payouts simulés."
+      ],
+      "flags": [
+        "B1/B2 : 10-second rule et appréciation de la conduite de trading à examiner précisément, sans transformer toute consistance chiffrée en clause arbitraire.",
+        "Date d'achat 01/09/2026 et type Select Daily/Flex obligatoires.",
+        "Contrôler la politique Risk/Verification et le contrat de la phase Elite Live."
+      ],
+      "trustpilot": "Profil tradeify.co actif ; ne pas confondre avec tradeifycrypto.co ni tradeifyfx.co.",
+      "sources": [
+        "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies",
+        "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule",
+        "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/tradeify.co",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "audacity-capital",
+      "name": "Audacity Capital",
+      "currentScore": 77,
+      "product": "Ability Challenge 2-Step / Ability One 1-Step / FTP Instant Funding",
+      "contract": [
+        "CGU officielles identifient AudaCity Global LTD 15850 (Anjouan/Comores) comme opérateur et AudaCity International FZCO (Dubai) comme facilitateur de paiement. Cela n'établit pas par vérification primaire que le numéro de licence déclaré couvre exactement les services annoncés.",
+        "Une version des termes publiés conserve une clause large selon laquelle la firme peut classer un comportement comme négligent, « gambling » ou risque excessif et retirer le trader du programme sans remboursement. Une autre partie du texte évoque de fortes restrictions d'actualités sur un ancien Funded Trader Program ; applicability aux nouveaux produits à vérifier.",
+        "Les pages Ability Challenge modernes promettent une répartition et un remboursement de frais sous conditions ; les variantes d'archives doivent être réconciliées au contrat exact."
+      ],
+      "flags": [
+        "**Priorité B2** : appréciation discrétionnaire des stratégies / risk interview et impact éventuel sur paiement ; ne pas décréter qu'un litige est fondé à partir des seules plaintes.",
+        "**Priorité A1/A2** : numéro d'immatriculation/licence à recouper au registre et partie débitrice du contrat Ability One/2-Step vs FTP.",
+        "Deux profils Trustpilot audacity.capital et www.audacitycapital.co.uk ; pas de report automatique de score ou sanction entre domaines."
+      ],
+      "trustpilot": "Deux profils Trustpilot historiques ou actifs à rapprocher : audacity.capital et www.audacitycapital.co.uk ; des plaintes détaillées existent mais ne prouvent pas à elles seules un refus arbitraire ni une retenue du TrustScore.",
+      "sources": [
+        "https://audacity.capital/en/terms-and-conditions/",
+        "https://audacity.capital/terms-and-conditions/",
+        "https://audacity.capital/knowledge-center/ability-challenge/"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/audacity.capital",
+      "trustpilotAlternate": "https://www.trustpilot.com/review/www.audacitycapital.co.uk",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "myfundedcapital",
+      "name": "MyFundedCapital",
+      "currentScore": 75,
+      "product": "1-Step / 2-Step / Instant Funded / Stocks / Prediction Markets",
+      "contract": [
+        "Pour évaluations 1-Step/2-Step achetées depuis le 22/10/2026, règle de meilleure journée maximum 50 % ; au funded, un minimum de trois jours de trading entre demandes est annoncé pour certains comptes acquis depuis cette date.",
+        "Les CGU contiennent des catégories larges de stratégies interdites, notamment changement de stratégie entre challenge et funded tel qu'apprécié par l'entreprise, et possibilité d'exclure un trader du programme. Certains guides commerciaux décrivent en parallèle une règle de consistance 35 % au funded.",
+        "Une promesse de remboursement de frais au premier payout n'équivaut pas à une facture de paiement effectif."
+      ],
+      "flags": [
+        "**Priorité B2** : clauses subjectives de stratégies « différentes » ou de risque réglementaire, opposables selon le contrat acheté.",
+        "**Priorité identité** : distinguer entreprise du site et MFC Technologies LLC FZ figurant aux termes.",
+        "Ne jamais unifier les modalités de marchés actions/prédiction avec le CFD challenge."
+      ],
+      "trustpilot": "Profil exact myfundedcapital.com présent ; pas de constat primaire de retenue TrustScore au moment de cette passe.",
+      "sources": [
+        "https://myfundedcapital.com/terms-and-conditions/",
+        "https://myfundedcapital.com/faq/live-accounts/",
+        "https://myfundedcapital.com/faq/trading-rules/"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/myfundedcapital.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "earn2trade",
+      "name": "Earn2Trade",
+      "currentScore": 74,
+      "product": "Trader Career Path / Gauntlet Mini ; LiveSim et Live gérés avec partenaires",
+      "contract": [
+        "Depuis le 02/11/2026, pour les nouveaux achats, Earn2Trade a remplacé la Progression Ladder par des limites fixes de contrats et requis cinq jours profitables qualifiants avant **chaque retrait** en LiveSim comme en Live. Les cohortes antérieures, renouvellements et comptes issus de ces cohortes conservent leurs anciennes règles selon l'annonce officielle.",
+        "Politique de retrait : jours non nécessairement consécutifs et minima de profit journaliers selon taille ; paiement traité hebdomadairement le mercredi, demande avant vendredi 14h CT ; minimum net 100 USD ; frais Rise distincts pour résidents US et non-US.",
+        "Le payout split des TCP et Gauntlet Mini change selon **taille du retrait individuel** (seuil 50/80 %), tandis que certains LiveSim ont un maximum de retrait cumulé déclenchant un passage Live."
+      ],
+      "flags": [
+        "**Urgent** : ne pas appliquer nouvelles obligations à comptes antérieurs au 02/11 ; le prix et la cotisation doivent suivre le produit exact.",
+        "Identifier contrat et personne responsable du payout (Earn2Trade présente des partenaires de prop trading).",
+        "Le pourcentage 80% de marketing ne doit pas effacer le split 50% de certains petits retraits."
+      ],
+      "trustpilot": "Profil www.earn2trade.com actif avec avis ; ne pas déduire A3 de l'avis ou du certificat.",
+      "sources": [
+        "https://www.earn2trade.com/blog/earn2trade-rule-updates-november-2026",
+        "https://help.earn2trade.com/en/articles/5452472-what-is-the-withdrawal-policy",
+        "https://help.earn2trade.com/fr/articles/6877364-que-se-passe-t-il-lorsque-je-termine-mon-evaluation"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/www.earn2trade.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    },
+    {
+      "slug": "fundednext",
+      "name": "FundedNext",
+      "currentScore": 72,
+      "product": "Stellar 1-Step / 2-Step / Lite / Instant + on-demand en option",
+      "contract": [
+        "La FAQ de payout de FundedNext distingue les anciens clients dont les challenges furent achetés/réinitialisés avant le 12/01/2026, des cohortes ultérieures (différents calendriers, split, mécanisme de bonus lié au Challenge).",
+        "Les produits à retrait on-demand imposent des conditions spécifiques, par exemple objectif de croissance minimum 2 % et consistance 40 % selon programme; ce mécanisme ne décrit pas universellement tous les produits Stellar."
+      ],
+      "flags": [
+        "Documenter cohorte pré/post 12/01/2026, modèle et éventuel add-on payé avant d'évaluer B1/B2.",
+        "Rechercher version contractuelle liée au compte funded, la source des rejets et les preuves définitives de payout.",
+        "Ne pas présenter le calendrier on-demand comme l'engagement de virement instantané."
+      ],
+      "trustpilot": "Profil fundednext.com actif avec avis récents ; pas de malus -6 sans notice explicite Trustpilot sur ce domaine.",
+      "sources": [
+        "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward",
+        "https://help.fundednext.com/en/articles/15586820-does-fundednext-cfds-offer-on-demand-performance-rewards",
+        "https://help.fundednext.com/en/articles/10701694-what-will-be-my-reward-share-from-the-stellar-2-step-account"
+      ],
+      "trustpilotUrl": "https://www.trustpilot.com/review/fundednext.com",
+      "scoreV52": null,
+      "thirteenCriteriaComplete": false,
+      "independentlyVerifiablePayoutA3": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "publicationApproved": false,
+      "finalContractVerified": false,
+      "primaryLegalRegistryVerified": false,
+      "phase": "Documentary pre-audit"
+    }
+  ]
+}
