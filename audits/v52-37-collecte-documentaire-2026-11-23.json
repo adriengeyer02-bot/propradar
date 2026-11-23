@@ -395,12 +395,12 @@
       "firm": "Traders With Edge",
       "scorePublishedBefore": 22,
       "sourceDate": "2026-11-23",
-      "statusFinding": "DOMAINE_INACCESSIBLE_FERMETURE_LEGALE_NON_PROUVÉE",
-      "statusEvidence": "Le domaine officiel est signalé hors ligne depuis plusieurs contrôles en 2026, sans avis signé de fermeture ni registre du vendeur retrouvé.",
+      "statusFinding": "2_ENTITES_HK_CONSTITUEES_2022_2023_DOMAINE_HORS_LIGNE_DEP2026_PAYER_NON_IDENTIFIE",
+      "statusEvidence": "Registre Hong Kong officiel (PDFs inspectés visuellement) confirme Traders With Edge Limited CRN 3126405 (08/02/2022) ET Traders With Edge (Hong Kong) Limited CRN 3337985 (14/11/2023). 86hc.com affirme les deux 'still registered' 2026, mais contrôle direct du statut courant au registre officiel e-Search manquant. TheTrustedProp mentionne n°17591 pour la seconde, pas conforme au CRN officiel 3337985. Contrat/facture liant l'une aux comptes absent. Site traderswithedge.com HTTP502 23/11, DNS inactif depuis juin/octobre selon MyPropGenius; aucune annonce de dissolution ou arrêt juridique primaire.",
       "statusBasis": "dated_secondary_offline_check",
-      "contractAndRules": "CGU et FAQ 2026 non disponibles. Ne pas conclure qu'une suspension autorise la confiscation de payouts ; chercher contrat funded historique.",
-      "payoutEvidenceFinding": "Aucune chaîne de paiement finale indépendante vérifiée depuis interruption.",
-      "trustpilotFinding": "Statut Trustpilot du domaine exact non reconfirmé.",
+      "contractAndRules": "Pas de CGU ni funded agreement 2026 récupéré. Annuaires secondaires historiques Turtle 1 phase 10% target, 6% max loss, 3% daily, 80% split, payout 14j; Hare 2 phases 10/5% targets, max 10%, 5% daily, 80%, 14j. Critiques secondaires de tick scalp répétitif <30s, copy trading/manipulation. Aucun B1/B2 chiffrable car date, produit, vendeur et accord signés indisponibles.",
+      "payoutEvidenceFinding": "Vieux forums et pages commerciales revendiquent des payouts (exemple $8,083.50) et paiements via Wise/BTC/USDT, sans vérification finale indépendante payer/entity→programme→transaction→beneficiary→checker. Aucun A3 complet. Absence de site actif ne prouve pas qu'une dette a été réglée ou refusée.",
+      "trustpilotFinding": "Trustpilot exact traderswithedge.com a refusé l'accès par robots.txt au contrôle du 23/11/2026. Score, profil et éventuelle retenue officielle non vérifiés; impossibilité d'accès ≠ avis officiel breach of guidelines. Aucun -6.",
       "trustpilotExactProfile": null,
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -427,6 +427,41 @@
         {
           "url": "https://vettedpropfirms.com/traders-with-edge-website-goes-offline-suggesting-firm-shutdown/",
           "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.cr.gov.hk/docs/wrpt/RNC063_2022.02.07-2022.02.13.pdf",
+          "kind": "registre_hongkong_primaire_pdf_capturé_p37",
+          "label": "Traders With Edge Limited CRN3126405 08 Feb 2022"
+        },
+        {
+          "url": "https://www.cr.gov.hk/docs/wrpt/RNC063_2023.11.13-2023.11.19.pdf",
+          "kind": "registre_hongkong_primaire_pdf_capturé_p60",
+          "label": "Traders With Edge (Hong Kong) Limited CRN3337985 14 Nov 2023"
+        },
+        {
+          "url": "https://www.86hc.com/traders-with-edge-limited",
+          "kind": "registre_secondaire_etat2026_a_confirm",
+          "label": "Claims BRN73778484 still registered"
+        },
+        {
+          "url": "https://www.86hc.com/traders-with-edge-hong-kong-limited",
+          "kind": "registre_secondaire_etat2026_a_confirm",
+          "label": "Claims BRN75910337 still registered"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/traders-with-edge",
+          "kind": "annuaire_secondaire_erreur_identifiant",
+          "label": "Registration number 17591 not same as official HK CRN"
+        },
+        {
+          "url": "https://www.elitetrader.com/et/threads/traders-with-edge-prop-firm-q-a.371553/",
+          "kind": "declaration_marketing_forum_historique",
+          "label": "Claimed payouts and trading bot rules, not independent proof"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/traderswithedge.com",
+          "kind": "profil_exact_robots",
+          "label": "Not readable due robots, no verified withholding"
         }
       ],
       "remainingTasks": [
@@ -435,11 +470,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer directement statut HK e-Search 2026 des deux CRN 3126405 et 3337985, et rectifier numéro 17591 d'annuaire.",
+        "Obtenir facture vendeur/merchant of record et contrats signés 2022-2026 attribuant les créances clients à la bonne personne morale.",
+        "Vérifier source primaire effective de CGU et preuves A3 des payouts annoncés; absence du site ne prouve pas refus ou règlement."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md"
     },
     {
       "slug": "kortanafx",
@@ -501,12 +540,12 @@
       "firm": "Traddoo",
       "scorePublishedBefore": 38,
       "sourceDate": "2026-11-23",
-      "statusFinding": "CESSATION_COMMERCIALE_POSSIBLE_NON_ATTESTÉE_JURIDIQUEMENT",
-      "statusEvidence": "2024 ventes suspendues d'après presse; indices d'arrêt du domaine en octobre 2026, pas de document de fermeture juridique à jour.",
+      "statusFinding": "C104558_MALTE_ATTRIBUE_ERRONEMENT_TRADDOO_EN_FAIT_FUNDERPRO_DOMAINE_EXPIRE_OFFRE_NON_VERIFIEE",
+      "statusEvidence": "Source officielle FunderPro et Bloomberg LEI confirment C 104558 = FUNDERPRO LTD Malta, malgré plusieurs annuaires attribuant ce même numéro à 'Traddoo LTD'; identité légale/n° propre du vendeur Traddoo non validés. Finance Magnates 11/09/2024 relate pause nouvelles ventes, puis 28/10/2024 annonce pivot Futures avec TradersLaunch après fin accord FunderPro. Proptrad 31/10/2026 signale domaine NXDOMAIN, PropFirmBook app.traddoo.com dangling CNAME CloudFront; vérif directe 23/11 traddoo.com redirige expireddomains.com, CGU introuvables. Fin commerce probable, dissolution légale non prouvée; ni TradersLaunch ni FunderPro ne sont réputés reprendre les soldes de Traddoo.",
       "statusBasis": "archived_domain_and_press",
-      "contractAndRules": "Ne pas utiliser CGU forex 2024 pour une éventuelle offre Futures 2026 non vérifiée.",
-      "payoutEvidenceFinding": "Aucun versement final indépendant récent corroboré.",
-      "trustpilotFinding": "Page Trustpilot du domaine historique existe, statut masque/non masqué non revu.",
+      "contractAndRules": "Anciennes descriptions Forex: split 80%, payout crypto USDT daily/on demand, refund frais challenge seulement au 4e payout; plaintes secondaires sur disqualification pour hedging dans produits commercialisés sans restriction; CGU/contrat signé non récupérés. Pivot Futures 2024: NinjaTrader/Volumetrica, EOD DD, 40% consistency selon fiches 2026, payout 1-3j, modèles 1-/2-step; ne pas fusionner phases, prix ni payeur. Aucune retenue B1/B2 sans termes officiels et faits distincts.",
+      "payoutEvidenceFinding": "Trustpilot 53 avis favorables/critique historiques, notamment grief remboursement frais de challenge au changement de plateforme; pas d'échantillon A3 indépendant 6 maillons sur ventes Forex ou produit Futures. Aucune transmission de passif via TradersLaunch établie.",
+      "trustpilotFinding": "Deux snapshots dynamiques de Trustpilot traddoo.com divergents : l'un annonce nouveaux avis impossibles car site fermé, l'autre TrustScore 3.8/5 pour 53 avis et bouton d'avis actif. Pas de notice vérifiée de score retenu pour non-respect des guidelines dans aucun; -6 non fondé. Recontrôler à date de décision.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/traddoo.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -550,6 +589,31 @@
           "url": "https://github.com/adriengeyer02-bot/propradar/issues/4",
           "kind": "archive_code",
           "label": "PropRadar domain monitor, 14 Nov 2026"
+        },
+        {
+          "url": "https://funderpro.com/",
+          "kind": "source_primaire_juridique",
+          "label": "FunderPro Ltd Malta registration C104558 (NOT Traddoo)"
+        },
+        {
+          "url": "https://lei.bloomberg.com/leis/view/8755004JF69ITJAWW873",
+          "kind": "registre_LEI_corroboration",
+          "label": "FunderPro Ltd MBR registration authority C104558"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/traddoo",
+          "kind": "erreur_numero_secondaire",
+          "label": "Misattributes FunderPro C104558 to Traddoo"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-partners-with-traderslaunch-and-enters-futures-market/",
+          "kind": "presse_controlee_oct2024",
+          "label": "FunderPro split and TradersLaunch futures pivot October 28 2024"
+        },
+        {
+          "url": "https://propfirmbook.com/unverified/traddoo",
+          "kind": "controle_secondaire_2026",
+          "label": "CloudFront deleted CNAME app.traddoo.com, no checkout validated"
         }
       ],
       "remainingTasks": [
@@ -558,11 +622,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Identifier Traddoo LTD / LLC sur facture ou au registre maltais correct, SANS utiliser C104558 de FunderPro.",
+        "Obtenir contrat Forex client au 2024 et funded Futures sous TradersLaunch, établir qui doit remboursements de frais et rewards.",
+        "Recontrôler Trustpilot dynamique (fermé aux avis vs note 3.8/5) et ne jamais confondre fermeture des avis avec guideline breach."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md"
     },
     {
       "slug": "rocket21-challenge",
@@ -887,12 +955,12 @@
       "firm": "Nations Trading",
       "scorePublishedBefore": 56,
       "sourceDate": "2026-11-23",
-      "statusFinding": "CHECKOUT_ET_DOSSIER_COMMERCIAL_NON_IDENTIFIÉS",
-      "statusEvidence": "Site nationstrading.com historique dans le catalogue, pas de CGU/FAQ de programme 2026 authentifiées dans cette revue ni entité juridique enregistrée.",
+      "statusFinding": "DOMAINE_NATIONSTRADING_COM_REDIRECT_GODADDY_FOR_SALE_2026_ENTITE_FACTURANTE_NON_ETABLIE",
+      "statusEvidence": "Contrôle direct 23/11/2026 : nationstrading.com redirige vers https://forsale.godaddy.com/forsale/nationstrading.com ; /terms-and-conditions inaccessible. Pas de contrat ni marchand au checkout 2026. Annuaires incompatibles USA/Chine sans certificat officiel, ne pas attribuer juridiction. Domaine offert à la vente ≠ société juridiquement dissoute.",
       "statusBasis": "archived_site_inventory_unverified",
-      "contractAndRules": "Aucune clause de retrait ne peut être classée à partir de la seule ancienne fiche produit. Exiger date/version, produit et vendeur.",
-      "payoutEvidenceFinding": "Aucun versement trader final indépendant vérifié.",
-      "trustpilotFinding": "URL Trustpilot à vérifier directement; absence d'avis accessibles ne prouve pas masquage.",
+      "contractAndRules": "Réponse officielle 21/07/2023 Trustpilot cite une clause des forbidden Trading Practices (b) prohibant l'accès/gestion de comptes Challenge, Verification, funded par un tiers, y compris gestion pro. Un plaignant relate challenge 500k annoncé 'allow AI', réussi puis disqualification au motif d'IP multiples; distinguer EA propre vs tierce gestion. Autre plainte 03/2023 prétend interdiction de news appliquée deux jours après achat (rétroactivité non prouvée). Pas de CGU originales, dates des programmes ou logs, donc ne pas appliquer B1/B2. Entreprise déclare 'funds traders every month' en 07/2023, non preuve bancaire finale.",
+      "payoutEvidenceFinding": "Trustpilot contient une déclaration de l'entreprise payant mensuellement et avis positif d'un payout bihebdomadaire 2022, et complaint remboursement frais challenge tardif; aucune preuve finale payeur/bon programme/bénéficiaire/vérificateur indépendant. A2 injustifié et A3 non validés.",
+      "trustpilotFinding": "Trustpilot nationstrading.com TrustScore 2.6/5 pour 13 avis, aucune revue depuis 12 mois, 54% une étoile, score affiché, aucune notice officielle de retenue du TrustScore pour guideline breach. -6 non applicable sur cette base.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/nationstrading.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -922,11 +990,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Identifier société contractante, facture, ancien contrat signé et opérateur du compte original Nations Trading.",
+        "Recueillir CGU originales AI/HFT/EA third-party/IP/VPN/news et leur éventuelle modification post-achat, puis logs anonymisés et motif de disqualification.",
+        "Établir solde des remboursements versus rewards à payer et vérifier payout final indépendamment; site à vendre ne résout pas le passif."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md"
     },
     {
       "slug": "the-forex-funder",
