@@ -746,7 +746,8 @@ export const frArticles: FrArticle[] = [
         compare: {
           columns: ['Parcours Standard', 'Parcours Consistency'],
           rows: [
-            { label: 'Avant chaque payout', values: ['**5 journées gagnantes** d\'au moins 150 
+            { label: 'Avant chaque payout', values: ["**5 journées gagnantes** d'au moins 150 $", '**3 jours de trading**, meilleure journée **≤ 40 %** du profit net'] },
+            { label: 'Plafond de base (50K / 100K / 150K)', values: ['**2 000 / 3 000 / 5 000 $**', '**3 000 / 4 000 / 6 000 $**'] },
           ],
           note: 'Plafonds de base vérifiés le 23 novembre 2026. Une option Daily Loss Limit à l’achat d’un nouveau Combine peut les relever temporairement. Le choix du parcours est définitif.',
         },
