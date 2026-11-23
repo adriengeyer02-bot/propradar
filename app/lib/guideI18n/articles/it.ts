@@ -141,12 +141,12 @@ const it: GuideArticleTranslations = {
       {
         heading: 'Le regole del conto finanziato che contano di più',
         paragraphs: [
-          "I modelli di challenge sono classici. Il modello 2-Step GOAT chiede 8% poi 6% con perdita giornaliera del 4% e perdita massima statica del 10%; il 2-Step Standard chiede 10% poi 5% con 5% giornaliero e 10% massimo; l'1-Step chiede 10% con perdita giornaliera del 3% e perdita massima statica del 6%. Il modello 3-Step è stato ritirato ad agosto 2026. Questi dati vengono da una recensione di terzi verificata il 5 ottobre 2026: confermali al checkout.",
+          "I modelli di challenge sono classici. Il modello 2-Step GOAT chiede 8% poi 6% con perdita giornaliera del 4% e perdita massima statica del 10%; il 2-Step Standard chiede 10% poi 5% con 5% giornaliero e 10% massimo; l'1-Step chiede 10% con perdita giornaliera del 3% e perdita massima statica del 6%. GOAT pubblica ancora la guida del modello 3-Step, ma le regole sui reset escludono modelli precedenti. Il 2-Step Standard non è più venduto ai nuovi clienti. La presenza di una FAQ non dimostra la disponibilità commerciale: verificare modello e contratto al checkout. Questi dati vengono da una recensione di terzi verificata il 5 ottobre 2026: confermali al checkout.",
           'Le regole che decidono i pagamenti iniziano dopo il superamento:',
         ],
         bullets: [
           "Goat Guard: sui conti finanziati interessati (esclusi Instant), una perdita flottante del 2% del saldo può far chiudere le posizioni. Alla prima attivazione il profit split scende al 50%; alla seconda il conto è violato. Verifica le eccezioni del programma.",
-          'Regola dei 2 minuti: i profitti dei trade tenuti meno di due minuti vengono tolti al pagamento, mentre le perdite di quei trade restano sul conto.',
+          "Durata minima soltanto sul conto funded: challenge acquistato prima del 6 ottobre 2026 = 2 minuti; dal 6 ottobre = 1 minuto. I profitti dei trade più brevi sono esclusi dal payout, mentre le perdite restano. Il reset non cambia la data originaria di acquisto; la regola non si applica alla valutazione.",
           'Finestra news: il profitto realizzato intorno a notizie ad alto impatto è limitato all’1% del saldo iniziale.',
           'Tetto di profitto giornaliero: un conto finanziato può registrare al massimo 3.000 $ di profitto al giorno.',
           'I modelli immediati usano trailing drawdown e chiudono il conto con una perdita fluttuante dell’1% o del 2% a seconda del modello.',
