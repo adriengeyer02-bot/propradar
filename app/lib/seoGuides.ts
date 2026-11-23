@@ -661,12 +661,12 @@ export const seoGuides: SeoGuide[] = [
     intent: 'comparer',
     demandSignal: 'Decision search: the user hesitates between two possible purchases and wants to know which one really fits.',
     answer:
-      'FTMO and The5ers are two solid profiles, but they do not serve the same need. FTMO stands out for history, documentation and benchmark status. The5ers often speaks to careful traders who want clearer limits by program. The right choice depends on trading style, budget, accepted drawdown, news/EA restrictions and payout-rule comfort.',
+      'FTMO and The5ers target different forex/CFD trading styles. FTMO’s **1-Step consistency rule for new purchases from October 12, 2026** should not be confused with its 2-Step objectives. The5ers High Stakes has separate payout and risk rules. FTMO’s November 2026 Black Friday partner creative offers **up to 30%** on eligible challenges; the actual checkout total, not the headline, decides the discount. Commercial links do not change PropRadar’s scores.',
     primaryKeywords: ['FTMO vs The5ers', 'FTMO or The5ers', 'The5ers vs FTMO review'],
     secondaryKeywords: ['FTMO payout', 'The5ers rules', 'prop firm compare', 'challenge forex'],
     checks: [
-      'Compare minimum price and target account size.',
-      'Read news, EA, drawdown and profit-target rules.',
+      'Compare the current checkout price and target account size, including temporary discounts (FTMO Black Friday up to 30% on eligible products in November 2026).',
+      'Separate the FTMO 1-Step consistency rule effective for new purchases from October 12, 2026, from FTMO 2-Step and The5ers High Stakes.',
       'Identify affiliate links, coupons and displayed commercial interests.',
       'Choose by trading style, not popularity alone.',
     ],
@@ -737,20 +737,20 @@ export const seoGuides: SeoGuide[] = [
     intent: 'risque',
     demandSignal: 'Trust search before buying a futures evaluation: legitimacy, current rules, payout conditions and public reviews.',
     answer:
-      'Topstep is a legitimate, long-running US futures prop firm founded in 2012. Its Trading Combine has no time limit, a 55% consistency target and a Maximum Loss Limit that trails the end-of-day balance but is monitored live. New traders keep 90% of payouts. The main drawbacks are futures-only trading, no overnight holds and frequent rule changes since late 2025.',
+      'Topstep is a long-running US futures prop firm founded in 2012. Its Combine has no time limit, a 55% consistency target and a trailing Maximum Loss Limit. The Standard and Consistency funded payout paths have **different withdrawal caps**; geography and account cohort also affect eligibility. The latest country restrictions took effect November 17, 2026.',
     primaryKeywords: ['topstep review', 'is topstep legit', 'topstep reviews'],
     secondaryKeywords: ['topstep rules', 'topstep payout', 'topstep consistency rule', 'topstep trading combine', 'topstep trustpilot'],
     checks: [
       'Confirm the current Combine price and whether the plan carries an activation fee.',
       'Size positions from the Maximum Loss Limit, which trails the end-of-day balance.',
-      'Choose the Express Funded Account payout path carefully: the choice is permanent.',
-      'Remember the MLL resets to $0 after the first payout.',
+      'Choose the Express Funded Account payout path carefully: the choice is permanent and per-request payout caps differ.',
+      'Remember the MLL resets to $0 after the first payout; verify new country restrictions effective November 17, 2026.',
     ],
     faq: [
       {
         question: 'Is Topstep legit?',
         answer:
-          'Yes. Topstep has operated since 2012 from Chicago, publishes detailed rules in its help center and launched an affiliated introducing broker in 2026. PropRadar scores it 84/100 with no regulator warning recorded. As with all prop firms, the evaluation and funded stages are simulated.',
+          'Topstep has operated since 2012 from Chicago and publishes detailed program and payout rules. An affiliated introducing broker does not turn the simulated Trading Combine or XFA into a live brokerage account. For PropRadar’s current score and assessment date, consult the firm profile.',
       },
       {
         question: 'What is the Topstep consistency rule?',
@@ -898,21 +898,21 @@ export const seoGuides: SeoGuide[] = [
   },
   {
     slug: 'goat-funded-trader-avis',
-    title: 'GOAT Funded Trader Review: FIRSTGFT, BOGO40 and Payouts',
+    title: 'GOAT Funded Trader Review 2026: Codes, Payouts & Rules',
     metaDescription:
-      'GOAT Funded Trader review: compare FIRSTGFT and BOGO40, 1-step, 2-step, 3-step and Instant rules, payout terms, news trading and key risks.',
+      'GOAT Funded Trader review: FIRSTGFT and BOGO40 conditions, 2% payout fee, 1- or 2-minute funded holding time, 1-step, 2-step and legacy program rules.',
     eyebrow: 'Brand review',
     h1: 'Goat Funded Trader review: strong offer, but reread the rules before buying',
     intent: 'risque',
     demandSignal:
-      'Brand decision search: the trader wants to know whether GFT is reliable, which current code gives the better immediate value, which model to choose and which rules to verify before paying.',
+      'Brand decision search: verify whether FIRSTGFT or BOGO40 applies to the chosen live offer, whether the legacy model is sold, and funded payout terms.',
     answer:
-      'GOAT Funded Trader combines 1-step, 2-step, 3-step and Instant Funding models with two current official offers: FIRSTGFT gives new customers up to 50% off eligible plans, while BOGO40 gives 40% off and a conditional same-size account only after the first successful payout. Compare the exact model before choosing the code.',
+      'GOAT lists FIRSTGFT as a new-customer offer with up to 50% off eligible plans, while its BOGO40 FAQ describes 40% off selected plans and a same-size bonus account **only after the first successful payout** and contacting support. Both are time-limited and must be confirmed at checkout. The 2-Step Standard is no longer sold to new customers; the 3-Step help page may remain online for legacy traders. For funded accounts bought before 6 October 2026 the minimum trade duration is 2 minutes; newer purchases use 1 minute.',
     primaryKeywords: ['Goat Funded Trader review', 'GFT prop firm', 'Goat Funded Trader discount code'],
     secondaryKeywords: ['FIRSTGFT code', 'BOGO40 code', 'GFT payout', 'GFT instant funding', 'Goat Funded Trader rules'],
     checks: [
       'Compare FIRSTGFT and BOGO40 at checkout without selecting an oversized account.',
-      'Compare 1 step, 2 step, 3 step and Instant because the rules are not identical.',
+      'Compare 1-step, 2-step and Instant models; confirm whether a legacy 3-step plan is actually available before selecting it.',
       'Verify news trading, weekend holding, lot size, daily loss, max loss and payout delay.',
       'Read recent feedback from the last 30 to 60 days across Reddit, Discord and X.',
       'Look for payout-denial examples and the most common rejection reasons on the exact program you want.',
@@ -921,12 +921,12 @@ export const seoGuides: SeoGuide[] = [
       {
         question: 'Should I use FIRSTGFT or BOGO40 at GOAT Funded Trader?',
         answer:
-          'FIRSTGFT is the simpler new-customer offer and can reach 50% on eligible plans. BOGO40 gives 40% off, but its same-size bonus account is claimable only after a first successful payout and contact with support. Compare the immediate checkout totals before choosing.',
+          'GOAT advertises FIRSTGFT up to 50% for new customers and BOGO40 with a 40% discount on eligible accounts. A BOGO bonus account requires an actual first payout and a support request, and is **not** issued at purchase. Confirm code eligibility and the final checkout amount; limited-time campaigns can expire.',
       },
       {
         question: 'Which GFT model should I choose?',
         answer:
-          'Instant and 1-step models are faster, but they can be stricter. 2-step or 3-step models may be easier to read if you want more validation and less pressure before funded-stage rules apply.',
+          'Instant and 1-step models can involve tighter funded rules. Compare currently sold 2-step plans by their exact name. GOAT still documents some retired or legacy products (including 3-Step and Standard) but a help-center page does not prove current checkout availability.',
       },
     ],
     internalLinks: [
