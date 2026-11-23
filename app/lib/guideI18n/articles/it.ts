@@ -128,7 +128,7 @@ const it: GuideArticleTranslations = {
         heading: 'Chi gestisce GOAT Funded Trader',
         paragraphs: [
           "GOAT Funded Trader è stata lanciata a maggio 2023. È un nome commerciale di Wishes Tower International Limited, società di Hong Kong, e il trading simulato è fornito da Goat Funded LTD a Saint Lucia. Nessuna autorità finanziaria vigila sul servizio. I termini descrivono conti simulati, acquisti non rimborsabili e ampia discrezionalità sui pagamenti: è comune nel settore, ma va saputo prima di comprare.",
-          "PropRadar le assegna 58/100 e la tiene sotto osservazione: il marchio è reale e paga i trader, ma la sua storia è breve e i termini di pagamento lasciano molto spazio all'interpretazione. PropRadar ha un rapporto di affiliazione con GOAT Funded Trader; non cambia questo punteggio né questa recensione.",
+          "La valutazione editoriale aggiornata di PropRadar si trova nella scheda dell'azienda. Con V5.2, una sospensione ufficiale del TrustScore da parte di Trustpilot comporta una detrazione di 6 punti, non un tetto automatico di 64/100; i limiti legati alle prove di pagamento sono separati. Le condizioni di prelievo restano importanti. Il rapporto di affiliazione di PropRadar non influenza il punteggio.",
         ],
       },
       {
@@ -145,7 +145,7 @@ const it: GuideArticleTranslations = {
           'Le regole che decidono i pagamenti iniziano dopo il superamento:',
         ],
         bullets: [
-          'Goat Guard: sui conti finanziati 1-Step e 2-Step, una perdita fluttuante del 2% del saldo iniziale riduce la ripartizione al 50%; una seconda attivazione viola il conto.',
+          "Goat Guard: sui conti finanziati interessati (esclusi Instant), una perdita flottante del 2% del saldo può far chiudere le posizioni. Alla prima attivazione il profit split scende al 50%; alla seconda il conto è violato. Verifica le eccezioni del programma.",
           'Regola dei 2 minuti: i profitti dei trade tenuti meno di due minuti vengono tolti al pagamento, mentre le perdite di quei trade restano sul conto.',
           'Finestra news: il profitto realizzato intorno a notizie ad alto impatto è limitato all’1% del saldo iniziale.',
           'Tetto di profitto giornaliero: un conto finanziato può registrare al massimo 3.000 $ di profitto al giorno.',
@@ -155,8 +155,8 @@ const it: GuideArticleTranslations = {
       {
         heading: 'Pagamenti',
         paragraphs: [
-          "La ripartizione standard è dell'80%, con un upgrade a pagamento al 100% al checkout e un piano di scaling che può portarla al 90-95%. La maggior parte dei modelli paga ogni 14 giorni, con un minimo di 100 $ e una commissione del 3%. I primi due pagamenti sono limitati al minore tra il 6% del saldo iniziale e 10.000 $. I metodi di pagamento includono Rise, bonifico, Skrill e cripto, ognuno con il proprio limite.",
-          "Diverse affermazioni pubbliche contraddicono il centro assistenza, per esempio sulla velocità di pagamento (24 ore contro 2 giorni lavorativi) e sulla dimensione massima del conto. Quando marketing e termini non coincidono, al tuo pagamento si applicano i termini.",
+          "La quota standard pubblicizzata è dell'80%, ma varia per programma e opzioni. Il centro assistenza ufficiale, consultato il 23 novembre 2026, indica un minimo di 100 $ per richiesta e una commissione del 2%. I primi due pagamenti possono essere limitati al minore tra il 6% del saldo iniziale e 10.000 $; per i conti 2-Step da 5.000 $ acquistati dal 25 luglio 2026 si applica invece il 4%. Rise, banca, Skrill e crypto hanno limiti diversi.",
+          "Il centro assistenza aggiornato indica 2 giorni lavorativi per l'elaborazione, dopo KYC e firma del Trader Agreement al primo prelievo. L'eventuale verifica del Risk Team e l'accredito bancario definitivo sono passaggi distinti. Controlla le condizioni del programma acquistato.",
         ],
       },
       {
