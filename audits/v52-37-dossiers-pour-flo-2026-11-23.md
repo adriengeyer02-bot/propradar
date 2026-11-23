@@ -516,6 +516,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte G, classement de recherche SITE_OFFLINE_OFFICIAL_CLOSURE_NOT_FOUND. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 — preuve au registre primaire Hong Kong :** [Companies Registry 2022](https://www.cr.gov.hk/docs/wrpt/RNC063_2022.02.07-2022.02.13.pdf) : **Traders With Edge Limited CRN 3126405**, créée 08/02/2022 ; [Companies Registry 2023](https://www.cr.gov.hk/docs/wrpt/RNC063_2023.11.13-2023.11.19.pdf) : **Traders With Edge (Hong Kong) Limited CRN 3337985**, créée 14/11/2023 (**deux PDF inspectés visuellement**). Les annuaires HK [86hc (2022)](https://www.86hc.com/traders-with-edge-limited) et [86hc (2023)](https://www.86hc.com/traders-with-edge-hong-kong-limited) les disent encore enregistrées, **statut actuel non vérifié dans le registre HK officiel**. Un comparateur donne n°17591 pour la seconde, **ne pas remplacer le CRN officiel 3337985**. Domaine `traderswithedge.com` HTTP502 au contrôle 23/11 et DNS inaccessible depuis juin/octobre d'après [MyPropGenius](https://mypropgenius.com/closed-firms/traders-with-edge/). Anciennes règles Turtle/Hare et payout 14j seulement **secondaires historiques** ; aucune preuve A3 finale. Profil Trustpilot exact **inaccessible robots.txt**, pas de notice officielle -6 vérifiée. Deux sociétés ne prouvent ni même actionnariat ni transfert de créance.
+
+**Dossier détaillé :** [Lot 11 Traders With Edge / Traddoo / Nations Trading](v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md). **Aucune note V5.2 ni décision d'archivage publiées.**
+
 ---
 
 ### 23. Traddoo — `traddoo`
@@ -535,6 +540,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://traddoo.com/) · [Source 2](https://traddoo.com/terms-and-conditions/) · [Source 3](https://www.trustpilot.com/review/traddoo.com) · [Source 4](https://joinprop.com/prop-firm/traddoo/) · [Source 5](https://propfirmtier.com/en/firms/traddoo) · [Source 6](https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-temporarily-suspends-access-for-new-clients/) · [Source 7](https://github.com/adriengeyer02-bot/propradar/issues/4).
 
 *Reprise du dossier F/G : cohorte G, classement de recherche COMMERCIAL_ACTIVITY_DISPUTED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 — erreur légale critique :** certains comparateurs attribuent à « Traddoo LTD » le numéro maltais **C 104558** ; or le [site officiel FunderPro](https://funderpro.com/) et son [LEI Bloomberg](https://lei.bloomberg.com/leis/view/8755004JF69ITJAWW873) attribuent **C 104558 à FUNDERPRO LTD**, **PAS une pièce d'immatriculation Traddoo**. Vendeur Traddoo exact toujours inconnu. [Finance Magnates](https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-partners-with-traderslaunch-and-enters-futures-market/) : pause de nouvelles ventes puis pivot vers Futures avec TradersLaunch fin octobre 2024 après rupture FunderPro. Domaine direct `traddoo.com` redirige vers expireddomains.com ; [PropFirmBook](https://propfirmbook.com/unverified/traddoo) documente app CloudFront supprimée / login inaccessible, pas d'offre actuelle sûre. Anciennes plaintes « hedging » et refund frais au 4e payout **non vérifiées par contrats signés**. Trustpilot exact comporte deux snapshots **contradictoires** : avis fermés pour site clos vs **3,8/5 53 avis** et bouton actif ; ni l'un ni l'autre ne documente une retenue TrustScore guideline −6. Payout indépendant absent.
+
+**Dossier détaillé :** [Lot 11 Traders With Edge / Traddoo / Nations Trading](v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md). **Aucune note V5.2 ni décision d'archivage publiées.**
 
 ---
 
@@ -580,6 +590,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://nationstrading.com/) · [Source 2](https://nationstrading.com/terms-and-conditions/) · [Source 3](https://www.trustpilot.com/review/nationstrading.com).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** `nationstrading.com` redirige vers **GoDaddy domaine à vendre**, CGU complètes et checkout non accessibles ; **pas une dissolution juridique prouvée**. [Trustpilot exact](https://www.trustpilot.com/review/nationstrading.com) affiche **2,6/5, 13 avis**, note non retenue et aucune sanction guideline −6. Réponse de la firme du **21/07/2023** cite une clause historique *forbidden Trading Practices (b)* **interdisant gestion ou accès à des comptes challenge/verification/funded par un tiers** ; un client allègue pourtant avoir acheté un challenge autorisant IA/bot puis subi disqualification pour IP multiples. **Bots personnels ≠ gestion par un tiers à présumer** : exiger CGU signées, logs IP et preuves de notification. Autre plainte signale restriction news trading introduite **deux jours après achat** : rétroactivité non authentifiée. La firme déclarait payer mensuellement sans preuve A3 indépendante. Pas d'identité légale du débiteur établie.
+
+**Dossier détaillé :** [Lot 11 Traders With Edge / Traddoo / Nations Trading](v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md). **Aucune note V5.2 ni décision d'archivage publiées.**
 
 ---
 
