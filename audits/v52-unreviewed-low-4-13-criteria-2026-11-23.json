@@ -1,0 +1,453 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-23",
+  "status": "research_only_unapproved",
+  "noLiveChanges": true,
+  "count": 4,
+  "audits": [
+    {
+      "slug": "blue-guardian",
+      "name": "Blue Guardian",
+      "previousReconstructed": 61,
+      "programAndPhase": "CFD 2-Step Standard funded, Instant Starter séparé",
+      "legal": "CGU citent Blue Guardian Limited à Sainte-Lucie, alors qu'un parcours checkout indique une immatriculation Angleterre/Pays de Galles #12087566 : contrepartie acheteur et funded non réconciliées au registre.",
+      "criticalContractFinding": "Les termes autorisent à leur « sole and absolute discretion » annulation de trades, ajustement de profits/pertes et rejet de rewards, avec décisions décrites comme finales. B1 3; la même discrétion ne doit pas générer un second B2. 2-Step Standard payout 14j ; Instant Starter plafonds/rails distincts.",
+      "remaining": "Comparer checkout réel, facture et contrats de l'entité anglaise vs Sainte-Lucie ; vérifier la portée exacte de la clause sur rewards acquis et l'appel. Valider transferts finaux par traders tiers sur le bon compte.",
+      "sources": {
+        "terms": "https://blueguardian.com/terms-and-conditions",
+        "payout": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+        "rules": "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules",
+        "trustpilot": "https://www.trustpilot.com/review/blueguardian.com"
+      },
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Payout et conditions d'éligibilité documentés partiellement pour le programme ciblé : conditions exactes de premier retrait, frais, caps et cohorte à consolider.",
+          "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Palier neutre 6/10 : ni historique régulier vérifié indépendamment sur 12 mois, ni incidents qualifiés aux seuils V5.2. Les avis clients seuls ne tranchent pas.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1/5 : communications de paiement, captures ou témoignages, sans preuve indépendante complète des six maillons et attribution du bon programme/compte.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Protection des Rewards, retrait ou sanction selon la clause identifiée dans le constat de cette firme. Sous-note à confronter à la convention funded individuelle.",
+          "source": "https://blueguardian.com/terms-and-conditions"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Restrictions opérationnelles ordinaires chiffrées non sanctionnées. Seul un risque distinct de B1 peut entraîner une retenue ; résultat expliqué dans le constat.",
+          "source": "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Entité citée dans les CGU sans correspondance complète entre registre, checkout, prestataire de paiement et débiteur funded.",
+          "source": "https://blueguardian.com/terms-and-conditions"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 provisoire : statut statutaire à jour de la bonne personne morale non authentifié au registre primaire. Ne pas en inférer une fermeture.",
+          "source": "https://blueguardian.com/terms-and-conditions"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 provisoire : revue réglementaire par nom/domaine/juridiction non exhaustive dans ce dossier. Ni certification ni avertissement établi.",
+          "source": "https://blueguardian.com/terms-and-conditions"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Offre, phases, limites, accès et frais examinés dans les pages publiques, avec éléments encore manquants au checkout.",
+          "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work"
+        },
+        "D2": {
+          "points": 2,
+          "max": 6,
+          "justification": "CGU accessibles, mais historique de versions et applicabilité aux cohortes existantes non tous vérifiés.",
+          "source": "https://blueguardian.com/terms-and-conditions"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Nature simulée et organisation décrites, mais la cohérence du panier final, de l'entité et du contrat funded n'a pas été intégralement contrôlée.",
+          "source": "https://blueguardian.com/terms-and-conditions"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté de la marque estimée par présence de pages et témoignages ; ancienneté opérationnelle précise à vérifier.",
+          "source": "https://www.trustpilot.com/review/blueguardian.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Support/pages d'aide et réponses observables ; résoudre et documenter indépendamment des litiges reste nécessaire.",
+          "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work"
+        }
+      },
+      "pillars": {
+        "A": 15,
+        "B": 13,
+        "C": 9,
+        "D": 12,
+        "E": 6
+      },
+      "raw": 55,
+      "trustpilotOfficialWithholding": null,
+      "conditionalIfNoNotice": 55,
+      "finalV52": null,
+      "publicationApproved": false,
+      "commercialStatus": "NOT CERTIFIED",
+      "registryStatusVerified": false,
+      "fullPayoutEvidenceVerified": false,
+      "confidence": "faible"
+    },
+    {
+      "slug": "traders-launch",
+      "name": "Traders Launch",
+      "previousReconstructed": 61,
+      "programAndPhase": "Evaluation et compte simulé funded / sélection live, cohortes partenaires distinctes",
+      "legal": "Traders Launch LLC nommée dans les termes ; numéro/statut de registre, juridiction exacte et rôle éventuel de partenaires non recoupés officiellement.",
+      "criticalContractFinding": "CGU : réussir l'évaluation ne garantit pas un compte live ; les droits à récompenses simulées peuvent être différents pour les clients référés par partenaires. FAQ annonce demandes toutes les 24h après éligibilité, mais pas réception bancaire sous 24h. B1 conservateur 6, sans déclaration de confiscation de profit certifiée.",
+      "remaining": "Vérifier contrat des acheteurs directs vs liens partenaires et si l'exclusion du payout affecte bien ces comptes ; reconstituer éligibilité exacte au retrait et contrat live ; rapprocher registre et au moins plusieurs versements.",
+      "sources": {
+        "terms": "https://traderslaunch.com/terms",
+        "payout": "https://traderslaunch.com/payout-rules",
+        "rules": "https://traderslaunch.com/faq",
+        "trustpilot": "https://www.trustpilot.com/review/traderslaunch.com"
+      },
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Payout et conditions d'éligibilité documentés partiellement pour le programme ciblé : conditions exactes de premier retrait, frais, caps et cohorte à consolider.",
+          "source": "https://traderslaunch.com/payout-rules"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Palier neutre 6/10 : ni historique régulier vérifié indépendamment sur 12 mois, ni incidents qualifiés aux seuils V5.2. Les avis clients seuls ne tranchent pas.",
+          "source": "https://www.trustpilot.com/review/traderslaunch.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1/5 : communications de paiement, captures ou témoignages, sans preuve indépendante complète des six maillons et attribution du bon programme/compte.",
+          "source": "https://www.trustpilot.com/review/traderslaunch.com"
+        },
+        "B1": {
+          "points": 6,
+          "max": 15,
+          "justification": "Protection des Rewards, retrait ou sanction selon la clause identifiée dans le constat de cette firme. Sous-note à confronter à la convention funded individuelle.",
+          "source": "https://traderslaunch.com/terms"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Restrictions opérationnelles ordinaires chiffrées non sanctionnées. Seul un risque distinct de B1 peut entraîner une retenue ; résultat expliqué dans le constat.",
+          "source": "https://traderslaunch.com/faq"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Entité citée dans les CGU sans correspondance complète entre registre, checkout, prestataire de paiement et débiteur funded.",
+          "source": "https://traderslaunch.com/terms"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 provisoire : statut statutaire à jour de la bonne personne morale non authentifié au registre primaire. Ne pas en inférer une fermeture.",
+          "source": "https://traderslaunch.com/terms"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 provisoire : revue réglementaire par nom/domaine/juridiction non exhaustive dans ce dossier. Ni certification ni avertissement établi.",
+          "source": "https://traderslaunch.com/terms"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Offre, phases, limites, accès et frais examinés dans les pages publiques, avec éléments encore manquants au checkout.",
+          "source": "https://traderslaunch.com/payout-rules"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "CGU accessibles, mais historique de versions et applicabilité aux cohortes existantes non tous vérifiés.",
+          "source": "https://traderslaunch.com/terms"
+        },
+        "D3": {
+          "points": 4,
+          "max": 6,
+          "justification": "Nature simulée et organisation décrites, mais la cohérence du panier final, de l'entité et du contrat funded n'a pas été intégralement contrôlée.",
+          "source": "https://traderslaunch.com/terms"
+        },
+        "E1": {
+          "points": 2,
+          "max": 6,
+          "justification": "Ancienneté de la marque estimée par présence de pages et témoignages ; ancienneté opérationnelle précise à vérifier.",
+          "source": "https://www.trustpilot.com/review/traderslaunch.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Support/pages d'aide et réponses observables ; résoudre et documenter indépendamment des litiges reste nécessaire.",
+          "source": "https://traderslaunch.com/payout-rules"
+        }
+      },
+      "pillars": {
+        "A": 15,
+        "B": 16,
+        "C": 9,
+        "D": 16,
+        "E": 4
+      },
+      "raw": 60,
+      "trustpilotOfficialWithholding": null,
+      "conditionalIfNoNotice": 60,
+      "finalV52": null,
+      "publicationApproved": false,
+      "commercialStatus": "NOT CERTIFIED",
+      "registryStatusVerified": false,
+      "fullPayoutEvidenceVerified": false,
+      "confidence": "faible"
+    },
+    {
+      "slug": "ofp-funding",
+      "name": "OFP Funding",
+      "previousReconstructed": 58,
+      "programAndPhase": "OFP simulated evaluation / reward invoice, programme et taille à confirmer",
+      "legal": "OFP Funding Ltd, Sainte-Lucie #2024-00577 indiqué dans des documents commerciaux ; inscription et débiteur du contrat funded non vérifiés directement au registre.",
+      "criticalContractFinding": "La récompense exigible est déterminée après révision des trades ; un processus de facture prévoit jusqu'à 7 jours pour émission puis 14 jours pour paiement. Les CGU mentionnent un « market standard risk » décidé par la firme sans seuil numérique parfaitement déterminé, d'où B2 7. B1 9 conditionnel sur règles/recours, à revoir au contrat signée.",
+      "remaining": "Lire les numéros de clause exacts du cycle facture et séparer traitement du virement ; vérifier produit checkout et approbation des rewards ; documenter exemple de décision et recours. Extraire statut de l'entité au registre.",
+      "sources": {
+        "terms": "https://ofpfunding.com/terms-and-conditions",
+        "payout": "https://help.ofpfunding.com/how-does-the-payout-process-work-at-ofp-funding/",
+        "rules": "https://help.ofpfunding.com/how-long-does-it-take-to-receive-my-payout-after-request/",
+        "trustpilot": "https://www.trustpilot.com/review/ofpfunding.com"
+      },
+      "criteria": {
+        "A1": {
+          "points": 8,
+          "max": 10,
+          "justification": "Payout et conditions d'éligibilité documentés partiellement pour le programme ciblé : conditions exactes de premier retrait, frais, caps et cohorte à consolider.",
+          "source": "https://help.ofpfunding.com/how-does-the-payout-process-work-at-ofp-funding/"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Palier neutre 6/10 : ni historique régulier vérifié indépendamment sur 12 mois, ni incidents qualifiés aux seuils V5.2. Les avis clients seuls ne tranchent pas.",
+          "source": "https://www.trustpilot.com/review/ofpfunding.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1/5 : communications de paiement, captures ou témoignages, sans preuve indépendante complète des six maillons et attribution du bon programme/compte.",
+          "source": "https://www.trustpilot.com/review/ofpfunding.com"
+        },
+        "B1": {
+          "points": 9,
+          "max": 15,
+          "justification": "Protection des Rewards, retrait ou sanction selon la clause identifiée dans le constat de cette firme. Sous-note à confronter à la convention funded individuelle.",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        },
+        "B2": {
+          "points": 7,
+          "max": 10,
+          "justification": "Restrictions opérationnelles ordinaires chiffrées non sanctionnées. Seul un risque distinct de B1 peut entraîner une retenue ; résultat expliqué dans le constat.",
+          "source": "https://help.ofpfunding.com/how-long-does-it-take-to-receive-my-payout-after-request/"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Entité citée dans les CGU sans correspondance complète entre registre, checkout, prestataire de paiement et débiteur funded.",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 provisoire : statut statutaire à jour de la bonne personne morale non authentifié au registre primaire. Ne pas en inférer une fermeture.",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 provisoire : revue réglementaire par nom/domaine/juridiction non exhaustive dans ce dossier. Ni certification ni avertissement établi.",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        },
+        "D1": {
+          "points": 8,
+          "max": 8,
+          "justification": "Offre, phases, limites, accès et frais examinés dans les pages publiques, avec éléments encore manquants au checkout.",
+          "source": "https://help.ofpfunding.com/how-does-the-payout-process-work-at-ofp-funding/"
+        },
+        "D2": {
+          "points": 4,
+          "max": 6,
+          "justification": "CGU accessibles, mais historique de versions et applicabilité aux cohortes existantes non tous vérifiés.",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        },
+        "D3": {
+          "points": 4,
+          "max": 6,
+          "justification": "Nature simulée et organisation décrites, mais la cohérence du panier final, de l'entité et du contrat funded n'a pas été intégralement contrôlée.",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        },
+        "E1": {
+          "points": 4,
+          "max": 6,
+          "justification": "Ancienneté de la marque estimée par présence de pages et témoignages ; ancienneté opérationnelle précise à vérifier.",
+          "source": "https://www.trustpilot.com/review/ofpfunding.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Support/pages d'aide et réponses observables ; résoudre et documenter indépendamment des litiges reste nécessaire.",
+          "source": "https://help.ofpfunding.com/how-does-the-payout-process-work-at-ofp-funding/"
+        }
+      },
+      "pillars": {
+        "A": 15,
+        "B": 16,
+        "C": 9,
+        "D": 16,
+        "E": 6
+      },
+      "raw": 62,
+      "trustpilotOfficialWithholding": null,
+      "conditionalIfNoNotice": 62,
+      "finalV52": null,
+      "publicationApproved": false,
+      "commercialStatus": "NOT CERTIFIED",
+      "registryStatusVerified": false,
+      "fullPayoutEvidenceVerified": false,
+      "confidence": "faible"
+    },
+    {
+      "slug": "funded-bull",
+      "name": "Funded Bull",
+      "previousReconstructed": 55,
+      "programAndPhase": "Evaluation et funded : disponibilité commerciale du portail / checkout à recontrôler",
+      "legal": "Nom juridique de type LTD et rattachement à Singapour mentionnés dans les termes, mais numéro d'immatriculation, statut et identité du débiteur funded non authentifiés.",
+      "criticalContractFinding": "CGU décrivent un premier cycle de retrait de 14 jours et cinq journées de trading, puis cycle de 7 jours ; interdictions liées à « irresponsible risk » et pertes possibles de rewards en cas de violation. La page du dashboard n'a pas pu être vérifiée au cours de cette recherche ; une erreur d'accès ne prouve ni fermeture ni fraude.",
+      "remaining": "PRIORITÉ STATUT : contrôler commande complète, portail, source de paiement, date de dernier programme vendu et service à la clientèle. Sans disponibilité commerciale prouvée, ne pas proposer de note active ; registre et transferts A3 à obtenir.",
+      "sources": {
+        "terms": "https://fundedbull.com/terms/",
+        "payout": "https://fundedbull.com/trading-rules/",
+        "rules": "https://my.fundedbull.com/",
+        "trustpilot": "https://www.trustpilot.com/review/fundedbull.com"
+      },
+      "criteria": {
+        "A1": {
+          "points": 6,
+          "max": 10,
+          "justification": "Payout et conditions d'éligibilité documentés partiellement pour le programme ciblé : conditions exactes de premier retrait, frais, caps et cohorte à consolider.",
+          "source": "https://fundedbull.com/trading-rules/"
+        },
+        "A2": {
+          "points": 6,
+          "max": 10,
+          "justification": "Palier neutre 6/10 : ni historique régulier vérifié indépendamment sur 12 mois, ni incidents qualifiés aux seuils V5.2. Les avis clients seuls ne tranchent pas.",
+          "source": "https://www.trustpilot.com/review/fundedbull.com"
+        },
+        "A3": {
+          "points": 1,
+          "max": 5,
+          "justification": "1/5 : communications de paiement, captures ou témoignages, sans preuve indépendante complète des six maillons et attribution du bon programme/compte.",
+          "source": "https://www.trustpilot.com/review/fundedbull.com"
+        },
+        "B1": {
+          "points": 3,
+          "max": 15,
+          "justification": "Protection des Rewards, retrait ou sanction selon la clause identifiée dans le constat de cette firme. Sous-note à confronter à la convention funded individuelle.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        "B2": {
+          "points": 10,
+          "max": 10,
+          "justification": "Restrictions opérationnelles ordinaires chiffrées non sanctionnées. Seul un risque distinct de B1 peut entraîner une retenue ; résultat expliqué dans le constat.",
+          "source": "https://my.fundedbull.com/"
+        },
+        "C1": {
+          "points": 4,
+          "max": 10,
+          "justification": "Entité citée dans les CGU sans correspondance complète entre registre, checkout, prestataire de paiement et débiteur funded.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        "C2": {
+          "points": 3,
+          "max": 6,
+          "justification": "3 provisoire : statut statutaire à jour de la bonne personne morale non authentifié au registre primaire. Ne pas en inférer une fermeture.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        "C3": {
+          "points": 2,
+          "max": 4,
+          "justification": "2 provisoire : revue réglementaire par nom/domaine/juridiction non exhaustive dans ce dossier. Ni certification ni avertissement établi.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        "D1": {
+          "points": 6,
+          "max": 8,
+          "justification": "Offre, phases, limites, accès et frais examinés dans les pages publiques, avec éléments encore manquants au checkout.",
+          "source": "https://fundedbull.com/trading-rules/"
+        },
+        "D2": {
+          "points": 2,
+          "max": 6,
+          "justification": "CGU accessibles, mais historique de versions et applicabilité aux cohortes existantes non tous vérifiés.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        "D3": {
+          "points": 2,
+          "max": 6,
+          "justification": "Nature simulée et organisation décrites, mais la cohérence du panier final, de l'entité et du contrat funded n'a pas été intégralement contrôlée.",
+          "source": "https://fundedbull.com/terms/"
+        },
+        "E1": {
+          "points": 2,
+          "max": 6,
+          "justification": "Ancienneté de la marque estimée par présence de pages et témoignages ; ancienneté opérationnelle précise à vérifier.",
+          "source": "https://www.trustpilot.com/review/fundedbull.com"
+        },
+        "E2": {
+          "points": 2,
+          "max": 4,
+          "justification": "Support/pages d'aide et réponses observables ; résoudre et documenter indépendamment des litiges reste nécessaire.",
+          "source": "https://fundedbull.com/trading-rules/"
+        }
+      },
+      "pillars": {
+        "A": 13,
+        "B": 13,
+        "C": 9,
+        "D": 10,
+        "E": 4
+      },
+      "raw": 49,
+      "trustpilotOfficialWithholding": null,
+      "conditionalIfNoNotice": 49,
+      "finalV52": null,
+      "publicationApproved": false,
+      "commercialStatus": "PORTAL/SALE TO VERIFY",
+      "registryStatusVerified": false,
+      "fullPayoutEvidenceVerified": false,
+      "confidence": "faible"
+    }
+  ]
+}
