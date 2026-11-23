@@ -10,7 +10,7 @@
     "check:program-promos": "node scripts/check-program-promotions.cjs",
     "start": "next start",
     "lint": "next lint",
-    "check:scoring-v52": "node scripts/test-scoring-v52-candidate.mjs && node scripts/test-scoring-v52-runtime.mjs && node scripts/check-scoring-v52-coverage.mjs",
+    "check:scoring-v52": "node scripts/test-scoring-v52-candidate.mjs && node scripts/test-scoring-v52-runtime.mjs && node scripts/check-scoring-v52-coverage.mjs && node scripts/check-scoring-v52-cohort-h.mjs",
     "check:score-modal": "node scripts/check-score-modal-consistency.mjs"
   },
   "dependencies": {

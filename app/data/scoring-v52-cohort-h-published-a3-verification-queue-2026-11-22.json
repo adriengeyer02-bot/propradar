@@ -1,0 +1,62 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-22",
+  "status": "PAYOUT_PROOF_METHOD_REVIEW_ONLY_NEVER_AUTOMATIC_SCORE_CHANGE",
+  "population": {
+    "publishedScores": 58,
+    "strongA3": 4
+  },
+  "criterion": "A3 >=4 requires multi-beneficiary/program specific final settlement chain under SCORING_V5_2.md; public-chain transfer can include vendors/affiliates",
+  "entries": [
+    {
+      "slug": "alpha-capital-group",
+      "A3": 5,
+      "publicScore": 66,
+      "origin": "migrated",
+      "existingSources": [
+        "https://payoutjunction.com/firms/alphacapitalgroup",
+        "https://payoutjunction.com/methodology",
+        "https://payoutproofs.com/firms/alpha-capital-group"
+      ],
+      "followup": "Independently determine which Rise/on-chain recipients were traders, link sender to contracting operator and exact program/phase, obtain dated multi-beneficiary verification and a sample of final settlements; exclude vendors and affiliates before determining A3=4 or 5. Do not change published note without editorial approval.",
+      "blockingIssue": "Current on-chain evidence and attribution as a trader reward has not been reconciled under the six-link standard. This file does not find payouts fake, only considers the high A3 value unconfirmed pending attribution."
+    },
+    {
+      "slug": "alpha-futures",
+      "A3": 5,
+      "publicScore": 62,
+      "origin": "migrated",
+      "existingSources": [
+        "https://payoutjunction.com/firms/alphafutures",
+        "https://payoutjunction.com/methodology"
+      ],
+      "followup": "Independently determine which Rise/on-chain recipients were traders, link sender to contracting operator and exact program/phase, obtain dated multi-beneficiary verification and a sample of final settlements; exclude vendors and affiliates before determining A3=4 or 5. Do not change published note without editorial approval.",
+      "blockingIssue": "Current on-chain evidence and attribution as a trader reward has not been reconciled under the six-link standard. This file does not find payouts fake, only considers the high A3 value unconfirmed pending attribution."
+    },
+    {
+      "slug": "top-one-trader",
+      "A3": 5,
+      "publicScore": 56,
+      "origin": "migrated",
+      "existingSources": [
+        "https://payoutjunction.com/firms/toponetrader",
+        "https://payoutjunction.com/methodology"
+      ],
+      "followup": "Independently determine which Rise/on-chain recipients were traders, link sender to contracting operator and exact program/phase, obtain dated multi-beneficiary verification and a sample of final settlements; exclude vendors and affiliates before determining A3=4 or 5. Do not change published note without editorial approval.",
+      "blockingIssue": "Current on-chain evidence and attribution as a trader reward has not been reconciled under the six-link standard. This file does not find payouts fake, only considers the high A3 value unconfirmed pending attribution."
+    },
+    {
+      "slug": "top-one-futures",
+      "A3": 4,
+      "publicScore": 67,
+      "origin": "native",
+      "existingSources": [
+        "https://damnpropfirms.com/payouts/methodology/",
+        "https://propfirmloop.com/payout-tracker/top-one-futures/",
+        "https://damnpropfirms.com/futures-prop-firms/top-one-futures/payouts/"
+      ],
+      "followup": "Independently determine which Rise/on-chain recipients were traders, link sender to contracting operator and exact program/phase, obtain dated multi-beneficiary verification and a sample of final settlements; exclude vendors and affiliates before determining A3=4 or 5. Do not change published note without editorial approval.",
+      "blockingIssue": "Current on-chain evidence and attribution as a trader reward has not been reconciled under the six-link standard. This file does not find payouts fake, only considers the high A3 value unconfirmed pending attribution."
+    }
+  ]
+}
