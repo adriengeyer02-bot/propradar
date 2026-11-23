@@ -1,0 +1,463 @@
+{
+  "generatedOn": "2026-11-23",
+  "source": "V4 published allowlist and V4 scorecard input files on main",
+  "count": 57,
+  "rows": [
+    {
+      "slug": "ftmo",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 90,
+      "priorDisplayed": 83,
+      "source": "scoring-v4-batch-1.json"
+    },
+    {
+      "slug": "topstep",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 81,
+      "priorDisplayed": 79,
+      "source": "scoring-v4-batch-1.json"
+    },
+    {
+      "slug": "the5ers",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 76,
+      "source": "scoring-v4-batch-1.json"
+    },
+    {
+      "slug": "trade-the-pool",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 70,
+      "priorDisplayed": 75,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "audacity-capital",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 83,
+      "priorDisplayed": 73,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "myfundedfutures",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 81,
+      "priorDisplayed": 73,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "tradeify",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 72,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "earn2trade",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 74,
+      "priorDisplayed": 71,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "fundednext",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 72,
+      "priorDisplayed": 70,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "instant-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 70,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "the-trading-pit",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 73,
+      "priorDisplayed": 70,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "e8-markets",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 69,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "fintokei",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 68,
+      "source": "scoring-v4-batch-2.json"
+    },
+    {
+      "slug": "fxify",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 75,
+      "priorDisplayed": 67,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "funderpro",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 76,
+      "priorDisplayed": 67,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "funding-pips",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 76,
+      "priorDisplayed": 66,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "brightfunded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 66,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "pipfarm",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 77,
+      "priorDisplayed": 66,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "for-traders",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 76,
+      "priorDisplayed": 66,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "leeloo-trading",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 67,
+      "priorDisplayed": 63,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "funding-traders",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 74,
+      "priorDisplayed": 63,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "ftuk",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 69,
+      "priorDisplayed": 63,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "aqua-funded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 75,
+      "priorDisplayed": 62,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "hantec-trader",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 68,
+      "priorDisplayed": 62,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "hola-prime",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 72,
+      "priorDisplayed": 62,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "lark-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 67,
+      "priorDisplayed": 61,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "bulenox",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 62,
+      "priorDisplayed": 61,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "finotive-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 75,
+      "priorDisplayed": 61,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "ment-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 67,
+      "priorDisplayed": 61,
+      "source": "scoring-v4-batch-3.json"
+    },
+    {
+      "slug": "elite-trader-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 66,
+      "priorDisplayed": 58,
+      "source": "scoring-v4-batch-4-published.json"
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 62,
+      "priorDisplayed": 55,
+      "source": "scoring-v4-batch-4-published.json"
+    },
+    {
+      "slug": "myfundedcapital",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 75,
+      "priorDisplayed": 59,
+      "source": "scoring-v4-batch-4-published.json"
+    },
+    {
+      "slug": "blue-guardian",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 67,
+      "priorDisplayed": 53,
+      "source": "scoring-v4-batch-5-published.json"
+    },
+    {
+      "slug": "atlas-funded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 66,
+      "priorDisplayed": 55,
+      "source": "scoring-v4-batch-5-published.json"
+    },
+    {
+      "slug": "traders-launch",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 61,
+      "priorDisplayed": 52,
+      "source": "scoring-v4-batch-6-published.json"
+    },
+    {
+      "slug": "funded-bull",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 55,
+      "priorDisplayed": 51,
+      "source": "scoring-v4-batch-6-published.json"
+    },
+    {
+      "slug": "ofp-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 64,
+      "priorDisplayed": 50,
+      "source": "scoring-v4-batch-6-published.json"
+    },
+    {
+      "slug": "alpha-capital-group",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 80,
+      "priorDisplayed": 71,
+      "source": "scoring-v4-completion-c01-published.json"
+    },
+    {
+      "slug": "maven-trading",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 78,
+      "priorDisplayed": 67,
+      "source": "scoring-v4-completion-c01-published.json"
+    },
+    {
+      "slug": "get-leveraged",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 65,
+      "priorDisplayed": 50,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "miltraders",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 58,
+      "priorDisplayed": 50,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "top-one-trader",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 56,
+      "priorDisplayed": 47,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "alpha-futures",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 64,
+      "priorDisplayed": 46,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "bem-funding",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 55,
+      "priorDisplayed": 46,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "upcomers",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 59,
+      "priorDisplayed": 46,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "thinkcapital",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 65,
+      "priorDisplayed": 45,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "tiger-funded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 56,
+      "priorDisplayed": 45,
+      "source": "scoring-v4-batch-7-published.json"
+    },
+    {
+      "slug": "bullwaves-prime",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 60,
+      "priorDisplayed": 40,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "directfundedtrader",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 47,
+      "priorDisplayed": 43,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "foxx-funded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 50,
+      "priorDisplayed": 36,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "funded-trader-markets",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 52,
+      "priorDisplayed": 43,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "hash-hedge",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 61,
+      "priorDisplayed": 44,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "sabiotrade",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 58,
+      "priorDisplayed": 43,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "sfx-funded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 44,
+      "priorDisplayed": 43,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "x-funded",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 50,
+      "priorDisplayed": 44,
+      "source": "scoring-v4-batch-8-published.json"
+    },
+    {
+      "slug": "levels",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 43,
+      "priorDisplayed": 27,
+      "source": "scoring-v4-batch-9-published.json"
+    },
+    {
+      "slug": "titan-capital-markets",
+      "confidence": "moyenne",
+      "checkedOn": "2026-11-20",
+      "editorial": 52,
+      "priorDisplayed": 24,
+      "source": "scoring-v4-batch-9-published.json"
+    }
+  ]
+}
