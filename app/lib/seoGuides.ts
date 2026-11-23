@@ -699,25 +699,26 @@ export const seoGuides: SeoGuide[] = [
     intent: 'comparer',
     demandSignal: 'Futures decision search: real cost, drawdown, withdrawal conditions and payout trust before buying an evaluation.',
     answer:
-      'Apex attracts traders with aggressive promotions and a wide choice of account sizes. Topstep leans on its established futures profile and a framework many traders find easier to identify. The match is not only about price: compare drawdown, recurring fees, payout caps, platforms and recent community feedback.',
+      "Topstep XFA and Apex Performance Accounts have fundamentally different payout contracts in November 2026. Topstep's Standard XFA needs five winning days of $150+, while its Consistency path uses three trading days and a 40% target. Apex's EOD Performance Account requires five qualifying days, a 50% consistency test, a $500 minimum request and no more than six approved payouts before that PA closes. Compare the account version and current agreement, not only the promotional fee or profit split.",
     primaryKeywords: ['Topstep vs Apex', 'Apex vs Topstep', 'best futures prop firm'],
     secondaryKeywords: ['Apex Trader Funding promo', 'Topstep payout', 'futures funded account'],
     checks: [
-      'Compare promotions and total cost after funded status.',
-      'Check EOD/trailing drawdown and consistency rules.',
-      'Read community signals and recent incidents.',
-      'Choose by platform and intraday style.',
+      'Compare challenge price, activation charges, recurring fees and payout terms.',
+      'Compare Topstep XFA Standard and Consistency with Apex EOD and Intraday PA separately.',
+      'Check Apex EOD\'s six-approved-payout limit per PA, not per trader.',
+      'Check loss limits, consistency, country eligibility and the account version.',
+      'Read official payout terms instead of relying on promotions.',
     ],
     faq: [
       {
         question: 'Is Apex cheaper than Topstep?',
         answer:
-          'Apex often displays large promotions, but price must be compared with the full rules and fees.',
+          'Apex may offer large discounts, but compare all fees and the six-payout lifecycle of its current EOD Performance Accounts before calling it cheaper.',
       },
       {
         question: 'Is Topstep more reliable?',
         answer:
-          'It has a strong historical presence, but every trader must verify current conditions before buying.',
+          'Topstep has an established public history, but the firms have different funded-stage and payout contracts. Verify the current score and official policy for the exact account.',
       },
     ],
     internalLinks: [
