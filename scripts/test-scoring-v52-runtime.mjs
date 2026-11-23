@@ -27,6 +27,10 @@ assert.ok(!gate.approvals.some(x=>x.slug==='ck-capital'),'CK Capital veto: no po
 assert.equal(ownerRelease.migrationSlugs.length,25);
 assert.equal(ownerRelease.reviewedAudits.length,7);
 assert.equal(gate.approvals.find(x=>x.slug==='axi-select')?.expectedFinal,60);
+assert.equal(gate.approvals.find(x=>x.slug==='take-profit-trader')?.expectedFinal,74,'No A3=1 cap at 64');
+assert.equal(gate.approvals.find(x=>x.slug==='fxify')?.expectedFinal,72,'No A3=2 cap at 69');
+assert.equal(gate.approvals.find(x=>x.slug==='myfundedcapital')?.expectedFinal,66,'No A3 cap at 64');
+assert.equal(gate.approvals.find(x=>x.slug==='lux-trading-firm')?.expectedFinal,65,'No A3 cap at 64');
 assert.equal(gate.approvals.find(x=>x.slug==='city-traders-imperium')?.expectedFinal,53);
 const expectedNative={'funded7':56,'top-one-futures':67,'wegetfunded':52,'purdia-capital':62,'daytraders-com':52,'equity-edge':53,'alpine-funded':59,'funded-squad':41,'orion-funded':60,'wsfunded':59,'moneta-funded':59,'tradexprop':51,'funder-trading':52,'fundyourfx':58,'monevis':54,'fundedhive':49,'sabiotrade':42,'clarity-traders':48,'tradersedgefx':55,'lvlup-futures':57,'atmos-funded':52,'tx3-funding':60,'fundedelite':51,'upcomers':56,'funding-your-trades':52,'funded-trader-markets':58,'funded-futures-network':55,'directfundedtrader':47,'fidelcrest':54,'now-trade-funded':47,'fundings4u':41,'ultimate-traders':55,'bullwaves-prime':53,'dna-funded':51,'foxx-funded':44,'sfx-funded':42,'superfunded':45,'funding-frontier':49,'wemastertrade':42,'forexive':51,'hash-hedge':63,'sure-leverage':49,'titan-capital-markets':49,'prop-number-one':36,'trading-cult':40,'x-funded':42,'levels':39};
 assert.equal(intake.audits.length,47,'Forty-seven native V5.2 source-backed scorecards expected');
@@ -60,7 +64,7 @@ for(const row of all.rows){
   const n=computeV52Scorecard(audit);
   assert.equal(n.final,row.v52,row.slug+' native V5.2 differs from migrated source');
   assert.equal(n.rulesPenalty,10-row.criteriaV52.B2,row.slug+' B2 double count');
-  assert.equal(n.payoutEvidenceCap,row.payoutEvidenceCap===100?null:row.payoutEvidenceCap,row.slug+' A3 cap');
+  assert.equal(n.payoutEvidenceCap,null,row.slug+' A3 must not impose a score cap');
   assert.equal(n.safetyCap,row.legalCap===100?null:55,row.slug+' entity cap');
   if(row.wasPublishedV5) active.add(row.slug);
 }
