@@ -1,0 +1,2616 @@
+{
+  "version": "V5.2-research",
+  "checkedOn": "2026-11-23",
+  "purpose": "collecte documentaire des 37 statuts à clarifier avant toute nouvelle notation",
+  "scoreStatus": "UNSCORED_DOSSIERS_NO_CHANGES_TO_LIVE_RATINGS",
+  "methodology": "SCORING_V5_2.md",
+  "safety": "Les constats anciens F/G sont référencés et distingués des pages primaires revues le 23/11. Aucune URL inaccessible n'est prétendue relue. Note Trustpilot masquée et fraude ne doivent jamais être inférées d'avis négatifs. Le champ activeTrustpilotScoreWithholdingVerified vaut null sur les domaines principaux non établis ; exception explicitement documentée : historicalAeonTrustpilotNotice.activeTrustpilotScoreWithholdingVerified=true sur aeonfunded.com, sans transfert de sanction à quantxfund.io ni approbation de score.",
+  "count": 37,
+  "rows": [
+    {
+      "slug": "bespoke-funding-program",
+      "firm": "Bespoke Funding Program",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SOCIETE_UK_DISSOUTE_REPRENEUR_NON_VERIFIE",
+      "statusEvidence": "Companies House: BESPOKE FUNDING PROGRAM LTD 14377446 dissoute 04/08/2026; FCA warning 31/10/2023 exact nom/domaine. Les CGU 2026 sont enregistrées dans le dossier existant, mais le contrat de tout repreneur n'est pas identifié.",
+      "statusBasis": "official_registry_and_regulator",
+      "contractAndRules": "CGU antérieures: 5 règles classifiées (notamment pouvoir de refus discret., tailles et news). Vérifier leur validité pour un éventuel autre vendeur et aucune extension aux programmes non couverts.",
+      "payoutEvidenceFinding": "Plaintes/délais de récompense : Prop Firm Match a retiré la firme de son annuaire; aucun règlement bancaire final indépendamment attribué à un repreneur vérifié.",
+      "trustpilotFinding": "Profil Trustpilot visible et noté autour de 3/5 sur recherche; aucune suspension de TrustScore confirmée.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/bespokefundingprogram.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 5,
+        "classified": 5
+      },
+      "sourceLinks": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/14377446",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.fca.org.uk/news/warnings/bespoke-funding-program-limited-https-wwwbespokefundingprogramcom",
+          "kind": "archive_code",
+          "label": "FCA warning list: Bespoke Funding Program Limited"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/bespoke-funding-program",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/bespokefundingprogram.com",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.bespokefundingprogram.com/term-condition/",
+          "kind": "archive_code",
+          "label": "Terms & conditions read in full (2026-11-20)"
+        }
+      ],
+      "remainingTasks": [
+        "Vérifier si la société UK dissoute a un successeur contractuel assumant effectivement ses obligations.",
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-bespoke-blufx-fxci-2026-11-23.md"
+    },
+    {
+      "slug": "tickticktrader",
+      "firm": "TickTickTrader",
+      "scorePublishedBefore": 67,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "MIGRATION_OPÉRATIONNELLE_CONTESTÉE",
+      "statusEvidence": "Anciennes conditions S2F+ et Direct récupérables en index; site et checkout commerciaux non vérifiés actifs. Trustpilot contient des réponses de l'entreprise affirmant poursuivre les opérations/migration.",
+      "statusBasis": "primary_firm_public_reply_plus_archive",
+      "contractAndRules": "Contrat historique : durée compte 180 jours, éligibilité Performance Score 10 puis 7. Réponse de l'entreprise à un avis 2026 : refus de retrait et fermeture invoquant des propos publics qualifiés de diffamatoires, clause de non-dénigrement à réclamer dans la version signée.",
+      "payoutEvidenceFinding": "Plusieurs plaintes datées 2026 pour retard de 6-11 mois. L'entreprise admet une file d'attente de payouts durant migration et affirme ne pas avoir globalement rejeté ces demandes. Pas de dossier indépendant de paiement final validé.",
+      "trustpilotFinding": "Profil Trustpilot accessible avec avis 2026 et réponses de la firme; avis négatifs ne prouvent pas un refus injustifié. Aucun TrustScore officiellement masqué vérifié.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/tickticktrader.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 3,
+        "classified": 2
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.trustpilot.com/review/tickticktrader.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement",
+          "kind": "archive_code",
+          "label": "TickTickTrader Direct 50K agreement"
+        },
+        {
+          "url": "https://app.tickticktrader.com/signup",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://pickmyfirm.com/firms/tickticktrader",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://app.tickticktrader.com/signup/Recurring_Subscriptions?provider=Projectx&type=evaluation",
+          "kind": "archive_code",
+          "label": "TickTickTrader public checkout suspension notice (official, verified by indexed text)"
+        },
+        {
+          "url": "https://whichprop.co/rule-changes/",
+          "kind": "archive_code",
+          "label": "Independent 9 November 2026 status check of TickTickTrader"
+        },
+        {
+          "url": "https://app.tickticktrader.com/signup/5oZvj0yTy",
+          "kind": "archive_code",
+          "label": "TickTickTrader S2F+ published legacy account agreement"
+        }
+      ],
+      "remainingTasks": [
+        "Obtenir la clause de non-dénigrement et les preuves de la décision relative au payout refusé, sans confondre motif déclaré et irrégularité démontrée.",
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fxrk-tickticktrader-rocket21-2026-11-23.md"
+    },
+    {
+      "slug": "the-funded-trader",
+      "firm": "The Funded Trader",
+      "scorePublishedBefore": 35,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SITE_COMMERCIAL_INACCESSIBLE_CESSATION_JURIDIQUE_NON_PROUVÉE",
+      "statusEvidence": "Contrôle direct 23/11/2026: thefundedtraderprogram.com et /terms-of-use/index.html renvoient HTTP 402. Les données légales actuelles du vendeur et une annonce primaire de dissolution ne sont pas retrouvées.",
+      "statusBasis": "archived_official_plus_independent_status",
+      "contractAndRules": "CGU indexées historiques: trading simulé, Customer Agreement et KYC conditionnent les récompenses; aucune version contractuelle funded 2026 accessible. Article de split/payout daté mai 2026 repris par tiers, sans garantie applicable aujourd'hui.",
+      "payoutEvidenceFinding": "La firme reconnaissait 900 demandes en attente en nov 2024 et 1272 en mars 2025 (Finance Magnates reprenant ses annonces); en mars 2025 elle revendiquait 386k USD de payouts, dont une liste a été rapprochée des mouvements Arbiscan par Finance Magnates. Preuve partielle de transferts blockchain, mais attribution au vendeur, programme et bénéficiaire final incomplète; état des arriérés 2026 inconnu.",
+      "trustpilotFinding": "Profil thefundedtraderprogram.com affiche TrustScore ~2,9/5 (21906 avis relevés), nouvelles plaintes 2026; pas de bannière officielle de retenue du TrustScore active constatée. Avis ≠ jugement ni paiement indépendamment attribué.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/thefundedtraderprogram.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "HOSTING_UNAVAILABLE_LEGAL_CLOSURE_UNCONFIRMED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://thefundedtraderprogram.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.thefundedtraderprogram.com/terms-of-use/index.html",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://bestprops.com/status/the-funded-trader-status/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://bestprops.com/prop-firms/the-funded-trader/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/",
+          "kind": "archive_code",
+          "label": "Finance Magnates: The Funded Trader suspends payouts (14 Mar 2024)"
+        },
+        {
+          "url": "https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp",
+          "kind": "archive_code",
+          "label": "Finance Magnates: 900 traders await payouts (20 Nov 2024)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/thefundedtraderprogram.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/this-prop-firm-has-nearly-1300-traders-waiting-a-year-for-their-money/",
+          "kind": "presse_documentant_annonce_firme",
+          "label": "900 (nov 2024) -> 1272 (mars 2025) clients déclarés en attente"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/prop-firm-the-funded-trader-paid-traders-386k-in-march-could-have-earned-3x-more/",
+          "kind": "presse_avec_rapprochement_onchain",
+          "label": "March 2025 $386k declared and Arbiscan cross-check partial"
+        },
+        {
+          "url": "https://propfirmbeacon.com/news/the-funded-trader-site-offline-no-closure-notice",
+          "kind": "controle_independant_2026",
+          "label": "Nov 2026 direct HTTP 402 observation"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir statut des 900/1272 dossiers anciens: état des sommes réellement soldées et remises négociées.",
+        "Identifier à travers Rise / Arbiscan les entités payeuses, programmes, bénéficiaires et virement final sans diffuser de données privées."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md"
+    },
+    {
+      "slug": "myforexfunds",
+      "firm": "My Forex Funds",
+      "scorePublishedBefore": 20,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "MARQUE_RACHETÉE_NOUVEL_OPÉRATEUR_PAS_NOUVEAU_PAYOUT_VERIFIÉ",
+      "statusEvidence": "Propriétaire annoncé Global Solutions Operations FZE ; ancienne responsabilité pour les demandes 2023 relève de Traders Global. Site actuel affiche liste d'attente pour Evolution/Accelerated ; confirmer la possibilité d'acheter en direct.",
+      "statusBasis": "official_ownership_notice",
+      "contractAndRules": "Nouvelle grille Evolution ne peut pas être évaluée à partir des règles 2023; obtenir T&C nouvelle offre, instant/accelerated, règles de rétroactivité et droit aux rewards.",
+      "payoutEvidenceFinding": "Remboursements/obligations historiques 2023 distincts des premiers rewards du nouveau programme. Aucun paiement du nouveau régime indépendant vérifié dans ce dossier.",
+      "trustpilotFinding": "Ne pas transférer avis du vendeur de 2023 au repreneur comme s'il s'agissait de la même entreprise.",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "NEW_OWNER_RELAUNCH_PENDING_HISTORICAL_REWARD_LIABILITY_SEPARATE",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://myforexfunds.com/myforexfunds-announces-new-ownership/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://myforexfunds.com/terms-of-use/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://myforexfunds.com/myforexfunds-returns/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://globalsolutionsops.com/insights/global-solutions-acquires-myforexfunds-brand.html",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/my-forex-funds-parent-defeats-cftc-in-court-as-judge-imposes-sanctions/",
+          "kind": "archive_code",
+          "label": "Finance Magnates: court dismisses CFTC case against My Forex Funds' parent (14 May 2025)"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/breaking-myforexfunds-brand-assets-sold-to-dubai-based-firm/",
+          "kind": "archive_code",
+          "label": "Finance Magnates: MyForexFunds brand assets sold (28 Sep 2026)"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/myforexfunds-unveils-evolution-hitting-2-drawdown-gets-you-demoted-to-intern/",
+          "kind": "archive_code",
+          "label": "Finance Magnates: MyForexFunds Evolution program (21 Oct 2026)"
+        }
+      ],
+      "remainingTasks": [
+        "Séparer les récompenses dues par Traders Global depuis 2023 des engagements de Global Solutions Operations FZE en 2026.",
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-atfunded-kortanafx-myforexfunds-2026-11-23.md"
+    },
+    {
+      "slug": "t4tcapital",
+      "firm": "T4TCapital",
+      "scorePublishedBefore": 38,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "T4TCAPITALFM_REDIRECT_TRADERS4TRADERS_CONTRAT_FINAL_PAR_PRODUIT_NON_VERIFIE",
+      "statusEvidence": "t4tcapitalfm.com redirige vers traders4traders.com; client.t4tcapitalfm.com/register pointe Terms of Service vers www.traders4traders.com. Ces CGU désignent Traders4Traders Pty Ltd (Australie) ACN 139140373; registre officiel ASIC non vérifié. Piste de continuité primaire désormais forte, sans confirmation juridique des dettes et de la facturation historique.",
+      "statusBasis": "commercial_indicators_legal_unverified",
+      "contractAndRules": "Page Traders4Traders funding : stop-loss obligatoire dès ouverture, profit du trade sans SL annulé mais perte conservée, deuxième manquement termine challenge; news ±2 min autour CPI/employment/taux, SL/TP dans fenêtre potentiellement sanctionné; autre portail Traders4Traders déclare 'news trading is fully allowed', même programme non établi. Règles standard 2.5% daily/7.5% max trailing, best day ≤50%, 5 jours. Payout hebdo min $50 80-90% selon niveau; ancien T4TCapitalFM différent. CGU australiennes prévoient remboursement sous 30 jours si aucun trade, droits consommateurs préservés.",
+      "payoutEvidenceFinding": "Aucune preuve de payout final indépendante à six maillons pour l'ancien T4TCapitalFM ni pour le produit exact du portail actif. Annonces de payouts hebdomadaires non probantes à elles seules.",
+      "trustpilotFinding": "Profil proptradr.com intitulé T4TCapital Funds Management, TrustScore 2,5/5 sur 6 avis; page Trustpilot indique profils fusionnés. Une fusion de profils ne signifie pas une retenue du TrustScore pour guideline breach. Ne pas copier le profil distinct traders4traders.com sans périmètre.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/proptradr.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "CHECKOUT_EXISTS_TERMS_AND_ENTITY_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.t4tcapital.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://t4tcapitalfm.com/pt/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://client.t4tcapitalfm.com/register",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://traders4traders.com/funding/",
+          "kind": "archive_code",
+          "label": "Current Traders4Traders funding overview (not assumed identical contract)"
+        },
+        {
+          "url": "https://propfirmmap.com/blog/t4tcapitalfm-review",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.t4tcapitalfm.com/",
+          "kind": "archive_code",
+          "label": "Related T4TCapitalFM domain now redirects to Traders4Traders (17 Nov 2026)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/proptradr.com",
+          "kind": "archive_code",
+          "label": "Historical T4TCapitalFM Trustpilot profile"
+        },
+        {
+          "url": "https://traders4traders.com/terms-of-service",
+          "kind": "source_primaire_cgu_courantes",
+          "label": "Traders4Traders Pty Ltd, ACN 139140373"
+        },
+        {
+          "url": "https://traders4traders.com/trader-funding",
+          "kind": "source_primaire_regles_par_produit",
+          "label": "SL gains annulés pertes conservées, news ±2m, payouts hebdomadaires"
+        },
+        {
+          "url": "https://propfirm.traders4traders.com/",
+          "kind": "source_primaire_portail_associe",
+          "label": "FAQ commerciale news fully allowed, à rapprocher programme exact"
+        },
+        {
+          "url": "https://pt.trustpilot.com/review/proptradr.com",
+          "kind": "source_primaire_plateforme_avis",
+          "label": "Profile merge statement, not score withholding"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/traders4traders.com",
+          "kind": "source_primaire_plateforme_avis",
+          "label": "Separate brand profile"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer la personne morale facturante et les CGU signées via checkout T4TCapitalFM, sans paiement-test.",
+        "Réconcilier news fully allowed du portail et ±2 minutes de la page funding pour un produit et phase identiques.",
+        "Valider l'asymétrie SL et le traitement des comptes funded signés avant évaluation B2.",
+        "Obtenir historique A3 indépendant des rewards pour le vendeur et le programme exact."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md"
+    },
+    {
+      "slug": "traders-with-edge",
+      "firm": "Traders With Edge",
+      "scorePublishedBefore": 22,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "2_ENTITES_HK_CONSTITUEES_2022_2023_DOMAINE_HORS_LIGNE_DEP2026_PAYER_NON_IDENTIFIE",
+      "statusEvidence": "Registre Hong Kong officiel (PDFs inspectés visuellement) confirme Traders With Edge Limited CRN 3126405 (08/02/2022) ET Traders With Edge (Hong Kong) Limited CRN 3337985 (14/11/2023). 86hc.com affirme les deux 'still registered' 2026, mais contrôle direct du statut courant au registre officiel e-Search manquant. TheTrustedProp mentionne n°17591 pour la seconde, pas conforme au CRN officiel 3337985. Contrat/facture liant l'une aux comptes absent. Site traderswithedge.com HTTP502 23/11, DNS inactif depuis juin/octobre selon MyPropGenius; aucune annonce de dissolution ou arrêt juridique primaire.",
+      "statusBasis": "dated_secondary_offline_check",
+      "contractAndRules": "Pas de CGU ni funded agreement 2026 récupéré. Annuaires secondaires historiques Turtle 1 phase 10% target, 6% max loss, 3% daily, 80% split, payout 14j; Hare 2 phases 10/5% targets, max 10%, 5% daily, 80%, 14j. Critiques secondaires de tick scalp répétitif <30s, copy trading/manipulation. Aucun B1/B2 chiffrable car date, produit, vendeur et accord signés indisponibles.",
+      "payoutEvidenceFinding": "Vieux forums et pages commerciales revendiquent des payouts (exemple $8,083.50) et paiements via Wise/BTC/USDT, sans vérification finale indépendante payer/entity→programme→transaction→beneficiary→checker. Aucun A3 complet. Absence de site actif ne prouve pas qu'une dette a été réglée ou refusée.",
+      "trustpilotFinding": "Trustpilot exact traderswithedge.com a refusé l'accès par robots.txt au contrôle du 23/11/2026. Score, profil et éventuelle retenue officielle non vérifiés; impossibilité d'accès ≠ avis officiel breach of guidelines. Aucun -6.",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "SITE_OFFLINE_OFFICIAL_CLOSURE_NOT_FOUND",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://traderswithedge.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/traders-with-edge/",
+          "kind": "archive_code",
+          "label": "Independent October 2026 record of Traders With Edge domain downtime"
+        },
+        {
+          "url": "https://vettedpropfirms.com/traders-with-edge-website-goes-offline-suggesting-firm-shutdown/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.cr.gov.hk/docs/wrpt/RNC063_2022.02.07-2022.02.13.pdf",
+          "kind": "registre_hongkong_primaire_pdf_capturé_p37",
+          "label": "Traders With Edge Limited CRN3126405 08 Feb 2022"
+        },
+        {
+          "url": "https://www.cr.gov.hk/docs/wrpt/RNC063_2023.11.13-2023.11.19.pdf",
+          "kind": "registre_hongkong_primaire_pdf_capturé_p60",
+          "label": "Traders With Edge (Hong Kong) Limited CRN3337985 14 Nov 2023"
+        },
+        {
+          "url": "https://www.86hc.com/traders-with-edge-limited",
+          "kind": "registre_secondaire_etat2026_a_confirm",
+          "label": "Claims BRN73778484 still registered"
+        },
+        {
+          "url": "https://www.86hc.com/traders-with-edge-hong-kong-limited",
+          "kind": "registre_secondaire_etat2026_a_confirm",
+          "label": "Claims BRN75910337 still registered"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/traders-with-edge",
+          "kind": "annuaire_secondaire_erreur_identifiant",
+          "label": "Registration number 17591 not same as official HK CRN"
+        },
+        {
+          "url": "https://www.elitetrader.com/et/threads/traders-with-edge-prop-firm-q-a.371553/",
+          "kind": "declaration_marketing_forum_historique",
+          "label": "Claimed payouts and trading bot rules, not independent proof"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/traderswithedge.com",
+          "kind": "profil_exact_robots",
+          "label": "Not readable due robots, no verified withholding"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer directement statut HK e-Search 2026 des deux CRN 3126405 et 3337985, et rectifier numéro 17591 d'annuaire.",
+        "Obtenir facture vendeur/merchant of record et contrats signés 2022-2026 attribuant les créances clients à la bonne personne morale.",
+        "Vérifier source primaire effective de CGU et preuves A3 des payouts annoncés; absence du site ne prouve pas refus ou règlement."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md"
+    },
+    {
+      "slug": "kortanafx",
+      "firm": "KortanaFX",
+      "scorePublishedBefore": 15,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "PAUSE_OFFICIELLE_MTABLE",
+      "statusEvidence": "Bannière d'accueil officielle encore visible au 23/11 : toutes opérations suspendues après perte de licence MT5, jusqu'à nouvel ordre. Le vendeur affiché est KortanaFX F.Z.C. à Dubaï.",
+      "statusBasis": "official_current_pause",
+      "contractAndRules": "Pages de produits antérieures (compte demo) et conditions sur fermeture/retraits ne prouvent pas qu'une offre est aujourd'hui exécutable. Vérifier CGU exacte à l'achat et politique remboursements.",
+      "payoutEvidenceFinding": "Aucun justificatif de versement après la pause ni règlement des comptes pendants indépendamment authentifié dans cette revue.",
+      "trustpilotFinding": "Profil Trustpilot actuellement visible, TrustScore environ 2,5/5 sur relevé externe; aucune retenue TrustScore déclarée.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/kortanafx.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "OFFICIAL_PAUSE_PLATFORM_LICENSE",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.kortanafx.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.kortanafx.com/terms.html",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/kortanafx.com",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://kortanafx.com/",
+          "kind": "archive_code",
+          "label": "KortanaFX homepage and pause announcement (official)"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-atfunded-kortanafx-myforexfunds-2026-11-23.md"
+    },
+    {
+      "slug": "traddoo",
+      "firm": "Traddoo",
+      "scorePublishedBefore": 38,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "C104558_MALTE_ATTRIBUE_ERRONEMENT_TRADDOO_EN_FAIT_FUNDERPRO_DOMAINE_EXPIRE_OFFRE_NON_VERIFIEE",
+      "statusEvidence": "Source officielle FunderPro et Bloomberg LEI confirment C 104558 = FUNDERPRO LTD Malta, malgré plusieurs annuaires attribuant ce même numéro à 'Traddoo LTD'; identité légale/n° propre du vendeur Traddoo non validés. Finance Magnates 11/09/2024 relate pause nouvelles ventes, puis 28/10/2024 annonce pivot Futures avec TradersLaunch après fin accord FunderPro. Proptrad 31/10/2026 signale domaine NXDOMAIN, PropFirmBook app.traddoo.com dangling CNAME CloudFront; vérif directe 23/11 traddoo.com redirige expireddomains.com, CGU introuvables. Fin commerce probable, dissolution légale non prouvée; ni TradersLaunch ni FunderPro ne sont réputés reprendre les soldes de Traddoo.",
+      "statusBasis": "archived_domain_and_press",
+      "contractAndRules": "Anciennes descriptions Forex: split 80%, payout crypto USDT daily/on demand, refund frais challenge seulement au 4e payout; plaintes secondaires sur disqualification pour hedging dans produits commercialisés sans restriction; CGU/contrat signé non récupérés. Pivot Futures 2024: NinjaTrader/Volumetrica, EOD DD, 40% consistency selon fiches 2026, payout 1-3j, modèles 1-/2-step; ne pas fusionner phases, prix ni payeur. Aucune retenue B1/B2 sans termes officiels et faits distincts.",
+      "payoutEvidenceFinding": "Trustpilot 53 avis favorables/critique historiques, notamment grief remboursement frais de challenge au changement de plateforme; pas d'échantillon A3 indépendant 6 maillons sur ventes Forex ou produit Futures. Aucune transmission de passif via TradersLaunch établie.",
+      "trustpilotFinding": "Deux snapshots dynamiques de Trustpilot traddoo.com divergents : l'un annonce nouveaux avis impossibles car site fermé, l'autre TrustScore 3.8/5 pour 53 avis et bouton d'avis actif. Pas de notice vérifiée de score retenu pour non-respect des guidelines dans aucun; -6 non fondé. Recontrôler à date de décision.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/traddoo.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "COMMERCIAL_ACTIVITY_DISPUTED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://traddoo.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://traddoo.com/terms-and-conditions/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/traddoo.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://joinprop.com/prop-firm/traddoo/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://propfirmtier.com/en/firms/traddoo",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-temporarily-suspends-access-for-new-clients/",
+          "kind": "archive_code",
+          "label": "Finance Magnates: Traddoo suspends sales to new clients (11 Sep 2024)"
+        },
+        {
+          "url": "https://github.com/adriengeyer02-bot/propradar/issues/4",
+          "kind": "archive_code",
+          "label": "PropRadar domain monitor, 14 Nov 2026"
+        },
+        {
+          "url": "https://funderpro.com/",
+          "kind": "source_primaire_juridique",
+          "label": "FunderPro Ltd Malta registration C104558 (NOT Traddoo)"
+        },
+        {
+          "url": "https://lei.bloomberg.com/leis/view/8755004JF69ITJAWW873",
+          "kind": "registre_LEI_corroboration",
+          "label": "FunderPro Ltd MBR registration authority C104558"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/traddoo",
+          "kind": "erreur_numero_secondaire",
+          "label": "Misattributes FunderPro C104558 to Traddoo"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/brokers/prop-firm-traddoo-partners-with-traderslaunch-and-enters-futures-market/",
+          "kind": "presse_controlee_oct2024",
+          "label": "FunderPro split and TradersLaunch futures pivot October 28 2024"
+        },
+        {
+          "url": "https://propfirmbook.com/unverified/traddoo",
+          "kind": "controle_secondaire_2026",
+          "label": "CloudFront deleted CNAME app.traddoo.com, no checkout validated"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Identifier Traddoo LTD / LLC sur facture ou au registre maltais correct, SANS utiliser C104558 de FunderPro.",
+        "Obtenir contrat Forex client au 2024 et funded Futures sous TradersLaunch, établir qui doit remboursements de frais et rewards.",
+        "Recontrôler Trustpilot dynamique (fermé aux avis vs note 3.8/5) et ne jamais confondre fermeture des avis avec guideline breach."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md"
+    },
+    {
+      "slug": "rocket21-challenge",
+      "firm": "Rocket21 Challenge",
+      "scorePublishedBefore": 60,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_NON_OPERATIONNEL_EN_2026_OFFRE_ACTUELLE_NON_PROUVÉE",
+      "statusEvidence": "Contrat PDF historique officiel de Prop Trade Tech Pty Ltd (ABN 71 661 045 950), mais indisponibilité du site Rocket21 selon contrôles 2026. Ne pas le confondre avec Nova Funded; identifier éventuel successeur.",
+      "statusBasis": "official_historical_contract_pdf",
+      "contractAndRules": "Clause §2.2/11.1 : réussite challenge ne garantit jamais l'offre funded, société libre de sélectionner les traders. §3.1 modifications possiblement notifiées APRÈS mise en œuvre ; §11.6 reward prévu sous critères funded. Requérir Independent Contractor Agreement.",
+      "payoutEvidenceFinding": "Avis datés de demandes non réglées ou reportées et messages de migration; pas de transfert final du bon vendeur authentifié.",
+      "trustpilotFinding": "Trustpilot actif avec avis historiques 2024–2026 ; aucune preuve de TrustScore masqué.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/rocket21challenge.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21-2.pdf",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/rocket21challenge.com",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://joinprop.com/prop-firm/rocket-21/",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://rocket21challenge.com/",
+          "kind": "source_primaire_ou_registre"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fxrk-tickticktrader-rocket21-2026-11-23.md"
+    },
+    {
+      "slug": "blufx",
+      "firm": "BluFX",
+      "scorePublishedBefore": 38,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "ENTITÉ_UK_LIQUIDATION_ET_AVERTISSEMENT_FCA",
+      "statusEvidence": "BLUFX LTD n°10819120 en liquidation au Companies House; avertissement FCA du 5/12/2022, mis à jour 16/02/2023. Les deux documents portent sur le nom historique exact.",
+      "statusBasis": "official_registry_and_regulator",
+      "contractAndRules": "Anciens abonnements funded et frais d'accès ; les conditions de paiement encore opposables ne sont pas retrouvées, aucune nouvelle vente confirmée.",
+      "payoutEvidenceFinding": "Aucune preuve récente indépendante de récompenses; historiques de litiges à rapprocher des procédures de liquidation.",
+      "trustpilotFinding": "Profil historique Trustpilot à contrôler, ne pas déduire −6 sans avertissement officiel de manipulation actif.",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "OLD_REGULATOR_WARNING_CURRENT_OFFER_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/10819120",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.fca.org.uk/news/warnings/blufx",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://blufx.co.uk/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://pickmytrade.io/prop-firm-faq/blufx",
+          "kind": "archive_code",
+          "label": "PickMyTrade: BluFX research record"
+        },
+        {
+          "url": "https://uk.trustpilot.com/review/blufx.com",
+          "kind": "legacy_alternate_domain_not_the_same_as_blufx.co.uk"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-bespoke-blufx-fxci-2026-11-23.md"
+    },
+    {
+      "slug": "traders-central",
+      "firm": "Traders Central",
+      "scorePublishedBefore": 61,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "ANCIENNE_MARQUE_ET_POLITIQUE_LEGALE_ACCESSIBLE_CONTINUITE_NON_VÉRIFIÉE",
+      "statusEvidence": "Politique Trader's Eco / Prime Bridge Securities LLC accessible. Ancien événement cession de propriété intellectuelle à Alpha Capital Group, mais chaîne vers vendeur actuel non authentifiée.",
+      "statusBasis": "first_party_policy_read",
+      "contractAndRules": "Funding Policy §4.3.1-4.3.5 : appréciation discrétionnaire des tailles et stratégies, possibilité de retenir payouts; maintien abonnement actif pour obtenir le versement; sanctions 50% au retrait selon risk desk et gains soumis à fonds disponibles.",
+      "payoutEvidenceFinding": "Politique de paiement et de retrait documentée mais aucun transfert bancaire final au bon vendeur vérifié pour 2026.",
+      "trustpilotFinding": "Ancienne page traderscentral.com visible, aucun masquage TrustScore confirmé.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/www.traderscentral.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://legal.traderseco.com/funding-provider/funding-policy",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/www.traderscentral.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://traderscentral.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://finance.yahoo.com/news/alpha-capital-group-acquires-traders-012200502.html",
+          "kind": "archive_code",
+          "label": "Alpha Capital Group acquires the IP of Traders Central Fund (Newsfile via Yahoo Finance, 2023-04-17)"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-aeon-quantx-traders-central-2026-11-23.md"
+    },
+    {
+      "slug": "my-flash-funding",
+      "firm": "My Flash Funding",
+      "scorePublishedBefore": 49,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "MARQUE_ACQUISE_PAR_SWAY_OFFICIELLEMENT_CHECKOUT_REDIRECT_SOCIETES_CONTRACTANTES_MULTIPLES",
+      "statusEvidence": "MyFlashFunding.com indique explicitement 'now owned by Sway Funded' et Buy Evaluation vers my.swayfunded.com. BrokersView 30/07/2024 relate clôture ordonnée pour 24/07/2024, migration et promesse de payout immédiat intégral; non confirmé payé. Ancien site cite MyFlashFunding LLC, Sway Funded LTD, Sway Funded LLC 2024-00342 Sainte-Lucie. CGU publiques Sway 2026 désignent SF FUNDED LTD n°2026-00408 Sainte-Lucie, CGU my.swayfunded.com/p/terms désignent Sway Funded FZCO. Transfert juridique des obligations anciennes et date des versions non authentifiés.",
+      "statusBasis": "official_acquisition_and_terms",
+      "contractAndRules": "CGU portail Sway FZCO §4.10 changent immédiatement prix/paramètres pour challenges déjà achetés; preuve d'une modification défavorable effectivement appliquée à un programme historique non obtenue. §8.7 permet réexamen du style/volume/profit/consistency et refus du funded après réussite, frais d'entrée/credits alors remboursables; §9.5 split 80/20 et §9.6 remboursement fee crédité sur payouts pendants. Nouveaux T&C Sway 2026 SF FUNDED LTD §1.3 large pouvoir de modification des CGU. Site MyFlash ancien affiche 80% daily et jusqu'à 90%; produits et versions à distinguer.",
+      "payoutEvidenceFinding": "Aucun justificatif final indépendant établissant le paiement des récompenses MyFlash promises en juillet 2024. Les payouts Sway contemporains sont non transférables au vendeur historique sans preuve de reprise, et les annonces d'acquisition ne constituent pas une preuve A3.",
+      "trustpilotFinding": "Trustpilot myflashfunding.com redirige vers swayfunded.com, profil Trustpilot actif ~4.0/5 621 avis et avis Merged; une fusion de profils n'est PAS une retenue du TrustScore pour non-respect des guidelines et ne valide pas les payouts historiques MyFlash.",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "ACQUIRED_CHECKOUT_SWAY",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.myflashfunding.com/terms",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.myflashfunding.com/",
+          "kind": "archive_code",
+          "label": "MyFlashFunding homepage (official)"
+        },
+        {
+          "url": "https://www.swayfunded.com/terms",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://my.swayfunded.com/p/terms",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://myflashfunding.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://my.swayfunded.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.fastbull.com/brokersview/news/prop-firm-sway-funded-acquires-another-prop-brand-myflashfunding-239082",
+          "kind": "presse_source_annonce_2024",
+          "label": "July 2024 acquisition, migration and immediate payouts promised"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/myflashfunding.com",
+          "kind": "profil_avis_redirect",
+          "label": "Redirect to swayfunded.com profile, merger not penalty"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir acte de migration juillet 2024 et obligations expressément reprises, y compris paiement immédiat annoncé.",
+        "Identifier entity merchant/contract debtor pour achats MyFlash historiques, Sway Funded LLC 2024, Sway Funded FZCO et SF FUNDED LTD 2026.",
+        "Vérifier §4.10 sur le programme réellement signé puis cas de changement défavorable avant toute B2 −4."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md"
+    },
+    {
+      "slug": "nova-funding",
+      "firm": "Nova Funding",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_HISTORIQUE_REDIRECT_INAPPROPRIÉ_REPRISE_NON_VERIFIÉE",
+      "statusEvidence": "Contrôle direct 23/11/2026 : nova-funding.com redirige vers un site de jeux sans lien avec la prop firm. PDFs 2024 signés au nom de Prop Trade Tech Pty Ltd (ABN 71 661 045 950) aussi cité dans le PDF Rocket21; registre australien: renommage en TRADESIM PTY LTD le 14/03/2025, ABN actif. Autre entité Prop Trade Tech LLC 2784 LLC 2022 nommée dans Website Terms, radiée officiellement à Saint-Vincent-et-les-Grenadines (Gazette 24/06/2025). Ne pas fusionner les personnes morales ni attribuer les dettes à Nova Funded.",
+      "statusBasis": "current_redirect_plus_identity_separation",
+      "contractAndRules": "PDF Nova 2024: §11 réussite challenge ≠ contrat funded garanti et Independent Contractor Agreement séparé; §12.2(g)(viii)/§12.3 discrétion sur stratégie, fermeture et perte de paiements; §18.5 droits acquis protégés sauf exception §12.3. Schedule sept 2024: split payouts 1/2/3+ à 50/70/80%; HFT/weekend autorisés challenge et interdits funded; consistance indiquée 'No' challenge dans tableau mais note 3 l'applique possiblement pendant l'évaluation, contradiction potentielle non résolue. Documents historiques uniquement.",
+      "payoutEvidenceFinding": "Site indexé promettait traitement 2-5 jours et liste de pourcentages, mais aucun payout final attribué au bon vendeur/compte et confirmé par tiers indépendant n'a été authentifié.",
+      "trustpilotFinding": "Trustpilot nova-funding.com ~2,2/5, 4448 avis au relevé, toujours affiché: aucun avis officiel de retenue du TrustScore constaté. Ne pas rapprocher automatiquement de novafunded.com.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/nova-funding.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://nova-funding.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/nova-funding.com",
+          "kind": "archive_code",
+          "label": "Nova Funding Trustpilot claimed profile"
+        },
+        {
+          "url": "https://novafunded.com/faq/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://nova-funding.com/wp-content/uploads/2024/08/Terms-and-conditions-Nova-Funding-1.pdf",
+          "kind": "archive_code",
+          "label": "Nova historic assessment terms (2024)"
+        },
+        {
+          "url": "https://abr.business.gov.au/AbnHistory/View?id=71661045950",
+          "kind": "archive_code",
+          "label": "Australian company register historic name"
+        },
+        {
+          "url": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf",
+          "kind": "archive_code",
+          "label": "SVG government gazette of struck-off Prop Trade Tech LLC"
+        },
+        {
+          "url": "https://portal.nova-funding.com/wp-content/uploads/Website-Terms-and-Conditions-Nova-Funding.pdf",
+          "kind": "contrat_historique_indexe_inaccessible_courant",
+          "label": "Site Terms formerly signed by Prop Trade Tech LLC 2784 LLC 2022"
+        },
+        {
+          "url": "https://nova-funding.com/wp-content/uploads/2024/08/Nova-Funding-SOA-09.09.2024.pdf",
+          "kind": "document_primaire_historique_indexe",
+          "label": "Nova Funding Sep 2024 program schedule and payouts 50/70/80"
+        },
+        {
+          "url": "https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21-2.pdf",
+          "kind": "contrat_primaire_historique_croise",
+          "label": "Rocket21 historic contract same Australian ABN"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Exiger reçus et contrats signés séparant Prop Trade Tech Pty Ltd (Australie/renommée TRADESIM) et Prop Trade Tech LLC (SVG/radiée).",
+        "Réconcilier incohérence sur consistency challenge dans annexe 2024 et date de mise en vigueur par produit.",
+        "Mettre à jour aussi dossier Rocket21 sur l'ABN australien et la LLC SVG sans transfert automatique des passifs."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md"
+    },
+    {
+      "slug": "nations-trading",
+      "firm": "Nations Trading",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_NATIONSTRADING_COM_REDIRECT_GODADDY_FOR_SALE_2026_ENTITE_FACTURANTE_NON_ETABLIE",
+      "statusEvidence": "Contrôle direct 23/11/2026 : nationstrading.com redirige vers https://forsale.godaddy.com/forsale/nationstrading.com ; /terms-and-conditions inaccessible. Pas de contrat ni marchand au checkout 2026. Annuaires incompatibles USA/Chine sans certificat officiel, ne pas attribuer juridiction. Domaine offert à la vente ≠ société juridiquement dissoute.",
+      "statusBasis": "archived_site_inventory_unverified",
+      "contractAndRules": "Réponse officielle 21/07/2023 Trustpilot cite une clause des forbidden Trading Practices (b) prohibant l'accès/gestion de comptes Challenge, Verification, funded par un tiers, y compris gestion pro. Un plaignant relate challenge 500k annoncé 'allow AI', réussi puis disqualification au motif d'IP multiples; distinguer EA propre vs tierce gestion. Autre plainte 03/2023 prétend interdiction de news appliquée deux jours après achat (rétroactivité non prouvée). Pas de CGU originales, dates des programmes ou logs, donc ne pas appliquer B1/B2. Entreprise déclare 'funds traders every month' en 07/2023, non preuve bancaire finale.",
+      "payoutEvidenceFinding": "Trustpilot contient une déclaration de l'entreprise payant mensuellement et avis positif d'un payout bihebdomadaire 2022, et complaint remboursement frais challenge tardif; aucune preuve finale payeur/bon programme/bénéficiaire/vérificateur indépendant. A2 injustifié et A3 non validés.",
+      "trustpilotFinding": "Trustpilot nationstrading.com TrustScore 2.6/5 pour 13 avis, aucune revue depuis 12 mois, 54% une étoile, score affiché, aucune notice officielle de retenue du TrustScore pour guideline breach. -6 non applicable sur cette base.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/nationstrading.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://nationstrading.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://nationstrading.com/terms-and-conditions/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/nationstrading.com",
+          "kind": "reference_web_ciblee"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Identifier société contractante, facture, ancien contrat signé et opérateur du compte original Nations Trading.",
+        "Recueillir CGU originales AI/HFT/EA third-party/IP/VPN/news et leur éventuelle modification post-achat, puis logs anonymisés et motif de disqualification.",
+        "Établir solde des remboursements versus rewards à payer et vérifier payout final indépendamment; site à vendre ne résout pas le passif."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-traders-with-edge-traddoo-nations-trading-2026-11-23.md"
+    },
+    {
+      "slug": "the-forex-funder",
+      "firm": "The Forex Funder",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "AXE_ACQUISITION_ANONCEE_2024_HELP_CENTER_HISTORIQUE_ACCESSIBLE_CHECKOUT_2026_NON_VERIFIE",
+      "statusEvidence": "TFF/Finance Magnates annoncent acquisition par AXE Securities 26/08/2024, sans acte de novation des dettes historiques ni vendeur actuel identifié. Homepage theforexfunder.com HTTP403 le 23/11/2026 ; MyPropGenius relève domaine inaccessible 11/10/2026 sans notice de dissolution. Intercom help center avec FAQ 31/08–05/09/2024 encore accessible, mais historique non preuve d'offre actuelle.",
+      "statusBasis": "official_2024_faq_current_sale_unknown",
+      "contractAndRules": "FAQ primaire 31/08/2024 premier payout après 30j depuis premier trade funded, suivants après 14j depuis premier trade suivant payout précédent ; FAQ 04/09 premier payout après 30j depuis funding, puis 'no restrictions on subsequent payouts' alors que bi-weekly processing annoncé. Divergences de date déclencheur et éligibilité/process à réconcilier. Minimum retrait 1% nominal incluant split, délai traitement 1–3 jours ouvrés, USDT TRC20 <400$ et Rise >400$, exactement 400$ indéfini. Read-only pendant demande, aucun trade ouvert. FAQ 05/09 exige 1 trade chaque 30j et dit 30j sans trading = compte funded expiré. Règles historiques : date, phase et contrat signé 2026 introuvables.",
+      "payoutEvidenceFinding": "Avis sur refus de payouts et challenges affectés par migration AXE et restrictions holding weekend invoquées en 2024, mais aucun dossier client contractuel et logs ne prouvent rétroactivité ni refus injustifié. Modes de traitement Rise/USDT ne constituent pas une transaction finale A3 vérifiée.",
+      "trustpilotFinding": "Trustpilot exact theforexfunder.com note 2,4/5 et 1561 avis au relevé, 1 avis dans les 12 derniers mois; TrustScore affiché, pas de notice de retenue pour breach of guidelines constatée; pas de −6.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/theforexfunder.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account",
+          "kind": "archive_code",
+          "label": "TFF official 2024 payout eligibility and KYC"
+        },
+        {
+          "url": "https://support.theforexfunder.com/en/articles/9823909-how-do-i-request-a-payout",
+          "kind": "archive_code",
+          "label": "TFF official 2024 payout methods"
+        },
+        {
+          "url": "https://support.theforexfunder.com/en/articles/9823917-what-is-the-payout-process-like",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://support.theforexfunder.com/en/articles/9823885-when-can-i-request-a-payout",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/",
+          "kind": "archive_code",
+          "label": "TFF Aug 2024 AXE acquisition reporting"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/theforexfunder/",
+          "kind": "archive_code",
+          "label": "TFF October 2026 inactive-domain report"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/theforexfunder.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://support.theforexfunder.com/en/articles/9808953-do-i-have-to-meet-minimum-trading-days-once-i-become-a-funded-trader",
+          "kind": "faq_primaire_historique_2024",
+          "label": "At least one trade each 30d; funded expires at 30d inactivity"
+        },
+        {
+          "url": "https://theforexfunder.com/",
+          "kind": "controle_site_direct_2026",
+          "label": "HTTP403 November 2026"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir acte de reprise et vendeur actuel AXE; ne pas transférer automatiquement les dettes.",
+        "Demander matrice FAQ/contrat TFF par date et programme pour délais 30j/14j, minimum 1% et 30j inactivité.",
+        "Authentifier indépendamment règlements TFF historiques Rise/USDT par payeur, programme, bénéficiaire et finalité."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "fundedlions",
+      "firm": "FundedLions",
+      "scorePublishedBefore": 55,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "PAUSE_2024_DOMAINE_NXDOMAIN_2026_SOCIETE_UK_HOMONYME_DISSOUTE_IDENTITE_VENDEUR_NON_PROUVEE",
+      "statusEvidence": "Annonce FundedLions citée BrokersView 12/09/2024: suspension dans différend allégué avec Dominion Markets, migration MT5 promise sous 7 jours, preuve de restauration non obtenue. MyPropGenius relève fundedlions.com NXDOMAIN le 11/10/2026; navigation 23/11 échoue. Companies House THE FUNDED LION LTD 15102550 dissoute le 11/02/2025 après strike-off obligatoire, mais lien avec le contractant exact du domaine et des comptes vendus NON démontré; responsable enregistré au registre britannique différent du dirigeant cité pour la marque.",
+      "statusBasis": "secondary_dated_site_down",
+      "contractAndRules": "CGU et accord funded applicables aux anciens challenges FundedLions non récupérés, donc impossible de noter les restrictions du bon programme ou de certifier les règles d'un comparateur historique. L'annonce de migration est une communication unilatérale du prestataire, les accusations contre Dominion non établies contradictoirement.",
+      "payoutEvidenceFinding": "Suspension reconnue en 2024 et plaintes de traders sur migration/payout, aucune confirmation tierce multi-bénéficiaires des rewards reçus ou remboursements des comptes historiques. A3 à six maillons inconnu.",
+      "trustpilotFinding": "Trustpilot fundedlions.com 73 avis historiques, avis désormais fermés parce que 'company website has closed', pas parce qu'un avis officiel de breach of guidelines retient le TrustScore. Ne pas appliquer le -6 Trustpilot sur ce seul bandeau.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/fundedlions.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://fundedlions.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/the-funded-lion/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/fundedlions.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/in-review-bdswiss-staff-exodus-ironfxs-new-prop-firm-us-fx-deposits-and-more/",
+          "kind": "archive_code",
+          "label": "Finance Magnates contemporaneous platform suspension report"
+        },
+        {
+          "url": "https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013",
+          "kind": "archive_code",
+          "label": "FundedLions own 2024 statement reproduced in industry report"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15102550",
+          "kind": "registre_primaire_homonyme_a_relier",
+          "label": "THE FUNDED LION LTD 15102550 dissolved 11 Feb 2025; link to website contractual seller unproven"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15102550/officers",
+          "kind": "registre_primaire",
+          "label": "Registered director differs from reported CEO, confirm website seller"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15102550/filing-history",
+          "kind": "registre_primaire",
+          "label": "Compulsory strike-off dated 11 Feb 2025"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir CGU/facture FundedLions liant le bon vendeur et l'éventuelle THE FUNDED LION LTD 15102550.",
+        "Vérifier l'état de la migration MT5 annoncée et la résolution des anciennes créances et remboursements.",
+        "Ne pas imputer les accusations du fournisseur Dominion Markets comme des faits vérifiés."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md"
+    },
+    {
+      "slug": "leveled-up-society",
+      "firm": "Leveled Up Society",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "ALERTE_OFFICIELLE_CNMV_2023_PAUSE_RECONNUE_OCT2023_DOMAINE_INACTIF_2026",
+      "statusEvidence": "Nouvelle source primaire : avertissement CNMV du 26/06/2023 visant LEVELED UP SOCIETY et leveledupsociety.com pour services d'investissement non autorisés visés par droit espagnol, périmètre trading simulé à qualifier. Finance Magnates reproduit avis historique de pause de tous les services en oct 2023 ; domaine 2026 redirige vers site sans rapport selon MyPropGenius, ouverture actuelle en boucle de redirections. Aucune dissolution légale prouvée.",
+      "statusBasis": "archival_official_pause_quoted_by_press",
+      "contractAndRules": "Ancienne offre 2023 deux phases et rémunération 80–85% selon presse/archives, sans contrat funded actuel récupéré. Anciennes communications sur reprise des payouts en attente non assorties de preuve bancaire indépendante. Les compteurs marketing de membres et payouts sont critiqués par la presse pour stabilité inexpliquée; ne pas les traiter comme chiffres certifiés.",
+      "payoutEvidenceFinding": "Annonce d'une reprise des payouts 2023, chiffres promotionnels 1,9 M USD et avis Trustpilot (Deel évoqué) ne prouvent pas le paiement final d'un échantillon attribuable au bon opérateur. Aucun historique indépendant actuel A3 complet.",
+      "trustpilotFinding": "Trustpilot du domaine exact www.leveledupsociety.com score affiché 3,3/5 et 1286 avis (relevé 23/11), zéro avis récent sur 12 mois; aucun bandeau de retenue du TrustScore pour guideline breach. Ne pas transférer à Leveled Up Traders ou autres homonymes.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/leveleduptraders.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://leveledupsociety.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://mypropgenius.com/rule-changes/2026-10/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/leveleduptraders.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://www.fsma.be/sites/default/files/media/files/2023-07/20230626_leveledupsociety.pdf",
+          "kind": "avis_regulateur_primaire_cnmv_miroir_fsma",
+          "label": "CNMV warning 26 Jun 2023 exact brand/domain, PDF visual page 1"
+        },
+        {
+          "url": "https://www.tradingview.com/news/financemagnates%3A099925cdd094b%3A0-exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/",
+          "kind": "presse_archives_2023",
+          "label": "Finance Magnates Oct 2023 quotes suspension and payout claims"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/www.leveledupsociety.com",
+          "kind": "source_primaire_plateforme_avis",
+          "label": "Historical score visible, 1286 reviews"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Conserver l'avis officiel CNMV du 26/06/2023 en citant exactement les activités visées, sans conclure sur le simulé.",
+        "Identifier immatriculation juridique du vendeur historique et éventuel transfert des anciens paiements après pause 2023.",
+        "Obtenir preuve indépendante de paiements réellement réglés après l'annonce de reprise en octobre 2023, sans reprendre les compteurs marketing."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md"
+    },
+    {
+      "slug": "one-of-one-funding",
+      "firm": "1of1 Funding",
+      "scorePublishedBefore": 55,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SITE_403_CLOUDFLARE1014_SOCIETE_DUBAI_DECLAREE_PAR_TIERS_NON_AUTHENTIFIEE",
+      "statusEvidence": "Contrôle domaine oneofonefunding.com HTTP403 23/11/2026, observateur MyPropGenius 11/10/2026 Cloudflare error 1014, dernière archive 20/07/2025. TheTrustedProp attribue vente historique à ONEOFONE FUNDING MANAGEMENT CONSULTANCIES Dubaï sans registre ni licence primaire. Association marketing à TJR selon annuaires, ne pas déduire responsabilité personnelle. Site hors ligne n'est pas preuve de société dissoute.",
+      "statusBasis": "historical_domain_and_aggregators",
+      "contractAndRules": "Trustpilot description commerciale historique revendique 100% profit split ; comparateurs évoquent consistency funded 10%, challenges divers et TradeLocker, KYC Sumsub. Aucune CGU acceptée exacte/contrat funded par plan et phase ne permet confirmer applicabilité ou légitimité des refus de comptes.",
+      "payoutEvidenceFinding": "Avis 2024–2026 évoquent payouts non reçus, longs délais jusqu'à phase 2/funded, comptes achetés jamais livrés, bugs TradeLocker/KYC, sans documents bancaires indépendants ni passif total prouvé. Aucun A3 à six maillons.",
+      "trustpilotFinding": "Trustpilot exact oneofonefunding.com score 3,3/5 sur 964 avis (score affiché), 1 avis sur 12 derniers mois. Aucune retenue officielle du TrustScore pour breach of guidelines, -6 non fondé.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/oneofonefunding.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://oneofonefunding.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://joinprop.com/prop-firm/1-of-1-funding/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/oneofonefunding.com",
+          "kind": "archive_code",
+          "label": "1of1 claimed Trustpilot profile (historical oneofonefunding.com)"
+        },
+        {
+          "url": "https://www.forexpeacearmy.com/forex-reviews/21955/one-of-one-funding-review",
+          "kind": "archive_code",
+          "label": "Forex Peace Army independent inactivity assessment"
+        },
+        {
+          "url": "https://www.wikifx.com/en/prop/517425147.html",
+          "kind": "archive_code",
+          "label": "WikiFX unverified historic identity and program rules"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/one-of-one-trading/",
+          "kind": "controle_domaine_oct2026",
+          "label": "Cloudflare 1014 on 11 Oct 2026"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/one-of-one-trading/overview",
+          "kind": "identite_secondaire_non_confirmee",
+          "label": "ONEOFONE FUNDING MANAGEMENT CONSULTANCIES Dubai without registry number"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir extrait d'enregistrement et factures ONEOFONE FUNDING MANAGEMENT CONSULTANCIES UAE.",
+        "Récupérer versions historiques des CGU KYC, consistency, funded agreement et contrat d'administration TradeLocker.",
+        "Séparer paiements de rewards, remboursement de frais et comptes acquis non délivrés, avec preuves finales."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "atfunded",
+      "firm": "ATFunded",
+      "scorePublishedBefore": 28,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "PAUSE_OFFICIELLE_REMBOURSEMENTS_PROMIS",
+      "statusEvidence": "Annonce officielle suspend les opérations, met MT5 en close only et promet remboursement intégral des acheteurs actifs et rewards des funded traders éligibles; aucun communiqué ultérieur validant réalisation intégrale recueilli.",
+      "statusBasis": "official_pause_statement",
+      "contractAndRules": "Les retraits promis sont « in accordance with our rules ». Demander les CGU datées applicables, échéances exactes de fermeture, et listes de soldes à régler.",
+      "payoutEvidenceFinding": "Témoignages Trustpilot de traders payés avant la pause, mais pas vérifiés bancaires et pas preuve de remboursement de TOUS les comptes; ne pas convertir promesse en payout réussi.",
+      "trustpilotFinding": "Trustpilot atfunded.com accessible avec avis et réponses; pas de sanction de masquage actif confirmée.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/atfunded.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "OFFICIAL_PAUSE_REFUNDS_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://atfunded.com/faq/is-atfunded-legit/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/atfunded.com",
+          "kind": "archive_code",
+          "label": "Live ATFunded exact-domain Trustpilot historical rating"
+        },
+        {
+          "url": "https://traderstrusted.com/companies/atfunded/",
+          "kind": "recherche_precedente_F_G"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-atfunded-kortanafx-myforexfunds-2026-11-23.md"
+    },
+    {
+      "slug": "tribe-funded",
+      "firm": "Tribe Funded",
+      "scorePublishedBefore": 55,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_SSL525_NOV2026_OFFRE_NON_VERIFIEE_REGISTRE_INTRouvable",
+      "statusEvidence": "Contrôle direct tribefunded.com renvoie HTTP525 le 23/11/2026, PropFirmBook décrit site devenu inaccessible depuis mi-2026 et statut inconnu ; absence de registre ou vendeur exact identifié. Pas de preuve primaire de dissolution ni checkout fonctionnel.",
+      "statusBasis": "dated_secondary_offline_plus_trustpilot",
+      "contractAndRules": "Produits 1-step/2-step/Pay After Pass/Instant et split jusqu'à 100% sont descriptions secondaires historiques, CGU/funded agreement non consultables. Avis sur breach pour inactivité sans trade et fermeture pendant payout ne prouvent pas règle contractuelle opposable.",
+      "payoutEvidenceFinding": "Avis octobre–décembre 2025 allèguent payout mis en attente 20 jours puis breach, compte 10k marqué en infraction sans aucune connexion ou support fermé. Témoignages positifs aussi. Pas de tiers ayant authentifié la chaîne A3 ni décision établissant refus abusif.",
+      "trustpilotFinding": "Trustpilot exact tribefunded.com 3,1/5 46 avis, 7 avis 12 derniers mois, score affiché. Mention générique high-risk investments n'est PAS une retenue TrustScore breach guidelines ; aucun -6.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/tribefunded.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://tribefunded.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://propfirmbook.com/unverified/tribe-funded",
+          "kind": "archive_code",
+          "label": "July 2026 dated reachability assessment"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/tribefunded.com",
+          "kind": "archive_code",
+          "label": "Tribe Funded claimed Trustpilot review profile"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/tribe-funded",
+          "kind": "archive_code",
+          "label": "Prop Firm Match unlisted status"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir immatriculation et merchant des ventes Tribe, ainsi que contrat challenge et funded pour chaque plan.",
+        "Vérifier règle d'inactivité, date de notification, logs et motivation des rejets historiques.",
+        "Obtenir authentification indépendante des payouts, distincte des avis clients."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "aurafunded",
+      "firm": "AuraFunded",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "MARQUE_EN_VENTE_FLIPPA_REBRANDING_AURAPIPS_PUIS_DOMAINES_REDIRECT_JEUX",
+      "statusEvidence": "Flippa propose aurafunded.com à $700k (profit mensuel présenté $32,952, marge 60%; listing dit vetted revenue/expenses/traffic, ni clients payés ni vente effectivement conclue prouvés). Chronologie archive PropFirmTier: aurafunded.com -> aurapips.com entre mai-juin 2025. Contrôle direct 23/11/2026 aurafunded.com et aurapips.com/terms redirigent vers site de jeux lineslot88pro.com sans relation. Vendeur et transfert des passifs historiques inconnus.",
+      "statusBasis": "historical_terms_sale_listing",
+      "contractAndRules": "Anciennes conditions AuraPips mentionnant AuraFunded signalées par dossier précédent, mais source actuelle /terms redirige vers site tiers, aucun contrat actuel relu. Instant, 2-step, HFT historiques à séparer par programmes et phases. Aucune obligation de reprise documentée.",
+      "payoutEvidenceFinding": "Flippa chiffres de profits commerciaux non preuves de récompenses aux traders ; avis AuraFunded/AuraPips sur demandes impayées non attestations finales indépendantes. Aucune chaîne A3 complète ni état de dettes transférées vérifiés.",
+      "trustpilotFinding": "Deux profils exacts distincts, aurafunded.com 1,5/5 (130 avis), aurapips.com 1,8/5 (20 avis). Les notes restent affichées, aucun warning officiel de retenue TrustScore pour breach of guidelines constaté ; aucune pénalité -6.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/aurafunded.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.trustpilot.com/review/aurafunded.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://aurapips.com/terms/",
+          "kind": "archive_code",
+          "label": "Historical AuraPips terms: provider named AuraFunded"
+        },
+        {
+          "url": "https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders",
+          "kind": "archive_code",
+          "label": "Flippa listing: AuraFunded business for sale"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/aurapips.com",
+          "kind": "archive_code",
+          "label": "AuraPips historical customer reviews and payout allegations"
+        },
+        {
+          "url": "https://propfirmtier.com/en/incidents?page=2",
+          "kind": "chronologie_secondaire_archive",
+          "label": "May-Jun 2025 brand redirect, 2026 unrelated slot redirect"
+        },
+        {
+          "url": "https://aurafunded.com/",
+          "kind": "controle_direct_domaine_redirect",
+          "label": "Domain redirects to unrelated slot site in Nov 2026"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir document de vente conclue (et passifs assumés ou non), au-delà de l'annonce Flippa.",
+        "Identifier contrat funded signé et factures de la marque originale et d'AuraPips, puis prouver tout transfert de payout historique.",
+        "Vérifier identité titulaire légal, histoire de redirection des deux domaines et dater cessation commerciale sans prétendre à dissolution."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md"
+    },
+    {
+      "slug": "getcryptofunded",
+      "firm": "GetCryptoFunded",
+      "scorePublishedBefore": 54,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_HTTP502_2026_VENDEUR_FZCO_ATTRIBUE_PAR_TIERS_NON_CERTIFIE",
+      "statusEvidence": "Contrôle 23/11/2026 getcryptofunded.com et /terms-and-conditions HTTP502; PropRubric 29/09/2026 déjà unreachable sans source officielle de fermeture. PropFirmBook et TheTrustedProp nomment GCF Technologies FZCO Dubai, sans extrait de registre ni CGU/facture attribuables vérifiés; il est interdit d'annoncer une dissolution.",
+      "statusBasis": "dated_secondary_dns_down",
+      "contractAndRules": "Aucune CGU ni funded agreement exact authentifiés 2026. Page Trustpilot rédigée par société présente plusieurs classes multi-asset et claim 'up to 95%'; vieux comparateurs mentionnent jusqu'à 90% et programmes 1/2/3-step, ces allégations historiques non attribuables au même produit ou version.",
+      "payoutEvidenceFinding": "Trustpilot 7 avis tous 1 étoile en 2025 : comptes achetés non délivrés, accès dashboard bloqué, challenge réussi mais funded non envoyé, support silencieux (allégations, souvent liées à livraison service et non à payout). Aucun retrait final indépendamment vérifié, aucun incident A2 de paiement quantifié.",
+      "trustpilotFinding": "Profil exact getcryptofunded.com montre TrustScore 2,3/5 pour 7 avis, 100% une étoile et aucun avis durant les douze derniers mois. TrustScore visible, aucune sanction de retenue pour breach of guidelines observée, -6 non fondé.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/getcryptofunded.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "DOMAIN_NOT_VERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://getcryptofunded.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://proprubric.com/crypto/reviews/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://getcryptofunded.com/terms-and-conditions/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/getcryptofunded.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://propfirmbook.com/unverified/getcryptofunded",
+          "kind": "secondaire_2026_venue_non_confirme",
+          "label": "July 2026 review cites GCF Technologies FZCO, no primary registry established"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/get-crypto-funded",
+          "kind": "secondaire_operateur",
+          "label": "GCF Technologies FZCO attribution unverified"
+        },
+        {
+          "url": "https://proprubric.com/crypto/",
+          "kind": "controle_secondaire_domaine_2026",
+          "label": "GetCryptoFunded unreachable 29 Sep 2026, no closure source"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir contrat, reçus et extrait du registre GCF Technologies FZCO UAE pour établir le vendeur précis.",
+        "Départager fourniture de comptes/funded et paiements de rewards, avec tickets datés et transactions finales indépendantes.",
+        "Établir si le checkout a rouvert et quelle version des CGU était applicable aux défis 1/2/3 étapes."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md"
+    },
+    {
+      "slug": "myfxcapital",
+      "firm": "MyFxCapital",
+      "scorePublishedBefore": 45,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SITE_HTTP502_US_REGISTRATION_REVENDIQUEE_NON_RECROUPEE_PAYOUTS_CONTESTES",
+      "statusEvidence": "Contrôle 23/11/2026 myfxcapital.com et /terms-and-conditions HTTP502, aucune offre checkout ou fermeture juridique actuelle vérifiée. Trustpilot entreprise répond 08/09/2025 être US-registered et payeuse de milliers de récompenses, mais sans numéro État/registrar ni documents bancaires; adresse publique Las Vegas auto-déclarée.",
+      "statusBasis": "unavailable_primary_domain",
+      "contractAndRules": "Trustpilot 12/09/2025 Direct Funding : trader allègue 20 trades >=3min conformes + 2 sous 3min et payout refusé; réponse de MyFx 16/09 dit >12 infractions et compte actif. 04/09/2025 2-step : autre trader allègue Win Rate Profitability Score malgré marketing sans consistency et changement seuil 40->25%; réponse 08/09 nie consistency sur challenge, non sur funded. Autre avis 08/08 allègue règle 3min affichée après trades; preuve de changement rétroactif non authentifiée. Exiger contrats signés de bonne phase, logs, captures horodatées et procédure recours avant sanction B1/B2; pas de double compte.",
+      "payoutEvidenceFinding": "Réponse officielle 2025 revendique milliers de payouts US-registered sans audit externe; avis contradictoires (12h payout, refus/retards) et avis 2026 sur serveurs inactifs/support, aucun échantillon bancaire ou onchain A3 independamment attribué au bon vendeur/programme.",
+      "trustpilotFinding": "Trustpilot exact myfxcapital.com 2,7/5 (46 avis), TrustScore actif et avis tardifs 2025-2026. Aucun avis officiel en cours de rétention du TrustScore pour breach of guidelines, -6 non fondé. Pas de transfert des avis myfxfunding.com, homonyme.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/myfxcapital.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "CURRENT_SALE_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://myfxcapital.com/",
+          "kind": "archive_code",
+          "label": "MyFxCapital official domain reachability check"
+        },
+        {
+          "url": "https://myfxcapital.com/terms-and-conditions/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/myfxcapital.com",
+          "kind": "archive_code",
+          "label": "MyFxCapital Trustpilot score, alleged disputes and company registration claims"
+        },
+        {
+          "url": "https://t.me/s/myfxcapitalofficial",
+          "kind": "archive_code",
+          "label": "Older MyFxCapital first-party Telegram marketing, not an active contract"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/myfxcapital",
+          "kind": "annuaire_non_liste_pas_audit_independant",
+          "label": "Company unlisted, 2025 launch detail, no evidence of compliance"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Demander numéro d'immatriculation de l'État US et nom du vendeur identique sur facture, contrat et paiement.",
+        "Obtenir CGU signées Direct Funding et 2-Step, date d'application de la règle 3 minutes et Win Rate Profitability Score.",
+        "Documenter logs pour cas contestés et droit au recours, distinguer payout refusé et simple refus de compte funded.",
+        "Vérifier enregistrements de payout indépendants, et état du site, des serveurs et du support en novembre 2026."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md"
+    },
+    {
+      "slug": "alphaproptraders",
+      "firm": "AlphaPropTraders",
+      "scorePublishedBefore": 56,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SITE_HTTP502_PLATEFORME_INACCESSIBLE_CONTRATS_ET_PAYOUTS_INTROUVABLES",
+      "statusEvidence": "Contrôle direct 23/11/2026 alphaproptraders.com HTTP 502, platform.alphaproptraders.com inaccessible. Linktree @AlphaPropTraders social actif au crawl sans contrat vendeur/checkout. PropTradeCenter octobre 2026 signale 5/6 éléments documentaires manquants. Aucune cessation légale authentifiée ni vente réelle vérifiée.",
+      "statusBasis": "brand_identification_unverified",
+      "contractAndRules": "Aucune CGU de la marque exacte ni contrat funded/programme vérifiés. Pas de reprise de clauses ou de réputation des homonymes Alpha Prop, Alpha Prop Trader et alphaprotraders.com.",
+      "payoutEvidenceFinding": "Aucune preuve indépendante de récompense finale attribuable au bon vendeur de alphaproptraders.com. Avis/indices d'homonymes non exploitables.",
+      "trustpilotFinding": "Profil www.alphaprotraders.com existe (Alphaprotraders, orthographe sans p, 2 avis, 2,9/5) mais n'est PAS le profil prouvé d'AlphaPropTraders. Profil exact alphaproptraders.com non consultable; aucun avertissement officiel de retenue du score du bon domaine confirmé.",
+      "trustpilotExactProfile": "https://uk.trustpilot.com/review/www.alphaprotraders.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://alphaproptraders.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://platform.alphaproptraders.com/",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://proptradecenter.com/firm-dossiers/alphaproptraders",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://linktr.ee/alphaproptraders",
+          "kind": "archive_code",
+          "label": "AlphaPropTraders claimed official social links"
+        },
+        {
+          "url": "https://uk.trustpilot.com/review/www.alphaprotraders.com",
+          "kind": "archive_code",
+          "label": "Do-not-conflate 2020 Alphaprotraders Trustpilot page"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/alphaproptraders.com",
+          "kind": "profil_exact_non_accessible",
+          "label": "No current exact-domain Trustpilot available"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/alphaproptraders",
+          "kind": "annuaire_statut_non_reference",
+          "label": "Firm unlisted, not an objective finding of fraud"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Trouver reçu et identité juridique exacte du vendeur de alphaproptraders.com, preuve d'un checkout aujourd'hui fonctionnel et CGU par produit.",
+        "Ne pas confondre avec alphaprotraders.com; exiger une preuve de lien avant toute attribution Trustpilot ou d'incident."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md"
+    },
+    {
+      "slug": "fxci",
+      "firm": "FXCI",
+      "scorePublishedBefore": 51,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "ANCIENNE_SOCIETE_UK_DISSOUTE_ACQUISITION_DECLAREE",
+      "statusEvidence": "FXCI Challenge Ltd n°15068590 dissoute selon Companies House 28/07/2026; OneFunded a annoncé l'acquisition de la marque FXCI en novembre 2025. L'original fxci.com/terms est actuellement en erreur 502; identité du vendeur des comptes historiques à documenter.",
+      "statusBasis": "official_company_record_plus_acquisition",
+      "contractAndRules": "Anciennes CGU FXCI comportent 5 règles classifiées dans PropRadar : conditions payouts, pouvoir discrétionnaire, KYC/IP, scalping. Leur applicabilité à des clients OneFunded est inconnue; nouveau funded agreement OneFunded à isoler.",
+      "payoutEvidenceFinding": "FAQ OneFunded actuelle documente split et remboursements éventuels mais ne prouve pas avoir réglé les récompenses historiques FXCI. Aucune preuve finale rattachée aux deux opérateurs.",
+      "trustpilotFinding": "Ne pas transférer avis FXCI à OneFunded par défaut; contrôle de masquage Trustpilot FXCI non effectué.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/fxci.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "ACQUIRED_OLD_ENTITY_DISSOLVED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 5,
+        "classified": 5
+      },
+      "sourceLinks": [
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15068590",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.newsfilecorp.com/release/274356/OneFunded-Acquires-FXCI-to-Accelerate-Global-Leadership-in-Prop-Trading",
+          "kind": "archive_code",
+          "label": "OneFunded press release: acquisition of FXCI (13 Nov 2025)"
+        },
+        {
+          "url": "https://fxci.com/terms-and-conditions/",
+          "kind": "archive_code",
+          "label": "Terms & conditions read in full (2026-11-20)"
+        },
+        {
+          "url": "https://help.onefunded.com/payout-amount-explained/",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://fxci.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.tradingview.com/news/reuters.com%2C2025-11-13%3Anewsml_NFC9zNNQY%3A0-onefunded-acquires-fxci-to-accelerate-global-leadership-in-prop-trading/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://help.fxci.com/are-eas-and-hft-bots-allowed/",
+          "kind": "archive_code",
+          "label": "FXCI EAs and HFT bots (official help)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/fxci.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-bespoke-blufx-fxci-2026-11-23.md"
+    },
+    {
+      "slug": "dei-funded",
+      "firm": "Dei Funded",
+      "scorePublishedBefore": 38,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_REDIRIGE_VERS_DATASIDNEY_XYZ_OFFRE_DEI_INDISPONIBLE",
+      "statusEvidence": "Navigation directe deifunded.com 23/11/2026 redirige vers datasidney.xyz sans lien probant avec la prop firm. Trustpilot auto-déclare adresse commerciale Sydney, mais aucune société et aucun ACN/ABN à date confirmé. Offre et checkout 2026 inaccessibles, sans preuve de dissolution juridique.",
+      "statusBasis": "historical_redirect_and_review",
+      "contractAndRules": "Programmes historiques challenge Forex/CFD et publicités de splits, sans CGU ou accord funded courant authentifiés. Avis clients parlent de payout refusé pour daily drawdown et comptes MT5/dashboard V2 bloqués lors de l'arrêt 2024, sans logs ni version signée de règles, donc aucune note B1/B2 justifiée automatiquement.",
+      "payoutEvidenceFinding": "Nombreux avis de juin-juillet 2024 déclarent payouts bloqués 1k/4k/11k/15k dollars, Discord fermé, tableau de bord V2 indisponible, MT5 bloqué et remboursements attendus. Récits non vérifiés bancaires, ne pas additionner comme passif reconnu. Aucun payout A3 final certifié.",
+      "trustpilotFinding": "Trustpilot exact deifunded.com score 2,1/5 pour 402 avis (67% une étoile), score visible, zéro nouveau avis sur 12 mois, pas de bannière de withholding pour guidelines. -6 non fondé.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/deifunded.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "DOMAIN_REDIRECT_UNRELATED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://deifunded.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/deifunded.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.tradingfinder.com/prop-firms/dei-funded/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://github.com/adriengeyer02-bot/propradar/issues/4",
+          "kind": "archive_code",
+          "label": "PropRadar domain monitor, 2026-10-23"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer le contractant australien exact (ACN/ABN) sur reçus Dei, ne pas déduire registre de l'adresse Trustpilot.",
+        "Récupérer CGU funded de 2024, historiques de dashboard/MT5 et décisions payout avec logs.",
+        "Distinguer créances et témoignages, obtenir preuve A3 indépendante d'au moins plusieurs transferts finaux."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "fxrk",
+      "firm": "FXRK",
+      "scorePublishedBefore": 58,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "AVERTISSEMENT_OFFICIEL_CNΜV_ET_CONDITIONS_MODIFIÉES",
+      "statusEvidence": "CNMV espagnole (17/02/2025) avertit sur l'absence d'autorisation pour certains services sous fxrk.com; la nature exacte du service offert en 2026 doit être comparée au champ légal de l'alerte. FAQ officielle FXRK du 13/03/2026 change plusieurs règles au 17/03.",
+      "statusBasis": "official_regulator_and_current_2026_help",
+      "contractAndRules": "Règle de transition : challenges achetés avant changement gardent leurs règles en évaluation, mais futurs funded activés après le 16/03 appliquent les nouvelles CGU. News : interdiction d'ouvrir/fermer ±4 minutes, règle de consistency funded; Instant premier payout 30 j puis tous les 14 j.",
+      "payoutEvidenceFinding": "Trustpilot contient témoignages de payouts payés et refusés; FXRK explique examiner individuellement les demandes par Risk Team, aucune preuve finale indépendante requise pour A3 retrouvée ici.",
+      "trustpilotFinding": "Profil Trustpilot fxrk.com actif et noté; aucune suspension officielle TrustScore détectée au contrôle.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/fxrk.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 3,
+        "classified": 3
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.cnmv.es/portal/resultadobusqueda?lang=en&nombre=fxrk.com&tipo=1",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://fxrk.framer.website/help-center/help-center-articles/new-trading-conditions",
+          "kind": "source_primaire_ou_registre"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/fxrk.com",
+          "kind": "source_primaire_ou_registre"
+        }
+      ],
+      "remainingTasks": [
+        "Vérifier le périmètre juridique exact de l'avertissement CNMV avant toute conclusion sur le service simulé.",
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fxrk-tickticktrader-rocket21-2026-11-23.md"
+    },
+    {
+      "slug": "aeon-funded",
+      "firm": "Aeon Funded",
+      "scorePublishedBefore": 49,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "MARQUE_RESTRUCTURÉE_SOUS_QUANTX",
+      "statusEvidence": "QuantX revendique dans son manifeste être issu d'Aeon Funded ; CGU actuelles sont signées EVC Holdings LTD. Identité du débiteur des anciens comptes Aeon et nature de la reprise à obtenir.",
+      "statusBasis": "current_first_party_terms_and_payout_faq",
+      "contractAndRules": "CGU QuantX : IP région constante / voyage vérifiable, bots/copy prohibés, lot exposure, 30% fee sur certaines violations et droit discrétionnaire de fermer/modifier comptes. Incohérence marketing : manifeste promet 24h ou +$500, FAQ payout officielle 48h APRÈS APPROBATION ou +50% des profits; ne pas inférer un délai total du traitement.",
+      "payoutEvidenceFinding": "QuantX a auto-déclaré 570k$ de payouts, non vérifiés par preuve bancaire externe; récompenses nouvelles indépendamment authentifiées manquantes.",
+      "trustpilotFinding": "Deux profils distincts : aeonfunded.com affiche une retenue officielle du TrustScore pour violation des guidelines Trustpilot (présentation trompeuse du contenu Trustpilot), constat 23/11/2026. Quantxfund.io affiche un TrustScore public 2.0/5 (11 avis) sans avis de retenue identifié. Malus −6 du domaine historique Aeon seulement, sous validation de notation ; aucune transmission automatique à QuantX.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/quantxfund.io",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "historicalAeonTrustpilotNotice": {
+        "domain": "aeonfunded.com",
+        "url": "https://www.trustpilot.com/review/aeonfunded.com",
+        "activeTrustpilotScoreWithholdingVerified": true,
+        "warningText": "This company’s rating is unavailable due to a breach of our guidelines",
+        "breachReason": "This company is displaying Trustpilot content in a misleading way.",
+        "checkedOn": "2026-11-23",
+        "v52Minus6EligibleForHistoricalAeonOnly": true,
+        "publicationApproved": false
+      },
+      "sourcePolicy": "Avis officiel de retenue confirmé sur aeonfunded.com seulement ; ne pas déplacer automatiquement le −6 vers le profil quantxfund.io, qui conserve un TrustScore public. Réactualiser à la validation du score.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "BRAND_OPERATOR_TRANSITION",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 6,
+        "classified": 6
+      },
+      "sourceLinks": [
+        {
+          "url": "https://quantxfund.io/manifesto",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://quantxfund.io/terms",
+          "kind": "archive_code",
+          "label": "Quantx (formerly Aeon Funded) Terms, prohibited practices and IP consistency (official, 2026-11-18)"
+        },
+        {
+          "url": "https://quantxfund.io/help/reward-policy-13766013",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/quantxfund.io",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://quantxfund.io/how-it-works",
+          "kind": "archive_code",
+          "label": "Quantx How it works (official, 2026-11-18)"
+        }
+      ],
+      "remainingTasks": [
+        "Réconcilier promesse manifeste 24 h et >500$ avec FAQ 48 h après approbation et bonus 50 % ; obtenir contrat signé.",
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises"
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Aeon historical domain: CURRENT Trustpilot guideline-breach score withholding VERIFIED 23/11/2026, company displays Trustpilot content misleadingly. Quantxfund.io: score public, no active withholding verified there. No numeric V5.2 score approved.",
+      "deepDiveFile": "audits/v52-deep-dive-aeon-quantx-traders-central-2026-11-23.md"
+    },
+    {
+      "slug": "mifunder",
+      "firm": "MiFunder",
+      "scorePublishedBefore": 51,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SITE_NON_ACCESSIBLE_CGU_HISTORIQUES_2023_AUTHENTIFIEES_AU_MIROIR",
+      "statusEvidence": "Contrôle 23/11/2026: mifunder.com/legal/terms-of-service inaccessible; contrôle tiers MyPropGenius 11/10/2026 Cloudflare 522. Miroir officiel marque mi-funder.vercel.app affiche CGU datées 24/08/2023, contractant déclaré Gigimobile Technology Solutions PTY Ltd 2023/535414/07, CIPC non vérifié. Aucune vente 2026, fermeture légale ou version actuelle authentifiée.",
+      "statusBasis": "prior_source_snapshot_primary_unreadable",
+      "contractAndRules": "CGU 24/08/2023: §8.3 chargeback de n'importe quel challenge peut provoquer refus de payout et suspension d'un autre compte; §11.1 réussite challenge ne garantit pas funded (Independent Contractor Agreement séparé); §§12.2-12.3 stratégie appréciée à discrétion exclusive et forfeiture fees/payments; §18.2 résiliation sans cause MAIS §18.5 protège droits acquis sauf §12.3; §19 lot sizing 25-200% de moyenne, trades <30s agrégés, plus gros trade ≤50% profit, exemple $10k→$4k retirables après exclusions. Applicabilité après 2023 non établie.",
+      "payoutEvidenceFinding": "Anciennes CGU promettent paiements bancaires en USD, exemples théoriques ne sont pas versements. Trustpilot témoignages positifs/négatifs 2024-2026 sans chaîne A3 indépendante pour le bon vendeur.",
+      "trustpilotFinding": "Trustpilot mifunder.com affiche 2,6/5 sur 159 avis au relevé, TrustScore actif, aucune retenue officielle pour guideline breach constatée. Accusations de faux avis ≠ sanction Trustpilot officielle.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/mifunder.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": null,
+      "existingRuleInventory": {
+        "total": 7,
+        "classified": 7
+      },
+      "sourceLinks": [
+        {
+          "url": "https://mifunder.com/legal/terms-of-service",
+          "kind": "archive_code",
+          "label": "Terms & conditions read in full (2026-11-20)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/mifunder.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://mi-funder.vercel.app/legal/terms-of-service",
+          "kind": "archive_code",
+          "label": "MiFunder historical legal terms (not current ownership proof)"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/",
+          "kind": "controle_secondaire_date",
+          "label": "mifunder.com Cloudflare 522 on Oct 11 2026"
+        },
+        {
+          "url": "https://eservices.cipc.co.za/Search.aspx",
+          "kind": "registre_officiel_acces_authentifie",
+          "label": "CIPC registered entity confirmation still required"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer directement dans le registre CIPC le numéro Gigimobile Technology Solutions Pty Ltd 2023/535414/07, dernier statut et vendeur facturant en 2026.",
+        "Obtenir Schedule de programmes datée et Independent Contractor Agreement pour déterminer si §§8.3,12.3,19 sont applicables aux clients historiques/actuels.",
+        "Clarifier conséquences du chargeback sur un autre compte et possibilités de recours/contestation contradictoire."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md"
+    },
+    {
+      "slug": "gry-funding",
+      "firm": "Gry Funding",
+      "scorePublishedBefore": 44,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "ACQUISITION_ANNONCEE_PAR_COMMUNIQUE_PROMOTIONNEL_2024_CESSION_DE_DETTES_NON_VERIFIEE",
+      "statusEvidence": "IssueWire 07/10/2024 publie déclaration de Grayson Maldonado selon laquelle Gry Funding est acquis par Goated FX et Only Funds FX; rôle Genesis Assets évoqué, aucune copie d'acte officiel ni registre des entités et novation des dettes clients. Site gryfunding.com HTTP502 23/11, MyPropGenius DNS inaccessible le 11/10 sans avis officiel de fermeture. Succession juridique non établie.",
+      "statusBasis": "self_attributed_press_release",
+      "contractAndRules": "Anciennes CGU gryfunding.com/terms-and-conditions indisponibles, aucun contrat funded actuel ni projet repreneur signé au bon client récupéré. Pas de déduction automatique des règles Goated FX ou Only Funds FX ni de leur histoire payout.",
+      "payoutEvidenceFinding": "Communiqué auto-déclare plus de 1000 clients et quelques payouts à cinq chiffres sans liste de paiements, payeurs, programmes, bénéficiaires ni vérification finale indépendante. Pas de preuve A3 ni règlement des dettes 2024 du précédent vendeur.",
+      "trustpilotFinding": "Aucun Trustpilot exact de gryfunding.com vérifié avec score et notice de retenue officiels; ne pas transférer profil d'un repreneur présumé. Aucun −6 démontré.",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "SITE_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110",
+          "kind": "archive_code",
+          "label": "7 October 2024 founder-attributed acquisition announcement"
+        },
+        {
+          "url": "https://gryfunding.com/terms-and-conditions/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/gry-funding/",
+          "kind": "archive_code",
+          "label": "Independent domain status review in October 2026"
+        },
+        {
+          "url": "https://www.verify.trading/compare/prop-firms/gryfunding",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://gryfunding.com/",
+          "kind": "archive_code",
+          "label": "Original GRY Funding domain, no verifiable checkout"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Identifier anciens et nouveaux vendeurs sur registre et facture, puis preuve d'acquisition et surtout reprise des dettes payouts.",
+        "Exiger CGU historiques Gry / nouveaux agreements et bilan des créances clients par programme.",
+        "Corroborer séparément les payouts cinq chiffres allégués par avis vérifiés et transactions finales indépendantes."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "my-crypto-funding",
+      "firm": "My Crypto Funding",
+      "scorePublishedBefore": 29,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "SOCIETE_NOM_EQUIVALENT_UK_ACTIVE_STRIKEOFF_2026_SUSPENDU_DOMAINE_ORG_INACTIF",
+      "statusEvidence": "Companies House MY CRYPTO FUNDING LTD 15795471 statut ACTIVE, constituée 22/06/2024 ; comptes arrêtés au 29/06/2025 en retard (échéance 22/09/2026). GAZ1 compulsory strike-off 29/09/2026, confirmation statement 27/10, DISS40 strike-off discontinued 28/10/2026. Communiqué commercial Decrypt/Chainwire 11/04/2025 revendique My Crypto Funding Ltd UK, suggère lien à la marque mycryptofunding.org mais reçu/CGU n°UK non validés. Domaine historique 502 en navigation 23/11 et DNS signalé indisponible depuis sep 2026, sans preuve de dissolution du vendeur. mycryptofund.com appartient à offre distincte YSF Tech Limited BVI; ne pas fusionner.",
+      "statusBasis": "unreachable_historical_site",
+      "contractAndRules": "Homepage ancienne indexée mycryptofunding.org : 2-step objectifs 10%/5%, DD daily 4-5%, DD total 8-10%, 80-90% split selon add-on, 15 jours traded et 3 jours +0.5% pour payout standard, parfois on-demand. Instant : daily 3%, trailing 6%, 30x, consistency best day 15% si on-demand OU pas de consistency et 15 jours (min 4 jours tradés); news high impact ±2m interdites sans add-on, weekend non-crypto conditionné à option. Pas de CGU/contrat funded 2026 accessible. Prix 4980 USDT et target 60% du domaine mycryptofund.com ne concernent PAS cette marque.",
+      "payoutEvidenceFinding": "Payouts 'average two hours' et split 80-90% revendiqués dans homepage historique, pas de preuve finale à 6 éléments pour un compte signé de mycryptofunding.org. Communiqué prix 2025 est une publication promotionnelle et non un audit de récompenses réellement encaissées.",
+      "trustpilotFinding": "Profil Trustpilot exact mycryptofunding.org non confirmé accessible ; éviter profils mycryptofunds.com, mycryptofund.com ou autres homonymes. Aucune retenue officielle du TrustScore pour manquement aux guidelines démontrée, -6 non fondé.",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "ORIGINAL_DOMAIN_UNVERIFIED_DO_NOT_CONFUSE_MYCRYPTOFUND",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 9,
+        "classified": 9
+      },
+      "sourceLinks": [
+        {
+          "url": "https://mycryptofunding.org/",
+          "kind": "archive_code",
+          "label": "mycryptofunding.org official page (read 2026-11-19)"
+        },
+        {
+          "url": "https://mycryptofunding.org/terms-and-conditions/",
+          "kind": "archive_code",
+          "label": "My Crypto Funding terms and conditions (official, 2026-11-18)"
+        },
+        {
+          "url": "https://www.mycryptofund.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://proprubric.com/crypto/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms",
+          "kind": "archive_code",
+          "label": "Decrypt (Chainwire release, 11 Apr 2025): My Crypto Funding, mycryptofunding.org"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15795471",
+          "kind": "registre_primaire_uk",
+          "label": "MY CRYPTO FUNDING LTD active, 2026 overdue accounts"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15795471/filing-history",
+          "kind": "registre_primaire_uk",
+          "label": "GAZ1 Sep 29 and DISS40 Oct 28 strike-off stopped"
+        },
+        {
+          "url": "https://mycryptofund.com/faq/2",
+          "kind": "autre_societe_ne_pas_confondre",
+          "label": "YSF Tech Limited BVI associated with mycryptofund.com, not same company evidence"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/mycryptofunding.org",
+          "kind": "profil_exact_non_confirme",
+          "label": "Trustpilot exact domain not validated; do not import similarly-named profile"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir factures et termes signés reliant l'ancien domaine mycryptofunding.org à MY CRYPTO FUNDING LTD 15795471 ou autre vendeur.",
+        "Qualifier statut ACTIVE malgré radiation d'office suspendue au 28/10/2026, et vérifier comptes annuels en retard avant publication.",
+        "Ne pas recopier les règles et chiffres de MyCryptoFund.com / YSF Tech BVI sur My Crypto Funding .org.",
+        "Vérifier CGU datées des challenges standard et Instant, conditions 3 jours +0.5%, consistency 15% et historique de paiement final."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md"
+    },
+    {
+      "slug": "quantec-trading-capital",
+      "firm": "Quantec Trading Capital",
+      "scorePublishedBefore": 34,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "CGU_2024_CONTRACTANT_PROP_TRADE_TECH_LLC_RADIEE_2025_OFFRE_2026_NON_PROUVEE",
+      "statusEvidence": "PDF officiel historique Quantec §1 nomme Prop Trade Tech LLC 2784 LLC 2022; Gazette SVG n°33 du 24/06/2025 p.419, inspectée en capture, confirme radiation de CETTE LLC. Ne pas confondre avec Prop Trade Tech Pty Ltd ABN 71 661 045 950 devenue TRADESIM (contrats historiques Nova/Rocket21). Aucun transfert ou nouvelle entité Quantec contractante démontré. Domaine quantectrading.com HTTP526 au contrôle 23/11/2026, quantectradingcapital.com/terms inaccessible; annexe CGU 2024 récupérable seulement via texte indexé, captures PDF serveur 526.",
+      "statusBasis": "archived_2024_primary_docs",
+      "contractAndRules": "CGU historiques §§2.2/11.1 : funded non garanti, accord entrepreneur distinct. §12.2(g)(viii) stratégie à opinion exclusive et §12.3 rupture sans préavis + forfeiture des paiements de contrat, §18.5 préserve droits acquis sauf §12.3. Schedule 03/10/2024 produit Standard 1-step: splits 60/70/80% successifs, 35% profit consistency funded, HFT/news autorisés challenge et interdits funded. Plans nouveaux DXTrade/TradeLocker 90% selon produit. Même annexe : tableau 'No' consistency evaluation vs note n°3 'Assessment and/or Trading Period', à clarifier. Annexe novembre 2024 comptes après 07/10 et anciens avant 26/08 : cap 2.5% capital premier reward, 5% suivants, 30 jours avant premier payout puis 15 jours, éventuel refund fee après troisième payout si achat dès 01/11. Incohérence de définition de 35% entre annexes octobre (profit/return) et novembre (35% account size per day), approbation/phase à vérifier; news ±10m 2-step, même instruments entre challenge/funded, changement de stratégie et scalp <15m peuvent mener à refus partiel/total de profit selon Risk Team.",
+      "payoutEvidenceFinding": "Trustpilot plaintes 2024/2025 de refus de payouts pour consistency, stratégies et retraits, certaines réponses officielles; faits individuels non indépendamment jugés, aucun A3 final à six maillons du bon payeur prouvé.",
+      "trustpilotFinding": "Trustpilot exact quantectrading.com environ 1.7/5 pour 515-516 avis, score affiché, aucune retenue officielle de TrustScore pour breach of guidelines. Avis défavorables ne justifient pas -6.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/quantectrading.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "F",
+        "classification": "ACTIVE_OPERATOR_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://quantectrading.com/wp-content/uploads/2024/01/Proptradetech-terms-and-conditions-Quantec-Trading-Capital-.pdf",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://quantectrading.com/wp-content/uploads/2024/10/Schedule-of-assessment-Quantec-03.10.2024-1.pdf",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/quantectrading.com",
+          "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://quantectradingcapital.com/terms-and-conditions/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://tradersunion.com/brokers/prop/view/quantec-trading-capital/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf",
+          "kind": "journal_officiel_primaire_capture_p419",
+          "label": "Prop Trade Tech LLC 2784 LLC 2022 officially struck off SVG register June 2025"
+        },
+        {
+          "url": "https://quantectrading.com/wp-content/uploads/2024/11/Schedule-of-assessment-Quantec.pdf",
+          "kind": "annexe_historique_nov2024_indexee",
+          "label": "Different cohorts and October 7 cutoff, 2.5/5% funded cap, 30/15-day payouts"
+        },
+        {
+          "url": "https://thetrustedprop.com/checkout/quantec-trading?challengeId=401&firmId=158&pricingId=1929",
+          "kind": "annuaire_secondaire",
+          "label": "Firm marked closed; not primary evidence"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Rapprocher la LLC SVG radiée avec les factures Quantec et les contrats funded signés, et établir éventuel transfert de créances.",
+        "Éclaircir la consistency 35% selon annexe oct/nov 2024, la base de calcul et le programme/phase.",
+        "Obtenir les décisions/rejets documentés concernant instrument/strategy consistency et scalp sous 15 minutes, sans punition B1+B2 duplicative.",
+        "Vérifier les cap payouts 2.5% / 5%, délai initial 30j puis 15j, et contrôle des paiements finalisés au bon vendeur."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md"
+    },
+    {
+      "slug": "real-funds-trader",
+      "firm": "Real Funds Trader",
+      "scorePublishedBefore": 21,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "DOMAINE_DNS_NXDOMAIN_2026_REAL_FUNDS_INC_DELAWARE_SECONDAIRE_NON_VERIFIE",
+      "statusEvidence": "MyPropGenius 11/10/2026 DNS NXDOMAIN pour realfundstrader.com, Verify.trading 30/10/2026 marque inactive sans vérification indépendante terminée, URL inaccessible en navigation 23/11. TheTrustedProp attribue Real Funds Inc Delaware mais sans Delaware entity ID/registre ni facture. Ce n'est pas une dissolution légale confirmée.",
+      "statusBasis": "dated_secondary_dns_down",
+      "contractAndRules": "Anciennes fiches secondaires Real Funds Trader cTrader et Elite / payouts on demand >$500 via crypto ou processor, stratégies manipulatoires interdites, mais CGU signées par plan/date non accessibles. Une référence archive du 02/06/2024 n'a pas été relue en entier, pas un contrat actuel.",
+      "payoutEvidenceFinding": "Promesses on-demand de comparateurs et descriptions des canaux crypto ne prouvent aucun paiement final d'un compte réel ni créance soldée; aucune chaîne A3 indépendante.",
+      "trustpilotFinding": "Aucun profil Trustpilot du domaine realfundstrader.com authentifié avec retenue officielle du TrustScore, -6 non fondé faute de preuve (statut inconnu).",
+      "trustpilotExactProfile": null,
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "ORIGINAL_DOMAIN_DNS_OFFLINE",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://realfundstrader.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/real-funds-trader/",
+          "kind": "archive_code",
+          "label": "Real Funds Trader dated inactive-domain verification"
+        },
+        {
+          "url": "https://www.verify.trading/compare/prop-firms/realfundstrader",
+          "kind": "controle_tiers_oct2026",
+          "label": "Not active, independent verification pending"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/real-funds-trader",
+          "kind": "identite_juridique_secondaire_sans_registre",
+          "label": "Real Funds Inc Delaware alleged; registration not verified"
+        },
+        {
+          "url": "https://web.archive.org/web/20240602003034id_/https://realfundstrader.com/",
+          "kind": "piste_archive_non_authentifiee_entier",
+          "label": "Historical site archived June 2024, full signed terms not recovered"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer Real Funds Inc au registre Delaware (identifiant exact) et facture historique du vendeur.",
+        "Obtenir CGU historiques et dated funded agreements / statut commerciale/coordonnées client.",
+        "Vérifier plusieurs payouts finaux reçus par bénéficiaires indépendants du vendeur de challenge."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "the-prop-game",
+      "firm": "The Prop Game",
+      "scorePublishedBefore": 16,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "FERMETURE_DECLAREE_PAR_ANNUAIRE_SANS_SOURCE_PRIMAIRE",
+      "statusEvidence": "Contrôle direct 23/11/2026: site thepropgame.com renvoie erreur 502; observations tierces sep-oct 2026 signalent domaine parqué GoDaddy. Ancienne AML Policy officielle identifie Garuda Education and Training Pte Ltd (UEN 202342938C) Singapore. Répertoire ACRA repris par Companies.sg: société enregistrée active. HUMBPROP actuel affiche exactement le même UEN et le même nom légal mais aucune preuve de migration ou apurement des anciennes dettes n'est retrouvée.",
+      "statusBasis": "secondary_closure_claim",
+      "contractAndRules": "Ancienne Refund Policy primaire: remboursement généralement exclu une fois les identifiants du compte simulé envoyés; exception sans trade à la discrétion de la firme et exclusion pour chargeback qualifié d'abusif. CGU funded The Prop Game non obtenues. HUMBPROP propose de demander par email l'intégralité de ses CGU: impossible de transposer à l'ancienne marque.",
+      "payoutEvidenceFinding": "Avis contradictoires sur ancien TNPL (dont un retrait $8000 refusé allégué en jan 2025, un autre reçu) sans preuve finale indépendante. HUMBPROP revendique des rewards mais ces déclarations ne prouvent pas les anciennes dettes réglées.",
+      "trustpilotFinding": "Profil thepropgame.com ~4,2/5 pour 35 avis au dernier relevé accessible; score affiché, pas de bannière officielle de retenue TrustScore constatée. Certains avis mis à jour en 2026 décrivent des expériences plus anciennes.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/thepropgame.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "THIRD_PARTY_CLOSED_PRIMARY_NOT_VERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://thepropgame.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://fundedminds.com/firm/the-prop-game.html",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/thepropgame.com",
+          "kind": "archive_code",
+          "label": "The Prop Game customer reports"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/",
+          "kind": "archive_code",
+          "label": "The Prop Game documented expired domain"
+        },
+        {
+          "url": "https://www.thepropgame.com/aml-policy/",
+          "kind": "document_primaire_historique_indexe",
+          "label": "Garuda company identity UEN 202342938C"
+        },
+        {
+          "url": "https://www.thepropgame.com/refund_policy/",
+          "kind": "document_primaire_historique_indexe",
+          "label": "No refund after access and chargeback policy"
+        },
+        {
+          "url": "https://www.companies.sg/business/202342938C/GARUDA-EDUCATION-AND-TRAINING-PTE-LTD",
+          "kind": "registre_secondaire_sourcant_ACRA",
+          "label": "Company registry active, record observed Sep 2026"
+        },
+        {
+          "url": "https://humbprop.com/terms-of-service",
+          "kind": "source_primaire_marque_associee",
+          "label": "HUMBPROP current website same Garuda UEN, full terms on request"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Clarifier document de continuité entre The Prop Game et HUMBPROP et liste anonymisée de comptes historiques transférés ou non.",
+        "Obtenir contrat funded historique et totalité des CGU HUMBPROP, ainsi que preuves de payout indépendantes par produit."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md"
+    },
+    {
+      "slug": "neg-markets",
+      "firm": "NEG Markets",
+      "scorePublishedBefore": 18,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "ARCHIVE_SITE_OFFICIEL_NEG_MARKETS_LTD_VS_ANNUAIRE_NEGMARKETS_LLC_OFFRE_2026_INACCESSIBLE",
+      "statusEvidence": "Page officielle NEG MARKETS indexée il y a 1,8 ans contient l'auto-description 'NEG Markets LTD', alors que TheTrustedProp attribue 'NEGmarkets LLC' (CEO Chris Tarta) sans registration number. Nouveaux fetch /faqs/, /about/, /contact/ renvoient HTTP502 le 23/11; ancien contenu encore indexé n'est pas checkout actif. MyPropGenius 11/10 rapporte hosting error. Nom commercial New Era Globe/Global Markets aussi non réconcilié.",
+      "statusBasis": "dated_secondary_offline",
+      "contractAndRules": "Homepage historique officielle : Instant funding invitation only nominal 50k, split 60% augmentant mensuellement, 14 jours minimum et DD 8%. Offre 1 step affiche 10% target nominal 10k avec illustration FAUSSE '$500' (10% de 10k = $1000), 3 jours mini phase, DD journalier 4%, max 8%, split funded illustré 80%. Addon +25% prix pour split 90%, autres addons drawdown de +10 à +50% frais; 2 step objectif 8% et DD 5/10%, phases à séparer. Aucun document signé ni FAQ complète 2026 disponible. Fenêtre news ±3 min mentionnée seulement dans un avis secondaire, pas CGU authentifiée.",
+      "payoutEvidenceFinding": "Site ancien dit payouts en un jour (promotion); Trustpilot 12/2024 plainte de reward 34k USD refusé sans motif transmis, aucune preuve de contrat, créance acquise ou transfert bancaire indépendant; ne pas prononcer refus injustifié confirmé.",
+      "trustpilotFinding": "Trustpilot exact negmarkets.com TrustScore visible 2,8/5 avec 4 avis tous une étoile, profil non revendiqué. Avis critiques non sanction Trustpilot, -6 non justifié.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/negmarkets.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "HISTORICAL_SITE_UNAVAILABLE",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://negmarkets.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/negmarkets.com",
+          "kind": "archive_code",
+          "label": "NEG Markets 2.8/5 from 4 reviews"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/",
+          "kind": "archive_code",
+          "label": "NEG Markets dated inactive domain"
+        },
+        {
+          "url": "https://negmarkets.com/faqs/",
+          "kind": "archive_indexee_courante_non_accessible",
+          "label": "FAQ indexed historical; current opens HTTP502"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/new-era-global-markets",
+          "kind": "identite_secondaire_contradictoire",
+          "label": "NEGmarkets LLC and Chris Tarta with no legal number"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Reconstituer reçus CGU et société NEG Markets LTD vs NEGmarkets LLC, et enregistrement officiel.",
+        "Corriger l'exemple historique 10% ($500) sur 10k dans dossier et identifier cible réellement contractuelle.",
+        "Demander détail et preuve de payout 34k allégué avec logs, appel et décisions, et preuve A3 d'autres paiements.",
+        "Déterminer si un checkout 2026 peut réellement fonctionner au-delà de la vieille page indexée."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "guardeer-funding",
+      "firm": "Guardeer Funding",
+      "scorePublishedBefore": 13,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "MAINTENANCE_OFFICIELLE_ACTUELLE_FORTRESS_FUNDING_404_TRUSTPILOT_FERME_POUR_SITE",
+      "statusEvidence": "Page officielle guardeerfunding.com 23/11 affiche maintenance et redirection vers funding.fortressfx.com. Cible répond HTTP404 en direct. Contrôle tiers 24/09 constatait même combinaison. Footer Guardeer Funding ©2025, pas de date de reprise ni transaction 2026. Trustpilot ancien Guardeer indique adresse Hong Kong auto-déclarée, sans registre prouvant la société; aucune novation vers Fortress et aucun contrat au checkout confirmés.",
+      "statusBasis": "archived_maintenance_brand",
+      "contractAndRules": "Anciennes offres 2 step jusqu'à 200k, première cible 8% selon avis, mais ni CGU actuelles ni accord funded signés; aucune règle de split, consistency, news et délai de payout prouvée. Certains avis Fortress/Guardeer invoquent 14 jours annoncés mais 40 jours de réception et migration MT5/CRM, pas une clause vérifiée. Ne pas transposer règles du broker fortressfx.com sur challenge Guardeer.",
+      "payoutEvidenceFinding": "Avis Guardeer 2025 (retards ~3 mois, solde migré différent, comptes achetés non livrés) et avis Fortress 2026 portant sur wallets et broker. Aucune attestation indépendante de règlement final des anciens comptes sous le bon débiteur; ne pas supposer le repreneur payé.",
+      "trustpilotFinding": "Profil exact guardeerfunding.com 605 avis, fermé aux nouveaux avis car Trustpilot indique company website closed, NON guideline breach withholding. Profil distinct funding.fortressfx.com score affiché 1,4/5 sur 113 avis, sans withholding officiel. Ne pas fusionner ni utiliser -6 sur l'un ou l'autre.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/funding.fortressfx.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "BRAND_MAINTENANCE_CHECKOUT_UNVERIFIED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 0,
+        "classified": 0
+      },
+      "sourceLinks": [
+        {
+          "url": "https://guardeerfunding.com/",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/funding.fortressfx.com",
+          "kind": "archive_code",
+          "label": "Fortress Funding customer account reports"
+        },
+        {
+          "url": "https://top30forexbrokers.com/propfirm/guardeer-funding-review/",
+          "kind": "archive_code",
+          "label": "Guardeer site migration and blocked reviews review"
+        },
+        {
+          "url": "https://www.propradar.tech/fr/firm/guardeer-funding",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/guardeerfunding.com",
+          "kind": "source_primaire_plateforme_statut",
+          "label": "605 reviews, closed new reviews because company website closed, not breach penalty"
+        },
+        {
+          "url": "https://funding.fortressfx.com/",
+          "kind": "controle_redirection_primaire",
+          "label": "HTTP404 23 November 2026"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/fortressfx.com?page=3",
+          "kind": "autre_profil_cas_historique",
+          "label": "Buyer claims Guardeer migration and 40-day wait, not payment evidence"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir identité contractuelle Guardeer et Fortress séparément, facture, registre Hong Kong et éventuel acte de reprise de passifs.",
+        "Prouver le règlement final des soldes/payouts Guardeer historiques et distinguer le courtier FortressFX.",
+        "Établir si maintenance est réellement close et les modalités/CGU d'un éventuel checkout; ne pas publier de lien d'achat 404."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md",
+      "deepDiveCheckedOn": "2026-11-23"
+    },
+    {
+      "slug": "willis-capital",
+      "firm": "Willis Capital",
+      "scorePublishedBefore": 33,
+      "sourceDate": "2026-11-23",
+      "statusFinding": "WILLIS_CAPITAL_WFUNDED_CONTINUITE_COMMERCIALE_DIRECTE_REPRISE_DE_PASSIFS_NON_ETABLIE",
+      "statusEvidence": "williscapitals.com redirige vers wfunded.io et ancien stage.williscapitals.com héberge CGU WFunded. Contrat WFunded nomme Western Sahara Worldwide Services LTD au Nigeria RC 1573472, registre CAC non consulté. Continuité commerciale bien mieux établie, mais obligations historiques Willis et transfert juridique non confirmés.",
+      "statusBasis": "current_wfunded_primary_identity_unconfirmed",
+      "contractAndRules": "CGU WFunded §§5.2 et 5.3 : rejet de payout en attente et perte de profits pour communication staff jugée abusive ou propos publics considérés faux/diffamatoires; condition vidéo de témoignage et certificat dans les 7 jours du premier payout avant retraits suivants. Règles IP maximum deux adresses, préavis voyage, trading sans SL en live sanctionné. FAQ : 70/30 standard, premier payout mensuel puis bimensuel, min 100 USD. Contrat funded signé et recours à obtenir; ne pas doubler B1/B2.",
+      "payoutEvidenceFinding": "Aucune chaîne indépendante A3 vérifiée du payeur WSWS ni règlement des comptes Willis historiques. Les screenshots, retours Trustpilot, garanties de processing 24h et pages de marketing ne prouvent pas la réception définitive.",
+      "trustpilotFinding": "Trustpilot williscapitals.com redirige le visiteur vers WFunded et affiche TrustScore 3.4/5 sur 294 avis au relevé 23/11/2026, signalements variés en 2026, pas de notice de retenue TrustScore pour breach of guidelines constatée. Ne pas inférer un refus injustifié d'allégations.",
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/williscapitals.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
+      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
+      "priorResearch": {
+        "cohort": "G",
+        "classification": "THIRD_PARTY_CLOSED_PRIMARY_NOT_LOCATED",
+        "checkedOn": "2026-11-22"
+      },
+      "existingRuleInventory": {
+        "total": 8,
+        "classified": 8
+      },
+      "sourceLinks": [
+        {
+          "url": "https://www.wfunded.io/en/terms-and-conditions",
+          "kind": "archive_code",
+          "label": "WFunded Terms and Conditions (official, 2026-11-18)"
+        },
+        {
+          "url": "https://www.wfunded.io/en/faq",
+          "kind": "archive_code",
+          "label": "WFunded FAQ (official, 2026-11-18)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/williscapitals.com",
+          "kind": "archive_code",
+          "label": "Trustpilot profile williscapitals.com (now shown as WFUNDED)"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/willis-capital/overview",
+          "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://wfunded.io/",
+          "kind": "archive_code",
+          "label": "WFunded active official homepage and simulated disclaimer"
+        },
+        {
+          "url": "https://techcabal.com/?p=162269",
+          "kind": "archive_code",
+          "label": "TechCabal: WFunded, formerly known as Willis Capital"
+        },
+        {
+          "url": "https://stage.williscapitals.com/en/terms-and-conditions",
+          "kind": "source_primaire_lien_de_marque",
+          "label": "Ancien sous-domaine Willis héberge CGU WFunded"
+        },
+        {
+          "url": "https://www.wfunded.io/en/checkout",
+          "kind": "source_primaire_checkout_observable",
+          "label": "Choix produits WFunded, transaction non effectuée"
+        },
+        {
+          "url": "https://www.wfunded.io/en/risk-disclosure",
+          "kind": "source_primaire_contenu",
+          "label": "Environnement simulé à réconcilier avec marketing live"
+        }
+      ],
+      "remainingTasks": [
+        "Identité du vendeur réel + registre et état 2026",
+        "Capture de CGU versionnée au bon checkout et contrat funded",
+        "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
+        "Preuves de payout final par tiers indépendant, séparées des déclarations",
+        "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Vérifier extrait registre CAC du vendeur WSWS n°RC 1573472 et contrat effectivement émis lors des achats Willis historiques.",
+        "Obtenir consentement/migration Willis→WFunded et état indépendant de règlements des anciennes obligations.",
+        "Faire expliciter le recours pour motifs staff/réputation annulant les payouts et obligation vidéo marketing après premier retrait."
+      ],
+      "numericV52": null,
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md"
+    }
+  ]
+}
