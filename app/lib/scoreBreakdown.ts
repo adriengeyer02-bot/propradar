@@ -35,7 +35,6 @@ export type ScoreBreakdown = {
   trustpilot?: { penalty: number; included: boolean; before: number };
   closedCap?: { cap: number; before: number };
   safetyCap?: { cap: number; before: number };
-  payoutEvidenceCap?: { cap: number; before: number };
   final: number;
   maxPenalty: number;
 };
@@ -67,7 +66,6 @@ export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
       unclassifiedOnly: allRules.length - classified.length,
       trustpilot: firm.trustpilotPenalty,
       safetyCap: firm.v5SafetyCap,
-      payoutEvidenceCap: firm.v52PayoutCap,
       closedCap: firm.closedCap,
       final: firm.score,
       maxPenalty: 10,
