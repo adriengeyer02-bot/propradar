@@ -730,7 +730,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       {
         heading: 'Who Topstep suits',
         paragraphs: [
-          'Monthly subscription pricing makes a **slow evaluation** more expensive than one-time-fee competitors. If you are comparing it with Apex, review the separate XFA and PA payout contracts: Apex's published EOD Performance Account terms allow **six approved payouts per individual PA**, after which that PA closes. This is not a lifetime limit on the trader; compare our Topstep vs Apex guide for the exact account version.',
+          "Monthly subscription pricing makes a **slow evaluation** more expensive than one-time-fee competitors. If you are comparing it with Apex, review the separate XFA and PA payout contracts: Apex's published EOD Performance Account terms allow **six approved payouts per individual PA**, after which that PA closes. This is not a lifetime limit on the trader; compare our Topstep vs Apex guide for the exact account version.",
         ],
         fit: {
           yes: ['**Intraday futures** traders', 'Traders who want an **established operator**', 'Comfortable with a **live-monitored trailing limit**'],
