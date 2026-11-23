@@ -1,7 +1,7 @@
 {
   "version": "5.2",
   "effectiveDecision": "2026-11-23",
-  "publication": "Owner approval 2026-11-23: 32 additional V5.2 proposals accepted (25 prior 13-criterion V5 source migrations, 5 targeted native reaudits, ExFunded, Klein Funding Crypto); 58 previously authorized remain. CK Capital candidate 14 to 58 expressly REJECTED; no points or changes to CK Capital. Snapshot proof limitations, A3 caps and conditional B1 evidence caveats remain. Payout proof is not certified solely by a score.",
+  "publication": "Owner explicitly authorized publication of 31 newly researched 13-criterion V5.2 scorecards on 2026-11-23; 90 prior owner-approved scores retained = 121 total. All 31 newly approved files have audit confidence LOW because full independent six-link trader payout proof and current primary entity extracts are not universally available; this is a conservative quantified assessment, NOT a certification that the firm did not pay traders. CK Capital candidate 58 remains rejected with prior low score unchanged.",
   "approvals": [
     {
       "slug": "alpha-capital-group",
@@ -538,6 +538,254 @@
       "expectedFinal": 40,
       "ownerApprovedOn": "2026-11-23",
       "sourceAudit": "cohort F PR #256"
+    },
+    {
+      "slug": "e8-markets",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 58,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "brightfunded",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 56,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "instant-funding",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 54,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "hola-prime",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 60,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "pipfarm",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 56,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "trade-the-pool",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 57,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "for-traders",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 48,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "ftmo",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "topstep",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "myfundedfutures",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "the5ers",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "fintokei",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "tradeify",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "audacity-capital",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 50,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "myfundedcapital",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "earn2trade",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "fundednext",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "aqua-funded",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 50,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "finotive-funding",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 50,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "funding-traders",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 55,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "rzr-funded",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 53,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "lark-funding",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 54,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "the-trading-pit",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 57,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "ment-funding",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 58,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "elite-trader-funding",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 59,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "atlas-funded",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 45,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "blue-guardian",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 49,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "traders-launch",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "ofp-funding",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 54,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+    },
+    {
+      "slug": "funded-bull",
+      "checkedOn": "2026-11-23",
+      "expectedFinal": 49,
+      "ownerApprovedOn": "2026-11-23",
+      "confidence": "faible",
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
     }
   ],
   "ownerDecision": {
@@ -547,5 +795,16 @@
     "rejectedCandidate": 58,
     "keepExistingScore": true,
     "notes": "No score modification of CK Capital (reconstructed 14). Axi Select 60 and City Traders Imperium 53 explicitly accepted. Data sources are evidence snapshots; no claims of independently certified payouts."
+  },
+  "latestOwnerDecision": {
+    "date": "2026-11-23",
+    "priorApproved": 90,
+    "newlyApproved": 31,
+    "totalApproved": 121,
+    "excludedSlug": "ck-capital",
+    "keepExistingCkScore": true,
+    "snapshotSource": "app/data/scoring-v52-31-owner-release-2026-11-23.json",
+    "allNewScoresConfidence": "faible",
+    "payoutProofSixLinksNotCertified": true
   }
 }
