@@ -128,7 +128,7 @@ const pt: GuideArticleTranslations = {
         heading: 'Quem está por trás da GOAT Funded Trader',
         paragraphs: [
           'A GOAT Funded Trader foi lançada em maio de 2023. É um nome comercial da Wishes Tower International Limited, empresa de Hong Kong, e o trading simulado é fornecido pela Goat Funded LTD em Santa Lúcia. Nenhum regulador financeiro supervisiona o serviço. Os termos descrevem contas simuladas, compras não reembolsáveis e ampla margem de decisão sobre pagamentos, algo comum no setor, mas que vale saber antes de comprar.',
-          'O PropRadar lhe dá 58/100 e a mantém em vigilância: a marca é real e paga traders, mas o histórico é curto e as condições de pagamento deixam muito espaço para interpretação. O PropRadar tem uma relação de afiliado com a GOAT Funded Trader; isso não muda esta pontuação nem esta análise.',
+          "A pontuação editorial atual do PropRadar aparece na ficha da empresa. Pela V5.2, a retenção oficial do TrustScore pelo Trustpilot gera uma dedução de 6 pontos, não um teto automático de 64/100; os limites ligados às provas de pagamento são separados. As regras de saque exigem atenção. A relação de afiliado do PropRadar não influencia a nota.",
         ],
       },
       {
@@ -141,12 +141,12 @@ const pt: GuideArticleTranslations = {
       {
         heading: 'As regras da conta financiada que mais importam',
         paragraphs: [
-          'Os modelos de challenge são convencionais. O modelo 2-Step GOAT pede 8% e depois 6% com perda diária de 4% e perda máxima estática de 10%; o 2-Step Standard pede 10% e depois 5% com 5% diário e 10% máximo; o 1-Step pede 10% com perda diária de 3% e perda máxima estática de 6%. O modelo 3-Step foi descontinuado em agosto de 2026. Esses números vêm de uma análise de terceiros verificada em 5 de outubro de 2026: confirme no checkout.',
+          'Os modelos de challenge são convencionais. O modelo 2-Step GOAT pede 8% e depois 6% com perda diária de 4% e perda máxima estática de 10%; o 2-Step Standard pede 10% e depois 5% com 5% diário e 10% máximo; o 1-Step pede 10% com perda diária de 3% e perda máxima estática de 6%. A GOAT ainda publica a FAQ do modelo 3-Step, mas regras de reset excluem modelos antigos. O 2-Step Standard também não é mais vendido a novos clientes. Uma página de ajuda não confirma a oferta atual: verifique o programa e o contrato no checkout. Esses números vêm de uma análise de terceiros verificada em 5 de outubro de 2026: confirme no checkout.',
           'As regras que decidem os pagamentos começam depois da aprovação:',
         ],
         bullets: [
-          'Goat Guard: nas contas financiadas 1-Step e 2-Step, uma perda flutuante de 2% do saldo inicial reduz sua divisão para 50%; um segundo acionamento viola a conta.',
-          'Regra dos 2 minutos: o lucro de operações mantidas por menos de dois minutos é removido no pagamento, enquanto as perdas dessas operações ficam na conta.',
+          "Goat Guard: em contas financiadas às quais se aplica (não Instant), uma perda flutuante de 2% do saldo pode fechar posições abertas. A primeira ativação reduz a participação para 50%; a segunda viola a conta. Verifique exceções por programa.",
+          "Tempo mínimo somente no funded: challenge comprado antes de 6 de outubro de 2026 = 2 minutos; a partir dessa data = 1 minuto. Lucros de operações mais curtas são retirados do payout, enquanto as perdas permanecem. Um reset não altera a data da compra original; a regra não se aplica à avaliação.",
           'Janela de notícias: o lucro obtido em torno de notícias de alto impacto é limitado a 1% do saldo inicial.',
           'Teto de lucro diário: uma conta financiada pode registrar no máximo US$ 3.000 de lucro por dia.',
           'Os modelos instantâneos usam trailing drawdowns e encerram a conta com perda flutuante de 1% ou 2%, conforme o modelo.',
@@ -155,8 +155,8 @@ const pt: GuideArticleTranslations = {
       {
         heading: 'Pagamentos',
         paragraphs: [
-          'A divisão padrão é de 80%, com upgrade pago para 100% no checkout e um plano de escala que pode elevá-la a 90-95%. A maioria dos modelos paga a cada 14 dias, com mínimo de US$ 100 e taxa de processamento de 3%. Os dois primeiros pagamentos têm teto no menor valor entre 6% do saldo inicial e US$ 10.000. Os métodos de pagamento incluem Rise, transferência bancária, Skrill e cripto, cada um com seu limite.',
-          'Várias afirmações públicas contradizem a central de ajuda, como a velocidade de pagamento (24 horas contra 2 dias úteis) e o tamanho máximo de conta. Quando marketing e termos divergem, são os termos que valem para o seu pagamento.',
+          "A participação anunciada costuma ser de 80%, mas varia conforme programa e opções. A central oficial consultada em 23 de novembro de 2026 informa mínimo de US$ 100 por pedido e taxa de processamento de 2%. Os dois primeiros pagamentos podem ficar limitados ao menor valor entre 6% do saldo inicial e US$ 10.000; em contas 2-Step de US$ 5.000 compradas a partir de 25 de julho de 2026, o teto é 4%. Rise, transferência, Skrill e cripto têm limites distintos.",
+          "A central atualizada informa processamento em 2 dias úteis, condicionado no primeiro saque ao KYC e à assinatura do Trader Agreement. Uma análise da equipe de risco e o recebimento bancário definitivo são etapas distintas. Confira as condições do programa exato.",
         ],
       },
       {

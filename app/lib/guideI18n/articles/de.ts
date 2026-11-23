@@ -128,7 +128,7 @@ const de: GuideArticleTranslations = {
         heading: 'Wer GOAT Funded Trader betreibt',
         paragraphs: [
           'GOAT Funded Trader startete im Mai 2023. Es ist ein Handelsname der Wishes Tower International Limited, einer Gesellschaft in Hongkong, und das simulierte Trading stellt Goat Funded LTD in St. Lucia bereit. Keine Finanzaufsicht überwacht den Dienst. Die Bedingungen beschreiben simulierte Konten, nicht erstattungsfähige Käufe und weiten Ermessensspielraum bei Auszahlungen, was in der Branche üblich ist, aber vor dem Kauf bekannt sein sollte.',
-          'PropRadar bewertet die Firma mit 58/100 und führt sie auf der Beobachtungsliste: Die Marke ist real und zahlt Trader aus, aber ihre Historie ist kurz und ihre Auszahlungsbedingungen lassen viel Interpretationsspielraum. PropRadar hat eine Affiliate-Beziehung zu GOAT Funded Trader; sie ändert weder diesen Score noch diesen Test.',
+          "Die aktuelle redaktionelle PropRadar-Bewertung steht im Firmenprofil. Nach V5.2 führt ein offiziell von Trustpilot einbehaltener TrustScore zu einem Abzug von 6 Punkten, aber nicht automatisch zu einer Obergrenze von 64/100; Begrenzungen aufgrund fehlender Auszahlungsbelege gelten gesondert. Die Auszahlungsregeln bleiben anspruchsvoll. Die Affiliate-Beziehung von PropRadar beeinflusst die Bewertung nicht.",
         ],
       },
       {
@@ -141,12 +141,12 @@ const de: GuideArticleTranslations = {
       {
         heading: 'Die wichtigsten Regeln des finanzierten Kontos',
         paragraphs: [
-          'Die Challenge-Modelle sind konventionell. Das 2-Step-GOAT-Modell verlangt 8 % und dann 6 % bei 4 % Tagesverlust und 10 % statischem Maximalverlust; das 2-Step Standard verlangt 10 % und dann 5 % bei 5 % Tages- und 10 % Maximalverlust; das 1-Step verlangt 10 % bei 3 % Tagesverlust und 6 % statischem Maximalverlust. Das 3-Step-Modell wurde im August 2026 eingestellt. Diese Zahlen stammen aus einem am 5. Oktober 2026 geprüften Drittanbieter-Test: Bestätigen Sie sie an der Kasse.',
+          'Die Challenge-Modelle sind konventionell. Das 2-Step-GOAT-Modell verlangt 8 % und dann 6 % bei 4 % Tagesverlust und 10 % statischem Maximalverlust; das 2-Step Standard verlangt 10 % und dann 5 % bei 5 % Tages- und 10 % Maximalverlust; das 1-Step verlangt 10 % bei 3 % Tagesverlust und 6 % statischem Maximalverlust. GOAT veröffentlicht weiterhin eine 3-Step-FAQ, aber ältere Modelle sind laut Reset-Regeln nicht mehr resetfähig. Auch 2-Step Standard ist nicht mehr neu erhältlich. Ein vorhandener FAQ-Artikel bedeutet nicht, dass der Plan heute gekauft werden kann; Programm und Vertragsversion an der Kasse prüfen. Diese Zahlen stammen aus einem am 5. Oktober 2026 geprüften Drittanbieter-Test: Bestätigen Sie sie an der Kasse.',
           'Die Regeln, die über Auszahlungen entscheiden, beginnen nach dem Bestehen:',
         ],
         bullets: [
-          'Goat Guard: Auf finanzierten 1-Step- und 2-Step-Konten senkt ein schwebender Verlust von 2 % des Anfangssaldos Ihre Gewinnbeteiligung auf 50 %; eine zweite Auslösung verletzt das Konto.',
-          '2-Minuten-Regel: Gewinne aus Trades, die kürzer als zwei Minuten gehalten wurden, werden bei der Auszahlung gestrichen, Verluste aus solchen Trades bleiben auf dem Konto.',
+          "Goat Guard: Bei betroffenen finanzierten Konten (nicht bei Instant) können offene Positionen geschlossen werden, sobald der offene Verlust 2 % des Kontoguthabens erreicht. Nach dem ersten Auslösen sinkt der Gewinnanteil auf 50 %; beim zweiten wird das Konto verletzt. Programmausnahmen prüfen.",
+          "Mindesthaltedauer nur bei finanzierten Konten: Challenge-Kauf vor dem 6. Oktober 2026 = 2 Minuten, ab dem 6. Oktober = 1 Minute. Gewinne aus kürzeren Trades werden nicht ausgezahlt, Verluste zählen weiter. Ein Reset ändert das ursprüngliche Kaufdatum nicht; in der Evaluierung gilt diese Mindestdauer nicht.",
           'News-Fenster: Gewinne rund um wichtige Nachrichten sind auf 1 % des Startsaldos begrenzt.',
           'Tagesgewinnlimit: Ein finanziertes Konto kann höchstens 3.000 $ Gewinn pro Tag verbuchen.',
           'Sofortmodelle nutzen Trailing-Drawdowns und schließen das Konto je nach Modell bei 1 % oder 2 % schwebendem Verlust.',
@@ -155,8 +155,8 @@ const de: GuideArticleTranslations = {
       {
         heading: 'Auszahlungen',
         paragraphs: [
-          'Die Standard-Gewinnbeteiligung beträgt 80 %, mit einem kostenpflichtigen Upgrade auf 100 % an der Kasse und einem Skalierungsplan, der sie auf 90-95 % anheben kann. Die meisten Modelle zahlen alle 14 Tage aus, mit 100 $ Minimum und 3 % Bearbeitungsgebühr. Die ersten beiden Auszahlungen sind auf den niedrigeren Wert von 6 % des Startsaldos oder 10.000 $ begrenzt. Zu den Zahlungsmethoden gehören Rise, Banküberweisung, Skrill und Krypto, jeweils mit eigenem Limit.',
-          'Mehrere öffentliche Angaben widersprechen dem Hilfecenter, etwa zur Auszahlungsdauer (24 Stunden gegenüber 2 Werktagen) und zur maximalen Kontogröße. Wenn Marketing und Bedingungen sich widersprechen, gelten für Ihre Auszahlung die Bedingungen.',
+          "Die angegebene Standard-Gewinnbeteiligung beträgt 80 %, kann aber je nach Produkt und Option variieren. Das offizielle Hilfecenter nennt am 23. November 2026 mindestens 100 $ pro Auszahlungsantrag und 2 % Bearbeitungsgebühr. Die ersten beiden Auszahlungen sind auf den kleineren Betrag von 6 % des Startguthabens oder 10.000 $ begrenzt; bei 5.000-$-2-Step-Konten, die ab 25. Juli 2026 gekauft wurden, gilt stattdessen ein Limit von 4 %. Rise, Banküberweisung, Skrill und Krypto haben unterschiedliche Höchstbeträge.",
+          "Laut dem aktualisierten Hilfecenter werden Anträge innerhalb von 2 Werktagen bearbeitet, sofern beim ersten Antrag KYC und die Unterzeichnung des Trader Agreements abgeschlossen sind. Eine mögliche Prüfung durch das Risk Team und die tatsächliche Bankgutschrift müssen gesondert betrachtet werden. Maßgeblich sind die Bedingungen des konkreten Programms.",
         ],
       },
       {
