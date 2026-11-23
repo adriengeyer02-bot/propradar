@@ -10,7 +10,7 @@
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | E8 Markets | 72 | 16 | 13 | 9 | 18 | 8 | 64 | -6 | 69 | **58** | -14 | **À valider** |
 | BrightFunded | 72 | 16 | 13 | 9 | 16 | 8 | 62 | -6 | 69 | **56** | -16 | **À valider** |
-| Instant Funding | 72 | 16 | 13 | 9 | 16 | 8 | 62 | -6 | 69 | **56** | -16 | **À valider** |
+| Instant Funding | 72 | 16 | 13 | 9 | 14 | 8 | 60 | -6 | 69 | **54** | -18 | **À valider** |
 | Hola Prime | 72 | 16 | 13 | 9 | 16 | 6 | 60 | 0 | 69 | **60** | -12 | **À valider** |
 | PipFarm | 71 | 15 | 13 | 9 | 18 | 7 | 62 | -6 | 64 | **56** | -15 | **À valider** |
 | Trade The Pool | 70 | 15 | 7 | 9 | 18 | 8 | 57 | 0 | 64 | **57** | -13 | **À valider** |
@@ -41,7 +41,7 @@
 | C2 | **3/6** | Statut administratif actuel de l'E8 Funding LLC du contrat non attesté dans un registre primaire; 3/6 est 'non vérifié', et ne signifie ni active ni dissoute. | [1](https://www.fca.org.uk/consumers/warning-list-unauthorised-firms) |
 | C3 | **2/4** | Recherche par nom/domaine et liste d'alertes à finaliser pour l'entité exacte; pas de sanction directe confirmée, mais recherche primaire insuffisante pour donner 4. | [1](https://www.fca.org.uk/consumers/warning-list-unauthorised-firms) |
 | D1 | **8/8** | Pages comparatives et politiques par produit documentent objectifs, frais, drawdowns, restrictions, KYC et programmes, séparés entre Pro/Zero/Signature; 8 points de lisibilité, pas de garantie du contrat funded. | [1](https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature) · [2](https://e8markets.com/e8-markets-terms-and-conditions) |
-| D2 | **6/6** | CGU accessibles avec date d'effet 03/11/2025 et §1.4 décrivant la prise d'effet à publication des changements, donc critères de visibilité et applicabilité documentés; cela n'établit pas l'équité d'une modification. | [1](https://e8markets.com/e8-markets-terms-and-conditions) |
+| D2 | **6/6** | CGU accessibles avec date d'effet 11/03/2025 (format imprimé) et §1.4 décrivant la prise d'effet à publication des changements, donc critères de visibilité et applicabilité documentés; cela n'établit pas l'équité d'une modification. | [1](https://e8markets.com/e8-markets-terms-and-conditions) |
 | D3 | **4/6** | Simulation annoncée clairement; FAQ Pro/Zero et règlement général peuvent être conciliés par parcours. Checkout exhaustif et accord E8 Trader après évaluation non inspectés, deux vérifications sur trois. | [1](https://e8markets.com/e8-markets-terms-and-conditions) |
 | E1 | **6/6** | Service commercial E8 présenté comme actif depuis 2021, plus de 36 mois avant novembre 2026 selon l'historique de la marque; statut du véhicule juridique individuel distinct. | [1](https://help.e8markets.com/en/articles/14124293-about-e8-markets) |
 | E2 | **2/4** | Centre d'aide et support identifiables avec réponses publiques; pas d'essai contradictoire documenté ni procédure de recours récompense suffisamment vérifiée. | [1](https://www.trustpilot.com/review/e8markets.com) |
@@ -88,11 +88,11 @@
 
 **Phase et produits :** Instant GO, IF Micro Clarity, One-Phase Clarity, et contrats CFD après KYC; splits différents selon add-ons.
 
-**Identité :** Source légale nomme IF Pro Ltd à Sainte-Lucie n°2025-00056 pour le service et Acello Ltd UK n°12696083 comme agent de paiement; seul agent UK primaire visible.
+**Identité :** **Discordance de sources officielles** : CGU PDF octobre 2026 §1.1 présentent Acello Ltd n°12696083 comme partie contractante, tandis que les Corporate Disclosures du site déclarent Acello Ltd seulement agent de paiement de IF Pro Ltd Sainte-Lucie n°2025-00056. Réconcilier contrat du checkout et accord Trader.
 
 **Activité :** Entreprise se présente active depuis 2022.
 
-**Constats/risques les plus importants** : CGU PDF d'octobre 2026 §§11.4–11.9 : opérateur décide des pratiques interdites et peut ôter/annuler le payout; le contrôle des clauses exactes par cohorte doit être conservé, mais pouvoir large sur rewards => B1=3. Les restrictions de trading explicitement chiffrées ne génèrent pas de pénalité B2 sans fait distinct établi.
+**Constats/risques les plus importants** : CGU PDF d'octobre 2026 §§11.4–11.9 : opérateur décide des pratiques interdites et peut ôter/annuler le payout; le contrôle des clauses exactes par cohorte doit être conservé, mais pouvoir large sur rewards => B1=3. **Incohérence officielle distincte sur l'entité du contrat :** le PDF des CGU 2026 nomme Acello Ltd en tant que partie contractante, alors que les mentions légales actuelles présentent IF Pro Ltd comme prestataire et Acello comme mandataire de paiement. Cela justifie D3=2 (cohérence), mais pas une déduction B2 de trading.
 
 | Critère | Note V5.2 | Motivation factuelle | Source primaire/externe |
 |---|---:|---|---|
@@ -101,20 +101,18 @@
 | A3 | **2/5** | Payout Junction recense des transferts Rise sous le nom Instant Funding; la réconciliation source-marque, programme-funded, réception finale et bénéficiaire indépendant n'est pas complète : niveau de preuve externe intermédiaire 2/5. | [1](https://payoutjunction.com/firms/instantfunding) |
 | B1 | **3/15** | CGU PDF d'octobre 2026 §§11.4–11.9 : opérateur décide des pratiques interdites et peut ôter/annuler le payout; le contrôle des clauses exactes par cohorte doit être conservé, mais pouvoir large sur rewards => B1=3. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
 | B2 | **10/10** | Restrictions de best-day, min winning days et news annoncées par type de programme. La discrétion de retrait du payout motivée par trading est imputée B1; aucune violation rétroactive ou autre fait B2 autonome établi. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
-| C1 | **4/10** | IF Pro Ltd Sainte-Lucie est affiché comme fournisseur avec numéro; Acello Ltd UK est vérifiable au registre britannique mais n'est que l'agent de paiement, donc pas d'identité du débiteur IF Pro certifiée au checkout funded. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) · [2](https://instantfunding.com/disclaimers-legal-information/) |
-| C2 | **3/6** | Companies House Acello Ltd ACTIVE ne certifie pas IF Pro Ltd qui fournit l'évaluation; pas d'extrait primaire de l'entité Sainte-Lucie liée au funded : C2=3. | [1](https://find-and-update.company-information.service.gov.uk/company/12696083) |
+| C1 | **4/10** | Contradiction de rôles : le PDF General Terms §1.1 désigne Acello Ltd (UK n°12696083) comme 'Company' contractante, alors que la page Corporate Disclosures du site la désigne comme agent de paiement d'IF Pro Ltd (Sainte-Lucie). Le vendeur au checkout funded est donc non réconcilié, C1=4. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) · [2](https://instantfunding.com/disclaimers-legal-information/) · [3](https://find-and-update.company-information.service.gov.uk/company/12696083) |
+| C2 | **3/6** | Companies House confirme Acello Ltd UK active, mais la page actuelle désigne IF Pro Ltd Sainte-Lucie comme opérateur du service; absence de registre officiel valide du débiteur ultime et contrat non aligné, donc C2=3 provisoire, non preuve de dissolution. | [1](https://find-and-update.company-information.service.gov.uk/company/12696083) · [2](https://instantfunding.com/disclaimers-legal-information/) · [3](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
 | C3 | **2/4** | Pas d'avertissement officiel matériel confirmé sur la bonne partie, mais le contrôle par juridiction n'a pas été achevé pour IF Pro Ltd et l'éventuel agent. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
 | D1 | **8/8** | Programmes Instant GO, Micro Clarity, One-/Two-Phase, prix, objectifs, drawdowns et contraintes par phase sont documentés; KYC, accès et règles figurent dans pages de présentation et dossier juridique. | [1](https://instantfunding.com/) · [2](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
 | D2 | **4/6** | CGU datées octobre 2026 et consultables; application éventuelle à tous les anciens comptes et archivage des cohortes restent insuffisamment établis. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
-| D3 | **4/6** | L'offre reconnaît simulation et sépare IF Pro Ltd de l'agent Acello Ltd; le panier et la version funded signée n'ont pas été vérifiés, seulement deux items documentaires lisibles. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) |
+| D3 | **2/6** | Le produit est bien présenté comme une simulation, mais le PDF d'octobre 2026 fait contracter Acello Ltd tandis que les Corporate Disclosures donnent IF Pro Ltd comme fournisseur et Acello comme simple agent. Cette contradiction officielle bloque la cohérence juridique FAQ/contrat et checkout; seul le caractère simulé donne +2/6. | [1](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) · [2](https://instantfunding.com/disclaimers-legal-information/) |
 | E1 | **6/6** | Marque commerciale lancée en 2022 d'après historique officiel, soit plus de 36 mois d'activité prop avant novembre 2026. | [1](https://instantfunding.com/disclaimers-legal-information/) · [2](https://instantfunding.com/about-us/) |
-| E2 | **2/4** | Support et centre d'aide publics avec réponses, mais pas de règlement contradictoire de litige vérifié, ni de procédure d'escalade rewards complète. | [1](https://www.trustpilot.com/review/instantfunding.com) |
+| E2 | **2/4** | Centre d'aide et support officiels identifiables avec réponses publiques; la page de mentions juridiques distingue contact et sociétés, mais le mécanisme de résolution indépendant des litiges rewards et le vrai débiteur n'ont pas été démontrés. | [1](https://www.trustpilot.com/review/instantfunding.com) |
 
-**Piliers :** A=16/25, B=13/25, C=9/20, D=16/20, E=8/10. **Brut 62 − Trustpilot 6 = 56; plafond A3=69 ; V5.2 proposé=56/100** (-16 comparé à 72 reconstitué). **Confiance : faible**. Aucun double malus B1/B2; aucun malus B2 imputé.
+**Piliers :** A=16/25, B=13/25, C=9/20, D=14/20, E=8/10. **Brut 60 − Trustpilot 6 = 54; plafond A3=69; V5.2 proposé=54/100** (-18 comparé à 72 reconstitué). **Confiance : faible**. Aucun malus B2 imputé deux fois.
 
-**Payout & statut :** trustpilot_guidelines_withheld; payment_agent_distinct_from_provider; payout_wallet_partial. Registre du payeur actuel, agreement funded signé, nature exacte des bénéficiaires du suivi externe, revue des litiges A2 et parcours du checkout à compléter.
-
-**Trustpilot profil** : [instantfunding.com](https://www.trustpilot.com/review/instantfunding.com). **CGU** : [conditions](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf). **Note LIVE non modifiée**.
+**Payout & statut :** trustpilot_guidelines_withheld; payment_agent_distinct_from_provider; payout_wallet_partial; conflict_acello_vs_ifpro_in_official_terms_and_disclaimers. Registre du payeur actuel, funded agreement signé, transactions six maillons et parcours checkout à compléter. [CGU PDF](https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf) · [disclaimer opérateur](https://instantfunding.com/disclaimers-legal-information/) · [Trustpilot](https://www.trustpilot.com/review/instantfunding.com). **Score LIVE non modifié**.
 
 ## Hola Prime — holaprime.com
 
