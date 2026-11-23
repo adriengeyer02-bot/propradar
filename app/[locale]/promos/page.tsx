@@ -121,7 +121,7 @@ function DealCard({
   const isAffiliate = isAffiliateUrl(deal.sourceUrl) || deal.proofLevel === 'PropRadar affiliate';
   const hasCode = deal.code.toLowerCase() !== 'no code';
   return (
-    <article className={`pr-deal${featured ? ' pr-deal-featured' : ''}`}>
+    <article className={`pr-deal${featured ? ' pr-deal-featured' : ''}${deal.blackFriday ? ' pr-deal-black-friday' : ''}`}>
       <header className="pr-deal-head">
         {typeof rank === 'number' ? <span className="pr-deal-rank">#{rank}</span> : null}
         <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="md" />
@@ -137,6 +137,13 @@ function DealCard({
           <strong>{deal.value}</strong>
           <span lang="en">{toEnglishText(deal.title)}</span>
         </div>
+        {deal.priceExample ? (
+          <div className="pr-bf-price" lang="en" aria-label="Verified before and after price">
+            <span>{deal.priceExample.plan} · {deal.priceExample.accountSize.toLocaleString('en-US')}</span>
+            <s>{new Intl.NumberFormat('en-US', { style: 'currency', currency: deal.priceExample.currency }).format(deal.priceExample.before)}</s>
+            <strong>{new Intl.NumberFormat('en-US', { style: 'currency', currency: deal.priceExample.currency }).format(deal.priceExample.after)}</strong>
+          </div>
+        ) : null}
         <div className="pr-deal-code">
           <span>{hasCode ? c.code : p.categories['official-discount']}</span>
           {!hasCode
@@ -235,7 +242,7 @@ export default async function PromosPage({ params }: Props) {
       />
       <section className="promos-hero">
         <div>
-          <div className="eyebrow">{p.eyebrow}</div>
+          <div className="eyebrow">{p.eyebrow} · Black Friday 2026</div>
           <h1>{p.h1}</h1>
           <p className="lead">{p.lead}</p>
         </div>
@@ -260,7 +267,7 @@ export default async function PromosPage({ params }: Props) {
       <section className="section mega-deal-section" id="mega-deals">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">{fmt(p.hotEyebrow, { date: PROMO_REVIEW_DATE })}</div>
+            <div className="eyebrow">Black Friday 2026 · {fmt(p.hotEyebrow, { date: PROMO_REVIEW_DATE })}</div>
             <h2>{p.hotTitle}</h2>
           </div>
           <p className="section-note">{p.hotNote}</p>
@@ -283,6 +290,7 @@ export default async function PromosPage({ params }: Props) {
           <p className="section-note">{p.allNote}</p>
         </div>
         {p.dataNote ? <p className="pr-fineprint pr-data-note">{p.dataNote}</p> : null}
+        <p className="pr-fineprint" lang="en">Black Friday 2026: published discounts are tied to specific account types. Prices marked before/after are sourced examples, not universal checkout guarantees. Partners are disclosed, scores remain independent and undated offers automatically age out unless rechecked.</p>
         <div className="pr-deal-grid">
           {bestPromoDeals
             .filter((deal) => !megaKeys.has(`${deal.slug}-${deal.code}`))
