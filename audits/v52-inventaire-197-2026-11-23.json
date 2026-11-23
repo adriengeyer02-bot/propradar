@@ -3,18 +3,18 @@
   "scope": "197 firm profiles, including closed historical profiles",
   "methodology": "scoreAvant reconstructed from main repo score pipeline (source and approval gates), not a live browser audit. V5.2 proposals are not approved or live; null means no independently justifiable V5.2 result. Old legacy priority file is historical and never the source of live before values.",
   "counts": {
-    "Audit complet V5.2 à faire": 32,
+    "Audit complet V5.2 à faire": 31,
     "Proposition V5.2 à contrôler": 33,
-    "V5.2 approuvée": 57,
+    "V5.2 approuvée": 58,
     "Statut commercial/juridique à vérifier": 37,
     "Archivée / fermée": 38
   },
   "summary": {
     "total": 197,
-    "priority": 121,
-    "approved": 57,
+    "priority": 122,
+    "approved": 58,
     "candidates": 33,
-    "noNewV52": 107,
+    "noNewV52": 106,
     "closed": 38
   },
   "rows": [
@@ -3879,18 +3879,21 @@
       "dateDerniereModificationNote": null
     },
     {
-      "scoreAvant": 0,
-      "origineAvant": "Score initial",
-      "scoreHistoriqueFile": null,
+      "slug": "foxx-funded",
+      "nom": "FOXX Funded",
+      "statut": "À surveiller",
+      "scoreAvant": 44,
+      "origineAvant": "V5.2 publiée",
+      "scoreHistoriqueFile": 36,
       "noteV52": null,
       "ecart": null,
-      "etat": "Audit complet V5.2 à faire",
+      "etat": "V5.2 approuvée",
       "natureV52": null,
       "confianceV52": null,
       "sourceV52": null,
-      "priorite122": false,
-      "groupeHistorique": null,
-      "etatHistorique": null,
+      "priorite122": true,
+      "groupeHistorique": "N02",
+      "etatHistorique": "v52_native_published",
       "controleA3Fort": false,
       "revueStatutDocumentee": false,
       "dateDerniereModificationNote": null
