@@ -1,7 +1,7 @@
 {
   "version": "5.2",
-  "effectiveDecision": "2026-11-22",
-  "publication": "PropRadar V5.2 owner-authorized continuous release — 11 previously approved V5 migrations + 47 native 13-criterion audits (9 in Cohort E on Nov 22, 2026; prior 38). No mechanical-only 24 re-evaluations permitted. One further active-operator audit target (MiFunder) moved to STATUS REVIEW without inventing a V5.2 rating due HTTP 521 and non-authorized mirror. Scores evidence-dated, not payout guarantees.",
+  "effectiveDecision": "2026-11-23",
+  "publication": "Owner approval 2026-11-23: 32 additional V5.2 proposals accepted (25 prior 13-criterion V5 source migrations, 5 targeted native reaudits, ExFunded, Klein Funding Crypto); 58 previously authorized remain. CK Capital candidate 14 to 58 expressly REJECTED; no points or changes to CK Capital. Snapshot proof limitations, A3 caps and conditional B1 evidence caveats remain. Payout proof is not certified solely by a score.",
   "approvals": [
     {
       "slug": "alpha-capital-group",
@@ -314,6 +314,238 @@
       "slug": "levels",
       "checkedOn": "2026-11-22",
       "expectedFinal": 39
+    },
+    {
+      "slug": "funding-pips",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 68,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "goat-funded-trader",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 60,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "funded-trading-plus",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "city-traders-imperium",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 53,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "oneup-trader",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 63,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "leeloo-trading",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 55,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "uprofit-trader",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 57,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "bulenox",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 59,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "breakout-prop",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 70,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "rebelsfunding",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "sway-funded",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 56,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "ftuk",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 61,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "lux-trading-firm",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "funderpro",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 57,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "hyrotrader",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 67,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "tradefundrr",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 58,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "axi-select",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 60,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "ic-funded",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 57,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "fx2-funding",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 54,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "blueberry-funded",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 54,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "quant-tekel",
+      "checkedOn": "2026-11-20",
+      "expectedFinal": 55,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "e8-futures",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 60,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "forex-funds-flow",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 50,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "the-concept-trading",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 62,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "tentrade",
+      "checkedOn": "2026-11-21",
+      "expectedFinal": 63,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "V5 source-backed 13-criteria migration"
+    },
+    {
+      "slug": "fxify",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 69,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort H PR #261"
+    },
+    {
+      "slug": "blusky-trading",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 68,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort H PR #261"
+    },
+    {
+      "slug": "lucid-trading",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort H PR #261"
+    },
+    {
+      "slug": "apex-trader-funding",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 58,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort H PR #261"
+    },
+    {
+      "slug": "take-profit-trader",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 64,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort H PR #261"
+    },
+    {
+      "slug": "exfunded",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 44,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort G PR #260"
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "checkedOn": "2026-11-22",
+      "expectedFinal": 40,
+      "ownerApprovedOn": "2026-11-23",
+      "sourceAudit": "cohort F PR #256"
     }
-  ]
+  ],
+  "ownerDecision": {
+    "date": "2026-11-23",
+    "approvedCount": 32,
+    "excludedSlug": "ck-capital",
+    "rejectedCandidate": 58,
+    "keepExistingScore": true,
+    "notes": "No score modification of CK Capital (reconstructed 14). Axi Select 60 and City Traders Imperium 53 explicitly accepted. Data sources are evidence snapshots; no claims of independently certified payouts."
+  }
 }
