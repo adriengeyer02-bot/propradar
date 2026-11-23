@@ -30,7 +30,7 @@ const fr: GuideArticleTranslations = {
         ],
         bullets: [
           'Goat Guard : sur les comptes financés concernés (hors Instant), une perte latente de 2 % du solde du compte peut fermer les trades ouverts ; un premier déclenchement réduit le partage à 50 % et le second entraîne une violation. Vérifiez les exceptions du programme.',
-          'Durée minimale des trades **sur compte funded** : **2 minutes** pour un challenge acheté avant le 6 octobre 2026, **1 minute** pour un achat à partir de cette date. Les gains des trades plus courts sont exclus du payout, mais les pertes comptent. Un reset ne modifie pas la date d'achat originale ; cette règle ne s'applique pas en évaluation.',
+          'Durée minimale des trades **sur compte funded** : **2 minutes** pour un challenge acheté avant le 6 octobre 2026, **1 minute** pour un achat à partir de cette date. Les gains des trades plus courts sont exclus du payout, mais les pertes comptent. Un reset ne modifie pas la date d’achat originale ; cette règle ne s’applique pas en évaluation.',
           'Fenêtre news : le profit réalisé autour des annonces à fort impact est plafonné à 1 % du solde initial.',
           'Plafond de profit journalier : un compte financé peut enregistrer au maximum 3 000 $ de profit par jour.',
           'Les modèles instantanés utilisent un drawdown suiveur et ferment le compte à 1 % ou 2 % de perte latente selon le modèle.',
