@@ -145,7 +145,7 @@ export type PropFirm = {
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
   v5SafetyCap?: { before: number; cap: 55 };
-  /** V5.2 evidence ceiling; a cap, not a second score deduction. */
+  /** Deprecated legacy marker: never populated under current V5.2. */
   v52PayoutCap?: { before: number; cap: 64 | 69 | 79 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
@@ -12983,21 +12983,16 @@ function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
   return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
 }
 
-/** Apply V5.2 proof ceiling and (if required) legal ceiling AFTER Trustpilot once. */
+/** Apply only the V5.2 legal safety ceiling AFTER Trustpilot once. Evidence quality already affects A3 and confidence. */
 function applyV52CapsRule(firm: PropFirm): PropFirm {
   if (firm.status === 'Fermée') return firm;
   const audit = getPublishedV52Score(firm);
   if (!audit) return firm;
-  let next = firm;
-  const proof = audit.payoutEvidenceCap;
-  if (proof !== null && next.score > proof) {
-    next = { ...next, score: proof, v52PayoutCap: { before: next.score, cap: proof } };
-  }
   const legal = audit.safetyCap;
-  if (legal !== null && next.score > legal) {
-    next = { ...next, score: legal, v5SafetyCap: { before: next.score, cap: legal } };
+  if (legal !== null && firm.score > legal) {
+    return { ...firm, score: legal, v5SafetyCap: { before: firm.score, cap: legal } };
   }
-  return next;
+  return firm;
 }
 
 function applyV5SafetyCapRule(firm: PropFirm): PropFirm {
