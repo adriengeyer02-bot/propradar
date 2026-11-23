@@ -6,7 +6,7 @@ import { localePath, type Locale } from '../lib/locales';
 // This is affiliate marketing, never a basis for the firm's editorial score.
 // The official creative only claims "UP TO 30% OFF", not 30% on every account.
 export const FTMO_BLACK_FRIDAY_LINK = 'https://join.ftmo.com/ILTDLLkYLwdMlzGLBwkq';
-export const FTMO_BLACK_FRIDAY_CREATIVE = 'https://cdn.ftmo.com/d910cdc4ab014978952e61c97ee6e6aa';
+export const FTMO_BLACK_FRIDAY_CREATIVE = 'https://cdn.ftmo.com/06087f2803df4f8da8c3b4312517ce30';
 
 // Our own conservative homepage display cutoff, NOT a claimed FTMO promo end date.
 // Revalidated at most hourly by the homepage ISR setting.
@@ -154,6 +154,23 @@ export default function FTMOBlackFridayBanner({ locale }: { locale: Locale }) {
   const c = copy[locale];
   return (
     <section className="container pr-ftmo-bf" aria-labelledby="pr-ftmo-bf-title">
+      <a
+        href={FTMO_BLACK_FRIDAY_LINK}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="pr-ftmo-bf-art"
+        aria-label={c.cta}
+      >
+        {/* Official landscape affiliate creative supplied by the site owner; uncropped. */}
+        <img
+          src={FTMO_BLACK_FRIDAY_CREATIVE}
+          alt=""
+          width={350}
+          height={250}
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
       <div className="pr-ftmo-bf-main">
         <div className="pr-ftmo-bf-eyebrow">
           <FirmLogo name="FTMO" logoDomain="ftmo.com" size="sm" />
@@ -172,24 +189,6 @@ export default function FTMOBlackFridayBanner({ locale }: { locale: Locale }) {
         </div>
         <p className="pr-ftmo-bf-disclosure">{c.disclosure}</p>
       </div>
-      <a
-        href={FTMO_BLACK_FRIDAY_LINK}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className="pr-ftmo-bf-art"
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        {/* Unaltered official affiliate creative, supplied by the site owner. */}
-        <img
-          src={FTMO_BLACK_FRIDAY_CREATIVE}
-          alt=""
-          width={120}
-          height={600}
-          loading="lazy"
-          decoding="async"
-        />
-      </a>
     </section>
   );
 }
