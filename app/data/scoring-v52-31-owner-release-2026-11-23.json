@@ -3500,9 +3500,10 @@
     {
       "slug": "myfundedcapital",
       "checkedOn": "2026-11-23",
-      "expectedFinal": 64,
+      "expectedFinal": 66,
       "ownerApprovedOn": "2026-11-23",
-      "confidence": "faible"
+      "confidence": "faible",
+      "originalExpectedFinalWithEvidenceCap": 64
     },
     {
       "slug": "earn2trade",
@@ -3621,5 +3622,7 @@
     "audit/v52-seven-new-major-firms-20261123",
     "audit/v52-ten-large-native-20261123",
     "audit/v52-mid14-primary-crosscheck-20261123"
-  ]
+  ],
+  "policyAmendedOn": "2026-11-23",
+  "policyAmendment": "Proof ceilings 64/69/79 removed by owner instruction; source evidence and criteria are unchanged. Approval snapshots retain prior expectedFinal values where amended."
 }
