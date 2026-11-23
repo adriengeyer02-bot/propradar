@@ -4,6 +4,7 @@ import converted from '../app/data/scoring-v52-all-existing-audits-2026-11-21.js
 import published from '../app/data/scoring-v52-published.json' with {type:'json'};
 import native from '../app/data/scoring-v52-new-audits.json' with {type:'json'};
 import ownerRelease from '../app/data/scoring-v52-owner-approved-2026-11-23.json' with {type:'json'};
+import latestRelease from '../app/data/scoring-v52-31-owner-release-2026-11-23.json' with {type:'json'};
 import statuses from '../app/data/scoring-v52-c04-operational-status-review-2026-11-22.json' with {type:'json'};
 import {computeV52Scorecard} from '../app/lib/scoringV52.ts';
 const unique=new Set(queue.rows.map(x=>x.slug));
@@ -31,12 +32,12 @@ assert.equal(converted.rows.length,41);
 assert.deepEqual(new Set(outside.map(x=>x.slug)),new Set(queue.extraScoredOutside122.map(x=>x.slug)));
 // The priority file is an immutable 22 Nov queue snapshot; 23 Nov owner approvals form an overlay.
 const priorPublished=queue.rows.filter(x=>x.state==='v52_publication_gate'||x.state==='v52_native_published').map(x=>x.slug);
-const newlyPublished=[...ownerRelease.migrationSlugs,...ownerRelease.reviewedAudits.map(x=>x.slug)];
-assert.equal(newlyPublished.length,32);
-assert.equal(new Set(newlyPublished).size,32);
+const newlyPublished=[...ownerRelease.migrationSlugs,...ownerRelease.reviewedAudits.map(x=>x.slug),...latestRelease.newCards.map(x=>x.slug)];
+assert.equal(newlyPublished.length,63);
+assert.equal(new Set(newlyPublished).size,63);
 assert.ok(!newlyPublished.includes('ck-capital'));
 assert.deepEqual(new Set(published.approvals.map(x=>x.slug)),new Set([...priorPublished,...newlyPublished]));
-assert.equal(published.approvals.length,90);
+assert.equal(published.approvals.length,121);
 assert.equal(queue.counts.v52_native_score_proposal_needs_approval,0,'Owner-approved native cases must not remain pending');
 for(const row of queue.rows){
   const migrated=converted.rows.find(x=>x.slug===row.slug);
@@ -48,4 +49,4 @@ for(const row of queue.rows){
   } else if(row.v52Candidate!==null){assert.ok(migrated);assert.equal(row.v52Candidate,migrated.v52)}
   else assert.equal(Boolean(migrated),false,'Unlisted converted firm '+row.slug);
 }
-console.log('V5.2 22 Nov snapshot: 122 unique | 11 prior + 47 native | 24 prior pending + 15 status + 25 missing; 23 Nov overlay adds 32 owner approvals, CK excluded.');
+console.log('V5.2 22 Nov snapshot: 122 unique | 11 prior + 47 native | 24 prior pending + 15 status + 25 missing; 23 Nov overlay adds 63 owner approvals, CK excluded.');

@@ -1,16 +1,28 @@
-/** Regression tests: 47 published native V5.2 audits, 41 source-backed migrations, 58 gated public scores. */
+/** Regression tests: 121 V5.2 approved scores, 31 new source-linked 13-criterion audits, CK veto. */
 import assert from 'node:assert/strict';
 import all from '../app/data/scoring-v52-all-existing-audits-2026-11-21.json' with {type:'json'};
 import gate from '../app/data/scoring-v52-published.json' with {type:'json'};
 import oldGate from '../app/data/scoring-v5-published.json' with {type:'json'};
 import intake from '../app/data/scoring-v52-new-audits.json' with {type:'json'};
 import ownerRelease from '../app/data/scoring-v52-owner-approved-2026-11-23.json' with {type:'json'};
+import latestRelease from '../app/data/scoring-v52-31-owner-release-2026-11-23.json' with {type:'json'};
 import {computeV52Scorecard} from '../app/lib/scoringV52.ts';
 
 const allowed=['A1','A2','A3','B1','B2','C1','C2','C3','D1','D2','D3','E1','E2'];
 assert.equal(all.rows.length,41,'All source-backed V5 files must be preserved');
 assert.equal(gate.version,'5.2');
-assert.equal(gate.approvals.length,oldGate.approvals.length+intake.audits.length+32,'58 existing plus 32 owner-approved scores');
+assert.equal(gate.approvals.length,oldGate.approvals.length+intake.audits.length+32+31,'90 previous + 31 owner-approved scores');
+assert.equal(latestRelease.newCards.length,31);
+assert.equal(latestRelease.approvals.length,31);
+assert.ok(latestRelease.ckCapitalExplicitlyExcluded);
+assert.equal(new Set(latestRelease.newCards.map(x=>x.slug)).size,31);
+for(const card of latestRelease.newCards){
+  assert.equal(card.status,'approuvee');
+  assert.equal(card.confidence,'faible');
+  const expected=latestRelease.approvals.find(x=>x.slug===card.slug);
+  assert.ok(expected);
+  assert.equal(computeV52Scorecard(card).final,expected.expectedFinal,card.slug+' final approved value');
+}
 assert.ok(!gate.approvals.some(x=>x.slug==='ck-capital'),'CK Capital veto: no points may be added');
 assert.equal(ownerRelease.migrationSlugs.length,25);
 assert.equal(ownerRelease.reviewedAudits.length,7);
@@ -61,7 +73,7 @@ for(const approval of gate.approvals){
     assert.equal(approval.sourceV5Final,previous.expectedFinal,approval.slug+' prior score changed');
     assert.equal(approval.expectedFinal,row.v52,approval.slug+' recalculated final changed');
   }else{
-    const native=intake.audits.find(x=>x.slug===approval.slug)??ownerRelease.reviewedAudits.find(x=>x.slug===approval.slug);
+    const native=intake.audits.find(x=>x.slug===approval.slug)??ownerRelease.reviewedAudits.find(x=>x.slug===approval.slug)??latestRelease.newCards.find(x=>x.slug===approval.slug);
     if(native){
       assert.equal(approval.checkedOn,native.checkedOn,approval.slug+' publication snapshot changed');
       assert.equal(approval.expectedFinal,computeV52Scorecard(native).final,approval.slug+' approved numeric outcome changed');
@@ -73,8 +85,8 @@ for(const approval of gate.approvals){
     }
   }
 }
-assert.deepEqual(new Set(gate.approvals.map(x=>x.slug)),new Set([...oldGate.approvals.map(x=>x.slug),...intake.audits.map(x=>x.slug),...ownerRelease.migrationSlugs,...ownerRelease.reviewedAudits.map(x=>x.slug)]));
+assert.deepEqual(new Set(gate.approvals.map(x=>x.slug)),new Set([...oldGate.approvals.map(x=>x.slug),...intake.audits.map(x=>x.slug),...ownerRelease.migrationSlugs,...ownerRelease.reviewedAudits.map(x=>x.slug),...latestRelease.newCards.map(x=>x.slug)]));
 assert.ok(ownerRelease.excludedSlugs.includes('ck-capital'));
 assert.ok(ownerRelease.reviewedAudits.every(x=>!ownerRelease.migrationSlugs.includes(x.slug)));
 assert.equal(active.size,11);
-console.log('V5.2: 58 previous + 25 new source migrations + 5 reaudits + 2 source-native = 90 approved; CK Capital veto confirmed.');
+console.log('V5.2: 90 previous + 31 newly approved native audits = 121 published; CK Capital veto confirmed.');

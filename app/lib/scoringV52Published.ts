@@ -1,6 +1,6 @@
 /**
  * V5.2 publication gate: owner-reviewed, evidence-dated 13-criterion cards.
- * 58 previously released + 32 explicitly approved 23 Nov 2026.
+ * 90 previously released + 31 additionally approved 23 Nov 2026 = 121.
  * CK Capital is expressly rejected; the old live score stays untouched.
  * Mechanical source migrations remain distinct from newer native reaudits.
  */
@@ -14,6 +14,7 @@ import { computeV5Scorecard } from './scoringV5';
 import { computeV52Candidate } from './scoringV52Candidate';
 import freshAudits from '../data/scoring-v52-new-audits.json';
 import ownerRelease from '../data/scoring-v52-owner-approved-2026-11-23.json';
+import latestRelease from '../data/scoring-v52-31-owner-release-2026-11-23.json';
 import migratedEvidence from '../data/scoring-v52-all-existing-audits-2026-11-21.json';
 import { computeV52Scorecard, type V52Scorecard } from './scoringV52';
 
@@ -64,6 +65,17 @@ for(const slug of ownerRelease.migrationSlugs){
   if(computeV52Scorecard(card).final!==row.v52) throw Error('V5.2 approved migration score mismatch '+slug);
   ownerCards.set(slug,{card,kind:'reviewedMigration'});
 }
+// The 31 newly authorized full V5.2 scorecards were kept OUT of the active
+// publication gate while being researched; their low confidence survives publication.
+const latestCards=new Map<string,V52Scorecard>();
+for(const card of latestRelease.newCards as V52Scorecard[]){
+  if(latestCards.has(card.slug)||source.has(card.slug)||newCards.has(card.slug)||ownerCards.has(card.slug)||card.slug==='ck-capital') throw Error('V5.2 latest release duplicate / CK veto '+card.slug);
+  computeV52Scorecard({...card,status:'proposition'});
+  latestCards.set(card.slug,card);
+}
+if(latestRelease.newCards.length!==31||latestRelease.approvals.length!==31||latestCards.size!==31||!latestRelease.ckCapitalExplicitlyExcluded) throw Error('V5.2 latest 31 manifest invalid');
+const latestApprovals=new Set(latestRelease.approvals.map(entry=>entry.slug));
+if(latestApprovals.size!==31||[...latestApprovals].some(slug=>!latestCards.has(slug))) throw Error('V5.2 latest approved list not matched to cards');
 const ownerMigrated=new Set(ownerRelease.migrationSlugs);
 const ownerApprovedSlugs=new Set([...ownerMigrated,...ownerRelease.reviewedAudits.map(card=>card.slug)]);
 if(ownerApprovedSlugs.size!==32||ownerMigrated.size!==25||ownerCards.size!==32||!ownerRelease.excludedSlugs.includes('ck-capital')||ownerApprovedSlugs.has('ck-capital')) throw Error('V5.2 owner release CK veto/count mismatch');
@@ -81,13 +93,17 @@ for(const entry of whitelist.approvals) {
     approved.set(entry.slug,{kind:'migration',card:{...card,status:'approuvee'}});
   } else {
     const reviewed=ownerCards.get(entry.slug);
-    const card=newCards.get(entry.slug)??reviewed?.card;
+    const card=newCards.get(entry.slug)??reviewed?.card??latestCards.get(entry.slug);
     if(!card||card.checkedOn!==entry.checkedOn||computeV52Scorecard({...card,status:'approuvee'}).final!==entry.expectedFinal) throw Error('V5.2: new/reaudited/migrated card lacks matched evidence '+entry.slug);
     approved.set(entry.slug,{kind:reviewed?.kind??'native',card:{...card,status:'approuvee'}});
   }
 }
 for(const name of publishedPreviously)if(!approved.has(name))throw Error('V5.2: approved V5 firm was lost '+name);
-if(approved.has('ck-capital')||approved.size!==90||[...ownerApprovedSlugs].some(s=>!approved.has(s))) throw Error('V5.2: CK veto or 90-score release not enforced');
+if(approved.has('ck-capital')||approved.size!==121||[...ownerApprovedSlugs].some(s=>!approved.has(s))||[...latestApprovals].some(s=>!approved.has(s))) throw Error('V5.2: CK veto or 121-score release not enforced');
+for(const entry of latestRelease.approvals){
+  const got=approved.get(entry.slug);
+  if(!got||got.kind!=='native'||got.card.checkedOn!==entry.checkedOn||computeV52Scorecard(got.card).final!==entry.expectedFinal||got.card.confidence!=='faible') throw Error('V5.2 latest approval drift '+entry.slug);
+}
 
 export function isPublishedV52(slug:string,latestScoreReview?:string):boolean {
   const source=approved.get(slug);
@@ -95,7 +111,7 @@ export function isPublishedV52(slug:string,latestScoreReview?:string):boolean {
   // Keep the original evidence date for source traceability; only use the decision date
   // when deciding whether this approval supersedes earlier website score edits.
   if(!source) return false;
-  const gatingDate=ownerApprovedSlugs.has(slug)?ownerRelease.approvedOn:source.card.checkedOn;
+  const gatingDate=ownerApprovedSlugs.has(slug)?ownerRelease.approvedOn:latestApprovals.has(slug)?latestRelease.approvedOn:source.card.checkedOn;
   return !latestScoreReview||latestScoreReview<=gatingDate;
 }
 export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
