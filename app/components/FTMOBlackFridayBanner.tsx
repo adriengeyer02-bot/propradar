@@ -183,7 +183,7 @@ export default function FTMOBlackFridayBanner({ locale }: { locale: Locale }) {
             href={FTMO_BLACK_FRIDAY_LINK}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="btn btn-primary pr-ftmo-bf-cta"
+            className="pr-ftmo-bf-cta"
           >{c.cta} <span aria-hidden="true">↗</span></a>
           <Link href={localePath(locale, '/firm/ftmo')} className="pr-ftmo-bf-review">{c.audit} <span aria-hidden="true">→</span></Link>
         </div>
