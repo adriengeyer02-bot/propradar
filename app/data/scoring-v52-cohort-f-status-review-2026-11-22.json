@@ -1,0 +1,189 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-22",
+  "batch": "F",
+  "status": "STATUS_TRIAGE_NO_NEW_RATING_NO_PUBLICATION",
+  "scope": "9 priority backlog items whose 2026 active-contracting operator or independent checkout could not be verified; Klein Funding is separately staged with all 13 native criteria",
+  "reviews": [
+    {
+      "slug": "getcryptofunded",
+      "checkedOn": "2026-11-22",
+      "previousReference": 54,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "DOMAIN_NOT_VERIFIED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Domaine officiel/CGU non récupérables dans le contrôle du jour; contrôle indépendant signale erreur DNS le 29/09/2026. Ne pas en déduire cessation ou défaut de paiement.",
+      "sources": [
+        "https://getcryptofunded.com/terms-and-conditions/",
+        "https://proprubric.com/crypto/reviews/"
+      ],
+      "openChecks": [
+        "Tester checkout courant et vendeur",
+        "Obtenir CGU et contrat funded datés",
+        "Vérifier registre et preuves A3"
+      ]
+    },
+    {
+      "slug": "fxci",
+      "checkedOn": "2026-11-22",
+      "previousReference": 51,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "ACQUIRED_OLD_ENTITY_DISSOLVED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Acquisition annoncée par OneFunded le 13/11/2025; FXCI CHALLENGE LTD (UK n°15068590) dissoute le 28/07/2026 selon registre. Aucun contrat d'achat FXCI indépendant actuel attesté. Dette éventuelle de l'ancienne société et succession contractuelle à documenter.",
+      "sources": [
+        "https://find-and-update.company-information.service.gov.uk/company/15068590",
+        "https://fxci.com/",
+        "https://www.tradingview.com/news/reuters.com%2C2025-11-13%3Anewsml_NFC9zNNQY%3A0-onefunded-acquires-fxci-to-accelerate-global-leadership-in-prop-trading/"
+      ],
+      "openChecks": [
+        "Vérifier relation juridique OneFunded et comptes FXCI existants",
+        "Ne pas créer score d'un vendeur FXCI distinct"
+      ]
+    },
+    {
+      "slug": "aeon-funded",
+      "checkedOn": "2026-11-22",
+      "previousReference": 49,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "BRAND_OPERATOR_TRANSITION",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Manifesto QuantX attribue explicitement ses origines à Aeon Funded, mais ne prouve pas à lui seul continuité juridique du vendeur et des engagements antérieurs. Compte Aeon autonome non validé.",
+      "sources": [
+        "https://quantxfund.io/manifesto",
+        "https://quantxfund.io/terms"
+      ],
+      "openChecks": [
+        "Identifier ancien et nouveau vendeur",
+        "Vérifier checkout propre Aeon ou produit QuantX",
+        "Revoir clauses payout de la bonne entité"
+      ]
+    },
+    {
+      "slug": "my-flash-funding",
+      "checkedOn": "2026-11-22",
+      "previousReference": 49,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "ACQUIRED_CHECKOUT_SWAY",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Site MyFlashFunding : marque rachetée par Sway Funded et bouton Buy Evaluation vers my.swayfunded.com. Ne pas considérer comme deux offres indépendantes sans preuve.",
+      "sources": [
+        "https://myflashfunding.com/",
+        "https://my.swayfunded.com/"
+      ],
+      "openChecks": [
+        "Vérifier transfert des obligations passées",
+        "Comparer programmes et conditions Sway",
+        "Ne pas doubler le classement"
+      ]
+    },
+    {
+      "slug": "myfxcapital",
+      "checkedOn": "2026-11-22",
+      "previousReference": 45,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "CURRENT_SALE_UNVERIFIED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Conditions primaires indiquées dans le backlog non récupérables de manière fiable; fiche Trustpilot avec témoignages récents mais un avis ou annuaire ne prouve ni checkout courant ni contrepartie de payout.",
+      "sources": [
+        "https://myfxcapital.com/terms-and-conditions/",
+        "https://www.trustpilot.com/review/myfxcapital.com"
+      ],
+      "openChecks": [
+        "Confirmer site et checkout datés",
+        "Identifier société et registre",
+        "Obtenir CGU funded et payout"
+      ]
+    },
+    {
+      "slug": "blufx",
+      "checkedOn": "2026-11-22",
+      "previousReference": 38,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "OLD_REGULATOR_WARNING_CURRENT_OFFER_UNVERIFIED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Avertissement officiel FCA visant BLUFX, publié en 2022 et actualisé en 2023. Domaine original ne fournit pas de checkout contemporain accessible; non-preuve automatique d'une dissolution.",
+      "sources": [
+        "https://www.fca.org.uk/news/warnings/blufx",
+        "https://blufx.co.uk/"
+      ],
+      "openChecks": [
+        "Distinguer alerte historique, société réelle et opérateur 2026",
+        "Documenter cessation éventuelle auprès vendeur",
+        "Archiver après validation de statut"
+      ]
+    },
+    {
+      "slug": "dei-funded",
+      "checkedOn": "2026-11-22",
+      "previousReference": 38,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "DOMAIN_REDIRECT_UNRELATED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Domaine original deifunded.com non confirmé comme vendeur actuel; redirection observée vers site sans relation démontrée. Ne pas lier l'opérateur redirigé aux anciennes obligations.",
+      "sources": [
+        "https://deifunded.com/",
+        "https://www.tradingfinder.com/prop-firms/dei-funded/"
+      ],
+      "openChecks": [
+        "Identifier domaine officiel ou successeur",
+        "Récupérer checkout/CGU valides",
+        "Contrôler identité de l'ancien vendeur"
+      ]
+    },
+    {
+      "slug": "gry-funding",
+      "checkedOn": "2026-11-22",
+      "previousReference": 44,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "SITE_UNVERIFIED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "CGU et offre actuelle au domaine gryfunding.com non confirmées; une archive et un classement tiers ne prouvent pas une activité ni une dissolution en novembre 2026.",
+      "sources": [
+        "https://gryfunding.com/terms-and-conditions/",
+        "https://www.verify.trading/compare/prop-firms/gryfunding"
+      ],
+      "openChecks": [
+        "Chercher contrat/checkout contemporain",
+        "Vérifier vendeur juridique",
+        "Ne pas inventer score 13 critères"
+      ]
+    },
+    {
+      "slug": "quantec-trading-capital",
+      "checkedOn": "2026-11-22",
+      "previousReference": 34,
+      "previousReferenceType": "priority_backlog_legacyScore_NOT_live_score",
+      "classification": "ACTIVE_OPERATOR_UNVERIFIED",
+      "operatorAndCheckoutVerified": false,
+      "v52Final": null,
+      "publicationAllowed": false,
+      "summary": "Site quantectradingcapital.com et CGU annoncées non suffisamment contrôlables. Des avis rétrospectifs peuvent concerner un autre domaine quantectrading.com et ne prouvent pas l'activité présente. Ne pas assimiler quantectrading.com à un successeur sans identité concordante.",
+      "sources": [
+        "https://quantectradingcapital.com/terms-and-conditions/",
+        "https://tradersunion.com/brokers/prop/view/quantec-trading-capital/"
+      ],
+      "openChecks": [
+        "Vérifier les domaines historiques et la partie contractante",
+        "Obtenir programme achetable et versions",
+        "Statut officiel ou fermeture à documenter"
+      ]
+    }
+  ]
+}

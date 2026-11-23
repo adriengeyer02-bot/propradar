@@ -6088,6 +6088,141 @@
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
       "closed": false
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "checkedOn": "2026-11-22",
+      "status": "proposition",
+      "confidence": "faible",
+      "previousDisplayedScore": 42,
+      "criteria": {
+        "A1": {
+          "points": 4,
+          "reason": "Eligibilité et étapes de demande de gain documentées (2+2); absence d'une fiche unique complète confirmant premier retrait, seuils, frais, catégories de profits exclus, et cadence comparable entre les programmes; aucun point présumé.",
+          "sources": [
+            "https://kleinfunding.com/faqs/how-often-can-i-request-my-earnings",
+            "https://kleinfunding.com/faqs/how-can-i-request-payout",
+            "https://kleinfunding.com/faqs/what-is-the-profit-share-in-a-funded-stage",
+            "https://kleinfunding.com/faqs/how-fast-will-my-profit-withdrawal-be-processed"
+          ]
+        },
+        "A2": {
+          "points": 6,
+          "reason": "Palier neutre : aucun historique de paiements réguliers vérifié par tiers sur au moins 12 mois, et pas de refus injustifiés indépendamment corroborés en nombre suffisant. Les avis de clients isolés ne démontrent ni incidents systémiques ni paiement fiable.",
+          "sources": [
+            "https://www.trustpilot.com/review/kleinfunding.com",
+            "https://kleinfunding.com/terms-of-use"
+          ]
+        },
+        "A3": {
+          "points": 1,
+          "reason": "Seules des annonces de la firme, FAQ indiquant 4–24 heures, et des témoignages non authentifiés sont retrouvés. Pas de règlement final et de bénéficiaire liés au bon programme, contrôlés indépendamment. Cap de preuves applicable.",
+          "sources": [
+            "https://kleinfunding.com/faqs/how-fast-will-my-profit-withdrawal-be-processed",
+            "https://www.trustpilot.com/review/kleinfunding.com"
+          ]
+        },
+        "B1": {
+          "points": 3,
+          "reason": "CGU KYC §2 : les profits générés avant vérification peuvent être annulés « at our sole discretion ». §Trading Rules autorise rejet et ajustement des payouts. Pouvoir large sur gains acquis, sans protection objective et recours propre aux rewards.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use"
+          ],
+          "negativeFactIds": [
+            "klein-kyc-profit-void"
+          ]
+        },
+        "B2": {
+          "points": 7,
+          "reason": "La FAQ interdit « high-frequency trading » sans seuil objectif de fréquence et les CGU permettent résiliation ou rejet de profits sur violation. Une seule ambiguïté matérielle (−3). Les positions inférieures à 50 secondes sont séparément définies et non sanctionnées ici.",
+          "sources": [
+            "https://kleinfunding.com/faqs/prohibited-trading-styles",
+            "https://kleinfunding.com/terms-of-use"
+          ],
+          "negativeFactIds": [
+            "klein-hft-undefined"
+          ]
+        },
+        "C1": {
+          "points": 4,
+          "reason": "CGU nomment KUENTECH LLC mais déclarent une immatriculation en England/Wales sans numéro, avec siège affiché au Delaware USA. La connexion juridique effective au checkout n'est pas établie, malgré le nom contractuel apparent.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use"
+          ]
+        },
+        "C2": {
+          "points": 3,
+          "reason": "Immatriculation ou état administratif de KUENTECH LLC non authentifié dans un registre officiel compétent au 22 novembre 2026. Statut non vérifiable; pas de conclusion de dissolution ou procédure de radiation.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use",
+            "https://icis.corp.delaware.gov/ecorp/entitysearch/namesearch.aspx"
+          ]
+        },
+        "C3": {
+          "points": 2,
+          "reason": "Recherche datée sans avertissement nominatif applicable corroboré, mais identification juridique ambiguë empêchant de garantir l'exhaustivité du contrôle du bon opérateur. Aucune sanction officielle ni absence d'agrément obligatoire supposée.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use",
+            "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+          ]
+        },
+        "D1": {
+          "points": 4,
+          "reason": "Prix et plans publiés (+2), interdictions de trading détaillées (+2). Les objectifs exacts de certains programmes et la liste ferme des pays exclus ne sont pas entièrement retrouvés sur ces sources; pas de crédit supplémentaire.",
+          "sources": [
+            "https://kleinfunding.com/pricing",
+            "https://kleinfunding.com/faqs/prohibited-trading-styles",
+            "https://kleinfunding.com/faqs/which-countries-are-restricted-from-using-klein-funding"
+          ]
+        },
+        "D2": {
+          "points": 4,
+          "reason": "Conditions librement consultables avec date « Last Updated: 08 March 2025 » (+4), mais changées à discrétion et sans archive exploitable des versions ni politique claire de protection des comptes existants (+0). Aucune rétroactivité réalisée démontrée.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use"
+          ]
+        },
+        "D3": {
+          "points": 2,
+          "reason": "Simulation des comptes et nature éducative explicitement écrites; des incohérences sur la localisation et l'immatriculation de l'opérateur empêchent d'accorder la cohérence pleine. Relation exacte entre toutes offres, FAQ, vendeur et checkout à préciser.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use",
+            "https://kleinfunding.com/pricing"
+          ]
+        },
+        "E1": {
+          "points": 4,
+          "reason": "Finance Magnates du 23 janvier 2025 décrit une firme lancée fin 2024 : entre 18 et 35 mois d'activité prop firm au 22 novembre 2026. C'est l'ancienneté opérationnelle, pas celle du seul domaine ou de la LLC.",
+          "sources": [
+            "https://www.financemagnates.com/forex/klein-funding-prop-firm-partners-with-worlds-third-largest-crypto-exchange/",
+            "https://kleinfunding.com/terms-of-use"
+          ]
+        },
+        "E2": {
+          "points": 2,
+          "reason": "Canal de contact publié et procédure écrite de réclamation avec négociation informelle de trente jours (+2); aucun test vérifiable de réponse et de résolution externe ne justifie les deux points additionnels.",
+          "sources": [
+            "https://kleinfunding.com/terms-of-use",
+            "https://www.trustpilot.com/review/kleinfunding.com"
+          ]
+        }
+      },
+      "ruleDeductions": [
+        {
+          "factId": "klein-hft-undefined",
+          "kind": "ambiguite",
+          "points": 3,
+          "program": "Klein Funding evaluations selon conditions générales",
+          "phase": "Evaluation et funded si règle applicable",
+          "clause": "FAQ Prohibited trading styles : High-frequency trading, sans seuil; CGU §Trading Rules 148–151",
+          "consequence": "Exposition à une sanction de compte ou rejet de payout pour fréquence jugée excessive sans critère chiffré public",
+          "source": "https://kleinfunding.com/faqs/prohibited-trading-styles"
+        }
+      ],
+      "trustpilotActiveNotice": true,
+      "contractingEntityMissing": false,
+      "activeUnsuspendedStrikeOff": false,
+      "closed": false
     }
   ],
   "instruction": "Claude and ChatGPT add new 13-criterion V5.2 cards here, with current-source verification. Every score must pass computeV52Scorecard. A score is NOT live until explicitly whitelisted in scoring-v52-published.json."
