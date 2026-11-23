@@ -62,14 +62,18 @@ assert.equal(15-(fxify.criteria?.B1?.points??fxify.scores?.B?.[0])+5-(fxify.crit
 assert.equal(Object.values(fxify.scores).flat().reduce((sum,n)=>sum+n,0),75,'FXIFY final V4 must remain 75');
 assert.equal(75+8,83,'FXIFY reconstructed displayed base must be 83');
 
-// All 58 gate-approved V5.2 firms: exactly one application of B2 and
+// All 121 gate-approved V5.2 firms: exactly one application of B2 and
 // Trustpilot, plus evidence/legal caps, without inventing risk points.
 const gate=json('app/data/scoring-v52-published.json').approvals;
+const ownerRelease=json('app/data/scoring-v52-owner-approved-2026-11-23.json');
+const latestRelease=json('app/data/scoring-v52-31-owner-release-2026-11-23.json');
 const native=json('app/data/scoring-v52-new-audits.json').audits;
 const converted=json('app/data/scoring-v52-all-existing-audits-2026-11-21.json').rows;
-const nativeMap=new Map(native.map(x=>[x.slug,x]));
+const nativeMap=new Map([...native,...ownerRelease.reviewedAudits,...latestRelease.newCards].map(x=>[x.slug,x]));
 const convertedMap=new Map(converted.map(x=>[x.slug,x]));
-assert.equal(gate.length,58);
+assert.equal(gate.length,121);
+assert.ok(!gate.some(x=>x.slug==='ck-capital'));
+assert.equal(latestRelease.newCards.length,31);
 assert.equal(new Set(gate.map(x=>x.slug)).size,gate.length);
 let checkedNative=0,checkedMigrated=0,withDeductions=0;
 for(const approval of gate){
@@ -110,8 +114,8 @@ for(const approval of gate){
     if(penalty>0)withDeductions++;
   }
 }
-assert.equal(checkedNative,47);
-assert.equal(checkedMigrated,11);
+assert.equal(checkedNative,85);
+assert.equal(checkedMigrated,36);
 
 // Older cards: an unclassified or missing rules audit must never masquerade as
 // a confirmed 0-point deduction. Their existing scores are left untouched.
