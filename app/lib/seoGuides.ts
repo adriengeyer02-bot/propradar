@@ -1894,9 +1894,9 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     primaryKeywords: ['goat funded trader review', 'is goat funded trader legit', 'goat funded trader'],
     secondaryKeywords: ['goat funded trader trustpilot', 'goat funded trader rules', 'goat funded trader payout', 'goat guard', 'GFT prop firm', 'goatfundedtrader'],
     checks: [
-      'Read the funded-account rules, not only the challenge: Goat Guard, the 2-minute rule and the news-window cap apply after you pass.',
-      'Check the payout cap on your first two withdrawals and the 3% processing fee.',
-      'Confirm which model you are buying: the 3-Step model was retired in August 2026 and 2-Step Pro stopped selling in June 2026.',
+      'Read the funded-account rules, not only the challenge: Goat Guard, the **1- or 2-minute** holding rule (depending on purchase date) and the news-window cap can change payouts.',
+      'Check the first-two-reward cap and the **2%** processing fee in GOAT’s November 23, 2026 help center, plus the $5K 2-Step 4% exception.',
+      'Confirm the exact model sold: GOAT retains legacy 3-Step help pages, **2-Step Standard** is explicitly unavailable to new buyers, and older models can be excluded from resets.',
       'Read recent payout feedback from the last 30 to 60 days, not only star ratings.',
       'Compare discount codes only after choosing a model that fits your trading.',
     ],
@@ -1904,7 +1904,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       {
         question: 'Is GOAT Funded Trader legit?',
         answer:
-          'It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 58/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).',
+          'GOAT publishes rules for simulated accounts and reward payouts but retains broad contractual discretion. Check PropRadar’s **live profile** for its current score instead of a frozen figure. Trustpilot still displayed a guideline-breach withholding notice on November 23, 2026; under V5.2 that implies a **−6 deduction, not an automatic 64-point score ceiling**.',
       },
       {
         question: 'Why is the GOAT Funded Trader Trustpilot rating unavailable?',
