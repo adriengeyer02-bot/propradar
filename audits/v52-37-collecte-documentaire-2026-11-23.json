@@ -4,7 +4,7 @@
   "purpose": "collecte documentaire des 37 statuts à clarifier avant toute nouvelle notation",
   "scoreStatus": "UNSCORED_DOSSIERS_NO_CHANGES_TO_LIVE_RATINGS",
   "methodology": "SCORING_V5_2.md",
-  "safety": "Les constats anciens F/G sont référencés et distingués des pages primaires revues le 23/11. Aucune URL inaccessible n'est prétendue relue. Note Trustpilot masquée et fraude ne doivent jamais être inférées d'avis négatifs. Le champ activeTrustpilotScoreWithholdingVerified vaut null : non constaté, et non pas false (preuve d'absence).",
+  "safety": "Les constats anciens F/G sont référencés et distingués des pages primaires revues le 23/11. Aucune URL inaccessible n'est prétendue relue. Note Trustpilot masquée et fraude ne doivent jamais être inférées d'avis négatifs. Le champ activeTrustpilotScoreWithholdingVerified vaut null sur les domaines principaux non établis ; exception explicitement documentée : historicalAeonTrustpilotNotice.activeTrustpilotScoreWithholdingVerified=true sur aeonfunded.com, sans transfert de sanction à quantxfund.io ni approbation de score.",
   "count": 37,
   "rows": [
     {
@@ -1585,10 +1585,20 @@
       "statusBasis": "current_first_party_terms_and_payout_faq",
       "contractAndRules": "CGU QuantX : IP région constante / voyage vérifiable, bots/copy prohibés, lot exposure, 30% fee sur certaines violations et droit discrétionnaire de fermer/modifier comptes. Incohérence marketing : manifeste promet 24h ou +$500, FAQ payout officielle 48h APRÈS APPROBATION ou +50% des profits; ne pas inférer un délai total du traitement.",
       "payoutEvidenceFinding": "QuantX a auto-déclaré 570k$ de payouts, non vérifiés par preuve bancaire externe; récompenses nouvelles indépendamment authentifiées manquantes.",
-      "trustpilotFinding": "Profil quantxfund.io actif, note publique observée; ne pas agréger avec quantx.io ou quantxcapital.io (homonymes).",
+      "trustpilotFinding": "Deux profils distincts : aeonfunded.com affiche une retenue officielle du TrustScore pour violation des guidelines Trustpilot (présentation trompeuse du contenu Trustpilot), constat 23/11/2026. Quantxfund.io affiche un TrustScore public 2.0/5 (11 avis) sans avis de retenue identifié. Malus −6 du domaine historique Aeon seulement, sous validation de notation ; aucune transmission automatique à QuantX.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/quantxfund.io",
       "activeTrustpilotScoreWithholdingVerified": null,
-      "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
+      "historicalAeonTrustpilotNotice": {
+        "domain": "aeonfunded.com",
+        "url": "https://www.trustpilot.com/review/aeonfunded.com",
+        "activeTrustpilotScoreWithholdingVerified": true,
+        "warningText": "This company’s rating is unavailable due to a breach of our guidelines",
+        "breachReason": "This company is displaying Trustpilot content in a misleading way.",
+        "checkedOn": "2026-11-23",
+        "v52Minus6EligibleForHistoricalAeonOnly": true,
+        "publicationApproved": false
+      },
+      "sourcePolicy": "Avis officiel de retenue confirmé sur aeonfunded.com seulement ; ne pas déplacer automatiquement le −6 vers le profil quantxfund.io, qui conserve un TrustScore public. Réactualiser à la validation du score.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
         "cohort": "F",
@@ -1634,7 +1644,7 @@
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Aeon historical domain: CURRENT Trustpilot guideline-breach score withholding VERIFIED 23/11/2026, company displays Trustpilot content misleadingly. Quantxfund.io: score public, no active withholding verified there. No numeric V5.2 score approved."
     },
     {
       "slug": "mifunder",
