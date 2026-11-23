@@ -267,7 +267,23 @@
       "trustpilotActiveNotice": true,
       "contractingEntityMissing": false,
       "activeUnsuspendedStrikeOff": false,
-      "closed": false
+      "closed": false,
+      "ownerEditorialDecision": {
+        "decision": "REJECT_58_NOT_APPROVED",
+        "decisionOn": "2026-11-23",
+        "previousReconstructedScore": 14,
+        "rejectedCandidate": 58,
+        "ownerOpinion": "around 20/100, requested as a risk-view not a finalized 13-criterion arithmetic score",
+        "ownerReason": "V5.2 candidate +44 conflicts with Trustpilot officially withheld score and numerous unresolved payout allegations; do not allow the mechanical uplift into active ranking.",
+        "publicationRule": "Keep existing live low score until 13-criterion sourced recalibration and explicit new approval. Do not substitute 20 by editorial fiat.",
+        "evidence": {
+          "trustpilotOfficialWithholding": "https://www.trustpilot.com/review/ckcapital.co.uk",
+          "legalActiveNotPayoutProof": "https://find-and-update.company-information.service.gov.uk/company/15658914",
+          "independentPayoutSixLinks": false,
+          "signedFundedRewardContract": false
+        }
+      },
+      "publicationApproved": false
     }
   ],
   "statusReviews": [
