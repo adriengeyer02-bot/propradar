@@ -699,7 +699,7 @@ export const seoGuides: SeoGuide[] = [
     intent: 'comparer',
     demandSignal: 'Futures decision search: real cost, drawdown, withdrawal conditions and payout trust before buying an evaluation.',
     answer:
-      'Topstep XFA and Apex Performance Accounts have fundamentally different payout contracts in November 2026. Topstep's Standard XFA needs five winning days of $150+, while its Consistency path uses three trading days and a 40% target. Apex's EOD Performance Account requires five qualifying days, a 50% consistency test, a $500 minimum request and no more than six approved payouts before that PA closes. Compare the account version and current agreement, not only the promotional fee or profit split.',
+      "Topstep XFA and Apex Performance Accounts have fundamentally different payout contracts in November 2026. Topstep's Standard XFA needs five winning days of $150+, while its Consistency path uses three trading days and a 40% target. Apex's EOD Performance Account requires five qualifying days, a 50% consistency test, a $500 minimum request and no more than six approved payouts before that PA closes. Compare the account version and current agreement, not only the promotional fee or profit split.",
     primaryKeywords: ['Topstep vs Apex', 'Apex vs Topstep', 'best futures prop firm'],
     secondaryKeywords: ['Apex Trader Funding promo', 'Topstep payout', 'futures funded account'],
     checks: [
