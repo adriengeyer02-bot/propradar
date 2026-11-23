@@ -460,7 +460,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       'GOAT Funded Trader is one of the most visible prop firms of the last two years: aggressive discounts, a large range of models and constant social media presence. **Visibility is not the same as reliability.** This review separates what is documented from what is marketing, and puts the **funded-account rules** first, because that is where traders lose payouts.',
     keyPoints: [
       'Launched in **May 2023**; Hong Kong trade name, Saint Lucia provider, **no financial regulator**.',
-      'On November 23, 2026, Trustpilot still withheld the company's TrustScore for a guideline breach.',
+      'On November 23, 2026, Trustpilot still withheld the company’s TrustScore for a guideline breach.',
       'Funded-account payout restrictions include Goat Guard, a **1- or 2-minute** minimum holding period depending on the October 6 purchase date, news-profit limits and the daily profit cap.',
       'PropRadar has an **affiliate relationship** with the firm; it does not change the score.',
     ],
