@@ -190,6 +190,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte F, classement de recherche ACQUIRED_CHECKOUT_SWAY. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** [MyFlash](https://www.myflashfunding.com/) confirme acquisition par **Sway Funded**, boutons d'achat vers Sway et ancienne offre encore affichée ; [BrokersView 30/07/2024](https://www.fastbull.com/brokersview/news/prop-firm-sway-funded-acquires-another-prop-brand-myflashfunding-239082) cite une **promesse** de payout intégral immédiat à la migration, **non confirmée exécutée**. [CGU publiques Sway 2026](https://www.swayfunded.com/terms) nomment **SF FUNDED LTD n°2026-00408 Sainte-Lucie**, [portail Sway](https://my.swayfunded.com/p/terms) nomme **Sway Funded FZCO**, ancienne homepage MyFlash mentionne aussi **Sway Funded LLC 2024-00342** : vendeur/débiteur à réconcilier. **CGU portail §4.10 : changements de paramètres déclarés applicables immédiatement aux challenges déjà achetés** ; B2 −4 uniquement si changement défavorable effectif du bon produit prouvé. §§8.7/9.5 : réexamen funded et split 80/20 ; anciens chiffres MyFlash 80/90% non substituables. [Trustpilot MyFlash](https://www.trustpilot.com/review/myflashfunding.com) redirige vers Sway (profil fusionné), pas une retenue sanctionnable du TrustScore ni preuve d'A3 historique.
+
+**Dossier complet :** [Lot 9 FundedLions / MyFlash / Quantec](v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md). **Aucune nouvelle notation V5.2, cessation ou sanction publiée.**
+
 ---
 
 ### 9. Aeon Funded — `aeon-funded`
@@ -409,6 +414,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte F, classement de recherche ACTIVE_OPERATOR_UNVERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 — découverte juridique :** [CGU historiques Quantec 2024](https://quantectrading.com/wp-content/uploads/2024/01/Proptradetech-terms-and-conditions-Quantec-Trading-Capital-.pdf) identifient comme cocontractant **Prop Trade Tech LLC 2784 LLC 2022**. [Gazette officielle SVG du 24/06/2025, p.419](https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf) **confirme sa radiation** ; ce n'est pas l'australienne Prop Trade Tech Pty Ltd devenue TRADESIM, citée dans contrats Nova/Rocket21. Domaine quantectrading.com HTTP 526 au contrôle 2026, nouvelle offre non prouvée. [Schedule 03/10/2024](https://quantectrading.com/wp-content/uploads/2024/10/Schedule-of-assessment-Quantec-03.10.2024-1.pdf) : split 60/70/80 pour anciens Standard et 90% pour certains nouveaux plans, consistency funded 35% ; tableau « No » evaluation vs note impliquant évaluation aussi. [Schedule novembre 2024](https://quantectrading.com/wp-content/uploads/2024/11/Schedule-of-assessment-Quantec.pdf) : **cap premier payout 2,5% du capital, 5% suivants, premier retrait 30j puis 15j**, interdictions news et changements d'instruments/style, scalping sous 15 min, possibles pertes de rewards décidées par Risk Team. Définition consistency 35% diffère entre annexes de dates distinctes — clarification du contrat effectivement fourni requise. **A3 non prouvé**, [Trustpilot 1,7/5](https://www.trustpilot.com/review/quantectrading.com) affiche la note, pas −6.
+
+**Dossier complet :** [Lot 9 FundedLions / MyFlash / Quantec](v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md). **Aucune nouvelle notation V5.2, cessation ou sanction publiée.**
+
 ---
 
 ### 19. AuraFunded — `aurafunded`
@@ -585,6 +595,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://fundedlions.com/) · [Source 2](https://mypropgenius.com/closed-firms/the-funded-lion/) · [Source 3](https://www.trustpilot.com/review/fundedlions.com) · [Source 4](https://www.financemagnates.com/forex/in-review-bdswiss-staff-exodus-ironfxs-new-prop-firm-us-fx-deposits-and-more/) · [Source 5](https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** [Companies House](https://find-and-update.company-information.service.gov.uk/company/15102550) confirme **THE FUNDED LION LTD n°15102550 dissoute le 11/02/2025**, mais **lien juridique exact avec le vendeur fundedlions.com non démontré** (dirigeant déclaré au registre différent du CEO décrit par la presse) ; **ne pas attribuer automatiquement les dettes ou la radiation à tous les challenges**. [BrokersView, 12/09/2024](https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013) rapporte la suspension annoncée et projet migration MT5 ; allegations de FundedLions contre Dominion non prouvées. [Contrôle DNS 11/10/2026](https://mypropgenius.com/closed-firms/the-funded-lion/) : NXDOMAIN. [Trustpilot](https://www.trustpilot.com/review/fundedlions.com) bloque nouveaux avis car **site fermé**, et NON parce que sanction guidelines ; pas de −6. A3 et frais remboursés non authentifiés.
+
+**Dossier complet :** [Lot 9 FundedLions / MyFlash / Quantec](v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md). **Aucune nouvelle notation V5.2, cessation ou sanction publiée.**
 
 ---
 
