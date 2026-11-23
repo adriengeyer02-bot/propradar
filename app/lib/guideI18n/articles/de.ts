@@ -141,12 +141,12 @@ const de: GuideArticleTranslations = {
       {
         heading: 'Die wichtigsten Regeln des finanzierten Kontos',
         paragraphs: [
-          'Die Challenge-Modelle sind konventionell. Das 2-Step-GOAT-Modell verlangt 8 % und dann 6 % bei 4 % Tagesverlust und 10 % statischem Maximalverlust; das 2-Step Standard verlangt 10 % und dann 5 % bei 5 % Tages- und 10 % Maximalverlust; das 1-Step verlangt 10 % bei 3 % Tagesverlust und 6 % statischem Maximalverlust. Das 3-Step-Modell wurde im August 2026 eingestellt. Diese Zahlen stammen aus einem am 5. Oktober 2026 geprüften Drittanbieter-Test: Bestätigen Sie sie an der Kasse.',
+          'Die Challenge-Modelle sind konventionell. Das 2-Step-GOAT-Modell verlangt 8 % und dann 6 % bei 4 % Tagesverlust und 10 % statischem Maximalverlust; das 2-Step Standard verlangt 10 % und dann 5 % bei 5 % Tages- und 10 % Maximalverlust; das 1-Step verlangt 10 % bei 3 % Tagesverlust und 6 % statischem Maximalverlust. GOAT veröffentlicht weiterhin eine 3-Step-FAQ, aber ältere Modelle sind laut Reset-Regeln nicht mehr resetfähig. Auch 2-Step Standard ist nicht mehr neu erhältlich. Ein vorhandener FAQ-Artikel bedeutet nicht, dass der Plan heute gekauft werden kann; Programm und Vertragsversion an der Kasse prüfen. Diese Zahlen stammen aus einem am 5. Oktober 2026 geprüften Drittanbieter-Test: Bestätigen Sie sie an der Kasse.',
           'Die Regeln, die über Auszahlungen entscheiden, beginnen nach dem Bestehen:',
         ],
         bullets: [
           "Goat Guard: Bei betroffenen finanzierten Konten (nicht bei Instant) können offene Positionen geschlossen werden, sobald der offene Verlust 2 % des Kontoguthabens erreicht. Nach dem ersten Auslösen sinkt der Gewinnanteil auf 50 %; beim zweiten wird das Konto verletzt. Programmausnahmen prüfen.",
-          '2-Minuten-Regel: Gewinne aus Trades, die kürzer als zwei Minuten gehalten wurden, werden bei der Auszahlung gestrichen, Verluste aus solchen Trades bleiben auf dem Konto.',
+          "Mindesthaltedauer nur bei finanzierten Konten: Challenge-Kauf vor dem 6. Oktober 2026 = 2 Minuten, ab dem 6. Oktober = 1 Minute. Gewinne aus kürzeren Trades werden nicht ausgezahlt, Verluste zählen weiter. Ein Reset ändert das ursprüngliche Kaufdatum nicht; in der Evaluierung gilt diese Mindestdauer nicht.",
           'News-Fenster: Gewinne rund um wichtige Nachrichten sind auf 1 % des Startsaldos begrenzt.',
           'Tagesgewinnlimit: Ein finanziertes Konto kann höchstens 3.000 $ Gewinn pro Tag verbuchen.',
           'Sofortmodelle nutzen Trailing-Drawdowns und schließen das Konto je nach Modell bei 1 % oder 2 % schwebendem Verlust.',
