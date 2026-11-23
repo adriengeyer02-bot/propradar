@@ -145,8 +145,6 @@ export type PropFirm = {
   trustpilotPenalty?: { before: number; penalty: number; included: boolean };
   /** V5 legal safety cap, after ordinary scoring and Trustpilot. */
   v5SafetyCap?: { before: number; cap: 55 };
-  /** Deprecated legacy marker: never populated under current V5.2. */
-  v52PayoutCap?: { before: number; cap: 64 | 69 | 79 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
