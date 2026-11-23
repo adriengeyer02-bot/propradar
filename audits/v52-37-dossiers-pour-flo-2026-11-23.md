@@ -464,6 +464,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte F, classement de recherche CURRENT_SALE_UNVERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** site et CGU actuelles en HTTP502, aucune vente ni société juridique US indépendante identifiées. [Trustpilot myfxcapital.com](https://www.trustpilot.com/review/myfxcapital.com) affiche **2,7/5 (46 avis)**, score **non retenu**. **Programme Direct Funding :** trader décrit rejet de payout après deux trades de moins de **3 minutes** (20 autres conformes), **réponse MyFx du 16/09/2025 invoquant plus de 12 violations et un compte toujours actif** ; dossiers contradictoires. **Programme 2-step :** plainte d'une règle `Win Rate Profitability Score` opposée malgré publicité « sans consistency » et seuil changé **40→25 % allégué**, réponse du 08/09/2025 **nie consistency sur challenge**, sans expliquer contrat funded. Entreprise revendique être enregistrée aux États-Unis et avoir payé des milliers de traders **sans fournir numéro ni preuve A3**. CGU datées, logs, capture de changement et recours nécessaires avant B1/B2 ; éviter double malus et toute allégation de refus injustifié établie.
+
+**Dossier complet :** [Lot 10 GetCryptoFunded / My Crypto Funding / MyFxCapital](v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md). **Recherche pré-notation, aucune note V5.2 ou fermeture publique approuvée.**
+
 ---
 
 ## Domaine ou vente actuelle non vérifiables — 17 profils
@@ -686,6 +691,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte F, classement de recherche DOMAIN_NOT_VERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** domaine `getcryptofunded.com` **HTTP502**, CGU et checkout inaccessibles ; [PropRubric contrôle 29/09](https://proprubric.com/crypto/) notait déjà le site hors ligne **sans acte de fermeture**. [PropFirmBook](https://propfirmbook.com/unverified/getcryptofunded) identifie **GCF Technologies FZCO (Dubaï)** comme vendeur probable, **registre et facture non obtenus**. [Trustpilot exact](https://www.trustpilot.com/review/getcryptofunded.com) **2,3/5, 7 avis tous une étoile** (février-avril 2025), signalements de **comptes achetés non fournis, accès perdus et funded non remis après challenge**, distincts d'une preuve de refus de payout déjà acquis. Les publicités anciennes évoquent jusqu'à 90–95 % de split sans accord signé. **A3 indépendant non établi, aucune retenue du TrustScore guideline −6.**
+
+**Dossier complet :** [Lot 10 GetCryptoFunded / My Crypto Funding / MyFxCapital](v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md). **Recherche pré-notation, aucune note V5.2 ou fermeture publique approuvée.**
+
 ---
 
 ### 31. AlphaPropTraders — `alphaproptraders`
@@ -750,6 +760,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://mycryptofunding.org/) · [Source 2](https://mycryptofunding.org/terms-and-conditions/) · [Source 3](https://www.mycryptofund.com/) · [Source 4](https://proprubric.com/crypto/) · [Source 5](https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms).
 
 *Reprise du dossier F/G : cohorte G, classement de recherche ORIGINAL_DOMAIN_UNVERIFIED_DO_NOT_CONFUSE_MYCRYPTOFUND. règles déjà structurées dans le site : 9/9. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 — découverte juridique :** [Companies House](https://find-and-update.company-information.service.gov.uk/company/15795471) affiche **MY CRYPTO FUNDING LTD n°15795471 ACTIVE**, constituée 22/06/2024, **comptes annuels en retard** ; [historique officiel](https://find-and-update.company-information.service.gov.uk/company/15795471/filing-history) **GAZ1 du 29/09/2026 puis DISS40 du 28/10/2026 : radiation d'office interrompue**, donc aucune dissolution actuelle. [Communiqué 2025](https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms) revendique My Crypto Funding Ltd UK pour la marque historique, **mais pas de facture/CGU reliant chaque ancien client à cette société**. Domaine `mycryptofunding.org` HTTP502 (DNS indisponible depuis sept. selon tiers). Ancienne [homepage indexée](https://mycryptofunding.org/) donne **10%/5% challenge, 80–90% split, 15 jours de trading et 3 jours +0,5 %** pour certains comptes funded, **Instant 15% best-day consistency/on-demand OU 15j sans consistency selon option**, source **historique non contractualisée 2026**. [mycryptofund.com](https://mycryptofund.com/faq/2) est une **autre offre de YSF Tech Limited BVI**, pas la même firme prouvée ; interdiction de transférer règles et payouts. A3 et Trustpilot exact non vérifiés ; aucune sanction −6 fondée.
+
+**Dossier complet :** [Lot 10 GetCryptoFunded / My Crypto Funding / MyFxCapital](v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md). **Recherche pré-notation, aucune note V5.2 ou fermeture publique approuvée.**
 
 ---
 
