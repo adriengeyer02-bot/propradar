@@ -1271,12 +1271,12 @@
       "firm": "AuraFunded",
       "scorePublishedBefore": 56,
       "sourceDate": "2026-11-23",
-      "statusFinding": "CESSION_PROPOSÉE_SANS_PREUVE_DE_VENTE",
-      "statusEvidence": "Annonce Flippa propose la vente de la marque; cela ne signifie pas qu'une acquisition a eu lieu. Anciennes CGU AuraPips mentionnent AuraFunded : identité et contrat à confirmer.",
+      "statusFinding": "MARQUE_EN_VENTE_FLIPPA_REBRANDING_AURAPIPS_PUIS_DOMAINES_REDIRECT_JEUX",
+      "statusEvidence": "Flippa propose aurafunded.com à $700k (profit mensuel présenté $32,952, marge 60%; listing dit vetted revenue/expenses/traffic, ni clients payés ni vente effectivement conclue prouvés). Chronologie archive PropFirmTier: aurafunded.com -> aurapips.com entre mai-juin 2025. Contrôle direct 23/11/2026 aurafunded.com et aurapips.com/terms redirigent vers site de jeux lineslot88pro.com sans relation. Vendeur et transfert des passifs historiques inconnus.",
       "statusBasis": "historical_terms_sale_listing",
-      "contractAndRules": "Les programmes instant/2-step/HFT diffèrent; seule la version de terms du bon vendeur et de la date d'achat pourrait être opposée au trader.",
-      "payoutEvidenceFinding": "Avis Trustpilot comportent allégations de demandes impayées; aucune attestation de transfert final vérifiée.",
-      "trustpilotFinding": "Profil aurafunded.com accessible avec critiques; aucune retenue TrustScore officiellement observée.",
+      "contractAndRules": "Anciennes conditions AuraPips mentionnant AuraFunded signalées par dossier précédent, mais source actuelle /terms redirige vers site tiers, aucun contrat actuel relu. Instant, 2-step, HFT historiques à séparer par programmes et phases. Aucune obligation de reprise documentée.",
+      "payoutEvidenceFinding": "Flippa chiffres de profits commerciaux non preuves de récompenses aux traders ; avis AuraFunded/AuraPips sur demandes impayées non attestations finales indépendantes. Aucune chaîne A3 complète ni état de dettes transférées vérifiés.",
+      "trustpilotFinding": "Deux profils exacts distincts, aurafunded.com 1,5/5 (130 avis), aurapips.com 1,8/5 (20 avis). Les notes restent affichées, aucun warning officiel de retenue TrustScore pour breach of guidelines constaté ; aucune pénalité -6.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/aurafunded.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1305,6 +1305,16 @@
           "url": "https://www.trustpilot.com/review/aurapips.com",
           "kind": "archive_code",
           "label": "AuraPips historical customer reviews and payout allegations"
+        },
+        {
+          "url": "https://propfirmtier.com/en/incidents?page=2",
+          "kind": "chronologie_secondaire_archive",
+          "label": "May-Jun 2025 brand redirect, 2026 unrelated slot redirect"
+        },
+        {
+          "url": "https://aurafunded.com/",
+          "kind": "controle_direct_domaine_redirect",
+          "label": "Domain redirects to unrelated slot site in Nov 2026"
         }
       ],
       "remainingTasks": [
@@ -1313,11 +1323,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir document de vente conclue (et passifs assumés ou non), au-delà de l'annonce Flippa.",
+        "Identifier contrat funded signé et factures de la marque originale et d'AuraPips, puis prouver tout transfert de payout historique.",
+        "Vérifier identité titulaire légal, histoire de redirection des deux domaines et dater cessation commerciale sans prétendre à dissolution."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md"
     },
     {
       "slug": "getcryptofunded",
@@ -1435,12 +1449,12 @@
       "firm": "AlphaPropTraders",
       "scorePublishedBefore": 56,
       "sourceDate": "2026-11-23",
-      "statusFinding": "ENTITÉ_ET_COMMERCE_NON_AUTHENTIFIÉS",
-      "statusEvidence": "alphaproptraders.com et plateforme revendiquée non suffisamment reliés à un vendeur/domaine de checkout actuel; ne pas confondre avec Alpha Prop Trader ou alphaprotraders.com.",
+      "statusFinding": "SITE_HTTP502_PLATEFORME_INACCESSIBLE_CONTRATS_ET_PAYOUTS_INTROUVABLES",
+      "statusEvidence": "Contrôle direct 23/11/2026 alphaproptraders.com HTTP 502, platform.alphaproptraders.com inaccessible. Linktree @AlphaPropTraders social actif au crawl sans contrat vendeur/checkout. PropTradeCenter octobre 2026 signale 5/6 éléments documentaires manquants. Aucune cessation légale authentifiée ni vente réelle vérifiée.",
       "statusBasis": "brand_identification_unverified",
-      "contractAndRules": "CGU sur la marque EXACTE non récupérées; aucune règle d'une homonyme ne doit être importée.",
-      "payoutEvidenceFinding": "Pas de preuve indépendante d'un payout à un trader de la marque exacte.",
-      "trustpilotFinding": "Trustpilot de marque exacte non confirmé; le profil alphaprotraders.com est un autre intitulé et ne suffit pas.",
+      "contractAndRules": "Aucune CGU de la marque exacte ni contrat funded/programme vérifiés. Pas de reprise de clauses ou de réputation des homonymes Alpha Prop, Alpha Prop Trader et alphaprotraders.com.",
+      "payoutEvidenceFinding": "Aucune preuve indépendante de récompense finale attribuable au bon vendeur de alphaproptraders.com. Avis/indices d'homonymes non exploitables.",
+      "trustpilotFinding": "Profil www.alphaprotraders.com existe (Alphaprotraders, orthographe sans p, 2 avis, 2,9/5) mais n'est PAS le profil prouvé d'AlphaPropTraders. Profil exact alphaproptraders.com non consultable; aucun avertissement officiel de retenue du score du bon domaine confirmé.",
       "trustpilotExactProfile": "https://uk.trustpilot.com/review/www.alphaprotraders.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1472,6 +1486,16 @@
           "url": "https://uk.trustpilot.com/review/www.alphaprotraders.com",
           "kind": "archive_code",
           "label": "Do-not-conflate 2020 Alphaprotraders Trustpilot page"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/alphaproptraders.com",
+          "kind": "profil_exact_non_accessible",
+          "label": "No current exact-domain Trustpilot available"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/alphaproptraders",
+          "kind": "annuaire_statut_non_reference",
+          "label": "Firm unlisted, not an objective finding of fraud"
         }
       ],
       "remainingTasks": [
@@ -1480,11 +1504,14 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Trouver reçu et identité juridique exacte du vendeur de alphaproptraders.com, preuve d'un checkout aujourd'hui fonctionnel et CGU par produit.",
+        "Ne pas confondre avec alphaprotraders.com; exiger une preuve de lien avant toute attribution Trustpilot ou d'incident."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md"
     },
     {
       "slug": "fxci",
@@ -1737,12 +1764,12 @@
       "firm": "MiFunder",
       "scorePublishedBefore": 51,
       "sourceDate": "2026-11-23",
-      "statusFinding": "CGU_HISTORIQUES_REFERENCÉES_MAIS_INACCESSIBLES",
-      "statusEvidence": "mifunder.com/legal/terms-of-service et miroir ancien Vercel listés dans dossier, l'URL primaire est inaccessible en lecture aujourd'hui. Vendeur actuel et checkout non vérifiés.",
+      "statusFinding": "SITE_NON_ACCESSIBLE_CGU_HISTORIQUES_2023_AUTHENTIFIEES_AU_MIROIR",
+      "statusEvidence": "Contrôle 23/11/2026: mifunder.com/legal/terms-of-service inaccessible; contrôle tiers MyPropGenius 11/10/2026 Cloudflare 522. Miroir officiel marque mi-funder.vercel.app affiche CGU datées 24/08/2023, contractant déclaré Gigimobile Technology Solutions PTY Ltd 2023/535414/07, CIPC non vérifié. Aucune vente 2026, fermeture légale ou version actuelle authentifiée.",
       "statusBasis": "prior_source_snapshot_primary_unreadable",
-      "contractAndRules": "Dossier ancien classe clauses de discrétion, consistency, lot sizing, jours, inactivité; impossible de garantir que ces stipulations s'appliquent aujourd'hui sans nouvelle version signée.",
-      "payoutEvidenceFinding": "Aucune preuve bancaire indépendante vérifiée; critiques et score Trustpilot historique ne suffisent pas à en déduire un refus injustifié.",
-      "trustpilotFinding": "Profil mifunder.com actif avec avis médiocres selon résultats de recherche, pas de warning actif TrustScore confirmé.",
+      "contractAndRules": "CGU 24/08/2023: §8.3 chargeback de n'importe quel challenge peut provoquer refus de payout et suspension d'un autre compte; §11.1 réussite challenge ne garantit pas funded (Independent Contractor Agreement séparé); §§12.2-12.3 stratégie appréciée à discrétion exclusive et forfeiture fees/payments; §18.2 résiliation sans cause MAIS §18.5 protège droits acquis sauf §12.3; §19 lot sizing 25-200% de moyenne, trades <30s agrégés, plus gros trade ≤50% profit, exemple $10k→$4k retirables après exclusions. Applicabilité après 2023 non établie.",
+      "payoutEvidenceFinding": "Anciennes CGU promettent paiements bancaires en USD, exemples théoriques ne sont pas versements. Trustpilot témoignages positifs/négatifs 2024-2026 sans chaîne A3 indépendante pour le bon vendeur.",
+      "trustpilotFinding": "Trustpilot mifunder.com affiche 2,6/5 sur 159 avis au relevé, TrustScore actif, aucune retenue officielle pour guideline breach constatée. Accusations de faux avis ≠ sanction Trustpilot officielle.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/mifunder.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1766,6 +1793,16 @@
           "url": "https://mi-funder.vercel.app/legal/terms-of-service",
           "kind": "archive_code",
           "label": "MiFunder historical legal terms (not current ownership proof)"
+        },
+        {
+          "url": "https://mypropgenius.com/closed-firms/",
+          "kind": "controle_secondaire_date",
+          "label": "mifunder.com Cloudflare 522 on Oct 11 2026"
+        },
+        {
+          "url": "https://eservices.cipc.co.za/Search.aspx",
+          "kind": "registre_officiel_acces_authentifie",
+          "label": "CIPC registered entity confirmation still required"
         }
       ],
       "remainingTasks": [
@@ -1774,11 +1811,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Confirmer directement dans le registre CIPC le numéro Gigimobile Technology Solutions Pty Ltd 2023/535414/07, dernier statut et vendeur facturant en 2026.",
+        "Obtenir Schedule de programmes datée et Independent Contractor Agreement pour déterminer si §§8.3,12.3,19 sont applicables aux clients historiques/actuels.",
+        "Clarifier conséquences du chargeback sur un autre compte et possibilités de recours/contestation contradictoire."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md"
     },
     {
       "slug": "gry-funding",
