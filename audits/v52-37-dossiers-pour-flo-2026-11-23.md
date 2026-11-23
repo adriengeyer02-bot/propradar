@@ -384,6 +384,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 7/7. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** miroir des CGU primaires [24 août 2023](https://mi-funder.vercel.app/legal/terms-of-service) : vendeur déclaré **Gigimobile Technology Solutions PTY Ltd 2023/535414/07** (CIPC non consulté), §8.3 **chargeback pouvant suspendre un autre compte et refuser son retrait**, §11.1 **funded non garanti malgré challenge réussi**, §§12.2–12.3 **stratégies jugées à seule appréciation + perte possible de paiements**, §18.5 préserve normalement les droits acquis sauf §12.3, §19 **lot-size 25–200 % + opérations à moins de 30 s regroupées + exemple 10k$ gains théoriques → 4k$ retirables**. Domaine officiel inaccessible, applicabilité 2026 et contrat funded inconnus. [Trustpilot](https://www.trustpilot.com/review/mifunder.com) 2,6/5 (159 avis), aucun malus −6 justifié.
+
+**Dossier complet :** [Lot 8 — MiFunder / AlphaPropTraders / AuraFunded](v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md). **Aucune note V5.2 ni fermeture publique autorisée.**
+
 ---
 
 ### 18. Quantec Trading Capital — `quantec-trading-capital`
@@ -423,6 +428,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://www.trustpilot.com/review/aurafunded.com) · [Source 2](https://aurapips.com/terms/) · [Source 3](https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders) · [Source 4](https://www.trustpilot.com/review/aurapips.com).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** [Flippa](https://flippa.com/11936805-aurafunded-com-offers-innovative-funding-solutions-for-traders-providing-fast-and-flexible-virtual-simulated-capital-to-help-traders) affiche une **mise en vente à 700 000 USD** avec bénéfice mensuel allégué de 32 952 USD ; **pas d'acte de vente conclue ni de preuve de payout**. [Chronologie documentée](https://propfirmtier.com/en/incidents?page=2) : aurafunded.com redirigeait vers **AuraPips** en mai-juin 2025, puis les deux domaines redirigent en 2026 vers un **site de jeux sans rapport** (contrôle direct confirmé). Les CGU anciennes AuraPips sont aujourd'hui illisibles. [Trustpilot AuraFunded](https://www.trustpilot.com/review/aurafunded.com) 1,5/5 (130 avis), [AuraPips](https://www.trustpilot.com/review/aurapips.com) 1,8/5 (20 avis) ; profils distincts, **pas** de malus guideline −6 vérifié. Ni transfert des dettes ni dissolution juridique établis.
+
+**Dossier complet :** [Lot 8 — MiFunder / AlphaPropTraders / AuraFunded](v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md). **Aucune note V5.2 ni fermeture publique autorisée.**
 
 ---
 
@@ -680,6 +690,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://alphaproptraders.com/) · [Source 2](https://platform.alphaproptraders.com/) · [Source 3](https://proptradecenter.com/firm-dossiers/alphaproptraders) · [Source 4](https://linktr.ee/alphaproptraders) · [Source 5](https://uk.trustpilot.com/review/www.alphaprotraders.com).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** [site alphaproptraders.com](https://alphaproptraders.com/) HTTP 502, plateforme dédiée non accessible, **aucun contrat et vendeur au checkout identifiés**. [Linktree @AlphaPropTraders](https://linktr.ee/alphaproptraders) conserve réseaux sociaux mais ne suffit pas à authentifier une offre active. [PropTradeCenter](https://proptradecenter.com/firm-dossiers/alphaproptraders) signale documentation insuffisante. [Trustpilot www.alphaprotraders.com](https://www.trustpilot.com/review/www.alphaprotraders.com) (2 avis, note 2,9/5) concerne **une orthographe et un domaine différents** ; ne pas l'imputer à AlphaPropTraders. Aucun A3 indépendant ni retenue TrustScore de bon domaine vérifiés.
+
+**Dossier complet :** [Lot 8 — MiFunder / AlphaPropTraders / AuraFunded](v52-deep-dive-mifunder-alphaproptraders-aurafunded-2026-11-23.md). **Aucune note V5.2 ni fermeture publique autorisée.**
 
 ---
 
