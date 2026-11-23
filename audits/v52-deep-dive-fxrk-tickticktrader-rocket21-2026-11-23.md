@@ -94,3 +94,13 @@
 | Rocket21 Challenge | Société australienne nommée dans ancien PDF ; registre actuel non vérifié | §12.2(g)(viii) + §12.3 : discrétion sur stratégie et perte de paiements, contrat funded annexe absente | **Non démontré** | **Non justifié** |
 
 **Décision pour Flo à ce stade :** ne pas transformer ces recherches en scores V5.2, ne pas déclencher cap C1=55 ou plafond A3 avant 13 critères sourcés et choix du statut actif/archivé. Procéder aux demandes de documents ci-dessus, puis validation humaine avant tout changement sensible. La présente annexe reste dans la PR de collecte **#263**, en brouillon.
+
+
+## Addendum 23/11/2026 — identification du contractant Rocket21 recoupée via Nova Funding
+
+Ce contre-audit prend acte du nouveau dossier [Nova Funding](v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md) :
+
+- L'ancien contrat officiel [Rocket21 (PDF)](https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21-2.pdf) et celui de [Nova Funding (PDF)](https://nova-funding.com/wp-content/uploads/2024/08/Terms-and-conditions-Nova-Funding-1.pdf) désignent **exactement Prop Trade Tech Pty Ltd, ABN 71 661 045 950**. Les premières pages ont été contrôlées. **Cela établit une identité du fournisseur contractuel dans les modèles publiés**, pas la preuve que chaque client a signé ces PDF, ni une garantie de paiement.
+- [ABN Lookup officiel](https://abr.business.gov.au/AbnHistory/View?id=71661045950) : cette société, **anciennement PROPTRADETECH PTY LTD**, a été renommée **TRADESIM PTY LTD le 14 mars 2025** ; l'ABN est **toujours actif** au relevé du 21/11/2026. **En conséquence, ne pas qualifier la société australienne de dissoute parce que le domaine Rocket21 est inaccessible.**
+- Les autres [Website Terms historiques de Nova](https://portal.nova-funding.com/wp-content/uploads/Website-Terms-and-Conditions-Nova-Funding.pdf) nomment en revanche une **société différente, Prop Trade Tech LLC (2784 LLC 2022)** à Saint-Vincent-et-les-Grenadines. Elle figure dans la [Gazette officielle nº33 du 24 juin 2025, p.419](https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf) parmi les sociétés **radiées**. **Aucune preuve qu'elle était le vendeur du programme Rocket21 ni qu'elle doit les payouts Rocket21** ; ne pas transférer ce statut entre personnes morales.
+- **À demander pour Rocket21 avant statut ou note :** reçu de transaction et contrat funded effectif de chaque programme, nature du service fourni par TRADESIM (vendeur / prestataire / sous-traitant), éventuel transfert d'obligations après le changement de nom, preuve indépendante de règlement des récompenses. Toujours `numericV52=null` et `publicationApproved=false`.
