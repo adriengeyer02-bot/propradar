@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FirmLogo from '../components/FirmLogo';
 import HomeGlobe from '../components/ui/HomeGlobe';
+import FTMOBlackFridayBanner from '../components/FTMOBlackFridayBanner';
 import { buildRadar } from '../lib/radar';
 import { withOptionsGlobe } from '../lib/optionsGlobe';
 import { optionsCopy } from '../lib/optionsI18n';
@@ -29,6 +30,9 @@ import { isLocale, localeAlternates, localePath, type Locale } from '../lib/loca
 import { fmt, formatDateLong, getMessages, tv } from '../lib/messages';
 import IntentLink from '../components/IntentLink';
 import { DISCORD_URL, communityCopy } from '../lib/community';
+
+// Refresh the temporary promotion automatically; a full rebuild is not needed to hide it.
+export const revalidate = 3600;
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -148,6 +152,8 @@ export default async function HomePage({ params }: Props) {
           <HomeGlobe data={homeRadar} globeData={withOptionsGlobe(homeRadar)} optionLabels={{ name: optionsCopy(locale).nav, unrated: optionsCopy(locale).noScore }} locale={locale} labels={t.radar} sectorNames={t.sectors} valueNames={t.values} tableLabels={t.table} radarCta={h.openRadar} />
         </div>
       </section>
+
+      <FTMOBlackFridayBanner locale={locale} />
 
       <section className="container home-v2-section" aria-labelledby="home-reviews-title">
         <div className="home-v2-section-heading">
