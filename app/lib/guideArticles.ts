@@ -488,7 +488,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       {
         heading: 'The funded-account rules that matter most',
         paragraphs: [
-          'The challenge models are conventional. **The 3-Step model was retired in August 2026.** The figures below come from a third-party review checked on October 5, 2026: confirm them at checkout.',
+          'Challenge programs change by sales cohort. **GOAT still publishes a 3-Step help page**, but its reset FAQ lists 3-Step among models without reset eligibility, so a published FAQ is **not proof of current availability for new sales**. Likewise, its **2-Step Standard** rules now explicitly describe a legacy plan not sold to new customers. The figures below come from a third-party review checked October 5, 2026; identify the exact offer and signed terms at checkout.',
           'The rules that decide payouts start **after you pass**:',
         ],
         compare: {
@@ -502,7 +502,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         bulletStyle: 'flag',
         bullets: [
           '**Goat Guard:** on eligible funded accounts (not Instant accounts), a floating loss of 2% of account balance can close all open trades. The first trigger reduces the split to 50%; the second breaches the account. Check exclusions for the exact product.',
-          '**2-minute rule:** profit from trades held under two minutes is removed at payout, while losses from those trades stay on the account.',
+          '**Minimum holding time on funded accounts:** challenges purchased **before October 6, 2026** retain **2 minutes**; those purchased **on or after October 6** use **1 minute**. Profit on shorter trades is excluded from payouts, but losses remain; resetting a legacy challenge does not reset the purchase-date threshold. This restriction does **not** apply during evaluation.',
           '**News window:** profit made around high-impact news is capped at 1% of the starting balance.',
           '**Daily profit cap:** a funded account can bank at most $3,000 of profit per day.',
           '**Instant models:** trailing drawdowns, and the account closes on a 1% or 2% floating loss depending on the model.',
@@ -539,6 +539,9 @@ export const guideArticles: Record<string, GuideArticle> = {
       { label: 'GOAT help center: 2-Step Standard', url: 'https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard' },
       { label: 'GOAT: payout eligibility, fees and payment methods (Nov 23, 2026)', url: 'https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival' },
       { label: 'GOAT: Goat Guard scope and consequences', url: 'https://help.goatfundedtrader.com/en/articles/10742107-what-is-goat-guard' },
+      { label: 'GOAT: funded minimum holding time varies by purchase date (Oct 6 cutoff)', url: 'https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades' },
+      { label: 'GOAT: model list including legacy Standard and 3-Step documentation', url: 'https://help.goatfundedtrader.com/en/collections/11811982-models' },
+      { label: 'GOAT: reset availability differs for older/retired models', url: 'https://help.goatfundedtrader.com/en/articles/15948316-how-do-resets-work' },
       { label: 'FuturesHive review, checked October 5, 2026 (third party)', url: 'https://www.futureshive.com/blog/goat-funded-trader-review-2026' },
     ],
   },
