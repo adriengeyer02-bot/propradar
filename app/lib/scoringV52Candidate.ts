@@ -9,7 +9,7 @@ export type V52Result = {
   afterRules: number;
   trustpilotPenalty: 0|6;
   adjusted: number;
-  payoutEvidenceCap: 64|69|79|null;
+  payoutEvidenceCap: null;
   safetyCap: 55|null;
   final: number|null;
   confidence: V5Scorecard['confidence'];
@@ -46,12 +46,12 @@ export function computeV52Candidate(card: V5Scorecard): V52Result {
   const editorialGross=afterRules+rulesPenalty;
   const trustpilotPenalty:0|6=card.trustpilotActiveNotice?6:0;
   const adjusted=Math.max(0,afterRules-trustpilotPenalty);
-  const a3=criteriaPoints.A3;
-  const payoutEvidenceCap:64|69|79|null=a3<=1?64:a3===2?69:a3===3?79:null;
+  // Unverified payout evidence affects A3 and audit confidence, never a second ceiling.
+  const payoutEvidenceCap:null=null;
   if(card.contractingEntityMissing&&criteriaPoints.C1!==0) throw Error(card.slug+': C1 must be zero');
   if(card.activeUnsuspendedStrikeOff&&criteriaPoints.C2!==2) throw Error(card.slug+': C2 must be two');
   const safetyCap:55|null=card.contractingEntityMissing||card.activeUnsuspendedStrikeOff?55:null;
   return {blocks,editorialGross,rulesPenalty,afterRules,trustpilotPenalty,adjusted,payoutEvidenceCap,safetyCap,
-    final:card.closed?null:Math.min(adjusted,payoutEvidenceCap??100,safetyCap??100),
+    final:card.closed?null:Math.min(adjusted,safetyCap??100),
     confidence:card.confidence,criteriaPoints,ruleDeductions};
 }
