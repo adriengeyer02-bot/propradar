@@ -741,7 +741,7 @@ export const frArticles: FrArticle[] = [
         heading: 'Compte Express Funded et payouts',
         paragraphs: [
           'Après validation, vous tradez un compte **Express Funded (XFA)**, toujours simulé, où commencent les payouts. Les parcours **Standard** et **Consistency** ont des conditions et **des plafonds par retrait différents** ; le choix est définitif pour ce compte.',
-          'Les traders inscrits depuis le 12 janvier 2026 touchent **90 %** des payouts validés ; les traders de l’ancien tableau de bord bénéficient de règles spécifiques pour leurs 10 000 premiers dollars. Payout minimum : **125 $**. Sur les comptes Express Funded, chaque demande est limitée à **50 % du solde**, sous réserve d'un plafond par taille et parcours. Une **option temporaire de Daily Loss Limit achetée avec un nouveau Combine** peut augmenter les plafonds. Les comptes Live suivent une autre politique.',
+          'Les traders inscrits depuis le 12 janvier 2026 touchent **90 %** des payouts validés ; les traders de l’ancien tableau de bord bénéficient de règles spécifiques pour leurs 10 000 premiers dollars. Payout minimum : **125 $**. Sur les comptes Express Funded, chaque demande est limitée à **50 % du solde**, sous réserve d’un plafond par taille et parcours. Une **option temporaire de Daily Loss Limit achetée avec un nouveau Combine** peut augmenter les plafonds. Les comptes Live suivent une autre politique.',
         ],
         compare: {
           columns: ['Parcours Standard', 'Parcours Consistency'],
