@@ -1,7 +1,7 @@
 {
   "version": "5.2",
   "effectiveDecision": "2026-11-23",
-  "publication": "Owner explicitly authorized publication of 31 newly researched 13-criterion V5.2 scorecards on 2026-11-23; 90 prior owner-approved scores retained = 121 total. All 31 newly approved files have audit confidence LOW because full independent six-link trader payout proof and current primary entity extracts are not universally available; this is a conservative quantified assessment, NOT a certification that the firm did not pay traders. CK Capital candidate 58 remains rejected with prior low score unchanged.",
+  "publication": "Owner explicitly authorized publication of 31 newly researched 13-criterion V5.2 scorecards on 2026-11-23; 90 prior owner-approved scores retained = 121 total. All 31 newly approved files have audit confidence LOW because full independent six-link trader payout proof and current primary entity extracts are not universally available; this is a conservative quantified assessment, NOT a certification that the firm did not pay traders. CK Capital candidate 58 remains rejected with prior low score unchanged. Amended 2026-11-23: no payout-evidence caps; 121 approved profiles retained, scores recalculated using identical 13 criterion data.",
   "approvals": [
     {
       "slug": "alpha-capital-group",
@@ -402,9 +402,10 @@
     {
       "slug": "lux-trading-firm",
       "checkedOn": "2026-11-21",
-      "expectedFinal": 64,
+      "expectedFinal": 65,
       "ownerApprovedOn": "2026-11-23",
-      "sourceAudit": "V5 source-backed 13-criteria migration"
+      "sourceAudit": "V5 source-backed 13-criteria migration",
+      "originalExpectedFinalWithEvidenceCap": 64
     },
     {
       "slug": "funderpro",
@@ -493,9 +494,10 @@
     {
       "slug": "fxify",
       "checkedOn": "2026-11-22",
-      "expectedFinal": 69,
+      "expectedFinal": 72,
       "ownerApprovedOn": "2026-11-23",
-      "sourceAudit": "cohort H PR #261"
+      "sourceAudit": "cohort H PR #261",
+      "originalExpectedFinalWithEvidenceCap": 69
     },
     {
       "slug": "blusky-trading",
@@ -521,9 +523,10 @@
     {
       "slug": "take-profit-trader",
       "checkedOn": "2026-11-22",
-      "expectedFinal": 64,
+      "expectedFinal": 74,
       "ownerApprovedOn": "2026-11-23",
-      "sourceAudit": "cohort H PR #261"
+      "sourceAudit": "cohort H PR #261",
+      "originalExpectedFinalWithEvidenceCap": 64
     },
     {
       "slug": "exfunded",
@@ -654,10 +657,11 @@
     {
       "slug": "myfundedcapital",
       "checkedOn": "2026-11-23",
-      "expectedFinal": 64,
+      "expectedFinal": 66,
       "ownerApprovedOn": "2026-11-23",
       "confidence": "faible",
-      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23"
+      "sourceAudit": "new 13-criterion owner-authorized V5.2 audit, 2026-11-23",
+      "originalExpectedFinalWithEvidenceCap": 64
     },
     {
       "slug": "earn2trade",
@@ -806,5 +810,7 @@
     "snapshotSource": "app/data/scoring-v52-31-owner-release-2026-11-23.json",
     "allNewScoresConfidence": "faible",
     "payoutProofSixLinksNotCertified": true
-  }
+  },
+  "policyAmendedOn": "2026-11-23",
+  "policyAmendment": "Owner removed all A3 proof ceilings (64/69/79). Apply A3 as 0–5 score points and display low audit confidence; keep Trustpilot −6 once and legal cap 55 only. Four approved final scores changed; 121 approvals and CK exclusion preserved."
 }
