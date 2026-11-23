@@ -25,12 +25,12 @@ const fr: GuideArticleTranslations = {
       {
         heading: 'Les règles du compte financé qui comptent le plus',
         paragraphs: [
-          "Les modèles de challenge sont classiques. Le modèle 2-Step GOAT demande 8 % puis 6 % avec une perte journalière de 4 % et une perte maximale statique de 10 % ; le 2-Step Standard demande 10 % puis 5 % avec 5 % par jour et 10 % au maximum ; le 1-Step demande 10 % avec une perte journalière de 3 % et une perte maximale statique de 6 %. Le modèle 3-Step a été retiré en août 2026. Ces chiffres viennent d'une analyse tierce vérifiée le 5 octobre 2026 : confirmez-les au paiement.",
+          "Les modèles de challenge sont classiques. Le modèle 2-Step GOAT demande 8 % puis 6 % avec une perte journalière de 4 % et une perte maximale statique de 10 % ; le 2-Step Standard demande 10 % puis 5 % avec 5 % par jour et 10 % au maximum ; le 1-Step demande 10 % avec une perte journalière de 3 % et une perte maximale statique de 6 %. GOAT conserve une FAQ officielle pour l'ancien modèle 3-Step, sans que sa présence garantisse de nouvelles ventes ; le 2-Step Standard est explicitement indiqué comme indisponible aux nouveaux acheteurs. Ces chiffres viennent d'une analyse tierce du 5 octobre 2026 : confirmez le modèle réellement vendu et le contrat au paiement.",
           'Les règles qui décident des paiements commencent après la réussite :',
         ],
         bullets: [
           'Goat Guard : sur les comptes financés concernés (hors Instant), une perte latente de 2 % du solde du compte peut fermer les trades ouverts ; un premier déclenchement réduit le partage à 50 % et le second entraîne une violation. Vérifiez les exceptions du programme.',
-          'Règle des 2 minutes : le profit des trades tenus moins de deux minutes est retiré au paiement, tandis que les pertes de ces trades restent sur le compte.',
+          'Durée minimale des trades **sur compte funded** : **2 minutes** pour un challenge acheté avant le 6 octobre 2026, **1 minute** pour un achat à partir de cette date. Les gains des trades plus courts sont exclus du payout, mais les pertes comptent. Un reset ne modifie pas la date d'achat originale ; cette règle ne s'applique pas en évaluation.',
           'Fenêtre news : le profit réalisé autour des annonces à fort impact est plafonné à 1 % du solde initial.',
           'Plafond de profit journalier : un compte financé peut enregistrer au maximum 3 000 $ de profit par jour.',
           'Les modèles instantanés utilisent un drawdown suiveur et ferment le compte à 1 % ou 2 % de perte latente selon le modèle.',
