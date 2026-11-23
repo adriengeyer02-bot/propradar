@@ -814,66 +814,6 @@ export const frArticles: FrArticle[] = [
   },
 
   {
-, '**3 jours de trading**, meilleure journée **≤ 40 %** du profit net'] },
-            { label: 'Plafond de base (50K / 100K / 150K)', values: ['**2 000 / 3 000 / 5 000 $**', '**3 000 / 4 000 / 6 000 $**'] },
-          ],
-          note: 'Le choix entre les deux parcours est définitif.',
-        },
-        callout: { kind: 'warning', text: 'Après le premier payout, la limite de perte passe à **0 $** : **une mauvaise journée après un retrait peut suffire à perdre le compte.**' },
-      },
-      {
-        heading: 'Points forts et points faibles',
-        paragraphs: ['Ce qui ressort des règles actuelles :'],
-        prosCons: {
-          pros: [
-            'L\'**historique le plus long** du prop trading futures et un centre d\'aide très documenté.',
-            '**Pas de limite de temps** ; la consistance relève l\'objectif au lieu d\'éliminer.',
-            '**90 %** de partage dès le premier dollar et un payout minimum bas (**125 $**).',
-          ],
-          cons: [
-            '**Futures uniquement**, positions obligatoirement fermées en fin de séance.',
-            'La limite de perte tombe à **0 $ après le premier payout**.',
-            'Règles **modifiées plusieurs fois** entre novembre 2025 et avril 2026.',
-          ],
-        },
-      },
-      {
-        heading: 'Pour qui ?',
-        paragraphs: [
-          'L\'abonnement mensuel rend une **évaluation lente** plus coûteuse qu\'un challenge à frais unique.',
-        ],
-        fit: {
-          yes: ['**Day traders futures**', 'Envie d\'un **opérateur établi**', 'À l\'aise avec une **limite suiveuse surveillée en direct**'],
-          no: ['Traders **forex ou CFD**', '**Swing traders** qui gardent la nuit', 'Choix **surtout sur le prix**'],
-        },
-      },
-    ],
-    sources: [
-      { label: 'Centre d\'aide Topstep : Maximum Loss Limit', url: 'https://intercom.help/topstep-llc/en/articles/8284204' },
-      { label: 'Centre d\'aide Topstep : consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
-      { label: 'Centre d\'aide Topstep : payouts', url: 'https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs' },
-      { label: 'Topstep sur Trustpilot', url: 'https://www.trustpilot.com/review/topstep.com' },
-    ],
-    faq: [
-      {
-        question: 'Topstep est-il une arnaque ?',
-        answer:
-          'Non. Topstep existe depuis 2012, publie ses règles en détail et n\'a pas d\'alerte de régulateur recensée par PropRadar. Ses comptes d\'évaluation et Express Funded sont simulés, comme chez toutes les prop firms.',
-      },
-      {
-        question: 'Quel partage des profits chez Topstep ?',
-        answer: '90 % pour les traders inscrits depuis le 12 janvier 2026 ; 100 % des 10 000 premiers dollars puis 90 % pour les plus anciens.',
-      },
-      {
-        question: 'Peut-on garder une position overnight chez Topstep ?',
-        answer: 'Non, toutes les positions doivent être fermées avant la fin de séance.',
-      },
-    ],
-    firmSlugs: ['topstep', 'apex-trader-funding', 'alpha-futures'],
-    related: ['drawdown-prop-firm', 'regle-de-consistance-prop-firm', 'meilleures-prop-firms-2026'],
-  },
-
-  {
     slug: 'ftmo-vs-the5ers',
     enPath: '/guides/ftmo-vs-the5ers',
     title: 'FTMO vs The5ers : quelle prop firm choisir en 2026 ?',
