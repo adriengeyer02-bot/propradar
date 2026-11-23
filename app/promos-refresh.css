@@ -241,3 +241,11 @@
   .promos-page .pr-deal-code { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
   .promos-page .pr-deal-status { justify-items: start; text-align: left; }
 }
+
+
+/* A quiet, sourced Black Friday marker; editorial rating display is untouched. */
+.promos-page .pr-deal-black-friday { border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+.promos-page .pr-bf-price { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 12px; padding: 10px 12px; border-radius: 8px; background: var(--surface, rgba(255,255,255,.04)); font-size: 13px; }
+.promos-page .pr-bf-price > span { flex: 1 1 100%; color: var(--muted, #aab0ba); font-size: 11px; }
+.promos-page .pr-bf-price s { color: var(--muted, #aab0ba); }
+.promos-page .pr-bf-price strong { font-size: 17px; font-variant-numeric: tabular-nums; color: var(--accent); }
