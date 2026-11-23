@@ -1147,7 +1147,7 @@ const blackFridayDeals: PromoDeal[] = [
     expiresAt: '2026-12-01T04:59:00Z'
   },
   {
-    slug: 'aquafunded', label: 'Black Friday · official', blackFriday: true, featured: true, heroRank: 5,
+    slug: 'aqua-funded', label: 'Black Friday · official', blackFriday: true, featured: true, heroRank: 5,
     title: 'AquaFunded BLACKFRIDAY: 35% off eligible accounts',
     code: 'BLACKFRIDAY', value: '35%', category: 'code', proofLevel: 'Official', availability: 'Active official offer',
     validity: 'Live on official homepage checked 23 Nov 2026; no verified end date.',
