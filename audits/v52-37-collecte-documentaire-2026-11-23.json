@@ -137,11 +137,11 @@
       "scorePublishedBefore": 35,
       "sourceDate": "2026-11-23",
       "statusFinding": "SITE_COMMERCIAL_INACCESSIBLE_CESSATION_JURIDIQUE_NON_PROUVÉE",
-      "statusEvidence": "Site/dashboards signalés erreur hébergement HTTP 402 par plusieurs observations datées; contenu produit indexé ancien, non preuve de checkout fonctionnel. The Funded Trader LLC figurait dans anciennes CGU. Il manque l'entité commerciale actuelle.",
+      "statusEvidence": "Contrôle direct 23/11/2026: thefundedtraderprogram.com et /terms-of-use/index.html renvoient HTTP 402. Les données légales actuelles du vendeur et une annonce primaire de dissolution ne sont pas retrouvées.",
       "statusBasis": "archived_official_plus_independent_status",
-      "contractAndRules": "FAQ indexée : reward conditionnée à conformité Terms/Customer Agreement, comptes simulés, KYC avant reward, diverses périodes de payout selon challenges; contrats actifs non accessibles.",
-      "payoutEvidenceFinding": "Ancienne crise de paiement documentée par la presse (2024), déclarations de la firme sur ses arriérés; aucun état de règlement des demandes historiques ni chaîne indépendante actuelle établi.",
-      "trustpilotFinding": "Historique de plaintes à contrôler sur le bon domaine, pas d'avis Trustpilot de masquage confirmé.",
+      "contractAndRules": "CGU indexées historiques: trading simulé, Customer Agreement et KYC conditionnent les récompenses; aucune version contractuelle funded 2026 accessible. Article de split/payout daté mai 2026 repris par tiers, sans garantie applicable aujourd'hui.",
+      "payoutEvidenceFinding": "La firme reconnaissait 900 demandes en attente en nov 2024 et 1272 en mars 2025 (Finance Magnates reprenant ses annonces); en mars 2025 elle revendiquait 386k USD de payouts, dont une liste a été rapprochée des mouvements Arbiscan par Finance Magnates. Preuve partielle de transferts blockchain, mais attribution au vendeur, programme et bénéficiaire final incomplète; état des arriérés 2026 inconnu.",
+      "trustpilotFinding": "Profil thefundedtraderprogram.com affiche TrustScore ~2,9/5 (21906 avis relevés), nouvelles plaintes 2026; pas de bannière officielle de retenue du TrustScore active constatée. Avis ≠ jugement ni paiement indépendamment attribué.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/thefundedtraderprogram.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -189,6 +189,21 @@
         {
           "url": "https://www.trustpilot.com/review/thefundedtraderprogram.com",
           "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/this-prop-firm-has-nearly-1300-traders-waiting-a-year-for-their-money/",
+          "kind": "presse_documentant_annonce_firme",
+          "label": "900 (nov 2024) -> 1272 (mars 2025) clients déclarés en attente"
+        },
+        {
+          "url": "https://www.financemagnates.com/forex/prop-firm-the-funded-trader-paid-traders-386k-in-march-could-have-earned-3x-more/",
+          "kind": "presse_avec_rapprochement_onchain",
+          "label": "March 2025 $386k declared and Arbiscan cross-check partial"
+        },
+        {
+          "url": "https://propfirmbeacon.com/news/the-funded-trader-site-offline-no-closure-notice",
+          "kind": "controle_independant_2026",
+          "label": "Nov 2026 direct HTTP 402 observation"
         }
       ],
       "remainingTasks": [
@@ -197,11 +212,14 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir statut des 900/1272 dossiers anciens: état des sommes réellement soldées et remises négociées.",
+        "Identifier à travers Rise / Arbiscan les entités payeuses, programmes, bénéficiaires et virement final sans diffuser de données privées."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md"
     },
     {
       "slug": "myforexfunds",
@@ -745,11 +763,11 @@
       "scorePublishedBefore": 56,
       "sourceDate": "2026-11-23",
       "statusFinding": "DOMAINE_HISTORIQUE_REDIRECT_INAPPROPRIÉ_REPRISE_NON_VERIFIÉE",
-      "statusEvidence": "nova-funding.com a renvoyé au contrôle vers une page de casino sans rapport. ATTENTION : novafunded.com est une marque actuelle DISTINCTE et dispose de sa propre FAQ, ne jamais lui attribuer les dettes ou CGU de Nova Funding.",
+      "statusEvidence": "Contrôle direct 23/11/2026 : nova-funding.com redirige vers un site de jeux sans lien avec la prop firm. PDFs 2024 signés au nom de Prop Trade Tech Pty Ltd (ABN 71 661 045 950) aussi cité dans le PDF Rocket21; registre australien: renommage en TRADESIM PTY LTD le 14/03/2025, ABN actif. Autre entité Prop Trade Tech LLC 2784 LLC 2022 nommée dans Website Terms, radiée officiellement à Saint-Vincent-et-les-Grenadines (Gazette 24/06/2025). Ne pas fusionner les personnes morales ni attribuer les dettes à Nova Funded.",
       "statusBasis": "current_redirect_plus_identity_separation",
-      "contractAndRules": "CGU Nova Funding 2024 à conserver comme document historique; impossible de prétendre qu'elles gouvernent une vente actuelle. La FAQ de Nova Funded mentionne des règles sévères mais concerne une autre firme.",
-      "payoutEvidenceFinding": "Aucun payout client récent du vendeur Nova Funding historique vérifié; réclamations historiques Trustpilot sans preuve bancaire indépendante.",
-      "trustpilotFinding": "Trustpilot nova-funding.com existant, avis contradictoires, aucune dissimulation du TrustScore confirmée.",
+      "contractAndRules": "PDF Nova 2024: §11 réussite challenge ≠ contrat funded garanti et Independent Contractor Agreement séparé; §12.2(g)(viii)/§12.3 discrétion sur stratégie, fermeture et perte de paiements; §18.5 droits acquis protégés sauf exception §12.3. Schedule sept 2024: split payouts 1/2/3+ à 50/70/80%; HFT/weekend autorisés challenge et interdits funded; consistance indiquée 'No' challenge dans tableau mais note 3 l'applique possiblement pendant l'évaluation, contradiction potentielle non résolue. Documents historiques uniquement.",
+      "payoutEvidenceFinding": "Site indexé promettait traitement 2-5 jours et liste de pourcentages, mais aucun payout final attribué au bon vendeur/compte et confirmé par tiers indépendant n'a été authentifié.",
+      "trustpilotFinding": "Trustpilot nova-funding.com ~2,2/5, 4448 avis au relevé, toujours affiché: aucun avis officiel de retenue du TrustScore constaté. Ne pas rapprocher automatiquement de novafunded.com.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/nova-funding.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -787,6 +805,21 @@
           "url": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf",
           "kind": "archive_code",
           "label": "SVG government gazette of struck-off Prop Trade Tech LLC"
+        },
+        {
+          "url": "https://portal.nova-funding.com/wp-content/uploads/Website-Terms-and-Conditions-Nova-Funding.pdf",
+          "kind": "contrat_historique_indexe_inaccessible_courant",
+          "label": "Site Terms formerly signed by Prop Trade Tech LLC 2784 LLC 2022"
+        },
+        {
+          "url": "https://nova-funding.com/wp-content/uploads/2024/08/Nova-Funding-SOA-09.09.2024.pdf",
+          "kind": "document_primaire_historique_indexe",
+          "label": "Nova Funding Sep 2024 program schedule and payouts 50/70/80"
+        },
+        {
+          "url": "https://portal.rocket21challenge.com/wp-content/uploads/Proptradetech-terms-and-conditions-Rocket21-2.pdf",
+          "kind": "contrat_primaire_historique_croise",
+          "label": "Rocket21 historic contract same Australian ABN"
         }
       ],
       "remainingTasks": [
@@ -795,11 +828,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Exiger reçus et contrats signés séparant Prop Trade Tech Pty Ltd (Australie/renommée TRADESIM) et Prop Trade Tech LLC (SVG/radiée).",
+        "Réconcilier incohérence sur consistency challenge dans annexe 2024 et date de mise en vigueur par produit.",
+        "Mettre à jour aussi dossier Rocket21 sur l'ABN australien et la LLC SVG sans transfert automatique des passifs."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md"
     },
     {
       "slug": "nations-trading",
@@ -1927,11 +1964,11 @@
       "scorePublishedBefore": 16,
       "sourceDate": "2026-11-23",
       "statusFinding": "FERMETURE_DECLAREE_PAR_ANNUAIRE_SANS_SOURCE_PRIMAIRE",
-      "statusEvidence": "thepropgame.com listé fermé par annuaire, statut d'entité et date de fermeture légale non vérifiés.",
+      "statusEvidence": "Contrôle direct 23/11/2026: site thepropgame.com renvoie erreur 502; observations tierces sep-oct 2026 signalent domaine parqué GoDaddy. Ancienne AML Policy officielle identifie Garuda Education and Training Pte Ltd (UEN 202342938C) Singapore. Répertoire ACRA repris par Companies.sg: société enregistrée active. HUMBPROP actuel affiche exactement le même UEN et le même nom légal mais aucune preuve de migration ou apurement des anciennes dettes n'est retrouvée.",
       "statusBasis": "secondary_closure_claim",
-      "contractAndRules": "Pas de CGU funded d'une offre actuelle récupérables.",
-      "payoutEvidenceFinding": "Pas de transfert final indépendant contrôlé.",
-      "trustpilotFinding": "Trustpilot du domaine exact à examiner; aucune preuve de warning actif.",
+      "contractAndRules": "Ancienne Refund Policy primaire: remboursement généralement exclu une fois les identifiants du compte simulé envoyés; exception sans trade à la discrétion de la firme et exclusion pour chargeback qualifié d'abusif. CGU funded The Prop Game non obtenues. HUMBPROP propose de demander par email l'intégralité de ses CGU: impossible de transposer à l'ancienne marque.",
+      "payoutEvidenceFinding": "Avis contradictoires sur ancien TNPL (dont un retrait $8000 refusé allégué en jan 2025, un autre reçu) sans preuve finale indépendante. HUMBPROP revendique des rewards mais ces déclarations ne prouvent pas les anciennes dettes réglées.",
+      "trustpilotFinding": "Profil thepropgame.com ~4,2/5 pour 35 avis au dernier relevé accessible; score affiché, pas de bannière officielle de retenue TrustScore constatée. Certains avis mis à jour en 2026 décrivent des expériences plus anciennes.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/thepropgame.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1963,6 +2000,26 @@
           "url": "https://mypropgenius.com/closed-firms/",
           "kind": "archive_code",
           "label": "The Prop Game documented expired domain"
+        },
+        {
+          "url": "https://www.thepropgame.com/aml-policy/",
+          "kind": "document_primaire_historique_indexe",
+          "label": "Garuda company identity UEN 202342938C"
+        },
+        {
+          "url": "https://www.thepropgame.com/refund_policy/",
+          "kind": "document_primaire_historique_indexe",
+          "label": "No refund after access and chargeback policy"
+        },
+        {
+          "url": "https://www.companies.sg/business/202342938C/GARUDA-EDUCATION-AND-TRAINING-PTE-LTD",
+          "kind": "registre_secondaire_sourcant_ACRA",
+          "label": "Company registry active, record observed Sep 2026"
+        },
+        {
+          "url": "https://humbprop.com/terms-of-service",
+          "kind": "source_primaire_marque_associee",
+          "label": "HUMBPROP current website same Garuda UEN, full terms on request"
         }
       ],
       "remainingTasks": [
@@ -1971,11 +2028,14 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Clarifier document de continuité entre The Prop Game et HUMBPROP et liste anonymisée de comptes historiques transférés ou non.",
+        "Obtenir contrat funded historique et totalité des CGU HUMBPROP, ainsi que preuves de payout indépendantes par produit."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md"
     },
     {
       "slug": "neg-markets",
