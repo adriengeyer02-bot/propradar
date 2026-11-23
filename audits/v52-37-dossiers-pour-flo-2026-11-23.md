@@ -456,6 +456,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte G, classement de recherche HOSTING_UNAVAILABLE_LEGAL_CLOSURE_UNCONFIRMED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Annexe détaillée :** [The Funded Trader / Nova Funding / The Prop Game](v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md). **Aucune nouvelle note V5.2 ni fermeture publique autorisée.**
+
+**Contre-audit 23/11/2026 (prévaut sur les constats initiaux) :** site et CGU retournent **HTTP 402** en contrôle direct, sans preuve de dissolution. [Finance Magnates (20/11/2024)](https://www.financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/) rapporte **900** demandes en attente déclarées, puis [Finance Magnates (03/03/2025)](https://www.financemagnates.com/forex/this-prop-firm-has-nearly-1300-traders-waiting-a-year-for-their-money/) **1 272** ; ce ne sont **pas** des chiffres de novembre 2026. [Revue du 27/03/2025](https://www.financemagnates.com/forex/prop-firm-the-funded-trader-paid-traders-386k-in-march-could-have-earned-3x-more/) : **386 000 USD** de payouts revendiqués, rapprochement partiel de mouvements on-chain par le journaliste, mais absence d'attribution indépendante complète au bon programme et bénéficiaire. [Trustpilot historique](https://www.trustpilot.com/review/thefundedtraderprogram.com) 2,9/5, avis actifs, pas de retenue de TrustScore pour guidelines constatée. Identité légale actuelle et contrat funded non authentifiés.
+
 ---
 
 ### 22. Traders With Edge — `traders-with-edge`
@@ -515,6 +520,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://nova-funding.com/) · [Source 2](https://www.trustpilot.com/review/nova-funding.com) · [Source 3](https://novafunded.com/faq/) · [Source 4](https://nova-funding.com/wp-content/uploads/2024/08/Terms-and-conditions-Nova-Funding-1.pdf) · [Source 5](https://abr.business.gov.au/AbnHistory/View?id=71661045950) · [Source 6](https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Annexe détaillée :** [The Funded Trader / Nova Funding / The Prop Game](v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md). **Aucune nouvelle note V5.2 ni fermeture publique autorisée.**
+
+**Contre-audit 23/11/2026 (prévaut sur les constats initiaux) :** ancien contrat 2024 **Prop Trade Tech Pty Ltd ABN 71 661 045 950**, le **même ABN contractuel que Rocket21** ; [ABR officiel](https://abr.business.gov.au/AbnHistory/View?id=71661045950) : renommage en **TRADESIM PTY LTD** le 14/03/2025, entité australienne active. **Autre entité juridique :** anciennes Website Terms **Prop Trade Tech LLC 2784 LLC 2022**, officiellement radiée à Saint-Vincent-et-les-Grenadines par [Gazette 24/06/2025, p.419](https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf). Pas de fusion des passifs ni attribution automatique à la société australienne. [Annexe produit 09/09/2024](https://nova-funding.com/wp-content/uploads/2024/08/Nova-Funding-SOA-09.09.2024.pdf) : split **50/70/80 %** selon payout, HFT/weekend autorisés challenge mais interdits funded, potentiel conflit « consistance No » dans le tableau vs note 3. [CGU §12.2(g)(viii)/§12.3](https://nova-funding.com/wp-content/uploads/2024/08/Terms-and-conditions-Nova-Funding-1.pdf) discrétion stratégique et perte de paiements. Domaine actuel redirigé vers jeux sans rapport, **novafunded.com distinct**. Aucun A3 final authentifié.
 
 ---
 
@@ -735,6 +745,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://thepropgame.com/) · [Source 2](https://fundedminds.com/firm/the-prop-game.html) · [Source 3](https://www.trustpilot.com/review/thepropgame.com) · [Source 4](https://mypropgenius.com/closed-firms/).
 
 *Reprise du dossier F/G : cohorte G, classement de recherche THIRD_PARTY_CLOSED_PRIMARY_NOT_VERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Annexe détaillée :** [The Funded Trader / Nova Funding / The Prop Game](v52-deep-dive-the-funded-trader-nova-funding-the-prop-game-2026-11-23.md). **Aucune nouvelle note V5.2 ni fermeture publique autorisée.**
+
+**Contre-audit 23/11/2026 (prévaut sur les constats initiaux) :** ancienne [AML Policy officielle](https://www.thepropgame.com/aml-policy/) : **Garuda Education and Training Pte Ltd, UEN 202342938C** ; [registre ACRA repris par Companies.sg](https://www.companies.sg/business/202342938C/GARUDA-EDUCATION-AND-TRAINING-PTE-LTD) : **société active** ; nouveau site [HUMBPROP](https://humbprop.com/terms-of-service) indique **exactement le même UEN et nom légal**, mais aucun document ne confirme la reprise des comptes ou dettes The Prop Game. Site historique en HTTP 502 aujourd'hui, parqué chez GoDaddy selon contrôles tiers 2026 ; pas une dissolution légale. [Refund Policy historique](https://www.thepropgame.com/refund_policy/) : pas de remboursement en principe après fourniture des accès, exceptions discrétionnaires sans trade, sanctions pour chargeback qualifié d'abusif ; aucun funded agreement historique trouvé. [Trustpilot](https://www.trustpilot.com/review/thepropgame.com) 4,2/5, 35 avis lors du relevé, pas de retenue officielle. A3 final inconnu.
 
 ---
 
