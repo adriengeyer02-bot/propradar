@@ -511,7 +511,7 @@ export const guideArticles: Record<string, GuideArticle> = {
       {
         heading: 'Payouts',
         paragraphs: [
-          'The published standard split is **80%**, but upgrades, payout cycles and account cohorts differ. The updated help center lists a **$100 minimum payout request** and **2% processing fee**. The first two rewards may be capped at the lower of **6% of initial balance or $10,000**; for **$5K 2-Step accounts purchased from July 25, 2026**, the limit is **4%**. Payment options include Rise, bank transfer, Skrill and crypto, each with its own per-request cap.',
+          'The published standard split is **80%**, but upgrades, payout cycles and account cohorts differ. The updated help center lists a **$100 minimum payout request** for most models (**$35 for Goat 1$ accounts**) and a **2% processing fee**. The first two rewards may be capped at the lower of **6% of initial balance or $10,000**; for **$5K 2-Step accounts purchased from July 25, 2026**, the limit is **4%**. Payment options include Rise, bank transfer, Skrill and crypto, each with its own per-request cap.',
           'The help center checked on **November 23, 2026** says requests are processed within **2 business days**, subject to first-payout KYC, a signed Trader Agreement and possible risk-team review. A processing promise is **not independently verified final bank receipt**; confirm the contract and funded product at purchase.',
         ],
         stats: [
