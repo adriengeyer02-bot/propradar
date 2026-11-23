@@ -1,5 +1,6 @@
 import {
   PARTNER_OFFERS,
+  FTMO_AFFILIATE_URL,
   BLUE_GUARDIAN_AFFILIATE_URL,
   BLUE_GUARDIAN_PROMO_CODE,
   E8_AFFILIATE_URL,
@@ -19,7 +20,7 @@ import {
 } from './propFirms';
 import { isProgramPromotionCurrent, programPromotions } from './programPromotions';
 
-export const PROMO_REVIEW_DATE = '2026-11-14';
+export const PROMO_REVIEW_DATE = '2026-11-23';
 
 export type PromoProofLevel = 'Official' | 'PropRadar affiliate' | 'Confirm at checkout' | 'Good deal without code';
 export type PromoCategory = 'code' | 'affiliate' | 'official-discount' | 'price-opportunity' | 'futures';
@@ -47,6 +48,8 @@ export type PromoDeal = {
   checkoutTip?: string;
   featured?: boolean;
   heroRank?: number;
+  /** Source-checked seasonal offer, never an editorial firm rating. */
+  blackFriday?: boolean;
   /** Exact sourced before/after price for the named challenge; never extrapolate to other plans. */
   priceExample?: { plan: string; accountSize: number; currency: 'USD' | 'EUR' | 'GBP'; before: number; after: number; checkedOn: string; sourceUrl: string };
   /** Exact expiration, so a seasonal offer is not published after it ends. */
@@ -1087,6 +1090,143 @@ const allPromoDeals: PromoDeal[] = [
   },
 ];
 
+/** Black Friday 2026 — verified on primary firm pages on 23 Nov, no coupon-site inference.
+ * Public and partner offers share the same ranking inputs; score remains editorially independent.
+ * Undated sales age out after seven days unless the primary source is rechecked.
+ */
+const blackFridayDeals: PromoDeal[] = [
+  {
+    slug: 'ftmo', label: 'Black Friday · partner link', blackFriday: true, featured: true, heroRank: 1,
+    title: 'FTMO Black Friday: 2-Step 100K €540 → €432; up to 30% on eligible accounts',
+    priceExample: { plan: '2-Step Standard', accountSize: 100000, currency: 'EUR', before: 540, after: 432, checkedOn: '2026-11-23', sourceUrl: 'https://promo.ftmo.com/special-november-deal-2026/' },
+    code: 'No code', value: 'Up to 30%', category: 'affiliate', proofLevel: 'Official', availability: 'Active official offer',
+    validity: 'Official Black Friday campaign checked 23 November 2026. End date not stated; account and country eligibility confirmed at order.',
+    eligibility: 'FTMO Standard Challenges from $10K to $200K; 2-Step 100K €540 → €432 (20%), 2-Step 10K €89 → €62 (about 30%). Not all plans get 30%.',
+    sourceUrl: FTMO_AFFILIATE_URL, sourceLabel: 'Official FTMO Black Friday campaign; PropRadar partner link',
+    sourceNote: 'Offer prices and restrictions sourced from https://promo.ftmo.com/special-november-deal-2026/ on 2026-11-23. The outbound affiliate link never affects the ranking.',
+    consumerVerdict: 'Clear, size-specific published prices. The 2-Step fee can be refunded with the first eligible reward, while 1-Step and Instant fees are not refunded.',
+    caveats: ['30% is the maximum, not the 100K discount (20%)', 'Standard accounts and eligible countries only', 'Affiliate link disclosed; score unaffected'],
+    bestFor: ['forex', 'CFD', 'established firm', 'Black Friday'], checkoutTip: 'Choose the precise account size and compare the checkout price with the published €432 / €540 100K example.'
+  },
+  {
+    slug: 'fxify', label: 'Black Friday · official vs partner', blackFriday: true, featured: true, heroRank: 2,
+    title: 'FXIFY BLACK35: 35% off eligible programs (better than our 25% code)',
+    code: 'BLACK35', value: '35%', category: 'official-discount', proofLevel: 'Official', availability: 'Active official offer',
+    validity: '17 Nov–9 Dec 2026 at 23:59 EST; up to three uses per trader.',
+    eligibility: 'All programs except Instant Funding Lite, including the limited One Step Static.',
+    sourceUrl: FXIFY_AFFILIATE_URL, sourceLabel: 'FXIFY official November code and PropRadar partner link',
+    sourceNote: 'Official terms: https://fxify.com/blog/best-current-prop-firm-discount-codes-november-2026/ (18 November 2026), checked on 23 Nov.',
+    consumerVerdict: 'Choose the public 35% code rather than the weaker 25% PropRadar partner code. Profit-split add-ons and challenge rules still matter.',
+    caveats: ['Instant Funding Lite excluded', 'Three redemptions max', 'FXIFY partner relationship is disclosed and does not affect ratings'],
+    bestFor: ['forex', 'CFD', 'Black Friday'], checkoutTip: 'Apply BLACK35 first, verify the discounted amount, and do not stack coupons.',
+    expiresAt: '2026-12-10T04:59:00Z'
+  },
+  {
+    slug: 'audacity-capital', label: 'Black Friday · official code', blackFriday: true, featured: true, heroRank: 3,
+    title: 'Audacity BF50: 50% on Ability 2-Step; 30% on 1-Step and Instant',
+    code: 'BF50', value: '50%', category: 'code', proofLevel: 'Official', availability: 'Active official offer',
+    validity: 'Official homepage banner checked 23 Nov 2026; no end date provided.',
+    eligibility: '50% on Ability Challenge 2-Step; 30% on Ability Challenge 1-Step and FTP Instant Funding; not a blanket 50%.',
+    sourceUrl: 'https://audacity.capital/', sourceLabel: 'Audacity Capital official Black Friday offer',
+    sourceNote: 'https://audacity.capital/ prominently displayed BF50 and program-specific discounts on 23 Nov 2026; no order completed.',
+    consumerVerdict: 'A substantial official price reduction, but compare the underlying payout, drawdown and fee terms for the specific Ability plan.',
+    caveats: ['50% applies to 2-Step, not Instant', 'End date not published', 'Check exact selected plan before checkout'],
+    bestFor: ['forex', 'CFD', 'Black Friday'], checkoutTip: 'Enter BF50 and verify which of the 50% / 30% variants applies to the cart.'
+  },
+  {
+    slug: 'tradeify', label: 'November deal · official', blackFriday: true, featured: true, heroRank: 4,
+    title: 'Tradeify NOV: 45% off eligible 25K; 30% across other eligible futures plans',
+    code: 'NOV', value: 'Up to 45%', category: 'futures', proofLevel: 'Official', availability: 'Active official offer',
+    validity: 'Ends 30 November 2026 at 23:59 EST (official site).',
+    eligibility: '45% on eligible 25K accounts except Miami; 30% on other applicable futures offers. Resets and funded-stage fees are separate.',
+    sourceUrl: 'https://tradeify.co/', sourceLabel: 'Tradeify official November banner',
+    sourceNote: 'https://tradeify.co/ officially advertises 30% with NOV and 45% for eligible 25K accounts, excluding Miami, through 30 November.',
+    consumerVerdict: 'Attractive for futures, but a discount on an evaluation does not change funded payout rules or recurring fees.',
+    caveats: ['Miami plan excluded from the 45% offer', 'Confirm monthly renewal vs one-time fee', 'Separate funded rules'],
+    bestFor: ['futures', 'Black Friday'], checkoutTip: 'Use NOV on the exact futures program and compare total cost.',
+    expiresAt: '2026-12-01T04:59:00Z'
+  },
+  {
+    slug: 'aquafunded', label: 'Black Friday · official', blackFriday: true, featured: true, heroRank: 5,
+    title: 'AquaFunded BLACKFRIDAY: 35% off eligible accounts',
+    code: 'BLACKFRIDAY', value: '35%', category: 'code', proofLevel: 'Official', availability: 'Active official offer',
+    validity: 'Live on official homepage checked 23 Nov 2026; no verified end date.',
+    eligibility: 'Official banner says 35% off every account; verify model-specific exclusions and add-ons at checkout.',
+    sourceUrl: 'https://www.aquafunded.com/', sourceLabel: 'AquaFunded official site',
+    sourceNote: 'https://www.aquafunded.com/ displayed 35% and BLACKFRIDAY on 23 November 2026; no checkout submitted.',
+    consumerVerdict: 'The discount is sourced; it is not an endorsement of the funded contract or payout protections.',
+    caveats: ['Check discount on the chosen account', 'Payout and discretionary clauses deserve separate scrutiny'],
+    bestFor: ['forex', 'CFD', 'futures', 'Black Friday'], checkoutTip: 'Enter BLACKFRIDAY, check total and read the relevant funded rules.'
+  },
+  {
+    slug: 'topstep', label: 'Friendsgiving · referral, not a universal code', blackFriday: true, featured: true, heroRank: 6,
+    title: 'Topstep Friendsgiving: 50% off a NEW trader’s first purchase using a current trader’s referral',
+    code: 'Trader referral', value: '50%', category: 'futures', proofLevel: 'Official', availability: 'Active official offer',
+    validity: 'Topstep announcement 16 November 2026; no campaign end date published.',
+    eligibility: 'New Topstep customer only. Obtain a personal referral code from an existing trader; they earn a 50% reward on their next eligible purchase (excludes Back2Funded).',
+    sourceUrl: 'https://www.topstep.com/friendsgiving', sourceLabel: 'Topstep official Friendsgiving campaign',
+    sourceNote: 'https://www.topstep.com/blog/friendsgiving-topstep-discount published 16 November 2026; no public universal coupon exists for this campaign.',
+    consumerVerdict: 'Genuine 50% reduction for first-time customers if you have a real trader referral. Do not use fabricated coupon codes.',
+    caveats: ['Only new customers', 'A genuine existing-trader referral is required', 'Cannot stack affiliate/promo coupons'],
+    bestFor: ['futures', 'new customer', 'Black Friday'], checkoutTip: 'Ask a current Topstep trader for a personal referral code, then check the first-purchase total.'
+  },
+  {
+    slug: 'e8-markets', label: 'Official promotion · affiliate link', blackFriday: true, featured: true, heroRank: 7,
+    title: 'E8 Markets E8ARC: 30% off selected Classic Markets (100K example $488 → $342)',
+    priceExample: { plan: 'E8 One Classic Markets 100K', accountSize: 100000, currency: 'USD', before: 488, after: 342, checkedOn: '2026-11-23', sourceUrl: 'https://e8markets.com/d/E8' },
+    code: 'E8ARC', value: '30%', category: 'affiliate', proofLevel: 'Official', availability: 'Verify at checkout',
+    validity: 'No published expiration. Primary discount page checked 23 Nov 2026; different landing pages show different codes.',
+    eligibility: 'Only E8 One / E8 Pro Classic Markets according to the published E8ARC table. Product, campaign and account size can change the price.',
+    sourceUrl: E8_AFFILIATE_URL, sourceLabel: 'E8 official discount codes with PropRadar affiliate landing',
+    sourceNote: 'E8 official codes page https://e8markets.com/e8-markets-discount-code and a 30%-off $488 → $342 configuration at https://e8markets.com/d/E8; E8ARC availability needs checkout confirmation.',
+    consumerVerdict: 'Good potential Classic Markets discount; checkout variations mean the exact 30% must be checked before describing it as applied.',
+    caveats: ['Public code/landing variants differ', 'Only Classic Markets', 'Partner link does not affect score'],
+    bestFor: ['forex', 'CFD', 'Black Friday'], checkoutTip: 'Test E8ARC for your selected Classic Markets plan. If the checkout does not show 30%, do not claim the discount.'
+  },
+  {
+    slug: 'top-one-trader', label: 'Black November · official', blackFriday: true, heroRank: 8,
+    title: 'Top One Trader BLACKFRIDAY: up to 80% depending on plan',
+    code: 'BLACKFRIDAY', value: 'Up to 80%', category: 'code', proofLevel: 'Official', availability: 'Verify at checkout',
+    validity: 'Official November homepage displays the offer; no fixed public end date.',
+    eligibility: 'The maximum percentage only applies to selected 5K and Instant models; confirm the other sizes individually.',
+    sourceUrl: 'https://www.toponetrader.com/', sourceLabel: 'Top One Trader official Black November offer',
+    sourceNote: 'https://www.toponetrader.com/ displayed BLACKFRIDAY and up to 80% on 23 November 2026.',
+    consumerVerdict: 'Big headline discount, but the product size, payout terms and price after promotional period matter more than the badge.',
+    caveats: ['Up to, not all sizes', 'Selected Instant models only for the top reduction', 'Verify actual price'],
+    bestFor: ['forex', 'CFD', 'Black Friday'], checkoutTip: 'Confirm the specific account discount and compare funded-stage terms.'
+  },
+  {
+    slug: 'top-one-futures', label: 'Black November · official', blackFriday: true, heroRank: 9,
+    title: 'Top One Futures BLACKFRIDAY: 55% off Elite Daily / 60% on eligible Ignite',
+    code: 'BLACKFRIDAY', value: 'Up to 60%', category: 'futures', proofLevel: 'Official', availability: 'Verify at checkout',
+    validity: 'Live Black November banner observed 23 Nov 2026; end date not specified.',
+    eligibility: '55% off eligible Elite Daily and up to 60% on Ignite Instant Funded; selected Elite Daily 100K price cards show $398 → $179; other plans and activation charges differ.',
+    sourceUrl: 'https://www.toponefutures.com/', sourceLabel: 'Top One Futures official Black November banner',
+    sourceNote: 'https://www.toponefutures.com/ advertised BLACKFRIDAY for eligible plans on 23 Nov 2026; account card snapshot can depend on campaign landing page.',
+    consumerVerdict: 'Strong futures headline discount but read activation fees and funded account conditions separately.',
+    caveats: ['Percent differs by product', 'Activation and reset costs separate', 'Confirm campaign and price at checkout'],
+    bestFor: ['futures', 'Black Friday'], checkoutTip: 'Apply BLACKFRIDAY and verify the line-item price before paying.'
+  },
+  {
+    slug: 'apex-trader-funding', label: 'Official coupon · eligibility caution', blackFriday: true,
+    title: 'Apex SAVENOW: evaluations up to 90% off; activation and resets NOT included',
+    code: 'SAVENOW', value: 'Up to 90%', category: 'futures', proofLevel: 'Official', availability: 'Verify at checkout',
+    validity: 'Official coupon page observed November 2026, limited-time rate with no fixed cutoff.',
+    eligibility: 'Only new evaluation purchases, not existing subscriptions, PA activation fees or resets.',
+    sourceUrl: 'https://apextraderfunding.com/coupon-code/', sourceLabel: 'Apex official coupon policy',
+    sourceNote: 'https://apextraderfunding.com/coupon-code/ advertises up to 90% and SAVENOW; verify the live checkout timer and the precise account model.',
+    consumerVerdict: 'Do not compare the discounted evaluation fee alone: funded activation, resets and payout restrictions can dominate total cost.',
+    caveats: ['No PA activation-fee waiver', 'Not retroactive', 'Check payout and consistency restrictions'],
+    bestFor: ['futures', 'Black Friday'], checkoutTip: 'Compare the complete cost after evaluation, not only the initial coupon rate.'
+  }
+];
+const BLACK_FRIDAY_UNDATED_FRESHNESS_MS = 7 * 24 * 60 * 60 * 1000;
+function blackFridayCurrent(deal: PromoDeal, now = Date.now()): boolean {
+  if (!deal.blackFriday) return true;
+  if (deal.expiresAt) return now < Date.parse(deal.expiresAt);
+  return now < Date.parse(PROMO_REVIEW_DATE + 'T23:59:59Z') + BLACK_FRIDAY_UNDATED_FRESHNESS_MS;
+}
+
 /** Reuse the same sourced, dated offer record for program cards and the promo board. */
 const spotlightIds = new Set(['fxify-black35-2026', 'tradeify-nov-2026', 'funderpro-bf30-2026', 'fundedtradingplus-size20-2026']);
 const spotlightDeals: PromoDeal[] = programPromotions
@@ -1113,8 +1253,9 @@ const spotlightDeals: PromoDeal[] = programPromotions
   }));
 
 /** Do not display ended or withdrawn promotions. */
-export const promoDeals: PromoDeal[] = [...allPromoDeals, ...spotlightDeals]
-  .filter((deal) => !deal.notSeenOn && (!deal.expiresAt || Date.now() < Date.parse(deal.expiresAt)));
+const seasonalKeys = new Set(blackFridayDeals.map((deal) => deal.slug + ':' + deal.code.toLowerCase()));
+export const promoDeals: PromoDeal[] = [...blackFridayDeals, ...allPromoDeals.filter((deal) => !seasonalKeys.has(deal.slug + ':' + deal.code.toLowerCase())), ...spotlightDeals.filter((deal) => !seasonalKeys.has(deal.slug + ':' + (deal.code ?? '').toLowerCase()))]
+  .filter((deal) => !deal.notSeenOn && (!deal.expiresAt || Date.now() < Date.parse(deal.expiresAt)) && blackFridayCurrent(deal));
 
 /** Deals withdrawn from the page because the official source no longer shows them. */
 export const withdrawnPromoDeals: PromoDeal[] = allPromoDeals.filter((deal) => Boolean(deal.notSeenOn));
@@ -1200,24 +1341,21 @@ const isPartner = (slug: string) => slug in PARTNER_OFFERS;
 export function getBestPromoDeals(limit = 12) {
   return promoDeals
     .map((deal) => promoDealWithFirm(deal))
-    .sort((a, b) => Number(isPartner(b.slug)) - Number(isPartner(a.slug)) || b.dealScore - a.dealScore)
+    .sort((a, b) => Number(Boolean(b.blackFriday)) - Number(Boolean(a.blackFriday)) || Number(isPartner(b.slug)) - Number(isPartner(a.slug)) || (a.heroRank ?? 99) - (b.heroRank ?? 99) || b.dealScore - a.dealScore)
     .slice(0, limit);
 }
 
 /** Top of /promos: one offer per partner firm first (best deal score), then the other featured official offers. */
-export function getMegaPromoDeals(limit = 4) {
-  // The best verified public discount takes precedence over a weaker affiliate code.
-  const percent = (value: string) => value.includes('%') ? Number(value.match(/\d+/)?.[0] ?? 0) : 0;
-  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal))
-    .sort((a, b) => percent(b.value) - percent(a.value) || b.dealScore - a.dealScore);
-  const partners: typeof ranked = [];
-  for (const deal of ranked) {
-    if (isPartner(deal.slug) && !partners.some((item) => item.slug === deal.slug)) partners.push(deal);
-  }
-  const others = ranked
-    .filter((deal) => !isPartner(deal.slug) && deal.featured && deal.availability === 'Active official offer')
+export function getMegaPromoDeals(limit = 6) {
+  // Independently source-verified Black Friday deals first. Partner relationships
+  // are disclosed on outbound links, but they do not alter a firm's risk score.
+  const seasonal = promoDeals.filter((deal) => deal.blackFriday && deal.featured)
+    .map((deal) => promoDealWithFirm(deal))
     .sort((a, b) => (a.heroRank ?? 99) - (b.heroRank ?? 99) || b.dealScore - a.dealScore);
-  return [...partners, ...others].slice(0, limit);
+  if (seasonal.length) return seasonal.slice(0, limit);
+  const ranked = promoDeals.map((deal) => promoDealWithFirm(deal))
+    .sort((a, b) => Number(isPartner(b.slug)) - Number(isPartner(a.slug)) || b.dealScore - a.dealScore);
+  return ranked.slice(0, limit);
 }
 
 export function getBudgetPromoShortlist(limit = 12) {
