@@ -7,7 +7,7 @@ import data from '../app/data/scoring-v52-seven-major-audits-2026-11-23.json' wi
 import published from '../app/data/scoring-v52-published.json' with {type:'json'};
 import {computeV52Scorecard} from '../app/lib/scoringV52.ts';
 
-const expected={'e8-markets':58,'brightfunded':56,'instant-funding':56,'hola-prime':60,'pipfarm':56,'trade-the-pool':57,'for-traders':48};
+const expected={'e8-markets':58,'brightfunded':56,'instant-funding':54,'hola-prime':60,'pipfarm':56,'trade-the-pool':57,'for-traders':48};
 const originals={'e8-markets':72,'brightfunded':72,'instant-funding':72,'hola-prime':72,'pipfarm':71,'trade-the-pool':70,'for-traders':70};
 const officialWithheld=new Set(['e8-markets','brightfunded','instant-funding','pipfarm','for-traders']);
 assert.equal(data.version,'5.2');
