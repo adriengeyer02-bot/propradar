@@ -1371,12 +1371,12 @@
       "firm": "GetCryptoFunded",
       "scorePublishedBefore": 54,
       "sourceDate": "2026-11-23",
-      "statusFinding": "DOMAINE_INACCESSIBLE_FERMETURE_NON_CONFIRMÉE",
-      "statusEvidence": "getcryptofunded.com signalé hors DNS septembre 2026, aucun avis officiel de dissolution trouvé. Ne pas supposer le devenir d'une société à partir d'un DNS.",
+      "statusFinding": "DOMAINE_HTTP502_2026_VENDEUR_FZCO_ATTRIBUE_PAR_TIERS_NON_CERTIFIE",
+      "statusEvidence": "Contrôle 23/11/2026 getcryptofunded.com et /terms-and-conditions HTTP502; PropRubric 29/09/2026 déjà unreachable sans source officielle de fermeture. PropFirmBook et TheTrustedProp nomment GCF Technologies FZCO Dubai, sans extrait de registre ni CGU/facture attribuables vérifiés; il est interdit d'annoncer une dissolution.",
       "statusBasis": "dated_secondary_dns_down",
-      "contractAndRules": "Terms non récupérées dans ce contrôle.",
-      "payoutEvidenceFinding": "Aucune attestation indépendante finale du programme GetCryptoFunded.",
-      "trustpilotFinding": "Trustpilot de nom exact non trouvé avec notice explicite; non vérifiable.",
+      "contractAndRules": "Aucune CGU ni funded agreement exact authentifiés 2026. Page Trustpilot rédigée par société présente plusieurs classes multi-asset et claim 'up to 95%'; vieux comparateurs mentionnent jusqu'à 90% et programmes 1/2/3-step, ces allégations historiques non attribuables au même produit ou version.",
+      "payoutEvidenceFinding": "Trustpilot 7 avis tous 1 étoile en 2025 : comptes achetés non délivrés, accès dashboard bloqué, challenge réussi mais funded non envoyé, support silencieux (allégations, souvent liées à livraison service et non à payout). Aucun retrait final indépendamment vérifié, aucun incident A2 de paiement quantifié.",
+      "trustpilotFinding": "Profil exact getcryptofunded.com montre TrustScore 2,3/5 pour 7 avis, 100% une étoile et aucun avis durant les douze derniers mois. TrustScore visible, aucune sanction de retenue pour breach of guidelines observée, -6 non fondé.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/getcryptofunded.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1406,6 +1406,21 @@
         {
           "url": "https://www.trustpilot.com/review/getcryptofunded.com",
           "kind": "trustpilot_profile_to_verify_current_notice"
+        },
+        {
+          "url": "https://propfirmbook.com/unverified/getcryptofunded",
+          "kind": "secondaire_2026_venue_non_confirme",
+          "label": "July 2026 review cites GCF Technologies FZCO, no primary registry established"
+        },
+        {
+          "url": "https://thetrustedprop.com/prop-firms/get-crypto-funded",
+          "kind": "secondaire_operateur",
+          "label": "GCF Technologies FZCO attribution unverified"
+        },
+        {
+          "url": "https://proprubric.com/crypto/",
+          "kind": "controle_secondaire_domaine_2026",
+          "label": "GetCryptoFunded unreachable 29 Sep 2026, no closure source"
         }
       ],
       "remainingTasks": [
@@ -1414,23 +1429,27 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir contrat, reçus et extrait du registre GCF Technologies FZCO UAE pour établir le vendeur précis.",
+        "Départager fourniture de comptes/funded et paiements de rewards, avec tickets datés et transactions finales indépendantes.",
+        "Établir si le checkout a rouvert et quelle version des CGU était applicable aux défis 1/2/3 étapes."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md"
     },
     {
       "slug": "myfxcapital",
       "firm": "MyFxCapital",
       "scorePublishedBefore": 45,
       "sourceDate": "2026-11-23",
-      "statusFinding": "VENTE_ACTUELLE_NON_VÉRIFIÉE",
-      "statusEvidence": "Le domaine myfxcapital.com/terms-and-conditions inaccessible en lecture actuelle; pas de vendeur juridique autonome validé. NE PAS CONFONDRE MyFXFunding (autre domaine sur Trustpilot).",
+      "statusFinding": "SITE_HTTP502_US_REGISTRATION_REVENDIQUEE_NON_RECROUPEE_PAYOUTS_CONTESTES",
+      "statusEvidence": "Contrôle 23/11/2026 myfxcapital.com et /terms-and-conditions HTTP502, aucune offre checkout ou fermeture juridique actuelle vérifiée. Trustpilot entreprise répond 08/09/2025 être US-registered et payeuse de milliers de récompenses, mais sans numéro État/registrar ni documents bancaires; adresse publique Las Vegas auto-déclarée.",
       "statusBasis": "unavailable_primary_domain",
-      "contractAndRules": "Pas de contrat funded 2026 vérifiable. Identité, modifications et droits aux profits acquis indéterminés.",
-      "payoutEvidenceFinding": "Avis sur Trustpilot myfxcapital.com existent, mais ne constituent pas authentification de payouts finaux.",
-      "trustpilotFinding": "Profil myfxcapital.com à consulter, score/masquage exact non reconfirmé; exclure myfxfunding.com (homonyme).",
+      "contractAndRules": "Trustpilot 12/09/2025 Direct Funding : trader allègue 20 trades >=3min conformes + 2 sous 3min et payout refusé; réponse de MyFx 16/09 dit >12 infractions et compte actif. 04/09/2025 2-step : autre trader allègue Win Rate Profitability Score malgré marketing sans consistency et changement seuil 40->25%; réponse 08/09 nie consistency sur challenge, non sur funded. Autre avis 08/08 allègue règle 3min affichée après trades; preuve de changement rétroactif non authentifiée. Exiger contrats signés de bonne phase, logs, captures horodatées et procédure recours avant sanction B1/B2; pas de double compte.",
+      "payoutEvidenceFinding": "Réponse officielle 2025 revendique milliers de payouts US-registered sans audit externe; avis contradictoires (12h payout, refus/retards) et avis 2026 sur serveurs inactifs/support, aucun échantillon bancaire ou onchain A3 independamment attribué au bon vendeur/programme.",
+      "trustpilotFinding": "Trustpilot exact myfxcapital.com 2,7/5 (46 avis), TrustScore actif et avis tardifs 2025-2026. Aucun avis officiel en cours de rétention du TrustScore pour breach of guidelines, -6 non fondé. Pas de transfert des avis myfxfunding.com, homonyme.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/myfxcapital.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1463,6 +1482,11 @@
           "url": "https://t.me/s/myfxcapitalofficial",
           "kind": "archive_code",
           "label": "Older MyFxCapital first-party Telegram marketing, not an active contract"
+        },
+        {
+          "url": "https://propfirmmatch.com/unlisted-prop-firms/myfxcapital",
+          "kind": "annuaire_non_liste_pas_audit_independant",
+          "label": "Company unlisted, 2025 launch detail, no evidence of compliance"
         }
       ],
       "remainingTasks": [
@@ -1471,11 +1495,16 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Demander numéro d'immatriculation de l'État US et nom du vendeur identique sur facture, contrat et paiement.",
+        "Obtenir CGU signées Direct Funding et 2-Step, date d'application de la règle 3 minutes et Win Rate Profitability Score.",
+        "Documenter logs pour cas contestés et droit au recours, distinguer payout refusé et simple refus de compte funded.",
+        "Vérifier enregistrements de payout indépendants, et état du site, des serveurs et du support en novembre 2026."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md"
     },
     {
       "slug": "alphaproptraders",
@@ -1920,12 +1949,12 @@
       "firm": "My Crypto Funding",
       "scorePublishedBefore": 29,
       "sourceDate": "2026-11-23",
-      "statusFinding": "SITE_HISTORIQUE_INACCESSIBLE_DANGER_HOMONYMES",
-      "statusEvidence": "mycryptofunding.org indisponible pendant lecture; site mycryptofund.com appartient à une autre marque. Les antécédents de pubs ne prouvent pas reprise de l'opérateur.",
+      "statusFinding": "SOCIETE_NOM_EQUIVALENT_UK_ACTIVE_STRIKEOFF_2026_SUSPENDU_DOMAINE_ORG_INACTIF",
+      "statusEvidence": "Companies House MY CRYPTO FUNDING LTD 15795471 statut ACTIVE, constituée 22/06/2024 ; comptes arrêtés au 29/06/2025 en retard (échéance 22/09/2026). GAZ1 compulsory strike-off 29/09/2026, confirmation statement 27/10, DISS40 strike-off discontinued 28/10/2026. Communiqué commercial Decrypt/Chainwire 11/04/2025 revendique My Crypto Funding Ltd UK, suggère lien à la marque mycryptofunding.org mais reçu/CGU n°UK non validés. Domaine historique 502 en navigation 23/11 et DNS signalé indisponible depuis sep 2026, sans preuve de dissolution du vendeur. mycryptofund.com appartient à offre distincte YSF Tech Limited BVI; ne pas fusionner.",
       "statusBasis": "unreachable_historical_site",
-      "contractAndRules": "CGU du domaine historique non récupérées aujourd'hui; ancien dossier classifie lots, bots, VPN, pays, discrétion mais ne justifie pas un malus sans version contractuelle présente.",
-      "payoutEvidenceFinding": "Aucune preuve indépendante de transfert final depuis le vendeur original; ne pas attribuer les versements de MyCryptoFund.",
-      "trustpilotFinding": "Profil Trustpilot et éventuel retrait de TrustScore non vérifiés pour la marque historique exacte.",
+      "contractAndRules": "Homepage ancienne indexée mycryptofunding.org : 2-step objectifs 10%/5%, DD daily 4-5%, DD total 8-10%, 80-90% split selon add-on, 15 jours traded et 3 jours +0.5% pour payout standard, parfois on-demand. Instant : daily 3%, trailing 6%, 30x, consistency best day 15% si on-demand OU pas de consistency et 15 jours (min 4 jours tradés); news high impact ±2m interdites sans add-on, weekend non-crypto conditionné à option. Pas de CGU/contrat funded 2026 accessible. Prix 4980 USDT et target 60% du domaine mycryptofund.com ne concernent PAS cette marque.",
+      "payoutEvidenceFinding": "Payouts 'average two hours' et split 80-90% revendiqués dans homepage historique, pas de preuve finale à 6 éléments pour un compte signé de mycryptofunding.org. Communiqué prix 2025 est une publication promotionnelle et non un audit de récompenses réellement encaissées.",
+      "trustpilotFinding": "Profil Trustpilot exact mycryptofunding.org non confirmé accessible ; éviter profils mycryptofunds.com, mycryptofund.com ou autres homonymes. Aucune retenue officielle du TrustScore pour manquement aux guidelines démontrée, -6 non fondé.",
       "trustpilotExactProfile": null,
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1962,6 +1991,26 @@
           "url": "https://decrypt.co/314495/my-crypto-funding-wins-best-trading-conditions-among-crypto-prop-firms",
           "kind": "archive_code",
           "label": "Decrypt (Chainwire release, 11 Apr 2025): My Crypto Funding, mycryptofunding.org"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15795471",
+          "kind": "registre_primaire_uk",
+          "label": "MY CRYPTO FUNDING LTD active, 2026 overdue accounts"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15795471/filing-history",
+          "kind": "registre_primaire_uk",
+          "label": "GAZ1 Sep 29 and DISS40 Oct 28 strike-off stopped"
+        },
+        {
+          "url": "https://mycryptofund.com/faq/2",
+          "kind": "autre_societe_ne_pas_confondre",
+          "label": "YSF Tech Limited BVI associated with mycryptofund.com, not same company evidence"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/mycryptofunding.org",
+          "kind": "profil_exact_non_confirme",
+          "label": "Trustpilot exact domain not validated; do not import similarly-named profile"
         }
       ],
       "remainingTasks": [
@@ -1970,11 +2019,16 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir factures et termes signés reliant l'ancien domaine mycryptofunding.org à MY CRYPTO FUNDING LTD 15795471 ou autre vendeur.",
+        "Qualifier statut ACTIVE malgré radiation d'office suspendue au 28/10/2026, et vérifier comptes annuels en retard avant publication.",
+        "Ne pas recopier les règles et chiffres de MyCryptoFund.com / YSF Tech BVI sur My Crypto Funding .org.",
+        "Vérifier CGU datées des challenges standard et Instant, conditions 3 jours +0.5%, consistency 15% et historique de paiement final."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-getcryptofunded-my-crypto-funding-myfxcapital-2026-11-23.md"
     },
     {
       "slug": "quantec-trading-capital",
