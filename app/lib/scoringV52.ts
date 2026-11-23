@@ -30,7 +30,7 @@ export type V52ScoreResult = {
   afterRules: number;
   trustpilotPenalty: 0|6;
   adjusted: number;
-  payoutEvidenceCap: 64|69|79|null;
+  payoutEvidenceCap: null;
   safetyCap:55|null;
   final:number|null;
   confidence:V5Confidence;
@@ -79,9 +79,9 @@ export function computeV52Scorecard(card:V52Scorecard):V52ScoreResult {
   const editorialGross=afterRules+rawRulesPenalty;
   const trustpilotPenalty:0|6=card.trustpilotActiveNotice?6:0;
   const adjusted=Math.max(0,afterRules-trustpilotPenalty);
-  const A3=card.criteria.A3.points;
-  const payoutEvidenceCap:64|69|79|null=A3<=1?64:A3===2?69:A3===3?79:null;
+  // A3 is scored once (0–5 points), not used as an extra score ceiling.
+  const payoutEvidenceCap:null=null;
   const safetyCap:55|null=card.contractingEntityMissing||card.activeUnsuspendedStrikeOff?55:null;
-  const final=card.closed?null:Math.min(adjusted,payoutEvidenceCap??100,safetyCap??100);
+  const final=card.closed?null:Math.min(adjusted,safetyCap??100);
   return {blocks,editorialGross,rulesPenalty:rawRulesPenalty,afterRules,trustpilotPenalty,adjusted,payoutEvidenceCap,safetyCap,final,confidence:card.confidence,criteriaPoints,ruleDeductions:rules};
 }
