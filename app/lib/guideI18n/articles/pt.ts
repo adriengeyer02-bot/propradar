@@ -141,12 +141,12 @@ const pt: GuideArticleTranslations = {
       {
         heading: 'As regras da conta financiada que mais importam',
         paragraphs: [
-          'Os modelos de challenge são convencionais. O modelo 2-Step GOAT pede 8% e depois 6% com perda diária de 4% e perda máxima estática de 10%; o 2-Step Standard pede 10% e depois 5% com 5% diário e 10% máximo; o 1-Step pede 10% com perda diária de 3% e perda máxima estática de 6%. O modelo 3-Step foi descontinuado em agosto de 2026. Esses números vêm de uma análise de terceiros verificada em 5 de outubro de 2026: confirme no checkout.',
+          'Os modelos de challenge são convencionais. O modelo 2-Step GOAT pede 8% e depois 6% com perda diária de 4% e perda máxima estática de 10%; o 2-Step Standard pede 10% e depois 5% com 5% diário e 10% máximo; o 1-Step pede 10% com perda diária de 3% e perda máxima estática de 6%. A GOAT ainda publica a FAQ do modelo 3-Step, mas regras de reset excluem modelos antigos. O 2-Step Standard também não é mais vendido a novos clientes. Uma página de ajuda não confirma a oferta atual: verifique o programa e o contrato no checkout. Esses números vêm de uma análise de terceiros verificada em 5 de outubro de 2026: confirme no checkout.',
           'As regras que decidem os pagamentos começam depois da aprovação:',
         ],
         bullets: [
           "Goat Guard: em contas financiadas às quais se aplica (não Instant), uma perda flutuante de 2% do saldo pode fechar posições abertas. A primeira ativação reduz a participação para 50%; a segunda viola a conta. Verifique exceções por programa.",
-          'Regra dos 2 minutos: o lucro de operações mantidas por menos de dois minutos é removido no pagamento, enquanto as perdas dessas operações ficam na conta.',
+          "Tempo mínimo somente no funded: challenge comprado antes de 6 de outubro de 2026 = 2 minutos; a partir dessa data = 1 minuto. Lucros de operações mais curtas são retirados do payout, enquanto as perdas permanecem. Um reset não altera a data da compra original; a regra não se aplica à avaliação.",
           'Janela de notícias: o lucro obtido em torno de notícias de alto impacto é limitado a 1% do saldo inicial.',
           'Teto de lucro diário: uma conta financiada pode registrar no máximo US$ 3.000 de lucro por dia.',
           'Os modelos instantâneos usam trailing drawdowns e encerram a conta com perda flutuante de 1% ou 2%, conforme o modelo.',
