@@ -461,7 +461,7 @@ export const guideArticles: Record<string, GuideArticle> = {
     keyPoints: [
       'Launched in **May 2023**; Hong Kong trade name, Saint Lucia provider, **no financial regulator**.',
       'On November 23, 2026, Trustpilot still withheld the company's TrustScore for a guideline breach.',
-      'Payouts are lost on the **funded rules**: Goat Guard, the 2-minute rule, the news cap and the daily cap.',
+      'Funded-account payout restrictions include Goat Guard, a **1- or 2-minute** minimum holding period depending on the October 6 purchase date, news-profit limits and the daily profit cap.',
       'PropRadar has an **affiliate relationship** with the firm; it does not change the score.',
     ],
     sections: [
