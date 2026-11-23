@@ -346,7 +346,7 @@
       "v52": 58,
       "delta": -3,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -485,7 +485,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "axi-select",
@@ -498,7 +499,7 @@
       "v52": 60,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -624,7 +625,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "bem-funding",
@@ -637,7 +639,7 @@
       "v52": 47,
       "delta": -7,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -813,7 +815,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "blueberry-funded",
@@ -826,7 +829,7 @@
       "v52": 54,
       "delta": -4,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -958,7 +961,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "blusky-trading",
@@ -1292,7 +1296,7 @@
       "v52": 59,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -1420,7 +1424,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "city-traders-imperium",
@@ -1433,7 +1438,7 @@
       "v52": 53,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -1584,7 +1589,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "e8-futures",
@@ -1597,7 +1603,7 @@
       "v52": 60,
       "delta": -4,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -1729,7 +1735,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "forex-funds-flow",
@@ -1742,7 +1749,7 @@
       "v52": 50,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -1881,7 +1888,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "ftuk",
@@ -1894,7 +1902,7 @@
       "v52": 61,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -2020,7 +2028,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "funded-trading-plus",
@@ -2033,7 +2042,7 @@
       "v52": 62,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -2180,7 +2189,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "funderpro",
@@ -2193,7 +2203,7 @@
       "v52": 57,
       "delta": -5,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -2341,7 +2351,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "funding-pips",
@@ -2492,7 +2503,7 @@
       "v52": 54,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -2626,7 +2637,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "fxify",
@@ -2786,7 +2798,7 @@
       "v52": 51,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -2931,7 +2943,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "goat-funded-trader",
@@ -3098,7 +3111,7 @@
       "v52": 67,
       "delta": -5,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -3235,7 +3248,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "ic-funded",
@@ -3248,7 +3262,7 @@
       "v52": 57,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -3389,7 +3403,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "leeloo-trading",
@@ -3402,7 +3417,7 @@
       "v52": 55,
       "delta": -5,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -3544,7 +3559,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "lucid-trading",
@@ -3557,7 +3573,7 @@
       "v52": 64,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -3702,7 +3718,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "lux-trading-firm",
@@ -3712,10 +3729,10 @@
       "confidence": "moyenne",
       "oldDisplayed": 58,
       "v5": 70,
-      "v52": 64,
-      "delta": -6,
+      "v52": 65,
+      "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -3859,7 +3876,9 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "originalV52WithEvidenceCap": 64,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "maven-trading",
@@ -3872,7 +3891,7 @@
       "v52": 56,
       "delta": -7,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -4043,7 +4062,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "miltraders",
@@ -4056,7 +4076,7 @@
       "v52": 58,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -4201,7 +4221,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "onefunded",
@@ -4214,7 +4235,7 @@
       "v52": 54,
       "delta": -6,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -4374,7 +4395,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "oneup-trader",
@@ -4387,7 +4409,7 @@
       "v52": 63,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -4515,7 +4537,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "quant-tekel",
@@ -4528,7 +4551,7 @@
       "v52": 55,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -4661,7 +4684,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "rebelsfunding",
@@ -4674,7 +4698,7 @@
       "v52": 62,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -4816,7 +4840,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "sway-funded",
@@ -4829,7 +4854,7 @@
       "v52": 56,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -4957,7 +4982,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "take-profit-trader",
@@ -4967,10 +4993,10 @@
       "confidence": "faible",
       "oldDisplayed": 73,
       "v5": 78,
-      "v52": 64,
-      "delta": -14,
+      "v52": 74,
+      "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -5094,7 +5120,9 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "originalV52WithEvidenceCap": 64,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "tentrade",
@@ -5107,7 +5135,7 @@
       "v52": 63,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -5237,7 +5265,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "the-concept-trading",
@@ -5250,7 +5279,7 @@
       "v52": 62,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -5392,7 +5421,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "thinkcapital",
@@ -5405,7 +5435,7 @@
       "v52": 53,
       "delta": -7,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -5577,7 +5607,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "tiger-funded",
@@ -5590,7 +5621,7 @@
       "v52": 40,
       "delta": -7,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 6,
       "criteriaV52": {
@@ -5765,7 +5796,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "top-one-trader",
@@ -5949,7 +5981,7 @@
       "v52": 62,
       "delta": -5,
       "payoutEvidenceLevel": 2,
-      "payoutEvidenceCap": 69,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -6108,7 +6140,8 @@
         }
       },
       "status": "mechanical_candidate_requires_evidence_review",
-      "wasPublishedV5": true
+      "wasPublishedV5": true,
+      "historicalEvidenceCapNov22": 69
     },
     {
       "slug": "tradefundrr",
@@ -6121,7 +6154,7 @@
       "v52": 58,
       "delta": -4,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -6251,7 +6284,8 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     },
     {
       "slug": "uprofit-trader",
@@ -6264,7 +6298,7 @@
       "v52": 57,
       "delta": -5,
       "payoutEvidenceLevel": 1,
-      "payoutEvidenceCap": 64,
+      "payoutEvidenceCap": 100,
       "legalCap": 100,
       "trustpilotPenalty": 0,
       "criteriaV52": {
@@ -6409,7 +6443,10 @@
           ]
         }
       },
-      "status": "mechanical_candidate_requires_evidence_review"
+      "status": "mechanical_candidate_requires_evidence_review",
+      "historicalEvidenceCapNov22": 64
     }
-  ]
+  ],
+  "policyAmendedOn": "2026-11-23",
+  "policyAmendment": "A3 payout proof cap disabled by owner decision. Original proof cap preserved in historicalEvidenceCapNov22; A3 remains a 0-5-point criterion, not a score ceiling. No fact or 13-criterion subscore modified."
 }
