@@ -4,7 +4,7 @@
   "purpose": "collecte documentaire des 37 statuts à clarifier avant toute nouvelle notation",
   "scoreStatus": "UNSCORED_DOSSIERS_NO_CHANGES_TO_LIVE_RATINGS",
   "methodology": "SCORING_V5_2.md",
-  "safety": "Les constats anciens F/G sont référencés et distingués des pages primaires revues le 23/11. Aucune URL inaccessible n'est prétendue relue. Note Trustpilot masquée et fraude ne doivent jamais être inférées d'avis négatifs.",
+  "safety": "Les constats anciens F/G sont référencés et distingués des pages primaires revues le 23/11. Aucune URL inaccessible n'est prétendue relue. Note Trustpilot masquée et fraude ne doivent jamais être inférées d'avis négatifs. Le champ activeTrustpilotScoreWithholdingVerified vaut null : non constaté, et non pas false (preuve d'absence).",
   "count": 37,
   "rows": [
     {
@@ -19,7 +19,7 @@
       "payoutEvidenceFinding": "Plaintes/délais de récompense : Prop Firm Match a retiré la firme de son annuaire; aucun règlement bancaire final indépendamment attribué à un repreneur vérifié.",
       "trustpilotFinding": "Profil Trustpilot visible et noté autour de 3/5 sur recherche; aucune suspension de TrustScore confirmée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/bespokefundingprogram.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -52,6 +52,7 @@
         }
       ],
       "remainingTasks": [
+        "Vérifier si la société UK dissoute a un successeur contractuel assumant effectivement ses obligations.",
         "Identité du vendeur réel + registre et état 2026",
         "Capture de CGU versionnée au bon checkout et contrat funded",
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
@@ -60,7 +61,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "tickticktrader",
@@ -74,7 +76,7 @@
       "payoutEvidenceFinding": "Plusieurs plaintes datées 2026 pour retard de 6-11 mois. L'entreprise admet une file d'attente de payouts durant migration et affirme ne pas avoir globalement rejeté ces demandes. Pas de dossier indépendant de paiement final validé.",
       "trustpilotFinding": "Profil Trustpilot accessible avec avis 2026 et réponses de la firme; avis négatifs ne prouvent pas un refus injustifié. Aucun TrustScore officiellement masqué vérifié.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/tickticktrader.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -117,6 +119,7 @@
         }
       ],
       "remainingTasks": [
+        "Obtenir la clause de non-dénigrement et les preuves de la décision relative au payout refusé, sans confondre motif déclaré et irrégularité démontrée.",
         "Identité du vendeur réel + registre et état 2026",
         "Capture de CGU versionnée au bon checkout et contrat funded",
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
@@ -125,7 +128,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "the-funded-trader",
@@ -138,8 +142,8 @@
       "contractAndRules": "FAQ indexée : reward conditionnée à conformité Terms/Customer Agreement, comptes simulés, KYC avant reward, diverses périodes de payout selon challenges; contrats actifs non accessibles.",
       "payoutEvidenceFinding": "Ancienne crise de paiement documentée par la presse (2024), déclarations de la firme sur ses arriérés; aucun état de règlement des demandes historiques ni chaîne indépendante actuelle établi.",
       "trustpilotFinding": "Historique de plaintes à contrôler sur le bon domaine, pas d'avis Trustpilot de masquage confirmé.",
-      "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/thefundedtraderprogram.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -181,6 +185,10 @@
           "url": "https://financemagnates.com/forex/prop-firm-the-funded-trader-resumes-paused-accounts-as-900-traders-await-payouts/amp",
           "kind": "archive_code",
           "label": "Finance Magnates: 900 traders await payouts (20 Nov 2024)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/thefundedtraderprogram.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
         }
       ],
       "remainingTasks": [
@@ -192,7 +200,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "myforexfunds",
@@ -206,7 +215,7 @@
       "payoutEvidenceFinding": "Remboursements/obligations historiques 2023 distincts des premiers rewards du nouveau programme. Aucun paiement du nouveau régime indépendant vérifié dans ce dossier.",
       "trustpilotFinding": "Ne pas transférer avis du vendeur de 2023 au repreneur comme s'il s'agissait de la même entreprise.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -252,6 +261,7 @@
         }
       ],
       "remainingTasks": [
+        "Séparer les récompenses dues par Traders Global depuis 2023 des engagements de Global Solutions Operations FZE en 2026.",
         "Identité du vendeur réel + registre et état 2026",
         "Capture de CGU versionnée au bon checkout et contrat funded",
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
@@ -260,7 +270,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "t4tcapital",
@@ -274,7 +285,7 @@
       "payoutEvidenceFinding": "Aucun paiement final de T4TCapital actuel indépendamment corroboré. Les avis du domaine Proptradr ne sont pas attribuables sans preuve de succession.",
       "trustpilotFinding": "Trustpilot de la marque exacte à isoler de l'ancien Proptradr; pas de masquage confirmé.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/proptradr.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -328,7 +339,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "traders-with-edge",
@@ -342,7 +354,7 @@
       "payoutEvidenceFinding": "Aucune chaîne de paiement finale indépendante vérifiée depuis interruption.",
       "trustpilotFinding": "Statut Trustpilot du domaine exact non reconfirmé.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -378,7 +390,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "kortanafx",
@@ -392,7 +405,7 @@
       "payoutEvidenceFinding": "Aucun justificatif de versement après la pause ni règlement des comptes pendants indépendamment authentifié dans cette revue.",
       "trustpilotFinding": "Profil Trustpilot actuellement visible, TrustScore environ 2,5/5 sur relevé externe; aucune retenue TrustScore déclarée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/kortanafx.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -432,7 +445,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "traddoo",
@@ -446,7 +460,7 @@
       "payoutEvidenceFinding": "Aucun versement final indépendant récent corroboré.",
       "trustpilotFinding": "Page Trustpilot du domaine historique existe, statut masque/non masqué non revu.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/traddoo.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -499,7 +513,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "rocket21-challenge",
@@ -513,7 +528,7 @@
       "payoutEvidenceFinding": "Avis datés de demandes non réglées ou reportées et messages de migration; pas de transfert final du bon vendeur authentifié.",
       "trustpilotFinding": "Trustpilot actif avec avis historiques 2024–2026 ; aucune preuve de TrustScore masqué.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/rocket21challenge.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -548,7 +563,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "blufx",
@@ -562,7 +578,7 @@
       "payoutEvidenceFinding": "Aucune preuve récente indépendante de récompenses; historiques de litiges à rapprocher des procédures de liquidation.",
       "trustpilotFinding": "Profil historique Trustpilot à contrôler, ne pas déduire −6 sans avertissement officiel de manipulation actif.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -591,6 +607,10 @@
           "url": "https://pickmytrade.io/prop-firm-faq/blufx",
           "kind": "archive_code",
           "label": "PickMyTrade: BluFX research record"
+        },
+        {
+          "url": "https://uk.trustpilot.com/review/blufx.com",
+          "kind": "legacy_alternate_domain_not_the_same_as_blufx.co.uk"
         }
       ],
       "remainingTasks": [
@@ -602,7 +622,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "traders-central",
@@ -616,7 +637,7 @@
       "payoutEvidenceFinding": "Politique de paiement et de retrait documentée mais aucun transfert bancaire final au bon vendeur vérifié pour 2026.",
       "trustpilotFinding": "Ancienne page traderscentral.com visible, aucun masquage TrustScore confirmé.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/www.traderscentral.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -652,7 +673,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "my-flash-funding",
@@ -666,7 +688,7 @@
       "payoutEvidenceFinding": "Aucun règlement MyFlash historique vérifié indépendamment dans cette revue ; les payouts Sway récents ne prouvent pas le paiement d'anciens clients MyFlash.",
       "trustpilotFinding": "Trustpilot de l'ancien domaine ne doit pas être transféré à Sway sans preuve juridique.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -714,7 +736,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "nova-funding",
@@ -728,7 +751,7 @@
       "payoutEvidenceFinding": "Aucun payout client récent du vendeur Nova Funding historique vérifié; réclamations historiques Trustpilot sans preuve bancaire indépendante.",
       "trustpilotFinding": "Trustpilot nova-funding.com existant, avis contradictoires, aucune dissimulation du TrustScore confirmée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/nova-funding.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -775,7 +798,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "nations-trading",
@@ -789,7 +813,7 @@
       "payoutEvidenceFinding": "Aucun versement trader final indépendant vérifié.",
       "trustpilotFinding": "URL Trustpilot à vérifier directement; absence d'avis accessibles ne prouve pas masquage.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/nationstrading.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -820,7 +844,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "the-forex-funder",
@@ -833,8 +858,8 @@
       "contractAndRules": "FAQ : 1er payout après 30 jours puis 14 jours pour suivants (mais une autre FAQ dit ensuite « no restrictions » : incohérence), KYC et contrat funded signés, demande met compte en lecture seule, retrait minimum 1% de capital et frais de transaction; délai 1-4 jours. Expliquer les différences selon produit et date.",
       "payoutEvidenceFinding": "Modes historiques USDT TRC20 sous $400/Rise au-delà; pas de preuve d'un transfert réel 2026 attribué aux traders de TFF.",
       "trustpilotFinding": "Trustpilot theforexfunder.com à revérifier pour un avertissement actif, pas de −6 automatique.",
-      "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/theforexfunder.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -870,6 +895,10 @@
           "url": "https://mypropgenius.com/closed-firms/theforexfunder/",
           "kind": "archive_code",
           "label": "TFF October 2026 inactive-domain report"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/theforexfunder.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
         }
       ],
       "remainingTasks": [
@@ -881,7 +910,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "fundedlions",
@@ -895,7 +925,7 @@
       "payoutEvidenceFinding": "Pas de reward final indépendant contemporain vérifié.",
       "trustpilotFinding": "Profil fundedlions.com ancien à vérifier, pas de masquage confirmé.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/fundedlions.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -936,7 +966,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "leveled-up-society",
@@ -949,8 +980,8 @@
       "contractAndRules": "CGU funded avant suspension uniquement archives; aucune offre 2026 confirmée.",
       "payoutEvidenceFinding": "Pas de transfert indépendant récent ni plan de règlement revendiqué vérifié.",
       "trustpilotFinding": "Anciens avis Leveled Up Traders à ne pas transférer à un service homonyme.",
-      "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/leveleduptraders.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -970,6 +1001,10 @@
         {
           "url": "https://mypropgenius.com/rule-changes/2026-10/",
           "kind": "reference_web_ciblee"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/leveleduptraders.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
         }
       ],
       "remainingTasks": [
@@ -981,7 +1016,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "one-of-one-funding",
@@ -995,7 +1031,7 @@
       "payoutEvidenceFinding": "Plaintes de retraits impayés dans annuaires et avis, mais faute de pièces pas de jugement de refus injustifié confirmé.",
       "trustpilotFinding": "Trustpilot oneofonefunding.com et 1of1funding.com : profils à rapprocher, aucun notice masquage prouvé.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/oneofonefunding.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -1037,7 +1073,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "atfunded",
@@ -1051,7 +1088,7 @@
       "payoutEvidenceFinding": "Témoignages Trustpilot de traders payés avant la pause, mais pas vérifiés bancaires et pas preuve de remboursement de TOUS les comptes; ne pas convertir promesse en payout réussi.",
       "trustpilotFinding": "Trustpilot atfunded.com accessible avec avis et réponses; pas de sanction de masquage actif confirmée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/atfunded.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1087,7 +1124,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "tribe-funded",
@@ -1101,7 +1139,7 @@
       "payoutEvidenceFinding": "Plaintes/avis sur Discord et Trustpilot non vérifiés par preuve finale bancaire ni par dossier transactionnel.",
       "trustpilotFinding": "Trustpilot tribefunded.com accessible, pas d'avertissement actif identifié.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/tribefunded.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -1139,7 +1177,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "aurafunded",
@@ -1153,7 +1192,7 @@
       "payoutEvidenceFinding": "Avis Trustpilot comportent allégations de demandes impayées; aucune attestation de transfert final vérifiée.",
       "trustpilotFinding": "Profil aurafunded.com accessible avec critiques; aucune retenue TrustScore officiellement observée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/aurafunded.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -1191,7 +1230,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "getcryptofunded",
@@ -1204,8 +1244,8 @@
       "contractAndRules": "Terms non récupérées dans ce contrôle.",
       "payoutEvidenceFinding": "Aucune attestation indépendante finale du programme GetCryptoFunded.",
       "trustpilotFinding": "Trustpilot de nom exact non trouvé avec notice explicite; non vérifiable.",
-      "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/getcryptofunded.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1229,6 +1269,10 @@
         {
           "url": "https://getcryptofunded.com/terms-and-conditions/",
           "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/getcryptofunded.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
         }
       ],
       "remainingTasks": [
@@ -1240,7 +1284,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "myfxcapital",
@@ -1254,7 +1299,7 @@
       "payoutEvidenceFinding": "Avis sur Trustpilot myfxcapital.com existent, mais ne constituent pas authentification de payouts finaux.",
       "trustpilotFinding": "Profil myfxcapital.com à consulter, score/masquage exact non reconfirmé; exclure myfxfunding.com (homonyme).",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/myfxcapital.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1296,7 +1341,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "alphaproptraders",
@@ -1310,7 +1356,7 @@
       "payoutEvidenceFinding": "Pas de preuve indépendante d'un payout à un trader de la marque exacte.",
       "trustpilotFinding": "Trustpilot de marque exacte non confirmé; le profil alphaprotraders.com est un autre intitulé et ne suffit pas.",
       "trustpilotExactProfile": "https://uk.trustpilot.com/review/www.alphaprotraders.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -1351,7 +1397,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "fxci",
@@ -1364,8 +1411,8 @@
       "contractAndRules": "Anciennes CGU FXCI comportent 5 règles classifiées dans PropRadar : conditions payouts, pouvoir discrétionnaire, KYC/IP, scalping. Leur applicabilité à des clients OneFunded est inconnue; nouveau funded agreement OneFunded à isoler.",
       "payoutEvidenceFinding": "FAQ OneFunded actuelle documente split et remboursements éventuels mais ne prouve pas avoir réglé les récompenses historiques FXCI. Aucune preuve finale rattachée aux deux opérateurs.",
       "trustpilotFinding": "Ne pas transférer avis FXCI à OneFunded par défaut; contrôle de masquage Trustpilot FXCI non effectué.",
-      "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "trustpilotExactProfile": "https://www.trustpilot.com/review/fxci.com",
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1408,6 +1455,10 @@
           "url": "https://help.fxci.com/are-eas-and-hft-bots-allowed/",
           "kind": "archive_code",
           "label": "FXCI EAs and HFT bots (official help)"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/fxci.com",
+          "kind": "trustpilot_profile_to_verify_current_notice"
         }
       ],
       "remainingTasks": [
@@ -1419,7 +1470,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "dei-funded",
@@ -1433,7 +1485,7 @@
       "payoutEvidenceFinding": "Trustpilot 2024 documente avis contrastés dont une plainte datée de retrait; aucune preuve bancaire indépendante pour 2026.",
       "trustpilotFinding": "Profil Trustpilot deifunded.com accessible dans l'index, suspension de TrustScore non confirmée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/deifunded.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1473,7 +1525,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "fxrk",
@@ -1487,7 +1540,7 @@
       "payoutEvidenceFinding": "Trustpilot contient témoignages de payouts payés et refusés; FXRK explique examiner individuellement les demandes par Risk Team, aucune preuve finale indépendante requise pour A3 retrouvée ici.",
       "trustpilotFinding": "Profil Trustpilot fxrk.com actif et noté; aucune suspension officielle TrustScore détectée au contrôle.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/fxrk.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -1510,6 +1563,7 @@
         }
       ],
       "remainingTasks": [
+        "Vérifier le périmètre juridique exact de l'avertissement CNMV avant toute conclusion sur le service simulé.",
         "Identité du vendeur réel + registre et état 2026",
         "Capture de CGU versionnée au bon checkout et contrat funded",
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
@@ -1518,7 +1572,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "aeon-funded",
@@ -1532,7 +1587,7 @@
       "payoutEvidenceFinding": "QuantX a auto-déclaré 570k$ de payouts, non vérifiés par preuve bancaire externe; récompenses nouvelles indépendamment authentifiées manquantes.",
       "trustpilotFinding": "Profil quantxfund.io actif, note publique observée; ne pas agréger avec quantx.io ou quantxcapital.io (homonymes).",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/quantxfund.io",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1569,6 +1624,7 @@
         }
       ],
       "remainingTasks": [
+        "Réconcilier promesse manifeste 24 h et >500$ avec FAQ 48 h après approbation et bonus 50 % ; obtenir contrat signé.",
         "Identité du vendeur réel + registre et état 2026",
         "Capture de CGU versionnée au bon checkout et contrat funded",
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
@@ -1577,7 +1633,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "mifunder",
@@ -1591,7 +1648,7 @@
       "payoutEvidenceFinding": "Aucune preuve bancaire indépendante vérifiée; critiques et score Trustpilot historique ne suffisent pas à en déduire un refus injustifié.",
       "trustpilotFinding": "Profil mifunder.com actif avec avis médiocres selon résultats de recherche, pas de warning actif TrustScore confirmé.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/mifunder.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": null,
@@ -1624,7 +1681,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "gry-funding",
@@ -1638,7 +1696,7 @@
       "payoutEvidenceFinding": "Communiqué auto-déclare plusieurs payouts historiques à cinq chiffres, sans bénéficiaires, transactions ni attestations tierces; aucun payout final indépendant du nouveau vendeur.",
       "trustpilotFinding": "Ancien domaine et marque secondaire à vérifier, pas d'avertissement actif confirmé.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1684,7 +1742,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "my-crypto-funding",
@@ -1698,7 +1757,7 @@
       "payoutEvidenceFinding": "Aucune preuve indépendante de transfert final depuis le vendeur original; ne pas attribuer les versements de MyCryptoFund.",
       "trustpilotFinding": "Profil Trustpilot et éventuel retrait de TrustScore non vérifiés pour la marque historique exacte.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1744,7 +1803,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "quantec-trading-capital",
@@ -1758,7 +1818,7 @@
       "payoutEvidenceFinding": "Demandes de paiement contestées et réponses argumentées visibles sur Trustpilot 2024; aucun paiement bancaire final indépendant 2026 identifié.",
       "trustpilotFinding": "Profil quantectrading.com actif avec avis et réponses, aucune suspension du TrustScore officiellement constatée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/quantectrading.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1801,7 +1861,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "real-funds-trader",
@@ -1815,7 +1876,7 @@
       "payoutEvidenceFinding": "Aucun payout final authentifié après arrêt site.",
       "trustpilotFinding": "Ancien profil à contrôler, pas de suspension confirmée.",
       "trustpilotExactProfile": null,
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1847,7 +1908,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "the-prop-game",
@@ -1861,7 +1923,7 @@
       "payoutEvidenceFinding": "Pas de transfert final indépendant contrôlé.",
       "trustpilotFinding": "Trustpilot du domaine exact à examiner; aucune preuve de warning actif.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/thepropgame.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1902,7 +1964,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "neg-markets",
@@ -1916,7 +1979,7 @@
       "payoutEvidenceFinding": "Aucune preuve bancaire indépendante de reward récent.",
       "trustpilotFinding": "Ancien profil negmarkets.com accessible dans recherche, pas de dissimulation du TrustScore confirmée.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/negmarkets.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -1953,7 +2016,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "guardeer-funding",
@@ -1967,7 +2031,7 @@
       "payoutEvidenceFinding": "Aucun règlement final independently verified sous nouvelle marque.",
       "trustpilotFinding": "Profil historique funding.fortressfx.com et notice possible de reviews à contrôler directement; pas de −6 avant preuve actuelle.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/funding.fortressfx.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -2008,7 +2072,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     },
     {
       "slug": "willis-capital",
@@ -2022,7 +2087,7 @@
       "payoutEvidenceFinding": "WFunded live claims ne prouvent pas paiement des comptes anciens Willis Capital ; aucune chaîne indépendante vérifiée.",
       "trustpilotFinding": "Profil williscapitals.com non rapproché de WFunded; vérifier deux profils séparément et notice spécifique.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/williscapitals.com",
-      "activeTrustpilotScoreWithholdingVerified": false,
+      "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
       "payoutPolicy": "Les transferts commerciaux auto-déclarés et les avis utilisateurs ne valent pas preuve indépendante du règlement final à un trader du bon opérateur.",
       "priorResearch": {
@@ -2074,7 +2139,8 @@
         "Réconciliation des éventuelles dettes historiques et reprises"
       ],
       "numericV52": null,
-      "publicationApproved": false
+      "publicationApproved": false,
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
     }
   ]
 }
