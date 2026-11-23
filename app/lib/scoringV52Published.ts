@@ -70,8 +70,9 @@ export function isPublishedV52(slug:string,latestScoreReview?:string):boolean {
   // Owner approved the 32 candidate snapshots on 23 Nov after reviewing the score movements.
   // Keep the original evidence date for source traceability; only use the decision date
   // when deciding whether this approval supersedes earlier website score edits.
-  const gatingDate=ownerApprovedSlugs.has(slug)?ownerRelease.approvedOn:source?.card.checkedOn;
-  return Boolean(source&&(!latestScoreReview||latestScoreReview<=gatingDate));
+  if(!source) return false;
+  const gatingDate=ownerApprovedSlugs.has(slug)?ownerRelease.approvedOn:source.card.checkedOn;
+  return !latestScoreReview||latestScoreReview<=gatingDate;
 }
 export function getPublishedV52Score(firm:PropFirm,latestScoreReview?:string) {
   if(!isPublishedV52(firm.slug,latestScoreReview)) return undefined;
