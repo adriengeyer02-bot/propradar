@@ -1,5 +1,7 @@
 # PropRadar TECH — Récolte documentaire des 37 statuts à clarifier
 
+**Clôture des approfondissements au 23/11/2026 : les 37 profils de la file possèdent désormais chacun une annexe documentaire sourcée. Cela clôt la phase de *recherche possible sur sources publiques*, et NON la vérification de toutes les obligations de payout ou la collecte de contrats clients privés. Aucun score V5.2 n'est nouveau ni approuvé, les pièces manquantes restent répertoriées dans le JSON. Voir [index de clôture](v52-37-index-cloture-pour-flo-2026-11-23.md).**
+
 **Dossier préparatoire pour Flo · 23 novembre 2026 · Avant toute notation V5.2**
 
 ## Cadre de vérification
@@ -262,6 +264,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte F, classement de recherche SITE_UNVERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** [communiqué IssueWire du 07/10/2024](https://www.issuewire.com/gry-funding-acquired-by-goated-fx-only-funds-fx-a-strategic-move-in-the-cfd-and-proprietary-trading-industry-1812157787515110) **attribue au fondateur** une acquisition par Goated FX / Only Funds FX, mais aucun acte de vente ou reprise des dettes n'est prouvé ; annonce de >1000 clients et payouts à 5 chiffres **auto-déclarée**. gryfunding.com HTTP502, DNS déclaré inaccessible le 11/10 par [MyPropGenius](https://mypropgenius.com/closed-firms/gry-funding/). Contrats et payouts finaux absents, Trustpilot exact non authentifié, aucune déduction −6.
+
+**Annexe sourcée :** [lot final — Gry, Real Funds, NEG, Guardeer](v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
+
 ---
 
 ### 12. Traders Central — `traders-central`
@@ -368,6 +375,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account) · [Source 2](https://support.theforexfunder.com/en/articles/9823909-how-do-i-request-a-payout) · [Source 3](https://support.theforexfunder.com/en/articles/9823917-what-is-the-payout-process-like) · [Source 4](https://support.theforexfunder.com/en/articles/9823885-when-can-i-request-a-payout) · [Source 5](https://www.financemagnates.com/forex/offshore-cfds-broker-axe-enters-prop-trading-acquires-the-forex-funder/) · [Source 6](https://mypropgenius.com/closed-firms/theforexfunder/) · [Source 7](https://www.trustpilot.com/review/theforexfunder.com).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** acquisition AXE Securities annoncée le 26/08/2024, vendeur/dette du bon programme non réconciliés ; homepage HTTP403. [FAQ officielle 31/08/2024](https://support.theforexfunder.com/en/articles/9808956-how-do-i-request-my-payout-from-the-forex-funder-account) premier payout après 30j du premier trade puis après 14j pour les suivants ; [autre FAQ](https://support.theforexfunder.com/en/articles/9823917-what-is-the-payout-process-like) écrit « no restrictions » après le premier. [FAQ 05/09](https://support.theforexfunder.com/en/articles/9808953-do-i-have-to-meet-minimum-trading-days-once-i-become-a-funded-trader) **30j sans trade = expiration funded**. Minimum payout 1% du nominal, Rise/USDT selon montant. [Trustpilot exact](https://www.trustpilot.com/review/theforexfunder.com) 2,4/5, 1561 avis, pas de score retenu officiellement. A3 indépendant non vérifié ; contrat applicable manquant.
+
+**Annexe sourcée :** [lot final — The Forex Funder, 1of1, Tribe, Dei](v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
 
 ---
 
@@ -666,6 +678,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** site oneofonefunding.com HTTP403, [contrôle 11/10](https://mypropgenius.com/closed-firms/one-of-one-trading/) Cloudflare 1014. Société ONEOFONE FUNDING MANAGEMENT CONSULTANCIES à Dubaï **seulement citée par tiers**, aucun extrait de licence/facture. [Trustpilot exact](https://www.trustpilot.com/review/oneofonefunding.com) 3,3/5, 964 avis, score affiché, plaintes de payouts tardifs et comptes funded non remis ; marketing 100% split non preuve d'un contrat réel. Absence de checkout/CGU/funded agreement, aucune chaîne A3 indépendante ni sanction Trustpilot −6.
+
+**Annexe sourcée :** [lot final — The Forex Funder, 1of1, Tribe, Dei](v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
+
 ---
 
 ### 29. Tribe Funded — `tribe-funded`
@@ -685,6 +702,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://tribefunded.com/) · [Source 2](https://propfirmbook.com/unverified/tribe-funded) · [Source 3](https://www.trustpilot.com/review/tribefunded.com) · [Source 4](https://propfirmmatch.com/unlisted-prop-firms/tribe-funded).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** domaine tribefunded.com **HTTP525**, [PropFirmBook](https://propfirmbook.com/unverified/tribe-funded) constate offre inaccessible depuis mi-2026, aucun registre juridique. Programmes historiques 1-step, 2-step, Pay After Pass et Instant, partage « up to 100% » seulement allégué, contrats actuels introuvables. [Trustpilot](https://www.trustpilot.com/review/tribefunded.com) 3,1/5, 46 avis, score visible, plaintes 2025 de payout bloqué et de breach pour inactivité, non arbitrées. A3 indépendant absent ; pas de −6.
+
+**Annexe sourcée :** [lot final — The Forex Funder, 1of1, Tribe, Dei](v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
 
 ---
 
@@ -756,6 +778,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte F, classement de recherche DOMAIN_REDIRECT_UNRELATED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** deifunded.com redirige vers **datasidney.xyz**, sans relation contractuelle démontrée. [Trustpilot exact](https://www.trustpilot.com/review/deifunded.com) **2,1/5, 402 avis**, compte rendu de comptes MT5/dashboard V2 indisponibles et demandes de payouts bloquées en juin–juillet 2024 ; témoignages non vérifiés bancaires. Adresse Sydney auto-déclarée, mais pas de société ni ACN/ABN authentifiés. CGU 2026 absentes, A3 inconnu, score Trustpilot toujours visible donc pas de −6.
+
+**Annexe sourcée :** [lot final — The Forex Funder, 1of1, Tribe, Dei](v52-deep-dive-forex-funder-1of1-tribe-dei-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
+
 ---
 
 ### 33. My Crypto Funding — `my-crypto-funding`
@@ -800,6 +827,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://realfundstrader.com/) · [Source 2](https://mypropgenius.com/closed-firms/real-funds-trader/).
 
 *Reprise du dossier F/G : cohorte G, classement de recherche ORIGINAL_DOMAIN_DNS_OFFLINE. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** [MyPropGenius 11/10](https://mypropgenius.com/closed-firms/real-funds-trader/) constate **DNS NXDOMAIN** ; [Verify.trading](https://www.verify.trading/compare/prop-firms/realfundstrader) indique not active sans preuve de dissolution. [TheTrustedProp](https://thetrustedprop.com/prop-firms/real-funds-trader) nomme **Real Funds Inc (Delaware)** sans immatriculation primaire/facture ; ne pas certifier le vendeur. Anciens slogans payouts on demand/crypto >500$ **secondaires, non CGU ni A3** ; Trustpilot exact et contrat funded non retrouvés.
+
+**Annexe sourcée :** [lot final — Gry, Real Funds, NEG, Guardeer](v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
 
 ---
 
@@ -846,6 +878,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte G, classement de recherche HISTORICAL_SITE_UNAVAILABLE. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit 23/11/2026 :** [homepage historique officielle indexée](https://negmarkets.com/) écrit **NEG Markets LTD**, [TheTrustedProp](https://thetrustedprop.com/prop-firms/new-era-global-markets) nomme **NEGmarkets LLC** sans n° d'immatriculation. **Incohérence vendeur**. Offre historique Instant invitation only 60% split/14j minimum ; 1-step 80% standard puis add-on +25% frais pour 90%; exemple fautif « **10% ($500)** » pour **10k** (10% serait 1000$). FAQ aujourd'hui HTTP502 ; **ne pas présenter l'ancienne indexation comme un checkout actif**. [Trustpilot exact](https://www.trustpilot.com/review/negmarkets.com) 2,8/5, 4 avis, un litige payout 34k allégué non prouvé ; aucun A3 ni −6.
+
+**Annexe sourcée :** [lot final — Gry, Real Funds, NEG, Guardeer](v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
+
 ---
 
 ### 37. Guardeer Funding — `guardeer-funding`
@@ -865,6 +902,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://guardeerfunding.com/) · [Source 2](https://www.trustpilot.com/review/funding.fortressfx.com) · [Source 3](https://top30forexbrokers.com/propfirm/guardeer-funding-review/) · [Source 4](https://www.propradar.tech/fr/firm/guardeer-funding).
 
 *Reprise du dossier F/G : cohorte G, classement de recherche BRAND_MAINTENANCE_CHECKOUT_UNVERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit 23/11/2026 :** [site officiel](https://guardeerfunding.com/) affiche toujours « We're Updating Our Site », dirige vers [funding.fortressfx.com](https://funding.fortressfx.com/) désormais **HTTP404**. [Trustpilot exact Guardeer](https://www.trustpilot.com/review/guardeerfunding.com) **605 avis, nouveaux avis fermés car site déclaré fermé**, ce n'est **pas** une retenue du score pour infraction aux guidelines. [Profil distinct Fortress Funding](https://www.trustpilot.com/review/funding.fortressfx.com) **1,4/5, 113 avis** et plaintes, à ne pas fusionner. Pas de preuve de novation des dettes, contrat, achat fonctionnel ou paiement final A3. −6 non justifié.
+
+**Annexe sourcée :** [lot final — Gry, Real Funds, NEG, Guardeer](v52-deep-dive-gry-realfunds-neg-guardeer-2026-11-23.md). **V5.2 non noté / publication non approuvée.**
 
 ---
 
