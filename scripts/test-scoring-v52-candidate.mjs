@@ -30,16 +30,17 @@ for(const f of all.rows){
   }
   const raw=Object.values(f.criteriaV52).reduce((n,v)=>n+v,0);
   assert.ok(raw>=0&&raw<=100,f.slug+' raw');
-  const cap=f.payoutEvidenceLevel<=1?64:f.payoutEvidenceLevel===2?69:f.payoutEvidenceLevel===3?79:100;
-  assert.equal(f.payoutEvidenceCap,cap,f.slug+' proof cap');
-  const result=Math.max(0,Math.min(raw-f.trustpilotPenalty,cap,f.legalCap));
+  assert.equal(f.payoutEvidenceCap,100,f.slug+' must have no extra A3 ceiling');
+  const result=Math.max(0,Math.min(raw-f.trustpilotPenalty,f.legalCap));
   assert.equal(f.v52,result,f.slug+' final');
   assert.equal(f.delta,f.v52-f.v5,f.slug+' delta');
 }
 for(const f of sample.rows){
   const row=all.rows.find(x=>x.slug===f.slug);
   assert.ok(row,f.slug+' missing from full migration');
-  assert.equal(row.v52,f.v52,f.slug+' differs from prior backtest');
+  // The 21 Nov backtest is a historical, capped V5.2 snapshot.
+  // The owner-approved no-cap policy can only preserve or increase a score.
+  assert.ok(row.v52>=f.v52,f.slug+' uncapped policy fell below historical backtest');
 }
 assert.equal(all.rows.filter(x=>approved.approvals.some(a=>a.slug===x.slug)).length,approved.approvals.length,'published V5 approvals not preserved');
 console.log('V5.2 candidate: '+all.rows.length+' dossiers verified, '+sample.rows.length+' backtest comparisons; public approvals unchanged.');
