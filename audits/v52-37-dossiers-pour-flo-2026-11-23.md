@@ -232,6 +232,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 
 *Reprise du dossier F/G : cohorte G, classement de recherche CHECKOUT_EXISTS_TERMS_AND_ENTITY_UNVERIFIED. règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
 
+
+**Contre-audit du 23/11/2026 :** [t4tcapitalfm.com](https://www.t4tcapitalfm.com/) **redirige vers Traders4Traders**, et [client.t4tcapitalfm.com/register](https://client.t4tcapitalfm.com/register) pointe vers ses [CGU](https://traders4traders.com/terms-of-service) ; vendeur déclaré **Traders4Traders Pty Ltd ACN 139140373**, registre australien à confirmer, contrats historiques à réconcilier. [Page Funding](https://traders4traders.com/trader-funding) : **gains annulés et pertes maintenues pour trade sans stop-loss**, news interdites ±2 min sur actifs concernés, payout hebdomadaire 80–90 % sous conditions ; **portail associé** [propfirm.traders4traders.com](https://propfirm.traders4traders.com/) dit à l'inverse « news fully allowed », programme/phase/version non réconciliés. [Trustpilot proptradr.com](https://www.trustpilot.com/review/proptradr.com) affiche 2,5/5 (6 avis) et profil fusionné, **pas** de rétention TrustScore. B2 potentiel **à instruire sans malus automatique** ; A3 non démontré.
+
+**Annexe :** [T4TCapital / autres firmes du lot 7](v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md). **Note V5.2 non attribuée.**
+
 ---
 
 ### 11. Gry Funding — `gry-funding`
@@ -291,6 +296,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://www.wfunded.io/en/terms-and-conditions) · [Source 2](https://www.wfunded.io/en/faq) · [Source 3](https://www.trustpilot.com/review/williscapitals.com) · [Source 4](https://thetrustedprop.com/prop-firms/willis-capital/overview) · [Source 5](https://wfunded.io/) · [Source 6](https://techcabal.com/?p=162269).
 
 *Reprise du dossier F/G : cohorte G, classement de recherche THIRD_PARTY_CLOSED_PRIMARY_NOT_LOCATED. règles déjà structurées dans le site : 8/8. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit du 23/11/2026 :** [williscapitals.com](https://williscapitals.com/) redirige vers [WFunded](https://www.wfunded.io/en), et [stage.williscapitals.com](https://stage.williscapitals.com/en/terms-and-conditions) héberge les CGU WFunded : **continuité commerciale mieux établie**, transfert des dettes historiques **non démontré**. [CGU WFunded §§5.2–5.3](https://www.wfunded.io/en/terms-and-conditions) : refus possible de payout et perte de profits pour manquements relationnels / propos publics jugés faux ou diffamatoires ; **vidéo de témoignage exigée après le premier payout, faute de quoi les suivants peuvent être bloqués** ; wallet promo non retirable, limitation IP. [FAQ](https://www.wfunded.io/en/faq) : 70/30 standard, premier retrait mensuel puis bihebdomadaire, minimum 100 USD. [Trustpilot ancien domaine](https://www.trustpilot.com/review/williscapitals.com) affiche WFunded 3,4/5 (294 avis), **pas de rétention officielle du score**. Pas de preuve A3 indépendante, contrat funded / vendeur du compte historique à demander.
+
+**Annexe :** [Willis Capital / autres firmes du lot 7](v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md). **Note V5.2 non attribuée.**
 
 ---
 
@@ -585,6 +595,11 @@ La matière documentaire reprend **22 dossiers de recherche F/G** avec leur prov
 **Sources et pistes à consulter :** [Source 1](https://leveledupsociety.com/) · [Source 2](https://www.financemagnates.com/forex/exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/) · [Source 3](https://mypropgenius.com/rule-changes/2026-10/) · [Source 4](https://www.trustpilot.com/review/leveleduptraders.com).
 
 *Source : dossier actuel PropRadar et références publiques ; règles déjà structurées dans le site : 0/0. La classification ancienne ne vaut pas preuve de validité des CGU actuelles.*
+
+
+**Contre-audit du 23/11/2026 :** [CNMV — avertissement officiel du 26 juin 2023](https://www.fsma.be/sites/default/files/media/files/2023-07/20230626_leveledupsociety.pdf) visant expressément **LEVELED UP SOCIETY** et `leveledupsociety.com` pour **services d'investissement visés non autorisés**. Périmètre du trading simulé **non tranché**. [Finance Magnates, octobre 2023](https://www.tradingview.com/news/financemagnates%3A099925cdd094b%3A0-exclusive-closed-prop-trading-firm-leveled-up-society-leaves-traders-in-limbo/) cite suspension officielle des services, puis reprise de payouts **déclarée** sans preuve de règlements finaux. [MyPropGenius octobre 2026](https://mypropgenius.com/rule-changes/2026-10/) observe redirection vers jeu sans rapport ; aucun opérateur actuel ou dissolution légale démontrés. [Trustpilot du domaine exact](https://www.trustpilot.com/review/www.leveledupsociety.com) affiche ~3,3/5 (1 286 avis), pas de retenue officielle. A3 non démontré, **examen archivage commercial soumis à Flo**.
+
+**Annexe :** [Leveled Up Society / autres firmes du lot 7](v52-deep-dive-willis-t4t-leveled-up-2026-11-23.md). **Note V5.2 non attribuée.**
 
 ---
 
