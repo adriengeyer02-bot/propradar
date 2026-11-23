@@ -86,7 +86,7 @@
           },
           "D2": {
             "points": 6,
-            "reason": "CGU accessibles avec date d'effet 03/11/2025 et §1.4 décrivant la prise d'effet à publication des changements, donc critères de visibilité et applicabilité documentés; cela n'établit pas l'équité d'une modification.",
+            "reason": "CGU accessibles avec date d'effet 11/03/2025 (format imprimé par la firme) et §1.4 décrivant la prise d'effet à publication des changements, donc critères de visibilité et applicabilité documentés; cela n'établit pas l'équité d'une modification.",
             "sources": [
               "https://e8markets.com/e8-markets-terms-and-conditions"
             ]
@@ -351,17 +351,20 @@
           },
           "C1": {
             "points": 4,
-            "reason": "IF Pro Ltd Sainte-Lucie est affiché comme fournisseur avec numéro; Acello Ltd UK est vérifiable au registre britannique mais n'est que l'agent de paiement, donc pas d'identité du débiteur IF Pro certifiée au checkout funded.",
+            "reason": "Contradiction de rôles : le PDF General Terms §1.1 désigne Acello Ltd (UK n°12696083) comme 'Company' contractante, alors que la page Corporate Disclosures du site la désigne comme agent de paiement d'IF Pro Ltd (Sainte-Lucie). Le vendeur au checkout funded est donc non réconcilié, C1=4.",
             "sources": [
               "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
-              "https://instantfunding.com/disclaimers-legal-information/"
+              "https://instantfunding.com/disclaimers-legal-information/",
+              "https://find-and-update.company-information.service.gov.uk/company/12696083"
             ]
           },
           "C2": {
             "points": 3,
-            "reason": "Companies House Acello Ltd ACTIVE ne certifie pas IF Pro Ltd qui fournit l'évaluation; pas d'extrait primaire de l'entité Sainte-Lucie liée au funded : C2=3.",
+            "reason": "Companies House confirme Acello Ltd UK active, mais la page actuelle désigne IF Pro Ltd Sainte-Lucie comme opérateur du service; absence de registre officiel valide du débiteur ultime et contrat non aligné, donc C2=3 provisoire, non preuve de dissolution.",
             "sources": [
-              "https://find-and-update.company-information.service.gov.uk/company/12696083"
+              "https://find-and-update.company-information.service.gov.uk/company/12696083",
+              "https://instantfunding.com/disclaimers-legal-information/",
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
             ]
           },
           "C3": {
@@ -387,10 +390,11 @@
             ]
           },
           "D3": {
-            "points": 4,
-            "reason": "L'offre reconnaît simulation et sépare IF Pro Ltd de l'agent Acello Ltd; le panier et la version funded signée n'ont pas été vérifiés, seulement deux items documentaires lisibles.",
+            "points": 2,
+            "reason": "Le produit est bien présenté comme une simulation, mais le PDF d'octobre 2026 fait contracter Acello Ltd tandis que les Corporate Disclosures donnent IF Pro Ltd comme fournisseur et Acello comme simple agent. Cette contradiction officielle bloque la cohérence juridique FAQ/contrat et checkout; seul le caractère simulé donne +2/6.",
             "sources": [
-              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+              "https://instantfunding.com/disclaimers-legal-information/"
             ]
           },
           "E1": {
@@ -403,7 +407,7 @@
           },
           "E2": {
             "points": 2,
-            "reason": "Support et centre d'aide publics avec réponses, mais pas de règlement contradictoire de litige vérifié, ni de procédure d'escalade rewards complète.",
+            "reason": "Centre d'aide et support officiels identifiables avec réponses publiques; la page de mentions juridiques distingue contact et sociétés, mais le mécanisme de résolution indépendant des litiges rewards et le vrai débiteur n'ont pas été démontrés.",
             "sources": [
               "https://www.trustpilot.com/review/instantfunding.com"
             ]
@@ -418,7 +422,7 @@
       "name": "Instant Funding",
       "domain": "instantfunding.com",
       "program": "Instant GO, IF Micro Clarity, One-Phase Clarity, et contrats CFD après KYC; splits différents selon add-ons",
-      "legal": "Source légale nomme IF Pro Ltd à Sainte-Lucie n°2025-00056 pour le service et Acello Ltd UK n°12696083 comme agent de paiement; seul agent UK primaire visible.",
+      "legal": "**Discordance de sources officielles** : CGU PDF octobre 2026 §1.1 présentent Acello Ltd n°12696083 comme partie contractante, tandis que les Corporate Disclosures du site déclarent Acello Ltd seulement agent de paiement de IF Pro Ltd Sainte-Lucie n°2025-00056. Réconcilier contrat du checkout et accord Trader.",
       "launch": "Entreprise se présente active depuis 2022",
       "refs": {
         "terms": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
@@ -434,14 +438,14 @@
         "A": 16,
         "B": 13,
         "C": 9,
-        "D": 16,
+        "D": 14,
         "E": 8
       },
-      "raw": 62,
+      "raw": 60,
       "trustpilotPenalty": 6,
       "payoutEvidenceCap": 69,
-      "proposedScore": 56,
-      "change": -16,
+      "proposedScore": 54,
+      "change": -18,
       "ownerApproval": false,
       "officialContract2026Inspected": true,
       "legalPrimaryRegistryVerified": false,
@@ -449,7 +453,8 @@
       "openIssues": [
         "trustpilot_guidelines_withheld",
         "payment_agent_distinct_from_provider",
-        "payout_wallet_partial"
+        "payout_wallet_partial",
+        "conflict_acello_vs_ifpro_in_official_terms_and_disclaimers"
       ]
     },
     {
