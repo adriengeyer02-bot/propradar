@@ -18,7 +18,7 @@ import ScoreRing from '../../../components/ui/ScoreRing';
 import ScoreBreakdownDialog, { type ScoreBreakdownView, type ScoreStep } from '../../../components/ui/ScoreBreakdownDialog';
 import { getScoreBreakdown } from '../../../lib/scoreBreakdown';
 import { scoreV4Copy } from '../../../lib/scoreV4I18n';
-import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy, scoreV52Copy, scoreV52EvidenceCapCopy } from '../../../lib/scoreV5I18n';
+import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy, scoreV52Copy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
 import { scoreRuleCopy } from '../../../lib/scoreRuleCopy';
@@ -682,11 +682,6 @@ export default async function FirmPage({ params }: Props) {
       value: afterTrustpilot,
       delta: breakdown.trustpilot.before - afterTrustpilot,
     });
-  }
-  if (breakdown.payoutEvidenceCap) {
-    const evidence = scoreV52EvidenceCapCopy(locale, breakdown.payoutEvidenceCap.cap);
-    scoreSteps.push({ kind: 'proof', label: evidence.label, detail: evidence.detail,
-      value: breakdown.payoutEvidenceCap.cap, delta: breakdown.payoutEvidenceCap.before - breakdown.payoutEvidenceCap.cap });
   }
   if (breakdown.safetyCap) {
     const safety = scoreV5LegalCapCopy(locale, breakdown.safetyCap.cap);
