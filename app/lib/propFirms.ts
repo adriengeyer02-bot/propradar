@@ -12963,8 +12963,21 @@ function applyRulesPenaltyRule(firm: PropFirm): PropFirm {
 export const TRUSTPILOT_NOTICE_PENALTY = 6;
 
 function applyTrustpilotPenaltyRule(firm: PropFirm): PropFirm {
-  if (firm.status === 'Fermée' || !firm.reviewSignals.trustpilotRatingWithheld) return firm;
-  if (getFirmUpdate(firm.slug)?.set?.trustpilotPenaltyIncluded) {
+  if (firm.status === 'Fermée') return firm;
+  // A published V5.2 score has ALREADY deducted Trustpilot's exact-domain -6
+  // in computeV52Scorecard/computeV52Candidate. Applying the legacy site-wide
+  // penalty here again silently deducts 12 points and breaks the modal.
+  // Respect the source-date gate: if a later score edit superseded V5.2, it
+  // must use its own legacy penalty policy instead.
+  const current = getFirmUpdate(firm.slug);
+  const v52Current = current?.scoringVersion === 5.2 || (!current && isPublishedV52(firm.slug));
+  if (v52Current) {
+    return firm.reviewSignals.trustpilotRatingWithheld
+      ? { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } }
+      : firm;
+  }
+  if (!firm.reviewSignals.trustpilotRatingWithheld) return firm;
+  if (current?.set?.trustpilotPenaltyIncluded) {
     return { ...firm, trustpilotPenalty: { before: firm.score, penalty: 0, included: true } };
   }
   return { ...firm, score: Math.max(0, firm.score - TRUSTPILOT_NOTICE_PENALTY), trustpilotPenalty: { before: firm.score, penalty: TRUSTPILOT_NOTICE_PENALTY, included: false } };
