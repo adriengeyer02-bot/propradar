@@ -729,12 +729,12 @@
       "firm": "My Flash Funding",
       "scorePublishedBefore": 49,
       "sourceDate": "2026-11-23",
-      "statusFinding": "ACQUIS_PAR_SWAY_FUNDED",
-      "statusEvidence": "La page myflashfunding.com annonce l'acquisition par Sway Funded; l'ancien site cite selon pages Sway Funded LTD, LLC n°2024-00342 Saint Lucia et conditions Sway Funded FZCO; la chaîne contractuelle reste incohérente.",
+      "statusFinding": "MARQUE_ACQUISE_PAR_SWAY_OFFICIELLEMENT_CHECKOUT_REDIRECT_SOCIETES_CONTRACTANTES_MULTIPLES",
+      "statusEvidence": "MyFlashFunding.com indique explicitement 'now owned by Sway Funded' et Buy Evaluation vers my.swayfunded.com. BrokersView 30/07/2024 relate clôture ordonnée pour 24/07/2024, migration et promesse de payout immédiat intégral; non confirmé payé. Ancien site cite MyFlashFunding LLC, Sway Funded LTD, Sway Funded LLC 2024-00342 Sainte-Lucie. CGU publiques Sway 2026 désignent SF FUNDED LTD n°2026-00408 Sainte-Lucie, CGU my.swayfunded.com/p/terms désignent Sway Funded FZCO. Transfert juridique des obligations anciennes et date des versions non authentifiés.",
       "statusBasis": "official_acquisition_and_terms",
-      "contractAndRules": "L'ancien contrat public accorde une licence de service résiliable. Recouper CGU à my.swayfunded.com au checkout et contrat funded ; distinguer conditions de nouveaux clients et obligations des anciens.",
-      "payoutEvidenceFinding": "Aucun règlement MyFlash historique vérifié indépendamment dans cette revue ; les payouts Sway récents ne prouvent pas le paiement d'anciens clients MyFlash.",
-      "trustpilotFinding": "Trustpilot de l'ancien domaine ne doit pas être transféré à Sway sans preuve juridique.",
+      "contractAndRules": "CGU portail Sway FZCO §4.10 changent immédiatement prix/paramètres pour challenges déjà achetés; preuve d'une modification défavorable effectivement appliquée à un programme historique non obtenue. §8.7 permet réexamen du style/volume/profit/consistency et refus du funded après réussite, frais d'entrée/credits alors remboursables; §9.5 split 80/20 et §9.6 remboursement fee crédité sur payouts pendants. Nouveaux T&C Sway 2026 SF FUNDED LTD §1.3 large pouvoir de modification des CGU. Site MyFlash ancien affiche 80% daily et jusqu'à 90%; produits et versions à distinguer.",
+      "payoutEvidenceFinding": "Aucun justificatif final indépendant établissant le paiement des récompenses MyFlash promises en juillet 2024. Les payouts Sway contemporains sont non transférables au vendeur historique sans preuve de reprise, et les annonces d'acquisition ne constituent pas une preuve A3.",
+      "trustpilotFinding": "Trustpilot myflashfunding.com redirige vers swayfunded.com, profil Trustpilot actif ~4.0/5 621 avis et avis Merged; une fusion de profils n'est PAS une retenue du TrustScore pour non-respect des guidelines et ne valide pas les payouts historiques MyFlash.",
       "trustpilotExactProfile": null,
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -773,6 +773,16 @@
         {
           "url": "https://my.swayfunded.com/",
           "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://www.fastbull.com/brokersview/news/prop-firm-sway-funded-acquires-another-prop-brand-myflashfunding-239082",
+          "kind": "presse_source_annonce_2024",
+          "label": "July 2024 acquisition, migration and immediate payouts promised"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/myflashfunding.com",
+          "kind": "profil_avis_redirect",
+          "label": "Redirect to swayfunded.com profile, merger not penalty"
         }
       ],
       "remainingTasks": [
@@ -781,11 +791,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir acte de migration juillet 2024 et obligations expressément reprises, y compris paiement immédiat annoncé.",
+        "Identifier entity merchant/contract debtor pour achats MyFlash historiques, Sway Funded LLC 2024, Sway Funded FZCO et SF FUNDED LTD 2026.",
+        "Vérifier §4.10 sur le programme réellement signé puis cas de changement défavorable avant toute B2 −4."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md"
     },
     {
       "slug": "nova-funding",
@@ -985,12 +999,12 @@
       "firm": "FundedLions",
       "scorePublishedBefore": 55,
       "sourceDate": "2026-11-23",
-      "statusFinding": "DOMAINE_NON_RÉSOLVANT_EN_OCTOBRE_2026",
-      "statusEvidence": "fundedlions.com ne résolvait pas au contrôle indépendant du 11/10/2026, sans avis primaire récent de dissolution. Source historique d'interruption de plateforme dans la presse.",
+      "statusFinding": "PAUSE_2024_DOMAINE_NXDOMAIN_2026_SOCIETE_UK_HOMONYME_DISSOUTE_IDENTITE_VENDEUR_NON_PROUVEE",
+      "statusEvidence": "Annonce FundedLions citée BrokersView 12/09/2024: suspension dans différend allégué avec Dominion Markets, migration MT5 promise sous 7 jours, preuve de restauration non obtenue. MyPropGenius relève fundedlions.com NXDOMAIN le 11/10/2026; navigation 23/11 échoue. Companies House THE FUNDED LION LTD 15102550 dissoute le 11/02/2025 après strike-off obligatoire, mais lien avec le contractant exact du domaine et des comptes vendus NON démontré; responsable enregistré au registre britannique différent du dirigeant cité pour la marque.",
       "statusBasis": "secondary_dated_site_down",
-      "contractAndRules": "Les CGU du fournisseur actif ne sont pas accessibles; aucune restriction généralisée ne peut être imputée sans contrat daté.",
-      "payoutEvidenceFinding": "Pas de reward final indépendant contemporain vérifié.",
-      "trustpilotFinding": "Profil fundedlions.com ancien à vérifier, pas de masquage confirmé.",
+      "contractAndRules": "CGU et accord funded applicables aux anciens challenges FundedLions non récupérés, donc impossible de noter les restrictions du bon programme ou de certifier les règles d'un comparateur historique. L'annonce de migration est une communication unilatérale du prestataire, les accusations contre Dominion non établies contradictoirement.",
+      "payoutEvidenceFinding": "Suspension reconnue en 2024 et plaintes de traders sur migration/payout, aucune confirmation tierce multi-bénéficiaires des rewards reçus ou remboursements des comptes historiques. A3 à six maillons inconnu.",
+      "trustpilotFinding": "Trustpilot fundedlions.com 73 avis historiques, avis désormais fermés parce que 'company website has closed', pas parce qu'un avis officiel de breach of guidelines retient le TrustScore. Ne pas appliquer le -6 Trustpilot sur ce seul bandeau.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/fundedlions.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1022,6 +1036,21 @@
           "url": "https://www.fastbull.com/brokersview/news/prop-firm-fundedlions-claims-to-be-attacked-and-blackmailed-by-dominion-markets-244013",
           "kind": "archive_code",
           "label": "FundedLions own 2024 statement reproduced in industry report"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15102550",
+          "kind": "registre_primaire_homonyme_a_relier",
+          "label": "THE FUNDED LION LTD 15102550 dissolved 11 Feb 2025; link to website contractual seller unproven"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15102550/officers",
+          "kind": "registre_primaire",
+          "label": "Registered director differs from reported CEO, confirm website seller"
+        },
+        {
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15102550/filing-history",
+          "kind": "registre_primaire",
+          "label": "Compulsory strike-off dated 11 Feb 2025"
         }
       ],
       "remainingTasks": [
@@ -1030,11 +1059,15 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Obtenir CGU/facture FundedLions liant le bon vendeur et l'éventuelle THE FUNDED LION LTD 15102550.",
+        "Vérifier l'état de la migration MT5 annoncée et la résolution des anciennes créances et remboursements.",
+        "Ne pas imputer les accusations du fournisseur Dominion Markets comme des faits vérifiés."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md"
     },
     {
       "slug": "leveled-up-society",
@@ -1948,12 +1981,12 @@
       "firm": "Quantec Trading Capital",
       "scorePublishedBefore": 34,
       "sourceDate": "2026-11-23",
-      "statusFinding": "DOCUMENTS_2024_EXISTENT_ACTIVITE_2026_NON_RECONFIRMÉE",
-      "statusEvidence": "CGU et schedule datés 2024 trouvés sur domaine quantectrading.com, non preuve d'un checkout actuel. Le domaine quantectradingcapital.com doit être identifié séparément pour éviter la confusion.",
+      "statusFinding": "CGU_2024_CONTRACTANT_PROP_TRADE_TECH_LLC_RADIEE_2025_OFFRE_2026_NON_PROUVEE",
+      "statusEvidence": "PDF officiel historique Quantec §1 nomme Prop Trade Tech LLC 2784 LLC 2022; Gazette SVG n°33 du 24/06/2025 p.419, inspectée en capture, confirme radiation de CETTE LLC. Ne pas confondre avec Prop Trade Tech Pty Ltd ABN 71 661 045 950 devenue TRADESIM (contrats historiques Nova/Rocket21). Aucun transfert ou nouvelle entité Quantec contractante démontré. Domaine quantectrading.com HTTP526 au contrôle 23/11/2026, quantectradingcapital.com/terms inaccessible; annexe CGU 2024 récupérable seulement via texte indexé, captures PDF serveur 526.",
       "statusBasis": "archived_2024_primary_docs",
-      "contractAndRules": "Schedule historique prévoit 35% maximum de contribution d'une journée au profit et 5% de profit minimum initial selon plan. Réponses aux avis Trustpilot attribuent refus à similarité de stratégie / Risk Team; il faut obtenir le contrat signé et les logs avant conclusion.",
-      "payoutEvidenceFinding": "Demandes de paiement contestées et réponses argumentées visibles sur Trustpilot 2024; aucun paiement bancaire final indépendant 2026 identifié.",
-      "trustpilotFinding": "Profil quantectrading.com actif avec avis et réponses, aucune suspension du TrustScore officiellement constatée.",
+      "contractAndRules": "CGU historiques §§2.2/11.1 : funded non garanti, accord entrepreneur distinct. §12.2(g)(viii) stratégie à opinion exclusive et §12.3 rupture sans préavis + forfeiture des paiements de contrat, §18.5 préserve droits acquis sauf §12.3. Schedule 03/10/2024 produit Standard 1-step: splits 60/70/80% successifs, 35% profit consistency funded, HFT/news autorisés challenge et interdits funded. Plans nouveaux DXTrade/TradeLocker 90% selon produit. Même annexe : tableau 'No' consistency evaluation vs note n°3 'Assessment and/or Trading Period', à clarifier. Annexe novembre 2024 comptes après 07/10 et anciens avant 26/08 : cap 2.5% capital premier reward, 5% suivants, 30 jours avant premier payout puis 15 jours, éventuel refund fee après troisième payout si achat dès 01/11. Incohérence de définition de 35% entre annexes octobre (profit/return) et novembre (35% account size per day), approbation/phase à vérifier; news ±10m 2-step, même instruments entre challenge/funded, changement de stratégie et scalp <15m peuvent mener à refus partiel/total de profit selon Risk Team.",
+      "payoutEvidenceFinding": "Trustpilot plaintes 2024/2025 de refus de payouts pour consistency, stratégies et retraits, certaines réponses officielles; faits individuels non indépendamment jugés, aucun A3 final à six maillons du bon payeur prouvé.",
+      "trustpilotFinding": "Trustpilot exact quantectrading.com environ 1.7/5 pour 515-516 avis, score affiché, aucune retenue officielle de TrustScore pour breach of guidelines. Avis défavorables ne justifient pas -6.",
       "trustpilotExactProfile": "https://www.trustpilot.com/review/quantectrading.com",
       "activeTrustpilotScoreWithholdingVerified": null,
       "sourcePolicy": "Aucun malus Trustpilot −6 ne doit être supposé quand la page existe. Exiger la bannière Trustpilot courante et le même domaine.",
@@ -1987,6 +2020,21 @@
         {
           "url": "https://tradersunion.com/brokers/prop/view/quantec-trading-capital/",
           "kind": "recherche_precedente_F_G"
+        },
+        {
+          "url": "https://legal.gov.vc/legal/images/PDF/2025Gazettes/Gazette_No33_2025.pdf",
+          "kind": "journal_officiel_primaire_capture_p419",
+          "label": "Prop Trade Tech LLC 2784 LLC 2022 officially struck off SVG register June 2025"
+        },
+        {
+          "url": "https://quantectrading.com/wp-content/uploads/2024/11/Schedule-of-assessment-Quantec.pdf",
+          "kind": "annexe_historique_nov2024_indexee",
+          "label": "Different cohorts and October 7 cutoff, 2.5/5% funded cap, 30/15-day payouts"
+        },
+        {
+          "url": "https://thetrustedprop.com/checkout/quantec-trading?challengeId=401&firmId=158&pricingId=1929",
+          "kind": "annuaire_secondaire",
+          "label": "Firm marked closed; not primary evidence"
         }
       ],
       "remainingTasks": [
@@ -1995,11 +2043,16 @@
         "FAQ complète par produit et phase + clauses déclenchant refus/confiscation",
         "Preuves de payout final par tiers indépendant, séparées des déclarations",
         "Profil Trustpilot du domaine exact, vérifier bandeau officiel actif",
-        "Réconciliation des éventuelles dettes historiques et reprises"
+        "Réconciliation des éventuelles dettes historiques et reprises",
+        "Rapprocher la LLC SVG radiée avec les factures Quantec et les contrats funded signés, et établir éventuel transfert de créances.",
+        "Éclaircir la consistency 35% selon annexe oct/nov 2024, la base de calcul et le programme/phase.",
+        "Obtenir les décisions/rejets documentés concernant instrument/strategy consistency et scalp sous 15 minutes, sans punition B1+B2 duplicative.",
+        "Vérifier les cap payouts 2.5% / 5%, délai initial 30j puis 15j, et contrôle des paiements finalisés au bon vendeur."
       ],
       "numericV52": null,
       "publicationApproved": false,
-      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule."
+      "trustpilotEvidenceState": "Current official Trustpilot guideline-breach withholding NOT confirmed; negative reviews or inaccessible profiles alone do not justify the −6 rule.",
+      "deepDiveFile": "audits/v52-deep-dive-fundedlions-myflashfunding-quantec-2026-11-23.md"
     },
     {
       "slug": "real-funds-trader",
