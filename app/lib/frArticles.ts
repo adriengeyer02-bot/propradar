@@ -696,7 +696,7 @@ export const frArticles: FrArticle[] = [
     answer:
       'Oui, Topstep est une prop firm futures sérieuse et ancienne (fondée en 2012 à Chicago). Son Trading Combine n\'a pas de limite de temps, une règle de consistance à 55 % et une Maximum Loss Limit qui suit le solde de fin de journée. Les nouveaux traders gardent 90 % des payouts. Limites : futures uniquement, pas de position overnight, règles souvent modifiées depuis fin 2025.',
     keywords: ['avis topstep', 'topstep fiable', 'topstep avis 2026', 'règles topstep'],
-    updated: '2026-11-12',
+    updated: '2026-11-23',
     intro:
       'Topstep est **le nom le plus ancien du prop trading sur futures**. Cet historique est sa principale force. Ses faiblesses : une offre **limitée aux futures**, des règles **plusieurs fois modifiées** depuis fin 2025 et une limite de perte **suiveuse** qui exige de la discipline.',
     keyPoints: [
@@ -704,6 +704,7 @@ export const frArticles: FrArticle[] = [
       'Le Combine n\'a **pas de limite de temps**, et toutes les positions sont **fermées en fin de séance**.',
       'Les nouveaux traders gardent **90 %** des payouts ; payout minimum **125 $**.',
       'Après le premier payout, la limite de perte passe à **0 $** : plus aucun coussin.',
+      'Depuis le **17 novembre 2026**, certains pays ont des restrictions supplémentaires : nationalité, résidence et phase du compte doivent être vérifiées.',
     ],
     sections: [
       {
@@ -739,13 +740,81 @@ export const frArticles: FrArticle[] = [
       {
         heading: 'Compte Express Funded et payouts',
         paragraphs: [
-          'Après validation, vous tradez un compte **Express Funded (XFA)**, toujours simulé, où commencent les payouts. Depuis février 2026, deux parcours au choix, et **le choix est définitif**.',
-          'Les traders inscrits depuis le 12 janvier 2026 touchent **90 %** des payouts validés ; les plus anciens gardent 100 % de leurs 10 000 premiers dollars, puis 90 %. Payout minimum : **125 $**.',
+          'Après validation, vous tradez un compte **Express Funded (XFA)**, toujours simulé, où commencent les payouts. Les parcours **Standard** et **Consistency** ont des conditions et **des plafonds par retrait différents** ; le choix est définitif pour ce compte.',
+          'Les traders inscrits depuis le 12 janvier 2026 touchent **90 %** des payouts validés ; les traders de l'ancien tableau de bord bénéficient de règles spécifiques pour leurs 10 000 premiers dollars. Payout minimum : **125 $**. Sur les comptes Express Funded, chaque demande est limitée à **50 % du solde**, sous réserve d'un plafond par taille et parcours. Une **option temporaire de Daily Loss Limit achetée avec un nouveau Combine** peut augmenter les plafonds. Les comptes Live suivent une autre politique.',
         ],
         compare: {
           columns: ['Parcours Standard', 'Parcours Consistency'],
           rows: [
-            { label: 'Avant chaque payout', values: ['**5 journées gagnantes** d\'au moins 150 $', '**3 jours de trading**, meilleure journée **≤ 40 %** du profit net'] },
+            { label: 'Avant chaque payout', values: ['**5 journées gagnantes** d\'au moins 150 
+          ],
+          note: 'Plafonds de base vérifiés le 23 novembre 2026. Une option Daily Loss Limit à l’achat d’un nouveau Combine peut les relever temporairement. Le choix du parcours est définitif.',
+        },
+        callout: { kind: 'warning', text: 'Après le premier payout, la limite de perte passe à **0 $** : **une mauvaise journée après un retrait peut suffire à perdre le compte.**' },
+      },
+      {
+        heading: 'Points forts et points faibles',
+        paragraphs: ['Ce qui ressort des règles actuelles :'],
+        prosCons: {
+          pros: [
+            'L\'**historique le plus long** du prop trading futures et un centre d\'aide très documenté.',
+            '**Pas de limite de temps** ; la consistance relève l\'objectif au lieu d\'éliminer.',
+            '**90 %** de partage dès le premier dollar et un payout minimum bas (**125 $**).',
+          ],
+          cons: [
+            '**Futures uniquement**, positions obligatoirement fermées en fin de séance.',
+            'La limite de perte tombe à **0 $ après le premier payout**.',
+            'Règles **modifiées plusieurs fois** entre novembre 2025 et avril 2026.',
+          ],
+        },
+      },
+      {
+        heading: 'Pays acceptés : changement du 17 novembre 2026',
+        paragraphs: [
+          'Depuis le **17 novembre 2026**, Topstep bloque les **nouveaux achats** pour des adresses situées en Andorre, Cambodge, Éthiopie, Guinée, Kirghizistan, Laos, Macao, Mozambique, Namibie, Sénégal, Serbie, Ouzbékistan et Zimbabwe. Selon la transition annoncée, le trading et les payouts des comptes existants concernés restent possibles jusqu’au **31 décembre 2026**, sous réserve des autres restrictions.',
+          'La **nationalité**, la **résidence** et le **pays depuis lequel vous tradez** peuvent changer l’éligibilité. Certains pays sont admis au compte Express simulé mais **pas au compte Live**. Vérifiez toujours la page officielle avant d’acheter ou de voyager.',
+        ],
+      },
+      {
+        heading: 'Pour qui ?',
+        paragraphs: [
+          'L\'abonnement mensuel rend une **évaluation lente** plus coûteuse qu\'un challenge à frais unique.',
+        ],
+        fit: {
+          yes: ['**Day traders futures**', 'Envie d\'un **opérateur établi**', 'À l\'aise avec une **limite suiveuse surveillée en direct**'],
+          no: ['Traders **forex ou CFD**', '**Swing traders** qui gardent la nuit', 'Choix **surtout sur le prix**'],
+        },
+      },
+    ],
+    sources: [
+      { label: 'Centre d\'aide Topstep : Maximum Loss Limit', url: 'https://intercom.help/topstep-llc/en/articles/8284204' },
+      { label: 'Centre d\'aide Topstep : consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
+      { label: 'Topstep : politique de payout et plafonds (23 novembre 2026)', url: 'https://help.topstep.com/en/articles/8284233-topstep-payout-policy' },
+      { label: 'Topstep : éligibilité par pays, mise à jour 17 novembre 2026', url: 'https://help.topstep.com/en/articles/8284116-am-i-eligible-to-trade-with-topstep' },
+      { label: 'Topstep sur Trustpilot', url: 'https://www.trustpilot.com/review/topstep.com' },
+    ],
+    faq: [
+      {
+        question: 'Topstep est-il une arnaque ?',
+        answer:
+          'Non. Topstep existe depuis 2012, publie ses règles en détail et n\'a pas d\'alerte de régulateur recensée par PropRadar. Ses comptes d\'évaluation et Express Funded sont simulés, comme chez toutes les prop firms.',
+      },
+      {
+        question: 'Quel partage des profits chez Topstep ?',
+        answer: '90 % pour les traders inscrits depuis le 12 janvier 2026 ; 100 % des 10 000 premiers dollars puis 90 % pour les plus anciens.',
+      },
+      {
+        question: 'Peut-on garder une position overnight chez Topstep ?',
+        answer: 'Non, toutes les positions doivent être fermées avant la fin de séance.',
+      },
+    ],
+    firmSlugs: ['topstep', 'apex-trader-funding', 'alpha-futures'],
+    related: ['drawdown-prop-firm', 'regle-de-consistance-prop-firm', 'meilleures-prop-firms-2026'],
+  },
+
+  {
+, '**3 jours de trading**, meilleure journée **≤ 40 %** du profit net'] },
+            { label: 'Plafond de base (50K / 100K / 150K)', values: ['**2 000 / 3 000 / 5 000 $**', '**3 000 / 4 000 / 6 000 $**'] },
           ],
           note: 'Le choix entre les deux parcours est définitif.',
         },
