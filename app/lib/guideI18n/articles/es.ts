@@ -141,12 +141,12 @@ const es: GuideArticleTranslations = {
       {
         heading: 'Las reglas de la cuenta financiada que más importan',
         paragraphs: [
-          'Los modelos de challenge son convencionales. El modelo 2-Step GOAT pide 8 % y luego 6 % con un 4 % de pérdida diaria y un 10 % de pérdida máxima estática; el 2-Step Standard pide 10 % y luego 5 % con 5 % diario y 10 % máximo; el 1-Step pide 10 % con un 3 % de pérdida diaria y un 6 % de pérdida máxima estática. El modelo 3-Step se retiró en agosto de 2026. Estas cifras proceden de un análisis de terceros revisado el 5 de octubre de 2026: confírmalas al pagar.',
+          'Los modelos de challenge son convencionales. El modelo 2-Step GOAT pide 8 % y luego 6 % con un 4 % de pérdida diaria y un 10 % de pérdida máxima estática; el 2-Step Standard pide 10 % y luego 5 % con 5 % diario y 10 % máximo; el 1-Step pide 10 % con un 3 % de pérdida diaria y un 6 % de pérdida máxima estática. GOAT todavía publica documentación del modelo 3-Step, pero la política de reset excluye modelos antiguos. Además, 2-Step Standard ya no se vende a nuevos clientes. Una FAQ publicada no garantiza que el modelo esté disponible hoy: comprueba producto y contrato en el checkout. Estas cifras proceden de un análisis de terceros revisado el 5 de octubre de 2026: confírmalas al pagar.',
           'Las reglas que deciden los pagos empiezan después de aprobar:',
         ],
         bullets: [
           "Goat Guard: en las cuentas financiadas a las que se aplica (no Instant), una pérdida flotante del 2 % del saldo puede cerrar posiciones. La primera activación reduce el reparto al 50 % y la segunda supone un incumplimiento. Comprueba las excepciones del programa.",
-          'Regla de 2 minutos: el beneficio de las operaciones mantenidas menos de dos minutos se elimina al pagar, mientras que las pérdidas de esas operaciones se quedan en la cuenta.',
+          "Tiempo mínimo solo en cuentas funded: challenge comprado antes del 6 de octubre de 2026 = 2 minutos; desde esa fecha = 1 minuto. Los beneficios de trades más cortos se eliminan del payout, pero las pérdidas se mantienen. Un reset no cambia la fecha de compra original; no rige durante la evaluación.",
           'Ventana de noticias: el beneficio obtenido en torno a noticias de alto impacto está limitado al 1 % del saldo inicial.',
           'Tope de beneficio diario: una cuenta financiada puede registrar como máximo 3.000 $ de beneficio al día.',
           'Los modelos instantáneos usan trailing drawdowns y cierran la cuenta con una pérdida flotante del 1 % o 2 % según el modelo.',
