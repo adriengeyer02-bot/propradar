@@ -5,10 +5,10 @@
   "rules": "A research file is not an approved/closed audited contract. All records require dated applicable agreement; public scoring remains rollback version. No score or commercial ranking may be changed based on this tracker.",
   "summary": {
     "total": 121,
-    "researchFiles": 84,
-    "pending": 37,
+    "researchFiles": 90,
+    "pending": 31,
     "pendingBlocked": 3,
-    "observations": 255,
+    "observations": 276,
     "signedFundedCoverageComplete": "NOT_ASSESSED_FOR_ALL"
   },
   "records": [
@@ -240,17 +240,18 @@
     },
     {
       "slug": "equity-edge",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 4,
       "priorRuleClassification": {
         "rules": 9,
         "classed": 9,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Confirmer conditions funded supplémentaires et clause précise sur rewards déjà approuvés; vérifier version 06/10 et source de la procédure de recours.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_terms_recent_web"
     },
     {
       "slug": "alpine-funded",
@@ -282,17 +283,18 @@
     },
     {
       "slug": "orion-funded",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 3,
       "priorRuleClassification": {
         "rules": 14,
         "classed": 13,
         "risks": 4
       },
       "legacyLastReviewed": "2026-11-19",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Lire PDF du contrat Orion par pages, accord Orion Trader Account proposé par tiers après réussite et recours; sans cela revue incomplète.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_faq_only_terms_pdf_unread"
     },
     {
       "slug": "wsfunded",
@@ -613,17 +615,18 @@
     },
     {
       "slug": "ultimate-traders",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 3,
       "priorRuleClassification": {
         "rules": 6,
         "classed": 6,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-20",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Recueillir convention funded et le débiteur des rewards; vérifier les voies d'appel, conditions exactes des sanctions et anciennes cohortes.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_general_terms_web_crawled_older"
     },
     {
       "slug": "bullwaves-prime",
@@ -965,17 +968,18 @@
     },
     {
       "slug": "rebelsfunding",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 3,
       "priorRuleClassification": {
         "rules": 7,
         "classed": 7,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Obtenir accord RCF de rémunération, séparation entité vendeuse/payeuse, traitement des payouts approuvés et recours selon cohorte.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_general_terms_web_crawled_older"
     },
     {
       "slug": "sway-funded",
@@ -1023,17 +1027,18 @@
     },
     {
       "slug": "funderpro",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 4,
       "priorRuleClassification": {
         "rules": 4,
         "classed": 4,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Examiner CGU générales et Challenge séparées, version actuelle au checkout, accords de rémunération, exceptions et recours contre §7.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_instant_program_terms_march_2026_web"
     },
     {
       "slug": "hyrotrader",
@@ -1544,17 +1549,18 @@
     },
     {
       "slug": "finotive-funding",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 4,
       "priorRuleClassification": {
         "rules": 3,
         "classed": 3,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Relier la version effectivement signée et programmes, vérifier si recours/strike permettent appel d'une sanction fondée sur classification subjective; examiner conditions de payout approuvé.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "full_official_terms_web_crawled_older"
     },
     {
       "slug": "funding-traders",
@@ -1731,5 +1737,5 @@
     }
   ],
   "updatedOn": "2026-11-24",
-  "updateDetail": "New wave4: 17 additional documentary reviews, 66 observations. Three other primary-contract access failures listed as pending; these are not counted as audited. Partial/cached source flags remain in detailed JSON."
+  "updateDetail": "Fourth wave cumulative: 23 additional documentary reviews / 87 observations; 3 access-blocked cases remain pending. Research file is not a completed individual funded contract audit."
 }
