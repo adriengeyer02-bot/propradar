@@ -1,0 +1,1709 @@
+{
+  "version": "24-11-2026-no-scores-contract-audit-coverage",
+  "date": "2026-11-24",
+  "scope": "121 historical V5.2 approvals ONLY, NOT whole current live roster",
+  "rules": "A research file is not an approved/closed audited contract. All records require dated applicable agreement; public scoring remains rollback version. No score or commercial ranking may be changed based on this tracker.",
+  "summary": {
+    "total": 121,
+    "researchFiles": 67,
+    "pending": 54,
+    "observations": 189,
+    "signedFundedCoverageComplete": "NOT_ASSESSED_FOR_ALL"
+  },
+  "records": [
+    {
+      "slug": "alpha-capital-group",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accord Qualified Analyst/versions des annexes du programme et application effective à une cohorte achetée",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "maven-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Vérifier correspondance produit (Standard, OMO, Mini, Instant), capture version 2026.4 et contrat accepté par le trader",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "get-leveraged",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "alpha-futures",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "miltraders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir Program Rules de chaque offre, contrats Live, vérifier légalité du forum d'arbitrage et portée des exclusions de recours/insolvabilité.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "top-one-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 29,
+        "classed": 29,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Obtenir convention Top One Funding par programme (1-Step Flash, Instant, Nova) et qualifier recours et gains acquis, ne pas déduire deux fois un même fait EA/stratégie.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "onefunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir version courante CGU client et accord funded, sanctions subjectives et recours; démêler prix/commission/refund à trois payouts.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bem-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Comparer BEM One, BEM Classic et One Only à leurs documents effectivement achetés; obtenir BEM Trader agreement et traitement des rewards déjà approuvés.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "thinkcapital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Récupérer le Funded Account Agreement du prestataire tiers, comparer les variantes du produit Instant selon le checkout et éviter le double comptage B1/B2.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tiger-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir accord des rewards funded, relever les annexes actuelles de reset de journée et conserver copie de toute contradiction réapparue.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradeday",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded7",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "top-one-futures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 26,
+        "classed": 26,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Trouver Terms & Conditions et contrat simulé funded 2026, sanctions payout revues, différentes versions Elite/Elite Daily/Ignite et recours.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "wegetfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Confronter promesses de retrait publiées/affiliation au schéma LIVE et identifier le contrat du partenaire broker; vérifier si le passage en Live peut être imposé et quels rewards restent dus.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "purdia-capital",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "daytraders-com",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 11,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir l'accord Pro/S2F/Live signé, vérifier conditions de blocage et perte des rewards et statut exact du payeur; ne pas extrapoler de l'accord de site.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "equity-edge",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "alpine-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-squad",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "orion-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 13,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "wsfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 21,
+        "classed": 21,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Comparer les versions espagnole/anglaise du site et documenter l'accord funded signé, les recours contre la suppression de profit split et l'identité payeuse.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "moneta-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradexprop",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funder-trading",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fundyourfx",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "monevis",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fundedhive",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Examiner PDF officiel avec lecture et capture, conventions FundedHive/TradingHive, règles A-Book/B-Book et déblocage on-chain",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "sabiotrade",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "clarity-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier s'il existe un accord funded distinct, les sections de la version actuelle régissant les rewards acquis, et une éventuelle procédure de recours.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradersedgefx",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lvlup-futures",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "atmos-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tx3-funding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fundedelite",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Déterminer si l'accord Elite individuel modifie les conditions de payout et quel mécanisme de recours existe contre le constat de violation.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "upcomers",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Accord spécifique Upcomers Trader Program, entité payeuse et versions éventuelles /2026 vs /fr",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funding-your-trades",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-trader-markets",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 18,
+        "classed": 18,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-futures-network",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 17,
+        "classed": 17,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "directfundedtrader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir CGU texte direct/historique, version, l'accord funded et clauses de reward, liens du vrai vendeur; ne pas marquer examen complet.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fidelcrest",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-09",
+      "remainingCriticalDocument": "Vérifier offre et disponibilité actuelles; obtenir accords du prestataire funded, statuts juridiques, et bannière d'achat avant toute recommandation.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "now-trade-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fundings4u",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-17",
+      "remainingCriticalDocument": "Localiser nom de domaine actuel, état de la vente, contrats et historique des versements. Ne pas attribuer un zéro malus pour absence de données.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ultimate-traders",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bullwaves-prime",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "dna-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "foxx-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "sfx-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir contrat rémunérateur souscrit, périmètre de la garantie $1k, exceptions, définition d'inconsistent trading et procédure d'appel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "superfunded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funding-frontier",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-17",
+      "remainingCriticalDocument": "Vérifier site marchand actuel, vendeur légal et accord rémunérateur; ne pas classer une page de 2024 comme contrat courant.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "wemastertrade",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Retrouver CGU actuelles signées et la distinction entre produits WeMasterTrade et WeCopyTrade, procédure de recours, refus des rewards acquis et siège réel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "forexive",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "hash-hedge",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "sure-leverage",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Lire Terms & Conditions de ASAP Solutions FZ-LLC et garantie de rewards sous contrat funded",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "titan-capital-markets",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "prop-number-one",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accéder aux CGU actuelles via checkout et à l'accord Independent Contractor applicable, rapprocher entités affichées sur page actuelle.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "trading-cult",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Lire CGU et accord funded effectifs du bon produit, rôle de l'entité payeuse, clauses de modification/résiliation et recours",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "x-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Distinguer version de contrat souscription vs aide funded, inspecter recours et règles individuelles",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "levels",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 2,
+        "classed": 2,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funding-pips",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "CGU contractuelles actuelles, article précis du Member/Master Agreement, distinction responsabilité du client et du prestataire tiers",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "goat-funded-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 5,
+        "classed": 5,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat funded spécifique, conséquences sur rewards déjà éligibles, procédure de contestation et entité(s) Hong Kong/Sainte-Lucie",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-trading-plus",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Lire Terms & Conditions 2026 et Contracted Researcher Agreement effectivement accepté; vérifier conditions de refus payout",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "city-traders-imperium",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Relier version de CGU acceptée au checkout 1-Step / 2-Step / Instant / Direct et au véritable débiteur des récompenses, distinguer CTI FZCO de City Traders Imperium Limited; recherche registre primaire. Pas de nouveau score.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "oneup-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir modèle de contrat partenaire actuel, nom de l'entité rémunératrice, sanctions de funded pour revue",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "leeloo-trading",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 5,
+        "classed": 5,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "uprofit-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir Trader Agreement par produit et motifs/recours effectivement contractuels; vérifier ampleur de sanction pour comportements non frauduleux",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bulenox",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "breakout-prop",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 2,
+        "classed": 1,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat client total, version des règles par programme et procédure de réexamen",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "rebelsfunding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "sway-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ftuk",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 18,
+        "classed": 18,
+        "risks": 6
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir TOS actualisées et Agreement Flex Futures / Instant Sim / Instant PRO, vérifier versions des 7 profitable trading days et mécanisme de refus/révision.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lux-trading-firm",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funderpro",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "hyrotrader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir Funded Trader Agreement BVI, comparer avec la hiérarchie juridique CGU fournisseur UAE/BVI, vérifier modalités précises de reward acquis.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradefundrr",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 1,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "CGU intégrales du nouveau Prop/Pre-Prop et contrats réels Pro/T3; définir pouvoirs de refus payout et droit de recours",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "axi-select",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Conditions générales du compte Axi de la juridiction réelle, contrat Axi Select et retenues/clawback éventuelles, ne pas appliquer une analogie prop firm simulée sans analyse.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ic-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fx2-funding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "blueberry-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "quant-tekel",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Rapprocher entités Quant Tekel SVG/Quant Tekel LTD et QT Treasury Limited citées sur différents textes; fournir programme exact, version, payouts et accords d'adhésion.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "e8-futures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Comparer les contrats E8 Markets, E8 Funding et produits E8 Signature/Zero; obtenir l'accord E8 Trader rémunérateur et limites par programme.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "forex-funds-flow",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-10-30",
+      "remainingCriticalDocument": "Rétablir accès page directe, retrouver contrat de reward de la cohorte et qualifier les conditions de suppression; identifier les deux entités nommées.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "the-concept-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Récupérer Contractor Service Agreement article 3, contrat broker et preuve de version/effectivité entre domaines new/prop, puis recours et droits déjà acquis.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tentrade",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fxify",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 8,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat Trader Agreement fourni post-évaluation, version signée et société débitrice des rewards ; règles de refus et recours par programme.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "blusky-trading",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lucid-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 18,
+        "classed": 18,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Accords LucidPro/LucidDirect/LucidFlex et Live signés, définitions et seuils microscalping pour date du compte.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "apex-trader-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 14,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Identifier quelle version du User Agreement est acceptée par les nouveaux clients, vérifier les termes PA actuels et les droits impératifs applicables; ne pas conclure juridiquement qu'une clause est automatiquement valide.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "take-profit-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat PRO et PRO+ actuel, effective date, entité rémunératrice, clauses de suppression ou de contestation du payout.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "exfunded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "e8-markets",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "E8 Trader agreement/ESPA applicable, seuils de conformité non publiés, distinction modèle E8 Pro/One/Signature",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "brightfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accord Funded Trader distinct, effets sur reward validé vs potentiel, application par programme",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "instant-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Lire et contrôler visuellement le PDF via un outil de capture PDF, identifier accord prioritaire et versions 2025/2026; ne pas déduire une clause d'une simple recherche",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "hola-prime",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "pipfarm",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-16",
+      "remainingCriticalDocument": "Obtenir appendice B intégral, compléter conditions de forfait et remises des rewards et vérifier accès direct depuis le site actuel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "trade-the-pool",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Identifier le contrat trader de rémunération, variation plan Stock et versions du payout threshold",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "for-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accord Member/Master spécifique et date, portée des règles commerciales vs funded, droit local de contester un paiement",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ftmo",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 7,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat FTMO Account effectivement signé, distinction reward potentiel/gain acquis, cohorte 1-Step/2-Step/Swing et seuils exacts. Ancien malus mécanique −8 non approuvé.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "topstep",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Accord Express Funded et Live applicable en 2026 selon date de compte ; vérifier portée des recours et savoir si « balance forfeited » inclut demandes déjà approuvées.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "myfundedfutures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir Simulated Trader Agreement et l'Appendix correspondant au programme actuel. Ne pas transférer les termes de MyFunded Perpetuals à MFFU.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "the5ers",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 12,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Distinguer accord du Challenge et funded/reward, exceptions de publication légale / demandes de support, recours et version du contrat acceptée.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fintokei",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 12,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Lire V17 et annexes FPP par programme et cohorte, distinguer prime de performance et évaluation, revoir éventuelles clauses de résiliation.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradeify",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Préciser selon offre Select / Growth / Lightning / Elite Live et date d'achat les annexes incorporées ; distinguer clause bancaire réclamant restitution vs droit local de contestation des frais.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "audacity-capital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Isoler le texte juridique réellement accepté au checkout et le rôle d'AudaCity Global LTD/éventuelles autres entités, puis confirmer si Ability One est encore contradictoire. Notice Trustpilot distincte des clauses.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "myfundedcapital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-09",
+      "remainingCriticalDocument": "Version effectivement acceptée par chaque cohorte ; contraste avec anciennes CGU indexées, portée des exceptions à effet immédiat.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "earn2trade",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fundednext",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Comparer CGU effectivement acceptées et annexes selon pays/produit ; conserver la preuve de la variante de pénalité et déterminer sa date d'effet ; portée du recours.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "aqua-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Trouver funded trader agreement actuel, vérifier conditions de retenue et recours, résoudre différences de programme (Instant/Step)",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "finotive-funding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funding-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat funded signé par modèle, procédure d'appel / arbitrage et portée des restrictions sur gains accumulés",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "rzr-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": null,
+      "remainingCriticalDocument": "Archiver capture datée et hash de chaque version RZR/Hantec, accord Trader de §4.2, entité applicable au checkout et anciens comptes.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lark-funding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "the-trading-pit",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat Earning/Performance Phase d'après challenge CFD/Futures et clauses de recours, version actuelle vs ancienne",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ment-funding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "elite-trader-funding",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "atlas-funded",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "blue-guardian",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Récupérer Trader Agreement CFD/futures et versions 2026, motivations/reviews, contrat direct funded, portée juridique du plafond $8k et alternatives.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "traders-launch",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier l'accord SimFunded individuel, les critères de conformité et le statut de reward acquis/apprové; confronter la version acceptée au programme actuel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ofp-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrôler quelles versions du Plan, Schedule A et normes de marché s'appliquent au compte; identifier tous les recours et le traitement d'une sanction contestée.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-bull",
+      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
+      "sourceFile": null,
+      "observations": 0,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
+      "canPublishNewScore": false
+    }
+  ]
+}
