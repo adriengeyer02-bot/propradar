@@ -6,9 +6,9 @@
   "summary": {
     "candidateProfiles": 198,
     "historical121ResearchFiles": 121,
-    "reopenedPartial": 30,
+    "reopenedPartial": 35,
     "fullyValidatedUnderNewProtocol": 0,
-    "otherRevalidationRequired": 168
+    "otherRevalidationRequired": 163
   },
   "rules": {
     "normalConsistencyAtOrAbove40Percent": "record without automatic penalty if transparent and solely eligibility; below 40 recorded, future weighting unapproved; hidden/contradictory/hard breach separate",
@@ -511,25 +511,31 @@
       "slug": "blue-guardian",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Separate signed CFD/Futures Trader Agreements, complete product catalogue, Guardian Shield, reserves, profit cap treatment and old/new terms; indexed help pages direct fetch cache miss",
+        "Primary entity registry, regulatory and historic incident reconciliation, individual payment attribution"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "blueberry-funded",
@@ -832,25 +838,31 @@
       "slug": "crypto-fund-trader",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full current 469-line agreement, individual final stage scholarship contract and all phase/platform rules, precise fees/caps/cohorts",
+        "Swiss entity and register, current payor, historic incidents and individual payout evidence"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "daytraders-com",
@@ -1149,25 +1161,31 @@
       "slug": "finotive-funding",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full current 811-line agreement, specific funded and Finotive Pay agreements; current clause versions and minimum payment conflict",
+        "All risk thresholds and consequences per stage, recourse §19, registry and history; independently matched payment evidence"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "fintokei",
@@ -1225,25 +1243,31 @@
       "slug": "for-traders",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Current full dated CGU, Member Agreement and data licence, product matrices for Forex/Futures/Crypto/Prediction and cohorts",
+        "Resolve split difference and entity name; primary registry, historic incidents and payout evidence. TradingPilot result located but period/method unconfirmed, no monetary amount recorded"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "forex-funds-flow",
@@ -3307,25 +3331,32 @@
       "slug": "onefunded",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "PDF textual sections retrieved but screenshot failed; March version not established as accepted today; current HTML cache August, new FAQ indexed",
+        "Current checkout funded agreement and exact Flash/Core/Value/Entry/Flex/Instant exposure consequences, payout cycles, add-ons",
+        "Entity registry, historic incidents and individually verified payments"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "oneup-trader",
