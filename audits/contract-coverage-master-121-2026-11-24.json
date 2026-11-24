@@ -5,10 +5,10 @@
   "rules": "A research file is not an approved/closed audited contract. All records require dated applicable agreement; public scoring remains rollback version. No score or commercial ranking may be changed based on this tracker.",
   "summary": {
     "total": 121,
-    "researchFiles": 90,
-    "pending": 31,
+    "researchFiles": 96,
+    "pending": 25,
     "pendingBlocked": 3,
-    "observations": 276,
+    "observations": 298,
     "signedFundedCoverageComplete": "NOT_ASSESSED_FOR_ALL"
   },
   "records": [
@@ -156,31 +156,33 @@
     },
     {
       "slug": "tradeday",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 4,
       "priorRuleClassification": {
         "rules": 3,
         "classed": 2,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Accords SIM/LIVE et Quick Pay/Fast Pass; recours et retrait déjà approuvé; débiteur juridique, preuve primaire et paiements indépendants.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_public_rules"
     },
     {
       "slug": "funded7",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 5,
       "priorRuleClassification": {
         "rules": 7,
         "classed": 7,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Contrat de rémunération, recours sur nullification, version OREF applicable, identités primaires et preuves de payouts.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_public_rules"
     },
     {
       "slug": "top-one-futures",
@@ -212,17 +214,18 @@
     },
     {
       "slug": "purdia-capital",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 3,
       "priorRuleClassification": {
         "rules": 10,
         "classed": 10,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-20",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Texte intégral CGU (rendu web limité), contrat SFA/LFA, broker, entité juridique et preuves de retraits.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "partial_primary_public_docs_not_full_terms"
     },
     {
       "slug": "daytraders-com",
@@ -255,31 +258,33 @@
     },
     {
       "slug": "alpine-funded",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 3,
       "priorRuleClassification": {
         "rules": 7,
         "classed": 7,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-20",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Récupérer iframe CGU §7, vérifier éventuelle contradiction entre FAQ et page commerciale, convention reward, registre suisse et preuve de paiement.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "partial_primary_public_docs_not_full_terms"
     },
     {
       "slug": "funded-squad",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 3,
       "priorRuleClassification": {
         "rules": 12,
         "classed": 12,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Contrats évaluation/funded, seuils temporels news et variantes, recours et rewards acquis, registres primaires.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "partial_primary_public_docs_not_full_terms"
     },
     {
       "slug": "orion-funded",
@@ -358,17 +363,18 @@
     },
     {
       "slug": "fundyourfx",
-      "coverage": "PENDING_SAME_DEPTH_CGU_REVIEW",
-      "sourceFile": null,
-      "observations": 0,
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 4,
       "priorRuleClassification": {
         "rules": 8,
         "classed": 8,
         "risks": 1
       },
       "legacyLastReviewed": "2026-11-18",
-      "remainingCriticalDocument": "Read current primary CGU, funded Agreement, effective cohort and contracting entity; map clauses and appeal",
-      "canPublishNewScore": false
+      "remainingCriticalDocument": "Vérifier domaine réellement utilisé au checkout, avis de migration, registre HK, protection payouts après approbation et preuves indépendantes.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_public_rules"
     },
     {
       "slug": "monevis",
@@ -1737,5 +1743,5 @@
     }
   ],
   "updatedOn": "2026-11-24",
-  "updateDetail": "Fourth wave cumulative: 23 additional documentary reviews / 87 observations; 3 access-blocked cases remain pending. Research file is not a completed individual funded contract audit."
+  "updateDetail": "Wave 5: six new research files/22 observations; Purdia, Alpine and FundedSquad partial primary evidence; no scoring changes. Trustpilot .com FundYourFX closed to reviews, .io distinct. No independent payouts verified."
 }
