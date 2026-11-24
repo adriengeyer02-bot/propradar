@@ -6,9 +6,9 @@
   "summary": {
     "candidateProfiles": 198,
     "historical121ResearchFiles": 121,
-    "reopenedPartial": 20,
+    "reopenedPartial": 25,
     "fullyValidatedUnderNewProtocol": 0,
-    "otherRevalidationRequired": 178
+    "otherRevalidationRequired": 173
   },
   "rules": {
     "normalConsistencyAtOrAbove40Percent": "record without automatic penalty if transparent and solely eligibility; below 40 recorded, future weighting unapproved; hidden/contradictory/hard breach separate",
@@ -626,25 +626,30 @@
       "slug": "brightfunded",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Complete funded agreement, full general terms/linked policies and separate Futures contracts, old cohort rules and all news treatment, registry and historical incident reconciliation"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "bulenox",
@@ -966,25 +971,30 @@
       "slug": "e8-markets",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Current ESPA and Futures/perpetual agreements; full program caps and risk rules, registry and historical incidents, individual payments"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "earn2trade",
@@ -1842,25 +1852,30 @@
       "slug": "funding-traders",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Read all 447 lines and exact checkout versions; verify all product payout cycles and day/swing variants; legal registry, incidents and direct payout proof"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "funding-your-trades",
@@ -2729,25 +2744,30 @@
       "slug": "maven-trading",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full clause and schedule 2 news read, M2 exact thresholds and Static/Prediction product versions; registry and individual payout evidence"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "ment-funding",
@@ -3920,25 +3940,30 @@
       "slug": "take-profit-trader",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-deep-sweep-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
-        "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
-        "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
+        "checkout_contract_versions": "PARTIAL",
+        "full_cgu_clause_coverage": "PARTIAL",
+        "funded_and_live_agreements": "MISSING_OR_UNRECONCILED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Current official signed PRO and PRO+ contracts for Nov 23 plan change; complete EOD and Test matrix; historic mirror provenance and enforceability; primary registry and verified payout records"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ]
     },
     {
       "slug": "tentrade",
