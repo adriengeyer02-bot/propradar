@@ -1,0 +1,27 @@
+# Contrôle ciblé — FTMO / City Traders Imperium / Audacity Capital
+**24 novembre 2026 · Projet non publié · Les pénalités de la simulation précédente sont non comparables et invalidées**
+
+## Défaillance démontrée
+1. Le moteur historique `app/lib/restrictiveRules.ts` ne calcule des points que pour des objets `restrictiveRules` **préalablement classés**. Les clauses contractuelles non ingérées n'entraînent aucune pénalité, même si elles sont majeures. Les lignes CTI 0 et Audacity 0 reflètent un **trou d'audit**, pas un diagnostic de sécurité.
+2. La fonction `ruleKind` retourne `classic` avant de vérifier `vague` / `conflicting` si une règle a pour catégorie `min-trading-days` ou `funded-trailing-drawdown`. Pour Audacity, une contradiction explicite sur le nombre de jours minimum était codée `min-trading-days` et `conflicting`, **mais ignorée**, sans décision éditoriale.
+3. FTMO possède **8** règles listées, dont 7 classées et 3 jugées `vague` à conséquences fortes : sa charge moyenne était 31,8 ⇒ **−8**. CTI n'a que 3 règles (deux classées, toutes ordinaires) ⇒ charge 0,3 ⇒ **0**. Audacity a 3 règles classées, dont la contradiction précitée indûment exclue ⇒ charge 0,5 ⇒ **0**. **Ces données ne correspondent pas à une inspection équivalente des CGU.**
+4. Chez FTMO, la catégorie « gap trading » est jugée contradictoire avec l'exemption de maintien de positions du compte Swing. Or interdire *l'ouverture* à proximité de la fermeture et autoriser *le maintien* d'une position déjà ouverte sont deux comportements différents; la contradiction ne peut pas être considérée démontrée sans autre pièce. Le plafond de capital 400 k$ des EA comprend un seuil objectif, mais le test de similarité de stratégies reste à préciser. **FTMO −8 n'est pas suffisamment sécurisé, sans conclure que ses clauses vagues sont inoffensives.**
+
+## Sources contractuelles primaires / clauses à réconcilier
+| Entreprise | Source | Clauses pertinentes | Statut de l'examen |
+| --- | --- | --- | --- |
+| FTMO | https://ftmo.com/en/forbidden-trading-practices/ ; https://ftmo.com/en/faq/can-i-hold-positions-overnight-or-over-the-weekend/ | pratiques « raisonnablement reproductibles », sizing non quantifié, possible perte de rewards; ouverture gap vs maintien hors week-end ; règles EA/capital | Signal de discrétion confirmé; contradiction ouverture/maintien NON démontrée |
+| CTI | https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf | §8.11 perte de tous rewards pour violation des CGU; §8.13 pouvoir de définir le comportement; §9.2.9 exclusion pour tout motif; §13.12 rupture sans cause; §17.3 modification applicable aux contrats déjà conclus avec droit de rejet mais terminaison si rejet | Trois risques factuels distincts : perte rewards, résiliation arbitraire, modification du contrat déjà conclu. Attention ne pas pénaliser §9.2.9 et §13.12 deux fois pour le même pouvoir |
+| Audacity | https://audacity.capital/en/terms-and-conditions/ ; https://audacity.capital/fr/terms-and-conditions/ | décision sur « gambling », risque excessif et discipline; sanctions pouvant affecter compte et payout. Textes de plusieurs versions coexistent sur certaines pages; la version moderne mentionne revue des payouts, motifs et possibilité de demander réexamen; contradiction sur jours minimum Ability One | Discrétion contractuelle à examiner; nouveau recours et portée produit à prendre en compte; ne pas utiliser un extrait ancien isolé comme seul fondement |
+
+**Précaution de version CTI** : le PDF d'avril 2025 existe dans les index, mais peut être supprimé ou remplacé. Ce document privilégie le PDF /2026/06/ lu sur le domaine officiel. Les intitulés et numéros des clauses changent entre éditions (ancienne rupture « 13.13 », nouvelle rupture « 13.12 »). Il faut lier le contrat acheté à la version applicable avant publication.
+
+## Règle de rectification proposée
+- Construire par entreprise la **même liste de clauses éligibles**, avec date/URL officielle, version contractuelle, produit/phase, texte, effet sur gains **acquis**, droit au recours, preuve du fondement, identifiant unique du fait et type de risque. Exclure les simples objectifs chiffrés ordinaires.
+- Définir **d'abord** la réalité d'une clause `vague`/contradictoire, **ensuite** sa catégorie « classique » (une contradiction matérielle ne doit pas être automatiquement ignorée).
+- N'attribuer ni zéro ni une note définitive à une fiche dont l'audit du contrat est incomplet : `unknown/unclassified` est une valeur de travail, pas zéro. Si le contrat ancien et le nouveau divergent, suspendre la note de risque jusqu'au rapprochement des versions.
+- Déduire une clause par fait unique, sans répliquer la même capacité d'annulation sous B1, B2, « discretionary », Trustpilot ou réputation. Le cas d'un manquement avéré et d'un droit unilatéral contractuel sont deux preuves différentes.
+- **Annuler le tableau de simulation hybride précédente** et recalculer les trois, puis les 20, uniquement lorsque le niveau de couverture documentaire est comparable. Ne pas calibrer des chiffres pour rendre CTI « pire » a priori : la hiérarchie doit résulter de faits cohérents.
+
+## Situation de publication
+**AUCUNE mise à jour de production.** Les notes publiques conservent le déploiement restauré. Le document de correction doit rester sur la branche d'audit; aucun recalcul global sans validation de la méthode et des dossiers.
