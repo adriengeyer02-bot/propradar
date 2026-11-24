@@ -1,0 +1,708 @@
+{
+  "version": "2026-11-24-medium-contract-sweep-v1",
+  "date": "2026-11-24",
+  "basis": "Official firm Terms / FAQs and the historic rule-classification backlog",
+  "nonPublication": true,
+  "noScoresComputed": true,
+  "warning": "Sources include different levels of verification, from full terms examined to merely identified documents. A clause does not prove an actual unfair action. Some 2026 agreements are individual, inaccessible or supersede public terms; no risk-free inference from missing clauses.",
+  "firmCount": 22,
+  "findingsCount": 54,
+  "firms": [
+    {
+      "slug": "alpha-capital-group",
+      "name": "Alpha Capital Group",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://alphacapitalgroup.uk/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "alpha-capital-group-contract-20261124-01",
+          "section": "Schedule 2 §2.6",
+          "subject": "Reward denial",
+          "documentedEffect": "La Performance Fee peut être refusée lorsque la firme détermine à sa seule discrétion que des trades contreviennent aux règles applicables.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://alphacapitalgroup.uk/terms-and-conditions"
+        },
+        {
+          "factId": "alpha-capital-group-contract-20261124-02",
+          "section": "§9.1.7 et Schedule 2 §3.5",
+          "subject": "Subjective trading conduct",
+          "documentedEffect": "La firme se réserve des appréciations qualitatives de stratégies et du comportement; vérifier critères et filières de recours.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://alphacapitalgroup.uk/terms-and-conditions"
+        },
+        {
+          "factId": "alpha-capital-group-contract-20261124-03",
+          "section": "§5.1/5.3/9.1.8",
+          "subject": "Rules updates",
+          "documentedEffect": "Modifications publiées et acceptation par utilisation continue; vérifier effet sur cohortes existantes et trades déjà clôturés.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://alphacapitalgroup.uk/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Accord Qualified Analyst/versions des annexes du programme et application effective à une cohorte achetée",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "maven-trading",
+      "name": "Maven Trading",
+      "auditStatus": "official_terms_examined_updated_2026_4",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://maventrading.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "maven-trading-contract-20261124-01",
+          "section": "V2026.4 §4.5",
+          "subject": "Profit asymmetry",
+          "documentedEffect": "OMO/Instant Mini: les profits de trades sous 150 secondes sont retranchés mais les pertes restent comptabilisées.",
+          "evidenceStatus": "verified_current_terms",
+          "sourceUrl": "https://maventrading.com/terms-and-conditions"
+        },
+        {
+          "factId": "maven-trading-contract-20261124-02",
+          "section": "§10.7–10.8",
+          "subject": "Payout caps",
+          "documentedEffect": "Certains comptes ont des plafonds par période; profits excédentaires annulés, pas simplement reportés.",
+          "evidenceStatus": "verified_current_terms",
+          "sourceUrl": "https://maventrading.com/terms-and-conditions"
+        },
+        {
+          "factId": "maven-trading-contract-20261124-03",
+          "section": "§13.2 / §5.7",
+          "subject": "Termination and risk limits",
+          "documentedEffect": "Possibilité large de résiliation et d'application d'une règle de risque à discrétion; distinguer motifs explicitement définis et formule ouverte.",
+          "evidenceStatus": "verified_current_terms",
+          "sourceUrl": "https://maventrading.com/terms-and-conditions"
+        },
+        {
+          "factId": "maven-trading-contract-20261124-04",
+          "section": "§16.2",
+          "subject": "Non-retroactivity safeguard",
+          "documentedEffect": "Les comptes existants conservent normalement leurs termes acceptés; une publication seule ne modifie pas rétroactivement rewards acquis ou trades terminés.",
+          "evidenceStatus": "verified_current_terms",
+          "sourceUrl": "https://maventrading.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Vérifier correspondance produit (Standard, OMO, Mini, Instant), capture version 2026.4 et contrat accepté par le trader",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "funding-pips",
+      "name": "Funding Pips",
+      "auditStatus": "official_help_article_only",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards",
+      "findings": [
+        {
+          "factId": "funding-pips-contract-20261124-01",
+          "section": "Trading Conduct and Security Standards",
+          "subject": "EA/reward denial",
+          "documentedEffect": "Un EA tiers non autorisé peut provoquer refus de l'évaluation ou de la récompense et fermeture du compte; l'équipe apprécie la preuve de propriété d'un EA personnel.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+        },
+        {
+          "factId": "funding-pips-contract-20261124-02",
+          "section": "Trading Conduct and Security Standards",
+          "subject": "Procedure",
+          "documentedEffect": "La FAQ prévoit une possibilité d'explication préalable pour certains changements d'IP, mais pas pour toutes les violations prouvées.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+        }
+      ],
+      "remainingWork": "CGU contractuelles actuelles, article précis du Member/Master Agreement, distinction responsabilité du client et du prestataire tiers",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "goat-funded-trader",
+      "name": "GOAT Funded Trader",
+      "auditStatus": "official_terms_examined_2026_11_15",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "goat-funded-trader-contract-20261124-01",
+          "section": "§1.3",
+          "subject": "Unilateral changes",
+          "documentedEffect": "Accord modifiable/résiliable à la seule discrétion de la firme; utilisation continue vaut acceptation de changements.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+        },
+        {
+          "factId": "goat-funded-trader-contract-20261124-02",
+          "section": "§4.4, §4.6",
+          "subject": "Discretionary prohibited practices",
+          "documentedEffect": "Détermination à la discrétion de la firme de pratiques proscrites; pouvoir de bloquer un trader; distinguer annulation de frais de perte de payout.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+        },
+        {
+          "factId": "goat-funded-trader-contract-20261124-03",
+          "section": "§11.2/11.4",
+          "subject": "Termination",
+          "documentedEffect": "La firme peut mettre fin à la relation sans préavis, éventuellement rembourser les frais; l'accord funded post-évaluation n'est pas fourni par ces clauses.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Contrat funded spécifique, conséquences sur rewards déjà éligibles, procédure de contestation et entité(s) Hong Kong/Sainte-Lucie",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "e8-markets",
+      "name": "E8 Markets",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://e8markets.com/e8-markets-terms-and-conditions",
+      "findings": [
+        {
+          "factId": "e8-markets-contract-20261124-01",
+          "section": "§5.1",
+          "subject": "Payout eligibility/forfeiture",
+          "documentedEffect": "Avant le payout, conformité à un E8 Trader agreement; E8 peut, à sa seule discrétion, annuler/retenir des récompenses en cas de non-conformité.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://e8markets.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "factId": "e8-markets-contract-20261124-02",
+          "section": "§5.2–5.3",
+          "subject": "Payout process/legal challenge",
+          "documentedEffect": "Informations de paiement/KYC; réserve de décision lorsqu'une autorité juridique conteste le reward; ne pas traiter comme refus arbitraire prouvé.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://e8markets.com/e8-markets-terms-and-conditions"
+        },
+        {
+          "factId": "e8-markets-contract-20261124-03",
+          "section": "§12.2",
+          "subject": "Broad termination",
+          "documentedEffect": "Suspension/résiliation à la discrétion de E8 pour plusieurs motifs, dont comportement considéré nuisible à sa réputation.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://e8markets.com/e8-markets-terms-and-conditions"
+        }
+      ],
+      "remainingWork": "E8 Trader agreement/ESPA applicable, seuils de conformité non publiés, distinction modèle E8 Pro/One/Signature",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "brightfunded",
+      "name": "BrightFunded",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://brightfunded.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "brightfunded-contract-20261124-01",
+          "section": "§7.7.1, §7.8",
+          "subject": "Remaining rewards on suspension",
+          "documentedEffect": "Des rewards restants peuvent être perdus après suspension; récompenses de performance qualifiées de discrétionnaires; préciser quand deviennent exigibles.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://brightfunded.com/terms-and-conditions"
+        },
+        {
+          "factId": "brightfunded-contract-20261124-02",
+          "section": "§5.7 / §5.8",
+          "subject": "Forbidden trading discretion",
+          "documentedEffect": "Firme décide de ce qui constitue certaines pratiques interdites et peut supprimer des transactions, imposer des restrictions ou terminer le compte.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://brightfunded.com/terms-and-conditions"
+        },
+        {
+          "factId": "brightfunded-contract-20261124-03",
+          "section": "§16.1",
+          "subject": "Terms updates",
+          "documentedEffect": "Changements annoncés effectifs dès publication/notification; pas automatiquement preuve de rétroactivité défavorable exercée.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://brightfunded.com/terms-and-conditions"
+        },
+        {
+          "factId": "brightfunded-contract-20261124-04",
+          "section": "§3.4 / §17",
+          "subject": "Dispute and complaint",
+          "documentedEffect": "Contestations de frais jugées injustifiables peuvent conduire à des restrictions; canal de plainte officiel prévu.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://brightfunded.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Accord Funded Trader distinct, effets sur reward validé vs potentiel, application par programme",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "instant-funding",
+      "name": "Instant Funding",
+      "auditStatus": "official_agreement_identified_not_full_audited",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf",
+      "findings": [
+        {
+          "factId": "instant-funding-contract-20261124-01",
+          "section": "GTC June 2026 introductory §1",
+          "subject": "Contract precedence",
+          "documentedEffect": "CGU publiées en juin 2026 identifient Acello Ltd mais donnent priorité à un Instant Funding/Traders Agreement séparé en cas de conflit.",
+          "evidenceStatus": "document_discovered_not_analysed",
+          "sourceUrl": "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf"
+        },
+        {
+          "factId": "instant-funding-contract-20261124-02",
+          "section": "Public company pages",
+          "subject": "Contracting parties",
+          "documentedEffect": "La vitrine 2026 mentionne aussi IF Pro Ltd et Acello Ltd comme agent de paiement; les rôles doivent être réconciliés avant d'imputer les clauses aux rewards.",
+          "evidenceStatus": "verified_public_site",
+          "sourceUrl": "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf"
+        }
+      ],
+      "remainingWork": "Lire et contrôler visuellement le PDF via un outil de capture PDF, identifier accord prioritaire et versions 2025/2026; ne pas déduire une clause d'une simple recherche",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "for-traders",
+      "name": "For Traders",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://fortraders.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "for-traders-contract-20261124-01",
+          "section": "§6.10",
+          "subject": "Chargeback / pending rewards",
+          "documentedEffect": "Un litige bancaire déclenché par le client, quelle qu'en soit la raison selon le texte, peut conduire à fermeture de services et annulation de rewards en attente.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://fortraders.com/terms-and-conditions"
+        },
+        {
+          "factId": "for-traders-contract-20261124-02",
+          "section": "§11.6",
+          "subject": "Disciplinary payout cancellation",
+          "documentedEffect": "Une pratique interdite peut mener au refus de reward/contrat, et des récompenses en attente peuvent être annulées après résiliation pour violation.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://fortraders.com/terms-and-conditions"
+        },
+        {
+          "factId": "for-traders-contract-20261124-03",
+          "section": "§16.5",
+          "subject": "Verification non-cooperation",
+          "documentedEffect": "Absence de coopération à une vérification peut conduire au refus de reward, suppression d'upgrade et arrêt de relation.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://fortraders.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Accord Member/Master spécifique et date, portée des règles commerciales vs funded, droit local de contester un paiement",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "aqua-funded",
+      "name": "AquaFunded",
+      "auditStatus": "official_terms_plus_help",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://www.aquafunded.com/legal/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "aqua-funded-contract-20261124-01",
+          "section": "Terms — third-party services",
+          "subject": "Contract hierarchy",
+          "documentedEffect": "Les CGU générales renvoient à des prestataires tiers et des exceptions de droit local; les clauses de funded rewards ne sont pas intégralement accessibles dans ce seul texte.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.aquafunded.com/legal/terms-and-conditions"
+        },
+        {
+          "factId": "aqua-funded-contract-20261124-02",
+          "section": "Rewards Help",
+          "subject": "Fees",
+          "documentedEffect": "Centre d'aide indique frais de traitement de 3 % sur les payouts et une garantie de délai sous conditions; vérifier variantes de programme et date d'entrée en vigueur.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work"
+        }
+      ],
+      "remainingWork": "Trouver funded trader agreement actuel, vérifier conditions de retenue et recours, résoudre différences de programme (Instant/Step)",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "oneup-trader",
+      "name": "OneUp Trader",
+      "auditStatus": "official_terms_plus_funding_partner_help",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://www.oneuptrader.com/terms-conditions/",
+      "findings": [
+        {
+          "factId": "oneup-trader-contract-20261124-01",
+          "section": "Website Terms",
+          "subject": "No direct funded compensation guarantee",
+          "documentedEffect": "Le contrat de site ne garantit ni rémunération future ni emploi; ce n'est pas l'accord de distribution funded, car des partenaires distincts fournissent les comptes.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.oneuptrader.com/terms-conditions/"
+        },
+        {
+          "factId": "oneup-trader-contract-20261124-02",
+          "section": "Getting Funded Process",
+          "subject": "Partner agreements",
+          "documentedEffect": "Après évaluation le trader reçoit et signe le contrat du partenaire financier; ce contrat définit les droits et obligations du payout.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.oneuptrader.com/article/520-getting-funded-process"
+        }
+      ],
+      "remainingWork": "Obtenir modèle de contrat partenaire actuel, nom de l'entité rémunératrice, sanctions de funded pour revue",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "uprofit-trader",
+      "name": "UProfit Trader",
+      "auditStatus": "official_risk_guide_only",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide",
+      "findings": [
+        {
+          "factId": "uprofit-trader-contract-20261124-01",
+          "section": "Trading Best Practices Guide (Nov 2026)",
+          "subject": "Account-wide sanctions",
+          "documentedEffect": "Si violation démontrée à partir d'éléments vérifiables, fermeture de comptes Evaluation/Live Virtual/Live Funded et annulation des profits/rewards/demandes en cours des comptes concernés, sous réserve du Trader Agreement et droit applicable.",
+          "evidenceStatus": "verified_official_guide",
+          "sourceUrl": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide"
+        }
+      ],
+      "remainingWork": "Obtenir Trader Agreement par produit et motifs/recours effectivement contractuels; vérifier ampleur de sanction pour comportements non frauduleux",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "breakout-prop",
+      "name": "Breakout Prop",
+      "auditStatus": "official_program_rules_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://www.breakoutprop.com/program-rules/",
+      "findings": [
+        {
+          "factId": "breakout-prop-contract-20261124-01",
+          "section": "Cross-Account Hedging §(iv)",
+          "subject": "Sole discretion / hedging",
+          "documentedEffect": "Définition de hedging intercomptes comporte un test discrétionnaire sur l'intention ou l'effet d'une coordination.",
+          "evidenceStatus": "verified_rules",
+          "sourceUrl": "https://www.breakoutprop.com/program-rules/"
+        },
+        {
+          "factId": "breakout-prop-contract-20261124-02",
+          "section": "Hedging — penalties",
+          "subject": "Accrued performance split forfeiture",
+          "documentedEffect": "Décision de prohibited hedging peut déclencher perte de tous Performance Splits accumulés, terminaison de comptes; avertissement possible si première violation involontaire.",
+          "evidenceStatus": "verified_rules",
+          "sourceUrl": "https://www.breakoutprop.com/program-rules/"
+        }
+      ],
+      "remainingWork": "Contrat client total, version des règles par programme et procédure de réexamen",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "tradefundrr",
+      "name": "TradeFundrr",
+      "auditStatus": "program_rules_not_full_signed_contract",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://tradefundrr.com/pages/fee-refund-policy",
+      "findings": [
+        {
+          "factId": "tradefundrr-contract-20261124-01",
+          "section": "Fee Refund Policy (2026)",
+          "subject": "Refund conditions",
+          "documentedEffect": "Remboursement ponctuel des frais de compte Prop après 1er payout qualifiant, avec une limite à un remboursement à vie par classe d'actifs; frais mensuels non remboursables.",
+          "evidenceStatus": "verified_official_policy",
+          "sourceUrl": "https://tradefundrr.com/pages/fee-refund-policy"
+        },
+        {
+          "factId": "tradefundrr-contract-20261124-02",
+          "section": "TradeFundrr main pages",
+          "subject": "Entity/program split",
+          "documentedEffect": "Prop/Pre-Prop simulés avec TradeFundrr LLC ; Pro live est un programme distinct exploité sous accords propres T3 Global; ne pas transférer règles et licences.",
+          "evidenceStatus": "verified_official_policy",
+          "sourceUrl": "https://tradefundrr.com/pages/fee-refund-policy"
+        }
+      ],
+      "remainingWork": "CGU intégrales du nouveau Prop/Pre-Prop et contrats réels Pro/T3; définir pouvoirs de refus payout et droit de recours",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "upcomers",
+      "name": "Upcomers",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://www.upcomers.com/policies/terms-conditions",
+      "findings": [
+        {
+          "factId": "upcomers-contract-20261124-01",
+          "section": "§5.5/5.6",
+          "subject": "Discretionary prohibited strategies",
+          "documentedEffect": "La firme se réserve de définir d'autres pratiques interdites et paramètres à son appréciation, avec droit de résilier des services et comptes concernés.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.upcomers.com/policies/terms-conditions"
+        },
+        {
+          "factId": "upcomers-contract-20261124-02",
+          "section": "§7.8",
+          "subject": "Funded admission not guaranteed",
+          "documentedEffect": "Le passage du challenge n'oblige pas la firme à proposer le contrat Upcomers Trader Program, dont l'admission est discrétionnaire.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.upcomers.com/policies/terms-conditions"
+        },
+        {
+          "factId": "upcomers-contract-20261124-03",
+          "section": "Rules / KYC",
+          "subject": "Conditional rewards",
+          "documentedEffect": "KYC obligatoire avant rewards; distinguer condition d'identité légitime et pouvoir de refus arbitraire.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.upcomers.com/policies/terms-conditions"
+        }
+      ],
+      "remainingWork": "Accord spécifique Upcomers Trader Program, entité payeuse et versions éventuelles /2026 vs /fr",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "x-funded",
+      "name": "X-Funded",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://x-funded.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "x-funded-contract-20261124-01",
+          "section": "Termination section",
+          "subject": "Unilateral suspension",
+          "documentedEffect": "Le contrat annonce pouvoir de suspendre ou fermer pour n'importe quel motif à la seule discrétion, avec limites possibles de droit applicable.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://x-funded.com/terms-and-conditions/"
+        },
+        {
+          "factId": "x-funded-contract-20261124-02",
+          "section": "Official payout help",
+          "subject": "Hard payout cap / excess loss",
+          "documentedEffect": "Le centre d'aide annonce plafond de 20 000 USD par payout, l'excédent d'une demande supérieure n'étant pas reportable; à vérifier par modèle et tranche.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.x-funded.com/payout-policy-dashboard/is-there-a-maximum-withdrawal/"
+        }
+      ],
+      "remainingWork": "Distinguer version de contrat souscription vs aide funded, inspecter recours et règles individuelles",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "funded-trading-plus",
+      "name": "Funded Trading Plus",
+      "auditStatus": "official_help_only",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://help.fundedtradingplus.com/activation-accounts-payouts-and-withdrawals/",
+      "findings": [
+        {
+          "factId": "funded-trading-plus-contract-20261124-01",
+          "section": "Activation Accounts — Payouts",
+          "subject": "Payout eligibility",
+          "documentedEffect": "Délai de dix jours de trading avant un retrait d'Activation Account, sous réserve de ses propres termes; règle objective, pas une discrétion constatée.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.fundedtradingplus.com/activation-accounts-payouts-and-withdrawals/"
+        },
+        {
+          "factId": "funded-trading-plus-contract-20261124-02",
+          "section": "Program-specific terms",
+          "subject": "Missing contract",
+          "documentedEffect": "FAQ indique accord et KYC nécessaires; texte contractuel actuel sur les protections et retenues de reward non lu dans cette passe.",
+          "evidenceStatus": "missing_core_agreement",
+          "sourceUrl": "https://help.fundedtradingplus.com/activation-accounts-payouts-and-withdrawals/"
+        }
+      ],
+      "remainingWork": "Lire Terms & Conditions 2026 et Contracted Researcher Agreement effectivement accepté; vérifier conditions de refus payout",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "the-trading-pit",
+      "name": "The Trading Pit",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://www.thetradingpit.com/general-terms-and-conditions",
+      "findings": [
+        {
+          "factId": "the-trading-pit-contract-20261124-01",
+          "section": "Opening; §2.9",
+          "subject": "Existing contract rule changes",
+          "documentedEffect": "Modifications possibles de conditions de challenges déjà achetés, avec annonce préalable visée et possibilité de résiliation; quantifier portée sur gains acquis.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.thetradingpit.com/general-terms-and-conditions"
+        },
+        {
+          "factId": "the-trading-pit-contract-20261124-02",
+          "section": "§5.4",
+          "subject": "Discretionary trading determination",
+          "documentedEffect": "Firme détermine à son appréciation si des trades/stratégies répondent aux définitions de pratiques interdites, dont tailles de positions qualitativement disproportionnées.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.thetradingpit.com/general-terms-and-conditions"
+        },
+        {
+          "factId": "the-trading-pit-contract-20261124-03",
+          "section": "§1.3",
+          "subject": "Identity and reward forfeit",
+          "documentedEffect": "Identité, paiement et destinataire doivent correspondre; certaines violations peuvent fermer le compte et annuler une récompense; nécessaire de distinguer fraude de faute ordinaire.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://www.thetradingpit.com/general-terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Contrat Earning/Performance Phase d'après challenge CFD/Futures et clauses de recours, version actuelle vs ancienne",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "fundedhive",
+      "name": "FundedHive",
+      "auditStatus": "public_faq_only_pdf_to_inspect",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://fundedhive.com/faq",
+      "findings": [
+        {
+          "factId": "fundedhive-contract-20261124-01",
+          "section": "FAQ — payout flow",
+          "subject": "Smart-contract claim vs contract",
+          "documentedEffect": "Le site soutient que les rewards sont payés par smart contract et non traités manuellement; ceci est une revendication de fonctionnement, pas preuve suffisante qu'aucun blocage/clawback n'est possible.",
+          "evidenceStatus": "verified_site_claim",
+          "sourceUrl": "https://fundedhive.com/faq"
+        },
+        {
+          "factId": "fundedhive-contract-20261124-02",
+          "section": "General Terms PDF",
+          "subject": "Missing full clauses",
+          "documentedEffect": "PDF de conditions/annexes officiel identifié, mais lecture juridique de ses sections suspendue dans ce lot; ne pas attribuer une pénalité nulle.",
+          "evidenceStatus": "document_discovered_not_analysed",
+          "sourceUrl": "https://fundedhive.com/faq"
+        }
+      ],
+      "remainingWork": "Examiner PDF officiel avec lecture et capture, conventions FundedHive/TradingHive, règles A-Book/B-Book et déblocage on-chain",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "funding-traders",
+      "name": "Funding Traders",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://fundingtraders.com/terms-of-service/",
+      "findings": [
+        {
+          "factId": "funding-traders-contract-20261124-01",
+          "section": "§2.4–2.5",
+          "subject": "Subjective strategy suitability",
+          "documentedEffect": "La firme peut terminer une relation lorsque stratégies de démo ne sont pas jugées reproductibles en réel ou source de risque/réputation; un entretien est prévu pour recherche de solution.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://fundingtraders.com/terms-of-service/"
+        },
+        {
+          "factId": "funding-traders-contract-20261124-02",
+          "section": "§3.4–3.5",
+          "subject": "Linked account termination",
+          "documentedEffect": "Pratiques interdites sur des comptes liés peuvent mener à résiliation de plusieurs services, y compris des services d'autres traders concernés.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://fundingtraders.com/terms-of-service/"
+        },
+        {
+          "factId": "funding-traders-contract-20261124-03",
+          "section": "Refund section",
+          "subject": "Second payout refund",
+          "documentedEffect": "Les frais d'évaluation sont remboursables après le deuxième payout traité pour les comptes admissibles; ne pas confondre ce remboursement avec protection des rewards.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://fundingtraders.com/terms-of-service/"
+        }
+      ],
+      "remainingWork": "Contrat funded signé par modèle, procédure d'appel / arbitrage et portée des restrictions sur gains accumulés",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "trade-the-pool",
+      "name": "Trade The Pool",
+      "auditStatus": "official_terms_examined",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://tradethepool.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "trade-the-pool-contract-20261124-01",
+          "section": "Payout Threshold",
+          "subject": "Unilateral per-payout cap",
+          "documentedEffect": "La société se réserve le droit de fixer à sa discrétion un plafond de payout par opération; conditions de publication de ce plafond à vérifier.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://tradethepool.com/terms-and-conditions/"
+        },
+        {
+          "factId": "trade-the-pool-contract-20261124-02",
+          "section": "Account eligibility / sanctions",
+          "subject": "KYC conditions",
+          "documentedEffect": "KYC et restrictions pays/compte sont des conditions de compte, et les violations de contournement peuvent mener à fermeture; pas en soi une preuve de retenue abusive.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://tradethepool.com/terms-and-conditions/"
+        },
+        {
+          "factId": "trade-the-pool-contract-20261124-03",
+          "section": "Program Terms",
+          "subject": "Minimum payout",
+          "documentedEffect": "Le programme exige notamment 300 USD au-dessus du capital virtuel initial pour un payout; norme objective.",
+          "evidenceStatus": "verified_terms",
+          "sourceUrl": "https://tradethepool.com/program-terms/"
+        }
+      ],
+      "remainingWork": "Identifier le contrat trader de rémunération, variation plan Stock et versions du payout threshold",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "sure-leverage",
+      "name": "Sure Leverage Funding",
+      "auditStatus": "official_help_only",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
+      "findings": [
+        {
+          "factId": "sure-leverage-contract-20261124-01",
+          "section": "General Rules",
+          "subject": "Soft breaches remove profit",
+          "documentedEffect": "Une infraction soft (ex. règle précise de tick scalping/news selon programme) déduit le profit du trade au payout; vérifier si les pertes restent, et les cohortes.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+        },
+        {
+          "factId": "sure-leverage-contract-20261124-02",
+          "section": "Current product help",
+          "subject": "Review stage",
+          "documentedEffect": "Certaines violations sont évaluées au retrait ou par risk review, mais des règles chiffrées et exceptions sont publiées.",
+          "evidenceStatus": "verified_help",
+          "sourceUrl": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules"
+        }
+      ],
+      "remainingWork": "Lire Terms & Conditions de ASAP Solutions FZ-LLC et garantie de rewards sous contrat funded",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    },
+    {
+      "slug": "trading-cult",
+      "name": "TradingCult",
+      "auditStatus": "product_faq_only",
+      "checkedOn": "2026-11-24",
+      "primarySource": "https://pro.tradingcult.com/no-evaluation-challenges/conditions",
+      "findings": [
+        {
+          "factId": "trading-cult-contract-20261124-01",
+          "section": "Instant Funding / Pay After Pass info",
+          "subject": "Program-specific account rules",
+          "documentedEffect": "Documentation décrit des règles distinctes pour Pay After Pass et Instant Funding, mais une FAQ ne démontre pas la protection des récompenses contractuelles.",
+          "evidenceStatus": "verified_product_publication",
+          "sourceUrl": "https://pro.tradingcult.com/no-evaluation-challenges/conditions"
+        }
+      ],
+      "remainingWork": "Lire CGU et accord funded effectifs du bon produit, rôle de l'entité payeuse, clauses de modification/résiliation et recours",
+      "doNotInferRiskAbsent": true,
+      "publicationStatus": "RESEARCH_ONLY_NOT_APPROVED"
+    }
+  ]
+}
