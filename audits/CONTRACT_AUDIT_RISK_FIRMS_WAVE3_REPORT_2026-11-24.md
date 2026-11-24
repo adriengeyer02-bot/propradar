@@ -1,9 +1,13 @@
-# PropRadar — Vague 3 : 14 audits contractuels de firmes intermédiaires et spécialisées
+# PropRadar — Vague 3 : 22 dossiers contractuels de firmes intermédiaires et spécialisées
 **Recherche datée : 24 novembre 2026 · version de travail ; aucune note publique ni promotion modifiée.**
 
+> **Actualisation de la vague 3 :** huit firmes supplémentaires sont désormais incluses dans le fichier [batch 3c](contract-clauses-active-risk-firms-batch3c-2026-11-24.json), soit **22 dossiers / 79 constats** pour cette vague et **67 sociétés / 189 constats** sur le chantier contractuel du 24 novembre. Les 67 dossiers restent des revues documentaires, non des certifications contractuelles intégrales.
+
+
+
 ## Périmètre et contrôles de qualité
-- **14 firmes supplémentaires / 53 constats sourcés** : CGU, conditions de service, documentation de payouts et pièces manquantes.
-- Sur la branche d'audit du 24/11, le total passe à **59 firmes distinctes / 163 observations documentaires**, sur les **121 approbations historiques V5.2**. Couverture de recherche : 59/121. **Ce nombre n'est PAS le nombre d'audits finalisés** : des accords funded individuels sont parfois absents.
+- **22 firmes supplémentaires / 79 constats sourcés** : CGU, conditions de service, documentation de payouts et pièces manquantes.
+- Sur la branche d'audit du 24/11, le total passe à **67 firmes distinctes / 189 observations documentaires**, sur les **121 approbations historiques V5.2**. Couverture de recherche : 67/121. **Ce nombre n'est PAS le nombre d'audits finalisés** : des accords funded individuels sont parfois absents.
 - Le travail porte cette fois sur des firmes dont le vieux moteur affichait déjà un risque classé, contrairement aux 26 dossiers « zéro risque classé » de la vague précédente. Le but est de **tester la symétrie documentaire**, pas d'augmenter artificiellement leurs malus.
 - Une règle claire et chiffrée, une pénalité contractuelle, une simple suspicion et une fraude réellement prouvée ne sont pas interchangeables.
 - « À confirmer / manque de contrat » ≠ « aucun risque » et ≠ « violation confirmée ». Les documents web consultés ne prouvent pas qu'ils s'appliquent aux anciens comptes.
@@ -59,6 +63,7 @@
 Fichiers structurés :
 - [8 entreprises et 32 constats](contract-clauses-active-risk-firms-batch3-2026-11-24.json)
 - [6 entreprises et 21 constats](contract-clauses-active-risk-firms-batch3b-2026-11-24.json)
+- [8 firmes / 26 constats supplémentaires](contract-clauses-active-risk-firms-batch3c-2026-11-24.json)
 - [Rapport Vague 2](CONTRACT_AUDIT_MEDIUM_FIRMS_REPORT_2026-11-24.md)
 - [Rapport général](CONTRACT_AUDIT_SWEEP_REPORT_2026-11-24.md)
 
