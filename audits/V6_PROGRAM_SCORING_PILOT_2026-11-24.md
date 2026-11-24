@@ -1,3 +1,5 @@
+> **REJECTED FOR PUBLICATION — 24 November 2026.** The 85-point socle pilot omits known adverse events and has unequal program coverage. See `v61-corrected-pilot-20-2026-11-24.json`. GetLeveraged 87 is invalid. All other rows require reconciliation of historical negative evidence before ranking; the V6.1 age sensitivity is not approval. No production changes.
+
 # V6 pilot — 24 November 2026 (research only)
 
 Owner direction: objective evidence and per-program risk scores. **No public scores or production routes changed.**
