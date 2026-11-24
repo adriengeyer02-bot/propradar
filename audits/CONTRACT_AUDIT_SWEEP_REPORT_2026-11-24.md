@@ -3,6 +3,8 @@
 
 > **État consolidé — troisième vague du 24/11/2026 :** 22 nouveaux dossiers / 79 constats, soit **67 entreprises distinctes / 189 observations** dans six fichiers. Les 67 sont des **dossiers de recherche**, pas des audits individuels financés complets. **54 fiches sur les 121** approuvées V5.2 n'ont pas encore reçu ce même triage sur cette branche. Le fichier de pilotage [contract-coverage-master-121-2026-11-24.json](contract-coverage-master-121-2026-11-24.json) contient les 121 statuts et la file restante; lire le [rapport Vague 3](CONTRACT_AUDIT_RISK_FIRMS_WAVE3_REPORT_2026-11-24.md). Aucun score public modifié.
 
+> **Vague 4 — consolidation 24/11/2026 :** +23 dossiers de revue contractuelle et +87 observations, soit **90 sociétés recherchées sur 121 / 276 observations** en tout. **31 sociétés restent sans ce triage (dont 3 CGU inaccessibles)**. Plusieurs des 90 n'ont PAS d'accord funded individuel disponible ; ce total ne mesure pas une certification ou la fin des audits. [Rapport Vague 4](CONTRACT_AUDIT_WAVE4_REPORT_2026-11-24.md) · [Tracker maître](contract-coverage-master-121-2026-11-24.json).
+
 **Date : 24 novembre 2026** · **RAPPORT DE RECHERCHE, NON PUBLIÉ SUR LE SITE**
 
 ## Décision de méthode
