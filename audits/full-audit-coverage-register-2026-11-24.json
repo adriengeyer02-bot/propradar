@@ -70,7 +70,7 @@
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
       "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+      "latestEvidence": "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json",
       "checks": {
         "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
@@ -82,16 +82,22 @@
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
         "trustpilot_exact_domain": "CHECKED_2026_11_24",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
       "remaining": [
         "Complete clause-by-clause coverage and exact accepted checkout/funded/live agreement versions",
         "Full product and cohort matrix, appeal and amendment provisions",
         "Primary registry, regulatory and historical incident reconciliation",
-        "Independent payout evidence not captured in this pass; no inference of nonpayment"
+        "Independent payout evidence not captured in this pass; no inference of nonpayment",
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
       ],
-      "canPublishNewScore": false
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ]
     },
     {
       "slug": "alpha-futures",
@@ -99,7 +105,7 @@
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
       "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
-      "latestEvidence": "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+      "latestEvidence": "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json",
       "checks": {
         "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
@@ -111,16 +117,22 @@
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
         "trustpilot_exact_domain": "CHECKED_2026_11_24",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
       "remaining": [
         "Complete clause-by-clause coverage and exact accepted checkout/funded/live agreement versions",
         "Full product and cohort matrix, appeal and amendment provisions",
         "Primary registry, regulatory and historical incident reconciliation",
-        "Independent payout evidence not captured in this pass; no inference of nonpayment"
+        "Independent payout evidence not captured in this pass; no inference of nonpayment",
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
       ],
-      "canPublishNewScore": false
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ]
     },
     {
       "slug": "alphaproptraders",
@@ -2024,7 +2036,7 @@
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
       "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-deep-sweep-2026-11-24.json",
-      "latestEvidence": "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+      "latestEvidence": "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json",
       "checks": {
         "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
@@ -2036,16 +2048,22 @@
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
         "trustpilot_exact_domain": "CHECKED_2026_11_24",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
       "remaining": [
         "Complete clause-by-clause coverage and exact accepted checkout/funded/live agreement versions",
         "Full product and cohort matrix, appeal and amendment provisions",
         "Primary registry, regulatory and historical incident reconciliation",
-        "Independent payout evidence not captured in this pass; no inference of nonpayment"
+        "Independent payout evidence not captured in this pass; no inference of nonpayment",
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
       ],
-      "canPublishNewScore": false
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ]
     },
     {
       "slug": "fxrk",
@@ -2957,7 +2975,7 @@
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
       "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-deep-sweep-2026-11-24.json",
-      "latestEvidence": "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+      "latestEvidence": "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json",
       "checks": {
         "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
@@ -2969,16 +2987,22 @@
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
         "trustpilot_exact_domain": "CHECKED_2026_11_24",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
       "remaining": [
         "Complete clause-by-clause coverage and exact accepted checkout/funded/live agreement versions",
         "Full product and cohort matrix, appeal and amendment provisions",
         "Primary registry, regulatory and historical incident reconciliation",
-        "Independent payout evidence not captured in this pass; no inference of nonpayment"
+        "Independent payout evidence not captured in this pass; no inference of nonpayment",
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
       ],
-      "canPublishNewScore": false
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ]
     },
     {
       "slug": "myfundedfx",
@@ -4386,7 +4410,7 @@
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
       "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-deep-sweep-2026-11-24.json",
-      "latestEvidence": "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+      "latestEvidence": "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json",
       "checks": {
         "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
@@ -4398,16 +4422,22 @@
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
         "trustpilot_exact_domain": "CHECKED_2026_11_24",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "payout_evidence_inventory": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
         "independent_crosscheck": "NOT_VALIDATED"
       },
       "remaining": [
         "Complete clause-by-clause coverage and exact accepted checkout/funded/live agreement versions",
         "Full product and cohort matrix, appeal and amendment provisions",
         "Primary registry, regulatory and historical incident reconciliation",
-        "Independent payout evidence not captured in this pass; no inference of nonpayment"
+        "Independent payout evidence not captured in this pass; no inference of nonpayment",
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
       ],
-      "canPublishNewScore": false
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ]
     },
     {
       "slug": "traders-central",
