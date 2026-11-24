@@ -1,0 +1,134 @@
+{
+  "documentVersion": "CGU_SWEEP_APPROVED_ZERO_RULES_2026_11_24",
+  "date": "2026-11-24",
+  "nonPublication": true,
+  "note": "Ces huit firmes figuraient parmi les 121 notes V5.2 alors qu'aucune règle n'était classée dans le moteur historique. La recherche produit des constats documentaires, pas des validations exhaustives ni des malus chiffrés.",
+  "firmCount": 8,
+  "findings": 12,
+  "firms": [
+    {
+      "slug": "myfundedcapital",
+      "name": "MyFundedCapital",
+      "quality": "source_actuelle_lue",
+      "clauses": [
+        {
+          "section": "Terms 23/11/2026 — Grounds for Refusing a Payout",
+          "finding": "Les refus de payout se limitent textuellement à des catégories énumérées (règles de compte, trading interdit, KYC, sanctions, paiement, etc.). L'entreprise doit identifier le motif, l'essai déclencheur et les éléments utilisés.",
+          "source": "https://myfundedcapital.com/terms-and-conditions/"
+        },
+        {
+          "section": "Review / reply after breach",
+          "finding": "Le trader peut présenter une explication dans les sept jours; la société annonce répondre sous sept jours. C'est un recours interne documenté.",
+          "source": "https://myfundedcapital.com/terms-and-conditions/"
+        },
+        {
+          "section": "Material changes",
+          "finding": "Préavis général de 14 jours, sauf modifications aux pratiques interdites, copie et hedging ou obligation légale, effet immédiat. Clauses de sauvegarde des payouts de comptes existants pour les autres changements.",
+          "source": "https://myfundedcapital.com/terms-and-conditions/"
+        }
+      ],
+      "missing": "Version effectivement acceptée par chaque cohorte ; contraste avec anciennes CGU indexées, portée des exceptions à effet immédiat."
+    },
+    {
+      "slug": "rzr-funded",
+      "name": "RZR Funded",
+      "quality": "source_actuelle_lue_mais_identité_version_à_reconcilier",
+      "clauses": [
+        {
+          "section": "Clause 7 Prohibited Trading",
+          "finding": "Résiliation possible et retrait/récupération de rewards associés à une activité jugée interdite; contenu explicitement rétroactif.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "section": "Clause 8 RMG",
+          "finding": "RMG peut être imposé à des comptes existants ou futurs et s'appliquer rétroactivement à des trades et payouts précédents.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        },
+        {
+          "section": "Entité contractante / changement d'opérateur",
+          "finding": "CGU actuellement lues nomment RZR Funded Limited, Mauritius C191400; une autre copie indexée du même domaine évoque une entité Saint Lucia 2026-00682. Conflit réel de versions à résoudre avant détermination du débiteur et d'une note.",
+          "source": "https://rzrfunded.com/terms-conditions/"
+        }
+      ],
+      "missing": "Archiver capture datée et hash de chaque version RZR/Hantec, accord Trader de §4.2, entité applicable au checkout et anciens comptes."
+    },
+    {
+      "slug": "forex-funds-flow",
+      "name": "Forex Funds Flow",
+      "quality": "source_indexée_mais_scrape_direct_503",
+      "clauses": [
+        {
+          "section": "Terms and Conditions",
+          "finding": "Le texte officiel indexé décrit une firme d'évaluation sur environnement simulé, avec restrictions de hedging et traitement des données de trading; page directe momentanément 503, pas de conclusion sur droits aux payouts.",
+          "source": "https://forexfundsflow.com/terms-conditions"
+        }
+      ],
+      "missing": "Rétablir accès page directe, retrouver contrat de reward de la cohorte et qualifier les conditions de suppression; identifier les deux entités nommées."
+    },
+    {
+      "slug": "funding-frontier",
+      "name": "Funding Frontier",
+      "quality": "historique_2024_site_redirects",
+      "clauses": [
+        {
+          "section": "Legal Terms (archive)",
+          "finding": "Page historique de 2024 attribuée à First Frontier FZ-LLC ; un renvoi courant forme une boucle de redirections. Aucun contrat funded récent validé.",
+          "source": "https://fundingfrontier.com/legal-terms/"
+        }
+      ],
+      "missing": "Vérifier site marchand actuel, vendeur légal et accord rémunérateur; ne pas classer une page de 2024 comme contrat courant."
+    },
+    {
+      "slug": "fidelcrest",
+      "name": "Fidelcrest",
+      "quality": "site_non_lisible_et_accord_absent",
+      "clauses": [
+        {
+          "section": "Legacy terms",
+          "finding": "Texte ancien trouvable dans index mais accès serveur actuel incertain ; des termes additionnels peuvent s'imposer à la signature. Impossible d'affirmer les règles courantes ni l'entité qui rémunère.",
+          "source": "https://fidelcrest.com/terms-conditions"
+        }
+      ],
+      "missing": "Vérifier offre et disponibilité actuelles; obtenir accords du prestataire funded, statuts juridiques, et bannière d'achat avant toute recommandation."
+    },
+    {
+      "slug": "fundings4u",
+      "name": "Fundings4U",
+      "quality": "contrat_officiel_non_accessible",
+      "clauses": [
+        {
+          "section": "Terms lookup",
+          "finding": "L'URL officielle supposée de CGU renvoie 404 ; aucun texte de contrat rémunérateur authentifié dans cette revue.",
+          "source": "https://fundings4u.com/terms-and-conditions"
+        }
+      ],
+      "missing": "Localiser nom de domaine actuel, état de la vente, contrats et historique des versements. Ne pas attribuer un zéro malus pour absence de données."
+    },
+    {
+      "slug": "pipfarm",
+      "name": "PipFarm",
+      "quality": "termes_partiellement_lus_annexe_à_revoir",
+      "clauses": [
+        {
+          "section": "Terms and Conditions",
+          "finding": "Le texte rendu mentionne un Remote Trader Program Agreement en appendice B et des Reward Payouts; certains composants de la page ne se chargent pas correctement. La hiérarchie contractuelle exige de lire l'appendice.",
+          "source": "https://pipfarm.com/terms-and-conditions"
+        }
+      ],
+      "missing": "Obtenir appendice B intégral, compléter conditions de forfait et remises des rewards et vérifier accès direct depuis le site actuel."
+    },
+    {
+      "slug": "prop-number-one",
+      "name": "Prop Number One",
+      "quality": "pdf_ancien_non_validé_pour_cohorte_2026",
+      "clauses": [
+        {
+          "section": "Independent Contractor Agreement",
+          "finding": "L'archive officielle 2025 mentionne un accord séparé après sélection comme trader financé. Ce PDF historique ne permet pas de conclure à des droits de payout 2026.",
+          "source": "https://propnumberone.com/wp-content/uploads/2025/04/Overview_1.pdf"
+        }
+      ],
+      "missing": "Accéder aux CGU actuelles via checkout et à l'accord Independent Contractor applicable, rapprocher entités affichées sur page actuelle."
+    }
+  ]
+}
