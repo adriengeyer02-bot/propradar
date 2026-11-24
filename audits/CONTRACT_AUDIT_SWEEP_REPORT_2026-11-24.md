@@ -1,6 +1,8 @@
 # PropRadar — audit approfondi des CGU, clauses de récompense et résiliation
 > **Mise à jour — deuxième vague (24/11/2026) :** 22 prop firms intermédiaires supplémentaires ont été étudiées, avec 54 constats supplémentaires. Les 26 profils du lot « règles ordinaires uniquement / zéro risque classé » ont désormais fait l'objet d'un triage documentaire, mais les accords funded absents restent non vérifiés. Au total : 45 sociétés distinctes et 110 observations, sans aucune modification des scores publics. Voir [rapport Vague 2](CONTRACT_AUDIT_MEDIUM_FIRMS_REPORT_2026-11-24.md) et [données structurées](contract-clauses-medium-firms-2026-11-24.json).
 
+> **État consolidé — troisième vague du 24/11/2026 :** 22 nouveaux dossiers / 79 constats, soit **67 entreprises distinctes / 189 observations** dans six fichiers. Les 67 sont des **dossiers de recherche**, pas des audits individuels financés complets. **54 fiches sur les 121** approuvées V5.2 n'ont pas encore reçu ce même triage sur cette branche. Le fichier de pilotage [contract-coverage-master-121-2026-11-24.json](contract-coverage-master-121-2026-11-24.json) contient les 121 statuts et la file restante; lire le [rapport Vague 3](CONTRACT_AUDIT_RISK_FIRMS_WAVE3_REPORT_2026-11-24.md). Aucun score public modifié.
+
 **Date : 24 novembre 2026** · **RAPPORT DE RECHERCHE, NON PUBLIÉ SUR LE SITE**
 
 ## Décision de méthode
