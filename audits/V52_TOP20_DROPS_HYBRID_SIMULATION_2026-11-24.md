@@ -1,4 +1,7 @@
 # Simulation du modèle hybride — 20 plus fortes chutes de V5.2
+
+> **ERRATUM CRITIQUE (24 novembre 2026)** — Les pénalités de règles de ce tableau ne sont **PAS comparables entre firmes**. FTMO −8 vient d'un audit profond des clauses de risque, CTI 0 vient d'un dossier ne contenant pratiquement que les règles commerciales tandis que son contrat officiel contient des clauses de confiscation/résiliation non classées, et Audacity 0 ignore ses clauses de conduite/discrétion. De plus, le moteur `ruleKind()` traite `min-trading-days` comme une règle classique (0) avant de tester `status: conflicting`, masquant une contradiction Audacity. **Les notes hybrides des 20 lignes sont INVALIDES pour publication ou recommandation.** Lire `HYBRID_RULES_FTMO_CTI_AUDACITY_REVIEW_2026-11-24.md`. Ni le site ni les scores publics n'ont été modifiés.
+
 **24 novembre 2026 · NON PUBLIÉ / RECHERCHE UNIQUEMENT**
  
 ## Méthode
