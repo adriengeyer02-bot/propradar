@@ -1,0 +1,2097 @@
+{
+  "version": "6.3",
+  "date": "2026-11-24",
+  "status": "RESEARCH_ONLY_NOT_RANKABLE",
+  "method": "Retrospective corpus sensitivity, no fresh web verification. 75+age 0–20+proof 0–5−incidents 0–35−common max30−specific max20−historical official TP notice 8 once. All proof bonuses zero, no newly assessed incidents except GetLeveraged carried from V6.1. Missing data neither penalized nor rated as safe. Age founded year proxy; Bullwaves age unknown no numeric score, conditional 0–20. Risk weights manually coded from existing findings; not complete audit. Program scopes and sample medians not full company rating. No automatic ranking. Previous V6.3 three-firm inputs carried forward as regression checks; residual FTMO Instant and The5ers High Stakes deductions need detailed mapping.",
+  "statistics": {
+    "firmCount": 46,
+    "numericCount": 45,
+    "programSampleFirmCount": 13,
+    "programCount": 26,
+    "mean": 76.9,
+    "meanV52": 56.8,
+    "distribution": [
+      {
+        "range": "0-49",
+        "n": 1
+      },
+      {
+        "range": "50-59",
+        "n": 0
+      },
+      {
+        "range": "60-69",
+        "n": 4
+      },
+      {
+        "range": "70-79",
+        "n": 25
+      },
+      {
+        "range": "80-89",
+        "n": 13
+      },
+      {
+        "range": "90-100",
+        "n": 2
+      }
+    ],
+    "up15": 34,
+    "meanCommonOnly": 77.9,
+    "meanProgramSample": 74
+  },
+  "firms": [
+    {
+      "slug": "ftmo",
+      "name": "FTMO",
+      "founded": 2015,
+      "historicalStoredScore": 91,
+      "v52": 62,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Qualitative replicability/risk criteria may affect rewards",
+          "source": "https://ftmo.com/en/forbidden-trading-practices/"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 95,
+      "trustpilotPenalty": 0,
+      "commonScore": 87,
+      "programs": [
+        {
+          "name": "2-Step Swing",
+          "rules": [],
+          "specificPenalty": 0,
+          "score": 87
+        },
+        {
+          "name": "2-Step Standard",
+          "rules": [
+            {
+              "family": "news",
+              "points": 2,
+              "label": "News restriction",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            },
+            {
+              "family": "overnight",
+              "points": 2,
+              "label": "Overnight/weekend restriction",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            }
+          ],
+          "specificPenalty": 4,
+          "score": 83
+        },
+        {
+          "name": "1-Step",
+          "rules": [
+            {
+              "family": "news",
+              "points": 2,
+              "label": "News restriction",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            },
+            {
+              "family": "overnight",
+              "points": 2,
+              "label": "Overnight/weekend restriction",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            },
+            {
+              "family": "consistency",
+              "points": 0,
+              "label": "50% consistency",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            }
+          ],
+          "specificPenalty": 4,
+          "score": 83
+        },
+        {
+          "name": "Instant Account",
+          "rules": [
+            {
+              "family": "other-program",
+              "points": 4,
+              "label": "Other restrictions carried from V6.3 prior briefing; detailed source mapping still required",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            },
+            {
+              "family": "consistency",
+              "points": 0,
+              "label": "30% consistency",
+              "source": "https://ftmo.com/en/trading-objectives/"
+            }
+          ],
+          "specificPenalty": 4,
+          "score": 83
+        }
+      ],
+      "sample": 83,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "the5ers",
+      "name": "The5ers",
+      "founded": 2016,
+      "historicalStoredScore": 85,
+      "v52": 64,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Subjective prohibited strategy criteria",
+          "source": "https://the5ers.com/en/terms-and-conditions/"
+        },
+        {
+          "family": "communication-forfeiture",
+          "points": 6,
+          "label": "Loss of accumulated profits for unauthorized private communication disclosure",
+          "source": "https://the5ers.com/en/terms-and-conditions/"
+        },
+        {
+          "family": "interview-forfeiture",
+          "points": 4,
+          "label": "Pending payout forfeiture for missed interview deadline",
+          "source": "https://the5ers.com/en/terms-and-conditions/"
+        }
+      ],
+      "commonPenalty": 18,
+      "editorial": 95,
+      "trustpilotPenalty": 0,
+      "commonScore": 77,
+      "programs": [
+        {
+          "name": "Bootcamp",
+          "rules": [],
+          "specificPenalty": 0,
+          "score": 77
+        },
+        {
+          "name": "Hyper Growth",
+          "rules": [],
+          "specificPenalty": 0,
+          "score": 77
+        },
+        {
+          "name": "High Stakes",
+          "rules": [
+            {
+              "family": "news-and-other",
+              "points": 4,
+              "label": "Prior V6.3 specific deductions carried forward; verify detailed rule mapping",
+              "source": "https://the5ers.com/en/terms-and-conditions/"
+            }
+          ],
+          "specificPenalty": 4,
+          "score": 73
+        }
+      ],
+      "sample": 77,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "topstep",
+      "name": "Topstep",
+      "founded": 2012,
+      "historicalStoredScore": 84,
+      "v52": 64,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "ban-forfeiture",
+          "points": 4,
+          "label": "Ban can forfeit balance/pending requests; review available",
+          "source": "https://help.topstep.com/en/articles/16989498-i-ve-been-banned-what-are-my-options"
+        }
+      ],
+      "commonPenalty": 4,
+      "editorial": 95,
+      "trustpilotPenalty": 0,
+      "commonScore": 91,
+      "programs": [
+        {
+          "name": "XFA Standard",
+          "rules": [
+            {
+              "family": "withdrawal-cap",
+              "points": 2,
+              "label": "50% balance and size-dependent payout cap",
+              "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+            },
+            {
+              "family": "qualifying-days",
+              "points": 2,
+              "label": "5 days earning $150+",
+              "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+            }
+          ],
+          "specificPenalty": 4,
+          "score": 87
+        },
+        {
+          "name": "XFA Consistency",
+          "rules": [
+            {
+              "family": "withdrawal-cap",
+              "points": 2,
+              "label": "50% balance and size-dependent payout cap",
+              "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+            },
+            {
+              "family": "qualifying-days",
+              "points": 2,
+              "label": "Three qualifying days; 40% consistency itself zero",
+              "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+            }
+          ],
+          "specificPenalty": 4,
+          "score": 87
+        }
+      ],
+      "sample": 87,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "fundednext",
+      "name": "FundedNext",
+      "founded": 2022,
+      "historicalStoredScore": 79,
+      "v52": 64,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Suspicion and non-exhaustive prohibited conduct may trigger reward cancellation/recovery",
+          "source": "https://fundednext.com/terms-of-service"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 83,
+      "programs": [
+        {
+          "name": "Stellar 1-Step",
+          "rules": [
+            {
+              "family": "news-asymmetry",
+              "points": 6,
+              "label": "40% of news profits counted, 100% losses retained",
+              "source": "https://help.fundednext.com/en/articles/17252927-stellar-1-step-account"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 77
+        },
+        {
+          "name": "Stellar 2-Step Standard",
+          "rules": [
+            {
+              "family": "news-asymmetry",
+              "points": 6,
+              "label": "40% of news profits counted, 100% losses retained",
+              "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 77
+        },
+        {
+          "name": "Stellar Instant",
+          "rules": [
+            {
+              "family": "news-asymmetry",
+              "points": 6,
+              "label": "40% of news profits counted, 100% losses retained",
+              "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
+            },
+            {
+              "family": "payout-eligibility",
+              "points": 2,
+              "label": "Minimum 1% growth and 14-day cycle unless 5% on demand",
+              "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account"
+            }
+          ],
+          "specificPenalty": 8,
+          "score": 75
+        }
+      ],
+      "sample": 77,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "apex-trader-funding",
+      "name": "Apex",
+      "founded": 2021,
+      "historicalStoredScore": 66,
+      "v52": 58,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 10,
+          "label": "PA rewards discretionary and may be refused without cause before authorized distribution",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "family": "chargeback-clawback",
+          "points": 5,
+          "label": "Chargeback/refund can claw back associated distributed rewards",
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        }
+      ],
+      "commonPenalty": 15,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 76,
+      "programs": [
+        {
+          "name": "EOD PA",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 0,
+              "label": "50% consistency, delays payout",
+              "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+            },
+            {
+              "family": "lifetime-payout-limit",
+              "points": 4,
+              "label": "Six payouts then PA closed",
+              "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+            },
+            {
+              "family": "payout-buffer",
+              "points": 2,
+              "label": "Lifetime safety net and minimum withdrawal",
+              "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+            },
+            {
+              "family": "qualifying-days",
+              "points": 2,
+              "label": "Five days with minimum daily profit",
+              "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/"
+            }
+          ],
+          "specificPenalty": 8,
+          "score": 68
+        },
+        {
+          "name": "Intraday PA",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 0,
+              "label": "50% consistency, delays payout",
+              "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+            },
+            {
+              "family": "lifetime-payout-limit",
+              "points": 4,
+              "label": "Six payouts then PA closed",
+              "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+            },
+            {
+              "family": "payout-buffer",
+              "points": 2,
+              "label": "Lifetime safety net and minimum withdrawal",
+              "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+            },
+            {
+              "family": "qualifying-days",
+              "points": 2,
+              "label": "Five days with minimum daily profit",
+              "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+            }
+          ],
+          "specificPenalty": 8,
+          "score": 68
+        }
+      ],
+      "sample": 68,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "city-traders-imperium",
+      "name": "City Traders Imperium",
+      "founded": 2018,
+      "historicalStoredScore": 74,
+      "v52": 53,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 10,
+          "label": "§8.11/8.13/13.12 broad forfeiture and termination without cause",
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf"
+        },
+        {
+          "family": "existing-contract-change",
+          "points": 4,
+          "label": "§17.3 changes existing contract; refusal terminates; no proven retroactive closed trades",
+          "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf"
+        }
+      ],
+      "commonPenalty": 14,
+      "editorial": 95,
+      "trustpilotPenalty": 0,
+      "commonScore": 81,
+      "programs": [],
+      "sample": 81,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "audacity-capital",
+      "name": "Audacity Capital",
+      "founded": 2012,
+      "historicalStoredScore": 79,
+      "v52": 50,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "audacity.capital",
+      "trustpilotStatus": "confirmed-withheld-2026-11-24",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 5,
+          "label": "Qualitative prohibited practices with affected activity limit and review right",
+          "source": "https://audacity.capital/en/terms-and-conditions/"
+        }
+      ],
+      "commonPenalty": 5,
+      "editorial": 95,
+      "trustpilotPenalty": 8,
+      "commonScore": 82,
+      "programs": [],
+      "sample": 82,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "tradeify",
+      "name": "Tradeify",
+      "founded": 2023,
+      "historicalStoredScore": 72,
+      "v52": 62,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "approved-payout-hold",
+          "points": 8,
+          "label": "§4.4 approved but unpaid reward can be held during investigation and forfeited upon breach",
+          "source": "https://tradeify.co/funded-trader-agreement"
+        },
+        {
+          "family": "chargeback-forfeiture",
+          "points": 5,
+          "label": "§7.6 chargeback triggers loss of unpaid rewards and ban",
+          "source": "https://tradeify.co/funded-trader-agreement"
+        }
+      ],
+      "commonPenalty": 13,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 74,
+      "programs": [],
+      "sample": 74,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "myfundedfutures",
+      "name": "MyFundedFutures",
+      "founded": 2023,
+      "historicalStoredScore": 73,
+      "v52": 62,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "§16.2 unilateral determination can cause reward forfeiture; appendix prevails",
+          "source": "https://myfundedfutures.com/terms"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 79,
+      "programs": [],
+      "sample": 79,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "alpha-capital-group",
+      "name": "Alpha Capital Group",
+      "founded": 2021,
+      "historicalStoredScore": 78,
+      "v52": 66,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Schedule 2 §2.6 sole discretion on trading violation",
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 83,
+      "programs": [],
+      "sample": 83,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "fintokei",
+      "name": "Fintokei",
+      "founded": 2022,
+      "historicalStoredScore": 77,
+      "v52": 62,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 5,
+          "label": "Risk review can lower reward share/leverage, termination after warnings",
+          "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+        }
+      ],
+      "commonPenalty": 5,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 86,
+      "programs": [],
+      "sample": 86,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "funding-traders",
+      "name": "Funding Traders",
+      "founded": 2023,
+      "historicalStoredScore": 70,
+      "v52": 55,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "fundingtraders.com",
+      "trustpilotStatus": "confirmed-withheld-2026-11-24",
+      "commonRules": [
+        {
+          "family": "subjective-termination",
+          "points": 4,
+          "label": "§2.4–2.5 real market suitability and reputational risk, interview envisaged",
+          "source": "https://fundingtraders.com/terms-of-service/"
+        },
+        {
+          "family": "asymmetry",
+          "points": 6,
+          "label": "§6.3.8 RMG asymmetric Violation Profit calculation (prior audit PR275)",
+          "source": "https://fundingtraders.com/terms-of-service/"
+        }
+      ],
+      "commonPenalty": 10,
+      "editorial": 87,
+      "trustpilotPenalty": 8,
+      "commonScore": 69,
+      "programs": [],
+      "sample": 69,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "for-traders",
+      "name": "For Traders",
+      "founded": 2023,
+      "historicalStoredScore": 72,
+      "v52": 48,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "fortraders.com",
+      "trustpilotStatus": "confirmed-withheld-2026-11-24",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 10,
+          "label": "§17.3–17.4 discretionary reward per prior native audit PR273",
+          "source": "https://fortraders.com/terms-and-conditions"
+        },
+        {
+          "family": "chargeback-forfeiture",
+          "points": 5,
+          "label": "§6.10 bank dispute regardless of reason may cancel pending rewards",
+          "source": "https://fortraders.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 15,
+      "editorial": 87,
+      "trustpilotPenalty": 8,
+      "commonScore": 64,
+      "programs": [],
+      "sample": 64,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "name": "Crypto Fund Trader",
+      "founded": 2022,
+      "historicalStoredScore": 62,
+      "v52": 45,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "cryptofundtrader.com",
+      "trustpilotStatus": "confirmed-withheld-2026-11-24",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "§14.2 scholarship nonpayment even after goal and stated fee refund remedy limit",
+          "source": "https://cryptofundtrader.com/terms-and-conditions/"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 75,
+      "programs": [],
+      "sample": 75,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "finotive-funding",
+      "name": "Finotive Funding",
+      "founded": 2021,
+      "historicalStoredScore": 71,
+      "v52": 50,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "finotivefunding.com",
+      "trustpilotStatus": "confirmed-withheld-2026-11-24",
+      "commonRules": [
+        {
+          "family": "reward-clawback",
+          "points": 8,
+          "label": "§12 reward withholding/reversal even after processing (prior audit PR275)",
+          "source": "https://finotivefunding.com/terms-and-conditions"
+        },
+        {
+          "family": "split-sanction",
+          "points": 3,
+          "label": "§7.14–7.18 specified breaches can reduce split to 10%",
+          "source": "https://finotivefunding.com/terms-and-conditions"
+        },
+        {
+          "family": "appeal-limit",
+          "points": 2,
+          "label": "§19 limited 48h appeal",
+          "source": "https://finotivefunding.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 13,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 70,
+      "programs": [],
+      "sample": 70,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "get-leveraged",
+      "name": "GetLeveraged",
+      "founded": 2025,
+      "historicalStoredScore": 56,
+      "v52": 51,
+      "ageBonus": 4,
+      "incidentPenalty": 15,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "TrustScore 4.5 displayed on 24 Nov 2026; historical notice not currently displayed; no penalty under current-only rule.",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "§7.2, §8.3 and FAQ broad commercial/strategy judgment; refusal or reduction of reward possible; §12.4 appeal limits severity",
+          "source": "https://getleveraged.com/terms/"
+        },
+        {
+          "family": "confidentiality",
+          "points": 3,
+          "label": "§13.6 restricts publication of support/review exchanges, with legal remedies; §13.3 expressly protects honest reviews; not payout confiscation",
+          "source": "https://getleveraged.com/terms/"
+        },
+        {
+          "family": "third-party-ea",
+          "points": 2,
+          "label": "Third-party EAs forbidden; distinct transparent strategy limitation",
+          "source": "https://getleveraged.com/fr/faq/what-is-prohibited/"
+        }
+      ],
+      "commonPenalty": 13,
+      "editorial": 64,
+      "trustpilotPenalty": 0,
+      "commonScore": 51,
+      "programs": [
+        {
+          "name": "Sprint",
+          "rules": [
+            {
+              "family": "exceptional-drawdown",
+              "points": 3,
+              "label": "1% daily and overall static drawdown; unusual objective severity, no ordinary drawdown penalty",
+              "source": "https://getleveraged.com/sprint/"
+            }
+          ],
+          "specificPenalty": 3,
+          "score": 48
+        },
+        {
+          "name": "Turbo Trade",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 4,
+              "label": "20% funded consistency delays payout",
+              "source": "https://getleveraged.com/fr/faq/what-is-the-consistency-rule/"
+            },
+            {
+              "family": "profitable-days",
+              "points": 2,
+              "label": "3 days with at least 0.5% initial balance profit",
+              "source": "https://getleveraged.com/fr/faq/payouts-and-profit-split/"
+            },
+            {
+              "family": "news-window",
+              "points": 2,
+              "label": "High-impact news window outside Sprint",
+              "source": "https://getleveraged.com/fr/faq/what-is-prohibited/"
+            }
+          ],
+          "specificPenalty": 8,
+          "score": 43
+        },
+        {
+          "name": "Instant",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 4,
+              "label": "20% funded consistency delays payout",
+              "source": "https://getleveraged.com/fr/faq/what-is-the-consistency-rule/"
+            },
+            {
+              "family": "news-window",
+              "points": 2,
+              "label": "High-impact news window outside Sprint",
+              "source": "https://getleveraged.com/fr/faq/what-is-prohibited/"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 45
+        }
+      ],
+      "sample": 45,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "elite-trader-funding",
+      "name": "Elite Trader Funding",
+      "founded": 2021,
+      "historicalStoredScore": 64,
+      "v52": 59,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "pending-reward-transfer",
+          "points": 8,
+          "label": "Pending rewards may be transferred to LIVE ELITE/Vault instead of paid",
+          "source": "https://elitetraderfunding.app/terms-of-service"
+        },
+        {
+          "family": "reward-interview",
+          "points": 3,
+          "label": "Interview refusal may result in reward denial",
+          "source": "https://elitetraderfunding.app/terms-of-service"
+        }
+      ],
+      "commonPenalty": 11,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 80,
+      "programs": [
+        {
+          "name": "LIVE ELITE",
+          "rules": [
+            {
+              "family": "personal-loss-liability",
+              "points": 8,
+              "label": "Loss beyond total loss limit and certain overnight costs may be owed",
+              "source": "https://elitetraderfunding.app/terms-of-service"
+            }
+          ],
+          "specificPenalty": 8,
+          "score": 72
+        }
+      ],
+      "sample": 72,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "funded7",
+      "name": "Funded7",
+      "founded": 2025,
+      "historicalStoredScore": 60,
+      "v52": 56,
+      "ageBonus": 4,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "asymmetry",
+          "points": 6,
+          "label": "Sanctioned gains removed; losses remain",
+          "source": "https://funded7.com/faq/rule-2-3-position-risk-execution/"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 79,
+      "trustpilotPenalty": 0,
+      "commonScore": 73,
+      "programs": [],
+      "sample": 73,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "hash-hedge",
+      "name": "Hash Hedge",
+      "founded": 2023,
+      "historicalStoredScore": 36,
+      "v52": 63,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [],
+      "commonPenalty": 0,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 87,
+      "programs": [
+        {
+          "name": "Commercial terms / withdrawal cap",
+          "rules": [
+            {
+              "family": "withdrawal-cap",
+              "points": 2,
+              "label": "10k/14d cap",
+              "source": "https://www.hashhedge.com/commercial-terms"
+            }
+          ],
+          "specificPenalty": 2,
+          "score": 85
+        }
+      ],
+      "sample": 85,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "ment-funding",
+      "name": "Ment Funding",
+      "founded": 2021,
+      "historicalStoredScore": 66,
+      "v52": 58,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not-rechecked-no-deduction-in-scenario",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Prohibited trading may cause forfeiture of sums due; funded partner agreement separate",
+          "source": "https://mentfunding.com/terms-of-service"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 83,
+      "programs": [],
+      "sample": 83,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "maven-trading",
+      "name": "Maven Trading",
+      "founded": 2022,
+      "historicalStoredScore": 73,
+      "v52": 56,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "maventrading.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-termination",
+          "points": 6,
+          "label": "Broad discretionary risk termination",
+          "source": "https://maventrading.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 77,
+      "programs": [
+        {
+          "name": "OMO",
+          "rules": [
+            {
+              "family": "asymmetry",
+              "points": 6,
+              "label": "Profit under 150 seconds removed, losses retained",
+              "source": "https://maventrading.com/terms-and-conditions"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 71
+        },
+        {
+          "name": "Instant Mini",
+          "rules": [
+            {
+              "family": "asymmetry",
+              "points": 6,
+              "label": "Profit under 150 seconds removed, losses retained",
+              "source": "https://maventrading.com/terms-and-conditions"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 71
+        }
+      ],
+      "sample": 71,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "funding-pips",
+      "name": "Funding Pips",
+      "founded": 2022,
+      "historicalStoredScore": 70,
+      "v52": 68,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "ea-approval",
+          "points": 4,
+          "label": "Discretionary EA ownership proof with risk of reward refusal",
+          "source": "https://help.fundingpips.com/hc/en-us/articles/34505029138449-Trading-Conduct-and-Security-Standards"
+        }
+      ],
+      "commonPenalty": 4,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 87,
+      "programs": [],
+      "sample": 87,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "goat-funded-trader",
+      "name": "GOAT Funded Trader",
+      "founded": 2023,
+      "historicalStoredScore": 68,
+      "v52": 60,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-termination",
+          "points": 6,
+          "label": "Broad termination without notice and discretionary prohibited trading; funded payout scope unresolved",
+          "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 81,
+      "programs": [],
+      "sample": 81,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "e8-markets",
+      "name": "E8 Markets",
+      "founded": 2021,
+      "historicalStoredScore": 75,
+      "v52": 58,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "e8markets.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Rewards withheld or canceled at sole discretion for noncompliance",
+          "source": "https://e8markets.com/e8-markets-terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 75,
+      "programs": [],
+      "sample": 75,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "brightfunded",
+      "name": "BrightFunded",
+      "founded": 2023,
+      "historicalStoredScore": 73,
+      "v52": 56,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "brightfunded.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 10,
+          "label": "Discretionary rewards and loss of remaining rewards after suspension",
+          "source": "https://brightfunded.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 10,
+      "editorial": 87,
+      "trustpilotPenalty": 8,
+      "commonScore": 69,
+      "programs": [],
+      "sample": 69,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "instant-funding",
+      "name": "Instant Funding",
+      "founded": 2021,
+      "historicalStoredScore": 76,
+      "v52": 54,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "instantfunding.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [],
+      "commonPenalty": 0,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 83,
+      "programs": [],
+      "sample": 83,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "aqua-funded",
+      "name": "AquaFunded",
+      "founded": 2023,
+      "historicalStoredScore": 69,
+      "v52": 50,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "aquafunded.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [],
+      "commonPenalty": 0,
+      "editorial": 87,
+      "trustpilotPenalty": 8,
+      "commonScore": 79,
+      "programs": [],
+      "sample": 79,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "the-trading-pit",
+      "name": "The Trading Pit",
+      "founded": 2022,
+      "historicalStoredScore": 76,
+      "v52": 57,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "thetradingpit.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Qualitative trading restrictions and cancellation exposure; prior annex A.3 reward rate may reach zero",
+          "source": "https://www.thetradingpit.com/general-terms-and-conditions"
+        },
+        {
+          "family": "existing-contract-change",
+          "points": 4,
+          "label": "Changes may affect purchased challenges; not proven retroactive on settled trades",
+          "source": "https://www.thetradingpit.com/general-terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 12,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 71,
+      "programs": [],
+      "sample": 71,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "trade-the-pool",
+      "name": "Trade The Pool",
+      "founded": 2022,
+      "historicalStoredScore": 76,
+      "v52": 57,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout-cap",
+          "points": 6,
+          "label": "Discretionary cap per trade; scope and advance publication unresolved",
+          "source": "https://tradethepool.com/terms-and-conditions/"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 85,
+      "programs": [],
+      "sample": 85,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "alpha-futures",
+      "name": "Alpha Futures",
+      "founded": 2024,
+      "historicalStoredScore": 55,
+      "v52": 62,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Schedule 4 §1.2.6 discretionary compliance and refusal",
+          "source": "https://alpha-futures.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 75,
+      "programs": [],
+      "sample": 75,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "ic-funded",
+      "name": "IC Funded",
+      "founded": 2024,
+      "historicalStoredScore": 65,
+      "v52": 57,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "§11.3–11.4 unlisted practices and final refusal determination",
+          "source": "https://www.icfunded.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 75,
+      "programs": [],
+      "sample": 75,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "sway-funded",
+      "name": "Sway Funded",
+      "founded": 2024,
+      "historicalStoredScore": 61,
+      "v52": 56,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-termination",
+          "points": 6,
+          "label": "Termination without cause and exclusive strategy-change assessment; reward forfeiture not confirmed",
+          "source": "https://my.swayfunded.com/p/terms"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 77,
+      "programs": [],
+      "sample": 77,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "funded-bull",
+      "name": "Funded Bull",
+      "founded": 2023,
+      "historicalStoredScore": 58,
+      "v52": 49,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Qualitative gambling and position-size rules with possible profit loss",
+          "source": "https://fundedbull.com/terms/"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 79,
+      "programs": [],
+      "sample": 79,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "sabiotrade",
+      "name": "SabioTrade",
+      "founded": 2023,
+      "historicalStoredScore": 64,
+      "v52": 42,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Subjective sustainable-risk assessment can cause payout refusal",
+          "source": "https://sabiotrade.com/terms"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 79,
+      "programs": [],
+      "sample": 79,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "fundedelite",
+      "name": "Funded Elite",
+      "founded": 2024,
+      "historicalStoredScore": 62,
+      "v52": 51,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "interview-forfeiture",
+          "points": 4,
+          "label": "Five-day deadline for payout interview, rejection and closure",
+          "source": "https://fundedelite.com/terms-and-conditions"
+        },
+        {
+          "family": "chargeback-forfeiture",
+          "points": 3,
+          "label": "Chargeback without prior support contact can terminate services; payout consequence not confirmed",
+          "source": "https://fundedelite.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 7,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 76,
+      "programs": [],
+      "sample": 76,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "thinkcapital",
+      "name": "ThinkCapital",
+      "founded": 2024,
+      "historicalStoredScore": 65,
+      "v52": 53,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-termination",
+          "points": 6,
+          "label": "Discretionary risk/holding time and linked-account termination; funded agreement separate",
+          "source": "https://www.thinkcapital.com/terms-of-services/"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 77,
+      "programs": [],
+      "sample": 77,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "ofp-funding",
+      "name": "OFP Funding",
+      "founded": 2022,
+      "historicalStoredScore": 63,
+      "v52": 54,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "ofpfunding.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 10,
+          "label": "§4.9 and risk clauses: discretionary market standards and automatic forfeiture of accumulated rewards",
+          "source": "https://ofpfunding.com/terms-and-conditions"
+        }
+      ],
+      "commonPenalty": 10,
+      "editorial": 91,
+      "trustpilotPenalty": 8,
+      "commonScore": 73,
+      "programs": [],
+      "sample": 73,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "hyrotrader",
+      "name": "HyroTrader",
+      "founded": 2022,
+      "historicalStoredScore": 61,
+      "v52": 67,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [],
+      "commonPenalty": 0,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 91,
+      "programs": [],
+      "sample": 91,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "blue-guardian",
+      "name": "Blue Guardian",
+      "founded": 2019,
+      "historicalStoredScore": 66,
+      "v52": 49,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "blueguardian.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Final risk-team decisions and possible refusal",
+          "source": "https://help.blueguardian.com/en/articles/18426723-what-happens-if-i-break-a-rule"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 95,
+      "trustpilotPenalty": 8,
+      "commonScore": 79,
+      "programs": [
+        {
+          "name": "Zero funded",
+          "rules": [
+            {
+              "family": "profit-cap-closure",
+              "points": 6,
+              "label": "$8k daily profit triggers closure with fixed payout or live option; scope to confirm",
+              "source": "https://help.blueguardian.com/en/articles/18426723-what-happens-if-i-break-a-rule"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 73
+        }
+      ],
+      "sample": 73,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "onefunded",
+      "name": "OneFunded",
+      "founded": 2025,
+      "historicalStoredScore": 61,
+      "v52": 54,
+      "ageBonus": 4,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "onefunded.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [],
+      "commonPenalty": 0,
+      "editorial": 79,
+      "trustpilotPenalty": 8,
+      "commonScore": 71,
+      "programs": [],
+      "sample": 71,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "bullwaves-prime",
+      "name": "Bullwaves Prime",
+      "founded": null,
+      "historicalStoredScore": 53,
+      "v52": 53,
+      "ageBonus": null,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": "prime.bullwaves.com",
+      "trustpilotStatus": "historical corpus notice, current status not rechecked",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Discretionary risk review and profit removal",
+          "source": "https://prime.bullwaves.com/trading-rules"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": null,
+      "trustpilotPenalty": 8,
+      "commonScore": null,
+      "programs": [
+        {
+          "name": "1-Step",
+          "rules": [
+            {
+              "family": "consistency-hard",
+              "points": 6,
+              "label": "15% single trade, four soft breaches lead to disqualification",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "asymmetry",
+              "points": 6,
+              "label": "Winning outlier trades removed",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "qualifying-days",
+              "points": 2,
+              "label": "Six days at 0.5%",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "stop-duration",
+              "points": 4,
+              "label": "Mandatory stop within 60 sec and minimum holding duration",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "news",
+              "points": 2,
+              "label": "News window",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            }
+          ],
+          "specificPenalty": 20,
+          "score": null
+        },
+        {
+          "name": "2-Step",
+          "rules": [
+            {
+              "family": "consistency-hard",
+              "points": 6,
+              "label": "15% single trade, four soft breaches lead to disqualification",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "asymmetry",
+              "points": 6,
+              "label": "Winning outlier trades removed",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "qualifying-days",
+              "points": 2,
+              "label": "Six days at 0.5%",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "stop-duration",
+              "points": 4,
+              "label": "Mandatory stop within 60 sec and minimum holding duration",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "news",
+              "points": 2,
+              "label": "News window",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            },
+            {
+              "family": "overnight",
+              "points": 2,
+              "label": "Weekend holding requires add-on",
+              "source": "https://prime.bullwaves.com/trading-rules"
+            }
+          ],
+          "specificPenalty": 20,
+          "score": null
+        }
+      ],
+      "sample": null,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "bulenox",
+      "name": "Bulenox",
+      "founded": 2020,
+      "historicalStoredScore": 65,
+      "v52": 59,
+      "ageBonus": 20,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 5,
+          "label": "Coordinated copying sanction at discretion; limited to specified conduct",
+          "source": "https://form.jotform.com/230508683548160"
+        }
+      ],
+      "commonPenalty": 5,
+      "editorial": 95,
+      "trustpilotPenalty": 0,
+      "commonScore": 90,
+      "programs": [],
+      "sample": 90,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "blusky-trading",
+      "name": "BluSky Trading",
+      "founded": 2022,
+      "historicalStoredScore": 60,
+      "v52": 68,
+      "ageBonus": 16,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "live-transition",
+          "points": 6,
+          "label": "New payout requests blocked on transition to live; submitted requests unresolved",
+          "source": "https://blusky.pro/terms-and-conditions/"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 91,
+      "trustpilotPenalty": 0,
+      "commonScore": 85,
+      "programs": [],
+      "sample": 85,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "tentrade",
+      "name": "TenTrade",
+      "founded": 2023,
+      "historicalStoredScore": 64,
+      "v52": 63,
+      "ageBonus": 12,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-termination",
+          "points": 6,
+          "label": "Exclusive classification of prohibited strategies, loss of account without refund",
+          "source": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
+        }
+      ],
+      "commonPenalty": 6,
+      "editorial": 87,
+      "trustpilotPenalty": 0,
+      "commonScore": 81,
+      "programs": [
+        {
+          "name": "Instant",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 4,
+              "label": "25% profit score",
+              "source": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
+            },
+            {
+              "family": "withdrawal-cap",
+              "points": 2,
+              "label": "Size-specific caps",
+              "source": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf"
+            }
+          ],
+          "specificPenalty": 6,
+          "score": 75
+        }
+      ],
+      "sample": 75,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "blueberry-funded",
+      "name": "Blueberry Funded",
+      "founded": 2024,
+      "historicalStoredScore": 64,
+      "v52": 54,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [],
+      "commonPenalty": 0,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 83,
+      "programs": [
+        {
+          "name": "Synthetic",
+          "rules": [
+            {
+              "family": "consistency",
+              "points": 4,
+              "label": "25% consistency",
+              "source": "https://help.blueberryfunded.com/en/articles/9812246-does-blueberry-funded-enforce-a-consistency-rule-in-trading"
+            },
+            {
+              "family": "profit-removal",
+              "points": 4,
+              "label": "Profits from trades under five minutes removed; losses not established",
+              "source": "https://help.blueberryfunded.com/en/articles/9812246-does-blueberry-funded-enforce-a-consistency-rule-in-trading"
+            }
+          ],
+          "specificPenalty": 8,
+          "score": 75
+        }
+      ],
+      "sample": 75,
+      "scope": "sampled-programs-not-full-catalog",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    },
+    {
+      "slug": "forexive",
+      "name": "Forexive",
+      "founded": 2024,
+      "historicalStoredScore": 58,
+      "v52": 51,
+      "ageBonus": 8,
+      "incidentPenalty": 0,
+      "payoutBonus": 0,
+      "trustpilotDomain": null,
+      "trustpilotStatus": "not checked in this backtest",
+      "commonRules": [
+        {
+          "family": "subjective-payout",
+          "points": 8,
+          "label": "Unethical conduct / abuse may lead to profit removal and closure",
+          "source": "https://forexive.com/faq/general"
+        }
+      ],
+      "commonPenalty": 8,
+      "editorial": 83,
+      "trustpilotPenalty": 0,
+      "commonScore": 75,
+      "programs": [],
+      "sample": 75,
+      "scope": "common-clauses-only",
+      "rankEligible": false,
+      "missing": [
+        "Full current catalogue/cohorts and funded contract applicability",
+        "Historical incident reconciliation and exact domain Trustpilot recheck",
+        "Independent proof bonus held at zero for sensitivity, not adverse"
+      ]
+    }
+  ]
+}
