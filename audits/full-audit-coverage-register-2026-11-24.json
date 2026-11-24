@@ -6,9 +6,9 @@
   "summary": {
     "candidateProfiles": 198,
     "historical121ResearchFiles": 121,
-    "reopenedPartial": 35,
+    "reopenedPartial": 39,
     "fullyValidatedUnderNewProtocol": 0,
-    "otherRevalidationRequired": 163
+    "otherRevalidationRequired": 159
   },
   "rules": {
     "normalConsistencyAtOrAbove40Percent": "record without automatic penalty if transparent and solely eligibility; below 40 recorded, future weighting unapproved; hidden/contradictory/hard breach separate",
@@ -1193,7 +1193,7 @@
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
       "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-deep-sweep-2026-11-24.json",
-      "latestEvidence": "audits/full-audit-reopen-wave1-seven-2026-11-24.json",
+      "latestEvidence": "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json",
       "checks": {
         "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "PARTIAL",
@@ -1205,15 +1205,23 @@
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
         "trustpilot_exact_domain": "CHECKED_2026_11_24",
-        "payout_evidence_inventory": "PARTIAL_SEARCH_RECORDED",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
       "remaining": [
         "V17 and all FPP annexes including Swing/Scalp; compare to older contracts without treating historical version as current",
         "specific risk restrictions and payout variants, registry and historical events",
-        "payment evidence, not marketing claims"
+        "payment evidence, not marketing claims",
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment",
+        "V17 and FPP annexes still blocked"
       ],
-      "canPublishNewScore": false
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json",
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ]
     },
     {
       "slug": "firmity-funding",
@@ -1445,25 +1453,33 @@
       "slug": "funded-bull",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
+        "full_cgu_clause_coverage": "PARTIAL",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment",
+        "Direct dashboard availability and official closure confirmation"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ]
     },
     {
       "slug": "funded-engineer",
@@ -1661,25 +1677,32 @@
       "slug": "fundedelite",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
+        "full_cgu_clause_coverage": "PARTIAL",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ]
     },
     {
       "slug": "fundedhive",
@@ -3698,25 +3721,33 @@
       "slug": "sabiotrade",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
+        "full_cgu_clause_coverage": "PARTIAL",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment",
+        "International .com contract and US applicability reconciliation"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ]
     },
     {
       "slug": "sfx-funded",
@@ -4140,25 +4171,32 @@
       "slug": "the-trading-pit",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
+        "full_cgu_clause_coverage": "PARTIAL",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
-        "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
-        "rule_changes_and_cohort_protection": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
+        "reward_eligibility_and_forfeiture": "PARTIAL",
+        "rule_changes_and_cohort_protection": "PARTIAL",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full current CGU and signed funded/live agreements, checkout versions and all cohorts not fully retrieved",
+        "Primary legal registry, regulator alerts, incident resolution and formal appeals not validated",
+        "Independent dated payment records with attribution not captured; absence is not nonpayment"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ]
     },
     {
       "slug": "the5ers",
