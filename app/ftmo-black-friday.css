@@ -1,0 +1,113 @@
+/* FTMO partner offer: deliberately small and clearly marked advertising.
+ * Owner-supplied landscape creative is always shown uncropped.
+ * This is separate from all rankings and editorial scores. */
+.pr-ftmo-bf {
+  display: grid;
+  grid-template-columns: minmax(0, 156px) minmax(0, 1fr);
+  gap: clamp(12px, 1.6vw, 20px);
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding: clamp(10px, 1.3vw, 14px);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+.pr-ftmo-bf-art {
+  display: block;
+  width: 100%;
+  max-width: 156px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #060b13;
+  line-height: 0;
+  text-decoration: none;
+}
+.pr-ftmo-bf-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 7 / 5;
+  object-fit: contain;
+}
+.pr-ftmo-bf-main { min-width: 0; }
+.pr-ftmo-bf-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 4px;
+  color: var(--soft);
+  font-size: 11px;
+  font-weight: 600;
+}
+.pr-ftmo-bf h2 {
+  margin: 0;
+  font-size: clamp(15px, 1.7vw, 19px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text);
+}
+.pr-ftmo-bf-detail {
+  margin: 4px 0 0;
+  color: var(--soft);
+  font-size: 11px;
+  line-height: 1.3;
+}
+.pr-ftmo-bf-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 15px;
+  margin-top: 8px;
+}
+.pr-ftmo-bf-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 3px 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  font-size: 11.5px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-decoration: none;
+}
+.pr-ftmo-bf-cta:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.pr-ftmo-bf-review {
+  color: var(--accent);
+  font-size: 11.5px;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+.pr-ftmo-bf-review:hover { text-decoration: underline; }
+.pr-ftmo-bf-disclosure {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10.5px;
+  line-height: 1.3;
+}
+@media (max-width: 600px) {
+  .pr-ftmo-bf {
+    grid-template-columns: minmax(0, 95px) minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+    padding: 10px;
+  }
+  .pr-ftmo-bf-art { max-width: 95px; margin-top: 2px; }
+  .pr-ftmo-bf-eyebrow { gap: 4px; font-size: 10px; }
+  .pr-ftmo-bf h2 { font-size: 15px; }
+  .pr-ftmo-bf-detail { font-size: 10.5px; }
+  .pr-ftmo-bf-actions { margin-top: 7px; gap: 6px 11px; }
+  .pr-ftmo-bf-cta { min-height: 27px; font-size: 11px; }
+  .pr-ftmo-bf-review { font-size: 11px; }
+  .pr-ftmo-bf-disclosure { font-size: 10px; }
+}
