@@ -1,7 +1,7 @@
 {
   "version": "6.3",
   "date": "2026-11-24",
-  "status": "RESEARCH_ONLY_NOT_RANKABLE",
+  "status": "INVALIDATED_FOR_RANKING_INCOMPLETE_AUDITS",
   "method": "Retrospective corpus sensitivity, no fresh web verification. 75+age 0–20+proof 0–5−incidents 0–35−common max30−specific max20−historical official TP notice 8 once. All proof bonuses zero, no newly assessed incidents except GetLeveraged carried from V6.1. Missing data neither penalized nor rated as safe. Age founded year proxy; Bullwaves age unknown no numeric score, conditional 0–20. Risk weights manually coded from existing findings; not complete audit. Program scopes and sample medians not full company rating. No automatic ranking. Previous V6.3 three-firm inputs carried forward as regression checks; residual FTMO Instant and The5ers High Stakes deductions need detailed mapping.",
   "statistics": {
     "firmCount": 46,
@@ -2093,5 +2093,11 @@
         "Independent proof bonus held at zero for sensitivity, not adverse"
       ]
     }
-  ]
+  ],
+  "invalidation": {
+    "date": "2026-11-24",
+    "reason": "Counteraudit establishes omitted materially restrictive terms and current GOAT Trustpilot sanction. 121 research files do not establish completed audits. All prior numeric outputs retained for traceability only, not publication.",
+    "replacementEvidence": "audits/v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json",
+    "gate": "Every programme and cohort needs primary contract and funded agreement or authoritative equivalent, explicit coverage matrix, dated Trustpilot review, reconciliation of historic documented incidents, and unique evidence-linked rule deductions. Unknown stays unknown; no automatic rank. Reaudit remaining profiles before new distribution."
+  }
 }
