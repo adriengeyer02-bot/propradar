@@ -6,9 +6,9 @@
   "summary": {
     "candidateProfiles": 198,
     "historical121ResearchFiles": 121,
-    "reopenedPartial": 25,
+    "reopenedPartial": 30,
     "fullyValidatedUnderNewProtocol": 0,
-    "otherRevalidationRequired": 173
+    "otherRevalidationRequired": 168
   },
   "rules": {
     "normalConsistencyAtOrAbove40Percent": "record without automatic penalty if transparent and solely eligibility; below 40 recorded, future weighting unapproved; hidden/contradictory/hard breach separate",
@@ -238,25 +238,30 @@
       "slug": "aqua-funded",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-medium-firms-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
         "full_cgu_clause_coverage": "NOT_VALIDATED",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
         "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
         "rule_changes_and_cohort_protection": "NOT_VALIDATED",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Current full CGU and funded agreements not retrieved; exact Standard cohorts and trailing formula; registry and regulatory checks; independent payout proof"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json"
+      ]
     },
     {
       "slug": "astra-capital-funding",
@@ -2356,25 +2361,30 @@
       "slug": "ic-funded",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
         "full_cgu_clause_coverage": "NOT_VALIDATED",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
         "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
         "rule_changes_and_cohort_protection": "NOT_VALIDATED",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Rules page located but full matrix not extracted; full CGU and signed funded agreement not retrieved; entity, registry, alerts, independent payout evidence"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json"
+      ]
     },
     {
       "slug": "indigo-trader-funding",
@@ -3244,25 +3254,30 @@
       "slug": "ofp-funding",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
         "full_cgu_clause_coverage": "NOT_VALIDATED",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
         "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
         "rule_changes_and_cohort_protection": "NOT_VALIDATED",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Official www homepage inaccessible through research tool; full terms, current plan rules and exposure thresholds not retrieved; registry and independent payout verification"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json"
+      ]
     },
     {
       "slug": "one-of-one-funding",
@@ -3868,25 +3883,30 @@
       "slug": "sway-funded",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
+        "full_cgu_clause_coverage": "PARTIAL",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
         "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
         "rule_changes_and_cohort_protection": "NOT_VALIDATED",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full terms not exhaustively read; linked FAQ and funded rules, dated contracts and acquisition cohorts; Saint Lucia registry and regulatory checks; independent payout proof"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json"
+      ]
     },
     {
       "slug": "syndicate-funded",
@@ -4141,25 +4161,30 @@
       "slug": "thinkcapital",
       "priority": "P2",
       "scope": "CANDIDATE_CATALOGUE_ENTRY_VERIFY_CURRENT_STATUS",
-      "state": "REVALIDATION_REQUIRED",
+      "state": "REOPENED_PARTIAL",
       "previousResearch": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
-      "latestEvidence": null,
+      "latestEvidence": "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json",
       "checks": {
-        "catalogue_current_and_legacy": "NOT_VALIDATED",
+        "catalogue_current_and_legacy": "PARTIAL",
         "checkout_contract_versions": "NOT_VALIDATED",
-        "full_cgu_clause_coverage": "NOT_VALIDATED",
+        "full_cgu_clause_coverage": "PARTIAL",
         "funded_and_live_agreements": "NOT_VALIDATED",
-        "program_rule_matrix": "NOT_VALIDATED",
+        "program_rule_matrix": "PARTIAL",
         "reward_eligibility_and_forfeiture": "NOT_VALIDATED",
         "rule_changes_and_cohort_protection": "NOT_VALIDATED",
         "entity_and_registry": "NOT_VALIDATED",
         "regulator_and_incident_history": "NOT_VALIDATED",
-        "trustpilot_exact_domain": "NOT_VALIDATED",
-        "payout_evidence_inventory": "NOT_VALIDATED",
+        "trustpilot_exact_domain": "CHECKED_2026_11_24",
+        "payout_evidence_inventory": "NO_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
         "independent_crosscheck": "NOT_VALIDATED"
       },
-      "remaining": [],
-      "canPublishNewScore": false
+      "remaining": [
+        "Full clause-by-clause CGU and schedules not read; signed funded agreement and all cohort rules, legal registry and regulatory checks, independent payout evidence"
+      ],
+      "canPublishNewScore": false,
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave5-five-1500-2026-11-24.json"
+      ]
     },
     {
       "slug": "tickticktrader",
