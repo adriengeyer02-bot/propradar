@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-24",
+  "status": "BLOCKED_NOT_AUDITED",
+  "warning": "These are unresolved access cases, not primary-source verified clauses. They remain in pending tally.",
+  "firms": [
+    {
+      "slug": "foxx-funded",
+      "name": "Foxx Funded",
+      "primarySource": "https://www.foxx-funded.com/terms-and-conditions/",
+      "sourceProblem": "Page CGU inaccessible lors de l'ouverture directe; PDF secondaire du domaine également indisponible.",
+      "historicalIssueUnconfirmed": "Ancien extrait invoquait §22.4 et le caractère discrétionnaire de payouts, ainsi que l'absence de recours. Pas de vérification primaire nouvelle; ne pas republier ces assertions comme constat actuel.",
+      "nextAction": "Récupérer CGU actuelles via checkout/archives officielles et vérifier disponibilité du marchand et accord de reward."
+    },
+    {
+      "slug": "tradexprop",
+      "name": "TradeXProp",
+      "primarySource": "https://tradexprop.com/terms-of-use/",
+      "sourceProblem": "Accès direct au contrat en timeout sur la consultation courante.",
+      "historicalIssueUnconfirmed": "Une divergence d'objectifs de drawdown sur le programme Instant Funded X et des clauses de trading subjectives figuraient dans l'inventaire historique; non contrôlées à cette date.",
+      "nextAction": "Retrouver les deux pages source simultanément, leur horodatage et un contrat d'achat applicable; enregistrer preuve de capture."
+    },
+    {
+      "slug": "lark-funding",
+      "name": "Lark Funding",
+      "primarySource": "https://larkfunding.com/terms-of-use",
+      "sourceProblem": "La page renvoie un document vide ou non exploitable, hormis un élément de navigation.",
+      "historicalIssueUnconfirmed": "Anciennes notes de l'audit mentionnent un plafond de gain par trade et des sanctions répétées, sans inspection actuelle complète des CGU.",
+      "nextAction": "Vérifier l'offre et le checkout actifs, obtenir conditions client, accord funded et article de plafonnement applicable."
+    }
+  ]
+}
