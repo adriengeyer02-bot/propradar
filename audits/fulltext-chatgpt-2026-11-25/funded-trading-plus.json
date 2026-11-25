@@ -1,0 +1,39 @@
+{
+  "slug": "funded-trading-plus",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted OCR clauses from upload-bfaf93dd03.txt (21 pages, May 26 2026 update) pp.1,12–15 and other selected sections; direct terms blocked 403. Remaining clauses and help pages not read. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§10.2–10.5: “suspected of taking unfair advantage” and novel abuse not listed; §10.5 permits forfeiture of “any and all simulated-profit” at any phase, including withdrawal. Discretionary risk interview pass/fail.",
+      "source": "https://www.fundedtradingplus.com/terms-conditions/",
+      "locator": "OCR pp.12–13/21, §10.2–10.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "§10.5(b)(vi): failing to complete a risk interview satisfactorily may lead to all profit forfeiture or termination; §10.6(b) noncompliance with demands for logs/source code of third-party tools also triggers same penalties.",
+      "source": "https://www.fundedtradingplus.com/terms-conditions/",
+      "locator": "OCR pp.13–14/21, §10.5(b)(vi), §10.6",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Reputational clause permits public factual response and referencing prior communications when materially harmed. Not express cancellation or damages on this basis.",
+      "source": "https://www.fundedtradingplus.com/terms-conditions/",
+      "locator": "OCR pp.14–15/21, referenced §12.3–12.5",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Forfeiture tied to behaviours suspected prohibited, B2 not unconditional B1.",
+    "B6": "Public response right alone is not termination, forfeiture or damages.",
+    "B3": "§10.4 permits varying prohibited strategies without notice; §10.5 risk review any phase. Need explicit applicability of new rules to already-purchased accounts or date/version clause before coding."
+  },
+  "toVerify": {
+    "coverage": "Read all OCR pages and six payout/programme help bodies, notably actual appeal route, FT+ Trader/Contracted Researcher agreement.",
+    "B2A": "Find written review or explanation route.",
+    "CONS": "Most lenient main programme; compare Express/Classic/Instant/Pass Now Pay Later."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "forexive",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read targeted passages in general FAQ 205a1f8665a5.txt; uploaded FOREXIVE OCR header is French FAQ, not CG (upload-6b42709510.txt); terms archive 404. Other rule/FAQ bodies not fully read.",
+  "facts": [
+    {
+      "code": "B5",
+      "text": "General FAQ news rule: profits during ±5min window deducted even for pre-opened trades closed by SL/TP; “Losses made in the window count against your balance and drawdown limits as normal.” No automatic breach. Verify exact funded model scope.",
+      "source": "https://forexive.com/faq/general",
+      "locator": "Trading rules and conduct > news trading",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "General FAQ says any rule broken on funded account prevents reward withdrawal; prohibited autonomous trade execution results in denial of evaluation or reward and account closure. Exact legal terms absent.",
+      "source": "https://forexive.com/faq/general",
+      "locator": "Trading rules and conduct > prohibited strategies / EA",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "CONS_INFO",
+      "text": "FAQ index: Instant Funding side model 20% consistency; other main programme full rules unread.",
+      "source": "https://forexive.com/faq/general",
+      "locator": "Related sections > Instant Funding",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B7": "Rise onboarding signature is payment-provider/possible agreement timing, not clear withholding of funded contract.",
+    "B2": "Need full qualitative conduct definition and direct payout sanction, not generic prohibition."
+  },
+  "toVerify": {
+    "coverage": "Actual CG URL 404; uploaded PDF is FAQ, not legal contract. Read full general and instant FAQ, rules/challenges and source for model-specific news scope.",
+    "CONS": "Most lenient 1-Step/2-Step main programme.",
+    "B5": "Confirm applicable models and current version."
+  }
+}

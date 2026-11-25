@@ -1,0 +1,46 @@
+{
+  "slug": "alpine-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Selected excerpts from user PDF TC-260929.pdf upload-d0e25c461f.txt (40,040 chars, text layer): §§2.1,4.6–4.7,7–9,12–13. Exact public PDF URL not in index; source field links official root named in §1; actual file/locator provided. Archive pinned d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§7.1–7.4 forbids trading inconsistent with professional standards, disproportionate sizes and significant trade count variation; provider “sole discretion” determines forbidden practice, removal of trades from history and P/L calculations. Base Camp payout eligibility expressly requires §7 compliance.",
+      "source": "https://www.alpinefunded.com",
+      "locator": "Archived upload-d0e25c461f.txt §7.1–7.4; §8.2.3",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B6",
+      "text": "§12.2 grounds include “behavior that is detrimental to the Provider’s business reputation, partners, or technology”; §12.3–12.4 discretionary enforcement, no refund/compensation/restoration.",
+      "source": "https://www.alpinefunded.com",
+      "locator": "Archived PDF §12.2–12.4; §7.1(i)",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "§9.1–9.4 customer may receive third-party contract only after successful completion of relevant stages; funding partner discretion and payout terms outside Alpine contract.",
+      "source": "https://www.alpinefunded.com",
+      "locator": "Archived PDF §9.1–9.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "§4.7 any chargeback or attempted chargeback permanently revokes payout eligibility for past/current/future purchased accounts; no compensation.",
+      "source": "https://www.alpinefunded.com",
+      "locator": "Archived PDF §4.7",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Third-party admission discretion is pre-entitlement, not unconditional cancellation of earned payouts. Need actual partner contract.",
+    "B3": "§2.1 generic continued-use amendments, not enough.",
+    "B5": "§7.4 excludes trades from profit/loss calculations, not express asymmetry."
+  },
+  "toVerify": {
+    "coverage": "Read entire 40k PDF, locate exact public URL or preserve upload as primary evidence; all incorporated FAQ/product terms and actual third-party funded contract absent.",
+    "B2A": "Review complaint/dispute section for written review or reasons.",
+    "CONS": "Main Peak/other model payout eligibility."
+  }
+}

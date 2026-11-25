@@ -1,0 +1,64 @@
+{
+  "slug": "lvlup-futures",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read Analytix OCR upload-4c36f17229.txt in full in two slices (same provider copy also under Ment/TradeXProp); selected excerpts of 442f7a8f7233.txt rules; upload-23e9314ac6.txt header checked, rest not read. Rules affiliate footer expressly gives provider contract precedence. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "Prohibited Uses and Gambling Practices: strategy changes and significant risk judged at discretion; prohibited trading may forfeit amounts owed. Exposure & Position Limit Abuse: near-max leverage/size and sub-minute activity may trigger termination and forfeiture of rewards.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.4–6/17, September 2026 version",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B3",
+      "text": "Margin/Platform and Instrument Specific Exposure: “apply, modify, impose, or remove risk controls on any Account at any time”, including drawdown parameters and forced liquidation.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.10–11/17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "“Upon passing an assessment, you will be invited to enter into a Trader Agreement”; guidelines via email upon becoming a Trader.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.2, 9/17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "If withdrawals permitted on breached accounts, request within 60 days of settlement or profit automatically reset to zero. KYC failure withdraw rejected, gains forfeited; distinguish ordinary KYC from harsh procedural sanction.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.9–10/17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B2",
+      "text": "Brand rules prohibit “an unreasonable portion of the account at risk” and enforcement includes forfeiture of profit; reinforces provider B2, not cumulative.",
+      "source": "https://lvlupfutures.com/rules",
+      "locator": "§13 Prohibited and Allowed Trading Activity > Gambling and All-In Trading / Enforcement",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Starter funded has “no Consistency Rule”; Lvlup funded 40%, evaluation 40%, excess delays rather than breaches.",
+      "source": "https://lvlupfutures.com/rules",
+      "locator": "§3 Consistency Rules",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Footer: “only the current Client Terms and Policies shall apply” for trading rules and payouts, explicit Prop Account LLC/LC counterparty and link to Analytix.",
+      "source": "https://lvlupfutures.com/rules",
+      "locator": "Affiliate and Liability Disclaimer",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Same provider distinction: no explicit unconditional forfeiture of earned reward.",
+    "CONS": "Starter funded no consistency, Lvlup 40%; no penalty from either."
+  },
+  "toVerify": {
+    "coverage": "Complete Lvlup rules and FAQ bodies, second uploaded LVLUP OCR (header confirms Analytix, compare whole content), separate Prop Account LC Trader Agreement and current checkout version."
+  }
+}

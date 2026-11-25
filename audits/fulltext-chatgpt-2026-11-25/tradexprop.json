@@ -1,0 +1,51 @@
+{
+  "slug": "tradexprop",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read full visible provider OCR ANALYTIX upload-4c36f17229.txt in two consecutive slices (0–13000 and 13000–34005), plus redirected terms capture f698ae9f59d8.txt full. Other archive URLs also redirect to crypto evaluation; no branded CG accessible. Affiliate footer explicitly identifies Prop Account LLC/LC. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "Prohibited Uses and Gambling Practices: strategy changes and significant risk judged at discretion; prohibited trading may forfeit amounts owed. Exposure & Position Limit Abuse: near-max leverage/size and sub-minute activity may trigger termination and forfeiture of rewards.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.4–6/17, September 2026 version",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B3",
+      "text": "Margin/Platform and Instrument Specific Exposure: “apply, modify, impose, or remove risk controls on any Account at any time”, including drawdown parameters and forced liquidation.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.10–11/17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "“Upon passing an assessment, you will be invited to enter into a Trader Agreement”; guidelines via email upon becoming a Trader.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.2, 9/17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "If withdrawals permitted on breached accounts, request within 60 days of settlement or profit automatically reset to zero. KYC failure withdraw rejected, gains forfeited; distinguish ordinary KYC from harsh procedural sanction.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX OCR pp.9–10/17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Branded redirected page: “All funding assessments are provided by Prop Account, LLC” and qualifying funded account requires Trader Agreement with Prop Account LC. Crypto X-1/2 models shown with ±3% daily cap, static drawdowns and 90% share; marketing only.",
+      "source": "https://tradexprop.com/crypto-evaluation/",
+      "locator": "Disclaimer; X-Crypto evaluation table",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Provider's any-reason blocking and no-notice termination do not expressly revoke earned rewards independently of prohibited conduct; B2.",
+    "B5": "News position removal refers to associated P&L, not profit-only with losses retained."
+  },
+  "toVerify": {
+    "coverage": "Confirm September Analytix version used at branded checkout; actual Trader Agreement and branded Forex/Crypto/Instant X FAQ (redirected in archive).",
+    "CONS": "Exact funded consistency across main models."
+  }
+}
