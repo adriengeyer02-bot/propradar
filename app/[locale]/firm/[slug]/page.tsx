@@ -9,6 +9,7 @@ import FirmSectionNav from '../../../components/ui/FirmSectionNav';
 import { notFound } from 'next/navigation';
 import FirmLogo from '../../../components/FirmLogo';
 import PartnerCodeOffer from '../../../components/PartnerCodeOffer';
+import ProgramPromoCode from '../../../components/ProgramPromoCode';
 import SourceSubmission from '../../../components/SourceSubmission';
 import ClosedFirmNotice, { ClosedFirmArchiveLabel } from '../../../components/ClosedFirmNotice';
 import { firmLogoFor } from '../../../lib/firmLogos';
@@ -93,7 +94,7 @@ function firmPublishedAt(slug: string) {
   return getFirmChangelog(slug).filter((entry) => entry.fields?.includes('initialReview'))
     .map((entry) => entry.date).sort()[0] ?? FIRM_LIBRARY_PUBLISHED_AT;
 }
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return propFirms.map((firm) => ({ slug: firm.slug }));
@@ -1097,6 +1098,10 @@ export default async function FirmPage({ params }: Props) {
               const evidence = getProgramEvidence(firm.slug, product.id);
               const mapped = mapProgramRules(product, getFirmUpdate(firm.slug));
               const matchingPrices = priceTable?.programs.filter(p => p.productId === product.id) ?? [];
+              const candidateHref = firm.partnerOffer?.href || product.linkToStart;
+              const purchaseHref = firm.status !== 'Fermée' && !firm.listedDomainWarning && candidateHref && !isBlockedFirmUrl(firm, candidateHref) ? candidateHref : undefined;
+              const sponsored = Boolean(purchaseHref && (firm.partnerOffer?.href || isAffiliateUrl(purchaseHref)));
+              const promos = firm.status !== 'Fermée' && !firm.listedDomainWarning ? getProgramPromotions(firm.slug, product.id).filter(p => !isBlockedFirmUrl(firm,p.sourceUrl)) : [];
               const minSize = product.accountSizeMin;
               const maxSize = product.accountSizeMax;
               const capital = minSize > 0 && maxSize > 0 ? minSize === maxSize ? formatUsd(minSize) : `${formatUsd(minSize)} – ${formatUsd(maxSize)}` : pc.unknown;
@@ -1124,24 +1129,36 @@ export default async function FirmPage({ params }: Props) {
                 <dl className="pr-program-facts">
                   {facts.map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
                 </dl>
-                {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
-                  <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
-                    <div className="pr-program-promo-head">
-                      <span>{f.pricePromoTitle}</span>
-                      <strong>{promo.offer}</strong>
-                    </div>
-                    {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
-                    <details className="pr-program-promo-details">
-                      <summary>{f.pricePromoTermsLabel}</summary>
-                      <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+                {promos.length ? <div className="pr-program-deals">
+                  {promos.map((promo) => (
+                    <aside className="pr-program-promo pr-program-promo-integrated" key={promo.id} aria-label={f.pricePromoTitle}>
+                      <div className="pr-program-promo-head">
+                        <span>{f.pricePromoTitle}</span>
+                        <strong>{promo.offer}</strong>
+                      </div>
+                      {promo.scope ? <p className="pr-program-promo-scope" lang="en">{promo.scope}</p> : null}
+                      {promo.priceExamples?.length ? <div className="pr-program-promo-prices">
+                        {promo.priceExamples.map(row => <div key={row.size+'-'+row.currency} className="pr-program-promo-price">
+                          <span>{formatAccountSize(row.size)}</span>
+                          <del aria-label={f.priceList}>{formatListPrice(row.regular,row.currency)}</del>
+                          <strong>{formatListPrice(row.sale,row.currency)}</strong>
+                        </div>)}
+                      </div> : null}
+                      {promo.code ? <ProgramPromoCode code={promo.code} label={f.partnerOffer.copy} copied={f.partnerOffer.copied} /> : null}
                       <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
+                      <details className="pr-program-promo-details">
+                        <summary>{f.pricePromoTermsLabel}</summary>
+                        <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+                      </details>
                       <div className="pr-program-promo-foot">
                         <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
                         <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
                       </div>
-                    </details>
-                  </aside>
-                )) : null}
+                    </aside>
+                  ))}
+                  {purchaseHref ? <a className="btn btn-primary pr-program-promo-cta" href={purchaseHref} target="_blank" rel={sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer'}>{sponsored ? f.openAffiliate : f.openOfficial}</a> : null}
+                  {sponsored ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate} {f.partnerOffer.compare}</small> : null}
+                </div> : null}
                 {firm.status !== 'Fermée' ? priceTable?.programs.filter((program) => program.productId === product.id).map((program) => (
                   <div className="pr-product-prices" key={program.name}>
                     <div className="pr-product-prices-head">
@@ -1149,7 +1166,7 @@ export default async function FirmPage({ params }: Props) {
                       <span>{f.priceList}{program.billing === 'monthly' ? ` ${f.perMonth}` : ''}</span>
                     </div>
                     <div className="pr-product-price-tiers">
-                      {pricePreviewRows(program, getProgramPromotions(firm.slug, product.id).flatMap((promo) => promo.highlightedSizes ?? [])).map((row) => (
+                      {pricePreviewRows(program, promos.flatMap((promo) => promo.highlightedSizes ?? [])).map((row) => (
                         <div className="pr-product-price-tier" key={row.size}>
                           <span>{formatAccountSize(row.size)}</span>
                           <strong>{formatListPrice(row.price, program.currency)}</strong>
@@ -1207,17 +1224,12 @@ export default async function FirmPage({ params }: Props) {
                 </dl>
                 {evidence?.cohort ? <p className="pr-program-cohort muted" lang="en">{evidence.cohort}</p> : null}
                 {evidence?.sources.length ? <div className="pr-program-sources">{evidence.sources.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{pc.official}{evidence.sources.length > 1 ? ` ${index+1}` : ''} ↗</a>)}</div> : null}
-                {firm.status !== 'Fermée' && (firm.partnerOffer?.href || product.linkToStart) ? (
-                  <a
-                    href={firm.partnerOffer?.href || product.linkToStart}
-                    target="_blank"
-                    rel={firm.partnerOffer?.href || isAffiliateUrl(product.linkToStart ?? '') ? 'noreferrer sponsored' : 'noreferrer'}
-                    className="btn btn-primary"
-                  >
-                    {firm.partnerOffer?.href || isAffiliateUrl(product.linkToStart ?? '') ? f.openAffiliate : f.openOfficial}
+                {!promos.length && purchaseHref ? (
+                  <a href={purchaseHref} target="_blank" rel={sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer'} className="btn btn-primary">
+                    {sponsored ? f.openAffiliate : f.openOfficial}
                   </a>
                 ) : null}
-                {firm.status !== 'Fermée' && firm.partnerOffer?.href ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
+                {!promos.length && sponsored ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
               </article>
               );
             })}
