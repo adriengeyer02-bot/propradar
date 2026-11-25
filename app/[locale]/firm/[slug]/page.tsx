@@ -737,7 +737,6 @@ export default async function FirmPage({ params }: Props) {
   const specificStrengthPoints = isClosedOrParked || firm.listedDomainWarning ? [] : traderStrengthPoints(firm.strengths);
   const sp = programmeScoreCopy(locale);
   const productScores = new Map(firm.products.map(product => [product.id, firm.status === 'Fermée' || firm.listedDomainWarning ? [] : getProgrammeScores(firm.slug,product,getFirmUpdate(firm.slug))]));
-  const assessedProducts = [...productScores.values()].filter(scores=>scores.length).length;
   const programCopy = programCardCopy(locale);
   const productCapital = (product: (typeof firm.products)[number]) => {
     const min = product.accountSizeMin, max = product.accountSizeMax;
@@ -779,9 +778,7 @@ export default async function FirmPage({ params }: Props) {
     return value.length > 3 &&
       !/^(?:profile needs more detail|payout data and reviews must be rechecked|not a strong recommendation by default|rules may change|data must be rechecked before buying|entity mapping pending|public warning-list checks must be repeated|tier-one regulator authorization not yet documented|not audited in depth yet|no strong recommendation|needs verification before buying|operating status and terms require a full recheck|community signal to enrich|watchlist profile|unknown|not documented|to audit|to verify|no purchase recommended|operational risk materialized|a verifier|non renseigne)\b/.test(value);
   });
-  const snapshotHasStrength = Boolean(specificStrengthPoints[0]);
-  const snapshotHasScores = !isClosedOrParked && assessedProducts > 0;
-  const hasSnapshot = Boolean(snapshotMarkets || snapshotHasScores || snapshotHasStrength || snapshotRisk);
+  const hasSnapshot = Boolean(snapshotMarkets || snapshotRisk);
   const topRiskPoints = uniqueProfilePoints([
     ...specificRiskPoints,
     ...evidenceFallbackPoints,
@@ -1049,17 +1046,6 @@ export default async function FirmPage({ params }: Props) {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 4 3 5-7"/><path d="M16 7h4v4"/></svg>
                   <span>{sp.market}</span>
                   <strong className="pr-snapshot-markets">{snapshotMarkets}</strong>
-                </div> : null}
-                {snapshotHasScores ? <div className="pr-snapshot-tile">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"/></svg>
-                  <span>{sp.assessed}</span>
-                  <strong className="pr-snapshot-count">{assessedProducts}<small> / {firm.products.length}</small></strong>
-                  <a href="#produits">{sp.detail} ↓</a>
-                </div> : null}
-                {snapshotHasStrength ? <div className="pr-snapshot-tile pr-snapshot-strength">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
-                  <span>{sp.strength}</span>
-                  <strong>{tx(specificStrengthPoints[0])}</strong>
                 </div> : null}
                 {snapshotRisk ? <div className="pr-snapshot-tile pr-snapshot-watch">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg>
