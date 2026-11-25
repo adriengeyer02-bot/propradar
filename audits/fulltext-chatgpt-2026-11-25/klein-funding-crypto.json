@@ -2,7 +2,7 @@
   "slug": "klein-funding-crypto",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted excerpts of uploaded OCR upload-be1f023447.txt (25,998 chars, 15 pages) pp.1,3–8, not all; direct public terms 403. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "method": "Read entire available uploaded KLEIN.pdf OCR upload-be1f023447.txt pp.1–15, contiguous 0–13,500 and 13,500–25,998 chars including header; full FAQ index 18e119a76378.txt read. OCR has visible clipped/garbled text on several page breaks (p.5,7–9,11–12,14); no claim missing words read. Other archived terms/refund/FAQ attempts return 403. Actual incorporated FAQ article bodies unavailable.",
   "facts": [
     {
       "code": "B6",
@@ -24,6 +24,27 @@
       "source": "https://kleinfunding.com/terms-of-use",
       "locator": "OCR p.7/15",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "Chargeback policy: failure to contact support before dispute may itself be treated as breach and potential fraudulent dispute with all consequences; these include terminating pending/future payouts permanently in confirmed abuse. Distinguish actual fraud from the procedural prerequisite.",
+      "source": "https://kleinfunding.com/terms-of-use",
+      "locator": "Uploaded KLEIN.pdf pp.10–11/15, Chargeback Policy B and Obligation to Contact Support Before Disputing",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Terms p.1 states registered in England and Wales with blank company number, but gives Delaware address. Footer p.15 names KUENTECH LLC and Delaware; FAQ footer also refers to UK payment provider location. Verify entity rather than infer illegality.",
+      "source": "https://kleinfunding.com/terms-of-use",
+      "locator": "OCR pp.1,15; FAQ footer https://kleinfunding.com/faqs",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Complaints via email; written amicable negotiation before London arbitration. OCR reads 'thirty (80) days' so duration cannot be reliably established. No specific appeal of trading risk classification found.",
+      "source": "https://kleinfunding.com/terms-of-use",
+      "locator": "OCR pp.9–10, Complaints / Dispute Resolution",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -32,9 +53,10 @@
     "B4": "Priority clause alone is not concrete contradiction."
   },
   "toVerify": {
-    "coverage": "Read entire 15-page OCR; FAQ index 18e119a76378.txt and blocked article bodies; product/funded terms, KYC timing and exact company details (OCR leaves company number blank).",
-    "B2": "Link qualitative conduct to reward sanctions in exact trading rules.",
-    "E_HARSH": "Distinguish incomplete KYC from forfeiture for routine update and time limits.",
-    "CONS": "Most lenient main account."
+    "coverage": "Every available OCR page and FAQ index read; actual rule, payout and refund FAQ bodies missing; OCR obscured text needs original PDF visual check. PARTIAL due to those missing/garbled passages, not unread OCR pages.",
+    "B2": "Trading Rules FAQ titles only: prohibited styles, stability score, 50 seconds rule, withdrawal requirements; need bodies and sanction links.",
+    "E_HARSH": "Check whether support-first procedural breach alone can permanently cancel accrued rewards, rather than confirmed chargeback abuse only; candidate code requires review.",
+    "CONS": "Need full main programme stability/consistency rule and payout consequences.",
+    "entity": "Confirm registration and contracting entity using original PDF/registry."
   }
 }
