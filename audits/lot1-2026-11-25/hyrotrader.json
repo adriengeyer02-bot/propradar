@@ -1,0 +1,16 @@
+{"slug":"hyrotrader","checkedOn":"2026-11-25","status":"COMPLETE_EXCEPT_FUNDED_AGREEMENT",
+ "checklist":{
+  "currentTermsRead":"Terms v1.17 effective 4 Nov 2026 (last updated 9 Nov 2026)",
+  "payoutClausesRead":"§13.4 rewards may be withheld/delayed pending KYC, sanctions, tax or investigation; denied only for a confirmed prohibited practice",
+  "fundedAgreement":"separate Funded Trader Agreement with HYROTRADER TECHNOLOGIES LTD (BVI 2166693), provided at transition only -> B7",
+  "prohibitedPractices":"§10.2 list (a)-(s), some qualitative ((g) 'does not reflect genuine trading skill', (k) not replicable live); §10.3 consequences must be reasonable, good faith, proportionate, with notice and >=14 days to make representations; review under §24.2",
+  "consistency":"§6.1A evaluation profit cap 40% per day (Zero-Step 50% per trade); excess does not count toward target, not a breach -> 0",
+  "trustpilotExactDomain":"4.0/5, 249 reviews, no breach notice, claimed (2026-11-25)",
+  "entityRegistry":"HYRO TECHNOLOGIES FZ-LLC (RAKEZ FDBC5283, licence 47034334) seller; HYROTRADER TECHNOLOGIES LTD (BVI 2166693) pays rewards; Hyro Finance j.s.a. (SK IČO 55072275) EEA agent; registries not checked",
+  "payoutEvidence":"PayoutJunction 1.74 M$ / 2,253 payouts (below 10 M$ threshold); firm transparency page with on-chain payouts since April 2026",
+  "incidents":"no regulator or court record found; one third-party blog (propscorer.com) on denied accounts and Phase 2 delays, single source -> recorded, not penalised"},
+ "facts":[
+  {"code":"B2A","text":"Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.","source":"https://www.hyrotrader.com/terms-and-conditions/","locator":"§10.2(g),(k); §10.3(d),(h); §24.2","checkedOn":"2026-11-25"},
+  {"code":"B7","text":"Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.","source":"https://www.hyrotrader.com/terms-and-conditions/","locator":"§P.4; Companion Policies","checkedOn":"2026-11-25"},
+  {"code":"SAFE","text":"Trading-rule changes not applied retroactively to enrolled accounts; 30 days' notice of modifications; honest reviews and criticism expressly protected.","source":"https://www.hyrotrader.com/terms-and-conditions/","locator":"§6.3; §19.2; §17.1","checkedOn":"2026-11-25"}
+ ]}

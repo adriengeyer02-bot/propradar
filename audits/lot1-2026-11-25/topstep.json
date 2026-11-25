@@ -1,0 +1,11 @@
+{"slug":"topstep","checkedOn":"2026-11-25","status":"COMPLETE_EXCEPT_XFA_LFA_AGREEMENTS",
+ "checklist":{"currentTermsRead":"Terms of Use last updated 4 Nov 2026","fundedAgreement":"XFA and Live Funded Account governed by separate or supplemental written agreements (§3); not located publicly",
+  "trustpilotExactDomain":"3.7/5, 15,147 reviews, no breach notice (2026-11-24 check)","entityRegistry":"Topstep LLC (Delaware); TopstepFunded LLC (Illinois)",
+  "payoutEvidence":"2025 disclosures: 33.3% of Funded Level participants received a payout; 0.71% of XFA participants moved to Live (re-read 2026-11-25)",
+  "incidents":"individual pro se complaint filed 2026-04-09 (already in firm file); no regulator action found"},
+ "facts":[
+  {"code":"B1","text":"Topstep may, for no consideration and without notice, alter or cancel any Reward earned by a user it deems to have violated the Terms, 'regardless of if such activity was or was not related to earning such Reward'. No appeal mechanism stated.","source":"https://www.topstep.com/terms-of-use","locator":"§29","checkedOn":"2026-11-25"},
+  {"code":"B2","text":"Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.","source":"https://www.topstep.com/terms-of-use","locator":"§27","checkedOn":"2026-11-25"},
+  {"code":"B3","text":"Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.","source":"https://www.topstep.com/terms-of-use","locator":"§9; §27; introduction","checkedOn":"2026-11-25"},
+  {"code":"B6","text":"Users who disparage Topstep, its competitors or affiliates can be barred from a Reward at Topstep's sole discretion; conduct risking reputational damage can lead to loss of access without compensation.","source":"https://www.topstep.com/terms-of-use","locator":"§29; §24","checkedOn":"2026-11-25"}
+ ]}
