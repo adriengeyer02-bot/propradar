@@ -1320,6 +1320,160 @@
           ]
         }
       ]
+    },
+    "tradeify": {
+      "tradeify-growth-eval": [
+        {
+          "score": 88,
+          "scope": "Growth → Sim Funded (current cohort)",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "Funded drawdown trails on an end-of-day basis.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Payout eligibility requires both a majority of trades and a majority of profit from trades held longer than 10 seconds; one strategy restriction, not two penalties.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "C30",
+              "points": 1,
+              "reason": "35% best-day payout eligibility; resets after approved payout.",
+              "source": "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Material per-request caps; excess stays in account, not confiscated.",
+              "source": "https://help.tradeify.co/en/articles/11083796-growth-funded-account-payout-policy"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Five profitable days with size-dependent minimum each cycle.",
+              "source": "https://help.tradeify.co/en/articles/11083796-growth-funded-account-payout-policy"
+            }
+          ],
+          "sources": [
+            "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+            "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule",
+            "https://help.tradeify.co/en/articles/11083796-growth-funded-account-payout-policy"
+          ]
+        }
+      ],
+      "tradeify-lightning": [
+        {
+          "score": 89,
+          "scope": "Lightning Funded (purchased after 12 Sep 2025, first payout)",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "Funded drawdown trails on an end-of-day basis.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Payout eligibility requires both a majority of trades and a majority of profit from trades held longer than 10 seconds; one strategy restriction, not two penalties.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "20% first payout, 25% second, 30% thereafter; charged once for the strictest initial threshold.",
+              "source": "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Material per-request caps; unused profits remain in account.",
+              "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+            }
+          ],
+          "sources": [
+            "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+            "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule",
+            "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy"
+          ]
+        }
+      ],
+      "tradeify-select-eval": [
+        {
+          "score": 89,
+          "scope": "Select → Flex (25–150K, purchased from 1 Sep 2026)",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "Funded drawdown trails on an end-of-day basis.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Payout eligibility requires both a majority of trades and a majority of profit from trades held longer than 10 seconds; one strategy restriction, not two penalties.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Material per-request withdrawal caps, with distinct add-on and account-size schedules.",
+              "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Five winning trading days per cycle.",
+              "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+            }
+          ],
+          "sources": [
+            "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+            "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+          ]
+        },
+        {
+          "score": 92,
+          "scope": "Select → Daily (25–150K, purchased from 1 Sep 2026)",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "Funded drawdown trails on an end-of-day basis.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Payout eligibility requires both a majority of trades and a majority of profit from trades held longer than 10 seconds; one strategy restriction, not two penalties.",
+              "source": "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Material daily withdrawal caps; no five-day requirement.",
+              "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+            }
+          ],
+          "sources": [
+            "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
+            "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+          ]
+        }
+      ]
     }
   }
 }
