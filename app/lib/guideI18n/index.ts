@@ -19,6 +19,7 @@ import zhArticles from './articles/zh';
 import jaArticles from './articles/ja';
 import hiArticles from './articles/hi';
 import { updateNoChallengeTranslation } from './noChallenge';
+import { refreshNovemberGuide } from './novemberRefresh';
 
 export type { GuideTranslation };
 
@@ -42,7 +43,7 @@ export function getGuideTranslation(locale: Locale, slug: string): GuideTranslat
   if (!summary) return undefined;
   const article = ARTICLES[locale]?.[slug];
   const translation = article ? { ...summary, article } : summary;
-  return slug === 'prop-firm-sans-challenge' ? updateNoChallengeTranslation(locale, translation) : translation;
+  return slug === 'prop-firm-sans-challenge' ? updateNoChallengeTranslation(locale, translation) : refreshNovemberGuide(locale, slug, translation);
 }
 
 /**
