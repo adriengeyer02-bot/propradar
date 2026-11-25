@@ -2,7 +2,7 @@
   "slug": "funded-trading-plus",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted OCR clauses from upload-bfaf93dd03.txt (21 pages, May 26 2026 update) pp.1,12–15 and other selected sections; direct terms blocked 403. Remaining clauses and help pages not read. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "method": "Read entire 21-page user-uploaded OCR upload-bfaf93dd03.txt (50,240 chars in contiguous ranges 0–18k,18k–35k,35k–end; May 26 2026 version), and all nine successful help captures 8507ec2fb7df,49a63f581398,1bf8087421b8,626f657dc335,08bfa427d1ab,696e187ac8c5,e8da91c775ac,07f30f159da7,d3a126e58a73 (.txt). Public terms blocked; actual Contracted Researcher Agreement and risk policy article not archived. OCR numbering inconsistent; cross-references used.",
   "facts": [
     {
       "code": "B2",
@@ -24,16 +24,59 @@
       "source": "https://www.fundedtradingplus.com/terms-conditions/",
       "locator": "OCR pp.14–15/21, referenced §12.3–12.5",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "After passing all evaluations, trader must 'complete, sign and return to us the Agreement' to enter reward-earning programme. Separate Contracted Researcher Agreement provided for this stage. Instant also requires signature and KYC before any payment.",
+      "source": "https://www.fundedtradingplus.com/terms-conditions/",
+      "locator": "Uploaded OCR p.3–4 §3.7, §3.14(b); p.16–17 KYC/Contracted Researcher Agreement",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B4",
+      "text": "Contract §3.15(a)(ii): higher of equity/balance daily loss basis 'Prestige Lite' and 'Prestige Pro' only; 'All other Programs ... Account Balance ... only.' Instant FAQ Aug 12 says prior closed balance or equity 'whichever is higher'. Same drawdown formula, contrary provisions.",
+      "source": "https://help.fundedtradingplus.com/instant-program-information/",
+      "locator": "Daily Drawdown; uploaded PDF p.4 §3.15(a)(ii)",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Incorrect purchase address leading to unpaid VAT can result in 'Forfeiture of some or all of any simulated-profit at the point of payout' and all linked accounts; applies to incorrect or fraudulent details. Candidate procedural sanction already covered by E_HARSH; no additional deduction.",
+      "source": "https://www.fundedtradingplus.com/terms-conditions/",
+      "locator": "OCR p.8 §5.4; p.18 §17.8–10",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Express main model has no stated consistency condition; contract says only Classic as of Feb 7; Classic funded 50%, evaluation 35%; new Pass Now Pay Later funded 25% delay. No firm-level consistency penalty for most lenient main Express.",
+      "source": "https://help.fundedtradingplus.com/1-step-express-program-information/",
+      "locator": "Challenge rules; Classic and PNPL programme articles; OCR p.6 §3.15(a)(x)",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "PNPL programme FAQ says minimum withdrawal 3% of balance, Activation Accounts FAQ distinguishes 3% eligibility from $50 minimum request. Both specify 10 trading days and 25% delay, not forfeiture. Reconcile same product scope.",
+      "source": "https://help.fundedtradingplus.com/activation-accounts-payouts-and-withdrawals/",
+      "locator": "What is the minimum withdrawal?; PNPL programme article",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Consumer cancellation within 14 days before first simulated trade, refund within 14 days; accepted-order fees not increased retroactively. Inactivity 30 days; FAQ reminder seven days before breach.",
+      "source": "https://www.fundedtradingplus.com/terms-conditions/",
+      "locator": "OCR pp.17–18, §15 and §16; Express/Classic/Instant FAQ",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B1": "Forfeiture tied to behaviours suspected prohibited, B2 not unconditional B1.",
     "B6": "Public response right alone is not termination, forfeiture or damages.",
-    "B3": "§10.4 permits varying prohibited strategies without notice; §10.5 risk review any phase. Need explicit applicability of new rules to already-purchased accounts or date/version clause before coding."
+    "B3": "§2.5–6 general change upon next login not enough; §3.15 paid programme definitions vary and §10.4 varies prohibited strategies without notice, but explicit application of amended rules to previously bought accounts needs confirmation."
   },
   "toVerify": {
-    "coverage": "Read all OCR pages and six payout/programme help bodies, notably actual appeal route, FT+ Trader/Contracted Researcher agreement.",
-    "B2A": "Find written review or explanation route.",
-    "CONS": "Most lenient main programme; compare Express/Classic/Instant/Pass Now Pay Later."
+    "coverage": "All available OCR and help bodies fully read. Contracted Researcher Agreement and incorporated Risk Review Policy, news policy, drawdown child articles absent; main live terms URL 403. PARTIAL solely for missing actual incorporated documents.",
+    "B2A": "Risk interview and email notice are not written reasons or appeal; actual Risk Review Policy needed.",
+    "B4": "Confirm precedence/current versions of instant daily formula and PNPL 3% eligibility vs min request.",
+    "CONS": "Express no explicit consistency; compare current checkout and new models."
   }
 }
