@@ -36,3 +36,22 @@
 .pr-program-card .btn{margin-block-start:2px;width:100%}
 @media(max-width:640px){.pr-program-grid{grid-template-columns:minmax(0,1fr)}.pr-program-grid .pr-program-card{padding:14px;gap:12px}.pr-program-card-heading{gap:8px}.pr-program-score{min-width:76px;max-width:96px;padding:6px}.pr-program-facts dd{font-size:.86rem}.pr-program-facts>div{padding:10px 7px}.pr-program-heading-copy h3{font-size:1rem}}
 @media(max-width:360px){.pr-program-facts,.pr-program-dates{grid-template-columns:repeat(2,minmax(0,1fr))}.pr-program-facts>div:nth-child(3n){border-inline-end:1px solid var(--border,#303640)}.pr-program-facts>div:nth-child(2n){border-inline-end:0}.pr-program-facts>div:nth-child(4){border-block-end:1px solid var(--border,#303640)}}
+
+/* Offers sit next to the documented list prices, never inside the score. */
+.pr-program-deals{display:grid;gap:9px}
+.pr-program-card .pr-program-promo-integrated{margin:0;padding:13px;border-radius:12px;display:grid;gap:9px;min-width:0}
+.pr-program-promo-integrated .pr-program-promo-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px 10px}
+.pr-program-promo-integrated .pr-program-promo-head strong{font-size:1rem;overflow-wrap:anywhere}
+.pr-program-promo-scope{font-size:.72rem;line-height:1.4;margin:0;opacity:.85}
+.pr-program-promo-prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(85px,1fr));gap:7px}
+.pr-program-promo-price{display:grid;gap:3px;padding:8px 6px;background:rgba(127,127,127,.08);border:1px solid var(--border,#303640);border-radius:8px;text-align:center;min-width:0;font-variant-numeric:tabular-nums}
+.pr-program-promo-price span{font-size:.71rem}
+.pr-program-promo-price del{font-size:.73rem;opacity:.8}
+.pr-program-promo-price strong{font-size:1.05rem;color:#53c59b;overflow-wrap:anywhere}
+.pr-program-promo-ticket{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px dashed currentColor;border-radius:8px;padding:7px 10px}
+.pr-program-promo-ticket code{font-size:.95rem;font-weight:700;overflow-wrap:anywhere}
+.pr-program-promo-ticket button{cursor:pointer;font:inherit;font-size:.76rem;color:inherit;background:transparent;border:1px solid currentColor;border-radius:6px;padding:5px 9px}
+.pr-program-promo-integrated .pr-program-promo-check{margin:0;font-size:.75rem}
+.pr-program-promo-integrated .pr-program-promo-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:5px 10px}
+.pr-program-promo-cta{margin:0!important}
+.pr-program-deals .pr-program-affiliate-note{margin:0;font-size:.72rem;line-height:1.4}
