@@ -2,45 +2,72 @@
   "slug": "alpine-funded",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Selected excerpts from user PDF TC-260929.pdf upload-d0e25c461f.txt (40,040 chars, text layer): §§2.1,4.6–4.7,7–9,12–13. Exact public PDF URL not in index; source field links official root named in §1; actual file/locator provided. Archive pinned d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "method": "Entire uploaded TC-260929.pdf text layer upload-d0e25c461f.txt, 40,040 chars including archive header, read in contiguous ranges 0–20,000 and 20,000–40,040, sections 1–20.2. All index entries inspected: eight attempted substantive web captures returned 403 (no contractual bodies); FAQ and third-party funding contract unavailable. Source URL is official terms route but exact evidence is uploaded PDF, not a successful live retrieval.",
   "facts": [
     {
       "code": "B2",
       "text": "§7.1–7.4 forbids trading inconsistent with professional standards, disproportionate sizes and significant trade count variation; provider “sole discretion” determines forbidden practice, removal of trades from history and P/L calculations. Base Camp payout eligibility expressly requires §7 compliance.",
-      "source": "https://www.alpinefunded.com",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
       "locator": "Archived upload-d0e25c461f.txt §7.1–7.4; §8.2.3",
       "checkedOn": "2026-11-25"
     },
     {
       "code": "B6",
       "text": "§12.2 grounds include “behavior that is detrimental to the Provider’s business reputation, partners, or technology”; §12.3–12.4 discretionary enforcement, no refund/compensation/restoration.",
-      "source": "https://www.alpinefunded.com",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
       "locator": "Archived PDF §12.2–12.4; §7.1(i)",
       "checkedOn": "2026-11-25"
     },
     {
       "code": "B7",
       "text": "§9.1–9.4 customer may receive third-party contract only after successful completion of relevant stages; funding partner discretion and payout terms outside Alpine contract.",
-      "source": "https://www.alpinefunded.com",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
       "locator": "Archived PDF §9.1–9.4",
       "checkedOn": "2026-11-25"
     },
     {
       "code": "E_HARSH",
       "text": "§4.7 any chargeback or attempted chargeback permanently revokes payout eligibility for past/current/future purchased accounts; no compensation.",
-      "source": "https://www.alpinefunded.com",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
       "locator": "Archived PDF §4.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B3",
+      "text": "§15.1 expressly applies immediately to “Customers with ongoing Services” and binds amended GTC “regardless of when the relevant Service or contractual relationship commenced”, subject to applicable law.",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
+      "locator": "Uploaded TC-260929.pdf §15.1",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§16.3 written confirmation on resolution/expiry of 30-day complaint period; right to terminate if unresolved. §17.1 direct dispute route, §18.3 mandatory consumer protection preserved. Generic complaint path, not explicit review of payout classification; Claude to decide B2A eligibility.",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
+      "locator": "§13.5; §16.1–16.3; §17.1; §18.3",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§14.1 withdrawal window 48 hours but §14.2 loss on immediate access/performance and §14.3 exclusions for discount or KYC submission; mandatory law exception. §9.6 waives claims against Alpine for partner refusal/delay/disputes. §20.1 incorporates FAQ as binding source for specific rules and operational procedures.",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
+      "locator": "§9.6; §14.1–14.5; §20.1 FAQ",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Base Camp: three non-consecutive 0.5% profitable days, 5% overall profit, 3% daily and 5% total loss limits. Peak two-phase 8%/5% targets and five days per phase, 4% daily and 8% total drawdown. §8.4.4 partner acceptance not guaranteed.",
+      "source": "https://alpinefunded.com/terms-and-conditions/",
+      "locator": "§8.2–8.4",
       "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B1": "Third-party admission discretion is pre-entitlement, not unconditional cancellation of earned payouts. Need actual partner contract.",
-    "B3": "§2.1 generic continued-use amendments, not enough.",
     "B5": "§7.4 excludes trades from profit/loss calculations, not express asymmetry."
   },
   "toVerify": {
-    "coverage": "Read entire 40k PDF, locate exact public URL or preserve upload as primary evidence; all incorporated FAQ/product terms and actual third-party funded contract absent.",
-    "B2A": "Review complaint/dispute section for written review or reasons.",
-    "CONS": "Main Peak/other model payout eligibility."
+    "coverage": "Uploaded main GTC fully read. Seven incorporated FAQ/rule URLs and official terms route in archive returned 403; actual FAQ bodies and partner funding contract not available. PARTIAL solely for those missing documents, not unread main PDF.",
+    "B2A": "Generic complaint route §§13.5,16.3,17.1 documented; no specific payout review or appeal in GTC. Claude to confirm whether written complaint status satisfies B2A.",
+    "CONS": "Peak funded payout/consistency and Base Camp detailed payout rules require incorporated FAQ or third-party agreement."
   }
 }
