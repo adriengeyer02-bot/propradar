@@ -321,6 +321,6 @@ export function mapProgramRules(product: Product, update?: FirmUpdate): { specif
   const keys = new Set([product.id, ...(update?.auditedPrograms ?? []).filter(p => p.key === product.id || normal(p.name) === normal(product.name)).map(p=>p.key)]);
   const specific = rules.filter(r => r.appliesTo?.length && !r.appliesTo.includes('*') && r.appliesTo.some(k => keys.has(k)));
   const general = rules.filter(r => r.appliesTo?.includes('*'));
-  const unmapped = rules.some(r=>!r.appliesTo?.length) || rules.some(r => r.appliesTo?.length && !r.appliesTo.includes('*') && !r.appliesTo.some(k=>keys.has(k)));
+  const unmapped = rules.some(r=>!r.appliesTo?.length);
   return {specific,general,unmapped};
 }
