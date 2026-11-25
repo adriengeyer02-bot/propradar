@@ -1,15 +1,11 @@
 name: Archive firm terms (full text)
 
 # Downloads the full text of each open firm's terms, funded agreements, rules,
-# FAQ and payout pages, and pushes them to the `agent/terms-archive` branch with
-# date and SHA-256. Audits read these files; a re-audit is a diff. Nothing is
-# published from this workflow.
+# FAQ and payout pages (8 parallel shards), then pushes them to the
+# `agent/terms-archive` branch with date and SHA-256. Audits read these files;
+# a re-audit is a diff. Nothing is published from this workflow.
 on:
   workflow_dispatch:
-    inputs:
-      only:
-        description: 'Comma-separated slugs (empty = all open firms)'
-        required: false
   push:
     branches: [agent/terms-archive-run]
 
@@ -19,7 +15,11 @@ permissions:
 jobs:
   archive:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,8 +29,27 @@ jobs:
       - run: npm install --no-save --no-audit --no-fund playwright@1.49.1 && npx playwright install --with-deps chromium
       - run: node scripts/archive-terms.mjs
         env:
-          ONLY: ${{ github.event.inputs.only }}
           OUT_DIR: /tmp/terms-archive
+          SHARD: ${{ matrix.shard }}
+          SHARDS: 8
+          CONCURRENCY: 5
+      - run: mv /tmp/terms-archive/summary.json /tmp/terms-archive/summary-${{ matrix.shard }}.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: terms-${{ matrix.shard }}
+          path: /tmp/terms-archive
+          if-no-files-found: ignore
+
+  push:
+    needs: archive
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: /tmp/parts
       - name: Push archive to agent/terms-archive
         run: |
           git config user.name "github-actions[bot]"
@@ -44,7 +63,7 @@ jobs:
             rm -rf ./* .github
           fi
           mkdir -p terms-archive
-          cp -r /tmp/terms-archive/* terms-archive/
+          for d in /tmp/parts/terms-*; do cp -r "$d"/* terms-archive/ 2>/dev/null || true; done
           git add terms-archive
           git commit -q -m "Terms archive $(date -u +%F)" || echo "no change"
           git push -q origin agent/terms-archive

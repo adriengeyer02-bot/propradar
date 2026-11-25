@@ -64,7 +64,7 @@ async function archiveFirm(slug, info) {
   const index = []; const queue = [...info.urls]; const seen = new Set();
   // Discover legal links from the official home page as well.
   if (info.site) queue.unshift(info.site);
-  let budget = 14;
+  let budget = 12;
   while (queue.length && budget-- > 0) {
     const url = queue.shift(); if (seen.has(url)) continue; seen.add(url);
     try {
@@ -90,7 +90,8 @@ async function archiveFirm(slug, info) {
   console.log(slug, JSON.stringify(summary[slug]));
 }
 
-const todo = Object.entries(sources).filter(([slug]) => !ONLY.length || ONLY.includes(slug));
+const SHARD = Number(process.env.SHARD || 0), SHARDS = Number(process.env.SHARDS || 1);
+const todo = Object.entries(sources).filter(([slug]) => !ONLY.length || ONLY.includes(slug)).filter((_, i) => i % SHARDS === SHARD);
 let next = 0;
 await Promise.all(Array.from({ length: CONCURRENCY }, async () => { while (next < todo.length) { const [slug, info] = todo[next++]; try { await archiveFirm(slug, info); } catch (e) { console.log(slug, 'FAILED', String(e).slice(0, 200)); } } }));
 writeFileSync(join(OUT, 'summary.json'), JSON.stringify({ fetchedAt: new Date().toISOString(), firms: summary }, null, 1));
