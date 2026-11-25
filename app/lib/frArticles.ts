@@ -206,7 +206,7 @@ export const frArticles: FrArticle[] = [
               "label": "FundingTicks",
               "values": [
                 "Janvier 2026",
-                "Liquidation progressive de l'activité annoncée",
+                "Cessation progressive de l'activité annoncée",
                 "Arrêt engagé après modifications des règles et rémunérations ; causalité précise non établie."
               ],
               "sourceUrl": "https://www.financemagnates.com/forex/following-profit-cuts-and-trading-limits-prop-firm-fundingticks-begins-winding-down/"
@@ -322,7 +322,7 @@ export const frArticles: FrArticle[] = [
       {
         "heading": "My Forex Funds : pourquoi nous le traitons à part",
         "paragraphs": [
-          "L’arrêt de My Forex Funds en août 2023 a suivi une action de la CFTC et un gel d’avoirs. La plainte américaine a été rejetée définitivement en mai 2025. En septembre 2026, la presse a annoncé la cession d’actifs de marque à Global Solutions, puis un lancement prévu le 23 novembre 2026 sous un nouveau propriétaire. Nous n’avons pas confirmé ici le démarrage effectif ni le règlement de toutes les créances historiques.",
+          "L’arrêt de My Forex Funds en août 2023 a suivi une action de la CFTC et un gel d’avoirs. La plainte américaine a été rejetée avec préjudice en mai 2025 (la même action ne peut pas être simplement réintroduite). En septembre 2026, la presse a annoncé la cession d’actifs de marque à Global Solutions, puis un lancement prévu le 23 novembre 2026 sous un nouveau propriétaire. Nous n’avons pas confirmé ici le démarrage effectif ni le règlement de toutes les créances historiques.",
           "Ce dossier est antérieur au périmètre statistique de janvier 2024 et n’entre pas dans les 24 cas du tableau. Une relance annoncée ne prouve ni continuité juridique ni remboursement de tous les anciens clients."
         ]
       },
