@@ -2,7 +2,7 @@
   "slug": "funded-squad",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted main CG 944770d7bf05.txt §§4.4–5.1,8,11.2; prohibited strategy and payout article excerpts e219d422e860.txt,6c006a69930c.txt. Other rules not yet fully read.",
+  "method": "All eight successful archive bodies read: 944770d7bf05.txt main terms §§1–21; 1cb4678cedfc.txt risk disclosure; 4bec3904af2e.txt Instant rules; 1eac89812364.txt challenge rules (including separate reread of truncated 4,400–8,000 chars); 6c006a69930c.txt payout guide; e219d422e860.txt prohibited strategies; e62dc9e475b8.txt FAQ index; ea9a9169d843.txt help index. Alternate terms 404. No individual model rulebooks, IP/social-policy bodies or funded agreement captured.",
   "facts": [
     {
       "code": "B2",
@@ -24,6 +24,41 @@
       "source": "https://fundedsquad.com/terms-of-service",
       "locator": "§8 Guidelines",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B5",
+      "text": "Evaluation funded news rule ±4 minutes: profitable trades opened before restricted window and closed inside have profits removed while 'Losses remain your responsibility'; 2+ hour prior opening exception. Instant Lite/Pro separate ±5 min rule with same asymmetry. Not applicable to evaluation stage.",
+      "source": "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+      "locator": "News trading rules > Restricted Window / Scenarios; https://intercom.help/fundedsquad/en/articles/17015480-instant-account-trading-rules",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "VPN/VPS use expressly prohibited and may constitute violation; general Risk Review says confirmed rule violation terminates account and rejects payout. Candidate procedural penalty, verify specific IP policy exceptions.",
+      "source": "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+      "locator": "VPN and VPS Policy; Risk Review and Rule Violations",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "1.5% aggregate floating loss: challenge first breach reduces split to 20% for accounts purchased on/after Nov 24 2026, 40% before; second terminates. Instant first breach terminates for newer cohort; pre-Aug 31 first split 40%, second closure. Preserve cohort distinctions; FAQ expressly respects purchase date for min holding duration changes.",
+      "source": "https://intercom.help/fundedsquad/en/articles/17013981-challenge-account-trading-rules",
+      "locator": "Max Risk Rule; Instant Account Trading Rules; min trade duration",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout guide: min $100 except Rapid $12.50, Rise $40 each for >$300, crypto $5–12 below $300; exactly $300 ambiguous. 48h guarantee begins after approval, not request. Main help index says Instant Pro/Rapid and One-Step Pro/2-Step Squad discontinued; don't treat as current offerings.",
+      "source": "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+      "locator": "Payout options; When Will Your Payout Arrive?; https://fundedsquad.com/faqs > Models",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Main terms §5.1 claims live account capital after passing; risk disclosure says both evaluation and funded accounts demo only; terms footer gives main terms precedence. Internal contract/disclosure inconsistency, not a direct FAQ contradiction.",
+      "source": "https://fundedsquad.com/terms-of-service",
+      "locator": "§5.1; risk disclosure https://fundedsquad.com/risk-disclosure; terms footer",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -32,8 +67,10 @@
     "B7": "Registration timing not clearly after purchase."
   },
   "toVerify": {
-    "coverage": "Whole terms, risk disclosure, full challenge and instant rules, payout guide and FAQ; social media policy index title only, not B6.",
-    "B2A": "Written explanation or review route.",
-    "CONS": "Most lenient main model."
+    "coverage": "All eight successful archived bodies read; help index links individual Flex/Lite rulebooks, social media/IP policies, payout ownership and refund body not captured; funded agreement §5.1 absent. PARTIAL for missing actual bodies.",
+    "CONS": "Current Flex/Lite main product numeric consistency thresholds absent from archived rulebooks.",
+    "B2A": "General risk review not necessarily written appeal route; obtain policy.",
+    "E_HARSH": "Verify VPN/IP violation exception and actual accrued payout scope.",
+    "B6": "Social media policy title not evidence; retrieve actual sanction."
   }
 }
