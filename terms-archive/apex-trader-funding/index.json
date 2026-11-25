@@ -120,5 +120,17 @@
   "sha256": "9df1c0fa6646874350a3308625ad1dbeabb1302dada79e6ea1d08297df8269d1",
   "file": "9a62d2769611.txt",
   "fetchedAt": "2026-11-25T11:48:35.836Z"
+ },
+ {
+  "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+  "finalUrl": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+  "title": "Apex User Agreement fetched with Firecrawl (maxAge 0) on 2026-11-25",
+  "status": 200,
+  "kind": "upload",
+  "chars": 71489,
+  "sha256": "e753a30ec1ee0343766ee2f3a28ab905dba8502a70d7f35e2fb42194982ab3bf",
+  "file": "upload-e753a30ec1.txt",
+  "fetchedAt": "2026-11-25",
+  "upload": true
  }
 ]
