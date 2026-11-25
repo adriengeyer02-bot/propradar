@@ -1,0 +1,22 @@
+{
+ "slug": "brightfunded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B1",
+   "text": "'Performance rewards are discretionary and do not constitute a guaranteed right or entitlement'; they are processed under a separate Funded Trader Program agreement, and participation in that program is 'at the sole discretion' of Bright Global FZCO.",
+   "source": "https://brightfunded.com/terms-conditions",
+   "locator": "§7.2; §7.8",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Evaluation models state no consistency rule (15% applies to the instant model).",
+   "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+   "locator": "Model comparison",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

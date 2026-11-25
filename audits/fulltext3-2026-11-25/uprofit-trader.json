@@ -1,0 +1,22 @@
+{
+ "slug": "uprofit-trader",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "E_HARSH",
+   "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
+   "source": "https://uprofit.com/terms-and-conditions",
+   "locator": "Prohibited practices; cancellation policy",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Practices that 'at our sole discretion, represent non-viable strategies' may lead to 'disciplinary actions, such as significant fines, trading restrictions, or permanent bans' (no explicit payout forfeiture outside the VPN clause).",
+   "source": "https://uprofit.com/terms-and-conditions",
+   "locator": "§10.2",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

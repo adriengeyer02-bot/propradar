@@ -226,6 +226,42 @@
      "source": "https://alphacapitalgroup.uk/terms-and-conditions",
      "locator": "§16.3, §20, §28",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. 'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha 'reserve[s] the right to determine, at our own discretion, whether certain virtual trades, practices, strategies, or situations are not allowed'; trades judged gambling lead to 'removal of profits'.",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "Schedule Analyst Performance Fees §2.6; §9.1.7; Alpha Direct plan",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. §27.1: the user 'irrevocably agrees ... not to disparage or denigrate Alpha', including 'any form of public statement ... on any social media platforms ... that could be construed as negative'; Alpha may suspend or terminate access for such conduct at its sole discretion, 'final and binding'.",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "§27.1; §27.3",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Alpha may change the Terms and Services by posting updates and 'will, however, notify you by email if there is a material change to an Evaluation which you are currently participating in': changes reach evaluations already bought.",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "§5.1",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Best Day Rule 40% for Alpha Pro, Swing, One and Three (15% for Alpha Direct).",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "Performance fees on-demand",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -262,13 +298,14 @@
     "contract-clauses-medium-firms-2026-11-24.json",
     "full-audit-reopen-wave3-five-2026-11-24.json",
     "full-audit-reopen-wave3-five-supplement-2026-11-24.json",
-    "audits/clause-review-2026-11-25/alpha-capital-group.json"
+    "audits/clause-review-2026-11-25/alpha-capital-group.json",
+    "audits/fulltext3-2026-11-25/alpha-capital-group.json"
    ],
    "counts": {
-    "rule": 6,
-    "discretion": 8,
+    "rule": 7,
+    "discretion": 10,
     "contradiction": 0,
-    "version": 2,
+    "version": 3,
     "payout": 3,
     "safeguard": 1,
     "legal": 1,
@@ -281,7 +318,7 @@
    "slug": "alpha-futures",
    "name": "Alpha Futures",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Standard",
     "Advanced",
@@ -433,6 +470,42 @@
      "source": "https://alpha-futures.com/fr/terms-and-conditions",
      "locator": "Direct table vs FAQ",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. 'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha may determine at its own discretion whether practices are not allowed.",
+     "source": "https://alpha-futures.com/terms-and-conditions",
+     "locator": "Schedule §1.2.6; §8.1.7",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. §26.1: the user irrevocably agrees not to disparage or denigrate Alpha in any public statement 'that could be construed as negative', under threat of 'injunctive relief and damages'; the clause survives termination.",
+     "source": "https://alpha-futures.com/terms-and-conditions",
+     "locator": "§26.1",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Alpha may change the Terms by posting and 'will, however, notify you by email if there is a material change to a Challenge which you are currently participating in'; Schedule 5 rules 'may be updated from time to time'.",
+     "source": "https://alpha-futures.com/terms-and-conditions",
+     "locator": "§4.1; §8.1.8",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Advanced Qualified accounts: no consistency rule (Zero and Standard Qualified 40%, Direct 20%).",
+     "source": "https://help.alpha-futures.com/en/articles/9492048-consistency-rule",
+     "locator": "Consistency rule",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -469,13 +542,14 @@
    "sourceFiles": [
     "contract-clauses-wave4-primary-10-2026-11-24.json",
     "full-audit-reopen-wave3-five-2026-11-24.json",
-    "full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+    "full-audit-reopen-wave3-five-supplement-2026-11-24.json",
+    "audits/fulltext3-2026-11-25/alpha-futures.json"
    ],
    "counts": {
-    "rule": 4,
-    "discretion": 2,
+    "rule": 5,
+    "discretion": 4,
     "contradiction": 3,
-    "version": 1,
+    "version": 2,
     "payout": 6,
     "safeguard": 1,
     "legal": 1,
@@ -664,51 +738,6 @@
      "checkedOn": "2026-11-24"
     },
     {
-     "group": "discretion",
-     "scope": "",
-     "text": "Earned rewards removable at the firm's discretion. Rewards 'may be withheld, forfeited, or rescinded at any time in the Company's sole discretion'; the Company 'reserves the right to deny, modify, reduce, cap, delay, or revoke Reward distributions for any reason or no reason'; determinations 'are final and binding' and 'not subject to appeal or review' (except clerical correction or fraud).",
-     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
-     "locator": "§12 Rewards",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-excerpt-read"
-    },
-    {
-     "group": "discretion",
-     "scope": "",
-     "text": "Payout can be refused for conduct the contract does not quantify. Accounts can be terminated and unpaid Rewards denied or revoked if the Company determines, in its sole discretion, that the user's 'level of sophistication materially exceeds' the simulated environment (indicators include 'consistently exceptional performance'); the Company may also 'graduate out' a user it judges no longer a proper fit and decide at its sole discretion whether any final reward is paid.",
-     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
-     "locator": "§15; §14",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-excerpt-read"
-    },
-    {
-     "group": "version",
-     "scope": "",
-     "text": "Rules can change on accounts already bought. 'The Company may update the list of Prohibited Activities at any time, without notice'; changes to the Agreement, Trading Rules or Reward distribution policies 'become effective upon posting', and continued use of the accounts means acceptance.",
-     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
-     "locator": "§11 Prohibited Activities; §30",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-excerpt-read"
-    },
-    {
-     "group": "discretion",
-     "scope": "",
-     "text": "Public criticism of the firm is a ground for sanction. Dispute outcomes, account closures and 'denial of Reward distributions' are defined as Confidential Information, and all communications with the Company 'may not be published or shared without permission'; breaches expose the user to the §11 penalties (loss of unpaid Rewards, repayment of previously distributed Rewards).",
-     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
-     "locator": "§20 Confidentiality; §21; §11 Penalties",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-excerpt-read"
-    },
-    {
-     "group": "rule",
-     "scope": "",
-     "text": "Penalties for any breach of the Agreement or incorporated documents include 'loss of any unpaid Rewards' and 'repayment of previously distributed Rewards'; the incorporated Trading and Consistency Rules link (dashboard.apextraderfunding.com/legal/trading-rules) returned 404 to ChatGPT on 2026-11-25.",
-     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
-     "locator": "§11 Penalties; §1",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-excerpt-read"
-    },
-    {
      "group": "rule",
      "scope": "",
      "text": "§24 individual dispute resolution; communications publication restrictions.",
@@ -767,6 +796,51 @@
      "checkedOn": "2026-11-25",
      "verification": "chatgpt-partial-2026-11-25",
      "publish": true
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Earned rewards removable at the firm's discretion. Rewards 'may be withheld, forfeited, or rescinded at any time in the Company's sole discretion'; the Company 'reserves the right to deny, modify, reduce, cap, delay, or revoke Reward distributions for any reason or no reason'; determinations 'are final and binding' and 'not subject to appeal or review' (except clerical correction or fraud).",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§12 Rewards",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Accounts can be terminated and unpaid Rewards denied or revoked if the Company determines, in its sole discretion, that the user's 'level of sophistication materially exceeds' the simulated environment (indicators include 'consistently exceptional performance'); the Company may also 'graduate out' a user it judges no longer a proper fit and decide at its sole discretion whether any final reward is paid.",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§15; §14",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. 'The Company may update the list of Prohibited Activities at any time, without notice'; changes to the Agreement, Trading Rules or Reward distribution policies 'become effective upon posting', and continued use of the accounts means acceptance.",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§11 Prohibited Activities; §30",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Dispute outcomes, account closures and 'denial of Reward distributions' are defined as Confidential Information, and all communications with the Company 'may not be published or shared without permission'; breaches expose the user to the §11 penalties (loss of unpaid Rewards, repayment of previously distributed Rewards).",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§20 Confidentiality; §21; §11 Penalties",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Penalties for any breach of the Agreement or incorporated documents include 'loss of any unpaid Rewards' and 'repayment of previously distributed Rewards'; the incorporated Trading and Consistency Rules link (dashboard.apextraderfunding.com/legal/trading-rules) returned 404 to ChatGPT on 2026-11-25.",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§11 Penalties; §1",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -784,8 +858,8 @@
     "Full User Agreement sections and linked code/trading rules, exact current checkout version and legacy grandfathering",
     "Current live proprietary contract and detailed EOD/Intraday evaluation risk matrices",
     "Registry, historical documented incidents, externally matched payout evidence not captured this pass",
-    "Clause to verify (2026-11-25): TRADING_RULES — Incorporated Trading and Consistency Rules page (404 for ChatGPT) and payout pages for EOD / intraday PA.",
-    "ChatGPT register 2026-11-25: Review 38 contract sections end-to-end plus signature; complete risk disclosure and Terms of Use; obtain current Live Market Proprietary Account Agreement; resolve broken incorporated Trading Rules link; enumerate support.apextraderfunding.com and platform subcategories; read all 8 programme pages and remaining indexed help entries; separate legacy rules; verify actual applicability and consumer-law enforceability before score changes."
+    "ChatGPT register 2026-11-25: Review 38 contract sections end-to-end plus signature; complete risk disclosure and Terms of Use; obtain current Live Market Proprietary Account Agreement; resolve broken incorporated Trading Rules link; enumerate support.apextraderfunding.com and platform subcategories; read all 8 programme pages and remaining indexed help entries; separate legacy rules; verify actual applicability and consumer-law enforceability before score changes.",
+    "Clause to verify (2026-11-25): TRADING_RULES — Incorporated Trading and Consistency Rules page (404 for ChatGPT) and payout pages for EOD / intraday PA."
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
@@ -810,7 +884,7 @@
    "slug": "aqua-funded",
    "name": "AquaFunded",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Instant Standard",
     "Instant Pro",
@@ -892,6 +966,24 @@
      "source": "https://help.aquafunded.com/en/articles/9250906",
      "locator": "Rewards",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Aqua Funded 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy'; strategy changes between assessment and funded stage are prohibited 'as determined by the Company ... at their discretion'.",
+     "source": "https://www.aquafunded.com/legal/terms-and-conditions",
+     "locator": "Risk management; prohibited strategies",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Two Step Pro funded stage: 50% consistency (15-25% on Instant, Aqua Man and One Step Pro).",
+     "source": "https://help.aquafunded.com/en/articles/11875903",
+     "locator": "Consistency rule",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -921,11 +1013,12 @@
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
-    "full-audit-reopen-wave5-five-1500-2026-11-24.json"
+    "full-audit-reopen-wave5-five-1500-2026-11-24.json",
+    "audits/fulltext3-2026-11-25/aqua-funded.json"
    ],
    "counts": {
-    "rule": 2,
-    "discretion": 0,
+    "rule": 3,
+    "discretion": 1,
     "contradiction": 2,
     "version": 3,
     "payout": 2,
@@ -1495,24 +1588,6 @@
     {
      "group": "discretion",
      "scope": "",
-     "text": "Payout can be refused for conduct the contract does not quantify. Blue Guardian 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy', and 'reserves the sole and absolute discretion to determine any breach and may, without prior notice, take action including ... trade voiding, profit/loss adjustments, payout denial'.",
-     "source": "https://blueguardian.com/terms-and-conditions/",
-     "locator": "Risk management; Breach",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-full-read"
-    },
-    {
-     "group": "rule",
-     "scope": "",
-     "text": "Consistency rule. Main programmes: 2 Step Nano 50% funded consistency, Express 40% evaluation only, Zero 30/40/50% chosen at checkout; 15-20% apply to Instant accounts.",
-     "source": "https://help.blueguardian.com/en/collections/19810140-cfd-plans",
-     "locator": "Plan rules",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-full-read"
-    },
-    {
-     "group": "discretion",
-     "scope": "",
      "text": "FAQ and other policies incorporated; risk management review at any stage; broad withdrawal denial and final breach decisions; individual arbitration and class waiver; mandatory local consumer protections preserved.",
      "source": "https://blueguardian.com/terms-and-conditions",
      "locator": "",
@@ -1729,6 +1804,24 @@
      "checkedOn": "2026-11-25",
      "verification": "chatgpt-partial-2026-11-25",
      "publish": true
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Blue Guardian 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy', and 'reserves the sole and absolute discretion to determine any breach and may, without prior notice, take action including ... trade voiding, profit/loss adjustments, payout denial'.",
+     "source": "https://blueguardian.com/terms-and-conditions/",
+     "locator": "Risk management; Breach",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Main programmes: 2 Step Nano 50% funded consistency, Express 40% evaluation only, Zero 30/40/50% chosen at checkout; 15-20% apply to Instant accounts.",
+     "source": "https://help.blueguardian.com/en/collections/19810140-cfd-plans",
+     "locator": "Plan rules",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -2196,6 +2289,24 @@
      "source": "https://help.brightfunded.com/en/articles/18450320-2-step-bright-evaluation-rules",
      "locator": "funded",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Earned rewards removable at the firm's discretion. 'Performance rewards are discretionary and do not constitute a guaranteed right or entitlement'; they are processed under a separate Funded Trader Program agreement, and participation in that program is 'at the sole discretion' of Bright Global FZCO.",
+     "source": "https://brightfunded.com/terms-conditions",
+     "locator": "§7.2; §7.8",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Evaluation models state no consistency rule (15% applies to the instant model).",
+     "source": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+     "locator": "Model comparison",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -2236,11 +2347,12 @@
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
     "full-audit-reopen-wave4-five-manual-2026-11-24.json",
-    "audits/clause-review-2026-11-25/brightfunded.json"
+    "audits/clause-review-2026-11-25/brightfunded.json",
+    "audits/fulltext3-2026-11-25/brightfunded.json"
    ],
    "counts": {
-    "rule": 1,
-    "discretion": 7,
+    "rule": 2,
+    "discretion": 8,
     "contradiction": 0,
     "version": 0,
     "payout": 3,
@@ -2255,7 +2367,7 @@
    "slug": "bulenox",
    "name": "Bulenox",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Traditional Master"
    ],
@@ -2331,6 +2443,24 @@
      "source": "https://form.jotform.com/230508683548160",
      "locator": "428–436",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Abuse includes 'implementation of reckless transactions in rough markets'; 'If abuse is suspected, we reserve the right to refuse to claim any profit.' Bulenox may also 'restrict or limit or terminate account(s) for any reasons at any time without prior notice'.",
+     "source": "https://bulenox.com/legal/Terms_of_Use.pdf",
+     "locator": "Algorithms and auto trading; user representations",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Consistency rule: a request that does not meet it is not a violation; the account stays open.",
+     "source": "https://bulenox.com/faq",
+     "locator": "Consistency rule",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -2346,16 +2476,17 @@
    ],
    "sourceFiles": [
     "contract-clauses-wave6-final-25-2026-11-24.json",
-    "v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json"
+    "v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json",
+    "audits/fulltext3-2026-11-25/bulenox.json"
    ],
    "trustpilotUrlOnly": "https://www.trustpilot.com/review/bulenox.com",
    "counts": {
     "rule": 3,
-    "discretion": 5,
+    "discretion": 6,
     "contradiction": 0,
     "version": 0,
     "payout": 1,
-    "safeguard": 0,
+    "safeguard": 1,
     "legal": 0,
     "history": 0,
     "gap": 0
@@ -3002,7 +3133,7 @@
    "slug": "e8-futures",
    "name": "E8 Futures",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -3028,6 +3159,24 @@
      "source": "https://e8futures.com/e8-signature-futures",
      "locator": "E8 Futures entity/program",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. If 'E8 otherwise determines in its sole discretion that you do not meet the eligibility requirements or are not in compliance with the agreements, E8 reserves the right to terminate your account and withhold or revoke the awarding of any payout awards'; forfeiture may occur 'if it is determined that a participant did not comply with the agreements in any manner as determined by E8 in its sole discretion'.",
+     "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+     "locator": "§5 Payout awards; §9.3",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. 'E8 may modify or eliminate features retroactively, and no user shall have a claim to prior functionality, pricing, payout structure, or simulation logic'; Terms changes are effective immediately upon posting.",
+     "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+     "locator": "§6 (no grandfathering or legacy rights); §13.1",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -3038,13 +3187,14 @@
     "Compare E8 Markets, E8 Funding and E8 Signature/Zero contracts; obtain the paid E8 Trader agreement and limits by programme."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3c-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+    "audits/fulltext3-2026-11-25/e8-futures.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 1,
+    "discretion": 2,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 1,
     "safeguard": 0,
     "legal": 0,
@@ -3314,7 +3464,7 @@
    "slug": "elite-trader-funding",
    "name": "Elite Trader Funding",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -3348,6 +3498,42 @@
      "source": "https://elitetraderfunding.app/terms-of-service",
      "locator": "",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Reward eligibility; violations",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Prohibited conduct (ad)",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "LIVE ELITE program",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Emotional or gambling-like trading may be a supporting factor, but ETF 'will not deny a Reward based on this subsection (t) alone'; reducing account limits does not close accounts already held.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Prohibited conduct (t); account limits",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -3370,15 +3556,16 @@
     "November version and cohorts; live/Vault agreement, debt clauses and mandatory rights, appeal procedure."
    ],
    "sourceFiles": [
-    "contract-clauses-wave6-final-25-2026-11-24.json"
+    "contract-clauses-wave6-final-25-2026-11-24.json",
+    "audits/fulltext3-2026-11-25/elite-trader-funding.json"
    ],
    "counts": {
     "rule": 3,
-    "discretion": 0,
+    "discretion": 2,
     "contradiction": 0,
-    "version": 1,
+    "version": 2,
     "payout": 0,
-    "safeguard": 0,
+    "safeguard": 1,
     "legal": 0,
     "history": 0,
     "gap": 0
@@ -6628,6 +6815,42 @@
      "locator": "PDF copy of the published terms read on 2026-11-25",
      "checkedOn": "2026-11-25",
      "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. GOAT may 'disallow or block any Trader from participating in the program for any reason, in the Company's sole and absolute discretion'; several prohibited practices are 'as determined by the Company in its sole and absolute discretion', with forfeiture of associated profits or payouts.",
+     "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+     "locator": "§4.6; prohibited practices",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Profits removed while losses stay counted. Trades closed faster than the minimum holding time: 'Profits from those trades are not included in payout calculations, while losses still count.'",
+     "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+     "locator": "Minimum holding time",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "An account closed because GOAT judges the trading style unsuitable, without any other violation, is refunded in full.",
+     "source": "https://help.goatfundedtrader.com/en/articles/10742118-what-are-prohibited-trading-practices",
+     "locator": "Prohibited trading practices",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. 1-Step and 2-Step models: no consistency rule (Instant GOAT 15%).",
+     "source": "https://help.goatfundedtrader.com/en/articles/10630134-1-step-model",
+     "locator": "Model overview",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -6654,16 +6877,17 @@
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
     "v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json",
-    "audits/clause-review-2026-11-25/goat-funded-trader.json"
+    "audits/clause-review-2026-11-25/goat-funded-trader.json",
+    "audits/fulltext3-2026-11-25/goat-funded-trader.json"
    ],
    "trustpilotUrlOnly": "https://www.trustpilot.com/review/goatfundedtrader.com",
    "counts": {
-    "rule": 5,
-    "discretion": 4,
+    "rule": 7,
+    "discretion": 5,
     "contradiction": 0,
     "version": 0,
     "payout": 0,
-    "safeguard": 1,
+    "safeguard": 2,
     "legal": 0,
     "history": 0,
     "gap": 0
@@ -11137,6 +11361,33 @@
      "source": "https://www.tradeday.com/terms-and-conditions",
      "locator": "Definitions and funding section",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Prohibited Conduct includes 'other conduct which, in the sole discretion of TradeDay, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; TradeDay may then 'remove any Simulated Account profits, delete a trading day, reset an Account, or ban a User'.",
+     "source": "https://www.tradeday.com/terms-and-conditions",
+     "locator": "§23 Prohibited Conduct",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Trading Rules 'are subject to change by TradeDay in its sole and absolute discretion from time to time' and 'remain subject to change at any time'; the user must stay current.",
+     "source": "https://www.tradeday.com/terms-and-conditions",
+     "locator": "§23 Trading Rules",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. Funded SIM and Funded Live accounts 'are governed by a separate agreement between the User and TradeDay' (the 'Funded SIM Account Agreement that you execute'), not published with the terms.",
+     "source": "https://www.tradeday.com/terms-and-conditions",
+     "locator": "§1 Definitions; §3; §7",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -11161,18 +11412,19 @@
    ],
    "sourceFiles": [
     "contract-clauses-wave5-six-2026-11-24.json",
-    "audits/clause-review-2026-11-25/tradeday.json"
+    "audits/clause-review-2026-11-25/tradeday.json",
+    "audits/fulltext3-2026-11-25/tradeday.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 3,
+    "discretion": 4,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 0,
     "safeguard": 0,
     "legal": 0,
     "history": 0,
-    "gap": 0
+    "gap": 1
    },
    "status": "partial"
   },
@@ -11903,7 +12155,7 @@
    "slug": "uprofit-trader",
    "name": "UProfit Trader",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -11913,6 +12165,24 @@
      "source": "https://help.uprofittrader.com/hc/en-us/articles/38280308499604-Trading-Best-Practices-Guide",
      "locator": "Trading Best Practices Guide (Nov 2026)",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Severe sanction attached to a rule breach. Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
+     "source": "https://uprofit.com/terms-and-conditions",
+     "locator": "Prohibited practices; cancellation policy",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Practices that 'at our sole discretion, represent non-viable strategies' may lead to 'disciplinary actions, such as significant fines, trading restrictions, or permanent bans' (no explicit payout forfeiture outside the VPN clause).",
+     "source": "https://uprofit.com/terms-and-conditions",
+     "locator": "§10.2",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -11923,10 +12193,11 @@
     "Obtain the Trader Agreement per product and the reasons/recourse actually contracted; check how severe sanctions are for non-fraudulent behaviour."
    ],
    "sourceFiles": [
-    "contract-clauses-medium-firms-2026-11-24.json"
+    "contract-clauses-medium-firms-2026-11-24.json",
+    "audits/fulltext3-2026-11-25/uprofit-trader.json"
    ],
    "counts": {
-    "rule": 0,
+    "rule": 2,
     "discretion": 0,
     "contradiction": 0,
     "version": 0,

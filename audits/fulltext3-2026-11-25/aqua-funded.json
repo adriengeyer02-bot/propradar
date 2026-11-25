@@ -1,0 +1,22 @@
+{
+ "slug": "aqua-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Aqua Funded 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy'; strategy changes between assessment and funded stage are prohibited 'as determined by the Company ... at their discretion'.",
+   "source": "https://www.aquafunded.com/legal/terms-and-conditions",
+   "locator": "Risk management; prohibited strategies",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Two Step Pro funded stage: 50% consistency (15-25% on Instant, Aqua Man and One Step Pro).",
+   "source": "https://help.aquafunded.com/en/articles/11875903",
+   "locator": "Consistency rule",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

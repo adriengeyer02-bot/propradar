@@ -1,0 +1,29 @@
+{
+ "slug": "tradeday",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Prohibited Conduct includes 'other conduct which, in the sole discretion of TradeDay, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; TradeDay may then 'remove any Simulated Account profits, delete a trading day, reset an Account, or ban a User'.",
+   "source": "https://www.tradeday.com/terms-and-conditions",
+   "locator": "§23 Prohibited Conduct",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "Trading Rules 'are subject to change by TradeDay in its sole and absolute discretion from time to time' and 'remain subject to change at any time'; the user must stay current.",
+   "source": "https://www.tradeday.com/terms-and-conditions",
+   "locator": "§23 Trading Rules",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B7",
+   "text": "Funded SIM and Funded Live accounts 'are governed by a separate agreement between the User and TradeDay' (the 'Funded SIM Account Agreement that you execute'), not published with the terms.",
+   "source": "https://www.tradeday.com/terms-and-conditions",
+   "locator": "§1 Definitions; §3; §7",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

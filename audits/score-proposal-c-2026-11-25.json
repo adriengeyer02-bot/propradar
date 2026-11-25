@@ -323,6 +323,67 @@
    "founded": 2019
   },
   {
+   "slug": "tradeday",
+   "name": "TradeDay",
+   "current": 67,
+   "proposed": 77,
+   "raw": 77,
+   "flag": "",
+   "delta": 10,
+   "ceiling": 95,
+   "ceilingWhy": "6 ans + preuve",
+   "penalties": "B2 −8 · B3 −5 · B7 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Prohibited Conduct includes 'other conduct which, in the sole discretion of TradeDay, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; TradeDay may then 'remove any Simulated Account profits, delete a trading day, reset an Account, or ban a User'.",
+     "url": "https://www.tradeday.com/terms-and-conditions",
+     "heading": "§23 Prohibited Conduct"
+    },
+    "B3": {
+     "text": "Trading Rules 'are subject to change by TradeDay in its sole and absolute discretion from time to time' and 'remain subject to change at any time'; the user must stay current.",
+     "url": "https://www.tradeday.com/terms-and-conditions",
+     "heading": "§23 Trading Rules"
+    },
+    "B7": {
+     "text": "Funded SIM and Funded Live accounts 'are governed by a separate agreement between the User and TradeDay' (the 'Funded SIM Account Agreement that you execute'), not published with the terms.",
+     "url": "https://www.tradeday.com/terms-and-conditions",
+     "heading": "§1 Definitions; §3; §7"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited Conduct includes 'other conduct which, in the sole discretion of TradeDay, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; TradeDay may then 'remove any Simulated Account profits, delete a trading day, reset an Account, or ban a User'.",
+     "source": "https://www.tradeday.com/terms-and-conditions",
+     "locator": "§23 Prohibited Conduct"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Trading Rules 'are subject to change by TradeDay in its sole and absolute discretion from time to time' and 'remain subject to change at any time'; the user must stay current.",
+     "source": "https://www.tradeday.com/terms-and-conditions",
+     "locator": "§23 Trading Rules"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Funded SIM and Funded Live accounts 'are governed by a separate agreement between the User and TradeDay' (the 'Funded SIM Account Agreement that you execute'), not published with the terms.",
+     "source": "https://www.tradeday.com/terms-and-conditions",
+     "locator": "§1 Definitions; §3; §7"
+    }
+   ],
+   "age": 6,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 16323563
+    }
+   ],
+   "founded": 2020
+  },
+  {
    "slug": "funding-pips",
    "name": "Funding Pips",
    "current": 76,
@@ -475,37 +536,6 @@
     }
    ],
    "founded": 2021
-  },
-  {
-   "slug": "brightfunded",
-   "name": "BrightFunded",
-   "current": 72,
-   "proposed": 72,
-   "raw": 79,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 85,
-   "ceilingWhy": "3 ans + preuve",
-   "penalties": "Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 11933014
-    }
-   ],
-   "founded": 2023
   },
   {
    "slug": "instant-funding",
@@ -780,6 +810,81 @@
    "founded": 2016
   },
   {
+   "slug": "alpha-capital-group",
+   "name": "Alpha Capital Group",
+   "current": 67,
+   "proposed": 71,
+   "raw": 71,
+   "flag": "",
+   "delta": 4,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "B2 −8 · B3 −5 · B6 −5 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha 'reserve[s] the right to determine, at our own discretion, whether certain virtual trades, practices, strategies, or situations are not allowed'; trades judged gambling lead to 'removal of profits'.",
+     "url": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "heading": "Schedule Analyst Performance Fees §2.6; §9.1.7; Alpha Direct plan"
+    },
+    "B6": {
+     "text": "§27.1: the user 'irrevocably agrees ... not to disparage or denigrate Alpha', including 'any form of public statement ... on any social media platforms ... that could be construed as negative'; Alpha may suspend or terminate access for such conduct at its sole discretion, 'final and binding'.",
+     "url": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "heading": "§27.1; §27.3"
+    },
+    "B3": {
+     "text": "Alpha may change the Terms and Services by posting updates and 'will, however, notify you by email if there is a material change to an Evaluation which you are currently participating in': changes reach evaluations already bought.",
+     "url": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "heading": "§5.1"
+    },
+    "CONS": {
+     "pct": 40.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Best Day Rule 40% for Alpha Pro, Swing, One and Three (15% for Alpha Direct).",
+     "url": "https://alphacapitalgroup.uk/terms-and-conditions"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha 'reserve[s] the right to determine, at our own discretion, whether certain virtual trades, practices, strategies, or situations are not allowed'; trades judged gambling lead to 'removal of profits'.",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "Schedule Analyst Performance Fees §2.6; §9.1.7; Alpha Direct plan"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Alpha may change the Terms and Services by posting updates and 'will, however, notify you by email if there is a material change to an Evaluation which you are currently participating in': changes reach evaluations already bought.",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "§5.1"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "§27.1: the user 'irrevocably agrees ... not to disparage or denigrate Alpha', including 'any form of public statement ... on any social media platforms ... that could be construed as negative'; Alpha may suspend or terminate access for such conduct at its sole discretion, 'final and binding'.",
+     "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+     "locator": "§27.1; §27.3"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 74793046
+    }
+   ],
+   "founded": 2021
+  },
+  {
    "slug": "pipfarm",
    "name": "PipFarm",
    "current": 71,
@@ -836,6 +941,45 @@
    "age": 4,
    "ceilingEvidence": [],
    "founded": 2022
+  },
+  {
+   "slug": "uprofit-trader",
+   "name": "UProfit Trader",
+   "current": 69,
+   "proposed": 70,
+   "raw": 70,
+   "flag": "",
+   "delta": 1,
+   "ceiling": 75,
+   "ceilingWhy": "7 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3 · E_HARSH −2",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "E_HARSH": {
+     "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
+     "url": "https://uprofit.com/terms-and-conditions",
+     "heading": "Prohibited practices; cancellation policy"
+    }
+   },
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.4 / 6554"
+    },
+    {
+     "code": "E_HARSH",
+     "points": 2,
+     "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
+     "source": "https://uprofit.com/terms-and-conditions",
+     "locator": "Prohibited practices; cancellation policy"
+    }
+   ],
+   "age": 7,
+   "ceilingEvidence": [],
+   "founded": 2019
   },
   {
    "slug": "breakout-prop",
@@ -922,58 +1066,6 @@
    "founded": 2023
   },
   {
-   "slug": "aqua-funded",
-   "name": "AquaFunded",
-   "current": 69,
-   "proposed": 69,
-   "raw": 71,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 85,
-   "ceilingWhy": "3 ans + preuve",
-   "penalties": "D:payout-cap −4 · D:funded-trailing-drawdown −2 · D:split-reduction −2 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "Funded rewards — general limits: The first request normally opens 14 days after the first funded trade. For accounts of $100K or more, each of the first two reward requests is capped at $10,000; the minimum request is $100. The stated 24-business-hour guarantee starts after a payout is approved.",
-     "source": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work",
-     "locator": "main programme scored: instant-standard"
-    },
-    {
-     "code": "D_FUNDED_TRAILING_DRAWDOWN",
-     "points": 2,
-     "text": "Instant Funding Standard — hard loss limits: The model has a 3% daily equity/balance-based loss floor, resetting at 00:00 UTC, and a 5% maximum loss floor trailing upward at daily reset. The higher balance or equity at the reset determines the reference.",
-     "source": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
-     "locator": "main programme scored: instant-standard"
-    },
-    {
-     "code": "D_SPLIT_REDUCTION",
-     "points": 2,
-     "text": "Instant Funding Standard — floating-loss strikes: If combined floating PnL reaches minus 1% of the initial balance, the first occurrence cuts the payout split to 50%, the second cuts it to 25%, and the third closes the account.",
-     "source": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
-     "locator": "main programme scored: instant-standard"
-    },
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 13335576
-    }
-   ],
-   "founded": 2023
-  },
-  {
    "slug": "audacity-capital",
    "name": "Audacity Capital",
    "current": 77,
@@ -998,32 +1090,6 @@
    "age": 14,
    "ceilingEvidence": [],
    "founded": 2012
-  },
-  {
-   "slug": "uprofit-trader",
-   "name": "UProfit Trader",
-   "current": 69,
-   "proposed": 69,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "7 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.4 / 6554"
-    }
-   ],
-   "age": 7,
-   "ceilingEvidence": [],
-   "founded": 2019
   },
   {
    "slug": "ftuk",
@@ -1111,6 +1177,88 @@
    "founded": 2021
   },
   {
+   "slug": "elite-trader-funding",
+   "name": "Elite Trader Funding",
+   "current": 66,
+   "proposed": 68,
+   "raw": 68,
+   "flag": "",
+   "delta": 2,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "B2 −8 · B3 −5 · B6 −5 · D:payout-cap −4 · D:split-reduction −2 · Trustpilot < 4,0 −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
+     "url": "https://elitetraderfunding.app/terms-of-service",
+     "heading": "Reward eligibility; violations"
+    },
+    "B6": {
+     "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
+     "url": "https://elitetraderfunding.app/terms-of-service",
+     "heading": "Prohibited conduct (ad)"
+    },
+    "B3": {
+     "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
+     "url": "https://elitetraderfunding.app/terms-of-service",
+     "heading": "LIVE ELITE program"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Reward eligibility; violations"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "LIVE ELITE program"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Prohibited conduct (ad)"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All plans — Elite sim-funded stage: Each payout cycle has a $100 minimum and a maximum that scales with account size and completed cycles (example on a $50K account: $1,250 in the first cycle, rising toward $2,000). Sim payouts are capped at \"$25,000 total per trader\" across all accounts, with a $150,000 lifetime sim cap across re-entries.",
+     "source": "https://elitetraderfunding.app/payouts",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "D_SPLIT_REDUCTION",
+     "points": 2,
+     "text": "All plans — Elite sim-funded stage: Reaching $25,000 in cumulative sim payouts moves the trader to LIVE ELITE, where the split is \"80% to you, 20% to ETF\" (sim-funded split: up to 100%). The terms add that ETF may convert a trader to LIVE ELITE \"at any time\" at its sole discretion, and a trader who declines is prohibited from using ETF's services for two calendar years.",
+     "source": "https://elitetraderfunding.app/elite",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.8 / 1174"
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 10015655
+    }
+   ],
+   "founded": 2021
+  },
+  {
    "slug": "funding-traders",
    "name": "Funding Traders",
    "current": 68,
@@ -1142,37 +1290,6 @@
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
-  },
-  {
-   "slug": "alpha-capital-group",
-   "name": "Alpha Capital Group",
-   "current": 67,
-   "proposed": 67,
-   "raw": 89,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 95,
-   "ceilingWhy": "5 ans + preuve",
-   "penalties": "Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 5,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 74793046
-    }
-   ],
-   "founded": 2021
   },
   {
    "slug": "lark-funding",
@@ -1253,6 +1370,38 @@
    "founded": 2020
   },
   {
+   "slug": "bulenox",
+   "name": "Bulenox",
+   "current": 62,
+   "proposed": 67,
+   "raw": 67,
+   "flag": "",
+   "delta": 5,
+   "ceiling": 75,
+   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Abuse includes 'implementation of reckless transactions in rough markets'; 'If abuse is suspected, we reserve the right to refuse to claim any profit.' Bulenox may also 'restrict or limit or terminate account(s) for any reasons at any time without prior notice'.",
+     "url": "https://bulenox.com/legal/Terms_of_Use.pdf",
+     "heading": "Algorithms and auto trading; user representations"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Abuse includes 'implementation of reckless transactions in rough markets'; 'If abuse is suspected, we reserve the right to refuse to claim any profit.' Bulenox may also 'restrict or limit or terminate account(s) for any reasons at any time without prior notice'.",
+     "source": "https://bulenox.com/legal/Terms_of_Use.pdf",
+     "locator": "Algorithms and auto trading; user representations"
+    }
+   ],
+   "age": 6,
+   "ceilingEvidence": [],
+   "founded": 2020
+  },
+  {
    "slug": "ment-funding",
    "name": "Ment Funding",
    "current": 67,
@@ -1292,29 +1441,6 @@
    "founded": 2021
   },
   {
-   "slug": "tradeday",
-   "name": "TradeDay",
-   "current": 67,
-   "proposed": 67,
-   "raw": 95,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 95,
-   "ceilingWhy": "6 ans + preuve",
-   "penalties": "aucune",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [],
-   "age": 6,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 16323563
-    }
-   ],
-   "founded": 2020
-  },
-  {
    "slug": "tradefundrr",
    "name": "TradeFundrr",
    "current": 67,
@@ -1330,51 +1456,6 @@
    "items": [],
    "age": 5,
    "ceilingEvidence": [],
-   "founded": 2021
-  },
-  {
-   "slug": "elite-trader-funding",
-   "name": "Elite Trader Funding",
-   "current": 66,
-   "proposed": 66,
-   "raw": 86,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 95,
-   "ceilingWhy": "5 ans + preuve",
-   "penalties": "D:payout-cap −4 · D:split-reduction −2 · Trustpilot < 4,0 −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "All plans — Elite sim-funded stage: Each payout cycle has a $100 minimum and a maximum that scales with account size and completed cycles (example on a $50K account: $1,250 in the first cycle, rising toward $2,000). Sim payouts are capped at \"$25,000 total per trader\" across all accounts, with a $150,000 lifetime sim cap across re-entries.",
-     "source": "https://elitetraderfunding.app/payouts",
-     "locator": "main programme scored: 1step"
-    },
-    {
-     "code": "D_SPLIT_REDUCTION",
-     "points": 2,
-     "text": "All plans — Elite sim-funded stage: Reaching $25,000 in cumulative sim payouts moves the trader to LIVE ELITE, where the split is \"80% to you, 20% to ETF\" (sim-funded split: up to 100%). The terms add that ETF may convert a trader to LIVE ELITE \"at any time\" at its sole discretion, and a trader who declines is prohibited from using ETF's services for two calendar years.",
-     "source": "https://elitetraderfunding.app/elite",
-     "locator": "main programme scored: 1step"
-    },
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.8 / 1174"
-    }
-   ],
-   "age": 5,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 10015655
-    }
-   ],
    "founded": 2021
   },
   {
@@ -1402,6 +1483,50 @@
    "age": 1,
    "ceilingEvidence": [],
    "founded": 2025
+  },
+  {
+   "slug": "brightfunded",
+   "name": "BrightFunded",
+   "current": 72,
+   "proposed": 64,
+   "raw": 64,
+   "flag": "",
+   "delta": -8,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "B1 −15 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B1": {
+     "text": "'Performance rewards are discretionary and do not constitute a guaranteed right or entitlement'; they are processed under a separate Funded Trader Program agreement, and participation in that program is 'at the sole discretion' of Bright Global FZCO.",
+     "url": "https://brightfunded.com/terms-conditions",
+     "heading": "§7.2; §7.8"
+    }
+   },
+   "items": [
+    {
+     "code": "B1",
+     "points": 15,
+     "text": "'Performance rewards are discretionary and do not constitute a guaranteed right or entitlement'; they are processed under a separate Funded Trader Program agreement, and participation in that program is 'at the sole discretion' of Bright Global FZCO.",
+     "source": "https://brightfunded.com/terms-conditions",
+     "locator": "§7.2; §7.8"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 11933014
+    }
+   ],
+   "founded": 2023
   },
   {
    "slug": "hantec-trader",
@@ -1560,42 +1685,6 @@
    "founded": 2023
   },
   {
-   "slug": "alpha-futures",
-   "name": "Alpha Futures",
-   "current": 64,
-   "proposed": 64,
-   "raw": 71,
-   "flag": "hausse bloquée : incidents du dossier à recoder",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "2 ans",
-   "penalties": "D:payout-cap −4",
-   "confidence": "audit en cours (CGU non lues)",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "All Qualified Accounts: Each request is limited to up to 50% of profit and a fixed cap: Zero $1,000/$1,500/$2,500 (25K/50K/100K); Standard $3,000/$4,000/$5,000 (50K/100K/150K); Advanced $15,000 on every size; Direct $1,000 to $3,000 by size. Up to 4 payouts a month.",
-     "source": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
-     "locator": "main programme scored: zero"
-    }
-   ],
-   "age": 2,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 33415099
-    },
-    {
-     "kind": "trustpilot",
-     "rating": 4.3,
-     "count": 6304
-    }
-   ],
-   "founded": 2024
-  },
-  {
    "slug": "hash-hedge",
    "name": "Hash Hedge",
    "current": 61,
@@ -1681,6 +1770,71 @@
    "founded": 2022
   },
   {
+   "slug": "aqua-funded",
+   "name": "AquaFunded",
+   "current": 69,
+   "proposed": 63,
+   "raw": 63,
+   "flag": "",
+   "delta": -6,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "B2 −8 · D:payout-cap −4 · D:funded-trailing-drawdown −2 · D:split-reduction −2 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Aqua Funded 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy'; strategy changes between assessment and funded stage are prohibited 'as determined by the Company ... at their discretion'.",
+     "url": "https://www.aquafunded.com/legal/terms-and-conditions",
+     "heading": "Risk management; prohibited strategies"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Aqua Funded 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy'; strategy changes between assessment and funded stage are prohibited 'as determined by the Company ... at their discretion'.",
+     "source": "https://www.aquafunded.com/legal/terms-and-conditions",
+     "locator": "Risk management; prohibited strategies"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Funded rewards — general limits: The first request normally opens 14 days after the first funded trade. For accounts of $100K or more, each of the first two reward requests is capped at $10,000; the minimum request is $100. The stated 24-business-hour guarantee starts after a payout is approved.",
+     "source": "https://help.aquafunded.com/en/articles/9250906-how-do-rewards-work",
+     "locator": "main programme scored: instant-standard"
+    },
+    {
+     "code": "D_FUNDED_TRAILING_DRAWDOWN",
+     "points": 2,
+     "text": "Instant Funding Standard — hard loss limits: The model has a 3% daily equity/balance-based loss floor, resetting at 00:00 UTC, and a 5% maximum loss floor trailing upward at daily reset. The higher balance or equity at the reset determines the reference.",
+     "source": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
+     "locator": "main programme scored: instant-standard"
+    },
+    {
+     "code": "D_SPLIT_REDUCTION",
+     "points": 2,
+     "text": "Instant Funding Standard — floating-loss strikes: If combined floating PnL reaches minus 1% of the initial balance, the first occurrence cuts the payout split to 50%, the second cuts it to 25%, and the third closes the account.",
+     "source": "https://help.aquafunded.com/en/articles/10476448-instant-funding-standard",
+     "locator": "main programme scored: instant-standard"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 13335576
+    }
+   ],
+   "founded": 2023
+  },
+  {
    "slug": "miltraders",
    "name": "MilTraders",
    "current": 63,
@@ -1758,24 +1912,6 @@
    "founded": 2018
   },
   {
-   "slug": "bulenox",
-   "name": "Bulenox",
-   "current": 62,
-   "proposed": 62,
-   "raw": 75,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [],
-   "age": 6,
-   "ceilingEvidence": [],
-   "founded": 2020
-  },
-  {
    "slug": "crypto-fund-trader",
    "name": "Crypto Fund Trader",
    "current": 62,
@@ -1851,6 +1987,76 @@
    "age": 4,
    "ceilingEvidence": [],
    "founded": 2022
+  },
+  {
+   "slug": "goat-funded-trader",
+   "name": "GOAT Funded Trader",
+   "current": 59,
+   "proposed": 61,
+   "raw": 61,
+   "flag": "",
+   "delta": 2,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "B2 −8 · B5 −3 · D:payout-cap −4 · D:payout-conditions −3 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "GOAT may 'disallow or block any Trader from participating in the program for any reason, in the Company's sole and absolute discretion'; several prohibited practices are 'as determined by the Company in its sole and absolute discretion', with forfeiture of associated profits or payouts.",
+     "url": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+     "heading": "§4.6; prohibited practices"
+    },
+    "B5": {
+     "text": "Trades closed faster than the minimum holding time: 'Profits from those trades are not included in payout calculations, while losses still count.'",
+     "url": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+     "heading": "Minimum holding time"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "GOAT may 'disallow or block any Trader from participating in the program for any reason, in the Company's sole and absolute discretion'; several prohibited practices are 'as determined by the Company in its sole and absolute discretion', with forfeiture of associated profits or payouts.",
+     "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+     "locator": "§4.6; prohibited practices"
+    },
+    {
+     "code": "B5",
+     "points": 3,
+     "text": "Trades closed faster than the minimum holding time: 'Profits from those trades are not included in payout calculations, while losses still count.'",
+     "source": "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+     "locator": "Minimum holding time"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "GOAT programmes — funded reward requests: The payout guide sets a $3,000 daily profit ceiling (excess removed), model-specific caps on the first two rewards, and a 3% processing fee.",
+     "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+     "locator": "main programme scored: instant"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "GOAT programmes — purchased after 8 October 2026: Before requesting a reward, the largest winning trade must be at least as large as the largest losing trade. This eligibility test is not itself an account breach.",
+     "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
+     "locator": "main programme scored: instant"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 27799318
+    }
+   ],
+   "founded": 2023
   },
   {
    "slug": "traders-central",
@@ -2030,51 +2236,6 @@
    "age": 5,
    "ceilingEvidence": [],
    "founded": 2021
-  },
-  {
-   "slug": "goat-funded-trader",
-   "name": "GOAT Funded Trader",
-   "current": 59,
-   "proposed": 59,
-   "raw": 72,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 85,
-   "ceilingWhy": "3 ans + preuve",
-   "penalties": "D:payout-cap −4 · D:payout-conditions −3 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "GOAT programmes — funded reward requests: The payout guide sets a $3,000 daily profit ceiling (excess removed), model-specific caps on the first two rewards, and a 3% processing fee.",
-     "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
-     "locator": "main programme scored: instant"
-    },
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "GOAT programmes — purchased after 8 October 2026: Before requesting a reward, the largest winning trade must be at least as large as the largest losing trade. This eligibility test is not itself an account breach.",
-     "source": "https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival",
-     "locator": "main programme scored: instant"
-    },
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 27799318
-    }
-   ],
-   "founded": 2023
   },
   {
    "slug": "rebelsfunding",
@@ -3092,6 +3253,79 @@
    "founded": 2024
   },
   {
+   "slug": "alpha-futures",
+   "name": "Alpha Futures",
+   "current": 64,
+   "proposed": 53,
+   "raw": 53,
+   "flag": "",
+   "delta": -11,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans",
+   "penalties": "B2 −8 · B3 −5 · B6 −5 · D:payout-cap −4",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha may determine at its own discretion whether practices are not allowed.",
+     "url": "https://alpha-futures.com/terms-and-conditions",
+     "heading": "Schedule §1.2.6; §8.1.7"
+    },
+    "B6": {
+     "text": "§26.1: the user irrevocably agrees not to disparage or denigrate Alpha in any public statement 'that could be construed as negative', under threat of 'injunctive relief and damages'; the clause survives termination.",
+     "url": "https://alpha-futures.com/terms-and-conditions",
+     "heading": "§26.1"
+    },
+    "B3": {
+     "text": "Alpha may change the Terms by posting and 'will, however, notify you by email if there is a material change to a Challenge which you are currently participating in'; Schedule 5 rules 'may be updated from time to time'.",
+     "url": "https://alpha-futures.com/terms-and-conditions",
+     "heading": "§4.1; §8.1.8"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "'The Analyst Performance Fee will not be paid where we ascertain, in our sole discretion, that any of your virtual trades have been made in contravention of the Virtual Trading Rules ... or otherwise in contravention of these Terms'; Alpha may determine at its own discretion whether practices are not allowed.",
+     "source": "https://alpha-futures.com/terms-and-conditions",
+     "locator": "Schedule §1.2.6; §8.1.7"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Alpha may change the Terms by posting and 'will, however, notify you by email if there is a material change to a Challenge which you are currently participating in'; Schedule 5 rules 'may be updated from time to time'.",
+     "source": "https://alpha-futures.com/terms-and-conditions",
+     "locator": "§4.1; §8.1.8"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "§26.1: the user irrevocably agrees not to disparage or denigrate Alpha in any public statement 'that could be construed as negative', under threat of 'injunctive relief and damages'; the clause survives termination.",
+     "source": "https://alpha-futures.com/terms-and-conditions",
+     "locator": "§26.1"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All Qualified Accounts: Each request is limited to up to 50% of profit and a fixed cap: Zero $1,000/$1,500/$2,500 (25K/50K/100K); Standard $3,000/$4,000/$5,000 (50K/100K/150K); Advanced $15,000 on every size; Direct $1,000 to $3,000 by size. Up to 4 payouts a month.",
+     "source": "https://alpha-futures.com/posts/alpha-futures-payout-rules-2026",
+     "locator": "main programme scored: zero"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 33415099
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.3,
+     "count": 6304
+    }
+   ],
+   "founded": 2024
+  },
+  {
    "slug": "equity-edge",
    "name": "Equity Edge",
    "current": 53,
@@ -3279,15 +3513,40 @@
    "name": "E8 Futures",
    "current": 52,
    "proposed": 52,
-   "raw": 65,
-   "flag": "hausse en attente de lecture complète",
+   "raw": 52,
+   "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-cap −4 · D:account-ends-after-payouts −3 · D:payout-conditions −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
+   "penalties": "B2 −8 · B3 −5 · D:payout-cap −4 · D:account-ends-after-payouts −3 · D:payout-conditions −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "If 'E8 otherwise determines in its sole discretion that you do not meet the eligibility requirements or are not in compliance with the agreements, E8 reserves the right to terminate your account and withhold or revoke the awarding of any payout awards'; forfeiture may occur 'if it is determined that a participant did not comply with the agreements in any manner as determined by E8 in its sole discretion'.",
+     "url": "https://e8futures.com/e8-markets-terms-and-conditions",
+     "heading": "§5 Payout awards; §9.3"
+    },
+    "B3": {
+     "text": "'E8 may modify or eliminate features retroactively, and no user shall have a claim to prior functionality, pricing, payout structure, or simulation logic'; Terms changes are effective immediately upon posting.",
+     "url": "https://e8futures.com/e8-markets-terms-and-conditions",
+     "heading": "§6 (no grandfathering or legacy rights); §13.1"
+    }
+   },
    "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "If 'E8 otherwise determines in its sole discretion that you do not meet the eligibility requirements or are not in compliance with the agreements, E8 reserves the right to terminate your account and withhold or revoke the awarding of any payout awards'; forfeiture may occur 'if it is determined that a participant did not comply with the agreements in any manner as determined by E8 in its sole discretion'.",
+     "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+     "locator": "§5 Payout awards; §9.3"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "'E8 may modify or eliminate features retroactively, and no user shall have a claim to prior functionality, pricing, payout structure, or simulation logic'; Terms changes are effective immediately upon posting.",
+     "source": "https://e8futures.com/e8-markets-terms-and-conditions",
+     "locator": "§6 (no grandfathering or legacy rights); §13.1"
+    },
     {
      "code": "D_PAYOUT_CAP",
      "points": 4,
