@@ -1,0 +1,2048 @@
+{
+  "date": "2026-11-25",
+  "status": "EXPERIMENT_ONLY_NOT_APPROVED_NOT_RANKING",
+  "scope": "Cross-sectional rubric stress test on the Nov 24 audit snapshot, not statistical historical backtest or current complete product audit. Purposive sample; no market share claim. Ranges are subjective calibration scenarios, not statistical confidence intervals or guaranteed bounds.",
+  "method": {
+    "criteria": {
+      "contract": 25,
+      "drawdown": 20,
+      "freedom": 20,
+      "payout": 15,
+      "cost": 10,
+      "split": 10
+    },
+    "consistency": ">=40 transparent 0 deduction, 30–39 2, 20–29 5, 15–19 8, <15 10; separate strategy burden range. History numerator additional constraint within same criterion; no score outside cap.",
+    "split": "90–100=10,80–89=8,70–79=6,60–69=4,50–59=2,<50=0; base rate before exceptional sanctions; unknown [0,10].",
+    "intervals": "Editorial judgment based on documented constraints; unresolved dimensions widen ranges, completely missing dimensions [0,max]. Midpoint assumes halfway within each interval solely for stress test. Not a production method. Cost lacks calibrated comparable price/drawdown ratios; do not interpret as assessed. No score of firm or affiliate inclusion.",
+    "sensitivity": "Contract40 uses weights 40/20/15/15/5/5, same fraction in each category. Not an approved alternative.",
+    "risk": "Do not penalize twice; scheduled liquidity limits in payout, forfeiture and arbitrary sanctions in contract, risk thresholds in drawdown, strategy permission in freedom. Some documented effects are intertwined; adjudication required before scoring."
+  },
+  "stats": {
+    "programs": 40,
+    "firms": 24,
+    "market": {
+      "CFD": 13,
+      "Instant": 15,
+      "Futures": 10,
+      "CFD/crypto": 2
+    },
+    "mean": 52.6125,
+    "meanContract40": 51.21499999999999,
+    "meanRangeWidth": 61.925,
+    "midpointAbove70": 1,
+    "midpointBelow50": 17,
+    "overlapPairs": 780,
+    "fullUnknown": {
+      "contract": 4,
+      "drawdown": 15,
+      "freedom": 1,
+      "payout": 6,
+      "cost": 34,
+      "split": 25
+    }
+  },
+  "records": [
+    {
+      "slug": "ftmo",
+      "program": "CFD 1-Step",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          10,
+          22
+        ],
+        "drawdown": [
+          11,
+          17
+        ],
+        "freedom": [
+          15,
+          19
+        ],
+        "payout": [
+          5,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          10,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 16,
+        "drawdown": 14,
+        "freedom": 17,
+        "payout": 10,
+        "cost": 5,
+        "split": 10
+      },
+      "scoreRange": [
+        51,
+        93
+      ],
+      "simulationMidpoint": 72,
+      "sensitivityContract40": 69.9,
+      "notes": "50% net eligibility; EOD trailing; 90% split; qualitative risk rules",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "ftmo",
+      "program": "CFD 2-Step Standard",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          10,
+          22
+        ],
+        "drawdown": [
+          8,
+          20
+        ],
+        "freedom": [
+          10,
+          19
+        ],
+        "payout": [
+          4,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 16,
+        "drawdown": 14,
+        "freedom": 14.5,
+        "payout": 9.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        32,
+        96
+      ],
+      "simulationMidpoint": 64,
+      "sensitivityContract40": 65,
+      "notes": "No percentage rule; gap/news and general restrictions; exact funded split and agreement need reconciliation",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "ftmo",
+      "program": "CFD Instant",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          10,
+          22
+        ],
+        "drawdown": [
+          4,
+          20
+        ],
+        "freedom": [
+          13,
+          17
+        ],
+        "payout": [
+          5,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          10,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 16,
+        "drawdown": 12,
+        "freedom": 15,
+        "payout": 10,
+        "cost": 5,
+        "split": 10
+      },
+      "scoreRange": [
+        42,
+        94
+      ],
+      "simulationMidpoint": 68,
+      "sensitivityContract40": 66.4,
+      "notes": "30% resets each payout; 90% split; funded terms accepted at purchase",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "the5ers",
+      "program": "Bootcamp",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          9,
+          22
+        ],
+        "drawdown": [
+          8,
+          20
+        ],
+        "freedom": [
+          15,
+          20
+        ],
+        "payout": [
+          8,
+          12
+        ],
+        "cost": [
+          0,
+          7
+        ],
+        "split": [
+          2,
+          2
+        ]
+      },
+      "midpoints": {
+        "contract": 15.5,
+        "drawdown": 14,
+        "freedom": 17.5,
+        "payout": 10,
+        "cost": 3.5,
+        "split": 2
+      },
+      "scoreRange": [
+        42,
+        83
+      ],
+      "simulationMidpoint": 62.5,
+      "sensitivityContract40": 64.7,
+      "notes": "3% soft pause in Pro; 14-day cycle resets on scaling; 50% starting split",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "the5ers",
+      "program": "High Stakes",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          9,
+          22
+        ],
+        "drawdown": [
+          4,
+          20
+        ],
+        "freedom": [
+          7,
+          18
+        ],
+        "payout": [
+          5,
+          11
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          8,
+          8
+        ]
+      },
+      "midpoints": {
+        "contract": 15.5,
+        "drawdown": 12,
+        "freedom": 12.5,
+        "payout": 8,
+        "cost": 5,
+        "split": 8
+      },
+      "scoreRange": [
+        33,
+        89
+      ],
+      "simulationMidpoint": 61,
+      "sensitivityContract40": 60.7,
+      "notes": "News profits removed, losses retained; 50K/100K caps; 80% starting split",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "the5ers",
+      "program": "Hyper Growth",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          9,
+          22
+        ],
+        "drawdown": [
+          4,
+          20
+        ],
+        "freedom": [
+          11,
+          20
+        ],
+        "payout": [
+          8,
+          13
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          2,
+          2
+        ]
+      },
+      "midpoints": {
+        "contract": 15.5,
+        "drawdown": 12,
+        "freedom": 15.5,
+        "payout": 10.5,
+        "cost": 5,
+        "split": 2
+      },
+      "scoreRange": [
+        34,
+        87
+      ],
+      "simulationMidpoint": 60.5,
+      "sensitivityContract40": 62.4,
+      "notes": "News/weekend allowed subject to prohibited strategies; 14 days; initial 50% split",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "topstep",
+      "program": "XFA Standard (50K path)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          7,
+          21
+        ],
+        "drawdown": [
+          4,
+          16
+        ],
+        "freedom": [
+          12,
+          18
+        ],
+        "payout": [
+          5,
+          9
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          10,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 14,
+        "drawdown": 10,
+        "freedom": 15,
+        "payout": 7,
+        "cost": 5,
+        "split": 10
+      },
+      "scoreRange": [
+        38,
+        84
+      ],
+      "simulationMidpoint": 61,
+      "sensitivityContract40": 58.2,
+      "notes": "Five $150 winning days; 50% balance/$2K cap; MLL zero after payout; 90%",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "topstep",
+      "program": "XFA Consistency (50K path)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          7,
+          21
+        ],
+        "drawdown": [
+          4,
+          16
+        ],
+        "freedom": [
+          12,
+          18
+        ],
+        "payout": [
+          7,
+          11
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          10,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 14,
+        "drawdown": 10,
+        "freedom": 15,
+        "payout": 9,
+        "cost": 5,
+        "split": 10
+      },
+      "scoreRange": [
+        40,
+        86
+      ],
+      "simulationMidpoint": 63,
+      "sensitivityContract40": 60.2,
+      "notes": "Three days, 40% eligibility; 50% balance/$3K cap; MLL zero; 90%",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "apex-trader-funding",
+      "program": "EOD evaluation → PA (50K)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          0,
+          6
+        ],
+        "drawdown": [
+          6,
+          17
+        ],
+        "freedom": [
+          10,
+          18
+        ],
+        "payout": [
+          1,
+          6
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 3,
+        "drawdown": 11.5,
+        "freedom": 14,
+        "payout": 3.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        17,
+        67
+      ],
+      "simulationMidpoint": 42,
+      "sensitivityContract40": 35.3,
+      "notes": "Any/no-reason reward denial; six payouts then closure; 50% consistency; safety net",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "apex-trader-funding",
+      "program": "Intraday trailing evaluation → PA",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          0,
+          6
+        ],
+        "drawdown": [
+          3,
+          14
+        ],
+        "freedom": [
+          10,
+          18
+        ],
+        "payout": [
+          1,
+          7
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 3,
+        "drawdown": 8.5,
+        "freedom": 14,
+        "payout": 4,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        14,
+        65
+      ],
+      "simulationMidpoint": 39.5,
+      "sensitivityContract40": 32.8,
+      "notes": "Same reward discretion; intraday trailing; six payouts; 50% gate",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "fundednext",
+      "program": "Stellar Instant",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          3,
+          15
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          0,
+          20
+        ],
+        "payout": [
+          6,
+          12
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          6,
+          6
+        ]
+      },
+      "midpoints": {
+        "contract": 9,
+        "drawdown": 10,
+        "freedom": 10,
+        "payout": 9,
+        "cost": 5,
+        "split": 6
+      },
+      "scoreRange": [
+        15,
+        83
+      ],
+      "simulationMidpoint": 49,
+      "sensitivityContract40": 46.4,
+      "notes": "Conditional reward and clawback; 5% on demand or 14 days/1%; initial 70% split",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "fundednext",
+      "program": "Futures Direct",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          3,
+          15
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          3,
+          13
+        ],
+        "payout": [
+          0,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 9,
+        "drawdown": 10,
+        "freedom": 8,
+        "payout": 7.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        6,
+        83
+      ],
+      "simulationMidpoint": 44.5,
+      "sensitivityContract40": 42.9,
+      "notes": "20% perpetual best-day rule; conditional reward, repayment and penalty provisions",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave2-five-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "hyrotrader",
+      "program": "One-Step",
+      "market": "CFD/crypto",
+      "intervals": {
+        "contract": [
+          13,
+          24
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          14,
+          19
+        ],
+        "payout": [
+          0,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 18.5,
+        "drawdown": 10,
+        "freedom": 16.5,
+        "payout": 7.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        27,
+        98
+      ],
+      "simulationMidpoint": 62.5,
+      "sensitivityContract40": 64.5,
+      "notes": "40% target-based cap; excess excluded from target, not deleted; nonretroactivity safeguards",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "hyrotrader",
+      "program": "Hyro Instant",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          13,
+          24
+        ],
+        "drawdown": [
+          0,
+          17
+        ],
+        "freedom": [
+          4,
+          18
+        ],
+        "payout": [
+          9,
+          14
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 18.5,
+        "drawdown": 8.5,
+        "freedom": 11,
+        "payout": 11.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        26,
+        93
+      ],
+      "simulationMidpoint": 59.5,
+      "sensitivityContract40": 62.9,
+      "notes": "2% loss per closed trade, second breach closes; three days first payout",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "city-traders-imperium",
+      "program": "Instant Funding",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          0,
+          25
+        ],
+        "drawdown": [
+          10,
+          17
+        ],
+        "freedom": [
+          9,
+          19
+        ],
+        "payout": [
+          0,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          2,
+          2
+        ]
+      },
+      "midpoints": {
+        "contract": 12.5,
+        "drawdown": 13.5,
+        "freedom": 14,
+        "payout": 7.5,
+        "cost": 5,
+        "split": 2
+      },
+      "scoreRange": [
+        21,
+        88
+      ],
+      "simulationMidpoint": 54.5,
+      "sensitivityContract40": 55,
+      "notes": "6% static; initial half allocation and 50% split; consistency scaling only; funded contract missing",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "city-traders-imperium",
+      "program": "Direct Funding",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          0,
+          25
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          12,
+          19
+        ],
+        "payout": [
+          9,
+          15
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          6,
+          6
+        ]
+      },
+      "midpoints": {
+        "contract": 12.5,
+        "drawdown": 10,
+        "freedom": 15.5,
+        "payout": 12,
+        "cost": 5,
+        "split": 6
+      },
+      "scoreRange": [
+        27,
+        95
+      ],
+      "simulationMidpoint": 61,
+      "sensitivityContract40": 59.1,
+      "notes": "70% initial split, day five first request; no payout consistency; funded contract missing",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "audacity-capital",
+      "program": "Ability One",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          9,
+          21
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          13,
+          19
+        ],
+        "payout": [
+          0,
+          15
+        ],
+        "cost": [
+          0,
+          7
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 15,
+        "drawdown": 10,
+        "freedom": 16,
+        "payout": 7.5,
+        "cost": 3.5,
+        "split": 5
+      },
+      "scoreRange": [
+        22,
+        92
+      ],
+      "simulationMidpoint": 57,
+      "sensitivityContract40": 57.8,
+      "notes": "50% live consistency; reasonable gambling/risk discretion; prior cohorts protected",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "audacity-capital",
+      "program": "FTP Instant",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          9,
+          21
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          11,
+          17
+        ],
+        "payout": [
+          0,
+          15
+        ],
+        "cost": [
+          0,
+          7
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 15,
+        "drawdown": 10,
+        "freedom": 14,
+        "payout": 7.5,
+        "cost": 3.5,
+        "split": 5
+      },
+      "scoreRange": [
+        20,
+        90
+      ],
+      "simulationMidpoint": 55,
+      "sensitivityContract40": 56.3,
+      "notes": "35% live consistency; own copying allowed; risk review; nonrefundable fee",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "instant-funding",
+      "program": "One-Phase Pro",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          3,
+          16
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          10,
+          20
+        ],
+        "payout": [
+          0,
+          15
+        ],
+        "cost": [
+          0,
+          8
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 9.5,
+        "drawdown": 10,
+        "freedom": 15,
+        "payout": 7.5,
+        "cost": 4,
+        "split": 5
+      },
+      "scoreRange": [
+        13,
+        89
+      ],
+      "simulationMidpoint": 51,
+      "sensitivityContract40": 48.5,
+      "notes": "40% on-demand eligibility; trader agreement priority; general discretionary trade removal",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "instant-funding",
+      "program": "IF Micro Lite",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          3,
+          16
+        ],
+        "drawdown": [
+          2,
+          16
+        ],
+        "freedom": [
+          2,
+          12
+        ],
+        "payout": [
+          2,
+          8
+        ],
+        "cost": [
+          0,
+          8
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 9.5,
+        "drawdown": 9,
+        "freedom": 7,
+        "payout": 5,
+        "cost": 4,
+        "split": 5
+      },
+      "scoreRange": [
+        9,
+        70
+      ],
+      "simulationMidpoint": 39.5,
+      "sensitivityContract40": 39,
+      "notes": "15% consistency; 5% payout minimum, 3% lock and 14-day cycle",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "fintokei",
+      "program": "StartTrader",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          10,
+          22
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          10,
+          20
+        ],
+        "payout": [
+          2,
+          8
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 16,
+        "drawdown": 10,
+        "freedom": 15,
+        "payout": 5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        22,
+        90
+      ],
+      "simulationMidpoint": 56,
+      "sensitivityContract40": 56.9,
+      "notes": "No default consistency; $400 total over at most two payouts; exit option after risk flag",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json",
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "fintokei",
+      "program": "SwiftTrader (new cohort)",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          10,
+          22
+        ],
+        "drawdown": [
+          9,
+          14
+        ],
+        "freedom": [
+          3,
+          18
+        ],
+        "payout": [
+          0,
+          12
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 16,
+        "drawdown": 11.5,
+        "freedom": 10.5,
+        "payout": 6,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        22,
+        86
+      ],
+      "simulationMidpoint": 54,
+      "sensitivityContract40": 56,
+      "notes": "3% static overall, 2% daily, 60-day evaluation; 3% daily target cap; qualitative risk controls",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave1-seven-2026-11-24.json",
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "fxify",
+      "program": "Instant Lite",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          7,
+          19
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          5,
+          15
+        ],
+        "payout": [
+          5,
+          11
+        ],
+        "cost": [
+          0,
+          7
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 13,
+        "drawdown": 10,
+        "freedom": 10,
+        "payout": 8,
+        "cost": 3.5,
+        "split": 5
+      },
+      "scoreRange": [
+        17,
+        82
+      ],
+      "simulationMidpoint": 49.5,
+      "sensitivityContract40": 50.6,
+      "notes": "20% consistency; ten days and five traded days; agreement version and lock scope unresolved",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "alpha-futures",
+      "program": "Zero (50K)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          3,
+          17
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          10,
+          20
+        ],
+        "payout": [
+          4,
+          9
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 10,
+        "drawdown": 10,
+        "freedom": 15,
+        "payout": 6.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        17,
+        86
+      ],
+      "simulationMidpoint": 51.5,
+      "sensitivityContract40": 48.8,
+      "notes": "40% funded; $200 min/$1500 cap; sole discretion and trading pause on request",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "alpha-futures",
+      "program": "Advanced",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          3,
+          17
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          10,
+          20
+        ],
+        "payout": [
+          6,
+          12
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 10,
+        "drawdown": 10,
+        "freedom": 15,
+        "payout": 9,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        19,
+        89
+      ],
+      "simulationMidpoint": 54,
+      "sensitivityContract40": 51.3,
+      "notes": "No funded consistency; $1000 min/$15K cap; sole discretion and trading pause",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "alpha-capital-group",
+      "program": "Direct",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          4,
+          17
+        ],
+        "drawdown": [
+          2,
+          15
+        ],
+        "freedom": [
+          2,
+          8
+        ],
+        "payout": [
+          2,
+          9
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          10,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 10.5,
+        "drawdown": 8.5,
+        "freedom": 5,
+        "payout": 5.5,
+        "cost": 5,
+        "split": 10
+      },
+      "scoreRange": [
+        20,
+        69
+      ],
+      "simulationMidpoint": 44.5,
+      "sensitivityContract40": 42.1,
+      "notes": "15% gate; 3% buffer +1%; 90% split; per-asset hard breach and news/weekend restrictions",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "myfundedfutures",
+      "program": "Rapid Intraday (50K)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          3,
+          16
+        ],
+        "drawdown": [
+          3,
+          15
+        ],
+        "freedom": [
+          10,
+          20
+        ],
+        "payout": [
+          8,
+          12
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 9.5,
+        "drawdown": 9,
+        "freedom": 15,
+        "payout": 10,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        24,
+        83
+      ],
+      "simulationMidpoint": 53.5,
+      "sensitivityContract40": 50.5,
+      "notes": "Daily after 24h; no consistency; $2100 buffer; automatic live trigger",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "myfundedfutures",
+      "program": "Builder (50K)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          3,
+          16
+        ],
+        "drawdown": [
+          2,
+          17
+        ],
+        "freedom": [
+          10,
+          20
+        ],
+        "payout": [
+          6,
+          10
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          8,
+          8
+        ]
+      },
+      "midpoints": {
+        "contract": 9.5,
+        "drawdown": 9.5,
+        "freedom": 15,
+        "payout": 8,
+        "cost": 5,
+        "split": 8
+      },
+      "scoreRange": [
+        29,
+        81
+      ],
+      "simulationMidpoint": 55,
+      "sensitivityContract40": 50.5,
+      "notes": "50% consistency; 2 days possible; $2K cap and buffer; 80% split",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "take-profit-trader",
+      "program": "EOD Test → PRO (50K)",
+      "market": "Futures",
+      "intervals": {
+        "contract": [
+          0,
+          25
+        ],
+        "drawdown": [
+          6,
+          17
+        ],
+        "freedom": [
+          6,
+          19
+        ],
+        "payout": [
+          5,
+          11
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          8,
+          8
+        ]
+      },
+      "midpoints": {
+        "contract": 12.5,
+        "drawdown": 11.5,
+        "freedom": 12.5,
+        "payout": 8,
+        "cost": 5,
+        "split": 8
+      },
+      "scoreRange": [
+        25,
+        90
+      ],
+      "simulationMidpoint": 57.5,
+      "sensitivityContract40": 55.4,
+      "notes": "EOD trailing; conditional DLL; news flat; $2K buffer, 80% above buffer; current signed contract missing",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "maven-trading",
+      "program": "Instant",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          3,
+          16
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          4,
+          14
+        ],
+        "payout": [
+          1,
+          10
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 9.5,
+        "drawdown": 10,
+        "freedom": 9,
+        "payout": 5.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        8,
+        80
+      ],
+      "simulationMidpoint": 44,
+      "sensitivityContract40": 42.5,
+      "notes": "20% consistency, $10K gross cap excess deleted; termination discretion",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "maven-trading",
+      "program": "2-Step OMO",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          3,
+          16
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          2,
+          17
+        ],
+        "payout": [
+          2,
+          8
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          8,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 9.5,
+        "drawdown": 10,
+        "freedom": 9.5,
+        "payout": 5,
+        "cost": 5,
+        "split": 9
+      },
+      "scoreRange": [
+        15,
+        81
+      ],
+      "simulationMidpoint": 48,
+      "sensitivityContract40": 44.3,
+      "notes": "150s gains removed; 6%/8% caps excess void; four profitable days, 10 business days",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "blue-guardian",
+      "program": "Instant Standard",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          2,
+          14
+        ],
+        "drawdown": [
+          5,
+          12
+        ],
+        "freedom": [
+          5,
+          15
+        ],
+        "payout": [
+          5,
+          11
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 8,
+        "drawdown": 8.5,
+        "freedom": 10,
+        "payout": 8,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        17,
+        72
+      ],
+      "simulationMidpoint": 44.5,
+      "sensitivityContract40": 41.8,
+      "notes": "20% gate; 3% daily/6% trailing; five profitable days; broad withdrawal denial",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "blue-guardian",
+      "program": "Instant Starter",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          2,
+          14
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          2,
+          12
+        ],
+        "payout": [
+          0,
+          5
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 8,
+        "drawdown": 10,
+        "freedom": 7,
+        "payout": 2.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        4,
+        71
+      ],
+      "simulationMidpoint": 37.5,
+      "sensitivityContract40": 35.6,
+      "notes": "15% gate; one payout only up to $250 on $5K; five profitable days",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "for-traders",
+      "program": "Instant Pro",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          2,
+          15
+        ],
+        "drawdown": [
+          5,
+          13
+        ],
+        "freedom": [
+          7,
+          18
+        ],
+        "payout": [
+          5,
+          11
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 8.5,
+        "drawdown": 9,
+        "freedom": 12.5,
+        "payout": 8,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        19,
+        77
+      ],
+      "simulationMidpoint": 48,
+      "sensitivityContract40": 45,
+      "notes": "No consistency/minimum days; 6% trailing and 3% buffer; 5s min hold; split conflict",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "finotive-funding",
+      "program": "2-Step Pro",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          1,
+          12
+        ],
+        "drawdown": [
+          0,
+          16
+        ],
+        "freedom": [
+          0,
+          13
+        ],
+        "payout": [
+          4,
+          12
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          8,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 6.5,
+        "drawdown": 8,
+        "freedom": 6.5,
+        "payout": 8,
+        "cost": 5,
+        "split": 9
+      },
+      "scoreRange": [
+        13,
+        73
+      ],
+      "simulationMidpoint": 43,
+      "sensitivityContract40": 38.3,
+      "notes": "2% floating loss strike, cycle reduced to 10%; fifth strike forfeits; Pro 90-day/volume conditions",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "program": "Break (100K)",
+      "market": "CFD/crypto",
+      "intervals": {
+        "contract": [
+          2,
+          14
+        ],
+        "drawdown": [
+          3,
+          17
+        ],
+        "freedom": [
+          10,
+          18
+        ],
+        "payout": [
+          1,
+          11
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 8,
+        "drawdown": 10,
+        "freedom": 14,
+        "payout": 6,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        16,
+        80
+      ],
+      "simulationMidpoint": 48,
+      "sensitivityContract40": 44.3,
+      "notes": "40% gate; $10K profit cap deleted; interview and broad gambling classification",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave6-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "the-trading-pit",
+      "program": "Instant CFD (100K)",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          0,
+          25
+        ],
+        "drawdown": [
+          0,
+          20
+        ],
+        "freedom": [
+          5,
+          15
+        ],
+        "payout": [
+          2,
+          8
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 12.5,
+        "drawdown": 10,
+        "freedom": 10,
+        "payout": 5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        7,
+        88
+      ],
+      "simulationMidpoint": 47.5,
+      "sensitivityContract40": 47.5,
+      "notes": "20% consistency; half realized profit or $4500 cap; 14 days, >$200; contract not fully mapped",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave7-five-1800-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "goat-funded-trader",
+      "program": "2-Step Standard (new cohort)",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          0,
+          16
+        ],
+        "drawdown": [
+          0,
+          17
+        ],
+        "freedom": [
+          0,
+          16
+        ],
+        "payout": [
+          0,
+          7
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 8,
+        "drawdown": 8.5,
+        "freedom": 8,
+        "payout": 3.5,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        0,
+        76
+      ],
+      "simulationMidpoint": 38,
+      "sensitivityContract40": 35.8,
+      "notes": "60s gains removed; $3K daily profit cap excess deleted; Guard 2%/50% then closure; four 0.5% days",
+      "evidenceFiles": [
+        "audits/v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "funding-pips",
+      "program": "Zero",
+      "market": "Instant",
+      "intervals": {
+        "contract": [
+          0,
+          20
+        ],
+        "drawdown": [
+          0,
+          14
+        ],
+        "freedom": [
+          0,
+          8
+        ],
+        "payout": [
+          1,
+          7
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 10,
+        "drawdown": 7,
+        "freedom": 4,
+        "payout": 4,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        1,
+        69
+      ],
+      "simulationMidpoint": 35,
+      "sensitivityContract40": 35,
+      "notes": "15% consistency; news/weekend hard breach; 1% floating hard breach; 3% nonwithdrawable",
+      "evidenceFiles": [
+        "audits/v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json"
+      ],
+      "canPublish": false
+    },
+    {
+      "slug": "brightfunded",
+      "program": "2-Step Bright (new cohort)",
+      "market": "CFD",
+      "intervals": {
+        "contract": [
+          7,
+          23
+        ],
+        "drawdown": [
+          12,
+          18
+        ],
+        "freedom": [
+          13,
+          20
+        ],
+        "payout": [
+          10,
+          14
+        ],
+        "cost": [
+          0,
+          10
+        ],
+        "split": [
+          0,
+          10
+        ]
+      },
+      "midpoints": {
+        "contract": 15,
+        "drawdown": 15,
+        "freedom": 16.5,
+        "payout": 12,
+        "cost": 5,
+        "split": 5
+      },
+      "scoreRange": [
+        42,
+        95
+      ],
+      "simulationMidpoint": 68.5,
+      "sensitivityContract40": 68.4,
+      "notes": "8% static/4% daily; no consistency, buffer/minimum; 14 days; weekend allowed; prior purchases protected",
+      "evidenceFiles": [
+        "audits/full-audit-reopen-wave4-five-manual-2026-11-24.json"
+      ],
+      "canPublish": false
+    }
+  ]
+}

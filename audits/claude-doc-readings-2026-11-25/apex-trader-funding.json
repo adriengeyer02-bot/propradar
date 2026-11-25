@@ -1,0 +1,47 @@
+{
+ "slug": "apex-trader-funding",
+ "method": "User Agreement fetched in full (38 sections) on 2026-11-25; sections 11, 12, 14, 15, 20, 21 and 30 and every paragraph matching the discretion, sanction, rule-change and publication lexicons read by hand. Not a full end-to-end reading: Trading Rules, live agreement and help-centre bodies not read.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B1",
+   "text": "Rewards 'may be withheld, forfeited, or rescinded at any time in the Company's sole discretion'; the Company 'reserves the right to deny, modify, reduce, cap, delay, or revoke Reward distributions for any reason or no reason'; determinations 'are final and binding' and 'not subject to appeal or review' (except clerical correction or fraud).",
+   "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+   "locator": "§12 Rewards",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B2",
+   "text": "Accounts can be terminated and unpaid Rewards denied or revoked if the Company determines, in its sole discretion, that the user's 'level of sophistication materially exceeds' the simulated environment (indicators include 'consistently exceptional performance'); the Company may also 'graduate out' a user it judges no longer a proper fit and decide at its sole discretion whether any final reward is paid.",
+   "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+   "locator": "§15; §14",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B3",
+   "text": "'The Company may update the list of Prohibited Activities at any time, without notice'; changes to the Agreement, Trading Rules or Reward distribution policies 'become effective upon posting', and continued use of the accounts means acceptance.",
+   "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+   "locator": "§11 Prohibited Activities; §30",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "Dispute outcomes, account closures and 'denial of Reward distributions' are defined as Confidential Information, and all communications with the Company 'may not be published or shared without permission'; breaches expose the user to the §11 penalties (loss of unpaid Rewards, repayment of previously distributed Rewards).",
+   "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+   "locator": "§20 Confidentiality; §21; §11 Penalties",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Penalties for any breach of the Agreement or incorporated documents include 'loss of any unpaid Rewards' and 'repayment of previously distributed Rewards'; the incorporated Trading and Consistency Rules link (dashboard.apextraderfunding.com/legal/trading-rules) returned 404 to ChatGPT on 2026-11-25.",
+   "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+   "locator": "§11 Penalties; §1",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {
+  "TRADING_RULES": "Incorporated Trading and Consistency Rules page (404 for ChatGPT) and payout pages for EOD / intraday PA."
+ },
+ "safeguards": []
+}

@@ -1,0 +1,2409 @@
+{
+  "date": "2026-11-24",
+  "scope": "historical firm-updates.json snapshot 22f715e, 196 records; V5.2 121 approvals from main, not current active universe",
+  "disclaimer": "Zero rules in a spreadsheet means not evaluated, NOT that no contract risk exists; no score recalculated. Do not treat all 196 as active.",
+  "stats": {
+    "firmUpdateEntries": 196,
+    "noRulesAmong196": 73,
+    "noRiskAmong196": 101,
+    "approved": {
+      "totalApproved": 121,
+      "noneClassified": 8,
+      "noHighRiskClassified": 34,
+      "hasHighRiskClassified": 87,
+      "hiddenClassicRisk": 7
+    },
+    "cguContractsReviewedToday": 23,
+    "documentedItemsToday": 56
+  },
+  "approvedCoverage": [
+    {
+      "slug": "alpha-capital-group",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "maven-trading",
+      "rules": 4,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "get-leveraged",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "alpha-futures",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "miltraders",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "top-one-trader",
+      "rules": 29,
+      "classified": 29,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "onefunded",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "bem-funding",
+      "rules": 14,
+      "classified": 14,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "thinkcapital",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tiger-funded",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tradeday",
+      "rules": 3,
+      "classified": 2,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funded7",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "top-one-futures",
+      "rules": 26,
+      "classified": 26,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "wegetfunded",
+      "rules": 11,
+      "classified": 11,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "purdia-capital",
+      "rules": 10,
+      "classified": 10,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "daytraders-com",
+      "rules": 12,
+      "classified": 11,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "equity-edge",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "alpine-funded",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funded-squad",
+      "rules": 12,
+      "classified": 12,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "orion-funded",
+      "rules": 14,
+      "classified": 13,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "wsfunded",
+      "rules": 21,
+      "classified": 21,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "moneta-funded",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tradexprop",
+      "rules": 10,
+      "classified": 10,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funder-trading",
+      "rules": 6,
+      "classified": 6,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fundyourfx",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "monevis",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fundedhive",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "sabiotrade",
+      "rules": 6,
+      "classified": 6,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "clarity-traders",
+      "rules": 12,
+      "classified": 12,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tradersedgefx",
+      "rules": 10,
+      "classified": 10,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "lvlup-futures",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "atmos-funded",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tx3-funding",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fundedelite",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "upcomers",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "funding-your-trades",
+      "rules": 14,
+      "classified": 14,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funded-trader-markets",
+      "rules": 18,
+      "classified": 18,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funded-futures-network",
+      "rules": 17,
+      "classified": 17,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "directfundedtrader",
+      "rules": 14,
+      "classified": 14,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fidelcrest",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-09",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "now-trade-funded",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fundings4u",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-17",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "ultimate-traders",
+      "rules": 6,
+      "classified": 6,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "bullwaves-prime",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "dna-funded",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "foxx-funded",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "sfx-funded",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "superfunded",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funding-frontier",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-17",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "wemastertrade",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 5,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "forexive",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "hash-hedge",
+      "rules": 6,
+      "classified": 6,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "sure-leverage",
+      "rules": 14,
+      "classified": 14,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "titan-capital-markets",
+      "rules": 10,
+      "classified": 10,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "prop-number-one",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "trading-cult",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "x-funded",
+      "rules": 4,
+      "classified": 4,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "levels",
+      "rules": 2,
+      "classified": 2,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funding-pips",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "goat-funded-trader",
+      "rules": 5,
+      "classified": 5,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "funded-trading-plus",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "city-traders-imperium",
+      "rules": 3,
+      "classified": 2,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "oneup-trader",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "leeloo-trading",
+      "rules": 5,
+      "classified": 5,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "uprofit-trader",
+      "rules": 3,
+      "classified": 2,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "bulenox",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "breakout-prop",
+      "rules": 2,
+      "classified": 1,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "rebelsfunding",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "sway-funded",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "ftuk",
+      "rules": 18,
+      "classified": 18,
+      "discretionaryOrConflicting": 6,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "lux-trading-firm",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funderpro",
+      "rules": 4,
+      "classified": 4,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "hyrotrader",
+      "rules": 12,
+      "classified": 12,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tradefundrr",
+      "rules": 3,
+      "classified": 1,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "axi-select",
+      "rules": 3,
+      "classified": 2,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "ic-funded",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fx2-funding",
+      "rules": 7,
+      "classified": 7,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "blueberry-funded",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "quant-tekel",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "e8-futures",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "forex-funds-flow",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-10-30",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "the-concept-trading",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tentrade",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fxify",
+      "rules": 9,
+      "classified": 8,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "blusky-trading",
+      "rules": 12,
+      "classified": 12,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "lucid-trading",
+      "rules": 18,
+      "classified": 18,
+      "discretionaryOrConflicting": 5,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "apex-trader-funding",
+      "rules": 15,
+      "classified": 14,
+      "discretionaryOrConflicting": 5,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "take-profit-trader",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "exfunded",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "rules": 11,
+      "classified": 11,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "e8-markets",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "brightfunded",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "instant-funding",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "hola-prime",
+      "rules": 12,
+      "classified": 12,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "pipfarm",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-16",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "trade-the-pool",
+      "rules": 4,
+      "classified": 4,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "for-traders",
+      "rules": 3,
+      "classified": 2,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "ftmo",
+      "rules": 8,
+      "classified": 7,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "topstep",
+      "rules": 11,
+      "classified": 10,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "myfundedfutures",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "the5ers",
+      "rules": 13,
+      "classified": 12,
+      "discretionaryOrConflicting": 5,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fintokei",
+      "rules": 13,
+      "classified": 12,
+      "discretionaryOrConflicting": 5,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "tradeify",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "audacity-capital",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 1,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "myfundedcapital",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-09",
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "earn2trade",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "fundednext",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 5,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "deep_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "aqua-funded",
+      "rules": 4,
+      "classified": 4,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "finotive-funding",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funding-traders",
+      "rules": 4,
+      "classified": 4,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "rzr-funded",
+      "rules": 0,
+      "classified": 0,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": null,
+      "caseFile": "zero_classified_triage",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "lark-funding",
+      "rules": 11,
+      "classified": 11,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "the-trading-pit",
+      "rules": 3,
+      "classified": 3,
+      "discretionaryOrConflicting": 0,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": true
+    },
+    {
+      "slug": "ment-funding",
+      "rules": 11,
+      "classified": 11,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "elite-trader-funding",
+      "rules": 10,
+      "classified": 10,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "atlas-funded",
+      "rules": 13,
+      "classified": 13,
+      "discretionaryOrConflicting": 1,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "rules": 8,
+      "classified": 8,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "blue-guardian",
+      "rules": 15,
+      "classified": 15,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "traders-launch",
+      "rules": 9,
+      "classified": 9,
+      "discretionaryOrConflicting": 4,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-20",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "ofp-funding",
+      "rules": 6,
+      "classified": 6,
+      "discretionaryOrConflicting": 3,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-18",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    },
+    {
+      "slug": "funded-bull",
+      "rules": 10,
+      "classified": 10,
+      "discretionaryOrConflicting": 2,
+      "classicRiskHiddenByRuleKind": 0,
+      "reviewedOn": "2026-11-19",
+      "caseFile": "not_in_nov24_sweep",
+      "needsContractClassification": false
+    }
+  ],
+  "fullHistoricalCoverage": [
+    {
+      "slug": "traders-with-edge",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "t4tcapital",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "fundings4u",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funded-squad",
+      "numberOfRules": 12,
+      "classified": 12,
+      "riskClassified": 1
+    },
+    {
+      "slug": "miltraders",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 3
+    },
+    {
+      "slug": "foxx-funded",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 3
+    },
+    {
+      "slug": "aeon-funded",
+      "numberOfRules": 6,
+      "classified": 6,
+      "riskClassified": 1
+    },
+    {
+      "slug": "alpha-capital-group",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "alpha-futures",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "apex-trader-funding",
+      "numberOfRules": 15,
+      "classified": 14,
+      "riskClassified": 5
+    },
+    {
+      "slug": "aqua-funded",
+      "numberOfRules": 4,
+      "classified": 4,
+      "riskClassified": 0
+    },
+    {
+      "slug": "audacity-capital",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 1
+    },
+    {
+      "slug": "aurafunded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "bespoke-funding-program",
+      "numberOfRules": 5,
+      "classified": 5,
+      "riskClassified": 1
+    },
+    {
+      "slug": "blue-guardian",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 2
+    },
+    {
+      "slug": "blueberry-funded",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 1
+    },
+    {
+      "slug": "blufx",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "blusky-trading",
+      "numberOfRules": 12,
+      "classified": 12,
+      "riskClassified": 2
+    },
+    {
+      "slug": "breakout-prop",
+      "numberOfRules": 2,
+      "classified": 1,
+      "riskClassified": 0
+    },
+    {
+      "slug": "brightfunded",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "bulenox",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "city-traders-imperium",
+      "numberOfRules": 3,
+      "classified": 2,
+      "riskClassified": 0
+    },
+    {
+      "slug": "clarity-traders",
+      "numberOfRules": 12,
+      "classified": 12,
+      "riskClassified": 3
+    },
+    {
+      "slug": "dei-funded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "e8-futures",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 2
+    },
+    {
+      "slug": "e8-markets",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "earn2trade",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "elite-trader-funding",
+      "numberOfRules": 10,
+      "classified": 10,
+      "riskClassified": 1
+    },
+    {
+      "slug": "fast-track-trading",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "finotive-funding",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 1
+    },
+    {
+      "slug": "fintokei",
+      "numberOfRules": 13,
+      "classified": 12,
+      "riskClassified": 5
+    },
+    {
+      "slug": "for-traders",
+      "numberOfRules": 3,
+      "classified": 2,
+      "riskClassified": 0
+    },
+    {
+      "slug": "ftmo",
+      "numberOfRules": 8,
+      "classified": 7,
+      "riskClassified": 3
+    },
+    {
+      "slug": "ftuk",
+      "numberOfRules": 18,
+      "classified": 18,
+      "riskClassified": 6
+    },
+    {
+      "slug": "funded-trading-plus",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funded7",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 1
+    },
+    {
+      "slug": "fundedelite",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 3
+    },
+    {
+      "slug": "fundednext",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 5
+    },
+    {
+      "slug": "funderpro",
+      "numberOfRules": 4,
+      "classified": 4,
+      "riskClassified": 1
+    },
+    {
+      "slug": "funding-pips",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funding-traders",
+      "numberOfRules": 4,
+      "classified": 4,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funding-your-trades",
+      "numberOfRules": 14,
+      "classified": 14,
+      "riskClassified": 1
+    },
+    {
+      "slug": "fundyourfx",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 1
+    },
+    {
+      "slug": "fx2-funding",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 1
+    },
+    {
+      "slug": "fxify",
+      "numberOfRules": 9,
+      "classified": 8,
+      "riskClassified": 3
+    },
+    {
+      "slug": "goat-funded-trader",
+      "numberOfRules": 5,
+      "classified": 5,
+      "riskClassified": 0
+    },
+    {
+      "slug": "hantec-trader",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 3
+    },
+    {
+      "slug": "hola-prime",
+      "numberOfRules": 12,
+      "classified": 12,
+      "riskClassified": 1
+    },
+    {
+      "slug": "hyrotrader",
+      "numberOfRules": 12,
+      "classified": 12,
+      "riskClassified": 2
+    },
+    {
+      "slug": "ic-funded",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "inspire-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "instant-funding",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "lark-funding",
+      "numberOfRules": 11,
+      "classified": 11,
+      "riskClassified": 2
+    },
+    {
+      "slug": "leeloo-trading",
+      "numberOfRules": 5,
+      "classified": 5,
+      "riskClassified": 2
+    },
+    {
+      "slug": "lucid-trading",
+      "numberOfRules": 18,
+      "classified": 18,
+      "riskClassified": 5
+    },
+    {
+      "slug": "lux-trading-firm",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 2
+    },
+    {
+      "slug": "maven-trading",
+      "numberOfRules": 4,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "ment-funding",
+      "numberOfRules": 11,
+      "classified": 11,
+      "riskClassified": 1
+    },
+    {
+      "slug": "moneta-funded",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 4
+    },
+    {
+      "slug": "my-crypto-funding",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 2
+    },
+    {
+      "slug": "myforexfunds",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "myfundedfutures",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "ofp-funding",
+      "numberOfRules": 6,
+      "classified": 6,
+      "riskClassified": 3
+    },
+    {
+      "slug": "onefunded",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 3
+    },
+    {
+      "slug": "oneup-trader",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "pipfarm",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "quant-tekel",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 3
+    },
+    {
+      "slug": "rebelsfunding",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 1
+    },
+    {
+      "slug": "sabiotrade",
+      "numberOfRules": 6,
+      "classified": 6,
+      "riskClassified": 2
+    },
+    {
+      "slug": "smart-prop-trader",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "sure-leverage",
+      "numberOfRules": 14,
+      "classified": 14,
+      "riskClassified": 0
+    },
+    {
+      "slug": "sway-funded",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 2
+    },
+    {
+      "slug": "syndicate-funded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "take-profit-trader",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "the-concept-trading",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 4
+    },
+    {
+      "slug": "the-funded-trader",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "the-trading-pit",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "the5ers",
+      "numberOfRules": 13,
+      "classified": 12,
+      "riskClassified": 5
+    },
+    {
+      "slug": "thinkcapital",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 3
+    },
+    {
+      "slug": "tickticktrader",
+      "numberOfRules": 3,
+      "classified": 2,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tiger-funded",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 4
+    },
+    {
+      "slug": "top-one-futures",
+      "numberOfRules": 26,
+      "classified": 26,
+      "riskClassified": 3
+    },
+    {
+      "slug": "top-one-trader",
+      "numberOfRules": 29,
+      "classified": 29,
+      "riskClassified": 2
+    },
+    {
+      "slug": "topstep",
+      "numberOfRules": 11,
+      "classified": 10,
+      "riskClassified": 2
+    },
+    {
+      "slug": "trade-the-pool",
+      "numberOfRules": 4,
+      "classified": 4,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tradeday",
+      "numberOfRules": 3,
+      "classified": 2,
+      "riskClassified": 1
+    },
+    {
+      "slug": "tradefundrr",
+      "numberOfRules": 3,
+      "classified": 1,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tradeify",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "rocket21-challenge",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "traders-central",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tradexprop",
+      "numberOfRules": 10,
+      "classified": 10,
+      "riskClassified": 2
+    },
+    {
+      "slug": "ultimate-traders",
+      "numberOfRules": 6,
+      "classified": 6,
+      "riskClassified": 1
+    },
+    {
+      "slug": "uprofit-trader",
+      "numberOfRules": 3,
+      "classified": 2,
+      "riskClassified": 0
+    },
+    {
+      "slug": "wegetfunded",
+      "numberOfRules": 11,
+      "classified": 11,
+      "riskClassified": 4
+    },
+    {
+      "slug": "wemastertrade",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 5
+    },
+    {
+      "slug": "willis-capital",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "wsfunded",
+      "numberOfRules": 21,
+      "classified": 21,
+      "riskClassified": 4
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "dna-funded",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 1
+    },
+    {
+      "slug": "funded-bull",
+      "numberOfRules": 10,
+      "classified": 10,
+      "riskClassified": 2
+    },
+    {
+      "slug": "axi-select",
+      "numberOfRules": 3,
+      "classified": 2,
+      "riskClassified": 1
+    },
+    {
+      "slug": "kortanafx",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "my-flash-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "atmos-funded",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 4
+    },
+    {
+      "slug": "funder-trading",
+      "numberOfRules": 6,
+      "classified": 6,
+      "riskClassified": 3
+    },
+    {
+      "slug": "daytraders-com",
+      "numberOfRules": 12,
+      "classified": 11,
+      "riskClassified": 3
+    },
+    {
+      "slug": "orion-funded",
+      "numberOfRules": 14,
+      "classified": 13,
+      "riskClassified": 4
+    },
+    {
+      "slug": "atlas-funded",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 1
+    },
+    {
+      "slug": "superfunded",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 1
+    },
+    {
+      "slug": "bem-funding",
+      "numberOfRules": 14,
+      "classified": 14,
+      "riskClassified": 2
+    },
+    {
+      "slug": "cove-funded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "fortunes-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "forex-funds-flow",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "traders-launch",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 4
+    },
+    {
+      "slug": "sfx-funded",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 3
+    },
+    {
+      "slug": "funded-trader-markets",
+      "numberOfRules": 18,
+      "classified": 18,
+      "riskClassified": 1
+    },
+    {
+      "slug": "tx3-funding",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 2
+    },
+    {
+      "slug": "fxrk",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "now-trade-funded",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 1
+    },
+    {
+      "slug": "getcryptofunded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "fidelcrest",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "leveled-up-society",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "fxci",
+      "numberOfRules": 5,
+      "classified": 5,
+      "riskClassified": 2
+    },
+    {
+      "slug": "myfundedcapital",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "directfundedtrader",
+      "numberOfRules": 14,
+      "classified": 14,
+      "riskClassified": 2
+    },
+    {
+      "slug": "upcomers",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 0
+    },
+    {
+      "slug": "forexive",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 1
+    },
+    {
+      "slug": "alpine-funded",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 1
+    },
+    {
+      "slug": "funded-unicorn",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "fundedhive",
+      "numberOfRules": 3,
+      "classified": 3,
+      "riskClassified": 0
+    },
+    {
+      "slug": "nations-trading",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "lvlup-futures",
+      "numberOfRules": 15,
+      "classified": 15,
+      "riskClassified": 1
+    },
+    {
+      "slug": "traddoo",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "trade-amber",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "purdia-capital",
+      "numberOfRules": 10,
+      "classified": 10,
+      "riskClassified": 1
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "numberOfRules": 11,
+      "classified": 11,
+      "riskClassified": 1
+    },
+    {
+      "slug": "quantec-trading-capital",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "limitless-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funded-futures-network",
+      "numberOfRules": 17,
+      "classified": 17,
+      "riskClassified": 1
+    },
+    {
+      "slug": "mifunder",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 1
+    },
+    {
+      "slug": "tradersedgefx",
+      "numberOfRules": 10,
+      "classified": 10,
+      "riskClassified": 2
+    },
+    {
+      "slug": "monevis",
+      "numberOfRules": 7,
+      "classified": 7,
+      "riskClassified": 2
+    },
+    {
+      "slug": "nova-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "the-forex-funder",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "one-of-one-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "glow-node",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tribe-funded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "fx-capital-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "get-leveraged",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 2
+    },
+    {
+      "slug": "fundedlions",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "alphaproptraders",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "summit-strike-capital",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "nostro",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funding-frontier",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "equity-edge",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 1
+    },
+    {
+      "slug": "myfxcapital",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funds-for-traders",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "onlyfunds",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "axe-trader-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "algo-forex-funds",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "astra-capital-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "gry-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "cash-flow-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "levels",
+      "numberOfRules": 2,
+      "classified": 2,
+      "riskClassified": 2
+    },
+    {
+      "slug": "titan-capital-markets",
+      "numberOfRules": 10,
+      "classified": 10,
+      "riskClassified": 1
+    },
+    {
+      "slug": "ryze-trading",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tradicave",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "trading-cult",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 0
+    },
+    {
+      "slug": "next-step-funded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "exfunded",
+      "numberOfRules": 8,
+      "classified": 8,
+      "riskClassified": 2
+    },
+    {
+      "slug": "optimal-traders",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "next-level-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "ck-capital",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 2
+    },
+    {
+      "slug": "firmity-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "hash-hedge",
+      "numberOfRules": 6,
+      "classified": 6,
+      "riskClassified": 1
+    },
+    {
+      "slug": "real-funds-trader",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "forfx",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "the-prop-game",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "tentrade",
+      "numberOfRules": 9,
+      "classified": 9,
+      "riskClassified": 1
+    },
+    {
+      "slug": "neg-markets",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "guardeer-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "indigo-trader-funding",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "stocknet-institute",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "infinity-forex-funds",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funded-peaks",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "prop-number-one",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "karma-prop-traders",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "atfunded",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "alpicap",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "myfundedfx",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "surgetrader",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "true-forex-funds",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "funded-engineer",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "skilled-funded-traders",
+      "numberOfRules": 0,
+      "classified": 0,
+      "riskClassified": 0
+    },
+    {
+      "slug": "x-funded",
+      "numberOfRules": 4,
+      "classified": 4,
+      "riskClassified": 0
+    },
+    {
+      "slug": "bullwaves-prime",
+      "numberOfRules": 13,
+      "classified": 13,
+      "riskClassified": 2
+    }
+  ]
+}
