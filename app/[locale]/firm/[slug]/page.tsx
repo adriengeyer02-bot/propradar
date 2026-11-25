@@ -66,7 +66,7 @@ import { toEnglishText } from '../../../lib/i18n';
 import { editorialBriefs, getEditorialBriefPath } from '../../../lib/editorialBriefs';
 import GuideCover from '../../../components/guide-visuals/GuideCover';
 import { DEPENDENCY_COVER } from '../../../lib/guideCovers';
-import { formatAccountSize, formatListPrice, getPriceTable, pricePreviewRows } from '../../../lib/priceTables';
+import { formatAccountSize, formatListPrice, getPriceTable } from '../../../lib/priceTables';
 import { getProgramPromotions } from '../../../lib/programPromotions';
 import { getAuditCaseFile } from '../../../lib/auditCaseFiles';
 import { entityCountries } from '../../../lib/jurisdictions';
@@ -1129,65 +1129,48 @@ export default async function FirmPage({ params }: Props) {
                 <dl className="pr-program-facts">
                   {facts.map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
                 </dl>
-                {promos.length ? <div className="pr-program-deals">
+                {promos.length || matchingPrices.length || purchaseHref ? <div className="pr-program-price-block">
                   {promos.map((promo) => (
-                    <aside className="pr-program-promo pr-program-promo-integrated" key={promo.id} aria-label={f.pricePromoTitle}>
-                      <div className="pr-program-promo-head">
-                        <span>{f.pricePromoTitle}</span>
-                        <strong>{promo.offer}</strong>
-                      </div>
+                    <div className="pr-program-deal-summary" key={promo.id}>
+                      <div className="pr-program-promo-head"><span>{f.pricePromoTitle}</span><strong>{promo.offer}</strong></div>
                       {promo.scope ? <p className="pr-program-promo-scope" lang="en">{promo.scope}</p> : null}
-                      {promo.priceExamples?.length ? <div className="pr-program-promo-prices">
-                        {promo.priceExamples.map(row => <div key={row.size+'-'+row.currency} className="pr-program-promo-price">
+                      {promo.code ? <ProgramPromoCode code={promo.code} label={f.partnerOffer.copy} copied={f.partnerOffer.copied} /> : null}
+                      {promo.priceExamples?.length ? <div className="pr-program-offer-rows">
+                        {promo.priceExamples.slice(0,3).map(row => <div key={row.size+'-'+row.currency}>
                           <span>{formatAccountSize(row.size)}</span>
                           <del aria-label={f.priceList}>{formatListPrice(row.regular,row.currency)}</del>
                           <strong>{formatListPrice(row.sale,row.currency)}</strong>
                         </div>)}
                       </div> : null}
-                      {promo.code ? <ProgramPromoCode code={promo.code} label={f.partnerOffer.copy} copied={f.partnerOffer.copied} /> : null}
-                      <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
-                      <details className="pr-program-promo-details">
+                      <details className="pr-program-inline-details">
                         <summary>{f.pricePromoTermsLabel}</summary>
-                        <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+                        <p lang="en">{promo.terms}</p>
+                        {promo.priceExamples && promo.priceExamples.length > 3 ? <div className="pr-program-offer-rows">{promo.priceExamples.slice(3).map(row => <div key={row.size+'-'+row.currency}><span>{formatAccountSize(row.size)}</span><del>{formatListPrice(row.regular,row.currency)}</del><strong>{formatListPrice(row.sale,row.currency)}</strong></div>)}</div> : null}
+                        <p>{f.pricePromoCheckout}</p>
+                        <div className="pr-program-promo-foot"><small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small><a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div>
                       </details>
-                      <div className="pr-program-promo-foot">
-                        <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
-                        <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
-                      </div>
-                    </aside>
+                    </div>
                   ))}
-                  {purchaseHref ? <a className="btn btn-primary pr-program-promo-cta" href={purchaseHref} target="_blank" rel={sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer'}>{sponsored ? f.openAffiliate : f.openOfficial}</a> : null}
-                  {sponsored ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate} {f.partnerOffer.compare}</small> : null}
-                </div> : null}
-                {firm.status !== 'Fermée' ? priceTable?.programs.filter((program) => program.productId === product.id).map((program) => (
-                  <div className="pr-product-prices" key={program.name}>
-                    <div className="pr-product-prices-head">
-                      <strong>{tx(program.name)}</strong>
-                      <span>{f.priceList}{program.billing === 'monthly' ? ` ${f.perMonth}` : ''}</span>
-                    </div>
-                    <div className="pr-product-price-tiers">
-                      {pricePreviewRows(program, promos.flatMap((promo) => promo.highlightedSizes ?? [])).map((row) => (
-                        <div className="pr-product-price-tier" key={row.size}>
-                          <span>{formatAccountSize(row.size)}</span>
-                          <strong>{formatListPrice(row.price, program.currency)}</strong>
-                          {row.upfrontPrice != null && row.completionFee != null ? (
-                            <small>{formatListPrice(row.upfrontPrice, program.currency)} + {formatListPrice(row.completionFee, program.currency)}*</small>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="pr-product-prices-links">
-                      <a href="#prices">{f.priceTableTitle} ↓</a>
+                  {matchingPrices.length && firm.status !== 'Fermée' ? <details className="pr-program-inline-details pr-program-all-prices">
+                    <summary>{f.priceTableTitle}</summary>
+                    {matchingPrices.map(program => <div className="pr-program-price-list" key={program.name}>
+                      {matchingPrices.length > 1 ? <strong>{tx(program.name)}</strong> : null}
+                      <small>{f.priceList}{program.billing === 'monthly' ? ` · ${f.perMonth}` : ''}</small>
+                      <div className="pr-program-list-rows">{program.rows.map(row => <div key={row.size}><span>{formatAccountSize(row.size)}</span><strong>{formatListPrice(row.price,program.currency)}</strong>{row.upfrontPrice != null && row.completionFee != null ? <small>{formatListPrice(row.upfrontPrice,program.currency)} + {formatListPrice(row.completionFee,program.currency)}*</small> : null}</div>)}</div>
+                      {program.note ? <p lang="en">{program.note}</p> : null}
                       <a href={program.sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
-                    </div>
-                  </div>
-                )) : null}
+                    </div>)}
+                  </details> : null}
+                  {purchaseHref ? <a className="btn btn-primary pr-program-promo-cta" href={purchaseHref} target="_blank" rel={sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer'}>{sponsored ? f.openAffiliate : f.openOfficial}</a> : null}
+                  {sponsored ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
+                </div> : null}
                 <div className="pr-program-restrictions">
-                  <h4>{pc.rules}</h4>
                   <p className={product.hasConsistencyRule ? 'pr-product-rule pr-tone-watch' : 'pr-product-rule'}>
                     <span className="pr-pip-dot" aria-hidden="true" />
                     {product.hasConsistencyRule ? tx(product.consistencyRule ?? 'Règle de cohérence à vérifier') : pc.noConsistency}
                   </p>
+                  <details className="pr-program-inline-details pr-program-rule-details">
+                    <summary>{pc.rules}{mapped.specific.length ? ` (${mapped.specific.length})` : ''}</summary>
                   {mapped.specific.length ? <ul className="pr-program-rule-list">
                     {mapped.specific.map((rule,index) => <li key={rule.source+'-'+index}>
                       <span className={rule.severity === 'blocking' ? 'pr-program-severity strong' : 'pr-program-severity'} aria-hidden="true">!</span>
@@ -1198,6 +1181,7 @@ export default async function FirmPage({ params }: Props) {
                   </ul> : <p className="muted pr-program-rule-empty">{pc.empty}</p>}
                   {mapped.general.length ? <details className="pr-program-general"><summary>{pc.general} ({mapped.general.length})</summary><ul className="pr-program-rule-list">{mapped.general.map((rule,index) => <li key={rule.source+'-'+index}><div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p><a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div></li>)}</ul></details> : null}
                   {mapped.unmapped ? <a className="pr-program-register" href="#rules">{pc.unmapped} ↓</a> : <a className="pr-program-register" href="#rules">{f.rulesUi.title} ↓</a>}
+                  </details>
                 </div>
                 <details className="pr-product-details">
                   <summary>{f.programDetails}</summary>
@@ -1224,12 +1208,6 @@ export default async function FirmPage({ params }: Props) {
                 </dl>
                 {evidence?.cohort ? <p className="pr-program-cohort muted" lang="en">{evidence.cohort}</p> : null}
                 {evidence?.sources.length ? <div className="pr-program-sources">{evidence.sources.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{pc.official}{evidence.sources.length > 1 ? ` ${index+1}` : ''} ↗</a>)}</div> : null}
-                {!promos.length && purchaseHref ? (
-                  <a href={purchaseHref} target="_blank" rel={sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer'} className="btn btn-primary">
-                    {sponsored ? f.openAffiliate : f.openOfficial}
-                  </a>
-                ) : null}
-                {!promos.length && sponsored ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
               </article>
               );
             })}
@@ -1241,12 +1219,12 @@ export default async function FirmPage({ params }: Props) {
             <p className="muted" style={{ marginBottom: 0 }}>{f.noProductText}</p>
           </div>
         )}
-        {priceTable && firm.status !== 'Fermée' ? (
-          <div className="pr-price-tables" id="prices">
-            <h3>{f.priceTableTitle}</h3>
+        {priceTable && firm.status !== 'Fermée' && priceTable.programs.some(p => !firm.products.some(product => product.id === p.productId)) ? (
+          <details className="pr-price-tables pr-program-orphan-prices" id="prices">
+            <summary>{f.priceTableTitle}</summary>
             <p className="muted">{fmt(f.priceTableLead, { name: firm.name, date: formatDateLong(locale, priceTable.checkedOn) })}</p>
             <div className="pr-price-grid">
-              {priceTable.programs.map((program) => (
+              {priceTable.programs.filter(p => !firm.products.some(product => product.id === p.productId)).map((program) => (
                 <figure className="pr-price-table" key={program.name}>
                   <figcaption>
                     <strong>{program.name}</strong>
@@ -1276,7 +1254,7 @@ export default async function FirmPage({ params }: Props) {
                 </figure>
               ))}
             </div>
-          </div>
+          </details>
         ) : null}
         {classicRules.length ? (
           <div className="pr-classic-rules">
