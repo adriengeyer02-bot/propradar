@@ -21,6 +21,7 @@ export type ScaleCCopy = {
   readingFull: string;
   readingExcerpts: string;
   previous: string;
+  pending: string;
   source: string;
   method: [string, string, string, string];
 };
@@ -66,6 +67,7 @@ const en: ScaleCCopy = {
   readingFull: 'Contract read in full by hand on {date}.',
   readingExcerpts: 'Flagged clauses re-read by hand on {date}; the rest of the contract is still to be read, so the score cannot rise yet.',
   previous: 'Previous score: {n}',
+  pending: 'Scale C detail not available yet: this firm’s contract is still being read, so the score still comes from the earlier method above.',
   source: 'Source',
   method: [
     'The ceiling is earned with evidence: years of operation and payouts at scale (on-chain tracking, published statistics, a large Trustpilot sample).',
@@ -116,6 +118,7 @@ const fr: ScaleCCopy = {
   readingFull: 'Contrat lu en entier à la main le {date}.',
   readingExcerpts: 'Clauses repérées relues à la main le {date} ; le reste du contrat reste à lire, la note ne peut donc pas encore monter.',
   previous: 'Note précédente : {n}',
+  pending: 'Détail barème C pas encore disponible : le contrat de cette firme est en cours de lecture, la note vient donc encore de l’ancienne méthode ci-dessus.',
   source: 'Source',
   method: [
     'Le plafond se gagne avec des preuves : années d’activité et paiements à grande échelle (suivi on-chain, statistiques publiées, large échantillon Trustpilot).',
@@ -166,6 +169,7 @@ const de: ScaleCCopy = {
   readingFull: 'Vertrag am {date} vollständig von Hand gelesen.',
   readingExcerpts: 'Markierte Klauseln am {date} von Hand geprüft; der Rest des Vertrags ist noch zu lesen, daher kann die Bewertung noch nicht steigen.',
   previous: 'Vorherige Bewertung: {n}',
+  pending: 'Detail nach Skala C noch nicht verfügbar: Der Vertrag dieser Firma wird noch gelesen, die Bewertung stammt daher noch aus der früheren Methode oben.',
   source: 'Quelle',
   method: [
     'Die Obergrenze wird durch Belege erreicht: Betriebsjahre und Auszahlungen in großem Umfang (On-chain-Erfassung, veröffentlichte Statistiken, große Trustpilot-Stichprobe).',
@@ -216,6 +220,7 @@ const it: ScaleCCopy = {
   readingFull: 'Contratto letto integralmente a mano il {date}.',
   readingExcerpts: 'Clausole segnalate rilette a mano il {date}; il resto del contratto è ancora da leggere, quindi il punteggio non può ancora salire.',
   previous: 'Punteggio precedente: {n}',
+  pending: 'Dettaglio della scala C non ancora disponibile: il contratto di questa società è in lettura, quindi il punteggio deriva ancora dal metodo precedente qui sopra.',
   source: 'Fonte',
   method: [
     'Il tetto si ottiene con le prove: anni di attività e pagamenti su larga scala (tracciamento on-chain, statistiche pubblicate, ampio campione Trustpilot).',
@@ -266,6 +271,7 @@ const es: ScaleCCopy = {
   readingFull: 'Contrato leído íntegramente a mano el {date}.',
   readingExcerpts: 'Cláusulas señaladas releídas a mano el {date}; falta leer el resto del contrato, por lo que la puntuación aún no puede subir.',
   previous: 'Puntuación anterior: {n}',
+  pending: 'Detalle de la escala C aún no disponible: el contrato de esta empresa se está leyendo, por lo que la puntuación aún procede del método anterior.',
   source: 'Fuente',
   method: [
     'El techo se obtiene con pruebas: años de actividad y pagos a gran escala (rastreo on-chain, estadísticas publicadas, gran muestra de Trustpilot).',
@@ -316,6 +322,7 @@ const pt: ScaleCCopy = {
   readingFull: 'Contrato lido integralmente à mão em {date}.',
   readingExcerpts: 'Cláusulas sinalizadas relidas à mão em {date}; o resto do contrato ainda será lido, então a nota ainda não pode subir.',
   previous: 'Nota anterior: {n}',
+  pending: 'Detalhe da escala C ainda indisponível: o contrato desta empresa está sendo lido, então a nota ainda vem do método anterior acima.',
   source: 'Fonte',
   method: [
     'O teto é obtido com provas: anos de atividade e pagamentos em grande escala (rastreio on-chain, estatísticas publicadas, grande amostra do Trustpilot).',
@@ -366,6 +373,7 @@ const zh: ScaleCCopy = {
   readingFull: '已于 {date} 人工通读合同全文。',
   readingExcerpts: '已于 {date} 人工复核标记的条款；合同其余部分尚待阅读，因此评分暂不能上调。',
   previous: '原评分：{n}',
+  pending: 'C 级评分明细尚未提供：该公司的合同仍在阅读中，因此评分仍来自上方的旧方法。',
   source: '来源',
   method: [
     '上限凭证据获得：运营年限和大规模出金（链上追踪、公布的统计、大量 Trustpilot 评价）。',
@@ -416,6 +424,7 @@ const ja: ScaleCCopy = {
   readingFull: '{date} に契約全文を人の手で読みました。',
   readingExcerpts: '{date} に抽出された条項を人の手で再確認しました。契約の残りは未読のため、まだスコアは上がりません。',
   previous: '以前のスコア：{n}',
+  pending: 'スケール C の内訳はまだありません：この会社の契約を読んでいる最中のため、スコアは上記の従来の方法によるものです。',
   source: '出典',
   method: [
     '上限は証拠で得られます：運営年数と大規模な出金（オンチェーン追跡、公開統計、多数の Trustpilot レビュー）。',
@@ -466,6 +475,7 @@ const hi: ScaleCCopy = {
   readingFull: '{date} को अनुबंध पूरा हाथ से पढ़ा गया।',
   readingExcerpts: '{date} को चिह्नित शर्तें हाथ से दोबारा पढ़ी गईं; अनुबंध का बाकी हिस्सा अभी पढ़ना है, इसलिए स्कोर अभी बढ़ नहीं सकता।',
   previous: 'पिछला स्कोर: {n}',
+  pending: 'स्केल C का विवरण अभी उपलब्ध नहीं: इस फर्म का अनुबंध अभी पढ़ा जा रहा है, इसलिए स्कोर अभी ऊपर दी गई पुरानी पद्धति से है।',
   source: 'स्रोत',
   method: [
     'ऊपरी सीमा प्रमाण से मिलती है: संचालन के वर्ष और बड़े पैमाने पर भुगतान (ऑन-चेन ट्रैकिंग, प्रकाशित आँकड़े, बड़ा Trustpilot नमूना)।',
@@ -516,6 +526,7 @@ const tr: ScaleCCopy = {
   readingFull: 'Sözleşmenin tamamı {date} tarihinde elle okundu.',
   readingExcerpts: 'İşaretlenen maddeler {date} tarihinde elle yeniden okundu; sözleşmenin kalanı henüz okunmadığından puan şimdilik yükselemez.',
   previous: 'Önceki puan: {n}',
+  pending: 'Ölçek C ayrıntısı henüz yok: bu firmanın sözleşmesi hâlâ okunuyor, bu yüzden puan hâlâ yukarıdaki önceki yöntemden geliyor.',
   source: 'Kaynak',
   method: [
     'Tavan kanıtla kazanılır: faaliyet yılları ve büyük ölçekli ödemeler (zincir üstü izleme, yayımlanan istatistikler, geniş Trustpilot örneği).',
@@ -566,6 +577,7 @@ const ar: ScaleCCopy = {
   readingFull: 'قُرئ العقد كاملًا يدويًا في {date}.',
   readingExcerpts: 'أعيدت قراءة البنود المحددة يدويًا في {date}؛ ما زال باقي العقد بحاجة إلى القراءة، لذا لا يمكن رفع التقييم بعد.',
   previous: 'التقييم السابق: {n}',
+  pending: 'تفاصيل المقياس C غير متاحة بعد: ما زال عقد هذه الشركة قيد القراءة، لذا يأتي التقييم حاليًا من الطريقة السابقة أعلاه.',
   source: 'المصدر',
   method: [
     'يُكتسب السقف بالأدلة: سنوات النشاط والمدفوعات واسعة النطاق (تتبع على السلسلة، إحصاءات منشورة، عينة كبيرة من Trustpilot).',
@@ -616,6 +628,7 @@ const ko: ScaleCCopy = {
   readingFull: '{date}에 계약서 전문을 직접 읽었습니다.',
   readingExcerpts: '{date}에 추출된 조항을 직접 다시 읽었습니다. 계약서 나머지는 아직 읽지 않아 점수가 아직 오를 수 없습니다.',
   previous: '이전 점수: {n}',
+  pending: '스케일 C 세부 내역은 아직 없습니다. 이 회사의 계약서를 읽는 중이므로 점수는 아직 위의 이전 방식에 따른 것입니다.',
   source: '출처',
   method: [
     '상한은 증거로 얻습니다: 운영 연수와 대규모 지급(온체인 추적, 공개 통계, 많은 Trustpilot 리뷰).',
@@ -666,6 +679,7 @@ const sw: ScaleCCopy = {
   readingFull: 'Mkataba ulisomwa wote kwa mkono tarehe {date}.',
   readingExcerpts: 'Vifungu vilivyoonyeshwa vilisomwa tena kwa mkono tarehe {date}; sehemu iliyobaki ya mkataba bado haijasomwa, hivyo alama haiwezi kupanda bado.',
   previous: 'Alama ya awali: {n}',
+  pending: 'Maelezo ya kipimo C bado hayapatikani: mkataba wa kampuni hii bado unasomwa, hivyo alama bado inatokana na mbinu ya awali hapo juu.',
   source: 'Chanzo',
   method: [
     'Kiwango cha juu hupatikana kwa ushahidi: miaka ya shughuli na malipo kwa kiwango kikubwa (ufuatiliaji on-chain, takwimu zilizochapishwa, sampuli kubwa ya Trustpilot).',
@@ -716,6 +730,7 @@ const ha: ScaleCCopy = {
   readingFull: 'An karanta kwangilar gaba ɗaya da hannu a ranar {date}.',
   readingExcerpts: 'An sake karanta sassan da aka gano da hannu a ranar {date}; sauran kwangilar ba a karanta ba tukuna, don haka maki ba zai iya hawa ba yanzu.',
   previous: 'Makin da ya gabata: {n}',
+  pending: 'Cikakken bayanin ma’aunin C bai samu ba tukuna: ana ci gaba da karanta kwangilar kamfanin, don haka makin har yanzu daga tsohuwar hanyar da ke sama yake.',
   source: 'Tushe',
   method: [
     'Ana samun iyakar maki da hujjoji: shekarun aiki da biyan kuɗi mai yawa (bibiya a kan sarkar, ƙididdigar da aka wallafa, babban samfurin Trustpilot).',
@@ -766,6 +781,7 @@ const am: ScaleCCopy = {
   readingFull: 'ውሉ በ{date} ሙሉ በሙሉ በእጅ ተነቧል።',
   readingExcerpts: 'የተለዩ አንቀጾች በ{date} በእጅ በድጋሚ ተነበዋል፤ የቀረው ውል ገና ስላልተነበበ ነጥቡ ገና ሊጨምር አይችልም።',
   previous: 'ቀዳሚ ነጥብ፡ {n}',
+  pending: 'የመለኪያ C ዝርዝር ገና አልተገኘም፡ የዚህ ድርጅት ውል አሁንም እየተነበበ ስለሆነ ነጥቡ ገና ከላይ ካለው የቀድሞ ዘዴ የመጣ ነው።',
   source: 'ምንጭ',
   method: [
     'ከፍተኛው ገደብ በማስረጃ ይገኛል፡ የእንቅስቃሴ ዓመታትና በሰፊ መጠን ክፍያዎች (በብሎክቼይን ክትትል፣ የታተሙ ስታቲስቲክስ፣ ሰፊ የTrustpilot ናሙና)።',

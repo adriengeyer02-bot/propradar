@@ -1,20 +1,21 @@
 firm,current,proposed,delta,raw_scale_c,ceiling,ceiling_why,penalties,confidence,flag
+Earn2Trade,74,89,15,89,95,9 ans + preuve,B7 −5 · consistency 30% −1,contrat lu en entier,
 FTMO,90,85,-5,85,98,11 ans + preuve très large,B2 −8 · B6 −5,contrat lu en entier,
 Take Profit Trader,73,82,9,82,95,5 ans + preuve,B3 −5 · B7 −5 · B4 −3,contrat lu en entier,
-MyFundedFutures,81,81,0,85,85,3 ans + preuve,aucune,extraits relus à la main,hausse en attente de lecture complète
+Blue Guardian,61,81,20,81,95,7 ans + preuve,B2 −8 · Trustpilot retiré −6,contrat lu en entier,
+Tradeify,78,80,2,80,85,3 ans + preuve,B3 −5,contrat lu en entier,
 Topstep,81,79,-2,79,95,14 ans + preuve,"B2 −8 · B3 −5 · Trustpilot < 4,0 −3",contrat lu en entier,
 The5ers,78,78,0,78,98,10 ans + preuve très large,B2 −8 · B3 −5 · B6 −5 · E_HARSH −2,contrat lu en entier,
-Tradeify,78,78,0,85,85,3 ans + preuve,aucune,extraits relus à la main,hausse en attente de lecture complète
 Funding Pips,76,76,0,85,85,4 ans + preuve,aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
-FXIFY,75,75,0,85,85,3 ans + preuve,aucune,extraits relus à la main,hausse en attente de lecture complète
 Fintokei,78,75,-3,75,75,"4 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,
 Axi Select,76,75,-1,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,
 City Traders Imperium,74,74,0,75,75,"8 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
-Earn2Trade,74,74,0,94,95,9 ans + preuve,consistency 30% −1,extraits relus à la main,hausse en attente de lecture complète
 E8 Markets,72,72,0,89,95,5 ans + preuve,Trustpilot retiré −6,audit en cours (CGU non lues),
+FXIFY,75,72,-3,72,85,3 ans + preuve,B2 −8 · B3 −5,contrat lu en entier,
 BrightFunded,72,72,0,79,85,3 ans + preuve,Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 Instant Funding,72,72,0,69,75,"5 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
 OneUp Trader,72,72,0,75,75,"9 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+MyFundedFutures,81,72,-9,72,85,3 ans + preuve,B2 −8 · B6 −5,contrat lu en entier,
 Hola Prime,72,72,0,75,75,2 ans,aucune,audit en cours (CGU non lues),
 PipFarm,71,71,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,audit en cours (CGU non lues),
 Hash Hedge,61,71,10,71,75,"3 ans, pas de preuve à grande échelle",B2A −4,contrat lu en entier,
@@ -47,7 +48,6 @@ Maven Trading,63,63,0,66,75,"4 ans, pas de preuve à grande échelle",B5 −3 ·
 MilTraders,63,63,0,75,75,date de création inconnue,aucune,extraction sans clause retenue,
 Bulenox,62,62,0,75,75,"6 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
 Crypto Fund Trader,62,62,0,75,75,"4 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
-Blue Guardian,61,61,0,89,95,7 ans + preuve,Trustpilot retiré −6,extraction sans clause retenue,
 Traders Central,61,61,0,75,75,"6 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 Traders Launch,61,61,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
 ThinkCapital,60,60,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète

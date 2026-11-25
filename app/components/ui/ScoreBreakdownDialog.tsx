@@ -48,6 +48,8 @@ export type ScoreBreakdownView = {
     notes: string[];
     copy: { ceiling: string; lost: string; none: string; source: string; method: string[] };
   };
+  /** Shown when the firm is not on scale C yet. */
+  pendingNote?: string;
   methodHref: string;
   rulesHref: string;
 };
@@ -249,6 +251,8 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               </li>
             </ol>
             )}
+
+            {view.pendingNote ? <p className="psb-note psb-c-pending prg-hud-reveal">{view.pendingNote}</p> : null}
 
             {view.signals.length ? (
               <div className="psb-signals prg-hud-reveal" style={delay(steps.length + 3)}>

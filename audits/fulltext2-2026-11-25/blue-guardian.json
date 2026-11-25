@@ -1,0 +1,22 @@
+{
+ "slug": "blue-guardian",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every paragraph of the archived terms, help and agreement pages matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Blue Guardian 'reserves the right to terminate an account or agreement or deny a withdrawal request if it is deemed a customer has abused margin availability on an account or not applied an appropriate risk management strategy', and 'reserves the sole and absolute discretion to determine any breach and may, without prior notice, take action including ... trade voiding, profit/loss adjustments, payout denial'.",
+   "source": "https://blueguardian.com/terms-and-conditions/",
+   "locator": "Risk management; Breach",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Main programmes: 2 Step Nano 50% funded consistency, Express 40% evaluation only, Zero 30/40/50% chosen at checkout; 15-20% apply to Instant accounts.",
+   "source": "https://help.blueguardian.com/en/collections/19810140-cfd-plans",
+   "locator": "Plan rules",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

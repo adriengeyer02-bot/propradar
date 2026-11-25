@@ -737,6 +737,7 @@ export default async function FirmPage({ params }: Props) {
         copy: { ceiling: cc.ceiling, lost: cc.lost, none: cc.none, source: cc.source, method: cc.method },
       };
     })() : undefined,
+    pendingNote: breakdown.scaleC || firm.status === 'Fermée' ? undefined : scaleCCopy(locale).pending,
     methodHref: L('/audit'),
     rulesHref: '#rules',
   };

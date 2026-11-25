@@ -1,0 +1,29 @@
+{
+ "slug": "earn2trade",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every paragraph of the archived terms, help and agreement pages matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B7",
+   "text": "After the evaluation, results are forwarded to a proprietary trading partner (such as Helios Trading Partners or Appius Trading Limited) which offers the LiveSim or Live account; that partner contract is not published on the Earn2Trade site.",
+   "source": "https://help.earn2trade.com/en/articles/6877364-what-happens-when-i-complete-my-evaluation",
+   "locator": "Funding",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_30_EVAL",
+   "text": "30% consistency rule during the evaluation phase only.",
+   "source": "https://help.earn2trade.com/en/articles/5941958-what-are-the-evaluation-rules",
+   "locator": "Evaluation rules",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "'Earn2Trade never changes the rules retroactively': updated rules apply only to evaluations purchased on or after the change date.",
+   "source": "https://www.earn2trade.com/blog/earn2trade-evaluation-rules-profit-split-update/",
+   "locator": "Comment reply, July 2026 update",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}
