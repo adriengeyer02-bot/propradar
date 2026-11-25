@@ -1,7 +1,57 @@
-{"slug":"fundednext","method":"full-text archive 2026-11-25 + extract-clauses.py","checkedOn":"2026-11-25","status":"PARTIAL: main Terms of Service not captured (robot redirected from /terms-of-service to /reward); help-centre pages read in full",
- "facts":[
-  {"code":"CONS_20_29_DELAY","text":"Futures Direct Account: 20% Perpetual Consistency Rule as a withdrawal gate; the best day ever carries forward across all cycles (cycle total must reach 5x the best day). CFD On-Demand: 40%; Futures Rapid Pro funded: 40%; Legacy/Flex funded: none.","source":"https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account","locator":"Direct Account section","checkedOn":"2026-11-25"},
-  {"code":"B5","text":"Quick Strike (trades closed within 30 s): at 30% or more of trades after a warning at 20%, 100% of their profit is deducted from the Performance Reward and the account is terminated if still at or above 30% at cycle end. News window (+/-5 min, high-impact): only 40% of profit from profitable trades counts.","source":"https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext","locator":"thresholds; News Reward Share Rule","checkedOn":"2026-11-25"}
+{
+ "slug": "fundednext",
+ "method": "full-text archive 2026-11-25 + extract-clauses.py",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ (French version saved by Geyer, OCR) + help centre pages",
+ "facts": [
+  {
+   "code": "CONS_20_29_DELAY",
+   "text": "Futures Direct Account: 20% Perpetual Consistency Rule as a withdrawal gate; the best day ever carries forward across all cycles (cycle total must reach 5x the best day). CFD On-Demand: 40%; Futures Rapid Pro funded: 40%; Legacy/Flex funded: none.",
+   "source": "https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account",
+   "locator": "Direct Account section",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B5",
+   "text": "Quick Strike (trades closed within 30 s): at 30% or more of trades after a warning at 20%, 100% of their profit is deducted from the Performance Reward and the account is terminated if still at or above 30% at cycle end. News window (+/-5 min, high-impact): only 40% of profit from profitable trades counts.",
+   "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+   "locator": "thresholds; News Reward Share Rule",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B1",
+   "text": "'Performance Reward' is defined as any amount the Provider may make available 'à sa seule discrétion' and is 'not ... an acquired right'; at any time before actual payment the Provider may review, adjust, withhold, refuse or cancel Performance Rewards, including for 'technical or operational inconsistencies'. Funded access is revocable at the Provider's discretion and creates no acquired right or guarantee of future payments.",
+   "source": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+   "locator": "§3 Définitions; §12.6; §10.3",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B2",
+   "text": "On a breach or 'reasonable indications' of a breach, the Provider may, at its sole discretion and without notice, suspend or close accounts and refuse, withhold or reverse Performance Rewards; open-ended ground: any circumstance 'incompatible with the legitimate purpose of the Services'.",
+   "source": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+   "locator": "§5.8; §9.4; §9.7-9.8",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "Non-disparagement clause covering defamation, 'discrédit, dénigrement, attaque réputationnelle ou propagande négative' on social media, forums, review platforms, support tickets and e-mails, including saying 'does not pay' without verifiable factual basis; breach allows withholding, refusing or cancelling Performance Rewards.",
+   "source": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+   "locator": "§24.1; §24.2; §24.5",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Continued use after the effective date of changed Terms counts as acceptance; terminating the account creates no right to a refund or to a Performance Reward.",
+   "source": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+   "locator": "§22.4; §22.5",
+   "checkedOn": "2026-11-25"
+  }
  ],
- "carriedFromPriorDossier":["REGWARN (RBI Alert List 2024-10-22)","B2 suspected-breach powers","B4 USD 2,500 vs 25,000 penalty versions","B6 reputational restrictions"],
- "todo":"re-capture https://fundednext.com/terms-of-service with a browser session that is not redirected"}
+ "carriedFromPriorDossier": [
+  "REGWARN (RBI Alert List 2024-10-22)",
+  "B2 suspected-breach powers",
+  "B4 USD 2,500 vs 25,000 penalty versions",
+  "B6 reputational restrictions"
+ ],
+ "todo": "English version of the Terms to compare with the French one; notice period for changes (§22.1-22.2) not legible in this pass"
+}

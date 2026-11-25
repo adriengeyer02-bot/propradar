@@ -11,19 +11,19 @@ never read outside its section (lesson of Topstep §29, 25 Nov 2026).
 import json, os, re, sys, hashlib
 
 CHECKLIST = {
-    'discretion': r"sole discretion|absolute discretion|own discretion|its discretion|our discretion|at any time for any reason|for any reason|without (?:any )?reason|in (?:its|our) (?:sole |reasonable )?(?:opinion|judg(?:e)?ment|determination)|deem(?:s|ed)? (?:to be )?(?:necessary|appropriate|abusive|prohibited)|reserves? the right|final and binding|decision(?:s)? (?:is|are) final",
-    'forfeiture': r"forfeit|confiscat|void|nullif|cancel(?:l)?(?:ation|ed|s)? (?:of )?(?:the |any |all )?(?:profit|reward|payout|withdraw|gain|balance)|withh[oe]ld|den(?:y|ial) (?:of )?(?:the |any )?(?:payout|reward|withdraw)|refuse (?:to pay|the payout|a payout|payment)|claw ?back|recover (?:any )?(?:amount|reward|payout)|reverse|deduct|remov(?:e|al) (?:of )?(?:the )?(?:profit|gain|trade)",
-    'prohibited': r"prohibited|forbidden|not (?:allowed|permitted)|banned|abus(?:e|ive)|gambl|toxic|exploit|arbitrage|latency|hedg|copy ?trad|martingale|grid|tick scalp|high[- ]frequency|hft|news (?:trading|event)|reckless|replicab|unrealistic|gaming|manipulat",
-    'changes': r"amend|modif(?:y|ication)|change (?:these|the|our|any)|update (?:these|the)|without (?:prior )?notice|with or without notice|retroactiv|existing accounts?|effective (?:upon|immediately|on publication)|continued use",
-    'reputation': r"reputation|disparag|defam|negative (?:review|comment)|publicly|social media|confidential|non-disclosure|gag",
-    'consistency': r"consisten|best (?:trading )?day|single (?:trading )?day|largest (?:winning )?(?:day|trade)|\d{1,2}\s?% (?:of (?:the )?(?:total )?(?:net )?profit)|profit (?:cap|share rule)",
+    'discretion': r"sole discretion|absolute discretion|own discretion|its discretion|our discretion|at any time for any reason|for any reason|without (?:any )?reason|in (?:its|our) (?:sole |reasonable )?(?:opinion|judg(?:e)?ment|determination)|deem(?:s|ed)? (?:to be )?(?:necessary|appropriate|abusive|prohibited)|reserves? the right|final and binding|decision(?:s)? (?:is|are) final|discrétion|discretion|seule appréciation|à tout moment|pour quelque raison|décision (?:est )?(?:finale|définitive)|se réserve le droit|reserve le droit",
+    'forfeiture': r"forfeit|confiscat|void|nullif|cancel(?:l)?(?:ation|ed|s)? (?:of )?(?:the |any |all )?(?:profit|reward|payout|withdraw|gain|balance)|withh[oe]ld|den(?:y|ial) (?:of )?(?:the |any )?(?:payout|reward|withdraw)|refuse (?:to pay|the payout|a payout|payment)|claw ?back|recover (?:any )?(?:amount|reward|payout)|reverse|deduct|remov(?:e|al) (?:of )?(?:the )?(?:profit|gain|trade)|annul|confisqu|retenir|retenue|refus(?:er)? (?:le |tout )?(?:paiement|récompense|retrait)|déduir|déduction|perte des (?:gains|profits|récompenses)|récupér",
+    'prohibited': r"prohibited|forbidden|not (?:allowed|permitted)|banned|abus(?:e|ive)|gambl|toxic|exploit|arbitrage|latency|hedg|copy ?trad|martingale|grid|tick scalp|high[- ]frequency|hft|news (?:trading|event)|reckless|replicab|unrealistic|gaming|manipulat|interdit|prohib|abus|gamble|jeu de hasard|arbitrage de latence|copie de trades|couverture",
+    'changes': r"amend|modif(?:y|ication)|change (?:these|the|our|any)|update (?:these|the)|without (?:prior )?notice|with or without notice|retroactiv|existing accounts?|effective (?:upon|immediately|on publication)|continued use|modifi|sans préavis|sans preavis|rétroacti|retroacti|mise(?:s)? à jour|entrée en vigueur",
+    'reputation': r"reputation|disparag|defam|negative (?:review|comment)|publicly|social media|confidential|non-disclosure|gag|réputation|reputation|dénigr|denigr|diffam|confidential|publiquement|réseaux sociaux",
+    'consistency': r"consisten|best (?:trading )?day|single (?:trading )?day|largest (?:winning )?(?:day|trade)|\d{1,2}\s?% (?:of (?:the )?(?:total )?(?:net )?profit)|profit (?:cap|share rule)|cohérence|coherence|consistance|meilleur jour|meilleure journée",
     'payout': r"payout|withdraw|reward|profit split|performance fee|scholarship|buffer|minimum (?:trading )?days|bi-?weekly|on demand|cap(?:ped)? (?:at|per)",
-    'recourse': r"appeal|review (?:request|the decision|procedure)|dispute|arbitrat|complain|right to (?:explain|respond|be heard)|representations|ombudsman|mediat|jurisdiction|governing law",
+    'recourse': r"appeal|review (?:request|the decision|procedure)|dispute|arbitrat|complain|right to (?:explain|respond|be heard)|representations|ombudsman|mediat|jurisdiction|governing law|recours|réclamation|arbitrag|médiat|juridiction|droit applicable",
     'entity': r"\b(?:ltd|limited|llc|l\.l\.c\.|inc\.?|gmbh|s\.r\.o\.|fz-?llc|fzco|fze|pte|pty|s\.a\.|b\.v\.|a\.s\.)\b|incorporated|registered (?:in|under|office|number)|company (?:number|no\.?|registration)|registration (?:number|no\.?)",
-    'funded_agreement': r"(?:funded|trader|account|contractor|participation|live|xfa|pro) (?:trader )?agreement|separate (?:written )?agreement|supplemental (?:written )?agreement|contract (?:we send|will be sent|provided)|sign(?:ed|ing)? (?:the |a )?(?:contract|agreement)",
+    'funded_agreement': r"(?:funded|trader|account|contractor|participation|live|xfa|pro) (?:trader )?agreement|separate (?:written )?agreement|supplemental (?:written )?agreement|contract (?:we send|will be sent|provided)|sign(?:ed|ing)? (?:the |a )?(?:contract|agreement)|contrat (?:distinct|séparé|de trader|funded)|accord (?:distinct|séparé)",
     'kyc_vpn': r"\bkyc\b|identity verification|\bvpn\b|\bvps\b|proxy|ip address|location|restricted (?:countr|jurisdiction)",
     'inactivity': r"inactiv|dormant|at least one (?:trade|trading day)|days? without (?:a )?trad",
-    'refund_chargeback': r"refund|chargeback|charge-back|payment dispute|bank dispute",
+    'refund_chargeback': r"refund|chargeback|charge-back|payment dispute|bank dispute|rembourse|rétrofactur|contestation bancaire|litige bancaire",
 }
 RX = {k: re.compile(v, re.I) for k, v in CHECKLIST.items()}
 HEAD = re.compile(r"^\s*(?:(?:section|article|clause|§)\s*)?(?:\d+(?:\.\d+)*\.?|[A-Z]\.|[IVX]+\.)\s+\S.{0,90}$|^[A-Z0-9][A-Z0-9 ,&/()'’-]{3,80}$")
@@ -87,7 +87,7 @@ def main():
         paras = [] if dup or blocked else paragraphs(body)
         n = 0
         for heading, p in paras:
-            if openings[p[:120]] >= 2 and len(index) > 2:
+            if openings[p[:120]] >= 2 and len(index) > 2 and len(p) < 400:
                 continue
             cats = [k for k, rx in RX.items() if rx.search(p) or (heading and rx.search(heading))]
             if cats:
