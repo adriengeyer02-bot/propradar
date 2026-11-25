@@ -1,5 +1,5 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
-import { getScaleC } from './scaleC';
+import { getScaleC, isFullyRead, UNAUDITED_SCORE_CAP } from './scaleC';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
@@ -148,6 +148,8 @@ export type PropFirm = {
   closedCap?: { before: number; cap: number };
   /** Scale C (SCORING.md): set when the score comes from app/data/scale-c.json; `before` = previous pipeline score. */
   scaleC?: { before: number };
+  /** Cap at 60 while the terms are not read in full (scaleC.ts), set when it lowered the score. */
+  unauditedCap?: { before: number; cap: number };
   /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
@@ -13028,7 +13030,12 @@ function applyScaleCRule(firm: PropFirm): PropFirm {
   return { ...firm, score: entry.score, scaleC: { before: firm.score } };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyScaleCRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+function applyUnauditedCapRule(firm: PropFirm): PropFirm {
+  if (firm.status === 'Fermée' || isFullyRead(firm.slug) || firm.score <= UNAUDITED_SCORE_CAP) return firm;
+  return { ...firm, score: UNAUDITED_SCORE_CAP, unauditedCap: { before: firm.score, cap: UNAUDITED_SCORE_CAP } };
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyScaleCRule).map(applyUnauditedCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

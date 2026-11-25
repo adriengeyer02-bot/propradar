@@ -662,6 +662,11 @@ export default async function FirmPage({ params }: Props) {
     scoreSteps.push({ kind: 'safety', label: safety.label, detail: safety.detail,
       value: breakdown.safetyCap.cap, delta: breakdown.safetyCap.before - breakdown.safetyCap.cap });
   }
+  if (firm.unauditedCap && !breakdown.scaleC) {
+    const cc = scaleCCopy(locale);
+    scoreSteps.push({ kind: 'unaudited', label: cc.unauditedCap, detail: fmt(cc.unauditedCapDetail, { before: firm.unauditedCap.before }),
+      value: firm.unauditedCap.cap, delta: firm.unauditedCap.before - firm.unauditedCap.cap });
+  }
   if (breakdown.closedCap) scoreSteps.push({ kind: 'closed', label: scoreCopy.closedCap, detail: fmt(scoreCopy.closedCapDetail, { cap: breakdown.closedCap.cap }), value: breakdown.closedCap.cap, delta: breakdown.closedCap.before - breakdown.closedCap.cap });
   const scoreView: ScoreBreakdownView = {
     name: firm.name,
@@ -717,7 +722,8 @@ export default async function FirmPage({ params }: Props) {
         c.contractCap && contractTotal > c.contractCap ? fmt(cc.contractCap, { cap: c.contractCap }) : '',
         c.score !== c.raw && c.score > c.raw ? cc.fallCap : '',
         fmt(c.reading === 'full' ? cc.readingFull : cc.readingExcerpts, { date: formatDateLong(locale, c.checkedOn) }),
-        c.previous !== c.score ? fmt(cc.previous, { n: c.previous }) : '',
+        firm.unauditedCap ? fmt(cc.unauditedCapDetail, { before: firm.unauditedCap.before }) : '',
+        c.previous !== firm.score ? fmt(cc.previous, { n: c.previous }) : '',
       ].filter(Boolean);
       return {
         ceiling: c.ceiling,
@@ -737,7 +743,7 @@ export default async function FirmPage({ params }: Props) {
         copy: { ceiling: cc.ceiling, lost: cc.lost, none: cc.none, source: cc.source, method: cc.method },
       };
     })() : undefined,
-    pendingNote: breakdown.scaleC || firm.status === 'Fermée' ? undefined : scaleCCopy(locale).pending,
+    pendingNote: breakdown.scaleC || firm.status === 'Fermée' || firm.unauditedCap ? undefined : scaleCCopy(locale).pending,
     methodHref: L('/audit'),
     rulesHref: '#rules',
   };

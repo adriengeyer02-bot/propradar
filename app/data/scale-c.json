@@ -25,15 +25,50 @@
    "checkedOn": "2026-11-25"
   },
   "axi-select": {
-   "score": 75,
+   "score": 72,
    "previous": 76,
-   "raw": 75,
+   "raw": 72,
    "ceiling": 75,
    "tier": "y2plus",
    "founded": 2023,
    "ceilingEvidence": [],
-   "penalties": [],
+   "penalties": [
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "Axi Select — own-funds withdrawal: Withdrawing from the linked real-money brokerage balance can reduce programme allocation by the applicable multiplier while the original loss limit does not automatically move downward.",
+     "source": "https://www.axi.com/int/funded-trader-program",
+     "locator": "main programme scored: axi-select"
+    }
+   ],
    "reading": "excerpts",
+   "checkedOn": "2026-11-25"
+  },
+  "city-traders-imperium": {
+   "score": 62,
+   "previous": 74,
+   "raw": 62,
+   "ceiling": 75,
+   "tier": "y2plus",
+   "founded": 2018,
+   "ceilingEvidence": [],
+   "penalties": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "The Company may 'disallow or block any Trader from participating in the program for any reason, in the Company's sole and absolute discretion'; it may act against conduct 'that we, at our sole discretion, regard as misaligned with our mission and values'; actions include cancelling trades and informing CTI, which may cancel 'all of your accounts or rewards'; any violation of the Terms forfeits 'their right to receive any rewards'.",
+     "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+     "locator": "§9.2.9; §10; §10.2.4; §8.11 (PDF of 12 June 2026, saved by Geyer)"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "If the Client 'acts in a manner that may damage the Company's good reputation', the Company may restrict access to all or some services.",
+     "source": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+     "locator": "§12 (restriction of access)"
+    }
+   ],
+   "reading": "full",
    "checkedOn": "2026-11-25"
   },
   "finotive-funding": {
@@ -64,14 +99,22 @@
    "checkedOn": "2026-11-25"
   },
   "fintokei": {
-   "score": 75,
+   "score": 72,
    "previous": 78,
-   "raw": 75,
+   "raw": 72,
    "ceiling": 75,
    "tier": "y2plus",
    "founded": 2022,
    "ceilingEvidence": [],
-   "penalties": [],
+   "penalties": [
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All Fintokei programmes — pre-payout review: General Terms V17 art. V.5: \"before processing any Performance reward payout, the Company may review your trading activity\", with automated detection of prohibited trading (art. V.4); penalties are retracted only if the customer \"can demonstrate otherwise beyond a reasonable doubt\". The help article \"When will I receive my payout?\" says requests are \"automatically approved within seconds\" and contrasts this with manual reviews…",
+     "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+     "locator": "main programme scored: swift"
+    }
+   ],
    "reading": "excerpts",
    "checkedOn": "2026-11-25"
   },
@@ -136,9 +179,9 @@
    "checkedOn": "2026-11-25"
   },
   "fundednext": {
-   "score": 57,
+   "score": 55,
    "previous": 72,
-   "raw": 57,
+   "raw": 55,
    "ceiling": 85,
    "tier": "y3evidence",
    "founded": 2022,
@@ -176,6 +219,13 @@
      "locator": "§24.1; §24.2; §24.5"
     },
     {
+     "code": "D_SPLIT_REDUCTION",
+     "points": 2,
+     "text": "All Stellar programmes — gambling behaviour: \"Gambling behaviors such as overleveraging, over-risking, a non-repeatable trading style\" are enforced under the Risk parameter, identified from indicators such as losses outweighing average gains, breaching several accounts in a short span or unrealistic targets. The trader must then choose On-Demand Performance Rewards with a 40% Consistency Rule or an \"Adjusted Profit Split\" (percentage not stated); \"it applies across all…",
+     "source": "https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies",
+     "locator": "main programme scored: 1step"
+    },
+    {
      "code": "REGWARN",
      "points": 5,
      "text": "The Reserve Bank of India added \"FundedNext | https://fundednext.com\" to its Alert List of unauthorised forex trading platforms in a press release dated 2024-10-22 (Press Release 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). The RBI says the list is not exhaustive.",
@@ -207,9 +257,9 @@
    "checkedOn": "2026-11-25"
   },
   "fxify": {
-   "score": 72,
+   "score": 69,
    "previous": 75,
-   "raw": 72,
+   "raw": 69,
    "ceiling": 85,
    "tier": "y3evidence",
    "founded": 2023,
@@ -238,6 +288,13 @@
      "text": "Funded traders accept the Risk Management and Program Rules 'as they are set forth here and as may be amended from time to time by The Prop Company and sent to You by email'; 'any violation thereof will result in the closing of your account'.",
      "source": "https://fxify.com/agreement/",
      "locator": "Risk Management and Program Rules"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "Funded accounts — withdrawal frequency in the trader agreement: The User Agreement (section 5, page modified 25 March 2025) says withdrawals \"can be requested no more than once every 30 days\", while FXIFY's current programme material describes shorter cycles (for example ten-day payouts on 2-Phase Pro). The agreement does not say which programmes the 30-day limit covers.",
+     "source": "https://fxify.com/agreement/",
+     "locator": "main programme scored: one-phase"
     }
    ],
    "reading": "full",
@@ -271,9 +328,9 @@
    "checkedOn": "2026-11-25"
   },
   "hantec-trader": {
-   "score": 67,
+   "score": 64,
    "previous": 68,
-   "raw": 67,
+   "raw": 64,
    "ceiling": 75,
    "tier": "y2plus",
    "founded": 2023,
@@ -285,15 +342,22 @@
      "text": "Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
      "source": "https://rzrfunded.com/terms-conditions/",
      "locator": ""
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "RZR Funded — standard funded accounts: The first payout is generally eligible after 14 days from the first trade; certain products offer seven days or an Instant24 variant. All positions must be closed before requesting.",
+     "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
+     "locator": "main programme scored: challenge"
     }
    ],
    "reading": "excerpts",
    "checkedOn": "2026-11-25"
   },
   "hash-hedge": {
-   "score": 71,
+   "score": 64,
    "previous": 61,
-   "raw": 71,
+   "raw": 64,
    "ceiling": 75,
    "tier": "y2plus",
    "founded": 2023,
@@ -305,15 +369,29 @@
      "text": "Open-ended prohibition ('any other conduct which, in the reasonable opinion of the Company, may harm the integrity') with sole-discretion measures; pending payouts can be put on Hold for suspected breach or reputational risk. Mitigated: written appeal within 7 days with decision in 14 days, 30-business-day investigation target and a 90-day backstop opening the dispute procedure.",
      "source": "https://www.hashhedge.com/terms-and-conditions",
      "locator": "cl. 4.5; 16.1; 16.3(e); 15.7(c); 7.11"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All plans (Live Account): Commercial Terms section 3: \"the maximum payout amount per fourteen (14) calendar day period is USD 10,000\".",
+     "source": "https://www.hashhedge.com/commercial-terms",
+     "locator": "main programme scored: 2stage"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All plans (Live Account): Commercial Terms section 3: the payout day falls \"between fourteen (14) and sixty (60) calendar days from the opening of the first trade\"; \"No payout shall be processed until the applicable Re-Verification requirement has been satisfied\". Sections 6.2 and 6.5: payouts may be suspended during a Hold, with no interest or compensation, and disputes wait for the Hold to end or a 90-day \"Backstop Period\". Section 4.4: disqualification can \"forfeit any…",
+     "source": "https://www.hashhedge.com/commercial-terms",
+     "locator": "main programme scored: 2stage"
     }
    ],
    "reading": "full",
    "checkedOn": "2026-11-25"
   },
   "hyrotrader": {
-   "score": 66,
+   "score": 62,
    "previous": 55,
-   "raw": 66,
+   "raw": 62,
    "ceiling": 75,
    "tier": "y2plus",
    "founded": 2022,
@@ -332,15 +410,22 @@
      "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
      "source": "https://www.hyrotrader.com/terms-and-conditions/",
      "locator": "§P.4; Companion Policies"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Funded accounts — profit above 5% per request: \"The profit counted in one payout request is capped at 5% of your initial balance\", and \"If a trader does not withdraw and exceeds 5% profit, any additional profit will not be paid.\" The FAQ does not limit this to one programme. Terms 11.7 add that payouts are subject to \"the per-payout and cumulative limits published in the payout information on the Platform\".",
+     "source": "https://www.hyrotrader.com/faq/orders-billing-taxes/is-there-a-maximum-withdrawal-amount-in-one-payout/",
+     "locator": "main programme scored: core"
     }
    ],
    "reading": "full",
    "checkedOn": "2026-11-25"
   },
   "lucid-trading": {
-   "score": 66,
+   "score": 59,
    "previous": 53,
-   "raw": 66,
+   "raw": 59,
    "ceiling": 75,
    "tier": "y2plus",
    "founded": 2024,
@@ -365,15 +450,29 @@
      "text": "Terms of Use may be revised 'from time to time in our sole discretion'; Website, Software, Services and fees may be modified, suspended or discontinued; prices may change without notice.",
      "source": "https://www.lucidtrading.com/terms-of-use/",
      "locator": "Changes to the Terms of Use"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "LucidPro — funded payout: Minimum request $500. Maximum per request: Payout 1 $1,000 / $2,000 / $2,500 / $3,000 and Payouts 2+ $1,500 / $2,500 / $3,000 / $3,500 for 25K / 50K / 100K / 150K. The buffer (initial Max Loss Limit + $100) cannot be withdrawn. A request 'may be denied' if a trade before approval drops the balance into the buffer.",
+     "source": "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+     "locator": "main programme scored: pro"
+    },
+    {
+     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+     "points": 3,
+     "text": "LucidPro, LucidFlex and LucidDirect — move to live: Receiving Payout 5 on a Flex, Pro or Direct plan puts the trader in a live review pool ('Payout 5 represents the maximum payout level'); transitions occur 'at the discretion of the Lucid risk team'. Accounts 'automatically move to Live' if no cash-out choice is made within 24 hours of the email. Live accounts start with a $0 balance, and all simulated prop accounts close when the trader moves live or takes the cash-out.…",
+     "source": "https://support.lucidtrading.com/en/articles/16558826-new-live-structure",
+     "locator": "main programme scored: pro"
     }
    ],
    "reading": "full",
    "checkedOn": "2026-11-25"
   },
   "lvlup-futures": {
-   "score": 50,
+   "score": 44,
    "previous": 51,
-   "raw": 50,
+   "raw": 44,
    "ceiling": 55,
    "tier": "lt1",
    "founded": 2026,
@@ -385,6 +484,20 @@
      "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
      "source": "https://lvlupfutures.com/rules",
      "locator": ""
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Lvlup — funded: Lvlup funded payouts are capped at 10% of the original starting balance per request: $2,500 (25K), $5,000 (50K), $10,000 (100K), $15,000 (150K), every 14 days.",
+     "source": "https://lvlupfutures.com/rules",
+     "locator": "main programme scored: lvlup"
+    },
+    {
+     "code": "D_FUNDED_TRAILING_DRAWDOWN",
+     "points": 2,
+     "text": "Lvlup — funded: The funded account keeps a 5% EOD trailing drawdown based on the highest end-of-day balance, locking at the original starting balance once the account reaches 6% profit; 'A payout does not reset drawdown.'",
+     "source": "https://lvlupfutures.com/rules",
+     "locator": "main programme scored: lvlup"
     }
    ],
    "reading": "excerpts",
@@ -448,9 +561,9 @@
    "checkedOn": "2026-11-25"
   },
   "take-profit-trader": {
-   "score": 82,
+   "score": 80,
    "previous": 73,
-   "raw": 82,
+   "raw": 80,
    "ceiling": 95,
    "tier": "y5evidence",
    "founded": 2021,
@@ -482,6 +595,13 @@
      "text": "Older FAQ says weekly PRO+ activity, current help says one traded day per calendar month (cohort to reconcile).",
      "source": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
      "locator": "PRO+ FAQ vs PRO Account Rules §3"
+    },
+    {
+     "code": "D_FUNDED_TRAILING_DRAWDOWN",
+     "points": 2,
+     "text": "PRO — funded simulated: Trailing drawdown follows the highest REAL-TIME equity, including unrealized gains. Build a payout buffer equivalent to the maximum loss limit before normal cash-outs.",
+     "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+     "locator": "main programme scored: test-pro"
     }
    ],
    "reading": "full",
@@ -515,9 +635,9 @@
    "checkedOn": "2026-11-25"
   },
   "the5ers": {
-   "score": 78,
+   "score": 71,
    "previous": 78,
-   "raw": 78,
+   "raw": 71,
    "ceiling": 98,
    "tier": "y8veryLarge",
    "founded": 2016,
@@ -555,6 +675,20 @@
      "locator": "Termination rights - Termination for Cause"
     },
     {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "The5ers High Stakes — Pro withdrawals: Published $50K / $100K Pro payout caps are $3,000 / $4,000, with minimum payout profits $300 / $500; requests are every 14 days.",
+     "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+     "locator": "main programme scored: high-stakes"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All programmes — verification interview: Section 3.2: if the Company requests an interview, scheduling and conducting it \"must take place within five (5) business days from the date of the request.\" Failure \"will result in the denial of any pending payouts, immediate cancellation of all associated accounts, and termination of the collaboration.\" The verification process may be conducted \"at any time on our sole discretion.\"",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "main programme scored: high-stakes"
+    },
+    {
      "code": "E_HARSH",
      "points": 2,
      "text": "A video interview requested during verification must be scheduled and completed within five business days, otherwise pending payouts are denied, all accounts cancelled and the collaboration terminated.",
@@ -565,10 +699,44 @@
    "reading": "full",
    "checkedOn": "2026-11-25"
   },
+  "top-one-trader": {
+   "score": 57,
+   "previous": 60,
+   "raw": 57,
+   "ceiling": 75,
+   "tier": "y2plus",
+   "founded": 2023,
+   "ceilingEvidence": [],
+   "penalties": [
+    {
+     "code": "CONS",
+     "points": 8,
+     "text": "Accounts bought since 14 Oct 2025: consistency score must stay at 15 % or below (rules page).",
+     "source": "https://checkout.toponetrader.com/rules/",
+     "locator": "15%"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "2-Step PRO (V2) — funded stage: 'Each payout request is limited to 6% of the account size', with a $15,000 maximum per request; a request needs at least 3% profit and 'at least 3 profitable trading days' (each at least 0.5% of the starting balance).",
+     "source": "https://help.toponetrader.com/en/articles/15164961-2-step-pro-v2-when-can-i-request-a-payout",
+     "locator": "main programme scored: 2steppro"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "reading": "excerpts",
+   "checkedOn": "2026-11-25"
+  },
   "topstep": {
-   "score": 79,
+   "score": 73,
    "previous": 81,
-   "raw": 79,
+   "raw": 73,
    "ceiling": 95,
    "tier": "y5evidence",
    "founded": 2012,
@@ -591,6 +759,20 @@
      "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
      "source": "https://www.topstep.com/terms-of-use",
      "locator": "§9; §27; introduction"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Express Funded Account — payout size: Each Express Funded Account payout is limited to \"50% of your account balance up to the cap\", with caps from $2,000 to $6,000 depending on account size and payout path. \"Minimum Payout: $125.\" Live Funded Account payouts are not capped.",
+     "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+     "locator": "main programme scored: combine"
+    },
+    {
+     "code": "D_FUNDED_TRAILING_DRAWDOWN",
+     "points": 2,
+     "text": "Topstep Express Funded Account — payout: Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
+     "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+     "locator": "main programme scored: combine"
     },
     {
      "code": "TPMID",
@@ -631,6 +813,47 @@
     }
    ],
    "reading": "full",
+   "checkedOn": "2026-11-25"
+  },
+  "wegetfunded": {
+   "score": 47,
+   "previous": 53,
+   "raw": 47,
+   "ceiling": 65,
+   "tier": "y1to2",
+   "founded": 2025,
+   "ceilingEvidence": [],
+   "penalties": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
+     "source": "https://wegetfunded.com/en/legal/terms",
+     "locator": ""
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All programmes — funded (WGF) account: Each withdrawal is limited to 'up to 50% of their cumulative P&L, subject to a maximum amount'. Per-withdrawal maximums: Instant $850 / $1,500 / $3,000 (15k / 30k / 60k); 1 Step and 2 Step funded e.g. $1,800 / $2,000 / $2,250 on 50k and $3,000 / $3,500 / $4,000 on 200k for the 1st / 2nd / 3rd+ withdrawal.",
+     "source": "https://wegetfunded.com/en/faq",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All programmes — funded (WGF) account: Withdrawal requests are accepted only from the 16th to the last day of each month (UTC); none from the 1st to the 15th. A minimum of 7 calendar days from the cycle's first trade applies, and the cycle restarts after each approved withdrawal.",
+     "source": "https://wegetfunded.com/legal/terms",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 1004"
+    }
+   ],
+   "reading": "excerpts",
    "checkedOn": "2026-11-25"
   }
  }

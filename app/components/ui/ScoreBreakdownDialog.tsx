@@ -6,7 +6,7 @@ import type { ScoreV4Copy } from '../../lib/scoreV4I18n';
 import type { V5RuleDeduction } from '../../lib/scoringV5';
 
 export type ScoreStep = {
-  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'closed';
+  kind: 'editorial' | 'rules' | 'trustpilot' | 'safety' | 'closed' | 'unaudited';
   label: string;
   detail: string;
   /** Score after this step. */

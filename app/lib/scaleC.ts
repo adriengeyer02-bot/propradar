@@ -10,7 +10,8 @@ import type { FirmChangelogEntry } from './firmUpdates';
  */
 export type ScaleCCode =
   | 'B1' | 'B2' | 'B2A' | 'B3' | 'B4' | 'B5' | 'B6' | 'B7'
-  | 'CONS' | 'TPW' | 'TPMID' | 'REGWARN' | 'E_HARSH' | 'A1' | 'A1_OLD_UNCLEAR' | 'A2ISO';
+  | 'CONS' | 'TPW' | 'TPMID' | 'REGWARN' | 'E_HARSH' | 'A1' | 'A1_OLD_UNCLEAR' | 'A2ISO'
+  | 'D_PAYOUT_CAP' | 'D_PAYOUT_CONDITIONS' | 'D_ACCOUNT_ENDS_AFTER_PAYOUTS' | 'D_FUNDED_TRAILING_DRAWDOWN' | 'D_SPLIT_REDUCTION';
 
 export type ScaleCTier = 'unknown' | 'lt1' | 'y1to2' | 'y2plus' | 'y3evidence' | 'y5evidence' | 'y8veryLarge';
 
@@ -42,6 +43,15 @@ export function getScaleC(slug: string): ScaleCEntry | undefined {
   return FIRMS[slug];
 }
 
+/**
+ * Firms whose terms have not been read in full by hand are capped at 60
+ * (Geyer, 2026-11-25): an unread contract must never rank above a read one.
+ */
+export const UNAUDITED_SCORE_CAP = 60;
+export function isFullyRead(slug: string): boolean {
+  return FIRMS[slug]?.reading === 'full';
+}
+
 /** Contract-clause codes (capped together at `contractCap`). */
 export const SCALE_C_CONTRACT_CODES: ScaleCCode[] = ['B1', 'B2', 'B2A', 'B3', 'B4', 'B5', 'B6', 'B7'];
 
@@ -53,7 +63,7 @@ export function scaleCChangelog(slug: string): FirmChangelogEntry[] {
   const source = entry.penalties.find((item) => item.source.startsWith('https://'))?.source ?? 'https://www.propradar.tech/audit';
   return [{
     date: SCALE_C_APPROVED_ON,
-    summary: `Score recalculated with scale C (approved 2026-11-25): ${entry.previous} → ${entry.score}. Ceiling ${entry.ceiling}; points lost: ${lost}. ${entry.reading === 'full' ? 'Contract read in full.' : 'Flagged clauses re-read by hand; a rise waits for a full reading.'}`,
+    summary: `Score recalculated with scale C (approved 2026-11-25): ${entry.previous} → ${entry.score}. Ceiling ${entry.ceiling}; points lost: ${lost}. ${entry.reading === 'full' ? 'Contract read in full.' : `Flagged clauses re-read by hand; a rise waits for a full reading${entry.score > UNAUDITED_SCORE_CAP ? ` and the displayed score is capped at ${UNAUDITED_SCORE_CAP} until then` : ''}.`}`,
     source,
     fields: ['score'],
   }];

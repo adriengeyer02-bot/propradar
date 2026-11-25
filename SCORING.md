@@ -256,3 +256,18 @@ every point lost with the clause excerpt and its source.
    each post linked, −10; H2 acknowledged default or regulator proceedings
    −20. Until firm-file incidents are coded this way, no firm with dated
    incidents can rise under scale C.
+
+### Scale C additions (Geyer, 2026-11-25, evening)
+
+- **Cap at 60 for terms not read in full.** Any open firm whose terms have
+  not been read in full by hand (`reading: "full"` in `scale-c.json`) is
+  capped at 60 (`applyUnauditedCapRule`); the score dialog states the cap and
+  the score before it. An unread contract can no longer rank above a read one.
+- **D. Payout conditions**, read from the sourced restrictive rules (major or
+  blocking) on the most lenient main programme: payout capped per request −4;
+  extra payout conditions (buffer, review, minimum) −3; funded account ends
+  after a set number of payouts −3; trailing drawdown on the funded account
+  −2; profit split reduced over time −2. Consistency and D together cost at
+  most 15 points.
+- Earn2Trade and Blue Guardian are held (Geyer declined the rises); they stay
+  under the 60 cap until he decides.

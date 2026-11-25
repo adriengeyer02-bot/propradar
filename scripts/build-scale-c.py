@@ -39,6 +39,8 @@ def tier(row):
 # A firm entering scale C with a move of 10 points or more waits for Geyer's
 # explicit approval (CLAUDE.md rule 6) unless it is listed in --approved.
 APPROVED = set(json.load(open(OUT))['firms']) if len(sys.argv) < 3 else set(sys.argv[2].split(','))
+# Firms Geyer declined to move (2026-11-25: Earn2Trade, Blue Guardian).
+HOLD = set(sys.argv[3].split(',')) if len(sys.argv) > 3 else set()
 held = []
 firms = {}
 for r in PROPOSAL['rows']:
@@ -46,7 +48,7 @@ for r in PROPOSAL['rows']:
     excerpt = r['confidence'] == 'extraits relus à la main' and r['delta'] < 0
     if not (full or excerpt):
         continue
-    if r['slug'] not in APPROVED and abs(r['delta']) >= 10:
+    if r['slug'] in HOLD or (r['slug'] not in APPROVED and abs(r['delta']) >= 10):
         held.append((r['slug'], r['current'], r['proposed']))
         continue
     items = []

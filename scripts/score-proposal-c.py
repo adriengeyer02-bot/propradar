@@ -165,6 +165,32 @@ def real_incidents(f):
     return [i for i in f['incidents'] if not GENERIC_INC.search(i)]
 
 
+# D: payout conditions (approved by Geyer 2026-11-25, with consistency capped at 15 in total).
+# Read from the sourced restrictive rules in firm-updates.json (major or blocking only), on
+# the most lenient main programme, like consistency.
+D_W = {'payout-cap': 4, 'payout-conditions': 3, 'account-ends-after-payouts': 3, 'funded-trailing-drawdown': 2, 'split-reduction': 2}
+D_CAP = 15
+_UPD = json.load(open('app/data/firm-updates.json'))
+_UPD = _UPD.get('firms', _UPD)
+
+
+def payout_conditions(slug):
+    e = _UPD.get(slug) or {}
+    rules = [r for r in e.get('restrictiveRules', []) if r.get('category') in D_W and r.get('severity') in ('major', 'blocking')]
+    progs = [p['key'] for p in e.get('auditedPrograms', [])] or sorted({k for r in e.get('restrictiveRules', []) for k in r.get('appliesTo', []) if k != '*'}) or ['*']
+    best = None
+    for prog in progs:
+        hits = {}
+        for r in rules:
+            ap = r.get('appliesTo', [])
+            if '*' in ap or prog in ap:
+                hits.setdefault(r['category'], r)
+        pts = sum(D_W[c] for c in hits)
+        if best is None or pts < best[0]:
+            best = (pts, prog, hits)
+    return best or (0, None, {})
+
+
 cov = {}
 if '--coverage' in A:
     cov = {r['slug']: r['status'] for r in json.load(open(A['--coverage']))}
@@ -226,6 +252,16 @@ for f in BASE:
         if pen:
             lines.append((f"consistency {pct:g}%", pen)); other += pen
             item('CONS', pen, {**codes['CONS'], 'locator': f"{pct:g}%"})
+    dpts, dprog, dhits = payout_conditions(slug)
+    cons_pen = next((p for k, p in lines if k.startswith('consistency')), 0)
+    room = max(0, D_CAP - cons_pen)
+    for cat, r in sorted(dhits.items(), key=lambda kv: -D_W[kv[0]]):
+        pts = min(D_W[cat], room)
+        if pts <= 0:
+            break
+        room -= pts
+        lines.append((f'D:{cat}', pts)); other += pts
+        item('D_' + cat.replace('-', '_').upper(), pts, {'text': f"{r.get('program', '')}: {r.get('rule', '')}", 'url': r.get('source', ''), 'locator': f"main programme scored: {dprog}"})
     if f['withheld']:
         lines.append(('Trustpilot retiré', W['TPW'])); other += W['TPW']; item('TPW', W['TPW'])
     elif (f['tp'] or 5) < 4.0 and (f['tpCount'] or 0) >= 1000:

@@ -1,141 +1,141 @@
 firm,current,proposed,delta,raw_scale_c,ceiling,ceiling_why,penalties,confidence,flag
-Earn2Trade,74,89,15,89,95,9 ans + preuve,B7 −5 · consistency 30% −1,contrat lu en entier,
 FTMO,90,85,-5,85,98,11 ans + preuve très large,B2 −8 · B6 −5,contrat lu en entier,
-Take Profit Trader,73,82,9,82,95,5 ans + preuve,B3 −5 · B7 −5 · B4 −3,contrat lu en entier,
-Blue Guardian,61,81,20,81,95,7 ans + preuve,B2 −8 · Trustpilot retiré −6,contrat lu en entier,
+Earn2Trade,74,83,9,83,95,9 ans + preuve,B7 −5 · consistency 30% −1 · D:payout-cap −4 · D:split-reduction −2,contrat lu en entier,
 Tradeify,78,80,2,80,85,3 ans + preuve,B3 −5,contrat lu en entier,
-Topstep,81,79,-2,79,95,14 ans + preuve,"B2 −8 · B3 −5 · Trustpilot < 4,0 −3",contrat lu en entier,
-The5ers,78,78,0,78,98,10 ans + preuve très large,B2 −8 · B3 −5 · B6 −5 · E_HARSH −2,contrat lu en entier,
+Take Profit Trader,73,80,7,80,95,5 ans + preuve,B3 −5 · B7 −5 · B4 −3 · D:funded-trailing-drawdown −2,contrat lu en entier,
+Blue Guardian,61,78,17,78,95,7 ans + preuve,B2 −8 · D:payout-conditions −3 · Trustpilot retiré −6,contrat lu en entier,
 Funding Pips,76,76,0,85,85,4 ans + preuve,aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
-Fintokei,78,75,-3,75,75,"4 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,
-Axi Select,76,75,-1,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,
-City Traders Imperium,74,74,0,75,75,"8 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
+Topstep,81,73,-8,73,95,14 ans + preuve,"B2 −8 · B3 −5 · D:payout-cap −4 · D:funded-trailing-drawdown −2 · Trustpilot < 4,0 −3",contrat lu en entier,
 E8 Markets,72,72,0,89,95,5 ans + preuve,Trustpilot retiré −6,audit en cours (CGU non lues),
-FXIFY,75,72,-3,72,85,3 ans + preuve,B2 −8 · B3 −5,contrat lu en entier,
 BrightFunded,72,72,0,79,85,3 ans + preuve,Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 Instant Funding,72,72,0,69,75,"5 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
+Fintokei,78,72,-6,72,75,"4 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraits relus à la main,
 OneUp Trader,72,72,0,75,75,"9 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
 MyFundedFutures,81,72,-9,72,85,3 ans + preuve,B2 −8 · B6 −5,contrat lu en entier,
 Hola Prime,72,72,0,75,75,2 ans,aucune,audit en cours (CGU non lues),
+Axi Select,76,72,-4,72,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraits relus à la main,
+The5ers,78,71,-7,71,98,10 ans + preuve très large,B2 −8 · B3 −5 · B6 −5 · D:payout-cap −4 · D:payout-conditions −3 · E_HARSH −2,contrat lu en entier,
 PipFarm,71,71,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,audit en cours (CGU non lues),
-Hash Hedge,61,71,10,71,75,"3 ans, pas de preuve à grande échelle",B2A −4,contrat lu en entier,
 Trade The Pool,70,70,0,70,75,"4 ans, pas de preuve à grande échelle",B6 −5,extraits relus à la main,
 Breakout Prop,70,70,0,85,85,3 ans + preuve,aucune,audit en cours (CGU non lues),
-AquaFunded,69,69,0,79,85,3 ans + preuve,Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+FXIFY,75,69,-6,69,85,3 ans + preuve,B2 −8 · B3 −5 · D:payout-conditions −3,contrat lu en entier,
+AquaFunded,69,69,0,71,85,3 ans + preuve,D:payout-cap −4 · D:funded-trailing-drawdown −2 · D:split-reduction −2 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 Audacity Capital,77,69,-8,69,75,"14 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,
 UProfit Trader,69,69,0,72,75,"7 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",extraction sans clause retenue,
-FTUK,69,69,0,75,75,"5 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
+FTUK,69,69,0,70,75,"5 ans, pas de preuve à grande échelle",D:payout-conditions −3 · D:split-reduction −2,audit en cours (CGU non lues),
 FunderPro,70,69,-1,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,
 Funded Trading Plus,68,68,0,69,75,"5 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
-Funding Traders,68,68,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,audit en cours (CGU non lues),
+Funding Traders,68,68,0,66,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3 · Trustpilot retiré −6,audit en cours (CGU non lues),
 Alpha Capital Group,67,67,0,89,95,5 ans + preuve,Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-Lark Funding,67,67,0,75,75,"4 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
+Lark Funding,67,67,0,71,75,"4 ans, pas de preuve à grande échelle",D:payout-cap −4,extraits relus à la main,hausse en attente de lecture complète
 TickTickTrader,67,67,0,72,75,"4 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),
-Leeloo Trading,67,67,0,75,75,"6 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
-RZR Funded,68,67,-1,67,75,"3 ans, pas de preuve à grande échelle",B2 −8,extraits relus à la main,
-Ment Funding,67,67,0,70,75,"5 ans, pas de preuve à grande échelle",B3 −5,extraits relus à la main,hausse en attente de lecture complète
+Leeloo Trading,67,67,0,71,75,"6 ans, pas de preuve à grande échelle",D:payout-cap −4,extraits relus à la main,hausse en attente de lecture complète
+Ment Funding,67,67,0,67,75,"5 ans, pas de preuve à grande échelle",B3 −5 · D:payout-conditions −3,extraits relus à la main,
 TradeDay,67,67,0,95,95,6 ans + preuve,aucune,extraits relus à la main,hausse en attente de lecture complète
 TradeFundrr,67,67,0,75,75,"5 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
-Elite Trader Funding,66,66,0,92,95,5 ans + preuve,"Trustpilot < 4,0 −3",extraits relus à la main,hausse en attente de lecture complète
-HyroTrader,55,66,11,66,75,"4 ans, pas de preuve à grande échelle",B2A −4 · B7 −5,contrat lu en entier,
-Lucid Trading,53,66,13,66,75,2 ans,B2A −4 · B3 −5,contrat lu en entier,
+Elite Trader Funding,66,66,0,86,95,5 ans + preuve,"D:payout-cap −4 · D:split-reduction −2 · Trustpilot < 4,0 −3",extraits relus à la main,hausse en attente de lecture complète
 Atlas Funded,66,66,0,62,65,1-2 ans,"Trustpilot < 4,0 −3",extraction sans clause retenue,
+RZR Funded,68,64,-4,64,75,"3 ans, pas de preuve à grande échelle",B2 −8 · D:payout-conditions −3,extraits relus à la main,
 The Trading Pit,67,64,-3,64,75,"4 ans, pas de preuve à grande échelle",B6 −5 · Trustpilot retiré −6,extraits relus à la main,
 Finotive Funding,69,64,-5,64,75,"5 ans, pas de preuve à grande échelle",B3 −5 · Trustpilot retiré −6,extraits relus à la main,
 For Traders,70,64,-6,64,75,"3 ans, pas de preuve à grande échelle",B7 −5 · Trustpilot retiré −6,extraits relus à la main,
-Alpha Futures,64,64,0,75,75,2 ans,aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
+Alpha Futures,64,64,0,71,75,2 ans,D:payout-cap −4,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
+Hash Hedge,61,64,3,64,75,"3 ans, pas de preuve à grande échelle",B2A −4 · D:payout-cap −4 · D:payout-conditions −3,contrat lu en entier,
 Maven Trading,63,63,0,66,75,"4 ans, pas de preuve à grande échelle",B5 −3 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-MilTraders,63,63,0,75,75,date de création inconnue,aucune,extraction sans clause retenue,
+MilTraders,63,63,0,70,75,date de création inconnue,D:account-ends-after-payouts −3 · D:split-reduction −2,extraction sans clause retenue,
+City Traders Imperium,74,62,-12,62,75,"8 ans, pas de preuve à grande échelle",B2 −8 · B6 −5,contrat lu en entier,
 Bulenox,62,62,0,75,75,"6 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
-Crypto Fund Trader,62,62,0,75,75,"4 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+Crypto Fund Trader,62,62,0,71,75,"4 ans, pas de preuve à grande échelle",D:payout-cap −4,extraction sans clause retenue,
+HyroTrader,55,62,7,62,75,"4 ans, pas de preuve à grande échelle",B2A −4 · B7 −5 · D:payout-cap −4,contrat lu en entier,
 Traders Central,61,61,0,75,75,"6 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Traders Launch,61,61,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+Traders Launch,61,61,0,72,75,"2 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
 ThinkCapital,60,60,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 Rocket21 Challenge,60,60,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Top One Trader,60,60,0,61,75,"3 ans, pas de preuve à grande échelle",consistency 15% −8 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 MyFundedCapital,75,60,-15,60,65,1-2 ans,B7 −5,contrat lu en entier,
 OneFunded,60,60,0,59,65,1-2 ans,Trustpilot retiré −6,extraction sans clause retenue,
-The Concept Trading,60,60,0,75,75,"5 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
-GOAT Funded Trader,59,59,0,79,85,3 ans + preuve,Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+The Concept Trading,60,60,0,68,75,"5 ans, pas de preuve à grande échelle",D:payout-cap −4 · D:payout-conditions −3,extraction sans clause retenue,
+GOAT Funded Trader,59,59,0,72,85,3 ans + preuve,D:payout-cap −4 · D:payout-conditions −3 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 RebelsFunding,59,59,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
+Lucid Trading,53,59,6,59,75,2 ans,B2A −4 · B3 −5 · D:payout-cap −4 · D:account-ends-after-payouts −3,contrat lu en entier,
 Lux Trading Firm,58,58,0,75,75,"5 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
 OFP Funding,58,58,0,69,75,"4 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
 IC Funded,58,58,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
 FXRK,58,58,0,60,65,1-2 ans,REGWARN −5,audit en cours (CGU non lues),
 TenTrade,58,58,0,71,75,"3 ans, pas de preuve à grande échelle",B2A −4,extraits relus à la main,hausse en attente de lecture complète
-FundedNext,72,57,-15,57,85,4 ans + preuve,B1 −15 · B5 −3 · B6 −5 · REGWARN −5,contrat lu en entier,
-Apex Trader Funding,57,57,0,90,95,5 ans + preuve,A2ISO −5,audit en cours (CGU non lues),
+Apex Trader Funding,57,57,0,84,95,5 ans + preuve,D:account-ends-after-payouts −3 · D:payout-conditions −3 · A2ISO −5,audit en cours (CGU non lues),
+Top One Trader,60,57,-3,57,75,"3 ans, pas de preuve à grande échelle",consistency 15% −8 · D:payout-cap −4 · Trustpilot retiré −6,extraits relus à la main,
 Forex Funds Flow,57,57,0,65,65,1-2 ans,aucune,extraction sans clause retenue,
-Bespoke Funding Program,56,56,0,67,75,"4 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3 · REGWARN −5",audit en cours (CGU non lues),
-Sway Funded,56,56,0,70,75,"2 ans, pas de preuve à grande échelle",B3 −5,extraits relus à la main,hausse en attente de lecture complète
+Bespoke Funding Program,56,56,0,64,75,"4 ans, pas de preuve à grande échelle","D:payout-conditions −3 · Trustpilot < 4,0 −3 · REGWARN −5",audit en cours (CGU non lues),
+Sway Funded,56,56,0,67,75,"2 ans, pas de preuve à grande échelle",B3 −5 · D:payout-conditions −3,extraits relus à la main,hausse en attente de lecture complète
 Nova Funding,56,56,0,72,75,"3 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),
 Nations Trading,56,56,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 The Forex Funder,56,56,0,72,75,"3 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",extraction sans clause retenue,
 Leveled Up Society,56,56,0,72,75,"4 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
 AuraFunded,56,56,0,65,65,1-2 ans,aucune,audit en cours (CGU non lues),
 AlphaPropTraders,56,56,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Funded Bull,55,55,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+FundedNext,72,55,-17,55,85,4 ans + preuve,B1 −15 · B5 −3 · B6 −5 · D:split-reduction −2 · REGWARN −5,contrat lu en entier,
+Funded Bull,55,55,0,72,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
 FX2 Funding,55,55,0,70,75,"3 ans, pas de preuve à grande échelle",B3 −5,extraits relus à la main,hausse en attente de lecture complète
 QT Funded (Quant Tekel),55,55,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
 FundedLions,55,55,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
 1of1 Funding,55,55,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 Tribe Funded,55,55,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Funded7,55,55,0,65,65,1-2 ans,aucune,extraction sans clause retenue,
+Funded7,55,55,0,61,65,1-2 ans,D:payout-cap −4,extraction sans clause retenue,
 BEM Funding,54,54,0,49,55,< 1 an,Trustpilot retiré −6,extraction sans clause retenue,
 GetCryptoFunded,54,54,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Alpine Funded,54,54,0,60,65,1-2 ans,REGWARN −5,audit en cours (CGU non lues),
+Alpine Funded,54,54,0,57,65,1-2 ans,D:payout-conditions −3 · REGWARN −5,audit en cours (CGU non lues),
 Get Leveraged,56,54,-2,54,65,1-2 ans,consistency 20% −5 · Trustpilot retiré −6,extraits relus à la main,
-Bullwaves Prime,54,54,0,69,75,date de création inconnue,Trustpilot retiré −6,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
-BluSky Trading,53,53,0,85,85,4 ans + preuve,aucune,extraction sans clause retenue,
+Bullwaves Prime,54,54,0,65,75,date de création inconnue,D:payout-cap −4 · Trustpilot retiré −6,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
+BluSky Trading,53,53,0,75,85,4 ans + preuve,D:payout-cap −4 · D:payout-conditions −3 · D:account-ends-after-payouts −3,extraction sans clause retenue,
 Blueberry Funded,53,53,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-Purdia Capital,53,53,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+Purdia Capital,53,53,0,72,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
 Orion Funded,53,53,0,70,75,"2 ans, pas de preuve à grande échelle",B6 −5,extraits relus à la main,hausse en attente de lecture complète
-Equity Edge,53,53,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
-Upcomers,53,53,0,59,65,1-2 ans,Trustpilot retiré −6,extraction sans clause retenue,
-WeGetFunded,53,53,0,54,65,1-2 ans,"B2 −8 · Trustpilot < 4,0 −3",extraits relus à la main,hausse en attente de lecture complète
+Equity Edge,53,53,0,72,75,"2 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
+Upcomers,53,53,0,53,65,1-2 ans,D:payout-cap −4 · D:split-reduction −2 · Trustpilot retiré −6,extraction sans clause retenue,
 Fidelcrest,52,52,0,72,75,"8 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),
-SabioTrade,52,52,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
-Funder Trading,52,52,0,75,75,"4 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-WSFunded,52,52,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+SabioTrade,52,52,0,67,75,"3 ans, pas de preuve à grande échelle",D:funded-trailing-drawdown −2 · Trustpilot retiré −6,extraction sans clause retenue,
+Funder Trading,52,52,0,73,75,"4 ans, pas de preuve à grande échelle",D:split-reduction −2,audit en cours (CGU non lues),
+WSFunded,52,52,0,72,75,"2 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
 Moneta Funded,52,52,0,57,65,1-2 ans,B2 −8,extraits relus à la main,hausse en attente de lecture complète
-E8 Futures,52,52,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
+E8 Futures,52,52,0,65,75,"2 ans, pas de preuve à grande échelle",D:payout-cap −4 · D:account-ends-after-payouts −3 · D:payout-conditions −3,extraits relus à la main,hausse en attente de lecture complète
 DayTraders.com,51,51,0,62,75,"3 ans, pas de preuve à grande échelle",B2 −8 · B6 −5,extraits relus à la main,hausse en attente de lecture complète
-Funded Squad,51,51,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
-Top One Futures,51,51,0,70,75,2 ans,B6 −5,extraits relus à la main,hausse en attente de lecture complète
+Funded Squad,51,51,0,72,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
+Top One Futures,51,51,0,63,75,2 ans,B6 −5 · D:payout-cap −4 · D:account-ends-after-payouts −3,extraits relus à la main,hausse en attente de lecture complète
 TradeXProp,51,51,0,70,75,"2 ans, pas de preuve à grande échelle",B3 −5,extraits relus à la main,hausse en attente de lecture complète
-FXCI,51,51,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
+FXCI,51,51,0,72,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3,audit en cours (CGU non lues),
 Monevis Funding Platform,51,51,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
 MiFunder,51,51,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-TradersEdgeFX,51,51,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+TradersEdgeFX,51,51,0,71,75,"3 ans, pas de preuve à grande échelle",D:payout-cap −4,extraction sans clause retenue,
 FundYourFX,51,51,0,66,75,"5 ans, pas de preuve à grande échelle",B5 −3 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 Atmos Funded,50,50,0,65,65,1-2 ans,aucune,extraits relus à la main,hausse en attente de lecture complète
 TX3 Funding,50,50,0,72,75,"2 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",extraction sans clause retenue,
-Now Trade Funded,50,50,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+Now Trade Funded,50,50,0,68,75,"2 ans, pas de preuve à grande échelle",D:payout-cap −4 · D:payout-conditions −3,extraction sans clause retenue,
 Fundings4u,50,50,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Lvlup Futures,51,50,-1,50,55,< 1 an,B3 −5,extraits relus à la main,
 My Flash Funding,49,49,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
-Aeon Funded,49,49,0,65,65,1-2 ans,aucune,extraits relus à la main,hausse en attente de lecture complète
-FundedHive,49,49,0,49,55,< 1 an,Trustpilot retiré −6,audit en cours (CGU non lues),
-Clarity Traders,48,48,0,64,75,"2 ans, pas de preuve à grande échelle",consistency 20% −5 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-Ultimate Traders,48,48,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
+Aeon Funded,49,49,0,62,65,1-2 ans,D:payout-conditions −3,extraits relus à la main,hausse en attente de lecture complète
+FundedHive,49,49,0,46,55,< 1 an,D:payout-conditions −3 · Trustpilot retiré −6,audit en cours (CGU non lues),
+Clarity Traders,48,48,0,62,75,"2 ans, pas de preuve à grande échelle",consistency 20% −5 · D:split-reduction −2 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+Ultimate Traders,48,48,0,73,75,"3 ans, pas de preuve à grande échelle",D:funded-trailing-drawdown −2,audit en cours (CGU non lues),
 Tiger Funded,47,47,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
-FundedElite,46,46,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
-Funded Trader Markets,46,46,0,54,65,1-2 ans,B7 −5 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-Funding Your Trades,46,46,0,54,65,1-2 ans,consistency 25% −5 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-Titan Capital Markets,46,46,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+WeGetFunded,53,47,-6,47,65,1-2 ans,"B2 −8 · D:payout-cap −4 · D:payout-conditions −3 · Trustpilot < 4,0 −3",extraits relus à la main,
+FundedElite,46,46,0,66,75,"2 ans, pas de preuve à grande échelle",D:payout-conditions −3 · Trustpilot retiré −6,extraction sans clause retenue,
+Funded Trader Markets,46,46,0,51,65,1-2 ans,B7 −5 · D:payout-conditions −3 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+Funding Your Trades,46,46,0,52,65,1-2 ans,consistency 25% −5 · D:split-reduction −2 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+Titan Capital Markets,46,46,0,66,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 WeMasterTrade,45,45,0,64,75,"4 ans, pas de preuve à grande échelle",consistency 20% −5 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 MyFxCapital,45,45,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
-Sure Leverage,44,44,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
+Sure Leverage,44,44,0,63,75,"2 ans, pas de preuve à grande échelle",D:payout-cap −4 · D:split-reduction −2 · Trustpilot retiré −6,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
 Forexive,44,44,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 Gry Funding,44,44,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
-SuperFunded,44,44,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
+SuperFunded,44,44,0,65,75,"3 ans, pas de preuve à grande échelle",D:payout-cap −4 · Trustpilot retiré −6,extraction sans clause retenue,
+Lvlup Futures,51,44,-7,44,55,< 1 an,B3 −5 · D:payout-cap −4 · D:funded-trailing-drawdown −2,extraits relus à la main,
 FOXX Funded,44,44,0,69,75,date de création inconnue,Trustpilot retiré −6,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
 X Funded,44,44,0,69,75,date de création inconnue,Trustpilot retiré −6,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
-Levels,43,43,0,70,75,"3 ans, pas de preuve à grande échelle",REGWARN −5,extraits relus à la main,hausse en attente de lecture complète
+Levels,43,43,0,67,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3 · REGWARN −5,extraits relus à la main,hausse en attente de lecture complète
 Funding Frontier,42,42,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
-Klein Funding Crypto,42,42,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,
-DNA Funded,41,41,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-DirectFundedTrader,41,41,0,64,75,"3 ans, pas de preuve à grande échelle",B7 −5 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
+Klein Funding Crypto,42,42,0,64,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3 · D:split-reduction −2 · Trustpilot retiré −6,extraction sans clause retenue,
+DNA Funded,41,41,0,71,75,"2 ans, pas de preuve à grande échelle",D:payout-cap −4,audit en cours (CGU non lues),
+DirectFundedTrader,41,41,0,59,75,"3 ans, pas de preuve à grande échelle",B7 −5 · D:payout-conditions −3 · D:split-reduction −2 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
 T4TCapital,38,38,0,75,75,"7 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 Traddoo,38,38,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
 BluFX,38,38,0,75,75,"11 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
@@ -143,10 +143,10 @@ SFX Funded,38,38,0,69,75,"2 ans, pas de preuve à grande échelle",Trustpilot re
 Dei Funded,38,38,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 The Funded Trader,35,35,0,60,75,"5 ans, pas de preuve à grande échelle",A1_OLD_UNCLEAR −15,audit en cours (CGU non lues),
 Quantec Trading Capital,34,34,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-Willis Capital,33,33,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
+Willis Capital,33,33,0,72,75,"3 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
 Trading Cult,32,32,0,67,75,"3 ans, pas de preuve à grande échelle",consistency 30% −2 · Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
-ExFunded,32,32,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
-Funded Futures Network,29,29,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraits relus à la main,hausse en attente de lecture complète
+ExFunded,32,32,0,71,75,"3 ans, pas de preuve à grande échelle",D:payout-cap −4,extraits relus à la main,hausse en attente de lecture complète
+Funded Futures Network,29,29,0,68,75,"3 ans, pas de preuve à grande échelle",D:payout-cap −4 · D:account-ends-after-payouts −3,extraits relus à la main,hausse en attente de lecture complète
 My Crypto Funding,29,29,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 ATFunded,28,28,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
 Prop Number One,26,26,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,
@@ -156,5 +156,5 @@ My Forex Funds,20,20,0,75,75,"6 ans, pas de preuve à grande échelle",aucune,ex
 NEG Markets,18,18,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
 The Prop Game,16,16,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
 KortanaFX,15,15,0,72,75,"3 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
-CK Capital,14,14,0,69,75,"3 ans, pas de preuve à grande échelle",Trustpilot retiré −6,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
+CK Capital,14,14,0,62,75,"3 ans, pas de preuve à grande échelle",D:payout-cap −4 · D:payout-conditions −3 · Trustpilot retiré −6,extraction sans clause retenue,hausse bloquée : incidents du dossier à recoder
 Guardeer Funding,13,13,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
