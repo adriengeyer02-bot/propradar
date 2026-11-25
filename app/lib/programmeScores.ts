@@ -31,6 +31,8 @@ function classify(r:RestrictiveRule):{family:string;points:number}|undefined {
   case 'consistency': {
    // Single numerical percentage only; combined tiers or ratios require manual reading.
    if(r.clarity!=='clear'||!/(best.day|winning day|single day|single trade|trade idea|consistency)/.test(s))return;
+   if(/no (?:funded |evaluation |default )?consistency|without (?:a )?consistency|consistency (?:is )?not (?:required|applied)/.test(r.rule.toLowerCase()))return;
+   if(!/(?:best.day|winning day|single day|single trade|trade idea|consistency)[^.;]{0,80}\d+(?:\.\d+)?\s*%|\d+(?:\.\d+)?\s*%[^.;]{0,80}(?:best.day|winning day|single day|single trade|trade idea|consistency)/i.test(r.rule))return;
    const vals=[...new Set(Array.from(r.rule.matchAll(/(\d+(?:\.\d+)?)\s*%/g),m=>Number(m[1])))];
    if(vals.length!==1||vals[0]<=0||vals[0]>100)return;
    const n=vals[0];return n>=40?undefined:points('consistency',n>=30?1:n>=20?3:n>=15?5:7);
@@ -78,7 +80,7 @@ export function getProgrammeScores(slug:string,p:Product,u:FirmUpdate|undefined)
  const scope=explicitScope(slug,p,u);
  const selected=u.restrictiveRules.filter(r=>r.appliesTo?.length&&r.appliesTo.some(k=>scope.has(k)));
  // Do not rate a generic family or umbrella product using firm-wide rules alone.
- if(!selected.length)return [];
+ if(!selected.length||!selected.some(r=>classify(r)))return [];
  const common=u.restrictiveRules.filter(r=>r.appliesTo?.includes('*'));
  const deductions=new Map<string,ProgrammeDeduction>();
  for(const r of [...selected,...common]){
@@ -92,7 +94,7 @@ export function getProgrammeScores(slug:string,p:Product,u:FirmUpdate|undefined)
  // A hard risk/strike rule can already subsume confiscation for that trigger.
  // Do not combine a duplicate cross-category rule if identical evidence wording.
  const list=[...deductions.values()].filter((d,i,a)=>!a.some((o,j)=>j!==i&&o.source===d.source&&o.reason===d.reason&&(o.points>d.points||(o.points===d.points&&j<i))));
- // Confirmed exact numeric baseline split only; never use marketing "up to".
+ // Numeric split in product inventory is an explicitly labelled baseline; it is not inferred from the firm's headline. The rest of the score remains provisional.
  const match=p.profitSplit.match(/^(\d+(?:\.\d+)?)\s*%(?:\s*(?:initial(?:ly)?|base|default|standard|from the start|first payout))?(?:\s*[,;]|\s*$)/i);
  if(match){const n=Number(match[1]);if(n>=50&&n<80)list.push({family:'initial-split',points:n>=70?1:n>=60?2:4,reason:p.profitSplit});}
  // No 100-point placeholder and no grade based on one thin fact alone.
