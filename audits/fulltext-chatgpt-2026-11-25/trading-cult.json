@@ -1,0 +1,48 @@
+{
+  "slug": "trading-cult",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read entire substantive English terms 7eeff578960c.txt (actual archive URL /terms-conditions, January 2026 stated; original /terms-and-conditions/ returns 404). Excluded trailing iframe JS unrelated to contract. Other captured rules/FAQ/conditions not yet read. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "Restricted Activities section applies to evaluation and funded phases: “unexplained risk changes” and “disproportionate event risk”; actions may include “payout rejection or cancellation” and removal of profits. Overall assessment is not a quantified limit.",
+      "source": "https://pro.tradingcult.com/terms-conditions",
+      "locator": "Restricted Activities, High-Risk, Gambling, and Exploitative Trading Practices",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Same section states “Leverage, different position sizes, market specialisation, multiple challenges or trading around events do not automatically constitute a breach”; overall activity and evidence assessed. No formal appeal route established.",
+      "source": "https://pro.tradingcult.com/terms-conditions",
+      "locator": "Restricted Activities",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Guaranteed payout processing within three business days from approval or $300 compensation, excludes compliance reviews and third-party delays. Not a guarantee of approval.",
+      "source": "https://pro.tradingcult.com/terms-conditions",
+      "locator": "Guaranteed Payout Conditions",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "30 consecutive days inactivity: contract automatically terminates; “any remaining balances considered null and void”. Scope of earned/approved rewards not established.",
+      "source": "https://pro.tradingcult.com/terms-conditions",
+      "locator": "Termination of Service > Automatic Termination",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Right to terminate service at any time does not expressly remove earned rewards independent of breach. Conduct-linked cancellation B2.",
+    "B3": "Last updated clause permits updating terms with continued use; restricted country list amendment reflects AML. Neither expressly applies new trading rules to existing purchased accounts.",
+    "E_HARSH": "30-day inactivity forfeiture refers to remaining balances, not explicitly earned payouts; do not double count as procedural harsh sanction without clarification.",
+    "CONS_INFO": "Promotional free/giveaway payout cap and 50/50 split excluded by handoff."
+  },
+  "toVerify": {
+    "coverage": "Read c654a61d7958.txt/404, db620e94870f.txt French 2-step, c655fca08c2a.txt Italian 1-step, f3826dd5b53c.txt French Instant, 878bd5d22380.txt conditions, 4c128dc2cba5.txt trading rules, 617bc1b86ff3.txt FAQ and 3d90da8ef7dc.txt 1-step conditions; current high-risk FAQ referenced by contract missing or identify within archive.",
+    "B2A": "Check if dedicated review/appeal/explanation route exists in full high-risk FAQ.",
+    "CONS": "Compare most lenient main programme after rule bodies read.",
+    "B7": "Obtain funded agreement and timing."
+  }
+}

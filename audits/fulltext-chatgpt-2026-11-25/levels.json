@@ -1,0 +1,47 @@
+{
+  "slug": "levels",
+  "status": "TERMS READ",
+  "checkedOn": "2026-11-25",
+  "method": "Read full visible bodies of all three archived substantive pages: terms a636ebdb3ab5.txt (general, Payment, Paysafe, Independent Contractor and Platform Terms), FAQ af8de1996d1e.txt, public Contractor Agreement 9453c9a9e751.txt. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Home is index-only. Status refers to archived texts, not verification of every live checkout/individual contract.",
+  "facts": [
+    {
+      "code": "B4",
+      "text": "Terms Definitions: “No cryptocurrencies, indices, equities, or real financial instruments are supported” and defines assets as FX instruments. FAQ 'What instruments can I trade?' says “forex pairs, commodities, and more.” Same scope of simulated instruments; confirm exact current platform.",
+      "source": "https://lv.ls/terms-and-conditions/",
+      "locator": "General §1 Definitions; FAQ https://lv.ls/faq/ > What instruments can I trade?",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ 'What happens if I pass Level 6?' says “Once you pass level 6, you’ll start earning payouts!” whereas public Trader Contract says “starting benefit at Level 10”. Different level structures are expressly possible in FAQ; scope must be reconciled before coding this as another B4.",
+      "source": "https://lv.ls/contract/",
+      "locator": "Performance Benefits; FAQ https://lv.ls/faq/ > What happens if I pass Level 6?",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "FAQ says “you won't lose your payout” if pips fall after passing a payout level; contractor terms §9.2 preserve compensation for completed and accepted services subject to individual agreement.",
+      "source": "https://lv.ls/faq/",
+      "locator": "What happens when I reach a level with a payout, but then lose pips?; terms Independent Contractor §9.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payment §3–5 and Platform §2.5 deny entitlement from evaluation fees/metrics alone; compensation, if applicable, governed by separate written contractor agreement. Public contract provides benefit milestones. Do not equate evaluation with earned compensation.",
+      "source": "https://lv.ls/terms-and-conditions/",
+      "locator": "Payment §3–5; Platform §2.5; Independent Contractor §4",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Evaluation metrics not entitlement, but public contractor agreement provides performance benefits and §9.2 preserves accepted compensation; no earned reward explicitly removable at sole discretion.",
+    "B3": "Platform §1.3 generic continued-use amendments, and contractor §12 amendments require written bilateral agreement. No explicit retroactive change clause.",
+    "B7": "Public contractor agreement available at /contract/; separate relationship alone not withholding.",
+    "B2": "Termination of access for any reason under Platform §7.1 not expressly forfeiture of earned contractor benefits.",
+    "CONS": "No numeric best-day consistency limit; level progression is pip target."
+  },
+  "toVerify": {
+    "coverage": "Confirm current selected challenge level schedule, signed contractor contract and any additional Challenge Rules not separately archived; placeholders [Company Name]/[Governing Jurisdiction] appear in terms.",
+    "B4": "Reconcile level 6 FAQ vs level 10 public contract by plan; instrument mismatch already coded."
+  }
+}
