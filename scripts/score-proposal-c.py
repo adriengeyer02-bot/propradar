@@ -268,9 +268,15 @@ for f in BASE:
         item('D_' + cat.replace('-', '_').upper(), pts, {'text': f"{r.get('program', '')}: {r.get('rule', '')}", 'url': r.get('source', ''), 'locator': f"main programme scored: {dprog}"})
     if f['withheld']:
         lines.append(('Trustpilot retiré', W['TPW'])); other += W['TPW']; item('TPW', W['TPW'])
-    elif (f['tp'] or 5) < 4.0 and (f['tpCount'] or 0) >= 1000:
-        lines.append(('Trustpilot < 4,0', W['TPMID'])); other += W['TPMID']
-        item('TPMID', W['TPMID'], {'locator': f"{f['tp']} / {f['tpCount']}"})
+    elif f['tp'] and (f['tpCount'] or 0) >= 30:
+        # Graded Trustpilot rating (Geyer, 2026-11-25 evening): the score must track a poor rating.
+        r, n = f['tp'], f['tpCount']
+        pen = 0 if r >= 4.3 else 3 if r >= 4.0 else 8 if r >= 3.5 else 15 if r >= 3.0 else 22
+        if n < 100:
+            pen = (pen + 1) // 2
+        if pen:
+            lines.append((f'Trustpilot {r}', pen)); other += pen
+            item('TPR', pen, {'locator': f"{r} / {n}"})
     for k in INCIDENTS.get(slug, []):
         lines.append((k, W[k])); other += W[k]
         inc = next((i for i in f['incidents'] if re.search(r'Alert List|warning|unauthori|regulator|payout', i, re.I)), '')

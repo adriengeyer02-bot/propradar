@@ -1,0 +1,22 @@
+{
+ "slug": "oneup-trader",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B7",
+   "text": "Funded accounts are run under the rules of OneUp’s funding partners (‘strictly prohibited by our funding partners’; account holds must be requested from the funding partner); the funding partner agreement is not published.",
+   "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+   "locator": "Funded Trader Rules (PDF saved by Geyer, 25 Nov 2026)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Funded traders must keep weekly trade executions at no less than 50% of their evaluation average, and during a 30-day probation must be above the starting balance at each 15-day check; failure risks termination.",
+   "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+   "locator": "Funded Trader Rules",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}
