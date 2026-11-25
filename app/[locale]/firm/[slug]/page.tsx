@@ -1159,7 +1159,7 @@ export default async function FirmPage({ params }: Props) {
                   <div className={`pr-program-score ${scores.length?'pr-program-score-provisional':''}`} aria-label={pc.score + ': ' + displayScore + (scores.length ? '/100 · '+sp.provisional : ' · '+sp.pending)}>
                     <span>{pc.score}</span>
                     <strong aria-hidden="true">{displayScore}<small>/100</small></strong>
-                    <small>{scores.length ? sp.provisional : sp.pending}</small>
+                    <small>{scores.length ? sp.provisional : sp.pending}</small>{scores.length ? <small className="pr-program-audit-state">{sp.pending}</small> : null}
                   </div>
                 </div>
                 {scores.length ? <details className="pr-program-inline-details pr-program-score-detail">
@@ -1169,7 +1169,7 @@ export default async function FirmPage({ params }: Props) {
                     <div className="pr-program-score-path-head"><strong>{tx(score.scope)}</strong><b>{score.score}/100</b></div>
                     <ul>{score.deductions.map((d,i)=><li key={d.family+i}><span>{tx(d.reason)}</span><b>−{d.points}</b>{d.source ? <a href={d.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}</li>)}</ul>
                     <small>{f.checkedLabel} · {formatDateLong(locale,score.checkedOn)}</small>
-                    {score.sources.length ? <div className="pr-program-sources">{score.sources.map((source,i)=><a href={source} key={source} target="_blank" rel="noopener noreferrer">{pc.official} {i+1} ↗</a>)}</div> : null}
+                    {score.sources.length ? <div className="pr-program-sources">{score.sources.map((source,i)=><a href={source} key={source} target="_blank" rel="noopener noreferrer">{f.historySource} {i+1} ↗</a>)}</div> : null}
                   </div>)}
                 </details> : null}
                 <p className="muted pr-product-intro">{tx(product.description)}</p>
