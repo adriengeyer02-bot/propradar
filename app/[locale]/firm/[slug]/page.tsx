@@ -725,6 +725,12 @@ export default async function FirmPage({ params }: Props) {
   const sp = programmeScoreCopy(locale);
   const productScores = new Map(firm.products.map(product => [product.id, firm.status === 'Fermée' || firm.listedDomainWarning ? [] : getProgrammeScores(firm.slug,product,getFirmUpdate(firm.slug))]));
   const assessedProducts = [...productScores.values()].filter(scores=>scores.length).length;
+  // Snapshot uses listed instruments, not the firm's broad radar category. FTMO's official symbol specifications explicitly list metals.
+  const snapshotAssets = firm.slug === 'ftmo'
+    ? ['Forex', 'Indices', 'Metals', 'Commodities', 'Stock CFDs', 'Crypto', ...firm.products.flatMap(p=>p.tradableAssets).filter(a=>/futures/i.test(a))]
+    : firm.products.flatMap(p=>p.tradableAssets);
+  const marketLabels = [...new Set(snapshotAssets.filter(a=>a.trim() && !/^(to verify|to audit|unknown|n\/?a|à vérifier|non renseigné|variable)$/i.test(a.trim())).map(a=>tx(a.trim())))];
+  const snapshotMarkets = marketLabels.join(' · ') || firm.styles.map(style=>tx(style)).join(' · ') || '—';
   const specificRiskPoints = uniqueProfilePoints([
     ...regulatoryAudit.redFlags,
     ...firm.reviewSignals.payoutIssues,
@@ -1007,18 +1013,18 @@ export default async function FirmPage({ params }: Props) {
                 <div className="pr-snapshot-tile">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 4 3 5-7"/><path d="M16 7h4v4"/></svg>
                   <span>{sp.market}</span>
-                  <strong>{firm.styles.slice(0,3).map(style=>tx(style)).join(' · ') || v(toEnglishText(firm.products[0]?.type??'')) || sp.pending}</strong>
+                  <strong className="pr-snapshot-markets">{snapshotMarkets}</strong>
                 </div>
                 <div className="pr-snapshot-tile">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"/></svg>
                   <span>{sp.assessed}</span>
                   <strong className="pr-snapshot-count">{assessedProducts}<small> / {firm.products.length}</small></strong>
-                  <a href="#produits">{assessedProducts ? sp.provisional : sp.noGrade} ↓</a>
+                  {assessedProducts ? <a href="#produits">{sp.detail} ↓</a> : null}
                 </div>
                 <div className="pr-snapshot-tile pr-snapshot-strength">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
                   <span>{sp.strength}</span>
-                  <strong>{specificStrengthPoints[0] ? tx(specificStrengthPoints[0]) : sp.pending}</strong>
+                  <strong>{specificStrengthPoints[0] ? tx(specificStrengthPoints[0]) : '—'}</strong>
                 </div>
                 <div className="pr-snapshot-tile pr-snapshot-watch">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg>
@@ -1156,15 +1162,18 @@ export default async function FirmPage({ params }: Props) {
                     </div>
                     <h3>{tx(product.name)}</h3>
                   </div>
-                  <div className={`pr-program-score ${scores.length?'pr-program-score-provisional':''}`} aria-label={pc.score + ': ' + displayScore + (scores.length ? '/100 · '+sp.provisional : ' · '+sp.pending)}>
+                  <div className="pr-program-score pr-program-score-ring" aria-label={pc.score + ': ' + displayScore + (scores.length ? '/100' : '')}>
                     <span>{pc.score}</span>
-                    <strong aria-hidden="true">{displayScore}<small>/100</small></strong>
-                    <small>{scores.length ? sp.provisional : sp.pending}</small>{scores.length ? <small className="pr-program-audit-state">{sp.pending}</small> : null}
+                    {minScore === undefined ? <strong>—</strong> : minScore === maxScore ? (
+                      <><ScoreRing score={minScore} size="md" label={pc.score} /><small>/100</small></>
+                    ) : (
+                      <><div className="pr-program-range-rings"><ScoreRing score={minScore} size="sm" label={pc.score} /><ScoreRing score={maxScore!} size="sm" label={pc.score} /></div><small>{displayScore}/100</small></>
+                    )}
                   </div>
                 </div>
                 {scores.length ? <details className="pr-program-inline-details pr-program-score-detail">
                   <summary>{sp.detail} · V3.1</summary>
-                  <p className="pr-program-score-warning">{sp.warning}</p>
+                  <p className="pr-program-score-basis">{sp.basis}</p>
                   {scores.map(score=><div className="pr-program-score-path" key={score.scope}>
                     <div className="pr-program-score-path-head"><strong>{tx(score.scope)}</strong><b>{score.score}/100</b></div>
                     <ul>{score.deductions.map((d,i)=><li key={d.family+i}><span>{tx(d.reason)}</span><b>−{d.points}</b>{d.source ? <a href={d.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}</li>)}</ul>

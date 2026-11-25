@@ -119,7 +119,24 @@ const labels:Record<Locale,readonly string[]> = {
  ha:['A taƙaice','Kasuwanni / tsare-tsare','Ƙarfi','Lura','Shirye-shiryen da aka tantance','Na wucin gadi','Bincike bai cika ba','Bayanin maki','Ragi bisa takardu kawai; bincike bai cika ba. Ba maki na ƙarshe ba.','Binciken kamfani','Cikakken bayani','Babu maki mai kwatanci'],
  am:['በአጭሩ','ገበያዎች / ሞዴሎች','ጥንካሬ','ማስጠንቀቂያ','የተገመገሙ ፕሮግራሞች','ጊዜያዊ','ኦዲት ያልተጠናቀቀ','የነጥብ ዝርዝር','የተመዘገቡ ቅናሾች ብቻ፤ ኦዲት ያልተጠናቀቀ። የመጨረሻ ነጥብ አይደለም።','የኩባንያ ግምገማ','ሙሉ መገለጫ','የሚነጻጸር ነጥብ የለም']
 };
+const scoreBasis:Record<Locale,string> = {
+  "en": "Score based on documented programme rules; distinct from the firm reliability score.",
+  "fr": "Note fondée sur les règles documentées du programme, distincte de la note de fiabilité de la société.",
+  "de": "Bewertung anhand dokumentierter Programmregeln, getrennt von der Unternehmenszuverlässigkeit.",
+  "it": "Voto basato sulle regole documentate del programma, distinto dall'affidabilità della società.",
+  "es": "Nota basada en las reglas documentadas del programa, distinta de la fiabilidad de la empresa.",
+  "pt": "Nota baseada nas regras documentadas do programa, distinta da fiabilidade da empresa.",
+  "zh": "评分依据已记录的计划规则，与公司可靠性评分不同。",
+  "ja": "文書で確認したプログラム規則に基づく評価で、会社の信頼性評価とは異なります。",
+  "hi": "स्कोर प्रोग्राम के दस्तावेज़ित नियमों पर आधारित है, कंपनी की विश्वसनीयता से अलग।",
+  "tr": "Belgelenen program kurallarına dayalı puan; şirket güvenilirlik puanından ayrıdır.",
+  "ar": "درجة تستند إلى قواعد البرنامج الموثقة، وهي منفصلة عن درجة موثوقية الشركة.",
+  "ko": "문서화된 프로그램 규칙에 따른 점수이며 회사 신뢰도 점수와는 별개입니다.",
+  "sw": "Alama inategemea kanuni za programu zilizoandikwa, tofauti na alama ya uaminifu wa kampuni.",
+  "ha": "Maki bisa ka'idojin shirin da aka rubuta, daban da amincin kamfani.",
+  "am": "ነጥቡ በተመዘገቡ የፕሮግራም ደንቦች ላይ የተመሠረተ ሲሆን ከኩባንያው አስተማማኝነት ደረጃ የተለየ ነው።"
+};
 export function programmeScoreCopy(locale:Locale){
  const [snapshot,market,strength,watch,assessed,provisional,pending,detail,warning,firmReview,fullProfile,noGrade]=labels[locale]??labels.en;
- return {snapshot,market,strength,watch,assessed,provisional,pending,detail,warning,firmReview,fullProfile,noGrade};
+ return {snapshot,market,strength,watch,assessed,provisional,pending,detail,warning,firmReview,fullProfile,noGrade,basis:scoreBasis[locale]??scoreBasis.en};
 }

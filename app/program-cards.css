@@ -130,3 +130,12 @@
 .pr-program-score-path li b{color:#e18e87;font-variant-numeric:tabular-nums}
 .pr-program-score-path li a{font-size:.66rem;grid-column:1/-1}
 @media(max-width:480px){.pr-snapshot-tile{padding:7px;gap:2px 5px}.pr-snapshot-tile strong{font-size:.76rem}.pr-snapshot-tile span{font-size:.65rem}.pr-snapshot-grid{gap:6px}}
+
+/* Compact circular product rating; same risk-tone gauge as the company score. */
+.pr-program-score-ring{background:none;border:0;padding:0 2px;gap:3px;min-width:72px;max-width:112px}
+.pr-program-score-ring>span:first-child{font-size:.68rem;line-height:1.25;opacity:.88;max-width:112px;overflow-wrap:anywhere}
+.pr-program-score-ring>small{font-size:.66rem;line-height:1;opacity:.72;font-variant-numeric:tabular-nums}
+.pr-program-range-rings{display:flex;gap:3px;align-items:center;justify-content:center}
+.pr-program-score-basis{font-size:.72rem;opacity:.8;margin:5px 0}
+.pr-snapshot-tile .pr-snapshot-markets{display:block;-webkit-line-clamp:unset;overflow:visible}
+@media(max-width:640px){.pr-program-card-heading{grid-template-columns:auto minmax(0,1fr) auto}.pr-program-score-ring{min-width:66px;max-width:96px}.pr-program-range-rings{gap:2px}}
