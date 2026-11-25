@@ -1,0 +1,32 @@
+{
+  "slug": "my-flash-funding",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted MyFlashFunding terms bcc4b13abbb9.txt (31,421 chars), actually Sway Funded FZCO terms; §§1.1–1.3,7.5–7.6,11.1,13.4,14.1,17.2. FAQ capture not read.",
+  "facts": [
+    {
+      "code": "NOTE",
+      "text": "§1.1 identifies Sway Funded FZCO; §11.1 successful participants receive Funded by Sway account under a Sway Funded agreement. Do not apply historical MyFlash terms or duplicate the Sway audit without verifying brand continuity.",
+      "source": "https://myflashfunding.com/terms",
+      "locator": "§1.1; §11.1",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§7.5 qualitative prohibited trading classification may terminate participation and forfeit fees, with denial of funded sim; §14.1 guidelines by email upon becoming a Trader. Specific earned reward sanction and rule timing not confirmed.",
+      "source": "https://myflashfunding.com/terms",
+      "locator": "§7.5; §14.1",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B2": "§7.5 speaks of fees/eligibility, not express earned payout removal; actual Sway agreement needed.",
+    "B1": "Any-reason exclusion §7.6 and no-notice termination §17.2 do not explicitly cancel earned rewards.",
+    "B3": "Generic amendment §1.3.",
+    "B7": "§14.1 email upon becoming a Trader, but guidelines also on website; actual withheld contract timing unresolved."
+  },
+  "toVerify": {
+    "coverage": "Full terms and FAQ, current status of old brand and whether this is a separate offer; Sway funded agreement, avoid double counting.",
+    "CONS": "No main model verified."
+  }
+}

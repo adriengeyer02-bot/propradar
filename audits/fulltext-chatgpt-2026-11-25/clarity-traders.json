@@ -1,0 +1,45 @@
+{
+  "slug": "clarity-traders",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted current terms 155192f10d66.txt (Nov 3 2026), full §§6–8, selected §9. Unresolved drafting placeholders in published text; other rule/FAQ bodies unread.",
+  "facts": [
+    {
+      "code": "B2A",
+      "text": "§7 includes any strategy reasonably deemed designed to exploit programme instead of skill; §8.7 may reduce/refuse reward for §7 breach. §7 requires identifying rule and “opportunity to respond” before final reward decision; §8.7 reason given.",
+      "source": "https://www.claritytraders.com/terms-and-conditions",
+      "locator": "§7; §8.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "CONS_20_DELAY",
+      "text": "§6.1 table One Step/Two Step 20% funded best-day rule; §8.3 allows continuing trading until compliant. Instant 10% is side programme.",
+      "source": "https://www.claritytraders.com/terms-and-conditions",
+      "locator": "§6.1; §8.1, §8.3",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§6.4 approved reward before hard breach still paid; §9.4 approved unpaid reward survives termination.",
+      "source": "https://www.claritytraders.com/terms-and-conditions",
+      "locator": "§6.4; §9.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§6.2 reset time and Instant trailing formula contain drafting placeholders; §8.4 review period [X], §8.6 reset [Confirm.]. Terms require funded 7 trading days and 14-day payout interval (7 with add-on).",
+      "source": "https://www.claritytraders.com/terms-and-conditions",
+      "locator": "§6.2; §8.1, §8.4–8.6",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§8.7 express refusal grounds and reason; §9.4 protects approved rewards.",
+    "B4": "Internal terms inconsistency weekend permission §6.6/paid add-on §6.7 not FAQ-v-contract until compared.",
+    "B3": "§9.3 allows finishing active accounts on discontinuation; read amendment provisions."
+  },
+  "toVerify": {
+    "coverage": "Whole terms and four FAQ/payout/rules/comparison captures; resolve placeholders, weekend, copy and product version contradictions.",
+    "CONS": "Confirm most lenient main threshold against product comparison."
+  }
+}

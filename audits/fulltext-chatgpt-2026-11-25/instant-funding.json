@@ -1,0 +1,40 @@
+{
+  "slug": "instant-funding",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted October PDF 9548d25fa795.txt (94,058 chars), full reviewed §11.4–11.9 sanction passage, other excerpts including EDD §8.10–8.13 and §19.1. June PDF and extensive help captures not fully read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§11.4 reserves discretion to classify Forbidden Trading Practices; §11.6 customer will “lose the right to a Reward” and trades may be removed, services canceled, leverage reduced. §11.9 sanctions at own discretion.",
+      "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+      "locator": "§11.4–11.9",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "EDD §8.10–8.13 permits suspension/termination, exclusion of results and cancellation of pending payouts. Need full procedural trigger and appeal before coding E_HARSH.",
+      "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+      "locator": "EDD appendix §8.10–8.13",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§11.5 changes to trading rules communicated on website; §19.1 variations effective upon notification, acceptance or further use. Exact existing account application not established from these passages.",
+      "source": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+      "locator": "§11.5; §19.1",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§11.6 forfeiture tied to prohibited conduct; not unconditional earned-reward forfeiture.",
+    "B3": "Generic update/continued use, no explicit active-account scope in reviewed clauses.",
+    "B5": "§11.6 refers to profits and/or losses, not explicit asymmetric retention."
+  },
+  "toVerify": {
+    "coverage": "Read full October and June PDFs, current version/cohort, product-specific FAQ bodies and payout-on-demand; Intercom vendor terms unrelated. Actual funded agreement and applicable rules.",
+    "B2A": "Review appeal or explanation route.",
+    "CONS": "Most lenient main model; do not apply Instant Micro to entire brand.",
+    "E_HARSH": "Read full EDD procedure and consequences."
+  }
+}

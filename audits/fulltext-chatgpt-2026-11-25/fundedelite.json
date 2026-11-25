@@ -1,0 +1,46 @@
+{
+  "slug": "fundedelite",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted main terms aed6bba76a39.txt §§4–5,8–9,11–12,17,20; separate programme rules/FAQ not fully read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§8.1–8.2 qualitative proof of skill, “single-direction exposure without documented risk logic” and nonreplicable strategies; §8.4 forfeiture of all pending rewards/payouts and termination at discretion.",
+      "source": "https://fundedelite.com/terms-and-conditions",
+      "locator": "§8.1–8.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "§5.3 failure to schedule and attend interview within five business days denies pending payouts and cancels all associated accounts. §11.5 dispute without contacting firm first is material breach; §11.4 forfeits accrued rewards upon breach termination.",
+      "source": "https://fundedelite.com/terms-and-conditions",
+      "locator": "§5.3; §11.4–11.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§7 preceding §8 says changes prospectively to new trading periods; potential application to ongoing account between periods needs exact context.",
+      "source": "https://fundedelite.com/terms-and-conditions",
+      "locator": "End of §7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§9.3 review-based threats qualified by intent to circumvent rules/obtain undeserved refunds; ordinary criticism not expressly prohibited in excerpt.",
+      "source": "https://fundedelite.com/terms-and-conditions",
+      "locator": "§9.3",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B6": "§9.3 targets coercive review threats, not ordinary criticism, no B6 without broader clause.",
+    "B1": "§11.4 accrued reward forfeiture on breach; §12.3 investigation hold; no unconditional forfeiture established.",
+    "B3": "§20 generic amendments and §7 prospective periods; actual account applicability unresolved."
+  },
+  "toVerify": {
+    "coverage": "Full 33k main terms, duplicate and FAQ bodies, Catalyst/Flash/Atom/Lite/Free Retry and live agreement. Read §17 termination consequences and review procedure.",
+    "B2A": "Written explanation/appeal route.",
+    "CONS": "Most lenient main programme."
+  }
+}
