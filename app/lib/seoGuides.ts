@@ -1567,7 +1567,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     metaDescription: 'What is a prop firm consistency rule? See the formula, a worked 40% example, payout impact and how to compare firms without the rule.',
     eyebrow: 'Rules search',
     h1: 'What is a consistency rule in a prop firm?',
-    answer: 'A consistency rule limits how much of your total profit can come from one day or trade. A prop firm without a consistency rule removes that specific cap, but may still use strict drawdown, payout minimums, lot limits or funded-stage conditions.',
+    answer: "A consistency rule commonly limits the share of profit from one day or trade. A transparent 40–50% eligibility gate differs from a 15–20% rule or a calculation that carries the historical best day into later payout cycles. No-consistency programmes still have other risk and payout rules.",
     primaryKeywords: ['what is consistency rule in prop firm', 'no consistency rule prop firm', 'prop firm without consistency rule'],
     secondaryKeywords: ['prop firms without consistency rule', 'best day rule', 'payout consistency rule', 'trailing drawdown'],
     checks: [
@@ -1753,7 +1753,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     metaDescription: 'How to spot a reliable prop firm: Trustpilot, Reddit, payout proof, official sources, press coverage, regulator warnings and conflicts of interest.',
     eyebrow: 'Trust',
     h1: 'Reliable prop firm: do not confuse a high rating with strong proof',
-    answer: 'A reliable prop firm combines clear rules, official sources, payout history, consistent community feedback, independent press/regulator checks and visible commercial conflicts.',
+    answer: "Check the exact Trustpilot domain and distinguish a visible rating, a withheld rating and an inaccessible profile. Cross-check the notice with contract terms, documented incidents, independent payment evidence and commercial disclosures. A suspended rating is not proof of fraud or nonpayment.",
     primaryKeywords: ['reliable prop firm', 'prop firm reviews', 'prop firm Trustpilot'],
     secondaryKeywords: ['prop firm scam', 'Reddit prop firm', 'prop firm feedback', 'payout proof', 'prop firm news', 'prop firm regulator warning'],
     checks: [
@@ -1775,7 +1775,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     metaDescription: 'FTMO vs The5ers: compare current programs, prices, drawdown, payout rules, platforms, Trustpilot signals and official terms before choosing.',
     eyebrow: 'Brand comparison',
     h1: 'FTMO vs The5ers: two solid profiles, not the same use case',
-    answer: 'FTMO and The5ers are both serious names, but they do not solve the same problem. FTMO is more reference-driven; The5ers can feel more conservative depending on the program. The exact offer matters more than the brand name.',
+    answer: "Compare FTMO's CFD 1-Step (50% consistency), 2-Step (no percentage rule), Instant (30%), and its separate Futures products with The5ers Bootcamp, High Stakes, Hyper Growth, ProGrowth and Futures. News rules, scaling, payout eligibility and contract terms depend on the programme.",
     primaryKeywords: ['FTMO vs The5ers', 'FTMO or The5ers', 'The5ers vs FTMO'],
     secondaryKeywords: ['FTMO payout', 'The5ers rules', 'prop firm compare', 'forex challenge'],
     checks: [
@@ -2142,7 +2142,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     metaDescription: 'Prop firm payout proof guide: identify dated, traceable and consistent withdrawal evidence before trusting marketing claims.',
     eyebrow: 'Payout proof',
     h1: 'Prop firm payout proof: evidence must be dated, traceable and consistent',
-    answer: 'A payout screenshot is not enough on its own. Good proof should be dated, connected to a real program, consistent with the rules and supported by more than one public signal.',
+    answer: "Distinguish company reports, independent reporting, on-chain settlements and individually matched payment evidence. A transaction proves a settlement event, not automatically the recipient's identity or bank receipt; no trace does not establish nonpayment.",
     primaryKeywords: ['prop firm payout proof', 'prop firm that actually pays', 'withdrawal proof prop firm'],
     secondaryKeywords: ['payout problem', 'payout denial', 'prop firm withdrawal', 'fast payout'],
     checks: [
@@ -2364,6 +2364,8 @@ export function getGuideLastModified(guideOrSlug: SeoGuide | string) {
     .filter((timestamp) => Number.isFinite(timestamp));
 
   const articleUpdated = guide ? getGuideArticle(guide.slug)?.updated : undefined;
+  // An editorial date reflects the actual article update, not the latest underlying firm review.
+  if (articleUpdated && Number.isFinite(Date.parse(articleUpdated))) return new Date(articleUpdated);
   const editorialRefresh = Math.max(
     new Date(GUIDE_EDITORIAL_REFRESH_DATE).getTime(),
     articleUpdated ? new Date(articleUpdated).getTime() : 0,
