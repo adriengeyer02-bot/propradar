@@ -283,7 +283,7 @@ for slug, label, amount, count, method in TRACKER:
         continue
     f = firm(slug)
     # Replace older readings of the same tracker page/label with today's reading.
-    f['payoutEvidence'] = [p for p in f['payoutEvidence'] if not (p.get('url') == TRACKER_URL)]
+    f['payoutEvidence'] = [p for p in f['payoutEvidence'] if not (p.get('url') == TRACKER_URL and p.get('checkedOn') != '2026-11-25')]
     f['payoutEvidence'].append({'url': TRACKER_URL, 'trackerLabel': label, 'grade': 'EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED',
                                 'method': method, 'amountUSD': amount, 'count': count, 'period': 'all time, as shown on 2026-11-25',
                                 'checkedOn': '2026-11-25'})

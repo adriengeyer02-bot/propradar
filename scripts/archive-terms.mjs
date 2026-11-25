@@ -37,11 +37,21 @@ async function grab(url) {
   try {
     const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
     await page.waitForTimeout(4000);
+    // Cloudflare "Just a moment..." challenge: give it time to clear on its own.
+    for (let i = 0; i < 6 && /just a moment|attention required/i.test(await page.title()); i++) await page.waitForTimeout(5000);
+    try { await page.waitForLoadState('networkidle', { timeout: 15000 }); } catch {}
     // Open collapsed FAQ/accordion sections so their text is captured.
     await page.evaluate(() => { document.querySelectorAll('details').forEach((d) => d.setAttribute('open', '')); });
     for (const b of await page.$$('[aria-expanded="false"]')) { try { await b.click({ timeout: 500 }); } catch {} }
     await page.waitForTimeout(1000);
-    const text = await page.evaluate(() => document.body?.innerText || '');
+    // innerText skips collapsed tabs/accordions; textContent keeps them. Keep the longer one.
+    const text = await page.evaluate(() => {
+      const inner = document.body?.innerText || '';
+      const clone = document.body?.cloneNode(true);
+      clone?.querySelectorAll('script,style,noscript,svg').forEach((n) => n.remove());
+      const all = (clone?.textContent || '').replace(/[ \t]+/g, ' ').replace(/\n\s*\n+/g, '\n\n');
+      return all.length > inner.length * 1.3 ? all : inner;
+    });
     const links = await page.evaluate(() => [...document.querySelectorAll('a[href]')].map((a) => ({ href: a.href, label: (a.textContent || '').trim().slice(0, 80) })));
     const frames = [];
     for (const f of page.frames().slice(1)) { try { const t = await f.evaluate(() => document.body?.innerText || ''); if (t.length > 500) frames.push(t); } catch {} }
