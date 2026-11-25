@@ -1,0 +1,4242 @@
+{
+ "weights": {
+  "B1": 15,
+  "B2": 8,
+  "B2A": 4,
+  "B3": 5,
+  "B4": 3,
+  "B4max": 6,
+  "B5": 3,
+  "B6": 5,
+  "B7": 5,
+  "Bcap": 30,
+  "TPW": 6,
+  "TPMID": 3,
+  "REGWARN": 5,
+  "A1": 40,
+  "A1_OLD_UNCLEAR": 15,
+  "A2ISO": 5,
+  "E_HARSH": 2
+ },
+ "consistency": [
+  [
+   40,
+   0
+  ],
+  [
+   30,
+   2
+  ],
+  [
+   20,
+   5
+  ],
+  [
+   0,
+   8
+  ]
+ ],
+ "rows": [
+  {
+   "slug": "ftmo",
+   "name": "FTMO",
+   "current": 90,
+   "proposed": 85,
+   "raw": 85,
+   "flag": "",
+   "delta": -5,
+   "ceiling": 98,
+   "ceilingWhy": "11 ans + preuve très large",
+   "penalties": "B2 −8 · B6 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "FTMO reserves the right to determine 'at our own discretion' whether trades fall within a Forbidden Trading Practice; acting reasonably, it may cancel trades and cancel all FTMO Accounts or rewards, without prior notice (endeavours to notify) and without compensation; may also impose temporary or permanent consistency measures.",
+     "url": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "heading": "cl. 7.3; 7.5; 7.6.2; 7.6.4; 7.6.9; 7.7; 7.9"
+    },
+    "B6": {
+     "text": "Acting 'in a manner that may damage our reputation, including after termination' leads to termination of agreements and loss of access.",
+     "url": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "heading": "cl. 11.1"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "FTMO reserves the right to determine 'at our own discretion' whether trades fall within a Forbidden Trading Practice; acting reasonably, it may cancel trades and cancel all FTMO Accounts or rewards, without prior notice (endeavours to notify) and without compensation; may also impose temporary or permanent consistency measures.",
+     "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "locator": "cl. 7.3; 7.5; 7.6.2; 7.6.4; 7.6.9; 7.7; 7.9"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Acting 'in a manner that may damage our reputation, including after termination' leads to termination of agreements and loss of access.",
+     "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "locator": "cl. 11.1"
+    }
+   ],
+   "age": 11,
+   "ceilingEvidence": [
+    {
+     "kind": "trustpilot",
+     "rating": 4.8,
+     "count": 56103
+    }
+   ],
+   "founded": 2015
+  },
+  {
+   "slug": "take-profit-trader",
+   "name": "Take Profit Trader",
+   "current": 73,
+   "proposed": 82,
+   "raw": 82,
+   "flag": "",
+   "delta": 9,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "B3 −5 · B7 −5 · B4 −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B3": {
+     "text": "User Agreement can change 'from time to time without notice'; continued use binds users regardless of when they registered.",
+     "url": "https://takeprofittrader.com/terms",
+     "heading": "introductory section"
+    },
+    "B7": {
+     "text": "Payout and PRO rules are set out in a PRO contract sent after the Test is passed; the contract itself is not published.",
+     "url": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+     "heading": "introduction"
+    },
+    "B4": {
+     "text": "Older FAQ says weekly PRO+ activity, current help says one traded day per calendar month (cohort to reconcile).",
+     "url": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+     "heading": "PRO+ FAQ vs PRO Account Rules §3"
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "User Agreement can change 'from time to time without notice'; continued use binds users regardless of when they registered.",
+     "source": "https://takeprofittrader.com/terms",
+     "locator": "introductory section"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Payout and PRO rules are set out in a PRO contract sent after the Test is passed; the contract itself is not published.",
+     "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+     "locator": "introduction"
+    },
+    {
+     "code": "B4",
+     "points": 3,
+     "text": "Older FAQ says weekly PRO+ activity, current help says one traded day per calendar month (cohort to reconcile).",
+     "source": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+     "locator": "PRO+ FAQ vs PRO Account Rules §3"
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "trustpilot",
+     "rating": 4.4,
+     "count": 11175
+    }
+   ],
+   "founded": 2021
+  },
+  {
+   "slug": "myfundedfutures",
+   "name": "MyFundedFutures",
+   "current": 81,
+   "proposed": 81,
+   "raw": 85,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 274473466
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.9,
+     "count": 22813
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "topstep",
+   "name": "Topstep",
+   "current": 81,
+   "proposed": 79,
+   "raw": 79,
+   "flag": "",
+   "delta": -2,
+   "ceiling": 95,
+   "ceilingWhy": "14 ans + preuve",
+   "penalties": "B2 −8 · B3 −5 · Trustpilot < 4,0 −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
+     "url": "https://www.topstep.com/terms-of-use",
+     "heading": "§27"
+    },
+    "B3": {
+     "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
+     "url": "https://www.topstep.com/terms-of-use",
+     "heading": "§9; §27; introduction"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
+     "source": "https://www.topstep.com/terms-of-use",
+     "locator": "§27"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
+     "source": "https://www.topstep.com/terms-of-use",
+     "locator": "§9; §27; introduction"
+    },
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.7 / 15052"
+    }
+   ],
+   "age": 14,
+   "ceilingEvidence": [
+    {
+     "kind": "stats"
+    }
+   ],
+   "founded": 2012
+  },
+  {
+   "slug": "the5ers",
+   "name": "The5ers",
+   "current": 78,
+   "proposed": 78,
+   "raw": 78,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 98,
+   "ceilingWhy": "10 ans + preuve très large",
+   "penalties": "B2 −8 · B3 −5 · B6 −5 · E_HARSH −2",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B6": {
+     "text": "Termination for cause includes making 'any defamatory, disparaging, or harmful statements about the Company, its employees, or the Services on any public platform', including review sites, and publishing support tickets or private correspondence; consequence: termination without refund and 'any accrued profits or Reward Balance shall be immediately forfeited'.",
+     "url": "https://the5ers.com/terms-and-conditions/",
+     "heading": "Termination rights - Termination for Cause"
+    },
+    "B2": {
+     "text": "Prohibited list ends with 'other conduct which in the sole discretion of the Company, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; also 'intentionally or unintentionally' exploiting system errors.",
+     "url": "https://the5ers.com/terms-and-conditions/",
+     "heading": "Termination rights - prohibited trading list"
+    },
+    "B3": {
+     "text": "Terms may be modified 'in Our sole discretion', binding 'effective immediately upon posting'; Trading Rules and Prohibited Conduct 'subject to change at any time ... with or without notice'.",
+     "url": "https://the5ers.com/terms-and-conditions/",
+     "heading": "Introduction; Prohibited Conduct"
+    },
+    "E_HARSH": {
+     "text": "A video interview requested during verification must be scheduled and completed within five business days, otherwise pending payouts are denied, all accounts cancelled and the collaboration terminated.",
+     "url": "https://the5ers.com/terms-and-conditions/",
+     "heading": "User Verification Process"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited list ends with 'other conduct which in the sole discretion of the Company, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; also 'intentionally or unintentionally' exploiting system errors.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Termination rights - prohibited trading list"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Terms may be modified 'in Our sole discretion', binding 'effective immediately upon posting'; Trading Rules and Prohibited Conduct 'subject to change at any time ... with or without notice'.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Introduction; Prohibited Conduct"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Termination for cause includes making 'any defamatory, disparaging, or harmful statements about the Company, its employees, or the Services on any public platform', including review sites, and publishing support tickets or private correspondence; consequence: termination without refund and 'any accrued profits or Reward Balance shall be immediately forfeited'.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Termination rights - Termination for Cause"
+    },
+    {
+     "code": "E_HARSH",
+     "points": 2,
+     "text": "A video interview requested during verification must be scheduled and completed within five business days, otherwise pending payouts are denied, all accounts cancelled and the collaboration terminated.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "User Verification Process"
+    }
+   ],
+   "age": 10,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 101654178
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.7,
+     "count": 41676
+    }
+   ],
+   "founded": 2016
+  },
+  {
+   "slug": "tradeify",
+   "name": "Tradeify",
+   "current": 78,
+   "proposed": 78,
+   "raw": 85,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 469919983
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.6,
+     "count": 6894
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "funding-pips",
+   "name": "Funding Pips",
+   "current": 76,
+   "proposed": 76,
+   "raw": 85,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "4 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 159940179
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.4,
+     "count": 72707
+    }
+   ],
+   "founded": 2022
+  },
+  {
+   "slug": "fxify",
+   "name": "FXIFY",
+   "current": 75,
+   "proposed": 75,
+   "raw": 85,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 36079782
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.3,
+     "count": 6663
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "fintokei",
+   "name": "Fintokei",
+   "current": 78,
+   "proposed": 75,
+   "raw": 75,
+   "flag": "",
+   "delta": -3,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "axi-select",
+   "name": "Axi Select",
+   "current": 76,
+   "proposed": 75,
+   "raw": 75,
+   "flag": "",
+   "delta": -1,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "city-traders-imperium",
+   "name": "City Traders Imperium",
+   "current": 74,
+   "proposed": 74,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "8 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 8,
+   "ceilingEvidence": [],
+   "founded": 2018
+  },
+  {
+   "slug": "earn2trade",
+   "name": "Earn2Trade",
+   "current": 74,
+   "proposed": 74,
+   "raw": 94,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "9 ans + preuve",
+   "penalties": "consistency 30% −1",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 30.0,
+     "forfeit": false,
+     "evalOnly": true,
+     "text": "30 % on the evaluation phase only; funded accounts not concerned.",
+     "url": "https://www.earn2trade.com/blog/earn2trade-evaluation-rules-profit-split-update/"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 1,
+     "text": "30 % on the evaluation phase only; funded accounts not concerned.",
+     "source": "https://www.earn2trade.com/blog/earn2trade-evaluation-rules-profit-split-update/",
+     "locator": "30%"
+    }
+   ],
+   "age": 9,
+   "ceilingEvidence": [
+    {
+     "kind": "trustpilot",
+     "rating": 4.5,
+     "count": 5079
+    }
+   ],
+   "founded": 2017
+  },
+  {
+   "slug": "e8-markets",
+   "name": "E8 Markets",
+   "current": 72,
+   "proposed": 72,
+   "raw": 89,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 47582149
+    }
+   ],
+   "founded": 2021
+  },
+  {
+   "slug": "brightfunded",
+   "name": "BrightFunded",
+   "current": 72,
+   "proposed": 72,
+   "raw": 79,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 11933014
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "instant-funding",
+   "name": "Instant Funding",
+   "current": 72,
+   "proposed": 72,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "oneup-trader",
+   "name": "OneUp Trader",
+   "current": 72,
+   "proposed": 72,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "9 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 9,
+   "ceilingEvidence": [],
+   "founded": 2017
+  },
+  {
+   "slug": "hola-prime",
+   "name": "Hola Prime",
+   "current": 72,
+   "proposed": 72,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 10642909
+    }
+   ],
+   "founded": 2024
+  },
+  {
+   "slug": "pipfarm",
+   "name": "PipFarm",
+   "current": 71,
+   "proposed": 71,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "hash-hedge",
+   "name": "Hash Hedge",
+   "current": 61,
+   "proposed": 71,
+   "raw": 71,
+   "flag": "",
+   "delta": 10,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2A −4",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2A": {
+     "text": "Open-ended prohibition ('any other conduct which, in the reasonable opinion of the Company, may harm the integrity') with sole-discretion measures; pending payouts can be put on Hold for suspected breach or reputational risk. Mitigated: written appeal within 7 days with decision in 14 days, 30-business-day investigation target and a 90-day backstop opening the dispute procedure.",
+     "url": "https://www.hashhedge.com/terms-and-conditions",
+     "heading": "cl. 4.5; 16.1; 16.3(e); 15.7(c); 7.11"
+    }
+   },
+   "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "Open-ended prohibition ('any other conduct which, in the reasonable opinion of the Company, may harm the integrity') with sole-discretion measures; pending payouts can be put on Hold for suspected breach or reputational risk. Mitigated: written appeal within 7 days with decision in 14 days, 30-business-day investigation target and a 90-day backstop opening the dispute procedure.",
+     "source": "https://www.hashhedge.com/terms-and-conditions",
+     "locator": "cl. 4.5; 16.1; 16.3(e); 15.7(c); 7.11"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "trade-the-pool",
+   "name": "Trade The Pool",
+   "current": 70,
+   "proposed": 70,
+   "raw": 70,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B6 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B6": {
+     "text": "Defamatory, disparaging or harmful statements on review sites are listed among the grounds of termination for cause.",
+     "url": "https://tradethepool.com/terms-and-conditions/",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Defamatory, disparaging or harmful statements on review sites are listed among the grounds of termination for cause.",
+     "source": "https://tradethepool.com/terms-and-conditions/",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "breakout-prop",
+   "name": "Breakout Prop",
+   "current": 70,
+   "proposed": 70,
+   "raw": 85,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 83931731
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "aqua-funded",
+   "name": "AquaFunded",
+   "current": 69,
+   "proposed": 69,
+   "raw": 79,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 13335576
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "audacity-capital",
+   "name": "Audacity Capital",
+   "current": 77,
+   "proposed": 69,
+   "raw": 69,
+   "flag": "",
+   "delta": -8,
+   "ceiling": 75,
+   "ceilingWhy": "14 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 14,
+   "ceilingEvidence": [],
+   "founded": 2012
+  },
+  {
+   "slug": "uprofit-trader",
+   "name": "UProfit Trader",
+   "current": 69,
+   "proposed": 69,
+   "raw": 72,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "7 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.4 / 6554"
+    }
+   ],
+   "age": 7,
+   "ceilingEvidence": [],
+   "founded": 2019
+  },
+  {
+   "slug": "ftuk",
+   "name": "FTUK",
+   "current": 69,
+   "proposed": 69,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "funderpro",
+   "name": "FunderPro",
+   "current": 70,
+   "proposed": 69,
+   "raw": 69,
+   "flag": "",
+   "delta": -1,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "funded-trading-plus",
+   "name": "Funded Trading Plus",
+   "current": 68,
+   "proposed": 68,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "funding-traders",
+   "name": "Funding Traders",
+   "current": 68,
+   "proposed": 68,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "alpha-capital-group",
+   "name": "Alpha Capital Group",
+   "current": 67,
+   "proposed": 67,
+   "raw": 89,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 74793046
+    }
+   ],
+   "founded": 2021
+  },
+  {
+   "slug": "lark-funding",
+   "name": "Lark Funding",
+   "current": 67,
+   "proposed": 67,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "tickticktrader",
+   "name": "TickTickTrader",
+   "current": 67,
+   "proposed": 67,
+   "raw": 72,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.4 / 6636"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "leeloo-trading",
+   "name": "Leeloo Trading",
+   "current": 67,
+   "proposed": 67,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 6,
+   "ceilingEvidence": [],
+   "founded": 2020
+  },
+  {
+   "slug": "hantec-trader",
+   "name": "RZR Funded",
+   "current": 68,
+   "proposed": 67,
+   "raw": 67,
+   "flag": "",
+   "delta": -1,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B2": {
+     "text": "Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
+     "url": "https://rzrfunded.com/terms-conditions/",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
+     "source": "https://rzrfunded.com/terms-conditions/",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "ment-funding",
+   "name": "Ment Funding",
+   "current": 67,
+   "proposed": 67,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "B3 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B3": {
+     "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "url": "upload:57c77dd6-ANALYTIX.pdf",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "source": "upload:57c77dd6-ANALYTIX.pdf",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "tradeday",
+   "name": "TradeDay",
+   "current": 67,
+   "proposed": 67,
+   "raw": 95,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "6 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 6,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 16323563
+    }
+   ],
+   "founded": 2020
+  },
+  {
+   "slug": "tradefundrr",
+   "name": "TradeFundrr",
+   "current": 67,
+   "proposed": 67,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "elite-trader-funding",
+   "name": "Elite Trader Funding",
+   "current": 66,
+   "proposed": 66,
+   "raw": 92,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.8 / 1174"
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 10015655
+    }
+   ],
+   "founded": 2021
+  },
+  {
+   "slug": "hyrotrader",
+   "name": "HyroTrader",
+   "current": 55,
+   "proposed": 66,
+   "raw": 66,
+   "flag": "",
+   "delta": 11,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B2A −4 · B7 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2A": {
+     "text": "Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
+     "url": "https://www.hyrotrader.com/terms-and-conditions/",
+     "heading": "§10.2(g),(k); §10.3(d),(h); §24.2"
+    },
+    "B7": {
+     "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
+     "url": "https://www.hyrotrader.com/terms-and-conditions/",
+     "heading": "§P.4; Companion Policies"
+    }
+   },
+   "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§10.2(g),(k); §10.3(d),(h); §24.2"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§P.4; Companion Policies"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "lucid-trading",
+   "name": "Lucid Trading",
+   "current": 53,
+   "proposed": 66,
+   "raw": 66,
+   "flag": "",
+   "delta": 13,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans",
+   "penalties": "B2A −4 · B3 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2A": {
+     "text": "Prohibited practices are 'determined in Lucid's sole discretion'; on a prohibited use Lucid may remove trades, adjust balances, pause, hold or deny payouts or terminate, without compensation or refund; the clause continues with a route to contest an enforcement action ('If you believe an enforcement action ...', text truncated by OCR).",
+     "url": "upload:99a0a12f-lucid.pdf",
+     "heading": "Terms of Use - prohibited uses"
+    },
+    "B3": {
+     "text": "Terms of Use may be revised 'from time to time in our sole discretion'; Website, Software, Services and fees may be modified, suspended or discontinued; prices may change without notice.",
+     "url": "upload:99a0a12f-lucid.pdf",
+     "heading": "Changes to the Terms of Use"
+    }
+   },
+   "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "Prohibited practices are 'determined in Lucid's sole discretion'; on a prohibited use Lucid may remove trades, adjust balances, pause, hold or deny payouts or terminate, without compensation or refund; the clause continues with a route to contest an enforcement action ('If you believe an enforcement action ...', text truncated by OCR).",
+     "source": "upload:99a0a12f-lucid.pdf",
+     "locator": "Terms of Use - prohibited uses"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Terms of Use may be revised 'from time to time in our sole discretion'; Website, Software, Services and fees may be modified, suspended or discontinued; prices may change without notice.",
+     "source": "upload:99a0a12f-lucid.pdf",
+     "locator": "Changes to the Terms of Use"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [
+    {
+     "kind": "trustpilot",
+     "rating": 4.5,
+     "count": 7805
+    }
+   ],
+   "founded": 2024
+  },
+  {
+   "slug": "atlas-funded",
+   "name": "Atlas Funded",
+   "current": 66,
+   "proposed": 66,
+   "raw": 62,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 2015"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "the-trading-pit",
+   "name": "The Trading Pit",
+   "current": 67,
+   "proposed": 64,
+   "raw": 64,
+   "flag": "",
+   "delta": -3,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B6 −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B6": {
+     "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
+     "url": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
+     "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "finotive-funding",
+   "name": "Finotive Funding",
+   "current": 69,
+   "proposed": 64,
+   "raw": 64,
+   "flag": "",
+   "delta": -5,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "B3 −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B3": {
+     "text": "Compliance, risk, prohibited-strategy and platform updates may apply immediately to existing accounts.",
+     "url": "https://finotivefunding.com/terms-and-conditions",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Compliance, risk, prohibited-strategy and platform updates may apply immediately to existing accounts.",
+     "source": "https://finotivefunding.com/terms-and-conditions",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "for-traders",
+   "name": "For Traders",
+   "current": 70,
+   "proposed": 64,
+   "raw": 64,
+   "flag": "",
+   "delta": -6,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B7 −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B7": {
+     "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+     "url": "https://www.fortraders.com/terms-and-conditions",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+     "source": "https://www.fortraders.com/terms-and-conditions",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "alpha-futures",
+   "name": "Alpha Futures",
+   "current": 64,
+   "proposed": 64,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 33415099
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.3,
+     "count": 6304
+    }
+   ],
+   "founded": 2024
+  },
+  {
+   "slug": "maven-trading",
+   "name": "Maven Trading",
+   "current": 63,
+   "proposed": 63,
+   "raw": 66,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B5 −3 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B5": {
+     "text": "OMO Simulated Funded and Instant Mini: profits from trades closed before 150 s are removed, losses remain.",
+     "url": "https://maventrading.com/terms-and-conditions",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B5",
+     "points": 3,
+     "text": "OMO Simulated Funded and Instant Mini: profits from trades closed before 150 s are removed, losses remain.",
+     "source": "https://maventrading.com/terms-and-conditions",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "miltraders",
+   "name": "MilTraders",
+   "current": 63,
+   "proposed": 63,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "date de création inconnue",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": null,
+   "ceilingEvidence": [],
+   "founded": 0
+  },
+  {
+   "slug": "bulenox",
+   "name": "Bulenox",
+   "current": 62,
+   "proposed": 62,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 6,
+   "ceilingEvidence": [],
+   "founded": 2020
+  },
+  {
+   "slug": "crypto-fund-trader",
+   "name": "Crypto Fund Trader",
+   "current": 62,
+   "proposed": 62,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "blue-guardian",
+   "name": "Blue Guardian",
+   "current": 61,
+   "proposed": 61,
+   "raw": 89,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "7 ans + preuve",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 7,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 40898683
+    }
+   ],
+   "founded": 2019
+  },
+  {
+   "slug": "traders-central",
+   "name": "Traders Central",
+   "current": 61,
+   "proposed": 61,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 6,
+   "ceilingEvidence": [],
+   "founded": 2020
+  },
+  {
+   "slug": "traders-launch",
+   "name": "Traders Launch",
+   "current": 61,
+   "proposed": 61,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "thinkcapital",
+   "name": "ThinkCapital",
+   "current": 60,
+   "proposed": 60,
+   "raw": 69,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "rocket21-challenge",
+   "name": "Rocket21 Challenge",
+   "current": 60,
+   "proposed": 60,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "top-one-trader",
+   "name": "Top One Trader",
+   "current": 60,
+   "proposed": 60,
+   "raw": 61,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "consistency 15% −8 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 15.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Accounts bought since 14 Oct 2025: consistency score must stay at 15 % or below (rules page).",
+     "url": "https://checkout.toponetrader.com/rules/"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 8,
+     "text": "Accounts bought since 14 Oct 2025: consistency score must stay at 15 % or below (rules page).",
+     "source": "https://checkout.toponetrader.com/rules/",
+     "locator": "15%"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "myfundedcapital",
+   "name": "MyFundedCapital",
+   "current": 75,
+   "proposed": 60,
+   "raw": 60,
+   "flag": "",
+   "delta": -15,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B7 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B7": {
+     "text": "Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
+     "url": "https://myfundedcapital.com/terms-and-conditions/",
+     "heading": "Education / Guidelines / Arbitration"
+    }
+   },
+   "items": [
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
+     "source": "https://myfundedcapital.com/terms-and-conditions/",
+     "locator": "Education / Guidelines / Arbitration"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "onefunded",
+   "name": "OneFunded",
+   "current": 60,
+   "proposed": 60,
+   "raw": 59,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "the-concept-trading",
+   "name": "The Concept Trading",
+   "current": 60,
+   "proposed": 60,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "goat-funded-trader",
+   "name": "GOAT Funded Trader",
+   "current": 59,
+   "proposed": 59,
+   "raw": 79,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "3 ans + preuve",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 27799318
+    }
+   ],
+   "founded": 2023
+  },
+  {
+   "slug": "rebelsfunding",
+   "name": "RebelsFunding",
+   "current": 59,
+   "proposed": 59,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "lux-trading-firm",
+   "name": "Lux Trading Firm",
+   "current": 58,
+   "proposed": 58,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "ofp-funding",
+   "name": "OFP Funding",
+   "current": 58,
+   "proposed": 58,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "ic-funded",
+   "name": "IC Funded",
+   "current": 58,
+   "proposed": 58,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "fxrk",
+   "name": "FXRK",
+   "current": 58,
+   "proposed": 58,
+   "raw": 60,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "REGWARN −5",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "REGWARN",
+     "points": 5,
+     "text": "The Spanish securities regulator CNMV published a warning dated 17/02/2025 on \"HTTPS://FXRK.COM\" in its list of unauthorised entities, stating that it is not authorised to provide investment services and activities subject to authorisation, including foreign-exchange operations (https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en).",
+     "source": "https://www.cnmv.es/portal/resultadobusqueda?tipo=1&nombre=fxrk.com&lang=en",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "tentrade",
+   "name": "TenTrade",
+   "current": 58,
+   "proposed": 58,
+   "raw": 71,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2A −4",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B2A": {
+     "text": "Funded trader terms: sole and absolute discretion to judge the \"spirit\" or operational objectives, with payout denial possible.",
+     "url": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "Funded trader terms: sole and absolute discretion to judge the \"spirit\" or operational objectives, with payout denial possible.",
+     "source": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "fundednext",
+   "name": "FundedNext",
+   "current": 72,
+   "proposed": 57,
+   "raw": 57,
+   "flag": "",
+   "delta": -15,
+   "ceiling": 85,
+   "ceilingWhy": "4 ans + preuve",
+   "penalties": "B1 −15 · B5 −3 · B6 −5 · REGWARN −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B5": {
+     "text": "Quick Strike (trades closed within 30 s): at 30% or more of trades after a warning at 20%, 100% of their profit is deducted from the Performance Reward and the account is terminated if still at or above 30% at cycle end. News window (+/-5 min, high-impact): only 40% of profit from profitable trades counts.",
+     "url": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+     "heading": "thresholds; News Reward Share Rule"
+    },
+    "B1": {
+     "text": "'Performance Reward' is defined as any amount the Provider may make available 'à sa seule discrétion' and is 'not ... an acquired right'; at any time before actual payment the Provider may review, adjust, withhold, refuse or cancel Performance Rewards, including for 'technical or operational inconsistencies'. Funded access is revocable at the Provider's discretion and creates no acquired right or guarantee of future payments.",
+     "url": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+     "heading": "§3 Définitions; §12.6; §10.3"
+    },
+    "B6": {
+     "text": "Non-disparagement clause covering defamation, 'discrédit, dénigrement, attaque réputationnelle ou propagande négative' on social media, forums, review platforms, support tickets and e-mails, including saying 'does not pay' without verifiable factual basis; breach allows withholding, refusing or cancelling Performance Rewards.",
+     "url": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+     "heading": "§24.1; §24.2; §24.5"
+    }
+   },
+   "items": [
+    {
+     "code": "B1",
+     "points": 15,
+     "text": "'Performance Reward' is defined as any amount the Provider may make available 'à sa seule discrétion' and is 'not ... an acquired right'; at any time before actual payment the Provider may review, adjust, withhold, refuse or cancel Performance Rewards, including for 'technical or operational inconsistencies'. Funded access is revocable at the Provider's discretion and creates no acquired right or guarantee of future payments.",
+     "source": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+     "locator": "§3 Définitions; §12.6; §10.3"
+    },
+    {
+     "code": "B5",
+     "points": 3,
+     "text": "Quick Strike (trades closed within 30 s): at 30% or more of trades after a warning at 20%, 100% of their profit is deducted from the Performance Reward and the account is terminated if still at or above 30% at cycle end. News window (+/-5 min, high-impact): only 40% of profit from profitable trades counts.",
+     "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+     "locator": "thresholds; News Reward Share Rule"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Non-disparagement clause covering defamation, 'discrédit, dénigrement, attaque réputationnelle ou propagande négative' on social media, forums, review platforms, support tickets and e-mails, including saying 'does not pay' without verifiable factual basis; breach allows withholding, refusing or cancelling Performance Rewards.",
+     "source": "upload:funded_next.pdf (CGU FR, saved by Geyer from fundednext.com on 2026-11-25, OCR)",
+     "locator": "§24.1; §24.2; §24.5"
+    },
+    {
+     "code": "REGWARN",
+     "points": 5,
+     "text": "The Reserve Bank of India added \"FundedNext | https://fundednext.com\" to its Alert List of unauthorised forex trading platforms in a press release dated 2024-10-22 (Press Release 2024-2025/1351, https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=58949). The RBI says the list is not exhaustive.",
+     "source": "https://fundednext.com\"",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 353872270
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.5,
+     "count": 83306
+    }
+   ],
+   "founded": 2022
+  },
+  {
+   "slug": "apex-trader-funding",
+   "name": "Apex Trader Funding",
+   "current": 57,
+   "proposed": 57,
+   "raw": 90,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "A2ISO −5",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "A2ISO",
+     "points": 5,
+     "text": "Finance Magnates reported on 29 August 2024 that Apex Trader Funding had \"allegedly been struggling with timely payouts\" and that traders were asked for video proof covering \"Two Trading Days\" before payout; Apex did not reply to the outlet before publication (https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid).",
+     "source": "https://financemagnates.com/forex/this-prop-firm-requires-recording-your-trades-for-2-days-otherwise-you-wont-get-paid",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "trustpilot",
+     "rating": 4.2,
+     "count": 21625
+    }
+   ],
+   "founded": 2021
+  },
+  {
+   "slug": "forex-funds-flow",
+   "name": "Forex Funds Flow",
+   "current": 57,
+   "proposed": 57,
+   "raw": 65,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "bespoke-funding-program",
+   "name": "Bespoke Funding Program",
+   "current": 56,
+   "proposed": 56,
+   "raw": 67,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3 · REGWARN −5",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.1 / 1185"
+    },
+    {
+     "code": "REGWARN",
+     "points": 5,
+     "text": "The UK FCA published a warning about \"Bespoke Funding Program Limited / https://www.bespokefundingprogram.com/\" on 31 October 2023 (last updated 1 November 2023): \"This firm may be providing or promoting financial services or products without our permission.\"",
+     "source": "https://www.bespokefundingprogram.com/\"",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "sway-funded",
+   "name": "Sway Funded",
+   "current": 56,
+   "proposed": 56,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B3 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B3": {
+     "text": "4.2: fees and parameters may change at any time \"with immediate effect on all existing challenges\".",
+     "url": "https://my.swayfunded.com/p/refund-policy",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "4.2: fees and parameters may change at any time \"with immediate effect on all existing challenges\".",
+     "source": "https://my.swayfunded.com/p/refund-policy",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "nova-funding",
+   "name": "Nova Funding",
+   "current": 56,
+   "proposed": 56,
+   "raw": 72,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "2.2 / 4448"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "nations-trading",
+   "name": "Nations Trading",
+   "current": 56,
+   "proposed": 56,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "the-forex-funder",
+   "name": "The Forex Funder",
+   "current": 56,
+   "proposed": 56,
+   "raw": 72,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "2.5 / 1574"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "leveled-up-society",
+   "name": "Leveled Up Society",
+   "current": 56,
+   "proposed": 56,
+   "raw": 72,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.3 / 1286"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "aurafunded",
+   "name": "AuraFunded",
+   "current": 56,
+   "proposed": 56,
+   "raw": 65,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "alphaproptraders",
+   "name": "AlphaPropTraders",
+   "current": 56,
+   "proposed": 56,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "funded-bull",
+   "name": "Funded Bull",
+   "current": 55,
+   "proposed": 55,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "fx2-funding",
+   "name": "FX2 Funding",
+   "current": 55,
+   "proposed": 55,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B3 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B3": {
+     "text": "Margin, order size, position limits and drawdown halt levels of the Funded Account may be revised at any time.",
+     "url": "https://fx2funding.com/faqs/",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Margin, order size, position limits and drawdown halt levels of the Funded Account may be revised at any time.",
+     "source": "https://fx2funding.com/faqs/",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "quant-tekel",
+   "name": "QT Funded (Quant Tekel)",
+   "current": 55,
+   "proposed": 55,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "fundedlions",
+   "name": "FundedLions",
+   "current": 55,
+   "proposed": 55,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "one-of-one-funding",
+   "name": "1of1 Funding",
+   "current": 55,
+   "proposed": 55,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "tribe-funded",
+   "name": "Tribe Funded",
+   "current": 55,
+   "proposed": 55,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "funded7",
+   "name": "Funded7",
+   "current": 55,
+   "proposed": 55,
+   "raw": 65,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "bem-funding",
+   "name": "BEM Funding",
+   "current": 54,
+   "proposed": 54,
+   "raw": 49,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 55,
+   "ceilingWhy": "< 1 an",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 0,
+   "ceilingEvidence": [],
+   "founded": 2026
+  },
+  {
+   "slug": "getcryptofunded",
+   "name": "GetCryptoFunded",
+   "current": 54,
+   "proposed": 54,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "alpine-funded",
+   "name": "Alpine Funded",
+   "current": 54,
+   "proposed": 54,
+   "raw": 60,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "REGWARN −5",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "REGWARN",
+     "points": 5,
+     "text": "Finance Magnates reported on 2025-03-05 (Arnab Shome) that Ukraine's National Securities and Stock Market Commission (NSSMC) added Alpine Funded and Aura Funded to its warning list, among seven names flagged the week before; the article notes the regulator gave no reason for their inclusion (https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/).",
+     "source": "https://www.financemagnates.com/forex/ukraine-flags-two-prop-trading-firms-is-it-a-signal-of-incoming-regulations/",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "get-leveraged",
+   "name": "Get Leveraged",
+   "current": 56,
+   "proposed": 54,
+   "raw": 54,
+   "flag": "",
+   "delta": -2,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "consistency 20% −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 20.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Highest day may not exceed 20 % of total profit before a reward request.",
+     "url": "https://getleveraged.com/faq/what-is-the-consistency-rule/"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 5,
+     "text": "Highest day may not exceed 20 % of total profit before a reward request.",
+     "source": "https://getleveraged.com/faq/what-is-the-consistency-rule/",
+     "locator": "20%"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "bullwaves-prime",
+   "name": "Bullwaves Prime",
+   "current": 54,
+   "proposed": 54,
+   "raw": 69,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "date de création inconnue",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": null,
+   "ceilingEvidence": [],
+   "founded": 0
+  },
+  {
+   "slug": "blusky-trading",
+   "name": "BluSky Trading",
+   "current": 53,
+   "proposed": 53,
+   "raw": 85,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 85,
+   "ceilingWhy": "4 ans + preuve",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 12898022
+    }
+   ],
+   "founded": 2022
+  },
+  {
+   "slug": "blueberry-funded",
+   "name": "Blueberry Funded",
+   "current": 53,
+   "proposed": 53,
+   "raw": 69,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "purdia-capital",
+   "name": "Purdia Capital",
+   "current": 53,
+   "proposed": 53,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "orion-funded",
+   "name": "Orion Funded",
+   "current": 53,
+   "proposed": 53,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B6 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B6": {
+     "text": "14.1: acting in a manner that may damage the firm's reputation, including after termination, leads to termination of the agreements.",
+     "url": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "14.1: acting in a manner that may damage the firm's reputation, including after termination, leads to termination of the agreements.",
+     "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "equity-edge",
+   "name": "Equity Edge",
+   "current": 53,
+   "proposed": 53,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "upcomers",
+   "name": "Upcomers",
+   "current": 53,
+   "proposed": 53,
+   "raw": 59,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "wegetfunded",
+   "name": "WeGetFunded",
+   "current": 53,
+   "proposed": 53,
+   "raw": 54,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B2 −8 · Trustpilot < 4,0 −3",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B2": {
+     "text": "Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
+     "url": "https://wegetfunded.com/en/legal/terms",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
+     "source": "https://wegetfunded.com/en/legal/terms",
+     "locator": ""
+    },
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 1004"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "fidelcrest",
+   "name": "Fidelcrest",
+   "current": 52,
+   "proposed": 52,
+   "raw": 72,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "8 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 1766"
+    }
+   ],
+   "age": 8,
+   "ceilingEvidence": [],
+   "founded": 2018
+  },
+  {
+   "slug": "sabiotrade",
+   "name": "SabioTrade",
+   "current": 52,
+   "proposed": 52,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "funder-trading",
+   "name": "Funder Trading",
+   "current": 52,
+   "proposed": 52,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "wsfunded",
+   "name": "WSFunded",
+   "current": 52,
+   "proposed": 52,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "moneta-funded",
+   "name": "Moneta Funded",
+   "current": 52,
+   "proposed": 52,
+   "raw": 57,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B2 −8",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B2": {
+     "text": "Sole discretion to delay, reduce, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules.",
+     "url": "upload:11a8a29e-MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Sole discretion to delay, reduce, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules.",
+     "source": "upload:11a8a29e-MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "e8-futures",
+   "name": "E8 Futures",
+   "current": 52,
+   "proposed": 52,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "daytraders-com",
+   "name": "DayTraders.com",
+   "current": 51,
+   "proposed": 51,
+   "raw": 62,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · B6 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B2": {
+     "text": "A user may be barred from a Reward at the sole discretion of Day Traders for \"disregard for these Terms\" or \"any other disruptive manner\".",
+     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "heading": ""
+    },
+    "B6": {
+     "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "A user may be barred from a Reward at the sole discretion of Day Traders for \"disregard for these Terms\" or \"any other disruptive manner\".",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": ""
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "funded-squad",
+   "name": "Funded Squad",
+   "current": 51,
+   "proposed": 51,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "top-one-futures",
+   "name": "Top One Futures",
+   "current": 51,
+   "proposed": 51,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans",
+   "penalties": "B6 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B6": {
+     "text": "Disparaging statements, including on review platforms, may lead to immediate termination and forfeiture of profits.",
+     "url": "https://toponefutures.com/terms-and-conditions/",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Disparaging statements, including on review platforms, may lead to immediate termination and forfeiture of profits.",
+     "source": "https://toponefutures.com/terms-and-conditions/",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 30407332
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.8,
+     "count": 5269
+    }
+   ],
+   "founded": 2024
+  },
+  {
+   "slug": "tradexprop",
+   "name": "TradeXProp",
+   "current": 51,
+   "proposed": 51,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B3 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B3": {
+     "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "url": "upload:57c77dd6-ANALYTIX.pdf",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "source": "upload:57c77dd6-ANALYTIX.pdf",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "fxci",
+   "name": "FXCI",
+   "current": 51,
+   "proposed": 51,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "monevis",
+   "name": "Monevis Funding Platform",
+   "current": 51,
+   "proposed": 51,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "mifunder",
+   "name": "MiFunder",
+   "current": 51,
+   "proposed": 51,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "tradersedgefx",
+   "name": "TradersEdgeFX",
+   "current": 51,
+   "proposed": 51,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "fundyourfx",
+   "name": "FundYourFX",
+   "current": 51,
+   "proposed": 51,
+   "raw": 66,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "B5 −3 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B5": {
+     "text": "Violating trades: profits removed, losses retained and counted toward drawdown.",
+     "url": "https://fundyourfx.io/terms-conditions/",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B5",
+     "points": 3,
+     "text": "Violating trades: profits removed, losses retained and counted toward drawdown.",
+     "source": "https://fundyourfx.io/terms-conditions/",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "atmos-funded",
+   "name": "Atmos Funded",
+   "current": 50,
+   "proposed": 50,
+   "raw": 65,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "tx3-funding",
+   "name": "TX3 Funding",
+   "current": 50,
+   "proposed": 50,
+   "raw": 72,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "3 / 4311"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "now-trade-funded",
+   "name": "Now Trade Funded",
+   "current": 50,
+   "proposed": 50,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "fundings4u",
+   "name": "Fundings4u",
+   "current": 50,
+   "proposed": 50,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "lvlup-futures",
+   "name": "Lvlup Futures",
+   "current": 51,
+   "proposed": 50,
+   "raw": 50,
+   "flag": "",
+   "delta": -1,
+   "ceiling": 55,
+   "ceilingWhy": "< 1 an",
+   "penalties": "B3 −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B3": {
+     "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "url": "upload:57c77dd6-ANALYTIX.pdf",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "source": "upload:57c77dd6-ANALYTIX.pdf",
+     "locator": ""
+    }
+   ],
+   "age": 0,
+   "ceilingEvidence": [],
+   "founded": 2026
+  },
+  {
+   "slug": "my-flash-funding",
+   "name": "My Flash Funding",
+   "current": 49,
+   "proposed": 49,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "aeon-funded",
+   "name": "Aeon Funded",
+   "current": 49,
+   "proposed": 49,
+   "raw": 65,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "fundedhive",
+   "name": "FundedHive",
+   "current": 49,
+   "proposed": 49,
+   "raw": 49,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 55,
+   "ceilingWhy": "< 1 an",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 0,
+   "ceilingEvidence": [],
+   "founded": 2026
+  },
+  {
+   "slug": "clarity-traders",
+   "name": "Clarity Traders",
+   "current": 48,
+   "proposed": 48,
+   "raw": 64,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "consistency 20% −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 20.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Funded accounts: no single day above 20 % of a reward request (trading rules page).",
+     "url": "https://www.claritytraders.com/trading-rules"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 5,
+     "text": "Funded accounts: no single day above 20 % of a reward request (trading rules page).",
+     "source": "https://www.claritytraders.com/trading-rules",
+     "locator": "20%"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "ultimate-traders",
+   "name": "Ultimate Traders",
+   "current": 48,
+   "proposed": 48,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "tiger-funded",
+   "name": "Tiger Funded",
+   "current": 47,
+   "proposed": 47,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "fundedelite",
+   "name": "FundedElite",
+   "current": 46,
+   "proposed": 46,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "funded-trader-markets",
+   "name": "Funded Trader Markets",
+   "current": 46,
+   "proposed": 46,
+   "raw": 54,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B7 −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B7": {
+     "text": "The Trader Agreement is provided in the dashboard only after a funded account is granted.",
+     "url": "https://fundedtradermarkets.com/terms-conditions",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "The Trader Agreement is provided in the dashboard only after a funded account is granted.",
+     "source": "https://fundedtradermarkets.com/terms-conditions",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 12282417
+    }
+   ],
+   "founded": 2025
+  },
+  {
+   "slug": "funding-your-trades",
+   "name": "Funding Your Trades",
+   "current": 46,
+   "proposed": 46,
+   "raw": 54,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "consistency 25% −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 25.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Minimum 25 % consistency score to qualify for a withdrawal (20 % on Instant Plus).",
+     "url": "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 5,
+     "text": "Minimum 25 % consistency score to qualify for a withdrawal (20 % on Instant Plus).",
+     "source": "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/",
+     "locator": "25%"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "titan-capital-markets",
+   "name": "Titan Capital Markets",
+   "current": 46,
+   "proposed": 46,
+   "raw": 69,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "wemastertrade",
+   "name": "WeMasterTrade",
+   "current": 45,
+   "proposed": 45,
+   "raw": 64,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "consistency 20% −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 20.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Best trading day may not exceed 20 % of total profit (FAQ, general rule).",
+     "url": "https://faq.wemastertrade.com/what-is-the-profit-consistency-rule/"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 5,
+     "text": "Best trading day may not exceed 20 % of total profit (FAQ, general rule).",
+     "source": "https://faq.wemastertrade.com/what-is-the-profit-consistency-rule/",
+     "locator": "20%"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "myfxcapital",
+   "name": "MyFxCapital",
+   "current": 45,
+   "proposed": 45,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "sure-leverage",
+   "name": "Sure Leverage",
+   "current": 44,
+   "proposed": 44,
+   "raw": 69,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "forexive",
+   "name": "Forexive",
+   "current": 44,
+   "proposed": 44,
+   "raw": 69,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "gry-funding",
+   "name": "Gry Funding",
+   "current": 44,
+   "proposed": 44,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "superfunded",
+   "name": "SuperFunded",
+   "current": 44,
+   "proposed": 44,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "foxx-funded",
+   "name": "FOXX Funded",
+   "current": 44,
+   "proposed": 44,
+   "raw": 69,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "date de création inconnue",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": null,
+   "ceilingEvidence": [],
+   "founded": 0
+  },
+  {
+   "slug": "x-funded",
+   "name": "X Funded",
+   "current": 44,
+   "proposed": 44,
+   "raw": 69,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "date de création inconnue",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": null,
+   "ceilingEvidence": [],
+   "founded": 0
+  },
+  {
+   "slug": "levels",
+   "name": "Levels",
+   "current": 43,
+   "proposed": 43,
+   "raw": 70,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "REGWARN −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [
+    {
+     "code": "REGWARN",
+     "points": 5,
+     "text": "2023-07-13 — The Dutch AFM regulator database republishes a UK FCA warning identifying Levels LV.LS. The current service advertises simulated trading; the warning's applicability to its current model was not resolved. Source: https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/l/levels--lvls",
+     "source": "https://www.afm.nl/nl-nl/consumenten/waarschuwingen/bekijk-de-waarschuwingen/l/levels--lvls",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "funding-frontier",
+   "name": "Funding Frontier",
+   "current": 42,
+   "proposed": 42,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "klein-funding-crypto",
+   "name": "Klein Funding Crypto",
+   "current": 42,
+   "proposed": 42,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "dna-funded",
+   "name": "DNA Funded",
+   "current": 41,
+   "proposed": 41,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "directfundedtrader",
+   "name": "DirectFundedTrader",
+   "current": 41,
+   "proposed": 41,
+   "raw": 64,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B7 −5 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B7": {
+     "text": "Funding contract is sent after the evaluation (\"sign the contract we send you\").",
+     "url": "https://directfundedtrader.com/faq-rules",
+     "heading": ""
+    }
+   },
+   "items": [
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Funding contract is sent after the evaluation (\"sign the contract we send you\").",
+     "source": "https://directfundedtrader.com/faq-rules",
+     "locator": ""
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "t4tcapital",
+   "name": "T4TCapital",
+   "current": 38,
+   "proposed": 38,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "7 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 7,
+   "ceilingEvidence": [],
+   "founded": 2019
+  },
+  {
+   "slug": "traddoo",
+   "name": "Traddoo",
+   "current": 38,
+   "proposed": 38,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "blufx",
+   "name": "BluFX",
+   "current": 38,
+   "proposed": 38,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "11 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 11,
+   "ceilingEvidence": [],
+   "founded": 2015
+  },
+  {
+   "slug": "sfx-funded",
+   "name": "SFX Funded",
+   "current": 38,
+   "proposed": 38,
+   "raw": 69,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "dei-funded",
+   "name": "Dei Funded",
+   "current": 38,
+   "proposed": 38,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "the-funded-trader",
+   "name": "The Funded Trader",
+   "current": 35,
+   "proposed": 35,
+   "raw": 60,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "A1_OLD_UNCLEAR −15",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [
+    {
+     "code": "A1_OLD_UNCLEAR",
+     "points": 15,
+     "text": "Finance Magnates reported on 14 March 2024 that The Funded Trader confirmed it had halted all payouts, citing a \"self-imposed internal audit\" (https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/).",
+     "source": "https://www.financemagnates.com/forex/prop-trading-firm-the-funded-trader-cites-internal-audit-to-suspend-payouts/",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "quantec-trading-capital",
+   "name": "Quantec Trading Capital",
+   "current": 34,
+   "proposed": 34,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "willis-capital",
+   "name": "Willis Capital",
+   "current": 33,
+   "proposed": 33,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "trading-cult",
+   "name": "Trading Cult",
+   "current": 32,
+   "proposed": 32,
+   "raw": 67,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "consistency 30% −2 · Trustpilot retiré −6",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "CONS": {
+     "pct": 30.0,
+     "forfeit": false,
+     "evalOnly": false,
+     "text": "Funded accounts: no trade or day above 30 % of profits; failure rejects the payout and extends the date by 15 days (20 % on no-evaluation challenges).",
+     "url": "https://faq.tradingcult.com/"
+    }
+   },
+   "items": [
+    {
+     "code": "CONS",
+     "points": 2,
+     "text": "Funded accounts: no trade or day above 30 % of profits; failure rejects the payout and extends the date by 15 days (20 % on no-evaluation challenges).",
+     "source": "https://faq.tradingcult.com/",
+     "locator": "30%"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "exfunded",
+   "name": "ExFunded",
+   "current": 32,
+   "proposed": 32,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "funded-futures-network",
+   "name": "Funded Futures Network",
+   "current": 29,
+   "proposed": 29,
+   "raw": 75,
+   "flag": "hausse en attente de lecture complète",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraits relus à la main",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "my-crypto-funding",
+   "name": "My Crypto Funding",
+   "current": 29,
+   "proposed": 29,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "atfunded",
+   "name": "ATFunded",
+   "current": 28,
+   "proposed": 28,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "prop-number-one",
+   "name": "Prop Number One",
+   "current": 26,
+   "proposed": 26,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "traders-with-edge",
+   "name": "Traders With Edge",
+   "current": 22,
+   "proposed": 22,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "real-funds-trader",
+   "name": "Real Funds Trader",
+   "current": 21,
+   "proposed": 21,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "myforexfunds",
+   "name": "My Forex Funds",
+   "current": 20,
+   "proposed": 20,
+   "raw": 75,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 6,
+   "ceilingEvidence": [],
+   "founded": 2020
+  },
+  {
+   "slug": "neg-markets",
+   "name": "NEG Markets",
+   "current": 18,
+   "proposed": 18,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "the-prop-game",
+   "name": "The Prop Game",
+   "current": 16,
+   "proposed": 16,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "kortanafx",
+   "name": "KortanaFX",
+   "current": 15,
+   "proposed": 15,
+   "raw": 72,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot < 4,0 −3",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPMID",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "2.4 / 3401"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "ck-capital",
+   "name": "CK Capital",
+   "current": 14,
+   "proposed": 14,
+   "raw": 69,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot retiré −6",
+   "confidence": "extraction sans clause retenue",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "guardeer-funding",
+   "name": "Guardeer Funding",
+   "current": 13,
+   "proposed": 13,
+   "raw": 75,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
+   "delta": 0,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "aucune",
+   "confidence": "audit en cours (CGU non lues)",
+   "evidence": {},
+   "items": [],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  }
+ ]
+}

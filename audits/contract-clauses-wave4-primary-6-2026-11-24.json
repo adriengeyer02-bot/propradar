@@ -1,0 +1,250 @@
+{
+  "schema": "PROP_RADAR_CONTRACT_REVIEW_RESEARCH",
+  "date": "2026-11-24",
+  "firmCount": 6,
+  "observationCount": 21,
+  "publicationStatus": "INTERNAL_RESEARCH_ONLY",
+  "warning": "General web terms and help articles do not establish individually accepted funded agreements. Some web caches are months old. No score calculation or site changes.",
+  "firms": [
+    {
+      "slug": "finotive-funding",
+      "name": "Finotive Funding",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "full_official_terms_web_crawled_older",
+      "primarySource": "https://finotivefunding.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "finotive-funding-cgu-v4b-20261124-01",
+          "section": "§1.1",
+          "riskFamily": "identity",
+          "contractualMeaning": "Finotive Funding Technologies Limited, DIFC Dubaï n°11088, se présente comme prestataire de la plateforme, des paiements Finotive Pay et des simulations; vérifier payeur pour anciens contrats.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://finotivefunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "finotive-funding-cgu-v4b-20261124-02",
+          "section": "§7.14–7.18",
+          "riskFamily": "quantified_risk_strikes",
+          "contractualMeaning": "Plusieurs risques sont chiffrés: scalping selon durées et part du profit, 60% d'un meilleur trade pour certains Instant, concentration à 70%, HFT par fréquence; demandes malgré condition active peuvent donner strike et split abaissé à 10%.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://finotivefunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "finotive-funding-cgu-v4b-20261124-03",
+          "section": "§7.14–7.18",
+          "riskFamily": "closure_on_repeated_strikes",
+          "contractualMeaning": "Le texte prévoit 5 strikes cumulés = fermeture permanente, appliqué à catégories précises; éviter d'assimiler tous les scalps au même régime.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://finotivefunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "finotive-funding-cgu-v4b-20261124-04",
+          "section": "§19",
+          "riskFamily": "appeal_time_limit",
+          "contractualMeaning": "Recours annoncé sous 48 heures après enforcement, limité principalement aux erreurs de données/calcul/prix/plateforme; contestation de l'existence d'une règle exclue.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://finotivefunding.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Relier la version effectivement signée et programmes, vérifier si recours/strike permettent appel d'une sanction fondée sur classification subjective; examiner conditions de payout approuvé.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "rebelsfunding",
+      "name": "RebelsFunding",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "official_general_terms_web_crawled_older",
+      "primarySource": "https://www.rebelsfunding.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "rebelsfunding-cgu-v4b-20261124-01",
+          "section": "§1.1",
+          "riskFamily": "contracting_identity",
+          "contractualMeaning": "CGU identifient RIFM s.r.o. (Slovaquie), société n°48 116 700 à Bratislava, comme fournisseur de services RF.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://www.rebelsfunding.com/terms-and-conditions/"
+        },
+        {
+          "factId": "rebelsfunding-cgu-v4b-20261124-02",
+          "section": "§4A.3",
+          "riskFamily": "credits_not_cash",
+          "contractualMeaning": "Les crédits fidélité peuvent être accordés à discrétion et comme alternative non monétaire uniquement avec acceptation du client; pas de droit automatique à un montant de crédit.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://www.rebelsfunding.com/terms-and-conditions/"
+        },
+        {
+          "factId": "rebelsfunding-cgu-v4b-20261124-03",
+          "section": "§8.4",
+          "riskFamily": "separate_reward_contract",
+          "contractualMeaning": "Les conditions de reward/commission en coopération RCF peuvent différer des règles des services RF et relèvent d'un accord RCF distinct.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://www.rebelsfunding.com/terms-and-conditions/"
+        }
+      ],
+      "remainingWork": "Obtenir accord RCF de rémunération, séparation entité vendeuse/payeuse, traitement des payouts approuvés et recours selon cohorte.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "ultimate-traders",
+      "name": "Ultimate Traders",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "official_general_terms_web_crawled_older",
+      "primarySource": "https://www.ultimatetraders.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "ultimate-traders-cgu-v4b-20261124-01",
+          "section": "Introduction",
+          "riskFamily": "contracting_identity",
+          "contractualMeaning": "Ultimate Traders Evaluation Ltd UK n°14665391 est l'entité nommée; contrat conclu électroniquement, usage continu présenté comme acceptation des mises à jour.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://www.ultimatetraders.com/terms-and-conditions/"
+        },
+        {
+          "factId": "ultimate-traders-cgu-v4b-20261124-02",
+          "section": "§2.8",
+          "riskFamily": "chargeback_and_service",
+          "contractualMeaning": "Une réclamation jugée injustifiable ou contestation bancaire de frais peut entraîner résiliation de services et refus futur; pas preuve directe de confiscation de rewards déjà dus.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://www.ultimatetraders.com/terms-and-conditions/"
+        },
+        {
+          "factId": "ultimate-traders-cgu-v4b-20261124-03",
+          "section": "§2.10",
+          "riskFamily": "nonretroactive_purchased_services",
+          "contractualMeaning": "Modifications unilatérales des paramètres possibles pour l'avenir mais clause précise qu'elles ne s'appliquent pas aux services achetés avant la modification.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://www.ultimatetraders.com/terms-and-conditions/"
+        }
+      ],
+      "remainingWork": "Recueillir convention funded et le débiteur des rewards; vérifier les voies d'appel, conditions exactes des sanctions et anciennes cohortes.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "funderpro",
+      "name": "FunderPro",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "official_instant_program_terms_march_2026_web",
+      "primarySource": "https://funderpro.com/instant-account-terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "funderpro-cgu-v4b-20261124-01",
+          "section": "Preamble/Definitions",
+          "riskFamily": "program_scope",
+          "contractualMeaning": "Conditions spécifiques au programme Instant sans évaluation, comptes simulés en fonds virtuels; ne pas transposer aux challenges standard.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://funderpro.com/instant-account-terms-and-conditions/"
+        },
+        {
+          "factId": "funderpro-cgu-v4b-20261124-02",
+          "section": "§7 Risk and compliance",
+          "riskFamily": "discretionary_reward_denial",
+          "contractualMeaning": "Pouvoir déclaré de clôturer positions, suspendre le compte, refuser une récompense ou conserver frais après infraction; la portée de recours et contrôle de proportionnalité est à vérifier.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://funderpro.com/instant-account-terms-and-conditions/"
+        },
+        {
+          "factId": "funderpro-cgu-v4b-20261124-03",
+          "section": "§8.1–8.2",
+          "riskFamily": "kyc_gating",
+          "contractualMeaning": "KYC requis avant première demande de récompense au titre du programme; contrôle d'identité n'est pas à lui seul une pénalité abusive.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://funderpro.com/instant-account-terms-and-conditions/"
+        },
+        {
+          "factId": "funderpro-cgu-v4b-20261124-04",
+          "section": "Definitions Trading Rules",
+          "riskFamily": "unilateral_rule_updates",
+          "contractualMeaning": "Les règles annexées font partie intégrante du contrat et sont modifiables au pouvoir de la société; effets sur comptes existants à revoir.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://funderpro.com/instant-account-terms-and-conditions/"
+        }
+      ],
+      "remainingWork": "Examiner CGU générales et Challenge séparées, version actuelle au checkout, accords de rémunération, exceptions et recours contre §7.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "equity-edge",
+      "name": "Equity Edge",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "official_terms_recent_web",
+      "primarySource": "https://equityedge.io/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "equity-edge-cgu-v4b-20261124-01",
+          "section": "Introduction 06/10/2026",
+          "riskFamily": "entities_split",
+          "contractualMeaning": "Equity Edge Ltd Sainte-Lucie n°2025-00306 gère site/simulation; Equity Edge Analytics Ltd UK n°15263705 gère administration, évaluation et paiements; déterminer débiteur du reward.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://equityedge.io/terms-and-conditions"
+        },
+        {
+          "factId": "equity-edge-cgu-v4b-20261124-02",
+          "section": "§6",
+          "riskFamily": "payout_suspicion_gate",
+          "contractualMeaning": "Un payout peut être rejeté après revue des risques pour suspicion de violation, incohérence de lieu ou manipulation de stratégie; garanties procédurales détaillées non visibles dans §6.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://equityedge.io/terms-and-conditions"
+        },
+        {
+          "factId": "equity-edge-cgu-v4b-20261124-03",
+          "section": "§20",
+          "riskFamily": "merchant_distinction",
+          "contractualMeaning": "Le paiement peut être encaissé via Odeonpay ALE S.R.L/Paysagi en qualité de marchand de règlement, mais cette société n'est pas le fournisseur du service.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://equityedge.io/terms-and-conditions"
+        },
+        {
+          "factId": "equity-edge-cgu-v4b-20261124-04",
+          "section": "§5–7",
+          "riskFamily": "termination_vs_fee",
+          "contractualMeaning": "Frais non remboursables dès première transaction, interdictions de comportement et de partage; ne pas confondre perte de frais avec perte d'un reward acquis.",
+          "evidenceStatus": "primary_text_verified",
+          "sourceUrl": "https://equityedge.io/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Confirmer conditions funded supplémentaires et clause précise sur rewards déjà approuvés; vérifier version 06/10 et source de la procédure de recours.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "orion-funded",
+      "name": "Orion Funded",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "official_faq_only_terms_pdf_unread",
+      "primarySource": "https://www.orionfunded.com/faq/programs/prohibited-practices",
+      "findings": [
+        {
+          "factId": "orion-funded-cgu-v4b-20261124-01",
+          "section": "FAQ — forbidden trading",
+          "riskFamily": "open_ended_trading_replicability",
+          "contractualMeaning": "Liste officielle inclut sur-exposition, paris unilatéraux, account rolling, stratégies jugées non reproductibles sur compte réel; termes qualitatifs à évaluer selon seuils autres documents.",
+          "evidenceStatus": "primary_faq_verified",
+          "sourceUrl": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        },
+        {
+          "factId": "orion-funded-cgu-v4b-20261124-02",
+          "section": "FAQ — automation",
+          "riskFamily": "published_numeric_threshold",
+          "contractualMeaning": "Un maximum de 2 000 requêtes serveur par jour est annoncé pour les EAs: seuil chiffré, à distinguer des clauses ouvertes.",
+          "evidenceStatus": "primary_faq_verified",
+          "sourceUrl": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        },
+        {
+          "factId": "orion-funded-cgu-v4b-20261124-03",
+          "section": "FAQ — risk management",
+          "riskFamily": "relative_position_size",
+          "contractualMeaning": "Tailles/quantité de positions nettement différentes des habitudes interdits; sanctions sur reward doivent être rapprochées de CGU effectives.",
+          "evidenceStatus": "primary_faq_verified",
+          "sourceUrl": "https://www.orionfunded.com/faq/programs/prohibited-practices"
+        }
+      ],
+      "remainingWork": "Lire PDF du contrat Orion par pages, accord Orion Trader Account proposé par tiers après réussite et recours; sans cela revue incomplète.",
+      "noScore": true,
+      "finalAuditComplete": false
+    }
+  ]
+}

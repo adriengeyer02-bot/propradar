@@ -38,6 +38,16 @@ export type ScoreBreakdownView = {
     limitedPayoutProof: boolean;
     copy: { contract: string; consequence: string; source: string; evidence: string; limited: string; rulesClarification: string };
   };
+  /** Scale C (scaleC.ts): ceiling earned with evidence, minus sourced penalties. */
+  scaleC?: {
+    ceiling: number;
+    ceilingLabel: string;
+    evidence: string[];
+    items: { label: string; points: number; text: string; source?: string; locator?: string }[];
+    lostTotal: number;
+    notes: string[];
+    copy: { ceiling: string; lost: string; none: string; source: string; method: string[] };
+  };
   methodHref: string;
   rulesHref: string;
 };
@@ -119,6 +129,53 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
               <h2 id={titleId}>{fill(copy.title, { name: view.name, score: view.score })}</h2>
             </header>
 
+            {view.scaleC ? (
+              <ol className="psb-steps psb-scale-c">
+                <li className="psb-step psb-step-editorial prg-hud-reveal" style={delay(2)}>
+                  <div className="psb-step-line">
+                    <span className="psb-step-label">{view.scaleC.copy.ceiling}</span>
+                    <span className="psb-step-value">{view.scaleC.ceiling}</span>
+                  </div>
+                  <div className="psb-bar" aria-hidden="true"><span className="psb-bar-fill" style={{ width: `${view.scaleC.ceiling}%` }} /></div>
+                  <p>{view.scaleC.ceilingLabel}</p>
+                  {view.scaleC.evidence.length ? <ul className="psb-c-evidence">{view.scaleC.evidence.map((line) => <li key={line}>{line}</li>)}</ul> : null}
+                </li>
+                <li className="psb-step psb-step-rules prg-hud-reveal" style={delay(3)}>
+                  <div className="psb-step-line">
+                    <span className="psb-step-label">{view.scaleC.copy.lost}</span>
+                    <span className={`psb-step-value${view.scaleC.lostTotal ? ' psb-step-minus' : ''}`}>{view.scaleC.lostTotal ? `−${view.scaleC.lostTotal}` : '—'}</span>
+                  </div>
+                  <div className="psb-bar" aria-hidden="true">
+                    <span className="psb-bar-fill" style={{ width: `${view.score}%` }} />
+                    {view.scaleC.lostTotal ? <span className="psb-bar-cut" style={{ left: `${view.score}%`, width: `${Math.max(0, view.scaleC.ceiling - view.score)}%` }} /> : null}
+                  </div>
+                  {view.scaleC.items.length ? (
+                    <div className="psb-heaviest psb-c-items">
+                      <ul>
+                        {view.scaleC.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <span className="psb-pts psb-kind-risk">−{item.points}</span>
+                            <span>
+                              <strong>{item.label}</strong>
+                              {item.text ? <em>{item.text}</em> : null}
+                              {item.locator ? <small className="psb-c-locator">{item.locator}</small> : null}
+                              {item.source ? <a href={item.source} target="_blank" rel="noopener noreferrer">{view.scaleC!.copy.source} ↗</a> : null}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : <p>{view.scaleC.copy.none}</p>}
+                  {view.scaleC.notes.map((note) => <p key={note} className="psb-note">{note}</p>)}
+                </li>
+                <li className="psb-step psb-step-final prg-hud-reveal" style={delay(4)}>
+                  <div className="psb-step-line">
+                    <span className="psb-step-label">{copy.final}</span>
+                    <span className={`psb-step-value psb-tone-${view.tone}`}>{view.score}/100</span>
+                  </div>
+                </li>
+              </ol>
+            ) : (
             <ol className="psb-steps">
               {steps.map((step, index) => (
                 <li key={step.kind} className={`psb-step psb-step-${step.kind} prg-hud-reveal`} style={delay(index + 2)}>
@@ -191,6 +248,7 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
                 </div>
               </li>
             </ol>
+            )}
 
             {view.signals.length ? (
               <div className="psb-signals prg-hud-reveal" style={delay(steps.length + 3)}>
@@ -205,7 +263,9 @@ export default function ScoreBreakdownDialog({ view, copy, children }: { view: S
 
             <details className="psb-scale prg-hud-reveal" style={delay(steps.length + 4)}>
               <summary>{copy.scaleTitle}</summary>
-              {view.pillars ? (
+              {view.scaleC ? (
+                <ul>{view.scaleC.copy.method.map((line) => <li key={line}>{line}</li>)}</ul>
+              ) : view.pillars ? (
                 <>
                   <p>{view.pillars.copy.method}</p>
                   <p>{view.pillars.copy.caution}</p>

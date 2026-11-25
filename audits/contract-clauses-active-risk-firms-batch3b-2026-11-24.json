@@ -1,0 +1,243 @@
+{
+  "schema": "PROPRADAR_CONTRACT_AUDIT_V3",
+  "date": "2026-11-24",
+  "publicationStatus": "RESEARCH_ONLY",
+  "coverage": "second tranche; some historical contracts and help documents are not sufficient to conclude final funded obligations",
+  "caveat": "No clause should be assumed enforceable, applied to all cohorts or evidence of misconduct without program-specific signed document and due process; no score changed.",
+  "firms": [
+    {
+      "slug": "top-one-trader",
+      "name": "Top One Trader",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "official_primary_terms_current",
+      "primarySource": "https://www.toponetrader.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "top-one-trader-contracts-20261124-01",
+          "section": "Prohibited Trading — risk discretion",
+          "riskFamily": "Unquantified prohibition",
+          "effect": "La société interdit certaines pratiques qu'elle juge hors standards acceptables de risque, notamment sizing anormal et gambling; certaines pratiques peuvent entraîner déduction des gains ou clôture.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.toponetrader.com/terms-and-conditions"
+        },
+        {
+          "factId": "top-one-trader-contracts-20261124-02",
+          "section": "EA/third-party strategy",
+          "riskFamily": "Forfeiture on automated trading",
+          "effect": "Utilisation de certains EA commerciaux ou stratégies tierces peut entraîner clôture immédiate et perte des gains, tandis que certains outils personnalisés sont autorisés.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.toponetrader.com/terms-and-conditions"
+        },
+        {
+          "factId": "top-one-trader-contracts-20261124-03",
+          "section": "Separate simulated funded agreement",
+          "riskFamily": "Funding contract priority",
+          "effect": "Le texte précise qu'après réussite une convention séparée avec Top One Funding s'applique au compte simulé financé; cette convention n'a pas été rapprochée.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.toponetrader.com/terms-and-conditions"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir convention Top One Funding par programme (1-Step Flash, Instant, Nova) et qualifier recours et gains acquis, ne pas déduire deux fois un même fait EA/stratégie.",
+      "noScore": true
+    },
+    {
+      "slug": "quant-tekel",
+      "name": "Quant Tekel / QT Funded",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "official_terms_current_entity_complex",
+      "primarySource": "https://qtfunded.quanttekel.com/terms-and-conditions-general/",
+      "findings": [
+        {
+          "factId": "quant-tekel-contracts-20261124-01",
+          "section": "Client Account / KYC",
+          "riskFamily": "Loss of account entitlement",
+          "effect": "Le texte indique qu'un KYC non achevé rend les trades et profits invalides; refuser pour défaut de KYC documenté n'est pas une sanction arbitraire sans distinguer disponibilité du dispositif.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+        },
+        {
+          "factId": "quant-tekel-contracts-20261124-02",
+          "section": "Term and Termination",
+          "riskFamily": "Termination without warning",
+          "effect": "La société conserve un pouvoir de résiliation de service sans avertissement à sa discrétion; les droits de récompense déjà établis doivent être examinés séparément.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+        },
+        {
+          "factId": "quant-tekel-contracts-20261124-03",
+          "section": "Modifications and Interruptions",
+          "riskFamily": "Rules changes",
+          "effect": "Modification de contenu/service possible à tout moment sans préavis; effet sur accords conclus, rewards et contrats funded à réconcilier.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+        },
+        {
+          "factId": "quant-tekel-contracts-20261124-04",
+          "section": "Payment Processing by Paysagi",
+          "riskFamily": "Identity of payer",
+          "effect": "Les CGU indiquent un fournisseur Quant Tekel LTD et un marchand de paiement Odeonpay ALE S.R.L; ne pas attribuer la dette de récompense automatiquement au prestataire de paiement.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://qtfunded.quanttekel.com/terms-and-conditions-general/"
+        }
+      ],
+      "missingAgreementOrVerification": "Rapprocher entités Quant Tekel SVG/Quant Tekel LTD et QT Treasury Limited citées sur différents textes; fournir programme exact, version, payouts et accords d'adhésion.",
+      "noScore": true
+    },
+    {
+      "slug": "ftuk",
+      "name": "FTUK",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "historical_terms_2024_not_current_confirmed",
+      "primarySource": "https://ftuk.com/terms-of-service",
+      "findings": [
+        {
+          "factId": "ftuk-contracts-20261124-01",
+          "section": "TOS Issue Date 20 July 2024",
+          "riskFamily": "Document freshness gap",
+          "effect": "CGU accessibles datées de juillet 2024, insuffisantes pour certifier que leurs termes sont ceux de toutes les cohortes 2026.",
+          "evidence": "historical_primary",
+          "sourceUrl": "https://ftuk.com/terms-of-service"
+        },
+        {
+          "factId": "ftuk-contracts-20261124-02",
+          "section": "Termination rights",
+          "riskFamily": "Suspicion and termination",
+          "effect": "Le texte autorise résiliation sans préavis lorsqu'un manquement est suspecté ou jugé à la discrétion de FTUK; conséquences sur demande de reward à prouver dans la version applicable.",
+          "evidence": "historical_primary",
+          "sourceUrl": "https://ftuk.com/terms-of-service"
+        },
+        {
+          "factId": "ftuk-contracts-20261124-03",
+          "section": "Payout Locker FAQ",
+          "riskFamily": "Reward model separated from proof",
+          "effect": "Centre d'aide officiel indique restrictions de payout/locker et progression suivant niveau; une description publique ne démontre pas transfert bancaire indépendant ni droit contractuel acquis.",
+          "evidence": "official_help",
+          "sourceUrl": "https://faq.ftuk.com/en/articles/12339852-how-do-i-request-a-profit-payout"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir TOS actualisées et Agreement Flex Futures / Instant Sim / Instant PRO, vérifier versions des 7 profitable trading days et mécanisme de refus/révision.",
+      "noScore": true
+    },
+    {
+      "slug": "daytraders-com",
+      "name": "DayTraders.com",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "official_help_terms_and_payout_rules",
+      "primarySource": "https://daytraders.com/help/articles/17704078-terms-of-use",
+      "findings": [
+        {
+          "factId": "daytraders-com-contracts-20261124-01",
+          "section": "Terms — Dispute Resolution",
+          "riskFamily": "Arbitration and dispute route",
+          "effect": "Les CGU prévoient arbitrage selon règles AAA et un cadre de contestation contractuelle, qui ne signifie pas absence de recours; vérifier frais/lieu et cohorte.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://daytraders.com/help/articles/17704078-terms-of-use"
+        },
+        {
+          "factId": "daytraders-com-contracts-20261124-02",
+          "section": "Getting Started — Step 5",
+          "riskFamily": "Separate funded agreement",
+          "effect": "Après évaluation, la procédure prévoit signature d'un Pro Account Agreement avant activation du funded; l'accord n'a pas été lu.",
+          "evidence": "official_help",
+          "sourceUrl": "https://daytraders.com/help/articles/17704101-getting-started-from-sign-up-to-first-payout"
+        },
+        {
+          "factId": "daytraders-com-contracts-20261124-03",
+          "section": "Moving from Pro/S2F to Live",
+          "riskFamily": "Live admission discretion",
+          "effect": "Sélection Live à discrétion de DayTraders selon des critères de performance, distincte des droits aux payouts des comptes Pro/S2F.",
+          "evidence": "official_help",
+          "sourceUrl": "https://daytraders.com/help/articles/17697925-moving-from-pro-or-s2f-to-live"
+        },
+        {
+          "factId": "daytraders-com-contracts-20261124-04",
+          "section": "S2F payout rules",
+          "riskFamily": "Consistency and payout math",
+          "effect": "Les payouts S2F sont soumis notamment à une règle best-day 20%, objectif chiffré et demandes par période; ce n'est pas en soi une confiscation discrétionnaire.",
+          "evidence": "official_help",
+          "sourceUrl": "https://daytraders.com/help/articles/17684752-s2f-payouts"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir l'accord Pro/S2F/Live signé, vérifier conditions de blocage et perte des rewards et statut exact du payeur; ne pas extrapoler de l'accord de site.",
+      "noScore": true
+    },
+    {
+      "slug": "the-concept-trading",
+      "name": "The Concept Trading",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "mixed_versions_public_terms",
+      "primarySource": "https://prop.theconcepttrader.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "the-concept-trading-contracts-20261124-01",
+          "section": "new.theconcepttrading.com — preamble",
+          "riskFamily": "Prior terms replaced",
+          "effect": "Une version alternative dit remplacer tous les accords précédents y compris arrangements existants; vérifier si cette page est effectivement applicable au site marchand actuel.",
+          "evidence": "version_conflict_requires_check",
+          "sourceUrl": "https://new.theconcepttrading.com/terms-and-conditions/"
+        },
+        {
+          "factId": "the-concept-trading-contracts-20261124-02",
+          "section": "§12.16–12.19",
+          "riskFamily": "Monthly payout ceiling and contractor agreement",
+          "effect": "Payout limité par matrice de niveau/programme; un retrait par mois; calcul de la part renvoyé à l'article 3 d'un Contractor Service Agreement séparé.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://prop.theconcepttrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "the-concept-trading-contracts-20261124-03",
+          "section": "§12.21",
+          "riskFamily": "Inactivity clause",
+          "effect": "Compte Prop inactif quatre semaines peut être résilié; dépend de ce que signifie exactement inactivité et des exceptions contractuelles.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://prop.theconcepttrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "the-concept-trading-contracts-20261124-04",
+          "section": "§12.2",
+          "riskFamily": "Broker sub-account / legal party",
+          "effect": "Compte Prop décrit comme sous-compte The Concept AU/NZ Pty Ltd auprès de son broker; distinguer vendeur, broker et société qui verse rewards.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://prop.theconcepttrader.com/terms-and-conditions/"
+        }
+      ],
+      "missingAgreementOrVerification": "Récupérer Contractor Service Agreement article 3, contrat broker et preuve de version/effectivité entre domaines new/prop, puis recours et droits déjà acquis.",
+      "noScore": true
+    },
+    {
+      "slug": "wemastertrade",
+      "name": "WeMasterTrade",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "official_faq_terms_partial",
+      "primarySource": "https://faq.wemastertrade.com/en_gb/profit-sharing/",
+      "findings": [
+        {
+          "factId": "wemastertrade-contracts-20261124-01",
+          "section": "Profit Sharing 510Zero",
+          "riskFamily": "Low profit profit-share reduction",
+          "effect": "Documentation annonce que sous 6% de performance (8% pour certains pays), le payout share 510Zero baisse à 10%; règle chiffrée conditionnelle, pas une accusation d'arbitraire.",
+          "evidence": "official_faq",
+          "sourceUrl": "https://faq.wemastertrade.com/en_gb/profit-sharing/"
+        },
+        {
+          "factId": "wemastertrade-contracts-20261124-02",
+          "section": "Profit Sharing FAQ — prohibited risk",
+          "riskFamily": "Eligibility to withdraw",
+          "effect": "Les profits provenant de stratégies contraires aux règles ne donnent pas droit au retrait selon la documentation ; obtenir le texte contractuel et les critères de manquement.",
+          "evidence": "official_faq",
+          "sourceUrl": "https://faq.wemastertrade.com/en_gb/profit-sharing/"
+        },
+        {
+          "factId": "wemastertrade-contracts-20261124-03",
+          "section": "Introduction and legal party",
+          "riskFamily": "Company jurisdiction",
+          "effect": "La FAQ comporte une mention WeMasterTrade LTD à Sainte-Lucie (réf. 2025-00321); vérifier si c'est toujours le fournisseur contractant du modèle sélectionné.",
+          "evidence": "official_faq",
+          "sourceUrl": "https://faq.wemastertrade.com/en_gb/profit-sharing/"
+        }
+      ],
+      "missingAgreementOrVerification": "Retrouver CGU actuelles signées et la distinction entre produits WeMasterTrade et WeCopyTrade, procédure de recours, refus des rewards acquis et siège réel.",
+      "noScore": true
+    }
+  ]
+}

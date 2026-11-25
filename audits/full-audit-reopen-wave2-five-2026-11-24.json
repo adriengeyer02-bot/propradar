@@ -1,0 +1,638 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "scope": "Targeted current primary HTML sections, FAQ, exact domain Trustpilot and payout source inventory; no claim full contract read or completed audit. Prior evidence retained.",
+  "findingsCount": 60,
+  "firms": [
+    {
+      "slug": "ftmo",
+      "programs": [
+        "CFD 1-Step",
+        "CFD 2-Step Standard",
+        "CFD 2-Step Swing",
+        "CFD Instant",
+        "Futures Growth",
+        "Futures Pro"
+      ],
+      "terms": {
+        "url": "https://ftmo.com/en/terms-and-conditions/",
+        "status": "LEGAL_LANDING_AND_TARGETED_PUBLIC_RULES_NOT_COMPLETE_AGREEMENTS"
+      },
+      "findings": [
+        {
+          "source": "https://ftmo.com/en/forbidden-trading-practices/",
+          "locator": "Forbidden practices; Risk Management Rules",
+          "scope": "CFD all subject to applicability",
+          "kind": "discretion",
+          "finding": "Qualitative deviations in position size/count and correlated risk exposure may be treated as non-replicable; no universal numerical threshold in cited passage."
+        },
+        {
+          "source": "https://ftmo.com/en/forbidden-trading-practices/",
+          "locator": "Forbidden practices, gap trading",
+          "scope": "CFD",
+          "kind": "strategy",
+          "finding": "Opening near scheduled material events or within two hours before a market closure lasting at least two hours can be prohibited under gap-trading definition. Distinguish opening from holding and product-specific news rules."
+        },
+        {
+          "source": "https://ftmo.com/en/forbidden-trading-practices/",
+          "locator": "EA server requests",
+          "scope": "CFD",
+          "kind": "quantified",
+          "finding": "Hyperactive EA threshold more than 2,000 server requests/day; artificial redistribution of profits across days to evade consistency prohibited."
+        },
+        {
+          "source": "https://ftmo.com/en/trading-objectives/",
+          "locator": "Consistency / Best Day legacy",
+          "scope": "1-Step",
+          "kind": "cohort",
+          "finding": "Orders created or merged from 12 October 2026 use net cumulative P&L denominator; legacy directly initiated accounts use positive-day P&L. Both 50%, exceeding threshold delays eligibility, not breach."
+        },
+        {
+          "source": "https://ftmo.com/en/trading-objectives/",
+          "locator": "Maximum Loss Limit",
+          "scope": "1-Step",
+          "kind": "drawdown",
+          "finding": "EOD high-water balance trailing maximum loss resets to 90% of initial simulated capital when reward withdrawn and new account supplied."
+        },
+        {
+          "source": "https://ftmo.com/en/trading-objectives/",
+          "locator": "Consistency",
+          "scope": "Instant",
+          "kind": "quantified",
+          "finding": "30% of net total profit; exceeding delays reward; resets after withdrawal. Not same as forfeiture."
+        },
+        {
+          "source": "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/",
+          "locator": "Reward FAQ",
+          "scope": "CFD",
+          "kind": "payout",
+          "finding": "Reward conditioned on objectives and account agreement; 1-Step and Instant 90% split; 2-Step rollover available."
+        },
+        {
+          "source": "https://ftmo.com/en/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/",
+          "locator": "Legal relationship",
+          "scope": "CFD Instant",
+          "kind": "contract_scope",
+          "finding": "Challenge and account terms both accepted when buying Instant; account terms govern reward and further trading after first eligibility."
+        },
+        {
+          "source": "https://ftmo.com/en/futures/faq/how-do-the-growth-and-pro-products-differ/",
+          "locator": "Growth/Pro comparison",
+          "scope": "Futures Growth",
+          "kind": "payout",
+          "finding": "Soft DLL in sim funded, no evaluation DLL; up to 50% available profit in cycle, subject to caps."
+        },
+        {
+          "source": "https://ftmo.com/en/futures/faq/how-do-the-growth-and-pro-products-differ/",
+          "locator": "Growth/Pro comparison",
+          "scope": "Futures Pro",
+          "kind": "payout",
+          "finding": "Hard DLL; up to 100% available profit in cycle subject to caps. Both models EOD trailing and 90/10 split."
+        },
+        {
+          "source": "https://ftmo.com/en/futures/how-it-works/",
+          "locator": "Consistency",
+          "scope": "Futures evaluation",
+          "kind": "quantified",
+          "finding": "Growth 40%, Pro 50% best day; no automatic penalty per owner policy for transparent eligibility conditions."
+        },
+        {
+          "source": "https://ftmo.com/en/futures/faq/ftr-who-is-an-ftmo-trader-and-how-do-i-become-one",
+          "locator": "Live invitation",
+          "scope": "Futures",
+          "kind": "transition",
+          "finding": "Live invitation is discretionary and not guaranteed."
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/ftmo.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.8,
+        "count": 57782
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://ftmo.com/en/futures/faq/how-do-the-growth-and-pro-products-differ/",
+          "amountUSDLowerBound": 650000000,
+          "grade": "FIRM_REPORTED_AGGREGATE",
+          "note": "Website states cumulative rewards >650M; not independently reconciled"
+        }
+      ],
+      "missing": [
+        "Actual dated CFD challenge/account and Futures evaluation/sim-funded/live agreements; complete clause coverage",
+        "Full payout and fee matrices, country-specific entity and applicable law, registry/incident crosscheck",
+        "Independently matched trader payments not captured this pass"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "payoutSearchResult": "FIRM_REPORTED_ONLY"
+    },
+    {
+      "slug": "the5ers",
+      "programs": [
+        "Bootcamp",
+        "Hyper Growth",
+        "High Stakes",
+        "Futures Day Trade",
+        "Futures Swing"
+      ],
+      "terms": {
+        "url": "https://the5ers.com/en/terms-and-conditions/",
+        "status": "PUBLIC_TERMS_TARGETED_SECTIONS_AND_FAQ_REVIEWED"
+      },
+      "findings": [
+        {
+          "source": "https://www.the5ers.com/faqs/prohibited-trading-practices/",
+          "locator": "Updated 3 Nov 2026",
+          "scope": "Evaluation and Pro",
+          "kind": "strategy",
+          "finding": "Simultaneous bulk trades, news bracketing, and strategies exploiting errors even unintentionally prohibited; examine qualitative application."
+        },
+        {
+          "source": "https://the5ers.com/en/terms-and-conditions/",
+          "locator": "§15 Data Accuracy",
+          "scope": "All",
+          "kind": "change",
+          "finding": "Information on website, policies and products can change without notice; not proof of retroactive application."
+        },
+        {
+          "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+          "locator": "Updated 2 Nov 2026",
+          "scope": "Bootcamp",
+          "kind": "payout",
+          "finding": "14-day withdrawal cycle restarts each scaling level; fee non-refundable."
+        },
+        {
+          "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+          "locator": "Specifications",
+          "scope": "Bootcamp",
+          "kind": "risk",
+          "finding": "3% daily pause Pro only, trading resumes next server midnight; not account termination. 30 days inactivity closes account."
+        },
+        {
+          "source": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+          "locator": "Specifications",
+          "scope": "Bootcamp",
+          "kind": "strategy",
+          "finding": "News and overnight/weekend permitted except bracketing; each active account must use a different method. FAQ says four active accounts (250K,100K, two 20K); reconcile general FAQ."
+        },
+        {
+          "source": "https://the5ers.com/faqs/how-many-the5ers-accounts-can-i-have/",
+          "locator": "Account limits",
+          "scope": "Bootcamp",
+          "kind": "potential_conflict",
+          "finding": "General account FAQ says three Bootcamp accounts; current dedicated program FAQ says four. Verify dates and applicable size mix before definitive contradiction."
+        },
+        {
+          "source": "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+          "locator": "Program FAQ",
+          "scope": "Hyper Growth",
+          "kind": "strategy",
+          "finding": "News and weekend holding allowed subject to prohibited strategies; first payout after 14 days, then biweekly."
+        },
+        {
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+          "locator": "Updated 3 Nov 2026",
+          "scope": "High Stakes",
+          "kind": "asymmetry",
+          "finding": "Orders executed ±2 minutes around relevant high-impact news: profits deducted, losses retained; holding existing trades allowed."
+        },
+        {
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+          "locator": "Payout caps",
+          "scope": "High Stakes 50K/100K",
+          "kind": "payout",
+          "finding": "50K cap $3,000, minimum P&L $300; 100K cap $4,000, minimum $500; verify excess profit handling separately."
+        },
+        {
+          "source": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+          "locator": "Inactivity",
+          "scope": "High Stakes",
+          "kind": "termination",
+          "finding": "30 consecutive days evaluation, 60 days Pro."
+        },
+        {
+          "source": "https://the5ers.com/futures-faqs/what-are-the-general-rules-for-the-futures-program/",
+          "locator": "Updated 12 Oct 2026",
+          "scope": "Futures",
+          "kind": "quantified",
+          "finding": "40% consistency per trade, not per day; exceeding delays qualification; 6% evaluation target, 4% funded target, 4% EOD maximum loss; overnight permitted on Swing."
+        },
+        {
+          "source": "https://the5ers.com/futures-faqs/what-are-the-payout-caps/",
+          "locator": "Updated 8 Nov 2026",
+          "scope": "Futures Pro",
+          "kind": "cohort",
+          "finding": "3% cap on purchases from Nov 5; earlier 25K accounts retain 5% cap."
+        },
+        {
+          "source": "https://the5ers.com/faqs/how-much-is-the-profit-split-in-the5ers/",
+          "locator": "Split FAQ",
+          "scope": "CFD",
+          "kind": "payout",
+          "finding": "Bootcamp/Hyper Growth start 50%, next level 75%; High Stakes starts 80%."
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/the5ers.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.7,
+        "count": 44402
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "amountUSD": 101319198,
+          "count": 48327,
+          "method": "Rise",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "asOf": "2026-11-24 08:46 UTC"
+        }
+      ],
+      "missing": [
+        "Complete dated terms, signed Pro and Futures contracts; reconcile prior privacy/interview forfeiture clauses",
+        "Full futures offer payout gates, current Bootcamp account count discrepancy, excess-cap profit disposition",
+        "Primary registries, historical incidents, matched transfer records"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "payoutSearchResult": "EXTERNAL_TRACKER_RECORDED_NOT_INDIVIDUAL_CERTIFICATION"
+    },
+    {
+      "slug": "topstep",
+      "programs": [
+        "Trading Combine",
+        "XFA Standard",
+        "XFA Consistency",
+        "Live Funded Account",
+        "Labs/Payout Round"
+      ],
+      "terms": {
+        "url": "https://www.topstep.com/terms-of-use",
+        "status": "CURRENT_SITE_TERMS_AND_TARGETED_RULES; SIGNED_AGREEMENTS_NOT_RETRIEVED"
+      },
+      "findings": [
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Standard eligibility",
+          "scope": "XFA Standard",
+          "kind": "payout",
+          "finding": "Five winning days $150+ and positive net P&L since previous payout (first exempt); five-day counter resets."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Consistency eligibility",
+          "scope": "XFA Consistency",
+          "kind": "quantified",
+          "finding": "Three trading days and best day ≤40% net total profit; ordinary eligibility condition."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Payout caps",
+          "scope": "XFA both",
+          "kind": "payout",
+          "finding": "50% of balance subject to Standard 2K/3K/5K or Consistency 3K/4K/6K caps for 50K/100K/150K respectively."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Limited time DLL offer",
+          "scope": "XFA both",
+          "kind": "cohort",
+          "finding": "Double caps only when optional DLL added at original new Trading Combine checkout, not XFA activation/reactivation. End date not established."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Standard payout; also MLL FAQ",
+          "scope": "XFA",
+          "kind": "risk",
+          "finding": "After first payout MLL set to zero permanently; preserve enough balance to avoid liquidation."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Live payout",
+          "scope": "LFA",
+          "kind": "payout",
+          "finding": "Five days $150+; up to 50% balance, no fixed dollar cap; daily access after 30 winning days, further conditions to map."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+          "locator": "Basics",
+          "scope": "XFA / LFA",
+          "kind": "cohort",
+          "finding": "90/10 split; new dashboard traders joined before Jan 12 2026 retain 100% first lifetime $10K, legacy dashboard payments excluded."
+        },
+        {
+          "source": "https://www.topstep.com/terms-of-use",
+          "locator": "Restricted Participants",
+          "scope": "XFA",
+          "kind": "eligibility",
+          "finding": "Certain restricted participants cannot migrate live regardless of performance; country eligibility must be mapped."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/10290170-professional-behavior-at-topstep",
+          "locator": "Professional Behavior",
+          "scope": "XFA/LFA",
+          "kind": "discretion",
+          "finding": "Excessive XFA use and irresponsible trading listed as unacceptable; quantify sanctions from actual agreements."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/13747047-understanding-hedging",
+          "locator": "Hedging",
+          "scope": "Combine/XFA/LFA",
+          "kind": "strategy",
+          "finding": "Cross-account hedging forbidden."
+        },
+        {
+          "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
+          "locator": "Labs",
+          "scope": "Labs",
+          "kind": "scope",
+          "finding": "Labs challenges and payout round may remain open after live transfer; separate experimental program, not universal XFA rule."
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/topstep.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 3.7,
+        "count": 15147
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://www.topstep.com/disclosures-notices",
+          "period": "2025",
+          "grade": "FIRM_REPORTED_STATISTICS",
+          "fundedParticipantsPaidPct": 33.3,
+          "xfaParticipantsLivePct": 0.71,
+          "note": "Different denominators; not an independent audit or chance of success for all entrants"
+        }
+      ],
+      "missing": [
+        "Current signed XFA/LFA/Combine contracts and Labs terms, not 2023 historical PDF",
+        "Ban appeal, termination and balance disposition at migration; exact geographic eligibility",
+        "Registry and incident reconciliation, independently matched payouts"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "payoutSearchResult": "FIRM_REPORTED_ONLY"
+    },
+    {
+      "slug": "fundednext",
+      "programs": [
+        "Stellar 1-Step",
+        "Stellar 2-Step",
+        "Stellar Lite",
+        "Stellar Instant",
+        "Futures Flex",
+        "Futures Rapid Pro",
+        "Futures Rapid Daily",
+        "Futures Direct",
+        "Futures Legacy",
+        "Labs (separate terms)"
+      ],
+      "terms": {
+        "url": "https://fundednext.com/terms-of-service",
+        "status": "CURRENT_MAIN_HTML_SELECTED_SECTIONS_REVIEWED",
+        "date": "2026-05-05"
+      },
+      "findings": [
+        {
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§1.3–1.6",
+          "scope": "All",
+          "kind": "hierarchy",
+          "finding": "Main terms prevail over FAQ/annex unless specific permitted precedence explicitly provided; product-specific terms incorporated."
+        },
+        {
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§2.1–2.2",
+          "scope": "All",
+          "kind": "identity",
+          "finding": "GrowthNext FZE UAE no.28831 named sole counterparty; Comoros FundedNext Ltd technical, HK FundedNext Limited payment processing, Cyprus Incenteco HE307114 payment intermediary; registrations not verified."
+        },
+        {
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§9.4",
+          "scope": "All",
+          "kind": "discretion",
+          "finding": "Identified violation or reasonable indications permit suspension, reward denial/reversal, recovery and contractual penalty up to $2,500 per prohibited conduct subject to law. Do not substitute prior indexed $25K variant."
+        },
+        {
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§12.1–12.3",
+          "scope": "Funded",
+          "kind": "payout",
+          "finding": "Conditional contractual benefit, eligibility requires continuous compliance and final review; numeric targets alone insufficient."
+        },
+        {
+          "source": "https://fundednext.com/terms-of-service",
+          "locator": "§24.1–24.6",
+          "scope": "All",
+          "kind": "reputation",
+          "finding": "Broad reputational restrictions, examples include false claims and coordinated harassment; 24h removal/retraction demand; material breach may cause reversal of rewards and damages. Assess honest complaint safeguards, do not say all negative reviews forbidden."
+        },
+        {
+          "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
+          "locator": "News Reward Share",
+          "scope": "Stellar 1-Step/2-Step/Lite funded",
+          "kind": "asymmetry",
+          "finding": "40% of gains in applicable news window count; check exact phase and cohort; evaluation not treated identically."
+        },
+        {
+          "source": "https://help.fundednext.com/en/articles/17253939-stellar-lite-account",
+          "locator": "News",
+          "scope": "Stellar Lite",
+          "kind": "payout",
+          "finding": "Five minutes before/after high impact event on correlated pair; only 40% gains credited."
+        },
+        {
+          "source": "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+          "locator": "Payout cycle",
+          "scope": "Stellar Instant",
+          "kind": "payout",
+          "finding": "On-demand at 5% growth; otherwise 14-day cycle with minimum 1% growth; tier 1/2 split 70%."
+        },
+        {
+          "source": "https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account",
+          "locator": "Perpetual consistency",
+          "scope": "Futures Direct",
+          "kind": "quantified",
+          "finding": "20% uses largest single day ever on account against current cycle total profit; historical best day persists across withdrawals."
+        },
+        {
+          "source": "https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account",
+          "locator": "Flex / Rapid Daily",
+          "scope": "Futures",
+          "kind": "quantified",
+          "finding": "Flex funded no consistency; Rapid Daily no consistency at any stage."
+        },
+        {
+          "source": "https://helpfutures.fundednext.com/en/articles/17242064-how-can-i-withdraw-my-performance-reward",
+          "locator": "Withdrawal",
+          "scope": "Futures Legacy/Flex",
+          "kind": "payout",
+          "finding": "Withdrawal button locked below $500 total profit."
+        },
+        {
+          "source": "https://helpfutures.fundednext.com/en/articles/17242064-how-can-i-withdraw-my-performance-reward",
+          "locator": "First withdrawal",
+          "scope": "Futures Rapid Pro/Daily",
+          "kind": "risk",
+          "finding": "After first withdrawal maximum loss limit set to initial size +$100 (25,100/50,100/100,100)."
+        },
+        {
+          "source": "https://helpfutures.fundednext.com/fr/articles/16522296-route-vers-le-trading-en-direct-rapid-flex-direct",
+          "locator": "Live transition",
+          "scope": "Futures",
+          "kind": "transition",
+          "finding": "Zero-payout accounts closed, cost refunded within 3–5 business days after transition per FAQ; other balances require mapping."
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fundednext.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.5,
+        "count": 84738
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "amountUSD": 353210276,
+          "count": 251700,
+          "method": "Rise + Direct Crypto",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "asOf": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full main clause read including §22 amendments, §25 complaints, §27 disputes; dated CFD, Futures, Instant and Labs agreements",
+        "Exact news losses and per-model thresholds/caps, current vs legacy cohorts, live agreement",
+        "Registry and historical incidents, individual matched payment traces"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "payoutSearchResult": "EXTERNAL_TRACKER_RECORDED_NOT_INDIVIDUAL_CERTIFICATION"
+    },
+    {
+      "slug": "apex-trader-funding",
+      "programs": [
+        "EOD Evaluation/PA",
+        "Intraday Trailing Evaluation/PA",
+        "Legacy PA",
+        "Live Proprietary Account"
+      ],
+      "terms": {
+        "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+        "status": "CURRENT_PUBLIC_USER_AGREEMENT_TARGETED_SECTIONS_REVIEWED"
+      },
+      "findings": [
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§1",
+          "scope": "All",
+          "kind": "hierarchy",
+          "finding": "Agreement controls over explanatory materials; trading rules incorporated."
+        },
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§12",
+          "scope": "PA",
+          "kind": "discretion",
+          "finding": "Rewards not enforceable entitlement according to text; company can deny/reduce/revoke for any or no reason, determinations final, ordinary review unavailable except discretionary correction or fraud/unlawful conduct."
+        },
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§12",
+          "scope": "PA",
+          "kind": "chargeback",
+          "finding": "Associated unpaid rewards can be voided and previous payments offset or invoiced following chargeback/reversal; debt recovery methods listed."
+        },
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§13",
+          "scope": "PA",
+          "kind": "audit",
+          "finding": "Verification may include live session, video, software/logs and financial records; response within 48h unless extension; noncooperation may terminate and forfeit unpaid rewards."
+        },
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§14",
+          "scope": "PA to live",
+          "kind": "transition",
+          "finding": "Graduation at discretion, final reward distribution conditional; invited user can elect authorized cash or voluntarily forfeit part/all for potential allocation, no ownership of live capital."
+        },
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§15",
+          "scope": "All simulated programs",
+          "kind": "discretion",
+          "finding": "Exceptional performance or sophisticated/professional methods can trigger termination and unpaid reward denial; company can exempt affiliate program or other approved users."
+        },
+        {
+          "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "locator": "§16",
+          "scope": "PA",
+          "kind": "termination",
+          "finding": "Dormancy termination may forfeit rewards regardless of prior eligibility; exact current inactivity thresholds need separate rule lookup."
+        },
+        {
+          "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+          "locator": "Safety Net / Minimum payout",
+          "scope": "EOD PA",
+          "kind": "payout",
+          "finding": "Lifetime safety net equal drawdown limit +$100; $500 minimum withdrawal."
+        },
+        {
+          "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+          "locator": "Maximum Payout Per Request",
+          "scope": "EOD PA",
+          "kind": "payout",
+          "finding": "Six payouts maximum then closure and fresh evaluation. Per-request size/sequence caps; for 50K $1,500 first two, $2,000 third, $2,500 fourth/fifth, $3,000 sixth."
+        },
+        {
+          "source": "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+          "locator": "Minimum days / Consistency",
+          "scope": "EOD PA",
+          "kind": "quantified",
+          "finding": "Five qualifying days; 50K $250 minimum per day. 50% consistency delays withdrawal, no automatic penalty under owner instruction."
+        },
+        {
+          "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+          "locator": "Maximum Payouts / Consistency",
+          "scope": "Intraday PA",
+          "kind": "payout",
+          "finding": "Six payouts and 50% consistency gate; exact size tables distinct from EOD."
+        }
+      ],
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/apextraderfunding.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.2,
+        "count": 21930
+      },
+      "payoutEvidence": [],
+      "missing": [
+        "Full User Agreement sections and linked code/trading rules, exact current checkout version and legacy grandfathering",
+        "Current live proprietary contract and detailed EOD/Intraday evaluation risk matrices",
+        "Registry, historical documented incidents, externally matched payout evidence not captured this pass"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "canPublishNewScore": false,
+      "auditDate": "2026-11-24",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED",
+      "payoutSearchResult": "NO_NEW_PROOF_CAPTURED_NOT_NONPAYMENT"
+    }
+  ]
+}

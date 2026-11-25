@@ -1,0 +1,20 @@
+{
+ "slug": "tentrade",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B2A",
+   "text": "Funded trader terms: sole and absolute discretion to judge the \"spirit\" or operational objectives, with payout denial possible.",
+   "source": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+   "excerpt": "TenTrade reserves the sole and absolute discretion to determine whether trading activity violates the program’s risk framework, spirit, or operational objectives. Where prohibited or abusive conduct is identified or reasonably suspected, TenTrade may take any action it deems appropriate, including trade cancellation, payout denial, account termination, or permanent disqualification from the program.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B3": "Account authorisation clause.",
+  "B7": "Broker disclosure clause."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

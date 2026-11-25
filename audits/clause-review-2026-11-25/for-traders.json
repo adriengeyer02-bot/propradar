@@ -1,0 +1,17 @@
+{
+ "slug": "for-traders",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B7",
+   "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+   "source": "https://www.fortraders.com/terms-and-conditions",
+   "excerpt": "13.4. The specific rules of the Master Account will be communicated to the Client via a separate agreement and/or email notification from the Platform’s Risk Department. The relationship between the Client and the Platform in the Master Account phase is governed by that separate agreement, the terms of which shall be binding once mutually accepted.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {},
+ "safeguards": []
+}

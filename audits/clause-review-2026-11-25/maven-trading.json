@@ -1,0 +1,17 @@
+{
+ "slug": "maven-trading",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B5",
+   "text": "OMO Simulated Funded and Instant Mini: profits from trades closed before 150 s are removed, losses remain.",
+   "source": "https://maventrading.com/terms-and-conditions",
+   "excerpt": "seconds; exactly 60 seconds qualifies, and exactly 50% qualifying trades is permitted. This requirement also applies to OMO Simulated Funded Accounts and Instant Mini alongside their specific 150-second rule. On OMO Simulated Funded Accounts and Instant Mini, profits from trades closed before 150 seconds are removed; losses remain in account results. The general excessive-scalping prohibition applies separately.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {},
+ "safeguards": []
+}

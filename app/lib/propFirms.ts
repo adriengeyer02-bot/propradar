@@ -1,4 +1,5 @@
 import { applyFirmUpdates, getFirmUpdate } from './firmUpdates';
+import { getScaleC } from './scaleC';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
 import { computeRulesPenalty, RULES_PENALTY_ENABLED } from './restrictiveRules';
 import { narrativeOriginals, stripScoreClaims } from './scoreClaims';
@@ -145,6 +146,8 @@ export type PropFirm = {
   v5SafetyCap?: { before: number; cap: 55 };
   /** Closed-firm cap (CLOSED_FIRM_SCORE_CAP), set when it lowered the score. */
   closedCap?: { before: number; cap: number };
+  /** Scale C (SCORING.md): set when the score comes from app/data/scale-c.json; `before` = previous pipeline score. */
+  scaleC?: { before: number };
   /** Zero when the brand's founding year has not been confirmed. */
   founded: number;
   headquarters: string;
@@ -13013,7 +13016,19 @@ function applyNarrativeScoreRule(firm: PropFirm): PropFirm {
   return verdict === firm.verdict && auditSummary === firm.auditSummary ? firm : { ...firm, verdict, auditSummary };
 }
 
-export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
+/**
+ * Scale C (Geyer, 2026-11-25; SCORING.md "Scale C"): for a firm whose contract
+ * was read by hand, the displayed score is the scale C score. It already
+ * includes the Trustpilot notice (−6) and the contract clauses, so it replaces
+ * the earlier steps instead of stacking on them. Closed firms are never listed.
+ */
+function applyScaleCRule(firm: PropFirm): PropFirm {
+  const entry = getScaleC(firm.slug);
+  if (!entry || firm.status === 'Fermée') return firm;
+  return { ...firm, score: entry.score, scaleC: { before: firm.score } };
+}
+
+export const propFirms: PropFirm[] = applyFirmUpdates(basePropFirms).map(applyPayoutEvidenceRule).map(applyReviewEvidenceRule).map(applyRulesPenaltyRule).map(applyTrustpilotPenaltyRule).map(applyV5SafetyCapRule).map(applyScaleCRule).map(applyClosedVerdictRule).map(applyClosedScoreRule).map(applyNarrativeScoreRule).map(applyPartnerOffer);
 
 /** Firms shown in buyer-facing lists (radar, comparator, rankings): closed firms are left out (Geyer, 14 Nov 2026). */
 export const listedFirms = propFirms.filter((firm) => firm.status !== 'Fermée');

@@ -1,0 +1,17 @@
+{
+ "slug": "fundyourfx",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B5",
+   "text": "Violating trades: profits removed, losses retained and counted toward drawdown.",
+   "source": "https://fundyourfx.io/terms-conditions/",
+   "excerpt": "Virtual Profits from Violating Trades: Removed and will not count toward your target; Virtual Losses from Violating Trades: Retained and remain your responsibility, counting toward drawdown; Repeated Violations: May be treated as a Hard Breach at our discretion.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {},
+ "safeguards": []
+}

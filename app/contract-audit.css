@@ -1,0 +1,18 @@
+/* Contract audit dossier on firm pages (documentary, not a score input). */
+.pr-contract-audit .ca-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 16px; }
+.pr-contract-audit .ca-hint { margin-top: 14px; }
+.pr-contract-audit .ca-inline-tag { margin-right: 8px; vertical-align: 1px; font-size: 11px; }
+.pr-contract-audit .ca-locator, .pr-contract-audit .ca-date { color: var(--muted); }
+.pr-contract-audit .ca-note { margin: 12px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.pr-contract-audit .ca-missing { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 13.5px; line-height: 1.5; color: var(--text); }
+.pr-contract-audit .ca-trustpilot { margin: 14px 0 0; color: var(--muted); font-size: 13px; }
+.pr-contract-audit .ca-trustpilot a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.pr-contract-audit .pr-section-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; color: var(--muted); font-size: 12.5px; }
+.pr-contract-audit .pr-section-meta b { color: var(--text); font-weight: 600; }
+.ca-menu-safeguard .pr-rules-list li { border-left-color: var(--tone-good, var(--line)); }
+
+/* Scale C score dialog (ScoreBreakdownDialog, view.scaleC) */
+.psb-c-evidence { margin: 6px 0 0; padding: 0 0 0 16px; font-size: 12px; line-height: 1.45; color: var(--hud-faint); }
+.psb-c-items li em { overflow-wrap: anywhere; }
+.psb-c-items li a { display: inline-block; margin-top: 3px; font-size: 11.5px; }
+.psb-c-locator { display: block; margin-top: 2px; font-size: 11px; color: var(--hud-faint); opacity: .8; }

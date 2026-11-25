@@ -1,0 +1,11 @@
+{
+ "slug": "lark-funding",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [],
+ "rejected": {
+  "B2A": "Extract is a quantified per-trade / daily gain cap ($10,000), a restrictive rule, not a discretionary clause."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

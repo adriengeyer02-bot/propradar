@@ -1,0 +1,459 @@
+{
+  "schema": "PROP_RADAR_CONTRACT_REVIEW_RESEARCH",
+  "date": "2026-11-24",
+  "sourceMethod": "Web-accessible official terms, several cached/crawled previously: verification recency flagged per entry",
+  "publicationStatus": "INTERNAL_RESEARCH_ONLY",
+  "warning": "No risk points, scores, closure claims or ranking updates. Contracts may differ by cohort. A contractual power is not evidence of actual abusive enforcement.",
+  "firmCount": 10,
+  "observationCount": 41,
+  "firms": [
+    {
+      "slug": "alpha-futures",
+      "name": "Alpha Futures",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_full_read_web",
+      "primarySource": "https://alpha-futures.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "alpha-futures-cgu-v4-20261124-01",
+          "section": "Terms introduction",
+          "riskFamily": "identity",
+          "contractualMeaning": "Alpha Futures Limited, England & Wales, n°15655643; conditions publiées comme effectives au 27 juillet 2026.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://alpha-futures.com/terms-and-conditions"
+        },
+        {
+          "factId": "alpha-futures-cgu-v4-20261124-02",
+          "section": "Schedule 4 §1.2.2 and §1.2.6",
+          "riskFamily": "reward_discretion",
+          "contractualMeaning": "Une Analyst Performance Fee peut être fournie à discrétion et refusée si Alpha établit, à son appréciation exclusive, une contravention aux règles de trading virtuel.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://alpha-futures.com/terms-and-conditions"
+        },
+        {
+          "factId": "alpha-futures-cgu-v4-20261124-03",
+          "section": "Schedule 4 §1.2.7",
+          "riskFamily": "payout_timing_safeguard",
+          "contractualMeaning": "Paiement demandé traité en principe sous trois jours ouvrés, jusqu'à 14 en présence de vérifications additionnelles; ne constitue pas preuve externe de virements.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://alpha-futures.com/terms-and-conditions"
+        },
+        {
+          "factId": "alpha-futures-cgu-v4-20261124-04",
+          "section": "Terms §4.1; Schedule 4 §1.3.2",
+          "riskFamily": "modification_and_account_closure",
+          "contractualMeaning": "Modification des conditions par publication avec notification par email pour changement matériel pendant un challenge; risque identique sur Qualified Analyst à qualifier à part.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://alpha-futures.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Comparer annexes Standard/Advanced/Zero, preuve de version acceptée et mécanisme d'appel contre décision Schedule 4; ne pas confondre reward potentiel et dû.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "ic-funded",
+      "name": "IC Funded",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_full_read_web",
+      "primarySource": "https://www.icfunded.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "ic-funded-cgu-v4-20261124-01",
+          "section": "§11.3–11.4",
+          "riskFamily": "subjective_breach_and_payout",
+          "contractualMeaning": "L'entreprise se réserve de qualifier comme interdite toute stratégie même non expressément mentionnée; détermination qualifiée de finale; retrait de profits ou refus de payouts possible.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.icfunded.com/terms-and-conditions"
+        },
+        {
+          "factId": "ic-funded-cgu-v4-20261124-02",
+          "section": "§12.1–12.4",
+          "riskFamily": "uncertain_consistency",
+          "contractualMeaning": "La cohérence des tailles de lots, stratégies, fréquences et expositions est exigée, mais les écarts significatifs/injustifiés restent peu chiffrés dans cette clause et peuvent provoquer exclusion.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.icfunded.com/terms-and-conditions"
+        },
+        {
+          "factId": "ic-funded-cgu-v4-20261124-03",
+          "section": "§4.4–4.5",
+          "riskFamily": "kyc_refusal",
+          "contractualMeaning": "KYC possible à tout moment; faux renseignement ou vérification impossible peut déclencher annulation de récompenses; ne pas assimiler KYC légitime à un abus.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.icfunded.com/terms-and-conditions"
+        },
+        {
+          "factId": "ic-funded-cgu-v4-20261124-04",
+          "section": "§6.4",
+          "riskFamily": "program_changes",
+          "contractualMeaning": "Frais et règles de programmes peuvent être modifiés; effet sur comptes achetés non établi par cette seule clause.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://www.icfunded.com/terms-and-conditions"
+        }
+      ],
+      "remainingWork": "Réconcilier la contrepartie juridique complète, les versions/cohortes, les règles précises par offre, les recours de refus; conserver le contrat de funded.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "name": "Crypto Fund Trader",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_full_read_web",
+      "primarySource": "https://cryptofundtrader.com/terms-and-conditions/",
+      "findings": [
+        {
+          "factId": "crypto-fund-trader-cgu-v4-20261124-01",
+          "section": "Introduction §1",
+          "riskFamily": "entity",
+          "contractualMeaning": "Conditions attribuées à SWISS RLCRATES AG, adresse de Zug Suisse; les rewards sont qualifiés de scholarships pour activité simulée.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "crypto-fund-trader-cgu-v4-20261124-02",
+          "section": "§14.2",
+          "riskFamily": "reward_nonpayment_limited_remedy",
+          "contractualMeaning": "Le texte envisage le non-paiement d'une scholarship malgré la réussite et limite le recours contractuel annoncé au remboursement des frais; ne préjuge pas de la validité juridique de cette limitation.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "crypto-fund-trader-cgu-v4-20261124-03",
+          "section": "§1.3",
+          "riskFamily": "unilateral_amendments",
+          "contractualMeaning": "Conditions et politiques modifiables à seule discrétion; usage continu vaut acceptation. La portée sur comptes achetés n'est pas explicitement établie.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://cryptofundtrader.com/terms-and-conditions/"
+        },
+        {
+          "factId": "crypto-fund-trader-cgu-v4-20261124-04",
+          "section": "§8 / trading conditions",
+          "riskFamily": "reward_verification",
+          "contractualMeaning": "La conformité des pratiques/trades avant scholarship est examinée; demander conditions du contrat final et versions par programme plutôt que transformer la liste de programmes en sanction universelle.",
+          "evidenceStatus": "requires_program_reconciliation",
+          "sourceUrl": "https://cryptofundtrader.com/terms-and-conditions/"
+        }
+      ],
+      "remainingWork": "Obtenir contrat final/conditions Scholarship par programme et cohorte, preuve du droit de contestation et réconciliation entité/clients USA.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "get-leveraged",
+      "name": "GetLeveraged",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_full_read_web_recent",
+      "primarySource": "https://getleveraged.com/terms/",
+      "findings": [
+        {
+          "factId": "get-leveraged-cgu-v4-20261124-01",
+          "section": "§1.1–1.2; §3.7",
+          "riskFamily": "counterparty_and_payer",
+          "contractualMeaning": "GetLeveraged Ltd., Sainte-Lucie n°2025-00808 est le prestataire et paie les Performance Rewards depuis ses propres fonds; société chypriote distincte agit comme agent de facturation.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://getleveraged.com/terms/"
+        },
+        {
+          "factId": "get-leveraged-cgu-v4-20261124-02",
+          "section": "§7.1; §7.5",
+          "riskFamily": "predictable_rules",
+          "contractualMeaning": "Refus liés aux règles publiées et certaines exceptions circonscrites; changements normaux des règles non rétroactifs, préavis 14 jours, comptes achetés conservant leur version; exceptions en cas de loi/abus.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://getleveraged.com/terms/"
+        },
+        {
+          "factId": "get-leveraged-cgu-v4-20261124-03",
+          "section": "§8.3; §12.4",
+          "riskFamily": "appeal_and_paid_reward_limit",
+          "contractualMeaning": "Décision motivée par règle et trades touchés; procédure d'appel; clawback d'une récompense déjà versée limité à certaines violations identifiées sous 90 jours (dont fraude).",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://getleveraged.com/terms/"
+        },
+        {
+          "factId": "get-leveraged-cgu-v4-20261124-04",
+          "section": "§9.4; §5.5",
+          "riskFamily": "approved_reward_protection",
+          "contractualMeaning": "Après chargeback ou fermeture pour inactivité, les rewards déjà approuvés restent payables, éventuellement diminués du montant en litige (§9.4).",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://getleveraged.com/terms/"
+        },
+        {
+          "factId": "get-leveraged-cgu-v4-20261124-05",
+          "section": "§6.1–6.3",
+          "riskFamily": "conditional_activation",
+          "contractualMeaning": "Admission et rewards restent conditionnels à la réussite, vérification et respect des règles; la rémunération est calculée comme part d'un profit simulé, pas solde réellement détenu.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://getleveraged.com/terms/"
+        }
+      ],
+      "remainingWork": "Vérifier version effective du checkout (2.0, 27/10/2026), règles individuelles des programmes et différences entre clauses de reviews et exceptions.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "tx3-funding",
+      "name": "TX3 Funding",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_archived_age_note",
+      "primarySource": "https://www.tx3funding.com/en/terms",
+      "findings": [
+        {
+          "factId": "tx3-funding-cgu-v4-20261124-01",
+          "section": "Preamble §2",
+          "riskFamily": "identity",
+          "contractualMeaning": "TX3 Funding FZCO (EAU) fournit un environnement de trading simulé, non un service financier réglementé; contrats futurs à distinguer entre CFD/futures.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.tx3funding.com/en/terms"
+        },
+        {
+          "factId": "tx3-funding-cgu-v4-20261124-02",
+          "section": "§7",
+          "riskFamily": "forfeiture_on_breach",
+          "contractualMeaning": "Violations de règles de compte, copie/automatisation et conduite prohibée peuvent entraîner résiliation immédiate et confiscation de payouts; portée d'un reward déjà validé non précisée.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.tx3funding.com/en/terms"
+        },
+        {
+          "factId": "tx3-funding-cgu-v4-20261124-03",
+          "section": "§8–9",
+          "riskFamily": "investigation_hold",
+          "contractualMeaning": "Payouts suspendus ou refusés dans le cadre de revérification d'identité, enquêtes conformité/suspicion d'abus; raisons et recours détaillés non disponibles dans ce texte.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.tx3funding.com/en/terms"
+        },
+        {
+          "factId": "tx3-funding-cgu-v4-20261124-04",
+          "section": "§11",
+          "riskFamily": "termination_payouts",
+          "contractualMeaning": "Résiliation pour violation avec perte de frais et payouts annoncée, sans ventilation reward potentiel/autorisé/payant.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://www.tx3funding.com/en/terms"
+        }
+      ],
+      "remainingWork": "Relire à date récente la version checkout et l'accord funded pour toutes les offres (FX/Futures), recours/limites, et identifier l'effet de simple soupçon sur paiement.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "funded-bull",
+      "name": "FundedBull",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_archived_age_note",
+      "primarySource": "https://fundedbull.com/terms/",
+      "findings": [
+        {
+          "factId": "funded-bull-cgu-v4-20261124-01",
+          "section": "§1.2",
+          "riskFamily": "identity",
+          "contractualMeaning": "Fournisseur annoncé RATERIGHT PTE. LTD., société de Singapour, 68 Circular Road; vérifier l'entité effectivement vendeuse et payeuse sur facture.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedbull.com/terms/"
+        },
+        {
+          "factId": "funded-bull-cgu-v4-20261124-02",
+          "section": "§6.1.10–6.1.11",
+          "riskFamily": "subjective_position_sizing",
+          "contractualMeaning": "Tailles de position significativement différentes interdites; risque de « gambling » combiné à une attente de risque par trade de 2%, malgré absence de règle de stop-loss obligatoire.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedbull.com/terms/"
+        },
+        {
+          "factId": "funded-bull-cgu-v4-20261124-03",
+          "section": "§6.1.17; §6.3",
+          "riskFamily": "inactivity_and_forfeiture",
+          "contractualMeaning": "15 jours sans trade peuvent entraîner fermeture; solde restant peut être perdu, tandis que violations des politiques peuvent entraîner perte de profits. Distinguer profits fictifs et rewards dus.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedbull.com/terms/"
+        },
+        {
+          "factId": "funded-bull-cgu-v4-20261124-04",
+          "section": "§1.5; §6.1.12",
+          "riskFamily": "updates_and_news",
+          "contractualMeaning": "Changements de CGU immédiats à publication et news interdit 5 minutes avant/après; une fenêtre connue doit être traitée comme règle objective, non discrétionnaire.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://fundedbull.com/terms/"
+        }
+      ],
+      "remainingWork": "Confirmer dates des CGU 2026 et accord financé, portée des limites de risque 2% vs simple recommandation, rappel de version par cohorte.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "sway-funded",
+      "name": "Sway Funded",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_archived_age_note",
+      "primarySource": "https://my.swayfunded.com/p/terms",
+      "findings": [
+        {
+          "factId": "sway-funded-cgu-v4-20261124-01",
+          "section": "§1.3",
+          "riskFamily": "unilateral_changes",
+          "contractualMeaning": "Sway Funded FZCO peut modifier ou terminer l'accord à son entière discrétion, avec acceptation par poursuite du service.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://my.swayfunded.com/p/terms"
+        },
+        {
+          "factId": "sway-funded-cgu-v4-20261124-02",
+          "section": "§7.4–7.5",
+          "riskFamily": "subjective_strategy_change",
+          "contractualMeaning": "Interdiction de passer évaluation avec une stratégie puis de la modifier en funded, appréciée exclusivement par la firme; peut provoquer terminaison et perte des frais/crédits.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://my.swayfunded.com/p/terms"
+        },
+        {
+          "factId": "sway-funded-cgu-v4-20261124-03",
+          "section": "§7.6",
+          "riskFamily": "account_ban",
+          "contractualMeaning": "Pouvoir de bloquer un participant pour tout motif, distinct de la question d'annulation de gains déjà acquis.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://my.swayfunded.com/p/terms"
+        },
+        {
+          "factId": "sway-funded-cgu-v4-20261124-04",
+          "section": "§4.3–4.4",
+          "riskFamily": "admission_not_guaranteed",
+          "contractualMeaning": "Réussite de l'évaluation ne garantit pas de passer à l'étape suivante ou d'obtenir un compte funded; contrepartie exacte du reward n'est pas clarifiée ici.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://my.swayfunded.com/p/terms"
+        }
+      ],
+      "remainingWork": "Lire accord Funded by Sway et règles relatives aux rewards dus, KYC et dates; ne pas confondre « fees and credits » avec payouts approuvés.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "funding-your-trades",
+      "name": "Funding Your Trades",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_read",
+      "primarySource": "https://fundingyourtrades.com/terms-of-services/",
+      "findings": [
+        {
+          "factId": "funding-your-trades-cgu-v4-20261124-01",
+          "section": "§2.2; §11.3",
+          "riskFamily": "identity_and_payment_agent",
+          "contractualMeaning": "Site identifie PrimeWorks International FZ LLC comme propriétaire opérant la marque; Odeonpay ALE S.R.L./Paysagi agit seulement comme encaisseur, pas fournisseur de service.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://fundingyourtrades.com/terms-of-services/"
+        },
+        {
+          "factId": "funding-your-trades-cgu-v4-20261124-02",
+          "section": "§10.3",
+          "riskFamily": "open_ended_prohibited_practices",
+          "contractualMeaning": "Activité jugée non réplicable, « unethical », ou changement de stratégie après challenge peut entraîner fermeture immédiate et suppression de profits; liste ouverte.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://fundingyourtrades.com/terms-of-services/"
+        },
+        {
+          "factId": "funding-your-trades-cgu-v4-20261124-03",
+          "section": "§15.1–15.2",
+          "riskFamily": "chargeback_or_dispute",
+          "contractualMeaning": "Les comptes impliqués dans des litiges de paiement sont annoncés bannis; une tentative de résolution amiable est prévue avant action juridique.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://fundingyourtrades.com/terms-of-services/"
+        },
+        {
+          "factId": "funding-your-trades-cgu-v4-20261124-04",
+          "section": "§4.1; §17.2",
+          "riskFamily": "unilateral_modifications",
+          "contractualMeaning": "Modification ou interruption du service et de certains prix à publication, sans garantie de continuité; traitement de compte funded courant reste à vérifier.",
+          "evidenceStatus": "verified_primary",
+          "sourceUrl": "https://fundingyourtrades.com/terms-of-services/"
+        }
+      ],
+      "remainingWork": "Vérifier contrat funded et droit sur rewards déjà approuvés, contrôles de double comptage entre sanctions, rôle d'une vraie contestation bancaire de bonne foi.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "lux-trading-firm",
+      "name": "Lux Trading Firm",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_archived_age_note",
+      "primarySource": "https://luxtradingfirm.com/t_c-2/",
+      "findings": [
+        {
+          "factId": "lux-trading-firm-cgu-v4-20261124-01",
+          "section": "Art 1.1; Art 3.4",
+          "riskFamily": "legal_entity_and_precedence",
+          "contractualMeaning": "Lux Trading Firm Ltd UK n°13160991; un accord individuel écrit prévaut sur les CGU générales en cas de conflit.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://luxtradingfirm.com/t_c-2/"
+        },
+        {
+          "factId": "lux-trading-firm-cgu-v4-20261124-02",
+          "section": "Art 7.1–7.2",
+          "riskFamily": "unilateral_amendments",
+          "contractualMeaning": "Modifications de CGU immédiates sans obligation de notification; refus du client peut entraîner résiliation, sans remboursement indiqué.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://luxtradingfirm.com/t_c-2/"
+        },
+        {
+          "factId": "lux-trading-firm-cgu-v4-20261124-03",
+          "section": "Art 9.1; 10.1",
+          "riskFamily": "subjective_account_closure",
+          "contractualMeaning": "Résiliation possible notamment pour faits jugés trompeurs ou « cheating », faux avis, abus verbal ou non-respect du risque; évaluation peut écarter des trades à seule appréciation.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://luxtradingfirm.com/t_c-2/"
+        },
+        {
+          "factId": "lux-trading-firm-cgu-v4-20261124-04",
+          "section": "Art 9.3–9.4",
+          "riskFamily": "cohort_rule_protection",
+          "contractualMeaning": "Comptes avant 22/09/2025 gardent expressément anciennes Trading Rules, nouveaux les règles applicables à activation; ne pas leur attribuer les mêmes conditions.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://luxtradingfirm.com/t_c-2/"
+        }
+      ],
+      "remainingWork": "Obtenir contrat individuel de rémunération et sa version, vérifier mise à jour du site actuel et limites sur rewards approuvés.",
+      "noScore": true,
+      "finalAuditComplete": false
+    },
+    {
+      "slug": "sabiotrade",
+      "name": "SabioTrade",
+      "checkedOn": "2026-11-24",
+      "sourceStatus": "primary_terms_web_archived_age_note",
+      "primarySource": "https://sabiotrade.com/terms",
+      "findings": [
+        {
+          "factId": "sabiotrade-cgu-v4-20261124-01",
+          "section": "Introduction",
+          "riskFamily": "identity_and_versions",
+          "contractualMeaning": "CGU identifient CODEVIL IT ENGINEERING LIMITED, Irlande n°680139; les mentions historiques 2021–2025 nécessitent cohérence de version 2026.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://sabiotrade.com/terms"
+        },
+        {
+          "factId": "sabiotrade-cgu-v4-20261124-02",
+          "section": "Trading Rules §9",
+          "riskFamily": "subjective_payout_review",
+          "contractualMeaning": "Payout dépend notamment de cohérence (55% profit max par trade) et d'un nombre minimum de trades comparables, et peut être refusé sur appréciation subjective du risque durable.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://sabiotrade.com/terms"
+        },
+        {
+          "factId": "sabiotrade-cgu-v4-20261124-03",
+          "section": "Trading Rules §10",
+          "riskFamily": "cohort_specific_forfeiture",
+          "contractualMeaning": "Pour accounts funded issus d'évaluations achetées depuis 02/02/2026, certaines violations provoquent fermeture et perte d'éligibilité au payout restant; anciens comptes sont explicitement exemptés.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://sabiotrade.com/terms"
+        },
+        {
+          "factId": "sabiotrade-cgu-v4-20261124-04",
+          "section": "Introduction; trading conditions",
+          "riskFamily": "unilateral_amendment",
+          "contractualMeaning": "La société annonce modification de règles et résiliation à discrétion; vérifier priorité de la version souscrite pour chaque cohorte.",
+          "evidenceStatus": "verified_primary_crawled_older",
+          "sourceUrl": "https://sabiotrade.com/terms"
+        }
+      ],
+      "remainingWork": "Vérifier nature de « scholarship »/compensation et portée des protections des comptes pré-02/02/2026, avec contrat individuel éventuel.",
+      "noScore": true,
+      "finalAuditComplete": false
+    }
+  ]
+}

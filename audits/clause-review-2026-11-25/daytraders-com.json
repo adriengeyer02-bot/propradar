@@ -1,0 +1,26 @@
+{
+ "slug": "daytraders-com",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "A user may be barred from a Reward at the sole discretion of Day Traders for \"disregard for these Terms\" or \"any other disruptive manner\".",
+   "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+   "excerpt": "Day Traders may prohibit any User or potential User from participating in a given Reward, if, at the sole discretion of Day Traders, (i) such person shows a disregard for these Terms, (ii) acts with an intent to annoy, abuse, threaten, or harass any other User, Day Traders, or its agents or representatives, (iii) disparages Day Traders or its products or services, Day Traders competitors or their products or services, Day Traders Affiliates or any other person or party affiliated with Day Traders, or (iv) acts in any other disruptive manner. Day Traders may, for no consideration and without an",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+   "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+   "excerpt": "m participating in a given Reward, if, at the sole discretion of Day Traders, (i) such person shows a disregard for these Terms, (ii) acts with an intent to annoy, abuse, threaten, or harass any other User, Day Traders, or its agents or representatives, (iii) disparages Day Traders or its products or services, Day Traders competitors or their products or services, Day Traders Affiliates or any other person or party affiliated with Day Traders, or (iv) acts in any other disruptive manner. Day Traders may, for no consideration and without any notice to a User, alter or cancel any Reward earned b",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {
+  "B7": "Funded stage governed by separate or supplemental agreement: check whether published."
+ },
+ "safeguards": []
+}

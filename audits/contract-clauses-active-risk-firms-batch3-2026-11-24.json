@@ -1,0 +1,353 @@
+{
+  "schema": "PROPRADAR_CONTRACT_AUDIT_V3",
+  "date": "2026-11-24",
+  "publicationStatus": "RESEARCH_ONLY",
+  "coverage": "first batch of active-risk-classified firms",
+  "caveat": "A clause grants a contractual power and does not prove an abusive real-world exercise. Compare applicable version, phase, products, entity, exceptions and appeal; incomplete individual funded contracts remain open. No scores or website states changed.",
+  "firms": [
+    {
+      "slug": "fundedelite",
+      "name": "Funded Elite",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "current_primary_terms_2026",
+      "primarySource": "https://fundedelite.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "fundedelite-contracts-20261124-01",
+          "section": "§5.3",
+          "riskFamily": "KYC interview and pending rewards",
+          "effect": "Un entretien de vérification peut être exigé pendant le traitement d'un payout; absence au rendez-vous dans cinq jours ouvrés => rejet des demandes pendantes et fermeture des comptes.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://fundedelite.com/terms-and-conditions"
+        },
+        {
+          "factId": "fundedelite-contracts-20261124-02",
+          "section": "§8.4; §11.4",
+          "riskFamily": "Payout forfeiture on breach",
+          "effect": "Le texte prévoit confiscation de rewards en attente après des pratiques interdites ou une résiliation pour violation; distinguer violation prouvée, simple soupçon et récompense déjà exigible.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://fundedelite.com/terms-and-conditions"
+        },
+        {
+          "factId": "fundedelite-contracts-20261124-03",
+          "section": "§11.5",
+          "riskFamily": "Chargeback procedure",
+          "effect": "Le chargeback engagé sans avoir contacté la société au préalable constitue une violation importante pouvant mener à résiliation et bannissement.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://fundedelite.com/terms-and-conditions"
+        },
+        {
+          "factId": "fundedelite-contracts-20261124-04",
+          "section": "§20; §21",
+          "riskFamily": "Change and dispute",
+          "effect": "CGU modifiables avec information des changements matériels; litiges soumis au droit italien, juridiction de Latina, résolution amiable encouragée.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://fundedelite.com/terms-and-conditions"
+        }
+      ],
+      "missingAgreementOrVerification": "Déterminer si l'accord Elite individuel modifie les conditions de payout et quel mécanisme de recours existe contre le constat de violation.",
+      "noScore": true
+    },
+    {
+      "slug": "clarity-traders",
+      "name": "Clarity Traders",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "primary_website_terms_reviewed",
+      "primarySource": "https://www.claritytraders.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "clarity-traders-contracts-20261124-01",
+          "section": "§7",
+          "riskFamily": "Chargeback and profits",
+          "effect": "Les contestations, chargebacks ou reversals de frais sont traités comme une violation matérielle pouvant mener à fermeture, perte de profits et exclusion future; aucune preuve ici d'application abusive.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.claritytraders.com/terms-and-conditions"
+        },
+        {
+          "factId": "clarity-traders-contracts-20261124-02",
+          "section": "§12",
+          "riskFamily": "Discretionary classification",
+          "effect": "Liste non exhaustive d'actes proscrits incluant des risques opérationnels ou réputationnels; la société se réserve l'interprétation des violations et mesures.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.claritytraders.com/terms-and-conditions"
+        },
+        {
+          "factId": "clarity-traders-contracts-20261124-03",
+          "section": "§4; §21",
+          "riskFamily": "Changes to service and terms",
+          "effect": "Prix et règles de service peuvent changer sans préavis; utilisation après mise à jour vaut acceptation. Effet sur transactions passées non démontré.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.claritytraders.com/terms-and-conditions"
+        },
+        {
+          "factId": "clarity-traders-contracts-20261124-04",
+          "section": "§16; §17",
+          "riskFamily": "Limitation and indemnification",
+          "effect": "Limitations de responsabilité et indemnisation réclamée au client; vérifier droits impératifs du consommateur et application en funded.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.claritytraders.com/terms-and-conditions"
+        }
+      ],
+      "missingAgreementOrVerification": "Vérifier s'il existe un accord funded distinct, les sections de la version actuelle régissant les rewards acquis, et une éventuelle procédure de recours.",
+      "noScore": true
+    },
+    {
+      "slug": "ofp-funding",
+      "name": "OFP Funding",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "primary_contract_detailed",
+      "primarySource": "https://ofpfunding.com/terms-and-conditions",
+      "findings": [
+        {
+          "factId": "ofp-funding-contracts-20261124-01",
+          "section": "§4.9",
+          "riskFamily": "Forfeiture of accrued reward",
+          "effect": "Une stratégie interdite fait automatiquement perdre la récompense accumulée, avec annulation de trades, fermeture possible et réduction du levier sur d'autres comptes.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://ofpfunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "ofp-funding-contracts-20261124-02",
+          "section": "§6.1",
+          "riskFamily": "Open-ended trading review",
+          "effect": "L'entreprise juge à sa discrétion la conformité des pratiques aux standards de marché; l'articulation avec le retrait de reward §4.9 doit être explicitée.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://ofpfunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "ofp-funding-contracts-20261124-03",
+          "section": "§5.3–5.9",
+          "riskFamily": "Reward invoicing safeguards and conditions",
+          "effect": "Droit au reward apprécié au Review Day sous conditions, facturation/autofacturation et délais prévus; erreurs de facture empêchent le paiement tant que non corrigées.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://ofpfunding.com/terms-and-conditions"
+        },
+        {
+          "factId": "ofp-funding-contracts-20261124-04",
+          "section": "§12.3–12.4",
+          "riskFamily": "Termination accounting",
+          "effect": "Une résiliation ordinaire peut entraîner calcul de la récompense jusqu'à la fermeture (§12.3); une résiliation pour violation matérielle exclut la récompense (§12.4). Ne pas confondre les deux.",
+          "evidence": "primary_contract",
+          "sourceUrl": "https://ofpfunding.com/terms-and-conditions"
+        }
+      ],
+      "missingAgreementOrVerification": "Contrôler quelles versions du Plan, Schedule A et normes de marché s'appliquent au compte; identifier tous les recours et le traitement d'une sanction contestée.",
+      "noScore": true
+    },
+    {
+      "slug": "thinkcapital",
+      "name": "ThinkCapital",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "mixed_contract_current_official",
+      "primarySource": "https://www.thinkcapital.com/terms-of-services/",
+      "findings": [
+        {
+          "factId": "thinkcapital-contracts-20261124-01",
+          "section": "§5.5; §5.5.4–5.5.8",
+          "riskFamily": "Open-ended risk and cross-account termination",
+          "effect": "Stratégies excessives ou durées atypiques évaluées à la discrétion de la société; des violations peuvent faire annuler trades et résilier plusieurs comptes, parfois liés à un tiers.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.thinkcapital.com/terms-of-services/"
+        },
+        {
+          "factId": "thinkcapital-contracts-20261124-02",
+          "section": "§7.1–7.3",
+          "riskFamily": "Third party funded agreement",
+          "effect": "Après évaluation, une société tierce peut décider de proposer un contrat rémunérateur; l'accord funded est distinct et doit être obtenu avant toute conclusion définitive.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.thinkcapital.com/terms-of-services/"
+        },
+        {
+          "factId": "thinkcapital-contracts-20261124-03",
+          "section": "§7.6",
+          "riskFamily": "Instant programme payout restrictions",
+          "effect": "Certaines offres Instant exigent seuils de profit, jours et consistency, mais le même contrat affiche différentes variantes de §7.6 selon les paramètres; vérifier la cohorte exacte.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.thinkcapital.com/terms-of-services/"
+        },
+        {
+          "factId": "thinkcapital-contracts-20261124-04",
+          "section": "§14 (Instant grandfathering)",
+          "riskFamily": "Existing-account protection",
+          "effect": "Certaines règles Instant achetées sont garanties durant la vie du compte avec exceptions légales/fraude et modifications consenties; créditer cette protection.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.thinkcapital.com/terms-of-services/"
+        }
+      ],
+      "missingAgreementOrVerification": "Récupérer le Funded Account Agreement du prestataire tiers, comparer les variantes du produit Instant selon le checkout et éviter le double comptage B1/B2.",
+      "noScore": true
+    },
+    {
+      "slug": "traders-launch",
+      "name": "Traders Launch",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "primary_terms_read",
+      "primarySource": "https://www.traderslaunch.com/terms",
+      "findings": [
+        {
+          "factId": "traders-launch-contracts-20261124-01",
+          "section": "Funding and simulated payout paragraphs",
+          "riskFamily": "Conditional simulated reward",
+          "effect": "Le trader peut être éligible aux payouts selon les règles et continuer dans le programme simulé selon les choix de financement; certains termes qualifient la récompense de discrétionnaire.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.traderslaunch.com/terms"
+        },
+        {
+          "factId": "traders-launch-contracts-20261124-02",
+          "section": "Term/Refund policy",
+          "riskFamily": "Termination without refund",
+          "effect": "Le prestataire indique pouvoir résilier une adhésion et ne pas rembourser les frais déjà payés lorsque le trader a violé le contrat.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.traderslaunch.com/terms"
+        },
+        {
+          "factId": "traders-launch-contracts-20261124-03",
+          "section": "Arbitration §2 and opt-out §7",
+          "riskFamily": "Dispute / opt-out safeguard",
+          "effect": "Arbitrage individuel AAA à Philadelphie sous conditions avec possibilité de refuser la clause d'arbitrage dans les trente jours après acceptation; exceptions small claims et droits non arbitrables.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://www.traderslaunch.com/terms"
+        },
+        {
+          "factId": "traders-launch-contracts-20261124-04",
+          "section": "Payout Rules",
+          "riskFamily": "One-per-day request",
+          "effect": "Une demande de payout par 24h par trader ; la règle publiée ne prouve pas une confiscation discrétionnaire.",
+          "evidence": "official_payout_rules",
+          "sourceUrl": "https://traderslaunch.com/payout-rules"
+        }
+      ],
+      "missingAgreementOrVerification": "Vérifier l'accord SimFunded individuel, les critères de conformité et le statut de reward acquis/apprové; confronter la version acceptée au programme actuel.",
+      "noScore": true
+    },
+    {
+      "slug": "wegetfunded",
+      "name": "WeGetFunded",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "current_primary_terms_detailed",
+      "primarySource": "https://wegetfunded.com/en/legal/terms",
+      "findings": [
+        {
+          "factId": "wegetfunded-contracts-20261124-01",
+          "section": "§18.6.1–18.6.4",
+          "riskFamily": "Live progression / allocation",
+          "effect": "Après passage au programme LIVE à la discrétion de WGF, l'Enhanced Reward = 110% du Reward éligible; 20% versé immédiatement, 30% crédité en Live et 50% débloqué sous jalons de performance; ne pas appeler ces crédits cash payout immédiat.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://wegetfunded.com/en/legal/terms"
+        },
+        {
+          "factId": "wegetfunded-contracts-20261124-02",
+          "section": "§18.6.5",
+          "riskFamily": "Live programme revision",
+          "effect": "Droit de modifier, adapter ou fermer le programme LIVE pour motifs opérationnels/réglementaires ou liés au courtier; droits des traders en cours à confirmer.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://wegetfunded.com/en/legal/terms"
+        },
+        {
+          "factId": "wegetfunded-contracts-20261124-03",
+          "section": "§23",
+          "riskFamily": "Termination on suspicion",
+          "effect": "Droit de résilier sans préavis en cas de violation ou de suspicion de violation; les obligations contractées avant résiliation sont réputées survivre.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://wegetfunded.com/en/legal/terms"
+        },
+        {
+          "factId": "wegetfunded-contracts-20261124-04",
+          "section": "§18.5",
+          "riskFamily": "Per-account withdrawal caps",
+          "effect": "Des plafonds de retrait et conditions de conservation d'une partie du profit existent par modèle et taille; appliquer seulement au produit concerné.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://wegetfunded.com/en/legal/terms"
+        }
+      ],
+      "missingAgreementOrVerification": "Confronter promesses de retrait publiées/affiliation au schéma LIVE et identifier le contrat du partenaire broker; vérifier si le passage en Live peut être imposé et quels rewards restent dus.",
+      "noScore": true
+    },
+    {
+      "slug": "wsfunded",
+      "name": "Wall Street Funded",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "current_primary_terms_but_individual_agreement_missing",
+      "primarySource": "https://wsfunded.com/en/terms-conditions",
+      "findings": [
+        {
+          "factId": "wsfunded-contracts-20261124-01",
+          "section": "Prohibited Trading Practices",
+          "riskFamily": "Funded contract cancellation",
+          "effect": "Une pratique interdite peut entraîner la perte du compte Simulated Funded et la résiliation du contrat signé; la page prévoit le refus du profit split pour certains abus.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "factId": "wsfunded-contracts-20261124-02",
+          "section": "Participation restrictions",
+          "riskFamily": "Discretionary programme cancellation",
+          "effect": "La société se réserve la possibilité d'annuler/suspendre des traders à sa discrétion; effet sur récompenses déjà approuvées non établi.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "factId": "wsfunded-contracts-20261124-03",
+          "section": "Site legal disclosure",
+          "riskFamily": "Multiple operating entities",
+          "effect": "WSFmarkets Ltd à Sainte-Lucie, WSF Technology FZCO à Dubaï et RENATICA LTD à Chypre apparaissent avec des rôles différents. Établir la contrepartie et le payeur du contrat effectif.",
+          "evidence": "primary_site",
+          "sourceUrl": "https://wsfunded.com/en/terms-conditions"
+        },
+        {
+          "factId": "wsfunded-contracts-20261124-04",
+          "section": "FAQ Instant funded",
+          "riskFamily": "Separate signed agreement",
+          "effect": "Pour les comptes Instant le site précise qu'un contrat signé reçu par email est requis avant activation; le texte privé n'a pas été obtenu.",
+          "evidence": "official_faq",
+          "sourceUrl": "https://wsfunded.com/en/faq"
+        }
+      ],
+      "missingAgreementOrVerification": "Comparer les versions espagnole/anglaise du site et documenter l'accord funded signé, les recours contre la suppression de profit split et l'identité payeuse.",
+      "noScore": true
+    },
+    {
+      "slug": "miltraders",
+      "name": "MILTRADERS",
+      "reviewedOn": "2026-11-24",
+      "auditStatus": "current_version_3_primary_terms",
+      "primarySource": "https://miltraders.com/terms/",
+      "findings": [
+        {
+          "factId": "miltraders-contracts-20261124-01",
+          "section": "§9.4–9.5",
+          "riskFamily": "Enumerated grounds and clawback limits",
+          "effect": "Refus de reward limité contractuellement à catégories énumérées avec notification du motif et recours; récupération d'un payout déjà versé limitée à fraude, fausse identité et exploitation d'erreur technique.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://miltraders.com/terms/"
+        },
+        {
+          "factId": "miltraders-contracts-20261124-02",
+          "section": "§12.5–12.6",
+          "riskFamily": "Gambling and chargeback sanctions",
+          "effect": "Gambling peut faire rejeter un payout demandé à la discrétion de la firme et fermer les comptes; contestation bancaire sans réclamation préalable => tous comptes clos, gains impayés perdus, bannissement.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://miltraders.com/terms/"
+        },
+        {
+          "factId": "miltraders-contracts-20261124-03",
+          "section": "§19.1–19.3",
+          "riskFamily": "Changes to existing accounts",
+          "effect": "Une modification entre en vigueur dès publication sur le site/help center et s'applique expressément aussi aux comptes déjà achetés; effet réellement rétroactif sur gains acquis doit être vérifié.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://miltraders.com/terms/"
+        },
+        {
+          "factId": "miltraders-contracts-20261124-04",
+          "section": "§9.6; §20.3; §21",
+          "riskFamily": "Insolvency, continuation and appeal",
+          "effect": "Droit de suspendre les payouts en insolvabilité; en cas d'arrêt d'un programme, payout éligible demandé reste payable. Réclamation 7 jours ouvrés puis revue interne 14 jours.",
+          "evidence": "primary_terms",
+          "sourceUrl": "https://miltraders.com/terms/"
+        }
+      ],
+      "missingAgreementOrVerification": "Obtenir Program Rules de chaque offre, contrats Live, vérifier légalité du forum d'arbitrage et portée des exclusions de recours/insolvabilité.",
+      "noScore": true
+    }
+  ]
+}

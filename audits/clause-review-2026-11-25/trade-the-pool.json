@@ -1,0 +1,19 @@
+{
+ "slug": "trade-the-pool",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B6",
+   "text": "Defamatory, disparaging or harmful statements on review sites are listed among the grounds of termination for cause.",
+   "source": "https://tradethepool.com/terms-and-conditions/",
+   "excerpt": "ete, outdated or misleading data to Us. You manipulated Our systems, whether manually or through any use of an automated system (e.g. bot) or any other tool or method which deviated from normal, typical and intended use of Our system. You make any defamatory, disparaging, or harmful statements about the Company, its employees, or the Services on any public platform, including but not limited to social media networks, public groups, forums, or review sites. This includes a strict prohibition on the unauthorized disclosure, sharing, or publication of any internal correspondence, support tickets,",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B2A": "Verification interview clause, no forfeiture standard."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

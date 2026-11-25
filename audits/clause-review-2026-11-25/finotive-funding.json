@@ -1,0 +1,17 @@
+{
+ "slug": "finotive-funding",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "Compliance, risk, prohibited-strategy and platform updates may apply immediately to existing accounts.",
+   "source": "https://finotivefunding.com/terms-and-conditions",
+   "excerpt": "time. Unless a later effective date is specified, changes take effect when published on the Website, Dashboard, or other official Finotive channel. Compliance, risk, security, fraud, prohibited strategy, and platform-integrity updates may apply immediately to existing accounts where Finotive considers this necessary to protect the integrity of the Services, comply with law, prevent abuse, or reduce risk. It is your responsibility to review the Terms regularly. Continued use of the Services after amended Terms are published constitutes acceptance of the amended Terms.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {},
+ "safeguards": []
+}

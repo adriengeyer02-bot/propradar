@@ -1,0 +1,503 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "supplements": "audits/full-audit-reopen-wave3-five-2026-11-24.json",
+  "scope": "Targeted primary-source checks; some findings overlap base wave; not unique observation count and no completed-audit claim.",
+  "findingsCount": 43,
+  "firms": [
+    {
+      "slug": "fxify",
+      "programs": [
+        "1 Phase",
+        "2 Phase Standard",
+        "2 Phase PRO",
+        "3 Phase",
+        "Lightning",
+        "Instant",
+        "Instant Lite",
+        "FXIFY Futures (separate scope)"
+      ],
+      "findings": [
+        {
+          "source": "https://fxify.com/terms-and-conditions",
+          "locator": "§5.4.1.8; PDF dated 6 Nov 2024",
+          "scope": "evaluation",
+          "kind": "discretion",
+          "finding": "Firm may designate further strategies prohibited with seven days notice; version applicable to current checkout unresolved."
+        },
+        {
+          "source": "https://fxify.com/terms-and-conditions",
+          "locator": "§13.1–13.3 p17 (visually checked)",
+          "scope": "evaluation",
+          "kind": "termination",
+          "finding": "14-day withdrawal right described, lost on beginning demo trading; two months inactivity may terminate account."
+        },
+        {
+          "source": "https://fxify.com/terms-and-conditions",
+          "locator": "§14–15 p18 (visually checked)",
+          "scope": "existing contracts",
+          "kind": "recourse/change",
+          "finding": "Complaint deadline 30 calendar days; existing agreement can change with seven days notice; rejecting change terminates contract. Not proven retroactive forfeiture."
+        },
+        {
+          "source": "https://fxify.com/agreement/",
+          "locator": "§3.4, §4",
+          "scope": "funded",
+          "kind": "incorporation",
+          "finding": "Broker dispute routed through prop company; welcome email sets risk rules and split."
+        },
+        {
+          "source": "https://fxify.com/agreement/",
+          "locator": "§5",
+          "scope": "funded one-phase",
+          "kind": "payout",
+          "finding": "Withdrawal locks trailing floor at starting balance. Agreement provides split of profits above high-water mark on breach; scope and instant exceptions need reconciliation."
+        },
+        {
+          "source": "https://fxify.com/faqs/all-faqs/instant-funded-faq/what-happens-if-i-violate-the-rules/",
+          "locator": "breach FAQ",
+          "scope": "Instant",
+          "kind": "forfeiture",
+          "finding": "No Performance Protect; breach forfeits remaining profit."
+        },
+        {
+          "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-how-does-the-20-consistency-rule-work/",
+          "locator": "consistency FAQ",
+          "scope": "Instant Lite",
+          "kind": "quantified",
+          "finding": "20% consistency; withdrawal after ten days from first trade; at least five traded days per separate FAQ."
+        },
+        {
+          "source": "https://fxify.com/faqs/all-faqs/instant-funding-lite-faq/instant-funding-lite-what-is-instant-funding-lite/",
+          "locator": "footer",
+          "scope": "entity",
+          "kind": "identity",
+          "finding": "FXIFY Solutions Ltd UK 14451720 described as payment agent, reconcile with agreement role."
+        },
+        {
+          "source": "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/",
+          "locator": "withdrawal FAQ",
+          "scope": "1/2 trailing, Lightning, Instant",
+          "kind": "risk",
+          "finding": "Withdrawal locks loss threshold at starting balance; verified accounts usually processed within three business days."
+        }
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fxify.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.3,
+        "count": 6728
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "method": "Rise",
+          "amountUSD": 36079782,
+          "count": 14960,
+          "latest": "2026-11-24 08:17 UTC",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+      ]
+    },
+    {
+      "slug": "tradeify",
+      "programs": [
+        "Growth",
+        "Lightning",
+        "Select Flex",
+        "Select Daily",
+        "Elite Live",
+        "Tradeify FX and 247 (separate scope)"
+      ],
+      "findings": [
+        {
+          "source": "https://tradeify.co/funded-trader-agreement",
+          "locator": "§4.2–4.5",
+          "scope": "funded",
+          "kind": "hold",
+          "finding": "Approved unpaid payout can be suspended during investigation; clock stops; notice and commercially reasonable review required; forfeiture possible under linked clauses. Select Flex/Daily election irrevocable."
+        },
+        {
+          "source": "https://tradeify.co/funded-trader-agreement",
+          "locator": "§5.1–5.7",
+          "scope": "live",
+          "kind": "transition",
+          "finding": "Discretionary live transfer at any time; ten aggregate or three same-account approved payouts are guidelines only. Live excludes other accounts, including household members."
+        },
+        {
+          "source": "https://tradeify.co/funded-trader-agreement",
+          "locator": "§6.11(c)–(h)",
+          "scope": "all stages",
+          "kind": "sanction",
+          "finding": "Expired contracts prohibited regardless of intent or platform acceptance; nonmarket profits removable, closure possible; isolated occurrences normally treated more mildly. Enforcement can occur months later, including after payout."
+        },
+        {
+          "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+          "locator": "Payout requirements",
+          "scope": "Lightning",
+          "kind": "cohort",
+          "finding": "20/25/30% consistency by payout number since Sep 12 2025, older accounts 20% throughout. No minimum days, fresh profit goals each cycle."
+        },
+        {
+          "source": "https://help.tradeify.co/en/articles/10495932-lightning-funded-account-payout-policy",
+          "locator": "Profit goals and caps",
+          "scope": "Lightning 150K",
+          "kind": "payout",
+          "finding": "First $9k target but $3k withdrawal cap; next $4.5k new profit; retained balance at risk, not erased. Failure before processing can deny request."
+        },
+        {
+          "source": "https://help.tradeify.co/en/articles/11083796-growth-funded-account-payout-policy",
+          "locator": "Payout requirements",
+          "scope": "Growth",
+          "kind": "payout",
+          "finding": "35% consistency, five profitable days over $100/150/200/250 by size; reset each successful payout. 50K gate $53k vs $52.1k pre-Sep 12 2025."
+        },
+        {
+          "source": "https://help.tradeify.co/en/articles/10468320-rules-consistency-rule",
+          "locator": "Consistency",
+          "scope": "Select evaluation",
+          "kind": "quantified",
+          "finding": "40% eligibility threshold, no automatic malus."
+        },
+        {
+          "source": "https://help.tradeify.co/en/articles/10495938-lightning-funded-accounts",
+          "locator": "100K risk parameters",
+          "scope": "Lightning",
+          "kind": "cohort",
+          "finding": "New risk parameters apply purchases from Nov 23 2026; exact table not yet captured."
+        }
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/tradeify.co",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.6,
+        "count": 7673
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "method": "Rise",
+          "amountUSD": 468395479,
+          "count": 245325,
+          "latest": "2026-11-24 04:09 UTC",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+      ]
+    },
+    {
+      "slug": "myfundedfutures",
+      "programs": [
+        "Rapid Intraday",
+        "Rapid EOD",
+        "Builder",
+        "Pro",
+        "Studio (pending)",
+        "legacy Core/Flex/Scale/Starter (pending)",
+        "Live"
+      ],
+      "findings": [
+        {
+          "source": "https://myfundedfutures.com/terms",
+          "locator": "§16.2, §17.1–17.4",
+          "scope": "general",
+          "kind": "forfeiture",
+          "finding": "Corrective actions can include withholding rewards; broad suspension or termination without notice, including perceived harmful conduct."
+        },
+        {
+          "source": "https://myfundedfutures.com/terms",
+          "locator": "§29",
+          "scope": "sim funded",
+          "kind": "hierarchy",
+          "finding": "Appendix overrides Simulated Trader Agreement then general terms for direct conflicts; prohibited conduct §22 cumulative."
+        },
+        {
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+          "locator": "Rapid payouts",
+          "scope": "Rapid",
+          "kind": "payout",
+          "finding": "Daily, first request after 24h with buffer, no consistency; 50K buffer $2100, $500 minimum."
+        },
+        {
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+          "locator": "Builder payouts",
+          "scope": "Builder",
+          "kind": "payout",
+          "finding": "50% consistency, two days possible, buffer, cap $1000/2000 for 25K/50K, 80% split; first withdrawal resets MLL to $100."
+        },
+        {
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+          "locator": "Pro payouts",
+          "scope": "Pro",
+          "kind": "payout",
+          "finding": "14-day cadence, $1000 minimum, up to 60% profit withdrawal before fully clearing buffer; $100k user cap, 80% split."
+        },
+        {
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+          "locator": "Live transition",
+          "scope": "Rapid/Builder/Pro",
+          "kind": "transition",
+          "finding": "Rapid automatic at $10k net in one day; Builder 5 consecutive payouts or $100k sim cap or risk review; Pro reviewed at 3 consecutive payouts or $20k profit, may be accelerated."
+        },
+        {
+          "source": "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts",
+          "locator": "Pro Reserve Program",
+          "scope": "Pro",
+          "kind": "payout",
+          "finding": "Excess above $100k sim cap placed in reserve up to $5k per account; treatment of additional surplus not established."
+        }
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/myfundedfutures.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.9,
+        "count": 23151
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "method": "Rise",
+          "amountUSD": 273781967,
+          "count": 179561,
+          "latest": "2026-11-24 08:14 UTC",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+      ]
+    },
+    {
+      "slug": "alpha-capital-group",
+      "programs": [
+        "Pro 6/8/10",
+        "One 6/10/12",
+        "Swing",
+        "Three",
+        "Direct",
+        "Biweekly/On Demand",
+        "90% add-on"
+      ],
+      "findings": [
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 2 §2.6",
+          "scope": "qualified",
+          "kind": "discretion",
+          "finding": "Firm determines violation and may deny performance fee."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 2 §3.2–3.3",
+          "scope": "qualified",
+          "kind": "risk",
+          "finding": "Risk level must match evaluation; breach can close account. Separate per-asset drawdown hard breach on purchases after July 21 2026; same-direction reentry within 10min combines losses."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 2 §3.5",
+          "scope": "qualified",
+          "kind": "discretion",
+          "finding": "Focused Trader Group reduces leverage and lot limits based on trading style/risk."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 3 lot exposure",
+          "scope": "qualified",
+          "kind": "sanction",
+          "finding": "Initial oversized trade violation excludes attributable performance fee."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "News FAQ embedded",
+          "scope": "Pro/One/Three/Direct qualified",
+          "kind": "strategy",
+          "finding": "No execution ±5 minutes around targeted news; losses retained; gain removal scope and Swing exception still need exact mapping."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 1",
+          "scope": "qualified",
+          "kind": "holding",
+          "finding": "Weekend restrictions Pro/Direct, allowed One/Swing/Three; evaluation allowed."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 3 on-demand",
+          "scope": "Pro/Swing/One/Three",
+          "kind": "quantified",
+          "finding": "40% best-day plus 2% gross profit minimum; alternative domain One advertises 50%, version to reconcile."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Schedule 3 Direct",
+          "scope": "Direct",
+          "kind": "payout",
+          "finding": "15% consistency, 3% buffer and 1% gross additional profit, split 90%."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "Trailing drawdown notice",
+          "scope": "One/Direct",
+          "kind": "risk",
+          "finding": "Full withdrawal after trailing floor reaches initial balance closes account but payment stated payable."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "§27.1–27.2",
+          "scope": "all",
+          "kind": "reputation",
+          "finding": "Firm determines breach of reputation clause for access termination; legal cost indemnity language. Do not infer all criticism prohibited."
+        },
+        {
+          "source": "https://alphacapitalgroup.uk/terms-and-conditions",
+          "locator": "§16.3, §20, §28",
+          "scope": "all",
+          "kind": "recourse",
+          "finding": "Defective-service remedies, rights under law preserved; English law/courts with specified UK exceptions."
+        }
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/alphacapitalgroup.uk",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null,
+        "count": null
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "method": "Rise",
+          "amountUSD": 74739481,
+          "count": 39173,
+          "latest": "2026-11-23 17:37 UTC",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+      ]
+    },
+    {
+      "slug": "alpha-futures",
+      "programs": [
+        "Zero",
+        "Standard",
+        "Advanced",
+        "Direct",
+        "legacy/live"
+      ],
+      "findings": [
+        {
+          "source": "https://alpha-futures.com/fr/terms-and-conditions",
+          "locator": "Schedule 4 §1.2.6",
+          "scope": "qualified",
+          "kind": "discretion",
+          "finding": "Sole discretion to determine violation and deny performance fee."
+        },
+        {
+          "source": "https://alpha-futures.com/fr/terms-and-conditions",
+          "locator": "Schedule 4 §1.2.5–1.2.7",
+          "scope": "qualified",
+          "kind": "payout",
+          "finding": "Close positions before request; trading paused until debit; processing three business days, up to 14 for checks."
+        },
+        {
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "locator": "Advanced",
+          "scope": "qualified",
+          "kind": "payout",
+          "finding": "No consistency, $1000 minimum, $15000 maximum per request."
+        },
+        {
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "locator": "Zero",
+          "scope": "qualified",
+          "kind": "payout",
+          "finding": "40% consistency, $200 minimum, caps $1000/1500/2500 for 25/50/100K; older English page differs for 100K."
+        },
+        {
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "locator": "Standard",
+          "scope": "qualified",
+          "kind": "payout",
+          "finding": "40% consistency, $500 minimum, caps $3000/4000/5000 for 50/100/150K."
+        },
+        {
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "locator": "Direct",
+          "scope": "qualified",
+          "kind": "payout",
+          "finding": "20% consistency; fresh profit target each payout, residual profit does not count for next target, not necessarily deleted."
+        },
+        {
+          "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+          "locator": "Direct 50/100/150K",
+          "scope": "qualified",
+          "kind": "payout",
+          "finding": "First goals $3000/6000/9000, later $2000/4000/6000; caps $2000/2500/3000."
+        },
+        {
+          "source": "https://alpha-futures.com/fr/terms-and-conditions",
+          "locator": "Direct table vs FAQ",
+          "scope": "qualified",
+          "kind": "potential_conflict",
+          "finding": "Five days shown in terms vs no winning-day requirement in FAQ; distinguish trading and winning days."
+        }
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/alpha-futures.com",
+        "checkedOn": "2026-11-24",
+        "status": "RATING_DISPLAYED",
+        "rating": 4.3,
+        "count": 6333
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/alltime",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "method": "Rise",
+          "amountUSD": 33353406,
+          "count": 16165,
+          "latest": "2026-11-23 17:27 UTC",
+          "checkedOn": "2026-11-24"
+        }
+      ],
+      "missing": [
+        "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
+        "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+      ]
+    }
+  ]
+}

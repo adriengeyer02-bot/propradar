@@ -1,0 +1,1854 @@
+{
+  "version": "24-11-2026-no-scores-contract-audit-coverage",
+  "date": "2026-11-24",
+  "scope": "121 historical V5.2 approvals ONLY, NOT whole current live roster",
+  "rules": "A research file is not an approved/closed audited contract. All records require dated applicable agreement; public scoring remains rollback version. No score or commercial ranking may be changed based on this tracker.",
+  "summary": {
+    "total": 121,
+    "researchFiles": 121,
+    "pending": 0,
+    "pendingBlocked": 0,
+    "observations": 373,
+    "signedFundedCoverageComplete": "NOT_ASSESSED_FOR_ALL",
+    "originalThreeFullTermsStillUnresolved": [
+      "tradexprop",
+      "foxx-funded",
+      "lark-funding"
+    ],
+    "wave6PartialOrHistorical": 18,
+    "pendingDefinition": "Pending means no research file. Zero pending does not mean completed contractual or payout audits. Full terms remain unresolved for multiple firms, including the original three."
+  },
+  "records": [
+    {
+      "slug": "alpha-capital-group",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accord Qualified Analyst/versions des annexes du programme et application effective à une cohorte achetée",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "maven-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Vérifier correspondance produit (Standard, OMO, Mini, Instant), capture version 2026.4 et contrat accepté par le trader",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "get-leveraged",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 5,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier version effective du checkout (2.0, 27/10/2026), règles individuelles des programmes et différences entre clauses de reviews et exceptions.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_full_read_web_recent"
+    },
+    {
+      "slug": "alpha-futures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Comparer annexes Standard/Advanced/Zero, preuve de version acceptée et mécanisme d'appel contre décision Schedule 4; ne pas confondre reward potentiel et dû.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_full_read_web"
+    },
+    {
+      "slug": "miltraders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir Program Rules de chaque offre, contrats Live, vérifier légalité du forum d'arbitrage et portée des exclusions de recours/insolvabilité.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "top-one-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 29,
+        "classed": 29,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Obtenir convention Top One Funding par programme (1-Step Flash, Instant, Nova) et qualifier recours et gains acquis, ne pas déduire deux fois un même fait EA/stratégie.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "onefunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir version courante CGU client et accord funded, sanctions subjectives et recours; démêler prix/commission/refund à trois payouts.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bem-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Comparer BEM One, BEM Classic et One Only à leurs documents effectivement achetés; obtenir BEM Trader agreement et traitement des rewards déjà approuvés.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "thinkcapital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Récupérer le Funded Account Agreement du prestataire tiers, comparer les variantes du produit Instant selon le checkout et éviter le double comptage B1/B2.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tiger-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir accord des rewards funded, relever les annexes actuelles de reset de journée et conserver copie de toute contradiction réapparue.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradeday",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accords SIM/LIVE et Quick Pay/Fast Pass; recours et retrait déjà approuvé; débiteur juridique, preuve primaire et paiements indépendants.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_public_rules"
+    },
+    {
+      "slug": "funded7",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 5,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat de rémunération, recours sur nullification, version OREF applicable, identités primaires et preuves de payouts.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_public_rules"
+    },
+    {
+      "slug": "top-one-futures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 26,
+        "classed": 26,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Trouver Terms & Conditions et contrat simulé funded 2026, sanctions payout revues, différentes versions Elite/Elite Daily/Ignite et recours.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "wegetfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Confronter promesses de retrait publiées/affiliation au schéma LIVE et identifier le contrat du partenaire broker; vérifier si le passage en Live peut être imposé et quels rewards restent dus.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "purdia-capital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Texte intégral CGU (rendu web limité), contrat SFA/LFA, broker, entité juridique et preuves de retraits.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "partial_primary_public_docs_not_full_terms"
+    },
+    {
+      "slug": "daytraders-com",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 11,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir l'accord Pro/S2F/Live signé, vérifier conditions de blocage et perte des rewards et statut exact du payeur; ne pas extrapoler de l'accord de site.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "equity-edge",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Confirmer conditions funded supplémentaires et clause précise sur rewards déjà approuvés; vérifier version 06/10 et source de la procédure de recours.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_terms_recent_web"
+    },
+    {
+      "slug": "alpine-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Récupérer iframe CGU §7, vérifier éventuelle contradiction entre FAQ et page commerciale, convention reward, registre suisse et preuve de paiement.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "partial_primary_public_docs_not_full_terms"
+    },
+    {
+      "slug": "funded-squad",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrats évaluation/funded, seuils temporels news et variantes, recours et rewards acquis, registres primaires.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "partial_primary_public_docs_not_full_terms"
+    },
+    {
+      "slug": "orion-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 13,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Lire PDF du contrat Orion par pages, accord Orion Trader Account proposé par tiers après réussite et recours; sans cela revue incomplète.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_faq_only_terms_pdf_unread"
+    },
+    {
+      "slug": "wsfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 21,
+        "classed": 21,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Comparer les versions espagnole/anglaise du site et documenter l'accord funded signé, les recours contre la suppression de profit split et l'identité payeuse.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "moneta-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Lire intégralement le PDF officiel avec contrôle des pages/versions, vérifier §5.1J et §6.9 historiques sur pouvoirs de payout et contradictions sur news; agreement funded signé par programme.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_program_rules_only_pdf_not_read"
+    },
+    {
+      "slug": "tradexprop",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Récupérer CGU exactes au checkout et accord funded, portée des gains dus; ancien blocage CGU non entièrement levé.",
+      "canPublishNewScore": false,
+      "researchBlocker": "Accès direct au contrat en timeout sur la consultation courante. Retrouver les deux pages source simultanément, leur horodatage et un contrat d'achat applicable; enregistrer preuve de capture.",
+      "blockerFile": "audits/contract-clauses-wave4-blocked-3-2026-11-24.json",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "funder-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Obtenir accords TrueEdge funded et partenaire éventuel; confirmer les chiffres et la version des pages commerciales. Page générale insuffisante pour noter les payouts.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "website_terms_not_funded_agreement"
+    },
+    {
+      "slug": "fundyourfx",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave5-six-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Vérifier domaine réellement utilisé au checkout, avis de migration, registre HK, protection payouts après approbation et preuves indépendantes.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_public_rules"
+    },
+    {
+      "slug": "monevis",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "PDF indexé mais capture 404; obtenir version actuelle et accord tiers.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "indexed_pdf_direct_404",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "fundedhive",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Examiner PDF officiel avec lecture et capture, conventions FundedHive/TradingHive, règles A-Book/B-Book et déblocage on-chain",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "sabiotrade",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier nature de « scholarship »/compensation et portée des protections des comptes pré-02/02/2026, avec contrat individuel éventuel.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_archived_age_note"
+    },
+    {
+      "slug": "clarity-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier s'il existe un accord funded distinct, les sections de la version actuelle régissant les rewards acquis, et une éventuelle procédure de recours.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradersedgefx",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Lire accord rémunérateur / fonctionnement exact du statut funded; vérifier dates de la version et limites des interdictions vagues.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "website_terms_web_crawled_older"
+    },
+    {
+      "slug": "lvlup-futures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Obtenir accord exact Prop Account par modèle et droits sur rewards approuvés.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_rules_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "atmos-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Version 2025 à rapprocher de l'achat 2026 et politiques par offre.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "historical_pdf_page_verified",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "tx3-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Relire à date récente la version checkout et l'accord funded pour toutes les offres (FX/Futures), recours/limites, et identifier l'effet de simple soupçon sur paiement.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_archived_age_note"
+    },
+    {
+      "slug": "fundedelite",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Déterminer si l'accord Elite individuel modifie les conditions de payout et quel mécanisme de recours existe contre le constat de violation.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "upcomers",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Accord spécifique Upcomers Trader Program, entité payeuse et versions éventuelles /2026 vs /fr",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funding-your-trades",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Vérifier contrat funded et droit sur rewards déjà approuvés, contrôles de double comptage entre sanctions, rôle d'une vraie contestation bancaire de bonne foi.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_read"
+    },
+    {
+      "slug": "funded-trader-markets",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 18,
+        "classed": 18,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Réconcilier trois sociétés, obtenir Trader Agreement dans dashboard et annexes par programme, contrôler refus rewards acquis et recours.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_crawled_older"
+    },
+    {
+      "slug": "funded-futures-network",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 17,
+        "classed": 17,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Trader Agreement FFN Cap LLC à obtenir et identité à rapprocher, conditions des retraits acquis.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "directfundedtrader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir CGU texte direct/historique, version, l'accord funded et clauses de reward, liens du vrai vendeur; ne pas marquer examen complet.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fidelcrest",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-09",
+      "remainingCriticalDocument": "Vérifier offre et disponibilité actuelles; obtenir accords du prestataire funded, statuts juridiques, et bannière d'achat avant toute recommandation.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "now-trade-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Obtenir annexe checkout actuelle, CGU principales et entité rémunératrice.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "historical_pdf_page_verified",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "fundings4u",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-17",
+      "remainingCriticalDocument": "Localiser nom de domaine actuel, état de la vente, contrats et historique des versements. Ne pas attribuer un zéro malus pour absence de données.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ultimate-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Recueillir convention funded et le débiteur des rewards; vérifier les voies d'appel, conditions exactes des sanctions et anciennes cohortes.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_general_terms_web_crawled_older"
+    },
+    {
+      "slug": "bullwaves-prime",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir CGU exactes du checkout et convention rémunératrice; vérifier pertes conservées dans le calcul.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_rules_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "dna-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Capture PDF 403; récupérer version 2026 et règles par cohorte, statut après approbation.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "indexed_pdf_direct_403",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "foxx-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "CGU complètes et accord Trader à obtenir, registre et preuve de paiement; blocage initial maintenu pour contrat intégral.",
+      "canPublishNewScore": false,
+      "researchBlocker": "Page CGU inaccessible lors de l'ouverture directe; PDF secondaire du domaine également indisponible. Récupérer CGU actuelles via checkout/archives officielles et vérifier disponibilité du marchand et accord de reward.",
+      "blockerFile": "audits/contract-clauses-wave4-blocked-3-2026-11-24.json",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "sfx-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir contrat rémunérateur souscrit, périmètre de la garantie $1k, exceptions, définition d'inconsistent trading et procédure d'appel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "superfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Capture PDF 403; récupérer conditions actualisées, risk policy et procédure de recours.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "indexed_pdf_direct_403",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "funding-frontier",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-17",
+      "remainingCriticalDocument": "Vérifier site marchand actuel, vendeur légal et accord rémunérateur; ne pas classer une page de 2024 comme contrat courant.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "wemastertrade",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Retrouver CGU actuelles signées et la distinction entre produits WeMasterTrade et WeCopyTrade, procédure de recours, refus des rewards acquis et siège réel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "forexive",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Accord trader, définition abus et recours, partie contractante, cohorte.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "hash-hedge",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier registres, version acceptée et durée/enquête/recours §16, paiements indépendants.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_commercial_terms",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "sure-leverage",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 14,
+        "classed": 14,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Lire Terms & Conditions de ASAP Solutions FZ-LLC et garantie de rewards sous contrat funded",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "titan-capital-markets",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat de rémunération et lien juridique TG Markets/Titan; dossier UK historique à contrôler sans assimiler les entités.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "prop-number-one",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accéder aux CGU actuelles via checkout et à l'accord Independent Contractor applicable, rapprocher entités affichées sur page actuelle.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "trading-cult",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Lire CGU et accord funded effectifs du bon produit, rôle de l'entité payeuse, clauses de modification/résiliation et recours",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "x-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Distinguer version de contrat souscription vs aide funded, inspecter recours et règles individuelles",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "levels",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 2,
+        "classed": 2,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Identifier conditions d'éligibilité et montant/devise/contrat de travail annoncé, entité, preuve de versement.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_contract_excerpt",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "funding-pips",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "CGU contractuelles actuelles, article précis du Member/Master Agreement, distinction responsabilité du client et du prestataire tiers",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "goat-funded-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 5,
+        "classed": 5,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat funded spécifique, conséquences sur rewards déjà éligibles, procédure de contestation et entité(s) Hong Kong/Sainte-Lucie",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-trading-plus",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Lire Terms & Conditions 2026 et Contracted Researcher Agreement effectivement accepté; vérifier conditions de refus payout",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "city-traders-imperium",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Relier version de CGU acceptée au checkout 1-Step / 2-Step / Instant / Direct et au véritable débiteur des récompenses, distinguer CTI FZCO de City Traders Imperium Limited; recherche registre primaire. Pas de nouveau score.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "oneup-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir modèle de contrat partenaire actuel, nom de l'entité rémunératrice, sanctions de funded pour revue",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "leeloo-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 5,
+        "classed": 5,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat Performance Account et version exacte de plafond, droits acquis.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "indexed_terms_direct_404",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "uprofit-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir Trader Agreement par produit et motifs/recours effectivement contractuels; vérifier ampleur de sanction pour comportements non frauduleux",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bulenox",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Vérifier lien/formulaire applicable au checkout, Exhibit A par modèle et procédure d'appel.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_master_agreement",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "breakout-prop",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 2,
+        "classed": 1,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat client total, version des règles par programme et procédure de réexamen",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "rebelsfunding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir accord RCF de rémunération, séparation entité vendeuse/payeuse, traitement des payouts approuvés et recours selon cohorte.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_general_terms_web_crawled_older"
+    },
+    {
+      "slug": "sway-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Lire accord Funded by Sway et règles relatives aux rewards dus, KYC et dates; ne pas confondre « fees and credits » avec payouts approuvés.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_archived_age_note"
+    },
+    {
+      "slug": "ftuk",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 18,
+        "classed": 18,
+        "risks": 6
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir TOS actualisées et Agreement Flex Futures / Instant Sim / Instant PRO, vérifier versions des 7 profitable trading days et mécanisme de refus/révision.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lux-trading-firm",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Obtenir contrat individuel de rémunération et sa version, vérifier mise à jour du site actuel et limites sur rewards approuvés.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_archived_age_note"
+    },
+    {
+      "slug": "funderpro",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Examiner CGU générales et Challenge séparées, version actuelle au checkout, accords de rémunération, exceptions et recours contre §7.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "official_instant_program_terms_march_2026_web"
+    },
+    {
+      "slug": "hyrotrader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Obtenir Funded Trader Agreement BVI, comparer avec la hiérarchie juridique CGU fournisseur UAE/BVI, vérifier modalités précises de reward acquis.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradefundrr",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 1,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "CGU intégrales du nouveau Prop/Pre-Prop et contrats réels Pro/T3; définir pouvoirs de refus payout et droit de recours",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "axi-select",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Conditions générales du compte Axi de la juridiction réelle, contrat Axi Select et retenues/clawback éventuelles, ne pas appliquer une analogie prop firm simulée sans analyse.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ic-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Réconcilier la contrepartie juridique complète, les versions/cohortes, les règles précises par offre, les recours de refus; conserver le contrat de funded.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_full_read_web"
+    },
+    {
+      "slug": "fx2-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 7,
+        "classed": 7,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Contrat Prop Account, protection des payouts approuvés et choix éclairé du crédit.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "blueberry-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "PDF 2024 et contrat dashboard à rapprocher du produit/cohorte; confirmer entité actuelle.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "historical_pdf_page_verified",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "quant-tekel",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Rapprocher entités Quant Tekel SVG/Quant Tekel LTD et QT Treasury Limited citées sur différents textes; fournir programme exact, version, payouts et accords d'adhésion.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "e8-futures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Comparer les contrats E8 Markets, E8 Funding et produits E8 Signature/Zero; obtenir l'accord E8 Trader rémunérateur et limites par programme.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "forex-funds-flow",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-10-30",
+      "remainingCriticalDocument": "Rétablir accès page directe, retrouver contrat de reward de la cohorte et qualifier les conditions de suppression; identifier les deux entités nommées.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "the-concept-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Récupérer Contractor Service Agreement article 3, contrat broker et preuve de version/effectivité entre domaines new/prop, puis recours et droits déjà acquis.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tentrade",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat funded, entité broker effectivement signataire et procédures de contestation.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_program_pdf_page_verified",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "fxify",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 8,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat Trader Agreement fourni post-évaluation, version signée et société débitrice des rewards ; règles de refus et recours par programme.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "blusky-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Comparer parcours et traitement solde résiduel lors de migration, accords live et SIM.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_and_rules",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "lucid-trading",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 18,
+        "classed": 18,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Accords LucidPro/LucidDirect/LucidFlex et Live signés, définitions et seuils microscalping pour date du compte.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "apex-trader-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 14,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Identifier quelle version du User Agreement est acceptée par les nouveaux clients, vérifier les termes PA actuels et les droits impératifs applicables; ne pas conclure juridiquement qu'une clause est automatiquement valide.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "take-profit-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat PRO et PRO+ actuel, effective date, entité rémunératrice, clauses de suppression ou de contestation du payout.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "exfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Vérifier domaine exact, registre Ghana, checkout, accord funded et datation du miroir.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "mirror_terms_unverified_current",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Entité signataire et registre, contrat crypto funded, critères du score stabilité et recours.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "e8-markets",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "E8 Trader agreement/ESPA applicable, seuils de conformité non publiés, distinction modèle E8 Pro/One/Signature",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "brightfunded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accord Funded Trader distinct, effets sur reward validé vs potentiel, application par programme",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "instant-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Lire et contrôler visuellement le PDF via un outil de capture PDF, identifier accord prioritaire et versions 2025/2026; ne pas déduire une clause d'une simple recherche",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "hola-prime",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 12,
+        "classed": 12,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Vérifier contrepartie pays/produit et version signée, accords funded Forex et Futures, risques de suspension d'un paiement approuvé.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_crawled_older"
+    },
+    {
+      "slug": "pipfarm",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 1,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-16",
+      "remainingCriticalDocument": "Obtenir appendice B intégral, compléter conditions de forfait et remises des rewards et vérifier accès direct depuis le site actuel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "trade-the-pool",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Identifier le contrat trader de rémunération, variation plan Stock et versions du payout threshold",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "for-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 2,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Accord Member/Master spécifique et date, portée des règles commerciales vs funded, droit local de contester un paiement",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ftmo",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 7,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrat FTMO Account effectivement signé, distinction reward potentiel/gain acquis, cohorte 1-Step/2-Step/Swing et seuils exacts. Ancien malus mécanique −8 non approuvé.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "topstep",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Accord Express Funded et Live applicable en 2026 selon date de compte ; vérifier portée des recours et savoir si « balance forfeited » inclut demandes déjà approuvées.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "myfundedfutures",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir Simulated Trader Agreement et l'Appendix correspondant au programme actuel. Ne pas transférer les termes de MyFunded Perpetuals à MFFU.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "the5ers",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 12,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Distinguer accord du Challenge et funded/reward, exceptions de publication légale / demandes de support, recours et version du contrat acceptée.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fintokei",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 12,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Lire V17 et annexes FPP par programme et cohorte, distinguer prime de performance et évaluation, revoir éventuelles clauses de résiliation.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradeify",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Préciser selon offre Select / Growth / Lightning / Elite Live et date d'achat les annexes incorporées ; distinguer clause bancaire réclamant restitution vs droit local de contestation des frais.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "audacity-capital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Isoler le texte juridique réellement accepté au checkout et le rôle d'AudaCity Global LTD/éventuelles autres entités, puis confirmer si Ability One est encore contradictoire. Notice Trustpilot distincte des clauses.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "myfundedcapital",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-09",
+      "remainingCriticalDocument": "Version effectivement acceptée par chaque cohorte ; contraste avec anciennes CGU indexées, portée des exceptions à effet immédiat.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "earn2trade",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Contrats LiveSim/Live du partenaire de trading effectif, recours et règles de payout selon programme; ne pas convertir suspension du site en suppression de rémunération.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "website_terms_not_live_funded_contract"
+    },
+    {
+      "slug": "fundednext",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-deep-sweep-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 5
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Comparer CGU effectivement acceptées et annexes selon pays/produit ; conserver la preuve de la variante de pénalité et déterminer sa date d'effet ; portée du recours.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "aqua-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 2,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Trouver funded trader agreement actuel, vérifier conditions de retenue et recours, résoudre différences de programme (Instant/Step)",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "finotive-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-6-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Relier la version effectivement signée et programmes, vérifier si recours/strike permettent appel d'une sanction fondée sur classification subjective; examiner conditions de payout approuvé.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "full_official_terms_web_crawled_older"
+    },
+    {
+      "slug": "funding-traders",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 4,
+        "classed": 4,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat funded signé par modèle, procédure d'appel / arbitrage et portée des restrictions sur gains accumulés",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "rzr-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-zero-classified-8-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 0,
+        "classed": 0,
+        "risks": 0
+      },
+      "legacyLastReviewed": null,
+      "remainingCriticalDocument": "Archiver capture datée et hash de chaque version RZR/Hantec, accord Trader de §4.2, entité applicable au checkout et anciens comptes.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lark-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "CGU exactes toujours bloquées par rendu; obtenir contrat individuel et preuve de version.",
+      "canPublishNewScore": false,
+      "researchBlocker": "La page renvoie un document vide ou non exploitable, hormis un élément de navigation. Vérifier l'offre et le checkout actifs, obtenir conditions client, accord funded et article de plafonnement applicable.",
+      "blockerFile": "audits/contract-clauses-wave4-blocked-3-2026-11-24.json",
+      "contractEvidenceStatus": "indexed_terms_render_mismatch",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "the-trading-pit",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-medium-firms-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 3,
+        "classed": 3,
+        "risks": 0
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrat Earning/Performance Phase d'après challenge CFD/Futures et clauses de recours, version actuelle vs ancienne",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ment-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 3,
+      "priorRuleClassification": {
+        "rules": 11,
+        "classed": 11,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrats Forex/Futures/Equities distincts, version applicable, recours et définition exactes de sommes dues.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "elite-trader-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave6-final-25-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Version novembre et cohortes; accord live/Vault, clauses de dette et droits impératifs, procédure d'appel.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED"
+    },
+    {
+      "slug": "atlas-funded",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-7-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 13,
+        "classed": 13,
+        "risks": 1
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Confirmer contrat de reward funded et juridiction du payeur; examiner annexes CFD/Futures, plans Direct/Access et cas de clawback.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_recent_web"
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 8,
+        "classed": 8,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Obtenir contrat final/conditions Scholarship par programme et cohorte, preuve du droit de contestation et réconciliation entité/clients USA.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_full_read_web"
+    },
+    {
+      "slug": "blue-guardian",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 15,
+        "classed": 15,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Récupérer Trader Agreement CFD/futures et versions 2026, motivations/reviews, contrat direct funded, portée juridique du plafond $8k et alternatives.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "traders-launch",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 9,
+        "classed": 9,
+        "risks": 4
+      },
+      "legacyLastReviewed": "2026-11-20",
+      "remainingCriticalDocument": "Vérifier l'accord SimFunded individuel, les critères de conformité et le statut de reward acquis/apprové; confronter la version acceptée au programme actuel.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ofp-funding",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 6,
+        "classed": 6,
+        "risks": 3
+      },
+      "legacyLastReviewed": "2026-11-18",
+      "remainingCriticalDocument": "Contrôler quelles versions du Plan, Schedule A et normes de marché s'appliquent au compte; identifier tous les recours et le traitement d'une sanction contestée.",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-bull",
+      "coverage": "RESEARCH_FILED_NOT_CLOSED",
+      "sourceFile": "audits/contract-clauses-wave4-primary-10-2026-11-24.json",
+      "observations": 4,
+      "priorRuleClassification": {
+        "rules": 10,
+        "classed": 10,
+        "risks": 2
+      },
+      "legacyLastReviewed": "2026-11-19",
+      "remainingCriticalDocument": "Confirmer dates des CGU 2026 et accord financé, portée des limites de risque 2% vs simple recommandation, rappel de version par cohorte.",
+      "canPublishNewScore": false,
+      "contractEvidenceStatus": "primary_terms_web_archived_age_note"
+    }
+  ],
+  "updatedOn": "2026-11-24",
+  "updateDetail": "Wave 6: all final 25 profiles screened and 75 observations filed; evidence quality varies, old PDFs and blocked/rerendered terms clearly flagged. Original three have partial official FAQ but full contracts remain unresolved. Trustpilot, primary registries and independent payouts not reverified in this wave. No scores changed."
+}
