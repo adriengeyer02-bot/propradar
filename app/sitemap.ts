@@ -112,12 +112,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.82,
     })),
+    ...editorialBriefs.map((brief, index) => ({
+      url: `${SITE_URL}${getEditorialBriefPath(brief)}`,
+      lastModified: new Date(brief.updatedAt),
+      changeFrequency: index === 0 ? ('weekly' as const) : ('monthly' as const),
+      priority: index === 0 ? 0.86 : 0.74,
+    })),
+    ]),
+    // French canonical URLs must never enter generic locale-prefix expansion.
     {
       url: `${SITE_URL}/fr/articles`,
       lastModified: new Date(frArticles.reduce((latest, article) => (article.updated > latest ? article.updated : latest), '2026-01-01')),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-      alternates: { languages: { fr: `${SITE_URL}/fr/articles`, en: `${SITE_URL}/guides` } },
     },
     ...frArticles.map((article) => ({
       url: `${SITE_URL}/fr/${article.slug}`,
@@ -132,13 +139,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
           }
         : {}),
     })),
-    ...editorialBriefs.map((brief, index) => ({
-      url: `${SITE_URL}${getEditorialBriefPath(brief)}`,
-      lastModified: new Date(brief.updatedAt),
-      changeFrequency: index === 0 ? ('weekly' as const) : ('monthly' as const),
-      priority: index === 0 ? 0.86 : 0.74,
-    })),
-    ]),
     // This two-language explainer is intentionally independent from the SEO guide
     // registry while an older SEO PR is being reviewed. Do not enumerate other
     // locales: no translated article exists there.

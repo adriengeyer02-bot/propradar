@@ -5,6 +5,34 @@ import type { GuideArticleTranslations } from '../types';
  * have a hand-written French article (/fr/<slug>) that the French guide URL redirects to.
  */
 const fr: GuideArticleTranslations = {
+  'prop-firm-payout-rapide': {
+  "intro": "Un payout rapide ne signifie pas que les gains sont immédiatement disponibles. Distinguez l'éligibilité, la validation et la réception. Conditions officielles consultées le 25 novembre 2026, sans mesure indépendante des délais réels.",
+  "sections": [
+    {
+      "heading": "Délais de retrait : comparer les trois étapes",
+      "paragraphs": [
+        "FTMO CFD : demande possible dès le 14e jour après le premier trade du compte concerné, sous réserve des objectifs et des conditions.",
+        "Topstep Express Funded : Standard et Consistency ont des conditions de jours distinctes ; retrait limité à 50 % du solde et à un plafond propre au parcours.",
+        "Tradeify Select : Flex exige cinq jours gagnants ; Daily impose une réserve et des plafonds selon la date d'achat.",
+        "FundingPips 2-Step Standard : la consistance de 35 % concerne le cycle On Demand, pas tous les cycles."
+      ]
+    },
+    {
+      "heading": "Exemple : combien peut-on réellement retirer ?",
+      "paragraphs": [
+        "Compte fictif : 4 000 $ de gains éligibles, réserve de 2 000 $, plafond brut de 1 500 $. La demande brute maximale est de 1 500 $. Avec un partage hypothétique de 80 %, le montant reçu est de 1 200 $ avant frais. Le contrat réel peut appliquer le plafond après le partage.",
+        "Vérifiez le drawdown après retrait et le traitement des gains excédentaires."
+      ]
+    },
+    {
+      "heading": "Vérifier les preuves de paiement",
+      "paragraphs": [
+        "Une FAQ décrit une politique, pas des délais effectivement mesurés. Une transaction datée et vérifiable constitue une preuve plus solide du paiement concerné, sans garantir les retraits futurs.",
+        "Conservez le contrat et la version du programme ; demandez une clarification écrite en cas de contradiction."
+      ]
+    }
+  ]
+},
   'goat-funded-trader-avis': {
     intro: "GOAT Funded Trader est l'une des prop firms les plus visibles des deux dernières années : réductions agressives, nombreux modèles et présence constante sur les réseaux sociaux. La visibilité n'est pas la fiabilité. Cet avis sépare ce qui est documenté de ce qui relève du marketing, et place en premier les règles du compte financé, parce que c'est là que les traders perdent leurs paiements.",
     sections: [

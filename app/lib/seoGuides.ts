@@ -430,9 +430,9 @@ export const seoGuides: SeoGuide[] = [
   },
   {
     slug: 'prop-firm-payout-rapide',
-    title: 'Fast payout prop firm: withdrawals, proof and traps',
+    title: 'Fast Payout Prop Firms: Withdrawal Rules, Caps & Proof (2026)',
     metaDescription:
-      'Guide to prop firms with fast payout: delay, withdrawal proof, payout risk, caps and conditions before paying for a challenge.',
+      'Compare prop firm payout eligibility, withdrawal caps and buffers at FTMO, Topstep, Tradeify and FundingPips. Check the official rules before buying.',
     eyebrow: 'Payout search',
     h1: 'Fast payout prop firm: check proof, not only the promise',
     intent: 'risque',
@@ -461,6 +461,8 @@ export const seoGuides: SeoGuide[] = [
     ],
     internalLinks: [
       { label: 'Payout risks', href: '/prop-firm-payout-risk' },
+      { label: 'Hidden rules and payout traps', href: '/guides/prop-firm-hidden-rules' },
+      { label: 'Drawdown after withdrawals', href: '/guides/prop-firm-drawdown' },
       { label: 'Source audit', href: '/audit' },
       { label: 'Filtered Trustpilot', href: '/trustpilot-prop-firms' },
     ],

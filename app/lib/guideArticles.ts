@@ -61,6 +61,97 @@ export type GuideArticle = {
 
 export const guideArticles: Record<string, GuideArticle> = {
   'hyrotrader-vs-tradeify': hyroTradeifyArticle,
+  'prop-firm-payout-rapide': {
+  "published": "2026-11-25",
+  "updated": "2026-11-25",
+  "intro": "Fast payout processing is not the same as fast access to profits. This guide separates eligibility, review and settlement using official policies checked on 25 November 2026, not independently measured payment times.",
+  "keyPoints": [
+    "Check qualifying days, minimum profit, consistency and retained buffers before comparing payout speed.",
+    "Distinguish per-request caps from permanent profit deletion.",
+    "Compare the exact programme, account size and purchase date."
+  ],
+  "sections": [
+    {
+      "heading": "First payout eligibility versus processing time",
+      "paragraphs": [
+        "A 24-hour processing claim does not remove the earlier eligibility requirements. Measure qualifying days, account review and settlement separately."
+      ],
+      "compare": {
+        "columns": [
+          "Path",
+          "Eligibility and limits"
+        ],
+        "rows": [
+          {
+            "label": "FTMO CFD",
+            "values": [
+              "Reward request",
+              "From day 14 after the first trade on the relevant account, subject to objectives and terms."
+            ],
+            "sourceUrl": "https://ftmo.com/fr/faq/comment-puis-je-retirer-ma-recompense/"
+          },
+          {
+            "label": "Topstep Express Funded",
+            "values": [
+              "Standard or Consistency",
+              "Different qualifying-day rules; withdrawal limited to 50% of balance and a path-specific cap."
+            ],
+            "sourceUrl": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+          },
+          {
+            "label": "Tradeify Select",
+            "values": [
+              "Flex or Daily",
+              "Flex requires five winning days; Daily requires a retained buffer and has purchase-date-specific caps."
+            ],
+            "sourceUrl": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+          },
+          {
+            "label": "FundingPips 2-Step Standard",
+            "values": [
+              "On Demand",
+              "35% consistency applies to this reward cycle, not every cycle."
+            ],
+            "sourceUrl": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+          }
+        ],
+        "note": "Official policies checked 25 November 2026. Not a ranking of actual payment speeds."
+      }
+    },
+    {
+      "heading": "Worked example: how much can you withdraw?",
+      "paragraphs": [
+        "Suppose a hypothetical funded account has $4,000 in eligible profit, a $2,000 retained buffer and a $1,500 gross per-request cap. The maximum gross request is $1,500. With an illustrative 80% trader split, the reward is $1,200 before fees. Real contracts may apply the cap after the split instead.",
+        "Check the post-withdrawal drawdown floor and whether excess profits remain available, expire or are deleted."
+      ]
+    },
+    {
+      "heading": "What counts as reliable payout evidence?",
+      "paragraphs": [
+        "A published policy describes eligibility and expected processing, not measured payment times. A dated, independently verifiable transaction is stronger evidence of that specific payment, but cannot guarantee future payouts.",
+        "Save the agreement, account variant and purchase date. Ask for written clarification of contradictions before buying."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "FTMO official reward FAQ",
+      "url": "https://ftmo.com/fr/faq/comment-puis-je-retirer-ma-recompense/"
+    },
+    {
+      "label": "Topstep payout policy",
+      "url": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+    },
+    {
+      "label": "Tradeify Select payout policies",
+      "url": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+    },
+    {
+      "label": "FundingPips 2-Step Standard",
+      "url": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+    }
+  ]
+},
   'prop-firm-hidden-rules': {
     published: '2026-11-16',
     updated: '2026-11-16',
