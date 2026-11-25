@@ -1,0 +1,22 @@
+{
+ "slug": "kortanafx",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "The Provider reserves the right to determine, at its own discretion, whether certain trades, practices, strategies or situations are Forbidden Trading Practices, including trading that establishes justified concerns that the provider might suffer financial or other harm; it may then exercise the actions of clauses 5.5 and 5.6 (cancel trades, terminate all contracts) at its own discretion.",
+   "source": "https://kortanafx.com/terms.html",
+   "locator": "§5.4.2; §5.5-5.6",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Live Kortana Trader Program contract is offered by a third-party company, strictly between the customer and that company.",
+   "source": "https://kortanafx.com/terms.html",
+   "locator": "§7",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

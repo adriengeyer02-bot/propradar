@@ -1,0 +1,15 @@
+{
+ "slug": "oneup-trader",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "PARTIAL",
+ "facts": [
+  {
+   "code": "NOTE",
+   "text": "Archived terms are website terms of use only (guidelines incorporated, may change at the Company’s sole discretion); the funded-trader rules and any additional terms accepted at registration were not in the archive.",
+   "source": "https://www.oneuptrader.com/terms-conditions/",
+   "locator": "Terms of use",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

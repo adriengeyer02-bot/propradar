@@ -1,0 +1,22 @@
+{
+ "slug": "sway-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "4.2: fees and parameters may change at any time with immediate effect on all existing challenges.",
+   "source": "https://my.swayfunded.com/p/terms",
+   "locator": "§4.2",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B2",
+   "text": "The Company retains the right, at its sole and absolute discretion, to prohibit or block any individual from accessing or participating in the program for any reason; if, at its sole discretion, it determines that trading falls under Prohibited Trading, participation may be terminated with forfeiture of fees or credits.",
+   "source": "https://my.swayfunded.com/p/terms",
+   "locator": "§7.5; §7.6",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

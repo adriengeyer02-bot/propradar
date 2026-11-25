@@ -1,0 +1,29 @@
+{
+ "slug": "blusky-trading",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Prohibited trading patterns include any activity deemed by BluSky Trading Company (in its sole discretion) as non-commercial, designed to game the system, lacking a viable trading strategy, or demonstrating a lack of responsible trading; BluSky may terminate an account for any reason in its discretion and has the sole right to decide whether a user is in violation.",
+   "source": "https://help.blusky.pro/en/articles/12069208-ethical-trading-conduct",
+   "locator": "Ethical trading conduct; Terms (blusky.pro/terms)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Once a Live Brokerage invitation is issued, all active Sim Funded accounts become ineligible for further trading or payout requests.",
+   "source": "https://help.blusky.pro/en/articles/17290897-live-brokerage-qualifying",
+   "locator": "Live Brokerage",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "Orbit plans: 40% consistency while Sim Funded.",
+   "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases",
+   "locator": "Orbit plans",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

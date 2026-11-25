@@ -1,0 +1,22 @@
+{
+ "slug": "fx2-funding",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "PARTIAL",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "We reserve the right to increase the margin requirement, limit the max order size or limit the number of open positions you may enter or maintain in the Funded Account at any time, and to revise in response to market conditions the drawdown levels at which trading in the Funded Account will be halted.",
+   "source": "https://fx2funding.com/faqs/",
+   "locator": "FAQ (Funded Account)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "The archived terms page held only 2,217 characters (likely rendered by script); the Dashboard Analytix terms PDF saved alongside is a generic template whose attribution to FX2 is not confirmed.",
+   "source": "https://fx2funding.com/terms-and-conditions/",
+   "locator": "Terms page",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

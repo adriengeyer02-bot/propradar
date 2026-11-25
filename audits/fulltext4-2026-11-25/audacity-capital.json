@@ -1,0 +1,22 @@
+{
+ "slug": "audacity-capital",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "Material changes affecting existing accounts, including changes to trading rules, applicable fees, or payout terms, take effect after at least seven calendar days’ notice by email or through the User Area.",
+   "source": "https://www.audacity.capital/terms-and-conditions/",
+   "locator": "Terms, changes clause",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "At least seven calendar days’ notice before any material change affecting existing accounts; price changes for new purchases do not affect existing accounts.",
+   "source": "https://www.audacity.capital/terms-and-conditions/",
+   "locator": "Terms, changes clause",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

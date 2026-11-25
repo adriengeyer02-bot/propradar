@@ -1,0 +1,29 @@
+{
+ "slug": "daytraders-com",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "A user may be barred from a Reward at the sole discretion of Day Traders for disregard for these Terms or any other disruptive manner; for Prohibited Conduct Day Traders may determine at its own discretion the nature of the behaviour and reasonable consequences.",
+   "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+   "locator": "Terms of Use §3; Rewards",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B6",
+   "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+   "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+   "locator": "Rewards",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "B7",
+   "text": "Funding with Day Traders capital or another product after the evaluation shall be governed pursuant to separate or supplemental written agreement, not published with the terms.",
+   "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+   "locator": "§3 Services",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

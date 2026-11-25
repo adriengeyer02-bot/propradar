@@ -1,0 +1,22 @@
+{
+ "slug": "tx3-funding",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "TX3 may suspend or terminate accounts immediately for breach or for suspicion of fraud, abuse, harassment, or regulatory risk; termination for breach results in forfeiture of fees and payouts. TX3 may freeze accounts, delay payouts or terminate access at its discretion if suspicious activity is detected.",
+   "source": "https://www.tx3funding.com/en/terms",
+   "locator": "§8; §11",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "CONS_INFO",
+   "text": "1-Phase: 50% consistency on the funded stage only (Pro 40% up to 50K; Flex 20%).",
+   "source": "https://faq.tx3funding.com/help/tx3-funding/rules-and-objectives-1-phase",
+   "locator": "Consistency rule",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

@@ -12,12 +12,16 @@ evidence); points are lost only for established facts. Unknown costs nothing.
 Automatic codes are CANDIDATES found by fixed regexes on the full text, each
 with its paragraph; hand-verified sheets override them.
 """
-import json, re, os, sys, glob, csv
+import glob, json, re, os, sys, glob, csv
 
 A = {k: v for k, v in zip(sys.argv[1::2], sys.argv[2::2])}
 BASE = json.load(open(A['--base']))
 CLAUSES = A['--clauses']
 VERIFIED = A['--verified'].split(',')
+# Firms already approved on scale C before the history rule was tightened (2026-11-25 evening):
+# a new full reading cannot raise a firm with dated incidents until the history criterion is coded.
+VERIFIED_SLUGS = {os.path.basename(f)[:-5] for d in VERIFIED for f in glob.glob(os.path.join(d, '*.json'))}
+APPROVED_C = set(json.load(open('app/data/scale-c.json'))['firms'])
 REVIEWED = A.get('--reviewed', '').split(',') if A.get('--reviewed') else []
 OUT = A['--out']
 YEAR = 2026
@@ -205,7 +209,7 @@ for f in BASE:
     reviewed = bool(REVIEWED) and any(os.path.exists(os.path.join(d, f'{slug}.json')) for d in REVIEWED)
     rev = verified_codes(slug, REVIEWED) if reviewed else {}
     scored_auto = {k: v for k, v in (auto or {}).items() if k != 'B3gen'}
-    if ver:
+    if ver or slug in VERIFIED_SLUGS:
         source, codes = 'contrat lu en entier', ver
     elif reviewed:
         source, codes = 'extraits relus à la main', rev
@@ -216,7 +220,7 @@ for f in BASE:
     # Only a hand reading can move a score; an empty robot extraction proves nothing.
     read = source in ('contrat lu en entier', 'extraits relus à la main')
     paused = any(re.search(r"paus|suspend|halt|went dark|cease|shut ?down|closed", i, re.I) for i in f['incidents'])
-    if paused and not ver:
+    if paused and not (ver or slug in VERIFIED_SLUGS):
         read = False
     if 'B1' in codes and 'B2' in codes:
         # B1 (any reward removable at discretion) already covers B2 (removal for
@@ -285,7 +289,7 @@ for f in BASE:
             proposed, flag = f['score'], 'hausse en attente de lecture complète'
         elif raw < f['score'] - 10:
             proposed, flag = f['score'] - 10, 'baisse plafonnée à 10 (lecture partielle)'
-    if proposed > f['score'] and real_incidents(f) and slug not in INCIDENTS and source != 'contrat lu en entier':
+    if proposed > f['score'] and real_incidents(f) and slug not in INCIDENTS and (source != 'contrat lu en entier' or slug not in APPROVED_C):
         proposed = f['score']
         flag = 'hausse bloquée : incidents du dossier à recoder'
     publish = read

@@ -1,0 +1,15 @@
+{
+ "slug": "axi-select",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "PARTIAL",
+ "facts": [
+  {
+   "code": "NOTE",
+   "text": "The archive holds Axi’s broker legal page and help-centre articles only; the Axi Select programme terms were not captured.",
+   "source": "https://www.axi.com/int/legal-documentation",
+   "locator": "Legal documentation",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

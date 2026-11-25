@@ -1,0 +1,22 @@
+{
+ "slug": "sure-leverage",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2A",
+   "text": "The Company reserves sole discretion to determine whether trading activity violates these Terms or the published Program Rules, and may terminate where continued participation presents legal, regulatory, operational, or reputational risk; termination does not affect any rights or obligations accrued before termination.",
+   "source": "https://sureleveragefunding.com/terms-and-conditions/",
+   "locator": "§8; §15 (PDF saved by Geyer)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Termination does not affect any rights or obligations accrued before termination.",
+   "source": "https://sureleveragefunding.com/terms-and-conditions/",
+   "locator": "§15",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

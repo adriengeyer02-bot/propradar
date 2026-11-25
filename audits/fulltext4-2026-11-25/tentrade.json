@@ -1,0 +1,15 @@
+{
+ "slug": "tentrade",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "TenTrade reserves the sole and absolute discretion to determine whether trading activity violates the program’s risk framework, spirit, or operational objectives. Where prohibited or abusive conduct is identified or reasonably suspected, TenTrade may take any action it deems appropriate, including trade cancellation, payout denial, account termination, or permanent disqualification. No review or appeal route was found.",
+   "source": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+   "locator": "Funded Trader terms (June 2026) §11",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

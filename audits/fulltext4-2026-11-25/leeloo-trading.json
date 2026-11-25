@@ -1,0 +1,15 @@
+{
+ "slug": "leeloo-trading",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B3",
+   "text": "Unless Leeloo consents, in its sole and absolute discretion, Leeloo is not obligated to pay the Trader more than the maximum payout amount (Account Payout Cap) per user. Account Payout Caps are subject to change at any time.",
+   "source": "https://www.leelootrading.com/terms-conditions",
+   "locator": "§8 Subscription and payouts",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

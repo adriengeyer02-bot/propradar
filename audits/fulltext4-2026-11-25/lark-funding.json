@@ -1,0 +1,22 @@
+{
+ "slug": "lark-funding",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "The Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion; several prohibited practices apply as determined by the Company in its sole and absolute discretion.",
+   "source": "https://larkfunding.com/terms-of-use",
+   "locator": "§4.6; §4 Prohibited Uses",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "All-or-nothing style is capped by a $10,000 daily and per-trade gain limit (trades at similar times count as one).",
+   "source": "https://larkfunding.com/terms-of-use",
+   "locator": "§4",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

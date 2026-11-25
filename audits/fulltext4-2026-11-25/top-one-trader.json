@@ -1,0 +1,22 @@
+{
+ "slug": "top-one-trader",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "CONS_INFO",
+   "text": "The rules page lists no consistency rule for the 1-Step and 2-Step funded accounts (NOVA funded: 20% ESS score); an earlier help-centre reading of a 15% score is superseded by the current rules page.",
+   "source": "https://checkout.toponetrader.com/rules/",
+   "locator": "Rules table",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "NOTE",
+   "text": "Anti-disparagement wording exists in the terms; its sanction was not established. Funded payouts are capped at $10k per 30 days on the 2-Step model.",
+   "source": "https://www.toponetrader.com/terms-and-conditions",
+   "locator": "Terms; rules table",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

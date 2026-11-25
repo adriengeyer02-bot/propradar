@@ -1,0 +1,29 @@
+{
+ "slug": "atlas-funded",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "SAFE",
+   "text": "Accounts can be suspended or closed for a rule breach or suspicious activity, with an appeal to support within 10 business days of the notice.",
+   "source": "https://www.atlasfunded.com/terms",
+   "locator": "§3.4 (PDF saved by Geyer, 25 Nov 2026)",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "You are free to share your honest experience with Atlas, good or bad. That includes reviews, complaints and public discussion of our rules. We will not act against you for honest feedback or criticism. Only knowingly false or defamatory statements are sanctioned.",
+   "source": "https://www.atlasfunded.com/terms",
+   "locator": "§7 Public statements and conduct",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Add-ons apply from the moment you buy them and never change payouts already made.",
+   "source": "https://www.atlasfunded.com/terms",
+   "locator": "§6.1",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}

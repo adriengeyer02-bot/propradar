@@ -1,0 +1,29 @@
+{
+ "slug": "get-leveraged",
+ "method": "full-text archive (agent/terms-archive, 2026-11-25): every archived terms/help paragraph matching the discretion, sanction, rule-change, separate-agreement, asymmetry and consistency lexicons reviewed by hand; sanction clauses re-read in the full text",
+ "checkedOn": "2026-11-25",
+ "status": "TERMS READ",
+ "facts": [
+  {
+   "code": "CONS_20_DELAY",
+   "text": "The highest day may not exceed 20% of total profit before a reward request (request delayed until it falls below).",
+   "source": "https://getleveraged.com/terms/",
+   "locator": "FAQ / payout rules",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Rule changes get at least 14 days’ notice and apply only to accounts bought after the effective date; existing accounts keep the rules in force when they were bought (exceptions: law, genuine abuse, with refund option).",
+   "source": "https://getleveraged.com/terms/",
+   "locator": "§7",
+   "checkedOn": "2026-11-25"
+  },
+  {
+   "code": "SAFE",
+   "text": "Any Reward already approved before the closure of an inactive account will still be paid.",
+   "source": "https://getleveraged.com/terms/",
+   "locator": "§5",
+   "checkedOn": "2026-11-25"
+  }
+ ]
+}
