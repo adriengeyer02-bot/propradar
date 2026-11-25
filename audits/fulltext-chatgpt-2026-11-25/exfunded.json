@@ -1,0 +1,39 @@
+{
+  "slug": "exfunded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Full archived website terms 429555093135.txt; selected FAQ passages 69ca150eaa97.txt (25,278 chars). Terms mostly website use rather than trading agreement. Other files not read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "FAQ prohibited-strategies section: review at any time without notice, “withdraw any profits” deemed inappropriately gained “in its sole discretion”. Undefined judgment extends beyond listed techniques.",
+      "source": "https://exfunded.sandai-investment.com/faq/",
+      "locator": "Rules > Prohibited trading strategies; paragraph before list and EA paragraph",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ lot-size consistency between 0.5× and 2× average lot; a volume-rule first violation returns account to Phase 1 and forfeits all profits, second breach. Lot-size rule not best-day consistency.",
+      "source": "https://exfunded.sandai-investment.com/faq/",
+      "locator": "Withdrawal Eligibility; Lot Consistency; Max Trading Volume",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Website terms §1 identifies ExFunded LLC Ghana, §13 Ghana law/courts; no funded payout agreement in terms.",
+      "source": "https://exfunded.sandai-investment.com/terms-condition/",
+      "locator": "§1, §13",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "FAQ forfeiture tied to gains deemed inappropriate; B2 not unconditional.",
+    "B3": "§10 generic linking terms change, no purchased-account rule change.",
+    "B6": "§7 generic comment moderation and no defamation, not payout sanction."
+  },
+  "toVerify": {
+    "coverage": "Read full FAQ including IP, lot rules, payout conditions and other archive files; actual trading/funded agreement.",
+    "B2A": "Look for review/appeal or reasons.",
+    "CONS": "Check funded best-day threshold by programme."
+  }
+}

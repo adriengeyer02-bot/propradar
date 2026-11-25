@@ -1,0 +1,38 @@
+{
+  "slug": "foxx-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read full HTML CG 31000ad7c24b.txt §§1–22.8 and full visible FAQ a09c659c6136.txt; partial secondary PDF d07399f586eb.txt and payout page c1e59e0e7e5f.txt. FAQ accordions not expanded; current version/contracting entity to reconcile.",
+  "facts": [
+    {
+      "code": "B1",
+      "text": "§22.4 “Payouts remain entirely discretionary and subject to internal compliance review”; decision to refuse based on trading style final and non-appealable. §22.7 reiterates discretionary payouts. B1 candidate absorbs B2; Claude to verify whether wording restricts discretion exclusively to conduct.",
+      "source": "https://www.foxx-funded.com/terms-and-conditions/",
+      "locator": "§22.4, §22.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ permits denial of payout for frequent strategy changes, undisciplined trading or trades that fail to align with realistic conditions. If B1 rejected, B2 supported.",
+      "source": "https://www.foxx-funded.com/faqs/",
+      "locator": "Trading Rules > Gambling Policy > Undisciplined Trading and enforcement",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "1-Step FAQ displays 25% of cycle profit per trade idea; not a best-day consistency formula; Instant tab not captured. HTML §1 identifies SEMIZU, FAQ footer distinguishes Foxx Limited Saint Lucia for MT5. PDF §5.1 mentions Bespoke Funding; version/entity conflict.",
+      "source": "https://www.foxx-funded.com/faqs/",
+      "locator": "Risk Overview; footer; PDF https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf §5.1",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B3": "§1.3 generic continued use and §8.1 guidelines changeable anytime, no explicit existing account scope in read text.",
+    "B4": "Version/entity differences not yet same-point FAQ/contract contradiction.",
+    "CONS": "25% trade idea not confirmed best-day consistency; no assumption on most lenient plan."
+  },
+  "toVerify": {
+    "coverage": "Finish PDF, AML, payout and duplicate checks, all accordion answers and Trader Agreement; validate current checkout and entity by platform.",
+    "B1": "Determine if “entirely discretionary” applies to earned payouts beyond conduct. If restricted, B2 rather than B1."
+  }
+}

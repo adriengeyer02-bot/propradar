@@ -1,0 +1,31 @@
+{
+  "slug": "tradefundrr",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Full uploaded French OCR refund policy upload-9b349b4c37.txt pp.1–4. Other upload-69d2802319.txt header is privacy notice (not CG). Help index not yet read; actual main Terms and Conditions not present in archive index. Source is official public refund-policy route, actual OCR from Termly.",
+  "facts": [
+    {
+      "code": "NOTE",
+      "text": "Refund policy §5: chargeback before contacting support may suspend all associated services and cause loss of ongoing evaluation or funded account pending resolution. Post-resolution restoration or permanent termination at discretion; no express accrued-payout forfeiture in refund text.",
+      "source": "https://tradefundrr.com/pages/fee-refund-policy",
+      "locator": "Uploaded refund OCR §5, p.3/4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "EU/EEA withdrawal described as available within 14 days if market-data agreements not signed, full reimbursement within 14 days. Subject to applicable mandatory rights.",
+      "source": "https://tradefundrr.com/pages/fee-refund-policy",
+      "locator": "Uploaded refund OCR §3, p.2/4",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Refund suspension is not a clause removing earned payouts.",
+    "E_HARSH": "§5 account loss possible, but no express forfeiture of accrued profits; verify actual agreement.",
+    "B2": "No trading risk sanction in refund policy."
+  },
+  "toVerify": {
+    "coverage": "Actual evaluation and funded contract, programme payout/rules FAQ bodies. Uploaded PDFs are privacy notice and refund policy, not terms. Review public fee-refund page and help solutions index.",
+    "CONS": "No main programme threshold established."
+  }
+}
