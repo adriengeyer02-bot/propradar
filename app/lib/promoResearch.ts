@@ -20,7 +20,8 @@ import {
 } from './propFirms';
 import { isProgramPromotionCurrent, programPromotions } from './programPromotions';
 
-export const PROMO_REVIEW_DATE = '2026-11-23';
+export const PROMO_REVIEW_DATE = '2026-11-25';
+const ORIGINAL_SEASONAL_REVIEW_DATE = '2026-11-23';
 
 export type PromoProofLevel = 'Official' | 'PropRadar affiliate' | 'Confirm at checkout' | 'Good deal without code';
 export type PromoCategory = 'code' | 'affiliate' | 'official-discount' | 'price-opportunity' | 'futures';
@@ -50,6 +51,7 @@ export type PromoDeal = {
   heroRank?: number;
   /** Source-checked seasonal offer, never an editorial firm rating. */
   blackFriday?: boolean;
+  checkedOn?: string;
   /** Exact sourced before/after price for the named challenge; never extrapolate to other plans. */
   priceExample?: { plan: string; accountSize: number; currency: 'USD' | 'EUR' | 'GBP'; before: number; after: number; checkedOn: string; sourceUrl: string };
   /** Exact expiration, so a seasonal offer is not published after it ends. */
@@ -96,10 +98,10 @@ const allPromoDeals: PromoDeal[] = [
     sourceUrl: FXIFY_AFFILIATE_URL,
     sourceLabel: 'FXIFY checkout + PropRadar affiliate link',
     sourceNote: 'FXIFY gave PropRadar the code FXIFY0EVDNU (25% off all programs). On 2026-11-14 the official home page showed FUNDED25 (25% off + 2 free add-ons, excl. Instant Lite, expires 24 November 2026) and ONESTEP35 (35% off One Phase, new traders, expires 31 December 2026).',
-    consumerVerdict: 'Same percentage as the public FUNDED25 sale, which adds 2 free add-ons until 24 November 2026; new traders buying One Phase get more with ONESTEP35. Compare at checkout.',
-    caveats: ['FUNDED25 adds 2 free add-ons until 24 November 2026', 'ONESTEP35: 35% on One Phase for new traders', 'Partner code: PropRadar may receive a commission; no impact on the score'],
+    consumerVerdict: 'The earlier FUNDED25 offer ended 24 November. BLACK35 is the stronger current public code for eligible programs; Instant Funding Lite is excluded. Compare the partner code if the public offer does not apply.',
+    caveats: ['BLACK35 excludes Instant Funding Lite', 'Do not combine coupon codes', 'Partner code: PropRadar may receive a commission; no impact on the score'],
     bestFor: ['FXIFY', 'forex', 'all programs'],
-    checkoutTip: 'Try FXIFY0EVDNU, FUNDED25 and ONESTEP35 on your cart and keep the lowest total.',
+    checkoutTip: 'Compare BLACK35 and FXIFY0EVDNU on the selected program; FUNDED25 has expired.',
   },
   {
     slug: 'e8-markets',
@@ -710,8 +712,8 @@ const allPromoDeals: PromoDeal[] = [
   {
     slug: 'funding-pips',
     label: 'Official first-purchase code',
-    title: 'HELLO: 20% off a first FundingPips purchase',
-    code: 'HELLO',
+    title: 'FP: 20% off eligible first FundingPips purchases (5% Labs)',
+    code: 'FP',
     value: '20%',
     category: 'code',
     proofLevel: 'Official',
@@ -720,11 +722,11 @@ const allPromoDeals: PromoDeal[] = [
     eligibility: 'First purchase only; the official checkout guide explicitly EXCLUDES 100K accounts.',
     sourceUrl: 'https://help.fundingpips.com/hc/en-us/articles/44390730743825-Get-Started',
     sourceLabel: 'Official FundingPips purchase guide',
-    sourceNote: 'Official onboarding guide checked 2026-11-19: HELLO grants 20% off a first purchase but cannot be used on 100K accounts; the code must be entered before payment.',
+    sourceNote: 'Official onboarding guide checked 2026-11-25: FP grants 20% on eligible first purchases, 5% on 1 Step Labs; 100K excluded. Enter before payment.',
     consumerVerdict: 'A simple first-purchase discount. Read the PRIME terms in the firm file before buying.',
     caveats: ['First purchase only', '100K accounts excluded', 'See the product rules on the firm file'],
     bestFor: ['forex', 'first purchase'],
-    checkoutTip: 'Apply HELLO on your first order and check the subtotal.',
+    checkoutTip: 'Apply FP on your eligible first order and check the subtotal.',
   },
   {
     slug: 'upcomers',
@@ -1100,7 +1102,8 @@ const blackFridayDeals: PromoDeal[] = [
     title: 'FTMO Black Friday: 2-Step 100K €540 → €432; up to 30% on eligible accounts',
     priceExample: { plan: '2-Step Standard', accountSize: 100000, currency: 'EUR', before: 540, after: 432, checkedOn: '2026-11-23', sourceUrl: 'https://promo.ftmo.com/special-november-deal-2026/' },
     code: 'No code', value: 'Up to 30%', category: 'affiliate', proofLevel: 'Official', availability: 'Active official offer',
-    validity: 'Official Black Friday campaign checked 23 November 2026. End date not stated; account and country eligibility confirmed at order.',
+    validity: 'Campaign observed 23 November; conservative PropRadar display cutoff 30 November 09:00 UTC, not a confirmed official expiry.',
+    expiresAt: '2026-11-30T09:00:00Z',
     eligibility: 'FTMO Standard Challenges from $10K to $200K; 2-Step 100K €540 → €432 (20%), 2-Step 10K €89 → €62 (about 30%). Not all plans get 30%.',
     sourceUrl: FTMO_AFFILIATE_URL, sourceLabel: 'Official FTMO Black Friday campaign; PropRadar partner link',
     sourceNote: 'Offer prices and restrictions sourced from https://promo.ftmo.com/special-november-deal-2026/ on 2026-11-23. The outbound affiliate link never affects the ranking.',
@@ -1150,7 +1153,9 @@ const blackFridayDeals: PromoDeal[] = [
     slug: 'aqua-funded', label: 'Black Friday · official', blackFriday: true, featured: true, heroRank: 5,
     title: 'AquaFunded BLACKFRIDAY: 35% off eligible accounts',
     code: 'BLACKFRIDAY', value: '35%', category: 'code', proofLevel: 'Official', availability: 'Active official offer',
-    validity: 'Live on official homepage checked 23 Nov 2026; no verified end date.',
+    validity: 'Official CFD page advertises the campaign until 30 November 2026; exact timezone not stated.',
+    checkedOn: '2026-11-25', expiresAt: '2026-12-01T00:00:00Z',
+    priceExample: { plan: 'CFD Instant Pro 100K', accountSize: 100000, currency: 'USD', before: 560, after: 364, checkedOn: '2026-11-25', sourceUrl: 'https://www.aquafunded.com/' },
     eligibility: 'Official banner says 35% off every account; verify model-specific exclusions and add-ons at checkout.',
     sourceUrl: 'https://www.aquafunded.com/', sourceLabel: 'AquaFunded official site',
     sourceNote: 'https://www.aquafunded.com/ displayed 35% and BLACKFRIDAY on 23 November 2026; no checkout submitted.',
@@ -1209,12 +1214,12 @@ const blackFridayDeals: PromoDeal[] = [
   },
   {
     slug: 'apex-trader-funding', label: 'Official coupon · eligibility caution', blackFriday: true,
-    title: 'Apex SAVENOW: evaluations up to 90% off; activation and resets NOT included',
-    code: 'SAVENOW', value: 'Up to 90%', category: 'futures', proofLevel: 'Official', availability: 'Verify at checkout',
+    title: 'Apex SAVENOW: official evaluation coupon; current percentage varies',
+    code: 'SAVENOW', value: 'Code', category: 'futures', proofLevel: 'Official', availability: 'Verify at checkout',
     validity: 'Official coupon page observed November 2026, limited-time rate with no fixed cutoff.',
     eligibility: 'Only new evaluation purchases, not existing subscriptions, PA activation fees or resets.',
-    sourceUrl: 'https://apextraderfunding.com/coupon-code/', sourceLabel: 'Apex official coupon policy',
-    sourceNote: 'https://apextraderfunding.com/coupon-code/ advertises up to 90% and SAVENOW; verify the live checkout timer and the precise account model.',
+    sourceUrl: 'https://apextraderfunding.com/help-center/billing/coupon-codes/', sourceLabel: 'Apex official coupon policy',
+    sourceNote: 'Official coupon FAQ confirms SAVENOW, checked 25 November 2026; live reduction not independently confirmed. Separate PA activation promotions may have distinct deadlines.',
     consumerVerdict: 'Do not compare the discounted evaluation fee alone: funded activation, resets and payout restrictions can dominate total cost.',
     caveats: ['No PA activation-fee waiver', 'Not retroactive', 'Check payout and consistency restrictions'],
     bestFor: ['futures', 'Black Friday'], checkoutTip: 'Compare the complete cost after evaluation, not only the initial coupon rate.'
@@ -1224,23 +1229,27 @@ const BLACK_FRIDAY_UNDATED_FRESHNESS_MS = 7 * 24 * 60 * 60 * 1000;
 function blackFridayCurrent(deal: PromoDeal, now = Date.now()): boolean {
   if (!deal.blackFriday) return true;
   if (deal.expiresAt) return now < Date.parse(deal.expiresAt);
-  return now < Date.parse(PROMO_REVIEW_DATE + 'T23:59:59Z') + BLACK_FRIDAY_UNDATED_FRESHNESS_MS;
+  return now < Date.parse((deal.checkedOn ?? ORIGINAL_SEASONAL_REVIEW_DATE) + 'T23:59:59Z') + BLACK_FRIDAY_UNDATED_FRESHNESS_MS;
 }
 
 /** Reuse the same sourced, dated offer record for program cards and the promo board. */
-const spotlightIds = new Set(['fxify-black35-2026', 'tradeify-nov-2026', 'funderpro-bf30-2026', 'fundedtradingplus-size20-2026']);
+const spotlightIds = new Set(['fxify-black35-2026', 'tradeify-nov-2026', 'funderpro-bf30-2026', 'fundedtradingplus-size20-2026', 'fintokei-blackfriday20-2026', 'ttp-bf40-2026', 'fundednext-bogo-nov2026', 'alpha-futures-alpha50-nov2026', 'earn2trade-blackweek-2026', 'brightfunded-bf30-2026','blueguardian-black-2026','goat-blackfriday55-2026','goat-blackfriday60-futures-2026']);
+const seasonalSpotlightIds = new Set(['fintokei-blackfriday20-2026','ttp-bf40-2026','fundednext-bogo-nov2026','alpha-futures-alpha50-nov2026','earn2trade-blackweek-2026','brightfunded-bf30-2026','blueguardian-black-2026','goat-blackfriday55-2026','goat-blackfriday60-futures-2026']);
 const spotlightDeals: PromoDeal[] = programPromotions
   .filter((offer) => spotlightIds.has(offer.id) && isProgramPromotionCurrent(offer))
   .map((offer) => ({
     slug: offer.slug,
     label: 'Official dated program discount',
-    title: `${getFirmBySlug(offer.slug)?.name ?? offer.slug}: ${offer.offer} with ${offer.code}`,
-    code: offer.code ?? '',
+    title: `${getFirmBySlug(offer.slug)?.name ?? offer.slug}: ${offer.offer}${offer.code ? ` · ${offer.code}` : ''}`,
+    code: offer.code ?? 'No code confirmed',
+    blackFriday: seasonalSpotlightIds.has(offer.id),
+    checkedOn: offer.checkedOn,
     value: offer.offer,
     category: 'official-discount' as const,
     proofLevel: 'Official' as const,
-    availability: 'Active official offer' as const,
-    validity: offer.expiresAt ? `Offer published until ${offer.expiresAt.slice(0, 10)} (UTC date); confirm the exact checkout cutoff.` : `Checked ${offer.checkedOn}; no public end date.`,
+    availability: offer.id === 'goat-blackfriday60-futures-2026' ? 'Verify at checkout' as const : 'Active official offer' as const,
+    ...(offer.priceExamples?.length ? {priceExample: {plan: offer.scope ?? offer.offer, accountSize: offer.priceExamples[0].size, currency: offer.priceExamples[0].currency, before: offer.priceExamples[0].regular, after: offer.priceExamples[0].sale, checkedOn: offer.checkedOn, sourceUrl: offer.sourceUrl}} : {}),
+    validity: offer.endsOn ? `Published end date: ${offer.endsOn}; confirm the exact checkout cutoff.` : `Source reviewed ${offer.checkedOn}; no public end date.`,
     eligibility: offer.terms,
     sourceUrl: offer.sourceUrl,
     sourceLabel: 'Firm-published offer',
@@ -1248,14 +1257,17 @@ const spotlightDeals: PromoDeal[] = programPromotions
     consumerVerdict: 'Compare the final checkout subtotal with the standard fee; promotions never change the PropRadar score.',
     caveats: [offer.terms, 'Confirm the discounted subtotal before payment'],
     bestFor: [offer.slug, 'current code'],
-    checkoutTip: `Use ${offer.code} on an eligible product and check the price before purchasing.`,
-    expiresAt: offer.expiresAt,
+    checkoutTip: offer.code ? `Use ${offer.code} on an eligible product and check the price before purchasing.` : 'Read the official offer and eligibility conditions; a public coupon is not confirmed.',
+    expiresAt: offer.expiresAt ?? (offer.endsOn ? `${offer.endsOn}T23:59:59Z` : undefined),
   }));
 
 /** Do not display ended or withdrawn promotions. */
 const seasonalKeys = new Set(blackFridayDeals.map((deal) => deal.slug + ':' + deal.code.toLowerCase()));
 export const promoDeals: PromoDeal[] = [...blackFridayDeals, ...allPromoDeals.filter((deal) => !seasonalKeys.has(deal.slug + ':' + deal.code.toLowerCase())), ...spotlightDeals.filter((deal) => !seasonalKeys.has(deal.slug + ':' + (deal.code ?? '').toLowerCase()))]
-  .filter((deal) => !deal.notSeenOn && (!deal.expiresAt || Date.now() < Date.parse(deal.expiresAt)) && blackFridayCurrent(deal));
+  .filter((deal) => {
+    const mapped = programPromotions.filter(offer => offer.slug === deal.slug && Boolean(offer.code) && offer.code?.toLowerCase() === deal.code.toLowerCase());
+    return !(deal.slug === 'blue-guardian' && deal.code === 'BG25') && !deal.notSeenOn && (!deal.expiresAt || Date.now() < Date.parse(deal.expiresAt)) && blackFridayCurrent(deal) && (!mapped.length || mapped.some(offer => isProgramPromotionCurrent(offer)));
+  });
 
 /** Deals withdrawn from the page because the official source no longer shows them. */
 export const withdrawnPromoDeals: PromoDeal[] = allPromoDeals.filter((deal) => Boolean(deal.notSeenOn));

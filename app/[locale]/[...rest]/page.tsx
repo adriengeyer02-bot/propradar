@@ -98,6 +98,7 @@ export default async function FrArticlePage({ params }: Props) {
       headline: article.h1,
       description: article.metaDescription,
       inLanguage: 'fr-FR',
+      datePublished: article.published ?? article.updated,
       dateModified: article.updated,
       mainEntityOfPage: pageUrl,
       author: { '@type': 'Organization', name: 'PropRadar Research', url: `${SITE_URL}/audit` },
@@ -149,6 +150,10 @@ export default async function FrArticlePage({ params }: Props) {
       </header>
 
       <GuideArticleBody article={article} label={article.h1} updatedLabel="Mis à jour le" sourcesLabel="Sources" diagramLabels={getMessages('fr').diagram} />
+
+      {article.slug === 'prop-firms-fermees' ? (
+        <p className="guide-article"><Link href="/fr/prop-firm-statistics#closures">Consulter le registre des fermetures et les statistiques PropRadar →</Link></p>
+      ) : null}
 
       {firms.length ? (
         <section className="guide-article fr-firm-table" aria-labelledby="fr-firms-title">
