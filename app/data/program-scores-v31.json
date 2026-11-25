@@ -1,0 +1,1325 @@
+{
+  "version": "3.1",
+  "status": "provisional-only",
+  "source": "audits/program-v31-intermediate-test-40-2026-11-25.json",
+  "bindingSource": "production 3387a94c, firm-updates blob 6a9b87c3",
+  "bindings": {
+    "alpha-capital-group": {
+      "alpha-pro": "alpha-pro",
+      "alpha-one": "alpha-one",
+      "alpha-direct": "alpha-direct"
+    },
+    "alpha-futures": {
+      "alpha-futures-zero": "zero",
+      "alpha-futures-standard": "standard"
+    },
+    "apex-trader-funding": {
+      "apex-eod-current": "eod",
+      "apex-intraday-current": "intraday"
+    },
+    "audacity-capital": {
+      "audacity-ability-challenge": "2step",
+      "audacity-ability-one": "1step",
+      "audacity-ftp-instant": "ftp"
+    },
+    "blue-guardian": {
+      "bg-one-standard-current": "1step",
+      "bg-two-standard-current": "2step",
+      "bg-two-nano-current": "nano",
+      "bg-instant-standard-current": "instant-standard",
+      "bg-instant-starter-current": "instant-starter"
+    },
+    "blueberry-funded": {
+      "blueberry-prime-2-step": "prime"
+    },
+    "blusky-trading": {
+      "blusky-launch": "launch"
+    },
+    "breakout-prop": {
+      "breakout-classic": "classic",
+      "breakout-pro": "pro",
+      "breakout-turbo": "turbo"
+    },
+    "brightfunded": {
+      "bf-one-step-daily-current": "1step",
+      "bf-two-step-bright-current": "2step",
+      "bf-instant-current": "instant"
+    },
+    "city-traders-imperium": {
+      "cti-one-current": "1step",
+      "cti-two-current": "2step",
+      "cti-instant-current": "instant",
+      "cti-direct-current": "direct"
+    },
+    "clarity-traders": {
+      "clarity-instant": "instant",
+      "clarity-1step": "1step",
+      "clarity-2step": "2step"
+    },
+    "e8-futures": {
+      "e8-signature-futures": "signature"
+    },
+    "e8-markets": {
+      "e8-one-current": "one",
+      "e8-pro-current": "pro",
+      "e8-zero-current": "zero",
+      "e8-signature-current": "signature"
+    },
+    "earn2trade": {
+      "e2t-tcp": "tcp",
+      "e2t-gauntlet": "gauntlet"
+    },
+    "finotive-funding": {
+      "finotive-two-step": "2step"
+    },
+    "fintokei": {
+      "finto-start-new": "start",
+      "finto-swift-new": "swift",
+      "finto-pro-two": "pro",
+      "finto-swing-two": "swing"
+    },
+    "ftmo": {
+      "ftmo-two-step-current": "2step",
+      "ftmo-one-step-current": "1step",
+      "ftmo-instant-current": "instant"
+    },
+    "ftuk": {
+      "ftuk-flex-challenge": "flex",
+      "ftuk-instant-funding": "instant",
+      "ftuk-flex-futures": "flex-futures",
+      "ftuk-instant-sim-futures": "isf"
+    },
+    "funded-trading-plus": {
+      "ftp-express-current": "express",
+      "ftp-classic-current": "classic",
+      "ftp-instant-current": "instant",
+      "ftp-pnpl-current": "pnpl"
+    },
+    "funded7": {
+      "funded7-two-phase": "2phase",
+      "funded7-one-phase": "1phase",
+      "funded7-instant": "instant"
+    },
+    "fundednext": {
+      "fundednext-stellar-one-current": "1step",
+      "fundednext-stellar-two-current": "2step",
+      "fundednext-stellar-lite-current": "lite",
+      "fundednext-stellar-instant-current": "instant"
+    },
+    "funderpro": {
+      "funderpro-one-phase": "onephase",
+      "funderpro-classic": "classic",
+      "funderpro-pro": "pro"
+    },
+    "funding-pips": {
+      "pips-one-step-flex": "1step-flex",
+      "pips-two-step-standard": "2step-standard",
+      "pips-two-step-pro": "2step-pro",
+      "pips-zero-direct": "zero"
+    },
+    "funding-traders": {
+      "funding-traders-pro6": "2step",
+      "funding-traders-pro10": "2step",
+      "funding-traders-1-step-pro": "1step",
+      "funding-traders-instant": "instant"
+    },
+    "fxify": {
+      "fxi-one": "one-phase",
+      "fxi-two-std": "two-phase-standard",
+      "fxi-two-classic": "two-phase-classic",
+      "fxi-two-pro": "two-phase-pro",
+      "fxi-instant-lite": "instant-lite"
+    },
+    "goat-funded-trader": {
+      "goat-one-new": "1step",
+      "goat-two-standard-new": "2step-standard",
+      "goat-instant-goat": "instant",
+      "goat-instant-premium": "instant-premium",
+      "goat-instant-daily": "instant-daily"
+    },
+    "hantec-trader": {},
+    "ic-funded": {
+      "ic-funded-2-step-professional": "2step"
+    },
+    "instant-funding": {
+      "instant-funding-pro": "if-pro",
+      "instant-funding-one-phase-pro": "one-phase-pro",
+      "instant-funding-two-phase": "two-phase"
+    },
+    "lark-funding": {
+      "lark-1-step-career": "1step",
+      "lark-3-step": "3step"
+    },
+    "lux-trading-firm": {
+      "lux-1-step-evaluation": "1step"
+    },
+    "maven-trading": {
+      "maven-standard-one-step": "1step",
+      "maven-static-one-step": "1step-static",
+      "maven-standard-two-step": "2step",
+      "maven-standard-three-step": "3step",
+      "maven-instant": "instant"
+    },
+    "ment-funding": {
+      "ment-forex-1-step": "forex",
+      "ment-futures": "futures",
+      "ment-equities": "equities"
+    },
+    "myfundedfutures": {
+      "mffu-builder": "builder",
+      "mffu-rapid-intraday": "rapid-intraday",
+      "mffu-rapid-eod": "rapid-eod",
+      "mffu-pro": "pro"
+    },
+    "ofp-funding": {
+      "ofp-instant-95": "instant95",
+      "ofp-challenge-8-5": "ch-8-5"
+    },
+    "oneup-trader": {
+      "oneup-standard-current": "standard",
+      "oneup-pro-current": "pro",
+      "oneup-express-return": "express"
+    },
+    "quant-tekel": {
+      "qt-one": "qtone",
+      "qt-two": "qttwo",
+      "qt-instant": "qtinstant",
+      "qt-power": "qtpower"
+    },
+    "rebelsfunding": {
+      "rebelsfunding-gold-1-phase": "gold"
+    },
+    "take-profit-trader": {},
+    "the-trading-pit": {
+      "ttp-futures-prime": "prime",
+      "ttp-futures-instant": "instant"
+    },
+    "the5ers": {
+      "the5ers-high-stakes-current": "high-stakes",
+      "the5ers-bootcamp-current": "bootcamp",
+      "the5ers-hyper-growth-current": "hyper-growth"
+    },
+    "top-one-futures": {
+      "top-one-elite-evaluation": "elite",
+      "top-one-elite-daily": "daily",
+      "top-one-elite-access": "access",
+      "top-one-instant-sim-funded": "instant",
+      "top-one-ignite": "ignite"
+    },
+    "top-one-trader": {
+      "top-one-trader-flash": "flash",
+      "top-one-trader-2-step-pro": "2steppro",
+      "top-one-trader-2-step-plus": "2stepplus",
+      "top-one-trader-magnum": "magnum",
+      "top-one-trader-nova": "nova"
+    },
+    "topstep": {
+      "topstep-trading-combine-current": "combine"
+    },
+    "trade-the-pool": {
+      "ttp-edge": "edge"
+    },
+    "tradeday": {
+      "tradeday-quick-pay": "quick-pay",
+      "tradeday-fast-pass": "fast-pass"
+    },
+    "tradefundrr": {},
+    "tradeify": {
+      "tradeify-select-eval": "select",
+      "tradeify-growth-eval": "growth",
+      "tradeify-lightning": "lightning"
+    },
+    "tradexprop": {
+      "tradexprop-x-1-step": "1step",
+      "tradexprop-x-2-step": "2step",
+      "tradexprop-instant-funded-x": "instant",
+      "tradexprop-crypto-x-1-step": "crypto1step",
+      "tradexprop-crypto-x-2-step": "crypto2step"
+    },
+    "uprofit-trader": {
+      "uprofit-day-soft": "day-soft",
+      "uprofit-day-flex": "day-flex",
+      "uprofit-one-50k": "one50k"
+    },
+    "wsfunded": {
+      "wsfunded-instant-pro": "instant-pro",
+      "wsfunded-instant-standard": "instant",
+      "wsfunded-classic-2phase": "2phase",
+      "wsfunded-ultra-2phase": "2phase",
+      "wsfunded-rapid-1phase": "rapid",
+      "wsfunded-power-1phase": "power"
+    },
+    "crypto-fund-trader": {
+      "cft-break": "break"
+    },
+    "dna-funded": {
+      "dna-1-phase-march-2026": "1phase",
+      "dna-2-phase-march-2026": "2phase",
+      "dna-rapid-march-2026": "rapid",
+      "dna-instant-march-2026": "instant"
+    },
+    "funded-bull": {
+      "funded-bull-1-step": "1step",
+      "funded-bull-2-step": "2step",
+      "funded-bull-3-step": "3step"
+    },
+    "axi-select": {
+      "axi-select-six-stages": "axi-select"
+    },
+    "atmos-funded": {
+      "atmos-nova": "nova",
+      "atmos-2-step-standard": "2step",
+      "atmos-instant-funding": "instant"
+    },
+    "funder-trading": {
+      "funder-trading-trueedge": "trueedge"
+    },
+    "orion-funded": {
+      "orion-standard-2-step": "standard",
+      "orion-select-3-step": "select",
+      "orion-nova-1-step": "nova",
+      "orion-zero-instant": "zero"
+    },
+    "atlas-funded": {
+      "atlas-1-step": "1step",
+      "atlas-2-step": "2step"
+    },
+    "superfunded": {
+      "superfunded-one-phase": "1step",
+      "superfunded-two-phase": "2step"
+    },
+    "traders-launch": {
+      "traders-launch-futures-standard": "standard",
+      "traders-launch-futures-legacy-nyc": "legacy-nyc",
+      "traders-launch-static-25k": "static-25k"
+    },
+    "sfx-funded": {
+      "sfx-2-step": "2step",
+      "sfx-1-step-pro": "1step-pro"
+    },
+    "funded-trader-markets": {
+      "ftm-1step-nitro": "nitro",
+      "ftm-2step-plus": "2step-plus",
+      "ftm-instant-standard": "instant-standard",
+      "ftm-instant-pro": "instant-pro",
+      "ftm-instant-plus": "instant-plus"
+    },
+    "directfundedtrader": {
+      "directfundedtrader-evaluation": "evaluation",
+      "directfundedtrader-turbo": "turbo",
+      "directfundedtrader-fastfunding": "fastfunding"
+    },
+    "lvlup-futures": {
+      "lvlup-futures-lvlup": "lvlup",
+      "lvlup-futures-starter": "starter"
+    },
+    "klein-funding-crypto": {
+      "klein-funding-1step": "1step",
+      "klein-funding-2step": "2step"
+    },
+    "funded-futures-network": {
+      "funded-futures-network-max-standard": "max-standard",
+      "funded-futures-network-steady": "steady"
+    },
+    "tradersedgefx": {
+      "tradersedgefx-2-step": "2step",
+      "tradersedgefx-1-step": "1step",
+      "tradersedgefx-hft": "hft"
+    },
+    "titan-capital-markets": {
+      "titan-instant": "instant",
+      "titan-1step": "1step",
+      "titan-2step": "2step",
+      "titan-3step": "3step"
+    },
+    "exfunded": {
+      "exfunded-1step": "1step",
+      "exfunded-2step": "2step"
+    },
+    "hash-hedge": {
+      "hash-hedge-two-stage": "2stage",
+      "hash-hedge-one-stage": "1stage"
+    }
+  },
+  "scores": {
+    "ftmo": {
+      "ftmo-one-step-current": [
+        {
+          "score": 94,
+          "scope": "CFD 1-Step",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "EOD high-water balance trailing"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative sizing and correlation risk rules"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Gap-trading restrictions around events/closures"
+            }
+          ],
+          "sources": [
+            "https://ftmo.com/en/forbidden-trading-practices/",
+            "https://ftmo.com/en/trading-objectives/",
+            "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/",
+            "https://ftmo.com/en/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/",
+            "https://ftmo.com/en/futures/faq/how-do-the-growth-and-pro-products-differ/",
+            "https://ftmo.com/en/futures/how-it-works/",
+            "https://ftmo.com/en/futures/faq/ftr-who-is-an-ftmo-trader-and-how-do-i-become-one"
+          ]
+        }
+      ],
+      "ftmo-two-step-current": [
+        {
+          "score": 95,
+          "scope": "CFD 2-Step Standard",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative sizing and correlation rules"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Standard news/gap restrictions; separate from qualitative exposure"
+            }
+          ],
+          "sources": [
+            "https://ftmo.com/en/forbidden-trading-practices/",
+            "https://ftmo.com/en/trading-objectives/",
+            "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/",
+            "https://ftmo.com/en/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/",
+            "https://ftmo.com/en/futures/faq/how-do-the-growth-and-pro-products-differ/",
+            "https://ftmo.com/en/futures/how-it-works/",
+            "https://ftmo.com/en/futures/faq/ftr-who-is-an-ftmo-trader-and-how-do-i-become-one"
+          ]
+        }
+      ],
+      "ftmo-instant-current": [
+        {
+          "score": 94,
+          "scope": "CFD Instant",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "C30",
+              "points": 1,
+              "reason": "30% consistency resets at withdrawal"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative sizing and correlation rules"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Gap-trading restrictions"
+            }
+          ],
+          "sources": [
+            "https://ftmo.com/en/forbidden-trading-practices/",
+            "https://ftmo.com/en/trading-objectives/",
+            "https://ftmo.com/en/faq/how-do-i-withdraw-my-profits/",
+            "https://ftmo.com/en/faq/what-is-the-legal-relationship-between-an-ftmo-trader-and-ftmo-after-signing-the-ftmo-account-terms-conditions/",
+            "https://ftmo.com/en/futures/faq/how-do-the-growth-and-pro-products-differ/",
+            "https://ftmo.com/en/futures/how-it-works/",
+            "https://ftmo.com/en/futures/faq/ftr-who-is-an-ftmo-trader-and-how-do-i-become-one"
+          ]
+        }
+      ]
+    },
+    "the5ers": {
+      "the5ers-bootcamp-current": [
+        {
+          "score": 90,
+          "scope": "Bootcamp",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "S50",
+              "points": 4,
+              "reason": "Starting split 50%, later 75%"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "14-day clock restarts on scaling; not ordinary 14-day wait"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Different methods required per active account"
+            }
+          ],
+          "sources": [
+            "https://www.the5ers.com/faqs/prohibited-trading-practices/",
+            "https://the5ers.com/en/terms-and-conditions/",
+            "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+            "https://the5ers.com/faqs/how-many-the5ers-accounts-can-i-have/",
+            "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+            "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+            "https://the5ers.com/futures-faqs/what-are-the-general-rules-for-the-futures-program/",
+            "https://the5ers.com/futures-faqs/what-are-the-payout-caps/"
+          ]
+        }
+      ],
+      "the5ers-high-stakes-current": [
+        {
+          "score": 84,
+          "scope": "High Stakes",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Prohibited news executions: gains removed, losses kept"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "50K/100K payout caps; deletion not established"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative prohibited practices"
+            }
+          ],
+          "sources": [
+            "https://www.the5ers.com/faqs/prohibited-trading-practices/",
+            "https://the5ers.com/en/terms-and-conditions/",
+            "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+            "https://the5ers.com/faqs/how-many-the5ers-accounts-can-i-have/",
+            "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+            "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+            "https://the5ers.com/futures-faqs/what-are-the-general-rules-for-the-futures-program/",
+            "https://the5ers.com/futures-faqs/what-are-the-payout-caps/"
+          ]
+        }
+      ],
+      "the5ers-hyper-growth-current": [
+        {
+          "score": 92,
+          "scope": "Hyper Growth",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "S50",
+              "points": 4,
+              "reason": "Starting split 50%, later 75%"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative prohibited practices; ordinary news/holding allowed"
+            }
+          ],
+          "sources": [
+            "https://www.the5ers.com/faqs/prohibited-trading-practices/",
+            "https://the5ers.com/en/terms-and-conditions/",
+            "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/",
+            "https://the5ers.com/faqs/how-many-the5ers-accounts-can-i-have/",
+            "https://the5ers.com/faqs/how-does-the-hyper-growth-program-work/",
+            "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/",
+            "https://the5ers.com/futures-faqs/what-are-the-general-rules-for-the-futures-program/",
+            "https://the5ers.com/futures-faqs/what-are-the-payout-caps/"
+          ]
+        }
+      ]
+    },
+    "apex-trader-funding": {
+      "apex-eod-current": [
+        {
+          "score": 63,
+          "scope": "EOD evaluation → PA (50K)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D16",
+              "points": 25,
+              "reason": "Reward can be denied for any or no reason; exceptional-performance clause grouped"
+            },
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "EOD trailing"
+            },
+            {
+              "family": "F4",
+              "points": 7,
+              "reason": "Six payouts then mandatory closure"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Per-request caps and lifetime safety net grouped as liquidity burden"
+            }
+          ],
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+          ]
+        }
+      ],
+      "apex-intraday-current": [
+        {
+          "score": 61,
+          "scope": "Intraday trailing evaluation → PA",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D16",
+              "points": 25,
+              "reason": "Same discretionary reward clause"
+            },
+            {
+              "family": "ID",
+              "points": 3,
+              "reason": "Intraday trailing"
+            },
+            {
+              "family": "F4",
+              "points": 7,
+              "reason": "Six payouts then closure"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Per-request cap/safety requirements, exact tiers not assumed"
+            }
+          ],
+          "sources": [
+            "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+            "https://apextraderfunding.com/help-center/eod-payouts/eod-payouts/",
+            "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+          ]
+        }
+      ]
+    },
+    "fundednext": {
+      "fundednext-stellar-instant-current": [
+        {
+          "score": 81,
+          "scope": "Stellar Instant",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Reasonable indications permit denial/reversal and contractual penalty; group enforcement"
+            },
+            {
+              "family": "S70",
+              "points": 1,
+              "reason": "Starting 70%"
+            },
+            {
+              "family": "M3",
+              "points": 2,
+              "reason": "5% growth for on-demand access; 14-day alternative reduces burden: partial penalty applied below"
+            }
+          ],
+          "sources": [
+            "https://fundednext.com/terms-of-service",
+            "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext",
+            "https://help.fundednext.com/en/articles/17253939-stellar-lite-account",
+            "https://help.fundednext.com/en/articles/17253243-stellar-instant-account",
+            "https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account",
+            "https://helpfutures.fundednext.com/en/articles/17242064-how-can-i-withdraw-my-performance-reward",
+            "https://helpfutures.fundednext.com/fr/articles/16522296-route-vers-le-trading-en-direct-rapid-flex-direct"
+          ]
+        }
+      ]
+    },
+    "city-traders-imperium": {
+      "cti-instant-current": [
+        {
+          "score": 90,
+          "scope": "Instant Funding",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "S50",
+              "points": 4,
+              "reason": "Initial 50% split"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "Only half nominal allocation at start"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Mandatory visible stop / approved VPS and EA conditions grouped"
+            }
+          ],
+          "sources": [
+            "https://citytradersimperium.com/choosing-your-funding-program/",
+            "https://citytradersimperium.com/forex-calculators/consistency-score-calculator/",
+            "https://citytradersimperium.com/instant-funding/",
+            "https://citytradersimperium.com/direct-funding/",
+            "https://citytradersimperium.com/ea-trading-rules/",
+            "https://citytradersimperium.com/contact-us/"
+          ]
+        }
+      ],
+      "cti-direct-current": [
+        {
+          "score": 96,
+          "scope": "Direct Funding",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "S70",
+              "points": 1,
+              "reason": "Initial 70% split"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Mandatory visible stop / approved VPS and EA conditions grouped"
+            }
+          ],
+          "sources": [
+            "https://citytradersimperium.com/choosing-your-funding-program/",
+            "https://citytradersimperium.com/forex-calculators/consistency-score-calculator/",
+            "https://citytradersimperium.com/instant-funding/",
+            "https://citytradersimperium.com/direct-funding/",
+            "https://citytradersimperium.com/ea-trading-rules/",
+            "https://citytradersimperium.com/contact-us/"
+          ]
+        }
+      ]
+    },
+    "audacity-capital": {
+      "audacity-ability-one": [
+        {
+          "score": 92,
+          "scope": "Ability One",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Reasonable determination of gambling/excess risk can terminate; not unconditional denial"
+            }
+          ],
+          "sources": [
+            "https://audacity.capital/terms-and-conditions/",
+            "https://audacity.capital/knowledge-center/trading-guidelines/"
+          ]
+        }
+      ],
+      "audacity-ftp-instant": [
+        {
+          "score": 91,
+          "scope": "FTP Instant",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Same risk/termination review"
+            },
+            {
+              "family": "C30",
+              "points": 1,
+              "reason": "35% live-stage consistency"
+            }
+          ],
+          "sources": [
+            "https://audacity.capital/terms-and-conditions/",
+            "https://audacity.capital/knowledge-center/trading-guidelines/"
+          ]
+        }
+      ]
+    },
+    "instant-funding": {
+      "instant-funding-one-phase-pro": [
+        {
+          "score": 84,
+          "scope": "One-Phase Pro",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Discretionary trade/result removal and termination; applicable funded terms still missing"
+            }
+          ],
+          "sources": [
+            "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+            "https://instantfunding.com/wp-content/uploads/2026/06/Instant-Funding-General-Terms-Conditions.pdf",
+            "https://instantfunding.com/help/payout-on-demand/"
+          ]
+        }
+      ]
+    },
+    "fintokei": {
+      "finto-start-new": [
+        {
+          "score": 85,
+          "scope": "StartTrader",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Individual risk adjustments and reduced split; exit/payout or refund option moderates severity"
+            },
+            {
+              "family": "F4",
+              "points": 7,
+              "reason": "At most two payouts, cumulative $400 cap grouped into same family"
+            }
+          ],
+          "sources": [
+            "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+            "https://support.fintokei.com/en/articles/10166343-what-is-unsustainable-trading-on-fintokei-accounts",
+            "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules",
+            "https://support.fintokei.com/en/articles/12040973-how-does-swifttrader-challenge-work-what-are-the-rules",
+            "https://www.fintokei.com/terms-and-conditions/",
+            "https://support.fintokei.com/it/articles/8409176-quali-regole-devo-seguire-per-mantenere-l-account-swifttrader",
+            "https://www.fintokei.com/is-fintokei-legit/"
+          ]
+        }
+      ],
+      "finto-swift-new": [
+        {
+          "score": 84,
+          "scope": "SwiftTrader (new cohort)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Individual risk controls with exit safeguard"
+            },
+            {
+              "family": "G3",
+              "points": 5,
+              "reason": "3% static max loss, 2% daily; very narrow envelope, not trailing"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "3% daily target cap; not a 40% consistency rule"
+            }
+          ],
+          "sources": [
+            "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices",
+            "https://support.fintokei.com/en/articles/10166343-what-is-unsustainable-trading-on-fintokei-accounts",
+            "https://support.fintokei.com/en/articles/9579997-how-does-starttrader-challenge-work-what-are-the-rules",
+            "https://support.fintokei.com/en/articles/12040973-how-does-swifttrader-challenge-work-what-are-the-rules",
+            "https://www.fintokei.com/terms-and-conditions/",
+            "https://support.fintokei.com/it/articles/8409176-quali-regole-devo-seguire-per-mantenere-l-account-swifttrader",
+            "https://www.fintokei.com/is-fintokei-legit/"
+          ]
+        }
+      ]
+    },
+    "fxify": {
+      "fxi-instant-lite": [
+        {
+          "score": 93,
+          "scope": "Instant Lite",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 4,
+              "reason": "Additional prohibited strategies possible with seven days notice; signed funded version unresolved: reduced penalty below"
+            },
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "20% consistency"
+            }
+          ],
+          "sources": [
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/agreement/",
+            "https://fxify.com/faqs/all-faqs/instant-funded-faq/what-happens-if-i-violate-the-rules/",
+            "https://fxify.com/faqs/all-faqs/instant-funding-lite-how-does-the-20-consistency-rule-work/",
+            "https://fxify.com/faqs/all-faqs/instant-funding-lite-faq/instant-funding-lite-what-is-instant-funding-lite/",
+            "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/"
+          ]
+        }
+      ]
+    },
+    "alpha-futures": {
+      "alpha-futures-zero": [
+        {
+          "score": 78,
+          "scope": "Zero (50K)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Sole discretion to determine breach/deny fee"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "$1500 cap at 50K; $200 min not separately deducted"
+            },
+            {
+              "family": "Z2",
+              "points": 2,
+              "reason": "Mandatory trading pause pending debit: reduced penalty below"
+            }
+          ],
+          "sources": [
+            "https://alpha-futures.com/fr/terms-and-conditions",
+            "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+          ]
+        }
+      ]
+    },
+    "alpha-capital-group": {
+      "alpha-direct": [
+        {
+          "score": 67,
+          "scope": "Direct",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Discretionary performance-fee denial; focused risk sanctions grouped"
+            },
+            {
+              "family": "C15",
+              "points": 5,
+              "reason": "15% consistency"
+            },
+            {
+              "family": "G3",
+              "points": 5,
+              "reason": "Separate per-asset drawdown hard breach"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Restricted news execution; gain removal scope uncertain"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Weekend restriction"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "3% buffer plus 1% gross profit"
+            }
+          ],
+          "sources": [
+            "https://alphacapitalgroup.uk/terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    "myfundedfutures": {
+      "mffu-rapid-intraday": [
+        {
+          "score": 75,
+          "scope": "Rapid Intraday (50K)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Broad withholding and suspension powers"
+            },
+            {
+              "family": "ID",
+              "points": 3,
+              "reason": "Intraday trailing model"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "$2100 buffer on 50K"
+            },
+            {
+              "family": "Z2",
+              "points": 2,
+              "reason": "Automatic transition at $10K single day; no assumed forfeiture: reduced penalty below"
+            }
+          ],
+          "sources": [
+            "https://myfundedfutures.com/terms",
+            "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
+          ]
+        }
+      ],
+      "mffu-builder": [
+        {
+          "score": 76,
+          "scope": "Builder (50K)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Same withholding and suspension powers"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "Reserve / reset MLL grouped"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "$2K cap at 50K"
+            }
+          ],
+          "sources": [
+            "https://myfundedfutures.com/terms",
+            "https://help.myfundedfutures.com/en/articles/13745661-payout-policy-overview-best-and-fastest-prop-firm-payouts"
+          ]
+        }
+      ]
+    },
+    "maven-trading": {
+      "maven-instant": [
+        {
+          "score": 80,
+          "scope": "Instant",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "20% consistency"
+            },
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "$10K combined gross cap, surplus deleted"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "At least half trades must last 60 seconds"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Broad termination language; exact discretionary reward scope unresolved"
+            }
+          ],
+          "sources": [
+            "https://maventrading.com/terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    "blue-guardian": {
+      "bg-instant-standard-current": [
+        {
+          "score": 81,
+          "scope": "Instant Standard",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Final discretionary breach decision/withdrawal denial"
+            },
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "20% consistency"
+            }
+          ],
+          "sources": [
+            "https://blueguardian.com/terms-and-conditions",
+            "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+            "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules",
+            "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+            "https://blueguardian.com/faq/articles/18446026-zero-account-rules",
+            "https://help.blueguardian.com/en/articles/18426777-elite-reserve-direct-path-to-live",
+            "https://help.blueguardian.com/en/articles/15859899-buy-now-pay-later-bnpl-rules"
+          ]
+        }
+      ],
+      "bg-instant-starter-current": [
+        {
+          "score": 69,
+          "scope": "Instant Starter",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Same broad discretion"
+            },
+            {
+              "family": "C15",
+              "points": 5,
+              "reason": "15% consistency"
+            },
+            {
+              "family": "F6",
+              "points": 10,
+              "reason": "Only one payout, max $250; cap grouped"
+            }
+          ],
+          "sources": [
+            "https://blueguardian.com/terms-and-conditions",
+            "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+            "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules",
+            "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+            "https://blueguardian.com/faq/articles/18446026-zero-account-rules",
+            "https://help.blueguardian.com/en/articles/18426777-elite-reserve-direct-path-to-live",
+            "https://help.blueguardian.com/en/articles/15859899-buy-now-pay-later-bnpl-rules"
+          ]
+        }
+      ]
+    },
+    "crypto-fund-trader": {
+      "cft-break": [
+        {
+          "score": 77,
+          "scope": "Break (100K)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Discretionary prohibited-practice determination and forfeiture; interview grouped"
+            },
+            {
+              "family": "P4",
+              "points": 7,
+              "reason": "$10K profit/day or trade cap, excess deducted"
+            }
+          ],
+          "sources": [
+            "https://cryptofundtrader.com/terms-and-conditions/",
+            "https://cryptofundtrader.com/faq/"
+          ]
+        }
+      ]
+    },
+    "goat-funded-trader": {
+      "goat-two-standard-new": [
+        {
+          "score": 69,
+          "scope": "2-Step Standard (new cohort)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "New cohort sub-60s gains removed, losses retained"
+            },
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "$3K daily/first payouts excess deletion grouped"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Guard 2% floating, first split cut to 50%, second closes"
+            },
+            {
+              "family": "T2",
+              "points": 2,
+              "reason": "Four funded days at 0.5%: reasonable count but substantial qualifying profit; reduced penalty below"
+            }
+          ],
+          "sources": [
+            "https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades",
+            "https://help.goatfundedtrader.com/en/articles/11472001-funded-account-reward-guidelines",
+            "https://help.goatfundedtrader.com/en/articles/10742107-what-is-goat-guard",
+            "https://help.goatfundedtrader.com/2-step-standard.html"
+          ]
+        }
+      ]
+    },
+    "funding-pips": {
+      "pips-zero-direct": [
+        {
+          "score": 71,
+          "scope": "Zero",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "C15",
+              "points": 5,
+              "reason": "15% payout consistency"
+            },
+            {
+              "family": "G4",
+              "points": 7,
+              "reason": "1% combined floating hard breach"
+            },
+            {
+              "family": "N",
+              "points": 5,
+              "reason": "News ±10 min hard breach incl holding: higher than ordinary restriction below"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Weekend hard breach"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "First 3% profit nonwithdrawable"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Seven 0.25% days rolling 30"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "Largest losing trade cannot exceed largest winner"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+            "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard",
+            "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"
+          ]
+        }
+      ]
+    },
+    "brightfunded": {
+      "bf-two-step-bright-current": [
+        {
+          "score": 96,
+          "scope": "2-Step Bright (new cohort)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Passing evaluation does not guarantee admission; internal criteria can change, funded contract unresolved"
+            }
+          ],
+          "sources": [
+            "https://brightfunded.com/terms-and-conditions",
+            "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+            "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
+            "https://help.brightfunded.com/en/articles/18450319-1-step-daily-evaluation-rules",
+            "https://help.brightfunded.com/en/articles/18450320-2-step-bright-evaluation-rules"
+          ]
+        }
+      ]
+    },
+    "topstep": {
+      "topstep-trading-combine-current": [
+        {
+          "score": 88,
+          "scope": "XFA Standard (50K path)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "50% balance and $2K cap (50K)"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "MLL fixed at zero after first payout"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative irresponsible-trading criteria"
+            }
+          ],
+          "sources": [
+            "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+            "https://www.topstep.com/terms-of-use",
+            "https://help.topstep.com/en/articles/10290170-professional-behavior-at-topstep",
+            "https://help.topstep.com/en/articles/13747047-understanding-hedging",
+            "https://help.topstep.com/en/articles/15520357-topstep-labs"
+          ]
+        },
+        {
+          "score": 90,
+          "scope": "XFA Consistency (50K path)",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "L1",
+              "points": 2,
+              "reason": "50% balance and higher $3K cap (50K)"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "MLL fixed at zero after first payout"
+            },
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Qualitative irresponsible-trading criteria"
+            }
+          ],
+          "sources": [
+            "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+            "https://www.topstep.com/terms-of-use",
+            "https://help.topstep.com/en/articles/10290170-professional-behavior-at-topstep",
+            "https://help.topstep.com/en/articles/13747047-understanding-hedging",
+            "https://help.topstep.com/en/articles/15520357-topstep-labs"
+          ]
+        }
+      ]
+    }
+  }
+}
