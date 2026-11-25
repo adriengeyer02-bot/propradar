@@ -1,8 +1,8 @@
 {
   "slug": "funding-your-trades",
-  "status": "PARTIAL",
+  "status": "TERMS READ",
   "checkedOn": "2026-11-25",
-  "method": "Targeted terms 3976ecdbdfe5.txt (17,546 chars), full §10.3 and adjacent §§11–13; uploaded PDF and incorporated help pages unread.",
+  "method": "Read full main web terms §§1–28 3976ecdbdfe5.txt and entire nine-page OCR duplicate upload-712fe3a66d.txt (OCR obscured some words; complete HTML resolves); all eight successful FAQ bodies dbb0fb55e5bc,3d4dc67c736c,13c9abedf0be,8b811bb492cf,a4e0645c2784,cbb493283323,17a7380ed4aa,3394f7606956 (.txt). Excluded unrelated Google iframe JS and affiliate 404. All archived contractual/rules bodies read. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
   "facts": [
     {
       "code": "B2",
@@ -24,16 +24,53 @@
       "source": "https://fundingyourtrades.com/terms-of-services/#",
       "locator": "§11.3–11.4",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "FYT Prime main challenge/funded model expressly has 'no consistency requirement' in both stages; Classic requires 30% funded and if exceeded upon request 'Gains will be cleared from your account'. Classic forfeiture noted, no firm-level CONS penalty because Prime is most lenient main model.",
+      "source": "https://fundingyourtrades.com/faq/consistency-rule/",
+      "locator": "Consistency Rule; Consequences of Violation; Model-Specific Rules; https://fundingyourtrades.com/faq/fyt-prime-model/ §7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "CONS_INFO",
+      "text": "Classic 30% best-day forfeiture at request; Instant 25%, Instant Plus 20%, Instant Prime none. Exact instant forfeiture mechanism not assumed identical to Classic.",
+      "source": "https://fundingyourtrades.com/faq/consistency-rule/",
+      "locator": "Consequences of Violation / Model-Specific Rules",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Prime funded: 1.5% per asset, max 40% margin, 3-minute min hold even SL/TP, max three same-asset positions, five profitable days ≥0.3% each cycle. First soft breach at discretion reduces split by 10% each and disqualifies fee refund/bonus; repeat may terminate and forfeit gains.",
+      "source": "https://fundingyourtrades.com/faq/fyt-prime-model/",
+      "locator": "§6; §8; §12",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "CG §15.1 accounts involved in payment disputes banned; no explicit accrued-payout loss in this clause. §15.2 good-faith discussions before legal action, not a specific payout review route.",
+      "source": "https://fundingyourtrades.com/terms-of-services/",
+      "locator": "§15.1–15.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout FAQ states all first payouts on demand and subsequent 7 days, but Instant section ten minimum days and 25%/20% consistency; Instant Prime comparison five days and no consistency. Different plan scope likely explains; reconcile before public statement. Priority interview voluntary for expedited payment (normal 5–7 days after verification).",
+      "source": "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/",
+      "locator": "First/Ongoing Payout Eligibility; Instant Funded Accounts; https://fundingyourtrades.com/faq/instant-funding-models-compared/",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B1": "§10.3 forfeiture linked to prohibited trading; B2 not unconditional.",
     "E_HARSH": "IP mismatch termination alone; verify explicit payout consequence and legitimate exceptions.",
-    "B3": "§11.2 generic service change, no already purchased account language."
+    "B3": "§11.2 generic service change, no already purchased account language.",
+    "B2A": "§15.2 generic amicable discussion is not express trading review/appeal or reasons.",
+    "B5": "Prime min hold profit reduction not explicit loss retention in captured rules."
   },
   "toVerify": {
-    "coverage": "Full web terms, uploaded OCR upload-712fe3a66d.txt, all Prime/Classic/Instant rules, payout qualification, prohibited usage and consistency FAQ; separate funded terms.",
-    "B2A": "Check appeal/reason route.",
-    "CONS": "Most lenient main programme."
+    "coverage": "All current terms and all archived substantive FAQ bodies read. Help index lists 55 articles; uncaptured detailed Classic/Instant rulebooks and any distinct funded-stage agreement should be obtained if needed; no full live help-center claim.",
+    "CONS": "Prime main no-consistency expressly confirmed; resolve general Instant payout wording vs Instant Prime-specific schedule.",
+    "B4": "Terms generally permit holding positions during news; Prime FAQ permits holding but prohibits opening ±5 min, no direct same-point conflict."
   }
 }
