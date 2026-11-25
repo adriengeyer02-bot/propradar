@@ -649,6 +649,84 @@
             "https://helpfutures.fundednext.com/fr/articles/16522296-route-vers-le-trading-en-direct-rapid-flex-direct"
           ]
         }
+      ],
+      "fundednext-stellar-one-current": [
+        {
+          "score": 76,
+          "scope": "Stellar 1-Step — funded",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "General terms permit discretionary denial/reversal of rewards and contractual penalties where violations or reasonable indications exist; grouped once.",
+              "source": "https://fundednext.com/static/terms-of-service"
+            },
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Funded high-impact correlated news execution window: only 40% of affected profitable trades counts, while losses remain fully counted.",
+              "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext"
+            }
+          ],
+          "sources": [
+            "https://fundednext.com/static/terms-of-service",
+            "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext"
+          ]
+        }
+      ],
+      "fundednext-stellar-two-current": [
+        {
+          "score": 76,
+          "scope": "Stellar 2-Step — funded, standard cycle",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "General terms permit discretionary denial/reversal of rewards and contractual penalties where violations or reasonable indications exist; grouped once.",
+              "source": "https://fundednext.com/static/terms-of-service"
+            },
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Funded high-impact correlated news execution window: only 40% of affected profitable trades counts, while losses remain fully counted.",
+              "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext"
+            }
+          ],
+          "sources": [
+            "https://fundednext.com/static/terms-of-service",
+            "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext"
+          ]
+        }
+      ],
+      "fundednext-stellar-lite-current": [
+        {
+          "score": 76,
+          "scope": "Stellar Lite — funded, standard cycle",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "General terms permit discretionary denial/reversal of rewards and contractual penalties where violations or reasonable indications exist; grouped once.",
+              "source": "https://fundednext.com/static/terms-of-service"
+            },
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Funded high-impact correlated news execution window: only 40% of affected profitable trades counts, while losses remain fully counted.",
+              "source": "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext"
+            }
+          ],
+          "sources": [
+            "https://fundednext.com/static/terms-of-service",
+            "https://help.fundednext.com/en/articles/10701447-is-news-trading-allowed-at-fundednext"
+          ]
+        }
       ]
     },
     "city-traders-imperium": {
@@ -712,6 +790,51 @@
             "https://citytradersimperium.com/contact-us/"
           ]
         }
+      ],
+      "cti-one-current": [
+        {
+          "score": 94,
+          "scope": "1-Step Challenge",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Visible stop-loss and VPS approval required; applicable even though third-party EAs are allowed on 1-Step.",
+              "source": "https://citytradersimperium.com/ea-trading-rules/"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "5% balance-based high-water trailing maximum loss; exact EOD versus intraday update timing not assumed.",
+              "source": "https://citytradersimperium.com/1-step-challenge/"
+            }
+          ],
+          "sources": [
+            "https://citytradersimperium.com/ea-trading-rules/",
+            "https://citytradersimperium.com/1-step-challenge/"
+          ]
+        }
+      ],
+      "cti-two-current": [
+        {
+          "score": 97,
+          "scope": "2-Step Challenge",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Visible stop-loss, approved VPS and ownership/source-code condition on EAs grouped as one strategy limitation.",
+              "source": "https://citytradersimperium.com/ea-trading-rules/"
+            }
+          ],
+          "sources": [
+            "https://citytradersimperium.com/ea-trading-rules/"
+          ]
+        }
       ]
     },
     "audacity-capital": {
@@ -755,6 +878,39 @@
           "sources": [
             "https://audacity.capital/terms-and-conditions/",
             "https://audacity.capital/knowledge-center/trading-guidelines/"
+          ]
+        }
+      ],
+      "audacity-ability-challenge": [
+        {
+          "score": 90,
+          "scope": "Ability Challenge — 2-Step",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Risk review and termination for reasonably identified gambling/excess risk; no unconditional denial inferred.",
+              "source": "https://audacity.capital/terms-and-conditions/"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Restricted news execution window including automated stop-loss or take-profit executions.",
+              "source": "https://audacity.capital/knowledge-center/trading-guidelines/"
+            },
+            {
+              "family": "S70",
+              "points": 1,
+              "reason": "Initial 75% trader split before scaling.",
+              "source": "https://audacity.capital/webinars/new-rules-better-trading/"
+            }
+          ],
+          "sources": [
+            "https://audacity.capital/terms-and-conditions/",
+            "https://audacity.capital/knowledge-center/trading-guidelines/",
+            "https://audacity.capital/webinars/new-rules-better-trading/"
           ]
         }
       ]
@@ -1339,9 +1495,9 @@
     "blue-guardian": {
       "bg-instant-standard-current": [
         {
-          "score": 81,
+          "score": 70,
           "scope": "Instant Standard",
-          "checkedOn": "2026-11-24",
+          "checkedOn": "2026-11-25",
           "method": "reviewed-simulation",
           "deductions": [
             {
@@ -1353,6 +1509,12 @@
               "family": "C20",
               "points": 3,
               "reason": "20% consistency"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Guardian Shield: first trigger at the stated floating-loss threshold permanently reduces trader split to 50%; second trigger closes the account. One sanction mechanism.",
+              "source": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules"
             }
           ],
           "sources": [
@@ -1368,9 +1530,9 @@
       ],
       "bg-instant-starter-current": [
         {
-          "score": 69,
+          "score": 58,
           "scope": "Instant Starter",
-          "checkedOn": "2026-11-24",
+          "checkedOn": "2026-11-25",
           "method": "reviewed-simulation",
           "deductions": [
             {
@@ -1387,6 +1549,12 @@
               "family": "F6",
               "points": 10,
               "reason": "Only one payout, max $250; cap grouped"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Guardian Shield: first trigger at the stated floating-loss threshold permanently reduces trader split to 50%; second trigger closes the account. One sanction mechanism.",
+              "source": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules"
             }
           ],
           "sources": [
@@ -1397,6 +1565,84 @@
             "https://blueguardian.com/faq/articles/18446026-zero-account-rules",
             "https://help.blueguardian.com/en/articles/18426777-elite-reserve-direct-path-to-live",
             "https://help.blueguardian.com/en/articles/15859899-buy-now-pay-later-bnpl-rules"
+          ]
+        }
+      ],
+      "bg-one-standard-current": [
+        {
+          "score": 73,
+          "scope": "CFD 1-Step Standard",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Broad contractual enforcement discretion including final breach determination and denial of payments; grouped once.",
+              "source": "https://blueguardian.com/terms-and-conditions"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Guardian Shield: first trigger at the stated floating-loss threshold permanently reduces trader split to 50%; second trigger closes the account. One sanction mechanism.",
+              "source": "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+            }
+          ],
+          "sources": [
+            "https://blueguardian.com/terms-and-conditions",
+            "https://help.blueguardian.com/en/articles/18426782-1-step-standard-rules"
+          ]
+        }
+      ],
+      "bg-two-standard-current": [
+        {
+          "score": 73,
+          "scope": "CFD 2-Step Standard",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Broad contractual enforcement discretion including final breach determination and denial of payments; grouped once.",
+              "source": "https://blueguardian.com/terms-and-conditions"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Guardian Shield: first trigger at the stated floating-loss threshold permanently reduces trader split to 50%; second trigger closes the account. One sanction mechanism.",
+              "source": "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules"
+            }
+          ],
+          "sources": [
+            "https://blueguardian.com/terms-and-conditions",
+            "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules"
+          ]
+        }
+      ],
+      "bg-two-nano-current": [
+        {
+          "score": 80,
+          "scope": "CFD 2-Step Nano",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Broad contractual enforcement discretion including final breach determination and denial of payments; grouped once.",
+              "source": "https://blueguardian.com/terms-and-conditions"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Each payout is capped at 2% of the original account size; no permanent removal inferred.",
+              "source": "https://help.blueguardian.com/en/articles/18426785-2-step-nano-rules"
+            }
+          ],
+          "sources": [
+            "https://blueguardian.com/terms-and-conditions",
+            "https://help.blueguardian.com/en/articles/18426785-2-step-nano-rules"
           ]
         }
       ]
@@ -1537,6 +1783,56 @@
             "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
             "https://help.brightfunded.com/en/articles/18450319-1-step-daily-evaluation-rules",
             "https://help.brightfunded.com/en/articles/18450320-2-step-bright-evaluation-rules"
+          ]
+        }
+      ],
+      "bf-instant-current": [
+        {
+          "score": 76,
+          "scope": "Instant — current rules",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "G4",
+              "points": 7,
+              "reason": "Hard combined floating loss maximum of 1% of starting account size.",
+              "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules"
+            },
+            {
+              "family": "C15",
+              "points": 5,
+              "reason": "15% maximum single-day share of cycle profits.",
+              "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "3% profit reserve must remain in the account.",
+              "source": "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Five qualifying profitable days of at least 0.5%.",
+              "source": "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "No weekend positions.",
+              "source": "https://help.brightfunded.com/en/articles/18450321-instant-account-rules"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Largest losing trade cannot exceed the largest winning trade; independent payout restriction.",
+              "source": "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant"
+            }
+          ],
+          "sources": [
+            "https://help.brightfunded.com/en/articles/18450321-instant-account-rules",
+            "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant"
           ]
         }
       ]
