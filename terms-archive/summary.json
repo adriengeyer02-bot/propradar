@@ -1,20 +1,15 @@
 {
- "fetchedAt": "2026-11-25T09:30:19.153Z",
+ "fetchedAt": "2026-11-25T09:37:59.349Z",
  "firms": {
-  "ftmo": {
-   "pages": 12,
-   "errors": 0,
-   "chars": 276269
-  },
   "fundednext": {
    "pages": 13,
    "errors": 0,
-   "chars": 118247
+   "chars": 117792
   },
   "topstep": {
    "pages": 13,
    "errors": 0,
-   "chars": 436696
+   "chars": 445544
   },
   "funding-pips": {
    "pages": 8,
@@ -25,16 +20,6 @@
    "pages": 10,
    "errors": 0,
    "chars": 7678
-  },
-  "myfundedfutures": {
-   "pages": 9,
-   "errors": 0,
-   "chars": 173667
-  },
-  "the5ers": {
-   "pages": 13,
-   "errors": 0,
-   "chars": 240213
   }
  }
 }
