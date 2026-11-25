@@ -56,41 +56,35 @@ standard présent partout. Révisions :
    incidents ne sont pas codés. Proposition : H1 « plaintes de paiement multiples et non résolues
    depuis plus de 90 jours, comptées à la main avec liens » −10 ; H2 « défaut reconnu ou
    procédure d'un régulateur » −20 ; A1 conservé à −40.
-9. **Point ouvert : Trustpilot retiré (TPW)** coûte deux fois : la note n'est plus une preuve pour
-   le plafond (ex. Audacity : 14 ans mais plafond 75) et −10 en plus. À garder ou à réduire à
-   un seul effet ?
+9. **Trustpilot retiré (TPW) : −6, décidé par Geyer le 25/11.** Pas d'autre effet : le plafond de 64 du barème actuel disparaît dans le barème C. Une note retirée ne compte simplement pas comme preuve pour le plafond (comme pour toute firme sans preuve de paiement à grande échelle).
+10. **Révisions du 25/11 au soir** : B1 absorbe B2 (une seule pénalité pour la famille « gains retirables à discrétion »), comme pour les codes automatiques ; la consistency des fiches lues en entier suit la règle du programme principal (FTMO Instant 30 %, MyFundedCapital Stocks 35 %, FundedNext Direct 20 % : produits secondaires, plus de pénalité).
 
-## 3. Mouvements proposés (20 firmes)
+## 3. Mouvements proposés (18 firmes, version 2 du 25 novembre au soir)
 
 | Firme | Actuelle | Proposée | Écart | Lecture | Plafond | Pénalités |
 |---|---|---|---|---|---|---|
-| FundedNext | 72 | 45 | −27 | contrat entier | 85 (4 ans + preuve) | B1 −15, B2 −8, B5 −3, B6 −5, consistency 20 % −5, REGWARN −5 |
-| MyFundedCapital | 75 | 58 | −17 | contrat entier | 65 (1-2 ans) | B7 −5, consistency 30 % −2 |
-| Audacity Capital | 77 | 67 | −10 | extraits | 75 | Trustpilot retiré −10 (baisse plafonnée) |
-| For Traders | 70 | 60 | −10 | extraits | 75 | B7 −5, Trustpilot retiré −10 |
-| Finotive Funding | 69 | 60 | −9 | extraits | 75 | B3 −5, Trustpilot retiré −10 |
-| FTMO | 90 | 83 | −7 | contrat entier | 98 (11 ans + preuve très large) | B2 −8, B6 −5, consistency 30 % −2 |
-| The Trading Pit | 67 | 60 | −7 | extraits | 75 | B6 −5, Trustpilot retiré −10 |
-| Get Leveraged | 56 | 50 | −6 | extraits | 65 | consistency 20 % −5, Trustpilot retiré −10 |
-| FunderPro | 70 | 65 | −5 | extraits | 75 | Trustpilot retiré −10 |
-| Fintokei | 78 | 75 | −3 | extraits | 75 (pas de preuve à grande échelle) | aucune |
-| Top One Trader | 60 | 57 | −3 | extraits | 75 | consistency 15 % −8, Trustpilot retiré −10 |
-| Topstep | 81 | 79 | −2 | contrat entier | 95 | B2 −8, B3 −5, Trustpilot < 4,0 −3 |
-| Axi Select | 76 | 75 | −1 | extraits | 75 | aucune |
-| RZR Funded | 68 | 67 | −1 | extraits | 75 | B2 −8 |
-| Maven Trading | 63 | 62 | −1 | extraits | 75 | B5 −3, Trustpilot retiré −10 |
+| MyFundedCapital | 75 | 60 | −15 | contrat entier | 65 (1-2 ans) | B7 −5 |
+| FundedNext | 72 | 57 | −15 | contrat entier | 85 (4 ans + preuve) | B1 −15 · B5 −3 · B6 −5 · REGWARN −5 |
+| Audacity Capital | 77 | 69 | −8 | extraits | 75 (14 ans, pas de preuve à grande échelle) | Trustpilot retiré −6 |
+| For Traders | 70 | 64 | −6 | extraits | 75 (3 ans, pas de preuve à grande échelle) | B7 −5 · Trustpilot retiré −6 |
+| FTMO | 90 | 85 | −5 | contrat entier | 98 (11 ans + preuve très large) | B2 −8 · B6 −5 |
+| Finotive Funding | 69 | 64 | −5 | extraits | 75 (5 ans, pas de preuve à grande échelle) | B3 −5 · Trustpilot retiré −6 |
+| Fintokei | 78 | 75 | −3 | extraits | 75 (4 ans, pas de preuve à grande échelle) | aucune |
+| The Trading Pit | 67 | 64 | −3 | extraits | 75 (4 ans, pas de preuve à grande échelle) | B6 −5 · Trustpilot retiré −6 |
+| Topstep | 81 | 79 | −2 | contrat entier | 95 (14 ans + preuve) | B2 −8 · B3 −5 · Trustpilot < 4,0 −3 |
+| Get Leveraged | 56 | 54 | −2 | extraits | 65 (1-2 ans) | consistency 20% −5 · Trustpilot retiré −6 |
+| Axi Select | 76 | 75 | −1 | extraits | 75 (3 ans, pas de preuve à grande échelle) | aucune |
+| FunderPro | 70 | 69 | −1 | extraits | 75 (3 ans, pas de preuve à grande échelle) | Trustpilot retiré −6 |
+| RZR Funded | 68 | 67 | −1 | extraits | 75 (3 ans, pas de preuve à grande échelle) | B2 −8 |
 | Lvlup Futures | 51 | 50 | −1 | extraits | 55 (< 1 an) | B3 −5 |
-| Take Profit Trader | 73 | 82 | +9 | contrat entier | 95 | B3 −5, B7 −5, B4 −3 |
-| Hash Hedge | 61 | 71 | +10 | contrat entier | 75 | B2A −4 |
-| HyroTrader | 55 | 66 | +11 | contrat entier | 75 | B2A −4, B7 −5 |
-| Lucid Trading | 53 | 66 | +13 | contrat entier | 75 (2 ans) | B2A −4, B3 −5 |
+| Take Profit Trader | 73 | 82 | +9 | contrat entier | 95 (5 ans + preuve) | B3 −5 · B7 −5 · B4 −3 |
+| Hash Hedge | 61 | 71 | +10 | contrat entier | 75 (3 ans, pas de preuve à grande échelle) | B2A −4 |
+| HyroTrader | 55 | 66 | +11 | contrat entier | 75 (4 ans, pas de preuve à grande échelle) | B2A −4 · B7 −5 |
+| Lucid Trading | 53 | 66 | +13 | contrat entier | 75 (2 ans) | B2A −4 · B3 −5 |
 
-Sensibles (accord requis) : FundedNext, MyFundedCapital, Audacity, For Traders, Finotive, FTMO,
-The Trading Pit, Get Leveraged, FunderPro (baisses ≥ 5) ; Hash Hedge, HyroTrader, Lucid
-(hausses ≥ 10). FTMO et FunderPro sont affiliés : même traitement que les autres.
+Sensibles (accord requis) : MyFundedCapital, FundedNext, Audacity, For Traders, FTMO, Finotive (baisses ≥ 5) ; Hash Hedge, HyroTrader, Lucid (hausses ≥ 10). FTMO est affilié : même traitement que les autres.
 
-Effet sur le haut du classement : FTMO 83, Take Profit Trader 82, MyFundedFutures 81 (inchangée,
-extraits seulement), Topstep 79, The5ers 78, Tradeify 78.
+Effet sur le haut du classement : FTMO 85, Take Profit Trader 82, MyFundedFutures 81 (inchangée), Topstep 79, The5ers 78, Tradeify 78.
 
 ## 4. Ce qui n'est pas proposé
 

@@ -5,11 +5,12 @@
  "status": "TERMS READ (French version saved by Geyer, OCR) + help centre pages",
  "facts": [
   {
-   "code": "CONS_20_29_DELAY",
+   "code": "CONS_INFO",
    "text": "Futures Direct Account: 20% Perpetual Consistency Rule as a withdrawal gate; the best day ever carries forward across all cycles (cycle total must reach 5x the best day). CFD On-Demand: 40%; Futures Rapid Pro funded: 40%; Legacy/Flex funded: none.",
    "source": "https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account",
    "locator": "Direct Account section",
-   "checkedOn": "2026-11-25"
+   "checkedOn": "2026-11-25",
+   "scoreNote": "Revised 2026-11-25: threshold applies to a secondary programme only (most lenient main programme scored), no penalty."
   },
   {
    "code": "B5",

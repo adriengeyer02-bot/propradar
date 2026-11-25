@@ -24,7 +24,7 @@ YEAR = 2026
 
 W = {  # weights, barème C final draft
     'B1': 15, 'B2': 8, 'B2A': 4, 'B3': 5, 'B4': 3, 'B4max': 6, 'B5': 3, 'B6': 5, 'B7': 5, 'Bcap': 30,
-    'TPW': 10, 'TPMID': 3, 'REGWARN': 5, 'A1': 40, 'A1_OLD_UNCLEAR': 15, 'A2ISO': 5, 'E_HARSH': 2,
+    'TPW': 6, 'TPMID': 3, 'REGWARN': 5, 'A1': 40, 'A1_OLD_UNCLEAR': 15, 'A2ISO': 5, 'E_HARSH': 2,
 }
 CONS = [(40, 0), (30, 2), (20, 5), (0, 8)]
 
@@ -192,6 +192,10 @@ for f in BASE:
     paused = any(re.search(r"paus|suspend|halt|went dark|cease|shut ?down|closed", i, re.I) for i in f['incidents'])
     if paused and not ver:
         read = False
+    if 'B1' in codes and 'B2' in codes:
+        # B1 (any reward removable at discretion) already covers B2 (removal for
+        # unquantified conduct): one penalty for the family, as for automatic codes.
+        codes = {k: v for k, v in codes.items() if k != 'B2'}
     c, why, evid = ceiling(f, f['withheld'])
     lines = []
     b = 0
