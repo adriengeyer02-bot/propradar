@@ -12,9 +12,11 @@
       "highlightedSizes": [
         6000
       ],
-      "terms": "Only Stellar 2-Step 6K: $59.99 to $34.99 globally (41% off), or $49.99 to $34.99 in the US (30% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
+      "terms": "Only Stellar 2-Step 6K: $59.99 to $34.99 globally (41% off), or $49.99 to $34.99 in the US (30% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and official campaign ended 22 November at 17:00 GMT+6.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
-      "checkedOn": "2026-11-19"
+      "checkedOn": "2026-11-19",
+      "endsOn": "2026-11-22",
+      "expiresAt": "2026-11-22T11:00:00Z"
     },
     {
       "id": "fundednext-novstr-stellar-one-2026",
@@ -27,9 +29,11 @@
       "highlightedSizes": [
         6000
       ],
-      "terms": "Only Stellar 1-Step 6K: $65.99 to $44.99 globally (31% off), or $55.99 to $44.99 in the US (19% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
+      "terms": "Only Stellar 1-Step 6K: $65.99 to $44.99 globally (31% off), or $55.99 to $44.99 in the US (19% off). Larger account sizes are excluded; do not apply this discount to 25K–200K list prices. Up to 5 uses per trader; no resets, and official campaign ended 22 November at 17:00 GMT+6.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
-      "checkedOn": "2026-11-19"
+      "checkedOn": "2026-11-19",
+      "endsOn": "2026-11-22",
+      "expiresAt": "2026-11-22T11:00:00Z"
     },
     {
       "id": "fundednext-novstr-stellar-lite-2026",
@@ -42,9 +46,11 @@
       "highlightedSizes": [
         5000
       ],
-      "terms": "Only Stellar Lite 5K: $32.99 to $29.99 (9% off), including in the US. Larger sizes are excluded. Up to 5 uses per trader; no resets, and the campaign can stop without notice.",
+      "terms": "Only Stellar Lite 5K: $32.99 to $29.99 (9% off), including in the US. Larger sizes are excluded. Up to 5 uses per trader; no resets, and official campaign ended 22 November at 17:00 GMT+6.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833708-what-is-the-fundednext-stellar-november-kickoff-offer",
-      "checkedOn": "2026-11-19"
+      "checkedOn": "2026-11-19",
+      "endsOn": "2026-11-22",
+      "expiresAt": "2026-11-22T11:00:00Z"
     },
     {
       "id": "fundednext-novins-stellar-instant-2026",
@@ -150,10 +156,51 @@
       "productIds": [
         "ftmo-two-step-current"
       ],
-      "offer": "Black Friday · 100K · €432 / €540 (−20%)",
-      "terms": "Official Black Friday special for the USD $100K FTMO 2-Step STANDARD Challenge: €540 list price, €432 sale price (20% off). The campaign headline 'up to 30%' applies to other account sizes, not this 100K card. Only eligible countries/accounts; final fee at checkout.",
+      "offer": "Black Friday · up to 30%",
+      "terms": "Official Black Friday page displays these exact EUR prices for USD-sized FTMO 2-Step STANDARD accounts only. No claim for Swing or other currencies. Eligibility and final price depend on the country and cart. PropRadar removes the card at its conservative banner cutoff; this is not an independently confirmed official deadline.",
       "sourceUrl": "https://promo.ftmo.com/special-november-deal-2026/",
-      "checkedOn": "2026-11-23"
+      "checkedOn": "2026-11-25",
+      "highlightedSizes": [
+        10000,
+        25000,
+        50000,
+        100000,
+        200000
+      ],
+      "priceExamples": [
+        {
+          "size": 10000,
+          "regular": 89,
+          "sale": 62,
+          "currency": "EUR"
+        },
+        {
+          "size": 25000,
+          "regular": 250,
+          "sale": 199,
+          "currency": "EUR"
+        },
+        {
+          "size": 50000,
+          "regular": 345,
+          "sale": 276,
+          "currency": "EUR"
+        },
+        {
+          "size": 100000,
+          "regular": 540,
+          "sale": 432,
+          "currency": "EUR"
+        },
+        {
+          "size": 200000,
+          "regular": 1080,
+          "sale": 864,
+          "currency": "EUR"
+        }
+      ],
+      "scope": "Standard only · USD account sizes · eligible countries",
+      "expiresAt": "2026-11-30T09:00:00Z"
     },
     {
       "id": "ftmo-one-step-100k-2026",
@@ -164,7 +211,19 @@
       "offer": "100K · €399 / €499",
       "terms": "The official FTMO 1-Step page displays €399 next to the regular €499 for a USD 100K account. No coupon is specified; eligibility and final checkout fee must be confirmed.",
       "sourceUrl": "https://ftmo.com/fr/1-step-challenge/",
-      "checkedOn": "2026-11-19"
+      "checkedOn": "2026-11-19",
+      "highlightedSizes": [
+        100000
+      ],
+      "priceExamples": [
+        {
+          "size": 100000,
+          "regular": 499,
+          "sale": 399,
+          "currency": "EUR"
+        }
+      ],
+      "scope": "100K USD account · EUR fee"
     },
     {
       "id": "funderpro-bf30-2026",
@@ -181,20 +240,6 @@
       "checkedOn": "2026-11-19",
       "endsOn": "2026-11-22",
       "expiresAt": "2026-11-22T23:59:00Z"
-    },
-    {
-      "id": "ftmo-black-friday-10k-2step-2026",
-      "slug": "ftmo",
-      "productIds": [
-        "ftmo-two-step-current"
-      ],
-      "offer": "Black Friday · 10K · €62 / €89 (≈30%)",
-      "highlightedSizes": [
-        10000
-      ],
-      "terms": "USD $10K FTMO 2-Step STANDARD account: €89 regular, €62 discounted according to the official Black Friday 2026 page. Rounding makes the percentage approximate; eligibility subject to country and cart.",
-      "sourceUrl": "https://promo.ftmo.com/special-november-deal-2026/",
-      "checkedOn": "2026-11-23"
     },
     {
       "id": "audacity-bf50-2026",
