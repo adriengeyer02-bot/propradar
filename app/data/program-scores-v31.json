@@ -1075,6 +1075,84 @@
             "https://alphacapitalgroup.uk/terms-and-conditions"
           ]
         }
+      ],
+      "alpha-pro": [
+        {
+          "score": 74,
+          "scope": "Alpha Pro — qualified account, post 21 July 2026",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Schedule 2 §2.6 and §3.2: firm determines trading-rule breaches at its discretion; funded risk must match the evaluation. Related subjective restrictions grouped.",
+              "source": "https://alphacapitalgroup.uk/terms-and-conditions"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "First lot-exposure violation excludes affected performance fees; second forfeits performance fee and deactivates the account.",
+              "source": "https://help.alphacapitalgroup.uk/en/articles/6934289-what-is-the-lot-size-limit-on-qualified-analyst-accounts"
+            },
+            {
+              "family": "G3",
+              "points": 5,
+              "reason": "For qualified accounts purchased after 21 July 2026, 2%–3% combined floating loss per asset is an independent hard breach.",
+              "source": "https://alphacapitalgroup.uk/terms-and-conditions"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Weekend holding restricted at qualified stage.",
+              "source": "https://help.alphacapitalgroup.uk/en/articles/8420429-alpha-pro-8-10"
+            }
+          ],
+          "sources": [
+            "https://alphacapitalgroup.uk/terms-and-conditions",
+            "https://help.alphacapitalgroup.uk/en/articles/6934289-what-is-the-lot-size-limit-on-qualified-analyst-accounts",
+            "https://help.alphacapitalgroup.uk/en/articles/8420429-alpha-pro-8-10"
+          ]
+        }
+      ],
+      "alpha-one": [
+        {
+          "score": 72,
+          "scope": "Alpha One — qualified account, post 21 July 2026",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Schedule 2 §2.6 and §3.2: firm determines trading-rule breaches at its discretion; funded risk must match the evaluation. Related subjective restrictions grouped.",
+              "source": "https://alphacapitalgroup.uk/terms-and-conditions"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "First lot-exposure violation excludes affected performance fees; second forfeits performance fee and deactivates the account.",
+              "source": "https://help.alphacapitalgroup.uk/en/articles/6934289-what-is-the-lot-size-limit-on-qualified-analyst-accounts"
+            },
+            {
+              "family": "G3",
+              "points": 5,
+              "reason": "For qualified accounts purchased after 21 July 2026, 2%–3% combined floating loss per asset is an independent hard breach.",
+              "source": "https://alphacapitalgroup.uk/terms-and-conditions"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "Trailing floor locks at initial balance; withdrawing all available profit closes account, rather than preserving trading buffer.",
+              "source": "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12"
+            }
+          ],
+          "sources": [
+            "https://alphacapitalgroup.uk/terms-and-conditions",
+            "https://help.alphacapitalgroup.uk/en/articles/6934289-what-is-the-lot-size-limit-on-qualified-analyst-accounts",
+            "https://help.alphacapitalgroup.uk/en/articles/10097421-alpha-one-6-10-12"
+          ]
+        }
       ]
     },
     "myfundedfutures": {
@@ -1169,6 +1247,87 @@
               "family": "Q",
               "points": 4,
               "reason": "Broad termination language; exact discretionary reward scope unresolved"
+            }
+          ],
+          "sources": [
+            "https://maventrading.com/terms-and-conditions"
+          ]
+        }
+      ],
+      "maven-standard-one-step": [
+        {
+          "score": 87,
+          "scope": "Standard 1-Step",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "§10.7: trader-wide $10,000 gross profit ceiling across two payouts or any rolling 30-day period; surplus is lost rather than deferred.",
+              "source": "https://maventrading.com/terms-and-conditions"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§4.5: at least half of trades must last 60 seconds or more; separate trading restriction.",
+              "source": "https://maventrading.com/terms-and-conditions"
+            }
+          ],
+          "sources": [
+            "https://maventrading.com/terms-and-conditions"
+          ]
+        }
+      ],
+      "maven-standard-two-step": [
+        {
+          "score": 84,
+          "scope": "Standard 2-Step",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "§10.7: trader-wide $10,000 gross profit ceiling across two payouts or any rolling 30-day period; surplus is lost rather than deferred.",
+              "source": "https://maventrading.com/terms-and-conditions"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§4.5: at least half of trades must last 60 seconds or more; separate trading restriction.",
+              "source": "https://maventrading.com/terms-and-conditions"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "Schedule 1 requires three fresh profitable days for each reward cycle, independently of the minimum payout period.",
+              "source": "https://maventrading.com/terms-and-conditions"
+            }
+          ],
+          "sources": [
+            "https://maventrading.com/terms-and-conditions"
+          ]
+        }
+      ],
+      "maven-standard-three-step": [
+        {
+          "score": 87,
+          "scope": "Standard 3-Step",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "§10.7: trader-wide $10,000 gross profit ceiling across two payouts or any rolling 30-day period; surplus is lost rather than deferred.",
+              "source": "https://maventrading.com/terms-and-conditions"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§4.5: at least half of trades must last 60 seconds or more; separate trading restriction.",
+              "source": "https://maventrading.com/terms-and-conditions"
             }
           ],
           "sources": [
@@ -1855,6 +2014,183 @@
           "sources": [
             "https://funderpro.com/terms-conditions/",
             "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+          ]
+        }
+      ],
+      "funderpro-one-phase": [
+        {
+          "score": 80,
+          "scope": "One Phase — standard, no Swing add-on",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Terms §13.14–15: discretionary risk and lot-size assessment can disqualify evaluation or deny reward; grouped with qualitative review.",
+              "source": "https://funderpro.com/terms-conditions/"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Funded asset-class margin limit: first violation removes affected profits, second closes account and declines remaining reward.",
+              "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Funded news entry restricted around high-impact announcements without Swing add-on.",
+              "source": "https://funderpro.com/terms-conditions/"
+            }
+          ],
+          "sources": [
+            "https://funderpro.com/terms-conditions/",
+            "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+          ]
+        }
+      ]
+    },
+    "e8-markets": {
+      "e8-one-current": [
+        {
+          "score": 90,
+          "scope": "E8 One — performance account",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Published E8 Funding LLC terms §§5 and 12 permit denial/revocation of rewards for noncompliance at sole discretion; separate signed ESPA may specify further safeguards.",
+              "source": "https://e8markets.com/e8-markets-terms-and-conditions"
+            },
+            {
+              "family": "B1",
+              "points": 2,
+              "reason": "Dynamic drawdown requires retention of a buffer in specified payout scenarios.",
+              "source": "https://help.e8markets.com/en/articles/9323884-payout-request-on-e8-one"
+            }
+          ],
+          "sources": [
+            "https://e8markets.com/e8-markets-terms-and-conditions",
+            "https://help.e8markets.com/en/articles/9323884-payout-request-on-e8-one"
+          ]
+        }
+      ],
+      "e8-pro-current": [
+        {
+          "score": 88,
+          "scope": "E8 Pro — performance account",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Published E8 Funding LLC terms §§5 and 12 permit denial/revocation of rewards for noncompliance at sole discretion; separate signed ESPA may specify further safeguards.",
+              "source": "https://e8markets.com/e8-markets-terms-and-conditions"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "After first payout the floor fixes at starting balance; 50% retained profit functions as the drawdown buffer.",
+              "source": "https://help.e8markets.com/en/articles/13653464-payout-request-from-e8-pro"
+            }
+          ],
+          "sources": [
+            "https://e8markets.com/e8-markets-terms-and-conditions",
+            "https://help.e8markets.com/en/articles/13653464-payout-request-from-e8-pro"
+          ]
+        }
+      ],
+      "e8-zero-current": [
+        {
+          "score": 88,
+          "scope": "E8 Zero — Futures performance account",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "End-of-day dynamic drawdown in performance stage.",
+              "source": "https://help.e8markets.com/en/articles/11864596-eod-dynamic-drawdown"
+            },
+            {
+              "family": "F4",
+              "points": 7,
+              "reason": "Maximum five payouts per performance account.",
+              "source": "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+            },
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Per-request payout caps apply; no inference of permanent profit deletion.",
+              "source": "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+            }
+          ],
+          "sources": [
+            "https://help.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+            "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature"
+          ]
+        }
+      ]
+    },
+    "e8-futures": {
+      "e8-signature-futures": [
+        {
+          "score": 72,
+          "scope": "Signature Futures — performance account",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "End-of-day dynamic drawdown.",
+              "source": "https://help.e8markets.com/en/articles/11864596-eod-dynamic-drawdown"
+            },
+            {
+              "family": "C30",
+              "points": 1,
+              "reason": "35% best-day payout eligibility.",
+              "source": "https://help.e8markets.com/en/articles/11865587-35-best-day-rule"
+            },
+            {
+              "family": "F4",
+              "points": 7,
+              "reason": "Four payouts per account, then deactivation.",
+              "source": "https://help.e8markets.com/en/articles/11755943-e8-signature"
+            },
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "Unused gains of previous payout cycles cannot be claimed in later cycles; charged as lost payout eligibility rather than an ordinary cap.",
+              "source": "https://help.e8markets.com/en/articles/11755943-e8-signature"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "A buffer equal to the drawdown must be retained.",
+              "source": "https://help.e8markets.com/en/articles/11755943-e8-signature"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Five profitable days at 0.3% after first payout.",
+              "source": "https://help.e8markets.com/en/articles/11755943-e8-signature"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Positions must be closed each day at 23:00 server time.",
+              "source": "https://help.e8markets.com/en/articles/11755943-e8-signature"
+            }
+          ],
+          "sources": [
+            "https://help.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
+            "https://help.e8markets.com/en/articles/11865587-35-best-day-rule",
+            "https://help.e8markets.com/en/articles/11755943-e8-signature"
           ]
         }
       ]
