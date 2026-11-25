@@ -1,0 +1,41 @@
+{
+  "slug": "ic-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read archived English T&C da28a3562122.txt (sections 1–24, full captured text), rules d608d1a2e6bc.txt and FAQs 507f850333a4.txt (full captured bodies). Rules capture shows 2-Step Professional only and several unexpanded questions; not equivalent to all programme rules or the separate funded agreement. Archive pinned d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§11.3: “full and sole discretion” to classify even unlisted prohibited conduct; §11.4 expressly permits “Remove profits” and “Deny payouts”. Conduct-linked discretion, not unconditional earned-reward forfeiture.",
+      "source": "https://www.icfunded.com/terms-and-conditions",
+      "locator": "§11.2–11.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§12.1–12.4: significant or unjustified deviations in lot size, strategy, frequency or exposure may disqualify/terminate. §15.2: “Passing does not guarantee a funded account.” Related to B2; no separate penalty.",
+      "source": "https://www.icfunded.com/terms-and-conditions",
+      "locator": "§12; §15.2–15.3",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "2-Step Professional: “5 profitable days” for first payout, three for second and none thereafter, minimum 14 calendar days each. Fixed 10% max drawdown in funded stage; up to 90% split. Not a numeric consistency threshold.",
+      "source": "https://www.icfunded.com/rules",
+      "locator": "2-Step Professional > Simulated funded stage / Payout eligibility",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§11.4 payout removal follows classification of conduct, not an unrestricted right to remove earned rewards; §16.2 revokes access but does not explicitly remove earned rewards.",
+    "B3": "§6.4 permits modifying fees or program rules at any time and §22 continued-use acceptance; neither explicitly states application to existing purchased accounts.",
+    "B6": "§19 prohibits excessive demands/repeated complaints after resolution with termination without refund; no express public criticism/reputational harm ground.",
+    "E_HARSH": "§4.5 denial/cancellation concerns false/inconsistent information or failed identity verification; ordinary KYC controls not coded."
+  },
+  "toVerify": {
+    "B7": "§16.1 says funded accounts subject to separate agreements; need actual agreement and evidence of when provided.",
+    "CONS": "1-Step and Instant tab bodies, full risk-management policy and collapsed programme FAQs not captured; no firm-wide consistency conclusion.",
+    "B2A": "No documented review/appeal route in read clauses; check separate funded terms.",
+    "coverage": "Home snapshot not read; main terms read but programme rule archive incomplete."
+  }
+}
