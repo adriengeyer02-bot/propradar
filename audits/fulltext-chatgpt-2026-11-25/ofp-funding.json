@@ -2,7 +2,7 @@
   "slug": "ofp-funding",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted 708662716093.txt §§4.6–4.12,5.1–5.7,6.1–6.2.4,8.5 and appendix excerpt. Other FAQ pages not read.",
+  "method": "Full main terms 708662716093.txt 54,012 chars, §§1–16 and Schedules A/B, contiguous slices 0–18k,18k–36k,36k–end; all seven successful help captures 1003413cbe7b,07669adc5103,bab7f656421e,e1793c3c3e9c,7859324dd21d,309f54b7a2a4,135fe05fa83b (.txt) fully read. Public trading-rules route 403, separate detail not available; main terms include both schedules and all captured rules. PARTIAL if blocked trading-rules route materially supplements these rules; conservatively retain PARTIAL.",
   "facts": [
     {
       "code": "B2",
@@ -24,16 +24,52 @@
       "source": "https://ofpfunding.com/terms-and-conditions",
       "locator": "§6.2.1–6.2.3",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B4",
+      "text": "Contract §6.2.1: floating PnL below -1% means account 'closed immediately'; May 20 FAQ: 'This is a soft rule: breaching it does not result in account termination. Instead, the account balance will be reset.' Same rule, opposite sanction. Also contract §6.2.2 daily high balance vs FAQ previous EOD equity.",
+      "source": "https://help.ofpfunding.com/what-are-the-trading-rules-every-ofp-trader-must-follow/",
+      "locator": "Maximum 1% Risk Limit; Maximum Daily Drawdown; contract §6.2.1–6.2.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§12.2–12.5 no-cause termination preserves reward entitlement for current trading period/pro rata where eligible; forfeiture only material breach. §14 written complaint acknowledgment and resolution within 30 calendar days. Claude to assess whether this qualifies as B2A review route; no duplicate B2/B2A.",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "locator": "§12.2–12.5; §14.1–14.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Schedule A: One-Phase and Two-Phase main models no consistency in evaluation or funded; Instant Lite/Pro/Prime/Plus none; Instant Classic 25%. Most lenient main programme no consistency penalty.",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "locator": "Schedule A §§1.1–1.5,2.1–2.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Legacy gambling rule applies accounts purchased before May 21; 3.5x typical lot size, unclear strategy, largest loss exceeding typical winning trade may cause monthly payout refusal or closure. Under-one-minute duration is a guideline not fixed threshold. News ±2 min; max two same-direction same-asset active positions, trades different days exempt, suggested 30-minute pause.",
+      "source": "https://help.ofpfunding.com/which-strategies-are-not-allowed-hedging-arbitrage-hft-martingale/",
+      "locator": "Gambling; One-sided betting; HFT; News",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Terms §5.7 invoices issued within seven days and due in 14 calendar days; Aug 5 FAQ advertises usual 2–3 business days, Rise $50 fee over $500. These are deadline vs usual processing, not clear contradiction. Terms contracting party UK Finteknology Ltd, footer Saint Lucia OFP Funding Ltd service provider and UK payment agent.",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "locator": "§1.1; §5.7; footer; help payout timing",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
-    "B1": "§5.2 entitlement based on performance and conditions; §4.9 conduct-linked.",
+    "B1": "§12.3–12.5 expressly preserve otherwise entitled reward upon no-cause termination; forfeiture tied to material breach.",
     "CONS": "20% example not confirmed actual most lenient plan; no code.",
     "B5": "§4.9 ignores variation in performance, no express asymmetric loss."
   },
   "toVerify": {
-    "coverage": "Read whole 54k terms, help trading/risk/strategies and payout pages; verify invoice errors vs permanent forfeiture and appeal route.",
-    "B2A": "Find written review or explanation.",
-    "CONS": "Actual plan thresholds and delay/forfeit."
+    "coverage": "All accessible captured documents fully read. Public trading-rules route 403; obtain actual body and help child articles on sanctions, minimum withdrawal, risk rules and current checkout. PARTIAL solely for missing rule surface, not unread archive bodies.",
+    "B2A": "§14 formal written complaint acknowledgment and 30-day resolution route; Claude assess if sufficient for B2A rather than B2.",
+    "B4": "Verify current precedence/cohort of conflicting hard/soft risk rule and daily drawdown.",
+    "CONS": "Main one/two-phase no consistency in Schedule A; verify still sold at checkout."
   }
 }
