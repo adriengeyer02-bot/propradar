@@ -2,7 +2,7 @@
   "slug": "ic-funded",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read archived English T&C da28a3562122.txt (sections 1–24, full captured text), rules d608d1a2e6bc.txt and FAQs 507f850333a4.txt (full captured bodies). Rules capture shows 2-Step Professional only and several unexpanded questions; not equivalent to all programme rules or the separate funded agreement. Archive pinned d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "method": "Re-read complete terms §§1–24 da28a3562122.txt, rules d608d1a2e6bc.txt, FAQ 507f850333a4.txt and home 92f9cf80b574.txt. Home and rules capture 2-Step Professional tab only; other product rules and separate funded agreement absent.",
   "facts": [
     {
       "code": "B2",
@@ -24,6 +24,13 @@
       "source": "https://www.icfunded.com/rules",
       "locator": "2-Step Professional > Simulated funded stage / Payout eligibility",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Homepage 2-Step Step 1 says news trading allowed, weekend holding no, SL not required; fee refund after third payout. Footer distinguishes IC Funded Evaluations Ltd Saint Lucia 2024-00388 and distributor IC Funded Tech Solutions Ltd Cyprus HE 464324.",
+      "source": "https://www.icfunded.com/",
+      "locator": "Trading Objectives; The IC Funded Payout; footer",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -36,6 +43,6 @@
     "B7": "§16.1 says funded accounts subject to separate agreements; need actual agreement and evidence of when provided.",
     "CONS": "1-Step and Instant tab bodies, full risk-management policy and collapsed programme FAQs not captured; no firm-wide consistency conclusion.",
     "B2A": "No documented review/appeal route in read clauses; check separate funded terms.",
-    "coverage": "Home snapshot not read; main terms read but programme rule archive incomplete."
+    "coverage": "All four substantive archived captures read. Missing 1-Step and Instant tab bodies, other FAQ categories and actual funded agreement under §16.1; PARTIAL for these missing documents."
   }
 }

@@ -2,7 +2,7 @@
   "slug": "aeon-funded",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read full archived Quantx/EVC Holdings terms 3434d2e80647.txt, payout bf6200aad2cb.txt, help index 9442f523ee8b.txt and refund 5f27e20a9f62.txt. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Incorporated FAQ has many article titles only, no full bodies. Verify Aeon/Quantx entity continuity.",
+  "method": "Re-read entire four available Quantx/EVC Holdings archived texts: terms 3434d2e80647.txt, payout bf6200aad2cb.txt, help index 9442f523ee8b.txt, refund 5f27e20a9f62.txt. Help index lacks incorporated article bodies. Actual successor/brand applicability not confirmed.",
   "facts": [
     {
       "code": "NOTE",
@@ -37,6 +37,13 @@
       "text": "Refund policy states all sales final; terms promise fee reimbursement with third performance reward after passing. Distinguish refund of purchases from conditional fee reimbursement.",
       "source": "https://quantxfund.io/refund",
       "locator": "§1; compare Terms > Trader Rewards and IP Consistency",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Written dispute notice, 30 days before ICDR arbitration in Dubai; generic dispute route does not establish specific payout appeal. Terms 30-day inactivity contrasts with help index title 7-day policy; title alone insufficient for B4.",
+      "source": "https://quantxfund.io/terms",
+      "locator": "Dispute Resolution; Account Credentials and Usage Rules; https://quantxfund.io/help",
       "checkedOn": "2026-11-25"
     }
   ],

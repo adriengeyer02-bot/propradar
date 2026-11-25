@@ -2,7 +2,7 @@
   "slug": "myforexfunds",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Full visible archived English and Spanish website Terms of Use, 643c878c4514.txt and 10cf5c23b911.txt, dated September 28 2026; archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. No actual challenge/funded contract archived.",
+  "method": "Re-read all two archived website terms in English and Spanish (643c878c4514.txt and 10cf5c23b911.txt, Sept 28 2026), including legal disclosures. No actual challenge/funded contract archived.",
   "facts": [
     {
       "code": "NOTE",
@@ -16,6 +16,13 @@
       "text": "§3: “No client, advisory, employee, fiduciary, or similar relationship is created through use of the Website.” Informational website terms do not govern current programme payouts.",
       "source": "https://myforexfunds.com/terms-of-use/",
       "locator": "§3 Information-Only Website",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Legal footer names GSO licence L-4713 and separate Globeline Markets Ltd (2026-00192) for MT5, not available in the US; waitlist/relaunch language remains in both captures. No evidence of actual operative reward agreement.",
+      "source": "https://myforexfunds.com/terms-of-use/",
+      "locator": "Legal Disclaimer; Relaunching Shortly",
       "checkedOn": "2026-11-25"
     }
   ],

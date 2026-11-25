@@ -2,13 +2,20 @@
   "slug": "tradersedgefx",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read full archived common-terms-and-questions ee5d716a556d.txt; FAQ 483536939f4f.txt has identical body hash in index. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Glossary rather than contract.",
+  "method": "Re-read full glossary ee5d716a556d.txt; FAQ 483536939f4f.txt same index body hash; both URLs lead to same Common Terms and Questions page, not terms of service. No actual CG or refund policy captured.",
   "facts": [
     {
       "code": "NOTE",
       "text": "Footer states “provides simulated trading services and educational tools for traders”; separate Terms of Service and Refund Policy listed but absent from archived bodies.",
       "source": "https://tradersedgefx.com/common-terms-and-questions/",
       "locator": "Disclaimer / Customer Service",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Glossary lists major news events without a prohibition or sanction. Footer announces named rewards repeatedly; no independent proof or methodology in this capture.",
+      "source": "https://tradersedgefx.com/common-terms-and-questions/",
+      "locator": "News Events; rewards ticker",
       "checkedOn": "2026-11-25"
     }
   ],
