@@ -7,9 +7,9 @@ export type ProgrammeDeduction = {family:string;points:number;reason:string;sour
 export type ProgrammeScore = {score:number;scope:string;checkedOn:string;method:'reviewed-simulation'|'scoped-rules';deductions:ProgrammeDeduction[];sources:string[]};
 const data = registry as unknown as {version:string;bindings:Record<string,Record<string,string>>;scores:Record<string,Record<string,ProgrammeScore[]>>};
 const norm = (s:string) => s.normalize('NFKC').trim().toLowerCase();
-const explicitScope = (slug:string,p:Product,u:FirmUpdate) => {
+export const programmeScopeKeys = (slug:string,p:Product,u?:FirmUpdate) => {
  const key = data.bindings[slug]?.[p.id];
- const names = (u.auditedPrograms??[]).filter(a=>a.key===p.id||norm(a.name)===norm(p.name)).map(a=>a.key);
+ const names = (u?.auditedPrograms??[]).filter(a=>a.key===p.id||norm(a.name)===norm(p.name)).map(a=>a.key);
  return new Set([p.id,...names,...(key?[key]:[])]);
 };
 function classify(r:RestrictiveRule):{family:string;points:number}|undefined {
@@ -77,7 +77,7 @@ export function getProgrammeScores(slug:string,p:Product,u:FirmUpdate|undefined)
  const seeded=data.scores[slug]?.[p.id];
  if(seeded)return seeded;
  if(!u?.restrictiveRules?.length)return [];
- const scope=explicitScope(slug,p,u);
+ const scope=programmeScopeKeys(slug,p,u);
  const selected=u.restrictiveRules.filter(r=>r.appliesTo?.length&&r.appliesTo.some(k=>scope.has(k)));
  // Do not rate a generic family or umbrella product using firm-wide rules alone.
  if(!selected.length||!selected.some(r=>classify(r)))return [];

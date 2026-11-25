@@ -2,6 +2,7 @@ import type { Locale } from './locales';
 import type { Product } from './propFirms';
 import type { FirmUpdate, RestrictiveRule } from './firmUpdates';
 import data from '../data/program-evidence.json';
+import { programmeScopeKeys } from './programmeScores';
 
 export type ProgramEvidence = { rulesCheckedOn?: string; effectiveFrom?: string; cohort?: string; sources: string[] };
 const registry = data.firms as Record<string, Record<string, ProgramEvidence>>;
@@ -314,11 +315,10 @@ export function programCardCopy(locale: Locale) {
   const [score,pending,capital,price,target,daily,drawdown,split,rulesDate,priceDate,effective,unknown,rules,empty,official,general,unmapped,noConsistency] = copy[locale] ?? copy.en;
   return {score,pending,capital,price,target,daily,drawdown,split,rulesDate,priceDate,effective,unknown,rules,empty,official,general,unmapped,noConsistency};
 }
-const normal = (s: string) => s.normalize('NFKC').trim().toLowerCase();
 /** No fuzzy matching, no scope inferred from missing appliesTo. */
-export function mapProgramRules(product: Product, update?: FirmUpdate): { specific: RestrictiveRule[]; general: RestrictiveRule[]; unmapped: boolean } {
+export function mapProgramRules(product: Product, update?: FirmUpdate, slug = ''): { specific: RestrictiveRule[]; general: RestrictiveRule[]; unmapped: boolean } {
   const rules = update?.restrictiveRules ?? [];
-  const keys = new Set([product.id, ...(update?.auditedPrograms ?? []).filter(p => p.key === product.id || normal(p.name) === normal(product.name)).map(p=>p.key)]);
+  const keys = programmeScopeKeys(slug, product, update);
   const specific = rules.filter(r => r.appliesTo?.length && !r.appliesTo.includes('*') && r.appliesTo.some(k => keys.has(k)));
   const general = rules.filter(r => r.appliesTo?.includes('*'));
   const unmapped = rules.some(r=>!r.appliesTo?.length);

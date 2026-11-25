@@ -140,5 +140,20 @@
 .pr-snapshot-tile .pr-snapshot-markets{display:block;-webkit-line-clamp:unset;overflow:visible}
 @media(max-width:640px){.pr-program-card-heading{grid-template-columns:auto minmax(0,1fr) auto}.pr-program-score-ring{min-width:66px;max-width:96px}.pr-program-range-rings{gap:2px}}
 
-/* Programme score: requested red outline, number only, company gauges unchanged. */
-.pr-program-score-ring .pr-ring-value{stroke:#ef5555}
+/* Programme score thresholds: strictly <65 red, 65–75 orange, >75 green. */
+.pr-ring.pr-program-ring-red .pr-ring-value{stroke:#ef5555}
+.pr-ring.pr-program-ring-orange .pr-ring-value{stroke:#e8a34d}
+.pr-ring.pr-program-ring-green .pr-ring-value{stroke:#49c69b}
+
+/* A compact, optional comparison before the detailed cards. */
+.pr-program-compare{margin:0 0 12px;border:1px solid var(--border,#303640);border-radius:10px;padding:9px 12px;font-size:.82rem;min-width:0}
+.pr-program-compare>summary{cursor:pointer;font-weight:650;line-height:1.4}
+.pr-program-compare-scroll{overflow-x:auto;margin-top:9px;max-width:100%;overscroll-behavior-inline:contain}
+.pr-program-compare table{border-collapse:collapse;width:100%;min-width:620px;text-align:start}
+.pr-program-compare th,.pr-program-compare td{padding:8px;border-bottom:1px solid var(--border,#303640);text-align:start;vertical-align:middle;font-size:.76rem;line-height:1.35}
+.pr-program-compare thead th{opacity:.78;font-size:.69rem}
+.pr-program-compare-scores{display:flex;align-items:center;gap:3px}
+.pr-program-compare tbody tr:last-child>*{border-bottom:0}
+.pr-program-card{scroll-margin-top:100px}
+.pr-program-card:target{outline:2px solid rgba(83,197,155,.65);outline-offset:3px}
+.pr-program-compare-scroll:focus-visible{outline:2px solid #7cb7d4;outline-offset:2px}

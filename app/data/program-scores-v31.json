@@ -1224,6 +1224,31 @@
             "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
           ]
         }
+      ],
+      "alpha-futures-standard": [
+        {
+          "score": 93,
+          "scope": "Standard — documented payout restrictions",
+          "checkedOn": "2026-11-24",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "L2",
+              "points": 4,
+              "reason": "Qualified Standard: request limited to 50% of profits and account-size-dependent caps of $3,000/$4,000/$5,000; grouped liquidity constraint.",
+              "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Five winning days of at least $200 required for payout.",
+              "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+            }
+          ],
+          "sources": [
+            "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+          ]
+        }
       ]
     },
     "alpha-capital-group": {

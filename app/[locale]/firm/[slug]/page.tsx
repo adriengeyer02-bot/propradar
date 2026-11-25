@@ -1130,6 +1130,26 @@ export default async function FirmPage({ params }: Props) {
             <span>{firm.products.length === 1 ? f.programOne : fmt(f.programs, { n: firm.products.length })}</span>
           </div>
         </header>
+        {firm.products.length > 1 ? (
+          <details className="pr-program-compare">
+            <summary>{f.compare} · {firm.products.length} {f.nav.offers.toLocaleLowerCase()}</summary>
+            <div className="pr-program-compare-scroll" tabIndex={0} aria-label={f.nav.offers}>
+              <table>
+                <thead><tr><th scope="col">{f.nav.offers}</th><th scope="col">{programCardCopy(locale).score}</th><th scope="col">{programCardCopy(locale).target}</th><th scope="col">{programCardCopy(locale).daily}</th><th scope="col">{programCardCopy(locale).drawdown}</th><th scope="col">{programCardCopy(locale).split}</th></tr></thead>
+                <tbody>{firm.products.map(product => {
+                  const scores = productScores.get(product.id) ?? [];
+                  const values = [...new Set(scores.map(s=>s.score))].sort((a,b)=>a-b);
+                  const limits = values.length > 1 ? [values[0],values[values.length-1]] : values;
+                  return <tr key={product.id}>
+                    <th scope="row"><a href={`#programme-${product.id}`}>{tx(product.name)} <span aria-hidden="true">↓</span></a></th>
+                    <td><div className="pr-program-compare-scores">{limits.length ? limits.map(score=><ScoreRing key={score} score={score} size="sm" label={programCardCopy(locale).score} kind="programme" />) : '—'}</div></td>
+                    <td>{tx(product.profitTarget)}</td><td>{tx(product.maxDailyLoss)}</td><td>{tx(product.maxDrawdown)}</td><td>{tx(product.profitSplit)}</td>
+                  </tr>;
+                })}</tbody>
+              </table>
+            </div>
+          </details>
+        ) : null}
         {firm.products.length > 0 ? (
           <div className="grid-2 pr-program-grid">
             {firm.products.map((product) => {
@@ -1139,7 +1159,7 @@ export default async function FirmPage({ params }: Props) {
               const maxScore = scores.length ? Math.max(...scores.map(s=>s.score)) : undefined;
               const displayScore = minScore===undefined ? '—' : minScore===maxScore ? String(minScore) : `${minScore}–${maxScore}`;
               const evidence = getProgramEvidence(firm.slug, product.id);
-              const mapped = mapProgramRules(product, getFirmUpdate(firm.slug));
+              const mapped = mapProgramRules(product, getFirmUpdate(firm.slug), firm.slug);
               const matchingPrices = priceTable?.programs.filter(p => p.productId === product.id) ?? [];
               const candidateHref = firm.partnerOffer?.href || product.linkToStart || (firm.logoDomain ? `https://${firm.logoDomain}/` : undefined);
               const purchaseHref = firm.status !== 'Fermée' && !firm.listedDomainWarning && candidateHref && !isBlockedFirmUrl(firm, candidateHref) ? candidateHref : undefined;
@@ -1152,7 +1172,7 @@ export default async function FirmPage({ params }: Props) {
               const facts = [[pc.capital, capital], [pc.price, priceOptions.length ? [...new Set(priceOptions)].join(' · ') : pc.unknown], [pc.target, tx(product.profitTarget)], [pc.daily, tx(product.maxDailyLoss)], [pc.drawdown, tx(product.maxDrawdown)], [pc.split, tx(product.profitSplit)]];
               const dateValue = (date?: string) => date ? <time dateTime={date}>{formatDateLong(locale, date)}</time> : <span>{pc.unknown}</span>;
               return (
-              <article className="card product-card pr-product pr-product-compact pr-program-card" key={product.id}>
+              <article className="card product-card pr-product pr-product-compact pr-program-card" key={product.id} id={`programme-${product.id}`}>
                 <div className="pr-program-card-heading">
                   <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="md" />
                   <div className="pr-program-heading-copy">
@@ -1165,9 +1185,9 @@ export default async function FirmPage({ params }: Props) {
                   <div className="pr-program-score pr-program-score-ring" aria-label={pc.score + ': ' + displayScore + (scores.length ? '/100' : '')}>
                     <span>{pc.score}</span>
                     {minScore === undefined ? <strong>—</strong> : minScore === maxScore ? (
-                      <ScoreRing score={minScore} size="md" label={pc.score} />
+                      <ScoreRing score={minScore} size="md" label={pc.score} kind="programme" />
                     ) : (
-                      <div className="pr-program-range-rings"><ScoreRing score={minScore} size="sm" label={pc.score} /><ScoreRing score={maxScore!} size="sm" label={pc.score} /></div>
+                      <div className="pr-program-range-rings"><ScoreRing score={minScore} size="sm" label={pc.score} kind="programme" /><ScoreRing score={maxScore!} size="sm" label={pc.score} kind="programme" /></div>
                     )}
                   </div>
                 </div>
@@ -1176,7 +1196,7 @@ export default async function FirmPage({ params }: Props) {
                   <p className="pr-program-score-basis">{sp.basis}</p>
                   {scores.map(score=><div className="pr-program-score-path" key={score.scope}>
                     <div className="pr-program-score-path-head"><strong>{tx(score.scope)}</strong><b>{score.score}/100</b></div>
-                    <ul>{score.deductions.map((d,i)=><li key={d.family+i}><span>{tx(d.reason)}</span><b>−{d.points}</b>{d.source ? <a href={d.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}</li>)}</ul>
+                    <ul>{[...score.deductions].sort((a,b)=>b.points-a.points).map((d,i)=><li key={d.family+i}><span>{tx(d.reason)}</span><b>−{d.points}</b>{d.source ? <a href={d.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}</li>)}</ul>
                     <small>{f.checkedLabel} · {formatDateLong(locale,score.checkedOn)}</small>
                     {score.sources.length ? <div className="pr-program-sources">{score.sources.map((source,i)=><a href={source} key={source} target="_blank" rel="noopener noreferrer">{f.historySource} {i+1} ↗</a>)}</div> : null}
                   </div>)}

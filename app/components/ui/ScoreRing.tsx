@@ -5,6 +5,7 @@ type ScoreRingProps = {
   score: number;
   size?: 'sm' | 'md' | 'lg';
   label?: string;
+  kind?: 'firm' | 'programme';
   /** Draw the ring and count up to the score once on load (CSS only). */
   animate?: boolean;
 };
@@ -12,17 +13,18 @@ type ScoreRingProps = {
 const SIZES = { sm: 44, md: 64, lg: 112 } as const;
 
 /** Circular score gauge. Colour follows the shared risk scale. */
-export default function ScoreRing({ score, size = 'md', label, animate = false }: ScoreRingProps) {
+export default function ScoreRing({ score, size = 'md', label, animate = false, kind = 'firm' }: ScoreRingProps) {
   const px = SIZES[size];
   const stroke = size === 'lg' ? 8 : size === 'md' ? 5 : 4;
   const radius = (px - stroke) / 2;
   const circumference = 2 * Math.PI * radius;
   const clamped = Math.max(0, Math.min(100, score));
   const dash = (clamped / 100) * circumference;
+  const programmeTone = score < 65 ? 'red' : score <= 75 ? 'orange' : 'green';
 
   return (
     <span
-      className={`pr-ring pr-ring-${size} pr-tone-${scoreTone(score)}${animate ? ' pr-ring-animate' : ''}`}
+      className={`pr-ring pr-ring-${size} pr-tone-${scoreTone(score)}${animate ? ' pr-ring-animate' : ''}${kind === 'programme' ? ` pr-program-ring-${programmeTone}` : ''}`}
       style={animate ? ({ '--pr-ring-to': clamped, '--pr-ring-circ': circumference } as CSSProperties) : undefined}
       role="img"
       aria-label={`${label ?? 'PropRadar'} ${score}/100`}
@@ -47,7 +49,7 @@ export default function ScoreRing({ score, size = 'md', label, animate = false }
         ) : (
           <strong>{score}</strong>
         )}
-        {size === 'lg' ? <small>/100</small> : null}
+        {size === 'lg' && kind !== 'programme' ? <small>/100</small> : null}
       </span>
     </span>
   );
