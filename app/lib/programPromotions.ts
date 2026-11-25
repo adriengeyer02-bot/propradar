@@ -8,6 +8,9 @@ export type ProgramPromotion = {
   code?: string;
   /** Account sizes whose published list price should be visible beside this offer. */
   highlightedSizes?: number[];
+  /** Published before/after amounts only; never inferred from a headline percentage. */
+  priceExamples?: { size: number; regular: number; sale: number; currency: 'USD' | 'EUR' | 'GBP' }[];
+  scope?: string;
   terms: string;
   sourceUrl: string;
   checkedOn: string;
@@ -23,6 +26,7 @@ const UNDATED_OFFER_MAX_AGE_DAYS = 14;
 export function isProgramPromotionCurrent(promo: ProgramPromotion, today = new Date()): boolean {
   const date = today.getTime();
   if (promo.expiresAt) return date < Date.parse(promo.expiresAt);
+  if (promo.endsOn && date >= Date.parse(`${promo.endsOn}T23:59:59Z`)) return false;
   const checked = Date.parse(`${promo.checkedOn}T23:59:59Z`);
   return date >= checked - 24 * 60 * 60 * 1000 && date - checked < UNDATED_OFFER_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
 }
