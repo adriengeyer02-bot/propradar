@@ -1,0 +1,38 @@
+/* Program cards: presentation only. No score pipeline or price mutation. */
+.pr-program-grid{align-items:start;gap:18px}
+.pr-program-grid .pr-program-card{min-width:0;display:flex;flex-direction:column;gap:14px;padding:20px;border:1px solid var(--border,#303640);border-radius:16px;overflow:hidden}
+.pr-program-card-heading{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:start;gap:12px}
+.pr-program-heading-copy{min-width:0}
+.pr-program-heading-copy h3{margin:6px 0 0;font-size:1.15rem;line-height:1.35;overflow-wrap:anywhere}
+.pr-program-heading-copy .pr-product-tags{margin:0;flex-wrap:wrap}
+.pr-program-score{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:94px;max-width:125px;padding:8px;border:1px solid var(--border,#303640);border-radius:10px;background:rgba(127,127,127,.06)}
+.pr-program-score>span{font-size:.68rem;line-height:1.3;font-weight:650}
+.pr-program-score>strong{font-size:1.85rem;line-height:1.2;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.pr-program-score>strong small{font-size:.65rem;letter-spacing:0;opacity:.7}
+.pr-program-score>small{font-size:.68rem;line-height:1.3;opacity:.75}
+.pr-program-card .pr-product-intro{margin:0;line-height:1.55}
+.pr-program-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;border:1px solid var(--border,#303640);border-radius:12px;overflow:hidden}
+.pr-program-facts>div{padding:12px 10px;min-width:0;background:rgba(127,127,127,.045);border-block-end:1px solid var(--border,#303640);border-inline-end:1px solid var(--border,#303640)}
+.pr-program-facts>div:nth-child(3n){border-inline-end:0}
+.pr-program-facts>div:nth-child(n+4){border-block-end:0}
+.pr-program-facts dt,.pr-program-dates dt{font-size:.72rem;opacity:.76;line-height:1.3}
+.pr-program-facts dd{margin:6px 0 0;font-size:.98rem;font-weight:700;line-height:1.35;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.pr-program-restrictions{border-block-start:1px solid var(--border,#303640);padding-block-start:14px;display:grid;gap:10px}
+.pr-program-restrictions h4{margin:0;font-size:.92rem}
+.pr-program-restrictions .pr-product-rule{margin:0}
+.pr-program-rule-list{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.pr-program-rule-list>li{display:flex;align-items:start;gap:9px;border:1px solid var(--border,#303640);border-radius:9px;padding:10px;min-width:0}
+.pr-program-rule-list>li>div{min-width:0}
+.pr-program-rule-list p{margin:3px 0;line-height:1.45;font-size:.82rem;overflow-wrap:anywhere}
+.pr-program-rule-list small{font-size:.7rem;opacity:.75}
+.pr-program-rule-list a,.pr-program-register,.pr-program-sources a{font-size:.77rem;overflow-wrap:anywhere}
+.pr-program-severity{border:1px solid #b78a39;color:#d7a754;border-radius:50%;width:17px;height:17px;display:grid;place-items:center;flex:none;font-size:11px;font-weight:700}
+.pr-program-severity.strong{border-color:#df746e;color:#df746e}
+.pr-program-rule-empty,.pr-program-cohort{font-size:.76rem;margin:0;line-height:1.4}
+.pr-program-general summary{cursor:pointer;font-size:.82rem;font-weight:600;margin-block-end:8px}
+.pr-program-dates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0;padding-block-start:12px;border-block-start:1px solid var(--border,#303640)}
+.pr-program-dates dd{margin:4px 0 0;font-size:.75rem;line-height:1.35;overflow-wrap:anywhere}
+.pr-program-sources{display:flex;flex-wrap:wrap;gap:6px 12px}
+.pr-program-card .btn{margin-block-start:2px;width:100%}
+@media(max-width:640px){.pr-program-grid{grid-template-columns:minmax(0,1fr)}.pr-program-grid .pr-program-card{padding:14px;gap:12px}.pr-program-card-heading{gap:8px}.pr-program-score{min-width:76px;max-width:96px;padding:6px}.pr-program-facts dd{font-size:.86rem}.pr-program-facts>div{padding:10px 7px}.pr-program-heading-copy h3{font-size:1rem}}
+@media(max-width:360px){.pr-program-facts,.pr-program-dates{grid-template-columns:repeat(2,minmax(0,1fr))}.pr-program-facts>div:nth-child(3n){border-inline-end:1px solid var(--border,#303640)}.pr-program-facts>div:nth-child(2n){border-inline-end:0}.pr-program-facts>div:nth-child(4){border-block-end:1px solid var(--border,#303640)}}
