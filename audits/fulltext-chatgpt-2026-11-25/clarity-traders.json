@@ -1,8 +1,8 @@
 {
   "slug": "clarity-traders",
-  "status": "PARTIAL",
+  "status": "TERMS READ",
   "checkedOn": "2026-11-25",
-  "method": "Targeted current terms 155192f10d66.txt (Nov 3 2026), full §§6–8, selected §9. Unresolved drafting placeholders in published text; other rule/FAQ bodies unread.",
+  "method": "Full visible text read of all five substantive archived files: main terms 155192f10d66.txt (20,001 chars, §§1–18, Nov 3 2026), FAQ 24b5c1a19fb6.txt (17,965), payout guide cd008fab8f45.txt (12,605), rules 3fc67ba22cf9.txt (11,114), comparison 4efb3666043b.txt (12,864). All 74,549 chars including headers, repeated nav and footers received without truncation. Index-only home excluded. TERMS READ means all substantive captured documents; unresolved drafting placeholders remain visible.",
   "facts": [
     {
       "code": "B2A",
@@ -31,15 +31,44 @@
       "source": "https://www.claritytraders.com/terms-and-conditions",
       "locator": "§6.2; §8.1, §8.4–8.6",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§3.4 parameters in force at purchase apply for account life, unless required by law or beneficial; §17.1 “Changes don't alter the parameters of Accounts already bought”.",
+      "source": "https://www.claritytraders.com/terms-and-conditions",
+      "locator": "§3.4; §17.1",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§14 liability cap expressly adds approved but unpaid reward to fees; §16.2 30-day good-faith dispute route, mandatory local court rights preserved §16.3.",
+      "source": "https://www.claritytraders.com/terms-and-conditions",
+      "locator": "§14; §16.2–16.3",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ permits weekend holding; §6.6 also permits holding over weekend, while §6.7 requires paid add-on for trading on weekends. Rules page explicitly separates holding from opening/managing trades. Not a clear same-point B4; clarify FAQ wording 'weekend trading and holding positions ... are permitted'.",
+      "source": "https://www.claritytraders.com/faq",
+      "locator": "Am I allowed to hold trades over the weekend?; Terms §6.6–6.7; Trading rules > Allowed",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout guide and comparison confirm 20% funded best-day rule on both main evaluation models; 10% Instant; continue trading until eligible. No minimum evaluation days, 7 funded trading days, 14-day payout interval; 70/80/90% progressive share.",
+      "source": "https://www.claritytraders.com/how-payouts-work",
+      "locator": "Will my reward pass the consistency rule?; Reward questions; comparison table",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B1": "§8.7 express refusal grounds and reason; §9.4 protects approved rewards.",
-    "B4": "Internal terms inconsistency weekend permission §6.6/paid add-on §6.7 not FAQ-v-contract until compared.",
-    "B3": "§9.3 allows finishing active accounts on discontinuation; read amendment provisions."
+    "B4": "FAQ weekend holding vs weekend trading add-on is distinguishable; FAQ wording ambiguous but rules page and terms separate holding from trading. No proven direct contradiction of same scope.",
+    "B3": "Explicit nonretroactivity in §§3.4 and 17.1.",
+    "E_HARSH": "§4.4 permits suspension during chargeback review, closure if not upheld; no express forfeiture of accrued rewards; §9.4 preserves approved unpaid rewards."
   },
   "toVerify": {
-    "coverage": "Whole terms and four FAQ/payout/rules/comparison captures; resolve placeholders, weekend, copy and product version contradictions.",
-    "CONS": "Confirm most lenient main threshold against product comparison."
+    "drafting": "Published placeholders remain in §§2.2,2.4,6.2,6.5,7,8.4–8.6,10.2,16.3,17.1; obtain finalized wording and actual reset timing, review deadline, fees and copy policy before treating those facts as definitive.",
+    "weekend": "Clarify FAQ general weekend trading wording versus add-on for opening/managing weekend positions. Holding itself permitted."
   }
 }
