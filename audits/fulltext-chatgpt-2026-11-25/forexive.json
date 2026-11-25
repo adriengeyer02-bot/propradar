@@ -2,11 +2,11 @@
   "slug": "forexive",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read targeted passages in general FAQ 205a1f8665a5.txt; uploaded FOREXIVE OCR header is French FAQ, not CG (upload-6b42709510.txt); terms archive 404. Other rule/FAQ bodies not fully read.",
+  "method": "Read all six unique available substantive archive bodies: 205a1f8665a5.txt general FAQ, 8c1223c7eb87.txt Instant FAQ, e2d773a441ab.txt rules, e47390b43d11.txt legacy risk article, b5cf5dc5e721.txt comparison (d9967b42ebdb.txt duplicate hash), upload-6b42709510.txt full 11-page French OCR FAQ. Terms route returns 404; no legal CG or funded agreement. OCR contains some obscured lines; English captures corroborate most operational rules.",
   "facts": [
     {
       "code": "B5",
-      "text": "General FAQ news rule: profits during ±5min window deducted even for pre-opened trades closed by SL/TP; “Losses made in the window count against your balance and drawdown limits as normal.” No automatic breach. Verify exact funded model scope.",
+      "text": "General FAQ explicitly applies to funded 1-Step, 2-Step and Access 1-Step: profits from trades closed ±5 minutes around high-impact news deducted, including SL/TP; 'Losses made in the window count against your balance and drawdown limits as normal.' No hard breach on these models; Instant uses a different prohibition.",
       "source": "https://forexive.com/faq/general",
       "locator": "Trading rules and conduct > news trading",
       "checkedOn": "2026-11-25"
@@ -24,15 +24,43 @@
       "source": "https://forexive.com/faq/general",
       "locator": "Related sections > Instant Funding",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B2",
+      "text": "General FAQ prohibits 'one-sided betting strategies' and states lot sizes unrestricted except gambling, with no quantified definition of gambling in that article; enforcement includes profit removal and any funded rule breach prevents withdrawal. Candidate B2 subject to actual CG and definition.",
+      "source": "https://forexive.com/faq/general",
+      "locator": "Trading rules and conduct > restricted strategies; lot sizes; enforcement",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "General FAQ says investor password change is a rule violation; enforcement states on funded account 'once any rule is broken you cannot withdraw or request a reward on your profits.' French Instant OCR p.8 corroborates general forfeiture. Confirm actual scope in CG; candidate procedural penalty.",
+      "source": "https://forexive.com/faq/general",
+      "locator": "Account security > changing password; Trading rules and conduct > enforcement; uploaded French FAQ p.8",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "CONS_INFO",
+      "text": "Instant 20% best-day delay (continue trading until compliant), seven 0.5% profitable days and 3% minimum profit; 70% first/80% later split. Only one position open, 1% per-trade loss, static 3% maximum, 2% daily. Do not apply Instant consistency to main evaluation plans.",
+      "source": "https://forexive.com/faq/instant",
+      "locator": "On-demand reward; consistency score; maximum loss per trade",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Comparison table displays 100% funded reward split across all models, whereas detailed Instant FAQ states 70%/80%, and main one-step selector displays 80% first, 85% bi-weekly, 95% weekly. FAQ-vs-marketing mismatch, not B4 absent actual contract.",
+      "source": "https://forexive.com/challenges",
+      "locator": "Comparison table / 1-Step selector; https://forexive.com/faq/instant",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
-    "B7": "Rise onboarding signature is payment-provider/possible agreement timing, not clear withholding of funded contract.",
-    "B2": "Need full qualitative conduct definition and direct payout sanction, not generic prohibition."
+    "B7": "Rise onboarding signature is payment-provider/possible agreement timing, not clear withholding of funded contract."
   },
   "toVerify": {
-    "coverage": "Actual CG URL 404; uploaded PDF is FAQ, not legal contract. Read full general and instant FAQ, rules/challenges and source for model-specific news scope.",
-    "CONS": "Most lenient 1-Step/2-Step main programme.",
-    "B5": "Confirm applicable models and current version."
+    "coverage": "All accessible archive bodies read; original terms returns 404, uploaded PDF is FAQ not CG, other product tabs/FAQ not captured, some OCR obscured. PARTIAL for missing legal terms/individual programme bodies.",
+    "B2": "Verify exact gambling definition and written review route in legal terms.",
+    "E_HARSH": "Confirm general funded reward forfeiture applies to password/inactivity breach.",
+    "CONS": "No quantified best-day threshold for main 1-Step/2-Step/Access in read archive; need full current programme FAQ."
   }
 }
