@@ -1,0 +1,54 @@
+{
+  "slug": "ment-funding",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read full English Ment terms July 2026 c5b924e46b25.txt (§1–33), full refund 7d753b317b0c.txt and risk disclaimer f10278b2a4a6.txt, plus first six pages (partial) of uploaded Dashboard Analytix OCR upload-4c36f17229.txt. Archive pinned d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Terms and refund aliases have identical index body hashes; Spanish translation, remaining OCR, incorporated rules/FAQ and funded contract not read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§4: changes of strategy judged at provider discretion and news event definition at its “sole and absolute discretion”; prohibited trading may terminate participation and forfeit amounts owed. §5 includes undefined “significant portion” risk and discretionary forfeiture of amounts owed; §14 generally forfeits profits on breached accounts.",
+      "source": "https://mentfunding.com/terms-of-service",
+      "locator": "§4–5, §14",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B3",
+      "text": "§17–18 explicitly permits risk controls “on any Account at any time”, including drawdown parameters, restrictions and forced liquidation, without prior notice for margin changes. Applies to accounts already running.",
+      "source": "https://mentfunding.com/terms-of-service",
+      "locator": "§17–18",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "§1: “Upon passing an assessment, you will be invited to enter into a Trader Agreement”; §12 says guidelines provided via email upon becoming a Trader. Separate stage agreement expressly post-passing; risk disclaimer §7 confirms funded agreement with Prop Account LC.",
+      "source": "https://mentfunding.com/terms-of-service",
+      "locator": "§1, §12",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§33 prioritises Terms over other policies; §8 refers to live capital, whereas September risk disclaimer says subsequent funded phase is simulated. This is a contract/disclaimer mismatch, not a proven FAQ/contract B4.",
+      "source": "https://mentfunding.com/risk-disclaimer",
+      "locator": "§8, §33; disclaimer §4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Risk disclaimer §7 specifies Prop Account LLC receives assessment fees; qualifying funded trader enters agreement with Prop Account LC.",
+      "source": "https://mentfunding.com/risk-disclaimer",
+      "locator": "§7",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§4 any-reason blocking and §22 discretionary termination do not expressly cancel earned rewards for any/no reason. Forfeiture tied to prohibited conduct in §4–5; B2 only.",
+    "B4": "Risk disclaimer inconsistency is recorded as NOTE, not FAQ/contract contradiction; need exact FAQ.",
+    "B5": "§4 news event removal refers to associated P&L, not profit-only with losses retained.",
+    "E_HARSH": "Refund policy allows access revocation for missing payment-risk documentation within 24h; does not expressly forfeit accrued payouts."
+  },
+  "toVerify": {
+    "coverage": "Remaining uploaded Analytix OCR pages 7–17, Spanish terms version, programme rules and payout FAQ referred to in §12/14, actual funded Trader Agreement (Prop Account LC). Verify whether shared Analytix text applies to current Ment checkout and exact version.",
+    "B1": "Read funded agreement for accrued or approved rewards upon discretionary termination.",
+    "CONS": "No numeric consistency threshold established from captured main terms."
+  }
+}
