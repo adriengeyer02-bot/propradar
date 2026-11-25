@@ -2,7 +2,7 @@
   "slug": "purdia-capital",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read full visible general terms b6c2f6b1888f.txt (effective Aug 13 2026 stated in body; footer June 7). Incorporated Trading Policy, Rules, knowledgebase and payout texts not yet fully read.",
+  "method": "Full visible bodies read: b6c2f6b1888f.txt general terms (e4ee285eeec4.txt identical archived body hash), f3ad7a53f34f.txt incorporated Trading Policy, 7c00db4d9e35.txt rules, ca15d77f8621.txt payout page, 5cc0118dbb96.txt risk disclosure, c69204bfe46f.txt policies knowledgebase and a81415172e4b.txt rules knowledgebase. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Knowledgebase has summaries with 'Read full article', some model rule tabs/underlying articles not captured.",
   "facts": [
     {
       "code": "B1",
@@ -24,6 +24,34 @@
       "source": "https://purdia.com/terms",
       "locator": "Billing, Payments, and Refunds; Account Closure Policy",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Trading Policy expressly permits cancellation of 'all unpaid and pending payouts' for activity determined abusive or unfair. Terms protect approved and in-process payouts on general closure, while Trading Policy permits all unpaid cancellation for prohibited conduct. If B1 not upheld, this supports B2; no duplicate deduction.",
+      "source": "https://purdia.com/trading-policy",
+      "locator": "Rule Violations, Cheating, and Exploits; Enforcement; general Terms Account Closure Policy",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B4",
+      "text": "Trading Policy Inactivity: 'more than 30 days' inactive followed by 30 days to request reactivation. Knowledgebase: accounts purchased on or after Oct 1 2026 'permanently closed' after '14 consecutive calendar days' without trade, cannot reopen. New cohort carve-out not stated in Aug 13 Trading Policy. Verify precedence/version.",
+      "source": "https://purdia.com/knowledgebase/general/rules-and-risk-management",
+      "locator": "Account Inactivity and Closure Policy; https://purdia.com/trading-policy > Inactivity",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout page explicitly says displayed payouts are 'Sample data for layout preview only'. Do not use named sample payouts as actual payout proof or scale evidence.",
+      "source": "https://purdia.com/payouts",
+      "locator": "Payout register / Coming soon",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout page: five evaluation days, ten sim-funded days, five $200+ profitable days in example, reach minimum payout balance once, daily payouts after qualification, transition to live at $10k sim overall profit. Knowledgebase says live position limits can change over time with assigned risk manager. No quantified consistency threshold or full product scope in captures.",
+      "source": "https://purdia.com/payouts",
+      "locator": "Path To First Payout; https://purdia.com/knowledgebase/general/rules-and-risk-management > Position Size Limits / Percentage-Based Consistency Rule",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -31,8 +59,9 @@
     "B2": "Absorbed by B1 candidate; prohibited hedging alone defined practice."
   },
   "toVerify": {
-    "coverage": "Full Trading Policy, programme Rules, payouts, knowledgebase, risk disclosure; verify duplicate terms body/version.",
-    "B1": "Check pending earned vs merely ineligible request and precise payout policy; if only conduct-linked, B2/B2A instead.",
-    "CONS": "Main programmes."
+    "coverage": "All seven unique substantive captured bodies read; actual knowledgebase child articles, full Instant rules tab and quantitative consistency thresholds unavailable in capture. PARTIAL for those gaps, no unread unique substantive archived file.",
+    "B1": "Check whether general discretionary closure can cancel an otherwise eligible earned request beyond misconduct. If B1 rejected, B2 explicit in Trading Policy; generic complaints route is not necessarily payout appeal.",
+    "B4": "Check whether Oct 1 cohort notice supersedes Aug 13 policy, confirm current accepted version.",
+    "CONS": "Percentage-Based Consistency Rule only summary; exact most lenient main programme threshold not captured."
   }
 }
