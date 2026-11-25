@@ -1,0 +1,47 @@
+{
+  "slug": "fundyourfx",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted main terms a70ba873b909.txt (83,694 chars), definition Reward and clauses 4–6, trading rules §§4.7,13.4,27–28, remaining sections and uploaded PDF unread.",
+  "facts": [
+    {
+      "code": "B1",
+      "text": "Reward defined as discretionary payment “at our sole discretion”; does not vest/accrue/owe until all reviews and release approval. Trading Rules §4.7: “All Payouts are discretionary and are not guaranteed.” B1 candidate absorbs B2; eligibility scope to verify.",
+      "source": "https://fundyourfx.com/terms-conditions",
+      "locator": "Definitions > Reward; Trading Rules §4.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B5",
+      "text": "Trading Rules §13.4 news violation profits removed, losses retained counting toward drawdown. §27.1 expressly “virtual profits from such trades will not count, but virtual losses will remain.”",
+      "source": "https://fundyourfx.com/terms-conditions",
+      "locator": "Trading Rules §13.4; §27.1 Trade Removal",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Hard breach automated decision can be submitted for human review.",
+      "source": "https://fundyourfx.com/terms-conditions",
+      "locator": "Terms §6.5.1",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Cluster investigations use matching IP/device/trading patterns etc.; §28.2 may cancel pending payouts and ban associated individuals.",
+      "source": "https://fundyourfx.com/terms-conditions",
+      "locator": "Trading Rules §28.1–28.2",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B2": "Absorbed by B1 candidate; alternatively conduct-linked reasonable eligibility discretion needs review of appeal route.",
+    "B6": "No exact clause reviewed.",
+    "E_HARSH": "Unjustified chargeback is qualified; do not code as ordinary procedural chargeback without full clause."
+  },
+  "toVerify": {
+    "coverage": "Full main terms and uploaded PDF, refund, current funded agreement, clause 29 poor risk management, notice, changes and earned approved payment protections.",
+    "B1": "Confirm exact distinction approval versus otherwise earned rewards.",
+    "B3": "Review explicit existing-account rule amendment scope.",
+    "CONS": "Most lenient main model."
+  }
+}

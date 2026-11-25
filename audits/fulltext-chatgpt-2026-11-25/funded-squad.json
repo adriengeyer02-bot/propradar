@@ -1,0 +1,39 @@
+{
+  "slug": "funded-squad",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted main CG 944770d7bf05.txt §§4.4–5.1,8,11.2; prohibited strategy and payout article excerpts e219d422e860.txt,6c006a69930c.txt. Other rules not yet fully read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "FAQ prohibits all-or-nothing trading including extremely large lot sizes or positions without reasonable risk consideration; practices may cause profit removal/payout rejection. Terms §4.4–4.5 allow exclusion on qualitative strategy classification (fees forfeited).",
+      "source": "https://intercom.help/fundedsquad/en/articles/17015352-prohibited-trading-strategies",
+      "locator": "Prohibited Trading Strategies > All-or-Nothing Trading; CG §4.4–4.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout FAQ: shared crypto wallet with another user results in payout rejection and permanent ban. Identity/AML context; verify legitimate exceptions.",
+      "source": "https://intercom.help/fundedsquad/en/articles/17135683-your-payout-guide-eligibility-requests-processing",
+      "locator": "Payout guide > wallet address",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§8 guidelines provided via email on registration as Trader; timing relative to purchase not established.",
+      "source": "https://fundedsquad.com/terms-of-service",
+      "locator": "§8 Guidelines",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "General right to exclude, no direct earned reward forfeiture independent of prohibited conduct.",
+    "B3": "Generic changes and continued use not enough.",
+    "B7": "Registration timing not clearly after purchase."
+  },
+  "toVerify": {
+    "coverage": "Whole terms, risk disclosure, full challenge and instant rules, payout guide and FAQ; social media policy index title only, not B6.",
+    "B2A": "Written explanation or review route.",
+    "CONS": "Most lenient main model."
+  }
+}

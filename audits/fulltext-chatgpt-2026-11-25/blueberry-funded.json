@@ -1,0 +1,46 @@
+{
+  "slug": "blueberry-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Selected clauses of uploaded PDF upload-b498104a6a.txt (53,759 chars), §§11–12,18; targeted prohibited-strategies FAQ 5ce30732c8ae.txt; no full read. Public PDF URL absent in archive; official root in source field, precise PDF in locator.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§12.2(g)(viii) covers any strategy not representing “individual trading in good faith” in company's exclusive judgment; §12.3 forfeiture of fees or payments trader is entitled to, immediate suspension/termination.",
+      "source": "https://blueberryfunded.com/",
+      "locator": "Uploaded BBF Technology Access and Trader Assessment Program Terms, §12.2(g)(viii), §12.3 pp.14–15",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "§11.2 after funded offer trader must sign Independent Contract Agreement “that the Company will provide you”; successful assessment does not guarantee offer.",
+      "source": "https://blueberryfunded.com/",
+      "locator": "Uploaded PDF §11.1–11.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§18.5 preserves accrued rights/payments on termination except §12.3 contraventions.",
+      "source": "https://blueberryfunded.com/",
+      "locator": "Uploaded PDF §18.5 pp.19–20",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ prohibits bad-faith trading, immediate closure/denied pending payouts. Funded synthetics profit from trades under 5 minutes removed; losses treatment not yet proven. Index lists breach appeal article, body not archived in read excerpt.",
+      "source": "https://help.blueberryfunded.com/en/articles/9714626-prohibited-strategies-after-march-12-2026",
+      "locator": "Prohibited Strategies / Bad faith trading; minimum hold-time cross-reference",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§18.5 preserves accrued rights except §12.3 conduct breach; B2.",
+    "B5": "Profit-only removal explicit but loss retention not yet verified.",
+    "E_HARSH": "§12.2 multiple IP restriction with forfeiture; exceptions in IP FAQ must be read."
+  },
+  "toVerify": {
+    "coverage": "Complete uploaded PDF and 11 archived FAQ bodies, exact published PDF URL and current funded contract, product-specific cohorts; verify appeal article.",
+    "B2A": "If written appeal/reasons confirmed, replace B2 with B2A.",
+    "CONS": "Most lenient main evaluation/funded account."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "bem-funding",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read selected main terms f18873bc48b6.txt, notably full §15 risk-management/sanctions, amendment and eligibility excerpts; remaining general and four product-specific terms not read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§15 permits measures for conduct deemed “misaligned with Our mission and values”; market-standard risk defined at discretion. Sanctions include cancellation of BEM Funding accounts or rewards under separate account terms.",
+      "source": "https://bemfunding.com/terms-and-conditions",
+      "locator": "§15 Risk Management Rules / Consequences",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Material modifications “will not apply retroactively to Challenges or Services already purchased or commenced” unless required by law.",
+      "source": "https://bemfunding.com/terms-and-conditions",
+      "locator": "Introduction / modifications",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§15 will endeavor to notify trader of action but no requirement for advance notice; restrictions and risk limits may be imposed where reasonably necessary.",
+      "source": "https://bemfunding.com/terms-and-conditions",
+      "locator": "§15 consequences",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B3": "Express nonretroactivity safeguard; changes to eligibility based on law not general retroactive trading rule change.",
+    "B5": "§15 excludes results in profits and/or losses, no explicit asymmetry.",
+    "B1": "Reward cancellation tied to prohibited conduct/risk rule; actual separate account terms needed."
+  },
+  "toVerify": {
+    "coverage": "Full 65,848-char main terms, Ascend/One/One Only/Classic Normal agreements and applicable checkout, prohibited-practice list and funded agreement.",
+    "B2A": "Written review or explanation route.",
+    "CONS": "Most lenient main model."
+  }
+}

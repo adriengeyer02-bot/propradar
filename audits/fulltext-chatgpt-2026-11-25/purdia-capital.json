@@ -1,0 +1,38 @@
+{
+  "slug": "purdia-capital",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read full visible general terms b6c2f6b1888f.txt (effective Aug 13 2026 stated in body; footer June 7). Incorporated Trading Policy, Rules, knowledgebase and payout texts not yet fully read.",
+  "facts": [
+    {
+      "code": "B1",
+      "text": "Account Closure Policy: discretionary account closure, “Pending payout requests may be canceled unless already approved and in process.” Candidate B1 for otherwise earned pending requests; approved in-process protected.",
+      "source": "https://purdia.com/terms",
+      "locator": "Account Closure Policy",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B6",
+      "text": "May suspend, disable or delete accounts that “harm the reputation, goodwill, or integrity of the platform.”",
+      "source": "https://purdia.com/terms",
+      "locator": "Accounts and Membership",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Permanent ban for rule violations/cheating/exploitation: refunds fees for still active, nonfailed accounts, per Trading Policy. Approved in-process payouts exception.",
+      "source": "https://purdia.com/terms",
+      "locator": "Billing, Payments, and Refunds; Account Closure Policy",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B3": "Generic continued-use update only.",
+    "B2": "Absorbed by B1 candidate; prohibited hedging alone defined practice."
+  },
+  "toVerify": {
+    "coverage": "Full Trading Policy, programme Rules, payouts, knowledgebase, risk disclosure; verify duplicate terms body/version.",
+    "B1": "Check pending earned vs merely ineligible request and precise payout policy; if only conduct-linked, B2/B2A instead.",
+    "CONS": "Main programmes."
+  }
+}
