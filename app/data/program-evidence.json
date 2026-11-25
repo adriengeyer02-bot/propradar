@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "notes": "Targeted rule sources; dates do not certify a complete audit. Effective dates refer only to named rules/cohorts. No programme scores are approved.",
+  "firms": {
+    "ftmo": {
+      "ftmo-one-step-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "effectiveFrom": "2026-10-12",
+        "cohort": "New 1-Step orders: net-profit consistency calculation",
+        "sources": [
+          "https://ftmo.com/en/trading-objectives/"
+        ]
+      },
+      "ftmo-two-step-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://ftmo.com/en/trading-objectives/",
+          "https://ftmo.com/en/forbidden-trading-practices/"
+        ]
+      },
+      "ftmo-instant-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://ftmo.com/en/trading-objectives/"
+        ]
+      }
+    },
+    "the5ers": {
+      "the5ers-high-stakes-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+        ]
+      },
+      "the5ers-bootcamp-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"
+        ]
+      }
+    },
+    "topstep": {
+      "topstep-trading-combine-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+        ],
+        "cohort": "Funded payout paths; evaluation conditions require separate confirmation"
+      }
+    },
+    "fundednext": {
+      "fundednext-stellar-two-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://fundednext.com/terms-of-service"
+        ]
+      },
+      "fundednext-stellar-one-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://fundednext.com/terms-of-service"
+        ]
+      },
+      "fundednext-stellar-lite-current": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://fundednext.com/terms-of-service"
+        ]
+      }
+    },
+    "alpha-futures": {
+      "alpha-futures-zero": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+        ]
+      },
+      "alpha-futures-standard": {
+        "rulesCheckedOn": "2026-11-24",
+        "sources": [
+          "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+        ]
+      }
+    }
+  }
+}
