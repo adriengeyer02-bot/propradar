@@ -60,9 +60,10 @@
       ],
       "offer": "−30% · 2K–20K",
       "code": "NOVINS",
-      "terms": "30% off all Stellar Instant account sizes, including the US. One use per trader; resets excluded. Double Up add-on is disabled during the offer. No fixed end date has been published; confirm eligibility and total at checkout.",
+      "terms": "30% off all Stellar Instant account sizes, including the US. One use per trader; resets excluded. Double Up add-on is disabled during the offer. No fixed end date has been published; confirm eligibility and total at checkout. Display suspended pending revalidation of earlier November offer.",
       "sourceUrl": "https://help.fundednext.com/en/articles/17833714-what-is-the-fundednext-stellar-instant-november-kickoff-offer",
-      "checkedOn": "2026-11-19"
+      "checkedOn": "2026-11-19",
+      "expiresAt": "2026-11-25T00:00:00Z"
     },
     {
       "id": "fundedtradingplus-size20-2026",
@@ -200,7 +201,8 @@
         }
       ],
       "scope": "Standard only · USD account sizes · eligible countries",
-      "expiresAt": "2026-11-30T09:00:00Z"
+      "expiresAt": "2026-11-30T09:00:00Z",
+      "endsOn": "2026-11-30"
     },
     {
       "id": "ftmo-one-step-100k-2026",
@@ -250,6 +252,79 @@
       "terms": "Official Audacity Black Friday homepage: 50% on Ability Challenge 2-Step and 30% on Ability Challenge 1-Step / FTP Instant. Product mapping not independently confirmed; shown in promo directory until eligible product IDs are verified.",
       "sourceUrl": "https://audacity.capital/",
       "checkedOn": "2026-11-23"
+    },
+    {
+      "id": "fundednext-bogo-nov2026",
+      "slug": "fundednext",
+      "productIds": [
+        "fundednext-stellar-one-current",
+        "fundednext-stellar-two-current",
+        "fundednext-stellar-lite-current",
+        "fundednext-stellar-instant-current"
+      ],
+      "offer": "Buy one · earn a second account",
+      "scope": "Eligible Stellar CFD accounts; conditional bonus, not a 50% price cut",
+      "terms": "Same plan and size bonus only after reaching funded stage on the challenges or completing Tier 1 on Instant. Allocation limits apply; no merging or scaling of bonus account; resets remove eligibility. Official FAQ does not specify a coupon.",
+      "sourceUrl": "https://help.fundednext.com/en/articles/18540665-double-the-opportunity-with-the-fundednext-cfd-bogo-offer",
+      "checkedOn": "2026-11-25",
+      "endsOn": "2026-11-30",
+      "expiresAt": "2026-11-30T07:00:00Z"
+    },
+    {
+      "id": "aqua-bf35-2026",
+      "slug": "aqua-funded",
+      "productIds": [
+        "aqua-instant"
+      ],
+      "allPaidPrograms": true,
+      "offer": "Black Friday · −35%",
+      "code": "BLACKFRIDAY",
+      "scope": "Eligible CFD and futures accounts",
+      "terms": "Official CFD and futures pages advertise 35% off every account until November 30; verify exact paid plan at checkout. Separate AquaPerps products not included in this verification.",
+      "sourceUrl": "https://www.aquafunded.com/cfds",
+      "checkedOn": "2026-11-25",
+      "endsOn": "2026-11-30"
+    },
+    {
+      "id": "alpha-futures-alpha50-nov2026",
+      "slug": "alpha-futures",
+      "productIds": [
+        "alpha-futures-zero",
+        "alpha-futures-standard"
+      ],
+      "offer": "−50% · ALPHA50",
+      "code": "ALPHA50",
+      "scope": "Eligible evaluation purchases; confirm exact cart",
+      "terms": "Official homepage displays 50% with ALPHA50. Direct page also advertises the code, but no exact Direct product ID confirmed here. Do not infer renewal, reset or activation discounts.",
+      "sourceUrl": "https://alpha-futures.com/",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "earn2trade-blackweek-2026",
+      "slug": "earn2trade",
+      "productIds": [
+        "e2t-tcp",
+        "e2t-gauntlet",
+        "earn2trade-gauntlet"
+      ],
+      "offer": "Black Week · up to 70%",
+      "scope": "Selected evaluation sizes and billing periods",
+      "terms": "Official homepage advertises up to 70% off and reset savings. Maximum percentage is not universal. Code, applicable durations and before/after amounts are not confirmed directly; check the official cart.",
+      "sourceUrl": "https://www.earn2trade.com/",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "id": "brightfunded-bf30-2026",
+      "slug": "brightfunded",
+      "productIds": [
+        "brightfunded-evaluation"
+      ],
+      "offer": "Early Black Friday · −30% + conditional bonus",
+      "code": "BF30",
+      "scope": "Eligible CFD offers only; bonus account after payout",
+      "terms": "Official CFD page banner advertises 30% and an extra account after payout. Do not assume the bonus is immediate or the offer applies to futures; verify plan and checkout. Published price displays vary by locale.",
+      "sourceUrl": "https://brightfunded.com/de/cfds/instant",
+      "checkedOn": "2026-11-25"
     }
   ]
 }
