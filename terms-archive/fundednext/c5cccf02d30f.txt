@@ -1,0 +1,125 @@
+URL: https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext
+FINAL: https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext
+TITLE: Understanding the Quick Strike Parameter on FundedNext | FundedNext Help Center
+FETCHED: 2026-11-25T09:23:21.995Z
+
+Skip to main content
+Go to Website
+العربية
+Português do Brasil
+English
+Français
+Deutsch
+हिन्दी
+Italiano
+日本語
+fa-IR
+简体中文
+Español
+ภาษาไทย
+Türkçe
+Oʻzbekcha
+English
+Search for articles...
+All Collections
+Trading Rules & Guidelines
+Understanding the Quick Strike Parameter on FundedNext
+Understanding the Quick Strike Parameter on FundedNext
+July 2, 2026
+
+FundedNext defines Quick Strike trades as positions closed within 30 seconds of opening. A high concentration of such trades raises concerns around market integrity — rapid, ultra-short positions can inflate trading volumes, contribute to artificial price movements, and create conditions that are inconsistent with fair and stable market participation.
+
+For this reason, FundedNext enforces a Quick Strike threshold across all account types.
+
+How the Threshold Is Calculated
+
+Quick Strike percentage is calculated based on profitable trades only. It represents the proportion of total recorded profit derived from trades closed within 30 seconds. The threshold is evaluated on a per-cycle basis.
+
+A Quick Strike percentage at or above 30% constitutes a violation.
+
+Challenge Account
+
+At 20% Quick Strike, a compliance warning is issued. This serves as an early indicator that the profit distribution is approaching the threshold and that trading behavior needs to be rebalanced before the 30% limit is reached.
+
+At 30% or above, progress toward the profit target and advancement to the next stage is placed on hold. The account remains active, and trading can continue, but progress is not credited until the Quick Strike percentage falls back below 30%. Eligibility is restored automatically once the threshold is cleared.
+​
+
+Example Scenarios
+
+Example 1
+
+Challenge Account Phase 1 (Account Size: $100,000)
+
+A trader reaches the Phase 1 profit target of $8,000.
+
+Total Profit: $8,000
+
+Profit from trades held under 30 seconds: $3,200
+
+Quick Strike Ratio: (3,200 / 8,000) x 100 = 40%
+
+Outcome: The profit target has been reached, but the Quick Strike share sits at 40%, exceeding the 30% threshold. Progression to Phase 2 is placed on hold. The account is not terminated. The trader must continue trading standard setups to increase overall profit until the $3,200 Quick Strike profit accounts for less than 30% of the total recorded profit.
+
+Example 2
+
+Challenge Account Phase 2 (Account Size: $100,000 | Profit Target: 5%)
+
+A trader reaches the Phase 2 profit target of $5,000.
+
+Total Profit: $5,000
+
+Profit from trades held under 30 seconds: $1,300
+
+Quick Strike Ratio: (1,300 / 5,000) x 100 = 26%
+
+Outcome: The Quick Strike share sits at 26%, safely below the 30% threshold. Losses from Quick Strike trades are excluded from the calculation. The trader successfully advances to the FundedNext Account.
+
+FundedNext Account
+
+At 20% Quick Strike, a formal warning is issued. At this stage, no deduction or termination is applied. However, if the Quick Strike percentage reaches or exceeds 30% after this warning, the following applies:
+
+100% of the profit generated from Quick Strike trades is deducted from the Performance Reward
+
+If the Quick Strike percentage remains at or above 30% at the end of the trading cycle, the account is terminated and all Quick Strike profit is forfeited in full
+
+Please note that due to the nature of cycle-end processing, the threshold breach and resulting account action are evaluated and applied at the end of the trading cycle. If a positive balance remains after the forfeiture, it is disbursed as the final Performance Reward for that cycle.
+
+ 
+
+Example Scenarios
+
+FundedNext Account (Account Size: $100,000)
+
+At the end of the first monthly trading cycle, the trader has generated a total profit of $12,000.
+
+Total Profit: $12,000
+
+Profit from trades held under 30 seconds: $4,200
+
+Quick Strike Ratio: (4,200 / 12,000) x 100 = 35%
+
+Outcome: The Quick Strike share sits at 35%, exceeding the 30% threshold. As this breach is identified at the end of the trading cycle, the $4,200 in Quick Strike profit is forfeited in full. The applicable account action is communicated in accordance with the platform's standard enforcement process.
+
+When the Forfeiture Exceeds Total Account Profit
+
+If the total Quick Strike profit forfeiture equals or exceeds the account's net profit for the cycle, no Performance Reward is issued for that cycle, and the withdrawal option is disabled. A full breakdown of applied deductions is available in the account dashboard.
+
+Maintaining a healthy profit distribution across varied trade durations reflects consistent, process-driven trading. Keeping Quick Strike activity well below the 30% threshold ensures uninterrupted eligibility and account standing.
+
+Related Articles
+Does FundedNext offer a Scale-Up plan?
+What are the Restricted/Prohibited Trading Strategies?
+What are the Risk Limits on a FundedNext Account?
+What are the Clarity Cards, and how do they affect my account?
+Stellar 1-Step Account
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+How the Threshold Is Calculated
+Challenge Account
+FundedNext Account
+When the Forfeiture Exceeds Total Account Profit

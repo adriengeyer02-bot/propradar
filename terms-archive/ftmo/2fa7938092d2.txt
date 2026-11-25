@@ -1,0 +1,309 @@
+URL: https://ftmo.com/au/terms-and-conditions/
+FINAL: https://ftmo.com/au/terms-and-conditions/
+TITLE: Terms and conditions | FTMO Australia
+FETCHED: 2026-11-25T09:23:37.097Z
+
+FTMO AU Live Chat: 11am–7pm AEDT.
+Black Friday: Up to 30% Off
+Claim Now 
+FTMO Challenge
+Trading
+FAQ
+Blog
+Academy
+About
+Log In
+Get Started
+Popular searches
+How it works
+App Suite
+Economic Calendar
+TERMS AND CONDITIONS
+GENERAL TERMS AND CONDITIONS - AUSTRALIA
+Support
+Chat with us
+Start the chat
+support@ftmo.com
+61 2 5018 1216
+Operated by:
+VRGK Tech Pty Ltd. (trading as FTMO Australia)
+Three International Towers Level 24
+300 Barangaroo Avenue
+Sydney, NSW, 2000
+Australia
+
+ACN 640 619 521
+AFSL 525757
+Top Searches
+FAQ
+Support
+How It Works
+Scaling Plan
+Blog
+FTMO Challenge
+How It Works
+Pricing
+FTMO Free Trial
+Scaling Plan
+Premium Programme
+Trading Objectives
+FTMO Challenge: 1-Step
+FTMO Challenge: 2-Step
+Comparison Table
+Trading
+Forbidden Trading Practices
+Tools Overview
+Economic Calendar
+Tradable Symbols
+Trading Updates
+Trading Platforms
+About
+Contact Us
+Blog
+FAQ
+Get Exclusive FTMO Insights
+Expert Trading Insights
+Latest Updates
+Special Offers
+Subscribe
+General Disclaimer: The FTMO Platform is an online demo trading platform offered by VRGK Tech Pty Ltd (trading as FTMO Australia) ACN 640 619 521 AFSL 525757.  The FTMO Platform is an educational and training tool related to trading on financial markets. No content on the platform should be considered as financial advice, or a recommendation for the purchase or sale of any financial products. All information and data on the website are for reference only and doesn’t take into account your personal objectives, financial circumstances, or needs. We encourage you to seek independent advice if necessary. The services offered by FTMO Australia are intended for Australian residents only.
+
+CFD Risk Disclaimer: CFDs are a leveraged product and trading in them is risky. You don’t own or have rights in the underlying assets. Trading CFDs are not suitable for everyone. Please consider our PDS, FSG, Account Agreement and our Terms and Conditions available on this website before using our services. You should also consider whether you’re part of our target market for the FTMO Account by reviewing our TMD. Past performance is no indication of future performance and tax laws are subject to change.
+Copyright © 2026 FTMO s.r.o. All rights reserved.
+Cookie settings
+Cookies
+Terms & Conditions
+Privacy Policy
+Legal Documents
+Made with
+for trading
+Region:
+Global
+US
+Australia
+
+If you want to learn more about FTMO Australia, you can find out all about it here.
+
+Learn more
+
+--- iframe ---
+
+
+        
+        
+                
+                
+        
+    
+    
+    
+        var inPage = 'N';
+        closeWindow = function() {
+            window.LiveAgentTrackerXD.postMessage(["closeOpenedWidget"], parent, window.parent_url);
+        }
+    
+    
+
+  
+      function toggleKb() {
+      var articles = document.getElementById('kb_side_panel');
+          articles.classList.toggle('Kb-open');
+    }
+  
+
+
+    
+    Knowledgebase
+    
+      
+                
+   
+ 
+
+
+  
+  
+    
+        
+    
+
+    
+        Contact Us
+        
+                
+            
+                    
+    
+        Name
+    
+    
+        
+            
+    
+
+        
+        
+        
+        
+    
+    
+
+    
+    
+        E-mail
+    
+    
+        
+            
+    
+
+        
+        
+        
+        
+    
+    
+
+    
+    
+        Message
+    
+    
+        
+            
+    
+    
+        
+        
+            
+                
+                Attach file
+                
+                    
+                        
+                        
+                    
+                
+            
+        
+    
+    
+        Déposer les fichiers ici...
+    
+
+        
+        
+        
+        
+    
+    
+
+
+            
+            
+        
+    
+   
+
+    Close
+
+
+      
+  
+  
+      0
+      
+                    	        Send
+  	        	      	              Chat
+            	
+  		Call
+  		Close
+  	
+   
+  
+
+        
+
+        
+            
+
+            var scriptParams = new Array();
+            var startParams = '';
+
+            var Widget = function() {
+                this.scriptStarted = false;
+                this.serverUrl = window.location.href;
+                var refMatch = window.location.hash.match(/[#&]ref=([^&]+)/) || window.location.search.match(/[?&]ref=([^&]+)/);
+                if (refMatch) {
+                    this.tracker = { url: decodeURIComponent(refMatch[1].replace(/\+/g, '%20')) };
+                }
+            };
+
+            Widget.prototype = {
+                start: function(param) {
+                    if (this.scriptStarted) {
+                        return;
+                    }
+                    startParams = param;
+                    this.scriptStarted = true;
+
+                    
+                    var widget = this;
+                    window.LiveAgentVisitorBootstrap.start(
+                        [
+                                                        '/static/webpack/liveagent-common-bundle/bundle-f89035f40d5b877e1138.esm.js',
+                                                        '/static/webpack/liveagent-common-bundle/stringutils-1831e68dca994e2e0f88.esm.js',
+                                                    ],
+                        '/chat/js/com.qualityunit.liveagent.Contact.nocache.js?v=5.70.3.20261113104659'
+                    ).catch(function(error) {
+                        widget.scriptStarted = false;
+                        console.error('Could not start LiveAgent widget', error);
+                    });
+                },
+                setSize: function(width, height) {
+                                    },
+                setParam: function(name, value) {
+                    scriptParams[name] = value;
+                },
+                                action: function() {
+                    if (arguments.length > 0) {
+                        switch (arguments[0]) {
+                            case 'start':
+                                this.start(arguments[1]);
+                                break;
+                            case 'setSize':
+                                this.setSize(arguments[1], arguments[2]);
+                                break;
+                            case 'setParam':
+                                this.setParam(arguments[1], arguments[2]);
+                                break;
+                                                    }
+                    }
+                }
+            };
+
+            var w = new Widget();
+
+            if (typeof window.LiveAgentTrackerXD !== 'undefined') {
+                window.LiveAgentTrackerXD.receiveMessage(w);
+            }
+
+            var base_path = '/';
+            
+            
+        
+        
+            
+            if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+                var viewportmeta = document.querySelector('meta[name="viewport"]');
+                if (viewportmeta) {
+                    viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+                    document.body.addEventListener('gesturestart', function() {
+                    viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+                    }, false);
+                }
+            }
+            
+        
+            
+

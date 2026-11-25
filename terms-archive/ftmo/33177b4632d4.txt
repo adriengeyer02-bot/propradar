@@ -1,0 +1,541 @@
+URL: https://ftmo.com/en/terms-and-conditions/
+FINAL: https://ftmo.com/en/terms-and-conditions/
+TITLE: Terms and conditions | FTMO.com
+FETCHED: 2026-11-25T09:23:43.189Z
+
+Live Chat
+Black Friday: Up to 30% Off
+Claim Now 
+CFD
+New
+Futures
+Trading
+About
+EN
+Log In
+Get Started
+Popular searches
+How It Works
+CFD
+App Suite
+CFD
+Leaderboard
+CFD
+Economic Calendar
+CFD
+TERMS AND CONDITIONS
+GENERAL TERMS AND CONDITIONS - GLOBAL
+Top Searches
+FAQ
+How it Works
+Affiliate Programme
+Trading Objectives
+FTMO Shop
+Support
+Chat with us
+Start the chat
+support@ftmo.com
++420 910 920 310
+Follow FTMO
+Follow FTMO Futures
+CFD
+CFDs Overview
+Pricing
+How CFDs Work
+FTMO Free Trial
+Trading Objectives
+1-Step FTMO Challenge
+2-Step FTMO Challenge
+FTMO Instant Account
+Comparison Table
+Forbidden Trading Practices
+GROW
+Premium Programme
+Scaling plan
+Futures
+Futures Overview
+Pricing
+How Futures Works
+Trading Objectives
+Comparison Table
+Forbidden Trading Practices
+Trading
+Economic Calendar
+Trading Updates
+Instruments
+Trading Platforms
+TOOLS & SERVICES
+Tools Overview
+Trading Psychology
+Leaderboard
+App Suite
+RESOURCES
+FAQ
+Blog
+Academy
+About
+About Us
+Careers
+Contact us
+Press Kit
+Press Releases
+Affiliate programme
+ADDRESS
+FTMO
+Quadrio offices
+Purkynova 2121/3
+110 00 Prague
+Czech Republic
+Get Exclusive FTMO Insights
+Expert Trading Insights
+Latest Updates
+Special Offers
+Subscribe
+All information provided on this site is intended solely for educational purposes related to trading on financial markets and does not serve in any way as a specific investment recommendation, business recommendation, investment opportunity analysis or similar general recommendation regarding the trading of investment instruments. FTMO only provides services of simulated trading and educational tools for traders. The information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local laws or regulations. FTMO companies do not act as a broker and do not accept any deposits. The offered technical solution for the FTMO platforms and data feed is powered by liquidity providers.
+Copyright © 2026 FTMO s.r.o. All rights reserved.
+Cookie settings
+Cookies
+Imprint
+Terms & Conditions
+Privacy Policy
+Made with
+for trading
+Region:
+Global
+US
+Australia
+
+--- iframe ---
+
+
+        
+        
+            
+
+    
+    
+    
+        closeWindow = function() {
+            window.LiveAgent_chatFrameClosed = true;
+            window.LiveAgentTrackerXD.postMessage(["closeOpenedWidget"], parent, window.parent_url);
+        }
+        minimizeWindow = function() {
+            window.LiveAgentTrackerXD.postMessage(["minimizeOpenedWidget"], parent, window.parent_url);
+        }
+        
+            
+                
+    
+    function togglemenu() {
+        var mainElement = document.getElementById('mainElement');
+        if ( mainElement.className.match(/(?:^|\s)SettingsOpened(?!\S)/) ) {
+            mainElement.className = mainElement.className.replace(/(?:^|\s)SettingsOpened(?!\S)/g, '' );
+        } else {
+        	mainElement.className += " SettingsOpened";
+        }
+    }
+    
+    
+    New unread message!
+    
+        
+            
+                
+                  
+                        
+                          
+                          
+                            
+                          
+                        
+                    
+                     
+                        Calling online representative...
+                        
+                    
+                 
+            
+            
+                Settings
+                 
+                  
+                      
+                      Expand to new window
+                  
+                            
+            
+            
+             
+              
+                  _
+              
+              
+                  x
+              
+                        
+            
+            
+            
+            
+              
+              	
+                  You can submit messages while waiting
+              
+            
+            
+                
+                    
+                        
+                        
+                        
+                        
+                        Send
+                     
+                     
+                       
+                        
+                        
+                                          
+                
+            
+            
+        
+    
+            
+        
+        
+    
+   
+        
+
+        
+            
+
+            var scriptParams = new Array();
+            var startParams = '';
+
+            var Widget = function() {
+                this.scriptStarted = false;
+                this.serverUrl = window.location.href;
+                var refMatch = window.location.hash.match(/[#&]ref=([^&]+)/) || window.location.search.match(/[?&]ref=([^&]+)/);
+                if (refMatch) {
+                    this.tracker = { url: decodeURIComponent(refMatch[1].replace(/\+/g, '%20')) };
+                }
+            };
+
+            Widget.prototype = {
+                start: function(param) {
+                    if (this.scriptStarted) {
+                        return;
+                    }
+                    startParams = param;
+                    this.scriptStarted = true;
+
+                                        var mainElement = document.getElementById('mainElement');
+                    mainElement.className += ' Started';
+                    
+                    var widget = this;
+                    window.LiveAgentVisitorBootstrap.start(
+                        [
+                                                        '/static/webpack/liveagent-common-bundle/bundle-f89035f40d5b877e1138.esm.js',
+                                                        '/static/webpack/liveagent-common-bundle/stringutils-1831e68dca994e2e0f88.esm.js',
+                                                    ],
+                        '/chat/js/com.qualityunit.liveagent.EmbeddedChat.nocache.js?v=5.70.3.20261113104659'
+                    ).catch(function(error) {
+                        widget.scriptStarted = false;
+                        console.error('Could not start LiveAgent widget', error);
+                    });
+                },
+                setSize: function(width, height) {
+                                    },
+                setParam: function(name, value) {
+                    scriptParams[name] = value;
+                },
+                                updateVisitorLocation : function(locationName) {
+                    com.qualityunit.liveagent.client.embeddedchat.ChatJsApi.setVisitorLocation(locationName)
+                },
+                                action: function() {
+                    if (arguments.length > 0) {
+                        switch (arguments[0]) {
+                            case 'start':
+                                this.start(arguments[1]);
+                                break;
+                            case 'setSize':
+                                this.setSize(arguments[1], arguments[2]);
+                                break;
+                            case 'setParam':
+                                this.setParam(arguments[1], arguments[2]);
+                                break;
+                                                        case 'updateVisitorLocation':
+                                this.updateVisitorLocation(arguments[1]);
+                                break;
+                                                    }
+                    }
+                }
+            };
+
+            var w = new Widget();
+
+            if (typeof window.LiveAgentTrackerXD !== 'undefined') {
+                window.LiveAgentTrackerXD.receiveMessage(w);
+            }
+
+            var base_path = '/';
+            
+            
+        
+        
+            
+            if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+                var viewportmeta = document.querySelector('meta[name="viewport"]');
+                if (viewportmeta) {
+                    viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+                    document.body.addEventListener('gesturestart', function() {
+                    viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+                    }, false);
+                }
+            }
+            
+        
+                
+            
+                if (typeof window.LiveAgentTrackerXD !== 'undefined') {
+                    const params = new URLSearchParams(window.location.search);
+                    const hashParams = new URLSearchParams(window.location.hash.slice(1));
+                    const refUrl = hashParams.get("ref") || params.get("ref") || window.parent_url;
+                    window.LiveAgentTrackerXD.postMessage(['onEmbeddedChatInitialized', params.get("cwid")], window.parent, refUrl);
+                }
+            
+        
+            
+
+
+
+--- iframe ---
+
+
+        
+        
+                
+                
+        
+    
+    
+    
+        var inPage = 'N';
+        closeWindow = function() {
+            window.LiveAgentTrackerXD.postMessage(["closeOpenedWidget"], parent, window.parent_url);
+        }
+    
+    
+
+  
+      function toggleKb() {
+      var articles = document.getElementById('kb_side_panel');
+          articles.classList.toggle('Kb-open');
+    }
+  
+
+
+    
+    Knowledgebase
+    
+      
+                
+   
+ 
+
+
+  
+  
+    
+        
+    
+
+    
+        Welcome to the FTMO Live Chat
+        
+                
+            
+                    
+    
+        Language
+    
+    
+        
+            
+    
+    
+
+        
+        
+        
+        
+    
+    
+
+    
+    
+        What is your residency?
+    
+    
+        
+            
+    
+        
+    
+    Global
+
+    
+        
+    
+    USA
+
+        
+        
+        
+        
+    
+    
+
+    
+    
+        Name
+    
+    
+        
+            
+    
+
+        
+        
+        
+        
+    
+    
+
+    
+    
+        Email
+    
+    
+        
+            
+    
+
+        
+        
+        
+        
+    
+    
+
+
+            
+            
+        
+    
+   
+
+    Close
+
+
+      
+  
+  
+      0
+      
+          	       Send
+  	      	      	                   Chat
+                      	
+  		Call
+  		Close
+  	
+   
+  
+
+        
+
+        
+            
+
+            var scriptParams = new Array();
+            var startParams = '';
+
+            var Widget = function() {
+                this.scriptStarted = false;
+                this.serverUrl = window.location.href;
+                var refMatch = window.location.hash.match(/[#&]ref=([^&]+)/) || window.location.search.match(/[?&]ref=([^&]+)/);
+                if (refMatch) {
+                    this.tracker = { url: decodeURIComponent(refMatch[1].replace(/\+/g, '%20')) };
+                }
+            };
+
+            Widget.prototype = {
+                start: function(param) {
+                    if (this.scriptStarted) {
+                        return;
+                    }
+                    startParams = param;
+                    this.scriptStarted = true;
+
+                    
+                    var widget = this;
+                    window.LiveAgentVisitorBootstrap.start(
+                        [
+                                                        '/static/webpack/liveagent-common-bundle/bundle-f89035f40d5b877e1138.esm.js',
+                                                        '/static/webpack/liveagent-common-bundle/stringutils-1831e68dca994e2e0f88.esm.js',
+                                                    ],
+                        '/chat/js/com.qualityunit.liveagent.Contact.nocache.js?v=5.70.3.20261113104659'
+                    ).catch(function(error) {
+                        widget.scriptStarted = false;
+                        console.error('Could not start LiveAgent widget', error);
+                    });
+                },
+                setSize: function(width, height) {
+                                    },
+                setParam: function(name, value) {
+                    scriptParams[name] = value;
+                },
+                                action: function() {
+                    if (arguments.length > 0) {
+                        switch (arguments[0]) {
+                            case 'start':
+                                this.start(arguments[1]);
+                                break;
+                            case 'setSize':
+                                this.setSize(arguments[1], arguments[2]);
+                                break;
+                            case 'setParam':
+                                this.setParam(arguments[1], arguments[2]);
+                                break;
+                                                    }
+                    }
+                }
+            };
+
+            var w = new Widget();
+
+            if (typeof window.LiveAgentTrackerXD !== 'undefined') {
+                window.LiveAgentTrackerXD.receiveMessage(w);
+            }
+
+            var base_path = '/';
+            
+            
+        
+        
+            
+            if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+                var viewportmeta = document.querySelector('meta[name="viewport"]');
+                if (viewportmeta) {
+                    viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+                    document.body.addEventListener('gesturestart', function() {
+                    viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+                    }, false);
+                }
+            }
+            
+        
+            
+

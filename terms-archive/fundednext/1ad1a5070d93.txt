@@ -1,0 +1,591 @@
+URL: https://help.fundednext.com/en/articles/17253243-stellar-instant-account
+FINAL: https://help.fundednext.com/en/articles/17253243-stellar-instant-account
+TITLE: Stellar Instant Account | FundedNext Help Center
+FETCHED: 2026-11-25T09:23:38.647Z
+
+Skip to main content
+Go to Website
+العربية
+Português do Brasil
+English
+Français
+Deutsch
+हिन्दी
+Italiano
+日本語
+fa-IR
+简体中文
+Español
+ภาษาไทย
+Türkçe
+Oʻzbekcha
+English
+Search for articles...
+All Collections
+Stellar Instant
+Stellar Instant Account
+Stellar Instant Account
+
+Everything a trader needs to know, in sequence
+
+October 2, 2026
+
+TL;DR: The Stellar Instant Account is FundedNext's instant funding plan that allows traders to start trading with simulated real market conditions immediately without any Challenge Phase, evaluation stage, or waiting period. You purchase the account, log in, and begin trading in a live market simulation from day one.
+
+How It Works
+
+The Stellar Instant Account is created for traders who prefer to skip the traditional evaluation process. Once purchased, the account is activated instantly, and you can start executing trades in a real market simulation without any pre-qualification requirements.
+
+Key Features of the Stellar Instant Account
+
+Trade in a real market simulation as soon as your account is activated.
+
+Eligible for Performance Rewards based on your trading performance.
+
+Start trading and earning without completing minimum days, profit targets, or Challenge Phases.
+
+Pricing
+Account Sizes and Purchase Price
+
+The Stellar Instant Account is available in the following account sizes:
+
+Account Size
+
+	
+
+Price (approx.)
+
+
+
+
+$2,000
+
+	
+
+$59.99
+
+
+
+
+$5,000
+
+	
+
+$149.99
+
+
+
+
+$10,000
+
+	
+
+$299.99
+
+
+
+
+$20,000
+
+	
+
+$599.99
+
+Note: For the full and up-to-date pricing list, visit FundedNext Plans. Prices may vary based on promotional offers and add-ons.
+
+Maximum Allocation: 
+
+You can hold up to $20,000 in total active allocation at any time in Stellar Instant. Account merging is not allowed.
+
+Available Add-Ons
+
+The following add-ons can be selected at checkout:
+
+Swap-Free Add-On: Removes overnight swap charges from your account.
+
+EA Add-On: Enables the use of Expert Advisors on your account.
+
+VPS & EA Add-On: Provides a Virtual Private Server alongside EA access for more stable automated trading.
+
+For full details on each add-on: How does the Add-On feature work?
+
+Account Rules
+
+To ensure a smooth and compliant trading experience in the Stellar Instant Account, traders must strictly adhere to the following rules and restrictions:
+
+Requirement
+
+	
+
+Details
+
+
+
+
+Daily Loss Limit
+
+	
+
+None. There is no Daily Loss Limit in the Stellar Instant Account.
+
+
+
+
+Maximum Loss Limit
+
+	
+
+6% trailing Maximum Loss Limit. Moves up only when profit is made and never exceeds the initial balance
+
+
+
+
+Minimum Trading Days
+
+	
+
+None. There are no minimum trading day requirements.
+
+
+
+
+Profit Target
+
+	
+
+None. No profit target required.
+
+
+
+
+Consistency Rules
+
+	
+
+None. No consistency rules apply. No restrictions on lot sizes or trade frequency.
+
+
+
+
+Overnight/Weekend Trading
+
+	
+
+Allowed with no restrictions. Swap charges apply
+
+Important: Although there is no Daily Loss Limit, the 6% trailing Maximum Loss Limit is strictly enforced. If your equity drops below the trailing limit at any point, your account will be considered breached.
+
+How the 6% Trailing Maximum Loss Limit Works
+
+The Maximum Loss Limit (MLL) is set at 6% of your initial balance. This limit trails your account's highest recorded balance but is capped at your initial starting balance.
+
+How it trails: If you make a profit, the Maximum Loss Limit moves up. For example, on a $10,000 account, the initial MLL is $9,400. If your balance grows to $10,200, the MLL moves to $9,600.
+
+ 
+
+The Cap: Once the Maximum Loss Limit reaches your initial starting balance ($10,000 in this example), it will never move higher, even if your profits continue to grow.
+
+ 
+
+Losses: Trading losses do not move the Maximum Loss Limit downward.
+
+Important Note on Performance Rewards and Maximum Loss Limit: Requesting a Performance Reward brings your account balance closer to your Maximum Loss Limit. Since the limit does not move down after a reward is issued, traders should manage their rewards carefully to maintain a sufficient buffer.For example, on a $10,000 account, the initial MLL is $9,400.
+
+If your balance grows to $10,200, the MLL moves to $9,600. If you decide to take a $100 Performance Reward, your balance after the request will be $10,100, and the MLL will remain at $9,600, reducing your buffer from $600 down to $500. The MLL never moves down, so managing the size of your reward requests is important to maintain a safe buffer.
+
+Breach Condition
+
+If your account balance falls below the active MLL at any time, the account is considered breached.
+
+MLL After Withdrawals
+
+When a withdrawal is made, a new trading cycle begins. The Maximum Loss Limit does not reset or decrease; it is carried forward from the previous cycle at its last achieved level. The distance between your account balance and the MLL at the start of the new cycle becomes the fixed gap that the trailing mechanism preserves going forward.
+
+From the moment the new cycle begins, every dollar of profit immediately moves the MLL upward by the same amount, maintaining that same gap. The MLL does not wait for your balance to reach any previous peak before it starts moving; it trails your balance continuously from the very first dollar of profit in the new cycle.
+
+Example:
+
+Cycle 1:
+
+Account grows to a highest balance of $10,450
+
+MLL reaches $9,850
+
+Trader withdraws $100
+
+Cycle 2 begins:
+
+Starting Balance: $10,350
+
+MLL carried forward: $9,850
+
+Gap between balance and MLL: $500—this gap is preserved and trailed going forward immediately
+
+Key things to remember:
+
+The MLL is never reset after a withdrawal
+
+The MLL is carried forward at its highest achieved level
+
+Trailing resumes immediately from the first dollar of profit in the new cycle
+
+Withdrawals reduce the gap between your balance and the MLL—manage this carefully
+
+ 
+
+General Rules
+
+To ensure a smooth and compliant trading experience in the Stellar Instant Account, traders must strictly adhere to the following rules and restrictions:
+
+Copy Trading Policy
+
+Allowed only within Stellar Instant Accounts owned by the same individual.
+
+Copy trading across accounts belonging to different individuals is strictly prohibited.
+
+Learn more: Is copy trading allowed in Stellar Instant?
+
+IP Address Policy
+
+To maintain platform integrity, it is highly recommended to trade from a single device with a consistent IP address.
+
+Learn more: Trading Device and Network Policy
+
+VPN/VPS Usage
+
+VPN and VPS services are permitted. For best performance and security, use paid services with dedicated IPs.
+
+Learn more: Can I use a VPN or VPS?
+
+EAs and Indicators
+
+You can use Expert Advisors (EAs) and custom indicators as long as they are customized to your strategy and do not violate any platform rules or exploit mechanics.
+
+Learn more: Do you allow EAs and Indicators?
+
+News Trading
+
+News trading rules apply. Trades placed within 5 minutes before and after a high-impact news event on a correlated pair are subject to the News Profit Split Rule: only 40% of the profits from those trades will be counted toward your account. Losses remain fully your responsibility.
+
+Learn more: Is News Trading Allowed at FundedNext?
+
+Prohibited Trading Strategies
+
+Any activity intended to exploit or cheat the system is strictly forbidden under FundedNext Terms of Service. Violating this can result in a permanent breach of your account. Please review the Terms of Service for full details.
+
+Learn more: Restricted and Prohibited Trading Strategies
+
+Quick Strike Rule
+
+FundedNext defines Quick Strike trades as positions closed within 30 seconds of opening. The Quick Strike percentage represents the proportion of total recorded profit derived from trades closed within 30 seconds, evaluated on a per-cycle basis.
+
+Learn more: Understanding the Quick Strike Parameter on FundedNext
+
+Risk Rule
+
+FundedNext requires traders to limit risk to a maximum of 3% at any given time in the FundedNext Account. Risk refers to the maximum potential loss on a trade at a time, based on stop-loss placement, the maximum realized and unrealized (floating) losses across all trades, calculated against the initial account balance.
+
+Learn more: What are the Risk Limits on a FundedNext Account?
+
+ 
+
+Agreement
+
+Yes, in the Stellar Instant model, traders are required to sign an agreement during the purchase process. Before the account is activated, you must review and accept the terms outlined in the agreement to proceed. This ensures that you fully understand the trading conditions and responsibilities tied to your FundedNext Stellar Instant Account.
+
+KYC Process
+
+FundedNext uses a single, profile-level KYC system. This means you verify once, and it applies to every account you own across all models.
+
+How to Complete KYC—Step by Step
+
+1. Start KYC: After purchase, a pop-up appears on your Dashboard. Click Start KYC.
+
+ 
+
+2. Choose Verification Method You will be given the option to scan a QR code or receive a verification link by SMS.
+
+ 
+
+3. Submit Documents Follow the link and submit a valid photo ID along with a liveness check, which is a real-time selfie to confirm your identity.
+
+ 
+
+4. Confirmation You will receive a confirmation that your documents have been received.
+
+ 
+
+5. Review and Approval Review takes approximately 48 hours. Once complete, you will receive a notification confirming your verified status.
+
+Required Documents
+
+Submit a photo of a physical copy of one of the following:
+
+National ID
+
+Passport
+
+Permanent Residence Permit
+
+Driving Licence — accepted only for traders in the US, Australia, New Zealand, and Canada
+
+FundedNext may also request a Proof of Address such as a utility bill or bank statement issued within the last 3 months.
+
+ 
+
+Submission Attempts
+
+Iraq and Nigeria: 5 attempts
+
+All other countries: 3 attempts
+
+ 
+
+If you exhaust all your attempts, contact our support team directly, and they will guide you accordingly.
+
+Important Notes
+
+Simply submitting your documents does not complete the KYC verification process. Your status must be Approved to receive a FundedNext Account.
+
+If you become eligible but do not complete KYC within 30 days, your account can be deactivated. Complete verification promptly after being eligible.
+
+Once your KYC is approved, your profile personal details such as name and date of birth are locked to match your verified documents. This is why the Edit Profile button appears greyed out on a verified account.
+
+Note on 90-Day KYC Renewal: The mandatory 90-day KYC renewal process has been temporarily paused. Traders are not required to resubmit their KYC documents at this time, and your approved KYC verification will remain valid until further notice. We will notify all traders in advance before the renewal process is reinstated. Once your KYC is approved, if resubmission is required for your next eligibility, our team will reach out to you directly with further instructions.
+
+Learn more: Understanding the KYC Verification Process at FundedNext
+
+Trading Cycle and Performance Reward Eligibility
+
+In the Stellar Instant Account, you can claim your Performance Reward either on-demand by achieving 5% account growth or on a bi-weekly (14-day) cycle if growth is less than 5%, provided you meet the minimum 1% growth requirement.
+
+ 
+
+On-Demand Performance Reward (5% Growth)
+
+You can request your Performance Reward once your account reaches 5% growth — but eligibility is confirmed at the End of Day (EOD).
+
+The system checks your account eligibility at the End of Day (EOD).
+
+If your account meets the 5% growth milestone at the time of the EOD check, the Transfer to Wallet option is enabled.
+
+The option remains available until you place a new trade.
+
+Once a trade is placed during the current trading day, the transfer option is disabled immediately.
+
+It will remain disabled until the next EOD eligibility check.
+
+At the next EOD, the system will re-evaluate eligibility and re-enable the option if 5% growth is still maintained.
+
+Example: Starting balance: $10,000. Profit: $500 (5% growth). If your account meets 5% growth at Monday EOD, you can transfer your reward. If you place a trade on Tuesday before transferring, the option will be disabled. It will be checked again at Tuesday EOD and re-enabled only if 5% growth is still maintained.
+
+Bi-Weekly (14-Day) Performance Reward
+
+If your growth is less than 5% but at least 1%, you can withdraw Rewards 14 days after your cycle start date. This option is useful if you want regular payouts without hitting the 5% growth target.
+
+Example: Starting balance = $10,000. Profit = $300 (3% growth). Eligible for withdrawal after 14 days.
+
+Important: The minimum growth requirement for any Reward is 1%. If growth is below 1%, you cannot request a Reward and your cycle will be extended.
+
+Learn more: What Happens When the Trading Cycle Ends?
+
+Process of Withdrawal
+How to Request a Withdrawal
+
+1. Transfer to Wallet  Navigate to your account Dashboard and transfer your reward share to your FundedNext Wallet once eligible.
+
+2. Go to Payout From the Wallet, go to the Payout section and click Payout Request.
+
+3. Confirm via OTP An OTP will be sent to your registered email address. Enter the OTP to confirm and submit your request.
+
+Available Payout Methods
+
+Performance Rewards can be withdrawn via the following methods:
+
+USDT (ERC20 / TRC20)
+
+USDC (ERC20)
+
+Confirmo
+
+RiseWorks
+
+Bank Transfer
+
+Direct Deposit to FNmarkets
+
+Card Payout — available for traders who have at least one saved card on their account. Select from your saved cards, confirm the amount, and submit your request in under 3 steps. Settlement is completed within 24 hours of approval. Minimum and maximum limits will be communicated separately.
+
+Note: Traders from Iran can only request their Performance Reward using TC Pay.
+
+Learn more: How Can I Withdraw My Performance Reward?
+
+Profit Share Percentage
+
+With the FundedNext Stellar Instant Account, traders can earn up to 80% Performance Rewards. The system uses a tier-based structure that starts at 70% for Tiers 1 and 2 and increases to 80% from Tier 3 onwards. Your reward percentage increases automatically as your account scales.
+
+Tier
+
+	
+
+Reward Share
+
+
+
+
+Tiers 1 and 2
+
+	
+
+70% Performance Reward
+
+
+
+
+Tier 3 and above
+
+	
+
+80% Performance Reward (capped at 80%)
+
+Note: To request a Performance Reward withdrawal, you must grow your account by at least 1% within the current trading cycle. If your growth is below 1%, you will not be eligible to request a Performance Reward and your cycle will get extended.
+
+Refundable Fee
+
+Note: There is no Refundable Fee for the Stellar Instant Account. The purchase price is not refunded at any point.
+
+Reset
+
+Yes, you can reset your Stellar Instant Account. The reset option allows you to start over with the same account type while keeping the pricing affordable.
+
+What Happens After a Reset
+
+Your account balance is restored to the initial balance.
+
+Any past trading history or profits will not carry over.
+
+The reset fee is not refundable.
+
+Reset Pricing
+
+The reset fee is calculated at 10% less than the original purchase price.
+
+ 
+
+Scale-Up
+
+FundedNext Stellar Instant Account includes a performance-based scale-up plan that can grow your account up to 10 times your initial balance as you consistently perform and make withdrawals.
+
+Scale-Up Criteria
+
+To qualify for a scale-up in your current tier, you must:
+
+Achieve a cumulative 10% growth in the current tier, measured as (total disbursed withdrawal amount divided by current tier start balance) multiplied by 100.
+
+Complete at least one withdrawal in the current tier.
+
+Once both conditions are met, your account balance and Maximum Loss Limit increase, and your tier is upgraded.
+
+Reward Share by Tier
+
+Tier / Stage
+
+	
+
+Details
+
+
+
+
+Tiers 1 and 2
+
+	
+
+70% Reward Share
+
+
+
+
+Tier 3 onwards
+
+	
+
+80% Reward Share (capped)
+
+
+
+
+Maximum scale
+
+	
+
+10x initial balance, then up to $2,000,000
+
+
+
+
+Scale increment
+
+	
+
+Initial account balance is added at each tier upgrade
+
+Post-Tier 10: Once you successfully reach Tier 10, the scaling process continues to follow the standard Scale-Up criteria in a repeating cycle.
+
+Important: Withdrawing the full eligible reward share in a single Tier 1 cycle results in 7% growth, which is below the required 10%. Based on Maximum Loss Limit calculations, the account will be considered breached for withdrawing the full amount in Tier 1.
+
+Learn more: What does 10x scale-up mean?
+
+Learn more: What will happen if traders grow 10% in a single cycle in a Stellar Instant Account?
+
+Related Articles
+What Happens When the Trading Cycle Ends?
+USA Client Guide at FundedNext CFD: Accounts, Platforms & Rewards
+Stellar 1-Step Account
+Stellar Lite Account
+Stellar 2-Step Challenge
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+How It Works
+Key Features of the Stellar Instant Account
+Pricing
+Account Sizes and Purchase Price
+Maximum Allocation:
+Available Add-Ons
+Account Rules
+How the 6% Trailing Maximum Loss Limit Works
+Breach Condition
+MLL After Withdrawals
+General Rules
+Copy Trading Policy
+IP Address Policy
+VPN/VPS Usage
+EAs and Indicators
+News Trading
+Prohibited Trading Strategies
+Quick Strike Rule
+Risk Rule
+Agreement
+KYC Process
+How to Complete KYC—Step by Step
+Required Documents
+Submission Attempts
+Trading Cycle and Performance Reward Eligibility
+On-Demand Performance Reward (5% Growth)
+Bi-Weekly (14-Day) Performance Reward
+Process of Withdrawal
+How to Request a Withdrawal
+Available Payout Methods
+Profit Share Percentage
+Refundable Fee
+Reset
+What Happens After a Reset
+Reset Pricing
+Scale-Up
+Scale-Up Criteria
+Reward Share by Tier
