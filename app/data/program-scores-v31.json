@@ -874,6 +874,131 @@
             "https://fxify.com/faqs/all-faqs/how-do-i-withdraw-my-profits/"
           ]
         }
+      ],
+      "fxi-one": [
+        {
+          "score": 91,
+          "scope": "One Phase — Standard",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Published evaluation GTC dated 6 Nov 2024, §5.4.1.7–8: open-ended prohibited trading and sole-discretion classification; current signed version remains to be checked.",
+              "source": "https://fxify.com/terms-and-conditions"
+            },
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "Trailing floor updated at server reset; based on closed-balance high-water mark.",
+              "source": "https://fxify.com/blog/why-traders-fail-prop-firm-challenges/"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "Withdrawal fixes loss floor at starting balance; full withdrawal leaves no trading buffer and next trade can forfeit account.",
+              "source": "https://fxify.com/faqs/all-faqs/how-do-withdrawals-affect-drawdown-on-1-and-2-phase-accounts/"
+            }
+          ],
+          "sources": [
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/blog/why-traders-fail-prop-firm-challenges/",
+            "https://fxify.com/faqs/all-faqs/how-do-withdrawals-affect-drawdown-on-1-and-2-phase-accounts/"
+          ]
+        }
+      ],
+      "fxi-two-std": [
+        {
+          "score": 91,
+          "scope": "Two Phase Standard — trailing",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Published evaluation GTC dated 6 Nov 2024, §5.4.1.7–8: open-ended prohibited trading and sole-discretion classification; current signed version remains to be checked.",
+              "source": "https://fxify.com/terms-and-conditions"
+            },
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "Trailing floor updated at server reset; based on closed-balance high-water mark.",
+              "source": "https://fxify.com/blog/why-traders-fail-prop-firm-challenges/"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "Withdrawal fixes loss floor at starting balance; full withdrawal leaves no trading buffer and next trade can forfeit account.",
+              "source": "https://fxify.com/faqs/all-faqs/how-do-withdrawals-affect-drawdown-on-1-and-2-phase-accounts/"
+            }
+          ],
+          "sources": [
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/blog/why-traders-fail-prop-firm-challenges/",
+            "https://fxify.com/faqs/all-faqs/how-do-withdrawals-affect-drawdown-on-1-and-2-phase-accounts/"
+          ]
+        }
+      ],
+      "fxi-two-classic": [
+        {
+          "score": 93,
+          "scope": "Two Phase Classic",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Published evaluation GTC dated 6 Nov 2024, §5.4.1.7–8: open-ended prohibited trading and sole-discretion classification; current signed version remains to be checked.",
+              "source": "https://fxify.com/terms-and-conditions"
+            },
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "25% best-day consistency at funded stage.",
+              "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+            }
+          ],
+          "sources": [
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+          ]
+        }
+      ],
+      "fxi-two-pro": [
+        {
+          "score": 83,
+          "scope": "Two Phase Pro",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "Q",
+              "points": 4,
+              "reason": "Published evaluation GTC dated 6 Nov 2024, §5.4.1.7–8: open-ended prohibited trading and sole-discretion classification; current signed version remains to be checked.",
+              "source": "https://fxify.com/terms-and-conditions"
+            },
+            {
+              "family": "P6",
+              "points": 10,
+              "reason": "First two payout requests capped at 5% of initial balance or $8,000 on 200K/250K; excess profits permanently removed.",
+              "source": "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-what-is-the-max-profit-on-my-account/"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Three qualifying days each with 0.5% profit required for payout.",
+              "source": "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-whats-the-min-days-in-order-to-request-a-payout/"
+            }
+          ],
+          "sources": [
+            "https://fxify.com/terms-and-conditions",
+            "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-what-is-the-max-profit-on-my-account/",
+            "https://fxify.com/faqs/all-faqs/two-phase-pro/2-phase-pro-whats-the-min-days-in-order-to-request-a-payout/"
+          ]
+        }
       ]
     },
     "alpha-futures": {
@@ -1444,7 +1569,7 @@
           ]
         },
         {
-          "score": 92,
+          "score": 88,
           "scope": "Select → Daily (25–150K, purchased from 1 Sep 2026)",
           "checkedOn": "2026-11-25",
           "method": "reviewed-simulation",
@@ -1466,11 +1591,270 @@
               "points": 4,
               "reason": "Material daily withdrawal caps; no five-day requirement.",
               "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "Daily policy mandates retained buffer above initial account size before payout; distinct from per-request cap.",
+              "source": "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
             }
           ],
           "sources": [
             "https://help.tradeify.co/en/articles/12268167-essential-trading-rules-overview",
             "https://help.tradeify.co/en/articles/12853966-select-flex-and-select-daily-payout-policies"
+          ]
+        }
+      ]
+    },
+    "funding-traders": {
+      "funding-traders-pro6": [
+        {
+          "score": 85,
+          "scope": "2-Step PRO6",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "§6.3.6–8: escalating disciplinary ladder reduces split to 70% then 60%, deducts up to 100% of violation profit and can discontinue account; one grouped sanction.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§5.7: separate volume-weighted average holding time below two minutes terminates account; distinct from strike assessment.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "§5.4: funded news-linked gains limited to 30% of total PnL for payout eligibility; excess delays payout rather than being deleted.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            }
+          ],
+          "sources": [
+            "https://fundingtraders.com/terms-of-service/"
+          ]
+        }
+      ],
+      "funding-traders-pro10": [
+        {
+          "score": 85,
+          "scope": "2-Step PRO10",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "§6.3.6–8: escalating disciplinary ladder reduces split to 70% then 60%, deducts up to 100% of violation profit and can discontinue account; one grouped sanction.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§5.7: separate volume-weighted average holding time below two minutes terminates account; distinct from strike assessment.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "§5.4: funded news-linked gains limited to 30% of total PnL for payout eligibility; excess delays payout rather than being deleted.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            }
+          ],
+          "sources": [
+            "https://fundingtraders.com/terms-of-service/"
+          ]
+        }
+      ],
+      "funding-traders-1-step-pro": [
+        {
+          "score": 85,
+          "scope": "1-Step PRO",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "§6.3.6–8: escalating disciplinary ladder reduces split to 70% then 60%, deducts up to 100% of violation profit and can discontinue account; one grouped sanction.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§5.7: separate volume-weighted average holding time below two minutes terminates account; distinct from strike assessment.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "§5.4: funded news-linked gains limited to 30% of total PnL for payout eligibility; excess delays payout rather than being deleted.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            }
+          ],
+          "sources": [
+            "https://fundingtraders.com/terms-of-service/"
+          ]
+        }
+      ],
+      "funding-traders-instant": [
+        {
+          "score": 67,
+          "scope": "Instant Funding",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "§6.3.6–8: escalating disciplinary ladder reduces split to 70% then 60%, deducts up to 100% of violation profit and can discontinue account; one grouped sanction.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "§5.7: separate volume-weighted average holding time below two minutes terminates account; distinct from strike assessment.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "C15",
+              "points": 5,
+              "reason": "§6.1: 15% best-day consistency.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "G4",
+              "points": 7,
+              "reason": "§5.3: total floating PnL cannot exceed a 1% loss; independent hard risk threshold.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "§5.4: no trading within ten minutes either side of high-impact news.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "§5.5: positions must close before Friday market close.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            },
+            {
+              "family": "B2",
+              "points": 4,
+              "reason": "§7.2: first 3% of profit not withdrawable; material retained reserve.",
+              "source": "https://fundingtraders.com/terms-of-service/"
+            }
+          ],
+          "sources": [
+            "https://fundingtraders.com/terms-of-service/"
+          ]
+        }
+      ]
+    },
+    "funderpro": {
+      "funderpro-classic": [
+        {
+          "score": 80,
+          "scope": "Classic — standard, no Swing add-on",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "GTC §13.14–15 and prohibited-practices enforcement: discretionary risk/lot-size assessment can disqualify evaluation or deny funded progression/reward; no separate qualitative penalty for same mechanism.",
+              "source": "https://funderpro.com/terms-conditions/"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Funded 20% margin cap per asset class: first breach removes affected gains, second closes account and declines remaining payout; grouped independently of qualitative review.",
+              "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Funded high-impact news entry prohibited within two minutes either side unless Swing add-on (GTC §10.1).",
+              "source": "https://funderpro.com/terms-conditions/"
+            }
+          ],
+          "sources": [
+            "https://funderpro.com/terms-conditions/",
+            "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+          ]
+        }
+      ],
+      "funderpro-pro": [
+        {
+          "score": 78,
+          "scope": "Pro — daily rewards, no Swing add-on",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "GTC §13.14–15 and prohibited-practices enforcement: discretionary risk/lot-size assessment can disqualify evaluation or deny funded progression/reward; no separate qualitative penalty for same mechanism.",
+              "source": "https://funderpro.com/terms-conditions/"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Funded 20% margin cap per asset class: first breach removes affected gains, second closes account and declines remaining payout; grouped independently of qualitative review.",
+              "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Funded high-impact news entry prohibited within two minutes either side unless Swing add-on (GTC §10.1).",
+              "source": "https://funderpro.com/terms-conditions/"
+            },
+            {
+              "family": "S60",
+              "points": 2,
+              "reason": "Daily reward option starts at 60% trader split.",
+              "source": "https://support.funderpro.com/en/articles/377978-what-happens-after-i-pass-my-challenge"
+            }
+          ],
+          "sources": [
+            "https://funderpro.com/terms-conditions/",
+            "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts",
+            "https://support.funderpro.com/en/articles/377978-what-happens-after-i-pass-my-challenge"
+          ]
+        },
+        {
+          "score": 80,
+          "scope": "Pro — weekly rewards, no Swing add-on",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "GTC §13.14–15 and prohibited-practices enforcement: discretionary risk/lot-size assessment can disqualify evaluation or deny funded progression/reward; no separate qualitative penalty for same mechanism.",
+              "source": "https://funderpro.com/terms-conditions/"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Funded 20% margin cap per asset class: first breach removes affected gains, second closes account and declines remaining payout; grouped independently of qualitative review.",
+              "source": "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Funded high-impact news entry prohibited within two minutes either side unless Swing add-on (GTC §10.1).",
+              "source": "https://funderpro.com/terms-conditions/"
+            }
+          ],
+          "sources": [
+            "https://funderpro.com/terms-conditions/",
+            "https://support.funderpro.com/en/articles/421458-is-there-a-margin-rule-on-funded-accounts"
           ]
         }
       ]
