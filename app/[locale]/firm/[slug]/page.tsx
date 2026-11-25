@@ -1136,7 +1136,7 @@ export default async function FirmPage({ params }: Props) {
                       {promo.scope ? <p className="pr-program-promo-scope" lang="en">{promo.scope}</p> : null}
                       {promo.code ? <ProgramPromoCode code={promo.code} label={f.partnerOffer.copy} copied={f.partnerOffer.copied} /> : null}
                       {promo.priceExamples?.length ? <div className="pr-program-offer-rows">
-                        {promo.priceExamples.slice(0,3).map(row => <div key={row.size+'-'+row.currency}>
+                        {[...promo.priceExamples].sort((a,b) => (a.size === 100000 ? -1 : b.size === 100000 ? 1 : a.size-b.size)).slice(0,3).sort((a,b)=>a.size-b.size).map(row => <div key={row.size+'-'+row.currency}>
                           <span>{formatAccountSize(row.size)}</span>
                           <del aria-label={f.priceList}>{formatListPrice(row.regular,row.currency)}</del>
                           <strong>{formatListPrice(row.sale,row.currency)}</strong>
@@ -1145,7 +1145,7 @@ export default async function FirmPage({ params }: Props) {
                       <details className="pr-program-inline-details">
                         <summary>{f.pricePromoTermsLabel}</summary>
                         <p lang="en">{promo.terms}</p>
-                        {promo.priceExamples && promo.priceExamples.length > 3 ? <div className="pr-program-offer-rows">{promo.priceExamples.slice(3).map(row => <div key={row.size+'-'+row.currency}><span>{formatAccountSize(row.size)}</span><del>{formatListPrice(row.regular,row.currency)}</del><strong>{formatListPrice(row.sale,row.currency)}</strong></div>)}</div> : null}
+                        {promo.priceExamples && promo.priceExamples.length > 3 ? <div className="pr-program-offer-rows">{[...promo.priceExamples].sort((a,b) => (a.size === 100000 ? -1 : b.size === 100000 ? 1 : a.size-b.size)).slice(3).sort((a,b)=>a.size-b.size).map(row => <div key={row.size+'-'+row.currency}><span>{formatAccountSize(row.size)}</span><del>{formatListPrice(row.regular,row.currency)}</del><strong>{formatListPrice(row.sale,row.currency)}</strong></div>)}</div> : null}
                         <p>{f.pricePromoCheckout}</p>
                         <div className="pr-program-promo-foot"><small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small><a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div>
                       </details>
