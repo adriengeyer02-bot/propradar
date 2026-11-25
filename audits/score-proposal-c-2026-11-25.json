@@ -326,16 +326,42 @@
    "slug": "funding-pips",
    "name": "Funding Pips",
    "current": 76,
-   "proposed": 76,
-   "raw": 85,
-   "flag": "hausse bloquée : incidents du dossier à recoder",
-   "delta": 0,
+   "proposed": 75,
+   "raw": 75,
+   "flag": "",
+   "delta": -1,
    "ceiling": 85,
    "ceilingWhy": "4 ans + preuve",
-   "penalties": "aucune",
-   "confidence": "audit en cours (CGU non lues)",
-   "evidence": {},
-   "items": [],
+   "penalties": "B2 −8 · E_HARSH −2",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "'The Company reserves the right to determine, at its own discretion, whether certain trades, practices, strategies, or situations are Forbidden Trading Practices'; it may then deduct trades, impose new restrictions or terminate. The Responsible Trading Policy adds that 'performance fees may be denied' if it is determined that the trader is not trading responsibly, and the prohibited-practices appendix lists 'removing profits attributable to prohibited activity' and 'declining affected reward requests'.",
+     "url": "https://fundingpips.com/terms-and-conditions",
+     "heading": "§9(b)-(e); Appendix A (consequences 1-3); Appendix B §10 (version effective 15 May 2026, PDF saved by Geyer 25 Nov 2026)"
+    },
+    "E_HARSH": {
+     "text": "Users must take part in mandatory risk assessment interviews; 'failure to comply with this requirement may result in us withholding remuneration and terminating services'.",
+     "url": "https://fundingpips.com/terms-and-conditions",
+     "heading": "§12"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "'The Company reserves the right to determine, at its own discretion, whether certain trades, practices, strategies, or situations are Forbidden Trading Practices'; it may then deduct trades, impose new restrictions or terminate. The Responsible Trading Policy adds that 'performance fees may be denied' if it is determined that the trader is not trading responsibly, and the prohibited-practices appendix lists 'removing profits attributable to prohibited activity' and 'declining affected reward requests'.",
+     "source": "https://fundingpips.com/terms-and-conditions",
+     "locator": "§9(b)-(e); Appendix A (consequences 1-3); Appendix B §10 (version effective 15 May 2026, PDF saved by Geyer 25 Nov 2026)"
+    },
+    {
+     "code": "E_HARSH",
+     "points": 2,
+     "text": "Users must take part in mandatory risk assessment interviews; 'failure to comply with this requirement may result in us withholding remuneration and terminating services'.",
+     "source": "https://fundingpips.com/terms-and-conditions",
+     "locator": "§12"
+    }
+   ],
    "age": 4,
    "ceilingEvidence": [
     {
@@ -2488,32 +2514,6 @@
    "founded": 2023
   },
   {
-   "slug": "the-forex-funder",
-   "name": "The Forex Funder",
-   "current": 56,
-   "proposed": 56,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "2.5 / 1574"
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [],
-   "founded": 2023
-  },
-  {
    "slug": "leveled-up-society",
    "name": "Leveled Up Society",
    "current": 56,
@@ -3156,32 +3156,6 @@
    "age": 1,
    "ceilingEvidence": [],
    "founded": 2025
-  },
-  {
-   "slug": "fidelcrest",
-   "name": "Fidelcrest",
-   "current": 52,
-   "proposed": 52,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "8 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
-   "confidence": "audit en cours (CGU non lues)",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.9 / 1766"
-    }
-   ],
-   "age": 8,
-   "ceilingEvidence": [],
-   "founded": 2018
   },
   {
    "slug": "sabiotrade",

@@ -256,6 +256,43 @@
    "reading": "excerpts",
    "checkedOn": "2026-11-25"
   },
+  "funding-pips": {
+   "score": 75,
+   "previous": 76,
+   "raw": 75,
+   "ceiling": 85,
+   "tier": "y3evidence",
+   "founded": 2022,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 159940179
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.4,
+     "count": 72707
+    }
+   ],
+   "penalties": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "'The Company reserves the right to determine, at its own discretion, whether certain trades, practices, strategies, or situations are Forbidden Trading Practices'; it may then deduct trades, impose new restrictions or terminate. The Responsible Trading Policy adds that 'performance fees may be denied' if it is determined that the trader is not trading responsibly, and the prohibited-practices appendix lists 'removing profits attributable to prohibited activity' and…",
+     "source": "https://fundingpips.com/terms-and-conditions",
+     "locator": "§9(b)-(e); Appendix A (consequences 1-3); Appendix B §10 (version effective 15 May 2026, PDF saved by Geyer 25 Nov 2026)"
+    },
+    {
+     "code": "E_HARSH",
+     "points": 2,
+     "text": "Users must take part in mandatory risk assessment interviews; 'failure to comply with this requirement may result in us withholding remuneration and terminating services'.",
+     "source": "https://fundingpips.com/terms-and-conditions",
+     "locator": "§12"
+    }
+   ],
+   "reading": "full",
+   "checkedOn": "2026-11-25"
+  },
   "fxify": {
    "score": 69,
    "previous": 75,

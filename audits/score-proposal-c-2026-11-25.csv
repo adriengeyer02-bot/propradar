@@ -4,7 +4,7 @@ Earn2Trade,74,83,9,83,95,9 ans + preuve,B7 −5 · consistency 30% −1 · D:pay
 Tradeify,78,80,2,80,85,3 ans + preuve,B3 −5,contrat lu en entier,
 Take Profit Trader,73,80,7,80,95,5 ans + preuve,B3 −5 · B7 −5 · B4 −3 · D:funded-trailing-drawdown −2,contrat lu en entier,
 Blue Guardian,61,78,17,78,95,7 ans + preuve,B2 −8 · D:payout-conditions −3 · Trustpilot retiré −6,contrat lu en entier,
-Funding Pips,76,76,0,85,85,4 ans + preuve,aucune,audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
+Funding Pips,76,75,-1,75,85,4 ans + preuve,B2 −8 · E_HARSH −2,contrat lu en entier,
 Topstep,81,73,-8,73,95,14 ans + preuve,"B2 −8 · B3 −5 · D:payout-cap −4 · D:funded-trailing-drawdown −2 · Trustpilot < 4,0 −3",contrat lu en entier,
 E8 Markets,72,72,0,89,95,5 ans + preuve,Trustpilot retiré −6,audit en cours (CGU non lues),
 BrightFunded,72,72,0,79,85,3 ans + preuve,Trustpilot retiré −6,extraits relus à la main,hausse en attente de lecture complète
@@ -69,7 +69,6 @@ Bespoke Funding Program,56,56,0,64,75,"4 ans, pas de preuve à grande échelle",
 Sway Funded,56,56,0,67,75,"2 ans, pas de preuve à grande échelle",B3 −5 · D:payout-conditions −3,extraits relus à la main,hausse en attente de lecture complète
 Nova Funding,56,56,0,72,75,"3 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),
 Nations Trading,56,56,0,75,75,"3 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
-The Forex Funder,56,56,0,72,75,"3 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",extraction sans clause retenue,
 Leveled Up Society,56,56,0,72,75,"4 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),hausse bloquée : incidents du dossier à recoder
 AuraFunded,56,56,0,65,65,1-2 ans,aucune,audit en cours (CGU non lues),
 AlphaPropTraders,56,56,0,75,75,"2 ans, pas de preuve à grande échelle",aucune,audit en cours (CGU non lues),
@@ -92,7 +91,6 @@ Purdia Capital,53,53,0,72,75,"3 ans, pas de preuve à grande échelle",D:payout-
 Orion Funded,53,53,0,70,75,"2 ans, pas de preuve à grande échelle",B6 −5,extraits relus à la main,hausse en attente de lecture complète
 Equity Edge,53,53,0,72,75,"2 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,
 Upcomers,53,53,0,53,65,1-2 ans,D:payout-cap −4 · D:split-reduction −2 · Trustpilot retiré −6,extraction sans clause retenue,
-Fidelcrest,52,52,0,72,75,"8 ans, pas de preuve à grande échelle","Trustpilot < 4,0 −3",audit en cours (CGU non lues),
 SabioTrade,52,52,0,67,75,"3 ans, pas de preuve à grande échelle",D:funded-trailing-drawdown −2 · Trustpilot retiré −6,extraction sans clause retenue,
 Funder Trading,52,52,0,73,75,"4 ans, pas de preuve à grande échelle",D:split-reduction −2,audit en cours (CGU non lues),
 WSFunded,52,52,0,72,75,"2 ans, pas de preuve à grande échelle",D:payout-conditions −3,extraction sans clause retenue,

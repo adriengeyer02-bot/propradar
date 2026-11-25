@@ -15,6 +15,21 @@ export type ClosureRecord = {
 
 export const closureRecords: ClosureRecord[] = [
   {
+    slug: 'fidelcrest',
+    date: '2025-01-29',
+    dateKind: 'reported',
+    summary: 'Forex Peace Army lists Fidelcrest.com as out of business: "Website is down. Company seems to be out of business." No official closure notice or last trading day was verified.',
+    source: { label: 'Forex Peace Army', url: 'https://www.forexpeacearmy.com/forex-reviews/18879/fidelcrest-prop-firm' },
+    checkedAt: '2026-11-25',
+  },
+  {
+    slug: 'the-forex-funder',
+    dateKind: 'none',
+    summary: 'TheTrustedProp marks The Forex Funder as closed ("This prop firm is no longer operating"). No official closure notice or date was verified.',
+    source: { label: 'TheTrustedProp', url: 'https://thetrustedprop.com/prop-firms/theforexfunder/news' },
+    checkedAt: '2026-11-25',
+  },
+  {
     slug: 'fast-track-trading',
     date: '2025-01-16',
     dateKind: 'reported',

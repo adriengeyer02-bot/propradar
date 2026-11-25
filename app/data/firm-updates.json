@@ -23956,9 +23956,18 @@
             "trustpilotReviewCount",
             "trustpilotSourceUrl"
           ]
+        },
+        {
+          "date": "2026-11-25",
+          "summary": "Status set to closed: Forex Peace Army lists Fidelcrest.com as \"Out of business\" (\"Website is down. Company seems to be out of business\", updated 29 Jan 2025); Trustpilot shows no review since 4 Jan 2025. Closure reported by Geyer on 2026-11-25.",
+          "source": "https://www.forexpeacearmy.com/forex-reviews/18879/fidelcrest-prop-firm",
+          "fields": [
+            "status"
+          ]
         }
       ],
       "set": {
+        "status": "Fermée",
         "trustpilotRating": 3.9,
         "trustpilotReviewCount": 1766,
         "trustpilotSourceUrl": "https://ca.trustpilot.com/review/fidelcrest.com"
@@ -27042,9 +27051,18 @@
             "trustpilotReviewCount",
             "legalReview"
           ]
+        },
+        {
+          "date": "2026-11-25",
+          "summary": "Status set to closed: TheTrustedProp marks The Forex Funder as closed (\"This prop firm is no longer operating\"). Closure reported by Geyer on 2026-11-25; no official closure notice or date verified.",
+          "source": "https://thetrustedprop.com/prop-firms/theforexfunder/news",
+          "fields": [
+            "status"
+          ]
         }
       ],
       "set": {
+        "status": "Fermée",
         "trustpilotRating": 2.5,
         "trustpilotReviewCount": 1574,
         "trustpilotSourceUrl": "https://www.trustpilot.com/review/theforexfunder.com",
