@@ -1,0 +1,14 @@
+{
+ "slug": "funderpro",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [],
+ "rejected": {
+  "B1": "Extract is about service suspension, not removal of earned rewards.",
+  "B3": "Restriction after a compliance review lets the active account finish under standard rules.",
+  "CONS": "15 % rule is in the Instant Account terms only (payout delayed, not forfeited).",
+  "B2A": "Prohibited-practice list."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

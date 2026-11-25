@@ -1,0 +1,19 @@
+{
+ "slug": "moneta-funded",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Sole discretion to delay, reduce, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules.",
+   "source": "upload:11a8a29e-MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+   "excerpt": "Payout request on hold while it conducts trading, risk, account-association, compliance, or abuse reviews. If Moneta Funded determines, in its sole discretion, that you have engaged in any Prohibited Conduct under Clause 5.2 or otherwise breached the Program Rules, Moneta Funded may delay, reduce, deduct from, refuse, cancel, or void any Payout request, whether pending or future. Any simulated profits or account results generated through such conduct may be removed or recalculated before any Payout is approved.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B3": "Extract is a disclosed max-profit-per-day rule."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

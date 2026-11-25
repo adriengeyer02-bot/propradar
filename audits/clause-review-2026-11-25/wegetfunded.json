@@ -1,0 +1,19 @@
+{
+ "slug": "wegetfunded",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
+   "source": "https://wegetfunded.com/en/legal/terms",
+   "excerpt": "mply with the rules established in the official WeGetFunded documentation (FAQ, T&Cs, challenge regulations, etc.); Use of trading techniques deemed inconsistent with the spirit or the educational and evaluation objectives of the programme; Trading strategies incompatible with WeGetFunded's risk management policy; Behaviour considered abusive, aggressive, or circumventing the ethics of the programme; Any activity or trading method making it difficult or impossible to carry out a reliable, fair and consistent assessment of the trader's skills; Technical or security reasons, or a well-founded su",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B3": "FAQ withdrawal text."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

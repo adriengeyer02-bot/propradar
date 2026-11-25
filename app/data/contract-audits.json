@@ -4,10 +4,48 @@
  "policy": "Documentary evidence only. Not a score input. Every dossier is partial until the register marks it validated.",
  "firms": [
   {
+   "slug": "aeon-funded",
+   "name": "Aeon Funded",
+   "level": "first-file",
+   "checkedOn": "2026-11-25",
+   "programs": [],
+   "findings": [
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Payout rule updates not retroactive.",
+     "source": "https://quantxfund.io/terms",
+     "locator": "PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    }
+   ],
+   "payoutEvidence": [],
+   "payoutNote": null,
+   "trustpilot": null,
+   "registry": null,
+   "openItems": [],
+   "sourceFiles": [
+    "audits/clause-review-2026-11-25/aeon-funded.json"
+   ],
+   "status": "partial",
+   "counts": {
+    "rule": 0,
+    "discretion": 0,
+    "contradiction": 0,
+    "version": 0,
+    "payout": 0,
+    "safeguard": 1,
+    "legal": 0,
+    "history": 0,
+    "gap": 0
+   }
+  },
+  {
    "slug": "alpha-capital-group",
    "name": "Alpha Capital Group",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Pro",
     "Swing",
@@ -217,12 +255,14 @@
     "Primary registry, regulatory and historical incident reconciliation",
     "Independent payout evidence not captured in this pass; no inference of nonpayment",
     "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
-    "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+    "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details",
+    "Clause to verify (2026-11-25): B6 — 27.1 non-disparagement clause found; the sanction attached to 27.1 is not stated in the extract."
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
     "full-audit-reopen-wave3-five-2026-11-24.json",
-    "full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+    "full-audit-reopen-wave3-five-supplement-2026-11-24.json",
+    "audits/clause-review-2026-11-25/alpha-capital-group.json"
    ],
    "counts": {
     "rule": 6,
@@ -1521,7 +1561,7 @@
    "slug": "brightfunded",
    "name": "BrightFunded",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "1-Step Daily",
     "2-Step Bright",
@@ -1667,11 +1707,13 @@
    "registry": "NOT_INDEPENDENTLY_VERIFIED",
    "openItems": [
     "Separate Funded Trader agreement; effect on validated vs potential rewards; application by programme.",
-    "Complete funded agreement, full general terms/linked policies and separate Futures contracts, old cohort rules and all news treatment, registry and historical incident reconciliation"
+    "Complete funded agreement, full general terms/linked policies and separate Futures contracts, old cohort rules and all news treatment, registry and historical incident reconciliation",
+    "Clause to verify (2026-11-25): B7 — 7.3: Funded Trader Program obligations \"as stipulated in the separate agreement\": check whether published."
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
-    "full-audit-reopen-wave4-five-manual-2026-11-24.json"
+    "full-audit-reopen-wave4-five-manual-2026-11-24.json",
+    "audits/clause-review-2026-11-25/brightfunded.json"
    ],
    "counts": {
     "rule": 1,
@@ -1990,7 +2032,7 @@
    "slug": "clarity-traders",
    "name": "Clarity Traders",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -2024,6 +2066,15 @@
      "source": "https://www.claritytraders.com/terms-and-conditions",
      "locator": "§16; §17",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Funded accounts: no single day above 20 % of a reward request (trading rules page).",
+     "source": "https://www.claritytraders.com/trading-rules",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -2034,10 +2085,11 @@
     "Check whether a separate funded agreement exists, the sections of the current version governing acquired rewards, and any appeal procedure."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+    "audits/clause-review-2026-11-25/clarity-traders.json"
    ],
    "counts": {
-    "rule": 2,
+    "rule": 3,
     "discretion": 2,
     "contradiction": 0,
     "version": 0,
@@ -2212,7 +2264,7 @@
    "slug": "daytraders-com",
    "name": "DayTraders.com",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -2246,6 +2298,24 @@
      "source": "https://daytraders.com/help/articles/17684752-s2f-payouts",
      "locator": "S2F payout rules",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. A user may be barred from a Reward at the sole discretion of Day Traders for \"disregard for these Terms\" or \"any other disruptive manner\".",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -2253,14 +2323,16 @@
    "trustpilot": null,
    "registry": null,
    "openItems": [
-    "Obtain the signed Pro/S2F/Live agreement; check blocking and reward-loss conditions and the payer's exact status; do not extrapolate from the site agreement."
+    "Obtain the signed Pro/S2F/Live agreement; check blocking and reward-loss conditions and the payer's exact status; do not extrapolate from the site agreement.",
+    "Clause to verify (2026-11-25): B7 — Funded stage governed by separate or supplemental agreement: check whether published."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3b-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+    "audits/clause-review-2026-11-25/daytraders-com.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 2,
+    "discretion": 4,
     "contradiction": 0,
     "version": 0,
     "payout": 0,
@@ -2275,7 +2347,7 @@
    "slug": "directfundedtrader",
    "name": "DirectFundedTrader",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -2293,6 +2365,15 @@
      "source": "https://www.directfundedtrader.com/faq-rules",
      "locator": "FAQ — prohibited strategies",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. Funding contract is sent after the evaluation (\"sign the contract we send you\").",
+     "source": "https://directfundedtrader.com/faq-rules",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -2303,7 +2384,8 @@
     "Obtain direct/historical terms text, version, the funded agreement and reward clauses, links of the real seller; do not mark the review complete."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3c-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+    "audits/clause-review-2026-11-25/directfundedtrader.json"
    ],
    "counts": {
     "rule": 1,
@@ -2314,7 +2396,7 @@
     "safeguard": 0,
     "legal": 0,
     "history": 0,
-    "gap": 0
+    "gap": 1
    },
    "status": "partial"
   },
@@ -2579,7 +2661,7 @@
    "slug": "earn2trade",
    "name": "Earn2Trade",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -2605,6 +2687,24 @@
      "source": "https://www.earn2trade.com/terms-and-conditions",
      "locator": "Sanctioned countries clause",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. 30 % on the evaluation phase only; funded accounts not concerned.",
+     "source": "https://www.earn2trade.com/blog/earn2trade-evaluation-rules-profit-split-update/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Rule changes are never retroactive (blog, July 2026 update).",
+     "source": "https://www.earn2trade.com/blog/earn2trade-evaluation-rules-profit-split-update/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -2615,15 +2715,16 @@
     "LiveSim/Live contracts of the actual trading partner, recourse and payout rules by programme; a site suspension must not be read as removal of pay."
    ],
    "sourceFiles": [
-    "contract-clauses-wave4-primary-7-2026-11-24.json"
+    "contract-clauses-wave4-primary-7-2026-11-24.json",
+    "audits/clause-review-2026-11-25/earn2trade.json"
    ],
    "counts": {
-    "rule": 1,
+    "rule": 2,
     "discretion": 1,
     "contradiction": 0,
     "version": 0,
     "payout": 1,
-    "safeguard": 0,
+    "safeguard": 1,
     "legal": 0,
     "history": 0,
     "gap": 0
@@ -2867,7 +2968,7 @@
    "slug": "finotive-funding",
    "name": "Finotive Funding",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "1-Step Challenge",
     "2-Step Challenge",
@@ -3005,6 +3106,15 @@
      "source": "https://help.finotivepay.com/en/articles/25-does-an-on-demand-funding-reward-mean-an-immediate-external-pay-payout",
      "locator": "current indexed FAQ",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Compliance, risk, prohibited-strategy and platform updates may apply immediately to existing accounts.",
+     "source": "https://finotivefunding.com/terms-and-conditions",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -3022,13 +3132,14 @@
    ],
    "sourceFiles": [
     "contract-clauses-wave4-primary-6-2026-11-24.json",
-    "full-audit-reopen-wave6-five-manual-2026-11-24.json"
+    "full-audit-reopen-wave6-five-manual-2026-11-24.json",
+    "audits/clause-review-2026-11-25/finotive-funding.json"
    ],
    "counts": {
     "rule": 3,
     "discretion": 4,
     "contradiction": 1,
-    "version": 0,
+    "version": 1,
     "payout": 5,
     "safeguard": 1,
     "legal": 2,
@@ -3175,7 +3286,7 @@
    "slug": "for-traders",
    "name": "For Traders",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Forex Fast",
     "Fast Static",
@@ -3290,6 +3401,15 @@
      "source": "https://fortraders.com/terms-and-conditions",
      "locator": "intro (cached DMCC vs fresh indexed FZCO)",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. 13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+     "source": "https://www.fortraders.com/terms-and-conditions",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -3307,7 +3427,8 @@
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
-    "full-audit-reopen-wave6-five-manual-2026-11-24.json"
+    "full-audit-reopen-wave6-five-manual-2026-11-24.json",
+    "audits/clause-review-2026-11-25/for-traders.json"
    ],
    "counts": {
     "rule": 4,
@@ -3318,7 +3439,7 @@
     "safeguard": 0,
     "legal": 0,
     "history": 0,
-    "gap": 0
+    "gap": 1
    },
    "status": "partial"
   },
@@ -3476,7 +3597,7 @@
    "slug": "ftmo",
    "name": "FTMO",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "CFD 1-Step",
     "CFD 2-Step Standard",
@@ -3605,6 +3726,42 @@
      "source": "https://ftmo.com/en/futures/faq/ftr-who-is-an-ftmo-trader-and-how-do-i-become-one",
      "locator": "Live invitation",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. FTMO reserves the right to determine 'at our own discretion' whether trades fall within a Forbidden Trading Practice; acting reasonably, it may cancel trades and cancel all FTMO Accounts or rewards, without prior notice (endeavours to notify) and without compensation; may also impose temporary or permanent consistency measures.",
+     "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "locator": "cl. 7.3; 7.5; 7.6.2; 7.6.4; 7.6.9; 7.7; 7.9",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Acting 'in a manner that may damage our reputation, including after termination' leads to termination of agreements and loss of access.",
+     "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "locator": "cl. 11.1",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Instant consistency 30% of net total profit; exceeding delays the reward (prior dossier).",
+     "source": "https://ftmo.com/en/",
+     "locator": "Instant account rules",
+     "checkedOn": "2026-11-24",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Terms changes notified at least 7 days ahead; trader can reject them (agreements then terminate); complaints answered within 30 days.",
+     "source": "https://cdn.ftmo.com/docs%2Fterms-and-conditions%2F118cdaed571a48529431ffa6ff28a91b",
+     "locator": "cl. 15.1; 14.3",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -3634,15 +3791,16 @@
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
-    "full-audit-reopen-wave2-five-2026-11-24.json"
+    "full-audit-reopen-wave2-five-2026-11-24.json",
+    "audits/lot1-2026-11-25/ftmo.json"
    ],
    "counts": {
-    "rule": 4,
-    "discretion": 5,
+    "rule": 5,
+    "discretion": 7,
     "contradiction": 0,
     "version": 2,
     "payout": 3,
-    "safeguard": 0,
+    "safeguard": 1,
     "legal": 1,
     "history": 0,
     "gap": 0
@@ -3938,7 +4096,7 @@
    "slug": "funded-trader-markets",
    "name": "Funded Trader Markets",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -3972,6 +4130,15 @@
      "source": "https://fundedtradermarkets.com/terms-conditions",
      "locator": "§5.G",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. The Trader Agreement is provided in the dashboard only after a funded account is granted.",
+     "source": "https://fundedtradermarkets.com/terms-conditions",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [
@@ -3994,7 +4161,8 @@
     "Reconcile three companies, obtain the Trader Agreement in the dashboard and annexes by programme, check refusal of acquired rewards and recourse."
    ],
    "sourceFiles": [
-    "contract-clauses-wave4-primary-7-2026-11-24.json"
+    "contract-clauses-wave4-primary-7-2026-11-24.json",
+    "audits/clause-review-2026-11-25/funded-trader-markets.json"
    ],
    "counts": {
     "rule": 0,
@@ -4005,7 +4173,7 @@
     "safeguard": 0,
     "legal": 1,
     "history": 0,
-    "gap": 0
+    "gap": 1
    },
    "status": "partial"
   },
@@ -4298,7 +4466,7 @@
    "slug": "fundednext",
    "name": "FundedNext",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Stellar 1-Step",
     "Stellar 2-Step",
@@ -4447,6 +4615,60 @@
      "source": "https://helpfutures.fundednext.com/fr/articles/16522296-route-vers-le-trading-en-direct-rapid-flex-direct",
      "locator": "Live transition",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Futures Direct Account: 20% Perpetual Consistency Rule as a withdrawal gate; the best day ever carries forward across all cycles (cycle total must reach 5x the best day). CFD On-Demand: 40%; Futures Rapid Pro funded: 40%; Legacy/Flex funded: none.",
+     "source": "https://helpfutures.fundednext.com/en/articles/17230245-is-there-any-consistency-rule-to-be-followed-in-the-fundednext-futures-challenge-fundednext-account",
+     "locator": "Direct Account section",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Profits removed while losses stay counted. Quick Strike (trades closed within 30 s): at 30% or more of trades after a warning at 20%, 100% of their profit is deducted from the Performance Reward and the account is terminated if still at or above 30% at cycle end. News window (+/-5 min, high-impact): only 40% of profit from profitable trades counts.",
+     "source": "https://help.fundednext.com/en/articles/14702484-understanding-the-quick-strike-parameter-on-fundednext",
+     "locator": "thresholds; News Reward Share Rule",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Earned rewards removable at the firm's discretion. 'Performance Reward' is defined as any amount the Provider may make available 'à sa seule discrétion' and is 'not ... an acquired right'; at any time before actual payment the Provider may review, adjust, withhold, refuse or cancel Performance Rewards, including for 'technical or operational inconsistencies'. Funded access is revocable at the Provider's discretion and creates no acquired right or guarantee of future payments.",
+     "source": "https://fundednext.com/terms-of-service",
+     "locator": "§3 Définitions; §12.6; §10.3 · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. On a breach or 'reasonable indications' of a breach, the Provider may, at its sole discretion and without notice, suspend or close accounts and refuse, withhold or reverse Performance Rewards; open-ended ground: any circumstance 'incompatible with the legitimate purpose of the Services'.",
+     "source": "https://fundednext.com/terms-of-service",
+     "locator": "§5.8; §9.4; §9.7-9.8 · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Non-disparagement clause covering defamation, 'discrédit, dénigrement, attaque réputationnelle ou propagande négative' on social media, forums, review platforms, support tickets and e-mails, including saying 'does not pay' without verifiable factual basis; breach allows withholding, refusing or cancelling Performance Rewards.",
+     "source": "https://fundednext.com/terms-of-service",
+     "locator": "§24.1; §24.2; §24.5 · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Continued use after the effective date of changed Terms counts as acceptance; terminating the account creates no right to a refund or to a Performance Reward.",
+     "source": "https://fundednext.com/terms-of-service",
+     "locator": "§22.4; §22.5 · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -4479,11 +4701,12 @@
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
-    "full-audit-reopen-wave2-five-2026-11-24.json"
+    "full-audit-reopen-wave2-five-2026-11-24.json",
+    "audits/fulltext-2026-11-25/fundednext.json"
    ],
    "counts": {
-    "rule": 5,
-    "discretion": 5,
+    "rule": 8,
+    "discretion": 8,
     "contradiction": 1,
     "version": 1,
     "payout": 4,
@@ -4990,7 +5213,7 @@
    "slug": "funding-your-trades",
    "name": "Funding Your Trades",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -5024,6 +5247,15 @@
      "source": "https://fundingyourtrades.com/terms-of-services/",
      "locator": "§4.1; §17.2",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Minimum 25 % consistency score to qualify for a withdrawal (20 % on Instant Plus).",
+     "source": "https://fundingyourtrades.com/faq/how-do-i-qualify-for-a-payout-reward/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -5034,10 +5266,11 @@
     "Check the funded contract and rights over rewards already approved, double counting between sanctions, and the treatment of a genuine good-faith bank dispute."
    ],
    "sourceFiles": [
-    "contract-clauses-wave4-primary-10-2026-11-24.json"
+    "contract-clauses-wave4-primary-10-2026-11-24.json",
+    "audits/clause-review-2026-11-25/funding-your-trades.json"
    ],
    "counts": {
-    "rule": 2,
+    "rule": 3,
     "discretion": 1,
     "contradiction": 0,
     "version": 0,
@@ -5092,7 +5325,7 @@
    "slug": "fundyourfx",
    "name": "FundYourFX",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -5127,6 +5360,15 @@
      "locator": "Profil fundyourfx.com",
      "checkedOn": "2026-11-24",
      "publish": false
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Profits removed while losses stay counted. Violating trades: profits removed, losses retained and counted toward drawdown.",
+     "source": "https://fundyourfx.io/terms-conditions/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -5137,10 +5379,11 @@
     "Check the domain actually used at checkout, migration notice, HK registry, payout protection after approval and independent evidence."
    ],
    "sourceFiles": [
-    "contract-clauses-wave5-six-2026-11-24.json"
+    "contract-clauses-wave5-six-2026-11-24.json",
+    "audits/clause-review-2026-11-25/fundyourfx.json"
    ],
    "counts": {
-    "rule": 1,
+    "rule": 2,
     "discretion": 1,
     "contradiction": 0,
     "version": 0,
@@ -5156,7 +5399,7 @@
    "slug": "fx2-funding",
    "name": "FX2 Funding",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -5182,6 +5425,15 @@
      "source": "https://fx2funding.com/terms-and-conditions/",
      "locator": "",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Margin, order size, position limits and drawdown halt levels of the Funded Account may be revised at any time.",
+     "source": "https://fx2funding.com/faqs/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -5192,13 +5444,14 @@
     "Prop Account contract, protection of approved payouts and informed choice of the credit option."
    ],
    "sourceFiles": [
-    "contract-clauses-wave6-final-25-2026-11-24.json"
+    "contract-clauses-wave6-final-25-2026-11-24.json",
+    "audits/clause-review-2026-11-25/fx2-funding.json"
    ],
    "counts": {
     "rule": 0,
     "discretion": 0,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 2,
     "safeguard": 0,
     "legal": 1,
@@ -5422,7 +5675,7 @@
    "slug": "get-leveraged",
    "name": "Get Leveraged",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -5464,6 +5717,15 @@
      "source": "https://getleveraged.com/terms/",
      "locator": "§6.1–6.3",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Highest day may not exceed 20 % of total profit before a reward request.",
+     "source": "https://getleveraged.com/faq/what-is-the-consistency-rule/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -5474,10 +5736,11 @@
     "Check the effective checkout version (2.0, 27/10/2026), individual programme rules and differences between review clauses and exceptions."
    ],
    "sourceFiles": [
-    "contract-clauses-wave4-primary-10-2026-11-24.json"
+    "contract-clauses-wave4-primary-10-2026-11-24.json",
+    "audits/clause-review-2026-11-25/get-leveraged.json"
    ],
    "counts": {
-    "rule": 0,
+    "rule": 1,
     "discretion": 2,
     "contradiction": 0,
     "version": 0,
@@ -5493,7 +5756,7 @@
    "slug": "goat-funded-trader",
    "name": "GOAT Funded Trader",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "2-Step Standard"
    ],
@@ -5569,6 +5832,15 @@
      "source": "https://help.goatfundedtrader.com/2-step-standard.html",
      "locator": "Funded conditions",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Account closed for unsuitable style without other violation: fee refunded in full.",
+     "source": "https://www.goatfundedtrader.com/legal/terms-and-conditions",
+     "locator": "PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [
@@ -5594,7 +5866,8 @@
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
-    "v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json"
+    "v63-counteraudit-bulenox-goat-fundingpips-2026-11-24.json",
+    "audits/clause-review-2026-11-25/goat-funded-trader.json"
    ],
    "trustpilotUrlOnly": "https://www.trustpilot.com/review/goatfundedtrader.com",
    "counts": {
@@ -5603,7 +5876,7 @@
     "contradiction": 0,
     "version": 0,
     "payout": 0,
-    "safeguard": 0,
+    "safeguard": 1,
     "legal": 0,
     "history": 0,
     "gap": 0
@@ -5611,10 +5884,48 @@
    "status": "partial"
   },
   {
+   "slug": "hantec-trader",
+   "name": "RZR Funded",
+   "level": "first-file",
+   "checkedOn": "2026-11-25",
+   "programs": [],
+   "findings": [
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
+     "source": "https://rzrfunded.com/terms-conditions/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    }
+   ],
+   "payoutEvidence": [],
+   "payoutNote": null,
+   "trustpilot": null,
+   "registry": null,
+   "openItems": [],
+   "sourceFiles": [
+    "audits/clause-review-2026-11-25/hantec-trader.json"
+   ],
+   "status": "partial",
+   "counts": {
+    "rule": 0,
+    "discretion": 1,
+    "contradiction": 0,
+    "version": 0,
+    "payout": 0,
+    "safeguard": 0,
+    "legal": 0,
+    "history": 0,
+    "gap": 0
+   }
+  },
+  {
    "slug": "hash-hedge",
    "name": "Hash Hedge",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Challenge Plan Conditions by checkout (full catalog not yet captured)"
    ],
@@ -5714,6 +6025,24 @@
      "source": "https://www.hashhedge.com/commercial-terms",
      "locator": "§8 (prior audit)",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Discretionary payout refusal, with a review or explanation route. Open-ended prohibition ('any other conduct which, in the reasonable opinion of the Company, may harm the integrity') with sole-discretion measures; pending payouts can be put on Hold for suspected breach or reputational risk. Mitigated: written appeal within 7 days with decision in 14 days, 30-business-day investigation target and a 90-day backstop opening the dispute procedure.",
+     "source": "https://www.hashhedge.com/terms-and-conditions",
+     "locator": "cl. 4.5; 16.1; 16.3(e); 15.7(c); 7.11",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Changes do not alter the conditions of an existing purchase unless agreed or required by law; ICC arbitration after negotiation and mediation.",
+     "source": "https://www.hashhedge.com/terms-and-conditions",
+     "locator": "cl. 2.5; 20.1-20.2",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -5734,15 +6063,16 @@
    ],
    "sourceFiles": [
     "contract-clauses-wave6-final-25-2026-11-24.json",
-    "full-audit-reopen-wave1-seven-2026-11-24.json"
+    "full-audit-reopen-wave1-seven-2026-11-24.json",
+    "audits/lot1-2026-11-25/hash-hedge.json"
    ],
    "counts": {
     "rule": 2,
-    "discretion": 2,
+    "discretion": 3,
     "contradiction": 0,
     "version": 0,
     "payout": 4,
-    "safeguard": 3,
+    "safeguard": 4,
     "legal": 1,
     "history": 0,
     "gap": 0
@@ -5828,7 +6158,7 @@
    "slug": "hyrotrader",
    "name": "HyroTrader",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Hyro Core",
     "One-Step",
@@ -5924,6 +6254,33 @@
      "source": "https://www.hyrotrader.com/trading-rules/",
      "locator": "Trading rules",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Discretionary payout refusal, with a review or explanation route. Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§10.2(g),(k); §10.3(d),(h); §24.2",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§P.4; Companion Policies",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Trading-rule changes not applied retroactively to enrolled accounts; 30 days' notice of modifications; honest reviews and criticism expressly protected.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§6.3; §19.2; §17.1",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -5966,18 +6323,19 @@
    ],
    "sourceFiles": [
     "contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
-    "full-audit-reopen-wave1-seven-2026-11-24.json"
+    "full-audit-reopen-wave1-seven-2026-11-24.json",
+    "audits/lot1-2026-11-25/hyrotrader.json"
    ],
    "counts": {
     "rule": 3,
-    "discretion": 3,
+    "discretion": 4,
     "contradiction": 0,
     "version": 2,
     "payout": 2,
-    "safeguard": 1,
+    "safeguard": 2,
     "legal": 0,
     "history": 0,
-    "gap": 0
+    "gap": 1
    },
    "status": "partial"
   },
@@ -6457,7 +6815,7 @@
    "slug": "lucid-trading",
    "name": "Lucid Trading",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -6475,6 +6833,33 @@
      "source": "https://lucidtrading.com/terms-of-use/",
      "locator": "Rewards",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Discretionary payout refusal, with a review or explanation route. Prohibited practices are 'determined in Lucid's sole discretion'; on a prohibited use Lucid may remove trades, adjust balances, pause, hold or deny payouts or terminate, without compensation or refund; the clause continues with a route to contest an enforcement action ('If you believe an enforcement action ...', text truncated by OCR).",
+     "source": "https://www.lucidtrading.com/terms-of-use/",
+     "locator": "Terms of Use - prohibited uses · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Terms of Use may be revised 'from time to time in our sole discretion'; Website, Software, Services and fees may be modified, suspended or discontinued; prices may change without notice.",
+     "source": "https://www.lucidtrading.com/terms-of-use/",
+     "locator": "Changes to the Terms of Use · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Payouts are governed by the Program Rules; payouts may be delayed or withheld while suspected violations, linked accounts or payment disputes are reviewed. The 'Reward' section (participation can be refused for disparaging Lucid) concerns promotional rewards, not payouts: not counted as B6.",
+     "source": "https://www.lucidtrading.com/terms-of-use/",
+     "locator": "Payouts; Rewards; Promo codes · PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -6485,13 +6870,14 @@
     "Signed LucidPro/LucidDirect/LucidFlex and Live agreements, definitions and microscalping thresholds for the account date."
    ],
    "sourceFiles": [
-    "contract-clauses-deep-sweep-2026-11-24.json"
+    "contract-clauses-deep-sweep-2026-11-24.json",
+    "audits/fulltext-2026-11-25/lucid-trading.json"
    ],
    "counts": {
-    "rule": 0,
-    "discretion": 1,
+    "rule": 1,
+    "discretion": 2,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 1,
     "safeguard": 0,
     "legal": 0,
@@ -6567,7 +6953,7 @@
    "slug": "lvlup-futures",
    "name": "Lvlup Futures",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -6593,6 +6979,15 @@
      "source": "https://lvlupfutures.com/rules",
      "locator": "",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "source": "https://lvlupfutures.com/rules",
+     "locator": "PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -6603,13 +6998,14 @@
     "Obtain the exact Prop Account agreement by model and rights over approved rewards."
    ],
    "sourceFiles": [
-    "contract-clauses-wave6-final-25-2026-11-24.json"
+    "contract-clauses-wave6-final-25-2026-11-24.json",
+    "audits/clause-review-2026-11-25/lvlup-futures.json"
    ],
    "counts": {
     "rule": 3,
     "discretion": 0,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 0,
     "safeguard": 0,
     "legal": 0,
@@ -6622,7 +7018,7 @@
    "slug": "maven-trading",
    "name": "Maven Trading",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Standard 1/2/3-Step",
     "Static 1-Step (scope pending)",
@@ -6736,6 +7132,15 @@
      "source": "https://maventrading.com/terms-and-conditions",
      "locator": "schedule 3",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Profits removed while losses stay counted. OMO Simulated Funded and Instant Mini: profits from trades closed before 150 s are removed, losses remain.",
+     "source": "https://maventrading.com/terms-and-conditions",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -6752,10 +7157,11 @@
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
-    "full-audit-reopen-wave4-five-manual-2026-11-24.json"
+    "full-audit-reopen-wave4-five-manual-2026-11-24.json",
+    "audits/clause-review-2026-11-25/maven-trading.json"
    ],
    "counts": {
-    "rule": 5,
+    "rule": 6,
     "discretion": 5,
     "contradiction": 0,
     "version": 0,
@@ -6771,7 +7177,7 @@
    "slug": "ment-funding",
    "name": "Ment Funding",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Forex",
     "Futures",
@@ -6865,6 +7271,15 @@
      "source": "https://mentfunding.com/terms-of-service",
      "locator": "§8",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "source": "https://mentfunding.com/terms-of-service",
+     "locator": "PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -6885,13 +7300,14 @@
    ],
    "sourceFiles": [
     "contract-clauses-wave6-final-25-2026-11-24.json",
-    "full-audit-reopen-wave1-seven-2026-11-24.json"
+    "full-audit-reopen-wave1-seven-2026-11-24.json",
+    "audits/clause-review-2026-11-25/ment-funding.json"
    ],
    "counts": {
     "rule": 3,
     "discretion": 5,
     "contradiction": 1,
-    "version": 0,
+    "version": 1,
     "payout": 1,
     "safeguard": 0,
     "legal": 1,
@@ -6967,7 +7383,7 @@
    "slug": "moneta-funded",
    "name": "Moneta Funded",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -7001,6 +7417,15 @@
      "source": "https://www.monetafunded.com/general-rules/",
      "locator": "September 2026 PDF previously indexed",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Sole discretion to delay, reduce, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules.",
+     "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "locator": "PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -7011,11 +7436,12 @@
     "Read the full official PDF with page/version checks, verify historical §5.1J and §6.9 on payout powers and news contradictions; signed funded agreement by programme."
    ],
    "sourceFiles": [
-    "contract-clauses-wave4-primary-7-2026-11-24.json"
+    "contract-clauses-wave4-primary-7-2026-11-24.json",
+    "audits/clause-review-2026-11-25/moneta-funded.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 1,
+    "discretion": 2,
     "contradiction": 0,
     "version": 0,
     "payout": 2,
@@ -7085,7 +7511,7 @@
    "slug": "myfundedcapital",
    "name": "MyFundedCapital",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -7111,6 +7537,42 @@
      "source": "https://myfundedcapital.com/terms-and-conditions/",
      "locator": "Material changes",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "Payouts can be refused or delayed 'only on these grounds' (enumerated list); the firm states the ground, the test met and the trades used; trader may reply within 7 days, answer within 7 days. Prohibited trading limited to listed practices, each with a measured test.",
+     "source": "https://myfundedcapital.com/terms-and-conditions/",
+     "locator": "Grounds for Refusing a Payout; Prohibited Uses",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "safeguard",
+     "scope": "",
+     "text": "14 days' email notice of material changes; changes do not alter the rules and payout terms already bound to existing accounts, except integrity rules and legal requirements.",
+     "source": "https://myfundedcapital.com/terms-and-conditions/",
+     "locator": "Terms and Conditions (updates)",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. MFC Stocks consistency 35%; an unmet consistency rule refuses or delays the payout, account stays open.",
+     "source": "https://myfundedcapital.com/terms-and-conditions/",
+     "locator": "MFC Stocks; Grounds for Refusing a Payout",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
+     "source": "https://myfundedcapital.com/terms-and-conditions/",
+     "locator": "Education / Guidelines / Arbitration",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -7121,18 +7583,19 @@
     "Version actually accepted by each cohort; contrast with older indexed terms; scope of immediate-effect exceptions."
    ],
    "sourceFiles": [
-    "contract-clauses-zero-classified-8-2026-11-24.json"
+    "contract-clauses-zero-classified-8-2026-11-24.json",
+    "audits/lot1-2026-11-25/myfundedcapital.json"
    ],
    "counts": {
-    "rule": 0,
+    "rule": 1,
     "discretion": 1,
     "contradiction": 0,
     "version": 0,
     "payout": 0,
-    "safeguard": 2,
+    "safeguard": 4,
     "legal": 0,
     "history": 0,
-    "gap": 0
+    "gap": 1
    },
    "status": "partial"
   },
@@ -7140,7 +7603,7 @@
    "slug": "myfundedfutures",
    "name": "MyFundedFutures",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Flex 50K",
     "Flex 25K legacy",
@@ -7312,12 +7775,14 @@
     "Primary registry, regulatory and historical incident reconciliation",
     "Independent payout evidence not captured in this pass; no inference of nonpayment",
     "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
-    "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+    "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details",
+    "Clause to verify (2026-11-25): B6 — Conduct that \"may cause reputational damage\" allows access restriction without compensation or refund (Terms, capital-letter clause): check whether funded payouts are lost."
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
     "full-audit-reopen-wave3-five-2026-11-24.json",
-    "full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+    "full-audit-reopen-wave3-five-supplement-2026-11-24.json",
+    "audits/clause-review-2026-11-25/myfundedfutures.json"
    ],
    "counts": {
     "rule": 2,
@@ -7686,7 +8151,7 @@
    "slug": "orion-funded",
    "name": "Orion Funded",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -7712,6 +8177,15 @@
      "source": "https://www.orionfunded.com/faq/programs/prohibited-practices",
      "locator": "FAQ — risk management",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. 14.1: acting in a manner that may damage the firm's reputation, including after termination, leads to termination of the agreements.",
+     "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [
@@ -7734,11 +8208,12 @@
     "Read the Orion contract PDF page by page, the Orion Trader Account agreement offered by a third party after passing, and recourse; review incomplete without them."
    ],
    "sourceFiles": [
-    "contract-clauses-wave4-primary-6-2026-11-24.json"
+    "contract-clauses-wave4-primary-6-2026-11-24.json",
+    "audits/clause-review-2026-11-25/orion-funded.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 1,
+    "discretion": 2,
     "contradiction": 0,
     "version": 0,
     "payout": 1,
@@ -7999,6 +8474,44 @@
     "gap": 0
    },
    "status": "partial"
+  },
+  {
+   "slug": "rzr-funded",
+   "name": "rzr-funded",
+   "level": "first-file",
+   "checkedOn": "2026-11-25",
+   "programs": [],
+   "findings": [
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Same clause as Hantec Trader terms (rzrfunded.com/terms-conditions): payout not due if trading is judged inconsistent with the commercial purpose of the Programme.",
+     "source": "https://rzrfunded.com/terms-conditions/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
+    }
+   ],
+   "payoutEvidence": [],
+   "payoutNote": null,
+   "trustpilot": null,
+   "registry": null,
+   "openItems": [],
+   "sourceFiles": [
+    "audits/clause-review-2026-11-25/rzr-funded.json"
+   ],
+   "status": "partial",
+   "counts": {
+    "rule": 0,
+    "discretion": 1,
+    "contradiction": 0,
+    "version": 0,
+    "payout": 0,
+    "safeguard": 0,
+    "legal": 0,
+    "history": 0,
+    "gap": 0
+   }
   },
   {
    "slug": "sabiotrade",
@@ -8271,7 +8784,7 @@
    "slug": "sway-funded",
    "name": "Sway Funded",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Challenge",
     "Funded Simulation",
@@ -8365,6 +8878,15 @@
      "source": "https://swayfunded.com/",
      "locator": "Timeline and reward claims",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. 4.2: fees and parameters may change at any time \"with immediate effect on all existing challenges\".",
+     "source": "https://my.swayfunded.com/p/refund-policy",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -8383,13 +8905,14 @@
    ],
    "sourceFiles": [
     "contract-clauses-wave4-primary-10-2026-11-24.json",
-    "full-audit-reopen-wave5-five-1500-2026-11-24.json"
+    "full-audit-reopen-wave5-five-1500-2026-11-24.json",
+    "audits/clause-review-2026-11-25/sway-funded.json"
    ],
    "counts": {
     "rule": 2,
     "discretion": 5,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 2,
     "safeguard": 2,
     "legal": 0,
@@ -8402,7 +8925,7 @@
    "slug": "take-profit-trader",
    "name": "Take Profit Trader",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Classic",
     "Intraday",
@@ -8515,6 +9038,33 @@
      "locator": "company responses",
      "checkedOn": "2026-11-24",
      "publish": false
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. User Agreement can change 'from time to time without notice'; continued use binds users regardless of when they registered.",
+     "source": "https://takeprofittrader.com/terms",
+     "locator": "introductory section",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "gap",
+     "scope": "",
+     "text": "Funded-stage contract not published before purchase. Payout and PRO rules are set out in a PRO contract sent after the Test is passed; the contract itself is not published.",
+     "source": "https://takeprofittraderhelp.zendesk.com/hc/en-us/articles/15171769361053-PRO-Account-Rules",
+     "locator": "introduction",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "contradiction",
+     "scope": "",
+     "text": "Help-centre wording differs from the contract. Older FAQ says weekly PRO+ activity, current help says one traded day per calendar month (cohort to reconcile).",
+     "source": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725",
+     "locator": "PRO+ FAQ vs PRO Account Rules §3",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -8533,18 +9083,19 @@
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
-    "full-audit-reopen-wave4-five-manual-2026-11-24.json"
+    "full-audit-reopen-wave4-five-manual-2026-11-24.json",
+    "audits/lot1-2026-11-25/take-profit-trader.json"
    ],
    "counts": {
     "rule": 3,
     "discretion": 0,
-    "contradiction": 1,
-    "version": 0,
+    "contradiction": 2,
+    "version": 1,
     "payout": 2,
     "safeguard": 0,
     "legal": 0,
     "history": 0,
-    "gap": 1
+    "gap": 2
    },
    "status": "partial"
   },
@@ -8552,7 +9103,7 @@
    "slug": "tentrade",
    "name": "TenTrade",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -8578,6 +9129,15 @@
      "source": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
      "locator": "",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Discretionary payout refusal, with a review or explanation route. Funded trader terms: sole and absolute discretion to judge the \"spirit\" or operational objectives, with payout denial possible.",
+     "source": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -8588,11 +9148,12 @@
     "Funded contract, broker entity actually signing and dispute procedures."
    ],
    "sourceFiles": [
-    "contract-clauses-wave6-final-25-2026-11-24.json"
+    "contract-clauses-wave6-final-25-2026-11-24.json",
+    "audits/clause-review-2026-11-25/tentrade.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 0,
+    "discretion": 1,
     "contradiction": 0,
     "version": 0,
     "payout": 2,
@@ -8670,7 +9231,7 @@
    "slug": "the-trading-pit",
    "name": "The Trading Pit",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -8741,6 +9302,15 @@
      "locator": "2 Aug 2024 announcement",
      "checkedOn": "2026-11-24",
      "verification": "TARGETED_EXCERPT_NOT_FULL_CONTRACT"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. 14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
+     "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -8760,11 +9330,12 @@
    ],
    "sourceFiles": [
     "contract-clauses-medium-firms-2026-11-24.json",
-    "full-audit-reopen-wave7-five-1800-2026-11-24.json"
+    "full-audit-reopen-wave7-five-1800-2026-11-24.json",
+    "audits/clause-review-2026-11-25/the-trading-pit.json"
    ],
    "counts": {
     "rule": 3,
-    "discretion": 2,
+    "discretion": 3,
     "contradiction": 0,
     "version": 0,
     "payout": 3,
@@ -8779,7 +9350,7 @@
    "slug": "the5ers",
    "name": "The5ers",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Bootcamp",
     "Hyper Growth",
@@ -8915,6 +9486,51 @@
      "source": "https://the5ers.com/faqs/how-much-is-the-profit-split-in-the5ers/",
      "locator": "Split FAQ",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Termination for cause includes making 'any defamatory, disparaging, or harmful statements about the Company, its employees, or the Services on any public platform', including review sites, and publishing support tickets or private correspondence; consequence: termination without refund and 'any accrued profits or Reward Balance shall be immediately forfeited'.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Termination rights - Termination for Cause",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Prohibited list ends with 'other conduct which in the sole discretion of the Company, represents uncommercial activity, is intended to game the market, or otherwise is not a viable trading strategy'; also 'intentionally or unintentionally' exploiting system errors.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Termination rights - prohibited trading list",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Terms may be modified 'in Our sole discretion', binding 'effective immediately upon posting'; Trading Rules and Prohibited Conduct 'subject to change at any time ... with or without notice'.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Introduction; Prohibited Conduct",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Severe sanction attached to a rule breach. A video interview requested during verification must be scheduled and completed within five business days, otherwise pending payouts are denied, all accounts cancelled and the collaboration terminated.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "User Verification Process",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Completing the evaluation does not guarantee acceptance as a Professional User; the firm may use its discretion on executing suggested trades.",
+     "source": "https://the5ers.com/terms-and-conditions/",
+     "locator": "Professional User",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -8947,13 +9563,14 @@
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
-    "full-audit-reopen-wave2-five-2026-11-24.json"
+    "full-audit-reopen-wave2-five-2026-11-24.json",
+    "audits/fulltext-2026-11-25/the5ers.json"
    ],
    "counts": {
-    "rule": 6,
-    "discretion": 4,
+    "rule": 8,
+    "discretion": 6,
     "contradiction": 1,
-    "version": 1,
+    "version": 2,
     "payout": 4,
     "safeguard": 0,
     "legal": 0,
@@ -9200,7 +9817,7 @@
    "slug": "top-one-futures",
    "name": "Top One Futures",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -9226,6 +9843,15 @@
      "source": "https://help.toponefutures.com/en/articles/10907392-what-are-the-requirements-to-request-a-payout",
      "locator": "Payout Requirements",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Disparaging statements, including on review platforms, may lead to immediate termination and forfeiture of profits.",
+     "source": "https://toponefutures.com/terms-and-conditions/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [
@@ -9248,11 +9874,12 @@
     "Find the 2026 Terms & Conditions and simulated funded contract, reviewed payout sanctions, the Elite/Elite Daily/Ignite versions and recourse."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3c-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3c-2026-11-24.json",
+    "audits/clause-review-2026-11-25/top-one-futures.json"
    ],
    "counts": {
     "rule": 2,
-    "discretion": 1,
+    "discretion": 2,
     "contradiction": 0,
     "version": 0,
     "payout": 0,
@@ -9267,7 +9894,7 @@
    "slug": "top-one-trader",
    "name": "Top One Trader",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -9293,6 +9920,15 @@
      "source": "https://www.toponetrader.com/terms-and-conditions",
      "locator": "Separate simulated funded agreement",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Accounts bought since 14 Oct 2025: consistency score must stay at 15 % or below (rules page).",
+     "source": "https://checkout.toponetrader.com/rules/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [
@@ -9312,13 +9948,16 @@
    "trustpilot": null,
    "registry": null,
    "openItems": [
-    "Obtain the Top One Funding agreement by programme (1-Step Flash, Instant, Nova) and assess recourse and acquired gains."
+    "Obtain the Top One Funding agreement by programme (1-Step Flash, Instant, Nova) and assess recourse and acquired gains.",
+    "Clause to verify (2026-11-25): B6 — Anti-disparagement clause found; sanction not read in the extract.",
+    "Clause to verify (2026-11-25): B7 — Live simulated account under separate agreement: check publication."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3b-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+    "audits/clause-review-2026-11-25/top-one-trader.json"
    ],
    "counts": {
-    "rule": 1,
+    "rule": 2,
     "discretion": 2,
     "contradiction": 0,
     "version": 0,
@@ -9334,7 +9973,7 @@
    "slug": "topstep",
    "name": "Topstep",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Trading Combine",
     "XFA Standard",
@@ -9352,7 +9991,7 @@
      "checkedOn": "2026-11-24"
     },
     {
-     "group": "discretion",
+     "group": "safeguard",
      "scope": "",
      "text": "The 'Rewards' in this section concern referral codes. The text expressly excludes payouts/pay under the separate XFA/LFA agreements. NOT evidence of payout confiscation.",
      "source": "https://www.topstep.com/terms-of-use",
@@ -9454,6 +10093,24 @@
      "source": "https://help.topstep.com/en/articles/15520357-topstep-labs",
      "locator": "Labs",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
+     "source": "https://www.topstep.com/terms-of-use",
+     "locator": "§27",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
+     "source": "https://www.topstep.com/terms-of-use",
+     "locator": "§9; §27; introduction",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [
@@ -9485,15 +10142,16 @@
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
-    "full-audit-reopen-wave2-five-2026-11-24.json"
+    "full-audit-reopen-wave2-five-2026-11-24.json",
+    "audits/lot1-2026-11-25/topstep.json"
    ],
    "counts": {
     "rule": 4,
     "discretion": 4,
     "contradiction": 0,
-    "version": 2,
+    "version": 3,
     "payout": 4,
-    "safeguard": 0,
+    "safeguard": 1,
     "legal": 0,
     "history": 0,
     "gap": 0
@@ -9504,7 +10162,7 @@
    "slug": "trade-the-pool",
    "name": "Trade The Pool",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -9530,6 +10188,15 @@
      "source": "https://tradethepool.com/program-terms/",
      "locator": "Program Terms",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Public criticism of the firm is a ground for sanction. Defamatory, disparaging or harmful statements on review sites are listed among the grounds of termination for cause.",
+     "source": "https://tradethepool.com/terms-and-conditions/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -9540,11 +10207,12 @@
     "Identify the trader pay contract, the Stock plan variation and versions of the payout threshold."
    ],
    "sourceFiles": [
-    "contract-clauses-medium-firms-2026-11-24.json"
+    "contract-clauses-medium-firms-2026-11-24.json",
+    "audits/clause-review-2026-11-25/trade-the-pool.json"
    ],
    "counts": {
     "rule": 1,
-    "discretion": 1,
+    "discretion": 2,
     "contradiction": 0,
     "version": 0,
     "payout": 1,
@@ -9559,7 +10227,7 @@
    "slug": "tradeday",
    "name": "TradeDay",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -9612,10 +10280,12 @@
    "trustpilot": null,
    "registry": null,
    "openItems": [
-    "SIM/LIVE and Quick Pay/Fast Pass agreements; recourse and withdrawals already approved; legal debtor, primary evidence and independent payments."
+    "SIM/LIVE and Quick Pay/Fast Pass agreements; recourse and withdrawals already approved; legal debtor, primary evidence and independent payments.",
+    "Clause to verify (2026-11-25): B7 — Funded SIM accounts are governed by a separate agreement: check whether it is published before purchase."
    ],
    "sourceFiles": [
-    "contract-clauses-wave5-six-2026-11-24.json"
+    "contract-clauses-wave5-six-2026-11-24.json",
+    "audits/clause-review-2026-11-25/tradeday.json"
    ],
    "counts": {
     "rule": 1,
@@ -9681,7 +10351,7 @@
    "slug": "tradeify",
    "name": "Tradeify",
    "level": "counter-audit",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [
     "Growth",
     "Select Flex",
@@ -9848,6 +10518,17 @@
    "payoutEvidence": [
     {
      "url": "https://payoutjunction.com/alltime",
+     "trackerLabel": "Tradeify Futures",
+     "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+     "method": "Rise",
+     "amountUSD": 468894858,
+     "count": 245639,
+     "period": "all time, as shown on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "reliability": "tracker"
+    },
+    {
+     "url": "https://payoutjunction.com/alltime",
      "trackerLabel": "Tradeify FX",
      "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
      "method": "Rise",
@@ -9874,12 +10555,14 @@
     "Primary registry, regulatory and historical incident reconciliation",
     "Independent payout evidence not captured in this pass; no inference of nonpayment",
     "Full applicable current checkout and signed funded/live agreements, all program variants and cohorts; full clause coverage not established",
-    "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details"
+    "Primary registry and incident reconciliation, direct individual payout matching; reconcile earlier source versions and verify missing details",
+    "Clause to verify (2026-11-25): B7 — Check whether the Account Agreement is public."
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
     "full-audit-reopen-wave3-five-2026-11-24.json",
-    "full-audit-reopen-wave3-five-supplement-2026-11-24.json"
+    "full-audit-reopen-wave3-five-supplement-2026-11-24.json",
+    "audits/clause-review-2026-11-25/tradeify.json"
    ],
    "counts": {
     "rule": 5,
@@ -10016,7 +10699,7 @@
    "slug": "tradexprop",
    "name": "TradeXProp",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -10042,6 +10725,15 @@
      "source": "https://tradexprop.zohodesk.com/portal/en/kb/articles/prohibited-trading-activities-what-you-need-to-know",
      "locator": "",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
+     "source": "https://tradexprop.com/terms-of-use/",
+     "locator": "PDF copy of the published terms read on 2026-11-25",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -10053,13 +10745,14 @@
     "Retrieve the exact checkout terms and funded agreement, scope of gains due; earlier terms blocker not fully lifted."
    ],
    "sourceFiles": [
-    "contract-clauses-wave6-final-25-2026-11-24.json"
+    "contract-clauses-wave6-final-25-2026-11-24.json",
+    "audits/clause-review-2026-11-25/tradexprop.json"
    ],
    "counts": {
     "rule": 1,
     "discretion": 2,
     "contradiction": 0,
-    "version": 0,
+    "version": 1,
     "payout": 0,
     "safeguard": 0,
     "legal": 0,
@@ -10072,7 +10765,7 @@
    "slug": "trading-cult",
    "name": "Trading Cult",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -10082,6 +10775,15 @@
      "source": "https://pro.tradingcult.com/no-evaluation-challenges/conditions",
      "locator": "Instant Funding / Pay After Pass info",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Funded accounts: no trade or day above 30 % of profits; failure rejects the payout and extends the date by 15 days (20 % on no-evaluation challenges).",
+     "source": "https://faq.tradingcult.com/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -10092,10 +10794,11 @@
     "Read the effective terms and funded agreement of the right product, the paying entity's role, change/termination clauses and recourse."
    ],
    "sourceFiles": [
-    "contract-clauses-medium-firms-2026-11-24.json"
+    "contract-clauses-medium-firms-2026-11-24.json",
+    "audits/clause-review-2026-11-25/trading-cult.json"
    ],
    "counts": {
-    "rule": 0,
+    "rule": 1,
     "discretion": 0,
     "contradiction": 0,
     "version": 0,
@@ -10335,7 +11038,7 @@
    "slug": "wegetfunded",
    "name": "WeGetFunded",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -10369,6 +11072,15 @@
      "source": "https://wegetfunded.com/en/legal/terms",
      "locator": "§18.5",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "discretion",
+     "scope": "",
+     "text": "Payout can be refused for conduct the contract does not quantify. Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
+     "source": "https://wegetfunded.com/en/legal/terms",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -10379,11 +11091,12 @@
     "Compare published withdrawal/affiliate promises with the LIVE scheme and identify the broker partner's contract; check whether the move to Live can be imposed and which rewards remain due."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3-2026-11-24.json",
+    "audits/clause-review-2026-11-25/wegetfunded.json"
    ],
    "counts": {
     "rule": 0,
-    "discretion": 3,
+    "discretion": 4,
     "contradiction": 0,
     "version": 0,
     "payout": 1,
@@ -10398,7 +11111,7 @@
    "slug": "wemastertrade",
    "name": "WeMasterTrade",
    "level": "first-file",
-   "checkedOn": "2026-11-24",
+   "checkedOn": "2026-11-25",
    "programs": [],
    "findings": [
     {
@@ -10424,6 +11137,15 @@
      "source": "https://faq.wemastertrade.com/en_gb/profit-sharing/",
      "locator": "Introduction and legal party",
      "checkedOn": "2026-11-24"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Consistency rule. Best trading day may not exceed 20 % of total profit (FAQ, general rule).",
+     "source": "https://faq.wemastertrade.com/what-is-the-profit-consistency-rule/",
+     "locator": "",
+     "checkedOn": "2026-11-25",
+     "verification": "claude-excerpt-read"
     }
    ],
    "payoutEvidence": [],
@@ -10434,10 +11156,11 @@
     "Find the current signed terms and the distinction between WeMasterTrade and WeCopyTrade products, appeal procedure, refusal of acquired rewards and actual head office."
    ],
    "sourceFiles": [
-    "contract-clauses-active-risk-firms-batch3b-2026-11-24.json"
+    "contract-clauses-active-risk-firms-batch3b-2026-11-24.json",
+    "audits/clause-review-2026-11-25/wemastertrade.json"
    ],
    "counts": {
-    "rule": 0,
+    "rule": 1,
     "discretion": 0,
     "contradiction": 0,
     "version": 0,

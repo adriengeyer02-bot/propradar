@@ -1,0 +1,17 @@
+{
+ "slug": "hantec-trader",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B2",
+   "text": "Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
+   "source": "https://rzrfunded.com/terms-conditions/",
+   "excerpt": "tract or payout is conditional upon ongoing compliance and is not automatic or guaranteed. If, acting reasonably and in good faith, the Company determines that trading activity: Constitutes Prohibited Trading; Involves collusion, account coordination, latency exploitation, price-feed manipulation, system abuse, or circumvention of risk controls; or Is otherwise inconsistent with the intended commercial purpose of the Programme, the Customer may be disqualified from progression and shall not be entitled to payment of simulated profits derived from such activity. This clause 7 shall continue to",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {},
+ "toVerify": {},
+ "safeguards": []
+}

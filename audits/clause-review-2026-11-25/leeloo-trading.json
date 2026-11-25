@@ -1,0 +1,11 @@
+{
+ "slug": "leeloo-trading",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [],
+ "rejected": {
+  "B3": "Account sign-up clause, no rule change."
+ },
+ "toVerify": {},
+ "safeguards": []
+}

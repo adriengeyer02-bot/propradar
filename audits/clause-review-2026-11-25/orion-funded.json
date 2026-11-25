@@ -1,0 +1,19 @@
+{
+ "slug": "orion-funded",
+ "method": "Automatic extraction re-read by hand, clause by clause (excerpts). Full contract not read end to end.",
+ "reviewedOn": "2026-11-25",
+ "facts": [
+  {
+   "code": "B6",
+   "text": "14.1: acting in a manner that may damage the firm's reputation, including after termination, leads to termination of the agreements.",
+   "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+   "excerpt": "g Platform, without any prior notice, if you breach any provision of these Terms. If you breach Clause 1 (Eligible Customers), 3.4, 9 (Rules of Simulated Trading), 10 (Prohibited Trading Practices) or Clause 12 (Use of the Website) or act in a manner that may damage our reputation, including after termination of the Agreement, we will terminate one or more Agreements and you will lose access to the Services. In addition, we may adopt measures to prevent you from using our services in the future. 14.2 We are not obliged to provide you with any compensation in the cases set out in Clause 14.1.",
+   "checkedOn": "2026-11-25"
+  }
+ ],
+ "rejected": {
+  "B7": "Order/agreement definition."
+ },
+ "toVerify": {},
+ "safeguards": []
+}
