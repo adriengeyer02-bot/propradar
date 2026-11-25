@@ -62,7 +62,6 @@ export type GuideArticle = {
 export const guideArticles: Record<string, GuideArticle> = {
   'hyrotrader-vs-tradeify': hyroTradeifyArticle,
   'prop-firm-payout-rapide': {
-  "published": "2026-11-25",
   "updated": "2026-11-25",
   "intro": "Fast payout processing is not the same as fast access to profits. This guide separates eligibility, review and settlement using official policies checked on 25 November 2026, not independently measured payment times.",
   "keyPoints": [
