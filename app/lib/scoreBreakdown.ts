@@ -3,6 +3,7 @@ import { getFirmUpdate, type RestrictiveRule } from './firmUpdates';
 import { computeRulesPenalty, isScoredRule, ruleKind, rulePoints, RULES_PENALTY_ENABLED, RULES_PENALTY_MAX } from './restrictiveRules';
 import { getPublishedV4Score, isPublishedV4, type PublishedV4Score } from './scoringV4Published';
 import { getPublishedV5Score, isPublishedV5 } from './scoringV5Published';
+import { getScaleC, type ScaleCEntry } from './scaleC';
 
 /**
  * Step-by-step explanation of a firm's displayed score (SCORING.md): the
@@ -35,10 +36,16 @@ export type ScoreBreakdown = {
   safetyCap?: { cap: number; before: number };
   final: number;
   maxPenalty: number;
+  /** Scale C: the score is the ceiling minus the listed penalties (see scaleC.ts). */
+  scaleC?: ScaleCEntry;
 };
 
 export function getScoreBreakdown(firm: PropFirm): ScoreBreakdown {
   const update = getFirmUpdate(firm.slug);
+  const scaleC = firm.scaleC ? getScaleC(firm.slug) : undefined;
+  if (scaleC) {
+    return { editorial: scaleC.ceiling, unclassifiedOnly: 0, final: firm.score, maxPenalty: 0, scaleC };
+  }
   const v5 = (update?.scoringVersion === 5 || (!update && isPublishedV5(firm.slug)))
     ? getPublishedV5Score(firm) : undefined;
   if (v5) {

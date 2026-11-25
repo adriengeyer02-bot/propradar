@@ -1,3 +1,4 @@
+import { scaleCChangelog } from './scaleC';
 import type { Product, PropFirm, RegulatoryAudit, RegulatoryEntity, SourceLink, PayoutProof } from './propFirms';
 import { firmLogoFor } from './firmLogos';
 import updatesFile from '../data/firm-updates.json';
@@ -159,7 +160,7 @@ function applyPublishedV5Evidence(firm: PropFirm, audit: NonNullable<ReturnType<
 }
 
 export function getFirmChangelog(slug: string): FirmChangelogEntry[] {
-  return [...(updates[slug]?.changelog ?? [])].sort((a, b) => b.date.localeCompare(a.date));
+  return [...(updates[slug]?.changelog ?? []), ...scaleCChangelog(slug)].sort((a, b) => b.date.localeCompare(a.date));
 }
 
 /**

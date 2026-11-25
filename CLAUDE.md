@@ -11,6 +11,9 @@ load through `app/site.css`, in cascade order (globals, design-system,
 design-refresh, design-epure); add a sheet there, never as a separate import.
 Site language: English. Owner: Geyer (writes in French, answer him in French).
 
+Scale C (approved 2026-11-25) scores the firms listed in `app/data/scale-c.json`;
+regenerate it with `scripts/build-scale-c.py`, never by hand (SCORING.md "Scale C").
+
 Read also `SCORING.md` (how scores move, restrictive-rules penalty) and
 `AGENTS.md` (who does what between Claude and ChatGPT/Codex, and how to avoid
 editing the same files). Restrictive rules need `category`, `severity`,

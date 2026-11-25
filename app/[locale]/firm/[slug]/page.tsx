@@ -21,6 +21,8 @@ import { scoreV4Copy } from '../../../lib/scoreV4I18n';
 import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
+import { scaleCCopy } from '../../../lib/scaleCI18n';
+import { SCALE_C_CONTRACT_CODES } from '../../../lib/scaleC';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
 import RevealOnView from '../../../components/ui/RevealOnView';
 import { legalTone, payoutTone, reviewTone, scoreTone, statusTone, trustpilotPip, type Tone } from '../../../lib/riskTone';
@@ -71,7 +73,7 @@ import { getClosureRecord } from '../../../lib/closures';
 import { isFirmIndexable } from '../../../lib/firmIndexing';
 import { feeStats } from '../../../lib/industryStats';
 import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../../lib/locales';
-import { fmt, formatDateLong, getMessages, tv, type Messages } from '../../../lib/messages';
+import { fmt, formatDateLong, getMessages, numberLocale, tv, type Messages } from '../../../lib/messages';
 import IntentLink from '../../../components/IntentLink';
 import ContractAuditSection from '../../../components/ContractAuditSection';
 import { getContractAudit } from '../../../lib/contractAudits';
@@ -704,6 +706,37 @@ export default async function FirmPage({ params }: Props) {
       limitedPayoutProof: breakdown.v5.independentPayoutProofLimited,
       copy: scoreV5EvidenceCopy(locale),
     } : undefined,
+    scaleC: breakdown.scaleC ? (() => {
+      const c = breakdown.scaleC!;
+      const cc = scaleCCopy(locale);
+      const nf = (n: number) => new Intl.NumberFormat(numberLocale(locale)).format(n);
+      const age = c.founded ? Number(c.checkedOn.slice(0, 4)) - c.founded : 0;
+      const contractTotal = c.penalties.filter((p) => SCALE_C_CONTRACT_CODES.includes(p.code)).reduce((sum, p) => sum + p.points, 0);
+      const lostTotal = Math.max(0, c.ceiling - firm.score);
+      const notes = [
+        c.contractCap && contractTotal > c.contractCap ? fmt(cc.contractCap, { cap: c.contractCap }) : '',
+        c.score !== c.raw && c.score > c.raw ? cc.fallCap : '',
+        fmt(c.reading === 'full' ? cc.readingFull : cc.readingExcerpts, { date: formatDateLong(locale, c.checkedOn) }),
+        c.previous !== c.score ? fmt(cc.previous, { n: c.previous }) : '',
+      ].filter(Boolean);
+      return {
+        ceiling: c.ceiling,
+        ceilingLabel: fmt(cc.tiers[c.tier], { age }),
+        evidence: c.ceilingEvidence.map((e) => e.kind === 'tracker'
+          ? fmt(cc.tracker, { amount: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 0 }).format(e.amountUSD) })
+          : e.kind === 'trustpilot' ? fmt(cc.trustpilot, { rating: e.rating, count: nf(e.count) }) : cc.stats),
+        items: c.penalties.map((p) => ({
+          label: cc.codes[p.code] ?? p.code,
+          points: p.points,
+          text: p.code === 'TPW' ? cc.tpwText : p.code === 'TPMID' ? fmt(cc.tpmidText, { detail: p.locator }) : p.text,
+          source: p.source || ((p.code === 'TPW' || p.code === 'TPMID') ? firm.reviewSignals.trustpilotSourceUrl : undefined),
+          locator: p.code === 'TPMID' ? undefined : p.locator,
+        })),
+        lostTotal,
+        notes,
+        copy: { ceiling: cc.ceiling, lost: cc.lost, none: cc.none, source: cc.source, method: cc.method },
+      };
+    })() : undefined,
     methodHref: L('/audit'),
     rulesHref: '#rules',
   };

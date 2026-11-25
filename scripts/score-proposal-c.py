@@ -197,13 +197,25 @@ for f in BASE:
         # unquantified conduct): one penalty for the family, as for automatic codes.
         codes = {k: v for k, v in codes.items() if k != 'B2'}
     c, why, evid = ceiling(f, f['withheld'])
+    age = YEAR - f['founded'] if f['founded'] else None
+    ceil_evidence = []
+    if f['tracker'] >= 10e6: ceil_evidence.append({'kind': 'tracker', 'amountUSD': f['tracker']})
+    if not f['withheld'] and (f['tp'] or 0) >= 4.0 and (f['tpCount'] or 0) >= 5000:
+        ceil_evidence.append({'kind': 'trustpilot', 'rating': f['tp'], 'count': f['tpCount']})
+    if slug == 'topstep': ceil_evidence.append({'kind': 'stats'})
+    items = []
+
+    def item(code, points, ev=None):
+        ev = ev or {}
+        items.append({'code': code, 'points': points, 'text': ' '.join(str(ev.get('text', '')).split()),
+                      'source': ev.get('url') or ev.get('source') or '', 'locator': ev.get('heading') or ev.get('locator') or ''})
     lines = []
     b = 0
     for k in ('B1', 'B2', 'B2A', 'B3', 'B5', 'B6', 'B7'):
         if k in codes:
-            lines.append((k, W[k])); b += W[k]
+            lines.append((k, W[k])); b += W[k]; item(k, W[k], codes[k])
     if 'B4' in codes:
-        lines.append(('B4', W['B4'])); b += W['B4']
+        lines.append(('B4', W['B4'])); b += W['B4']; item('B4', W['B4'], codes['B4'])
     b = min(b, W['Bcap'])
     other = 0
     if 'CONS' in codes:
@@ -213,14 +225,19 @@ for f in BASE:
             pen = pen // 2
         if pen:
             lines.append((f"consistency {pct:g}%", pen)); other += pen
+            item('CONS', pen, {**codes['CONS'], 'locator': f"{pct:g}%"})
     if f['withheld']:
-        lines.append(('Trustpilot retiré', W['TPW'])); other += W['TPW']
+        lines.append(('Trustpilot retiré', W['TPW'])); other += W['TPW']; item('TPW', W['TPW'])
     elif (f['tp'] or 5) < 4.0 and (f['tpCount'] or 0) >= 1000:
         lines.append(('Trustpilot < 4,0', W['TPMID'])); other += W['TPMID']
+        item('TPMID', W['TPMID'], {'locator': f"{f['tp']} / {f['tpCount']}"})
     for k in INCIDENTS.get(slug, []):
         lines.append((k, W[k])); other += W[k]
+        inc = next((i for i in f['incidents'] if re.search(r'Alert List|warning|unauthori|regulator|payout', i, re.I)), '')
+        url = re.search(r'https://[^\s),]+', inc)
+        item(k, W[k], {'text': inc, 'url': url.group(0) if url else ''})
     if 'E_HARSH' in codes:
-        lines.append(('E_HARSH', W['E_HARSH'])); other += W['E_HARSH']
+        lines.append(('E_HARSH', W['E_HARSH'])); other += W['E_HARSH']; item('E_HARSH', W['E_HARSH'], codes['E_HARSH'])
     raw = max(5, c - b - other)
     proposed = raw
     flag = ''
@@ -239,7 +256,8 @@ for f in BASE:
     rows.append({'slug': slug, 'name': f['name'], 'current': f['score'], 'proposed': proposed if publish else f['score'],
                  'raw': raw, 'flag': flag, 'delta': (proposed - f['score']) if publish else 0, 'ceiling': c, 'ceilingWhy': why,
                  'penalties': ' · '.join(f"{k} −{p}" for k, p in lines) or 'aucune', 'confidence': source if publish else (source if source != 'non lu' else 'audit en cours (CGU non lues)'),
-                 'evidence': {k: v for k, v in codes.items()}})
+                 'evidence': {k: v for k, v in codes.items()}, 'items': items, 'age': age, 'ceilingEvidence': ceil_evidence,
+                 'founded': f['founded']})
 
 rows.sort(key=lambda r: -r['proposed'])
 json.dump({'weights': W, 'consistency': CONS, 'rows': rows}, open(OUT + '.json', 'w'), ensure_ascii=False, indent=1)
