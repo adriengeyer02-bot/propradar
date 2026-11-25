@@ -1,0 +1,39 @@
+{
+  "slug": "funding-your-trades",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted terms 3976ecdbdfe5.txt (17,546 chars), full §10.3 and adjacent §§11–13; uploaded PDF and incorporated help pages unread.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§10.3 any trading deemed unethical, exploitative or non-replicable; strategy switching after assessment at discretion and “disproportionate risk” on one position; expressly permits “forfeiture of profits” and immediate termination.",
+      "source": "https://fundingyourtrades.com/terms-of-services/#",
+      "locator": "§10.3 Trading Rules",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§10.3 IP usage must match KYC country/location; mismatches may suspend/terminate. No express accrued profit forfeiture for this procedural condition in its specific sentence.",
+      "source": "https://fundingyourtrades.com/terms-of-services/#",
+      "locator": "§10.3 final paragraph",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§11.3 names PrimeWorks International FZ LLC; §11.4 says not a broker and no live trading accounts.",
+      "source": "https://fundingyourtrades.com/terms-of-services/#",
+      "locator": "§11.3–11.4",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§10.3 forfeiture linked to prohibited trading; B2 not unconditional.",
+    "E_HARSH": "IP mismatch termination alone; verify explicit payout consequence and legitimate exceptions.",
+    "B3": "§11.2 generic service change, no already purchased account language."
+  },
+  "toVerify": {
+    "coverage": "Full web terms, uploaded OCR upload-712fe3a66d.txt, all Prime/Classic/Instant rules, payout qualification, prohibited usage and consistency FAQ; separate funded terms.",
+    "B2A": "Check appeal/reason route.",
+    "CONS": "Most lenient main programme."
+  }
+}

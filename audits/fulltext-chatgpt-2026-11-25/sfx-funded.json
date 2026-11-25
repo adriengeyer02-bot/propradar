@@ -1,0 +1,47 @@
+{
+  "slug": "sfx-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted 83,456-char terms bb19e0c93f49.txt, full §§3.11–3.12, §7.6, selected §§6.7–6.8,9.2–9.8,13.11–13.12. Other programme/payout rules unread.",
+  "facts": [
+    {
+      "code": "B1",
+      "text": "§3.11: “No Client has a right or entitlement to a payout” from funded-stage simulated profits; “any and all payouts are at the full discretion of the Company.”",
+      "source": "https://sfxfunded.com/docs/terms-of-service",
+      "locator": "§3.11 Payout Requests",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§7.6 changes to service fees/parameters “will not apply to Services that have already been purchased before the notification of the changes.”",
+      "source": "https://sfxfunded.com/docs/terms-of-service",
+      "locator": "§7.6",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§3.12 unsatisfactory explanation of strategy or insufficient detail can immediately terminate services; §6.7 violation forfeits profit sharing. Verify exact treatment of accrued payout for interview failure as distinct procedural sanction.",
+      "source": "https://sfxfunded.com/docs/terms-of-service",
+      "locator": "§3.12; §6.7–6.8",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§9.2 inconsistent strategy/times/instruments can lead to funded revocation and denial of payouts. B1 absorbs conduct-linked B2.",
+      "source": "https://sfxfunded.com/docs/terms-of-service",
+      "locator": "§9.2 Behavioural & Inconsistent Trading Patterns",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B2": "Absorbed by B1.",
+    "B3": "§7.6 explicit nonretroactivity for purchased services; check other clause conflict.",
+    "B5": "§9.6 removes profits and/or losses, no explicit loss retention.",
+    "E_HARSH": "Interview failure termination stated; exact separate accrued payout forfeiture must be confirmed."
+  },
+  "toVerify": {
+    "coverage": "Read entire main terms, prohibited strategies, withdrawal processing, breach, refund and add-on pages; current funded agreement and consistency across main plans.",
+    "E_HARSH": "Read full interview and sanction cross-references.",
+    "CONS": "Most lenient main plan."
+  }
+}

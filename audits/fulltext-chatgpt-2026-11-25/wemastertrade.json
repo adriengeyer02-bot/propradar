@@ -1,0 +1,39 @@
+{
+  "slug": "wemastertrade",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted terms 5a5d6e76fda4.txt (45,186 chars), §§4,6,12, termination and guidelines excerpts; full §12 profit-sharing passage read; related help/risk pages not fully read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§12 Risk Team can add requirements for “trading irregularities” or signs of inconsistency/gambling before approving payout; violations of risk parameters and undefined toxic activity “may result in forfeiture of profits and termination”.",
+      "source": "https://faq.wemastertrade.com/terms-and-conditions/",
+      "locator": "§12 Profit Sharing",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§12 Customization requires trading until best-day ratio below target; 510Zero reward reduced to 10% if performance below 6%, or 8% for clients from Vietnam/Indonesia/Thailand. Reactivate Profit Sharing reduces next split to 20%, then gradually restores 50–90%.",
+      "source": "https://faq.wemastertrade.com/terms-and-conditions/",
+      "locator": "§12 Profit Sharing / Reactivate Profit Sharing",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§4 replication discretionary; rewards subject to internal policies and not guaranteed; distinguish admission/replication from earned entitlement.",
+      "source": "https://faq.wemastertrade.com/terms-and-conditions/",
+      "locator": "§4 Education",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§12 forfeiture linked to rule noncompliance; §4 discretionary replication does not itself prove unconditional revocation of earned rewards.",
+    "B3": "Generic continued-use amendment and guidelines change, no explicit already-running scope.",
+    "B7": "Guidelines on website and via email upon becoming Trader; withholding before purchase not established."
+  },
+  "toVerify": {
+    "coverage": "Whole terms including clauses 15–24 and actual signed agreement, profit/risk consistency, prohibited conduct, refund and payout FAQs.",
+    "B2A": "Written appeal/reasons route.",
+    "CONS": "Actual ratio and most lenient main programme, distinguish reduction versus delay."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "funded-trader-markets",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted archived terms 1164068875ea.txt §§1.C,4.H–I,5.C–G,11.B; full sanction and onboarding excerpt §§5.D–G reviewed. Remaining main terms and programme FAQ bodies not read.",
+  "facts": [
+    {
+      "code": "B7",
+      "text": "§5.G: “Upon receiving access to a simulated funded account, a Trader Agreement will be provided within the trader dashboard” and account remains read-only until KYC and signing.",
+      "source": "https://fundedtradermarkets.com/terms-conditions",
+      "locator": "§5.G",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "§4.H verification call before/upon reward or funded issuance; “Failure to attend the verification call within the requested time period may result in the forfeiture of the performance reward.”",
+      "source": "https://fundedtradermarkets.com/terms-conditions",
+      "locator": "§4.H",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§5.C–D strategy changes between evaluation and funded subject to discretion; sanctions specify termination, forfeiture of fees and refusal of funded account. §5.E incorporates FAQ rules. §4.I maximum allocation breach may void rewards; amount and scope plan-specific.",
+      "source": "https://fundedtradermarkets.com/terms-conditions",
+      "locator": "§4.I; §5.C–E",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§5.F any-reason exclusion and §11.B termination do not expressly cancel earned rewards.",
+    "B2": "§5.D explicitly mentions fees and admission, not earned funded payouts; investigate FAQ and actual Trader Agreement before coding.",
+    "B3": "§1.C generic continued-use amendment."
+  },
+  "toVerify": {
+    "coverage": "Complete terms, 32k FAQ, Nitro FAQ, refund and actual funded Trader Agreement; terms-of-service alternate returns not found. Promotional terms excluded.",
+    "B2": "Find express earned payout sanction and any explanation/review procedure.",
+    "CONS": "Most lenient main model."
+  }
+}

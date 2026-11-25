@@ -1,0 +1,33 @@
+{
+  "slug": "superfunded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted January Eightcap Challenges PDF 58915d271e1c.txt §§13.3–13.8 and termination excerpts; selected October Rules PDF 51fd7bdf8fad.txt approval/payout cap passages. Archived SuperFunded URLs redirect to Eightcap Challenges Japanese home; applicability to historic SuperFunded not established.",
+  "facts": [
+    {
+      "code": "B1",
+      "text": "October Rules: risk team has “sole and absolute discretion in determining whether Payouts are approved.” January §13.4 also provides payout forfeiture for noncompliance. Candidate B1 for current Eightcap Challenges, contingent on confirmed SuperFunded successor applicability.",
+      "source": "https://challenges.eightcap.com/wp-content/uploads/2026/10/Eightcap-Challenges-Rules-and-Conditions-V2.3-22.10.26.pdf",
+      "locator": "Approval processes; January GTC §13.3–13.8",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "January §13.4 payout can be withheld or declined if company not satisfied of compliance; §13.8 KYC-related denial. October rules note some payout cap excess forfeited on reset; exact scope requires full table.",
+      "source": "https://challenges.eightcap.com/wp-content/uploads/2026/01/Eightcap-Challenges-General-Terms-and-Conditions.pdf",
+      "locator": "§13.4, §13.8; October Rules Profit Cap",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B2": "Absorbed by candidate B1 if approved; §13.4 alone linked to compliance.",
+    "E_HARSH": "October rules mention phone/video call and failure consequence, but sentence not fully reviewed; no code.",
+    "B3": "Explicit existing-account change not established."
+  },
+  "toVerify": {
+    "coverage": "Read both complete PDFs, complaint management and participant verification policies, website terms and current product rules; verify brand/entity/contract continuity from SuperFunded to Eightcap.",
+    "B1": "Confirm if absolute discretion limited by binding approval criteria or protection of earned/approved rewards.",
+    "B2A": "Complaint policy and appeal route; if B1 rejected reassess.",
+    "CONS": "Most lenient current main programme."
+  }
+}
