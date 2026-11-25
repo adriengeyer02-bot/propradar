@@ -2,7 +2,7 @@
   "slug": "wemastertrade",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted terms 5a5d6e76fda4.txt (45,186 chars), §§4,6,12, termination and guidelines excerpts; full §12 profit-sharing passage read; related help/risk pages not fully read.",
+  "method": "Full read main terms 5a5d6e76fda4.txt (45,186 chars, §§1–30, contiguous slices 0–16k,16k–31k,31k–end) and all nine successful captured pages 221a18e7021a,03d7fc0d5489,c5660de48407,4336714eafa4,5b22eb096240,15ae25bf944f,fce21e891012,a3e675cf909b,83776f77325f (.txt). Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Separate Prop Account Trader Agreement and linked individual product rule bodies absent.",
   "facts": [
     {
       "code": "B2",
@@ -24,16 +24,68 @@
       "source": "https://faq.wemastertrade.com/terms-and-conditions/",
       "locator": "§4 Education",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B6",
+      "text": "Incorporated Prohibited Conduct §3.1 prohibits 'reputationally damaging language ... internally or externally, without a valid basis'; sanctions expressly include withdrawal denial and programme termination. Candidate B6 because firm assesses validity, not generic defamation boilerplate; Claude verify whether qualification narrows to objectively false statements.",
+      "source": "https://faq.wemastertrade.com/prohibited-conduct-at-wemastertrade/",
+      "locator": "§3.1; Consequences of Violating Rules; main terms §10 incorporation",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "FAQ explicitly says 'Profit consistency does not apply to ... Challenge Phase 1 ... Challenge Funded Account'. Instant 20% best-day ratio; most lenient main challenge funded has no consistency, no firm-level penalty. Risk consistency is separate 1% trade-idea limit on Challenge/1 Phase, 2% Instant.",
+      "source": "https://faq.wemastertrade.com/what-is-the-profit-consistency-rule/",
+      "locator": "Note; https://faq.wemastertrade.com/what-is-the-risk-consistency-rule/ Key Guidelines",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§29 absolute right to withdraw any trader at any time without explanation; no fee refund, no express cancellation of otherwise earned rewards. §10 recorded interview for lifetime reward above $1,000 at discretion, company holds exclusive publishing rights; no specific failure/payout sanction stated. §11.2 leverage can change; §11.3 daily/overall loss limits vary with market, experience, risk; §12 additional payout requirements may be imposed during account activity. Verify whether these change already-purchased contractual rules before B3.",
+      "source": "https://faq.wemastertrade.com/terms-and-conditions/",
+      "locator": "§10; §11.2–11.3; §12; §29",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§15 requires physical presence for AAA arbitration in Florida with Florida law; §28 exclusive Canadian courts and Canadian law. Contradictory internal dispute provisions, not FAQ/contract B4. §6.2 no monthly fee while §6.4 says billed every 30 days, another internal inconsistency.",
+      "source": "https://faq.wemastertrade.com/terms-and-conditions/",
+      "locator": "§6.2,6.4; §15; §28",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Refund policy promises written acknowledgment/resolution of defective performance complaints generally within 30 days, termination if unresolved. Payout page has separate technical error claims within 7 days, response within 5 business days, compensation capped at fee. Not specific payout risk review/appeal.",
+      "source": "https://faq.wemastertrade.com/refund-and-cancellation/",
+      "locator": "Defective Performances; https://wemastertrade.com/payout/ Complaint Resolution Process",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout page reports $72,594,921.36 total, region breakdown and counts, transaction hash column and verification guide; individual hash rows absent in captured text. Claude must verify actual evidence before ceiling award; figures are operator claims.",
+      "source": "https://wemastertrade.com/payout/",
+      "locator": "Total Payouts; Top Daily Payout; Step-by-Step Guide",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Prohibited Conduct §3.3 prevents new same-symbol trade in any other account while losing position open; after closing loss wait one hour. §3.5 single-share CFD earnings hard breach. Final daily loss paragraph calls it soft breach for session but blocks new trades 'until your buy a new package'; main §11.3 describes closure. Ambiguous wording, not definitive B4 without clarification.",
+      "source": "https://faq.wemastertrade.com/prohibited-conduct-at-wemastertrade/",
+      "locator": "§3.3,3.5; final Daily Loss Limit paragraph",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
-    "B1": "§12 forfeiture linked to rule noncompliance; §4 discretionary replication does not itself prove unconditional revocation of earned rewards.",
+    "B1": "§29 no-cause withdrawal explicitly loses fee, but no explicit earned reward revocation. §12 and §10 denial/forfeiture linked to prohibited conduct.",
     "B3": "Generic continued-use amendment and guidelines change, no explicit already-running scope.",
     "B7": "Guidelines on website and via email upon becoming Trader; withholding before purchase not established."
   },
   "toVerify": {
-    "coverage": "Whole terms including clauses 15–24 and actual signed agreement, profit/risk consistency, prohibited conduct, refund and payout FAQs.",
-    "B2A": "Written appeal/reasons route.",
-    "CONS": "Actual ratio and most lenient main programme, distinguish reduction versus delay."
+    "coverage": "All ten successful archived substantive bodies read. Prop Account Trader Agreement named in §10, current product parameter schedules, dedicated termination, payout and challenge contract-signing articles not captured; PARTIAL for missing actual contract/rules.",
+    "B2A": "General written defective-performance procedure not specific risk payout appeal; §29 no explanation. Verify actual funded review route.",
+    "B3": "§11.2–11.3 individual variable parameters and §12 added payout requirements; need explicit application of amended contractual requirements to already purchased/running account.",
+    "B4": "Clarify soft daily loss breach vs main contract closure, and internal Florida vs Canada conflict.",
+    "B6": "Validate scope of 'without a valid basis' and actual sanction for public criticism.",
+    "CONS": "Challenge Funded no consistency in FAQ; confirm current main programme and no contrary individual agreement."
   }
 }
