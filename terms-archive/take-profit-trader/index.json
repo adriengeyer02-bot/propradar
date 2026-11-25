@@ -120,5 +120,16 @@
   "sha256": "19f221014a6003000f88a36b848e4633202afbf95ad67ef7a32a17b875c01864",
   "file": "c8a4eb0e21aa.txt",
   "fetchedAt": "2026-11-25T11:48:11.413Z"
+ },
+ {
+  "url": "upload:7d8f1387-take_profit.pdf",
+  "finalUrl": "upload:7d8f1387-take_profit.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 20814,
+  "sha256": "dbbd82bbdca783a5e01986e7e55cd6bd2278a4316fd283b7ec07450960932d98",
+  "file": "upload-ca3b096b18.txt",
+  "fetchedAt": "2026-11-25T15:24:53.832967+00:00"
  }
 ]

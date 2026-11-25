@@ -2,7 +2,7 @@
  {
   "url": "https://x-funded.com/",
   "finalUrl": "https://x-funded.com/x-funded-zero/",
-  "title": "X-Funded Zero – XFunded",
+  "title": "X-Funded Zero \u2013 XFunded",
   "status": 200,
   "kind": "html",
   "chars": 15185,
@@ -14,7 +14,7 @@
  {
   "url": "https://x-funded.com/terms-and-conditions/",
   "finalUrl": "https://x-funded.com/x-funded-zero/",
-  "title": "X-Funded Zero – XFunded",
+  "title": "X-Funded Zero \u2013 XFunded",
   "status": 200,
   "kind": "html",
   "chars": 15185,
@@ -25,7 +25,7 @@
  {
   "url": "https://help.x-funded.com/payout-policy-dashboard/payout-split-policy/",
   "finalUrl": "https://help.x-funded.com/payout-policy-dashboard/payout-split-policy/",
-  "title": "Payout Split Policy — Affiliate-Referred Accounts - XFunded Help Center",
+  "title": "Payout Split Policy \u2014 Affiliate-Referred Accounts - XFunded Help Center",
   "status": 200,
   "kind": "html",
   "chars": 2147,
@@ -98,5 +98,16 @@
   "sha256": "d0942526de4eca00c98b25af397233a78ccec1b720f1ad792625464ff21cbe10",
   "file": "cd14a345c3d9.txt",
   "fetchedAt": "2026-11-25T11:48:32.691Z"
+ },
+ {
+  "url": "upload:9db75df1-xfunded.pdf",
+  "finalUrl": "upload:9db75df1-xfunded.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 30516,
+  "sha256": "a6ae2b9aaeb2c628f2b8c8f4706445fd6eb65af906c78d30a589ea338aab3e0b",
+  "file": "upload-a00b89d6e7.txt",
+  "fetchedAt": "2026-11-25T15:24:53.832967+00:00"
  }
 ]

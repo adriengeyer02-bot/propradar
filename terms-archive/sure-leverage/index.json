@@ -25,7 +25,7 @@
  {
   "url": "https://help.sureleveragefunding.com/en/articles/12141500-2-step-challenge-faq-rules",
   "finalUrl": "https://help.sureleveragefunding.com/en/articles/12141500-2-step-challenge-faq-rules",
-  "title": "📘 2 Step Challenge – FAQ & Rules | Sure Leverage Funding Help Center",
+  "title": "\ud83d\udcd8 2 Step Challenge \u2013 FAQ & Rules | Sure Leverage Funding Help Center",
   "status": 200,
   "kind": "html",
   "chars": 4448,
@@ -36,7 +36,7 @@
  {
   "url": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules-sure-leverage-funding",
   "finalUrl": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
-  "title": "📘 General Rules | Sure Leverage Funding Help Center",
+  "title": "\ud83d\udcd8 General Rules | Sure Leverage Funding Help Center",
   "status": 200,
   "kind": "html",
   "chars": 3663,
@@ -47,7 +47,7 @@
  {
   "url": "https://help.sureleveragefunding.com/en/articles/12141596-instant-funding-static-faq-rules",
   "finalUrl": "https://help.sureleveragefunding.com/en/articles/12141596-instant-funding-static-faq-rules",
-  "title": "📘 Instant Funding Static – FAQ & Rules | Sure Leverage Funding Help Center",
+  "title": "\ud83d\udcd8 Instant Funding Static \u2013 FAQ & Rules | Sure Leverage Funding Help Center",
   "status": 200,
   "kind": "html",
   "chars": 4782,
@@ -58,7 +58,7 @@
  {
   "url": "https://help.sureleveragefunding.com/en/articles/12141620-instant-funding-trailing-faq-rules",
   "finalUrl": "https://help.sureleveragefunding.com/en/articles/12141620-instant-funding-trailing-faq-rules",
-  "title": "📘 Instant Funding Trailing – FAQ & Rules | Sure Leverage Funding Help Center",
+  "title": "\ud83d\udcd8 Instant Funding Trailing \u2013 FAQ & Rules | Sure Leverage Funding Help Center",
   "status": 200,
   "kind": "html",
   "chars": 6189,
@@ -69,7 +69,7 @@
  {
   "url": "https://help.sureleveragefunding.com/en/articles/16100455-one-step-pro-futures-style",
   "finalUrl": "https://help.sureleveragefunding.com/en/articles/16100455-one-step-pro-futures-style",
-  "title": "📘 One Step Pro (Futures Style) | Sure Leverage Funding Help Center",
+  "title": "\ud83d\udcd8 One Step Pro (Futures Style) | Sure Leverage Funding Help Center",
   "status": 200,
   "kind": "html",
   "chars": 5064,
@@ -80,7 +80,7 @@
  {
   "url": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
   "finalUrl": "https://help.sureleveragefunding.com/en/articles/12141636-general-rules",
-  "title": "📘 General Rules | Sure Leverage Funding Help Center",
+  "title": "\ud83d\udcd8 General Rules | Sure Leverage Funding Help Center",
   "status": 200,
   "kind": "html",
   "chars": 3663,
@@ -109,5 +109,16 @@
   "sha256": "b76b59bd63146fe190bf8e47a44b7c6b28551c6bec7b58d71510464551593009",
   "file": "47b442d1089a.txt",
   "fetchedAt": "2026-11-25T11:45:03.737Z"
+ },
+ {
+  "url": "upload:de83bc49-Terms-Conditions.pdf",
+  "finalUrl": "upload:de83bc49-Terms-Conditions.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-pdf",
+  "chars": 13060,
+  "sha256": "b934c9304b3d6cbf6af120bb6d69b2cd0f8be5c64a91741db50a297abe11b69a",
+  "file": "upload-52e883efed.txt",
+  "fetchedAt": "2026-11-25T15:24:53.832967+00:00"
  }
 ]

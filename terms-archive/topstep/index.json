@@ -69,7 +69,7 @@
  {
   "url": "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
   "finalUrl": "https://help.topstep.com/en/articles/8284197-trading-combine-parameters",
-  "title": "Trading Combine® Parameters | Topstep Help Center",
+  "title": "Trading Combine\u00ae Parameters | Topstep Help Center",
   "status": 200,
   "kind": "html",
   "chars": 7647,
@@ -80,7 +80,7 @@
  {
   "url": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
   "finalUrl": "https://help.topstep.com/en/articles/8284215-express-funded-account-parameters",
-  "title": "Express Funded Account™ Parameters | Topstep Help Center",
+  "title": "Express Funded Account\u2122 Parameters | Topstep Help Center",
   "status": 200,
   "kind": "html",
   "chars": 6649,
@@ -131,5 +131,16 @@
   "sha256": "b1109df0231ce95ffe7203f1d422cc33911d5064847a9641a10201c16d1de05f",
   "file": "7954dd7a04c2.txt",
   "fetchedAt": "2026-11-25T11:44:10.670Z"
+ },
+ {
+  "url": "upload:0be75719-topstep.pdf",
+  "finalUrl": "upload:0be75719-topstep.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 97167,
+  "sha256": "30726214bad0a490ec58c48743fecc2d198ea594b81a20569ee765a9f5c6df2d",
+  "file": "upload-a200123732.txt",
+  "fetchedAt": "2026-11-25T15:24:53.832967+00:00"
  }
 ]
