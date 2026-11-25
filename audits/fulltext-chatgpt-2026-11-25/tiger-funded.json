@@ -2,7 +2,7 @@
   "slug": "tiger-funded",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted 17,946-char main terms ea715dc642be.txt (Mar 11 2026), §§4,5.5,6–7,12 excerpts; full FAQ/rules/refund not read.",
+  "method": "Read full substantive text of five archived documents: terms ea715dc642be.txt §§1–16, refund b53cbd1de7a8.txt, trading rules 74513d044eb2.txt, payout d1b563f354e8.txt, FAQ 857af8ef571a.txt all 42 entries (body 0–18,000 and 18,000–32,345). Excluded unrelated Google iframe JS. Additional funded rules communicated at funding per §4.3; actual individual funded contract not captured, see toVerify. TERMS READ refers only to full current general terms and captured rule documents.",
   "facts": [
     {
       "code": "B2",
@@ -24,16 +24,73 @@
       "source": "https://tigerfunded.com/terms-of-service",
       "locator": "§5.5",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "§4.3 funded accounts are subject to additional rules, policies and payout conditions 'communicated at the time of funding'. Refund Policy also says written agreement on successful completion.",
+      "source": "https://tigerfunded.com/terms-of-service",
+      "locator": "§4.3; Refund Policy > Refunds Upon Completion",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "Refund Policy chargeback: 'we may suspend your accounts and recover any payments made to you, including legal fees' after requiring prior contact. §5.5 allows permanent suspension for dispute before contacting support. No fraud qualifier in refund remedy itself.",
+      "source": "https://tigerfunded.com/refund-policy",
+      "locator": "Chargebacks; terms §5.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B4",
+      "text": "FAQ #7 lists restricted countries as North Korea, Cuba, Syria, Yemen; terms §16 restricted jurisdictions includes Russia, North Korea, Iran, Myanmar, with possibility of additional restrictions. FAQ omits expressly restricted Russia/Iran/Myanmar. Verify current list before publication.",
+      "source": "https://tigerfunded.com/faq",
+      "locator": "#7; https://tigerfunded.com/terms-of-service §16 Restricted Jurisdictions",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ #12 says fee refundable after second payout; refund policy says 'with your first successful profit split payment' but also up to 200% on second reward. Terms §5.4 says challenge bonus starting second reward together with refundable fee. Payout page advertises first payout +200% refund. Need reconcile fee vs bonus and current terms.",
+      "source": "https://tigerfunded.com/refund-policy",
+      "locator": "Refund Fees; Refunds Upon Completion; FAQ #4,#12; terms §5.4; payout page The Split",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Rules page 1 day evaluation on 1/2 step, zero 3-step; FAQ #31 states three days per phase across all step challenges. Rules page says 'No hidden behavior scoring' and only four prohibited categories, whereas FAQ #26–39 sets funded two-minute hold, max two same-asset positions, 80% margin, trade-idea limit and Tiger Guard. Marketing/FAQ conflict, not additional B4 unless contract directly differs.",
+      "source": "https://tigerfunded.com/rules",
+      "locator": "Minimum Trading Days; What We Allow/What's Off-Limits; FAQ #26–39",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Main Elite 1/2-step funded best-day consistency none; standard 1/2/3 step 25% delayed, Instant Standard 15% delayed. Elite 30% best single trade evaluation condition (not best day), five winning trades ≥0.25%. No firm-level consistency penalty for most lenient main Elite model.",
+      "source": "https://tigerfunded.com/faq",
+      "locator": "#34–35",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Elite funded 4% buffer, 21 days wait, first payout cap 3% carried forward; Instant Elite 5% buffer no wait. Elite advertised 'static' 6/10% max loss nevertheless rises with highest daily closing balance, not fixed initial. Tiger Guard 2% floating/1% Elite auto-close, first split 40% current cycle, second hard breach; margin 80% first 40%, second closure.",
+      "source": "https://tigerfunded.com/faq",
+      "locator": "#35–39",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout page names and figures 'illustrate platform activity'; not independently verified evidence. It promises $1,000 after 48h with 'No exceptions', FAQ #42 says clock pauses weekends and remedy 95% split. Distinguish payout claim from verified policy; contract §6 sets eligibility interval, not processing guarantee.",
+      "source": "https://tigerfunded.com/payouts",
+      "locator": "The Guarantee; illustrative disclaimer; FAQ #40–42",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B1": "§12 any-reason termination without refund is not explicit earned reward removal; §6 linked to violation.",
-    "E_HARSH": "Chargeback suspension not expressly all-profit forfeiture in reviewed clause.",
     "B3": "Current-account amendments not established."
   },
   "toVerify": {
-    "coverage": "Full terms incl end of §7 sanction, 36k FAQ, rules, payout/refund and current funded agreement.",
-    "B2A": "Review explanation/appeal.",
-    "CONS": "Most lenient main programme."
+    "coverage": "All five archived general terms and rule/payout texts read. Additional funded conditions/actual written agreement expressly supplied at funding §4.3 not captured; if Claude requires that missing agreement for full status, retain PARTIAL. No unresolved unread archived body.",
+    "B2A": "No specific written appeal/reasons procedure in archived texts.",
+    "B4": "Resolve restricted country list, refund timing and marketing/FAQ differences. Same-point B4 count once.",
+    "CONS": "Elite main programmes no best-day consistency; verify availability at checkout and distinct best-trade evaluation condition.",
+    "entity": "Terms §16/footer references Cyprus seller and UAE platform provider; verify specific accepted contract."
   }
 }
