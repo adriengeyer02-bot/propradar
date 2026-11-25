@@ -1,0 +1,50 @@
+name: Archive firm terms (full text)
+
+# Downloads the full text of each open firm's terms, funded agreements, rules,
+# FAQ and payout pages, and pushes them to the `agent/terms-archive` branch with
+# date and SHA-256. Audits read these files; a re-audit is a diff. Nothing is
+# published from this workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Comma-separated slugs (empty = all open firms)'
+        required: false
+  push:
+    branches: [agent/terms-archive-run]
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: sudo apt-get update -q && sudo apt-get install -y -q poppler-utils
+      - run: npm install --no-save --no-audit --no-fund playwright@1.49.1 && npx playwright install --with-deps chromium
+      - run: node scripts/archive-terms.mjs
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+          OUT_DIR: /tmp/terms-archive
+      - name: Push archive to agent/terms-archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin agent/terms-archive >/dev/null 2>&1; then
+            git fetch -q --depth=1 origin agent/terms-archive
+            git checkout -q -B agent/terms-archive FETCH_HEAD
+          else
+            git checkout -q --orphan agent/terms-archive
+            git rm -rf --quiet . || true
+            rm -rf ./* .github
+          fi
+          mkdir -p terms-archive
+          cp -r /tmp/terms-archive/* terms-archive/
+          git add terms-archive
+          git commit -q -m "Terms archive $(date -u +%F)" || echo "no change"
+          git push -q origin agent/terms-archive
