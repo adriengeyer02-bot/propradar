@@ -42,7 +42,7 @@ async function grab(url) {
     try { await page.waitForLoadState('networkidle', { timeout: 15000 }); } catch {}
     // Open collapsed FAQ/accordion sections so their text is captured.
     await page.evaluate(() => { document.querySelectorAll('details').forEach((d) => d.setAttribute('open', '')); });
-    for (const b of await page.$$('[aria-expanded="false"]')) { try { await b.click({ timeout: 500 }); } catch {} }
+    for (const b of (await page.$$('[aria-expanded="false"]')).slice(0, 60)) { try { await b.click({ timeout: 500, noWaitAfter: true }); } catch {} }
     await page.waitForTimeout(1000);
     // innerText skips collapsed tabs/accordions; textContent keeps them. Keep the longer one.
     const text = await page.evaluate(() => {
@@ -68,7 +68,8 @@ async function archiveFirm(slug, info) {
   while (queue.length && budget-- > 0) {
     const url = queue.shift(); if (seen.has(url)) continue; seen.add(url);
     try {
-      const r = await grab(url);
+      // Hard cap per page: a hung page (endless script, click loop) must not stall the shard.
+      const r = await Promise.race([grab(url), new Promise((_, rej) => setTimeout(() => rej(new Error('page timeout 120s')), 120000))]);
       const isHome = url === info.site;
       for (const l of r.links || []) {
         try {
