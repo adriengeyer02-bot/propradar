@@ -139,3 +139,6 @@
 .pr-program-score-basis{font-size:.72rem;opacity:.8;margin:5px 0}
 .pr-snapshot-tile .pr-snapshot-markets{display:block;-webkit-line-clamp:unset;overflow:visible}
 @media(max-width:640px){.pr-program-card-heading{grid-template-columns:auto minmax(0,1fr) auto}.pr-program-score-ring{min-width:66px;max-width:96px}.pr-program-range-rings{gap:2px}}
+
+/* Programme score: requested red outline, number only, company gauges unchanged. */
+.pr-program-score-ring .pr-ring-value{stroke:#ef5555}

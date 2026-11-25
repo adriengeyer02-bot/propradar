@@ -1165,9 +1165,9 @@ export default async function FirmPage({ params }: Props) {
                   <div className="pr-program-score pr-program-score-ring" aria-label={pc.score + ': ' + displayScore + (scores.length ? '/100' : '')}>
                     <span>{pc.score}</span>
                     {minScore === undefined ? <strong>—</strong> : minScore === maxScore ? (
-                      <><ScoreRing score={minScore} size="md" label={pc.score} /><small>/100</small></>
+                      <ScoreRing score={minScore} size="md" label={pc.score} />
                     ) : (
-                      <><div className="pr-program-range-rings"><ScoreRing score={minScore} size="sm" label={pc.score} /><ScoreRing score={maxScore!} size="sm" label={pc.score} /></div><small>{displayScore}/100</small></>
+                      <div className="pr-program-range-rings"><ScoreRing score={minScore} size="sm" label={pc.score} /><ScoreRing score={maxScore!} size="sm" label={pc.score} /></div>
                     )}
                   </div>
                 </div>

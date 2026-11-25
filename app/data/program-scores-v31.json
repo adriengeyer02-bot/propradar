@@ -1000,6 +1000,44 @@
             "https://www.fintokei.com/is-fintokei-legit/"
           ]
         }
+      ],
+      "finto-pro-two": [
+        {
+          "score": 92,
+          "scope": "ProTrader — funded",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Individual risk assessment may lower leverage, reward share or profit caps; exit with pending reward or refund available for unsustainable-pattern flags, distinct from hard breaches.",
+              "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+            }
+          ],
+          "sources": [
+            "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+          ]
+        }
+      ],
+      "finto-swing-two": [
+        {
+          "score": 92,
+          "scope": "ProTrader Swing — funded",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Individual risk assessment may lower leverage, reward share or profit caps; exit with pending reward or refund available for unsustainable-pattern flags, distinct from hard breaches.",
+              "source": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+            }
+          ],
+          "sources": [
+            "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+          ]
+        }
       ]
     },
     "fxify": {
@@ -1761,6 +1799,220 @@
             "https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"
           ]
         }
+      ],
+      "pips-one-step-flex": [
+        {
+          "score": 79,
+          "scope": "1-Step Flex — Master",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Cumulative sanctions: affected gains deducted, second warning halves share, third reduces it to 20%, fourth closes account. One mechanism.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+            "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+          ]
+        },
+        {
+          "score": 76,
+          "scope": "1-Step Flex — concentration condition triggered",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Cumulative sanctions: affected gains deducted, second warning halves share, third reduces it to 20%, fourth closes account. One mechanism.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "If one evaluation trade idea exceeds 60% of target, four days at 0.5% realized profit required for each Master reward, for account lifetime.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+            "https://help.fundingpips.com/hc/en-us/articles/34501697434385-1-Step-Flex"
+          ]
+        }
+      ],
+      "pips-two-step-standard": [
+        {
+          "score": 79,
+          "scope": "2-Step Standard — 8% target cohort, Master above $25K",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Cumulative sanctions: affected gains deducted, second warning halves share, third reduces it to 20%, fourth closes account. One mechanism.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+            "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+          ]
+        },
+        {
+          "score": 90,
+          "scope": "2-Step Standard — 8% target cohort, Master at or below $25K",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+          ]
+        },
+        {
+          "score": 76,
+          "scope": "2-Step Standard — above $25K, concentration condition triggered",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "X6",
+              "points": 11,
+              "reason": "Cumulative sanctions: affected gains deducted, second warning halves share, third reduces it to 20%, fourth closes account. One mechanism.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "If one evaluation trade idea exceeds 60% of target, four days at 0.5% realized profit required for each Master reward, for account lifetime.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+            "https://help.fundingpips.com/hc/en-us/articles/34501809112081-2-Step-Standard"
+          ]
+        }
+      ],
+      "pips-two-step-pro": [
+        {
+          "score": 90,
+          "scope": "2-Step Pro — Master",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+          ]
+        },
+        {
+          "score": 87,
+          "scope": "2-Step Pro — concentration condition triggered",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "A5",
+              "points": 8,
+              "reason": "Master: full gains of affected trades around restricted high-impact news removed; five-hour entry exception; deductions can trigger loss limits.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Temporary weekend prohibition on Master accounts, with automatic position closure rather than account breach.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "If one evaluation trade idea exceeds 60% of target, four days at 0.5% realized profit required for each Master reward, for account lifetime.",
+              "source": "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model"
+            }
+          ],
+          "sources": [
+            "https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding",
+            "https://help.fundingpips.com/hc/en-us/articles/34502027344017-2-Step-Pro-Model"
+          ]
+        }
       ]
     },
     "brightfunded": {
@@ -2487,6 +2739,165 @@
             "https://help.e8markets.com/en/articles/11864596-eod-dynamic-drawdown",
             "https://help.e8markets.com/en/articles/11865587-35-best-day-rule",
             "https://help.e8markets.com/en/articles/11755943-e8-signature"
+          ]
+        }
+      ]
+    },
+    "ftuk": {
+      "ftuk-instant-funding": [
+        {
+          "score": 87,
+          "scope": "Instant Funding Forex — initial level, excludes PRO",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "G3",
+              "points": 5,
+              "reason": "Account Protector at 2% floating loss; second trigger terminates account.",
+              "source": "https://faq.ftuk.com/en/articles/12332935-what-is-the-account-protector"
+            },
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "First two levels require best-day consistency below 20%; higher levels relax threshold.",
+              "source": "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex"
+            },
+            {
+              "family": "S60",
+              "points": 2,
+              "reason": "Initial 65% profit share, increases with progression.",
+              "source": "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex"
+            },
+            {
+              "family": "K2",
+              "points": 3,
+              "reason": "Partial closures require all remaining position volume closed that trading day; repeat violation may breach account.",
+              "source": "https://faq.ftuk.com/en/articles/13770309-partial-trade-closing-policy"
+            }
+          ],
+          "sources": [
+            "https://faq.ftuk.com/en/articles/12332935-what-is-the-account-protector",
+            "https://faq.ftuk.com/en/articles/12310214-instant-funding-program-forex",
+            "https://faq.ftuk.com/en/articles/13770309-partial-trade-closing-policy"
+          ]
+        }
+      ],
+      "ftuk-instant-sim-futures": [
+        {
+          "score": 88,
+          "scope": "Instant Sim Funding Futures — $50K path",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "C20",
+              "points": 3,
+              "reason": "20% consistency required.",
+              "source": "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview"
+            },
+            {
+              "family": "EOD",
+              "points": 1,
+              "reason": "End-of-day trailing drawdown.",
+              "source": "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview"
+            },
+            {
+              "family": "M3",
+              "points": 5,
+              "reason": "6% payout target.",
+              "source": "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression"
+            },
+            {
+              "family": "T2",
+              "points": 3,
+              "reason": "Five winning days required.",
+              "source": "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview"
+            }
+          ],
+          "sources": [
+            "https://faq.ftuk.com/en/articles/12355700-instant-sim-funding-futures-account-rules-overview",
+            "https://faq.ftuk.com/en/articles/12354244-instant-sim-funding-payout-rules-caps-progression"
+          ]
+        }
+      ]
+    },
+    "funded-trading-plus": {
+      "ftp-express-current": [
+        {
+          "score": 89,
+          "scope": "1-Step Express — funded",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Holistic manual risk assessment at evaluation pass, withdrawal and scaling; numerical triggers do not automatically fail review.",
+              "source": "https://help.fundedtradingplus.com/risk-review-policy/"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "Relative drawdown trails closed balance highs rather than fixed initial capital.",
+              "source": "https://help.fundedtradingplus.com/relative-drawdown-maximum-simulated-loss/"
+            }
+          ],
+          "sources": [
+            "https://help.fundedtradingplus.com/risk-review-policy/",
+            "https://help.fundedtradingplus.com/relative-drawdown-maximum-simulated-loss/"
+          ]
+        }
+      ],
+      "ftp-classic-current": [
+        {
+          "score": 92,
+          "scope": "2-Step Classic — funded",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Holistic manual risk assessment at evaluation pass, withdrawal and scaling; numerical triggers do not automatically fail review.",
+              "source": "https://help.fundedtradingplus.com/risk-review-policy/"
+            }
+          ],
+          "sources": [
+            "https://help.fundedtradingplus.com/risk-review-policy/"
+          ]
+        }
+      ],
+      "ftp-instant-current": [
+        {
+          "score": 87,
+          "scope": "Instant — funded",
+          "checkedOn": "2026-11-25",
+          "method": "reviewed-simulation",
+          "deductions": [
+            {
+              "family": "D6",
+              "points": 8,
+              "reason": "Holistic manual risk assessment at evaluation pass, withdrawal and scaling; numerical triggers do not automatically fail review.",
+              "source": "https://help.fundedtradingplus.com/risk-review-policy/"
+            },
+            {
+              "family": "Z2",
+              "points": 3,
+              "reason": "Relative trailing drawdown measured from closed balance highs.",
+              "source": "https://help.fundedtradingplus.com/relative-drawdown-maximum-simulated-loss/"
+            },
+            {
+              "family": "W1",
+              "points": 2,
+              "reason": "Positions must be closed before weekend.",
+              "source": "https://help.fundedtradingplus.com/instant-program-information/"
+            }
+          ],
+          "sources": [
+            "https://help.fundedtradingplus.com/risk-review-policy/",
+            "https://help.fundedtradingplus.com/relative-drawdown-maximum-simulated-loss/",
+            "https://help.fundedtradingplus.com/instant-program-information/"
           ]
         }
       ]
