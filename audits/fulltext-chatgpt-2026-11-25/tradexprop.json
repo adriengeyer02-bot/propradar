@@ -2,7 +2,7 @@
   "slug": "tradexprop",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read full visible provider OCR ANALYTIX upload-4c36f17229.txt in two consecutive slices (0–13000 and 13000–34005), plus redirected terms capture f698ae9f59d8.txt full. Other archive URLs also redirect to crypto evaluation; no branded CG accessible. Affiliate footer explicitly identifies Prop Account LLC/LC. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "method": "Re-read all 17 pages (34,005 chars including archive header) of uploaded Dashboard Analytix OCR upload-4c36f17229.txt, September 2026 terms; both unique commercial captures f698ae9f59d8.txt and 928fc649ab04.txt fully read. Four other web captures same body hash as f698ae9f59d8.txt. All terms/FAQ URLs redirect to crypto evaluation page. Actual Prop Account LC Trader Agreement not captured.",
   "facts": [
     {
       "code": "B2",
@@ -38,6 +38,27 @@
       "source": "https://tradexprop.com/crypto-evaluation/",
       "locator": "Disclaimer; X-Crypto evaluation table",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "On breached accounts where withdrawals are permitted, eligible profit balance is 'automatically ... reset to zero' and forfeited if withdrawal request not filed within 60 days from settlement. This is procedural loss of an otherwise permitted withdrawal; verify exact eligibility.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "Uploaded ANALYTIX.pdf p.9/17, Profit Withdrawals - Breached Accounts",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Electing payout as PropWallet credit irrevocably replaces cash withdrawal; unused balance expires after one year without compensation. Shared wallet screening can cause rejection, hold, alternative instructions or termination; not automatic forfeiture in read clause.",
+      "source": "https://dashboardanalytix.com/client-terms-and-policies/?v=82a9e4d26595",
+      "locator": "OCR pp.8–10/17, PropWallet Credit; No Payouts to Shared Wallet Addresses",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Crypto table advertises daily cap ±3%, 9% target one-step / 6 & 9% two-step, static maximum 6%/9%, zero minimum days, 90% share. Provider p.4 prohibits opening ±3 min around discretionary news events; no exact matching branded FAQ to test contradiction.",
+      "source": "https://tradexprop.com/crypto-evaluation/",
+      "locator": "X-Crypto Evaluation; provider OCR p.4",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -45,7 +66,7 @@
     "B5": "News position removal refers to associated P&L, not profit-only with losses retained."
   },
   "toVerify": {
-    "coverage": "Confirm September Analytix version used at branded checkout; actual Trader Agreement and branded Forex/Crypto/Instant X FAQ (redirected in archive).",
+    "coverage": "All available unique text bodies fully read; genuine branded CG/FAQ redirected, funded Trader Agreement absent. Confirm applicability of uploaded September 2026 provider terms to checkout; no further unread unique archived documents.",
     "CONS": "Exact funded consistency across main models."
   }
 }
