@@ -1,8 +1,8 @@
 {
   "slug": "miltraders",
-  "status": "PARTIAL",
+  "status": "TERMS READ",
   "checkedOn": "2026-11-25",
-  "method": "Targeted sections of bde27170fa91.txt, Terms v3.0 effective Oct 17 2026, Articles 1–2, 4.4–4.6, 8.4, 9–10, 11–12, 21–23; remaining terms and incorporated FAQ not read in full.",
+  "method": "Full read of all 10 unique archived bodies: bde27170fa91.txt v3.0 Articles 1–23; e17ad1c974a6.txt FAQ; 64559850d19b.txt Refund v1.2 Articles 1–6; six Intercom files b2dce49acf7c, c7ce369ccff9, 4d925b936599, 54cc46ab84ae, 884ba770ccd2, 8a98b056c590 (.txt), and 7b0cec69f0ea.txt support. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Status means all captured contract/rule texts, not the entire external help centre; linked uncaptured articles listed in toVerify.",
   "facts": [
     {
       "code": "B3",
@@ -52,6 +52,41 @@
       "source": "https://miltraders.com/terms/",
       "locator": "Art 12.1, 12.3",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B4",
+      "text": "Public FAQ gambling policy says company 'honors the payout currently requested'; controlling contract Art 12.5 says it 'may be approved or declined at MILTRADERS’ discretion'. Intercom Oct 2026 gambling article and Refund Art 3 repeat discretion. Concrete FAQ/contract contradiction.",
+      "source": "https://miltraders.com/faqs/",
+      "locator": "What is considered gambling behavior?; https://miltraders.com/terms/ Art 12.5; https://intercom.help/miltraders/en/articles/14664370-what-is-considered-gambling-behavior",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Zero main funded programme has 'no consistency rule' (evaluation 50% with 1% tolerance, no breach); Pro 30% delay; Instant 20% delay. Most lenient main programme Zero means no consistency penalty.",
+      "source": "https://intercom.help/miltraders/en/articles/16001317-zero-vs-pro-vs-instant-which-account-should-i-choose",
+      "locator": "Consistency (funded); public FAQ Consistency rule during evaluation / Other Key Rules",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Art 10.1 selected trader cannot decline live transition; Art 10.3 all sim accounts blocked and no other payouts due beyond eligible already requested; Art 10.9 refunds conditional on broker KYC approval; Art 10.10 excess live drawdown losses borne by trader and can offset future payouts across accounts.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 10.1–10.10",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Art 8.4 30 calendar days inactivity closes funded account and forfeits unpaid profit; prior support exception discretionary. Art 19.2 independently confirms changes apply to 'Accounts purchased before the amendment'.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 8.4; 19.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Zero fixed cap $1k/2k/2.5k/3k per 25/50/100/150k, 50% profit above locked MLL, minimum $500; subsequent request requires balance above previous request level. Pro progressive caps, buffer; Instant fresh profit goal each cycle. 90% split.",
+      "source": "https://intercom.help/miltraders/en/articles/14642755-what-are-the-progressive-payout-caps",
+      "locator": "Zero funded accounts; Pro & Instant; Instant FAQ",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -60,7 +95,8 @@
     "B7": "Art 1.3 replaces old evaluation/funded agreements; current consolidated terms cover all stages."
   },
   "toVerify": {
-    "coverage": "Read all Articles 1–23, FAQ, refund, six incorporated Intercom article bodies, especially Zero/Pro/Instant and progressive caps; verify current rules across all plans.",
-    "CONS": "Most lenient main programme; do not infer consistency from generic Art 9.1."
+    "coverage": "All captured substantive texts read. Support index lists 99 articles across eight categories, only six individual help articles captured. Obtain uncaptured 25K detailed model article, Zero/Pro all rules, minimum hold and review/loss treatment; if Claude requires entire linked rule surface rather than archive, keep PARTIAL.",
+    "B5": "No explicit losses retained for under-10s/news profits in captured documents; do not code.",
+    "B4": "Public FAQ vs Art 12.5 contradiction explicitly documented; verify current displayed version."
   }
 }
