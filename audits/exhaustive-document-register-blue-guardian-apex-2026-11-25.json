@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-25",
+  "status": "IN_PROGRESS_NOT_EXHAUSTIVE",
+  "method": "Record discovery, retrieved text coverage, actual reviewed excerpts, separate contract versions, and outstanding sources. No final score changes until coverage and scope reconciliation. Do not mark complete merely because URL opened.",
+  "firms": [
+    {
+      "slug": "blue-guardian",
+      "documents": [
+        {
+          "url": "https://blueguardian.com/terms-and-conditions",
+          "status": "partial_read",
+          "lineCount": 313,
+          "reviewed": "Selected contract paragraphs including incorporation, prohibited strategies, discretionary enforcement, arbitration, liability and consumer mandatory-law exception",
+          "findings": [
+            "FAQ and other policies incorporated; risk management review at any stage; broad withdrawal denial and final breach decisions; individual arbitration and class waiver; mandatory local consumer protections preserved."
+          ]
+        },
+        {
+          "url": "https://checkout.blueguardian.com/terms-and-conditions/",
+          "status": "partial_read",
+          "lineCount": 273,
+          "reviewed": "Selected clauses 1–22 and 26",
+          "findings": [
+            "Different named UK entity (12087566) versus Dubai FZCO on main site; §14.3 discretion to reject funding even after objectives achieved, possible refund or retake; §14.5 appears incomplete in extracted page; §16 caps liability at evaluation fees subject to exceptions; §19 written notice for amendments; §13.2.12–14 legacy copy strategy restrictions; reconcile scope with current FAQ."
+          ]
+        },
+        {
+          "url": "https://blueguardian.com/faq",
+          "status": "partial_read_legacy_snapshot",
+          "lineCount": 733,
+          "findings": [
+            "Older FAQ snapshot includes own-account copying and EA permission; legacy instant news permission differs from newer programme rules. Version scope unresolved."
+          ]
+        },
+        {
+          "url": "https://help.blueguardian.com/en",
+          "status": "inventory_only",
+          "note": "Current search listing reports 35 articles across 9 categories (3+3+1+3+5+4+7+7+2); opened older index differs. Inventory needs exact URL enumeration, deduplication and version reconciliation."
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426783-2-step-standard-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://help.blueguardian.com/en/articles/18446026-zero-account-rules",
+          "status": "search_excerpt_only_open_failed"
+        },
+        {
+          "url": "https://blueguardian.com/faq/articles/18426782-1-step-standard-rules",
+          "status": "search_excerpt_only_open_failed"
+        }
+      ],
+      "outstanding": [
+        "Retrieve actual signed Trader Agreement (sent after passing); checkout-specific entity and effective date; refund/privacy/payment processor terms; enumerate all current CFD and Futures FAQ pages, review every body; verify Guardian Shield applicability on Instant Starter rather than extrapolating; reconcile old FAQ."
+      ]
+    },
+    {
+      "slug": "apex-trader-funding",
+      "documents": [
+        {
+          "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+          "status": "partial_read",
+          "lineCount": 409,
+          "findings": [
+            "§11 penalties include unpaid reward forfeiture and repayment of prior rewards for breaches; §12 reward release and calculation are discretionary; §14 graduation can occur outside milestones and final reward at discretion; §15 exceptional performance/professional sophistication may lead to termination and unpaid reward denial, with potential exceptions; dormant PA can lose all rewards; rules effective when posted; manual order requirement; §24 individual dispute resolution; communications publication restrictions."
+          ]
+        },
+        {
+          "url": "https://apextraderfunding.com/terms-of-use/",
+          "status": "partial_read",
+          "lineCount": 90
+        },
+        {
+          "url": "https://apextraderfunding.com/privacy-policy/",
+          "status": "body_read",
+          "lineCount": 238,
+          "note": "Public policy dated 2025-10-06; sections 1–19 displayed, retention and data sharing reviewed. Cookie addendum linked separately."
+        },
+        {
+          "url": "https://apextraderfunding.com/risk-disclosure/",
+          "status": "partial_read",
+          "lineCount": 115
+        },
+        {
+          "url": "https://dashboard.apextraderfunding.com/legal/trading-rules",
+          "status": "open_failed_404"
+        },
+        {
+          "url": "https://sim.apextraderfunding.com/legal/user-agreement",
+          "status": "search_excerpt_only",
+          "note": "Compare dashboard and sim versions."
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/eod-trailing-drawdown-accounts/",
+          "status": "index_read",
+          "listedItems": 4
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/intraday-trailing-drawdown-accounts/",
+          "status": "index_read",
+          "listedItems": 4
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/getting-started/",
+          "status": "index_read",
+          "listedItems": 15
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/billing/",
+          "status": "index_read",
+          "listedItems": 9
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/platform-set-up-guides/",
+          "status": "index_read",
+          "listedItems": 4
+        },
+        {
+          "url": "https://apextraderfunding.com/hc-category/legacy-products/",
+          "status": "index_read",
+          "listedItems": 6
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-evaluations/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-drawdown-explained/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-performance-accounts-pa/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/eod-trailing-drawdown-accounts/eod-payouts/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-explained/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-performance-accounts-pa/",
+          "status": "opened_indexed_body_not_reviewed"
+        },
+        {
+          "url": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/",
+          "status": "opened_indexed_body_not_reviewed"
+        }
+      ],
+      "outstanding": [
+        "Review 38 contract sections end-to-end plus signature; complete risk disclosure and Terms of Use; obtain current Live Market Proprietary Account Agreement; resolve broken incorporated Trading Rules link; enumerate support.apextraderfunding.com and platform subcategories; read all 8 programme pages and remaining indexed help entries; separate legacy rules; verify actual applicability and consumer-law enforceability before score changes."
+      ]
+    }
+  ],
+  "blockers": [
+    "Firecrawl inventory request refused due to insufficient credits. Web search/open returned cache misses on six Blue Guardian current FAQ pages and selective excerpts on long contracts; coverage incomplete. No claim of exhaustive audit."
+  ],
+  "next": "Finish Blue Guardian and Apex before widening to Alpha Capital Group, FXIFY, Funding Traders, Maven, E8 and Tradeify."
+}
