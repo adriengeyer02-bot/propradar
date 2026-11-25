@@ -1,0 +1,91 @@
+[
+ {
+  "url": "https://mentfunding.com/",
+  "finalUrl": "https://mentfunding.com/",
+  "title": "Ment Funding - Funded. No time limits.",
+  "status": 200,
+  "kind": "html",
+  "chars": 26256,
+  "sha256": "0506778aca78a62ecac02268c0131d85b82fcb666d893575cfad504fc645de79",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:06.077Z",
+  "home": true
+ },
+ {
+  "url": "https://mentfunding.com/terms-of-service",
+  "finalUrl": "https://mentfunding.com/terms-of-service",
+  "title": "Terms of Service - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 30580,
+  "sha256": "cc7f8f249a65cdce905399a86f9541692468164ef5eeebb6f4b46ecc4b8599d2",
+  "file": "c5b924e46b25.txt",
+  "fetchedAt": "2026-11-25T11:43:11.441Z"
+ },
+ {
+  "url": "https://mentfunding.com/terms-of-service.html",
+  "finalUrl": "https://mentfunding.com/terms-of-service",
+  "title": "Terms of Service - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 30580,
+  "sha256": "cc7f8f249a65cdce905399a86f9541692468164ef5eeebb6f4b46ecc4b8599d2",
+  "file": "84ca65f37327.txt",
+  "fetchedAt": "2026-11-25T11:43:16.661Z"
+ },
+ {
+  "url": "https://mentfunding.com/refund-policy",
+  "finalUrl": "https://mentfunding.com/refund-policy",
+  "title": "Refund Policy - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 3402,
+  "sha256": "bc57e23b6b7df3a9e28327af42a2fef5ebe96a1b2f396f0105d3210eb1ce00f8",
+  "file": "7d753b317b0c.txt",
+  "fetchedAt": "2026-11-25T11:43:21.888Z"
+ },
+ {
+  "url": "https://mentfunding.com/contact/",
+  "finalUrl": "https://mentfunding.com/contact/",
+  "title": "Contact - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 2343,
+  "sha256": "654f89d85640feb106aa94f0b623f3ccd3d0aa2b34aaddb0f178a6500d04203f",
+  "file": "d98b31412db8.txt",
+  "fetchedAt": "2026-11-25T11:43:27.101Z"
+ },
+ {
+  "url": "https://mentfunding.com/risk-disclaimer.html",
+  "finalUrl": "https://mentfunding.com/risk-disclaimer",
+  "title": "Risk Disclaimer - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 6595,
+  "sha256": "a17626cb1e06c370969cc4606fa2faae6cd42a935d57d89ab56d4e9590fbda0d",
+  "file": "f10278b2a4a6.txt",
+  "fetchedAt": "2026-11-25T11:43:32.296Z"
+ },
+ {
+  "url": "https://mentfunding.com/refund-policy.html",
+  "finalUrl": "https://mentfunding.com/refund-policy",
+  "title": "Refund Policy - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 3402,
+  "sha256": "bc57e23b6b7df3a9e28327af42a2fef5ebe96a1b2f396f0105d3210eb1ce00f8",
+  "file": "c78a1c4e799e.txt",
+  "fetchedAt": "2026-11-25T11:43:37.473Z"
+ },
+ {
+  "url": "https://mentfunding.com/es/terms-of-service.html",
+  "finalUrl": "https://mentfunding.com/es/terms-of-service",
+  "title": "Términos del Servicio - Ment Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 33106,
+  "sha256": "9daa2145c600f3dd6a46cea9e454e6360ed1ad430c8c7b86ff3dec4262b6ddaf",
+  "file": "9b3ae82a78c9.txt",
+  "fetchedAt": "2026-11-25T11:43:42.666Z"
+ }
+]

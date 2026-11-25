@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://mycryptofunding.org/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://mycryptofunding.org/\nCall log:\n  - navigating to \"https://mycryptofunding.org/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:45:50.505Z"
+ },
+ {
+  "url": "https://mycryptofunding.org/terms-and-conditions/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://mycryptofunding.org/terms-and-conditions/\nCall log:\n  - navigating to \"https://mycryptofunding.org/terms-and-conditions/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:46:10.009Z"
+ }
+]

@@ -1,0 +1,112 @@
+URL: https://support.funderpro.com/en/articles/527811-instant-how-drawdown-works-in-instant-program
+FINAL: https://support.funderpro.com/en/articles/527811-instant-how-drawdown-works-in-instant-program
+TITLE: [Instant] How Drawdown Works in Instant Program | FunderPro Help Center
+FETCHED: 2026-11-25T11:43:42.095Z
+
+Skip to main content
+Login
+Trading Rules
+Beware of Scams
+Search for articles...
+All Collections
+Instant Program
+[Instant] How Drawdown Works in Instant Program
+[Instant] How Drawdown Works in Instant Program
+
+The Instant Program uses a strict drawdown model to protect the account while still allowing traders flexibility such as overnight and weekend holding.
+
+June 16, 2026
+
+There are two drawdown limits on the Instant Account:
+
+Daily Drawdown
+
+Maximum Drawdown
+
+Both limits are monitored continuously. Breaching either results in immediate and permanent account termination.
+
+ 
+
+Understanding how these two drawdowns work together is essential to managing risk correctly on an Instant Program Account.
+
+ 
+
+[Instant] Daily Drawdown Explained
+
+The Daily Drawdown on the Instant Account is set at 3%.
+
+Daily drawdown represents the maximum amount you are allowed to lose in a single trading day.
+
+ 
+
+The daily drawdown:
+
+Is calculated at 00:00 GMT+3 server time
+
+Is based on Equity or Balance, whichever is higher
+
+Applies at all times during the trading day
+
+The daily drawdown is calculated based on the higher of the prior day’s End-of-Day Equity or Balance at the start of the trading day (00:00 GMT+3 server time).
+
+Because overnight holding is allowed, the daily drawdown model uses end-of-day values instead of intraday floating equity. This means that losses carried overnight are included in the next day’s allowable drawdown.
+
+ 
+
+If, at any point during the trading day, your equity or balance falls below the allowed daily drawdown limit, the account is immediately breached.
+
+ 
+
+Daily drawdown does not reset intraday. It only resets at the start of the next trading day.
+
+ 
+
+[Instant] Maximum Drawdown – Trailing Until Initial Balance
+
+The Maximum Drawdown on the Instant Program Account is 6%.
+
+This drawdown starts as trailing and later becomes static.
+
+ 
+
+How it works:
+
+The drawdown trails the highest peak in your balance.
+
+As your account grows, the drawdown level moves upward with your profits
+
+Once the trailing drawdown reaches the initial account balance, it stops trailing
+
+From that point forward, the drawdown becomes static and fixed at the initial balance
+
+Example: If your account balance reaches a high-water mark of $20,000, the drawdown threshold adjusts to $20,000 − 6% = $18,800.
+
+This means you can never lose more than 6% of the original account size, regardless of how much profit you have made.
+
+ 
+
+Example: If your initial balance is $100,000, the drawdown limit becomes fixed at $94,000 (6% below $100,000) once the trailing phase ends.
+
+ 
+
+ 
+
+ 
+
+Related Articles
+How does FunderPro evaluate trader success during a challenge?
+What is the Drawdown rule and how does it apply to Funded Account Challenges?
+[Instant] Consistency Rule Explained
+[Instant] Trading Rule Violations & Prohibited Behavior
+[Instant] Is Overnight and Weekend Holding permitted?
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+[Instant] Daily Drawdown Explained
+[Instant] Maximum Drawdown – Trailing Until Initial Balance
+FunderPro Help Center
+All trading activity takes place in a simulated trading environment. Funds allocated are fictitious.

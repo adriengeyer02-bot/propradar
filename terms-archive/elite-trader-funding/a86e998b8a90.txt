@@ -1,0 +1,332 @@
+URL: https://elitetraderfunding.app/risk-of-ruin-calculator
+FINAL: https://elitetraderfunding.app/risk-of-ruin-calculator
+TITLE: Risk of Ruin Calculator: Odds of Hitting Your Drawdown | Elite Trader Funding
+FETCHED: 2026-11-25T11:43:49.592Z
+
+Plans
+Resources
+Rewards
+Testimonials
+Blog
+About
+Contact
+Sign In
+Sign Up
+Risk of Ruin Calculator
+Risk of Ruin Calculator
+
+A profitable system can still blow a funded account. Enter your win rate, your average win and loss, and your risk per trade, and a Monte Carlo simulation shows the odds of hitting your drawdown, modeled against the strict trailing drawdown a real evaluation uses.
+
+The honest number most firms won't show you
+HIGHLIGHT
+Trailing or static drawdown
+HIGHLIGHT
+20,000 simulated trade runs
+HIGHLIGHT
+See what halving risk does
+
+Most blown accounts aren't killed by a bad strategy; they're killed by risking too much per trade for the drawdown they're trading against. Risk of ruin is the probability that variance ends the account before your edge can pay off, simulated against the same trailing drawdown a funded evaluation actually uses.
+
+What it does
+Odds of hitting your drawdown
+Method
+Monte Carlo: 20,000 runs
+Inputs
+Win rate, avg win/loss, risk per trade
+Drawdown
+Trailing (ETF) or static floor
+Best for
+Sizing risk on a funded account
+Try it yourself
+
+Pick your account size to load its trailing drawdown, set your win rate and reward-to-risk, and choose your risk per trade. The tool returns the share of simulated runs that hit the drawdown, your per-trade edge, the median outcome, and what happens if you halve your risk.
+
+Account & drawdown
+$50K
+$100K
+$150K
+$250K
+Account size
+Max drawdown ($)
+Trailing (ETF)
+Static
+Win rate
+40%
+50%
+60%
+Risk per trade
+0.25%
+0.5%
+1%
+Average win (R)
+1.5R
+2R
+3R
+A 2R win makes twice what you risk.
+Average loss (R)
+0.5R
+1R
+1.5R
+1R = a full stop; less if you cut early.
+Trades to simulate
+50
+100
+150
+300
+RISK OF RUIN
+63.0%
+
+of simulated runs hit the trailing drawdown before finishing.
+
+Even with a positive +0.50R edge, a $2,000 trailing drawdown is hit in 63.0% of 150-trade runs. Variance ruins the account before the edge can compound. At 0.5% risk per trade, halving your risk to 0.25% drops the risk of ruin to about 1.4%.
+
+Your edge (expectancy)	+0.50 R / trade
+Survived	37.0%
+At half the risk per trade	1.4%
+Median ending balance	$66,940
+Median worst drawdown	$2,045
+
+Educational tool, not trading advice. It runs 20,000 random sequences of trades using the win rate and average win and loss you enter, assuming each trade is independent and those averages hold. Real trading has streaks, changing edges, fees and slippage this does not model. It does not predict your results. Futures trading carries a substantial risk of loss.
+
+How the simulation works
+
+There is no clean closed-form answer once the drawdown trails your peak, so the calculator simulates instead of solving. It plays out thousands of random trade sequences and counts how many end in ruin.
+
+1. Describe your edge
+
+Enter your win rate and your average win and loss in R: a 2R win makes twice what a 1R loss costs. Together these decide whether the system makes money over the long run, and how bumpy the ride is.
+
+2. Set your risk and floor
+
+Pick your account size to load its trailing max drawdown (or type your own), and choose the risk you take per trade. Trailing means the drawdown chases your highest balance, the way a funded evaluation works, so it is far less forgiving than a fixed floor.
+
+3. Read the odds
+
+The tool runs twenty thousand random sequences of trades and reports the share that hit the drawdown before finishing. Even a clearly profitable system can ruin most runs when risk per trade is too high for the floor.
+
+Each run sizes every trade as a fixed fraction of the current balance, wins or loses by your average R, and tracks the drawdown from the running peak (trailing) or the start (static). The headline is simply runs that hit the drawdown ÷ total runs.
+
+Why risk per trade matters more than you think
+
+Two traders can run the identical system, same win rate, same reward-to-risk, the same positive edge, and one survives while the other busts, purely because of how much they risk per trade against a trailing drawdown.
+
+Rule	Smaller risk per trade	Double the risk per trade
+System	50% win rate, 2 : 1 reward-to-risk (+0.5R edge)	50% win rate, 2 : 1 reward-to-risk (+0.5R edge)
+Risk per trade	0.5% of a 50K account	1.0% of a 50K account
+Floor	$2,000 trailing drawdown	$2,000 trailing drawdown
+What usually happens	Survives most runs, but far from safe	Hits the drawdown in nearly every run
+
+Drop your risk per trade in the calculator and watch the odds fall, usually faster than you'd expect. That single lever, not a fancier strategy, is what keeps funded accounts alive.
+
+Surviving a funded evaluation
+
+A trailing drawdown is the reason a good system can still fail an evaluation: it chases your highest balance, so giving back a gain can end the account before your edge compounds. Knowing your risk of ruin up front lets you pick a risk per trade you can actually survive, and then size each trade to match.
+
+Trade Expectancy Calculator
+Check your edge first.
+Position Size Calculator
+Turn your chosen risk into a contract count.
+Drawdown Calculator
+See how the floor moves.
+Plans page
+Pick the evaluation that fits your style.
+Frequently asked questions
+
+What is risk of ruin?
+
+Risk of ruin is the probability that a string of losses wipes out your account, or, on a funded account, hits the maximum drawdown that ends it, before your edge has time to pay off. It depends on four things: how often you win, how big your wins are versus your losses, how much you risk per trade, and how far the account can fall before it is gone. Even a profitable system has a non-zero risk of ruin, and risking too much per trade can push it surprisingly high. This calculator estimates it with a Monte Carlo simulation rather than a single formula, so it can handle the trailing drawdown that funded evaluations use.
+
+How is the risk of ruin calculated here?
+
+What is a trailing drawdown and why does it matter so much?
+
+How can a profitable system still have a high risk of ruin?
+
+What risk per trade should I use on a funded account?
+
+Is this calculator trading advice?
+
+Size it to survive
+Know your odds, then trade them.
+
+Once you've found a risk per trade you can actually survive, pick the evaluation that matches how you trade and put the plan to work on our capital.
+
+Browse evaluations
+
+Account sizes and risk parameters are subject to change.
+
+Real Feedback
+Trusted by Our Traders
+Easy to use and pay outs are smooth.
+Omar Mayen
+Always quick with responses to queries
+Van Gend Botha
+I been with elite for over 3 years but never got a payout, I been close so many times but just couldn't cross over to 8th day,once when I did get to 8th day and waited after market closed to finally see a payout button but i found out that my account was liquidated ,reason I left a trade open ,anyway I have good experience with elite n I will continue to try and get a payout, 👊
+Read more
+of NAEEM's Trustpilot review
+NAEEM
+Great communication and support
+MontyZ
+Price if evaluation
+Anita Hampton
+Top Funding.
+Jan E
+Elite Trader Funding has serious top-5 prop firm potential. The customer bot solves problems fast, and email support is incredibly quick and on point. Payout efficiency is a huge plus—they honor their 48-hour approval promise and pushed my payout through even when Rise had issues. The main downside? Too many micro-rules that change depending on the account. Elite should streamline rules, like making the 30% consistency rule uniform across the board. If you actually take the time to learn the rules before trading, this firm will absolutely reward you.
+Read more
+of LotTrader's Trustpilot review
+LotTrader
+love it this is the best brokerage around. Static account is so clutch.
+Trevor Blow
+Great place to trade at
+Rico
+Payment Response time Customer service
+Mohamed Benchaaira
+Easy to use and pay outs are smooth.
+Omar Mayen
+Always quick with responses to queries
+Van Gend Botha
+I been with elite for over 3 years but never got a payout, I been close so many times but just couldn't cross over to 8th day,once when I did get to 8th day and waited after market closed to finally see a payout button but i found out that my account was liquidated ,reason I left a trade open ,anyway I have good experience with elite n I will continue to try and get a payout, 👊
+Read more
+of NAEEM's Trustpilot review
+NAEEM
+Great communication and support
+MontyZ
+Price if evaluation
+Anita Hampton
+Top Funding.
+Jan E
+Elite Trader Funding has serious top-5 prop firm potential. The customer bot solves problems fast, and email support is incredibly quick and on point. Payout efficiency is a huge plus—they honor their 48-hour approval promise and pushed my payout through even when Rise had issues. The main downside? Too many micro-rules that change depending on the account. Elite should streamline rules, like making the 30% consistency rule uniform across the board. If you actually take the time to learn the rules before trading, this firm will absolutely reward you.
+Read more
+of LotTrader's Trustpilot review
+LotTrader
+love it this is the best brokerage around. Static account is so clutch.
+Trevor Blow
+Great place to trade at
+Rico
+Payment Response time Customer service
+Mohamed Benchaaira
+Good company, clear rules and fast execution!
+Leonardo Baptista
+Easy to use and nice dashboard and straight forward clear rules
+BILLINCI CODE
+Excellent Platform and great pricing.
+SM
+Love it - ETF is great
+Franco
+The help center
+Samuel Amaral
+Good firm is ok
+Vincent Danville
+The approval process is good and fast. The KYC could be easier as the website times out too fast...
+Paul in Texas
+Love you guys
+Edgar Gil
+Trading with ETF has been such a great experience. I really can't think of a problem, any problem at all with them. Their 50k static (2k DD, no DLL) account that goes on sale all the time is THE MOST UNDERRATED trading product on the market!
+Read more
+of Dennis Ronan's Trustpilot review
+Dennis Ronan
+EXCELLENT PROP FIRM WITH SMOOTH EXECUTION AND GREAT SUPPORT
+NABIL HANNOUCH
+Good company, clear rules and fast execution!
+Leonardo Baptista
+Easy to use and nice dashboard and straight forward clear rules
+BILLINCI CODE
+Excellent Platform and great pricing.
+SM
+Love it - ETF is great
+Franco
+The help center
+Samuel Amaral
+Good firm is ok
+Vincent Danville
+The approval process is good and fast. The KYC could be easier as the website times out too fast...
+Paul in Texas
+Love you guys
+Edgar Gil
+Trading with ETF has been such a great experience. I really can't think of a problem, any problem at all with them. Their 50k static (2k DD, no DLL) account that goes on sale all the time is THE MOST UNDERRATED trading product on the market!
+Read more
+of Dennis Ronan's Trustpilot review
+Dennis Ronan
+EXCELLENT PROP FIRM WITH SMOOTH EXECUTION AND GREAT SUPPORT
+NABIL HANNOUCH
+Ready to Start Your Trading Journey?
+
+Trading doesn't have to be complicated. We're here to guide you on every step of your journey. Choose your evaluation and start trading today. Grow your capital. Get paid.
+
+Join Our Community
+Start Earning Now
+Compare Plans
+ELITETRADERFUNDING
+
+Providing traders with an opportunity to earn live funding based on their trading performance in simulated accounts.
+
+See our reviews on Trustpilot
+Quick Links
+Plans
+Rewards
+Blog
+Help Center
+About Us
+Contact Us
+Purchase Guarantee
+Plans & Products
+All Plans
+1 Step
+Static Drawdown
+End of Day
+Diamond Hands
+Fast Track
+Direct to Funded
+Elite Sim-Funded
+LIVE ELITE
+Payouts
+Tools
+ATD Calculator
+Consistency Calculator
+Drawdown Calculator
+Position Size Calculator
+Expectancy Calculator
+Risk of Ruin Calculator
+Cost to Get Funded
+Futures Contract Specs
+Legal
+Privacy Policy
+Delete Account
+Risk Disclosure
+Performance Disclosure
+Trading Disclaimer
+Trade Copier Disclaimer
+Terms of Service
+Data Disclaimer
+Beat the Beast Rules
+Socials
+Discord
+X
+Instagram
+Facebook
+YouTube
+TikTok
+
+© 2026 Elite Trader Funding, LLC.
+
+Light
+Dark
+
+Developed by Quick14
+
+Disclosures:
+Commodity Futures Trading Commission Futures required disclaimer.
+
+Commodity Futures Trading Commission: Futures and Options trading has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the futures markets. Don't trade with money you can't afford to lose. This is neither a solicitation nor an offer to Buy/Sell futures, stocks or options on the same. No representation is being made that any account will or is likely to achieve profits or losses similar to those discussed on this web site. The past performance of any trading system or methodology is not necessarily indicative of future results.
+
+CFTC RULE 4.41 - Hypothetical or simulated performance results have certain limitations. Unlike an actual performance record, simulated results do not represent actual trading. Also, since the trades have not been executed, the results may have under-or-over compensated for the impact, if any, of certain market factors, such as lack of liquidity. Simulated trading programs in general are also subject to the fact that they are designed with the benefit of hindsight. No representation is being made that any account will or is likely to achieve profit or losses similar to those shown. No representation is being made that any account will, or is likely to achieve profits or losses similar to those discussed within this site, support and texts. Our course(s), products and services should be used as learning aids only and should not be used to invest real money. If you decide to invest real money, all trading decisions should be your own
+
+Testimonials Disclosure: Testimonials appearing on this website may not be representative of other clients or customers and are not a guarantee of future performance or success.
+
+The Terms of Service have been updated. Please review the updated Terms of Service
+.
+
+Ends in
+5d 17h 16m
+Grab 20 evals with 90% OFF →
+90off gobble

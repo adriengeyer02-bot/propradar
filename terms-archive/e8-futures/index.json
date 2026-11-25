@@ -1,0 +1,80 @@
+[
+ {
+  "url": "https://e8futures.com/",
+  "finalUrl": "https://e8futures.com/",
+  "title": "SimFi™ Trading Platform — 150+ Markets, US-Based · E8Markets",
+  "status": 200,
+  "kind": "html",
+  "chars": 23638,
+  "sha256": "bdc96d421f12f6b8577de5b243456c01ed261d2f2304f9b40c3ae14bce8a60ec",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:44:12.963Z",
+  "home": true
+ },
+ {
+  "url": "https://e8futures.com/terms-and-conditions/",
+  "finalUrl": "https://e8futures.com/terms-and-conditions/",
+  "title": "Page not found",
+  "status": 404,
+  "kind": "html",
+  "chars": 4920,
+  "sha256": "10c55b6f157465d8f4125ab9aa0b0b6ce8968ea78b6e0c5cdb0a13bdf532b063",
+  "file": "49bfe4ffc701.txt",
+  "fetchedAt": "2026-11-25T11:44:18.869Z"
+ },
+ {
+  "url": "https://e8futures.com/e8-markets-terms-and-conditions",
+  "finalUrl": "https://e8futures.com/e8-markets-terms-and-conditions",
+  "title": "Terms & Conditions · E8Markets",
+  "status": 200,
+  "kind": "html",
+  "chars": 46218,
+  "sha256": "af2e4871c51bdf1688deabb0bd487d456dc8700c155effe231c0104a7a83a37b",
+  "file": "6a71263a34aa.txt",
+  "fetchedAt": "2026-11-25T11:44:24.789Z"
+ },
+ {
+  "url": "https://www.intercom.com/terms-and-policies",
+  "finalUrl": "https://www.intercom.com/legal/terms-and-policies",
+  "title": "Terms and Policies | Intercom",
+  "status": 200,
+  "kind": "html",
+  "chars": 65674,
+  "sha256": "4fc7c4097ac9ecb1344c3bc7aabbc9dc11de01f1068adc87fb3a37801e327f17",
+  "file": "e1f330cee2e3.txt",
+  "fetchedAt": "2026-11-25T11:44:46.421Z"
+ },
+ {
+  "url": "https://e8futures.com/e8-traders-stories",
+  "finalUrl": "https://e8futures.com/e8-traders-stories",
+  "title": "Verified Trader Payouts & Award-Winning Process · E8Markets",
+  "status": 200,
+  "kind": "html",
+  "chars": 14599,
+  "sha256": "e83b4796c0b743fb3b23f548489e71b11ad0a4e02e758950886bda2badb403d4",
+  "file": "b59d4231adad.txt",
+  "fetchedAt": "2026-11-25T11:44:53.583Z"
+ },
+ {
+  "url": "https://www.intercom.com/helpdesk",
+  "finalUrl": "https://www.intercom.com/helpdesk",
+  "title": "The helpdesk built for AI and humans | Intercom",
+  "status": 200,
+  "kind": "html",
+  "chars": 7884,
+  "sha256": "9934c50645fd72fd7802d3466206858ec5ae8704cf9033b83fe43fc57b07b829",
+  "file": "1b36877f4823.txt",
+  "fetchedAt": "2026-11-25T11:45:17.221Z"
+ },
+ {
+  "url": "https://www.intercom.com/helpdesk/omnichannel",
+  "finalUrl": "https://www.intercom.com/helpdesk/omnichannel",
+  "title": "Omnichannel Customer Service Software | Intercom",
+  "status": 200,
+  "kind": "html",
+  "chars": 14773,
+  "sha256": "b731d095e43104c1c140d52c105fa82e66eeef2a1eb856b0c31322f200123a86",
+  "file": "695064db7080.txt",
+  "fetchedAt": "2026-11-25T11:45:28.921Z"
+ }
+]

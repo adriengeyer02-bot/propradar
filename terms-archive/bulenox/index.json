@@ -1,0 +1,58 @@
+[
+ {
+  "url": "https://bulenox.com/",
+  "finalUrl": "https://bulenox.com/",
+  "title": "Bulenox — Invest in Yourself",
+  "status": 200,
+  "kind": "html",
+  "chars": 5459,
+  "sha256": "7f6ff2c4ebad379ec71a29c4974e04e6a56da48a9b9421a0a32d97e36a184c03",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:42:33.857Z",
+  "home": true
+ },
+ {
+  "url": "https://bulenox.com/faq",
+  "finalUrl": "https://bulenox.com/faq",
+  "title": "FAQ — Bulenox",
+  "status": 200,
+  "kind": "html",
+  "chars": 4972,
+  "sha256": "5346c8d6bae298881cbf1790977ef2720752a61846881ce2696a12c75ba044fd",
+  "file": "e5755dea6b94.txt",
+  "fetchedAt": "2026-11-25T11:42:47.199Z"
+ },
+ {
+  "url": "https://bulenox.com/help-center",
+  "finalUrl": "https://bulenox.com/help-center",
+  "title": "General Information — Help Center — Bulenox",
+  "status": 200,
+  "kind": "html",
+  "chars": 2319,
+  "sha256": "e618e307ea17ad71e1a70d7e8ca7c6ec364d4570dd804cd636b170964832ae65",
+  "file": "547d2fdcd3b6.txt",
+  "fetchedAt": "2026-11-25T11:42:54.653Z"
+ },
+ {
+  "url": "https://bulenox.com/legal/Terms_of_Use.pdf",
+  "finalUrl": "https://bulenox.com/legal/Terms_of_Use.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 41131,
+  "sha256": "938294d433fb8ee2fe2ad17e515937ff4dff6ffa8388c25959bdfde09b5f147f",
+  "file": "ea1871f5e311.txt",
+  "fetchedAt": "2026-11-25T11:42:55.080Z"
+ },
+ {
+  "url": "https://bulenox.com/legal/Risk_Disclosure.pdf",
+  "finalUrl": "https://bulenox.com/legal/Risk_Disclosure.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 1952,
+  "sha256": "e8ba51311bc3d10c2f9dcdc7b09c237e38a35c4323a644bdd80998b74e11f1df",
+  "file": "488c69f9f8c8.txt",
+  "fetchedAt": "2026-11-25T11:42:55.137Z"
+ }
+]

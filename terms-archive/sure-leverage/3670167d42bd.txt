@@ -1,0 +1,407 @@
+URL: https://help.sureleveragefunding.com/en/articles/16100455-one-step-pro-futures-style
+FINAL: https://help.sureleveragefunding.com/en/articles/16100455-one-step-pro-futures-style
+TITLE: 📘 One Step Pro (Futures Style) | Sure Leverage Funding Help Center
+FETCHED: 2026-11-25T11:44:45.391Z
+
+Skip to main content
+العربية
+English
+Français
+Deutsch
+Español
+English
+Search for articles...
+All Collections
+Retired Account Rules/Information
+📘 One Step Pro (Futures Style)
+📘 One Step Pro (Futures Style)
+Y
+Written by Yemi
+October 20, 2026
+This product is no longer on sale. These rules apply to existing One Step Pro (Futures Style) accounts.
+Overview
+
+What is One Step Pro (Futures Style)? A single-phase evaluation with an end-of-day (EOD) trailing drawdown. Hit the profit target to move to a funded account.
+
+Maximum Drawdown: EOD trailing, by account size
+
+Daily Drawdown: fixed, by account size (none on $25,000)
+
+Profit Consistency Rule: 40% (funded only)
+
+Profit Split: 90%
+
+Payout Frequency: Every 3 days
+
+Max Total Funding: $400,000 across all accounts
+
+Account Size
+
+	
+
+Profit Target
+
+	
+
+Max Loss Limit
+
+	
+
+Daily Loss Limit
+
+
+
+
+$25,000
+
+	
+
+$1,250
+
+	
+
+$1,000
+
+	
+
+None
+
+
+
+
+$50,000
+
+	
+
+$3,000
+
+	
+
+$2,000
+
+	
+
+$1,200
+
+
+
+
+$100,000
+
+	
+
+$6,000
+
+	
+
+$3,000
+
+	
+
+$1,800
+
+
+
+
+$150,000
+
+	
+
+$9,000
+
+	
+
+$4,500
+
+	
+
+$2,700
+
+The same Max Loss Limit and Daily Loss Limit apply in the evaluation and funded phases.
+
+Trading Rules
+
+Stop Losses
+
+Not required.
+
+News Trading
+
+Not allowed. Trades must not be opened or closed 5 minutes before or after a red folder news event. Profit from these trades is deducted at payout.
+
+Expert Advisors (EAs)
+
+Allowed.
+
+Copy Trading
+
+You can copy your own trades.
+
+Copying other traders' trades in the same timeframe is not allowed.
+
+Averaging Into Trades
+
+Allowed.
+
+Tick Scalping
+
+Keep trades open for over 2 minutes. Shorter trades are a soft breach.
+
+Consistency Rules
+
+Profit Consistency Rule (40%, Funded Only)
+
+Your best single day can't be more than 40% of your total profit for the payout cycle.
+
+Formula: best day profit divided by total profit.
+
+Example: on a $50,000 account, best day $1,000 and total profit $4,000. $1,000 / $4,000 = 25%, so you're within the rule.
+
+It resets after every payout. Not meeting it is not a breach. You just keep trading until you do.
+
+Drawdown & Targets
+
+Profit Target
+
+By account size, see the table above.
+
+Max Loss Limit (EOD Trailing)
+
+Your limit sits your Max Loss Limit below the highest end-of-day balance or equity your account has reached.
+
+It only moves at the 5pm EST snapshot. Intraday highs are ignored.
+
+It only ever moves up, never down. Hit it and the account is closed.
+
+Example 1: Intraday spike, flat close ($50,000, $2,000 limit)
+
+Start: equity $50,000, limit $48,000.
+
+Midday equity hits $50,900, then falls back to $50,000.
+
+At 5pm EST equity is $50,000. The spike is ignored, so the limit stays at $48,000.
+
+Example 2: Higher close ($50,000, $2,000 limit)
+
+At 5pm EST equity is $50,600 (closed profit, open profit, or both).
+
+New end-of-day high, so the limit trails to $48,600.
+
+If you lose the next day, it stays at $48,600.
+
+Daily Loss Limit (Fixed)
+
+A fixed amount by account size that doesn't change over time (see table). Hit it and the account is closed.
+
+Payouts
+
+All of these must be met for each payout. They reset after every approved payout.
+
+Profit Split
+
+90% to you.
+
+Payout Schedule
+
+You can request a payout every 3 days.
+
+Minimum Profit Goal
+
+Account Size
+
+	
+
+Minimum Profit Per Cycle
+
+
+
+
+$25,000
+
+	
+
+$250
+
+
+
+
+$50,000
+
+	
+
+$500
+
+
+
+
+$100,000
+
+	
+
+$750
+
+
+
+
+$150,000
+
+	
+
+$1,000
+
+Buffer Balance
+
+Your balance must be above the buffer before you can request a payout. You can't withdraw from the buffer itself.
+
+Buffer = starting balance + Max Loss Limit + $100.
+
+Account Size
+
+	
+
+Buffer Balance
+
+
+
+
+$25,000
+
+	
+
+$26,100
+
+
+
+
+$50,000
+
+	
+
+$52,100
+
+
+
+
+$100,000
+
+	
+
+$103,100
+
+
+
+
+$150,000
+
+	
+
+$154,600
+
+Max Payout
+
+Account Size
+
+	
+
+1st Payout
+
+	
+
+2nd Payout Onwards
+
+
+
+
+$25,000
+
+	
+
+$1,000
+
+	
+
+$1,500
+
+
+
+
+$50,000
+
+	
+
+$2,000
+
+	
+
+$2,500
+
+
+
+
+$100,000
+
+	
+
+$2,500
+
+	
+
+$3,000
+
+
+
+
+$150,000
+
+	
+
+$3,000
+
+	
+
+$3,500
+
+24-Hour Payout Guarantee
+
+Payouts are processed within 24 business hours of an eligible request.
+
+If we miss this, you get an extra 10% on your profit split.
+
+Exceptions: weekends and bank holidays, compliance or risk reviews, and delays in Rise onboarding or waiting on your reply.
+
+Rule Breaches & Payout Denials
+
+Soft Breaches (Profit Deductions)
+
+If you break a funded account rule (for example tick scalping or news trading), the profit from that trade is deducted from your total profit.
+
+If deductions are less than your profit, the reduced payout is still processed.
+
+If deductions are more than your profit, the payout is denied.
+
+Maximum of 20 soft breaches before the account is closed. These are checked at payout, not automatically.
+
+If 50% or more of your trades are soft breaches, the payout is declined.
+
+Payout Denial Penalties
+
+1st denial: profit split is halved.
+
+2nd denial: account closed.
+
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+This product is no longer on sale. These rules apply to existing One Step Pro (Futures Style) accounts.
+Overview
+Trading Rules
+Consistency Rules
+Drawdown & Targets
+Payouts
+Rule Breaches & Payout Denials
+Sure Leverage Funding Help Center
+We run on Intercom

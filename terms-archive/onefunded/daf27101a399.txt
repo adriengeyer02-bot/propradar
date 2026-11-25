@@ -1,0 +1,234 @@
+URL: https://help.onefunded.com/prohibited-trading-practices-on-onefunded/
+FINAL: https://help.onefunded.com/prohibited-trading-practices-on-onefunded/
+TITLE: Prohibited Trading Practices on OneFunded | OneFunded Help Center
+FETCHED: 2026-11-25T11:51:30.932Z
+
+Help Center
+Visit onefunded.com
+Home
+Risk Rules
+Prohibited Trading Practices on OneFunded
+Prohibited Trading Practices on OneFunded
+5 min. read
+last update: 05.12.2026
+
+OneFunded funds traders who demonstrate disciplined, sustainable, and skill-based risk management. The following practices are prohibited on all OneFunded accounts. Violations may result in trading restrictions, cancellation of payouts, suspension of the account, or termination of the Trader Agreement.
+
+OneFunded reserves the sole and final right to determine whether a strategy, execution style, or trading behavior falls within the scope of prohibited activity.
+
+ 
+
+Data Freezing
+
+Exploiting moments where the trading platform freezes, delays, or becomes temporarily unresponsive in order to open or close positions at prices unavailable under normal market conditions is prohibited.
+
+This includes:
+
+Executing trades during delayed chart refreshes
+Entering or closing trades during platform desynchronization
+Exploiting temporary pricing discrepancies caused by technical interruptions
+
+Trades executed during confirmed data-freeze events may be invalidated.
+
+ 
+
+Gap Trading (Gap Billing)
+
+Opening positions specifically to exploit predictable market gaps, including weekend opens, session opens, or major macroeconomic events, without a legitimate directional market thesis is prohibited.
+
+This includes:
+
+Holding oversized exposure solely to capture opening gaps
+Opening trades moments before scheduled high-impact events with the primary intention of exploiting slippage or discontinuous pricing
+Systematically targeting predictable price dislocations without genuine market analysis
+
+Legitimate swing trading and macro positioning remain permitted. However, strategies primarily designed to exploit simulated execution characteristics rather than market direction are prohibited.
+
+ 
+
+Use of External, Delayed, or Slow Data Feeds
+
+Using external, delayed, manipulated, or alternative data feeds to gain an informational advantage over the platform’s live pricing is prohibited.
+
+Examples include:
+
+Delayed broker feeds
+Third-party latency feeds
+Artificially slowed chart feeds
+Multi-broker execution synchronization designed to exploit stale prices
+
+All trading decisions must be based exclusively on live market data available directly within the OneFunded trading environment.
+
+ 
+
+Trading on Delayed Charts
+
+Placing trades using chart data that lags behind the actual live market is prohibited.
+
+This includes:
+
+Trading from delayed chart streams
+Exploiting chart refresh delays
+Using stale candles or delayed tick feeds to anticipate price updates
+
+This behavior creates an unfair informational advantage and is not considered legitimate trading activity.
+
+ 
+
+Latency Arbitrage
+
+Latency arbitrage refers to exploiting delays in price updates between brokers, data providers, or trading infrastructure.
+
+This occurs when a trader:
+
+Detects stale prices
+Executes trades before the platform updates to the true market price
+Closes positions immediately after price synchronization
+
+Latency arbitrage is classified as a technological exploit rather than a legitimate trading strategy.
+
+ 
+
+Reverse Arbitrage
+
+Reverse arbitrage refers to deliberately trading against known latency or pricing discrepancies in order to profit from the subsequent correction.
+
+Although the direction differs from traditional latency arbitrage, the strategy still depends on exploiting feed inefficiencies rather than legitimate market speculation.
+
+Both latency arbitrage and reverse arbitrage are prohibited.
+
+ 
+
+Tick Scalping
+
+Tick scalping refers to executing an excessive volume of extremely short-duration trades designed to capture minimal price fluctuations on individual ticks.
+
+This includes:
+
+Ultra-short holding times
+Excessive execution frequency
+Micro-scalping behavior
+Strategies dependent on unrealistically precise execution conditions
+
+OneFunded recognizes legitimate scalping strategies. However, trading styles primarily designed to exploit microstructure inefficiencies, pricing refresh behavior, or simulated execution characteristics are prohibited.
+
+ 
+
+Cross-Account Hedging
+
+Placing opposing or offsetting positions across multiple accounts in order to artificially reduce directional risk is prohibited.
+
+This includes:
+
+Hedging between two or more OneFunded accounts
+Hedging between a OneFunded account and an external brokerage account
+Coordinated hedging between multiple individuals
+Shared-risk strategies designed to guarantee payout outcomes
+
+Examples:
+
+Buying XAUUSD on one account while selling XAUUSD on another
+Opposite positions on correlated instruments across multiple accounts
+Group-coordinated risk distribution
+
+OneFunded funds individual trading skill, not synthetic risk-neutral structures.
+
+ 
+
+One-Sided Bets
+
+One-sided bets refer to trading behavior where a trader concentrates excessive exposure into a single directional market thesis.
+
+This includes, but is not limited to:
+
+Continuously trading only long or only short on the same instrument regardless of changing market structure
+Concentrating a disproportionate percentage of free margin into one directional event
+Repeatedly adding exposure to winning or losing positions without risk reduction
+Maintaining oversized exposure driven solely by one macroeconomic conviction
+Trading behavior resembling gambling-style directional conviction rather than structured portfolio risk management
+
+Examples include:
+
+Aggressively averaging into losses
+Excessive leverage during major news events
+All-in directional positioning
+Escalating exposure during drawdown
+
+OneFunded does not prohibit directional conviction. However, exposure concentration must remain professionally managed and proportionate to account size and market conditions.
+
+ 
+
+Martingale and Grid Strategies
+
+Martingale and grid-based recovery systems are prohibited when they create uncontrolled exposure escalation.
+
+Martingale Strategies
+
+Martingale systems systematically increase position size after losses in an attempt to recover prior losses with a future winning trade.
+
+Grid Strategies
+
+Grid systems place layered orders at predefined intervals without requiring a validated directional thesis.
+
+These strategies are prohibited because they:
+
+Depend on effectively unlimited capital
+Require unrealistic drawdown tolerance
+Produce artificially smooth equity curves until catastrophic failure occurs
+Create unsustainable tail-risk exposure
+
+Examples include:
+
+Doubling position size after losses
+Unlimited averaging down
+Recovery trading cycles
+Escalating exposure without reducing downside risk
+
+ 
+
+Copy Trading Without Authorization
+
+Copy trading or signal mirroring from external sources without prior written authorization is prohibited.
+
+This includes:
+
+Social trading networks
+Telegram or Discord signal groups
+External AI-generated execution systems
+Third-party trade copiers
+Shared institutional execution streams
+
+OneFunded recognizes that traders may use personal tools, indicators, or automated systems that they fully control.
+
+However, traders must retain genuine and meaningful control over:
+
+Position selection
+Risk management
+Execution logic
+Exposure sizing
+
+ 
+
+Account Management for Third Parties / Account Passing Services
+
+Allowing another individual or entity to trade your account for any reason is prohibited.
+
+This includes:
+
+Paying someone to pass a challenge
+Passing challenges on behalf of another trader
+Sharing account access
+Delegating execution to third parties
+Temporary or permanent account management arrangements
+
+OneFunded funds the verified trader only.
+
+Any transfer, delegation, or outsourcing of trading activity violates the Trader Agreement.
+
+ 
+
+Was this article helpful?
+Yes
+No
+OneFunded
+Powered by

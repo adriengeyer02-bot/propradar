@@ -1,0 +1,107 @@
+[
+ {
+  "url": "https://audacity.capital/",
+  "finalUrl": "https://audacity.capital/",
+  "title": "Audacity Capital | Best Prop Trading Firm in 2026 : Empowering Traders Since 2012",
+  "status": 200,
+  "kind": "html",
+  "chars": 40681,
+  "sha256": "ae0b899b5d97489af887eca76e1c93fb7868259b472fc9881219b259f2badda0",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:42:51.696Z",
+  "home": true
+ },
+ {
+  "url": "https://www.audacity.capital/terms-and-conditions/",
+  "finalUrl": "https://audacity.capital/terms-and-conditions/",
+  "title": "Terms of Service & Conditions | Audacity Capital",
+  "status": 200,
+  "kind": "html",
+  "chars": 74535,
+  "sha256": "52647e4efcea37e87b5df419e32b461ab0a5baffe3faa923fc642b70f237e634",
+  "file": "5d5dc3b1096c.txt",
+  "fetchedAt": "2026-11-25T11:43:20.582Z"
+ },
+ {
+  "url": "https://audacity.capital/terms-and-conditions/",
+  "finalUrl": "https://audacity.capital/terms-and-conditions/",
+  "title": "Terms of Service & Conditions | Audacity Capital",
+  "status": 200,
+  "kind": "html",
+  "chars": 74535,
+  "sha256": "52647e4efcea37e87b5df419e32b461ab0a5baffe3faa923fc642b70f237e634",
+  "file": "0f3327b7fe48.txt",
+  "fetchedAt": "2026-11-25T11:44:03.740Z"
+ },
+ {
+  "url": "https://help.audacity.capital/hc/en-gb/articles/31929047154834-What-are-the-prohibited-strategies",
+  "error": "Error: page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://help.audacity.capital/hc/en-gb/articles/31929047154834-What-are-the-prohibited-strategies\nCall log:\n  - navigating to \"https://help.audacity.capital/hc/en-gb/articles/31929047154834-What-are-the-prohibited-strategies\", waiting unti",
+  "fetchedAt": "2026-11-25T11:44:03.879Z"
+ },
+ {
+  "url": "https://audacity.capital/en/terms-and-conditions/",
+  "finalUrl": "https://audacity.capital/en/terms-and-conditions/",
+  "title": "Terms of Service & Conditions | Audacity Capital",
+  "status": 200,
+  "kind": "html",
+  "chars": 74535,
+  "sha256": "52647e4efcea37e87b5df419e32b461ab0a5baffe3faa923fc642b70f237e634",
+  "file": "455be13c61d2.txt",
+  "fetchedAt": "2026-11-25T11:44:47.502Z"
+ },
+ {
+  "url": "https://www.intercom.com/terms-and-policies",
+  "finalUrl": "https://www.intercom.com/legal/terms-and-policies",
+  "title": "Terms and Policies | Intercom",
+  "status": 200,
+  "kind": "html",
+  "chars": 65674,
+  "sha256": "4fc7c4097ac9ecb1344c3bc7aabbc9dc11de01f1068adc87fb3a37801e327f17",
+  "file": "e1f330cee2e3.txt",
+  "fetchedAt": "2026-11-25T11:45:09.039Z"
+ },
+ {
+  "url": "https://audacity.capital/support/",
+  "finalUrl": "https://audacity.capital/support/",
+  "title": "Support Center | Get Trading Help from Audacity Capital",
+  "status": 200,
+  "kind": "html",
+  "chars": 27870,
+  "sha256": "4e35043fed531364ce24ab611dc062a69978ae57bf165fc63d647f06b4e742d1",
+  "file": "7d2c4d9be6e1.txt",
+  "fetchedAt": "2026-11-25T11:45:38.921Z"
+ },
+ {
+  "url": "https://audacity.capital/whistleblower-policy/",
+  "finalUrl": "https://audacity.capital/whistleblower-policy/",
+  "title": "Audacity Capital Whistleblower Policy & Reporting Guidelines",
+  "status": 200,
+  "kind": "html",
+  "chars": 26431,
+  "sha256": "e2e34a8ccd0dfbb5253b4186c699eecebb2e85c2a1eb0fe36b6166c829671db2",
+  "file": "83cad0c2b849.txt",
+  "fetchedAt": "2026-11-25T11:46:07.294Z"
+ },
+ {
+  "url": "https://audacity.capital/anti-money-laundering/",
+  "finalUrl": "https://audacity.capital/anti-money-laundering/",
+  "title": "Anti Money Laundering Policy (AML) & Compliance | Audacity Capital",
+  "status": 200,
+  "kind": "html",
+  "chars": 28262,
+  "sha256": "b1d393683f9114bfc4e2656cb72055d29383657e6f0313ee65ca06120fc01791",
+  "file": "d25fbb466f4a.txt",
+  "fetchedAt": "2026-11-25T11:46:36.021Z"
+ },
+ {
+  "url": "https://audacity.capital/fake-review-policy/",
+  "finalUrl": "https://audacity.capital/fake-review-policy/",
+  "title": "Audacity Capital Reviews: Fake Reviews Policy & Commitment",
+  "status": 200,
+  "kind": "html",
+  "chars": 29805,
+  "sha256": "dd3ffc8f257c5bfab73895bd30877ae7d2667b187334bd68399d72d1d1e2c55e",
+  "file": "852bcd19c340.txt",
+  "fetchedAt": "2026-11-25T11:47:05.273Z"
+ }
+]

@@ -1,0 +1,47 @@
+[
+ {
+  "url": "https://maventrading.com/",
+  "finalUrl": "https://maventrading.com/",
+  "title": "Forex Prop Firm: Get Funded - Get Paid | Maven Trading",
+  "status": 200,
+  "kind": "html",
+  "chars": 73293,
+  "sha256": "5b5ab33f0dcd69f0035ac15ada22cb722f3c58ba605f862d2be84ad577556d15",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:42:37.500Z",
+  "home": true
+ },
+ {
+  "url": "https://maventrading.com/terms-and-conditions",
+  "finalUrl": "https://maventrading.com/terms-and-conditions",
+  "title": "Terms & Conditions | Maven Trading",
+  "status": 200,
+  "kind": "html",
+  "chars": 43663,
+  "sha256": "8bc48c02e64db6f0b06b3435b329a6d75dda987146bc85d87199e42596bb6c9a",
+  "file": "9670a055b8ab.txt",
+  "fetchedAt": "2026-11-25T11:42:45.891Z"
+ },
+ {
+  "url": "https://maventrading.com/risk-disclosure",
+  "finalUrl": "https://maventrading.com/risk-disclosure",
+  "title": "Risk Disclosure | Trading & Investment Disclaimer | Maven Trading",
+  "status": 200,
+  "kind": "html",
+  "chars": 5614,
+  "sha256": "56ed76fb0d74ae3a4c8b41c185c70c9a351818686c2a80556ab88eb61ca333b7",
+  "file": "af6bb0278b03.txt",
+  "fetchedAt": "2026-11-25T11:42:54.324Z"
+ },
+ {
+  "url": "https://maventrading.com/faqs",
+  "finalUrl": "https://maventrading.com/faqs#prediction-markets-examples-and-how-it-works",
+  "title": "FAQ | Maven Trading Questions Answered | Maven Trading",
+  "status": 200,
+  "kind": "html",
+  "chars": 65904,
+  "sha256": "affc93d2d628bf1dda867c2002a129180bd55f270b4157b87ea872d04616c6e8",
+  "file": "ded1e932a4df.txt",
+  "fetchedAt": "2026-11-25T11:43:04.884Z"
+ }
+]

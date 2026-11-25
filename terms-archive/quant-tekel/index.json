@@ -1,0 +1,113 @@
+[
+ {
+  "url": "https://quanttekel.com/",
+  "finalUrl": "https://quanttekel.com/",
+  "title": "Home - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 14646,
+  "sha256": "72071cf30d678f86f352f82eb238fa646dede21a87e59cf555a23dfd033fb66c",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:44:33.060Z",
+  "home": true
+ },
+ {
+  "url": "https://qtfunded.quanttekel.com/terms-and-conditions-general/",
+  "finalUrl": "https://qtfunded.quanttekel.com/terms-and-conditions-general/",
+  "title": "Terms and Conditions - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 24769,
+  "sha256": "8b9d078b7b74576bb263a1e9dd4eeb34fbf9dff6c8e49fcb998e3e42827d62ba",
+  "file": "453493a78fae.txt",
+  "fetchedAt": "2026-11-25T11:44:39.167Z"
+ },
+ {
+  "url": "https://qtfunded.quanttekel.com/terms-of-service/",
+  "finalUrl": "https://qtfunded.quanttekel.com/terms-of-service/",
+  "title": "Terms of Service - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 42433,
+  "sha256": "2869c549a106022f1837dc0b7a3aac1efb5a606c4e468aef9b7006d03a3c624c",
+  "file": "043d2aa5871c.txt",
+  "fetchedAt": "2026-11-25T11:44:45.024Z"
+ },
+ {
+  "url": "https://qtfunded.quanttekel.com/wp-content/themes/qt-funded/assets/doc/QT%20Launch%20FAQ.pdf",
+  "finalUrl": "https://qtfunded.quanttekel.com/wp-content/themes/qt-funded/assets/doc/QT%20Launch%20FAQ.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 9449,
+  "sha256": "56281f3d308db417561acf8e59a739896f9b205151585cbd8cc29b9570ee1a83",
+  "file": "509e1353f2b8.txt",
+  "fetchedAt": "2026-11-25T11:44:45.175Z"
+ },
+ {
+  "url": "https://quanttekel.com/terms-and-conditions/",
+  "finalUrl": "https://quanttekel.com/terms-and-conditions/",
+  "title": "Page not found - Quant Tekel",
+  "status": 404,
+  "kind": "html",
+  "chars": 9568,
+  "sha256": "515e290245f4d928779badc0d723e20e143cf6ef7968f31f20188cd81e55dd7f",
+  "file": "08a1b76e55ba.txt",
+  "fetchedAt": "2026-11-25T11:44:52.037Z"
+ },
+ {
+  "url": "https://quanttekel.com/contact/",
+  "finalUrl": "https://quanttekel.com/contact/",
+  "title": "Contact - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 12350,
+  "sha256": "7fddb5275515e6fd761075be6b80969c649c76ce8fbccf2e5895f6c8fe8aa983",
+  "file": "caee5ed4654a.txt",
+  "fetchedAt": "2026-11-25T11:44:59.410Z"
+ },
+ {
+  "url": "https://quanttekel.com/faqs/",
+  "finalUrl": "https://quanttekel.com/faqs/",
+  "title": "Frequently Asked Questions - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 10282,
+  "sha256": "c70ed29755a0e632a1e8bc7246ddcca041ca0f2b6c9b5dc3a31b606e241bc808",
+  "file": "085d520ba5f9.txt",
+  "fetchedAt": "2026-11-25T11:45:05.824Z"
+ },
+ {
+  "url": "https://quanttekel.com/legals/",
+  "finalUrl": "https://quanttekel.com/legals/",
+  "title": "Page not found - Quant Tekel",
+  "status": 404,
+  "kind": "html",
+  "chars": 9568,
+  "sha256": "515e290245f4d928779badc0d723e20e143cf6ef7968f31f20188cd81e55dd7f",
+  "file": "6a0cd89ee44f.txt",
+  "fetchedAt": "2026-11-25T11:45:13.139Z"
+ },
+ {
+  "url": "https://quanttekel.com/terms-conditions/",
+  "finalUrl": "https://quanttekel.com/terms-conditions/",
+  "title": "Terms & Conditions - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 37309,
+  "sha256": "49d2726e8afe305b3e8a2d578e6c2ea39bc36f09650360733f739817d7a16825",
+  "file": "7860fe4d05e4.txt",
+  "fetchedAt": "2026-11-25T11:45:19.288Z"
+ },
+ {
+  "url": "https://quanttekel.com/quant-tekel-cards-terms-and-conditions-aml-policy/",
+  "finalUrl": "https://quanttekel.com/quant-tekel-cards-terms-and-conditions-aml-policy/",
+  "title": "Quant Tekel Cards - Terms and Conditions & AML Policy - Quant Tekel",
+  "status": 200,
+  "kind": "html",
+  "chars": 210359,
+  "sha256": "f17cc43579f9a5b6313e441bbe10c069b8dfd0e24489fed66ecedc7888375979",
+  "file": "daab1472451e.txt",
+  "fetchedAt": "2026-11-25T11:45:25.630Z"
+ }
+]

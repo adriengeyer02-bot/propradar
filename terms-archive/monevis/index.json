@@ -1,0 +1,69 @@
+[
+ {
+  "url": "https://monevis.com/",
+  "finalUrl": "https://monevis.com/",
+  "title": "Monevis® | Next-Gen Prop Trading | Simple Path to Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 5394,
+  "sha256": "a00f45c8915df4b9c1e5b7d1811c0e907e8fb025347cbe772db1b8c3b74bbc30",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:06.542Z",
+  "home": true
+ },
+ {
+  "url": "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf",
+  "finalUrl": "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf",
+  "title": "",
+  "status": 404,
+  "kind": "html",
+  "chars": 568,
+  "sha256": "e286b7b5bc681d1c0e34bd049d247967a078d579d1bd8b4e610614a7132926ff",
+  "file": "98acf8ddba8a.txt",
+  "fetchedAt": "2026-11-25T11:45:12.529Z"
+ },
+ {
+  "url": "https://monevis.com/payouts",
+  "finalUrl": "https://monevis.com/payouts",
+  "title": "Monevis® | Payouts",
+  "status": 200,
+  "kind": "html",
+  "chars": 2826,
+  "sha256": "4a1a18e207540abe4b15ef89054e9d8853234d33ff284d4c34d0b84272e3574a",
+  "file": "b7d2d15b1e8b.txt",
+  "fetchedAt": "2026-11-25T11:45:18.521Z"
+ },
+ {
+  "url": "https://help.monevis.com/en/articles/9019769-hft-trading",
+  "finalUrl": "https://help.monevis.com/en/articles/9019769-hft-trading",
+  "title": "DNS points to prohibited IP | help.monevis.com | Cloudflare",
+  "status": 403,
+  "kind": "html",
+  "chars": 664,
+  "sha256": "602216f7bbeb83fa5a744e12414aca518935e54916f062316f488bae808cfdc0",
+  "file": "a82b5a94461b.txt",
+  "fetchedAt": "2026-11-25T11:45:24.209Z"
+ },
+ {
+  "url": "https://help.monevis.com/en/articles/9961225-news-trading",
+  "finalUrl": "https://help.monevis.com/en/articles/9961225-news-trading",
+  "title": "DNS points to prohibited IP | help.monevis.com | Cloudflare",
+  "status": 403,
+  "kind": "html",
+  "chars": 664,
+  "sha256": "5be8b70722be1e66dba1e22a4b70b47d5d049d984f262851800652aaf7fe2980",
+  "file": "11c8052df3a1.txt",
+  "fetchedAt": "2026-11-25T11:45:29.614Z"
+ },
+ {
+  "url": "https://help.monevis.com/en/articles/9620576-can-i-use-copy-trading",
+  "finalUrl": "https://help.monevis.com/en/articles/9620576-can-i-use-copy-trading",
+  "title": "DNS points to prohibited IP | help.monevis.com | Cloudflare",
+  "status": 403,
+  "kind": "html",
+  "chars": 664,
+  "sha256": "5f9d2a231eb226596b6c6134931d6ea4e142048930d461c5b266ea2668766d4d",
+  "file": "d7adef133fc8.txt",
+  "fetchedAt": "2026-11-25T11:45:34.920Z"
+ }
+]

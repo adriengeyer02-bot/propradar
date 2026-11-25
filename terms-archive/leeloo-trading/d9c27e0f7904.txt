@@ -1,0 +1,96 @@
+URL: https://www.leelootrading.com/terms-of-service
+FINAL: https://www.leelootrading.com/terms-of-service
+TITLE: Leeloo
+FETCHED: 2026-11-25T11:42:19.229Z
+
+Home
+
+How it works
+
+For beginners
+
+Resources
+
+FAQ
+
+Get started
+
+Log in
+
+Page Not Found
+
+404 - Oops Page
+Not Found in Data.
+
+Oops! The web page you’re looking for doesn’t
+ exist. Please click the below button to get back to the home.
+
+Back To Homepage
+
+Performance Based Trading and Contests by  Leeloo Trading, Montana USA
+
+Subscribe Us
+
+Pages
+
+Home
+
+How it works
+
+For beginners
+
+Resources
+
+FAQ
+
+© 2026 Leeloo
+
+Terms & Conditions
+
+Privacy Policy
+
+Risk Disclosure
+
+Performance Disclosure
+
+Copyright© 2026 Leeloo Trading, All rights reserved.
+
+Leeloo™ provides simulated trading programs for educational, informational, and practice purposes only. All trading activity occurs in a simulated environment using virtual funds; no real capital is traded and no live market execution occurs. Nothing on this website constitutes an offer, solicitation, or recommendation to buy or sell any financial instrument. Leeloo™ does not provide investment advice and is not a broker-dealer, futures commission merchant, or financial advisor.
+
+Simulated trading results have limitations and do not represent actual trading. Past or simulated performance does not guarantee future results. Participation in Leeloo™ programs is voluntary and does not create an employment relationship. Reward payouts, if offered, are discretionary and subject to program eligibility, compliance requirements, and applicable laws and tax obligations.
+
+Use of our services is subject to our Terms of Use, User Agreement, Privacy Policy, and Risk Disclosure. Services are not offered where prohibited by law.
+
+--- iframe ---
+
+
+
+
+
+
+
+
+	
+		// Keep these keys in sync with DarkModeProvider.tsx
+		var userDarkMode = localStorage.getItem("dark-mode") === "true"
+		var overrideSystem = localStorage.getItem("dark-mode-override-system") === "true"
+		var systemDarkMode = matchMedia("(prefers-color-scheme: dark)").matches
+		var isDarkMode = overrideSystem ? userDarkMode : systemDarkMode
+		if (isDarkMode) {
+			document.body.classList.add("framer-theme-dark")
+		}
+
+		// Set release channel as class on body.
+		var framerReleaseChannel = window.framerRelease && window.framerRelease.channel
+		if (framerReleaseChannel) {
+			document.body.classList.add("framer-release-" + framerReleaseChannel)
+		}
+
+	
+
+
+
+
+
+
+

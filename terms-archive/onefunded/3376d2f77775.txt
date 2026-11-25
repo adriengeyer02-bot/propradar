@@ -1,0 +1,96 @@
+URL: https://help.onefunded.com/max-exposure-rule/
+FINAL: https://help.onefunded.com/max-exposure-rule/
+TITLE: Max Exposure Rule | OneFunded Help Center
+FETCHED: 2026-11-25T11:51:25.740Z
+
+Help Center
+Visit onefunded.com
+Home
+Risk Rules
+Max Exposure Rule
+Max Exposure Rule
+4 min. read
+last update: 10.14.2026
+
+To promote responsible risk management, traders must not open or maintain any trade idea where the combined floating loss exceeds the Max Exposure limit for their account.
+
+The limit is measured against your account Equity at the moment the trade idea was opened.
+
+For challenge sizes 100k and 200k, a 2% Exposure Loss limit is applied (accounts of 100k and 200k purchased before 21 August 2026 remain on a 3% limit)
+For smaller account sizes, a 3% Exposure Loss limit is applied.
+For Instant accounts, the Max Exposure limit is 1%.
+
+This rule is designed to prevent excessive exposure on a single trade idea, even when that exposure is split across multiple positions or correlated instruments.
+
+What Does This Rule Apply To?
+
+The Max Exposure Rule applies to:
+Individual positions
+Layered entries
+Correlated instruments
+Aggregated directional exposure
+The rule is evaluated at the level of the trade idea, not only individual trades. It is important that a trader understand that splitting exposure across correlated instruments does not reduce the total measured risk.
+Examples of Aggregated Exposure
+
+The following may be considered one combined trade idea:
+
+Multiple XAUUSD buy positions
+NAS100 buy + US30 buy + SPX500 buy
+EURUSD buy + GBPUSD buy
+BTCUSD long + ETHUSD long
+Soft and Hard Breach System
+
+To ensure fair compliance with the rule and to avoid misunderstandings, OneFunded applies a Soft and Hard Breach system. How a breach is treated depends on your account type and, on challenge accounts, on the date the account was purchased.
+
+Instant accounts
+
+There is no warning stage on Instant accounts. Reaching the 1% limit is a hard breach: the account is deactivated immediately, from the first occurrence.
+
+Challenge accounts purchased on or after 13 October 2026
+
+This is the structure that applies to challenges bought today, and it covers Flash, Core, Value and Entry. The first violations are treated as warnings before enforcement action is taken.
+
+1st breach on the account: Soft breach — warning only
+2nd breach on the account: Soft breach — warning only
+3rd breach on the account: Hard breach — the account is deactivated
+
+This structure is intended to give traders a fair opportunity to understand and correct their risk management behaviour before the account is affected.
+
+Previous structures
+
+Challenges purchased between 12 and 13 October 2026
+
+Four breaches rather than three:
+
+1st breach on the account: Soft breach — warning only
+2nd breach on the account: Soft breach — warning only
+3rd breach on the account: Soft breach — warning only
+4th breach on the account: Hard breach — the account is deactivated
+
+Challenges purchased before 12 October 2026
+
+On these accounts, breaches do not deactivate the account automatically:
+
+1st breach on the account: Soft breach — warning only
+2nd breach on the account: Soft breach — warning only
+3rd breach on the account: Final warning
+
+After repeated breaches, the account may be subject to further Risk & Compliance review and stronger enforcement action. 
+
+How the structure is assigned
+
+The rule set is fixed when the account is purchased and does not change afterwards. If you purchased your challenge before 13 October 2026, it stays on the previous structure for its whole lifetime, including after you progress to the next evaluation phase or to a funded account.
+
+Breaches are counted per account. Each evaluation phase runs on a separate account, so the count starts again when you progress to the next phase.
+
+General
+
+OneFunded reserves the right to review the full trading context when assessing any breach, including position size, floating loss, account equity, correlated exposure, and whether the behaviour appears intentional or repeated.
+
+This rule is enforced to promote disciplined risk management practices among traders and to help ensure prudent control of trading exposure.
+
+Was this article helpful?
+Yes
+No
+OneFunded
+Powered by

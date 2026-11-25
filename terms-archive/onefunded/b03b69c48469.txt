@@ -1,0 +1,96 @@
+URL: https://help.onefunded.com/consistency-rule-best-day-rule/
+FINAL: https://help.onefunded.com/consistency-rule-best-day-rule/
+TITLE: Consistency Rule (Best Day Rule) | OneFunded Help Center
+FETCHED: 2026-11-25T11:51:20.505Z
+
+Help Center
+Visit onefunded.com
+Home
+Risk Rules
+Consistency Rule (Best Day Rule)
+Consistency Rule (Best Day Rule)
+3 min. read
+last update: 10.14.2026
+
+Effective scope: applies to both the Evaluation phases and the Funded (OneFunded Trader) phase, depending on Challenge type.
+
+What is the Consistency (Best Day Profit) rule?
+
+! Update took place on Aug, 20, 2026.
+
+
+Consistency Rule is fixed to 15% on Instant Accounts.
+
+The Consistency Rule promotes steady performance instead of relying on a single outsized win. Your best single day cannot represent more than the Cap of the profit you made on profitable days.
+
+For challenges purchased before Aug, 20:
+The Consistency rule limits how much of your total profit can come from your single best (highest-profit) day in the current period. It promotes steady performance instead of relying on a single outsized win.
+Key idea: your Best Day Profit Ratio must be at or below the phase’s cap before you can pass a phase (Evaluation) or request a payout (Funded).
+
+! Update took place on Jun, 26, 2026. New limits apply to all challenge account sizes from 5K to 50K purchased from Jun, 26, while old limits keep being applied to challenges purchased before the date, to accounts sizes 100K, 200K before and after the update.
+
+Consistency caps at Evaluation stage:
+Challenge	Old Limit	New Limit
+Core	50%	Off
+Value	40%	Off
+Flash	50%	50%
+Entry	 	Off
+Consistency caps at Funded stage:
+Challenge	Old Limit	New Limit
+Core	30%	50%
+Value	30%	50%
+Flash	30%	50%
+Entry	 	30%
+Instant	20%	15%
+
+ 
+
+How we calculate it
+
+Definitions:
+UTC day = 00:00–23:59 UTC+0
+Best Day Profit = highest net closed profit you made in any single UTC day during the current phase/payout cycle. 
+Profitable day= a UTC day (00:00-23:59) whose net closed profit > 0.
+
+Formula:
+Best Day Profit Ratio = Best Day Profit ÷ Total Profit from profitable days
+
+❗Days you closed at a loss aren’t counted here.
+
+Thresholds:
+Evaluation phases: must be ≤ 50%* to pass to the next step/funding.
+Funded phase: must be ≤ 30%* to be eligible for payout.
+*depending on the challenge type and date of purchase
+
+When is it checked?
+
+Every day: We recalculate your Best Day Profit Ratio automatically at 00:00 UTC+0 for the current phase or payout cycle.
+Visible in your Dashboard: You can monitor the current ratio anytime in your OneFunded Dashboard, alongside the applicable cap.
+Used at milestones: When you reach the profit target (during the Evaluation phase) or submit a payout request (Funded phase), the platform uses the most recent daily calculation to determine eligibility. If the ratio is above the cap, nothing breaches – you simply continue trading until subsequent profitable days bring the ratio within the limit.
+
+When does the ratio reset?
+
+Evaluation phase: resets at the start of each phase.
+Funded phase: resets after each payout is processed, starting a new payout cycle.
+
+What if my ratio is above the cap?
+
+This rule doesn’t breach your account. It only means you need to continue trading so that your new profitable days dilute the impact of your biggest day until the ratio falls at or below the cap.
+
+Examples:
+
+50% cap example:
+Profit in day 1: +$1500. Best Day Profit: $1500. Total Profit from profitable days: $1500 ⬆️. 
+Ratio: $1500/$1500 = 100% 🆕
+Profit in day 2: +$500. Best Day Profit: $1500. Total Profit from profitable days: $2000 ⬆️. 
+Ratio: $1500/$2000 = 75% ⬇️
+Profit in day 3: -$500. Best Day Profit: $1500. Total Profit from profitable days: $2000 ⬆️.
+Ratio: $1500/$2000 = 75% ⬇️
+Profit in day 4: +$1000. Best Day Profit: $1500. Total Profit from profitable days: $3000 ⬆️.
+Ratio: $1500/$3000 = 50% ⬇️
+
+Was this article helpful?
+Yes
+No
+OneFunded
+Powered by

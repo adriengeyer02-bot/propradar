@@ -1,0 +1,110 @@
+URL: https://www.leelootrading.com/performance-disclosure
+FINAL: https://www.leelootrading.com/performance-disclosure
+TITLE: Leeloo
+FETCHED: 2026-11-25T11:42:40.255Z
+
+Home
+
+How it works
+
+For beginners
+
+Resources
+
+FAQ
+
+Get started
+
+Log in
+
+Performance disclosure
+
+Performance disclosure
+
+Last Updated: Mar 31, 2026, 12:00 AM
+
+User-Created Content and Hypothetical Performance Disclosure
+
+Risk
+
+Futures trading contains substantial risk and is not for every investor. An investor could potentially lose all or more than the initial investment. Risk capital is money that can be lost without jeopardizing ones’ financial security or life style. Only risk capital should be used for trading and only those with sufficient risk capital should consider trading. Past performance is not necessarily indicative of future results.
+
+Hypothetical Performance
+
+Hypothetical performance results have many inherent limitations, some of which are last updated August 9th, 2017 described below. No representation is being made that any account will or is likely to achieve profits or losses similar to those stated herein; in fact, there are frequently sharp differences between hypothetical performance results and the actual results subsequently achieved by any particular trading program. One of the limitations of hypothetical performance results is that they are generally prepared with the benefit of hindsight. In addition, hypothetical trading does not involve financial risk, and no hypothetical trading record can completely account for the impact of financial risk of actual trading. for example, the ability to withstand losses or to adhere to a particular trading program in spite of trading losses are material points which can also adversely affect actual trading results. There are numerous other factors related to the markets in general or to the implementation of any specific trading program which cannot be fully accounted for in the preparation of hypothetical performance results and all which can adversely affect trading results.
+
+User-Created Content/Testimonials
+
+User-created content/Testimonials appearing on this website may not be representative of other clients or customers and is not a guarantee of future performance or success.
+
+Live Trade Room and Indicators
+
+Any information and presentation is for educational purposes only and the opinions expressed are those of the presenter only. All,trades presented shouldbeconsidered hypothetical and should not be expected to be replicated in alive trading account.
+
+Performance Based Trading and Contests by  Leeloo Trading, Montana USA
+
+Subscribe Us
+
+Pages
+
+Home
+
+How it works
+
+For beginners
+
+Resources
+
+FAQ
+
+© 2026 Leeloo
+
+Terms & Conditions
+
+Privacy Policy
+
+Risk Disclosure
+
+Performance Disclosure
+
+Copyright© 2026 Leeloo Trading, All rights reserved.
+
+Leeloo™ provides simulated trading programs for educational, informational, and practice purposes only. All trading activity occurs in a simulated environment using virtual funds; no real capital is traded and no live market execution occurs. Nothing on this website constitutes an offer, solicitation, or recommendation to buy or sell any financial instrument. Leeloo™ does not provide investment advice and is not a broker-dealer, futures commission merchant, or financial advisor.
+
+Simulated trading results have limitations and do not represent actual trading. Past or simulated performance does not guarantee future results. Participation in Leeloo™ programs is voluntary and does not create an employment relationship. Reward payouts, if offered, are discretionary and subject to program eligibility, compliance requirements, and applicable laws and tax obligations.
+
+Use of our services is subject to our Terms of Use, User Agreement, Privacy Policy, and Risk Disclosure. Services are not offered where prohibited by law.
+
+--- iframe ---
+
+
+
+
+
+
+
+
+	
+		// Keep these keys in sync with DarkModeProvider.tsx
+		var userDarkMode = localStorage.getItem("dark-mode") === "true"
+		var overrideSystem = localStorage.getItem("dark-mode-override-system") === "true"
+		var systemDarkMode = matchMedia("(prefers-color-scheme: dark)").matches
+		var isDarkMode = overrideSystem ? userDarkMode : systemDarkMode
+		if (isDarkMode) {
+			document.body.classList.add("framer-theme-dark")
+		}
+
+		// Set release channel as class on body.
+		var framerReleaseChannel = window.framerRelease && window.framerRelease.channel
+		if (framerReleaseChannel) {
+			document.body.classList.add("framer-release-" + framerReleaseChannel)
+		}
+
+	
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+[
+ {
+  "url": "https://traderslaunch.com/",
+  "finalUrl": "https://traderslaunch.com/",
+  "title": "Traders Launch | Futures Prop Firm & Funded Trading Accounts",
+  "status": 200,
+  "kind": "html",
+  "chars": 11740,
+  "sha256": "5c1d3e97851090a8e11163f7331726a6ca425e8f6d9288e13d822513d3d2d116",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:23.200Z",
+  "home": true
+ },
+ {
+  "url": "https://traderslaunch.com/payout-rules",
+  "finalUrl": "https://traderslaunch.com/payout-rules",
+  "title": "Payout Rules | Traders Launch",
+  "status": 200,
+  "kind": "html",
+  "chars": 2663,
+  "sha256": "0ed91c377f57989a67bcb24f58f4be34fb58721f8e1d1b3d5bed75450aeaa554",
+  "file": "0032bdb23a8c.txt",
+  "fetchedAt": "2026-11-25T11:45:28.960Z"
+ },
+ {
+  "url": "https://www.traderslaunch.com/terms",
+  "finalUrl": "https://www.traderslaunch.com/terms",
+  "title": "Terms of Service | Traders Launch",
+  "status": 200,
+  "kind": "html",
+  "chars": 24097,
+  "sha256": "114aced95c676eba299b812d806eb2f72c426b741cc350662b2986c39deb8385",
+  "file": "cf9b5edcee9b.txt",
+  "fetchedAt": "2026-11-25T11:45:34.992Z"
+ },
+ {
+  "url": "https://traderslaunch.com/terms",
+  "finalUrl": "https://traderslaunch.com/terms",
+  "title": "Terms of Service | Traders Launch",
+  "status": 200,
+  "kind": "html",
+  "chars": 24097,
+  "sha256": "b50b8afceb0ec987aeb3369d1fc3e7bc818db343879f14f4dfb3faa10756ed6a",
+  "file": "f6159c55b4f7.txt",
+  "fetchedAt": "2026-11-25T11:45:40.767Z"
+ },
+ {
+  "url": "https://traderslaunch.com/results",
+  "finalUrl": "https://traderslaunch.com/results",
+  "title": "Results & Payouts | Traders Launch",
+  "status": 200,
+  "kind": "html",
+  "chars": 8684,
+  "sha256": "640081993a5807fe5bd9cd0dcb7dc4837d8384ba3d1e44e12735ae55633a43c7",
+  "file": "9247241cfd0b.txt",
+  "fetchedAt": "2026-11-25T11:45:47.133Z"
+ },
+ {
+  "url": "https://traderslaunch.com/faq",
+  "finalUrl": "https://traderslaunch.com/faq",
+  "title": "FAQ - Traders Launch | Traders Launch",
+  "status": 200,
+  "kind": "html",
+  "chars": 12408,
+  "sha256": "4ea9ac4ccdb47784843a675e1cf2b7a4405bf18027a7b10d88041a0668b838ea",
+  "file": "96ffcbadbfc1.txt",
+  "fetchedAt": "2026-11-25T11:45:58.902Z"
+ },
+ {
+  "url": "https://traderslaunch.com/futures/rules",
+  "finalUrl": "https://traderslaunch.com/futures/rules",
+  "title": "Futures Evaluation Rules",
+  "status": 200,
+  "kind": "html",
+  "chars": 3680,
+  "sha256": "bc08774c1447e66abc9bfaf8c76b722af1c622957afd23e5ff714f22b33fd89d",
+  "file": "0fbb283a810e.txt",
+  "fetchedAt": "2026-11-25T11:46:04.641Z"
+ },
+ {
+  "url": "https://traderslaunch.com/crypto/rules",
+  "finalUrl": "https://traderslaunch.com/crypto/rules",
+  "title": "Crypto Evaluation Rules",
+  "status": 200,
+  "kind": "html",
+  "chars": 2441,
+  "sha256": "b82438b401d73b059e3cc192935cf85eb5398c1213bb93594c601edc3a294cbd",
+  "file": "587af92077e9.txt",
+  "fetchedAt": "2026-11-25T11:46:10.500Z"
+ }
+]

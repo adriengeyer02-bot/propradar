@@ -1,0 +1,22 @@
+[
+ {
+  "url": "https://fxci.com/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fxci.com/\nCall log:\n  - navigating to \"https://fxci.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:47:16.959Z"
+ },
+ {
+  "url": "https://help.fxci.com/are-eas-and-hft-bots-allowed/",
+  "error": "Error: page.goto: net::ERR_SSL_PROTOCOL_ERROR at https://help.fxci.com/are-eas-and-hft-bots-allowed/\nCall log:\n  - navigating to \"https://help.fxci.com/are-eas-and-hft-bots-allowed/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:47:17.684Z"
+ },
+ {
+  "url": "https://fxci.com/terms-and-conditions/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fxci.com/terms-and-conditions/\nCall log:\n  - navigating to \"https://fxci.com/terms-and-conditions/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:47:17.807Z"
+ },
+ {
+  "url": "https://fxci.com/refund-policy/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fxci.com/refund-policy/\nCall log:\n  - navigating to \"https://fxci.com/refund-policy/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:47:17.901Z"
+ }
+]

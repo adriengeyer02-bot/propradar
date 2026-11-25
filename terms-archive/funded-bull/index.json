@@ -1,0 +1,69 @@
+[
+ {
+  "url": "https://fundedbull.com/",
+  "finalUrl": "https://fundedbull.com/",
+  "title": "FundedBull | Online Trading Evaluation and Funding Challenges",
+  "status": 200,
+  "kind": "html",
+  "chars": 6494,
+  "sha256": "3068e76c5e297466c91647f679646fcdf0bdaba24151ee5fc3fcabe1b6da42e6",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:11.862Z",
+  "home": true
+ },
+ {
+  "url": "https://fundedbull.com/trading-rules/",
+  "finalUrl": "https://fundedbull.com/trading-rules",
+  "title": "FundedBull Trading rules",
+  "status": 200,
+  "kind": "html",
+  "chars": 7803,
+  "sha256": "d532029a3f91fc8d8fef152c6eefbadc497ccae6036ffae2c2488338bebd5b8b",
+  "file": "b09c19696fd4.txt",
+  "fetchedAt": "2026-11-25T11:43:17.325Z"
+ },
+ {
+  "url": "https://fundedbull.com/terms/",
+  "finalUrl": "https://fundedbull.com/terms",
+  "title": "FundedBull Terms of Use",
+  "status": 200,
+  "kind": "html",
+  "chars": 65152,
+  "sha256": "ae3e41b22890ace8bdde1ce6a7f660ecd69c372e8e98d3ecaf6975b863c137bb",
+  "file": "49017cd6ee2d.txt",
+  "fetchedAt": "2026-11-25T11:43:22.836Z"
+ },
+ {
+  "url": "https://fundedbull.com/terms-of-use",
+  "finalUrl": "https://fundedbull.com/terms-of-use",
+  "title": "404 - Page not found: /terms-of-use | Nuxt",
+  "status": 404,
+  "kind": "html",
+  "chars": 48,
+  "sha256": "e17237273b1ad1769e0c1c88b7d66dd8e6452e09e5009ca01b1063cb1a05deca",
+  "file": "5b1d4a3fec5f.txt",
+  "fetchedAt": "2026-11-25T11:43:28.291Z"
+ },
+ {
+  "url": "https://fundedbull.com/trading-rules",
+  "finalUrl": "https://fundedbull.com/trading-rules",
+  "title": "FundedBull Trading rules",
+  "status": 200,
+  "kind": "html",
+  "chars": 7803,
+  "sha256": "d532029a3f91fc8d8fef152c6eefbadc497ccae6036ffae2c2488338bebd5b8b",
+  "file": "a7d0b9e75afe.txt",
+  "fetchedAt": "2026-11-25T11:43:33.766Z"
+ },
+ {
+  "url": "https://fundedbull.com/terms",
+  "finalUrl": "https://fundedbull.com/terms",
+  "title": "FundedBull Terms of Use",
+  "status": 200,
+  "kind": "html",
+  "chars": 65152,
+  "sha256": "ae3e41b22890ace8bdde1ce6a7f660ecd69c372e8e98d3ecaf6975b863c137bb",
+  "file": "15de37bfe6e7.txt",
+  "fetchedAt": "2026-11-25T11:43:39.065Z"
+ }
+]

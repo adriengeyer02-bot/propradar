@@ -1,0 +1,69 @@
+[
+ {
+  "url": "https://tigerfunded.com/",
+  "finalUrl": "https://tigerfunded.com/",
+  "title": "TigerFunded | Multi-Award-Winning Prop Firm",
+  "status": 200,
+  "kind": "html",
+  "chars": 15032,
+  "sha256": "a5a66b7806913b78bbd88a35f74a19385404988a5c8daa830936e36c5f6fda92",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:46:40.529Z",
+  "home": true
+ },
+ {
+  "url": "https://tigerfunded.com/payouts",
+  "finalUrl": "https://tigerfunded.com/payouts",
+  "title": "Tiger Funded Payouts: $10.2M+ Paid to Traders",
+  "status": 200,
+  "kind": "html",
+  "chars": 11381,
+  "sha256": "f1812c10581a12e22c41578994c1c165cd8bb6dc796dc9a506ce92acbb3677c6",
+  "file": "d1b563f354e8.txt",
+  "fetchedAt": "2026-11-25T11:46:49.769Z"
+ },
+ {
+  "url": "https://tigerfunded.com/rules",
+  "finalUrl": "https://tigerfunded.com/rules",
+  "title": "Trading Rules · Tiger Funded",
+  "status": 200,
+  "kind": "html",
+  "chars": 11536,
+  "sha256": "bbb854e1cb3d5d49224875090b28e7f3409c6cf085e3cef0eed3a3d4995bfff3",
+  "file": "74513d044eb2.txt",
+  "fetchedAt": "2026-11-25T11:47:11.102Z"
+ },
+ {
+  "url": "https://tigerfunded.com/faq",
+  "finalUrl": "https://tigerfunded.com/faq",
+  "title": "Tiger Funded · Faq",
+  "status": 200,
+  "kind": "html",
+  "chars": 36301,
+  "sha256": "f86be4592e6dbd2585105dcc757638d802a96f560736baccfdc1e5c2ec64f3f6",
+  "file": "857af8ef571a.txt",
+  "fetchedAt": "2026-11-25T11:47:34.726Z"
+ },
+ {
+  "url": "https://tigerfunded.com/terms-of-service",
+  "finalUrl": "https://tigerfunded.com/terms-of-service",
+  "title": "Terms of Service - TigerFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 17779,
+  "sha256": "02acf379fdc6827a337e7f3fb8e0592814372e012ede17dfb6a353da341b7e2e",
+  "file": "ea715dc642be.txt",
+  "fetchedAt": "2026-11-25T11:47:41.201Z"
+ },
+ {
+  "url": "https://tigerfunded.com/refund-policy",
+  "finalUrl": "https://tigerfunded.com/refund-policy",
+  "title": "Refund policy",
+  "status": 200,
+  "kind": "html",
+  "chars": 7834,
+  "sha256": "5372ac3cd41850a383799cb0bc6472a71e7f19221ac0545019770f62afbf1988",
+  "file": "b53cbd1de7a8.txt",
+  "fetchedAt": "2026-11-25T11:47:47.736Z"
+ }
+]

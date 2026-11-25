@@ -1,0 +1,47 @@
+[
+ {
+  "url": "https://lv.ls/",
+  "finalUrl": "https://lv.ls/",
+  "title": "Home - LEVELS",
+  "status": 200,
+  "kind": "html",
+  "chars": 4790,
+  "sha256": "9ca469cb0f8e464e43ff68e665aaa6b66bd9d5659509d5acd2b98ed86a88ce7b",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:35.343Z",
+  "home": true
+ },
+ {
+  "url": "https://lv.ls/terms-and-conditions/",
+  "finalUrl": "https://lv.ls/terms-and-conditions/",
+  "title": "Understanding Levels Trading Terms and Conditions - LEVELS",
+  "status": 200,
+  "kind": "html",
+  "chars": 24988,
+  "sha256": "27fbe9f7fa8849353fe87c06be65e66b92de54cde2795351731ca601541c3d1b",
+  "file": "a636ebdb3ab5.txt",
+  "fetchedAt": "2026-11-25T11:45:41.367Z"
+ },
+ {
+  "url": "https://lv.ls/faq/",
+  "finalUrl": "https://lv.ls/faq/",
+  "title": "Frequently Asked Questions - LEVELS",
+  "status": 200,
+  "kind": "html",
+  "chars": 7414,
+  "sha256": "0766ffa202712c77acabf08061310129f0b2f957f85ffb9a0f2632890ea7152b",
+  "file": "af8de1996d1e.txt",
+  "fetchedAt": "2026-11-25T11:45:47.411Z"
+ },
+ {
+  "url": "https://lv.ls/contract/",
+  "finalUrl": "https://lv.ls/contract/",
+  "title": "Contract - LEVELS",
+  "status": 200,
+  "kind": "html",
+  "chars": 1363,
+  "sha256": "10cc97089dd9ef1d3120cc9c932b3ba00526f5e6dde87e7d8d465485fe74e051",
+  "file": "9453c9a9e751.txt",
+  "fetchedAt": "2026-11-25T11:45:53.347Z"
+ }
+]

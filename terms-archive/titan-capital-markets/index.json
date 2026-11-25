@@ -1,0 +1,80 @@
+[
+ {
+  "url": "https://titancapital.tgmarkets.com/",
+  "finalUrl": "https://titancapital.tgmarkets.com/",
+  "title": "Home - Titan Capital Markets",
+  "status": 200,
+  "kind": "html",
+  "chars": 40978,
+  "sha256": "7202c734c575a82149112b4ca8a677d6faf6c0a9d36b1c6650319809b79f95a0",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:44:59.603Z",
+  "home": true
+ },
+ {
+  "url": "https://titancapital.tgmarkets.com/terms-conditions/",
+  "finalUrl": "https://titancapital.tgmarkets.com/terms-conditions/",
+  "title": "Proprietary Trading Terms & Conditions - Titan Capital Markets",
+  "status": 200,
+  "kind": "html",
+  "chars": 34017,
+  "sha256": "56edcf140dcea5f692d9d70b4ae765eacb83f930f3481e970476afc8b86a286b",
+  "file": "addf2685d729.txt",
+  "fetchedAt": "2026-11-25T11:45:05.695Z"
+ },
+ {
+  "url": "https://support.tgmarkets.com/articles/hard-soft-breaches/",
+  "finalUrl": "https://support.tgmarkets.com/articles/hard-soft-breaches/",
+  "title": "Service Suspended",
+  "status": 503,
+  "kind": "html",
+  "chars": 45,
+  "sha256": "fd8226f8742900cd915231bac3e031d203edfbc28c6f0a9ac904eb59f283ce56",
+  "file": "f973e051336d.txt",
+  "fetchedAt": "2026-11-25T11:45:11.002Z"
+ },
+ {
+  "url": "https://support.tgmarkets.com/articles/gambling-rule/",
+  "finalUrl": "https://support.tgmarkets.com/articles/gambling-rule/",
+  "title": "Service Suspended",
+  "status": 503,
+  "kind": "html",
+  "chars": 45,
+  "sha256": "fd8226f8742900cd915231bac3e031d203edfbc28c6f0a9ac904eb59f283ce56",
+  "file": "06591c95aeb0.txt",
+  "fetchedAt": "2026-11-25T11:45:16.196Z"
+ },
+ {
+  "url": "https://support.tgmarkets.com/articles/performance-fee-policy",
+  "finalUrl": "https://support.tgmarkets.com/articles/performance-fee-policy",
+  "title": "Service Suspended",
+  "status": 503,
+  "kind": "html",
+  "chars": 45,
+  "sha256": "fd8226f8742900cd915231bac3e031d203edfbc28c6f0a9ac904eb59f283ce56",
+  "file": "4769dd0d6c16.txt",
+  "fetchedAt": "2026-11-25T11:45:21.408Z"
+ },
+ {
+  "url": "https://support.tgmarkets.com/articles/1-step-evaluation-rules",
+  "finalUrl": "https://support.tgmarkets.com/articles/1-step-evaluation-rules",
+  "title": "Service Suspended",
+  "status": 503,
+  "kind": "html",
+  "chars": 45,
+  "sha256": "fd8226f8742900cd915231bac3e031d203edfbc28c6f0a9ac904eb59f283ce56",
+  "file": "6e3bea468f19.txt",
+  "fetchedAt": "2026-11-25T11:45:26.589Z"
+ },
+ {
+  "url": "https://support.tgmarkets.com/",
+  "finalUrl": "https://support.tgmarkets.com/",
+  "title": "Service Suspended",
+  "status": 503,
+  "kind": "html",
+  "chars": 45,
+  "sha256": "fd8226f8742900cd915231bac3e031d203edfbc28c6f0a9ac904eb59f283ce56",
+  "file": "250eac4eb561.txt",
+  "fetchedAt": "2026-11-25T11:45:31.781Z"
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "url": "https://myfxcapital.com/",
+  "finalUrl": "https://myfxcapital.com/lander",
+  "title": "",
+  "status": 200,
+  "kind": "html",
+  "chars": 397,
+  "sha256": "d00e08832e716ae1f8f0a071deafbe77088cf7b775b442d6413ca651557b1adc",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:20.956Z",
+  "home": true
+ },
+ {
+  "url": "https://myfxcapital.com/terms-and-conditions/",
+  "finalUrl": "https://myfxcapital.com/lander",
+  "title": "",
+  "status": 200,
+  "kind": "html",
+  "chars": 397,
+  "sha256": "d00e08832e716ae1f8f0a071deafbe77088cf7b775b442d6413ca651557b1adc",
+  "file": "906fa5c41e35.txt",
+  "fetchedAt": "2026-11-25T11:45:41.131Z"
+ },
+ {
+  "url": "https://myfxcapital.com/lander",
+  "finalUrl": "https://myfxcapital.com/lander",
+  "title": "",
+  "status": 200,
+  "kind": "html",
+  "chars": 397,
+  "sha256": "d00e08832e716ae1f8f0a071deafbe77088cf7b775b442d6413ca651557b1adc",
+  "file": "a6e47ece3a4f.txt",
+  "fetchedAt": "2026-11-25T11:46:01.296Z"
+ }
+]

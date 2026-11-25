@@ -1,0 +1,25 @@
+[
+ {
+  "url": "https://myfundedcapital.com/",
+  "finalUrl": "https://myfundedcapital.com/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 267,
+  "sha256": "f04f3e879c5822e379e5cfc98277093478ceacb212b1fece0754f4d0fda580ca",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:49:05.673Z",
+  "home": true
+ },
+ {
+  "url": "https://myfundedcapital.com/terms-and-conditions/",
+  "finalUrl": "https://myfundedcapital.com/2-step-challenge/",
+  "title": "Just a moment...",
+  "status": 200,
+  "kind": "html",
+  "chars": 267,
+  "sha256": "54039bd3a8a262855f975c499e074588d15d6329263a2284a1ecc4fa1b4ac5e3",
+  "file": "9097c99d9885.txt",
+  "fetchedAt": "2026-11-25T11:49:11.852Z"
+ }
+]

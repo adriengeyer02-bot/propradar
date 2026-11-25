@@ -1,0 +1,358 @@
+URL: https://elitetraderfunding.app/futures-contract-specs
+FINAL: https://elitetraderfunding.app/futures-contract-specs
+TITLE: Futures Contract Specs: Tick Value, Point Value, Hours, Margin | Elite Trader Funding
+FETCHED: 2026-11-25T11:44:00.613Z
+
+Plans
+Resources
+Rewards
+Testimonials
+Blog
+About
+Contact
+Sign In
+Sign Up
+Futures Contract Specs
+Futures Contract Specs
+
+Tick value, point value, the micro equivalent, regular trading hours, and approximate margin for the major equity index, energy, metals, Treasury and FX futures, in one quick table you can bookmark.
+
+One table, every spec you look up
+HIGHLIGHT
+Tick and point value for every contract
+HIGHLIGHT
+Regular and electronic trading hours
+HIGHLIGHT
+Margins, with a verify-live note
+
+Every trader ends up hunting for the same handful of numbers: what a tick is worth, the point value, when the cash session runs, whether there’s a micro, and how much margin a contract ties up. They’re all here, in Central Time, for the contracts most prop and retail traders actually trade.
+
+What it is
+A quick reference for futures specs
+Markets
+Index, energy, metals, rates, FX
+Each row
+Tick, point, micro, hours, margin
+Hours shown in
+US Central Time (CT)
+Margins
+Approx. snapshot, verify live
+The reference table
+
+Search by symbol or name, or filter by group. Each symbol links to the position size calculator so you can size a trade on it in one click.
+
+All
+Equity Index
+Energy
+Metals
+Treasuries
+FX
+CONTRACT	TICK	POINT VALUE	MICRO	REGULAR HOURS (CT)	MARGIN (INITIAL · INTRADAY)
+EQUITY INDEX
+ES
+E-mini S&P 500 · CME
+	0.25 · $12.5	$50	MES · 1/10	8:30 AM – 3:15 PM CT	$26,500 · $500
+NQ
+E-mini Nasdaq-100 · CME
+	0.25 · $5	$20	MNQ · 1/10	8:30 AM – 3:15 PM CT	$39,900 · $1,000
+YM
+E-mini Dow ($5) · CBOT
+	1 · $5	$5	MYM · 1/10	8:30 AM – 3:15 PM CT	$16,700 · $500
+RTY
+E-mini Russell 2000 · CME
+	0.1 · $5	$50	M2K · 1/10	8:30 AM – 3:15 PM CT	$11,950 · $500
+ENERGY
+CL
+Crude Oil · NYMEX
+	0.01 · $10	$1,000	MCL · 1/10	8:00 AM – 1:30 PM CT	$7,300 · $1,000 †
+NG
+Henry Hub Natural Gas · NYMEX
+	0.001 · $10	$10,000	-	8:00 AM – 1:30 PM CT	$3,700 · $1,000 †
+METALS
+GC
+Gold · COMEX
+	0.1 · $10	$100	MGC · 1/10	7:20 AM – 12:30 PM CT	$7,600 · $2,000 †
+SI
+Silver (5,000 oz) · COMEX
+	0.005 · $25	$5,000	SIL · 1/5	7:25 AM – 12:25 PM CT	$11,500 · $4,000 †
+HG
+Copper (25,000 lb) · COMEX
+	0.0005 · $12.5	$25,000	MHG · 1/10	7:10 AM – 12:00 PM CT	$3,300 · $1,000
+TREASURIES
+ZB
+30-Year U.S. T-Bond · CBOT
+	0.03125 · $31.25	$1,000	-	7:20 AM – 2:00 PM CT	$4,480 · $500
+ZN
+10-Year U.S. T-Note · CBOT
+	0.015625 · $15.625	$1,000	-	7:20 AM – 2:00 PM CT	$2,270 · $500
+ZF
+5-Year U.S. T-Note · CBOT
+	0.0078125 · $7.8125	$1,000	-	7:20 AM – 2:00 PM CT	$1,510 · $500
+ZT
+2-Year U.S. T-Note · CBOT
+	0.00390625 · $7.8125	$2,000	-	7:20 AM – 2:00 PM CT	$1,450 · $500
+FX
+6E
+Euro FX (125,000 €) · CME
+	0.00005 · $6.25	$125,000	-	7:20 AM – 2:00 PM CT	$2,900 · $500
+6B
+British Pound (62,500 £) · CME
+	0.0001 · $6.25	$62,500	M6B · 1/10	7:20 AM – 2:00 PM CT	$2,300 · $500
+6J
+Japanese Yen (¥12.5M) · CME
+	5e-7 · $6.25	$12,500,000	-	7:20 AM – 2:00 PM CT	$3,150 · $500
+6A
+Australian Dollar (100,000 A$) · CME
+	0.00005 · $5	$100,000	-	7:20 AM – 2:00 PM CT	$2,300 · $500
+6C
+Canadian Dollar (100,000 C$) · CME
+	0.00005 · $5	$100,000	-	7:20 AM – 2:00 PM CT	$1,100 · $500
+Showing 18 of 18 contracts. Electronic session for all: Sun 5:00 PM – Fri 4:00 PM CT (daily maintenance break 4:00–5:00 PM CT).
+Margins are an approximate exchange-broker snapshot from May 2026, in USD per contract; “initial” is the exchange overnight margin and “intraday” is a typical broker day-trade rate (broker-set, often lower). Marked † move with volatility (gold and silver are now percentage-of-notional), so confirm live before sizing. A funded or evaluation account posts no margin; it trades within set position limits instead.
+How to read each row
+
+Six columns, the numbers you actually need. Here’s what each one means and where it comes from.
+
+Tick and point value
+
+The tick is the smallest move a contract can make; tick value is what that move is worth per contract. A point is a full 1.0 move (tick value divided by tick size).
+
+On ES a tick is 0.25 ($12.50) and a point is worth $50.
+
+Micro equivalent
+
+Where a market has a micro contract, it shares the same tick size at a fraction of the dollar value. Micros let you size precisely and keep per-trade risk small.
+
+One-tenth the value on most contracts, one-fifth on silver.
+
+Hours and margin
+
+Regular hours (RTH) are the cash-session window in Central Time; the electronic Globex session runs nearly around the clock.
+
+Margin is the per-contract capital a broker requires, shown as a dated snapshot to verify live.
+
+Margin vs. position limits
+
+Trade self-funded and you post the exchange margin yourself, per contract. In a funded or evaluation ETF account you post none of your own margin, but the account’s position caps still apply. These are two different constraints, so read the margin column accordingly.
+
+Self-funded
+You post the margin
+
+You post the broker’s required capital per contract to open and hold a position. The margin column in the table above is this number.
+
+A normal self-funded brokerage account: your capital is on the line.
+
+Funded / evaluation
+Position limits apply instead
+
+The firm’s account posts the margin, not you. Your real constraint is the position cap on how many minis and micros you may hold, plus the account’s maximum drawdown and any daily loss limit.
+
+On a funded or evaluation account the margin column does not apply.
+
+Overnight margin responsibilities →
+Why it matters
+
+On a funded account the table’s margin figures tell you the size and leverage of a contract, not your buying power. What you can actually hold is set by the account’s position limits, and what you can lose before it’s gone is set by the maximum drawdown (plus, on some plans, a daily loss limit).
+
+Turn a contract’s tick value into a position size on the Position Size Calculator, see how a losing run moves your drawdown floor on the Risk of Ruin Calculator, then pick a plan on the evaluations page.
+
+Frequently asked questions
+
+What is tick value in futures?
+
+Tick value is the dollar amount one tick (the smallest price increment a contract can move) is worth per contract. On the E-mini S&P 500 (ES) the tick size is 0.25 index points and each tick is worth $12.50; on Crude Oil (CL) a tick is 0.01 and worth $10. Multiply the number of ticks the price moves by the tick value to get your profit or loss per contract. The table above lists tick size and tick value for every contract.
+
+What is the difference between tick value and point value?
+
+What are the trading hours for futures?
+
+What is futures margin, and what is day-trade margin?
+
+Do I need margin to trade a funded account?
+
+Are these contract specs and margins guaranteed to be current?
+
+Trade these on our capital
+Know the contract? Trade it funded.
+
+Once you know what a contract is worth, the next step is trading it without risking your own capital. Pick the evaluation that fits how you trade and get funded.
+
+Browse evaluations
+
+Account sizes and risk parameters are subject to change.
+
+Real Feedback
+Trusted by Our Traders
+Easy to use and pay outs are smooth.
+Omar Mayen
+Always quick with responses to queries
+Van Gend Botha
+I been with elite for over 3 years but never got a payout, I been close so many times but just couldn't cross over to 8th day,once when I did get to 8th day and waited after market closed to finally see a payout button but i found out that my account was liquidated ,reason I left a trade open ,anyway I have good experience with elite n I will continue to try and get a payout, 👊
+Read more
+of NAEEM's Trustpilot review
+NAEEM
+Great communication and support
+MontyZ
+Price if evaluation
+Anita Hampton
+Top Funding.
+Jan E
+Elite Trader Funding has serious top-5 prop firm potential. The customer bot solves problems fast, and email support is incredibly quick and on point. Payout efficiency is a huge plus—they honor their 48-hour approval promise and pushed my payout through even when Rise had issues. The main downside? Too many micro-rules that change depending on the account. Elite should streamline rules, like making the 30% consistency rule uniform across the board. If you actually take the time to learn the rules before trading, this firm will absolutely reward you.
+Read more
+of LotTrader's Trustpilot review
+LotTrader
+love it this is the best brokerage around. Static account is so clutch.
+Trevor Blow
+Great place to trade at
+Rico
+Payment Response time Customer service
+Mohamed Benchaaira
+Easy to use and pay outs are smooth.
+Omar Mayen
+Always quick with responses to queries
+Van Gend Botha
+I been with elite for over 3 years but never got a payout, I been close so many times but just couldn't cross over to 8th day,once when I did get to 8th day and waited after market closed to finally see a payout button but i found out that my account was liquidated ,reason I left a trade open ,anyway I have good experience with elite n I will continue to try and get a payout, 👊
+Read more
+of NAEEM's Trustpilot review
+NAEEM
+Great communication and support
+MontyZ
+Price if evaluation
+Anita Hampton
+Top Funding.
+Jan E
+Elite Trader Funding has serious top-5 prop firm potential. The customer bot solves problems fast, and email support is incredibly quick and on point. Payout efficiency is a huge plus—they honor their 48-hour approval promise and pushed my payout through even when Rise had issues. The main downside? Too many micro-rules that change depending on the account. Elite should streamline rules, like making the 30% consistency rule uniform across the board. If you actually take the time to learn the rules before trading, this firm will absolutely reward you.
+Read more
+of LotTrader's Trustpilot review
+LotTrader
+love it this is the best brokerage around. Static account is so clutch.
+Trevor Blow
+Great place to trade at
+Rico
+Payment Response time Customer service
+Mohamed Benchaaira
+Good company, clear rules and fast execution!
+Leonardo Baptista
+Easy to use and nice dashboard and straight forward clear rules
+BILLINCI CODE
+Excellent Platform and great pricing.
+SM
+Love it - ETF is great
+Franco
+The help center
+Samuel Amaral
+Good firm is ok
+Vincent Danville
+The approval process is good and fast. The KYC could be easier as the website times out too fast...
+Paul in Texas
+Love you guys
+Edgar Gil
+Trading with ETF has been such a great experience. I really can't think of a problem, any problem at all with them. Their 50k static (2k DD, no DLL) account that goes on sale all the time is THE MOST UNDERRATED trading product on the market!
+Read more
+of Dennis Ronan's Trustpilot review
+Dennis Ronan
+EXCELLENT PROP FIRM WITH SMOOTH EXECUTION AND GREAT SUPPORT
+NABIL HANNOUCH
+Good company, clear rules and fast execution!
+Leonardo Baptista
+Easy to use and nice dashboard and straight forward clear rules
+BILLINCI CODE
+Excellent Platform and great pricing.
+SM
+Love it - ETF is great
+Franco
+The help center
+Samuel Amaral
+Good firm is ok
+Vincent Danville
+The approval process is good and fast. The KYC could be easier as the website times out too fast...
+Paul in Texas
+Love you guys
+Edgar Gil
+Trading with ETF has been such a great experience. I really can't think of a problem, any problem at all with them. Their 50k static (2k DD, no DLL) account that goes on sale all the time is THE MOST UNDERRATED trading product on the market!
+Read more
+of Dennis Ronan's Trustpilot review
+Dennis Ronan
+EXCELLENT PROP FIRM WITH SMOOTH EXECUTION AND GREAT SUPPORT
+NABIL HANNOUCH
+Ready to Start Your Trading Journey?
+
+Trading doesn't have to be complicated. We're here to guide you on every step of your journey. Choose your evaluation and start trading today. Grow your capital. Get paid.
+
+Join Our Community
+Start Earning Now
+Compare Plans
+ELITETRADERFUNDING
+
+Providing traders with an opportunity to earn live funding based on their trading performance in simulated accounts.
+
+See our reviews on Trustpilot
+Quick Links
+Plans
+Rewards
+Blog
+Help Center
+About Us
+Contact Us
+Purchase Guarantee
+Plans & Products
+All Plans
+1 Step
+Static Drawdown
+End of Day
+Diamond Hands
+Fast Track
+Direct to Funded
+Elite Sim-Funded
+LIVE ELITE
+Payouts
+Tools
+ATD Calculator
+Consistency Calculator
+Drawdown Calculator
+Position Size Calculator
+Expectancy Calculator
+Risk of Ruin Calculator
+Cost to Get Funded
+Futures Contract Specs
+Legal
+Privacy Policy
+Delete Account
+Risk Disclosure
+Performance Disclosure
+Trading Disclaimer
+Trade Copier Disclaimer
+Terms of Service
+Data Disclaimer
+Beat the Beast Rules
+Socials
+Discord
+X
+Instagram
+Facebook
+YouTube
+TikTok
+
+© 2026 Elite Trader Funding, LLC.
+
+Light
+Dark
+
+Developed by Quick14
+
+Disclosures:
+Commodity Futures Trading Commission Futures required disclaimer.
+
+Commodity Futures Trading Commission: Futures and Options trading has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the futures markets. Don't trade with money you can't afford to lose. This is neither a solicitation nor an offer to Buy/Sell futures, stocks or options on the same. No representation is being made that any account will or is likely to achieve profits or losses similar to those discussed on this web site. The past performance of any trading system or methodology is not necessarily indicative of future results.
+
+CFTC RULE 4.41 - Hypothetical or simulated performance results have certain limitations. Unlike an actual performance record, simulated results do not represent actual trading. Also, since the trades have not been executed, the results may have under-or-over compensated for the impact, if any, of certain market factors, such as lack of liquidity. Simulated trading programs in general are also subject to the fact that they are designed with the benefit of hindsight. No representation is being made that any account will or is likely to achieve profit or losses similar to those shown. No representation is being made that any account will, or is likely to achieve profits or losses similar to those discussed within this site, support and texts. Our course(s), products and services should be used as learning aids only and should not be used to invest real money. If you decide to invest real money, all trading decisions should be your own
+
+Testimonials Disclosure: Testimonials appearing on this website may not be representative of other clients or customers and are not a guarantee of future performance or success.
+
+The Terms of Service have been updated. Please review the updated Terms of Service
+.
+
+Ends in
+5d 17h 15m
+Grab 20 evals with 90% OFF →
+90off gobble

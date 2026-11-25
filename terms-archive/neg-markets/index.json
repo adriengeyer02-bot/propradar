@@ -1,0 +1,7 @@
+[
+ {
+  "url": "https://negmarkets.com/",
+  "error": "Error: page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://negmarkets.com/\nCall log:\n  - navigating to \"https://negmarkets.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:46:36.020Z"
+ }
+]

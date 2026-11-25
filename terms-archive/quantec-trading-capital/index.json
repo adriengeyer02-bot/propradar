@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://quantectradingcapital.com/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://quantectradingcapital.com/\nCall log:\n  - navigating to \"https://quantectradingcapital.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:46:40.646Z"
+ },
+ {
+  "url": "https://quantectradingcapital.com/terms-and-conditions/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://quantectradingcapital.com/terms-and-conditions/\nCall log:\n  - navigating to \"https://quantectradingcapital.com/terms-and-conditions/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:46:40.810Z"
+ }
+]

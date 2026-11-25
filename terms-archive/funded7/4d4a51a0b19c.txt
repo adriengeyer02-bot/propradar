@@ -1,0 +1,390 @@
+URL: https://funded7.com/faq/rule-2-3-position-risk-execution/
+FINAL: https://funded7.com/faq/rule-2-3-position-risk-execution/
+TITLE: Rule 2 & 3: Position Risk & Execution | Funded7
+FETCHED: 2026-11-25T11:46:08.559Z
+
+Skip to main content
+Current Offer
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Enjoy 25% Off on all Two Phase Challenges. Code: NOV25
+✦
+
+Hit enter to search or ESC to close
+Search
+Close Search
+Challenges
+Two PhasePopular
+PAYGNew & Hot
+Two Phase NEO
+One Phase
+Instant Funding
+Comparison Hub
+FAQs
+Blog
+Affiliates
+About
+About Us
+Contact Us
+Brand Ambassador
+Support Center
+Media Assets
+ 
+Get Started
+search
+account
+Rule 2 & 3: Position Risk & Execution
+
+The number one reason prop traders fail is excessive leverage and the accumulation of risk without considering correlations. At Funded7, instead of complex margin calls or opaque stop-out rules, we have established a simple yet powerful standard: the “Flat Risk Limit.”
+
+Flat Risk Limits & Leverage Specs
+
+We apply a uniform Risk Limit (%) per tier to “Single Positions,” “Correlation Buckets,” and the “Total Portfolio.”
+
+[IMPORTANT] This Risk Limit is a “TOTAL” limit.
+
+For example, if your limit is 3.0% and you take a 3.0% risk on a single trade, you cannot open any other positions. Attempting to add more positions beyond the limit will result in an immediate violation.
+
+Tier	Flat Risk Limit (Total)	FX Leverage	Indices & Metals	Crypto	Stop Loss (SL)
+Funded	3.0%	1:50	1:10	1:3	Optional
+Silver Funded	2.0%	1:30	1:5	1:2	Mandatory
+Bronze Funded	1.0%	1:20	1:5	1:2	Mandatory
+Single Position Limit: No single trade may exceed this risk percentage.
+Bucket Limit: The total risk of correlated currency pairs (e.g., all USD pairs) must not exceed this percentage.
+Portfolio Limit: The combined risk of all open positions must not exceed this percentage.
+Correlation Buckets
+
+Correlated pairs are categorized into “Buckets.” Total risk is monitored per group. Opposite positions (hedging) within the same bucket offset each other.
+
+Forex Buckets
+
+Formula: | Total Buy Risk – Total Sell Risk |
+
+Bucket 1 (USD Longs): EUR/USD, GBP/USD, NZD/USD, AUD/USD
+Bucket 2 (USD Shorts): USD/JPY, USD/CHF, USD/CAD
+Bucket 10 (Precious Metals): XAU/USD, XAG/USD
+Bucket 13 (US Indices): US500, US30, US100
+Bucket 17 (Major Crypto): BTC/USD, ETH/USD
+
+>>See full detail here
+
+Rule 2 Risk Calculation (SL Priority vs. ATR Protection)
+
+This rule applies if you did not set a Stop Loss (SL) at the time of entry, and no valid SL setting is confirmed within 30 seconds .
+
+【Rule 2A】 SL-Based Risk
+
+Applied only if the SL is submitted simultaneously with the Entry order.
+
+Formula: ATR risk amount = ATR(14) × 1.96 × Lot size × Contract size × Exchange rate
+
+Contract size: This refers to the trading unit per lot (e.g., typically 100,000 currency units in FX).
+Exchange rate: This is the conversion rate when the settlement currency and the account currency are different.
+
+[MT5 Exclusive] 30-Second Placement Buffer: 30 seconds rule is applicable to MT5 only.
+Late SL Settings: If you set an SL after the order is executed, the risk remains fixed as “ATR Risk” until the trade is closed.
+SL Modifications: You may move your SL; however, the “Maximum Risk Level” (the widest SL distance reached during the trade) is used to determine tier compliance.
+Slippage & Gaps: If a compliant SL was set, but a market gap caused a larger loss (execution below SL price), the trade remains COMPLIANT. We do not punish traders for market conditions beyond their control.
+【Rule 2B】 ATR-Based Statistical Risk
+
+Applied automatically if no SL is set at the time of entry.
+
+Formula: ATR Risk Amount = ATR(14) × 1.96 × (Pip Value) × (Lot Size)
+
+ATR(14): Average True Range of the last 14 periods on the Daily (D1) timeframe.
+
+1.96: Coefficient covering a 95% statistical confidence interval.
+
+Note: Trading without an SL triggers ATR risk, which strictly limits your lot size based on market volatility. This serves as a safety net against sudden market crashes.
+
+Rule3. Execution Standards: Scalping Restrictions (HFT/Scalping)
+
+This rule is designed to prevent HFT (High-Frequency Trading) and the exploitation of system latencies, ensuring a fair trading environment for all participants.
+
+【Important】Trigger Criteria A violation occurs if the “ratio” of your trades meets either of the following conditions:
+
+Under 15-second duration: If trades closed in less than 15 seconds exceed 2% of your total trade count.
+
+Under 30-second duration: If trades closed in less than 30 seconds exceed 3% of your total trade count.
+
+Consequences: Any accounts found in violation will be subject to transition into “Restricted Professional Accounts” (Silver or Bronze Tiers).
+
+Intent: While occasional fast exits during manual trading are permitted, consistent and systematic ultra-short-term trading is strictly prohibited.
+
+Violations & Remediation
+
+Violations of Rule 2 (Risk) or Rule 3 (Execution) will result in the following:
+
+1. Asymmetric Nullification: Profits from violating trades are removed, while losses remain.
+2. Status Change: Serious or repeated violations will result in a forced demotion to a lower tier (Silver/Bronze).
+3. Profit Protection & Rule 1 Cure: If compliant profit remains after nullification but Rule 1 (Consistency) is in violation, the payout will be delayed. Traders must continue trading in their current account to satisfy Rule 1 requirements before a payout can be processed.
+[WARNING] Removing an SL at the moment of exit or intentionally manipulating SL levels to bypass risk limits is strictly monitored via MT5 logs. Such deceptive practices will lead to immediate account termination regardless of the number of strikes.
+Previous
+Next
+Follow Funded7 on Twitter
+Follow Funded7 on Instagram
+Follow Funded7 on Facebook
+Join Funded7 on Discord
+Funded7 on YouTube
+Funded7 on Linkedin
+Funded7 on Linkedin
+Support
+
+Support Center
+
+Live Chat
+
+Contact us
+
+support@funded7.com
+
+F7 Challenges
+
+Two Phase
+
+PAYG
+
+Two Phase NEO
+
+One Phase
+
+Instant Funding
+
+Comparison Hub
+
+Trading
+
+Economic Calendar
+
+Download Center
+
+Education Hub
+
+Glossary
+
+Market Watch
+
+Newsfeed
+
+Calculators
+
+Videos
+
+eBooks
+
+Company
+
+About us
+
+Brand Ambassador
+
+Affiliates
+
+Media Assets
+
+Disclaimer: The content on this website is for informational purposes only and should not be interpreted as financial, investment, tax, or professional advice. Funded7 (F7), along with its agents, employees, and affiliates, does not endorse or encourage the buying or selling of any financial instruments. Users are solely responsible for evaluating the risks associated with any information provided. All trading and educational packages involve inherent risks, and any decisions made are at the user’s discretion. The information is provided “as is” without any guarantees regarding its accuracy, completeness, or timeliness. Funded7 (F7) and its affiliates are not responsible for any decisions made based on the information presented on this website. Purchases are final and should not be considered as deposits. Restricted countries: The services and information on this website are not available to residents of the following countries or regions: Afghanistan, Belarus, Cuba, Cyprus, North Korea, Iran, Iraq, Myanmar, Russian Federation, Syria, Yemen, Crimea, Donetsk, Palestinian Territory, United States, Vatican City.
+
+This website is owned and operated by ICHIBAN TECH LTD, registration number 470329, with its registered office at Kyrillou Loukareos, 40, Kato Polemidia, 4156, Limassol, Cyprus and SUCCESSIO LTD, registration number 245758 and FUNDED7 LTD, registration number 2025-00900, with its registered office at Hewanorra House, Truo Garnier Financial Centre, Pointe Seraphine Catries, Saint Lucia. All associated entities are authorized to conduct business under the Funded7 (F7) brand and trademark
+
+© Funded7. 2026. All Rights Reserved.
+
+Privacy Policy
+
+Dispute Resolution
+
+Terms & Conditions
+
+Funded7
+Live Chat
+
+--- iframe ---
+
+
+        
+        
+                
+                
+        
+    
+    
+    
+        var inPage = 'N';
+        closeWindow = function() {
+            window.LiveAgentTrackerXD.postMessage(["closeOpenedWidget"], parent, window.parent_url);
+        }
+    
+    
+
+  
+      function toggleKb() {
+      var articles = document.getElementById('kb_side_panel');
+          articles.classList.toggle('Kb-open');
+    }
+  
+
+
+    
+    Knowledgebase
+    
+      
+                
+   
+ 
+
+
+  
+  
+    
+        
+    
+
+    
+        Hi there 👋
+        Need help? Please leave your contact details and ask us.
+                
+            
+                    
+    
+        Email
+    
+    
+        
+            
+    
+
+        
+        
+        
+        
+    
+    
+
+
+            
+            
+        
+    
+   
+
+    Close
+
+
+      
+  
+  
+      0
+      
+          	       Send
+  	      	      	                   Chat
+                      	
+  		Call
+  		Close
+  	
+   
+  
+
+        
+
+        
+            
+
+            var scriptParams = new Array();
+            var startParams = '';
+
+            var Widget = function() {
+                this.scriptStarted = false;
+                this.serverUrl = window.location.href;
+                var refMatch = window.location.hash.match(/[#&]ref=([^&]+)/) || window.location.search.match(/[?&]ref=([^&]+)/);
+                if (refMatch) {
+                    this.tracker = { url: decodeURIComponent(refMatch[1].replace(/\+/g, '%20')) };
+                }
+            };
+
+            Widget.prototype = {
+                start: function(param) {
+                    if (this.scriptStarted) {
+                        return;
+                    }
+                    startParams = param;
+                    this.scriptStarted = true;
+
+                    
+                    var widget = this;
+                    window.LiveAgentVisitorBootstrap.start(
+                        [
+                                                        '/static/webpack/liveagent-common-bundle/bundle-f89035f40d5b877e1138.esm.js',
+                                                        '/static/webpack/liveagent-common-bundle/stringutils-1831e68dca994e2e0f88.esm.js',
+                                                    ],
+                        '/chat/js/com.qualityunit.liveagent.Contact.nocache.js?v=5.70.3.20261120180140'
+                    ).catch(function(error) {
+                        widget.scriptStarted = false;
+                        console.error('Could not start LiveAgent widget', error);
+                    });
+                },
+                setSize: function(width, height) {
+                                    },
+                setParam: function(name, value) {
+                    scriptParams[name] = value;
+                },
+                                action: function() {
+                    if (arguments.length > 0) {
+                        switch (arguments[0]) {
+                            case 'start':
+                                this.start(arguments[1]);
+                                break;
+                            case 'setSize':
+                                this.setSize(arguments[1], arguments[2]);
+                                break;
+                            case 'setParam':
+                                this.setParam(arguments[1], arguments[2]);
+                                break;
+                                                    }
+                    }
+                }
+            };
+
+            var w = new Widget();
+
+            if (typeof window.LiveAgentTrackerXD !== 'undefined') {
+                window.LiveAgentTrackerXD.receiveMessage(w);
+            }
+
+            var base_path = '/';
+            
+            
+        
+        
+            
+            if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+                var viewportmeta = document.querySelector('meta[name="viewport"]');
+                if (viewportmeta) {
+                    viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+                    document.body.addEventListener('gesturestart', function() {
+                    viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+                    }, false);
+                }
+            }
+            
+        
+            
+

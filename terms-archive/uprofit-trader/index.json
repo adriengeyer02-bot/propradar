@@ -1,0 +1,47 @@
+[
+ {
+  "url": "https://uprofit.com/",
+  "finalUrl": "https://uprofit.com/",
+  "title": "Funding Since 2019 | UProfit — UProfit",
+  "status": 200,
+  "kind": "html",
+  "chars": 10928,
+  "sha256": "7992378a9808caad25ee998cf9a6793a868d9fee5acbeb395b30e9725e1d5a94",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:42:57.382Z",
+  "home": true
+ },
+ {
+  "url": "https://uprofit.com/terms-and-conditions",
+  "finalUrl": "https://uprofit.com/terms-and-conditions",
+  "title": "Terms & Conditions — UProfit",
+  "status": 200,
+  "kind": "html",
+  "chars": 18459,
+  "sha256": "bf6a6646ec61a6bab6581ee5244fafe4716890f7302c24c6a52427bd87d820ae",
+  "file": "1ea561ea7fd0.txt",
+  "fetchedAt": "2026-11-25T11:43:05.140Z"
+ },
+ {
+  "url": "https://uprofit.com/risk-disclosure",
+  "finalUrl": "https://uprofit.com/risk-disclosure",
+  "title": "Risk Disclosure — UProfit",
+  "status": 200,
+  "kind": "html",
+  "chars": 8997,
+  "sha256": "dfa2bddb6a913841900dbe6f6cc6152f595d87f4dca3e1988c092a347a2b538e",
+  "file": "311adc5514a1.txt",
+  "fetchedAt": "2026-11-25T11:43:12.356Z"
+ },
+ {
+  "url": "https://uprofit.com/help",
+  "finalUrl": "https://uprofit.com/help",
+  "title": "How can We help? — UProfit",
+  "status": 200,
+  "kind": "html",
+  "chars": 7483,
+  "sha256": "d449801ee4167c9530a73263d974008880f8dd89607812c9ce7b0c81ddee782a",
+  "file": "c2710b6dc8df.txt",
+  "fetchedAt": "2026-11-25T11:43:35.193Z"
+ }
+]

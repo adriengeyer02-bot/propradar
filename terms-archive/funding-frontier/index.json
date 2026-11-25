@@ -1,0 +1,17 @@
+[
+ {
+  "url": "https://fundingfrontier.com/",
+  "error": "Error: page.goto: net::ERR_TOO_MANY_REDIRECTS at https://fundingfrontier.com/\nCall log:\n  - navigating to \"https://fundingfrontier.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:44:17.761Z"
+ },
+ {
+  "url": "https://fundingfrontier.com/legal-terms/",
+  "error": "Error: page.goto: net::ERR_TOO_MANY_REDIRECTS at https://fundingfrontier.com/legal-terms/\nCall log:\n  - navigating to \"https://fundingfrontier.com/legal-terms/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:44:17.838Z"
+ },
+ {
+  "url": "https://fundingfrontier.com/rules-faqs/",
+  "error": "Error: page.goto: net::ERR_TOO_MANY_REDIRECTS at https://fundingfrontier.com/rules-faqs/\nCall log:\n  - navigating to \"https://fundingfrontier.com/rules-faqs/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:44:17.918Z"
+ }
+]

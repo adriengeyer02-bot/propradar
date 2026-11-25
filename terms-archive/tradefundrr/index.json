@@ -1,0 +1,80 @@
+[
+ {
+  "url": "https://tradefundrr.com/",
+  "finalUrl": "https://tradefundrr.com/",
+  "title": "TradeFundrr | Stock & Options Trader Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 16701,
+  "sha256": "a45d331f732d550b8fca6be3b05e1f9cda97d725934440c3c98ecf6bfa7a08db",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:44:00.796Z",
+  "home": true
+ },
+ {
+  "url": "https://tradefundrr.com/pages/fee-refund-policy",
+  "finalUrl": "https://tradefundrr.com/pages/fee-refund-policy",
+  "title": "Fee Refund Policy | TradeFundrr",
+  "status": 200,
+  "kind": "html",
+  "chars": 10631,
+  "sha256": "679bc55f7c31e931f8311fad6baa4b818bef845f4c0f7df3851d4cdf7f12e88c",
+  "file": "905f5799dd3f.txt",
+  "fetchedAt": "2026-11-25T11:44:06.487Z"
+ },
+ {
+  "url": "https://tradefundrr.freshdesk.com/support/home",
+  "finalUrl": "https://tradefundrr.freshdesk.com/support/home",
+  "title": "Home | Support : TradeFundrr",
+  "status": 200,
+  "kind": "html",
+  "chars": 481,
+  "sha256": "e599a2662c619157cc9c1b44a9cba3e2d058d5e616da8625d83a62954c6a5ab4",
+  "file": "3b69053dae37.txt",
+  "fetchedAt": "2026-11-25T11:44:12.677Z"
+ },
+ {
+  "url": "https://tradefundrr.freshdesk.com/support/solutions",
+  "finalUrl": "https://tradefundrr.freshdesk.com/support/solutions",
+  "title": "Knowledge base : TradeFundrr",
+  "status": 200,
+  "kind": "html",
+  "chars": 5754,
+  "sha256": "594441b72be77edb984b44982653caa7b52e33e72de69b2f53ca244284dabf22",
+  "file": "4d8f1372ec17.txt",
+  "fetchedAt": "2026-11-25T11:44:18.988Z"
+ },
+ {
+  "url": "https://tradefundrr.freshdesk.com/support/search/solutions",
+  "finalUrl": "https://tradefundrr.freshdesk.com/support/search/solutions",
+  "title": "Search : TradeFundrr",
+  "status": 200,
+  "kind": "html",
+  "chars": 352,
+  "sha256": "8cc1b46f994034fa7259a5173737bebf76a396793a8e87a6d6a9a92f75ccc43e",
+  "file": "8215699a8e42.txt",
+  "fetchedAt": "2026-11-25T11:44:25.338Z"
+ },
+ {
+  "url": "https://tradefundrr.freshdesk.com/support/search/topics",
+  "finalUrl": "https://tradefundrr.freshdesk.com/support/login",
+  "title": "Login : TradeFundrr",
+  "status": 200,
+  "kind": "html",
+  "chars": 487,
+  "sha256": "99cec02bd3794c89fffc9c6515c562232b08909f7c760c313ccc4561d6cecf96",
+  "file": "8158975df96b.txt",
+  "fetchedAt": "2026-11-25T11:44:32.359Z"
+ },
+ {
+  "url": "https://tradefundrr.freshdesk.com/support/search/tickets",
+  "finalUrl": "https://tradefundrr.freshdesk.com/support/login",
+  "title": "Login : TradeFundrr",
+  "status": 200,
+  "kind": "html",
+  "chars": 487,
+  "sha256": "99cec02bd3794c89fffc9c6515c562232b08909f7c760c313ccc4561d6cecf96",
+  "file": "f9b9527958ad.txt",
+  "fetchedAt": "2026-11-25T11:44:39.329Z"
+ }
+]

@@ -1,0 +1,127 @@
+URL: https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/buy-challenge.md
+FINAL: https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/buy-challenge.md
+TITLE: 
+FETCHED: 2026-11-25T11:46:41.232Z
+
+> For the complete documentation index, see [llms.txt](https://hashhedge.gitbook.io/hashhedge-user-guide/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/buy-challenge.md).
+
+# How to buy a Challenge
+
+Everything happens on one page: pick your market, account type, size and options, then pay in USDT or USDC.
+
+It takes a couple of minutes: the account is instant and there's no KYC.
+
+***
+
+{% stepper %}
+{% step %}
+
+### Open New Challenge
+
+In the left-hand menu, click **New Challenge**. The whole configurator is a single page, and the **Your order** panel on the right updates live as you choose.
+{% endstep %}
+
+{% step %}
+
+### Choose your market and account type
+
+* **Market**: **Crypto + TradFi** (BTC, ETH, NASDAQ, S\&P, metals, oil and gas; trades 24/7) or **US Stocks** (new): 11000+ NYSE and NASDAQ stocks. The market also decides which terminal you'll trade in, and which sizes and types are available: see [Trading US Stocks](https://hashhedge.gitbook.io/hashhedge-user-guide/trading-terminal/stocks-terminal.md).
+* **Account type**: **Two-stage** (Standard), **One-stage** (faster to funded), or **Instant** (no evaluation, trade right away, coming soon). The table shows the profit target and loss limits for each stage. See [Challenge types](https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/challenge-types.md) for the full breakdown.
+
+<figure><img src="https://4124520956-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1rxibxWwlEbigdfKGWCp%2Fuploads%2Fgit-blob-4f16c768c1019c832069427db079cb67a0f3fd5b%2Fbuy-market.png?alt=media" alt=""><figcaption><p>Choosing the market</p></figcaption></figure>
+{% endstep %}
+
+{% step %}
+
+### Choose your account size and options
+
+Pick an **account size**, from **$5K to $100K**, or up to **$200K** on Two-stage. On the **US Stocks** market the largest account is **$100K**. Each card shows the fee and the value per $1,000; **$10K** is the most popular and **$100K** is the traders' choice. **$500K** is coming soon.
+
+Then choose your **options**:
+
+* **+10% to profit share**: raises your profit share by 10% at the **Trader** stage, where you trade a funded account.
+* **Daily Loss Protection**: a one-time safety net for your daily loss limit: it refreshes the limit once instead of ending the Challenge. See [Rules, stages and loss limits](https://hashhedge.gitbook.io/hashhedge-user-guide/rules/challenge-rules.md).
+* **No options**: no add-ons: 80% profit split and the standard limits.
+
+You can take both add-ons, one of them, or neither.
+
+Option prices scale with your account size.
+
+<figure><img src="https://4124520956-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1rxibxWwlEbigdfKGWCp%2Fuploads%2Fgit-blob-ae0ffe8188ca3414bcedf41e943f91581896c89c%2Fbuy-account-size.png?alt=media" alt=""><figcaption><p>Choosing the account size</p></figcaption></figure>
+
+<figure><img src="https://4124520956-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1rxibxWwlEbigdfKGWCp%2Fuploads%2Fgit-blob-35d3c0ea6696641c9a761e373271e07cbadf6ae6%2Fbuy-options.png?alt=media" alt=""><figcaption><p>Options at checkout</p></figcaption></figure>
+{% endstep %}
+
+{% step %}
+
+### Review your order and pay
+
+The **Your order** panel sums up your choices (account size, type, profit split and the **Total**) and shows the **average payout** for that account. Have a promo code? Click **Have a promo code?**, enter it and apply. A code must be added **before** you pay. Got HH Coins? See [Cashback Balance (HH Coins)](https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/cashback-balance.md). When you're ready, click **Proceed to payment**. Payment is in **USDT or USDC**, the account is **instant**, and there's **no KYC**.
+
+<details>
+
+<summary>If a code doesn't work</summary>
+
+Check that you typed it correctly and that it hasn't expired. A promo code must be applied **before** you pay; it can't be added to an order you've already paid for.
+
+</details>
+
+<figure><img src="https://4124520956-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1rxibxWwlEbigdfKGWCp%2Fuploads%2Fgit-blob-5d27cf0006e6bc33dad2df9f5851e667397e980e%2Fbuy-your-order.png?alt=media" alt=""><figcaption><p>The Your order panel at checkout</p></figcaption></figure>
+{% endstep %}
+
+{% step %}
+
+### Pay in USDT or USDC
+
+Hash Hedge accepts **USDT or USDC**: no cards or bank transfers.
+
+Choose the currency and the network your wallet uses:
+
+* ERC-20
+* TRC-20
+* BEP-20
+* Arbitrum
+* Optimism
+* Solana
+
+{% hint style="warning" %}
+Pick the currency and the network your wallet supports, and always send funds on the **same network** you select on the payment screen. Sending on a different network can result in lost funds.
+{% endhint %}
+
+<figure><img src="https://4124520956-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1rxibxWwlEbigdfKGWCp%2Fuploads%2Fgit-blob-9f88fabcc4ae92d7fce042070e7ab80cfe795c13%2Fpayment-choose-asset.png?alt=media" alt=""><figcaption><p>Choosing USDT or USDC</p></figcaption></figure>
+
+You'll see the amount, a deposit address and a QR code. Send the **exact** amount on the network you chose.
+
+<figure><img src="https://4124520956-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1rxibxWwlEbigdfKGWCp%2Fuploads%2Fgit-blob-a8791f39c4fb5a525b935339a20b7a5cf7f304cf%2Fpayment-network-address.png?alt=media" alt=""><figcaption><p>The network and the deposit address</p></figcaption></figure>
+
+{% hint style="info" %}
+You have **30 minutes** to complete the transfer. The page checks for your payment automatically and updates once it's received. USDT and USDC are stablecoins pegged to the US dollar (1 USDT ≈ 1 USDC ≈ 1 USD), so the price stays predictable.
+{% endhint %}
+{% endstep %}
+{% endstepper %}
+
+## After payment
+
+Your order appears in Orders and their statuses, and once the payment is confirmed a new account shows up in Your accounts and stages. If a payment window expires, just start the order again from **Orders**. You're ready to start trading the Challenge.
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation by asking a question.
+
+Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters:
+
+```
+GET https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/buy-challenge.md?ask=<question>&goal=<user_goal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is what the user is ultimately trying to achieve, the reason they need the answer. Sharing it helps GitBook give you a better, more relevant answer. A goal is most helpful when it describes the outcome the user wants rather than restating the question. For example, with `ask=how do I create an API token`, a goal like `automate deployments from our CI pipeline` lets GitBook tailor the answer to that use case.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

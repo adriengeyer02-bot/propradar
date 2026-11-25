@@ -1,0 +1,93 @@
+URL: https://help.atmosfunded.com/en/articles/12381332-what-is-the-drawdown-lock-on-payout
+FINAL: https://help.atmosfunded.com/en/articles/12381332-what-is-the-drawdown-lock-on-payout
+TITLE: What is the Drawdown Lock on Payout? | AtmosFunded Help Center
+FETCHED: 2026-11-25T11:44:53.229Z
+
+Skip to main content
+Start a Challenge
+Discord
+Home
+Search for articles...
+All Collections
+Rules & Trading Conditions
+Drawdown & Consistency Rules
+What is the Drawdown Lock on Payout?
+What is the Drawdown Lock on Payout?
+Updated over 3 weeks ago
+
+Some Atmos Funded plans include a drawdown lock at payout, securing your account after withdrawals.
+
+⚡ Overview
+
+When you request a payout, your max drawdown is fixed at the initial balance — protecting your account even as you withdraw profits.
+
+Trailing Drawdown Mechanism
+
+Before a payout, Nova accounts use a trailing drawdown mechanism. This means the drawdown level follows your equity upward but does not decrease with losses. Once your equity reaches the initial balance, the drawdown locks at that level after a payout.
+
+✅ Applies To
+
+Nova & Instant Funded
+
+ 
+
+💡 Example
+
+$100,000 // Nova account.
+
+Max drawdown = $94,000
+
+You grow to $108,000 and withdraw $5,000 → account balance = $103,000
+
+Drawdown remains locked at $100,000
+
+⚠️ Important: Leave a Buffer
+
+When withdrawing profits, it is essential to leave a buffer in your account to avoid breaching the drawdown lock. Here’s how:
+
+Leave a Profit Buffer: After a payout, ensure your remaining balance stays above the locked drawdown level. For example, if your account balance is $10,500 and you withdraw $500, leaving $10,000, you are at the drawdown limit. A small loss could breach the account.
+
+Avoid Withdrawing All Profits: Withdrawing the entire profit amount risks breaching the account immediately. Always leave a portion of your profits as a buffer.
+
+Consider Trading Style: The size of the buffer depends on your trading style and lot sizes. A larger buffer provides more flexibility for ongoing trades.
+
+💰 Profit Split & Minimum Payout
+
+Nova accounts offer an 80/20 profit split in your favor. For example, if you earn $1,000 in profit, you can withdraw $800, and $200 goes to Atmos. The minimum payout amount is $100.
+
+✅ Best Practices
+
+Plan Withdrawals Carefully: Avoid withdrawing all profits at once. Leave enough balance to cover potential losses and trading fees.
+
+Monitor Equity Levels: Keep track of your equity and ensure it remains above the locked drawdown level after withdrawals.
+
+Understand Risk Rules: Adhere to Nova’s risk rules, such as the 4% daily drawdown limit and 8% maximum overall loss.
+
+⚠️ Common Mistakes
+
+Withdrawing All Profits: This leaves no buffer and risks immediate breach.
+
+Ignoring the Drawdown Lock: Failing to account for the locked drawdown level can lead to unexpected breaches.
+
+Related Articles
+Instant Funding
+How Payouts Work
+Drawdowns & Loss Limits - How They Work
+Static vs Trailing Drawdown - What's the Difference?
+Nova Challenge
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+Trailing Drawdown Mechanism
+✅ Applies To
+💡 Example
+⚠️ Important: Leave a Buffer
+💰 Profit Split & Minimum Payout
+✅ Best Practices
+⚠️ Common Mistakes
+AtmosFunded Help Center
+Broker-backed prop firm. Transparent, competitive & built for success🚀

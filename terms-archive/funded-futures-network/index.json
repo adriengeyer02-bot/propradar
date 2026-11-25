@@ -1,0 +1,80 @@
+[
+ {
+  "url": "https://fundedfuturesnetwork.com/",
+  "finalUrl": "https://fundedfuturesnetwork.com/",
+  "title": "Funded Futures Prop Firm | Same-Day Payouts | Funded Futures Network",
+  "status": 200,
+  "kind": "html",
+  "chars": 6457,
+  "sha256": "3b7642653e09e881a05ce2d9f24cf4da3595d5126f872613f697f5340d85b815",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:31.605Z",
+  "home": true
+ },
+ {
+  "url": "https://fundedfuturesnetwork.com/faq",
+  "finalUrl": "https://fundedfuturesnetwork.com/faq",
+  "title": "FAQ | Funded Futures Network",
+  "status": 200,
+  "kind": "html",
+  "chars": 9876,
+  "sha256": "a726b14599fb243dbd956e87f6288bf399a39f5edfa3611229ffbb1bd3f62b25",
+  "file": "02d54a4d4183.txt",
+  "fetchedAt": "2026-11-25T11:43:45.925Z"
+ },
+ {
+  "url": "https://fundedfuturesnetwork.com/payouts",
+  "finalUrl": "https://fundedfuturesnetwork.com/payouts",
+  "title": "Verified Payouts | Funded Futures Network",
+  "status": 200,
+  "kind": "html",
+  "chars": 4129,
+  "sha256": "b0ba1dd26df9d33931311f5c35adce3dae8301b4150a6d42c0fb8f6864430e98",
+  "file": "6cc4001995d1.txt",
+  "fetchedAt": "2026-11-25T11:43:52.172Z"
+ },
+ {
+  "url": "https://fundedfuturesnetwork.zendesk.com/hc/en-us/articles/52807758679835-Article-6-5-Account-Inactivity-Policy",
+  "finalUrl": "https://fundedfuturesnetwork.zendesk.com/hc/en-us/articles/52807758679835-Article-6-5-Account-Inactivity-Policy",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 280,
+  "sha256": "39fc6618ea6433ea1fc1254ee1ad8512eca596a3bcd0e8ed7459b134a6a1eb7c",
+  "file": "31d277909d5f.txt",
+  "fetchedAt": "2026-11-25T11:44:27.345Z"
+ },
+ {
+  "url": "https://www.fundedfuturesnetwork.com/faq",
+  "finalUrl": "https://fundedfuturesnetwork.com/faq",
+  "title": "FAQ | Funded Futures Network",
+  "status": 200,
+  "kind": "html",
+  "chars": 8174,
+  "sha256": "cc0e36d096a1de4ed4faa8c9c027061075cc4730504cf9494fe78766a5481556",
+  "file": "adc6f813bec2.txt",
+  "fetchedAt": "2026-11-25T11:44:39.545Z"
+ },
+ {
+  "url": "https://app.fundedfuturesnetwork.com/nexus/rules",
+  "finalUrl": "https://app.fundedfuturesnetwork.com/nexus/rules",
+  "title": "Rules — Funded Futures Network",
+  "status": 200,
+  "kind": "html",
+  "chars": 3038,
+  "sha256": "20afdc3b2d15b89259dc053d9d099f89fa3c982c17355a29ebf5e76527ebcf06",
+  "file": "b5ade8f1d8ac.txt",
+  "fetchedAt": "2026-11-25T11:44:51.914Z"
+ },
+ {
+  "url": "https://storage.googleapis.com/ffn-files/FFN%20Risk%20Disclosure%20Statement.pdf",
+  "finalUrl": "https://storage.googleapis.com/ffn-files/FFN%20Risk%20Disclosure%20Statement.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 13105,
+  "sha256": "af10c36161645b3c42de182d2dba6c2f3f96232a7bacc9eb1b64cd207a5da7f3",
+  "file": "88afdcdc574f.txt",
+  "fetchedAt": "2026-11-25T11:44:52.197Z"
+ }
+]

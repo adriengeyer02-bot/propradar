@@ -1,0 +1,135 @@
+[
+ {
+  "url": "https://lucidtrading.com/",
+  "finalUrl": "https://lucidtrading.com/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 264,
+  "sha256": "7c6b942ad4f69b6d5bf50418f0d81e398208b19b9a32a805647d87798298fa88",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:10.686Z",
+  "home": true
+ },
+ {
+  "url": "https://www.lucidtrading.com/terms-of-use/",
+  "finalUrl": "https://www.lucidtrading.com/terms-of-use/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 268,
+  "sha256": "5b45461f4f56f808340c70636cdd15ded9eb9852fe68ad698a4771442680f73f",
+  "file": "508857b3bb1c.txt",
+  "fetchedAt": "2026-11-25T11:45:45.924Z"
+ },
+ {
+  "url": "https://www.lucidtrading.com/risk-disclosure-statement/",
+  "finalUrl": "https://lucidtrading.com/risk-disclosure-statement/",
+  "title": "Risk Disclosure Statement - Lucid Trading",
+  "status": 200,
+  "kind": "html",
+  "chars": 7470,
+  "sha256": "e138b1fec75ee5a48c42baf1b9652aac8fafef0ca48306e965625a99afde403c",
+  "file": "bd5c42108e4b.txt",
+  "fetchedAt": "2026-11-25T11:46:08.014Z"
+ },
+ {
+  "url": "https://lucidtrading.com/disclaimer-of-liability-refunds-and-chargeback-policy/",
+  "finalUrl": "https://lucidtrading.com/disclaimer-of-liability-refunds-and-chargeback-policy/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 264,
+  "sha256": "9c3dc55f559270e8d613c7e51b0c15fed5faed26ec80dd734a8fb6e097ff1038",
+  "file": "e1ad8687b450.txt",
+  "fetchedAt": "2026-11-25T11:46:43.179Z"
+ },
+ {
+  "url": "https://lucidtrading.com/wp-content/uploads/2025/04/LucidPro-Trader-Agreement.pdf",
+  "finalUrl": "https://lucidtrading.com/wp-content/uploads/2025/04/LucidPro-Trader-Agreement.pdf",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 264,
+  "sha256": "8b92c9cb53bd86ba8b34334328f3c1dfda456ea09e069458e20264e50073a035",
+  "file": "a76de2712d9b.txt",
+  "fetchedAt": "2026-11-25T11:47:18.512Z"
+ },
+ {
+  "url": "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+  "finalUrl": "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts",
+  "title": "LucidPro Payouts | Lucid Trading Help Center",
+  "status": 200,
+  "kind": "html",
+  "chars": 4160,
+  "sha256": "ba5d72c614515e37fd1307f3a6251048b2c8599e32a750f719d9c7766648dac7",
+  "file": "b677c2078742.txt",
+  "fetchedAt": "2026-11-25T11:47:24.097Z"
+ },
+ {
+  "url": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account",
+  "finalUrl": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account",
+  "title": "LucidFlex Funded Account | Lucid Trading Help Center",
+  "status": 200,
+  "kind": "html",
+  "chars": 1433,
+  "sha256": "87bd7b524a267c4b8dabd34df874d0de22a896fe9e84874282fdc4e1bbc53165",
+  "file": "00e219689063.txt",
+  "fetchedAt": "2026-11-25T11:47:29.462Z"
+ },
+ {
+  "url": "https://support.lucidtrading.com/en/articles/12890164-luciddirect-payout-objectives",
+  "finalUrl": "https://support.lucidtrading.com/en/articles/12890164-luciddirect-payout-objectives",
+  "title": "LucidDirect Payout Objectives | Lucid Trading Help Center",
+  "status": 200,
+  "kind": "html",
+  "chars": 2453,
+  "sha256": "f5723f12ddf82b1dc50f06e04704df7677f882759755c0f5b6c2ed3d214d9ad4",
+  "file": "22a0b17827fa.txt",
+  "fetchedAt": "2026-11-25T11:47:34.910Z"
+ },
+ {
+  "url": "https://support.lucidtrading.com/en/articles/11404614-supported-platforms",
+  "finalUrl": "https://support.lucidtrading.com/en/articles/11404614-lucid-trading-supported-platforms",
+  "title": "Lucid Trading Supported Platforms | Lucid Trading Help Center",
+  "status": 200,
+  "kind": "html",
+  "chars": 1492,
+  "sha256": "7165bc36192dca01ef672222be758bf367789df945b91774566f8c84839bae65",
+  "file": "f0d9da26e3a9.txt",
+  "fetchedAt": "2026-11-25T11:47:40.409Z"
+ },
+ {
+  "url": "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+  "finalUrl": "https://support.lucidtrading.com/en/articles/12945796-lucidflex-payouts",
+  "title": "LucidFlex Payouts | Lucid Trading Help Center",
+  "status": 200,
+  "kind": "html",
+  "chars": 3153,
+  "sha256": "b44890efac4eecb8e71ad0ccd143fd0dad38c6bc61a38770ae49c6771119a619",
+  "file": "af61d0e7a387.txt",
+  "fetchedAt": "2026-11-25T11:47:45.781Z"
+ },
+ {
+  "url": "https://lucidtrading.com/terms-of-use/",
+  "finalUrl": "https://lucidtrading.com/terms-of-use/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 264,
+  "sha256": "f4622bef809da6eb00dfeca20d1710b5ff26dd1c50efe1a66a97e1e49ab9befc",
+  "file": "9763599a7d24.txt",
+  "fetchedAt": "2026-11-25T11:48:20.908Z"
+ },
+ {
+  "url": "https://lucidtrading.com/risk-disclosure-statement/",
+  "finalUrl": "https://lucidtrading.com/risk-disclosure-statement/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 264,
+  "sha256": "fe82ed7ff0713dbd3ef083be873e04e90eea11c0e97c4904ee4646118cf823a0",
+  "file": "585ee6d42e9b.txt",
+  "fetchedAt": "2026-11-25T11:48:56.023Z"
+ }
+]

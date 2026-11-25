@@ -1,0 +1,80 @@
+[
+ {
+  "url": "https://wegetfunded.com/",
+  "finalUrl": "https://wegetfunded.com/en",
+  "title": "WeGetFunded, French prop firm: trading challenges",
+  "status": 200,
+  "kind": "html",
+  "chars": 12245,
+  "sha256": "0e5169da9a1ee0faa1c3fc5fc8993470a73a2c24f03ccfd2af8e95c4000b7187",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:49:10.074Z",
+  "home": true
+ },
+ {
+  "url": "https://wegetfunded.com/en/legal/terms",
+  "finalUrl": "https://wegetfunded.com/en/legal/terms",
+  "title": "Terms and conditions — WeGetFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 50394,
+  "sha256": "11ba489098ebe4c4424a67e4cb89b4bd174cecd10010aeefc03efa024b47bb2b",
+  "file": "d7dbcb0c2149.txt",
+  "fetchedAt": "2026-11-25T11:49:17.722Z"
+ },
+ {
+  "url": "https://wegetfunded.com/faq",
+  "finalUrl": "https://wegetfunded.com/faq",
+  "title": "FAQ WeGetFunded : règles, challenges, paiements et pays",
+  "status": 200,
+  "kind": "html",
+  "chars": 56038,
+  "sha256": "2a004529017db26338a09fbc84287911860a26e76a9d3ac0b225d5c313514f4f",
+  "file": "6a43c3b2b0aa.txt",
+  "fetchedAt": "2026-11-25T11:49:46.423Z"
+ },
+ {
+  "url": "https://wegetfunded.com/en/faq",
+  "finalUrl": "https://wegetfunded.com/en/faq",
+  "title": "WeGetFunded FAQ: rules, challenges, rewards and countries",
+  "status": 200,
+  "kind": "html",
+  "chars": 50543,
+  "sha256": "131368ceb5ef35c9bb73fdf73d9b38c1bb35e009f97c5ba047acd590ef41c425",
+  "file": "14a714c40ba1.txt",
+  "fetchedAt": "2026-11-25T11:50:15.263Z"
+ },
+ {
+  "url": "https://wegetfunded.com/legal/terms",
+  "finalUrl": "https://wegetfunded.com/legal/terms",
+  "title": "Conditions générales de vente — WeGetFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 55133,
+  "sha256": "516bbf7e0012797184c411a3f21e1c5a8187d9e793788611e9f596d47b7797ff",
+  "file": "9e86627d734f.txt",
+  "fetchedAt": "2026-11-25T11:50:22.076Z"
+ },
+ {
+  "url": "https://wegetfunded.com/en/contact",
+  "finalUrl": "https://wegetfunded.com/en/contact",
+  "title": "Contact — WeGetFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 3823,
+  "sha256": "49390b27c61ee4dcee21f203ea6f155b2bfdf433f25d4efed5bca1dbf0d1a163",
+  "file": "93b0930839d4.txt",
+  "fetchedAt": "2026-11-25T11:50:28.751Z"
+ },
+ {
+  "url": "https://wegetfunded.com/en/legal/risk-disclosure",
+  "finalUrl": "https://wegetfunded.com/en/legal/risk-disclosure",
+  "title": "Risk disclosure — WeGetFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 6499,
+  "sha256": "ecf08042e6d44a2df25f26fa501ee5abe743fba539af4ab8db5feee287fab85d",
+  "file": "105b3ecb57b9.txt",
+  "fetchedAt": "2026-11-25T11:50:35.419Z"
+ }
+]

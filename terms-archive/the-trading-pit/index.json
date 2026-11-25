@@ -1,0 +1,69 @@
+[
+ {
+  "url": "https://www.thetradingpit.com/",
+  "finalUrl": "https://www.thetradingpit.com/",
+  "title": "Home | TheTradingPit",
+  "status": 200,
+  "kind": "html",
+  "chars": 8847,
+  "sha256": "7310ad7cbeab0b5ba3e6a0f871fef515aa55e8c957c44295471a35a9134d53b4",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:40.959Z",
+  "home": true
+ },
+ {
+  "url": "https://www.thetradingpit.com/risk-disclosure",
+  "finalUrl": "https://www.thetradingpit.com/risk-disclosure",
+  "title": "Risk Disclosure | TheTradingPit",
+  "status": 200,
+  "kind": "html",
+  "chars": 8124,
+  "sha256": "9431811476e377f8ff3390fa2ccebfcf9c6974e354b0199f7d67fbfe0a855a2f",
+  "file": "f03c0b2a647d.txt",
+  "fetchedAt": "2026-11-25T11:43:50.689Z"
+ },
+ {
+  "url": "https://support.thetradingpit.com/",
+  "finalUrl": "https://support.thetradingpit.com/en/",
+  "title": "Home | The Trading Pit",
+  "status": 200,
+  "kind": "html",
+  "chars": 3753,
+  "sha256": "bbda815f4d5cb45f9ad59963480df15a0867feaf2034c997ba4e30db2fdee7b2",
+  "file": "86c2826bd10c.txt",
+  "fetchedAt": "2026-11-25T11:43:56.673Z"
+ },
+ {
+  "url": "https://www.thetradingpit.com/general-terms-and-conditions",
+  "finalUrl": "https://www.thetradingpit.com/general-terms-and-conditions",
+  "title": "Terms and Conditions | TheTradingPit",
+  "status": 200,
+  "kind": "html",
+  "chars": 90251,
+  "sha256": "fb2cc0995c6663615f5c07c6c998f38eef27c55fbe1f48ef680cc370c2692c34",
+  "file": "e4c057f9357d.txt",
+  "fetchedAt": "2026-11-25T11:44:06.316Z"
+ },
+ {
+  "url": "https://support.thetradingpit.com/en/",
+  "finalUrl": "https://support.thetradingpit.com/en/",
+  "title": "Home | The Trading Pit",
+  "status": 200,
+  "kind": "html",
+  "chars": 3753,
+  "sha256": "bbda815f4d5cb45f9ad59963480df15a0867feaf2034c997ba4e30db2fdee7b2",
+  "file": "6a4c6e99cdca.txt",
+  "fetchedAt": "2026-11-25T11:44:11.677Z"
+ },
+ {
+  "url": "https://www.thetradingpit.com/impressum",
+  "finalUrl": "https://www.thetradingpit.com/impressum",
+  "title": "Legal Notice | TheTradingPit",
+  "status": 200,
+  "kind": "html",
+  "chars": 5418,
+  "sha256": "1840ff8c0043b08f49b46c1ee43b5210fbd2d7c8598d8ed55486d952b258feb5",
+  "file": "e7d1dcbea602.txt",
+  "fetchedAt": "2026-11-25T11:44:21.170Z"
+ }
+]

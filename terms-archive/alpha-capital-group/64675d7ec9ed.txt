@@ -1,0 +1,109 @@
+URL: https://help.alphacapitalgroup.uk/en/articles/6934220-what-is-the-maximum-total-loss
+FINAL: https://help.alphacapitalgroup.uk/en/articles/6934220-what-is-the-maximum-total-loss
+TITLE: What is the Maximum Total Loss? | Alpha Capital Help Center
+FETCHED: 2026-11-25T11:43:56.513Z
+
+Skip to main content
+Português do Brasil
+English
+Español
+English
+Search for articles...
+All Collections
+Trading Rules
+What is the Maximum Total Loss?
+What is the Maximum Total Loss?
+July 24, 2026
+
+The maximum permissible loss is determined by a fixed or trailing maximum drawdown, depending on the account type. This loss limit is set as a percentage of the initial starting balance.
+
+ 
+
+Maximum Drawdown Limits by Account Type
+
+Alpha Pro - static maximum drawdown:
+
+Pro 6%: 6%
+
+Pro 8%: 8%
+
+Pro 10%: 10%
+
+Alpha One - trailing maximum drawdown (based on high-water mark*):
+
+One 6%: 4%
+
+One 10%: 6%
+
+One 12%: 8% 
+
+Alpha Swing: 10% static maximum drawdown
+
+Alpha Three: 6% static maximum drawdown 
+
+Alpha Direct: 5% trailing maximum drawdown (based on high-water mark*)
+
+*High-water mark: maximum account balance achieved on the account
+
+ 
+
+Examples
+
+Alpha Pro & Alpha Swing: 10% static maximum drawdown
+
+If the starting balance is $100,000, the maximum allowable loss is $10,000 (10% of it). If the balance or equity drops below $90,000, the account is breached, and all trades will be closed automatically. Even if the balance grows to $110,000, the maximum loss limit remains at $90,000.
+
+ 
+
+ Alpha Three: 6% static maximum drawdown
+
+If the starting balance is $100,000, the maximum allowable loss is $6,000 (6% of it). If the balance or equity drops below $94,000, the account is breached, and all trades will be closed automatically. Even if the balance grows to $110,000, the maximum loss limit remains at $94,000.
+
+ 
+
+Alpha One 10%: 6% trailing maximum drawdown
+
+If the starting balance is $100,000, the maximum allowable loss is $6,000 (6% of it). If the balance or equity drops below $94,000, the account is breached, and all trades will be closed automatically. If the balance grows to $102,000, the maximum loss limit will be adjusted to $96,000: the $102,000 high-water mark minus 6% of the initial account balance ($6,000). This process will continue until the account reaches a high-water mark equal to the trailing drawdown of 6%. In other words, once the balance reaches $106,000, the trailing drawdown will remain fixed at the initial balance of $100,000 and will not be moved any further.
+
+ 
+
+Alpha Direct: 5% trailing maximum drawdown
+
+If the starting balance is $100,000, the maximum allowable loss is $5,000 (5% of it). If the balance or equity drops below $95,000, the account is breached, and all trades will be closed automatically. If the balance grows to $102,000, the maximum loss limit will be adjusted to $97,000: the $102,000 high-water mark minus 5% of the initial account balance ($5,000). This process will continue until the account reaches a high-water mark equal to the trailing drawdown of 5%. In other words, once the balance reaches $105,000, the trailing drawdown will remain fixed at the initial balance of $100,000 and will not be moved any further.
+
+ 
+
+Additional details about our plans
+
+Alpha Pro
+
+ 
+
+Alpha Swing
+
+ 
+
+Alpha Three
+
+ 
+
+Alpha One
+
+ 
+
+Alpha Direct
+
+ 
+
+In line with our maximum loss policy, if the equity dips below the predetermined minimum level, the system will automatically close all trades, resulting in the termination of the account.
+
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+support@alphacapitalgroup.uk
+DiscordWebsiteDashboard
+We run on Intercom

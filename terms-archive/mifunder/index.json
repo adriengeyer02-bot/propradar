@@ -1,0 +1,36 @@
+[
+ {
+  "url": "https://mifunder.com/",
+  "finalUrl": "https://mifunder.com/",
+  "title": "mifunder.com | 522: Connection timed out",
+  "status": 522,
+  "kind": "html",
+  "chars": 883,
+  "sha256": "7bce4a5ee0411b2181b3c1b8c304bc6c4797b76e95570e98963a5cae4f63d5ed",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:46:31.856Z",
+  "home": true
+ },
+ {
+  "url": "https://mifunder.com/legal/terms-of-service",
+  "finalUrl": "https://mifunder.com/legal/terms-of-service",
+  "title": "mifunder.com | 522: Connection timed out",
+  "status": 522,
+  "kind": "html",
+  "chars": 883,
+  "sha256": "72ca7bc61032b6d75361b618cf7e705f845b25b5845b115e94371ebedcdcfb58",
+  "file": "7f86284f8cc4.txt",
+  "fetchedAt": "2026-11-25T11:46:56.447Z"
+ },
+ {
+  "url": "https://mifunder.com/terms-and-conditions/",
+  "finalUrl": "https://mifunder.com/terms-and-conditions/",
+  "title": "mifunder.com | 522: Connection timed out",
+  "status": 522,
+  "kind": "html",
+  "chars": 883,
+  "sha256": "c6ab07faf25a15dd5b591f4a1bd8f68be48ba1e7e8fecbb79720cba45c1f6848",
+  "file": "3e8e8feb36ca.txt",
+  "fetchedAt": "2026-11-25T11:47:20.887Z"
+ }
+]

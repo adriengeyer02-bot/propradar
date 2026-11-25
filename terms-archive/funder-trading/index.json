@@ -1,0 +1,58 @@
+[
+ {
+  "url": "https://fundertrading.com/",
+  "finalUrl": "https://fundertrading.com/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 265,
+  "sha256": "b72c6467c74dedd66a11e4b067f60a90a00ae54c31e2cc37b3b1dee2a3ba75ad",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:46:13.832Z",
+  "home": true
+ },
+ {
+  "url": "https://fundertrading.com/terms-conditions/",
+  "finalUrl": "https://fundertrading.com/terms-conditions/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 265,
+  "sha256": "009e65a1e6fca789a49aa8809b6ca58f8ea29670cbe005366640057d0dfa0555",
+  "file": "e5a4a315aea3.txt",
+  "fetchedAt": "2026-11-25T11:46:49.058Z"
+ },
+ {
+  "url": "https://fundertrading.zendesk.com/hc/en-us",
+  "finalUrl": "https://fundertrading.zendesk.com/hc/en-us",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 273,
+  "sha256": "0cead8f6f19326b941df7f031dd0d55b4ce000dd705eb15e6fd60cc8e3ef5df0",
+  "file": "e71771593d79.txt",
+  "fetchedAt": "2026-11-25T11:47:24.407Z"
+ },
+ {
+  "url": "https://fundertrading.zendesk.com/hc/en-us/categories/22639923408659-True-Edge-Challenge-and-Rules",
+  "finalUrl": "https://fundertrading.zendesk.com/hc/en-us/categories/22639923408659-True-Edge-Challenge-and-Rules",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 273,
+  "sha256": "05c00762aade7d4b58fb3f42618eb35497e368dcbe0bd93b2dbbf30a535332d6",
+  "file": "faa81a3b2f2b.txt",
+  "fetchedAt": "2026-11-25T11:48:00.080Z"
+ },
+ {
+  "url": "https://fundertrading.zendesk.com/hc/en-us/categories/22639915259539-FAQ",
+  "finalUrl": "https://fundertrading.zendesk.com/hc/en-us/categories/22639915259539-FAQ",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 273,
+  "sha256": "770aab76ee5912845292691782e4563bd3ca94efec2bb3755ca8e560d44e762a",
+  "file": "af376eebfc66.txt",
+  "fetchedAt": "2026-11-25T11:48:35.397Z"
+ }
+]

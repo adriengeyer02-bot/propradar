@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://1of1funding.com/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://1of1funding.com/\nCall log:\n  - navigating to \"https://1of1funding.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:44:57.055Z"
+ },
+ {
+  "url": "https://1of1funding.com/terms-and-conditions/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://1of1funding.com/terms-and-conditions/\nCall log:\n  - navigating to \"https://1of1funding.com/terms-and-conditions/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:44:57.183Z"
+ }
+]

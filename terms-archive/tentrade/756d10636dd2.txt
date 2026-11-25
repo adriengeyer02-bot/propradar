@@ -1,0 +1,180 @@
+URL: https://tentrade.com/en/company/legal-documentations/
+FINAL: https://tentrade.com/en/company/legal-documentations/
+TITLE: Legal Documents - TenTrade
+FETCHED: 2026-11-25T11:47:22.192Z
+
+10
+TenTrade
+Trade
+Learn
+Company
+Partner
+Login
+Register
+ English
+Home
+/
+Company
+/
+Legal Documents
+Legal Documents
+Review TenTrade's legal documents, terms and conditions, risk disclosures, and policies.
+Available Documents
+
+Review our policies and agreements
+
+Terms & Conditions
+
+Complete terms governing your use of TenTrade services and trading platform.
+
+Funded Trader
+
+Terms governing participation in the funded trader program.
+
+TenEdge
+TenExpress
+
+Copy Trading
+
+Terms and Conditions for Copy Trading.
+
+Client Agreement
+
+The agreement between TenTrade and clients regarding trading services.
+
+Bonus Terms
+
+Terms and conditions applicable to bonus account offerings.
+
+Withdrawal and Payout Policy
+
+Rules and procedures for withdrawals, payouts, and related processing.
+
+Cookies Policy
+
+Details on how we use cookies and similar tracking technologies.
+
+Banned Jurisdictions
+
+List of jurisdictions where TenTrade services are restricted or unavailable.
+
+Card Payment Record Retention Notice
+
+Information about how card payment records are retained and handled.
+
+Conflicts of Interest
+
+Our policy on identifying, managing, and disclosing conflicts of interest.
+
+Risk Disclosure
+
+Important information about the risks associated with trading financial instruments.
+
+Privacy Policy
+
+How we collect, use, and protect your personal information.
+
+Cardholder Screening Policy
+
+Our policy for screening cardholders and maintaining payment compliance.
+
+Licensed & Regulated to Protect You
+
+TenTrade is a brand name of Evalanch Ltd, licensed and regulated by the Seychelles Financial Services Authority (FSA) with license number SD082.
+
+Trade
+Trade Live
+PRO
+ECN
+Cent
+Swap Free
+Dynamic Leverage 1:5000
+Account Comparison
+Trade Funded
+Funded Trader
+TenEdge Instant 
+TenEdge Challenge
+TenExpress Instant
+TenExpress Challenge
+Trade & Invest
+Copy Trading
+PAMM Program
+MetaTrader 5
+WebTrader
+Deposits & Withdrawals
+Bonus Promotions
+Trading Instruments
+Forex
+Indices
+Commodities
+Shares
+Cryptocurrencies
+Learn
+Learning Hub
+Meet the Experts
+Webinars and Events
+Trading Resources
+Economic Calendar
+Articles
+Guides
+Prop & Funded Trading
+Forex Trading – What is FX Trading
+Crypto Trading
+Risk, Margin & Leverage
+Company
+About TenTrade
+Who we are
+Safety of Funds
+Luis Figo | Brand Ambassador
+Legal Documents
+Careers
+Help Centre
+FAQ
+Contact Us
+Partner
+Partnerships
+Partners
+PAMM Program
+ 
+
+RISK DISCLAIMER "Contract for Differences" (CFDs) are usually leveraged products. Trading Over-The-Counter (OTC) CFDs related to commodities, Forex, Indices and Shares, carries a high level of risk and can result in the loss of all of your investment. As such, CFDs may not be appropriate and/ or suitable for all investors. You should not invest money that you cannot afford to lose. Before deciding to trade, you should be aware of all the risks associated with OTC CFDs trading, and seek advice from an independent and suitably licensed financial advisor. Past performance does not constitute a reliable indicator of future results. Future forecasts do not constitute a reliable indicator of future performance. General information and/ or recommendations provided by the Company should not be interpreted as investment advice. For more information please visit our General Risk Disclosure Policy.
+Disclaimer: Information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulation
+
+TenTrade is a brand name of Evalanch Ltd (hereinafter the “Company”) which is Licensed and regulated by the Seychelles Financial Services Authority with license number SD082.
+Evalanch Ltd, with registration number 8429760-1, has its office registered at CT House, Office 9A, Providence, Mahe, Seychelles
+
+SKAI Consultancy Ltd, registered in the Republic of Cyprus with registration number HE124105 and registered address at 30 Tempon Street, Ground Floor, Nicosia, 2408, Cyprus, solely acts as an independent representative for TenTrade. This entity is not authorised or licensed in Cyprus and does not conduct any regulated activities.
+
+© 2026 TenTrade. All rights reserved.
+
+Terms & Conditions
+Legal Documents
+Banned Jurisdictions
+This website uses cookies to ensure you get the best experience on our website. Learn more
+Technical
+Technical
+Marketing
+Marketing
+Deny
+Save Settings
+Allow
+x
+
+--- iframe ---
+
+
+  
+'use strict';var m={};class n{constructor(a){this.l=a;this.h={};this.i={};this.j=0;this.id=String(Math.floor(Number.MAX_SAFE_INTEGER*Math.random()))}}function p(a){return a.performance&&a.performance.now()||Date.now()}
+var q=function(a,b){class d{constructor(c,f,g){this.failureType=c;this.data=f;this.h=g;this.i=new n(p(g))}o(c,f){var g=c.clientId;if(c.type===0){c.isDead=!0;var e=this.i,h=p(this.h);e.h[g]==null&&(e.h[g]=0,e.i[g]=h,e.j++);e.h[g]++;c.stats={targetId:e.id,clientCount:e.j,totalLifeMs:Math.round(h-e.l),heartbeatCount:e.h[g],clientLifeMs:Math.round(h-e.i[g])}}c.failure={failureType:this.failureType,data:this.data};f(c)}}return new d(5,a,b)};/*
+
+ Copyright Google LLC
+ SPDX-License-Identifier: Apache-2.0
+*/
+let r=globalThis.trustedTypes,t;function u(){var a=null;if(!r)return a;try{let b=d=>d;a=r.createPolicy("goog#html",{createHTML:b,createScript:b,createScriptURL:b})}catch(b){}return a};var v=class{constructor(a){this.h=a}toString(){return this.h+""}};function w(a){var b=a,d;t===void 0&&(t=u());var c=(d=t)?d.createScriptURL(b):b;return new v(c)}function x(a){if(a instanceof v)return a.h;throw Error("");};function y(a,...b){if(b.length===0)return w(a[0]);var d=a[0];for(let c=0;c<b.length;c++)d+=encodeURIComponent(b[c])+a[c+1];return w(d)}function z(a){var b=y`sw.js`,d=x(b).toString(),c=d.split(/[?#]/),f=/[?]/.test(d)?"?"+c[1]:"";return A(c[0],f,/[#]/.test(d)?"#"+(f?c[2]:c[1]):"",a)}
+function A(a,b,d,c){function f(e,h){e!=null&&(Array.isArray(e)?e.forEach(l=>f(l,h)):(b+=g+encodeURIComponent(h)+"="+encodeURIComponent(e),g="&"))}var g=b.length?"&":"?";c.constructor===Object&&(c=Object.entries(c));Array.isArray(c)?c.forEach(e=>f(e[1],e[0])):c.forEach(f);return w(a+b+d)};const B=/Chrome\/(\d+)/;var D=function(a){var b=a.origin;if(b){var d=a.u?"sw.js":"sw_uncompiled.js",c=a.h?y`/static/service_worker/${a.h}/${d}?origin=${b}`:y`/gtm/static/${d}?origin=${b}`,f=new Map([["origin",b]]);a.path&&f.set("path",a.path);var g=a.l?z(f):c,e=()=>{var k=B.exec(a.window.navigator.userAgent);return k&&Number(k[1])<119},h=a.window.document.location.href;a.h&&(a.l?h=`${a.path}/_/service_worker`:e()||(h="/static/service_worker"));var l={scope:h};a.h&&(l.updateViaCache="all");a.window.navigator.serviceWorker.register(x(g),
+l).then(()=>{a.window.navigator.serviceWorker.ready.then(k=>{a.i=k.active;C(a)})},k=>{a.j=q(k==null?void 0:k.toString(),a.window);C(a)});a.window.navigator.serviceWorker.addEventListener("message",k=>{a.window.parent.postMessage(k.data,a.origin)})}},C=function(a){var b=a.m.slice();a.m=[];for(let d of b)a.handleEvent(d)};
+(new class{constructor(a,b=!0){this.window=a;this.u=b;this.origin="";this.l=!1;this.path="";this.j=this.i=null;this.m=[];this.h=""}init(){if((f=>{try{return f!==f.top}catch(g){return!0}})(this.window)){var a=new URL(this.window.document.location.href),b=a.searchParams.get("origin");if(b){this.origin=b;this.l=!!a.searchParams.get("1p");this.path=a.searchParams.get("path")||"";var d=a.pathname.match(RegExp(".*/service_worker/(\\w+)/"));d&&d.length&&(this.h=d[1]);var c=this.window.document.location.ancestorOrigins;
+c&&c[0]!==this.origin||(D(this),this.window.addEventListener("message",f=>{this.handleEvent(f)}))}}}handleEvent(a){a.origin===this.origin&&(this.i?this.i.postMessage(a.data):this.j?this.j.o(a.data,b=>{this.window.parent.postMessage(b,this.origin)}):this.m.push(a))}}(window)).init();
+  
+
+

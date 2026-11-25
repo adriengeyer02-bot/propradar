@@ -1,0 +1,155 @@
+URL: https://www.thinkcapital.com/tc-faqs/general-faqs/guidelines-regarding-trading-strategies-contrary-to-thinkcapitals-terms-of-use-policy-2/
+FINAL: https://www.thinkcapital.com/tc-faqs/general-faqs/guidelines-regarding-trading-strategies-contrary-to-thinkcapitals-terms-of-use-policy/#overview
+TITLE: Prohibited Trading Strategies for Funded Accounts
+FETCHED: 2026-11-25T11:44:27.489Z
+
+Skip to content
+Programs
+Lightning
+Dual Step
+Nexus
+Bolt
+How it works
+FAQs
+Blog
+Partners
+About
+Contact
+Login / Register
+Get funded
+EN
+
+FAQ
+
+HOW CAN WE HELP?
+
+Popular Keywords
+
+Withdraw
+Funded
+Platform
+Nexus
+Tradingview
+Penalties
+News
+Trial Program
+FAQ Home
+General FAQs
+Which trading strategies are prohibited at ThinkCa...
+WHICH TRADING STRATEGIES ARE PROHIBITED AT THINKCAPITAL?
+
+ThinkCapital prohibits any strategy that exploits the simulated environment in ways you could not repeat in real markets. These include copy trading, grid trading, hedging across accounts, latency arbitrage, high-frequency trading and order layering. ThinkCapital treats them as gambling practices. A first confirmed violation brings a warning, a second brings a reset or final warning, and a ban follows two resets. Copy trading and hedging across accounts normally result in a ban on the first confirmed violation.
+
+Why these rules exist
+
+ThinkCapital collects genuine, practical trading data that can be replicated in real market conditions. If trading behaviour cannot be replicated in real markets, ThinkCapital may audit the account, strategy and execution. Clients on simulated funded accounts are expected to trade as they would on a live account.
+
+Routine account reviews
+
+All accounts, in every phase, are subject to routine reviews of trading activity, behaviour patterns and account data. Every payout request is reviewed before the payout is released.
+
+Consequences
+
+Forbidden trading practices are treated as gambling practices and follow the same consequences. The exception is copy trading and hedging across accounts, which normally result in a ban on the first confirmed violation. Each finding is reviewed by the Risk team before any action is taken. First confirmed violation: a formal warning. Second: an account reset or a final warning, decided case by case. After two resets: a ban from ThinkCapital programs. A confirmed violation can also lead ThinkCapital to cancel all of the trader's accounts, and the accounts of anyone colluding with them.
+
+Account sharing or management, challenge-passing services and news-window violations are handled separately, as described in the items below.
+
+Prohibited strategies and what counts as a breach
+
+1. Copy trading: Copying trades from or to any other account, including signal providers, other traders, other prop firm accounts and personal accounts. Copy trading is not allowed on any ThinkCapital account. A confirmed violation normally results in a ban.
+
+2. Grid trading: Opening several trades on the same symbol and in the same direction that are open at the same time, with no stop loss on any of them.
+
+3. Hedging or group hedging across multiple accounts: Opening opposite positions on the same instrument across different accounts, whether your own, other traders' or accounts at other prop firms, so that a loss on one account is offset by a gain on another. A confirmed violation normally results in a ban.
+
+4. Collusion between users: Coordinating trades with other traders across multiple accounts to manipulate results, for example by taking agreed opposite positions. All accounts involved can be cancelled.
+
+5. Account sharing, management or sale: Allowing anyone else to trade, manage or access your account, or buying or selling an account. Each account must be traded only by its registered owner. This results in account termination and a ban from ThinkCapital services.
+
+6. Latency arbitrage: Exploiting time delays between price feeds or servers to enter trades at outdated prices, typically through repeated trades held for only a few seconds with an unusually high win rate.
+
+7. High-frequency trading (HFT): Opening and closing trades within seconds. Any trade held for less than 5 seconds, or held for 5 to 59 seconds and closed in profit, counts as high-frequency trading.
+
+8. Abuse of a delayed data feed: Taking advantage of delays in the price feed to trade on prices that are no longer current. This gives an unfair advantage that would not exist in a real market.
+
+9. Abuse of the simulated environment: Trading large volumes with no logical strategy, or using any approach that only works because the account is simulated, such as strategies designed to produce risk-free, consistent simulated profits.
+
+10. Trading on delayed charts: Using delayed charts to open positions based on prices the market has already moved past.
+
+11. Running automated trading tools: EAs cannot currently be deployed on ThinkCapital accounts, because the ThinkMarkets app does not support automated trading. Only TradingView-based tools, such as indicators, can be used.
+
+12. Challenge-passing services: Paying for, or allowing, a third party to pass a challenge on your behalf. This results in rejection of simulated funded accounts and a permanent ban.
+
+13. Martingale trading: Increasing your position size after each loss to recover previous losses in one trade.
+
+14. Exploiting guaranteed execution of limit orders: Relying on limit orders being filled at an exact price in conditions where a real market would not fill them at that price.
+
+15. Trading from OFAC-sanctioned countries: Accessing or trading an account from a country sanctioned by OFAC or otherwise restricted by ThinkCapital, including by using a VPN to hide your location.
+
+16. Trading during restricted news windows: No trade can be opened or closed, no pending order filled and no stop loss or take profit hit from 2 minutes before to 2 minutes after a high-impact (red-folder) release, or from 5 minutes before to 5 minutes after on Bolt and Bolt Flex. This applies unless your account has the News Trading add-on or is Dual Step Swing. A violation is a hard breach: the account is terminated and profits are forfeited.
+
+17. Order layering: Opening three or more trades on the same symbol and in the same direction, each within 3 seconds of the previous one.
+
+18. Gambling or punting: Taking a few large, high-risk trades with no clear strategy, overleveraging, or putting a large share of the balance on one trade without a stop loss. The gambling guidelines list the risk thresholds ThinkCapital monitors, such as margin above 60% of equity, stop-loss risk above 2.5% of balance (above 4% is high risk), combined margin above 50% of equity on positions that share a currency, and 'coinflip' trading.
+
+19. Trading cryptocurrency on Bolt or Bolt Flex: cryptocurrency is not available on Bolt or Bolt Flex accounts, and any crypto trade on either plan is flagged in the account review.
+
+Why Does ThinkCapital Prohibit These Strategies?
+
+ThinkCapital prohibits these strategies because they exploit the simulated environment or aim for risk-free simulated profits that real markets would not allow. Clients on simulated funded accounts must trade as they would on a live account. A first confirmed violation brings a warning. A second brings an account reset or final warning, and a ban follows two resets.
+
+Exploiting demo accounts leads to account closure regardless of phase.
+
+Related links
+
+Gambling and reckless trading
+Penalties
+Data collection and account integrity
+Terms of Service
+
+Was this article helpful?
+
+Yes
+No
+IN THIS ARTICLE
+Why does ThinkCapital prohibit these strategies?
+RELATED ARTICLES
+What is ThinkCapital?
+Is ThinkCapital legit?
+Does floating profit count towards my ThinkCapital profit target?
+Does leverage change during news events at ThinkCapital?
+Are Expert Advisors (EAs) allowed at ThinkCapital?
+SHARE THIS ARTICLE
+STILL NEED HELP?
+
+Contact our support team. Email inquiries are accepted 24 hours a day. Replies are sent during business hours.
+
+support@thinkcapital.com
+
+Join 40,000+ traders getting weekly prop firm tips, funded trader success stories, and free trading tools.
+
+SUBSCRIBE TO OUR NEWSLETTER
+Subscribe
+PROGRAMS
+How it works
+Lightning
+Dual Step
+Nexus
+Bolt
+COMPANY
+About
+Partners
+RESOURCES
+FAQs
+Blog
+Risk Disclosure
+
+© 2026 ThinkCapital
+
+DISCLAIMER: All information provided on this site is intended solely for educational purposes related to trading on financial markets and does not serve in any way as a specific investment recommendation, business recommendation, investment opportunity analysis or similar general recommendation regarding the trading of investment instruments. ThinkCapital only provides services of simulated trading and educational tools for traders. The information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local laws or regulations. ThinkCapital does not act as a broker and does not accept any deposits. The offered technical solution and data feed is powered by liquidity providers. ThinkCapital offers only demo accounts to all users registered for the Free Trial or any ThinkCapital Challenge products. ThinkCapital does not offer brokerage services, trading services, or custody of investor funds. ThinkCapital reserves the sole right and discretion not to provide services to residents of certain jurisdictions, including but not limited to Vietnam, Russia, Ukraine, Zambia, Yemen, Western Sahara, West Bank, Vatican City State, Syria, Sudan, Somalia, Samoa, Republic of the Congo, North Korea, Midway Islands, Mali, Guinea, Haiti, Libya, Lebanon, Kosovo, Iran, Iraq, Venezuela, Cyprus, Cuba, Central African Republic, Burundi, Burma (Myanmar), British Columbia, Australia, Albania and Afghanistan.
+
+NEW
+Bolt Flex is here. Instant funding with more room to trade.
+Learn More
+→
+✕

@@ -1,0 +1,7 @@
+[
+ {
+  "url": "https://leveledupsociety.com/",
+  "error": "Error: page.goto: net::ERR_TOO_MANY_REDIRECTS at https://leveledupsociety.com/\nCall log:\n  - navigating to \"https://leveledupsociety.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:43:52.107Z"
+ }
+]

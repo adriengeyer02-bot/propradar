@@ -1,0 +1,50 @@
+URL: https://www.axi.com/int/deposits-and-withdrawals
+FINAL: https://www.axi.com/int/deposits-and-withdrawals
+TITLE: Deposits & Withdrawals - Payment Methods by Region / Axi
+FETCHED: 2026-11-25T11:46:36.953Z
+
+Over-the-counter derivatives are leveraged products that carry a high level of risk to your capital. Trading is not suitable for everyone and may result in you losing substantially more than your initial investment. You do not own, or have any rights to, the underlying assets. You should only trade with money you can afford to lose.AxiYour EdgeMarketsTradeEducationPartnershipsOur CompanyLoginOpen AccountOpen AccountTrade with ConfidenceWe support every step of your trading journeyPricing and ExecutionTransparent pricing with fast, reliable executionTrade SafelyAdvanced security to protect your tradingAward-Winning ServiceRecognised for excellence in tradingTrading EdgeGiving you more to trade your edgeCFDSForexAccess forex pairs and trade in markets 24/5IndicesInvest in key leading market indices globallySharesTrade stocks from leading global companiesETFsTrendingBroad exposure with exchange-traded fundsUpcoming IPOsNewTrade the biggest IPOs as soon as they are publicCommoditiesDiversify with hard and soft commodity marketsCryptocurrenciesTrade digital assets, explore crypto optionsTradFi Markets🔥24/7Trade Gold, Stocks, Indices and Commodities 24x7PaymentsPayment MethodsFees & ChargesAccountsAccount TypesAxi SelectCopy TradingPlatformsAxi Trading PlatformClaude Connector (MCP)NEWMetaTrader 5MetaTrader 4ToolsAI Trade AssistantNEWAutochartistCalculatorsTrading InfoEconomic CalendarDividend Forecast ScheduleFutures CFD Contract RolloverTrading Holidays CalendarAxi AcademyLearn trading with free tutorials and resourcesFree eBooksDiscover valuable trading strategiesBlogAccess trading guides, technical analysis and market newsHelp CentreOur Help Centre will answer all your questions about trading with AxiIntroducing BrokersEarn commissions by referring clientsAffiliate ProgrammePopularPromote and earn easily with flexible rewardsHybrid ProgrammeNewCombine CPA and revenue share in one flexible partner modelMT4 Multi-Account ManagerManage multiple client accounts with advanced allocation toolsMT4 PAMM ManagerBecome a fund manager and share the profitsAbout AxiLearn more about Axi's mission and valuesSponsorshipExplore our sponsorship and partnershipsCorporate Social ResponsibilityDiscover Axi's commitment to social impactInvestor RelationsBuilding innovation and strength for our partnersCompany NewsRead about the latest Axi news and eventsCareersFind job opportunities and join our teamContact UsGet in touch with our support teamHomeDeposits and WithdrawalsDeposits and WithdrawalsChoose from a range of simple and convenient payment methods from top global providers.See payment options available in your region. AfricaSee Payment Options See Payment OptionsAsiaSee Payment Options See Payment OptionsEuropeSee Payment Options See Payment OptionsLatin AmericaSee Payment Options See Payment OptionsMiddle East & North AfricaSee payment options See payment optionsNorth AmericaSee payment options See payment optionsOpen AccountAll your trading activities in one place.Start trading with a global, award-winning broker.Download the App on iOS or Android.Scan to download the App on iOS or Android.Download on theApp StoreGet it onGoogle PlayDownload on theApp StoreGet it onGoogle PlayOpen Live AccountTrustpilotAsk AI to summarizeDownload on theApp StoreGet it onGoogle PlayEssentialsOpen AccountPayment MethodsDownload MT4Download MT5Download Axi AppTradingMarketsAccount TypesPlatformsToolsEducationAxi AcademyFree eBooksBlogPartnershipsIntroducing BrokersAffiliate ProgrammeLegalLegal DocumentationProduct ScheduleClient AgreementComplaints HandlingPrivacy PolicyWebsite Terms & ConditionsClient supportRequest a callbackWhatsAppHelp CentreAxi is a trading name of AxiTrader LLC (AxiTrader), which is incorporated in St Vincent and the Grenadines, number 4303 LLC 2025 by the Registrar of International Business Companies, and registered by the Financial Services Authority, and whose address is Euro House, Richmond Hill Road, Kingstown, St. Vincent and the Grenadines.Over-the-counter derivatives are complex instruments and come with a high risk of losing substantially more than your initial investment rapidly due to leverage. You should consider whether you understand how over-the-counter derivatives work and whether you can afford to take the high level of risk to your capital. Investing in over-the-counter derivatives carries significant risks and is not suitable for all investors.When acquiring our derivative products you have no entitlement, right or obligation to the underlying financial asset. AxiTrader is not a financial adviser and all services are provided on an execution only basis. Information is of a general nature only and does not consider your financial objectives, needs or personal circumstances. Important legal documents in relation to our products and services are available on our website. You should read and understand these documents before applying for any AxiTrader products or services and obtain independent professional advice as necessary.AxiTrader LLC is a member of The Financial Commission, an international organisation engaged in the resolution of disputes within the financial services industry in the Forex market.The information on this website is not intended for Australian and New Zealand residents.© 2026
+
+
+
+--- iframe ---
+
+
+  
+'use strict';var m={};class n{constructor(a){this.l=a;this.h={};this.i={};this.j=0;this.id=String(Math.floor(Number.MAX_SAFE_INTEGER*Math.random()))}}function p(a){return a.performance&&a.performance.now()||Date.now()}
+var q=function(a,b){class d{constructor(c,f,g){this.failureType=c;this.data=f;this.h=g;this.i=new n(p(g))}o(c,f){var g=c.clientId;if(c.type===0){c.isDead=!0;var e=this.i,h=p(this.h);e.h[g]==null&&(e.h[g]=0,e.i[g]=h,e.j++);e.h[g]++;c.stats={targetId:e.id,clientCount:e.j,totalLifeMs:Math.round(h-e.l),heartbeatCount:e.h[g],clientLifeMs:Math.round(h-e.i[g])}}c.failure={failureType:this.failureType,data:this.data};f(c)}}return new d(5,a,b)};/*
+
+ Copyright Google LLC
+ SPDX-License-Identifier: Apache-2.0
+*/
+let r=globalThis.trustedTypes,t;function u(){var a=null;if(!r)return a;try{let b=d=>d;a=r.createPolicy("goog#html",{createHTML:b,createScript:b,createScriptURL:b})}catch(b){}return a};var v=class{constructor(a){this.h=a}toString(){return this.h+""}};function w(a){var b=a,d;t===void 0&&(t=u());var c=(d=t)?d.createScriptURL(b):b;return new v(c)}function x(a){if(a instanceof v)return a.h;throw Error("");};function y(a,...b){if(b.length===0)return w(a[0]);var d=a[0];for(let c=0;c<b.length;c++)d+=encodeURIComponent(b[c])+a[c+1];return w(d)}function z(a){var b=y`sw.js`,d=x(b).toString(),c=d.split(/[?#]/),f=/[?]/.test(d)?"?"+c[1]:"";return A(c[0],f,/[#]/.test(d)?"#"+(f?c[2]:c[1]):"",a)}
+function A(a,b,d,c){function f(e,h){e!=null&&(Array.isArray(e)?e.forEach(l=>f(l,h)):(b+=g+encodeURIComponent(h)+"="+encodeURIComponent(e),g="&"))}var g=b.length?"&":"?";c.constructor===Object&&(c=Object.entries(c));Array.isArray(c)?c.forEach(e=>f(e[1],e[0])):c.forEach(f);return w(a+b+d)};const B=/Chrome\/(\d+)/;var D=function(a){var b=a.origin;if(b){var d=a.u?"sw.js":"sw_uncompiled.js",c=a.h?y`/static/service_worker/${a.h}/${d}?origin=${b}`:y`/gtm/static/${d}?origin=${b}`,f=new Map([["origin",b]]);a.path&&f.set("path",a.path);var g=a.l?z(f):c,e=()=>{var k=B.exec(a.window.navigator.userAgent);return k&&Number(k[1])<119},h=a.window.document.location.href;a.h&&(a.l?h=`${a.path}/_/service_worker`:e()||(h="/static/service_worker"));var l={scope:h};a.h&&(l.updateViaCache="all");a.window.navigator.serviceWorker.register(x(g),
+l).then(()=>{a.window.navigator.serviceWorker.ready.then(k=>{a.i=k.active;C(a)})},k=>{a.j=q(k==null?void 0:k.toString(),a.window);C(a)});a.window.navigator.serviceWorker.addEventListener("message",k=>{a.window.parent.postMessage(k.data,a.origin)})}},C=function(a){var b=a.m.slice();a.m=[];for(let d of b)a.handleEvent(d)};
+(new class{constructor(a,b=!0){this.window=a;this.u=b;this.origin="";this.l=!1;this.path="";this.j=this.i=null;this.m=[];this.h=""}init(){if((f=>{try{return f!==f.top}catch(g){return!0}})(this.window)){var a=new URL(this.window.document.location.href),b=a.searchParams.get("origin");if(b){this.origin=b;this.l=!!a.searchParams.get("1p");this.path=a.searchParams.get("path")||"";var d=a.pathname.match(RegExp(".*/service_worker/(\\w+)/"));d&&d.length&&(this.h=d[1]);var c=this.window.document.location.ancestorOrigins;
+c&&c[0]!==this.origin||(D(this),this.window.addEventListener("message",f=>{this.handleEvent(f)}))}}}handleEvent(a){a.origin===this.origin&&(this.i?this.i.postMessage(a.data):this.j?this.j.o(a.data,b=>{this.window.parent.postMessage(b,this.origin)}):this.m.push(a))}}(window)).init();
+  
+
+
+
+--- iframe ---
+
+
+    
+        
+            (function(global) { 
+                var ttdcm = new TTDCM(); 
+                ttdcm.init( [] );
+            })(this);
+        
+    
+
+
+
+
+    
+
+
+    parent.postMessage(`{"type":"DynamicParams","pixelId":"w4n85bh","params":[{"evaluatedParameter":"td1","parameterValue":"{TD1}"},{"evaluatedParameter":"td8","parameterValue":"{TD8}"},{"evaluatedParameter":"td9","parameterValue":"{TD9}"},{"evaluatedParameter":"td3","parameterValue":"{TD3}"},{"evaluatedParameter":"td2","parameterValue":"{TD2}"},{"evaluatedParameter":"td5","parameterValue":"{TD5}"},{"evaluatedParameter":"td4","parameterValue":"{TD4}"},{"evaluatedParameter":"td7","parameterValue":"{TD7}"},{"evaluatedParameter":"v","parameterValue":"{v}"},{"evaluatedParameter":"td6","parameterValue":"{TD6}"}]}`, `https://www.axi.com`);
+
+    
+

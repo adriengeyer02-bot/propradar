@@ -1,0 +1,58 @@
+[
+ {
+  "url": "https://exfunded.sandai-investment.com/",
+  "finalUrl": "https://exfunded.sandai-investment.com/",
+  "title": "Homepage - ExFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 8642,
+  "sha256": "2864b9e7f818ecc6655d1266e234b7a0ffd28c4c2c6d1d25463095d536af92b3",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:07.388Z",
+  "home": true
+ },
+ {
+  "url": "https://exfunded.sandai-investment.com/terms-condition/",
+  "finalUrl": "https://exfunded.sandai-investment.com/terms-condition/",
+  "title": "Terms & Condition - ExFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 9584,
+  "sha256": "814111529a5d833d2fb3a12c692ba04ba248be860801aa75c3d298a213db9e11",
+  "file": "429555093135.txt",
+  "fetchedAt": "2026-11-25T11:45:13.808Z"
+ },
+ {
+  "url": "https://exfunded.sandai-investment.com/faq/",
+  "finalUrl": "https://exfunded.sandai-investment.com/faq/",
+  "title": "FAQ - ExFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 25121,
+  "sha256": "e5d1c4436d5e08077c66917bc6c1d192847cda34b27a948281b3f0d66179e4cc",
+  "file": "69ca150eaa97.txt",
+  "fetchedAt": "2026-11-25T11:45:30.649Z"
+ },
+ {
+  "url": "https://exfunded.sandai-investment.com/faq",
+  "finalUrl": "https://exfunded.sandai-investment.com/faq/",
+  "title": "FAQ - ExFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 25121,
+  "sha256": "e5d1c4436d5e08077c66917bc6c1d192847cda34b27a948281b3f0d66179e4cc",
+  "file": "19f3f2472f4a.txt",
+  "fetchedAt": "2026-11-25T11:45:49.547Z"
+ },
+ {
+  "url": "https://exfunded.sandai-investment.com/aml-policy/",
+  "finalUrl": "https://exfunded.sandai-investment.com/aml-policy/",
+  "title": "AML Policy - ExFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 8108,
+  "sha256": "28ef8ddfb7ed506226882273205d24b957e4de073eb25b3ab298f4610648740d",
+  "file": "0db076d91070.txt",
+  "fetchedAt": "2026-11-25T11:45:56.061Z"
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "url": "https://fundyourfx.io/",
+  "finalUrl": "https://fundyourfx.com/",
+  "title": "FundYourFX | Prop Firm for Forex Traders",
+  "status": 200,
+  "kind": "html",
+  "chars": 14860,
+  "sha256": "bf5f9bf12a4047bd5d4e3b7a7de83fef8f082b98c2213b6da5f776df589369b1",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:46:51.770Z",
+  "home": true
+ },
+ {
+  "url": "https://fundyourfx.io/terms-conditions/",
+  "finalUrl": "https://fundyourfx.com/terms-conditions",
+  "title": "Terms & Conditions | FundYourFX",
+  "status": 200,
+  "kind": "html",
+  "chars": 83528,
+  "sha256": "034d64256d9404762e94f6670514cb0517dfc7a1d9116c3a1cb95ccee30a0a40",
+  "file": "a70ba873b909.txt",
+  "fetchedAt": "2026-11-25T11:46:58.044Z"
+ },
+ {
+  "url": "https://fundyourfx.io/refund-policy/",
+  "finalUrl": "https://fundyourfx.com/refund-policy",
+  "title": "Refund Policy | FundYourFX",
+  "status": 200,
+  "kind": "html",
+  "chars": 2843,
+  "sha256": "f7bfff8bfa94731e43a02b2f42e4dc5b7760410bf563f2256023a2034476ac3b",
+  "file": "f67c794649b8.txt",
+  "fetchedAt": "2026-11-25T11:47:04.489Z"
+ }
+]

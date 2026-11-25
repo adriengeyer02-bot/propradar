@@ -1,0 +1,215 @@
+URL: https://citytradersimperium.com/forex-calculators/risk-of-ruin-calculator/
+FINAL: https://citytradersimperium.com/forex-calculators/risk-of-ruin-calculator/
+TITLE: Risk Of Ruin Calculator | CTI
+FETCHED: 2026-11-25T11:45:19.412Z
+
+Home
+Funding Programs
+FAQs
+Academy
+Resources
+More
+LOG IN
+FREE TRIAL
+Skip to content
+FREE TRADING TOOLS
+RISK OF RUIN CALCULATOR
+Find out how likely your current risk level is to blow the account before your edge has a chance to pay off. Enter your win rate, reward to risk and risk per trade, and it simulates ten thousand runs of your strategy.
+FREE TO USE
+NO SIGN UP
+10,000 SIMULATIONS
+1
+Enter your real numbers. Use your actual win rate and average reward to risk from your trading records, not what you hope they will be.
+2
+Set your risk and limit. Add your risk per trade and the drawdown that would end things, such as your prop firm maximum drawdown.
+3
+Compare risk levels. Use the table below to see how quickly the odds turn against you as your risk per trade climbs.
+Your Strategy
+Results update automatically as you type. There is nothing to submit.
+WIN RATE %
+REWARD TO RISK
+Average win divided by average loss.
+RISK PER TRADE %
+NUMBER OF TRADES
+RUIN THRESHOLD %
+The drawdown from your starting balance that counts as ruin. On a funded account use your maximum drawdown limit.
+Reset To Defaults
+Your Odds
+Under 0.1%
+RISK OF RUIN
+0.25R
+EXPECTANCY PER TRADE
+99.7%
+CHANCE OF ENDING IN PROFIT
++62.2%
+MEDIAN ACCOUNT CHANGE
+36
+LOSSES IN A ROW TO RUIN
+
+Your sizing is conservative and well matched to your edge.
+Ruin occurred in Under 0.1% of runs, with a median outcome of +62.2% over 200 trades. It would take 36 consecutive losses to reach your limit. This is the position most traders should aim for.
+
+SIZE MATTERS
+Your Odds At Different Risk Levels
+RISK PER TRADE	RISK OF RUIN	CHANCE OF PROFIT	MEDIAN CHANGE
+0.25%	0%	99.8%	+13.2%
+0.5%	0%	99.8%	+27.9%
+1%	Under 0.1%	99.6%	+62.2%
+2%	0.7%	98.9%	+154.9%
+3%	2.9%	97%	+288%
+5%	11.8%	88.1%	+826.6%
+10%	39.7%	60.3%	Over +999%
+
+Every row uses the same win rate, reward to risk and 30 percent limit over 200 trades. Only the risk per trade changes. Median figures at high risk assume you keep compounding without limit, which is unrealistic, so treat the risk of ruin column as the meaningful comparison.
+
+THE BASICS
+How Risk Of Ruin Works
+Edge Is Not Enough
+
+A profitable strategy can still lose everything if the position size is too large. Ruin happens when a normal run of losses arrives before your edge has had enough trades to show up. The edge decides where you end up, the size decides whether you survive to get there.
+
+Why Risk Compounds Against You
+
+Doubling your risk per trade does far more than double your risk of ruin. Halving your risk usually cuts the odds of ruin dramatically while only slowing your returns. That trade is almost always worth making, which is why the table above is the most useful part of this page.
+
+What The Simulation Does
+
+It runs your strategy ten thousand times, dealing random wins and losses at your win rate and sizing each trade as a percentage of the balance at the time. It counts how often the drawdown limit is breached before the run finishes. Same inputs always give the same answer.
+
+COMMON QUESTIONS
+Risk Of Ruin Questions Answered
+What is risk of ruin in trading?
+
+Risk of ruin is the probability that your account falls to a level you have defined as failure before a given number of trades is complete. On a funded account that level is usually your maximum drawdown limit. It depends on three things working together: your win rate, your reward to risk, and how much you risk per trade.
+
+What is an acceptable risk of ruin?
+
+Most professionals aim to keep it under 1 percent, and many would treat anything above 5 percent as unacceptable. The reason is that ruin is permanent while a slower return is only temporary. If your figure is above 10 percent, reducing your risk per trade will improve your odds far more than trying to improve your win rate.
+
+Can I reduce my risk of ruin without a better strategy?
+
+Yes, and it is usually the fastest fix available. Cutting your risk per trade in half typically reduces the risk of ruin by much more than half, because losing streaks then need to be far longer to reach your limit. Your expected return per trade does not change at all, only the path there becomes smoother.
+
+What if my expectancy is negative?
+
+Then no position size will save the account, it only changes how long the decline takes. A negative expectancy means each trade loses money on average, so smaller sizing slows the bleed rather than stopping it. The only fix is a better win rate, a better reward to risk, or not trading that strategy.
+
+How is expectancy calculated?
+
+Multiply your win rate by your reward to risk, then subtract your loss rate. A 50 percent win rate at 1.5 to 1 gives 0.5 times 1.5 minus 0.5, which is 0.25R per trade. That means you make a quarter of what you risk on an average trade. Anything above zero is a positive edge.
+
+Why do the same inputs always give the same result?
+
+The simulation uses a fixed starting seed, so the ten thousand runs are identical every time for the same inputs. That makes results reproducible and lets you compare two risk levels fairly, rather than seeing numbers shift each time you look.
+
+How accurate is this calculator?
+
+The simulation is mathematically sound but it assumes each trade is independent and that your win rate and reward to risk stay constant. Real trading is messier, with losses clustering during bad market conditions and results drifting as conditions change, so treat the figure as a guide to whether your sizing is sensible rather than a precise forecast.
+
+Please note: This is a Monte Carlo simulation that runs ten thousand sequences using the numbers you enter. It assumes each trade is independent, that your win rate and reward to risk stay constant, and that you risk a fixed percentage of the current balance on every trade. Real trading breaks those assumptions, since losses tend to arrive in clusters and performance drifts over time, so a real risk of ruin is usually higher than a model suggests. Results exclude spread, commission and slippage. Nothing here is financial or investment advice.
+KEEP PLANNING
+Our Other Free Calculators
+Position Size Calculator
+Turn a stop loss and a risk percentage into the exact lot size to trade.
+Challenge Drawdown Calculator
+See what a losing run does to your account and whether it breaches your limit.
+Pip Calculator
+Find what a pip is worth on any pair at your lot size.
+Margin Calculator
+Check the margin a position ties up and whether you are over leveraging.
+Swap Calculator
+Work out the overnight cost of holding a position, including triple Wednesdays.
+Consistency Score Calculator
+Another free calculator for funded traders.
+All Trading Calculators
+Browse every free tool we have built for funded traders in one place.
+Become A CTI Funded Trader
+
+Prove your skills. Get rewarded. It’s as simple as that.
+
+✓
+8 years of consistent payouts
+✓
+Keep up to 100% profit share
+✓
+Scale up to $4M in funding
+100,000+
+TRADERS WORLDWIDE
+178+
+COUNTRIES
+4.8/5
+GOOGLE RATING
+Get Funded Now →
+Start Free Trial
+*No card needed
+FOLLOW US
+FUNDING PROGRAMS
+1-Step Challenge
+2-Step Challenge
+Instant Funding
+Direct Funding
+Success Stories
+FAQs
+Free Trial
+RESOURCES
+CTI Academy
+Join Community
+Blog
+Market News
+Symbols Live Feed
+Calculators
+MT5 Trade Manager
+MORE
+Become an Affiliate
+Partners
+About Us
+Shop
+Start a Prop Firm
+Contact Us
+CONTACT SUPPORT
+Email: support@citytradersimperium.com
+Live Chat: available on the website
+Discord: Join Community
+TERMS & CONDITIONS
+PRIVACY POLICY
+REFUND POLICY
+AML POLICY
+AFFILIATE AGREEMENT
+CONDUCT POLICY
+EDITORIAL POLICY
+SITEMAP
+COOKIE SETTINGS
+
+Skill assessment programs and simulated demo trading services are provided exclusively by City Traders Imperium Limited, a company incorporated under the laws of Comoros Union with company number 15969 (License No. L15969/CTI), registered address at Hamchako, Mutsamudu, Autonomous Island of Anjouan, Comoros Union, with operating address at Edificio Faro, Oficina 4, Avenidas 12 y 14, Calle 12, Barrio Luján, San José, Costa Rica. City Traders Imperium Academy educational courses are provided by CTI FZCO (Company No. DSO-FZCO-21340), registered at Dubai Silicon Oasis, DDP, Building A1, Dubai, United Arab Emirates.
+
+Legal Disclosure: City Traders Imperium Limited provides access to simulated trading skill assessment programs designed solely for the evaluation of trading proficiency and risk-management skills. City Traders Imperium Academy provides structured educational courses. All trading activity occurs in a demo environment using virtual capital.
+
+No Client Funds / No Live Trading: Neither CTI FZCO nor City Traders Imperium Limited is a broker, dealer, exchange, or investment adviser, and neither accepts nor manages client deposits. Participants do not trade real assets or place live market orders. Any rewards are performance-based and derived from skill assessment results only.
+
+Evaluation & Educational Use Only: All content, tools, and services are provided for educational and evaluation purposes only and shall not be construed as investment advice, solicitation, or an offer to buy or sell any financial product, cryptocurrency, or derivative. Participants are encouraged to consult independent financial, legal, or tax advisors before engaging in any trading activity outside of these services.
+
+Platforms: MetaTrader 5 & Match-Trader platforms are used exclusively in connection with the simulated skill assessment environment operated by City Traders Imperium Limited.
+
+Hypothetical Performance Disclosure: Simulated or hypothetical trading results have inherent limitations. Unlike actual performance records, they do not represent real trading activity and may be designed with the benefit of hindsight. No representation is being made that any account will, or is likely to, achieve profits or losses similar to those shown or implied.
+
+Payments & Refunds: All fees paid are educational service fees for access to courses or skill assessment programs. All fees are non-refundable except as outlined in our Refund Policy.
+
+Jurisdictional Restrictions: Neither entity offers services to nationals or residents of the following jurisdictions: North Korea (DPRK), Iran, Syria, Cuba, Russia, or to any individual under international sanctions.
+
+Non-Targeted Reach: Information on these websites is not directed to residents of any country where such distribution or use would be contrary to local law or regulation. It is the user's responsibility to ensure that any use of the websites or services adheres to their local laws or regulations.
+
+Beware of Impersonators: This is our only official website.
+
+© 2026 Copyright
+
+City Traders Imperium & City Traders Imperium Academy.
+
+All Rights Reserved.
+
+We use cookies
+We use cookies to run this site, understand how it is used and measure our advertising. You can accept all, reject non-essential cookies, or choose which categories to allow.
+Privacy policy
+Cookie policy
+Cookie settings
+Reject non-essential
+Accept all

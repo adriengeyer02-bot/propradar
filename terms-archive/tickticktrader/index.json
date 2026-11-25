@@ -1,0 +1,36 @@
+[
+ {
+  "url": "https://tickticktrader.com/",
+  "finalUrl": "https://tickticktrader.com/",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 266,
+  "sha256": "0a439979bb1167f965a689c90fe2cc411a96bfc9e566ded8fe945bca9c36735a",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:42:59.598Z",
+  "home": true
+ },
+ {
+  "url": "https://tickticktrader.com/terms-conditions",
+  "finalUrl": "https://tickticktrader.com/terms-conditions",
+  "title": "Site Not Found | Framer",
+  "status": 404,
+  "kind": "html",
+  "chars": 61,
+  "sha256": "e5ff772fef06308d99024ec4c81fcb7b5cb63d18cd5a0705ad19ab8c1115e6c6",
+  "file": "77b1e64bdccb.txt",
+  "fetchedAt": "2026-11-25T11:43:04.841Z"
+ },
+ {
+  "url": "https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement",
+  "finalUrl": "https://app.tickticktrader.com/agreement/50K-Direct-Account-Agreement",
+  "title": "Just a moment...",
+  "status": 403,
+  "kind": "html",
+  "chars": 270,
+  "sha256": "80c6b0f3ac298fec70e312f7e26a978ec2bda4e12f1da8548b00eee4111140b1",
+  "file": "f7f616daa8f3.txt",
+  "fetchedAt": "2026-11-25T11:43:40.035Z"
+ }
+]

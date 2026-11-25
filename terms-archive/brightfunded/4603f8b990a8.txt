@@ -1,0 +1,515 @@
+URL: https://help.brightfunded.com/en/articles/18450321-instant-account-rules
+FINAL: https://help.brightfunded.com/en/articles/18450321-instant-account-rules
+TITLE: Instant: account rules | BrightFunded CFD Help Center
+FETCHED: 2026-11-25T11:43:52.685Z
+
+Skip to main content
+Discord 👾
+Website 💻
+English
+Deutsch
+Polski
+Português
+Español
+English
+Search for articles...
+All Collections
+BrightFunded Plans & Challenge Essentials
+BrightFunded Plans
+Instant
+Instant: account rules
+Instant: account rules
+
+Account rules, payout requirements and general trading rules.
+
+Updated yesterday
+
+Instant has no evaluation. You are funded when you buy, so these are the rules of your funded account.
+
+Account summary
+
+Rule
+
+	
+
+Value
+
+
+
+
+Evaluation and profit target
+
+	
+
+None
+
+
+
+
+Max loss
+
+	
+
+5% trailing, on the highest balance or equity you reach. Stops at your starting balance
+
+
+
+
+Daily loss
+
+	
+
+3%
+
+
+
+
+Max floating loss
+
+	
+
+1% of starting size, all open positions combined, in real time
+
+
+
+
+Weekend holding
+
+	
+
+Not allowed. Trades still open on Friday are closed automatically at market close
+
+
+
+
+Consistency rule
+
+	
+
+15%
+
+
+
+
+Profit split
+
+	
+
+90% (100% with the 100% Payout Split add-on)
+
+
+
+
+Account sizes
+
+	
+
+$5K, $10K, $25K, $50K, $100K, $200K
+
+
+
+
+Platforms
+
+	
+
+MT5, cTrader, DXtrade
+
+Max loss: 5% trailing
+
+It trails the high-water mark of your balance or equity and stops moving at your starting balance.
+
+Highest balance or equity reached
+
+	
+
+Max loss limit
+
+
+
+
+$100,000 (start)
+
+	
+
+$95,000
+
+
+
+
+$102,000
+
+	
+
+$97,000
+
+
+
+
+$104,000
+
+	
+
+$99,000
+
+
+
+
+$105,000
+
+	
+
+$100,000 (locks here)
+
+Daily loss: 3%
+
+It is calculated on the higher value between your balance and equity at the start of the day. Example: you start the day with $100,000, so your equity cannot drop below $97,000.
+
+The daily limit resets every day between 11:30 PM and 11:59 PM CET (rollover). We do not recommend trading in that window.
+
+Max floating loss: 1%
+
+The total open loss of all your positions together cannot reach 1% of your starting size. On $100,000 that is $1,000. It is checked in real time and it breaches the account even if you have not closed a trade.
+
+Weekend holding
+
+Positions cannot be held over the weekend. Any trade still open on Friday is closed automatically when the market closes. Holding overnight during the week is allowed.
+
+Payout requirements
+
+You need all of these at the same time. There is no payout cycle.
+
+Requirement
+
+	
+
+What it means
+
+
+
+
+Profit buffer
+
+	
+
+3% of account size, built before your first payout and kept in the account
+
+
+
+
+Minimum payout
+
+	
+
+1% of account size ($1,000 on $100K)
+
+
+
+
+Consistency
+
+	
+
+No single day above 15% of your total profit in the cycle. It resets when you request a payout
+
+
+
+
+Profitable days
+
+	
+
+5 days with a profit of at least 0.5%
+
+
+
+
+Win and loss
+
+	
+
+Biggest losing trade not larger than your biggest winning trade
+
+The 15% Evaluation Reward does not apply to Instant, because there is no evaluation phase.
+
+KYC
+
+If you have not passed KYC before buying, your Instant account stays paused until you complete it. Once KYC is passed, your account is activated automatically.
+
+General trading rules
+
+Rule
+
+	
+
+Instant
+
+
+
+
+News trading in the evaluation
+
+	
+
+No evaluation
+
+
+
+
+News trading on the funded account
+
+	
+
+Restricted (see below)
+
+
+
+
+Holding positions overnight
+
+	
+
+Allowed
+
+
+
+
+Holding positions over the weekend
+
+	
+
+Not allowed (closed automatically on Friday at market close)
+
+
+
+
+Expert Advisors (EAs)
+
+	
+
+Allowed
+
+
+
+
+Consistency rule
+
+	
+
+Yes, 15%
+
+
+
+
+Swap-Free add-on
+
+	
+
++10%
+
+Topic
+
+	
+
+Allowed?
+
+	
+
+What to know
+
+
+
+
+Any strategy style
+
+	
+
+Yes
+
+	
+
+Trades must follow our rules, match real market conditions and be replicable on live accounts
+
+
+
+
+Expert Advisors
+
+	
+
+Yes
+
+	
+
+Daily and maximum loss limits still apply. Not supported on DXtrade
+
+
+
+
+HFT, AI or speed tools, tick scalping, grid, arbitrage
+
+	
+
+No
+
+	
+
+Any system built to act faster than a person or to exploit price gaps
+
+
+
+
+Exploiting platform errors or delayed data feeds
+
+	
+
+No
+
+	
+
+Use only BrightFunded data
+
+
+
+
+Copy trading between your own accounts
+
+	
+
+Yes
+
+	
+
+All accounts must be yours
+
+
+
+
+Copying others, signals, managing accounts for others
+
+	
+
+No
+
+	
+
+Flagged by similar trade patterns
+
+
+
+
+Hedging inside one account
+
+	
+
+Yes
+
+	
+
+Buy and sell the same instrument in the same account
+
+
+
+
+Hedging across accounts, prop firms or platforms
+
+	
+
+No
+
+	
+
+First detection with one trade is a soft breach. A second detection is a hard breach
+
+
+
+
+VPN or VPS
+
+	
+
+Yes
+
+	
+
+Only the account owner may trade
+
+
+
+
+More than one profile per person
+
+	
+
+No
+
+	
+
+One email profile and one set of KYC documents
+
+
+
+
+Inactivity
+
+	
+
+Limited
+
+	
+
+A new trade is needed every 30 calendar days. Inactivity is a hard breach. Reactivation can be requested until 30 Nov 2026 only.
+
+News trading on the funded account. No trades in the 10-minute window around major news: 5 minutes before and 5 after. That covers opening and closing trades, stop loss, take profit, and buy stop and sell stop orders. The profit of that trade is deducted. This is a soft breach and does not breach your account. Take profits on trades held at least 48 hours are exempt.
+
+Inactivity. Place a new trade within 30 calendar days of your last closed trade. The trade must stay open at least 1 minute. While a trade is open the account counts as active, but pending orders do not. Inactivity is a hard breach. If the account is deactivated, you can request reactivation until November 30th, 2026. From December 1st, 2026 reactivation is no longer possible, even if the breach happened before that date.
+
+Positions held overnight can incur swap charges unless you have the Swap-Free add-on.
+
+Breaches
+
+Reaching a loss limit is a hard breach and closes the account. News trading on a funded account and the first hedging detection across accounts are soft breaches: you get a warning or a profit deduction and the account stays open. A second hedging detection is a hard breach. Inactivity is also a hard breach: reactivation can be requested until November 30th, 2026 only.
+
+Related Articles
+BrightFunded 1-Step (OLD)
+BrightFunded Original Accounts (OLD)
+What is Instant?
+1-Step Daily: evaluation rules
+2-Step Bright: evaluation rules
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+Account summary
+Max loss: 5% trailing
+Daily loss: 3%
+Max floating loss: 1%
+Weekend holding
+Payout requirements
+KYC
+General trading rules
+Breaches
+
+--- iframe ---
+
+Hi there 👋
+How can we help?
+Send us a message
+Join our Discord Community
+What is BrightFunded Futures?
+How the program works from buying an Evaluation to getting…
+BrightCore: complete guide
+Everything about BrightCore on one page: prices, Evaluation,…
+BrightPlus: complete guide
+Everything about BrightPlus on one page: prices, Evaluation,…
+Search for help
+Can I trade news?
+Which strategies are prohibited at BrightFunded?
+How do I get funded? (OLD)
+What is the Leverage in BrightFunded's Simulated Trading Environment?
+Home
+Messages
+Help

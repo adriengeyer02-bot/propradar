@@ -1,0 +1,36 @@
+[
+ {
+  "url": "https://myforexfunds.com/",
+  "finalUrl": "https://myforexfunds.com/",
+  "title": "MyForexFunds Is On Its Way | Relaunching Shortly",
+  "status": 200,
+  "kind": "html",
+  "chars": 10432,
+  "sha256": "1e7f56568845095558bbb2fe172b132328c1e00ccd77c327852d074d25b12d70",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:42:27.588Z",
+  "home": true
+ },
+ {
+  "url": "https://myforexfunds.com/terms-of-use/",
+  "finalUrl": "https://myforexfunds.com/terms-of-use/",
+  "title": "Terms of Use | MyForexFunds",
+  "status": 200,
+  "kind": "html",
+  "chars": 9727,
+  "sha256": "b8eb6b25326210f88506f84c5326e1af5e16655660092f0d960d6963f165e396",
+  "file": "643c878c4514.txt",
+  "fetchedAt": "2026-11-25T11:42:33.444Z"
+ },
+ {
+  "url": "https://myforexfunds.com/es/terms-of-use/",
+  "finalUrl": "https://myforexfunds.com/es/terms-of-use/",
+  "title": "Términos de uso | MyForexFunds",
+  "status": 200,
+  "kind": "html",
+  "chars": 10984,
+  "sha256": "b21e73b051d6707481f883cb85c49eef2505efbe4f384e17dc725cf3f7fec559",
+  "file": "10cf5c23b911.txt",
+  "fetchedAt": "2026-11-25T11:42:39.639Z"
+ }
+]

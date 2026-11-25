@@ -1,0 +1,91 @@
+[
+ {
+  "url": "https://www.tradeday.com/",
+  "finalUrl": "https://www.tradeday.com/",
+  "title": "TradeDay 2.0 | Futures Prop Trading & Funded Trader Accounts",
+  "status": 200,
+  "kind": "html",
+  "chars": 9665,
+  "sha256": "27870c4a844a0e3775bc8c6a27f0e4be0dbded27ed11f59e37c692c243631b3a",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:19.729Z",
+  "home": true
+ },
+ {
+  "url": "https://www.tradeday.com/terms-and-conditions",
+  "finalUrl": "https://www.tradeday.com/terms-and-conditions",
+  "title": "Terms and Conditions",
+  "status": 200,
+  "kind": "html",
+  "chars": 69577,
+  "sha256": "d721f86e91dfa27870db8b109743d7ca143deff64fd1c443632ca000ac78c3a0",
+  "file": "c79978e13c3b.txt",
+  "fetchedAt": "2026-11-25T11:43:25.663Z"
+ },
+ {
+  "url": "https://tradeday.freshdesk.com/en/support/solutions",
+  "finalUrl": "https://tradeday.freshdesk.com/en/support/solutions",
+  "title": "Knowledge base :",
+  "status": 200,
+  "kind": "html",
+  "chars": 1647,
+  "sha256": "04e6611c200ecfa6d2bb5f7cde5d762210ad282e04b22a7315c4305d69d99433",
+  "file": "e97a94d70e2f.txt",
+  "fetchedAt": "2026-11-25T11:43:31.819Z"
+ },
+ {
+  "url": "https://tradeday.freshdesk.com/en/support/tickets/new",
+  "finalUrl": "https://tradeday.freshdesk.com/en/support/tickets/new",
+  "title": "Submit a ticket :",
+  "status": 200,
+  "kind": "html",
+  "chars": 1237,
+  "sha256": "7119561b573136ed0a511cec6d122a68178b3fc2ef5d823f97c02addd3df0594",
+  "file": "dbab5ace8413.txt",
+  "fetchedAt": "2026-11-25T11:43:39.335Z"
+ },
+ {
+  "url": "https://www.tradeday.com/pt/terms-and-conditions",
+  "finalUrl": "https://www.tradeday.com/pt/terms-and-conditions",
+  "title": "Termos e Condições",
+  "status": 200,
+  "kind": "html",
+  "chars": 76122,
+  "sha256": "28ef69efb928453f7c38415bb0aee94c21284cc6984ba84c59e16bdffac1a738",
+  "file": "40201c6d4461.txt",
+  "fetchedAt": "2026-11-25T11:43:45.345Z"
+ },
+ {
+  "url": "https://tradeday.freshdesk.com/support/solutions/articles/103000008877-why-do-you-charge-for-resetting-the-evaluation-challenge-",
+  "finalUrl": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000008877-why-do-you-charge-for-resetting-the-evaluation-challenge-",
+  "title": "The page you were looking for doesn't exist (404)",
+  "status": 404,
+  "kind": "html",
+  "chars": 121,
+  "sha256": "e8c738036e01cbb80de5a3afab0ce950392cce4102227935aafa602744c2a173",
+  "file": "794a19aa80de.txt",
+  "fetchedAt": "2026-11-25T11:43:50.836Z"
+ },
+ {
+  "url": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000295384-using-a-vpn-or-vps",
+  "finalUrl": "https://tradeday.freshdesk.com/en/support/solutions/articles/103000295384-using-a-vpn-or-vps",
+  "title": "Using a VPN, VPS, or IP masking add-on :",
+  "status": 200,
+  "kind": "html",
+  "chars": 88193,
+  "sha256": "112c8a844170165f4a421bbabf71c85d1274fcd5aefcb9dbda5435f203a533b2",
+  "file": "f36b0be40025.txt",
+  "fetchedAt": "2026-11-25T11:43:57.562Z"
+ },
+ {
+  "url": "https://tradeday.freshdesk.com/en/support/home",
+  "finalUrl": "https://tradeday.freshdesk.com/en/support/home",
+  "title": "Home | Support :",
+  "status": 200,
+  "kind": "html",
+  "chars": 868,
+  "sha256": "cba4af1f760fcfa82d219a01eea1972478b599a72359af9eb6c1e1a4f8153ab5",
+  "file": "381694fc86fe.txt",
+  "fetchedAt": "2026-11-25T11:44:03.434Z"
+ }
+]

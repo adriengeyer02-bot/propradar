@@ -1,0 +1,36 @@
+[
+ {
+  "url": "https://myflashfunding.com/",
+  "finalUrl": "https://myflashfunding.com/",
+  "title": "MyFlashFunding: Home - Sway Funded",
+  "status": 200,
+  "kind": "html",
+  "chars": 2450,
+  "sha256": "c5b52341b3297f49087fc426b64b6e098c21bca20c91b456010b301d7452d2e8",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:44.242Z",
+  "home": true
+ },
+ {
+  "url": "https://myflashfunding.com/faq",
+  "finalUrl": "https://myflashfunding.com/faq",
+  "title": "MyFlashFunding: Home - Sway Funded",
+  "status": 200,
+  "kind": "html",
+  "chars": 2018,
+  "sha256": "a1836398efc00178a597220e18e80bfa4ae74af98d765cc0978b5191ea0da1d2",
+  "file": "b2ea4fd745cf.txt",
+  "fetchedAt": "2026-11-25T11:43:49.427Z"
+ },
+ {
+  "url": "https://myflashfunding.com/terms",
+  "finalUrl": "https://myflashfunding.com/terms",
+  "title": "MyFlashFunding: Home - Sway Funded",
+  "status": 200,
+  "kind": "html",
+  "chars": 31266,
+  "sha256": "79bc15f8cc1e8bdd6bc8fef00f6fd6d9e8e2f982c5b15c964eb03ab7ae69d779",
+  "file": "bcc4b13abbb9.txt",
+  "fetchedAt": "2026-11-25T11:43:54.726Z"
+ }
+]

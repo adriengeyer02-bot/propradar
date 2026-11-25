@@ -1,0 +1,25 @@
+[
+ {
+  "url": "https://tribefunded.com/",
+  "finalUrl": "https://tribefunded.com/",
+  "title": "tribefunded.com | 525: SSL handshake failed",
+  "status": 525,
+  "kind": "html",
+  "chars": 822,
+  "sha256": "943581dc6abff596587ca10381eb567b4a47e9eb5f4198a19524d69c8f303437",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:44:57.504Z",
+  "home": true
+ },
+ {
+  "url": "https://tribefunded.com/terms-and-conditions/",
+  "finalUrl": "https://tribefunded.com/terms-and-conditions/",
+  "title": "tribefunded.com | 525: SSL handshake failed",
+  "status": 525,
+  "kind": "html",
+  "chars": 822,
+  "sha256": "73e42266fc4cff9c0137326a7657252ac3a6a9b5e71dd0b7227413fcaecb845e",
+  "file": "03435cac65fe.txt",
+  "fetchedAt": "2026-11-25T11:45:02.731Z"
+ }
+]

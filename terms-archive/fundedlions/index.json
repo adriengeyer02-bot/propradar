@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://fundedlions.com/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fundedlions.com/\nCall log:\n  - navigating to \"https://fundedlions.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:45:08.547Z"
+ },
+ {
+  "url": "https://fundedlions.com/terms-and-conditions/",
+  "error": "Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://fundedlions.com/terms-and-conditions/\nCall log:\n  - navigating to \"https://fundedlions.com/terms-and-conditions/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:45:09.051Z"
+ }
+]

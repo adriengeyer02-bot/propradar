@@ -1,0 +1,82 @@
+URL: https://cryptofundtrader.com/contact
+FINAL: https://cryptofundtrader.com/contact/
+TITLE: Crypto Fund Trader - Contact
+FETCHED: 2026-11-25T11:44:34.512Z
+
+CFT Terminal is live! Get 30% off any Evaluation on any platform with code BLACK.
+[
+PROGRAMS
+]
+NEW
+[
+HOW IT WORKS
+]
+[
+AFFILIATES
+]
+[
+SUPPORT
+]
+BLOG FAQ CONTACT
+[
+RANK
+]
+[
+DASHBOARD
+]
+Contact
+
+Contact with our tutors and technical team.
+We usually reply in less than 1 hour.
+
+Contact us directly by Email
+Speak with us on live chat
+Name *
+First
+Last
+Email *
+Comment or Message *
+SUBMIT
+Do you feel ready?
+START EVALUATION
+CRYPTO FUND TRADER IS AN EVALUATION FIRM WHERE WE BOOST THE BEST TRADERS IN ADDITION TO TESTING THEIR QUALITIES.
+support@cryptofundtrader.com
+FAQ
+Terms and Conditions
+Refund Policy
+Proof of Scholarship
+Affiliate Partner
+Theory Tools
+Blog
+CFT x Bybit
+Choose your challenge
+Free tournaments
+Match-Trader Platform
+MT5 Web Terminal
+BYBIT Platform
+Contact us
+Cookies
+“KYC Audit”
+Privacy Policy
+Bahnhofstrasse 21, 6300, Zug, Switzerland
+SWISS RLCRATES AG (CHE-162.567.204)
+Crypto Fund Trader © 2026 All Rights Reserved.
+SWISS RLCRATES AG is a provider of educational services, all information available on our site is intended solely for the study purposes related to trading on financial markets. Accordingly, we do not offer financial, investment, tax, brokerage or other advice and/or services. Trading in financial markets is a high-risk activity, past performance do not guarantee future ones. It is highly advised not to risk more, than you can afford to lose. Brokers and operators of trading platforms are persons or entities that are separate from SWISS RLCRATES AG and their own terms and conditions will apply when you use their services and products. Neither SWISS RLCRATES AG nor RLCRATES, S.L. (the company that provides services with MT5) operate in countries where crypto or CFD’s activity is not allowed. The content in our platform is applicable to the extent local laws and/or regulations permit. SWISS RLCRATES AG acts as a payment/marketing agent for RLCRATES SL. SWISS RLCRATES AG is not authorized or licensed in Switzerland and does not offer any trading services with MT5 neither conducts any regulated activities.
+
+--- iframe ---
+
+
+  
+'use strict';var m={};class n{constructor(a){this.l=a;this.h={};this.i={};this.j=0;this.id=String(Math.floor(Number.MAX_SAFE_INTEGER*Math.random()))}}function p(a){return a.performance&&a.performance.now()||Date.now()}
+var q=function(a,b){class d{constructor(c,f,g){this.failureType=c;this.data=f;this.h=g;this.i=new n(p(g))}o(c,f){var g=c.clientId;if(c.type===0){c.isDead=!0;var e=this.i,h=p(this.h);e.h[g]==null&&(e.h[g]=0,e.i[g]=h,e.j++);e.h[g]++;c.stats={targetId:e.id,clientCount:e.j,totalLifeMs:Math.round(h-e.l),heartbeatCount:e.h[g],clientLifeMs:Math.round(h-e.i[g])}}c.failure={failureType:this.failureType,data:this.data};f(c)}}return new d(5,a,b)};/*
+
+ Copyright Google LLC
+ SPDX-License-Identifier: Apache-2.0
+*/
+let r=globalThis.trustedTypes,t;function u(){var a=null;if(!r)return a;try{let b=d=>d;a=r.createPolicy("goog#html",{createHTML:b,createScript:b,createScriptURL:b})}catch(b){}return a};var v=class{constructor(a){this.h=a}toString(){return this.h+""}};function w(a){var b=a,d;t===void 0&&(t=u());var c=(d=t)?d.createScriptURL(b):b;return new v(c)}function x(a){if(a instanceof v)return a.h;throw Error("");};function y(a,...b){if(b.length===0)return w(a[0]);var d=a[0];for(let c=0;c<b.length;c++)d+=encodeURIComponent(b[c])+a[c+1];return w(d)}function z(a){var b=y`sw.js`,d=x(b).toString(),c=d.split(/[?#]/),f=/[?]/.test(d)?"?"+c[1]:"";return A(c[0],f,/[#]/.test(d)?"#"+(f?c[2]:c[1]):"",a)}
+function A(a,b,d,c){function f(e,h){e!=null&&(Array.isArray(e)?e.forEach(l=>f(l,h)):(b+=g+encodeURIComponent(h)+"="+encodeURIComponent(e),g="&"))}var g=b.length?"&":"?";c.constructor===Object&&(c=Object.entries(c));Array.isArray(c)?c.forEach(e=>f(e[1],e[0])):c.forEach(f);return w(a+b+d)};const B=/Chrome\/(\d+)/;var D=function(a){var b=a.origin;if(b){var d=a.u?"sw.js":"sw_uncompiled.js",c=a.h?y`/static/service_worker/${a.h}/${d}?origin=${b}`:y`/gtm/static/${d}?origin=${b}`,f=new Map([["origin",b]]);a.path&&f.set("path",a.path);var g=a.l?z(f):c,e=()=>{var k=B.exec(a.window.navigator.userAgent);return k&&Number(k[1])<119},h=a.window.document.location.href;a.h&&(a.l?h=`${a.path}/_/service_worker`:e()||(h="/static/service_worker"));var l={scope:h};a.h&&(l.updateViaCache="all");a.window.navigator.serviceWorker.register(x(g),
+l).then(()=>{a.window.navigator.serviceWorker.ready.then(k=>{a.i=k.active;C(a)})},k=>{a.j=q(k==null?void 0:k.toString(),a.window);C(a)});a.window.navigator.serviceWorker.addEventListener("message",k=>{a.window.parent.postMessage(k.data,a.origin)})}},C=function(a){var b=a.m.slice();a.m=[];for(let d of b)a.handleEvent(d)};
+(new class{constructor(a,b=!0){this.window=a;this.u=b;this.origin="";this.l=!1;this.path="";this.j=this.i=null;this.m=[];this.h=""}init(){if((f=>{try{return f!==f.top}catch(g){return!0}})(this.window)){var a=new URL(this.window.document.location.href),b=a.searchParams.get("origin");if(b){this.origin=b;this.l=!!a.searchParams.get("1p");this.path=a.searchParams.get("path")||"";var d=a.pathname.match(RegExp(".*/service_worker/(\\w+)/"));d&&d.length&&(this.h=d[1]);var c=this.window.document.location.ancestorOrigins;
+c&&c[0]!==this.origin||(D(this),this.window.addEventListener("message",f=>{this.handleEvent(f)}))}}}handleEvent(a){a.origin===this.origin&&(this.i?this.i.postMessage(a.data):this.j?this.j.o(a.data,b=>{this.window.parent.postMessage(b,this.origin)}):this.m.push(a))}}(window)).init();
+  
+

@@ -1,0 +1,69 @@
+[
+ {
+  "url": "https://wfunded.io/",
+  "finalUrl": "https://www.wfunded.io/en",
+  "title": "WFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 5329,
+  "sha256": "59a1fd75213549666478bd93142e166d82d66afc3e4a21372da872d9b160164d",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:46:52.717Z",
+  "home": true
+ },
+ {
+  "url": "https://www.wfunded.io/en/faq",
+  "finalUrl": "https://www.wfunded.io/en/faq",
+  "title": "WFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 20875,
+  "sha256": "f4a3c58b1ad6111b6be49a12dec7cbd0b38f9331210d3c460471dcfbe9cf903e",
+  "file": "209fe2e524fb.txt",
+  "fetchedAt": "2026-11-25T11:46:58.335Z"
+ },
+ {
+  "url": "https://www.wfunded.io/en/terms-and-conditions",
+  "finalUrl": "https://www.wfunded.io/en/terms-and-conditions",
+  "title": "WFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 37195,
+  "sha256": "06bef122a33eef7f2eab6735d715c212769ce26cb1f36bd2076e4b4502bbe5ff",
+  "file": "4e772e093f76.txt",
+  "fetchedAt": "2026-11-25T11:47:03.861Z"
+ },
+ {
+  "url": "https://www.wfunded.io/terms-and-conditions",
+  "finalUrl": "https://www.wfunded.io/en/terms-and-conditions",
+  "title": "WFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 37195,
+  "sha256": "06bef122a33eef7f2eab6735d715c212769ce26cb1f36bd2076e4b4502bbe5ff",
+  "file": "6711f90a21c5.txt",
+  "fetchedAt": "2026-11-25T11:47:09.225Z"
+ },
+ {
+  "url": "https://www.wfunded.io/en/aml-policy",
+  "finalUrl": "https://www.wfunded.io/en/aml-policy",
+  "title": "WFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 25324,
+  "sha256": "de2b50c9ba4c6d172ea5cec0092eb3f86a08e47c7cd70564d2999126b27ae869",
+  "file": "4976c427c5f4.txt",
+  "fetchedAt": "2026-11-25T11:47:14.799Z"
+ },
+ {
+  "url": "https://www.wfunded.io/en/risk-disclosure",
+  "finalUrl": "https://www.wfunded.io/en/risk-disclosure",
+  "title": "WFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 7138,
+  "sha256": "9cb196b888d4d1e95946d62be96511e4b264a3333a1c5058e663af20d17c7438",
+  "file": "5e0e30d62d93.txt",
+  "fetchedAt": "2026-11-25T11:47:20.026Z"
+ }
+]

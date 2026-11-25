@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://getcryptofunded.com/",
+  "error": "Error: page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://getcryptofunded.com/\nCall log:\n  - navigating to \"https://getcryptofunded.com/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:45:17.635Z"
+ },
+ {
+  "url": "https://getcryptofunded.com/terms-and-conditions/",
+  "error": "Error: page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://getcryptofunded.com/terms-and-conditions/\nCall log:\n  - navigating to \"https://getcryptofunded.com/terms-and-conditions/\", waiting until \"domcontentloaded\"\n",
+  "fetchedAt": "2026-11-25T11:45:17.719Z"
+ }
+]

@@ -1,0 +1,58 @@
+[
+ {
+  "url": "https://icfunded.com/",
+  "finalUrl": "https://www.icfunded.com/",
+  "title": "Home - ICFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 7510,
+  "sha256": "f148532319be64218e224e18d032011d18d87b02479bc096eda0def348b3ae75",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:43:42.808Z",
+  "home": true
+ },
+ {
+  "url": "https://www.icfunded.com/rules",
+  "finalUrl": "https://www.icfunded.com/rules",
+  "title": "IC Funded rules - ICFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 5857,
+  "sha256": "3502ea9c2ae207ec5ef6e184fce3f99ce002cdccf18d26937b87e914a90996ef",
+  "file": "d608d1a2e6bc.txt",
+  "fetchedAt": "2026-11-25T11:43:52.053Z"
+ },
+ {
+  "url": "https://www.icfunded.com/terms-and-conditions",
+  "finalUrl": "https://www.icfunded.com/terms-and-conditions",
+  "title": "Terms and conditions - ICFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 12730,
+  "sha256": "f2be5bf449cd3e72b774b416502e6abc7271298898593a2b6b8c25ad9a4e5d50",
+  "file": "da28a3562122.txt",
+  "fetchedAt": "2026-11-25T11:44:00.035Z"
+ },
+ {
+  "url": "https://www.icfunded.com/faqs",
+  "finalUrl": "https://www.icfunded.com/faqs#can-i-have-multiple-ic-funded-accounts",
+  "title": "FAQs - ICFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 7371,
+  "sha256": "0a117a7db5ab85e75af53f42579e73805818f9ac3703b63ab41f96132fe7cf35",
+  "file": "507f850333a4.txt",
+  "fetchedAt": "2026-11-25T11:44:10.090Z"
+ },
+ {
+  "url": "https://www.icfunded.com/",
+  "finalUrl": "https://www.icfunded.com/",
+  "title": "Home - ICFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 7510,
+  "sha256": "f148532319be64218e224e18d032011d18d87b02479bc096eda0def348b3ae75",
+  "file": "92f9cf80b574.txt",
+  "fetchedAt": "2026-11-25T11:44:17.600Z"
+ }
+]

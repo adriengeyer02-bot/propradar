@@ -1,0 +1,91 @@
+[
+ {
+  "url": "https://forexive.com/",
+  "finalUrl": "https://forexive.com/",
+  "title": "Best Prop Trading Firm | FOREXIVE",
+  "status": 200,
+  "kind": "html",
+  "chars": 12699,
+  "sha256": "757d3acafe49c77d0bf69928704825bc49d24415f4b51238e1878bf484337725",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:15.425Z",
+  "home": true
+ },
+ {
+  "url": "https://forexive.com/faq/general",
+  "finalUrl": "https://forexive.com/faq/general",
+  "title": "General: Help Centre FAQ — FOREXIVE",
+  "status": 200,
+  "kind": "html",
+  "chars": 19318,
+  "sha256": "e5f746e378a9d99b11d0f2e53eaa7ebb5951ce0d8524474ab9bdee0e4e7f06fa",
+  "file": "205a1f8665a5.txt",
+  "fetchedAt": "2026-11-25T11:45:39.228Z"
+ },
+ {
+  "url": "https://forexive.com/faq/instant",
+  "finalUrl": "https://forexive.com/faq/instant",
+  "title": "Instant Funding: Help Centre FAQ — FOREXIVE",
+  "status": 200,
+  "kind": "html",
+  "chars": 9419,
+  "sha256": "6c2fccd8c638dbbb9b0eec976a3adc91b8805a480fa558470fd08d649bcca943",
+  "file": "8c1223c7eb87.txt",
+  "fetchedAt": "2026-11-25T11:45:53.504Z"
+ },
+ {
+  "url": "https://forexive.com/rules",
+  "finalUrl": "https://forexive.com/rules",
+  "title": "Trading Rules and Objectives by Model and Stage — FOREXIVE",
+  "status": 200,
+  "kind": "html",
+  "chars": 4595,
+  "sha256": "13405a234b8427a13d120632cec34a9e1354de24dbe4ba5d3fa1e8806c56dbf9",
+  "file": "e2d773a441ab.txt",
+  "fetchedAt": "2026-11-25T11:46:02.288Z"
+ },
+ {
+  "url": "https://help.forexive.com/article/maximum-loss-per-trade-instant-funding",
+  "finalUrl": "https://help.forexive.com/article/maximum-loss-per-trade-instant-funding",
+  "title": "FOREXIVE Help Center | Maximum Loss Per Trade Instant Funding",
+  "status": 200,
+  "kind": "html",
+  "chars": 1063,
+  "sha256": "8357055b4ff7b15a522f4617264b517f5e6006679db48802b41b721ebb57687c",
+  "file": "e47390b43d11.txt",
+  "fetchedAt": "2026-11-25T11:46:08.080Z"
+ },
+ {
+  "url": "https://forexive.com/terms-and-conditions/",
+  "finalUrl": "https://forexive.com/terms-and-conditions",
+  "title": "We could not find that page — FOREXIVE",
+  "status": 404,
+  "kind": "html",
+  "chars": 2047,
+  "sha256": "7513b60ed1eee00a96f62589bb83518e8890d67f128b7f98580cd63c3d1d13dc",
+  "file": "089ff51897cd.txt",
+  "fetchedAt": "2026-11-25T11:46:16.848Z"
+ },
+ {
+  "url": "https://forexive.com/faq",
+  "finalUrl": "https://forexive.com/challenges",
+  "title": "Prop Trading Challenges: Compare All Four Models — FOREXIVE",
+  "status": 200,
+  "kind": "html",
+  "chars": 7488,
+  "sha256": "898914b24066936c88b0c32fe4d0030a9c74568a3bc059f7ba41ac4e715af328",
+  "file": "b5cf5dc5e721.txt",
+  "fetchedAt": "2026-11-25T11:46:26.791Z"
+ },
+ {
+  "url": "https://forexive.com/contact",
+  "finalUrl": "https://forexive.com/challenges",
+  "title": "Prop Trading Challenges: Compare All Four Models — FOREXIVE",
+  "status": 200,
+  "kind": "html",
+  "chars": 7488,
+  "sha256": "898914b24066936c88b0c32fe4d0030a9c74568a3bc059f7ba41ac4e715af328",
+  "file": "d9967b42ebdb.txt",
+  "fetchedAt": "2026-11-25T11:46:35.870Z"
+ }
+]

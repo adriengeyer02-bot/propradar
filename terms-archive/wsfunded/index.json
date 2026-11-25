@@ -1,0 +1,124 @@
+[
+ {
+  "url": "https://wsfunded.com/",
+  "finalUrl": "https://wsfunded.com/en",
+  "title": "Wall Street Funded | Best Prop Firm",
+  "status": 200,
+  "kind": "html",
+  "chars": 59775,
+  "sha256": "a19d4dec427985a8366d62e6ccac253723eae9389d3776b6d224e49a3fe67887",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:45:09.073Z",
+  "home": true
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/10719208-instant-pro",
+  "title": "Instant Pro | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 10588,
+  "sha256": "c05f36ec490612cab19f5d0a2aef550e1827b4357ae0e501ca8ac7b037487cc7",
+  "file": "84598be19aac.txt",
+  "fetchedAt": "2026-11-25T11:45:14.802Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/8772868-what-strategies-are-not-allowed",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/8772868-what-strategies-are-not-allowed",
+  "title": "What strategies are NOT allowed | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 716,
+  "sha256": "0f8aa2b1ae97815e78eee8cf03504e2dcd36230229d98bab792ded861376d8d0",
+  "file": "6ebd6caf8728.txt",
+  "fetchedAt": "2026-11-25T11:45:20.186Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/13609936-new-dashboard-update-softbreach-suspensions-and-breach",
+  "title": "New Dashboard Update: Softbreach, Suspensions, and Breach | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 2539,
+  "sha256": "e2b2872e5443fa0c58a0bb1811f66681b8d7b2d0969102c50e692a661e6cf3b5",
+  "file": "2304459b0822.txt",
+  "fetchedAt": "2026-11-25T11:45:25.635Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/16859382-1-phase-wall-street-power",
+  "title": "(1 PHASE) Wall Street POWER | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 3252,
+  "sha256": "c0e4c0f0a88511537f640de3cef3dc28bfa796fd6c3ebec352dd376b21322c94",
+  "file": "3cfe57225362.txt",
+  "fetchedAt": "2026-11-25T11:45:31.043Z"
+ },
+ {
+  "url": "https://wsfunded.com/en/faq",
+  "finalUrl": "https://wsfunded.com/en/faq",
+  "title": "FAQ | Wall Street Funded",
+  "status": 200,
+  "kind": "html",
+  "chars": 75411,
+  "sha256": "b63513e0ec54d031e9cbaff5b8c4934506197695fba5f427ea21e8cd1239bc57",
+  "file": "f52d1e9ee3c3.txt",
+  "fetchedAt": "2026-11-25T11:46:03.673Z"
+ },
+ {
+  "url": "https://wsfunded.com/en/terms-conditions",
+  "finalUrl": "https://wsfunded.com/en/terms-conditions",
+  "title": "Terms & Conditions | Wall Street Funded",
+  "status": 200,
+  "kind": "html",
+  "chars": 46174,
+  "sha256": "6d109582c6eb461e7a377373576e82a5d5452488ba9a95354c44af6a60a5aafa",
+  "file": "b29312495809.txt",
+  "fetchedAt": "2026-11-25T11:46:13.245Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/8717270-2-phases-wall-street-classic",
+  "title": "(2 PHASES) Wall Street CLASSIC | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 1829,
+  "sha256": "a818d055a94e25fcf7afe78c89ca05cbc5d4f2d185f3d3120343d742e70dba95",
+  "file": "da47314113c2.txt",
+  "fetchedAt": "2026-11-25T11:46:18.628Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/8717276-2-phases-wall-street-ultra",
+  "title": "(2 PHASES) Wall Street ULTRA | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 1757,
+  "sha256": "20136e148dccbac145302431c6718cd927f0e00b2faab0554e453e7c94c1d5fb",
+  "file": "e4b630bde7cd.txt",
+  "fetchedAt": "2026-11-25T11:46:23.995Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/10719192-instant-standard",
+  "title": "Instant Standard | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 10797,
+  "sha256": "3290b74cc88e1199f9e5a243e71d0dbae3a47ed4f45979ed03afbc716250b2de",
+  "file": "73f707262759.txt",
+  "fetchedAt": "2026-11-25T11:46:29.378Z"
+ },
+ {
+  "url": "https://faq.wsfunded.com/en/articles/8717151-how-many-accounts-can-i-manage",
+  "finalUrl": "https://faq.wsfunded.com/en/articles/8717151-how-many-accounts-can-i-manage",
+  "title": "How many accounts can I manage? | WSFunded",
+  "status": 200,
+  "kind": "html",
+  "chars": 501,
+  "sha256": "818775096f7cb9a7187d67df2f87a1fee9e0845f1506ec83cccbe0c90aab4eba",
+  "file": "e143d786e135.txt",
+  "fetchedAt": "2026-11-25T11:46:34.879Z"
+ }
+]

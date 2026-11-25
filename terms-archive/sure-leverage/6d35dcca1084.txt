@@ -1,0 +1,205 @@
+URL: https://help.sureleveragefunding.com/en/articles/12141620-instant-funding-trailing-faq-rules
+FINAL: https://help.sureleveragefunding.com/en/articles/12141620-instant-funding-trailing-faq-rules
+TITLE: 📘 Instant Funding Trailing – FAQ & Rules | Sure Leverage Funding Help Center
+FETCHED: 2026-11-25T11:44:39.839Z
+
+Skip to main content
+العربية
+English
+Français
+Deutsch
+Español
+English
+Search for articles...
+All Collections
+Retired Account Rules/Information
+📘 Instant Funding Trailing – FAQ & Rules
+📘 Instant Funding Trailing – FAQ & Rules
+
+Please read this to understand the rules of the challenge.
+
+S
+Written by Sure Leverage Funding
+September 29, 2026
+Overview
+
+What is Instant Funding Trailing?
+Instant Funding Trailng removes the challenge phase. Purchase an account and start trading right away—funded instantly.
+
+Account Parameters
+
+Profit Cap: 5% per payout cycle
+
+Maximum Drawdown: 7% trailing (high-watermark)
+
+Daily Drawdown: 3%
+
+Profit Consistency Rule: 20%
+
+Payout Frequency: Every 14 days (bi-weekly)
+
+Max Funding: $200,000
+
+Formerly called "Instant Funding Pro"
+
+Trading Rules
+
+Stop Losses
+
+A stop-loss is mandatory and must be set within 5 minutes of opening any trade in funded status.
+
+“Fake” stop-losses (where a hit would exceed daily or max DD) are not allowed.
+
+News Trading
+
+News trading is not allowed. Opening or closing trades 5 minutes before or after news, will results in a soft breach of profits. Effective as of 29/09/2026
+
+Expert Advisors (EAs)
+
+Not allowed on Instant Funding Pro.
+
+Copy Trading
+
+Allowed to copy your own trades; copying others in the same timeframe is not permitted.
+
+Averaging Into Trades
+
+Allowed. Trades in the same direction on the same pair opened close together are treated as one Trade Idea for checks (Profit Consistency & Lot Consistency).
+
+Tick Scalping
+
+Please avoid any attempts at tick scalping, and keep trades open for over 2 minutes.
+
+Consistency Rules
+
+Profit Consistency (from 1st June 2025)
+
+No single trading day may equal or exceed 20% of your total profit for that payout period.
+
+Example: If you make $1,000 in one day, you must reach $5,000 total profit before you’re eligible to request a payout.
+
+Important: Consistency is calculated on total profit, not the profit cap. (e.g., on $10,000 total profit, 20% = $2,000, regardless of a 5% cap on withdrawals.)
+
+You cannot request a payout until this rule is satisfied.
+
+If you are on a 200k Instant Funding Pro account, the consistency rule will be 15%, not 20% consistency. (As of 3rd of December, 2025). Meaning if you make $5,000 total, no single trading day should be more than 15% of that, which is $750
+
+Drawdown & Targets
+
+Maximum Drawdown (Trailing High-Watermark, 7%)
+
+The breach level = Highest balance/equity (HWM) – 7% of that HWM.
+
+Example (start $100,000):
+
+At start: HWM = $100,000 → Breach level = $100,000 – $7,000 = $93,000.
+
+If equity peaks at $102,000: HWM = $102,000 → Breach level = $102,000 – $7% of 102,000 (= $7,140) = $94,860.
+
+If balance later peaks at $107,000: HWM = $107,000 → Breach level = $107,000 – $7,490 = $99,510.
+
+Daily Drawdown (3%)
+
+Recalculated daily at 5pm EST using the higher of balance or equity at reset; limit = that higher value minus 3% of the initial balance.
+
+Example 1 (floating profit):
+
+$100,000 account; 5pm equity $102,000 → Next day equity must stay ≥ $99,000 ( $102,000 – $3,000 ).
+
+Example 2 (floating loss):
+
+5pm equity $98,000 and balance $100,000 → Use balance; next day equity must stay ≥ $97,000 ( $100,000 – $3,000 ).
+
+Payouts
+
+Profit Split
+
+80% from the first payout onward.
+
+Payout Schedule
+
+Bi-weekly (every 14 days).
+
+Instant payout requests are not available for Instant Funding Pro (see below).
+
+Profit Cap & Max Withdrawal
+
+Profit Cap per cycle = 5% of initial balance.
+
+Max Withdrawal per cycle = 5% of initial balance.
+
+Example: On $200,000, max withdrawal per cycle = $10,000.
+
+Instant Payouts
+
+Not available on Instant Funding Pro (available on other products as specified).
+
+24-Hour Payout Guarantee
+
+Once a payout is eligible and requested, we process within 24 business hours.
+
+If we miss this, you receive an extra 10% on your profit split.
+
+Exceptions: weekends/holidays, compliance/risk reviews, or delays in Rise onboarding/user response.
+
+Top Up Feature:
+
+Traders will be able to "Top Up" the balance on their account if in drawdown, they will pay more depending on how much drawdown they are in. It can be found within the dashboard on your accounts metric page.
+
+For example, if you are in a 200k account at 192k in current balance, you can pay to have your balance adjusted back to starting balance.
+
+Rule Breaches & Payout Denials
+
+Soft Breaches (Profit Deductions)
+
+If you break a rule (e.g., Lot Consistency, Stop Loss rule, or other restrictions), the profit from that trade is deducted from your total profit.
+
+If deductions are less than your profit, the reduced payout is still processed.
+
+If deductions are greater than your profit (e.g., $3,000 profit but $4,000 deducted), your payout is denied.
+
+You have a maximum of 20 soft breaches before account closure, this is detected at payout stage. Not automatically
+
+If you have 50% or more of trades being soft breached, your payout will be declined. For example, if you have 15 trades and 10 of them are in breach of our rules, the payout will be declined
+
+Payout Denial Penalties
+
+1st denial: profit split halved.
+
+2nd denial: account closed.
+
+Floating Loss Rule (from 16th September 2025)
+
+If your account equity ever falls more than 1% below the starting balance (including floating losses, swaps, and commissions), penalties will apply:
+
+1st breach: Profit split is halved.
+
+2nd breach: account closed.
+
+Example:
+On a $100,000 account, if your starting balance is $100,000 and you have two trades open that together push your equity below $99,000 (a 1% floating loss), the system will register a breach. After the second breach, the account will be closed.
+
+⚠️ This rule applies only to accounts purchased after 15th June 2025.
+
+ 
+
+Example:
+
+If your on a $100,000 account and you are at a balance of $102,000 and have an equity of $100,900 which is a floating loss of over $1,000 (1% of start balance) the system will register a breach.
+
+Did this answer your question?
+Disappointed Reaction
+😞
+Neutral Reaction
+😐
+Smiley Reaction
+😃
+Overview
+Trading Rules
+Consistency Rules
+Drawdown & Targets
+Payouts
+Rule Breaches & Payout Denials
+Floating Loss Rule (from 16th September 2025)
+Sure Leverage Funding Help Center
+We run on Intercom

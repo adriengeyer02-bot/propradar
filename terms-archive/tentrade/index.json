@@ -1,0 +1,102 @@
+[
+ {
+  "url": "https://tentrade.com/",
+  "finalUrl": "https://tentrade.com/en/",
+  "title": "Online Trading Platform | Forex, CFD & Stock Trading MT5 | TenTrade",
+  "status": 200,
+  "kind": "html",
+  "chars": 11342,
+  "sha256": "e0c991593f7b5674be137f5ac267dbd90da38f840f982bf80a4c50d1050c0190",
+  "file": null,
+  "fetchedAt": "2026-11-25T11:47:16.654Z",
+  "home": true
+ },
+ {
+  "url": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+  "finalUrl": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 32735,
+  "sha256": "9976646c2bd9e5b0a0706852c6e07e7bf1f21fd89fd99ea3d608428d317a5a05",
+  "file": "591c1f99629d.txt",
+  "fetchedAt": "2026-11-25T11:47:16.828Z"
+ },
+ {
+  "url": "https://tentrade.com/en/company/legal-documentations/",
+  "finalUrl": "https://tentrade.com/en/company/legal-documentations/",
+  "title": "Legal Documents - TenTrade",
+  "status": 200,
+  "kind": "html",
+  "chars": 7729,
+  "sha256": "46749a77050f7cd4271125b49b1a620235f268cb348734165e1a6adfbe977a87",
+  "file": "756d10636dd2.txt",
+  "fetchedAt": "2026-11-25T11:47:22.192Z"
+ },
+ {
+  "url": "https://tentrade.com/wp-content/uploads/2026/04/Terms-and-Conditions-Feb-2026.pdf",
+  "finalUrl": "https://tentrade.com/wp-content/uploads/2026/04/Terms-and-Conditions-Feb-2026.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 69164,
+  "sha256": "f6fd7c567ca8f2aaac07a617cd31e7019f53930319a0e04611070bbfaa504c39",
+  "file": "f2d3014722fd.txt",
+  "fetchedAt": "2026-11-25T11:47:23.193Z"
+ },
+ {
+  "url": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+  "finalUrl": "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+  "title": "PDF",
+  "status": 200,
+  "kind": "pdf",
+  "chars": 56903,
+  "sha256": "a009e6cf9cc01268159703b87e6326133510620109d171d4ee97f8346691cef2",
+  "file": "33fbc331f61f.txt",
+  "fetchedAt": "2026-11-25T11:47:23.967Z"
+ },
+ {
+  "url": "https://tentrade.com/en/deposits-withdrawals/",
+  "finalUrl": "https://tentrade.com/en/deposits-withdrawals/",
+  "title": "Deposits & Withdrawals - TenTrade",
+  "status": 200,
+  "kind": "html",
+  "chars": 7346,
+  "sha256": "536f4eb1aaa0a76d2e9a378645b83845b3585f1ab477700a41db968c4a39fe2d",
+  "file": "98463249a90e.txt",
+  "fetchedAt": "2026-11-25T11:47:29.329Z"
+ },
+ {
+  "url": "https://tentrade.com/en/margin-leverage/",
+  "finalUrl": "https://tentrade.com/en/margin-leverage/",
+  "title": "Risk, Margin & Leverage - TenTrade",
+  "status": 200,
+  "kind": "html",
+  "chars": 20074,
+  "sha256": "8764f553cca7b8b90895aac878c2e0206adf5ffd54976e84a9dbbc90584ceefa",
+  "file": "185ec09f6f86.txt",
+  "fetchedAt": "2026-11-25T11:47:34.686Z"
+ },
+ {
+  "url": "https://tentrade.com/en/help-centre/faq/",
+  "finalUrl": "https://tentrade.com/en/help-centre/faq/",
+  "title": "FAQ - TenTrade",
+  "status": 200,
+  "kind": "html",
+  "chars": 19085,
+  "sha256": "b0e91efd19424626e5e3d97a84385a537d77ba0e49b23e23f528a7303d69c489",
+  "file": "07525ab1c539.txt",
+  "fetchedAt": "2026-11-25T11:47:40.040Z"
+ },
+ {
+  "url": "https://tentrade.com/en/help-centre/contact-us/",
+  "finalUrl": "https://tentrade.com/en/help-centre/contact-us/",
+  "title": "Contact Us - TenTrade",
+  "status": 200,
+  "kind": "html",
+  "chars": 6440,
+  "sha256": "481061152201764ba5196838a8705872abd2c7197db52fbd547bacbdbeb0efd6",
+  "file": "8f4b3a18c494.txt",
+  "fetchedAt": "2026-11-25T11:47:45.760Z"
+ }
+]

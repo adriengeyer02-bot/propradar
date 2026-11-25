@@ -1,0 +1,101 @@
+URL: https://hashhedge.gitbook.io/hashhedge-user-guide/rules/challenge-rules.md
+FINAL: https://hashhedge.gitbook.io/hashhedge-user-guide/rules/challenge-rules.md
+TITLE: 
+FETCHED: 2026-11-25T11:46:34.928Z
+
+> For the complete documentation index, see [llms.txt](https://hashhedge.gitbook.io/hashhedge-user-guide/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://hashhedge.gitbook.io/hashhedge-user-guide/rules/challenge-rules.md).
+
+# Rules, Stages and Loss Limits
+
+Every Challenge follows the same rules.
+
+Pass the profit targets, stay inside the loss limits, and trade fairly.
+
+***
+
+## The two stages
+
+A Challenge has **Stage 1** and **Stage 2**. In each one you reach a profit target while staying within the loss limits. After Stage 2 you move to the **Trader** (funded) stage, and what changes there is on [Becoming a Trader](https://hashhedge.gitbook.io/hashhedge-user-guide/rules/becoming-a-trader.md). There is no time limit on any stage.
+
+## Targets and limits by stage
+
+These are the rules of the **Two-stage Challenge**. The **One-stage Challenge** has a single stage with a higher target and tighter limits, see [Challenge types](https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/challenge-types.md).
+
+| Rule                 | Stage 1   | Stage 2   | Trader                      |
+| -------------------- | --------- | --------- | --------------------------- |
+| Profit target        | 5%        | 6%        | none                        |
+| Daily loss           | 5%        | 5%        | 5%                          |
+| Total loss           | 10%       | 8%        | 8%                          |
+| Minimum trading days | 5         | 5         | none                        |
+| Trading period       | Unlimited | Unlimited | Unlimited                   |
+| Max leverage         | 1:5       | 1:5       | 1:5                         |
+| Profit share         | none      | none      | 80% (90% with Profit Split) |
+
+All percentages are measured against your account size. For example, on a **$25,000** account the Stage 1 target is **$1,250** (5%), the daily loss limit is **$1,250** (5%), and the max. total loss is **$2,500** (10%). Leverage is capped at **1:5** and there is no time limit.
+
+## Minimum trading days
+
+Each stage of the **Two-stage Challenge** requires a **minimum of 5 trading days**; the **One-stage Challenge** requires **3**. A trading day is a separate day on which you opened at least one position. It's a minimum, not a maximum: with no time limit, you can take as many days as you need, and a day with no opened position simply doesn't count.
+
+## Loss limits
+
+The limits below are for the **Two-stage Challenge**; the **One-stage Challenge** uses **3%** daily and **6%** total. See [Challenge types](https://hashhedge.gitbook.io/hashhedge-user-guide/start-here/challenge-types.md).
+
+Two limits apply on every account:
+
+* **Daily loss limit**: the loss level for a single trading day that, once reached, ends the Challenge. It is not an amount you are free to lose, but the threshold that fails the account.
+* **Total loss limit**: the overall account loss level that, once reached, ends the Challenge.
+
+{% hint style="warning" %}
+If you breach the **total loss limit**, open positions are closed automatically and the Challenge is permanently failed. The **daily loss limit** ends a Challenge the same way, unless you use Daily Loss Protection, see below.
+{% endhint %}
+
+How the daily loss is calculated, and what Balance and Equity mean, is on [How the daily loss limit is calculated](https://hashhedge.gitbook.io/hashhedge-user-guide/rules/daily-loss-calculation.md). See [The Challenge dashboard explained](https://hashhedge.gitbook.io/hashhedge-user-guide/account-and-payouts/trader-dashboard.md) for the equity level at which the Challenge would fail.
+
+## If you hit the daily loss limit
+
+Reaching the daily loss limit ends a Challenge, unless you bought **Daily Loss Protection** at checkout. It closes all open positions, cancels your open orders and refreshes your daily loss limit, so you can carry on with the Challenge.
+
+It works **once**. It's added at checkout or at some point during the Challenge (before you reach the **Trader** stage). It works on **every stage**, including **Trader**.
+
+It does not cover the **total** loss limit: when that is reached, the Challenge is permanently failed.
+
+## Instant
+
+The **Instant Challenge** doesn't go through evaluation stages at all: it's issued directly on the **Trader** stage, so the profit target and minimum trading days above don't apply to it. It has its own loss limits and leverage: **3%** daily, **5%** total, **1:2** leverage. Daily Loss Reset and Stage Rollback are not available on it. Its payout condition is different too: 5 profitable days instead of clearing a stage, see [Instant Challenge Payouts](https://hashhedge.gitbook.io/hashhedge-user-guide/account-and-payouts/instant-challenge.md).
+
+## Trading rules
+
+* **Crypto futures or US stocks**, depending on the market you bought. Spot crypto trading is not available. See [Trading US Stocks](https://hashhedge.gitbook.io/hashhedge-user-guide/trading-terminal/stocks-terminal.md).
+* **Leverage** up to **1:5** (**1:2** on Instant). Every instrument has its own maximum position size, see [Instruments and position limits](https://hashhedge.gitbook.io/hashhedge-user-guide/rules/coins-limit.md).
+* A **trading day** is any day on which you opened at least one position.
+* **Stop Loss is not required**, but you must stay within the limits. If a limit is hit, positions are force-closed. With Daily Loss Protection, you can keep trading after a daily limit hit.
+* You can run **multiple Challenges at once** up to the **Trader** stage. On the **Trader** stage you can trade only one Challenge of each denomination (account size). For example, a One-stage $100,000 and a Two-stage $100,000 count as the same denomination, so you can trade only one of them. A passed Challenge that has to wait gets the **Trader Transition** status, see [Your accounts and stages](https://hashhedge.gitbook.io/hashhedge-user-guide/account-and-payouts/accounts-stages.md). Denominations are counted per market: a $100,000 US Stocks Challenge and a $100,000 Crypto + TradFi Challenge are different denominations, so both can trade at the Trader stage.
+
+## What's not allowed
+
+* Arbitrage, manipulation, and other forms of unfair trading.
+
+Aside from the above, any trading strategy is allowed on both the Challenge and the funded account.
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation by asking a question.
+
+Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters:
+
+```
+GET https://hashhedge.gitbook.io/hashhedge-user-guide/rules/challenge-rules.md?ask=<question>&goal=<user_goal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is what the user is ultimately trying to achieve, the reason they need the answer. Sharing it helps GitBook give you a better, more relevant answer. A goal is most helpful when it describes the outcome the user wants rather than restating the question. For example, with `ask=how do I create an API token`, a goal like `automate deployments from our CI pipeline` lets GitBook tailor the answer to that use case.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
