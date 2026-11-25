@@ -4,6 +4,8 @@ export type ProgramPromotion = {
   id: string;
   slug: string;
   productIds: string[];
+  /** Only when official documentation covers every paid CFD/futures account; never generic unmapped promos. */
+  allPaidPrograms?: boolean;
   offer: string;
   code?: string;
   /** Account sizes whose published list price should be visible beside this offer. */
@@ -31,6 +33,6 @@ export function isProgramPromotionCurrent(promo: ProgramPromotion, today = new D
   return date >= checked - 24 * 60 * 60 * 1000 && date - checked < UNDATED_OFFER_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
 }
 
-export function getProgramPromotions(slug: string, productId: string, today = new Date()) {
-  return programPromotions.filter((promo) => promo.slug === slug && promo.productIds.includes(productId) && isProgramPromotionCurrent(promo, today));
+export function getProgramPromotions(slug: string, productId: string, today = new Date(), productType?: string) {
+  return programPromotions.filter((promo) => promo.slug === slug && (promo.productIds.includes(productId) || (promo.allPaidPrograms && ['Challenge', 'Instant funding', 'Futures evaluation'].includes(productType ?? '') && !/perps|perpetual/i.test(productId))) && isProgramPromotionCurrent(promo, today));
 }
