@@ -1,0 +1,31 @@
+{
+  "slug": "myforexfunds",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Full visible archived English and Spanish website Terms of Use, 643c878c4514.txt and 10cf5c23b911.txt, dated September 28 2026; archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. No actual challenge/funded contract archived.",
+  "facts": [
+    {
+      "code": "NOTE",
+      "text": "§1: GSO “has not assumed any of the Traders Global’s liabilities or obligations”; GSO administers the historical discretionary rewards programme as service provider only. Effective brand acquisition August 1 2026.",
+      "source": "https://myforexfunds.com/terms-of-use/",
+      "locator": "§1 Acceptance of Terms",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§3: “No client, advisory, employee, fiduciary, or similar relationship is created through use of the Website.” Informational website terms do not govern current programme payouts.",
+      "source": "https://myforexfunds.com/terms-of-use/",
+      "locator": "§3 Information-Only Website",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Historical Traders Global discretionary rewards programme mentioned, but no operative reward forfeiture clause for current GSO challenge. Do not transfer historical contract to new entity.",
+    "B2": "Geographic refusal/ending services in footer is not a subjective earned-payout removal clause.",
+    "B7": "No express timing of provision of current funded agreement."
+  },
+  "toVerify": {
+    "coverage": "Actual Evolution/Accelerated terms, payout and trading rules, funded contract, checkout/version; only website use terms archived. Spanish and English convey same material limitations.",
+    "B1": "Obtain current reward agreement; separate historical liabilities from current purchases."
+  }
+}

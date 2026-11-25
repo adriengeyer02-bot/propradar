@@ -1,0 +1,56 @@
+{
+  "slug": "aeon-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read full archived Quantx/EVC Holdings terms 3434d2e80647.txt, payout bf6200aad2cb.txt, help index 9442f523ee8b.txt and refund 5f27e20a9f62.txt. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Incorporated FAQ has many article titles only, no full bodies. Verify Aeon/Quantx entity continuity.",
+  "facts": [
+    {
+      "code": "NOTE",
+      "text": "Risk policy: “Exceeding this limit voids profits from trades beyond the threshold”; repeat violations may incur a 30% performance fee or closure. Lot exposure threshold depends on FAQ, not captured; do not assume losses remain counted.",
+      "source": "https://quantxfund.io/terms",
+      "locator": "Prohibited Practices and Risk Management",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Terms incorporate FAQ and other policies “which may be amended periodically and form part of this Agreement” and require adherence; verify whether amended rules explicitly bind accounts already running.",
+      "source": "https://quantxfund.io/terms",
+      "locator": "Additional Policies",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout minimum $600; below $50,000: “A minimum of 5 profitable days is required”, 0.5% each, 2.5% threshold. 1-Step five profitable days; 2-Step/Instant bi-weekly.",
+      "source": "https://quantxfund.io/help/how-can-i-request-a-payout-13765982",
+      "locator": "Additional Details / Payout Criteria / Payout Cycle",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "For IP region mismatch the Risk Team may request verification, e.g. travel documents/live location video; notice before travel advised.",
+      "source": "https://quantxfund.io/terms",
+      "locator": "Trader Rewards and IP Consistency",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Refund policy states all sales final; terms promise fee reimbursement with third performance reward after passing. Distinguish refund of purchases from conditional fee reimbursement.",
+      "source": "https://quantxfund.io/refund",
+      "locator": "§1; compare Terms > Trader Rewards and IP Consistency",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "General discretionary suspension/deletion is not explicit forfeiture of earned rewards.",
+    "B2": "Reckless Trading language includes qualitative factors, but sanctions stated for general reckless trading are leverage/trade limits/ban, while profit deductions are tied to exceeding the lot limit. Do not infer subjective payout confiscation.",
+    "B3": "Incorporation of periodically amended policies without express existing/current account applicability needs clarification; no B3 asserted.",
+    "B5": "Profit voiding above lot threshold does not explicitly preserve losses.",
+    "E_HARSH": "Promotional interview payout forfeiture expressly applies to free/giveaway accounts, excluded under handoff; do not code for paid main programmes.",
+    "B7": "Separate live agreement mentioned, not expressly withheld until passing."
+  },
+  "toVerify": {
+    "coverage": "Full incorporated FAQ: Strategy Consistency Policy, Reward Policy After Account Breach, Reward Policy, Risk Protection Measures, product pages QUANT A/X/S; current funded agreement; check 30-day terms versus FAQ title '7 day Inactivity Policy' (title only, not B4).",
+    "B2": "Read reward/breach policies and review route.",
+    "CONS": "Numeric consistency requirements for all main programmes."
+  }
+}

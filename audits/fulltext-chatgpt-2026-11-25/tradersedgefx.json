@@ -1,0 +1,23 @@
+{
+  "slug": "tradersedgefx",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Read full archived common-terms-and-questions ee5d716a556d.txt; FAQ 483536939f4f.txt has identical body hash in index. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. Glossary rather than contract.",
+  "facts": [
+    {
+      "code": "NOTE",
+      "text": "Footer states “provides simulated trading services and educational tools for traders”; separate Terms of Service and Refund Policy listed but absent from archived bodies.",
+      "source": "https://tradersedgefx.com/common-terms-and-questions/",
+      "locator": "Disclaimer / Customer Service",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B2": "Educational glossary entries on HFT, arbitrage, hedging, news and risk are not a contractual prohibition with a payout sanction.",
+    "CONS": "No numeric contractual consistency threshold in the glossary.",
+    "B7": "Separate Terms of Service link does not prove contractual withholding."
+  },
+  "toVerify": {
+    "coverage": "Actual Terms of Service, Refund Policy, payout schedule, programme rules, funded agreement; not present in archived text. No penalty codes inferred from glossary."
+  }
+}
