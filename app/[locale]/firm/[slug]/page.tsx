@@ -1098,10 +1098,10 @@ export default async function FirmPage({ params }: Props) {
               const evidence = getProgramEvidence(firm.slug, product.id);
               const mapped = mapProgramRules(product, getFirmUpdate(firm.slug));
               const matchingPrices = priceTable?.programs.filter(p => p.productId === product.id) ?? [];
-              const candidateHref = firm.partnerOffer?.href || product.linkToStart;
+              const candidateHref = firm.partnerOffer?.href || product.linkToStart || (firm.logoDomain ? `https://${firm.logoDomain}/` : undefined);
               const purchaseHref = firm.status !== 'Fermée' && !firm.listedDomainWarning && candidateHref && !isBlockedFirmUrl(firm, candidateHref) ? candidateHref : undefined;
               const sponsored = Boolean(purchaseHref && (firm.partnerOffer?.href || isAffiliateUrl(purchaseHref)));
-              const promos = firm.status !== 'Fermée' && !firm.listedDomainWarning ? getProgramPromotions(firm.slug, product.id).filter(p => !isBlockedFirmUrl(firm,p.sourceUrl)) : [];
+              const promos = firm.status !== 'Fermée' && !firm.listedDomainWarning ? getProgramPromotions(firm.slug, product.id, new Date(), product.type).filter(p => !isBlockedFirmUrl(firm,p.sourceUrl)) : [];
               const minSize = product.accountSizeMin;
               const maxSize = product.accountSizeMax;
               const capital = minSize > 0 && maxSize > 0 ? minSize === maxSize ? formatUsd(minSize) : `${formatUsd(minSize)} – ${formatUsd(maxSize)}` : pc.unknown;
