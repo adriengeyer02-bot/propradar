@@ -1,0 +1,534 @@
+{
+  "date": "2026-11-24",
+  "status": "AUDIT_ONLY_SCORE_FREEZE",
+  "scope": "Targeted terms sections and FAQ index evidence. Direct fetch of some pages and PDF screenshot failed. No complete audit or definitive current contract assertion. Trustpilot official exact-domain notice checked via regional variants. Existing evidence retained.",
+  "findingsCount": 52,
+  "firms": [
+    {
+      "slug": "blue-guardian",
+      "programs": [
+        "CFD Instant Standard",
+        "CFD Instant Starter",
+        "CFD BNPL",
+        "Futures Zero",
+        "Futures Direct",
+        "Futures Reserve",
+        "Futures Elite",
+        "Futures Express (legacy)"
+      ],
+      "findings": [
+        {
+          "source": "https://blueguardian.com/terms-and-conditions",
+          "locator": "Prohibited Trading; Trading Styles; Risk Management (lines 64–83)",
+          "scope": "evaluation/funded applicability to confirm",
+          "kind": "discretion",
+          "finding": "Changing strategy between assessment and funded, margin abuse and qualitative risk management can cause termination or denial of withdrawal; no universal numerical threshold in the cited clause."
+        },
+        {
+          "source": "https://blueguardian.com/terms-and-conditions",
+          "locator": "enforcement clause lines 143–145",
+          "scope": "general",
+          "kind": "discretion",
+          "finding": "Company may determine breach, suspend or terminate without notice, remove trades, adjust results or deny payment; decisions stated final."
+        },
+        {
+          "source": "https://blueguardian.com/terms-and-conditions",
+          "locator": "Payment Settlement",
+          "scope": "payments",
+          "kind": "identity",
+          "finding": "Odeonpay ALE S.R.L. / Paysagi identified as merchant of record, not service supplier; settlement terms incorporated at payment."
+        },
+        {
+          "source": "https://blueguardian.com/terms-and-conditions",
+          "locator": "Education, lines 124–129",
+          "scope": "legal scope",
+          "kind": "potential_conflict",
+          "finding": "General terms refer to live allocation after assessment, while current FAQ distinguishes simulated funded and live pathways. Confirm governing product agreement."
+        },
+        {
+          "source": "https://help.blueguardian.com/en/articles/18426779-instant-standard-account-rules",
+          "locator": "indexed FAQ",
+          "scope": "CFD Instant Standard",
+          "kind": "payout",
+          "finding": "20% best-day consistency and five profitable days before on-demand request; 3% daily loss and 6% trailing maximum; Guardian Shield and buffer require precise mapping."
+        },
+        {
+          "source": "https://help.blueguardian.com/en/articles/18426780-instant-starter-account-rules",
+          "locator": "indexed FAQ",
+          "scope": "CFD Instant Starter",
+          "kind": "payout",
+          "finding": "One-time $5K account, one payout up to $250 after five profitable days, 15% consistency. Profit above cap may exist; verify treatment of surplus."
+        },
+        {
+          "source": "https://help.blueguardian.com/en/articles/18426605-how-payouts-work",
+          "locator": "indexed FAQ updated Nov 17",
+          "scope": "Futures Direct",
+          "kind": "quantified",
+          "finding": "20% consistency for first payout, 25% second, 30% later; profit target and payout caps apply."
+        },
+        {
+          "source": "https://blueguardian.com/faq/articles/18446026-zero-account-rules",
+          "locator": "indexed FAQ",
+          "scope": "Futures Zero",
+          "kind": "transition",
+          "finding": "No funded consistency; $8k net profit in one trading day triggers closure and choice of $3,600 per qualifying account or live transition; cash path closes all funded Zero accounts. Cooldown 30 days per payout overview."
+        },
+        {
+          "source": "https://help.blueguardian.com/en/articles/18426777-elite-reserve-direct-path-to-live",
+          "locator": "indexed FAQ",
+          "scope": "Futures Elite/Reserve/Direct",
+          "kind": "transition",
+          "finding": "Live alternative may pay 50% of combined Live Allocation if no pending payout; household restriction on other simulated Futures accounts."
+        },
+        {
+          "source": "https://help.blueguardian.com/en/articles/15859899-buy-now-pay-later-bnpl-rules",
+          "locator": "indexed older FAQ",
+          "scope": "CFD BNPL",
+          "kind": "payout",
+          "finding": "20% consistency funded and minimum trading days; current availability and cohort must be confirmed."
+        }
+      ],
+      "missing": [
+        "Separate signed CFD/Futures Trader Agreements, complete product catalogue, Guardian Shield, reserves, profit cap treatment and old/new terms; indexed help pages direct fetch cache miss",
+        "Primary entity registry, regulatory and historic incident reconciliation, individual payment attribution"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/blueguardian.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null
+      },
+      "payoutEvidence": [
+        {
+          "url": "https://payoutjunction.com/monthly",
+          "amountUSD": 3218675,
+          "count": 2704,
+          "period": "Nov 2026 month-to-date as indexed Nov 24",
+          "method": "Rise + Direct Crypto",
+          "grade": "EXTERNAL_TRACKER_ATTRIBUTION_NOT_INDIVIDUALLY_VERIFIED",
+          "note": "Tracker label BlueGuardian; product attribution not independently confirmed"
+        }
+      ],
+      "payoutSearchResult": "EXTERNAL_TRACKER_RECORDED_PARTIAL",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "onefunded",
+      "programs": [
+        "Flash",
+        "Core",
+        "Value",
+        "Entry",
+        "Flex (March PDF)",
+        "Instant (availability to confirm)"
+      ],
+      "findings": [
+        {
+          "source": "https://app.onefunded.com/app/assets/policy/1f_Terms_Conditions.pdf",
+          "locator": "§1.3; §§6.8–6.11",
+          "scope": "evaluation",
+          "kind": "discretion",
+          "finding": "Challenge success is not an unconditional funded admission; further activities may be designated prohibited and linked accounts terminated."
+        },
+        {
+          "source": "https://app.onefunded.com/app/assets/policy/1f_Terms_Conditions.pdf",
+          "locator": "§12.6",
+          "scope": "assessment historical March 17 PDF",
+          "kind": "inactivity",
+          "finding": "60-day activity rule; current plan-specific limits need comparison."
+        },
+        {
+          "source": "https://app.onefunded.com/app/assets/policy/1f_Terms_Conditions.pdf",
+          "locator": "§13.16",
+          "scope": "evaluation March PDF",
+          "kind": "quantified",
+          "finding": "Flash/Core 50%, Value 40% best-day eligibility. Record without automatic penalty."
+        },
+        {
+          "source": "https://help.onefunded.com/consistency-rule-best-day-rule/",
+          "locator": "indexed current FAQ",
+          "scope": "funded",
+          "kind": "quantified",
+          "finding": "Flash 50% at funded payout, Core/Value off. Other plans pending. No automatic penalty for transparent 40%+ threshold."
+        },
+        {
+          "source": "https://help.onefunded.com/max-exposure-rule/",
+          "locator": "FAQ indexed Sept version, lines 11–46",
+          "scope": "all applicable",
+          "kind": "risk",
+          "finding": "3% equity combined floating loss per trade idea; Instant 1% may be hard breach. Correlated symbols aggregated, intentional or repeated behaviour subject to review. Current strike matrix to reconcile."
+        },
+        {
+          "source": "https://help.onefunded.com/prohibited-trading-practices-on-onefunded/",
+          "locator": "indexed FAQ",
+          "scope": "all",
+          "kind": "discretion",
+          "finding": "Firm asserts final classification of prohibited strategies and behaviour."
+        },
+        {
+          "source": "https://help.onefunded.com/breaching-a-funded-account/",
+          "locator": "indexed FAQ",
+          "scope": "funded",
+          "kind": "forfeiture",
+          "finding": "Terms breach can affect all profile accounts and pending payments; unauthorised automation may cause closure before drawdown thresholds. Email contest route provided."
+        },
+        {
+          "source": "https://app.onefunded.com/app/assets/policy/1f_Terms_Conditions.pdf",
+          "locator": "§§21.1.9–21.2",
+          "scope": "all",
+          "kind": "termination_and_safeguard",
+          "finding": "Contract may be terminated without reasons specified; accrued rights/remedies explicitly preserved. Not automatic forfeiture of every accrued amount."
+        },
+        {
+          "source": "https://help.onefunded.com/before-you-request-a-payout/",
+          "locator": "indexed FAQ",
+          "scope": "funded",
+          "kind": "payout",
+          "finding": "First cycle starts at first trade; trading resumes after payout completes."
+        },
+        {
+          "source": "https://help.onefunded.com/payout-methods/",
+          "locator": "indexed FAQ",
+          "scope": "funded",
+          "kind": "payment",
+          "finding": "USDT ERC20, USDC ERC20/BEP20 offered; method is not proof of completed payment."
+        }
+      ],
+      "missing": [
+        "PDF textual sections retrieved but screenshot failed; March version not established as accepted today; current HTML cache August, new FAQ indexed",
+        "Current checkout funded agreement and exact Flash/Core/Value/Entry/Flex/Instant exposure consequences, payout cycles, add-ons",
+        "Entity registry, historic incidents and individually verified payments"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/onefunded.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "for-traders",
+      "programs": [
+        "Forex Fast",
+        "Fast Static",
+        "Classic",
+        "Instant",
+        "Instant Pro",
+        "Pay After Pass",
+        "24/7 Trading Fast",
+        "Futures/Crypto/Prediction separate scopes"
+      ],
+      "findings": [
+        {
+          "source": "https://fortraders.com/terms-and-conditions",
+          "locator": "§§9.a.5–6,9.b.3–4",
+          "scope": "evaluation / Instant",
+          "kind": "discretion",
+          "finding": "Passing evaluation and paying applicable activation fee do not guarantee Member Program; risk/KYC approvals required. Instant reward also subject to contract issuance."
+        },
+        {
+          "source": "https://fortraders.com/terms-and-conditions",
+          "locator": "§§10.1–10.3",
+          "scope": "all",
+          "kind": "scope",
+          "finding": "Product conditions incorporated by purchase; inactivity measured by completed round trip, not open positions."
+        },
+        {
+          "source": "https://fortraders.com/terms-and-conditions",
+          "locator": "§§11.3–11.6",
+          "scope": "all",
+          "kind": "discretion",
+          "finding": "Qualitative deviations in position sizing and prohibited practices may deny evaluation, contract or reward; distinguish ordinary risk from identity fraud."
+        },
+        {
+          "source": "https://fortraders.com/terms-and-conditions",
+          "locator": "§12",
+          "scope": "all",
+          "kind": "conduct",
+          "finding": "Community-standard breach may terminate cooperation; no blanket inference that honest criticism is banned."
+        },
+        {
+          "source": "https://help.fortraders.com/en/articles/15342912-what-is-allowed-with-us",
+          "locator": "indexed FAQ",
+          "scope": "all applicable",
+          "kind": "strategy",
+          "finding": "Five-second minimum holding; external signals and copy into For Traders prohibited."
+        },
+        {
+          "source": "https://help.fortraders.com/en/articles/15053571-reward-policy-instant-account-forex",
+          "locator": "June 3 2026 FAQ and indexed current summary",
+          "scope": "Instant",
+          "kind": "payout",
+          "finding": "14-day cycles; 3% retained buffer; 15% consistency and seven profitable days according to current indexed summary."
+        },
+        {
+          "source": "https://help.fortraders.com/en/articles/15379390-instant-pro-account-forex",
+          "locator": "June 4 FAQ versus current index",
+          "scope": "Instant Pro",
+          "kind": "payout",
+          "finding": "No consistency/minimum days; 6% trailing locks at starting balance on payout request, seven-day inactivity, 3% buffer and $15k cap in June text. Current snippet says maximum split 100%, June text 90%; reconcile."
+        },
+        {
+          "source": "https://help.fortraders.com/en/articles/10442201-how-does-the-consistency-score-work-on-instant-and-pay-after-pass-accounts",
+          "locator": "indexed FAQ",
+          "scope": "Fast/Fast Static/Classic/Instant Pro/24-7 Fast",
+          "kind": "quantified",
+          "finding": "No consistency listed on these offers; Pay After Pass and other current models need precise values."
+        },
+        {
+          "source": "https://fortraders.com/our-rules",
+          "locator": "indexed page",
+          "scope": "all",
+          "kind": "payout",
+          "finding": "Rewards described as discretionary and conditional on licensing of trading data."
+        },
+        {
+          "source": "https://fortraders.com/terms-and-conditions",
+          "locator": "intro (cached DMCC vs fresh indexed FZCO)",
+          "scope": "identity",
+          "kind": "potential_conflict",
+          "finding": "BLN TECH CLUB DMCC/FZCO variants, same disclosed licence DMCC-882990; exact entity and registry confirmation necessary."
+        }
+      ],
+      "missing": [
+        "Current full dated CGU, Member Agreement and data licence, product matrices for Forex/Futures/Crypto/Prediction and cohorts",
+        "Resolve split difference and entity name; primary registry, historic incidents and payout evidence. TradingPilot result located but period/method unconfirmed, no monetary amount recorded"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/fortraders.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "finotive-funding",
+      "programs": [
+        "1-Step Challenge",
+        "2-Step Challenge",
+        "1-Step Pro",
+        "2-Step Pro",
+        "Instant Standard",
+        "Instant Lite",
+        "Finotive Pay (separate)"
+      ],
+      "findings": [
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§§1.1,1.5–1.6; footer",
+          "scope": "identity",
+          "kind": "identity",
+          "finding": "Finotive Funding Technologies Limited, DIFC registration 11088 disclosed; separate Finotive Markets infrastructure, Finotive Pay CY HE475209 agent. Registry not independently verified."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§1.7",
+          "scope": "all",
+          "kind": "change",
+          "finding": "Risk/compliance/security changes may apply immediately to existing accounts; publication plus continued use acceptance. Not proof of actual retroactive change."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§7.8",
+          "scope": "funded and Instant",
+          "kind": "risk",
+          "finding": "Floating drawdown 2% for funded Challenge/Pro; confirmed event strike plus cycle payment reduced to 10%. Instant 1.5%, first formal warning, subsequent strikes and reduction."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§7.14",
+          "scope": "funded",
+          "kind": "strategy",
+          "finding": "Scalping condition at >=40% trades held 120 seconds or less OR >=20% positive realized profit from such trades; conditional strike at withdrawal when unresolved."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§7.15 (lines 316–317)",
+          "scope": "Instant Standard/Lite",
+          "kind": "payout",
+          "finding": "Single trade >=60% positive realised profit may trigger conditional strike and reduction to 10% if payout requested without correction; distinct from ordinary consistency eligibility."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§7.22",
+          "scope": "funded",
+          "kind": "forfeiture",
+          "finding": "Five accumulated strikes permanently close account and eliminate cycle payment. Challenge-to-funded transition clears prior strike history if eligible."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§7.24 lines 363–365",
+          "scope": "all",
+          "kind": "clawback",
+          "finding": "Past breaches may be enforced after payment; reward may be reversed, scaling benefits recovered; review may pause new positions. Distinguish retrospective enforcement from new retroactive rule."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§10.5–10.6",
+          "scope": "Pro",
+          "kind": "downgrade",
+          "finding": "From funded day 31, weekly trade count and instrument volume within ±25% historical averages and instrument allocation; rolling 90-day profit ≥5%. Breach permanently loses Pro benefits including salary and 100% split. Accrued salary protected for ordinary drawdown/strikes subject to compliance."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§8 vs §12.3; FAQ 982",
+          "scope": "1/2-Step Challenge/Pro",
+          "kind": "potential_conflict",
+          "finding": "Retrieved HTML §8 says no minimum on 2-Step and lower of 1%/$100 on 1-Step; §12.3 lists 1% uncapped for all; FAQ says no minimum on 2-Step Challenge/Pro. Clarify before publishing."
+        },
+        {
+          "source": "https://finotivefunding.com/terms-and-conditions",
+          "locator": "§12.2,12.6",
+          "scope": "funded",
+          "kind": "hold",
+          "finding": "Review can delay, reject, reverse or reclaim reward; mandatory payment may be followed by reset, restriction or closure."
+        },
+        {
+          "source": "https://help.finotivefunding.com/en/articles/981-how-often-can-i-request-reward-payments-after-the-first-one",
+          "locator": "current indexed FAQ",
+          "scope": "Challenge/Pro/Instant Standard",
+          "kind": "payout",
+          "finding": "Usually seven calendar days after first payment; Lite 14 per terms."
+        },
+        {
+          "source": "https://help.finotivepay.com/en/articles/25-does-an-on-demand-funding-reward-mean-an-immediate-external-pay-payout",
+          "locator": "current indexed FAQ",
+          "scope": "all",
+          "kind": "payout",
+          "finding": "Funding approval and external Finotive Pay withdrawal schedule are distinct."
+        }
+      ],
+      "missing": [
+        "Full current 811-line agreement, specific funded and Finotive Pay agreements; current clause versions and minimum payment conflict",
+        "All risk thresholds and consequences per stage, recourse §19, registry and history; independently matched payment evidence"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/finotivefunding.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    },
+    {
+      "slug": "crypto-fund-trader",
+      "programs": [
+        "1-Phase",
+        "2-Phase",
+        "3-Phase",
+        "Ascend",
+        "Break 25/50/100K",
+        "Instant",
+        "Student/Advanced platform variants"
+      ],
+      "findings": [
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "interview section lines 221–223",
+          "scope": "all",
+          "kind": "hold",
+          "finding": "Interview via video/voice/screen share or written verification can be required for continuation, ticket or scholarship; failure may cancel entitlement. Deadline set by firm."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.1 xiii",
+          "scope": "all",
+          "kind": "forfeiture",
+          "finding": "$10k profit per day and/or trade per user; excess deducted and positions closed, grouped similar trades treated as one. Daily baseline 00:10 UTC."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.1 xv, xvii",
+          "scope": "all",
+          "kind": "discretion",
+          "finding": "Company determines gambling; disrespect via any communication channel can cause indefinite suspension; verify scope of legitimate criticism and payment effect."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.1 xviii–xix",
+          "scope": "Bybit",
+          "kind": "strategy",
+          "finding": "Demo withdrawal attempt soft breach with balance deduction and closing positions; repeat may disqualify. USDT derivatives only; spot/options immediate termination."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.1 xx",
+          "scope": "Ascend",
+          "kind": "strategy",
+          "finding": "Own-account copying also prohibited, manually or automatically; firm classification of replication final."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.1 xxiv",
+          "scope": "Break final",
+          "kind": "quantified",
+          "finding": "40% best-day threshold at withdrawal, exceeding delays eligibility, resets after approved payout; no automatic penalty under owner rule."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.2",
+          "scope": "all",
+          "kind": "forfeiture",
+          "finding": "Suspected prohibited practices can lead to trade removal, leverage reduction, cancellation and loss of reward/fees. No independent proof of actual misuse inferred."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§7.3",
+          "scope": "platforms",
+          "kind": "eligibility",
+          "finding": "MT5 unavailable to US residents; users of Bybit responsible for Bybit jurisdictional terms; do not infer all countries are allowed for service."
+        },
+        {
+          "source": "https://cryptofundtrader.com/terms-and-conditions/",
+          "locator": "§8 i–iii",
+          "scope": "1/2/Ascend/Break",
+          "kind": "risk",
+          "finding": "2-phase/Ascend 5% daily, 10% overall; 1-phase 4% daily and 6% trailing until 6% profit then floor at initial balance. Break daily 4% for 25/50K, 3% for 100K measured on maximum balance."
+        },
+        {
+          "source": "https://cryptofundtrader.com/faq/",
+          "locator": "indexed scholarship cycle FAQ",
+          "scope": "applicable final stage",
+          "kind": "payout",
+          "finding": "Seven traded days default, two with 48h add-on; exact applicable programs and definition of traded day remain to map."
+        }
+      ],
+      "missing": [
+        "Full current 469-line agreement, individual final stage scholarship contract and all phase/platform rules, precise fees/caps/cohorts",
+        "Swiss entity and register, current payor, historic incidents and individual payout evidence"
+      ],
+      "status": "REOPENED_PARTIAL_EVIDENCE",
+      "auditDate": "2026-11-24",
+      "canPublishNewScore": false,
+      "trustpilot": {
+        "url": "https://www.trustpilot.com/review/cryptofundtrader.com",
+        "checkedOn": "2026-11-24",
+        "status": "WITHHELD_GUIDELINE_BREACH",
+        "rating": null
+      },
+      "payoutEvidence": [],
+      "payoutSearchResult": "NO_NEW_INDEPENDENT_PROOF_CAPTURED_NOT_NONPAYMENT",
+      "registryStatus": "NOT_INDEPENDENTLY_VERIFIED"
+    }
+  ]
+}

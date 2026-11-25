@@ -1,0 +1,584 @@
+{
+  "documentVersion": "CGU_SWEEP_2026-11-24_v1",
+  "date": "2026-11-24",
+  "scope": "Audit documentaire des conditions générales des sociétés dont les règles étaient insuffisamment classées",
+  "nonPublication": true,
+  "noScoresComputed": true,
+  "important": "Les constats contractuels ne démontrent ni abus effectivement commis ni la validité juridique des clauses. Un non-examiné n'est jamais un zéro risque. Vérification au niveau d'un texte public, pas preuve de version effectivement acceptée par tous les traders.",
+  "firms": [
+    {
+      "slug": "city-traders-imperium",
+      "name": "City Traders Imperium",
+      "quality": "clauses_vérifiées_mais_contrepartie_à_réconcilier",
+      "phase": "Evaluation + récompenses (à relier au vendeur/contrat funded)",
+      "version": "PDF juin 2026 ; site actuel cite City Traders Imperium Limited (Comores) et CTI FZCO (Dubaï)",
+      "sources": [
+        "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf",
+        "https://citytradersimperium.com/contact-us/",
+        "https://citytradersimperium.com/2-step-challenge/"
+      ],
+      "findings": [
+        {
+          "factId": "CTI-2026-8.11",
+          "clause": "§8.11",
+          "riskFamily": "Récompenses",
+          "documentedEffect": "En cas de violation de n'importe quelle condition, perte du droit aux récompenses et au maintien des services, sans limitation explicite à la transaction fautive dans cette clause.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf"
+        },
+        {
+          "factId": "CTI-2026-8.13",
+          "clause": "§8.13",
+          "riskFamily": "Interprétation discrétionnaire",
+          "documentedEffect": "L'entreprise se réserve l'autorité de définir les comportements prohibés et les critères de détermination ; rapprocher de §9 et des programmes.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf"
+        },
+        {
+          "factId": "CTI-2026-13.12",
+          "clause": "§13.12",
+          "riskFamily": "Résiliation",
+          "documentedEffect": "Droit unilatéral de suspendre/résilier sans préavis, avec ou sans motif ; même famille de risque que §8.13 et §§13.10–13.13 : ne pas multiplier les malus.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf"
+        },
+        {
+          "factId": "CTI-2026-17.3",
+          "clause": "§17.3",
+          "riskFamily": "Changement sur comptes existants",
+          "documentedEffect": "Modifications pouvant affecter des contrats déjà conclus ; refus du client entraîne la résiliation. Ne prouve pas rétroactivité effective sur trades clos.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://citytradersimperium.com/wp-content/uploads/2026/06/City-Traders-Imperium-Terms-and-Conditions.pdf"
+        }
+      ],
+      "missing": "Relier version de CGU acceptée au checkout 1-Step / 2-Step / Instant / Direct et au véritable débiteur des récompenses, distinguer CTI FZCO de City Traders Imperium Limited; recherche registre primaire. Pas de nouveau score."
+    },
+    {
+      "slug": "audacity-capital",
+      "name": "Audacity Capital",
+      "quality": "clauses_vérifiées_versions_mêlées",
+      "phase": "Ability 1-Step, 2-Step, FTP Instant ; version et date d'achat à déterminer",
+      "version": "Page actuelle anglais contient clauses modernes et blocs hérités ; ne pas fusionner en un seul contrat",
+      "sources": [
+        "https://audacity.capital/en/terms-and-conditions/",
+        "https://audacity.capital/knowledge-center/general/"
+      ],
+      "findings": [
+        {
+          "factId": "AUD-2026-PROHIBITED",
+          "clause": "Trading Rules / Consequences of a Breach",
+          "riskFamily": "Retrait de récompenses",
+          "documentedEffect": "Pratiques prohibées appréciées raisonnablement : ignorer les trades concernés, suspendre/fermer, refuser paiement/refund lié à l'activité sanctionnée ; la référence à l'activité affectée limite la portée.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://audacity.capital/en/terms-and-conditions/"
+        },
+        {
+          "factId": "AUD-2026-REVIEW",
+          "clause": "Payouts and Profit Sharing",
+          "riskFamily": "Recours",
+          "documentedEffect": "Droit de demander une revue d'un payout rejeté/ajusté ; enquête pouvant suspendre temporairement le paiement. À intégrer comme garantie procédurale, contrairement à une confiscation sans appel.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://audacity.capital/en/terms-and-conditions/"
+        },
+        {
+          "factId": "AUD-2026-NOTICE",
+          "clause": "Changes to these Terms",
+          "riskFamily": "Changement des règles",
+          "documentedEffect": "Version moderne : préavis annoncé de sept jours pour changement matériel sur comptes existants et non-rétroactivité des trades déjà ouverts. Distinguer des anciens textes restés sur la page.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://audacity.capital/en/terms-and-conditions/"
+        },
+        {
+          "factId": "AUD-2026-ONE-DAYS",
+          "clause": "Ability One — règles vs CGU",
+          "riskFamily": "Contradiction",
+          "documentedEffect": "Des documents officiels du corpus antérieur divergent sur nombre minimum de jours d'évaluation. Le moteur l'a neutralisé car « min-trading-days » était classé classique avant conflit ; vérifier la version applicable en achat courant.",
+          "evidenceStatus": "à_recontrôler",
+          "sourceUrl": "https://audacity.capital/knowledge-center/general/"
+        }
+      ],
+      "missing": "Isoler le texte juridique réellement accepté au checkout et le rôle d'AudaCity Global LTD/éventuelles autres entités, puis confirmer si Ability One est encore contradictoire. Notice Trustpilot distincte des clauses."
+    },
+    {
+      "slug": "fundednext",
+      "name": "FundedNext",
+      "quality": "clauses_vérifiées_mais_versions_dupliquées",
+      "phase": "Services d'évaluation/compte simulé, modèle et zone géographique à préciser",
+      "version": "Page canonique /terms-of-service et copies /static/ etc. divergent sur le montant de pénalité; retenir la version contractuellement applicable",
+      "sources": [
+        "https://fundednext.com/terms-of-service",
+        "https://fundednext.com/static/terms-of-service",
+        "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward"
+      ],
+      "findings": [
+        {
+          "factId": "FN-2026-9.4",
+          "clause": "§9.4",
+          "riskFamily": "Récompenses conditionnelles",
+          "documentedEffect": "En cas de violation identifiée ou soupçonnée selon les conditions, la firme peut suspendre, recalculer, refuser, récupérer ou annuler des Performance Rewards et fermer le compte.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://fundednext.com/terms-of-service"
+        },
+        {
+          "factId": "FN-2026-9.6",
+          "clause": "§9.6",
+          "riskFamily": "Liste ouverte",
+          "documentedEffect": "La liste de comportements prohibés n'est pas exhaustive ; vérification de la possibilité de sanctionner des pratiques « incompatibles » hors listes objectives.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://fundednext.com/terms-of-service"
+        },
+        {
+          "factId": "FN-2026-PENALTY-VARIANTS",
+          "clause": "§9.4, variantes URL",
+          "riskFamily": "Versions contradictoires",
+          "documentedEffect": "La page canonique lue annonce jusqu'à 2 500 USD de pénalité contractuelle par conduite prohibée; une copie /static/ indexée montre 25 000 USD. Ne jamais attribuer 25 000 à un contrat sans rapprocher version, marché et date.",
+          "evidenceStatus": "incohérence_de_version",
+          "sourceUrl": "https://fundednext.com/static/terms-of-service"
+        },
+        {
+          "factId": "FN-2026-PAYOUTREVIEW",
+          "clause": "FAQ Performance Reward",
+          "riskFamily": "Contrôle après paiement",
+          "documentedEffect": "La FAQ prévoit des contrôles complémentaires éventuellement postérieurs à un reward déjà traité ; ne pas les confondre avec preuve de refus réellement intervenu.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://help.fundednext.com/en/articles/10701585-how-often-will-i-receive-my-performance-reward"
+        }
+      ],
+      "missing": "Comparer CGU effectivement acceptées et annexes selon pays/produit ; conserver la preuve de la variante de pénalité et déterminer sa date d'effet ; portée du recours."
+    },
+    {
+      "slug": "tradeify",
+      "name": "Tradeify",
+      "quality": "accord_funded_lu",
+      "phase": "Evaluation, simulated funded, Elite Live ; modalités individualisées par programme",
+      "version": "Funded Trader Agreement public ; help center incorporé par renvoi",
+      "sources": [
+        "https://tradeify.co/funded-trader-agreement",
+        "https://help.tradeify.co/en/articles/17069653-risk-compliance-guidelines-faq",
+        "https://help.tradeify.co/en/articles/17229690-know-your-trader-kyt-policy"
+      ],
+      "findings": [
+        {
+          "factId": "TR-2026-4.4",
+          "clause": "§4.4",
+          "riskFamily": "Payout approuvé suspendu",
+          "documentedEffect": "Peut suspendre le traitement et retenir un paiement déjà approuvé mais non encore versé durant une enquête ; les délais cessent de courir ; confiscation possible après constatation de violation.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://tradeify.co/funded-trader-agreement"
+        },
+        {
+          "factId": "TR-2026-7.6",
+          "clause": "§7.6",
+          "riskFamily": "Chargeback et récompenses",
+          "documentedEffect": "Une contestation bancaire des frais déclenche selon l'accord bannissement permanent, terminaison des comptes et perte de rewards impayés; contact du support exigé avant litige.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://tradeify.co/funded-trader-agreement"
+        },
+        {
+          "factId": "TR-2026-16",
+          "clause": "§16",
+          "riskFamily": "Modification unilatérale",
+          "documentedEffect": "Modification possible des conditions, plans et payouts à tout moment, avec effet lors de publication/notification et acceptation via usage continu. Vérifier effet sur comptes et trades existants.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://tradeify.co/funded-trader-agreement"
+        },
+        {
+          "factId": "TR-2026-10",
+          "clause": "§10",
+          "riskFamily": "Recours juridictionnel",
+          "documentedEffect": "Arbitrage contraignant en Floride d'après le contrat; ce n'est pas une absence totale de recours.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://tradeify.co/funded-trader-agreement"
+        }
+      ],
+      "missing": "Préciser selon offre Select / Growth / Lightning / Elite Live et date d'achat les annexes incorporées ; distinguer clause bancaire réclamant restitution vs droit local de contestation des frais."
+    },
+    {
+      "slug": "the5ers",
+      "name": "The5ers",
+      "quality": "conditions_2026_vérifiées",
+      "phase": "Programmes CFD/Forex et Futures ; conditions de Reward à contrôler par programme",
+      "version": "Terms du 28 octobre 2026",
+      "sources": [
+        "https://the5ers.com/en/terms-and-conditions/",
+        "https://the5ers.com/faqs/withdrawals-everything-you-need-to-know/"
+      ],
+      "findings": [
+        {
+          "factId": "5ERS-2026-10.1.11",
+          "clause": "§10.1(11)",
+          "riskFamily": "Confidentialité et rewards",
+          "documentedEffect": "Publication non autorisée de communications privées/support : risque de fermeture immédiate, sans remboursement, et perte des profits ou Reward Balance accumulés. Bien distinguer publication d'éléments privés, plainte publique et éventuels droits légaux.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://the5ers.com/en/terms-and-conditions/"
+        },
+        {
+          "factId": "5ERS-2026-CHANGES",
+          "clause": "Introduction + règles mises à jour",
+          "riskFamily": "Règles pouvant évoluer",
+          "documentedEffect": "Conditions annoncées modifiables immédiatement après publication ; vérifier protection des comptes achetés avant chaque version de règles. Ne prouve pas changement rétroactif concret.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://the5ers.com/en/terms-and-conditions/"
+        },
+        {
+          "factId": "5ERS-2026-AUTOMATION",
+          "clause": "§11",
+          "riskFamily": "EA, interdictions et autorisation",
+          "documentedEffect": "Automatisation personnelle soumise à approbation écrite, interdiction de logiciels tiers ; contrôle ciblé d'un risque objectif de disqualification sur certains profils.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://the5ers.com/en/terms-and-conditions/"
+        }
+      ],
+      "missing": "Distinguer accord du Challenge et funded/reward, exceptions de publication légale / demandes de support, recours et version du contrat acceptée."
+    },
+    {
+      "slug": "apex-trader-funding",
+      "name": "Apex Trader Funding",
+      "quality": "accord_principal_lu",
+      "phase": "Performance Account (PA) simulé, distinguer evaluation et Authorized Trader live",
+      "version": "User Agreement accessible depuis le dashboard et Terms of Use, dates/versions à archiver",
+      "sources": [
+        "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+        "https://apextraderfunding.com/terms-of-use/"
+      ],
+      "findings": [
+        {
+          "factId": "APEX-2026-12",
+          "clause": "§12 Rewards",
+          "riskFamily": "Distribution sans droit garanti",
+          "documentedEffect": "L'accord déclare les Rewards discrétionnaires, non dus contractuellement avant distribution autorisée, pouvant être refusés, plafonnés, supprimés sans motif, décisions finales sans appel ordinaire. Concerne bien le PA, pas coupon d'affiliation.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "factId": "APEX-2026-CHARGEBACK",
+          "clause": "§12 Reward distributions",
+          "riskFamily": "Clawback",
+          "documentedEffect": "Des remboursements/chargebacks de cotisations peuvent annuler des rewards associés aux périodes de souscription litigieuses, y compris déjà distribués.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        },
+        {
+          "factId": "APEX-2026-30",
+          "clause": "§30",
+          "riskFamily": "Changements de politiques",
+          "documentedEffect": "Le texte et règles incorporées sont modifiables à la discrétion de l'entreprise, effet à la publication sauf indication contraire; pas de protection explicite des anciennes cohortes dans cette clause.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://dashboard.apextraderfunding.com/agreement/user-agreement"
+        }
+      ],
+      "missing": "Identifier quelle version du User Agreement est acceptée par les nouveaux clients, vérifier les termes PA actuels et les droits impératifs applicables; ne pas conclure juridiquement qu'une clause est automatiquement valide."
+    },
+    {
+      "slug": "myfundedfutures",
+      "name": "MyFundedFutures",
+      "quality": "cgu_lues_mais_accord_sim_funded_prioritaire_manquant",
+      "phase": "Evaluation, Sim Funded ; exclure le produit séparé MyFunded Perpetuals",
+      "version": "Terms site 2026 ; §29 donne priorité à l'Appendix et Simulated Trader Agreement",
+      "sources": [
+        "https://myfundedfutures.com/terms",
+        "https://myfundedfutures.com/disclaimer"
+      ],
+      "findings": [
+        {
+          "factId": "MFFU-2026-16.2",
+          "clause": "§16.2–16.5",
+          "riskFamily": "Risque sur rémunérations",
+          "documentedEffect": "Violation du contrat pouvant donner lieu à suspension, perte de payouts/rewards selon décision unilatérale, avec détermination laissée à l'entreprise.",
+          "evidenceStatus": "constaté_sur_conditions_generales",
+          "sourceUrl": "https://myfundedfutures.com/terms"
+        },
+        {
+          "factId": "MFFU-2026-17",
+          "clause": "§17",
+          "riskFamily": "Résiliation large",
+          "documentedEffect": "Droit de résilier/suspendre à tout moment y compris en cas de risque réputé nuisible; examiner cumul avec sanctions et dommages.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://myfundedfutures.com/terms"
+        },
+        {
+          "factId": "MFFU-2026-29",
+          "clause": "§29",
+          "riskFamily": "Priorité contractuelle",
+          "documentedEffect": "Appendix > Simulated Trader Agreement > Terms en cas de conflit sur le même objet. Impossible de conclure définitivement aux droits de payout sans ces deux pièces.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://myfundedfutures.com/terms"
+        }
+      ],
+      "missing": "Obtenir Simulated Trader Agreement et l'Appendix correspondant au programme actuel. Ne pas transférer les termes de MyFunded Perpetuals à MFFU."
+    },
+    {
+      "slug": "ftmo",
+      "name": "FTMO",
+      "quality": "clauses_principales_vérifiées_qualification_à_revoir",
+      "phase": "Evaluation, 1-Step, 2-Step, Instant, Swing : sanctions différentes selon cohorte",
+      "version": "Forbidden Trading Practices + FAQ de chaque programme",
+      "sources": [
+        "https://ftmo.com/en/forbidden-trading-practices/",
+        "https://ftmo.com/en/faq/can-i-trade-news/",
+        "https://ftmo.com/en/faq/can-i-hold-positions-overnight-or-over-the-weekend/"
+      ],
+      "findings": [
+        {
+          "factId": "FTMO-2026-FT-PROHIBITED",
+          "clause": "Forbidden Trading Practices",
+          "riskFamily": "Récompenses discrétionnaires",
+          "documentedEffect": "Termes « non reasonably replicable », surdimensionnement et pratiques à risque non totalement chiffrés, potentiellement suivis de retraits de trades ou perte de rewards.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://ftmo.com/en/forbidden-trading-practices/"
+        },
+        {
+          "factId": "FTMO-2026-GAP",
+          "clause": "Forbidden Trading Practices vs FAQ Swing",
+          "riskFamily": "Contradiction contestée",
+          "documentedEffect": "L'interdiction d'OUVRIR près de fermeture de marché n'est pas nécessairement contradictoire avec l'autorisation de CONSERVER une position déjà ouverte sur Swing. Réexaminer l'ancien risque classé conflicting.",
+          "evidenceStatus": "qualification_à_revoir",
+          "sourceUrl": "https://ftmo.com/en/forbidden-trading-practices/"
+        },
+        {
+          "factId": "FTMO-2026-NEWS",
+          "clause": "FAQ news",
+          "riskFamily": "Restriction objective",
+          "documentedEffect": "Fenêtre de news pour Standard non Swing, publiée et chiffrée. Ne pas la traiter comme règle discrétionnaire sans autre élément.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://ftmo.com/en/faq/can-i-trade-news/"
+        }
+      ],
+      "missing": "Contrat FTMO Account effectivement signé, distinction reward potentiel/gain acquis, cohorte 1-Step/2-Step/Swing et seuils exacts. Ancien malus mécanique −8 non approuvé."
+    },
+    {
+      "slug": "topstep",
+      "name": "Topstep",
+      "quality": "cgu_et_help_lus_mais_accord_XFA_actuel_manquant",
+      "phase": "Trading Combine, Express Funded XFA, Live LFA : contrats distincts",
+      "version": "Terms of Use / help 2026 ; accord Express Funded individuel à obtenir",
+      "sources": [
+        "https://www.topstep.com/terms-of-use",
+        "https://help.topstep.com/en/articles/16989498-i-ve-been-banned-what-are-my-options",
+        "https://www.topstep.com/express-funded-account-rules",
+        "https://dashboard.topstep.com/public/agreement/evaluation-challenge-2026-09-12"
+      ],
+      "findings": [
+        {
+          "factId": "TS-2026-BAN",
+          "clause": "Help — banned",
+          "riskFamily": "Compte/solde en cas de bannissement",
+          "documentedEffect": "Bannissement pour violation des conditions décrit comme fermeture du compte avec confiscation du solde et des demandes en cours ; un recours peut être demandé via le help center.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://help.topstep.com/en/articles/16989498-i-ve-been-banned-what-are-my-options"
+        },
+        {
+          "factId": "TS-2026-REFERRAL",
+          "clause": "Terms §29 Rewards",
+          "riskFamily": "FAUX POSITIF à exclure",
+          "documentedEffect": "Les « Rewards » de cette section concernent les codes de parrainage. Le texte exclut explicitement payout/rémunération des accords distincts XFA/LFA. NE PAS utiliser pour prouver la confiscation d'un payout.",
+          "evidenceStatus": "exclusion_confirmée",
+          "sourceUrl": "https://www.topstep.com/terms-of-use"
+        },
+        {
+          "factId": "TS-2026-XFA",
+          "clause": "XFA Rules/Agreement",
+          "riskFamily": "Droit de payout séparé",
+          "documentedEffect": "Les vraies conditions de retrait XFA relèvent du programme et d'un accord spécifique; certains documents Evaluation Challenge 2026 comportent des conditions de perte de Reward lors d'un transfert vers Live.",
+          "evidenceStatus": "à_rapprocher",
+          "sourceUrl": "https://dashboard.topstep.com/public/agreement/evaluation-challenge-2026-09-12"
+        }
+      ],
+      "missing": "Accord Express Funded et Live applicable en 2026 selon date de compte ; vérifier portée des recours et savoir si « balance forfeited » inclut demandes déjà approuvées."
+    },
+    {
+      "slug": "fxify",
+      "name": "FXIFY",
+      "quality": "accord_public_lu_mais_versions_et_entité_ambiguës",
+      "phase": "Trader agreement après Audition, différentes formules 1/2 phases et instant",
+      "version": "Agreement FXIFY Solutions Limited ; anciennes CGU attribuent certaines responsabilités à un tiers",
+      "sources": [
+        "https://fxify.com/agreement/",
+        "https://fxify.com/terms-and-conditions",
+        "https://fxify.com/contact/",
+        "https://fxify.com/faqs/all-faqs/i-have-successfully-passed-the-challenge-what-happens-next/"
+      ],
+      "findings": [
+        {
+          "factId": "FX-2026-PARTY",
+          "clause": "Agreement vs Conditions générales",
+          "riskFamily": "Contrepartie contractante",
+          "documentedEffect": "Agreement appelle FXIFY Solutions Limited Prop Company alors que la page Contact décrit cette entité comme agent de paiement ; il faut identifier la contrepartie qui doit les rewards.",
+          "evidenceStatus": "incohérence_documentaire",
+          "sourceUrl": "https://fxify.com/contact/"
+        },
+        {
+          "factId": "FX-2026-WITHDRAW",
+          "clause": "Trader Agreement",
+          "riskFamily": "Conditions de payout",
+          "documentedEffect": "Le contrat décrit partage des profits et conditions de demande/retrait, mais son application aux différentes cohortes et programmes et aux modifications n'est pas garantie.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://fxify.com/agreement/"
+        }
+      ],
+      "missing": "Contrat Trader Agreement fourni post-évaluation, version signée et société débitrice des rewards ; règles de refus et recours par programme."
+    },
+    {
+      "slug": "lucid-trading",
+      "name": "Lucid Trading",
+      "quality": "conditions_et_programmes_lus_accord_individuel_à_voir",
+      "phase": "LucidFlex/Pro/Direct/Daily et Live ; contrats propres",
+      "version": "Terms of Use 2026 + help program-specific",
+      "sources": [
+        "https://lucidtrading.com/terms-of-use/",
+        "https://support.lucidtrading.com/en/articles/11404742-prohibited-microscalping",
+        "https://support.lucidtrading.com/en/articles/12890092-lucidpro-payouts"
+      ],
+      "findings": [
+        {
+          "factId": "LUCID-2026-PROHIBITED",
+          "clause": "Prohibited Uses",
+          "riskFamily": "Payout sur conduite subjective",
+          "documentedEffect": "Référence à activités non représentatives du trading responsable ; sanction possible allant du retrait de trades à pause/refus de payouts; support permet de demander un réexamen.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://lucidtrading.com/terms-of-use/"
+        },
+        {
+          "factId": "LUCID-2026-PROMO-REWARD",
+          "clause": "Rewards",
+          "riskFamily": "FAUX POSITIF potentiel",
+          "documentedEffect": "Section 'Rewards' décrit des prix/incitations promotionnels, pas automatiquement les payouts funded. Interdiction de convertir sa clause de retrait en malus payout sans accord produit.",
+          "evidenceStatus": "exclusion_à_confirmer_par_accord",
+          "sourceUrl": "https://lucidtrading.com/terms-of-use/"
+        }
+      ],
+      "missing": "Accords LucidPro/LucidDirect/LucidFlex et Live signés, définitions et seuils microscalping pour date du compte."
+    },
+    {
+      "slug": "tiger-funded",
+      "name": "Tiger Funded",
+      "quality": "documents_officiels_lus_conflits_anciens_non_reproduits",
+      "phase": "Challenge 1/2/3-Step et Instant ; après réussite accord funded distinct",
+      "version": "Terms of Service et Rules courants 2026",
+      "sources": [
+        "https://tigerfunded.com/terms-of-service",
+        "https://tigerfunded.com/rules",
+        "https://tigerfunded.com/faq"
+      ],
+      "findings": [
+        {
+          "factId": "TIGER-2026-4.1",
+          "clause": "§4.1 Terms",
+          "riskFamily": "Sanction d'évaluation",
+          "documentedEffect": "Violation d'une règle challenge peut entraîner disqualification, suspension, résiliation avec ou sans remboursement à discrétion. Ne pas la projeter automatiquement sur les rewards funded.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://tigerfunded.com/terms-of-service"
+        },
+        {
+          "factId": "TIGER-2026-4.3",
+          "clause": "§4.3 Terms",
+          "riskFamily": "Contrat funded distinct",
+          "documentedEffect": "Les comptes financés simulés sont soumis à des règles/paiement additionnels communiqués au funding ; ces contrats sont requis.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://tigerfunded.com/terms-of-service"
+        },
+        {
+          "factId": "TIGER-2026-DAYS",
+          "clause": "Rules vs FAQ ancien",
+          "riskFamily": "Contradiction non reconfirmée",
+          "documentedEffect": "Les Rules courantes indiquent 1 jour minimum 1-Step et 2-Step, aucun 3-Step. L'ancien constat « 3 jours » dans FAQ n'a PAS été retrouvé lors de la vérification actuelle : ne pas imputer de contradiction vérifiée.",
+          "evidenceStatus": "non_reconfirmé",
+          "sourceUrl": "https://tigerfunded.com/rules"
+        }
+      ],
+      "missing": "Obtenir accord des rewards funded, relever les annexes actuelles de reset de journée et conserver copie de toute contradiction réapparue."
+    },
+    {
+      "slug": "axi-select",
+      "name": "Axi Select",
+      "quality": "aides_publiques_lues_contrat_juridique_manquant",
+      "phase": "Programme Axi Select lié à un compte client, stages et juridictions spécifiques",
+      "version": "Help Axi Select, version client et régulateur/filiale à confirmer",
+      "sources": [
+        "https://help.axi.com/en-US/axiv2--axicorp-prod/article/rBpGJlIt-how-do-i-withdraw-from-my-axi-select-account",
+        "https://help.axi.com/en-US/axiv2--axicorp-prod/article/CqkuE8Cv-qu-ocurre-si-retiro-dinero-a-lo-largo-del-mes",
+        "https://help.axi.com/en-US/axiv2--axicorp-prod/article/Xi1qeq4R--"
+      ],
+      "findings": [
+        {
+          "factId": "AXI-2026-ACCOUNT",
+          "clause": "Help withdrawals",
+          "riskFamily": "Effet économique des retraits",
+          "documentedEffect": "Les fonds du compte client restent retirables, mais un retrait réduit l'allocation multipliée ; Seed peut reset et faire perdre bénéfices de qualification. Ne pas confondre réduction objective et confiscation discrétionnaire de rewards acquis.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://help.axi.com/en-US/axiv2--axicorp-prod/article/rBpGJlIt-how-do-i-withdraw-from-my-axi-select-account"
+        },
+        {
+          "factId": "AXI-2026-TIMING",
+          "clause": "Help payout",
+          "riskFamily": "Moment du Performance Fee",
+          "documentedEffect": "Mieux vaut retirer après paiement de la commission de performance et avant la première position du mois suivant pour éviter de modifier la base de calcul.",
+          "evidenceStatus": "constaté",
+          "sourceUrl": "https://help.axi.com/en-US/axiv2--axicorp-prod/article/Xi1qeq4R--"
+        }
+      ],
+      "missing": "Conditions générales du compte Axi de la juridiction réelle, contrat Axi Select et retenues/clawback éventuelles, ne pas appliquer une analogie prop firm simulée sans analyse."
+    },
+    {
+      "slug": "fintokei",
+      "name": "Fintokei",
+      "quality": "lien_vers_contrat_courant_récupéré_non_analysé",
+      "phase": "Programmes ProTrader/SwiftTrader, cohortes 2026",
+      "version": "Lien officiel vers General Terms V17 daté novembre 2026 ; PDF non ouvert dans les outils disponibles",
+      "sources": [
+        "https://www.fintokei.com/terms-and-conditions/",
+        "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+        "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+      ],
+      "findings": [
+        {
+          "factId": "FINTOKEI-2026-RISK-FAQ",
+          "clause": "FAQ risk-management",
+          "riskFamily": "Réduction ou annulation possible",
+          "documentedEffect": "La FAQ indique qu'un contrôle de risque peut conduire à diminuer la part de reward, le levier ou le plafond journalier; en cas extrême et après plusieurs avertissements, terminaison envisagée.",
+          "evidenceStatus": "constaté_FAQ",
+          "sourceUrl": "https://support.fintokei.com/en/articles/11315957-overview-of-our-risk-management-process-what-will-happen-if-we-identify-any-of-the-prohibited-gambling-or-unsustainable-practices"
+        },
+        {
+          "factId": "FINTOKEI-2026-V17",
+          "clause": "General Terms V17",
+          "riskFamily": "Contrat prioritaire non lu",
+          "documentedEffect": "PDF V17 repéré sur le site officiel, mais clauses et entrée en vigueur non inspectées directement ; ne pas convertir une description FAQ en audit complet des CGU.",
+          "evidenceStatus": "contrat_à_lire",
+          "sourceUrl": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf"
+        }
+      ],
+      "missing": "Lire V17 et annexes FPP par programme et cohorte, distinguer prime de performance et évaluation, revoir éventuelles clauses de résiliation."
+    },
+    {
+      "slug": "take-profit-trader",
+      "name": "Take Profit Trader",
+      "quality": "CGU_publiques_lues_funded_agreement_manquant",
+      "phase": "Test (simulation), PRO et PRO+ (différents)",
+      "version": "CGU génériques 2024, FAQ récente ; agreement PRO/PRO+ applicable non trouvé",
+      "sources": [
+        "https://takeprofittrader.com/terms",
+        "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+      ],
+      "findings": [
+        {
+          "factId": "TPT-2026-CONTRACT",
+          "clause": "Terms publics",
+          "riskFamily": "Portée insuffisante",
+          "documentedEffect": "Conditions de site et FAQ ne fournissent pas à elles seules un engagement actuel complet concernant les gains PRO/PRO+, leurs cas de retrait et recours ; pas de conclusion sur la protection des gains.",
+          "evidenceStatus": "pièce_critique_absente",
+          "sourceUrl": "https://takeprofittrader.com/terms"
+        },
+        {
+          "factId": "TPT-2026-PRO",
+          "clause": "FAQ PRO/PRO+",
+          "riskFamily": "Règles de payout",
+          "documentedEffect": "La FAQ décrit des retraits quotidiens, split 80/20 PRO et 90/10 PRO+ et règles spécifiques ; ce sont des déclarations de programme, pas une substitution à l'accord signé.",
+          "evidenceStatus": "constaté_FAQ",
+          "sourceUrl": "https://try.takeprofittrader.com/TPT-FAQs-nf40-4-0725"
+        }
+      ],
+      "missing": "Contrat PRO et PRO+ actuel, effective date, entité rémunératrice, clauses de suppression ou de contestation du payout."
+    }
+  ]
+}

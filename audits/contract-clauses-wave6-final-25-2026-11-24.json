@@ -1,0 +1,614 @@
+{
+  "date": "2026-11-24",
+  "status": "RESEARCH_ONLY_NO_SCORES",
+  "scope": "25 remaining profiles screened; no claim of fully closed audits. Indexed old PDFs and FAQ-only findings are explicitly partial. No independent payout verification or fresh exact-domain Trustpilot verification.",
+  "observations": 75,
+  "firms": [
+    {
+      "slug": "monevis",
+      "contractEvidenceStatus": "indexed_pdf_direct_404",
+      "sources": [
+        "https://monevis-cdn.s3.eu-central-1.amazonaws.com/terms_and_conditions.pdf",
+        "https://www.monevis.com/rules"
+      ],
+      "observations": [
+        {
+          "finding": "§5.4–5.6 : qualification discrétionnaire de stratégies interdites; annulation des résultats, résiliation, réduction du levier possibles."
+        },
+        {
+          "finding": "§5.7 : contrat Trader avec tiers distinct; pas de preuve de confiscation automatique de reward approuvé."
+        },
+        {
+          "finding": "Règles HTML : inactivité 30 jours."
+        }
+      ],
+      "remainingCriticalDocument": "PDF indexé mais capture 404; obtenir version actuelle et accord tiers.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lvlup-futures",
+      "contractEvidenceStatus": "primary_rules_partial_contract",
+      "sources": [
+        "https://lvlupfutures.com/rules",
+        "https://lvlupfutures.com/imprint"
+      ],
+      "observations": [
+        {
+          "finding": "Consistency 40% non éliminatoire; Starter funded sans consistency, contrairement au Lvlup funded."
+        },
+        {
+          "finding": "Lvlup : cycle 14 jours, plafond 10%; Starter : cinq jours profitables, plafond variable 2–4%, jusqu'à 50% du profit."
+        },
+        {
+          "finding": "Prop Account distinct de LVLUP One UG; contrat funded requis."
+        }
+      ],
+      "remainingCriticalDocument": "Obtenir accord exact Prop Account par modèle et droits sur rewards approuvés.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "atmos-funded",
+      "contractEvidenceStatus": "historical_pdf_page_verified",
+      "sources": [
+        "https://atmosfunded.com/wp-content/uploads/2025/05/ATMOS-Customer-Agreement-v6.pdf",
+        "https://help.atmosfunded.com/en/articles/10109079-anti-gambling-policy"
+      ],
+      "observations": [
+        {
+          "finding": "§9.1 : appréciation exclusive des pratiques interdites, effacement des profits nets possible."
+        },
+        {
+          "finding": "§7.3–7.5 (page 8 vérifiée) : cycle 14 jours et jusqu'à trois jours ouvrés de traitement; justificatifs supplémentaires peuvent retarder le payout."
+        },
+        {
+          "finding": "§7.6 : demande de retrait verrouille le trailing drawdown au solde initial."
+        }
+      ],
+      "remainingCriticalDocument": "Version 2025 à rapprocher de l'achat 2026 et politiques par offre.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "funded-futures-network",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "sources": [
+        "https://www.fundedfuturesnetwork.com/faq",
+        "https://fundedfuturesnetwork.zendesk.com/hc/en-us/sections/46870371000731-Article-5-1-How-Payouts-Work-Overview",
+        "https://blog.fundedfuturesnetwork.com/payouts"
+      ],
+      "observations": [
+        {
+          "finding": "Consistency 25% ou 40% selon compte, cinq jours gagnants Express MAX."
+        },
+        {
+          "finding": "FAQ : plafond $10 000 par utilisateur et retrait; micro/mini opposés interdits."
+        },
+        {
+          "finding": "Firme affirme payer les demandes approuvées intégralement et expliquer les refus; déclaration non auditée indépendamment."
+        }
+      ],
+      "remainingCriticalDocument": "Trader Agreement FFN Cap LLC à obtenir et identité à rapprocher, conditions des retraits acquis.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "now-trade-funded",
+      "contractEvidenceStatus": "historical_pdf_page_verified",
+      "sources": [
+        "https://nowtradefunded.com/wp-content/uploads/2024/06/Now-Trade-SOA-18-03-2024-1.docx-1.pdf",
+        "https://nowtradefunded.com/challenges/"
+      ],
+      "observations": [
+        {
+          "finding": "Annexe 2024, page 1 : HFT autorisé durant deux phases mais interdit en funded; consistency volume/profit uniquement funded."
+        },
+        {
+          "finding": "Annexe : premier plafond de retrait 2,5% du solde initial, puis 5%; dix jours minimum en funded sur modèle HFT."
+        },
+        {
+          "finding": "Annexe dit primer sur CGU en conflit; ne démontre pas son application en 2026."
+        }
+      ],
+      "remainingCriticalDocument": "Obtenir annexe checkout actuelle, CGU principales et entité rémunératrice.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bullwaves-prime",
+      "contractEvidenceStatus": "primary_rules_partial_contract",
+      "sources": [
+        "https://prime.bullwaves.com/trading-rules",
+        "https://prime.bullwaves.com/legal"
+      ],
+      "observations": [
+        {
+          "finding": "Cohorte 2-Step depuis 12/11/2026 : drawdown statique 8%, anciennes conditions conservées."
+        },
+        {
+          "finding": "Payout : trade >15% du profit total = soft breach, quatre = disqualification; règles lot moyenne -70%/+100% sur trades gagnants, gains hors plage supprimés."
+        },
+        {
+          "finding": "Stop obligatoire sous 60 secondes, sanction dure; revue avant retrait et éventuelle suppression de profits/fermeture à discrétion."
+        },
+        {
+          "finding": "Moonance LLC annoncée sur page juridique."
+        }
+      ],
+      "remainingCriticalDocument": "Obtenir CGU exactes du checkout et convention rémunératrice; vérifier pertes conservées dans le calcul.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "dna-funded",
+      "contractEvidenceStatus": "indexed_pdf_direct_403",
+      "sources": [
+        "https://dnafunded.com/wp-content/uploads/2025/05/General-Terms-and-Conditions-DNA-Funded-2-1.pdf"
+      ],
+      "observations": [
+        {
+          "finding": "§13.2–13.3 : conformité appréciée par société, pas de garantie d'éligibilité à une récompense."
+        },
+        {
+          "finding": "§25.6 : clauses de non-garantie, contraventions et litiges survivent à la résiliation."
+        }
+      ],
+      "remainingCriticalDocument": "Capture PDF 403; récupérer version 2026 et règles par cohorte, statut après approbation.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "superfunded",
+      "contractEvidenceStatus": "indexed_pdf_direct_403",
+      "sources": [
+        "https://superfunded.com/wp-content/uploads/2025/06/General-Terms-and-Conditions-SuperFunded-new-new.pdf"
+      ],
+      "observations": [
+        {
+          "finding": "§13.4 : non-conformité entraîne perte d'éligibilité/droit au payout; suspension ou refus si conformité jugée insuffisante."
+        },
+        {
+          "finding": "§13.5 : frais d'accès ne donnent pas automatiquement droit à retrait."
+        }
+      ],
+      "remainingCriticalDocument": "Capture PDF 403; récupérer conditions actualisées, risk policy et procédure de recours.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "forexive",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "sources": [
+        "https://forexive.com/faq/general",
+        "https://help.forexive.com/article/profit-split-and-pay-out-2-step",
+        "https://forexive.com/fr/rewards"
+      ],
+      "observations": [
+        {
+          "finding": "FAQ : abus, manipulation ou comportement contraire à l'éthique peuvent mener à suppression de profits et clôture; limites exactes à préciser."
+        },
+        {
+          "finding": "Premier split 2-Step 80% selon FAQ; promesse 24h après approbation, non délai avant approbation."
+        },
+        {
+          "finding": "FAQ évoque signature électronique de documents distincts."
+        }
+      ],
+      "remainingCriticalDocument": "Accord trader, définition abus et recours, partie contractante, cohorte.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "hash-hedge",
+      "contractEvidenceStatus": "primary_commercial_terms",
+      "sources": [
+        "https://www.hashhedge.com/commercial-terms",
+        "https://www.hashhedge.com/terms-and-conditions"
+      ],
+      "observations": [
+        {
+          "finding": "§3 : reward acquis pas rendu inéligible par simple attente/revérification; fermeture administrative de demande ne l'éteint pas à elle seule."
+        },
+        {
+          "finding": "§3 : garantie triple sous 72h avec nombreuses exceptions et redémarrage du délai; plafond 10 000 USD/14 jours, minimum 1 USD."
+        },
+        {
+          "finding": "§4.2–4.4 et §6 : enquête avant certaines disqualifications, forfeiture des demandes affectées en cas de violation confirmée; issue B/C permet traitement sous conditions."
+        },
+        {
+          "finding": "§8 : FinSmart Solution Ltd Seychelles 246832 responsable des payouts; Empower Academy Ltd EAU 01011157 opérateur de plateforme."
+        }
+      ],
+      "remainingCriticalDocument": "Vérifier registres, version acceptée et durée/enquête/recours §16, paiements indépendants.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "titan-capital-markets",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "sources": [
+        "https://support.tgmarkets.com/articles/1-step-evaluation-rules",
+        "https://support.tgmarkets.com/articles/3-step-evaluation-rules",
+        "https://support.tgmarkets.com/articles/performance-fee-policy"
+      ],
+      "observations": [
+        {
+          "finding": "Stop loss obligatoire dans 60 secondes sur 1-Step/Instant Pro selon FAQ."
+        },
+        {
+          "finding": "3-Step : risque de classification excessive sur marge insuffisante ou levier jugé imprudent par Risk Team."
+        },
+        {
+          "finding": "Jours profitables à recommencer après reset; définition intrajournalière."
+        }
+      ],
+      "remainingCriticalDocument": "Contrat de rémunération et lien juridique TG Markets/Titan; dossier UK historique à contrôler sans assimiler les entités.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "levels",
+      "contractEvidenceStatus": "primary_contract_excerpt",
+      "sources": [
+        "https://lv.ls/contract/",
+        "https://lv.ls/faq/"
+      ],
+      "observations": [
+        {
+          "finding": "Contrat public : benefits par paliers 10, 15, 20, 25, catégories Trader/Senior/Elite."
+        },
+        {
+          "finding": "Pas de délai limite pour achever un niveau; modèle différent de challenge classique."
+        }
+      ],
+      "remainingCriticalDocument": "Identifier conditions d'éligibilité et montant/devise/contrat de travail annoncé, entité, preuve de versement.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "leeloo-trading",
+      "contractEvidenceStatus": "indexed_terms_direct_404",
+      "sources": [
+        "https://www.leelootrading.com/terms-of-service",
+        "https://support.leelootrading.com/kb/a202/payouts-vs_-withdrawals-why-we-use-the-term-payout-at-leeloo.aspx",
+        "https://support.leelootrading.com/kb/a198/flexible-plan.aspx"
+      ],
+      "observations": [
+        {
+          "finding": "CGU indexées : plafond par utilisateur avec exception à discrétion; ouverture directe 404."
+        },
+        {
+          "finding": "FAQ : récompense non automatique, revue manuelle du comportement."
+        },
+        {
+          "finding": "Flexible Plan : revue à $6 500 ou trois retraits; ne pas généraliser."
+        }
+      ],
+      "remainingCriticalDocument": "Contrat Performance Account et version exacte de plafond, droits acquis.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "bulenox",
+      "contractEvidenceStatus": "primary_master_agreement",
+      "sources": [
+        "https://form.jotform.com/230508683548160",
+        "https://bulenox.com/help-center/master",
+        "https://bulenox.com/help-center/funded"
+      ],
+      "observations": [
+        {
+          "finding": "Master Agreement : copie coordonnée peut entraîner refus, suspension, résiliation ou confiscation à discrétion."
+        },
+        {
+          "finding": "§12 : frais de réémission $50 si échec non imputable à Bulenox, par réémission."
+        },
+        {
+          "finding": "Transition live après trois payouts seulement discrétionnaire; accord funded distinct."
+        }
+      ],
+      "remainingCriticalDocument": "Vérifier lien/formulaire applicable au checkout, Exhibit A par modèle et procédure d'appel.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "fx2-funding",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "sources": [
+        "https://fx2funding.com/terms-and-conditions/",
+        "https://fx2funding.com/faqs/"
+      ],
+      "observations": [
+        {
+          "finding": "Page CGU affiche FX2 Funding LTD Sainte-Lucie 2025-00108 mais conditions complètes non rendues; Prop Account LTD reçoit frais et conclut Trader Agreement."
+        },
+        {
+          "finding": "FAQ : retrait intégral des gains Instant peut provoquer violation du trailing drawdown et perte du compte."
+        },
+        {
+          "finding": "Crédit client choisi en guise de payout irréversible selon FAQ."
+        }
+      ],
+      "remainingCriticalDocument": "Contrat Prop Account, protection des payouts approuvés et choix éclairé du crédit.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "blueberry-funded",
+      "contractEvidenceStatus": "historical_pdf_page_verified",
+      "sources": [
+        "https://blueberryfunded.com/wp-content/uploads/2024/08/BBF-Technology-Access-and-Trader-Assessment-Program-Terms-and-Conditions.pdf",
+        "https://help.blueberryfunded.com/en/articles/10622848-how-to-request-a-payout-from-your-earnings-account",
+        "https://help.blueberryfunded.com/en/articles/9812246-does-blueberry-funded-enforce-a-consistency-rule-in-trading"
+      ],
+      "observations": [
+        {
+          "finding": "PDF p.4 : réussite évaluation ne garantit pas offre funded; paiement prévu si critères funded satisfaits."
+        },
+        {
+          "finding": "FAQ : synthetic depuis 08/10/2026, gains trades sous cinq minutes retirés du payout; consistency 25%."
+        },
+        {
+          "finding": "FAQ : anciens comptes avant 17/08/2026 conservés pour règle consistency décrite; pas de rétroactivité générale prouvée."
+        }
+      ],
+      "remainingCriticalDocument": "PDF 2024 et contrat dashboard à rapprocher du produit/cohorte; confirmer entité actuelle.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tentrade",
+      "contractEvidenceStatus": "primary_program_pdf_page_verified",
+      "sources": [
+        "https://tentrade.com/wp-content/uploads/2026/04/Funded-Terms-2026.pdf",
+        "https://tentrade.com/fr/commerce/comptes-finances/funded-trader/"
+      ],
+      "observations": [
+        {
+          "finding": "PDF p.5 : Ten Freedom 70/30 et retrait après revue; pas de profit score sur évaluation 2-phase."
+        },
+        {
+          "finding": "Document : pouvoir exclusif de qualifier hedging/autres stratégies interdites; compte perdu sans remboursement en cas de stratégie prohibée."
+        },
+        {
+          "finding": "Instant : profit score maximum 25% par trade/jour et plafonds de payout chiffrés selon taille."
+        }
+      ],
+      "remainingCriticalDocument": "Contrat funded, entité broker effectivement signataire et procédures de contestation.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "blusky-trading",
+      "contractEvidenceStatus": "primary_terms_and_rules",
+      "sources": [
+        "https://blusky.pro/terms-and-conditions/",
+        "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+        "https://help.blusky.pro/en/articles/12292284-sim-funded-payouts"
+      ],
+      "observations": [
+        {
+          "finding": "Invitation Live Brokerage : comptes Sim Funded deviennent inéligibles à nouveaux trades ou demandes de payout; sort des demandes déjà déposées à établir."
+        },
+        {
+          "finding": "Split Sim standard 90/10, Instant 80/20, Direct 50/50 les 30 premiers jours puis 80/20."
+        },
+        {
+          "finding": "CGU : abonnements payés non remboursables; contrat live distinct à vérifier."
+        }
+      ],
+      "remainingCriticalDocument": "Comparer parcours et traitement solde résiduel lors de migration, accords live et SIM.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "exfunded",
+      "contractEvidenceStatus": "mirror_terms_unverified_current",
+      "sources": [
+        "https://exfunded.sandai-investment.com/terms-condition/",
+        "https://exfunded.sandai-investment.com/faq/"
+      ],
+      "observations": [
+        {
+          "finding": "Copie sur domaine Sandai identifie ExFunded LLC, Ghana et tribunaux ghanéens; identité du site actuel non établie."
+        },
+        {
+          "finding": "§11 : contenu du site modifiable sans préavis; ne suffit pas à prouver rétroactivité des contrats funded."
+        },
+        {
+          "finding": "FAQ ancienne : remboursement frais quatrième retrait et lot consistency avant retrait."
+        }
+      ],
+      "remainingCriticalDocument": "Vérifier domaine exact, registre Ghana, checkout, accord funded et datation du miroir.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "klein-funding-crypto",
+      "contractEvidenceStatus": "primary_terms",
+      "sources": [
+        "https://kleinfunding.com/terms-of-use",
+        "https://kleinfunding.com/fr/conditions-d-039-utilisation",
+        "https://kleinfunding.com/disclaimer"
+      ],
+      "observations": [
+        {
+          "finding": "CGU intègrent FAQ/dashboard/règles produit; violation peut mener à refus payout ou ajustement profits."
+        },
+        {
+          "finding": "En cas de conflit, disposition jugée plus spécifique peut s'appliquer; vérifier version/cohorte."
+        },
+        {
+          "finding": "Clause réputation large; distinguer diffamation et avis honnêtes. Mentions Klein EDU LTD vs KUENTECH LLC et adresse US/description UK à rapprocher."
+        }
+      ],
+      "remainingCriticalDocument": "Entité signataire et registre, contrat crypto funded, critères du score stabilité et recours.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "ment-funding",
+      "contractEvidenceStatus": "primary_terms",
+      "sources": [
+        "https://mentfunding.com/terms-of-service",
+        "https://mentfunding.com/risk-disclaimer"
+      ],
+      "observations": [
+        {
+          "finding": "CGU : modifications/fin à entière discrétion; trading prohibé peut entraîner confiscation de frais ou sommes dues."
+        },
+        {
+          "finding": "Shared Wallet : soupçon raisonnable peut entraîner blocage/refus, instructions alternatives ou vérification."
+        },
+        {
+          "finding": "Trader Agreement Prop Account LC distinct après réussite selon disclaimer."
+        }
+      ],
+      "remainingCriticalDocument": "Contrats Forex/Futures/Equities distincts, version applicable, recours et définition exactes de sommes dues.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "elite-trader-funding",
+      "contractEvidenceStatus": "primary_terms",
+      "sources": [
+        "https://elitetraderfunding.app/terms-of-service"
+      ],
+      "observations": [
+        {
+          "finding": "Sections Reward Interview/Modifications : refus d'entretien audio/vidéo peut faire refuser reward; minimums/maxima modifiables sans avis, dashboard prévaut."
+        },
+        {
+          "finding": "LIVE ELITE : demandes en attente peuvent être transférées à allocation/Vault plutôt que payées; société qualifie ce transfert de résolution."
+        },
+        {
+          "finding": "LIVE ELITE : remboursement de pertes au-delà du Total Loss Limit et de certains coûts overnight, avec compensation possible."
+        },
+        {
+          "finding": "Non-executable fills : données de marché et tolérance 50 ms, gains annulés; restitution des 12 mois sur fraude établie par tribunal/arbitre, set-off distinct avec notification."
+        }
+      ],
+      "remainingCriticalDocument": "Version novembre et cohortes; accord live/Vault, clauses de dette et droits impératifs, procédure d'appel.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "tradexprop",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "sources": [
+        "https://tradexprop.zohodesk.com/portal/en/kb/articles/prohibited-trading-activities-what-you-need-to-know",
+        "https://dashboardanalytix.com/client-terms-and-policies/"
+      ],
+      "observations": [
+        {
+          "finding": "FAQ §2 : changement de stratégie evaluation/funded interdit; relations broker et risque excessif qualitatifs."
+        },
+        {
+          "finding": "News ±3 minutes, copie entre comptes propres seulement; limites explicites à distinguer."
+        },
+        {
+          "finding": "Consequences : forfeiture de frais ou earnings dus; CGU liées au partenaire Dashboard Analytix, document particulier à identifier."
+        }
+      ],
+      "remainingCriticalDocument": "Récupérer CGU exactes au checkout et accord funded, portée des gains dus; ancien blocage CGU non entièrement levé.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "foxx-funded",
+      "contractEvidenceStatus": "primary_faq_partial_contract",
+      "sources": [
+        "https://www.foxx-funded.com/en/faqs",
+        "https://www.foxx-funded.com/payout/"
+      ],
+      "observations": [
+        {
+          "finding": "FAQ : changements fréquents de stratégie, comportement impulsif et stratégies jugées non réalistes peuvent conduire au redémarrage, hard breach ou refus de payout."
+        },
+        {
+          "finding": "Comptes funded simulés; Trader Agreement annoncé comme référence contractuelle."
+        },
+        {
+          "finding": "Foxx Limited annoncée comme opérateur; page payout non preuve indépendante."
+        }
+      ],
+      "remainingCriticalDocument": "CGU complètes et accord Trader à obtenir, registre et preuve de paiement; blocage initial maintenu pour contrat intégral.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    },
+    {
+      "slug": "lark-funding",
+      "contractEvidenceStatus": "indexed_terms_render_mismatch",
+      "sources": [
+        "https://larkfunding.com/terms-of-use",
+        "https://helpdesk.larkfunding.com/en/articles/8117403-how-do-payouts-work",
+        "https://larkfunding.com/help/take-an-evaluation/instant-master-account-details"
+      ],
+      "observations": [
+        {
+          "finding": "Recherche indexe CGU mais ouverture renvoie page marketing, pas texte complet."
+        },
+        {
+          "finding": "Instant Master : drawdown trailing 8% ne se réinitialise pas après payout; ne pas confondre avec annonces static des évaluations."
+        },
+        {
+          "finding": "FAQ : demande depuis dashboard; convention Trader Agreement distincte à signer."
+        }
+      ],
+      "remainingCriticalDocument": "CGU exactes toujours bloquées par rendu; obtenir contrat individuel et preuve de version.",
+      "trustpilotStatus": "NOT_REVERIFIED_EXACT_DOMAIN_IN_THIS_WAVE",
+      "independentPayoutProof": "NOT_VERIFIED",
+      "registryPrimaryStatus": "NOT_VERIFIED",
+      "canPublishNewScore": false
+    }
+  ]
+}

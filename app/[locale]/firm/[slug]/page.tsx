@@ -73,6 +73,9 @@ import { feeStats } from '../../../lib/industryStats';
 import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localePath, type Locale } from '../../../lib/locales';
 import { fmt, formatDateLong, getMessages, tv, type Messages } from '../../../lib/messages';
 import IntentLink from '../../../components/IntentLink';
+import ContractAuditSection from '../../../components/ContractAuditSection';
+import { getContractAudit } from '../../../lib/contractAudits';
+import { contractAuditCopy } from '../../../lib/contractAuditI18n';
 
 type FirmT = Messages['firm'];
 
@@ -1067,6 +1070,7 @@ export default async function FirmPage({ params }: Props) {
           items={[
             ...(firm.products.length ? [{ id: 'produits', label: f.nav.offers }] : []),
             { id: 'rules', label: f.rulesUi.nav },
+            ...(getContractAudit(firm.slug) ? [{ id: 'contract-audit', label: contractAuditCopy(locale).nav }] : []),
             { id: 'decision', label: f.nav.decision },
             ...(auditCaseFile ? [{ id: 'case-timeline', label: f.nav.timeline }] : []),
             { id: 'regulatory', label: f.nav.legal },
@@ -1308,6 +1312,8 @@ export default async function FirmPage({ params }: Props) {
           <div className="pr-rules-empty" role="note">{f.rulesEmpty}</div>
         )}
       </section>
+
+      <ContractAuditSection slug={firm.slug} firmName={firm.name} locale={locale} />
 
       <section className="container pr-section pr-decision" id="decision" aria-label={fmt(f.decisionAria, { name: firm.name })}>
 
