@@ -60,18 +60,320 @@ export type GuideArticle = {
 };
 
 export const guideArticles: Record<string, GuideArticle> = {
+  "prop-firm-payout-proof": {
+    "updated": "2026-11-25",
+    "intro": "A payout screenshot, a company total and a public blockchain transaction are not interchangeable evidence. PropRadar distinguishes what each source can establish, what is merely reported, and what remains unknown.",
+    "keyPoints": [
+      "A company-reported total is not an independently audited total.",
+      "A blockchain transaction proves a settlement event, not automatically a trader's identity or bank receipt.",
+      "A high payout volume cannot establish the fraction of customers paid or prove every valid request is honoured."
+    ],
+    "sections": [
+      {
+        "heading": "Four levels of payout evidence",
+        "paragraphs": [
+          "Start with the provenance of the evidence, not the largest marketing number. A press article repeating a company announcement remains company-reported. Multiple trackers may use the same underlying transactions, so do not add their totals."
+        ],
+        "compare": {
+          "columns": [
+            "What it supports",
+            "Limit"
+          ],
+          "rows": [
+            {
+              "label": "Company report or screenshot",
+              "values": [
+                "A reported payment or aggregate",
+                "Not independently authenticated"
+              ]
+            },
+            {
+              "label": "Independent reporting",
+              "values": [
+                "A documented claim or incident",
+                "Check whether the journalist obtained underlying records"
+              ]
+            },
+            {
+              "label": "Public on-chain tracker",
+              "values": [
+                "Timestamped transfers or settlement events attributed to a firm",
+                "Attribution, coverage and recipient classification may remain uncertain"
+              ],
+              "sourceUrl": "https://payoutjunction.com/methodology"
+            },
+            {
+              "label": "Matched individual evidence",
+              "values": [
+                "Specific payment supported by matching firm record and recipient receipt",
+                "Only that payment, not the firm's overall reliability"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "heading": "How to check a tracked payout",
+        "paragraphs": [
+          "Payout Junction describes a method based on firm wallet tracking and transaction hashes. Rise settlements and direct crypto transfers use different rails. A settlement record may not identify the final recipient in publicly visible data; some trackers also warn that payments from the same account can include non-trader recipients."
+        ],
+        "steps": [
+          {
+            "title": "Identify the exact firm and payment rail",
+            "text": "Record the domain, legal entity, source and time period."
+          },
+          {
+            "title": "Open the underlying transaction",
+            "text": "Compare hash, network, amount, timestamp and source account; document attribution limits."
+          },
+          {
+            "title": "Check the recipient evidence",
+            "text": "With consent, match the approved reward to a redacted receipt; never publish personal financial identifiers."
+          },
+          {
+            "title": "Record missing evidence",
+            "text": "Do not treat a missing blockchain record as proof of nonpayment: bank payments outside the observed rail may not be captured."
+          }
+        ]
+      },
+      {
+        "heading": "What a payout total cannot tell you",
+        "paragraphs": [
+          "A firm's cumulative settled amount does not show the proportion of purchasers who reach funding, the proportion of valid requests refused, or the company's solvency. Compare dates, active account population if available, contract rules and complaint outcomes separately. A transaction count is not necessarily a count of unique traders."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Payout Junction methodology",
+        "url": "https://payoutjunction.com/methodology"
+      },
+      {
+        "label": "Payout Junction statistics (live, variable)",
+        "url": "https://payoutjunction.com/statistics"
+      },
+      {
+        "label": "Independent tracker: Rise settlement attribution limitations",
+        "url": "https://damnpropfirms.com/payouts/methodology/"
+      }
+    ]
+  },
+  "ftmo-vs-the5ers": {
+    "updated": "2026-11-25",
+    "intro": "FTMO and The5ers now cover more than their traditional forex evaluation models. Compare the exact market, product and accepted contract; neither brand's overall score guarantees a payment.",
+    "keyPoints": [
+      "FTMO 1-Step, 2-Step and Instant have different consistency requirements.",
+      "The5ers Bootcamp, High Stakes and Futures have distinct payout and news conditions.",
+      "The5ers also lists ProGrowth and stock trading; check those separate terms before buying."
+    ],
+    "sections": [
+      {
+        "heading": "Compare the programmes, not the logos",
+        "paragraphs": [
+          "FTMO's 2-Step Swing account permits extended holding and news trading subject to general forbidden practices. The 1-Step and Instant paths have different consistency gates. The5ers' Bootcamp is a three-stage evaluation; its 14-day payout cycle restarts on scaling."
+        ],
+        "compare": {
+          "columns": [
+            "Programme",
+            "Important condition"
+          ],
+          "rows": [
+            {
+              "label": "FTMO 1-Step CFD",
+              "values": [
+                "50% consistency",
+                "New orders from 12 October use net profit"
+              ],
+              "sourceUrl": "https://ftmo.com/en/trading-objectives/"
+            },
+            {
+              "label": "FTMO 2-Step CFD",
+              "values": [
+                "No percentage consistency",
+                "Standard and Swing have different news/holding rules"
+              ],
+              "sourceUrl": "https://ftmo.com/en/faq/what-is-the-swing-account-type-and-how-does-it-work/"
+            },
+            {
+              "label": "FTMO Instant CFD",
+              "values": [
+                "30% consistency",
+                "Direct simulated account; verify loss limits"
+              ],
+              "sourceUrl": "https://ftmo.com/en/trading-objectives/"
+            },
+            {
+              "label": "The5ers Bootcamp",
+              "values": [
+                "Three evaluation phases",
+                "14-day payout cycle resets at scaling"
+              ],
+              "sourceUrl": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"
+            },
+            {
+              "label": "The5ers High Stakes",
+              "values": [
+                "Two-stage evaluation",
+                "Restricted news executions; gains deducted, losses retained"
+              ],
+              "sourceUrl": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+            },
+            {
+              "label": "The5ers Futures",
+              "values": [
+                "40% per trade in dedicated FAQ",
+                "Separate futures contract; confirm product and checkout"
+              ],
+              "sourceUrl": "https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"
+            },
+            {
+              "label": "The5ers ProGrowth / stocks",
+              "values": [
+                "Separate current offer",
+                "Bootcamp and ProGrowth list stock instruments; verify full rules"
+              ],
+              "sourceUrl": "https://the5ers.com/faqs/available-stocks-for-trading/"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "News trading and overnight positions",
+        "paragraphs": [
+          "Swing and Standard are not interchangeable. The5ers permits news trading on Bootcamp and Hyper Growth subject to prohibited strategies such as bracketing; High Stakes prohibits executions around designated news. FTMO Swing exceptions do not override general prohibited trading practices."
+        ],
+        "callout": {
+          "kind": "warning",
+          "text": "Check whether the restriction concerns opening, closing, pending-order execution or holding an existing trade; a stop or target can execute during a news window."
+        }
+      },
+      {
+        "heading": "Which should you choose?",
+        "paragraphs": [
+          "Start with your instruments and typical holding period. Compare the cost of a complete path, not just the cheapest entry, including resets, payout gates and scaling. Consult the live company profiles for current scores and the exact contracts; this article does not rank the firms using an unapproved scoring formula."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "FTMO objectives",
+        "url": "https://ftmo.com/en/trading-objectives/"
+      },
+      {
+        "label": "FTMO Swing FAQ",
+        "url": "https://ftmo.com/en/faq/what-is-the-swing-account-type-and-how-does-it-work/"
+      },
+      {
+        "label": "The5ers Bootcamp",
+        "url": "https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"
+      },
+      {
+        "label": "The5ers High Stakes",
+        "url": "https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"
+      },
+      {
+        "label": "The5ers news rules",
+        "url": "https://the5ers.com/faqs/can-i-trade-during-news/"
+      },
+      {
+        "label": "The5ers Futures consistency",
+        "url": "https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"
+      },
+      {
+        "label": "The5ers catalogue",
+        "url": "https://the5ers.com/faqs/"
+      },
+      {
+        "label": "The5ers stock instruments",
+        "url": "https://the5ers.com/faqs/available-stocks-for-trading/"
+      }
+    ]
+  },
+  "prop-firm-fiable-trustpilot": {
+    "updated": "2026-11-25",
+    "intro": "Trustpilot is one research signal, not a solvency test. A rating can be suspended while reviews remain visible. Treat the exact-domain notice as a separate platform-integrity fact, not proof that every review is fake or that a firm does not pay.",
+    "keyPoints": [
+      "Match the domain, not just the brand name.",
+      "Date the status and distinguish a visible rating, withheld rating and missing profile.",
+      "Read company replies and independently documented payment evidence separately."
+    ],
+    "sections": [
+      {
+        "heading": "Three distinct review states",
+        "paragraphs": [
+          "A visible rating summarises reviews under the platform's methodology. A withheld rating indicates a platform restriction; read the specific notice. A missing or inaccessible profile is a separate status and can have several causes."
+        ],
+        "compare": {
+          "columns": [
+            "Interpretation",
+            "Do not infer"
+          ],
+          "rows": [
+            {
+              "label": "Rating visible",
+              "values": [
+                "Review signal on the checked domain",
+                "Guaranteed payment or regulatory approval"
+              ]
+            },
+            {
+              "label": "Rating withheld",
+              "values": [
+                "Specific Trustpilot notice, if shown",
+                "Fraud or nonpayment in every case"
+              ]
+            },
+            {
+              "label": "Profile inaccessible",
+              "values": [
+                "Verification not possible at this time",
+                "Delisting for misconduct without evidence"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "heading": "Read the notice, then the contract",
+        "paragraphs": [
+          "On 25 November 2026 the GOAT domain still displayed a rating-withheld notice for a breach of Trustpilot guidelines. This is a dated example, not a list of all suspended firms. Cross-check exact programme terms, payout deductions, appeal options, payment evidence and any documented incidents. A high rating does not override a restrictive contract."
+        ],
+        "callout": {
+          "kind": "warning",
+          "text": "Never turn a Trustpilot notice into a numerical deduction in guide prose. The live score and its explanation belong to the firm profile."
+        }
+      },
+      {
+        "heading": "How PropRadar records review evidence",
+        "paragraphs": [
+          "Record domain, date, visible rating and count if available, exact notice, sources and any company response. Distinguish allegations from corroborated incidents. Avoid treating historical review counts as today's totals; preserve dated evidence when a notice changes."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Trustpilot: GOAT exact-domain example",
+        "url": "https://www.trustpilot.com/review/goatfundedtrader.com"
+      },
+      {
+        "label": "Payout Junction methodology",
+        "url": "https://payoutjunction.com/methodology"
+      }
+    ]
+  },
   'hyrotrader-vs-tradeify': hyroTradeifyArticle,
   'prop-firm-hidden-rules': {
     published: '2026-11-16',
-    updated: '2026-11-16',
+    updated: '2026-11-25',
     intro: 'A prop firm can advertise a generous profit split and an easy challenge while the binding agreement includes conditions that materially change when you may withdraw. These are **easy-to-miss rules**, not necessarily rules the company has intentionally concealed: the examples below are taken from firms\' own public documentation. **We include PropRadar affiliate partners.** No ranking or affiliate commission can buy an exemption from scrutiny.',
     keyPoints: [
       '**Evaluation rules are not necessarily funded-account rules.** News, trading hours and consistency may change after you pass.',
       '**Profit in the dashboard is not automatically a payable reward.** Some programs deduct profits or apply separate eligibility gates.',
       '**Residence, citizenship, location and payment provider can differ.** A successful purchase does not prove later payout eligibility.',
-      '**Every named example below links to an original company policy** checked on 16 November 2026.',
+      '**Every named example below links to an original company policy** with individual research dates.',
     ],
     sections: [
+      {"heading":"Contract clauses that change your actual reward — November 25 update","paragraphs":["Distinguish a delay in eligibility from a permanent deduction, a hard breach and a discretionary refusal. The same profit in a dashboard can lead to four very different outcomes. The examples are published terms, not findings of unlawful conduct or proof of a particular refusal."],"compare":{"columns":["Rule and scope","Effect"],"rows":[{"label":"Apex Performance Accounts, §§12–13","values":["Reward discretion; audit response normally within 48 hours","Unpaid rewards may be denied; ordinary internal review excluded by the clause"],"sourceUrl":"https://dashboard.apextraderfunding.com/agreement/user-agreement"},{"label":"Apex, §15","values":["Existing professional-level proficiency; discretionary exceptions","Termination and denial of unpaid rewards possible, even for exceptional performance"],"sourceUrl":"https://dashboard.apextraderfunding.com/agreement/user-agreement"},{"label":"Maven, applicable product schedules","values":["Profit above contractual cap","Excess can be deleted rather than carried forward; check model and accepted version"],"sourceUrl":"https://maventrading.com/terms-and-conditions"},{"label":"The5ers High Stakes","values":["Orders executed within two minutes either side of relevant high-impact news","Profits removed, losses retained"],"sourceUrl":"https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"},{"label":"FundedNext Futures Direct","values":["20% perpetual consistency","Historical largest winning day stays in the calculation for future withdrawal cycles"],"sourceUrl":"https://helpfutures.fundednext.com/en/articles/17430319-what-is-the-perpetual-consistency-rule-and-how-does-it-work"}],"note":"Targeted source checks on 25 November 2026. Not a complete review of every agreement. Earlier tables retain their original research dates."},"callout":{"kind":"warning","text":"Before paying, save the checkout rules, full accepted terms and funded agreement. Ask in writing what happens to excess profits, unpaid rewards and existing accounts when a rule changes."}},
       {
         heading: '1. News trading allowed in evaluation, but profits deducted after funding',
         paragraphs: [
@@ -214,6 +516,10 @@ export const guideArticles: Record<string, GuideArticle> = {
       },
     ],
     sources: [
+      {"label":"Apex User Agreement","url":"https://dashboard.apextraderfunding.com/agreement/user-agreement"},
+      {"label":"Maven terms","url":"https://maventrading.com/terms-and-conditions"},
+      {"label":"The5ers High Stakes","url":"https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"},
+      {"label":"FundedNext Futures perpetual consistency","url":"https://helpfutures.fundednext.com/en/articles/17430319-what-is-the-perpetual-consistency-rule-and-how-does-it-work"},
       { label: 'E8 Markets: news trading by E8 Pro, Classic and One', url: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
       { label: 'FundingPips: news trading and weekend holding', url: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
       { label: 'GOAT Funded Trader: VPN/VPS and hosted trading policy (12 Oct 2026)', url: 'https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading' },
@@ -321,16 +627,17 @@ export const guideArticles: Record<string, GuideArticle> = {
   },
 
   'prop-firm-sans-consistency-rule': {
-    updated: '2026-11-12',
+    updated: '2026-11-25',
     intro:
       'A consistency rule limits **how much of your total profit can come from a single day**. It exists because one lucky day, one oversized position or one news spike can produce a payout that says nothing about whether you can trade the account over time. Understanding the exact formula matters more than finding a firm that claims to have none.',
     keyPoints: [
       'The formula: **best day ÷ total profit × 100**, compared with the firm\'s limit (often 40 to 55%).',
-      'Above the limit you **lose nothing**: you keep trading until total profit is high enough.',
+      'For an eligibility-only rule, exceeding the limit delays qualification; other contractual penalties may differ.',
       '**Where** it applies matters: in the evaluation it delays a pass, on payouts it can block a withdrawal.',
       'No consistency rule does **not** mean easier: risk is controlled another way.',
     ],
     sections: [
+      {"heading":"A 15% rule is not equivalent to a 50% rule","paragraphs":["For a best day of $1,000 and a standard eligibility formula, total profit must reach $2,000 at 50%, $2,500 at 40%, $5,000 at 20% and about $6,667 at 15%. These figures are mathematical illustrations, not guarantees of payment. Trading further exposes the account to losses.","PropRadar treats transparent limits of 40% or higher as potentially reasonable eligibility rules, without assuming a universal sanction or changing published scores. A lower threshold, a historical high-water numerator, or a profit-deletion clause deserves separate attention."],"compare":{"columns":["Threshold and basis","Stage / consequence"],"rows":[{"label":"FTMO CFD 2-Step","values":["No percentage consistency rule","Minimum trading days still apply"],"sourceUrl":"https://ftmo.com/en/trading-objectives/"},{"label":"FTMO CFD 1-Step / Instant","values":["50% / 30%, respectively","Eligibility; new 1-Step orders from Oct 12 use net profit"],"sourceUrl":"https://ftmo.com/en/trading-objectives/"},{"label":"The5ers Futures","values":["40% per trade in dedicated FAQ","Eligibility; confirm checkout wording (catalogue also uses different labels)"],"sourceUrl":"https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"},{"label":"FundedNext Futures Direct","values":["20%; highest day ever vs current cycle","Not reset by a payout"],"sourceUrl":"https://helpfutures.fundednext.com/en/articles/17430319-what-is-the-perpetual-consistency-rule-and-how-does-it-work"},{"label":"FundingPips Zero","values":["15% or below","Reward eligibility; separate hard-breach rules"],"sourceUrl":"https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"}],"note":"Examples checked 25 November 2026; exact plan and cohort govern."}},
       {
         heading: 'How the rule is calculated',
         visual: 'consistency-example',
@@ -345,7 +652,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'Where the rule applies: evaluation, payout or both',
         visual: 'rule-stages',
         paragraphs: [
-          'The same percentage can mean very different things. A consistency rule in the evaluation **only delays your pass**. A consistency rule on payouts **can block a withdrawal** after you have already made money on a funded account. Some firms also use different limits per stage: Topstep uses **55% in the Combine** and **40% on the Consistency payout path** of its Express Funded Account.',
+          'The same percentage can mean very different things. A consistency rule in an eligibility-only evaluation **delays your pass**. A consistency rule on payouts **can block a withdrawal** after you have already made money on a funded account. Some firms also use different limits per stage: Topstep uses **55% in the Combine** and **40% on the Consistency payout path** of its Express Funded Account.',
           'FTMO changed its rule on **October 12, 2026**: new 1-Step Challenge orders use a Consistency rule that compares your best day with your total profit, **losing days included**, while accounts from older orders keep the previous Best Day Rule, which only counted positive days. FTMO says that if you do not meet the requirement, you simply keep trading until you do (FTMO trading update, October 8, 2026). PropRadar has not captured a percentage best-day rule on The5ers High Stakes program.',
         ],
         callout: { kind: 'warning', text: 'Always confirm **the stage, the product and your order date**: the same firm can run two versions of the rule.' },
@@ -380,6 +687,9 @@ export const guideArticles: Record<string, GuideArticle> = {
       },
     ],
     sources: [
+      {"label":"The5ers Futures consistency","url":"https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"},
+      {"label":"FundedNext Futures Direct","url":"https://helpfutures.fundednext.com/en/articles/17430319-what-is-the-perpetual-consistency-rule-and-how-does-it-work"},
+      {"label":"FundingPips Zero","url":"https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"},
       { label: 'Topstep help center: consistency at Topstep', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
       { label: 'FTMO trading objectives', url: 'https://ftmo.com/en/trading-objectives/' },
       { label: 'FTMO trading update, October 8, 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
