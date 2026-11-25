@@ -438,75 +438,6 @@
    "founded": 2022
   },
   {
-   "slug": "topstep",
-   "name": "Topstep",
-   "current": 81,
-   "proposed": 73,
-   "raw": 73,
-   "flag": "",
-   "delta": -8,
-   "ceiling": 95,
-   "ceilingWhy": "14 ans + preuve",
-   "penalties": "B2 −8 · B3 −5 · D:payout-cap −4 · D:funded-trailing-drawdown −2 · Trustpilot < 4,0 −3",
-   "confidence": "contrat lu en entier",
-   "evidence": {
-    "B2": {
-     "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
-     "url": "https://www.topstep.com/terms-of-use",
-     "heading": "§27"
-    },
-    "B3": {
-     "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
-     "url": "https://www.topstep.com/terms-of-use",
-     "heading": "§9; §27; introduction"
-    }
-   },
-   "items": [
-    {
-     "code": "B2",
-     "points": 8,
-     "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
-     "source": "https://www.topstep.com/terms-of-use",
-     "locator": "§27"
-    },
-    {
-     "code": "B3",
-     "points": 5,
-     "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
-     "source": "https://www.topstep.com/terms-of-use",
-     "locator": "§9; §27; introduction"
-    },
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "Express Funded Account — payout size: Each Express Funded Account payout is limited to \"50% of your account balance up to the cap\", with caps from $2,000 to $6,000 depending on account size and payout path. \"Minimum Payout: $125.\" Live Funded Account payouts are not capped.",
-     "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
-     "locator": "main programme scored: combine"
-    },
-    {
-     "code": "D_FUNDED_TRAILING_DRAWDOWN",
-     "points": 2,
-     "text": "Topstep Express Funded Account — payout: Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
-     "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
-     "locator": "main programme scored: combine"
-    },
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.7 / 15052"
-    }
-   ],
-   "age": 14,
-   "ceilingEvidence": [
-    {
-     "kind": "stats"
-    }
-   ],
-   "founded": 2012
-  },
-  {
    "slug": "e8-markets",
    "name": "E8 Markets",
    "current": 72,
@@ -562,50 +493,6 @@
    "age": 5,
    "ceilingEvidence": [],
    "founded": 2021
-  },
-  {
-   "slug": "fintokei",
-   "name": "Fintokei",
-   "current": 78,
-   "proposed": 72,
-   "raw": 72,
-   "flag": "",
-   "delta": -6,
-   "ceiling": 75,
-   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "All Fintokei programmes — pre-payout review: General Terms V17 art. V.5: \"before processing any Performance reward payout, the Company may review your trading activity\", with automated detection of prohibited trading (art. V.4); penalties are retracted only if the customer \"can demonstrate otherwise beyond a reasonable doubt\". The help article \"When will I receive my payout?\" says requests are \"automatically approved within seconds\" and contrasts this with manual reviews at other firms.",
-     "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
-     "locator": "main programme scored: swift"
-    }
-   ],
-   "age": 4,
-   "ceilingEvidence": [],
-   "founded": 2022
-  },
-  {
-   "slug": "oneup-trader",
-   "name": "OneUp Trader",
-   "current": 72,
-   "proposed": 72,
-   "raw": 75,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "9 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [],
-   "age": 9,
-   "ceilingEvidence": [],
-   "founded": 2017
   },
   {
    "slug": "myfundedfutures",
@@ -911,75 +798,36 @@
    "founded": 2023
   },
   {
-   "slug": "trade-the-pool",
-   "name": "Trade The Pool",
-   "current": 70,
+   "slug": "oneup-trader",
+   "name": "OneUp Trader",
+   "current": 72,
    "proposed": 70,
    "raw": 70,
    "flag": "",
-   "delta": 0,
+   "delta": -2,
    "ceiling": 75,
-   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "B6 −5",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "B6": {
-     "text": "Defamatory, disparaging or harmful statements on review sites are listed among the grounds of termination for cause.",
-     "url": "https://tradethepool.com/terms-and-conditions/",
-     "heading": ""
-    }
-   },
-   "items": [
-    {
-     "code": "B6",
-     "points": 5,
-     "text": "Defamatory, disparaging or harmful statements on review sites are listed among the grounds of termination for cause.",
-     "source": "https://tradethepool.com/terms-and-conditions/",
-     "locator": ""
-    }
-   ],
-   "age": 4,
-   "ceilingEvidence": [],
-   "founded": 2022
-  },
-  {
-   "slug": "uprofit-trader",
-   "name": "UProfit Trader",
-   "current": 69,
-   "proposed": 70,
-   "raw": 70,
-   "flag": "",
-   "delta": 1,
-   "ceiling": 75,
-   "ceilingWhy": "7 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3 · E_HARSH −2",
+   "ceilingWhy": "9 ans, pas de preuve à grande échelle",
+   "penalties": "B7 −5",
    "confidence": "contrat lu en entier",
    "evidence": {
-    "E_HARSH": {
-     "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
-     "url": "https://uprofit.com/terms-and-conditions",
-     "heading": "Prohibited practices; cancellation policy"
+    "B7": {
+     "text": "Funded accounts are run under the rules of OneUp’s funding partners (‘strictly prohibited by our funding partners’; account holds must be requested from the funding partner); the funding partner agreement is not published.",
+     "url": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+     "heading": "Funded Trader Rules (PDF saved by Geyer, 25 Nov 2026)"
     }
    },
    "items": [
     {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.4 / 6554"
-    },
-    {
-     "code": "E_HARSH",
-     "points": 2,
-     "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
-     "source": "https://uprofit.com/terms-and-conditions",
-     "locator": "Prohibited practices; cancellation policy"
+     "code": "B7",
+     "points": 5,
+     "text": "Funded accounts are run under the rules of OneUp’s funding partners (‘strictly prohibited by our funding partners’; account holds must be requested from the funding partner); the funding partner agreement is not published.",
+     "source": "https://help.oneuptrader.com/article/372-funded-trader-rules",
+     "locator": "Funded Trader Rules (PDF saved by Geyer, 25 Nov 2026)"
     }
    ],
-   "age": 7,
+   "age": 9,
    "ceilingEvidence": [],
-   "founded": 2019
+   "founded": 2017
   },
   {
    "slug": "breakout-prop",
@@ -1003,6 +851,38 @@
     }
    ],
    "founded": 2023
+  },
+  {
+   "slug": "orion-funded",
+   "name": "Orion Funded",
+   "current": 53,
+   "proposed": 70,
+   "raw": 70,
+   "flag": "",
+   "delta": 17,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B6 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B6": {
+     "text": "Acting in a manner that may damage the firm’s reputation, including after termination, leads to termination of the agreements; breaches of the trading clauses lead to disqualification and forfeiture of pending rewards.",
+     "url": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+     "heading": "§14.1"
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Acting in a manner that may damage the firm’s reputation, including after termination, leads to termination of the agreements; breaches of the trading clauses lead to disqualification and forfeiture of pending rewards.",
+     "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
+     "locator": "§14.1"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
   },
   {
    "slug": "fxify",
@@ -1066,42 +946,16 @@
    "founded": 2023
   },
   {
-   "slug": "audacity-capital",
-   "name": "Audacity Capital",
-   "current": 77,
-   "proposed": 69,
-   "raw": 69,
-   "flag": "",
-   "delta": -8,
-   "ceiling": 75,
-   "ceilingWhy": "14 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 14,
-   "ceilingEvidence": [],
-   "founded": 2012
-  },
-  {
    "slug": "ftuk",
    "name": "FTUK",
    "current": 69,
    "proposed": 69,
-   "raw": 70,
+   "raw": 62,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "5 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3 · D:split-reduction −2",
+   "penalties": "D:payout-conditions −3 · D:split-reduction −2 · Trustpilot 3.9 −8",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
    "items": [
@@ -1118,6 +972,13 @@
      "text": "All FTUK programmes — Terms of Service section 1: Section 1 (Trader Representations): if FTUK identifies trading practices contrary to its trading rules, \"we will retain the right to reduce pay-outs ranging from 0% to 50%.\" The terms do not say which practices lead to which reduction.",
      "source": "https://ftuk.com/terms-of-service",
      "locator": "main programme scored: flex"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 811"
     }
    ],
    "age": 5,
@@ -1151,6 +1012,108 @@
    "founded": 2023
   },
   {
+   "slug": "equity-edge",
+   "name": "Equity Edge",
+   "current": 53,
+   "proposed": 69,
+   "raw": 69,
+   "flag": "",
+   "delta": 16,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "D:payout-conditions −3 · Trustpilot 4.2 −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {},
+   "items": [
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All funded accounts (14-day payouts): Payouts can be requested \"every fourteenth calendar day following the initiation of the first trade on the funded account\"; \"If you miss the 14th calendar day, you will need to wait another 14 calendar days\". Requests must be submitted before 17:00 UK time. On-demand payouts only at VIP Spot.",
+     "source": "https://equityedge.io/funded-traders/payout-process",
+     "locator": "main programme scored: 2step"
+    },
+    {
+     "code": "TPR",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "4.2 / 2704"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "topstep",
+   "name": "Topstep",
+   "current": 81,
+   "proposed": 68,
+   "raw": 68,
+   "flag": "",
+   "delta": -13,
+   "ceiling": 95,
+   "ceilingWhy": "14 ans + preuve",
+   "penalties": "B2 −8 · B3 −5 · D:payout-cap −4 · D:funded-trailing-drawdown −2 · Trustpilot 3.7 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
+     "url": "https://www.topstep.com/terms-of-use",
+     "heading": "§27"
+    },
+    "B3": {
+     "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
+     "url": "https://www.topstep.com/terms-of-use",
+     "heading": "§9; §27; introduction"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited conduct includes conduct that 'in the sole discretion of Topstep, represents uncommercial activity, is intended to game the market, is not a viable trading strategy, or is not responsible trading'; consequence can be forfeiture of withdrawals from every other account.",
+     "source": "https://www.topstep.com/terms-of-use",
+     "locator": "§27"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Trading Rules 'remain subject to change at any time and from time to time, with or without notice'; terms changes effective upon notice in a form at Topstep's discretion.",
+     "source": "https://www.topstep.com/terms-of-use",
+     "locator": "§9; §27; introduction"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Express Funded Account — payout size: Each Express Funded Account payout is limited to \"50% of your account balance up to the cap\", with caps from $2,000 to $6,000 depending on account size and payout path. \"Minimum Payout: $125.\" Live Funded Account payouts are not capped.",
+     "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy",
+     "locator": "main programme scored: combine"
+    },
+    {
+     "code": "D_FUNDED_TRAILING_DRAWDOWN",
+     "points": 2,
+     "text": "Topstep Express Funded Account — payout: Despite a nominal $50K–$150K buying-power label, the XFA starts at $0. MLL rises from a negative floor, locks at $0 and is set to $0 after first payout; on the optional Consistency payout path, best day ≤40% and at least 3 trading days.",
+     "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep",
+     "locator": "main programme scored: combine"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.7 / 15052"
+    }
+   ],
+   "age": 14,
+   "ceilingEvidence": [
+    {
+     "kind": "stats"
+    }
+   ],
+   "founded": 2012
+  },
+  {
    "slug": "funded-trading-plus",
    "name": "Funded Trading Plus",
    "current": 68,
@@ -1174,88 +1137,6 @@
    ],
    "age": 5,
    "ceilingEvidence": [],
-   "founded": 2021
-  },
-  {
-   "slug": "elite-trader-funding",
-   "name": "Elite Trader Funding",
-   "current": 66,
-   "proposed": 68,
-   "raw": 68,
-   "flag": "",
-   "delta": 2,
-   "ceiling": 95,
-   "ceilingWhy": "5 ans + preuve",
-   "penalties": "B2 −8 · B3 −5 · B6 −5 · D:payout-cap −4 · D:split-reduction −2 · Trustpilot < 4,0 −3",
-   "confidence": "contrat lu en entier",
-   "evidence": {
-    "B2": {
-     "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
-     "url": "https://elitetraderfunding.app/terms-of-service",
-     "heading": "Reward eligibility; violations"
-    },
-    "B6": {
-     "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
-     "url": "https://elitetraderfunding.app/terms-of-service",
-     "heading": "Prohibited conduct (ad)"
-    },
-    "B3": {
-     "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
-     "url": "https://elitetraderfunding.app/terms-of-service",
-     "heading": "LIVE ELITE program"
-    }
-   },
-   "items": [
-    {
-     "code": "B2",
-     "points": 8,
-     "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
-     "source": "https://elitetraderfunding.app/terms-of-service",
-     "locator": "Reward eligibility; violations"
-    },
-    {
-     "code": "B3",
-     "points": 5,
-     "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
-     "source": "https://elitetraderfunding.app/terms-of-service",
-     "locator": "LIVE ELITE program"
-    },
-    {
-     "code": "B6",
-     "points": 5,
-     "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
-     "source": "https://elitetraderfunding.app/terms-of-service",
-     "locator": "Prohibited conduct (ad)"
-    },
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "All plans — Elite sim-funded stage: Each payout cycle has a $100 minimum and a maximum that scales with account size and completed cycles (example on a $50K account: $1,250 in the first cycle, rising toward $2,000). Sim payouts are capped at \"$25,000 total per trader\" across all accounts, with a $150,000 lifetime sim cap across re-entries.",
-     "source": "https://elitetraderfunding.app/payouts",
-     "locator": "main programme scored: 1step"
-    },
-    {
-     "code": "D_SPLIT_REDUCTION",
-     "points": 2,
-     "text": "All plans — Elite sim-funded stage: Reaching $25,000 in cumulative sim payouts moves the trader to LIVE ELITE, where the split is \"80% to you, 20% to ETF\" (sim-funded split: up to 100%). The terms add that ETF may convert a trader to LIVE ELITE \"at any time\" at its sole discretion, and a trader who declines is prohibited from using ETF's services for two calendar years.",
-     "source": "https://elitetraderfunding.app/elite",
-     "locator": "main programme scored: 1step"
-    },
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.8 / 1174"
-    }
-   ],
-   "age": 5,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 10015655
-    }
-   ],
    "founded": 2021
   },
   {
@@ -1292,48 +1173,22 @@
    "founded": 2023
   },
   {
-   "slug": "lark-funding",
-   "name": "Lark Funding",
-   "current": 67,
-   "proposed": 67,
-   "raw": 71,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-cap −4",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "All Lark accounts — $10,000 daily / per-trade gain limit: The prohibited-strategies article states: \"The daily and/or per-trade gain limit is set to $10,000.\" On challenge accounts \"A single violation requires a restart from Phase 1.\" On simulated funded accounts \"Trades exceeding the $10,000 limit will be excluded from account\", and three violations breach the account with no payout. The homepage says the opposite: \"Once funded, there is no cap on simulated gains\".",
-     "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies",
-     "locator": "main programme scored: 1step"
-    }
-   ],
-   "age": 4,
-   "ceilingEvidence": [],
-   "founded": 2022
-  },
-  {
    "slug": "tickticktrader",
    "name": "TickTickTrader",
    "current": 67,
    "proposed": 67,
-   "raw": 72,
+   "raw": 60,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
+   "penalties": "Trustpilot 3.4 −15",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
    "items": [
     {
-     "code": "TPMID",
-     "points": 3,
+     "code": "TPR",
+     "points": 15,
      "text": "",
      "source": "",
      "locator": "3.4 / 6636"
@@ -1342,32 +1197,6 @@
    "age": 4,
    "ceilingEvidence": [],
    "founded": 2022
-  },
-  {
-   "slug": "leeloo-trading",
-   "name": "Leeloo Trading",
-   "current": 67,
-   "proposed": 67,
-   "raw": 71,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-cap −4",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "Performance Account — lifetime payout ceiling: The homepage product card for the Performance Account says \"Earn back what you invest, plus 5%. Lifetime ceiling. Predictable.\" and \"Earn back up to your paid-in, plus 5%.\" Terms section 8 adds that \"Leeloo is not obligated to pay the Trader more than the maximum payout amount\".",
-     "source": "https://www.leelootrading.com/",
-     "locator": "main programme scored: performance"
-    }
-   ],
-   "age": 6,
-   "ceilingEvidence": [],
-   "founded": 2020
   },
   {
    "slug": "bulenox",
@@ -1400,6 +1229,71 @@
    "age": 6,
    "ceilingEvidence": [],
    "founded": 2020
+  },
+  {
+   "slug": "rebelsfunding",
+   "name": "RebelsFunding",
+   "current": 59,
+   "proposed": 67,
+   "raw": 67,
+   "flag": "",
+   "delta": 8,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "The Provider may refuse a further phase, onboarding, payment method or cooperation, particularly for legal, sanctions, KYC/AML, security, antifraud, payment, reputational, commercial, operational, technical, product or risk-management reasons, and is not required to disclose its internal reasons, methodology or results.",
+     "url": "https://www.rebelsfunding.com/terms-and-conditions/",
+     "heading": "Terms §2 / review clause"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "The Provider may refuse a further phase, onboarding, payment method or cooperation, particularly for legal, sanctions, KYC/AML, security, antifraud, payment, reputational, commercial, operational, technical, product or risk-management reasons, and is not required to disclose its internal reasons, methodology or results.",
+     "source": "https://www.rebelsfunding.com/terms-and-conditions/",
+     "locator": "Terms §2 / review clause"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "sabiotrade",
+   "name": "SabioTrade",
+   "current": 52,
+   "proposed": 67,
+   "raw": 67,
+   "flag": "",
+   "delta": 15,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "D:funded-trailing-drawdown −2 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {},
+   "items": [
+    {
+     "code": "D_FUNDED_TRAILING_DRAWDOWN",
+     "points": 2,
+     "text": "All plans — reward stage: The maximum drawdown trails the highest closed balance (\"Equity ≤ Highest Closed Balance - (Initial Balance × 6%)\" in the terms); the homepage states that \"after your first Performance Reward is processed, your Maximum Trailing Drawdown no longer trails upward\".",
+     "source": "https://sabiotrade.us/",
+     "locator": "main programme scored: classic"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
   },
   {
    "slug": "ment-funding",
@@ -1441,6 +1335,64 @@
    "founded": 2021
   },
   {
+   "slug": "blusky-trading",
+   "name": "BluSky Trading",
+   "current": 53,
+   "proposed": 67,
+   "raw": 67,
+   "flag": "",
+   "delta": 14,
+   "ceiling": 85,
+   "ceilingWhy": "4 ans + preuve",
+   "penalties": "B2 −8 · D:payout-cap −4 · D:payout-conditions −3 · D:account-ends-after-payouts −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Prohibited trading patterns include any activity deemed by BluSky Trading Company (in its sole discretion) as non-commercial, designed to game the system, lacking a viable trading strategy, or demonstrating a lack of responsible trading; BluSky may terminate an account for any reason in its discretion and has the sole right to decide whether a user is in violation.",
+     "url": "https://help.blusky.pro/en/articles/12069208-ethical-trading-conduct",
+     "heading": "Ethical trading conduct; Terms (blusky.pro/terms)"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited trading patterns include any activity deemed by BluSky Trading Company (in its sole discretion) as non-commercial, designed to game the system, lacking a viable trading strategy, or demonstrating a lack of responsible trading; BluSky may terminate an account for any reason in its discretion and has the sole right to decide whether a user is in violation.",
+     "source": "https://help.blusky.pro/en/articles/12069208-ethical-trading-conduct",
+     "locator": "Ethical trading conduct; Terms (blusky.pro/terms)"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All Sim Funded accounts: 'Sim Funded payout caps operate on a rolling 7-day basis': 25K $1,500, 50K $2,500, 100K $3,000, 150K Static $1,500, 200K Static $2,500, 300K Static $3,000 (Orbit and Launch articles list their own 7-day caps; Direct to Funded has a $3,000 weekly cap).",
+     "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+     "locator": "main programme scored: launch"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All Sim Funded accounts: Between payouts 'you must generate at least $500 in new profit through normal trading activity'; 'flipping contracts or placing trades solely to qualify for another payout does not count'. After a request the trader must 'stop trading until the requested funds have been removed'.",
+     "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+     "locator": "main programme scored: launch"
+    },
+    {
+     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+     "points": 3,
+     "text": "All Sim Funded accounts: 'Before exceeding $10,000 in total profit per account, you must open a Support Review Ticket' (payouts count toward the total); 'Trading during an active review may result in automatic account loss'; reviews can occur earlier and may end with the account closed or kept on Sim Funded; the $10,000 level 'is not a guaranteed number'.",
+     "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
+     "locator": "main programme scored: launch"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 12898022
+    }
+   ],
+   "founded": 2022
+  },
+  {
    "slug": "tradefundrr",
    "name": "TradeFundrr",
    "current": 67,
@@ -1459,30 +1411,81 @@
    "founded": 2021
   },
   {
-   "slug": "atlas-funded",
-   "name": "Atlas Funded",
-   "current": 66,
-   "proposed": 66,
-   "raw": 62,
+   "slug": "trade-the-pool",
+   "name": "Trade The Pool",
+   "current": 70,
+   "proposed": 65,
+   "raw": 65,
    "flag": "",
-   "delta": 0,
-   "ceiling": 65,
-   "ceilingWhy": "1-2 ans",
-   "penalties": "Trustpilot < 4,0 −3",
-   "confidence": "extraction sans clause retenue",
+   "delta": -5,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B6 −5 · B7 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B6": {
+     "text": "Defamatory, disparaging or harmful statements on review sites or social media are listed among the grounds of termination for cause.",
+     "url": "https://tradethepool.com/terms-and-conditions/",
+     "heading": "Termination for Cause"
+    },
+    "B7": {
+     "text": "Once a user becomes a Professional User, the relationship is governed by additional terms which the user will be required to accept in addition to these Terms; they are not published with the terms.",
+     "url": "https://tradethepool.com/terms-and-conditions/",
+     "heading": "Professional User / additional terms"
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Defamatory, disparaging or harmful statements on review sites or social media are listed among the grounds of termination for cause.",
+     "source": "https://tradethepool.com/terms-and-conditions/",
+     "locator": "Termination for Cause"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Once a user becomes a Professional User, the relationship is governed by additional terms which the user will be required to accept in addition to these Terms; they are not published with the terms.",
+     "source": "https://tradethepool.com/terms-and-conditions/",
+     "locator": "Professional User / additional terms"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "top-one-trader",
+   "name": "Top One Trader",
+   "current": 60,
+   "proposed": 65,
+   "raw": 65,
+   "flag": "",
+   "delta": 5,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "D:payout-cap −4 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
    "evidence": {},
    "items": [
     {
-     "code": "TPMID",
-     "points": 3,
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "2-Step PRO (V2) — funded stage: 'Each payout request is limited to 6% of the account size', with a $15,000 maximum per request; a request needs at least 3% profit and 'at least 3 profitable trading days' (each at least 0.5% of the starting balance).",
+     "source": "https://help.toponetrader.com/en/articles/15164961-2-step-pro-v2-when-can-i-request-a-payout",
+     "locator": "main programme scored: 2steppro"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
      "text": "",
      "source": "",
-     "locator": "3.9 / 2015"
+     "locator": ""
     }
    ],
-   "age": 1,
+   "age": 3,
    "ceilingEvidence": [],
-   "founded": 2025
+   "founded": 2023
   },
   {
    "slug": "brightfunded",
@@ -1529,109 +1532,31 @@
    "founded": 2023
   },
   {
-   "slug": "hantec-trader",
-   "name": "RZR Funded",
-   "current": 68,
+   "slug": "audacity-capital",
+   "name": "Audacity Capital",
+   "current": 77,
    "proposed": 64,
    "raw": 64,
    "flag": "",
-   "delta": -4,
+   "delta": -13,
    "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "B2 −8 · D:payout-conditions −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "B2": {
-     "text": "Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
-     "url": "https://rzrfunded.com/terms-conditions/",
-     "heading": ""
-    }
-   },
-   "items": [
-    {
-     "code": "B2",
-     "points": 8,
-     "text": "Payout not due if trading is judged \"inconsistent with the intended commercial purpose of the Programme\" (acting reasonably and in good faith). Terms hosted on rzrfunded.com.",
-     "source": "https://rzrfunded.com/terms-conditions/",
-     "locator": ""
-    },
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "RZR Funded — standard funded accounts: The first payout is generally eligible after 14 days from the first trade; certain products offer seven days or an Instant24 variant. All positions must be closed before requesting.",
-     "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
-     "locator": "main programme scored: challenge"
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [],
-   "founded": 2023
-  },
-  {
-   "slug": "the-trading-pit",
-   "name": "The Trading Pit",
-   "current": 67,
-   "proposed": 64,
-   "raw": 64,
-   "flag": "",
-   "delta": -3,
-   "ceiling": 75,
-   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "B6 −5 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "B6": {
-     "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
-     "url": "https://www.thetradingpit.com/general-terms-and-conditions",
-     "heading": ""
-    }
-   },
-   "items": [
-    {
-     "code": "B6",
-     "points": 5,
-     "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
-     "source": "https://www.thetradingpit.com/general-terms-and-conditions",
-     "locator": ""
-    },
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 4,
-   "ceilingEvidence": [],
-   "founded": 2022
-  },
-  {
-   "slug": "finotive-funding",
-   "name": "Finotive Funding",
-   "current": 69,
-   "proposed": 64,
-   "raw": 64,
-   "flag": "",
-   "delta": -5,
-   "ceiling": 75,
-   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "ceilingWhy": "14 ans, pas de preuve à grande échelle",
    "penalties": "B3 −5 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
+   "confidence": "contrat lu en entier",
    "evidence": {
     "B3": {
-     "text": "Compliance, risk, prohibited-strategy and platform updates may apply immediately to existing accounts.",
-     "url": "https://finotivefunding.com/terms-and-conditions",
-     "heading": ""
+     "text": "Material changes affecting existing accounts, including changes to trading rules, applicable fees, or payout terms, take effect after at least seven calendar days’ notice by email or through the User Area.",
+     "url": "https://www.audacity.capital/terms-and-conditions/",
+     "heading": "Terms, changes clause"
     }
    },
    "items": [
     {
      "code": "B3",
      "points": 5,
-     "text": "Compliance, risk, prohibited-strategy and platform updates may apply immediately to existing accounts.",
-     "source": "https://finotivefunding.com/terms-and-conditions",
-     "locator": ""
+     "text": "Material changes affecting existing accounts, including changes to trading rules, applicable fees, or payout terms, take effect after at least seven calendar days’ notice by email or through the User Area.",
+     "source": "https://www.audacity.capital/terms-and-conditions/",
+     "locator": "Terms, changes clause"
     },
     {
      "code": "TPW",
@@ -1641,48 +1566,48 @@
      "locator": ""
     }
    ],
-   "age": 5,
+   "age": 14,
    "ceilingEvidence": [],
-   "founded": 2021
+   "founded": 2012
   },
   {
-   "slug": "for-traders",
-   "name": "For Traders",
-   "current": 70,
+   "slug": "wsfunded",
+   "name": "WSFunded",
+   "current": 52,
    "proposed": 64,
    "raw": 64,
    "flag": "",
-   "delta": -6,
+   "delta": 12,
    "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "B7 −5 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · D:payout-conditions −3",
+   "confidence": "contrat lu en entier",
    "evidence": {
-    "B7": {
-     "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
-     "url": "https://www.fortraders.com/terms-and-conditions",
-     "heading": ""
+    "B2": {
+     "text": "The Company reserves the right to cancel or suspend any Trader’s participation in the programme for any reason it deems appropriate, at its sole and absolute discretion.",
+     "url": "https://wsfunded.com/en/terms-conditions",
+     "heading": "Terms and conditions of sale"
     }
    },
    "items": [
     {
-     "code": "B7",
-     "points": 5,
-     "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
-     "source": "https://www.fortraders.com/terms-and-conditions",
-     "locator": ""
+     "code": "B2",
+     "points": 8,
+     "text": "The Company reserves the right to cancel or suspend any Trader’s participation in the programme for any reason it deems appropriate, at its sole and absolute discretion.",
+     "source": "https://wsfunded.com/en/terms-conditions",
+     "locator": "Terms and conditions of sale"
     },
     {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All programmes (Terms & Conditions): Terms 8.4 warning ladder: first warning 'Reduction of leverage for 20 working days and delay of payouts on all accounts'; second warning a further leverage reduction for 60 working days and 'a further delay in payouts'; third warning 'Permanent removal from the platform'.",
+     "source": "https://wsfunded.com/en/terms-conditions",
+     "locator": "main programme scored: 2phase"
     }
    ],
-   "age": 3,
+   "age": 2,
    "ceilingEvidence": [],
-   "founded": 2023
+   "founded": 2024
   },
   {
    "slug": "hash-hedge",
@@ -1835,6 +1760,183 @@
    "founded": 2023
   },
   {
+   "slug": "lark-funding",
+   "name": "Lark Funding",
+   "current": 67,
+   "proposed": 63,
+   "raw": 63,
+   "flag": "",
+   "delta": -4,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · D:payout-cap −4",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "The Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion; several prohibited practices apply as determined by the Company in its sole and absolute discretion.",
+     "url": "https://larkfunding.com/terms-of-use",
+     "heading": "§4.6; §4 Prohibited Uses"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "The Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion; several prohibited practices apply as determined by the Company in its sole and absolute discretion.",
+     "source": "https://larkfunding.com/terms-of-use",
+     "locator": "§4.6; §4 Prohibited Uses"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All Lark accounts — $10,000 daily / per-trade gain limit: The prohibited-strategies article states: \"The daily and/or per-trade gain limit is set to $10,000.\" On challenge accounts \"A single violation requires a restart from Phase 1.\" On simulated funded accounts \"Trades exceeding the $10,000 limit will be excluded from account\", and three violations breach the account with no payout. The homepage says the opposite: \"Once funded, there is no cap on simulated gains\".",
+     "source": "https://helpdesk.larkfunding.com/en/articles/8243502-prohibited-trading-strategies",
+     "locator": "main programme scored: 1step"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "elite-trader-funding",
+   "name": "Elite Trader Funding",
+   "current": 66,
+   "proposed": 63,
+   "raw": 63,
+   "flag": "",
+   "delta": -3,
+   "ceiling": 95,
+   "ceilingWhy": "5 ans + preuve",
+   "penalties": "B2 −8 · B3 −5 · B6 −5 · D:payout-cap −4 · D:split-reduction −2 · Trustpilot 3.8 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
+     "url": "https://elitetraderfunding.app/terms-of-service",
+     "heading": "Reward eligibility; violations"
+    },
+    "B6": {
+     "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
+     "url": "https://elitetraderfunding.app/terms-of-service",
+     "heading": "Prohibited conduct (ad)"
+    },
+    "B3": {
+     "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
+     "url": "https://elitetraderfunding.app/terms-of-service",
+     "heading": "LIVE ELITE program"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Reward eligibility; violations"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "LIVE ELITE program"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
+     "source": "https://elitetraderfunding.app/terms-of-service",
+     "locator": "Prohibited conduct (ad)"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All plans — Elite sim-funded stage: Each payout cycle has a $100 minimum and a maximum that scales with account size and completed cycles (example on a $50K account: $1,250 in the first cycle, rising toward $2,000). Sim payouts are capped at \"$25,000 total per trader\" across all accounts, with a $150,000 lifetime sim cap across re-entries.",
+     "source": "https://elitetraderfunding.app/payouts",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "D_SPLIT_REDUCTION",
+     "points": 2,
+     "text": "All plans — Elite sim-funded stage: Reaching $25,000 in cumulative sim payouts moves the trader to LIVE ELITE, where the split is \"80% to you, 20% to ETF\" (sim-funded split: up to 100%). The terms add that ETF may convert a trader to LIVE ELITE \"at any time\" at its sole discretion, and a trader who declines is prohibited from using ETF's services for two calendar years.",
+     "source": "https://elitetraderfunding.app/elite",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.8 / 1174"
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 10015655
+    }
+   ],
+   "founded": 2021
+  },
+  {
+   "slug": "top-one-futures",
+   "name": "Top One Futures",
+   "current": 51,
+   "proposed": 63,
+   "raw": 63,
+   "flag": "",
+   "delta": 12,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans",
+   "penalties": "B6 −5 · D:payout-cap −4 · D:account-ends-after-payouts −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B6": {
+     "text": "Disparaging, false, or misleading statements about Top One Futures are strictly prohibited, including on review platforms, social media, or forums. Violations may result in immediate account termination and forfeiture of profits.",
+     "url": "https://toponefutures.com/terms-and-conditions/",
+     "heading": "§9 Code of Conduct"
+    }
+   },
+   "items": [
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Disparaging, false, or misleading statements about Top One Futures are strictly prohibited, including on review platforms, social media, or forums. Violations may result in immediate account termination and forfeiture of profits.",
+     "source": "https://toponefutures.com/terms-and-conditions/",
+     "locator": "§9 Code of Conduct"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Elite Evaluation (sim funded stage): Maximum per payout request: $1,500 (25K), $2,500 (50K), $3,000 (100K), $3,500 (150K); profit above the cap stays in the account.",
+     "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
+     "locator": "main programme scored: elite"
+    },
+    {
+     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
+     "points": 3,
+     "text": "All sim funded accounts: After 3 successful payouts from one sim funded account (5 for Elite Daily) a risk manager reviews the account; if selected for live, \"your options are to begin trading live or to close your Sim Funded account\", and any active sim account \"will be closed\". Live accounts start at $0 and sim profits are not carried over in full.",
+     "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
+     "locator": "main programme scored: elite"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [
+    {
+     "kind": "tracker",
+     "amountUSD": 30407332
+    },
+    {
+     "kind": "trustpilot",
+     "rating": 4.8,
+     "count": 5269
+    }
+   ],
+   "founded": 2024
+  },
+  {
    "slug": "miltraders",
    "name": "MilTraders",
    "current": 63,
@@ -1938,57 +2040,6 @@
    "founded": 2022
   },
   {
-   "slug": "hyrotrader",
-   "name": "HyroTrader",
-   "current": 55,
-   "proposed": 62,
-   "raw": 62,
-   "flag": "",
-   "delta": 7,
-   "ceiling": 75,
-   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "B2A −4 · B7 −5 · D:payout-cap −4",
-   "confidence": "contrat lu en entier",
-   "evidence": {
-    "B2A": {
-     "text": "Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
-     "url": "https://www.hyrotrader.com/terms-and-conditions/",
-     "heading": "§10.2(g),(k); §10.3(d),(h); §24.2"
-    },
-    "B7": {
-     "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
-     "url": "https://www.hyrotrader.com/terms-and-conditions/",
-     "heading": "§P.4; Companion Policies"
-    }
-   },
-   "items": [
-    {
-     "code": "B2A",
-     "points": 4,
-     "text": "Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
-     "source": "https://www.hyrotrader.com/terms-and-conditions/",
-     "locator": "§10.2(g),(k); §10.3(d),(h); §24.2"
-    },
-    {
-     "code": "B7",
-     "points": 5,
-     "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
-     "source": "https://www.hyrotrader.com/terms-and-conditions/",
-     "locator": "§P.4; Companion Policies"
-    },
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "Funded accounts — profit above 5% per request: \"The profit counted in one payout request is capped at 5% of your initial balance\", and \"If a trader does not withdraw and exceeds 5% profit, any additional profit will not be paid.\" The FAQ does not limit this to one programme. Terms 11.7 add that payouts are subject to \"the per-payout and cumulative limits published in the payout information on the Platform\".",
-     "source": "https://www.hyrotrader.com/faq/orders-billing-taxes/is-there-a-maximum-withdrawal-amount-in-one-payout/",
-     "locator": "main programme scored: core"
-    }
-   ],
-   "age": 4,
-   "ceilingEvidence": [],
-   "founded": 2022
-  },
-  {
    "slug": "goat-funded-trader",
    "name": "GOAT Funded Trader",
    "current": 59,
@@ -2059,19 +2110,66 @@
    "founded": 2023
   },
   {
+   "slug": "thinkcapital",
+   "name": "ThinkCapital",
+   "current": 60,
+   "proposed": 61,
+   "raw": 61,
+   "flag": "",
+   "delta": 1,
+   "ceiling": 75,
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "The Provider reserves the right to determine, at its own discretion, whether certain trades, practices, strategies, or situations are Forbidden Trading Practices (including position holding time deviating from the average by an unreasonable amount), and may exercise the actions of clauses 5.5 and 5.6 (cancel trades, terminate all contracts) at its own discretion.",
+     "url": "https://www.thinkcapital.com/terms-of-services/",
+     "heading": "§5.5.1; §5.5.4"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "The Provider reserves the right to determine, at its own discretion, whether certain trades, practices, strategies, or situations are Forbidden Trading Practices (including position holding time deviating from the average by an unreasonable amount), and may exercise the actions of clauses 5.5 and 5.6 (cancel trades, terminate all contracts) at its own discretion.",
+     "source": "https://www.thinkcapital.com/terms-of-services/",
+     "locator": "§5.5.1; §5.5.4"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
    "slug": "traders-central",
    "name": "Traders Central",
    "current": 61,
    "proposed": 61,
-   "raw": 75,
+   "raw": 67,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "6 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
+   "penalties": "Trustpilot 3.6 −8",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
-   "items": [],
+   "items": [
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.6 / 973"
+    }
+   ],
    "age": 6,
    "ceilingEvidence": [],
    "founded": 2020
@@ -2103,19 +2201,44 @@
    "founded": 2024
   },
   {
-   "slug": "thinkcapital",
-   "name": "ThinkCapital",
-   "current": 60,
+   "slug": "the-trading-pit",
+   "name": "The Trading Pit",
+   "current": 67,
    "proposed": 60,
-   "raw": 69,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
+   "raw": 60,
+   "flag": "",
+   "delta": -7,
    "ceiling": 75,
-   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B2A −4 · B6 −5 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B6": {
+     "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
+     "url": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "heading": "§14.2.5; §16"
+    },
+    "B2A": {
+     "text": "Responsible-trading measures can lead to adverse measures on accounts; automated or AI-assisted decisions can be reviewed, and a measure not confirmed on review is reversed.",
+     "url": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "heading": "§4.6; §6.5"
+    }
+   },
    "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "Responsible-trading measures can lead to adverse measures on accounts; automated or AI-assisted decisions can be reviewed, and a measure not confirmed on review is reversed.",
+     "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "locator": "§4.6; §6.5"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "14.2.5: breach of the non-disparagement obligation (clause 16) is a ground for termination; clause 16 survives termination.",
+     "source": "https://www.thetradingpit.com/general-terms-and-conditions",
+     "locator": "§14.2.5; §16"
+    },
     {
      "code": "TPW",
      "points": 6,
@@ -2124,9 +2247,9 @@
      "locator": ""
     }
    ],
-   "age": 2,
+   "age": 4,
    "ceilingEvidence": [],
-   "founded": 2024
+   "founded": 2022
   },
   {
    "slug": "rocket21-challenge",
@@ -2145,38 +2268,6 @@
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
-  },
-  {
-   "slug": "myfundedcapital",
-   "name": "MyFundedCapital",
-   "current": 75,
-   "proposed": 60,
-   "raw": 60,
-   "flag": "",
-   "delta": -15,
-   "ceiling": 65,
-   "ceilingWhy": "1-2 ans",
-   "penalties": "B7 −5",
-   "confidence": "contrat lu en entier",
-   "evidence": {
-    "B7": {
-     "text": "Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
-     "url": "https://myfundedcapital.com/terms-and-conditions/",
-     "heading": "Education / Guidelines / Arbitration"
-    }
-   },
-   "items": [
-    {
-     "code": "B7",
-     "points": 5,
-     "text": "Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
-     "source": "https://myfundedcapital.com/terms-and-conditions/",
-     "locator": "Education / Guidelines / Arbitration"
-    }
-   ],
-   "age": 1,
-   "ceilingEvidence": [],
-   "founded": 2025
   },
   {
    "slug": "onefunded",
@@ -2238,22 +2329,203 @@
    "founded": 2021
   },
   {
-   "slug": "rebelsfunding",
-   "name": "RebelsFunding",
-   "current": 59,
+   "slug": "fintokei",
+   "name": "Fintokei",
+   "current": 78,
    "proposed": 59,
-   "raw": 75,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
+   "raw": 59,
+   "flag": "",
+   "delta": -19,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · B3 −5 · D:payout-conditions −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Prohibited practices include 'gambling or unsustainable practices - trading practices that contradict the systematic, consistent and long-term approach' the Company is looking for; in that case 'you are not entitled to any performance reward payouts'. Entry into the virtually funded phase can be refused, and the Company 'is not responsible or liable for you being rejected for any or no reason'.",
+     "url": "https://www.fintokei.com/",
+     "heading": "General Terms and Conditions V17 (Nov 2026, PDF saved by Geyer 25 Nov 2026): prohibited trading xvii and consequences; virtually funded phase §2"
+    },
+    "B3": {
+     "text": "To restrict prohibited trading the Company may apply 'Consistency rules' (cap daily profit or loss, reduce leverage, cap lot exposure, require stop losses, restrict news trading) 'to any or all of your active Fintokei demo accounts'; they 'may remain applicable for indefinite period of time' and 'may apply even on any new Fintokei challenge purchased by you'.",
+     "url": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules",
+     "heading": "General Terms V17, consistency rules (consequences iii); support article"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited practices include 'gambling or unsustainable practices - trading practices that contradict the systematic, consistent and long-term approach' the Company is looking for; in that case 'you are not entitled to any performance reward payouts'. Entry into the virtually funded phase can be refused, and the Company 'is not responsible or liable for you being rejected for any or no reason'.",
+     "source": "https://www.fintokei.com/",
+     "locator": "General Terms and Conditions V17 (Nov 2026, PDF saved by Geyer 25 Nov 2026): prohibited trading xvii and consequences; virtually funded phase §2"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "To restrict prohibited trading the Company may apply 'Consistency rules' (cap daily profit or loss, reduce leverage, cap lot exposure, require stop losses, restrict news trading) 'to any or all of your active Fintokei demo accounts'; they 'may remain applicable for indefinite period of time' and 'may apply even on any new Fintokei challenge purchased by you'.",
+     "source": "https://support.fintokei.com/en/articles/11315971-other-restrictions-that-may-be-part-of-consistency-rules",
+     "locator": "General Terms V17, consistency rules (consequences iii); support article"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All Fintokei programmes — pre-payout review: General Terms V17 art. V.5: \"before processing any Performance reward payout, the Company may review your trading activity\", with automated detection of prohibited trading (art. V.4); penalties are retracted only if the customer \"can demonstrate otherwise beyond a reasonable doubt\". The help article \"When will I receive my payout?\" says requests are \"automatically approved within seconds\" and contrasts this with manual reviews at other firms.",
+     "source": "https://media.fintokei-web.purple-lab.dev/uploads/11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+     "locator": "main programme scored: swift"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
+  },
+  {
+   "slug": "hantec-trader",
+   "name": "RZR Funded",
+   "current": 68,
+   "proposed": 59,
+   "raw": 59,
+   "flag": "",
+   "delta": -9,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [],
+   "penalties": "B2 −8 · B3 −5 · D:payout-conditions −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "If the Company determines, in its sole discretion, at any time (including in respect of past trades, payouts, or account activity), that the Customer has engaged in, attempted to engage in, benefited from, or is suspected of Prohibited Trading, the Company may take proportionate enforcement action without prior notice, explanation, or evidence; payout is also not due if trading is judged inconsistent with the intended commercial purpose of the Programme.",
+     "url": "https://rzrfunded.com/terms-conditions/",
+     "heading": "Prohibited Trading enforcement; Risk Management Group (clause 8)"
+    },
+    "B3": {
+     "text": "Under clause 3.6 the Company may change risk parameters including drawdown parameters and allocated simulated capital, halt instruments, close positions or suspend accounts, whether or not the Customer has engaged in Prohibited Trading.",
+     "url": "https://rzrfunded.com/terms-conditions/",
+     "heading": "§3.6 risk controls"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "If the Company determines, in its sole discretion, at any time (including in respect of past trades, payouts, or account activity), that the Customer has engaged in, attempted to engage in, benefited from, or is suspected of Prohibited Trading, the Company may take proportionate enforcement action without prior notice, explanation, or evidence; payout is also not due if trading is judged inconsistent with the intended commercial purpose of the Programme.",
+     "source": "https://rzrfunded.com/terms-conditions/",
+     "locator": "Prohibited Trading enforcement; Risk Management Group (clause 8)"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Under clause 3.6 the Company may change risk parameters including drawdown parameters and allocated simulated capital, halt instruments, close positions or suspend accounts, whether or not the Customer has engaged in Prohibited Trading.",
+     "source": "https://rzrfunded.com/terms-conditions/",
+     "locator": "§3.6 risk controls"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "RZR Funded — standard funded accounts: The first payout is generally eligible after 14 days from the first trade; certain products offer seven days or an Instant24 variant. All positions must be closed before requesting.",
+     "source": "https://rzrfunded.com/blog/how-payouts-work-at-rzr-funded-everything-you-need-to-know/",
+     "locator": "main programme scored: challenge"
+    }
+   ],
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
+  },
+  {
+   "slug": "lux-trading-firm",
+   "name": "Lux Trading Firm",
+   "current": 58,
+   "proposed": 59,
+   "raw": 59,
+   "flag": "",
+   "delta": 1,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · Trustpilot 3.7 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "In the case of serious negligence, or poor risk management, your account might be closed at our discretion, and you will be expelled from the program.",
+     "url": "https://luxtradingfirm.com/trading-rules/",
+     "heading": "Rules of engagement"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "In the case of serious negligence, or poor risk management, your account might be closed at our discretion, and you will be expelled from the program.",
+     "source": "https://luxtradingfirm.com/trading-rules/",
+     "locator": "Rules of engagement"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.7 / 627"
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
+   "slug": "hyrotrader",
+   "name": "HyroTrader",
+   "current": 55,
+   "proposed": 59,
+   "raw": 59,
+   "flag": "",
+   "delta": 4,
+   "ceiling": 75,
+   "ceilingWhy": "4 ans, pas de preuve à grande échelle",
+   "penalties": "B2A −4 · B7 −5 · D:payout-cap −4 · Trustpilot 4 −3",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2A": {
+     "text": "Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
+     "url": "https://www.hyrotrader.com/terms-and-conditions/",
+     "heading": "§10.2(g),(k); §10.3(d),(h); §24.2"
+    },
+    "B7": {
+     "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
+     "url": "https://www.hyrotrader.com/terms-and-conditions/",
+     "heading": "§P.4; Companion Policies"
+    }
+   },
+   "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "Qualitative prohibited practices (e.g. strategy that 'does not reflect genuine trading skill') can forfeit pending rewards, but only acting reasonably, in good faith and proportionately, after notice and at least 14 days to make representations, with a review route.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§10.2(g),(k); §10.3(d),(h); §24.2"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Rewards are governed by a separate Funded Trader Agreement with the BVI entity, provided only at transition to the funded phase.",
+     "source": "https://www.hyrotrader.com/terms-and-conditions/",
+     "locator": "§P.4; Companion Policies"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Funded accounts — profit above 5% per request: \"The profit counted in one payout request is capped at 5% of your initial balance\", and \"If a trader does not withdraw and exceeds 5% profit, any additional profit will not be paid.\" The FAQ does not limit this to one programme. Terms 11.7 add that payouts are subject to \"the per-payout and cumulative limits published in the payout information on the Platform\".",
+     "source": "https://www.hyrotrader.com/faq/orders-billing-taxes/is-there-a-maximum-withdrawal-amount-in-one-payout/",
+     "locator": "main programme scored: core"
+    },
+    {
+     "code": "TPR",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "4 / 229"
+    }
+   ],
+   "age": 4,
+   "ceilingEvidence": [],
+   "founded": 2022
   },
   {
    "slug": "lucid-trading",
@@ -2320,22 +2592,43 @@
    "founded": 2024
   },
   {
-   "slug": "lux-trading-firm",
-   "name": "Lux Trading Firm",
-   "current": 58,
+   "slug": "uprofit-trader",
+   "name": "UProfit Trader",
+   "current": 69,
    "proposed": 58,
-   "raw": 75,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
+   "raw": 58,
+   "flag": "",
+   "delta": -11,
    "ceiling": 75,
-   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [],
-   "age": 5,
+   "ceilingWhy": "7 ans, pas de preuve à grande échelle",
+   "penalties": "Trustpilot 3.4 −15 · E_HARSH −2",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "E_HARSH": {
+     "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
+     "url": "https://uprofit.com/terms-and-conditions",
+     "heading": "Prohibited practices; cancellation policy"
+    }
+   },
+   "items": [
+    {
+     "code": "TPR",
+     "points": 15,
+     "text": "",
+     "source": "",
+     "locator": "3.4 / 6554"
+    },
+    {
+     "code": "E_HARSH",
+     "points": 2,
+     "text": "Any detected VPN or VPS use leads to 'the immediate closure of all associated accounts and the forfeiture of any accumulated profits'; after a payment dispute, Live-account profits 'will be duly settled in favor of UProfit'.",
+     "source": "https://uprofit.com/terms-and-conditions",
+     "locator": "Prohibited practices; cancellation policy"
+    }
+   ],
+   "age": 7,
    "ceilingEvidence": [],
-   "founded": 2021
+   "founded": 2019
   },
   {
    "slug": "ofp-funding",
@@ -2368,15 +2661,23 @@
    "name": "IC Funded",
    "current": 58,
    "proposed": 58,
-   "raw": 75,
+   "raw": 60,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
+   "penalties": "Trustpilot 3.4 −15",
    "confidence": "extraction sans clause retenue",
    "evidence": {},
-   "items": [],
+   "items": [
+    {
+     "code": "TPR",
+     "points": 15,
+     "text": "",
+     "source": "",
+     "locator": "3.4 / 183"
+    }
+   ],
    "age": 2,
    "ceilingEvidence": [],
    "founded": 2024
@@ -2412,27 +2713,34 @@
    "name": "TenTrade",
    "current": 58,
    "proposed": 58,
-   "raw": 71,
-   "flag": "hausse en attente de lecture complète",
+   "raw": 64,
+   "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "B2A −4",
-   "confidence": "extraits relus à la main",
+   "penalties": "B2 −8 · Trustpilot 4 −3",
+   "confidence": "contrat lu en entier",
    "evidence": {
-    "B2A": {
-     "text": "Funded trader terms: sole and absolute discretion to judge the \"spirit\" or operational objectives, with payout denial possible.",
+    "B2": {
+     "text": "TenTrade reserves the sole and absolute discretion to determine whether trading activity violates the program’s risk framework, spirit, or operational objectives. Where prohibited or abusive conduct is identified or reasonably suspected, TenTrade may take any action it deems appropriate, including trade cancellation, payout denial, account termination, or permanent disqualification. No review or appeal route was found.",
      "url": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
-     "heading": ""
+     "heading": "Funded Trader terms (June 2026) §11"
     }
    },
    "items": [
     {
-     "code": "B2A",
-     "points": 4,
-     "text": "Funded trader terms: sole and absolute discretion to judge the \"spirit\" or operational objectives, with payout denial possible.",
+     "code": "B2",
+     "points": 8,
+     "text": "TenTrade reserves the sole and absolute discretion to determine whether trading activity violates the program’s risk framework, spirit, or operational objectives. Where prohibited or abusive conduct is identified or reasonably suspected, TenTrade may take any action it deems appropriate, including trade cancellation, payout denial, account termination, or permanent disqualification. No review or appeal route was found.",
      "source": "https://tentrade.com/wp-content/uploads/2026/06/funded-trader-2026.pdf",
-     "locator": ""
+     "locator": "Funded Trader terms (June 2026) §11"
+    },
+    {
+     "code": "TPR",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "4 / 1084"
     }
    ],
    "age": 3,
@@ -2440,19 +2748,164 @@
    "founded": 2023
   },
   {
+   "slug": "daytraders-com",
+   "name": "DayTraders.com",
+   "current": 51,
+   "proposed": 57,
+   "raw": 57,
+   "flag": "",
+   "delta": 6,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · B6 −5 · B7 −5",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "A user may be barred from a Reward at the sole discretion of Day Traders for disregard for these Terms or any other disruptive manner; for Prohibited Conduct Day Traders may determine at its own discretion the nature of the behaviour and reasonable consequences.",
+     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "heading": "Terms of Use §3; Rewards"
+    },
+    "B6": {
+     "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "heading": "Rewards"
+    },
+    "B7": {
+     "text": "Funding with Day Traders capital or another product after the evaluation shall be governed pursuant to separate or supplemental written agreement, not published with the terms.",
+     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "heading": "§3 Services"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "A user may be barred from a Reward at the sole discretion of Day Traders for disregard for these Terms or any other disruptive manner; for Prohibited Conduct Day Traders may determine at its own discretion the nature of the behaviour and reasonable consequences.",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": "Terms of Use §3; Rewards"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": "Rewards"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Funding with Day Traders capital or another product after the evaluation shall be governed pursuant to separate or supplemental written agreement, not published with the terms.",
+     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
+     "locator": "§3 Services"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
+   "slug": "atlas-funded",
+   "name": "Atlas Funded",
+   "current": 66,
+   "proposed": 57,
+   "raw": 57,
+   "flag": "",
+   "delta": -9,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "Trustpilot 3.9 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 2015"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
+   "slug": "forex-funds-flow",
+   "name": "Forex Funds Flow",
+   "current": 57,
+   "proposed": 57,
+   "raw": 57,
+   "flag": "",
+   "delta": 0,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "Trustpilot 3.6 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {},
+   "items": [
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.6 / 265"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
+  },
+  {
    "slug": "apex-trader-funding",
    "name": "Apex Trader Funding",
    "current": 57,
-   "proposed": 57,
-   "raw": 84,
+   "proposed": 56,
+   "raw": 56,
    "flag": "",
-   "delta": 0,
+   "delta": -1,
    "ceiling": 95,
    "ceilingWhy": "5 ans + preuve",
-   "penalties": "D:account-ends-after-payouts −3 · D:payout-conditions −3 · A2ISO −5",
-   "confidence": "audit en cours (CGU non lues)",
-   "evidence": {},
+   "penalties": "B1 −15 · B3 −5 · B6 −5 · D:account-ends-after-payouts −3 · D:payout-conditions −3 · Trustpilot 4.2 −3 · A2ISO −5",
+   "confidence": "extraits relus à la main",
+   "evidence": {
+    "B1": {
+     "text": "Rewards 'may be withheld, forfeited, or rescinded at any time in the Company's sole discretion'; the Company 'reserves the right to deny, modify, reduce, cap, delay, or revoke Reward distributions for any reason or no reason'; determinations 'are final and binding' and 'not subject to appeal or review' (except clerical correction or fraud).",
+     "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "heading": "§12 Rewards"
+    },
+    "B3": {
+     "text": "'The Company may update the list of Prohibited Activities at any time, without notice'; changes to the Agreement, Trading Rules or Reward distribution policies 'become effective upon posting', and continued use of the accounts means acceptance.",
+     "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "heading": "§11 Prohibited Activities; §30"
+    },
+    "B6": {
+     "text": "Dispute outcomes, account closures and 'denial of Reward distributions' are defined as Confidential Information, and all communications with the Company 'may not be published or shared without permission'; breaches expose the user to the §11 penalties (loss of unpaid Rewards, repayment of previously distributed Rewards).",
+     "url": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "heading": "§20 Confidentiality; §21; §11 Penalties"
+    }
+   },
    "items": [
+    {
+     "code": "B1",
+     "points": 15,
+     "text": "Rewards 'may be withheld, forfeited, or rescinded at any time in the Company's sole discretion'; the Company 'reserves the right to deny, modify, reduce, cap, delay, or revoke Reward distributions for any reason or no reason'; determinations 'are final and binding' and 'not subject to appeal or review' (except clerical correction or fraud).",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§12 Rewards"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "'The Company may update the list of Prohibited Activities at any time, without notice'; changes to the Agreement, Trading Rules or Reward distribution policies 'become effective upon posting', and continued use of the accounts means acceptance.",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§11 Prohibited Activities; §30"
+    },
+    {
+     "code": "B6",
+     "points": 5,
+     "text": "Dispute outcomes, account closures and 'denial of Reward distributions' are defined as Confidential Information, and all communications with the Company 'may not be published or shared without permission'; breaches expose the user to the §11 penalties (loss of unpaid Rewards, repayment of previously distributed Rewards).",
+     "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
+     "locator": "§20 Confidentiality; §21; §11 Penalties"
+    },
     {
      "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
      "points": 3,
@@ -2466,6 +2919,13 @@
      "text": "Apex Performance Accounts — chargebacks and refunds: If a user receives a Reward and later initiates a chargeback, refund request or clawback for any subscription fee, 'you will forfeit all Rewards associated with the subscription period being refunded', whether the reversal is full or partial; Apex may void unpaid Rewards, offset paid ones against future distributions or invoice the user.",
      "source": "https://dashboard.apextraderfunding.com/agreement/user-agreement",
      "locator": "main programme scored: eod"
+    },
+    {
+     "code": "TPR",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "4.2 / 21625"
     },
     {
      "code": "A2ISO",
@@ -2486,82 +2946,16 @@
    "founded": 2021
   },
   {
-   "slug": "top-one-trader",
-   "name": "Top One Trader",
-   "current": 60,
-   "proposed": 57,
-   "raw": 57,
-   "flag": "",
-   "delta": -3,
-   "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "consistency 15% −8 · D:payout-cap −4 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "CONS": {
-     "pct": 15.0,
-     "forfeit": false,
-     "evalOnly": false,
-     "text": "Accounts bought since 14 Oct 2025: consistency score must stay at 15 % or below (rules page).",
-     "url": "https://checkout.toponetrader.com/rules/"
-    }
-   },
-   "items": [
-    {
-     "code": "CONS",
-     "points": 8,
-     "text": "Accounts bought since 14 Oct 2025: consistency score must stay at 15 % or below (rules page).",
-     "source": "https://checkout.toponetrader.com/rules/",
-     "locator": "15%"
-    },
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "2-Step PRO (V2) — funded stage: 'Each payout request is limited to 6% of the account size', with a $15,000 maximum per request; a request needs at least 3% profit and 'at least 3 profitable trading days' (each at least 0.5% of the starting balance).",
-     "source": "https://help.toponetrader.com/en/articles/15164961-2-step-pro-v2-when-can-i-request-a-payout",
-     "locator": "main programme scored: 2steppro"
-    },
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [],
-   "founded": 2023
-  },
-  {
-   "slug": "forex-funds-flow",
-   "name": "Forex Funds Flow",
-   "current": 57,
-   "proposed": 57,
-   "raw": 65,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 65,
-   "ceilingWhy": "1-2 ans",
-   "penalties": "aucune",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [],
-   "age": 1,
-   "ceilingEvidence": [],
-   "founded": 2025
-  },
-  {
    "slug": "bespoke-funding-program",
    "name": "Bespoke Funding Program",
    "current": 56,
    "proposed": 56,
-   "raw": 64,
+   "raw": 52,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3 · Trustpilot < 4,0 −3 · REGWARN −5",
+   "penalties": "D:payout-conditions −3 · Trustpilot 3.1 −15 · REGWARN −5",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
    "items": [
@@ -2573,8 +2967,8 @@
      "locator": "main programme scored: evaluation"
     },
     {
-     "code": "TPMID",
-     "points": 3,
+     "code": "TPR",
+     "points": 15,
      "text": "",
      "source": "",
      "locator": "3.1 / 1185"
@@ -2596,27 +2990,39 @@
    "name": "Sway Funded",
    "current": 56,
    "proposed": 56,
-   "raw": 67,
-   "flag": "hausse en attente de lecture complète",
+   "raw": 56,
+   "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "B3 −5 · D:payout-conditions −3",
-   "confidence": "extraits relus à la main",
+   "penalties": "B2 −8 · B3 −5 · D:payout-conditions −3 · Trustpilot 4.1 −3",
+   "confidence": "contrat lu en entier",
    "evidence": {
     "B3": {
-     "text": "4.2: fees and parameters may change at any time \"with immediate effect on all existing challenges\".",
-     "url": "https://my.swayfunded.com/p/refund-policy",
-     "heading": ""
+     "text": "4.2: fees and parameters may change at any time with immediate effect on all existing challenges.",
+     "url": "https://my.swayfunded.com/p/terms",
+     "heading": "§4.2"
+    },
+    "B2": {
+     "text": "The Company retains the right, at its sole and absolute discretion, to prohibit or block any individual from accessing or participating in the program for any reason; if, at its sole discretion, it determines that trading falls under Prohibited Trading, participation may be terminated with forfeiture of fees or credits.",
+     "url": "https://my.swayfunded.com/p/terms",
+     "heading": "§7.5; §7.6"
     }
    },
    "items": [
     {
+     "code": "B2",
+     "points": 8,
+     "text": "The Company retains the right, at its sole and absolute discretion, to prohibit or block any individual from accessing or participating in the program for any reason; if, at its sole discretion, it determines that trading falls under Prohibited Trading, participation may be terminated with forfeiture of fees or credits.",
+     "source": "https://my.swayfunded.com/p/terms",
+     "locator": "§7.5; §7.6"
+    },
+    {
      "code": "B3",
      "points": 5,
-     "text": "4.2: fees and parameters may change at any time \"with immediate effect on all existing challenges\".",
-     "source": "https://my.swayfunded.com/p/refund-policy",
-     "locator": ""
+     "text": "4.2: fees and parameters may change at any time with immediate effect on all existing challenges.",
+     "source": "https://my.swayfunded.com/p/terms",
+     "locator": "§4.2"
     },
     {
      "code": "D_PAYOUT_CONDITIONS",
@@ -2624,6 +3030,13 @@
      "text": "All programmes — rewards: A 1.5% fee applies to all reward payouts; a request needs at least $10 net realised profit and no open positions, and new trades cannot be opened until the withdrawal is fully completed.",
      "source": "https://swayfunded.kb.help/how-does-sway-funded-reward-system-work/",
      "locator": "main programme scored: rapid"
+    },
+    {
+     "code": "TPR",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "4.1 / 620"
     }
    ],
    "age": 2,
@@ -2631,22 +3044,73 @@
    "founded": 2024
   },
   {
+   "slug": "finotive-funding",
+   "name": "Finotive Funding",
+   "current": 69,
+   "proposed": 56,
+   "raw": 56,
+   "flag": "",
+   "delta": -13,
+   "ceiling": 75,
+   "ceilingWhy": "5 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · B3 −5 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B3": {
+     "text": "Compliance, risk, security, fraud, prohibited strategy, and platform-integrity updates may apply immediately to existing accounts where Finotive considers this necessary.",
+     "url": "https://finotivefunding.com/terms-and-conditions",
+     "heading": "§1.7 Amendments"
+    },
+    "B2": {
+     "text": "Prohibited Behaviour covers conduct that is abusive, non-reproducible, manipulative, deceptive, non-compliant, or otherwise prohibited, and may lead to payout delay, payout rejection or account closure after Risk or Compliance review.",
+     "url": "https://finotivefunding.com/terms-and-conditions",
+     "heading": "§2 Definitions (Prohibited Behaviour)"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Prohibited Behaviour covers conduct that is abusive, non-reproducible, manipulative, deceptive, non-compliant, or otherwise prohibited, and may lead to payout delay, payout rejection or account closure after Risk or Compliance review.",
+     "source": "https://finotivefunding.com/terms-and-conditions",
+     "locator": "§2 Definitions (Prohibited Behaviour)"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Compliance, risk, security, fraud, prohibited strategy, and platform-integrity updates may apply immediately to existing accounts where Finotive considers this necessary.",
+     "source": "https://finotivefunding.com/terms-and-conditions",
+     "locator": "§1.7 Amendments"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 5,
+   "ceilingEvidence": [],
+   "founded": 2021
+  },
+  {
    "slug": "nova-funding",
    "name": "Nova Funding",
    "current": 56,
    "proposed": 56,
-   "raw": 72,
+   "raw": 53,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
+   "penalties": "Trustpilot 2.2 −22",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
    "items": [
     {
-     "code": "TPMID",
-     "points": 3,
+     "code": "TPR",
+     "points": 22,
      "text": "",
      "source": "",
      "locator": "2.2 / 4448"
@@ -2679,18 +3143,18 @@
    "name": "Leveled Up Society",
    "current": 56,
    "proposed": 56,
-   "raw": 72,
+   "raw": 60,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "4 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
+   "penalties": "Trustpilot 3.3 −15",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
    "items": [
     {
-     "code": "TPMID",
-     "points": 3,
+     "code": "TPR",
+     "points": 15,
      "text": "",
      "source": "",
      "locator": "3.3 / 1286"
@@ -2699,6 +3163,57 @@
    "age": 4,
    "ceilingEvidence": [],
    "founded": 2022
+  },
+  {
+   "slug": "for-traders",
+   "name": "For Traders",
+   "current": 70,
+   "proposed": 56,
+   "raw": 56,
+   "flag": "",
+   "delta": -14,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · B7 −5 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B7": {
+     "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+     "url": "https://www.fortraders.com/terms-and-conditions",
+     "heading": "§13.4"
+    },
+    "B2": {
+     "text": "The Platform reserves the right to determine, at its own discretion, the nature of behaviour linked to Prohibited Trading Practices and reasonable boundaries for such determination, and may act upon any breach regardless of when it is discovered, even weeks or months later, at its sole discretion.",
+     "url": "https://www.fortraders.com/terms-and-conditions",
+     "heading": "§5; §10"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "The Platform reserves the right to determine, at its own discretion, the nature of behaviour linked to Prohibited Trading Practices and reasonable boundaries for such determination, and may act upon any breach regardless of when it is discovered, even weeks or months later, at its sole discretion.",
+     "source": "https://www.fortraders.com/terms-and-conditions",
+     "locator": "§5; §10"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "13.4: Master Account rules are communicated by separate agreement and/or e-mail, not published in the terms.",
+     "source": "https://www.fortraders.com/terms-and-conditions",
+     "locator": "§13.4"
+    },
+    {
+     "code": "TPW",
+     "points": 6,
+     "text": "",
+     "source": "",
+     "locator": ""
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
   },
   {
    "slug": "aurafunded",
@@ -2735,6 +3250,45 @@
    "age": 2,
    "ceilingEvidence": [],
    "founded": 2024
+  },
+  {
+   "slug": "myfundedcapital",
+   "name": "MyFundedCapital",
+   "current": 75,
+   "proposed": 56,
+   "raw": 56,
+   "flag": "",
+   "delta": -19,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B7 −5 · Trustpilot 3.5 −4",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B7": {
+     "text": "Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
+     "url": "https://myfundedcapital.com/terms-and-conditions/",
+     "heading": "Education / Guidelines / Arbitration"
+    }
+   },
+   "items": [
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Rewards are paid only under the Funded Trader Agreement, whose text is not published.",
+     "source": "https://myfundedcapital.com/terms-and-conditions/",
+     "locator": "Education / Guidelines / Arbitration"
+    },
+    {
+     "code": "TPR",
+     "points": 4,
+     "text": "",
+     "source": "",
+     "locator": "3.5 / 82"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
   },
   {
    "slug": "fundednext",
@@ -2847,27 +3401,34 @@
    "name": "FX2 Funding",
    "current": 55,
    "proposed": 55,
-   "raw": 70,
+   "raw": 67,
    "flag": "hausse en attente de lecture complète",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "B3 −5",
+   "penalties": "B3 −5 · Trustpilot 4.1 −3",
    "confidence": "extraits relus à la main",
    "evidence": {
     "B3": {
-     "text": "Margin, order size, position limits and drawdown halt levels of the Funded Account may be revised at any time.",
+     "text": "We reserve the right to increase the margin requirement, limit the max order size or limit the number of open positions you may enter or maintain in the Funded Account at any time, and to revise in response to market conditions the drawdown levels at which trading in the Funded Account will be halted.",
      "url": "https://fx2funding.com/faqs/",
-     "heading": ""
+     "heading": "FAQ (Funded Account)"
     }
    },
    "items": [
     {
      "code": "B3",
      "points": 5,
-     "text": "Margin, order size, position limits and drawdown halt levels of the Funded Account may be revised at any time.",
+     "text": "We reserve the right to increase the margin requirement, limit the max order size or limit the number of open positions you may enter or maintain in the Funded Account at any time, and to revise in response to market conditions the drawdown levels at which trading in the Funded Account will be halted.",
      "source": "https://fx2funding.com/faqs/",
-     "locator": ""
+     "locator": "FAQ (Funded Account)"
+    },
+    {
+     "code": "TPR",
+     "points": 3,
+     "text": "",
+     "source": "",
+     "locator": "4.1 / 456"
     }
    ],
    "age": 3,
@@ -2915,15 +3476,23 @@
    "name": "1of1 Funding",
    "current": 55,
    "proposed": 55,
-   "raw": 75,
+   "raw": 60,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
+   "penalties": "Trustpilot 3.3 −15",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
-   "items": [],
+   "items": [
+    {
+     "code": "TPR",
+     "points": 15,
+     "text": "",
+     "source": "",
+     "locator": "3.3 / 964"
+    }
+   ],
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
@@ -2933,15 +3502,23 @@
    "name": "Tribe Funded",
    "current": 55,
    "proposed": 55,
-   "raw": 75,
+   "raw": 67,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
+   "penalties": "Trustpilot 3.1 −8",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
-   "items": [],
+   "items": [
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.1 / 46"
+    }
+   ],
    "age": 2,
    "ceilingEvidence": [],
    "founded": 2024
@@ -2951,12 +3528,12 @@
    "name": "Funded7",
    "current": 55,
    "proposed": 55,
-   "raw": 61,
+   "raw": 53,
    "flag": "",
    "delta": 0,
    "ceiling": 65,
    "ceilingWhy": "1-2 ans",
-   "penalties": "D:payout-cap −4",
+   "penalties": "D:payout-cap −4 · Trustpilot 3.1 −8",
    "confidence": "extraction sans clause retenue",
    "evidence": {},
    "items": [
@@ -2966,6 +3543,13 @@
      "text": "All programmes: Terms Provision 3: withdrawals are 'limited to USD 10,000 per calendar month, regardless of account size or trading performance'; amounts above can be moved to later months at the provider's discretion.",
      "source": "https://funded7.com/terms-and-conditions/",
      "locator": "main programme scored: 2phase"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.1 / 49"
     }
    ],
    "age": 1,
@@ -3060,22 +3644,22 @@
    "ceiling": 65,
    "ceilingWhy": "1-2 ans",
    "penalties": "consistency 20% −5 · Trustpilot retiré −6",
-   "confidence": "extraits relus à la main",
+   "confidence": "contrat lu en entier",
    "evidence": {
     "CONS": {
      "pct": 20.0,
      "forfeit": false,
      "evalOnly": false,
-     "text": "Highest day may not exceed 20 % of total profit before a reward request.",
-     "url": "https://getleveraged.com/faq/what-is-the-consistency-rule/"
+     "text": "The highest day may not exceed 20% of total profit before a reward request (request delayed until it falls below).",
+     "url": "https://getleveraged.com/terms/"
     }
    },
    "items": [
     {
      "code": "CONS",
      "points": 5,
-     "text": "Highest day may not exceed 20 % of total profit before a reward request.",
-     "source": "https://getleveraged.com/faq/what-is-the-consistency-rule/",
+     "text": "The highest day may not exceed 20% of total profit before a reward request (request delayed until it falls below).",
+     "source": "https://getleveraged.com/terms/",
      "locator": "20%"
     },
     {
@@ -3122,51 +3706,6 @@
    "age": null,
    "ceilingEvidence": [],
    "founded": 0
-  },
-  {
-   "slug": "blusky-trading",
-   "name": "BluSky Trading",
-   "current": 53,
-   "proposed": 53,
-   "raw": 75,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 85,
-   "ceilingWhy": "4 ans + preuve",
-   "penalties": "D:payout-cap −4 · D:payout-conditions −3 · D:account-ends-after-payouts −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "All Sim Funded accounts: 'Sim Funded payout caps operate on a rolling 7-day basis': 25K $1,500, 50K $2,500, 100K $3,000, 150K Static $1,500, 200K Static $2,500, 300K Static $3,000 (Orbit and Launch articles list their own 7-day caps; Direct to Funded has a $3,000 weekly cap).",
-     "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
-     "locator": "main programme scored: launch"
-    },
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "All Sim Funded accounts: Between payouts 'you must generate at least $500 in new profit through normal trading activity'; 'flipping contracts or placing trades solely to qualify for another payout does not count'. After a request the trader must 'stop trading until the requested funds have been removed'.",
-     "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
-     "locator": "main programme scored: launch"
-    },
-    {
-     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
-     "points": 3,
-     "text": "All Sim Funded accounts: 'Before exceeding $10,000 in total profit per account, you must open a Support Review Ticket' (payouts count toward the total); 'Trading during an active review may result in automatic account loss'; reviews can occur earlier and may end with the account closed or kept on Sim Funded; the $10,000 level 'is not a guaranteed number'.",
-     "source": "https://help.blusky.pro/en/articles/17297032-sim-funded-accounts-rules",
-     "locator": "main programme scored: launch"
-    }
-   ],
-   "age": 4,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 12898022
-    }
-   ],
-   "founded": 2022
   },
   {
    "slug": "blueberry-funded",
@@ -3219,38 +3758,6 @@
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
-  },
-  {
-   "slug": "orion-funded",
-   "name": "Orion Funded",
-   "current": 53,
-   "proposed": 53,
-   "raw": 70,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "B6 −5",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "B6": {
-     "text": "14.1: acting in a manner that may damage the firm's reputation, including after termination, leads to termination of the agreements.",
-     "url": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
-     "heading": ""
-    }
-   },
-   "items": [
-    {
-     "code": "B6",
-     "points": 5,
-     "text": "14.1: acting in a manner that may damage the firm's reputation, including after termination, leads to termination of the agreements.",
-     "source": "https://www.orionfunded.com/docs/terms-and-conditions.pdf",
-     "locator": ""
-    }
-   ],
-   "age": 2,
-   "ceilingEvidence": [],
-   "founded": 2024
   },
   {
    "slug": "alpha-futures",
@@ -3326,32 +3833,6 @@
    "founded": 2024
   },
   {
-   "slug": "equity-edge",
-   "name": "Equity Edge",
-   "current": 53,
-   "proposed": 53,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "All funded accounts (14-day payouts): Payouts can be requested \"every fourteenth calendar day following the initiation of the first trade on the funded account\"; \"If you miss the 14th calendar day, you will need to wait another 14 calendar days\". Requests must be submitted before 17:00 UK time. On-demand payouts only at VIP Spot.",
-     "source": "https://equityedge.io/funded-traders/payout-process",
-     "locator": "main programme scored: 2step"
-    }
-   ],
-   "age": 2,
-   "ceilingEvidence": [],
-   "founded": 2024
-  },
-  {
    "slug": "upcomers",
    "name": "Upcomers",
    "current": 53,
@@ -3392,39 +3873,6 @@
    "founded": 2025
   },
   {
-   "slug": "sabiotrade",
-   "name": "SabioTrade",
-   "current": 52,
-   "proposed": 52,
-   "raw": 67,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "D:funded-trailing-drawdown −2 · Trustpilot retiré −6",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_FUNDED_TRAILING_DRAWDOWN",
-     "points": 2,
-     "text": "All plans — reward stage: The maximum drawdown trails the highest closed balance (\"Equity ≤ Highest Closed Balance - (Initial Balance × 6%)\" in the terms); the homepage states that \"after your first Performance Reward is processed, your Maximum Trailing Drawdown no longer trails upward\".",
-     "source": "https://sabiotrade.us/",
-     "locator": "main programme scored: classic"
-    },
-    {
-     "code": "TPW",
-     "points": 6,
-     "text": "",
-     "source": "",
-     "locator": ""
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [],
-   "founded": 2023
-  },
-  {
    "slug": "funder-trading",
    "name": "Funder Trading",
    "current": 52,
@@ -3451,57 +3899,43 @@
    "founded": 2022
   },
   {
-   "slug": "wsfunded",
-   "name": "WSFunded",
-   "current": 52,
-   "proposed": 52,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "All programmes (Terms & Conditions): Terms 8.4 warning ladder: first warning 'Reduction of leverage for 20 working days and delay of payouts on all accounts'; second warning a further leverage reduction for 60 working days and 'a further delay in payouts'; third warning 'Permanent removal from the platform'.",
-     "source": "https://wsfunded.com/en/terms-conditions",
-     "locator": "main programme scored: 2phase"
-    }
-   ],
-   "age": 2,
-   "ceilingEvidence": [],
-   "founded": 2024
-  },
-  {
    "slug": "moneta-funded",
    "name": "Moneta Funded",
    "current": 52,
    "proposed": 52,
-   "raw": 57,
-   "flag": "hausse en attente de lecture complète",
+   "raw": 52,
+   "flag": "",
    "delta": 0,
    "ceiling": 65,
    "ceilingWhy": "1-2 ans",
-   "penalties": "B2 −8",
-   "confidence": "extraits relus à la main",
+   "penalties": "B2 −8 · B7 −5",
+   "confidence": "contrat lu en entier",
    "evidence": {
     "B2": {
-     "text": "Sole discretion to delay, reduce, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules.",
-     "url": "upload:11a8a29e-MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
-     "heading": ""
+     "text": "Moneta may, at its sole discretion, delay, reduce, deduct, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules, and remove the related profits.",
+     "url": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "heading": "Terms (September 2026) §5 payouts / Prohibited Conduct"
+    },
+    "B7": {
+     "text": "Passing the Evaluation leads to an offer 'subject to additional verification and the execution of a separate Funded Trader Agreement'; profit split arises only under that separate agreement, not published with the terms. Passing 'does not automatically guarantee you will become a Funded Trader' (full discretion).",
+     "url": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "heading": "§3.6-3.10"
     }
    },
    "items": [
     {
      "code": "B2",
      "points": 8,
-     "text": "Sole discretion to delay, reduce, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules.",
-     "source": "upload:11a8a29e-MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
-     "locator": ""
+     "text": "Moneta may, at its sole discretion, delay, reduce, deduct, refuse, cancel or void any pending or future payout for Prohibited Conduct or any breach of the Program Rules, and remove the related profits.",
+     "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "locator": "Terms (September 2026) §5 payouts / Prohibited Conduct"
+    },
+    {
+     "code": "B7",
+     "points": 5,
+     "text": "Passing the Evaluation leads to an offer 'subject to additional verification and the execution of a separate Funded Trader Agreement'; profit split arises only under that separate agreement, not published with the terms. Passing 'does not automatically guarantee you will become a Funded Trader' (full discretion).",
+     "source": "https://www.monetafunded.com/pdf/MONETA_FUNDED_LTD_Terms_And_Conditions_September_2026.pdf",
+     "locator": "§3.6-3.10"
     }
    ],
    "age": 1,
@@ -3574,48 +4008,135 @@
    "founded": 2024
   },
   {
-   "slug": "daytraders-com",
-   "name": "DayTraders.com",
-   "current": 51,
-   "proposed": 51,
-   "raw": 62,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
+   "slug": "tx3-funding",
+   "name": "TX3 Funding",
+   "current": 50,
+   "proposed": 52,
+   "raw": 52,
+   "flag": "",
+   "delta": 2,
    "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "B2 −8 · B6 −5",
-   "confidence": "extraits relus à la main",
+   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · Trustpilot 3 −15",
+   "confidence": "contrat lu en entier",
    "evidence": {
     "B2": {
-     "text": "A user may be barred from a Reward at the sole discretion of Day Traders for \"disregard for these Terms\" or \"any other disruptive manner\".",
-     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
-     "heading": ""
-    },
-    "B6": {
-     "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
-     "url": "https://daytraders.com/help/articles/17704078-terms-of-use",
-     "heading": ""
+     "text": "TX3 may suspend or terminate accounts immediately for breach or for suspicion of fraud, abuse, harassment, or regulatory risk; termination for breach results in forfeiture of fees and payouts. TX3 may freeze accounts, delay payouts or terminate access at its discretion if suspicious activity is detected.",
+     "url": "https://www.tx3funding.com/en/terms",
+     "heading": "§8; §11"
     }
    },
    "items": [
     {
      "code": "B2",
      "points": 8,
-     "text": "A user may be barred from a Reward at the sole discretion of Day Traders for \"disregard for these Terms\" or \"any other disruptive manner\".",
-     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
-     "locator": ""
+     "text": "TX3 may suspend or terminate accounts immediately for breach or for suspicion of fraud, abuse, harassment, or regulatory risk; termination for breach results in forfeiture of fees and payouts. TX3 may freeze accounts, delay payouts or terminate access at its discretion if suspicious activity is detected.",
+     "source": "https://www.tx3funding.com/en/terms",
+     "locator": "§8; §11"
     },
+    {
+     "code": "TPR",
+     "points": 15,
+     "text": "",
+     "source": "",
+     "locator": "3 / 4311"
+    }
+   ],
+   "age": 2,
+   "ceilingEvidence": [],
+   "founded": 2024
+  },
+  {
+   "slug": "willis-capital",
+   "name": "Willis Capital",
+   "current": 33,
+   "proposed": 52,
+   "raw": 52,
+   "flag": "",
+   "delta": 19,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B6 −5 · D:payout-conditions −3 · Trustpilot 3.4 −15",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B6": {
+     "text": "Participants found intentionally spreading false information, making defamatory claims, or engaging in coordinated actions intended to damage the reputation of WFunded may have their account suspended or terminated; WFunded reserves the right to cancel any pending payouts, void any profits generated on the account, and pursue legal remedies.",
+     "url": "https://www.wfunded.io/en/terms-and-conditions",
+     "heading": "§5.3 Reputational Protection & Defamation Policy"
+    }
+   },
+   "items": [
     {
      "code": "B6",
      "points": 5,
-     "text": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
-     "source": "https://daytraders.com/help/articles/17704078-terms-of-use",
-     "locator": ""
+     "text": "Participants found intentionally spreading false information, making defamatory claims, or engaging in coordinated actions intended to damage the reputation of WFunded may have their account suspended or terminated; WFunded reserves the right to cancel any pending payouts, void any profits generated on the account, and pursue legal remedies.",
+     "source": "https://www.wfunded.io/en/terms-and-conditions",
+     "locator": "§5.3 Reputational Protection & Defamation Policy"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All programmes — funded stage: A testimonial and certificate \"must be submitted within seven (7) calendar days of your first payout\", otherwise later payouts are not processed (section 4); payouts must go to the payment method used for the purchase or may be rejected, delayed or returned (section 7.1).",
+     "source": "https://www.wfunded.io/en/terms-and-conditions",
+     "locator": "main programme scored: skillcheck-standard"
+    },
+    {
+     "code": "TPR",
+     "points": 15,
+     "text": "",
+     "source": "",
+     "locator": "3.4 / 294"
     }
    ],
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
+  },
+  {
+   "slug": "leeloo-trading",
+   "name": "Leeloo Trading",
+   "current": 67,
+   "proposed": 51,
+   "raw": 51,
+   "flag": "",
+   "delta": -16,
+   "ceiling": 75,
+   "ceilingWhy": "6 ans, pas de preuve à grande échelle",
+   "penalties": "B3 −5 · D:payout-cap −4 · Trustpilot 3.1 −15",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B3": {
+     "text": "Unless Leeloo consents, in its sole and absolute discretion, Leeloo is not obligated to pay the Trader more than the maximum payout amount (Account Payout Cap) per user. Account Payout Caps are subject to change at any time.",
+     "url": "https://www.leelootrading.com/terms-conditions",
+     "heading": "§8 Subscription and payouts"
+    }
+   },
+   "items": [
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Unless Leeloo consents, in its sole and absolute discretion, Leeloo is not obligated to pay the Trader more than the maximum payout amount (Account Payout Cap) per user. Account Payout Caps are subject to change at any time.",
+     "source": "https://www.leelootrading.com/terms-conditions",
+     "locator": "§8 Subscription and payouts"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "Performance Account — lifetime payout ceiling: The homepage product card for the Performance Account says \"Earn back what you invest, plus 5%. Lifetime ceiling. Predictable.\" and \"Earn back up to your paid-in, plus 5%.\" Terms section 8 adds that \"Leeloo is not obligated to pay the Trader more than the maximum payout amount\".",
+     "source": "https://www.leelootrading.com/",
+     "locator": "main programme scored: performance"
+    },
+    {
+     "code": "TPR",
+     "points": 15,
+     "text": "",
+     "source": "",
+     "locator": "3.1 / 608"
+    }
+   ],
+   "age": 6,
+   "ceilingEvidence": [],
+   "founded": 2020
   },
   {
    "slug": "funded-squad",
@@ -3644,72 +4165,16 @@
    "founded": 2023
   },
   {
-   "slug": "top-one-futures",
-   "name": "Top One Futures",
-   "current": 51,
-   "proposed": 51,
-   "raw": 63,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "2 ans",
-   "penalties": "B6 −5 · D:payout-cap −4 · D:account-ends-after-payouts −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "B6": {
-     "text": "Disparaging statements, including on review platforms, may lead to immediate termination and forfeiture of profits.",
-     "url": "https://toponefutures.com/terms-and-conditions/",
-     "heading": ""
-    }
-   },
-   "items": [
-    {
-     "code": "B6",
-     "points": 5,
-     "text": "Disparaging statements, including on review platforms, may lead to immediate termination and forfeiture of profits.",
-     "source": "https://toponefutures.com/terms-and-conditions/",
-     "locator": ""
-    },
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "Elite Evaluation (sim funded stage): Maximum per payout request: $1,500 (25K), $2,500 (50K), $3,000 (100K), $3,500 (150K); profit above the cap stays in the account.",
-     "source": "https://help.toponefutures.com/en/articles/12717928-elite-sim-funded-account-payout-requirements",
-     "locator": "main programme scored: elite"
-    },
-    {
-     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
-     "points": 3,
-     "text": "All sim funded accounts: After 3 successful payouts from one sim funded account (5 for Elite Daily) a risk manager reviews the account; if selected for live, \"your options are to begin trading live or to close your Sim Funded account\", and any active sim account \"will be closed\". Live accounts start at $0 and sim profits are not carried over in full.",
-     "source": "https://help.toponefutures.com/en/articles/11003130-path-to-trading-live",
-     "locator": "main programme scored: elite"
-    }
-   ],
-   "age": 2,
-   "ceilingEvidence": [
-    {
-     "kind": "tracker",
-     "amountUSD": 30407332
-    },
-    {
-     "kind": "trustpilot",
-     "rating": 4.8,
-     "count": 5269
-    }
-   ],
-   "founded": 2024
-  },
-  {
    "slug": "tradexprop",
    "name": "TradeXProp",
    "current": 51,
    "proposed": 51,
-   "raw": 70,
+   "raw": 68,
    "flag": "hausse en attente de lecture complète",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "B3 −5",
+   "penalties": "B3 −5 · Trustpilot 4 −2",
    "confidence": "extraits relus à la main",
    "evidence": {
     "B3": {
@@ -3725,6 +4190,13 @@
      "text": "Shared Dashboard Analytix terms: margin, leverage, position limits and risk controls may be changed on any account at any time without prior notice.",
      "source": "upload:57c77dd6-ANALYTIX.pdf",
      "locator": ""
+    },
+    {
+     "code": "TPR",
+     "points": 2,
+     "text": "",
+     "source": "",
+     "locator": "4 / 40"
     }
    ],
    "age": 2,
@@ -3736,12 +4208,12 @@
    "name": "FXCI",
    "current": 51,
    "proposed": 51,
-   "raw": 72,
+   "raw": 50,
    "flag": "",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3",
+   "penalties": "D:payout-conditions −3 · Trustpilot 1.9 −22",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
    "items": [
@@ -3751,6 +4223,13 @@
      "text": "Two-phase Challenge — funded recognition: Terms §13.5-13.10: after Phase 2 the participant requests a final evaluation; completing the assessments \"may lead to an invitation\" to become a \"FXCI EXPERT\" under a separate consulting agreement. \"The Provider reserves the right to accept or refuse to recognize a participant as a FXCI EXPERT at its discretion\", and its decision on completion of the Assessments \"is final and not subject to appeal\". §7.3: from simulated results \"you will not be entitled to compensation or gains\".",
      "source": "https://fxci.com/terms-and-conditions/",
      "locator": "main programme scored: 2phase"
+    },
+    {
+     "code": "TPR",
+     "points": 22,
+     "text": "",
+     "source": "",
+     "locator": "1.9 / 137"
     }
    ],
    "age": 3,
@@ -3857,50 +4336,6 @@
    "age": 5,
    "ceilingEvidence": [],
    "founded": 2021
-  },
-  {
-   "slug": "atmos-funded",
-   "name": "Atmos Funded",
-   "current": 50,
-   "proposed": 50,
-   "raw": 65,
-   "flag": "hausse en attente de lecture complète",
-   "delta": 0,
-   "ceiling": 65,
-   "ceilingWhy": "1-2 ans",
-   "penalties": "aucune",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
-   "items": [],
-   "age": 1,
-   "ceilingEvidence": [],
-   "founded": 2025
-  },
-  {
-   "slug": "tx3-funding",
-   "name": "TX3 Funding",
-   "current": 50,
-   "proposed": 50,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3 / 4311"
-    }
-   ],
-   "age": 2,
-   "ceilingEvidence": [],
-   "founded": 2024
   },
   {
    "slug": "now-trade-funded",
@@ -4131,59 +4566,6 @@
    "founded": 2024
   },
   {
-   "slug": "wegetfunded",
-   "name": "WeGetFunded",
-   "current": 53,
-   "proposed": 47,
-   "raw": 47,
-   "flag": "",
-   "delta": -6,
-   "ceiling": 65,
-   "ceilingWhy": "1-2 ans",
-   "penalties": "B2 −8 · D:payout-cap −4 · D:payout-conditions −3 · Trustpilot < 4,0 −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {
-    "B2": {
-     "text": "Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
-     "url": "https://wegetfunded.com/en/legal/terms",
-     "heading": ""
-    }
-   },
-   "items": [
-    {
-     "code": "B2",
-     "points": 8,
-     "text": "Techniques \"inconsistent with the spirit\" of the programme may lead, at WeGetFunded's sole discretion, to cancellation of profits and refusal of any payment.",
-     "source": "https://wegetfunded.com/en/legal/terms",
-     "locator": ""
-    },
-    {
-     "code": "D_PAYOUT_CAP",
-     "points": 4,
-     "text": "All programmes — funded (WGF) account: Each withdrawal is limited to 'up to 50% of their cumulative P&L, subject to a maximum amount'. Per-withdrawal maximums: Instant $850 / $1,500 / $3,000 (15k / 30k / 60k); 1 Step and 2 Step funded e.g. $1,800 / $2,000 / $2,250 on 50k and $3,000 / $3,500 / $4,000 on 200k for the 1st / 2nd / 3rd+ withdrawal.",
-     "source": "https://wegetfunded.com/en/faq",
-     "locator": "main programme scored: 1step"
-    },
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "All programmes — funded (WGF) account: Withdrawal requests are accepted only from the 16th to the last day of each month (UTC); none from the 1st to the 15th. A minimum of 7 calendar days from the cycle's first trade applies, and the cycle restarts after each approved withdrawal.",
-     "source": "https://wegetfunded.com/legal/terms",
-     "locator": "main programme scored: 1step"
-    },
-    {
-     "code": "TPMID",
-     "points": 3,
-     "text": "",
-     "source": "",
-     "locator": "3.9 / 1004"
-    }
-   ],
-   "age": 1,
-   "ceilingEvidence": [],
-   "founded": 2025
-  },
-  {
    "slug": "fundedelite",
    "name": "FundedElite",
    "current": 46,
@@ -4390,37 +4772,148 @@
    "founded": 2022
   },
   {
+   "slug": "prop-number-one",
+   "name": "Prop Number One",
+   "current": 26,
+   "proposed": 45,
+   "raw": 45,
+   "flag": "",
+   "delta": 19,
+   "ceiling": 75,
+   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
+   "penalties": "B2 −8 · Trustpilot 2.9 −22",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "The Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion.",
+     "url": "https://propnumberone.com/terms-and-conditions/",
+     "heading": "§11 General Conditions"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "The Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion.",
+     "source": "https://propnumberone.com/terms-and-conditions/",
+     "locator": "§11 General Conditions"
+    },
+    {
+     "code": "TPR",
+     "points": 22,
+     "text": "",
+     "source": "",
+     "locator": "2.9 / 920"
+    }
+   ],
+   "age": 3,
+   "ceilingEvidence": [],
+   "founded": 2023
+  },
+  {
    "slug": "myfxcapital",
    "name": "MyFxCapital",
    "current": 45,
    "proposed": 45,
-   "raw": 75,
+   "raw": 64,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
+   "penalties": "Trustpilot 2.7 −11",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
-   "items": [],
+   "items": [
+    {
+     "code": "TPR",
+     "points": 11,
+     "text": "",
+     "source": "",
+     "locator": "2.7 / 46"
+    }
+   ],
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
+  },
+  {
+   "slug": "atmos-funded",
+   "name": "Atmos Funded",
+   "current": 50,
+   "proposed": 44,
+   "raw": 44,
+   "flag": "",
+   "delta": -6,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B2 −8 · B3 −5 · Trustpilot 3.5 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Atmos may, in its sole and absolute discretion, close your account following any violation of the Risk Management Policy as determined by the Company; prohibited practices include using a different strategy on the funded account or arbitrage 'as determined by the Company in its sole and absolute discretion'.",
+     "url": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+     "heading": "Risk Management Policy clause 2; Customer Agreement §7.5"
+    },
+    "B3": {
+     "text": "Customers accept the Risk Management Policy, 'which may be amended from time to time at the Company’s sole and absolute discretion', and violations close the account.",
+     "url": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+     "heading": "Risk Management Policy (introduction)"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Atmos may, in its sole and absolute discretion, close your account following any violation of the Risk Management Policy as determined by the Company; prohibited practices include using a different strategy on the funded account or arbitrage 'as determined by the Company in its sole and absolute discretion'.",
+     "source": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+     "locator": "Risk Management Policy clause 2; Customer Agreement §7.5"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "Customers accept the Risk Management Policy, 'which may be amended from time to time at the Company’s sole and absolute discretion', and violations close the account.",
+     "source": "https://atmosfunded.com/wp-content/uploads/2025/08/AtmosFunded-Ltd-Customer-Agreement-and-Risk-Management-Policy-v2.pdf",
+     "locator": "Risk Management Policy (introduction)"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.5 / 340"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
   },
   {
    "slug": "sure-leverage",
    "name": "Sure Leverage",
    "current": 44,
    "proposed": 44,
-   "raw": 63,
+   "raw": 59,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-cap −4 · D:split-reduction −2 · Trustpilot retiré −6",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
+   "penalties": "B2A −4 · D:payout-cap −4 · D:split-reduction −2 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2A": {
+     "text": "The Company reserves sole discretion to determine whether trading activity violates these Terms or the published Program Rules, and may terminate where continued participation presents legal, regulatory, operational, or reputational risk; termination does not affect any rights or obligations accrued before termination.",
+     "url": "https://sureleveragefunding.com/terms-and-conditions/",
+     "heading": "§8; §15 (PDF saved by Geyer)"
+    }
+   },
    "items": [
+    {
+     "code": "B2A",
+     "points": 4,
+     "text": "The Company reserves sole discretion to determine whether trading activity violates these Terms or the published Program Rules, and may terminate where continued participation presents legal, regulatory, operational, or reputational risk; termination does not affect any rights or obligations accrued before termination.",
+     "source": "https://sureleveragefunding.com/terms-and-conditions/",
+     "locator": "§8; §15 (PDF saved by Geyer)"
+    },
     {
      "code": "D_PAYOUT_CAP",
      "points": 4,
@@ -4601,15 +5094,28 @@
    "name": "X Funded",
    "current": 44,
    "proposed": 44,
-   "raw": 69,
+   "raw": 61,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "date de création inconnue",
-   "penalties": "Trustpilot retiré −6",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
+   "penalties": "B2 −8 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "X-Funded reserves the right to terminate or suspend your account and bar access to the services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the terms.",
+     "url": "https://x-funded.com/x-funded-zero/",
+     "heading": "Terms, Amendments and Termination (PDF saved by Geyer)"
+    }
+   },
    "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "X-Funded reserves the right to terminate or suspend your account and bar access to the services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the terms.",
+     "source": "https://x-funded.com/x-funded-zero/",
+     "locator": "Terms, Amendments and Termination (PDF saved by Geyer)"
+    },
     {
      "code": "TPW",
      "points": 6,
@@ -4660,15 +5166,23 @@
    "name": "Funding Frontier",
    "current": 42,
    "proposed": 42,
-   "raw": 75,
+   "raw": 53,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "2 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
+   "penalties": "Trustpilot 2.8 −22",
    "confidence": "audit en cours (CGU non lues)",
    "evidence": {},
-   "items": [],
+   "items": [
+    {
+     "code": "TPR",
+     "points": 22,
+     "text": "",
+     "source": "",
+     "locator": "2.8 / 454"
+    }
+   ],
    "age": 2,
    "ceilingEvidence": [],
    "founded": 2024
@@ -4712,6 +5226,59 @@
    "age": 3,
    "ceilingEvidence": [],
    "founded": 2023
+  },
+  {
+   "slug": "wegetfunded",
+   "name": "WeGetFunded",
+   "current": 53,
+   "proposed": 42,
+   "raw": 42,
+   "flag": "",
+   "delta": -11,
+   "ceiling": 65,
+   "ceilingWhy": "1-2 ans",
+   "penalties": "B2 −8 · D:payout-cap −4 · D:payout-conditions −3 · Trustpilot 3.9 −8",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Techniques deemed inconsistent with the spirit or the educational and evaluation objectives of the programme, strategies incompatible with its risk management policy or behaviour considered abusive may lead, at the sole discretion of WeGetFunded, to account suspension, cancellation of profits and/or refusal of any payment, without refund or compensation.",
+     "url": "https://wegetfunded.com/en/legal/terms",
+     "heading": "Unauthorised trading practices; Sanctions; Section 15"
+    }
+   },
+   "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Techniques deemed inconsistent with the spirit or the educational and evaluation objectives of the programme, strategies incompatible with its risk management policy or behaviour considered abusive may lead, at the sole discretion of WeGetFunded, to account suspension, cancellation of profits and/or refusal of any payment, without refund or compensation.",
+     "source": "https://wegetfunded.com/en/legal/terms",
+     "locator": "Unauthorised trading practices; Sanctions; Section 15"
+    },
+    {
+     "code": "D_PAYOUT_CAP",
+     "points": 4,
+     "text": "All programmes — funded (WGF) account: Each withdrawal is limited to 'up to 50% of their cumulative P&L, subject to a maximum amount'. Per-withdrawal maximums: Instant $850 / $1,500 / $3,000 (15k / 30k / 60k); 1 Step and 2 Step funded e.g. $1,800 / $2,000 / $2,250 on 50k and $3,000 / $3,500 / $4,000 on 200k for the 1st / 2nd / 3rd+ withdrawal.",
+     "source": "https://wegetfunded.com/en/faq",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "D_PAYOUT_CONDITIONS",
+     "points": 3,
+     "text": "All programmes — funded (WGF) account: Withdrawal requests are accepted only from the 16th to the last day of each month (UTC); none from the 1st to the 15th. A minimum of 7 calendar days from the cycle's first trade applies, and the cycle restarts after each approved withdrawal.",
+     "source": "https://wegetfunded.com/legal/terms",
+     "locator": "main programme scored: 1step"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.9 / 1004"
+    }
+   ],
+   "age": 1,
+   "ceilingEvidence": [],
+   "founded": 2025
   },
   {
    "slug": "dna-funded",
@@ -4935,32 +5502,6 @@
    "founded": 2023
   },
   {
-   "slug": "willis-capital",
-   "name": "Willis Capital",
-   "current": 33,
-   "proposed": 33,
-   "raw": 72,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [
-    {
-     "code": "D_PAYOUT_CONDITIONS",
-     "points": 3,
-     "text": "All programmes — funded stage: A testimonial and certificate \"must be submitted within seven (7) calendar days of your first payout\", otherwise later payouts are not processed (section 4); payouts must go to the payment method used for the purchase or may be rejected, delayed or returned (section 7.1).",
-     "source": "https://www.wfunded.io/en/terms-and-conditions",
-     "locator": "main programme scored: skillcheck-standard"
-    }
-   ],
-   "age": 3,
-   "ceilingEvidence": [],
-   "founded": 2023
-  },
-  {
    "slug": "trading-cult",
    "name": "Trading Cult",
    "current": 32,
@@ -5032,12 +5573,12 @@
    "name": "Funded Futures Network",
    "current": 29,
    "proposed": 29,
-   "raw": 68,
+   "raw": 60,
    "flag": "hausse en attente de lecture complète",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-cap −4 · D:account-ends-after-payouts −3",
+   "penalties": "D:payout-cap −4 · D:account-ends-after-payouts −3 · Trustpilot 3.5 −8",
    "confidence": "extraits relus à la main",
    "evidence": {},
    "items": [
@@ -5054,6 +5595,13 @@
      "text": "STEADY - funded: 'After 5 payouts your account goes to live review.'",
      "source": "https://steady.fundedfuturesnetwork.com/",
      "locator": "main programme scored: steady"
+    },
+    {
+     "code": "TPR",
+     "points": 8,
+     "text": "",
+     "source": "",
+     "locator": "3.5 / 560"
     }
    ],
    "age": 3,
@@ -5095,24 +5643,6 @@
    "age": 2,
    "ceilingEvidence": [],
    "founded": 2024
-  },
-  {
-   "slug": "prop-number-one",
-   "name": "Prop Number One",
-   "current": 26,
-   "proposed": 26,
-   "raw": 75,
-   "flag": "",
-   "delta": 0,
-   "ceiling": 75,
-   "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "aucune",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
-   "items": [],
-   "age": 3,
-   "ceilingEvidence": [],
-   "founded": 2023
   },
   {
    "slug": "traders-with-edge",
@@ -5209,18 +5739,31 @@
    "name": "KortanaFX",
    "current": 15,
    "proposed": 15,
-   "raw": 72,
+   "raw": 45,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "Trustpilot < 4,0 −3",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
+   "penalties": "B2 −8 · Trustpilot 2.4 −22",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "The Provider reserves the right to determine, at its own discretion, whether certain trades, practices, strategies or situations are Forbidden Trading Practices, including trading that establishes justified concerns that the provider might suffer financial or other harm; it may then exercise the actions of clauses 5.5 and 5.6 (cancel trades, terminate all contracts) at its own discretion.",
+     "url": "https://kortanafx.com/terms.html",
+     "heading": "§5.4.2; §5.5-5.6"
+    }
+   },
    "items": [
     {
-     "code": "TPMID",
-     "points": 3,
+     "code": "B2",
+     "points": 8,
+     "text": "The Provider reserves the right to determine, at its own discretion, whether certain trades, practices, strategies or situations are Forbidden Trading Practices, including trading that establishes justified concerns that the provider might suffer financial or other harm; it may then exercise the actions of clauses 5.5 and 5.6 (cancel trades, terminate all contracts) at its own discretion.",
+     "source": "https://kortanafx.com/terms.html",
+     "locator": "§5.4.2; §5.5-5.6"
+    },
+    {
+     "code": "TPR",
+     "points": 22,
      "text": "",
      "source": "",
      "locator": "2.4 / 3401"
@@ -5235,15 +5778,28 @@
    "name": "CK Capital",
    "current": 14,
    "proposed": 14,
-   "raw": 62,
+   "raw": 54,
    "flag": "hausse bloquée : incidents du dossier à recoder",
    "delta": 0,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-cap −4 · D:payout-conditions −3 · Trustpilot retiré −6",
-   "confidence": "extraction sans clause retenue",
-   "evidence": {},
+   "penalties": "B2 −8 · D:payout-cap −4 · D:payout-conditions −3 · Trustpilot retiré −6",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B2": {
+     "text": "Additionally, the Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion.",
+     "url": "https://ckpropfirm.com/en/terms-conditions",
+     "heading": "§3 Prohibited Uses"
+    }
+   },
    "items": [
+    {
+     "code": "B2",
+     "points": 8,
+     "text": "Additionally, the Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion.",
+     "source": "https://ckpropfirm.com/en/terms-conditions",
+     "locator": "§3 Prohibited Uses"
+    },
     {
      "code": "D_PAYOUT_CAP",
      "points": 4,

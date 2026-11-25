@@ -54,7 +54,7 @@ for r in PROPOSAL['rows']:
     items = []
     for it in r['items']:
         src = public_url(r['slug'], it['source']) if it['source'] else ''
-        if it['code'] not in ('TPW', 'TPMID') and not src.startswith('https://'):
+        if it['code'] not in ('TPW', 'TPMID', 'TPR') and not src.startswith('https://'):
             sys.exit(f"{r['slug']} {it['code']}: no public https source")
         text = it['text']
         if len(text) > 480:

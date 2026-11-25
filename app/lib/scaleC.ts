@@ -10,7 +10,7 @@ import type { FirmChangelogEntry } from './firmUpdates';
  */
 export type ScaleCCode =
   | 'B1' | 'B2' | 'B2A' | 'B3' | 'B4' | 'B5' | 'B6' | 'B7'
-  | 'CONS' | 'TPW' | 'TPMID' | 'REGWARN' | 'E_HARSH' | 'A1' | 'A1_OLD_UNCLEAR' | 'A2ISO'
+  | 'CONS' | 'TPW' | 'TPMID' | 'TPR' | 'REGWARN' | 'E_HARSH' | 'A1' | 'A1_OLD_UNCLEAR' | 'A2ISO'
   | 'D_PAYOUT_CAP' | 'D_PAYOUT_CONDITIONS' | 'D_ACCOUNT_ENDS_AFTER_PAYOUTS' | 'D_FUNDED_TRAILING_DRAWDOWN' | 'D_SPLIT_REDUCTION';
 
 export type ScaleCTier = 'unknown' | 'lt1' | 'y1to2' | 'y2plus' | 'y3evidence' | 'y5evidence' | 'y8veryLarge';

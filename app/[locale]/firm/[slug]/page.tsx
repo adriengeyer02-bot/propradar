@@ -76,6 +76,7 @@ import { HTML_LANG, OG_LOCALE, countryLabel, isLocale, localeAlternates, localeP
 import { fmt, formatDateLong, getMessages, numberLocale, tv, type Messages } from '../../../lib/messages';
 import IntentLink from '../../../components/IntentLink';
 import ContractAuditSection from '../../../components/ContractAuditSection';
+import ContractRedFlags from '../../../components/ContractRedFlags';
 import { getContractAudit } from '../../../lib/contractAudits';
 import { contractAuditCopy } from '../../../lib/contractAuditI18n';
 
@@ -734,9 +735,9 @@ export default async function FirmPage({ params }: Props) {
         items: c.penalties.map((p) => ({
           label: cc.codes[p.code] ?? p.code,
           points: p.points,
-          text: p.code === 'TPW' ? cc.tpwText : p.code === 'TPMID' ? fmt(cc.tpmidText, { detail: p.locator }) : p.text,
-          source: p.source || ((p.code === 'TPW' || p.code === 'TPMID') ? firm.reviewSignals.trustpilotSourceUrl : undefined),
-          locator: p.code === 'TPMID' ? undefined : p.locator,
+          text: p.code === 'TPW' ? cc.tpwText : (p.code === 'TPMID' || p.code === 'TPR') ? fmt(cc.tpmidText, { detail: p.locator }) : p.text,
+          source: p.source || ((p.code === 'TPW' || p.code === 'TPMID' || p.code === 'TPR') ? firm.reviewSignals.trustpilotSourceUrl : undefined),
+          locator: (p.code === 'TPMID' || p.code === 'TPR') ? undefined : p.locator,
         })),
         lostTotal,
         notes,
@@ -1121,6 +1122,8 @@ export default async function FirmPage({ params }: Props) {
           ]}
         />
       </section>
+
+      <ContractRedFlags slug={firm.slug} locale={locale} />
 
       <section className="container pr-section pr-offers" id="produits" aria-labelledby={`offers-${firm.slug}`}>
         <header className="pr-section-head">
