@@ -31,6 +31,8 @@ export type Product = {
   profitSplit: string;
   platforms: string[];
   tradableAssets: string[];
+  /** Generic inventory defaults are not verified instrument coverage. */
+  snapshotAssetsInferred?: boolean;
   minTradingDays?: string;
   hasConsistencyRule: boolean;
   consistencyRule?: string;
@@ -789,6 +791,7 @@ function universeFirm(data: UniverseFirmInput): PropFirm {
             profitSplit: data.profitSplit === undefined ? 'To verify' : `up to ${data.profitSplit}% depending on conditions`,
             platforms: data.platforms ?? (isFutures ? ['NinjaTrader', 'Tradovate', 'Rithmic', 'To verify'] : ['MT4', 'MT5', 'cTrader', 'To verify']),
             tradableAssets: data.tradableAssets ?? (isFutures ? ['Futures'] : market === 'Crypto' ? ['Crypto'] : market === 'Actions' ? ['Stocks'] : ['Forex', 'Indices', 'Metals', 'Crypto']),
+            snapshotAssetsInferred: data.tradableAssets === undefined,
             minTradingDays: data.minTradingDays,
             hasConsistencyRule: data.hasConsistencyRule ?? true,
             consistencyRule: data.consistencyRule,

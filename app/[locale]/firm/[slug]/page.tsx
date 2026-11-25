@@ -750,11 +750,12 @@ export default async function FirmPage({ params }: Props) {
     return options.length ? [...new Set(options)].join(' · ') : programCopy.unknown;
   };
   // Snapshot uses listed instruments, not the firm's broad radar category. FTMO's official symbol specifications explicitly list metals.
-  const snapshotAssets = firm.slug === 'ftmo'
+  const documentedAssets = firm.products.filter(p=>!p.snapshotAssetsInferred).flatMap(p=>p.tradableAssets);
+  const snapshotAssets = isClosedOrParked ? [] : firm.slug === 'ftmo'
     ? ['Forex', 'Indices', 'Metals', 'Commodities', 'Stock CFDs', 'Crypto', ...firm.products.flatMap(p=>p.tradableAssets).filter(a=>/futures/i.test(a))]
-    : firm.products.flatMap(p=>p.tradableAssets);
-  const marketLabels = [...new Set(snapshotAssets.filter(a=>a.trim() && !/^(to verify|to audit|unknown|n\/?a|à vérifier|non renseigné|variable)$/i.test(a.trim())).map(a=>tx(a.trim())))];
-  const snapshotMarkets = marketLabels.join(' · ') || firm.styles.map(style=>tx(style)).join(' · ') || '—';
+    : documentedAssets;
+  const marketLabels = [...new Set(snapshotAssets.filter(a=>a.trim() && !/^(?:to verify\b|to audit\b|unknown\b|n\/?a$|à vérifier\b|non renseigné\b|variable\b|not documented\b|—$|-$)/i.test(a.trim())).map(a=>tx(a.trim())).filter(Boolean))];
+  const snapshotMarkets = marketLabels.join(' · ');
   const specificRiskPoints = uniqueProfilePoints([
     ...regulatoryAudit.redFlags,
     ...firm.reviewSignals.payoutIssues,
@@ -771,6 +772,16 @@ export default async function FirmPage({ params }: Props) {
       count: firm.products.length,
     }),
   ];
+  // The headline snapshot must not turn generic audit reminders into firm-specific risks.
+  // Detailed evidence gaps and the full decision/checklist remain available below.
+  const snapshotRisk = specificRiskPoints.find(point => {
+    const value = point.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+    return value.length > 3 &&
+      !/^(?:profile needs more detail|payout data and reviews must be rechecked|not a strong recommendation by default|rules may change|data must be rechecked before buying|entity mapping pending|public warning-list checks must be repeated|tier-one regulator authorization not yet documented|not audited in depth yet|no strong recommendation|needs verification before buying|operating status and terms require a full recheck|community signal to enrich|watchlist profile|unknown|not documented|to audit|to verify|no purchase recommended|operational risk materialized|a verifier|non renseigne)\b/.test(value);
+  });
+  const snapshotHasStrength = Boolean(specificStrengthPoints[0]);
+  const snapshotHasScores = !isClosedOrParked && assessedProducts > 0;
+  const hasSnapshot = Boolean(snapshotMarkets || snapshotHasScores || snapshotHasStrength || snapshotRisk);
   const topRiskPoints = uniqueProfilePoints([
     ...specificRiskPoints,
     ...evidenceFallbackPoints,
@@ -1008,7 +1019,7 @@ export default async function FirmPage({ params }: Props) {
           {f.allFirms}
         </IntentLink>
 
-        <div className="pr-firm-hero">
+        <div className={`pr-firm-hero${!hasSnapshot && !firm.listedDomainWarning ? ' pr-firm-hero-no-snapshot' : ''}`}>
           <div className="pr-firm-identity">
             <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="lg" />
             <div>
@@ -1030,35 +1041,35 @@ export default async function FirmPage({ params }: Props) {
             <p className="firm-domain-warning pr-firm-verdict" role="note">
               <strong>{f.domainWarning}</strong> {tx(firm.listedDomainWarning)}
             </p>
-          ) : (
+          ) : hasSnapshot ? (
             <div className="pr-firm-snapshot">
               <h2>{sp.snapshot}</h2>
               <div className="pr-snapshot-grid">
-                <div className="pr-snapshot-tile">
+                {snapshotMarkets ? <div className="pr-snapshot-tile">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 4 3 5-7"/><path d="M16 7h4v4"/></svg>
                   <span>{sp.market}</span>
                   <strong className="pr-snapshot-markets">{snapshotMarkets}</strong>
-                </div>
-                <div className="pr-snapshot-tile">
+                </div> : null}
+                {snapshotHasScores ? <div className="pr-snapshot-tile">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"/></svg>
                   <span>{sp.assessed}</span>
                   <strong className="pr-snapshot-count">{assessedProducts}<small> / {firm.products.length}</small></strong>
-                  {assessedProducts ? <a href="#produits">{sp.detail} ↓</a> : null}
-                </div>
-                {specificStrengthPoints[0] ? <div className="pr-snapshot-tile pr-snapshot-strength">
+                  <a href="#produits">{sp.detail} ↓</a>
+                </div> : null}
+                {snapshotHasStrength ? <div className="pr-snapshot-tile pr-snapshot-strength">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
                   <span>{sp.strength}</span>
                   <strong>{tx(specificStrengthPoints[0])}</strong>
                 </div> : null}
-                <div className={`pr-snapshot-tile pr-snapshot-watch${specificStrengthPoints.length ? '' : ' pr-snapshot-watch-wide'}`}>
+                {snapshotRisk ? <div className="pr-snapshot-tile pr-snapshot-watch">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg>
                   <span>{sp.watch}</span>
-                  <strong>{tx(topRiskPoints[0]??firm.verdict)}</strong>
-                </div>
+                  <strong>{tx(snapshotRisk)}</strong>
+                </div> : null}
               </div>
-              <details className="pr-snapshot-verdict"><summary>{sp.fullProfile}</summary><p>{tx(firm.verdict)}</p>{specificStrengthPoints[0] ? <p>{tx(specificStrengthPoints[0])}</p> : null}{topRiskPoints[0] ? <p>{tx(topRiskPoints[0])}</p> : null}</details>
+              <a className="pr-snapshot-profile-link" href="#decision">{sp.fullProfile} ↓</a>
             </div>
-          )}
+          ) : null}
 
           <aside className="pr-firm-scorecard" aria-label={fmt(f.scoreAria, { name: firm.name })}>
             <ScoreBreakdownDialog view={scoreView} copy={scoreCopy}>
