@@ -2,7 +2,7 @@
   "slug": "foxx-funded",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Read full HTML CG 31000ad7c24b.txt §§1–22.8 and full visible FAQ a09c659c6136.txt; partial secondary PDF d07399f586eb.txt and payout page c1e59e0e7e5f.txt. FAQ accordions not expanded; current version/contracting entity to reconcile.",
+  "method": "Read all six unique captured bodies: 31000ad7c24b.txt HTML terms §§1–22.8; d07399f586eb.txt PDF terms §§1–21; b8d0f539882a.txt AML §§1–7; a09c659c6136.txt FAQ/rulebook; c1e59e0e7e5f.txt payout; 61ffa0471fae.txt contact. Four duplicate captures have identical body hashes in index. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08. FAQ capture lacks accordion answers and Instant tab; actual Trader Agreement not archived.",
   "facts": [
     {
       "code": "B1",
@@ -24,6 +24,27 @@
       "source": "https://www.foxx-funded.com/faqs/",
       "locator": "Risk Overview; footer; PDF https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf §5.1",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "HTML §22.2 says payouts funded 'exclusively from the Company’s operational revenue, including challenge fees and other commercial activities', not from live trading. Payout page explicitly says example amounts and 'This ranking does not represent verified client payouts.' Do not count displayed examples as verified payout evidence.",
+      "source": "https://www.foxx-funded.com/terms-and-conditions/",
+      "locator": "§22.1–22.2; https://www.foxx-funded.com/payout/ > top 10 showcase",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "PDF §5.1 refers to 'agreement with Bespoke Funding', whereas HTML §1.1 names SEMIZU L.L.C-FZ and footer says Foxx Limited Saint Lucia serves MT5. PDF lacks HTML §22 entirely. Version and platform-specific contract must be reconciled before applying clauses firm-wide.",
+      "source": "https://www.foxx-funded.com/assets/Terms-Cyo23LFp.pdf",
+      "locator": "§5.1; compare HTML §§1.1,22; payout footer",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout guide: 1-Step first 14 trading days, then 7 trading days, 70/80/90% split. Instant first 4 weeks, then 2 weeks, 50–80% split. FAQ one-step max 2% risk/trade, >4 layered orders plus >2% risk prohibited, 25% profit per trade idea, five evaluation days.",
+      "source": "https://www.foxx-funded.com/payout/",
+      "locator": "Payout essentials; https://www.foxx-funded.com/faqs/ > Foxx Risk Overview / Gambling Policy",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -32,7 +53,9 @@
     "CONS": "25% trade idea not confirmed best-day consistency; no assumption on most lenient plan."
   },
   "toVerify": {
-    "coverage": "Finish PDF, AML, payout and duplicate checks, all accordion answers and Trader Agreement; validate current checkout and entity by platform.",
-    "B1": "Determine if “entirely discretionary” applies to earned payouts beyond conduct. If restricted, B2 rather than B1."
+    "coverage": "All unique captured bodies read; unexpanded accordion answers, Instant rule tab, Refund Policy and actual Trader Agreement not available in archive. PARTIAL for missing bodies and applicable entity/version.",
+    "B1": "§22.4 explicitly says payouts entirely discretionary; scope subject to compliance review; Claude to verify interpretation and applicable agreement.",
+    "CONS": "25% per trade idea not best-day rule. Exact funded consistency for both models requires full rule bodies.",
+    "entity": "Confirm SEMIZU vs Foxx Limited MT5 vs stale Bespoke PDF references and checkout agreement."
   }
 }
