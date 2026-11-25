@@ -2,7 +2,7 @@
   "slug": "tradefundrr",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Full uploaded French OCR refund policy upload-9b349b4c37.txt pp.1–4. Other upload-69d2802319.txt header is privacy notice (not CG). Help index not yet read; actual main Terms and Conditions not present in archive index. Source is official public refund-policy route, actual OCR from Termly.",
+  "method": "Read full public fee-refund policy 905f5799dd3f.txt, full uploaded refund OCR upload-9b349b4c37.txt pp.1–4, all substantive help index 4d8f1372ec17.txt and home/search/login captures 3b69053dae37,8215699a8e42,8158975df96b (.txt; duplicate login same hash). Uploaded 25-page privacy notice upload-69d2802319.txt identified via header and end, not read in full because it is a privacy notice, not trading terms or payout/rules page. No actual terms or individual FAQ answers captured.",
   "facts": [
     {
       "code": "NOTE",
@@ -17,6 +17,27 @@
       "source": "https://tradefundrr.com/pages/fee-refund-policy",
       "locator": "Uploaded refund OCR §3, p.2/4",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Fee Refund Policy updated October 2026: first qualifying payout fee reimbursement ended for purchases on/after Oct 26 2026; older eligible Stock/Options Prop only, one refund per asset class per customer for life; $99 monthly fee excluded. Fee refund can change prospectively; distinct from cancellation refund.",
+      "source": "https://tradefundrr.com/pages/fee-refund-policy",
+      "locator": "This offer has ended; Which accounts are eligible; One fee refund per asset class; General",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Fee Refund Policy reserves prospective (not retroactive) changes to that specific fee-refund offer only.",
+      "source": "https://tradefundrr.com/pages/fee-refund-policy",
+      "locator": "General",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Pre-Prop and Prop simulated; Pro run by separate T3 Global agreement and company, separate capital contribution risk, not interchangeable with sim-funded payout rules.",
+      "source": "https://tradefundrr.com/pages/fee-refund-policy",
+      "locator": "General Disclosure / T3 Global Disclosure / Risk Disclosure",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -25,7 +46,9 @@
     "B2": "No trading risk sanction in refund policy."
   },
   "toVerify": {
-    "coverage": "Actual evaluation and funded contract, programme payout/rules FAQ bodies. Uploaded PDFs are privacy notice and refund policy, not terms. Review public fee-refund page and help solutions index.",
-    "CONS": "No main programme threshold established."
+    "coverage": "All substantive available refund/rules-index documents read. Two uploaded PDFs are refund and privacy, not CG. 17 current Pre-Prop/Prop FAQ titles in Freshdesk index but no article bodies; legacy product categories numerous. Main T&C, paid product rules, funded agreement and Pro distinct contract not archived. PARTIAL for actual missing contract/rule bodies.",
+    "B7": "Index Crypto Getting Started title 'Sign Funded Agreement' alone not proof timing.",
+    "CONS": "No current numeric consistency rule in available documents.",
+    "E_HARSH": "No explicit forfeiture of accrued rewards in refund §5; actual funded agreement needed."
   }
 }
