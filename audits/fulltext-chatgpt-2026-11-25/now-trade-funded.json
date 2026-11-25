@@ -1,0 +1,46 @@
+{
+  "slug": "now-trade-funded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted portions of fbc706938ea4.txt PDF (50,458 chars), §§9–12.3, 13, 18.2–18.6. Other PDF SOA and HTML/FAQ not read; no full-read claim.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§12.2(g)(viii) covers any strategy considered not to represent “individual trading in good faith” by company; §12.3 immediate termination/suspension and forfeit fees or payments entitled to under terms.",
+      "source": "https://nowtradefunded.com/legal/terms-and-conditions.pdf",
+      "locator": "§12.2(g)(iv)–(viii); §12.3, p.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "§11.2 after offer to become Funded Trader, must sign “Independent Contract Agreement that the Company will provide you”; funding offer discretionary after evaluation.",
+      "source": "https://nowtradefunded.com/legal/terms-and-conditions.pdf",
+      "locator": "§11.1–11.2, p.6",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§18.5(b): except §12.3, termination does not prejudice rights accrued before termination, including Trader Payments whether invoiced or not. §11.6 payments due if funded criteria satisfied.",
+      "source": "https://nowtradefunded.com/legal/terms-and-conditions.pdf",
+      "locator": "§18.5(b), p.11; §11.6, p.6",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§12.2(g)(vi) multiple IP addresses prohibited; §12.3 forfeiture of entitled payments on breach. Consider E_HARSH only after confirming scope for ordinary IP changes/legitimate travel and actual accepted rules.",
+      "source": "https://nowtradefunded.com/legal/terms-and-conditions.pdf",
+      "locator": "§12.2(g)(vi); §12.3",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§18.2 any-reason termination has express accrued-payment safeguard in §18.5(b), except breach under §12.3; conduct-linked B2.",
+    "B6": "§15 confidentiality not a stated public criticism ground."
+  },
+  "toVerify": {
+    "coverage": "Full PDF, current SOA 1473efab9f19.txt, HTML terms 9836ec3f0ff3.txt and FAQs, separate Independent Contract Agreement and version priority.",
+    "B3": "Read amendment clause.",
+    "CONS": "Review assessment schedule and funded criteria.",
+    "E_HARSH": "Confirm IP policy exceptions."
+  }
+}

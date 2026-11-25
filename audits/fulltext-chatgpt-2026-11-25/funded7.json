@@ -1,0 +1,39 @@
+{
+  "slug": "funded7",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted excerpts from f7fc5605ea64.txt (46,822 chars; selected Provisions 1–4, 11–14); not whole terms or FAQ bodies. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "NOTE",
+      "text": "Provision 3 states $10,000 monthly withdrawal cap per client; excess can be deferred. Provision 12 claims direct purchases have “no payout limitations”; apparent internal discrepancy, not FAQ-versus-contract B4.",
+      "source": "https://funded7.com/terms-and-conditions/",
+      "locator": "Provisions 3 and 12",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Provision 1 prohibits coordinated account circumvention with review, possible forfeiture of accrued profits and blacklist; multiple profiles prohibited. Defined conduct, no B2 from this alone.",
+      "source": "https://funded7.com/terms-and-conditions/",
+      "locator": "Provision 1, allocation limits",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Provision 14 states obligations incurred before termination continue afterwards; repeated prohibited practices may lead to permanent restriction without compensation.",
+      "source": "https://funded7.com/terms-and-conditions/",
+      "locator": "Provision 14",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Provision 11 denial of remuneration unless expressly agreed otherwise concerns simulated services; no direct evidence earned funded payouts unconditionally removable. Need payout agreement.",
+    "B3": "Provider may amend allocation limits and modify services; current-account application not established in reviewed excerpts.",
+    "B4": "Intra-contract inconsistency does not qualify as FAQ vs contract; check payout criteria."
+  },
+  "toVerify": {
+    "coverage": "Entire main T&C not read. Review Rule 1 payout criteria, Rule 2/3 position risk, Rule 4 fair play, dispute/refund, payout FAQ, general FAQ, and current funded agreement.",
+    "B2": "Determine exact undefined conduct and payout sanction, plus appeal route.",
+    "CONS": "Compare main One/Two phase rules."
+  }
+}

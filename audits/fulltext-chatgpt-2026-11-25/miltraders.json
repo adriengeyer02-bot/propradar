@@ -1,0 +1,66 @@
+{
+  "slug": "miltraders",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted sections of bde27170fa91.txt, Terms v3.0 effective Oct 17 2026, Articles 1–2, 4.4–4.6, 8.4, 9–10, 11–12, 21–23; remaining terms and incorporated FAQ not read in full.",
+  "facts": [
+    {
+      "code": "B3",
+      "text": "Art 2.2 changes effective upon publication and apply to “all accounts, including accounts purchased before the change”; Art 1.3 every account regardless purchase date.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 1.3; 2.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B2A",
+      "text": "Art 11.1 gambling includes “nearly all” drawdown and no identifiable risk management; final assessment rests with firm, Art 12.5 payout approved or declined at discretion with reasons. Art 12.8/21 internal review (14 days).",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 11.1–11.2; 12.5, 12.8; 21.1–21.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "E_HARSH",
+      "text": "Art 12.6 chargeback/dispute without first filing claim leads to closure of all accounts, forfeiture of all unpaid profits and permanent ban. Procedural sequence sanction; Art 4.5 also cancels all unpaid profits if requested verification documents not provided.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 12.6; 4.4–4.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Art 9.4 refusal only specified grounds, category communicated and internal review; Art 9.5 already paid payout reclaimed only for fraud, identity misrepresentation or technical error exploitation.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 9.4–9.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Art 10.9 eligible payout requests submitted before live selection remain payable even if broker refuses verification.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 10.9",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Art 10.10 loss exceeding live drawdown borne by trader and may offset pending/future payouts across accounts. Art 9.6 suspension during insolvency is not breach.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 10.10; 9.6",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Art 12.1 soft minimum-duration breach allows profit deductions; Art 12.3 Zero news-window profits removed. No explicit statement losses stay counted in reviewed sections.",
+      "source": "https://miltraders.com/terms/",
+      "locator": "Art 12.1, 12.3",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Art 9.4 expressly limits reasons, 9.5 clawback only specified grounds; subjective gambling refusal with reasons/internal review B2A.",
+    "B5": "Profit-only removal language warrants checking loss treatment; no explicit retention of losses in reviewed clauses.",
+    "B7": "Art 1.3 replaces old evaluation/funded agreements; current consolidated terms cover all stages."
+  },
+  "toVerify": {
+    "coverage": "Read all Articles 1–23, FAQ, refund, six incorporated Intercom article bodies, especially Zero/Pro/Instant and progressive caps; verify current rules across all plans.",
+    "CONS": "Most lenient main programme; do not infer consistency from generic Art 9.1."
+  }
+}

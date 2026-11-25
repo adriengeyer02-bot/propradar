@@ -1,0 +1,45 @@
+{
+  "slug": "funded-bull",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted excerpts of archived 15de37bfe6e7.txt (§2.8–2.10, 3.5, 5.2.3–5.5, 6.1.17–7.8 and 10.2), not full contract/rules. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B2A",
+      "text": "§2.9 continued use posing risk is determined “in its sole discretion” and termination forfeits rights to generated profits. §6.2 uses “market-standard risk management rules” and relative sizes; §6.3 forfeiture. §7.4 written appeal within 14 days; final decision firm. §7.3 notice and reasons. B2A rather than B2 pending exact scope.",
+      "source": "https://fundedbull.com/terms",
+      "locator": "§2.9; §6.2–6.3; §7.2–7.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B6",
+      "text": "§7.1 termination/blacklisting for “behavior that harms the company’s reputation or operations”, extending beyond generic defamation prohibition.",
+      "source": "https://fundedbull.com/terms",
+      "locator": "§7.1 Defamation and Harmful Conduct",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§6.1.17 closure after >15 consecutive inactive days, both challenge and funded; remaining balance may be forfeited. §6.4 mandatory risk assessment interviews, but sanction for refusal not yet established.",
+      "source": "https://fundedbull.com/terms",
+      "locator": "§6.1.17; §6.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§7.4 right to appeal suspension/termination via support within 14 days with evidence; §7.3.2 notice period in some cases allows withdrawal remaining funds.",
+      "source": "https://fundedbull.com/terms",
+      "locator": "§7.3.2–7.4",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§7.1 any-reason termination and §7.5 settlement according to agreement are not clearly unconditional cancellation of earned rewards; §2.9 forfeiture tied to subjective risk determination, thus B2A.",
+    "B3": "§6.3 rules amendable with notice but no explicit purchased-account application in reviewed text; §10.2 generic amendment.",
+    "E_HARSH": "Interview required but forfeiture for failing interview not established; inactivity balance not explicitly approved reward."
+  },
+  "toVerify": {
+    "coverage": "Read full main 65,288 chars and remaining sections, trading rules duplicate b09c19696fd4/a7d0b9e75afe and funded agreement; check B1 vs B2A and actual payout conditions.",
+    "CONS": "Most lenient main product rule."
+  }
+}
