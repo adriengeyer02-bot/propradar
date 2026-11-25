@@ -2,7 +2,7 @@
   "slug": "exfunded",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Full archived website terms 429555093135.txt; selected FAQ passages 69ca150eaa97.txt (25,278 chars). Terms mostly website use rather than trading agreement. Other files not read.",
+  "method": "Entire three unique archived texts read: FAQ 69ca150eaa97.txt (25,278 chars, duplicate 19f3f2472f4a.txt same index body hash), website terms 429555093135.txt §§1–14 and AML 0db076d91070.txt. No evaluation/funded trader agreement in archive; website use terms do not specify payout rights. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
   "facts": [
     {
       "code": "B2",
@@ -24,6 +24,34 @@
       "source": "https://exfunded.sandai-investment.com/terms-condition/",
       "locator": "§1, §13",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ minimum hold >5 minutes; profitable trades under five minutes ineligible for withdrawal; no express statement losses remain counted. Stacking prohibited funded only: trades must be spaced by five minutes; high-speed scalping average 5 pips may disable account without notice.",
+      "source": "https://exfunded.sandai-investment.com/faq/",
+      "locator": "Withdrawal Eligibility / Trade Open Duration / Prohibited trading strategies",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Lot-size rule 0.5–2 times average; ineligible trades can later become eligible if average changes. First payout after ten days, 70% initial split, 80% after three withdrawals, 90% after four; fees refunded on fourth payout. Caps apply smaller accounts, not $50k+ per FAQ; exact small-account caps not provided.",
+      "source": "https://exfunded.sandai-investment.com/faq/",
+      "locator": "Lot Consistency; Profit Cap Limit; Platform; 1/2 Step Challenge",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "IP region change may trigger verification; proof of travel/current location accepted and advance notification advised.",
+      "source": "https://exfunded.sandai-investment.com/faq/",
+      "locator": "What are the IP address rules for trading accounts?",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Website terms §4 says client ID verified 'before entering into any business relationship'; AML policy says KYC mandatory 'before providing clients access to any ... services or accounts'. FAQ says after clearing phase, wait 24h for funded live account 'Then, complete the KYC verification with our designated broker.' Candidate same-point KYC timing mismatch; separate broker verification could explain, do not count until resolved.",
+      "source": "https://exfunded.sandai-investment.com/faq/",
+      "locator": "What happens after I clear Phase 1 or 2?; https://exfunded.sandai-investment.com/terms-condition/ §4; https://exfunded.sandai-investment.com/aml-policy/ Client Identification Procedures",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
@@ -32,8 +60,10 @@
     "B6": "§7 generic comment moderation and no defamation, not payout sanction."
   },
   "toVerify": {
-    "coverage": "Read full FAQ including IP, lot rules, payout conditions and other archive files; actual trading/funded agreement.",
-    "B2A": "Look for review/appeal or reasons.",
-    "CONS": "Check funded best-day threshold by programme."
+    "coverage": "All substantive archive bodies fully read. Actual paid challenge/funded contractual agreement absent: only site terms and FAQ; preserve PARTIAL until obtained.",
+    "B2A": "No specific written payout appeal or explanation route in captured rules; general contact and Ghana courts only.",
+    "CONS": "No numeric best-day threshold in archived main 1/2-step rules; lot consistency not best-day rule.",
+    "B5": "Loss treatment for five-minute or lot-size ineligible trades not explicit.",
+    "B4": "KYC timing may distinguish platform and broker verification; no definite contradiction."
   }
 }
