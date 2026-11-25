@@ -189,3 +189,6 @@
   .pr-program-range-rings{flex-wrap:wrap}
   .pr-program-score-ring{max-width:96px}
 }
+
+/* No manufactured strength: the vigilance tile spans the row when no genuine benefit is documented. */
+.pr-snapshot-watch-wide{grid-column:1/-1}

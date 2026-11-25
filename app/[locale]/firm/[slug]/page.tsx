@@ -359,6 +359,19 @@ function uniqueProfilePoints(points: string[]) {
     });
 }
 
+/** Strengths must benefit a trader, not describe PropRadar's coverage or the
+ * mere existence of a source. Preserve actual product features and substantive
+ * transparency advantages; do not invent a replacement for a weak profile. */
+function traderStrengthPoints(points: string[]) {
+  return uniqueProfilePoints(points).filter(point => {
+    const value = point.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return !(
+      /\bprop\s*radar\b|\bwatchlist\b|\bmonitored\b|\bmonitoring\b|\barchive\b|\bworth monitoring\b|\bveille\b|\bsurveille\b|\brecense\b/.test(value) ||
+      /^(?:official (?:source|sources|site|website|domain|terms)(?: (?:is|are))? (?:available|identified|accessible|found)|sources? officielles? disponibles?|offre identifiable|active current domain|current terms available|historically covered by comparison sites|historically well-known name|a name worth monitoring|useful closure archive|shutdown documented.*|current official codes documented|strong marketing|strong international visibility|public(?:ly)? (?:claimed payouts|payout claims)|none for a current purchase)[.!]?$/.test(value)
+    );
+  });
+}
+
 /** Default search title: the query people type ("<firm> review", "is <firm> legit"), facts only. */
 const MODEL_ANCHOR: Record<string, string> = { Challenge: 'forex', 'Futures evaluation': 'futures', 'Instant funding': 'instant' };
 
@@ -721,7 +734,7 @@ export default async function FirmPage({ params }: Props) {
       ? 'firm-title firm-title-long'
       : 'firm-title';
   const sourceCount = regulatoryAudit.sources.length || firm.sources.length;
-  const specificStrengthPoints = uniqueProfilePoints(firm.strengths);
+  const specificStrengthPoints = isClosedOrParked || firm.listedDomainWarning ? [] : traderStrengthPoints(firm.strengths);
   const sp = programmeScoreCopy(locale);
   const productScores = new Map(firm.products.map(product => [product.id, firm.status === 'Fermée' || firm.listedDomainWarning ? [] : getProgrammeScores(firm.slug,product,getFirmUpdate(firm.slug))]));
   const assessedProducts = [...productScores.values()].filter(scores=>scores.length).length;
@@ -764,10 +777,10 @@ export default async function FirmPage({ params }: Props) {
   ]).slice(0, 4);
   // Never show a risk under a "strengths" heading: the list and its title follow the decision.
   const showStrengths = firmDecision === 'Shortlist candidate' && specificStrengthPoints.length > 0;
-  const firmSpecificSignals = uniqueProfilePoints([
-    ...(showStrengths ? specificStrengthPoints : specificRiskPoints),
-    ...evidenceFallbackPoints,
-  ]).slice(0, 4);
+  const firmSpecificSignals = (showStrengths
+    ? specificStrengthPoints
+    : uniqueProfilePoints([...specificRiskPoints, ...evidenceFallbackPoints])
+  ).slice(0, 4);
   const decisionChecklist = [
     firm.sources.length ? f.checklist.sources : f.checklist.noSources,
     hasPayoutRiskSignal(firm) || !isPayoutRiskAssessed(firm) ? f.checklist.payoutProof : f.checklist.payoutCalendar,
@@ -1032,12 +1045,12 @@ export default async function FirmPage({ params }: Props) {
                   <strong className="pr-snapshot-count">{assessedProducts}<small> / {firm.products.length}</small></strong>
                   {assessedProducts ? <a href="#produits">{sp.detail} ↓</a> : null}
                 </div>
-                <div className="pr-snapshot-tile pr-snapshot-strength">
+                {specificStrengthPoints[0] ? <div className="pr-snapshot-tile pr-snapshot-strength">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
                   <span>{sp.strength}</span>
-                  <strong>{specificStrengthPoints[0] ? tx(specificStrengthPoints[0]) : '—'}</strong>
-                </div>
-                <div className="pr-snapshot-tile pr-snapshot-watch">
+                  <strong>{tx(specificStrengthPoints[0])}</strong>
+                </div> : null}
+                <div className={`pr-snapshot-tile pr-snapshot-watch${specificStrengthPoints.length ? '' : ' pr-snapshot-watch-wide'}`}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg>
                   <span>{sp.watch}</span>
                   <strong>{tx(topRiskPoints[0]??firm.verdict)}</strong>
