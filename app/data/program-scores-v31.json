@@ -1227,11 +1227,17 @@
       ],
       "alpha-futures-standard": [
         {
-          "score": 93,
-          "scope": "Standard — documented payout restrictions",
+          "score": 76,
+          "scope": "Standard — qualified account",
           "checkedOn": "2026-11-24",
           "method": "reviewed-simulation",
           "deductions": [
+            {
+              "family": "D10",
+              "points": 16,
+              "reason": "Same qualified-account contractual discretion to determine breaches and deny fees as documented for Alpha Futures Zero; common contract applies to Standard.",
+              "source": "https://alpha-futures.com/fr/terms-and-conditions"
+            },
             {
               "family": "L2",
               "points": 4,
@@ -1243,10 +1249,18 @@
               "points": 3,
               "reason": "Five winning days of at least $200 required for payout.",
               "source": "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+            },
+            {
+              "family": "N",
+              "points": 1,
+              "reason": "Qualified Standard: restricted order execution in the two-minute window around specified news.",
+              "source": "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy"
             }
           ],
           "sources": [
-            "https://help.alpha-futures.com/en/articles/9492051-payout-policy"
+            "https://alpha-futures.com/fr/terms-and-conditions",
+            "https://help.alpha-futures.com/en/articles/9492051-payout-policy",
+            "https://help.alpha-futures.com/en/articles/9492063-news-trading-policy"
           ]
         }
       ]
