@@ -55,3 +55,44 @@
 .pr-program-promo-integrated .pr-program-promo-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:5px 10px}
 .pr-program-promo-cta{margin:0!important}
 .pr-program-deals .pr-program-affiliate-note{margin:0;font-size:.72rem;line-height:1.4}
+
+/* Compact shared cards: one price area, consistent header and collapsed secondary data. */
+.pr-program-grid{align-items:stretch;gap:14px}
+.pr-program-grid .pr-program-card{padding:14px;gap:9px;border-radius:12px;min-height:0}
+.pr-program-card-heading{grid-template-columns:auto minmax(0,1fr) minmax(84px,108px);align-items:center;gap:9px;min-height:54px}
+.pr-program-heading-copy h3{font-size:1.04rem;line-height:1.3;margin:3px 0 0}
+.pr-program-score{min-width:0;max-width:none;padding:5px 4px;align-self:start}
+.pr-program-score>strong{font-size:1.42rem}
+.pr-program-score>span,.pr-program-score>small{font-size:.63rem}
+.pr-program-card .pr-product-intro{font-size:.79rem;line-height:1.38}
+.pr-program-facts>div{padding:8px}
+.pr-program-facts dt{font-size:.67rem}
+.pr-program-facts dd{font-size:.89rem;line-height:1.25;margin-top:3px}
+.pr-program-price-block{display:grid;gap:7px;padding:9px;border:1px solid var(--border,#303640);border-radius:9px}
+.pr-program-price-block:has(.pr-program-deal-summary){border-color:rgba(47,203,218,.5);background:rgba(47,203,218,.035)}
+.pr-program-deal-summary{display:grid;gap:5px}
+.pr-program-deal-summary+.pr-program-deal-summary{padding-top:8px;border-top:1px solid var(--border,#303640)}
+.pr-program-deal-summary .pr-program-promo-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:5px}
+.pr-program-deal-summary .pr-program-promo-head strong{font-size:.85rem;line-height:1.3}
+.pr-program-promo-scope{font-size:.68rem}
+.pr-program-offer-rows{display:grid;gap:2px}
+.pr-program-offer-rows>div{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:8px;font-size:.78rem;line-height:1.2;padding:5px 7px;border-radius:5px;background:rgba(127,127,127,.055);font-variant-numeric:tabular-nums}
+.pr-program-offer-rows del{text-align:center;opacity:.78}
+.pr-program-offer-rows strong{text-align:end;color:#53c59b;font-size:.9rem}
+.pr-program-inline-details{font-size:.75rem;line-height:1.45}
+.pr-program-inline-details summary,.pr-program-orphan-prices summary{cursor:pointer;font-weight:600;line-height:1.4}
+.pr-program-inline-details[open]>summary{margin-bottom:6px}
+.pr-program-inline-details p{margin:5px 0;overflow-wrap:anywhere}
+.pr-program-price-list{display:grid;gap:4px;padding:5px 0}
+.pr-program-list-rows>div{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap;padding:4px 0;border-bottom:1px solid var(--border,#303640)}
+.pr-program-price-block .btn{min-height:32px;padding:6px 10px;font-size:.8rem}
+.pr-program-price-block .pr-program-affiliate-note{font-size:.64rem;line-height:1.3;margin:0}
+.pr-program-restrictions{padding-top:8px;gap:5px}
+.pr-program-restrictions .pr-product-rule{font-size:.77rem}
+.pr-program-card .pr-product-details{margin:0}
+.pr-program-dates{margin-top:auto;padding-top:7px;gap:6px}
+.pr-program-dates dt,.pr-program-dates dd{font-size:.65rem;line-height:1.25}
+.pr-program-dates dd{margin-top:2px}
+.pr-program-cohort,.pr-program-sources a{font-size:.67rem}
+.pr-program-orphan-prices{margin-top:12px}
+@media(max-width:640px){.pr-program-grid .pr-program-card{padding:11px;gap:8px}.pr-program-card-heading{grid-template-columns:auto minmax(0,1fr) minmax(74px,90px);gap:7px}.pr-program-facts>div{padding:7px 5px}.pr-program-facts dd{font-size:.81rem}}
