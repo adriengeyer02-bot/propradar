@@ -725,6 +725,17 @@ export default async function FirmPage({ params }: Props) {
   const sp = programmeScoreCopy(locale);
   const productScores = new Map(firm.products.map(product => [product.id, firm.status === 'Fermée' || firm.listedDomainWarning ? [] : getProgrammeScores(firm.slug,product,getFirmUpdate(firm.slug))]));
   const assessedProducts = [...productScores.values()].filter(scores=>scores.length).length;
+  const programCopy = programCardCopy(locale);
+  const productCapital = (product: (typeof firm.products)[number]) => {
+    const min = product.accountSizeMin, max = product.accountSizeMax;
+    return min > 0 && max > 0 ? (min === max ? formatUsd(min) : `${formatUsd(min)} – ${formatUsd(max)}`) : programCopy.unknown;
+  };
+  const productListPrice = (productId: string) => {
+    if (firm.status === 'Fermée' || firm.listedDomainWarning) return programCopy.unknown;
+    const options = (priceTable?.programs.filter(p=>p.productId===productId) ?? []).flatMap(p =>
+      p.rows.length ? [formatListPrice(Math.min(...p.rows.map(row=>row.price)),p.currency) + (p.billing === 'monthly' ? ` ${f.perMonth}` : '')] : []);
+    return options.length ? [...new Set(options)].join(' · ') : programCopy.unknown;
+  };
   // Snapshot uses listed instruments, not the firm's broad radar category. FTMO's official symbol specifications explicitly list metals.
   const snapshotAssets = firm.slug === 'ftmo'
     ? ['Forex', 'Indices', 'Metals', 'Commodities', 'Stock CFDs', 'Crypto', ...firm.products.flatMap(p=>p.tradableAssets).filter(a=>/futures/i.test(a))]
@@ -1135,7 +1146,7 @@ export default async function FirmPage({ params }: Props) {
             <summary>{f.compare} · {firm.products.length} {f.nav.offers.toLocaleLowerCase()}</summary>
             <div className="pr-program-compare-scroll" tabIndex={0} aria-label={f.nav.offers}>
               <table>
-                <thead><tr><th scope="col">{f.nav.offers}</th><th scope="col">{programCardCopy(locale).score}</th><th scope="col">{programCardCopy(locale).target}</th><th scope="col">{programCardCopy(locale).daily}</th><th scope="col">{programCardCopy(locale).drawdown}</th><th scope="col">{programCardCopy(locale).split}</th></tr></thead>
+                <thead><tr><th scope="col">{f.nav.offers}</th><th scope="col">{programCopy.score}</th><th scope="col">{programCopy.capital}</th><th scope="col">{programCopy.price}</th><th scope="col">{programCopy.target}</th><th scope="col">{programCopy.daily}</th><th scope="col">{programCopy.drawdown}</th><th scope="col">{programCopy.split}</th></tr></thead>
                 <tbody>{firm.products.map(product => {
                   const scores = productScores.get(product.id) ?? [];
                   const values = [...new Set(scores.map(s=>s.score))].sort((a,b)=>a-b);
@@ -1143,7 +1154,7 @@ export default async function FirmPage({ params }: Props) {
                   return <tr key={product.id}>
                     <th scope="row"><a href={`#programme-${product.id}`}>{tx(product.name)} <span aria-hidden="true">↓</span></a></th>
                     <td><div className="pr-program-compare-scores">{limits.length ? limits.map(score=><ScoreRing key={score} score={score} size="sm" label={programCardCopy(locale).score} kind="programme" />) : '—'}</div></td>
-                    <td>{tx(product.profitTarget)}</td><td>{tx(product.maxDailyLoss)}</td><td>{tx(product.maxDrawdown)}</td><td>{tx(product.profitSplit)}</td>
+                    <td>{productCapital(product)}</td><td>{productListPrice(product.id)}</td><td>{tx(product.profitTarget)}</td><td>{tx(product.maxDailyLoss)}</td><td>{tx(product.maxDrawdown)}</td><td>{tx(product.profitSplit)}</td>
                   </tr>;
                 })}</tbody>
               </table>
@@ -1153,7 +1164,7 @@ export default async function FirmPage({ params }: Props) {
         {firm.products.length > 0 ? (
           <div className="grid-2 pr-program-grid">
             {firm.products.map((product) => {
-              const pc = programCardCopy(locale);
+              const pc = programCopy;
               const scores = productScores.get(product.id) ?? [];
               const minScore = scores.length ? Math.min(...scores.map(s=>s.score)) : undefined;
               const maxScore = scores.length ? Math.max(...scores.map(s=>s.score)) : undefined;
@@ -1165,11 +1176,7 @@ export default async function FirmPage({ params }: Props) {
               const purchaseHref = firm.status !== 'Fermée' && !firm.listedDomainWarning && candidateHref && !isBlockedFirmUrl(firm, candidateHref) ? candidateHref : undefined;
               const sponsored = Boolean(purchaseHref && (firm.partnerOffer?.href || isAffiliateUrl(purchaseHref)));
               const promos = firm.status !== 'Fermée' && !firm.listedDomainWarning ? getProgramPromotions(firm.slug, product.id, new Date(), product.type).filter(p => !isBlockedFirmUrl(firm,p.sourceUrl)) : [];
-              const minSize = product.accountSizeMin;
-              const maxSize = product.accountSizeMax;
-              const capital = minSize > 0 && maxSize > 0 ? minSize === maxSize ? formatUsd(minSize) : `${formatUsd(minSize)} – ${formatUsd(maxSize)}` : pc.unknown;
-              const priceOptions = matchingPrices.flatMap(p => p.rows.length ? [formatListPrice(Math.min(...p.rows.map(row => row.price)), p.currency) + (p.billing === 'monthly' ? ` ${f.perMonth}` : '')] : []);
-              const facts = [[pc.capital, capital], [pc.price, priceOptions.length ? [...new Set(priceOptions)].join(' · ') : pc.unknown], [pc.target, tx(product.profitTarget)], [pc.daily, tx(product.maxDailyLoss)], [pc.drawdown, tx(product.maxDrawdown)], [pc.split, tx(product.profitSplit)]];
+              const facts = [[pc.capital, productCapital(product)], [pc.price, productListPrice(product.id)], [pc.target, tx(product.profitTarget)], [pc.daily, tx(product.maxDailyLoss)], [pc.drawdown, tx(product.maxDrawdown)], [pc.split, tx(product.profitSplit)]];
               const dateValue = (date?: string) => date ? <time dateTime={date}>{formatDateLong(locale, date)}</time> : <span>{pc.unknown}</span>;
               return (
               <article className="card product-card pr-product pr-product-compact pr-program-card" key={product.id} id={`programme-${product.id}`}>
@@ -1205,6 +1212,25 @@ export default async function FirmPage({ params }: Props) {
                 <dl className="pr-program-facts">
                   {facts.map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
                 </dl>
+                <div className="pr-program-restrictions">
+                  <p className={product.hasConsistencyRule ? 'pr-product-rule pr-tone-watch' : 'pr-product-rule'}>
+                    <span className="pr-pip-dot" aria-hidden="true" />
+                    {product.hasConsistencyRule ? tx(product.consistencyRule ?? 'Règle de cohérence à vérifier') : pc.noConsistency}
+                  </p>
+                  <details className="pr-program-inline-details pr-program-rule-details">
+                    <summary>{pc.rules}{mapped.specific.length ? ` (${mapped.specific.length})` : ''}{mapped.specific.some(rule=>rule.severity==='blocking') ? <span className="pr-program-rule-alert" aria-label={f.rulesUi.nav}>!</span> : null}</summary>
+                  {mapped.specific.length ? <ul className="pr-program-rule-list">
+                    {mapped.specific.map((rule,index) => <li key={rule.source+'-'+index}>
+                      <span className={rule.severity === 'blocking' ? 'pr-program-severity strong' : 'pr-program-severity'} aria-hidden="true">!</span>
+                      <div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p>
+                      {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
+                      <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div>
+                    </li>)}
+                  </ul> : <p className="muted pr-program-rule-empty">{pc.empty}</p>}
+                  {mapped.general.length ? <details className="pr-program-general"><summary>{pc.general} ({mapped.general.length})</summary><ul className="pr-program-rule-list">{mapped.general.map((rule,index) => <li key={rule.source+'-'+index}><div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p><a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div></li>)}</ul></details> : null}
+                  {mapped.unmapped ? <a className="pr-program-register" href="#rules">{pc.unmapped} ↓</a> : <a className="pr-program-register" href="#rules">{f.rulesUi.title} ↓</a>}
+                  </details>
+                </div>
                 {promos.length || matchingPrices.length || purchaseHref ? <div className="pr-program-price-block">
                   {promos.map((promo) => (
                     <div className="pr-program-deal-summary" key={promo.id}>
@@ -1240,25 +1266,6 @@ export default async function FirmPage({ params }: Props) {
                   {purchaseHref ? <a className="btn btn-primary pr-program-promo-cta" href={purchaseHref} target="_blank" rel={sponsored ? 'noopener noreferrer sponsored' : 'noopener noreferrer'}>{sponsored ? f.openAffiliate : f.openOfficial}</a> : null}
                   {sponsored ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
                 </div> : null}
-                <div className="pr-program-restrictions">
-                  <p className={product.hasConsistencyRule ? 'pr-product-rule pr-tone-watch' : 'pr-product-rule'}>
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {product.hasConsistencyRule ? tx(product.consistencyRule ?? 'Règle de cohérence à vérifier') : pc.noConsistency}
-                  </p>
-                  <details className="pr-program-inline-details pr-program-rule-details">
-                    <summary>{pc.rules}{mapped.specific.length ? ` (${mapped.specific.length})` : ''}</summary>
-                  {mapped.specific.length ? <ul className="pr-program-rule-list">
-                    {mapped.specific.map((rule,index) => <li key={rule.source+'-'+index}>
-                      <span className={rule.severity === 'blocking' ? 'pr-program-severity strong' : 'pr-program-severity'} aria-hidden="true">!</span>
-                      <div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p>
-                      {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
-                      <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div>
-                    </li>)}
-                  </ul> : <p className="muted pr-program-rule-empty">{pc.empty}</p>}
-                  {mapped.general.length ? <details className="pr-program-general"><summary>{pc.general} ({mapped.general.length})</summary><ul className="pr-program-rule-list">{mapped.general.map((rule,index) => <li key={rule.source+'-'+index}><div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p><a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div></li>)}</ul></details> : null}
-                  {mapped.unmapped ? <a className="pr-program-register" href="#rules">{pc.unmapped} ↓</a> : <a className="pr-program-register" href="#rules">{f.rulesUi.title} ↓</a>}
-                  </details>
-                </div>
                 <details className="pr-product-details">
                   <summary>{f.programDetails}</summary>
                   <div className="pr-product-details-content">
@@ -1277,13 +1284,18 @@ export default async function FirmPage({ params }: Props) {
                     </dl>
                   </div>
                 </details>
-                <dl className="pr-program-dates">
-                  <div><dt>{pc.rulesDate}</dt><dd>{dateValue(evidence?.rulesCheckedOn)}</dd></div>
-                  <div><dt>{pc.priceDate}</dt><dd>{dateValue(matchingPrices.length ? priceTable?.checkedOn : undefined)}</dd></div>
-                  <div><dt>{pc.effective}</dt><dd>{dateValue(evidence?.effectiveFrom)}</dd></div>
-                </dl>
-                {evidence?.cohort ? <p className="pr-program-cohort muted" lang="en">{evidence.cohort}</p> : null}
-                {evidence?.sources.length ? <div className="pr-program-sources">{evidence.sources.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{pc.official}{evidence.sources.length > 1 ? ` ${index+1}` : ''} ↗</a>)}</div> : null}
+                {evidence?.rulesCheckedOn || evidence?.effectiveFrom || evidence?.cohort || evidence?.sources.length || (matchingPrices.length && priceTable?.checkedOn) ? (
+                  <details className="pr-program-inline-details pr-program-evidence">
+                    <summary>{pc.official} · {f.checkedLabel}</summary>
+                    <dl className="pr-program-dates">
+                      {evidence?.rulesCheckedOn ? <div><dt>{pc.rulesDate}</dt><dd>{dateValue(evidence.rulesCheckedOn)}</dd></div> : null}
+                      {matchingPrices.length && priceTable?.checkedOn ? <div><dt>{pc.priceDate}</dt><dd>{dateValue(priceTable.checkedOn)}</dd></div> : null}
+                      {evidence?.effectiveFrom ? <div><dt>{pc.effective}</dt><dd>{dateValue(evidence.effectiveFrom)}</dd></div> : null}
+                    </dl>
+                    {evidence?.cohort ? <p className="pr-program-cohort muted" lang="en">{evidence.cohort}</p> : null}
+                    {evidence?.sources.length ? <div className="pr-program-sources">{evidence.sources.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{pc.official}{evidence.sources.length > 1 ? ` ${index+1}` : ''} ↗</a>)}</div> : null}
+                  </details>
+                ) : null}
               </article>
               );
             })}

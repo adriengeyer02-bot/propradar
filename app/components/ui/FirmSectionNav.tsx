@@ -12,6 +12,7 @@ type Item = { id: string; label: string };
  */
 export default function FirmSectionNav({ items, label }: { items: Item[]; label: string }) {
   const inlineRef = useRef<HTMLElement>(null);
+  const pinnedRef = useRef<HTMLElement>(null);
   const [pinned, setPinned] = useState(false);
   const [active, setActive] = useState<string>(items[0]?.id ?? '');
 
@@ -41,8 +42,27 @@ export default function FirmSectionNav({ items, label }: { items: Item[]; label:
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    window.addEventListener('hashchange', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      window.removeEventListener('hashchange', onScroll);
+    };
   }, [items]);
+
+  // Reveal the selected tab horizontally without moving the document.
+  useEffect(() => {
+    if (!pinned) return;
+    const strip = pinnedRef.current?.querySelector<HTMLElement>('.container');
+    const link = strip?.querySelector<HTMLElement>('[aria-current="location"]');
+    if (!strip || !link) return;
+    const bounds = strip.getBoundingClientRect();
+    const target = link.getBoundingClientRect();
+    if (target.left < bounds.left || target.right > bounds.right) {
+      strip.scrollBy({ left: target.left + target.width / 2 - bounds.left - bounds.width / 2, behavior: 'instant' });
+    }
+  }, [active, pinned]);
 
   const links = (current: string | null) =>
     items.map((item) => (
@@ -56,7 +76,7 @@ export default function FirmSectionNav({ items, label }: { items: Item[]; label:
       <nav ref={inlineRef} className="firm-tabs pr-subnav" aria-label={label}>
         {links(null)}
       </nav>
-      <nav className={`pr-subnav-pinned${pinned ? ' is-pinned' : ''}`} aria-label={`${label} (pinned)`} aria-hidden={!pinned} inert={!pinned}>
+      <nav ref={pinnedRef} className={`pr-subnav-pinned${pinned ? ' is-pinned' : ''}`} aria-label={`${label} (pinned)`} aria-hidden={!pinned} inert={!pinned}>
         <div className="container">{links(active)}</div>
       </nav>
     </>

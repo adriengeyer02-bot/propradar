@@ -157,3 +157,35 @@
 .pr-program-card{scroll-margin-top:100px}
 .pr-program-card:target{outline:2px solid rgba(83,197,155,.65);outline-offset:3px}
 .pr-program-compare-scroll:focus-visible{outline:2px solid #7cb7d4;outline-offset:2px}
+
+/* Mobile and decision-first programme layout. */
+.pr-program-compare table{min-width:850px}
+.pr-program-compare td:nth-child(3),.pr-program-compare td:nth-child(4){min-width:110px;font-variant-numeric:tabular-nums}
+.pr-program-compare th:first-child{min-width:140px}
+.pr-program-evidence{border-top:1px solid var(--border,#303640);padding-top:8px;margin-top:auto}
+.pr-program-evidence .pr-program-dates{padding-top:3px;border-top:0;margin:0 0 7px}
+.pr-program-evidence .pr-program-dates:empty{display:none}
+.pr-program-rule-alert{display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;border:1px solid #df746e;color:#df746e;font-size:10px;font-weight:700;vertical-align:middle;margin-inline-start:6px}
+.pr-program-score-detail>summary,.pr-program-rule-details>summary,.pr-program-evidence>summary,.pr-program-compare>summary{padding-block:7px;min-height:32px}
+.pr-program-card .pr-program-promo-cta{min-height:40px}
+@media(max-width:640px){
+  .pr-program-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .pr-program-grid .pr-program-card{padding:13px;gap:10px}
+  .pr-program-card-heading{min-height:64px}
+  .pr-program-facts dt{font-size:.72rem}
+  .pr-program-facts dd{font-size:.9rem}
+  .pr-program-card .pr-product-intro{font-size:.83rem;line-height:1.5}
+  .pr-program-inline-details{font-size:.82rem}
+  .pr-program-compare th:first-child{position:sticky;inset-inline-start:0;background:var(--surface,#141c25);z-index:1}
+  .pr-program-compare-scroll{padding-bottom:5px}
+  .pr-program-compare-scroll table{min-width:830px}
+}
+@media(max-width:480px){
+  .pr-program-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pr-program-facts>div:nth-child(n){border-block-end:1px solid var(--border,#303640);border-inline-end:1px solid var(--border,#303640)}
+  .pr-program-facts>div:nth-child(2n){border-inline-end:0}
+  .pr-program-facts>div:nth-last-child(-n+2){border-block-end:0}
+  .pr-program-facts>div{padding:9px}
+  .pr-program-range-rings{flex-wrap:wrap}
+  .pr-program-score-ring{max-width:96px}
+}
