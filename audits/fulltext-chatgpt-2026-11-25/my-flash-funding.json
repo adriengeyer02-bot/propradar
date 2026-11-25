@@ -2,7 +2,7 @@
   "slug": "my-flash-funding",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Targeted MyFlashFunding terms bcc4b13abbb9.txt (31,421 chars), actually Sway Funded FZCO terms; §§1.1–1.3,7.5–7.6,11.1,13.4,14.1,17.2. FAQ capture not read.",
+  "method": "Read entire archived terms bcc4b13abbb9.txt (31,421 chars, §§1–27) and FAQ b2ea4fd745cf.txt (2,169 chars). Both expressly refer to Sway Funded; footer confirms acquisition of MyFlashFunding. No independent historical or current MyFlash funded-stage agreement captured. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
   "facts": [
     {
       "code": "NOTE",
@@ -17,16 +17,37 @@
       "source": "https://myflashfunding.com/terms",
       "locator": "§7.5; §14.1",
       "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B3",
+      "text": "§4.10 unilateral changes to success parameters have 'immediate effect on all challenges purchased prior to the enforcement of the change(s)'. §13.1 conversely says changes do not affect previously purchased services; internal contradiction, not B4. Apply only if this contract governs actual offer.",
+      "source": "https://myflashfunding.com/terms",
+      "locator": "§4.10; §13.1",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§8.7 company may reject funding offer after reviewing trading style etc., but trader remains entitled to entry fee/credits paid in that case.",
+      "source": "https://myflashfunding.com/terms",
+      "locator": "§8.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§9.5 says trader entitled to 80% of profits excluding company funds; §9.4 payout timing defined on website. §6.2 unlimited challenge/confirmation count conflicts with §12.3 five active challenges absent written approval (active vs total scope may explain).",
+      "source": "https://myflashfunding.com/terms",
+      "locator": "§6.2; §9.4–9.6; §12.3",
+      "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B2": "§7.5 speaks of fees/eligibility, not express earned payout removal; actual Sway agreement needed.",
     "B1": "Any-reason exclusion §7.6 and no-notice termination §17.2 do not explicitly cancel earned rewards.",
-    "B3": "Generic amendment §1.3.",
     "B7": "§14.1 email upon becoming a Trader, but guidelines also on website; actual withheld contract timing unresolved."
   },
   "toVerify": {
-    "coverage": "Full terms and FAQ, current status of old brand and whether this is a separate offer; Sway funded agreement, avoid double counting.",
-    "CONS": "No main model verified."
+    "coverage": "Both available bodies fully read; only Sway FZCO terms and short FAQ. Funded by Sway agreement and actual trading/payout parameters not captured; confirm successor offer and whether old brand is active separately.",
+    "B3": "Reconcile §§4.10 and 13.1; do not assign successor's clauses to historic accounts automatically.",
+    "CONS": "No numeric best-day rule in captured documents."
   }
 }
