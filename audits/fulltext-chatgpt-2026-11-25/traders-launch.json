@@ -1,0 +1,61 @@
+{
+  "slug": "traders-launch",
+  "status": "TERMS READ",
+  "checkedOn": "2026-11-25",
+  "method": "Read entire archived T&C (July 16 2026) cf9b5edcee9b.txt; compared duplicate f6159c55b4f7.txt contract core byte-for-byte (identical). Read all captured FAQ 96ffcbadbfc1.txt, payout rules 0032bdb23a8c.txt, futures rules 0fbb283a810e.txt and crypto rules 587af92077e9.txt. Results/payout examples 9247241cfd0b.txt not contractual, excluded. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
+  "facts": [
+    {
+      "code": "B3",
+      "text": "“All changes will be effective immediately and shall be effective for any existing or new user.” Explicit application to existing users.",
+      "source": "https://www.traderslaunch.com/terms",
+      "locator": "Modifications of Terms of Use",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B7",
+      "text": "FAQ says “After passing the evaluation you're moved into a buffer account” and “completed contract signing and KYC” before payout-eligible SimFunded; funded-stage signing occurs after purchase/passing. Terms also refer to funding offer after evaluation, onboarding/background check.",
+      "source": "https://traderslaunch.com/faq",
+      "locator": "Getting Funded > What is the buffer stage, and how much do I need to build?; Terms > Evaluation Funded Trader Benefits",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Payout Rules: “No consistency rules once funded”; FAQ evaluation profit per session capped at 40% of target (50% static), pauses until next session, not breach. No penalizable main funded consistency threshold.",
+      "source": "https://traderslaunch.com/payout-rules",
+      "locator": "Key Points; FAQ > What is the 40% rule?",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Terms say “discretionary, performance-based awards” but also distribution of earned payout at trader's sole discretion under programme rules. Unrestricted earned-reward forfeiture not expressly stated; need funded agreement.",
+      "source": "https://www.traderslaunch.com/terms",
+      "locator": "Performance Test Program; Simulated Trading Disclosure; Independent Relationship",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "Payout one per 24h per trader, futures account above +1%, no per-payout cap, next request reviewed for up to 5 business days after cumulative $100k. FAQ describes funded buffer stage; fixed drawdown after buffer.",
+      "source": "https://traderslaunch.com/payout-rules",
+      "locator": "Daily Payout Requests; FAQ > buffer stage / Do payouts affect my drawdown level?",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "Opt-out from arbitration and class action waiver within 30 days of first acceptance.",
+      "source": "https://www.traderslaunch.com/terms",
+      "locator": "Governing Law; Dispute Resolution §7",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "Discretionary award description alone does not state earned rewards may be removed at firm's sole discretion; terms expressly provide distribution at trader discretion subject to conditions.",
+    "B2": "Terms permit disqualification for unauthorized methods to game system and subjective eligibility review; no direct provision expressly removing earned funded payouts for undefined conduct in read texts. Check funded contract.",
+    "B4": "Evaluation consistency and funded-stage no-consistency are distinct stages; no proven contradiction.",
+    "B6": "Confidentiality clause addresses information and proprietary materials, not public criticism/reputational harm with sanction.",
+    "E_HARSH": "Evaluation inactivity breach after seven days; funded inactivity allows reactivation. No express forfeiture of all profits for procedure."
+  },
+  "toVerify": {
+    "B1": "Actual SimFunded agreement after buffer, accrued/approved rewards and post-$100k review; verify scope of partner-program exclusion from payouts.",
+    "B7": "Verify availability of agreement before purchase; FAQ establishes post-pass signing, not explicitly no preview."
+  }
+}
