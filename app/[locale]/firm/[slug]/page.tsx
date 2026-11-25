@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { getProgramEvidence, mapProgramRules, programCardCopy } from '../../../lib/programCardData';
+import '../../../program-cards.css';
 import type { CSSProperties } from 'react';
 import { firmMetaOverrides } from '../../../lib/firmMetaOverrides';
 import { getFirmChangelog, getFirmUpdate } from '../../../lib/firmUpdates';
@@ -1089,31 +1091,39 @@ export default async function FirmPage({ params }: Props) {
           </div>
         </header>
         {firm.products.length > 0 ? (
-          <div className="grid-2">
-            {firm.products.map((product) => (
-              <article className="card product-card pr-product pr-product-compact" key={product.id}>
-                <div className="pr-product-tags">
-                  <span className="pr-tag">{v(product.type)}</span>
-                  {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
+          <div className="grid-2 pr-program-grid">
+            {firm.products.map((product) => {
+              const pc = programCardCopy(locale);
+              const evidence = getProgramEvidence(firm.slug, product.id);
+              const mapped = mapProgramRules(product, getFirmUpdate(firm.slug));
+              const matchingPrices = priceTable?.programs.filter(p => p.productId === product.id) ?? [];
+              const minSize = product.accountSizeMin;
+              const maxSize = product.accountSizeMax;
+              const capital = minSize > 0 && maxSize > 0 ? minSize === maxSize ? formatUsd(minSize) : `${formatUsd(minSize)} – ${formatUsd(maxSize)}` : pc.unknown;
+              const priceOptions = matchingPrices.flatMap(p => p.rows.length ? [formatListPrice(Math.min(...p.rows.map(row => row.price)), p.currency) + (p.billing === 'monthly' ? ` ${f.perMonth}` : '')] : []);
+              const facts = [[pc.capital, capital], [pc.price, priceOptions.length ? [...new Set(priceOptions)].join(' · ') : pc.unknown], [pc.target, tx(product.profitTarget)], [pc.daily, tx(product.maxDailyLoss)], [pc.drawdown, tx(product.maxDrawdown)], [pc.split, tx(product.profitSplit)]];
+              const dateValue = (date?: string) => date ? <time dateTime={date}>{formatDateLong(locale, date)}</time> : <span>{pc.unknown}</span>;
+              return (
+              <article className="card product-card pr-product pr-product-compact pr-program-card" key={product.id}>
+                <div className="pr-program-card-heading">
+                  <FirmLogo name={firm.name} logoDomain={firm.logoDomain} size="md" />
+                  <div className="pr-program-heading-copy">
+                    <div className="pr-product-tags">
+                      <span className="pr-tag">{v(product.type)}</span>
+                      {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
+                    </div>
+                    <h3>{tx(product.name)}</h3>
+                  </div>
+                  <div className="pr-program-score" aria-label={pc.score + ': ' + pc.pending}>
+                    <span>{pc.score}</span>
+                    <strong aria-hidden="true">—<small>/100</small></strong>
+                    <small>{pc.pending}</small>
+                  </div>
                 </div>
-                <h3>{tx(product.name)}</h3>
                 <p className="muted pr-product-intro">{tx(product.description)}</p>
-                <dl className="pr-product-highlights">
-                  <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
-                  <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
-                  <div><dt>{f.path.paid}</dt><dd>{tx(product.profitSplit)}</dd></div>
+                <dl className="pr-program-facts">
+                  {facts.map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
                 </dl>
-                {product.hasConsistencyRule ? (
-                  <p className="pr-product-rule pr-tone-watch">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
-                  </p>
-                ) : (
-                  <p className="pr-product-rule pr-tone-good">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {f.noConsistency}
-                  </p>
-                )}
                 {firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id).map((promo) => (
                   <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
                     <div className="pr-program-promo-head">
@@ -1155,6 +1165,23 @@ export default async function FirmPage({ params }: Props) {
                     </div>
                   </div>
                 )) : null}
+                <div className="pr-program-restrictions">
+                  <h4>{pc.rules}</h4>
+                  <p className={product.hasConsistencyRule ? 'pr-product-rule pr-tone-watch' : 'pr-product-rule'}>
+                    <span className="pr-pip-dot" aria-hidden="true" />
+                    {product.hasConsistencyRule ? tx(product.consistencyRule ?? 'Règle de cohérence à vérifier') : pc.noConsistency}
+                  </p>
+                  {mapped.specific.length ? <ul className="pr-program-rule-list">
+                    {mapped.specific.map((rule,index) => <li key={rule.source+'-'+index}>
+                      <span className={rule.severity === 'blocking' ? 'pr-program-severity strong' : 'pr-program-severity'} aria-hidden="true">!</span>
+                      <div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p>
+                      {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
+                      <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div>
+                    </li>)}
+                  </ul> : <p className="muted pr-program-rule-empty">{pc.empty}</p>}
+                  {mapped.general.length ? <details className="pr-program-general"><summary>{pc.general} ({mapped.general.length})</summary><ul className="pr-program-rule-list">{mapped.general.map((rule,index) => <li key={rule.source+'-'+index}><div><small>{tx(rule.program)}</small><p>{tx(rule.rule)}</p><p className="muted">{tx(rule.impact)}</p><a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a></div></li>)}</ul></details> : null}
+                  {mapped.unmapped ? <a className="pr-program-register" href="#rules">{pc.unmapped} ↓</a> : <a className="pr-program-register" href="#rules">{f.rulesUi.title} ↓</a>}
+                </div>
                 <details className="pr-product-details">
                   <summary>{f.programDetails}</summary>
                   <div className="pr-product-details-content">
@@ -1171,9 +1198,15 @@ export default async function FirmPage({ params }: Props) {
                       <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
                       <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
                     </dl>
-                    {product.hasConsistencyRule ? <p className="pr-product-rule pr-tone-watch">{tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}</p> : null}
                   </div>
                 </details>
+                <dl className="pr-program-dates">
+                  <div><dt>{pc.rulesDate}</dt><dd>{dateValue(evidence?.rulesCheckedOn)}</dd></div>
+                  <div><dt>{pc.priceDate}</dt><dd>{dateValue(matchingPrices.length ? priceTable?.checkedOn : undefined)}</dd></div>
+                  <div><dt>{pc.effective}</dt><dd>{dateValue(evidence?.effectiveFrom)}</dd></div>
+                </dl>
+                {evidence?.cohort ? <p className="pr-program-cohort muted" lang="en">{evidence.cohort}</p> : null}
+                {evidence?.sources.length ? <div className="pr-program-sources">{evidence.sources.map((url,index) => <a key={url} href={url} target="_blank" rel="noopener noreferrer">{pc.official}{evidence.sources.length > 1 ? ` ${index+1}` : ''} ↗</a>)}</div> : null}
                 {firm.status !== 'Fermée' && (firm.partnerOffer?.href || product.linkToStart) ? (
                   <a
                     href={firm.partnerOffer?.href || product.linkToStart}
@@ -1186,7 +1219,8 @@ export default async function FirmPage({ params }: Props) {
                 ) : null}
                 {firm.status !== 'Fermée' && firm.partnerOffer?.href ? <small className="pr-program-affiliate-note">{f.partnerOffer.discAffiliate}</small> : null}
               </article>
-            ))}
+              );
+            })}
             {firm.products.length === 1 && firm.status !== 'Fermée' ? <ProductContext firm={firm} product={firm.products[0]} f={f} locale={locale} /> : null}
           </div>
         ) : (
