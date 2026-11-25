@@ -387,7 +387,7 @@ export const guideArticles: Record<string, GuideArticle> = {
   },
 
   'meilleure-prop-firm-2026': {
-    updated: '2026-11-12',
+    updated: '2026-11-25',
     intro:
       'There is no single best prop firm. There is a best firm **for your market, your trading style** and the amount of risk you accept from the operator itself. This ranking starts from that last point: before comparing profit splits and discounts, it checks whether a firm is likely to **still be there, and to pay**, when you need it.',
     keyPoints: [
@@ -401,7 +401,7 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'How this ranking is built',
         paragraphs: [
           'Each firm in PropRadar gets a **score out of 100** built from rule clarity, payout evidence, legal transparency, public review signals and operating history. Affiliate links are disclosed on every profile and **never change a score**. A firm with an affiliate relationship keeps its weaknesses on display, and a firm without one can rank at the top.',
-          'At this update the highest scores belong to long-running operators: **FTMO (91/100), The5ers (85/100) and Topstep (84/100)**. They are not the cheapest. They are the profiles with the longest public track records, the most readable terms and the fewest unresolved payout signals in PropRadar\'s files.',
+          "FTMO, The5ers and Topstep are examples of long-running operators, not a fixed top three. Read the live comparison and each firm's current score and evidence date. A higher score is not a guarantee of payment or a substitute for checking the exact programme.",
         ],
       },
       {
@@ -455,13 +455,13 @@ export const guideArticles: Record<string, GuideArticle> = {
   },
 
   'goat-funded-trader-avis': {
-    updated: '2026-11-12',
+    updated: '2026-11-25',
     intro:
       'GOAT Funded Trader is one of the most visible prop firms of the last two years: aggressive discounts, a large range of models and constant social media presence. **Visibility is not the same as reliability.** This review separates what is documented from what is marketing, and puts the **funded-account rules** first, because that is where traders lose payouts.',
     keyPoints: [
       'Launched in **May 2023**; Hong Kong trade name, Saint Lucia provider, **no financial regulator**.',
-      'On October 23, 2026, Trustpilot showed **no rating** for the company, citing a guideline breach.',
-      'Payouts are lost on the **funded rules**: Goat Guard, the 2-minute rule, the news cap and the daily cap.',
+      "Trustpilot still withheld its rating on November 25, 2026, citing a guideline breach.",
+      "Check Goat Guard, the minimum holding time for your purchase cohort, the news cap and the daily profit cap; some gains can be removed rather than deferred.",
       'PropRadar has an **affiliate relationship** with the firm; it does not change the score.',
     ],
     sections: [
@@ -469,14 +469,14 @@ export const guideArticles: Record<string, GuideArticle> = {
         heading: 'Who runs GOAT Funded Trader',
         paragraphs: [
           'GOAT Funded Trader launched in **May 2023**. It is a trade name of **Wishes Tower International Limited**, a Hong Kong company, and the simulated trading is provided by **Goat Funded LTD in Saint Lucia**. **No financial regulator** supervises the service. Its terms describe simulated accounts, non-refundable purchases and broad discretion over payouts, which is common in the industry but worth knowing before you buy.',
-          'PropRadar scores it **58/100**, below the 64-point maximum permitted while Trustpilot withholds its rating, and keeps it on the watchlist. The operator is active and reports paying traders, but the current payout caps, deductions and risk-team decisions create meaningful restrictions. PropRadar has an affiliate relationship with GOAT Funded Trader; it does not change this score or review.',
+          "Read the current editorial score on the linked GOAT profile rather than a frozen number. Trustpilot withholding its rating is a review-platform signal, not proof of nonpayment. GOAT reports paying traders, but payout caps, deductions and risk-team discretion remain material restrictions. Our affiliate relationship does not affect the assessment.",
         ],
       },
       {
         heading: 'The Trustpilot situation',
         paragraphs: [
-          'On October 23, 2026, Trustpilot showed **no TrustScore** for the company. Its profile states that "this company\'s rating is unavailable due to a breach of our guidelines" and that Trustpilot "removed a number of fake reviews". The profile still lists 4,352 reviews, split sharply:',
-          'A polarised profile usually means **two very different experiences**: traders who were paid quickly, and traders whose payouts were denied under rules they had not read closely.',
+          "On November 25, 2026, the exact-domain Trustpilot profile still displayed no rating because of a guideline breach. The figures below are a historical snapshot from October 23, 2026, not current counts.",
+          "Review distributions show reported experiences, not independently verified payment or refusal rates. Read dated complaints, replies, and primary payment evidence separately.",
         ],
         stats: [
           { value: '4,352', label: 'reviews listed' },
@@ -502,23 +502,23 @@ export const guideArticles: Record<string, GuideArticle> = {
         bulletStyle: 'flag',
         bullets: [
           '**Goat Guard:** on funded 1-Step and 2-Step accounts, a floating loss of 2% of the initial balance cuts your split to 50%; a second trigger breaches the account.',
-          '**2-minute rule:** profit from trades held under two minutes is removed at payout, while losses from those trades stay on the account.',
-          '**News window:** profit made around high-impact news is capped at 1% of the starting balance.',
-          '**Daily profit cap:** a funded account can bank at most $3,000 of profit per day.',
+          "**Minimum holding time:** funded trades below 120 seconds for purchases before October 6, 2026, or below 60 seconds for purchases from that date, have gains removed at payout; losses remain.",
+          "**News window:** the official FAQ caps gains at 1% of initial balance around qualifying announcements. Its November 23 update says the cap applies per release from November 24, 2026, rather than per trade. Check the applicable version and pending-payout treatment.",
+          "**Daily profit cap:** the general funded rule limits eligible daily gains to $3,000; excess is removed. Verify model-specific exceptions.",
           '**Instant models:** trailing drawdowns, and the account closes on a 1% or 2% floating loss depending on the model.',
         ],
       },
       {
         heading: 'Payouts',
         paragraphs: [
-          'The default profit split is **80%**, with a paid upgrade to 100% at checkout and a scaling plan that can raise it to 90-95%. Most models pay **every 14 days**, with a **$100 minimum** and a **3% processing fee**. The first two payouts are capped at the lower of 6% of the starting balance or $10,000. Payment methods include Rise, bank transfer, Skrill and crypto, each with its own limit.',
-          'Several public claims conflict with the help center, such as payout speed (24 hours versus 2 business days) and maximum account size.',
+          "Payout cycles, splits and minimums depend on the product and cohort. The general payout FAQ specifies a $100 minimum and a 2% processing fee after split and deductions. First-two-request caps generally remove excess gains above the lower of 6% of initial balance or $10,000; special models and eligible $5K cohorts have different caps. Check the current reward policy and payout method for the exact account.",
+          "The current processing FAQ describes two business days after verification is complete. This is the firm's processing commitment, not guaranteed arrival or independent payment proof.",
         ],
         stats: [
-          { value: '80%', label: 'default profit split' },
-          { value: '14 days', label: 'payout cycle on most models' },
-          { value: '$100', label: 'minimum payout' },
-          { value: '3%', label: 'processing fee' },
+          { value: 'Varies', label: 'profit split by programme' },
+          { value: 'Varies', label: 'payout cycle by programme' },
+          { value: '$100', label: 'general minimum; exceptions apply' },
+          { value: '2%', label: 'general processing fee' },
         ],
         callout: { kind: 'warning', text: 'When marketing and terms disagree, **the terms are what will be applied** to your payout.' },
       },
@@ -528,7 +528,7 @@ export const guideArticles: Record<string, GuideArticle> = {
           'The funded rules target specific behaviours. If rule clarity matters more to you than price, compare it with the **higher-scored firms** in our ranking first.',
         ],
         fit: {
-          yes: ['**Small, controlled** floating losses', 'Trades held **well over two minutes**', 'No reliance on **news spikes**', 'A **cheap entry** wanted'],
+          yes: ['**Small, controlled** floating losses', 'Trades held above the applicable minimum', 'No reliance on **news spikes**', 'A **cheap entry** wanted'],
           no: ['**Scalpers**', '**News traders**', 'Trades that need **large intraday drawdowns**'],
         },
       },
@@ -537,30 +537,34 @@ export const guideArticles: Record<string, GuideArticle> = {
       { label: 'GOAT Funded Trader on Trustpilot', url: 'https://www.trustpilot.com/review/goatfundedtrader.com' },
       { label: 'GOAT Funded Trader terms and conditions', url: 'https://www.goatfundedtrader.com/legal/terms-and-conditions' },
       { label: 'GOAT help center: 2-Step Standard', url: 'https://help.goatfundedtrader.com/en/articles/13575169-2-step-standard' },
+      { label: 'GOAT help center: minimum holding time', url: 'https://help.goatfundedtrader.com/en/articles/12849041-what-is-the-minimum-holding-time-for-trades' },
+      { label: 'GOAT help center: news policy', url: 'https://help.goatfundedtrader.com/en/articles/10742084-is-news-trading-allowed' },
+      { label: 'GOAT help center: rewards and caps', url: 'https://help.goatfundedtrader.com/en/articles/11472001-funded-account-reward-guidelines' },
+      { label: 'GOAT help center: payout policy', url: 'https://help.goatfundedtrader.com/en/articles/10742264-how-payouts-work-eligibility-request-processing-and-arrival' },
       { label: 'FuturesHive review, checked October 5, 2026 (third party)', url: 'https://www.futureshive.com/blog/goat-funded-trader-review-2026' },
     ],
   },
 
   'topstep-review': {
-    updated: '2026-11-12',
+    updated: '2026-11-25',
     intro:
       'Topstep is the oldest name in futures prop trading: founded in **2012 in Chicago** by Michael Patak, it ran its Trading Combine years before the current wave of prop firms. That history is its main strength. Its weaknesses are a **futures-only** offer, **frequent rule changes** since late 2025 and a **trailing loss limit** that demands discipline.',
     keyPoints: [
       'US operator since **2012**, futures only, no regulator warning recorded by PropRadar.',
       'The Combine has **no time limit**, and every position must be **closed by the session end**.',
       'New traders keep **90%** of payouts; the minimum request is **$125**.',
-      'After the first payout, the loss limit drops to **$0**: no cushion left.',
+      "After the first XFA payout, the loss limit is permanently fixed at $0; any remaining balance is the cushion.",
     ],
     sections: [
       {
         heading: 'Is Topstep legit?',
         paragraphs: [
-          'Topstep is an **established, US-based operator** with a long public history, a published help center and an affiliated introducing broker, Topstep Brokerage, launched in early 2026. PropRadar scores it **84/100** and has not recorded a regulator warning against it. As with every prop firm, the evaluation and the Express Funded Account are **simulated**: payouts are rewards paid by Topstep, not trading profits from a brokerage account.',
+          "Topstep is a long-running US futures operator. Read its current firm profile for the live score and the scope of our legal checks. The evaluation and Express Funded Account are simulated; rewards come from Topstep rather than brokerage-account trading profits.",
           'On Trustpilot the profile shows a **3.7** TrustScore across **14,955 reviews**, with Trustpilot\'s notice that the company "may be associated with high-risk investments" (checked October 23, 2026). Late 2025 complaints centred on **TopstepX platform outages** and failed stop orders.',
         ],
         stats: [
           { value: '2012', label: 'founded, Chicago' },
-          { value: '84/100', label: 'PropRadar score' },
+          { value: 'XFA', label: 'simulated funded account' },
           { value: '3.7', label: 'Trustpilot, 14,955 reviews (Oct 23, 2026)' },
         ],
       },
@@ -591,11 +595,12 @@ export const guideArticles: Record<string, GuideArticle> = {
         compare: {
           columns: ['Standard path', 'Consistency path'],
           rows: [
-            { label: 'Before each payout', values: ['**5 winning days** of at least $150', '**3 trading days**, largest day at **40% or less** of net profit'] },
+            { label: 'Before each payout', values: ['**5 winning days** of at least $150; positive net profit since last payout (first exempt)', '**3 trading days**, largest day at **40% or less** of net profit'] },
+            { label: 'Maximum per request', values: ['50% of balance; cap $2,000 / $3,000 / $5,000', '50% of balance; cap $3,000 / $4,000 / $6,000'] },
           ],
-          note: 'The choice between the two paths is permanent.',
+          note: 'Caps shown for 50K / 100K / 150K. The limited-time DLL offer can double these caps only when the DLL was added at original eligible Combine checkout; check current eligibility. Path selection is permanent.',
         },
-        callout: { kind: 'warning', text: 'After the first payout the MLL is set to **$0**. That removes the cushion: **one bad day after withdrawing can end the account.**' },
+        callout: { kind: 'warning', text: 'After the first payout the MLL is permanently fixed at $0. The remaining balance is the loss cushion, so withdrawing too much can put the account at risk.' },
       },
       {
         heading: 'Pros and cons',
@@ -627,7 +632,7 @@ export const guideArticles: Record<string, GuideArticle> = {
     sources: [
       { label: 'Topstep help center: Maximum Loss Limit', url: 'https://intercom.help/topstep-llc/en/articles/8284204' },
       { label: 'Topstep help center: consistency', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
-      { label: 'Topstep help center: payout FAQs', url: 'https://intercom.help/topstep-llc/en/articles/8284234-payout-faqs' },
+      { label: 'Topstep help center: current payout policy', url: 'https://help.topstep.com/en/articles/8284233-topstep-payout-policy' },
       { label: 'Topstep on Trustpilot', url: 'https://www.trustpilot.com/review/topstep.com' },
       { label: 'Topstep (Wikipedia)', url: 'https://en.wikipedia.org/wiki/Topstep' },
     ],
