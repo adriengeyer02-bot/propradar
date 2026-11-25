@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getProgramEvidence, mapProgramRules, programCardCopy } from '../../../lib/programCardData';
+import { getProgrammeScores, programmeScoreCopy } from '../../../lib/programmeScores';
 import '../../../program-cards.css';
 import type { CSSProperties } from 'react';
 import { firmMetaOverrides } from '../../../lib/firmMetaOverrides';
@@ -721,6 +722,9 @@ export default async function FirmPage({ params }: Props) {
       : 'firm-title';
   const sourceCount = regulatoryAudit.sources.length || firm.sources.length;
   const specificStrengthPoints = uniqueProfilePoints(firm.strengths);
+  const sp = programmeScoreCopy(locale);
+  const productScores = new Map(firm.products.map(product => [product.id, firm.status === 'Fermée' || firm.listedDomainWarning ? [] : getProgrammeScores(firm.slug,product,getFirmUpdate(firm.slug))]));
+  const assessedProducts = [...productScores.values()].filter(scores=>scores.length).length;
   const specificRiskPoints = uniqueProfilePoints([
     ...regulatoryAudit.redFlags,
     ...firm.reviewSignals.payoutIssues,
@@ -997,7 +1001,33 @@ export default async function FirmPage({ params }: Props) {
               <strong>{f.domainWarning}</strong> {tx(firm.listedDomainWarning)}
             </p>
           ) : (
-            <p className="pr-firm-verdict">{tx(firm.verdict)}</p>
+            <div className="pr-firm-snapshot">
+              <h2>{sp.snapshot}</h2>
+              <div className="pr-snapshot-grid">
+                <div className="pr-snapshot-tile">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 4 3 5-7"/><path d="M16 7h4v4"/></svg>
+                  <span>{sp.market}</span>
+                  <strong>{firm.styles.slice(0,3).map(style=>tx(style)).join(' · ') || v(toEnglishText(firm.products[0]?.type??'')) || sp.pending}</strong>
+                </div>
+                <div className="pr-snapshot-tile">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"/></svg>
+                  <span>{sp.assessed}</span>
+                  <strong className="pr-snapshot-count">{assessedProducts}<small> / {firm.products.length}</small></strong>
+                  <a href="#produits">{assessedProducts ? sp.provisional : sp.noGrade} ↓</a>
+                </div>
+                <div className="pr-snapshot-tile pr-snapshot-strength">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+                  <span>{sp.strength}</span>
+                  <strong>{specificStrengthPoints[0] ? tx(specificStrengthPoints[0]) : sp.pending}</strong>
+                </div>
+                <div className="pr-snapshot-tile pr-snapshot-watch">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg>
+                  <span>{sp.watch}</span>
+                  <strong>{tx(topRiskPoints[0]??firm.verdict)}</strong>
+                </div>
+              </div>
+              <details className="pr-snapshot-verdict"><summary>{sp.fullProfile}</summary><p>{tx(firm.verdict)}</p>{specificStrengthPoints[0] ? <p>{tx(specificStrengthPoints[0])}</p> : null}{topRiskPoints[0] ? <p>{tx(topRiskPoints[0])}</p> : null}</details>
+            </div>
           )}
 
           <aside className="pr-firm-scorecard" aria-label={fmt(f.scoreAria, { name: firm.name })}>
@@ -1023,6 +1053,8 @@ export default async function FirmPage({ params }: Props) {
           </aside>
         </div>
 
+        <details className="pr-snapshot-more">
+          <summary>{f.details} · {f.facts.lastReview} <ReviewFreshness date={firm.lastReviewed} labels={{ today: t.radar.today, yesterday: t.radar.yesterday, daysAgo: t.radar.daysAgo }} /></summary>
         <dl className="pr-key-facts">
           <div><dt>{f.facts.from}</dt><dd>{v(priceLabel(firm))}</dd></div>
           <div><dt>{f.facts.split}</dt><dd>{v(profitSplitLabel(firm))}</dd></div>
@@ -1034,6 +1066,7 @@ export default async function FirmPage({ params }: Props) {
             <div className="pr-key-facts-wide"><dt>{f.facts.payout}</dt><dd><PayoutFact text={tx(firm.payoutDelay)} label={f.details} /></dd></div>
           )}
         </dl>
+        </details>
 
         {locale !== 'en' ? <p className="pr-fineprint pr-data-note">{f.dataNote}</p> : null}
 
@@ -1053,16 +1086,16 @@ export default async function FirmPage({ params }: Props) {
         ) : null}
 
         {gaps.length ? (
-          <aside className="pr-gaps" aria-labelledby={`gaps-${firm.slug}`}>
+          <details className="pr-gaps pr-snapshot-gaps" aria-labelledby={`gaps-${firm.slug}`}>
+            <summary id={`gaps-${firm.slug}`}>{f.gapsTitle} · {gaps.length}</summary>
             <div>
-              <h2 id={`gaps-${firm.slug}`}>{f.gapsTitle}</h2>
               <p>{fmt(f.gapsText, { name: firm.name })}</p>
             </div>
             <ul>
               {gaps.map((gap) => <li key={gap}>{(f.gaps as Record<string, string>)[gap] ?? gap}</li>)}
             </ul>
             <SourceSubmission firm={firm.name} slug={firm.slug} copy={f} />
-          </aside>
+          </details>
         ) : null}
 
         <FirmSectionNav
@@ -1095,6 +1128,10 @@ export default async function FirmPage({ params }: Props) {
           <div className="grid-2 pr-program-grid">
             {firm.products.map((product) => {
               const pc = programCardCopy(locale);
+              const scores = productScores.get(product.id) ?? [];
+              const minScore = scores.length ? Math.min(...scores.map(s=>s.score)) : undefined;
+              const maxScore = scores.length ? Math.max(...scores.map(s=>s.score)) : undefined;
+              const displayScore = minScore===undefined ? '—' : minScore===maxScore ? String(minScore) : `${minScore}–${maxScore}`;
               const evidence = getProgramEvidence(firm.slug, product.id);
               const mapped = mapProgramRules(product, getFirmUpdate(firm.slug));
               const matchingPrices = priceTable?.programs.filter(p => p.productId === product.id) ?? [];
@@ -1119,12 +1156,22 @@ export default async function FirmPage({ params }: Props) {
                     </div>
                     <h3>{tx(product.name)}</h3>
                   </div>
-                  <div className="pr-program-score" aria-label={pc.score + ': ' + pc.pending}>
+                  <div className={`pr-program-score ${scores.length?'pr-program-score-provisional':''}`} aria-label={pc.score + ': ' + displayScore + (scores.length ? '/100 · '+sp.provisional : ' · '+sp.pending)}>
                     <span>{pc.score}</span>
-                    <strong aria-hidden="true">—<small>/100</small></strong>
-                    <small>{pc.pending}</small>
+                    <strong aria-hidden="true">{displayScore}<small>/100</small></strong>
+                    <small>{scores.length ? sp.provisional : sp.pending}</small>
                   </div>
                 </div>
+                {scores.length ? <details className="pr-program-inline-details pr-program-score-detail">
+                  <summary>{sp.detail} · V3.1</summary>
+                  <p className="pr-program-score-warning">{sp.warning}</p>
+                  {scores.map(score=><div className="pr-program-score-path" key={score.scope}>
+                    <div className="pr-program-score-path-head"><strong>{tx(score.scope)}</strong><b>{score.score}/100</b></div>
+                    <ul>{score.deductions.map((d,i)=><li key={d.family+i}><span>{tx(d.reason)}</span><b>−{d.points}</b>{d.source ? <a href={d.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}</li>)}</ul>
+                    <small>{f.checkedLabel} · {formatDateLong(locale,score.checkedOn)}</small>
+                    {score.sources.length ? <div className="pr-program-sources">{score.sources.map((source,i)=><a href={source} key={source} target="_blank" rel="noopener noreferrer">{pc.official} {i+1} ↗</a>)}</div> : null}
+                  </div>)}
+                </details> : null}
                 <p className="muted pr-product-intro">{tx(product.description)}</p>
                 <dl className="pr-program-facts">
                   {facts.map(([label,value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
