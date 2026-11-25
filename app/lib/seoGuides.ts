@@ -900,19 +900,19 @@ export const seoGuides: SeoGuide[] = [
     slug: 'goat-funded-trader-avis',
     title: 'GOAT Funded Trader Review: FIRSTGFT, BOGO40 and Payouts',
     metaDescription:
-      'GOAT Funded Trader review: compare FIRSTGFT and BOGO40, 1-step, 2-step, 3-step and Instant rules, payout terms, news trading and key risks.',
+      "GOAT Funded Trader review: current 1-step, 2-step and Instant programme rules, payout deductions, news limits and purchase-cohort restrictions.",
     eyebrow: 'Brand review',
     h1: 'Goat Funded Trader review: strong offer, but reread the rules before buying',
     intent: 'risque',
     demandSignal:
       'Brand decision search: the trader wants to know whether GFT is reliable, which current code gives the better immediate value, which model to choose and which rules to verify before paying.',
     answer:
-      'GOAT Funded Trader combines 1-step, 2-step, 3-step and Instant Funding models with two current official offers: FIRSTGFT gives new customers up to 50% off eligible plans, while BOGO40 gives 40% off and a conditional same-size account only after the first successful payout. Compare the exact model before choosing the code.',
+      "GOAT Funded Trader offers several evaluation and instant models; the 3-step model is historical. Compare the exact programme and cohort before choosing a discount. The current official payout rules include profit deductions, caps and risk review.",
     primaryKeywords: ['Goat Funded Trader review', 'GFT prop firm', 'Goat Funded Trader discount code'],
     secondaryKeywords: ['FIRSTGFT code', 'BOGO40 code', 'GFT payout', 'GFT instant funding', 'Goat Funded Trader rules'],
     checks: [
       'Compare FIRSTGFT and BOGO40 at checkout without selecting an oversized account.',
-      'Compare 1 step, 2 step, 3 step and Instant because the rules are not identical.',
+      "Compare current 1-step, 2-step and Instant programmes; check legacy offers separately.",
       'Verify news trading, weekend holding, lot size, daily loss, max loss and payout delay.',
       'Read recent feedback from the last 30 to 60 days across Reddit, Discord and X.',
       'Look for payout-denial examples and the most common rejection reasons on the exact program you want.',
@@ -926,7 +926,7 @@ export const seoGuides: SeoGuide[] = [
       {
         question: 'Which GFT model should I choose?',
         answer:
-          'Instant and 1-step models are faster, but they can be stricter. 2-step or 3-step models may be easier to read if you want more validation and less pressure before funded-stage rules apply.',
+          "Instant and 1-step models can be faster but more restrictive. Compare the current 2-step rules and check the funded stage before paying; 3-step is a historical offer.",
       },
     ],
     internalLinks: [
@@ -1818,7 +1818,7 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       {
         question: 'How do Topstep and Apex payout rules differ?',
         answer:
-          'Both firms use program-specific eligibility conditions. Compare minimum trading days, consistency or best-day requirements, payout caps, account balance thresholds and the exact funded account before purchase.',
+          "Topstep XFA Standard requires five $150 winning days and positive profit since the last withdrawal (first exempt); XFA Consistency requires three days and a 40% limit. Its standard per-request caps vary by size and path. Apex's User Agreement makes cash reward distribution discretionary; compare the actual Performance Account payout rules as well as the caps.",
       },
     ],
     internalLinks: [
@@ -1890,12 +1890,12 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
     metaDescription: 'Is GOAT Funded Trader legit? 2026 review: Hong Kong and Saint Lucia operators, funded-account rules, payout caps, withheld Trustpilot rating and who it suits.',
     eyebrow: 'Firm review',
     h1: 'GOAT Funded Trader review 2026: is it legit?',
-    answer: 'GOAT Funded Trader is a real, very visible prop firm launched in 2023 and run from Hong Kong and Saint Lucia, with no financial regulator. It does pay traders, but its funded accounts carry strict rules (a 2% floating-loss guard, a 2-minute minimum hold, capped first payouts) and Trustpilot currently withholds its rating for a guideline breach. Read the funded rules before the discount.',
+    answer: "GOAT Funded Trader reports paying traders, but funded rules include Goat Guard on applicable accounts, minimum holding times of 60 or 120 seconds depending on purchase date, and deductions above payout caps. On November 25, 2026, Trustpilot still withheld the rating. Read the exact programme rules before purchasing.",
     primaryKeywords: ['goat funded trader review', 'is goat funded trader legit', 'goat funded trader'],
     secondaryKeywords: ['goat funded trader trustpilot', 'goat funded trader rules', 'goat funded trader payout', 'goat guard', 'GFT prop firm', 'goatfundedtrader'],
     checks: [
-      'Read the funded-account rules, not only the challenge: Goat Guard, the 2-minute rule and the news-window cap apply after you pass.',
-      'Check the payout cap on your first two withdrawals and the 3% processing fee.',
+      "Read Goat Guard, the cohort-specific minimum holding time and the news-window policy; check whether each applies during evaluation or funding.",
+      "Check first-two-payout caps and exceptions, excess-profit deductions and the general 2% processing fee.",
       'Confirm which model you are buying: the 3-Step model was retired in August 2026 and 2-Step Pro stopped selling in June 2026.',
       'Read recent payout feedback from the last 30 to 60 days, not only star ratings.',
       'Compare discount codes only after choosing a model that fits your trading.',
@@ -1904,12 +1904,12 @@ const guideDisplayOverrides: Record<string, SeoGuideDisplayOverride> = {
       {
         question: 'Is GOAT Funded Trader legit?',
         answer:
-          'It is a real operator that pays traders, but it is not regulated by any financial authority and its terms give it wide discretion over payouts. PropRadar keeps it on the watchlist with a 58/100 score, and Trustpilot withholds its rating for a breach of its guidelines (checked October 23, 2026).',
+          "GOAT reports paying traders; its published rules include discretionary reviews and material deductions. The exact-domain Trustpilot rating was withheld on November 25, 2026. Consult the current firm profile for the score and evidence limitations; neither a rating nor its suspension proves payment outcomes.",
       },
       {
         question: 'Why is the GOAT Funded Trader Trustpilot rating unavailable?',
         answer:
-          'Trustpilot states that the rating is unavailable due to a breach of its guidelines and that it removed a number of fake reviews for the company. The profile still shows 4,352 reviews, 46% five-star and 40% one-star (checked October 23, 2026).',
+          "Trustpilot continued to withhold the rating on November 25, 2026 because of a guideline breach. The historical October review distribution is not a current measure of payment reliability.",
       },
       {
         question: 'What is the Goat Guard rule?',
