@@ -32,5 +32,16 @@
   "sha256": "f7bfff8bfa94731e43a02b2f42e4dc5b7760410bf563f2256023a2034476ac3b",
   "file": "f67c794649b8.txt",
   "fetchedAt": "2026-11-25T11:47:04.489Z"
+ },
+ {
+  "url": "upload:8f7220dc-fund_your_fx.pdf",
+  "finalUrl": "upload:8f7220dc-fund_your_fx.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 84469,
+  "sha256": "acb777383517c9ade474a664a937656e7605743cffca01efc86d340ef967e267",
+  "file": "upload-e07ff61648.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

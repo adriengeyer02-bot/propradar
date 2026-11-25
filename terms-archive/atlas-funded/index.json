@@ -25,7 +25,7 @@
  {
   "url": "https://help.atlasfunded.com/one-step",
   "finalUrl": "https://help.atlasfunded.com/one-step",
-  "title": "1-Step · Atlas Funded Docs",
+  "title": "1-Step \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 5514,
@@ -36,7 +36,7 @@
  {
   "url": "https://help.atlasfunded.com/two-step",
   "finalUrl": "https://help.atlasfunded.com/two-step",
-  "title": "2-Step · Atlas Funded Docs",
+  "title": "2-Step \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 5436,
@@ -58,7 +58,7 @@
  {
   "url": "https://help.atlasfunded.com/rules",
   "finalUrl": "https://help.atlasfunded.com/rules",
-  "title": "Rules at a glance · Atlas Funded Docs",
+  "title": "Rules at a glance \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 6310,
@@ -69,7 +69,7 @@
  {
   "url": "https://help.atlasfunded.com/prohibited-practices",
   "finalUrl": "https://help.atlasfunded.com/prohibited-practices",
-  "title": "Prohibited practices · Atlas Funded Docs",
+  "title": "Prohibited practices \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 6377,
@@ -80,7 +80,7 @@
  {
   "url": "https://help.atlasfunded.com/atlas-protector",
   "finalUrl": "https://help.atlasfunded.com/atlas-protector",
-  "title": "Atlas Protector · Atlas Funded Docs",
+  "title": "Atlas Protector \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 5747,
@@ -91,7 +91,7 @@
  {
   "url": "https://help.atlasfunded.com/instant-funded",
   "finalUrl": "https://help.atlasfunded.com/instant-funded",
-  "title": "Instant Funded · Atlas Funded Docs",
+  "title": "Instant Funded \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 6262,
@@ -102,7 +102,7 @@
  {
   "url": "https://help.atlasfunded.com/futures-standard",
   "finalUrl": "https://help.atlasfunded.com/futures-standard",
-  "title": "Atlas Standard · Atlas Funded Docs",
+  "title": "Atlas Standard \u00b7 Atlas Funded Docs",
   "status": 200,
   "kind": "html",
   "chars": 6087,
@@ -131,5 +131,16 @@
   "sha256": "721a53242f75ed4111499644884c63312bb4c521849a09aaf39af07ea98ba539",
   "file": "f5a13cf9791a.txt",
   "fetchedAt": "2026-11-25T11:50:43.600Z"
+ },
+ {
+  "url": "upload:25b01f8b-ATLAS_FUNDED.pdf",
+  "finalUrl": "upload:25b01f8b-ATLAS_FUNDED.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 17234,
+  "sha256": "ff6f600ab0bfe5f06b57a729749aaf1ed94c3c1fe2a6328f3291a3f99b436a85",
+  "file": "upload-fbb07b47ba.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

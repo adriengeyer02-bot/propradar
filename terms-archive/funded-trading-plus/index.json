@@ -120,5 +120,16 @@
   "sha256": "20f347453f83f21e34cc48906abd2fa1095cc09ebe50a5c4c7f69fabf90a1428",
   "file": "d3a126e58a73.txt",
   "fetchedAt": "2026-11-25T11:44:30.685Z"
+ },
+ {
+  "url": "upload:552e97fe-funded_trading_plus.pdf",
+  "finalUrl": "upload:552e97fe-funded_trading_plus.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 50043,
+  "sha256": "8d66351e57f0460e4ea1b9e7b9eef97fe81c184f6cc154233eb8032095c54649",
+  "file": "upload-bfaf93dd03.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

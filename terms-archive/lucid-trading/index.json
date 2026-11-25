@@ -131,5 +131,16 @@
   "sha256": "fe82ed7ff0713dbd3ef083be873e04e90eea11c0e97c4904ee4646118cf823a0",
   "file": "585ee6d42e9b.txt",
   "fetchedAt": "2026-11-25T11:48:56.023Z"
+ },
+ {
+  "url": "upload:99a0a12f-lucid.pdf",
+  "finalUrl": "upload:99a0a12f-lucid.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 36495,
+  "sha256": "b6f77b169b111261738b472c8ecf2ecb1a3ad5852e0f2291010cc02ad8e1f384",
+  "file": "upload-c21ddc04e5.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

@@ -80,12 +80,23 @@
  {
   "url": "https://mentfunding.com/es/terms-of-service.html",
   "finalUrl": "https://mentfunding.com/es/terms-of-service",
-  "title": "Términos del Servicio - Ment Funding",
+  "title": "T\u00e9rminos del Servicio - Ment Funding",
   "status": 200,
   "kind": "html",
   "chars": 33106,
   "sha256": "9daa2145c600f3dd6a46cea9e454e6360ed1ad430c8c7b86ff3dec4262b6ddaf",
   "file": "9b3ae82a78c9.txt",
   "fetchedAt": "2026-11-25T11:43:42.666Z"
+ },
+ {
+  "url": "upload:57c77dd6-ANALYTIX.pdf",
+  "finalUrl": "upload:57c77dd6-ANALYTIX.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 33830,
+  "sha256": "fbe979bfcf6bb217c806ffa297f79e5c44f728c5208ec095ccfab93b5c8739f3",
+  "file": "upload-4c36f17229.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

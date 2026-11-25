@@ -47,7 +47,7 @@
  {
   "url": "https://support.fintokei.com/en/articles/11316016-what-is-the-definition-of-using-multiple-ip-addresses-from-many-countries-when-connecting-to-your-fintokei-demo-accounts-or-masking-the-ip-addresses",
   "finalUrl": "https://support.fintokei.com/en/articles/11316016-what-is-the-definition-of-using-multiple-ip-addresses-from-many-countries-when-connecting-to-your-fintokei-demo-accounts-or-masking-the-ip-addresses",
-  "title": "​​What is the definition of using multiple IP addresses from many countries when connecting to your Fintokei Demo accounts or masking the IP addresses? | Fintokei FAQs",
+  "title": "\u200b\u200bWhat is the definition of using multiple IP addresses from many countries when connecting to your Fintokei Demo accounts or masking the IP addresses? | Fintokei FAQs",
   "status": 200,
   "kind": "html",
   "chars": 7243,
@@ -131,5 +131,16 @@
   "sha256": "45c6448586a0b5155561c2649f0b9398cf866111cbbc160b957c6fdb4863cf01",
   "file": "f762b48dfb26.txt",
   "fetchedAt": "2026-11-25T11:43:52.017Z"
+ },
+ {
+  "url": "upload:5d12d055-11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+  "finalUrl": "upload:5d12d055-11_2026_Fintokei_General_Terms_V17_EN_0993905327.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-pdf",
+  "chars": 115038,
+  "sha256": "133d746171b172e96bebcbea5e6d75eaa3f207598ba3e1bc74198d22d84ac674",
+  "file": "upload-d1d83d48f0.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

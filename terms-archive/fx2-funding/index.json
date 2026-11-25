@@ -65,5 +65,16 @@
   "sha256": "cd4f6d2b9e3bff8be0e917f44f9e24d2eae6b2f56d31bcbc662cfbc1531a7b07",
   "file": "acac7ab76345.txt",
   "fetchedAt": "2026-11-25T11:45:24.725Z"
+ },
+ {
+  "url": "upload:57c77dd6-ANALYTIX.pdf",
+  "finalUrl": "upload:57c77dd6-ANALYTIX.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 33830,
+  "sha256": "fbe979bfcf6bb217c806ffa297f79e5c44f728c5208ec095ccfab93b5c8739f3",
+  "file": "upload-4c36f17229.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

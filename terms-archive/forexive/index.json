@@ -14,7 +14,7 @@
  {
   "url": "https://forexive.com/faq/general",
   "finalUrl": "https://forexive.com/faq/general",
-  "title": "General: Help Centre FAQ — FOREXIVE",
+  "title": "General: Help Centre FAQ \u2014 FOREXIVE",
   "status": 200,
   "kind": "html",
   "chars": 19318,
@@ -25,7 +25,7 @@
  {
   "url": "https://forexive.com/faq/instant",
   "finalUrl": "https://forexive.com/faq/instant",
-  "title": "Instant Funding: Help Centre FAQ — FOREXIVE",
+  "title": "Instant Funding: Help Centre FAQ \u2014 FOREXIVE",
   "status": 200,
   "kind": "html",
   "chars": 9419,
@@ -36,7 +36,7 @@
  {
   "url": "https://forexive.com/rules",
   "finalUrl": "https://forexive.com/rules",
-  "title": "Trading Rules and Objectives by Model and Stage — FOREXIVE",
+  "title": "Trading Rules and Objectives by Model and Stage \u2014 FOREXIVE",
   "status": 200,
   "kind": "html",
   "chars": 4595,
@@ -58,7 +58,7 @@
  {
   "url": "https://forexive.com/terms-and-conditions/",
   "finalUrl": "https://forexive.com/terms-and-conditions",
-  "title": "We could not find that page — FOREXIVE",
+  "title": "We could not find that page \u2014 FOREXIVE",
   "status": 404,
   "kind": "html",
   "chars": 2047,
@@ -69,7 +69,7 @@
  {
   "url": "https://forexive.com/faq",
   "finalUrl": "https://forexive.com/challenges",
-  "title": "Prop Trading Challenges: Compare All Four Models — FOREXIVE",
+  "title": "Prop Trading Challenges: Compare All Four Models \u2014 FOREXIVE",
   "status": 200,
   "kind": "html",
   "chars": 7488,
@@ -80,12 +80,23 @@
  {
   "url": "https://forexive.com/contact",
   "finalUrl": "https://forexive.com/challenges",
-  "title": "Prop Trading Challenges: Compare All Four Models — FOREXIVE",
+  "title": "Prop Trading Challenges: Compare All Four Models \u2014 FOREXIVE",
   "status": 200,
   "kind": "html",
   "chars": 7488,
   "sha256": "898914b24066936c88b0c32fe4d0030a9c74568a3bc059f7ba41ac4e715af328",
   "file": "d9967b42ebdb.txt",
   "fetchedAt": "2026-11-25T11:46:35.870Z"
+ },
+ {
+  "url": "upload:95d9e010-FOREXIVE.pdf",
+  "finalUrl": "upload:95d9e010-FOREXIVE.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 14066,
+  "sha256": "17c43d124574e68fb88f26ac167bb51fa1f2a3d202c0d2ee8d24d8bab7185d8e",
+  "file": "upload-6b42709510.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]

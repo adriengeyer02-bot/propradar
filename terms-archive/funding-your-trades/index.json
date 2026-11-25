@@ -120,5 +120,16 @@
   "sha256": "6bdb25023bd14c6ed2ba3fea2f3ca0981005ac999ea065a4f89b3edaae518e5c",
   "file": "3394f7606956.txt",
   "fetchedAt": "2026-11-25T11:45:54.222Z"
+ },
+ {
+  "url": "upload:8dc03fbc-funding_your_trade.pdf",
+  "finalUrl": "upload:8dc03fbc-funding_your_trade.pdf",
+  "title": "PDF saved by Geyer, 2026-11-25",
+  "status": 200,
+  "kind": "upload-ocr",
+  "chars": 18409,
+  "sha256": "56474424545ed6ab3b006ed2c663520f6ebe7447ffa442ab553800e829e6d7c1",
+  "file": "upload-712fe3a66d.txt",
+  "fetchedAt": "2026-11-25T15:00:24.434502Z"
  }
 ]
