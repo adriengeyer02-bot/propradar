@@ -2,7 +2,7 @@
   "slug": "directfundedtrader",
   "status": "PARTIAL",
   "checkedOn": "2026-11-25",
-  "method": "Full visible FAQ/Rules 02f0078b5989.txt; selected excerpts of 7c21c3923816.txt terms (first combined output truncated). Duplicate terms/FAQ, risk and privacy not checked in full.",
+  "method": "Full read of both terms captures 7c21c3923816.txt and 3296e6b12eb8.txt (§§1–17; promotion header differs), FAQ/rules 02f0078b5989.txt (duplicate 9ced8d73d2f0.txt same body hash), privacy 647d3266202d.txt, risk disclosure 905b80bd492e.txt. Actual individual funded agreement referenced in §8 not captured. Archive d5cf8d01fcc97583ee3565af8361dc135f4c8b08.",
   "facts": [
     {
       "code": "B7",
@@ -12,35 +12,53 @@
       "checkedOn": "2026-11-25"
     },
     {
-      "code": "B4",
-      "text": "FAQ says funded account connected to live account and profits paid, whereas terms disclaimer says “All trading will occur on demo accounts only.” Verify if live replication rather than trader's own live account; candidate contradiction not definitive.",
-      "source": "https://directfundedtrader.com/faq-rules",
-      "locator": "What is the Direct Funded Trader program?; Terms https://directfundedtrader.com/termsandservices final disclaimer",
-      "checkedOn": "2026-11-25"
-    },
-    {
-      "code": "E_HARSH",
-      "text": "FAQ MT5 master password change causes account to be “terminated instantly”; funded SL omission within 30 seconds disables account. No explicit all-profit forfeiture in FAQ; verify sanction scope before counting.",
-      "source": "https://directfundedtrader.com/faq-rules",
-      "locator": "Can I Change My MT5 Password?; Is It Mandatory To Use Stop Loss For All Trades?",
-      "checkedOn": "2026-11-25"
-    },
-    {
       "code": "NOTE",
       "text": "FAQ 60-second minimum hold breach immediate disabling; three trades weekly on distinct days funded; first payout four weeks, subsequent 14 days. FAQ internally says drawdown floor 100% then example 90%; not B4.",
       "source": "https://directfundedtrader.com/faq-rules",
       "locator": "Minimum trade duration; trades per week; How often will I be paid?; Overall Drawdown",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "B4",
+      "text": "FAQ refund: 'you can request a refund in case you do not start trading within 14 days of your registration'; terms §17 cancellation: 'not entitled to a refund of any fees previously paid' without that exception. Same point of cancellation before trading, subject to applicable version.",
+      "source": "https://directfundedtrader.com/faq-rules",
+      "locator": "What Is Your Refund Policy?; https://directfundedtrader.com/termsandservices §17",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§8 requires individual agreement after successful evaluation; FAQ confirms contract is sent after completing evaluation. FAQ funded SL within 30 seconds or disabled, password change instant termination, all trades ≥60 seconds, news positions closed ±5 min funded. Severe operational restrictions, but no explicit all-profit forfeiture for these procedural breaches in read text.",
+      "source": "https://directfundedtrader.com/faq-rules",
+      "locator": "Do I need a license; Can I Change My MT5 Password; Is It Mandatory To Use Stop Loss; minimum trade duration; news; terms §8",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§15 termination expressly preserves antecedent claims and surviving payment obligations. §9 prohibits sale of user data.",
+      "source": "https://directfundedtrader.com/termsandservices",
+      "locator": "§9; §15",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "FAQ consistency explicitly Instant Funded only, no percentage stated. No best-day rule for Evaluation/Fast Funding in captured FAQ. FAQ says demo accounts connected to firm's live account, terms §1 also says demo accounts connected to capital; not necessarily contradiction because customer trades demo, replication possible.",
+      "source": "https://directfundedtrader.com/faq-rules",
+      "locator": "What is the Consistency Rule; What is the Direct Funded Trader program; terms §1 and disclaimer",
       "checkedOn": "2026-11-25"
     }
   ],
   "rejected": {
     "B1": "Terms §15 no-notice termination expressly preserves antecedent claims; no unconditional forfeiture shown.",
     "B3": "Generic continued-use modification not enough.",
-    "CONS": "FAQ consistency only Instant side model; no numeric threshold."
+    "CONS": "FAQ consistency only Instant side model; no numeric threshold.",
+    "B4": "Demo vs live replication not proven contradictory; refund discrepancy coded separately.",
+    "E_HARSH": "Immediate closure for password change or missed SL, but no explicit earned-payout forfeiture established in available text."
   },
   "toVerify": {
-    "coverage": "Read whole terms, compare www version, separate funded agreement, exact consequences of account disabling and actual live/sim structure.",
-    "B4": "Check whether live replication statement truly contradicts demo execution.",
-    "E_HARSH": "Check earned reward forfeiture."
+    "coverage": "All unique available archive bodies read, including terms versions. Separate funded individual agreement §8, Turbo plan-specific rules and actual signed terms absent; status PARTIAL for missing documents.",
+    "B2": "§6 qualitative market behavior/harm clause not explicitly linked to earned reward sanction in available agreement; obtain funded agreement.",
+    "B4": "Resolve refund rule priority and accepted version; FAQ internal drawdown 100% vs example 90% is internal inconsistency only.",
+    "E_HARSH": "Treatment of accrued payouts after closure for missed SL/password change.",
+    "CONS": "Instant side model exact threshold not stated."
   }
 }
