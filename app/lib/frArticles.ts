@@ -28,12 +28,12 @@ export const frArticles: FrArticle[] = [
     enPath: '/guides/prop-firm-hidden-rules',
     title: 'Prop firms : 9 règles cachées à vérifier avant de payer (2026)',
     metaDescription: 'Règles cachées des prop firms : comparatif sourcé des interdictions VPN/VPS et du news trading en challenge et au payout (FTMO, GFT, Topstep…).',
-    eyebrow: 'Enquête indépendante · 16 novembre 2026',
+    eyebrow: 'Enquête indépendante · 25 novembre 2026',
     h1: 'Règles cachées des prop firms : ce que la publicité ne dit pas',
     answer: 'Avant de payer un challenge, vérifiez les conditions du compte financé et du premier retrait : trading pendant les annonces, règle de consistance, VPN, scalping, pays acceptés et pouvoirs contractuels de la firme. Les exemples ci-dessous proviennent des propres conditions publiées par les entreprises, y compris nos partenaires affiliés.',
     keywords: ['règles cachées prop firm', 'prop firm sans règles cachées', 'règles payout prop firm', 'consistency rule', 'payout refusé'],
     published: '2026-11-16',
-    updated: '2026-11-16',
+    updated: '2026-11-25',
     intro: 'Une société peut annoncer un gros profit split et un challenge simple, puis appliquer au compte financé des conditions plus complexes. Nous parlons ici de **règles faciles à manquer**, et non nécessairement de règles volontairement dissimulées. Chaque exemple renvoie aux **conditions publiées par la firme elle-même**. Et oui, PropRadar examine aussi les sociétés avec lesquelles il a une affiliation.',
     keyPoints: [
       'Les règles du **challenge** ne sont pas forcément celles du **compte financé**.',
@@ -42,6 +42,7 @@ export const frArticles: FrArticle[] = [
       'Sources officielles consultées le **16 novembre 2026** ; les contrats peuvent évoluer.',
     ],
     sections: [
+      {"heading":"Mise à jour : quatre effets très différents sur les gains","paragraphs":["Un retrait retardé n'est pas une confiscation. Il faut distinguer l'inéligibilité temporaire, la suppression d'une partie des profits, la fermeture du compte et le refus discrétionnaire de rémunération. Voici des exemples de dispositions publiées, pas des constats de pratiques illégales."],"compare":{"columns":["Disposition","Conséquence possible"],"rows":[{"label":"Apex, articles 12 et 13","values":["Décision discrétionnaire sur les récompenses ; réponse à un audit sous 48 h sauf prolongation","Refus des gains impayés ; recours interne ordinaire exclu par le texte"],"sourceUrl":"https://dashboard.apextraderfunding.com/agreement/user-agreement"},{"label":"Apex, article 15","values":["Niveau professionnel ou performances exceptionnelles","Exclusion et refus de récompenses impayées possibles"],"sourceUrl":"https://dashboard.apextraderfunding.com/agreement/user-agreement"},{"label":"Maven, selon le programme","values":["Plafond de profits applicable","Excédent supprimé, non reporté"],"sourceUrl":"https://maventrading.com/terms-and-conditions"},{"label":"The5ers High Stakes","values":["Exécutions dans les deux minutes avant/après une annonce concernée","Gains supprimés, pertes conservées"],"sourceUrl":"https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"},{"label":"FundedNext Futures Direct","values":["Consistance perpétuelle de 20 %","Meilleure journée historique conservée après chaque retrait"],"sourceUrl":"https://helpfutures.fundednext.com/fr/articles/17430319-qu-est-ce-que-la-perpetual-consistency-rule-et-comment-fonctionne-t-elle"}],"note":"Sources consultées le 25 novembre 2026. Les autres tableaux conservent leur date de recherche initiale."},"callout":{"kind":"warning","text":"Conservez les conditions acceptées à l'achat, le contrat funded et les réponses écrites du support. Vérifiez le sort de l'excédent et des gains en attente."}},
       {
         heading: '1. News trading : autorisé pendant le challenge, limité ensuite',
         paragraphs: [
@@ -182,6 +183,10 @@ export const frArticles: FrArticle[] = [
       },
     ],
     sources: [
+      {"label":"Apex : contrat utilisateur","url":"https://dashboard.apextraderfunding.com/agreement/user-agreement"},
+      {"label":"Maven : CGU","url":"https://maventrading.com/terms-and-conditions"},
+      {"label":"The5ers High Stakes","url":"https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"},
+      {"label":"FundedNext Futures : consistance perpétuelle","url":"https://helpfutures.fundednext.com/fr/articles/17430319-qu-est-ce-que-la-perpetual-consistency-rule-et-comment-fonctionne-t-elle"},
       { label: 'E8 Markets : news trading et différences entre programmes', url: 'https://help.e8markets.com/en/articles/9185497-can-i-trade-news' },
       { label: 'FundingPips : règles de news et de week-end', url: 'https://help.fundingpips.com/hc/en-us/articles/34504137479441-News-Trading-Weekend-Holding' },
       { label: 'GOAT Funded Trader : VPN/VPS et environnements hébergés', url: 'https://help.goatfundedtrader.com/en/articles/17362726-can-i-use-a-vpn-vps-proxy-or-any-other-hosting-service-while-trading' },
@@ -513,18 +518,19 @@ export const frArticles: FrArticle[] = [
     eyebrow: 'Règles expliquées',
     h1: 'Règle de consistance en prop firm : comment elle se calcule',
     answer:
-      'La règle de consistance limite la part de votre profit total qui peut venir d\'une seule journée. Calcul : profit de la meilleure journée divisé par le profit total, multiplié par 100. Au-dessus de la limite (souvent 40 à 55 %), vous devez simplement gagner davantage avant de valider le challenge ou de demander un payout.',
+      "La consistance mesure souvent le poids de la meilleure journée dans le profit total. Une limite de 40 à 55 % peut être raisonnable ; certains programmes imposent 15 ou 20 %, d'autres une base historique. Le dépassement retarde parfois l'éligibilité, mais les conséquences exactes dépendent du contrat.",
     keywords: ['règle de consistance prop firm', 'consistency rule', 'prop firm sans règle de consistance', 'best day rule'],
-    updated: '2026-11-12',
+    updated: '2026-11-25',
     intro:
       'La règle de consistance limite **la part de votre profit total qui peut venir d\'une seule journée**. Elle existe parce qu\'une journée chanceuse, une position surdimensionnée ou un pic sur une annonce peuvent produire un payout qui ne dit rien de votre capacité à trader dans la durée. Comprendre la formule est plus utile que chercher à tout prix une firme qui n\'en a pas.',
     keyPoints: [
       'La formule : **meilleure journée ÷ profit total × 100**, comparée à la limite (souvent 40 à 55 %).',
-      'Au-dessus de la limite, vous **ne perdez rien** : vous continuez à trader jusqu\'à un profit total suffisant.',
+      "Pour une simple condition d'éligibilité, le dépassement retarde le retrait ou la validation ; vérifiez les éventuelles sanctions distinctes.",
       '**L\'étape compte** : sur le challenge elle retarde la validation, sur les payouts elle peut bloquer un retrait.',
       'Pas de règle de consistance ne veut **pas** dire plus facile : le risque est contrôlé autrement.',
     ],
     sections: [
+      {"heading":"15 %, 20 %, 40 % ou 50 % : la différence réelle","paragraphs":["Pour une meilleure journée de 1 000 $, le profit total nécessaire est de 2 000 $ à 50 %, 2 500 $ à 40 %, 5 000 $ à 20 % et environ 6 667 $ à 15 %. Le trading supplémentaire expose le compte aux pertes. Une règle transparente de 40 % ou plus peut être raisonnable, sans préjuger de la notation de la société."],"compare":{"columns":["Seuil et calcul","Effet"],"rows":[{"label":"FTMO 2-Step CFD","values":["Aucun pourcentage de consistance","Jours minimum toujours applicables"],"sourceUrl":"https://ftmo.com/fr/trading-objectives/"},{"label":"FTMO 1-Step / Instant","values":["50 % / 30 %","Nouveaux 1-Step depuis le 12 octobre : profit net"],"sourceUrl":"https://ftmo.com/fr/trading-objectives/"},{"label":"The5ers Futures","values":["40 % par trade selon la FAQ dédiée","Vérifier la formulation du programme acheté"],"sourceUrl":"https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"},{"label":"FundedNext Futures Direct","values":["20 %, meilleure journée historique / profit du cycle","Pas de réinitialisation du numérateur après payout"],"sourceUrl":"https://helpfutures.fundednext.com/fr/articles/17430319-qu-est-ce-que-la-perpetual-consistency-rule-et-comment-fonctionne-t-elle"},{"label":"FundingPips Zero","values":["15 % maximum","Condition de retrait distincte des règles éliminatoires"],"sourceUrl":"https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"}],"note":"Relevé ciblé du 25 novembre 2026."}},
       {
         heading: 'La formule de calcul',
         visual: 'consistency-example',
@@ -573,6 +579,10 @@ export const frArticles: FrArticle[] = [
       },
     ],
     sources: [
+      {"label":"FTMO : objectifs","url":"https://ftmo.com/fr/trading-objectives/"},
+      {"label":"The5ers Futures","url":"https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"},
+      {"label":"FundedNext Futures Direct","url":"https://helpfutures.fundednext.com/fr/articles/17430319-qu-est-ce-que-la-perpetual-consistency-rule-et-comment-fonctionne-t-elle"},
+      {"label":"FundingPips Zero","url":"https://help.fundingpips.com/hc/en-us/articles/34502157694865-FundingPips-Zero"},
       { label: 'Centre d\'aide Topstep : consistance', url: 'https://help.topstep.com/en/articles/8284208-consistency-at-topstep' },
       { label: 'FTMO : objectifs de trading', url: 'https://ftmo.com/en/trading-objectives/' },
       { label: 'FTMO : mise à jour du 8 octobre 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
@@ -812,18 +822,19 @@ export const frArticles: FrArticle[] = [
     eyebrow: 'Comparatif',
     h1: 'FTMO vs The5ers : deux profils solides, pas le même usage',
     answer:
-      'FTMO et The5ers font partie des prop firms forex les plus fiables (91/100 et 85/100 chez PropRadar). FTMO est la référence la plus documentée mais plus chère ; The5ers est moins chère à l\'entrée et utilise souvent des limites statiques. Le choix dépend surtout de votre budget et de votre façon de gérer le drawdown.',
+      "Comparez les programmes et leurs contrats plutôt que des scores figés. FTMO propose notamment 1-Step, 2-Step, Swing et Instant ; The5ers propose Bootcamp, High Stakes, Hyper Growth, ProGrowth et Futures. Les règles de news, de retrait et de drawdown varient.",
     keywords: ['ftmo vs the5ers', 'ftmo ou the5ers', 'the5ers avis', 'ftmo avis'],
-    updated: '2026-11-12',
+    updated: '2026-11-25',
     intro:
       'FTMO et The5ers reviennent dans presque tous les classements sérieux. Les deux sont **anciennes, transparentes et bien notées** sur Trustpilot. Elles ne s\'adressent pourtant **pas exactement au même trader**.',
     keyPoints: [
-      'Deux profils solides : **91/100** pour FTMO, **85/100** pour The5ers.',
-      'FTMO : **la plus documentée**, mais plus chère (environ 155 $).',
-      'The5ers : **entrée moins chère** (environ 39 $) et limites souvent **statiques**.',
+      "Consultez les scores actuels sur les fiches, sans classement figé dans le texte.",
+      "FTMO : comparez Standard, Swing, 1-Step et Instant, ainsi que les offres Futures séparées.",
+      "The5ers : comparez le coût total des étapes, le scaling et les conditions de retrait.",
       'Les règles évoluent : **vérifiez la page officielle** avant d\'acheter.',
     ],
     sections: [
+      {"heading":"Comparaison actualisée des programmes — novembre 2026","paragraphs":["FTMO et The5ers proposent aussi des offres Futures distinctes. Les règles de trading CFD ne s'y appliquent pas automatiquement. Le Bootcamp de The5ers remet à zéro le cycle de payout de 14 jours à chaque scaling ; High Stakes interdit certaines exécutions autour des news et conserve les pertes même lorsque les gains sont retirés."],"compare":{"columns":["Règle principale","Point de vigilance"],"rows":[{"label":"FTMO 1-Step","values":["Consistance de 50 %","Profit net pour les nouvelles commandes depuis le 12 octobre"],"sourceUrl":"https://ftmo.com/fr/trading-objectives/"},{"label":"FTMO 2-Step","values":["Pas de consistance en pourcentage","Swing et Standard : règles de news et de maintien différentes"],"sourceUrl":"https://ftmo.com/fr/faq/quest-ce-que-le-type-de-compte-swing-et-comment-fonctionne-t-il/"},{"label":"FTMO Instant","values":["30 %","Compte simulé direct ; vérifier drawdown"],"sourceUrl":"https://ftmo.com/fr/trading-objectives/"},{"label":"The5ers Bootcamp","values":["Trois phases","Cycle de 14 jours réinitialisé à chaque scaling"],"sourceUrl":"https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"},{"label":"The5ers High Stakes","values":["Deux phases","Gains retirés et pertes conservées sur les exécutions interdites aux news"],"sourceUrl":"https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"},{"label":"The5ers Futures","values":["40 % par trade selon FAQ dédiée","Vérifier la cohorte et les libellés du checkout"],"sourceUrl":"https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"},{"label":"The5ers ProGrowth / actions","values":["Offre distincte","Instruments actions annoncés sur Bootcamp et ProGrowth ; contrat à vérifier"],"sourceUrl":"https://the5ers.com/faqs/available-stocks-for-trading/"}],"note":"Sources officielles consultées le 25 novembre 2026. Comparaison ciblée, pas un audit complet."}},
       {
         heading: 'Les deux firmes en bref',
         paragraphs: [
@@ -832,9 +843,9 @@ export const frArticles: FrArticle[] = [
         compare: {
           columns: ['FTMO', 'The5ers'],
           rows: [
-            { label: 'Score PropRadar', values: ['**91/100**', '**85/100**'] },
+            { label: 'Score PropRadar', values: ['Voir la fiche FTMO', 'Voir la fiche The5ers'] },
             { label: 'Fondée', values: ['2015, République tchèque', '2016, Israël et Royaume-Uni'] },
-            { label: 'Prix d\'entrée', values: ['environ 155 $', 'environ 39 $'] },
+            { label: 'Prix', values: ['Vérifier programme et devise au paiement', 'Vérifier programme et frais des étapes'] },
             { label: 'Trustpilot (23 oct. 2026)', values: ['4,8 sur 54 942 avis', '4,7 sur 40 309 avis'] },
           ],
         },
@@ -868,7 +879,7 @@ export const frArticles: FrArticle[] = [
         compare: {
           columns: ['Plutôt'],
           rows: [
-            { label: 'Budget serré pour un premier essai', values: ['**The5ers**'] },
+            { label: 'Budget serré', values: ['Comparer les frais complets des parcours'] },
             { label: 'Documentation et historique public maximum', values: ['**FTMO**'] },
             { label: 'Envie d\'une limite fixe', values: ['**The5ers** et ses limites souvent statiques'] },
             { label: 'Annonces sur compte financé', values: ['Comparez **FTMO Swing** et le programme The5ers visé'] },
@@ -877,6 +888,13 @@ export const frArticles: FrArticle[] = [
       },
     ],
     sources: [
+      {"label":"FTMO : objectifs","url":"https://ftmo.com/fr/trading-objectives/"},
+      {"label":"FTMO : Swing","url":"https://ftmo.com/fr/faq/quest-ce-que-le-type-de-compte-swing-et-comment-fonctionne-t-il/"},
+      {"label":"The5ers : Bootcamp","url":"https://the5ers.com/faqs/how-does-the-bootcamp-program-work/"},
+      {"label":"The5ers : High Stakes","url":"https://the5ers.com/faqs/what-are-the-general-rules-for-the-high-stakes-program/"},
+      {"label":"The5ers : news","url":"https://the5ers.com/faqs/can-i-trade-during-news/"},
+      {"label":"The5ers : Futures","url":"https://the5ers.com/futures-faqs/what-is-the-consistency-rule/"},
+      {"label":"The5ers : actions","url":"https://the5ers.com/faqs/available-stocks-for-trading/"},
       { label: 'FTMO : objectifs de trading', url: 'https://ftmo.com/en/trading-objectives/' },
       { label: 'FTMO : mise à jour du 8 octobre 2026', url: 'https://ftmo.com/au/blog/trading-updates/trading-update-8-oct-2026/' },
       { label: 'The5ers : programmes', url: 'https://the5ers.com/programs/' },
@@ -887,11 +905,11 @@ export const frArticles: FrArticle[] = [
       {
         question: 'FTMO ou The5ers, laquelle est la plus fiable ?',
         answer:
-          'Les deux sont parmi les plus fiables du marché. FTMO obtient 91/100 et The5ers 85/100 chez PropRadar en octobre 2026, avec des notes Trustpilot de 4,8 et 4,7.',
+          "Les deux ont des historiques publics significatifs. Vérifiez les scores en direct, les sources et le contrat du programme choisi ; aucun score ne garantit un paiement.",
       },
       {
         question: 'Laquelle est la moins chère ?',
-        answer: 'The5ers, avec des programmes à partir d\'environ 39 $ contre environ 155 $ pour FTMO, selon les prix relevés par PropRadar.',
+        answer: "Le prix dépend du programme, de la taille du compte, de la devise et des promotions. Comparez aussi les frais d'étapes, de reset et d'activation éventuels.",
       },
     ],
     firmSlugs: ['ftmo', 'the5ers', 'funderpro'],
