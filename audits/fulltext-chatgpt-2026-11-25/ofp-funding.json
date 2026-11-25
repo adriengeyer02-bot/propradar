@@ -1,0 +1,39 @@
+{
+  "slug": "ofp-funding",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted 708662716093.txt §§4.6–4.12,5.1–5.7,6.1–6.2.4,8.5 and appendix excerpt. Other FAQ pages not read.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "§4.9 “any accrued Reward shall automatically lapse” for prohibited strategies; appendix includes “Any other unusual trading behaviour” classified at discretion; §6.1 sole discretion on market-standard risk management.",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "locator": "§4.8–4.10; §6.1; prohibited strategies appendix",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§6.2.4 inconsistency best day/total reference period PnL, threshold plan-specific e.g. 20%; equal or higher denies reward at review. §4.7 permits trading to continue if not eligible on Review Day. Exact most lenient plan and carry-over unverified.",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "locator": "§6.2.4; §4.7",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§6.2.1 default 1% floating loss across all positions closes immediately unless relevant plan specifies otherwise. §6.2.3 overall drawdown measured from balance at last reward.",
+      "source": "https://ofpfunding.com/terms-and-conditions",
+      "locator": "§6.2.1–6.2.3",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§5.2 entitlement based on performance and conditions; §4.9 conduct-linked.",
+    "CONS": "20% example not confirmed actual most lenient plan; no code.",
+    "B5": "§4.9 ignores variation in performance, no express asymmetric loss."
+  },
+  "toVerify": {
+    "coverage": "Read whole 54k terms, help trading/risk/strategies and payout pages; verify invoice errors vs permanent forfeiture and appeal route.",
+    "B2A": "Find written review or explanation.",
+    "CONS": "Actual plan thresholds and delay/forfeit."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "maven-trading",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted clauses of 9670a055b8ab.txt (43,844 chars), §§1.4,4.5–4.7,5.7,10.7–10.9,11,13,16.2, Schedule 2/3; not whole terms or incorporated FAQ.",
+  "facts": [
+    {
+      "code": "B5",
+      "text": "§4.5 OMO Simulated Funded and Instant Mini: profits closed before 150 seconds removed; “losses remain in account results”. OMO scope explicit.",
+      "source": "https://maventrading.com/terms-and-conditions",
+      "locator": "§4.5",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§1.4 approved cash reward is contractual entitlement; §11.2 exclusions do not remove approved obligation; §13.4 forfeiture requires lawful contractual basis.",
+      "source": "https://maventrading.com/terms-and-conditions",
+      "locator": "§1.4; §11.2; §13.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§16.2 existing purchases governed by accepted terms unless lawful amendment with required consent; publication alone does not retrospectively alter earned rewards or completed results.",
+      "source": "https://maventrading.com/terms-and-conditions",
+      "locator": "§16.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§13.2 termination for reasons seen necessary; §13.3 reason communicated where lawful and support route. §5.7 may impose 1% risk rule at discretion, scope/relationship to payout sanction needs review.",
+      "source": "https://maventrading.com/terms-and-conditions",
+      "locator": "§5.7; §13.2–13.4",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§10.8 OMO caps first two payouts at 6% and 8%, excess voided, reset to initial balance; no product cap from third. Standard funded news-window profit removed; OMO news excess above 0.5% removed.",
+      "source": "https://maventrading.com/terms-and-conditions",
+      "locator": "§10.8; Schedule 2",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§1.4/13.4 explicitly protect approved rewards; discretionary termination alone insufficient.",
+    "B3": "§16.2 explicit accepted-term/consent and nonretroactivity safeguard; §5.7 needs specific existing-account application.",
+    "B2A": "§13.3 review route established but still need full qualitative prohibited conduct clause and direct reward sanction."
+  },
+  "toVerify": {
+    "coverage": "Read full main terms including all schedules, risk disclosure and 65,904-char FAQ; establish current most lenient main model, exact payout sanctions and risk rule scope.",
+    "CONS": "Do not infer from prediction-market schedule."
+  }
+}

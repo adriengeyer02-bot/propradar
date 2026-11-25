@@ -1,0 +1,39 @@
+{
+  "slug": "onefunded",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted terms c306319e0d37.txt, full §21–23.3, first 7,900 chars of prohibited trading FAQ daf27101a399.txt; other FAQ not read. FAQ metadata '05.12.2026' ambiguous relative to capture date 2026-11-25; verify version/date.",
+  "facts": [
+    {
+      "code": "B2",
+      "text": "FAQ explicitly applies to all accounts, violations may cancel payouts; reserves “sole and final right” to classify trading behavior. One-sided bets use disproportionate exposure/professional management and legitimate thesis, not quantified.",
+      "source": "https://help.onefunded.com/prohibited-trading-practices-on-onefunded/",
+      "locator": "Opening paragraphs; Gap Trading; One-Sided Bets",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "SAFE",
+      "text": "§21.2 termination does not affect rights/remedies accrued as of termination.",
+      "source": "https://onefunded.com/terms-and-conditions/",
+      "locator": "§21.2",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "§23.1 7 days notice before change takes effect; §23.2 continued use/close account; not explicit existing-account application.",
+      "source": "https://onefunded.com/terms-and-conditions/",
+      "locator": "§23.1–23.3",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "§21.1 any-reason termination, but §21.2 preserves accrued rights; FAQ B2 conduct-linked.",
+    "B3": "Generic amendment with 7 days notice/continued use, no explicit existing contract scope.",
+    "B7": "§1.3 mentions separate Instant agreement; timing not yet proven."
+  },
+  "toVerify": {
+    "coverage": "Complete main terms 62,046 chars, rest of prohibited FAQ, eligibility, payout, best day, max exposure, IP, breach, EA, inactivity; actual funded contract and dates.",
+    "B2A": "Review complaints/review route.",
+    "CONS": "Most lenient main plan."
+  }
+}

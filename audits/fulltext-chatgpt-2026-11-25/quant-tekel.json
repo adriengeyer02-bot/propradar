@@ -1,0 +1,40 @@
+{
+  "slug": "quant-tekel",
+  "status": "PARTIAL",
+  "checkedOn": "2026-11-25",
+  "method": "Targeted 043d2aa5871c.txt (ToS) and 453493a78fae.txt (general terms) passages; neither whole. Multiple QT/Quant Tekel entities and product types; no extrapolation from QT Capital invitation or card agreement.",
+  "facts": [
+    {
+      "code": "E_HARSH",
+      "text": "Charge Backs: “Any attempted chargeback” nullifies current/future services and forfeits accounts/accrued simulated profits. Same language in both terms.",
+      "source": "https://qtfunded.quanttekel.com/terms-of-service/",
+      "locator": "Charge Backs; general terms https://qtfunded.quanttekel.com/terms-and-conditions-general/",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "DigiSigner funded agreements sent electronically; failure to execute in timeframe can delay/prevent onboarding. Timing of provision versus purchase not clear.",
+      "source": "https://qtfunded.quanttekel.com/terms-of-service/",
+      "locator": "DigiSigner",
+      "checkedOn": "2026-11-25"
+    },
+    {
+      "code": "NOTE",
+      "text": "QT Capital invitation at sole discretion/no entitlement to invitation concerns admission to separate programme, not earned reward. General terms describe Prime/Power/Instant 80% split and distinct payout frequencies.",
+      "source": "https://qtfunded.quanttekel.com/terms-and-conditions-general/",
+      "locator": "Funded Stage Profit Splits & Payout Frequency; ToS QT CAPITAL PROGRAMME",
+      "checkedOn": "2026-11-25"
+    }
+  ],
+  "rejected": {
+    "B1": "No entitlement to QT Capital invitation is not earned payout forfeiture.",
+    "B3": "Generic modification of content/terms not proof existing purchased account rule change.",
+    "B7": "Electronic signing alone does not establish withholding until passing.",
+    "B6": "Giveaway promotion posts excluded."
+  },
+  "toVerify": {
+    "coverage": "Read both full QT agreements, QT Launch FAQ PDF, Quant Tekel terms 7860fe4d05e4.txt, actual funded contract and program rules; card terms distinct product.",
+    "B2": "Find qualitative misconduct and full payout sanctions/review route.",
+    "CONS": "Most lenient main QT product."
+  }
+}
