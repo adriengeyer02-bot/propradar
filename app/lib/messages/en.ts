@@ -555,6 +555,7 @@ const en = {
     pricePromoAllTitle: "Offer on every program",
     promoNow: "Right now",
     promoDirectLink: "Direct link",
+    promoComputed: "* Computed by PropRadar from the list price; the exact amount is shown at checkout.",
     pricePromoTermsLabel: "Offer terms and source",
     programDetails: "Program steps and rules",
     pricePromoCode: "Code",

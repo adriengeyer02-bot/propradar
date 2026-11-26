@@ -430,6 +430,7 @@ const ha: Messages = {
     pricePromoAllTitle: 'Rangwame ga dukkan shirye-shirye',
     promoNow: 'Yanzu',
     promoDirectLink: 'Hanyar kai tsaye',
+    promoComputed: '* PropRadar ne ya lissafa daga farashin jeri; ainihin adadin yana bayyana a lokacin biya.',
     pricePromoTermsLabel: 'Sharuɗɗan rangwame da tushe',
     programDetails: 'Matakai da dokokin shirin',
     pricePromoCode: 'Lambar ragi',

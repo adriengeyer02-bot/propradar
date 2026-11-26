@@ -551,6 +551,7 @@ const hi: Messages = {
     pricePromoAllTitle: 'सभी प्रोग्राम पर ऑफ़र',
     promoNow: 'अभी',
     promoDirectLink: 'सीधा लिंक',
+    promoComputed: '* PropRadar ने सूची मूल्य से गणना की; सटीक राशि भुगतान पर दिखती है।',
     pricePromoTermsLabel: 'ऑफ़र की शर्तें और स्रोत',
     programDetails: 'प्रोग्राम के चरण और नियम',
     pricePromoCode: 'कोड',

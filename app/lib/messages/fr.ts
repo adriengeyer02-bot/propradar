@@ -551,6 +551,7 @@ const fr: Messages = {
     pricePromoAllTitle: "Promotion sur tous les programmes",
     promoNow: "En ce moment",
     promoDirectLink: "Lien direct",
+    promoComputed: "* Prix calculé par PropRadar sur le prix catalogue ; le montant exact s’affiche au paiement.",
     pricePromoTermsLabel: "Conditions et source de l'offre",
     programDetails: "Étapes et règles du programme",
     pricePromoCode: "Code",

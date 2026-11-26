@@ -488,6 +488,7 @@ const tr: Messages = {
     pricePromoAllTitle: 'Tüm programlardaki kampanya',
     promoNow: 'Şu anda',
     promoDirectLink: 'Doğrudan bağlantı',
+    promoComputed: '* PropRadar tarafından liste fiyatından hesaplanmıştır; kesin tutar ödemede görünür.',
     pricePromoTermsLabel: 'Kampanya koşulları ve kaynak',
     programDetails: 'Program aşamaları ve kuralları',
     pricePromoCode: 'Kod',

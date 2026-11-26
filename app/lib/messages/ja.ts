@@ -639,6 +639,7 @@ const ja: Messages = {
     "pricePromoAllTitle": "全プログラム共通の特典",
     "promoNow": "現在のセール",
     "promoDirectLink": "直接リンク",
+    "promoComputed": "* PropRadar が定価から計算。正確な金額は決済画面で表示されます。",
     "pricePromoTermsLabel": "特典の条件と出典",
     "programDetails": "プログラムの手順とルール",
     "pricePromoCode": "コード",

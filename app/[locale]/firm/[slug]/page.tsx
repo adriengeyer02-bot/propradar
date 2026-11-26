@@ -77,6 +77,7 @@ import { fmt, formatDateLong, getMessages, numberLocale, tv, type Messages } fro
 import IntentLink from '../../../components/IntentLink';
 import ContractAuditSection from '../../../components/ContractAuditSection';
 import ContractRedFlags from '../../../components/ContractRedFlags';
+import { promoSale, publishedPairs } from '../../../lib/promoPricing';
 import FirmAtAGlance, { GLANCE_COPY } from '../../../components/FirmAtAGlance';
 import { getContractAudit } from '../../../lib/contractAudits';
 import { contractAuditCopy } from '../../../lib/contractAuditI18n';
@@ -1181,30 +1182,33 @@ export default async function FirmPage({ params }: Props) {
                   const dd = product.drawdownType ?? (/end.of.day|\bEOD\b|fin de journée/i.test(ddText) ? 'EOD' : /trail|suiveur/i.test(ddText) ? 'Trailing' : /static|fixed|fixe|statique/i.test(ddText) ? 'Static' : undefined);
                   const promos = firm.status !== 'Fermée' ? getProgramPromotions(firm.slug, product.id) : [];
                   const offerHref = firm.partnerOffer?.href || product.linkToStart;
-                  // Struck "from" price only when a published sale amount exists for that same size.
-                  const fromSale = cheapest ? promos.map((promo) => /(\d+(?:\.\d+)?)K\s*·\s*[€$£]\s?([\d,.]+)\s*\/\s*[€$£]\s?([\d,.]+)/.exec(promo.offer)).find((m) => m && Number(m[1]) * 1000 === cheapest.size && Number(m[3].replace(/,/g, '')) === cheapest.price) : undefined;
+                  // Sale "from" price: published amount, or list price minus the advertised percentage (flagged as computed).
+                  const fromSale = cheapest ? promos.map((promo) => promoSale(promo.offer, cheapest.size, cheapest.price)).filter((x): x is NonNullable<typeof x> => Boolean(x)).sort((x, y) => x.sale - y.sale)[0] : undefined;
+                  const anyComputed = Boolean(cheapest) && promos.some((promo) => promoSale(promo.offer, cheapest!.size, cheapest!.price)?.computed);
                   return (
                     <>
                       <dl className="pr-offer-key">
-                        <div><dt>{f.facts.from}</dt><dd>{fromSale && cheapest ? <><s>{from}</s> <span className="pr-offer-key-sale">{formatListPrice(Number(fromSale[2].replace(/,/g, '')), cheapest.currency)}</span></> : from}</dd></div>
+                        <div><dt>{f.facts.from}</dt><dd>{fromSale && cheapest ? <><s>{from}</s> <span className="pr-offer-key-sale">{formatListPrice(fromSale.sale, cheapest.currency)}{fromSale.computed ? '*' : ''}</span></> : from}</dd></div>
                         <div><dt>{f.facts.split}</dt><dd>{split ? `${split}%` : '—'}</dd></div>
                         <div><dt>{f.facts.drawdown}</dt><dd>{dd ? v(dd) : '—'}</dd></div>
                       </dl>
                       {promos.map((promo) => {
                         // Published before/after amounts only ("100K · €432 / €540"); a headline percentage is never turned into a price.
-                        const pair = /(\d+(?:\.\d+)?)K\s*·\s*([€$£])\s?([\d,.]+)\s*\/\s*[€$£]\s?([\d,.]+)/.exec(promo.offer);
-                        const sale = pair ? Number(pair[3].replace(/,/g, '')) : undefined;
-                        const regular = pair ? Number(pair[4].replace(/,/g, '')) : undefined;
-                        const pct = /(\d{1,2})\s?%/.exec(promo.offer)?.[1] ?? (sale && regular ? String(Math.round((1 - sale / regular) * 100)) : undefined);
-                        const extra = pair ? '' : promo.offer.replace(/^[−-]?\s?\d{1,2}\s?%\s*·?\s*/, '');
+                        const pair = publishedPairs(promo.offer)[0];
+                        const shown = !pair && cheapest ? promoSale(promo.offer, cheapest.size, cheapest.price) : undefined;
+                        const pct = shown ? String(shown.pct) : pair ? String(Math.round((1 - pair.sale / pair.regular) * 100)) : /(\d{1,2})\s?%/.exec(promo.offer)?.[1];
+                        const extra = pair ? '' : promo.offer;
                         return (
                           <div className="pr-offer-now" key={promo.id}>
                             <div className="pr-offer-now-line">
                               {pct ? <span className="pr-offer-badge">−{pct}%</span> : null}
                               <span className="pr-offer-now-label">{f.promoNow}</span>
                               {pair ? (
-                                <span className="pr-offer-now-price"><span>{pair[1]}K</span> <s>{pair[2]}{pair[4]}</s> <strong>{pair[2]}{pair[3]}</strong></span>
-                              ) : extra ? <span className="pr-offer-now-extra">{extra}</span> : null}
+                                <span className="pr-offer-now-price"><span>{formatAccountSize(pair.size)}</span> <s>{pair.symbol}{pair.regular.toLocaleString('en-US')}</s> <strong>{pair.symbol}{pair.sale.toLocaleString('en-US')}</strong></span>
+                              ) : shown && cheapest ? (
+                                <span className="pr-offer-now-price"><span>{formatAccountSize(cheapest.size)}</span> <s>{formatListPrice(cheapest.price, cheapest.currency)}</s> <strong>{formatListPrice(shown.sale, cheapest.currency)}*</strong></span>
+                              ) : null}
+                              {!pair && extra ? <span className="pr-offer-now-extra">{extra}</span> : null}
                             </div>
                             <div className="pr-offer-now-line">
                               {promo.code ? <span className="pr-offer-code">{f.pricePromoCode} <code>{promo.code}</code></span> : offerHref ? (
@@ -1220,6 +1224,7 @@ export default async function FirmPage({ params }: Props) {
                           </div>
                         );
                       })}
+                      {anyComputed ? <p className="pr-offer-computed">{f.promoComputed}</p> : null}
                     </>
                   );
                 })()}

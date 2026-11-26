@@ -390,6 +390,7 @@ const sw: Messages = {
     pricePromoAllTitle: 'Ofa kwa programu zote',
     promoNow: 'Sasa hivi',
     promoDirectLink: 'Kiungo cha moja kwa moja',
+    promoComputed: '* Imehesabiwa na PropRadar kutoka bei ya orodha; kiasi kamili kinaonyeshwa wakati wa malipo.',
     pricePromoTermsLabel: 'Masharti ya ofa na chanzo',
     programDetails: 'Hatua na sheria za programu',
     pricePromoCode: 'Msimbo',

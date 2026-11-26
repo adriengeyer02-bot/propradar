@@ -639,6 +639,7 @@ const pt: Messages = {
     "pricePromoAllTitle": "Oferta para todos os programas",
     "promoNow": "Neste momento",
     "promoDirectLink": "Link direto",
+    "promoComputed": "* Calculado pelo PropRadar sobre o preço de tabela; o valor exato aparece no pagamento.",
     "pricePromoTermsLabel": "Condições e fonte da oferta",
     "programDetails": "Etapas e regras do programa",
     "pricePromoCode": "Código",

@@ -468,6 +468,7 @@ const am: Messages = {
     pricePromoAllTitle: 'ለሁሉም ፕሮግራሞች ቅናሽ',
     promoNow: 'አሁን',
     promoDirectLink: 'ቀጥተኛ ሊንክ',
+    promoComputed: '* በPropRadar ከዝርዝር ዋጋ የተሰላ፤ ትክክለኛው መጠን በክፍያ ጊዜ ይታያል።',
     pricePromoTermsLabel: 'የቅናሽ ውሎችና ምንጭ',
     programDetails: 'የፕሮግራም ደረጃዎችና ደንቦች',
     pricePromoCode: 'የቅናሽ ኮድ',

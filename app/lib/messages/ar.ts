@@ -490,6 +490,7 @@ const ar: Messages = {
     pricePromoAllTitle: 'عرض على جميع البرامج',
     promoNow: 'الآن',
     promoDirectLink: 'رابط مباشر',
+    promoComputed: '* محسوب من قبل PropRadar على السعر المعلن؛ يظهر المبلغ الدقيق عند الدفع.',
     pricePromoTermsLabel: 'شروط العرض ومصدره',
     programDetails: 'مراحل البرنامج وقواعده',
     pricePromoCode: 'رمز الخصم',

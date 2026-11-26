@@ -121,3 +121,4 @@
 .pr-offer-terms[open] { flex-basis: 100%; margin-left: 0; }
 .pr-offer-terms p { margin: 6px 0 0; color: var(--muted); }
 .pr-offer-key-sale { color: var(--accent); }
+.pr-offer-computed { margin: -2px 0 0; font-size: 11px; color: var(--muted); }

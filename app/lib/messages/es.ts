@@ -639,6 +639,7 @@ const es: Messages = {
     "pricePromoAllTitle": "Oferta para todos los programas",
     "promoNow": "Ahora mismo",
     "promoDirectLink": "Enlace directo",
+    "promoComputed": "* Calculado por PropRadar sobre el precio de lista; el importe exacto aparece al pagar.",
     "pricePromoTermsLabel": "Condiciones y fuente de la oferta",
     "programDetails": "Fases y reglas del programa",
     "pricePromoCode": "Código",
