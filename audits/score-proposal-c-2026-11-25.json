@@ -582,22 +582,71 @@
    "slug": "axi-select",
    "name": "Axi Select",
    "current": 76,
-   "proposed": 72,
-   "raw": 72,
+   "proposed": 47,
+   "raw": 47,
    "flag": "",
-   "delta": -4,
+   "delta": -29,
    "ceiling": 75,
    "ceilingWhy": "3 ans, pas de preuve à grande échelle",
-   "penalties": "D:payout-conditions −3",
-   "confidence": "extraits relus à la main",
-   "evidence": {},
+   "penalties": "B1 −15 · B3 −5 · B4 −3 · D:payout-conditions −3 · E_HARSH −2",
+   "confidence": "contrat lu en entier",
+   "evidence": {
+    "B1": {
+     "text": "§5.4: 'Your entitlement to profits only arises once transferred to your Axi Account.' §13.2: Axi 'may immediately terminate your participation in the Program for any reason at its discretion' and 'You hereby irrevocably waive any claim or demand against Axi'. Profit earned during the month is therefore not an entitlement before the month-end transfer and can be lost by a discretionary termination.",
+     "url": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Terms+of+Service.pdf",
+     "heading": "Terms of Service §5.4, §13.2"
+    },
+    "B3": {
+     "text": "§4.4: 'Axi reserves the right to apply changes to the Edge Score at any time. Changes may influence your Edge Score and even affect your current ranking in the Program.' §6.1: 'The Program is subject to change without notice. We retain the right to alter or discontinue the Program at any time and without notice.' Both reach participants already in a stage.",
+     "url": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Terms+of+Service.pdf",
+     "heading": "Terms of Service §4.4, §6.1"
+    },
+    "B4": {
+     "text": "The two official rule documents disagree on the same point: Program Rules state a quarantine 'is scheduled to end one week' after it starts, Withdrawal Rules Example 5 says the account 'is then moved into Quarantine for a duration of 14 days'. Example 5 also uses an equity stop of –10% for a $1,000 account, where the Program Rules table gives –7% for every stage below Pro M.",
+     "url": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Withdrawal+Rules+EN.pdf",
+     "heading": "Withdrawal Rules Example 5 vs Program Rules 'Quarantine' and pathway table"
+    },
+    "E_HARSH": {
+     "text": "Withdrawing your own money from the Axi Select account mid-month (after the first trade of the month) forfeits the whole month's profit share: 'Withdrawal at any point during the month will result in the trader forfeiting any profit gained during that period.' With negative PnL, the allocation is cut immediately by the withdrawal times the multiplier and the account may enter quarantine.",
+     "url": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Program+Rules.pdf",
+     "heading": "Program Rules 'Withdrawals'; Withdrawal Rules Examples 3 and 5"
+    }
+   },
    "items": [
+    {
+     "code": "B1",
+     "points": 15,
+     "text": "§5.4: 'Your entitlement to profits only arises once transferred to your Axi Account.' §13.2: Axi 'may immediately terminate your participation in the Program for any reason at its discretion' and 'You hereby irrevocably waive any claim or demand against Axi'. Profit earned during the month is therefore not an entitlement before the month-end transfer and can be lost by a discretionary termination.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Terms+of+Service.pdf",
+     "locator": "Terms of Service §5.4, §13.2"
+    },
+    {
+     "code": "B3",
+     "points": 5,
+     "text": "§4.4: 'Axi reserves the right to apply changes to the Edge Score at any time. Changes may influence your Edge Score and even affect your current ranking in the Program.' §6.1: 'The Program is subject to change without notice. We retain the right to alter or discontinue the Program at any time and without notice.' Both reach participants already in a stage.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Terms+of+Service.pdf",
+     "locator": "Terms of Service §4.4, §6.1"
+    },
+    {
+     "code": "B4",
+     "points": 3,
+     "text": "The two official rule documents disagree on the same point: Program Rules state a quarantine 'is scheduled to end one week' after it starts, Withdrawal Rules Example 5 says the account 'is then moved into Quarantine for a duration of 14 days'. Example 5 also uses an equity stop of –10% for a $1,000 account, where the Program Rules table gives –7% for every stage below Pro M.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Withdrawal+Rules+EN.pdf",
+     "locator": "Withdrawal Rules Example 5 vs Program Rules 'Quarantine' and pathway table"
+    },
     {
      "code": "D_PAYOUT_CONDITIONS",
      "points": 3,
      "text": "Axi Select — own-funds withdrawal: Withdrawing from the linked real-money brokerage balance can reduce programme allocation by the applicable multiplier while the original loss limit does not automatically move downward.",
      "source": "https://www.axi.com/int/funded-trader-program",
      "locator": "main programme scored: axi-select"
+    },
+    {
+     "code": "E_HARSH",
+     "points": 2,
+     "text": "Withdrawing your own money from the Axi Select account mid-month (after the first trade of the month) forfeits the whole month's profit share: 'Withdrawal at any point during the month will result in the trader forfeiting any profit gained during that period.' With negative PnL, the allocation is cut immediately by the withdrawal times the multiplier and the account may enter quarantine.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Program+Rules.pdf",
+     "locator": "Program Rules 'Withdrawals'; Withdrawal Rules Examples 3 and 5"
     }
    ],
    "age": 3,

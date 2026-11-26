@@ -1386,13 +1386,58 @@
      "checkedOn": "2026-11-24"
     },
     {
+     "group": "discretion",
+     "scope": "",
+     "text": "Earned rewards removable at the firm's discretion. §5.4: 'Your entitlement to profits only arises once transferred to your Axi Account.' §13.2: Axi 'may immediately terminate your participation in the Program for any reason at its discretion' and 'You hereby irrevocably waive any claim or demand against Axi'. Profit earned during the month is therefore not an entitlement before the month-end transfer and can be lost by a discretionary termination.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Terms+of+Service.pdf",
+     "locator": "Terms of Service §5.4, §13.2",
+     "checkedOn": "2026-11-26",
+     "verification": "claude-full-read"
+    },
+    {
      "group": "rule",
      "scope": "",
-     "text": "The archive holds Axi’s broker legal page and help-centre articles only; the Axi Select programme terms were not captured.",
-     "source": "https://www.axi.com/int/legal-documentation",
-     "locator": "Legal documentation",
-     "checkedOn": "2026-11-25",
-     "verification": "claude-excerpt-read"
+     "text": "Absorbed by B1 (would be B2 on its own): §7.1(v) lists as misuse trading 'in a way that results in Axi suffering financial loss'; §7.2 allows Axi to close trades and disable the account if it 'suspect[s]' a breach; Program Rules ban 'scalping' ('very short timeframes', no duration stated) on pain of 'disqualification and permanent removal'.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Program+Rules.pdf",
+     "locator": "Terms §7.1(v), §7.2; Program Rules 'Scalping is Prohibited'",
+     "checkedOn": "2026-11-26",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "version",
+     "scope": "",
+     "text": "Rules can change on accounts already bought. §4.4: 'Axi reserves the right to apply changes to the Edge Score at any time. Changes may influence your Edge Score and even affect your current ranking in the Program.' §6.1: 'The Program is subject to change without notice. We retain the right to alter or discontinue the Program at any time and without notice.' Both reach participants already in a stage.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Terms+of+Service.pdf",
+     "locator": "Terms of Service §4.4, §6.1",
+     "checkedOn": "2026-11-26",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "contradiction",
+     "scope": "",
+     "text": "Help-centre wording differs from the contract. The two official rule documents disagree on the same point: Program Rules state a quarantine 'is scheduled to end one week' after it starts, Withdrawal Rules Example 5 says the account 'is then moved into Quarantine for a duration of 14 days'. Example 5 also uses an equity stop of –10% for a $1,000 account, where the Program Rules table gives –7% for every stage below Pro M.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Withdrawal+Rules+EN.pdf",
+     "locator": "Withdrawal Rules Example 5 vs Program Rules 'Quarantine' and pathway table",
+     "checkedOn": "2026-11-26",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Severe sanction attached to a rule breach. Withdrawing your own money from the Axi Select account mid-month (after the first trade of the month) forfeits the whole month's profit share: 'Withdrawal at any point during the month will result in the trader forfeiting any profit gained during that period.' With negative PnL, the allocation is cut immediately by the withdrawal times the multiplier and the account may enter quarantine.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Program+Rules.pdf",
+     "locator": "Program Rules 'Withdrawals'; Withdrawal Rules Examples 3 and 5",
+     "checkedOn": "2026-11-26",
+     "verification": "claude-full-read"
+    },
+    {
+     "group": "rule",
+     "scope": "",
+     "text": "Model: free to join, the trader trades a funded copy ('Allocation Account') of their own Axi account; funds in it 'remain the property of Axi' (§4.1). Profit share 0% at Seed, then 40/50/60/70/80% by stage; payout automatic on the first day of the month, only if the allocation account is flat (§5.1-5.3). One account per client (§1.5). Governing law: Saint Vincent and the Grenadines (§15.1). No consistency percentage rule.",
+     "source": "https://axidocs.s3.ap-southeast-2.amazonaws.com/media/svg/Axi+Select+Program+Rules.pdf",
+     "locator": "Program Rules pathway table; Terms §1.5, §4.1, §5, §15.1",
+     "checkedOn": "2026-11-26",
+     "verification": "claude-full-read"
     }
    ],
    "payoutEvidence": [],
@@ -1404,13 +1449,14 @@
    ],
    "sourceFiles": [
     "contract-clauses-deep-sweep-2026-11-24.json",
-    "audits/partial4-2026-11-25/axi-select.json"
+    "audits/partial4-2026-11-25/axi-select.json",
+    "audits/fulltext4-2026-11-25/axi-select.json"
    ],
    "counts": {
-    "rule": 1,
-    "discretion": 2,
-    "contradiction": 0,
-    "version": 0,
+    "rule": 3,
+    "discretion": 3,
+    "contradiction": 1,
+    "version": 1,
     "payout": 0,
     "safeguard": 0,
     "legal": 0,
