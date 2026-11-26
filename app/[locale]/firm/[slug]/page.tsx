@@ -77,7 +77,7 @@ import { fmt, formatDateLong, getMessages, numberLocale, tv, type Messages } fro
 import IntentLink from '../../../components/IntentLink';
 import ContractAuditSection from '../../../components/ContractAuditSection';
 import ContractRedFlags from '../../../components/ContractRedFlags';
-import FirmAtAGlance from '../../../components/FirmAtAGlance';
+import FirmAtAGlance, { GLANCE_COPY } from '../../../components/FirmAtAGlance';
 import { getContractAudit } from '../../../lib/contractAudits';
 import { contractAuditCopy } from '../../../lib/contractAuditI18n';
 
@@ -517,7 +517,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function glanceShort(text: string): string {
   const first = text.split(/[.;(]/)[0].trim();
-  return first.length > 42 ? `${first.slice(0, 41).replace(/\s+\S*$/, '')}…` : first;
+  return first.length > 64 ? `${first.slice(0, 63).replace(/\s+\S*$/, '')}…` : first;
+}
+
+/** First sentence of the verdict, the rest behind "Read more" (Geyer, 2026-11-26). */
+function splitVerdict(text: string): [string, string] {
+  if (text.length <= 200) return [text, ''];
+  const m = /^([\s\S]{60,}?[.。!?])\s+([\s\S]+)$/.exec(text);
+  return m ? [m[1], m[2]] : [text, ''];
 }
 
 export default async function FirmPage({ params }: Props) {
@@ -1044,7 +1051,20 @@ export default async function FirmPage({ params }: Props) {
               <strong>{f.domainWarning}</strong> {tx(firm.listedDomainWarning)}
             </p>
           ) : (
-            <p className="pr-firm-verdict">{tx(firm.verdict)}</p>
+            (() => {
+              const [lead, rest] = splitVerdict(tx(firm.verdict));
+              return (
+                <div className="pr-firm-verdict">
+                  <p>{lead}</p>
+                  {rest ? (
+                    <details className="pr-verdict-more">
+                      <summary>{(GLANCE_COPY[locale] ?? GLANCE_COPY.en).readMore}</summary>
+                      <p>{rest}</p>
+                    </details>
+                  ) : null}
+                </div>
+              );
+            })()
           )}
 
           <aside className="pr-firm-scorecard" aria-label={fmt(f.scoreAria, { name: firm.name })}>
@@ -1070,7 +1090,7 @@ export default async function FirmPage({ params }: Props) {
           </aside>
         </div>
 
-        {/* PROPOSAL 2026-11-26: "at a glance" card replaces the key-facts grid. */}
+        {/* "At a glance" card (Geyer, 2026-11-26): replaces the key-facts grid. */}
         <FirmAtAGlance
           slug={firm.slug}
           locale={locale}
