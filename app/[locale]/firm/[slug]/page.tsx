@@ -1194,40 +1194,87 @@ export default async function FirmPage({ params }: Props) {
                   {product.isPopular ? <span className="pr-tag">{f.popular}</span> : null}
                 </div>
                 <h3>{tx(product.name)}</h3>
-                <dl className="pr-product-highlights">
-                  <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
-                  <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
-                  <div><dt>{f.path.paid}</dt><dd>{tx(product.profitSplit)}</dd></div>
-                </dl>
-                {product.hasConsistencyRule ? (
-                  <p className="pr-product-rule pr-tone-watch">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
-                  </p>
-                ) : (
-                  <p className="pr-product-rule pr-tone-good">
-                    <span className="pr-pip-dot" aria-hidden="true" />
-                    {f.noConsistency}
-                  </p>
-                )}
-                {firm.status !== 'Fermée' && !sharedPromos.length ? getProgramPromotions(firm.slug, product.id).map((promo) => (
-                  <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
-                    <div className="pr-program-promo-head">
-                      <span>{f.pricePromoTitle}</span>
-                      <strong>{promo.offer}</strong>
-                    </div>
-                    {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
-                    <details className="pr-program-promo-details">
-                      <summary>{f.pricePromoTermsLabel}</summary>
-                      <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
-                      <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
-                      <div className="pr-program-promo-foot">
-                        <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
-                        <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
-                      </div>
+                {(() => {
+                  const rows = (priceTable?.programs ?? []).filter((program) => program.productId === product.id).flatMap((program) => program.rows.map((row) => ({ price: row.price, currency: program.currency })));
+                  const cheapest = rows.length ? rows.reduce((low, row) => (row.price < low.price ? row : low)) : undefined;
+                  const from = cheapest ? formatListPrice(cheapest.price, cheapest.currency) : product.entryFeeMin ? formatUsd(product.entryFeeMin) : '—';
+                  const split = /(\d{2,3})\s?%/.exec(product.profitSplit ?? '')?.[1];
+                  const ddText = `${product.drawdownType ?? ''} ${product.maxDrawdown ?? ''}`;
+                  const dd = product.drawdownType ?? (/end.of.day|\bEOD\b|fin de journée/i.test(ddText) ? 'EOD' : /trail|suiveur/i.test(ddText) ? 'Trailing' : /static|fixed|fixe|statique/i.test(ddText) ? 'Static' : undefined);
+                  return (
+                    <dl className="pr-offer-key">
+                      <div><dt>{f.facts.from}</dt><dd>{from}</dd></div>
+                      <div><dt>{f.facts.split}</dt><dd>{split ? `${split}%` : '—'}</dd></div>
+                      <div><dt>{f.facts.drawdown}</dt><dd>{dd ? v(dd) : '—'}</dd></div>
+                    </dl>
+                  );
+                })()}
+                {(() => {
+                  const cardPromos = firm.status !== 'Fermée' && !sharedPromos.length ? getProgramPromotions(firm.slug, product.id) : [];
+                  if (!cardPromos.length) return null;
+                  return (
+                    <details className="pr-product-details pr-promo-dropdown">
+                      <summary>
+                        <span>{f.pricePromoTitle}</span>
+                        <strong>{cardPromos[0].offer}{cardPromos.length > 1 ? ` +${cardPromos.length - 1}` : ''}</strong>
+                      </summary>
+                    {cardPromos.map((promo) => (
+                      <aside className="pr-program-promo" key={promo.id} aria-label={f.pricePromoTitle}>
+                        <div className="pr-program-promo-head">
+                          <span>{f.pricePromoTitle}</span>
+                          <strong>{promo.offer}</strong>
+                        </div>
+                        {promo.code ? <p className="pr-program-promo-code">{f.pricePromoCode} <code>{promo.code}</code></p> : null}
+                        <details className="pr-program-promo-details">
+                          <summary>{f.pricePromoTermsLabel}</summary>
+                          <p className="pr-program-promo-terms" lang="en">{promo.terms}</p>
+                          <p className="pr-program-promo-check">{f.pricePromoCheckout}</p>
+                          <div className="pr-program-promo-foot">
+                            <small>{f.checkedLabel} · {formatDateLong(locale, promo.checkedOn)}{promo.endsOn ? ` · ${f.pricePromoExpires} ${formatDateLong(locale, promo.endsOn)}` : ''}</small>
+                            <a href={promo.sourceUrl} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a>
+                          </div>
+                        </details>
+                      </aside>
+                    ))}
                     </details>
-                  </aside>
-                )) : null}
+                  );
+                })()}
+                <details className="pr-product-details">
+                  <summary>{f.programDetails}</summary>
+                  <div className="pr-product-details-content">
+                  <dl className="pr-product-highlights">
+                    <div><dt>{f.path.pass}</dt><dd>{tx(product.profitTarget)}</dd></div>
+                    <div><dt>{f.path.stay}</dt><dd>{tx(product.maxDrawdown)}</dd></div>
+                    <div><dt>{f.path.paid}</dt><dd>{tx(product.profitSplit)}</dd></div>
+                  </dl>
+                  {product.hasConsistencyRule ? (
+                    <p className="pr-product-rule pr-tone-watch">
+                      <span className="pr-pip-dot" aria-hidden="true" />
+                      {tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}
+                    </p>
+                  ) : (
+                    <p className="pr-product-rule pr-tone-good">
+                      <span className="pr-pip-dot" aria-hidden="true" />
+                      {f.noConsistency}
+                    </p>
+                  )}
+                    {product.description ? <p className="muted pr-product-intro">{tx(product.description)}</p> : null}
+                    <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
+                    <dl className="pr-product-meta">
+                      <div>
+                        <dt>{f.gaps['Drawdown type']}</dt>
+                        <dd>
+                          <strong>{product.drawdownType ? tx(product.drawdownType) : f.rulesEmptyTag}</strong>
+                          {product.drawdownDetails ? <span className="pr-product-dd-detail">{tx(product.drawdownDetails)}</span> : null}
+                          {product.drawdownSource ? <a className="pr-product-dd-source" href={product.drawdownSource} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}
+                        </dd>
+                      </div>
+                      <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
+                      <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
+                    </dl>
+                    {product.hasConsistencyRule ? <p className="pr-product-rule pr-tone-watch">{tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}</p> : null}
+                  </div>
+                </details>
                 {firm.status !== 'Fermée' ? (() => {
                   const programs = priceTable?.programs.filter((program) => program.productId === product.id) ?? [];
                   if (!programs.length) return null;
@@ -1236,6 +1283,8 @@ export default async function FirmPage({ params }: Props) {
                   const variantLabel = (name: string) => (name.includes(' — ') ? name.slice(name.indexOf(' — ') + 3) : name);
                   const monthly = programs.some((program) => program.billing === 'monthly');
                   return (
+                    <details className="pr-product-details pr-price-dropdown">
+                      <summary>{f.priceTableTitle}</summary>
                     <div className="pr-price-matrix">
                       <table>
                         <thead>
@@ -1262,32 +1311,12 @@ export default async function FirmPage({ params }: Props) {
                         </tbody>
                       </table>
                       <div className="pr-product-prices-links">
-                        <a href="#prices">{f.priceTableTitle} ↓</a>
                         <a href={programs[0].sourceUrl} target="_blank" rel="noopener noreferrer">{f.priceSource} ↗</a>
                       </div>
                     </div>
+                    </details>
                   );
                 })() : null}
-                <details className="pr-product-details">
-                  <summary>{f.programDetails}</summary>
-                  <div className="pr-product-details-content">
-                    {product.description ? <p className="muted pr-product-intro">{tx(product.description)}</p> : null}
-                    <ChallengePath product={product} labels={f.path} translate={(text) => td(locale, text)} />
-                    <dl className="pr-product-meta">
-                      <div>
-                        <dt>{f.gaps['Drawdown type']}</dt>
-                        <dd>
-                          <strong>{product.drawdownType ? tx(product.drawdownType) : f.rulesEmptyTag}</strong>
-                          {product.drawdownDetails ? <span className="pr-product-dd-detail">{tx(product.drawdownDetails)}</span> : null}
-                          {product.drawdownSource ? <a className="pr-product-dd-source" href={product.drawdownSource} target="_blank" rel="noopener noreferrer">{f.historySource} ↗</a> : null}
-                        </dd>
-                      </div>
-                      <div><dt>{f.platforms}</dt><dd>{product.platforms.map((platform) => tx(platform)).join(' · ')}</dd></div>
-                      <div><dt>{f.assets}</dt><dd>{product.tradableAssets.map((asset) => tx(asset)).join(' · ')}</dd></div>
-                    </dl>
-                    {product.hasConsistencyRule ? <p className="pr-product-rule pr-tone-watch">{tx(product.consistencyRule ?? 'Règle de cohérence à vérifier')}</p> : null}
-                  </div>
-                </details>
                 {firm.status !== 'Fermée' && (firm.partnerOffer?.href || product.linkToStart) ? (
                   <a
                     href={firm.partnerOffer?.href || product.linkToStart}
@@ -1310,8 +1339,8 @@ export default async function FirmPage({ params }: Props) {
           </div>
         )}
         {priceTable && firm.status !== 'Fermée' ? (
-          <div className="pr-price-tables" id="prices">
-            <h3>{f.priceTableTitle}</h3>
+          <details className="pr-price-tables pr-price-tables-dropdown" id="prices">
+            <summary><h3>{f.priceTableTitle}</h3></summary>
             <p className="muted">{fmt(f.priceTableLead, { name: firm.name, date: formatDateLong(locale, priceTable.checkedOn) })}</p>
             {(() => {
               const sizes = [...new Set(priceTable.programs.flatMap((program) => program.rows.map((row) => row.size)))].sort((x, y) => x - y);
@@ -1355,7 +1384,7 @@ export default async function FirmPage({ params }: Props) {
                 </>
               );
             })()}
-          </div>
+          </details>
         ) : null}
         {classicRules.length ? (
           <div className="pr-classic-rules">
