@@ -19,8 +19,7 @@ export default function ContractAuditSection({ slug, firmName, locale }: { slug:
   const rules = by('rule');
   const ruleGroups = new Map<string, ContractFinding[]>();
   for (const rule of rules) {
-    const scope = rule.scope?.trim();
-    const key = !scope || /^all$/i.test(scope) ? c.allPrograms : localizeContractAuditText(locale, scope);
+    const key = rule.scope?.trim() || '';
     ruleGroups.set(key, [...(ruleGroups.get(key) ?? []), rule]);
   }
 
@@ -72,7 +71,7 @@ export default function ContractAuditSection({ slug, firmName, locale }: { slug:
             <div className="pr-rules-menu-body">
               {[...ruleGroups.entries()].map(([scope, list]) => (
                 <div className="pr-rules-block" key={scope}>
-                  <h3>{scope}</h3>
+                  <h3>{scope ? localizeContractAuditText(locale, scope) : c.allPrograms}</h3>
                   <FindingList items={list} c={c} locale={locale} hideScope />
                 </div>
               ))}
@@ -161,7 +160,7 @@ function FindingList({ items, c, locale, hideScope }: { items: ContractFinding[]
     <ul className="pr-rules-list">
       {items.map((finding, index) => (
         <li key={`${finding.source}-${index}`}>
-          {!hideScope && finding.scope ? <span className="pr-rules-stage">{/^all$/i.test(finding.scope.trim()) ? c.allPrograms : localizeContractAuditText(locale, finding.scope)}</span> : null}
+          {!hideScope && finding.scope ? <span className="pr-rules-stage">{localizeContractAuditText(locale, finding.scope)}</span> : null}
           <p>
             {finding.hidden ? <span className="pr-tag pr-tone-watch ca-inline-tag">{c.hidden}</span> : null}
             {localizeContractAuditText(locale, finding.text)}
