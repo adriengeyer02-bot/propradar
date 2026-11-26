@@ -16,6 +16,16 @@ any change, in this order:
    (including how to correct manual scores that embedded the former -8).
 4. `README.md`: product overview (French).
 
+## Active integration branch — 2026-11-26 (owner coordination request)
+
+**Until the owner approves a reconciled production baseline, use `claude/scale-c-batch2` as the shared integration baseline for current Scale C, offers UI and translations. Do not start current work from stale `main`, or deploy it.** PR #281 documents the approved Scale C changes. This instruction supersedes older references below to starting from main or the V4 audit split for current Scale C work; it does not authorize changes to scores or sensitive data.
+
+- Before editing, fetch the latest remote branch HEAD and the current file. Check open PRs and coordinate overlapping files; do not work concurrently on the same file from stale snapshots.
+- ChatGPT/Codex owns translations in the existing `app/lib/dataI18n/` dictionaries (including `scaleCEvidence.json`); Claude owns source clauses and scoring. Both agents must use the same canonical files, not alternative copies or older dictionaries. If an English source changes, review the corresponding translations; preserve unchanged entries and other locales. Match by firm slug, criterion code and exact source, not array position alone.
+- Make narrowly scoped changes against the latest file SHA, preserve unrelated changes, reject conflicts rather than force-push, and verify the diff and existing entries after each commit. Do not overwrite the entire branch or reset it to an old deployment.
+- For parallel changes, branch from the latest shared baseline and integrate by a reviewed, conflict-free PR into that baseline, not into stale main. Keep the production domain on a verified approved build; confirm scores, audit data, translations and offers UI before promotion. Do not merge the diverged main blindly.
+- Reconcile main and the production branch separately with an explicit file-level review and owner approval. Once that is done, update this instruction and Vercel's production branch together.
+
 ## Who does what (set by Geyer on 2026-11-18)
 
 | Agent | Area | Branch prefix |
@@ -37,7 +47,7 @@ publish a V4 note for a firm of the other agent's lots.
   (`GET repos/adriengeyer02-bot/propradar/pulls?state=open`). Do not edit a
   firm (a key of `firm-updates.json`) or a file that another agent's open PR
   changes; pick other work or wait.
-- **Start from an up-to-date `main`** and rebase on `main` right before you
+- **Start from the active integration baseline above** and synchronize with it right before you
   push. `app/data/firm-updates.json` is shared and large: change only the
   firm entries you work on, never reformat the whole file.
 - **Small PRs, one topic each.** Say in the PR body which firms or files you
