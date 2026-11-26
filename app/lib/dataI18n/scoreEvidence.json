@@ -555,6 +555,12 @@
           "評価および Reward 口座",
           "規約 §7.2：会社は「その他の故意の不正利用」を個別に判断する。",
           "戦略の主観的な認定により、トレーダーが報酬の受給資格を失う可能性がある。"
+        ],
+        "tr": [
+          "Leveraged · tüm programlar",
+          "Değerlendirme ve Reward hesabı",
+          "Şartlar §7.2: şirket, «diğer her türlü kasıtlı kötüye kullanımı» vaka bazında tanımlar.",
+          "Yatırımcı, stratejisinin öznel sınıflandırılması sonucu ödül hakkını kaybedebilir."
         ]
       }
     },
@@ -613,6 +619,12 @@
           "評価および Qualified",
           "規約 §8.1.7：Alpha は独自の裁量で戦略を許可されていないものと認定できる。",
           "事前に定義されていない取引スタイルの解釈により口座が閉鎖される可能性がある。"
+        ],
+        "tr": [
+          "Alpha Futures · tüm hesaplar",
+          "Değerlendirme ve Qualified",
+          "Şartlar §8.1.7: Alpha, bir stratejiyi kendi takdirine göre yetkisiz sayabilir.",
+          "Önceden tanımlanmamış işlem tarzı yorumuna dayanarak hesap kapatılabilir."
         ]
       }
     },
@@ -671,6 +683,12 @@
           "評価および Qualified",
           "別表5：2分未満の取引による利益が数値化されていない「大きな」割合を占めると問題になる。",
           "利益の一部が対象外と判断されるか、公表された集中度の基準値なしに口座が制裁を受ける可能性がある。"
+        ],
+        "tr": [
+          "Alpha Futures · tüm hesaplar",
+          "Değerlendirme ve Qualified",
+          "Ek 5: iki dakikadan kısa işlemlerin kârları, niceliği belirtilmemiş «büyük» bir pay oluşturduğunda sorun sayılır.",
+          "Yayımlanmış yoğunlaşma eşiği olmadan kârların bir kısmı uygunsuz sayılabilir veya hesaba yaptırım uygulanabilir."
         ]
       }
     },
@@ -729,6 +747,12 @@
           "シミュレーション資金提供口座と報酬申請",
           "規約 §§11.1–11.2：ドローダウンの「全部またはほぼ全部」をリスクにさらすポジションは、MilTraders の最終判断によりギャンブル行為と認定され得る。",
           "公表された割合の基準がないまま複数口座を閉鎖し、既に申請された報酬を拒否できる（規約 §12.5）。"
+        ],
+        "tr": [
+          "MilTraders · Zero, Pro ve Instant Funded",
+          "Simüle fonlanmış hesap ve ödül talebi",
+          "Şartlar §§11.1–11.2: düşüş limitinin «tamamını veya neredeyse tamamını» riske atan pozisyon, MilTraders'ın nihai takdirine göre kumar davranışı sayılabilir.",
+          "Yayımlanmış yüzde sınırı olmadan şirket birden fazla hesabı kapatabilir ve talep edilmiş ödülü reddedebilir (Şartlar §12.5)."
         ]
       }
     },
@@ -787,6 +811,12 @@
           "評価およびシミュレーション資金提供口座",
           "規約・禁止用途：会社が単独裁量で許容可能なリスク管理の範囲外と判断する取引をすべて禁止する。",
           "購入時に判明している基準値で限定されていない行為を理由に、利益の削除や口座閉鎖が行われ得る。"
+        ],
+        "tr": [
+          "Top One Trader · FLASH, NOVA, PRO ve Instant",
+          "Değerlendirme ve simüle fonlanmış hesap",
+          "Şartlar, yasak kullanımlar: şirket, münhasır takdirine göre kabul edilebilir risk uygulamalarının dışında gördüğü her türlü işlemi yasaklar.",
+          "Satın alma sırasında bilinen bir eşikle sınırlandırılmamış uygulamalar nedeniyle kârlar silinebilir ve hesap kapatılabilir."
         ]
       }
     },
@@ -845,6 +875,12 @@
           "チャレンジから資金提供口座への移行",
           "規約・禁止用途：チャレンジと資金提供段階の間の戦略変更は、会社の裁量による判断で禁止される。",
           "口座の承認や閉鎖は、取引手法の変更程度に関する主観的判断に左右され得る。"
+        ],
+        "tr": [
+          "Top One Trader · FLASH/NOVA/PRO değerlendirmesinden Funded aşamasına",
+          "Değerlendirmeden fonlanmış hesaba geçiş",
+          "Şartlar, yasak kullanımlar: değerlendirme ile fonlanmış aşama arasında strateji değiştirmek, şirketin kendi takdirine göre belirlediği şekilde yasaktır.",
+          "Hesap onayı veya kapatılması, yöntem değişikliğinin derecesine ilişkin öznel değerlendirmeye bağlı olabilir."
         ]
       }
     },
@@ -903,6 +939,12 @@
           "チャレンジおよび資金提供口座",
           "規約 §6.8：列挙された事例以外でも、会社はその他の取引活動を禁止対象と指定できる。",
           "購入時に網羅的に説明されていない戦略を理由に口座が閉鎖される可能性がある。"
+        ],
+        "tr": [
+          "OneFunded · Flash, Core, Value ve Instant",
+          "Değerlendirme ve fonlanmış hesap",
+          "Şartlar §6.8: şirket listelenen durumlar dışında başka işlem faaliyetlerini de yasak olarak belirleyebilir.",
+          "Satın alma sırasında kapsamlı biçimde açıklanmamış strateji nedeniyle hesap kapatılabilir."
         ]
       }
     },
@@ -961,6 +1003,12 @@
           "資金提供口座（出金審査を含む）",
           "ヘルプセンター・禁止取引：一方向への賭けと過度なエクスポージャー集中は禁止。割合の基準値はなく、最終判断は OneFunded が行う。",
           "方向性エクスポージャーの数値化されていない評価により、出金申請の取消しや口座閉鎖が行われ得る。"
+        ],
+        "tr": [
+          "OneFunded · Flash, Core, Value ve Instant",
+          "Fonlanmış hesap, ödeme incelemesi dahil",
+          "Yardım merkezi, yasak işlemler: tek yönlü bahisler ve oransal eşik olmadan aşırı pozisyon yoğunlaşması; nihai karar OneFunded'a aittir.",
+          "Yönsel pozisyon yoğunluğunun sayısallaştırılmamış değerlendirmesine göre ödeme talebi iptal edilebilir ve hesap kapatılabilir."
         ]
       }
     },
@@ -1019,6 +1067,12 @@
           "評価および BEM Trader 口座",
           "規約 §14：会社は独自裁量で禁止行為を認定する権利を留保する。",
           "明確に列挙されていない戦略が、事前に適用可能な基準値なしに口座閉鎖の対象となり得る。"
+        ],
+        "tr": [
+          "BEM Funding · One, One Only, Classic, Classic Swing",
+          "Değerlendirme ve BEM Trader hesabı",
+          "Şartlar §14: şirket yasak uygulamaları kendi takdirine göre sınıflandırma hakkını saklı tutar.",
+          "Kesin listelenmemiş strateji, önceden uygulanabilir eşik olmadan hesap kapatmayla cezalandırılabilir."
         ]
       }
     },
@@ -1077,6 +1131,12 @@
           "BEM Trader 口座と報酬審査",
           "禁止取引規約：ギャンブルに似た行為、または合理的に再現できない手法。網羅的な判定指標はない。",
           "戦略の主観的な認定により、利益または報酬受給資格が取り消される可能性がある。"
+        ],
+        "tr": [
+          "BEM Funding · One, One Only, Classic, Classic Swing",
+          "BEM Trader hesabı ve ödül incelemesi",
+          "Yasak işlem uygulamaları şartları: kumara benzeyen davranış veya makul biçimde tekrarlanamayan yöntem, kapsamlı ölçüt olmadan.",
+          "Stratejinin öznel sınıflandırılması sonucunda kârlar veya ödül uygunluğu iptal edilebilir."
         ]
       }
     },
@@ -1135,6 +1195,12 @@
           "評価後の BEM Trader 口座",
           "Classic Normal 利用規約 §6.2：重要ニュースの前後4分以内に執行した取引の利益は除外されるが、同じ取引の損失は全額計上される。",
           "ニュース取引の利益は計算から除外され得る一方、同様の損失取引は口座に計上される。"
+        ],
+        "tr": [
+          "BEM Classic Normal",
+          "Değerlendirme sonrası BEM Trader hesabı",
+          "Classic Normal kullanım şartları §6.2: önemli haberlerden önceki veya sonraki dört dakika içinde yapılan işlemlerin kârları silinir; aynı işlemlerin zararları tamamen sayılır.",
+          "Kârlı haber işlemi hesaptan çıkarılabilirken eşdeğer zararlı işlem hesaba yüklenmeye devam eder."
         ]
       }
     },
@@ -1193,6 +1259,12 @@
           "チャレンジおよびシミュレーション資金提供口座",
           "規約 §5.5.3：平均と比べて「著しく大きい」ポジションや「不合理な」保有時間。数値基準や許容範囲はない。",
           "取引サイズや時間の違いを禁止戦略と主観的に認定し、口座を閉鎖できる。"
+        ],
+        "tr": [
+          "ThinkCapital · Lightning, Dual Step, Nexus, Bolt ve Bolt Flex",
+          "Değerlendirme ve simüle fonlanmış hesap",
+          "Şartlar §5.5.3: ortalamaya göre «önemli ölçüde daha büyük» pozisyonlar ve «makul olmayan» tutma süreleri; sayısal eşik veya tolerans yok.",
+          "Şirket büyüklük ya da süre farkını yasak strateji sayarak öznel inceleme sonrası hesabı kapatabilir."
         ]
       }
     },
@@ -1251,6 +1323,12 @@
           "チャレンジ・資金提供口座、戦略審査",
           "ギャンブル FAQ：戦略変更が「日和見的または意図的に攻撃的に見える」場合、リスクチームは通常の警告手続きを省略し、「異議申立てなし」で即時終了できる。",
           "2.5%/4% の基準値自体を超えていなくても、日和見的と判断されたリスク増加により異議申立てなしの口座終了があり得る。"
+        ],
+        "tr": [
+          "ThinkCapital · tüm programlar",
+          "Değerlendirme ve fonlanmış hesap, strateji incelemesi",
+          "Kumar SSS: strateji değişikliği «fırsatçı veya kasıtlı agresif görünüyorsa» risk ekibi olağan uyarı sürecini atlayıp «itiraz hakkı olmadan» derhal feshedebilir.",
+          "Fırsatçı sayılan risk artışı, %2,5/%4 eşikleri tek başına aşılmamış olsa bile itirazsız hesap feshine yol açabilir."
         ]
       }
     },
@@ -1309,6 +1387,12 @@
           "評価・資金提供口座、ロボットと EA",
           "規約 §6.4：risk@thinkcapital.com の書面による許可後、TradingView 対応ツールを含む EA が許可され得る。一方、禁止戦略 FAQ §11 は EA が「現在導入できない」とし、TradingView インジケーターのみ利用可能とする。",
           "書面で許可された EA を規約違反や技術的制約なしに実際に使用できるか、購入者は明確に判断できない。"
+        ],
+        "tr": [
+          "ThinkCapital · Lightning, Dual Step, Nexus, Bolt ve Bolt Flex",
+          "Değerlendirme ve fonlanmış hesap, robotlar ve EA'lar",
+          "Şartlar §6.4: risk@thinkcapital.com üzerinden yazılı izinle TradingView uyumlu araçlar dahil EA'lar kullanılabilir; yasak stratejiler SSS §11 ise EA'ların «şu anda kullanılamadığını», yalnızca TradingView göstergelerinin kullanılabildiğini söyler.",
+          "Alıcı, yazılı izinli EA'sını ihlal veya teknik engel olmadan gerçekten kullanıp kullanamayacağını kesin belirleyemez."
         ]
       }
     },
@@ -1367,6 +1451,12 @@
           "チャレンジ、評価段階",
           "ルールページの最低取引日数：1-Step と 2-Step は1日。FAQ 質問31：1/2/3-Step は各段階3取引日。",
           "1日で合格した評価が認められるか、さらに2日必要なのか購入者には分からない。"
+        ],
+        "tr": [
+          "Tiger Funded · 1-Step ve 2-Step",
+          "Değerlendirme aşaması",
+          "Kurallar sayfası, asgari işlem günleri: 1-Step ve 2-Step için bir gün; SSS soru 31: 1/2/3-Step için aşama başına üç işlem günü.",
+          "Bir günde geçilen değerlendirmenin kabul edileceği veya iki ek gün gerekeceği belirsizdir."
         ]
       }
     },
@@ -1425,6 +1515,12 @@
           "評価、日次損失限度",
           "ルールページの日次ドローダウン：深夜0時にリセット。FAQ 質問19・21：20:00 EST にリセット、さらに17:00 EST という別の例もある。",
           "日付切替付近の保有ポジションが、別の公式文書とは異なる時刻を基準に限度違反となり得る。"
+        ],
+        "tr": [
+          "Tiger Funded · 1-Step, 2-Step ve 3-Step",
+          "Değerlendirme, günlük zarar limiti",
+          "Kurallar sayfası, günlük düşüş limiti: gece yarısı sıfırlanır; SSS sorular 19 ve 21: 20:00 EST, ayrıca farklı 17:00 EST örneği.",
+          "Gün değişimine yakın açık pozisyon, diğer resmî belgede belirtilenden farklı saatte limit ihlali yaratabilir."
         ]
       }
     },
@@ -1483,6 +1579,12 @@
           "チャレンジおよび資金提供口座",
           "規約 §7：禁止行為には、実際の市場条件を反映しない行為や公正利用を損なう行為が含まれるが、それらに限定されない。網羅的な判定方法はなく、停止・終了の対象となる。",
           "FAQ の詳細リストにない手法が事後にシミュレーションの不正利用と認定され、口座閉鎖につながり得る。"
+        ],
+        "tr": [
+          "Tiger Funded · Step ve Instant (genel şartlar)",
+          "Değerlendirme ve fonlanmış hesap",
+          "Şartlar §7: yasak davranışlar gerçek piyasa koşullarını yansıtmayan veya adil kullanımı zedeleyen uygulamaları içerir, ancak bunlarla sınırlı değildir; kapsamlı test yok, askıya alma/fesih uygulanabilir.",
+          "SSS'nin ayrıntılı listesinde bulunmayan yöntem sonradan simülasyon kötüye kullanımı sayılabilir ve hesap kapatılabilir."
         ]
       }
     },
@@ -1541,6 +1643,12 @@
           "評価",
           "商品紹介：最低3日。12/11 の Fast Pass FAQ：最低日数なし。11/08 の規約 §3：一般的に最低7日。",
           "資金提供口座への資格取得に何日の評価が必要か、購入者は明確に判断できない。"
+        ],
+        "tr": [
+          "TradeDay · Fast Pass",
+          "Değerlendirme",
+          "Teklif kartı: en az üç gün; 12/11 tarihli Fast Pass SSS: asgari süre yok; 11/08 tarihli Şartlar §3: genel asgari yedi gün.",
+          "Alıcı, fonlanmış hesaba erişmek için kaç değerlendirme günü gerektiğini kesin belirleyemez."
         ]
       }
     },
@@ -1599,6 +1707,12 @@
           "購入と同時チャレンジ数",
           "規約第1項の評価制限に関する二つの条項：一方は同一チャレンジの並行実施を禁止し、他方は総配分上限内で許可する。",
           "同一口座の購入が違反や契約終了の理由となるか、顧客には確実に分からない。"
+        ],
+        "tr": [
+          "Funded7 · aynı plan ve büyüklükte değerlendirmeler",
+          "Satın alma ve eşzamanlı değerlendirme sayısı",
+          "Şartlar hüküm 1, iki değerlendirme limiti maddesi: biri eşzamanlı aynı değerlendirmeleri yasaklar, diğeri toplam tahsis sınırı dahilinde izin verir.",
+          "Aynı hesapları satın almanın ihlal veya fesih nedeni olup olmadığı kesin değildir."
         ]
       }
     },
@@ -1657,6 +1771,12 @@
           "取引および出金前のルール審査",
           "規約 §4：ギャンブル・無謀な取引、規範に比べ過度なレバレッジや大きなポジション、ブローカー関係を害する取引。網羅的な基準値はない。",
           "通常の数値制限を守っていても、同じ行為が事後に禁止と認定され、口座閉鎖や利益削除につながり得る。"
+        ],
+        "tr": [
+          "Top One Futures · tüm simüle vadeli işlem programları",
+          "İşlem ve ödeme öncesi kural incelemesi",
+          "Şartlar §4: kumar/pervasız işlem, normlara göre aşırı kaldıraç veya büyük pozisyonlar ve aracı kurum ilişkilerine zarar veren işlemler; kapsamlı eşik yok.",
+          "Aynı davranış olağan sayısal limitler içinde olsa bile sonradan yasak sayılabilir, hesap kapatılıp kârlar silinebilir."
         ]
       }
     },
@@ -1715,6 +1835,12 @@
           "有効化、期間、出金申請",
           "2026/05/18 のフランス語オンライン規約：149.90ユーロ、利益率0.50%以上の7日。2026/11/10 の英語規約：199ユーロ、0.30%以上の5日。フランス語版は無効化されていない。",
           "異なる言語版を確認した購入者は異なる追加料金や資格条件に直面する可能性がある。"
+        ],
+        "tr": [
+          "WeGetFunded · 2 Steps Challenge ve WGF Funded aşaması",
+          "Aktivasyon, süre ve ödeme talepleri",
+          "18/05/2026 tarihli Fransızca çevrimiçi şartlar: 149,90 €, en az %0,50 kârlı yedi gün. 10/11/2026 tarihli İngilizce şartlar: 199 €, en az %0,30 olan beş gün; Fransızca sürüm kaldırılmamış.",
+          "Farklı dil sürümüne bakan alıcı farklı ek ücret veya uygunluk koşullarıyla karşılaşabilir."
         ]
       }
     },
@@ -1773,6 +1899,12 @@
           "チャレンジおよび WGF 口座での取引",
           "規約 §14：非現実的、一貫性がない、無責任な手法やプログラムの精神に反する行為。数値基準や網羅的なリストはない。",
           "明示的に禁止されていない戦略も取引後の定性的評価で違反とされ得る。報酬への契約上の影響は B1 で別途評価。"
+        ],
+        "tr": [
+          "WeGetFunded · Instant/1 Step/2 Steps (genel kurallar)",
+          "Değerlendirme ve WGF hesaplarında işlem",
+          "Şartlar §14: gerçekçi, tutarlı veya sorumlu olmayan teknikler ve programların ruhuyla bağdaşmayan davranışlar; sayısal ölçüt veya kapsamlı liste yok.",
+          "Açıkça yasaklanmamış strateji işlem sonrası nitel değerlendirmeyle ihlal sayılabilir; ödüllere sözleşmesel etkisi B1'de ayrı değerlendirilir."
         ]
       }
     },
@@ -1831,6 +1963,12 @@
           "出金前の取引行為・資格審査",
           "資金提供プロセス概要：持続不可能な取引行為、許容できないリスク、継続が不適切となる理由によりリスクチームは資格を剥奪できる。共通の公表基準値はない。",
           "ドローダウンと取引日数を守っても、完全には予測できない判断で継続や出金が拒否され得る。"
+        ],
+        "tr": [
+          "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "Ödeme öncesi işlem davranışı ve uygunluk incelemesi",
+          "Fonlama süreci özeti: risk ekibi sürdürülemez işlem davranışı, kabul edilemez risk veya devamı uygunsuz kılan herhangi bir nedenle uygunluğu kaldırabilir; yayımlanmış ortak eşik yok.",
+          "Düşüş ve işlem günü koşulları sağlansa bile, tamamen öngörülemeyen değerlendirmeyle devam ve ödeme erişimi reddedilebilir."
         ]
       }
     },
@@ -1889,6 +2027,12 @@
           "取引および出金前の適合性審査",
           "利用規約 §26：「著しく大きな」ポジション、「極端な過剰レバレッジ」、「財務その他の損害に関する合理的懸念」、不適合の裁量判断。",
           "数値制限を守っても、範囲の定まらない定性的認定によりシミュレーション利益の削除や口座閉鎖があり得る。"
+        ],
+        "tr": [
+          "DayTraders.com · EOD/Trail/Static değerlendirmeleri ve Pro/S2F hesapları",
+          "İşlem ve çekim öncesi uyum incelemesi",
+          "Kullanım şartları §26: «önemli ölçüde daha büyük» pozisyonlar, «aşırı yüksek kaldıraç», mali veya başka zarar konusunda makul kaygılar ve uygunsuzluğa ilişkin takdire bağlı karar.",
+          "Sayısal limitleri karşılayan yatırımcının simüle kârları, sınırsız nitel sınıflandırmayla silinebilir veya hesabı kapatılabilir."
         ]
       }
     },
@@ -1947,6 +2091,12 @@
           "シミュレーション取引および出金前の戦略審査",
           "取引ルール §3：有害な取引フローと一方向への賭けが禁止戦略に含まれる。明確な公開基準値はない。規約 §6 の出金審査とは別。",
           "ドローダウン制限を守る戦略も、有害なフローや一方向への賭けと主観的に認定され利益が除外され得る。"
+        ],
+        "tr": [
+          "Equity Edge · Legacy, Swift, Flagship ve Instant",
+          "Simüle işlem ve ödeme öncesi strateji incelemesi",
+          "İşlem kuralları §3: zararlı işlem akışı ve tek yönlü bahisler yasak stratejiler arasındadır; açık yayımlanmış eşik yok. Şartlar §6'daki ödeme incelemesinden ayrıdır.",
+          "Düşüş limitine uyan stratejinin kârları, zararlı akış veya tek yönlü bahis sayılarak öznel biçimde silinebilir."
         ]
       }
     },
@@ -2005,6 +2155,12 @@
           "資金提供・出金決定前の取引と禁止行為審査",
           "規約 §§7.1(h)-(i)、7.2–7.3：持続不可能な高リスク、非専門的な行為や評判への損害、異常な取引サイズ・頻度。会社の単独裁量で認定する。",
           "数値化されたドローダウンを守っても非専門的とされ、シミュレーション取引・利益の削除や口座終了があり得る。"
+        ],
+        "tr": [
+          "Alpine Funded · Base Camp Instant, 2-Step/Peak ve genel simüle işlem kuralları",
+          "Fonlama ve ödeme kararı öncesi işlem ve yasak davranış incelemesi",
+          "Şartlar §§7.1(h)-(i), 7.2–7.3: sürdürülemez yüksek risk, profesyonel olmayan uygulamalar veya itibar zararı, anormal büyüklük/sıklık; sınıflandırma şirketin münhasır takdirinde.",
+          "Sayısal düşüş limitine uyan strateji yine de profesyonel dışı sayılabilir; simüle işlemler/kârlar silinip hesaplar feshedilebilir."
         ]
       }
     },
@@ -2063,6 +2219,12 @@
           "資金提供口座へのアクセス・出金前の取引と戦略審査",
           "利用規約 §4.4：ブローカーとの関係を危うくする行為、第三者システムの不適切な使用、ブローカー規制。網羅的な実質基準はない。",
           "目標やドローダウンを守っても運営者が事後に禁止戦略と認定し、アクセスを取り消せる。"
+        ],
+        "tr": [
+          "FundedSquad · 1-Step, 2-Step değerlendirmeleri ve Instant modelleri (genel şartlar)",
+          "Fonlama veya ödeme öncesi işlem ve strateji incelemesi",
+          "Şartlar §4.4: aracı kurum ilişkilerini tehlikeye atabilen uygulamalar, üçüncü taraf sistemlerin uygunsuz kullanımı ve aracı kurum düzenlemeleri; kapsamlı maddi eşik yok.",
+          "Hedefler ve düşüş limitleri sağlansa bile işletmeci stratejiyi sonradan yasak sayıp erişimi iptal edebilir."
         ]
       }
     },
@@ -2121,6 +2283,12 @@
           "ニュース時間帯前に開始した取引を発表中に決済",
           "チャレンジ口座取引規則の Evaluation Funded シナリオ：時間帯前に開始し時間帯内に決済した取引の利益は審査時に除外され、損失は引き続きトレーダー負担となる。",
           "口座違反がなくても、同種の執行における利益は保持されず、実現損失は計上される。"
+        ],
+        "tr": [
+          "FundedSquad · Evaluation Funded (haber işlemleri, değerlendirme aşaması değil)",
+          "Haber penceresinden önce açılıp açıklama sırasında kapanan işlem",
+          "Değerlendirme hesabı işlem kuralları, Evaluation Funded senaryosu: pencere öncesi açılıp içinde kapanan işlemin kârı incelemede silinir; zararı yatırımcıya yüklenir.",
+          "Hesap ihlali olmasa bile aynı tür işlemde kâr korunmaz, gerçekleşen zarar sayılır."
         ]
       }
     },
@@ -2179,6 +2347,12 @@
           "シミュレーションおよびトレーダー口座への承認・支払い前審査",
           "規約 V3.01 §§9.3、10.1：ギャンブル、著しく大きな取引、不均衡なエクスポージャーの裁量的定義。明確な基準値はない。",
           "ドローダウンを守る戦略がギャンブルに再分類され、取引が取り消されたりアクセスが終了したりする可能性がある。"
+        ],
+        "tr": [
+          "Orion Funded · Nova, Zero, Standard, Swing ve Select",
+          "Simülasyon, yatırımcı hesabına kabul veya ödeme öncesi inceleme",
+          "Şartlar V3.01 §§9.3 ve 10.1: kumar, önemli ölçüde büyük işlemler ve orantısız pozisyonların takdire bağlı tanımı; kesin eşik yok.",
+          "Düşüş limitine uyan strateji kumar sayılabilir, işlemleri iptal edilebilir veya erişim feshedilebilir."
         ]
       }
     },
@@ -2237,6 +2411,12 @@
           "評価・資金提供取引、適合性審査",
           "規約 §7.26：「明確な計画や定義済み戦略のない大きな賭けに似た取引」。共通の客観的公開基準値なし。",
           "最大損失制限を守る戦略でも、予測可能な基準値なしにギャンブルとされ、資金提供口座が取り消され得る。"
+        ],
+        "tr": [
+          "Wall Street Funded · Power/Prime/Flash/Instant değerlendirmeleri",
+          "Değerlendirme ve fonlanmış işlem, uyum incelemesi",
+          "Şartlar §7.26: «açık plan veya tanımlı strateji olmadan önemli bir bahse benzeyen işlemler»; yayımlanmış evrensel nesnel eşik yok.",
+          "Maksimum zarar limitlerine uyan strateji öngörülebilir eşik olmadan kumar sayılabilir ve fonlanmış hesap iptal edilebilir."
         ]
       }
     },
@@ -2295,6 +2475,12 @@
           "取引、出金時の禁止行為認定",
           "2026年9月規約 §5.2：運営者が判断する不正利用または非現実的戦略を禁止行為に含む。一般基準値なし。結果は §6.9。",
           "数値で明示的に禁止されていない手法が事後に不正とされ、出金額の再計算につながり得る。"
+        ],
+        "tr": [
+          "Moneta Funded · 1-Step/2-Step/Instant/Sprint",
+          "İşlem, çekimde yasak davranış sınıflandırması",
+          "Eylül 2026 şartları §5.2: yasak davranış, işletmeci tarafından değerlendirilen kötüye kullanım veya gerçekçi olmayan stratejiyi içerir; genel eşik yok; sonuçlar §6.9.",
+          "Sayısal olarak açıkça yasaklanmamış yöntem sonradan kötüye kullanım sayılıp ödeme yeniden hesaplanabilir."
         ]
       }
     },
@@ -2353,6 +2539,12 @@
           "段階承認および資金提供時の戦略審査",
           "利用規約・ギャンブル行為の禁止：不均衡なリスク、ギャンブルに似た取引、全額賭け、過剰レバレッジ。条項にプログラム別の統一リスク限度なし。",
           "数値目標を守っても過度なギャンブルを理由に戦略を排除し、口座を閉鎖できる。"
+        ],
+        "tr": [
+          "TRADEXPROP · Forex/Kripto değerlendirmeleri ve Instant Funded X",
+          "Aşama onayı ve fonlama sırasında strateji incelemesi",
+          "Kullanım şartları, kumar uygulamalarının yasaklanması: orantısız risk, kumara benzeyen işlem, tümünü riske atma ve aşırı kaldıraç; maddede program başına tek risk sınırı yok.",
+          "Sayısal hedef sağlansa bile şirket aşırı kumar nedeniyle stratejiyi dışlayıp hesabı kapatabilir."
         ]
       }
     },
@@ -2411,6 +2603,12 @@
           "取引および出金前の戦略審査",
           "規約 §5.4.3：「著しく大きい」リスクや通常の市場行為に沿わない取引の認定。商品別の統一客観基準なし。",
           "最大損失制限を守る戦略でも、数値基準なしに再分類され、利益やアクセスを失い得る。"
+        ],
+        "tr": [
+          "Monevis · CFD değerlendirmeleri ve simüle fonlanmış hesaplar",
+          "İşlem ve ödeme öncesi strateji incelemesi",
+          "Şartlar §5.4.3: «önemli ölçüde daha büyük» riskler ve olağan piyasa davranışına uymayan işlemler; ürün başına tek nesnel ölçüt yok.",
+          "Maksimum zarara uyan strateji sayısal ölçüt olmadan yeniden sınıflandırılarak kâr veya erişim kaldırılabilir."
         ]
       }
     },
@@ -2469,6 +2667,12 @@
           "取引および出金前の違反審査",
           "規約 §9.2：非商業的活動、過度なサイズやエクスポージャーを禁止。完全な限度基準はなく、適合性は一方的に評価される。",
           "リスクは高いが数値上限を守る戦略も、取引後に再分類され利益を削除され得る。"
+        ],
+        "tr": [
+          "FundedHive · değerlendirmeler ve simüle hesaplar",
+          "İşlem ve çekim öncesi ihlal incelemesi",
+          "Şartlar §9.2: ticari olmayan faaliyet ve aşırı pozisyon büyüklüğü/yoğunluğu yasak; kapsamlı sınırlar yok, uyum tek taraflı değerlendirilir.",
+          "Riskli ancak sayısal sınırlara uygun strateji işlemden sonra yeniden sınıflandırılabilir ve kârı silinebilir."
         ]
       }
     },
@@ -2527,6 +2731,12 @@
           "取引および報酬申請時の取引審査",
           "取引条件：ギャンブル、持続不可能な執行、持続可能なリスク管理の欠如を禁止。全プラン共通の網羅的な指標なし。",
           "数値制限に適合する手法も定性的判断で排除される可能性がある。"
+        ],
+        "tr": [
+          "SabioTrade · CFD değerlendirmeleri ve fonlanmış programlar",
+          "İşlem ve ödül talebi sırasında inceleme",
+          "İşlem koşulları: kumar, sürdürülemez işlem yürütme ve sürdürülebilir risk yönetiminin yokluğu yasak; tüm planlarda kapsamlı ortak ölçüt yok.",
+          "Sayısal limitlere uyan yöntem nitel değerlendirmeyle dışlanabilir."
         ]
       }
     },
@@ -2585,6 +2795,12 @@
           "取引、プログラム審査、口座決定",
           "2026/11/03 規約 §§7–8：不正利用やプログラムの「精神」の回避。運営者の裁量は公開基準で十分に限定されていない。",
           "数値目標を守る戦略が不正利用とされ、排除または取引削除につながり得る。"
+        ],
+        "tr": [
+          "Clarity Traders · simüle değerlendirmeler ve fonlanmış hesaplar",
+          "İşlem, program incelemesi ve hesap kararı",
+          "03/11/2026 tarihli şartlar §§7–8: istismar ve programın ruhunu dolanma; işletmecinin takdiri kamuya açık ölçütlerle yeterince sınırlanmamış.",
+          "Sayısal hedefi karşılayan strateji istismar sayılıp dışlama veya işlem silinmesiyle sonuçlanabilir."
         ]
       }
     },
@@ -2643,6 +2859,12 @@
           "取引および資金提供・報酬前の口座審査",
           "規約 §3：一方向への賭け、ブローカーへの損害に関する正当な懸念、妨害行為を一方的裁量で判断する。",
           "ドローダウンと日数要件を守っても事前基準値なしに不適合とされ、閉鎖やアクセス喪失があり得る。"
+        ],
+        "tr": [
+          "TEFX · 1-Step, 2-Step, Instant",
+          "Fonlama veya ödül öncesi işlem ve hesap incelemesi",
+          "Şartlar §3: tek yönlü bahisler, aracı kurum zararına ilişkin haklı kaygılar ve bozucu uygulamalar tek taraflı takdire tabidir.",
+          "Düşüş ve gün koşullarına uyan işlemler önceden belirlenmiş eşik olmadan uygunsuz ilan edilip hesap kapatılabilir."
         ]
       }
     },
@@ -2701,6 +2923,12 @@
           "取引、戦略審査、資金提供への移行",
           "Analytix ダッシュボード条件：評価と資金提供の戦略が同一か会社のみが判断し、過度なギャンブルに共通の割合はない。",
           "戦略変更や相当な部分のリスクと判断される行為が、明確な共通基準値なしに事後違反となり得る。"
+        ],
+        "tr": [
+          "Lvlup Futures · Prop Account LLC değerlendirmeleri / Prop Account LC Trader Agreement",
+          "İşlem, strateji incelemesi ve fonlanmış aşamaya geçiş",
+          "Analytix panel koşulları: değerlendirme ve fonlanmış aşamada aynı strateji şartı şirketin tek takdirine bağlıdır; aşırı kumar için evrensel yüzde yok.",
+          "Strateji değiştirmek veya önemli sayılan bir payı riske atmak, ortak açık eşik olmadan sonradan ihlal yaratabilir."
         ]
       }
     },
@@ -2759,6 +2987,12 @@
           "資金提供取引および出金前審査",
           "公開規則 §9：一方向への賭け、積極的な平均取得、重要なスタイル変更を禁止。このページに詳細なプログラム横断基準値なし。",
           "ドローダウンを守る取引もギャンブルとされ、利益削除または違反となり得る。"
+        ],
+        "tr": [
+          "Atmos · Nova, 2-Step, Instant",
+          "Fonlanmış işlem ve çekim öncesi inceleme",
+          "Kamuya açık kurallar §9: tek yönlü bahisler, agresif maliyet ortalaması ve önemli stil değişiklikleri yasak; sayfada programlar arası ayrıntılı eşik yok.",
+          "Düşüş limitine uyan işlem kumar sayılabilir; kâr silinmesi veya ihlal oluşabilir."
         ]
       }
     },
@@ -2817,6 +3051,12 @@
           "評価および資金提供時の戦略継続性審査",
           "§6.4：専門的戦略からギャンブル戦略への変更。プログラム共通の数値リスク基準値なし。",
           "目標とドローダウンを守っても、専門性の判断で失格となる可能性がある。"
+        ],
+        "tr": [
+          "FundedElite · değerlendirmeler / Elite simüle hesapları",
+          "Değerlendirme ve fonlanmış aşamada strateji sürekliliği",
+          "§6.4: profesyonel stratejiden kumar stratejisine geçiş; programlar arası sayısal risk eşiği yok.",
+          "Hedefler ve düşüş limitleri sağlansa da profesyonellik değerlendirmesiyle yatırımcı diskalifiye edilebilir."
         ]
       }
     },
@@ -2875,6 +3115,12 @@
           "取引および報酬前の戦略審査",
           "規約 §§5.5、5.6：その他の禁止取引やパラメーターを一方的裁量で定義する。",
           "数値制限を守っても事後に戦略が禁止され、取引が損益から削除され得る。"
+        ],
+        "tr": [
+          "Upcomers · CFD, vadeli işlemler ve diğer simüle programlar",
+          "İşlem ve ödül öncesi strateji incelemesi",
+          "Şartlar §§5.5 ve 5.6: diğer yasak işlem türleri veya parametreler tek taraflı takdirle tanımlanır.",
+          "Sayısal limitler karşılansa bile strateji sonradan yasaklanıp işlemler kâr/zarardan çıkarılabilir."
         ]
       }
     },
@@ -2933,6 +3179,12 @@
           "取引および資金提供移行時の戦略審査",
           "規約 §5.C：ブローカーとの関係を危うくするリスクや裁量による戦略変更の認定。共通の公開指標なし。",
           "ドローダウンを守る戦略も範囲の定まらない定性的基準で排除され得る。"
+        ],
+        "tr": [
+          "Funded Trader Markets · simüle Challenge/Funded hesapları",
+          "Fonlanmış aşamaya geçişte işlem ve strateji incelemesi",
+          "Şartlar §5.C: aracı kurum ilişkisini tehlikeye atma riski ve strateji değişikliklerinin takdire bağlı sınıflandırılması; ortak kamuya açık ölçüt yok.",
+          "Düşüş limitine uyan strateji sınırlanmamış nitel ölçütlerle dışlanabilir."
         ]
       }
     },
@@ -2991,6 +3243,12 @@
           "出金承認・閉鎖前のシミュレーションおよび資金提供戦略審査",
           "トレーダー契約 §§4、16.12：ギャンブル、全か無かの賭け、ブローカー関係への損害リスクを会社の単独裁量で評価。全プログラム共通の客観的基準値体系なし。",
           "数値制限を守ってもスタイルの主観的再分類により閉鎖時に利益が没収され得る。報酬喪失は B1 で一度のみ評価。"
+        ],
+        "tr": [
+          "Funded Futures Network / FFN Cap LLC — geçerli sözleşmeye göre Sim-Funded Pro, STEADY ve Live hesapları",
+          "Ödeme onayı veya kapatma öncesi simüle ve fonlanmış strateji incelemesi",
+          "Trader Agreement §§4 ve 16.12: kumar, ya hep ya hiç bahisleri ve aracı kurum ilişkisine zarar riski şirketin münhasır takdirinde; programlar arası nesnel eşik çerçevesi yok.",
+          "Sayısal limitler sağlansa bile stil öznel biçimde yeniden sınıflandırılırsa kapanışta kârlar kaybedilebilir; ödül kaybı yalnızca B1'de bir kez değerlendirilir."
         ]
       }
     },
@@ -3049,6 +3307,12 @@
           "報酬申請前のチャレンジ・資金提供戦略審査",
           "規約 §6：金融市場で行うべき取引方法に反する、または DFT GROUP に損害を与える取引。明確なリスク指標なし。",
           "数値目標を守る戦略も有害行為とされ、予測可能な共通基準なしに口座閉鎖となり得る。"
+        ],
+        "tr": [
+          "DirectFundedTrader · iki aşamalı değerlendirme ve Fast Funding, simüle sözleşmeler",
+          "Ödül talebi öncesi değerlendirme ve fonlanmış strateji incelemesi",
+          "Şartlar §6: finansal piyasalarda yapılması gereken işlem biçimine aykırı veya DFT GROUP'a zarar veren her işlem; tanımlı risk ölçütü yok.",
+          "Sayısal hedeflere uygun strateji zararlı davranış sayılıp öngörülebilir evrensel ölçüt olmadan hesap kapatılabilir."
         ]
       }
     },
@@ -3107,6 +3371,12 @@
           "チャレンジ取引または出金前の資金提供審査",
           "一般規約 §5.4：定性的取引制限と取引削除の可能性。プログラムごとの完全な基準なし。",
           "目標を守る戦略も再分類され、結果が取り消され得る。"
+        ],
+        "tr": [
+          "Fidelcrest · Pro/Micro değerlendirmeleri",
+          "Değerlendirme işlemi veya ödeme öncesi fonlanmış inceleme",
+          "Genel şartlar §5.4: nitel işlem kısıtlamaları ve program başına tam ölçüt olmadan işlemlerin silinmesi.",
+          "Hedeflere uyan strateji yeniden sınıflandırılıp sonuçları iptal edilebilir."
         ]
       }
     },
@@ -3165,6 +3435,12 @@
           "チャレンジ取引または出金前の資金提供審査",
           "Speedy 取引規則：固定期限なし。規約 §10.6：チャレンジは30暦日後に失効。",
           "商品ページと契約の有効期限の矛盾により評価が不合格となり得る。"
+        ],
+        "tr": [
+          "Ultimate Traders · Speedy 1-phase",
+          "Değerlendirme işlemi veya ödeme öncesi fonlanmış inceleme",
+          "Speedy işlem kuralları: sabit süre yok; Şartlar §10.6: değerlendirme 30 takvim günü sonra sona erer.",
+          "Teklif ve sözleşmenin bitiş süresi çelişkisi değerlendirme başarısızlığına neden olabilir."
         ]
       }
     },
@@ -3223,6 +3499,12 @@
           "チャレンジ取引または出金前の資金提供審査",
           "Bullwaves 規約：過度なリスクや取引量・戦略変更の評価が商品別に完全には数値化されていない。",
           "ドローダウン制限内のスタイルも出金審査で再分類され得る。"
+        ],
+        "tr": [
+          "Bullwaves Prime · 1-Step/2-Step/Instant",
+          "Değerlendirme işlemi veya ödeme öncesi fonlanmış inceleme",
+          "Bullwaves şartları: aşırı risk ve işlem hacmi/strateji değişikliği değerlendirmesi ürün bazında tam sayısallaştırılmamış.",
+          "Düşüş limitleri içinde kalan stil ödeme incelemesinde yeniden sınıflandırılabilir."
         ]
       }
     },
@@ -3281,6 +3563,12 @@
           "評価・資金提供および報酬前の戦略確認",
           "規約 §15(k)：ギャンブル志向、悪意ある行為、会社が非専門的と判断する戦略。完全な数値基準値なし。",
           "数値制限内の戦略もスタイル認定で失格となり得る。報酬権利は B1 で別途評価。"
+        ],
+        "tr": [
+          "DNA Funded · simüle değerlendirmeler ve fonlanmış hesaplar",
+          "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
+          "Şartlar §15(k): kumar odaklı, kötü niyetli davranış ve şirketin profesyonel dışı gördüğü stratejiler; tam sayısal eşik yok.",
+          "Sayısal limitler içindeki strateji stile göre diskalifiye edilebilir; ödül hakkı B1'de ayrı değerlendirilir."
         ]
       }
     },
@@ -3339,6 +3627,12 @@
           "評価・資金提供および報酬前の戦略確認",
           "規約 §4.4：ブローカー関係を害すると判断される取引活動を数値定義なしに禁止し、終了処分を定める。",
           "損失限度を守る手法も予測できない認定により審査時に制裁され得る。"
+        ],
+        "tr": [
+          "Foxx · simüle 1-Step / Instant",
+          "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
+          "Şartlar §4.4: aracı kurum ilişkilerine zararlı sayılan her türlü işlem sayısal tanım olmadan yasaklanır; fesih yaptırımları öngörülür.",
+          "Sayısal zarar sınırına uygun teknik, öngörülebilir sınıflandırma olmadan incelemede cezalandırılabilir."
         ]
       }
     },
@@ -3397,6 +3691,12 @@
           "評価・資金提供および報酬前の戦略確認",
           "公式ヘルプガイド（2026年8月17日）：10分間の時間帯後に反対方向での回復取引が可能。一方向への賭けや非合理的とされる戦略。出金制裁はリスクチームの裁量。",
           "出金時にリスクチームが範囲の定まらない戦略認定でトレーダーを拒否できる。"
+        ],
+        "tr": [
+          "SFX Funded · Ascend / Rapid / Instant",
+          "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
+          "Resmî SFX yardım kılavuzu (17/08/2026): 10 dakikalık pencere sonrası ters yönlü telafi işlemi mümkün; tek yönlü bahisler ve mantıksız görülen stratejiler; ödeme yaptırımları risk ekibinin takdirinde.",
+          "Risk ekibi ödeme sırasında açık uçlu strateji sınıflandırmasıyla yatırımcıyı reddedebilir."
         ]
       }
     },
@@ -3455,6 +3755,12 @@
           "評価・資金提供および報酬前の戦略確認",
           "一般規約 §15：ギャンブルに似て見える行為や悪意ある戦略も禁止。評価は数値化されていない。",
           "明確な損失制限を守っても定性的理由でチャレンジ利益が無効化され得る。"
+        ],
+        "tr": [
+          "SuperFunded · simüle değerlendirme ve fonlanmış ödüller",
+          "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
+          "Genel şartlar §15: görünüşte kumara benzeyen davranış veya kötü niyetli strateji de yasak; değerlendirme sayısallaştırılmamış.",
+          "Açık zarar sınırlarına rağmen değerlendirme kazançları nitel gerekçeyle geçersiz kılınabilir."
         ]
       }
     },
@@ -3513,6 +3819,12 @@
           "評価・資金提供および報酬前の戦略確認",
           "規約 §7.3：First Frontier の単独裁量で判断する行為・戦略の「重要な」変更を禁止。数値化されていない。",
           "ドローダウンと最低日数に適合する戦略でも異なると判断され、報酬が拒否され得る。"
+        ],
+        "tr": [
+          "Funding Frontier · Classic ve PRO fonlanmış",
+          "Değerlendirme/fonlama ve ödül öncesi strateji doğrulaması",
+          "Şartlar §7.3: davranış veya stratejide «önemli» değişiklik, First Frontier'ın münhasır takdirinde sayısal eşik olmadan yasak.",
+          "Düşüş ve asgari gün koşullarına uyan strateji farklı sayılıp ödül reddedilebilir."
         ]
       }
     },
@@ -3571,6 +3883,12 @@
           "チャレンジ中または報酬前のスタイル審査",
           "規約：有害な取引やギャンブルに似た行為をリスクチームが認定する。パッケージ共通の完全な基準値はなく、支払い前に新たな条件が付く可能性がある。",
           "数値制限内の取引も再分類され、報酬拒否や口座閉鎖につながり得る。"
+        ],
+        "tr": [
+          "WeMasterTrade — simüle değerlendirme/fonlama programı",
+          "Değerlendirmede veya ödül öncesi stil incelemesi",
+          "Şartlar: zararlı işlem ve kumara benzeyen davranış risk ekibi tarafından sınıflandırılır; paketler arası tam eşik yok, ödeme öncesi yeni koşullar mümkün.",
+          "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
         ]
       }
     },
@@ -3629,6 +3947,12 @@
           "チャレンジ中または報酬前のスタイル審査",
           "FAQ：数値化されたニュース制限に加え、不正利用、操作的、非倫理的行為を対象とする。リスク基準値による網羅的認定なし。",
           "数値制限内の取引も再分類され、報酬拒否や口座閉鎖につながり得る。"
+        ],
+        "tr": [
+          "FOREXIVE — simüle değerlendirme/fonlama programı",
+          "Değerlendirmede veya ödül öncesi stil incelemesi",
+          "SSS: sayısal haber kısıtlamalarına ek olarak kötüye kullanım, manipülatif veya etik dışı uygulamalar; risk eşikleriyle kapsamlı sınıflandırma yok.",
+          "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
         ]
       }
     },
@@ -3687,6 +4011,12 @@
           "チャレンジ中または報酬前のスタイル審査",
           "規約：すべての基準値を定義せずに不公正、不正利用、有害な取引と認定できる。Outcome A 後に報酬を失う可能性。",
           "数値制限内の取引も再分類され、報酬拒否や口座閉鎖につながり得る。"
+        ],
+        "tr": [
+          "Hash Hedge — simüle değerlendirme/fonlama programı",
+          "Değerlendirmede veya ödül öncesi stil incelemesi",
+          "Şartlar tüm eşikleri tanımlamadan işlemi adaletsiz, kötüye kullanım veya zararlı saymaya izin verir; Outcome A sonrası ödüller kaybedilebilir.",
+          "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
         ]
       }
     },
@@ -3745,6 +4075,12 @@
           "チャレンジ中または報酬前のスタイル審査",
           "一般規則の不正利用やギャンブルに似たリスクの認定は一部主観的で、各商品の共通基準値なし。",
           "数値制限内の取引も再分類され、報酬拒否や口座閉鎖につながり得る。"
+        ],
+        "tr": [
+          "Sure Leverage Funding — simüle değerlendirme/fonlama programı",
+          "Değerlendirmede veya ödül öncesi stil incelemesi",
+          "Genel kurallarda kötüye kullanım veya kumara benzer risk sınıflandırması kısmen öznel; her ürün için evrensel eşik yok.",
+          "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
         ]
       }
     },
@@ -3803,6 +4139,12 @@
           "チャレンジ中または報酬前のスタイル審査",
           "ギャンブル規則：無謀な過剰レバレッジや余剰証拠金不足をリスクチームが定義できる。完全な統一基準値なし。戦略の曖昧さ1件、−3。",
           "数値制限内の取引も再分類され、報酬拒否や口座閉鎖につながり得る。"
+        ],
+        "tr": [
+          "Titan Capital Markets — simüle değerlendirme/fonlama programı",
+          "Değerlendirmede veya ödül öncesi stil incelemesi",
+          "Kumar kuralı, pervasız aşırı kaldıraç ve yetersiz serbest teminatı risk ekibinin tanımlamasına izin verir; tek tam eşik yok: bir strateji belirsizliği, −3.",
+          "Sayısal limitler içindeki işlemler yeniden sınıflandırılabilir, ödül reddedilebilir veya hesap kapatılabilir."
         ]
       }
     },
@@ -3861,6 +4203,12 @@
           "資金提供・出金承認前の取引審査",
           "概要 §24.5(6)：会社が誠実な取引に反すると判断する手法を禁止。§25：「明らかに」大きい・小さい取引サイズを基準値なしに禁止し、結果除外までの制裁。",
           "数値上限を超えなくても、主観的な戦略認定で口座や利益を失い得る。"
+        ],
+        "tr": [
+          "Prop Number One · değerlendirmeler ve fonlanmış simülasyon",
+          "Fonlama veya ödeme onayı öncesi işlem incelemesi",
+          "Genel bakış §24.5(6): şirketin iyi niyetli işleme aykırı gördüğü teknikler yasak; §25: eşik olmadan «belirgin» büyük/küçük pozisyonlar yasak, sonuçların dışlanmasına kadar yaptırım.",
+          "Öznel strateji sınıflandırması sayısal limitler aşılmadan hesap veya kâr kaybına yol açabilir."
         ]
       }
     },
@@ -3919,6 +4267,12 @@
           "資金提供・出金承認前の取引審査",
           "資金提供ガイド：一貫性のない戦略、ギャンブルに似た戦略、不十分なリスク管理を禁止。プログラム横断指標なし。利益全額取消しまでの制裁。B2 は曖昧なスタイルで−3、数値上限の自動処罰ではない。",
           "数値上限を超えなくても、主観的な戦略認定で口座や利益を失い得る。"
+        ],
+        "tr": [
+          "TradingCult · değerlendirmeler ve fonlanmış simülasyon",
+          "Fonlama veya ödeme onayı öncesi işlem incelemesi",
+          "Fonlanmış kılavuzlar: tutarsız veya kumara benzeyen stratejiler ve yetersiz risk yönetimi, programlar arası ölçüt olmadan yasak; tüm kârların iptaline kadar yaptırım. Belirsiz stil için B2 −3; sayısal limitlerin otomatik cezası değil.",
+          "Öznel strateji sınıflandırması sayısal limitler aşılmadan hesap veya kâr kaybına yol açabilir."
         ]
       }
     },
@@ -3977,6 +4331,12 @@
           "資金提供・出金承認前の取引審査",
           "規約：リスクチームは追加ルールや不適合と判断した活動の失格を決められる。プログラム別の完全な定義なし。曖昧なスタイル1件で−3、実際の遡及適用は認定していない。",
           "数値上限を超えなくても、主観的な戦略認定で口座や利益を失い得る。"
+        ],
+        "tr": [
+          "XFunded · değerlendirmeler ve fonlanmış simülasyon",
+          "Fonlama veya ödeme onayı öncesi işlem incelemesi",
+          "Şartlar risk ekibine ek kurallar koyma ve uygunsuz gördüğü faaliyetleri diskalifiye etme hakkı verir; program bazında tam tanım yok. Bir belirsiz stil sorunu −3, gerçekleşmiş geriye dönük uygulama isnadı yok.",
+          "Öznel strateji sınıflandırması sayısal limitler aşılmadan hesap veya kâr kaybına yol açabilir."
         ]
       }
     },
@@ -4035,6 +4395,12 @@
           "口座資格と維持",
           "規約 §§4.4–4.6：戦略、口座間裁定取引、リスク特性は会社の単独裁量で認定される。",
           "数値制限内の活動も禁止とされ、プログラム排除や資金提供アクセス拒否につながり得る。"
+        ],
+        "tr": [
+          "GOAT Funded Trader · değerlendirmeler ve fonlanmış erişim",
+          "Hesap uygunluğu ve sürdürülmesi",
+          "Şartlar §§4.4–4.6: stratejiler, hesaplar arası arbitraj ve risk profili şirketin münhasır takdirinde sınıflandırılır.",
+          "Sayısal limitlere uygun faaliyet yasak sayılabilir, programdan çıkarma ve fonlanmış erişim reddi doğabilir."
         ]
       }
     },
@@ -4093,6 +4459,12 @@
           "資金提供移行、スケーリング、シミュレーション・実口座出金",
           "リスク審査ポリシー §2.2：警告指標に基づく総合判断。各変数に具体的な客観基準値がないことを認めている。",
           "完全には予測できない手動審査後に口座が承認されるか、出金が遅延・拒否され得る。数値化された審査の開始条件自体は減点していない。"
+        ],
+        "tr": [
+          "FT+ · risk inceleme politikasına tabi hesaplar",
+          "Fonlanmış geçiş, ölçekleme ve simüle/gerçek çekim",
+          "Risk inceleme politikası §2.2: uyarı işaretleri temelinde bütünsel karar; her değişken için belirli nesnel eşik olmadığını kabul eder.",
+          "Tam öngörülemeyen manuel değerlendirme sonrası hesap onaylanabilir veya çekim geciktirilebilir/reddedilebilir; sayısal inceleme tetikleyicileri kendi başına cezalandırılmaz."
         ]
       }
     },
@@ -4151,6 +4523,12 @@
           "シミュレーション評価",
           "§9.5：CTI は独自裁量で特定の行為を禁止と認定できる。対応する制裁は §9.6 にまとめられている。",
           "口座や取引結果の制裁、または §9.6(e) によるレバレッジ・最大リスク変更があり得る。網羅的基準値なし。1事実、1減点。"
+        ],
+        "tr": [
+          "CTI · 20/11/2026 bağlantılı şartlar altındaki Komor şirketi değerlendirmeleri",
+          "Simüle değerlendirme",
+          "§9.5: CTI belirli uygulamaları kendi takdirine göre yasak sayabilir; ilgili yaptırımlar §9.6'da toplanır.",
+          "Hesap veya işlem sonucu yaptırıma tabi olabilir ya da §9.6(e) kapsamında kaldıraç ve maksimum risk değişebilir; kapsamlı eşik yok. Bir olgu, bir kesinti."
         ]
       }
     },
@@ -4209,6 +4587,12 @@
           "Performance Account / 資金提供アクセス維持",
           "規約 §8：無謀な取引とギャンブル行為を禁止。数値定義や適用可能な認定手続きなし。",
           "行為の主観的認定により口座閉鎖とユーザー無効化が行われ得る。"
+        ],
+        "tr": [
+          "Leeloo Trading · Performance hesapları",
+          "Performance Account / fonlanmış erişimi sürdürme",
+          "Şartlar §8: pervasız işlem ve kumar davranışı sayısal tanım veya uygulanabilir sınıflandırma prosedürü olmadan yasak.",
+          "Davranışın öznel sınıflandırılmasına göre hesap kapatılabilir ve kullanıcı devre dışı bırakılabilir."
         ]
       }
     },
@@ -4267,6 +4651,12 @@
           "評価、Live Virtual、Live Funded",
           "ガイド §§4、9：利益集中度、ポジションサイズ、履歴に基づき過度なリスクを評価。網羅的な決定基準値なし。",
           "数値制限に適合する行為も審査後に閉鎖につながり得る。報酬取消しの可能性は B1 のみに計上。"
+        ],
+        "tr": [
+          "UProfit · en iyi işlem uygulamaları kılavuzuna tabi programlar",
+          "Değerlendirme, Live Virtual ve Live Funded",
+          "Kılavuz §§4 ve 9: kâr yoğunluğu, pozisyon büyüklüğü ve geçmişe göre aşırı risk değerlendirmesi; kapsamlı kesin eşik yok.",
+          "Sayısal limitlerle uyumlu uygulama inceleme sonrası kapanmaya yol açabilir; ödül iptali olasılığı yalnız B1'e yazılır."
         ]
       }
     },
@@ -4325,6 +4715,12 @@
           "資金提供口座 / Payward Oceanic Ltd 下での取引",
           "POL 契約 §3(b)(v)–(viii)：流動性提供者を妨げる、または規制リスクを生じさせる可能性があると POL が判断する戦略。網羅的基準なし。",
           "数値制限を守る戦略でも禁止取引とされ停止・終了につながり得る。報酬への影響は B1 で評価しここでは二重減点しない。"
+        ],
+        "tr": [
+          "Breakout Prop · Classic/Pro/Turbo Funded Trader Agreement",
+          "Fonlanmış hesap / Payward Oceanic Ltd altında işlem",
+          "POL sözleşmesi §3(b)(v)–(viii): POL'un likidite sağlayıcısına müdahale edebileceğini veya düzenleyici risk yaratabileceğini düşündüğü stratejiler; kapsamlı ölçüt yok.",
+          "Sayısal limitlerle uyumlu strateji yasak işlem sayılıp askıya alma/feshe yol açabilir. Ödül sonuçları B1'de değerlendirilir, burada ikinci kez düşülmez."
         ]
       }
     },
@@ -4383,6 +4779,12 @@
           "シミュレーション評価、RCF 口座に自動適用されない",
           "規約 §7 とプログラム規則：数値化されたリスク例に加え、過度またはギャンブルに似ると認定されたリスク行為を対象とする。",
           "完全には限定されていない定性的解釈で評価不合格や口座閉鎖があり得る。RCF 契約は別途審査が必要。"
+        ],
+        "tr": [
+          "RebelsFunding · RF değerlendirmesi",
+          "Simüle değerlendirme, RCF hesaplarına otomatik uygulanmaz",
+          "Şartlar §7 ve program kuralları: sayısal risk örneklerine ek olarak aşırı veya kumara benzer görülen risk davranışı.",
+          "Tam sınırlandırılmamış nitel yorumla değerlendirme başarısız olabilir veya hesap kapanabilir; RCF sözleşmesi ayrı incelenmelidir."
         ]
       }
     },
@@ -4441,6 +4843,12 @@
           "評価承認",
           "規約 §10.1：Lux は独自判断で次段階へのアクセス計算から特定の取引を除外できる。",
           "網羅的基準なしに取引が除外されれば、数値目標を達成しても合格できない可能性がある。"
+        ],
+        "tr": [
+          "Lux Trading Firm · değerlendirme / ölçekleme",
+          "Değerlendirme onayı",
+          "Şartlar §10.1: Lux, sonraki aşamaya erişim hesabından belirli işlemleri kendi takdirine göre çıkarabilir.",
+          "Bazı işlemler kapsamlı ölçüt olmadan çıkarılırsa sayısal hedefi karşılamak aşamayı geçmeye yetmeyebilir."
         ]
       }
     },
@@ -4499,6 +4907,12 @@
           "評価および資金提供資格",
           "チャレンジ規約 §13.14：標準的市場慣行やエクスポージャー・リスクの定性的判断。網羅的な失格基準値なし。",
           "取引特性の解釈により段階移行が拒否され、評価費用が返金されない可能性がある。"
+        ],
+        "tr": [
+          "FunderPro Challenge · Classic / One Phase",
+          "Değerlendirme ve fonlanmış uygunluk",
+          "Değerlendirme şartları §13.14: standart piyasa uygulamaları ve pozisyon/risk nitel değerlendirmesi; kapsamlı diskalifiye eşiği yok.",
+          "İşlem profili yorumuyla aşama geçişi reddedilebilir ve değerlendirme ücreti iade edilmeyebilir."
         ]
       }
     },
@@ -4557,6 +4971,12 @@
           "評価後 Funded Trader",
           "規約 §10.2(n)：チャレンジの目的を損なう戦略・金融商品・リスク特性の重大な変更。数値基準値なし。",
           "変更が禁止行為と認定されれば、口座停止や報酬没収があり得る。"
+        ],
+        "tr": [
+          "HyroTrader · değerlendirme ve fonlanmış aşamaya geçiş",
+          "Değerlendirme ardından Funded Trader",
+          "Şartlar §10.2(n): değerlendirmenin amacını bozan önemli strateji, araç veya risk profili değişikliği; sayısal eşik yok.",
+          "Değişiklik yasak uygulama sayılırsa hesap askıya alınabilir ve ödüller kaybedilebilir."
         ]
       }
     },
@@ -4615,6 +5035,12 @@
           "取引と口座維持",
           "規約 §§12.2–12.4：戦略やポジションサイズの「重大または正当化されない」変化。網羅的基準値なし。",
           "数値化されたドローダウンを守る口座も一貫性に反すると判断され失格となり得る。報酬拒否権は B1 で既に評価。"
+        ],
+        "tr": [
+          "IC Funded · değerlendirme ve simüle fonlanmış hesap",
+          "İşlem ve hesap sürdürme",
+          "Şartlar §§12.2–12.4: strateji veya pozisyon büyüklüğünde «önemli ya da gerekçesiz» değişiklikler; kapsamlı eşik yok.",
+          "Sayısal düşüş limitine uyan hesap, değişiklik tutarlılıkla bağdaşmaz sayılırsa diskalifiye edilebilir; ödül reddi yetkisi B1'de zaten değerlendirilmiştir."
         ]
       }
     },
@@ -4673,6 +5099,12 @@
           "取引 / 戦略品質",
           "規約 §5.2.17：ギャンブルとランダムなロットサイズ急増を禁止。網羅的認定基準値なし。制裁は §5.3。",
           "全スタイルに適用される公表基準なしにポジションが過大とされ得る。報酬没収権は B1 のみに計上。"
+        ],
+        "tr": [
+          "Forex Funds Flow · FFF Boost ve simüle değerlendirmeler",
+          "İşlem / strateji kalitesi",
+          "Şartlar §5.2.17: kumar ve rastgele lot artışları kapsamlı sınıflandırma eşiği olmadan yasak; yaptırımlar §5.3.",
+          "Tüm stillere uygulanabilir yayımlanmış ölçüm olmadan pozisyonlar aşırı sayılabilir; ödül müsaderesi yalnız B1'de sayılır."
         ]
       }
     },
@@ -4731,6 +5163,12 @@
           "資金提供時の行為 / 評価",
           "規約 §12.24：実市場環境で商業的に再現できない活動を禁止。網羅的適用テストなし。",
           "ドローダウン制限を守ってもプログラムの不正利用と認定され口座を失い得る。出金権は請負契約で別途評価。"
+        ],
+        "tr": [
+          "The Concept Trading · Prop programı",
+          "Fonlanmış davranış / değerlendirme",
+          "Şartlar §12.24: gerçek piyasa ortamlarında ticari olarak tekrarlanamayan faaliyetler yasak; kapsamlı uygulama testleri yok.",
+          "Düşüş limitlerine rağmen strateji programı istismar sayılıp hesap kaybedilebilir; ödeme hakkı Contractor Agreement kapsamında ayrı değerlendirilir."
         ]
       }
     },
@@ -4789,6 +5227,12 @@
           "取引と口座維持",
           "利用規約・禁止用途：実市場の責任ある取引を代表しない行為と単独裁量。現在定義されているマイクロスキャルピング規則（5秒以下のポジションから利益の50%超）とは別。",
           "責任ある取引の一般的・主観的基準に基づく失格や閉鎖。累積報酬へのリスクは B1 に計上済み。"
+        ],
+        "tr": [
+          "Lucid Trading — simüle LucidFlex/Pro/Daily/Direct",
+          "İşlem ve hesap sürdürme",
+          "Kullanım şartları, yasak kullanımlar: gerçek piyasada sorumlu işlemi temsil etmeyen davranış ve münhasır takdir; beş saniye veya daha kısa pozisyonlardan elde edilen kârların %50'sinden fazlası olarak artık tanımlanmış microscalping kuralından ayrıdır.",
+          "Sorumlu işleme ilişkin genel öznel ölçütlerle diskalifiye veya kapatma; birikmiş ödül riskleri B1'de sayılmaya devam eder."
         ]
       }
     },
@@ -4847,6 +5291,12 @@
           "アクセス維持と段階移行",
           "ユーザー契約 §15：会社は非網羅的な基準に基づきトレーダーを経験豊富すぎる、または専門的すぎると判断し、口座を閉鎖できる。",
           "教育目的と両立しない専門性と認定された場合、口座や参加資格を失い得る。報酬は B1 のみで評価。"
+        ],
+        "tr": [
+          "Apex Trader Funding · değerlendirme/Performance Account (simüle program)",
+          "Erişim sürdürme ve üst aşamaya geçiş",
+          "Kullanıcı sözleşmesi §15: şirket kapsamlı olmayan ölçütlerle yatırımcıyı fazla deneyimli veya profesyonel sayıp hesaplarını kapatabilir.",
+          "Eğitim amacıyla bağdaşmaz sayılan gelişmişlik nedeniyle hesap ve program uygunluğu kaldırılabilir; ödüller yalnız B1'de değerlendirilir."
         ]
       }
     },
@@ -4905,6 +5355,12 @@
           "評価および規則適用時の資金提供",
           "FAQ・禁止取引スタイル：高頻度取引、基準値なし。規約取引規則148–151。",
           "公表された数値基準なしに取引頻度が過度と判断され、口座制裁や出金拒否があり得る。"
+        ],
+        "tr": [
+          "Klein Funding · genel şartlar altındaki değerlendirmeler",
+          "Değerlendirme ve kural uygulanıyorsa fonlanmış aşama",
+          "SSS, yasak işlem tarzları: yüksek frekanslı işlem, eşik yok; şartlar işlem kuralları 148–151.",
+          "Kamuya açık sayısal ölçüt olmadan aşırı sayılan sıklık nedeniyle hesap yaptırımı veya ödeme reddi riski."
         ]
       }
     },
@@ -4963,6 +5419,12 @@
           "利用規約が適用される評価・資金提供口座",
           "§10.1.7.20：会社の単独裁量で戦略を非商業的または実行不可能と認定できる。客観基準値や網羅的定義なし。",
           "取引が実行不可能とされれば失格、終了、口座関連権利喪失となり得る。利益没収があり得る契約制度。"
+        ],
+        "tr": [
+          "Trade The Pool — hisse değerlendirmesi/fonlaması, 03/08/2026 şartları",
+          "Kullanım şartlarına tabi değerlendirme ve fonlanmış hesap",
+          "§10.1.7.20: şirket münhasır takdirine göre stratejiyi ticari olmayan veya uygulanamaz sayabilir; nesnel eşik veya kapsamlı tanım yok.",
+          "İşlem uygulanamaz sayılırsa diskalifiye, fesih ve hesap haklarının kaybı; kârların kaybedilebileceği sözleşme rejimi."
         ]
       }
     },
@@ -5021,6 +5483,12 @@
           "チャレンジおよび Master 口座",
           "§11.9：取引・戦略の禁止認定はプラットフォームの単独裁量に留保。網羅的な客観基準値なし。",
           "突然禁止と認定された戦略による口座終了。§§17.3–17.4 の一方的報酬拒否権とは別。"
+        ],
+        "tr": [
+          "For Traders — geçerli şartlar kapsamında Challenge/Master",
+          "Değerlendirme ve Master hesabı",
+          "§11.9: işlem/stratejilerin yasak olarak sınıflandırılması platformun münhasır takdirinde; kapsamlı nesnel eşik yok.",
+          "Aniden yasak sayılan strateji nedeniyle hesap feshi; §§17.3–17.4'teki tek taraflı ücret reddi hakkından ayrı."
         ]
       }
     },
@@ -5079,6 +5547,12 @@
           "同一プログラム規則に基づく評価・資金提供",
           "規約 §7.9：ニュース前後、真の方向性市場見通しを示す代わりにボラティリティを利用してはならない。意図の違いに検証可能な基準値なし。",
           "ニュース・ストラドルと認定されリスク審査に付され、警告や口座制裁につながり得る。"
+        ],
+        "tr": [
+          "Finotive · değerlendirme ve simüle fonlanmış hesap; haber uygulamaları",
+          "Aynı program kuralları altında değerlendirme ve fonlanmış aşama",
+          "Şartlar §7.9: haber çevresinde strateji gerçek yönsel piyasa görüşü ifade etmek yerine volatiliteyi istismar etmemeli; niyet ayrımı doğrulanabilir eşiğe sahip değil.",
+          "İşlem veya strateji haber straddle işlemi sayılıp risk incelemesine yönlendirilebilir; uyarı veya hesap yaptırımı doğabilir."
         ]
       }
     },
@@ -5137,6 +5611,12 @@
           "Tier1 または Tier2 による審査後の出金期間",
           "規約 §6.3.8：違反利益（制裁対象取引の総利益）の50%または100%を控除。当該取引の損失は違反利益の計算でゼロとする一方、純適格利益を減らす。",
           "既に損失を含む純利益計算後に違反利益を別途削除し、報酬がゼロになる場合もある。"
+        ],
+        "tr": [
+          "Funding Traders · 1-Step Pro / 2-Step Pro / Instant, RMG disiplin programı",
+          "Tier1 veya Tier2 incelemesi sonrası ödeme dönemi",
+          "Şartlar §6.3.8: yaptırıma tabi işlemlerin brüt kazançlarından oluşan Violation Profit'in %50 veya %100'ü düşülür; aynı işlemlerin zararları bu hesapta sıfır sayılır ancak net Eligible Profit'i azaltır.",
+          "Zararları zaten içeren net kâr hesabından sonra ihlal kazançları ayrıca düşülür, bazen ödül sıfıra iner."
         ]
       }
     },
@@ -5195,6 +5675,12 @@
           "シミュレーション口座と資金提供取引",
           "規約 §§6.1、6.6(10)：適切なリスク管理は OFP の単独裁量で判断し、OFP が禁止とする他の異常な戦略も対象。",
           "異常な行為について統一固定基準値なしに取引や口座を失格とできる。"
+        ],
+        "tr": [
+          "OFP Funding · simüle ve Instant hesapları, 09/02/2026 yürürlük tarihli şartlar",
+          "Simüle hesap ve fonlanmış işlem",
+          "Şartlar §§6.1 ve 6.6(10): iyi risk uygulaması OFP'nin münhasır takdirinde ve OFP'nin yasak saydığı diğer olağan dışı stratejiler.",
+          "Şirket «olağan dışı» davranış için sabit tek eşik olmadan işlemleri veya hesabı diskalifiye edebilir."
         ]
       }
     }
