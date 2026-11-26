@@ -184,7 +184,8 @@
     "code": "B1",
     "source": "§5.4: 'Your entitlement to profits only arises once transferred to your Axi Account.' §13.2: Axi 'may immediately terminate your participation in the Program for any reason at its discretion' and 'You hereby irrevocably waive any claim or demand against Axi'. Profit earned during the month is therefore not an entitlement before the month-end transfer and can be lost by a discretionary termination.",
     "translations": {
-      "fr": "§5.4 : le droit aux profits ne naît qu'après leur transfert sur le compte Axi. §13.2 : Axi peut mettre immédiatement fin à la participation pour tout motif à sa discrétion, et le client renonce irrévocablement à toute réclamation contre Axi. Les profits du mois peuvent donc être perdus avant le transfert de fin de mois."
+      "fr": "§5.4 : le droit aux profits ne naît qu'après leur transfert sur le compte Axi. §13.2 : Axi peut mettre immédiatement fin à la participation pour tout motif à sa discrétion, et le client renonce irrévocablement à toute réclamation contre Axi. Les profits du mois peuvent donc être perdus avant le transfert de fin de mois.",
+      "es": "§5.4: el derecho a los beneficios solo nace una vez transferidos a la cuenta Axi. §13.2: Axi puede poner fin inmediatamente a la participación en el programa por cualquier motivo a su discreción; el usuario renuncia irrevocablemente a toda reclamación contra Axi. Por tanto, los beneficios obtenidos durante el mes no constituyen un derecho antes de la transferencia de fin de mes y pueden perderse por una terminación discrecional."
     }
   },
   {
@@ -192,7 +193,8 @@
     "code": "B3",
     "source": "§4.4: 'Axi reserves the right to apply changes to the Edge Score at any time. Changes may influence your Edge Score and even affect your current ranking in the Program.' §6.1: 'The Program is subject to change without notice. We retain the right to alter or discontinue the Program at any time and without notice.' Both reach participants already in a stage.",
     "translations": {
-      "fr": "§4.4 : Axi peut modifier l'Edge Score à tout moment, y compris le classement actuel. §6.1 : Axi peut modifier ou supprimer le programme sans préavis. Ces dispositions concernent également les participants déjà engagés dans une étape."
+      "fr": "§4.4 : Axi peut modifier l'Edge Score à tout moment, y compris le classement actuel. §6.1 : Axi peut modifier ou supprimer le programme sans préavis. Ces dispositions concernent également les participants déjà engagés dans une étape.",
+      "es": "§4.4: Axi se reserva el derecho de modificar el Edge Score en cualquier momento; los cambios pueden afectar a la puntuación e incluso a la clasificación actual del participante. §6.1: el programa está sujeto a cambios sin aviso; Axi conserva el derecho de modificarlo o interrumpirlo en cualquier momento y sin preaviso. Ambas disposiciones alcanzan a los participantes que ya se encuentran en una fase."
     }
   },
   {
@@ -200,7 +202,8 @@
     "code": "B4",
     "source": "The two official rule documents disagree on the same point: Program Rules state a quarantine 'is scheduled to end one week' after it starts, Withdrawal Rules Example 5 says the account 'is then moved into Quarantine for a duration of 14 days'. Example 5 also uses an equity stop of –10% for a $1,000 account, where the Program Rules table gives –7% for every stage below Pro M.",
     "translations": {
-      "fr": "Les deux documents officiels divergent : les Program Rules prévoient une quarantaine d'une semaine, tandis que l'exemple 5 des Withdrawal Rules indique 14 jours. Cet exemple fixe aussi un seuil d'équité de −10 % pour un compte de 1 000 $, contre −7 % dans le tableau des Program Rules pour les étapes avant Pro M."
+      "fr": "Les deux documents officiels divergent : les Program Rules prévoient une quarantaine d'une semaine, tandis que l'exemple 5 des Withdrawal Rules indique 14 jours. Cet exemple fixe aussi un seuil d'équité de −10 % pour un compte de 1 000 $, contre −7 % dans le tableau des Program Rules pour les étapes avant Pro M.",
+      "es": "Dos documentos oficiales discrepan: las reglas del programa indican que la cuarentena está prevista para terminar una semana después de su inicio; el ejemplo 5 de las reglas de retiro indica una cuarentena de 14 días. Ese ejemplo también utiliza un límite de pérdida sobre el patrimonio del −10 % para una cuenta de 1.000 USD, mientras que la tabla del programa establece −7 % en todas las fases inferiores a Pro M."
     }
   },
   {
@@ -208,7 +211,8 @@
     "code": "D_PAYOUT_CONDITIONS",
     "source": "Axi Select — own-funds withdrawal: Withdrawing from the linked real-money brokerage balance can reduce programme allocation by the applicable multiplier while the original loss limit does not automatically move downward.",
     "translations": {
-      "fr": "Axi Select — retrait des fonds propres : retirer de l'argent du solde réel du compte de courtage lié peut réduire l'allocation selon le multiplicateur applicable, sans abaisser automatiquement la limite de perte initiale."
+      "fr": "Axi Select — retrait des fonds propres : retirer de l'argent du solde réel du compte de courtage lié peut réduire l'allocation selon le multiplicateur applicable, sans abaisser automatiquement la limite de perte initiale.",
+      "es": "Axi Select — retiro de fondos propios: retirar dinero del saldo real de corretaje vinculado puede reducir la asignación del programa según el multiplicador aplicable, sin que el límite de pérdida original se ajuste automáticamente a la baja."
     }
   },
   {
@@ -216,7 +220,8 @@
     "code": "E_HARSH",
     "source": "Withdrawing your own money from the Axi Select account mid-month (after the first trade of the month) forfeits the whole month's profit share: 'Withdrawal at any point during the month will result in the trader forfeiting any profit gained during that period.' With negative PnL, the allocation is cut immediately by the withdrawal times the multiplier and the account may enter quarantine.",
     "translations": {
-      "fr": "Retirer ses propres fonds en cours de mois après le premier trade fait perdre toute la part des profits du mois. En cas de PnL négatif, l'allocation est immédiatement réduite du retrait multiplié par le coefficient, et le compte peut entrer en quarantaine."
+      "fr": "Retirer ses propres fonds en cours de mois après le premier trade fait perdre toute la part des profits du mois. En cas de PnL négatif, l'allocation est immédiatement réduite du retrait multiplié par le coefficient, et le compte peut entrer en quarantaine.",
+      "es": "Retirar dinero propio de la cuenta Axi Select a mitad de mes (después de la primera operación del mes) implica perder toda la participación en beneficios de ese mes: cualquier retiro durante el mes da lugar a la pérdida de los beneficios obtenidos en ese periodo. Con un resultado negativo, la asignación se reduce inmediatamente por el importe retirado multiplicado por el factor correspondiente y la cuenta puede entrar en cuarentena."
     }
   },
   {
@@ -224,7 +229,8 @@
     "code": "B2",
     "source": "Prohibited trading patterns include any activity deemed by BluSky Trading Company (in its sole discretion) as non-commercial, designed to game the system, lacking a viable trading strategy, or demonstrating a lack of responsible trading; BluSky may terminate an account for any reason in its discretion and has the sole right to decide whether a user is in violation.",
     "translations": {
-      "fr": "BluSky qualifie à sa seule discrétion les pratiques non commerciales, visant à exploiter le système, non viables ou irresponsables. Elle peut résilier un compte pour tout motif et décide seule si une violation a eu lieu."
+      "fr": "BluSky qualifie à sa seule discrétion les pratiques non commerciales, visant à exploiter le système, non viables ou irresponsables. Elle peut résilier un compte pour tout motif et décide seule si une violation a eu lieu.",
+      "es": "Las prácticas prohibidas incluyen cualquier actividad que BluSky Trading Company considere, a su exclusiva discreción, no comercial, destinada a manipular el sistema, carente de una estrategia viable o indicativa de una negociación irresponsable. BluSky puede cerrar una cuenta por cualquier motivo a su discreción y tiene el derecho exclusivo de determinar si el usuario ha cometido una infracción."
     }
   },
   {
@@ -232,7 +238,8 @@
     "code": "D_PAYOUT_CAP",
     "source": "All Sim Funded accounts: 'Sim Funded payout caps operate on a rolling 7-day basis': 25K $1,500, 50K $2,500, 100K $3,000, 150K Static $1,500, 200K Static $2,500, 300K Static $3,000 (Orbit and Launch articles list their own 7-day caps; Direct to Funded has a $3,000 weekly cap).",
     "translations": {
-      "fr": "Comptes Sim Funded : plafonds glissants sur sept jours : 25K 1 500 $, 50K 2 500 $, 100K 3 000 $, 150K Static 1 500 $, 200K Static 2 500 $, 300K Static 3 000 $. Orbit et Launch ont leurs propres plafonds ; Direct to Funded est limité à 3 000 $ par semaine."
+      "fr": "Comptes Sim Funded : plafonds glissants sur sept jours : 25K 1 500 $, 50K 2 500 $, 100K 3 000 $, 150K Static 1 500 $, 200K Static 2 500 $, 300K Static 3 000 $. Orbit et Launch ont leurs propres plafonds ; Direct to Funded est limité à 3 000 $ par semaine.",
+      "es": "Todas las cuentas Sim Funded: los límites de retiro se aplican en periodos móviles de siete días: 25K, 1.500 USD; 50K, 2.500 USD; 100K, 3.000 USD; 150K Static, 1.500 USD; 200K Static, 2.500 USD; 300K Static, 3.000 USD. Orbit y Launch tienen sus propios límites de siete días; Direct to Funded tiene un límite semanal de 3.000 USD."
     }
   },
   {
@@ -240,7 +247,8 @@
     "code": "D_PAYOUT_CONDITIONS",
     "source": "All Sim Funded accounts: Between payouts 'you must generate at least $500 in new profit through normal trading activity'; 'flipping contracts or placing trades solely to qualify for another payout does not count'. After a request the trader must 'stop trading until the requested funds have been removed'.",
     "translations": {
-      "fr": "Comptes Sim Funded : entre deux retraits, il faut générer au moins 500 $ de nouveaux profits par trading normal ; retourner des contrats ou trader uniquement pour être éligible ne compte pas. Après la demande, il faut arrêter de trader jusqu'au prélèvement des fonds."
+      "fr": "Comptes Sim Funded : entre deux retraits, il faut générer au moins 500 $ de nouveaux profits par trading normal ; retourner des contrats ou trader uniquement pour être éligible ne compte pas. Après la demande, il faut arrêter de trader jusqu'au prélèvement des fonds.",
+      "es": "Todas las cuentas Sim Funded: entre dos retiros hay que generar al menos 500 USD de beneficio nuevo mediante negociación normal. Abrir y cerrar contratos o realizar operaciones únicamente para optar a otro retiro no cuenta. Tras solicitarlo, el operador debe dejar de operar hasta que se hayan retirado los fondos solicitados."
     }
   },
   {
@@ -248,7 +256,8 @@
     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
     "source": "All Sim Funded accounts: 'Before exceeding $10,000 in total profit per account, you must open a Support Review Ticket' (payouts count toward the total); 'Trading during an active review may result in automatic account loss'; reviews can occur earlier and may end with the account closed or kept on Sim Funded; the $10,000 level 'is not a guaranteed number'.",
     "translations": {
-      "fr": "Avant de dépasser 10 000 $ de profits totaux par compte Sim Funded, retraits inclus, il faut ouvrir un ticket de révision. Trader pendant cette révision peut entraîner la perte automatique du compte. La révision peut intervenir plus tôt et aboutir à une fermeture ou un maintien en simulation ; le seuil de 10 000 $ n'est pas garanti."
+      "fr": "Avant de dépasser 10 000 $ de profits totaux par compte Sim Funded, retraits inclus, il faut ouvrir un ticket de révision. Trader pendant cette révision peut entraîner la perte automatique du compte. La révision peut intervenir plus tôt et aboutir à une fermeture ou un maintien en simulation ; le seuil de 10 000 $ n'est pas garanti.",
+      "es": "Todas las cuentas Sim Funded: antes de superar 10.000 USD de beneficio total por cuenta, incluidos los retiros, debe abrirse un ticket de revisión con soporte. Operar durante una revisión activa puede provocar la pérdida automática de la cuenta. Las revisiones pueden producirse antes y concluir con el cierre de la cuenta o su mantenimiento en Sim Funded; el umbral de 10.000 USD no está garantizado."
     }
   },
   {
@@ -256,7 +265,8 @@
     "code": "B1",
     "source": "'Performance rewards are discretionary and do not constitute a guaranteed right or entitlement'; they are processed under a separate Funded Trader Program agreement, and participation in that program is 'at the sole discretion' of Bright Global FZCO.",
     "translations": {
-      "fr": "Les récompenses de performance sont discrétionnaires et ne constituent pas un droit garanti. Elles dépendent d'un contrat Funded Trader Program distinct, auquel l'admission relève de la seule discrétion de Bright Global FZCO."
+      "fr": "Les récompenses de performance sont discrétionnaires et ne constituent pas un droit garanti. Elles dépendent d'un contrat Funded Trader Program distinct, auquel l'admission relève de la seule discrétion de Bright Global FZCO.",
+      "es": "Las recompensas de rendimiento son discrecionales y no constituyen un derecho garantizado. Se tramitan con arreglo a un contrato separado del Funded Trader Program, cuya participación queda a la exclusiva discreción de Bright Global FZCO."
     }
   },
   {
@@ -264,7 +274,8 @@
     "code": "B2",
     "source": "Abuse includes 'implementation of reckless transactions in rough markets'; 'If abuse is suspected, we reserve the right to refuse to claim any profit.' Bulenox may also 'restrict or limit or terminate account(s) for any reasons at any time without prior notice'.",
     "translations": {
-      "fr": "L'abus comprend notamment des transactions imprudentes en marchés difficiles. Si un abus est suspecté, Bulenox se réserve le droit de refuser tout profit. Elle peut aussi limiter ou résilier les comptes à tout moment, pour tout motif, sans préavis."
+      "fr": "L'abus comprend notamment des transactions imprudentes en marchés difficiles. Si un abus est suspecté, Bulenox se réserve le droit de refuser tout profit. Elle peut aussi limiter ou résilier les comptes à tout moment, pour tout motif, sans préavis.",
+      "es": "El abuso incluye la realización de operaciones imprudentes en mercados turbulentos. Si se sospecha un abuso, Bulenox se reserva el derecho a rechazar la reclamación de cualquier beneficio. También puede restringir, limitar o cerrar cuentas por cualquier motivo, en cualquier momento y sin preaviso."
     }
   },
   {
@@ -272,7 +283,8 @@
     "code": "B2",
     "source": "The Company may 'disallow or block any Trader from participating in the program for any reason, in the Company's sole and absolute discretion'; it may act against conduct 'that we, at our sole discretion, regard as misaligned with our mission and values'; actions include cancelling trades and informing CTI, which may cancel 'all of your accounts or rewards'; any violation of the Terms forfeits 'their right to receive any rewards'.",
     "translations": {
-      "fr": "CTI peut exclure tout trader pour tout motif à sa seule et absolue discrétion, notamment pour une conduite jugée incompatible avec sa mission et ses valeurs. Les mesures incluent l'annulation de trades, de tous les comptes ou récompenses ; toute violation des conditions fait perdre le droit aux récompenses."
+      "fr": "CTI peut exclure tout trader pour tout motif à sa seule et absolue discrétion, notamment pour une conduite jugée incompatible avec sa mission et ses valeurs. Les mesures incluent l'annulation de trades, de tous les comptes ou récompenses ; toute violation des conditions fait perdre le droit aux récompenses.",
+      "es": "La empresa puede impedir o bloquear la participación de cualquier operador en el programa por cualquier motivo, a su exclusiva y absoluta discreción. Puede actuar contra comportamientos que considere incompatibles con su misión y valores; entre las medidas figuran la cancelación de operaciones y la comunicación a CTI, que puede cancelar todas las cuentas o recompensas del usuario. Cualquier infracción de las condiciones supone la pérdida del derecho a recibir recompensas."
     }
   },
   {
@@ -280,7 +292,8 @@
     "code": "B6",
     "source": "If the Client 'acts in a manner that may damage the Company's good reputation', the Company may restrict access to all or some services.",
     "translations": {
-      "fr": "CTI peut restreindre l'accès à tout ou partie de ses services si le client agit d'une façon susceptible de nuire à sa réputation."
+      "fr": "CTI peut restreindre l'accès à tout ou partie de ses services si le client agit d'une façon susceptible de nuire à sa réputation.",
+      "es": "Si el cliente actúa de una manera que pueda perjudicar la buena reputación de la empresa, esta puede restringir el acceso a todos o parte de sus servicios."
     }
   },
   {
@@ -288,7 +301,8 @@
     "code": "B2",
     "source": "Additionally, the Company reserves the right to disallow or block any Trader from participating in the program for any reason, in the Company’s sole and absolute discretion.",
     "translations": {
-      "fr": "CK Capital se réserve le droit d'exclure ou bloquer tout trader du programme pour tout motif, à sa seule et absolue discrétion."
+      "fr": "CK Capital se réserve le droit d'exclure ou bloquer tout trader du programme pour tout motif, à sa seule et absolue discrétion.",
+      "es": "Además, la empresa se reserva el derecho de impedir o bloquear la participación de cualquier operador en el programa por cualquier motivo, a su exclusiva y absoluta discreción."
     }
   },
   {
@@ -296,7 +310,8 @@
     "code": "D_PAYOUT_CAP",
     "source": "All programmes — funded stage: The first five payouts are capped (before the 80/20 split): first payout 2.5% of account size (e.g. $2,500 on $100K), payouts 2-5 at 3% ($3,000 on $100K); every withdrawal, including partial ones, counts toward the five capped payouts, and 'meeting the conditions does not guarantee approval'.",
     "translations": {
-      "fr": "Tous programmes financés : cinq premiers retraits plafonnés avant partage 80/20 : premier à 2,5 % de la taille (2 500 $ sur 100K), deuxième à cinquième à 3 % (3 000 $ sur 100K). Tout retrait, même partiel, compte dans les cinq ; satisfaire les conditions ne garantit pas l'approbation."
+      "fr": "Tous programmes financés : cinq premiers retraits plafonnés avant partage 80/20 : premier à 2,5 % de la taille (2 500 $ sur 100K), deuxième à cinquième à 3 % (3 000 $ sur 100K). Tout retrait, même partiel, compte dans les cinq ; satisfaire les conditions ne garantit pas l'approbation.",
+      "es": "Todos los programas, fase financiada: los cinco primeros retiros están limitados antes del reparto 80/20. El primero al 2,5 % del tamaño de la cuenta (por ejemplo, 2.500 USD en 100K); del segundo al quinto, al 3 % (3.000 USD en 100K). Cada retiro, incluso parcial, cuenta entre los cinco sujetos a límite. Cumplir las condiciones no garantiza la aprobación."
     }
   },
   {
@@ -304,7 +319,8 @@
     "code": "D_PAYOUT_CONDITIONS",
     "source": "All programmes — funded stage: From the second payout on, at least 1% of the initial account size in new profit is required since the previous payout (e.g. $1,000 on $100K), plus a 'protected buffer' where applicable; this continues after the fifth payout.",
     "translations": {
-      "fr": "À partir du deuxième retrait, au moins 1 % du solde initial de nouveaux profits depuis le retrait précédent (1 000 $ sur 100K) est requis, plus un coussin protégé le cas échéant. Cette condition subsiste après le cinquième retrait."
+      "fr": "À partir du deuxième retrait, au moins 1 % du solde initial de nouveaux profits depuis le retrait précédent (1 000 $ sur 100K) est requis, plus un coussin protégé le cas échéant. Cette condition subsiste après le cinquième retrait.",
+      "es": "Todos los programas, fase financiada: a partir del segundo retiro se exige un beneficio nuevo de al menos el 1 % del tamaño inicial de la cuenta desde el retiro anterior (por ejemplo, 1.000 USD en 100K), además de un colchón protegido cuando proceda. Esta condición continúa después del quinto retiro."
     }
   },
   {
@@ -312,7 +328,8 @@
     "code": "B2",
     "source": "A user may be barred from a Reward at the sole discretion of Day Traders for disregard for these Terms or any other disruptive manner; for Prohibited Conduct Day Traders may determine at its own discretion the nature of the behaviour and reasonable consequences.",
     "translations": {
-      "fr": "Day Traders peut exclure un utilisateur des récompenses à sa seule discrétion pour non-respect des conditions ou tout autre comportement perturbateur. Elle détermine elle-même la nature de la conduite interdite et les conséquences raisonnables."
+      "fr": "Day Traders peut exclure un utilisateur des récompenses à sa seule discrétion pour non-respect des conditions ou tout autre comportement perturbateur. Elle détermine elle-même la nature de la conduite interdite et les conséquences raisonnables.",
+      "es": "Day Traders puede excluir a un usuario de una recompensa a su exclusiva discreción por incumplir las condiciones o por cualquier otro comportamiento perturbador. En caso de conducta prohibida, puede determinar a su discreción la naturaleza del comportamiento y las consecuencias razonables."
     }
   },
   {
@@ -320,7 +337,8 @@
     "code": "B6",
     "source": "Disparaging Day Traders (or its competitors) is a ground to bar a user from a Reward.",
     "translations": {
-      "fr": "Dénigrer Day Traders ou ses concurrents peut entraîner l'exclusion d'un utilisateur des récompenses."
+      "fr": "Dénigrer Day Traders ou ses concurrents peut entraîner l'exclusion d'un utilisateur des récompenses.",
+      "es": "Desacreditar a Day Traders o a sus competidores constituye un motivo para excluir al usuario de una recompensa."
     }
   },
   {
@@ -328,7 +346,8 @@
     "code": "B7",
     "source": "Funding with Day Traders capital or another product after the evaluation shall be governed pursuant to separate or supplemental written agreement, not published with the terms.",
     "translations": {
-      "fr": "L'accès au capital Day Traders ou à un autre produit après évaluation est régi par un contrat écrit distinct ou complémentaire, non publié avec les conditions."
+      "fr": "L'accès au capital Day Traders ou à un autre produit après évaluation est régi par un contrat écrit distinct ou complémentaire, non publié avec les conditions.",
+      "es": "La financiación con capital de Day Traders u otro producto posterior a la evaluación se rige por un contrato escrito separado o complementario, que no se publica junto con estas condiciones."
     }
   },
   {
@@ -336,7 +355,8 @@
     "code": "B2",
     "source": "If 'E8 otherwise determines in its sole discretion that you do not meet the eligibility requirements or are not in compliance with the agreements, E8 reserves the right to terminate your account and withhold or revoke the awarding of any payout awards'; forfeiture may occur 'if it is determined that a participant did not comply with the agreements in any manner as determined by E8 in its sole discretion'.",
     "translations": {
-      "fr": "E8 peut résilier le compte et retenir ou révoquer les récompenses si elle estime à sa seule discrétion que les conditions d'éligibilité ou les accords ne sont pas respectés. Le non-respect est également apprécié à sa seule discrétion."
+      "fr": "E8 peut résilier le compte et retenir ou révoquer les récompenses si elle estime à sa seule discrétion que les conditions d'éligibilité ou les accords ne sont pas respectés. Le non-respect est également apprécié à sa seule discrétion.",
+      "es": "Si E8 determina a su exclusiva discreción que el usuario no cumple los requisitos de elegibilidad o los contratos, se reserva el derecho de cerrar la cuenta y retener o revocar cualquier recompensa de retiro. Puede producirse la pérdida de recompensas cuando E8 determine a su exclusiva discreción que un participante incumplió los contratos de cualquier manera."
     }
   },
   {
@@ -344,7 +364,8 @@
     "code": "B3",
     "source": "'E8 may modify or eliminate features retroactively, and no user shall have a claim to prior functionality, pricing, payout structure, or simulation logic'; Terms changes are effective immediately upon posting.",
     "translations": {
-      "fr": "E8 peut modifier ou supprimer rétroactivement des fonctionnalités, sans droit au maintien des anciennes fonctionnalités, tarifs, structures de retrait ou logiques de simulation. Les modifications des conditions prennent effet dès publication."
+      "fr": "E8 peut modifier ou supprimer rétroactivement des fonctionnalités, sans droit au maintien des anciennes fonctionnalités, tarifs, structures de retrait ou logiques de simulation. Les modifications des conditions prennent effet dès publication.",
+      "es": "E8 puede modificar o eliminar funcionalidades con efecto retroactivo y ningún usuario puede reclamar las funcionalidades, precios, estructura de retiros o lógica de simulación anteriores. Los cambios de las condiciones surten efecto inmediatamente al publicarse."
     }
   },
   {
@@ -352,7 +373,8 @@
     "code": "D_PAYOUT_CAP",
     "source": "E8 Signature Futures — Performance stage: Per-payout caps: 1st and 2nd payouts $1,000 / $1,250 / $2,000 / $3,000, 3rd and 4th $1,250 / $2,000 / $3,000 / $3,495 for the $25K / $50K / $100K / $150K accounts.",
     "translations": {
-      "fr": "E8 Signature Futures, Performance : plafonds par retrait pour 25K/50K/100K/150K : premier et deuxième 1 000/1 250/2 000/3 000 $ ; troisième et quatrième 1 250/2 000/3 000/3 495 $."
+      "fr": "E8 Signature Futures, Performance : plafonds par retrait pour 25K/50K/100K/150K : premier et deuxième 1 000/1 250/2 000/3 000 $ ; troisième et quatrième 1 250/2 000/3 000/3 495 $.",
+      "es": "E8 Signature Futures, fase Performance: límites por retiro para cuentas de 25K/50K/100K/150K. Primer y segundo retiros: 1.000/1.250/2.000/3.000 USD; tercero y cuarto: 1.250/2.000/3.000/3.495 USD."
     }
   },
   {
@@ -360,7 +382,8 @@
     "code": "D_ACCOUNT_ENDS_AFTER_PAYOUTS",
     "source": "E8 Signature Futures — Performance stage: Maximum 4 payouts per account, \"Then a free new Challenge account.\"",
     "translations": {
-      "fr": "E8 Signature Futures, Performance : maximum quatre retraits par compte, puis un nouveau compte Challenge gratuit."
+      "fr": "E8 Signature Futures, Performance : maximum quatre retraits par compte, puis un nouveau compte Challenge gratuit.",
+      "es": "E8 Signature Futures, fase Performance: máximo de cuatro retiros por cuenta. Después se proporciona gratuitamente una nueva cuenta Challenge."
     }
   },
   {
@@ -368,7 +391,8 @@
     "code": "D_PAYOUT_CONDITIONS",
     "source": "E8 Signature Futures — Performance stage: \"You need to leave a buffer in your account of the same size as your EOD dynamic drawdown\" when requesting a payout.",
     "translations": {
-      "fr": "E8 Signature Futures, Performance : au moment d'une demande de retrait, le trader doit laisser un coussin égal au drawdown dynamique EOD."
+      "fr": "E8 Signature Futures, Performance : au moment d'une demande de retrait, le trader doit laisser un coussin égal au drawdown dynamique EOD.",
+      "es": "E8 Signature Futures, fase Performance: al solicitar un retiro, debe mantenerse en la cuenta un colchón del mismo importe que el límite dinámico de pérdida al cierre del día (EOD)."
     }
   },
   {
@@ -376,7 +400,8 @@
     "code": "B2",
     "source": "ETF 'reserves the right to withhold or delay Rewards ... if it determines, in its sole discretion, that a User has engaged in behavior that is inconsistent with or in violations of the Terms', and retains 'the sole and absolute discretion to determine whether a Trader's trading behavior is in accordance with the Terms'.",
     "translations": {
-      "fr": "ETF peut retenir ou retarder les récompenses si elle estime à sa seule discrétion que le comportement n'est pas conforme aux conditions. Elle conserve la seule et absolue discrétion de déterminer la conformité du comportement de trading."
+      "fr": "ETF peut retenir ou retarder les récompenses si elle estime à sa seule discrétion que le comportement n'est pas conforme aux conditions. Elle conserve la seule et absolue discrétion de déterminer la conformité du comportement de trading.",
+      "es": "ETF se reserva el derecho de retener o retrasar recompensas si determina, a su exclusiva discreción, que el comportamiento de un usuario es incompatible con las condiciones o las infringe. Conserva la facultad exclusiva y absoluta de determinar si el comportamiento de negociación del operador se ajusta a las condiciones."
     }
   },
   {
@@ -384,7 +409,8 @@
     "code": "B3",
     "source": "ETF may modify the Terms 'including Reward limits and eligibility requirements, ATD limits, drawdown limits, or any other parameters of the LIVE ELITE Account', and may convert a trader to LIVE ELITE 'at any time, before, during, or after a Reward request'.",
     "translations": {
-      "fr": "ETF peut modifier les conditions, notamment plafonds et éligibilité aux récompenses, limites ATD, drawdown ou autres paramètres LIVE ELITE. Elle peut transférer le trader vers LIVE ELITE à tout moment, avant, pendant ou après une demande de récompense."
+      "fr": "ETF peut modifier les conditions, notamment plafonds et éligibilité aux récompenses, limites ATD, drawdown ou autres paramètres LIVE ELITE. Elle peut transférer le trader vers LIVE ELITE à tout moment, avant, pendant ou après une demande de récompense.",
+      "es": "ETF puede modificar las condiciones, incluidos los límites de recompensas, requisitos de elegibilidad, límites ATD, límites de pérdida y cualquier otro parámetro de la cuenta LIVE ELITE. También puede trasladar al operador a LIVE ELITE en cualquier momento, antes, durante o después de una solicitud de recompensa."
     }
   },
   {
@@ -392,7 +418,8 @@
     "code": "B6",
     "source": "Prohibited conduct includes 'conduct or activities that, in ETF's sole discretion creates, reputational, regulatory, or financial risk to ETF'.",
     "translations": {
-      "fr": "Sont notamment interdits les comportements ou activités créant, à la seule discrétion d'ETF, un risque réputationnel, réglementaire ou financier pour ETF."
+      "fr": "Sont notamment interdits les comportements ou activités créant, à la seule discrétion d'ETF, un risque réputationnel, réglementaire ou financier pour ETF.",
+      "es": "Las conductas prohibidas incluyen comportamientos o actividades que, a la exclusiva discreción de ETF, generen riesgos reputacionales, regulatorios o financieros para ETF."
     }
   },
   {
@@ -400,7 +427,8 @@
     "code": "D_PAYOUT_CAP",
     "source": "All plans — Elite sim-funded stage: Each payout cycle has a $100 minimum and a maximum that scales with account size and completed cycles (example on a $50K account: $1,250 in the first cycle, rising toward $2,000). Sim payouts are capped at \"$25,000 total per trader\" across all accounts, with a $150,000 lifetime sim cap across re-entries.",
     "translations": {
-      "fr": "Comptes Elite sim-funded : minimum 100 $ par cycle, maximum selon taille et cycles accomplis (sur 50K : 1 250 $ au premier cycle, jusqu'à 2 000 $). Plafond total de 25 000 $ par trader sur tous les comptes simulés, et 150 000 $ à vie avec réinscriptions."
+      "fr": "Comptes Elite sim-funded : minimum 100 $ par cycle, maximum selon taille et cycles accomplis (sur 50K : 1 250 $ au premier cycle, jusqu'à 2 000 $). Plafond total de 25 000 $ par trader sur tous les comptes simulés, et 150 000 $ à vie avec réinscriptions.",
+      "es": "Todos los planes, fase Elite financiada simulada: cada ciclo de retiro tiene un mínimo de 100 USD y un máximo que aumenta según el tamaño de la cuenta y los ciclos completados (ejemplo en una cuenta de 50K: 1.250 USD en el primer ciclo, aumentando hasta 2.000 USD). Los retiros simulados tienen un límite total de 25.000 USD por operador entre todas las cuentas y un límite vitalicio de 150.000 USD sumando las reincorporaciones."
     }
   },
   {
@@ -408,7 +436,8 @@
     "code": "D_SPLIT_REDUCTION",
     "source": "All plans — Elite sim-funded stage: Reaching $25,000 in cumulative sim payouts moves the trader to LIVE ELITE, where the split is \"80% to you, 20% to ETF\" (sim-funded split: up to 100%). The terms add that ETF may convert a trader to LIVE ELITE \"at any time\" at its sole discretion, and a trader who declines is prohibited from using ETF's services for two calendar years.",
     "translations": {
-      "fr": "À 25 000 $ de retraits simulés cumulés, transfert vers LIVE ELITE avec partage de 80 % au trader contre jusqu'à 100 % en simulation. ETF peut aussi décider du transfert à tout moment ; le refus interdit l'utilisation de ses services pendant deux années calendaires."
+      "fr": "À 25 000 $ de retraits simulés cumulés, transfert vers LIVE ELITE avec partage de 80 % au trader contre jusqu'à 100 % en simulation. ETF peut aussi décider du transfert à tout moment ; le refus interdit l'utilisation de ses services pendant deux années calendaires.",
+      "es": "Todos los planes, fase Elite financiada simulada: alcanzar 25.000 USD en retiros simulados acumulados implica pasar a LIVE ELITE, donde el reparto es 80 % para el operador y 20 % para ETF (en simulación, hasta el 100 %). Las condiciones añaden que ETF puede trasladar al operador a LIVE ELITE en cualquier momento a su exclusiva discreción; quien se niegue no podrá utilizar sus servicios durante dos años naturales."
     }
   },
   {
@@ -416,7 +445,8 @@
     "code": "D_PAYOUT_CONDITIONS",
     "source": "All funded accounts (14-day payouts): Payouts can be requested \"every fourteenth calendar day following the initiation of the first trade on the funded account\"; \"If you miss the 14th calendar day, you will need to wait another 14 calendar days\". Requests must be submitted before 17:00 UK time. On-demand payouts only at VIP Spot.",
     "translations": {
-      "fr": "Comptes financés avec cycle de 14 jours : demande tous les quatorzièmes jours calendaires suivant le premier trade. Si le jour est manqué, attendre 14 jours supplémentaires. Demande avant 17 h au Royaume-Uni. Retraits à la demande réservés au VIP Spot."
+      "fr": "Comptes financés avec cycle de 14 jours : demande tous les quatorzièmes jours calendaires suivant le premier trade. Si le jour est manqué, attendre 14 jours supplémentaires. Demande avant 17 h au Royaume-Uni. Retraits à la demande réservés au VIP Spot.",
+      "es": "Todas las cuentas financiadas con retiros cada 14 días: pueden solicitarse cada decimocuarto día natural desde la primera operación de la cuenta financiada. Si se pierde ese día, deben esperarse otros 14 días naturales. Las solicitudes deben enviarse antes de las 17:00, hora del Reino Unido. Los retiros bajo demanda solo están disponibles en VIP Spot."
     }
   },
   {
@@ -424,7 +454,8 @@
     "code": "B2",
     "source": "Prohibited Behaviour covers conduct that is abusive, non-reproducible, manipulative, deceptive, non-compliant, or otherwise prohibited, and may lead to payout delay, payout rejection or account closure after Risk or Compliance review.",
     "translations": {
-      "fr": "Les comportements abusifs, non reproductibles, manipulateurs, trompeurs, non conformes ou autrement interdits peuvent entraîner retard ou refus de paiement, ou fermeture du compte après contrôle des risques ou de conformité."
+      "fr": "Les comportements abusifs, non reproductibles, manipulateurs, trompeurs, non conformes ou autrement interdits peuvent entraîner retard ou refus de paiement, ou fermeture du compte après contrôle des risques ou de conformité.",
+      "es": "La conducta prohibida comprende comportamientos abusivos, no reproducibles, manipuladores, engañosos, contrarios a las normas o prohibidos por otros motivos, y puede dar lugar a retrasos o rechazos de retiros o al cierre de la cuenta tras una revisión de Riesgos o Cumplimiento."
     }
   },
   {
@@ -432,7 +463,8 @@
     "code": "B3",
     "source": "Compliance, risk, security, fraud, prohibited strategy, and platform-integrity updates may apply immediately to existing accounts where Finotive considers this necessary.",
     "translations": {
-      "fr": "Les modifications de conformité, risque, sécurité, fraude, stratégies interdites et intégrité de la plateforme peuvent s'appliquer immédiatement aux comptes existants si Finotive le juge nécessaire."
+      "fr": "Les modifications de conformité, risque, sécurité, fraude, stratégies interdites et intégrité de la plateforme peuvent s'appliquer immédiatement aux comptes existants si Finotive le juge nécessaire.",
+      "es": "Las actualizaciones relativas a cumplimiento, riesgos, seguridad, fraude, estrategias prohibidas e integridad de la plataforma pueden aplicarse inmediatamente a las cuentas existentes cuando Finotive lo considere necesario."
     }
   },
   {
