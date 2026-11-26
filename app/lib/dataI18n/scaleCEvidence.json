@@ -1405,7 +1405,8 @@
       "fr": "PRO financé simulé : drawdown suiveur du plus haut d'équité en temps réel, gains latents inclus. Il faut constituer un coussin équivalent à la limite de perte maximale avant les retraits ordinaires.",
       "es": "PRO — fase financiada simulada: el límite dinámico de pérdida sigue el mayor patrimonio EN TIEMPO REAL, incluidas las ganancias no realizadas. Antes de los retiros ordinarios, debe constituirse un colchón equivalente al límite máximo de pérdida.",
       "de": "PRO — simulierte finanzierte Phase: Der nachlaufende Drawdown folgt der höchsten Echtzeit-Equity, einschließlich nicht realisierter Gewinne. Vor regulären Auszahlungen muss ein Puffer in Höhe der maximalen Verlustgrenze aufgebaut werden.",
-      "it": "PRO — fase finanziata simulata: il drawdown dinamico segue l'equity massima in tempo reale, compresi i profitti non realizzati. Prima dei prelievi ordinari occorre costituire un margine pari al limite massimo di perdita."
+      "it": "PRO — fase finanziata simulata: il drawdown dinamico segue l'equity massima in tempo reale, compresi i profitti non realizzati. Prima dei prelievi ordinari occorre costituire un margine pari al limite massimo di perdita.",
+      "pt": "PRO — fase financiada simulada: o drawdown móvel acompanha o capital próprio máximo em tempo real, incluindo ganhos não realizados. Antes dos levantamentos normais, deve ser constituída uma reserva equivalente ao limite máximo de perda."
     }
   },
   {
@@ -1416,7 +1417,8 @@
       "fr": "TenTrade conserve la seule et absolue discrétion de déterminer si le trading enfreint le cadre de risque, l'esprit ou les objectifs opérationnels du programme. En cas de conduite interdite ou abusive identifiée ou raisonnablement suspectée, elle peut annuler les trades, refuser le retrait, résilier le compte ou exclure définitivement. Aucune voie de révision ou d'appel n'a été trouvée.",
       "es": "TenTrade se reserva la facultad exclusiva y absoluta de determinar si una actividad de negociación incumple el marco de riesgo, el espíritu o los objetivos operativos del programa. Cuando se identifica o se sospecha razonablemente una conducta prohibida o abusiva, TenTrade puede adoptar cualquier medida que considere apropiada, incluida la cancelación de operaciones, la denegación de retiros, el cierre de cuentas o la descalificación permanente. No se ha encontrado ninguna vía de revisión o recurso.",
       "de": "TenTrade entscheidet nach alleinigem und uneingeschränktem Ermessen, ob Handelsaktivitäten gegen den Risikorahmen, den Geist oder die betrieblichen Ziele des Programms verstoßen. Bei festgestelltem oder begründet vermutetem verbotenem oder missbräuchlichem Verhalten kann TenTrade jede als angemessen erachtete Maßnahme ergreifen, einschließlich Trade-Annullierung, Auszahlungsverweigerung, Kontoschließung oder dauerhafter Disqualifikation. Eine Überprüfungs- oder Einspruchsmöglichkeit wurde nicht gefunden.",
-      "it": "TenTrade si riserva la facoltà esclusiva e assoluta di determinare se l'attività di trading violi il quadro di rischio, lo spirito o gli obiettivi operativi del programma. In caso di condotta vietata o abusiva accertata o ragionevolmente sospettata, può adottare qualsiasi misura ritenuta appropriata, inclusi annullamento delle operazioni, rifiuto dei prelievi, chiusura del conto o squalifica permanente. Non è stata trovata alcuna procedura di riesame o ricorso."
+      "it": "TenTrade si riserva la facoltà esclusiva e assoluta di determinare se l'attività di trading violi il quadro di rischio, lo spirito o gli obiettivi operativi del programma. In caso di condotta vietata o abusiva accertata o ragionevolmente sospettata, può adottare qualsiasi misura ritenuta appropriata, inclusi annullamento delle operazioni, rifiuto dei prelievi, chiusura del conto o squalifica permanente. Non è stata trovata alcuna procedura di riesame o ricorso.",
+      "pt": "A TenTrade reserva-se o exclusivo e absoluto critério para determinar se a atividade de negociação viola o quadro de risco, o espírito ou os objetivos operacionais do programa. Em caso de conduta proibida ou abusiva identificada ou razoavelmente suspeita, pode adotar qualquer medida considerada apropriada, incluindo cancelamento de operações, recusa de levantamentos, encerramento de contas ou desqualificação permanente. Não foi encontrada uma via de revisão ou recurso."
     }
   },
   {
@@ -1427,7 +1429,8 @@
       "fr": "Les mesures de trading responsable peuvent entraîner des restrictions de compte. Les décisions automatisées ou assistées par IA peuvent faire l'objet d'une révision ; une mesure non confirmée à l'issue de celle-ci est annulée.",
       "es": "Las medidas de negociación responsable pueden dar lugar a medidas desfavorables sobre las cuentas. Las decisiones automatizadas o asistidas por IA pueden revisarse y, si una medida no se confirma tras la revisión, se revoca.",
       "de": "Maßnahmen für verantwortungsvollen Handel können nachteilige Maßnahmen für Konten nach sich ziehen. Automatisierte oder KI-gestützte Entscheidungen können überprüft werden; eine bei der Überprüfung nicht bestätigte Maßnahme wird rückgängig gemacht.",
-      "it": "Le misure di trading responsabile possono comportare provvedimenti sfavorevoli sui conti. Le decisioni automatizzate o assistite dall'IA possono essere riesaminate e una misura non confermata in sede di riesame viene revocata."
+      "it": "Le misure di trading responsabile possono comportare provvedimenti sfavorevoli sui conti. Le decisioni automatizzate o assistite dall'IA possono essere riesaminate e una misura non confermata in sede di riesame viene revocata.",
+      "pt": "Medidas de negociação responsável podem levar a medidas desfavoráveis nas contas. Decisões automatizadas ou assistidas por IA podem ser revistas; uma medida não confirmada na revisão é revertida."
     }
   },
   {
@@ -1438,7 +1441,8 @@
       "fr": "§14.2.5 : le non-respect de l'obligation de non-dénigrement (§16) constitue un motif de résiliation. Le §16 continue de s'appliquer après résiliation.",
       "es": "§14.2.5: el incumplimiento de la obligación de no denigración (cláusula 16) constituye un motivo de resolución del contrato; la cláusula 16 subsiste tras la resolución.",
       "de": "§14.2.5: Ein Verstoß gegen die Verpflichtung zur Unterlassung von Herabsetzungen (Klausel 16) ist ein Kündigungsgrund. Klausel 16 gilt nach Vertragsbeendigung fort.",
-      "it": "§14.2.5: la violazione dell'obbligo di non denigrazione (clausola 16) costituisce motivo di risoluzione. La clausola 16 sopravvive alla risoluzione del contratto."
+      "it": "§14.2.5: la violazione dell'obbligo di non denigrazione (clausola 16) costituisce motivo di risoluzione. La clausola 16 sopravvive alla risoluzione del contratto.",
+      "pt": "§14.2.5: a violação da obrigação de não depreciação (cláusula 16) constitui motivo de cessação. A cláusula 16 mantém-se após a cessação."
     }
   },
   {
@@ -1449,7 +1453,8 @@
       "fr": "La liste d'interdictions comprend tout autre comportement qui, à la seule discrétion de la société, constitue une activité non commerciale, vise à exploiter le marché ou n'est pas une stratégie viable, ainsi que l'exploitation intentionnelle ou non d'erreurs du système.",
       "es": "La lista de prohibiciones termina con cualquier otra conducta que, a la exclusiva discreción de la empresa, constituya una actividad no comercial, tenga por objeto manipular el mercado o no sea una estrategia de negociación viable. También incluye el aprovechamiento intencionado o involuntario de errores del sistema.",
       "de": "Die Verbotsliste endet mit sonstigem Verhalten, das nach alleinigem Ermessen des Unternehmens nicht kommerziell ist, auf Marktmanipulation abzielt oder keine tragfähige Handelsstrategie darstellt. Auch die absichtliche oder unabsichtliche Ausnutzung von Systemfehlern ist erfasst.",
-      "it": "L'elenco dei divieti termina con ogni altra condotta che, a esclusiva discrezione della società, rappresenti un'attività non commerciale, sia finalizzata a manipolare il mercato o non costituisca una strategia di trading valida. Comprende inoltre lo sfruttamento intenzionale o involontario degli errori del sistema."
+      "it": "L'elenco dei divieti termina con ogni altra condotta che, a esclusiva discrezione della società, rappresenti un'attività non commerciale, sia finalizzata a manipolare il mercato o non costituisca una strategia di trading valida. Comprende inoltre lo sfruttamento intenzionale o involontario degli errori del sistema.",
+      "pt": "A lista de proibições termina com qualquer outra conduta que, a exclusivo critério da empresa, represente atividade não comercial, vise manipular o mercado ou não constitua uma estratégia de negociação viável. Abrange também a exploração intencional ou não intencional de erros do sistema."
     }
   },
   {
@@ -1460,7 +1465,8 @@
       "fr": "Les conditions peuvent être modifiées à la seule discrétion de la société, avec effet immédiat dès publication. Les règles de trading et comportements interdits peuvent changer à tout moment, avec ou sans préavis.",
       "es": "Las condiciones pueden modificarse a la exclusiva discreción de la empresa y son vinculantes desde su publicación. Las reglas de negociación y la conducta prohibida están sujetas a cambios en cualquier momento, con o sin aviso.",
       "de": "Die Bedingungen können nach alleinigem Ermessen des Unternehmens geändert werden und sind unmittelbar mit Veröffentlichung verbindlich. Handelsregeln und Vorgaben zu verbotenem Verhalten können jederzeit mit oder ohne Vorankündigung geändert werden.",
-      "it": "Le condizioni possono essere modificate a esclusiva discrezione della società e diventano vincolanti immediatamente alla pubblicazione. Le regole di trading e le condotte vietate possono cambiare in qualsiasi momento, con o senza preavviso."
+      "it": "Le condizioni possono essere modificate a esclusiva discrezione della società e diventano vincolanti immediatamente alla pubblicazione. Le regole di trading e le condotte vietate possono cambiare in qualsiasi momento, con o senza preavviso.",
+      "pt": "Os termos podem ser alterados a exclusivo critério da empresa e tornam-se vinculativos imediatamente após publicação. As regras de negociação e as condutas proibidas podem mudar a qualquer momento, com ou sem aviso."
     }
   },
   {
@@ -1471,7 +1477,8 @@
       "fr": "Le contrat peut être résilié pour toute déclaration diffamatoire, dénigrante ou préjudiciable sur la société, ses employés ou services, sur toute plateforme publique, sites d'avis inclus, ainsi que pour la publication de tickets de support ou échanges privés. Conséquence : résiliation sans remboursement et perte immédiate des profits acquis ou du solde de récompenses.",
       "es": "Entre los motivos de resolución por causa figuran las declaraciones difamatorias, denigrantes o perjudiciales sobre la empresa, sus empleados o servicios en cualquier plataforma pública, incluidas las páginas de reseñas, así como la publicación de tickets de soporte o correspondencia privada. La consecuencia es la resolución sin reembolso y la pérdida inmediata de los beneficios acumulados o del saldo de recompensas.",
       "de": "Zu den Gründen für eine außerordentliche Kündigung gehören verleumderische, herabsetzende oder schädigende Äußerungen über das Unternehmen, seine Mitarbeiter oder Dienstleistungen auf öffentlichen Plattformen, einschließlich Bewertungsseiten, sowie die Veröffentlichung von Support-Tickets oder privater Korrespondenz. Folge: Kündigung ohne Erstattung und sofortiger Verlust sämtlicher aufgelaufener Gewinne oder Vergütungsguthaben.",
-      "it": "Tra i motivi di risoluzione per giusta causa rientrano dichiarazioni diffamatorie, denigratorie o dannose sulla società, sui dipendenti o sui servizi su qualsiasi piattaforma pubblica, inclusi i siti di recensioni, nonché la pubblicazione di ticket di assistenza o corrispondenza privata. Conseguenza: risoluzione senza rimborso e perdita immediata di tutti i profitti maturati o del saldo delle ricompense."
+      "it": "Tra i motivi di risoluzione per giusta causa rientrano dichiarazioni diffamatorie, denigratorie o dannose sulla società, sui dipendenti o sui servizi su qualsiasi piattaforma pubblica, inclusi i siti di recensioni, nonché la pubblicazione di ticket di assistenza o corrispondenza privata. Conseguenza: risoluzione senza rimborso e perdita immediata di tutti i profitti maturati o del saldo delle ricompense.",
+      "pt": "Entre os motivos de cessação por justa causa estão declarações difamatórias, depreciativas ou prejudiciais sobre a empresa, os seus funcionários ou serviços em plataformas públicas, incluindo sites de avaliações, e a publicação de tickets de suporte ou correspondência privada. Consequência: cessação sem reembolso e perda imediata de todos os lucros acumulados ou saldo de recompensas."
     }
   },
   {
@@ -1482,7 +1489,8 @@
       "fr": "The5ers High Stakes Pro : plafonds de retrait 3 000 $ et 4 000 $ sur comptes 50K et 100K, avec profits minimums de 300 $ et 500 $ respectivement. Demandes tous les 14 jours.",
       "es": "The5ers High Stakes — retiros Pro: los límites publicados para las cuentas Pro de 50K y 100K son de 3.000 y 4.000 USD, respectivamente, con beneficios mínimos para retirar de 300 y 500 USD. Las solicitudes se realizan cada 14 días.",
       "de": "The5ers High Stakes — Pro-Auszahlungen: Die veröffentlichten Höchstbeträge für Pro-Konten mit 50K bzw. 100K liegen bei 3.000 bzw. 4.000 USD, die Mindestgewinne für eine Auszahlung bei 300 bzw. 500 USD. Anfragen sind alle 14 Tage möglich.",
-      "it": "The5ers High Stakes — prelievi Pro: i tetti pubblicati per i conti Pro da 50K e 100K sono rispettivamente 3.000 e 4.000 USD, con profitti minimi per il prelievo di 300 e 500 USD. Le richieste avvengono ogni 14 giorni."
+      "it": "The5ers High Stakes — prelievi Pro: i tetti pubblicati per i conti Pro da 50K e 100K sono rispettivamente 3.000 e 4.000 USD, con profitti minimi per il prelievo di 300 e 500 USD. Le richieste avvengono ogni 14 giorni.",
+      "pt": "The5ers High Stakes — levantamentos Pro: os tetos publicados para contas Pro de 50K e 100K são de 3.000 e 4.000 USD, respetivamente, com lucros mínimos para levantamento de 300 e 500 USD. Os pedidos são feitos de 14 em 14 dias."
     }
   },
   {
@@ -1493,7 +1501,8 @@
       "fr": "Tous programmes, §3.2 : si la société demande un entretien, sa planification et sa tenue doivent intervenir dans les cinq jours ouvrés suivant la demande. À défaut : refus des paiements en attente, annulation immédiate de tous les comptes associés et fin de la collaboration. La vérification peut intervenir à tout moment à la seule discrétion de la société.",
       "es": "Todos los programas — entrevista de verificación: sección 3.2: si la empresa solicita una entrevista, debe programarse y realizarse dentro de los cinco días hábiles siguientes a la solicitud. El incumplimiento conlleva la denegación de todos los retiros pendientes, la cancelación inmediata de todas las cuentas asociadas y el fin de la colaboración. La verificación puede realizarse en cualquier momento a la exclusiva discreción de la empresa.",
       "de": "Alle Programme — Verifizierungsgespräch: Abschnitt 3.2: Fordert das Unternehmen ein Gespräch an, muss es innerhalb von fünf Geschäftstagen ab Anfrage vereinbart und durchgeführt werden. Andernfalls werden alle ausstehenden Auszahlungen verweigert, sämtliche verbundenen Konten sofort annulliert und die Zusammenarbeit beendet. Die Verifizierung kann jederzeit nach alleinigem Ermessen des Unternehmens stattfinden.",
-      "it": "Tutti i programmi — colloquio di verifica: sezione 3.2: se la società richiede un colloquio, questo deve essere programmato e svolto entro cinque giorni lavorativi dalla richiesta. Il mancato rispetto comporta il rifiuto dei prelievi pendenti, l'annullamento immediato di tutti i conti associati e la fine della collaborazione. La verifica può avvenire in qualsiasi momento a esclusiva discrezione della società."
+      "it": "Tutti i programmi — colloquio di verifica: sezione 3.2: se la società richiede un colloquio, questo deve essere programmato e svolto entro cinque giorni lavorativi dalla richiesta. Il mancato rispetto comporta il rifiuto dei prelievi pendenti, l'annullamento immediato di tutti i conti associati e la fine della collaborazione. La verifica può avvenire in qualsiasi momento a esclusiva discrezione della società.",
+      "pt": "Todos os programas — entrevista de verificação: secção 3.2: se a empresa solicitar uma entrevista, esta deve ser agendada e realizada nos cinco dias úteis seguintes ao pedido. O incumprimento resulta na recusa de levantamentos pendentes, cancelamento imediato de todas as contas associadas e fim da colaboração. A verificação pode ser realizada a qualquer momento a exclusivo critério da empresa."
     }
   },
   {
@@ -1504,7 +1513,8 @@
       "fr": "Un entretien vidéo demandé lors de la vérification doit être planifié et réalisé sous cinq jours ouvrés ; sinon les retraits en attente sont refusés, tous les comptes annulés et la collaboration prend fin.",
       "es": "Una entrevista por vídeo solicitada durante la verificación debe programarse y completarse en cinco días hábiles; de lo contrario, se deniegan los retiros pendientes, se cancelan todas las cuentas y finaliza la colaboración.",
       "de": "Ein im Rahmen der Verifizierung verlangtes Videogespräch muss innerhalb von fünf Geschäftstagen vereinbart und abgeschlossen werden. Andernfalls werden ausstehende Auszahlungen verweigert, alle Konten annulliert und die Zusammenarbeit beendet.",
-      "it": "Un colloquio video richiesto durante la verifica deve essere programmato e completato entro cinque giorni lavorativi; in caso contrario vengono negati i prelievi pendenti, annullati tutti i conti e terminata la collaborazione."
+      "it": "Un colloquio video richiesto durante la verifica deve essere programmato e completato entro cinque giorni lavorativi; in caso contrario vengono negati i prelievi pendenti, annullati tutti i conti e terminata la collaborazione.",
+      "pt": "Uma entrevista por vídeo solicitada durante a verificação deve ser agendada e concluída em cinco dias úteis; caso contrário, os levantamentos pendentes são recusados, todas as contas canceladas e a colaboração terminada."
     }
   },
   {
@@ -1515,7 +1525,8 @@
       "fr": "Le prestataire peut définir à sa discrétion les opérations, pratiques, stratégies ou situations interdites, notamment une durée de détention s'écartant déraisonnablement de la moyenne. Il peut appliquer à sa discrétion les §§5.5–5.6 : annulation des trades et résiliation de tous les contrats.",
       "es": "El proveedor se reserva el derecho de determinar a su discreción si determinadas operaciones, prácticas, estrategias o situaciones constituyen prácticas prohibidas (incluido un tiempo de mantenimiento de posiciones que se desvíe de la media en una medida irrazonable). Puede aplicar las medidas de las cláusulas 5.5 y 5.6 (cancelar operaciones y resolver todos los contratos) a su discreción.",
       "de": "Der Anbieter behält sich vor, nach eigenem Ermessen zu bestimmen, ob bestimmte Trades, Praktiken, Strategien oder Situationen verbotene Handelspraktiken darstellen (einschließlich einer unangemessenen Abweichung der Positionshaltedauer vom Durchschnitt). Er kann nach eigenem Ermessen die Maßnahmen der Klauseln 5.5 und 5.6 ergreifen (Trades annullieren, sämtliche Verträge beenden).",
-      "it": "Il fornitore si riserva il diritto di determinare a propria discrezione se determinate operazioni, pratiche, strategie o situazioni siano vietate (incluso un tempo di mantenimento delle posizioni che si discosti irragionevolmente dalla media). Può applicare a propria discrezione le misure dei §§5.5 e 5.6 (annullare operazioni e risolvere tutti i contratti)."
+      "it": "Il fornitore si riserva il diritto di determinare a propria discrezione se determinate operazioni, pratiche, strategie o situazioni siano vietate (incluso un tempo di mantenimento delle posizioni che si discosti irragionevolmente dalla media). Può applicare a propria discrezione le misure dei §§5.5 e 5.6 (annullare operazioni e risolvere tutti i contratti).",
+      "pt": "O fornecedor reserva-se o direito de determinar a seu critério se operações, práticas, estratégias ou situações constituem práticas de negociação proibidas (incluindo duração de posições que se desvie de forma irrazoável da média). Pode aplicar a seu critério as medidas das cláusulas 5.5 e 5.6 (cancelar operações e cessar todos os contratos)."
     }
   },
   {
@@ -1526,7 +1537,8 @@
       "fr": "Les déclarations dénigrantes, fausses ou trompeuses concernant Top One Futures sont interdites, y compris sur les sites d'avis, réseaux sociaux et forums. Les violations peuvent entraîner la résiliation immédiate du compte et la confiscation des profits.",
       "es": "Las declaraciones denigrantes, falsas o engañosas sobre Top One Futures están estrictamente prohibidas, incluidas las realizadas en plataformas de reseñas, redes sociales o foros. Las infracciones pueden provocar el cierre inmediato de la cuenta y la pérdida de beneficios.",
       "de": "Herabsetzende, falsche oder irreführende Aussagen über Top One Futures sind streng verboten, auch auf Bewertungsplattformen, in sozialen Medien oder Foren. Verstöße können zur sofortigen Kontoschließung und zum Verlust der Gewinne führen.",
-      "it": "Le dichiarazioni denigratorie, false o ingannevoli su Top One Futures sono rigorosamente vietate, anche sulle piattaforme di recensioni, sui social media o nei forum. Le violazioni possono comportare l'immediata chiusura del conto e la perdita dei profitti."
+      "it": "Le dichiarazioni denigratorie, false o ingannevoli su Top One Futures sono rigorosamente vietate, anche sulle piattaforme di recensioni, sui social media o nei forum. Le violazioni possono comportare l'immediata chiusura del conto e la perdita dei profitti.",
+      "pt": "Declarações depreciativas, falsas ou enganosas sobre a Top One Futures são estritamente proibidas, incluindo em plataformas de avaliações, redes sociais ou fóruns. As violações podem causar o encerramento imediato da conta e a perda dos lucros."
     }
   },
   {
@@ -1537,7 +1549,8 @@
       "fr": "Elite Evaluation, compte simulé financé : maximum par demande de 1 500 $ (25K), 2 500 $ (50K), 3 000 $ (100K), 3 500 $ (150K). Le profit excédentaire reste sur le compte.",
       "es": "Elite Evaluation (fase financiada simulada): máximo por solicitud de retiro de 1.500 USD (25K), 2.500 USD (50K), 3.000 USD (100K) y 3.500 USD (150K); los beneficios por encima del límite permanecen en la cuenta.",
       "de": "Elite Evaluation (simulierte finanzierte Phase): Höchstbetrag je Auszahlungsanfrage 1.500 USD (25K), 2.500 USD (50K), 3.000 USD (100K), 3.500 USD (150K). Gewinne oberhalb des Limits verbleiben auf dem Konto.",
-      "it": "Elite Evaluation (fase finanziata simulata): massimo per richiesta di prelievo 1.500 USD (25K), 2.500 USD (50K), 3.000 USD (100K), 3.500 USD (150K); i profitti eccedenti restano sul conto."
+      "it": "Elite Evaluation (fase finanziata simulata): massimo per richiesta di prelievo 1.500 USD (25K), 2.500 USD (50K), 3.000 USD (100K), 3.500 USD (150K); i profitti eccedenti restano sul conto.",
+      "pt": "Elite Evaluation (fase financiada simulada): máximo por pedido de levantamento de 1.500 USD (25K), 2.500 USD (50K), 3.000 USD (100K), 3.500 USD (150K); os lucros acima do teto permanecem na conta."
     }
   },
   {
@@ -1548,7 +1561,8 @@
       "fr": "Tous comptes simulés financés : après trois retraits réussis (cinq pour Elite Daily), un responsable du risque examine le compte. Si sélectionné pour le réel, le trader doit commencer à trader en réel ou fermer le compte simulé ; tout compte simulé actif sera fermé. Les comptes réels démarrent à 0 $ et les profits simulés ne sont pas intégralement transférés.",
       "es": "Todas las cuentas financiadas simuladas: después de tres retiros exitosos de una cuenta (cinco para Elite Daily), un gestor de riesgos revisa la cuenta. Si se selecciona al operador para pasar a una cuenta real, sus opciones son comenzar a operar en real o cerrar la cuenta Sim Funded; cualquier cuenta simulada activa se cerrará. Las cuentas reales comienzan con 0 USD y los beneficios simulados no se transfieren íntegramente.",
       "de": "Alle simulierten finanzierten Konten: Nach drei erfolgreichen Auszahlungen aus einem Konto (fünf bei Elite Daily) prüft ein Risikomanager das Konto. Bei Auswahl für Live-Handel besteht die Wahl zwischen dem Beginn des Live-Handels und der Schließung des Sim Funded-Kontos; alle aktiven simulierten Konten werden geschlossen. Live-Konten starten bei 0 USD; simulierte Gewinne werden nicht vollständig übertragen.",
-      "it": "Tutti i conti finanziati simulati: dopo tre prelievi riusciti da un conto (cinque per Elite Daily), un responsabile del rischio esamina il conto. Se selezionato per il reale, il trader deve scegliere se iniziare a operare in reale o chiudere il conto Sim Funded; tutti i conti simulati attivi verranno chiusi. I conti reali partono da 0 USD e i profitti simulati non vengono trasferiti integralmente."
+      "it": "Tutti i conti finanziati simulati: dopo tre prelievi riusciti da un conto (cinque per Elite Daily), un responsabile del rischio esamina il conto. Se selezionato per il reale, il trader deve scegliere se iniziare a operare in reale o chiudere il conto Sim Funded; tutti i conti simulati attivi verranno chiusi. I conti reali partono da 0 USD e i profitti simulati non vengono trasferiti integralmente.",
+      "pt": "Todas as contas financiadas simuladas: após três levantamentos bem-sucedidos numa conta (cinco para Elite Daily), um gestor de risco analisa a conta. Se selecionado para conta real, o trader pode começar a negociar em Live ou encerrar a conta Sim Funded; todas as contas simuladas ativas serão encerradas. As contas reais começam com 0 USD e os lucros simulados não são transferidos integralmente."
     }
   },
   {
@@ -1559,7 +1573,8 @@
       "fr": "2-Step PRO V2 financé : chaque demande limitée à 6 % de la taille du compte et à 15 000 $. Il faut au moins 3 % de profit et trois journées bénéficiaires d'au moins 0,5 % du solde initial chacune.",
       "es": "2-Step PRO (V2) — fase financiada: cada solicitud de retiro se limita al 6 % del tamaño de la cuenta, con un máximo de 15.000 USD por solicitud. Se exige un beneficio de al menos el 3 % y al menos tres días de negociación rentables (cada uno con al menos el 0,5 % del saldo inicial).",
       "de": "2-Step PRO (V2) — finanzierte Phase: Jede Auszahlungsanfrage ist auf 6 % der Kontogröße und höchstens 15.000 USD begrenzt. Erforderlich sind mindestens 3 % Gewinn und mindestens drei profitable Handelstage (jeweils mindestens 0,5 % des Anfangssaldos).",
-      "it": "2-Step PRO (V2) — fase finanziata: ogni richiesta è limitata al 6% della dimensione del conto, con un massimo di 15.000 USD. Sono richiesti almeno il 3% di profitto e almeno tre giorni di trading profittevoli (ciascuno almeno lo 0,5% del saldo iniziale)."
+      "it": "2-Step PRO (V2) — fase finanziata: ogni richiesta è limitata al 6% della dimensione del conto, con un massimo di 15.000 USD. Sono richiesti almeno il 3% di profitto e almeno tre giorni di trading profittevoli (ciascuno almeno lo 0,5% del saldo iniziale).",
+      "pt": "2-Step PRO (V2) — fase financiada: cada pedido de levantamento está limitado a 6% do tamanho da conta, até 15.000 USD. São exigidos pelo menos 3% de lucro e três dias lucrativos de negociação (cada um com pelo menos 0,5% do saldo inicial)."
     }
   },
   {
@@ -1570,7 +1585,8 @@
       "fr": "Topstep interdit notamment toute conduite que la société juge à sa seule discrétion non commerciale, visant à exploiter le marché, non viable ou irresponsable. La sanction peut inclure la perte du droit aux retraits sur tous les autres comptes.",
       "es": "La conducta prohibida incluye aquella que, a la exclusiva discreción de Topstep, constituya una actividad no comercial, pretenda manipular el mercado, no sea una estrategia viable o no sea una negociación responsable. La consecuencia puede ser la pérdida de retiros de todas las demás cuentas.",
       "de": "Verbotenes Verhalten umfasst Handlungen, die nach alleinigem Ermessen von Topstep nicht kommerziell sind, auf Marktmanipulation abzielen, keine tragfähige Strategie darstellen oder nicht verantwortungsvollem Handel entsprechen. Als Folge können Auszahlungen sämtlicher anderer Konten verloren gehen.",
-      "it": "La condotta vietata comprende comportamenti che, a esclusiva discrezione di Topstep, rappresentino attività non commerciali, siano destinati a manipolare il mercato, non costituiscano una strategia valida o non rappresentino trading responsabile. La conseguenza può essere la perdita dei prelievi di tutti gli altri conti."
+      "it": "La condotta vietata comprende comportamenti che, a esclusiva discrezione di Topstep, rappresentino attività non commerciali, siano destinati a manipolare il mercato, non costituiscano una strategia valida o non rappresentino trading responsabile. La conseguenza può essere la perdita dei prelievi di tutti gli altri conti.",
+      "pt": "A conduta proibida inclui comportamentos que, a exclusivo critério da Topstep, constituam atividade não comercial, visem manipular o mercado, não representem uma estratégia viável ou não sejam negociação responsável. A consequência pode ser a perda de levantamentos de todas as outras contas."
     }
   },
   {
@@ -1581,7 +1597,8 @@
       "fr": "Les règles de trading peuvent changer à tout moment, avec ou sans préavis. Les modifications des conditions prennent effet après notification sous une forme choisie par Topstep.",
       "es": "Las reglas de negociación están sujetas a cambios en cualquier momento y periódicamente, con o sin aviso. Las modificaciones de las condiciones surten efecto tras una notificación en la forma que Topstep determine a su discreción.",
       "de": "Handelsregeln können jederzeit und von Zeit zu Zeit mit oder ohne Vorankündigung geändert werden. Änderungen der Bedingungen treten mit einer Mitteilung in einer von Topstep nach eigenem Ermessen bestimmten Form in Kraft.",
-      "it": "Le regole di trading possono cambiare in qualsiasi momento e periodicamente, con o senza preavviso. Le modifiche delle condizioni entrano in vigore dopo una comunicazione nella forma scelta da Topstep a propria discrezione."
+      "it": "Le regole di trading possono cambiare in qualsiasi momento e periodicamente, con o senza preavviso. Le modifiche delle condizioni entrano in vigore dopo una comunicazione nella forma scelta da Topstep a propria discrezione.",
+      "pt": "As regras de negociação podem mudar a qualquer momento e periodicamente, com ou sem aviso. As alterações aos termos entram em vigor após notificação na forma escolhida a critério da Topstep."
     }
   },
   {
@@ -1592,7 +1609,8 @@
       "fr": "Express Funded Account : chaque retrait est limité à 50 % du solde, avec un plafond de 2 000 à 6 000 $ selon taille et parcours de retrait. Minimum 125 $. Les retraits Live Funded Account ne sont pas plafonnés.",
       "es": "Express Funded Account — importe del retiro: cada retiro se limita al 50 % del saldo de la cuenta hasta el límite correspondiente, de 2.000 a 6.000 USD según el tamaño de la cuenta y la modalidad de retiro. Retiro mínimo: 125 USD. Los retiros de Live Funded Account no tienen límite.",
       "de": "Express Funded Account — Auszahlungshöhe: Jede Auszahlung ist auf 50 % des Kontostands bis zum jeweiligen Höchstbetrag begrenzt. Die Höchstbeträge liegen je nach Kontogröße und Auszahlungsmodell zwischen 2.000 und 6.000 USD. Mindestauszahlung: 125 USD. Auszahlungen vom Live Funded Account sind nicht gedeckelt.",
-      "it": "Express Funded Account — importo del prelievo: ogni prelievo è limitato al 50% del saldo del conto fino al tetto applicabile, da 2.000 a 6.000 USD secondo dimensione del conto e modalità di prelievo. Prelievo minimo: 125 USD. I prelievi del Live Funded Account non sono soggetti a tetto."
+      "it": "Express Funded Account — importo del prelievo: ogni prelievo è limitato al 50% del saldo del conto fino al tetto applicabile, da 2.000 a 6.000 USD secondo dimensione del conto e modalità di prelievo. Prelievo minimo: 125 USD. I prelievi del Live Funded Account non sono soggetti a tetto.",
+      "pt": "Express Funded Account — montante de levantamento: cada levantamento está limitado a 50% do saldo da conta até ao teto aplicável, de 2.000 a 6.000 USD conforme o tamanho e a modalidade de levantamento. Mínimo: 125 USD. Os levantamentos da Live Funded Account não têm teto."
     }
   },
   {
@@ -1603,7 +1621,8 @@
       "fr": "Express Funded Account : malgré une puissance d'achat nominale de 50K à 150K $, le compte démarre à 0 $. La limite de perte maximale remonte depuis un seuil négatif, se verrouille à 0 $ et passe à 0 $ après le premier retrait. Option Consistency : meilleure journée ≤40 % et au moins trois jours de trading.",
       "es": "Topstep Express Funded Account — retiro: a pesar de la capacidad de compra nominal de 50K–150K USD, la XFA comienza con 0 USD. El límite máximo de pérdida (MLL) sube desde un umbral negativo, queda fijado en 0 USD y se establece en 0 USD tras el primer retiro. En la modalidad opcional de retiros con consistencia, el mejor día no debe superar el 40 % y se exigen al menos tres días de negociación.",
       "de": "Topstep Express Funded Account — Auszahlung: Trotz nomineller Kaufkraft von 50K–150K USD startet das XFA bei 0 USD. Das Maximum Loss Limit steigt von einer negativen Untergrenze an, wird bei 0 USD fixiert und nach der ersten Auszahlung auf 0 USD gesetzt. Beim optionalen Konsistenz-Auszahlungsmodell darf der beste Tag höchstens 40 % ausmachen; mindestens drei Handelstage sind erforderlich.",
-      "it": "Topstep Express Funded Account — prelievo: nonostante il potere d'acquisto nominale di 50K–150K USD, l'XFA parte da 0 USD. Il Maximum Loss Limit sale da una soglia negativa, si blocca a 0 USD e viene impostato a 0 USD dopo il primo prelievo. Nella modalità opzionale Consistency il giorno migliore non deve superare il 40% e sono richiesti almeno tre giorni di trading."
+      "it": "Topstep Express Funded Account — prelievo: nonostante il potere d'acquisto nominale di 50K–150K USD, l'XFA parte da 0 USD. Il Maximum Loss Limit sale da una soglia negativa, si blocca a 0 USD e viene impostato a 0 USD dopo il primo prelievo. Nella modalità opzionale Consistency il giorno migliore non deve superare il 40% e sono richiesti almeno tre giorni di trading.",
+      "pt": "Topstep Express Funded Account — levantamento: apesar do poder de compra nominal de 50K–150K USD, a XFA começa com 0 USD. O Maximum Loss Limit sobe a partir de um limite negativo, fica fixo em 0 USD e é ajustado para 0 USD após o primeiro levantamento. Na modalidade opcional Consistency, o melhor dia não pode exceder 40% e são exigidos pelo menos três dias de negociação."
     }
   },
   {
@@ -1614,7 +1633,8 @@
       "fr": "Les déclarations diffamatoires, dénigrantes ou préjudiciables sur les sites d'avis ou réseaux sociaux figurent parmi les motifs de résiliation pour faute.",
       "es": "Las declaraciones difamatorias, denigrantes o perjudiciales en páginas de reseñas o redes sociales figuran entre los motivos de resolución del contrato por causa.",
       "de": "Verleumderische, herabsetzende oder schädigende Äußerungen auf Bewertungsseiten oder in sozialen Medien zählen zu den Gründen für eine außerordentliche Kündigung.",
-      "it": "Le dichiarazioni diffamatorie, denigratorie o dannose su siti di recensioni o social media rientrano tra i motivi di risoluzione per giusta causa."
+      "it": "Le dichiarazioni diffamatorie, denigratorie o dannose su siti di recensioni o social media rientrano tra i motivi di risoluzione per giusta causa.",
+      "pt": "Declarações difamatórias, depreciativas ou prejudiciais em sites de avaliações ou redes sociais constam dos motivos de cessação por justa causa."
     }
   },
   {
@@ -1625,7 +1645,8 @@
       "fr": "Une fois Professional User, la relation est régie par des conditions supplémentaires que l'utilisateur devra accepter ; elles ne sont pas publiées avec les conditions générales.",
       "es": "Una vez que el usuario adquiere la condición de Professional User, la relación se rige por condiciones adicionales que debe aceptar además de las presentes; no se publican junto con estas condiciones.",
       "de": "Sobald ein Nutzer Professional User wird, unterliegt die Geschäftsbeziehung zusätzlichen Bedingungen, denen er neben den vorliegenden Bedingungen zustimmen muss. Diese werden nicht zusammen mit den Bedingungen veröffentlicht.",
-      "it": "Quando un utente diventa Professional User, il rapporto è disciplinato da condizioni aggiuntive che dovrà accettare oltre a quelle presenti. Queste condizioni non sono pubblicate insieme al contratto."
+      "it": "Quando un utente diventa Professional User, il rapporto è disciplinato da condizioni aggiuntive che dovrà accettare oltre a quelle presenti. Queste condizioni non sono pubblicate insieme al contratto.",
+      "pt": "Quando o utilizador se torna Professional User, a relação é regida por termos adicionais que deve aceitar além dos presentes termos. Não são publicados juntamente com os termos."
     }
   },
   {
@@ -1636,7 +1657,8 @@
       "fr": "Les comportements interdits incluent toute conduite jugée non commerciale, visant à exploiter le marché ou non viable à la seule discrétion de TradeDay. La firme peut supprimer les profits simulés, effacer une journée, réinitialiser un compte ou exclure un utilisateur.",
       "es": "La conducta prohibida incluye cualquier otra conducta que, a la exclusiva discreción de TradeDay, constituya una actividad no comercial, tenga por objeto manipular el mercado o no sea una estrategia viable. TradeDay puede eliminar beneficios de la cuenta simulada, suprimir un día de negociación, reiniciar una cuenta o excluir al usuario.",
       "de": "Verbotenes Verhalten umfasst sonstige Handlungen, die nach alleinigem Ermessen von TradeDay nicht kommerziell sind, auf Marktmanipulation abzielen oder keine tragfähige Strategie darstellen. TradeDay kann daraufhin Gewinne eines simulierten Kontos entfernen, einen Handelstag löschen, ein Konto zurücksetzen oder einen Nutzer sperren.",
-      "it": "La condotta vietata comprende ogni altra condotta che, a esclusiva discrezione di TradeDay, rappresenti un'attività non commerciale, sia destinata a manipolare il mercato o non costituisca una strategia valida. TradeDay può quindi rimuovere profitti dal conto simulato, eliminare un giorno di trading, reimpostare un conto o escludere un utente."
+      "it": "La condotta vietata comprende ogni altra condotta che, a esclusiva discrezione di TradeDay, rappresenti un'attività non commerciale, sia destinata a manipolare il mercato o non costituisca una strategia valida. TradeDay può quindi rimuovere profitti dal conto simulato, eliminare un giorno di trading, reimpostare un conto o escludere un utente.",
+      "pt": "A conduta proibida inclui qualquer outra conduta que, a exclusivo critério da TradeDay, constitua atividade não comercial, vise manipular o mercado ou não represente uma estratégia viável. A TradeDay pode remover lucros de contas simuladas, eliminar um dia de negociação, reiniciar uma conta ou excluir um utilizador."
     }
   },
   {
@@ -1647,7 +1669,8 @@
       "fr": "Les règles de trading peuvent changer à tout moment à la seule et absolue discrétion de TradeDay ; l'utilisateur doit se tenir informé.",
       "es": "Las reglas de negociación pueden modificarse periódicamente a la exclusiva y absoluta discreción de TradeDay y están sujetas a cambios en cualquier momento. El usuario debe mantenerse informado.",
       "de": "Die Handelsregeln können von Zeit zu Zeit nach alleinigem und uneingeschränktem Ermessen von TradeDay geändert werden und unterliegen jederzeit Änderungen. Der Nutzer muss sich über den aktuellen Stand informieren.",
-      "it": "Le regole di trading possono essere modificate periodicamente da TradeDay a sua esclusiva e assoluta discrezione e restano soggette a modifica in qualsiasi momento. L'utente deve mantenersi aggiornato."
+      "it": "Le regole di trading possono essere modificate periodicamente da TradeDay a sua esclusiva e assoluta discrezione e restano soggette a modifica in qualsiasi momento. L'utente deve mantenersi aggiornato.",
+      "pt": "As regras de negociação podem ser alteradas periodicamente pela TradeDay a seu exclusivo e absoluto critério e continuam sujeitas a alterações a qualquer momento. O utilizador deve manter-se atualizado."
     }
   },
   {
@@ -1658,7 +1681,8 @@
       "fr": "Les comptes Funded SIM et Funded Live sont régis par un accord distinct entre utilisateur et TradeDay, non publié avec les conditions générales.",
       "es": "Las cuentas Funded SIM y Funded Live se rigen por un contrato separado entre el usuario y TradeDay (el contrato Funded SIM Account Agreement que firma el usuario), que no se publica junto con estas condiciones.",
       "de": "Funded SIM- und Funded Live-Konten unterliegen einem separaten Vertrag zwischen dem Nutzer und TradeDay (dem vom Nutzer unterzeichneten Funded SIM Account Agreement), der nicht zusammen mit den Bedingungen veröffentlicht wird.",
-      "it": "I conti Funded SIM e Funded Live sono disciplinati da un contratto separato tra utente e TradeDay (il Funded SIM Account Agreement sottoscritto dall'utente), non pubblicato insieme alle condizioni."
+      "it": "I conti Funded SIM e Funded Live sono disciplinati da un contratto separato tra utente e TradeDay (il Funded SIM Account Agreement sottoscritto dall'utente), non pubblicato insieme alle condizioni.",
+      "pt": "As contas Funded SIM e Funded Live são regidas por um contrato separado entre o utilizador e a TradeDay (o Funded SIM Account Agreement assinado pelo utilizador), não publicado juntamente com os termos."
     }
   },
   {
@@ -1669,7 +1693,8 @@
       "fr": "Le Funded Trader Agreement permet à Tradeify de modifier à sa seule discrétion et à tout moment les conditions, plans, exigences de retrait et règles du centre d'aide, avec effet dès publication. Les règles d'aide sont intégrées par renvoi.",
       "es": "El contrato de operador financiado permite a la empresa modificar, enmendar o actualizar las condiciones, planes y requisitos de retiro del contrato y las reglas publicadas en el centro de ayuda a su exclusiva discreción y en cualquier momento, con efecto desde su publicación. Las reglas del centro de ayuda se incorporan por referencia.",
       "de": "Das Funded Trader Agreement erlaubt dem Unternehmen, die Vertragsbedingungen, Pläne, Auszahlungsvoraussetzungen und die im Help Center veröffentlichten Regeln jederzeit nach alleinigem Ermessen zu ändern, zu ergänzen oder zu aktualisieren. Änderungen treten mit Veröffentlichung in Kraft. Die Help-Center-Regeln sind durch Verweis Bestandteil des Vertrags.",
-      "it": "Il Funded Trader Agreement consente alla società di modificare, integrare o aggiornare le condizioni, i piani, i requisiti di prelievo e le regole pubblicate nel centro assistenza a propria esclusiva discrezione e in qualsiasi momento, con effetto dalla pubblicazione. Le regole del centro assistenza sono incorporate per riferimento."
+      "it": "Il Funded Trader Agreement consente alla società di modificare, integrare o aggiornare le condizioni, i piani, i requisiti di prelievo e le regole pubblicate nel centro assistenza a propria esclusiva discrezione e in qualsiasi momento, con effetto dalla pubblicazione. Le regole del centro assistenza sono incorporate per riferimento.",
+      "pt": "O Funded Trader Agreement permite à empresa alterar, modificar ou atualizar as condições, planos, requisitos de levantamento e regras publicadas no Help Center a seu exclusivo critério e a qualquer momento, com efeito após publicação. As regras do Help Center são incorporadas por referência."
     }
   },
   {
@@ -1680,7 +1705,8 @@
       "fr": "TX3 peut suspendre ou résilier immédiatement pour violation ou suspicion de fraude, abus, harcèlement ou risque réglementaire ; la résiliation pour violation entraîne perte des frais et retraits. En cas d'activité suspecte, TX3 peut geler les comptes, retarder les retraits ou supprimer l'accès à sa discrétion.",
       "es": "TX3 puede suspender o cerrar cuentas inmediatamente por incumplimiento o por sospecha de fraude, abuso, acoso o riesgo regulatorio. El cierre por incumplimiento supone la pérdida de las tarifas y los retiros. TX3 puede congelar cuentas, retrasar retiros o poner fin al acceso a su discreción si detecta actividad sospechosa.",
       "de": "TX3 kann Konten bei Verstößen oder Verdacht auf Betrug, Missbrauch, Belästigung oder regulatorische Risiken sofort aussetzen oder schließen. Eine Kündigung wegen eines Verstoßes führt zum Verlust von Gebühren und Auszahlungen. Bei verdächtigen Aktivitäten kann TX3 nach eigenem Ermessen Konten einfrieren, Auszahlungen verzögern oder den Zugang beenden.",
-      "it": "TX3 può sospendere o chiudere immediatamente i conti per violazione o sospetto di frode, abuso, molestie o rischio normativo. La risoluzione per violazione comporta la perdita delle commissioni e dei prelievi. Se rileva attività sospette, TX3 può congelare i conti, ritardare i prelievi o terminare l'accesso a propria discrezione."
+      "it": "TX3 può sospendere o chiudere immediatamente i conti per violazione o sospetto di frode, abuso, molestie o rischio normativo. La risoluzione per violazione comporta la perdita delle commissioni e dei prelievi. Se rileva attività sospette, TX3 può congelare i conti, ritardare i prelievi o terminare l'accesso a propria discrezione.",
+      "pt": "A TX3 pode suspender ou encerrar contas imediatamente por violação ou suspeita de fraude, abuso, assédio ou risco regulamentar. A cessação por violação implica a perda de taxas e levantamentos. Se detetar atividade suspeita, a TX3 pode congelar contas, atrasar levantamentos ou terminar o acesso a seu critério."
     }
   },
   {
@@ -1691,7 +1717,8 @@
       "fr": "Toute utilisation détectée d'un VPN ou VPS entraîne la fermeture immédiate de tous les comptes associés et la confiscation des profits accumulés. Après un litige de paiement, les profits des comptes Live sont réglés en faveur d'UProfit.",
       "es": "Cualquier uso detectado de VPN o VPS provoca el cierre inmediato de todas las cuentas asociadas y la pérdida de los beneficios acumulados. Tras una controversia de pago, los beneficios de la cuenta Live se liquidarán a favor de UProfit.",
       "de": "Jede festgestellte Nutzung eines VPN oder VPS führt zur sofortigen Schließung aller verbundenen Konten und zum Verlust sämtlicher aufgelaufener Gewinne. Nach einem Zahlungsstreit werden Gewinne des Live-Kontos zugunsten von UProfit abgerechnet.",
-      "it": "Qualsiasi uso rilevato di VPN o VPS comporta la chiusura immediata di tutti i conti associati e la perdita dei profitti accumulati. Dopo una controversia di pagamento, i profitti del conto Live verranno liquidati a favore di UProfit."
+      "it": "Qualsiasi uso rilevato di VPN o VPS comporta la chiusura immediata di tutti i conti associati e la perdita dei profitti accumulati. Dopo una controversia di pagamento, i profitti del conto Live verranno liquidati a favore di UProfit.",
+      "pt": "Qualquer utilização detetada de VPN ou VPS resulta no encerramento imediato de todas as contas associadas e na perda dos lucros acumulados. Após um litígio de pagamento, os lucros da conta Live serão liquidados a favor da UProfit."
     }
   },
   {
@@ -1702,7 +1729,8 @@
       "fr": "Les techniques jugées incompatibles avec l'esprit ou les objectifs éducatifs et d'évaluation du programme, les stratégies incompatibles avec la politique de risque et les comportements jugés abusifs peuvent entraîner, à la seule discrétion de WeGetFunded, suspension, annulation des profits ou refus de paiement sans remboursement ni indemnité.",
       "es": "Las técnicas consideradas incompatibles con el espíritu o los objetivos educativos y de evaluación del programa, las estrategias incompatibles con su política de gestión del riesgo o los comportamientos considerados abusivos pueden provocar, a la exclusiva discreción de WeGetFunded, la suspensión de la cuenta, la cancelación de beneficios o la denegación de cualquier pago, o ambas, sin reembolso ni compensación.",
       "de": "Techniken, die als unvereinbar mit dem Geist oder den Bildungs- und Evaluationszielen des Programms gelten, Strategien, die gegen die Risikomanagementrichtlinie verstoßen, oder als missbräuchlich eingestuftes Verhalten können nach alleinigem Ermessen von WeGetFunded zur Kontosperre, Annullierung von Gewinnen und/oder Ablehnung sämtlicher Zahlungen ohne Erstattung oder Entschädigung führen.",
-      "it": "Tecniche considerate incompatibili con lo spirito o gli obiettivi formativi e di valutazione del programma, strategie incompatibili con la politica di gestione del rischio o comportamenti ritenuti abusivi possono comportare, a esclusiva discrezione di WeGetFunded, la sospensione del conto, l'annullamento dei profitti e/o il rifiuto di qualsiasi pagamento, senza rimborso o indennizzo."
+      "it": "Tecniche considerate incompatibili con lo spirito o gli obiettivi formativi e di valutazione del programma, strategie incompatibili con la politica di gestione del rischio o comportamenti ritenuti abusivi possono comportare, a esclusiva discrezione di WeGetFunded, la sospensione del conto, l'annullamento dei profitti e/o il rifiuto di qualsiasi pagamento, senza rimborso o indennizzo.",
+      "pt": "Técnicas consideradas incompatíveis com o espírito ou os objetivos educativos e de avaliação do programa, estratégias incompatíveis com a política de gestão de risco ou comportamentos considerados abusivos podem levar, a exclusivo critério da WeGetFunded, à suspensão da conta, cancelamento de lucros e/ou recusa de qualquer pagamento, sem reembolso nem compensação."
     }
   },
   {
@@ -1713,7 +1741,8 @@
       "fr": "Tous comptes WGF financés : chaque retrait limité à 50 % du P&L cumulé, sous plafond. Instant 850/1 500/3 000 $ (15K/30K/60K). 1 Step et 2 Step : par exemple 1 800/2 000/2 250 $ sur 50K et 3 000/3 500/4 000 $ sur 200K pour les premier/deuxième/troisième et suivants.",
       "es": "Todos los programas — cuenta financiada WGF: cada retiro se limita a un máximo del 50 % del resultado acumulado, sujeto a un importe máximo. Máximos por retiro: Instant, 850/1.500/3.000 USD (15K/30K/60K); 1 Step y 2 Step financiados, por ejemplo, 1.800/2.000/2.250 USD en 50K y 3.000/3.500/4.000 USD en 200K para el primer, segundo y tercer retiro o posteriores, respectivamente.",
       "de": "Alle Programme — finanziertes WGF-Konto: Jede Auszahlung ist auf bis zu 50 % des kumulierten P&L und einen Höchstbetrag begrenzt. Höchstbeträge je Auszahlung: Instant 850/1.500/3.000 USD (15K/30K/60K); 1 Step und 2 Step finanziert beispielsweise 1.800/2.000/2.250 USD bei 50K und 3.000/3.500/4.000 USD bei 200K für die erste, zweite bzw. dritte und weitere Auszahlung.",
-      "it": "Tutti i programmi — conto finanziato WGF: ogni prelievo è limitato al 50% del P&L cumulativo e soggetto a un tetto. Massimi per prelievo: Instant 850/1.500/3.000 USD (15K/30K/60K); 1 Step e 2 Step finanziati, ad esempio 1.800/2.000/2.250 USD su 50K e 3.000/3.500/4.000 USD su 200K per il primo, secondo e terzo o successivi prelievi."
+      "it": "Tutti i programmi — conto finanziato WGF: ogni prelievo è limitato al 50% del P&L cumulativo e soggetto a un tetto. Massimi per prelievo: Instant 850/1.500/3.000 USD (15K/30K/60K); 1 Step e 2 Step finanziati, ad esempio 1.800/2.000/2.250 USD su 50K e 3.000/3.500/4.000 USD su 200K per il primo, secondo e terzo o successivi prelievi.",
+      "pt": "Todos os programas — conta financiada WGF: cada levantamento está limitado a até 50% do P&L acumulado, sujeito a um teto. Máximos por levantamento: Instant 850/1.500/3.000 USD (15K/30K/60K); 1 Step e 2 Step financiados, por exemplo 1.800/2.000/2.250 USD em 50K e 3.000/3.500/4.000 USD em 200K para o primeiro, segundo e terceiro ou seguintes levantamentos."
     }
   },
   {
@@ -1724,7 +1753,8 @@
       "fr": "Tous comptes WGF financés : demandes uniquement du 16 au dernier jour du mois (UTC), aucune du 1er au 15. Minimum sept jours calendaires depuis le premier trade du cycle, lequel redémarre après chaque retrait approuvé.",
       "es": "Todos los programas — cuenta financiada WGF: las solicitudes de retiro solo se aceptan del día 16 al último día de cada mes (UTC); ninguna del 1 al 15. Se exige un mínimo de siete días naturales desde la primera operación del ciclo, que se reinicia tras cada retiro aprobado.",
       "de": "Alle Programme — finanziertes WGF-Konto: Auszahlungsanfragen werden nur vom 16. bis zum letzten Tag jedes Monats (UTC) angenommen, nicht vom 1. bis zum 15. Seit dem ersten Trade des Zyklus müssen mindestens sieben Kalendertage vergangen sein; nach jeder genehmigten Auszahlung beginnt der Zyklus erneut.",
-      "it": "Tutti i programmi — conto finanziato WGF: le richieste di prelievo sono accettate solo dal giorno 16 all'ultimo giorno del mese (UTC); nessuna dal giorno 1 al 15. Si applica un minimo di sette giorni di calendario dalla prima operazione del ciclo, che ricomincia dopo ogni prelievo approvato."
+      "it": "Tutti i programmi — conto finanziato WGF: le richieste di prelievo sono accettate solo dal giorno 16 all'ultimo giorno del mese (UTC); nessuna dal giorno 1 al 15. Si applica un minimo di sette giorni di calendario dalla prima operazione del ciclo, che ricomincia dopo ogni prelievo approvato.",
+      "pt": "Todos os programas — conta financiada WGF: os pedidos de levantamento só são aceites do dia 16 ao último dia de cada mês (UTC); nenhum do dia 1 ao 15. Aplica-se um mínimo de sete dias de calendário desde a primeira operação do ciclo, que reinicia após cada levantamento aprovado."
     }
   },
   {
@@ -1735,7 +1765,8 @@
       "fr": "Les participants diffusant intentionnellement de fausses informations, des allégations diffamatoires ou participant à des actions coordonnées visant à nuire à la réputation de WFunded peuvent être suspendus ou résiliés. WFunded peut annuler les retraits en attente, invalider les profits et engager des recours judiciaires.",
       "es": "Los participantes que difundan intencionadamente información falsa, hagan afirmaciones difamatorias o realicen acciones coordinadas dirigidas a dañar la reputación de WFunded pueden ver sus cuentas suspendidas o cerradas. WFunded se reserva el derecho de cancelar los retiros pendientes, anular los beneficios generados en la cuenta y emprender acciones legales.",
       "de": "Teilnehmer, die absichtlich Falschinformationen verbreiten, verleumderische Aussagen machen oder koordinierte Handlungen zur Rufschädigung von WFunded durchführen, können eine Kontosperre oder -schließung erfahren. WFunded behält sich vor, ausstehende Auszahlungen zu annullieren, erzielte Kontogewinne für ungültig zu erklären und rechtliche Schritte einzuleiten.",
-      "it": "I partecipanti che diffondono intenzionalmente informazioni false, formulano affermazioni diffamatorie o svolgono azioni coordinate per danneggiare la reputazione di WFunded possono subire la sospensione o chiusura del conto. WFunded si riserva il diritto di annullare i prelievi pendenti, invalidare i profitti generati sul conto e intraprendere azioni legali."
+      "it": "I partecipanti che diffondono intenzionalmente informazioni false, formulano affermazioni diffamatorie o svolgono azioni coordinate per danneggiare la reputazione di WFunded possono subire la sospensione o chiusura del conto. WFunded si riserva il diritto di annullare i prelievi pendenti, invalidare i profitti generati sul conto e intraprendere azioni legali.",
+      "pt": "Participantes que divulguem intencionalmente informações falsas, façam afirmações difamatórias ou realizem ações coordenadas para prejudicar a reputação da WFunded podem ter a conta suspensa ou encerrada. A WFunded reserva-se o direito de cancelar levantamentos pendentes, anular lucros gerados na conta e recorrer a meios legais."
     }
   },
   {
@@ -1746,7 +1777,8 @@
       "fr": "Tous programmes financés : témoignage et certificat à transmettre dans les sept jours calendaires du premier retrait, faute de quoi les suivants ne sont pas traités (§4). Les paiements doivent utiliser le moyen de paiement de l'achat, sinon ils peuvent être refusés, retardés ou retournés (§7.1).",
       "es": "Todos los programas — fase financiada: deben presentarse un testimonio y un certificado en los siete días naturales siguientes al primer retiro; de lo contrario, no se tramitan los retiros posteriores (sección 4). Los pagos deben dirigirse al método utilizado para la compra o pueden rechazarse, retrasarse o devolverse (sección 7.1).",
       "de": "Alle Programme — finanzierte Phase: Ein Erfahrungsbericht und ein Zertifikat müssen innerhalb von sieben Kalendertagen nach der ersten Auszahlung eingereicht werden; andernfalls werden weitere Auszahlungen nicht bearbeitet (Abschnitt 4). Auszahlungen müssen über die beim Kauf verwendete Zahlungsmethode erfolgen, andernfalls können sie abgelehnt, verzögert oder zurückgesendet werden (Abschnitt 7.1).",
-      "it": "Tutti i programmi — fase finanziata: una testimonianza e un certificato devono essere presentati entro sette giorni di calendario dal primo prelievo, altrimenti i prelievi successivi non vengono elaborati (sezione 4). I prelievi devono essere effettuati tramite il metodo di pagamento utilizzato per l'acquisto, pena possibile rifiuto, ritardo o restituzione (sezione 7.1)."
+      "it": "Tutti i programmi — fase finanziata: una testimonianza e un certificato devono essere presentati entro sette giorni di calendario dal primo prelievo, altrimenti i prelievi successivi non vengono elaborati (sezione 4). I prelievi devono essere effettuati tramite il metodo di pagamento utilizzato per l'acquisto, pena possibile rifiuto, ritardo o restituzione (sezione 7.1).",
+      "pt": "Todos os programas — fase financiada: um testemunho e um certificado devem ser apresentados nos sete dias de calendário seguintes ao primeiro levantamento; caso contrário, os levantamentos posteriores não são processados (secção 4). Os levantamentos devem ser enviados pelo método de pagamento utilizado na compra, sob pena de recusa, atraso ou devolução (secção 7.1)."
     }
   },
   {
@@ -1757,7 +1789,8 @@
       "fr": "La société se réserve le droit d'annuler ou de suspendre la participation de tout trader pour tout motif qu'elle juge approprié, à sa seule et absolue discrétion.",
       "es": "La empresa se reserva el derecho de cancelar o suspender la participación de cualquier operador en el programa por cualquier motivo que considere apropiado, a su exclusiva y absoluta discreción.",
       "de": "Das Unternehmen behält sich vor, die Programmteilnahme jedes Traders aus jedem als angemessen erachteten Grund nach alleinigem und uneingeschränktem Ermessen zu annullieren oder auszusetzen.",
-      "it": "La società si riserva il diritto di annullare o sospendere la partecipazione di qualsiasi trader al programma per qualsiasi motivo ritenuto appropriato, a sua esclusiva e assoluta discrezione."
+      "it": "La società si riserva il diritto di annullare o sospendere la partecipazione di qualsiasi trader al programma per qualsiasi motivo ritenuto appropriato, a sua esclusiva e assoluta discrezione.",
+      "pt": "A empresa reserva-se o direito de cancelar ou suspender a participação de qualquer trader no programa por qualquer motivo que considere apropriado, a seu exclusivo e absoluto critério."
     }
   },
   {
@@ -1768,7 +1801,8 @@
       "fr": "Conditions §8.4 : premier avertissement, baisse du levier durant 20 jours ouvrés et retard des retraits sur tous les comptes ; deuxième, nouvelle baisse durant 60 jours ouvrés et nouveau retard ; troisième, exclusion définitive de la plateforme.",
       "es": "Todos los programas (condiciones generales): escala de advertencias del §8.4. Primera advertencia: reducción del apalancamiento durante 20 días laborables y retraso de retiros en todas las cuentas. Segunda: reducción adicional del apalancamiento durante 60 días laborables y un nuevo retraso de retiros. Tercera: expulsión permanente de la plataforma.",
       "de": "Alle Programme (AGB): Warnstufen gemäß §8.4. Erste Warnung: Hebelreduzierung für 20 Arbeitstage und Verzögerung der Auszahlungen auf allen Konten. Zweite Warnung: weitere Hebelreduzierung für 60 Arbeitstage und erneute Auszahlungsverzögerung. Dritte Warnung: dauerhafter Ausschluss von der Plattform.",
-      "it": "Tutti i programmi (condizioni generali): scala degli avvertimenti del §8.4. Primo: riduzione della leva per 20 giorni lavorativi e ritardo dei prelievi su tutti i conti. Secondo: ulteriore riduzione della leva per 60 giorni lavorativi e ulteriore ritardo dei prelievi. Terzo: esclusione permanente dalla piattaforma."
+      "it": "Tutti i programmi (condizioni generali): scala degli avvertimenti del §8.4. Primo: riduzione della leva per 20 giorni lavorativi e ritardo dei prelievi su tutti i conti. Secondo: ulteriore riduzione della leva per 60 giorni lavorativi e ulteriore ritardo dei prelievi. Terzo: esclusione permanente dalla piattaforma.",
+      "pt": "Todos os programas (termos e condições): escala de avisos do §8.4. Primeiro aviso: redução da alavancagem durante 20 dias úteis e atraso de levantamentos em todas as contas. Segundo: redução adicional da alavancagem durante 60 dias úteis e novo atraso de levantamentos. Terceiro: exclusão permanente da plataforma."
     }
   },
   {
@@ -1779,7 +1813,8 @@
       "fr": "X-Funded peut résilier ou suspendre immédiatement le compte et bloquer l'accès aux services sans préavis ni responsabilité, à sa seule discrétion, pour tout motif, sans limitation, notamment en cas de violation des conditions.",
       "es": "X-Funded se reserva el derecho de cerrar o suspender la cuenta e impedir el acceso a los servicios de inmediato, sin previo aviso ni responsabilidad, a su exclusiva discreción, por cualquier motivo y sin limitación, incluido, entre otros, el incumplimiento de las condiciones.",
       "de": "X-Funded behält sich vor, das Konto sofort ohne Vorankündigung oder Haftung nach alleinigem Ermessen aus beliebigen Gründen zu schließen oder auszusetzen und den Zugang zu den Dienstleistungen zu sperren, einschließlich, aber nicht beschränkt auf Verstöße gegen die Bedingungen.",
-      "it": "X-Funded si riserva il diritto di chiudere o sospendere il conto e bloccare immediatamente l'accesso ai servizi, senza preavviso né responsabilità, a sua esclusiva discrezione, per qualsiasi motivo e senza limitazioni, inclusa, ma non limitata a, una violazione delle condizioni."
+      "it": "X-Funded si riserva il diritto di chiudere o sospendere il conto e bloccare immediatamente l'accesso ai servizi, senza preavviso né responsabilità, a sua esclusiva discrezione, per qualsiasi motivo e senza limitazioni, inclusa, ma non limitata a, una violazione delle condizioni.",
+      "pt": "A X-Funded reserva-se o direito de encerrar ou suspender a conta e bloquear imediatamente o acesso aos serviços, sem aviso prévio nem responsabilidade, a seu exclusivo critério, por qualquer motivo e sem limitação, incluindo, entre outros, uma violação dos termos."
     }
   }
 ]
