@@ -531,6 +531,12 @@
           "Evaluierung und Reward-Konto",
           "AGB §7.2: Das Unternehmen definiert „jeden anderen vorsätzlichen Missbrauch“ im Einzelfall.",
           "Ein Trader kann aufgrund einer subjektiven Einstufung seiner Strategie den Anspruch auf Auszahlungen verlieren."
+        ],
+        "it": [
+          "Leveraged · tutti i programmi",
+          "Valutazione e conto Reward",
+          "CGU §7.2: la società definisce «qualsiasi altro abuso deliberato» caso per caso.",
+          "Il trader può perdere l’idoneità ai premi dopo una classificazione soggettiva della strategia."
         ]
       }
     },
@@ -565,6 +571,12 @@
           "Evaluierung und Qualified",
           "AGB §8.1.7: Alpha kann eine Strategie nach eigenem Ermessen als unzulässig einstufen.",
           "Ein Konto kann aufgrund einer nicht vorab definierten Auslegung des Handelsstils geschlossen werden."
+        ],
+        "it": [
+          "Alpha Futures · tutti i conti",
+          "Valutazione e Qualified",
+          "CGU §8.1.7: Alpha può classificare una strategia come non autorizzata a propria discrezione.",
+          "Il conto può essere chiuso sulla base di un’interpretazione dello stile di trading non definita in anticipo."
         ]
       }
     },
@@ -599,6 +611,12 @@
           "Evaluierung und Qualified",
           "Anhang 5: Gewinne aus Trades unter zwei Minuten werden problematisch, wenn sie einen nicht quantifizierten „großen“ Anteil ausmachen.",
           "Gewinne können als nicht auszahlungsfähig gelten oder das Konto kann ohne veröffentlichten Konzentrationsgrenzwert sanktioniert werden."
+        ],
+        "it": [
+          "Alpha Futures · tutti i conti",
+          "Valutazione e Qualified",
+          "Allegato 5: i profitti delle operazioni inferiori a due minuti diventano problematici se rappresentano una quota «elevata» non quantificata.",
+          "Parte dei profitti può essere dichiarata non idonea o il conto sanzionato senza una soglia di concentrazione pubblicata."
         ]
       }
     },
@@ -633,6 +651,12 @@
           "Simuliertes finanziertes Konto und Auszahlungsantrag",
           "AGB §§11.1–11.2: Eine Position, die „den gesamten oder fast den gesamten“ Drawdown riskiert, kann nach abschließendem Ermessen von MilTraders als Glücksspielverhalten gelten.",
           "Ohne veröffentlichten Prozentsatz kann das Unternehmen mehrere Konten schließen und einen bereits beantragten Gewinn verweigern (AGB §12.5)."
+        ],
+        "it": [
+          "MilTraders · Zero, Pro e Instant Funded",
+          "Conto finanziato simulato e richiesta di premio",
+          "CGU §§11.1–11.2: una posizione che rischia «tutto o quasi tutto» il drawdown può essere classificata come gioco d’azzardo, a giudizio finale di MilTraders.",
+          "Senza una percentuale limite pubblicata, la società può chiudere più conti e negare un premio già richiesto (CGU §12.5)."
         ]
       }
     },
@@ -667,6 +691,12 @@
           "Evaluierung und simuliertes finanziertes Konto",
           "AGB, verbotene Nutzung: Verboten ist jeder Handel, der nach alleinigem Ermessen des Unternehmens außerhalb akzeptabler Risikopraktiken liegt.",
           "Gewinne können gestrichen und das Konto geschlossen werden, ohne dass beim Kauf ein Grenzwert bekannt war."
+        ],
+        "it": [
+          "Top One Trader · FLASH, NOVA, PRO e Instant",
+          "Valutazione e conto finanziato simulato",
+          "CGU, usi vietati: la società vieta qualsiasi trading che, a sua esclusiva discrezione, ritenga estraneo alle pratiche di rischio accettabili.",
+          "I profitti possono essere rimossi e il conto chiuso per pratiche non delimitate da una soglia nota all’acquisto."
         ]
       }
     },
@@ -701,6 +731,12 @@
           "Übergang zum finanzierten Konto",
           "AGB, verbotene Nutzung: Strategiewechsel zwischen Challenge und finanziertem Konto sind nach Ermessen des Unternehmens verboten.",
           "Genehmigung oder Schließung können von der subjektiven Bewertung des Umfangs des Strategiewechsels abhängen."
+        ],
+        "it": [
+          "Top One Trader · challenge FLASH/NOVA/PRO verso Funded",
+          "Passaggio dal challenge al conto finanziato",
+          "CGU, usi vietati: il cambio di strategia tra challenge e conto finanziato è vietato secondo quanto stabilito dalla società a propria discrezione.",
+          "L’approvazione o la chiusura del conto può dipendere da una valutazione soggettiva dell’entità del cambio di metodo."
         ]
       }
     },
@@ -735,6 +771,12 @@
           "Challenge und finanziertes Konto",
           "AGB §6.8: Das Unternehmen kann jede weitere Handelsaktivität über die genannten Fälle hinaus als verboten einstufen.",
           "Eine beim Kauf nicht abschließend beschriebene Strategie kann zur Kontoschließung führen."
+        ],
+        "it": [
+          "OneFunded · Flash, Core, Value e Instant",
+          "Challenge e conto finanziato",
+          "CGU §6.8: la società può designare qualsiasi altra attività di trading come vietata, oltre ai casi elencati.",
+          "Il trader può subire la chiusura per una strategia non descritta in modo esaustivo all’acquisto."
         ]
       }
     },
@@ -769,6 +811,12 @@
           "Finanziertes Konto einschließlich Auszahlungsprüfung",
           "Hilfezentrum, verbotener Handel: „einseitige Wetten“ und „übermäßige“ Risikokonzentration ohne prozentuale Grenze; OneFunded entscheidet abschließend.",
           "Auszahlungsantrag und Konto können aufgrund einer nicht quantifizierten Bewertung des Richtungsrisikos aufgehoben werden."
+        ],
+        "it": [
+          "OneFunded · Flash, Core, Value e Instant",
+          "Conto finanziato, inclusa verifica del prelievo",
+          "Centro assistenza, trading vietato: scommesse unidirezionali e concentrazione «eccessiva» dell’esposizione senza soglia proporzionale; OneFunded mantiene il giudizio finale.",
+          "Una richiesta di prelievo può essere annullata e il conto chiuso in base a una valutazione non quantificata dell’esposizione direzionale."
         ]
       }
     },
@@ -803,6 +851,12 @@
           "Evaluierung und BEM-Trader-Konto",
           "AGB §14: Das Unternehmen behält sich die Einstufung verbotener Praktiken nach eigenem Ermessen vor.",
           "Eine nicht genau aufgeführte Strategie kann ohne vorab verbindlichen Grenzwert zur Schließung führen."
+        ],
+        "it": [
+          "BEM Funding · One, One Only, Classic, Classic Swing",
+          "Valutazione e conto BEM Trader",
+          "CGU §14: la società si riserva il diritto di classificare pratiche vietate a propria discrezione.",
+          "Una strategia non elencata precisamente può essere sanzionata con la chiusura, senza una soglia vincolante prestabilita."
         ]
       }
     },
@@ -837,6 +891,12 @@
           "BEM-Trader-Konto und Auszahlungsprüfung",
           "Bedingungen zu verbotenen Handelspraktiken: Verhalten, das „Glücksspiel ähnelt“, oder eine nicht „angemessen reproduzierbare“ Methode ohne abschließenden Maßstab.",
           "Gewinne oder Auszahlungsberechtigung können nach subjektiver Einstufung einer Strategie entfallen."
+        ],
+        "it": [
+          "BEM Funding · One, One Only, Classic, Classic Swing",
+          "Conto BEM Trader e verifica del premio",
+          "Condizioni sulle pratiche vietate: condotta «simile al gioco d’azzardo» o metodo non «ragionevolmente replicabile», senza metrica esaustiva.",
+          "Profitti o idoneità ai premi possono essere annullati dopo una classificazione soggettiva."
         ]
       }
     },
@@ -871,6 +931,12 @@
           "BEM-Trader-Konto nach Evaluierung",
           "Nutzungsbedingungen Classic Normal §6.2: Gewinne aus Trades innerhalb von vier Minuten vor oder nach wichtigen Nachrichten werden gestrichen, Verluste derselben Trades vollständig beibehalten.",
           "Ein gewinnbringender News-Trade kann aus der Berechnung entfernt werden, während der entsprechende Verlust das Konto belastet."
+        ],
+        "it": [
+          "BEM Classic Normal",
+          "Conto BEM Trader dopo la valutazione",
+          "Condizioni Classic Normal §6.2: sono rimossi i profitti delle operazioni eseguite nei quattro minuti prima o dopo notizie importanti, mentre le relative perdite restano integralmente contabilizzate.",
+          "Un’operazione vincente sulle notizie può essere esclusa dal calcolo, mentre quella perdente equivalente resta a carico del conto."
         ]
       }
     },
@@ -905,6 +971,12 @@
           "Challenge und simuliertes finanziertes Konto",
           "AGB §5.5.3: „wesentlich größere“ Positionsgrößen und „unangemessene“ Haltedauer gegenüber einem Durchschnitt, ohne zahlenmäßigen Grenzwert oder Toleranz.",
           "Abweichungen in Größe oder Dauer können subjektiv als verbotene Strategie eingestuft und das Konto geschlossen werden."
+        ],
+        "it": [
+          "ThinkCapital · Lightning, Dual Step, Nexus, Bolt e Bolt Flex",
+          "Challenge e conto finanziato simulato",
+          "CGU §5.5.3: dimensioni «sostanzialmente maggiori» e durate «irragionevoli» rispetto a una media, senza soglia numerica né tolleranza.",
+          "La società può classificare differenze di dimensione o durata come strategia vietata e chiudere il conto dopo una verifica soggettiva."
         ]
       }
     },
@@ -939,6 +1011,12 @@
           "Challenge und finanziertes Konto, Strategieprüfung",
           "Glücksspiel-FAQ: Erscheint eine Strategieänderung „opportunistisch oder absichtlich aggressiv“, kann das Risikoteam das übliche Warnverfahren umgehen und sofort „ohne Einspruchsmöglichkeit“ kündigen.",
           "Eine als opportunistisch bewertete Risikoerhöhung kann zur Schließung ohne Einspruch führen, auch wenn die 2,5 %/4 %-Grenzen nicht selbst überschritten wurden."
+        ],
+        "it": [
+          "ThinkCapital · tutti i programmi",
+          "Challenge e conto finanziato, verifica della strategia",
+          "FAQ sul gioco d’azzardo: se un cambio di strategia «appare opportunistico o intenzionalmente aggressivo», il team rischi può saltare la normale procedura di avviso e risolvere immediatamente, «senza ricorso».",
+          "Un aumento del rischio ritenuto opportunistico può causare la chiusura senza ricorso, anche senza superare di per sé le soglie del 2,5%/4%."
         ]
       }
     },
@@ -973,6 +1051,12 @@
           "Evaluierung und finanziertes Konto, Bots und EAs",
           "AGB §6.4: EAs nach schriftlicher Genehmigung durch risk@thinkcapital.com möglich, auch TradingView-kompatible Tools; FAQ zu verbotenen Strategien §11: EAs „können derzeit nicht eingesetzt werden“, nur TradingView-Indikatoren.",
           "Ein Käufer kann nicht eindeutig feststellen, ob sein schriftlich genehmigter EA ohne Verstoß oder technische Hindernisse eingesetzt werden kann."
+        ],
+        "it": [
+          "ThinkCapital · Lightning, Dual Step, Nexus, Bolt e Bolt Flex",
+          "Valutazione e conto finanziato, robot ed EA",
+          "CGU §6.4: gli EA possono essere autorizzati per iscritto tramite risk@thinkcapital.com, inclusi strumenti compatibili con TradingView; FAQ strategie vietate §11: gli EA «non possono attualmente essere utilizzati», solo indicatori TradingView.",
+          "L’acquirente non può accertare con certezza se il suo EA autorizzato per iscritto sia realmente utilizzabile senza violazioni o impedimenti tecnici."
         ]
       }
     },
@@ -1007,6 +1091,12 @@
           "Challenge, Evaluierungsphase",
           "Regelseite, Mindesthandelstage: ein Tag bei 1-Step und 2-Step; FAQ Frage 31: drei Handelstage je Phase bei 1/2/3-Step.",
           "Unklar, ob eine an einem Tag bestandene Evaluierung akzeptiert wird oder zwei weitere Tage erforderlich sind."
+        ],
+        "it": [
+          "Tiger Funded · 1-Step e 2-Step",
+          "Challenge, fase di valutazione",
+          "Pagina delle regole, giorni minimi: un giorno per 1-Step e 2-Step; FAQ domanda 31: tre giorni di trading per fase per 1/2/3-Step.",
+          "L’acquirente non sa se una valutazione superata in un giorno sarà accettata o se occorrono altri due giorni."
         ]
       }
     },
@@ -1041,6 +1131,12 @@
           "Evaluierung, Tagesverlustgrenze",
           "Regelseite, täglicher Drawdown: Rücksetzung um Mitternacht; FAQ Fragen 19 und 21: um 20:00 EST, weiteres abweichendes Beispiel 17:00 EST.",
           "Eine zum Tageswechsel offene Position kann nach einer anderen Uhrzeit als im zweiten offiziellen Dokument die Grenze verletzen."
+        ],
+        "it": [
+          "Tiger Funded · 1-Step, 2-Step e 3-Step",
+          "Valutazione, limite di perdita giornaliera",
+          "Pagina delle regole, drawdown giornaliero: azzeramento a mezzanotte; FAQ domande 19 e 21: alle 20:00 EST, con un ulteriore esempio diverso alle 17:00 EST.",
+          "Una posizione aperta al cambio di giornata può violare il limite secondo un orario diverso da quello indicato nell’altro documento ufficiale."
         ]
       }
     },
@@ -1075,6 +1171,12 @@
           "Challenge und finanziertes Konto",
           "AGB §7: Verbotenes Verhalten umfasst unter anderem nicht realen Marktbedingungen entsprechende oder die faire Nutzung beeinträchtigende Praktiken, ohne abschließenden Test; Aussetzung/Kündigung möglich.",
           "Eine in der detaillierten FAQ nicht genannte Methode kann nachträglich als Simulationsmissbrauch eingestuft werden und zur Kontoschließung führen."
+        ],
+        "it": [
+          "Tiger Funded · Step e Instant (condizioni generali)",
+          "Challenge e conto finanziato",
+          "CGU §7: le condotte vietate includono, senza limitazioni, pratiche non conformi alle condizioni reali del mercato o che compromettono l’uso leale, senza test esaustivo, con sospensione o risoluzione.",
+          "Un metodo non citato nella FAQ dettagliata può essere classificato a posteriori come abuso della simulazione e causare la chiusura."
         ]
       }
     },
@@ -1109,6 +1211,12 @@
           "Evaluierung",
           "Angebotskarte: mindestens drei Tage; Fast-Pass-FAQ vom 12.11.: kein Minimum; AGB §3 vom 11.08.: allgemein mindestens sieben Tage.",
           "Käufer können die für den Zugang zum finanzierten Konto erforderliche Zahl an Evaluierungstagen nicht eindeutig bestimmen."
+        ],
+        "it": [
+          "TradeDay · Fast Pass",
+          "Valutazione",
+          "Scheda dell’offerta: minimo tre giorni; FAQ Fast Pass del 12/11: nessun minimo; CGU §3 dell’11/08: minimo generico di sette giorni.",
+          "L’acquirente non può determinare con chiarezza quanti giorni di valutazione richieda Fast Pass per accedere al conto finanziato."
         ]
       }
     },
@@ -1143,6 +1251,12 @@
           "Kauf und Zahl gleichzeitiger Challenges",
           "AGB Bestimmung 1, zwei Klauseln zu Evaluierungslimits: eine verbietet parallele identische Challenges, die andere erlaubt sie unter Beachtung der Gesamtallokation.",
           "Unklar, ob der Kauf identischer Konten einen Verstoß oder Kündigungsgrund darstellt."
+        ],
+        "it": [
+          "Funded7 · valutazioni dello stesso piano e dimensione",
+          "Acquisto e numero di challenge simultanei",
+          "CGU disposizione 1, due clausole sui limiti di valutazione: una vieta challenge identici simultanei, l’altra li consente entro l’allocazione complessiva.",
+          "Il cliente non può sapere con certezza se acquistare conti identici costituisca una violazione o motivo di risoluzione."
         ]
       }
     },
@@ -1177,6 +1291,12 @@
           "Handel und Regelprüfung vor Auszahlung",
           "AGB §4: Glücksspiel oder leichtfertiger Handel, übermäßiger Hebel oder gegenüber Normen große Positionen, Handel zulasten von Brokerbeziehungen, ohne abschließenden Grenzwert.",
           "Dasselbe Verhalten kann außerhalb üblicher Zahlenlimits nachträglich verboten werden, mit Kontoschließung und Gewinnstreichung."
+        ],
+        "it": [
+          "Top One Futures · tutti i programmi futures simulati",
+          "Trading e verifica delle regole prima del prelievo",
+          "CGU §4: gioco d’azzardo o trading imprudente, leva eccessiva o posizioni grandi rispetto alle norme, trading dannoso per i rapporti con i broker, senza soglia esaustiva.",
+          "La stessa condotta può essere classificata a posteriori come vietata, con chiusura del conto e rimozione dei profitti, al di fuori dei normali limiti numerici."
         ]
       }
     },
@@ -1211,6 +1331,12 @@
           "Aktivierung, Laufzeit und Auszahlungsanträge",
           "Französische Online-AGB vom 18.05.2026: 149,90 €, sieben Gewinntage mit mindestens 0,50 %. Englische Online-AGB vom 10.11.2026: 199 €, fünf Tage mit mindestens 0,30 %; französische Fassung weiterhin aktiv.",
           "Je nach Sprachfassung können andere Zusatzgebühren oder Zugangsbedingungen gelten."
+        ],
+        "it": [
+          "WeGetFunded · 2 Steps Challenge e fase WGF Funded",
+          "Attivazione, durata e richieste di prelievo",
+          "CGU francesi online del 18/05/2026: 149,90 €, sette giorni redditizi di almeno 0,50%. CGU inglesi online del 10/11/2026: 199 €, cinque giorni di almeno 0,30%; versione francese ancora attiva.",
+          "Chi consulta una versione linguistica diversa può pagare un supplemento differente o essere soggetto a condizioni di idoneità diverse."
         ]
       }
     },
@@ -1245,6 +1371,12 @@
           "Handel in Challenges und WGF-Konten",
           "AGB §14: unrealistische, inkonsistente oder unverantwortliche Methoden und Verhalten „unvereinbar mit dem Geist der Programme“, ohne quantifiziertes Kriterium oder abschließende Liste.",
           "Nicht ausdrücklich verbotene Strategien können nach dem Handel qualitativ als Verstoß eingestuft werden; die vertraglichen Auszahlungsauswirkungen werden gesondert in B1 bewertet."
+        ],
+        "it": [
+          "WeGetFunded · Instant/1 Step/2 Steps (regole generali)",
+          "Trading in challenge e conti WGF",
+          "CGU §14: tecniche non realistiche, incoerenti o irresponsabili e comportamenti «incompatibili con lo spirito dei programmi», senza criterio quantificato né elenco esaustivo.",
+          "Una strategia non espressamente vietata può essere classificata come violazione dopo una valutazione qualitativa; l’impatto contrattuale sui premi è valutato separatamente in B1."
         ]
       }
     },
@@ -1279,6 +1411,12 @@
           "Verhaltens- und Berechtigungsprüfung vor Auszahlung",
           "Übersicht zum Finanzierungsprozess: Das Risikoteam kann bei nicht nachhaltigem Handelsverhalten, inakzeptablem Risiko oder jedem Grund, der die Fortsetzung unangemessen macht, die Berechtigung entziehen, ohne gemeinsamen veröffentlichten Grenzwert.",
           "Fortsetzung und Auszahlung können trotz Einhaltung von Drawdown und Handelstagen aufgrund nicht vollständig vorhersehbarer Bewertung verweigert werden."
+        ],
+        "it": [
+          "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "Verifica della condotta e dell’idoneità prima del prelievo",
+          "Panoramica del finanziamento: il team rischi può revocare l’idoneità per condotta non sostenibile, rischio inaccettabile o qualsiasi motivo che renda inappropriata la prosecuzione, senza soglia comune pubblicata.",
+          "La società può negare prosecuzione e accesso ai prelievi mediante una valutazione non pienamente prevedibile, anche rispettando drawdown e giorni di trading."
         ]
       }
     },
@@ -1313,6 +1451,12 @@
           "Handel und Compliance-Prüfung vor Auszahlung",
           "Nutzungsbedingungen §26: „wesentlich größere“ Positionen, „grob überhöhte Hebelwirkung“, „berechtigte Bedenken hinsichtlich finanzieller oder anderer Schäden“ und Ermessensentscheidung über Verstöße.",
           "Trotz Einhaltung der Zahlenlimits können simulierte Gewinne gestrichen oder Konten aufgrund einer nicht eingegrenzten qualitativen Bewertung geschlossen werden."
+        ],
+        "it": [
+          "DayTraders.com · valutazioni EOD/Trail/Static e conti Pro/S2F",
+          "Trading e verifica di conformità prima del prelievo",
+          "Condizioni d’uso §26: posizioni «sostanzialmente maggiori», leva «grossolanamente eccessiva», «ragionevoli timori di danno finanziario o altro» e decisione discrezionale sulla non conformità.",
+          "Pur rispettando i limiti numerici, il trader può perdere profitti simulati o subire la chiusura sulla base di una valutazione qualitativa non delimitata."
         ]
       }
     },
@@ -1347,6 +1491,12 @@
           "Simulierter Handel und Strategieprüfung vor Auszahlung",
           "Handelsregeln §3: „toxischer Handelsfluss“ und „einseitige Wetten“ ohne präzisen öffentlichen Grenzwert verboten; getrennt von AGB §6 zur Auszahlungsprüfung.",
           "Gewinne einer drawdownkonformen Strategie können nach subjektiver Einstufung als toxischer Handelsfluss oder einseitige Wette gestrichen werden."
+        ],
+        "it": [
+          "Equity Edge · Legacy, Swift, Flagship e Instant",
+          "Trading simulato e verifica strategia prima del prelievo",
+          "Regole di trading §3: flusso di trading tossico e scommesse unidirezionali vietati senza precisa soglia pubblica; distinto dalla verifica dei prelievi delle CGU §6.",
+          "I profitti di una strategia conforme al drawdown possono essere rimossi dopo la classificazione soggettiva come flusso tossico o scommessa unidirezionale."
         ]
       }
     },
@@ -1381,6 +1531,12 @@
           "Handel und Prüfung verbotenen Verhaltens vor Finanzierungs- und Auszahlungsentscheidung",
           "AGB §§7.1(h)-(i) und 7.2–7.3: nicht tragfähig hohes Risiko, unprofessionelle Praktiken oder Rufschaden, ungewöhnliche Größen/Häufigkeiten; Einstufung im alleinigen Ermessen.",
           "Trotz Einhaltung quantifizierter Drawdowns kann eine Strategie als unprofessionell gelten; simulierte Trades/Gewinne werden gestrichen und Konten gekündigt."
+        ],
+        "it": [
+          "Alpine Funded · Base Camp Instant, 2-Step/Peak e regole generali simulate",
+          "Trading e verifica di condotte vietate prima di finanziamento e prelievo",
+          "CGU §§7.1(h)-(i) e 7.2–7.3: rischio insostenibilmente elevato, pratiche non professionali o danno reputazionale, dimensioni/frequenze anomale; classificazione a esclusiva discrezione della società.",
+          "Una strategia conforme ai drawdown numerici può essere dichiarata non professionale, con rimozione di operazioni/profitti simulati e risoluzione dei conti."
         ]
       }
     },
@@ -1415,6 +1571,12 @@
           "Handel und Strategieprüfung vor Finanzierung oder Auszahlung",
           "AGB §4.4: Praktiken, die Brokerbeziehungen gefährden können, unangemessene Nutzung von Drittsystemen und Brokerregulierung ohne abschließenden materiellen Grenzwert.",
           "Der Betreiber kann trotz Einhaltung von Zielen und Drawdowns eine Strategie nachträglich verbieten und den Zugang entziehen."
+        ],
+        "it": [
+          "FundedSquad · valutazioni 1-Step, 2-Step e modelli Instant (CGU)",
+          "Trading e verifica strategia prima di finanziamento o prelievo",
+          "CGU §4.4: pratiche che possono compromettere i rapporti con il broker, uso inappropriato di sistemi terzi e regolamentazione del broker, senza soglia materiale esaustiva.",
+          "L’operatore può classificare a posteriori la strategia come vietata e cancellare l’accesso nonostante il rispetto di obiettivi e drawdown."
         ]
       }
     },
@@ -1449,6 +1611,12 @@
           "Schließung eines vor dem News-Zeitfenster eröffneten Trades während der Meldung",
           "Handelsregeln des Challenge-Kontos, Szenario Evaluation Funded: Gewinn aus einem vor dem Fenster eröffneten und darin geschlossenen Trade wird bei Prüfung gestrichen; Verluste trägt weiterhin der Trader.",
           "Die gleiche Ausführung erhält den Gewinn nicht, rechnet aber den Verlust an, auch ohne Kontoverstoß."
+        ],
+        "it": [
+          "FundedSquad · Evaluation Funded (notizie, non fase di valutazione)",
+          "Chiusura durante la notizia di un’operazione aperta prima della finestra",
+          "Regole del challenge, scenario Evaluation Funded: il profitto di un’operazione aperta prima della finestra e chiusa al suo interno viene rimosso al controllo; le perdite restano a carico del trader.",
+          "Lo stesso tipo di esecuzione non conserva il guadagno ma mantiene la perdita realizzata, anche senza violazione del conto."
         ]
       }
     },
@@ -1483,6 +1651,12 @@
           "Simulation und Prüfung vor Zugang zum Trader-Konto oder Auszahlung",
           "AGB V3.01 §§9.3 und 10.1: Ermessensdefinitionen von Glücksspiel, wesentlich größeren Trades und unverhältnismäßiger Exposition ohne festen Grenzwert.",
           "Eine drawdownkonforme Strategie kann als Glücksspiel gelten; Trades können annulliert oder Zugang gekündigt werden."
+        ],
+        "it": [
+          "Orion Funded · Nova, Zero, Standard, Swing e Select",
+          "Simulazione e verifica prima dell’accesso al conto trader o pagamento",
+          "CGU V3.01 §§9.3 e 10.1: definizioni discrezionali di gioco d’azzardo, operazioni sostanzialmente maggiori ed esposizione sproporzionata, senza soglia certa.",
+          "Una strategia conforme al drawdown può essere riclassificata come gioco d’azzardo e subire l’annullamento delle operazioni o la risoluzione dell’accesso."
         ]
       }
     },
@@ -1517,6 +1691,12 @@
           "Handel in Evaluierung und finanziertem Konto, Compliance-Prüfung",
           "AGB §7.26: „Transaktionen, die einer erheblichen Wette ohne klaren Plan oder definierte Strategie ähneln“, ohne veröffentlichten universellen objektiven Grenzwert.",
           "Eine Strategie innerhalb der Maximalverluste kann ohne vorhersehbaren Grenzwert als Glücksspiel eingestuft und das finanzierte Konto annulliert werden."
+        ],
+        "it": [
+          "Wall Street Funded · challenge Power/Prime/Flash/Instant",
+          "Trading in valutazione e finanziato, verifica di conformità",
+          "CGU §7.26: «transazioni simili a una scommessa significativa senza piano chiaro o strategia definita», senza soglia oggettiva universale pubblicata.",
+          "Una strategia conforme alle perdite massime può essere classificata come gioco d’azzardo senza soglia prevedibile, con annullamento del conto finanziato."
         ]
       }
     },
@@ -1551,6 +1731,12 @@
           "Handel, Einstufung verbotenen Verhaltens bei Auszahlung",
           "AGB September 2026 §5.2: Missbrauch oder unrealistische Strategie nach Bewertung des Betreibers ohne allgemeinen Grenzwert verboten; Folgen in §6.9.",
           "Eine nicht ausdrücklich zahlenmäßig verbotene Methode kann nachträglich als missbräuchlich gelten und zu einer Neuberechnung der Auszahlung führen."
+        ],
+        "it": [
+          "Moneta Funded · 1-Step/2-Step/Instant/Sprint",
+          "Trading, classificazione della condotta vietata al prelievo",
+          "CGU settembre 2026 §5.2: condotta vietata comprende strategia abusiva o irrealistica secondo l’operatore, senza soglia generale; conseguenze al §6.9.",
+          "Un metodo non esplicitamente vietato da numeri può essere dichiarato abusivo a posteriori, con ricalcolo del prelievo."
         ]
       }
     },
@@ -1585,6 +1771,12 @@
           "Strategieprüfung bei Phasengenehmigung und Finanzierung",
           "Nutzungsbedingungen, Verbot von Glücksspielpraktiken: unverhältnismäßiges Risiko, glücksspielähnlicher Handel, Alles-oder-nichts und übermäßiger Hebel ohne einheitliche Risikogrenze je Programm in der Klausel.",
           "Strategien können trotz Einhaltung numerischer Ziele wegen übermäßigen Glücksspiels ausgeschlossen und Konten geschlossen werden."
+        ],
+        "it": [
+          "TRADEXPROP · valutazioni Forex/Crypto e Instant Funded X",
+          "Verifica della strategia all’approvazione della fase e al finanziamento",
+          "Condizioni d’uso, divieto delle pratiche di gioco d’azzardo: rischio sproporzionato, trading simile al gioco, all-in e leva eccessiva senza limite unico per programma nella clausola.",
+          "La società può escludere una strategia per gioco eccessivo e chiudere il conto nonostante l’obiettivo numerico raggiunto."
         ]
       }
     },
@@ -1619,6 +1811,12 @@
           "Handel und Strategieprüfung vor Auszahlung",
           "AGB §5.4.3: Einstufung „wesentlich größerer“ Risiken und marktunüblicher Transaktionen ohne einheitlichen objektiven Maßstab je Produkt.",
           "Strategien innerhalb der Maximalverluste können ohne quantifiziertes Kriterium umklassifiziert, Gewinne oder Zugang entzogen werden."
+        ],
+        "it": [
+          "Monevis · valutazioni CFD e conti finanziati simulati",
+          "Trading e verifica strategia prima del prelievo",
+          "CGU §5.4.3: rischi «sostanzialmente maggiori» e transazioni incompatibili con le consuetudini di mercato, senza scala oggettiva uniforme per prodotto.",
+          "La società può riclassificare una strategia conforme alle perdite massime e rimuovere profitti o accesso senza criterio quantificato."
         ]
       }
     },
@@ -1653,6 +1851,12 @@
           "Handel und Verstoßprüfung vor Auszahlung",
           "AGB §9.2: Verbot nichtkommerzieller Tätigkeit und übermäßiger Positionsgröße oder Exposition ohne vollständige Grenzwerte; einseitige Compliance-Bewertung.",
           "Eine riskante Strategie innerhalb der Zahlenlimits kann nachträglich umklassifiziert und ihr Gewinn gestrichen werden."
+        ],
+        "it": [
+          "FundedHive · challenge e conti simulati",
+          "Trading e verifica violazioni prima del prelievo",
+          "CGU §9.2: vieta attività non commerciali e dimensioni/esposizione eccessive senza soglie complete, con valutazione unilaterale della conformità.",
+          "Una strategia rischiosa ma conforme ai limiti numerici può essere riclassificata dopo il trading e perdere i profitti."
         ]
       }
     },
@@ -1687,6 +1891,12 @@
           "Handel und Tradeprüfung beim Auszahlungsantrag",
           "Handelsbedingungen: Glücksspiel, „nicht nachhaltige“ Ausführung und fehlendes „nachhaltiges Risikomanagement“ verboten, ohne abschließenden Maßstab für alle Pläne.",
           "Eine zahlenmäßig regelkonforme Methode kann aufgrund qualitativer Bewertung ausgeschlossen werden."
+        ],
+        "it": [
+          "SabioTrade · valutazioni CFD e programmi finanziati",
+          "Trading e verifica operazioni alla richiesta di premio",
+          "Condizioni di trading: vietano gioco d’azzardo, esecuzione non sostenibile e assenza di gestione sostenibile del rischio, senza metrica comune esaustiva per tutti i piani.",
+          "Un metodo conforme ai limiti numerici può essere escluso sulla base di una valutazione qualitativa."
         ]
       }
     },
@@ -1721,6 +1931,12 @@
           "Handel, Programmprüfung und Kontoentscheidung",
           "AGB vom 03.11.2026 §§7–8: Ausnutzung und Umgehung des „Geistes“ des Programms, wobei das Ermessen des Betreibers nicht ausreichend durch öffentliche Kriterien begrenzt ist.",
           "Eine Strategie innerhalb der Zielwerte kann als Ausnutzung eingestuft werden und zum Ausschluss oder zur Streichung von Trades führen."
+        ],
+        "it": [
+          "Clarity Traders · challenge simulati e conti finanziati",
+          "Trading, verifica programma e decisione sul conto",
+          "CGU del 03/11/2026 §§7–8: sfruttamento abusivo e aggiramento dello «spirito» del programma, con discrezionalità dell’operatore non sufficientemente delimitata da criteri pubblici.",
+          "Una strategia conforme agli obiettivi numerici può essere classificata come sfruttamento, con esclusione o rimozione delle operazioni."
         ]
       }
     },
@@ -1755,6 +1971,12 @@
           "Handel und Kontoprüfung vor Finanzierung oder Auszahlung",
           "AGB §3: einseitige Wetten, berechtigte Bedenken hinsichtlich Brokerschäden und störende Praktiken nach einseitigem Ermessen.",
           "Handel innerhalb der Drawdown- und Tagesvorgaben kann ohne vorgegebenen Grenzwert als unzulässig gelten, mit Schließung und Zugangsverlust."
+        ],
+        "it": [
+          "TEFX · 1-Step, 2-Step, Instant",
+          "Trading e verifica conto prima di finanziamento o premio",
+          "CGU §3: scommesse unidirezionali, giustificati timori di danno al broker e pratiche perturbatrici a discrezione unilaterale.",
+          "Il trading conforme a drawdown e giorni richiesti può essere dichiarato non conforme senza soglia prestabilita, con chiusura e perdita di accesso."
         ]
       }
     },
@@ -1789,6 +2011,12 @@
           "Handel, Strategieprüfung und Übergang zum finanzierten Konto",
           "Analytix-Dashboard-Bedingungen: identische Strategie in Evaluierung und finanziertem Konto nach alleiniger Bewertung des Unternehmens; übermäßiges Glücksspiel ohne universellen Prozentsatz.",
           "Ein Strategiewechsel oder als erheblich bewertetes Risiko kann nachträglich einen Verstoß auslösen, ohne klaren gemeinsamen Grenzwert."
+        ],
+        "it": [
+          "Lvlup Futures · valutazioni Prop Account LLC / contratto Trader Prop Account LC",
+          "Trading, verifica strategia e passaggio al finanziato",
+          "Condizioni dashboard Analytix: strategia identica tra valutazione e conto finanziato secondo il solo giudizio della società; gioco eccessivo senza percentuale universale.",
+          "Cambiare strategia o rischiare una parte ritenuta sostanziale può causare una violazione a posteriori, senza soglia comune chiara."
         ]
       }
     },
@@ -1823,6 +2051,12 @@
           "Finanzierter Handel und Prüfung vor Auszahlung",
           "Öffentliche Regeln §9: einseitige Wetten, aggressives Nachkaufen und wesentliche Stiländerungen ohne detaillierten programmübergreifenden Grenzwert auf dieser Seite verboten.",
           "Ein drawdownkonformer Trade kann als Glücksspiel gelten, mit Gewinnstreichung oder Verstoß."
+        ],
+        "it": [
+          "Atmos · Nova, 2-Step, Instant",
+          "Trading finanziato e verifica prima del prelievo",
+          "Regole pubbliche §9: vietate scommesse unidirezionali, mediazioni aggressive e cambiamenti importanti di stile senza soglia trasversale dettagliata nella pagina.",
+          "Un’operazione conforme al drawdown può essere classificata come gioco d’azzardo, con rimozione dei profitti o violazione."
         ]
       }
     },
@@ -1857,6 +2091,12 @@
           "Evaluierung und Prüfung der Strategiekontinuität im finanzierten Konto",
           "§6.4: Wechsel von professioneller Strategie zu Glücksspielstrategie ohne programmübergreifenden numerischen Risikogrenzwert.",
           "Trader können trotz erfüllter Ziele und Drawdowns aufgrund einer Bewertung der Professionalität disqualifiziert werden."
+        ],
+        "it": [
+          "FundedElite · valutazioni / conti Elite simulati",
+          "Valutazione e continuità della strategia nel finanziato",
+          "§6.4: passaggio da strategia professionale a strategia di gioco, senza soglia numerica di rischio comune ai programmi.",
+          "Il trader può essere squalificato sulla base della valutazione della professionalità pur rispettando obiettivi e drawdown."
         ]
       }
     },
@@ -1891,6 +2131,12 @@
           "Handel und Strategieprüfung vor Auszahlung",
           "AGB §§5.5 und 5.6: weitere verbotene Handelsarten oder einseitig nach Ermessen definierte Parameter.",
           "Eine Strategie kann trotz eingehaltenen Zahlenlimits nachträglich verboten und Trades aus dem PnL entfernt werden."
+        ],
+        "it": [
+          "Upcomers · CFD, futures e altri programmi simulati",
+          "Trading e verifica strategia prima del premio",
+          "CGU §§5.5 e 5.6: altri tipi di trading vietati o parametri definiti unilateralmente a discrezione.",
+          "Una strategia può essere vietata a posteriori e le operazioni rimosse dal PnL nonostante il rispetto dei limiti numerici."
         ]
       }
     },
@@ -1925,6 +2171,12 @@
           "Handel und Strategieprüfung beim Übergang zur Finanzierung",
           "AGB §5.C: Gefährdung der Brokerbeziehung und Ermessenseinstufung von Strategiewechseln ohne gemeinsamen öffentlichen Maßstab.",
           "Eine drawdownkonforme Strategie kann aufgrund unbegrenzter qualitativer Kriterien zum Ausschluss führen."
+        ],
+        "it": [
+          "Funded Trader Markets · conti simulati Challenge/Funded",
+          "Trading e verifica strategia nel passaggio al finanziato",
+          "CGU §5.C: rischio di compromettere il rapporto con il broker e classificazione discrezionale dei cambi di strategia senza metrica pubblica comune.",
+          "Una strategia conforme al drawdown può causare esclusione per criteri qualitativi non delimitati."
         ]
       }
     },
@@ -1959,6 +2211,12 @@
           "Simulierte und finanzierte Strategieprüfung vor Auszahlungsgenehmigung oder Schließung",
           "Trader-Vertrag §§4 und 16.12: Glücksspiel, Alles-oder-nichts-Wetten und Gefährdung der Brokerbeziehung werden nach alleinigem Ermessen ohne gemeinsamen objektiven Grenzwertrahmen bewertet.",
           "Gewinne können bei Schließung aufgrund subjektiver Stilumklassifizierung trotz Einhaltung von Zahlenlimits verfallen; Auszahlungsverlust wird nur einmal in B1 bewertet."
+        ],
+        "it": [
+          "Funded Futures Network / FFN Cap LLC — conti Sim-Funded Pro, STEADY e Live secondo contratto applicabile",
+          "Verifica strategia simulata e finanziata prima del prelievo o chiusura",
+          "Contratto Trader §§4 e 16.12: la società valuta a esclusiva discrezione gioco d’azzardo, scommesse tutto o niente e rischio di danno al rapporto con il broker, senza quadro comune di soglie oggettive.",
+          "I profitti possono essere confiscati alla chiusura dopo riclassificazione soggettiva dello stile anche rispettando i limiti numerici; la perdita dei premi è valutata una sola volta in B1."
         ]
       }
     },
@@ -1993,6 +2251,12 @@
           "Strategieprüfung in Challenge und finanziertem Konto vor Auszahlungsantrag",
           "AGB §6: Handel entgegen der angemessenen Praxis auf Finanzmärkten oder zulasten von DFT GROUP, ohne definierten Risikomaßstab.",
           "Strategien innerhalb numerischer Ziele können ohne vorhersehbares universelles Kriterium als schädlich gelten und zur Kontoschließung führen."
+        ],
+        "it": [
+          "DirectFundedTrader · valutazione in due fasi e Fast Funding, contratti simulati",
+          "Verifica strategia in challenge e finanziato prima della richiesta di premio",
+          "CGU §6: qualsiasi trading contrario a come dovrebbe essere effettuato sui mercati finanziari o che danneggi DFT GROUP, senza metrica di rischio definita.",
+          "Una strategia conforme agli obiettivi numerici può essere riclassificata come dannosa e causare chiusura senza criterio universale prevedibile."
         ]
       }
     },
@@ -2027,6 +2291,12 @@
           "Handel in Challenge oder finanzierte Prüfung vor Auszahlung",
           "AGB §5.4: qualitative Handelsbeschränkungen und mögliche Trade-Streichung ohne vollständigen Maßstab pro Programm.",
           "Eine ansonsten zielkonforme Strategie kann umklassifiziert und ihre Ergebnisse annulliert werden."
+        ],
+        "it": [
+          "Fidelcrest · valutazioni Pro/Micro",
+          "Trading in challenge o verifica finanziato prima del prelievo",
+          "CGU §5.4: restrizioni qualitative e possibile rimozione di operazioni senza scala completa per programma.",
+          "Una strategia conforme agli obiettivi può essere riclassificata e i risultati annullati."
         ]
       }
     },
@@ -2061,6 +2331,12 @@
           "Handel in Challenge oder finanzierte Prüfung vor Auszahlung",
           "Handelsregeln Speedy: keine feste Frist; AGB §10.6: Challenge verfällt nach 30 Kalendertagen.",
           "Widerspruch zwischen Angebotsseite und Vertrag zur Ablaufzeit, der zum Scheitern der Evaluierung führen kann."
+        ],
+        "it": [
+          "Ultimate Traders · Speedy 1-phase",
+          "Trading in challenge o verifica finanziato prima del prelievo",
+          "Regole Speedy: nessuna scadenza fissa; CGU §10.6: il challenge scade dopo 30 giorni di calendario.",
+          "Contraddizione tra offerta e contratto sulla scadenza, che può causare il fallimento della valutazione."
         ]
       }
     },
@@ -2095,6 +2371,12 @@
           "Handel in Challenge oder finanzierte Prüfung vor Auszahlung",
           "Bullwaves-Bedingungen: Bewertung übermäßigen Risikos sowie Volumen- oder Strategieänderungen nicht vollständig pro Produkt quantifiziert.",
           "Ein Stil innerhalb der Drawdown-Grenzen kann bei der Auszahlungsprüfung umklassifiziert werden."
+        ],
+        "it": [
+          "Bullwaves Prime · 1-Step/2-Step/Instant",
+          "Trading in challenge o verifica finanziato prima del prelievo",
+          "Condizioni Bullwaves: valutazione del rischio eccessivo e dei cambi di volumi/strategia non completamente quantificata per prodotto.",
+          "Uno stile entro i limiti di drawdown può essere riclassificato durante il controllo del prelievo."
         ]
       }
     },
@@ -2129,6 +2411,12 @@
           "Evaluierung/Finanzierung und Strategieprüfung vor Auszahlung",
           "AGB §15(k): glücksspielorientiertes, unredliches Verhalten und vom Unternehmen als unprofessionell bewertete Strategien ohne vollständigen numerischen Grenzwert.",
           "Strategien innerhalb der Zahlenlimits können aufgrund des Stils disqualifiziert werden, getrennt vom in B1 bewerteten Auszahlungsanspruch."
+        ],
+        "it": [
+          "DNA Funded · valutazioni simulate e conti finanziati",
+          "Valutazione/finanziato e verifica strategia prima del premio",
+          "CGU §15(k): condotta orientata al gioco, malafede e strategie giudicate non professionali senza soglia numerica completa.",
+          "Una strategia entro i limiti numerici può essere squalificata per stile, separatamente dal diritto ai premi valutato in B1."
         ]
       }
     },
@@ -2163,6 +2451,12 @@
           "Evaluierung/Finanzierung und Strategieprüfung vor Auszahlung",
           "AGB §4.4 verbietet jede als schädlich für Brokerbeziehungen bewertete Handelstätigkeit ohne Zahlenkriterium; Kündigungssanktionen vorgesehen.",
           "Eine innerhalb der Verlustgrenzen liegende Technik kann bei Prüfung ohne vorhersehbare Einstufung sanktioniert werden."
+        ],
+        "it": [
+          "Foxx · 1-Step / Instant simulati",
+          "Valutazione/finanziato e verifica strategia prima del premio",
+          "CGU §4.4 vieta il trading ritenuto dannoso per i rapporti con i broker senza definizione numerica; sono previste sanzioni di risoluzione.",
+          "Una tecnica conforme ai limiti di perdita può essere sanzionata durante la verifica senza classificazione prevedibile."
         ]
       }
     },
@@ -2197,6 +2491,12 @@
           "Evaluierung/Finanzierung und Strategieprüfung vor Auszahlung",
           "Offizieller SFX-Hilfeleitfaden (17.08.2026): „Erholung in Gegenrichtung“ nach zehn Minuten möglich, einseitige Wetten und als irrational bewertete Strategien; Auszahlungssanktionen nach Ermessen des Risikoteams.",
           "Das Risikoteam kann einen Trader bei Auszahlung aufgrund offener Strategieeinstufung ablehnen."
+        ],
+        "it": [
+          "SFX Funded · Ascend / Rapid / Instant",
+          "Valutazione/finanziato e verifica strategia prima del premio",
+          "Guida ufficiale SFX (17/08/2026): recupero in direzione opposta possibile dopo dieci minuti, scommesse unidirezionali e strategie ritenute irrazionali; sanzioni sui prelievi a discrezione del team rischi.",
+          "Il team rischi può respingere un trader al momento del prelievo mediante una classificazione aperta della strategia."
         ]
       }
     },
@@ -2231,6 +2531,12 @@
           "Evaluierung/Finanzierung und Strategieprüfung vor Auszahlung",
           "AGB §15 verbietet auch vermeintlich glücksspielähnliches Verhalten oder unredliche Strategien, ohne quantifizierte Bewertung.",
           "Challenge-Gewinne können trotz expliziter Verlustlimits aus qualitativen Gründen ungültig werden."
+        ],
+        "it": [
+          "SuperFunded · valutazione simulata e premi finanziati",
+          "Valutazione/finanziato e verifica strategia prima del premio",
+          "CGU §15 vieta anche condotte apparentemente simili al gioco d’azzardo o strategie in malafede, con valutazione non quantificata.",
+          "I guadagni del challenge possono essere invalidati per ragioni qualitative nonostante limiti di perdita espliciti."
         ]
       }
     },
@@ -2265,6 +2571,12 @@
           "Evaluierung/Finanzierung und Strategieprüfung vor Auszahlung",
           "AGB §7.3: nicht quantifiziertes Verbot „wesentlicher“ Verhaltens- oder Strategiewechsel nach alleinigem Ermessen von First Frontier.",
           "Eine drawdown- und mindesttagekonforme Strategie kann als abweichend bewertet und die Auszahlung verweigert werden."
+        ],
+        "it": [
+          "Funding Frontier · Classic e PRO finanziato",
+          "Valutazione/finanziato e verifica strategia prima del premio",
+          "CGU §7.3: divieto non quantificato di cambi «significativi» di condotta o strategia a esclusiva discrezione di First Frontier.",
+          "Una strategia compatibile con drawdown e giorni minimi può essere ritenuta diversa e il premio negato."
         ]
       }
     },
@@ -2299,6 +2611,12 @@
           "Stilprüfung in Challenge oder vor Auszahlung",
           "AGB: Einstufung von toxischem Handel und glücksspielähnlichem Verhalten durch das Risikoteam ohne vollständigen gemeinsamen Grenzwert für alle Pakete; neue Bedingungen vor Zahlung möglich.",
           "Mögliche Umklassifizierung von Trades innerhalb numerischer Grenzen, mit Auszahlungsverweigerung oder Kontoschließung."
+        ],
+        "it": [
+          "WeMasterTrade — programma simulato di valutazione/finanziamento",
+          "Verifica dello stile in challenge o prima del premio",
+          "CGU: trading tossico e condotta simile al gioco classificati dal team rischi senza soglia completa comune ai pacchetti; possibili nuove condizioni prima del pagamento.",
+          "Possibile riclassificazione di operazioni entro i limiti numerici, con rifiuto del premio o chiusura."
         ]
       }
     },
@@ -2333,6 +2651,12 @@
           "Stilprüfung in Challenge oder vor Auszahlung",
           "FAQ: missbräuchliche, manipulative oder unethische Praktiken zusätzlich zu quantifizierten News-Grenzen, ohne abschließende Einstufung mit Risikogrenzwerten.",
           "Mögliche Umklassifizierung von Trades innerhalb numerischer Grenzen, mit Auszahlungsverweigerung oder Kontoschließung."
+        ],
+        "it": [
+          "FOREXIVE — programma simulato di valutazione/finanziamento",
+          "Verifica dello stile in challenge o prima del premio",
+          "FAQ: pratiche abusive, manipolative o non etiche oltre alle restrizioni numeriche sulle notizie, senza classificazione esaustiva con soglie di rischio.",
+          "Possibile riclassificazione di operazioni entro i limiti numerici, con rifiuto del premio o chiusura."
         ]
       }
     },
@@ -2367,6 +2691,12 @@
           "Stilprüfung in Challenge oder vor Auszahlung",
           "AGB erlauben die Einstufung von Handel als unfair, missbräuchlich oder schädlich ohne Definition aller Grenzwerte; möglicher Auszahlungsverlust nach Outcome A.",
           "Mögliche Umklassifizierung von Trades innerhalb numerischer Grenzen, mit Auszahlungsverweigerung oder Kontoschließung."
+        ],
+        "it": [
+          "Hash Hedge — programma simulato di valutazione/finanziamento",
+          "Verifica dello stile in challenge o prima del premio",
+          "CGU: il trading può essere ritenuto sleale, abusivo o dannoso senza definire tutte le soglie, con possibile perdita dei premi dopo Outcome A.",
+          "Possibile riclassificazione di operazioni entro i limiti numerici, con rifiuto del premio o chiusura."
         ]
       }
     },
@@ -2401,6 +2731,12 @@
           "Stilprüfung in Challenge oder vor Auszahlung",
           "Einstufung missbräuchlichen Verhaltens oder glücksspielähnlichen Risikos nach allgemeinen Regeln teilweise subjektiv, ohne universellen Grenzwert für jedes Produkt.",
           "Mögliche Umklassifizierung von Trades innerhalb numerischer Grenzen, mit Auszahlungsverweigerung oder Kontoschließung."
+        ],
+        "it": [
+          "Sure Leverage Funding — programma simulato di valutazione/finanziamento",
+          "Verifica dello stile in challenge o prima del premio",
+          "La classificazione di condotta abusiva o rischio simile al gioco resta in parte soggettiva nelle regole generali, senza soglia universale per ciascun prodotto.",
+          "Possibile riclassificazione di operazioni entro i limiti numerici, con rifiuto del premio o chiusura."
         ]
       }
     },
@@ -2435,6 +2771,12 @@
           "Stilprüfung in Challenge oder vor Auszahlung",
           "Glücksspielregel lässt das Risikoteam leichtfertig überhöhte Hebelwirkung und unzureichende freie Margin ohne einheitlichen vollständigen Grenzwert definieren: eine Strategieunklarheit, −3.",
           "Mögliche Umklassifizierung von Trades innerhalb numerischer Grenzen, mit Auszahlungsverweigerung oder Kontoschließung."
+        ],
+        "it": [
+          "Titan Capital Markets — programma simulato di valutazione/finanziamento",
+          "Verifica dello stile in challenge o prima del premio",
+          "La regola sul gioco lascia al team rischi la definizione di leva eccessiva imprudente e margine libero insufficiente senza soglia unica completa: una ambiguità strategica, −3.",
+          "Possibile riclassificazione di operazioni entro i limiti numerici, con rifiuto del premio o chiusura."
         ]
       }
     },
@@ -2469,6 +2811,12 @@
           "Handelsprüfung vor Finanzierung oder Auszahlung",
           "Übersicht §24.5(6) verbietet Techniken entgegen gutgläubigem Handel nach Unternehmensbewertung; §25 verbietet „merklich“ größere/kleinere Positionen ohne Grenzwert, Sanktionen bis zum Ergebnisausschluss.",
           "Subjektive Strategieeinstufung kann ohne Überschreiten der Zahlenlimits zum Verlust von Konto oder Gewinnen führen."
+        ],
+        "it": [
+          "Prop Number One · challenge e finanziamento simulato",
+          "Verifica trading prima di approvare finanziamento o prelievo",
+          "Panoramica §24.5(6): vieta tecniche ritenute contrarie al trading in buona fede; §25 vieta dimensioni «notevolmente» maggiori/minori senza soglia, con sanzioni fino all’esclusione dei risultati.",
+          "La classificazione soggettiva di una strategia può causare perdita del conto o dei profitti senza superare i limiti numerici."
         ]
       }
     },
@@ -2503,6 +2851,12 @@
           "Handelsprüfung vor Finanzierung oder Auszahlung",
           "Leitfäden für finanzierte Konten verbieten inkonsistente, glücksspielähnliche Strategien und unzureichendes Risikomanagement ohne programmübergreifenden Maßstab; Sanktionen bis zur vollständigen Gewinnannullierung. B2 −3 für unklaren Stil, keine automatische Sanktion numerischer Limits.",
           "Subjektive Strategieeinstufung kann ohne Überschreiten der Zahlenlimits zum Verlust von Konto oder Gewinnen führen."
+        ],
+        "it": [
+          "TradingCult · challenge e finanziamento simulato",
+          "Verifica trading prima di approvare finanziamento o prelievo",
+          "Guide funded: vietate strategie incoerenti o simili al gioco e gestione inadeguata del rischio senza metrica trasversale; sanzioni fino all’annullamento completo dei profitti. B2 −3 per stile vago, non penalità automatiche per limiti numerici.",
+          "La classificazione soggettiva di una strategia può causare perdita del conto o dei profitti senza superare i limiti numerici."
         ]
       }
     },
@@ -2537,6 +2891,12 @@
           "Handelsprüfung vor Finanzierung oder Auszahlung",
           "AGB behalten dem Risikoteam Recht auf zusätzliche Regeln und Disqualifizierung jeder als unzulässig bewerteten Tätigkeit ohne vollständige Definition je Programm vor; eine Stilunklarheit −3, ohne tatsächlich erfolgte Rückwirkung zu unterstellen.",
           "Subjektive Strategieeinstufung kann ohne Überschreiten der Zahlenlimits zum Verlust von Konto oder Gewinnen führen."
+        ],
+        "it": [
+          "XFunded · challenge e finanziamento simulato",
+          "Verifica trading prima di approvare finanziamento o prelievo",
+          "CGU: il team rischi può aggiungere regole e squalificare attività ritenute non conformi senza definizione completa per programma; una criticità di stile vago, −3, senza attribuire retroattività effettivamente verificatasi.",
+          "La classificazione soggettiva di una strategia può causare perdita del conto o dei profitti senza superare i limiti numerici."
         ]
       }
     },
@@ -2571,6 +2931,12 @@
           "Kontozulassung und -erhalt",
           "AGB §§4.4–4.6: Einstufung von Strategien, kontenübergreifender Arbitrage und Risikoprofil nach alleinigem Ermessen.",
           "Aktivität innerhalb der Zahlenlimits kann als verboten gelten, mit Ausschluss und Verweigerung finanzierten Zugangs."
+        ],
+        "it": [
+          "GOAT Funded Trader · valutazioni e accesso finanziato",
+          "Qualificazione e mantenimento del conto",
+          "CGU §§4.4–4.6: classificazione di strategie, arbitraggio tra conti e profilo di rischio a esclusiva discrezione della società.",
+          "Attività conformi ai limiti numerici possono essere vietate, con esclusione e rifiuto dell’accesso finanziato."
         ]
       }
     },
@@ -2605,6 +2971,12 @@
           "Übergang zur Finanzierung, Skalierung und simulierte/reale Auszahlung",
           "Risikoprüfungsrichtlinie §2.2: Gesamtentscheidung anhand von Warnsignalen, wobei ein spezifischer objektiver Grenzwert für jede Variable fehlt.",
           "Konto kann genehmigt oder Auszahlung nach nicht vollständig vorhersehbarer manueller Bewertung verzögert/verweigert werden; numerische Prüfauslöser sind selbst nicht sanktionswürdig."
+        ],
+        "it": [
+          "FT+ · conti soggetti alla politica di verifica del rischio",
+          "Passaggio al finanziato, scaling e prelievo simulato/reale",
+          "Politica di verifica rischio §2.2: decisione complessiva basata su segnali d’allarme, riconoscendo l’assenza di soglia oggettiva specifica per ogni variabile.",
+          "Conto approvato o prelievo ritardato/negato dopo valutazione manuale non pienamente prevedibile; gli indicatori numerici di verifica non sono di per sé penalizzati."
         ]
       }
     },
@@ -2639,6 +3011,12 @@
           "Simulierte Evaluierung",
           "§9.5 erlaubt CTI, bestimmte Praktiken nach Ermessen zu verbieten; Sanktionen in §9.6.",
           "Konto oder Trade-Ergebnis potenziell sanktioniert oder Hebel und maximales Risiko nach §9.6(e) geändert, ohne abschließenden Grenzwert. Ein Sachverhalt, ein Abzug."
+        ],
+        "it": [
+          "CTI · valutazioni della società delle Comore secondo CGU collegate il 20/11/2026",
+          "Valutazione simulata",
+          "§9.5 permette a CTI di classificare pratiche come vietate a propria discrezione; sanzioni raggruppate nel §9.6.",
+          "Conto o risultato dell’operazione potenzialmente sanzionati, o leva e rischio massimo modificati ai sensi del §9.6(e), senza soglia esaustiva. Un fatto e una detrazione."
         ]
       }
     },
@@ -2673,6 +3051,12 @@
           "Performance Account / Erhalt des finanzierten Zugangs",
           "AGB §8: leichtfertiger Handel und Glücksspielverhalten ohne numerische Definition oder verbindliches Einstufungsverfahren verboten.",
           "Kontoschließung und Benutzerdeaktivierung nach subjektiver Verhaltenseinstufung."
+        ],
+        "it": [
+          "Leeloo Trading · conti Performance",
+          "Performance Account / mantenimento accesso finanziato",
+          "CGU §8: trading imprudente e comportamento di gioco vietati senza definizione numerica né procedura vincolante di classificazione.",
+          "Chiusura del conto e disattivazione dell’utente in base a una classificazione soggettiva della condotta."
         ]
       }
     },
@@ -2707,6 +3091,12 @@
           "Evaluierung, Live Virtual und Live Funded",
           "Leitfaden §§4 und 9: Bewertung übermäßigen Risikos anhand von Gewinnkonzentration, Positionsgröße und Historie ohne abschließenden entscheidenden Grenzwert.",
           "Innerhalb numerischer Grenzen liegende Praktiken können nach Prüfung zur Schließung führen; eventueller Auszahlungsverlust wird nur B1 zugerechnet."
+        ],
+        "it": [
+          "UProfit · programmi soggetti alla guida delle buone pratiche",
+          "Valutazione, Live Virtual e Live Funded",
+          "Guida §§4 e 9: valutazione del rischio eccessivo secondo concentrazione dei profitti, dimensioni e storico, senza soglia decisiva esaustiva.",
+          "Una pratica compatibile con i limiti numerici può causare chiusura dopo verifica; eventuale annullamento dei premi attribuito solo a B1."
         ]
       }
     },
@@ -2741,6 +3131,12 @@
           "Finanziertes Konto / Handel unter Payward Oceanic Ltd",
           "POL-Vertrag §3(b)(v)–(viii): Strategien, die nach Einschätzung von POL Liquiditätsanbieter beeinträchtigen oder regulatorische Risiken schaffen können, ohne abschließende Kriterien.",
           "Auch zahlenmäßig regelkonforme Strategien können als verbotener Handel gelten und Aussetzung/Kündigung verursachen. Auszahlungsfolgen werden in B1 bewertet und nicht erneut abgezogen."
+        ],
+        "it": [
+          "Breakout Prop · contratto Trader finanziato Classic/Pro/Turbo",
+          "Conto finanziato / trading presso Payward Oceanic Ltd",
+          "Contratto POL §3(b)(v)–(viii): strategie che POL ritiene possano ostacolare un fornitore di liquidità o creare rischio normativo, senza criteri esaustivi.",
+          "Una strategia conforme ai limiti numerici può essere classificata come trading vietato con sospensione/risoluzione. Conseguenze sui premi valutate in B1, senza nuova detrazione."
         ]
       }
     },
@@ -2775,6 +3171,12 @@
           "Simulierte Evaluierung, nicht automatisch RCF-Konten",
           "AGB §7 und Programmregeln: als übermäßig oder glücksspielähnlich bewertetes Risikoverhalten zusätzlich zu quantifizierten Risikobeispielen.",
           "Evaluierung kann scheitern oder Konto aufgrund nicht vollständig begrenzter qualitativer Auslegung geschlossen werden; RCF-Vertrag gesondert prüfen."
+        ],
+        "it": [
+          "RebelsFunding · valutazione RF",
+          "Valutazione simulata, non automaticamente conti RCF",
+          "CGU §7 e regole del programma: condotta di rischio ritenuta eccessiva o simile al gioco, oltre agli esempi quantificati.",
+          "La valutazione può fallire o il conto chiudersi per interpretazione qualitativa non pienamente delimitata; il contratto RCF va esaminato a parte."
         ]
       }
     },
@@ -2809,6 +3211,12 @@
           "Evaluierungsgenehmigung",
           "AGB §10.1: Lux kann nach alleinigem Urteil Trades aus der Berechnung für die nächste Stufe ausschließen.",
           "Ein erreichtes Zahlenziel reicht möglicherweise nicht, wenn Trades ohne abschließendes Kriterium ausgeschlossen werden."
+        ],
+        "it": [
+          "Lux Trading Firm · valutazione / scaling",
+          "Approvazione della valutazione",
+          "CGU §10.1: Lux può, a suo esclusivo giudizio, escludere operazioni dal calcolo per accedere alla fase successiva.",
+          "Raggiungere l’obiettivo numerico può non bastare se alcune operazioni sono escluse senza criterio esaustivo."
         ]
       }
     },
@@ -2843,6 +3251,12 @@
           "Evaluierung und Finanzierungsberechtigung",
           "Challenge-AGB §13.14: qualitative Bewertung marktüblicher Praktiken und Exposition/Risiko ohne abschließenden Disqualifikationsgrenzwert.",
           "Phasenaufstieg kann verweigert und Evaluierungsgebühr aufgrund Auslegung des Handelsprofils nicht erstattet werden."
+        ],
+        "it": [
+          "FunderPro Challenge · Classic / One Phase",
+          "Valutazione e idoneità al finanziamento",
+          "CGU challenge §13.14: valutazione qualitativa delle pratiche di mercato standard ed esposizione/rischio senza soglia esaustiva di squalifica.",
+          "Il passaggio di fase può essere negato e la quota di valutazione non rimborsata in base all’interpretazione del profilo di trading."
         ]
       }
     },
@@ -2877,6 +3291,12 @@
           "Evaluierung, dann Funded Trader",
           "AGB §10.2(n): wesentliche Änderung von Strategie, Instrumenten oder Risikoprofil, die den Zweck der Challenge vereitelt, ohne quantifizierten Grenzwert.",
           "Kontosperrung und möglicher Auszahlungsverlust, wenn der Wechsel als verbotene Praktik gilt."
+        ],
+        "it": [
+          "HyroTrader · challenge e passaggio al finanziato",
+          "Valutazione e poi Funded Trader",
+          "CGU §10.2(n): cambiamento sostanziale di strategia, strumenti o profilo di rischio che vanifica lo scopo del challenge, senza soglia quantificata.",
+          "Sospensione del conto e possibile perdita dei premi se il cambio è classificato come pratica vietata."
         ]
       }
     },
@@ -2911,6 +3331,12 @@
           "Handel und Kontoerhalt",
           "AGB §§12.2–12.4: „wesentliche oder ungerechtfertigte“ Änderungen von Strategie oder Positionsgröße ohne abschließenden Grenzwert.",
           "Ein drawdownkonformes Konto kann bei als inkonsistent bewerteter Änderung disqualifiziert werden; Befugnis zur Auszahlungsverweigerung bereits in B1 bewertet."
+        ],
+        "it": [
+          "IC Funded · valutazione e conto finanziato simulato",
+          "Trading e mantenimento del conto",
+          "CGU §§12.2–12.4: variazioni «significative o ingiustificate» della strategia o dimensione di posizione, senza soglia esaustiva.",
+          "Un conto conforme ai drawdown può essere squalificato se la variazione è ritenuta incompatibile con la coerenza; il potere di negare premi è già valutato in B1."
         ]
       }
     },
@@ -2945,6 +3371,12 @@
           "Handel / Strategiequalität",
           "AGB §5.2.17: Glücksspiel und zufällige Lotgrößensprünge ohne abschließenden Einstufungsgrenzwert verboten; Sanktionen §5.3.",
           "Positionen können ohne veröffentlichten Maßstab für alle Stile als übermäßig gelten; Auszahlungsverfall nur in B1 bewertet."
+        ],
+        "it": [
+          "Forex Funds Flow · FFF Boost e valutazioni simulate",
+          "Trading / qualità della strategia",
+          "CGU §5.2.17: gioco d’azzardo e aumenti casuali dei lotti vietati senza soglia esaustiva di classificazione; sanzioni §5.3.",
+          "Le posizioni possono essere classificate eccessive senza misura pubblicata per tutti gli stili; confisca dei premi conteggiata solo in B1."
         ]
       }
     },
@@ -2979,6 +3411,12 @@
           "Finanziertes Verhalten / Evaluierung",
           "AGB §12.24: in realen Märkten nicht kommerziell reproduzierbare Aktivitäten ohne abschließende Anwendbarkeitstests verboten.",
           "Strategie kann als Programmausnutzung gelten und trotz Einhaltung der Drawdowns zum Kontoverlust führen; Auszahlungsanspruch gesondert im Contractor Agreement bewertet."
+        ],
+        "it": [
+          "The Concept Trading · programma Prop",
+          "Condotta finanziata / valutazione",
+          "CGU §12.24: vietate attività «non replicabili commercialmente in mercati reali», senza test esaustivi di applicabilità.",
+          "Una strategia può essere classificata come sfruttamento del programma e causare perdita del conto pur rispettando i drawdown; diritto ai prelievi valutato separatamente nel contratto del prestatore."
         ]
       }
     },
@@ -3013,6 +3451,12 @@
           "Handel und Kontoerhalt",
           "Nutzungsbedingungen, verbotene Nutzung: nicht repräsentativ für verantwortlichen Handel auf realen Märkten und alleiniges Ermessen; getrennt von der nun definierten Microscalping-Regel: über 50 % der Gewinne aus Positionen von fünf Sekunden oder weniger.",
           "Disqualifizierung oder Schließung nach allgemeinen subjektiven Kriterien verantwortlichen Handels; Risiken für erworbene Auszahlungen bleiben in B1."
+        ],
+        "it": [
+          "Lucid Trading — LucidFlex/Pro/Daily/Direct simulati",
+          "Trading e mantenimento del conto",
+          "CGU, usi vietati: non rappresentativo di trading responsabile sui mercati reali e discrezione esclusiva; distinto dalla regola microscalping ora definita come oltre il 50% dei profitti da posizioni di cinque secondi o meno.",
+          "Squalifica o chiusura sulla base di criteri generali soggettivi di trading responsabile; rischi sui premi maturati restano in B1."
         ]
       }
     },
@@ -3047,6 +3491,12 @@
           "Zugangserhalt und Stufenwechsel",
           "Nutzervertrag §15: Das Unternehmen kann Trader anhand nicht abschließender Kriterien als zu erfahren oder professionell einstufen und Konten schließen.",
           "Konto und Programmberechtigung können bei als mit dem Ausbildungszweck unvereinbar bewerteter Professionalität entzogen werden; Auszahlungen nur in B1 bewertet."
+        ],
+        "it": [
+          "Apex Trader Funding · valutazione/Performance Account (programma simulato)",
+          "Mantenimento accesso e progressione",
+          "Contratto utente §15: la società può ritenere un trader troppo esperto o professionale sulla base di criteri non esaustivi e chiudere i conti.",
+          "Conto e idoneità possono essere revocati per sofisticazione ritenuta incompatibile con lo scopo educativo; premi valutati solo in B1."
         ]
       }
     },
@@ -3081,6 +3531,12 @@
           "Evaluierung und Finanzierung bei Anwendbarkeit",
           "FAQ, verbotene Handelsstile: Hochfrequenzhandel ohne Grenzwert; AGB Handelsregeln 148–151.",
           "Risiko von Kontosanktion oder Auszahlungsverweigerung bei als übermäßig bewerteter Frequenz ohne öffentliches Zahlenkriterium."
+        ],
+        "it": [
+          "Klein Funding · valutazioni secondo CGU",
+          "Valutazione e finanziato se la regola si applica",
+          "FAQ, stili vietati: trading ad alta frequenza senza soglia; CGU regole di trading 148–151.",
+          "Rischio di sanzione o rifiuto del prelievo per frequenza ritenuta eccessiva senza criterio numerico pubblico."
         ]
       }
     },
@@ -3115,6 +3571,12 @@
           "Evaluierung und finanziertes Konto, soweit Nutzungsbedingungen gelten",
           "§10.1.7.20: Strategien können nach alleinigem Ermessen ohne objektiven Grenzwert oder abschließende Definition als nichtkommerziell oder nicht tragfähig gelten.",
           "Disqualifizierung, Kündigung und Verlust kontobezogener Rechte bei als nicht tragfähig bewerteten Trades; Gewinne können vertraglich verfallen."
+        ],
+        "it": [
+          "Trade The Pool — valutazione/finanziamento azioni, CGU del 03/08/2026",
+          "Valutazione e conto finanziato se regolati dalle condizioni d’uso",
+          "§10.1.7.20: a esclusiva discrezione della società una strategia può essere ritenuta non commerciale o non praticabile senza soglia oggettiva né definizione esaustiva.",
+          "Squalifica, risoluzione e perdita dei diritti del conto per operazioni ritenute non praticabili, in un regime contrattuale in cui i profitti possono essere confiscati."
         ]
       }
     },
@@ -3149,6 +3611,12 @@
           "Challenge und Master-Konto",
           "§11.9 behält der Plattform die Einstufung von Trades/Strategien als verboten nach alleinigem Ermessen ohne abschließenden objektiven Grenzwert vor.",
           "Kontokündigung wegen plötzlich verbotener Strategie, getrennt vom einseitigen Recht auf Vergütungsverweigerung nach §§17.3–17.4."
+        ],
+        "it": [
+          "For Traders — Challenge/Master secondo CGU vigenti",
+          "Challenge e conto Master",
+          "§11.9 riserva alla piattaforma la classificazione di operazioni/strategie come vietate a esclusiva discrezione, senza soglia oggettiva esaustiva.",
+          "Risoluzione per strategia improvvisamente vietata, distinta dal diritto unilaterale di negare la remunerazione dei §§17.3–17.4."
         ]
       }
     },
@@ -3183,6 +3651,12 @@
           "Evaluierung und finanziertes Konto gemäß Regeln desselben Programms",
           "AGB §7.9: Bei Nachrichten darf eine Strategie nicht die Volatilität ausnutzen statt eine echte gerichtete Marktmeinung auszudrücken; kein überprüfbarer Grenzwert für die Absicht.",
           "Trade oder Strategie kann als News-Straddling eingestuft und einer Risikoprüfung mit möglicher Warnung oder Kontosanktion unterzogen werden."
+        ],
+        "it": [
+          "Finotive · challenge e conto finanziato simulato; pratiche sulle notizie",
+          "Valutazione e finanziato secondo le regole dello stesso programma",
+          "CGU §7.9: intorno alle notizie la strategia non deve sfruttare la volatilità invece di esprimere un’autentica visione direzionale del mercato; nessuna soglia verificabile per l’intento.",
+          "Operazione o strategia può essere classificata come news straddling e sottoposta a verifica del rischio, con possibile avviso o sanzione."
         ]
       }
     },
@@ -3217,6 +3691,12 @@
           "Auszahlungszeitraum nach Prüfung mit Tier1 oder Tier2",
           "AGB §6.3.8: Abzug von 50 % oder 100 % des Violation Profit, den Bruttogewinnen sanktionierter Trades; deren Verluste zählen dabei als null, mindern aber den Netto-Eligible-Profit.",
           "Regelwidrige Gewinne werden separat nach der bereits Verluste enthaltenden Nettogewinnberechnung gestrichen, teils bis auf null Auszahlung."
+        ],
+        "it": [
+          "Funding Traders · 1-Step Pro / 2-Step Pro / Instant, disciplina RMG",
+          "Periodo di prelievo dopo verifica con Tier1 o Tier2",
+          "CGU §6.3.8: detrazione del 50% o 100% del Violation Profit, profitti lordi delle operazioni sanzionate; le loro perdite valgono zero nel calcolo ma riducono l’Eligible Profit netto.",
+          "I guadagni in violazione vengono rimossi separatamente dopo il calcolo del profitto netto già comprensivo delle perdite, talvolta azzerando il premio."
         ]
       }
     },
@@ -3251,6 +3731,12 @@
           "Simuliertes Konto und finanzierter Handel",
           "AGB §§6.1 und 6.6(10): gute Risikopraxis nach alleinigem Ermessen von OFP und jede andere ungewöhnliche Strategie, die OFP für verboten hält.",
           "Das Unternehmen kann Trades oder Konten ohne einheitlichen festen Grenzwert für ungewöhnliches Verhalten disqualifizieren."
+        ],
+        "it": [
+          "OFP Funding · conti simulati e Instant, CGU dal 09/02/2026",
+          "Conto simulato e trading finanziato",
+          "CGU §§6.1 e 6.6(10): buone pratiche di rischio a esclusiva discrezione di OFP e qualsiasi altra strategia insolita ritenuta vietata da OFP.",
+          "La società può squalificare operazioni o conto senza soglia unica fissa per condotte insolite."
         ]
       }
     }
