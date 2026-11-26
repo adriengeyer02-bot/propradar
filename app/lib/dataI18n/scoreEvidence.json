@@ -585,6 +585,12 @@
           "Tathmini na akaunti ya Reward",
           "Masharti §7.2: kampuni inafafanua «matumizi mengine yoyote mabaya ya makusudi» kwa kila kesi kivyake.",
           "Mfanyabiashara anaweza kupoteza haki ya tuzo baada ya mkakati wake kuainishwa kwa maoni ya kampuni."
+        ],
+        "ha": [
+          "Leveraged · duk shirye-shirye",
+          "Tantancewa da asusun Reward",
+          "Sharuɗɗa §7.2: kamfanin yana bayyana «duk wani amfani mara kyau da gangan» bisa kowane hali dabam.",
+          "Mai ciniki na iya rasa cancantar lada bayan an tantance dabararsa bisa ra'ayin kamfanin."
         ]
       }
     },
@@ -673,6 +679,12 @@
           "Tathmini na Qualified",
           "Masharti §8.1.7: Alpha inaweza kuainisha mkakati kuwa hauruhusiwi kwa uamuzi wake.",
           "Akaunti inaweza kufungwa kutokana na tafsiri ya mtindo wa biashara ambayo haikufafanuliwa mapema."
+        ],
+        "ha": [
+          "Alpha Futures · duk asusu",
+          "Tantancewa da Qualified",
+          "Sharuɗɗa §8.1.7: Alpha na iya ayyana dabara a matsayin wadda ba a yarda da ita ba bisa ra'ayinsa.",
+          "Ana iya rufe asusu bisa fassarar salon ciniki da ba a bayyana tun farko ba."
         ]
       }
     },
@@ -761,6 +773,12 @@
           "Tathmini na Qualified",
           "Kiambatisho 5: faida za miamala ya chini ya dakika mbili huwa tatizo zikichangia sehemu «kubwa» isiyoainishwa kwa namba.",
           "Sehemu ya faida inaweza kukosa ustahiki au akaunti kuadhibiwa bila kiwango kilichochapishwa cha mkusanyiko wa faida."
+        ],
+        "ha": [
+          "Alpha Futures · duk asusu",
+          "Tantancewa da Qualified",
+          "Rataye na 5: ribar cinikin da bai kai minti biyu ba na zama matsala idan ta ƙunshi wani kaso «babba» da ba a ƙayyade da lamba ba.",
+          "Ana iya ayyana wani ɓangare na riba a matsayin wanda bai cancanta ba ko a hukunta asusu ba tare da iyakar tattara riba da aka wallafa ba."
         ]
       }
     },
@@ -849,6 +867,12 @@
           "Akaunti ya ufadhili ya majaribio na ombi la tuzo",
           "Masharti §§11.1–11.2: nafasi inayohatarisha «yote au karibu yote» ya kikomo cha hasara (drawdown) inaweza kuainishwa kama tabia ya kamari kwa uamuzi wa mwisho wa MilTraders.",
           "Bila asilimia ya kikomo iliyochapishwa, kampuni inaweza kufunga akaunti kadhaa na kukataa tuzo iliyoombwa tayari (Masharti §12.5)."
+        ],
+        "ha": [
+          "MilTraders · Zero, Pro da Instant Funded",
+          "Asusun da aka ba kuɗin kwaikwayo da neman lada",
+          "Sharuɗɗa §§11.1–11.2: matsayin ciniki da ke jefa «duk ko kusan duk» iyakar asara (drawdown) cikin haɗari na iya zama halin caca bisa hukuncin ƙarshe na MilTraders.",
+          "Ba tare da wallafa kaso na iyaka ba, kamfanin na iya rufe asusu da yawa da ƙin lada da aka riga aka nema (Sharuɗɗa §12.5)."
         ]
       }
     },
@@ -937,6 +961,12 @@
           "Tathmini na akaunti ya ufadhili ya majaribio",
           "Masharti, matumizi yaliyokatazwa: kampuni inakataza biashara yoyote ambayo kwa uamuzi wake pekee iko nje ya mbinu zinazokubalika za kudhibiti hatari.",
           "Faida zinaweza kuondolewa na akaunti kufungwa kwa mbinu ambazo hazina kikomo kilichojulikana wakati wa ununuzi."
+        ],
+        "ha": [
+          "Top One Trader · FLASH, NOVA, PRO da Instant",
+          "Tantancewa da asusun da aka ba kuɗin kwaikwayo",
+          "Sharuɗɗa, amfani da aka hana: kamfanin ya haramta duk cinikin da shi kaɗai ya ga ya saɓa wa hanyoyin haɗari da aka amince da su.",
+          "Ana iya cire riba da rufe asusu saboda hanyoyin da ba a iyakance da ƙa'idar da aka sani lokacin saye ba."
         ]
       }
     },
@@ -1025,6 +1055,12 @@
           "Kuhama kutoka changamoto kwenda akaunti iliyofadhiliwa",
           "Masharti, matumizi yaliyokatazwa: kubadili mkakati kati ya changamoto na hatua ya ufadhili kumekatazwa kulingana na uamuzi wa kampuni.",
           "Idhini au kufungwa kwa akaunti kunaweza kutegemea tathmini ya maoni kuhusu kiwango cha mabadiliko ya mbinu."
+        ],
+        "ha": [
+          "Top One Trader · ƙalubalen FLASH/NOVA/PRO zuwa Funded",
+          "Sauyawa daga ƙalubale zuwa asusun da aka ba da kuɗi",
+          "Sharuɗɗa, amfani da aka hana: an hana canza dabara tsakanin ƙalubale da matakin kuɗi bisa yadda kamfanin ya tantance.",
+          "Amincewa da asusu ko rufewa na iya dogara da ra'ayin kamfanin game da girman canjin hanyar ciniki."
         ]
       }
     },
@@ -1113,6 +1149,12 @@
           "Changamoto na akaunti iliyofadhiliwa",
           "Masharti §6.8: kampuni inaweza kutaja shughuli nyingine yoyote ya biashara kuwa imekatazwa zaidi ya mifano iliyoorodheshwa.",
           "Akaunti inaweza kufungwa kutokana na mkakati ambao haukuelezwa kikamilifu wakati wa ununuzi."
+        ],
+        "ha": [
+          "OneFunded · Flash, Core, Value da Instant",
+          "Ƙalubale da asusun da aka ba da kuɗi",
+          "Sharuɗɗa §6.8: kamfanin na iya ayyana sauran ayyukan ciniki a matsayin haramtattu fiye da misalan da aka jera.",
+          "Ana iya rufe asusun mai ciniki saboda dabarar da ba a bayyana gaba ɗaya lokacin saye ba."
         ]
       }
     },
@@ -1201,6 +1243,12 @@
           "Akaunti iliyofadhiliwa, pamoja na ukaguzi wa malipo",
           "Kituo cha msaada, biashara iliyokatazwa: dau za upande mmoja na mkusanyiko «uliopitiliza» wa hatari bila kiwango cha uwiano; OneFunded ina uamuzi wa mwisho.",
           "Ombi la malipo linaweza kufutwa na akaunti kufungwa kutokana na tathmini isiyo na kipimo cha namba ya hatari ya mwelekeo wa soko."
+        ],
+        "ha": [
+          "OneFunded · Flash, Core, Value da Instant",
+          "Asusun da aka ba da kuɗi, har da duba cire kuɗi",
+          "Cibiyar taimako, cinikin da aka hana: caca ta ɓangare ɗaya da tattara haɗari «fiye da kima» ba tare da iyakar kaso ba; OneFunded ke da hukuncin ƙarshe.",
+          "Ana iya soke buƙatar cire kuɗi da rufe asusu bisa tantance haɗarin alkibla da ba a ƙayyade da lamba ba."
         ]
       }
     },
@@ -1289,6 +1337,12 @@
           "Tathmini na akaunti ya BEM Trader",
           "Masharti §14: kampuni ina haki ya kuainisha mbinu zilizokatazwa kwa uamuzi wake.",
           "Mkakati ambao haujaorodheshwa kwa usahihi unaweza kusababisha kufungwa kwa akaunti bila kikomo cha kutekelezeka kilichowekwa mapema."
+        ],
+        "ha": [
+          "BEM Funding · One, One Only, Classic, Classic Swing",
+          "Tantancewa da asusun BEM Trader",
+          "Sharuɗɗa §14: kamfanin ya tanadi ikon ayyana hanyoyin da aka hana bisa ra'ayinsa.",
+          "Dabarar da ba a jera ta daidai ba na iya jawo rufe asusu ba tare da wata iyaka mai aiki da aka kayyade tun farko ba."
         ]
       }
     },
@@ -1377,6 +1431,12 @@
           "Akaunti ya BEM Trader na ukaguzi wa tuzo",
           "Masharti ya mbinu za biashara zilizokatazwa: tabia «inayofanana na kamari» au mbinu ambayo haiwezi «kurudiwa kwa njia inayofaa», bila kipimo kamili.",
           "Faida au ustahiki wa tuzo unaweza kufutwa baada ya kuainishwa kwa mkakati kwa maoni ya kampuni."
+        ],
+        "ha": [
+          "BEM Funding · One, One Only, Classic, Classic Swing",
+          "Asusun BEM Trader da duba lada",
+          "Sharuɗɗan hanyoyin cinikin da aka hana: hali «mai kama da caca» ko hanyar da ba za a iya «maimaitawa yadda ya dace» ba, ba tare da cikakken ma'auni ba.",
+          "Ana iya soke riba ko cancantar lada bayan ayyana dabara bisa ra'ayin kamfanin."
         ]
       }
     },
@@ -1465,6 +1525,12 @@
           "Akaunti ya BEM Trader baada ya tathmini",
           "Masharti ya matumizi ya Classic Normal §6.2: faida za miamala iliyotekelezwa ndani ya dakika nne kabla au baada ya habari muhimu huondolewa, lakini hasara za miamala hiyo huhesabiwa kikamilifu.",
           "Faida ya muamala wa habari inaweza kuondolewa kwenye hesabu huku hasara ya muamala unaolingana ikiendelea kutozwa kwenye akaunti."
+        ],
+        "ha": [
+          "BEM Classic Normal",
+          "Asusun BEM Trader bayan tantancewa",
+          "Sharuɗɗan amfani Classic Normal §6.2: ana cire ribar cinikin da aka aiwatar cikin minti huɗu kafin ko bayan muhimmin labari, amma ana ci gaba da lissafin duk asararsa.",
+          "Ana iya cire ribar cinikin labari daga lissafi, amma asarar irin wannan ciniki tana ci gaba da shiga asusu."
         ]
       }
     },
@@ -1553,6 +1619,12 @@
           "Changamoto na akaunti ya ufadhili ya majaribio",
           "Masharti §5.5.3: nafasi «kubwa sana» na muda wa kushikilia «usio wa kawaida» ikilinganishwa na wastani, bila kikomo cha namba au kiwango cha uvumilivu.",
           "Kampuni inaweza kuainisha tofauti za ukubwa au muda kuwa mkakati uliokatazwa na kufunga akaunti baada ya ukaguzi wa maoni."
+        ],
+        "ha": [
+          "ThinkCapital · Lightning, Dual Step, Nexus, Bolt da Bolt Flex",
+          "Ƙalubale da asusun da aka ba kuɗin kwaikwayo",
+          "Sharuɗɗa §5.5.3: girman matsayi «mai yawa sosai» da lokacin riƙewa «marar ma'ana» idan aka kwatanta da matsakaici, ba tare da iyakar lamba ko rangwame ba.",
+          "Kamfanin na iya ayyana bambancin girma ko lokaci a matsayin dabarar da aka hana ya rufe asusu bayan tantancewa bisa ra'ayi."
         ]
       }
     },
@@ -1641,6 +1713,12 @@
           "Changamoto na akaunti iliyofadhiliwa, ukaguzi wa mkakati",
           "Maswali ya kamari: ikiwa mabadiliko ya mkakati «yanaonekana ya kutumia fursa au ya uchokozi wa makusudi», timu ya hatari inaweza kuruka utaratibu wa kawaida wa onyo na kusitisha akaunti mara moja, «bila rufaa».",
           "Ongezeko la hatari linalochukuliwa kuwa la kutumia fursa linaweza kusababisha kufungwa bila rufaa, hata ikiwa viwango vya 2.5%/4% havijavukwa vyenyewe."
+        ],
+        "ha": [
+          "ThinkCapital · duk shirye-shirye",
+          "Ƙalubale da asusun da aka ba da kuɗi, duba dabara",
+          "FAQ game da caca: idan canjin dabara «ya yi kama da neman dama ko tsanani da gangan», ƙungiyar haɗari na iya tsallake gargadin da aka saba ta rufe asusu nan take, «ba tare da ɗaukaka ƙara ba».",
+          "Ƙara haɗarin da aka ɗauka na neman dama na iya jawo rufewa ba tare da ɗaukaka ƙara ba, ko da ba a ketare iyakokin 2.5%/4% da kansu ba."
         ]
       }
     },
@@ -1729,6 +1807,12 @@
           "Tathmini na akaunti iliyofadhiliwa, roboti na EA",
           "Masharti §6.4: EA zinaweza kuruhusiwa kwa idhini ya maandishi kutoka risk@thinkcapital.com, ikiwemo zana zinazotumika na TradingView; lakini FAQ ya mikakati iliyokatazwa §11 inasema EA «haziwezi kutumika kwa sasa», ni viashirio vya TradingView tu vinavyoruhusiwa.",
           "Mnunuzi hawezi kujua kwa uhakika ikiwa EA iliyoidhinishwa kwa maandishi inaweza kutumika bila ukiukaji au kizuizi cha kiufundi."
+        ],
+        "ha": [
+          "ThinkCapital · Lightning, Dual Step, Nexus, Bolt da Bolt Flex",
+          "Tantancewa da asusun da aka ba da kuɗi, bots da EA",
+          "Sharuɗɗa §6.4: ana iya amincewa da EA bayan izinin rubutu daga risk@thinkcapital.com, har da kayan TradingView; amma FAQ na dabarun da aka hana §11 ya ce EA «ba sa aiki a yanzu», alamomin TradingView kaɗai ake amfani da su.",
+          "Mai saye ba zai iya tabbatar da ko EA da aka ba izinin rubutu zai yi aiki ba tare da karya doka ko matsalar fasaha ba."
         ]
       }
     },
@@ -1817,6 +1901,12 @@
           "Changamoto, hatua ya tathmini",
           "Ukurasa wa sheria, siku za chini za biashara: siku moja kwa 1-Step na 2-Step; FAQ swali 31: siku tatu kwa kila hatua ya 1/2/3-Step.",
           "Mnunuzi hajui kama tathmini iliyofaulu kwa siku moja itakubaliwa au siku mbili zaidi zinahitajika."
+        ],
+        "ha": [
+          "Tiger Funded · 1-Step da 2-Step",
+          "Ƙalubale, matakin tantancewa",
+          "Shafin dokoki, mafi ƙarancin ranakun ciniki: rana ɗaya ga 1-Step da 2-Step; FAQ tambaya 31: ranaku uku ga kowane mataki na 1/2/3-Step.",
+          "Mai saye bai san ko za a karɓi tantancewar da aka ci a rana ɗaya ba ko sai ƙarin ranaku biyu."
         ]
       }
     },
@@ -1905,6 +1995,12 @@
           "Tathmini, kikomo cha hasara ya kila siku",
           "Ukurasa wa sheria, drawdown ya kila siku: kurejeshwa upya usiku wa manane; FAQ maswali 19 na 21: 20:00 EST, na mfano mwingine tofauti wa 17:00 EST.",
           "Nafasi iliyo wazi karibu na mabadiliko ya siku inaweza kuvuka kikomo kwa muda tofauti na ulioonyeshwa katika hati nyingine rasmi."
+        ],
+        "ha": [
+          "Tiger Funded · 1-Step, 2-Step da 3-Step",
+          "Tantancewa, iyakar asarar rana",
+          "Shafin dokoki, drawdown na rana: sake saita da tsakar dare; FAQ tambayoyi 19 da 21: 20:00 EST, da wani misali daban na 17:00 EST.",
+          "Matsayin ciniki da yake buɗe kusa da canjin rana na iya keta iyaka bisa lokacin da ya bambanta da na wani takardar hukuma."
         ]
       }
     },
@@ -1993,6 +2089,12 @@
           "Changamoto na akaunti iliyofadhiliwa",
           "Masharti §7: tabia zilizokatazwa zinajumuisha, bila kuishia hapo, mbinu zisizoakisi hali halisi za soko au zinazoharibu matumizi ya haki, bila kipimo kamili; kusimamishwa au kusitishwa kunawezekana.",
           "Mbinu isiyotajwa kwenye orodha ya kina ya FAQ inaweza baadaye kuainishwa kama matumizi mabaya ya majaribio na kusababisha kufungwa kwa akaunti."
+        ],
+        "ha": [
+          "Tiger Funded · Step da Instant (sharuɗɗan gaba ɗaya)",
+          "Ƙalubale da asusun da aka ba da kuɗi",
+          "Sharuɗɗa §7: halayen da aka hana sun haɗa da hanyoyin da ba su nuna yanayin kasuwa na gaske ba ko suka lalata amfani na adalci, ba a iyakance su ga waɗannan ba; babu cikakken gwaji, ana iya dakatarwa ko soke asusu.",
+          "Hanyar da ba a ambata a cikakken jerin FAQ ba na iya zama amfani mara kyau da kwaikwayo daga baya ta jawo rufewa."
         ]
       }
     },
@@ -2081,6 +2183,12 @@
           "Tathmini",
           "Kadi ya ofa: angalau siku tatu; FAQ ya Fast Pass ya 12/11: hakuna kiwango cha chini; Masharti §3 ya 11/08: kiwango cha jumla cha siku saba.",
           "Mnunuzi hawezi kujua wazi idadi ya siku za tathmini zinazohitajika ili kupata akaunti iliyofadhiliwa."
+        ],
+        "ha": [
+          "TradeDay · Fast Pass",
+          "Tantancewa",
+          "Katin tayin: aƙalla ranaku uku; FAQ na Fast Pass na 12/11: babu mafi ƙaranci; Sharuɗɗa §3 na 11/08: mafi ƙarancin gama-gari ranaku bakwai.",
+          "Mai saye ba zai iya sanin takamaiman yawan ranakun tantancewa da Fast Pass ke buƙata don samun asusun da aka ba da kuɗi ba."
         ]
       }
     },
@@ -2169,6 +2277,12 @@
           "Ununuzi na idadi ya changamoto za wakati mmoja",
           "Masharti, kifungu 1, vifungu viwili kuhusu mipaka ya tathmini: kimoja kinakataza changamoto zinazofanana kwa wakati mmoja, kingine kinaziruhusu ndani ya jumla ya mgao.",
           "Mteja hawezi kujua kwa hakika kama kununua akaunti zinazofanana ni ukiukaji au sababu ya kusitisha mkataba."
+        ],
+        "ha": [
+          "Funded7 · tantancewa masu tsari da girma iri ɗaya",
+          "Saye da yawan ƙalubalen lokaci guda",
+          "Sharuɗɗa, tanadi 1, ƙa'idodi biyu na iyakar tantancewa: ɗaya ya hana ƙalubale iri ɗaya lokaci guda, ɗayan ya yarda da su ƙarƙashin jimillar kuɗin da aka ware.",
+          "Abokin ciniki bai tabbatar ko sayen asusu iri ɗaya karya doka ne ko dalilin soke kwangila ba."
         ]
       }
     },
@@ -2257,6 +2371,12 @@
           "Biashara na ukaguzi wa sheria kabla ya malipo",
           "Masharti §4: kamari au biashara ya uzembe, mkopo wa biashara uliopitiliza au nafasi kubwa kuliko kawaida, na biashara inayodhuru uhusiano na madalali, bila kikomo kamili.",
           "Tabia hiyohiyo inaweza baadaye kuainishwa kuwa imekatazwa, akaunti kufungwa na faida kuondolewa, hata ndani ya viwango vya kawaida vya namba."
+        ],
+        "ha": [
+          "Top One Futures · duk shirye-shiryen futures na kwaikwayo",
+          "Ciniki da duba dokoki kafin cire kuɗi",
+          "Sharuɗɗa §4: caca ko cinikin sakaci, leverage mai yawa ko manyan matsayi idan aka kwatanta da al'ada, da cinikin da ke cutar da alaƙar dillalai; babu cikakkiyar iyaka.",
+          "Irin wannan hali na iya zama haramtacce daga baya, tare da rufe asusu da cire riba, ko da yana cikin iyakokin lamba na yau da kullum."
         ]
       }
     },
@@ -2345,6 +2465,12 @@
           "Uanzishaji, muda na maombi ya malipo",
           "Masharti ya Kifaransa ya 18/05/2026: €149.90, siku saba za faida za angalau 0.50%. Masharti ya Kiingereza ya 10/11/2026: €199, siku tano za angalau 0.30%; toleo la Kifaransa halijaondolewa.",
           "Mnunuzi anayetazama toleo la lugha tofauti anaweza kulipa ada ya ziada tofauti au kukabili masharti tofauti ya ustahiki."
+        ],
+        "ha": [
+          "WeGetFunded · 2 Steps Challenge da matakin WGF Funded",
+          "Kunnawa, tsawon lokaci da buƙatun cire kuɗi",
+          "Sharuɗɗan Faransanci na yanar gizo na 18/05/2026: €149.90, ranaku bakwai na riba aƙalla 0.50%. Sharuɗɗan Turanci na 10/11/2026: €199, ranaku biyar aƙalla 0.30%; ba a kashe sigar Faransanci ba.",
+          "Mai saye da ya duba sigar wani harshe na iya biyan ƙarin kuɗi daban ko fuskantar sharuɗɗan cancanta daban."
         ]
       }
     },
@@ -2433,6 +2559,12 @@
           "Biashara katika changamoto na akaunti za WGF",
           "Masharti §14: mbinu zisizo halisi, zisizo thabiti au zisizowajibika na tabia zisizolingana na madhumuni ya programu, bila kipimo cha namba au orodha kamili.",
           "Mkakati ambao haujakatazwa wazi unaweza kuainishwa kama ukiukaji baada ya tathmini ya ubora; athari za kimkataba kwa tuzo zinatathminiwa kando katika B1."
+        ],
+        "ha": [
+          "WeGetFunded · Instant/1 Step/2 Steps (dokokin gaba ɗaya)",
+          "Ciniki a ƙalubale da asusun WGF",
+          "Sharuɗɗa §14: hanyoyin da ba su dace da gaskiya ba, ba su da daidaito ko alhaki da halayen da suka saɓa wa manufar shiri, ba tare da ma'aunin lamba ko cikakken jerin ba.",
+          "Dabarar da ba a hana kai tsaye ba na iya zama karya doka bayan tantancewa bisa inganci; tasirin kwangila ga lada ana tantance shi dabam a B1."
         ]
       }
     },
@@ -2521,6 +2653,12 @@
           "Ukaguzi wa tabia ya biashara na ustahiki kabla ya malipo",
           "Muhtasari wa mchakato wa ufadhili: timu ya hatari inaweza kuondoa ustahiki kutokana na tabia isiyoweza kudumu, hatari isiyokubalika au sababu yoyote inayofanya kuendelea kutofaa, bila kikomo cha pamoja kilichochapishwa.",
           "Kampuni inaweza kukataa kuendelea au malipo kutokana na tathmini isiyotabirika kikamilifu, hata ikiwa mipaka ya hasara na siku za biashara zimetimizwa."
+        ],
+        "ha": [
+          "Purdia Capital · SFA / Temp SFA / Live Funded",
+          "Duba halin ciniki da cancanta kafin cire kuɗi",
+          "Bayanin hanyar samun kuɗi: ƙungiyar haɗari na iya cire cancanta saboda halin ciniki mara ɗorewa, haɗari marar karɓuwa ko kowane dalilin da ya sa ci gaba bai dace ba; babu iyaka ta gama-gari da aka wallafa.",
+          "Kamfanin na iya hana ci gaba da cire kuɗi bisa tantancewar da ba a iya hango gaba ɗaya ba, ko da an cika drawdown da ranakun ciniki."
         ]
       }
     },
@@ -2609,6 +2747,12 @@
           "Biashara na ukaguzi wa utii kabla ya malipo",
           "Masharti ya matumizi §26: nafasi «kubwa zaidi kwa kiasi kikubwa», mkopo wa biashara uliopitiliza sana, wasiwasi unaofaa kuhusu madhara ya kifedha au mengine, na uamuzi wa kampuni kuhusu kutotii.",
           "Hata akitimiza mipaka ya namba, mfanyabiashara anaweza kupoteza faida za majaribio au akaunti kutokana na uainishaji wa ubora usio na mipaka kamili."
+        ],
+        "ha": [
+          "DayTraders.com · tantancewar EOD/Trail/Static da asusun Pro/S2F",
+          "Ciniki da duba bin doka kafin cire kuɗi",
+          "Sharuɗɗan amfani §26: matsayi «masu girma sosai», leverage mai yawa ƙwarai, «damuwa mai ma'ana game da cutar kuɗi ko wata cuta» da hukuncin kamfanin kan rashin bin doka.",
+          "Ko da an bi iyakokin lamba, ana iya cire ribar kwaikwayo ko rufe asusu bisa tantancewa ta inganci marar cikakkiyar iyaka."
         ]
       }
     },
@@ -2697,6 +2841,12 @@
           "Biashara ya majaribio na ukaguzi wa mkakati kabla ya malipo",
           "Sheria za biashara §3: mtiririko hatari wa biashara na dau za upande mmoja zimekatazwa bila kikomo cha wazi cha umma; tofauti na Masharti §6 kuhusu ukaguzi wa malipo.",
           "Faida za mkakati unaoheshimu drawdown zinaweza kuondolewa baada ya kuainishwa kwa maoni kama mtiririko hatari au dau za upande mmoja."
+        ],
+        "ha": [
+          "Equity Edge · Legacy, Swift, Flagship da Instant",
+          "Cinikin kwaikwayo da duba dabara kafin cire kuɗi",
+          "Dokokin ciniki §3: an hana kwararar ciniki mai cutarwa da caca ta ɓangare ɗaya ba tare da takamaiman iyakar jama'a ba; daban da duba cire kuɗi a Sharuɗɗa §6.",
+          "Ribar dabarar da ta bi drawdown na iya ɓacewa bayan an ayyana ta bisa ra'ayi a matsayin kwararar ciniki mai cutarwa ko caca ta ɓangare ɗaya."
         ]
       }
     },
@@ -2785,6 +2935,12 @@
           "Biashara na ukaguzi wa tabia iliyokatazwa kabla ya maamuzi ya ufadhili na malipo",
           "Masharti §§7.1(h)-(i) na 7.2–7.3: hatari kubwa isiyoweza kudumu, mbinu zisizo za kitaalamu au madhara kwa sifa, ukubwa au marudio yasiyo ya kawaida; uainishaji kwa uamuzi wa kampuni pekee.",
           "Mkakati unaoheshimu drawdown za namba unaweza bado kutajwa kuwa usio wa kitaalamu; miamala na faida za majaribio kuondolewa na akaunti kusitishwa."
+        ],
+        "ha": [
+          "Alpine Funded · Base Camp Instant, 2-Step/Peak da dokokin kwaikwayo na gaba ɗaya",
+          "Ciniki da duba halin da aka hana kafin hukuncin kuɗi da cire kuɗi",
+          "Sharuɗɗa §§7.1(h)-(i) da 7.2–7.3: haɗari mai yawa marar ɗorewa, hanyoyin marasa ƙwarewa ko cutar suna, girma ko yawan cinikin da ba na al'ada ba; kamfanin kaɗai ke tantancewa.",
+          "Dabarar da ta bi drawdown na lamba za a iya ayyana ta marar ƙwarewa, a cire ciniki da ribar kwaikwayo, a soke asusu."
         ]
       }
     },
@@ -2873,6 +3029,12 @@
           "Biashara na ukaguzi wa mkakati kabla ya ufadhili au malipo",
           "Masharti §4.4: mbinu zinazoweza kuhatarisha uhusiano na dalali, matumizi yasiyofaa ya mifumo ya watu wengine na kanuni za dalali, bila kikomo kamili cha msingi.",
           "Mwendeshaji anaweza kuainisha mkakati kuwa umekatazwa baada ya biashara na kufuta ufikiaji licha ya kutimiza malengo na drawdown."
+        ],
+        "ha": [
+          "FundedSquad · tantancewar 1-Step, 2-Step da tsarin Instant (sharuɗɗan gaba ɗaya)",
+          "Ciniki da duba dabara kafin samun kuɗi ko cire kuɗi",
+          "Sharuɗɗa §4.4: hanyoyin da za su iya jefa alaƙar dillali cikin haɗari, amfani mara dacewa da tsarin ɓangare na uku da ƙa'idodin dillali, ba tare da cikakkiyar iyaka ta zahiri ba.",
+          "Mai gudanarwa na iya ayyana dabara haramtacciya bayan ciniki ya soke damar shiga duk da cika manufofi da drawdown."
         ]
       }
     },
@@ -2961,6 +3123,12 @@
           "Kufunga muamala uliofunguliwa kabla ya kipindi cha habari wakati wa tangazo",
           "Sheria za akaunti ya changamoto, hali ya Evaluation Funded: faida ya muamala uliofunguliwa kabla ya kipindi na kufungwa ndani yake huondolewa wakati wa ukaguzi; hasara hubaki kwa mfanyabiashara.",
           "Utekelezaji wa aina hiyo hauhifadhi faida lakini huhesabu hasara iliyotokea, hata bila ukiukaji wa akaunti."
+        ],
+        "ha": [
+          "FundedSquad · Evaluation Funded (cinikin labarai, ba matakin tantancewa ba)",
+          "Rufe cinikin da aka buɗe kafin lokacin labari a lokacin sanarwa",
+          "Dokokin cinikin asusun ƙalubale, yanayin Evaluation Funded: ana cire ribar cinikin da aka buɗe kafin taga kuma aka rufe a cikinsa yayin duba; asarar tana kan mai ciniki.",
+          "Irin wannan aiwatarwa ba ta adana ribar, amma tana lissafa asarar da ta faru, ko da ba a karya dokar asusu ba."
         ]
       }
     },
@@ -3049,6 +3217,12 @@
           "Majaribio na ukaguzi kabla ya kuingia akaunti ya mfanyabiashara au malipo",
           "Masharti V3.01 §§9.3 na 10.1: ufafanuzi kwa uamuzi wa kampuni wa kamari, miamala mikubwa zaidi na hatari isiyo na uwiano, bila kikomo thabiti.",
           "Mkakati unaoheshimu drawdown unaweza kuainishwa upya kama kamari, miamala kufutwa au ufikiaji kusitishwa."
+        ],
+        "ha": [
+          "Orion Funded · Nova, Zero, Standard, Swing da Select",
+          "Kwaikwayo da duba kafin shiga asusun mai ciniki ko biyan kuɗi",
+          "Sharuɗɗa V3.01 §§9.3 da 10.1: caca, ciniki masu girma sosai da haɗari marar daidaito ana bayyana su bisa ra'ayin kamfanin, ba tare da ƙayyadaddiyar iyaka ba.",
+          "Dabarar da ta bi drawdown na iya zama caca, a soke cinikinta ko damar shiga."
         ]
       }
     },
@@ -3137,6 +3311,12 @@
           "Biashara ya tathmini na ufadhili, ukaguzi wa utii",
           "Masharti §7.26: «miamala inayofanana na dau kubwa bila mpango wazi au mkakati uliofafanuliwa», bila kikomo cha jumla cha namba kilichochapishwa.",
           "Mkakati unaoheshimu kiwango cha juu cha hasara unaweza kuainishwa kama kamari bila kikomo kinachotabirika, akaunti iliyofadhiliwa kufutwa."
+        ],
+        "ha": [
+          "Wall Street Funded · ƙalubalen Power/Prime/Flash/Instant",
+          "Cinikin tantancewa da na kuɗi, duba bin doka",
+          "Sharuɗɗa §7.26: «cinikin da ya yi kama da babban caca ba tare da tsari bayyananne ko dabara da aka ƙayyade ba», babu iyakar gama-gari ta haƙiƙa da aka wallafa.",
+          "Dabarar da ta bi iyakar asara na iya zama caca ba tare da iyakar da za a iya hango ba, a soke asusun da aka ba da kuɗi."
         ]
       }
     },
@@ -3225,6 +3405,12 @@
           "Biashara, uainishaji wa tabia iliyokatazwa wakati wa malipo",
           "Masharti ya Septemba 2026 §5.2: tabia iliyokatazwa inajumuisha mkakati wa matumizi mabaya au usio halisi kwa tathmini ya mwendeshaji, bila kikomo cha jumla; matokeo katika §6.9.",
           "Mbinu isiyokatazwa wazi kwa namba inaweza baadaye kutajwa kuwa matumizi mabaya na kusababisha hesabu mpya ya malipo."
+        ],
+        "ha": [
+          "Moneta Funded · 1-Step/2-Step/Instant/Sprint",
+          "Ciniki, ayyana halin da aka hana lokacin cire kuɗi",
+          "Sharuɗɗan Satumba 2026 §5.2: halin da aka hana ya haɗa da amfani mara kyau ko dabarar da mai gudanarwa ya ga ba ta dace da gaskiya ba, babu iyakar gama-gari; sakamako a §6.9.",
+          "Hanyar da ba a haramta da lamba kai tsaye ba na iya zama amfani mara kyau daga baya a sake lissafa kuɗin da za a cire."
         ]
       }
     },
@@ -3313,6 +3499,12 @@
           "Ukaguzi wa mkakati wakati wa idhini ya hatua na ufadhili",
           "Masharti ya matumizi, katazo la mbinu za kamari: hatari isiyo na uwiano, biashara inayofanana na kamari, kuhatarisha fedha zote na mkopo wa biashara uliopitiliza; hakuna kikomo kimoja cha hatari kwa kila programu katika kifungu.",
           "Kampuni inaweza kuondoa mkakati kwa kamari iliyopitiliza na kufunga akaunti licha ya kutimiza lengo la namba."
+        ],
+        "ha": [
+          "TRADEXPROP · tantancewar Forex/Crypto da Instant Funded X",
+          "Duba dabara lokacin amincewa da mataki da kuɗi",
+          "Sharuɗɗan amfani, hana hanyoyin caca: haɗari marar daidaito, cinikin da ya yi kama da caca, jefa duk kuɗi cikin haɗari da leverage mai yawa; babu iyakar haɗari guda ga kowane shiri a cikin ƙa'idar.",
+          "Kamfanin na iya hana dabara saboda caca mai yawa ya rufe asusu duk da cika manufar lamba."
         ]
       }
     },
@@ -3401,6 +3593,12 @@
           "Biashara na ukaguzi wa mkakati kabla ya malipo",
           "Masharti §5.4.3: uainishaji wa hatari «kubwa zaidi kwa kiasi kikubwa» na miamala isiyolingana na tabia za kawaida za soko, bila kipimo cha haki sawa kwa kila bidhaa.",
           "Kampuni inaweza kuainisha upya mkakati unaoheshimu kikomo cha juu cha hasara na kuondoa faida au ufikiaji bila kipimo cha namba."
+        ],
+        "ha": [
+          "Monevis · tantancewar CFD da asusun da aka ba kuɗin kwaikwayo",
+          "Ciniki da duba dabara kafin cire kuɗi",
+          "Sharuɗɗa §5.4.3: ayyana haɗari «mai girma sosai» da cinikin da ya saɓa wa halin kasuwa na al'ada, ba tare da ma'auni na haƙiƙa iri ɗaya ga kowane samfur ba.",
+          "Kamfanin na iya sake ayyana dabarar da ta bi iyakar asara ya cire riba ko damar shiga ba tare da ma'aunin lamba ba."
         ]
       }
     },
@@ -3489,6 +3687,12 @@
           "Biashara na ukaguzi wa ukiukaji kabla ya malipo",
           "Masharti §9.2: shughuli zisizo za kibiashara na ukubwa wa nafasi au hatari uliopitiliza zimekatazwa bila mipaka kamili; tathmini ya utii ni ya upande mmoja.",
           "Mkakati wenye hatari lakini unaoheshimu mipaka ya namba unaweza kuainishwa upya baada ya biashara na faida zake kuondolewa."
+        ],
+        "ha": [
+          "FundedHive · ƙalubale da asusun kwaikwayo",
+          "Ciniki da duba karya doka kafin cire kuɗi",
+          "Sharuɗɗa §9.2: an hana aikin da ba na kasuwanci ba da matsayi ko haɗari mai yawa, ba tare da cikakkun iyakoki ba; kamfanin kaɗai ke tantance bin doka.",
+          "Dabarar mai haɗari amma mai bin iyakokin lamba na iya zama haramtacciya bayan ciniki a cire ribarta."
         ]
       }
     },
@@ -3577,6 +3781,12 @@
           "Biashara na ukaguzi wa miamala wakati wa kuomba tuzo",
           "Masharti ya biashara: yanakataza kamari, utekelezaji usioweza kudumu na kukosekana kwa usimamizi endelevu wa hatari, bila kipimo kamili cha pamoja kwa mipango yote.",
           "Mbinu inayoheshimu mipaka ya namba inaweza kuondolewa kwa tathmini ya ubora."
+        ],
+        "ha": [
+          "SabioTrade · tantancewar CFD da shirye-shiryen kuɗi",
+          "Ciniki da duba ciniki lokacin neman lada",
+          "Sharuɗɗan ciniki: an hana caca, aiwatarwa marar ɗorewa da rashin kula da haɗari mai ɗorewa, babu cikakken ma'auni na gama-gari ga duk tsare-tsare.",
+          "Hanyar da ta bi iyakokin lamba na iya zama wadda ba a yarda da ita ba bisa tantancewa ta inganci."
         ]
       }
     },
@@ -3665,6 +3875,12 @@
           "Biashara, ukaguzi wa programu na uamuzi wa akaunti",
           "Masharti ya 03/11/2026 §§7–8: matumizi mabaya na kukwepa «madhumuni» ya programu; uamuzi wa mwendeshaji haujawekewa mipaka ya kutosha na vigezo vya umma.",
           "Mkakati unaotimiza malengo ya namba unaweza kuainishwa kama matumizi mabaya na kusababisha kutengwa au kufutwa kwa miamala."
+        ],
+        "ha": [
+          "Clarity Traders · ƙalubalen kwaikwayo da asusun da aka ba da kuɗi",
+          "Ciniki, duba shiri da hukuncin asusu",
+          "Sharuɗɗan 03/11/2026 §§7–8: amfani mara kyau da kauce wa «manufar» shiri; ikon mai gudanarwa bai samu isasshiyar iyaka daga ƙa'idodin jama'a ba.",
+          "Dabarar da ta cika manufofin lamba na iya zama amfani mara kyau a hana ta ko a cire ciniki."
         ]
       }
     },
@@ -3753,6 +3969,12 @@
           "Biashara na ukaguzi wa akaunti kabla ya ufadhili au tuzo",
           "Masharti §3: dau za upande mmoja, wasiwasi wenye msingi wa madhara kwa dalali na mbinu zinazovuruga, kwa uamuzi wa upande mmoja.",
           "Biashara inayoheshimu drawdown na siku inaweza kutajwa kuwa haitii bila kikomo kilichowekwa mapema, akaunti kufungwa na ufikiaji kupotea."
+        ],
+        "ha": [
+          "TEFX · 1-Step, 2-Step, Instant",
+          "Ciniki da duba asusu kafin kuɗi ko lada",
+          "Sharuɗɗa §3: caca ta ɓangare ɗaya, damuwar da ke da dalili game da cutar dillali da hanyoyin kawo cikas bisa hukuncin ɓangare ɗaya.",
+          "Cinikin da ya bi drawdown da ranaku na iya zama marar bin doka ba tare da iyaka tun farko ba, a rufe asusu a hana shiga."
         ]
       }
     },
@@ -3841,6 +4063,12 @@
           "Biashara, ukaguzi wa mkakati na kuhamia ufadhili",
           "Masharti ya dashibodi ya Analytix: mkakati sawa kati ya tathmini na ufadhili kwa uamuzi wa kampuni pekee; kamari iliyopitiliza bila asilimia ya jumla.",
           "Kubadili mkakati au kuhatarisha sehemu inayochukuliwa kuwa kubwa kunaweza baadaye kuhesabiwa kama ukiukaji bila kikomo cha pamoja kilicho wazi."
+        ],
+        "ha": [
+          "Lvlup Futures · tantancewar Prop Account LLC / kwangilar Trader ta Prop Account LC",
+          "Ciniki, duba dabara da sauyawa zuwa kuɗi",
+          "Sharuɗɗan dashboard na Analytix: dabara ɗaya tsakanin tantancewa da matakin kuɗi bisa hukuncin kamfani kaɗai; babu kaso na gama-gari ga caca mai yawa.",
+          "Canza dabara ko jefa wani kaso da aka ga babba cikin haɗari na iya zama karya doka daga baya ba tare da bayyananniyar iyaka ta gama-gari ba."
         ]
       }
     },
@@ -3929,6 +4157,12 @@
           "Biashara iliyofadhiliwa na ukaguzi kabla ya malipo",
           "Sheria za umma §9: dau za upande mmoja, kuongeza nafasi kwa uchokozi ili kubadili wastani wa bei na mabadiliko makubwa ya mtindo yamekatazwa bila kikomo cha kina kwa programu zote kwenye ukurasa huu.",
           "Muamala unaoheshimu drawdown unaweza kuainishwa kama kamari, faida kuondolewa au ukiukaji kutambuliwa."
+        ],
+        "ha": [
+          "Atmos · Nova, 2-Step, Instant",
+          "Cinikin da aka ba da kuɗi da duba kafin cire kuɗi",
+          "Dokokin jama'a §9: an hana caca ta ɓangare ɗaya, ƙara matsayi da ƙarfi don canza matsakaicin farashi da manyan canje-canjen salo, ba tare da cikakkiyar iyaka ga duk shirye-shirye a shafin ba.",
+          "Cinikin da ya bi drawdown na iya zama caca, a cire riba ko a ayyana karya doka."
         ]
       }
     },
@@ -4017,6 +4251,12 @@
           "Tathmini na ukaguzi wa mwendelezo wa mkakati katika ufadhili",
           "§6.4: kubadili kutoka mkakati wa kitaalamu kwenda mkakati wa kamari, bila kikomo cha namba cha hatari cha pamoja kwa programu.",
           "Mfanyabiashara anaweza kuondolewa kwa tathmini ya utaalamu licha ya kutimiza malengo na drawdown."
+        ],
+        "ha": [
+          "FundedElite · tantancewa / asusun Elite na kwaikwayo",
+          "Tantancewa da duba ci gaban dabara a matakin kuɗi",
+          "§6.4: sauya dabara ta ƙwararru zuwa ta caca, babu iyakar haɗari ta lamba da ta shafi duk shirye-shirye.",
+          "Ana iya cire mai ciniki saboda tantance ƙwarewa duk da cika manufofi da drawdown."
         ]
       }
     },
@@ -4105,6 +4345,12 @@
           "Biashara na ukaguzi wa mkakati kabla ya tuzo",
           "Masharti §§5.5 na 5.6: aina nyingine za biashara zilizokatazwa au vigezo vinavyofafanuliwa kwa uamuzi wa upande mmoja.",
           "Mkakati unaweza baadaye kukatazwa na miamala kuondolewa kwenye PnL licha ya kuheshimu mipaka ya namba."
+        ],
+        "ha": [
+          "Upcomers · CFD, futures da sauran shirye-shiryen kwaikwayo",
+          "Ciniki da duba dabara kafin lada",
+          "Sharuɗɗa §§5.5 da 5.6: sauran nau'in cinikin da aka hana ko ƙa'idodi ana ayyana su bisa hukuncin ɓangare ɗaya.",
+          "Ana iya hana dabara daga baya a cire ciniki daga lissafin riba da asara duk da bin iyakokin lamba."
         ]
       }
     },
@@ -4193,6 +4439,12 @@
           "Biashara na ukaguzi wa mkakati wakati wa kuhamia ufadhili",
           "Masharti §5.C: hatari ya kuhatarisha uhusiano na dalali na uainishaji wa mabadiliko ya mkakati kwa uamuzi wa kampuni bila kipimo cha umma cha pamoja.",
           "Mkakati unaoheshimu drawdown unaweza kusababisha kutengwa kwa vigezo vya ubora visivyo na mipaka."
+        ],
+        "ha": [
+          "Funded Trader Markets · asusun Challenge/Funded na kwaikwayo",
+          "Ciniki da duba dabara lokacin sauyawa zuwa kuɗi",
+          "Sharuɗɗa §5.C: haɗarin jefa alaƙar dillali cikin matsala da ayyana canjin dabara bisa ra'ayi ba tare da ma'aunin jama'a na gama-gari ba.",
+          "Dabarar da ta bi drawdown na iya jawo cirewa bisa ƙa'idodin inganci marasa iyaka."
         ]
       }
     },
@@ -4281,6 +4533,12 @@
           "Ukaguzi wa mkakati wa majaribio na ufadhili kabla ya idhini ya malipo au kufungwa",
           "Mkataba wa Trader §§4 na 16.12: kampuni inatathmini kamari, dau za yote au hakuna, na hatari ya madhara kwa uhusiano na dalali kwa uamuzi wake pekee, bila mfumo wa pamoja wa viwango halisi.",
           "Faida zinaweza kunyang'anywa wakati wa kufungwa ikiwa mtindo umeainishwa upya kwa maoni, hata kama mipaka ya namba iliheshimiwa; kupoteza tuzo kunatathminiwa mara moja tu katika B1."
+        ],
+        "ha": [
+          "Funded Futures Network / FFN Cap LLC — asusun Sim-Funded Pro, STEADY da Live bisa kwangilar da ta shafa",
+          "Duba dabarar kwaikwayo da ta kuɗi kafin amincewa da cire kuɗi ko rufewa",
+          "Kwangilar Trader §§4 da 16.12: kamfanin kaɗai ke tantance caca, caca ta duka ko babu da haɗarin cutar alaƙar dillali; babu tsarin iyakoki na haƙiƙa da ya shafi duk shirye-shirye.",
+          "Ana iya ƙwace riba lokacin rufe asusu idan an sake ayyana salo bisa ra'ayi ko da an bi iyakokin lamba; ana tantance rasa lada sau ɗaya kawai a B1."
         ]
       }
     },
@@ -4369,6 +4627,12 @@
           "Ukaguzi wa mkakati katika changamoto na ufadhili kabla ya ombi la tuzo",
           "Masharti §6: biashara yoyote inayopingana na namna biashara inavyopaswa kufanywa katika masoko ya fedha au inayodhuru DFT GROUP, bila kipimo kilichofafanuliwa cha hatari.",
           "Mkakati unaotimiza malengo ya namba unaweza kuainishwa upya kama tabia yenye madhara na kusababisha kufungwa bila kigezo cha jumla kinachotabirika."
+        ],
+        "ha": [
+          "DirectFundedTrader · tantancewar matakai biyu da Fast Funding, kwangilolin kwaikwayo",
+          "Duba dabara a ƙalubale da matakin kuɗi kafin neman lada",
+          "Sharuɗɗa §6: duk cinikin da ya saɓa wa yadda ya kamata a yi ciniki a kasuwannin kuɗi ko ya cutar da DFT GROUP, ba tare da ma'aunin haɗari da aka bayyana ba.",
+          "Dabarar da ta cika manufofin lamba na iya zama hali mai cutarwa a rufe asusu ba tare da ma'aunin gama-gari da za a iya hango ba."
         ]
       }
     },
@@ -4457,6 +4721,12 @@
           "Biashara katika changamoto au ukaguzi wa ufadhili kabla ya malipo",
           "Masharti ya jumla §5.4: vizuizi vya biashara vya ubora na uwezekano wa kuondoa miamala bila kipimo kamili kwa kila programu.",
           "Mkakati unaotimiza malengo unaweza kuainishwa upya na matokeo yake kufutwa."
+        ],
+        "ha": [
+          "Fidelcrest · tantancewar Pro/Micro",
+          "Ciniki a ƙalubale ko duba matakin kuɗi kafin cire kuɗi",
+          "Sharuɗɗan gaba ɗaya §5.4: ƙuntata ciniki bisa inganci da yiwuwar cire ciniki, babu cikakken ma'auni ga kowane shiri.",
+          "Ana iya sake ayyana dabarar da ta cika manufofi a soke sakamakonta."
         ]
       }
     },
@@ -4545,6 +4815,12 @@
           "Biashara katika changamoto au ukaguzi wa ufadhili kabla ya malipo",
           "Sheria za Speedy: hakuna tarehe ya mwisho iliyowekwa; Masharti §10.6: changamoto inaisha baada ya siku 30 za kalenda.",
           "Mgongano wa muda wa kuisha kati ya ukurasa wa ofa na mkataba unaweza kusababisha kushindwa kwa tathmini."
+        ],
+        "ha": [
+          "Ultimate Traders · Speedy 1-phase",
+          "Ciniki a ƙalubale ko duba matakin kuɗi kafin cire kuɗi",
+          "Dokokin Speedy: babu tabbataccen lokacin ƙarewa; Sharuɗɗa §10.6: ƙalubale na ƙarewa bayan ranaku 30 na kalanda.",
+          "Saɓani tsakanin shafin tayin da kwangila game da lokacin ƙarewa na iya jawo faɗuwar tantancewa."
         ]
       }
     },
@@ -4633,6 +4909,12 @@
           "Biashara katika changamoto au ukaguzi wa ufadhili kabla ya malipo",
           "Masharti ya Bullwaves: tathmini ya hatari iliyopitiliza na mabadiliko ya kiasi cha biashara au mkakati haijaainishwa kikamilifu kwa namba kwa kila bidhaa.",
           "Mtindo ulio ndani ya mipaka ya drawdown unaweza kuainishwa upya wakati wa ukaguzi wa malipo."
+        ],
+        "ha": [
+          "Bullwaves Prime · 1-Step/2-Step/Instant",
+          "Ciniki a ƙalubale ko duba matakin kuɗi kafin cire kuɗi",
+          "Sharuɗɗan Bullwaves: ba a ƙayyade cikakken ma'aunin lamba na haɗari mai yawa da canjin yawan ciniki ko dabara ga kowane samfur ba.",
+          "Ana iya sake ayyana salon da yake cikin iyakokin drawdown lokacin duba cire kuɗi."
         ]
       }
     },
@@ -4721,6 +5003,12 @@
           "Tathmini/ufadhili na uthibitishaji wa mkakati kabla ya tuzo",
           "Masharti §15(k): tabia inayolenga kamari, nia mbaya na mikakati inayochukuliwa kuwa isiyo ya kitaalamu na kampuni, bila kikomo kamili cha namba.",
           "Mkakati ulio ndani ya mipaka ya namba unaweza kuondolewa kwa sababu ya mtindo; haki ya tuzo inatathminiwa kando katika B1."
+        ],
+        "ha": [
+          "DNA Funded · tantancewar kwaikwayo da asusun da aka ba da kuɗi",
+          "Tantancewa/kuɗi da tabbatar da dabara kafin lada",
+          "Sharuɗɗa §15(k): hali mai karkata ga caca, rashin kyakkyawar niyya da dabarun da kamfani ya ga marasa ƙwarewa, babu cikakkiyar iyakar lamba.",
+          "Ana iya cire dabarar da ke cikin iyakokin lamba saboda ayyana salo, daban da haƙƙin lada da aka tantance a B1."
         ]
       }
     },
@@ -4809,6 +5097,12 @@
           "Tathmini/ufadhili na uthibitishaji wa mkakati kabla ya tuzo",
           "Masharti §4.4 yanakataza biashara yoyote inayochukuliwa kudhuru uhusiano na madalali bila ufafanuzi wa namba; adhabu za kusitisha zimetajwa.",
           "Kampuni inaweza kuadhibu mbinu inayoheshimu mipaka ya hasara wakati wa ukaguzi bila uainishaji unaotabirika."
+        ],
+        "ha": [
+          "Foxx · 1-Step / Instant na kwaikwayo",
+          "Tantancewa/kuɗi da tabbatar da dabara kafin lada",
+          "Sharuɗɗa §4.4 sun hana duk cinikin da aka ga yana cutar da alaƙar dillalai ba tare da ma'aunin lamba ba; an tanadi soke asusu.",
+          "Kamfanin na iya hukunta hanyar da ta bi iyakar asara a lokacin duba ba tare da ayyana hali da za a iya hango ba."
         ]
       }
     },
@@ -4897,6 +5191,12 @@
           "Tathmini/ufadhili na uthibitishaji wa mkakati kabla ya tuzo",
           "Mwongozo rasmi wa msaada (17/08/2026): kurejesha hasara kwa mwelekeo wa kinyume kunawezekana baada ya kipindi cha dakika kumi, dau za upande mmoja na mikakati inayochukuliwa kuwa isiyo na mantiki; adhabu za malipo kwa uamuzi wa timu ya hatari.",
           "Timu ya hatari inaweza kumkataa mfanyabiashara wakati wa malipo kwa uainishaji wa mkakati usio na mipaka kamili."
+        ],
+        "ha": [
+          "SFX Funded · Ascend / Rapid / Instant",
+          "Tantancewa/kuɗi da tabbatar da dabara kafin lada",
+          "Jagorar taimako ta hukuma (17/08/2026): ana iya dawo da asara ta alkibla dabam bayan minti goma, caca ta ɓangare ɗaya da dabarun da aka ga marasa ma'ana; hukuncin cire kuɗi na ƙungiyar haɗari ne.",
+          "Ƙungiyar haɗari na iya ƙin mai ciniki lokacin cire kuɗi bisa ayyana dabara marar cikakkiyar iyaka."
         ]
       }
     },
@@ -4985,6 +5285,12 @@
           "Tathmini/ufadhili na uthibitishaji wa mkakati kabla ya tuzo",
           "Masharti ya jumla §15 yanakataza pia tabia inayoonekana kufanana na kamari au mkakati wa nia mbaya, kwa tathmini isiyo na kipimo cha namba.",
           "Faida za changamoto zinaweza kubatilishwa kwa sababu za ubora licha ya mipaka ya wazi ya hasara."
+        ],
+        "ha": [
+          "SuperFunded · tantancewar kwaikwayo da ladan matakin kuɗi",
+          "Tantancewa/kuɗi da tabbatar da dabara kafin lada",
+          "Sharuɗɗan gaba ɗaya §15 sun kuma hana halin da ya yi kama da caca ko dabara marar kyakkyawar niyya, bisa tantancewar da ba a ƙayyade da lamba ba.",
+          "Ana iya soke ribar ƙalubale saboda dalilin inganci duk da bayyanannun iyakokin asara."
         ]
       }
     },
@@ -5073,6 +5379,12 @@
           "Tathmini/ufadhili na uthibitishaji wa mkakati kabla ya tuzo",
           "Masharti §7.3: katazo lisilo na kipimo cha namba la mabadiliko «makubwa» ya tabia au mkakati kwa uamuzi wa First Frontier pekee.",
           "Mkakati unaolingana na drawdown na siku za chini unaweza kuchukuliwa kuwa tofauti na tuzo kukataliwa."
+        ],
+        "ha": [
+          "Funding Frontier · Classic da PRO masu kuɗi",
+          "Tantancewa/kuɗi da tabbatar da dabara kafin lada",
+          "Sharuɗɗa §7.3: an hana canjin hali ko dabara «mai muhimmanci» bisa hukuncin First Frontier kaɗai ba tare da ma'aunin lamba ba.",
+          "Dabarar da ta bi drawdown da mafi ƙarancin ranaku na iya zama dabam a ƙi ladanta."
         ]
       }
     },
@@ -5161,6 +5473,12 @@
           "Ukaguzi wa mtindo katika changamoto au kabla ya tuzo",
           "Masharti yanaainisha biashara hatari na tabia inayofanana na kamari kulingana na timu ya hatari bila kikomo kamili cha pamoja kwa vifurushi; masharti mapya yanaweza kuwekwa kabla ya malipo.",
           "Miamala ndani ya mipaka ya namba inaweza kuainishwa upya, tuzo kukataliwa au akaunti kufungwa."
+        ],
+        "ha": [
+          "WeMasterTrade — shirin tantancewa da kuɗin kwaikwayo",
+          "Duba salo a ƙalubale ko kafin lada",
+          "Sharuɗɗa: ƙungiyar haɗari ke ayyana ciniki mai cutarwa da halin caca ba tare da cikakkiyar iyaka ta gama-gari ga duk fakitoci ba; ana iya ƙara sharuɗɗa kafin biya.",
+          "Ana iya sake ayyana cinikin da ke cikin iyakokin lamba, a ƙi lada ko a rufe asusu."
         ]
       }
     },
@@ -5249,6 +5567,12 @@
           "Ukaguzi wa mtindo katika changamoto au kabla ya tuzo",
           "FAQ zinahusu mbinu za matumizi mabaya, udanganyifu wa soko au zisizo za maadili pamoja na mipaka ya namba ya habari, bila uainishaji kamili wenye mipaka ya hatari.",
           "Miamala ndani ya mipaka ya namba inaweza kuainishwa upya, tuzo kukataliwa au akaunti kufungwa."
+        ],
+        "ha": [
+          "FOREXIVE — shirin tantancewa da kuɗin kwaikwayo",
+          "Duba salo a ƙalubale ko kafin lada",
+          "FAQ ya haɗa da amfani mara kyau, magudin kasuwa ko hanyoyin da ba su dace da ɗa'a ba baya ga iyakokin labarai na lamba, ba tare da cikakken tsarin ayyana haɗari ba.",
+          "Ana iya sake ayyana cinikin da ke cikin iyakokin lamba, a ƙi lada ko a rufe asusu."
         ]
       }
     },
@@ -5337,6 +5661,12 @@
           "Ukaguzi wa mtindo katika changamoto au kabla ya tuzo",
           "Masharti yanaruhusu biashara kuonekana isiyo ya haki, ya matumizi mabaya au yenye madhara bila kufafanua mipaka yote, na uwezekano wa kupoteza tuzo baada ya Outcome A.",
           "Miamala ndani ya mipaka ya namba inaweza kuainishwa upya, tuzo kukataliwa au akaunti kufungwa."
+        ],
+        "ha": [
+          "Hash Hedge — shirin tantancewa da kuɗin kwaikwayo",
+          "Duba salo a ƙalubale ko kafin lada",
+          "Sharuɗɗa sun ba da damar ayyana ciniki marar adalci, amfani mara kyau ko mai cutarwa ba tare da bayyana duk iyakoki ba; ana iya rasa lada bayan Outcome A.",
+          "Ana iya sake ayyana cinikin da ke cikin iyakokin lamba, a ƙi lada ko a rufe asusu."
         ]
       }
     },
@@ -5425,6 +5755,12 @@
           "Ukaguzi wa mtindo katika changamoto au kabla ya tuzo",
           "Uainishaji wa tabia ya matumizi mabaya au hatari inayofanana na kamari unabaki kwa kiasi fulani wa maoni chini ya sheria za jumla, bila kikomo cha jumla kwa kila bidhaa.",
           "Miamala ndani ya mipaka ya namba inaweza kuainishwa upya, tuzo kukataliwa au akaunti kufungwa."
+        ],
+        "ha": [
+          "Sure Leverage Funding — shirin tantancewa da kuɗin kwaikwayo",
+          "Duba salo a ƙalubale ko kafin lada",
+          "Ayyana amfani mara kyau ko haɗarin da ya yi kama da caca yana nan bisa ra'ayi a wasu sassan dokokin gaba ɗaya, babu iyakar gama-gari ga kowane samfur.",
+          "Ana iya sake ayyana cinikin da ke cikin iyakokin lamba, a ƙi lada ko a rufe asusu."
         ]
       }
     },
@@ -5513,6 +5849,12 @@
           "Ukaguzi wa mtindo katika changamoto au kabla ya tuzo",
           "Sheria ya kamari inaruhusu timu ya hatari kufafanua mkopo wa biashara uliopitiliza kwa uzembe na dhamana huru isiyotosha bila kikomo kimoja kamili: utata mmoja wa mkakati, −3.",
           "Miamala ndani ya mipaka ya namba inaweza kuainishwa upya, tuzo kukataliwa au akaunti kufungwa."
+        ],
+        "ha": [
+          "Titan Capital Markets — shirin tantancewa da kuɗin kwaikwayo",
+          "Duba salo a ƙalubale ko kafin lada",
+          "Dokar caca ta ba ƙungiyar haɗari damar ayyana leverage mai yawa na sakaci da ƙarancin kuɗin jingina da ake iya amfani da su ba tare da cikakkiyar iyaka guda ba: ruɗanin dabara ɗaya, −3.",
+          "Ana iya sake ayyana cinikin da ke cikin iyakokin lamba, a ƙi lada ko a rufe asusu."
         ]
       }
     },
@@ -5601,6 +5943,12 @@
           "Ukaguzi wa biashara kabla ya idhini ya ufadhili au malipo",
           "Muhtasari §24.5(6) unakataza mbinu zinazochukuliwa na kampuni kuwa kinyume na biashara ya nia njema; §25 inakataza ukubwa «unaoonekana» mkubwa au mdogo zaidi bila kikomo, adhabu hadi kutengwa kwa matokeo.",
           "Uainishaji wa mkakati kwa maoni unaweza kusababisha kupoteza akaunti au faida bila kuvuka mipaka ya namba."
+        ],
+        "ha": [
+          "Prop Number One · ƙalubale da kwaikwayon kuɗi",
+          "Duba ciniki kafin amincewa da kuɗi ko cire kuɗi",
+          "Bayani §24.5(6) ya hana hanyoyin da kamfani ya ga sun saɓa wa cinikin gaskiya; §25 ya hana matsayi «masu bambanci bayyananne» girma ko ƙanƙanta ba tare da iyaka ba, har zuwa cire sakamakon.",
+          "Ayyana dabara bisa ra'ayi na iya jawo rasa asusu ko riba ba tare da wuce iyakokin lamba ba."
         ]
       }
     },
@@ -5689,6 +6037,12 @@
           "Ukaguzi wa biashara kabla ya idhini ya ufadhili au malipo",
           "Miongozo ya ufadhili inakataza mikakati isiyo thabiti au inayofanana na kamari na usimamizi usiotosha wa hatari, bila kipimo cha pamoja; adhabu hadi kufutwa kwa faida zote. B2 −3 kwa mtindo usio wazi, si adhabu ya moja kwa moja ya mipaka ya namba.",
           "Uainishaji wa mkakati kwa maoni unaweza kusababisha kupoteza akaunti au faida bila kuvuka mipaka ya namba."
+        ],
+        "ha": [
+          "TradingCult · ƙalubale da kwaikwayon kuɗi",
+          "Duba ciniki kafin amincewa da kuɗi ko cire kuɗi",
+          "Jagororin kuɗi sun hana dabarun marasa daidaito ko masu kama da caca da rashin kula da haɗari, ba tare da ma'aunin gama-gari ba; hukunci har zuwa soke duk riba. B2 −3 saboda salon da ba a fayyace ba, ba hukunci ta atomatik na iyakokin lamba ba.",
+          "Ayyana dabara bisa ra'ayi na iya jawo rasa asusu ko riba ba tare da wuce iyakokin lamba ba."
         ]
       }
     },
@@ -5777,6 +6131,12 @@
           "Ukaguzi wa biashara kabla ya idhini ya ufadhili au malipo",
           "Masharti yanatoa haki kwa timu ya hatari kuongeza sheria na kuondoa shughuli inayochukuliwa kutotii, bila ufafanuzi kamili kwa kila programu; tatizo moja la mtindo usio wazi, −3, bila kudai sheria zimetumika kwa nyuma katika uhalisia.",
           "Uainishaji wa mkakati kwa maoni unaweza kusababisha kupoteza akaunti au faida bila kuvuka mipaka ya namba."
+        ],
+        "ha": [
+          "XFunded · ƙalubale da kwaikwayon kuɗi",
+          "Duba ciniki kafin amincewa da kuɗi ko cire kuɗi",
+          "Sharuɗɗa sun tanadi ikon ƙungiyar haɗari na ƙara doka da cire aikin da aka ga bai bi doka ba, babu cikakken bayani ga kowane shiri; ruɗanin salo ɗaya, −3, ba a yi iƙirarin amfani da sabuwar doka ga abubuwan da suka gabata a zahiri ba.",
+          "Ayyana dabara bisa ra'ayi na iya jawo rasa asusu ko riba ba tare da wuce iyakokin lamba ba."
         ]
       }
     },
@@ -5865,6 +6225,12 @@
           "Ustahiki na kudumisha akaunti",
           "Masharti §§4.4–4.6: uainishaji wa mikakati, biashara ya arbitrage kati ya akaunti na wasifu wa hatari kwa uamuzi wa kampuni pekee.",
           "Shughuli inayoheshimu mipaka ya namba inaweza kutajwa kuwa imekatazwa, kusababisha kutengwa na kukataliwa ufikiaji wa ufadhili."
+        ],
+        "ha": [
+          "GOAT Funded Trader · tantancewa da samun damar kuɗi",
+          "Cancanta da kula da asusu",
+          "Sharuɗɗa §§4.4–4.6: dabaru, arbitrage tsakanin asusu da yanayin haɗari ana ayyana su bisa hukuncin kamfani kaɗai.",
+          "Aikin da ya bi iyakokin lamba na iya zama haramtacce a cire mai ciniki daga shiri a hana damar kuɗi."
         ]
       }
     },
@@ -5953,6 +6319,12 @@
           "Mpito wa ufadhili, kuongeza mgao na malipo ya majaribio/halisi",
           "Sera ya ukaguzi wa hatari §2.2: uamuzi wa jumla kwa ishara za tahadhari, ukikiri kwamba hakuna kikomo maalumu cha haki kwa kila kigezo.",
           "Akaunti inaweza kuidhinishwa au malipo kucheleweshwa/kukataliwa baada ya tathmini ya mikono isiyotabirika kikamilifu; viashirio vya namba vinavyoanzisha ukaguzi havijaadhibiwa vyenyewe."
+        ],
+        "ha": [
+          "FT+ · asusun da ke ƙarƙashin tsarin duba haɗari",
+          "Sauyawa zuwa kuɗi, ƙara kuɗin da aka ware da cire kuɗin kwaikwayo/na gaske",
+          "Tsarin duba haɗari §2.2: hukunci na gaba ɗaya bisa alamomin gargadi, tare da amincewa cewa babu takamaiman iyakar haƙiƙa ga kowane abu.",
+          "Ana iya amincewa da asusu ko jinkirta/ƙin cire kuɗi bayan duba da hannu marar cikakken hango; alamomin lamba na fara duba ba a hukunta su da kansu ba."
         ]
       }
     },
@@ -6041,6 +6413,12 @@
           "Tathmini ya majaribio",
           "§9.5 inaruhusu CTI kuainisha baadhi ya mbinu kuwa zimekatazwa kwa uamuzi wake; adhabu husika zimekusanywa katika §9.6.",
           "Akaunti au matokeo ya muamala yanaweza kuadhibiwa, au mkopo wa biashara na hatari ya juu kubadilishwa chini ya §9.6(e), bila kikomo kamili. Ukweli mmoja na punguzo moja."
+        ],
+        "ha": [
+          "CTI · tantancewar kamfanin Comoros ƙarƙashin sharuɗɗan da aka haɗa ranar 20/11/2026",
+          "Tantancewar kwaikwayo",
+          "§9.5 ya ba CTI ikon ayyana wasu hanyoyi a matsayin haramtattu bisa ra'ayinsa; an tattara hukunce-hukunce a §9.6.",
+          "Ana iya hukunta asusu ko sakamakon ciniki, ko canza leverage da iyakar haɗari ƙarƙashin §9.6(e), babu cikakkiyar iyaka. Gaskiya ɗaya da ragi ɗaya."
         ]
       }
     },
@@ -6129,6 +6507,12 @@
           "Performance Account / kudumisha ufikiaji wa ufadhili",
           "Masharti §8: biashara ya uzembe na tabia ya kamari zimekatazwa bila ufafanuzi wa namba au utaratibu wa uainishaji unaotekelezeka.",
           "Akaunti inaweza kufungwa na mtumiaji kuzimwa kutokana na uainishaji wa tabia kwa maoni."
+        ],
+        "ha": [
+          "Leeloo Trading · asusun Performance",
+          "Performance Account / kula da damar kuɗi",
+          "Sharuɗɗa §8: an hana cinikin sakaci da halin caca ba tare da bayanin lamba ko tsarin ayyana hali mai aiki ba.",
+          "Rufe asusu da dakatar da mai amfani bisa ayyana hali da ra'ayin kamfani."
         ]
       }
     },
@@ -6217,6 +6601,12 @@
           "Tathmini, Live Virtual na Live Funded",
           "Mwongozo §§4 na 9: tathmini ya hatari iliyopitiliza kwa mkusanyiko wa faida, ukubwa wa nafasi na historia, bila kikomo kamili cha uamuzi.",
           "Mbinu inayolingana na mipaka ya namba inaweza kusababisha kufungwa baada ya ukaguzi; uwezekano wa kufuta tuzo unahesabiwa katika B1 pekee."
+        ],
+        "ha": [
+          "UProfit · shirye-shiryen da ke ƙarƙashin jagorar kyawawan hanyoyin ciniki",
+          "Tantancewa, Live Virtual da Live Funded",
+          "Jagora §§4 da 9: tantance haɗari mai yawa bisa tattara riba, girman matsayi da tarihi, babu cikakkiyar iyakar hukunci.",
+          "Hanyar da ta bi iyakokin lamba na iya jawo rufewa bayan duba; yiwuwar soke lada tana cikin B1 kawai."
         ]
       }
     },
@@ -6305,6 +6695,12 @@
           "Akaunti iliyofadhiliwa / biashara chini ya Payward Oceanic Ltd",
           "Mkataba wa POL §3(b)(v)–(viii): mikakati ambayo POL inaona inaweza kuingilia mtoa ukwasi au kuleta hatari ya kikanuni, bila vigezo kamili.",
           "Mkakati unaoheshimu mipaka ya namba unaweza kuainishwa kuwa biashara iliyokatazwa na kusababisha kusimamishwa au kusitishwa. Athari kwa tuzo zinatathminiwa B1, hazipunguzwi tena hapa."
+        ],
+        "ha": [
+          "Breakout Prop · kwangilar Trader mai kuɗi Classic/Pro/Turbo",
+          "Asusun da aka ba da kuɗi / ciniki ƙarƙashin Payward Oceanic Ltd",
+          "Kwangilar POL §3(b)(v)–(viii): dabarun da POL ke ganin za su iya kawo cikas ga mai samar da kuɗin kasuwa ko haɗarin ƙa'ida, babu cikakkun ma'aunai.",
+          "Dabarar da ta bi iyakokin lamba na iya zama cinikin da aka hana a dakatar ko soke ta. Ana tantance tasirin lada a B1, ba a sake rage maki a nan ba."
         ]
       }
     },
@@ -6393,6 +6789,12 @@
           "Tathmini ya majaribio, si akaunti za RCF moja kwa moja",
           "Masharti §7 na sheria za programu: tabia ya hatari inayochukuliwa kuwa kubwa sana au inayofanana na kamari, pamoja na mifano ya hatari yenye vipimo vya namba.",
           "Tathmini inaweza kushindwa au akaunti kufungwa kwa tafsiri ya ubora isiyo na mipaka kamili; mkataba wa RCF unahitaji ukaguzi tofauti."
+        ],
+        "ha": [
+          "RebelsFunding · tantancewar RF",
+          "Tantancewar kwaikwayo, ba ta shafi asusun RCF kai tsaye ba",
+          "Sharuɗɗa §7 da dokokin shiri: halin haɗari da aka ga ya wuce kima ko mai kama da caca, baya ga misalan haɗari na lamba.",
+          "Tantancewa na iya faɗuwa ko asusu ya rufe saboda fassarar inganci marar cikakkiyar iyaka; sai an duba kwangilar RCF dabam."
         ]
       }
     },
@@ -6481,6 +6883,12 @@
           "Idhini ya tathmini",
           "Masharti §10.1: Lux inaweza, kwa uamuzi wake pekee, kuondoa miamala fulani kwenye hesabu ya ufikiaji wa hatua inayofuata.",
           "Kutimiza lengo la namba kunaweza kutotosha kupita hatua ikiwa miamala imeondolewa bila kigezo kamili."
+        ],
+        "ha": [
+          "Lux Trading Firm · tantancewa / ƙara kuɗin da aka ware",
+          "Amincewa da tantancewa",
+          "Sharuɗɗa §10.1: Lux na iya cire wasu cinikai daga lissafin shiga mataki na gaba bisa hukuncinsa kaɗai.",
+          "Cika manufar lamba na iya kasa isa a wuce mataki idan an cire wasu cinikai ba tare da cikakken ma'auni ba."
         ]
       }
     },
@@ -6569,6 +6977,12 @@
           "Tathmini na ustahiki wa ufadhili",
           "Masharti ya challenge §13.14: tathmini ya ubora ya mbinu za kawaida za soko na hatari, bila kikomo kamili cha kutostahiki.",
           "Kupita hatua kunaweza kukataliwa na ada ya tathmini kutorejeshwa kutokana na tafsiri ya wasifu wa biashara."
+        ],
+        "ha": [
+          "FunderPro Challenge · Classic / One Phase",
+          "Tantancewa da cancantar kuɗi",
+          "Sharuɗɗan ƙalubale §13.14: tantance bin al'adar kasuwa da haɗari bisa inganci ba tare da cikakkiyar iyakar cire cancanta ba.",
+          "Ana iya hana wuce mataki kuma ba a mayar da kuɗin tantancewa ba bisa fassarar yanayin ciniki."
         ]
       }
     },
@@ -6657,6 +7071,12 @@
           "Tathmini kisha Funded Trader",
           "Masharti §10.2(n): mabadiliko makubwa ya mkakati, vyombo vya biashara au wasifu wa hatari yanayoharibu madhumuni ya changamoto, bila kikomo cha namba.",
           "Akaunti inaweza kusimamishwa na tuzo kupotea ikiwa mabadiliko yameainishwa kama mbinu iliyokatazwa."
+        ],
+        "ha": [
+          "HyroTrader · ƙalubale da sauyawa zuwa kuɗi",
+          "Tantancewa sannan Funded Trader",
+          "Sharuɗɗa §10.2(n): babban canjin dabara, kayan ciniki ko yanayin haɗari da ya lalata manufar ƙalubale, babu iyakar lamba.",
+          "Ana iya dakatar da asusu da rasa lada idan an ayyana canjin a matsayin hanyar da aka hana."
         ]
       }
     },
@@ -6745,6 +7165,12 @@
           "Biashara na kudumisha akaunti",
           "Masharti §§12.2–12.4: mabadiliko «makubwa au yasiyo na sababu» ya mkakati au ukubwa wa nafasi, bila kikomo kamili.",
           "Akaunti inayoheshimu drawdown za namba inaweza kuondolewa ikiwa mabadiliko yanachukuliwa kutolingana na uthabiti; haki ya kukataa tuzo tayari imetathminiwa B1."
+        ],
+        "ha": [
+          "IC Funded · tantancewa da asusun da aka ba kuɗin kwaikwayo",
+          "Ciniki da kula da asusu",
+          "Sharuɗɗa §§12.2–12.4: canje-canjen dabara ko girman matsayi «masu muhimmanci ko marasa hujja», babu cikakkiyar iyaka.",
+          "Ana iya cire cancantar asusun da ya bi drawdown na lamba idan an ga canjin ya saɓa wa daidaito; ikon ƙin lada an riga an tantance a B1."
         ]
       }
     },
@@ -6833,6 +7259,12 @@
           "Biashara / ubora wa mkakati",
           "Masharti §5.2.17: kamari na ongezeko la ghafla la ukubwa wa lot bila mpangilio zimekatazwa bila kikomo kamili cha uainishaji; adhabu katika §5.3.",
           "Nafasi zinaweza kuainishwa kuwa kubwa kupita kiasi bila kipimo kilichochapishwa kwa mitindo yote; haki ya kunyang'anya tuzo inahesabiwa B1 pekee."
+        ],
+        "ha": [
+          "Forex Funds Flow · FFF Boost da tantancewar kwaikwayo",
+          "Ciniki / ingancin dabara",
+          "Sharuɗɗa §5.2.17: an hana caca da ƙarin girman lot ba bisa tsari ba, babu cikakkiyar iyakar ayyana hali; hukunci a §5.3.",
+          "Ana iya ayyana matsayi ya wuce kima ba tare da wallafa ma'aunin da ya shafi duk salo ba; ikon ƙwace lada ana lissafa shi a B1 kawai."
         ]
       }
     },
@@ -6921,6 +7353,12 @@
           "Tabia ya ufadhili / tathmini",
           "Masharti §12.24: shughuli zisizoweza kurudiwa kibiashara katika masoko halisi zimekatazwa bila vipimo kamili vya matumizi ya sheria.",
           "Mkakati unaweza kuainishwa kuwa unatumia programu vibaya na kusababisha kupoteza akaunti licha ya kuheshimu drawdown; haki ya malipo inatathminiwa kando chini ya mkataba wa mkandarasi."
+        ],
+        "ha": [
+          "The Concept Trading · shirin Prop",
+          "Halin ciniki da kuɗi / tantancewa",
+          "Sharuɗɗa §12.24: an hana ayyukan da ba za a iya maimaitawa ta kasuwanci a kasuwa ta gaske ba, babu cikakken gwajin amfani da doka.",
+          "Ana iya ayyana dabara a matsayin amfani mara kyau da shiri a rasa asusu duk da bin drawdown; haƙƙin cire kuɗi ana tantance shi dabam ƙarƙashin Contractor Agreement."
         ]
       }
     },
@@ -7009,6 +7447,12 @@
           "Biashara na kudumisha akaunti",
           "Masharti ya matumizi, matumizi yaliyokatazwa: tabia isiyowakilisha biashara inayowajibika katika masoko halisi na uamuzi wa kampuni pekee; tofauti na sheria ya microscalping iliyoainishwa sasa kuwa zaidi ya 50% ya faida kutoka nafasi za sekunde tano au chini.",
           "Kutengwa au kufungwa kutokana na vigezo vya jumla vya maoni kuhusu biashara inayowajibika; hatari kwa tuzo zilizopatikana zinahesabiwa B1."
+        ],
+        "ha": [
+          "Lucid Trading — LucidFlex/Pro/Daily/Direct na kwaikwayo",
+          "Ciniki da kula da asusu",
+          "Sharuɗɗan amfani, amfani da aka hana: hali da ba ya wakiltar cinikin alhaki a kasuwa ta gaske da hukuncin kamfani kaɗai; daban da dokar microscalping da yanzu aka bayyana a matsayin sama da 50% na riba daga matsayi na daƙiƙa biyar ko ƙasa.",
+          "Cire cancanta ko rufewa bisa ma'aunin ra'ayi na gaba ɗaya game da cinikin alhaki; haɗarin ladan da aka samu yana cikin B1."
         ]
       }
     },
@@ -7097,6 +7541,12 @@
           "Kudumisha ufikiaji na kupanda hatua",
           "Mkataba wa mtumiaji §15: kampuni inaweza kumchukulia mfanyabiashara kuwa na uzoefu au utaalamu kupita kiasi kwa vigezo visivyo kamili na kufunga akaunti.",
           "Akaunti na ustahiki vinaweza kuondolewa ikiwa kiwango cha utaalamu kinachukuliwa kutolingana na madhumuni ya elimu; tuzo zinatathminiwa B1 pekee."
+        ],
+        "ha": [
+          "Apex Trader Funding · tantancewa/Performance Account (shirin kwaikwayo)",
+          "Kula da damar shiga da wuce mataki",
+          "Kwangilar mai amfani §15: kamfanin na iya ɗaukar mai ciniki ya fi ƙarfin ƙwarewa ko gogewa bisa ma'aunin da ba cikakke ba ya rufe asusu.",
+          "Ana iya cire asusu da cancantar shiri saboda ƙwarewar da aka ga ba ta dace da manufar ilimi ba; lada ana tantance su a B1 kawai."
         ]
       }
     },
@@ -7185,6 +7635,12 @@
           "Tathmini na ufadhili ikiwa sheria inatumika",
           "FAQ, mitindo iliyokatazwa ya biashara: biashara ya marudio ya juu bila kikomo; Masharti, sheria za biashara 148–151.",
           "Hatari ya adhabu ya akaunti au kukataliwa malipo kwa marudio yanayochukuliwa kupitiliza bila kipimo cha umma cha namba."
+        ],
+        "ha": [
+          "Klein Funding · tantancewa ƙarƙashin sharuɗɗan gaba ɗaya",
+          "Tantancewa da matakin kuɗi idan dokar ta shafa",
+          "FAQ, salon cinikin da aka hana: ciniki mai yawan maimaituwa cikin sauri ba tare da iyaka ba; Sharuɗɗa, dokokin ciniki 148–151.",
+          "Haɗarin hukunta asusu ko ƙin cire kuɗi saboda yawan cinikin da aka ga ya wuce kima ba tare da ma'aunin lamba na jama'a ba."
         ]
       }
     },
@@ -7273,6 +7729,12 @@
           "Tathmini na akaunti iliyofadhiliwa chini ya masharti ya matumizi",
           "§10.1.7.20: kwa uamuzi wa kampuni pekee, mkakati unaweza kuchukuliwa usio wa kibiashara au usioweza kutekelezeka, bila kikomo cha haki au ufafanuzi kamili.",
           "Kutostahiki, kusitishwa na kupoteza haki za akaunti ikiwa muamala unachukuliwa kuwa usioweza kutekelezeka, chini ya mkataba ambao faida zinaweza kunyang'anywa."
+        ],
+        "ha": [
+          "Trade The Pool — tantancewa/kuɗin hannun jari, sharuɗɗan 03/08/2026",
+          "Tantancewa da asusun da aka ba da kuɗi idan sharuɗɗan amfani sun shafe su",
+          "§10.1.7.20: kamfanin kaɗai na iya ɗaukar dabara ba ta kasuwanci ba ko ba za ta yi aiki ba, babu iyakar haƙiƙa ko cikakken bayani.",
+          "Cire cancanta, soke kwangila da rasa haƙƙin asusu idan an ga ciniki ba zai yi aiki ba, ƙarƙashin kwangilar da ke ba da yiwuwar ƙwace riba."
         ]
       }
     },
@@ -7361,6 +7823,12 @@
           "Changamoto na akaunti ya Master",
           "§11.9 inahifadhi kwa jukwaa uamuzi wake pekee wa kuainisha miamala au mikakati kuwa imekatazwa, bila kikomo kamili cha haki.",
           "Kusitishwa kwa akaunti kutokana na mkakati uliotajwa ghafla kuwa umekatazwa, tofauti na haki ya upande mmoja ya kukataa malipo katika §§17.3–17.4."
+        ],
+        "ha": [
+          "For Traders — Challenge/Master ƙarƙashin sharuɗɗan yanzu",
+          "Ƙalubale da asusun Master",
+          "§11.9 ya tanadi ikon dandali kaɗai na ayyana ciniki ko dabara haramtacciya, babu cikakkiyar iyakar haƙiƙa.",
+          "Soke asusu saboda dabara da aka ayyana haramtacciya kwatsam, daban da ikon ƙin biyan diyya na ɓangare ɗaya a §§17.3–17.4."
         ]
       }
     },
@@ -7449,6 +7917,12 @@
           "Tathmini na ufadhili chini ya sheria za programu hiyo hiyo",
           "Masharti §7.9: karibu na habari, mkakati haupaswi kutumia mabadiliko ya bei badala ya kuonyesha mtazamo halisi wa mwelekeo wa soko; tofauti ya nia haina kikomo kinachoweza kuthibitishwa.",
           "Muamala au mkakati unaweza kuainishwa kuwa biashara ya pande mbili karibu na habari na kupelekwa kwenye ukaguzi wa hatari, unaoweza kuleta onyo au adhabu ya akaunti."
+        ],
+        "ha": [
+          "Finotive · ƙalubale da asusun da aka ba kuɗin kwaikwayo; hanyoyin labarai",
+          "Tantancewa da matakin kuɗi ƙarƙashin dokokin shiri ɗaya",
+          "Sharuɗɗa §7.9: kusa da labarai, dabara ba za ta yi amfani da sauyin farashi maimakon bayyana ainihin ra'ayin alkiblar kasuwa ba; babu iyakar tabbatar da bambancin niyya.",
+          "Ana iya ayyana ciniki ko dabara a matsayin cinikin ɓangarori biyu kusa da labarai a tura shi duba haɗari, wanda na iya jawo gargadi ko hukuncin asusu."
         ]
       }
     },
@@ -7537,6 +8011,12 @@
           "Kipindi cha malipo baada ya ukaguzi na Tier1 au Tier2",
           "Masharti §6.3.8: punguzo la 50% au 100% la Violation Profit, yaani faida ghafi za miamala iliyopewa adhabu; hasara za miamala hiyo zinahesabiwa sifuri katika hesabu hii lakini zinapunguza Eligible Profit halisi.",
           "Faida za ukiukaji huondolewa kando baada ya hesabu ya faida halisi ambayo tayari inajumuisha hasara, wakati mwingine tuzo hupungua hadi sifuri."
+        ],
+        "ha": [
+          "Funding Traders · 1-Step Pro / 2-Step Pro / Instant, shirin horo RMG",
+          "Lokacin cire kuɗi bayan duba tare da Tier1 ko Tier2",
+          "Sharuɗɗa §6.3.8: rage 50% ko 100% na Violation Profit, wato jimillar ribar cinikin da aka hukunta; asarar irin waɗannan cinikai tana zama sifili a wannan lissafi amma tana rage Eligible Profit na net.",
+          "Ana cire ribar cinikin da ya karya doka dabam bayan lissafin ribar net da ya riga ya haɗa asara, wani lokaci lada ya koma sifili."
         ]
       }
     },
@@ -7625,6 +8105,12 @@
           "Akaunti ya majaribio na biashara iliyofadhiliwa",
           "Masharti §§6.1 na 6.6(10): mbinu nzuri za hatari kwa uamuzi wa OFP pekee na mkakati mwingine wowote usio wa kawaida ambao OFP inaona umekatazwa.",
           "Kampuni inaweza kuondoa miamala au akaunti bila kikomo kimoja thabiti cha tabia «isiyo ya kawaida»."
+        ],
+        "ha": [
+          "OFP Funding · asusun kwaikwayo da Instant, sharuɗɗan da suka fara aiki 09/02/2026",
+          "Asusun kwaikwayo da cinikin da aka ba da kuɗi",
+          "Sharuɗɗa §§6.1 da 6.6(10): kyawawan hanyoyin haɗari bisa hukuncin OFP kaɗai da duk wata dabara da ba ta al'ada ba da OFP ya ga haramtacciya.",
+          "Kamfanin na iya cire cancantar ciniki ko asusu ba tare da iyaka guda tabbatacciya ga halin «da ba na al'ada ba»."
         ]
       }
     }
