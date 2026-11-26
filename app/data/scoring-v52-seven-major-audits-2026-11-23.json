@@ -1,0 +1,1067 @@
+{
+  "version": "5.2",
+  "checkedOn": "2026-11-23",
+  "count": 7,
+  "source": "SCORING_V5_2.md",
+  "publication": "NOT APPROVED — RESEARCH PROPOSALS ONLY",
+  "liveScoreChanges": 0,
+  "ownerApprovalRequired": true,
+  "ckCapitalUnchanged": true,
+  "independentlyVerifiedPayoutCount": 0,
+  "cards": [
+    {
+      "card": {
+        "slug": "e8-markets",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 72,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Le §5.2 décrit ACH, wire et crypto en sept jours de traitement; E8 Pro expose un payout à la demande, tandis que Signature/Zero gardent des caps et intervalles spécifiques. La tarification exacte des rails pour toutes les cohortes manque, donc 8/10 et non 10.",
+            "sources": [
+              "https://help.e8markets.com/en/articles/15272556-everything-about-payouts-when-how-how-fast",
+              "https://e8markets.com/e8-markets-terms-and-conditions"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Le tracker Rise montre des flux attribués à E8 sur plusieurs années, mais ni identité de chacun des bénéficiaires, ni correspondance funded, ni absence de litiges graves sur 12 mois ne sont auditées aux six maillons. Palier neutre 6/10, sans déduire fiabilité.",
+            "sources": [
+              "https://www.trustpilot.com/review/e8markets.com",
+              "https://payoutjunction.com/firms/e8markets"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction trace des transactions de portefeuilles attribués à la marque depuis novembre 2023, avec dates et montants; sa méthode ne certifie pas chaque bénéficiaire ni même que toute sortie soit un payout de trader : preuve externe partielle A3=2/5, pas 5.",
+            "sources": [
+              "https://payoutjunction.com/firms/e8markets"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU E8 Funding LLC §5.1–5.2 : si E8 juge à sa seule discrétion une non-éligibilité, la société peut révoquer/retirer des awards de paiement. Risque de perte de récompenses acquises sans seuil suffisamment objectif : B1=3.",
+            "sources": [
+              "https://e8markets.com/e8-markets-terms-and-conditions"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Règles E8 Pro et Zero doivent être séparées; les CGU §13 autorisent des mises à jour, mais application défavorable à une cohorte existante non démontrée. La décision discrétionnaire sur récompense §5 est déjà retenue B1 : aucun autre fait B2 distinct suffisamment établi.",
+            "sources": [
+              "https://e8markets.com/e8-markets-terms-and-conditions"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Le contrat général nomme E8 Funding LLC, mais numéro de registre officiel, vendeur checkout et accord rémunérateur E8 Trader n'ont pas été rapprochés pour la même entité : C1=4.",
+            "sources": [
+              "https://e8markets.com/e8-markets-terms-and-conditions",
+              "https://help.e8markets.com/en/articles/14124293-about-e8-markets"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "Statut administratif actuel de l'E8 Funding LLC du contrat non attesté dans un registre primaire; 3/6 est 'non vérifié', et ne signifie ni active ni dissoute.",
+            "sources": [
+              "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Recherche par nom/domaine et liste d'alertes à finaliser pour l'entité exacte; pas de sanction directe confirmée, mais recherche primaire insuffisante pour donner 4.",
+            "sources": [
+              "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Pages comparatives et politiques par produit documentent objectifs, frais, drawdowns, restrictions, KYC et programmes, séparés entre Pro/Zero/Signature; 8 points de lisibilité, pas de garantie du contrat funded.",
+            "sources": [
+              "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature",
+              "https://e8markets.com/e8-markets-terms-and-conditions"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "CGU accessibles avec date d'effet 11/03/2025 (format imprimé par la firme) et §1.4 décrivant la prise d'effet à publication des changements, donc critères de visibilité et applicabilité documentés; cela n'établit pas l'équité d'une modification.",
+            "sources": [
+              "https://e8markets.com/e8-markets-terms-and-conditions"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Simulation annoncée clairement; FAQ Pro/Zero et règlement général peuvent être conciliés par parcours. Checkout exhaustif et accord E8 Trader après évaluation non inspectés, deux vérifications sur trois.",
+            "sources": [
+              "https://e8markets.com/e8-markets-terms-and-conditions"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Service commercial E8 présenté comme actif depuis 2021, plus de 36 mois avant novembre 2026 selon l'historique de la marque; statut du véhicule juridique individuel distinct.",
+            "sources": [
+              "https://help.e8markets.com/en/articles/14124293-about-e8-markets"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Centre d'aide et support identifiables avec réponses publiques; pas d'essai contradictoire documenté ni procédure de recours récompense suffisamment vérifiée.",
+            "sources": [
+              "https://www.trustpilot.com/review/e8markets.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": true,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "E8 Markets",
+      "domain": "e8markets.com",
+      "program": "E8 Pro vs E8 Signature/Zero; E8 Funding LLC simulation, ne pas transposer vers E8 Futures",
+      "legal": "E8 Funding LLC désignée par les CGU 2025; immatriculation officielle et entité de la convention E8 Trader non rapprochées.",
+      "launch": "Depuis 2021 selon son historique public",
+      "refs": {
+        "terms": "https://e8markets.com/e8-markets-terms-and-conditions",
+        "payout": "https://help.e8markets.com/en/articles/15272556-everything-about-payouts-when-how-how-fast",
+        "plan": "https://help.e8markets.com/en/articles/13106558-all-product-overviews-e8-one-vs-e8-zero-vs-e8-pro-vs-e8-signature",
+        "risk": "https://help.e8markets.com/en/articles/6929927-trading-policies-and-prohibited-trading-strategies",
+        "tracker": "https://payoutjunction.com/firms/e8markets",
+        "tp": "https://www.trustpilot.com/review/e8markets.com",
+        "entity": "https://help.e8markets.com/en/articles/14124293-about-e8-markets",
+        "reg": "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+      },
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 18,
+        "E": 8
+      },
+      "raw": 64,
+      "trustpilotPenalty": 6,
+      "payoutEvidenceCap": 69,
+      "proposedScore": 58,
+      "change": -14,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "trustpilot_guidelines_withheld",
+        "payout_tracker_not_full_6_links",
+        "funded_agreement_missing"
+      ]
+    },
+    {
+      "card": {
+        "slug": "brightfunded",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 72,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "2-Step Bright annonce un premier payout au cycle de 14 jours, 1-Step Daily et Instant possèdent leurs propres seuils, caps et buffers; voie de demande et délais documentés, mais frais et conditions de chaque rail non consolidés pour tous les modèles.",
+            "sources": [
+              "https://help.brightfunded.com/en/articles/18450312-how-do-payouts-work-on-2-step-bright",
+              "https://brightfunded.com/terms-and-conditions"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Statistiques et wallet-tracker ne documentent pas une absence vérifiée d'incidents sur douze mois; aucune série de refus non justifiés indépendamment corroborée aux seuils A2 n'est démontrée : 6 neutre.",
+            "sources": [
+              "https://www.trustpilot.com/review/brightfunded.com",
+              "https://payoutjunction.com/firms/brightfunded"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction attribue des transactions on-chain au portefeuille BrightFunded, mais avertit que certains transferts peuvent être opérationnels et non des récompenses de comptes simulés. Chaîne bénéficiaire/contrat incomplète : 2/5.",
+            "sources": [
+              "https://payoutjunction.com/firms/brightfunded"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU §§7.5–7.8 : admission funded à la discrétion de la firme; §7.7 perte des rewards restants à suspension et §7.8 rewards discrétionnaires, accord funded distinct non communiqué : pouvoir de retenue élevé, B1=3.",
+            "sources": [
+              "https://brightfunded.com/terms-and-conditions"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Nouveaux modèles datés avec maintien des règles pré-16 novembre 2026 selon FAQ; aucune application rétroactive défavorable concrète constatée, aucun malus de règle chiffrée (buffer/consistency) et pas de seconde pénalité de confiscation §7 déjà en B1.",
+            "sources": [
+              "https://brightfunded.com/terms-and-conditions"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "L'entité Bright Global FZCO est nommée dans la version actuelle des CGU, mais le numéro d'immatriculation, la personne du checkout et le débiteur du Funded Trader Agreement ne sont pas officiellement rapprochés.",
+            "sources": [
+              "https://brightfunded.com/terms-and-conditions",
+              "https://brightfunded.com/about-us"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "La présence d'entités aux UAE et Sainte-Lucie dans le corpus ne vaut pas extrait de registre primaire courant et ne suffit pas à certifier leur situation légale.",
+            "sources": [
+              "https://brightfunded.com/futures/terms-and-conditions"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Avertissements officiels propres à l'opérateur et à cette branche CFD non vérifiés exhaustivement; l'absence de licence broker n'est pas automatiquement sanctionnée pour la simulation.",
+            "sources": [
+              "https://brightfunded.com/futures/terms-and-conditions"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Tarification, tailles, phases, objectifs/drawdowns, KYC et restrictions géographiques publiés dans les fiches 1-Step/2-Step/Instant; différencier les règles CFD de Futures.",
+            "sources": [
+              "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+              "https://brightfunded.com/terms-and-conditions"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU accessibles et évolution de cohortes (achat avant/après 16/11/2026) annoncée; absence de document juridique unique horodaté pour chaque version conserve deux points non attribués.",
+            "sources": [
+              "https://brightfunded.com/terms-and-conditions"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Nature simulée de la phase funded exposée et pages de modèle comparables; entités juridiques et checkout exact du produit choisi non recoupés au contrat rémunérateur.",
+            "sources": [
+              "https://brightfunded.com/terms-and-conditions"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Page officielle About indique 'Established 2023', activité de marque depuis 2023, donc 36 mois ou davantage à l'échéance novembre 2026; l'âge de chaque division reste distinct.",
+            "sources": [
+              "https://brightfunded.com/about-us"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Centre d'aide et support d'entreprise identifiables, réponses et procédure de recours funded pas testées indépendamment jusqu'à résolution.",
+            "sources": [
+              "https://www.trustpilot.com/review/brightfunded.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": true,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "BrightFunded",
+      "domain": "brightfunded.com",
+      "program": "Forex/CFD 1-Step Daily et 2-Step Bright; ne pas transposer les conditions de BrightFunded Futures",
+      "legal": "CGU actuelles §1 : Bright Global FZCO à Dubai; autre entité BrightFunded Ltd Sainte-Lucie et division Futures LLC à distinguer, registre et agreement funded non rapprochés.",
+      "launch": "Marque indique fondation 2023",
+      "refs": {
+        "terms": "https://brightfunded.com/terms-and-conditions",
+        "payout": "https://help.brightfunded.com/en/articles/18450312-how-do-payouts-work-on-2-step-bright",
+        "plan": "https://help.brightfunded.com/en/articles/18450305-which-model-is-right-for-me",
+        "daily": "https://help.brightfunded.com/en/articles/18450309-how-do-payouts-work-on-1-step-daily",
+        "instant": "https://help.brightfunded.com/en/articles/18450315-how-do-payouts-work-on-instant",
+        "tracker": "https://payoutjunction.com/firms/brightfunded",
+        "tp": "https://www.trustpilot.com/review/brightfunded.com",
+        "entity": "https://brightfunded.com/about-us",
+        "reg": "https://brightfunded.com/futures/terms-and-conditions"
+      },
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 16,
+        "E": 8
+      },
+      "raw": 62,
+      "trustpilotPenalty": 6,
+      "payoutEvidenceCap": 69,
+      "proposedScore": 56,
+      "change": -16,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "trustpilot_guidelines_withheld",
+        "separate_funded_agreement",
+        "cohort_2026_11_16"
+      ]
+    },
+    {
+      "card": {
+        "slug": "instant-funding",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 72,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "FAQ payouts : Instant GO premier payout 14 jours puis 7 jours; IF Micro Clarity requiert cinq journées à 0,5% et une limite Best Day 20%; One-Phase Clarity a un seuil 1,5%. Délais de demande et 48h de traitement; frais/rails complets non regroupés.",
+            "sources": [
+              "https://instantfunding.com/help/payouts/",
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Flux externes on-chain attribués à la marque mais pas d'historique multi-bénéficiaires et multi-produits authentifié démontrant la régularité complète; plaintes seules non probantes pour une baisse A2 : palier neutre 6.",
+            "sources": [
+              "https://www.trustpilot.com/review/instantfunding.com",
+              "https://payoutjunction.com/firms/instantfunding"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Payout Junction recense des transferts Rise sous le nom Instant Funding; la réconciliation source-marque, programme-funded, réception finale et bénéficiaire indépendant n'est pas complète : niveau de preuve externe intermédiaire 2/5.",
+            "sources": [
+              "https://payoutjunction.com/firms/instantfunding"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU PDF d'octobre 2026 §§11.4–11.9 : opérateur décide des pratiques interdites et peut ôter/annuler le payout; le contrôle des clauses exactes par cohorte doit être conservé, mais pouvoir large sur rewards => B1=3.",
+            "sources": [
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Restrictions de best-day, min winning days et news annoncées par type de programme. La discrétion de retrait du payout motivée par trading est imputée B1; aucune violation rétroactive ou autre fait B2 autonome établi.",
+            "sources": [
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Contradiction de rôles : le PDF General Terms §1.1 désigne Acello Ltd (UK n°12696083) comme 'Company' contractante, alors que la page Corporate Disclosures du site la désigne comme agent de paiement d'IF Pro Ltd (Sainte-Lucie). Le vendeur au checkout funded est donc non réconcilié, C1=4.",
+            "sources": [
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+              "https://instantfunding.com/disclaimers-legal-information/",
+              "https://find-and-update.company-information.service.gov.uk/company/12696083"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "Companies House confirme Acello Ltd UK active, mais la page actuelle désigne IF Pro Ltd Sainte-Lucie comme opérateur du service; absence de registre officiel valide du débiteur ultime et contrat non aligné, donc C2=3 provisoire, non preuve de dissolution.",
+            "sources": [
+              "https://find-and-update.company-information.service.gov.uk/company/12696083",
+              "https://instantfunding.com/disclaimers-legal-information/",
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Pas d'avertissement officiel matériel confirmé sur la bonne partie, mais le contrôle par juridiction n'a pas été achevé pour IF Pro Ltd et l'éventuel agent.",
+            "sources": [
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Programmes Instant GO, Micro Clarity, One-/Two-Phase, prix, objectifs, drawdowns et contraintes par phase sont documentés; KYC, accès et règles figurent dans pages de présentation et dossier juridique.",
+            "sources": [
+              "https://instantfunding.com/",
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU datées octobre 2026 et consultables; application éventuelle à tous les anciens comptes et archivage des cohortes restent insuffisamment établis.",
+            "sources": [
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf"
+            ]
+          },
+          "D3": {
+            "points": 2,
+            "reason": "Le produit est bien présenté comme une simulation, mais le PDF d'octobre 2026 fait contracter Acello Ltd tandis que les Corporate Disclosures donnent IF Pro Ltd comme fournisseur et Acello comme simple agent. Cette contradiction officielle bloque la cohérence juridique FAQ/contrat et checkout; seul le caractère simulé donne +2/6.",
+            "sources": [
+              "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+              "https://instantfunding.com/disclaimers-legal-information/"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Marque commerciale lancée en 2022 d'après historique officiel, soit plus de 36 mois d'activité prop avant novembre 2026.",
+            "sources": [
+              "https://instantfunding.com/disclaimers-legal-information/",
+              "https://instantfunding.com/about-us/"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Centre d'aide et support officiels identifiables avec réponses publiques; la page de mentions juridiques distingue contact et sociétés, mais le mécanisme de résolution indépendant des litiges rewards et le vrai débiteur n'ont pas été démontrés.",
+            "sources": [
+              "https://www.trustpilot.com/review/instantfunding.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": true,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "Instant Funding",
+      "domain": "instantfunding.com",
+      "program": "Instant GO, IF Micro Clarity, One-Phase Clarity, et contrats CFD après KYC; splits différents selon add-ons",
+      "legal": "**Discordance de sources officielles** : CGU PDF octobre 2026 §1.1 présentent Acello Ltd n°12696083 comme partie contractante, tandis que les Corporate Disclosures du site déclarent Acello Ltd seulement agent de paiement de IF Pro Ltd Sainte-Lucie n°2025-00056. Réconcilier contrat du checkout et accord Trader.",
+      "launch": "Entreprise se présente active depuis 2022",
+      "refs": {
+        "terms": "https://instantfunding.com/wp-content/uploads/2026/10/INSTANT-FUNDING-GENERAL-TERMS.pdf",
+        "payout": "https://instantfunding.com/help/payouts/",
+        "plan": "https://instantfunding.com/",
+        "entity": "https://instantfunding.com/disclaimers-legal-information/",
+        "registry": "https://find-and-update.company-information.service.gov.uk/company/12696083",
+        "tracker": "https://payoutjunction.com/firms/instantfunding",
+        "tp": "https://www.trustpilot.com/review/instantfunding.com",
+        "about": "https://instantfunding.com/about-us/"
+      },
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 14,
+        "E": 8
+      },
+      "raw": 60,
+      "trustpilotPenalty": 6,
+      "payoutEvidenceCap": 69,
+      "proposedScore": 54,
+      "change": -18,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "trustpilot_guidelines_withheld",
+        "payment_agent_distinct_from_provider",
+        "payout_wallet_partial",
+        "conflict_acello_vs_ifpro_in_official_terms_and_disclaimers"
+      ]
+    },
+    {
+      "card": {
+        "slug": "hola-prime",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 72,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Payouts Forex Pro/Prime/Direct décrits par calendriers spécifiques et portail; minimum des programmes annoncé $50 et traitement '1 heure' seulement après acceptation/KYC; frais selon rail et certains caps non consolidés au même modèle.",
+            "sources": [
+              "https://www.holaprime.com/rulebook/payouts-profit-splits-rewards/",
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Le rapport commercial de transparence et les flux on-chain externes ne montrent pas une série complète de virements bénéficiaires vérifiés sans incident 12 mois; les plaintes ne suffisent pas à qualifier les retards comme injustifiés : 6 neutre.",
+            "sources": [
+              "https://www.trustpilot.com/review/holaprime.com",
+              "https://payoutjunction.com/firms/holaprime"
+            ]
+          },
+          "A3": {
+            "points": 2,
+            "reason": "Deloitte a réalisé une revue des données de traitement publiée par la firme, expressément sans opinion ni assurance d'audit bancaire. Le tracker on-chain recense des flux non attribués à des bénéficiaires funded ; preuve indépendante partielle 2, pas A3 4–5.",
+            "sources": [
+              "https://payoutjunction.com/firms/holaprime"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "CGU §20 : la firme peut à son appréciation suspendre, clôturer, confisquer des profits, refuser ou inverser des payouts sur manquement; §23 inclut engagement de non-dénigrement très large. Reward acquis insuffisamment protégé : B1=3.",
+            "sources": [
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Le pouvoir sur les récompenses et la confidentialité figure déjà en B1. Les restrictions par produit/phase peuvent être sévères, mais une incohérence de règle sur le même plan ou changement rétroactif appliqué n'a pas été établi.",
+            "sources": [
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Hola Prime Limited HK identifiée et numéro annoncé; lien avec le checkout Forex funded et la société broker HolaPrimeMarkets, plus le registre officiel HK, pas encore recoupés.",
+            "sources": [
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "Statut à jour de Hola Prime Limited au registre primaire de Hong Kong non extrait au cours de cette passe : C2=3 provisoire.",
+            "sources": [
+              "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Avertissements officiels par entité Hong Kong et service simulé non contrôlés jusqu'à exhaustivité; aucune obligation de licence broker supposée pour le programme de simulation.",
+            "sources": [
+              "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Catalogue distingue Pro/Prime/Direct en CFD et Futures; prix, objectifs, drawdown, fenêtres d'actualités, KYC, pays exclus et politique de récompenses publiés.",
+            "sources": [
+              "https://holaprime.com/rulebook/schedules/",
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU disponibles et mécanisme de modification effective à publication; date de version de ce contrat exact non identifiée au contrôle, donc 4/6.",
+            "sources": [
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Le CFD simulé et l'activité de courtier sont séparés par la marque. La livraison finale du produit et l'identité du payeur après KYC n'ont pas été prouvées; deux vérifications documentaires possibles.",
+            "sources": [
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "E1": {
+            "points": 4,
+            "reason": "Historique public du service Hola Prime prop depuis 2024, donc environ deux ans en novembre 2026; pas 36 mois.",
+            "sources": [
+              "https://holaprime.com/terms-conditions/"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Contact/FAQ et règles de payout publiés, réclamations clients visibles, mais réponse détaillée et recours efficace hors payout non contrôlés indépendamment.",
+            "sources": [
+              "https://holaprime.com/contact-us/"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "Hola Prime",
+      "domain": "holaprime.com",
+      "program": "Forex CFD Pro/Prime/Direct (futures et courtier HolaPrimeMarkets distincts), payout et KYC propres au modèle",
+      "legal": "CGU nomment Hola Prime Limited, Hong Kong, n°76274750; société/produit broker et filiale Chypre à ne pas assimiler au débiteur des rewards Forex.",
+      "launch": "Marque documentée à partir de 2024",
+      "refs": {
+        "terms": "https://holaprime.com/terms-conditions/",
+        "payout": "https://www.holaprime.com/rulebook/payouts-profit-splits-rewards/",
+        "plan": "https://holaprime.com/rulebook/schedules/",
+        "report": "https://holaprime.com/payout-transparency-report/",
+        "tracker": "https://payoutjunction.com/firms/holaprime",
+        "tp": "https://www.trustpilot.com/review/holaprime.com",
+        "contact": "https://holaprime.com/contact-us/",
+        "reg": "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+      },
+      "pillars": {
+        "A": 16,
+        "B": 13,
+        "C": 9,
+        "D": 16,
+        "E": 6
+      },
+      "raw": 60,
+      "trustpilotPenalty": 0,
+      "payoutEvidenceCap": 69,
+      "proposedScore": 60,
+      "change": -12,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "deloitte_review_not_payment_audit",
+        "no_trustpilot_sanction",
+        "non_disparagement"
+      ]
+    },
+    {
+      "card": {
+        "slug": "pipfarm",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 71,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Annexe B §§B1.2–B1.9 : requête tous les 7 jours après la précédente résolue; revue deux jours ouvrables + versement deux jours; maximum brut 5 000 en devise du compte; compte standard cap 6% progressif à12%, Instant 3%→6%. Split de base 70%, frais rails et détails du tout premier retrait encore lacunaires.",
+            "sources": [
+              "https://updates.pipfarm.com/help/articles/1900230-payout-caps",
+              "https://pipfarm.com/terms-and-conditions"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "CGU et témoignages décrivent des récompenses, mais pas une série indépendante de versements bancaires sur douze mois, ni refus injustifiés distincts corroborés : 6/10 neutre et confiance faible.",
+            "sources": [
+              "https://www.trustpilot.com/review/pipfarm.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "PipFarm publie sa propre communication de rewards et des témoignages Trustpilot, mais aucun règlement final avec bénéficiaire externe vérifiable, contrat et tiers indépendant à six maillons n'a été rapproché : 1/5.",
+            "sources": [
+              "https://www.trustpilot.com/review/pipfarm.com"
+            ]
+          },
+          "B1": {
+            "points": 3,
+            "reason": "Annexe B/CGU §26.2 permet retenir/rejeter/ajuster/différer un reward pour comportement suspect; §§16.4/18.2 prévoient perte de rewards en cas de breach. Protections d'acquis faibles et pouvoir d'appréciation large : B1=3.",
+            "sources": [
+              "https://pipfarm.com/terms-and-conditions"
+            ]
+          },
+          "B2": {
+            "points": 10,
+            "reason": "Pip Protector annexe B2.1 : première violation allocation 2%→1%, seconde réduit irréversiblement le split (80%→40% exemple), mécanisme explicite et numérique. Les mesures de probation §B7.2 restent à préciser mais pas de violation de cohortes ni clause B2 autonome suffisamment établie pour pénaliser deux fois.",
+            "sources": [
+              "https://pipfarm.com/terms-and-conditions"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "PipFarm désigne ECI Ventures Pte Ltd UEN 202329954C à Singapore dans préambule; l'immatriculation est retrouvée sur annuaire tiers, mais pas sur extrait ACRA, ni identité de l'acheteur au checkout.",
+            "sources": [
+              "https://pipfarm.com/terms-and-conditions",
+              "https://pipfarm.com/contact-us"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "Annuaire privé retrouve la société et l'UEN mais n'est pas le registre primaire ACRA; statut courant légal non authentifié : C2=3.",
+            "sources": [
+              "https://www.companies.sg/business/202329954C/ECI-VENTURES-PTE-LTD"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Pas de sanction officielle concrète établie, mais revue complète par juridiction Singapore et société n'a pas été faite au registre des autorités : 2 de recherche.",
+            "sources": [
+              "https://www.companies.sg/business/202329954C/ECI-VENTURES-PTE-LTD"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "CGU/Appendice B présentent prix challenge, frais d'émission, objectifs et drawdown, règles KYC/pays, restriction household et industrie, paramètres de payout standard/Instant; information largement accessible.",
+            "sources": [
+              "https://help.pipfarm.com/en/articles/2821084-the-experience-program",
+              "https://pipfarm.com/terms-and-conditions"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "CGU horodatées 'Last updated April 9, 2026'; §24.1–24.3 : changements du funded seulement après premier payout approuvé avec préavis ≥7 jours, contrats existants protégés jusque-là : 6/6 pour transparence des versions (sans présumer absence d'abus).",
+            "sources": [
+              "https://pipfarm.com/terms-and-conditions"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "CGU identifient les services purement simulés et l'entité Singapore; nombre de règles par challenge cohérent sur le site, mais parcours de paiement (prix et activation) n'a pas été reproduit intégralement.",
+            "sources": [
+              "https://pipfarm.com/terms-and-conditions"
+            ]
+          },
+          "E1": {
+            "points": 4,
+            "reason": "Lancement du programme PipFarm documenté début 2024, soit 18–35 mois d'opération vérifiable en novembre 2026, pas 36 mois.",
+            "sources": [
+              "https://pipfarm.com/contact-us"
+            ]
+          },
+          "E2": {
+            "points": 3,
+            "reason": "Email de support, centre d'aide et mécanismes de tickets visibles, réponses publiques à des avis, mais aucune résolution de plainte indépendante sur rewards établie.",
+            "sources": [
+              "https://www.trustpilot.com/review/pipfarm.com"
+            ]
+          }
+        },
+        "ruleDeductions": [],
+        "trustpilotActiveNotice": true,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "PipFarm",
+      "domain": "pipfarm.com",
+      "program": "Trading Challenge + Remote Trader Program (annexe B) vs Instant Funded; XP et rewards spécifiques",
+      "legal": "ECI Ventures Pte. Ltd. Singapore UEN 202329954C explicitement partie contractante CGU mises à jour le 09/04/2026; confirmation ACRA et order form non extraits.",
+      "launch": "Lancement de l'offre prop en mars 2024",
+      "refs": {
+        "terms": "https://pipfarm.com/terms-and-conditions",
+        "payout": "https://updates.pipfarm.com/help/articles/1900230-payout-caps",
+        "plan": "https://help.pipfarm.com/en/articles/2821084-the-experience-program",
+        "legacy": "https://help.pipfarm.com/articles/8246911-pay-with-profits-payouts",
+        "reg": "https://www.companies.sg/business/202329954C/ECI-VENTURES-PTE-LTD",
+        "tp": "https://www.trustpilot.com/review/pipfarm.com",
+        "entity": "https://pipfarm.com/contact-us",
+        "launch": "https://pipfarm.com/blog"
+      },
+      "pillars": {
+        "A": 15,
+        "B": 13,
+        "C": 9,
+        "D": 18,
+        "E": 7
+      },
+      "raw": 62,
+      "trustpilotPenalty": 6,
+      "payoutEvidenceCap": 64,
+      "proposedScore": 56,
+      "change": -15,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "trustpilot_guidelines_withheld",
+        "pip_protector_split_halved_after_second_breach",
+        "no_independent_payment"
+      ]
+    },
+    {
+      "card": {
+        "slug": "trade-the-pool",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 70,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Program Terms : premier payout après 14 jours et minimum $300 sauf $5K $150, partage des profits selon modèle. CGU §7.5 : au-dessus d'un seuil discrétionnaire montant approuvé versé en échéances hebdomadaires d'au plus $10 000. Frais bancaires et seuil fixe non exhaustivement établis, donc 8/10.",
+            "sources": [
+              "https://tradethepool.com/program-terms/",
+              "https://tradethepool.com/terms-and-conditions/"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Aucune histoire indépendante de bénéficiaires TTP distincte des wallets de The5ers réconciliée; plaintes et avis seuls ne répondent pas aux critères des refus prouvés : palier neutre 6.",
+            "sources": [
+              "https://www.trustpilot.com/review/tradethepool.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "Paiements et témoignages sur pages publiques non appariés à des transferts achevés indépendants pour une récompense TTP; comptes The5ers et TTP juridiquement et produits différents : A3=1.",
+            "sources": [
+              "https://www.trustpilot.com/review/tradethepool.com"
+            ]
+          },
+          "B1": {
+            "points": 0,
+            "reason": "CGU §10.1.11 interdisent critiques publiques jugées négatives ou diffusion de tickets/support internes; violation peut déclencher résiliation, NON-remboursement et confiscation immédiate de gains déjà accumulés, sans recours protecteur clair : B1=0.",
+            "sources": [
+              "https://tradethepool.com/terms-and-conditions/"
+            ]
+          },
+          "B2": {
+            "points": 7,
+            "reason": "Fait distinct du droit de critique B1 : §10.1.7.20 classe à seule discrétion de la firme comme interdite toute activité de trading jugée « uncommercial » ou « non viable », sans seuil clair; −3 B2 une fois. Ne pas pénaliser une deuxième fois les récompenses perdues du §10.1.11.",
+            "sources": [
+              "https://tradethepool.com/terms-and-conditions/"
+            ],
+            "negativeFactIds": [
+              "ttp-trading-uncommercial-sole-discretion"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "CGU citent Five Percent Online Ltd en Israël, UK société apparentée active documentée mais la branche UK n'est pas automatiquement débitrice TTP; bon registre israélien et checkout funded non rapprochés.",
+            "sources": [
+              "https://tradethepool.com/terms-and-conditions/"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "Companies House valide l'entité anglaise n°12553363 mais pas le statut du Five Percent Online Ltd israélien contractant. C2=3 non vérifié pour le bon vendeur.",
+            "sources": [
+              "https://find-and-update.company-information.service.gov.uk/company/12553363"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Contrôle des avertissements d'autorités sur entité contractuelle israélienne incomplet; absence de sanction actuelle non certifiée.",
+            "sources": [
+              "https://find-and-update.company-information.service.gov.uk/company/12553363"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Program Terms des évaluations actions publient objectifs, risques par trade, limitations de HFT/copy, jours, KYC et conditions de participation, frais/tarifs sur site et programme.",
+            "sources": [
+              "https://tradethepool.com/program-terms/",
+              "https://tradethepool.com/terms-and-conditions/"
+            ]
+          },
+          "D2": {
+            "points": 6,
+            "reason": "T&C indiquent dernière mise à jour au 03/08/2026; clause de changement de règles à publication et applicabilité aux clients existants décrite, même si peu protectrice. Trois éléments de transparence vérifiables.",
+            "sources": [
+              "https://tradethepool.com/terms-and-conditions/"
+            ]
+          },
+          "D3": {
+            "points": 4,
+            "reason": "Service boursier/actions est distinct de The5ers Forex; simulations et règles de programmes TTP clairement présentées; checkout final et vendeur financé non recoupés.",
+            "sources": [
+              "https://tradethepool.com/terms-and-conditions/"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Prop firm actions Trade The Pool active depuis 2022 selon pages d'histoire publique, plus de 36 mois à novembre 2026.",
+            "sources": [
+              "https://tradethepool.com/about-us/"
+            ]
+          },
+          "E2": {
+            "points": 2,
+            "reason": "Canaux officiels de service et FAQ identifiables; mécanisme neutre de réclamation et cas de résolution utiles documentés insuffisamment.",
+            "sources": [
+              "https://tradethepool.com/contact-us/"
+            ]
+          }
+        },
+        "ruleDeductions": [
+          {
+            "factId": "ttp-trading-uncommercial-sole-discretion",
+            "kind": "ambiguite",
+            "points": 3,
+            "program": "Trade The Pool — evaluation/funded stocks, CGU 03/08/2026",
+            "phase": "Évaluation et compte funded si les Terms of Use le régissent",
+            "clause": "§10.1.7.20 : à la seule discrétion de la firme une stratégie peut être non commerciale / non viable, sans seuil objectif ni définition exhaustive",
+            "consequence": "Disqualification, résiliation et perte de droits liés au compte lorsque la firme juge un trade non viable, sous régime contractuel dont les profits peuvent être perdus",
+            "source": "https://tradethepool.com/terms-and-conditions/"
+          }
+        ],
+        "trustpilotActiveNotice": false,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "Trade The Pool",
+      "domain": "tradethepool.com",
+      "program": "Action stocks evaluation and TTP Funded Phase; ne pas imputer les paiements de The5ers à TTP",
+      "legal": "CGU datées 03/08/2026 : Five Percent Online Ltd Israel, siège Raanana; entité UK proche n°12553363 vérifiée active mais non suffisante pour valider le contractant Israel.",
+      "launch": "Programme de prop trading actions présenté depuis 2022",
+      "refs": {
+        "terms": "https://tradethepool.com/terms-and-conditions/",
+        "program": "https://tradethepool.com/program-terms/",
+        "tp": "https://www.trustpilot.com/review/tradethepool.com",
+        "reg": "https://find-and-update.company-information.service.gov.uk/company/12553363",
+        "contact": "https://tradethepool.com/contact-us/",
+        "launch": "https://tradethepool.com/about-us/"
+      },
+      "pillars": {
+        "A": 15,
+        "B": 7,
+        "C": 9,
+        "D": 18,
+        "E": 8
+      },
+      "raw": 57,
+      "trustpilotPenalty": 0,
+      "payoutEvidenceCap": 64,
+      "proposedScore": 57,
+      "change": -13,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "non_disparagement_rewards_forfeiture",
+        "subjective_trading_clause",
+        "no_trustpilot_sanction"
+      ]
+    },
+    {
+      "card": {
+        "slug": "for-traders",
+        "checkedOn": "2026-11-23",
+        "status": "proposition",
+        "confidence": "faible",
+        "previousDisplayedScore": 70,
+        "criteria": {
+          "A1": {
+            "points": 8,
+            "reason": "Instant Forex : cycle des demandes tous les 14 jours, 15% meilleure journée, buffer 3%, split initial 70% progressif +5% par retrait jusqu'à 90% et cap de $15k par cycle. Autres programmes et frais de chaque rail ne sont pas regroupés, donc 8/10.",
+            "sources": [
+              "https://help.fortraders.com/en/articles/14635307-new-instant-account-forex",
+              "https://fortraders.com/terms-and-conditions"
+            ]
+          },
+          "A2": {
+            "points": 6,
+            "reason": "Plaintes clients et réponses Trustpilot non authentifiées par rapprochement bancaire ni motifs contractuels; ni historique de 12 mois indépendant ni incidents grave prouvés aux seuils A2 : 6 neutre.",
+            "sources": [
+              "https://www.trustpilot.com/review/fortraders.com"
+            ]
+          },
+          "A3": {
+            "points": 1,
+            "reason": "Annonce de paiements et témoignages seuls; pas de virements/transactions à six maillons liant fonds réels, trader tiers, contrat funded et débiteur BLN TECH CLUB DMCC : 1/5.",
+            "sources": [
+              "https://www.trustpilot.com/review/fortraders.com"
+            ]
+          },
+          "B1": {
+            "points": 0,
+            "reason": "CGU §17.3–17.4 : tout performance reward est discrétionnaire et la firme peut approuver, ajuster, retarder ou refuser selon l'utilité des données de trading à sa seule appréciation. Pas de droit opposable suffisant ni recours rémunération indépendant : B1=0.",
+            "sources": [
+              "https://fortraders.com/terms-and-conditions"
+            ]
+          },
+          "B2": {
+            "points": 7,
+            "reason": "§11.9 porte sur une AUTRE clause : qualification unilatérale de stratégies comme 'Prohibited Trading Practices' sans seuil exhaustif, et menace de clôture. −3 pour ambiguïté de trading, distinct du pouvoir de rémunérer §17.3.",
+            "sources": [
+              "https://fortraders.com/terms-and-conditions"
+            ],
+            "negativeFactIds": [
+              "fortraders-undetermined-prohibited-practice"
+            ]
+          },
+          "C1": {
+            "points": 4,
+            "reason": "Entité DMCC désignée avec numéro dans T&C, mais statut officiel Dubai et concordance avec la FT Trading Ltd Sainte-Lucie de documents récents et Member Agreement non authentifiés.",
+            "sources": [
+              "https://fortraders.com/terms-and-conditions"
+            ]
+          },
+          "C2": {
+            "points": 3,
+            "reason": "Aucun extrait primaire DMCC actuel du fournisseur effectivement signataire, ni statut de la personne sœur Sainte-Lucie, donc C2=3 'non vérifié', sans présomption de radiation.",
+            "sources": [
+              "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+            ]
+          },
+          "C3": {
+            "points": 2,
+            "reason": "Autorités pays pertinentes à la société DMCC et service simulé non investiguées exhaustivement; absence d'agrément broker n'est pas automatiquement une sanction.",
+            "sources": [
+              "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+            ]
+          },
+          "D1": {
+            "points": 8,
+            "reason": "Fiches Instant Forex et autres plans affichent prix, objectifs, limites, restrictions, KYC/pays, spreads, frais et programme d'activation après la phase de challenge.",
+            "sources": [
+              "https://help.fortraders.com/en/articles/14635307-new-instant-account-forex",
+              "https://fortraders.com/terms-and-conditions"
+            ]
+          },
+          "D2": {
+            "points": 4,
+            "reason": "CGU accessibles, §19.3 explique protection normale des contrats achetés avant changement, avec exception possible; date de version d'entrée en vigueur non confirmée dans la page : 4/6.",
+            "sources": [
+              "https://fortraders.com/terms-and-conditions"
+            ]
+          },
+          "D3": {
+            "points": 2,
+            "reason": "Comptes de trading explicitement virtuels; pourtant §6.4 conserve un délai non rempli « [X] days » pour activation payante, et le contrat/member payer exact n'est pas recoupé avec le checkout. 2/6.",
+            "sources": [
+              "https://fortraders.com/terms-and-conditions"
+            ]
+          },
+          "E1": {
+            "points": 6,
+            "reason": "Le site officiel indique une exploitation prop firm depuis 2023, atteignant le palier d'au moins trois ans en novembre 2026 (date exacte à réattester).",
+            "sources": [
+              "https://fortraders.com/about"
+            ]
+          },
+          "E2": {
+            "points": 3,
+            "reason": "Canaux de service officiels, réponses aux clients et procédure de réclamation §14.3 avec délai de 30 jours ; indépendance effective de la contestation payout non démontrée.",
+            "sources": [
+              "https://fortraders.com/contact"
+            ]
+          }
+        },
+        "ruleDeductions": [
+          {
+            "factId": "fortraders-undetermined-prohibited-practice",
+            "kind": "ambiguite",
+            "points": 3,
+            "program": "For Traders — Challenge/Master selon CGU en vigueur",
+            "phase": "Challenge et Master Account",
+            "clause": "§11.9 réserve à la seule discrétion de la plateforme la qualification de trades/stratégies comme interdites, sans seuil objectif exhaustif",
+            "consequence": "Résiliation des comptes pour stratégie soudainement déclarée interdite, distincte du droit unilatéral de refuser la rémunération en §17.3–17.4",
+            "source": "https://fortraders.com/terms-and-conditions"
+          }
+        ],
+        "trustpilotActiveNotice": true,
+        "contractingEntityMissing": false,
+        "activeUnsuspendedStrikeOff": false,
+        "closed": false
+      },
+      "name": "For Traders",
+      "domain": "fortraders.com",
+      "program": "Instant Forex Master Account (ancien Instant Pro distinct), modèles Challenge séparés et activation post-pass",
+      "legal": "CGU : BLN TECH CLUB DMCC n°DMCC-882990 Dubai; footer cite aussi FT Trading Ltd Sainte-Lucie; identité du vendeur/Member Agreement non réconciliée au registre.",
+      "launch": "Marque présentée en activité depuis 2023",
+      "refs": {
+        "terms": "https://fortraders.com/terms-and-conditions",
+        "payout": "https://help.fortraders.com/en/articles/14635307-new-instant-account-forex",
+        "tp": "https://www.trustpilot.com/review/fortraders.com",
+        "contact": "https://fortraders.com/contact",
+        "about": "https://fortraders.com/about",
+        "reg": "https://www.fca.org.uk/consumers/warning-list-unauthorised-firms"
+      },
+      "pillars": {
+        "A": 15,
+        "B": 7,
+        "C": 9,
+        "D": 14,
+        "E": 9
+      },
+      "raw": 54,
+      "trustpilotPenalty": 6,
+      "payoutEvidenceCap": 64,
+      "proposedScore": 48,
+      "change": -22,
+      "ownerApproval": false,
+      "officialContract2026Inspected": true,
+      "legalPrimaryRegistryVerified": false,
+      "independentPayoutSixLinkVerified": false,
+      "openIssues": [
+        "trustpilot_guidelines_withheld",
+        "reward_entirely_discretionary",
+        "placeholder_activation_deadline"
+      ]
+    }
+  ]
+}
