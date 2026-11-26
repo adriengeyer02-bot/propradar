@@ -516,7 +516,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 function glanceShort(text: string): string {
-  const first = text.split(/[.;(]/)[0].trim();
+  const first = text.split(/[.;](?:\s|$)/)[0].trim();
   return first.length > 64 ? `${first.slice(0, 63).replace(/\s+\S*$/, '')}…` : first;
 }
 
