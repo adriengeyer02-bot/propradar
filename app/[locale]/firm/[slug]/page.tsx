@@ -516,6 +516,8 @@ export default async function FirmPage({ params }: Props) {
   const priceTable = getPriceTable(slug);
   /** Displayed firm data: English text, then its translation when the data dictionary has one. */
   const tx = (text?: string | null) => td(locale, toEnglishText(text ?? ''));
+  // Contract evidence is already in English. Never normalize it before an exact translation lookup.
+  const ruleTx = (text: string) => td(locale, text);
   const f = t.firm;
   const v = (value: string) => tv(t, value);
   const L = (path: string) => localePath(locale, path);
@@ -610,13 +612,13 @@ export default async function FirmPage({ params }: Props) {
         { key: '*', program: f.rulesUi.all, rules: constraintRules.filter(isFirmWide) },
         ...auditedPrograms.map(({ key, name }) => ({
           key,
-          program: tx(name),
+          program: ruleTx(name),
           rules: constraintRules.filter((rule) => !isFirmWide(rule) && rule.appliesTo!.includes(key)),
         })),
       ]
     : [...new Set(constraintRules.map((rule) => rule.program))].map((program) => ({
         key: program,
-        program: tx(program),
+        program: ruleTx(program),
         rules: constraintRules.filter((rule) => rule.program === program),
       })))
     .filter((group) => group.rules.length)
@@ -720,10 +722,10 @@ export default async function FirmPage({ params }: Props) {
     ],
     programs: breakdown.rules?.programs.map(({ name, load }) => ({ name: tx(name), load })) ?? [],
     heaviest: breakdown.rules?.heaviest.map(({ rule, points }) => {
-      const text = tx(rule.rule);
+      const text = ruleTx(rule.rule);
       return {
         text: text.length > 130 ? `${text.slice(0, 127).trimEnd()}…` : text,
-        program: tx(rule.program),
+        program: ruleTx(rule.program),
         severity: f.rulesSeverity[rule.severity!],
         severityKey: rule.severity!,
         clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
@@ -1288,8 +1290,8 @@ export default async function FirmPage({ params }: Props) {
                 <ul className="pr-rules-list">
                   {classicRules.map((rule, index) => (
                     <li key={`${rule.source}-${index}`}>
-                      <span className="pr-rules-stage">{tx(rule.program)}</span>
-                      <p>{tx(rule.rule)}</p>
+                      <span className="pr-rules-stage">{ruleTx(rule.program)}</span>
+                      <p>{ruleTx(rule.rule)}</p>
                       <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
                     </li>
                   ))}
@@ -1334,12 +1336,12 @@ export default async function FirmPage({ params }: Props) {
                       <ul className="pr-rules-list">
                         {list.map((rule, index) => (
                           <li key={`${rule.source}-${index}`} className={rule.status === 'conflicting' ? 'pr-rules-conflict' : ''}>
-                            <span className="pr-rules-stage">{tx(rule.program)}</span>
+                            <span className="pr-rules-stage">{ruleTx(rule.program)}</span>
                             <p>
                               {rule.severity === 'blocking' ? <span className="pr-rules-strong" title={f.rulesUi.strong}><span className="pr-rules-strong-dot" aria-hidden="true" />{f.rulesUi.strong}</span> : null}
-                              {tx(rule.rule)}
+                              {ruleTx(rule.rule)}
                             </p>
-                            <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {tx(rule.impact)}</p>
+                            <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {ruleTx(rule.impact)}</p>
                             {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
                             <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
                           </li>
