@@ -21,6 +21,8 @@ import { scoreV4Copy } from '../../../lib/scoreV4I18n';
 import { scoreV5Copy, scoreV5EvidenceCopy, scoreV5LegalCapCopy } from '../../../lib/scoreV5I18n';
 import { ruleKind } from '../../../lib/restrictiveRules';
 import { scoreMethodCopy } from '../../../lib/scoreMethodI18n';
+import { localizeScaleCEvidence } from '../../../lib/dataI18n/scaleCEvidence';
+import { localizeScoreEvidence, localizeContractProtection } from '../../../lib/dataI18n/scoreEvidence';
 import { scaleCCopy } from '../../../lib/scaleCI18n';
 import { SCALE_C_CONTRACT_CODES } from '../../../lib/scaleC';
 import ReviewFreshness from '../../../components/ui/ReviewFreshness';
@@ -534,6 +536,7 @@ export default async function FirmPage({ params }: Props) {
   const priceTable = getPriceTable(slug);
   /** Displayed firm data: English text, then its translation when the data dictionary has one. */
   const tx = (text?: string | null) => td(locale, toEnglishText(text ?? ''));
+  const ruleTx = (text: string) => td(locale, text);
   const f = t.firm;
   const v = (value: string) => tv(t, value);
   const L = (path: string) => localePath(locale, path);
@@ -628,13 +631,13 @@ export default async function FirmPage({ params }: Props) {
         { key: '*', program: f.rulesUi.all, rules: constraintRules.filter(isFirmWide) },
         ...auditedPrograms.map(({ key, name }) => ({
           key,
-          program: tx(name),
+          program: ruleTx(name),
           rules: constraintRules.filter((rule) => !isFirmWide(rule) && rule.appliesTo!.includes(key)),
         })),
       ]
     : [...new Set(constraintRules.map((rule) => rule.program))].map((program) => ({
         key: program,
-        program: tx(program),
+        program: ruleTx(program),
         rules: constraintRules.filter((rule) => rule.program === program),
       })))
     .filter((group) => group.rules.length)
@@ -706,10 +709,10 @@ export default async function FirmPage({ params }: Props) {
     ],
     programs: breakdown.rules?.programs.map(({ name, load }) => ({ name: tx(name), load })) ?? [],
     heaviest: breakdown.rules?.heaviest.map(({ rule, points }) => {
-      const text = tx(rule.rule);
+      const text = ruleTx(rule.rule);
       return {
         text: text.length > 130 ? `${text.slice(0, 127).trimEnd()}…` : text,
-        program: tx(rule.program),
+        program: ruleTx(rule.program),
         severity: f.rulesSeverity[rule.severity!],
         severityKey: rule.severity!,
         clarity: f.rulesClarity[rule.status === 'conflicting' ? 'vague' : rule.clarity!],
@@ -719,8 +722,8 @@ export default async function FirmPage({ params }: Props) {
     }) ?? [],
     rulesNotes: breakdown.rules?.uncounted ? [fmt(scoreCopy.rulesUncounted, { n: breakdown.rules.uncounted })] : [],
     v5Evidence: breakdown.v5 ? {
-      deductions: breakdown.v5.ruleDeductions,
-      contractProtection: breakdown.v5.contractProtection,
+      deductions: breakdown.v5.ruleDeductions.map(item => localizeScoreEvidence(locale, item)),
+      contractProtection: localizeContractProtection(locale, firm.slug, breakdown.v5.contractProtection),
       checkedOn: breakdown.v5.checkedOn,
       limitedPayoutProof: breakdown.v5.independentPayoutProofLimited,
       copy: scoreV5EvidenceCopy(locale),
@@ -748,7 +751,7 @@ export default async function FirmPage({ params }: Props) {
         items: c.penalties.map((p) => ({
           label: cc.codes[p.code] ?? p.code,
           points: p.points,
-          text: p.code === 'TPW' ? cc.tpwText : (p.code === 'TPMID' || p.code === 'TPR') ? fmt(cc.tpmidText, { detail: p.locator }) : p.text,
+          text: p.code === 'TPW' ? cc.tpwText : (p.code === 'TPMID' || p.code === 'TPR') ? fmt(cc.tpmidText, { detail: p.locator }) : localizeScaleCEvidence(locale, firm.slug, p),
           source: p.source || ((p.code === 'TPW' || p.code === 'TPMID' || p.code === 'TPR') ? firm.reviewSignals.trustpilotSourceUrl : undefined),
           locator: (p.code === 'TPMID' || p.code === 'TPR') ? undefined : p.locator,
         })),
@@ -1315,8 +1318,8 @@ export default async function FirmPage({ params }: Props) {
                 <ul className="pr-rules-list">
                   {classicRules.map((rule, index) => (
                     <li key={`${rule.source}-${index}`}>
-                      <span className="pr-rules-stage">{tx(rule.program)}</span>
-                      <p>{tx(rule.rule)}</p>
+                      <span className="pr-rules-stage">{ruleTx(rule.program)}</span>
+                      <p>{ruleTx(rule.rule)}</p>
                       <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
                     </li>
                   ))}
@@ -1361,12 +1364,12 @@ export default async function FirmPage({ params }: Props) {
                       <ul className="pr-rules-list">
                         {list.map((rule, index) => (
                           <li key={`${rule.source}-${index}`} className={rule.status === 'conflicting' ? 'pr-rules-conflict' : ''}>
-                            <span className="pr-rules-stage">{tx(rule.program)}</span>
+                            <span className="pr-rules-stage">{ruleTx(rule.program)}</span>
                             <p>
                               {rule.severity === 'blocking' ? <span className="pr-rules-strong" title={f.rulesUi.strong}><span className="pr-rules-strong-dot" aria-hidden="true" />{f.rulesUi.strong}</span> : null}
-                              {tx(rule.rule)}
+                              {ruleTx(rule.rule)}
                             </p>
-                            <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {tx(rule.impact)}</p>
+                            <p className="pr-rules-impact"><strong>{f.rulesImpact}:</strong> {ruleTx(rule.impact)}</p>
                             {rule.status === 'conflicting' ? <span className="pr-tag pr-tone-watch">{f.rulesConflict}</span> : null}
                             <a href={rule.source} target="_blank" rel="noopener noreferrer">{f.historySource} ↗ <span>{sourceDomain(rule.source)}</span></a>
                           </li>

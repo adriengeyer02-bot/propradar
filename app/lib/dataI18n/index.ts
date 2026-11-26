@@ -11,6 +11,7 @@ import { foxxFundedFrench } from '../foxxFunded';
 import { xFundedTranslations } from '../xFundedI18n';
 import { milTradersTranslations } from '../milTradersI18n';
 import { translatedAuditText } from './auditTranslations';
+import { translatedContractRule } from './contractRulesLocalized';
 import { narrativeOriginals, stripScoreClaims } from '../scoreClaims';
 
 /**
@@ -37,5 +38,5 @@ export function td(locale: Locale, text: string | undefined | null): string {
 }
 
 function lookup(locale: Locale, text: string): string {
-  return translatedAuditText(locale, text) ?? milTradersTranslations[locale]?.[text.trim()] ?? xFundedTranslations[locale]?.[text.trim()] ?? DATA[locale]?.[text.trim()] ?? text;
+  return translatedContractRule(locale, text) ?? translatedAuditText(locale, text) ?? milTradersTranslations[locale]?.[text.trim()] ?? xFundedTranslations[locale]?.[text.trim()] ?? DATA[locale]?.[text.trim()] ?? text;
 }
